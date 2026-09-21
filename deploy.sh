@@ -1,5 +1,5 @@
 #!/bin/bash
-# Deploy the static build to the Hostinger Agency website (UID Kq0nqTlGe).
+# Deploy the static build to the Hostinger Agency website (UID Y2Ln5wYMP).
 #
 # The platform's archive importer only accepts WordPress archives, so this
 # pushes the built files one by one through the website's File Browser TUS

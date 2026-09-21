@@ -525,17 +525,7 @@ def build_home():
         for p in POSTS[:3]
     )
 
-    # The Hostinger H5G platform answers unknown directory-style paths by
-    # serving /index.html with a 200 - before PHP or .htaccess can intervene.
-    # This guard is the one lever left: if this document was served for any
-    # path other than "/", hand off to the (noindex) 404 page.
-    soft404_guard = (
-        "<script>(function(){var p=location.pathname;"
-        "if(p!=='/'&&p!=='/index.html'&&p!=='/index.php'){"
-        "document.documentElement.style.visibility='hidden';"
-        "location.replace('/404.html?from='+encodeURIComponent(p));}})();</script>\n"
-    )
-    html = head(page).replace("</head>", soft404_guard + "</head>", 1) + header() + f"""
+    html = head(page) + header() + f"""
 <section class="hero" id="top" aria-labelledby="page-title"><div class="container hero-grid">
 <div class="hero-copy">
 <div class="eyebrow">Roofing Hutto TX</div>
@@ -1364,15 +1354,9 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# The Hostinger managed-WordPress platform keeps a protected index.php in the
-# document root and prefers it over DirectoryIndex. Serve the static homepage
-# for "/" explicitly, and never let the leftover WordPress entry points run.
-RewriteRule ^$ /index.html [L]
-RewriteRule ^index\\.php$ / [R=301,L]
-RewriteRule ^(wp-admin|wp-includes|wp-content|wp-json)(/.*)?$ / [R=301,L]
-RewriteRule ^(wp-[a-z-]+\\.php|xmlrpc\\.php)$ / [R=301,L]
+# Old WordPress-only paths -> nearest static equivalent
 RewriteRule ^feed/?$ /blog/ [R=301,L]
-RewriteRule ^wp-content/uploads/2026/09/(.+)$ /assets/img/$1 [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-json|wp-login\\.php|xmlrpc\\.php)(/.*)?$ / [R=301,L]
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -1382,18 +1366,6 @@ ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 """)
-
-
-def build_index_php():
-    """Shim for the managed-WordPress platform, which serves index.php ahead
-    of index.html and will not allow it to be deleted. Overwriting it with
-    this makes the WordPress entry point serve the static homepage."""
-    write("/index.php",
-          "<?php\n"
-          "// huttoroofs.com is a static site. This file only exists because the\n"
-          "// hosting platform keeps index.php and prefers it; it serves index.html.\n"
-          "header('Content-Type: text/html; charset=utf-8');\n"
-          "readfile(__DIR__ . '/index.html');\n")
 
 
 def build_robots():
@@ -1426,7 +1398,6 @@ def main():
     build_sitemap_xml()
     build_legacy_sitemaps()
     build_htaccess()
-    build_index_php()
     build_robots()
 
     print(f"Built {len(WRITTEN)} files:")

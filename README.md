@@ -104,36 +104,24 @@ components on top of the same tokens.
 
 ## Deploying
 
-The site is live on the Hostinger Agency website UID `Kq0nqTlGe`
-(huttoroofs.com; preview `saddlebrown-mouse-386212.hostingersite.com`).
+The site is live on the Hostinger Agency website UID `Y2Ln5wYMP`
+(huttoroofs.com; created 2026-09-21 as a plain php-fpm website to replace the
+WordPress website `Kq0nqTlGe`, which was deleted after the domain moved).
 `./deploy.sh` pushes the build through the website's File Browser upload API;
 its header comment explains the three credentials it needs. Clear the site
-cache afterwards. The platform's archive importer only accepts WordPress
-archives, which is why the deploy is file-by-file.
+cache afterwards.
 
 Deployed 2026-09-21. The WordPress site was backed up first — see
 `backup/wordpress-2026-09-21/README.md` for the files zip, database dump and
 restore steps.
 
-## Hosting note: the `index.php` shim
+## Hosting note
 
-The site lives on a Hostinger Agency (H5G) *managed WordPress* website. That
-platform keeps a protected `index.php` in the document root (it cannot be
-deleted or overwritten), routes `/` and every unknown path to it, and ignores
-`.htaccess`. `wp-content/mu-plugins/static-site.php` is a must-use plugin that
-loads before any theme and turns that front controller into a static file
-server: it serves `index.html` for `/`, 301s the old WordPress and
-`wp-content/uploads` URLs, and returns `404.html` with a real 404 status for
-anything else. Everything under `/services/`, `/blog/` etc. is served directly
-as files and never touches PHP. The `wp-*.php` core files that remain in the
-document root are inert (each redirects home via the plugin).
-
-`wp-content/uploads/2026/09/` holds the WordPress media library exactly as
-it was (all sizes), so every image URL the old site ever exposed still returns
-200. The static pages themselves use `/assets/img/`.
-
-If the site is ever moved to plain static hosting, delete `wp-content/mu-plugins/`
-and `.htaccess` takes over the same job (keep `wp-content/uploads/`).
+The site runs on a plain (php-fpm, no WordPress) Hostinger Agency website,
+which serves the files directly and returns a real 404 for unknown paths.
+`wp-content/uploads/2026/09/` holds the old WordPress media library exactly
+as it was, so every image URL the old site ever exposed still returns 200;
+the static pages themselves use `/assets/img/`.
 
 ## SEO
 
@@ -172,16 +160,6 @@ archive, and `robots.txt` disallows it.
 
 ## Known gaps
 
-- **Unknown URLs return 200.** The H5G platform answers any path that does not
-  match a file by serving `/index.html` with a 200, before PHP or `.htaccess`
-  can act. The homepage carries a small script that hands such requests to the
-  `noindex` 404 page, which is the only mitigation available on this flavor of
-  hosting. A true 404 status would need the site moved to a non-WordPress
-  Hostinger website (create one, deploy the same files, move the domain).
-- **hPanel still calls the website "WordPress".** The platform's protected
-  core files (`index.php`, `wp-*.php`, `wp-admin/`, `wp-includes/`) are still
-  on disk but inert; `wp-admin` and `wp-login.php` redirect to the homepage.
-  The WordPress database is untouched and still exists.
 
 - **The estimate form is not wired up.** It posts nowhere and shows a reminder
   on submit. Point it at a form handler or CRM endpoint before going live

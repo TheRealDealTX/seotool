@@ -5,15 +5,9 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# The Hostinger managed-WordPress platform keeps a protected index.php in the
-# document root and prefers it over DirectoryIndex. Serve the static homepage
-# for "/" explicitly, and never let the leftover WordPress entry points run.
-RewriteRule ^$ /index.html [L]
-RewriteRule ^index\.php$ / [R=301,L]
-RewriteRule ^(wp-admin|wp-includes|wp-content|wp-json)(/.*)?$ / [R=301,L]
-RewriteRule ^(wp-[a-z-]+\.php|xmlrpc\.php)$ / [R=301,L]
+# Old WordPress-only paths -> nearest static equivalent
 RewriteRule ^feed/?$ /blog/ [R=301,L]
-RewriteRule ^wp-content/uploads/2026/09/(.+)$ /assets/img/$1 [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php)(/.*)?$ / [R=301,L]
 </IfModule>
 
 <IfModule mod_expires.c>
