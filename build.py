@@ -529,12 +529,12 @@ def build_home():
 <section class="hero" id="top" aria-labelledby="page-title"><div class="container hero-grid">
 <div class="hero-copy">
 <div class="eyebrow">Roofing Hutto TX</div>
-<h1 id="page-title" style="color:#fff">Hutto roofing built for <span class="gold-text">Blackland Prairie</span> weather.</h1>
-<p>Hutto roofs get no shade and no shelter. Out here on open prairie the summer sun works on the
-shingles from May through September, and when a line comes through {BIZ['county']} the wind arrives
-with nothing in its way. That is the roof we are used to. {BIZ['name']} is a local Hutto roofing
-company handling repairs, replacements, inspections and storm damage for homes and businesses
-across {BIZ['city']}, {BIZ['state']} {BIZ['zip']}.</p>
+<h1 id="page-title" style="color:#fff">Hutto roofing for a <span class="gold-text">stronger roof</span> over your home or business.</h1>
+<p>A shingle in the yard, a stain spreading across the ceiling, a spring storm that leaves you
+unsure what happened up there &mdash; when that is the situation, you want a straight answer from
+someone local. {BIZ['name']} is a Hutto roofing company handling repairs, replacements,
+inspections and storm damage for homes and businesses across {BIZ['city']}, {BIZ['state']}
+{BIZ['zip']} and {BIZ['county']}.</p>
 <div class="hero-actions">
 <a class="btn btn-gold" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']} <span>&#8599;</span></a>
 <a class="btn btn-outline" href="#contact">Request a Roof Estimate</a>
