@@ -44,7 +44,8 @@ def pages():
         if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates", "backup", "dist")):
             continue
         for f in files:
-            if f.endswith(".html"):
+            # Google Search Console verification file is HTML by name only.
+            if f.endswith(".html") and not f.startswith("google"):
                 yield os.path.join(dirpath, f)
 
 
