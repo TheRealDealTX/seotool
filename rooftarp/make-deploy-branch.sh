@@ -27,7 +27,7 @@ cd "$REPO"
 
 # Things that are served. Everything else is source and stays out.
 SERVE=(
-  index.html 404.html sitemap.xml robots.txt .htaccess
+  home.html index.php 404.html sitemap.xml robots.txt .htaccess
   assets
   about blog contact faqs privacy-policy service-areas services sitemap terms-of-use
 )

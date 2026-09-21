@@ -69,7 +69,7 @@ def html_files():
 
 def rel_url(path):
     r = os.path.relpath(path, ROOT).replace(os.sep, "/")
-    if r == "index.html":
+    if r == "home.html":          # the homepage; index.php serves it at "/"
         return "/"
     if r == "404.html":
         return "/404.html"
