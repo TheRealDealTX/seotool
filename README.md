@@ -102,6 +102,19 @@ the site's own stylesheet already defined but did not use. Interior pages
 (services, areas, blog) add a compact hero, a prose/sidebar layout and a few
 components on top of the same tokens.
 
+## Deploying
+
+The site is live on the Hostinger Agency website UID `Kq0nqTlGe`
+(huttoroofs.com; preview `saddlebrown-mouse-386212.hostingersite.com`).
+`./deploy.sh` pushes the build through the website's File Browser upload API;
+its header comment explains the three credentials it needs. Clear the site
+cache afterwards. The platform's archive importer only accepts WordPress
+archives, which is why the deploy is file-by-file.
+
+Deployed 2026-09-21. The WordPress site was backed up first — see
+`backup/wordpress-2026-09-21/README.md` for the files zip, database dump and
+restore steps.
+
 ## Hosting note: the `index.php` shim
 
 The site lives on a Hostinger Agency (H5G) *managed WordPress* website. That
