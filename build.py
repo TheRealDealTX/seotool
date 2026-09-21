@@ -618,11 +618,11 @@ forward.</p>
 <div><div class="eyebrow">Our Process</div>
 <h2 style="color:#fff">From roof concern to a clear next step.</h2></div>
 <p>A roofing project feels more manageable when the path is straightforward. Here is a simple way to
-begin working through your {BIZ['city']} roofing needs.</p>
+begin working through your roofing needs.</p>
 </div>
 <div class="process-grid">
 <article class="step"><div class="step-num">01</div><h3>Tell Us What You See</h3><p>Share the property type, roof concern, leak symptoms and any recent storm information.</p></article>
-<article class="step"><div class="step-num">02</div><h3>Inspect the Roof</h3><p>Review accessible roof areas, penetrations and the attic to understand the real condition.</p></article>
+<article class="step"><div class="step-num">02</div><h3>Inspect the Roof</h3><p>A Hutto roofer reviews accessible roof areas, penetrations and the attic to understand the real condition.</p></article>
 <article class="step"><div class="step-num">03</div><h3>Review the Options</h3><p>Discuss repair, replacement or maintenance paths based on what the roof actually needs.</p></article>
 <article class="step"><div class="step-num">04</div><h3>Move Forward</h3><p>Choose a roofing scope that makes sense for the property, roof condition and project goals.</p></article>
 </div>
@@ -664,8 +664,8 @@ past repairs, and mature trees close to the house.</p>
 round in the fall. Hail tends to fall in narrow bands, so one neighborhood can be hit while the next
 is untouched. After any significant storm, an inspection is the reliable way to know where your roof
 stands.</p>
-<p>Whatever the roof and whatever the season, the job is the same: find the actual problem, explain
-it plainly, and fix what needs fixing at a fair price.</p>
+<p>Whatever the roof and whatever the season, the job of a Hutto roofer is the same: find the actual
+problem, explain it plainly, and fix what needs fixing at a fair price.</p>
 <div class="signal-list">
 <div class="signal">Missing or lifted shingles</div>
 <div class="signal">Ceiling or attic stains</div>
@@ -711,7 +711,8 @@ work on.</p>
         "Questions about Hutto roofing.",
         "Use these answers as a starting point when deciding whether it is time to contact a "
         f"{BIZ['city']} roofer about a repair, inspection or replacement.",
-    ) + contact_section() + footer()
+    ) + contact_section(None, "Whether you are dealing with a leak, storm concern, worn shingles or an aging roof, "
+        f"start the conversation here. A Hutto roofer from {BIZ['name']} will help you organize the next step.") + footer()
 
     # No index.html in the document root: the host falls back to it for
     # unknown file-style paths and returns 200. index.php (below) serves
