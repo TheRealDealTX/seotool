@@ -51,6 +51,8 @@ def pages():
 
 def site_path(fs_path):
     rel = os.path.relpath(fs_path, ROOT)
+    if rel == "home.html":          # the homepage; index.php serves it at "/"
+        return "/"
     if rel.endswith("index.html"):
         p = "/" + rel[: -len("index.html")]
         return p if p != "/" else "/"
@@ -184,7 +186,7 @@ for item in SERVICES + AREAS:
 # appear as natural variants ("a roofer in Hutto, TX"), so those are matched as
 # an in-order token sequence within a short window rather than as a literal.
 home_text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", open(
-    os.path.join(ROOT, "index.html"), encoding="utf-8").read().lower()))
+    os.path.join(ROOT, "home.html"), encoding="utf-8").read().lower()))
 
 if "roofing hutto tx" not in home_text:
     errors.append("/: primary keyword 'roofing hutto tx' not in homepage body")

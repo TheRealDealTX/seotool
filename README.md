@@ -8,7 +8,7 @@ file, one JS file and local images. Upload the repo root to any web host.
 
 | Path | What it is |
 | --- | --- |
-| `index.html` and the `*/index.html` files | The generated site — this is the deliverable |
+| `home.html`, `index.php` and the `*/index.html` files | The generated site — this is the deliverable |
 | `assets/css/site.css` | The single shared stylesheet |
 | `assets/js/site.js` | Sticky header + mobile nav (the only script) |
 | `assets/img/` | All images, downloaded from the original site |
@@ -117,8 +117,17 @@ restore steps.
 
 ## Hosting note
 
-The site runs on a plain (php-fpm, no WordPress) Hostinger Agency website,
-which serves the files directly and returns a real 404 for unknown paths.
+The site runs on a plain (php-fpm, no WordPress) Hostinger Agency website.
+The platform serves existing files directly, ignores `.htaccess`, and routes
+`/` and any unknown path to `index.php` — unless an `index.html` exists, in
+which case it answers unknown file-style paths with that file and a 200. So
+the build deliberately has **no `index.html`**: the homepage is rendered as
+`home.html` and a ten-line `index.php` serves it for `/`, 301s the old
+WordPress paths, and returns `404.html` with a real 404 status for everything
+else. (`home.html` is `Disallow`ed in robots.txt and canonicalises to `/`.)
+
+Local preview: `python3 -m http.server` will not run `index.php`, so open
+`/home.html` for the homepage; every other page previews normally.
 `wp-content/uploads/2026/09/` holds the old WordPress media library exactly
 as it was, so every image URL the old site ever exposed still returns 200;
 the static pages themselves use `/assets/img/`.

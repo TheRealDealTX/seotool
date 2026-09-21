@@ -716,7 +716,10 @@ work on.</p>
         f"{BIZ['city']} roofer about a repair, inspection or replacement.",
     ) + contact_section() + footer()
 
-    write("/", html)
+    # No index.html in the document root: the host falls back to it for
+    # unknown file-style paths and returns 200. index.php (below) serves
+    # this file for "/" and a real 404 for everything else.
+    write("/home.html", html)
 
 
 HOME_SERVICE_CARDS = []
@@ -1368,11 +1371,46 @@ ExpiresByType application/javascript "access plus 1 month"
 """)
 
 
+def build_index_php():
+    """Front controller for the Hostinger H5G host. The platform serves
+    existing files directly and routes "/" and every unknown path to this
+    file (provided no index.html exists). It serves the homepage for "/" and
+    a real 404 for anything else - which .htaccess cannot do here, since the
+    host ignores it."""
+    write("/index.php", """<?php
+// huttoroofs.com - static site front controller. See README, "Hosting note".
+$path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+$home = 'https://huttoroofs.com';
+
+if ($path === '/' || $path === '/index.php') {
+    header('Content-Type: text/html; charset=utf-8');
+    readfile(__DIR__ . '/home.html');
+    exit;
+}
+if (preg_match('#^/(feed|comments/feed)/?$#', $path)) {
+    header('Location: ' . $home . '/blog/', true, 301);
+    exit;
+}
+if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\\.php|xmlrpc\\.php)(/|$)#', $path)) {
+    header('Location: ' . $home . '/', true, 301);
+    exit;
+}
+if (substr($path, -1) !== '/' && is_dir(__DIR__ . $path)) {
+    header('Location: ' . $home . $path . '/', true, 301);
+    exit;
+}
+http_response_code(404);
+header('Content-Type: text/html; charset=utf-8');
+readfile(__DIR__ . '/404.html');
+""")
+
+
 def build_robots():
     write("/robots.txt",
           "User-agent: *\n"
           "Allow: /\n"
-          "Disallow: /templates/\n\n"
+          "Disallow: /templates/\n"
+          "Disallow: /home.html\n\n"
           f"Sitemap: {url('/sitemap.xml')}\n")
 
 
@@ -1398,6 +1436,7 @@ def main():
     build_sitemap_xml()
     build_legacy_sitemaps()
     build_htaccess()
+    build_index_php()
     build_robots()
 
     print(f"Built {len(WRITTEN)} files:")
