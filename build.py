@@ -1382,6 +1382,13 @@ def build_index_php():
 $path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 $home = 'https://huttoroofs.com';
 
+// Canonical host and scheme (the host ignores .htaccess, so this is the only
+// place to enforce them; direct static-file requests are covered by canonical tags).
+if (($_SERVER['REQUEST_SCHEME'] ?? 'https') !== 'https' || ($_SERVER['HTTP_HOST'] ?? '') === 'www.huttoroofs.com') {
+    header('Location: ' . $home . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
+    exit;
+}
+
 if ($path === '/' || $path === '/index.php') {
     header('Content-Type: text/html; charset=utf-8');
     readfile(__DIR__ . '/home.html');
