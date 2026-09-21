@@ -102,6 +102,22 @@ the site's own stylesheet already defined but did not use. Interior pages
 (services, areas, blog) add a compact hero, a prose/sidebar layout and a few
 components on top of the same tokens.
 
+## Hosting note: the `index.php` shim
+
+The site lives on a Hostinger Agency (H5G) *managed WordPress* website. That
+platform keeps a protected `index.php` in the document root (it cannot be
+deleted or overwritten), routes `/` and every unknown path to it, and ignores
+`.htaccess`. `wp-content/mu-plugins/static-site.php` is a must-use plugin that
+loads before any theme and turns that front controller into a static file
+server: it serves `index.html` for `/`, 301s the old WordPress and
+`wp-content/uploads` URLs, and returns `404.html` with a real 404 status for
+anything else. Everything under `/services/`, `/blog/` etc. is served directly
+as files and never touches PHP. The `wp-*.php` core files that remain in the
+document root are inert (each redirects home via the plugin).
+
+If the site is ever moved to plain static hosting, delete `wp-content/` and
+`.htaccess` takes over the same job.
+
 ## SEO
 
 Every page has a unique title and meta description, a single H1 carrying its

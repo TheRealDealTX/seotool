@@ -1354,9 +1354,14 @@ Options -Indexes
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# Old WordPress-only paths -> nearest static equivalent
+# The Hostinger managed-WordPress platform keeps a protected index.php in the
+# document root and prefers it over DirectoryIndex. Serve the static homepage
+# for "/" explicitly, and never let the leftover WordPress entry points run.
+RewriteRule ^$ /index.html [L]
+RewriteRule ^index\\.php$ / [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-content|wp-json)(/.*)?$ / [R=301,L]
+RewriteRule ^(wp-[a-z-]+\\.php|xmlrpc\\.php)$ / [R=301,L]
 RewriteRule ^feed/?$ /blog/ [R=301,L]
-RewriteRule ^(wp-admin|wp-login\\.php|xmlrpc\\.php|wp-json)(/.*)?$ / [R=301,L]
 RewriteRule ^wp-content/uploads/2026/09/(.+)$ /assets/img/$1 [R=301,L]
 </IfModule>
 
@@ -1367,6 +1372,18 @@ ExpiresByType text/css "access plus 1 month"
 ExpiresByType application/javascript "access plus 1 month"
 </IfModule>
 """)
+
+
+def build_index_php():
+    """Shim for the managed-WordPress platform, which serves index.php ahead
+    of index.html and will not allow it to be deleted. Overwriting it with
+    this makes the WordPress entry point serve the static homepage."""
+    write("/index.php",
+          "<?php\n"
+          "// huttoroofs.com is a static site. This file only exists because the\n"
+          "// hosting platform keeps index.php and prefers it; it serves index.html.\n"
+          "header('Content-Type: text/html; charset=utf-8');\n"
+          "readfile(__DIR__ . '/index.html');\n")
 
 
 def build_robots():
@@ -1399,6 +1416,7 @@ def main():
     build_sitemap_xml()
     build_legacy_sitemaps()
     build_htaccess()
+    build_index_php()
     build_robots()
 
     print(f"Built {len(WRITTEN)} files:")
