@@ -57,7 +57,7 @@ complex rooflines go well above it. Metal roofing runs roughly two to three time
 </div>
 
 <p>One thing to note about roof area: it is not the same as your house's square footage. A
-2,000 sq ft single-storey home has considerably more roof than a 2,000 sq ft two-storey, and pitch
+2,000 sq ft single-story home has considerably more roof than a 2,000 sq ft two-story, and pitch
 adds surface area on top of footprint. A steep roof over a 2,000 sq ft footprint can easily be
 2,800 sq ft of actual roof surface.</p>
 
@@ -70,13 +70,13 @@ appears on every estimate you compare.</p>
 
 <h3>2. Pitch</h3>
 <p>A 4/12 roof can be walked comfortably. A 10/12 requires harnesses, roof jacks and a slower pace,
-and it adds surface area for the same footprint. Steep roofs commonly carry a 15&ndash;30% labour
-premium. Many of Hutto's two-storey homes in <strong>Star Ranch</strong> and
+and it adds surface area for the same footprint. Steep roofs commonly carry a 15&ndash;30% labor
+premium. Many of Hutto's two-story homes in <strong>Star Ranch</strong> and
 <strong>Legends of Hutto</strong> sit in the steeper bracket.</p>
 
 <h3>3. Complexity</h3>
 <p>Every valley, dormer, chimney, skylight and roof-to-wall transition is hand-detailed work. A
-simple gable roof goes on fast. The multi-gable rooflines that Hutto's builders favoured through
+simple gable roof goes on fast. The multi-gable rooflines that Hutto's builders favored through
 the 2000s and 2010s take substantially longer for the same square footage, and they need more
 flashing and valley metal.</p>
 
@@ -87,7 +87,7 @@ particularly since many Texas carriers discount premiums for it.</p>
 
 <h3>5. Tear-off and layers</h3>
 <p>Removing one layer of shingles is standard. Two layers means roughly double the disposal volume
-and labour. Older homes around <strong>Old Town Hutto</strong> occasionally carry two or even three
+and labor. Older homes around <strong>Old Town Hutto</strong> occasionally carry two or even three
 layers.</p>
 
 <h3>6. Decking replacement</h3>
@@ -103,15 +103,15 @@ two estimates for "the same roof" can differ by $4,000.</p>
 
 <h2>Why Hutto roofs cost what they do</h2>
 <p>Hutto's pricing sits a little below Austin proper and roughly level with Round Rock and
-Pflugerville. Labour and material costs are regional, so the variation between neighbouring towns
+Pflugerville. Labor and material costs are regional, so the variation between neighbouring towns
 is small.</p>
 <p>What is specific to Hutto is <em>timing</em>. A very large share of the housing stock here went up
 in concentrated waves between roughly 2004 and 2014, which means a very large share of the roofs
 hit replacement age simultaneously. Add a hail event across {BIZ['county']} and demand spikes
 sharply &mdash; crews book out, material lead times stretch, and prices firm up. The cheapest time to
-replace a Hutto roof is a quiet stretch in late autumn or winter. The most expensive is the six
+replace a Hutto roof is a quiet stretch in late fall or winter. The most expensive is the six
 weeks after a major spring hail storm, when every roofer within fifty miles is fully committed.</p>
-<p>Hutto's open, unshaded exposure on the Blackland Prairie also argues for spending slightly more
+<p>Hutto's limited shade and hail exposure also argue for spending slightly more
 on the things that extend roof life here: proper attic ventilation, a six-nail high-wind pattern,
 and algae-resistant shingles on north slopes. Those add a few hundred dollars to a job and can add
 years to the roof.</p>
@@ -120,7 +120,7 @@ years to the roof.</p>
 <p>Put them side by side and check that each one states:</p>
 <ul>
 <li>Roof size in squares, and the pitch</li>
-<li>The specific shingle line and colour &mdash; not just "architectural shingles"</li>
+<li>The specific shingle line and color &mdash; not just "architectural shingles"</li>
 <li>Underlayment type and where ice-and-water membrane is being used</li>
 <li>Whether drip edge, valley metal and pipe boots are new or reused</li>
 <li>The ventilation plan &mdash; ridge vent, existing turbines, soffit intake</li>
@@ -217,12 +217,12 @@ the most frequent and most fixable problems we find.</p>
 <p>Central Texas gets roughly 230 sunny days a year, and UV degrades asphalt continuously. The
 practical effect is visible on any roof with partial shade: the shaded slopes routinely outlast the
 exposed ones by several years on the same house.</p>
-<p>This is where Hutto is at a genuine disadvantage. The subdivisions built on former farmland
-across the Blackland Prairie &mdash; <strong>Star Ranch</strong>, <strong>Emory Farms</strong>,
-<strong>Creek Bend</strong>, <strong>Legends of Hutto</strong> &mdash; have landscaping that is still
-maturing. There is essentially no canopy over those roof planes. Compare that with the older lots
-around Old Town Hutto, or with Round Rock's established neighbourhoods, where mature pecans and
-oaks break up the exposure. Same shingle, meaningfully different outcome.</p>
+<p>This is where Hutto is at a disadvantage. The subdivisions built on former farmland &mdash;
+<strong>Star Ranch</strong>, <strong>Emory Farms</strong>, <strong>Creek Bend</strong>,
+<strong>Legends of Hutto</strong> &mdash; have landscaping that is still maturing, so most of those roofs
+get full sun. Compare that with the older lots around Old Town Hutto, or with Round Rock's
+established neighborhoods, where mature pecans and oaks break up the exposure. Same shingle,
+different outcome.</p>
 
 <h3>3. Hail</h3>
 <p>The wildcard that can end a roof's life in twenty minutes regardless of how well it has been
@@ -323,17 +323,17 @@ the structure.</p>
 <h2>Where asphalt clearly wins</h2>
 <p><strong>Upfront cost.</strong> The gap is real and it is large. For many households the $14,000
 difference on a typical Hutto roof is decisive on its own, and that is a legitimate reason.</p>
-<p><strong>Complex rooflines.</strong> Hutto's 2000s and 2010s subdivisions favour multi-gable roofs
+<p><strong>Complex rooflines.</strong> Hutto's 2000s and 2010s subdivisions favor multi-gable roofs
 with numerous valleys, dormers and transitions. Every one of those is a custom-formed flashing
 detail on a metal roof, and both the cost premium and the risk of a bad install climb steeply with
 complexity.</p>
 <p><strong>Repairs.</strong> A damaged asphalt section can be replaced by any competent roofer for a
-few hundred dollars. Matching a metal panel profile and finish a decade later is harder and dearer.</p>
+few hundred dollars. Matching a metal panel profile and finish a decade later is harder and more expensive.</p>
 <p><strong>Shorter ownership.</strong> If you expect to sell within ten years, you will not recover
 the metal premium. Buyers value a newer roof; they rarely pay a metal premium for it.</p>
 <p><strong>HOA rules.</strong> Several of Hutto's newer planned communities, including sections of
 <strong>Star Ranch</strong> and <strong>Legends of Hutto</strong>, have architectural guidelines covering
-roofing materials, profiles and colours. Check before you price panels.</p>
+roofing materials, profiles and colors. Check before you price panels.</p>
 
 <h2>Two myths worth clearing up</h2>
 <p><strong>"Metal roofs are noisy in the rain."</strong> On an open-framed barn, yes. On a house with
@@ -348,8 +348,7 @@ strike more likely.</p>
 <p><strong>In the subdivisions</strong> &mdash; Star Ranch, Emory Farms, Creek Bend, Cottonwood Creek,
 Riverwalk, Legends of Hutto &mdash; asphalt remains the sensible default. Complex rooflines, HOA
 guidelines, and owners who typically move again within a decade or so all point the same way.
-Where we do push back is on grade: given Hutto's hail exposure and unshaded Blackland Prairie
-position, Class 4 impact-resistant shingles are worth pricing on any of those roofs, and many
+Where we do push back is on grade: given Hutto's hail exposure and limited shade, Class 4 impact-resistant shingles are worth pricing on any of those roofs, and many
 Texas carriers discount premiums for them.</p>
 <p><strong>Out past the subdivisions</strong> &mdash; the acreage along FM 1660, toward Taylor on US-79,
 and north toward the county line &mdash; metal dominates and should. Barns and shops, simpler roof
@@ -409,7 +408,7 @@ degradation accelerates sharply.</p>
 
 <h2>3. Curling, cupping or clawing tabs</h2>
 <p>Shingle edges lifting upward (curling), the middle rising while edges stay down (cupping), or
-edges turning down at the centre (clawing). All three mean the mat has lost flexibility and is no
+edges turning down at the center (clawing). All three mean the mat has lost flexibility and is no
 longer lying flat. A curled tab is a tab wind can get under, which is a significant problem on
 Hutto's open exposure. Widespread curling is a replacement signal, not a repair one.</p>
 
@@ -518,9 +517,9 @@ whether the attic underneath can breathe.</p>
 <tr><td>Standing seam metal, cool-rated finish</td><td>Excellent</td><td>40 &ndash; 60 yrs</td><td>$$$$</td></tr>
 <tr><td>Concrete or clay tile</td><td>Excellent</td><td>40 &ndash; 60 yrs</td><td>$$$$</td></tr>
 <tr><td>Exposed-fastener metal panel</td><td>Very good</td><td>25 &ndash; 40 yrs</td><td>$$</td></tr>
-<tr><td>Cool-rated architectural asphalt (light colour)</td><td>Good</td><td>22 &ndash; 28 yrs</td><td>$$</td></tr>
+<tr><td>Cool-rated architectural asphalt (light color)</td><td>Good</td><td>22 &ndash; 28 yrs</td><td>$$</td></tr>
 <tr><td>Class 4 impact-resistant asphalt</td><td>Good</td><td>22 &ndash; 30 yrs</td><td>$$$</td></tr>
-<tr><td>Standard architectural asphalt (dark colour)</td><td>Fair</td><td>18 &ndash; 25 yrs</td><td>$$</td></tr>
+<tr><td>Standard architectural asphalt (dark color)</td><td>Fair</td><td>18 &ndash; 25 yrs</td><td>$$</td></tr>
 <tr><td>Three-tab asphalt</td><td>Poor</td><td>15 &ndash; 20 yrs</td><td>$</td></tr>
 </tbody>
 </table>
@@ -540,14 +539,14 @@ west. Two caveats for Hutto: the weight requires a structure designed for it, wh
 subdivision framing was not, and large hail can crack individual tiles.</p>
 
 <h3>3. Exposed-fastener metal panel</h3>
-<p>Same thermal behaviour as standing seam at a fraction of the price. The exposed screws and
+<p>Same thermal behavior as standing seam at a fraction of the price. The exposed screws and
 washers are the maintenance point. The right answer for barns, shops and outbuildings on the
 acreage around Hutto, and a reasonable one for a simple-roofline house.</p>
 
-<h3>4. Cool-rated and light-coloured asphalt shingles</h3>
-<p>Asphalt is the practical choice for most Hutto homes, and within asphalt the colour and granule
+<h3>4. Cool-rated and light-colored asphalt shingles</h3>
+<p>Asphalt is the practical choice for most Hutto homes, and within asphalt the color and granule
 choice matter more than people expect. Manufacturers now offer shingle lines with reflective
-granules that meet ENERGY STAR or Cool Roof Rating Council thresholds. A light grey or tan cool
+granules that meet ENERGY STAR or Cool Roof Rating Council thresholds. A light gray or tan cool
 shingle can run 20&ndash;30&deg;F cooler at the surface than a black one on the same afternoon,
 which translates directly into attic temperature and shingle life. See
 <a href="/services/shingle-roofing-hutto-tx/">shingle roofing in Hutto</a>.</p>
@@ -555,7 +554,7 @@ which translates directly into attic temperature and shingle life. See
 <h3>5. Class 4 impact-resistant asphalt</h3>
 <p>Not a heat product as such, but worth listing because in Hutto the heat question and the hail
 question arrive together. Class 4 shingles are a modified-asphalt architectural product; choose a
-light colour and you get the heat benefit and the hail resistance in one roof, often with an
+light color and you get the heat benefit and the hail resistance in one roof, often with an
 insurance premium discount.</p>
 
 <h3>What to avoid</h3>
@@ -566,7 +565,7 @@ installation and the most expensive per year of service in this climate.</p>
 <p>Attic ventilation. A balanced system &mdash; intake at the soffits, exhaust at the ridge &mdash;
 keeps a Central Texas attic within 20&ndash;30&deg;F of outdoor temperature. An unbalanced or blocked
 system lets it climb past 150&deg;F, and at that point the shingles are being cooked from below
-regardless of what colour they are on top. Blown-in insulation burying the soffit vents is the
+regardless of what color they are on top. Blown-in insulation burying the soffit vents is the
 most common problem we find in Hutto attics, and baffles fix it cheaply.</p>
 <p>Radiant barrier &mdash; foil-faced sheathing or a foil layer stapled under the rafters &mdash; is the
 second-best upgrade. It reflects radiant heat off the underside of the deck and typically drops
@@ -574,17 +573,17 @@ attic temperature by 20&deg;F or more. New construction around Hutto commonly in
 homes from the 2000s boom mostly do not.</p>
 
 <h2>Why this matters more in Hutto than in Austin</h2>
-<p>Hutto's subdivisions were built on open Blackland Prairie farmland, and the trees planted with
-them are still small. Roofs in <strong>Star Ranch</strong>, <strong>Emory Farms</strong>,
-<strong>Creek Bend</strong> and <strong>Legends of Hutto</strong> take unbroken sun from sunrise to
-sunset. Compare that with an established Austin or Round Rock neighbourhood under mature live oaks,
-where a good part of the roof is shaded for half the day. A dark shingle that lasts 25 years under
+<p>Hutto's subdivisions were built on former farmland, and the trees planted with them are still
+small. Roofs in <strong>Star Ranch</strong>, <strong>Emory Farms</strong>, <strong>Creek Bend</strong> and
+<strong>Legends of Hutto</strong> get full sun most of the day. Compare that with an established Austin
+or Round Rock neighborhood under mature live oaks, where a good part of the roof is shaded for half
+the day. A dark shingle that lasts 25 years under
 canopy can be done at 18 out here. The reflectance of the material and the ventilation beneath it
 are how a Hutto roof closes that gap.</p>
 
 <h2>Our recommendation for most Hutto homes</h2>
 <p>If you are staying long term and the HOA allows it, standing seam metal in a light cool finish.
-For everyone else, a light-coloured Class 4 architectural shingle over a properly ventilated attic
+For everyone else, a light-colored Class 4 architectural shingle over a properly ventilated attic
 with a radiant barrier. That combination handles heat and hail, keeps the August cooling bill
 reasonable, and does not cost what metal does. Call
 <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we will price both on your roof.</p>
@@ -611,7 +610,7 @@ reasonable, and does not cost what metal does. Call
         "hero_image": "/assets/img/A-practical-approach-to-your-roof-not-a-one-size-fits-all-answer.webp",
         "hero_alt": "Roofing contractor working on a home in Hutto, Texas",
         "body": f"""
-<p>Here is the thing most homeowners do not know: Texas has no state licence for roofing
+<p>Here is the thing most homeowners do not know: Texas has no state license for roofing
 contractors. Anyone with a truck and a ladder can call themselves a roofer, and after a hail storm
 crosses Williamson County a great many of them do. That puts the job of vetting squarely on you.
 Knowing how to choose a roofing contractor in Hutto is mostly knowing what to ask for and what to
@@ -631,10 +630,10 @@ falls off your roof. Without the second, an injured worker's claim can land on t
 
 <h3>3. Voluntary certification</h3>
 <p>Because Texas does not license roofers, the Roofing Contractors Association of Texas runs a
-voluntary licensing programme, and the major shingle manufacturers certify installers. Neither is
+voluntary licensing program, and the major shingle manufacturers certify installers. Neither is
 mandatory, but both mean someone has checked the company's insurance and training.</p>
 
-<h3>4. A written, itemised estimate</h3>
+<h3>4. A written, itemized estimate</h3>
 <p>It should state the roof size in squares, the exact shingle line, underlayment type, what is new
 versus reused (drip edge, valley metal, pipe boots), the ventilation plan, a per-sheet price for
 decking replacement, and who pulls the permit. A one-line quote with a total is not an estimate;
@@ -652,7 +651,7 @@ the first.</p>
 can phone. Recent work matters more than old work, because crews change.</p>
 
 <h3>7. Who is actually on the roof</h3>
-<p>Many companies subcontract the labour. That is not automatically a problem, but ask whether the
+<p>Many companies subcontract the labor. That is not automatically a problem, but ask whether the
 crew is theirs, whether a supervisor from the company will be on site, and who you call if
 something goes wrong on day two.</p>
 
@@ -690,12 +689,12 @@ from one that will not.</p>
 <li>How many nails per shingle, and why?</li>
 <li>What happens if you find rotten decking?</li>
 <li>Who is on site each day and who do I call?</li>
-<li>What is the workmanship warranty, in writing, and who honours it if you close?</li>
+<li>What is the workmanship warranty, in writing, and who honors it if you close?</li>
 </ul>
 <p>A good contractor welcomes those questions. A poor one gets vague.</p>
 
 <h2>Choosing between two good quotes</h2>
-<p>If two estimates are both itemised, both from insured local companies, and a few thousand
+<p>If two estimates are both itemized, both from insured local companies, and a few thousand
 dollars apart, look at the specification rather than the total. Different underlayment, four nails
 versus six, reused versus new flashing, a ridge vent versus none &mdash; those explain most price
 gaps, and the cheaper roof is often the less specified one. The
@@ -703,7 +702,7 @@ gaps, and the cheaper roof is often the less specified one. The
 specifications actually buy you on a Hutto roof.</p>
 
 <h2>Where we fit</h2>
-<p>{BIZ['name']} is based in Hutto, works Williamson County year round, and provides the itemised
+<p>{BIZ['name']} is based in Hutto, works Williamson County year round, and provides the itemized
 estimate, insurance certificates and written workmanship warranty described above as a matter of
 course. If you would like us to be one of the quotes you compare, call or text
 <a href="tel:{BIZ['phone_href']}">{PHONE}</a>.</p>

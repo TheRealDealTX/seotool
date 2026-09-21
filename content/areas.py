@@ -37,7 +37,7 @@ that needs covering, or a second opinion you would rather not wait three days fo
 
 <h2>What Round Rock roofs deal with</h2>
 <p>Round Rock's housing stock spans a much wider range of build years than Hutto's does, and the
-roofing picture changes noticeably across it. The established neighbourhoods around
+roofing picture changes noticeably across it. The established neighborhoods around
 <strong>Old Town Round Rock</strong> and off Chisholm Trail carry homes from the 1970s and 80s &mdash;
 mature tree canopy, simpler roof geometry, and roofs that are frequently on their third covering.
 Layered roofs and decades of accumulated repair work are common there, and a tear-off often
@@ -55,7 +55,7 @@ the stronger part of a cell while Hutto gets the trailing edge. The
 <a href="/services/hail-damage-roof-repair-hutto-tx/">hail assessment</a> we do in Hutto is the same
 work, on roofs that see more of it.</p>
 <p>One further wrinkle: Round Rock has more genuinely mature tree cover than Hutto, particularly
-along Brushy Creek and in the older neighbourhoods. That means more shade &mdash; which helps shingles
+along Brushy Creek and in the older neighborhoods. That means more shade &mdash; which helps shingles
 last &mdash; but also more limb strikes, more leaf accumulation in valleys, and more moss and debris
 holding moisture against the roof surface.</p>
 
@@ -113,7 +113,7 @@ open terrain around it on the eastern side of town. Those subdivisions have very
 and storms crossing from the southwest hit them with the full force they carried across open
 ground. The pattern is much like Hutto's northern edge: the first row of houses on the windward
 side of a development takes a disproportionate share of the wind damage.</p>
-<p>Pflugerville's newer neighbourhoods also share Hutto's shade problem. Limited mature canopy means
+<p>Pflugerville's newer neighborhoods also share Hutto's shade problem. Limited mature canopy means
 roofs take unbroken summer sun, which shortens asphalt shingle life relative to the older,
 tree-covered parts of the metro. Attic ventilation is worth checking on any Pflugerville roof
 approaching the fifteen-year mark.</p>
@@ -169,7 +169,7 @@ over them. Steep pitch plus plank decking plus mature limbs overhead is a combin
 not encounter in Hutto's newer subdivisions.</p>
 <p>Out past the town limits, Taylor is <strong>farm and ranch country</strong>, and that is where the
 <a href="/services/metal-roofing-hutto-tx/">metal roofing</a> work is. Barns, equipment sheds,
-workshops and outbuildings across the Blackland Prairie run on exposed-fastener panel roofs, where
+workshops and outbuildings around Taylor run on exposed-fastener panel roofs, where
 the recurring job is fastener and washer service rather than replacement.</p>
 <p>Taylor is also changing fast. The large semiconductor development on the northeast side has
 brought new residential construction, and those new subdivisions have the same profile as Hutto's
@@ -224,11 +224,11 @@ careful than a standard re-roof.</p>
 <p><strong>Sun City and the west-side developments.</strong> Sun City Texas alone accounts for
 thousands of homes, built in phases from the mid-1990s through the 2010s. That phasing is the
 roofing story: entire sections reach replacement age together, and the earliest phases are well
-past twenty years on their original coverings. These are largely single-storey homes with
+past twenty years on their original coverings. These are largely single-story homes with
 straightforward roof geometry, which makes them efficient to work on &mdash; but they sit high and
 exposed on the west side with limited canopy.</p>
 <p><strong>The hill country edge.</strong> West and north toward Lake Georgetown the terrain changes
-from Blackland Prairie to rockier hill country, with larger lots, custom homes, heavier tree cover
+from flat farmland to rockier hill country, with larger lots, custom homes, heavier tree cover
 and more <a href="/services/metal-roofing-hutto-tx/">metal roofing</a>. Fire resistance is a real
 consideration on those properties during a dry summer, which is part of why metal is common.</p>
 
@@ -275,8 +275,8 @@ Georgetown re-roof.</p>
         "body": """
 <h2>Roofing in Manor, TX</h2>
 <p>Manor is a straight run south from Hutto on SH-130, roughly twenty-two minutes. Of everywhere we
-work, Manor is the town that most resembles Hutto &mdash; a small agricultural community on the
-Blackland Prairie that has grown very fast in a short time &mdash; and <strong>roofing</strong> in
+work, Manor is the town that most resembles Hutto &mdash; a small agricultural community that
+has grown very fast in a short time &mdash; and <strong>roofing</strong> in
 <strong>Manor, TX</strong> presents almost exactly the same set of problems we see at home.</p>
 
 <h2>Why Manor roofs behave like Hutto roofs</h2>
@@ -284,14 +284,12 @@ Blackland Prairie that has grown very fast in a short time &mdash; and <strong>r
 2010, and that growth arrived as large planned subdivisions dropped onto former farmland:
 <strong>ShadowGlen</strong>, <strong>Presidential Glen</strong>, <strong>Stonewater</strong>,
 <strong>Bell Farms</strong>, <strong>Wildhorse</strong> and the developments filling in along US-290.
-Concentrated build windows, uniform builder shingle packages, and now a synchronised march toward
+Concentrated build windows, uniform builder shingle packages, and now a synchronized march toward
 replacement age &mdash; the same pattern driving Hutto's current replacement wave.</p>
-<p>The terrain is the same too. Manor sits on flat, open Blackland Prairie with minimal elevation
-change and very little mature tree canopy over the newer subdivisions. That produces the two
-conditions that define roofing here: <strong>unbroken sun</strong> through the summer, which ages
-asphalt shingles faster than in the shaded parts of the metro, and <strong>unobstructed wind</strong>,
-which arrives at roof edges with nothing to slow it down. Attic ventilation and wind-rated nailing
-patterns matter as much in Manor as they do in 78634.</p>
+<p>The setting is the same too: flat ground and little mature tree cover over the newer
+subdivisions, which means more sun on the shingles through the summer and more wind at the roof
+edges in a storm. Attic ventilation and wind-rated nailing patterns matter as much in Manor as they
+do in 78634.</p>
 <p>Manor does have one thing Hutto does not, and it affects the weather picture. It sits further
 south and east, closer to the Colorado River bottomlands, which puts it slightly off the main
 Williamson County storm track. A cell that batters Hutto sometimes passes north of Manor entirely.

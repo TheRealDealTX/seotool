@@ -654,21 +654,18 @@ priorities. These are common starting points to discuss with a {BIZ['city']} roo
 <section class="local"><div class="container local-grid">
 <div class="local-copy">
 <div class="eyebrow">Local Roofing Focus</div>
-<h2>Why Hutto roofs wear out faster than the brochure says.</h2>
-<p>Hutto sits on flat, open Blackland Prairie at the eastern edge of the Austin metro, and that
-geography is hard on roofing. The subdivisions that filled in through the 2000s and 2010s &mdash;
-Star Ranch, Emory Farms, Creek Bend, Cottonwood Creek, Legends of Hutto &mdash; were built on former
-farmland where the landscaping is still catching up. There is almost no canopy over those roof
-planes, so the shingles take direct sun from sunrise to sunset through five months of Texas summer,
-then cycle 30 degrees cooler overnight. Asphalt does not enjoy that.</p>
-<p>The same open ground means nothing slows the wind down. When a line moves northeast through
-{BIZ['county']}, the gusts reaching the developments off FM 1660 and Chris Kelley Boulevard arrive
-with the full force they carried across open field &mdash; and spring hail falls in swaths narrow
-enough that one Hutto neighbourhood is hit while the next is missed entirely. Meanwhile the older
-lots around Old Town Hutto and along Brushy Creek have the opposite problem: mature pecans and live
-oaks that shade the roof beautifully and drop limbs on it during storms.</p>
-<p>All of which is a long way of saying that a roof in 78634 needs the details right. Balanced
-attic ventilation, a six-nail high-wind pattern, and honest attention after each severe season.</p>
+<h2>Roofing in Hutto, Texas, for the roofs that are actually here.</h2>
+<p>Most of Hutto's homes went up within a short span of years. Star Ranch, Emory Farms, Creek Bend,
+Cottonwood Creek and Legends of Hutto were built with similar roofing on similar timelines, and many
+of those roofs are now reaching the fifteen-to-twenty-year mark at the same time. The older homes
+around Old Town Hutto and along Brushy Creek are a different job: smaller roofs, a longer history of
+past repairs, and mature trees close to the house.</p>
+<p>{BIZ['county']} gets hail and high wind most springs, usually March through May, with a second
+round in the fall. Hail tends to fall in narrow bands, so one neighborhood can be hit while the next
+is untouched. After any significant storm, an inspection is the reliable way to know where your roof
+stands.</p>
+<p>Whatever the roof and whatever the season, the job is the same: find the actual problem, explain
+it plainly, and fix what needs fixing at a fair price.</p>
 <div class="signal-list">
 <div class="signal">Missing or lifted shingles</div>
 <div class="signal">Ceiling or attic stains</div>
@@ -1034,8 +1031,8 @@ def build_areas_index():
     page["body"] = f"""
 <h2>Hutto, TX &mdash; our home market</h2>
 <p>{BIZ['name']} is based in {BIZ['city']}, {BIZ['state']} {BIZ['zip']}, in {BIZ['county']}. The
-<a href="/">Hutto roofing homepage</a> covers what we do and how Hutto's open Blackland Prairie
-position affects the roofs here.</p>
+<a href="/">Hutto roofing homepage</a> covers what we do and what is particular about the roofs
+here.</p>
 
 <h2>Towns we also cover</h2>
 <div class="link-grid">{cards}</div>
@@ -1045,7 +1042,7 @@ position affects the roofs here.</p>
 share a building stock. Taylor has a historic downtown with hundred-year-old low-slope commercial
 roofs. Georgetown has Sun City's thousands of phase-built homes alongside Victorian properties near
 the square. Round Rock spans four decades of construction. Hutto and Manor are near-twins &mdash;
-fast-growing prairie towns where whole subdivisions reach replacement age together.</p>
+fast-growing towns where whole subdivisions reach replacement age together.</p>
 <p>Those differences change what a roofing visit involves, which is why each town has its own page
 rather than a name swapped into the same text.</p>
 """
