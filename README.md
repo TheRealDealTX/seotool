@@ -16,6 +16,7 @@ file, one JS file and local images. Upload the repo root to any web host.
 | `siteconfig.py` | Business details, locality facts, navigation |
 | `content/` | Page copy — services, service areas, blog, legal |
 | `validate.py` | Post-build checks (run it after every build) |
+| `templates/blog-post.html` | Generated blog post template for drop-in posts |
 
 ## Rebuilding
 
@@ -52,7 +53,16 @@ Preview locally with `python3 -m http.server 8000`.
 Georgetown, Manor. Each carries its own local detail (neighborhoods, drive time
 from Hutto, storm pattern, county) and links back to the Hutto homepage.
 
-**Blog** (`/blog/`) — six Central Texas homeowner guides.
+**Blog** (`/blog/`) — six Central Texas homeowner guides, one keyword each:
+
+| Page | Keyword |
+| --- | --- |
+| `/blog/how-much-does-a-roof-replacement-cost-in-hutto-tx/` | how much does a roof replacement cost in hutto tx |
+| `/blog/best-roofing-materials-for-central-texas-heat/` | best roofing materials for central texas heat |
+| `/blog/shingle-vs-metal-roofing-which-is-right-for-you/` | shingle vs metal roofing |
+| `/blog/signs-you-need-a-new-roof/` | signs you need a new roof |
+| `/blog/how-long-does-a-roof-last-in-texas/` | how long does a roof last in texas |
+| `/blog/how-to-choose-a-roofing-contractor-in-hutto/` | how to choose a roofing contractor in hutto |
 
 **Other** — `/privacy-policy/`, `/terms-of-use/`, `/sitemap/`, `/404.html`,
 `/sitemap.xml`, `/robots.txt`.
@@ -102,15 +112,32 @@ LocalBusiness data carries Hutto's address, 78634 postcode, coordinates and the
 
 `validate.py` enforces this: valid JSON-LD, one H1, unique titles and
 descriptions, no broken internal links or missing assets, alt text on every
-image, no WordPress or source-city leftovers, and keyword presence in the title,
-H1, meta description and body of each money page.
+image, keyword presence in the title, H1, meta description and body of every
+service, area and blog page, and — per the brief's QA step — no leftover
+source-city names, counties, zip codes, phone numbers or WordPress
+fingerprints anywhere in the build (only Hutto's 78634 and (512) 297-7580 may
+appear).
+
+## Adding a blog post
+
+Two ways, both end with `python3 build.py && python3 validate.py`.
+
+**As an HTML file (no Python):** copy `templates/blog-post.html` to
+`blog/<slug>/index.html` and replace the `{{PLACEHOLDERS}}` — the comment at
+the top of the template lists them. `build.py` finds any `blog/*/index.html` it
+did not generate itself, reads the title, description, H1 and
+`article:published_time`, and adds it to `/blog/` and `sitemap.xml`. The
+template is regenerated on every build from the live design, so it never
+drifts.
+
+**In Python:** add a dict to `POSTS` in `content/blog.py`. This is what the six
+existing posts use, and it gives you the shared phone/business constants.
+
+`templates/` is excluded from the sitemap, from validation and from the deploy
+archive, and `robots.txt` disallows it.
 
 ## Known gaps
 
-- **The blog brief was truncated.** The task description cut off mid-list at
-  "how much does a", so the first post matches that opening and the other five
-  cover the questions that most commonly accompany it. See the note at the top
-  of `content/blog.py`; the list is a plain Python list and easy to extend.
 - **The estimate form is not wired up.** It posts nowhere and shows a reminder
   on submit. Point it at a form handler or CRM endpoint before going live
   (`contact_section()` in `build.py`, and the submit handler in

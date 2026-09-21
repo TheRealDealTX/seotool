@@ -44,6 +44,16 @@ def url(path):
 # Shared chrome
 # --------------------------------------------------------------------------
 
+def article_meta(page):
+    """Dates for blog posts. The blog index and sitemap read these back from
+    drop-in posts, so the template and the generator must agree on them."""
+    if not page.get("published"):
+        return ""
+    mod = page.get("modified", page["published"])
+    return (f'<meta property="article:published_time" content="{page["published"]}">\n'
+            f'<meta property="article:modified_time" content="{mod}">\n')
+
+
 def head(page):
     """<head> for one page, including its JSON-LD graph."""
     canonical = url(page["path"])
@@ -70,7 +80,7 @@ def head(page):
 <meta name="twitter:title" content="{esc(page['title'])}">
 <meta name="twitter:description" content="{esc(page['description'])}">
 <meta name="twitter:image" content="{og_image}">
-<meta name="geo.region" content="US-TX">
+{article_meta(page)}<meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="{BIZ['city']}, {BIZ['state_long']}">
 <meta name="geo.position" content="{BIZ['latitude']};{BIZ['longitude']}">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -842,7 +852,7 @@ def build_posts():
         page["hero_cta"] = "Request an Estimate"
         page["body"] = (
             f'<p class="article-meta"><span>Published {post["published"]}</span>'
-            f'<span>{post["read_time"]}</span><span>{BIZ["name"]}</span></p>'
+            f'<span class="read-time">{post["read_time"]}</span><span>{BIZ["name"]}</span></p>'
             + post["body"]
         )
         page["side_lists"] = [
@@ -864,6 +874,65 @@ def build_posts():
             article_schema(post),
         ]
         write(post["path"], prose_page(page))
+
+
+# --------------------------------------------------------------------------
+# Drop-in blog posts
+#
+# A post can be added without touching Python: copy templates/blog-post.html
+# to blog/<slug>/index.html and fill in the placeholders. build_blog_index()
+# and the sitemap pick it up from its <title>, meta description, H1 and the
+# article:published_time meta tag.
+# --------------------------------------------------------------------------
+
+_DROPINS = None
+
+
+def discover_dropin_posts():
+    global _DROPINS
+    if _DROPINS is not None:
+        return _DROPINS
+    found = _DROPINS = []
+    blog_dir = os.path.join(OUT, "blog")
+    if not os.path.isdir(blog_dir):
+        return found
+    generated = {p["slug"] for p in POSTS}
+    for slug in sorted(os.listdir(blog_dir)):
+        fs = os.path.join(blog_dir, slug, "index.html")
+        if slug in generated or not os.path.isfile(fs):
+            continue
+        html = open(fs, encoding="utf-8").read()
+        # The template's instruction comment names the placeholders, so look
+        # for unfilled ones only outside comments.
+        if "{{" in re.sub(r"<!--.*?-->", "", html, flags=re.S):
+            print(f"  ! skipping blog/{slug}/: unfilled template placeholders")
+            continue
+
+        def grab(pattern, default=""):
+            m = re.search(pattern, html, re.S)
+            return m.group(1).strip() if m else default
+
+        title = grab(r"<title>(.*?)</title>")
+        h1 = re.sub(r"<[^>]+>", "", grab(r"<h1[^>]*>(.*?)</h1>"))
+        if not title or not h1:
+            print(f"  ! skipping blog/{slug}/: no <title> or <h1>")
+            continue
+        found.append({
+            "slug": slug,
+            "path": f"/blog/{slug}/",
+            "h1_plain": h1,
+            "excerpt": grab(r'<meta name="description" content="(.*?)">'),
+            "published": grab(r'<meta property="article:published_time" content="(.*?)">', "1970-01-01"),
+            "read_time": grab(r'<span class="read-time">(.*?)</span>', ""),
+            "dropin": True,
+        })
+        print(f"  + drop-in post: blog/{slug}/")
+    return found
+
+
+def all_posts():
+    """Generated posts plus drop-ins, newest first."""
+    return sorted(POSTS + discover_dropin_posts(), key=lambda p: p["published"], reverse=True)
 
 
 # --------------------------------------------------------------------------
@@ -1007,12 +1076,12 @@ def build_blog_index():
     }
     cards = "".join(
         f"""<a class="link-card post-card" href="{p['path']}">
-<span class="post-date">{p['published']} &middot; {p['read_time']}</span>
+<span class="post-date">{p['published']}{' &middot; ' + p['read_time'] if p.get('read_time') else ''}</span>
 <h3>{p['h1_plain']}</h3>
 <p>{p['excerpt']}</p>
 <span class="service-link">Read the guide &rarr;</span>
 </a>"""
-        for p in POSTS
+        for p in all_posts()
     )
     page["body"] = f"""
 <h2>Latest guides</h2>
@@ -1035,7 +1104,7 @@ here.</p>
         '{"@type":"ItemList","itemListElement":[' + ",".join(
             '{"@type":"ListItem","position":%d,"name":"%s","url":"%s"}'
             % (i, esc(p["h1_plain"]), url(p["path"]))
-            for i, p in enumerate(POSTS, start=1)
+            for i, p in enumerate(all_posts(), start=1)
         ) + "]}",
     ]
     write("/blog/", prose_page(page))
@@ -1160,6 +1229,85 @@ def build_404():
 
 
 # --------------------------------------------------------------------------
+# Blog post template (templates/blog-post.html)
+#
+# Rendered through the same prose_page() as every generated post, so it can
+# never drift from the live design. Placeholders are {{UPPER_CASE}} tokens.
+# templates/ is excluded from the sitemap, validation and the deploy archive.
+# --------------------------------------------------------------------------
+
+def build_blog_template():
+    page = {
+        "path": "/blog/{{SLUG}}/",
+        "title": "{{TITLE}} | " + BIZ["name"],
+        "description": "{{META_DESCRIPTION}}",
+        "h1": "{{H1}}",
+        "h1_plain": "{{H1}}",
+        "eyebrow": "{{EYEBROW}}",
+        "published": "{{YYYY-MM-DD}}",
+        "read_time": "{{N}} min read",
+        "excerpt": "{{META_DESCRIPTION}}",
+        "hero_image": "/assets/img/LOCAL-HUTTO-ROOFING.webp",
+        "hero_alt": "{{HERO_IMAGE_ALT}}",
+        "active": "/blog/",
+        "og_type": "article",
+        "hero_intro": "{{META_DESCRIPTION}}",
+        "hero_cta": "Request an Estimate",
+        "trail": [("Home", "/"), ("Blog", "/blog/"), ("{{H1}}", None)],
+        "body": (
+            '<p class="article-meta"><span>Published {{YYYY-MM-DD}}</span>'
+            '<span class="read-time">{{N}} min read</span><span>' + BIZ["name"] + "</span></p>\n"
+            "<!-- ARTICLE BODY: replace everything between these markers. Use <h2> for sections,\n"
+            "     <h3> for sub-sections, <p>, <ul>/<ol>, and <div class=\"callout\"> for asides.\n"
+            "     Link to services with /services/<slug>/ and other posts with /blog/<slug>/. -->\n"
+            "{{BODY_HTML}}\n"
+            "<!-- END ARTICLE BODY -->"
+        ),
+        "side_lists": [
+            {"title": "More from the blog",
+             "items": [(p["h1_plain"], p["path"]) for p in POSTS]},
+            {"title": "Roofing services",
+             "items": [(s["nav_label"], s["path"]) for s in SERVICES[:6]]},
+        ],
+        "cta_heading": "Questions about your own roof?",
+        "cta_intro": (
+            f"Articles describe the general case. For what is happening on your roof in "
+            f"{BIZ['city']}, call or text {BIZ['phone_display']} and describe it."
+        ),
+    }
+    page["schema"] = [
+        org_schema(), website_schema(), webpage_schema(page),
+        breadcrumb_schema(page["trail"], page["path"]), article_schema(page),
+    ]
+    html = prose_page(page)
+    instructions = """<!--
+  HUTTO ROOFERS BLOG POST TEMPLATE
+  ================================
+  1. Copy this file to  blog/<slug>/index.html   (slug: lowercase-with-hyphens)
+  2. Replace every {{PLACEHOLDER}}:
+       {{SLUG}}              the folder name, e.g. roof-ventilation-basics
+       {{TITLE}}             page title, under 50 chars (" | Hutto Roofers" is appended)
+       {{META_DESCRIPTION}}  140-160 chars, includes the post's main keyword
+       {{H1}}                the headline; may differ from TITLE
+       {{EYEBROW}}           short category label, e.g. Roofing Costs
+       {{YYYY-MM-DD}}        publish date (appears twice)
+       {{N}}                 reading time in minutes (appears twice)
+       {{HERO_IMAGE_ALT}}    alt text for the hero image; change the src if you add an image
+       {{BODY_HTML}}         the article, as HTML
+  3. Run  python3 build.py  - the post is picked up automatically and added to
+     /blog/ and sitemap.xml. Then  python3 validate.py.
+  Leave everything else alone; header, footer, sidebar and schema come from the live design.
+-->
+"""
+    html = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + instructions, 1)
+    target = os.path.join(OUT, "templates", "blog-post.html")
+    os.makedirs(os.path.dirname(target), exist_ok=True)
+    with open(target, "w", encoding="utf-8") as fh:
+        fh.write(html)
+    WRITTEN.append("/templates/blog-post.html")
+
+
+# --------------------------------------------------------------------------
 # robots.txt + sitemap.xml
 # --------------------------------------------------------------------------
 
@@ -1168,7 +1316,7 @@ def build_sitemap_xml():
                ("/service-areas/", "0.8", "monthly"), ("/blog/", "0.7", "weekly")]
     entries += [(s["path"], "0.9", "monthly") for s in SERVICES]
     entries += [(a["path"], "0.7", "monthly") for a in AREAS]
-    entries += [(p["path"], "0.6", "monthly") for p in POSTS]
+    entries += [(p["path"], "0.6", "monthly") for p in all_posts()]
     entries += [("/sitemap/", "0.3", "yearly"), ("/privacy-policy/", "0.2", "yearly"),
                 ("/terms-of-use/", "0.2", "yearly")]
     urls = "\n".join(
@@ -1185,7 +1333,8 @@ def build_sitemap_xml():
 def build_robots():
     write("/robots.txt",
           "User-agent: *\n"
-          "Allow: /\n\n"
+          "Allow: /\n"
+          "Disallow: /templates/\n\n"
           f"Sitemap: {url('/sitemap.xml')}\n")
 
 
@@ -1202,8 +1351,9 @@ def main():
     build_services()
     build_areas_index()
     build_areas()
-    build_blog_index()
     build_posts()
+    build_blog_index()
+    build_blog_template()
     build_legal()
     build_sitemap_page()
     build_404()

@@ -247,7 +247,7 @@ hail season. After a major storm, demand across
 {", ".join(NEARBY[:-1])} and {NEARBY[-1]} spikes and lead times stretch, so the calculus changes.</p>
 <p>Not sure you are actually at the replacement stage? Start with a
 <a href="/services/roof-inspection-hutto-tx/">roof inspection in Hutto</a>, or read our breakdown of
-<a href="/blog/how-much-does-a-new-roof-cost-in-hutto-tx/">what a new roof costs in Hutto</a>.</p>
+<a href="/blog/how-much-does-a-roof-replacement-cost-in-hutto-tx/">what a roof replacement costs in Hutto</a>.</p>
 """,
         "faqs": [
             ("How long does a roof replacement take in Hutto?",
@@ -500,7 +500,7 @@ unless something is actually open, but it is on a clock. Every month of Texas su
 moves it further along. Document it now, decide within the season.</p>
 <p>Related: <a href="/services/storm-damage-roof-repair-hutto-tx/">storm damage roof repair in Hutto</a>,
 <a href="/services/roof-inspection-hutto-tx/">roof inspection in Hutto</a>, and our guide to
-<a href="/blog/hail-damage-roof-inspection-what-to-look-for/">what to look for after a hail storm</a>.</p>
+<a href="/blog/best-roofing-materials-for-central-texas-heat/">materials that stand up to Central Texas weather</a>.</p>
 """,
         "faqs": [
             ("How do I know if my Hutto roof has hail damage if it is not leaking?",
@@ -761,7 +761,7 @@ when the problem is contained, <a href="/services/roof-replacement-hutto-tx/">fu
 when the system has aged out, and <a href="/services/roof-installation-hutto-tx/">new installation</a>
 on additions and new construction. Weighing shingles against the alternative? See
 <a href="/services/metal-roofing-hutto-tx/">metal roofing in Hutto</a>, or read our
-<a href="/blog/metal-vs-shingle-roofs-in-central-texas/">side-by-side comparison</a>.</p>
+<a href="/blog/shingle-vs-metal-roofing-which-is-right-for-you/">side-by-side comparison</a>.</p>
 """,
         "faqs": [
             ("How long do asphalt shingles last in Hutto?",
@@ -891,7 +891,7 @@ Decide which one is yours before you spend the money.</p>
 <p>New standing seam installation, exposed-fastener panel roofs for agricultural and outbuilding
 structures, fastener and washer service on existing panel roofs, panel and flashing repair, and
 conversions from asphalt to metal. If you are weighing the two, our
-<a href="/blog/metal-vs-shingle-roofs-in-central-texas/">metal versus shingle comparison</a> works
+<a href="/blog/shingle-vs-metal-roofing-which-is-right-for-you/">shingle versus metal comparison</a> works
 through the numbers, and
 <a href="/services/shingle-roofing-hutto-tx/">shingle roofing in Hutto</a> covers the alternative.</p>
 """,

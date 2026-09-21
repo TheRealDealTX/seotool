@@ -41,7 +41,7 @@ class Checker(HTMLParser):
 
 def pages():
     for dirpath, _dirs, files in os.walk(ROOT):
-        if any(part in dirpath for part in (".git", "assets", "__pycache__")):
+        if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates")):
             continue
         for f in files:
             if f.endswith(".html"):
@@ -111,13 +111,24 @@ for fs in sorted(pages()):
     if not re.search(r'<link rel="canonical"', html):
         errors.append(f"{sp}: no canonical")
 
-    # --- no WordPress / source-site leftovers ---
+    # --- no WordPress / source-site leftovers (brief §7) ---
+    # Source cities, their counties and zip codes, plus WP fingerprints.
     for bad in ["wp-content", "wp-includes", "elementor", "litespeed", "wp-json",
                 "templeroofs", "kyleroofs", "copperascoveroofs",
                 "Temple", "Belton", "Kyle", "Copperas Cove", "Harker Heights",
-                "Bell County", "Coryell County", "Hays County"]:
+                "Killeen", "Buda", "San Marcos",
+                "Bell County", "Coryell County", "Hays County",
+                "76501", "76502", "76504", "76508", "76513", "76522", "76548", "78640"]:
         if bad.lower() in html.lower():
             errors.append(f"{sp}: contains '{bad}'")
+    # Only Hutto Roofers' own number may appear, in any formatting.
+    for num in set(re.findall(r"\+?1?[\s.-]?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}", html)):
+        if re.sub(r"\D", "", num)[-10:] != "5122977580":
+            errors.append(f"{sp}: unexpected phone number {num!r}")
+    # And only Hutto's zip.
+    for z in set(re.findall(r"\b7[5-9]\d{3}\b", re.sub(r"<script.*?</script>", "", html, flags=re.S))):
+        if z != "78634":
+            errors.append(f"{sp}: unexpected zip code {z}")
 
     # --- internal links resolve ---
     for href in re.findall(r'href="(/[^"#?]*)', html):
@@ -198,6 +209,20 @@ for kw in ["hutto roofing company", "roofer hutto tx", "roofers in hutto texas",
            "hutto roofing contractor"]:
     if not near_sequence(home_text, kw):
         warnings.append(f"/: homepage secondary keyword {kw!r} not found")
+
+# --- blog keywords: title, H1, meta and body ---
+from content.blog import POSTS                 # noqa: E402
+for post in POSTS:
+    fs = os.path.join(ROOT, post["path"].strip("/"), "index.html")
+    html = open(fs, encoding="utf-8").read().lower()
+    kw = post["keyword"].lower()
+    title = re.search(r"<title>(.*?)</title>", html, re.S).group(1)
+    desc = re.search(r'<meta name="description" content="(.*?)">', html, re.S).group(1)
+    h1 = re.sub(r"<[^>]+>", "", re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S).group(1))
+    body = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html))
+    for label, hay in [("title", title), ("meta", desc), ("h1", h1), ("body", body)]:
+        if not near_sequence(hay, kw, window=3):
+            errors.append(f"{post['path']}: keyword {kw!r} missing from {label}")
 
 print(f"{len(list(pages()))} HTML pages checked")
 if warnings:

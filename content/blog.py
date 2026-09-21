@@ -1,9 +1,8 @@
 """Homeowner-focused blog posts for Central Texas roofs.
 
-NOTE: the brief's blog list arrived truncated after "how much does a", so the
-first post matches that opening and the remaining five cover the questions
-Hutto homeowners most commonly ask alongside it. Swap or extend this list as
-the full brief becomes available.
+Six posts, in the order the brief lists them. Posts written outside this file
+as plain HTML are picked up automatically by build.py (see README, "Adding a
+blog post").
 """
 
 from siteconfig import BIZ
@@ -12,35 +11,36 @@ PHONE = BIZ["phone_display"]
 
 POSTS = [
     {
-        "slug": "how-much-does-a-new-roof-cost-in-hutto-tx",
-        "keyword": "how much does a new roof cost in hutto tx",
-        "title": "How Much Does a New Roof Cost in Hutto, TX? (2026)",
+        "slug": "how-much-does-a-roof-replacement-cost-in-hutto-tx",
+        "keyword": "how much does a roof replacement cost in hutto tx",
+        "title": "How Much Does a Roof Replacement Cost in Hutto, TX? (2026)",
         "description": (
-            "How much does a new roof cost in Hutto, TX? Real 2026 price ranges by roof size and "
-            "material, plus the seven factors that move the number. Call (512) 297-7580."
+            "How much does a roof replacement cost in Hutto, TX? 2026 price ranges by roof size "
+            "and material, plus the seven factors that move the number. Call (512) 297-7580."
         ),
-        "h1": "How Much Does a New Roof Cost in <span class=\"gold-text\">Hutto, TX</span>?",
-        "h1_plain": "How Much Does a New Roof Cost in Hutto, TX?",
+        "h1": "How Much Does a Roof Replacement Cost in <span class=\"gold-text\">Hutto, TX</span>?",
+        "h1_plain": "How Much Does a Roof Replacement Cost in Hutto, TX?",
         "eyebrow": "Roofing Costs",
         "published": "2026-03-12",
         "modified": "2026-09-08",
         "read_time": "9 min read",
         "excerpt": (
-            "Real price ranges for a new roof in Hutto by size and material, the seven factors "
+            "Real price ranges for a roof replacement in Hutto by size and material, the seven factors "
             "that move the number, and how to read an estimate so you can compare two quotes "
             "that look nothing alike."
         ),
         "hero_image": "/assets/img/New-Roof-Installation.webp",
-        "hero_alt": "New roof being installed on a home in Hutto, Texas",
+        "hero_alt": "Roof replacement underway on a home in Hutto, Texas",
         "body": f"""
-<p>Ask three roofers what a new roof costs in Hutto and you will get three numbers that are
+<p>Ask three roofers what a roof replacement costs in Hutto and you will get three numbers that are
 thousands of dollars apart &mdash; and all three can be honest. Roofing is priced by the square, by
 the pitch, by the complexity of the roofline and by what turns up once the old shingles come off.
 What follows is what those numbers actually look like in Hutto in 2026, and more usefully, what
 makes one house's roof cost twice what its neighbour's did.</p>
 
 <h2>The short answer</h2>
-<p>For a typical single-family home in Hutto, a full asphalt shingle roof replacement runs
+<p>So, how much does a roof replacement cost in Hutto, TX? For a typical single-family home, a
+full asphalt shingle roof replacement runs
 <strong>$12,000 to $22,000</strong>. Smaller or simpler homes come in below that; large, steep or
 complex rooflines go well above it. Metal roofing runs roughly two to three times those figures.</p>
 
@@ -144,7 +144,7 @@ carrier. That is a separate track from choosing a contractor.</p>
 on your third or fourth repair, or shingles crack when they are lifted, repair money is being spent
 on a roof that is going to be replaced anyway. Our page on
 <a href="/services/roof-replacement-hutto-tx/">roof replacement in Hutto, TX</a> covers where that
-line falls, and <a href="/blog/signs-you-need-a-new-roof-in-hutto/">the signs you need a new roof</a>
+line falls, and <a href="/blog/signs-you-need-a-new-roof/">the signs you need a new roof</a>
 goes through the specific indicators.</p>
 
 <h2>Getting a real number</h2>
@@ -153,17 +153,16 @@ written after somebody has measured your roof, counted the penetrations and look
 Call or text <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we will come and produce one.</p>
 """,
     },
-
     {
-        "slug": "how-long-does-a-roof-last-in-central-texas",
-        "keyword": "how long does a roof last in central texas",
-        "title": "How Long Does a Roof Last in Central Texas? | Hutto Roofers",
+        "slug": "how-long-does-a-roof-last-in-texas",
+        "keyword": "how long does a roof last in texas",
+        "title": "How Long Does a Roof Last in Texas? | Hutto Roofers",
         "description": (
-            "How long does a roof last in Central Texas? Realistic lifespans by material, why "
-            "Hutto roofs age faster than the brochure says, and how to extend them."
+            "How long does a roof last in Texas? Realistic lifespans by material, why Hutto "
+            "roofs age faster than the brochure says, and how to get more years out of yours."
         ),
-        "h1": "How Long Does a Roof Last in <span class=\"gold-text\">Central Texas</span>?",
-        "h1_plain": "How Long Does a Roof Last in Central Texas?",
+        "h1": "How Long Does a Roof Last in <span class=\"gold-text\">Texas</span>?",
+        "h1_plain": "How Long Does a Roof Last in Texas?",
         "eyebrow": "Roof Lifespan",
         "published": "2026-04-08",
         "read_time": "7 min read",
@@ -179,7 +178,8 @@ Call or text <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we will come and 
 lasts under controlled conditions with ideal ventilation and no hail. Central Texas is not that
 place. A "30-year" shingle on a Hutto roof with a hot, poorly ventilated attic will not see thirty
 years, and anyone who tells you otherwise is selling something.</p>
-<p>Here is what roofs actually do here.</p>
+<p>So how long does a roof last in Texas? Here is what roofs actually do here, and why Central
+Texas in particular is the hard end of the state for asphalt.</p>
 
 <h2>Realistic lifespans in Central Texas</h2>
 <div class="table-wrap">
@@ -251,255 +251,21 @@ reliably.</p>
 install year. Failing that, the roof itself tells you: widespread granule loss, curling or cupping
 tabs, cracking, bald patches and heavy granule accumulation in the gutters all indicate a roof in
 its final years.</p>
-<p>Our guide to <a href="/blog/signs-you-need-a-new-roof-in-hutto/">the signs you need a new roof in
+<p>Our guide to <a href="/blog/signs-you-need-a-new-roof/">the signs you need a new roof in
 Hutto</a> goes through those in detail, or call <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we
 will give you a straight assessment of how much life is left.</p>
 """,
     },
-]
-
-POSTS += [
     {
-        "slug": "signs-you-need-a-new-roof-in-hutto",
-        "keyword": "signs you need a new roof in hutto",
-        "title": "9 Signs You Need a New Roof in Hutto, TX | Hutto Roofers",
+        "slug": "shingle-vs-metal-roofing-which-is-right-for-you",
+        "keyword": "shingle vs metal roofing",
+        "title": "Shingle vs Metal Roofing: Which Is Right for You? | Hutto Roofers",
         "description": (
-            "Nine signs you need a new roof in Hutto, TX, what each one actually means, and how "
-            "to tell a repair from a replacement. Call Hutto Roofers at (512) 297-7580."
+            "Shingle vs metal roofing: real costs, lifespan, hail and heat performance in Central "
+            "Texas, and the three questions that settle which is right for your home."
         ),
-        "h1": "9 Signs You Need a New Roof in <span class=\"gold-text\">Hutto</span>",
-        "h1_plain": "9 Signs You Need a New Roof in Hutto",
-        "eyebrow": "Repair or Replace",
-        "published": "2026-05-06",
-        "read_time": "8 min read",
-        "excerpt": (
-            "Curling tabs, granules in the gutter, a ceiling stain that keeps coming back. Nine "
-            "signals worth acting on, what each one actually means, and which ones are a repair "
-            "rather than a replacement."
-        ),
-        "hero_image": "/assets/img/Repair-Maintenance.webp",
-        "hero_alt": "Worn asphalt shingles on a Hutto, Texas roof",
-        "body": f"""
-<p>Roofs rarely fail suddenly. They send signals for two or three years first, and most of those
-signals are visible from the ground if you know what you are looking at. Here are the nine that
-matter, roughly in order of how seriously to take them.</p>
-
-<h2>1. Age past 15 years on builder-grade shingles</h2>
-<p>Not a defect, but a context that changes how you read everything else. Most of Hutto's
-subdivision housing went up between 2004 and 2014 with builder-grade architectural shingles, which
-run 20 to 28 years here &mdash; less on an unventilated attic. If your roof is original to a
-<strong>Star Ranch</strong>, <strong>Emory Farms</strong> or <strong>Creek Bend</strong> home from that
-era, it is in the zone where small problems start meaning something.</p>
-
-<h2>2. Granules in the gutters and at downspout outlets</h2>
-<p>Granules are the shingle's UV protection. A handful after a new install is normal shedding.
-Ongoing accumulation &mdash; a visible layer of grit in the gutter trough, or a small pile where the
-downspout discharges &mdash; means the asphalt underneath is being exposed. Once that happens, UV
-degradation accelerates sharply.</p>
-
-<h2>3. Curling, cupping or clawing tabs</h2>
-<p>Shingle edges lifting upward (curling), the middle rising while edges stay down (cupping), or
-edges turning down at the centre (clawing). All three mean the mat has lost flexibility and is no
-longer lying flat. A curled tab is a tab wind can get under, which is a significant problem on
-Hutto's open exposure. Widespread curling is a replacement signal, not a repair one.</p>
-
-<h2>4. Cracked or brittle shingles</h2>
-<p>If a shingle cracks rather than flexes when lifted, its asphalt oils are gone. This is the point
-at which repairs become genuinely difficult &mdash; you cannot lift the shingles around a repair
-without breaking them, so a small job turns into a larger one.</p>
-
-<h2>5. Bald patches and visible mat</h2>
-<p>Areas where the granules are entirely gone and the black asphalt mat shows through. These are
-usually worst on south and west slopes, which take the most sun. On Hutto's unshaded subdivision
-roofs the whole roof can reach this state at roughly the same time.</p>
-
-<h2>6. The same leak coming back</h2>
-<p>One leak is an event. The same leak returning after a repair means either the original diagnosis
-was wrong or the surrounding roof is no longer holding. Three separate leaks in different areas is
-the roof telling you it is failing as a system rather than at a point.</p>
-
-<h2>7. Daylight through the decking</h2>
-<p>Go into the attic on a bright day with the lights off. Pinpoints of daylight through the roof
-sheathing mean gaps in the deck. While you are up there, look for water staining on the rafters and
-the underside of the decking, and for insulation that is compressed, discoloured or damp.</p>
-
-<h2>8. Sagging in the roof plane</h2>
-<p>Stand across the street and look along the ridge and the roof planes. They should be straight.
-Dips, waves or a sagging ridge indicate the decking or the structure below has been compromised,
-usually by long-term moisture. This is the one sign on the list that warrants a call today rather
-than next month.</p>
-
-<h2>9. Storm damage across multiple slopes</h2>
-<p>Damage on one elevation after a wind event is a repair. Hail bruising or wind damage consistent
-across three or four slopes means the roof took the event as a whole. Individual shingles cannot be
-reliably replaced once the mat has been compromised across the field.</p>
-
-<h2>Hutto-specific things to watch for</h2>
-<p>A few of these behave differently here than they would elsewhere in the metro.</p>
-<p><strong>Watch your neighbours.</strong> Because Hutto's subdivisions were built in tight windows
-with identical shingle packages, roofs on a given street reach the same condition at roughly the
-same time. If three houses on your cul-de-sac in <strong>Cottonwood Creek</strong> or
-<strong>Riverwalk</strong> have gone up for replacement this year, yours is worth looking at
-regardless of whether you have noticed anything.</p>
-<p><strong>Check the north slope separately.</strong> Dark vertical streaking on north-facing slopes is
-algae &mdash; common throughout {BIZ['county']} and cosmetic rather than structural. Do not confuse
-it with granule loss. It is not a reason to replace a roof.</p>
-<p><strong>After any spring hail, check the soft metals.</strong> Gutters, downspouts, roof vents and
-the AC condenser fins dent at smaller hail sizes than shingles bruise. Dents there mean stones
-large enough to damage shingles fell on your property, even if the roof looks untouched. See our
-guide to <a href="/blog/hail-damage-roof-inspection-what-to-look-for/">hail damage inspection</a>.</p>
-<p><strong>South and west slopes age first.</strong> On Hutto's unshaded roofs, those two elevations
-take the heaviest sun. If you are checking one part of the roof, check those.</p>
-
-<h2>Repair or replace?</h2>
-<p>Broadly: signs 2, 6 and 9 in isolation can be repairs. Signs 3, 4, 5, 7 and 8, or any
-combination of several signs at once, point to replacement. Sign 1 is the context that tips the
-others one way or the other.</p>
-<p>If you are seeing one or two of these, a
-<a href="/services/roof-inspection-hutto-tx/">roof inspection</a> will tell you where you stand
-without committing you to anything. If you are seeing four or five, it is worth reading
-<a href="/blog/how-much-does-a-new-roof-cost-in-hutto-tx/">what a new roof costs in Hutto</a> and
-starting to plan.</p>
-<p>Not sure which bucket you are in? Call or text <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and
-describe what you are seeing.</p>
-""",
-    },
-
-    {
-        "slug": "hail-damage-roof-inspection-what-to-look-for",
-        "keyword": "hail damage roof inspection what to look for",
-        "title": "Hail Damage Roof Inspection: What to Look For | Hutto Roofers",
-        "description": (
-            "What to look for in a hail damage roof inspection: soft metal dents, bruising, "
-            "granule loss and directional patterns. A Central Texas guide from Hutto Roofers."
-        ),
-        "h1": "Hail Damage Roof Inspection: <span class=\"gold-text\">What to Look For</span>",
-        "h1_plain": "Hail Damage Roof Inspection: What to Look For",
-        "eyebrow": "After the Storm",
-        "published": "2026-06-11",
-        "read_time": "8 min read",
-        "excerpt": (
-            "Hail damage is mostly invisible from the driveway. Here is the order a roofer checks "
-            "things in, what bruising actually is, and the ground-level checks you can safely do "
-            "yourself after a Central Texas storm."
-        ),
-        "hero_image": "/assets/img/WHY-HUTTO-ROOFERS.webp",
-        "hero_alt": "Checking a Central Texas roof for hail damage",
-        "body": f"""
-<p>The single most misleading thing about hail damage is that a badly damaged roof usually looks
-completely normal from the driveway. Homeowners look up, see no missing shingles, and conclude they
-got lucky. Often they did not &mdash; they just cannot see the damage that matters from where they
-are standing.</p>
-<p>Here is what a proper hail inspection actually examines, and what you can safely check yourself.</p>
-
-<h2>What hail does to a shingle</h2>
-<p>An asphalt shingle is a fibreglass or organic mat saturated with asphalt and surfaced with
-mineral granules. Hail causes two distinct kinds of harm:</p>
-<p><strong>Granule loss.</strong> The impact knocks granules off, exposing the asphalt beneath. The
-granules are the shingle's UV protection, so bare asphalt begins degrading immediately.</p>
-<p><strong>Bruising.</strong> The impact compresses and fractures the mat internally while the surface
-stays largely intact. A bruised shingle looks fine and feels soft under thumb pressure, like a
-bruise on fruit. It does not leak now. It leaks in two or three years once UV and thermal cycling
-have opened the fracture up.</p>
-<p>Bruising is the reason ground-level assessment fails. You cannot see it. You have to feel it,
-which means someone has to be on the roof.</p>
-
-<h2>The inspection order</h2>
-
-<h3>1. Soft metals first &mdash; and you can do this part</h3>
-<p>Before anyone gets on a ladder, the soft metals tell you whether damaging hail actually fell on
-your property. They dent at smaller stone sizes than shingles bruise, which makes them an excellent
-early indicator:</p>
-<ul>
-<li><strong>Gutters and downspouts</strong> &mdash; look along the top edge and the round face of downspouts</li>
-<li><strong>Roof vents and turbines</strong> &mdash; visible from the ground with binoculars</li>
-<li><strong>The AC condenser</strong> &mdash; the aluminium fins on the outdoor unit are the most sensitive hail indicator on the property</li>
-<li><strong>Window screens, mailboxes, garage doors, metal fence caps, patio furniture</strong></li>
-</ul>
-<p>If those are dented and the roof "looks fine", the roof almost certainly is not fine.</p>
-
-<h3>2. Test squares on each slope</h3>
-<p>A roofer marks out a 10&times;10 foot area on each slope and counts the impacts inside it. This
-converts a vague impression into a number and shows whether damage is scattered or genuinely
-widespread. It also reveals whether one elevation took the storm and the others did not.</p>
-
-<h3>3. Directional consistency</h3>
-<p>Hail arrives on the wind, so real hail damage is directionally consistent. In Central Texas,
-storms generally track southwest to northeast, which typically puts the heaviest impacts on the
-north and west slopes. Damage scattered randomly with no directional pattern is usually something
-else &mdash; foot traffic, manufacturing defects or normal wear.</p>
-
-<h3>4. Ridge and hip caps</h3>
-<p>The most exposed shingles on the roof, sitting at the highest point with the least protection.
-They usually show the clearest impacts and are a good confirmation of what the field slopes are
-telling you.</p>
-
-<h3>5. Penetrations and accessories</h3>
-<p>Pipe boots, skylight flashing, satellite mounts, solar attachments and vent housings. Cracked
-pipe boot collars are common after hail and are a direct leak path.</p>
-
-<h3>6. The attic</h3>
-<p>Fresh water staining, damp insulation or daylight through the decking. On a recently
-hail-damaged roof the attic is often still clean &mdash; that is expected, and it is not evidence the
-roof is undamaged.</p>
-
-<h2>What is not hail damage</h2>
-<p>Worth knowing, because misidentification wastes everyone's time:</p>
-<ul>
-<li><strong>Blistering</strong> &mdash; small raised bubbles from manufacturing or trapped moisture. Round, uniform, no directional pattern.</li>
-<li><strong>Scuffing from foot traffic</strong> &mdash; granule loss in lines or patches, often near HVAC units or satellite dishes.</li>
-<li><strong>Algae streaking</strong> &mdash; dark vertical streaks on north slopes. Cosmetic.</li>
-<li><strong>Normal granule shedding</strong> &mdash; uniform, gradual, no impact marks.</li>
-<li><strong>Mechanical damage</strong> &mdash; sharp gouges or tears from tools or debris rather than round impacts.</li>
-</ul>
-
-<h2>Hail in Hutto: what to expect locally</h2>
-<p>Hutto's hail season runs <strong>March through May</strong> with a secondary window in
-<strong>September and October</strong>. Storms form where Gulf moisture meets drier air off the Edwards
-Plateau and track northeast, which means a cell over Georgetown or Round Rock is frequently over
-Hutto minutes later.</p>
-<p>The detail that catches people out here is how narrow hail swaths are. A core a mile or two wide
-can cross <strong>Star Ranch</strong> and <strong>Emory Farms</strong> while <strong>Old Town Hutto</strong>
-and the properties toward <strong>Hutto Lake Park</strong> get nothing but rain. Whether your roof was
-hit is a question about your address, not about Hutto.</p>
-<p>Hutto's open Blackland Prairie exposure makes impacts harder than they would be elsewhere.
-Without canopy to break the fall, stones arrive at full speed, and wind-driven hail comes in at an
-angle that drives it under shingle tabs rather than bouncing off. The newer subdivisions on the
-north and east sides of 78634 take the least-obstructed hits in town.</p>
-
-<div class="callout">
-<p><strong>Timing note.</strong> Most Texas homeowners policies cover sudden hail damage and apply a
-filing deadline measured from the date of loss &mdash; check yours, because it varies by carrier.
-Independently of any claim, the roof degrades faster once granules are gone, so getting it
-documented within weeks rather than months is the practical move.</p>
-</div>
-
-<h2>What to do next</h2>
-<ol>
-<li>Note the storm date and time.</li>
-<li>Photograph the dented soft metals from the ground.</li>
-<li>Check the attic if you can get to it safely.</li>
-<li>Have the roof itself inspected by someone who will walk it and feel for bruising.</li>
-<li>Get a written assessment with photographs before deciding anything.</li>
-</ol>
-<p>We do that inspection across Hutto and the surrounding towns &mdash; see
-<a href="/services/hail-damage-roof-repair-hutto-tx/">hail damage roof repair in Hutto, TX</a> or
-call <a href="tel:{BIZ['phone_href']}">{PHONE}</a>.</p>
-""",
-    },
-]
-
-POSTS += [
-    {
-        "slug": "metal-vs-shingle-roofs-in-central-texas",
-        "keyword": "metal vs shingle roofs in central texas",
-        "title": "Metal vs Shingle Roofs in Central Texas | Hutto Roofers",
-        "description": (
-            "Metal vs shingle roofs in Central Texas: real costs, lifespan, hail performance and "
-            "heat. An honest comparison for Hutto homeowners from Hutto Roofers."
-        ),
-        "h1": "Metal vs Shingle Roofs in <span class=\"gold-text\">Central Texas</span>",
-        "h1_plain": "Metal vs Shingle Roofs in Central Texas",
+        "h1": "Shingle vs Metal Roofing: <span class=\"gold-text\">Which Is Right for You?</span>",
+        "h1_plain": "Shingle vs Metal Roofing: Which Is Right for You?",
         "eyebrow": "Material Comparison",
         "published": "2026-07-15",
         "read_time": "8 min read",
@@ -509,9 +275,10 @@ POSTS += [
             "actually plan to own the house."
         ),
         "hero_image": "/assets/img/New-Roof-Installation.webp",
-        "hero_alt": "Metal and shingle roofing compared on Central Texas homes",
+        "hero_alt": "Shingle and metal roofing compared on Central Texas homes",
         "body": f"""
-<p>Metal costs roughly two to three times what asphalt does and lasts roughly two to three times
+<p>The shingle vs metal roofing question comes up on almost every replacement we quote in Hutto.
+Metal costs roughly two to three times what asphalt does and lasts roughly two to three times
 as long. On paper that looks like a wash, which is exactly why the comparison needs more than the
 headline numbers. The real question is not which roof is better &mdash; it is which one is better
 <em>for your building, your hail exposure and your time horizon</em>.</p>
@@ -602,116 +369,344 @@ and <a href="/services/shingle-roofing-hutto-tx/">shingle roofing in Hutto, TX</
 <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we will price both on your actual roof.</p>
 """,
     },
-
     {
-        "slug": "prepare-your-roof-for-central-texas-storm-season",
-        "keyword": "prepare your roof for storm season",
-        "title": "Prepare Your Roof for Central Texas Storm Season | Hutto Roofers",
+        "slug": "signs-you-need-a-new-roof",
+        "keyword": "signs you need a new roof",
+        "title": "9 Signs You Need a New Roof in Hutto, TX | Hutto Roofers",
         "description": (
-            "How to prepare your roof for storm season in Central Texas: a month-by-month "
-            "checklist for Hutto homeowners before spring hail and wind arrive."
+            "Nine signs you need a new roof in Hutto, TX, what each one actually means, and how "
+            "to tell a repair from a replacement. Call Hutto Roofers at (512) 297-7580."
         ),
-        "h1": "How to Prepare Your Roof for <span class=\"gold-text\">Storm Season</span>",
-        "h1_plain": "How to Prepare Your Roof for Central Texas Storm Season",
-        "eyebrow": "Seasonal Maintenance",
-        "published": "2026-08-19",
-        "read_time": "7 min read",
+        "h1": "9 Signs You Need a New Roof in <span class=\"gold-text\">Hutto</span>",
+        "h1_plain": "9 Signs You Need a New Roof in Hutto",
+        "eyebrow": "Repair or Replace",
+        "published": "2026-05-06",
+        "read_time": "8 min read",
         "excerpt": (
-            "Central Texas storm season is predictable enough to plan around. A month-by-month "
-            "checklist for Hutto homeowners, and the four jobs worth doing before March."
+            "Curling tabs, granules in the gutter, a ceiling stain that keeps coming back. Nine "
+            "signals worth acting on, what each one actually means, and which ones are a repair "
+            "rather than a replacement."
         ),
-        "hero_image": "/assets/img/LOCAL-HUTTO-ROOFING.webp",
-        "hero_alt": "Hutto, Texas home ahead of Central Texas storm season",
+        "hero_image": "/assets/img/Repair-Maintenance.webp",
+        "hero_alt": "Worn asphalt shingles on a Hutto, Texas roof",
         "body": f"""
-<p>Central Texas weather is violent but not unpredictable. The severe season arrives at roughly the
-same time every year, which means roof preparation is a scheduling problem rather than a guessing
-game. The work that matters takes an afternoon and costs very little. The work that gets skipped
-turns into a claim.</p>
+<p>Roofs rarely fail suddenly. They send signals for two or three years first, and most of those
+signals are visible from the ground if you know what you are looking at. Here are the nine that
+matter, roughly in order of how seriously to take them.</p>
 
-<h2>The Central Texas storm calendar</h2>
+<h2>1. Age past 15 years on builder-grade shingles</h2>
+<p>Not a defect, but a context that changes how you read everything else. Most of Hutto's
+subdivision housing went up between 2004 and 2014 with builder-grade architectural shingles, which
+run 20 to 28 years here &mdash; less on an unventilated attic. If your roof is original to a
+<strong>Star Ranch</strong>, <strong>Emory Farms</strong> or <strong>Creek Bend</strong> home from that
+era, it is in the zone where small problems start meaning something.</p>
+
+<h2>2. Granules in the gutters and at downspout outlets</h2>
+<p>Granules are the shingle's UV protection. A handful after a new install is normal shedding.
+Ongoing accumulation &mdash; a visible layer of grit in the gutter trough, or a small pile where the
+downspout discharges &mdash; means the asphalt underneath is being exposed. Once that happens, UV
+degradation accelerates sharply.</p>
+
+<h2>3. Curling, cupping or clawing tabs</h2>
+<p>Shingle edges lifting upward (curling), the middle rising while edges stay down (cupping), or
+edges turning down at the centre (clawing). All three mean the mat has lost flexibility and is no
+longer lying flat. A curled tab is a tab wind can get under, which is a significant problem on
+Hutto's open exposure. Widespread curling is a replacement signal, not a repair one.</p>
+
+<h2>4. Cracked or brittle shingles</h2>
+<p>If a shingle cracks rather than flexes when lifted, its asphalt oils are gone. This is the point
+at which repairs become genuinely difficult &mdash; you cannot lift the shingles around a repair
+without breaking them, so a small job turns into a larger one.</p>
+
+<h2>5. Bald patches and visible mat</h2>
+<p>Areas where the granules are entirely gone and the black asphalt mat shows through. These are
+usually worst on south and west slopes, which take the most sun. On Hutto's unshaded subdivision
+roofs the whole roof can reach this state at roughly the same time.</p>
+
+<h2>6. The same leak coming back</h2>
+<p>One leak is an event. The same leak returning after a repair means either the original diagnosis
+was wrong or the surrounding roof is no longer holding. Three separate leaks in different areas is
+the roof telling you it is failing as a system rather than at a point.</p>
+
+<h2>7. Daylight through the decking</h2>
+<p>Go into the attic on a bright day with the lights off. Pinpoints of daylight through the roof
+sheathing mean gaps in the deck. While you are up there, look for water staining on the rafters and
+the underside of the decking, and for insulation that is compressed, discoloured or damp.</p>
+
+<h2>8. Sagging in the roof plane</h2>
+<p>Stand across the street and look along the ridge and the roof planes. They should be straight.
+Dips, waves or a sagging ridge indicate the decking or the structure below has been compromised,
+usually by long-term moisture. This is the one sign on the list that warrants a call today rather
+than next month.</p>
+
+<h2>9. Storm damage across multiple slopes</h2>
+<p>Damage on one elevation after a wind event is a repair. Hail bruising or wind damage consistent
+across three or four slopes means the roof took the event as a whole. Individual shingles cannot be
+reliably replaced once the mat has been compromised across the field.</p>
+
+<h2>Hutto-specific things to watch for</h2>
+<p>A few of these behave differently here than they would elsewhere in the metro.</p>
+<p><strong>Watch your neighbours.</strong> Because Hutto's subdivisions were built in tight windows
+with identical shingle packages, roofs on a given street reach the same condition at roughly the
+same time. If three houses on your cul-de-sac in <strong>Cottonwood Creek</strong> or
+<strong>Riverwalk</strong> have gone up for replacement this year, yours is worth looking at
+regardless of whether you have noticed anything.</p>
+<p><strong>Check the north slope separately.</strong> Dark vertical streaking on north-facing slopes is
+algae &mdash; common throughout {BIZ['county']} and cosmetic rather than structural. Do not confuse
+it with granule loss. It is not a reason to replace a roof.</p>
+<p><strong>After any spring hail, check the soft metals.</strong> Gutters, downspouts, roof vents and
+the AC condenser fins dent at smaller hail sizes than shingles bruise. Dents there mean stones
+large enough to damage shingles fell on your property, even if the roof looks untouched. See our
+page on <a href="/services/hail-damage-roof-repair-hutto-tx/">hail damage roof repair</a>.</p>
+<p><strong>South and west slopes age first.</strong> On Hutto's unshaded roofs, those two elevations
+take the heaviest sun. If you are checking one part of the roof, check those.</p>
+
+<h2>Repair or replace?</h2>
+<p>Broadly: signs 2, 6 and 9 in isolation can be repairs. Signs 3, 4, 5, 7 and 8, or any
+combination of several signs at once, point to replacement. Sign 1 is the context that tips the
+others one way or the other.</p>
+<p>If you are seeing one or two of these, a
+<a href="/services/roof-inspection-hutto-tx/">roof inspection</a> will tell you where you stand
+without committing you to anything. If you are seeing four or five, it is worth reading
+<a href="/blog/how-much-does-a-roof-replacement-cost-in-hutto-tx/">what a roof replacement costs in Hutto</a> and
+starting to plan.</p>
+<p>Not sure which bucket you are in? Call or text <a href="tel:{BIZ['phone_href']}">{PHONE}</a> and
+describe what you are seeing.</p>
+""",
+    },
+    {
+        "slug": "best-roofing-materials-for-central-texas-heat",
+        "keyword": "best roofing materials for central texas heat",
+        "title": "Best Roofing Materials for Central Texas Heat | Hutto Roofers",
+        "description": (
+            "The best roofing materials for Central Texas heat, ranked by how they handle 100-degree "
+            "summers, hail and attic temperatures. Practical picks for Hutto homes."
+        ),
+        "h1": "Best Roofing Materials for <span class=\"gold-text\">Central Texas Heat</span>",
+        "h1_plain": "Best Roofing Materials for Central Texas Heat",
+        "eyebrow": "Materials Guide",
+        "published": "2026-06-11",
+        "read_time": "8 min read",
+        "excerpt": (
+            "A Hutto roof spends five months a year above 90 degrees. Here is how each common "
+            "material handles that, what actually keeps an attic cooler, and which choices pay "
+            "back on the electricity bill."
+        ),
+        "hero_image": "/assets/img/Asphalt-Shingle-Roofing.webp",
+        "hero_alt": "Roofing materials on Central Texas homes in summer heat",
+        "body": f"""
+<p>Heat is the slow killer of Central Texas roofs. Hail gets the headlines, but it is the daily
+100&deg;F afternoon and the 140&deg;F attic beneath it that drive the oils out of asphalt, warp
+fasteners and shorten a roof's life year after year. Choosing the best roofing materials for
+Central Texas heat is less about one magic product and more about three properties working
+together: how much sun the surface reflects, how quickly it sheds the heat it does absorb, and
+whether the attic underneath can breathe.</p>
+
+<h2>What "handles heat well" actually means</h2>
+<ul>
+<li><strong>Solar reflectance.</strong> How much sunlight bounces off rather than soaking in. A white TPO membrane reflects around 80%; a dark asphalt shingle reflects 5&ndash;15%.</li>
+<li><strong>Thermal emittance.</strong> How readily the material releases absorbed heat after the sun moves. Metal and tile emit fast; asphalt holds on.</li>
+<li><strong>Heat tolerance.</strong> Whether the material itself degrades under sustained high temperature. This is asphalt's weakness and metal's strength.</li>
+<li><strong>Ventilation under it.</strong> Any roof performs badly over a sealed, unvented attic. This matters more than the material choice for most Hutto homes.</li>
+</ul>
+
+<h2>The materials, ranked for Central Texas heat</h2>
 <div class="table-wrap">
 <table class="data-table">
-<thead><tr><th>Period</th><th>What to expect</th><th>What to do</th></tr></thead>
+<thead><tr><th>Material</th><th>Heat performance</th><th>Realistic life here</th><th>Relative cost</th></tr></thead>
 <tbody>
-<tr><td>Nov &ndash; Feb</td><td>Quiet. Occasional cold snap.</td><td>The maintenance window. Inspections, repairs and replacements are easiest to schedule now.</td></tr>
-<tr><td>Mar &ndash; May</td><td>Peak severe season. Hail, straight-line wind, supercells.</td><td>Nothing proactive &mdash; be ready to respond. Check the roof after each significant event.</td></tr>
-<tr><td>Jun &ndash; Aug</td><td>Heat. Attic temperatures peak.</td><td>Ventilation checks. Watch for heat-related shingle damage.</td></tr>
-<tr><td>Sep &ndash; Oct</td><td>Secondary severe window plus tropical remnants.</td><td>Clear gutters before the heavy rain arrives.</td></tr>
+<tr><td>Standing seam metal, cool-rated finish</td><td>Excellent</td><td>40 &ndash; 60 yrs</td><td>$$$$</td></tr>
+<tr><td>Concrete or clay tile</td><td>Excellent</td><td>40 &ndash; 60 yrs</td><td>$$$$</td></tr>
+<tr><td>Exposed-fastener metal panel</td><td>Very good</td><td>25 &ndash; 40 yrs</td><td>$$</td></tr>
+<tr><td>Cool-rated architectural asphalt (light colour)</td><td>Good</td><td>22 &ndash; 28 yrs</td><td>$$</td></tr>
+<tr><td>Class 4 impact-resistant asphalt</td><td>Good</td><td>22 &ndash; 30 yrs</td><td>$$$</td></tr>
+<tr><td>Standard architectural asphalt (dark colour)</td><td>Fair</td><td>18 &ndash; 25 yrs</td><td>$$</td></tr>
+<tr><td>Three-tab asphalt</td><td>Poor</td><td>15 &ndash; 20 yrs</td><td>$</td></tr>
 </tbody>
 </table>
 </div>
-<p>The important line in that table is the first one. <strong>November through February is when to do
-the work.</strong> Crews are available, lead times are short, and anything you fix then is fixed
-before the hail arrives.</p>
 
-<h2>The four jobs that actually matter</h2>
+<h3>1. Standing seam metal</h3>
+<p>The strongest all-round performer. A light or cool-pigmented finish reflects most of the solar
+load, the panel sheds whatever it absorbs within minutes of the sun moving, and the material
+itself is indifferent to temperature. Hutto's spring hail dents it without compromising it. The
+obstacles are cost and, in several of the newer subdivisions, HOA rules on roofing profiles. See
+<a href="/services/metal-roofing-hutto-tx/">metal roofing in Hutto</a>.</p>
 
-<h3>1. Clear the gutters and check the downspouts</h3>
-<p>Blocked gutters back water up under the roof edge, where it rots decking and fascia from a place
-you cannot see. Clear them, then run a hose and confirm the water leaves through the downspouts and
-discharges away from the foundation. While you are at it, note whether there is a layer of granules
-in the trough &mdash; that tells you something about the shingles' condition.</p>
+<h3>2. Concrete and clay tile</h3>
+<p>Tile is thermally massive and sits on battens with an air gap beneath, so it barely conducts
+heat into the deck at all. It is excellent in this climate and common in the Hill Country to our
+west. Two caveats for Hutto: the weight requires a structure designed for it, which most 2000s
+subdivision framing was not, and large hail can crack individual tiles.</p>
 
-<h3>2. Trim overhanging limbs</h3>
-<p>Two problems, both solved by the same job. Limbs abrade shingles when they move in wind, and
-limbs come down in storms. Cut anything overhanging the roof back, and take out dead wood entirely.
-In Hutto this matters most along the <strong>Brushy Creek</strong> corridor and around
-<strong>Old Town</strong>, where mature pecans and live oaks stand close to the houses. Saturated soil
-after a long rain makes whole trees more likely to go over.</p>
+<h3>3. Exposed-fastener metal panel</h3>
+<p>Same thermal behaviour as standing seam at a fraction of the price. The exposed screws and
+washers are the maintenance point. The right answer for barns, shops and outbuildings on the
+acreage around Hutto, and a reasonable one for a simple-roofline house.</p>
 
-<h3>3. Check the attic ventilation</h3>
-<p>Go into the attic and look at the soffit vents from the inside. Blown-in insulation very
-commonly buries them, which kills the intake side of the ventilation system entirely. Exhaust
-without intake does almost nothing. Baffles are cheap and fix it. This is a summer-heat job as much
-as a storm job, but the attic is where you would also spot existing water staining, so do it once
-and get both.</p>
+<h3>4. Cool-rated and light-coloured asphalt shingles</h3>
+<p>Asphalt is the practical choice for most Hutto homes, and within asphalt the colour and granule
+choice matter more than people expect. Manufacturers now offer shingle lines with reflective
+granules that meet ENERGY STAR or Cool Roof Rating Council thresholds. A light grey or tan cool
+shingle can run 20&ndash;30&deg;F cooler at the surface than a black one on the same afternoon,
+which translates directly into attic temperature and shingle life. See
+<a href="/services/shingle-roofing-hutto-tx/">shingle roofing in Hutto</a>.</p>
 
-<h3>4. Fix the small stuff now</h3>
-<p>A lifted shingle, a cracked pipe boot, a loose section of flashing. Each is a couple of hundred
-dollars in February and a leak with interior damage in April. Wind finds whatever is already
-loose &mdash; that is the entire mechanism. See
-<a href="/services/roof-repair-hutto-tx/">roof repair in Hutto</a>.</p>
+<h3>5. Class 4 impact-resistant asphalt</h3>
+<p>Not a heat product as such, but worth listing because in Hutto the heat question and the hail
+question arrive together. Class 4 shingles are a modified-asphalt architectural product; choose a
+light colour and you get the heat benefit and the hail resistance in one roof, often with an
+insurance premium discount.</p>
 
-<h2>A ground-level check you can do yourself</h2>
-<p>You do not need to get on the roof. Walk the perimeter of the house with binoculars and look for:</p>
+<h3>What to avoid</h3>
+<p>Dark three-tab shingles over an unvented attic. It is the cheapest roof on the day of
+installation and the most expensive per year of service in this climate.</p>
+
+<h2>The part that matters more than the material</h2>
+<p>Attic ventilation. A balanced system &mdash; intake at the soffits, exhaust at the ridge &mdash;
+keeps a Central Texas attic within 20&ndash;30&deg;F of outdoor temperature. An unbalanced or blocked
+system lets it climb past 150&deg;F, and at that point the shingles are being cooked from below
+regardless of what colour they are on top. Blown-in insulation burying the soffit vents is the
+most common problem we find in Hutto attics, and baffles fix it cheaply.</p>
+<p>Radiant barrier &mdash; foil-faced sheathing or a foil layer stapled under the rafters &mdash; is the
+second-best upgrade. It reflects radiant heat off the underside of the deck and typically drops
+attic temperature by 20&deg;F or more. New construction around Hutto commonly includes it now;
+homes from the 2000s boom mostly do not.</p>
+
+<h2>Why this matters more in Hutto than in Austin</h2>
+<p>Hutto's subdivisions were built on open Blackland Prairie farmland, and the trees planted with
+them are still small. Roofs in <strong>Star Ranch</strong>, <strong>Emory Farms</strong>,
+<strong>Creek Bend</strong> and <strong>Legends of Hutto</strong> take unbroken sun from sunrise to
+sunset. Compare that with an established Austin or Round Rock neighbourhood under mature live oaks,
+where a good part of the roof is shaded for half the day. A dark shingle that lasts 25 years under
+canopy can be done at 18 out here. The reflectance of the material and the ventilation beneath it
+are how a Hutto roof closes that gap.</p>
+
+<h2>Our recommendation for most Hutto homes</h2>
+<p>If you are staying long term and the HOA allows it, standing seam metal in a light cool finish.
+For everyone else, a light-coloured Class 4 architectural shingle over a properly ventilated attic
+with a radiant barrier. That combination handles heat and hail, keeps the August cooling bill
+reasonable, and does not cost what metal does. Call
+<a href="tel:{BIZ['phone_href']}">{PHONE}</a> and we will price both on your roof.</p>
+""",
+    },
+    {
+        "slug": "how-to-choose-a-roofing-contractor-in-hutto",
+        "keyword": "how to choose a roofing contractor in hutto",
+        "title": "How to Choose a Roofing Contractor in Hutto, TX | Hutto Roofers",
+        "description": (
+            "How to choose a roofing contractor in Hutto: the questions to ask, the paperwork to "
+            "see, the warning signs after a storm, and what Texas law says about deductibles."
+        ),
+        "h1": "How to Choose a Roofing Contractor in <span class=\"gold-text\">Hutto</span>",
+        "h1_plain": "How to Choose a Roofing Contractor in Hutto",
+        "eyebrow": "Hiring Guide",
+        "published": "2026-08-19",
+        "read_time": "8 min read",
+        "excerpt": (
+            "Texas does not license roofers, which puts the checking on you. Eight things to "
+            "verify before signing, the storm-season warning signs, and the one thing a Hutto "
+            "roofer is legally not allowed to offer."
+        ),
+        "hero_image": "/assets/img/A-practical-approach-to-your-roof-not-a-one-size-fits-all-answer.webp",
+        "hero_alt": "Roofing contractor working on a home in Hutto, Texas",
+        "body": f"""
+<p>Here is the thing most homeowners do not know: Texas has no state licence for roofing
+contractors. Anyone with a truck and a ladder can call themselves a roofer, and after a hail storm
+crosses Williamson County a great many of them do. That puts the job of vetting squarely on you.
+Knowing how to choose a roofing contractor in Hutto is mostly knowing what to ask for and what to
+walk away from.</p>
+
+<h2>Eight things to verify before you sign anything</h2>
+
+<h3>1. A real local address</h3>
+<p>Not a PO box, not a phone number that forwards somewhere. A roofing warranty is only as good as
+your ability to find the company in five years. Ask where they are based and how long they have
+worked in Hutto, Round Rock and Taylor specifically.</p>
+
+<h3>2. Liability insurance and workers' compensation</h3>
+<p>Ask for certificates, and call the insurer on the certificate to confirm the policy is current.
+General liability covers damage to your property; workers' compensation covers a crew member who
+falls off your roof. Without the second, an injured worker's claim can land on the homeowner.</p>
+
+<h3>3. Voluntary certification</h3>
+<p>Because Texas does not license roofers, the Roofing Contractors Association of Texas runs a
+voluntary licensing programme, and the major shingle manufacturers certify installers. Neither is
+mandatory, but both mean someone has checked the company's insurance and training.</p>
+
+<h3>4. A written, itemised estimate</h3>
+<p>It should state the roof size in squares, the exact shingle line, underlayment type, what is new
+versus reused (drip edge, valley metal, pipe boots), the ventilation plan, a per-sheet price for
+decking replacement, and who pulls the permit. A one-line quote with a total is not an estimate;
+it is an invitation to change orders. Our guide to
+<a href="/blog/how-much-does-a-roof-replacement-cost-in-hutto-tx/">roof replacement cost in Hutto</a>
+walks through each line.</p>
+
+<h3>5. Two warranties, stated separately</h3>
+<p>The manufacturer warrants the shingles. The contractor warrants the workmanship. They are
+different documents with different terms, and a company that blurs them is usually offering only
+the first.</p>
+
+<h3>6. Local references from the last year</h3>
+<p>Not a testimonial page &mdash; addresses in 78634 you can drive past, and a homeowner or two you
+can phone. Recent work matters more than old work, because crews change.</p>
+
+<h3>7. Who is actually on the roof</h3>
+<p>Many companies subcontract the labour. That is not automatically a problem, but ask whether the
+crew is theirs, whether a supervisor from the company will be on site, and who you call if
+something goes wrong on day two.</p>
+
+<h3>8. Permit handling</h3>
+<p>Re-roofing inside the City of Hutto generally needs a permit. A contractor who suggests skipping
+it is telling you something about how they handle the parts of the job you cannot see.</p>
+
+<h2>The Texas deductible rule</h2>
+<div class="callout">
+<p>Since 2019 it has been illegal in Texas for a contractor to waive, absorb, rebate or otherwise
+"cover" your insurance deductible on a roofing claim. A company offering a "free roof" or telling
+you the deductible is "taken care of" is proposing insurance fraud, and the homeowner can be the
+one exposed. It is also the single most reliable warning sign that you are talking to a storm
+chaser rather than a contractor.</p>
+</div>
+
+<h2>Storm-season warning signs</h2>
+<p>After a significant hail or wind event, Hutto gets a wave of out-of-area crews within days. Some
+are legitimate; many are not. Be cautious of:</p>
 <ul>
-<li>Missing, lifted, curled or cracked shingles</li>
-<li>Displaced ridge caps along the top line</li>
-<li>Rusted, bent or separated flashing at chimneys and wall transitions</li>
-<li>Damaged or leaning vents and turbines</li>
-<li>Sagging or waviness in the roof plane, checked from across the street</li>
-<li>Granule accumulation where downspouts discharge</li>
-<li>Gaps or gaps in the drip edge along the eaves</li>
+<li><strong>Unsolicited door-knocking</strong> the day after a storm, particularly with an out-of-state plate on the truck</li>
+<li><strong>Pressure to sign today</strong> &mdash; a real roofer's price is the same next week</li>
+<li><strong>Requests for a large deposit</strong> before materials are delivered</li>
+<li><strong>Offers to "handle the insurance company for you"</strong> in a way that has you signing over the claim</li>
+<li><strong>No written estimate</strong>, or one that is oddly close to your claim amount</li>
+<li><strong>A "free inspection" that finds damage on every house on the street</strong> &mdash; hail is real, but so is the pattern of manufactured damage</li>
 </ul>
-<p>Then check inside: ceiling stains, especially in upstairs rooms and around chimneys, and the
-attic for daylight through the decking or damp insulation.</p>
+<p>The tell is always the same: a company that will still be here next spring behaves differently
+from one that will not.</p>
 
-<h2>What Hutto homeowners should know specifically</h2>
-<p>Hutto's position makes two parts of this list matter more than they would elsewhere in the
-metro.</p>
-<p><strong>Wind, because there is nothing to stop it.</strong> Hutto sits on flat, open Blackland
-Prairie. No hills, no ridge line, and across the newer subdivisions off <strong>FM 1660</strong> and
-<strong>Chris Kelley Boulevard</strong> almost no mature tree line. Straight-line winds behind a squall
-line cross open field and arrive at those roof edges essentially undiminished. Houses on the
-windward edge of a development take the worst of it. If you are on the western or northern edge of
-your subdivision, the pre-season check on loose shingles and edge details is not optional.</p>
-<p><strong>Hail, because the swaths are narrow.</strong> A core a mile or two wide can cross one Hutto
-subdivision and miss the next entirely. That means you cannot judge your own risk from the news
-coverage &mdash; after any significant spring event, check your own soft metals. See
-<a href="/blog/hail-damage-roof-inspection-what-to-look-for/">what to look for after hail</a>.</p>
-<p>There is also a timing advantage specific to Hutto right now. So much of the housing stock here
-is reaching 15 to 20 years simultaneously that post-storm demand across
-Hutto, Round Rock, Pflugerville and Georgetown spikes hard after a bad spring. If your roof is in
-that age bracket and you already know it needs replacing, doing it in the quiet season is both
-cheaper and faster than joining the queue in May.</p>
+<h2>Questions worth asking on the estimate visit</h2>
+<ul>
+<li>Will you go into the attic? (If not, they are inspecting half the roof.)</li>
+<li>What ventilation does this house have now, and is it balanced?</li>
+<li>How many nails per shingle, and why?</li>
+<li>What happens if you find rotten decking?</li>
+<li>Who is on site each day and who do I call?</li>
+<li>What is the workmanship warranty, in writing, and who honours it if you close?</li>
+</ul>
+<p>A good contractor welcomes those questions. A poor one gets vague.</p>
 
-<h2>After a storm</h2>
-<p>Stay off the roof, photograph what you can see from the ground, check inside, and get the roof
-looked at within a week or two. If anything is actually open, that is an
-<a href="/services/emergency-roof-repair-hutto-tx/">emergency</a> &mdash; call immediately. Otherwise,
-<a href="/services/storm-damage-roof-repair-hutto-tx/">storm damage assessment</a> can wait for
-safe conditions.</p>
-<p>To get the pre-season check done, call or text <a href="tel:{BIZ['phone_href']}">{PHONE}</a>.</p>
+<h2>Choosing between two good quotes</h2>
+<p>If two estimates are both itemised, both from insured local companies, and a few thousand
+dollars apart, look at the specification rather than the total. Different underlayment, four nails
+versus six, reused versus new flashing, a ridge vent versus none &mdash; those explain most price
+gaps, and the cheaper roof is often the less specified one. The
+<a href="/blog/best-roofing-materials-for-central-texas-heat/">materials guide</a> covers what those
+specifications actually buy you on a Hutto roof.</p>
+
+<h2>Where we fit</h2>
+<p>{BIZ['name']} is based in Hutto, works Williamson County year round, and provides the itemised
+estimate, insurance certificates and written workmanship warranty described above as a matter of
+course. If you would like us to be one of the quotes you compare, call or text
+<a href="tel:{BIZ['phone_href']}">{PHONE}</a>.</p>
 """,
     },
 ]
