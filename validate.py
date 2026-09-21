@@ -41,7 +41,7 @@ class Checker(HTMLParser):
 
 def pages():
     for dirpath, _dirs, files in os.walk(ROOT):
-        if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates", "backup", "dist")):
+        if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates", "backup", "dist", "wp-content")):
             continue
         for f in files:
             # Google Search Console verification file is HTML by name only.
