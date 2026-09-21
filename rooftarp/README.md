@@ -66,8 +66,9 @@ that did. Body copy and FAQs are ported from the originals so no ranking signal
 is lost. Note that `emergency-roof-tarp-101` (16 clicks, 14,900 impressions) was
 never linked from the old homepage; it is linked properly here.
 
-**141 removed URLs return 410 Gone**, generated into `.htaccess` from
-`prune-list.txt`. 410 tells Google the pages are intentionally gone, which
+**141 removed URLs return 410 Gone**, generated from `prune-list.txt` into
+`index.php` (the Agency platform ignores `.htaccess`) and into `.htaccess` for
+Apache hosts. 410 tells Google the pages are intentionally gone, which
 de-indexes them faster than a 404 and, unlike a redirect, does not preserve the
 doorway pattern.
 
@@ -110,7 +111,7 @@ Preview with `python3 -m http.server 8000`.
 
 | Path | What it is |
 | --- | --- |
-| `index.html` and the `*/index.html` files | The generated site — the deliverable |
+| `home.html`, `index.php` and the `*/index.html` files | The generated site — the deliverable (`index.php` serves `home.html` at `/` and returns the 410s; see Deploying) |
 | `build.py` | Generator: shared layout, page templates, schema builders |
 | `validate.py` | Post-build checks, including the near-duplicate scan |
 | `siteconfig.py` | Business details, navigation, brand constants |
