@@ -1330,6 +1330,43 @@ def build_sitemap_xml():
           + urls + "\n</urlset>\n")
 
 
+def build_legacy_sitemaps():
+    """The WordPress site published sitemap_index.xml and page-sitemap.xml
+    (Rank Math). Keep both URLs alive so nothing indexed returns a 404."""
+    write("/sitemap_index.xml",
+          '<?xml version="1.0" encoding="UTF-8"?>\n'
+          '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+          f"  <sitemap>\n    <loc>{url('/sitemap.xml')}</loc>\n    <lastmod>{TODAY}</lastmod>\n  </sitemap>\n"
+          "</sitemapindex>\n")
+    write("/page-sitemap.xml", open(os.path.join(OUT, "sitemap.xml"), encoding="utf-8").read())
+
+
+def build_htaccess():
+    """Apache/LiteSpeed config for the static site: index.html first (the
+    WordPress install preferred index.php), a real 404 page, and 301s for
+    the WordPress URL patterns that no longer exist."""
+    write("/.htaccess", """# huttoroofs.com - static site
+DirectoryIndex index.html index.htm
+ErrorDocument 404 /404.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Old WordPress-only paths -> nearest static equivalent
+RewriteRule ^feed/?$ /blog/ [R=301,L]
+RewriteRule ^(wp-admin|wp-login\\.php|xmlrpc\\.php|wp-json)(/.*)?$ / [R=301,L]
+RewriteRule ^wp-content/uploads/2026/09/(.+)$ /assets/img/$1 [R=301,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+""")
+
+
 def build_robots():
     write("/robots.txt",
           "User-agent: *\n"
@@ -1358,6 +1395,8 @@ def main():
     build_sitemap_page()
     build_404()
     build_sitemap_xml()
+    build_legacy_sitemaps()
+    build_htaccess()
     build_robots()
 
     print(f"Built {len(WRITTEN)} files:")
