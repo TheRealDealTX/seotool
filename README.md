@@ -128,8 +128,12 @@ anything else. Everything under `/services/`, `/blog/` etc. is served directly
 as files and never touches PHP. The `wp-*.php` core files that remain in the
 document root are inert (each redirects home via the plugin).
 
-If the site is ever moved to plain static hosting, delete `wp-content/` and
-`.htaccess` takes over the same job.
+`wp-content/uploads/2026/09/` holds the WordPress media library exactly as
+it was (all sizes), so every image URL the old site ever exposed still returns
+200. The static pages themselves use `/assets/img/`.
+
+If the site is ever moved to plain static hosting, delete `wp-content/mu-plugins/`
+and `.htaccess` takes over the same job (keep `wp-content/uploads/`).
 
 ## SEO
 
