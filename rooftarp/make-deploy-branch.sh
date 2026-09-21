@@ -68,11 +68,14 @@ SRC_SHA="$(git rev-parse --short "$SRC_BRANCH" 2>/dev/null || git rev-parse --sh
 WORKTREE="$(mktemp -d)"
 trap 'rm -rf "$STAGE" "$WORKTREE"' EXIT
 
-git worktree add --detach "$WORKTREE" >/dev/null 2>&1
+git worktree add --detach "$WORKTREE" >/dev/null
 (
   cd "$WORKTREE"
-  git checkout --orphan "$DEPLOY_BRANCH" >/dev/null 2>&1
-  git rm -rf . >/dev/null 2>&1 || true
+  # Orphan onto a temporary name: --orphan refuses a branch that already
+  # exists, which is exactly the case on every rebuild after the first.
+  git branch -D "_$DEPLOY_BRANCH-tmp" >/dev/null 2>&1 || true
+  git checkout --orphan "_$DEPLOY_BRANCH-tmp" >/dev/null
+  git rm -rfq . >/dev/null 2>&1 || true
   # Copy staged files, including dotfiles such as .htaccess.
   cp -R "$STAGE"/. .
   git add -A
@@ -83,8 +86,10 @@ Document root only: no build scripts, no content sources, no backup archive.
 Do not commit here by hand -- this branch is rebuilt from source."
 )
 
-git branch -f "$DEPLOY_BRANCH" "$(git -C "$WORKTREE" rev-parse HEAD)" >/dev/null 2>&1 || true
-git worktree remove --force "$WORKTREE" >/dev/null 2>&1
+NEW_SHA="$(git -C "$WORKTREE" rev-parse HEAD)"
+git worktree remove --force "$WORKTREE" >/dev/null
+git branch -D "_$DEPLOY_BRANCH-tmp" >/dev/null 2>&1 || true
+git branch -f "$DEPLOY_BRANCH" "$NEW_SHA" >/dev/null
 
 COUNT="$(git ls-tree -r --name-only "$DEPLOY_BRANCH" | wc -l | tr -d ' ')"
 echo "==> $DEPLOY_BRANCH built: $COUNT files"
