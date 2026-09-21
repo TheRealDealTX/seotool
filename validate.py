@@ -41,7 +41,7 @@ class Checker(HTMLParser):
 
 def pages():
     for dirpath, _dirs, files in os.walk(ROOT):
-        if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates")):
+        if any(part in dirpath for part in (".git", "assets", "__pycache__", "templates", "backup", "dist")):
             continue
         for f in files:
             if f.endswith(".html"):
