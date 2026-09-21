@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /templates/
+Disallow: /home.html
+
+Sitemap: https://rooftarp.com/sitemap.xml
