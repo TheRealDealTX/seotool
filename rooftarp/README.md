@@ -194,7 +194,7 @@ template placeholders, and the near-duplicate scan.
 | Primary domain | `rooftarp.com` (attached via `changeWebsiteDomain`, 19:20 UTC) |
 | Nameservers | `pixel.dns-parking.com`, `byte.dns-parking.com` — set at GoDaddy (registrar) by the owner |
 | DNS | `A @ 72.60.128.114`, `AAAA @ 2a02:4780:3e:3:1636:c799:4082:e44`, `CNAME www rooftarp.com` — added in hPanel by the owner (the DNS API cannot write platform zones for domains not registered at Hostinger) |
-| SSL | Let's Encrypt, platform-managed; `installing` at the time of this commit |
+| SSL | Let's Encrypt, platform-managed; `active` (validated ~19:52 UTC) |
 | Deployed from | `deploy.sh` (56 files via the File Browser TUS endpoint) |
 
 Verified live over HTTP once DNS resolved: `/` 301→https (front controller),
