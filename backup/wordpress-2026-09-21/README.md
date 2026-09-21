@@ -28,15 +28,19 @@ plugins, `wp-config.php`, all uploads). SHA-256 in
 `huttoroofs-wordpress-files-2026-09-21.zip.sha256`.
 
 Stored on the Hostinger website's own file storage, outside the document
-root, at `.h5g/huttoroofs-wordpress-files-2026-09-21.zip` (website UID
-Kq0nqTlGe). Retrieve it through hPanel's file manager, or with the File
-Browser API behind `agency-hosting_generateUploadURLV1`. Hostinger's own
-automatic backups for the Agency plan remain available in hPanel as well.
+root, at `.h5g/huttoroofs-wordpress-files-2026-09-21.zip` on the current
+website (UID `Y2Ln5wYMP`). Retrieve it through hPanel's file manager, or with
+the File Browser API behind `agency-hosting_generateUploadURLV1`.
+
+The WordPress website itself (UID `Kq0nqTlGe`) and its database were deleted
+on 2026-09-21 after huttoroofs.com was moved to the new website, so this
+directory plus the zip above are now the only copies.
 
 ## Restoring WordPress
 
-1. hPanel → the website → File manager: extract the zip so its
-   `public_html/` replaces the current document root.
-2. Import `database/…sql.gz` into the same database (its credentials are in
-   the restored `wp-config.php`).
-3. Clear the site cache.
+1. Create a new WordPress website on the Agency plan (hPanel or
+   `agency-hosting_createANewWebsiteV1` with a `wp-*` flavor).
+2. Extract the zip so its `public_html/` replaces the new site's document
+   root, then edit `wp-config.php` to the new site's database credentials.
+3. Import `database/…sql.gz` into that database.
+4. Move huttoroofs.com to it and clear the cache.
