@@ -185,22 +185,60 @@ template placeholders, and the near-duplicate scan.
 
 ## Deploying
 
-**Not yet deployed.** The build is complete and validated but has not been
-pushed to the live server — rooftarp.com is still serving WordPress.
+**Deployed to staging; cutover pending.** The full build is live on a Hostinger
+Agency Plan website and verified there. rooftarp.com itself is still serving
+WordPress until the domain is linked.
 
-Deploying means uploading this directory to the document root at
-`/home/u401386392/domains/rooftarp.com/public_html` (Hostinger account
-`u401386392`, order `64270646`). Before doing that:
+| | |
+| --- | --- |
+| Agency website UID | `xilM91tbv` (order `1008744732`, `phoenix`, php-fpm 8.5) |
+| Preview URL | https://grey-lyrebird-158041.hostingersite.com |
+| Deployed from | `deploy.sh` (56 files via the File Browser TUS endpoint) |
 
-1. **Back up the WordPress site** — files and database both. The current site is
-   the only copy of nine blog posts' original markup.
-2. **Check `.htaccess`** merges cleanly with anything the host adds. The
-   generated file includes the 410 rules, HTTPS/www canonicalisation, legacy
-   sitemap redirects and a 404 document.
-3. **Keep `wp-content/uploads/`** in place if any old image URL should keep
-   returning 200.
-4. **Resubmit `sitemap.xml`** in Search Console and expect the 141 pruned URLs
-   to leave the index over the following weeks.
+Verified on the preview: kept pages 200, the 141 pruned city URLs **410**,
+unknown paths 404, legacy sitemap and feed URLs 301, `sitemap.xml` 42 URLs.
+The preview host serves a platform-injected `Googlebot / Disallow: /` in place
+of `robots.txt`; that is preview-only (huttoroofs.com on the same platform
+serves its real file) and disappears once a custom domain is linked.
+
+### Why the cutover is blocked from the API
+
+rooftarp.com is an addon domain on the *cloud* hosting account `u401386392`
+(order `64270646`, 47 websites). The Agency platform refuses to take a domain
+that another website holds:
+
+- `linkDomainToWebsite(xilM91tbv, rooftarp.com)` → `[Hosting:432] Website not found`
+- `changeWebsiteDomain(...)` → 422
+- `verifyDomainOwnership(rooftarp.com)` → `is_accessible: false`, empty TXT challenge
+  (the platform knows the domain; it is held elsewhere, not unverified)
+- `deleteWebsite(rooftarp.com)` on the cloud account → 400, twice
+
+No file-write, upload or Git-deployment path exists for the cloud website
+either (`generateUploadURL` → 404; no Git installation can be created by API).
+
+### Finishing the cutover
+
+One hPanel action, then the rest is API:
+
+1. **hPanel → Websites → rooftarp.com → ⋯ → Delete website** (the cloud one,
+   *not* the Agency one). Take the database export first if you want it:
+   hPanel → Databases → phpMyAdmin → `u401386392_BlNOR` → Export.
+2. `agency-hosting_linkDomainToWebsiteV1(xilM91tbv, rooftarp.com)`
+3. `agency-hosting_installWebsiteSSLV1(xilM91tbv, rooftarp.com)` and poll
+   `getWebsiteSSLStatusV1` until `active`
+4. `agency-hosting_clearWebsiteCacheV1(xilM91tbv)`
+5. Verify `https://rooftarp.com/` (title, 410 on a pruned slug, `robots.txt`
+   is the real file), then resubmit `sitemap.xml` in Search Console.
+
+Redeploying later: `python3 build.py && python3 validate.py && ./deploy.sh`
+with fresh credentials from `agency-hosting_generateUploadURLV1(xilM91tbv)`.
+
+### `deploy/rooftarp` branch
+
+`make-deploy-branch.sh` maintains an orphan branch whose root is the document
+root (56 servable files, no source, no backup archive) for hosts that deploy
+from Git. It is not what the Agency website uses -- that is `deploy.sh` -- but
+it stays current with the build.
 
 ## Known gaps
 
