@@ -12,6 +12,7 @@ file, one JS file and local images. Upload the repo root to any web host.
 | `assets/css/site.css` | The single shared stylesheet |
 | `assets/js/site.js` | Sticky header + mobile nav (the only script) |
 | `assets/img/` | All images, downloaded from the original site |
+| `favicon.*`, `apple-touch-icon.png`, `site.webmanifest`, `web-app-manifest-*.png`, `googlecccfbf2f7e9e5ae4.html` | Root files carried over from the WordPress install (icons, PWA manifest, Google Search Console verification) — keep them |
 | `build.py` | Generator: shared layout, page templates, schema builders |
 | `siteconfig.py` | Business details, locality facts, navigation |
 | `content/` | Page copy — services, service areas, blog, legal |

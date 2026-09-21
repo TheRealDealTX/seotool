@@ -60,7 +60,8 @@ all_paths = set()
 for f in pages():
     all_paths.add(site_path(f))
 all_paths |= {"/sitemap.xml", "/robots.txt", "/favicon.ico", "/favicon-96x96.png",
-              "/apple-touch-icon.png", "/favicon.svg"}
+              "/apple-touch-icon.png", "/favicon.svg", "/site.webmanifest",
+              "/web-app-manifest-192x192.png", "/web-app-manifest-512x512.png"}
 for dirpath, _d, files in os.walk(os.path.join(ROOT, "assets")):
     for f in files:
         all_paths.add("/" + os.path.relpath(os.path.join(dirpath, f), ROOT))

@@ -84,8 +84,10 @@ def head(page):
 <meta name="geo.placename" content="{BIZ['city']}, {BIZ['state_long']}">
 <meta name="geo.position" content="{BIZ['latitude']};{BIZ['longitude']}">
 <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap">
