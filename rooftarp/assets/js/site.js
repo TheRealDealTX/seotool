@@ -47,7 +47,7 @@
         form.appendChild(note);
       }
       note.textContent =
-        "This form is not connected yet — please call (512) 297-7580 so we can help right away.";
+        "This form is not connected yet — please call (956) 465-6045 so we can help right away.";
       note.setAttribute("role", "alert");
     });
   }

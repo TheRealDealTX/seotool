@@ -16,7 +16,7 @@ ABOUT = {
     "title": "About Roof Tarp | Texas Emergency Tarping Crews | Roof Tarp",
     "description": (
         "Roof Tarp provides 24/7 emergency roof tarping across Texas. What we do, how we work and "
-        "why tarping is a discipline of its own. Call (512) 297-7580."
+        "why tarping is a discipline of its own. Call (956) 465-6045."
     ),
     "h1": 'About <span class="accent-text">Roof Tarp</span>',
     "h1_plain": "About Roof Tarp",
@@ -82,7 +82,7 @@ FAQS_PAGE = {
     "title": "Roof Tarping FAQs | Cost, Insurance & Tarp Life | Roof Tarp",
     "description": (
         "Common questions about roof tarping: what it costs, whether insurance covers it, how long a "
-        "tarp lasts and when to DIY. Call (512) 297-7580."
+        "tarp lasts and when to DIY. Call (956) 465-6045."
     ),
     "h1": 'Roof Tarping <span class="accent-text">FAQs</span>',
     "h1_plain": "Roof Tarping FAQs",
@@ -157,7 +157,7 @@ CONTACT = {
     "path": "/contact/",
     "title": "Contact Roof Tarp | 24/7 Emergency Tarping | Roof Tarp",
     "description": (
-        "Contact Roof Tarp for 24/7 emergency roof tarping across Texas. Call (512) 297-7580 or "
+        "Contact Roof Tarp for 24/7 emergency roof tarping across Texas. Call (956) 465-6045 or "
         "request a callback."
     ),
     "h1": 'Contact <span class="accent-text">Roof Tarp</span>',

@@ -357,7 +357,7 @@ def build_home():
         "title": "Roof Tarp | 24/7 Emergency Roof Tarping Services in Texas",
         "description": (
             "Emergency roof tarping across Texas, 24/7. Storm, hail and tree damage covered fast to "
-            "stop water getting in. Call (512) 297-7580."
+            "stop water getting in. Call (956) 465-6045."
         ),
     }
     faqs = [
@@ -515,7 +515,7 @@ def build_services_index():
         "title": "Roof Tarping Services | Emergency & Long-Term | Roof Tarp",
         "description": (
             "Roof tarping services across Texas: emergency, long-term, residential, commercial, storm "
-            "and hail damage tarping. Call (512) 297-7580."
+            "and hail damage tarping. Call (956) 465-6045."
         ),
         "h1": 'Roof Tarping <span class="accent-text">Services</span>',
         "h1_plain": "Roof Tarping Services",
@@ -635,7 +635,7 @@ def build_areas_index():
         "title": "Service Areas | Texas Roof Tarping Coverage | Roof Tarp",
         "description": (
             "Emergency roof tarping across Texas: Houston, Dallas, Fort Worth, Austin, San Antonio, "
-            "El Paso, Lubbock, Corpus Christi and more. Call (512) 297-7580."
+            "El Paso, Lubbock, Corpus Christi and more. Call (956) 465-6045."
         ),
         "h1": 'Texas <span class="accent-text">Service Areas</span>',
         "h1_plain": "Texas Service Areas",

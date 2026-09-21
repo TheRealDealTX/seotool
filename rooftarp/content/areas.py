@@ -30,7 +30,7 @@ AREAS = [
         "title": "Roof Tarp Houston TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Houston, TX. Hurricane and tropical storm response across "
-            "Harris County, 24/7. Call (512) 297-7580."
+            "Harris County, 24/7. Call (956) 465-6045."
         ),
         "blurb": "Gulf tropical systems, prolonged wind loading and wind-driven rain.",
         "hero_intro": (
@@ -91,7 +91,7 @@ often but is harder to tarp without creating new penetrations.</p>
         "title": "Roof Tarp Dallas TX | Emergency Hail Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Dallas, TX. Hail and spring supercell response across "
-            "Dallas County, 24/7. Call (512) 297-7580."
+            "Dallas County, 24/7. Call (956) 465-6045."
         ),
         "blurb": "Hail alley &mdash; spring supercells and narrow, destructive hail swaths.",
         "hero_intro": (
@@ -147,7 +147,7 @@ considerably better but is not immune at larger stone sizes.</p>
         "title": "Roof Tarp Fort Worth TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Fort Worth, TX. Hail and tornado response across Tarrant "
-            "County, 24/7. Call (512) 297-7580."
+            "County, 24/7. Call (956) 465-6045."
         ),
         "blurb": "Western edge of the metroplex &mdash; storms arrive here first.",
         "hero_intro": (
@@ -205,7 +205,7 @@ covering.</p>
         "title": "Roof Tarp Austin TX | Emergency Roof Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Austin, TX. Hail and hill country storm response across "
-            "Travis County, 24/7. Call (512) 297-7580."
+            "Travis County, 24/7. Call (956) 465-6045."
         ),
         "blurb": "Hill country terrain, flash flood alley and spring hail off the I-35 corridor.",
         "hero_intro": (
@@ -265,7 +265,7 @@ covering rather than running off.</p>
         "title": "Roof Tarp San Antonio TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in San Antonio, TX. Hail and tile roof tarping across Bexar "
-            "County, 24/7. Call (512) 297-7580."
+            "County, 24/7. Call (956) 465-6045."
         ),
         "blurb": "Heavy clay and concrete tile &mdash; ballasted covers, no fasteners.",
         "hero_intro": (
@@ -323,7 +323,7 @@ straightforward &mdash; board-wrapped anchoring applies there as it would anywhe
         "title": "Roof Tarp El Paso TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in El Paso, TX. Monsoon and high-wind response for flat and "
-            "low-slope desert roofs. Call (512) 297-7580."
+            "low-slope desert roofs. Call (956) 465-6045."
         ),
         "blurb": "Desert monsoon, flat roofs and intense UV &mdash; a different problem entirely.",
         "hero_intro": (
@@ -383,7 +383,7 @@ Far East side out toward the county line.</p>
         "title": "Roof Tarp Lubbock TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Lubbock, TX. High Plains wind and hail response, 24/7. "
-            "Call (512) 297-7580."
+            "Call (956) 465-6045."
         ),
         "blurb": "High Plains wind &mdash; the hardest place in Texas to keep a tarp on.",
         "hero_intro": (
@@ -439,7 +439,7 @@ Slaton.</p>
         "title": "Roof Tarp Corpus Christi TX | Hurricane Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Corpus Christi, TX. Direct hurricane landfall response and "
-            "coastal roof protection. Call (512) 297-7580."
+            "coastal roof protection. Call (956) 465-6045."
         ),
         "blurb": "Direct landfall territory, plus salt air that corrodes fastenings.",
         "hero_intro": (
@@ -498,7 +498,7 @@ after a landfalling storm, which affects timing more than anything else.</p>
         "title": "Roof Tarp Arlington TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Arlington, TX. Mid-cities hail and wind response, 24/7. "
-            "Call (512) 297-7580."
+            "Call (956) 465-6045."
         ),
         "blurb": "Mid-cities density &mdash; dense housing, whole streets hit at once.",
         "hero_intro": (
@@ -555,7 +555,7 @@ Bedford and Hurst.</p>
         "title": "Roof Tarp Waco TX | Emergency Roof Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Waco, TX. I-35 corridor hail and wind response across "
-            "McLennan County. Call (512) 297-7580."
+            "McLennan County. Call (956) 465-6045."
         ),
         "blurb": "Mid-corridor between DFW and Austin &mdash; hail from both directions.",
         "hero_intro": (
@@ -612,7 +612,7 @@ penetrated as standard.</p>
         "title": "Roof Tarp McKinney TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in McKinney, TX. Collin County hail response for newer "
-            "suburban roofs. Call (512) 297-7580."
+            "suburban roofs. Call (956) 465-6045."
         ),
         "blurb": "Fast-growing Collin County &mdash; newer, steeper, more complex roofs.",
         "hero_intro": (
@@ -669,7 +669,7 @@ Melissa and Princeton.</p>
         "title": "Roof Tarp Sugar Land TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Sugar Land, TX. Fort Bend County storm response with "
-            "HOA-aware work. Call (512) 297-7580."
+            "HOA-aware work. Call (956) 465-6045."
         ),
         "blurb": "Master-planned Fort Bend County &mdash; HOA rules and expansive clay soils.",
         "hero_intro": (
@@ -727,7 +727,7 @@ the permanent repair scheduled rather than for a flimsier cover &mdash; and we w
         "title": "Roof Tarp Midland TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Midland, TX. Permian Basin wind, hail and dust storm "
-            "response. Call (512) 297-7580."
+            "response. Call (956) 465-6045."
         ),
         "blurb": "Permian Basin &mdash; wind, blowing dust and a long haul between towns.",
         "hero_intro": (
@@ -783,7 +783,7 @@ and Stanton.</p>
         "title": "Roof Tarp Beaumont TX | Hurricane Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Beaumont, TX. Extreme rainfall and hurricane response "
-            "across Jefferson County. Call (512) 297-7580."
+            "across Jefferson County. Call (956) 465-6045."
         ),
         "blurb": "The wettest corner of Texas &mdash; extreme rainfall totals.",
         "hero_intro": (
@@ -841,7 +841,7 @@ communities.</p>
         "title": "Roof Tarp The Woodlands TX | Tree Damage Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in The Woodlands, TX. Falling pine and tree strike response "
-            "across Montgomery County. Call (512) 297-7580."
+            "across Montgomery County. Call (956) 465-6045."
         ),
         "blurb": "Dense pine canopy &mdash; tree strikes rather than wind stripping.",
         "hero_intro": (
@@ -901,7 +901,7 @@ the cover has to wait for the structure to be made safe.</p>
         "title": "Roof Tarp Huntsville TX | Emergency Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Huntsville, TX. Piney Woods tree damage response across "
-            "Walker County. Call (512) 297-7580."
+            "Walker County. Call (956) 465-6045."
         ),
         "blurb": "Piney Woods and rural acreage &mdash; long drives, big trees.",
         "hero_intro": (
@@ -960,7 +960,7 @@ roof structure is considerably lighter than conventional framing.</p>
         "title": "Roof Tarp Hutto TX | Emergency Roof Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service in Hutto, TX. Williamson County hail and wind response in "
-            "78634. Call (512) 297-7580."
+            "78634. Call (956) 465-6045."
         ),
         "blurb": "Blackland Prairie, rapid growth and narrow Williamson County hail swaths.",
         "hero_intro": (

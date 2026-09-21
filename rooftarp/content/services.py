@@ -28,7 +28,7 @@ SERVICES = [
         "title": "Emergency Roof Tarp | 24/7 Emergency Roof Tarping | Roof Tarp",
         "description": (
             "Emergency roof tarp service across Texas. Crews dispatched day or night to stop water "
-            "entering after storm, hail or tree damage. Call (512) 297-7580."
+            "entering after storm, hail or tree damage. Call (956) 465-6045."
         ),
         "h1": 'Emergency <span class="accent-text">Roof Tarp</span> Service',
         "h1_plain": "Emergency Roof Tarp Service",
@@ -152,7 +152,7 @@ the weather actually hit. Find your area on the <a href="/service-areas/">servic
         "title": "Roof Tarp Installation | Professional Tarp Installers | Roof Tarp",
         "description": (
             "Professional roof tarp installation across Texas. Correct anchoring for shingle, tile and "
-            "metal roofs, with no-nail options. Call (512) 297-7580."
+            "metal roofs, with no-nail options. Call (956) 465-6045."
         ),
         "h1": '<span class="accent-text">Roof Tarp</span> Installation',
         "h1_plain": "Roof Tarp Installation",
@@ -274,7 +274,7 @@ your insurer's.</p>
         "title": "Long-Term Roof Tarp | Extended Roof Protection | Roof Tarp",
         "description": (
             "Long-term roof tarp installation built to last months, not days. Heavy-duty material and "
-            "UV-resistant anchoring for extended repair delays. Call (512) 297-7580."
+            "UV-resistant anchoring for extended repair delays. Call (956) 465-6045."
         ),
         "h1": 'Long-Term <span class="accent-text">Roof Tarp</span> Protection',
         "h1_plain": "Long-Term Roof Tarp Protection",
@@ -390,7 +390,7 @@ material is needed than come back in eight weeks to redo a failed installation.<
         "title": "Residential Roof Tarping | Home Roof Tarp Service | Roof Tarp",
         "description": (
             "Residential roof tarping for Texas homeowners. Shingle, tile and metal roofs covered "
-            "without damaging what is still sound. Call (512) 297-7580."
+            "without damaging what is still sound. Call (956) 465-6045."
         ),
         "h1": 'Residential <span class="accent-text">Roof Tarping</span>',
         "h1_plain": "Residential Roof Tarping",
@@ -500,7 +500,7 @@ damage after roof failure</a> covers what matters in the first 48 hours.</p>
         "title": "Commercial Roof Tarping | Flat & Low-Slope Tarps | Roof Tarp",
         "description": (
             "Commercial roof tarping for flat and low-slope buildings across Texas. Ballasted covers, "
-            "drain management, after-hours work. Call (512) 297-7580."
+            "drain management, after-hours work. Call (956) 465-6045."
         ),
         "h1": 'Commercial <span class="accent-text">Roof Tarping</span>',
         "h1_plain": "Commercial Roof Tarping",
@@ -609,7 +609,7 @@ sites, which matters when a single carrier is handling several claims from one s
         "title": "Storm Damage Roof Tarping | Texas Storm Response | Roof Tarp",
         "description": (
             "Storm damage roof tarping across Texas after wind, tornado and tropical systems. Crews "
-            "moved toward the affected metro. Call (512) 297-7580."
+            "moved toward the affected metro. Call (956) 465-6045."
         ),
         "h1": 'Storm Damage <span class="accent-text">Roof Tarping</span>',
         "h1_plain": "Storm Damage Roof Tarping",
@@ -720,7 +720,7 @@ is in season.</p>
         "title": "Hail Damage Roof Tarping | Texas Hail Alley | Roof Tarp",
         "description": (
             "Hail damage roof tarping across Texas hail alley. Covering bruised, fractured and "
-            "punctured roofs before the next storm. Call (512) 297-7580."
+            "punctured roofs before the next storm. Call (956) 465-6045."
         ),
         "h1": 'Hail Damage <span class="accent-text">Roof Tarping</span>',
         "h1_plain": "Hail Damage Roof Tarping",
@@ -834,7 +834,7 @@ than leaving an emergency cover to degrade.</p>
         "title": "24/7 Roof Tarping | Overnight & Weekend Tarp Crews | Roof Tarp",
         "description": (
             "24/7 roof tarping in Texas. Overnight, weekend and holiday dispatch for roofs that cannot "
-            "wait until Monday. Call (512) 297-7580."
+            "wait until Monday. Call (956) 465-6045."
         ),
         "h1": '24/7 <span class="accent-text">Roof Tarping</span>',
         "h1_plain": "24/7 Roof Tarping",
