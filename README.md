@@ -172,6 +172,17 @@ archive, and `robots.txt` disallows it.
 
 ## Known gaps
 
+- **Unknown URLs return 200.** The H5G platform answers any path that does not
+  match a file by serving `/index.html` with a 200, before PHP or `.htaccess`
+  can act. The homepage carries a small script that hands such requests to the
+  `noindex` 404 page, which is the only mitigation available on this flavor of
+  hosting. A true 404 status would need the site moved to a non-WordPress
+  Hostinger website (create one, deploy the same files, move the domain).
+- **hPanel still calls the website "WordPress".** The platform's protected
+  core files (`index.php`, `wp-*.php`, `wp-admin/`, `wp-includes/`) are still
+  on disk but inert; `wp-admin` and `wp-login.php` redirect to the homepage.
+  The WordPress database is untouched and still exists.
+
 - **The estimate form is not wired up.** It posts nowhere and shows a reminder
   on submit. Point it at a form handler or CRM endpoint before going live
   (`contact_section()` in `build.py`, and the submit handler in
