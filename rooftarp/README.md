@@ -186,50 +186,52 @@ template placeholders, and the near-duplicate scan.
 
 ## Deploying
 
-**Deployed to staging; cutover pending.** The full build is live on a Hostinger
-Agency Plan website and verified there. rooftarp.com itself is still serving
-WordPress until the domain is linked.
+**Cut over at the platform level on 2026-09-21; DNS delegation pending.**
 
 | | |
 | --- | --- |
 | Agency website UID | `xilM91tbv` (order `1008744732`, `phoenix`, php-fpm 8.5) |
-| Preview URL | https://grey-lyrebird-158041.hostingersite.com |
+| Primary domain | `rooftarp.com` (attached 2026-09-21 19:20 UTC via `changeWebsiteDomain`) |
+| Platform nameservers for this domain | `pixel.dns-parking.com`, `byte.dns-parking.com` |
+| Registrar | GoDaddy — delegation still `ns1`/`ns2.dns-parking.com` (the old cloud pair) |
 | Deployed from | `deploy.sh` (56 files via the File Browser TUS endpoint) |
 
-Verified on the preview: kept pages 200, the 141 pruned city URLs **410**,
-unknown paths 404, legacy sitemap and feed URLs 301, `sitemap.xml` 42 URLs.
-The preview host serves a platform-injected `Googlebot / Disallow: /` in place
-of `robots.txt`; that is preview-only (huttoroofs.com on the same platform
-serves its real file) and disappears once a custom domain is linked.
+Verified on the preview host before cutover: kept pages 200, the 141 pruned
+city URLs **410**, unknown paths 404, legacy sitemap and feed URLs 301,
+`sitemap.xml` 42 URLs. The preview host's platform-injected `Googlebot /
+Disallow: /` is preview-only (huttoroofs.com on the same platform serves its
+real `robots.txt`).
 
-### Why the cutover is blocked from the API
+### What happened to the WordPress site
 
-rooftarp.com is an addon domain on the *cloud* hosting account `u401386392`
-(order `64270646`, 47 websites). The Agency platform refuses to take a domain
-that another website holds:
-
-- `linkDomainToWebsite(xilM91tbv, rooftarp.com)` → `[Hosting:432] Website not found`
-- `changeWebsiteDomain(...)` → 422
-- `verifyDomainOwnership(rooftarp.com)` → `is_accessible: false`, empty TXT challenge
-  (the platform knows the domain; it is held elsewhere, not unverified)
-- `deleteWebsite(rooftarp.com)` on the cloud account → 400, twice
-
-No file-write, upload or Git-deployment path exists for the cloud website
-either (`generateUploadURL` → 404; no Git installation can be created by API).
+The cloud-plan website `rooftarp.com` (account `u401386392`) and its database
+`u401386392_BlNOR` **no longer exist**. Four API delete calls returned 400,
+but the website disappeared from the account shortly afterwards — either one of
+those requests was accepted asynchronously after all, or it was removed in
+hPanel. Its DNS zone on `ns1`/`ns2.dns-parking.com` went with it. The 176-page
+content archive in `backup/wordpress-2026-09-21/` is the only copy of that
+site; there is no database export.
 
 ### Finishing the cutover
 
-One hPanel action, then the rest is API:
+The Agency platform provisions this domain's zone on `pixel`/`byte`, and the
+control case proves the pair matters: huttoroofs.com's registrar delegation is
+exactly the `lunar`/`solar` pair its platform reports. Until GoDaddy delegates
+rooftarp.com to `pixel`/`byte`, public DNS is SERVFAIL and the site is dark.
 
-1. **hPanel → Websites → rooftarp.com → ⋯ → Delete website** (the cloud one,
-   *not* the Agency one). Take the database export first if you want it:
-   hPanel → Databases → phpMyAdmin → `u401386392_BlNOR` → Export.
-2. `agency-hosting_linkDomainToWebsiteV1(xilM91tbv, rooftarp.com)`
-3. `agency-hosting_installWebsiteSSLV1(xilM91tbv, rooftarp.com)` and poll
-   `getWebsiteSSLStatusV1` until `active`
-4. `agency-hosting_clearWebsiteCacheV1(xilM91tbv)`
-5. Verify `https://rooftarp.com/` (title, 410 on a pruned slug, `robots.txt`
-   is the real file), then resubmit `sitemap.xml` in Search Console.
+1. **GoDaddy → rooftarp.com → DNS → Nameservers → Change → "I'll use my own"**
+   → `pixel.dns-parking.com`, `byte.dns-parking.com`. Propagation is usually
+   minutes to an hour.
+2. Once `rooftarp.com` resolves: `agency-hosting_reinstallWebsiteSSLV1(xilM91tbv,
+   rooftarp.com)` (the setup the platform auto-started at link time will have
+   failed on the missing DNS), then poll `getWebsiteSSLStatusV1` until `active`.
+3. `agency-hosting_clearWebsiteCacheV1(xilM91tbv)`.
+4. Verify `https://rooftarp.com/` (title, a pruned slug → 410, real
+   `robots.txt`), then resubmit `sitemap.xml` in Search Console.
+
+**Email:** rooftarp.com has no Hostinger mail order, so whatever served
+`info@rooftarp.com` (MX records) lived in the deleted zone and is not known
+here. Re-create MX/SPF/DKIM in the new zone from the email provider's records.
 
 Redeploying later: `python3 build.py && python3 validate.py && ./deploy.sh`
 with fresh credentials from `agency-hosting_generateUploadURLV1(xilM91tbv)`.
@@ -237,9 +239,9 @@ with fresh credentials from `agency-hosting_generateUploadURLV1(xilM91tbv)`.
 ### `deploy/rooftarp` branch
 
 `make-deploy-branch.sh` maintains an orphan branch whose root is the document
-root (56 servable files, no source, no backup archive) for hosts that deploy
-from Git. It is not what the Agency website uses -- that is `deploy.sh` -- but
-it stays current with the build.
+root (56 servable files, no source, no backup archive). It is a public,
+zip-downloadable copy of exactly what is deployed; the Agency site itself is
+deployed with `deploy.sh`.
 
 ## Known gaps
 
