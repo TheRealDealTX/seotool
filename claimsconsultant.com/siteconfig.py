@@ -4,9 +4,8 @@ Everything a human needs to change before launch lives in this file. build.py
 and every module under content/ import from here, so the phone number, the
 license line and the service-area list are each defined exactly once.
 
-PLACEHOLDERS TO REPLACE BEFORE YOU GO LIVE are marked TODO. The phone number
-below is in the 555-01xx range reserved for fiction: it rings nowhere. Swap it
-for the real tracking number, set LICENSE, and the whole site updates.
+The phone number is live. Anything still marked TODO is a placeholder: fill it
+in, run `python3 build.py`, and it updates everywhere on the site at once.
 """
 
 from datetime import date
@@ -16,8 +15,8 @@ BIZ = {
     "legal_name": "Claims Consultant",           # TODO: registered entity name
     "tagline": "Large-Loss Public Adjusters",
     "descriptor": "public insurance adjusters for institutional and large commercial property losses",
-    "phone_display": "(512) 555-0100",           # TODO: real number
-    "phone_href": "+15125550100",
+    "phone_display": "(832) 503-5866",
+    "phone_href": "+18325035866",
     "email": "claims@claimsconsultant.com",      # TODO: real inbox
     "origin": "https://claimsconsultant.com",
     "city": "Austin",
@@ -26,7 +25,7 @@ BIZ = {
     "region": "Texas and the Gulf Coast",
     "latitude": "30.2672",
     "longitude": "-97.7431",
-    "founded": "2009",                           # TODO: real year founded
+    "founded": "",                               # TODO: real year founded (omitted from schema while blank)
     "license": "",                               # TODO: e.g. "TDI #1234567" — left blank, copy adapts
     "hours": "Mo-Fr 08:00-18:00",
 }

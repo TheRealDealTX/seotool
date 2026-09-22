@@ -16,12 +16,12 @@ Everything a human needs to change is in **`siteconfig.py`**, marked `TODO`:
 
 | Key | Current value | Notes |
 | --- | --- | --- |
-| `phone_display` / `phone_href` | `(512) 555-0100` | **Placeholder.** 555-01xx is the range reserved for fiction — it rings nowhere. Replace with the real tracking number. |
+| `phone_display` / `phone_href` | `(832) 503-5866` | Live. |
+| `city` / `latitude` / `longitude` | Austin | **Check this.** The phone is a Houston area code but the footer, contact page and `LocalBusiness` schema all say Austin. Local SEO keys off this — set it to wherever the business is actually based. |
 | `email` | `claims@claimsconsultant.com` | Confirm the mailbox exists; the contact form sends here. |
 | `legal_name` | `Claims Consultant` | The registered entity name for the footer and schema. |
-| `founded` | `2009` | **Placeholder.** Set the real year or delete the key. |
-| `license` | *(empty)* | Add e.g. `TDI #1234567`. While empty, the copy reads "licensed under Chapter 4102" with no number — which is accurate but weaker. Add it. |
-| `city` / `latitude` / `longitude` | Austin | Change if the office is elsewhere. |
+| `license` | *(empty)* | Optional. While empty, the copy reads "licensed public insurance adjusters · Chapter 4102" with no number. Add e.g. `TDI #1234567` and it appears in the top bar and footer. |
+| `founded` | *(empty)* | Omitted from the schema while blank, so no invented founding date is published. Set the real year when you want it. |
 
 Then rebuild:
 
