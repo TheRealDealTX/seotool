@@ -202,7 +202,7 @@ AREAS = [
              "survey by someone competent to distinguish fresh impact from weathered damage. On "
              "DFW files this is usually the central factual question.</p>"),
             ("We have already had two hail claims. Will a third be taken seriously?",
-             "<p>It will be scrutinised, which is not the same thing. The answer is documentation "
+             "<p>It will be scrutinized, which is not the same thing. The answer is documentation "
              "that the earlier damage was properly repaired: invoices, close-out photographs, "
              "warranty reinstatement. Where earlier claims were settled and the money spent on "
              "something else, that is a harder file, and still worth assessing honestly "

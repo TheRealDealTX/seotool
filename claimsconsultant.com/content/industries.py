@@ -302,7 +302,7 @@ INDUSTRIES = [
                 "blocks": [
                     ("checks", [
                         "<strong>Roof systems by section.</strong> Campuses are rarely one roof. A 1978 built-up section, a 2004 modified bitumen addition and a 2019 TPO wing have three different ages, three different repairability arguments and three different unit costs.",
-                        "<strong>Gym floors.</strong> Maple sports floors cup and crown from humidity alone. Sanding is not always the remedy and moisture testing under the vapour barrier is not optional.",
+                        "<strong>Gym floors.</strong> Maple sports floors cup and crown from humidity alone. Sanding is not always the remedy and moisture testing under the vapor barrier is not optional.",
                         "<strong>Portable and modular classrooms.</strong> Usually missing from the statement of values altogether, and the first structures to sustain wind damage.",
                         "<strong>Athletic facilities.</strong> Press boxes, field houses, bleachers, netting, scoreboards, track surfaces and turf infill &mdash; all separately damageable, all rarely inspected by the carrier&rsquo;s adjuster.",
                         "<strong>Kitchen equipment and food stock.</strong> A refrigeration outage during a wind event is a spoilage claim and a health-department event at the same time.",
@@ -406,7 +406,7 @@ INDUSTRIES = [
                           "before they are questions of coverage, and the decisions made in those "
                           "first days, where to relocate, what to demolish, which contractor "
                           "to bring in under an emergency purchase &mdash; are the decisions the "
-                          "carrier will scrutinise hardest afterwards."),
+                          "carrier will scrutinize hardest afterwards."),
                     ("p", "The way through is not to slow the city down. It is to document at the "
                           "speed the city is moving. We put a scope and a photographic record "
                           "around emergency work while it happens, capture the pre-mitigation "
@@ -443,7 +443,7 @@ INDUSTRIES = [
                     ("p", "Read plainly, that means a city cannot improve its position by settling "
                           "the insurance claim cheaply and asking the federal government to cover "
                           "the difference. The anticipated insurance recovery is deducted whether "
-                          "or not it was pursued with any vigour. A weak insurance "
+                          "or not it was pursued with any vigor. A weak insurance "
                           "settlement therefore lands on the city&rsquo;s own general "
                           "fund, twice over."),
                     ("p", "There is a second obligation that outlives the disaster. Applicants "
@@ -943,7 +943,7 @@ INDUSTRIES = [
         "h1_plain": "Hotel and hospitality insurance claims",
         "lede": ("A hotel measures damage in room nights. Fifty rooms down for ninety days at a "
                  "$182 average daily rate is a larger number than the repair that caused it, and "
-                 "it is the number carriers scrutinise hardest and policyholders document worst."),
+                 "it is the number carriers scrutinize hardest and policyholders document worst."),
         "head_aside": [
             ("ledger", "Hospitality claim drivers", [
                 ("Unit of loss", "Room night"),

@@ -897,7 +897,7 @@ SERVICES = [
         "head_aside": [
             ("ledger", "This capacity only", [
                 ("Acting for", "Policyholder"),
-                ("Licence", "Tex. ch. 4102"),
+                ("License", "Tex. ch. 4102"),
                 ("Statutory fee cap", "10%"),
                 ("Authority", "&sect;4102.104"),
                 ("Repair work", "Prohibited"),
@@ -916,7 +916,7 @@ SERVICES = [
                           "As a public adjuster, we are the policyholder&rsquo;s representative "
                           "in presenting and negotiating their claim: an advocacy role, "
                           "licensed separately under chapter 4102 of the Texas Insurance Code."),
-                    ("p", "We hold both licences, and we act in one capacity per matter, named in "
+                    ("p", "We hold both licenses, and we act in one capacity per matter, named in "
                           "the engagement letter. We never act for both parties to the same loss, "
                           "and a conflict check runs before any matter is discussed in detail."),
                     ("callout", "Fees are different in this capacity", [

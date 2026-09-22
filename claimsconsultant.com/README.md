@@ -42,14 +42,14 @@ Everything a human needs to change is in **`siteconfig.py`**, marked `TODO`:
 | `city` / `latitude` / `longitude` | Houston | Set to Houston to match the area code. Change if the office is elsewhere — local SEO keys off it. |
 | `email` | `info@claimsconsultant.com` | Confirm the mailbox exists; the contact form sends here. |
 | `legal_name` | `Claims Consultant` | The registered entity name for the footer and schema. |
-| `license_ia` | *(empty)* | Texas adjuster licence no. (Tex. Ins. Code ch. 4101). |
-| `license_pa` | *(empty)* | Texas public insurance adjuster licence no. (ch. 4102). |
+| `license_ia` | *(empty)* | Texas adjuster license no. (Tex. Ins. Code ch. 4101). |
+| `license_pa` | *(empty)* | Texas public insurance adjuster license no. (ch. 4102). |
 | `credential` | *(empty)* | Optional, e.g. `HAAG certified`. |
 | `founded` | *(empty)* | Omitted from the schema while blank, so no invented founding date is published. |
 
-The two licence numbers render automatically in the top bar and the footer via
+The two license numbers render automatically in the top bar and the footer via
 `license_line()` once filled, and the site reads correctly while they are
-blank. Holding both an IA and a PA licence is what the copy relies on to
+blank. Holding both an IA and a PA license is what the copy relies on to
 explain how one firm can be retained by either side — see `/about/` and
 `/faq/`.
 
@@ -164,7 +164,7 @@ Nothing was ever published at those URLs, so no redirects were added.
 ## Accessibility
 
 Built to WCAG 2.1 AA as a working target: one `h1` and one `main` per page
-(enforced by the validator), skip link, visible focus rings, labelled form
+(enforced by the validator), skip link, visible focus rings, labeled form
 controls, captioned tables with `scope`, `prefers-reduced-motion` respected, no
 horizontal scroll at 360px, contrast checked in both the light and dark bands.
 

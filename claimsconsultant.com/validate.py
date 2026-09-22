@@ -200,6 +200,21 @@ def main():
             if " " in m.group(1):
                 errors.append("%s: space inside URL -> %s" % (path, m.group(1)[:90]))
 
+        # --- US spelling (a Texas firm writing "labour" is a tell)
+        brit = re.findall(
+            r"\b(?:vapour|colour|odour|armour|honour|labour|rumour|savour|harbour|valour|"
+            r"vigour|endeavour|flavour|humour|candour|clamour|glamour|ardour|fervour|rigour|"
+            r"demeanour|neighbour|behaviour|favour|mould|smoulder|offence|pretence|licence|"
+            r"defence|metre|litre|fibre|theatre|calibre|sombre|lustre|spectre|manoeuvre|"
+            r"aluminium|sulphur|draught|jewellery|woollen|labelled|signalling|marvellous|"
+            r"skilful|instalment|learnt|spelt|dreamt|leapt|spoilt|tyre|plough|cheque|"
+            r"organise|recognise|prioritise|specialise|standardise|apologise|utilise|analyse|"
+            r"summarise|minimise|emphasise|criticise|authorise|itemise|customise|finalise|"
+            r"optimise|penalise|realise|scrutinise|whilst|amongst|programme|fortnight)\w*",
+            html, re.I)
+        for b in sorted(set(brit)):
+            errors.append("%s: British spelling %r" % (path, b))
+
         # --- content smells
         if "&amp;amp;" in html or "&amp;mdash;" in html or "&amp;rsquo;" in html:
             errors.append("%s: double-escaped entity" % path)

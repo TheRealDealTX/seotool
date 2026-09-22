@@ -94,7 +94,7 @@ POSTS = [
             ("h2", "The first week"),
             ("p", "Safety first, then capture, then mitigate, and mitigate hard, because "
                   "every property policy imposes a duty to prevent further damage and failing it "
-                  "hands the other side a defence on everything that followed. The detailed "
+                  "hands the other side a defense on everything that followed. The detailed "
                   "sequence is its own piece."),
             ("html", '<a class="tlink" href="/blog/first-72-hours-after-a-commercial-property-loss/">'
                      'The first 72 hours, hour by hour <span class="arw">&rarr;</span></a>'),
@@ -204,14 +204,14 @@ POSTS = [
             ("p", "Every commercial property policy imposes a duty to protect the property from "
                   "further damage. That duty is real and failing it gives the carrier a defense "
                   "on everything that happened afterwards. Board up, tarp, extract water, get "
-                  "power to the building, start drying. Do not wait for an adjuster to authorise "
+                  "power to the building, start drying. Do not wait for an adjuster to authorize "
                   "emergency mitigation; that is not how the obligation works."),
             ("p", "What you should avoid is destroying evidence while discharging that duty. "
                   "There is a difference between drying a building and gutting it. Before "
                   "materials are removed, photograph them in place. Where anything must be "
                   "disposed of, keep a representative sample and photograph the rest in the "
                   "dumpster. Retain failed components, pipes, fittings, valves, electrical "
-                  "equipment &mdash; labelled and boxed. If subrogation or a product defect ever "
+                  "equipment &mdash; labeled and boxed. If subrogation or a product defect ever "
                   "becomes relevant, that box is the case."),
             ("checks", [
                 "Photograph before, during and after every mitigation activity.",
@@ -1083,7 +1083,7 @@ POSTS = [
              ]),
             ("p", "That last row is the one people get wrong. An award of $2.4 million does not "
                   "decide that the insurer owes $2.4 million; it decides what the damage costs. "
-                  "Coverage defences survive the award, at least in principle."),
+                  "Coverage defenses survive the award, at least in principle."),
             ("html", '<a class="tlink" href="/blog/insurance-appraisal-vs-litigation-in-texas/">'
                      'When appraisal is the right tool <span class="arw">&rarr;</span></a>'),
 

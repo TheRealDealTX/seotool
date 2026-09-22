@@ -338,7 +338,7 @@ TOOLS = [
                 "h2": "Three numbers, and the gap between them.",
                 "blocks": [
                     ("p", "Every replacement cost policy pays a large loss in at least two "
-                          "instalments. The first is actual cash value: the cost to repair, less "
+                          "installments. The first is actual cash value: the cost to repair, less "
                           "depreciation, less the deductible. The second is the recoverable "
                           "depreciation, released after the work is finished and documented. "
                           "Institutions get into trouble when they budget from the first check "

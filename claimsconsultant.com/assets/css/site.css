@@ -759,14 +759,20 @@ table.data tbody tr:hover { background: var(--paper); }
 
 /* checklist */
 .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+/* The marker is positioned, not a grid track: an item like
+   "<strong>Label.</strong> trailing prose" would otherwise put the trailing
+   text in a third grid item and wrap it into the 18px marker column. */
 .checks li {
-  display: grid; grid-template-columns: 18px 1fr; gap: 14px; align-items: start;
+  position: relative;
+  padding-left: 27px;
   font-size: 15.5px; color: var(--ink-3); line-height: 1.55;
 }
 .checks li::before {
   content: "";
+  position: absolute;
+  left: 1px;
+  top: .5em;
   width: 9px; height: 9px;
-  margin-top: .48em;
   border: 1.5px solid var(--brass);
   transform: rotate(45deg);
 }

@@ -413,7 +413,7 @@ def _sitemap_page(render_blocks):
         "eyebrow": "Index",
         "h1": "Everything<br>on this <em>site</em>",
         "h1_plain": "Sitemap",
-        "lede": "Fifty-odd pages, organised the way the practice is.",
+        "lede": "Fifty-odd pages, organized the way the practice is.",
         "trail": [("Home", "/"), ("Sitemap", None)],
         "page_type": "CollectionPage",
         "sections": [

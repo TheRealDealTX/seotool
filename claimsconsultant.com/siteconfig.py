@@ -28,10 +28,10 @@ BIZ = {
     "latitude": "29.7604",
     "longitude": "-95.3698",
     "founded": "",                               # TODO: real year founded (omitted from schema while blank)
-    # Texas licences. Both are held; the numbers go in when you have them to
+    # Texas licenses. Both are held; the numbers go in when you have them to
     # hand, and they then render in the top bar and the footer automatically.
-    "license_ia": "",                            # TODO: adjuster licence no. (Tex. Ins. Code ch. 4101)
-    "license_pa": "",                            # TODO: public insurance adjuster licence no. (ch. 4102)
+    "license_ia": "",                            # TODO: adjuster license no. (Tex. Ins. Code ch. 4101)
+    "license_pa": "",                            # TODO: public insurance adjuster license no. (ch. 4102)
     "credential": "",                            # TODO: e.g. "HAAG / IICRC certified" — omitted while blank
     "hours": "Mo-Fr 08:00-18:00",
 }

@@ -116,8 +116,8 @@ def org_node():
         "openingHours": BIZ["hours"],
         "sameAs": [],
     }
-    creds = [c for c in (BIZ.get("license_ia") and "Texas adjuster licence",
-                         BIZ.get("license_pa") and "Texas public insurance adjuster licence",
+    creds = [c for c in (BIZ.get("license_ia") and "Texas adjuster license",
+                         BIZ.get("license_pa") and "Texas public insurance adjuster license",
                          BIZ.get("credential")) if c]
     if creds:
         node["hasCredential"] = creds
@@ -498,7 +498,7 @@ def footer():
       {esc(BIZ['name'])} provides expert witness and damage consulting services: causation
       analysis, damage assessment, construction cost estimating, testing and reporting, contents
       valuation, appraisal and testimony. We
-      hold Texas adjuster and public insurance adjuster licences, which is what allows us to be
+      hold Texas adjuster and public insurance adjuster licenses, which is what allows us to be
       retained by either party; on any individual matter we act in one capacity only, stated in
       the engagement letter, and we never act for both parties to the same loss. We are not a
       law firm and do not provide legal advice. Calculators,
@@ -896,7 +896,7 @@ def homepage():
       valuation rules and different politics.</p>
     </div>
     <div class="stats stats--4 mt-l">
-      <div class="stat"><span class="sv">2</span><span class="sl">Texas licences held, adjuster and public insurance adjuster, which is what lets either party retain us. One capacity per matter, named in the engagement letter.</span></div>
+      <div class="stat"><span class="sv">2</span><span class="sl">Texas licenses held, adjuster and public insurance adjuster, which is what lets either party retain us. One capacity per matter, named in the engagement letter.</span></div>
       <div class="stat"><span class="sv">702</span><span class="sl">The evidence rule an opinion has to satisfy. Reliability is a question about method, which is why ours is written down before the conclusion is.</span></div>
       <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel, two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
       <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>

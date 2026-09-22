@@ -258,7 +258,7 @@ ABOUT = {
             ("Licensed", "Ch. 4101 &amp; 4102"),
             ("Retained by", "Either party"),
             ("Consulting fee", "Hourly"),
-        ], "Texas adjuster and public insurance adjuster licences are both held, which is what "
+        ], "Texas adjuster and public insurance adjuster licenses are both held, which is what "
            "allows either party to retain us. Not a law firm, not a contractor, not an agency."),
     ],
     "sections": [
@@ -284,9 +284,9 @@ ABOUT = {
             ],
             "aside": [
                 ("callout", "One capacity per matter", [
-                    ("p", "We hold both a Texas adjuster licence and a public insurance adjuster "
-                          "licence. Holding both is what lets either party retain us; it is not "
-                          "a licence to face both ways at once. On any individual matter we act "
+                    ("p", "We hold both a Texas adjuster license and a public insurance adjuster "
+                          "license. Holding both is what lets either party retain us; it is not "
+                          "a license to face both ways at once. On any individual matter we act "
                           "in one capacity, stated in the engagement letter, and we never act "
                           "for both parties to the same loss."),
                 ]),
@@ -369,7 +369,7 @@ ABOUT = {
          "and as a public insurance adjuster under chapter 4102. Holding both is unusual and it "
          "is deliberate: it is what allows an insurer and a policyholder to retain the same "
          "firm, in different matters, without either one being served by somebody working "
-         "outside their licence. Licence numbers are published in the footer and can be verified "
+         "outside their license. License numbers are published in the footer and can be verified "
          "with the Texas Department of Insurance. Where a matter needs an attorney instead of a "
          "consultant, we say so.</p>"),
         ("Do you work outside Texas?",
@@ -452,7 +452,7 @@ HOW_WE_WORK = {
                  ["Discipline", "Engaged when"], [
                     ["Roofing consultant", "Any commercial roof claim where repairability or cause is contested"],
                     ["Structural or forensic engineer", "Structural damage, collapse, or where the carrier has retained an engineer"],
-                    ["Industrial hygienist", "Mould, contamination, or any healthcare or laboratory environment"],
+                    ["Industrial hygienist", "Mold, contamination, or any healthcare or laboratory environment"],
                     ["Forensic accountant", "Time-element losses of any real size"],
                     ["Equipment specialist / OEM", "Production equipment, medical imaging, laboratory instruments"],
                     ["Code consultant", "Older buildings where ordinance and law exposure is material"],
@@ -488,7 +488,7 @@ HOW_WE_WORK = {
             "h2": "Negotiate in writing, and know when to stop.",
             "blocks": [
                 ("p", "Every position we take is stated in writing and dated. Every position the "
-                      "carrier takes is recorded the same way. Differences are itemised rather "
+                      "carrier takes is recorded the same way. Differences are itemized rather "
                       "than described. Supplements are filed as actual costs come in. Where "
                       "statutory deadlines apply, they are cited by date rather than referred to "
                       "in general terms."),
@@ -677,11 +677,11 @@ FAQ_PAGE = {
             "eyebrow": "Independence",
             "h2": "Working both sides",
             "blocks": [("faq", [
-                ("What licences do you hold?",
+                ("What licenses do you hold?",
                  "<p>Texas adjuster (chapter 4101) and Texas public insurance adjuster (chapter "
                  "4102). Both, which is what makes it possible for an insurer to retain us on "
                  "one matter and a policyholder on another without anyone being served outside a "
-                 "licence. On any single matter we act in one capacity only, named in the "
+                 "license. On any single matter we act in one capacity only, named in the "
                  "engagement letter. Numbers are in the footer; verify them with TDI.</p>"),
                 ("How do you handle conflicts?",
                  "<p>A conflict check runs before any detailed discussion of a matter. Give us "
@@ -1292,10 +1292,10 @@ LEGAL = [
                   "to counsel. We are retained by policyholders, insurers, third-party "
                   "administrators, risk pools, brokers and attorneys." % BIZ["name"]),
             ("h2", "Licensing and capacity"),
-            ("p", "We hold Texas adjuster and public insurance adjuster licences, issued and "
-                  "regulated by the Texas Department of Insurance. Licence numbers appear in the "
+            ("p", "We hold Texas adjuster and public insurance adjuster licenses, issued and "
+                  "regulated by the Texas Department of Insurance. License numbers appear in the "
                   "footer of this site and can be verified directly with the department."),
-            ("p", "Holding licences on both sides is what allows either party to retain this "
+            ("p", "Holding licenses on both sides is what allows either party to retain this "
                   "firm. It does not mean we occupy both roles at once. On any individual matter "
                   "we act in a single, stated capacity, as consultant, as a "
                   "party-appointed appraiser, as umpire, or as an adjuster &mdash; identified in "

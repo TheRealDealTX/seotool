@@ -102,7 +102,7 @@ LOSS_TYPES = [
                          "a number and starts the carrier&rsquo;s clock instead of waiting on "
                          "theirs.</p>"),
                         ("Negotiation, appraisal or referral",
-                         "<p>Differences itemised in writing, positions dated, supplements filed "
+                         "<p>Differences itemized in writing, positions dated, supplements filed "
                          "as actual costs come in. Where the gap is about the amount of loss and "
                          "will not close, appraisal. Where it is about coverage, we tell you it is "
                          "time for a lawyer, and we say so early.</p>"),
@@ -390,7 +390,7 @@ LOSS_TYPES = [
         "head_aside": [
             ("ledger", "Fire loss components", [
                 ("Burn area", "Smallest"),
-                ("Smoke &amp; odour", "Building-wide"),
+                ("Smoke &amp; odor", "Building-wide"),
                 ("Suppression water", "Downward"),
                 ("Code upgrade", "Ord. &amp; law"),
                 ("Contents", "Item by item"),
@@ -418,7 +418,7 @@ LOSS_TYPES = [
                         "Residue sampling and analysis before cleaning begins, at multiple locations including inside HVAC and above ceilings.",
                         "Corrosion assessment on electrical distribution, controls, servers and any exposed metal.",
                         "Air-handling systems inspected internally &mdash; ductwork is the most common route for building-wide contamination and the most common omission.",
-                        "Odour treated as a completion standard with an objective test, not as a matter of opinion at walkthrough.",
+                        "Odor treated as a completion standard with an objective test, not as a matter of opinion at walkthrough.",
                         "Contents inventoried item by item before anything is discarded, with photographs and a documented restore-or-replace decision on each.",
                     ]),
                 ],
@@ -562,13 +562,13 @@ LOSS_TYPES = [
             },
             {
                 "band": "ink",
-                "eyebrow": "Mould",
+                "eyebrow": "Mold",
                 "h2": "Remediation limits are usually far smaller than people assume.",
-                "dek": "Texas commercial forms often sub-limit fungus and mould remediation "
+                "dek": "Texas commercial forms often sub-limit fungus and mold remediation "
                        " (sometimes to $15,000 or $25,000) regardless of the building "
                        "limit above it.",
                 "blocks": [
-                    ("p", "That sub-limit is one reason speed matters on a water loss. Where mould "
+                    ("p", "That sub-limit is one reason speed matters on a water loss. Where mold "
                           "results from a covered water event and is addressed as part of drying "
                           "and repair within a reasonable time, the work is typically part of the "
                           "repair. Where it is left to develop, the carrier will reclassify the "
