@@ -258,7 +258,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    'family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500'
+    'family=Newsreader:ital, opsz, wght@0,6..72,300..600;1,6..72,300..500'
     '&amp;family=IBM+Plex+Sans:wght@400;500;600'
     '&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">'
 )
@@ -266,7 +266,7 @@ FONTS = (
 
 def head(page):
     canonical = url(page["path"])
-    robots = page.get("robots", "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1")
+    robots = page.get("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1")
     extra = ""
     if page.get("published"):
         extra += (f'<meta property="article:published_time" content="{page["published"]}">\n'
@@ -454,7 +454,7 @@ def footer():
         <span class="wm-name">Claims<b>Consultant</b></span>
         <span class="wm-sub">{esc(BIZ['tagline'])}</span>
         <p>Expert witnesses and damage consultants on large institutional and commercial
-           property losses across Texas &mdash; churches, school districts, municipalities,
+           property losses across Texas, churches, school districts, municipalities,
            campuses and portfolios. Retained by either side. The method does not change
            with the client.</p>
         <div class="footer-contact">
@@ -823,7 +823,7 @@ def homepage():
         <p class="eyebrow">Expert witness &amp; damage consulting &middot; Texas</p>
         <h1>Two parties.<br>Two estimates.<br><em>One</em> set of facts.</h1>
         <p class="lede">We are damage consultants and testifying experts on large commercial
-          property losses. Causation, scope, cost and contents &mdash; established from the
+          property losses. Causation, scope, cost and contents, established from the
           building rather than asserted from a position, and written to survive a deposition.
           Policyholders, insurers, risk pools and counsel all retain us for the same thing.</p>
         <div class="btn-row">
@@ -848,7 +848,7 @@ def homepage():
             <div class="ledger-row"><dt>Public adjusting fee</dt><dd>Contingent</dd></div>
           </dl>
           <div class="ledger-foot">Consultant, testifying expert, party appraiser, umpire or
-            public adjuster &mdash; one capacity per matter, named in the engagement letter after
+            public adjuster, one capacity per matter, named in the engagement letter after
             a conflict check. We never act for both parties to the same loss.
             <a href="/who-we-work-for/">How that works &rarr;</a></div>
         </div>
@@ -890,14 +890,14 @@ def homepage():
       <p class="eyebrow">Where we work</p>
       <h2>Institutions and large commercial property. <em>Nothing smaller.</em></h2>
       <p class="dek">A 40,000-square-foot sanctuary, a district with nineteen campuses and one
-      blanket limit, a city hall with a FEMA obligation running alongside the insurance claim &mdash;
+      blanket limit, a city hall with a FEMA obligation running alongside the insurance claim,
       these are not big houses. They are different losses, with different wording, different
       valuation rules and different politics.</p>
     </div>
     <div class="stats stats--4 mt-l">
-      <div class="stat"><span class="sv">2</span><span class="sl">Texas licences held &mdash; adjuster and public insurance adjuster &mdash; which is what lets either party retain us. One capacity per matter, named in the engagement letter.</span></div>
+      <div class="stat"><span class="sv">2</span><span class="sl">Texas licences held, adjuster and public insurance adjuster, which is what lets either party retain us. One capacity per matter, named in the engagement letter.</span></div>
       <div class="stat"><span class="sv">702</span><span class="sl">The evidence rule an opinion has to satisfy. Reliability is a question about method, which is why ours is written down before the conclusion is.</span></div>
-      <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel &mdash; two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
+      <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel, two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
       <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>
     </div>
   </div>
@@ -922,7 +922,7 @@ def homepage():
         <p class="eyebrow">Services</p>
         <h2>Retained to answer a specific question.</h2>
         <p class="dek">Most engagements begin narrow: is this hail or wear, can the casework be
-        saved, is that estimate complete, what is this inventory actually worth. Nine of those
+        saved, is that estimate complete, what is this inventory worth. Nine of those
         questions come up often enough to have their own page.</p>
         <div class="btn-row"><a class="btn btn--ghost" href="/services/">All services</a></div>
       </div>
@@ -935,9 +935,9 @@ def homepage():
   <div class="wrap">
     <div class="head-block">
       <p class="eyebrow">Tools</p>
-      <h2>Six calculators we actually use on live files.</h2>
+      <h2>Six calculators we use on live files.</h2>
       <p class="dek">Built for commercial numbers, not householder ones. Nothing is stored, nothing
-      is emailed, and no figure here is a substitute for a policy read &mdash; but they will tell you
+      is emailed, and no figure here is a substitute for a policy read, but they will tell you
       quickly whether the offer on your desk is in the right ballpark.</p>
     </div>
     <div class="cardgrid cardgrid--3 mt-l">{tool_cards}</div>
@@ -954,7 +954,7 @@ def homepage():
           <div class="step"><div><h3>Policy before property</h3></div><div>
             <p>We read the declarations, the forms, the endorsements and the schedule of values
             before we walk the building. Half of what gets argued about later is already settled by
-            wording sitting in the file &mdash; coinsurance, valuation basis, ordinance and law
+            wording sitting in the file, coinsurance, valuation basis, ordinance and law
             limits, named-storm deductibles, the period of indemnity.</p></div></div>
           <div class="step"><div><h3>Document while it is still true</h3></div><div>
             <p>Full photographic and measured survey, drone and moisture mapping where it helps,
@@ -967,7 +967,7 @@ def homepage():
           <div class="step"><div><h3>State the basis in writing</h3></div><div>
             <p>Every judgment call recorded with the evidence behind it, differences between
             positions itemized rather than described. Where a gap will not close on the facts, we
-            say what we think it needs &mdash; appraisal, a specialist, or counsel &mdash; early
+            say what we think it needs (appraisal, a specialist, or counsel) early
             rather than after another six months of letters.</p></div></div>
         </div>
       </div>
@@ -978,16 +978,16 @@ def homepage():
           <ul class="checks mt-m">
             <li>The <strong>declarations page</strong> &mdash; limits, deductibles, valuation basis,
               and whether the schedule is blanket or per-location.</li>
-            <li>The <strong>loss notice</strong> &mdash; its date anchors every other date in
+            <li>The <strong>loss notice</strong>, its date anchors every other date in
               the file, including how long the evidence had to degrade.</li>
-            <li>The <strong>first estimate</strong> &mdash; not for its total, but for what it is
+            <li>The <strong>first estimate</strong>, not for its total, but for what it is
               silent about.</li>
           </ul>
           <a class="btn btn--sm mt-m" href="/how-we-work/">See the full method <span class="arw">&rarr;</span></a>
         </div>
         <div class="callout">
           <h4>A note on timing</h4>
-          <p>We can be brought in at any point &mdash; before notice, mid-file, after a coverage
+          <p>We can be brought in at any point, before notice, mid-file, after a coverage
           position has been taken, even after a partial payment. What nobody can do is
           un-photograph a building that has already been repaired.</p>
         </div>
@@ -1002,8 +1002,7 @@ def homepage():
       <div>
         <p class="eyebrow">Insights</p>
         <h2>Written for the people who have to explain the number to somebody else.</h2>
-        <p class="dek">No listicles. Policy wording, damage evidence, and the analysis that actually
-        resolves disputes on institutional files.</p>
+        <p class="dek">No listicles. Policy wording, damage evidence, and the analysis that resolves disputes on institutional files.</p>
         <div class="btn-row"><a class="btn btn--ghost" href="/blog/">All articles</a></div>
       </div>
       <div class="postlist">{recent}</div>
@@ -1044,7 +1043,7 @@ def build_hub(path, eyebrow, h1, lede, items, intro_sections, trail, title, desc
              "blocks": listing}]
     secs += intro_sections
     if faqs:
-        secs.append({"eyebrow": "Questions", "h2": "Frequently asked", "band": "",
+        secs.append({"eyebrow": "Questions", "h2": "Usually asked", "band": "",
                      "blocks": [("faq", faqs)]})
     if closing:
         secs.append(closing)
@@ -1128,15 +1127,15 @@ DirectoryIndex index.html
   # https + non-www canonical host
   RewriteCond %{HTTPS} !=on [OR]
   RewriteCond %{HTTP:X-Forwarded-Proto} =http
-  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L, R=301]
   RewriteCond %{HTTP_HOST} ^www\\.claimsconsultant\\.com$ [NC]
-  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L, R=301]
 
   # every page is a directory with a trailing slash
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !(/$|\\.[a-zA-Z0-9]{1,5}$)
-  RewriteRule ^(.*)$ /$1/ [L,R=301]
+  RewriteRule ^(.*)$ /$1/ [L, R=301]
 </IfModule>
 
 ErrorDocument 404 /404.html
@@ -1252,7 +1251,7 @@ def build_404():
         "title": f"Page not found | {BIZ['name']}",
         "description": ("That page has moved or never existed. Here is the rest of the site: "
                         "property types, claim services, calculators and service areas."),
-        "robots": "noindex,follow",
+        "robots": "noindex, follow",
     }
     links = [(i["nav_label"], i["card_blurb"], i["path"]) for i in INDUSTRIES[:3]]
     links += [(t["nav_label"], t["card_blurb"], t["path"]) for t in TOOLS[:3]]

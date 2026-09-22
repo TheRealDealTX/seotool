@@ -14,7 +14,7 @@ LOSS_TYPES = [
         "slug": "commercial-property-damage-claims",
         "nav_label": "Commercial Property Damage",
         "card_title": "Commercial property damage claims",
-        "card_blurb": ("The whole file, first notice to final release &mdash; scope, valuation, "
+        "card_blurb": ("The whole file, first notice to final release, scope, valuation, "
                        "documentation and negotiation."),
         "title": "Commercial Property Damage | Texas Claims Consultants",
         "description": "Expert witness and damage consulting for large commercial property damage in Texas. We scope, document and value the loss to an evidentiary standard.",
@@ -39,7 +39,7 @@ LOSS_TYPES = [
         "sections": [
             {
                 "eyebrow": "The gap",
-                "h2": "Where the money actually goes missing.",
+                "h2": "Where the money goes missing.",
                 "blocks": [
                     ("p", "Ask ten commercial policyholders why their settlement was short and most "
                           "will say the adjuster lowballed them. In our experience that is rarely "
@@ -50,7 +50,7 @@ LOSS_TYPES = [
                           "silent about everything else. Silence is what costs money."),
                     ("table", "The eight recurring omissions", ["Item", "The carrier&rsquo;s position", "The counter-argument"], [
                         ["Overhead and profit",
-                         "Not owed unless a general contractor is actually used.",
+                         "Not owed unless a general contractor is used.",
                          "Reasonably likely to be needed is the usual test, and three or more trades is the usual threshold. On commercial work it is nearly always met."],
                         ["Code and ordinance upgrades",
                          "Betterment. The policy pays to restore, not improve.",
@@ -93,19 +93,19 @@ LOSS_TYPES = [
                          "indexed by location. Drone and thermal where it earns its place. "
                          "Moisture mapping. Test cuts on roofing where the dispute will be about "
                          "membrane and insulation. Engineers, industrial hygienists, forensic "
-                         "accountants and specialist trades engaged where the loss warrants them "
-                         "&mdash; and not where it does not.</p>"),
+                         "accountants and specialist trades engaged where the loss warrants them"
+                         ", and not where it does not.</p>"),
                         ("Estimate and proof of loss",
                          "<p>A line-item estimate in the industry-standard platform, priced to "
                          "your market and your occupancy, with code work, soft costs, contents and "
                          "time-element carried separately. Then a sworn proof of loss that states "
-                         "a number and starts the carrier&rsquo;s clock rather than waiting on "
+                         "a number and starts the carrier&rsquo;s clock instead of waiting on "
                          "theirs.</p>"),
                         ("Negotiation, appraisal or referral",
                          "<p>Differences itemised in writing, positions dated, supplements filed "
                          "as actual costs come in. Where the gap is about the amount of loss and "
                          "will not close, appraisal. Where it is about coverage, we tell you it is "
-                         "time for a lawyer &mdash; and we say so early.</p>"),
+                         "time for a lawyer, and we say so early.</p>"),
                     ]),
                 ],
             },
@@ -117,8 +117,8 @@ LOSS_TYPES = [
                     ("checks", [
                         "We do not give legal advice or hold ourselves out as attorneys. When a file needs counsel, we say so and step into a support role.",
                         "We do not take referral fees from contractors, and we do not direct repairs to a preferred vendor. You choose who does the work.",
-                        "We do not inflate a scope. Every line has to survive an examination under oath and a forensic review, because on files this size it frequently gets one.",
-                        "We do not take claims we cannot move. If the policy simply does not respond, we will tell you that in the first conversation rather than after you have signed.",
+                        "We do not inflate a scope. Every line has to survive an examination under oath and a forensic review, because on files this size it commonly gets one.",
+                        "We do not take claims we cannot move. If the policy does not respond, we will tell you that in the first conversation instead of after you have signed.",
                     ]),
                 ],
             },
@@ -129,7 +129,7 @@ LOSS_TYPES = [
              "is the scope everybody argues from afterwards. That said, the majority of our "
              "engagements start later &mdash; when an estimate arrives that is obviously short, "
              "when a file has gone quiet for months, or when a denial letter lands. All of those "
-             "are workable. What is genuinely hard is a claim where repairs are complete, records "
+             "are workable. What is hard is a claim where repairs are complete, records "
              "are thin and the limitation period is close.</p>"),
             ("How much does it cost?",
              "<p>Hourly, or a fixed fee where the deliverable is well defined, agreed in writing "
@@ -182,8 +182,8 @@ LOSS_TYPES = [
                 "h2": "Anti-concurrent causation is the clause that decides coastal claims.",
                 "blocks": [
                     ("p", "Most commercial property forms contain wording that excludes loss caused "
-                          "directly or indirectly by an excluded peril &mdash; flood, for example "
-                          "&mdash; regardless of any other cause contributing concurrently or in "
+                          "directly or indirectly by an excluded peril, flood, for example"
+                          ", regardless of any other cause contributing concurrently or in "
                           "any sequence. Read at its widest, an insurer will argue that clause "
                           "excludes damage where surge played any part at all, even to property "
                           "the wind had already opened up."),
@@ -194,7 +194,7 @@ LOSS_TYPES = [
                           "days, cleanup has destroyed most of it."),
                     ("checks", [
                         "Photograph high-water marks before anything is cleaned, with a scale and a location reference in the frame.",
-                        "Document roof and upper-floor damage separately from ground-floor damage &mdash; wind losses above the water line are hard to attribute to surge.",
+                        "Document roof and upper-floor damage separately from ground-floor damage, wind losses above the water line are hard to attribute to surge.",
                         "Preserve a sample of affected materials where contamination class is likely to be disputed.",
                         "Obtain the storm data for your specific coordinates, not the regional summary: wind field, gust history, rainfall and surge timing.",
                         "Where flood and wind policies both respond, run them in parallel and keep the damage descriptions consistent.",
@@ -204,8 +204,8 @@ LOSS_TYPES = [
                     ("callout", "Wind-driven rain", [
                         ("p", "Many commercial forms cover rain entering the building only if wind "
                               "first made an opening in the roof or walls. Proving that opening "
-                              "existed &mdash; and that it was storm-created rather than a "
-                              "pre-existing maintenance defect &mdash; is frequently the whole "
+                              "existed, and that it was storm-created rather than a "
+                              "pre-existing maintenance defect &mdash; is often the whole "
                               "interior claim."),
                     ]),
                     ("callout", "TWIA", [
@@ -239,13 +239,13 @@ LOSS_TYPES = [
              "<p>No, it is the beginning of an evidentiary argument. Very few coastal losses are "
              "purely one peril. The task is to separate what the wind did from what the water did "
              "and to establish the wind portion with evidence the carrier&rsquo;s engineer cannot "
-             "dismiss &mdash; roof condition, interior damage above the water line, directional "
+             "dismiss, roof condition, interior damage above the water line, directional "
              "failure patterns, and the storm data for your location. Where anti-concurrent "
              "causation wording is being applied aggressively, that is a point at which counsel "
              "should be looking at the file alongside us.</p>"),
             ("How long after a hurricane can we still file?",
-             "<p>Policies contain their own notice requirements &mdash; usually prompt notice, "
-             "sometimes a specific number of days &mdash; and Texas weather claims are separately "
+             "<p>Policies contain their own notice requirements, usually prompt notice, "
+             "sometimes a specific number of days, and Texas weather claims are separately "
              "affected by the suit limitation in the policy. Late notice is a defense insurers "
              "raise often and win with sometimes, generally where they can show prejudice, and "
              "it is a question for counsel. What is certain is that evidence does not improve "
@@ -274,7 +274,7 @@ LOSS_TYPES = [
         "h1_plain": "Commercial hail damage claims",
         "lede": ("Texas leads the country in hail losses, and the commercial version of the claim "
                  "is almost nothing like the residential one. The damage is to membrane, "
-                 "insulation, coping and equipment, it is frequently invisible at grade, and the "
+                 "insulation, coping and equipment, it is often invisible at grade, and the "
                  "standard denial is that your roof was simply old."),
         "head_aside": [
             ("ledger", "Proving a commercial hail loss", [
@@ -301,7 +301,7 @@ LOSS_TYPES = [
                     ("p", "A test cut settles it. Four-inch squares taken through the assembly in "
                           "each roof section, photographed in place and then patched, show "
                           "fractured insulation, displaced granules and membrane damage directly. "
-                          "Carriers rarely propose them and frequently resist them, which tells "
+                          "Carriers rarely propose them and usually resist them, which tells "
                           "you how effective they are."),
                     ("p", "Around the roof, corroboration matters as much as the roof itself. "
                           "Spatter marks on oxidised metal, dented gutters and downspouts, damaged "
@@ -332,7 +332,7 @@ LOSS_TYPES = [
                         ["The damage is cosmetic only.",
                          "Test cuts showing insulation fracture and membrane damage; manufacturer statements on how impact affects the remaining service life of that specific system."],
                         ["Hail of that size did not fall here.",
-                         "Storm data for the property coordinates rather than the nearest reporting station, plus physical corroboration on soft metals and equipment at the site."],
+                         "Storm data for the property coordinates instead of the nearest reporting station, plus physical corroboration on soft metals and equipment at the site."],
                         ["The damage predates the policy period.",
                          "Sequential storm history, prior inspection reports, satellite and aerial imagery by date, and the condition of repairs made between events."],
                     ]),
@@ -340,7 +340,7 @@ LOSS_TYPES = [
                         ("p", "Some Texas commercial policies carry a cosmetic damage exclusion "
                               "for roof surfacing, which removes coverage for dents that do not "
                               "affect function. Whether it applies is a factual question about "
-                              "function and remaining service life &mdash; but you need to know "
+                              "function and remaining service life, but you need to know "
                               "the endorsement is there before you build the claim, not after."),
                     ]),
                 ],
@@ -350,13 +350,13 @@ LOSS_TYPES = [
             ("How long do we have to file a hail claim in Texas?",
              "<p>Two separate clocks run. The policy requires prompt notice, and some forms now "
              "state a specific reporting window for weather losses. Separately, the policy&rsquo;s "
-             "suit limitation &mdash; commonly two years in Texas, and governed for many weather "
+             "suit limitation, commonly two years in Texas, and governed for many weather "
              "caps how long there is to sue, and that is a question for counsel. Delay is also an "
              "evidentiary problem: the longer the wait, the easier the intervening-storm "
              "argument becomes.</p>"),
             ("Can you tell whether we have a claim before we report it?",
              "<p>That is usually the right sequence on a commercial roof. A pre-notice inspection "
-             "&mdash; roof survey, test cuts where appropriate, storm data for the address &mdash; "
+             " (roof survey, test cuts where appropriate, storm data for the address) "
              "tells you whether the damage clears your deductible and whether it will survive a "
              "wear-and-tear challenge. Reporting a claim you then abandon still shows up in your "
              "loss history.</p>"),
@@ -377,7 +377,7 @@ LOSS_TYPES = [
         "nav_label": "Fire &amp; Smoke",
         "card_title": "Commercial fire &amp; smoke claims",
         "card_blurb": ("Where the smoke, water and code exposure reach far beyond anything that "
-                       "actually burned."),
+                       "burned."),
         "title": "Commercial Fire Damage Claims | Texas Consultants",
         "description": "Expert witness and damage consulting for commercial fire and smoke losses in Texas. Smoke residue, code upgrades, contents and business interruption.",
         "eyebrow": "Service &middot; Fire &amp; smoke",
@@ -409,7 +409,7 @@ LOSS_TYPES = [
                           "months after the fire is out. Neither is remedied by wiping surfaces "
                           "and running a hydroxyl machine for a week."),
                     ("p", "The distinction matters because it decides whether an item is cleaned, "
-                          "restored or replaced &mdash; and that decision, multiplied across a "
+                          "restored or replaced, and that decision, multiplied across a "
                           "contents inventory or a building&rsquo;s electrical and mechanical "
                           "systems, is usually the largest disputed number in the claim. "
                           "Independent testing for residue type and distribution costs relatively "
@@ -439,7 +439,7 @@ LOSS_TYPES = [
                 "blocks": [
                     ("p", "Once repair work passes the threshold the local jurisdiction treats as "
                           "substantial, the whole structure can be pulled up to current "
-                          "requirements &mdash; sprinklers, fire alarm, egress, accessibility, "
+                          "requirements, sprinklers, fire alarm, egress, accessibility, "
                           "energy code, structural provisions, sometimes wind and seismic detailing "
                           "that did not exist at construction. On a mid-century civic building, "
                           "church or campus structure, that cost can rival the fire damage itself."),
@@ -466,7 +466,7 @@ LOSS_TYPES = [
              "to anything. A commercial fire claim of any size running six to twelve months is "
              "normal; running two years usually means something is stuck.</p>"),
             ("Should we start cleaning before the adjuster comes?",
-             "<p>Do what is needed to make the property safe and to prevent further damage &mdash; "
+             "<p>Do what is needed to make the property safe and to prevent further damage, "
              "that is your duty under the policy and it is not optional. Beyond that, document "
              "before you disturb. Photograph everything, keep damaged items until they have been "
              "inventoried, and retain a sample of anything you must dispose of. The most damaging "
@@ -485,7 +485,7 @@ LOSS_TYPES = [
         "slug": "water-damage-and-freeze-claims",
         "nav_label": "Water &amp; Freeze",
         "card_title": "Water damage &amp; freeze claims",
-        "card_blurb": ("Pipe bursts, roof leaks and freeze events &mdash; where the exclusion "
+        "card_blurb": ("Pipe bursts, roof leaks and freeze events, where the exclusion "
                        "wording does most of the work."),
         "title": "Commercial Water &amp; Freeze Losses | Texas Consultants",
         "description": "Expert witness and damage consulting for commercial water and freeze losses in Texas. Burst pipes, sprinkler leaks, roof leaks and the exclusions carriers use.",
@@ -523,10 +523,10 @@ LOSS_TYPES = [
                           "building management system logs showing setpoints and interior "
                           "temperatures, utility outage records for the specific address, work "
                           "orders and staffing records for the freeze period, and any written "
-                          "winterisation procedure that was actually followed. Most institutions "
+                          "winterisation procedure that was followed. Most institutions "
                           "have all of this and have never thought to assemble it."),
                     ("checks", [
-                        "BMS and thermostat logs exported before they roll off &mdash; many systems retain only 30 to 90 days.",
+                        "BMS and thermostat logs exported before they roll off, many systems retain only 30 to 90 days.",
                         "Utility outage confirmation for the property address and the exact period.",
                         "Staffing, security and work-order records showing the building was attended and monitored.",
                         "Photographs of the failure point before the plumber cuts it out, and retention of the failed component itself.",
@@ -538,8 +538,8 @@ LOSS_TYPES = [
                         ("p", "The single most valuable physical object in a water claim is the "
                               "failed component. Once the plumber removes it, ask for it, label "
                               "it, photograph it and put it in a box. Where the cause of failure "
-                              "is disputed &mdash; and where product liability or subrogation may "
-                              "be in play &mdash; that piece of pipe is the evidence."),
+                              "is disputed, and where product liability or subrogation may "
+                              "be in play. That piece of pipe is the evidence."),
                     ]),
                 ],
             },
@@ -564,8 +564,8 @@ LOSS_TYPES = [
                 "band": "ink",
                 "eyebrow": "Mould",
                 "h2": "Remediation limits are usually far smaller than people assume.",
-                "dek": "Texas commercial forms frequently sub-limit fungus and mould remediation "
-                       "&mdash; sometimes to $15,000 or $25,000 &mdash; regardless of the building "
+                "dek": "Texas commercial forms often sub-limit fungus and mould remediation "
+                       " (sometimes to $15,000 or $25,000) regardless of the building "
                        "limit above it.",
                 "blocks": [
                     ("p", "That sub-limit is one reason speed matters on a water loss. Where mould "
@@ -614,8 +614,8 @@ LOSS_TYPES = [
         "h1": "The loss that keeps<br>running after the <em>water stops</em>",
         "h1_plain": "Business interruption and extra expense claims",
         "lede": ("Property damage is visible and finite. The income loss behind it is neither, "
-                 "which is why it is the part of a commercial claim most often left unquantified "
-                 "&mdash; and, when it finally is quantified, most often disputed line by line by "
+                 "which is why it is the part of a commercial claim most often left unquantified"
+                 ", and, when it finally is quantified, most often disputed line by line by "
                  "a forensic accountant the carrier retained months earlier."),
         "head_aside": [
             ("ledger", "The four variables", [
@@ -633,7 +633,7 @@ LOSS_TYPES = [
                 "eyebrow": "Period of restoration",
                 "h2": "How long should it have taken to rebuild?",
                 "blocks": [
-                    ("p", "Business income coverage does not pay for as long as you were actually "
+                    ("p", "Business income coverage does not pay for as long as you were "
                           "closed. It pays for the period it should reasonably have taken to "
                           "repair or replace the damaged property, exercising due diligence and "
                           "dispatch. Those are the words that carry the argument. If the carrier "
@@ -650,8 +650,8 @@ LOSS_TYPES = [
                               "guests come back gradually. Many policies offer an extended period "
                               "of indemnity endorsement covering that ramp-back for a stated "
                               "number of days after operations resume. Whether you have one, and "
-                              "how long it runs, is worth checking on day one &mdash; it is "
-                              "frequently the last third of the claim."),
+                              "how long it runs, is worth checking on day one. It is "
+                              "commonly the last third of the claim."),
                     ]),
                 ],
                 "aside": [
@@ -676,7 +676,7 @@ LOSS_TYPES = [
                         ["Civil authority", "An order of civil authority prohibiting access to your premises.", "Usually requires covered physical damage nearby; short duration; waiting period"],
                         ["Ingress / egress", "Physical obstruction of access, without an official order.", "Not on every form; radius and duration limits"],
                         ["Dependent property (contingent BI)", "Damage at a named supplier, customer or attraction property.", "Property often must be scheduled by name; sub-limited"],
-                        ["Service interruption", "Off-premises failure of power, water, gas or communications.", "Frequently requires physical damage to the utility&rsquo;s property; may exclude overhead transmission lines"],
+                        ["Service interruption", "Off-premises failure of power, water, gas or communications.", "Often requires physical damage to the utility&rsquo;s property; may exclude overhead transmission lines"],
                         ["Extended period of indemnity", "The ramp-back after operations resume.", "Fixed number of days; must be endorsed"],
                     ]),
                 ],
@@ -684,9 +684,9 @@ LOSS_TYPES = [
         ],
         "faqs": [
             ("Our organization is a nonprofit. Is there anything to claim?",
-             "<p>Frequently yes, and it is frequently missed because the revenue is not called "
+             "<p>Usually yes, and it is often missed because the revenue is not called "
              "revenue. Tithes and offerings, tuition and program fees, facility rentals, event "
-             "income, dining and bookstore receipts, camp and conference bookings &mdash; these are "
+             "income, dining and bookstore receipts, camp and conference bookings, these are "
              "income streams that interrupt. Whether they are covered depends on the form, and "
              "nonprofit-specific programs often address them explicitly. Read the endorsements.</p>"),
             ("The carrier retained a forensic accountant. Should we be worried?",
@@ -699,9 +699,9 @@ LOSS_TYPES = [
             ("How is the loss actually calculated?",
              "<p>In outline: project the revenue the operation would have earned during the period "
              "of restoration, using its own trend and any relevant market benchmark; subtract "
-             "revenue actually earned; apply the appropriate margin so you are claiming lost "
-             "earnings rather than lost turnover; add expenses that continued but produced nothing; "
-             "subtract expenses genuinely saved; add extra expense reasonably incurred. Every one "
+             "revenue earned; apply the appropriate margin so you are claiming lost "
+             "earnings instead of lost turnover; add expenses that continued but produced nothing; "
+             "subtract expenses saved; add extra expense reasonably incurred. Every one "
              "of those six steps is a place where reasonable professionals disagree, which is why "
              "the claim is worth building properly.</p>"),
         ],

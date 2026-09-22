@@ -16,7 +16,7 @@ AREAS = [
         "city": "Austin",
         "nav_label": "Austin",
         "card_title": "Austin &amp; Central Texas",
-        "card_blurb": ("Travis, Williamson and Hays counties &mdash; hail, freeze and a building "
+        "card_blurb": ("Travis, Williamson and Hays counties, hail, freeze and a building "
                        "stock that doubled in fifteen years."),
         "title": "Austin Claims Consultants | Commercial Large Loss",
         "description": "Expert witness and damage consulting for Austin commercial and institutional property claims. Churches, school districts, city facilities and portfolios across Central Texas.",
@@ -36,7 +36,7 @@ AREAS = [
                               "here turn on heat-maintenance and winterisation records."),
             ("Wind and straight-line events", "Downbursts strip flashing, coping and rooftop "
                                               "equipment, and the resulting water intrusion is "
-                                              "frequently reported as a roof leak months later."),
+                                              "often reported as a roof leak months later."),
             ("Flash flooding", "Creek and low-water crossing flooding is a flood peril, not a "
                                "windstorm one. Whether your program responds at all is a "
                                "declarations-page question worth answering before May."),
@@ -64,11 +64,11 @@ AREAS = [
              "<p>Yes, and the public-entity work has its own rhythm: board or council approval, "
              "a purchasing process, documentation written for a public packet, and a repair "
              "schedule built around the academic calendar or a council meeting cycle. We are used "
-             "to all of it and produce the paperwork rather than asking the district to invent "
+             "to all of it and produce the paperwork instead of asking the district to invent "
              "it.</p>"),
             ("How quickly can you get to a property in the Austin area?",
              "<p>Same day or next day for a significant loss under normal conditions. After a "
-             "regional catastrophe, everybody in the industry is stretched &mdash; we will tell "
+             "regional catastrophe, everybody in the industry is stretched. We will tell "
              "you honestly what we can commit to rather than booking an inspection we cannot "
              "staff.</p>"),
         ],
@@ -79,7 +79,7 @@ AREAS = [
         "city": "Houston",
         "nav_label": "Houston",
         "card_title": "Houston &amp; the Gulf Coast",
-        "card_blurb": ("Harris and the surrounding counties &mdash; wind, surge, derecho and the "
+        "card_blurb": ("Harris and the surrounding counties, wind, surge, derecho and the "
                        "flood-versus-wind argument that follows every named storm."),
         "title": "Houston Claims Consultants | Hurricane &amp; Large Loss",
         "description": "Expert witness and damage consulting on Houston commercial property. Hurricane, windstorm, flood-versus-wind causation, fire and business interruption.",
@@ -96,7 +96,7 @@ AREAS = [
                              "hurricane claim, and all three are settled with evidence gathered "
                              "in the first ten days."),
             ("Straight-line wind", "The May 2024 derecho demonstrated that a non-named event can "
-                                   "produce hurricane-force damage across a metro &mdash; and, "
+                                   "produce hurricane-force damage across a metro, and, "
                                    "usefully for policyholders, without triggering a named-storm "
                                    "deductible. Which deductible applies is worth confirming."),
             ("Flooding", "Excluded on virtually every commercial property form. Where surge or "
@@ -112,23 +112,23 @@ AREAS = [
                   "was thin, then damaged again in 2024, arrives at the second claim with a "
                   "carrier arguing that the current condition is the unrepaired remnant of the "
                   "first event. Untangling that requires the prior claim file, the prior scope, "
-                  "the invoices for what was actually done, and photographs from both periods."),
+                  "the invoices for what was done, and photographs from both periods."),
             ("p", "The second pattern is the flood-versus-wind split on the coastal side of the "
                   "metro. Where a property carries both a flood policy and a commercial property "
                   "policy, the two adjusters have opposite incentives about the same water line, "
-                  "and a policyholder who lets them run independently frequently ends up "
+                  "and a policyholder who lets them run independently commonly ends up "
                   "under-recovered by both. Those files need to be run together, with one "
                   "consistent damage description."),
             ("p", "Beryl in July 2024 added a third: extended power loss. Institutions with "
                   "spoiled stock, failed refrigeration, lost cold chain and days of closure "
-                  "should check for service interruption cover, which frequently requires "
-                  "physical damage to the utility&rsquo;s own property and frequently excludes "
+                  "should check for service interruption cover, which often requires "
+                  "physical damage to the utility&rsquo;s own property and often excludes "
                   "overhead transmission lines. It is a narrow extension, and it is worth "
                   "reading before you assume it responds."),
         ],
         "faqs": [
             ("Our Harvey claim was settled years ago. Is there anything left in it?",
-             "<p>Occasionally, and it depends almost entirely on whether a full and final release "
+             "<p>Occasionally, and it depends almost on whether a full and final release "
              "was signed and whether the limitation period has run. Where repairs were never "
              "completed, where recoverable depreciation was never released, or where the damage "
              "proved materially worse than the settled scope, a supplement may still be live. "
@@ -161,8 +161,8 @@ AREAS = [
                  "arguing that a twenty-year-old commercial roof was already finished."),
         "counties": "Dallas, Tarrant, Collin, Denton, Rockwall, Ellis and Johnson counties",
         "perils": [
-            ("Hail", "Repeated severe hail across the Metroplex &mdash; the 2012 and 2016 events "
-                     "among the costliest in US history &mdash; means most institutional roofs "
+            ("Hail", "Repeated severe hail across the Metroplex, the 2012 and 2016 events "
+                     "among the costliest in US history, means most institutional roofs "
                      "here have a claim history, which carriers use to argue any new damage is "
                      "old."),
             ("Tornado and downburst", "The October 2019 Dallas tornado showed how a narrow track "
@@ -191,21 +191,21 @@ AREAS = [
             ("p", "Cosmetic damage exclusions also appear more often on North Texas commercial "
                   "programs than elsewhere in the state, for obvious underwriting reasons. If "
                   "one is on your policy, the entire claim becomes an argument about function and "
-                  "remaining service life &mdash; and that argument needs a qualified opinion, not "
+                  "remaining service life, and that argument needs a qualified opinion, not "
                   "a contractor&rsquo;s letter."),
         ],
         "faqs": [
             ("How do we prove which storm caused the damage?",
-             "<p>With dated evidence rather than assertion. Aerial and satellite imagery by date, "
+             "<p>With dated evidence instead of assertion. Aerial and satellite imagery by date, "
              "the property&rsquo;s own inspection and maintenance records, the prior claim files "
-             "and what was actually repaired, storm data for the specific coordinates, and a roof "
+             "and what was repaired, storm data for the specific coordinates, and a roof "
              "survey by someone competent to distinguish fresh impact from weathered damage. On "
              "DFW files this is usually the central factual question.</p>"),
             ("We have already had two hail claims. Will a third be taken seriously?",
              "<p>It will be scrutinised, which is not the same thing. The answer is documentation "
              "that the earlier damage was properly repaired: invoices, close-out photographs, "
              "warranty reinstatement. Where earlier claims were settled and the money spent on "
-             "something else, that is a harder file &mdash; and still worth assessing honestly "
+             "something else, that is a harder file, and still worth assessing honestly "
              "before you report.</p>"),
         ],
     },
@@ -223,7 +223,7 @@ AREAS = [
         "h1": "San Antonio<br><em>institutional</em> claims",
         "h1_plain": "Claims consultants in San Antonio, Texas",
         "lede": ("San Antonio has an unusually old institutional building stock for a Sun Belt "
-                 "city &mdash; parish churches, mission-era structures, mid-century schools and "
+                 "city, parish churches, mission-era structures, mid-century schools and "
                  "civic buildings. That makes ordinance and law coverage the decisive clause on a "
                  "large share of local claims."),
         "counties": "Bexar, Comal, Guadalupe, Kendall, Medina and Wilson counties",
@@ -243,16 +243,16 @@ AREAS = [
         "local": [
             ("p", "Age is the theme here. When a mid-century school building, a parish church or "
                   "a civic structure is substantially repaired, the local jurisdiction can require "
-                  "the whole building to come up to current code &mdash; fire suppression, egress, "
+                  "the whole building to come up to current code, fire suppression, egress, "
                   "accessibility, energy, sometimes structural detailing that did not exist at "
-                  "construction. That cost is frequently a large multiple of the storm damage "
+                  "construction. That cost is usually a large multiple of the storm damage "
                   "itself."),
             ("p", "Ordinance or law coverage is what answers it, and it normally comes in three "
                   "parts with three separate limits: the undamaged portion that must be "
                   "demolished, the demolition and debris cost, and the increased cost of "
                   "construction. Those limits were usually set as a small percentage of the "
                   "building limit by someone who was not imagining this repair. Establishing what "
-                  "the building official will actually require, in writing, is the single highest "
+                  "the building official will require, in writing, is the single highest "
                   "value early step on a San Antonio institutional file."),
             ("p", "Historic designation adds a further layer. Where a structure is designated, "
                   "replacement materials and methods may be constrained in ways that a standard "
@@ -265,8 +265,8 @@ AREAS = [
              "imposed. A policy written on functional replacement cost permits modern equivalents. "
              "A replacement-cost policy contemplates like kind and quality. Where a historic "
              "designation or the building code legally requires specific materials or methods, "
-             "ordinance and law coverage is the route &mdash; subject to its own limit, which is "
-             "the number worth checking now rather than after a fire.</p>"),
+             "ordinance and law coverage is the route, subject to its own limit, which is "
+             "the number worth checking now instead of after a fire.</p>"),
             ("How much ordinance and law coverage should we carry?",
              "<p>More than the default, on almost any building older than about thirty years. The "
              "useful exercise is to ask your building official what a substantial repair would "
@@ -290,7 +290,7 @@ AREAS = [
         "h1_plain": "Claims consultants in Corpus Christi and the Coastal Bend",
         "lede": ("On the coast the coverage architecture is different. Windstorm may sit with "
                  "TWIA, flood with a separate policy, and everything else with a commercial "
-                 "carrier &mdash; three adjusters looking at one building and each hoping the "
+                 "carrier: three adjusters looking at one building and each hoping the "
                  "damage belongs to somebody else."),
         "counties": "Nueces, San Patricio, Aransas, Kleberg, Refugio, Bee and Jim Wells counties",
         "perils": [
@@ -317,7 +317,7 @@ AREAS = [
                   "problem we see."),
             ("p", "TWIA in particular runs to its own timetable and its own appeal and dispute "
                   "resolution process, which is not the same as a standard carrier&rsquo;s and "
-                  "which has deadlines that are genuinely unforgiving. Institutions used to "
+                  "which has deadlines that are unforgiving. Institutions used to "
                   "dealing with a commercial carrier regularly assume the ordinary process applies "
                   "and find out otherwise."),
             ("p", "The evidentiary priority after a landfalling storm is always the same: "
@@ -333,7 +333,7 @@ AREAS = [
              "someone who knows them. TWIA has its own claim handling requirements, its own "
              "deadlines for disputing a decision and its own dispute resolution route. Those "
              "deadlines are strict, and an institution that treats a TWIA claim like an ordinary "
-             "carrier claim can lose rights simply by waiting.</p>"),
+             "carrier claim can lose rights by waiting.</p>"),
             ("How do we handle having three separate policies on one loss?",
              "<p>With one damage description and one set of measurements, used across all three "
              "files. Each policy is presented with the portion of the loss that belongs to it, "
@@ -348,7 +348,7 @@ AREAS = [
         "city": "McAllen",
         "nav_label": "Rio Grande Valley",
         "card_title": "Rio Grande Valley",
-        "card_blurb": ("Hidalgo and Cameron counties &mdash; tropical systems, flooding, and some "
+        "card_blurb": ("Hidalgo and Cameron counties, tropical systems, flooding, and some "
                        "of the fastest institutional growth in the state."),
         "title": "Rio Grande Valley Claims Consultants | Commercial",
         "description": "Expert witness and damage consulting for Rio Grande Valley commercial and institutional property claims across Hidalgo, Cameron, Willacy and Starr counties.",
@@ -356,7 +356,7 @@ AREAS = [
         "h1": "Rio Grande Valley<br>commercial <em>claims</em>",
         "h1_plain": "Claims consultants in the Rio Grande Valley",
         "lede": ("The Valley combines coastal windstorm exposure, inland flooding and the fastest "
-                 "school and municipal construction growth in South Texas &mdash; against an "
+                 "school and municipal construction growth in South Texas, against an "
                  "insurance market that has hardened sharply and a building stock that has "
                  "outgrown its statements of value."),
         "counties": "Hidalgo, Cameron, Willacy and Starr counties",
@@ -367,7 +367,7 @@ AREAS = [
             ("Rainfall flooding", "Drainage capacity across much of the Valley is a known "
                                   "constraint, and heavy-rain flooding is a recurring "
                                   "institutional exposure that property policies exclude."),
-            ("Hail and severe storm", "Less frequent than North Texas and entirely capable of "
+            ("Hail and severe storm", "Less frequent than North Texas and capable of "
                                       "ending a low-slope roof&rsquo;s service life when it "
                                       "happens."),
             ("Heat and thermal cycling", "Accelerated membrane aging gives carriers an easy wear "
@@ -375,7 +375,7 @@ AREAS = [
         ],
         "local": [
             ("p", "Valley school districts and municipalities have built heavily over the last "
-                  "fifteen years, frequently through bond programs, and the insured values on "
+                  "fifteen years, often through bond programs, and the insured values on "
                   "that construction have not always kept pace with what it would now cost to "
                   "replace. Construction cost inflation since 2020 has been severe enough that a "
                   "schedule assembled in 2019 can fail a 90% coinsurance test today without "
@@ -383,7 +383,7 @@ AREAS = [
             ("p", "The second local issue is the wind-versus-water split, which in the Valley is "
                   "usually rainfall flooding rather than surge. The distinction matters just as "
                   "much: property policies exclude flood, so establishing what the wind did "
-                  "&mdash; roof, envelope, upper floors &mdash; before the ground-level water "
+                  " (roof, envelope, upper floors) before the ground-level water "
                   "damage is cleaned up is the difference between a covered claim and a denied "
                   "one."),
             ("p", "We work across Hidalgo, Cameron, Willacy and Starr counties and we can conduct "
@@ -392,14 +392,14 @@ AREAS = [
         ],
         "faqs": [
             ("Do you work in Spanish?",
-             "<p>Yes &mdash; inspections, meetings and correspondence. Where a board or council "
+             "<p>Yes, inspections, meetings and correspondence. Where a board or council "
              "needs documentation in both languages for a public meeting, we produce it.</p>"),
             ("Our district built new campuses recently. Are the values likely to be wrong?",
-             "<p>Frequently, and not through anyone&rsquo;s fault. Commercial construction costs "
+             "<p>Commonly, and not through anyone&rsquo;s fault. Commercial construction costs "
              "in Texas rose sharply after 2020, and a statement of values built from 2018 or 2019 "
              "construction contracts can sit well below current replacement cost. If your "
              "program carries a coinsurance clause rather than agreed value, that gap becomes a "
-             "penalty on every claim. It is worth testing before renewal rather than after a "
+             "penalty on every claim. It is worth testing before renewal instead of after a "
              "storm.</p>"),
         ],
     },

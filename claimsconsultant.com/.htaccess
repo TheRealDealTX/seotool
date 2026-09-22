@@ -9,15 +9,15 @@ DirectoryIndex index.html
   # https + non-www canonical host
   RewriteCond %{HTTPS} !=on [OR]
   RewriteCond %{HTTP:X-Forwarded-Proto} =http
-  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L, R=301]
   RewriteCond %{HTTP_HOST} ^www\.claimsconsultant\.com$ [NC]
-  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L,R=301]
+  RewriteRule ^ https://claimsconsultant.com%{REQUEST_URI} [L, R=301]
 
   # every page is a directory with a trailing slash
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_URI} !(/$|\.[a-zA-Z0-9]{1,5}$)
-  RewriteRule ^(.*)$ /$1/ [L,R=301]
+  RewriteRule ^(.*)$ /$1/ [L, R=301]
 </IfModule>
 
 ErrorDocument 404 /404.html

@@ -191,6 +191,21 @@ territory, not a damage expert's. They were stripped deliberately — the hero
 panel, a calculator and an article were all built on them and were all
 replaced. Don't reintroduce them.
 
+### Style
+
+`tools-check-style.py` counts the tics that make copy read as machine-written
+— em-dash density, filler adverbs, antithesis constructions, sentence-length
+variance, and phrases repeated across pages. Run it after any substantial
+copy change:
+
+```sh
+python3 tools-check-style.py
+```
+
+Rough targets: em dash under 4 per 1,000 words, "actually" and "frequently"
+under 1 each, sentence-length standard deviation above 9. A pass in Sept 2026
+took em dash from 10.2 to 3.7 per 1,000.
+
 The copy never assumes the reader is the policyholder. Tables that set out
 competing positions give both, and the claim throughout is that the analysis
 does not change with the client. That is the firm's whole differentiator, so

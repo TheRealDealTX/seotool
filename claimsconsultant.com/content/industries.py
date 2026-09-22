@@ -22,7 +22,7 @@ INDUSTRIES = [
         "slug": "churches-and-religious-organizations",
         "nav_label": "Churches &amp; Faith Organizations",
         "card_title": "Churches &amp; faith organizations",
-        "card_blurb": ("Sanctuaries, family life centers, schools and parsonages &mdash; usually "
+        "card_blurb": ("Sanctuaries, family life centers, schools and parsonages, usually "
                        "insured on values nobody has revisited in a decade."),
         "title": "Church Property Loss Consultants | Texas",
         "description": "Expert witness and damage consulting for Texas churches. Storm, hail, fire and water loss assessment on sanctuaries, family life centers and church schools.",
@@ -42,7 +42,7 @@ INDUSTRIES = [
                 ("Stained glass scheduled", "Rarely"),
                 ("Loss of tithes covered", "Depends"),
                 ("Who reads the policy first", "Nobody"),
-            ], "Six lines that decide most sanctuary claims &mdash; and the six that nobody checks "
+            ], "Six lines that decide most sanctuary claims, and the six that nobody checks "
                "until the roof is already open."),
         ],
         "sections": [
@@ -58,7 +58,7 @@ INDUSTRIES = [
                           "lighting package twice."),
                     ("p", "That gap does not matter at all until there is a loss. Then it matters "
                           "in two ways at once. It caps what the policy can pay, and &mdash; if the "
-                          "form carries a coinsurance clause, which most church forms do &mdash; it "
+                          "form carries a coinsurance clause, which most church forms do. It "
                           "reduces the payment on every loss by the ratio of the limit carried to "
                           "the limit required. A partial roof claim on a badly scheduled sanctuary "
                           "gets cut by the same percentage as a total loss would."),
@@ -73,18 +73,18 @@ INDUSTRIES = [
                 ],
                 "aside": [
                     ("callout", "Functional replacement cost", [
-                        ("p", "Older sanctuaries are frequently written on a <strong>functional "
-                              "replacement cost</strong> basis rather than true RCV. That wording "
+                        ("p", "Older sanctuaries are often written on a <strong>functional "
+                              "replacement cost</strong> basis instead of true RCV. That wording "
                               "lets the carrier rebuild with modern equivalent materials instead of "
                               "matching plaster, millwork or leaded glass. It is not automatically "
-                              "wrong &mdash; but it is a completely different number, and it should "
+                              "wrong, but it is a completely different number, and it should "
                               "be a decision the church made, not one it discovered."),
                     ]),
                     ("callout", "Denominational programs", [
                         ("p", "Churches insured through a denominational or church-specialty "
-                              "program often have better wording than the open market &mdash; "
-                              "agreed value, replacement cost on contents, generous debris removal "
-                              "&mdash; and no one at the church has ever read it. The endorsement "
+                              "program often have better wording than the open market, "
+                              "agreed value, replacement cost on contents, generous debris removal"
+                              ", and no one at the church has ever read it. The endorsement "
                               "list is where the money is."),
                     ]),
                 ],
@@ -92,7 +92,7 @@ INDUSTRIES = [
             {
                 "band": "paper2",
                 "eyebrow": "Scope",
-                "h2": "The line items carriers routinely leave off a sanctuary estimate.",
+                "h2": "The line items carriers regularly leave off a sanctuary estimate.",
                 "dek": "None of these are exotic. They are simply not in the standard template, so "
                        "they do not appear unless somebody puts them there.",
                 "blocks": [
@@ -116,7 +116,7 @@ INDUSTRIES = [
                          "Business income for a nonprofit. Recorded as giving, not revenue, so nobody claims it.",
                          "~Time element"],
                         ["Temporary worship space",
-                         "Extra expense &mdash; tent, school gym, rented hall, sound hire &mdash; if the form allows it.",
+                         "Extra expense (tent, school gym, rented hall, sound hire) if the form allows it.",
                          "~Extra expense"],
                         ["Pre-school and day-care interruption",
                          "A separate revenue stream with its own licensing and staffing costs.",
@@ -153,16 +153,16 @@ INDUSTRIES = [
             {
                 "band": "ink",
                 "eyebrow": "Also relevant",
-                "h2": "Church schools, camps and parsonages sit on the same policy &mdash; and get forgotten.",
-                "dek": "If the organization owns it, the claim should scope it. We routinely find "
+                "h2": "Church schools, camps and parsonages sit on the same policy, and get forgotten.",
+                "dek": "If the organization owns it, the claim should scope it. We regularly find "
                        "outbuildings, portable classrooms, playground structures, fellowship halls "
                        "and church-owned housing on the schedule that nobody inspected after the storm.",
                 "blocks": [
                     ("checks", [
                         "Church-operated schools, pre-schools and mother&rsquo;s-day-out programs, including their revenue interruption.",
-                        "Gymnasiums and family life centers &mdash; floors, backstops, HVAC and roof systems.",
+                        "Gymnasiums and family life centers, floors, backstops, HVAC and roof systems.",
                         "Parsonages and church-owned residential property, which may be scheduled under a different valuation basis.",
-                        "Camps, retreat centers and cemetery structures, frequently in a different county from the main campus.",
+                        "Camps, retreat centers and cemetery structures, often in a different county from the main campus.",
                         "Detached storage, bus barns and maintenance buildings where hail damage shows earliest.",
                     ]),
                 ],
@@ -173,7 +173,7 @@ INDUSTRIES = [
              "<p>A church engages a consultant the same way it engages an architect or an attorney: "
              "through whatever its bylaws require for a contract of that size, usually trustee or "
              "board approval. Denominational insurance programs do not prohibit it. What they often "
-             "do is offer their own claims assistance, which is genuinely useful and still paid for "
+             "do is offer their own claims assistance, which is useful and still paid for "
              "by the same organization that will pay the claim. Those two things can coexist. An "
              "independent measurement of the loss is useful to the church and, frankly, useful "
              "to a well-run program too &mdash; it is easier to pay a documented number than an "
@@ -181,21 +181,21 @@ INDUSTRIES = [
             ("Our insurance is through a church-specific carrier. Are those claims different?",
              "<p>In the wording, yes, usually for the better. Church programs commonly carry agreed "
              "value in place of coinsurance, replacement cost on contents, broader debris removal, "
-             "and extensions for things the standard commercial form ignores &mdash; counselling "
+             "and extensions for things the standard commercial form ignores, counselling "
              "expense, loss of tithes, temporary worship facilities. The difficulty is that almost "
              "nobody at the church knows those extensions exist, so they are never claimed. Reading "
              "the endorsement schedule is often the single highest-value hour of a church file.</p>"),
             ("The roof looks fine from the ground. Should we still have it looked at after a hail storm?",
              "<p>Yes, and preferably before the policy&rsquo;s claim-reporting window and the "
              "two-year suit limitation start to bite. Hail bruising on a modified bitumen or "
-             "single-ply commercial roof is frequently invisible from grade and sometimes invisible "
+             "single-ply commercial roof is usually invisible from grade and sometimes invisible "
              "from the roof surface without a test cut. The damage that matters is to the membrane "
-             "and the insulation beneath it, and it expresses itself as leaks eighteen months later "
-             "&mdash; by which point the carrier will argue the cause was wear, not the storm.</p>"),
+             "and the insulation beneath it, and it expresses itself as leaks eighteen months later"
+             ", by which point the carrier will argue the cause was wear, not the storm.</p>"),
             ("Will filing a claim raise our premium or get us non-renewed?",
              "<p>It is a fair worry and we will not pretend otherwise: in a hard property market, "
              "loss history affects both. What we would say is that the calculation should be made "
-             "with a real number in hand rather than a guess. A church that quietly absorbs a "
+             "with a real number in hand instead of a guess. A church that quietly absorbs a "
              "$400,000 roof loss to protect a $9,000 premium has made a bad trade. One that files a "
              "marginal $22,000 claim in a year when it is already on notice may have made a worse "
              "one. We will tell you which situation you are in before you give notice.</p>"),
@@ -232,12 +232,12 @@ INDUSTRIES = [
         "sections": [
             {
                 "eyebrow": "The pool question",
-                "h2": "First establish whether you are actually insured.",
+                "h2": "First establish whether you are insured.",
                 "blocks": [
                     ("p", "A large share of Texas districts cover property through an interlocal "
                           "risk pool rather than a traditional insurance policy. That distinction "
                           "is not academic. A pool operates under an interlocal participation "
-                          "agreement, and the statutory machinery that governs insurers &mdash; the "
+                          "agreement, and the statutory machinery that governs insurers, the "
                           "statutory machinery aimed at insurers may not apply to it in the same way."),
                     ("p", "What that changes is procedure, not the technical work. A pool coverage "
                           "document has its own appeal process, its own valuation provisions and "
@@ -264,7 +264,7 @@ INDUSTRIES = [
             {
                 "band": "paper2",
                 "eyebrow": "Deductibles",
-                "h2": "How the deductible is written decides how much of a district-wide hail event you actually recover.",
+                "h2": "How the deductible is written decides how much of a district-wide hail event you recover.",
                 "dek": "One storm crossing nineteen campuses can be one occurrence or nineteen. "
                        "Both readings appear in Texas school property programs, and the difference "
                        "on a mid-sized district runs into seven figures.",
@@ -276,16 +276,16 @@ INDUSTRIES = [
                          "Best case. One deductible against the entire loss."],
                         ["Per building, per occurrence",
                          "The retention applies separately at each damaged structure.",
-                         "Nineteen campuses can mean nineteen retentions. Frequently fatal to small-per-campus losses."],
+                         "Nineteen campuses can mean nineteen retentions. Often fatal to small-per-campus losses."],
                         ["Percentage of values, per building",
-                         "A percentage &mdash; commonly 1% to 5% &mdash; of the insured value of each affected building.",
+                         "A percentage, commonly 1% to 5%, of the insured value of each affected building.",
                          "Scales with the schedule. A high-value high school can absorb its own claim entirely."],
                         ["Named storm / wind-hail separate",
                          "A different, usually larger, retention for named storms or for all wind and hail.",
                          "Determines whether a hail claim is worth filing at all. Check the trigger wording."],
                         ["Annual aggregate",
                          "Retentions accumulate toward a stop; losses after that point are covered in full.",
-                         "The reason to file small campus losses properly &mdash; they erode the aggregate."],
+                         "The reason to file small campus losses properly. They erode the aggregate."],
                      ]),
                     ("callout", "The occurrence definition is where this is decided", [
                         ("p", "Look for the phrase defining occurrence in terms of a continuous "
@@ -303,7 +303,7 @@ INDUSTRIES = [
                     ("checks", [
                         "<strong>Roof systems by section.</strong> Campuses are rarely one roof. A 1978 built-up section, a 2004 modified bitumen addition and a 2019 TPO wing have three different ages, three different repairability arguments and three different unit costs.",
                         "<strong>Gym floors.</strong> Maple sports floors cup and crown from humidity alone. Sanding is not always the remedy and moisture testing under the vapour barrier is not optional.",
-                        "<strong>Portable and modular classrooms.</strong> Frequently missing from the statement of values altogether, and the first structures to sustain wind damage.",
+                        "<strong>Portable and modular classrooms.</strong> Usually missing from the statement of values altogether, and the first structures to sustain wind damage.",
                         "<strong>Athletic facilities.</strong> Press boxes, field houses, bleachers, netting, scoreboards, track surfaces and turf infill &mdash; all separately damageable, all rarely inspected by the carrier&rsquo;s adjuster.",
                         "<strong>Kitchen equipment and food stock.</strong> A refrigeration outage during a wind event is a spoilage claim and a health-department event at the same time.",
                         "<strong>Technology and instructional equipment.</strong> Interactive panels, lab equipment, one-to-one device inventories and network hardware in ceiling spaces that took water.",
@@ -318,7 +318,7 @@ INDUSTRIES = [
                 "h2": "Insurance and FEMA have to be sequenced, not run in parallel.",
                 "dek": "Public assistance is a payer of last resort. Federal law prohibits "
                        "duplication of benefits, so what your insurance ought to have paid is "
-                       "deducted from federal assistance whether or not you actually pursued it.",
+                       "deducted from federal assistance whether or not you pursued it.",
                 "blocks": [
                     ("p", "The practical consequence for a district is uncomfortable: under-settling "
                           "the insurance claim does not shift the shortfall onto FEMA. The federal "
@@ -326,7 +326,7 @@ INDUSTRIES = [
                           "actual or anticipated, and applicants are separately required to obtain "
                           "and maintain insurance as a condition of assistance on the same facility "
                           "in future. Districts that take the carrier&rsquo;s first number to get "
-                          "the campus open frequently discover the cost of that decision in the "
+                          "the campus open often discover the cost of that decision in the "
                           "obligation phase, months later."),
                     ("p", "We document the insurance claim to a standard the public assistance file "
                           "can be built on: same measurements, same scope, same photographs, same "
@@ -339,14 +339,14 @@ INDUSTRIES = [
             ("Does a school district need to competitively bid a claims consultant?",
              "<p>Professional services procurement varies by district policy and by the value of the "
              "engagement, and your purchasing officer and counsel are the right people to answer it "
-             "for your board &mdash; not us. What we can tell you is that ours is an ordinary "
+             "for your board, not us. What we can tell you is that ours is an ordinary "
              "hourly professional-services engagement with a written estimate and a "
              "not-to-exceed figure, which is a familiar shape to a purchasing process. We are "
              "used to producing the documentation a board packet requires.</p>"),
             ("Our district is in a risk pool. Is there anything for a consultant to do?",
              "<p>Often more, not less. Pool coverage documents are not standard-form insurance "
              "policies, so the exclusions, the valuation basis and the appeal process all have to "
-             "be read rather than assumed. The adjusting is frequently done by the same third-party "
+             "be read rather than assumed. The adjusting is commonly done by the same third-party "
              "administrators the insurance industry uses, and the scope disputes are identical: "
              "roof age, repairability, matching, code upgrade, overhead and profit. What changes is "
              "that there is no statutory pressure to fall back on, so everything rests on "
@@ -356,7 +356,7 @@ INDUSTRIES = [
              "get scheduled around instruction, invasive testing goes in breaks, and the negotiation "
              "sequence is built backwards from the date the campus must be occupiable. Where the "
              "deadline is genuinely immovable, we would rather document heavily, get an advance "
-             "payment released to start work, and keep the scope disputes live &mdash; than let the "
+             "payment released to start work, and keep the scope disputes live, than let the "
              "calendar force the district into accepting a number as final.</p>"),
             ("What if repairs have already been done?",
              "<p>Then the claim gets built from what survives: invoices, contractor photographs, "
@@ -373,7 +373,7 @@ INDUSTRIES = [
         "slug": "cities-and-municipalities",
         "nav_label": "Cities &amp; Municipalities",
         "card_title": "Cities &amp; municipalities",
-        "card_blurb": ("City halls, public safety, utilities and public works &mdash; with FEMA, a "
+        "card_blurb": ("City halls, public safety, utilities and public works, with FEMA, a "
                        "council and the open-records file all watching."),
         "title": "Municipal Property Losses | Texas Claims Consultants",
         "description": "Expert witness and damage consulting for Texas cities and municipal entities. City hall, public safety, utilities and public works claims, including FEMA coordination.",
@@ -381,7 +381,7 @@ INDUSTRIES = [
         "h1": "Municipal claims, built<br>for the <em>public record</em>",
         "h1_plain": "Municipal and city property insurance claims",
         "lede": ("A city cannot settle a property claim quietly. The number ends up in a council "
-                 "packet, in the audit, sometimes in the newspaper, and frequently in a federal "
+                 "packet, in the audit, sometimes in the newspaper, and often in a federal "
                  "obligation file three years later. That is a good reason to get it right the "
                  "first time and to be able to show your working."),
         "head_aside": [
@@ -404,7 +404,7 @@ INDUSTRIES = [
                           "water treatment facility floods, the city still has to produce water. "
                           "Municipal property losses are almost always emergencies of operation "
                           "before they are questions of coverage, and the decisions made in those "
-                          "first days &mdash; where to relocate, what to demolish, which contractor "
+                          "first days, where to relocate, what to demolish, which contractor "
                           "to bring in under an emergency purchase &mdash; are the decisions the "
                           "carrier will scrutinise hardest afterwards."),
                     ("p", "The way through is not to slow the city down. It is to document at the "
@@ -426,8 +426,8 @@ INDUSTRIES = [
                     ("callout", "Risk pools and self-insurance", [
                         ("p", "Many Texas cities cover property through an intergovernmental risk "
                               "pool operating under an interlocal agreement, sometimes with a "
-                              "substantial self-insured retention beneath it. The coverage document "
-                              "&mdash; not the insurance code &mdash; is the primary rulebook, and "
+                              "substantial self-insured retention beneath it. The coverage document"
+                              ", not the insurance code, is the primary rulebook, and "
                               "it needs to be read before positions are taken."),
                     ]),
                 ],
@@ -443,13 +443,13 @@ INDUSTRIES = [
                     ("p", "Read plainly, that means a city cannot improve its position by settling "
                           "the insurance claim cheaply and asking the federal government to cover "
                           "the difference. The anticipated insurance recovery is deducted whether "
-                          "or not it was actually pursued with any vigour. A weak insurance "
-                          "settlement therefore lands entirely on the city&rsquo;s own general "
+                          "or not it was pursued with any vigour. A weak insurance "
+                          "settlement therefore lands on the city&rsquo;s own general "
                           "fund, twice over."),
                     ("p", "There is a second obligation that outlives the disaster. Applicants "
                           "receiving public assistance for an insurable facility are generally "
                           "required to obtain and maintain insurance on that facility going "
-                          "forward, in an amount at least equal to the eligible damage &mdash; and "
+                          "forward, in an amount at least equal to the eligible damage, and "
                           "failing to do so can jeopardise assistance after the next event. The "
                           "insurance decision made this year constrains the next declaration."),
                     ("table", "Sequencing the two files", ["Stage", "Insurance", "Public assistance"], [
@@ -464,7 +464,7 @@ INDUSTRIES = [
                     ]),
                     ("callout", "One set of measurements", [
                         ("p", "The most common self-inflicted wound in municipal recovery is two "
-                              "inconsistent damage descriptions &mdash; one written for the carrier "
+                              "inconsistent damage descriptions, one written for the carrier "
                               "and one written for the federal file. They will eventually be read "
                               "side by side. Build them from the same survey."),
                     ]),
@@ -472,11 +472,11 @@ INDUSTRIES = [
             },
             {
                 "eyebrow": "Facilities",
-                "h2": "What a city actually owns, and how each part fails.",
+                "h2": "What a city owns, and how each part fails.",
                 "blocks": [
                     ("cards", [
                         ("City hall &amp; civic buildings",
-                         "Often the oldest structure on the schedule, frequently historic, almost "
+                         "Often the oldest structure on the schedule, often historic, almost "
                          "always the one where ordinance and law coverage decides the outcome. "
                          "Records rooms and server rooms are the hidden exposure.",
                          "/loss-types/commercial-property-damage-claims/"),
@@ -500,7 +500,7 @@ INDUSTRIES = [
                          "/loss-types/commercial-fire-claims/"),
                         ("Parks, pools &amp; athletic facilities",
                          "Pavilions, press boxes, lighting, netting, shade structures and pool "
-                         "mechanical &mdash; routinely omitted from the carrier&rsquo;s inspection "
+                         "mechanical, often omitted from the carrier&rsquo;s inspection "
                          "list entirely.",
                          "/loss-types/hurricane-and-windstorm-claims/"),
                     ]),
@@ -517,7 +517,7 @@ INDUSTRIES = [
                         "A plain-English status memo at every stage, suitable for a council packet without rewriting.",
                         "Scope and estimate delivered in a standard estimating format your finance department and any state or federal reviewer can follow.",
                         "Photographic record indexed by facility, date and location, with the raw files handed over at closeout.",
-                        "A written record of every carrier position and every response, with dates &mdash; which is also the record that makes a statutory argument possible later.",
+                        "A written record of every carrier position and every response, with dates, which is also the record that makes a statutory argument possible later.",
                         "Fee and engagement terms stated as a percentage of recovery, in writing, before any work begins.",
                     ]),
                 ],
@@ -525,8 +525,8 @@ INDUSTRIES = [
         ],
         "faqs": [
             ("Can a Texas city engage a claims consultant?",
-             "<p>Cities engage professional services of this kind routinely, subject to their own "
-             "charter, purchasing policy and council approval thresholds &mdash; which your city "
+             "<p>Cities engage professional services of this kind regularly, subject to their own "
+             "charter, purchasing policy and council approval thresholds, which your city "
              "attorney and purchasing officer will apply, not us. Ours is an hourly "
              "professional-services engagement with a written estimate and a not-to-exceed "
              "figure, which most purchasing policies already have a route for. We will supply "
@@ -541,8 +541,8 @@ INDUSTRIES = [
              "structured with that in mind from the start.</p>"),
             ("Our coverage is through a risk pool, not an insurance company. Does that change things?",
              "<p>It changes the rulebook. A pool operates under an interlocal participation "
-             "agreement rather than an insurance policy, so the remedies that apply to an "
-             "insurer may not reach it. The technical questions, though, are identical &mdash; roof age, "
+             "agreement instead of an insurance policy, so the remedies that apply to an "
+             "insurer may not reach it. The technical questions, though, are identical, roof age, "
              "repairability, matching, code upgrade, depreciation, overhead and profit &mdash; and "
              "those are won with documentation and with the pool&rsquo;s own appeal mechanism.</p>"),
             ("How quickly can you mobilise after a declared event?",
@@ -587,7 +587,7 @@ INDUSTRIES = [
                 "h2": "A blanket limit is only as good as the values behind it.",
                 "blocks": [
                     ("p", "Campus programs are normally written blanket, which lets the full "
-                          "limit respond anywhere on the schedule rather than trapping recovery at "
+                          "limit respond anywhere on the schedule instead of trapping recovery at "
                           "a single building value. It is the right structure. It also creates a "
                           "quiet dependency: blanket coverage is usually conditioned on the "
                           "accuracy of the reported statement of values, and the margin clause or "
@@ -604,11 +604,11 @@ INDUSTRIES = [
                 ],
                 "aside": [
                     ("callout", "Three endorsements to find", [
-                        ("p", "<strong>Margin clause</strong> or occurrence limit of liability "
-                              "&mdash; caps recovery to a percentage of reported values. "
-                              "<strong>Errors and omissions</strong> &mdash; protects unreported "
+                        ("p", "<strong>Margin clause</strong> or occurrence limit of liability"
+                              ", caps recovery to a percentage of reported values. "
+                              "<strong>Errors and omissions</strong>, protects unreported "
                               "or misreported locations, within limits. <strong>Newly acquired "
-                              "property</strong> &mdash; and how many days you had to report it. "
+                              "property</strong>, and how many days you had to report it. "
                               "Together they decide whether a blanket limit behaves the way "
                               "everyone assumes."),
                     ]),
@@ -630,10 +630,10 @@ INDUSTRIES = [
                         ["Research", "Interrupted studies, lost specimens, equipment recalibration, grant timeline exposure.", "Protocol records, equipment logs, grant terms"],
                     ]),
                     ("callout", "Extra expense usually outruns business income", [
-                        ("p", "On a campus, the instinct is to keep operating at any cost &mdash; "
+                        ("p", "On a campus, the instinct is to keep operating at any cost, "
                               "hotels for students, chartered buses, rented modular labs, "
-                              "accelerated construction. That spend is frequently recoverable as "
-                              "extra expense, and it is frequently unrecorded because it is "
+                              "accelerated construction. That spend is usually recoverable as "
+                              "extra expense, and it is often unrecorded because it is "
                               "scattered across twelve departmental budgets. Centralise the capture "
                               "on day one."),
                     ]),
@@ -648,7 +648,7 @@ INDUSTRIES = [
                           "everything the building was holding &mdash; instruments that need "
                           "recalibration and requalification, controlled environments that must be "
                           "recertified, cold storage whose contents may be irreplaceable, and "
-                          "protocols that cannot simply resume."),
+                          "protocols that cannot resume."),
                     ("p", "Carriers scope the first competently and the second almost never, "
                           "because it requires manufacturer engagement and documentation from "
                           "principal investigators who are, understandably, thinking about their "
@@ -656,7 +656,7 @@ INDUSTRIES = [
                           "place early, in a format the carrier&rsquo;s consultant cannot wave "
                           "away."),
                     ("checks", [
-                        "Instrument-by-instrument condition assessment with manufacturer service reports rather than adjuster opinion.",
+                        "Instrument-by-instrument condition assessment with manufacturer service reports instead of adjuster opinion.",
                         "Cleanroom, vivarium and controlled-environment recertification treated as part of repair, not as an upgrade.",
                         "Cold-storage contents inventoried and valued before anything is discarded, with chain-of-custody documentation.",
                         "Code and safety upgrades triggered by laboratory renovation carried under ordinance and law, separately scheduled.",
@@ -669,14 +669,14 @@ INDUSTRIES = [
             ("We have a risk management office and a broker. What does a consultant add?",
              "<p>Capacity and independence, mostly. A campus risk office is typically two to five "
              "people who also run the whole insurance program, and a large loss is a full-time "
-             "job for months. Your broker is genuinely useful and is also structurally conflicted: "
+             "job for months. Your broker is useful and is also structurally conflicted: "
              "their relationship with the market is a long one and yours with this claim is short. "
              "We add estimating capability, specialist engagement and the capacity to work a file "
              "full-time for months, at an hourly rate against a written estimate.</p>"),
-            ("Can you work on part of a claim rather than the whole thing?",
+            ("Can you work on part of a claim instead of the whole thing?",
              "<p>Yes, and on campus files that is often the sensible structure. A common engagement "
-             "is on the disputed portion only &mdash; the roofs the carrier says are repairable, "
-             "the time-element loss nobody has quantified, the research contents &mdash; while the "
+             "is on the disputed portion only: the roofs the carrier says are repairable, "
+             "the time-element loss nobody has quantified, the research contents, while the "
              "risk office keeps the undisputed portion moving. The engagement letter defines the "
              "scope and the fee applies to that scope.</p>"),
             ("How is the fee handled on an institutional engagement?",
@@ -722,12 +722,12 @@ INDUSTRIES = [
                           "risk assessment, containment and negative-pressure isolation of the work "
                           "area, HEPA filtration, controlled access, and independent post-"
                           "remediation verification before the space can be returned to patient "
-                          "use. Work is frequently restricted to hours when adjacent departments "
+                          "use. Work is commonly restricted to hours when adjacent departments "
                           "are not operating, which doubles labor cost by itself."),
-                    ("p", "All of that is ordinary practice in healthcare construction and entirely "
+                    ("p", "All of that is ordinary practice in healthcare construction and "
                           "absent from a standard water-mitigation estimate. The gap between the "
                           "two is not an upgrade the facility is choosing. It is the only lawful "
-                          "way to do the repair, and it belongs in the claim as such &mdash; with "
+                          "way to do the repair, and it belongs in the claim as such, with "
                           "the protocol, the contractor&rsquo;s ICRA documentation and the "
                           "clearance testing attached as proof."),
                     ("html", '<a class="tlink" href="/loss-types/water-damage-and-freeze-claims/">'
@@ -773,7 +773,7 @@ INDUSTRIES = [
                 "h2": "Medical equipment fails quietly and expensively.",
                 "blocks": [
                     ("checks", [
-                        "Imaging equipment exposed to water, dust or power events requires manufacturer inspection and recalibration &mdash; and sometimes will not be recertified at all, which converts a repair into a replacement.",
+                        "Imaging equipment exposed to water, dust or power events requires manufacturer inspection and recalibration, and sometimes will not be recertified at all, which converts a repair into a replacement.",
                         "Sterile processing equipment, autoclaves and scope reprocessors have validation requirements that survive any cosmetic repair.",
                         "Laboratory analyzers need requalification before results can be reported clinically.",
                         "Refrigerated pharmaceuticals, vaccines and specimens have temperature excursion rules that render stock unusable regardless of appearance.",
@@ -784,7 +784,7 @@ INDUSTRIES = [
         ],
         "faqs": [
             ("Is a consultant appropriate for a hospital with in-house risk management?",
-             "<p>Frequently yes, for the same reason hospitals use outside counsel with a general "
+             "<p>Often yes, for the same reason hospitals use outside counsel with a general "
              "counsel in place. The in-house team runs the program; a large loss needs dedicated "
              "estimating, specialist engagement and sustained negotiation for six to eighteen "
              "months. We work alongside risk management rather than replacing it, and the "
@@ -873,7 +873,7 @@ INDUSTRIES = [
                           "basis, which means it must be proven rather than estimated. The proof is "
                           "the rent roll, the pre-loss occupancy trend, the concession history, the "
                           "down-unit log, and the record of what each displaced resident was "
-                          "actually paying. A community running at 94% before a freeze event and "
+                          "paying. A community running at 94% before a freeze event and "
                           "76% for five months afterwards has a quantifiable loss, but only if "
                           "somebody kept the records in a form an accountant can follow."),
                     ("checks", [
@@ -881,7 +881,7 @@ INDUSTRIES = [
                         "Pre-loss occupancy and effective rent trend for at least twelve months, so seasonality can be shown rather than argued.",
                         "Concessions, relocation costs and hotel expense captured as they are incurred, not reconstructed later.",
                         "Lease terminations and non-renewals attributable to the loss, with resident correspondence.",
-                        "The ramp-back period after units return to service &mdash; occupancy does not recover the day the work finishes.",
+                        "The ramp-back period after units return to service, occupancy does not recover the day the work finishes.",
                     ]),
                 ],
             },
@@ -892,7 +892,7 @@ INDUSTRIES = [
                     ("p", "On a condominium loss, the first fight is rarely with the carrier. It is "
                           "with the declaration. Where the association&rsquo;s responsibility ends "
                           "and the unit owner&rsquo;s begins &mdash; studs-out, bare walls, "
-                          "original-specification finishes, betterments and improvements &mdash; is "
+                          "original-specification finishes, betterments and improvements, is "
                           "set by the declaration and the governing statute, and it determines "
                           "which policy pays for what."),
                     ("p", "Get that boundary defined in writing early and the rest of the claim is "
@@ -900,7 +900,7 @@ INDUSTRIES = [
                           "spends a year mediating between its own members while the master policy "
                           "carrier waits."),
                     ("callout", "Board duty", [
-                        ("p", "Boards are frequently unpaid volunteers making a decision that "
+                        ("p", "Boards are often unpaid volunteers making a decision that "
                               "commits every owner in the community. Documentation is not "
                               "bureaucracy here; it is how a board demonstrates it acted "
                               "reasonably. We write to that standard."),
@@ -916,7 +916,7 @@ INDUSTRIES = [
              "structures the retention regularly exceeds the loss on most buildings while a handful "
              "of larger ones clear it comfortably. The answer is usually that part of the claim is "
              "worth pursuing properly and part is not worth reporting at all.</p>"),
-            ("Can you handle a portfolio rather than a single property?",
+            ("Can you handle a portfolio instead of a single property?",
              "<p>Yes. Portfolio events are actually where the method pays best, because the same "
              "storm produces a dozen files with the same carrier, the same deductible wording and "
              "the same arguments. Consistency across the files is leverage.</p>"),
@@ -924,7 +924,7 @@ INDUSTRIES = [
              "<p>Almost certainly. Most multifamily mortgages name the lender as loss payee or "
              "mortgagee, and claim proceeds above a threshold are routed through the lender and "
              "disbursed against construction draws. Build that requirement into the repair schedule "
-             "from the start &mdash; the disbursement process, not the settlement, is what delays "
+             "from the start, the disbursement process, not the settlement, is what delays "
              "most multifamily repairs.</p>"),
         ],
     },
@@ -965,15 +965,15 @@ INDUSTRIES = [
                           "nightly, by segment, with competitive-set benchmarking available from "
                           "third parties. That makes a hotel business-interruption claim unusually "
                           "provable, and it makes a badly built one unusually easy to attack."),
-                    ("p", "The right construction projects what the property would have earned "
-                          "&mdash; using its own historical performance adjusted by what the "
-                          "competitive set actually did during the loss period &mdash; and "
+                    ("p", "The right construction projects what the property would have earned"
+                          ", using its own historical performance adjusted by what the "
+                          "competitive set did during the loss period, and "
                           "subtracts what it did earn. That method survives a forensic accountant. "
                           "An annual-average calculation applied to a property with a Formula 1 "
                           "weekend, a rodeo season or a spring-break peak does not."),
                     ("checks", [
                         "Nightly occupancy, ADR and RevPAR for at least twenty-four months before the loss, by segment.",
-                        "Competitive-set performance during the loss period, to show the market rather than the property explains any shortfall.",
+                        "Competitive-set performance during the loss period, to show the market instead of the property explains any shortfall.",
                         "Group and event bookings canceled, with contract value and attrition terms.",
                         "Food and beverage, banquet, spa, parking and resort-fee revenue as separate streams.",
                         "The ramp-back period &mdash; online reputation and channel ranking recover more slowly than the building does.",
@@ -985,7 +985,7 @@ INDUSTRIES = [
                               "the closure: housekeeping labor, laundry, commissions, some "
                               "utilities. Some of that is legitimate. Much of it is overstated, "
                               "particularly where staff were retained to protect the operation. "
-                              "Track it deliberately rather than conceding it."),
+                              "Track it rather than conceding it."),
                     ]),
                 ],
             },
@@ -996,14 +996,14 @@ INDUSTRIES = [
                 "blocks": [
                     ("p", "A flagged hotel does not get to repair to the specification that was "
                           "there before. The franchise agreement sets current brand standards, and "
-                          "a substantial renovation frequently triggers a property improvement plan "
-                          "&mdash; a mandated upgrade program covering guest rooms, corridors, "
+                          "a substantial renovation often triggers a property improvement plan"
+                          ", a mandated upgrade program covering guest rooms, corridors, "
                           "lobby, fitness and technology, at the brand&rsquo;s current "
-                          "specification rather than the property&rsquo;s previous one."),
+                          "specification instead of the property&rsquo;s previous one."),
                     ("p", "Carriers treat that delta as betterment, and the argument is not "
                           "frivolous: a standard property form pays to repair with like kind and "
                           "quality. Whether the PIP cost is recoverable depends on the wording, on "
-                          "ordinance and law coverage where a code is genuinely involved, and on "
+                          "ordinance and law coverage where a code is involved, and on "
                           "any brand-standards or franchise endorsement the property carries. It "
                           "is a wording question with a large number attached, and it should be "
                           "identified in week one rather than discovered at closeout."),
@@ -1011,7 +1011,7 @@ INDUSTRIES = [
                         ("p", "Where a property is out of service long enough, or fails to complete "
                           "a mandated improvement plan on schedule, the flag itself can be at "
                           "risk. The consequences of that go well beyond the repair cost, and they "
-                          "are worth raising with the carrier early &mdash; as a reason for "
+                          "are worth raising with the carrier early, as a reason for "
                           "urgency and for extra-expense spend, not as an afterthought."),
                     ]),
                 ],
@@ -1021,15 +1021,15 @@ INDUSTRIES = [
             ("How is business interruption calculated for a hotel?",
              "<p>Properly done, it projects what the property would have earned during the period "
              "of restoration from its own historical performance, adjusted for what the competitive "
-             "set actually did in that period, then deducts actual earnings and genuinely saved "
+             "set did in that period, then deducts actual earnings and saved "
              "expenses, and adds extra expense reasonably incurred to reduce the loss. The two "
              "arguments that decide the number are the length of the period of restoration and "
              "whether the ramp-back after reopening is included.</p>"),
             ("Can we claim for rooms that were not damaged but could not be sold?",
              "<p>Often yes. If corridors are under containment, lifts are out, or an entire floor "
              "is inaccessible because of work on the floor above, those rooms are out of inventory "
-             "as a direct result of the physical damage. That has to be documented as it happens "
-             "&mdash; a daily out-of-order log by room number is the single most useful record you "
+             "as a direct result of the physical damage. That has to be documented as it happens"
+             ", a daily out-of-order log by room number is the single most useful record you "
              "can keep during a hotel loss.</p>"),
             ("The storm closed the roads, not the hotel. Is there any coverage?",
              "<p>Possibly, under civil authority or ingress/egress extensions, which respond when "
@@ -1064,7 +1064,7 @@ INDUSTRIES = [
                 ("Racking &amp; MHE", "Often omitted"),
                 ("Downtime", "Largest exposure"),
                 ("Dependent property", "Check wording"),
-            ], "The valuation clause on finished stock &mdash; cost versus selling price &mdash; "
+            ], "The valuation clause on finished stock &mdash; cost versus selling price, "
                "can change a stock claim by a third."),
         ],
         "sections": [
@@ -1073,7 +1073,7 @@ INDUSTRIES = [
                 "h2": "Repairable, replaceable, or obsolete: three answers, three numbers.",
                 "blocks": [
                     ("p", "The central dispute on most plant losses is whether a damaged machine "
-                          "can be restored. Carriers prefer repair, and for good reason &mdash; it "
+                          "can be restored. Carriers prefer repair, and for good reason. It "
                           "is usually cheaper. Manufacturers prefer replacement, also for good "
                           "reason: a repaired machine that comes back out of tolerance costs more "
                           "in scrap and downtime than it saved."),
@@ -1081,7 +1081,7 @@ INDUSTRIES = [
                           "manufacturer&rsquo;s own assessment, with tolerance and calibration "
                           "data, with parts availability for equipment whose controls are twenty "
                           "years old, and with the practical question of what the installation "
-                          "actually requires &mdash; rigging, foundations, power, controls "
+                          "requires, rigging, foundations, power, controls "
                           "integration and requalification. Those installation costs regularly "
                           "exceed the price of the machine and are regularly left off the "
                           "carrier&rsquo;s estimate."),
@@ -1089,17 +1089,17 @@ INDUSTRIES = [
                         "OEM inspection reports rather than adjuster assessment on any production-critical asset.",
                         "Obsolescence and parts availability documented where the equipment predates current control systems.",
                         "Rigging, foundation work, utility connections, controls integration and commissioning carried as separate line items.",
-                        "Requalification and validation where the process requires it &mdash; food, pharma, aerospace, automotive.",
+                        "Requalification and validation where the process requires it, food, pharma, aerospace, automotive.",
                         "Equipment breakdown and property coverage reviewed together, so neither carrier can point at the other.",
                     ]),
                 ],
                 "aside": [
                     ("callout", "Racking and material handling", [
                         ("p", "Pallet racking, mezzanines, conveyors, ASRS and dock equipment are "
-                              "frequently classed as contents, frequently omitted from the "
+                              "usually classed as contents, often omitted from the "
                               "statement of values, and almost always under-scoped after a fire or "
                               "a roof collapse. Damaged racking must be engineer-assessed, not "
-                              "eyeballed &mdash; it is a life-safety component."),
+                              "eyeballed. It is a life-safety component."),
                     ]),
                 ],
             },
@@ -1109,7 +1109,7 @@ INDUSTRIES = [
                 "h2": "What is finished goods actually worth?",
                 "blocks": [
                     ("p", "Standard property forms value stock at replacement cost, which for "
-                          "finished goods means the cost to manufacture it again &mdash; not what "
+                          "finished goods means the cost to manufacture it again, not what "
                           "you would have sold it for. A selling-price endorsement changes that for "
                           "finished stock, and on a distribution operation with thin manufacturing "
                           "content it is worth a great deal. Whether you have one is a "
@@ -1129,9 +1129,9 @@ INDUSTRIES = [
                 "blocks": [
                     ("p", "A plant can be shut down by damage it did not suffer. Contingent business "
                           "interruption responds when a supplier or a customer sustains physical "
-                          "damage that interrupts your operation &mdash; a sole-source component "
+                          "damage that interrupts your operation: a sole-source component "
                           "supplier burns down, a port closes, the customer who takes 60% of your "
-                          "output stops taking it. Coverage is usually sub-limited, frequently "
+                          "output stops taking it. Coverage is usually sub-limited, commonly "
                           "requires the dependent property to be named, and is regularly the piece "
                           "nobody thought about until it happened."),
                     ("p", "Extra expense is the other half of the calculation, and on an industrial "
@@ -1148,8 +1148,8 @@ INDUSTRIES = [
         "faqs": [
             ("Our loss is mostly equipment, not building. Is that still a property claim?",
              "<p>Yes, and it is the part most likely to be under-adjusted, because scoping a "
-             "production line requires manufacturer engagement rather than an estimating template. "
-             "It may also sit across two coverages &mdash; property and equipment breakdown &mdash; "
+             "production line requires manufacturer engagement instead of an estimating template. "
+             "It may also sit across two coverages, property and equipment breakdown, "
              "with different deductibles and different adjusters. Getting those coordinated early "
              "prevents each side waiting on the other for four months.</p>"),
             ("How long does an industrial claim take?",
@@ -1201,7 +1201,7 @@ INDUSTRIES = [
                     ("p", "Before anyone argues about scope, establish who is obliged to repair "
                           "what. Most retail leases put the roof, structure and common areas on the "
                           "landlord and the interior, fixtures and tenant improvements on the "
-                          "tenant &mdash; but the line is drawn differently in every lease, and "
+                          "tenant, but the line is drawn differently in every lease, and "
                           "tenant improvements installed by the landlord and amortised through rent "
                           "can sit on either side of it."),
                     ("p", "Getting this wrong produces the worst outcome available: the "
@@ -1228,8 +1228,8 @@ INDUSTRIES = [
                     ("checks", [
                         "<strong>Roof by section and by age.</strong> Centers are extended over decades. Different membranes, different ages, different arguments about wear versus storm.",
                         "<strong>HVAC units.</strong> Rooftop package units take hail on coils and cabinets. Coil damage reduces efficiency long before it stops the unit, and comb-out is not always a repair.",
-                        "<strong>Pylon and monument signage.</strong> Separately damageable, separately valued, and frequently subject to current sign-code restrictions on replacement.",
-                        "<strong>Parapets, coping and flashing.</strong> Where wind damage actually begins, and where water gets in for the next two years.",
+                        "<strong>Pylon and monument signage.</strong> Separately damageable, separately valued, and often subject to current sign-code restrictions on replacement.",
+                        "<strong>Parapets, coping and flashing.</strong> Where wind damage begins, and where water gets in for the next two years.",
                         "<strong>Storefront glazing and awnings.</strong> Including the frames, which are rarely inspected.",
                         "<strong>Parking, lighting and site work.</strong> Pole lights, canopies, cart corrals, landscaping and drainage.",
                         "<strong>Tenant improvements and betterments.</strong> Identify whose policy covers them before either carrier is asked to pay.",
@@ -1250,7 +1250,7 @@ INDUSTRIES = [
              "landlord&rsquo;s claim covers the building, common areas and loss of rents; each "
              "tenant&rsquo;s covers their improvements, contents and business income. Where they "
              "are presented inconsistently &mdash; different dates, different damage descriptions, "
-             "overlapping scope &mdash; both carriers slow down. A single documented survey of the "
+             "overlapping scope, both carriers slow down. A single documented survey of the "
              "center that everyone works from prevents most of that.</p>"),
             ("The carrier says our roof damage is wear and tear, not hail. What now?",
              "<p>That is the single most common denial on Texas commercial roofs and it is "
@@ -1263,7 +1263,7 @@ INDUSTRIES = [
              "signing a full and final release, and most property policies contemplate supplements "
              "when the actual cost of repair exceeds the estimate. What matters is the policy&rsquo;s "
              "own time limits and the suit limitation period, which is why this is worth looking at "
-             "now rather than next year.</p>"),
+             "now instead of next year.</p>"),
         ],
     },
 ]

@@ -22,10 +22,10 @@ HOME_FAQS = [
 
     ("You work for policyholders and for insurers. Isn&rsquo;t that a conflict?",
      "<p>Not on a given matter, because we run a conflict check before taking one and we never "
-     "act for both parties to the same loss. Across matters it is the point rather than the "
+     "act for both parties to the same loss. Across matters it is the point instead of the "
      "problem. A consultant who only ever produces numbers for one side learns to write numbers "
      "that side likes, and everyone in the industry knows it. Working both sides is what keeps "
-     "the methodology honest &mdash; and it is why our analysis survives scrutiny in appraisal "
+     "the methodology honest, and it is why our analysis survives scrutiny in appraisal "
      "and in court.</p>"),
 
     ("How are you paid?",
@@ -39,13 +39,13 @@ HOME_FAQS = [
      "Texas public entities and religious organizations cover property through an interlocal "
      "risk pool or a denominational program rather than a conventional insurance policy. Those "
      "are governed by their own coverage documents, with their own valuation provisions and "
-     "their own appeal routes rather than the rules that apply to an insurance policy. The "
+     "their own appeal routes instead of the rules that apply to an insurance policy. The "
      "technical questions are identical; the procedure is not.</p>"),
 
     ("Can you serve as an appraiser or umpire?",
      "<p>Yes, in any of the three roles. As a party-appointed appraiser for either side, or as "
      "umpire where both appraisers will accept us. Umpire work in particular depends on being "
-     "genuinely impartial and being seen to be, which is difficult for a firm that only ever "
+     "impartial and being seen to be, which is difficult for a firm that only ever "
      "works one side. We disclose prior engagements with either party before accepting any "
      "appraisal role.</p>"),
 
@@ -75,13 +75,13 @@ INDUSTRY_HUB_INTRO = [
             ("p", "A hail loss on a warehouse and a hail loss on a school district are not the "
                   "same file with a different address. The district has a per-building deductible "
                   "applied across nineteen campuses, a coverage document that may be an "
-                  "interlocal agreement rather than an insurance policy, a board that has to "
+                  "interlocal agreement instead of an insurance policy, a board that has to "
                   "approve the outcome in public, and a hard deadline in August. None of that "
                   "appears in the estimating software."),
             ("p", "We work a narrow set of property types on purpose. Each of the pages below "
                   "sets out the wording, the valuation problem and the political constraint "
-                  "peculiar to that kind of owner &mdash; because knowing which question a file "
-                  "actually turns on is most of the work, whichever party is asking."),
+                  "peculiar to that kind of owner, because knowing which question a file "
+                  "turns on is most of the work, whichever party is asking."),
         ],
         "aside": [
             ("callout", "Large commercial only", [
@@ -101,8 +101,8 @@ INDUSTRY_HUB_INTRO = [
                 "<strong>Somebody has to approve it in public.</strong> Boards, councils, trustees and vestries all need documentation they can put in a packet without rewriting it.",
                 "<strong>The values are stale.</strong> Statements of value assembled years ago, against construction costs that moved sharply after 2020.",
                 "<strong>The building is old enough to trigger code.</strong> Which makes ordinance and law coverage the decisive clause more often than anyone expects.",
-                "<strong>The deductible structure is unexamined.</strong> Per occurrence or per building, flat or percentage &mdash; on a multi-structure schedule that single clause can decide the claim.",
-                "<strong>Nobody is running the time-element side.</strong> Interruption and extra expense are real on institutional losses and almost never documented while they are happening &mdash; which hurts whichever party later has to prove or test them.",
+                "<strong>The deductible structure is unexamined.</strong> Per occurrence or per building, flat or percentage, on a multi-structure schedule that single clause can decide the claim.",
+                "<strong>Nobody is running the time-element side.</strong> Interruption and extra expense are real on institutional losses and almost never documented while they are happening, which hurts whichever party later has to prove or test them.",
             ]),
         ],
     },
@@ -113,7 +113,7 @@ LOSS_HUB_INTRO = [
         "eyebrow": "Why it is split this way",
         "h2": "The peril decides the evidence. The service decides the deliverable.",
         "blocks": [
-            ("p", "A hail file and a freeze file need the same things from us &mdash; a scope, "
+            ("p", "A hail file and a freeze file need the same things from us, a scope, "
                   "a cost, a causation opinion, sometimes testimony. What differs completely is "
                   "the evidence that answers the question, and how fast it disappears. Test cuts "
                   "and soft-metal spatter settle a hail argument. Building management system "
@@ -125,7 +125,7 @@ LOSS_HUB_INTRO = [
         "aside": [
             ("callout", "Evidence has a shelf life", [
                 ("p", "On most of these, the material that would settle the dispute is gone "
-                      "within weeks &mdash; cleaned, tarped, dried, demolished or repaired. It "
+                      "within weeks, cleaned, tarped, dried, demolished or repaired. It "
                       "is the single strongest argument for an early inspection, whichever side "
                       "is asking."),
             ]),
@@ -144,7 +144,7 @@ SERVICE_HUB_INTRO = [
                   "claim."),
             ("p", "The next three are technical reports we are asked for by name &mdash; soot, "
                   "smoke and mold testing, cabinet repairability, contents itemizing and "
-                  "pricing. They are narrow, they are frequently decisive, and they are cheap "
+                  "pricing. They are narrow, they are often decisive, and they are cheap "
                   "relative to the argument they settle."),
             ("p", "The last two are different in kind. Public adjusting is the one capacity "
                   "where we act as a party&rsquo;s representative rather than establishing "
@@ -177,7 +177,7 @@ TOOL_HUB_INTRO = [
                   "conventions to assumptions you supply. A real claim figure comes from a "
                   "measured survey, a line-item scope and the specific wording of your policy. "
                   "Use these to find out whether the number on your desk is in the right "
-                  "ballpark &mdash; that is genuinely useful, and it is all they do."),
+                  "ballpark. That is genuinely useful, and it is all they do."),
         ],
         "aside": [
             ("callout", "Built from live files", [
@@ -197,7 +197,7 @@ AREA_HUB_INTRO = [
         "blocks": [
             ("p", "We take institutional and large commercial files anywhere in Texas. The pages "
                   "below cover the metros where the volume is, and each one is written from what "
-                  "actually damages buildings there &mdash; the hail corridor through "
+                  "damages buildings there, the hail corridor through "
                   "Dallas&ndash;Fort Worth, surge and the wind-water line on the Coastal Bend, "
                   "the ordinance and law exposure in San Antonio&rsquo;s older institutional "
                   "stock."),
@@ -209,7 +209,7 @@ AREA_HUB_INTRO = [
             ("callout", "After a catastrophe", [
                 ("p", "Following a major regional event every firm in the industry is "
                       "oversubscribed, including this one. We would rather decline an engagement "
-                      "than take a file we cannot work properly &mdash; and we will still spend "
+                      "than take a file we cannot work properly, and we will still spend "
                       "ten minutes on the phone telling you what to photograph before the crews "
                       "arrive."),
             ]),
@@ -227,7 +227,7 @@ BLOG_INTRO = [
                   "evidence that settles a particular question, the records to start keeping on "
                   "day one. If a draft reads like a brochure with subheadings, it does not go "
                   "up. Nothing here is written for one side of a file."),
-            ("p", "Nothing here is legal advice, and where a question is genuinely legal we say "
+            ("p", "Nothing here is legal advice, and where a question is legal we say "
                   "so and recommend counsel."),
         ],
     },
@@ -247,7 +247,7 @@ ABOUT = {
     "h1": "We are not on<br>a <em>side</em>. We are on the facts.",
     "h1_plain": "About Claims Consultant",
     "lede": ("Independence is not a slogan here, it is the business model. We bill for the work "
-             "rather than a share of the result, we take matters from either party, and the "
+             "instead of a share of the result, we take matters from either party, and the "
              "method does not change depending on who signed the engagement."),
     "trail": [("Home", "/"), ("The firm", None)],
     "head_aside": [
@@ -268,8 +268,8 @@ ABOUT = {
             "blocks": [
                 ("p", "Every large property loss produces at least two estimates and a gap "
                       "between them. The gap is usually not fraud and usually not coverage. It is "
-                      "dozens of judgment calls &mdash; effective age, repairability, matching, "
-                      "code triggers, overhead and profit, the period of restoration &mdash; made "
+                      "dozens of judgment calls, effective age, repairability, matching, "
+                      "code triggers, overhead and profit, the period of restoration, made "
                       "by people who each have a position, on measurements nobody took to an "
                       "evidentiary standard."),
                 ("p", "We take those measurements. Then we state, in writing, what we concluded "
@@ -292,9 +292,9 @@ ABOUT = {
                 ]),
                 ("callout", "What we are not", [
                     ("p", "Not a law firm &mdash; we do not give legal advice, and when a matter "
-                          "needs counsel we say so. Not a contractor &mdash; we do not repair "
+                          "needs counsel we say so. Not a contractor. We do not repair "
                           "what we assess, and we take no referral money from anyone who does. "
-                          "Not an agency &mdash; we do not sell insurance."),
+                          "Not an agency. We do not sell insurance."),
                 ]),
             ],
         },
@@ -304,9 +304,9 @@ ABOUT = {
             "h2": "Institutional and large commercial. Nothing else.",
             "blocks": [
                 ("p", "Most consulting firms take whatever comes. We do not, for a practical "
-                      "reason: the way we work a file &mdash; full-property survey rather than a "
+                      "reason: the way we work a file, full-property survey instead of a "
                       "sample, specialist engagement where the loss warrants it, forensic "
-                      "accounting on the time-element side &mdash; is proportionate on a large "
+                      "accounting on the time-element side, is proportionate on a large "
                       "institutional loss and absurd on a small one."),
                 ("p", "So the practice is built around a narrow set of properties: churches and "
                       "faith organizations, school districts, cities and municipal entities, "
@@ -332,10 +332,10 @@ ABOUT = {
                     "Say early when a matter needs an attorney, a licensed adjuster or a specialist rather than more consulting.",
                 ]),
                 ("p", "The one we will not: shade a conclusion toward the party paying for it. "
-                      "On matters this size the file is frequently examined by a forensic "
+                      "On matters this size the file is commonly examined by a forensic "
                       "accountant, an opposing expert, an appraisal panel or a court. A scope "
                       "padded or trimmed to suit a client destroys the credibility of the forty "
-                      "findings around it that were right &mdash; and it ends the only thing this "
+                      "findings around it that were right, and it ends the only thing this "
                       "firm actually sells."),
             ],
         },
@@ -354,10 +354,10 @@ ABOUT = {
                      "from, in writing, before work begins. Institutional clients need something "
                      "a board, a panel or a procurement officer can read; so do we.</p>"),
                     ("One point of contact, and a paper trail",
-                     "<p>You get a named consultant who is actually on the file, not a "
+                     "<p>You get a named consultant who is on the file, not a "
                      "salesperson who hands you to a queue. Everything material goes in writing, "
                      "and at closeout you receive the complete record &mdash; photographs, "
-                     "measurements, estimates, correspondence &mdash; whether or not you ever "
+                     "measurements, estimates, correspondence, whether or not you ever "
                      "need it again.</p>"),
                 ]),
             ],
@@ -365,17 +365,17 @@ ABOUT = {
     ],
     "faqs": [
         ("Are you licensed?",
-         "<p>Yes &mdash; in Texas, both as an adjuster under chapter 4101 of the Insurance Code "
+         "<p>Yes, in Texas, both as an adjuster under chapter 4101 of the Insurance Code "
          "and as a public insurance adjuster under chapter 4102. Holding both is unusual and it "
          "is deliberate: it is what allows an insurer and a policyholder to retain the same "
          "firm, in different matters, without either one being served by somebody working "
          "outside their licence. Licence numbers are published in the footer and can be verified "
-         "with the Texas Department of Insurance. Where a matter needs an attorney rather than a "
+         "with the Texas Department of Insurance. Where a matter needs an attorney instead of a "
          "consultant, we say so.</p>"),
         ("Do you work outside Texas?",
          "<p>Our practice is Texas and the Gulf Coast. Consulting and expert work travels more "
          "easily than licensed activity does, so on a portfolio with property in several states "
-         "we can usually help &mdash; and we will say plainly which parts we can handle ourselves "
+         "we can usually help, and we will say plainly which parts we can handle ourselves "
          "and which need local counsel or a locally licensed professional.</p>"),
         ("Do you take residential matters?",
          "<p>No. It is not what the practice is built for, and a firm that works institutional "
@@ -424,7 +424,7 @@ HOW_WE_WORK = {
                       "multiple buildings; what the time-element structure covers and for how "
                       "long. Knowing all of that shapes what we go and document."),
                 ("checks", [
-                    "Limits, sub-limits and how the schedule is structured &mdash; blanket, per location, with or without a margin clause.",
+                    "Limits, sub-limits and how the schedule is structured, blanket, per location, with or without a margin clause.",
                     "Deductible mechanics, including named-storm and percentage wording and how occurrence is defined.",
                     "Valuation basis by category, including any roof surfacing or cosmetic damage endorsement.",
                     "Ordinance or law coverages A, B and C, with their separate limits.",
@@ -444,9 +444,9 @@ HOW_WE_WORK = {
                       "by a few hundred."),
                 ("p", "So we survey everything, measure everything and photograph everything, "
                       "indexed by location so any line on the estimate can be traced to the "
-                      "evidence for it. Where the dispute will be technical &mdash; roof "
-                      "membrane, cause of failure, contamination class, equipment condition "
-                      "&mdash; we engage the relevant specialist rather than offering an opinion "
+                      "evidence for it. Where the dispute will be technical, roof "
+                      "membrane, cause of failure, contamination class, equipment condition"
+                      ". We engage the relevant specialist instead of offering an opinion "
                       "we are not qualified to give."),
                 ("table", "Specialists we engage, and when",
                  ["Discipline", "Engaged when"], [
@@ -495,7 +495,7 @@ HOW_WE_WORK = {
                 ("p", "And when the gap will not close, we tell you which route we think fits. If "
                       "the dispute is about the amount of loss, that is usually appraisal. If it "
                       "is about coverage, a denial, late notice or the carrier&rsquo;s conduct, "
-                      "that is a lawyer &mdash; and saying so in month four is worth considerably "
+                      "that is a lawyer, and saying so in month four is worth considerably "
                       "more to you than saying it in month fourteen."),
                 ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">Discuss a matter '
                          '<span class="arw">&rarr;</span></a>'
@@ -516,7 +516,7 @@ HOW_WE_WORK = {
          "records; that is usually the largest demand we make.</p>"),
         ("Can you work alongside our broker and our attorney?",
          "<p>Routinely, and it is often the right structure. Brokers hold institutional knowledge "
-         "about the placement that is genuinely useful. Counsel handles coverage and statutory "
+         "about the placement that is useful. Counsel handles coverage and statutory "
          "remedies. We handle scope, valuation and the evidentiary record. Clear lanes make all "
          "three more effective.</p>"),
     ],
@@ -553,10 +553,10 @@ FEES_PAGE = {
                 ("p", "Consulting, expert, estimating and appraisal engagements are billed "
                       "hourly, agreed in writing before work begins and quoted against a written "
                       "estimate of the hours a matter should take. Where the deliverable is well "
-                      "defined &mdash; a scope and estimate on a single building, a policy "
-                      "review, an estimate critique &mdash; we quote a fixed fee instead."),
+                      "defined: a scope and estimate on a single building, a policy "
+                      "review, an estimate critique, we quote a fixed fee instead."),
                 ("p", "Public adjusting is different. There we act as the policyholder&rsquo;s "
-                      "representative rather than establishing facts, and the engagement is on a "
+                      "representative instead of establishing facts, and the engagement is on a "
                       "contingent fee, capped by Texas statute at %s of the claim settlement "
                       "(%s). Where an amount has already been offered we normally carve it out "
                       "of the fee base." % (FEES["pa_cap"], FEES["pa_cite"])),
@@ -567,8 +567,8 @@ FEES_PAGE = {
             "aside": [
                 ("callout", "Estimates, and when they move", [
                     ("p", "Every engagement carries a written estimate of hours. If a matter "
-                          "starts running toward it &mdash; access problems, a scope that turns "
-                          "out to be three buildings, records that do not exist &mdash; you hear "
+                          "starts running toward it, access problems, a scope that turns "
+                          "out to be three buildings, records that do not exist. You hear "
                           "about it before the number is passed, not on the invoice."),
                 ]),
             ],
@@ -600,7 +600,7 @@ FEES_PAGE = {
             "h2": "We check before we listen.",
             "blocks": [
                 ("p", "Because we act for both policyholders and insurers, a conflict check "
-                      "comes before any detailed discussion of a matter &mdash; not after. Tell "
+                      "comes before any detailed discussion of a matter, not after. Tell "
                       "us the property, the date of loss and the parties, and we will confirm "
                       "within a day whether we are clear. If we are already engaged on the other "
                       "side, we say so immediately and you tell us nothing further."),
@@ -620,7 +620,7 @@ FEES_PAGE = {
             "blocks": [
                 ("p", "School districts, cities and other public entities have their own "
                       "procurement rules for professional services, and your purchasing officer "
-                      "and counsel &mdash; not us &mdash; determine how they apply. An hourly "
+                      "and counsel, not us, determine how they apply. An hourly "
                       "professional-services engagement is a familiar shape to that process, "
                       "which is the usual shape of a consulting engagement."),
                 ("checks", [
@@ -645,7 +645,7 @@ FEES_PAGE = {
         ("Is the cost worth it on a smaller loss?",
          "<p>Often not, and we will say so. Below a certain size the cost of a full survey, a "
          "line-item scope and any specialist input is disproportionate to the amount in dispute. "
-         "A single fixed-fee estimate review is sometimes the right answer instead &mdash; and "
+         "A single fixed-fee estimate review is sometimes the right answer instead, and "
          "sometimes the right answer is that you do not need us at all.</p>"),
         ("Can we cap the spend?",
          "<p>Yes. Most institutional engagements carry a not-to-exceed figure, and phased "
@@ -662,9 +662,9 @@ FAQ_PAGE = {
                     "claims consulting, Texas claim deadlines, fees, appraisal and risk pools."),
     "eyebrow": "Questions",
     "h1": "Questions we get<br>in the <em>first</em> call",
-    "h1_plain": "Frequently asked questions",
-    "lede": ("Grouped by the order people usually ask them. Where an answer is genuinely a legal "
-             "question we say so rather than guessing at it."),
+    "h1_plain": "Often asked questions",
+    "lede": ("Grouped by the order people usually ask them. Where an answer is a legal "
+             "question we say so instead of guessing at it."),
     "trail": [("Home", "/"), ("FAQ", None)],
     "sections": [
         {
@@ -714,7 +714,7 @@ FAQ_PAGE = {
                 ("When is the best time to bring you in?",
                  "<p>Before the property changes. The scope documented in the first weeks is the "
                  "scope everyone argues from afterwards, and once tarps go up and crews clean, "
-                 "evidence is gone for good. In practice most engagements start later &mdash; "
+                 "evidence is gone for good. In practice most engagements start later, "
                  "when two estimates are far apart, when a file has stalled, or when appraisal "
                  "or litigation is in view. All of those are workable.</p>"),
                 ("Can you take part of a matter only?",
@@ -740,7 +740,7 @@ FAQ_PAGE = {
                 ("How quickly do you need to inspect?",
                  "<p>As soon as the property is safe and access can be arranged. High-water "
                  "marks survive days. A failed pipe survives until the plumber throws it out. "
-                 "Building management logs frequently roll off in thirty to ninety days. Cabinet "
+                 "Building management logs often roll off in thirty to ninety days. Cabinet "
                  "substrate and roof assemblies survive until the repair. None of that is "
                  "recoverable later, and every item on the list settles an argument.</p>"),
                 ("Can you work from photographs if the property is already repaired?",
@@ -748,16 +748,16 @@ FAQ_PAGE = {
                  "sources are contractor photographs and invoices, change orders, retained "
                  "materials, pre-loss survey or drone imagery, maintenance records and testing "
                  "done at the time. We will tell you plainly whether what survives supports a "
-                 "conclusion rather than producing one that cannot be defended.</p>"),
+                 "conclusion instead of producing one that cannot be defended.</p>"),
                 ("Do you need the other side present at the inspection?",
-                 "<p>Not required, and frequently a good idea &mdash; particularly for "
+                 "<p>Not required, and often a good idea, particularly for "
                  "destructive testing. A joint inspection with both parties invited in writing "
                  "removes an entire category of later objection about what was done and what it "
                  "showed. Where an invitation is declined, the fact that it was made is itself "
                  "worth recording.</p>"),
                 ("Our coverage is through a risk pool rather than an insurer. Does that change your work?",
                  "<p>Not the technical work, which is identical. What changes is the procedure: "
-                 "an interlocal pool operates under a participation agreement rather than a "
+                 "an interlocal pool operates under a participation agreement instead of a "
                  "standard policy, with its own notice requirements, valuation provisions and "
                  "appeal route. It has to be read rather than assumed.</p>"),
             ])],
@@ -778,7 +778,7 @@ FAQ_PAGE = {
                 ("Are consulting fees recoverable from the insurer?",
                  "<p>Generally no. Consulting costs are a cost of investigating or pursuing a "
                  "matter, not a covered cost of repair, though certain professional fees "
-                 "genuinely required to execute the repair &mdash; design professionals, for "
+                 "genuinely required to execute the repair, design professionals, for "
                  "instance &mdash; are a different question. Where litigation is involved, "
                  "recoverability of fees and costs is a matter for counsel. Consulting fees are "
                  "also generally not an eligible cost under FEMA public assistance, which public "
@@ -805,8 +805,8 @@ GLOSSARY_TERMS = [
      "side appoints an appraiser; the two select an umpire; any two of the three set the amount. "
      "It does not decide coverage."),
     ("Blanket limit",
-     "A single limit applying across multiple buildings or locations rather than a separate limit "
-     "for each. Usually conditioned on the accuracy of reported values, and frequently subject to "
+     "A single limit applying across multiple buildings or locations instead of a separate limit "
+     "for each. Usually conditioned on the accuracy of reported values, and usually subject to "
      "a margin clause."),
     ("Business income",
      "The net profit the operation would have earned plus continuing normal operating expenses, "
@@ -820,18 +820,18 @@ GLOSSARY_TERMS = [
      "was carried to what was required."),
     ("Contingent business interruption",
      "Cover for income lost because a supplier, customer or other dependent property sustained "
-     "physical damage. Frequently requires the dependent property to be named and is usually "
+     "physical damage. Often requires the dependent property to be named and is usually "
      "sub-limited."),
     ("Cosmetic damage exclusion",
      "An endorsement removing coverage for damage to roof surfacing that does not affect "
      "function. Increasingly common on Texas commercial property, and decisive on a hail claim "
      "where it appears."),
     ("Deductible, percentage",
-     "A retention calculated as a percentage of insured values rather than a flat dollar amount. "
+     "A retention calculated as a percentage of insured values instead of a flat dollar amount. "
      "Does not scale down with a small loss, and may apply per building or per occurrence."),
     ("Extended period of indemnity",
      "An endorsement covering the ramp-back in income after operations resume, for a stated "
-     "number of days. Frequently the last third of a time-element claim."),
+     "number of days. Usually the last third of a time-element claim."),
     ("Extra expense",
      "Costs incurred to continue operating or to speed the repair, generally recoverable to the "
      "extent they reduce the overall loss."),
@@ -845,8 +845,8 @@ GLOSSARY_TERMS = [
      "The question of how far replacement must extend into undamaged areas to achieve reasonably "
      "uniform appearance when a product is discontinued or cannot be matched."),
     ("Occurrence",
-     "The unit the deductible applies to. Frequently defined for wind and hail as damage within a "
-     "continuous period of hours &mdash; 72 is common &mdash; which determines whether a "
+     "The unit the deductible applies to. Often defined for wind and hail as damage within a "
+     "continuous period of hours &mdash; 72 is common, which determines whether a "
      "multi-campus storm is one retention or many."),
     ("Ordinance or law coverage",
      "Cover for the cost of complying with building codes on repair, in three parts: the "
@@ -854,11 +854,11 @@ GLOSSARY_TERMS = [
      "construction (C). Each has its own limit."),
     ("Period of restoration",
      "The period that should reasonably be required to repair or replace the damaged property, "
-     "exercising due diligence and dispatch. Not the period you were actually closed &mdash; which "
+     "exercising due diligence and dispatch. Not the period you were closed, which "
      "is the argument."),
     ("Proof of loss",
      "A sworn statement of the amount claimed. Where required, it starts the carrier&rsquo;s "
-     "decision clock rather than leaving the file open-ended."),
+     "decision clock instead of leaving the file open-ended."),
     ("Repairability",
      "Whether repair restores an item to its pre-loss condition and remaining service life. "
      "Not whether repair is physically possible, which it nearly always is."),
@@ -885,11 +885,11 @@ GLOSSARY_TERMS = [
      "for depreciation."),
     ("Risk pool (interlocal)",
      "A coverage arrangement among public entities operating under an interlocal participation "
-     "agreement rather than an insurance policy. Its own document governs, and the Insurance "
+     "agreement instead of an insurance policy. Its own document governs, and the Insurance "
      "Code&rsquo;s insurer provisions may not apply."),
     ("Service interruption",
      "A time-element extension responding to off-premises failure of power, water, gas or "
-     "communications. Frequently requires physical damage to the utility&rsquo;s property and may "
+     "communications. Commonly requires physical damage to the utility&rsquo;s property and may "
      "exclude overhead transmission lines."),
     ("Statement of values",
      "The schedule of insured values by location reported to the insurer. The document behind "
@@ -914,7 +914,7 @@ GLOSSARY = {
     "eyebrow": "Reference",
     "h1": "The vocabulary<br>that decides <em>claims</em>",
     "h1_plain": "Commercial property insurance claims glossary",
-    "lede": ("Thirty terms, defined the way they actually operate in a Texas commercial claim "
+    "lede": ("Thirty terms, defined the way they operate in a Texas commercial claim "
              "rather than the way a textbook would put it."),
     "trail": [("Home", "/"), ("Glossary", None)],
     "sections": [
@@ -948,7 +948,7 @@ CONTACT = {
     "eyebrow": "Contact",
     "h1": "Discuss a<br><em>matter</em>",
     "h1_plain": "Discuss a matter",
-    "lede": ("The first conversation costs nothing and frequently ends with advice rather than "
+    "lede": ("The first conversation costs nothing and often ends with advice instead of "
              "an engagement. Tell us the property, the date of loss and the parties, and we will "
              "run a conflict check before anything else is discussed."),
     "trail": [("Home", "/"), ("Contact", None)],
@@ -1005,7 +1005,7 @@ CONTACT = {
       <select name="status" id="c-status">
         <option>Not yet reported</option><option>Reported, awaiting inspection</option>
         <option>Estimate received, appears short</option><option>Underpaid or partially paid</option>
-        <option>Denied</option><option>Closed &mdash; considering a supplement</option>
+        <option>Denied</option><option>Closed, considering a supplement</option>
       </select></div>
   </div>
   <div class="field"><label for="c-message">What happened<span class="hint">A few sentences is plenty. What was damaged, what the carrier has said, and what you need.</span></label>
@@ -1028,7 +1028,7 @@ CONTACT = {
                 ("p", "For a loss that happened in the last few days, calling is better than "
                       "writing. Most of what matters in the first week is about what to "
                       "photograph and what not to throw away, and that is a ten-minute "
-                      "conversation rather than a form."),
+                      "conversation instead of a form."),
                 ("ledger", "Direct", [
                     ("Telephone", '<a href="tel:%s">%s</a>' % (PH, P)),
                     ("Email", '<a href="mailto:%s">%s</a>' % (E, E)),
@@ -1099,7 +1099,7 @@ CLIENTS = {
                      "/loss-types/commercial-property-damage-claims/"),
                     ("TPAs &amp; independent adjusting firms",
                      "Surge capacity and technical depth on files past the point where a general "
-                     "estimating platform helps &mdash; complex roofs, production equipment, "
+                     "estimating platform helps, complex roofs, production equipment, "
                      "laboratory and healthcare environments.",
                      "/loss-types/hail-damage-claims/"),
                     ("Risk pools &amp; self-insureds",
@@ -1137,9 +1137,9 @@ CLIENTS = {
                      "recovery cannot credibly be retained by an insurer, and one paid a bonus "
                      "for a low number cannot credibly be retained by a policyholder. Public "
                      "adjusting is the exception and is contingent, because there we are a "
-                     "party&rsquo;s representative rather than a neutral measurer.</p>"),
+                     "party&rsquo;s representative instead of a neutral measurer.</p>"),
                     ("One capacity per matter, stated up front",
-                     "<p>Consultant, party-appointed appraiser, umpire or adjuster &mdash; named "
+                     "<p>Consultant, party-appointed appraiser, umpire or adjuster, named "
                      "in the engagement letter before work starts. Where we are asked to serve "
                      "as umpire, prior engagements with either party are disclosed to both "
                      "appraisers first, and either can decline us.</p>"),
@@ -1156,7 +1156,7 @@ CLIENTS = {
                 ("p", "Ask for matters where we were retained by the party opposite to you and "
                       "read what we concluded. Ask whether our methodology, unit costs or "
                       "depreciation approach differ depending on who is paying. Ask what we have "
-                      "written when the answer was unhelpful to the client &mdash; because on a "
+                      "written when the answer was unhelpful to the client, because on a "
                       "practice built this way, that happens regularly and it is the point."),
                 ("p", "An expert whose opinions correlate perfectly with whoever retained them "
                       "is not an expert. They are a witness for hire with a technical vocabulary, "
@@ -1171,7 +1171,7 @@ CLIENTS = {
     "faqs": [
         ("Doesn&rsquo;t working for insurers compromise you with policyholders?",
          "<p>It would if the analysis changed with the client. It does not, and that is "
-         "verifiable rather than a promise &mdash; ask to see work produced for the other side. "
+         "verifiable instead of a promise, ask to see work produced for the other side. "
          "What working both sides actually buys a policyholder is a consultant who knows exactly "
          "how a carrier&rsquo;s file is built, which arguments its reviewers take seriously, and "
          "which ones get a claim quietly deprioritized.</p>"),
@@ -1184,10 +1184,10 @@ CLIENTS = {
          "<p>Potentially, once the earlier engagement is concluded and subject to confidentiality "
          "obligations, and we will disclose the prior relationship to both parties before "
          "accepting. We do not take a matter adverse to a client we are currently engaged by. If "
-         "either party is uncomfortable, they should say so and we will decline &mdash; that is "
+         "either party is uncomfortable, they should say so and we will decline. That is "
          "cheaper for everyone than an argument about it later.</p>"),
         ("Can counsel retain you rather than the party?",
-         "<p>Yes, and on matters heading toward litigation that is frequently the sensible "
+         "<p>Yes, and on matters heading toward litigation that is commonly the sensible "
          "structure. Engagement through counsel is common for expert work; how it affects "
          "privilege and discoverability is a question for the attorney, not for us.</p>"),
     ],
@@ -1297,7 +1297,7 @@ LEGAL = [
                   "footer of this site and can be verified directly with the department."),
             ("p", "Holding licences on both sides is what allows either party to retain this "
                   "firm. It does not mean we occupy both roles at once. On any individual matter "
-                  "we act in a single, stated capacity &mdash; as consultant, as a "
+                  "we act in a single, stated capacity, as consultant, as a "
                   "party-appointed appraiser, as umpire, or as an adjuster &mdash; identified in "
                   "the engagement letter before work begins. We do not act for both parties to "
                   "the same loss, and a conflict check is run before any matter is discussed in "
@@ -1311,8 +1311,8 @@ LEGAL = [
                   "restoration companies, engineers, vendors or attorneys, in either direction."),
             ("h2", "We are not a law firm"),
             ("p", "Nothing on this site is legal advice, and we do not provide it. Several topics "
-                  "discussed here &mdash; limitation periods, statutory remedies, pre-suit notice "
-                  "the effect of releases, coverage interpretation and statutory remedies &mdash; "
+                  "discussed here, limitation periods, statutory remedies, pre-suit notice "
+                  "the effect of releases, coverage interpretation and statutory remedies, "
                   "are legal questions on which you should consult a licensed Texas attorney. "
                   "Where we think a matter needs counsel, we say so."),
             ("h2", "We are not contractors"),
@@ -1357,7 +1357,7 @@ LEGAL = [
                 "Semantic HTML with a single main landmark, one h1 per page and a logical heading order.",
                 "A visible skip link, visible focus indicators throughout, and no keyboard traps.",
                 "Text contrast tested against AA thresholds in both the light and dark sections of the design.",
-                "Every form control has a persistent visible label rather than a placeholder standing in for one.",
+                "Every form control has a persistent visible label instead of a placeholder standing in for one.",
                 "Animation is limited and respects the prefers-reduced-motion setting.",
                 "Text reflows without horizontal scrolling down to a 320px viewport, and the layout holds at 200% zoom.",
                 "Tables carry captions and header cells with scope, so they are navigable by screen reader.",

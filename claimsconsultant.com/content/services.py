@@ -1,10 +1,10 @@
 """What we are retained to do.
 
-Ordered the way engagements actually arrive: testimony and causation first,
+Ordered the way engagements arrive: testimony and causation first,
 then the estimating and appraisal work, then the three technical report types
 we are asked for by name, then representation and pre-loss work.
 
-Loss types &mdash; hail, fire, water, wind &mdash; live in content/losstypes.py.
+Loss types (hail, fire, water, wind) live in content/losstypes.py.
 """
 
 from siteconfig import BIZ, STANDARDS, FEES
@@ -19,7 +19,7 @@ SERVICES = [
         "nav_label": "Expert Witness",
         "card_title": "Expert witness &amp; litigation support",
         "card_blurb": ("Reports, rebuttals, deposition and trial testimony on damage, scope, "
-                       "causation and cost &mdash; for either side."),
+                       "causation and cost, for either side."),
         "title": "Property Damage Expert Witness | Texas Litigation Support",
         "description": ("Expert witness and litigation support on Texas property damage: scope, "
                         "cost, causation and estimate critique. Reports, depositions and trial "
@@ -51,7 +51,7 @@ SERVICES = [
                           "that opinion for reliability and relevance. In practice the challenge "
                           "is rarely aimed at whether the witness is qualified. It is aimed at "
                           "the gap between the data and the conclusion &mdash; whether the method "
-                          "can be described, whether it was actually followed, and whether "
+                          "can be described, whether it was followed, and whether "
                           "someone else applying it would reach the same place."),
                     ("p", "That has consequences for how a file is built long before anyone files "
                           "anything. Measurements have to be recorded, not remembered. "
@@ -67,10 +67,10 @@ SERVICES = [
                 "aside": [
                     ("callout", "The credibility ledger", [
                         ("p", "Every expert accumulates a record: who retained them, what they "
-                              "concluded, how often those two correlate. Ours is deliberately "
+                              "concluded, how often those two correlate. Ours is "
                               "mixed, because a witness whose opinions always favor the paying "
                               "side is an advocate with a CV. Prior engagements and testimony are "
-                              "disclosed on request &mdash; and to opposing counsel as a matter "
+                              "disclosed on request, and to opposing counsel as a matter "
                               "of course."),
                     ]),
                 ],
@@ -78,7 +78,7 @@ SERVICES = [
             {
                 "band": "paper2",
                 "eyebrow": "Deliverables",
-                "h2": "What an engagement actually produces.",
+                "h2": "What an engagement produces.",
                 "blocks": [
                     ("table", "Work product", ["Deliverable", "What it contains", "Typical stage"], [
                         ["Preliminary assessment",
@@ -102,9 +102,9 @@ SERVICES = [
                     ]),
                     ("callout", "Working through counsel", [
                         ("p", "On matters heading to litigation, engagement through counsel "
-                              "rather than directly through the party is common. How that affects "
+                              "instead of directly through the party is common. How that affects "
                               "privilege, work product and discoverability is a question for the "
-                              "attorney; we simply follow whatever structure they set and keep "
+                              "attorney; we follow whatever structure they set and keep "
                               "our file accordingly."),
                     ]),
                 ],
@@ -116,7 +116,7 @@ SERVICES = [
                 "blocks": [
                     ("checks", [
                         "<strong>Will:</strong> the extent of physical damage, the scope of work required to repair it, the reasonable cost of that work, and whether an opposing estimate is complete.",
-                        "<strong>Will:</strong> causation within our competence &mdash; hail versus wear, wind versus water, freeze versus long-term seepage, impact versus settlement.",
+                        "<strong>Will:</strong> causation within our competence, hail versus wear, wind versus water, freeze versus long-term seepage, impact versus settlement.",
                         "<strong>Will:</strong> the period reasonably required to repair, and the documentary basis of a time-element calculation.",
                         "<strong>Will not:</strong> interpret the policy or opine on coverage. That is counsel&rsquo;s work and a court&rsquo;s.",
                         "<strong>Will not:</strong> opine on structural engineering, industrial hygiene or accounting where those require a separate licensed discipline. We identify what is needed and work alongside it.",
@@ -128,24 +128,24 @@ SERVICES = [
         "faqs": [
             ("Do you testify for policyholders or for insurers?",
              "<p>Both, and not in fixed proportion. It is the single most useful thing about the "
-             "practice and the single most awkward thing to establish if you have never done it "
-             "&mdash; which is why firms that start on one side tend to stay there. Prior "
+             "practice and the single most awkward thing to establish if you have never done it"
+             ", which is why firms that start on one side tend to stay there. Prior "
              "engagements are disclosed, and if either party is uncomfortable with our history "
              "they should say so early.</p>"),
             ("How is expert work billed?",
              "<p>Hourly, at a posted rate, with testimony time billed at the same rate whether "
              "the testimony helps or not. Public adjusting engagements are contingent, but that "
-             "is a different capacity and a different kind of work &mdash; expert and consulting "
+             "is a different capacity and a different kind of work, expert and consulting "
              "engagements are not.</p>"),
             ("Can you review another expert&rsquo;s report without producing one of your own?",
              "<p>Yes, and it is a common and inexpensive first engagement. A methodology review "
-             "of an opposing report frequently tells counsel what they need to know &mdash; "
+             "of an opposing report often tells counsel what they need to know, "
              "whether the opinion is vulnerable, and on what ground &mdash; without the cost of a "
              "full competing analysis.</p>"),
             ("How late can we bring you in?",
              "<p>Later than is ideal, usually. The binding constraints are the scheduling order "
              "and the condition of the property. If the building has been repaired we work from "
-             "the documentary record, which is harder and frequently still viable. If the "
+             "the documentary record, which is harder and often still viable. If the "
              "disclosure deadline has passed, that is a question for counsel before it is a "
              "question for us.</p>"),
         ],
@@ -156,7 +156,7 @@ SERVICES = [
         "slug": "causation-determinations",
         "nav_label": "Causation Determinations",
         "card_title": "Causation determinations",
-        "card_blurb": ("What actually caused the damage, and when &mdash; hail or wear, wind or "
+        "card_blurb": ("What caused the damage, and when, hail or wear, wind or "
                        "water, freeze or long-term seepage."),
         "title": "Property Damage Causation Determination | Texas Consultants",
         "description": ("Independent causation analysis on Texas commercial property damage: "
@@ -166,8 +166,8 @@ SERVICES = [
         "h1": "What caused it,<br>and <em>when</em>",
         "h1_plain": "Causation determinations",
         "lede": ("Almost every contested property claim turns into a causation argument "
-                 "eventually. Not whether the building is damaged &mdash; that is usually agreed "
-                 "&mdash; but whether the thing that damaged it is the thing the policy responds "
+                 "eventually. Not whether the building is damaged. That is usually agreed"
+                 ", but whether the thing that damaged it is the thing the policy responds "
                  "to, and whether it happened inside the policy period."),
         "head_aside": [
             ("ledger", "The four recurring questions", [
@@ -197,11 +197,11 @@ SERVICES = [
                           "told you nothing about the ambiguities."),
                     ("checks", [
                         "Site inspection with measured documentation and location-indexed photography, before anything is cleaned or repaired.",
-                        "Destructive testing where the question lives below the surface &mdash; roof test cuts, cavity openings, cabinet and substrate sampling.",
-                        "Address-specific weather data for the claimed date of loss, rather than the nearest reporting station or a regional summary.",
+                        "Destructive testing where the question lives below the surface, roof test cuts, cavity openings, cabinet and substrate sampling.",
+                        "Address-specific weather data for the claimed date of loss, instead of the nearest reporting station or a regional summary.",
                         "Dated aerial and satellite imagery to bracket when a condition first appeared, which is what answers the intervening-storm argument.",
                         "The building&rsquo;s own records: maintenance logs, prior inspection and survey reports, warranty status, earlier claims and what was repaired.",
-                        "Laboratory analysis where the material itself carries the answer &mdash; soot and char characterization, corrosion products, microbial speciation.",
+                        "Laboratory analysis where the material itself carries the answer, soot and char characterization, corrosion products, microbial speciation.",
                     ]),
                 ],
                 "aside": [
@@ -210,8 +210,8 @@ SERVICES = [
                               "whether hail caused the damage but which hail. Multiple severe "
                               "events across a metro over fifteen years give either party a date "
                               "to point at. Answering it needs dated imagery, prior claim "
-                              "history, and evidence of what was actually repaired after each "
-                              "event &mdash; not an opinion about probability."),
+                              "history, and evidence of what was repaired after each "
+                              "event, not an opinion about probability."),
                     ]),
                 ],
             },
@@ -232,9 +232,9 @@ SERVICES = [
                          "Crack morphology, width and propagation direction; whether displacement is consistent across elements; elevation survey; whether the pattern radiates from a point of impact or follows a settlement plane."],
                      ]),
                     ("callout", "Where we hand off", [
-                        ("p", "Causation frequently reaches a point where a licensed professional "
+                        ("p", "Causation usually reaches a point where a licensed professional "
                               "engineer, an origin-and-cause investigator or an industrial "
-                              "hygienist is required rather than optional. We say so and work "
+                              "hygienist is required instead of optional. We say so and work "
                               "alongside them. An opinion offered outside the witness&rsquo;s "
                               "competence is the easiest thing in the world to strike."),
                     ]),
@@ -244,7 +244,7 @@ SERVICES = [
         "faqs": [
             ("The other side already has an engineering report. Is it too late?",
              "<p>No, and reading theirs carefully is the first thing to do. Engineering reports "
-             "are frequently narrower than their conclusions suggest: a visual-only inspection, "
+             "are often narrower than their conclusions suggest: a visual-only inspection, "
              "two roof sections out of nine, weather data from a station fifteen miles away, "
              "assumptions about prior condition stated without support. The methodology section "
              "is where a rebuttal is usually found.</p>"),
@@ -303,7 +303,7 @@ SERVICES = [
                           "and price it afterwards. Code-driven work, soft costs, contents and "
                           "time-element losses are carried on separate schedules so that none of "
                           "them disappears into a general allowance. Every unit price is sourced "
-                          "and dated, and where a line is a judgment call rather than a "
+                          "and dated, and where a line is a judgment call instead of a "
                           "measurement, it says so."),
                     ("checks", [
                         "Measured survey of the whole affected area, not a representative sample.",
@@ -320,7 +320,7 @@ SERVICES = [
             {
                 "band": "paper2",
                 "eyebrow": "Taking one apart",
-                "h2": "Variance analysis: where the difference actually is.",
+                "h2": "Variance analysis: where the difference is.",
                 "blocks": [
                     ("p", "When two estimates are $1.4 million apart, the instinct is to argue "
                           "about $1.4 million. That is almost never where the dispute lives. Run "
@@ -331,16 +331,16 @@ SERVICES = [
                     ("p", "A variance analysis puts a number on each of those and reduces the "
                           "negotiation to six arguments instead of one. It is also, on most "
                           "files, the single most cost-effective thing we produce: it is quick, "
-                          "it is checkable, and it frequently shows both parties that they are "
+                          "it is checkable, and it commonly shows both parties that they are "
                           "closer than the totals suggest."),
                     ("table", "What a variance analysis separates",
                      ["Category", "Typical share of the gap"], [
                         ["Quantity and measurement differences", "Often the largest single component, and the easiest to resolve"],
-                        ["Scope omissions &mdash; trades or areas absent from one estimate", "Frequently substantial and usually unintentional"],
+                        ["Scope omissions, trades or areas absent from one estimate", "Usually substantial and usually unintentional"],
                         ["Repair versus replace decisions", "Technical; resolved by manufacturer or specialist input"],
                         ["Unit pricing", "Usually the smallest component, despite getting the most attention"],
                         ["Overhead, profit and general conditions", "A percentage of everything above, so it moves last"],
-                        ["Code and ordinance work", "Binary &mdash; either scheduled or not"],
+                        ["Code and ordinance work", "Binary, either scheduled or not"],
                      ]),
                 ],
             },
@@ -353,8 +353,8 @@ SERVICES = [
              "disagrees with is much less useful than it looks.</p>"),
             ("Can you produce an estimate without inspecting the property?",
              "<p>We can produce an analysis of somebody else&rsquo;s estimate from documents, and "
-             "frequently do. We will not produce an original scope from photographs and call it "
-             "an estimate &mdash; the quantities would be invented, and that is exactly the "
+             "often do. We will not produce an original scope from photographs and call it "
+             "an estimate, the quantities would be invented, and that is exactly the "
              "defect we are usually retained to expose in other people&rsquo;s work.</p>"),
             ("How long does an estimate take?",
              "<p>On a single commercial building, typically two to four weeks from access: a day "
@@ -400,13 +400,13 @@ SERVICES = [
                     ("p", "Appraisal decides how much the damage costs to put right. It does not "
                           "decide whether the policy covers it. A panel can return an award of "
                           "$2.4 million and the insurer can still decline on the basis that the "
-                          "cause of loss was excluded &mdash; although in practice, paying an "
+                          "cause of loss was excluded, although in practice, paying an "
                           "award and then denying coverage is an awkward position to hold."),
                     ("p", "Causation sits uncomfortably across that line. Where the dispute is "
                           "whether hail or age ended a roof&rsquo;s service life, Texas panels "
-                          "frequently allocate between covered and non-covered causes as part of "
+                          "often allocate between covered and non-covered causes as part of "
                           "determining the amount. How that will be handled is worth agreeing at "
-                          "the start rather than discovering in the award."),
+                          "the start instead of discovering in the award."),
                     ("callout", "When appraisal fits", [
                         ("p", "Use it when both parties accept the loss is covered and disagree "
                               "about what it costs. Do not use it when the real dispute is a "
@@ -439,7 +439,7 @@ SERVICES = [
                         ("Appraiser appointment",
                          "<p>Each party names a competent and impartial appraiser within the "
                          "period the policy states. Impartial does not mean neutral about the "
-                         "evidence &mdash; an appraiser should know the building and the scope "
+                         "evidence, an appraiser should know the building and the scope "
                          "thoroughly.</p>"),
                         ("Umpire selection",
                          "<p>The two appraisers agree an umpire, or a court appoints one. This is "
@@ -471,8 +471,8 @@ SERVICES = [
                         "Agreement, ideally in writing, on how causation allocation will be treated if it arises.",
                     ]),
                     ("p", "Awards are difficult to unwind. Texas courts generally uphold them "
-                          "absent fraud, accident, or a panel acting outside its authority "
-                          "&mdash; for instance by deciding coverage rather than amount. That "
+                          "absent fraud, accident, or a panel acting outside its authority"
+                          ", for instance by deciding coverage instead of amount. That "
                           "finality is the point of the mechanism, and it is why preparation "
                           "before the panel matters far more than argument afterwards."),
                 ],
@@ -491,7 +491,7 @@ SERVICES = [
              "appraisal is typically far cheaper and far faster &mdash; weeks to a few months on "
              "a well-run panel.</p>"),
             ("Is appraisal a good idea for a public entity?",
-             "<p>Frequently, and for a reason beyond cost: it is a contractual process rather "
+             "<p>Often, and for a reason beyond cost: it is a contractual process rather "
              "than public litigation against an insurer. For a school board, a city council or a "
              "church membership, that is often a materially easier thing to approve and to "
              "explain.</p>"),
@@ -504,7 +504,7 @@ SERVICES = [
         "nav_label": "Soot, Smoke &amp; Mold Testing",
         "card_title": "Soot, smoke &amp; mold testing and reporting",
         "card_blurb": ("Sampling, laboratory analysis and written findings on combustion residue "
-                       "and microbial contamination &mdash; and on what remediation is actually "
+                       "and microbial contamination, and on what remediation is actually "
                        "required."),
         "title": "Soot, Smoke &amp; Mold Testing and Reporting | Texas",
         "description": ("Independent soot, smoke and mold testing and reporting for Texas "
@@ -538,17 +538,17 @@ SERVICES = [
                           "metal, circuit boards and wiring for months after the fire is out. "
                           "Natural cellulose produces something different again."),
                     ("p", "That distinction decides whether an item is cleaned, restored or "
-                          "replaced &mdash; and multiplied across a contents inventory or a "
+                          "replaced, and multiplied across a contents inventory or a "
                           "building&rsquo;s electrical and mechanical systems, it is usually the "
-                          "largest disputed number in a fire claim. It is also entirely testable, "
+                          "largest disputed number in a fire claim. It is also testable, "
                           "relatively cheaply, which is why the argument is so unnecessary."),
                     ("checks", [
                         "Surface sampling by tape lift and wipe, at locations chosen to map distribution rather than to prove a point.",
-                        "Characterization of the particulate &mdash; combustion byproduct versus ordinary settled dust, char versus ash versus soot.",
+                        "Characterization of the particulate, combustion byproduct versus ordinary settled dust, char versus ash versus soot.",
                         "Background and control samples from unaffected areas of the same building, which is what makes a positive result mean anything.",
                         "Sampling inside air-handling systems and above ceilings, the most common route for building-wide contamination and the most common omission.",
                         "Corrosion assessment on electrical distribution, controls, servers and exposed metal where acidic residues are indicated.",
-                        "A written scope of remediation that follows from the findings, rather than a scope written first and justified afterwards.",
+                        "A written scope of remediation that follows from the findings, instead of a scope written first and justified afterwards.",
                     ]),
                 ],
                 "aside": [
@@ -556,7 +556,7 @@ SERVICES = [
                         ("p", "Odor is real, and it is also the least defensible basis for a "
                               "remediation scope, because it varies by person and by day. Where "
                               "odor is the presenting complaint, the useful deliverable is a "
-                              "sampling result and an objective completion criterion &mdash; "
+                              "sampling result and an objective completion criterion, "
                               "something both parties can test against at the end."),
                     ]),
                 ],
@@ -581,8 +581,8 @@ SERVICES = [
                      ["Method", "What it establishes"], [
                         ["Air sampling, spore trap", "Airborne concentration and genera, indoors against outdoor and unaffected-area controls"],
                         ["Surface sampling, tape lift and swab", "Whether visible growth is fungal, and what it is"],
-                        ["Bulk sampling", "Whether growth extends into the material rather than sitting on it"],
-                        ["Moisture mapping and meter readings", "The water source and the extent of affected material, which is what actually sizes the scope"],
+                        ["Bulk sampling", "Whether growth extends into the material instead of sitting on it"],
+                        ["Moisture mapping and meter readings", "The water source and the extent of affected material, which is what sizes the scope"],
                         ["Post-remediation verification", "Whether the completed work meets the clearance criteria set at the start"],
                      ]),
                     ("callout", "Set clearance criteria before the work, not after", [
@@ -598,7 +598,7 @@ SERVICES = [
                 "eyebrow": "The coverage angle",
                 "h2": "Remediation sub-limits make timing expensive.",
                 "blocks": [
-                    ("p", "Texas commercial forms frequently sub-limit fungus and mold "
+                    ("p", "Texas commercial forms usually sub-limit fungus and mold "
                           "remediation, sometimes to a figure that is trivial against the "
                           "building limit above it. Where microbial growth results from a covered "
                           "water event and is addressed as part of drying and repair within a "
@@ -625,7 +625,7 @@ SERVICES = [
              "an agreed criterion rather than inventing one retrospectively.</p>"),
             ("Is testing worth it on a smaller loss?",
              "<p>Often yes, because it is cheap relative to what it settles. A few hundred "
-             "dollars of sampling routinely resolves a five-figure argument about whether "
+             "dollars of sampling regularly resolves a five-figure argument about whether "
              "contents are restorable or a building-wide cleaning scope is justified. It is one "
              "of the few places in this business where the analysis costs much less than the "
              "disagreement.</p>"),
@@ -637,14 +637,14 @@ SERVICES = [
         "slug": "cabinet-repairability-reports",
         "nav_label": "Cabinet Repairability",
         "card_title": "Cabinet repairability reports",
-        "card_blurb": ("Whether damaged casework can actually be restored &mdash; substrate, "
+        "card_blurb": ("Whether damaged casework can be restored, substrate, "
                        "finish, hardware and whether the profile can still be matched."),
         "title": "Cabinet Repairability Reports | Casework Damage Assessment",
         "description": ("Independent cabinet and casework repairability assessment after water, "
                         "smoke or impact damage. Substrate condition, refinishing feasibility, "
                         "matching and replacement scope."),
         "eyebrow": "Service &middot; Casework",
-        "h1": "Can the cabinets<br>actually be <em>saved</em>?",
+        "h1": "Can the cabinets<br>be <em>saved</em>?",
         "h1_plain": "Cabinet repairability reports",
         "lede": ("It is a small question that carries a large number. Refinishing a kitchen and "
                  "replacing it differ by an order of magnitude, the decision is made early, and "
@@ -669,21 +669,21 @@ SERVICES = [
                           "particleboard or MDF with a thermofoil, melamine or veneer face. Those "
                           "substrates do not recover from sustained moisture. They swell "
                           "irreversibly, lose fastener holding at the joints, and delaminate at "
-                          "the face &mdash; and the swelling frequently appears at the toe kick "
+                          "the face, and the swelling often appears at the toe kick "
                           "and the bottom of the end panels first, where water wicked upward, "
-                          "rather than where the leak was."),
+                          "instead of where the leak was."),
                     ("p", "Plywood-box casework with solid-wood face frames behaves quite "
-                          "differently, and is often genuinely restorable after the same event. "
+                          "differently, and is often restorable after the same event. "
                           "So the first question on any cabinet claim is not how wet it got. It "
                           "is what it is made of, which requires looking at a cut edge rather "
                           "than at the finished face."),
                     ("checks", [
                         "Substrate identified from an exposed or cut edge, not assumed from the door style.",
                         "Moisture readings taken at the toe kick, base, end panels and back, recorded by location with the meter and scale noted.",
-                        "Swelling measured rather than described &mdash; thickness at affected and unaffected points on the same component.",
+                        "Swelling measured rather than described, thickness at affected and unaffected points on the same component.",
                         "Joint integrity and fastener holding tested, since a box that has lost its corners is not repairable whatever the faces look like.",
                         "Face condition assessed separately: thermofoil delamination and veneer lifting are different failures from a damaged topcoat.",
-                        "Hinges, slides and hardware checked for corrosion, which frequently outlives a successful box repair.",
+                        "Hinges, slides and hardware checked for corrosion, which commonly outlives a successful box repair.",
                     ]),
                 ],
                 "aside": [
@@ -702,15 +702,15 @@ SERVICES = [
                 "eyebrow": "Matching",
                 "h2": "Even repairable casework has an availability problem.",
                 "blocks": [
-                    ("p", "Suppose half the run is genuinely restorable and half is not. The next "
+                    ("p", "Suppose half the run is restorable and half is not. The next "
                           "question is whether the replacement half can be made to match the "
-                          "half that stays &mdash; same door profile, same species or laminate "
+                          "half that stays, same door profile, same species or laminate "
                           "pattern, same finish, in a kitchen that has aged five years under UV."),
                     ("p", "Cabinet lines are discontinued constantly. Door profiles change, "
                           "laminate patterns are dropped, stain formulations are reformulated. "
                           "Establishing that a profile is no longer available is a documentary "
                           "exercise &mdash; manufacturer correspondence, discontinued-product "
-                          "notices, supplier quotes &mdash; and it is what converts a partial "
+                          "notices, supplier quotes, and it is what converts a partial "
                           "replacement into a continuous-run replacement under a matching "
                           "argument."),
                     ("table", "What the report records",
@@ -734,13 +734,13 @@ SERVICES = [
              "wrongly moves seven figures.</p>"),
             ("Do you assess bathroom vanities, built-ins and commercial millwork too?",
              "<p>Yes. The same analysis applies to vanities, reception and nurse-station "
-             "millwork, laboratory casework, library shelving and church built-ins &mdash; and on "
+             "millwork, laboratory casework, library shelving and church built-ins, and on "
              "laboratory and healthcare casework there is usually a chemical-resistance or "
              "cleanability specification that constrains what a repair is allowed to be.</p>"),
             ("Can you report on units that have already been gutted?",
              "<p>Partially. Where photographs, retained components and the contractor&rsquo;s "
              "documentation survive, an opinion is possible and will be qualified accordingly. "
-             "This is a strong argument for getting the assessment done before demolition &mdash; "
+             "This is a strong argument for getting the assessment done before demolition, "
              "it is a one-day exercise that becomes impossible a week later.</p>"),
         ],
     },
@@ -792,7 +792,7 @@ SERVICES = [
                     ("checks", [
                         "Room-by-room capture with photographs indexed to the inventory line.",
                         "Specification-level descriptions, so a comparable can be sourced rather than guessed.",
-                        "Age and purchase evidence where it exists &mdash; asset registers, invoices, capital schedules, grant records.",
+                        "Age and purchase evidence where it exists, asset registers, invoices, capital schedules, grant records.",
                         "Condition recorded at the item level rather than applied as a blanket assumption.",
                         "Restorable, non-restorable and questionable segregated, with the basis stated for each.",
                         "Anything disposed of photographed and sampled before it goes, because it will be asked about.",
@@ -804,7 +804,7 @@ SERVICES = [
                               "sanctuary seating, commercial kitchen equipment, hotel FF&amp;E "
                               "and warehouse stock all price from trade channels rather than "
                               "retail. A comparable pulled from a consumer website is the wrong "
-                              "market, and saying so is frequently worth more than arguing about "
+                              "market, and saying so is often worth more than arguing about "
                               "the number."),
                     ]),
                 ],
@@ -815,12 +815,12 @@ SERVICES = [
                 "h2": "Like kind and quality, in the right market.",
                 "blocks": [
                     ("p", "Replacement cost for contents means the cost to replace with property "
-                          "of like kind and quality &mdash; not the cheapest item that performs "
+                          "of like kind and quality, not the cheapest item that performs "
                           "the same function. Most pricing disputes are really disputes about "
-                          "whether a proposed comparable is genuinely equivalent in grade, "
+                          "whether a proposed comparable is equivalent in grade, "
                           "durability, specification and channel."),
-                    ("p", "The way through is documentation rather than assertion: a sourced, "
-                          "dated comparable from the market the item would actually be bought in, "
+                    ("p", "The way through is documentation instead of assertion: a sourced, "
+                          "dated comparable from the market the item would be bought in, "
                           "with the specification set out so the equivalence can be checked. "
                           "Where an exact match is discontinued, the report says so and prices "
                           "the nearest current equivalent, showing the difference."),
@@ -841,15 +841,15 @@ SERVICES = [
                 "h2": "A table is a starting point, not a finding.",
                 "blocks": [
                     ("p", "Contents depreciation is normally applied from standard tables of "
-                          "useful life, which is efficient and frequently wrong at the item level. "
+                          "useful life, which is efficient and often wrong at the item level. "
                           "A commercial-grade item in light institutional use outlives its table "
                           "entry comfortably; a consumer-grade item in heavy use does not reach "
                           "it. Condition, maintenance and actual use are the variables, and all "
                           "three are evidenced rather than assumed."),
                     ("p", "On a replacement cost policy this is money that is recoverable once "
-                          "the items are actually replaced and documented &mdash; within whatever "
+                          "the items are replaced and documented, within whatever "
                           "period the policy allows. On institutional claims that deadline is "
-                          "missed routinely, because replacing four thousand items takes longer "
+                          "missed often, because replacing four thousand items takes longer "
                           "than anyone plans for."),
                     ("html", '<a class="tlink" href="/tools/rcv-acv-depreciation-calculator/">'
                              'Model the depreciation holdback <span class="arw">&rarr;</span></a>'),
@@ -858,7 +858,7 @@ SERVICES = [
         ],
         "faqs": [
             ("Can you build an inventory when everything is already gone?",
-             "<p>Frequently, and it is much of what this work is. The sources are asset "
+             "<p>Commonly, and it is much of what this work is. The sources are asset "
              "registers, purchase and capital records, insurance schedules, photographs taken for "
              "other reasons, video walkthroughs, supplier histories and structured interviews "
              "with the people who used the space. It is slower than inventorying what survives, "
@@ -914,7 +914,7 @@ SERVICES = [
                           "confuses them. As a consultant or expert, we are retained to measure, "
                           "analyze and report, and the conclusions do not change with the client. "
                           "As a public adjuster, we are the policyholder&rsquo;s representative "
-                          "in presenting and negotiating their claim &mdash; an advocacy role, "
+                          "in presenting and negotiating their claim: an advocacy role, "
                           "licensed separately under chapter 4102 of the Texas Insurance Code."),
                     ("p", "We hold both licences, and we act in one capacity per matter, named in "
                           "the engagement letter. We never act for both parties to the same loss, "
@@ -933,7 +933,7 @@ SERVICES = [
                         ("p", "If you need somebody to run the claim, deal with the carrier and "
                               "negotiate, that is public adjusting. If you need a defensible "
                               "measurement, a report your own broker or counsel can rely on, or "
-                              "testimony, that is consulting &mdash; and it is usually the "
+                              "testimony, that is consulting, and it is usually the "
                               "cheaper of the two on a well-handled file."),
                     ]),
                 ],
@@ -961,7 +961,7 @@ SERVICES = [
                         ("Negotiation to conclusion",
                          "<p>Positions stated in writing and dated, differences itemized, "
                          "supplements filed as actual costs come in, and an early view on whether "
-                         "the gap needs appraisal or counsel rather than more letters.</p>"),
+                         "the gap needs appraisal or counsel instead of more letters.</p>"),
                     ]),
                 ],
             },
@@ -969,15 +969,15 @@ SERVICES = [
         "faqs": [
             ("Why would we use you as a consultant rather than as a public adjuster?",
              "<p>Because on many files it is cheaper and gets the same result. If the insurer is "
-             "engaging properly and your team can run the correspondence, what you actually need "
-             "is a defensible scope and estimate &mdash; a fixed-fee consulting deliverable, not "
+             "engaging properly and your team can run the correspondence, what you need "
+             "is a defensible scope and estimate, a fixed-fee consulting deliverable, not "
              "a percentage of the whole settlement. Where the file needs somebody to carry it, "
              "public adjusting earns its fee. We will tell you which we think you are looking "
              "at.</p>"),
             ("Can you switch capacity mid-matter?",
              "<p>Rarely, and never quietly. Moving from consultant to representative changes the "
              "relationship, the fee basis and how the earlier work will be characterized by the "
-             "other side. If it is genuinely the right move it is done by a new written "
+             "other side. If it is the right move it is done by a new written "
              "engagement, and if we have served as a neutral or an umpire on the matter, it is "
              "not available at all.</p>"),
             ("Do you take referral fees from contractors?",
@@ -1001,7 +1001,7 @@ SERVICES = [
         "h1_plain": "Commercial policy review and pre-loss consulting",
         "lede": ("Every argument on this website is an argument about wording that was agreed years "
                  "before the storm. A coinsurance clause, a margin clause, a per-building "
-                 "deductible, an ordinance and law limit set at 10% &mdash; all fixable at "
+                 "deductible, an ordinance and law limit set at 10%, all fixable at "
                  "renewal, none fixable afterwards."),
         "head_aside": [
             ("ledger", "What a review covers", [
@@ -1030,12 +1030,12 @@ SERVICES = [
                           "the specific questions to raise with your broker before renewal. We do "
                           "not sell insurance and we take no commission from anyone who does."),
                     ("checks", [
-                        "Valuation basis on every scheduled location, and whether the reported values would actually rebuild the building today.",
+                        "Valuation basis on every scheduled location, and whether the reported values would rebuild the building today.",
                         "Coinsurance exposure modelled against a realistic partial loss, not just a total one.",
                         "Deductible mechanics for wind, hail and named storm, applied to a multi-building event to show the true retention.",
-                        "Ordinance and law coverage tested against what your jurisdiction would actually require on a substantial repair.",
-                        "Time-element structure: period of indemnity, extensions, waiting periods, dependent property, and whether the income streams you actually have are covered.",
-                        "Documentation readiness &mdash; whether the records that prove a claim exist and are retrievable before you need them.",
+                        "Ordinance and law coverage tested against what your jurisdiction would require on a substantial repair.",
+                        "Time-element structure: period of indemnity, extensions, waiting periods, dependent property, and whether the income streams you have are covered.",
+                        "Documentation readiness, whether the records that prove a claim exist and are retrievable before you need them.",
                     ]),
                 ],
                 "aside": [
@@ -1076,7 +1076,7 @@ SERVICES = [
         "faqs": [
             ("How much does a policy review cost?",
              "<p>It is a flat fee, quoted against the size and complexity of the schedule, and paid "
-             "whether or not there is ever a claim &mdash; which is the opposite of how we are paid "
+             "whether or not there is ever a claim, which is the opposite of how we are paid "
              "on claim work and is deliberate. You are buying independent analysis, not a "
              "interest in the conclusion.</p>"),
             ("Will this annoy our broker?",
@@ -1086,8 +1086,8 @@ SERVICES = [
              "read, that is itself information.</p>"),
             ("We are in a risk pool. Is a review still worth doing?",
              "<p>Arguably more so. Pool coverage documents are non-standard, they change from year "
-             "to year, and the differences from a commercial form &mdash; in valuation, in "
-             "exclusions, in the appeal process, in how the retention works &mdash; are exactly the "
+             "to year, and the differences from a commercial form, in valuation, in "
+             "exclusions, in the appeal process, in how the retention works, are exactly the "
              "things nobody reads until there is a loss.</p>"),
         ],
     },

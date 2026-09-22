@@ -29,7 +29,7 @@ POSTS = [
         "blurb": ("Claims are decided by what was recorded, not by what is argued later. The "
                   "evidence that settles each question, and how long you have to capture it."),
         "lede": ("Every contested property claim eventually reduces to the same question: can "
-                 "you prove it. Not whether it is true &mdash; whether the record you built at "
+                 "you prove it. Not whether it is true, whether the record you built at "
                  "the time supports it well enough that a forensic accountant, an appraisal "
                  "panel or a court can rely on it."),
         "body": [
@@ -46,7 +46,7 @@ POSTS = [
                   "dried, cleared and repaired, which is exactly what should be happening."),
             ("table", "How long you have, and what it proves",
              ["Evidence", "Typical window", "What it settles"], [
-                ["The failed component &mdash; pipe, fitting, valve, appliance",
+                ["The failed component, pipe, fitting, valve, appliance",
                  "Hours",
                  "Cause of failure, and whether anyone else is responsible. The plumber will take it to the truck and it is gone by lunchtime. Ask for it, label it, box it."],
                 ["High-water marks and debris lines",
@@ -54,7 +54,7 @@ POSTS = [
                  "Where the water reached, which on a coastal loss separates wind damage from surge. Photograph with a scale before anything is washed down."],
                 ["Contents, before disposal",
                  "Days",
-                 "Quantity, specification, age and condition &mdash; the four things a pricing dispute turns on. Photograph and inventory before the skips arrive."],
+                 "Quantity, specification, age and condition, the four things a pricing dispute turns on. Photograph and inventory before the skips arrive."],
                 ["Cabinet and casework substrate",
                  "Days",
                  "Whether the boxes are particleboard or plywood, and how far moisture travelled. Visible at a cut edge; invisible once the run is demolished."],
@@ -69,7 +69,7 @@ POSTS = [
                  "Whether insulation beneath an intact membrane is fractured. A test cut answers it in ten minutes and becomes impossible the day the tear-off starts."],
                 ["CCTV and access control",
                  "Days to weeks",
-                 "Timing and sequence. Frequently overwritten faster than anyone expects."],
+                 "Timing and sequence. Usually overwritten faster than anyone expects."],
              ]),
             ("p", "Read that table as a priority order rather than a checklist. If you do "
                   "nothing else in the first week, keep the failed component and export the "
@@ -87,19 +87,19 @@ POSTS = [
                 "<strong>A dated pre-loss condition record.</strong> A drone and photographic survey of roofs and elevations, filed and forgotten. It is the single most effective answer to a wear-and-tear argument, and it costs a fraction of the dispute it prevents.",
                 "<strong>Known data retention windows.</strong> Find out today how long your building management system, access control and CCTV actually retain. If the answer is thirty days, that is your real deadline after any loss.",
                 "<strong>A current asset register.</strong> Contents claims are won on specification and age. A register with make, model, purchase date and cost turns a four-thousand-line argument into a reconciliation.",
-                "<strong>The policy where someone can find it at 2am.</strong> Declarations page, full policy or coverage document, and the schedule of values &mdash; not in one person's inbox.",
+                "<strong>The policy where someone can find it at 2am.</strong> Declarations page, full policy or coverage document, and the schedule of values, not in one person's inbox.",
                 "<strong>A one-page first-response instruction.</strong> What to photograph, what not to throw away, who to call, what not to sign. Taped inside a cupboard door.",
             ]),
 
             ("h2", "The first week"),
-            ("p", "Safety first, then capture, then mitigate &mdash; and mitigate hard, because "
+            ("p", "Safety first, then capture, then mitigate, and mitigate hard, because "
                   "every property policy imposes a duty to prevent further damage and failing it "
                   "hands the other side a defence on everything that followed. The detailed "
                   "sequence is its own piece."),
             ("html", '<a class="tlink" href="/blog/first-72-hours-after-a-commercial-property-loss/">'
                      'The first 72 hours, hour by hour <span class="arw">&rarr;</span></a>'),
             ("p", "Two habits matter more than the rest. Photograph before you disturb anything, "
-                  "including the areas that are undamaged &mdash; proving what a room looked "
+                  "including the areas that are undamaged, proving what a room looked "
                   "like before demolition is worth more than you expect. And start a dated log "
                   "on day one: who attended, what was decided, which vendor arrived when, what "
                   "the carrier said on the phone. A contemporaneous log beats any reconstruction "
@@ -112,9 +112,9 @@ POSTS = [
             ("checks", [
                 "Open a separate general ledger account or cost code for loss-related spend on day two, and use it without exception.",
                 "Code every incremental cost to it as it is incurred: overtime, temporary premises, rented equipment, expedited freight, additional staffing, hotel nights.",
-                "Track what actually stopped as well. The other side will propose a saved-expenses credit; propose it yourself, correctly, first.",
+                "Track what stopped as well. The other side will propose a saved-expenses credit; propose it yourself, correctly, first.",
                 "Keep a dated construction schedule with the cause of every delay noted. A disputed period of restoration moves both the income loss and the general conditions, and this document answers both.",
-                "Preserve two years of monthly operating data by department, so the pre-loss baseline is a fact rather than an assertion.",
+                "Preserve two years of monthly operating data by department, so the pre-loss baseline is a fact instead of an assertion.",
             ]),
 
             ("h2", "Six things that quietly weaken a claim"),
@@ -140,7 +140,7 @@ POSTS = [
             ("p", "None of this requires a consultant, and that is the point of publishing it. "
                   "What it requires is somebody deciding in advance that the claim will be "
                   "argued on a record rather than on recollection. Organisations that do it "
-                  "settle faster and for more defensible numbers &mdash; and the ones on the "
+                  "settle faster and for more defensible numbers, and the ones on the "
                   "other side of those files generally prefer them too, because a documented "
                   "claim is much easier to pay than an asserted one."),
         ],
@@ -186,7 +186,7 @@ POSTS = [
             ("p", "Photograph everything before anything moves. Wide shots that establish the "
                   "space, then medium shots that show the relationship between the damage and "
                   "the building, then close-ups. Include a reference for scale. Photograph the "
-                  "undamaged areas too &mdash; six months from now, proving what a room looked "
+                  "undamaged areas too, six months from now, proving what a room looked "
                   "like before demolition will matter more than you expect. Video walkthroughs "
                   "with narration are unglamorous and extraordinarily useful."),
             ("callout", "The single most valuable photograph", [
@@ -210,7 +210,7 @@ POSTS = [
                   "There is a difference between drying a building and gutting it. Before "
                   "materials are removed, photograph them in place. Where anything must be "
                   "disposed of, keep a representative sample and photograph the rest in the "
-                  "dumpster. Retain failed components &mdash; pipes, fittings, valves, electrical "
+                  "dumpster. Retain failed components, pipes, fittings, valves, electrical "
                   "equipment &mdash; labelled and boxed. If subrogation or a product defect ever "
                   "becomes relevant, that box is the case."),
             ("checks", [
@@ -223,7 +223,7 @@ POSTS = [
 
             ("h2", "Read before you sign: three documents that arrive early"),
             ("p", "Restoration companies monitor scanner traffic and arrive fast, which is "
-                  "genuinely useful. What they bring with them deserves a careful reading even "
+                  "useful. What they bring with them deserves a careful reading even "
                   "at two in the morning."),
             ("table", "What gets put in front of you in the first day",
              ["Document", "What it does", "What to watch"], [
@@ -251,7 +251,7 @@ POSTS = [
                 ("p", "Many Texas districts, cities and other public entities cover property "
                       "through an interlocal risk pool rather than an insurer. The coverage "
                       "document governs the notice requirements and the appeal route, and it "
-                      "is not a standard policy. Read it rather than assuming."),
+                      "is not a standard policy. Read it instead of assuming."),
             ]),
 
             ("h2", "Day two to three: set the file up so it can be proved"),
@@ -263,10 +263,10 @@ POSTS = [
                   "finance team twenty minutes to set up and saves an argument that would "
                   "otherwise run for months."),
             ("p", "At the same time, export anything that expires. Building management system "
-                  "logs frequently retain only thirty to ninety days of data. Access control "
+                  "logs often retain only thirty to ninety days of data. Access control "
                   "and CCTV overwrite. Utility outage records are easiest to obtain close to the "
-                  "event. If any of those matter to your claim &mdash; and on a freeze claim the "
-                  "BMS logs are frequently the whole case &mdash; pull them this week."),
+                  "event. If any of those matter to your claim, and on a freeze claim the "
+                  "BMS logs are often the whole case, pull them this week."),
             ("checks", [
                 "Separate GL account or cost code opened for loss-related spend.",
                 "BMS, thermostat, access control and CCTV data exported and stored off-system.",
@@ -324,7 +324,7 @@ POSTS = [
         "lede": ("Strip the argument out of most contested property claims and what is left is a "
                  "single question asked forty times: can this be fixed, or does it have to be "
                  "replaced. It is a technical question with a technical answer, and it is "
-                 "routinely settled by whoever asserts hardest."),
+                 "often settled by whoever asserts hardest."),
         "body": [
             ("p", "The pattern is the same whatever the component. One side says the item can be "
                   "cleaned, dried, refinished, coated, patched or recalibrated. The other says it "
@@ -338,7 +338,7 @@ POSTS = [
                   "its pre-loss condition and remaining service life."),
             ("p", "Those last four words carry most of the weight. A roof membrane with bruised "
                   "insulation beneath it can be patched. It will not perform for the fifteen "
-                  "years it had left, and the manufacturer will frequently decline to warrant "
+                  "years it had left, and the manufacturer will usually decline to warrant "
                   "it. A swollen particleboard cabinet box can be refinished. It will not hold a "
                   "hinge screw. Repair that leaves the owner with a shorter-lived asset than "
                   "they had before the loss has not restored anything; it has deferred the cost "
@@ -351,7 +351,7 @@ POSTS = [
             ]),
 
             ("h2", "Four components, four kinds of evidence"),
-            ("table", "What actually settles it",
+            ("table", "What settles it",
              ["Component", "The real question", "Evidence that answers it"], [
                 ["Low-slope roofing",
                  "Is the insulation beneath an intact membrane fractured?",
@@ -367,7 +367,7 @@ POSTS = [
                  "Residue characterization by sampling, not by smell; background comparison from unaffected areas; test cleaning with a documented result"],
              ]),
             ("p", "Every row in that table describes something that can be done in a day or two "
-                  "for a few hundred to a few thousand dollars. Every one of them routinely goes "
+                  "for a few hundred to a few thousand dollars. Every one of them regularly goes "
                   "undone on claims where the disputed amount is six or seven figures, which is "
                   "the least rational feature of this industry."),
 
@@ -378,7 +378,7 @@ POSTS = [
                   "visible line between old and new finish, and a warranty on a third of the "
                   "run. At some cost ratio that stops being a saving."),
             ("p", "Around 70% of the replacement cost is a reasonable place to have the "
-                  "conversation, though it is a rule of thumb rather than a standard and it "
+                  "conversation, though it is a rule of thumb instead of a standard and it "
                   "varies by component. The useful move is to price both paths explicitly and "
                   "put the comparison in front of both parties, rather than defending a marginal "
                   "saving line by line."),
@@ -386,9 +386,9 @@ POSTS = [
                      'Compare the two paths <span class="arw">&rarr;</span></a>'),
 
             ("h2", "Matching, which is a different question again"),
-            ("p", "Suppose half a run is genuinely repairable and half is not. Whether the "
+            ("p", "Suppose half a run is repairable and half is not. Whether the "
                   "replacement half can be blended into the half that stays is not a "
-                  "repairability question at all &mdash; it is an availability question, and it "
+                  "repairability question at all. It is an availability question, and it "
                   "is answered with documents rather than with judgment."),
             ("p", "Cabinet lines are discontinued constantly. Roof membranes change "
                   "formulation. Tile runs are dropped. Establishing that a product can no longer "
@@ -403,15 +403,15 @@ POSTS = [
             ("h2", "What to do about it"),
             ("checks", [
                 "Identify the disputed repair-or-replace decisions explicitly and list them. On a large file there are usually between five and fifteen, not forty.",
-                "Price both paths for each one, so the comparison exists rather than being asserted.",
-                "Get the physical evidence for the ones worth more than the cost of getting it &mdash; which is nearly all of them.",
-                "Put manufacturer positions in writing. A letter declining to warrant a repaired system frequently ends the argument in a paragraph.",
+                "Price both paths for each one, so the comparison exists instead of being asserted.",
+                "Get the physical evidence for the ones worth more than the cost of getting it, which is nearly all of them.",
+                "Put manufacturer positions in writing. A letter declining to warrant a repaired system often ends the argument in a paragraph.",
                 "Treat matching as a separate question with a documentary answer, and gather the correspondence before claiming it.",
                 "Where a decision genuinely turns on judgment rather than measurement, say so, and record the basis on both sides.",
             ]),
             ("p", "None of this requires anyone to concede anything. It requires the question to "
                   "be asked in a form that has an answer, which is most of what an expert is "
-                  "actually for."),
+                  "for."),
         ],
     },
     {
@@ -428,7 +428,7 @@ POSTS = [
         "h1": "Coinsurance: the<br>clause nobody <em>reads</em>",
         "h1_plain": "Commercial property coinsurance explained",
         "blurb": ("It reduces every covered loss by the ratio of what you bought to what you "
-                  "should have bought &mdash; and it hurts most on partial claims."),
+                  "should have bought, and it hurts most on partial claims."),
         "lede": ("A church discovers it after a hailstorm. A district discovers it after a fire. "
                  "The damage is covered, the limit is nowhere near exhausted, and the payment is "
                  "still cut by a third. This is how that happens."),
@@ -436,7 +436,7 @@ POSTS = [
             ("p", "Coinsurance is the most consequential clause in commercial property insurance "
                   "that almost no policyholder can describe. It sits on the declarations page as "
                   "a percentage next to each building&rsquo;s limit &mdash; 80%, 90%, sometimes "
-                  "100% &mdash; and it does nothing at all until there is a claim."),
+                  "100%, and it does nothing at all until there is a claim."),
 
             ("h2", "What it actually does"),
             ("p", "The clause requires you to carry insurance of at least the stated percentage "
@@ -452,7 +452,7 @@ POSTS = [
             ("p", "Work an example. A sanctuary would cost $24 million to rebuild today. The "
                   "policy carries a $16 million limit with a 90% coinsurance clause. Required "
                   "insurance is $21.6 million; the ratio is 74%. A $3.2 million hail and water "
-                  "loss &mdash; well within the limit, entirely covered &mdash; pays $2.37 "
+                  "loss (well within the limit, entirely covered) pays $2.37 "
                   "million before the deductible. The other $830,000 is uninsured, not because "
                   "of anything to do with the damage, but because of a number on a schedule."),
             ("html", '<a class="tlink" href="/tools/coinsurance-penalty-calculator/">'
@@ -467,10 +467,10 @@ POSTS = [
             ("h2", "Why Texas institutions fail it so consistently"),
             ("p", "Three reasons, and none of them involve negligence."),
             ("h3", "Statements of value go stale"),
-            ("p", "Most institutional schedules were assembled once, for a specific reason "
-                  "&mdash; a bond issue, a refinance, a merger &mdash; and have been rolled "
+            ("p", "Most institutional schedules were assembled once, for a specific reason"
+                  ", a bond issue, a refinance, a merger, and have been rolled "
                   "forward with a small annual inflation factor ever since. That factor has not "
-                  "matched what actually happened to commercial construction costs in Texas "
+                  "matched what happened to commercial construction costs in Texas "
                   "since 2020."),
             ("h3", "Buildings change and schedules do not"),
             ("p", "A congregation adds a family life center. A district encloses a breezeway and "
@@ -488,7 +488,7 @@ POSTS = [
                 ("Agreed value",
                  "<p>An agreed value endorsement suspends the coinsurance clause for the policy "
                  "term in exchange for a signed statement of values the insurer accepts. It is "
-                 "the cleanest solution available, it is frequently less expensive than people "
+                 "the cleanest solution available, it is commonly less expensive than people "
                  "expect, and a surprising number of institutions already have it and do not "
                  "know. Look at your declarations page before you do anything else.</p>"),
                 ("Revalue and raise the limits",
@@ -499,26 +499,26 @@ POSTS = [
                 ("Contest the value at claim time",
                  "<p>The fallback, and a legitimate one. The required amount depends on the "
                  "property&rsquo;s actual value at the date of loss, which is a question of "
-                 "evidence rather than the carrier&rsquo;s assertion. Where a penalty is being "
+                 "evidence instead of the carrier&rsquo;s assertion. Where a penalty is being "
                  "applied on a valuation that overstates what the building would really cost to "
-                 "reproduce, that valuation is contestable &mdash; and on older or unusual "
-                 "buildings it is frequently wrong.</p>"),
+                 "reproduce, that valuation is contestable, and on older or unusual "
+                 "buildings it is often wrong.</p>"),
             ]),
 
             ("h2", "Two adjacent traps"),
             ("p", "Blanket coverage feels like the answer, and mostly it is: a blanket limit "
-                  "responds anywhere on the schedule rather than trapping recovery at one "
+                  "responds anywhere on the schedule instead of trapping recovery at one "
                   "building&rsquo;s value. But blanket cover is usually conditioned on the "
                   "accuracy of the reported values, and a <strong>margin clause</strong> or "
                   "occurrence limit of liability endorsement can cap recovery at a fixed "
-                  "percentage &mdash; commonly 110% or 115% &mdash; of the value reported for "
+                  "percentage, commonly 110% or 115%, of the value reported for "
                   "the affected location. Understate the value and the blanket limit above it "
                   "becomes decorative."),
             ("p", "The second trap is <strong>functional replacement cost</strong>, which "
-                  "appears frequently on older churches and civic buildings. It permits the "
+                  "appears often on older churches and civic buildings. It permits the "
                   "carrier to rebuild with modern equivalent materials rather than matching what "
                   "was there. It is not automatically wrong &mdash; for some buildings it is "
-                  "sensible and cheaper &mdash; but it should be a decision the organization "
+                  "sensible and cheaper, but it should be a decision the organization "
                   "made knowingly."),
             ("quote", "The cheapest hour in commercial insurance is the one spent reading the "
                       "declarations page while it can still be changed.",
@@ -527,12 +527,12 @@ POSTS = [
             ("h2", "What to do this week"),
             ("checks", [
                 "Find the declarations page. Look at the figure next to each building&rsquo;s limit. If it says 80, 90 or 100, the clause is live.",
-                "If it says agreed value, confirm the signed statement of values is current &mdash; that is the condition of the suspension.",
+                "If it says agreed value, confirm the signed statement of values is current. That is the condition of the suspension.",
                 "Get a current replacement cost per square foot for your construction class and occupancy, and multiply it out.",
                 "Compare that figure against the limit, and apply the percentage. Now you know your ratio.",
                 "If there is a shortfall, raise it with your broker at least 90 days before renewal, when something can still be done about it.",
             ]),
-            ("p", "This is the rare insurance problem with a genuinely simple fix, available only "
+            ("p", "This is the rare insurance problem with a simple fix, available only "
                   "in advance. After a loss, all that remains is the argument."),
         ],
     },
@@ -546,8 +546,8 @@ POSTS = [
         "read": "10",
         "words": 1550,
         "title": "Documenting a Commercial Hail Roof Claim in Texas",
-        "description": ("Test cuts, soft-metal corroboration, storm data and maintenance records "
-                        "&mdash; how to build a commercial hail roof claim that withstands a "
+        "description": ("Test cuts, soft-metal corroboration, storm data and maintenance records"
+                        ", how to build a commercial hail roof claim that withstands a "
                         "carrier&rsquo;s engineering report."),
         "h1": "Hail damage the<br>engineer <em>cannot</em> dismiss",
         "h1_plain": "Documenting a commercial hail roof claim",
@@ -555,20 +555,20 @@ POSTS = [
                   "evidence that makes that report untenable."),
         "lede": ("On a commercial roof, the difference between a paid claim and a denied one is "
                  "rarely the damage. It is whether anybody produced evidence in the first month "
-                 "that a consulting engineer, retained in month four, cannot simply write around."),
+                 "that a consulting engineer, retained in month four, cannot write around."),
         "body": [
             ("p", "Here is the sequence, and it is remarkably consistent. Storm in April. Claim "
                   "reported in May. Carrier&rsquo;s adjuster inspects in June, notes some "
                   "damage, and refers the matter to an engineering consultant. Report lands in "
                   "August concluding that the observed condition is consistent with normal "
-                  "weathering and long-term deterioration rather than a discrete hail event. "
+                  "weathering and long-term deterioration instead of a discrete hail event. "
                   "Denial follows in September."),
             ("p", "That report is not fraudulent. It is a professional opinion assembled largely "
                   "from a visual inspection, four months after the event, on a roof that has "
                   "since had a Texas summer. Beating it requires evidence collected before it "
                   "was written."),
 
-            ("h2", "What hail actually does to a commercial roof"),
+            ("h2", "What hail does to a commercial roof"),
             ("p", "Residential hail claims are argued over shingles, where impact is visible as "
                   "a bruise or a fracture on the surface. Commercial low-slope roofing fails "
                   "differently, and the difference is the whole argument."),
@@ -592,7 +592,7 @@ POSTS = [
             ("h2", "The five-part evidence package"),
             ("h3", "1. Test cuts, properly executed"),
             ("p", "Two to four per roof section, located to represent the full range of "
-                  "condition rather than only the worst spots &mdash; a package that only "
+                  "condition instead of only the worst spots: a package that only "
                   "samples the damage invites the argument that the sample was selective. "
                   "Photograph the location on the roof plan, the cut in place, the removed "
                   "sample with a scale, and the patch. Have them taken by a qualified roofing "
@@ -604,12 +604,12 @@ POSTS = [
                   "downspouts, gravel stops and coping, damage to vents, curbs and rooftop "
                   "mechanical cabinets, and impact on air-conditioning condenser fins. These "
                   "establish that stones of a given size landed here, on this date, from this "
-                  "direction. They are also frequently a separate claim item in their own right."),
+                  "direction. They are also usually a separate claim item in their own right."),
             ("h3", "3. Storm data for your coordinates"),
             ("p", "Not the regional summary and not the nearest official reporting station, "
                   "which may be fifteen miles away. Address-specific hail and wind data is "
                   "commercially available and inexpensive, and it either supports the reported "
-                  "date of loss or tells you early that it does not &mdash; which is itself "
+                  "date of loss or tells you early that it does not, which is itself "
                   "worth knowing before you build a file."),
             ("h3", "4. Maintenance and condition history"),
             ("p", "The wear-and-tear defense depends on the roof having been in poor condition "
@@ -632,7 +632,7 @@ POSTS = [
                 ["Scope of inspection", "Visual only? How many roof sections? Were test cuts taken, and if not, why not?"],
                 ["Date of inspection", "How long after the loss? What weather intervened?"],
                 ["Data sources", "Which weather station, and how far away? Was address-specific data used?"],
-                ["Concessions", "Reports frequently acknowledge some storm-related damage while concluding it is not the primary cause. That concession is a starting point."],
+                ["Concessions", "Reports often acknowledge some storm-related damage while concluding it is not the primary cause. That concession is a starting point."],
                 ["Assumptions about age and condition", "Often stated without documentary support. Your maintenance records are the answer."],
              ]),
             ("p", "Then get your own. Disagreement without a comparable expert report is just "
@@ -642,13 +642,13 @@ POSTS = [
             ("p", "<strong>Cosmetic damage exclusions.</strong> Some Texas commercial policies "
                   "exclude damage to roof surfacing that is merely cosmetic and does not affect "
                   "function. Where one applies, the entire claim becomes an argument about "
-                  "function and remaining service life &mdash; which requires a manufacturer or "
+                  "function and remaining service life, which requires a manufacturer or "
                   "engineering opinion, not a contractor&rsquo;s letter."),
             ("p", "<strong>Repair versus replacement.</strong> The carrier will price patching. "
-                  "The test is whether repair genuinely restores the roof to its pre-loss "
+                  "The test is whether repair restores the roof to its pre-loss "
                   "condition and service life. Widespread insulation fracture beneath an intact "
                   "membrane usually cannot be patched back to a warrantable system, and the "
-                  "manufacturer will often say so in writing. That letter frequently ends the "
+                  "manufacturer will often say so in writing. That letter commonly ends the "
                   "argument."),
             ("quote", "A test cut costs a few hundred dollars and patches in ten minutes. We have "
                       "watched that decision swing seven-figure claims.",
@@ -659,7 +659,7 @@ POSTS = [
                 "Get on the roof early, with a qualified consultant, and take test cuts.",
                 "Photograph soft-metal corroboration everywhere on the property, not just the roof.",
                 "Buy address-specific storm data for the date of loss before you build the claim.",
-                "Assemble maintenance, inspection and warranty records &mdash; they are the answer to wear and tear.",
+                "Assemble maintenance, inspection and warranty records, they are the answer to wear and tear.",
                 "Invite the carrier&rsquo;s representative to the inspection in writing, and record that you did.",
                 "Read their engineering report for its limitations before you respond to its conclusions.",
             ]),
@@ -684,13 +684,13 @@ POSTS = [
                   "covered only to the extent somebody bought a limit for it."),
         "lede": ("This is the clause that decides large losses on older institutional buildings, "
                  "and the one where the default limit is most often set by nobody in particular, "
-                 "years ago, without reference to what the building would actually require."),
+                 "years ago, without reference to what the building would require."),
         "body": [
             ("p", "A standard property policy pays to repair or replace what was damaged, with "
                   "materials of like kind and quality. It is a restoration promise: put the "
                   "building back the way it was."),
             ("p", "Building codes do not permit that. Once a repair exceeds whatever threshold "
-                  "the local jurisdiction treats as substantial, the work &mdash; and sometimes "
+                  "the local jurisdiction treats as substantial, the work, and sometimes "
                   "the entire structure &mdash; must be brought up to current requirements. "
                   "Sprinklers where there were none. Current egress widths and travel distances. "
                   "Accessibility. Energy code. Structural and wind provisions written decades "
@@ -706,7 +706,7 @@ POSTS = [
             ("table", "The three coverages", ["Coverage", "What it pays for", "Common failure"], [
                 ["A &mdash; Undamaged portion",
                  "The value of the undamaged part of the building that a law or ordinance requires you to demolish.",
-                 "Frequently included within the building limit rather than in addition to it"],
+                 "Often included within the building limit rather than in addition to it"],
                 ["B &mdash; Demolition cost",
                  "The cost of demolishing that undamaged portion and removing the debris.",
                  "Limit set as a small percentage; badly undersized on large or contaminated structures"],
@@ -716,19 +716,19 @@ POSTS = [
              ]),
             ("p", "On a $12 million school building, a 10% Coverage C limit is $1.2 million. Ask "
                   "your building official what a substantial renovation of a 1968 campus would "
-                  "trigger &mdash; full fire suppression, current egress, accessibility "
-                  "throughout, energy code envelope and mechanical upgrades &mdash; and you will "
+                  "trigger, full fire suppression, current egress, accessibility "
+                  "throughout, energy code envelope and mechanical upgrades, and you will "
                   "quickly establish whether $1.2 million is a serious number."),
 
             ("h2", "The enforcement question"),
             ("p", "Coverage generally responds to what the law actually requires and the "
-                  "jurisdiction actually enforces, not to what would be nice to do while the "
+                  "jurisdiction enforces, not to what would be nice to do while the "
                   "building is open. That distinction produces most of the disputes."),
             ("p", "Which makes one document unusually valuable: a written statement from the "
                   "building official setting out what the jurisdiction will require for this "
                   "repair, at this scale, on this building. It converts an argument about code "
-                  "interpretation into a documented requirement. Ask for it early &mdash; it "
-                  "routinely takes several weeks &mdash; and put the request in writing so the "
+                  "interpretation into a documented requirement. Ask for it early. It "
+                  "regularly takes several weeks, and put the request in writing so the "
                   "timeline is on the record."),
             ("callout", "Watch the trigger threshold", [
                 ("p", "Many jurisdictions set substantial improvement or substantial damage at a "
@@ -750,7 +750,7 @@ POSTS = [
                   "fire alarm and suppression, and energy code work across the whole building. "
                   "On a multi-campus district hit by one storm, that exposure is repeated."),
             ("h3", "Any building with a low-slope roof"),
-            ("p", "This one surprises people. A full roof tear-off frequently triggers current "
+            ("p", "This one surprises people. A full roof tear-off often triggers current "
                   "energy code insulation requirements, which means thicker insulation than what "
                   "was there, which means extending mechanical curbs and raising rooftop units, "
                   "modifying drainage and possibly adding tapered insulation. That is ordinance "
@@ -792,7 +792,7 @@ POSTS = [
         "read": "10",
         "words": 1550,
         "title": "Building a Business Interruption Claim That Holds Up",
-        "description": ("How commercial business interruption claims are actually calculated, "
+        "description": ("How commercial business interruption claims are calculated, "
                         "where carriers attack the assumptions, and the records to start keeping "
                         "on day one."),
         "h1": "The interruption claim,<br>built to <em>survive</em>",
@@ -805,16 +805,16 @@ POSTS = [
         "body": [
             ("p", "Property damage has a satisfying quality: you can photograph it, measure it "
                   "and price it. The income loss behind it has none of those properties. It is a "
-                  "counterfactual &mdash; what the organization would have earned had the loss "
-                  "not occurred &mdash; and counterfactuals are argued, not observed."),
+                  "counterfactual, what the organization would have earned had the loss "
+                  "not occurred, and counterfactuals are argued, not observed."),
             ("p", "Which is why the carrier retains a forensic accountant early, and why you "
                   "should too."),
 
-            ("h2", "What the coverage actually pays"),
+            ("h2", "What the coverage pays"),
             ("p", "Business income coverage pays the net profit the operation would have earned "
                   "plus the continuing normal operating expenses it had to keep paying during "
-                  "the period of restoration. It does not pay lost revenue &mdash; the most "
-                  "common error in a first-draft claim &mdash; and it does not pay expenses that "
+                  "the period of restoration. It does not pay lost revenue, the most "
+                  "common error in a first-draft claim, and it does not pay expenses that "
                   "stopped."),
             ("p", "Extra expense coverage pays costs incurred to continue operating or to speed "
                   "the repair, generally to the extent they reduce the overall loss. On many "
@@ -850,7 +850,7 @@ POSTS = [
                       "return gradually, and a policy without an extended period of indemnity "
                       "endorsement stops paying the day operations resume. Where the endorsement "
                       "exists, it typically covers a stated number of days of ramp-back. Check "
-                      "for it on day one &mdash; it is frequently the last third of the claim."),
+                      "for it on day one. It is often the last third of the claim."),
             ]),
             ("html", '<a class="tlink" href="/tools/business-interruption-calculator/">'
                      'Model the six variables <span class="arw">&rarr;</span></a>'),
@@ -861,7 +861,7 @@ POSTS = [
             ("checks", [
                 "Open a separate general ledger account or cost code for all loss-related expenditure, and use it without exception.",
                 "Log every incremental cost as it is incurred: overtime, temporary premises, rented equipment, expedited freight, additional staffing.",
-                "Track what actually stopped &mdash; the saved-expenses credit will be proposed by the carrier, so propose it yourself first and correctly.",
+                "Track what stopped &mdash; the saved-expenses credit will be proposed by the carrier, so propose it yourself first and correctly.",
                 "Maintain a dated construction schedule with the cause of every delay noted.",
                 "Preserve the operating data that establishes the baseline: two years of monthly performance, by department or revenue stream.",
                 "Record the ramp-back after reopening, so the extended period can be quantified if the endorsement exists.",
@@ -874,14 +874,14 @@ POSTS = [
              ["Organization", "Interrupted streams"], [
                 ["Church", "Tithes and offerings, facility rentals, pre-school and day-care fees, events, bookstore and cafe"],
                 ["School district", "Cafeteria and athletics revenue, facility rentals, community education, extra expense for portables and bussing"],
-                ["City", "Facility rentals, utility revenue, permit and program fees &mdash; but extra expense is usually the dominant component"],
+                ["City", "Facility rentals, utility revenue, permit and program fees, but extra expense is usually the dominant component"],
                 ["University", "Housing, dining, parking, athletics, conferences and summer camps, research continuity"],
-                ["Hospital", "Case volume by department, measured at contribution margin rather than gross charges"],
+                ["Hospital", "Case volume by department, measured at contribution margin instead of gross charges"],
              ]),
-            ("p", "Public entities frequently assume there is nothing to claim because they do "
+            ("p", "Public entities usually assume there is nothing to claim because they do "
                   "not have revenue in the commercial sense. That is usually wrong on two "
-                  "counts: auxiliary income streams do interrupt, and extra expense &mdash; the "
-                  "cost of continuing to deliver the service &mdash; is often substantial and "
+                  "counts: auxiliary income streams do interrupt, and extra expense, the "
+                  "cost of continuing to deliver the service, is often substantial and "
                   "recoverable."),
 
             ("h2", "When the carrier&rsquo;s accountant arrives"),
@@ -912,7 +912,7 @@ POSTS = [
         "words": 1400,
         "title": "Appraisal or Litigation on a Deadlocked Texas Claim",
         "description": ("When the appraisal clause is the right tool on a commercial property "
-                        "claim, when it is the wrong one, and what the process actually involves "
+                        "claim, when it is the wrong one, and what the process involves "
                         "in Texas."),
         "h1": "Appraisal, or a<br><em>lawsuit</em>?",
         "h1_plain": "Appraisal vs litigation on a Texas insurance claim",
@@ -920,7 +920,7 @@ POSTS = [
                   "coverage. Choosing wrong costs months."),
         "lede": ("Almost every commercial property policy contains an appraisal clause, and "
                  "almost no policyholder has read it. It is a contractual mechanism for breaking "
-                 "a deadlock over how much the damage costs &mdash; and it is either exactly the "
+                 "a deadlock over how much the damage costs, and it is either exactly the "
                  "right tool or exactly the wrong one."),
         "body": [
             ("p", "The clause is usually a single paragraph. If the parties fail to agree on the "
@@ -938,7 +938,7 @@ POSTS = [
                   "can still decline to pay it on the basis that the cause of loss was excluded, "
                   "that notice was late, or that a condition was breached. In practice, paying "
                   "an appraisal award and then denying coverage is an awkward position for an "
-                  "insurer to occupy &mdash; but it remains available, and a policyholder who "
+                  "insurer to occupy, but it remains available, and a policyholder who "
                   "invokes appraisal expecting it to resolve a coverage dispute has bought "
                   "nothing."),
             ("table", "Which tool fits", ["The real dispute is...", "The route"], [
@@ -956,28 +956,28 @@ POSTS = [
                   "umpire&rsquo;s &mdash; against years of discovery, depositions, expert "
                   "reports and motion practice."),
             ("p", "It also removes the dispute from a forum where the policyholder&rsquo;s "
-                  "practical problem &mdash; the building is not repaired and the money is not "
-                  "there &mdash; counts for nothing, and puts it in front of construction people "
+                  "practical problem: the building is not repaired and the money is not "
+                  "there, counts for nothing, and puts it in front of construction people "
                   "who look at the building."),
             ("p", "And for institutions, there is a governance advantage worth naming: appraisal "
                   "is a contractual process rather than public litigation against an insurer. "
                   "For a school board, a city council or a church membership, that is "
-                  "frequently a materially easier thing to approve."),
+                  "often a materially easier thing to approve."),
 
             ("h2", "Why it sometimes is not"),
             ("p", "Finality cuts both ways. Texas courts generally uphold appraisal awards absent "
-                  "fraud, accident, or the panel exceeding its authority &mdash; for instance by "
-                  "deciding coverage rather than amount. If you go into an appraisal "
+                  "fraud, accident, or the panel exceeding its authority, for instance by "
+                  "deciding coverage instead of amount. If you go into an appraisal "
                   "under-prepared and the award comes back low, there is very little to be done "
                   "about it."),
             ("p", "There is also a strategic dimension. On a claim where the carrier&rsquo;s "
                   "handling has been poor enough to raise extra-contractual exposure, invoking "
                   "appraisal and accepting an award can affect the posture of that claim. This "
                   "is squarely a question for counsel, and it should be answered before the "
-                  "demand is sent rather than afterwards."),
+                  "demand is sent instead of afterwards."),
             ("callout", "The umpire decides the number", [
                 ("p", "In a split panel, the umpire is the decision. Who is proposed, who is "
-                      "resisted and what their background is &mdash; roofing, general "
+                      "resisted and what their background is, roofing, general "
                       "construction, engineering, forensic accounting &mdash; deserves as much "
                       "attention as everything else in the process combined. A great deal of "
                       "appraisal strategy is umpire selection."),
@@ -991,7 +991,7 @@ POSTS = [
             ("checks", [
                 "A complete, defensible line-item estimate in the industry-standard format, priced to your market.",
                 "Photographic and measured documentation supporting every disputed line.",
-                "Expert reports where causation or repairability is in issue &mdash; engineering, manufacturer, roofing consultant.",
+                "Expert reports where causation or repairability is in issue, engineering, manufacturer, roofing consultant.",
                 "A written summary of exactly which items are disputed and why, so the panel can work efficiently.",
                 "An appraiser who knows your property type and can defend the estimate under challenge.",
                 "Agreement, ideally in writing, on how the panel will treat causation allocation if it arises.",
@@ -1006,8 +1006,8 @@ POSTS = [
             ("h2", "One practical note"),
             ("p", "Either party can invoke appraisal, and policyholders do so far less often than "
                   "insurers. That asymmetry is worth noticing. A well-documented policyholder "
-                  "with a thorough scope and a competent appraiser is frequently in a strong "
-                  "position in that forum &mdash; considerably stronger than in a correspondence "
+                  "with a thorough scope and a competent appraiser is commonly in a strong "
+                  "position in that forum, considerably stronger than in a correspondence "
                   "war with a claims department that has no deadline to meet."),
         ],
     },
@@ -1022,8 +1022,8 @@ POSTS = [
         "words": 1400,
         "title": "Who&rsquo;s Who on a Large Commercial Property Claim",
         "description": ("Staff adjuster, independent adjuster, public adjuster, consultant, "
-                        "appraiser, umpire and forensic accountant &mdash; who each works for, "
-                        "and what they actually decide."),
+                        "appraiser, umpire and forensic accountant, who each works for, "
+                        "and what they decide."),
         "h1": "Who&rsquo;s who on a<br>large <em>property</em> claim",
         "h1_plain": "Who's who on a commercial property claim",
         "blurb": ("Eight roles, four paymasters and a great deal of confusion about which is "
@@ -1036,8 +1036,8 @@ POSTS = [
             ("p", "The single most useful question to ask about anyone working a claim is not "
                   "how qualified they are. It is who pays them, and whether that payment moves "
                   "with the outcome. Everything else &mdash; how to weigh their report, what "
-                  "they can and cannot decide, what they are likely to be challenged on "
-                  "&mdash; follows from the answer."),
+                  "they can and cannot decide, what they are likely to be challenged on"
+                  ", follows from the answer."),
 
             ("h2", "The adjusters"),
             ("table", "Three kinds of adjuster",
@@ -1047,13 +1047,13 @@ POSTS = [
                  "Investigates, scopes and evaluates the claim for the insurer. Usually holds the settlement authority, or reports to whoever does."],
                 ["Independent adjuster (IA)",
                  "The insurer, on contract.",
-                 "The same work, outsourced &mdash; common after catastrophes and on specialist risks. &ldquo;Independent&rdquo; means independent of the payroll, not of the interest."],
+                 "The same work, outsourced, common after catastrophes and on specialist risks. &ldquo;Independent&rdquo; means independent of the payroll, not of the interest."],
                 ["Public adjuster",
                  "The policyholder, usually a percentage of the recovery.",
                  "Prepares, presents and negotiates the claim as the policyholder&rsquo;s representative. Licensed separately; in Texas, under chapter 4102."],
              ]),
             ("p", "None of this is a criticism of anyone. A staff adjuster on a large loss is "
-                  "frequently the most experienced person on the file. The point is structural: "
+                  "often the most experienced person on the file. The point is structural: "
                   "each of these three is a party&rsquo;s representative, and their work should "
                   "be read as a position rather than as a finding."),
 
@@ -1061,8 +1061,8 @@ POSTS = [
             ("p", "A claims consultant is retained to establish facts rather than to represent a "
                   "party. Damage assessment, scope, construction cost analysis, time-element "
                   "quantification, technical critique of somebody else&rsquo;s estimate. Either "
-                  "side can retain one, and the useful ones are paid for the work rather than a "
-                  "share of the result &mdash; because the moment the fee moves with the number, "
+                  "side can retain one, and the useful ones are paid for the work instead of a "
+                  "share of the result, because the moment the fee moves with the number, "
                   "the analysis becomes an argument and gets treated as one."),
             ("callout", "The question to ask a consultant", [
                 ("p", "&ldquo;Who else have you worked for?&rdquo; If the answer is only ever "
@@ -1074,7 +1074,7 @@ POSTS = [
             ("h2", "The appraisal panel"),
             ("p", "Most commercial property policies contain an appraisal clause: a contractual "
                   "mechanism for settling the amount of loss when the parties cannot agree. It "
-                  "produces three roles and they are routinely confused with each other."),
+                  "produces three roles and they are often confused with each other."),
             ("table", "The three appraisal roles",
              ["Role", "Appointed by", "What they decide"], [
                 ["Party appraiser", "One party each. Must be competent and impartial, which is not the same as neutral about the evidence.", "Their own determination of the amount of loss, then negotiates with the other appraiser."],
@@ -1089,7 +1089,7 @@ POSTS = [
 
             ("h2", "The specialists"),
             ("checks", [
-                "<strong>Forensic engineer.</strong> Retained by either side on causation and repairability. Read the methodology section before the conclusion &mdash; how many roof sections were examined, were test cuts taken, how far away was the weather station.",
+                "<strong>Forensic engineer.</strong> Retained by either side on causation and repairability. Read the methodology section before the conclusion, how many roof sections were examined, were test cuts taken, how far away was the weather station.",
                 "<strong>Forensic accountant.</strong> Almost always appears on a time-element claim of any size, usually for the insurer first. Tests the revenue projection, the margin, the continuing and saved expenses and the period of restoration.",
                 "<strong>Industrial hygienist.</strong> Contamination class, remediation protocol and post-remediation clearance. On healthcare and laboratory property their clearance letter, not an adjuster&rsquo;s opinion, is what returns the space to use.",
                 "<strong>Cost estimator or roofing consultant.</strong> Produces or critiques the line-item scope. Where the dispute is about square footage and unit cost rather than causation, this is the person who resolves it.",
@@ -1099,13 +1099,13 @@ POSTS = [
             ("h2", "Reading a report you did not commission"),
             ("p", "When an engineering or accounting report arrives from the other side, the "
                   "instinct is to argue with its conclusion. Read the rest of it first. These "
-                  "documents are frequently more limited than their summaries suggest, and the "
+                  "documents are often more limited than their summaries suggest, and the "
                   "limits are stated plainly in the parts nobody reads."),
             ("checks", [
                 "Scope of inspection &mdash; how much of the property, and by what method.",
                 "Date, and what happened to the property between the loss and the visit.",
                 "Data sources, and how specific to the property they are.",
-                "Concessions &mdash; most reports acknowledge something, and that acknowledgement is a starting point.",
+                "Concessions, most reports acknowledge something, and that acknowledgement is a starting point.",
                 "Assumptions stated without support, especially about age, prior condition and maintenance.",
                 "What the author was actually asked to opine on, which is often narrower than the conclusion implies.",
             ]),
@@ -1115,8 +1115,8 @@ POSTS = [
              "From the claims desk"),
 
             ("h2", "A short map"),
-            ("table", "Who decides what", ["Question", "Who actually settles it"], [
-                ["Is it covered?", "The policy &mdash; interpreted, if contested, by counsel and ultimately a court."],
+            ("table", "Who decides what", ["Question", "Who settles it"], [
+                ["Is it covered?", "The policy, interpreted, if contested, by counsel and ultimately a court."],
                 ["What was damaged?", "The scope document, built from a survey. Contested by competing experts."],
                 ["What does it cost?", "The estimate, and failing agreement, an appraisal panel."],
                 ["What caused it?", "Engineering evidence, and failing agreement, a court."],
@@ -1125,7 +1125,7 @@ POSTS = [
             ]),
             ("p", "Most large files get stuck because one of those six questions is being argued "
                   "by people equipped to answer a different one. Working out which question is "
-                  "actually in dispute, and who is qualified to close it, resolves more claims "
+                  "in dispute, and who is qualified to close it, resolves more claims "
                   "than any amount of correspondence."),
         ],
     },

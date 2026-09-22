@@ -40,8 +40,8 @@ def build_all(B):
         eyebrow="Who we serve",
         h1="Nine kinds of building,<br>nine different <em>problems</em>",
         lede=("We work institutional and large commercial property only. The pages below set out "
-              "what changes when the owner is a congregation rather than a corporation, a school "
-              "board rather than a landlord, a city rather than a chain &mdash; whichever party "
+              "what changes when the owner is a congregation instead of a corporation, a school "
+              "board instead of a landlord, a city rather than a chain, whichever party "
               "has retained us."),
         items=INDUSTRIES,
         intro_sections=sp.INDUSTRY_HUB_INTRO,
@@ -148,7 +148,7 @@ def build_all(B):
         eyebrow="Loss types",
         h1="What happened<br>to the <em>building</em>",
         lede=("Services describe what we are retained to do. These describe what we are "
-              "retained to do it on &mdash; the six kinds of loss that produce most of the "
+              "retained to do it on, the six kinds of loss that produce most of the "
               "institutional property work in Texas, and the technical question each one "
               "turns on."),
         items=LOSS_TYPES,
@@ -195,8 +195,8 @@ def build_all(B):
         path="/tools/",
         eyebrow="Tools &amp; calculators",
         h1="Seven calculators<br>we use on <em>live files</em>",
-        lede=("Built for commercial numbers rather than householder ones. Everything runs in your "
-              "browser &mdash; no form to fill in, nothing stored, nothing sent."),
+        lede=("Built for commercial numbers instead of householder ones. Everything runs in your "
+              "browser, no form to fill in, nothing stored, nothing sent."),
         items=TOOLS,
         intro_sections=sp.TOOL_HUB_INTRO,
         trail=[("Home", "/"), ("Tools", None)],
@@ -245,7 +245,7 @@ def build_all(B):
         h1="Statewide Texas,<br>six metros <em>constantly</em>",
         lede=("A hail file in Tarrant County and a surge file in Nueces County are different "
               "arguments, not the same page with the city name swapped. Each of these is written "
-              "from what actually damages buildings there."),
+              "from what damages buildings there."),
         items=AREAS,
         intro_sections=sp.AREA_HUB_INTRO,
         trail=[("Home", "/"), ("Service areas", None)],
@@ -434,7 +434,7 @@ def _sitemap_page(render_blocks):
                  ("About the firm", "Who we are, what we will not do, and how to check our license.", "/about/"),
                  ("How we work", "The method, stage by stage, with a typical timeline.", "/how-we-work/"),
                  ("Fees &amp; engagement", "Hourly and fixed fees, conflict checks and third-party costs.", "/fees/"),
-                 ("Frequently asked questions", "What boards and councils ask in the first call.", "/faq/"),
+                 ("Commonly asked questions", "What boards and councils ask in the first call.", "/faq/"),
                  ("Claims glossary", "Thirty terms that decide Texas commercial claims.", "/glossary/"),
                  ("Contact", "Run a conflict check, or just ask a question.", "/contact/"),
                  ("Privacy policy", "What this site collects, which is very little.", "/privacy-policy/"),

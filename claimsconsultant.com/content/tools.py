@@ -113,7 +113,7 @@ BI = _calc(
      + "</div>"
      + '<div class="field-row field-row--2">'
      + _f("Extra expense incurred", "extra", "420000", "Costs to keep operating or speed repair.", prefix="$")
-     + _f("Expenses genuinely saved", "saved", "260000", "Costs that stopped during closure.", prefix="$")
+     + _f("Expenses saved", "saved", "260000", "Costs that stopped during closure.", prefix="$")
      + "</div>"),
     "Indicated time-element loss", "total",
     "Business income plus extra expense, less saved expenses and the waiting period.",
@@ -128,7 +128,7 @@ BI = _calc(
      + _row("Indicated loss per day", "perday")
      + _row("Total time-element claim", "total", "outrow--total")),
     "Carriers test the period of restoration harder than any other input here. Change seven months "
-    "to five and watch what happens &mdash; that single assumption is usually where the negotiation "
+    "to five and watch what happens. That single assumption is usually where the negotiation "
     "actually is.",
     ("longtail",))
 
@@ -145,9 +145,9 @@ COINS = _calc(
      + _f("Deductible", "ded", "100000", "Flat amount.", prefix="$")
      + "</div>"),
     "Payable after the penalty", "net",
-    "What the policy actually pays once the coinsurance ratio and the deductible are applied.",
+    "What the policy pays once the coinsurance ratio and the deductible are applied.",
     (_row("Insurance required by the clause", "required")
-     + _row("Insurance actually carried", "carried")
+     + _row("Insurance carried", "carried")
      + _row("Shortfall", "shortfall")
      + _row("Coinsurance ratio", "ratio")
      + _row("Loss payable before deductible", "payable")
@@ -155,7 +155,7 @@ COINS = _calc(
      + _row("Deductible", "ded")
      + _row("Net recovery", "net", "outrow--total")),
     "The formula is the standard one: limit carried divided by limit required, multiplied by the "
-    "loss, less the deductible. Agreed value endorsements suspend the clause entirely &mdash; check "
+    "loss, less the deductible. Agreed value endorsements suspend the clause &mdash; check "
     "your declarations before assuming a penalty applies.",
     ("penalized", "clean"))
 
@@ -187,7 +187,7 @@ DEPREC = _calc(
      + _row("Deductible", "ded")
      + _row("First check (ACV)", "first")
      + _row("Held back until completion", "holdback", "outrow--total")),
-    "Recoverable depreciation is real money you are owed &mdash; but only if the work is completed "
+    "Recoverable depreciation is real money you are owed, but only if the work is completed "
     "and claimed within the period the policy allows. Diary that deadline the day the first payment "
     "arrives.",
     ("labordep", "bigholdback"))
@@ -269,8 +269,8 @@ ROOF = _calc(
      + _row("Cost per square foot", "persf")
      + _row("Total estimated cost", "total", "outrow--total")),
     "Unit costs are broad Texas commercial ranges for planning only; a real estimate is built from "
-    "a roof survey, a specified assembly and local bids. Energy code frequently requires added "
-    "insulation on a full tear-off, which is ordinance and law exposure rather than betterment.",
+    "a roof survey, a specified assembly and local bids. Energy code often requires added "
+    "insulation on a full tear-off, which is ordinance and law exposure instead of betterment.",
     ("op",))
 
 
@@ -311,7 +311,7 @@ OANDP = _calc(
      + _row("Bond", "bond")
      + _row("Total", "total", "outrow--total")),
     "Ten and ten is a convention, not a rule, and general conditions are a schedule-driven cost "
-    "rather than a percentage anyone should accept without testing. This models the standard "
+    "instead of a percentage anyone should accept without testing. This models the standard "
     "treatment so both the figure and the assumptions behind it are visible.",
     ("trades", "fewtrades", "gcflag"))
 
@@ -329,7 +329,7 @@ TOOLS = [
         "h1": "Commercial claim<br><em>value</em> estimator",
         "h1_plain": "Commercial claim value estimator",
         "lede": ("A first-order estimate of what a large property loss should be worth, with the "
-                 "deductible and the depreciation holdback shown separately &mdash; because the "
+                 "deductible and the depreciation holdback shown separately, because the "
                  "check that arrives first is never the whole number."),
         "calc": CLAIM_VALUE,
         "sections": [
@@ -344,7 +344,7 @@ TOOLS = [
                           "Institutions get into trouble when they budget from the first check "
                           "and discover the rebuild costs the full amount."),
                     ("p", "The third number, the one this tool cannot compute, is what the carrier "
-                          "will actually offer. That depends on how the scope is documented, "
+                          "will offer. That depends on how the scope is documented, "
                           "whether overhead and profit are included, how code upgrades are "
                           "treated and whether anyone has argued for the parts of the building "
                           "the adjuster did not inspect."),
@@ -361,9 +361,9 @@ TOOLS = [
                 "h2": "Two fields move the answer more than the rest combined.",
                 "blocks": [
                     ("checks", [
-                        "<strong>Replacement cost per square foot.</strong> Using an outdated figure understates everything downstream, including the coinsurance test. Current Texas commercial construction costs vary enormously by occupancy &mdash; a warehouse shell and a hospital wing are not comparable.",
+                        "<strong>Replacement cost per square foot.</strong> Using an outdated figure understates everything downstream, including the coinsurance test. Current Texas commercial construction costs vary enormously by occupancy, a warehouse shell and a hospital wing are not comparable.",
                         "<strong>Deductible basis.</strong> A flat $50,000 and a 2% of values deductible look similar in a conversation and are wildly different in a claim. Switch the selector and watch the bottom line move.",
-                        "<strong>Code upgrade percentage.</strong> On any building older than about twenty years, this is real and frequently substantial. It is also capped by your ordinance and law limit, which is often far lower than the exposure.",
+                        "<strong>Code upgrade percentage.</strong> On any building older than about twenty years, this is real and often substantial. It is also capped by your ordinance and law limit, which is often far lower than the exposure.",
                         "<strong>Service life.</strong> Depreciation is straight-line here. Real adjusters argue effective age against condition, and a well-maintained system deserves credit for it.",
                     ]),
                 ],
@@ -414,9 +414,9 @@ TOOLS = [
                           "to limit the damage, and deduct the waiting period. Every one of those "
                           "steps is contestable and every one has a documentary answer."),
                     ("callout", "Extra expense is the lever", [
-                        ("p", "Money spent to keep operating &mdash; temporary premises, expedited "
-                              "freight, overtime, rented equipment, accelerated construction "
-                              "&mdash; is generally recoverable where it reduces the overall loss. "
+                        ("p", "Money spent to keep operating, temporary premises, expedited "
+                              "freight, overtime, rented equipment, accelerated construction"
+                              ", is generally recoverable where it reduces the overall loss. "
                               "It also demonstrates mitigation, which strengthens the rest of the "
                               "claim. Spend deliberately, and document as you go."),
                     ]),
@@ -431,7 +431,7 @@ TOOLS = [
                         ["Revenue trend", "The growth you projected would not have continued.", "Multi-year trend, booked orders, market or competitive-set benchmark data"],
                         ["Period of restoration", "The rebuild should have taken less time.", "Dated construction schedule with the cause of every variance recorded"],
                         ["Continuing expenses", "You should have furloughed or cut.", "Contractual obligations, retention rationale, and the cost of losing trained staff"],
-                        ["Saved expenses", "More was saved than you have credited.", "Departmental accounts showing what actually stopped and what did not"],
+                        ["Saved expenses", "More was saved than you have credited.", "Departmental accounts showing what stopped and what did not"],
                     ]),
                 ],
             },
@@ -441,11 +441,11 @@ TOOLS = [
              "<p>Gross profit as your accounts define it is a reasonable starting point, but the "
              "policy&rsquo;s own definition governs. Some forms use a gross earnings definition "
              "that deducts only specified costs; others use net profit plus continuing expenses. "
-             "Read the definition before you build the model &mdash; it is usually on the first "
+             "Read the definition before you build the model. It is usually on the first "
              "page of the time-element form.</p>"),
             ("Does this work for a nonprofit or a public entity?",
              "<p>Yes, with a translation. Substitute the interrupted income stream &mdash; tuition, "
-             "program fees, rentals, dining, tithes and offerings, event income &mdash; for "
+             "program fees, rentals, dining, tithes and offerings, event income, for "
              "revenue, and use the contribution margin for that activity. The arithmetic is "
              "identical; the vocabulary in the policy is what changes.</p>"),
             ("Our operation never fully closed. Is there still a claim?",
@@ -459,7 +459,7 @@ TOOLS = [
         "slug": "coinsurance-penalty-calculator",
         "nav_label": "Coinsurance Penalty Calculator",
         "card_title": "Coinsurance penalty calculator",
-        "card_blurb": ("Find out whether your limit satisfies the coinsurance clause &mdash; and "
+        "card_blurb": ("Find out whether your limit satisfies the coinsurance clause, and "
                        "what the shortfall costs on every claim, not just a total loss."),
         "title": "Coinsurance Penalty Calculator | Commercial Property",
         "description": "Calculate the coinsurance penalty on a commercial property claim. Enter your limit, the property value, the coinsurance percentage and the loss.",
@@ -468,7 +468,7 @@ TOOLS = [
         "h1_plain": "Coinsurance penalty calculator",
         "lede": ("The most expensive clause in commercial property insurance is one that almost "
                  "nobody reads. It reduces every covered loss by the ratio of the limit you bought "
-                 "to the limit you should have bought &mdash; and it applies to a small claim just "
+                 "to the limit you should have bought, and it applies to a small claim just "
                  "as ruthlessly as to a large one."),
         "calc": COINS,
         "sections": [
@@ -481,7 +481,7 @@ TOOLS = [
                           "would collapse, because most losses are partial. The coinsurance clause "
                           "exists to prevent that: carry at least the stated percentage of "
                           "replacement value, or every claim is reduced proportionally."),
-                    ("p", "Two things make it dangerous in practice. Values drift &mdash; "
+                    ("p", "Two things make it dangerous in practice. Values drift, "
                           "construction costs in Texas have moved sharply since most statements of "
                           "value were assembled, and few institutions revalue annually. And the "
                           "test is applied at the time of loss, using the value then, not the "
@@ -499,8 +499,8 @@ TOOLS = [
                         ("Agreed value endorsement",
                          "<p>Suspends the coinsurance clause for the policy term in exchange for "
                          "a signed statement of values. The cleanest solution available and "
-                         "frequently cheaper than people expect. Check your declarations &mdash; "
-                         "you may already have it and not know.</p>"),
+                         "usually cheaper than people expect. Check your declarations. "
+                         "You may already have it and not know.</p>"),
                         ("Revalue the schedule",
                          "<p>A professional valuation, or at minimum a current cost-per-square-foot "
                          "review by occupancy and construction class. Then raise the limits to "
@@ -524,11 +524,11 @@ TOOLS = [
             ("How do we know if we have a coinsurance clause?",
              "<p>Look at the declarations page next to each building&rsquo;s limit. You will "
              "normally see 80%, 90% or 100%, or the words agreed value. If a percentage is shown, "
-             "the clause is live. If the schedule says agreed value, it is suspended for the term "
-             "&mdash; but check that the signed statement of values is current, because that is "
+             "the clause is live. If the schedule says agreed value, it is suspended for the term"
+             ", but check that the signed statement of values is current, because that is "
              "the condition.</p>"),
             ("Our broker says we are fine. Should we check anyway?",
-             "<p>Yes, with numbers rather than reassurance. Construction costs in Texas have moved "
+             "<p>Yes, with numbers instead of reassurance. Construction costs in Texas have moved "
              "substantially, and a schedule that satisfied a 90% requirement four years ago may not "
              "now. The test costs ten minutes on this page and a current cost-per-square-foot "
              "figure for your construction class.</p>"),
@@ -539,7 +539,7 @@ TOOLS = [
         "nav_label": "RCV / ACV Depreciation Calculator",
         "card_title": "RCV vs ACV depreciation calculator",
         "card_blurb": ("See exactly how much of your claim is being held back as recoverable "
-                       "depreciation &mdash; and whether labor is being depreciated."),
+                       "depreciation, and whether labor is being depreciated."),
         "title": "RCV vs ACV Calculator | Recoverable Depreciation",
         "description": "Calculate actual cash value, depreciation and recoverable depreciation on a commercial insurance claim, including whether labor is being depreciated.",
         "eyebrow": "Tool &middot; Valuation",
@@ -557,8 +557,8 @@ TOOLS = [
                     ("table", "The vocabulary", ["Term", "What it means"], [
                         ["Replacement cost value (RCV)", "What it costs today to repair or replace with materials of like kind and quality, without deduction for depreciation."],
                         ["Actual cash value (ACV)", "Replacement cost less depreciation. In Texas this is commonly computed as replacement cost less depreciation, though some wording contemplates a fair-market or broad-evidence approach."],
-                        ["Recoverable depreciation", "The withheld difference, released once the work is actually completed and documented within the policy&rsquo;s time limit."],
-                        ["Non-recoverable depreciation", "Depreciation you never get back &mdash; the position on an ACV-only policy, or on roof surfacing under an actual cash value roof endorsement."],
+                        ["Recoverable depreciation", "The withheld difference, released once the work is completed and documented within the policy&rsquo;s time limit."],
+                        ["Non-recoverable depreciation", "Depreciation you never get back, the position on an ACV-only policy, or on roof surfacing under an actual cash value roof endorsement."],
                     ]),
                     ("callout", "Check for an ACV roof endorsement", [
                         ("p", "A growing number of Texas commercial policies pay roof surfacing on "
@@ -583,7 +583,7 @@ TOOLS = [
                         "Maintenance records, inspection reports and warranty status for the affected system.",
                         "Manufacturer statements on expected service life for that specific assembly in this climate.",
                         "Evidence of recent partial replacement or refurbishment, which resets effective age for those sections.",
-                        "The policy&rsquo;s valuation wording &mdash; whether it permits depreciation of labor at all is a wording question, not a software setting.",
+                        "The policy&rsquo;s valuation wording, whether it permits depreciation of labor at all is a wording question, not a software setting.",
                         "The deadline for claiming recoverable depreciation, diarised from the date of the first payment.",
                     ]),
                 ],
@@ -593,16 +593,16 @@ TOOLS = [
             ("Can insurers depreciate labor in Texas?",
              "<p>It is contested and it turns on the policy language. Estimating software will "
              "depreciate labor by default, and many adjusters never change the setting. The "
-             "argument against is straightforward &mdash; labor is consumed when performed and "
-             "does not deteriorate &mdash; and on a large claim the sums involved justify making "
+             "argument against is straightforward, labor is consumed when performed and "
+             "does not deteriorate, and on a large claim the sums involved justify making "
              "it. Where the wording is ambiguous, that ambiguity is generally construed against "
-             "the insurer, which is a question for counsel rather than for us.</p>"),
+             "the insurer, which is a question for counsel instead of for us.</p>"),
             ("How long do we have to claim recoverable depreciation?",
              "<p>Whatever the policy says, commonly 180 days or two years from the date of loss, "
              "and sometimes measured from the ACV payment instead. It is one of the most "
-             "frequently missed deadlines in commercial property insurance. Find the provision, "
+             "often missed deadlines in commercial property insurance. Find the provision, "
              "write the date in a calendar, and ask for an extension in writing if the rebuild is "
-             "going to run past it &mdash; carriers routinely grant them and rarely volunteer them.</p>"),
+             "going to run past it &mdash; carriers regularly grant them and rarely volunteer them.</p>"),
             ("Is a condition adjustment a real thing or are we inventing it?",
              "<p>It is real and standard practice. Adjusters assess effective age rather than "
              "chronological age precisely because maintenance matters. What makes it persuasive is "
@@ -624,7 +624,7 @@ TOOLS = [
         "h1": "Cabinet repair<br>versus <em>replace</em>",
         "h1_plain": "Cabinet repair vs replace calculator",
         "lede": ("The argument is rarely about the unit costs. It is about how many boxes are "
-                 "genuinely repairable and whether the ones that are not can be matched &mdash; "
+                 "repairable and whether the ones that are not can be matched, "
                  "and those two inputs move the answer far more than any price does."),
         "calc": CABINET,
         "sections": [
@@ -637,7 +637,7 @@ TOOLS = [
                           "moisture measured at the toe kick and base, swelling measured rather "
                           "than described, joint integrity tested. Particleboard and MDF that "
                           "have swollen do not come back; plywood boxes with solid face frames "
-                          "frequently do."),
+                          "commonly do."),
                     ("p", "Profile availability is a documentary finding. If the line has been "
                           "discontinued, new boxes cannot be blended into a run that has to read "
                           "as one installation, and the replacement scope extends to the whole "
@@ -667,7 +667,7 @@ TOOLS = [
                         ["Profile availability", "Binary. Discontinued converts a partial scope into a full one"],
                         ["Countertop reuse", "Tops rarely survive box removal; assume replacement wherever boxes come out"],
                         ["Finish uniformity", "Refinished and new boxes age differently, which is a real defect in a single run"],
-                        ["Run definition", "What counts as one continuous installation is frequently the actual dispute"],
+                        ["Run definition", "What counts as one continuous installation is often the actual dispute"],
                      ]),
                 ],
             },
@@ -679,7 +679,7 @@ TOOLS = [
              "and run definition. Laboratory and healthcare casework adds a chemical-resistance "
              "or cleanability specification that constrains what a repair is allowed to be.</p>"),
             ("How do we establish the repairable count?",
-             "<p>From an assessment rather than a walkthrough: substrate identified at a cut "
+             "<p>From an assessment instead of a walkthrough: substrate identified at a cut "
              "edge, moisture readings recorded by location with the meter and scale noted, "
              "swelling measured at affected and unaffected points, joints and hardware tested. "
              "A number entered from an impression is exactly the input the other side will "
@@ -722,7 +722,7 @@ TOOLS = [
                           "catastrophe, and with how difficult the building is to work on. An "
                           "occupied hospital roof with limited crane access and night-only work is "
                           "not the same job as an empty warehouse, and the estimate should say so "
-                          "in the access line rather than hiding it in the unit price."),
+                          "in the access line instead of hiding it in the unit price."),
                 ],
             },
             {
@@ -744,11 +744,11 @@ TOOLS = [
              "<p>The test is whether repair restores the roof to its pre-loss condition and service "
              "life. Scattered punctures on a young membrane can be repaired. Widespread impact "
              "damage to insulation beneath a membrane cannot be patched back to a warrantable "
-             "system, and manufacturers will frequently say so in writing &mdash; which is the "
+             "system, and manufacturers will often say so in writing, which is the "
              "document that settles the argument.</p>"),
             ("Why does overhead and profit matter so much on a roof claim?",
              "<p>Because it is 20% of a large number and it is removed silently. The usual carrier "
-             "position is that O&amp;P is owed only when a general contractor is actually engaged. "
+             "position is that O&amp;P is owed only when a general contractor is engaged. "
              "The more common standard is whether one is reasonably likely to be needed, and the "
              "rule of thumb is three or more trades. A commercial re-roof almost always clears "
              "that.</p>"),
@@ -773,7 +773,7 @@ TOOLS = [
         "h1_plain": "Overhead, profit and general conditions calculator",
         "lede": ("After scope, markups are the single most disputed part of a commercial repair "
                  "estimate. This lays out the conventional treatment line by line so the "
-                 "argument is about the assumptions rather than about the total."),
+                 "argument is about the assumptions instead of about the total."),
         "calc": OANDP,
         "sections": [
             {
@@ -782,13 +782,13 @@ TOOLS = [
                 "blocks": [
                     ("p", "Overhead and profit compensate a general contractor for running a job: "
                           "coordinating subcontractors, carrying risk, supervising a schedule. "
-                          "The question is not whether a GC was hired &mdash; it is whether one "
+                          "The question is not whether a GC was hired, it is whether one "
                           "was reasonably required by the nature of the work."),
                     ("p", "The convention that has grown up around that question is the "
                           "three-trade threshold: where a repair involves three or more trades "
                           "needing coordination, a general contractor is normally considered "
                           "reasonably necessary, and O&amp;P follows. It is a rule of thumb "
-                          "rather than a legal standard, and it is a reasonable place for both "
+                          "instead of a legal standard, and it is a reasonable place for both "
                           "sides to start."),
                     ("p", "What makes the argument tractable is counting the trades honestly on "
                           "the actual scope and saying so. A commercial re-roof that involves "
@@ -809,7 +809,7 @@ TOOLS = [
                          "Conventionally 10%; a matter of market rather than entitlement"],
                         ["Bond",
                          "Payment and performance security, common and often mandatory on public work.",
-                         "A real, quotable cost &mdash; obtain the rate rather than estimating it"],
+                         "A real, quotable cost, obtain the rate instead of estimating it"],
                      ]),
                 ],
             },
@@ -818,21 +818,21 @@ TOOLS = [
                 "eyebrow": "General conditions",
                 "h2": "The line that moves with the schedule.",
                 "blocks": [
-                    ("p", "General conditions are frequently entered as a flat percentage and "
+                    ("p", "General conditions are usually entered as a flat percentage and "
                           "then defended as though the percentage were the cost. They are not. "
                           "Supervision, temporary power, weather protection, site security and "
                           "logistics accrue per week, which means a disputed construction "
                           "schedule moves this line and the business-interruption claim at the "
                           "same time and in the same direction."),
                     ("p", "That connection is worth making explicit on any large file. If one "
-                          "party argues the rebuild should have taken five months rather than "
+                          "party argues the rebuild should have taken five months instead of "
                           "nine, they are arguing down the time-element loss and the general "
-                          "conditions together &mdash; and a schedule that documents the cause "
+                          "conditions together, and a schedule that documents the cause "
                           "of each delay answers both at once."),
                     ("checks", [
                         "Build general conditions from a staffing and duration schedule, not from a percentage, on any job over a few months.",
                         "Identify which costs are time-dependent and which are fixed, so a change in duration can be priced rather than argued.",
-                        "Price occupied-building constraints explicitly &mdash; phasing, night work, protection, infection control &mdash; rather than burying them in unit costs.",
+                        "Price occupied-building constraints explicitly (phasing, night work, protection, infection control) instead of burying them in unit costs.",
                         "Obtain an actual bond rate where bonding is required; it is quotable and it is not a percentage guess.",
                         "State the trade count on the face of the estimate. It is the fact the O&amp;P argument turns on.",
                     ]),
@@ -847,17 +847,17 @@ TOOLS = [
              "whether a general contractor is reasonably required at all, and whether general "
              "conditions have been built up properly or assumed.</p>"),
             ("Should O&amp;P be paid if the owner self-performs or acts as their own GC?",
-             "<p>It is a genuine question rather than an obvious one, and it turns on the policy "
+             "<p>It is a genuine question instead of an obvious one, and it turns on the policy "
              "wording and on what the work actually required. The common position is that the "
              "measure is the reasonable cost to repair, which contemplates the contractor a "
-             "prudent owner would engage &mdash; not a discount for the owner&rsquo;s own "
+             "prudent owner would engage, not a discount for the owner&rsquo;s own "
              "labor. The opposing position is that unincurred cost is not a loss. Both are "
              "arguable; the scope and the wording decide it.</p>"),
             ("Does the occupied-building premium belong in the claim?",
              "<p>Where the building has to stay in use during the repair, and that constraint "
-             "genuinely increases the cost of the work, yes &mdash; it is part of the reasonable "
+             "increases the cost of the work, yes. It is part of the reasonable "
              "cost to repair that property. What it needs is documentation: the phasing plan, "
-             "the hours restriction, the protection and containment actually required. Entered "
+             "the hours restriction, the protection and containment required. Entered "
              "as a bare percentage it invites a bare percentage in reply.</p>"),
         ],
     },

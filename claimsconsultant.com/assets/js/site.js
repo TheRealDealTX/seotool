@@ -157,7 +157,7 @@
       ' insured value, your retention is ' + money(deductible) +
       ' before a dollar is paid. Named-storm deductibles are applied per occurrence, and on multi-building schedules the wording decides whether that is once or once per structure. It is worth reading before the next storm, not after.');
     flag(f, 'codeflag', code > 0 && codeLoss > 0,
-      '<b>Ordinance or law.</b> ' + money(codeLoss) + ' of this figure is code-upgrade cost. It is payable only to the extent Coverage B/C limits exist, and those limits are frequently a small percentage of the building limit rather than a full replacement guarantee.');
+      '<b>Ordinance or law.</b> ' + money(codeLoss) + ' of this figure is code-upgrade cost. It is payable only to the extent Coverage B/C limits exist, and those limits are often a small percentage of the building limit rather than a full replacement guarantee.');
   };
 
   /* 2. Business interruption ------------------------------------------ */
@@ -225,7 +225,7 @@
 
     flag(f, 'penalized', shortfall > 0 && loss > 0,
       '<b>You are underinsured by ' + money(shortfall) + '.</b> The coinsurance clause reduces every covered loss by the same ratio, so this penalty applies to a $10,000 claim and a total loss alike — ' + money(penalty) +
-      ' of this loss is uninsured before the deductible is even taken. Where the valuation behind the limit is stale, that ratio is frequently negotiable on the value side.');
+      ' of this loss is uninsured before the deductible is even taken. Where the valuation behind the limit is stale, that ratio is commonly negotiable on the value side.');
     flag(f, 'clean', shortfall <= 0 && loss > 0,
       '<b>No coinsurance penalty.</b> The limit carried meets or exceeds the required amount, so the loss is payable in full subject to the deductible and policy limits.');
   };
@@ -261,7 +261,7 @@
 
     flag(f, 'labordep', labor && rcv > 0,
       '<b>Labor is being depreciated.</b> ' + money(rcv * laborShare * rate) +
-      ' of the withholding is depreciation taken on labor rather than materials. Texas policies vary on whether that is permitted, and the answer usually sits in the valuation wording rather than the estimate. It is one of the first line items worth challenging.');
+      ' of the withholding is depreciation taken on labor instead of materials. Texas policies vary on whether that is permitted, and the answer usually sits in the valuation wording instead of the estimate. It is one of the first line items worth challenging.');
     flag(f, 'bigholdback', holdback > 0 && rcv > 0 && (holdback / Math.max(rcv, 1)) > 0.35,
       '<b>Recoverable depreciation is ' + pct((holdback / rcv) * 100, 0) + ' of the claim.</b> That sum is payable only after the work is completed and documented, and most policies put a clock on it — commonly 180 days or two years from the loss. Track the deadline from day one.');
   };
@@ -315,12 +315,12 @@
       '<b>The partial path costs ' + pct(ratio, 0) + ' of full replacement.</b> Once a repair '
       + 'scope passes roughly 70% of the replacement cost, replacement is usually the better '
       + 'outcome for everyone: one trade mobilization, a uniform finish and a warranty on the '
-      + 'whole run. Worth stating explicitly rather than defending a marginal saving.');
+      + 'whole run. Worth stating explicitly instead of defending a marginal saving.');
     flag(f, 'worthit', matching && full > 0 && ratio > 0 && ratio < 70,
       '<b>Partial repair saves ' + money(saving) + '</b> against full replacement, at '
-      + pct(ratio, 0) + ' of the cost. That is a defensible repair scope &mdash; provided the '
-      + repairable + ' boxes called repairable actually are, which is a substrate and moisture '
-      + 'question rather than a visual one.');
+      + pct(ratio, 0) + ' of the cost. That is a defensible repair scope, provided the '
+      + repairable + ' boxes called repairable are, which is a substrate and moisture '
+      + 'question instead of a visual one.');
   };
 
   /* 6. Commercial roof replacement estimator -------------------------- */
@@ -364,7 +364,7 @@
     put(f, 'persf', money2(perSf));
 
     flag(f, 'op', total > 0,
-      '<b>Overhead and profit is included at 20%.</b> A re-roof of this size involves three or more trades, which is the standard test for whether a general contractor is reasonably required. Carriers routinely strip O&amp;P from the first estimate on commercial roofs; on a ' + money(base) + ' scope that removal is worth ' + money(oandp) + '.');
+      '<b>Overhead and profit is included at 20%.</b> A re-roof of this size involves three or more trades, which is the standard test for whether a general contractor is reasonably required. Carriers regularly strip O&amp;P from the first estimate on commercial roofs; on a ' + money(base) + ' scope that removal is worth ' + money(oandp) + '.');
   };
 
   /* 7. Overhead, profit and general conditions ------------------------- */
@@ -461,13 +461,13 @@
 
   /* ------------------------------------------------------- contact form
      Static hosting: the form posts nowhere by default. Until a handler is
-     wired in, hand the inquiry to the visitor's mail client rather than
+     wired in, hand the inquiry to the visitor's mail client instead of
      dropping it silently. */
   var cf = $('form[data-contact]');
   if (cf && !cf.getAttribute('action')) {
     cf.addEventListener('submit', function (e) {
       e.preventDefault();
-      var get = function (n) { var el = $('[name="' + n + '"]', cf); return el ? el.value.trim() : ''; };
+      var get = function (n) { var el = $('[name="' + n + '"]', cf); return el ? el.value.trim(): ''; };
       var body = [
         'Organization: ' + get('org'),
         'Contact: ' + get('name'),
