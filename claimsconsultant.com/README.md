@@ -116,7 +116,7 @@ loss, not services.
 | Business interruption calculator | Gross earnings, continuing expenses, waiting period, extra expense |
 | Coinsurance penalty calculator | Required limit, recovery ratio, penalty, net |
 | RCV vs ACV depreciation calculator | Effective age, depreciable base, ACV, recoverable depreciation |
-| Texas claim deadline calculator | Ch. 542 acknowledgement / accept-reject / payment, 542A pre-suit, limitation |
+| Cabinet repair vs replace | Refinish vs replacement across a run, with the discontinued-profile effect on scope |
 | Commercial roof replacement estimator | By system, with tear-off, insulation, deck, flashing, curbs, O&P |
 | Overhead, profit & general conditions | O&P, general conditions, occupied-building premium, bond, and the three-trade test |
 
@@ -176,6 +176,12 @@ conventions, the FEMA duplication-of-benefits point and the storm references
 are all real and checkable. Where a question is legal rather than technical,
 the copy says so and recommends counsel — deliberately, and it should stay
 that way.
+
+**No statutory claim deadlines.** Chapter 542 and 542A govern insurer conduct and
+are policyholder leverage; quoting them signals a side and is counsel's
+territory, not a damage expert's. They were stripped deliberately — the hero
+panel, a calculator and an article were all built on them and were all
+replaced. Don't reintroduce them.
 
 The copy never assumes the reader is the policyholder. Tables that set out
 competing positions give both, and the claim throughout is that the analysis

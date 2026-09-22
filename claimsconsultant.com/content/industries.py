@@ -6,7 +6,7 @@ FEMA obligation running alongside its insurance, a church usually finds out too
 late that its steeple was scheduled at a number set in 2011.
 """
 
-from siteconfig import BIZ, STATUTE, FEES
+from siteconfig import BIZ, STANDARDS, FEES
 
 P = BIZ["phone_display"]
 
@@ -238,19 +238,18 @@ INDUSTRIES = [
                           "risk pool rather than a traditional insurance policy. That distinction "
                           "is not academic. A pool operates under an interlocal participation "
                           "agreement, and the statutory machinery that governs insurers &mdash; the "
-                          "prompt-payment deadlines in chapter 542, the remedies in chapter 542A, "
-                          "the unfair-settlement provisions &mdash; may not apply to it in the same "
-                          "way it applies to a carrier."),
-                    ("p", "What that changes is strategy, not effort. Against a pool, the leverage "
-                          "is documentary and procedural: the coverage document&rsquo;s own appeal "
-                          "process, the board of trustees of the pool, the quality of your proof of "
-                          "loss, and the fact that pool members are also pool owners. Against a "
-                          "carrier, the statutory clock is a real instrument and we use it. The "
-                          "mistake is running the second playbook against the first opponent."),
+                          "statutory machinery aimed at insurers may not apply to it in the same way."),
+                    ("p", "What that changes is procedure, not the technical work. A pool coverage "
+                          "document has its own appeal process, its own valuation provisions and "
+                          "its own definitions, and it is answerable to a board of trustees whose "
+                          "members are also the pool&rsquo;s owners. An insurance policy answers "
+                          "to a different set of rules. Which one applies is worth establishing "
+                          "in week one, because the documentation that persuades each is "
+                          "assembled differently."),
                     ("p", "We work out which one you have on day one, from the coverage document "
                           "itself rather than from what the broker calls it."),
-                    ("html", '<a class="tlink" href="/tools/texas-claim-deadline-calculator/">'
-                             'Date the statutory clock <span class="arw">&rarr;</span></a>'),
+                    ("html", '<a class="tlink" href="/services/causation-determinations/">'
+                             'How causation gets established <span class="arw">&rarr;</span></a>'),
                 ],
                 "aside": [
                     ("callout", "Ask your broker for three things", [
@@ -541,10 +540,9 @@ INDUSTRIES = [
              "generally not an eligible public assistance cost, so the engagement should be "
              "structured with that in mind from the start.</p>"),
             ("Our coverage is through a risk pool, not an insurance company. Does that change things?",
-             "<p>It changes the rulebook and the pressure points. A pool operates under an "
-             "interlocal participation agreement rather than an insurance policy, so the "
-             "prompt-payment deadlines and bad-faith remedies in the Insurance Code may not apply "
-             "in the usual way. The scope disputes, though, are identical &mdash; roof age, "
+             "<p>It changes the rulebook. A pool operates under an interlocal participation "
+             "agreement rather than an insurance policy, so the remedies that apply to an "
+             "insurer may not reach it. The technical questions, though, are identical &mdash; roof age, "
              "repairability, matching, code upgrade, depreciation, overhead and profit &mdash; and "
              "those are won with documentation and with the pool&rsquo;s own appeal mechanism.</p>"),
             ("How quickly can you mobilise after a declared event?",

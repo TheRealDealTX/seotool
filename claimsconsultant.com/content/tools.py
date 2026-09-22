@@ -192,27 +192,42 @@ DEPREC = _calc(
     "arrives.",
     ("labordep", "bigholdback"))
 
-# ------------------------------------------------------------- 5. deadline
-DEADLINE = _calc(
-    "deadline", "Texas claim deadline calculator",
-    (_f("Date of loss", "loss", "", "The date the damage occurred.", kind="date", step="")
-     + _f("Date written notice was given", "notice", "", "Leave blank to use the date of loss.", kind="date", step="")
-     + _f("Date you supplied everything the carrier requested", "items", "",
-          "Starts the accept-or-reject clock. Leave blank to use the notice date.", kind="date", step="")
-     + _f("Suit limitation in your policy", "suit", "2", "Years. Check the wording — some are shorter.", suffix="yrs")),
-    "Days since the date of loss", "elapsed",
-    "Statutory and policy deadlines calculated from the dates you entered.",
-    (_row("Carrier must acknowledge the claim by", "ack")
-     + _row("Carrier must accept or reject by", "decide")
-     + _row("Payment due by, if accepted", "pay")
-     + _row("Earliest suit date if notice given today (61 days)", "presuit")
-     + _row("Policy suit limitation expires", "suit")
-     + _row("Days remaining", "left", "outrow--total")),
-    "Business days exclude weekends but not public holidays, so treat the accept-or-reject and "
-    "payment dates as the earliest possible. Deadlines under chapter 542 apply to insurers; an "
-    "interlocal risk pool may be governed by its own document instead. Confirm any limitation date "
-    "with counsel before relying on it.",
-    ("urgent", "expired"))
+# -------------------------------------------------------------- 5. cabinets
+CABINET = _calc(
+    "cabinet", "cabinet repair versus replace calculator",
+    (_f("Cabinet boxes in the run", "total", "34", "Total boxes in the continuous installation.", suffix="boxes")
+     + '<div class="field-row field-row--2">'
+     + _f("Boxes affected", "damaged", "19", "Showing moisture, swelling or finish damage.", suffix="boxes")
+     + _f("Assessed repairable", "repairable", "8", "Sound substrate, intact joints.", suffix="boxes")
+     + "</div>"
+     + '<div class="field-row field-row--2">'
+     + _f("Refinish cost per box", "refinish", "185", "Clean, seal and refinish in place.", prefix="$")
+     + _f("Replacement cost per box", "replace", "640", "Installed, including demolition.", prefix="$")
+     + "</div>"
+     + '<div class="field-row field-row--2">'
+     + _f("Countertop replacement", "tops", "4200", "Tops rarely survive box removal.", prefix="$")
+     + _f("Door profile still available?", "matching", "no", "",
+          options=[("yes", "Yes — matching boxes can be sourced"),
+                   ("no", "No — line or profile discontinued")])
+     + "</div>"),
+    "Indicated scope cost", "partial",
+    "The partial-repair path: refinishing what is sound, replacing what is not.",
+    (_row("Boxes affected", "damaged")
+     + _row("Repairable", "repairable")
+     + _row("Actually refinished", "refinished")
+     + _row("Not repairable", "notrepairable")
+     + _row("Boxes in the replacement scope", "partialboxes")
+     + _row("Refinishing", "partialrefinish")
+     + _row("Replacement boxes", "partialreplace")
+     + _row("Countertops", "partialtops")
+     + _row("Partial path total", "partial")
+     + _row("Full replacement", "full")
+     + _row("Partial as a share of full", "ratio")
+     + _row("Saving against full replacement", "saving", "outrow--total")),
+    "Repairability is a substrate and moisture finding, not a visual one: particleboard and MDF "
+    "do not recover from sustained wetting, and plywood boxes with solid face frames often do. "
+    "Enter the repairable count from an actual assessment rather than an impression.",
+    ("nomatch", "threshold", "worthit"))
 
 # ----------------------------------------------------------------- 6. roof
 ROOF = _calc(
@@ -596,79 +611,84 @@ TOOLS = [
         ],
     },
     {
-        "slug": "texas-claim-deadline-calculator",
-        "nav_label": "Texas Claim Deadline Calculator",
-        "card_title": "Texas claim deadline calculator",
-        "card_blurb": ("Date the statutory clock on a Texas claim: acknowledgement, "
-                       "accept-or-reject, payment, pre-suit notice and the limitation period."),
-        "title": "Texas Claim Deadline Calculator | Chapter 542",
-        "description": "Calculate Texas insurance claim deadlines: the 15-day acknowledgement, 15 business day accept-or-reject, 5 business day payment and the suit limitation.",
-        "eyebrow": "Tool &middot; Statutory clock",
-        "h1": "Texas claim<br><em>deadline</em> calculator",
-        "h1_plain": "Texas claim deadline calculator",
-        "lede": ("Chapter 542 of the Texas Insurance Code puts deadlines on insurers, and chapter "
-                 "542A puts a notice requirement on you. Enter three dates and see where your "
-                 "claim actually sits."),
-        "calc": DEADLINE,
+        "slug": "cabinet-repair-vs-replace-calculator",
+        "nav_label": "Cabinet Repair vs Replace",
+        "card_title": "Cabinet repair vs replace calculator",
+        "card_blurb": ("Compare refinishing against replacement across a run, including what a "
+                       "discontinued door profile does to the scope."),
+        "title": "Cabinet Repair vs Replace Calculator | Casework Scope",
+        "description": ("Compare partial cabinet repair against full replacement: refinishing, "
+                        "replacement boxes, countertops, and the effect of a discontinued door "
+                        "profile on the scope."),
+        "eyebrow": "Tool &middot; Casework",
+        "h1": "Cabinet repair<br>versus <em>replace</em>",
+        "h1_plain": "Cabinet repair vs replace calculator",
+        "lede": ("The argument is rarely about the unit costs. It is about how many boxes are "
+                 "genuinely repairable and whether the ones that are not can be matched &mdash; "
+                 "and those two inputs move the answer far more than any price does."),
+        "calc": CABINET,
         "sections": [
             {
-                "eyebrow": "The statute",
-                "h2": "What the prompt payment provisions require.",
+                "eyebrow": "The two inputs that matter",
+                "h2": "Repairable count and profile availability.",
                 "blocks": [
-                    ("p", "Subchapter B of chapter 542 &mdash; the Prompt Payment of Claims Act "
-                          "&mdash; sets out a sequence. On receiving written notice of a claim the "
-                          "insurer must acknowledge it, commence an investigation and request the "
-                          "items it reasonably requires, generally within 15 days. Once it has "
-                          "what it asked for, it must notify you in writing whether the claim is "
-                          "accepted or rejected, generally within 15 business days. If accepted, "
-                          "payment is due within 5 business days of that notice."),
-                    ("p", "Missing those deadlines exposes an insurer to statutory interest on the "
-                          "amount of the claim plus reasonable attorney&rsquo;s fees. The rate and "
-                          "its calculation differ depending on when the claim arose and whether it "
-                          "falls under chapter 542A, which covers claims arising from forces of "
-                          "nature such as wind, hail and rain. That is a question for a lawyer, "
-                          "and it is one worth asking."),
-                    ("callout", "Chapter 542A pre-suit notice", [
-                        ("p", "For most weather-related claims, a claimant must give the insurer "
-                              "written notice at least 61 days before filing suit, stating the "
-                              "acts complained of, the amount alleged to be owed and the "
-                              "attorney&rsquo;s fees incurred. The insurer may then demand an "
-                              "inspection. Get this wrong and the consequences reach attorney&rsquo;s "
-                              "fees and, in some circumstances, abatement of the suit."),
-                    ]),
+                    ("p", "Everything else in this calculation is arithmetic. The repairable "
+                          "count is a physical finding: substrate identified at a cut edge, "
+                          "moisture measured at the toe kick and base, swelling measured rather "
+                          "than described, joint integrity tested. Particleboard and MDF that "
+                          "have swollen do not come back; plywood boxes with solid face frames "
+                          "frequently do."),
+                    ("p", "Profile availability is a documentary finding. If the line has been "
+                          "discontinued, new boxes cannot be blended into a run that has to read "
+                          "as one installation, and the replacement scope extends to the whole "
+                          "run rather than to the failed boxes. That is the matching argument, "
+                          "and it turns on manufacturer correspondence and supplier quotes "
+                          "rather than on anyone&rsquo;s opinion."),
+                    ("html", '<a class="tlink" href="/services/cabinet-repairability-reports/">'
+                             'How a repairability report is built <span class="arw">&rarr;</span></a>'),
                 ],
             },
             {
-                "band": "ink",
-                "eyebrow": "Caveats",
-                "h2": "Three reasons not to rely on this page alone.",
+                "band": "paper2",
+                "eyebrow": "The threshold",
+                "h2": "When partial repair stops making sense.",
                 "blocks": [
-                    ("checks", [
-                        "<strong>Business days are approximated.</strong> The calculator excludes weekends but not public holidays, so treat the accept-or-reject and payment dates as the earliest possible.",
-                        "<strong>Risk pools may not be covered.</strong> If your coverage is through an interlocal risk pool rather than an insurer, chapter 542 may not apply in the same way. The coverage document&rsquo;s own procedures govern.",
-                        "<strong>Limitation periods are legal questions.</strong> Policy wording, when the cause of action accrued, tolling and chapter 542A all affect the real deadline. Confirm it with counsel before relying on any date shown here.",
-                    ]),
+                    ("p", "There is a point where a partial scope costs so close to full "
+                          "replacement that it is the worse outcome for both parties. One "
+                          "mobilization instead of two, a uniform finish across the whole run, "
+                          "and a warranty on all of it, against a marginal saving and a visible "
+                          "line between old and new casework."),
+                    ("p", "Around 70% of replacement cost is a reasonable place to have that "
+                          "conversation. It is a rule of thumb rather than a standard, and it is "
+                          "a great deal more productive than arguing box by box."),
+                    ("table", "What moves the answer",
+                     ["Input", "Effect"], [
+                        ["Substrate type", "Decides the repairable count, which is the dominant variable"],
+                        ["Profile availability", "Binary. Discontinued converts a partial scope into a full one"],
+                        ["Countertop reuse", "Tops rarely survive box removal; assume replacement wherever boxes come out"],
+                        ["Finish uniformity", "Refinished and new boxes age differently, which is a real defect in a single run"],
+                        ["Run definition", "What counts as one continuous installation is frequently the actual dispute"],
+                     ]),
                 ],
             },
         ],
         "faqs": [
-            ("When does the clock actually start?",
-             "<p>On written notice of the claim, not on the date of the damage. That is why the "
-             "calculator asks for both. Giving clear written notice, keeping proof of when it was "
-             "sent, and responding promptly to the carrier&rsquo;s requests for information are "
-             "the three things that keep the statutory timeline working for you rather than "
-             "against you.</p>"),
-            ("The carrier keeps asking for more documents. Does that reset the deadline?",
-             "<p>It can extend the practical timeline, because the accept-or-reject clock runs from "
-             "when the insurer receives all items it reasonably requested. Repeated, escalating or "
-             "unreasonable requests are a recognized delay tactic. The answer is to respond fully "
-             "and in writing, log every request and every response with dates, and create a record "
-             "that shows when the carrier actually had everything it needed.</p>"),
-            ("We are past a deadline. Is the claim dead?",
-             "<p>Not necessarily, and do not assume it is. Notice requirements, limitation periods "
-             "and prejudice all interact, and the outcome depends on facts. What is certain is that "
-             "delay never improves the position. If a date on this page has passed, that is a "
-             "reason to speak to a lawyer this week.</p>"),
+            ("Does this apply to vanities and commercial millwork?",
+             "<p>Yes, with the same logic. Reception and nurse-station millwork, laboratory "
+             "casework, library shelving and church built-ins all turn on substrate, matching "
+             "and run definition. Laboratory and healthcare casework adds a chemical-resistance "
+             "or cleanability specification that constrains what a repair is allowed to be.</p>"),
+            ("How do we establish the repairable count?",
+             "<p>From an assessment rather than a walkthrough: substrate identified at a cut "
+             "edge, moisture readings recorded by location with the meter and scale noted, "
+             "swelling measured at affected and unaffected points, joints and hardware tested. "
+             "A number entered from an impression is exactly the input the other side will "
+             "attack, and correctly.</p>"),
+            ("What if the run has already been demolished?",
+             "<p>Then the assessment works from photographs, retained components and the "
+             "contractor&rsquo;s documentation, and the resulting opinion is qualified "
+             "accordingly. This is a one-day exercise before demolition that becomes very hard "
+             "a week later.</p>"),
         ],
     },
     {

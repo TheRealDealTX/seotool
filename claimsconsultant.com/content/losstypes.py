@@ -4,7 +4,7 @@ These are causes of loss rather than services: what happened to the building.
 What we are retained to do about it lives in content/services.py.
 """
 
-from siteconfig import BIZ, STATUTE, FEES
+from siteconfig import BIZ, STANDARDS, FEES
 
 P = BIZ["phone_display"]
 
@@ -144,8 +144,8 @@ LOSS_TYPES = [
             ("Can you work with our attorney?",
              "<p>Routinely, and it is often the right structure. Counsel handles coverage, statutory "
              "remedies and litigation; we handle scope, valuation and the evidentiary record. On "
-             "weather claims subject to chapter 542A the pre-suit notice and inspection mechanics "
-             "make that division of labor particularly useful.</p>"),
+             "weather claims the pre-suit notice and inspection mechanics make that division of "
+             "labor particularly useful.</p>"),
         ],
     },
 
@@ -247,10 +247,10 @@ LOSS_TYPES = [
             ("How long after a hurricane can we still file?",
              "<p>Policies contain their own notice requirements &mdash; usually prompt notice, "
              "sometimes a specific number of days &mdash; and Texas weather claims are separately "
-             "affected by the suit limitation in the policy and the framework in chapter 542A. "
-             "Late notice is a defense carriers raise often and win with sometimes, generally "
-             "where they can show prejudice. If you are outside the obvious window, that is a "
-             "reason to move quickly, not a reason to give up.</p>"),
+             "affected by the suit limitation in the policy. Late notice is a defense insurers "
+             "raise often and win with sometimes, generally where they can show prejudice, and "
+             "it is a question for counsel. What is certain is that evidence does not improve "
+             "with age.</p>"),
             ("We already got a payment right after the storm. Can the claim be reopened?",
              "<p>Usually yes, as a supplemental claim, provided you have not signed a full and "
              "final release and the policy&rsquo;s time limits have not run. Early post-storm "
@@ -352,9 +352,9 @@ LOSS_TYPES = [
              "<p>Two separate clocks run. The policy requires prompt notice, and some forms now "
              "state a specific reporting window for weather losses. Separately, the policy&rsquo;s "
              "suit limitation &mdash; commonly two years in Texas, and governed for many weather "
-             "claims by chapter 542A &mdash; caps how long you have to sue. Delay is also an "
-             "evidentiary problem: the longer you wait, the easier the carrier&rsquo;s "
-             "intervening-storm argument becomes.</p>"),
+             "caps how long there is to sue, and that is a question for counsel. Delay is also an "
+             "evidentiary problem: the longer the wait, the easier the intervening-storm "
+             "argument becomes.</p>"),
             ("Can you tell whether we have a claim before we report it?",
              "<p>That is usually the right sequence on a commercial roof. A pre-notice inspection "
              "&mdash; roof survey, test cuts where appropriate, storm data for the address &mdash; "

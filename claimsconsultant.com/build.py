@@ -15,7 +15,7 @@ import re
 import shutil
 from datetime import date
 
-from siteconfig import (BIZ, STATUTE, FEES, NAV, FOOTER_SERVING, TODAY, YEAR,
+from siteconfig import (BIZ, STANDARDS, FEES, NAV, FOOTER_SERVING, TODAY, YEAR,
                         license_line)
 
 from content.industries import INDUSTRIES
@@ -111,7 +111,7 @@ def org_node():
             "claims consulting", "property damage assessment", "commercial property claims",
             "construction cost estimating", "insurance appraisal", "expert witness",
             "business interruption", "hail and windstorm damage",
-            "ordinance and law coverage", "Texas Insurance Code chapter 542",
+            "ordinance and law coverage", "damage causation", "contents valuation",
         ],
         "openingHours": BIZ["hours"],
         "sameAs": [],
@@ -502,7 +502,7 @@ def footer():
       the engagement letter, and we never act for both parties to the same loss. We are not a
       law firm and do not provide legal advice. Calculators,
       timelines and figures published on this site are planning aids built from published
-      statutory deadlines and industry cost conventions. They are not appraisals, not coverage
+      industry cost conventions and published standards. They are not appraisals, not coverage
       opinions, and not a substitute for reading the policy. Coverage is determined by the policy
       or coverage document in force at the date of loss. Serving {FOOTER_SERVING}.
     </p>
@@ -838,18 +838,19 @@ def homepage():
       </div>
       <div>
         <div class="ledger">
-          <div class="ledger-head"><b>Texas claim clock</b><span>Ch. 542</span></div>
+          <div class="ledger-head"><b>Evidence half-life</b><span>Typical</span></div>
           <dl style="margin:0;">
-            <div class="ledger-row"><dt>Insurer must acknowledge the claim</dt><dd>15 days</dd></div>
-            <div class="ledger-row"><dt>Accept or reject, once it has what it asked for</dt><dd>15 bus. days</dd></div>
-            <div class="ledger-row"><dt>Pay, after notice of acceptance</dt><dd>5 bus. days</dd></div>
-            <div class="ledger-row"><dt>Pre-suit notice on weather losses (ch. 542A)</dt><dd>61 days</dd></div>
-            <div class="ledger-row"><dt>Typical suit limitation in Texas policies</dt><dd>2 years</dd></div>
-            <div class="ledger-row"><dt>Appraisal panel: signatures that bind</dt><dd>2 of 3</dd></div>
+            <div class="ledger-row"><dt>High-water marks, before cleaning</dt><dd>2&ndash;5 days</dd></div>
+            <div class="ledger-row"><dt>The failed pipe, before the plumber discards it</dt><dd>Hours</dd></div>
+            <div class="ledger-row"><dt>Building management system logs</dt><dd>30&ndash;90 days</dd></div>
+            <div class="ledger-row"><dt>Contents, before disposal</dt><dd>Days</dd></div>
+            <div class="ledger-row"><dt>Cabinet substrate, before demolition</dt><dd>Days</dd></div>
+            <div class="ledger-row"><dt>Roof test cuts, before the re-roof</dt><dd>Until repair</dd></div>
           </dl>
-          <div class="ledger-foot">Deadlines run from written notice, not from the day the damage
-            happened. Most large files lose months in the first two weeks, before anyone has read
-            the policy. <a href="/tools/texas-claim-deadline-calculator/">Date a claim &rarr;</a></div>
+          <div class="ledger-foot">Every one of these settles an argument, and every one is gone
+            within weeks of the loss. It is the reason an early inspection is worth more than a
+            late opinion &mdash; whichever side is asking.
+            <a href="/blog/first-72-hours-after-a-commercial-property-loss/">The first 72 hours &rarr;</a></div>
         </div>
       </div>
     </div>
@@ -895,7 +896,7 @@ def homepage():
     </div>
     <div class="stats stats--4 mt-l">
       <div class="stat"><span class="sv">0%</span><span class="sl">Contingency on expert and consulting work. The opinion does not move with the outcome, which is the first question on cross and the reason either side can rely on it.</span></div>
-      <div class="stat"><span class="sv">{STATUTE['ack_days']}</span><span class="sl">Days a Texas insurer has to acknowledge a claim and begin its investigation once written notice is given.</span></div>
+      <div class="stat"><span class="sv">702</span><span class="sl">The evidence rule an opinion has to satisfy. Reliability is a question about method, which is why ours is written down before the conclusion is.</span></div>
       <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel &mdash; two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
       <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>
     </div>
@@ -977,8 +978,8 @@ def homepage():
           <ul class="checks mt-m">
             <li>The <strong>declarations page</strong> &mdash; limits, deductibles, valuation basis,
               and whether the schedule is blanket or per-location.</li>
-            <li>The <strong>loss notice</strong> &mdash; its date starts every statutory clock in
-              chapter 542.</li>
+            <li>The <strong>loss notice</strong> &mdash; its date anchors every other date in
+              the file, including how long the evidence had to degrade.</li>
             <li>The <strong>first estimate</strong> &mdash; not for its total, but for what it is
               silent about.</li>
           </ul>

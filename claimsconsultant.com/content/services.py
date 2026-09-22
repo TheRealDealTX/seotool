@@ -7,7 +7,7 @@ we are asked for by name, then representation and pre-loss work.
 Loss types &mdash; hail, fire, water, wind &mdash; live in content/losstypes.py.
 """
 
-from siteconfig import BIZ, STATUTE, FEES
+from siteconfig import BIZ, STANDARDS, FEES
 
 P = BIZ["phone_display"]
 

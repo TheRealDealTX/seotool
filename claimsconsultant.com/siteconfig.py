@@ -36,19 +36,15 @@ BIZ = {
     "hours": "Mo-Fr 08:00-18:00",
 }
 
-# Subject-matter references quoted across the site. These describe the law we
-# work within, not a licence we hold — see /disclaimer/.
-STATUTE = {
-    "prompt_pay": "Tex. Ins. Code ch. 542, subch. B",
-    "forces_of_nature": "Tex. Ins. Code ch. 542A",
-    "ack_days": "15",
-    "decide_days": "15 business",
-    "pay_days": "5 business",
-    "presuit_days": "61",
+# Published standards and conventions the work refers to. Statutory claim
+# deadlines are deliberately absent: they govern insurer conduct and are a
+# question for counsel, not for a damage expert.
+STANDARDS = {
+    "pa_chapter": "Tex. Ins. Code ch. 4102",
+    "ia_chapter": "Tex. Ins. Code ch. 4101",
+    "evidence_rule": "Tex. R. Evid. 702",
 }
 
-# How we are paid. Stated in one place because it appears on several pages and
-# because it is the thing that makes working either side possible.
 # Expert, consulting and appraisal work is never contingent. Public adjusting
 # is the one capacity where a percentage basis may apply, capped by statute.
 FEES = {

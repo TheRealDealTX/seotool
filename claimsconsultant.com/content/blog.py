@@ -5,7 +5,7 @@ could act on without hiring us. If it reads like a brochure with subheadings,
 it does not go up.
 """
 
-from siteconfig import BIZ, STATUTE
+from siteconfig import BIZ
 
 P = BIZ["phone_display"]
 
@@ -103,22 +103,19 @@ POSTS = [
                   "an emergency, that is information about the vendor."),
 
             ("h2", "Day two: give notice, properly"),
-            ("p", "Notice starts the statutory clock. Under subchapter B of chapter 542 of the "
-                  "Texas Insurance Code, an insurer receiving written notice of a claim must "
-                  "generally acknowledge it, begin investigating and request what it reasonably "
-                  "needs within 15 days. Everything downstream &mdash; the accept-or-reject "
-                  "deadline, the payment deadline, the statutory interest exposure &mdash; runs "
-                  "from that sequence."),
+            ("p", "The date of notice anchors every other date in the file, including how "
+                  "long the property sat before anyone competent looked at it. That interval is "
+                  "the first thing an opposing expert calculates, so it is worth keeping short "
+                  "and worth being able to prove."),
             ("p", "So give notice in writing, keep proof of when you sent it, and describe the "
                   "loss accurately but without speculating about cause. &ldquo;Water damage "
                   "throughout the north wing following the storm of 14 March&rdquo; is a "
                   "description. &ldquo;The roof failed because it was old&rdquo; is a gift."),
             ("callout", "If you are covered by a risk pool", [
                 ("p", "Many Texas districts, cities and other public entities cover property "
-                      "through an interlocal risk pool rather than an insurer. The statutory "
-                      "deadlines in chapter 542 may not apply in the same way. Your coverage "
-                      "document governs the notice requirements and the appeal route &mdash; "
-                      "read it rather than assuming the insurance code applies."),
+                      "through an interlocal risk pool rather than an insurer. The coverage "
+                      "document governs the notice requirements and the appeal route, and it "
+                      "is not a standard policy. Read it rather than assuming."),
             ]),
 
             ("h2", "Day two to three: set the file up so it can be proved"),
@@ -175,135 +172,112 @@ POSTS = [
 
     # =====================================================================
     {
-        "slug": "texas-prompt-payment-of-claims-act-deadlines",
-        "category": "Texas statute",
+        "slug": "repair-or-replace-how-the-decision-gets-made",
+        "category": "Field guide",
         "published": "2026-07-09",
         "modified": "2026-08-30",
         "read": "10",
         "words": 1600,
-        "title": "Texas Prompt Payment of Claims Act: The Deadlines | Chapter 542",
-        "description": ("The deadlines chapter 542 of the Texas Insurance Code imposes on "
-                        "insurers, what chapter 542A changed for weather claims, and how to use "
-                        "the clock on a commercial file."),
-        "h1": "The deadlines your<br>insurer is <em>bound</em> by",
-        "h1_plain": "The Texas Prompt Payment of Claims Act",
-        "blurb": ("Chapter 542 puts hard dates on the carrier. Most commercial policyholders "
-                  "never learn they exist, which is why nobody enforces them."),
-        "lede": ("Texas law does not merely encourage insurers to move quickly. It sets specific "
-                 "deadlines, and attaches a financial consequence to missing them. Used "
-                 "deliberately, that timetable is the most useful pressure available to a "
-                 "policyholder who is being slow-walked."),
+        "title": "Repair or Replace: How the Decision Actually Gets Made",
+        "description": ("The repair-versus-replace test, and the evidence that settles it on "
+                        "roofs, casework, contents and equipment."),
+        "h1": "Repair or replace:<br>how it <em>gets decided</em>",
+        "h1_plain": "Repair or replace: how the decision gets made",
+        "blurb": ("More disputed dollars turn on this one question than on coverage. It has an "
+                  "answerable test, and almost nobody applies it."),
+        "lede": ("Strip the argument out of most contested property claims and what is left is a "
+                 "single question asked forty times: can this be fixed, or does it have to be "
+                 "replaced. It is a technical question with a technical answer, and it is "
+                 "routinely settled by whoever asserts hardest."),
         "body": [
-            ("p", "Ask a facilities director what leverage they have against a carrier that has "
-                  "gone quiet and the honest answer is usually none. They chase, they escalate, "
-                  "they ask for a supervisor, and the file continues to sit. What they generally "
-                  "do not do is cite the statute, because they do not know it applies to them."),
-            ("p", "It does, and it is short enough to read in an afternoon."),
+            ("p", "The pattern is the same whatever the component. One side says the item can be "
+                  "cleaned, dried, refinished, coated, patched or recalibrated. The other says it "
+                  "is finished. Both positions are stated with total confidence, neither is "
+                  "supported by a measurement, and the file sits for four months while two "
+                  "people who have never opened the assembly disagree about what is inside it."),
 
-            ("h2", "The basic sequence"),
-            ("p", "Subchapter B of chapter 542 of the Texas Insurance Code &mdash; usually called "
-                  "the Prompt Payment of Claims Act &mdash; sets out a chain of obligations that "
-                  "begins when the insurer receives written notice of a claim."),
-            ("table", "The statutory timetable", ["Stage", "Deadline", "Notes"], [
-                ["Acknowledge the claim, commence investigation and request the items the insurer reasonably requires",
-                 "~15 days", "From receipt of written notice of the claim"],
-                ["Notify the claimant in writing whether the claim is accepted or rejected",
-                 "~15 business days", "From receipt of all items requested. Extendable in defined circumstances"],
-                ["Pay the claim",
-                 "~5 business days", "From the notice that the claim is accepted"],
-             ]),
-            ("p", "The consequence of missing them is what makes the timetable matter. An "
-                  "insurer that is liable for a claim and fails to comply becomes exposed to "
-                  "statutory interest on the amount of the claim plus reasonable "
-                  "attorney&rsquo;s fees. The rate, and how it is computed, depends on when the "
-                  "claim arose and whether it falls under chapter 542A."),
-            ("callout", "This is a summary, not the statute", [
-                ("p", "The provisions contain qualifications, exceptions and extension mechanisms "
-                      "that matter in a real dispute, and their application is a legal question. "
-                      "Read this as orientation and take the specifics to counsel. We are "
-                      "adjusters, not lawyers, and the distinction is one we take seriously."),
+            ("h2", "The test"),
+            ("p", "The question is not whether a repair is physically possible. Almost anything "
+                  "is physically possible. The question is whether repair restores the item to "
+                  "its pre-loss condition and remaining service life."),
+            ("p", "Those last four words carry most of the weight. A roof membrane with bruised "
+                  "insulation beneath it can be patched. It will not perform for the fifteen "
+                  "years it had left, and the manufacturer will frequently decline to warrant "
+                  "it. A swollen particleboard cabinet box can be refinished. It will not hold a "
+                  "hinge screw. Repair that leaves the owner with a shorter-lived asset than "
+                  "they had before the loss has not restored anything; it has deferred the cost "
+                  "and moved it onto them."),
+            ("callout", "The corollary cuts the other way too", [
+                ("p", "A well-maintained plywood cabinet run that got wet at the toe kick and "
+                      "dried within forty-eight hours is repairable, and claiming otherwise "
+                      "because replacement is cleaner is exactly the same error in the opposite "
+                      "direction. The test does not have a preferred answer."),
             ]),
 
-            ("h2", "What chapter 542A changed"),
-            ("p", "In 2017 the legislature added chapter 542A, which applies to claims arising "
-                  "from forces of nature &mdash; wind, hail, rain, and similar perils. It is the "
-                  "chapter that governs a large share of Texas commercial property litigation, "
-                  "and it changed the landscape in two ways that matter to a policyholder."),
-            ("p", "First, it introduced a pre-suit notice requirement. A claimant must generally "
-                  "give the insurer written notice at least 61 days before filing suit, setting "
-                  "out the acts complained of, the amount alleged to be owed and the "
-                  "attorney&rsquo;s fees incurred to that point. The insurer may then request an "
-                  "inspection. Failing to give proper notice can affect the recovery of "
-                  "attorney&rsquo;s fees and, in some circumstances, lead to abatement."),
-            ("p", "Second, it changed how interest is calculated on covered claims within its "
-                  "scope, and it created a mechanism by which an insurer that accepts "
-                  "responsibility for an agent&rsquo;s conduct can have the agent dismissed from "
-                  "the suit."),
-            ("p", "The practical effect for a commercial policyholder is a compressed runway. If "
-                  "your policy carries a two-year suit limitation and you need 61 days of notice "
-                  "before filing, the date by which counsel must actually be engaged and ready "
-                  "is meaningfully earlier than the limitation date itself."),
-            ("html", '<a class="tlink" href="/tools/texas-claim-deadline-calculator/">'
-                     'Date your own claim against these deadlines <span class="arw">&rarr;</span></a>'),
+            ("h2", "Four components, four kinds of evidence"),
+            ("table", "What actually settles it",
+             ["Component", "The real question", "Evidence that answers it"], [
+                ["Low-slope roofing",
+                 "Is the insulation beneath an intact membrane fractured?",
+                 "Test cuts through the assembly, photographed in place; manufacturer position on warranting a patched system; soft-metal corroboration around the property"],
+                ["Casework and millwork",
+                 "What is the substrate, and has it lost dimensional stability?",
+                 "Substrate identified at a cut edge; moisture readings by location; swelling measured at affected and unaffected points; joint and fastener testing"],
+                ["Contents and equipment",
+                 "Can it be restored to reliable service, and can that be certified?",
+                 "Manufacturer or OEM inspection; cleaning trial on a representative sample; contamination testing where residue is in issue; recalibration and requalification results"],
+                ["Finishes and substrates after smoke",
+                 "What is the residue, and has it penetrated?",
+                 "Residue characterization by sampling, not by smell; background comparison from unaffected areas; test cleaning with a documented result"],
+             ]),
+            ("p", "Every row in that table describes something that can be done in a day or two "
+                  "for a few hundred to a few thousand dollars. Every one of them routinely goes "
+                  "undone on claims where the disputed amount is six or seven figures, which is "
+                  "the least rational feature of this industry."),
 
-            ("h2", "How to actually use the clock"),
-            ("p", "The statute rewards precision, and precision is a matter of habit rather than "
-                  "expertise. Four practices do most of the work."),
-            ("h3", "Give notice in writing and keep proof"),
-            ("p", "Email with a read receipt, or a letter with delivery confirmation. A phone "
-                  "call to a claims line is not a record. The date of written notice is the peg "
-                  "everything else hangs from."),
-            ("h3", "Log every request and every response"),
-            ("p", "The accept-or-reject deadline runs from when the insurer has received all the "
-                  "items it reasonably requested. That makes the request log the central "
-                  "document. Every time the carrier asks for something, record what was asked "
-                  "and when; every time you send it, record what you sent and when. A file that "
-                  "shows the carrier had everything it needed on 3 April is a file where the "
-                  "clock is running."),
-            ("h3", "Respond completely and quickly"),
-            ("p", "Partial responses restart arguments. Where a request is genuinely "
-                  "unreasonable or duplicative, say so in writing and explain why, rather than "
-                  "ignoring it. Escalating document demands are a recognized delay technique, "
-                  "and the answer is a paper trail that makes the pattern visible."),
-            ("h3", "Put the deadline in the letter"),
-            ("p", "There is a striking difference in response rate between correspondence that "
-                  "asks for an update and correspondence that notes the date on which the "
-                  "insurer received the last requested item and the deadline that follows from "
-                  "it. Adjusters have supervisors, and supervisors have reports."),
+            ("h2", "The threshold nobody writes down"),
+            ("p", "There is a second question that arrives once repairability is established: "
+                  "whether a partial repair is the sensible outcome even when it is possible. "
+                  "Replace eleven of thirty-four cabinet boxes and you have two mobilizations, a "
+                  "visible line between old and new finish, and a warranty on a third of the "
+                  "run. At some cost ratio that stops being a saving."),
+            ("p", "Around 70% of the replacement cost is a reasonable place to have the "
+                  "conversation, though it is a rule of thumb rather than a standard and it "
+                  "varies by component. The useful move is to price both paths explicitly and "
+                  "put the comparison in front of both parties, rather than defending a marginal "
+                  "saving line by line."),
+            ("html", '<a class="tlink" href="/tools/cabinet-repair-vs-replace-calculator/">'
+                     'Compare the two paths <span class="arw">&rarr;</span></a>'),
 
-            ("h2", "Where the statute does not reach"),
-            ("p", "Two important exceptions for institutional policyholders."),
-            ("p", "If your property coverage is through an interlocal risk pool &mdash; the "
-                  "common arrangement for Texas school districts, cities and other public "
-                  "entities &mdash; the pool is not an insurer in the ordinary sense, and the "
-                  "prompt-payment machinery may not apply to it as it would to a carrier. Your "
-                  "leverage is the coverage document&rsquo;s own procedures and appeal route, "
-                  "plus the fact that pool members are also pool owners."),
-            ("p", "And if the coverage is through a surplus lines carrier, or is written outside "
-                  "the ordinary admitted market, the analysis can differ again. Establishing "
-                  "which set of rules applies is the first thing we do on any file, because "
-                  "running the wrong playbook wastes months."),
-            ("quote", "The deadlines are not a magic wand. They are a reason for a claims "
-                      "supervisor to look at a file that has been sitting in someone&rsquo;s "
-                      "queue for eleven weeks.",
+            ("h2", "Matching, which is a different question again"),
+            ("p", "Suppose half a run is genuinely repairable and half is not. Whether the "
+                  "replacement half can be blended into the half that stays is not a "
+                  "repairability question at all &mdash; it is an availability question, and it "
+                  "is answered with documents rather than with judgment."),
+            ("p", "Cabinet lines are discontinued constantly. Roof membranes change "
+                  "formulation. Tile runs are dropped. Establishing that a product can no longer "
+                  "be sourced takes manufacturer correspondence, a discontinued-product notice "
+                  "or a supplier quote, and that paperwork is what converts a partial "
+                  "replacement into a continuous-run replacement. Asserted without it, the "
+                  "matching argument fails, and it deserves to."),
+            ("quote", "Repairability is a finding. Matching is a document. Neither is an "
+                      "opinion, and both get argued as though they were.",
              "From the claims desk"),
 
-            ("h2", "A short checklist"),
+            ("h2", "What to do about it"),
             ("checks", [
-                "Written notice given, with proof of the date it was received.",
-                "A dated log of every item the carrier requested and every item you supplied.",
-                "A calendar entry for the acknowledgement, accept-or-reject and payment deadlines.",
-                "The policy&rsquo;s suit limitation provision read and the date diarised.",
-                "If the loss is weather-related, the 61-day pre-suit notice requirement factored into that date.",
-                "Correspondence that cites dates rather than asking for updates.",
+                "Identify the disputed repair-or-replace decisions explicitly and list them. On a large file there are usually between five and fifteen, not forty.",
+                "Price both paths for each one, so the comparison exists rather than being asserted.",
+                "Get the physical evidence for the ones worth more than the cost of getting it &mdash; which is nearly all of them.",
+                "Put manufacturer positions in writing. A letter declining to warrant a repaired system frequently ends the argument in a paragraph.",
+                "Treat matching as a separate question with a documentary answer, and gather the correspondence before claiming it.",
+                "Where a decision genuinely turns on judgment rather than measurement, say so, and record the basis on both sides.",
             ]),
-            ("p", "None of this requires a lawyer or an adjuster. It requires somebody to keep a "
-                  "list. If the claim later needs either profession, that list is the most "
-                  "valuable thing you will hand them."),
+            ("p", "None of this requires anyone to concede anything. It requires the question to "
+                  "be asked in a form that has an answer, which is most of what an expert is "
+                  "actually for."),
         ],
     },
-
-    # =====================================================================
     {
         "slug": "commercial-property-coinsurance-explained",
         "category": "Policy wording",

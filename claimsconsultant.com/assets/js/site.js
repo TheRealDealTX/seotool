@@ -266,61 +266,61 @@
       '<b>Recoverable depreciation is ' + pct((holdback / rcv) * 100, 0) + ' of the claim.</b> That sum is payable only after the work is completed and documented, and most policies put a clock on it — commonly 180 days or two years from the loss. Track the deadline from day one.');
   };
 
-  /* 5. Texas claim deadline calculator -------------------------------- */
-  CALC['deadline'] = function (f) {
-    var lossStr = raw(f, 'loss');
-    var noticeStr = raw(f, 'notice');
-    var items = raw(f, 'items');
-    var suitYears = val(f, 'suit') || 2;
+  /* 5. Cabinet repair vs replace ---------------------------------------- */
+  CALC['cabinet'] = function (f) {
+    var total = val(f, 'total');
+    var damaged = Math.min(val(f, 'damaged'), total);
+    var repairable = Math.min(val(f, 'repairable'), damaged);
+    var refinish = val(f, 'refinish');
+    var replace = val(f, 'replace');
+    var tops = val(f, 'tops');
+    var matching = raw(f, 'matching') === 'yes';
 
-    var loss = lossStr ? new Date(lossStr + 'T12:00:00') : null;
-    var notice = noticeStr ? new Date(noticeStr + 'T12:00:00') : loss;
-    var itemsDate = items ? new Date(items + 'T12:00:00') : notice;
+    var notRepairable = Math.max(damaged - repairable, 0);
+    /* A discontinued profile means new boxes cannot be blended into the run, so
+       replacement extends across the whole run — and nothing is refinished,
+       because the boxes that could have been saved are replaced along with it. */
+    var fullRun = !matching && notRepairable > 0;
+    var partialBoxes = fullRun ? total : notRepairable;
+    var refinishedBoxes = fullRun ? 0 : repairable;
+    var partialRefinish = refinishedBoxes * refinish;
+    var partialReplace = partialBoxes * replace;
+    var partialTops = partialBoxes > 0 ? tops : 0;
+    var partial = partialRefinish + partialReplace + partialTops;
 
-    if (!loss || isNaN(loss)) {
-      ['ack', 'decide', 'pay', 'presuit', 'suit', 'elapsed', 'left'].forEach(
-        function (k) { put(f, k, '—'); });
-      return;
-    }
+    var full = total * replace + tops;
+    var ratio = full > 0 ? (partial / full) * 100 : 0;
+    var saving = full - partial;
 
-    function fmt(dt) {
-      if (!dt || isNaN(dt)) return '—';
-      return dt.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-    }
-    function addDays(dt, n) { var x = new Date(dt.getTime()); x.setDate(x.getDate() + n); return x; }
-    function addBusiness(dt, n) {
-      var x = new Date(dt.getTime());
-      var added = 0;
-      while (added < n) {
-        x.setDate(x.getDate() + 1);
-        var day = x.getDay();
-        if (day !== 0 && day !== 6) added++;
-      }
-      return x;
-    }
-    function addYears(dt, n) { var x = new Date(dt.getTime()); x.setFullYear(x.getFullYear() + n); return x; }
+    put(f, 'damaged', damaged ? damaged + ' of ' + total : '—');
+    put(f, 'repairable', repairable + ' boxes');
+    put(f, 'refinished', refinishedBoxes + ' boxes');
+    put(f, 'notrepairable', notRepairable + ' boxes');
+    put(f, 'partialboxes', partialBoxes + ' boxes');
+    put(f, 'partialrefinish', money(partialRefinish));
+    put(f, 'partialreplace', money(partialReplace));
+    put(f, 'partialtops', money(partialTops));
+    put(f, 'partial', money(partial));
+    put(f, 'full', money(full));
+    put(f, 'ratio', pct(ratio, 0));
+    put(f, 'saving', money(saving));
 
-    var ack = addDays(notice, 15);
-    var decide = addBusiness(itemsDate, 15);
-    var pay = addBusiness(decide, 5);
-    var presuit = addDays(new Date(), 61);
-    var suit = addYears(loss, suitYears);
-
-    var elapsed = Math.round((Date.now() - loss.getTime()) / 86400000);
-    var left = Math.round((suit.getTime() - Date.now()) / 86400000);
-
-    put(f, 'ack', fmt(ack));
-    put(f, 'decide', fmt(decide));
-    put(f, 'pay', fmt(pay));
-    put(f, 'presuit', fmt(presuit));
-    put(f, 'suit', fmt(suit));
-    put(f, 'elapsed', elapsed + ' days');
-    put(f, 'left', left > 0 ? left.toLocaleString('en-US') + ' days' : 'expired');
-
-    flag(f, 'urgent', left <= 180 && left > 0,
-      '<b>' + left + ' days to the limitations date.</b> Under ' + suitYears + '-year wording the window is closing. Chapter 542A also requires written pre-suit notice at least 61 days before filing, so the practical deadline to have counsel engaged is roughly ' + Math.max(left - 61, 0) + ' days out, not ' + left + '.');
-    flag(f, 'expired', left <= 0,
-      '<b>The limitations date shown has passed.</b> Some policies shorten or extend it, tolling can apply, and appraisal or a supplemental claim may sit on a different clock. Do not treat this as the end of the matter without a lawyer reading the policy.');
+    flag(f, 'nomatch', fullRun,
+      '<b>The profile is discontinued.</b> New boxes cannot be blended into a run that has to '
+      + 'read as one installation, so the replacement scope extends across all ' + total
+      + ' boxes rather than the ' + notRepairable + ' that failed. That is the matching '
+      + 'argument, and it needs documentary support &mdash; manufacturer correspondence or a '
+      + 'discontinued-product notice, not an assertion.');
+    flag(f, 'threshold', matching && full > 0 && ratio >= 70,
+      '<b>The partial path costs ' + pct(ratio, 0) + ' of full replacement.</b> Once a repair '
+      + 'scope passes roughly 70% of the replacement cost, replacement is usually the better '
+      + 'outcome for everyone: one trade mobilization, a uniform finish and a warranty on the '
+      + 'whole run. Worth stating explicitly rather than defending a marginal saving.');
+    flag(f, 'worthit', matching && full > 0 && ratio > 0 && ratio < 70,
+      '<b>Partial repair saves ' + money(saving) + '</b> against full replacement, at '
+      + pct(ratio, 0) + ' of the cost. That is a defensible repair scope &mdash; provided the '
+      + repairable + ' boxes called repairable actually are, which is a substrate and moisture '
+      + 'question rather than a visual one.');
   };
 
   /* 6. Commercial roof replacement estimator -------------------------- */

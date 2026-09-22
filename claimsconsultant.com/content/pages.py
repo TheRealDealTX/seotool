@@ -4,7 +4,7 @@ Also the shared FAQ list used on the homepage and the hub-page introductions,
 which live here so the hubs are not thin.
 """
 
-from siteconfig import BIZ, STATUTE, FEES, FOOTER_SERVING
+from siteconfig import BIZ, STANDARDS, FEES, FOOTER_SERVING
 
 P = BIZ["phone_display"]
 PH = BIZ["phone_href"]
@@ -38,9 +38,9 @@ HOME_FAQS = [
      "<p>Not always, and establishing which rules apply is the first thing we do. A great many "
      "Texas public entities and religious organizations cover property through an interlocal "
      "risk pool or a denominational program rather than a conventional insurance policy. Those "
-     "are governed by their own coverage documents, with their own appeal routes, and the "
-     "statutory prompt-payment machinery in the Insurance Code may not apply in the same way. "
-     "The technical questions are identical; the procedure is not.</p>"),
+     "are governed by their own coverage documents, with their own valuation provisions and "
+     "their own appeal routes rather than the rules that apply to an insurance policy. The "
+     "technical questions are identical; the procedure is not.</p>"),
 
     ("Can you serve as an appraiser or umpire?",
      "<p>Yes, in any of the three roles. As a party-appointed appraiser for either side, or as "
@@ -730,37 +730,32 @@ FAQ_PAGE = {
         },
         {
             "band": "paper2",
-            "eyebrow": "Texas specifics",
-            "h2": "Statute, deadlines and risk pools",
+            "eyebrow": "Evidence and access",
+            "h2": "Getting to the property, and what survives",
             "blocks": [("faq", [
-                ("What deadlines does Texas law impose on an insurer?",
-                 "<p>Under subchapter B of chapter 542, an insurer receiving written notice of a "
-                 "claim must generally acknowledge it, begin investigating and request what it "
-                 "reasonably needs within 15 days; notify the claimant in writing whether the "
-                 "claim is accepted or rejected within 15 business days of receiving the items "
-                 "it requested; and pay within 5 business days of an acceptance. The detail "
-                 "matters and it is a legal question &mdash; the "
-                 "<a href=\"/tools/texas-claim-deadline-calculator/\">deadline calculator</a> is "
-                 "a starting point, not advice.</p>"),
-                ("What is chapter 542A?",
-                 "<p>It governs claims arising from forces of nature &mdash; wind, hail, rain "
-                 "and similar perils. Its most practically important feature is a pre-suit "
-                 "notice requirement: written notice at least 61 days before filing, stating the "
-                 "acts complained of, the amount claimed and the attorney&rsquo;s fees incurred. "
-                 "It also affects how interest is calculated. If a loss is weather-related, "
-                 "assume it applies and plan the timeline accordingly.</p>"),
-                ("Our coverage is through a risk pool. Do these rules apply?",
-                 "<p>Possibly not in the same way. An interlocal risk pool operates under a "
-                 "participation agreement rather than an insurance policy, and statutory "
-                 "machinery aimed at insurers may not reach it. The coverage document governs: "
-                 "its notice requirements, its valuation provisions, its appeal process. The "
-                 "technical questions are identical; the procedure is not.</p>"),
-                ("How long is there to sue?",
-                 "<p>Texas commercial policies commonly carry a two-year suit limitation, and "
-                 "some wording is shorter. Layer the 61-day pre-suit notice requirement on top "
-                 "and the practical deadline to have counsel engaged is materially earlier than "
-                 "the limitation date. This is a legal question &mdash; get it confirmed by a "
-                 "lawyer rather than relying on any calculator, including ours.</p>"),
+                ("How quickly do you need to inspect?",
+                 "<p>As soon as the property is safe and access can be arranged. High-water "
+                 "marks survive days. A failed pipe survives until the plumber throws it out. "
+                 "Building management logs frequently roll off in thirty to ninety days. Cabinet "
+                 "substrate and roof assemblies survive until the repair. None of that is "
+                 "recoverable later, and every item on the list settles an argument.</p>"),
+                ("Can you work from photographs if the property is already repaired?",
+                 "<p>Sometimes, and the resulting opinion is qualified accordingly. The usable "
+                 "sources are contractor photographs and invoices, change orders, retained "
+                 "materials, pre-loss survey or drone imagery, maintenance records and testing "
+                 "done at the time. We will tell you plainly whether what survives supports a "
+                 "conclusion rather than producing one that cannot be defended.</p>"),
+                ("Do you need the other side present at the inspection?",
+                 "<p>Not required, and frequently a good idea &mdash; particularly for "
+                 "destructive testing. A joint inspection with both parties invited in writing "
+                 "removes an entire category of later objection about what was done and what it "
+                 "showed. Where an invitation is declined, the fact that it was made is itself "
+                 "worth recording.</p>"),
+                ("Our coverage is through a risk pool rather than an insurer. Does that change your work?",
+                 "<p>Not the technical work, which is identical. What changes is the procedure: "
+                 "an interlocal pool operates under a participation agreement rather than a "
+                 "standard policy, with its own notice requirements, valuation provisions and "
+                 "appeal route. It has to be read rather than assumed.</p>"),
             ])],
         },
         {
@@ -860,10 +855,9 @@ GLOSSARY_TERMS = [
     ("Proof of loss",
      "A sworn statement of the amount claimed. Where required, it starts the carrier&rsquo;s "
      "decision clock rather than leaving the file open-ended."),
-    ("Prompt Payment of Claims Act",
-     "Subchapter B of chapter 542 of the Texas Insurance Code, setting deadlines for insurers to "
-     "acknowledge, decide and pay claims, with statutory interest and attorney&rsquo;s fees "
-     "exposure for non-compliance."),
+    ("Repairability",
+     "Whether repair restores an item to its pre-loss condition and remaining service life. "
+     "Not whether repair is physically possible, which it nearly always is."),
     ("Public adjuster",
      "A professional licensed to represent the policyholder in presenting and negotiating a "
      "claim, and paid by the policyholder. Distinct from a claims consultant, who is retained "
@@ -935,8 +929,8 @@ GLOSSARY = {
                  "/blog/ordinance-and-law-coverage-explained/"),
                 ("Appraisal or litigation", "Which mechanism fits which dispute.",
                  "/blog/insurance-appraisal-vs-litigation-in-texas/"),
-                ("The Texas prompt payment deadlines", "What chapter 542 requires and how to use it.",
-                 "/blog/texas-prompt-payment-of-claims-act-deadlines/"),
+                ("Repair or replace", "The test, and the evidence that settles it.",
+                 "/blog/repair-or-replace-how-the-decision-gets-made/"),
             ])],
         },
     ],
@@ -1312,7 +1306,7 @@ LEGAL = [
             ("h2", "We are not a law firm"),
             ("p", "Nothing on this site is legal advice, and we do not provide it. Several topics "
                   "discussed here &mdash; limitation periods, statutory remedies, pre-suit notice "
-                  "under chapter 542A, the effect of releases, coverage interpretation &mdash; "
+                  "the effect of releases, coverage interpretation and statutory remedies &mdash; "
                   "are legal questions on which you should consult a licensed Texas attorney. "
                   "Where we think a matter needs counsel, we say so."),
             ("h2", "We are not contractors"),

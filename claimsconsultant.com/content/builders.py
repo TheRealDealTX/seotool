@@ -4,7 +4,7 @@ build.py calls build_all() with its own globals so this module can use the
 shared chrome without a circular import.
 """
 
-from siteconfig import BIZ, STATUTE, FOOTER_SERVING, TODAY
+from siteconfig import BIZ, FOOTER_SERVING, TODAY
 
 from content.industries import INDUSTRIES
 from content.services import SERVICES
