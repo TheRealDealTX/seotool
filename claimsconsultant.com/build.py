@@ -429,7 +429,7 @@ def cta_band(heading=None, dek=None, primary=("Discuss a matter", "/contact/"),
         </p>
         <ul class="checks" style="margin-top:26px;">
           <li>Retained by policyholders, insurers, pools, brokers and counsel.</li>
-          <li>Hourly or fixed fee &mdash; never a percentage of the settlement.</li>
+          <li>Hourly on consulting and expert work; contingent on public adjusting.</li>
           <li>Conflict check before we discuss any matter in detail.</li>
         </ul>
       </div>
@@ -833,7 +833,7 @@ def homepage():
         <div class="hero-meta">
           <span>Large commercial &amp; institutional only</span>
           <span>Retained by either side</span>
-          <span>Expert work never contingent</span>
+          <span>Hourly on expert work</span>
         </div>
       </div>
       <div>
@@ -895,7 +895,7 @@ def homepage():
       valuation rules and different politics.</p>
     </div>
     <div class="stats stats--4 mt-l">
-      <div class="stat"><span class="sv">0%</span><span class="sl">Contingency on expert and consulting work. The opinion does not move with the outcome, which is the first question on cross and the reason either side can rely on it.</span></div>
+      <div class="stat"><span class="sv">2</span><span class="sl">Texas licences held &mdash; adjuster and public insurance adjuster &mdash; which is what lets either party retain us. One capacity per matter, named in the engagement letter.</span></div>
       <div class="stat"><span class="sv">702</span><span class="sl">The evidence rule an opinion has to satisfy. Reliability is a question about method, which is why ours is written down before the conclusion is.</span></div>
       <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel &mdash; two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
       <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>

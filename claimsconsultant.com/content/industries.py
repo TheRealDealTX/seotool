@@ -681,7 +681,7 @@ INDUSTRIES = [
              "scope and the fee applies to that scope.</p>"),
             ("How is the fee handled on an institutional engagement?",
              "<p>Hourly, or fixed fee where the deliverable is well defined, with a written estimate "
-             "of hours and a not-to-exceed figure. Never a percentage of the recovery. "
+             "of hours and a not-to-exceed figure. "
              "Institutions almost always want that structure documented before procurement "
              "review, and we would rather produce it at the start than negotiate it later.</p>"),
         ],

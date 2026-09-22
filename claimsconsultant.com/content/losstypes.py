@@ -133,10 +133,9 @@ LOSS_TYPES = [
              "are thin and the limitation period is close.</p>"),
             ("How much does it cost?",
              "<p>Hourly, or a fixed fee where the deliverable is well defined, agreed in writing "
-         "before we start and quoted against a written estimate of hours. Never a percentage "
-         "of the settlement and never contingent on the outcome &mdash; that constraint is "
-         "what lets the same analysis be handed to the other party, an appraisal panel or a "
-         "court without anyone discounting it for who paid. See <a href=\"/fees/\">fees and engagement terms</a>.</p>"),
+         "before we start and quoted against a written estimate of hours. Public adjusting "
+         "engagements, where we act as the policyholder&rsquo;s representative, are on a "
+         "contingent fee capped by statute at 10%. See <a href=\"/fees/\">fees and engagement terms</a>.</p>"),
             ("Do we have to engage you for the whole matter?",
              "<p>No. Limited engagements are common on institutional files: the roofs only, the "
              "time-element loss only, the disputed supplement only. The engagement letter defines "

@@ -7,12 +7,14 @@ portfolios.
 
 **Positioning:** primarily expert witness and damage consulting. The firm is
 *not* a policyholder-side advocate — it is retained by either party
-(policyholders, insurers, TPAs, risk pools, brokers and counsel). Expert and
-consulting work is billed hourly or fixed fee and is **never contingent**;
-public adjusting is the one capacity where a percentage basis may apply, capped
-at 10% by §4102.104, and it is disclosed separately. That distinction is
-load-bearing: a contingent expert is impeachable on that ground alone. See
-`/who-we-work-for/`, `/services/public-adjusting/` and `/disclaimer/`.
+(policyholders, insurers, TPAs, risk pools, brokers and counsel).
+
+**Fees, stated plainly and the same way everywhere:** consulting and expert
+engagements are billed **hourly** (or fixed fee where the deliverable is well
+defined); public adjusting is on a **contingent fee**, capped at 10% by
+§4102.104. Say it as a fact of how each capacity works — don't editorialise it
+into "never a percentage" or a 0% statistic. See `/fees/`,
+`/services/public-adjusting/` and `/disclaimer/`.
 
 **Information architecture** — three axes, deliberately separated:
 

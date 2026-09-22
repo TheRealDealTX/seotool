@@ -35,12 +35,11 @@ SERVICES = [
             ("ledger", "Engagement facts", [
                 ("Retained by", "Either party"),
                 ("Fee basis", "Hourly"),
-                ("Contingent", "Never"),
                 ("Prior testimony", "Disclosed"),
                 ("Conflict check", "Before intake"),
                 ("Report standard", "TRE 702"),
-            ], "Fee never varies with the outcome. It is the first question on cross and it "
-               "should have a boring answer."),
+            ], "Expert work is billed hourly. It is the first question on cross and it should "
+               "have a boring answer."),
         ],
         "sections": [
             {
@@ -133,10 +132,11 @@ SERVICES = [
              "&mdash; which is why firms that start on one side tend to stay there. Prior "
              "engagements are disclosed, and if either party is uncomfortable with our history "
              "they should say so early.</p>"),
-            ("Is the fee ever contingent on the outcome?",
-             "<p>No, and it never will be for expert or consulting work. A contingent expert is "
-             "impeachable on that basis alone, and correctly so. Hourly, at a posted rate, with "
-             "testimony time billed at the same rate whether the testimony helps or not.</p>"),
+            ("How is expert work billed?",
+             "<p>Hourly, at a posted rate, with testimony time billed at the same rate whether "
+             "the testimony helps or not. Public adjusting engagements are contingent, but that "
+             "is a different capacity and a different kind of work &mdash; expert and consulting "
+             "engagements are not.</p>"),
             ("Can you review another expert&rsquo;s report without producing one of your own?",
              "<p>Yes, and it is a common and inexpensive first engagement. A methodology review "
              "of an opposing report frequently tells counsel what they need to know &mdash; "
@@ -921,12 +921,11 @@ SERVICES = [
                           "and a conflict check runs before any matter is discussed in detail."),
                     ("callout", "Fees are different in this capacity", [
                         ("p", "Consulting, estimating, appraisal and expert engagements are "
-                              "hourly or fixed fee, never contingent. Public adjusting "
-                              "engagements may be on the conventional percentage basis, which "
-                              "Texas caps at 10% of the claim settlement under "
-                              "&sect;4102.104. Whichever applies is stated in writing before work "
-                              "starts, and where an amount has already been offered we normally "
-                              "carve it out of the fee base."),
+                              "hourly or fixed fee. Public adjusting engagements are on a "
+                              "contingent fee, which Texas caps at 10% of the claim settlement "
+                              "under &sect;4102.104. Whichever applies is stated in writing "
+                              "before work starts, and where an amount has already been offered "
+                              "we normally carve it out of the fee base."),
                     ]),
                 ],
                 "aside": [

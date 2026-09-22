@@ -29,10 +29,10 @@ HOME_FAQS = [
      "and in court.</p>"),
 
     ("How are you paid?",
-     "<p>%s. Never a percentage of the settlement, and never contingent on the outcome. That is "
-     "a deliberate constraint: the moment our fee moves with the number, the number stops being "
-     "evidence and starts being advocacy. Estimates are given in writing before work starts, and "
-     "we flag it when a matter is running toward its estimate.</p>" % FEES["basis"]),
+     "<p>Consulting and expert engagements are billed hourly, or at a fixed fee where the "
+     "deliverable is well defined. Public adjusting is on a contingent fee, capped by Texas "
+     "statute at %s. Whichever applies is agreed in writing before work starts, against a "
+     "written estimate of hours where the work is hourly.</p>" % FEES["pa_cap"]),
 
     ("We are a church / district / city. Do the usual insurance rules even apply to us?",
      "<p>Not always, and establishing which rules apply is the first thing we do. A great many "
@@ -257,7 +257,7 @@ ABOUT = {
             ("Territory", "Texas"),
             ("Licensed", "Ch. 4101 &amp; 4102"),
             ("Retained by", "Either party"),
-            ("Fee", "Hourly / fixed"),
+            ("Consulting fee", "Hourly"),
         ], "Texas adjuster and public insurance adjuster licences are both held, which is what "
            "allows either party to retain us. Not a law firm, not a contractor, not an agency."),
     ],
@@ -276,10 +276,11 @@ ABOUT = {
                       "and why, with the evidence attached. That document has to hold up in front "
                       "of a forensic accountant, an appraisal panel, a code official or a court, "
                       "and it has to hold up whichever party is reading it."),
-                ("p", "Which is exactly why we do not take a percentage of the settlement. A fee "
-                      "that moves with the number turns the analysis into advocacy, and everyone "
-                      "in the industry can see it coming. We bill for hours and deliverables. The "
-                      "conclusion costs the same whether it helps the client or not."),
+                ("p", "Consulting and expert engagements are billed hourly, so the conclusion "
+                      "costs the same whether it helps the client or not. Public adjusting, where "
+                      "we act as the policyholder&rsquo;s representative, is on a contingent fee "
+                      "capped by statute. Which capacity applies is settled in the engagement "
+                      "letter before any work begins."),
             ],
             "aside": [
                 ("callout", "One capacity per matter", [
@@ -523,10 +524,10 @@ HOW_WE_WORK = {
 
 FEES_PAGE = {
     "path": "/fees/",
-    "title": "Fees &amp; Engagement Terms | Independent Claims Consulting",
-    "description": ("How we bill: hourly or fixed fee, never a percentage of the settlement. "
-                    "Third-party costs, conflict checks and what public-entity procurement "
-                    "needs."),
+    "title": "Fees &amp; Engagement Terms | Expert Witness &amp; Consulting",
+    "description": ("How we bill: hourly on consulting and expert work, contingent on public "
+                    "adjusting. Third-party costs, conflict checks and public-entity "
+                    "procurement."),
     "eyebrow": "Commercial terms",
     "h1": "Paid for the work,<br>not the <em>outcome</em>",
     "h1_plain": "Fees and engagement terms",
@@ -536,9 +537,9 @@ FEES_PAGE = {
     "trail": [("Home", "/"), ("Fees", None)],
     "head_aside": [
         ("ledger", "The commercial terms", [
-            ("Basis", "Hourly or fixed"),
-            ("Contingency", "Never"),
-            ("Percentage of recovery", "Never"),
+            ("Consulting &amp; expert", "Hourly / fixed"),
+            ("Public adjusting", "Contingent"),
+            ("Statutory cap on PA fee", "10%"),
             ("Estimate", "In writing, up front"),
             ("Third-party costs", "Client, pre-authorized"),
             ("Conflict check", "Before any detail"),
@@ -547,21 +548,21 @@ FEES_PAGE = {
     "sections": [
         {
             "eyebrow": "The fee",
-            "h2": "Why it is never a share of the settlement.",
+            "h2": "Hourly on consulting. Contingent on public adjusting.",
             "blocks": [
-                ("p", "%s, agreed in writing before work begins, against a written estimate of "
-                      "the hours a matter should take. Where the deliverable is well defined "
-                      "&mdash; a scope and estimate on a single building, a policy review, an "
-                      "estimate critique &mdash; we quote a fixed fee instead." % FEES["basis"]),
-                ("p", "What we will not do is take a percentage of the recovery. It is the "
-                      "standard model in the policyholder-side market and it is precisely what "
-                      "we are built to avoid. A consultant whose fee rises with the number has "
-                      "an interest in the number, and every opposing expert, appraisal panel and "
-                      "cross-examiner in the state knows how to make that point."),
-                ("p", "The practical consequence is that our work is portable. The same scope "
-                      "can be handed to the other party, submitted to a panel, attached to a "
-                      "board packet or produced in litigation without anyone needing to discount "
-                      "it for who paid."),
+                ("p", "Consulting, expert, estimating and appraisal engagements are billed "
+                      "hourly, agreed in writing before work begins and quoted against a written "
+                      "estimate of the hours a matter should take. Where the deliverable is well "
+                      "defined &mdash; a scope and estimate on a single building, a policy "
+                      "review, an estimate critique &mdash; we quote a fixed fee instead."),
+                ("p", "Public adjusting is different. There we act as the policyholder&rsquo;s "
+                      "representative rather than establishing facts, and the engagement is on a "
+                      "contingent fee, capped by Texas statute at %s of the claim settlement "
+                      "(%s). Where an amount has already been offered we normally carve it out "
+                      "of the fee base." % (FEES["pa_cap"], FEES["pa_cite"])),
+                ("p", "Which capacity applies is settled in the engagement letter before "
+                      "anything starts, because it changes the fee, the relationship and how the "
+                      "work will be characterized by the other side."),
             ],
             "aside": [
                 ("callout", "Estimates, and when they move", [
@@ -621,7 +622,7 @@ FEES_PAGE = {
                       "procurement rules for professional services, and your purchasing officer "
                       "and counsel &mdash; not us &mdash; determine how they apply. An hourly "
                       "professional-services engagement is a familiar shape to that process, "
-                      "which is one practical advantage of not billing contingently."),
+                      "which is the usual shape of a consulting engagement."),
                 ("checks", [
                     "A written scope of services suitable for an agenda item or board packet.",
                     "Hourly rates by role, a not-to-exceed figure, and a written estimate of hours.",
@@ -634,10 +635,13 @@ FEES_PAGE = {
         },
     ],
     "faqs": [
-        ("Would you ever work on contingency?",
-         "<p>No. It is the one commercial term we do not negotiate. The independence that makes "
-         "our work usable by either party, and defensible in front of a panel or a court, "
-         "depends on the fee not moving with the result.</p>"),
+        ("Which engagements are hourly and which are contingent?",
+         "<p>Consulting, expert, estimating and appraisal work is hourly or fixed fee. Public "
+         "adjusting is contingent, capped at %s by statute. The split follows the capacity: in "
+         "the first group we are establishing facts for whoever asks, and an opinion that moves "
+         "with the outcome is worth less to everyone, including the client. In the second we are "
+         "the policyholder&rsquo;s representative, which is the role a contingent fee is built "
+         "for.</p>" % FEES["pa_cap"]),
         ("Is the cost worth it on a smaller loss?",
          "<p>Often not, and we will say so. Below a certain size the cost of a full survey, a "
          "line-item scope and any specialist input is disproportionate to the amount in dispute. "
@@ -698,9 +702,9 @@ FAQ_PAGE = {
                 ("Do you give expert testimony?",
                  "<p>Yes, for either party, subject to conflict check. Scope and cost opinions, "
                  "damage causation within our competence, time-element quantification and "
-                 "critiques of an opposing estimate. Testimony time is billed at a posted rate "
-                 "that does not vary with the outcome, which is the first question you will be "
-                 "asked on cross.</p>"),
+                 "critiques of an opposing estimate. Testimony time is billed hourly at a "
+                 "posted rate, which is the first thing you will be asked about on "
+                 "cross.</p>"),
             ])],
         },
         {
@@ -764,9 +768,9 @@ FAQ_PAGE = {
             "blocks": [("faq", [
                 ("How is the fee calculated?",
                  "<p>Hourly or fixed fee, agreed in writing before work starts, against a "
-                 "written estimate of hours. Never a percentage of the settlement and never "
-                 "contingent on the outcome. See <a href=\"/fees/\">fees and engagement "
-                 "terms</a>.</p>"),
+                 "written estimate of hours, on consulting and expert engagements. Public "
+                 "adjusting is on a contingent fee capped by statute at 10%. See "
+                 "<a href=\"/fees/\">fees and engagement terms</a>.</p>"),
                 ("Who pays for engineers and accountants?",
                  "<p>The client, directly, and only where authorized in advance. Each specialist "
                  "is discussed before engagement rather than presented as a line on an invoice "
@@ -1071,8 +1075,8 @@ CLIENTS = {
             ("Conflict check", "Before any detail"),
             ("Both parties, same loss", "Never"),
             ("Capacity per matter", "One, stated"),
-            ("Fee", "Hourly / fixed"),
-            ("Tied to outcome", "Never"),
+            ("Consulting fee", "Hourly / fixed"),
+            ("PA fee", "Contingent"),
             ("Referral money", "None taken"),
         ], "The rules are the same whoever is paying, which is the only reason the analysis is "
            "worth anything to either of them."),
@@ -1127,12 +1131,13 @@ CLIENTS = {
                      "side we say so immediately and you tell us nothing further. We never act "
                      "for both parties to the same loss, and we do not take a matter adverse to "
                      "a client we are currently engaged by.</p>"),
-                    ("The fee never moves with the number",
-                     "<p>Hourly or fixed, agreed in writing, independent of outcome. This is the "
-                     "load-bearing rule. A consultant paid a share of the recovery cannot "
-                     "credibly be retained by an insurer, and a consultant paid a bonus for a "
-                     "low number cannot credibly be retained by a policyholder. Removing the "
-                     "contingency removes the objection from both directions.</p>"),
+                    ("Consulting and expert work is billed hourly",
+                     "<p>Hourly or fixed fee, agreed in writing, on every consulting, expert, "
+                     "estimating and appraisal engagement. A consultant paid a share of the "
+                     "recovery cannot credibly be retained by an insurer, and one paid a bonus "
+                     "for a low number cannot credibly be retained by a policyholder. Public "
+                     "adjusting is the exception and is contingent, because there we are a "
+                     "party&rsquo;s representative rather than a neutral measurer.</p>"),
                     ("One capacity per matter, stated up front",
                      "<p>Consultant, party-appointed appraiser, umpire or adjuster &mdash; named "
                      "in the engagement letter before work starts. Where we are asked to serve "
@@ -1299,8 +1304,9 @@ LEGAL = [
                   "detail."),
             ("h2", "Independence and compensation"),
             ("p", "We are paid for time and deliverables, on an hourly or fixed-fee basis. We do "
-                  "not take a percentage of any settlement, award or recovery, and our "
-                  "compensation does not vary with the outcome of a matter. We accept no "
+                  "not take a percentage of any settlement, award or recovery on those "
+                  "engagements. Public adjusting, where we act as the policyholder&rsquo;s "
+                  "representative, is on a contingent fee capped by statute. We accept no "
                   "referral fees, commissions or other consideration from contractors, "
                   "restoration companies, engineers, vendors or attorneys, in either direction."),
             ("h2", "We are not a law firm"),

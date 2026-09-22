@@ -45,11 +45,10 @@ STANDARDS = {
     "evidence_rule": "Tex. R. Evid. 702",
 }
 
-# Expert, consulting and appraisal work is never contingent. Public adjusting
-# is the one capacity where a percentage basis may apply, capped by statute.
+# How each capacity is billed.
 FEES = {
-    "basis": "Hourly, fixed-fee or per-project",
-    "not": "Never contingent on expert or consulting work",
+    "consulting": "Hourly, or fixed fee where the deliverable is well defined",
+    "pa": "Contingent fee, capped by statute at 10%",
     "pa_cap": "10%",
     "pa_cite": "Tex. Ins. Code &sect;4102.104",
 }
