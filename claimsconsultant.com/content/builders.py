@@ -324,12 +324,27 @@ def build_all(B):
         write(area["path"], standard_page(page))
 
     # ------------------------------------------------------------------ blog
+    featured = next((p for p in POSTS if p.get("featured")), None)
+    rest = [p for p in POSTS if not p.get("featured")]
+
+    feature_html = ""
+    if featured:
+        feature_html = (
+            '<a class="postfeature" href="%s">'
+            '<div class="pf-label"><span>Featured</span><span>%s &middot; %s min read</span></div>'
+            '<h2 class="pf-title">%s</h2>'
+            '<p class="pf-dek">%s</p>'
+            '<span class="tlink">Read the guide <span class="arw">&rarr;</span></span>'
+            '</a>'
+            % (featured["path"], featured.get("category", "Field guide"),
+               featured.get("read", "9"), featured["h1_plain"], featured["lede"]))
+
     postlist = "".join(
         '<a class="postitem" href="%s"><div class="pmeta"><b>%s</b>%s &middot; %s min</div>'
         '<div><h3>%s</h3><p>%s</p></div></a>'
         % (p["path"], p.get("category", "Claim strategy"),
            _month(p["published"]), p.get("read", "9"), p["h1_plain"], p["blurb"])
-        for p in POSTS)
+        for p in rest)
 
     blog_index = {
         "path": "/blog/",
@@ -340,14 +355,18 @@ def build_all(B):
         "eyebrow": "Insights",
         "h1": "Notes from the<br><em>claims desk</em>",
         "h1_plain": "Insights",
-        "lede": ("Policy wording, Texas statute and the arguments that move money on institutional "
-                 "files. Written for the person who has to explain the claim to a board."),
+        "lede": ("Policy wording, damage evidence and the technical questions that decide "
+                 "institutional files. Written for the person who has to explain the number "
+                 "to somebody else."),
         "trail": [("Home", "/"), ("Insights", None)],
         "page_type": "CollectionPage",
         "schema": [itemlist_schema("/blog/", "Articles",
                                    [(p["h1_plain"], p["path"]) for p in POSTS])],
         "sections": [
-            {"blocks": [("html", '<div class="postlist">%s</div>' % postlist)]},
+            {"tight": True, "flush": True,
+             "blocks": [("html", feature_html)]},
+            {"tight": True, "eyebrow": "Everything else", "h2": "More from the claims desk",
+             "blocks": [("html", '<div class="postlist mt-l">%s</div>' % postlist)]},
         ] + sp.BLOG_INTRO,
     }
     write("/blog/", standard_page(blog_index))

@@ -1,6 +1,6 @@
 # claimsconsultant.com
 
-A 65-page static SEO authority site for **Claims Consultant**, a Texas
+A 66-page static SEO authority site for **Claims Consultant**, a Texas
 **expert witness and damage consulting** firm working large commercial and
 institutional property losses — churches, school districts, cities, campuses, hospitals and
 portfolios.
@@ -89,7 +89,7 @@ question, not a copywriting one.
 | `.htaccess` | HTTPS + non-www canonical, trailing slashes, compression, cache, security headers |
 | `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.svg`, `apple-touch-icon.png` | Generated |
 
-### Page inventory — 65 pages
+### Page inventory — 66 pages
 
 **Homepage** — `texas claims consultant` / `commercial property loss consultant`
 
@@ -126,7 +126,13 @@ loss, not services.
 San Antonio · Corpus Christi & the Coastal Bend · Rio Grande Valley, plus a hub.
 Each is written from the perils and policy problems specific to that metro.
 
-**Insights** (`/blog/`) — 8 long-form articles (1,300–1,750 words) plus a hub.
+**Insights** (`/blog/`) — 9 long-form articles (1,300–1,900 words) plus a hub.
+One post carries `"featured": True` and renders as a large block above the
+list on `/blog/`; the builder picks it up automatically and excludes it from
+the list below. Only one should be flagged at a time. The featured guide,
+*How to prepare a property claim that holds up*, holds the evidence half-life
+table — deliberately there rather than on the homepage, since it is a
+"what to do" lesson rather than a pitch.
 
 **Firm** — `/about/`, `/who-we-work-for/`, `/how-we-work/`, `/fees/`, `/faq/`,
 `/glossary/` (33 terms), `/contact/`.

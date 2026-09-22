@@ -223,7 +223,7 @@ BLOG_INTRO = [
         "h2": "Written for the person who has to explain the claim to a board.",
         "blocks": [
             ("p", "One rule governs this section: every piece has to teach something a reader "
-                  "could act on without hiring anybody. Policy wording, Texas statute, the "
+                  "could act on without hiring anybody. Policy wording, damage evidence, the "
                   "evidence that settles a particular question, the records to start keeping on "
                   "day one. If a draft reads like a brochure with subheadings, it does not go "
                   "up. Nothing here is written for one side of a file."),

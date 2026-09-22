@@ -838,19 +838,19 @@ def homepage():
       </div>
       <div>
         <div class="ledger">
-          <div class="ledger-head"><b>Evidence half-life</b><span>Typical</span></div>
+          <div class="ledger-head"><b>Practice at a glance</b><span>Ref.</span></div>
           <dl style="margin:0;">
-            <div class="ledger-row"><dt>High-water marks, before cleaning</dt><dd>2&ndash;5 days</dd></div>
-            <div class="ledger-row"><dt>The failed pipe, before the plumber discards it</dt><dd>Hours</dd></div>
-            <div class="ledger-row"><dt>Building management system logs</dt><dd>30&ndash;90 days</dd></div>
-            <div class="ledger-row"><dt>Contents, before disposal</dt><dd>Days</dd></div>
-            <div class="ledger-row"><dt>Cabinet substrate, before demolition</dt><dd>Days</dd></div>
-            <div class="ledger-row"><dt>Roof test cuts, before the re-roof</dt><dd>Until repair</dd></div>
+            <div class="ledger-row"><dt>Retained by</dt><dd>Either party</dd></div>
+            <div class="ledger-row"><dt>Capacity per matter</dt><dd>One, stated</dd></div>
+            <div class="ledger-row"><dt>Property</dt><dd>Large commercial</dd></div>
+            <div class="ledger-row"><dt>Territory</dt><dd>Texas &amp; Gulf Coast</dd></div>
+            <div class="ledger-row"><dt>Consulting &amp; expert fee</dt><dd>Hourly</dd></div>
+            <div class="ledger-row"><dt>Public adjusting fee</dt><dd>Contingent</dd></div>
           </dl>
-          <div class="ledger-foot">Every one of these settles an argument, and every one is gone
-            within weeks of the loss. It is the reason an early inspection is worth more than a
-            late opinion &mdash; whichever side is asking.
-            <a href="/blog/first-72-hours-after-a-commercial-property-loss/">The first 72 hours &rarr;</a></div>
+          <div class="ledger-foot">Consultant, testifying expert, party appraiser, umpire or
+            public adjuster &mdash; one capacity per matter, named in the engagement letter after
+            a conflict check. We never act for both parties to the same loss.
+            <a href="/who-we-work-for/">How that works &rarr;</a></div>
         </div>
       </div>
     </div>
@@ -1002,7 +1002,7 @@ def homepage():
       <div>
         <p class="eyebrow">Insights</p>
         <h2>Written for the people who have to explain the number to somebody else.</h2>
-        <p class="dek">No listicles. Policy wording, Texas statute, and the evidence that actually
+        <p class="dek">No listicles. Policy wording, damage evidence, and the analysis that actually
         resolves disputes on institutional files.</p>
         <div class="btn-row"><a class="btn btn--ghost" href="/blog/">All articles</a></div>
       </div>

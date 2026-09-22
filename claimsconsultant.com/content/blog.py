@@ -11,6 +11,142 @@ P = BIZ["phone_display"]
 
 POSTS = [
 
+    # ===================================================== FEATURED ==========
+    {
+        "slug": "preparing-a-property-claim-that-holds-up",
+        "featured": True,
+        "category": "Field guide",
+        "published": "2026-09-08",
+        "modified": "2026-09-18",
+        "read": "12",
+        "words": 1900,
+        "title": "How to Prepare a Property Claim That Holds Up",
+        "description": ("What to record, what to keep and what to avoid so a commercial property "
+                        "claim survives scrutiny &mdash; including how fast each kind of "
+                        "evidence disappears."),
+        "h1": "Preparing a claim<br>that <em>holds up</em>",
+        "h1_plain": "How to prepare a property claim that holds up",
+        "blurb": ("Claims are decided by what was recorded, not by what is argued later. The "
+                  "evidence that settles each question, and how long you have to capture it."),
+        "lede": ("Every contested property claim eventually reduces to the same question: can "
+                 "you prove it. Not whether it is true &mdash; whether the record you built at "
+                 "the time supports it well enough that a forensic accountant, an appraisal "
+                 "panel or a court can rely on it."),
+        "body": [
+            ("p", "This is written for the person who will have to answer that question: a "
+                  "facilities director, a business manager, a risk officer, sometimes a claims "
+                  "examiner on the other side who wants a file that will not fall apart. Most of "
+                  "it costs nothing. Almost none of it can be done retrospectively."),
+
+            ("h2", "Evidence has a half-life"),
+            ("p", "The single most useful thing to understand about a property loss is that the "
+                  "material capable of settling a dispute starts disappearing immediately, and "
+                  "that different kinds of it disappear at very different speeds. Nobody "
+                  "destroys it deliberately. It goes because the building is being made safe, "
+                  "dried, cleared and repaired, which is exactly what should be happening."),
+            ("table", "How long you have, and what it proves",
+             ["Evidence", "Typical window", "What it settles"], [
+                ["The failed component &mdash; pipe, fitting, valve, appliance",
+                 "Hours",
+                 "Cause of failure, and whether anyone else is responsible. The plumber will take it to the truck and it is gone by lunchtime. Ask for it, label it, box it."],
+                ["High-water marks and debris lines",
+                 "2&ndash;5 days",
+                 "Where the water reached, which on a coastal loss separates wind damage from surge. Photograph with a scale before anything is washed down."],
+                ["Contents, before disposal",
+                 "Days",
+                 "Quantity, specification, age and condition &mdash; the four things a pricing dispute turns on. Photograph and inventory before the skips arrive."],
+                ["Cabinet and casework substrate",
+                 "Days",
+                 "Whether the boxes are particleboard or plywood, and how far moisture travelled. Visible at a cut edge; invisible once the run is demolished."],
+                ["Building management and thermostat logs",
+                 "30&ndash;90 days",
+                 "Whether heat was maintained, which decides most freeze claims. Many systems overwrite on a rolling window. Export them in week one."],
+                ["Utility outage records",
+                 "Weeks",
+                 "Whether a loss of heat or power was outside your control. Easiest to obtain close to the event, harder every month after."],
+                ["Roof assembly condition",
+                 "Until the re-roof",
+                 "Whether insulation beneath an intact membrane is fractured. A test cut answers it in ten minutes and becomes impossible the day the tear-off starts."],
+                ["CCTV and access control",
+                 "Days to weeks",
+                 "Timing and sequence. Frequently overwritten faster than anyone expects."],
+             ]),
+            ("p", "Read that table as a priority order rather than a checklist. If you do "
+                  "nothing else in the first week, keep the failed component and export the "
+                  "logs &mdash; those two are the cheapest to preserve and the most expensive "
+                  "to lose."),
+            ("quote", "Nearly every claim we are asked to rescue was survivable in week one and "
+                      "difficult by month six. The damage did not change. The evidence did.",
+             "From the claims desk"),
+
+            ("h2", "Before anything happens"),
+            ("p", "The best-prepared files are the ones where somebody did unglamorous work "
+                  "months earlier. None of this is expensive and all of it is impossible to "
+                  "backdate."),
+            ("checks", [
+                "<strong>A dated pre-loss condition record.</strong> A drone and photographic survey of roofs and elevations, filed and forgotten. It is the single most effective answer to a wear-and-tear argument, and it costs a fraction of the dispute it prevents.",
+                "<strong>Known data retention windows.</strong> Find out today how long your building management system, access control and CCTV actually retain. If the answer is thirty days, that is your real deadline after any loss.",
+                "<strong>A current asset register.</strong> Contents claims are won on specification and age. A register with make, model, purchase date and cost turns a four-thousand-line argument into a reconciliation.",
+                "<strong>The policy where someone can find it at 2am.</strong> Declarations page, full policy or coverage document, and the schedule of values &mdash; not in one person's inbox.",
+                "<strong>A one-page first-response instruction.</strong> What to photograph, what not to throw away, who to call, what not to sign. Taped inside a cupboard door.",
+            ]),
+
+            ("h2", "The first week"),
+            ("p", "Safety first, then capture, then mitigate &mdash; and mitigate hard, because "
+                  "every property policy imposes a duty to prevent further damage and failing it "
+                  "hands the other side a defence on everything that followed. The detailed "
+                  "sequence is its own piece."),
+            ("html", '<a class="tlink" href="/blog/first-72-hours-after-a-commercial-property-loss/">'
+                     'The first 72 hours, hour by hour <span class="arw">&rarr;</span></a>'),
+            ("p", "Two habits matter more than the rest. Photograph before you disturb anything, "
+                  "including the areas that are undamaged &mdash; proving what a room looked "
+                  "like before demolition is worth more than you expect. And start a dated log "
+                  "on day one: who attended, what was decided, which vendor arrived when, what "
+                  "the carrier said on the phone. A contemporaneous log beats any reconstruction "
+                  "made nine months later, and nobody has ever regretted keeping one."),
+
+            ("h2", "Build the financial record while it is happening"),
+            ("p", "This is the part organisations skip and the part that determines whether a "
+                  "time-element claim is provable at all. It takes a finance team about twenty "
+                  "minutes to set up."),
+            ("checks", [
+                "Open a separate general ledger account or cost code for loss-related spend on day two, and use it without exception.",
+                "Code every incremental cost to it as it is incurred: overtime, temporary premises, rented equipment, expedited freight, additional staffing, hotel nights.",
+                "Track what actually stopped as well. The other side will propose a saved-expenses credit; propose it yourself, correctly, first.",
+                "Keep a dated construction schedule with the cause of every delay noted. A disputed period of restoration moves both the income loss and the general conditions, and this document answers both.",
+                "Preserve two years of monthly operating data by department, so the pre-loss baseline is a fact rather than an assertion.",
+            ]),
+
+            ("h2", "Six things that quietly weaken a claim"),
+            ("table", "Avoidable damage", ["What happens", "Why it costs"], [
+                ["Tidying up efficiently", "The most damaging thing a well-run organisation does after a loss. Wet materials, failed components and contents go before anyone records them."],
+                ["Speculating about cause", "&ldquo;I think that roof was about twenty-five years old&rdquo; said casually on a recorded statement gets quoted back for two years."],
+                ["Signing in the first 48 hours", "Work authorisations are fine. Assignments of benefit transfer your rights and are hard to undo. Read them, or have someone read them."],
+                ["Inconsistent damage descriptions", "Where a property policy, a flood policy and a federal assistance file describe the same loss differently, all three slow down. Build them from one survey."],
+                ["Unrecorded emergency spend", "Reasonable mitigation cost is recoverable. Uncontrolled cost with no scope, no log and lump-sum invoices is an argument."],
+                ["Waiting for permission to document", "Nobody needs an adjuster's approval to photograph their own building. Capture first; the inspection can come later."],
+             ]),
+
+            ("h2", "A one-page readiness check"),
+            ("checks", [
+                "Pre-loss roof and elevation imagery exists and is dated.",
+                "Data retention windows for BMS, CCTV and access control are known and written down.",
+                "Asset register is current enough to price contents from.",
+                "Policy, declarations and schedule of values are findable by more than one person.",
+                "A first-response instruction exists and the on-site staff have seen it.",
+                "Someone is designated as the single point of contact for the carrier.",
+                "Finance knows to open a loss cost code on day two.",
+            ]),
+            ("p", "None of this requires a consultant, and that is the point of publishing it. "
+                  "What it requires is somebody deciding in advance that the claim will be "
+                  "argued on a record rather than on recollection. Organisations that do it "
+                  "settle faster and for more defensible numbers &mdash; and the ones on the "
+                  "other side of those files generally prefer them too, because a documented "
+                  "claim is much easier to pay than an asserted one."),
+        ],
+    },
+
+
     # =====================================================================
     {
         "slug": "first-72-hours-after-a-commercial-property-loss",
