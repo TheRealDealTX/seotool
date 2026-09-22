@@ -194,6 +194,12 @@ def main():
                 continue
             errors.append("%s: broken internal link -> %s" % (path, href))
 
+        # --- URLs must not contain spaces (a stray comma-space in a query
+        #     string silently breaks webfonts and canonical tags)
+        for m in re.finditer(r'(?:href|src|content)="((?:https?:)?//[^"]*)"', html):
+            if " " in m.group(1):
+                errors.append("%s: space inside URL -> %s" % (path, m.group(1)[:90]))
+
         # --- content smells
         if "&amp;amp;" in html or "&amp;mdash;" in html or "&amp;rsquo;" in html:
             errors.append("%s: double-escaped entity" % path)

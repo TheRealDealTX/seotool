@@ -258,7 +258,7 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    'family=Newsreader:ital, opsz, wght@0,6..72,300..600;1,6..72,300..500'
+    'family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500'
     '&amp;family=IBM+Plex+Sans:wght@400;500;600'
     '&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">'
 )
@@ -266,7 +266,8 @@ FONTS = (
 
 def head(page):
     canonical = url(page["path"])
-    robots = page.get("robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1")
+    robots = page.get("robots",
+                      "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1")
     extra = ""
     if page.get("published"):
         extra += (f'<meta property="article:published_time" content="{page["published"]}">\n'
