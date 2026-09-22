@@ -20,6 +20,7 @@ from siteconfig import (BIZ, STATUTE, FEES, NAV, FOOTER_SERVING, TODAY, YEAR,
 
 from content.industries import INDUSTRIES
 from content.services import SERVICES
+from content.losstypes import LOSS_TYPES
 from content.tools import TOOLS
 from content.areas import AREAS
 from content.blog import POSTS
@@ -311,7 +312,7 @@ def topbar():
   <div class="wrap">
     <div class="tb-left">
       <span><span class="dot"></span><span class="tb-long">Texas &amp; Gulf Coast &middot; statewide response</span><span class="tb-short">Statewide Texas</span></span>
-      <span class="tb-hide">Independent consulting for policyholders, insurers, pools and counsel{lic}</span>
+      <span class="tb-hide">Expert witness &amp; damage consulting &middot; either side of a file{lic}</span>
     </div>
     <div><a href="tel:{PHONE_HREF}">{PHONE}</a></div>
   </div>
@@ -333,6 +334,8 @@ def drawer_groups():
          [(i["nav_label"], i["path"]) for i in INDUSTRIES]),
         ("Services", "/services/",
          [(s["nav_label"], s["path"]) for s in SERVICES]),
+        ("Loss Types", "/loss-types/",
+         [(l["nav_label"], l["path"]) for l in LOSS_TYPES]),
         ("Tools &amp; Calculators", "/tools/",
          [(t["nav_label"], t["path"]) for t in TOOLS]),
         ("Service Areas", "/service-areas/",
@@ -439,6 +442,7 @@ def cta_band(heading=None, dek=None, primary=("Discuss a matter", "/contact/"),
 def footer():
     ind = "".join(f'<li><a href="{i["path"]}">{i["nav_label"]}</a></li>' for i in INDUSTRIES)
     srv = "".join(f'<li><a href="{s["path"]}">{s["nav_label"]}</a></li>' for s in SERVICES)
+    lts = "".join(f'<li><a href="{l["path"]}">{l["nav_label"]}</a></li>' for l in LOSS_TYPES)
     tls = "".join(f'<li><a href="{t["path"]}">{t["nav_label"]}</a></li>' for t in TOOLS)
     ars = "".join(f'<li><a href="{a["path"]}">{a["nav_label"]}</a></li>' for a in AREAS)
     lic = license_line()
@@ -449,7 +453,7 @@ def footer():
       <div class="footer-brand">
         <span class="wm-name">Claims<b>Consultant</b></span>
         <span class="wm-sub">{esc(BIZ['tagline'])}</span>
-        <p>Independent claims consultants working large institutional and commercial
+        <p>Expert witnesses and damage consultants on large institutional and commercial
            property losses across Texas &mdash; churches, school districts, municipalities,
            campuses and portfolios. Retained by either side. The method does not change
            with the client.</p>
@@ -460,7 +464,8 @@ def footer():
       </div>
       <div class="fnav">
         <div><h4>Property types</h4><ul>{ind}</ul></div>
-        <div><h4>Claim services</h4><ul>{srv}</ul></div>
+        <div><h4>Services</h4><ul>{srv}</ul>
+            <h4 style="margin-top:26px;">Loss types</h4><ul>{lts}</ul></div>
         <div><h4>Tools &amp; calculators</h4><ul>{tls}</ul></div>
         <div>
           <h4>Service areas</h4><ul>{ars}</ul>
@@ -489,8 +494,9 @@ def footer():
       </div>
     </div>
     <p class="disclaimer">
-      {esc(BIZ['name'])} is an independent claims consulting firm providing damage assessment,
-      scope and cost analysis, time-element quantification, appraisal and expert support. We
+      {esc(BIZ['name'])} provides expert witness and damage consulting services: causation
+      analysis, damage assessment, construction cost estimating, testing and reporting, contents
+      valuation, appraisal and testimony. We
       hold Texas adjuster and public insurance adjuster licences, which is what allows us to be
       retained by either party; on any individual matter we act in one capacity only, stated in
       the engagement letter, and we never act for both parties to the same loss. We are not a
@@ -765,17 +771,17 @@ def article_page(post, related):
 def homepage():
     page = {
         "path": "/",
-        "title": "Texas Claims Consultants | Commercial Property Loss Experts",
+        "title": "Texas Expert Witness &amp; Damage Consultants | Property Loss",
         "description": (
-            "Independent claims consultants for large Texas commercial property losses. Scope, "
-            "cost analysis, business interruption and appraisal — retained by either side."
+            "Expert witness and damage consulting on large Texas commercial property losses. "
+            "Causation, cost estimating, appraisal and testimony — retained by either side."
         ),
         "page_type": "WebPage",
         "schema": [
             service_schema(
-                "Commercial claims consulting",
-                "Independent claims consulting on institutional and large commercial property losses in Texas.",
-                "/", "Claims Consulting"),
+                "Expert witness and damage consulting",
+                "Expert witness, causation and damage consulting on institutional and large commercial property losses in Texas.",
+                "/", "Expert Witness and Damage Consulting"),
             itemlist_schema("/", "Industries served",
                             [(i["nav_label"], i["path"]) for i in INDUSTRIES]),
         ],
@@ -814,20 +820,20 @@ def homepage():
   <div class="wrap">
     <div class="cols cols--7-5">
       <div>
-        <p class="eyebrow">Independent claims consulting &middot; Texas</p>
+        <p class="eyebrow">Expert witness &amp; damage consulting &middot; Texas</p>
         <h1>Two parties.<br>Two estimates.<br><em>One</em> set of facts.</h1>
-        <p class="lede">Large property losses stall because nobody has established what actually
-          happened to the building. We do that work. Policyholders, insurers, risk pools, brokers
-          and attorneys retain us for the same thing &mdash; a measured, documented, defensible
-          account of the damage and what it costs to put right.</p>
+        <p class="lede">We are damage consultants and testifying experts on large commercial
+          property losses. Causation, scope, cost and contents &mdash; established from the
+          building rather than asserted from a position, and written to survive a deposition.
+          Policyholders, insurers, risk pools and counsel all retain us for the same thing.</p>
         <div class="btn-row">
           <a class="btn" href="/contact/">Discuss a matter <span class="arw">&rarr;</span></a>
           <a class="btn btn--ghost" href="/tools/">Run the numbers first</a>
         </div>
         <div class="hero-meta">
           <span>Large commercial &amp; institutional only</span>
-          <span>Either side of the file</span>
-          <span>Fee never tied to the outcome</span>
+          <span>Retained by either side</span>
+          <span>Expert work never contingent</span>
         </div>
       </div>
       <div>
@@ -866,10 +872,11 @@ def homepage():
         <p>Each of those is answerable with facts. Most of them never get answered, because the
         people arguing are also the people with a position, and the underlying measurements were
         never taken to a standard that would settle anything.</p>
-        <p>That is the work. A measured survey, a line-item scope, specialists where the question is
-        technical, and a written basis for every judgment call &mdash; produced to the same standard
-        regardless of which party retained us. A number that only holds up for the side that paid
-        for it is not worth having.</p>
+        <p>That is the work: a measured survey, a line-item scope, laboratory analysis where the
+        question is a laboratory question, and a written basis for every judgment call &mdash;
+        produced to the same standard regardless of which party retained us. An opinion that only
+        holds up for the side that paid for it is not an opinion, and a competent cross-examiner
+        will establish that in about four minutes.</p>
         <a class="tlink" href="/how-we-work/">How a file gets built <span class="arw">&rarr;</span></a>
       </div>
     </div>
@@ -887,9 +894,9 @@ def homepage():
       valuation rules and different politics.</p>
     </div>
     <div class="stats stats--4 mt-l">
-      <div class="stat"><span class="sv">0%</span><span class="sl">Of any settlement. We bill hourly or by fixed fee, so the analysis does not move with the outcome &mdash; which is the only reason both sides can rely on it.</span></div>
+      <div class="stat"><span class="sv">0%</span><span class="sl">Contingency on expert and consulting work. The opinion does not move with the outcome, which is the first question on cross and the reason either side can rely on it.</span></div>
       <div class="stat"><span class="sv">{STATUTE['ack_days']}</span><span class="sl">Days a Texas insurer has to acknowledge a claim and begin its investigation once written notice is given.</span></div>
-      <div class="stat"><span class="sv">3</span><span class="sl">Parties to an appraisal: two appraisers and an umpire. Two signatures set the amount of loss and bind the file.</span></div>
+      <div class="stat"><span class="sv">3</span><span class="sl">Roles on an appraisal panel &mdash; two appraisers and an umpire. We serve in any of them, disclosing prior engagements first.</span></div>
       <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>
     </div>
   </div>
@@ -911,11 +918,11 @@ def homepage():
   <div class="wrap">
     <div class="cols cols--5-7">
       <div>
-        <p class="eyebrow">Claim services</p>
-        <h2>From first notice to final release.</h2>
-        <p class="dek">Most clients call us at one of three moments: the day after the loss, the day
-        the carrier's estimate lands, or the day someone realizes the file has been open eight months
-        and nothing has moved.</p>
+        <p class="eyebrow">Services</p>
+        <h2>Retained to answer a specific question.</h2>
+        <p class="dek">Most engagements begin narrow: is this hail or wear, can the casework be
+        saved, is that estimate complete, what is this inventory actually worth. Nine of those
+        questions come up often enough to have their own page.</p>
         <div class="btn-row"><a class="btn btn--ghost" href="/services/">All services</a></div>
       </div>
       <div><ul class="linklist">{svc_links}</ul></div>
@@ -1062,6 +1069,8 @@ def all_pages():
     out += [(i["path"], "0.8", "monthly") for i in INDUSTRIES]
     out += [("/services/", "0.9", "monthly")]
     out += [(s["path"], "0.8", "monthly") for s in SERVICES]
+    out += [("/loss-types/", "0.8", "monthly")]
+    out += [(l["path"], "0.7", "monthly") for l in LOSS_TYPES]
     out += [("/tools/", "0.9", "monthly")]
     out += [(t["path"], "0.8", "monthly") for t in TOOLS]
     out += [("/service-areas/", "0.8", "monthly")]

@@ -73,49 +73,49 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/commercial-property-damage-claims/</loc>
+    <loc>https://claimsconsultant.com/services/expert-witness-and-litigation-support/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/hurricane-and-windstorm-claims/</loc>
+    <loc>https://claimsconsultant.com/services/causation-determinations/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/hail-damage-claims/</loc>
+    <loc>https://claimsconsultant.com/services/cost-estimating/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/commercial-fire-claims/</loc>
+    <loc>https://claimsconsultant.com/services/insurance-appraisal/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/water-damage-and-freeze-claims/</loc>
+    <loc>https://claimsconsultant.com/services/soot-smoke-and-mold-testing/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/business-interruption-claims/</loc>
+    <loc>https://claimsconsultant.com/services/cabinet-repairability-reports/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/appraisal-and-claim-disputes/</loc>
+    <loc>https://claimsconsultant.com/services/contents-itemizing-and-pricing-disputes/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/services/denied-and-underpaid-claims/</loc>
+    <loc>https://claimsconsultant.com/services/public-adjusting/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -125,6 +125,48 @@
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/commercial-property-damage-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/hurricane-and-windstorm-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/hail-damage-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/commercial-fire-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/water-damage-and-freeze-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/loss-types/business-interruption-claims/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://claimsconsultant.com/tools/</loc>

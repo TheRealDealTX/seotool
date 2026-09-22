@@ -19,7 +19,7 @@ AREAS = [
         "card_blurb": ("Travis, Williamson and Hays counties &mdash; hail, freeze and a building "
                        "stock that doubled in fifteen years."),
         "title": "Austin Claims Consultants | Commercial Large Loss",
-        "description": "Independent claims consultants for Austin commercial and institutional property claims. Churches, school districts, city facilities and portfolios across Central Texas.",
+        "description": "Expert witness and damage consulting for Austin commercial and institutional property claims. Churches, school districts, city facilities and portfolios across Central Texas.",
         "eyebrow": "Service area &middot; Central Texas",
         "h1": "Austin commercial<br>loss <em>consulting</em>",
         "h1_plain": "Claims consultants in Austin, Texas",
@@ -82,7 +82,7 @@ AREAS = [
         "card_blurb": ("Harris and the surrounding counties &mdash; wind, surge, derecho and the "
                        "flood-versus-wind argument that follows every named storm."),
         "title": "Houston Claims Consultants | Hurricane &amp; Large Loss",
-        "description": "Independent claims consultants for Houston commercial and institutional property claims. Hurricane, windstorm, flood-versus-wind causation, fire and business interruption.",
+        "description": "Expert witness and damage consulting on Houston commercial property. Hurricane, windstorm, flood-versus-wind causation, fire and business interruption.",
         "eyebrow": "Service area &middot; Gulf Coast",
         "h1": "Houston commercial<br>and <em>catastrophe</em> claims",
         "h1_plain": "Claims consultants in Houston, Texas",
@@ -152,7 +152,7 @@ AREAS = [
         "card_blurb": ("The most hail-exposed metro in the United States, with an institutional "
                        "building stock to match."),
         "title": "Dallas&ndash;Fort Worth Claims Consultants | Hail Losses",
-        "description": "Independent claims consultants for Dallas-Fort Worth commercial and institutional property claims. Hail, wind, tornado and fire losses across the Metroplex.",
+        "description": "Expert witness and damage consulting for Dallas-Fort Worth commercial and institutional property claims. Hail, wind, tornado and fire losses across the Metroplex.",
         "eyebrow": "Service area &middot; North Texas",
         "h1": "Dallas&ndash;Fort Worth<br><em>hail</em> and large loss",
         "h1_plain": "Claims consultants in Dallas–Fort Worth",
@@ -218,7 +218,7 @@ AREAS = [
         "card_blurb": ("Bexar County and the Hill Country edge &mdash; hail, flash flood and a "
                        "deep stock of historic institutional buildings."),
         "title": "San Antonio Claims Consultants | Commercial Losses",
-        "description": "Independent claims consultants for San Antonio commercial and institutional property claims. Hail, wind, flood and fire for churches, districts and municipalities.",
+        "description": "Expert witness and damage consulting for San Antonio commercial and institutional property claims. Hail, wind, flood and fire for churches, districts and municipalities.",
         "eyebrow": "Service area &middot; South Central Texas",
         "h1": "San Antonio<br><em>institutional</em> claims",
         "h1_plain": "Claims consultants in San Antonio, Texas",
@@ -284,7 +284,7 @@ AREAS = [
         "card_blurb": ("First-tier coastal counties, TWIA wind cover, and the surge line that "
                        "decides which policy responds."),
         "title": "Coastal Bend Claims Consultants | Corpus Christi",
-        "description": "Independent claims consultants for Corpus Christi and the Coastal Bend commercial property claims. TWIA windstorm, hurricane, surge-versus-wind and business interruption.",
+        "description": "Expert witness and damage consulting on Coastal Bend commercial property. TWIA windstorm, hurricane, surge-versus-wind causation and business interruption.",
         "eyebrow": "Service area &middot; Coastal Bend",
         "h1": "Coastal Bend wind<br>and <em>surge</em> claims",
         "h1_plain": "Claims consultants in Corpus Christi and the Coastal Bend",
@@ -351,7 +351,7 @@ AREAS = [
         "card_blurb": ("Hidalgo and Cameron counties &mdash; tropical systems, flooding, and some "
                        "of the fastest institutional growth in the state."),
         "title": "Rio Grande Valley Claims Consultants | Commercial",
-        "description": "Independent claims consultants for Rio Grande Valley commercial and institutional property claims across Hidalgo, Cameron, Willacy and Starr counties.",
+        "description": "Expert witness and damage consulting for Rio Grande Valley commercial and institutional property claims across Hidalgo, Cameron, Willacy and Starr counties.",
         "eyebrow": "Service area &middot; South Texas",
         "h1": "Rio Grande Valley<br>commercial <em>claims</em>",
         "h1_plain": "Claims consultants in the Rio Grande Valley",

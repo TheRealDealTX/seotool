@@ -1,17 +1,29 @@
 # claimsconsultant.com
 
-A 58-page static SEO authority site for **Claims Consultant**, an independent
-Texas claims consulting firm working large commercial and institutional
-property losses — churches, school districts, cities, campuses, hospitals and
+A 65-page static SEO authority site for **Claims Consultant**, a Texas
+**expert witness and damage consulting** firm working large commercial and
+institutional property losses — churches, school districts, cities, campuses, hospitals and
 portfolios.
 
-**Positioning:** the firm is *not* a policyholder-side advocate. It is retained
-by either party — policyholders, insurers, TPAs, risk pools, brokers and
-counsel — and bills hourly or by fixed fee, never a percentage of the
-settlement. That independence is the product, and it is load-bearing for the
-whole site: if anyone ever adds contingency-fee or "we fight the carrier" copy,
-the both-sides positioning collapses. See `/who-we-work-for/` and
-`/disclaimer/`.
+**Positioning:** primarily expert witness and damage consulting. The firm is
+*not* a policyholder-side advocate — it is retained by either party
+(policyholders, insurers, TPAs, risk pools, brokers and counsel). Expert and
+consulting work is billed hourly or fixed fee and is **never contingent**;
+public adjusting is the one capacity where a percentage basis may apply, capped
+at 10% by §4102.104, and it is disclosed separately. That distinction is
+load-bearing: a contingent expert is impeachable on that ground alone. See
+`/who-we-work-for/`, `/services/public-adjusting/` and `/disclaimer/`.
+
+**Information architecture** — three axes, deliberately separated:
+
+| Section | Answers |
+| --- | --- |
+| `/services/` | What we are retained to *do* (9 pages) |
+| `/loss-types/` | What we are retained to do it *on* (6 pages) |
+| `/who-we-serve/` | *Whose* property it is (9 pages) |
+
+Mixing these back together is the main way this structure degrades. A peril
+(hail, fire) is a loss type, not a service.
 
 No CMS, no database, no build toolchain beyond Python 3. Upload the contents of
 this folder to any web host and it runs.
@@ -75,7 +87,7 @@ question, not a copywriting one.
 | `.htaccess` | HTTPS + non-www canonical, trailing slashes, compression, cache, security headers |
 | `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.svg`, `apple-touch-icon.png` | Generated |
 
-### Page inventory — 58 pages
+### Page inventory — 65 pages
 
 **Homepage** — `texas claims consultant` / `commercial property loss consultant`
 
@@ -85,10 +97,16 @@ municipalities · universities & colleges · hospitals & healthcare ·
 multifamily & apartments · hotels & hospitality · industrial & manufacturing ·
 retail & shopping centers
 
-**Services** (`/services/`) — 9 services, one hub. Five by cause of loss
-(commercial property damage, hurricane & windstorm, hail, fire & smoke, water &
-freeze), four by claim stage (business interruption, appraisal & disputes,
-denied & underpaid, policy review & pre-loss).
+**Services** (`/services/`) — 9 services, one hub: expert witness & litigation
+support · causation determinations · construction cost estimating · appraisal &
+umpire service · soot, smoke & mold testing and reporting · cabinet
+repairability reports · contents itemizing & pricing disputes · public
+adjusting · policy review & pre-loss consulting.
+
+**Loss types** (`/loss-types/`) — 6 pages plus a hub: commercial property
+damage, hurricane & windstorm, hail, fire & smoke, water & freeze, business
+interruption. These were previously under `/services/`; they are causes of
+loss, not services.
 
 **Tools** (`/tools/`) — 7 working calculators, one hub:
 
@@ -110,6 +128,11 @@ Each is written from the perils and policy problems specific to that metro.
 
 **Firm** — `/about/`, `/who-we-work-for/`, `/how-we-work/`, `/fees/`, `/faq/`,
 `/glossary/` (33 terms), `/contact/`.
+
+Two pages were retired in the restructure: `/services/denied-and-underpaid-
+claims/` (covered by expert witness, appraisal and cost estimating) and the old
+`/services/appraisal-and-claim-disputes/` (now `/services/insurance-appraisal/`).
+Nothing was ever published at those URLs, so no redirects were added.
 
 **Legal** — `/privacy-policy/`, `/terms/`, `/disclaimer/`, `/accessibility/`,
 `/sitemap/`, `/404.html`.

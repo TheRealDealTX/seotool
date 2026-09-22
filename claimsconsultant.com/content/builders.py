@@ -8,6 +8,7 @@ from siteconfig import BIZ, STATUTE, FOOTER_SERVING, TODAY
 
 from content.industries import INDUSTRIES
 from content.services import SERVICES
+from content.losstypes import LOSS_TYPES
 from content.tools import TOOLS
 from content.areas import AREAS
 from content.blog import POSTS
@@ -92,17 +93,18 @@ def build_all(B):
     # -------------------------------------------------------------- services
     write("/services/", build_hub(
         path="/services/",
-        eyebrow="Claim services",
-        h1="From first notice<br>to final <em>number</em>",
-        lede=("Five of these are organized by what happened to the building. Three are for "
-              "matters that are already stuck. One works best before there is a claim at all."),
+        eyebrow="Services",
+        h1="Retained to answer<br>a <em>specific</em> question",
+        lede=("Most engagements start with one narrow question &mdash; is this hail or wear, "
+              "can the casework be saved, is that estimate complete, what is this inventory "
+              "worth. These are the nine we are asked for by name."),
         items=SERVICES,
         intro_sections=sp.SERVICE_HUB_INTRO,
         trail=[("Home", "/"), ("Services", None)],
-        title="Commercial Claim Services | Texas Claims Consultants",
-        description=("Claims consulting services for Texas commercial property: hurricane, "
-                     "hail, fire, water and freeze, business interruption, appraisal, denied "
-                     "claims and policy review."),
+        title="Services | Expert Witness &amp; Damage Consulting | Texas",
+        description=("Expert witness, causation, cost estimating, appraisal, soot and mold "
+                     "testing, cabinet repairability and contents pricing on Texas commercial "
+                     "property."),
         card_mode="links",
         schema=[itemlist_schema("/services/", "Claim services",
                                 [(s["nav_label"], s["path"]) for s in SERVICES])],
@@ -127,13 +129,66 @@ def build_all(B):
             },
             {
                 "eyebrow": "Run the numbers",
-                "h2": "Tools that apply to this kind of claim.",
+                "h2": "Tools that apply to this kind of work.",
                 "blocks": [
                     ("links", [(t["card_title"], t["card_blurb"], t["path"]) for t in rel_tools]),
+                    ("html", '<div class="mt-l"><p class="kicker" style="margin-bottom:14px;">'
+                             'Loss types</p><div class="tagrow">'
+                             + "".join('<a class="tag" href="%s">%s</a>' % (l["path"], l["nav_label"])
+                                       for l in LOSS_TYPES)
+                             + '</div></div>'),
                 ],
             },
         ]
         write(svc["path"], standard_page(page))
+
+    # ------------------------------------------------------------ loss types
+    write("/loss-types/", build_hub(
+        path="/loss-types/",
+        eyebrow="Loss types",
+        h1="What happened<br>to the <em>building</em>",
+        lede=("Services describe what we are retained to do. These describe what we are "
+              "retained to do it on &mdash; the six kinds of loss that produce most of the "
+              "institutional property work in Texas, and the technical question each one "
+              "turns on."),
+        items=LOSS_TYPES,
+        intro_sections=sp.LOSS_HUB_INTRO,
+        trail=[("Home", "/"), ("Loss types", None)],
+        title="Commercial Loss Types | Hail, Wind, Fire, Water | Texas",
+        description=("Hail, hurricane and windstorm, fire and smoke, water and freeze, and "
+                     "business interruption losses on Texas commercial and institutional "
+                     "property."),
+        card_mode="cards",
+        schema=[itemlist_schema("/loss-types/", "Loss types",
+                                [(l["nav_label"], l["path"]) for l in LOSS_TYPES])],
+    ))
+
+    for idx, loss in enumerate(LOSS_TYPES):
+        rel_services = _rotate(SERVICES, idx * 2, 3)
+        rel_inds = _rotate(INDUSTRIES, idx * 3, 3)
+        page = dict(loss)
+        page["trail"] = [("Home", "/"), ("Loss types", "/loss-types/"), (loss["nav_label"], None)]
+        page["schema"] = [service_schema(loss["h1_plain"], loss["card_blurb"], loss["path"])]
+        page["sections"] = list(loss["sections"]) + [
+            {
+                "band": "paper2",
+                "eyebrow": "What we are retained for",
+                "h2": "Services that apply to this kind of loss.",
+                "blocks": [
+                    ("cards", [(s["card_title"], s["card_blurb"], s["path"]) for s in rel_services]),
+                    ("html", '<div class="mt-l"><a class="tlink" href="/services/">'
+                             'All services <span class="arw">&rarr;</span></a></div>'),
+                ],
+            },
+            {
+                "eyebrow": "Property types",
+                "h2": "Where we see this loss.",
+                "blocks": [
+                    ("cards", [(i["card_title"], i["card_blurb"], i["path"]) for i in rel_inds]),
+                ],
+            },
+        ]
+        write(loss["path"], standard_page(page))
 
     # ----------------------------------------------------------------- tools
     write("/tools/", build_hub(
@@ -345,15 +400,17 @@ def _sitemap_page(render_blocks):
         "sections": [
             {"eyebrow": "Who we serve", "h2": "Property types",
              "blocks": [links(INDUSTRIES)]},
-            {"band": "paper2", "eyebrow": "Services", "h2": "Claim services",
+            {"band": "paper2", "eyebrow": "Services", "h2": "What we are retained to do",
              "blocks": [links(SERVICES)]},
-            {"eyebrow": "Tools", "h2": "Calculators",
+            {"eyebrow": "Loss types", "h2": "What we are retained to do it on",
+             "blocks": [links(LOSS_TYPES)]},
+            {"band": "paper2", "eyebrow": "Tools", "h2": "Calculators",
              "blocks": [links(TOOLS)]},
-            {"band": "paper2", "eyebrow": "Service areas", "h2": "Where we work",
+            {"eyebrow": "Service areas", "h2": "Where we work",
              "blocks": [links(AREAS)]},
-            {"eyebrow": "Insights", "h2": "Articles",
+            {"band": "paper2", "eyebrow": "Insights", "h2": "Articles",
              "blocks": [("links", [(p["h1_plain"], p["blurb"], p["path"]) for p in POSTS])]},
-            {"band": "paper2", "eyebrow": "The firm", "h2": "About, terms and reference",
+            {"eyebrow": "The firm", "h2": "About, terms and reference",
              "blocks": [("links", [
                  ("About the firm", "Who we are, what we will not do, and how to check our license.", "/about/"),
                  ("How we work", "The method, stage by stage, with a typical timeline.", "/how-we-work/"),

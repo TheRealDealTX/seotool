@@ -25,7 +25,7 @@ INDUSTRIES = [
         "card_blurb": ("Sanctuaries, family life centers, schools and parsonages &mdash; usually "
                        "insured on values nobody has revisited in a decade."),
         "title": "Church Property Loss Consultants | Texas",
-        "description": "Independent claims consultants for Texas churches. Storm, hail, fire and water loss assessment on sanctuaries, family life centers and church schools.",
+        "description": "Expert witness and damage consulting for Texas churches. Storm, hail, fire and water loss assessment on sanctuaries, family life centers and church schools.",
         "eyebrow": "Who we serve &middot; Faith organizations",
         "h1": "Church property losses,<br>measured <em>properly</em>",
         "h1_plain": "Church insurance claims in Texas",
@@ -210,7 +210,7 @@ INDUSTRIES = [
         "card_blurb": ("Multi-campus property programs, risk-pool coverage, bond-funded buildings "
                        "and a repair window that closes in August."),
         "title": "School District Property Losses | Texas Consultants",
-        "description": "Independent claims consultants for Texas school districts. Hail, wind, fire and water claims across multi-campus property programs, risk pools and self-insured retentions.",
+        "description": "Expert witness and damage consulting for Texas school districts. Hail, wind, fire and water losses across multi-campus programs and risk pools.",
         "eyebrow": "Who we serve &middot; Public education",
         "h1": "School district claims,<br>settled before <em>August</em>",
         "h1_plain": "School district property insurance claims",
@@ -377,7 +377,7 @@ INDUSTRIES = [
         "card_blurb": ("City halls, public safety, utilities and public works &mdash; with FEMA, a "
                        "council and the open-records file all watching."),
         "title": "Municipal Property Losses | Texas Claims Consultants",
-        "description": "Independent claims consultants for Texas cities and municipal entities. City hall, public safety, utilities and public works claims, including FEMA coordination.",
+        "description": "Expert witness and damage consulting for Texas cities and municipal entities. City hall, public safety, utilities and public works claims, including FEMA coordination.",
         "eyebrow": "Who we serve &middot; Local government",
         "h1": "Municipal claims, built<br>for the <em>public record</em>",
         "h1_plain": "Municipal and city property insurance claims",
@@ -414,7 +414,7 @@ INDUSTRIES = [
                           "condition, and keep the emergency spend in a separate, defensible "
                           "ledger so it can be presented as reasonable mitigation expense rather "
                           "than argued about as uncontrolled cost."),
-                    ("html", '<a class="tlink" href="/services/business-interruption-claims/">'
+                    ("html", '<a class="tlink" href="/loss-types/business-interruption-claims/">'
                              'Extra expense and continuity losses <span class="arw">&rarr;</span></a>'),
                 ],
                 "aside": [
@@ -480,30 +480,30 @@ INDUSTRIES = [
                          "Often the oldest structure on the schedule, frequently historic, almost "
                          "always the one where ordinance and law coverage decides the outcome. "
                          "Records rooms and server rooms are the hidden exposure.",
-                         "/services/commercial-property-damage-claims/"),
+                         "/loss-types/commercial-property-damage-claims/"),
                         ("Police, fire &amp; EMS",
                          "Apparatus bays, dispatch and communications, backup power, and a "
                          "continuity requirement that forbids waiting. Extra expense is usually the "
                          "larger half of the claim.",
-                         "/services/business-interruption-claims/"),
+                         "/loss-types/business-interruption-claims/"),
                         ("Water, wastewater &amp; utilities",
                          "Control buildings, SCADA, pump and lift stations, chemical storage. "
                          "Equipment breakdown and property coverage overlap here and carriers "
                          "exploit the seam.",
-                         "/services/water-damage-and-freeze-claims/"),
+                         "/loss-types/water-damage-and-freeze-claims/"),
                         ("Public works &amp; fleet",
                          "Barns, shops, salt and material storage, fuel islands and vehicle "
                          "inventory. The buildings are cheap and the contents are not.",
-                         "/services/hail-damage-claims/"),
+                         "/loss-types/hail-damage-claims/"),
                         ("Libraries, museums &amp; community centers",
                          "Collections, archives and special contents with valuation problems of "
                          "their own, plus smoke and water exposure far beyond the burn area.",
-                         "/services/commercial-fire-claims/"),
+                         "/loss-types/commercial-fire-claims/"),
                         ("Parks, pools &amp; athletic facilities",
                          "Pavilions, press boxes, lighting, netting, shade structures and pool "
                          "mechanical &mdash; routinely omitted from the carrier&rsquo;s inspection "
                          "list entirely.",
-                         "/services/hurricane-and-windstorm-claims/"),
+                         "/loss-types/hurricane-and-windstorm-claims/"),
                     ]),
                 ],
             },
@@ -564,7 +564,7 @@ INDUSTRIES = [
         "card_blurb": ("Campus-wide schedules, research exposure, auxiliary revenue and blanket "
                        "limits nobody has stress-tested."),
         "title": "University &amp; College Property | Texas Consultants",
-        "description": "Independent claims consultants for Texas universities and colleges. Residence halls, research facilities, athletics and auxiliary revenue interruption claims.",
+        "description": "Expert witness and damage consulting for Texas universities and colleges. Residence halls, research facilities, athletics and auxiliary revenue interruption claims.",
         "eyebrow": "Who we serve &middot; Higher education",
         "h1": "Campus losses are<br><em>portfolio</em> losses",
         "h1_plain": "University and college property insurance claims",
@@ -697,7 +697,7 @@ INDUSTRIES = [
         "card_blurb": ("Where remediation standards, licensure and patient volume all constrain "
                        "what a repair is allowed to be."),
         "title": "Hospital &amp; Healthcare Property | Texas Consultants",
-        "description": "Independent claims consultants for Texas hospitals and surgery centers. Water, fire and storm losses with infection control, licensure and patient-volume exposure.",
+        "description": "Expert witness and damage consulting for Texas hospitals and surgery centers. Water, fire and storm losses with infection control, licensure and patient-volume exposure.",
         "eyebrow": "Who we serve &middot; Healthcare",
         "h1": "In healthcare, the<br>repair standard <em>is</em> the claim",
         "h1_plain": "Hospital and healthcare property insurance claims",
@@ -732,7 +732,7 @@ INDUSTRIES = [
                           "way to do the repair, and it belongs in the claim as such &mdash; with "
                           "the protocol, the contractor&rsquo;s ICRA documentation and the "
                           "clearance testing attached as proof."),
-                    ("html", '<a class="tlink" href="/services/water-damage-and-freeze-claims/">'
+                    ("html", '<a class="tlink" href="/loss-types/water-damage-and-freeze-claims/">'
                              'Water and freeze claims <span class="arw">&rarr;</span></a>'),
                 ],
                 "aside": [
@@ -815,7 +815,7 @@ INDUSTRIES = [
         "card_blurb": ("Per-building deductibles, loss of rents, and a unit-by-unit scope nobody "
                        "on the carrier&rsquo;s side wants to walk."),
         "title": "Apartment &amp; Multifamily Insurance Claims | Texas",
-        "description": "Independent claims consultants for Texas apartment communities, multifamily portfolios and condominium associations. Hail, wind, fire, freeze and loss-of-rents claims.",
+        "description": "Expert witness and damage consulting for Texas apartment communities, multifamily portfolios and condominium associations. Hail, wind, fire, freeze and loss-of-rents claims.",
         "eyebrow": "Who we serve &middot; Multifamily",
         "h1": "Two hundred units,<br>one <em>walked</em> building",
         "h1_plain": "Apartment and multifamily property claims",
@@ -939,7 +939,7 @@ INDUSTRIES = [
         "card_blurb": ("Where the room-nights lost are worth more than the drywall, and the brand "
                        "standard dictates the scope."),
         "title": "Hotel Insurance Claims | Texas Hospitality Adjusters",
-        "description": "Independent claims consultants for Texas hotels and resorts. Storm, fire, water and business interruption claims measured in room nights, ADR and RevPAR.",
+        "description": "Expert witness and damage consulting for Texas hotels and resorts. Storm, fire, water and business interruption claims measured in room nights, ADR and RevPAR.",
         "eyebrow": "Who we serve &middot; Hospitality",
         "h1": "Rooms out of<br>inventory are the <em>loss</em>",
         "h1_plain": "Hotel and hospitality insurance claims",
@@ -1050,7 +1050,7 @@ INDUSTRIES = [
         "card_blurb": ("Plants, warehouses and distribution centers, where the equipment and the "
                        "downtime dwarf the building."),
         "title": "Manufacturing &amp; Warehouse Losses | Texas Consultants",
-        "description": "Independent claims consultants for Texas manufacturers and warehouses. Equipment, stock, contingent business interruption and extra expense claims.",
+        "description": "Expert witness and damage consulting for Texas manufacturers and warehouses. Equipment, stock, contingent business interruption and extra expense claims.",
         "eyebrow": "Who we serve &middot; Industrial",
         "h1": "The building is the<br><em>cheapest</em> thing in it",
         "h1_plain": "Manufacturing, warehouse and distribution claims",
@@ -1177,7 +1177,7 @@ INDUSTRIES = [
         "card_blurb": ("Landlord and tenant obligations, loss of rents, co-tenancy exposure and a "
                        "roof nobody has walked in four years."),
         "title": "Shopping Center &amp; Retail Losses | Consultants",
-        "description": "Independent claims consultants for Texas shopping centers and retail owners. Hail and wind damage, loss of rents, tenant disruption and co-tenancy exposure.",
+        "description": "Expert witness and damage consulting for Texas shopping centers and retail owners. Hail and wind damage, loss of rents, tenant disruption and co-tenancy exposure.",
         "eyebrow": "Who we serve &middot; Retail",
         "h1": "One roof, fourteen<br>tenants, <em>one</em> claim",
         "h1_plain": "Shopping center and retail property claims",

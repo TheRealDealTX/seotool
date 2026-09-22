@@ -13,9 +13,10 @@ from datetime import date
 BIZ = {
     "name": "Claims Consultant",
     "legal_name": "Claims Consultant",           # TODO: registered entity name
-    "tagline": "Independent Claims Consulting",
-    "descriptor": ("independent claims consultants retained by policyholders, insurers, risk "
-                   "pools, brokers and counsel on large commercial property losses"),
+    "tagline": "Expert Witness & Damage Consulting",
+    "descriptor": ("expert witnesses and damage consultants retained by policyholders, "
+                   "insurers, risk pools, brokers and counsel on large commercial property "
+                   "losses"),
     "phone_display": "(832) 503-5866",
     "phone_href": "+18325035866",
     "email": "info@claimsconsultant.com",        # TODO: real inbox
@@ -48,16 +49,20 @@ STATUTE = {
 
 # How we are paid. Stated in one place because it appears on several pages and
 # because it is the thing that makes working either side possible.
+# Expert, consulting and appraisal work is never contingent. Public adjusting
+# is the one capacity where a percentage basis may apply, capped by statute.
 FEES = {
     "basis": "Hourly, fixed-fee or per-project",
-    "not": "Never a percentage of the settlement",
+    "not": "Never contingent on expert or consulting work",
+    "pa_cap": "10%",
+    "pa_cite": "Tex. Ins. Code &sect;4102.104",
 }
 
 NAV = [
-    ("Who We Serve", "/who-we-serve/"),
     ("Services", "/services/"),
+    ("Loss Types", "/loss-types/"),
+    ("Who We Serve", "/who-we-serve/"),
     ("Tools", "/tools/"),
-    ("Service Areas", "/service-areas/"),
     ("Insights", "/blog/"),
     ("Firm", "/about/"),
 ]

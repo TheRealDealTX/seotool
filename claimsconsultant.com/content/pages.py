@@ -108,18 +108,47 @@ INDUSTRY_HUB_INTRO = [
     },
 ]
 
+LOSS_HUB_INTRO = [
+    {
+        "eyebrow": "Why it is split this way",
+        "h2": "The peril decides the evidence. The service decides the deliverable.",
+        "blocks": [
+            ("p", "A hail file and a freeze file need the same things from us &mdash; a scope, "
+                  "a cost, a causation opinion, sometimes testimony. What differs completely is "
+                  "the evidence that answers the question, and how fast it disappears. Test cuts "
+                  "and soft-metal spatter settle a hail argument. Building management system "
+                  "logs and a retained section of failed pipe settle a freeze argument. Neither "
+                  "helps with the other."),
+            ("p", "These six pages set out what each kind of loss turns on, what tends to get "
+                  "under-scoped, and which specialist the question eventually needs."),
+        ],
+        "aside": [
+            ("callout", "Evidence has a shelf life", [
+                ("p", "On most of these, the material that would settle the dispute is gone "
+                      "within weeks &mdash; cleaned, tarped, dried, demolished or repaired. It "
+                      "is the single strongest argument for an early inspection, whichever side "
+                      "is asking."),
+            ]),
+        ],
+    },
+]
+
 SERVICE_HUB_INTRO = [
     {
         "eyebrow": "How to use this",
         "h2": "The first five are causes of loss. The last four are stages.",
         "blocks": [
-            ("p", "Most people arrive knowing what happened to the building, so the first five "
-                  "pages are organized by peril: wind, hail, fire, water and the general case. "
-                  "Each sets out the technical question that peril raises and the evidence that "
-                  "answers it."),
-            ("p", "The last four are for matters that are already contested &mdash; deadlocked "
-                  "on amount, headed for appraisal, or being tested by the other side &mdash; "
-                  "plus the one service that works best before there is a claim at all."),
+            ("p", "The first four are the analytical core of the practice: testimony, "
+                  "causation, cost estimating and appraisal. Most engagements are one of those, "
+                  "and most of them start as a single narrow question rather than as a whole "
+                  "claim."),
+            ("p", "The next three are technical reports we are asked for by name &mdash; soot, "
+                  "smoke and mold testing, cabinet repairability, contents itemizing and "
+                  "pricing. They are narrow, they are frequently decisive, and they are cheap "
+                  "relative to the argument they settle."),
+            ("p", "The last two are different in kind. Public adjusting is the one capacity "
+                  "where we act as a party&rsquo;s representative rather than establishing "
+                  "facts. Policy review works best before there is a claim at all."),
         ],
         "aside": [
             ("ledger", "Engagement shapes", [
@@ -469,7 +498,7 @@ HOW_WE_WORK = {
                       "more to you than saying it in month fourteen."),
                 ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">Discuss a matter '
                          '<span class="arw">&rarr;</span></a>'
-                         '<a class="btn btn--ghost" href="/services/appraisal-and-claim-disputes/">About appraisal</a></div>'),
+                         '<a class="btn btn--ghost" href="/services/insurance-appraisal/">About appraisal</a></div>'),
             ],
         },
     ],
@@ -1069,12 +1098,12 @@ CLIENTS = {
                      "Scope verification and cost review on large or unusual losses, specialist "
                      "assessment where the in-house estimate needs support, and independent "
                      "critique of a presented claim.",
-                     "/services/commercial-property-damage-claims/"),
+                     "/loss-types/commercial-property-damage-claims/"),
                     ("TPAs &amp; independent adjusting firms",
                      "Surge capacity and technical depth on files past the point where a general "
                      "estimating platform helps &mdash; complex roofs, production equipment, "
                      "laboratory and healthcare environments.",
-                     "/services/hail-damage-claims/"),
+                     "/loss-types/hail-damage-claims/"),
                     ("Risk pools &amp; self-insureds",
                      "Interlocal pools and entities carrying large retentions, where the "
                      "coverage document is not a standard policy and the appeal route is its "
@@ -1088,7 +1117,7 @@ CLIENTS = {
                      "Expert reports, estimate critiques, damage and cost opinions, deposition "
                      "and trial testimony &mdash; for policyholder counsel and for coverage and "
                      "defense counsel alike.",
-                     "/services/appraisal-and-claim-disputes/"),
+                     "/services/insurance-appraisal/"),
                 ]),
             ],
         },

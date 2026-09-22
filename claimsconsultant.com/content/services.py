@@ -1,768 +1,428 @@
-"""The nine claim services.
+"""What we are retained to do.
 
-Written the way the work actually divides: by the cause of loss for the first
-five, then by the stage the file is stuck at for the last four.
+Ordered the way engagements actually arrive: testimony and causation first,
+then the estimating and appraisal work, then the three technical report types
+we are asked for by name, then representation and pre-loss work.
+
+Loss types &mdash; hail, fire, water, wind &mdash; live in content/losstypes.py.
 """
 
-from siteconfig import BIZ, STATUTE
+from siteconfig import BIZ, STATUTE, FEES
 
 P = BIZ["phone_display"]
 
 SERVICES = [
 
-    # ============================================== flagship / all perils ==
+    # ========================================================= expert witness
     {
-        "slug": "commercial-property-damage-claims",
-        "nav_label": "Commercial Property Damage",
-        "card_title": "Commercial property damage claims",
-        "card_blurb": ("The whole file, first notice to final release &mdash; scope, valuation, "
-                       "documentation and negotiation."),
-        "title": "Commercial Property Damage | Texas Claims Consultants",
-        "description": "Independent claims consultants for large commercial property damage in Texas. We scope, document and value the loss to an evidentiary standard.",
-        "eyebrow": "Service &middot; Full claim representation",
-        "h1": "Commercial losses,<br>established as <em>fact</em>",
-        "h1_plain": "Commercial property damage claims",
-        "lede": ("Insurers do not underpay large claims with a single dramatic decision. They do it "
-                 "with forty small ones, each defensible on its own. The counter is not outrage. "
-                 "It is a file built to the same standard, item by item, with an opposite "
-                 "incentive behind it."),
+        "slug": "expert-witness-and-litigation-support",
+        "nav_label": "Expert Witness",
+        "card_title": "Expert witness &amp; litigation support",
+        "card_blurb": ("Reports, rebuttals, deposition and trial testimony on damage, scope, "
+                       "causation and cost &mdash; for either side."),
+        "title": "Property Damage Expert Witness | Texas Litigation Support",
+        "description": ("Expert witness and litigation support on Texas property damage: scope, "
+                        "cost, causation and estimate critique. Reports, depositions and trial "
+                        "testimony for either party."),
+        "eyebrow": "Service &middot; Testimony",
+        "h1": "An opinion that<br>survives <em>cross</em>",
+        "h1_plain": "Expert witness and litigation support",
+        "lede": ("The question that decides an expert&rsquo;s value is not what they concluded. "
+                 "It is what happens when a competent attorney spends two hours trying to take "
+                 "the conclusion apart. Everything about how we work is built backwards from "
+                 "that afternoon."),
         "head_aside": [
-            ("ledger", "What full representation covers", [
-                ("Policy analysis", "Day 1"),
-                ("Site documentation", "Days 1&ndash;10"),
-                ("Line-item estimate", "Weeks 2&ndash;5"),
-                ("Experts engaged", "As warranted"),
-                ("Proof of loss", "Prepared"),
-                ("Negotiation", "To settlement"),
-            ], "We do not hand you a report and leave. The engagement runs until the claim closes "
-               "or you end it."),
+            ("ledger", "Engagement facts", [
+                ("Retained by", "Either party"),
+                ("Fee basis", "Hourly"),
+                ("Contingent", "Never"),
+                ("Prior testimony", "Disclosed"),
+                ("Conflict check", "Before intake"),
+                ("Report standard", "TRE 702"),
+            ], "Fee never varies with the outcome. It is the first question on cross and it "
+               "should have a boring answer."),
         ],
         "sections": [
             {
-                "eyebrow": "The gap",
-                "h2": "Where the money actually goes missing.",
+                "eyebrow": "The standard",
+                "h2": "Reliability is a method question, not a credentials question.",
                 "blocks": [
-                    ("p", "Ask ten commercial policyholders why their settlement was short and most "
-                          "will say the adjuster lowballed them. In our experience that is rarely "
-                          "what happened. The estimate was produced competently, from a template, "
-                          "by someone under production pressure who had ninety minutes on site and "
-                          "no instruction to look for anything not immediately visible."),
-                    ("p", "The result is a document that is accurate about what it contains and "
-                          "silent about everything else. Silence is what costs money."),
-                    ("table", "The eight recurring omissions", ["Item", "The carrier&rsquo;s position", "The counter-argument"], [
-                        ["Overhead and profit",
-                         "Not owed unless a general contractor is actually used.",
-                         "Reasonably likely to be needed is the usual test, and three or more trades is the usual threshold. On commercial work it is nearly always met."],
-                        ["Code and ordinance upgrades",
-                         "Betterment. The policy pays to restore, not improve.",
-                         "That is what Coverage B and C exist for. The question is the limit, not the entitlement."],
-                        ["Matching of undamaged areas",
-                         "Only the damaged slope, elevation or room is owed.",
-                         "Turns on the policy wording and on proof the product is discontinued or cannot be reasonably matched."],
-                        ["Depreciation on labor",
-                         "Applied as a matter of course by the estimating software.",
-                         "Labor does not wear out. Whether it may be depreciated turns on the valuation wording."],
-                        ["Access, protection and containment",
-                         "Overheads absorbed in unit cost.",
-                         "Scaffolding, lifts, floor protection, dust control and after-hours working are real line items on occupied commercial property."],
-                        ["Consultant and engineering fees",
-                         "Not a covered cost of repair.",
-                         "Where design professionals are required to permit and execute the repair, they are part of the cost of repair."],
-                        ["Soft costs and general conditions",
-                         "Folded into a percentage allowance.",
-                         "On a job of any size, supervision, temporary utilities, permits and logistics are quantifiable and separately owed."],
-                        ["Time-element loss",
-                         "Left for later, then time-barred or forgotten.",
-                         "Business income and extra expense must be documented from day one or they cannot be proved at all."],
+                    ("p", "Texas Rule of Evidence 702 lets a qualified expert give opinion "
+                          "testimony where it will help the trier of fact, and Texas courts test "
+                          "that opinion for reliability and relevance. In practice the challenge "
+                          "is rarely aimed at whether the witness is qualified. It is aimed at "
+                          "the gap between the data and the conclusion &mdash; whether the method "
+                          "can be described, whether it was actually followed, and whether "
+                          "someone else applying it would reach the same place."),
+                    ("p", "That has consequences for how a file is built long before anyone files "
+                          "anything. Measurements have to be recorded, not remembered. "
+                          "Assumptions have to be stated as assumptions. Photographs have to be "
+                          "indexed to locations. Where a conclusion rests on something we did not "
+                          "personally observe, the report has to say so."),
+                    ("p", "The corollary is that we will not write an opinion we cannot defend. "
+                          "If the evidence does not support the position the retaining party "
+                          "wants, we say so in the first conversation, in writing if it helps, "
+                          "and the engagement ends there. That is a cheaper outcome than a "
+                          "withdrawn expert in month nine."),
+                ],
+                "aside": [
+                    ("callout", "The credibility ledger", [
+                        ("p", "Every expert accumulates a record: who retained them, what they "
+                              "concluded, how often those two correlate. Ours is deliberately "
+                              "mixed, because a witness whose opinions always favor the paying "
+                              "side is an advocate with a CV. Prior engagements and testimony are "
+                              "disclosed on request &mdash; and to opposing counsel as a matter "
+                              "of course."),
                     ]),
                 ],
             },
             {
                 "band": "paper2",
+                "eyebrow": "Deliverables",
+                "h2": "What an engagement actually produces.",
+                "blocks": [
+                    ("table", "Work product", ["Deliverable", "What it contains", "Typical stage"], [
+                        ["Preliminary assessment",
+                         "A short written view on whether the position is supportable, before anyone commits to a report.",
+                         "Pre-suit, or on first review of the file"],
+                        ["Expert report",
+                         "Qualifications, materials reviewed, methodology, observations, opinions and the basis for each, with photographic and measurement appendices.",
+                         "Per the scheduling order"],
+                        ["Rebuttal report",
+                         "A methodology-level critique of the opposing expert: scope of inspection, data sources, assumptions, internal consistency, and what the report does not say.",
+                         "After opposing disclosure"],
+                        ["Estimate variance analysis",
+                         "Line-by-line reconciliation of two competing estimates, showing where the difference actually sits and how much each disputed item is worth.",
+                         "Mediation and appraisal prep"],
+                        ["Deposition",
+                         "Preparation, testimony, and a written note of anything the deposition changed in our view.",
+                         "Discovery"],
+                        ["Trial testimony &amp; demonstratives",
+                         "Direct and cross testimony, with exhibits built to be understood by people who have never walked the building.",
+                         "Trial"],
+                    ]),
+                    ("callout", "Working through counsel", [
+                        ("p", "On matters heading to litigation, engagement through counsel "
+                              "rather than directly through the party is common. How that affects "
+                              "privilege, work product and discoverability is a question for the "
+                              "attorney; we simply follow whatever structure they set and keep "
+                              "our file accordingly."),
+                    ]),
+                ],
+            },
+            {
+                "band": "ink",
+                "eyebrow": "Scope of opinion",
+                "h2": "What we will and will not opine on.",
+                "blocks": [
+                    ("checks", [
+                        "<strong>Will:</strong> the extent of physical damage, the scope of work required to repair it, the reasonable cost of that work, and whether an opposing estimate is complete.",
+                        "<strong>Will:</strong> causation within our competence &mdash; hail versus wear, wind versus water, freeze versus long-term seepage, impact versus settlement.",
+                        "<strong>Will:</strong> the period reasonably required to repair, and the documentary basis of a time-element calculation.",
+                        "<strong>Will not:</strong> interpret the policy or opine on coverage. That is counsel&rsquo;s work and a court&rsquo;s.",
+                        "<strong>Will not:</strong> opine on structural engineering, industrial hygiene or accounting where those require a separate licensed discipline. We identify what is needed and work alongside it.",
+                        "<strong>Will not:</strong> accept an engagement where the conclusion is specified in advance.",
+                    ]),
+                ],
+            },
+        ],
+        "faqs": [
+            ("Do you testify for policyholders or for insurers?",
+             "<p>Both, and not in fixed proportion. It is the single most useful thing about the "
+             "practice and the single most awkward thing to establish if you have never done it "
+             "&mdash; which is why firms that start on one side tend to stay there. Prior "
+             "engagements are disclosed, and if either party is uncomfortable with our history "
+             "they should say so early.</p>"),
+            ("Is the fee ever contingent on the outcome?",
+             "<p>No, and it never will be for expert or consulting work. A contingent expert is "
+             "impeachable on that basis alone, and correctly so. Hourly, at a posted rate, with "
+             "testimony time billed at the same rate whether the testimony helps or not.</p>"),
+            ("Can you review another expert&rsquo;s report without producing one of your own?",
+             "<p>Yes, and it is a common and inexpensive first engagement. A methodology review "
+             "of an opposing report frequently tells counsel what they need to know &mdash; "
+             "whether the opinion is vulnerable, and on what ground &mdash; without the cost of a "
+             "full competing analysis.</p>"),
+            ("How late can we bring you in?",
+             "<p>Later than is ideal, usually. The binding constraints are the scheduling order "
+             "and the condition of the property. If the building has been repaired we work from "
+             "the documentary record, which is harder and frequently still viable. If the "
+             "disclosure deadline has passed, that is a question for counsel before it is a "
+             "question for us.</p>"),
+        ],
+    },
+
+    # ================================================== causation determination
+    {
+        "slug": "causation-determinations",
+        "nav_label": "Causation Determinations",
+        "card_title": "Causation determinations",
+        "card_blurb": ("What actually caused the damage, and when &mdash; hail or wear, wind or "
+                       "water, freeze or long-term seepage."),
+        "title": "Property Damage Causation Determination | Texas Consultants",
+        "description": ("Independent causation analysis on Texas commercial property damage: "
+                        "hail versus wear, wind versus water, freeze versus seepage, and the "
+                        "date-of-loss question."),
+        "eyebrow": "Service &middot; Causation",
+        "h1": "What caused it,<br>and <em>when</em>",
+        "h1_plain": "Causation determinations",
+        "lede": ("Almost every contested property claim turns into a causation argument "
+                 "eventually. Not whether the building is damaged &mdash; that is usually agreed "
+                 "&mdash; but whether the thing that damaged it is the thing the policy responds "
+                 "to, and whether it happened inside the policy period."),
+        "head_aside": [
+            ("ledger", "The four recurring questions", [
+                ("Hail or wear?", "Test cuts"),
+                ("Wind or water?", "Water line"),
+                ("Freeze or seepage?", "Records"),
+                ("Impact or settlement?", "Pattern"),
+                ("Which storm?", "Dated imagery"),
+                ("Inside the period?", "All of the above"),
+            ], "Each has a physical answer. The difficulty is that the evidence for it decays "
+               "within weeks."),
+        ],
+        "sections": [
+            {
                 "eyebrow": "Method",
-                "h2": "One survey, three documents, no improvisation.",
+                "h2": "Differential analysis, not assertion.",
                 "blocks": [
-                    ("steps", [
-                        ("Coverage analysis",
-                         "<p>Declarations, forms, endorsements, schedule of values and any prior "
-                         "loss history. We produce a written coverage summary before the site "
-                         "visit: limits, sub-limits, deductible mechanics, valuation basis, "
-                         "coinsurance or agreed value, ordinance and law, time-element structure, "
-                         "and every condition that carries a deadline.</p>"),
-                        ("Forensic documentation",
-                         "<p>Measured survey of the whole property, not a sample. Photography "
-                         "indexed by location. Drone and thermal where it earns its place. "
-                         "Moisture mapping. Test cuts on roofing where the dispute will be about "
-                         "membrane and insulation. Engineers, industrial hygienists, forensic "
-                         "accountants and specialist trades engaged where the loss warrants them "
-                         "&mdash; and not where it does not.</p>"),
-                        ("Estimate and proof of loss",
-                         "<p>A line-item estimate in the industry-standard platform, priced to "
-                         "your market and your occupancy, with code work, soft costs, contents and "
-                         "time-element carried separately. Then a sworn proof of loss that states "
-                         "a number and starts the carrier&rsquo;s clock rather than waiting on "
-                         "theirs.</p>"),
-                        ("Negotiation, appraisal or referral",
-                         "<p>Differences itemised in writing, positions dated, supplements filed "
-                         "as actual costs come in. Where the gap is about the amount of loss and "
-                         "will not close, appraisal. Where it is about coverage, we tell you it is "
-                         "time for a lawyer &mdash; and we say so early.</p>"),
-                    ]),
-                ],
-            },
-            {
-                "band": "ink",
-                "eyebrow": "Boundaries",
-                "h2": "What we will not do.",
-                "blocks": [
+                    ("p", "A causation opinion is only worth what its method is worth. Ours is "
+                          "conventional and deliberately unexciting: identify every mechanism "
+                          "capable of producing the observed condition, gather the physical "
+                          "evidence that distinguishes them, and eliminate the ones the evidence "
+                          "does not support. Where the evidence does not eliminate a competing "
+                          "cause, the report says the question is open rather than picking the "
+                          "convenient answer."),
+                    ("p", "That last habit is what makes the rest of a report credible. An expert "
+                          "who resolves every ambiguity in favor of the party paying them has "
+                          "told you nothing about the ambiguities."),
                     ("checks", [
-                        "We do not give legal advice or hold ourselves out as attorneys. When a file needs counsel, we say so and step into a support role.",
-                        "We do not take referral fees from contractors, and we do not direct repairs to a preferred vendor. You choose who does the work.",
-                        "We do not inflate a scope. Every line has to survive an examination under oath and a forensic review, because on files this size it frequently gets one.",
-                        "We do not take claims we cannot move. If the policy simply does not respond, we will tell you that in the first conversation rather than after you have signed.",
+                        "Site inspection with measured documentation and location-indexed photography, before anything is cleaned or repaired.",
+                        "Destructive testing where the question lives below the surface &mdash; roof test cuts, cavity openings, cabinet and substrate sampling.",
+                        "Address-specific weather data for the claimed date of loss, rather than the nearest reporting station or a regional summary.",
+                        "Dated aerial and satellite imagery to bracket when a condition first appeared, which is what answers the intervening-storm argument.",
+                        "The building&rsquo;s own records: maintenance logs, prior inspection and survey reports, warranty status, earlier claims and what was repaired.",
+                        "Laboratory analysis where the material itself carries the answer &mdash; soot and char characterization, corrosion products, microbial speciation.",
+                    ]),
+                ],
+                "aside": [
+                    ("callout", "The date-of-loss problem", [
+                        ("p", "On commercial roofs in particular, the hardest question is not "
+                              "whether hail caused the damage but which hail. Multiple severe "
+                              "events across a metro over fifteen years give either party a date "
+                              "to point at. Answering it needs dated imagery, prior claim "
+                              "history, and evidence of what was actually repaired after each "
+                              "event &mdash; not an opinion about probability."),
+                    ]),
+                ],
+            },
+            {
+                "band": "paper2",
+                "eyebrow": "The four arguments",
+                "h2": "What separates each pair, physically.",
+                "blocks": [
+                    ("table", "Distinguishing evidence",
+                     ["The question", "Evidence that separates them"], [
+                        ["Hail impact or normal weathering",
+                         "Fractured insulation beneath an intact membrane, seen in test cuts; directional consistency across elevations; spatter and denting on soft metals and rooftop equipment; granule displacement patterns; the roof&rsquo;s documented condition and maintenance before the event."],
+                        ["Wind-driven rain or surge and flood",
+                         "High-water marks and debris deposition lines; the condition of the roof and upper floors relative to the water line; direction of structural failure; the timing of the wind field against the surge, from data specific to the coordinates."],
+                        ["Freeze rupture or long-term seepage",
+                         "The failed component itself, retained and examined; building management system and thermostat logs; utility outage records for the address and period; material condition analysis distinguishing recent saturation from long-term staining and microbial growth."],
+                        ["Impact damage or foundation movement",
+                         "Crack morphology, width and propagation direction; whether displacement is consistent across elements; elevation survey; whether the pattern radiates from a point of impact or follows a settlement plane."],
+                     ]),
+                    ("callout", "Where we hand off", [
+                        ("p", "Causation frequently reaches a point where a licensed professional "
+                              "engineer, an origin-and-cause investigator or an industrial "
+                              "hygienist is required rather than optional. We say so and work "
+                              "alongside them. An opinion offered outside the witness&rsquo;s "
+                              "competence is the easiest thing in the world to strike."),
                     ]),
                 ],
             },
         ],
         "faqs": [
-            ("At what point in a claim should we bring you in?",
-             "<p>Before the first inspection if you can, because the scope documented in week one "
-             "is the scope everybody argues from afterwards. That said, the majority of our "
-             "engagements start later &mdash; when an estimate arrives that is obviously short, "
-             "when a file has gone quiet for months, or when a denial letter lands. All of those "
-             "are workable. What is genuinely hard is a claim where repairs are complete, records "
-             "are thin and the limitation period is close.</p>"),
-            ("How much does it cost?",
-             "<p>Hourly, or a fixed fee where the deliverable is well defined, agreed in writing "
-         "before we start and quoted against a written estimate of hours. Never a percentage "
-         "of the settlement and never contingent on the outcome &mdash; that constraint is "
-         "what lets the same analysis be handed to the other party, an appraisal panel or a "
-         "court without anyone discounting it for who paid. See <a href=\"/fees/\">fees and engagement terms</a>.</p>"),
-            ("Do we have to engage you for the whole matter?",
-             "<p>No. Limited engagements are common on institutional files: the roofs only, the "
-             "time-element loss only, the disputed supplement only. The engagement letter defines "
-             "the scope and the fee applies to that scope.</p>"),
-            ("Can you work with our attorney?",
-             "<p>Routinely, and it is often the right structure. Counsel handles coverage, statutory "
-             "remedies and litigation; we handle scope, valuation and the evidentiary record. On "
-             "weather claims subject to chapter 542A the pre-suit notice and inspection mechanics "
-             "make that division of labor particularly useful.</p>"),
+            ("The other side already has an engineering report. Is it too late?",
+             "<p>No, and reading theirs carefully is the first thing to do. Engineering reports "
+             "are frequently narrower than their conclusions suggest: a visual-only inspection, "
+             "two roof sections out of nine, weather data from a station fifteen miles away, "
+             "assumptions about prior condition stated without support. The methodology section "
+             "is where a rebuttal is usually found.</p>"),
+            ("Can you determine causation if the property has already been repaired?",
+             "<p>Sometimes, from the documentary record &mdash; contractor photographs, invoices, "
+             "change orders, retained materials, pre-loss survey imagery and maintenance files. "
+             "It is materially harder and the resulting opinion is correspondingly more "
+             "qualified. We will tell you honestly whether what survives can support a "
+             "conclusion.</p>"),
+            ("Do you do origin and cause investigation on fires?",
+             "<p>Fire origin and cause is its own discipline with its own investigator "
+             "qualifications, and we do not hold ourselves out in it. What we do is everything "
+             "downstream: the extent of fire, smoke and suppression-water damage, whether "
+             "materials are restorable, and the cost of the repair.</p>"),
         ],
     },
 
-    # ============================================================= wind ====
+    # ========================================================= cost estimating
     {
-        "slug": "hurricane-and-windstorm-claims",
-        "nav_label": "Hurricane &amp; Windstorm",
-        "card_title": "Hurricane &amp; windstorm claims",
-        "card_blurb": ("Named-storm deductibles, wind-versus-water causation, and coastal wording "
-                       "that behaves differently from the rest of the state."),
-        "title": "Hurricane &amp; Windstorm Losses | Texas Claims Consultants",
-        "description": "Independent claims consultants for Texas hurricane and windstorm losses on commercial property. Named storm deductibles, wind-versus-flood causation and TWIA.",
-        "eyebrow": "Service &middot; Named storm",
-        "h1": "Wind, water, and the<br>line <em>between</em> them",
-        "h1_plain": "Hurricane and windstorm damage claims",
-        "lede": ("After a named storm the coverage question is almost never whether you were "
-                 "damaged. It is what damaged you. Wind is covered by the property policy; storm "
-                 "surge generally is not. Carriers know exactly where that line sits, and so "
-                 "should you."),
+        "slug": "cost-estimating",
+        "nav_label": "Cost Estimating",
+        "card_title": "Construction cost estimating",
+        "card_blurb": ("Line-item scopes in the industry-standard platforms, and forensic "
+                       "critique of somebody else&rsquo;s."),
+        "title": "Commercial Construction Cost Estimating | Insurance Claims",
+        "description": ("Independent line-item construction cost estimating for Texas commercial "
+                        "property claims, plus forensic critique and variance analysis of "
+                        "opposing estimates."),
+        "eyebrow": "Service &middot; Estimating",
+        "h1": "The estimate, and<br>the estimate of the <em>estimate</em>",
+        "h1_plain": "Construction cost estimating",
+        "lede": ("Two thirds of the disputed value on a large property claim is decided in a "
+                 "spreadsheet nobody reads line by line. We write those, and we take other "
+                 "people&rsquo;s apart."),
         "head_aside": [
-            ("ledger", "Named storm mechanics", [
-                ("Deductible", "% of values"),
-                ("Trigger", "Named &amp; dated"),
-                ("Wind-driven rain", "Conditioned"),
-                ("Surge / flood", "Separate policy"),
-                ("Anti-concurrent cause", "Usually present"),
-                ("TWIA", "Coastal counties"),
-            ], "A 5% named-storm deductible on a $30m schedule is $1.5m of retention. It changes "
-               "the whole strategy."),
+            ("ledger", "Estimating practice", [
+                ("Platform", "Industry standard"),
+                ("Detail", "Line item"),
+                ("Pricing", "Local, dated"),
+                ("Code work", "Scheduled separately"),
+                ("O&amp;P", "Stated, not buried"),
+                ("Output", "Exportable"),
+            ], "Anything summarized is anything that can be deleted without argument."),
         ],
         "sections": [
             {
-                "eyebrow": "Causation",
-                "h2": "Anti-concurrent causation is the clause that decides coastal claims.",
+                "eyebrow": "Building one",
+                "h2": "Scope first, price second, and never in the same step.",
                 "blocks": [
-                    ("p", "Most commercial property forms contain wording that excludes loss caused "
-                          "directly or indirectly by an excluded peril &mdash; flood, for example "
-                          "&mdash; regardless of any other cause contributing concurrently or in "
-                          "any sequence. Read at its widest, an insurer will argue that clause "
-                          "excludes damage where surge played any part at all, even to property "
-                          "the wind had already opened up."),
-                    ("p", "The practical answer is evidence, and it is time-sensitive. Water lines "
-                          "on walls, debris deposition, the direction of structural failure, the "
-                          "condition of the roof above the water line, and the timing of the wind "
-                          "field relative to the surge all separate the two perils. Within ten "
-                          "days, cleanup has destroyed most of it."),
+                    ("p", "The most common defect in a claim estimate is not the unit price. It "
+                          "is that the scope was inferred from a walkthrough rather than measured, "
+                          "so the quantities are approximately right and nothing can be checked. "
+                          "An estimate built that way cannot be defended line by line, which "
+                          "means the whole document gets negotiated as a lump sum."),
+                    ("p", "We measure the property, write the scope of work from the measurements, "
+                          "and price it afterwards. Code-driven work, soft costs, contents and "
+                          "time-element losses are carried on separate schedules so that none of "
+                          "them disappears into a general allowance. Every unit price is sourced "
+                          "and dated, and where a line is a judgment call rather than a "
+                          "measurement, it says so."),
                     ("checks", [
-                        "Photograph high-water marks before anything is cleaned, with a scale and a location reference in the frame.",
-                        "Document roof and upper-floor damage separately from ground-floor damage &mdash; wind losses above the water line are hard to attribute to surge.",
-                        "Preserve a sample of affected materials where contamination class is likely to be disputed.",
-                        "Obtain the storm data for your specific coordinates, not the regional summary: wind field, gust history, rainfall and surge timing.",
-                        "Where flood and wind policies both respond, run them in parallel and keep the damage descriptions consistent.",
+                        "Measured survey of the whole affected area, not a representative sample.",
+                        "Line-item scope in the platform the other party is using, so the two documents can be compared directly.",
+                        "Local, current pricing with the source and date recorded for anything unusual.",
+                        "Access, protection, containment and phasing priced explicitly rather than absorbed into unit costs.",
+                        "Overhead, profit and general conditions shown on their own lines with the basis stated.",
+                        "Code and ordinance work on a separate schedule, cross-referenced to the requirement that triggers it.",
                     ]),
-                ],
-                "aside": [
-                    ("callout", "Wind-driven rain", [
-                        ("p", "Many commercial forms cover rain entering the building only if wind "
-                              "first made an opening in the roof or walls. Proving that opening "
-                              "existed &mdash; and that it was storm-created rather than a "
-                              "pre-existing maintenance defect &mdash; is frequently the whole "
-                              "interior claim."),
-                    ]),
-                    ("callout", "TWIA", [
-                        ("p", "Property in the designated coastal counties may be written through "
-                              "the Texas Windstorm Insurance Association, which has its own claim "
-                              "handling procedure, its own deadlines and its own appeal and "
-                              "dispute resolution path. Those procedures are not the same as a "
-                              "standard carrier&rsquo;s, and missing one of their deadlines is "
-                              "expensive."),
-                    ]),
+                    ("html", '<a class="tlink" href="/tools/overhead-profit-general-conditions-calculator/">'
+                             'Model O&amp;P and general conditions <span class="arw">&rarr;</span></a>'),
                 ],
             },
             {
                 "band": "paper2",
-                "eyebrow": "Deductibles",
-                "h2": "Work out your retention before you decide anything else.",
+                "eyebrow": "Taking one apart",
+                "h2": "Variance analysis: where the difference actually is.",
                 "blocks": [
-                    ("p", "Percentage deductibles are calculated on insured values rather than on "
-                          "the size of the loss, so they do not scale down with a small claim. On "
-                          "a multi-building institutional schedule the application matters as much "
-                          "as the percentage: per occurrence, per building, or per occurrence with "
-                          "a per-building minimum are three very different numbers for the same "
-                          "storm."),
-                    ("html", '<a class="tlink" href="/tools/commercial-claim-value-estimator/">'
-                             'Model the retention against the loss <span class="arw">&rarr;</span></a>'),
+                    ("p", "When two estimates are $1.4 million apart, the instinct is to argue "
+                          "about $1.4 million. That is almost never where the dispute lives. Run "
+                          "the two documents against each other line by line and the gap usually "
+                          "resolves into a handful of decisions: a quantity difference on one "
+                          "assembly, a missing trade, a repair-versus-replace call, O&amp;P, and "
+                          "code work that one side scheduled and the other did not."),
+                    ("p", "A variance analysis puts a number on each of those and reduces the "
+                          "negotiation to six arguments instead of one. It is also, on most "
+                          "files, the single most cost-effective thing we produce: it is quick, "
+                          "it is checkable, and it frequently shows both parties that they are "
+                          "closer than the totals suggest."),
+                    ("table", "What a variance analysis separates",
+                     ["Category", "Typical share of the gap"], [
+                        ["Quantity and measurement differences", "Often the largest single component, and the easiest to resolve"],
+                        ["Scope omissions &mdash; trades or areas absent from one estimate", "Frequently substantial and usually unintentional"],
+                        ["Repair versus replace decisions", "Technical; resolved by manufacturer or specialist input"],
+                        ["Unit pricing", "Usually the smallest component, despite getting the most attention"],
+                        ["Overhead, profit and general conditions", "A percentage of everything above, so it moves last"],
+                        ["Code and ordinance work", "Binary &mdash; either scheduled or not"],
+                     ]),
                 ],
             },
         ],
         "faqs": [
-            ("The carrier says our damage is flood, which we do not have. Is that the end of it?",
-             "<p>No, it is the beginning of an evidentiary argument. Very few coastal losses are "
-             "purely one peril. The task is to separate what the wind did from what the water did "
-             "and to establish the wind portion with evidence the carrier&rsquo;s engineer cannot "
-             "dismiss &mdash; roof condition, interior damage above the water line, directional "
-             "failure patterns, and the storm data for your location. Where anti-concurrent "
-             "causation wording is being applied aggressively, that is a point at which counsel "
-             "should be looking at the file alongside us.</p>"),
-            ("How long after a hurricane can we still file?",
-             "<p>Policies contain their own notice requirements &mdash; usually prompt notice, "
-             "sometimes a specific number of days &mdash; and Texas weather claims are separately "
-             "affected by the suit limitation in the policy and the framework in chapter 542A. "
-             "Late notice is a defense carriers raise often and win with sometimes, generally "
-             "where they can show prejudice. If you are outside the obvious window, that is a "
-             "reason to move quickly, not a reason to give up.</p>"),
-            ("We already got a payment right after the storm. Can the claim be reopened?",
-             "<p>Usually yes, as a supplemental claim, provided you have not signed a full and "
-             "final release and the policy&rsquo;s time limits have not run. Early post-storm "
-             "payments are typically issued on a rapid drive-by scope, and the real cost of repair "
-             "emerges months later when contractors open the building up. That difference is what "
-             "a supplement is for.</p>"),
+            ("Which estimating platform do you use?",
+             "<p>The industry-standard platforms used by carriers and contractors, chosen to "
+             "match whatever the other party is working in so the documents can be reconciled "
+             "directly. An estimate that cannot be compared line by line with the one it "
+             "disagrees with is much less useful than it looks.</p>"),
+            ("Can you produce an estimate without inspecting the property?",
+             "<p>We can produce an analysis of somebody else&rsquo;s estimate from documents, and "
+             "frequently do. We will not produce an original scope from photographs and call it "
+             "an estimate &mdash; the quantities would be invented, and that is exactly the "
+             "defect we are usually retained to expose in other people&rsquo;s work.</p>"),
+            ("How long does an estimate take?",
+             "<p>On a single commercial building, typically two to four weeks from access: a day "
+             "or two on site, then the scope and pricing. Multi-building schedules and anything "
+             "requiring specialist input run longer. A variance analysis of an existing estimate "
+             "is usually a matter of days.</p>"),
         ],
     },
 
-    # ============================================================= hail ====
+    # ============================================================== appraisal
     {
-        "slug": "hail-damage-claims",
-        "nav_label": "Hail Damage",
-        "card_title": "Hail damage claims",
-        "card_blurb": ("Commercial roof systems, test cuts, and the wear-and-tear denial that "
-                       "answers most Texas hail claims."),
-        "title": "Commercial Hail Damage Claims | Texas Roof Consultants",
-        "description": "Independent claims consultants for commercial hail losses in Texas. Test cuts, membrane and insulation damage, HVAC coils, and the wear-and-tear denial.",
-        "eyebrow": "Service &middot; Hail",
-        "h1": "Hail damage you<br>cannot see from <em>the ground</em>",
-        "h1_plain": "Commercial hail damage claims",
-        "lede": ("Texas leads the country in hail losses, and the commercial version of the claim "
-                 "is almost nothing like the residential one. The damage is to membrane, "
-                 "insulation, coping and equipment, it is frequently invisible at grade, and the "
-                 "standard denial is that your roof was simply old."),
-        "head_aside": [
-            ("ledger", "Proving a commercial hail loss", [
-                ("Test cuts", "2&ndash;4 per section"),
-                ("Soft metal spatter", "Corroborating"),
-                ("HVAC coil damage", "Separate item"),
-                ("Storm data", "By coordinate"),
-                ("Maintenance history", "Rebuts wear"),
-                ("Engineer", "Often needed"),
-            ], "Test cuts are destructive, so they get resisted. They are also the only direct "
-               "evidence of what happened beneath the membrane."),
-        ],
-        "sections": [
-            {
-                "eyebrow": "The evidence",
-                "h2": "The membrane is intact. The insulation underneath is not.",
-                "blocks": [
-                    ("p", "On a modified bitumen or single-ply roof, a hailstone large enough to "
-                          "matter does its damage by fracturing the insulation board and bruising "
-                          "the membrane from beneath. The surface can look almost undisturbed. Two "
-                          "years later the bruise weathers open and the building starts leaking, "
-                          "by which point the carrier has an easy argument that this is age, not a "
-                          "storm."),
-                    ("p", "A test cut settles it. Four-inch squares taken through the assembly in "
-                          "each roof section, photographed in place and then patched, show "
-                          "fractured insulation, displaced granules and membrane damage directly. "
-                          "Carriers rarely propose them and frequently resist them, which tells "
-                          "you how effective they are."),
-                    ("p", "Around the roof, corroboration matters as much as the roof itself. "
-                          "Spatter marks on oxidised metal, dented gutters and downspouts, damaged "
-                          "coping and cap flashing, dinged vents and curbs, split gravel stops, "
-                          "and hail impact on rooftop mechanical equipment all establish that "
-                          "stones of a given size actually landed here, on this date, from this "
-                          "direction."),
-                ],
-                "aside": [
-                    ("callout", "HVAC coils", [
-                        ("p", "Hail flattens condenser fins, which reduces airflow and efficiency "
-                          "long before the unit fails outright. Carriers will offer comb-out. "
-                          "Whether that restores the unit to pre-loss condition is a technical "
-                          "question with a manufacturer&rsquo;s answer, and on a campus with "
-                          "eighty rooftop units the difference between comb-out and replacement is "
-                          "the largest single line on the estimate."),
-                    ]),
-                ],
-            },
-            {
-                "band": "paper2",
-                "eyebrow": "The denial",
-                "h2": "Answering &ldquo;wear and tear, not hail&rdquo;.",
-                "blocks": [
-                    ("table", "The four standard positions and how they break", ["Carrier position", "Evidence that answers it"], [
-                        ["The roof was at the end of its service life anyway.",
-                         "Maintenance records, prior roof survey reports, warranty status and photographs predating the storm. A serviceable 18-year-old roof that would have run another 7 years is a loss, not a write-off."],
-                        ["The damage is cosmetic only.",
-                         "Test cuts showing insulation fracture and membrane damage; manufacturer statements on how impact affects the remaining service life of that specific system."],
-                        ["Hail of that size did not fall here.",
-                         "Storm data for the property coordinates rather than the nearest reporting station, plus physical corroboration on soft metals and equipment at the site."],
-                        ["The damage predates the policy period.",
-                         "Sequential storm history, prior inspection reports, satellite and aerial imagery by date, and the condition of repairs made between events."],
-                    ]),
-                    ("callout", "Cosmetic damage exclusions", [
-                        ("p", "Some Texas commercial policies carry a cosmetic damage exclusion "
-                              "for roof surfacing, which removes coverage for dents that do not "
-                              "affect function. Whether it applies is a factual question about "
-                              "function and remaining service life &mdash; but you need to know "
-                              "the endorsement is there before you build the claim, not after."),
-                    ]),
-                ],
-            },
-        ],
-        "faqs": [
-            ("How long do we have to file a hail claim in Texas?",
-             "<p>Two separate clocks run. The policy requires prompt notice, and some forms now "
-             "state a specific reporting window for weather losses. Separately, the policy&rsquo;s "
-             "suit limitation &mdash; commonly two years in Texas, and governed for many weather "
-             "claims by chapter 542A &mdash; caps how long you have to sue. Delay is also an "
-             "evidentiary problem: the longer you wait, the easier the carrier&rsquo;s "
-             "intervening-storm argument becomes.</p>"),
-            ("Can you tell whether we have a claim before we report it?",
-             "<p>That is usually the right sequence on a commercial roof. A pre-notice inspection "
-             "&mdash; roof survey, test cuts where appropriate, storm data for the address &mdash; "
-             "tells you whether the damage clears your deductible and whether it will survive a "
-             "wear-and-tear challenge. Reporting a claim you then abandon still shows up in your "
-             "loss history.</p>"),
-            ("Our roof is 20 years old. Is it worth pursuing?",
-             "<p>Sometimes very much so, and sometimes not. Age affects depreciation and it affects "
-             "the wear argument, but a roof at 20 years on a 30-year system that was maintained "
-             "and functioning is still a covered loss when hail ends its service life early. What "
-             "usually decides it is the valuation basis: replacement cost with recoverable "
-             "depreciation is a fundamentally different claim from actual cash value on a roof "
-             "that age.</p>"),
-        ],
-    },
-
-    # ============================================================= fire ====
-    {
-        "slug": "commercial-fire-claims",
-        "nav_label": "Fire &amp; Smoke",
-        "card_title": "Commercial fire &amp; smoke claims",
-        "card_blurb": ("Where the smoke, water and code exposure reach far beyond anything that "
-                       "actually burned."),
-        "title": "Commercial Fire Damage Claims | Texas Consultants",
-        "description": "Independent claims consultants for commercial fire and smoke losses in Texas. Smoke residue, code upgrades, contents and business interruption.",
-        "eyebrow": "Service &middot; Fire &amp; smoke",
-        "h1": "Most fire damage<br>is not <em>burned</em>",
-        "h1_plain": "Commercial fire and smoke damage claims",
-        "lede": ("A contained fire in a mechanical room can produce a seven-figure claim without "
-                 "spreading past the door. Smoke migrates through every return air path in the "
-                 "building, suppression water finds three floors below, and the rebuild triggers "
-                 "codes that did not exist when the building went up."),
-        "head_aside": [
-            ("ledger", "Fire loss components", [
-                ("Burn area", "Smallest"),
-                ("Smoke &amp; odour", "Building-wide"),
-                ("Suppression water", "Downward"),
-                ("Code upgrade", "Ord. &amp; law"),
-                ("Contents", "Item by item"),
-                ("Downtime", "Months"),
-            ], "The estimate that only scopes the room that burned is the one to be suspicious of."),
-        ],
-        "sections": [
-            {
-                "eyebrow": "Smoke",
-                "h2": "Smoke is a chemistry problem, not a cleaning problem.",
-                "blocks": [
-                    ("p", "What burned determines what the residue is and how it must be treated. "
-                          "Protein fires from a kitchen leave a thin, foul, almost invisible film "
-                          "that defeats ordinary cleaning. Plastics and electronics produce acidic "
-                          "residues that continue to corrode metal, circuit boards and wiring for "
-                          "months after the fire is out. Neither is remedied by wiping surfaces "
-                          "and running a hydroxyl machine for a week."),
-                    ("p", "The distinction matters because it decides whether an item is cleaned, "
-                          "restored or replaced &mdash; and that decision, multiplied across a "
-                          "contents inventory or a building&rsquo;s electrical and mechanical "
-                          "systems, is usually the largest disputed number in the claim. "
-                          "Independent testing for residue type and distribution costs relatively "
-                          "little and settles arguments that otherwise run for months."),
-                    ("checks", [
-                        "Residue sampling and analysis before cleaning begins, at multiple locations including inside HVAC and above ceilings.",
-                        "Corrosion assessment on electrical distribution, controls, servers and any exposed metal.",
-                        "Air-handling systems inspected internally &mdash; ductwork is the most common route for building-wide contamination and the most common omission.",
-                        "Odour treated as a completion standard with an objective test, not as a matter of opinion at walkthrough.",
-                        "Contents inventoried item by item before anything is discarded, with photographs and a documented restore-or-replace decision on each.",
-                    ]),
-                ],
-                "aside": [
-                    ("callout", "Suppression water travels", [
-                        ("p", "Sprinkler and hose water goes down, and it goes into wall cavities "
-                              "and floor assemblies where it will sit. Moisture mapping of the "
-                              "floors below the fire is not optional on a commercial building, and "
-                              "a fire claim that contains no water damage scope in the levels "
-                              "beneath the burn is an incomplete claim."),
-                    ]),
-                ],
-            },
-            {
-                "band": "paper2",
-                "eyebrow": "Code",
-                "h2": "Rebuilding an older building means building it to today&rsquo;s code.",
-                "blocks": [
-                    ("p", "Once repair work passes the threshold the local jurisdiction treats as "
-                          "substantial, the whole structure can be pulled up to current "
-                          "requirements &mdash; sprinklers, fire alarm, egress, accessibility, "
-                          "energy code, structural provisions, sometimes wind and seismic detailing "
-                          "that did not exist at construction. On a mid-century civic building, "
-                          "church or campus structure, that cost can rival the fire damage itself."),
-                    ("p", "Ordinance or law coverage exists precisely for this, and it usually "
-                          "comes in three parts: the value of the undamaged portion that must be "
-                          "demolished, the cost of demolition and debris removal, and the "
-                          "increased cost of construction. Each has its own limit. Those limits "
-                          "are commonly set as a small percentage of the building limit, chosen "
-                          "years ago by someone who was not imagining this fire."),
-                    ("callout", "Get the code official&rsquo;s position in writing", [
-                        ("p", "A letter from the building official stating what the jurisdiction "
-                              "will require is worth more in a negotiation than any amount of "
-                              "argument about what the code says. Ask for it early; it takes weeks."),
-                    ]),
-                ],
-            },
-        ],
-        "faqs": [
-            ("The fire was small. Why is the claim taking so long?",
-             "<p>Because the burn area is usually the simplest part. Establishing the extent of "
-             "smoke migration, deciding restore-versus-replace across a contents inventory, "
-             "identifying what code will require on rebuild, and quantifying the interruption loss "
-             "all take time, and the carrier will investigate origin and cause before it commits "
-             "to anything. A commercial fire claim of any size running six to twelve months is "
-             "normal; running two years usually means something is stuck.</p>"),
-            ("Should we start cleaning before the adjuster comes?",
-             "<p>Do what is needed to make the property safe and to prevent further damage &mdash; "
-             "that is your duty under the policy and it is not optional. Beyond that, document "
-             "before you disturb. Photograph everything, keep damaged items until they have been "
-             "inventoried, and retain a sample of anything you must dispose of. The most damaging "
-             "thing an owner can do after a fire is tidy up efficiently.</p>"),
-            ("Can we use our own restoration contractor?",
-             "<p>Yes. You choose who performs the work; the carrier chooses what it is prepared to "
-             "pay. Be careful with direction-to-pay agreements and assignments of benefit signed "
-             "in the first forty-eight hours, when the restoration company is on site and you are "
-             "not thinking clearly. Read what you sign, or let us read it.</p>"),
-        ],
-    },
-
-    # ============================================================ water ====
-    {
-        "slug": "water-damage-and-freeze-claims",
-        "nav_label": "Water &amp; Freeze",
-        "card_title": "Water damage &amp; freeze claims",
-        "card_blurb": ("Pipe bursts, roof leaks and freeze events &mdash; where the exclusion "
-                       "wording does most of the work."),
-        "title": "Commercial Water &amp; Freeze Losses | Texas Consultants",
-        "description": "Independent claims consultants for commercial water and freeze losses in Texas. Burst pipes, sprinkler leaks, roof leaks and the exclusions carriers use.",
-        "eyebrow": "Service &middot; Water &amp; freeze",
-        "h1": "Water claims are<br>won in the <em>exclusions</em>",
-        "h1_plain": "Commercial water damage and freeze claims",
-        "lede": ("Almost every commercial policy covers sudden and accidental water discharge and "
-                 "almost every one excludes repeated seepage, wear, faulty maintenance and, in "
-                 "many cases, freeze damage where the building was left unheated. Which side of "
-                 "that line your loss falls on is decided by the facts you can prove."),
-        "head_aside": [
-            ("ledger", "What the carrier will ask", [
-                ("Date of discharge", "Exact"),
-                ("Duration", "Hours or weeks?"),
-                ("Heat maintained", "Records"),
-                ("System drained", "If vacant"),
-                ("Maintenance history", "Documented"),
-                ("Cause of failure", "Engineer"),
-            ], "Every one of these is answerable with records you already have &mdash; if somebody "
-               "collects them in the first week."),
-        ],
-        "sections": [
-            {
-                "eyebrow": "Freeze",
-                "h2": "After a Texas freeze, the fight is about what you did, not what happened.",
-                "blocks": [
-                    ("p", "The February 2021 freeze taught Texas commercial policyholders something "
-                          "they had not needed to know: many property forms exclude loss from water "
-                          "that freezes in a plumbing or sprinkler system unless the insured "
-                          "maintained heat in the building, or drained the system and shut off the "
-                          "supply. Buildings that lost power for four days lost heat for reasons "
-                          "outside their control, and carriers have litigated that distinction "
-                          "hard ever since."),
-                    ("p", "What wins these claims is contemporaneous evidence of reasonable care: "
-                          "building management system logs showing setpoints and interior "
-                          "temperatures, utility outage records for the specific address, work "
-                          "orders and staffing records for the freeze period, and any written "
-                          "winterisation procedure that was actually followed. Most institutions "
-                          "have all of this and have never thought to assemble it."),
-                    ("checks", [
-                        "BMS and thermostat logs exported before they roll off &mdash; many systems retain only 30 to 90 days.",
-                        "Utility outage confirmation for the property address and the exact period.",
-                        "Staffing, security and work-order records showing the building was attended and monitored.",
-                        "Photographs of the failure point before the plumber cuts it out, and retention of the failed component itself.",
-                        "Any winterisation checklist, vendor contract or standard operating procedure in force at the time.",
-                    ]),
-                ],
-                "aside": [
-                    ("callout", "Keep the pipe", [
-                        ("p", "The single most valuable physical object in a water claim is the "
-                              "failed component. Once the plumber removes it, ask for it, label "
-                              "it, photograph it and put it in a box. Where the cause of failure "
-                              "is disputed &mdash; and where product liability or subrogation may "
-                              "be in play &mdash; that piece of pipe is the evidence."),
-                    ]),
-                ],
-            },
-            {
-                "band": "paper2",
-                "eyebrow": "Long-term seepage",
-                "h2": "&ldquo;It has been leaking for years&rdquo; is a coverage defense, not an observation.",
-                "blocks": [
-                    ("p", "When a carrier says the damage resulted from repeated seepage or "
-                          "leakage over a period of weeks or more, it is invoking a specific "
-                          "exclusion, and the burden of proving the exclusion applies generally "
-                          "sits with the insurer. That is worth remembering, because the argument "
-                          "is usually made as though it were self-evident."),
-                    ("p", "Rebutting it is a matter of records: maintenance logs showing the area "
-                          "was inspected and dry, water bills without an unexplained rise, tenant "
-                          "or staff complaint history showing when the problem first appeared, and "
-                          "material condition analysis distinguishing a recent saturation event "
-                          "from long-term staining and microbial growth."),
-                ],
-            },
-            {
-                "band": "ink",
-                "eyebrow": "Mould",
-                "h2": "Remediation limits are usually far smaller than people assume.",
-                "dek": "Texas commercial forms frequently sub-limit fungus and mould remediation "
-                       "&mdash; sometimes to $15,000 or $25,000 &mdash; regardless of the building "
-                       "limit above it.",
-                "blocks": [
-                    ("p", "That sub-limit is one reason speed matters on a water loss. Where mould "
-                          "results from a covered water event and is addressed as part of drying "
-                          "and repair within a reasonable time, the work is typically part of the "
-                          "repair. Where it is left to develop, the carrier will reclassify the "
-                          "cost against the remediation sub-limit and the exposure lands on you. "
-                          "Document the drying, log the readings, and get to dry standard on the "
-                          "record."),
-                ],
-            },
-        ],
-        "faqs": [
-            ("Our building lost heat because the power failed. Is the freeze damage excluded?",
-             "<p>It depends on the exact wording and on what you can show. Many forms condition "
-             "coverage on the insured using reasonable care to maintain heat, which is not the "
-             "same as guaranteeing heat. Where the outage was utility-wide, outside your control, "
-             "and you can demonstrate the building was heated and monitored up to the failure, "
-             "that is a strong position. Where a building was vacant, unmonitored and never "
-             "winterised, it is a much harder one. The records decide it.</p>"),
-            ("How fast does a water claim need to be reported?",
-             "<p>Immediately, and mitigation should begin at once regardless of whether an adjuster "
-             "has been out. Every property policy imposes a duty to protect the property from "
-             "further damage, and failing it gives the carrier a defense on the additional damage "
-             "that followed. Photograph first, then dry.</p>"),
-            ("The carrier is only paying to dry the building, not to repair the finishes.",
-             "<p>A common midpoint, and usually incomplete. Drying is mitigation; it is not repair. "
-             "Once the structure is dry, the claim still owes removal and replacement of materials "
-             "that cannot be restored, reinstatement of finishes, and any code-driven work the "
-             "repair triggers. Where flooring, cabinetry or wall systems have been partially "
-             "removed, matching becomes the argument.</p>"),
-        ],
-    },
-
-    # ================================================ business interruption =
-    {
-        "slug": "business-interruption-claims",
-        "nav_label": "Business Interruption",
-        "card_title": "Business interruption &amp; extra expense",
-        "card_blurb": ("The half of the claim that is documented worst and disputed hardest, "
-                       "because nobody was recording it while it happened."),
-        "title": "Business Interruption Claims | Texas Consultants",
-        "description": "Independent claims consultants for Texas business interruption and extra expense. Period of restoration, continuing expenses, civil authority and contingent BI.",
-        "eyebrow": "Service &middot; Time element",
-        "h1": "The loss that keeps<br>running after the <em>water stops</em>",
-        "h1_plain": "Business interruption and extra expense claims",
-        "lede": ("Property damage is visible and finite. The income loss behind it is neither, "
-                 "which is why it is the part of a commercial claim most often left unquantified "
-                 "&mdash; and, when it finally is quantified, most often disputed line by line by "
-                 "a forensic accountant the carrier retained months earlier."),
-        "head_aside": [
-            ("ledger", "The four variables", [
-                ("Period of restoration", "Disputed"),
-                ("Revenue projection", "Trend-adjusted"),
-                ("Continuing expenses", "Proven"),
-                ("Saved expenses", "Deducted"),
-                ("Extra expense", "Documented"),
-                ("Waiting period", "Check form"),
-            ], "Change the period of restoration by two months and the whole number changes. That "
-               "is where the argument goes."),
-        ],
-        "sections": [
-            {
-                "eyebrow": "Period of restoration",
-                "h2": "How long should it have taken to rebuild?",
-                "blocks": [
-                    ("p", "Business income coverage does not pay for as long as you were actually "
-                          "closed. It pays for the period it should reasonably have taken to "
-                          "repair or replace the damaged property, exercising due diligence and "
-                          "dispatch. Those are the words that carry the argument. If the carrier "
-                          "says the rebuild should have taken five months and it took nine, the "
-                          "last four months are yours unless you can explain them."),
-                    ("p", "Which means the reasons for every delay have to be on the record as they "
-                          "happen: permitting timelines, long-lead equipment, the carrier&rsquo;s "
-                          "own delay in authorising scope, supply constraints, code review, "
-                          "specialist trade availability. A construction schedule maintained from "
-                          "week one, with the causes of variance noted, is the single most useful "
-                          "document in a time-element negotiation."),
-                    ("callout", "Extended period of indemnity", [
-                        ("p", "Reopening is not recovery. Customers, students, congregations and "
-                              "guests come back gradually. Many policies offer an extended period "
-                              "of indemnity endorsement covering that ramp-back for a stated "
-                              "number of days after operations resume. Whether you have one, and "
-                              "how long it runs, is worth checking on day one &mdash; it is "
-                              "frequently the last third of the claim."),
-                    ]),
-                ],
-                "aside": [
-                    ("callout", "Set up the capture immediately", [
-                        ("p", "A separate general ledger account for loss-related costs, opened in "
-                              "the first week, will save more argument than any amount of "
-                              "reconstruction later. Every invoice, every overtime hour, every "
-                              "rented piece of equipment coded to that account is a line the "
-                              "accountant cannot question the provenance of."),
-                    ]),
-                    ("html", '<a class="tlink" href="/tools/business-interruption-calculator/">'
-                             'Model your interruption loss <span class="arw">&rarr;</span></a>'),
-                ],
-            },
-            {
-                "band": "paper2",
-                "eyebrow": "Coverage parts",
-                "h2": "Six extensions that pay when the main grant does not.",
-                "blocks": [
-                    ("table", "Time-element extensions worth checking", ["Extension", "What triggers it", "Typical constraint"], [
-                        ["Extra expense", "Costs incurred to continue operating or to speed the repair.", "Must reduce the overall loss; reasonableness is tested"],
-                        ["Civil authority", "An order of civil authority prohibiting access to your premises.", "Usually requires covered physical damage nearby; short duration; waiting period"],
-                        ["Ingress / egress", "Physical obstruction of access, without an official order.", "Not on every form; radius and duration limits"],
-                        ["Dependent property (contingent BI)", "Damage at a named supplier, customer or attraction property.", "Property often must be scheduled by name; sub-limited"],
-                        ["Service interruption", "Off-premises failure of power, water, gas or communications.", "Frequently requires physical damage to the utility&rsquo;s property; may exclude overhead transmission lines"],
-                        ["Extended period of indemnity", "The ramp-back after operations resume.", "Fixed number of days; must be endorsed"],
-                    ]),
-                ],
-            },
-        ],
-        "faqs": [
-            ("Our organization is a nonprofit. Is there anything to claim?",
-             "<p>Frequently yes, and it is frequently missed because the revenue is not called "
-             "revenue. Tithes and offerings, tuition and program fees, facility rentals, event "
-             "income, dining and bookstore receipts, camp and conference bookings &mdash; these are "
-             "income streams that interrupt. Whether they are covered depends on the form, and "
-             "nonprofit-specific programs often address them explicitly. Read the endorsements.</p>"),
-            ("The carrier retained a forensic accountant. Should we be worried?",
-             "<p>Not worried, but you should stop treating the process as informal. That accountant "
-             "works for the insurer and will request years of financial records, test every "
-             "assumption in your projection and propose their own. The correct response is a "
-             "similarly qualified professional on your side, engaged early, with the production of "
-             "records managed rather than open-ended. On a claim of any size the cost of that is "
-             "small relative to the swing.</p>"),
-            ("How is the loss actually calculated?",
-             "<p>In outline: project the revenue the operation would have earned during the period "
-             "of restoration, using its own trend and any relevant market benchmark; subtract "
-             "revenue actually earned; apply the appropriate margin so you are claiming lost "
-             "earnings rather than lost turnover; add expenses that continued but produced nothing; "
-             "subtract expenses genuinely saved; add extra expense reasonably incurred. Every one "
-             "of those six steps is a place where reasonable professionals disagree, which is why "
-             "the claim is worth building properly.</p>"),
-        ],
-    },
-
-    # ======================================================== appraisal ====
-    {
-        "slug": "appraisal-and-claim-disputes",
-        "nav_label": "Appraisal &amp; Disputes",
-        "card_title": "Appraisal &amp; claim disputes",
-        "card_blurb": ("The policy&rsquo;s own mechanism for breaking a deadlock over the amount of "
-                       "loss &mdash; faster than litigation, and binding."),
-        "title": "Insurance Appraisal in Texas | Commercial Disputes",
-        "description": "Appraisal representation for Texas commercial insurance claims. When the amount of loss is deadlocked, the appraisal clause resolves it without litigation.",
+        "slug": "insurance-appraisal",
+        "nav_label": "Appraisal &amp; Umpire",
+        "card_title": "Appraisal &amp; umpire service",
+        "card_blurb": ("Party appraiser for either side, or umpire &mdash; the policy&rsquo;s own "
+                       "mechanism for settling the amount of loss."),
+        "title": "Insurance Appraisal &amp; Umpire Services | Texas",
+        "description": ("Appraisal and umpire services on Texas commercial property claims. "
+                        "Party-appointed appraiser for either side, or umpire where both "
+                        "appraisers agree."),
         "eyebrow": "Service &middot; Appraisal",
-        "h1": "When the gap will<br>not close: <em>appraisal</em>",
-        "h1_plain": "Insurance appraisal and claim disputes",
+        "h1": "Two appraisers,<br>one <em>umpire</em>",
+        "h1_plain": "Insurance appraisal and umpire service",
         "lede": ("Nearly every commercial property policy contains an appraisal clause, and most "
-                 "policyholders never learn it exists. It is a contractual mechanism for "
-                 "determining the amount of loss when the parties cannot agree &mdash; two "
-                 "appraisers, one umpire, and an award that any two of the three can sign."),
+                 "policyholders have never read it. It settles the amount of loss without "
+                 "litigation, in weeks rather than years, and the award binds both parties."),
         "head_aside": [
             ("ledger", "How appraisal works", [
                 ("Who invokes", "Either party"),
-                ("Your appraiser", "You appoint"),
-                ("Their appraiser", "They appoint"),
+                ("Appraisers", "One each"),
                 ("Umpire", "Agreed or court"),
                 ("Binding on", "Amount of loss"),
                 ("Not binding on", "Coverage"),
-            ], "Two of three signatures set the amount. That is the whole mechanism, and it is why "
-               "the umpire selection matters more than anything else in the process."),
+                ("Signatures needed", "Two of three"),
+            ], "Two of three signatures set the number. Which is why umpire selection matters "
+               "more than anything else in the process."),
         ],
         "sections": [
             {
-                "eyebrow": "What it decides",
+                "eyebrow": "The distinction",
                 "h2": "Amount of loss, not liability.",
                 "blocks": [
-                    ("p", "The distinction is the thing everybody gets wrong. Appraisal determines "
-                          "how much the damage costs to put right. It does not determine whether "
-                          "the policy covers it. A panel can return an award of $2.4 million and "
-                          "the carrier can still decline on the basis that the cause of loss was "
-                          "excluded &mdash; although in practice, paying an award and then denying "
-                          "coverage is a difficult position for an insurer to hold."),
-                    ("p", "Causation sits awkwardly across that line. Where the dispute is whether "
-                          "hail or age ended a roof&rsquo;s life, Texas panels frequently allocate "
-                          "between covered and non-covered causes as part of determining the "
-                          "amount of loss. How that is handled should be agreed at the start of "
-                          "the process rather than discovered in the award."),
-                    ("callout", "When appraisal is the right tool", [
-                        ("p", "Use it when the parties agree the loss is covered and disagree about "
-                              "what it costs. Do not use it when the real dispute is a denial, an "
-                              "exclusion, a late-notice defense or a misrepresentation allegation "
-                              "&mdash; appraisal cannot resolve those, and invoking it can "
-                              "complicate the position of a claim heading for litigation. That is "
-                              "a decision to take with counsel."),
+                    ("p", "Appraisal decides how much the damage costs to put right. It does not "
+                          "decide whether the policy covers it. A panel can return an award of "
+                          "$2.4 million and the insurer can still decline on the basis that the "
+                          "cause of loss was excluded &mdash; although in practice, paying an "
+                          "award and then denying coverage is an awkward position to hold."),
+                    ("p", "Causation sits uncomfortably across that line. Where the dispute is "
+                          "whether hail or age ended a roof&rsquo;s service life, Texas panels "
+                          "frequently allocate between covered and non-covered causes as part of "
+                          "determining the amount. How that will be handled is worth agreeing at "
+                          "the start rather than discovering in the award."),
+                    ("callout", "When appraisal fits", [
+                        ("p", "Use it when both parties accept the loss is covered and disagree "
+                              "about what it costs. Do not use it when the real dispute is a "
+                              "denial, an exclusion, a late-notice defense or a misrepresentation "
+                              "allegation. Appraisal cannot resolve those, and invoking it can "
+                              "complicate a claim heading for litigation. That is a decision to "
+                              "take with counsel."),
                     ]),
                 ],
                 "aside": [
-                    ("callout", "Cost", [
-                        ("p", "Each side pays its own appraiser and the parties usually split the "
-                              "umpire. Against months or years of litigation, appraisal is "
-                              "typically far cheaper and far faster &mdash; weeks to a few months "
-                              "on a well-run panel. It is also, once the award is signed, "
-                              "extremely difficult to unwind."),
+                    ("callout", "Which role we take", [
+                        ("p", "Party-appointed appraiser for a policyholder or an insurer, or "
+                              "umpire where both appraisers will accept us. We disclose prior "
+                              "engagements with either party before accepting any appraisal "
+                              "role, and either appraiser can decline us on that basis without "
+                              "explanation."),
                     ]),
                 ],
             },
@@ -773,149 +433,562 @@ SERVICES = [
                 "blocks": [
                     ("steps", [
                         ("Demand",
-                         "<p>Written demand for appraisal under the policy&rsquo;s own clause, "
-                         "naming your appraiser. Wording and timing matter; a defective demand "
-                         "gives the carrier grounds to resist the process entirely.</p>"),
+                         "<p>Written demand under the policy&rsquo;s own clause, naming an "
+                         "appraiser. Wording and timing matter; a defective demand gives the "
+                         "other party grounds to resist the process entirely.</p>"),
                         ("Appraiser appointment",
-                         "<p>Both parties name a competent and impartial appraiser within the "
+                         "<p>Each party names a competent and impartial appraiser within the "
                          "period the policy states. Impartial does not mean neutral about the "
-                         "evidence &mdash; your appraiser should know your building and your "
-                         "scope thoroughly.</p>"),
+                         "evidence &mdash; an appraiser should know the building and the scope "
+                         "thoroughly.</p>"),
                         ("Umpire selection",
                          "<p>The two appraisers agree an umpire, or a court appoints one. This is "
-                         "the single most consequential step in the process, because in a split "
-                         "panel the umpire decides the number. Who is proposed, and who is "
-                         "resisted, deserves real attention.</p>"),
+                         "the most consequential step in the process, because in a split panel "
+                         "the umpire decides the number. Who is proposed, who is resisted and "
+                         "what their background is deserves real attention.</p>"),
                         ("Inspection and exchange",
                          "<p>The panel inspects. Appraisers exchange scopes and estimates and "
                          "attempt to reconcile. A large share of appraisals settle here, between "
                          "the two appraisers, without the umpire ruling at all.</p>"),
                         ("Award",
-                         "<p>Any two of the three sign. The award typically itemises actual cash "
-                         "value and replacement cost. It binds both parties on the amount of loss, "
-                         "subject to the policy&rsquo;s terms and any reserved coverage "
-                         "positions.</p>"),
+                         "<p>Any two of the three sign. The award typically itemizes actual cash "
+                         "value and replacement cost, and binds both parties on the amount of "
+                         "loss, subject to the policy&rsquo;s terms and any reserved coverage "
+                         "position.</p>"),
                     ]),
-                ],
-            },
-        ],
-        "faqs": [
-            ("Can we invoke appraisal ourselves?",
-             "<p>Yes &mdash; the clause almost always runs both ways. Policyholders invoke it far "
-             "less often than insurers do, which is odd, because a well-prepared policyholder with "
-             "a thorough scope and a competent appraiser is usually in a strong position in that "
-             "forum. The precondition is a documented disagreement about the amount of loss, and a "
-             "scope good enough to defend line by line.</p>"),
-            ("Who should serve as our appraiser?",
-             "<p>Someone who knows the property type, can defend an estimate under pressure, and "
-             "is genuinely willing to move toward the evidence &mdash; a panel that suspects your "
-             "appraiser is simply an advocate loses you the umpire. We serve as appraiser on "
-             "commercial and institutional files, and where we are already the consultant on "
-             "the claim we will tell you plainly whether that dual role is appropriate for your "
-             "file or whether you are better served by someone independent.</p>"),
-            ("What if the umpire gets it wrong?",
-             "<p>Awards are hard to set aside. Texas courts generally uphold them absent fraud, "
-             "accident, or a panel acting outside its authority &mdash; for instance by deciding "
-             "coverage rather than amount. That finality is the point of the mechanism, and it is "
-             "the reason preparation before the panel matters so much more than argument "
-             "afterwards.</p>"),
-        ],
-    },
-
-    # ======================================================= denied claims =
-    {
-        "slug": "denied-and-underpaid-claims",
-        "nav_label": "Denied &amp; Underpaid Claims",
-        "card_title": "Denied &amp; underpaid claim review",
-        "card_blurb": ("A second opinion on a closed or short-paid file &mdash; what the letter "
-                       "actually says, and whether it holds."),
-        "title": "Denied &amp; Underpaid Claims | Independent Review",
-        "description": "Second opinion and reopening of denied or underpaid commercial insurance claims in Texas. Supplemental claims, reconsideration and appraisal.",
-        "eyebrow": "Service &middot; Denials &amp; supplements",
-        "h1": "A denial letter is<br>a <em>position</em>, not a verdict",
-        "h1_plain": "Denied and underpaid claim review",
-        "lede": ("Most denial letters are two pages long and quote three policy provisions. What "
-                 "they usually do not do is explain why those provisions apply to your facts. "
-                 "That gap is where reopened claims live."),
-        "head_aside": [
-            ("ledger", "First read of a denial", [
-                ("Provision cited", "Which one?"),
-                ("Facts relied on", "Stated?"),
-                ("Investigation", "What was done"),
-                ("Engineer report", "Request it"),
-                ("Suit limitation", "Date it"),
-                ("Appeal route", "Policy or pool"),
-            ], "Request the complete claim file in writing. What the carrier did and did not do is "
-               "frequently the strongest part of the answer."),
-        ],
-        "sections": [
-            {
-                "eyebrow": "Anatomy",
-                "h2": "The four denials we see most, and what usually answers them.",
-                "blocks": [
-                    ("table", "Common denial grounds", ["Ground", "What it means", "Where it breaks"], [
-                        ["Wear, tear and deterioration",
-                         "The damage is age, not an event.",
-                         "Maintenance records, prior condition reports, storm data, test cuts, and a service-life analysis from someone qualified to give one."],
-                        ["Late notice",
-                         "You did not report promptly and we are prejudiced.",
-                         "Prejudice generally has to be shown, not assumed. Evidence that the condition was latent, or that the carrier could still investigate fully, matters."],
-                        ["Excluded cause",
-                         "Flood, earth movement, faulty workmanship, seepage.",
-                         "The insurer generally bears the burden on exclusions. Separating covered from excluded causes, and the ensuing-loss wording, do a lot of work here."],
-                        ["Below deductible",
-                         "The loss does not exceed your retention.",
-                         "Almost always a scope argument rather than a coverage one. A complete estimate frequently clears a retention the carrier&rsquo;s partial estimate did not."],
-                    ]),
-                    ("p", "There is a fifth category that is not a denial at all: the claim that "
-                          "was paid, cashed, and quietly forgotten while the actual repair cost "
-                          "came in at double the estimate. Supplemental claims are ordinary and "
-                          "contemplated by the policy. Accepting a payment is not the same as "
-                          "signing a release."),
                 ],
             },
             {
                 "band": "ink",
-                "eyebrow": "Time",
-                "h2": "Before anything else, date the limitation.",
-                "dek": "Texas commercial policies commonly contain a two-year suit limitation, and "
-                       "chapter 542A adds a pre-suit notice requirement of at least 61 days for "
-                       "many weather-related claims.",
+                "eyebrow": "Preparation",
+                "h2": "The panel is looking at the building, not listening to the speech.",
                 "blocks": [
-                    ("p", "Read together, those two provisions mean the practical deadline to have "
-                          "counsel engaged is materially earlier than the limitation date itself. "
-                          "A file that looks like it has six months left may have four. The first "
-                          "thing we do on a denied claim is establish those dates and tell you, in "
-                          "writing, what the real runway is."),
-                    ("html", '<a class="btn btn--ghost mt-m" href="/tools/texas-claim-deadline-calculator/">'
-                             'Date your claim now <span class="arw">&rarr;</span></a>'),
+                    ("checks", [
+                        "A complete line-item estimate in the standard format, priced to the local market and defensible line by line.",
+                        "Measured and photographic documentation supporting every disputed item.",
+                        "Specialist reports where causation or repairability is in issue.",
+                        "A written statement of exactly which items are disputed and why, so the panel can work efficiently.",
+                        "Agreement, ideally in writing, on how causation allocation will be treated if it arises.",
+                    ]),
+                    ("p", "Awards are difficult to unwind. Texas courts generally uphold them "
+                          "absent fraud, accident, or a panel acting outside its authority "
+                          "&mdash; for instance by deciding coverage rather than amount. That "
+                          "finality is the point of the mechanism, and it is why preparation "
+                          "before the panel matters far more than argument afterwards."),
                 ],
             },
         ],
         "faqs": [
-            ("How long do we have to reopen a claim?",
-             "<p>It depends on the policy&rsquo;s suit limitation provision, on when the cause of "
-             "action accrued, and for many weather claims on the chapter 542A framework. Two years "
-             "is the common figure in Texas commercial policies, but wording varies and some "
-             "provisions are shorter. Because the analysis is legal rather than adjusting, we will "
-             "tell you what the policy says and recommend you confirm the deadline with counsel "
-             "&mdash; quickly.</p>"),
-            ("The carrier had an engineer. Do we need one too?",
-             "<p>Usually, yes. An engineering report is the carrier&rsquo;s evidentiary foundation, "
-             "and disagreement without a comparable report is just disagreement. What we would add "
-             "is that the carrier&rsquo;s report should be obtained and read closely first: they "
-             "often contain concessions, limited scopes of inspection, and assumptions the author "
-             "would struggle to defend.</p>"),
-            ("Is it worth reviewing a claim that was closed two years ago?",
-             "<p>It costs nothing to find out, and the answer is occasionally yes &mdash; "
-             "particularly where repairs were never completed, where recoverable depreciation was "
-             "never released, or where the settlement was for a scope that later proved badly "
-             "wrong. Often the answer is no, because the limitation has run or the evidence is "
-             "gone. We will tell you which within a week.</p>"),
+            ("Can you serve as umpire?",
+             "<p>Yes, where both appraisers accept us. Umpire work depends on being impartial and "
+             "being seen to be, so prior engagements with either party are disclosed to both "
+             "appraisers before we accept. A firm that only ever works one side has a structural "
+             "problem being accepted as umpire, which is one practical argument for the way this "
+             "practice is built.</p>"),
+            ("How much does appraisal cost compared with litigation?",
+             "<p>Each side pays its own appraiser and the parties normally split the umpire. "
+             "Against years of discovery, depositions, expert reports and motion practice, "
+             "appraisal is typically far cheaper and far faster &mdash; weeks to a few months on "
+             "a well-run panel.</p>"),
+            ("Is appraisal a good idea for a public entity?",
+             "<p>Frequently, and for a reason beyond cost: it is a contractual process rather "
+             "than public litigation against an insurer. For a school board, a city council or a "
+             "church membership, that is often a materially easier thing to approve and to "
+             "explain.</p>"),
         ],
     },
 
-    # ===================================================== policy review ====
+    # ============================================= soot, smoke and mold testing
+    {
+        "slug": "soot-smoke-and-mold-testing",
+        "nav_label": "Soot, Smoke &amp; Mold Testing",
+        "card_title": "Soot, smoke &amp; mold testing and reporting",
+        "card_blurb": ("Sampling, laboratory analysis and written findings on combustion residue "
+                       "and microbial contamination &mdash; and on what remediation is actually "
+                       "required."),
+        "title": "Soot, Smoke &amp; Mold Testing and Reporting | Texas",
+        "description": ("Independent soot, smoke and mold testing and reporting for Texas "
+                        "commercial property. Sampling, laboratory analysis, remediation scope "
+                        "and post-remediation verification."),
+        "eyebrow": "Service &middot; Testing",
+        "h1": "Contamination is a<br><em>laboratory</em> question",
+        "h1_plain": "Soot, smoke and mold testing and reporting",
+        "lede": ("&ldquo;It smells smoky&rdquo; and &ldquo;there is no visible mold&rdquo; are "
+                 "both opinions, and both get asserted with total confidence by people on either "
+                 "side of a claim. Sampling and analysis replace the argument with a number."),
+        "head_aside": [
+            ("ledger", "What testing settles", [
+                ("Residue present?", "Yes / no"),
+                ("Residue type", "Characterized"),
+                ("Distribution", "Mapped"),
+                ("Background", "Compared"),
+                ("Remediation scope", "Defined"),
+                ("Clearance", "Verified"),
+            ], "The same sampling answers whether the work is needed and whether it worked."),
+        ],
+        "sections": [
+            {
+                "eyebrow": "Soot and smoke",
+                "h2": "What burned decides what the residue is.",
+                "blocks": [
+                    ("p", "Combustion residue is not one substance. A protein fire from a kitchen "
+                          "leaves a thin, pervasive, almost invisible film that defeats ordinary "
+                          "cleaning and carries an odor out of all proportion to what can be seen. "
+                          "Plastics and electronics produce acidic residues that keep corroding "
+                          "metal, circuit boards and wiring for months after the fire is out. "
+                          "Natural cellulose produces something different again."),
+                    ("p", "That distinction decides whether an item is cleaned, restored or "
+                          "replaced &mdash; and multiplied across a contents inventory or a "
+                          "building&rsquo;s electrical and mechanical systems, it is usually the "
+                          "largest disputed number in a fire claim. It is also entirely testable, "
+                          "relatively cheaply, which is why the argument is so unnecessary."),
+                    ("checks", [
+                        "Surface sampling by tape lift and wipe, at locations chosen to map distribution rather than to prove a point.",
+                        "Characterization of the particulate &mdash; combustion byproduct versus ordinary settled dust, char versus ash versus soot.",
+                        "Background and control samples from unaffected areas of the same building, which is what makes a positive result mean anything.",
+                        "Sampling inside air-handling systems and above ceilings, the most common route for building-wide contamination and the most common omission.",
+                        "Corrosion assessment on electrical distribution, controls, servers and exposed metal where acidic residues are indicated.",
+                        "A written scope of remediation that follows from the findings, rather than a scope written first and justified afterwards.",
+                    ]),
+                ],
+                "aside": [
+                    ("callout", "Odor is not a standard", [
+                        ("p", "Odor is real, and it is also the least defensible basis for a "
+                              "remediation scope, because it varies by person and by day. Where "
+                              "odor is the presenting complaint, the useful deliverable is a "
+                              "sampling result and an objective completion criterion &mdash; "
+                              "something both parties can test against at the end."),
+                    ]),
+                ],
+            },
+            {
+                "band": "paper2",
+                "eyebrow": "Mold and microbial",
+                "h2": "Condition, not just presence.",
+                "blocks": [
+                    ("p", "Mold is present in every building, which is why a bare positive result "
+                          "proves very little. What matters is whether indoor conditions differ "
+                          "materially from outdoor and unaffected-area baselines, whether the "
+                          "species present indicate sustained water activity, and whether there "
+                          "is an identified moisture source that would let it continue."),
+                    ("p", "The industry standards that govern remediation set out water damage "
+                          "categories and condition classifications, and those classifications "
+                          "drive the scope: what is cleaned, what is removed, what containment is "
+                          "required, and what has to be demonstrated before the space goes back "
+                          "into use. A report that gives a result without placing it against "
+                          "those criteria has not finished the job."),
+                    ("table", "Typical sampling program",
+                     ["Method", "What it establishes"], [
+                        ["Air sampling, spore trap", "Airborne concentration and genera, indoors against outdoor and unaffected-area controls"],
+                        ["Surface sampling, tape lift and swab", "Whether visible growth is fungal, and what it is"],
+                        ["Bulk sampling", "Whether growth extends into the material rather than sitting on it"],
+                        ["Moisture mapping and meter readings", "The water source and the extent of affected material, which is what actually sizes the scope"],
+                        ["Post-remediation verification", "Whether the completed work meets the clearance criteria set at the start"],
+                     ]),
+                    ("callout", "Set clearance criteria before the work, not after", [
+                        ("p", "The most expensive disputes in remediation come from nobody having "
+                              "written down in advance what &ldquo;finished&rdquo; means. Agreed "
+                              "clearance criteria at the start convert a subjective argument at "
+                              "the end into a pass or a fail."),
+                    ]),
+                ],
+            },
+            {
+                "band": "ink",
+                "eyebrow": "The coverage angle",
+                "h2": "Remediation sub-limits make timing expensive.",
+                "blocks": [
+                    ("p", "Texas commercial forms frequently sub-limit fungus and mold "
+                          "remediation, sometimes to a figure that is trivial against the "
+                          "building limit above it. Where microbial growth results from a covered "
+                          "water event and is addressed as part of drying and repair within a "
+                          "reasonable time, the work is typically part of the repair. Where it is "
+                          "left to develop, the cost gets reclassified against the sub-limit and "
+                          "the exposure lands on the owner."),
+                    ("p", "Which means early, documented drying with logged readings is not "
+                          "administrative box-ticking. It is the difference between a repair cost "
+                          "and a capped one, and it matters to whichever party ends up "
+                          "carrying it."),
+                ],
+            },
+        ],
+        "faqs": [
+            ("Do you perform the remediation as well?",
+             "<p>No, and that separation is the point. A firm that tests, writes the scope and "
+             "then performs the work has an interest in the scope it wrote. We test, we report, "
+             "and somebody else does the work &mdash; chosen by the client, with no referral "
+             "relationship in either direction.</p>"),
+            ("Can you do post-remediation verification on work scoped by someone else?",
+             "<p>Yes, and it is a common engagement from both sides. What matters is that the "
+             "clearance criteria were defined before the work started. Where they were not, we "
+             "will say what the result shows against ordinary standards and note the absence of "
+             "an agreed criterion rather than inventing one retrospectively.</p>"),
+            ("Is testing worth it on a smaller loss?",
+             "<p>Often yes, because it is cheap relative to what it settles. A few hundred "
+             "dollars of sampling routinely resolves a five-figure argument about whether "
+             "contents are restorable or a building-wide cleaning scope is justified. It is one "
+             "of the few places in this business where the analysis costs much less than the "
+             "disagreement.</p>"),
+        ],
+    },
+
+    # ================================================= cabinet repairability
+    {
+        "slug": "cabinet-repairability-reports",
+        "nav_label": "Cabinet Repairability",
+        "card_title": "Cabinet repairability reports",
+        "card_blurb": ("Whether damaged casework can actually be restored &mdash; substrate, "
+                       "finish, hardware and whether the profile can still be matched."),
+        "title": "Cabinet Repairability Reports | Casework Damage Assessment",
+        "description": ("Independent cabinet and casework repairability assessment after water, "
+                        "smoke or impact damage. Substrate condition, refinishing feasibility, "
+                        "matching and replacement scope."),
+        "eyebrow": "Service &middot; Casework",
+        "h1": "Can the cabinets<br>actually be <em>saved</em>?",
+        "h1_plain": "Cabinet repairability reports",
+        "lede": ("It is a small question that carries a large number. Refinishing a kitchen and "
+                 "replacing it differ by an order of magnitude, the decision is made early, and "
+                 "on multifamily and institutional property it is made across hundreds of "
+                 "units at once."),
+        "head_aside": [
+            ("ledger", "What the report answers", [
+                ("Substrate", "Sound or failed"),
+                ("Moisture", "Measured"),
+                ("Finish", "Restorable?"),
+                ("Hardware", "Serviceable?"),
+                ("Profile", "Still available?"),
+                ("Scope", "Repair or replace"),
+            ], "Five physical findings and one conclusion, each with the evidence attached."),
+        ],
+        "sections": [
+            {
+                "eyebrow": "The substrate question",
+                "h2": "What the boxes are made of decides almost everything.",
+                "blocks": [
+                    ("p", "Most commercial and multifamily casework is built from "
+                          "particleboard or MDF with a thermofoil, melamine or veneer face. Those "
+                          "substrates do not recover from sustained moisture. They swell "
+                          "irreversibly, lose fastener holding at the joints, and delaminate at "
+                          "the face &mdash; and the swelling frequently appears at the toe kick "
+                          "and the bottom of the end panels first, where water wicked upward, "
+                          "rather than where the leak was."),
+                    ("p", "Plywood-box casework with solid-wood face frames behaves quite "
+                          "differently, and is often genuinely restorable after the same event. "
+                          "So the first question on any cabinet claim is not how wet it got. It "
+                          "is what it is made of, which requires looking at a cut edge rather "
+                          "than at the finished face."),
+                    ("checks", [
+                        "Substrate identified from an exposed or cut edge, not assumed from the door style.",
+                        "Moisture readings taken at the toe kick, base, end panels and back, recorded by location with the meter and scale noted.",
+                        "Swelling measured rather than described &mdash; thickness at affected and unaffected points on the same component.",
+                        "Joint integrity and fastener holding tested, since a box that has lost its corners is not repairable whatever the faces look like.",
+                        "Face condition assessed separately: thermofoil delamination and veneer lifting are different failures from a damaged topcoat.",
+                        "Hinges, slides and hardware checked for corrosion, which frequently outlives a successful box repair.",
+                    ]),
+                ],
+                "aside": [
+                    ("callout", "Why this gets disputed", [
+                        ("p", "The standard position on the other side of a cabinet claim is "
+                              "&ldquo;clean, dry and refinish.&rdquo; It is a reasonable opening "
+                              "on solid-wood casework and close to meaningless on swollen "
+                              "particleboard. The disagreement is almost always resolvable with "
+                              "a substrate identification and four moisture readings, which is "
+                              "why it is such a wasteful thing to argue about for six months."),
+                    ]),
+                ],
+            },
+            {
+                "band": "paper2",
+                "eyebrow": "Matching",
+                "h2": "Even repairable casework has an availability problem.",
+                "blocks": [
+                    ("p", "Suppose half the run is genuinely restorable and half is not. The next "
+                          "question is whether the replacement half can be made to match the "
+                          "half that stays &mdash; same door profile, same species or laminate "
+                          "pattern, same finish, in a kitchen that has aged five years under UV."),
+                    ("p", "Cabinet lines are discontinued constantly. Door profiles change, "
+                          "laminate patterns are dropped, stain formulations are reformulated. "
+                          "Establishing that a profile is no longer available is a documentary "
+                          "exercise &mdash; manufacturer correspondence, discontinued-product "
+                          "notices, supplier quotes &mdash; and it is what converts a partial "
+                          "replacement into a continuous-run replacement under a matching "
+                          "argument."),
+                    ("table", "What the report records",
+                     ["Finding", "Why it matters"], [
+                        ["Manufacturer, line and door profile", "Determines whether matching components can be sourced at all"],
+                        ["Substrate and construction type", "Determines whether repair is physically possible"],
+                        ["Moisture and dimensional data by location", "The evidence base for the repairability conclusion"],
+                        ["Finish system and current condition", "Whether refinishing produces a uniform result across old and new"],
+                        ["Availability correspondence", "Documented discontinuation is the foundation of a matching claim"],
+                        ["Run and elevation photography", "Establishes what a &ldquo;continuous run&rdquo; means in this space"],
+                     ]),
+                ],
+            },
+        ],
+        "faqs": [
+            ("Why commission a separate report for cabinets?",
+             "<p>Because the decision is worth a great deal and is usually made by someone "
+             "eyeballing a finished face. On a single kitchen the difference between refinishing "
+             "and replacing is perhaps tens of thousands. On a 200-unit multifamily property or a "
+             "school district with casework in forty classrooms, the same judgment applied "
+             "wrongly moves seven figures.</p>"),
+            ("Do you assess bathroom vanities, built-ins and commercial millwork too?",
+             "<p>Yes. The same analysis applies to vanities, reception and nurse-station "
+             "millwork, laboratory casework, library shelving and church built-ins &mdash; and on "
+             "laboratory and healthcare casework there is usually a chemical-resistance or "
+             "cleanability specification that constrains what a repair is allowed to be.</p>"),
+            ("Can you report on units that have already been gutted?",
+             "<p>Partially. Where photographs, retained components and the contractor&rsquo;s "
+             "documentation survive, an opinion is possible and will be qualified accordingly. "
+             "This is a strong argument for getting the assessment done before demolition &mdash; "
+             "it is a one-day exercise that becomes impossible a week later.</p>"),
+        ],
+    },
+
+    # ============================================ contents itemizing & pricing
+    {
+        "slug": "contents-itemizing-and-pricing-disputes",
+        "nav_label": "Contents &amp; Pricing Disputes",
+        "card_title": "Contents itemizing &amp; pricing disputes",
+        "card_blurb": ("Room-by-room inventory, like-kind-and-quality research and the "
+                       "depreciation arguments that decide a contents claim."),
+        "title": "Contents Inventory &amp; Pricing Disputes | Personal Property Claims",
+        "description": ("Independent contents itemizing, like-kind-and-quality pricing research "
+                        "and depreciation analysis on Texas commercial and institutional "
+                        "contents claims."),
+        "eyebrow": "Service &middot; Contents",
+        "h1": "Line by line,<br>and <em>priced</em>",
+        "h1_plain": "Contents itemizing and pricing disputes",
+        "lede": ("Contents claims are lost in the detail rather than in the principle. Nobody "
+                 "disputes that the inventory was destroyed. What gets disputed is 4,000 "
+                 "individual descriptions, comparables and depreciation entries, one at a time."),
+        "head_aside": [
+            ("ledger", "Where contents claims break", [
+                ("Description", "Too vague"),
+                ("Comparable", "Not like kind"),
+                ("Age", "Unsupported"),
+                ("Condition", "Asserted"),
+                ("Depreciation", "Table-driven"),
+                ("Non-restorable", "Undocumented"),
+            ], "Each line is small. Multiplied by four thousand, they are the claim."),
+        ],
+        "sections": [
+            {
+                "eyebrow": "Itemizing",
+                "h2": "A description that cannot be priced is not a description.",
+                "blocks": [
+                    ("p", "The single biggest cause of contents disputes is an inventory written "
+                          "in a hurry. &ldquo;Office chair &mdash; $250&rdquo; invites a $90 "
+                          "comparable and there is no basis to argue. &ldquo;Task chair, mesh "
+                          "back, synchro-tilt, adjustable arms and lumbar, commercial-grade, "
+                          "purchased 2019&rdquo; produces a comparable in the right category, "
+                          "because it describes what actually has to be replaced."),
+                    ("p", "We inventory room by room, from photographs and physical inspection "
+                          "where the items still exist, and from records, invoices, asset "
+                          "registers and owner interview where they do not. Each line carries "
+                          "the detail that determines price: make and model where known, "
+                          "material, size, grade, age and condition, with the source of each "
+                          "noted."),
+                    ("checks", [
+                        "Room-by-room capture with photographs indexed to the inventory line.",
+                        "Specification-level descriptions, so a comparable can be sourced rather than guessed.",
+                        "Age and purchase evidence where it exists &mdash; asset registers, invoices, capital schedules, grant records.",
+                        "Condition recorded at the item level rather than applied as a blanket assumption.",
+                        "Restorable, non-restorable and questionable segregated, with the basis stated for each.",
+                        "Anything disposed of photographed and sampled before it goes, because it will be asked about.",
+                    ]),
+                ],
+                "aside": [
+                    ("callout", "Institutional contents are not household contents", [
+                        ("p", "Classroom furniture, laboratory instruments, library collections, "
+                              "sanctuary seating, commercial kitchen equipment, hotel FF&amp;E "
+                              "and warehouse stock all price from trade channels rather than "
+                              "retail. A comparable pulled from a consumer website is the wrong "
+                              "market, and saying so is frequently worth more than arguing about "
+                              "the number."),
+                    ]),
+                ],
+            },
+            {
+                "band": "paper2",
+                "eyebrow": "Pricing",
+                "h2": "Like kind and quality, in the right market.",
+                "blocks": [
+                    ("p", "Replacement cost for contents means the cost to replace with property "
+                          "of like kind and quality &mdash; not the cheapest item that performs "
+                          "the same function. Most pricing disputes are really disputes about "
+                          "whether a proposed comparable is genuinely equivalent in grade, "
+                          "durability, specification and channel."),
+                    ("p", "The way through is documentation rather than assertion: a sourced, "
+                          "dated comparable from the market the item would actually be bought in, "
+                          "with the specification set out so the equivalence can be checked. "
+                          "Where an exact match is discontinued, the report says so and prices "
+                          "the nearest current equivalent, showing the difference."),
+                    ("table", "Common pricing arguments",
+                     ["The position", "What resolves it"], [
+                        ["The comparable is not like kind and quality", "Side-by-side specification comparison, in the correct trade channel, dated and sourced"],
+                        ["The item was older than claimed", "Purchase records, asset register, serial or model dating, warranty documentation"],
+                        ["Condition was poor before the loss", "Pre-loss photographs, maintenance and service records, replacement cycle policy"],
+                        ["Depreciation applied from a generic table", "Actual useful life for that item in that use, with manufacturer or industry support"],
+                        ["The item was restorable", "Cleaning trial results, testing where contamination is in issue, manufacturer position on restored equipment"],
+                        ["Quantity is overstated", "Photographic count, floor plan, purchase and delivery records"],
+                     ]),
+                ],
+            },
+            {
+                "band": "ink",
+                "eyebrow": "Depreciation",
+                "h2": "A table is a starting point, not a finding.",
+                "blocks": [
+                    ("p", "Contents depreciation is normally applied from standard tables of "
+                          "useful life, which is efficient and frequently wrong at the item level. "
+                          "A commercial-grade item in light institutional use outlives its table "
+                          "entry comfortably; a consumer-grade item in heavy use does not reach "
+                          "it. Condition, maintenance and actual use are the variables, and all "
+                          "three are evidenced rather than assumed."),
+                    ("p", "On a replacement cost policy this is money that is recoverable once "
+                          "the items are actually replaced and documented &mdash; within whatever "
+                          "period the policy allows. On institutional claims that deadline is "
+                          "missed routinely, because replacing four thousand items takes longer "
+                          "than anyone plans for."),
+                    ("html", '<a class="tlink" href="/tools/rcv-acv-depreciation-calculator/">'
+                             'Model the depreciation holdback <span class="arw">&rarr;</span></a>'),
+                ],
+            },
+        ],
+        "faqs": [
+            ("Can you build an inventory when everything is already gone?",
+             "<p>Frequently, and it is much of what this work is. The sources are asset "
+             "registers, purchase and capital records, insurance schedules, photographs taken for "
+             "other reasons, video walkthroughs, supplier histories and structured interviews "
+             "with the people who used the space. It is slower than inventorying what survives, "
+             "and it produces a defensible document.</p>"),
+            ("Who should do the itemizing &mdash; us or you?",
+             "<p>On a small inventory, the owner, with a template and half an hour of guidance. "
+             "Beyond a few hundred items, the quality of the descriptions starts to determine the "
+             "outcome and it is worth having done properly. The failure mode is a large inventory "
+             "written quickly by someone with other priorities.</p>"),
+            ("Do you handle commercial stock and inventory as well as FF&amp;E?",
+             "<p>Yes, and stock carries its own valuation question: whether finished goods are "
+             "valued at the cost to reproduce or at selling price depends on the policy and on "
+             "whether a selling-price endorsement exists. That is a wording check worth making "
+             "before the inventory is even built.</p>"),
+        ],
+    },
+
+    # ======================================================= public adjusting
+    {
+        "slug": "public-adjusting",
+        "nav_label": "Public Adjusting",
+        "card_title": "Public adjusting",
+        "card_blurb": ("Where the engagement is to present and negotiate the claim as the "
+                       "policyholder&rsquo;s representative, under chapter 4102."),
+        "title": "Public Adjusting | Texas Commercial Claim Representation",
+        "description": ("Licensed public adjusting for Texas commercial and institutional "
+                        "policyholders: presenting, documenting and negotiating the claim as your "
+                        "representative under chapter 4102."),
+        "eyebrow": "Service &middot; Representation",
+        "h1": "When the engagement<br>is to <em>represent</em> you",
+        "h1_plain": "Public adjusting",
+        "lede": ("Most of our work is consulting and testimony, where we are retained to "
+                 "establish facts for whoever asks. Public adjusting is the exception: here we "
+                 "act as the policyholder&rsquo;s representative, and the engagement is "
+                 "different in kind."),
+        "head_aside": [
+            ("ledger", "This capacity only", [
+                ("Acting for", "Policyholder"),
+                ("Licence", "Tex. ch. 4102"),
+                ("Statutory fee cap", "10%"),
+                ("Authority", "&sect;4102.104"),
+                ("Repair work", "Prohibited"),
+                ("Stated in", "Engagement letter"),
+            ], "A single matter is worked in one capacity. Where this is the capacity, it is "
+               "named in the engagement letter before anything begins."),
+        ],
+        "sections": [
+            {
+                "eyebrow": "The distinction",
+                "h2": "Consulting establishes facts. Public adjusting takes a side.",
+                "blocks": [
+                    ("p", "The two capacities are genuinely different and it matters that nobody "
+                          "confuses them. As a consultant or expert, we are retained to measure, "
+                          "analyze and report, and the conclusions do not change with the client. "
+                          "As a public adjuster, we are the policyholder&rsquo;s representative "
+                          "in presenting and negotiating their claim &mdash; an advocacy role, "
+                          "licensed separately under chapter 4102 of the Texas Insurance Code."),
+                    ("p", "We hold both licences, and we act in one capacity per matter, named in "
+                          "the engagement letter. We never act for both parties to the same loss, "
+                          "and a conflict check runs before any matter is discussed in detail."),
+                    ("callout", "Fees are different in this capacity", [
+                        ("p", "Consulting, estimating, appraisal and expert engagements are "
+                              "hourly or fixed fee, never contingent. Public adjusting "
+                              "engagements may be on the conventional percentage basis, which "
+                              "Texas caps at 10% of the claim settlement under "
+                              "&sect;4102.104. Whichever applies is stated in writing before work "
+                              "starts, and where an amount has already been offered we normally "
+                              "carve it out of the fee base."),
+                    ]),
+                ],
+                "aside": [
+                    ("callout", "When to choose which", [
+                        ("p", "If you need somebody to run the claim, deal with the carrier and "
+                              "negotiate, that is public adjusting. If you need a defensible "
+                              "measurement, a report your own broker or counsel can rely on, or "
+                              "testimony, that is consulting &mdash; and it is usually the "
+                              "cheaper of the two on a well-handled file."),
+                    ]),
+                ],
+            },
+            {
+                "band": "paper2",
+                "eyebrow": "What it covers",
+                "h2": "First notice to final release.",
+                "blocks": [
+                    ("steps", [
+                        ("Coverage analysis",
+                         "<p>Declarations, forms, endorsements, schedule of values and prior loss "
+                         "history, read before the site visit, with a written summary of limits, "
+                         "deductible mechanics, valuation basis and every condition that carries "
+                         "a deadline.</p>"),
+                        ("Documentation and estimate",
+                         "<p>Measured survey of the whole property, indexed photography, "
+                         "specialists where the loss warrants them, and a line-item estimate "
+                         "with code work, soft costs, contents and time-element carried "
+                         "separately.</p>"),
+                        ("Presentation",
+                         "<p>A sworn proof of loss where appropriate, which states a number and "
+                         "starts the insurer&rsquo;s clock rather than leaving the file "
+                         "open-ended.</p>"),
+                        ("Negotiation to conclusion",
+                         "<p>Positions stated in writing and dated, differences itemized, "
+                         "supplements filed as actual costs come in, and an early view on whether "
+                         "the gap needs appraisal or counsel rather than more letters.</p>"),
+                    ]),
+                ],
+            },
+        ],
+        "faqs": [
+            ("Why would we use you as a consultant rather than as a public adjuster?",
+             "<p>Because on many files it is cheaper and gets the same result. If the insurer is "
+             "engaging properly and your team can run the correspondence, what you actually need "
+             "is a defensible scope and estimate &mdash; a fixed-fee consulting deliverable, not "
+             "a percentage of the whole settlement. Where the file needs somebody to carry it, "
+             "public adjusting earns its fee. We will tell you which we think you are looking "
+             "at.</p>"),
+            ("Can you switch capacity mid-matter?",
+             "<p>Rarely, and never quietly. Moving from consultant to representative changes the "
+             "relationship, the fee basis and how the earlier work will be characterized by the "
+             "other side. If it is genuinely the right move it is done by a new written "
+             "engagement, and if we have served as a neutral or an umpire on the matter, it is "
+             "not available at all.</p>"),
+            ("Do you take referral fees from contractors?",
+             "<p>No, in any capacity. Chapter 4102 prohibits a public adjuster from participating "
+             "in the repair of property they adjusted, and we go further: no referral fees, "
+             "commissions or other consideration from contractors, restoration firms, engineers "
+             "or vendors, in either direction, on any engagement.</p>"),
+        ],
+    },
+
     {
         "slug": "policy-review-and-pre-loss-consulting",
         "nav_label": "Policy Review &amp; Pre-Loss",
