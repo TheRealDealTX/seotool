@@ -259,38 +259,46 @@ ROOF = _calc(
     ("op",))
 
 
-# ------------------------------------------------------------------ 7. fee
-FEE = _calc(
-    "fee", "public adjuster fee and net recovery calculator",
-    (_f("Carrier&rsquo;s current offer", "offer", "480000",
-        "What is on the table today. Enter 0 if nothing has been offered.", prefix="$")
-     + _f("Realistic settlement with representation", "projected", "1150000",
-          "Your own estimate, or ours after a scope review.", prefix="$")
+# ----------------------------------------------------------------- 7. O&P
+OANDP = _calc(
+    "oandp", "overhead, profit and general conditions calculator",
+    (_f("Direct trade cost", "direct", "2400000",
+        "The line-item repair cost before markups.", prefix="$")
      + '<div class="field-row field-row--2">'
-     + _f("Fee rate", "rate", "10", "Capped at 10% in Texas.", suffix="%")
-     + _f("Prior offer carved out of the fee base?", "carve", "yes", "",
-          options=[("yes", "Yes — fee on the improvement only"),
-                   ("no", "No — fee on the whole settlement")])
+     + _f("Trades on the scope", "trades", "6", "Roofing, framing, MEP, finishes, and so on.", suffix="trades")
+     + _f("Construction duration", "months", "9", "For the general conditions test.", suffix="mo")
      + "</div>"
-     + _f("Third-party costs you pay directly", "costs", "35000",
-          "Engineers, forensic accountants, surveys. Not our fee.", prefix="$")),
-    "Net in your hands", "net",
-    "Settlement less the adjusting fee and any third-party costs you pay directly.",
-    (_row("Offer on the table today", "offer")
-     + _row("Projected settlement", "projected")
-     + _row("Improvement", "uplift")
-     + _row("Fee base", "base")
-     + _row("Adjusting fee", "fee")
-     + _row("Third-party costs", "costs")
-     + _row("Net recovery", "net")
-     + _row("Break-even settlement", "breakeven")
-     + _row("Fee as a share of the improvement", "effective")
-     + _row("Net gain versus taking the offer", "gain", "outrow--total")),
-    "Texas caps a public adjuster&rsquo;s fee at 10% of the claim settlement under "
-    "Tex. Ins. Code &sect;4102.104. Whether an offer already made is carved out of the fee base is "
-    "a matter of negotiation, not statute &mdash; which is exactly why it belongs in the "
-    "engagement letter.",
-    ("carveout", "thin", "worth"))
+     + '<div class="field-row field-row--2">'
+     + _f("Occupied-building premium", "occupancy", "8",
+          "Night work, phasing, protection, noise and dust control.", suffix="%")
+     + _f("Building occupied during work?", "occupied", "yes", "",
+          options=[("yes", "Yes — apply the premium"), ("no", "No — vacant")])
+     + "</div>"
+     + '<div class="field-row field-row--2">'
+     + _f("General conditions", "gc", "9", "Supervision, temporary utilities, logistics.", suffix="%")
+     + _f("Payment &amp; performance bond", "bond", "1.2", "Common on public work.", suffix="%")
+     + "</div>"
+     + '<div class="field-row field-row--2">'
+     + _f("Contractor overhead", "overhead", "10", "Conventionally 10%.", suffix="%")
+     + _f("Contractor profit", "profit", "10", "Conventionally 10%.", suffix="%")
+     + "</div>"),
+    "Total with markups", "total",
+    "Direct cost plus access premium, general conditions, overhead, profit and bond.",
+    (_row("Direct trade cost", "direct")
+     + _row("Occupied-building premium", "access")
+     + _row("Adjusted direct cost", "base")
+     + _row("General conditions", "gc")
+     + _row("General conditions per month", "gcmo")
+     + _row("Subtotal before O&amp;P", "subtotal")
+     + _row("Overhead", "overhead")
+     + _row("Profit", "profit")
+     + _row("Combined O&amp;P rate", "combined")
+     + _row("Bond", "bond")
+     + _row("Total", "total", "outrow--total")),
+    "Ten and ten is a convention, not a rule, and general conditions are a schedule-driven cost "
+    "rather than a percentage anyone should accept without testing. This models the standard "
+    "treatment so both the figure and the assumptions behind it are visible.",
+    ("trades", "fewtrades", "gcflag"))
 
 
 TOOLS = [
@@ -731,81 +739,106 @@ TOOLS = [
         ],
     },
     {
-        "slug": "public-adjuster-fee-calculator",
-        "nav_label": "Fee &amp; Net Recovery Calculator",
-        "card_title": "Public adjuster fee &amp; net recovery",
-        "card_blurb": ("Work out whether representation actually pays &mdash; net gain, break-even "
-                       "settlement, and the fee as a share of the improvement."),
-        "title": "Public Adjuster Fee Calculator | Net Recovery",
-        "description": "Calculate what a public adjuster costs and whether it pays: net recovery after the fee, break-even settlement and the fee as a share of the improvement.",
-        "eyebrow": "Tool &middot; Engagement economics",
-        "h1": "Does representation<br>actually <em>pay</em>?",
-        "h1_plain": "Public adjuster fee and net recovery calculator",
-        "lede": ("It is the first question every board, council and finance committee asks, and it "
-                 "deserves a number rather than a reassurance. Put your figures in and see the "
-                 "break-even point &mdash; including the cases where the answer is no."),
-        "calc": FEE,
+        "slug": "overhead-profit-general-conditions-calculator",
+        "nav_label": "O&amp;P and General Conditions",
+        "card_title": "Overhead, profit &amp; general conditions",
+        "card_blurb": ("Model the markups that get argued over on every commercial repair "
+                       "&mdash; O&amp;P, general conditions, access premium and bond."),
+        "title": "Overhead &amp; Profit Calculator | General Conditions",
+        "description": ("Calculate overhead, profit, general conditions, occupied-building "
+                        "premium and bond on a commercial repair, and test the three-trade "
+                        "threshold for whether O&amp;P is owed."),
+        "eyebrow": "Tool &middot; Markups",
+        "h1": "Overhead, profit and<br>general <em>conditions</em>",
+        "h1_plain": "Overhead, profit and general conditions calculator",
+        "lede": ("After scope, markups are the single most disputed part of a commercial repair "
+                 "estimate. This lays out the conventional treatment line by line so the "
+                 "argument is about the assumptions rather than about the total."),
+        "calc": OANDP,
         "sections": [
             {
-                "eyebrow": "The economics",
-                "h2": "The only question that matters is the net, not the fee.",
+                "eyebrow": "The three-trade test",
+                "h2": "When is a general contractor reasonably required?",
                 "blocks": [
-                    ("p", "A 10% fee on a settlement that doubles is a bargain. The same fee on a "
-                          "claim that was already correctly adjusted is a straight loss. Both "
-                          "happen, and an honest firm will tell you which one you are looking at "
-                          "before you sign anything rather than afterwards."),
-                    ("p", "Two structural details decide most of it. The first is whether an offer "
-                          "already made is carved out of the fee base &mdash; if the carrier has "
-                          "put $480,000 on the table before we are engaged, charging a percentage "
-                          "of that is charging for work nobody did. The second is who pays for "
-                          "engineers, forensic accountants and specialist surveys, which on a "
-                          "large institutional file can run into real money and are usually the "
-                          "client&rsquo;s direct cost."),
-                    ("p", "Both belong in the engagement letter in plain language. If a firm will "
-                          "not put the carve-out in writing, that tells you something useful at no "
-                          "cost."),
+                    ("p", "Overhead and profit compensate a general contractor for running a job: "
+                          "coordinating subcontractors, carrying risk, supervising a schedule. "
+                          "The question is not whether a GC was hired &mdash; it is whether one "
+                          "was reasonably required by the nature of the work."),
+                    ("p", "The convention that has grown up around that question is the "
+                          "three-trade threshold: where a repair involves three or more trades "
+                          "needing coordination, a general contractor is normally considered "
+                          "reasonably necessary, and O&amp;P follows. It is a rule of thumb "
+                          "rather than a legal standard, and it is a reasonable place for both "
+                          "sides to start."),
+                    ("p", "What makes the argument tractable is counting the trades honestly on "
+                          "the actual scope and saying so. A commercial re-roof that involves "
+                          "roofing, sheet metal, mechanical disconnect and reset, electrical and "
+                          "structural repair is plainly a coordinated job. A single-trade "
+                          "flooring replacement plainly is not. Most disputes live between those "
+                          "two, and they are resolved by the scope document, not by assertion."),
+                    ("table", "How the markups differ",
+                     ["Markup", "What it pays for", "How it should be tested"], [
+                        ["General conditions",
+                         "Project-specific, time-dependent costs: supervision, temporary utilities and protection, dumpsters, permits, logistics, site facilities.",
+                         "Built up from the schedule and the site, not taken as a flat percentage"],
+                        ["Overhead",
+                         "The contractor&rsquo;s cost of being in business: office, estimating, insurance, administration.",
+                         "Conventionally 10%; genuinely varies with market and job type"],
+                        ["Profit",
+                         "Return for carrying the risk of the work.",
+                         "Conventionally 10%; a matter of market rather than entitlement"],
+                        ["Bond",
+                         "Payment and performance security, common and often mandatory on public work.",
+                         "A real, quotable cost &mdash; obtain the rate rather than estimating it"],
+                     ]),
                 ],
             },
             {
                 "band": "paper2",
-                "eyebrow": "What the law says",
-                "h2": "Texas caps the fee, and regulates the contract.",
+                "eyebrow": "General conditions",
+                "h2": "The line that moves with the schedule.",
                 "blocks": [
-                    ("table", "Fee rules under chapter 4102", ["Provision", "What it requires"], [
-                        ["Fee cap", "A public insurance adjuster&rsquo;s compensation may not exceed 10% of the amount of the claim settlement (Tex. Ins. Code &sect;4102.104)."],
-                        ["Written contract", "The engagement must be in writing, signed, and must state the services and the compensation."],
-                        ["Licensing", "Public adjusters must be licensed by the Texas Department of Insurance and may not act as a contractor on the same loss."],
-                        ["No conflicted interest", "A public adjuster may not participate directly or indirectly in the reconstruction or repair of the damaged property they adjusted."],
-                        ["Cancellation", "Statute and the contract provide a period in which the insured may cancel the engagement. Read that clause before you sign."],
-                    ]),
-                    ("callout", "The conflict rule is a feature", [
-                        ("p", "The prohibition on adjusting and repairing the same loss is the "
-                              "reason to use a licensed public adjuster rather than a contractor "
-                              "who offers to handle your claim. A roofer whose fee is the roof has "
-                              "an interest in the scope. We have an interest in the number, and "
-                              "you pick the contractor."),
+                    ("p", "General conditions are frequently entered as a flat percentage and "
+                          "then defended as though the percentage were the cost. They are not. "
+                          "Supervision, temporary power, weather protection, site security and "
+                          "logistics accrue per week, which means a disputed construction "
+                          "schedule moves this line and the business-interruption claim at the "
+                          "same time and in the same direction."),
+                    ("p", "That connection is worth making explicit on any large file. If one "
+                          "party argues the rebuild should have taken five months rather than "
+                          "nine, they are arguing down the time-element loss and the general "
+                          "conditions together &mdash; and a schedule that documents the cause "
+                          "of each delay answers both at once."),
+                    ("checks", [
+                        "Build general conditions from a staffing and duration schedule, not from a percentage, on any job over a few months.",
+                        "Identify which costs are time-dependent and which are fixed, so a change in duration can be priced rather than argued.",
+                        "Price occupied-building constraints explicitly &mdash; phasing, night work, protection, infection control &mdash; rather than burying them in unit costs.",
+                        "Obtain an actual bond rate where bonding is required; it is quotable and it is not a percentage guess.",
+                        "State the trade count on the face of the estimate. It is the fact the O&amp;P argument turns on.",
                     ]),
                 ],
             },
         ],
         "faqs": [
-            ("Is the 10% cap per claim or per payment?",
-             "<p>The statutory limit is expressed against the amount of the claim settlement. The "
-             "practical questions &mdash; whether the base includes an offer already made, how "
-             "supplements are treated, and what happens if you settle part of the claim without us "
-             "&mdash; are matters for the engagement letter. Get them written down before work "
-             "starts.</p>"),
-            ("What if you recover nothing?",
-             "<p>Then there is no fee. Third-party costs you authorised directly &mdash; an "
-             "engineer, a forensic accountant &mdash; are a separate matter and are normally your "
-             "cost regardless, which is why we discuss each one before it is incurred rather than "
-             "presenting a bill at the end.</p>"),
-            ("Would you ever tell us not to hire you?",
-             "<p>Regularly. If the carrier&rsquo;s estimate is broadly right, if the loss will not "
-             "clear the deductible, or if the real problem is a coverage denial that needs a lawyer "
-             "rather than an adjuster, the honest answer is that we would be taking a fee for very "
-             "little. Run the numbers on this page. If the net gain is thin, say so when you call "
-             "and we will tell you plainly what we think.</p>"),
+            ("Is 10 and 10 a rule?",
+             "<p>No. It is a long-standing convention that both sides of the industry use as a "
+             "starting point, and it is neither a statutory entitlement nor a ceiling. Markets, "
+             "job types and risk profiles differ. What matters far more than the percentage is "
+             "whether a general contractor is reasonably required at all, and whether general "
+             "conditions have been built up properly or assumed.</p>"),
+            ("Should O&amp;P be paid if the owner self-performs or acts as their own GC?",
+             "<p>It is a genuine question rather than an obvious one, and it turns on the policy "
+             "wording and on what the work actually required. The common position is that the "
+             "measure is the reasonable cost to repair, which contemplates the contractor a "
+             "prudent owner would engage &mdash; not a discount for the owner&rsquo;s own "
+             "labor. The opposing position is that unincurred cost is not a loss. Both are "
+             "arguable; the scope and the wording decide it.</p>"),
+            ("Does the occupied-building premium belong in the claim?",
+             "<p>Where the building has to stay in use during the repair, and that constraint "
+             "genuinely increases the cost of the work, yes &mdash; it is part of the reasonable "
+             "cost to repair that property. What it needs is documentation: the phasing plan, "
+             "the hours restriction, the protection and containment actually required. Entered "
+             "as a bare percentage it invites a bare percentage in reply.</p>"),
         ],
     },
 ]

@@ -6,7 +6,7 @@ FEMA obligation running alongside its insurance, a church usually finds out too
 late that its steeple was scheduled at a number set in 2011.
 """
 
-from siteconfig import BIZ, STATUTE
+from siteconfig import BIZ, STATUTE, FEES
 
 P = BIZ["phone_display"]
 
@@ -24,10 +24,10 @@ INDUSTRIES = [
         "card_title": "Churches &amp; faith organizations",
         "card_blurb": ("Sanctuaries, family life centers, schools and parsonages &mdash; usually "
                        "insured on values nobody has revisited in a decade."),
-        "title": "Church Insurance Claims in Texas | Public Adjusters",
-        "description": "Public adjusters for Texas churches. Storm, hail, fire and water claims on sanctuaries, family life centers and church schools. No recovery, no fee.",
+        "title": "Church Property Loss Consultants | Texas",
+        "description": "Independent claims consultants for Texas churches. Storm, hail, fire and water loss assessment on sanctuaries, family life centers and church schools.",
         "eyebrow": "Who we serve &middot; Faith organizations",
-        "h1": "Church property claims,<br>handled by <em>your</em> adjuster",
+        "h1": "Church property losses,<br>measured <em>properly</em>",
         "h1_plain": "Church insurance claims in Texas",
         "lede": ("A church is the hardest building in town to value and the easiest one to "
                  "underpay. The sanctuary is irregular, the finishes are not in any estimating "
@@ -169,14 +169,15 @@ INDUSTRIES = [
             },
         ],
         "faqs": [
-            ("Can a church hire a public adjuster, or does the denomination have to approve it?",
-             "<p>A church can hire a public adjuster the same way it hires a roofer or an attorney: "
+            ("Can a church engage a claims consultant, and who has to approve it?",
+             "<p>A church engages a consultant the same way it engages an architect or an attorney: "
              "through whatever its bylaws require for a contract of that size, usually trustee or "
              "board approval. Denominational insurance programs do not prohibit it. What they often "
              "do is offer their own claims assistance, which is genuinely useful and still paid for "
-             "by the same organization that pays the claim. Those two things can coexist &mdash; "
-             "and if the wording of your program is generous, our work is simply to make sure every "
-             "clause of it gets used.</p>"),
+             "by the same organization that will pay the claim. Those two things can coexist. An "
+             "independent measurement of the loss is useful to the church and, frankly, useful "
+             "to a well-run program too &mdash; it is easier to pay a documented number than an "
+             "asserted one.</p>"),
             ("Our insurance is through a church-specific carrier. Are those claims different?",
              "<p>In the wording, yes, usually for the better. Church programs commonly carry agreed "
              "value in place of coinsurance, replacement cost on contents, broader debris removal, "
@@ -208,8 +209,8 @@ INDUSTRIES = [
         "card_title": "School districts &amp; ISDs",
         "card_blurb": ("Multi-campus property programs, risk-pool coverage, bond-funded buildings "
                        "and a repair window that closes in August."),
-        "title": "School District Property Claims | Texas ISD Adjusters",
-        "description": "Public adjusters for Texas school districts. Hail, wind, fire and water claims across multi-campus property programs, risk pools and self-insured retentions.",
+        "title": "School District Property Losses | Texas Consultants",
+        "description": "Independent claims consultants for Texas school districts. Hail, wind, fire and water claims across multi-campus property programs, risk pools and self-insured retentions.",
         "eyebrow": "Who we serve &middot; Public education",
         "h1": "School district claims,<br>settled before <em>August</em>",
         "h1_plain": "School district property insurance claims",
@@ -336,21 +337,21 @@ INDUSTRIES = [
             },
         ],
         "faqs": [
-            ("Does a school district need to competitively bid a public adjuster?",
+            ("Does a school district need to competitively bid a claims consultant?",
              "<p>Professional services procurement varies by district policy and by the value of the "
              "engagement, and your purchasing officer and counsel are the right people to answer it "
-             "for your board &mdash; not us. What we can tell you is that our fee is contingent, "
-             "expressed as a percentage of what is recovered and capped by statute at %s, so the "
-             "engagement does not draw on budgeted funds and can be evaluated on that basis. We are "
-             "used to producing the documentation a board packet requires.</p>" % STATUTE["fee_cap"]),
-            ("Our district is in a risk pool. Is there anything for a public adjuster to do?",
+             "for your board &mdash; not us. What we can tell you is that ours is an ordinary "
+             "hourly professional-services engagement with a written estimate and a "
+             "not-to-exceed figure, which is a familiar shape to a purchasing process. We are "
+             "used to producing the documentation a board packet requires.</p>"),
+            ("Our district is in a risk pool. Is there anything for a consultant to do?",
              "<p>Often more, not less. Pool coverage documents are not standard-form insurance "
              "policies, so the exclusions, the valuation basis and the appeal process all have to "
              "be read rather than assumed. The adjusting is frequently done by the same third-party "
              "administrators the insurance industry uses, and the scope disputes are identical: "
              "roof age, repairability, matching, code upgrade, overhead and profit. What changes is "
-             "that the statutory pressure points differ, so the case is made on documentation and "
-             "through the pool&rsquo;s own process.</p>"),
+             "that there is no statutory pressure to fall back on, so everything rests on "
+             "documentation and on the pool&rsquo;s own process.</p>"),
             ("Can you work around the school calendar?",
              "<p>It is the central planning constraint on every district file we take. Inspections "
              "get scheduled around instruction, invasive testing goes in breaks, and the negotiation "
@@ -375,8 +376,8 @@ INDUSTRIES = [
         "card_title": "Cities &amp; municipalities",
         "card_blurb": ("City halls, public safety, utilities and public works &mdash; with FEMA, a "
                        "council and the open-records file all watching."),
-        "title": "Municipal Property Claims | Texas City Public Adjusters",
-        "description": "Public adjusters for Texas cities and municipal entities. City hall, public safety, utilities and public works claims, including FEMA coordination.",
+        "title": "Municipal Property Losses | Texas Claims Consultants",
+        "description": "Independent claims consultants for Texas cities and municipal entities. City hall, public safety, utilities and public works claims, including FEMA coordination.",
         "eyebrow": "Who we serve &middot; Local government",
         "h1": "Municipal claims, built<br>for the <em>public record</em>",
         "h1_plain": "Municipal and city property insurance claims",
@@ -524,18 +525,19 @@ INDUSTRIES = [
             },
         ],
         "faqs": [
-            ("Can a Texas city hire a public adjuster?",
+            ("Can a Texas city engage a claims consultant?",
              "<p>Cities engage professional services of this kind routinely, subject to their own "
              "charter, purchasing policy and council approval thresholds &mdash; which your city "
-             "attorney and purchasing officer will apply, not us. Because the fee is contingent on "
-             "recovery and capped by statute, it is generally evaluated differently from a budgeted "
-             "expenditure. We will supply whatever documentation the agenda item requires.</p>"),
-            ("Will using a public adjuster interfere with our FEMA public assistance?",
+             "attorney and purchasing officer will apply, not us. Ours is an hourly "
+             "professional-services engagement with a written estimate and a not-to-exceed "
+             "figure, which most purchasing policies already have a route for. We will supply "
+             "whatever documentation the agenda item requires.</p>"),
+            ("Will using a consultant interfere with our FEMA public assistance?",
              "<p>It should strengthen it. The federal file needs a defensible damage description, "
              "consistent measurements and a documented insurance recovery. Those are the same "
              "deliverables as the insurance claim. The risk to avoid is the opposite one: a thin "
              "insurance settlement does not increase federal assistance, because anticipated "
-             "insurance proceeds are deducted regardless. Public adjuster fees themselves are "
+             "insurance proceeds are deducted regardless. Note that claims consulting fees are "
              "generally not an eligible public assistance cost, so the engagement should be "
              "structured with that in mind from the start.</p>"),
             ("Our coverage is through a risk pool, not an insurance company. Does that change things?",
@@ -561,8 +563,8 @@ INDUSTRIES = [
         "card_title": "Universities &amp; colleges",
         "card_blurb": ("Campus-wide schedules, research exposure, auxiliary revenue and blanket "
                        "limits nobody has stress-tested."),
-        "title": "University &amp; College Property Claims | Texas Adjusters",
-        "description": "Public adjusters for Texas universities and colleges. Residence halls, research facilities, athletics and auxiliary revenue interruption claims.",
+        "title": "University &amp; College Property | Texas Consultants",
+        "description": "Independent claims consultants for Texas universities and colleges. Residence halls, research facilities, athletics and auxiliary revenue interruption claims.",
         "eyebrow": "Who we serve &middot; Higher education",
         "h1": "Campus losses are<br><em>portfolio</em> losses",
         "h1_plain": "University and college property insurance claims",
@@ -666,13 +668,13 @@ INDUSTRIES = [
             },
         ],
         "faqs": [
-            ("We have a risk management office and a broker. What does a public adjuster add?",
+            ("We have a risk management office and a broker. What does a consultant add?",
              "<p>Capacity and independence, mostly. A campus risk office is typically two to five "
              "people who also run the whole insurance program, and a large loss is a full-time "
              "job for months. Your broker is genuinely useful and is also structurally conflicted: "
              "their relationship with the market is a long one and yours with this claim is short. "
-             "We add estimating capability, specialist engagement and full-time negotiation "
-             "pressure, and we are paid only out of what the claim recovers.</p>"),
+             "We add estimating capability, specialist engagement and the capacity to work a file "
+             "full-time for months, at an hourly rate against a written estimate.</p>"),
             ("Can you work on part of a claim rather than the whole thing?",
              "<p>Yes, and on campus files that is often the sensible structure. A common engagement "
              "is on the disputed portion only &mdash; the roofs the carrier says are repairable, "
@@ -680,11 +682,10 @@ INDUSTRIES = [
              "risk office keeps the undisputed portion moving. The engagement letter defines the "
              "scope and the fee applies to that scope.</p>"),
             ("How is the fee handled on an institutional engagement?",
-             "<p>As a written percentage of what is recovered, within the statutory cap of %s, with "
-             "the scope of the engagement and any carve-outs for amounts already offered set out "
-             "explicitly. Institutions almost always want that structure documented before "
-             "procurement review, and we would rather produce it at the start than negotiate it "
-             "later.</p>" % STATUTE["fee_cap"]),
+             "<p>Hourly, or fixed fee where the deliverable is well defined, with a written estimate "
+             "of hours and a not-to-exceed figure. Never a percentage of the recovery. "
+             "Institutions almost always want that structure documented before procurement "
+             "review, and we would rather produce it at the start than negotiate it later.</p>"),
         ],
     },
 
@@ -695,8 +696,8 @@ INDUSTRIES = [
         "card_title": "Hospitals &amp; healthcare",
         "card_blurb": ("Where remediation standards, licensure and patient volume all constrain "
                        "what a repair is allowed to be."),
-        "title": "Hospital &amp; Healthcare Property Claims | Texas Adjusters",
-        "description": "Public adjusters for Texas hospitals, clinics and surgery centers. Water, fire and storm losses with infection control, licensure and patient-volume exposure.",
+        "title": "Hospital &amp; Healthcare Property | Texas Consultants",
+        "description": "Independent claims consultants for Texas hospitals and surgery centers. Water, fire and storm losses with infection control, licensure and patient-volume exposure.",
         "eyebrow": "Who we serve &middot; Healthcare",
         "h1": "In healthcare, the<br>repair standard <em>is</em> the claim",
         "h1_plain": "Hospital and healthcare property insurance claims",
@@ -784,7 +785,7 @@ INDUSTRIES = [
             },
         ],
         "faqs": [
-            ("Is a public adjuster appropriate for a hospital with in-house risk management?",
+            ("Is a consultant appropriate for a hospital with in-house risk management?",
              "<p>Frequently yes, for the same reason hospitals use outside counsel with a general "
              "counsel in place. The in-house team runs the program; a large loss needs dedicated "
              "estimating, specialist engagement and sustained negotiation for six to eighteen "
@@ -814,7 +815,7 @@ INDUSTRIES = [
         "card_blurb": ("Per-building deductibles, loss of rents, and a unit-by-unit scope nobody "
                        "on the carrier&rsquo;s side wants to walk."),
         "title": "Apartment &amp; Multifamily Insurance Claims | Texas",
-        "description": "Public adjusters for Texas apartment communities, multifamily portfolios and condominium associations. Hail, wind, fire, freeze and loss-of-rents claims.",
+        "description": "Independent claims consultants for Texas apartment communities, multifamily portfolios and condominium associations. Hail, wind, fire, freeze and loss-of-rents claims.",
         "eyebrow": "Who we serve &middot; Multifamily",
         "h1": "Two hundred units,<br>one <em>walked</em> building",
         "h1_plain": "Apartment and multifamily property claims",
@@ -938,7 +939,7 @@ INDUSTRIES = [
         "card_blurb": ("Where the room-nights lost are worth more than the drywall, and the brand "
                        "standard dictates the scope."),
         "title": "Hotel Insurance Claims | Texas Hospitality Adjusters",
-        "description": "Public adjusters for Texas hotels and resorts. Storm, fire, water and business interruption claims measured in room nights, ADR and RevPAR.",
+        "description": "Independent claims consultants for Texas hotels and resorts. Storm, fire, water and business interruption claims measured in room nights, ADR and RevPAR.",
         "eyebrow": "Who we serve &middot; Hospitality",
         "h1": "Rooms out of<br>inventory are the <em>loss</em>",
         "h1_plain": "Hotel and hospitality insurance claims",
@@ -1048,8 +1049,8 @@ INDUSTRIES = [
         "card_title": "Industrial &amp; manufacturing",
         "card_blurb": ("Plants, warehouses and distribution centers, where the equipment and the "
                        "downtime dwarf the building."),
-        "title": "Manufacturing &amp; Warehouse Claims | Texas Adjusters",
-        "description": "Public adjusters for Texas manufacturers, warehouses and distribution centers. Equipment, stock, contingent business interruption and extra expense claims.",
+        "title": "Manufacturing &amp; Warehouse Losses | Texas Consultants",
+        "description": "Independent claims consultants for Texas manufacturers and warehouses. Equipment, stock, contingent business interruption and extra expense claims.",
         "eyebrow": "Who we serve &middot; Industrial",
         "h1": "The building is the<br><em>cheapest</em> thing in it",
         "h1_plain": "Manufacturing, warehouse and distribution claims",
@@ -1175,8 +1176,8 @@ INDUSTRIES = [
         "card_title": "Retail &amp; shopping centers",
         "card_blurb": ("Landlord and tenant obligations, loss of rents, co-tenancy exposure and a "
                        "roof nobody has walked in four years."),
-        "title": "Shopping Center &amp; Retail Claims | Texas Adjusters",
-        "description": "Public adjusters for Texas shopping centers and retail owners. Hail and wind damage, loss of rents, tenant disruption and co-tenancy exposure.",
+        "title": "Shopping Center &amp; Retail Losses | Consultants",
+        "description": "Independent claims consultants for Texas shopping centers and retail owners. Hail and wind damage, loss of rents, tenant disruption and co-tenancy exposure.",
         "eyebrow": "Who we serve &middot; Retail",
         "h1": "One roof, fourteen<br>tenants, <em>one</em> claim",
         "h1_plain": "Shopping center and retail property claims",

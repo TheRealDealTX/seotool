@@ -18,11 +18,11 @@ AREAS = [
         "card_title": "Austin &amp; Central Texas",
         "card_blurb": ("Travis, Williamson and Hays counties &mdash; hail, freeze and a building "
                        "stock that doubled in fifteen years."),
-        "title": "Austin Commercial Public Adjusters | Large Loss",
-        "description": "Public adjusters for Austin commercial and institutional property claims. Churches, school districts, city facilities and portfolios across Central Texas.",
+        "title": "Austin Claims Consultants | Commercial Large Loss",
+        "description": "Independent claims consultants for Austin commercial and institutional property claims. Churches, school districts, city facilities and portfolios across Central Texas.",
         "eyebrow": "Service area &middot; Central Texas",
-        "h1": "Austin commercial<br>claim <em>representation</em>",
-        "h1_plain": "Commercial public adjusters in Austin, Texas",
+        "h1": "Austin commercial<br>loss <em>consulting</em>",
+        "h1_plain": "Claims consultants in Austin, Texas",
         "lede": ("Central Texas produces two kinds of institutional loss: hail on a very large "
                  "inventory of flat commercial roofing, and freeze damage to buildings that were "
                  "never designed for a week below freezing. We work both across the Austin metro."),
@@ -81,11 +81,11 @@ AREAS = [
         "card_title": "Houston &amp; the Gulf Coast",
         "card_blurb": ("Harris and the surrounding counties &mdash; wind, surge, derecho and the "
                        "flood-versus-wind argument that follows every named storm."),
-        "title": "Houston Commercial Public Adjusters | Hurricane",
-        "description": "Public adjusters for Houston commercial and institutional property claims. Hurricane, windstorm, flood-versus-wind causation, fire and business interruption.",
+        "title": "Houston Claims Consultants | Hurricane &amp; Large Loss",
+        "description": "Independent claims consultants for Houston commercial and institutional property claims. Hurricane, windstorm, flood-versus-wind causation, fire and business interruption.",
         "eyebrow": "Service area &middot; Gulf Coast",
         "h1": "Houston commercial<br>and <em>catastrophe</em> claims",
-        "h1_plain": "Commercial public adjusters in Houston, Texas",
+        "h1_plain": "Claims consultants in Houston, Texas",
         "lede": ("No metro in Texas has been tested harder. Harvey in 2017, the May 2024 derecho, "
                  "Hurricane Beryl two months later &mdash; Houston institutions have learned more "
                  "about their policy wording in eight years than most learn in fifty."),
@@ -151,11 +151,11 @@ AREAS = [
         "card_title": "Dallas&ndash;Fort Worth",
         "card_blurb": ("The most hail-exposed metro in the United States, with an institutional "
                        "building stock to match."),
-        "title": "Dallas&ndash;Fort Worth Public Adjusters | Hail Claims",
-        "description": "Public adjusters for Dallas-Fort Worth commercial and institutional property claims. Hail, wind, tornado and fire losses across the Metroplex.",
+        "title": "Dallas&ndash;Fort Worth Claims Consultants | Hail Losses",
+        "description": "Independent claims consultants for Dallas-Fort Worth commercial and institutional property claims. Hail, wind, tornado and fire losses across the Metroplex.",
         "eyebrow": "Service area &middot; North Texas",
         "h1": "Dallas&ndash;Fort Worth<br><em>hail</em> and large loss",
-        "h1_plain": "Commercial public adjusters in Dallas–Fort Worth",
+        "h1_plain": "Claims consultants in Dallas–Fort Worth",
         "lede": ("North Texas produces more insured hail damage than anywhere else in the country. "
                  "It has also produced a generation of carrier adjusters unusually practiced at "
                  "arguing that a twenty-year-old commercial roof was already finished."),
@@ -217,11 +217,11 @@ AREAS = [
         "card_title": "San Antonio &amp; South Central Texas",
         "card_blurb": ("Bexar County and the Hill Country edge &mdash; hail, flash flood and a "
                        "deep stock of historic institutional buildings."),
-        "title": "San Antonio Public Adjusters | Commercial Claims",
-        "description": "Public adjusters for San Antonio commercial and institutional property claims. Hail, wind, flood and fire for churches, districts and municipalities.",
+        "title": "San Antonio Claims Consultants | Commercial Losses",
+        "description": "Independent claims consultants for San Antonio commercial and institutional property claims. Hail, wind, flood and fire for churches, districts and municipalities.",
         "eyebrow": "Service area &middot; South Central Texas",
         "h1": "San Antonio<br><em>institutional</em> claims",
-        "h1_plain": "Commercial public adjusters in San Antonio, Texas",
+        "h1_plain": "Claims consultants in San Antonio, Texas",
         "lede": ("San Antonio has an unusually old institutional building stock for a Sun Belt "
                  "city &mdash; parish churches, mission-era structures, mid-century schools and "
                  "civic buildings. That makes ordinance and law coverage the decisive clause on a "
@@ -283,11 +283,11 @@ AREAS = [
         "card_title": "Corpus Christi &amp; the Coastal Bend",
         "card_blurb": ("First-tier coastal counties, TWIA wind cover, and the surge line that "
                        "decides which policy responds."),
-        "title": "Coastal Bend Public Adjusters | Corpus Christi Claims",
-        "description": "Public adjusters for Corpus Christi and Coastal Bend commercial property claims. TWIA windstorm, hurricane, surge-versus-wind and business interruption.",
+        "title": "Coastal Bend Claims Consultants | Corpus Christi",
+        "description": "Independent claims consultants for Corpus Christi and the Coastal Bend commercial property claims. TWIA windstorm, hurricane, surge-versus-wind and business interruption.",
         "eyebrow": "Service area &middot; Coastal Bend",
         "h1": "Coastal Bend wind<br>and <em>surge</em> claims",
-        "h1_plain": "Public adjusters in Corpus Christi and the Coastal Bend",
+        "h1_plain": "Claims consultants in Corpus Christi and the Coastal Bend",
         "lede": ("On the coast the coverage architecture is different. Windstorm may sit with "
                  "TWIA, flood with a separate policy, and everything else with a commercial "
                  "carrier &mdash; three adjusters looking at one building and each hoping the "
@@ -328,7 +328,7 @@ AREAS = [
                   "mitigation."),
         ],
         "faqs": [
-            ("Our windstorm cover is with TWIA. Can a public adjuster help?",
+            ("Our windstorm cover is with TWIA. Can a consultant help?",
              "<p>Yes, and the procedural differences are a large part of why it is worth having "
              "someone who knows them. TWIA has its own claim handling requirements, its own "
              "deadlines for disputing a decision and its own dispute resolution route. Those "
@@ -350,11 +350,11 @@ AREAS = [
         "card_title": "Rio Grande Valley",
         "card_blurb": ("Hidalgo and Cameron counties &mdash; tropical systems, flooding, and some "
                        "of the fastest institutional growth in the state."),
-        "title": "Rio Grande Valley Public Adjusters | Commercial",
-        "description": "Public adjusters for Rio Grande Valley commercial and institutional property claims across Hidalgo, Cameron, Willacy and Starr counties.",
+        "title": "Rio Grande Valley Claims Consultants | Commercial",
+        "description": "Independent claims consultants for Rio Grande Valley commercial and institutional property claims across Hidalgo, Cameron, Willacy and Starr counties.",
         "eyebrow": "Service area &middot; South Texas",
         "h1": "Rio Grande Valley<br>commercial <em>claims</em>",
-        "h1_plain": "Public adjusters in the Rio Grande Valley",
+        "h1_plain": "Claims consultants in the Rio Grande Valley",
         "lede": ("The Valley combines coastal windstorm exposure, inland flooding and the fastest "
                  "school and municipal construction growth in South Texas &mdash; against an "
                  "insurance market that has hardened sharply and a building stock that has "

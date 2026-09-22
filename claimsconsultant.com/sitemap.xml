@@ -169,7 +169,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/tools/public-adjuster-fee-calculator/</loc>
+    <loc>https://claimsconsultant.com/tools/overhead-profit-general-conditions-calculator/</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -265,7 +265,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://claimsconsultant.com/blog/what-a-public-adjuster-does-on-a-commercial-claim/</loc>
+    <loc>https://claimsconsultant.com/blog/who-is-who-on-a-commercial-property-claim/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -275,6 +275,12 @@
     <lastmod>2026-09-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://claimsconsultant.com/who-we-work-for/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://claimsconsultant.com/how-we-work/</loc>

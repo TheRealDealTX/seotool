@@ -367,49 +367,56 @@
       '<b>Overhead and profit is included at 20%.</b> A re-roof of this size involves three or more trades, which is the standard test for whether a general contractor is reasonably required. Carriers routinely strip O&amp;P from the first estimate on commercial roofs; on a ' + money(base) + ' scope that removal is worth ' + money(oandp) + '.');
   };
 
-  /* 7. Public adjuster fee and net recovery ---------------------------- */
-  CALC['fee'] = function (f) {
-    var offer = val(f, 'offer');
-    var projected = val(f, 'projected');
-    var rate = val(f, 'rate') / 100;
-    var carve = raw(f, 'carve') === 'yes';
-    var costs = val(f, 'costs');
+  /* 7. Overhead, profit and general conditions ------------------------- */
+  CALC['oandp'] = function (f) {
+    var direct = val(f, 'direct');
+    var trades = val(f, 'trades');
+    var gcPct = val(f, 'gc') / 100;
+    var oPct = val(f, 'overhead') / 100;
+    var pPct = val(f, 'profit') / 100;
+    var occupied = raw(f, 'occupied') === 'yes';
+    var occPct = val(f, 'occupancy') / 100;
+    var months = val(f, 'months');
+    var bondPct = val(f, 'bond') / 100;
 
-    var uplift = Math.max(projected - offer, 0);
-    var base = carve ? uplift : projected;
-    var fee = base * rate;
-    var net = projected - fee - costs;
-    var gain = net - offer;
+    var access = occupied ? direct * occPct : 0;
+    var base = direct + access;
+    var gc = base * gcPct;
+    var subtotal = base + gc;
+    var overhead = subtotal * oPct;
+    var profit = subtotal * pPct;
+    var bond = (subtotal + overhead + profit) * bondPct;
+    var total = subtotal + overhead + profit + bond;
+    var combined = subtotal > 0 ? ((overhead + profit) / subtotal) * 100 : 0;
+    var gcPerMonth = months > 0 ? gc / months : 0;
 
-    /* settlement at which you are no better off than taking the offer today */
-    var breakeven = rate < 1
-      ? (carve ? offer + costs / (1 - rate) : (offer + costs) / (1 - rate))
-      : Infinity;
-    var effective = uplift > 0 ? (fee / uplift) * 100 : 0;
-
-    put(f, 'offer', money(offer));
-    put(f, 'projected', money(projected));
-    put(f, 'uplift', money(uplift));
+    put(f, 'direct', money(direct));
+    put(f, 'access', money(access));
     put(f, 'base', money(base));
-    put(f, 'fee', '(' + money(fee) + ')');
-    put(f, 'costs', '(' + money(costs) + ')');
-    put(f, 'net', money(net));
-    put(f, 'gain', money(gain));
-    put(f, 'breakeven', money(breakeven));
-    put(f, 'effective', pct(effective, 1));
+    put(f, 'gc', money(gc));
+    put(f, 'gcmo', money(gcPerMonth));
+    put(f, 'subtotal', money(subtotal));
+    put(f, 'overhead', money(overhead));
+    put(f, 'profit', money(profit));
+    put(f, 'combined', pct(combined, 1));
+    put(f, 'bond', money(bond));
+    put(f, 'total', money(total));
 
-    flag(f, 'carveout', carve && offer > 0,
-      '<b>The standing offer is carved out of the fee base.</b> You are paying ' + pct(rate * 100, 1) +
-      ' on the ' + money(uplift) + ' of improvement only, not on the ' + money(offer) +
-      ' already on the table. Ask for that in writing in the engagement letter &mdash; it is negotiable and it should be explicit.');
-    flag(f, 'thin', projected > 0 && gain <= 0,
-      '<b>On these numbers you would be no better off.</b> After the fee and third-party costs the net is ' +
-      money(net) + ' against a standing offer of ' + money(offer) +
-      '. The settlement has to clear about ' + money(breakeven) +
-      ' before representation pays for itself. If we did not believe your claim clears that, we would tell you not to hire us.');
-    flag(f, 'worth', projected > 0 && gain > 0,
-      '<b>Net gain after our fee: ' + money(gain) + '.</b> Break-even sits at about ' + money(breakeven) +
-      '. Everything above that is the part of your own claim you would otherwise have left with the carrier.');
+    flag(f, 'trades', trades >= 3,
+      '<b>' + trades + ' trades on this scope.</b> Three or more is the usual threshold for '
+      + 'saying a general contractor is reasonably required, which is the common test for whether '
+      + 'overhead and profit are owed. On this scope that is ' + money(overhead + profit)
+      + ' &mdash; worth establishing on the record rather than leaving to be argued.');
+    flag(f, 'fewtrades', trades > 0 && trades < 3,
+      '<b>Only ' + trades + ' trade' + (trades === 1 ? '' : 's') + ' on this scope.</b> Below the '
+      + 'usual three-trade threshold, a general contractor may not be reasonably required and '
+      + 'full O&amp;P is harder to sustain. Coordination cost may still be real; it is better '
+      + 'argued as general conditions than as O&amp;P.');
+    flag(f, 'gcflag', gcPct > 0 && months > 0,
+      '<b>General conditions run ' + money(gcPerMonth) + ' per month</b> over a '
+      + months + '-month schedule. Supervision, temporary utilities, dumpsters, protection, '
+      + 'permits and logistics are time-dependent, so a disputed period of restoration moves '
+      + 'this line as well as the time-element claim.');
   };
 
   /* wire every calculator on the page */

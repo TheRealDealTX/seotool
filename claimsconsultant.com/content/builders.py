@@ -37,17 +37,18 @@ def build_all(B):
     write("/who-we-serve/", build_hub(
         path="/who-we-serve/",
         eyebrow="Who we serve",
-        h1="Nine kinds of building,<br>nine different <em>arguments</em>",
+        h1="Nine kinds of building,<br>nine different <em>problems</em>",
         lede=("We work institutional and large commercial property only. The pages below set out "
-              "what changes when the policyholder is a congregation rather than a corporation, "
-              "a school board rather than a landlord, a city rather than a chain."),
+              "what changes when the owner is a congregation rather than a corporation, a school "
+              "board rather than a landlord, a city rather than a chain &mdash; whichever party "
+              "has retained us."),
         items=INDUSTRIES,
         intro_sections=sp.INDUSTRY_HUB_INTRO,
         trail=[("Home", "/"), ("Who we serve", None)],
         title="Who We Serve | Churches, Schools, Cities &amp; Commercial",
-        description=("Public adjusters for Texas churches, school districts, municipalities, "
-                     "universities, hospitals, multifamily, hotels, industrial and retail "
-                     "property."),
+        description=("Independent claims consultants for Texas churches, school districts, "
+                     "municipalities, universities, hospitals, multifamily, hotels, industrial "
+                     "and retail property."),
         card_mode="cards",
         schema=[itemlist_schema("/who-we-serve/", "Property types served",
                                 [(i["nav_label"], i["path"]) for i in INDUSTRIES])],
@@ -92,14 +93,14 @@ def build_all(B):
     write("/services/", build_hub(
         path="/services/",
         eyebrow="Claim services",
-        h1="From first notice<br>to final <em>release</em>",
-        lede=("Five of these are organised by what happened to your building. Four are for claims "
-              "that are already stuck. One works best before there is a claim at all."),
+        h1="From first notice<br>to final <em>number</em>",
+        lede=("Five of these are organized by what happened to the building. Three are for "
+              "matters that are already stuck. One works best before there is a claim at all."),
         items=SERVICES,
         intro_sections=sp.SERVICE_HUB_INTRO,
         trail=[("Home", "/"), ("Services", None)],
-        title="Commercial Claim Services | Texas Public Adjusters",
-        description=("Public adjusting services for Texas commercial property claims: hurricane, "
+        title="Commercial Claim Services | Texas Claims Consultants",
+        description=("Claims consulting services for Texas commercial property: hurricane, "
                      "hail, fire, water and freeze, business interruption, appraisal, denied "
                      "claims and policy review."),
         card_mode="links",
@@ -194,7 +195,7 @@ def build_all(B):
         intro_sections=sp.AREA_HUB_INTRO,
         trail=[("Home", "/"), ("Service areas", None)],
         title="Texas Service Areas | Commercial Public Adjusters Statewide",
-        description=("Commercial and institutional public adjusting across Texas: Austin, "
+        description=("Commercial and institutional claims consulting across Texas: Austin, "
                      "Houston, Dallas-Fort Worth, San Antonio, Corpus Christi and the Rio Grande "
                      "Valley."),
         card_mode="cards",
@@ -216,7 +217,7 @@ def build_all(B):
             "lede": area["lede"],
             "trail": [("Home", "/"), ("Service areas", "/service-areas/"),
                       (area["nav_label"], None)],
-            "head_meta": ["Serving " + area["counties"], "No recovery, no fee",
+            "head_meta": ["Serving " + area["counties"], "Retained by either party",
                           "Statewide Texas response"],
             "schema": [service_schema(
                 "Public insurance adjusting in %s" % area["city"],
@@ -259,7 +260,7 @@ def build_all(B):
                         ("checks", ["<strong>%s</strong> &mdash; %s" % (s["nav_label"], s["card_blurb"])
                                     for s in rel_svc]),
                         ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">'
-                                 'Request a claim review <span class="arw">&rarr;</span></a>'
+                                 'Discuss a matter <span class="arw">&rarr;</span></a>'
                                  '<a class="btn btn--ghost" href="/services/">All services</a></div>'),
                     ],
                 },
@@ -304,7 +305,8 @@ def build_all(B):
         write(post["path"], article_page(page, related))
 
     # --------------------------------------------------------- static pages
-    for page in (sp.ABOUT, sp.HOW_WE_WORK, sp.FEES, sp.FAQ_PAGE, sp.GLOSSARY, sp.CONTACT):
+    for page in (sp.ABOUT, sp.CLIENTS, sp.HOW_WE_WORK, sp.FEES_PAGE, sp.FAQ_PAGE,
+                 sp.GLOSSARY, sp.CONTACT):
         write(page["path"], standard_page(page))
 
     for page in sp.LEGAL:
@@ -355,10 +357,10 @@ def _sitemap_page(render_blocks):
              "blocks": [("links", [
                  ("About the firm", "Who we are, what we will not do, and how to check our license.", "/about/"),
                  ("How we work", "The method, stage by stage, with a typical timeline.", "/how-we-work/"),
-                 ("Fees &amp; engagement", "The fee, the statutory cap, the carve-out and third-party costs.", "/fees/"),
+                 ("Fees &amp; engagement", "Hourly and fixed fees, conflict checks and third-party costs.", "/fees/"),
                  ("Frequently asked questions", "What boards and councils ask in the first call.", "/faq/"),
                  ("Claims glossary", "Thirty terms that decide Texas commercial claims.", "/glossary/"),
-                 ("Contact", "Request a claim review, or just ask a question.", "/contact/"),
+                 ("Contact", "Run a conflict check, or just ask a question.", "/contact/"),
                  ("Privacy policy", "What this site collects, which is very little.", "/privacy-policy/"),
                  ("Terms of use", "The terms on which this site is published.", "/terms/"),
                  ("Disclaimer", "Licensing, scope of services and the limits of what is here.", "/disclaimer/"),

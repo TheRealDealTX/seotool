@@ -158,14 +158,14 @@ POSTS = [
              "From the claims desk"),
 
             ("h2", "When to call someone"),
-            ("p", "You do not need a public adjuster on every loss, and any firm that tells you "
-                  "otherwise is selling. Below the deductible, or where the carrier&rsquo;s "
-                  "estimate is clearly thorough and the number is right, representation costs "
-                  "you money for nothing."),
+            ("p", "You do not need a consultant on every loss, and any firm that tells you "
+                  "otherwise is selling. Below the deductible, or where the estimate on the table "
+                  "is clearly thorough and the number is right, an independent review costs money "
+                  "for nothing."),
             ("p", "Where it earns its keep is on losses large enough that a scope dispute is "
                   "worth six figures, on buildings complex enough that a template estimate will "
                   "miss things, on any claim with a meaningful time-element component, and on "
-                  "any file where the carrier has retained an engineer. On institutional "
+                  "any file where an engineer has already been retained. On institutional "
                   "property, that is most significant losses."),
             ("p", "If you are inside the first 72 hours right now, the useful call is not about "
                   "engagement. It is about what to photograph before the crews arrive. That "
@@ -904,110 +904,119 @@ POSTS = [
 
     # =====================================================================
     {
-        "slug": "what-a-public-adjuster-does-on-a-commercial-claim",
+        "slug": "who-is-who-on-a-commercial-property-claim",
         "category": "The basics",
         "published": "2026-01-15",
         "modified": "2026-06-04",
-        "read": "8",
-        "words": 1300,
-        "title": "What a Public Adjuster Actually Does on a Commercial Claim",
-        "description": ("The three kinds of adjuster, what a public adjuster does on a large "
-                        "institutional loss, how the fee works in Texas, and when you should not "
-                        "hire one."),
-        "h1": "What a public adjuster<br>actually <em>does</em>",
-        "h1_plain": "What a public adjuster does on a commercial claim",
-        "blurb": ("Three kinds of adjuster, one of whom works for you. And an honest account of "
-                  "when hiring one is a waste of money."),
-        "lede": ("The phrase means very little to most facilities directors until the week they "
-                 "need one, at which point they are being called by four firms and cannot tell "
-                 "the difference between any of them."),
+        "read": "9",
+        "words": 1400,
+        "title": "Who&rsquo;s Who on a Large Commercial Property Claim",
+        "description": ("Staff adjuster, independent adjuster, public adjuster, consultant, "
+                        "appraiser, umpire and forensic accountant &mdash; who each works for, "
+                        "and what they actually decide."),
+        "h1": "Who&rsquo;s who on a<br>large <em>property</em> claim",
+        "h1_plain": "Who's who on a commercial property claim",
+        "blurb": ("Eight roles, four paymasters and a great deal of confusion about which is "
+                  "which. A map of who decides what."),
+        "lede": ("By month three a large commercial loss can have a dozen professionals on it, "
+                 "and most people on the file could not say with confidence who any of them "
+                 "works for. It is worth knowing, because it tells you exactly how to read what "
+                 "each one produces."),
         "body": [
-            ("p", "Start with the taxonomy, because it explains everything else."),
-            ("table", "Three kinds of adjuster", ["Type", "Who pays them", "Whose interest"], [
-                ["Staff adjuster", "The insurance company, as an employee.", "The insurer&rsquo;s"],
-                ["Independent adjuster", "The insurance company, as a contractor.", "The insurer&rsquo;s. &ldquo;Independent&rdquo; means independent of the insurer&rsquo;s payroll, not of its interest."],
-                ["Public adjuster", "The policyholder, from the recovery.", "Yours"],
+            ("p", "The single most useful question to ask about anyone working a claim is not "
+                  "how qualified they are. It is who pays them, and whether that payment moves "
+                  "with the outcome. Everything else &mdash; how to weigh their report, what "
+                  "they can and cannot decide, what they are likely to be challenged on "
+                  "&mdash; follows from the answer."),
+
+            ("h2", "The adjusters"),
+            ("table", "Three kinds of adjuster",
+             ["Role", "Paid by", "What they do"], [
+                ["Staff adjuster",
+                 "The insurer, as an employee.",
+                 "Investigates, scopes and evaluates the claim for the insurer. Usually holds the settlement authority, or reports to whoever does."],
+                ["Independent adjuster (IA)",
+                 "The insurer, on contract.",
+                 "The same work, outsourced &mdash; common after catastrophes and on specialist risks. &ldquo;Independent&rdquo; means independent of the payroll, not of the interest."],
+                ["Public adjuster",
+                 "The policyholder, usually a percentage of the recovery.",
+                 "Prepares, presents and negotiates the claim as the policyholder&rsquo;s representative. Licensed separately; in Texas, under chapter 4102."],
              ]),
-            ("p", "Only the third represents you. This is not a moral claim about the other two "
-                  "&mdash; most carrier adjusters we deal with are competent and reasonable "
-                  "people &mdash; it is a structural one. They are paid by the party writing the "
-                  "check, use that party&rsquo;s templates, and apply that party&rsquo;s "
-                  "reading of the policy."),
+            ("p", "None of this is a criticism of anyone. A staff adjuster on a large loss is "
+                  "frequently the most experienced person on the file. The point is structural: "
+                  "each of these three is a party&rsquo;s representative, and their work should "
+                  "be read as a position rather than as a finding."),
 
-            ("h2", "What the work consists of"),
-            ("h3", "Reading the policy properly"),
-            ("p", "Declarations, forms, endorsements, schedule of values. Not to find loopholes, "
-                  "but because a large share of what is arguable later is already decided by "
-                  "wording you own: valuation basis, coinsurance or agreed value, ordinance and "
-                  "law limits, deductible mechanics, the time-element structure. On institutional "
-                  "programs we routinely find extensions the client did not know existed."),
-            ("h3", "Documenting the loss to an evidentiary standard"),
-            ("p", "A measured survey of the whole property rather than a sample. Indexed "
-                  "photography. Test cuts, moisture mapping, drone and thermal where they earn "
-                  "their place. Engineers, industrial hygienists and forensic accountants "
-                  "engaged where the loss warrants them. This is the part that decays fastest, "
-                  "and the reason engagement timing matters so much."),
-            ("h3", "Building the estimate"),
-            ("p", "A line-item scope in the same estimating platform the carrier uses, priced to "
-                  "your market and your occupancy, with code work, soft costs, contents and "
-                  "time-element losses carried separately so nothing disappears into a lump sum. "
-                  "This is the document the negotiation actually happens over."),
-            ("h3", "Negotiating, in writing, to a conclusion"),
-            ("p", "Positions itemised and dated. Supplements filed as real costs come in. "
-                  "Statutory deadlines cited where they apply. And an honest recommendation "
-                  "about appraisal or counsel when the gap will not close &mdash; made early "
-                  "rather than after another six months of letters."),
-
-            ("h2", "How the fee works in Texas"),
-            ("p", "Public adjusters in Texas are licensed under chapter 4102 of the Insurance "
-                  "Code and regulated by the Texas Department of Insurance. Compensation is "
-                  "capped: a public insurance adjuster&rsquo;s fee may not exceed 10% of the "
-                  "amount of the claim settlement. The engagement must be in writing and must "
-                  "state the services and the compensation."),
-            ("p", "Chapter 4102 also prohibits a public adjuster from participating, directly or "
-                  "indirectly, in the repair of the property they adjusted. That rule is the "
-                  "reason to use a licensed public adjuster rather than a contractor who offers "
-                  "to handle your claim: a roofer whose compensation is the roof has an interest "
-                  "in the scope."),
-            ("callout", "Two things to negotiate", [
-                ("p", "<strong>The carve-out.</strong> If the carrier has already offered a "
-                      "number before you engage anyone, ask that it be excluded from the fee "
-                      "base so the percentage applies only to the improvement. It is negotiable "
-                      "and it should be written down. <strong>Third-party costs.</strong> "
-                      "Engineers and forensic accountants are normally the client&rsquo;s direct "
-                      "cost. Agree how they are authorised before any are engaged."),
+            ("h2", "The consultant"),
+            ("p", "A claims consultant is retained to establish facts rather than to represent a "
+                  "party. Damage assessment, scope, construction cost analysis, time-element "
+                  "quantification, technical critique of somebody else&rsquo;s estimate. Either "
+                  "side can retain one, and the useful ones are paid for the work rather than a "
+                  "share of the result &mdash; because the moment the fee moves with the number, "
+                  "the analysis becomes an argument and gets treated as one."),
+            ("callout", "The question to ask a consultant", [
+                ("p", "&ldquo;Who else have you worked for?&rdquo; If the answer is only ever "
+                      "policyholders, or only ever carriers, their conclusions correlate with "
+                      "their client list and any competent cross-examiner will establish that "
+                      "quickly. It is the first question in a deposition for a reason."),
             ]),
-            ("html", '<a class="tlink" href="/tools/public-adjuster-fee-calculator/">'
-                     'Work out whether it pays <span class="arw">&rarr;</span></a>'),
 
-            ("h2", "When you should not hire one"),
-            ("p", "An honest answer is worth more than a pitch, so: there are several situations "
-                  "where engaging a public adjuster costs you money for very little."),
+            ("h2", "The appraisal panel"),
+            ("p", "Most commercial property policies contain an appraisal clause: a contractual "
+                  "mechanism for settling the amount of loss when the parties cannot agree. It "
+                  "produces three roles and they are routinely confused with each other."),
+            ("table", "The three appraisal roles",
+             ["Role", "Appointed by", "What they decide"], [
+                ["Party appraiser", "One party each. Must be competent and impartial, which is not the same as neutral about the evidence.", "Their own determination of the amount of loss, then negotiates with the other appraiser."],
+                ["Umpire", "The two appraisers jointly, or a court if they cannot agree.", "Breaks the deadlock. Agreement between the umpire and either appraiser produces a binding award."],
+                ["The panel as a whole", "&mdash;", "The amount of loss. Not coverage, not liability, not whether the policy responds at all."],
+             ]),
+            ("p", "That last row is the one people get wrong. An award of $2.4 million does not "
+                  "decide that the insurer owes $2.4 million; it decides what the damage costs. "
+                  "Coverage defences survive the award, at least in principle."),
+            ("html", '<a class="tlink" href="/blog/insurance-appraisal-vs-litigation-in-texas/">'
+                     'When appraisal is the right tool <span class="arw">&rarr;</span></a>'),
+
+            ("h2", "The specialists"),
             ("checks", [
-                "The loss will not clear your deductible. Run that arithmetic before you do anything else.",
-                "The carrier&rsquo;s estimate is genuinely thorough and the number is right. It happens more often than the industry admits.",
-                "The real problem is a coverage denial rather than a scope dispute. That needs a lawyer; an adjuster cannot fix it.",
-                "The claim is small enough that a fixed-fee consultation or a one-off estimate review gets you what you need.",
+                "<strong>Forensic engineer.</strong> Retained by either side on causation and repairability. Read the methodology section before the conclusion &mdash; how many roof sections were examined, were test cuts taken, how far away was the weather station.",
+                "<strong>Forensic accountant.</strong> Almost always appears on a time-element claim of any size, usually for the insurer first. Tests the revenue projection, the margin, the continuing and saved expenses and the period of restoration.",
+                "<strong>Industrial hygienist.</strong> Contamination class, remediation protocol and post-remediation clearance. On healthcare and laboratory property their clearance letter, not an adjuster&rsquo;s opinion, is what returns the space to use.",
+                "<strong>Cost estimator or roofing consultant.</strong> Produces or critiques the line-item scope. Where the dispute is about square footage and unit cost rather than causation, this is the person who resolves it.",
+                "<strong>Coverage counsel.</strong> Interprets the policy. Nobody else on this list can, whatever they may say over the phone.",
             ]),
-            ("p", "Where representation earns its keep is on losses large enough that a scope "
-                  "dispute is worth six figures, on buildings complex enough that a template "
-                  "estimate will miss things, on any claim with a meaningful time-element "
-                  "component, and on any file where the carrier has already retained an "
-                  "engineer. For institutional property, that describes most significant "
-                  "losses."),
 
-            ("h2", "Choosing between firms"),
+            ("h2", "Reading a report you did not commission"),
+            ("p", "When an engineering or accounting report arrives from the other side, the "
+                  "instinct is to argue with its conclusion. Read the rest of it first. These "
+                  "documents are frequently more limited than their summaries suggest, and the "
+                  "limits are stated plainly in the parts nobody reads."),
             ("checks", [
-                "Ask whether they are licensed in Texas under chapter 4102, and check it with the Texas Department of Insurance yourself.",
-                "Ask who will actually work the file &mdash; the person in the room, or someone you will never meet.",
-                "Ask how many claims of your property type and size they handle at once. Capacity is the constraint that quietly determines outcomes.",
-                "Ask whether they take any compensation from contractors. The answer should be an immediate no.",
-                "Ask what they would advise if the claim turns out to be straightforward. A firm that cannot imagine that scenario is telling you something.",
-                "Read the cancellation provision in the engagement letter before you sign it.",
+                "Scope of inspection &mdash; how much of the property, and by what method.",
+                "Date, and what happened to the property between the loss and the visit.",
+                "Data sources, and how specific to the property they are.",
+                "Concessions &mdash; most reports acknowledge something, and that acknowledgement is a starting point.",
+                "Assumptions stated without support, especially about age, prior condition and maintenance.",
+                "What the author was actually asked to opine on, which is often narrower than the conclusion implies.",
             ]),
-            ("quote", "The right question is not what the fee is. It is what the net is, after "
-                      "the fee, against what you would otherwise have accepted.",
+            ("quote", "The useful question about any report on a claim file is not whether it is "
+                      "right. It is what it was asked, what it looked at, and who pays the "
+                      "author.",
              "From the claims desk"),
+
+            ("h2", "A short map"),
+            ("table", "Who decides what", ["Question", "Who actually settles it"], [
+                ["Is it covered?", "The policy &mdash; interpreted, if contested, by counsel and ultimately a court."],
+                ["What was damaged?", "The scope document, built from a survey. Contested by competing experts."],
+                ["What does it cost?", "The estimate, and failing agreement, an appraisal panel."],
+                ["What caused it?", "Engineering evidence, and failing agreement, a court."],
+                ["How long should it take?", "The construction schedule, tested by the other side&rsquo;s consultant."],
+                ["What was the income loss?", "Forensic accounting, from the claimant&rsquo;s own records."],
+            ]),
+            ("p", "Most large files get stuck because one of those six questions is being argued "
+                  "by people equipped to answer a different one. Working out which question is "
+                  "actually in dispute, and who is qualified to close it, resolves more claims "
+                  "than any amount of correspondence."),
         ],
     },
 ]

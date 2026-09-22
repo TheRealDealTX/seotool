@@ -4,7 +4,7 @@ Also the shared FAQ list used on the homepage and the hub-page introductions,
 which live here so the hubs are not thin.
 """
 
-from siteconfig import BIZ, STATUTE, FOOTER_SERVING
+from siteconfig import BIZ, STATUTE, FEES, FOOTER_SERVING
 
 P = BIZ["phone_display"]
 PH = BIZ["phone_href"]
@@ -12,49 +12,55 @@ E = BIZ["email"]
 
 # ---------------------------------------------------------------------------
 HOME_FAQS = [
-    ("What is a public adjuster, and how is that different from the adjuster the insurer sent?",
-     "<p>A public insurance adjuster is licensed to represent the policyholder &mdash; and only "
-     "the policyholder &mdash; in presenting and negotiating a claim. The adjuster the carrier "
-     "sends, whether a staff employee or an independent contractor, is retained and paid by the "
-     "insurer. Both may be entirely competent; only one of them is working from your side of the "
-     "table. In Texas we are licensed under %s and regulated by the Texas Department of "
-     "Insurance.</p>" % STATUTE["chapter"]),
+    ("What is a claims consultant, and how is that different from an adjuster?",
+     "<p>An adjuster works a claim on behalf of a party to it &mdash; a staff or independent "
+     "adjuster for the insurer, a public adjuster for the policyholder. A claims consultant is "
+     "retained to establish facts: what was damaged, what it costs to repair, how long the "
+     "operation was interrupted and what that was worth. We produce the measurement and the "
+     "analysis. What the parties then do with it is their business, and we are equally willing "
+     "to hand the same work to either of them.</p>"),
 
-    ("How much does it cost, and when do we pay?",
-     "<p>Our fee is a percentage of what is recovered, agreed in writing before any work starts, "
-     "and capped by statute at %s of the claim settlement (%s). If nothing is recovered there is "
-     "no fee. Where the carrier has already made an offer before we are engaged, we normally "
-     "carve that amount out of the fee base so the percentage applies to the improvement rather "
-     "than to money already on the table &mdash; ask for that in writing, from us or from anyone "
-     "else you are considering.</p>" % (STATUTE["fee_cap"], STATUTE["fee_cite"])),
+    ("You work for policyholders and for insurers. Isn&rsquo;t that a conflict?",
+     "<p>Not on a given matter, because we run a conflict check before taking one and we never "
+     "act for both parties to the same loss. Across matters it is the point rather than the "
+     "problem. A consultant who only ever produces numbers for one side learns to write numbers "
+     "that side likes, and everyone in the industry knows it. Working both sides is what keeps "
+     "the methodology honest &mdash; and it is why our analysis survives scrutiny in appraisal "
+     "and in court.</p>"),
+
+    ("How are you paid?",
+     "<p>%s. Never a percentage of the settlement, and never contingent on the outcome. That is "
+     "a deliberate constraint: the moment our fee moves with the number, the number stops being "
+     "evidence and starts being advocacy. Estimates are given in writing before work starts, and "
+     "we flag it when a matter is running toward its estimate.</p>" % FEES["basis"]),
 
     ("We are a church / district / city. Do the usual insurance rules even apply to us?",
      "<p>Not always, and establishing which rules apply is the first thing we do. A great many "
-     "Texas public entities and religious organizations cover property through an interlocal risk "
-     "pool or a denominational program rather than a conventional insurance policy. Those are "
-     "governed by their own coverage documents, with their own appeal routes, and the statutory "
-     "prompt-payment machinery in the Insurance Code may not apply in the same way. The scope "
-     "disputes are identical; the leverage is different.</p>"),
+     "Texas public entities and religious organizations cover property through an interlocal "
+     "risk pool or a denominational program rather than a conventional insurance policy. Those "
+     "are governed by their own coverage documents, with their own appeal routes, and the "
+     "statutory prompt-payment machinery in the Insurance Code may not apply in the same way. "
+     "The technical questions are identical; the procedure is not.</p>"),
 
-    ("Will hiring a public adjuster make the claim adversarial?",
-     "<p>Less often than people fear. Most carrier adjusters deal with represented policyholders "
-     "constantly and several prefer it &mdash; a well-documented, line-item claim from someone "
-     "who understands the policy is easier to process than a folder of contractor proposals. What "
-     "changes is that the scope stops being decided unilaterally.</p>"),
+    ("Can you serve as an appraiser or umpire?",
+     "<p>Yes, in any of the three roles. As a party-appointed appraiser for either side, or as "
+     "umpire where both appraisers will accept us. Umpire work in particular depends on being "
+     "genuinely impartial and being seen to be, which is difficult for a firm that only ever "
+     "works one side. We disclose prior engagements with either party before accepting any "
+     "appraisal role.</p>"),
 
-    ("How long will the claim take?",
-     "<p>A straightforward commercial roof claim can settle in two to four months. A large "
-     "institutional loss involving engineering, code analysis and a time-element component "
-     "typically runs nine to eighteen. The strongest predictor is how completely the loss was "
-     "documented in the first thirty days &mdash; which is the single best argument for calling "
-     "early, even if you decide not to engage anyone.</p>"),
+    ("How long will this take?",
+     "<p>A scope and estimate on a single commercial building is typically two to four weeks "
+     "from access. A large institutional loss with engineering, code analysis and a time-element "
+     "component runs considerably longer, and the pace is usually set by access, records and "
+     "third-party specialists rather than by us. We give a schedule with the engagement and tell "
+     "you when it slips.</p>"),
 
-    ("What size of claim do you take?",
-     "<p>We work large commercial and institutional property losses. That is a deliberate focus "
-     "rather than a boast: the methods on this site &mdash; full-property surveys, specialist "
-     "engagement, forensic accounting, appraisal &mdash; are proportionate on a large loss and "
-     "wasteful on a small one. If your loss is modest, we will say so and point you somewhere "
-     "more suitable rather than take the file.</p>"),
+    ("What size of matter do you take?",
+     "<p>Large commercial and institutional property only. That is a deliberate focus rather "
+     "than a boast: full-property surveys, specialist engagement and forensic accounting are "
+     "proportionate on a large loss and wasteful on a small one. If a matter is modest, we will "
+     "say so and point you somewhere more suitable rather than take it.</p>"),
 ]
 
 # ---------------------------------------------------------------------------
@@ -66,20 +72,20 @@ INDUSTRY_HUB_INTRO = [
         "eyebrow": "Why it matters",
         "h2": "The property type changes the argument, not just the vocabulary.",
         "blocks": [
-            ("p", "A hail claim on a warehouse and a hail claim on a school district are not the "
+            ("p", "A hail loss on a warehouse and a hail loss on a school district are not the "
                   "same file with a different address. The district has a per-building deductible "
                   "applied across nineteen campuses, a coverage document that may be an "
                   "interlocal agreement rather than an insurance policy, a board that has to "
-                  "approve the settlement in public, and a hard deadline in August. None of that "
+                  "approve the outcome in public, and a hard deadline in August. None of that "
                   "appears in the estimating software."),
             ("p", "We work a narrow set of property types on purpose. Each of the pages below "
                   "sets out the wording, the valuation problem and the political constraint "
-                  "peculiar to that kind of owner &mdash; because knowing which argument to make "
-                  "is most of the work."),
+                  "peculiar to that kind of owner &mdash; because knowing which question a file "
+                  "actually turns on is most of the work, whichever party is asking."),
         ],
         "aside": [
             ("callout", "Large commercial only", [
-                ("p", "We do not take residential claims, and we decline commercial losses too "
+                ("p", "We do not take residential matters, and we decline commercial losses too "
                       "small to justify the method. That is not exclusivity; it is a question of "
                       "what a full-property survey and specialist engagement are proportionate "
                       "to."),
@@ -96,7 +102,7 @@ INDUSTRY_HUB_INTRO = [
                 "<strong>The values are stale.</strong> Statements of value assembled years ago, against construction costs that moved sharply after 2020.",
                 "<strong>The building is old enough to trigger code.</strong> Which makes ordinance and law coverage the decisive clause more often than anyone expects.",
                 "<strong>The deductible structure is unexamined.</strong> Per occurrence or per building, flat or percentage &mdash; on a multi-structure schedule that single clause can decide the claim.",
-                "<strong>Nobody is running the time-element side.</strong> Interruption and extra expense are real on institutional losses and almost never documented while they are happening.",
+                "<strong>Nobody is running the time-element side.</strong> Interruption and extra expense are real on institutional losses and almost never documented while they are happening &mdash; which hurts whichever party later has to prove or test them.",
             ]),
         ],
     },
@@ -107,24 +113,24 @@ SERVICE_HUB_INTRO = [
         "eyebrow": "How to use this",
         "h2": "The first five are causes of loss. The last four are stages.",
         "blocks": [
-            ("p", "Most people arrive knowing what happened to their building, so the first five "
-                  "pages are organised by peril: wind, hail, fire, water and the general case. "
-                  "Each sets out the coverage question that peril raises and the evidence that "
+            ("p", "Most people arrive knowing what happened to the building, so the first five "
+                  "pages are organized by peril: wind, hail, fire, water and the general case. "
+                  "Each sets out the technical question that peril raises and the evidence that "
                   "answers it."),
-            ("p", "The last four are for claims that are already in trouble &mdash; deadlocked on "
-                  "amount, denied outright, or short-paid and closed &mdash; plus the one service "
-                  "that works best before there is a claim at all."),
+            ("p", "The last four are for matters that are already contested &mdash; deadlocked "
+                  "on amount, headed for appraisal, or being tested by the other side &mdash; "
+                  "plus the one service that works best before there is a claim at all."),
         ],
         "aside": [
             ("ledger", "Engagement shapes", [
-                ("Full representation", "Most common"),
+                ("Full scope &amp; estimate", "Most common"),
                 ("Disputed portion only", "Frequent"),
-                ("Appraisal only", "Available"),
-                ("Estimate review", "Fixed fee"),
+                ("Appraiser or umpire", "Available"),
+                ("Estimate critique", "Fixed fee"),
                 ("Policy review", "Fixed fee"),
-                ("Expert support to counsel", "Available"),
-            ], "Not every file needs the whole service. The engagement letter defines the scope, "
-               "and the fee applies to that scope."),
+                ("Expert report &amp; testimony", "Available"),
+            ], "Not every matter needs the whole service. The engagement letter defines the scope "
+               "and the capacity we are acting in."),
         ],
     },
 ]
@@ -189,8 +195,9 @@ BLOG_INTRO = [
         "blocks": [
             ("p", "One rule governs this section: every piece has to teach something a reader "
                   "could act on without hiring anybody. Policy wording, Texas statute, the "
-                  "evidence that wins a particular argument, the records to start keeping on day "
-                  "one. If a draft reads like a brochure with subheadings, it does not go up."),
+                  "evidence that settles a particular question, the records to start keeping on "
+                  "day one. If a draft reads like a brochure with subheadings, it does not go "
+                  "up. Nothing here is written for one side of a file."),
             ("p", "Nothing here is legal advice, and where a question is genuinely legal we say "
                   "so and recommend counsel."),
         ],
@@ -203,55 +210,61 @@ BLOG_INTRO = [
 
 ABOUT = {
     "path": "/about/",
-    "title": "About the Firm | Texas Commercial Public Adjusters",
-    "description": ("%s represents Texas churches, school districts, municipalities and large "
-                    "commercial owners in property insurance claims. No recovery, no fee."
-                    % BIZ["name"]),
+    "title": "About the Firm | Texas Independent Claims Consultants",
+    "description": ("%s is an independent claims consulting firm working large Texas commercial "
+                    "and institutional property losses for policyholders, insurers, pools and "
+                    "counsel." % BIZ["name"]),
     "eyebrow": "The firm",
-    "h1": "We represent the<br>policyholder. <em>Only</em> the policyholder.",
+    "h1": "We are not on<br>a <em>side</em>. We are on the facts.",
     "h1_plain": "About Claims Consultant",
-    "lede": ("There is no version of this business where we also work for insurers, take "
-             "referral money from contractors, or repair the buildings we adjust. That is partly "
-             "statute and mostly the point."),
+    "lede": ("Independence is not a slogan here, it is the business model. We bill for the work "
+             "rather than a share of the result, we take matters from either party, and the "
+             "method does not change depending on who signed the engagement."),
     "trail": [("Home", "/"), ("The firm", None)],
     "head_aside": [
         ("ledger", "Practice profile", [
             ("Focus", "Large commercial"),
             ("Sectors", "Institutional"),
             ("Territory", "Texas"),
-            ("Licensing", "Tex. Ins. Code ch. 4102"),
-            ("Fee", "Contingent, capped"),
-            ("Repair work", "None, ever"),
-        ], "We are licensed public insurance adjusters. We are not a law firm, not a contractor "
-           "and not an insurance agency."),
+            ("Licensed", "Ch. 4101 &amp; 4102"),
+            ("Retained by", "Either party"),
+            ("Fee", "Hourly / fixed"),
+        ], "Texas adjuster and public insurance adjuster licences are both held, which is what "
+           "allows either party to retain us. Not a law firm, not a contractor, not an agency."),
     ],
     "sections": [
         {
             "eyebrow": "Position",
-            "h2": "One side of the table, by construction.",
+            "h2": "A number is only worth what it survives.",
             "blocks": [
-                ("p", "Property insurance is an industry with a structural imbalance in it. The "
-                      "insurer has a claims department, an estimating platform, a panel of "
-                      "engineers and decades of institutional memory about which arguments work. "
-                      "The policyholder has a facilities director who has handled two claims in "
-                      "their career and a contractor with an interest in the scope."),
-                ("p", "A public adjuster is the correction to that. We bring the same estimating "
-                      "software, the same expert disciplines and the same familiarity with the "
-                      "arguments &mdash; with an incentive pointing the other way. Chapter 4102 "
-                      "of the Texas Insurance Code makes the position exclusive: a licensed "
-                      "public adjuster may not act for insurers on the same loss, and may not "
-                      "participate in repairing the property they adjusted."),
-                ("p", "We think that rule is a feature rather than a constraint, and we go "
-                      "further than it requires. We take no compensation of any kind from "
-                      "contractors, restoration firms, engineers or anyone else in the supply "
-                      "chain. You choose who does the work; we have no view worth buying."),
+                ("p", "Every large property loss produces at least two estimates and a gap "
+                      "between them. The gap is usually not fraud and usually not coverage. It is "
+                      "dozens of judgment calls &mdash; effective age, repairability, matching, "
+                      "code triggers, overhead and profit, the period of restoration &mdash; made "
+                      "by people who each have a position, on measurements nobody took to an "
+                      "evidentiary standard."),
+                ("p", "We take those measurements. Then we state, in writing, what we concluded "
+                      "and why, with the evidence attached. That document has to hold up in front "
+                      "of a forensic accountant, an appraisal panel, a code official or a court, "
+                      "and it has to hold up whichever party is reading it."),
+                ("p", "Which is exactly why we do not take a percentage of the settlement. A fee "
+                      "that moves with the number turns the analysis into advocacy, and everyone "
+                      "in the industry can see it coming. We bill for hours and deliverables. The "
+                      "conclusion costs the same whether it helps the client or not."),
             ],
             "aside": [
+                ("callout", "One capacity per matter", [
+                    ("p", "We hold both a Texas adjuster licence and a public insurance adjuster "
+                          "licence. Holding both is what lets either party retain us; it is not "
+                          "a licence to face both ways at once. On any individual matter we act "
+                          "in one capacity, stated in the engagement letter, and we never act "
+                          "for both parties to the same loss."),
+                ]),
                 ("callout", "What we are not", [
-                    ("p", "Not a law firm &mdash; we do not give legal advice, and when a file "
+                    ("p", "Not a law firm &mdash; we do not give legal advice, and when a matter "
                           "needs counsel we say so. Not a contractor &mdash; we do not repair "
-                          "what we adjust. Not an agency &mdash; we do not sell insurance or "
-                          "receive commission from anyone who does."),
+                          "what we assess, and we take no referral money from anyone who does. "
+                          "Not an agency &mdash; we do not sell insurance."),
                 ]),
             ],
         },
@@ -260,38 +273,40 @@ ABOUT = {
             "eyebrow": "Focus",
             "h2": "Institutional and large commercial. Nothing else.",
             "blocks": [
-                ("p", "Most public adjusting firms take whatever comes. We do not, for a "
-                      "practical reason: the way we work a claim &mdash; full-property survey "
-                      "rather than a sample, specialist engagement where the loss warrants it, "
-                      "forensic accounting on the time-element side, appraisal where the gap will "
-                      "not close &mdash; is proportionate on a large institutional loss and "
-                      "absurd on a small one."),
-                ("p", "So the practice is built around a narrow set of owners: churches and faith "
-                      "organizations, school districts, cities and municipal entities, colleges "
-                      "and universities, healthcare facilities, multifamily and commercial "
-                      "portfolios. What those have in common is complex property, complex "
-                      "coverage, and somebody who has to justify the outcome in public."),
-                ("html", '<a class="tlink" href="/who-we-serve/">Who we serve <span class="arw">&rarr;</span></a>'),
+                ("p", "Most consulting firms take whatever comes. We do not, for a practical "
+                      "reason: the way we work a file &mdash; full-property survey rather than a "
+                      "sample, specialist engagement where the loss warrants it, forensic "
+                      "accounting on the time-element side &mdash; is proportionate on a large "
+                      "institutional loss and absurd on a small one."),
+                ("p", "So the practice is built around a narrow set of properties: churches and "
+                      "faith organizations, school districts, cities and municipal entities, "
+                      "colleges and universities, healthcare facilities, multifamily and "
+                      "commercial portfolios. What those have in common is complex property, "
+                      "complex coverage, and somebody who has to justify the outcome to a board, "
+                      "a regulator, an auditor or a court."),
+                ("html", '<a class="tlink" href="/who-we-serve/">Property types we work '
+                         '<span class="arw">&rarr;</span></a>'),
             ],
         },
         {
             "band": "ink",
             "eyebrow": "Commitments",
-            "h2": "Six things we will do, and one we will not.",
+            "h2": "Six things we do, and one we will not.",
             "blocks": [
                 ("checks", [
-                    "Tell you in the first conversation whether we think representation is worth it &mdash; including when the answer is no.",
-                    "Put the fee, the scope of the engagement and any carve-out in writing before any work starts.",
-                    "Read the policy before we walk the building, and explain what it says in plain language.",
+                    "Run a conflict check before discussing any matter in detail, and decline where we are already engaged on the other side.",
+                    "Put the scope of work, the rate and an estimate in writing before any work starts.",
+                    "Read the policy or coverage document before walking the building, and explain what it says in plain language.",
                     "Document the whole property, not a representative sample of it.",
-                    "Discuss every third-party cost with you before it is incurred.",
-                    "Say early when a file needs a lawyer instead of, or alongside, an adjuster.",
+                    "Discuss every third-party cost before it is incurred.",
+                    "Say early when a matter needs an attorney, a licensed adjuster or a specialist rather than more consulting.",
                 ]),
-                ("p", "The one we will not: inflate a scope. On claims this size the file is "
-                      "frequently examined by a forensic accountant, an engineer, an appraisal "
-                      "panel or a court. Every line has to survive that, and a scope padded to "
-                      "create negotiating room destroys the credibility of the forty lines around "
-                      "it that were right."),
+                ("p", "The one we will not: shade a conclusion toward the party paying for it. "
+                      "On matters this size the file is frequently examined by a forensic "
+                      "accountant, an opposing expert, an appraisal panel or a court. A scope "
+                      "padded or trimmed to suit a client destroys the credibility of the forty "
+                      "findings around it that were right &mdash; and it ends the only thing this "
+                      "firm actually sells."),
             ],
         },
         {
@@ -300,36 +315,39 @@ ABOUT = {
             "blocks": [
                 ("steps", [
                     ("The first call costs nothing",
-                     "<p>Fifteen minutes on the phone, usually with the policy declarations page "
-                     "in front of you. We will tell you what we think the file needs and whether "
+                     "<p>Fifteen minutes, usually with the declarations page in front of you. We "
+                     "run a conflict check, tell you what we think the matter needs, and whether "
                      "that is us. A meaningful share of these calls end with advice and no "
                      "engagement.</p>"),
                     ("A written engagement, or nothing",
-                     "<p>Scope, fee, carve-outs and the cancellation provision, in writing, "
-                     "before work begins. Chapter 4102 requires a written contract; we would "
-                     "insist on one regardless, because institutional clients need something "
-                     "their board can read.</p>"),
+                     "<p>Scope, rate, estimate, deliverables and the assumptions we are working "
+                     "from, in writing, before work begins. Institutional clients need something "
+                     "a board, a panel or a procurement officer can read; so do we.</p>"),
                     ("One point of contact, and a paper trail",
-                     "<p>You get a named adjuster who is actually on the file, not a salesperson "
-                     "who hands you to a queue. Everything material goes in writing, and at "
-                     "closeout you receive the complete record &mdash; photographs, estimates, "
-                     "correspondence &mdash; whether or not you ever need it again.</p>"),
+                     "<p>You get a named consultant who is actually on the file, not a "
+                     "salesperson who hands you to a queue. Everything material goes in writing, "
+                     "and at closeout you receive the complete record &mdash; photographs, "
+                     "measurements, estimates, correspondence &mdash; whether or not you ever "
+                     "need it again.</p>"),
                 ]),
             ],
         },
     ],
     "faqs": [
         ("Are you licensed?",
-         "<p>Yes &mdash; as licensed public insurance adjusters under chapter 4102 of the Texas "
-         "Insurance Code. License status can be verified directly with the Texas Department of "
-         "Insurance, and you should verify it for any firm you are considering, including this "
-         "one. Ask for the license number and check it yourself; it takes two minutes.</p>"),
+         "<p>Yes &mdash; in Texas, both as an adjuster under chapter 4101 of the Insurance Code "
+         "and as a public insurance adjuster under chapter 4102. Holding both is unusual and it "
+         "is deliberate: it is what allows an insurer and a policyholder to retain the same "
+         "firm, in different matters, without either one being served by somebody working "
+         "outside their licence. Licence numbers are published in the footer and can be verified "
+         "with the Texas Department of Insurance. Where a matter needs an attorney rather than a "
+         "consultant, we say so.</p>"),
         ("Do you work outside Texas?",
-         "<p>Public adjusting is licensed state by state and we do not practice where we are not "
-         "licensed. Where an institution has property in several states we can usually help "
-         "coordinate, and we will say plainly which parts of that we can and cannot handle "
-         "ourselves.</p>"),
-        ("Do you take residential claims?",
+         "<p>Our practice is Texas and the Gulf Coast. Consulting and expert work travels more "
+         "easily than licensed activity does, so on a portfolio with property in several states "
+         "we can usually help &mdash; and we will say plainly which parts we can handle ourselves "
+         "and which need local counsel or a locally licensed professional.</p>"),
+        ("Do you take residential matters?",
          "<p>No. It is not what the practice is built for, and a firm that works institutional "
          "property all week is not the right choice for a house. We will point you toward "
          "somebody appropriate.</p>"),
@@ -449,7 +467,7 @@ HOW_WE_WORK = {
                       "is about coverage, a denial, late notice or the carrier&rsquo;s conduct, "
                       "that is a lawyer &mdash; and saying so in month four is worth considerably "
                       "more to you than saying it in month fourteen."),
-                ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">Start a claim review '
+                ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">Discuss a matter '
                          '<span class="arw">&rarr;</span></a>'
                          '<a class="btn btn--ghost" href="/services/appraisal-and-claim-disputes/">About appraisal</a></div>'),
             ],
@@ -474,121 +492,141 @@ HOW_WE_WORK = {
     ],
 }
 
-FEES = {
+FEES_PAGE = {
     "path": "/fees/",
-    "title": "Fees &amp; Engagement Terms | Texas Public Adjuster Fee Cap",
-    "description": ("How our fee works: a percentage of recovery, capped at 10% by Texas statute, "
-                    "with the prior offer normally carved out. Third-party costs explained."),
+    "title": "Fees &amp; Engagement Terms | Independent Claims Consulting",
+    "description": ("How we bill: hourly or fixed fee, never a percentage of the settlement. "
+                    "Third-party costs, conflict checks and what public-entity procurement "
+                    "needs."),
     "eyebrow": "Commercial terms",
-    "h1": "What it costs,<br>stated <em>plainly</em>",
+    "h1": "Paid for the work,<br>not the <em>outcome</em>",
     "h1_plain": "Fees and engagement terms",
-    "lede": ("Boards and councils have to approve this in public, so it needs to be simple enough "
-             "to put in a packet and specific enough to survive an audit."),
+    "lede": ("Boards and councils have to approve this in public and carriers have to reconcile "
+             "it against a vendor schedule, so it needs to be simple enough to put in a packet "
+             "and specific enough to survive an audit."),
     "trail": [("Home", "/"), ("Fees", None)],
     "head_aside": [
         ("ledger", "The commercial terms", [
-            ("Basis", "Contingent"),
-            ("Statutory cap", STATUTE["fee_cap"]),
-            ("Authority", "&sect;4102.104"),
-            ("Prior offer", "Normally carved out"),
-            ("If no recovery", "No fee"),
-            ("Third-party costs", "Client, pre-authorised"),
+            ("Basis", "Hourly or fixed"),
+            ("Contingency", "Never"),
+            ("Percentage of recovery", "Never"),
+            ("Estimate", "In writing, up front"),
+            ("Third-party costs", "Client, pre-authorized"),
+            ("Conflict check", "Before any detail"),
         ], "Every one of these is written into the engagement letter before work starts."),
     ],
     "sections": [
         {
             "eyebrow": "The fee",
-            "h2": "A percentage of what is recovered, and nothing if nothing is.",
+            "h2": "Why it is never a share of the settlement.",
             "blocks": [
-                ("p", "Texas caps a public insurance adjuster&rsquo;s compensation at 10%% of the "
-                      "amount of the claim settlement (%s). Within that cap, the rate is agreed "
-                      "before work begins and reflects the size and complexity of the file. On "
-                      "very large losses it is normally lower than the cap, for the obvious "
-                      "reason that ten percent of an eight-figure recovery is not proportionate "
-                      "to the work." % STATUTE["fee_cite"]),
-                ("p", "If the claim recovers nothing, there is no fee. That is not a marketing "
-                      "line; it is the structure, and it is why we decline files we do not think "
-                      "we can move."),
+                ("p", "%s, agreed in writing before work begins, against a written estimate of "
+                      "the hours a matter should take. Where the deliverable is well defined "
+                      "&mdash; a scope and estimate on a single building, a policy review, an "
+                      "estimate critique &mdash; we quote a fixed fee instead." % FEES["basis"]),
+                ("p", "What we will not do is take a percentage of the recovery. It is the "
+                      "standard model in the policyholder-side market and it is precisely what "
+                      "we are built to avoid. A consultant whose fee rises with the number has "
+                      "an interest in the number, and every opposing expert, appraisal panel and "
+                      "cross-examiner in the state knows how to make that point."),
+                ("p", "The practical consequence is that our work is portable. The same scope "
+                      "can be handed to the other party, submitted to a panel, attached to a "
+                      "board packet or produced in litigation without anyone needing to discount "
+                      "it for who paid."),
             ],
             "aside": [
-                ("callout", "The carve-out", [
-                    ("p", "Where the carrier has already offered an amount before we are engaged, "
-                          "we normally exclude that sum from the fee base so the percentage "
-                          "applies only to the improvement. Not every firm does this. Ask any "
-                          "firm you are considering to put their answer in writing."),
+                ("callout", "Estimates, and when they move", [
+                    ("p", "Every engagement carries a written estimate of hours. If a matter "
+                          "starts running toward it &mdash; access problems, a scope that turns "
+                          "out to be three buildings, records that do not exist &mdash; you hear "
+                          "about it before the number is passed, not on the invoice."),
                 ]),
-                ("html", '<a class="tlink" href="/tools/public-adjuster-fee-calculator/">'
-                         'Model the net <span class="arw">&rarr;</span></a>'),
             ],
         },
         {
             "band": "paper2",
             "eyebrow": "Third-party costs",
-            "h2": "Experts are a separate, pre-authorised cost.",
+            "h2": "Specialists are a separate, pre-authorized cost.",
             "blocks": [
                 ("p", "Engineers, forensic accountants, industrial hygienists, roofing "
-                      "consultants and specialist surveys are engaged where the loss warrants "
-                      "them, and they are normally the client&rsquo;s direct cost rather than "
-                      "ours. On a large institutional file those costs can be substantial, which "
-                      "is precisely why every one of them is discussed and authorised before it "
-                      "is incurred. You will not receive a bill for something you did not agree "
-                      "to."),
-                ("p", "Where a cost is genuinely part of the cost of repair &mdash; design "
-                      "professionals required to permit and execute the work, for instance "
-                      "&mdash; we claim it from the carrier as such."),
+                      "consultants and laboratory testing are engaged where a loss warrants "
+                      "them, and they are the client&rsquo;s direct cost rather than ours. On a "
+                      "large institutional matter those costs can be substantial, which is "
+                      "precisely why each one is discussed and authorized before it is incurred. "
+                      "You will not receive a bill for something you did not agree to."),
                 ("table", "Who pays for what", ["Item", "Paid by"], [
-                    ["Our adjusting services", "Contingent fee, out of the recovery"],
-                    ["Engineers and technical consultants", "Client, authorised in advance"],
-                    ["Forensic accounting", "Client, authorised in advance"],
-                    ["Appraiser fee, if appraisal is invoked", "Client, per the policy&rsquo;s appraisal clause"],
-                    ["Umpire fee", "Normally split between the parties"],
+                    ["Our consulting time", "Client, at the agreed hourly or fixed rate"],
+                    ["Engineers and technical consultants", "Client, authorized in advance"],
+                    ["Forensic accounting", "Client, authorized in advance"],
+                    ["Appraiser fee where we serve as a party appraiser", "The appointing party, per the policy&rsquo;s appraisal clause"],
+                    ["Umpire fee where we serve as umpire", "Normally split between the parties"],
+                    ["Expert testimony and deposition time", "Client, at the posted testimony rate"],
                     ["Legal representation", "Client, under separate engagement with counsel"],
                  ]),
             ],
         },
         {
+            "eyebrow": "Conflicts",
+            "h2": "We check before we listen.",
+            "blocks": [
+                ("p", "Because we act for both policyholders and insurers, a conflict check "
+                      "comes before any detailed discussion of a matter &mdash; not after. Tell "
+                      "us the property, the date of loss and the parties, and we will confirm "
+                      "within a day whether we are clear. If we are already engaged on the other "
+                      "side, we say so immediately and you tell us nothing further."),
+                ("checks", [
+                    "We never act for both parties to the same loss.",
+                    "Prior engagements with either party are disclosed before we accept any appraisal or umpire role.",
+                    "We take no referral fees, commissions or other compensation from contractors, restoration firms, engineers or vendors.",
+                    "We do not repair, restore or rebuild property we have assessed.",
+                    "Where we have served as a testifying expert against a party, we disclose it before accepting work for them.",
+                ]),
+            ],
+        },
+        {
+            "band": "ink",
             "eyebrow": "For public entities",
             "h2": "Documentation your procurement process will want.",
             "blocks": [
                 ("p", "School districts, cities and other public entities have their own "
                       "procurement rules for professional services, and your purchasing officer "
-                      "and counsel &mdash; not us &mdash; determine how they apply. What we can "
-                      "do is produce the documentation the process needs without you having to "
-                      "invent it."),
+                      "and counsel &mdash; not us &mdash; determine how they apply. An hourly "
+                      "professional-services engagement is a familiar shape to that process, "
+                      "which is one practical advantage of not billing contingently."),
                 ("checks", [
                     "A written scope of services suitable for an agenda item or board packet.",
-                    "Fee terms expressed as a percentage of recovery, with the statutory cap and authority cited.",
-                    "Proof of licensure and insurance.",
-                    "Confirmation in writing that we take no compensation from contractors or vendors on the loss.",
-                    "A stated cancellation provision.",
+                    "Hourly rates by role, a not-to-exceed figure, and a written estimate of hours.",
+                    "Proof of professional liability insurance.",
+                    "Written confirmation that we take no compensation from contractors or vendors on the matter.",
+                    "A stated termination provision.",
                     "Status reporting at a cadence that matches your meeting cycle.",
                 ]),
             ],
         },
     ],
     "faqs": [
-        ("Is the 10% cap per claim or per payment?",
-         "<p>The statutory limit is expressed against the amount of the claim settlement. How "
-         "supplements, advance payments and any amount already offered are treated within that is "
-         "a matter for the engagement letter, which is why those points should be written down "
-         "before work starts rather than discussed at settlement.</p>"),
-        ("Can we cancel?",
-         "<p>Yes. Statute and the engagement letter provide a cancellation right, and the terms "
-         "are stated in the contract you sign. Read that clause before signing &mdash; with us or "
-         "with anyone else.</p>"),
-        ("Do you ever work on a flat fee?",
-         "<p>For policy reviews and pre-loss consulting, always &mdash; those are fixed-fee "
-         "engagements precisely so there is no contingent interest in the advice. For estimate "
-         "reviews and expert support to counsel, frequently. For full claim representation, "
-         "almost never: the contingent structure is what aligns our interest with yours.</p>"),
+        ("Would you ever work on contingency?",
+         "<p>No. It is the one commercial term we do not negotiate. The independence that makes "
+         "our work usable by either party, and defensible in front of a panel or a court, "
+         "depends on the fee not moving with the result.</p>"),
+        ("Is the cost worth it on a smaller loss?",
+         "<p>Often not, and we will say so. Below a certain size the cost of a full survey, a "
+         "line-item scope and any specialist input is disproportionate to the amount in dispute. "
+         "A single fixed-fee estimate review is sometimes the right answer instead &mdash; and "
+         "sometimes the right answer is that you do not need us at all.</p>"),
+        ("Can we cap the spend?",
+         "<p>Yes. Most institutional engagements carry a not-to-exceed figure, and phased "
+         "engagements are common: an initial assessment at a fixed fee, then a decision about "
+         "whether the full scope is justified. We would rather structure it that way than "
+         "present a surprise.</p>"),
     ],
 }
 
 FAQ_PAGE = {
     "path": "/faq/",
-    "title": "Public Adjuster FAQ | Texas Commercial Claims Questions",
-    "description": ("Answers to the questions boards, councils and facilities directors ask about "
-                    "public adjusters, Texas claim deadlines, fees, appraisal and risk pools."),
+    "title": "Claims Consulting FAQ | Texas Commercial Property Questions",
+    "description": ("Answers to what boards, councils, carriers and counsel ask about independent "
+                    "claims consulting, Texas claim deadlines, fees, appraisal and risk pools."),
     "eyebrow": "Questions",
     "h1": "Questions we get<br>in the <em>first</em> call",
     "h1_plain": "Frequently asked questions",
@@ -598,72 +636,97 @@ FAQ_PAGE = {
     "sections": [
         {
             "eyebrow": "The basics",
-            "h2": "What a public adjuster is",
+            "h2": "What a claims consultant is",
             "blocks": [("faq", HOME_FAQS)],
         },
         {
             "band": "paper2",
-            "eyebrow": "Process",
-            "h2": "How a claim actually runs",
+            "eyebrow": "Independence",
+            "h2": "Working both sides",
             "blocks": [("faq", [
-                ("When is the best time to engage someone?",
-                 "<p>Before the first carrier inspection, because the scope documented in week one "
-                 "is the scope everyone argues from afterwards. In practice most engagements start "
-                 "later &mdash; when a short estimate lands, when a file has gone quiet, or after "
-                 "a denial. All of those are workable. The genuinely hard case is a claim where "
-                 "repairs are finished, records are thin and the limitation period is close.</p>"),
-                ("Can we engage you for part of a claim only?",
-                 "<p>Yes, and on institutional files that is common: the roofs only, the "
-                 "time-element loss only, the disputed supplement only, or appraisal only. The "
-                 "engagement letter defines the scope and the fee applies to that scope.</p>"),
-                ("What happens if we have already accepted a payment?",
-                 "<p>Accepting a payment is not the same as signing a full and final release, and "
-                 "most property policies contemplate supplemental claims where the actual cost of "
-                 "repair exceeds the estimate. What matters is the policy&rsquo;s own time limits "
-                 "and the suit limitation period, which is why a file in that position should be "
-                 "looked at quickly.</p>"),
-                ("Will you tell us if we do not need you?",
-                 "<p>Regularly, and we would rather do it on the first call than after you sign. "
-                 "If the loss will not clear the deductible, if the carrier&rsquo;s estimate is "
-                 "genuinely thorough, or if the real problem is a coverage denial that needs a "
-                 "lawyer rather than an adjuster, that is what we will say.</p>"),
-                ("Do you handle the repairs?",
-                 "<p>No, and we are prohibited from doing so. Chapter 4102 bars a public adjuster "
-                 "from participating directly or indirectly in the repair of property they "
-                 "adjusted. You select the contractor; we have no financial relationship with "
-                 "anyone in that supply chain.</p>"),
+                ("What licences do you hold?",
+                 "<p>Texas adjuster (chapter 4101) and Texas public insurance adjuster (chapter "
+                 "4102). Both, which is what makes it possible for an insurer to retain us on "
+                 "one matter and a policyholder on another without anyone being served outside a "
+                 "licence. On any single matter we act in one capacity only, named in the "
+                 "engagement letter. Numbers are in the footer; verify them with TDI.</p>"),
+                ("How do you handle conflicts?",
+                 "<p>A conflict check runs before any detailed discussion of a matter. Give us "
+                 "the property, the date of loss and the parties and we confirm within a day. We "
+                 "never act for both parties to the same loss, and if we are already engaged on "
+                 "the other side we say so immediately and you tell us nothing further.</p>"),
+                ("Does your analysis change depending on who hired you?",
+                 "<p>No, and that is testable. The same methodology, the same estimating "
+                 "platform, the same evidentiary standard for every judgment call. What changes "
+                 "with the client is which questions we are asked to answer, not what the "
+                 "answers are. Anyone can check this the same way opposing counsel does &mdash; "
+                 "by reading our work on matters where we were retained by the other side.</p>"),
+                ("Can you serve as an appraiser or an umpire?",
+                 "<p>Yes, in any of the three roles: party appraiser for either side, or umpire "
+                 "where both appraisers accept us. Umpire work depends on being impartial and "
+                 "being seen to be, so we disclose prior engagements with either party before "
+                 "accepting any appraisal role.</p>"),
+                ("Do you give expert testimony?",
+                 "<p>Yes, for either party, subject to conflict check. Scope and cost opinions, "
+                 "damage causation within our competence, time-element quantification and "
+                 "critiques of an opposing estimate. Testimony time is billed at a posted rate "
+                 "that does not vary with the outcome, which is the first question you will be "
+                 "asked on cross.</p>"),
             ])],
         },
         {
+            "eyebrow": "Process",
+            "h2": "How an engagement runs",
+            "blocks": [("faq", [
+                ("When is the best time to bring you in?",
+                 "<p>Before the property changes. The scope documented in the first weeks is the "
+                 "scope everyone argues from afterwards, and once tarps go up and crews clean, "
+                 "evidence is gone for good. In practice most engagements start later &mdash; "
+                 "when two estimates are far apart, when a file has stalled, or when appraisal "
+                 "or litigation is in view. All of those are workable.</p>"),
+                ("Can you take part of a matter only?",
+                 "<p>Yes, and on institutional files that is common: the roofs only, the "
+                 "time-element quantification only, a critique of an opposing estimate only, "
+                 "appraisal only. The engagement letter defines the scope and the fee applies to "
+                 "that scope.</p>"),
+                ("What do you need from us to start?",
+                 "<p>The declarations page and the full policy or coverage document, the claim "
+                 "number, any estimates and reports already produced, and access to the "
+                 "property. Everything else we can assemble. On a time-element matter we also "
+                 "need somebody in finance who can pull records.</p>"),
+                ("Do you handle repairs?",
+                 "<p>No. We do not repair, restore or rebuild property we have assessed, and we "
+                 "take no referral money from anyone who does. You select the contractor.</p>"),
+            ])],
+        },
+        {
+            "band": "paper2",
             "eyebrow": "Texas specifics",
             "h2": "Statute, deadlines and risk pools",
             "blocks": [("faq", [
-                ("What deadlines does Texas law impose on our insurer?",
+                ("What deadlines does Texas law impose on an insurer?",
                  "<p>Under subchapter B of chapter 542, an insurer receiving written notice of a "
                  "claim must generally acknowledge it, begin investigating and request what it "
-                 "reasonably needs within 15 days; notify you in writing whether the claim is "
-                 "accepted or rejected within 15 business days of receiving the items it "
-                 "requested; and pay within 5 business days of an acceptance. Missing those can "
-                 "expose the insurer to statutory interest and attorney&rsquo;s fees. The detail "
+                 "reasonably needs within 15 days; notify the claimant in writing whether the "
+                 "claim is accepted or rejected within 15 business days of receiving the items "
+                 "it requested; and pay within 5 business days of an acceptance. The detail "
                  "matters and it is a legal question &mdash; the "
-                 "<a href=\"/tools/texas-claim-deadline-calculator/\">deadline calculator</a> is a "
-                 "starting point, not advice.</p>"),
-                ("What is chapter 542A and does it apply to us?",
-                 "<p>Chapter 542A governs claims arising from forces of nature &mdash; wind, hail, "
-                 "rain and similar perils. Its most practically important feature is a pre-suit "
-                 "notice requirement: written notice to the insurer at least 61 days before "
-                 "filing, stating the acts complained of, the amount claimed and the "
-                 "attorney&rsquo;s fees incurred. It also affects how interest is calculated. If "
-                 "your loss is weather-related, assume it applies and plan the timeline "
-                 "accordingly.</p>"),
+                 "<a href=\"/tools/texas-claim-deadline-calculator/\">deadline calculator</a> is "
+                 "a starting point, not advice.</p>"),
+                ("What is chapter 542A?",
+                 "<p>It governs claims arising from forces of nature &mdash; wind, hail, rain "
+                 "and similar perils. Its most practically important feature is a pre-suit "
+                 "notice requirement: written notice at least 61 days before filing, stating the "
+                 "acts complained of, the amount claimed and the attorney&rsquo;s fees incurred. "
+                 "It also affects how interest is calculated. If a loss is weather-related, "
+                 "assume it applies and plan the timeline accordingly.</p>"),
                 ("Our coverage is through a risk pool. Do these rules apply?",
                  "<p>Possibly not in the same way. An interlocal risk pool operates under a "
-                 "participation agreement rather than an insurance policy, and the statutory "
+                 "participation agreement rather than an insurance policy, and statutory "
                  "machinery aimed at insurers may not reach it. The coverage document governs: "
                  "its notice requirements, its valuation provisions, its appeal process. The "
-                 "scope disputes are identical; the leverage differs, and using the wrong "
-                 "playbook wastes months.</p>"),
-                ("How long do we have to sue?",
+                 "technical questions are identical; the procedure is not.</p>"),
+                ("How long is there to sue?",
                  "<p>Texas commercial policies commonly carry a two-year suit limitation, and "
                  "some wording is shorter. Layer the 61-day pre-suit notice requirement on top "
                  "and the practical deadline to have counsel engaged is materially earlier than "
@@ -672,27 +735,26 @@ FAQ_PAGE = {
             ])],
         },
         {
-            "band": "paper2",
             "eyebrow": "Money",
-            "h2": "Fees, costs and net recovery",
+            "h2": "Fees and costs",
             "blocks": [("faq", [
                 ("How is the fee calculated?",
-                 "<p>A percentage of what is recovered, agreed in writing before work starts, "
-                 "capped by statute at 10% of the claim settlement. Larger losses normally carry a "
-                 "lower rate. Where the carrier has already offered an amount, we normally carve "
-                 "it out of the fee base. See <a href=\"/fees/\">fees and engagement terms</a>.</p>"),
-                ("What if the claim is denied entirely?",
-                 "<p>Then there is no recovery and no fee. Third-party costs you authorised "
-                 "directly &mdash; an engineer, an accountant &mdash; remain your cost, which is "
-                 "why each one is discussed before it is incurred rather than presented as a bill "
+                 "<p>Hourly or fixed fee, agreed in writing before work starts, against a "
+                 "written estimate of hours. Never a percentage of the settlement and never "
+                 "contingent on the outcome. See <a href=\"/fees/\">fees and engagement "
+                 "terms</a>.</p>"),
+                ("Who pays for engineers and accountants?",
+                 "<p>The client, directly, and only where authorized in advance. Each specialist "
+                 "is discussed before engagement rather than presented as a line on an invoice "
                  "afterwards.</p>"),
-                ("Are your fees recoverable from the insurer?",
-                 "<p>Generally no. A public adjuster&rsquo;s fee is a cost of pursuing the claim, "
-                 "not a covered cost of repair. On a file that later involves litigation, "
-                 "attorney&rsquo;s fees may be recoverable under the Insurance Code &mdash; that "
-                 "is a question for counsel. Public adjuster fees are also generally not an "
-                 "eligible cost under FEMA public assistance, which public entities should factor "
-                 "in from the start.</p>"),
+                ("Are consulting fees recoverable from the insurer?",
+                 "<p>Generally no. Consulting costs are a cost of investigating or pursuing a "
+                 "matter, not a covered cost of repair, though certain professional fees "
+                 "genuinely required to execute the repair &mdash; design professionals, for "
+                 "instance &mdash; are a different question. Where litigation is involved, "
+                 "recoverability of fees and costs is a matter for counsel. Consulting fees are "
+                 "also generally not an eligible cost under FEMA public assistance, which public "
+                 "entities should factor in from the start.</p>"),
             ])],
         },
     ],
@@ -775,8 +837,19 @@ GLOSSARY_TERMS = [
      "exposure for non-compliance."),
     ("Public adjuster",
      "A professional licensed to represent the policyholder in presenting and negotiating a "
-     "claim. In Texas, licensed under chapter 4102, fee capped at 10% of the settlement, and "
-     "prohibited from repairing the property adjusted."),
+     "claim, and paid by the policyholder. Distinct from a claims consultant, who is retained "
+     "to establish facts rather than to act as a party&rsquo;s representative."),
+    ("Claims consultant",
+     "An independent professional retained to assess damage, produce scope and cost analysis, "
+     "quantify time-element loss and give expert opinion. May be retained by either party, and "
+     "is normally paid for the work rather than a share of the outcome."),
+    ("Umpire",
+     "The third member of an appraisal panel, selected by the two party-appointed appraisers or "
+     "appointed by a court. Where the appraisers disagree, the umpire&rsquo;s agreement with "
+     "either of them produces a binding award."),
+    ("Independent adjuster (IA)",
+     "An adjuster who works for insurers on a contract basis rather than as an employee. "
+     "Independent of the insurer&rsquo;s payroll, not of its interest."),
     ("Recoverable depreciation",
      "The amount withheld from a replacement cost claim until the work is completed and "
      "documented. Time-limited under most policies."),
@@ -842,15 +915,15 @@ GLOSSARY = {
 
 CONTACT = {
     "path": "/contact/",
-    "title": "Request a Claim Review | %s" % BIZ["name"],
-    "description": ("Request a no-obligation review of a commercial or institutional property "
-                    "insurance claim in Texas. Call %s or send the details of your loss." % P),
+    "title": "Contact | Discuss a Matter | %s" % BIZ["name"],
+    "description": ("Discuss a commercial or institutional property loss in Texas with an "
+                    "independent claims consultant. Conflict check first. Call %s." % P),
     "eyebrow": "Contact",
-    "h1": "Request a<br>claim <em>review</em>",
-    "h1_plain": "Request a claim review",
-    "lede": ("The first conversation costs nothing and frequently ends with advice rather than an "
-             "engagement. If we do not think representation is worth it on your file, we will say "
-             "so."),
+    "h1": "Discuss a<br><em>matter</em>",
+    "h1_plain": "Discuss a matter",
+    "lede": ("The first conversation costs nothing and frequently ends with advice rather than "
+             "an engagement. Tell us the property, the date of loss and the parties, and we will "
+             "run a conflict check before anything else is discussed."),
     "trail": [("Home", "/"), ("Contact", None)],
     "head_aside": [
         ("ledger", "What to have to hand", [
@@ -956,6 +1029,142 @@ CONTACT = {
     ],
 }
 
+CLIENTS = {
+    "path": "/who-we-work-for/",
+    "title": "Who We Work For | Policyholders, Insurers, Pools &amp; Counsel",
+    "description": ("Independent claims consulting retained by policyholders, insurance "
+                    "carriers, third-party administrators, risk pools, brokers and attorneys on "
+                    "large Texas property losses."),
+    "eyebrow": "Clients",
+    "h1": "Six kinds of client,<br><em>one</em> methodology",
+    "h1_plain": "Who we work for",
+    "lede": ("Most consulting firms in this market pick a side and stay there. We did not, and "
+             "the reason is practical rather than high-minded: work that is only ever produced "
+             "for one party eventually reads that way, and everyone on the other side learns to "
+             "discount it."),
+    "trail": [("Home", "/"), ("Who we work for", None)],
+    "head_aside": [
+        ("ledger", "Engagement rules", [
+            ("Conflict check", "Before any detail"),
+            ("Both parties, same loss", "Never"),
+            ("Capacity per matter", "One, stated"),
+            ("Fee", "Hourly / fixed"),
+            ("Tied to outcome", "Never"),
+            ("Referral money", "None taken"),
+        ], "The rules are the same whoever is paying, which is the only reason the analysis is "
+           "worth anything to either of them."),
+    ],
+    "sections": [
+        {
+            "eyebrow": "The clients",
+            "h2": "Who retains us, and what for.",
+            "blocks": [
+                ("cards", [
+                    ("Policyholders &amp; owners",
+                     "Churches, districts, cities, campuses, portfolios and large commercial "
+                     "owners who need the loss measured properly before it is presented, or a "
+                     "second opinion on an estimate that looks thin.",
+                     "/who-we-serve/"),
+                    ("Insurance carriers",
+                     "Scope verification and cost review on large or unusual losses, specialist "
+                     "assessment where the in-house estimate needs support, and independent "
+                     "critique of a presented claim.",
+                     "/services/commercial-property-damage-claims/"),
+                    ("TPAs &amp; independent adjusting firms",
+                     "Surge capacity and technical depth on files past the point where a general "
+                     "estimating platform helps &mdash; complex roofs, production equipment, "
+                     "laboratory and healthcare environments.",
+                     "/services/hail-damage-claims/"),
+                    ("Risk pools &amp; self-insureds",
+                     "Interlocal pools and entities carrying large retentions, where the "
+                     "coverage document is not a standard policy and the appeal route is its "
+                     "own.",
+                     "/who-we-serve/school-districts/"),
+                    ("Brokers &amp; risk managers",
+                     "Pre-loss program review, statement-of-value testing, and an independent "
+                     "technical read when a client&rsquo;s claim is not moving.",
+                     "/services/policy-review-and-pre-loss-consulting/"),
+                    ("Attorneys, either side",
+                     "Expert reports, estimate critiques, damage and cost opinions, deposition "
+                     "and trial testimony &mdash; for policyholder counsel and for coverage and "
+                     "defense counsel alike.",
+                     "/services/appraisal-and-claim-disputes/"),
+                ]),
+            ],
+        },
+        {
+            "band": "paper2",
+            "eyebrow": "How it holds together",
+            "h2": "Three rules that make working both sides possible.",
+            "blocks": [
+                ("steps", [
+                    ("Conflicts are checked before the conversation, not after",
+                     "<p>Give us the property, the date of loss and the parties. We confirm "
+                     "within a day whether we are clear. If we are already engaged on the other "
+                     "side we say so immediately and you tell us nothing further. We never act "
+                     "for both parties to the same loss, and we do not take a matter adverse to "
+                     "a client we are currently engaged by.</p>"),
+                    ("The fee never moves with the number",
+                     "<p>Hourly or fixed, agreed in writing, independent of outcome. This is the "
+                     "load-bearing rule. A consultant paid a share of the recovery cannot "
+                     "credibly be retained by an insurer, and a consultant paid a bonus for a "
+                     "low number cannot credibly be retained by a policyholder. Removing the "
+                     "contingency removes the objection from both directions.</p>"),
+                    ("One capacity per matter, stated up front",
+                     "<p>Consultant, party-appointed appraiser, umpire or adjuster &mdash; named "
+                     "in the engagement letter before work starts. Where we are asked to serve "
+                     "as umpire, prior engagements with either party are disclosed to both "
+                     "appraisers first, and either can decline us.</p>"),
+                ]),
+            ],
+        },
+        {
+            "band": "ink",
+            "eyebrow": "The test",
+            "h2": "You can check this yourself.",
+            "dek": "The usual way to evaluate an expert is to ask who else they have worked for. "
+                   "That question is the whole answer here.",
+            "blocks": [
+                ("p", "Ask for matters where we were retained by the party opposite to you and "
+                      "read what we concluded. Ask whether our methodology, unit costs or "
+                      "depreciation approach differ depending on who is paying. Ask what we have "
+                      "written when the answer was unhelpful to the client &mdash; because on a "
+                      "practice built this way, that happens regularly and it is the point."),
+                ("p", "An expert whose opinions correlate perfectly with whoever retained them "
+                      "is not an expert. They are a witness for hire with a technical vocabulary, "
+                      "and a competent cross-examiner will establish that in about four "
+                      "minutes."),
+                ("html", '<div class="btn-row"><a class="btn btn--brass" href="/contact/">'
+                         'Run a conflict check <span class="arw">&rarr;</span></a>'
+                         '<a class="btn btn--ghost" href="/fees/">Fees &amp; engagement</a></div>'),
+            ],
+        },
+    ],
+    "faqs": [
+        ("Doesn&rsquo;t working for insurers compromise you with policyholders?",
+         "<p>It would if the analysis changed with the client. It does not, and that is "
+         "verifiable rather than a promise &mdash; ask to see work produced for the other side. "
+         "What working both sides actually buys a policyholder is a consultant who knows exactly "
+         "how a carrier&rsquo;s file is built, which arguments its reviewers take seriously, and "
+         "which ones get a claim quietly deprioritized.</p>"),
+        ("And doesn&rsquo;t working for policyholders compromise you with carriers?",
+         "<p>Same answer in reverse. A carrier retaining us is getting an assessment that will "
+         "not fall apart when policyholder counsel reads it, precisely because it was written to "
+         "the standard we would apply if we were on the other side. Work that only survives "
+         "friendly scrutiny is a liability on a large file.</p>"),
+        ("Will you take a matter against a party you have worked for before?",
+         "<p>Potentially, once the earlier engagement is concluded and subject to confidentiality "
+         "obligations, and we will disclose the prior relationship to both parties before "
+         "accepting. We do not take a matter adverse to a client we are currently engaged by. If "
+         "either party is uncomfortable, they should say so and we will decline &mdash; that is "
+         "cheaper for everyone than an argument about it later.</p>"),
+        ("Can counsel retain you rather than the party?",
+         "<p>Yes, and on matters heading toward litigation that is frequently the sensible "
+         "structure. Engagement through counsel is common for expert work; how it affects "
+         "privilege and discoverability is a question for the attorney, not for us.</p>"),
+    ],
+}
+
 # ---------------------------------------------------------------------------
 # Legal
 # ---------------------------------------------------------------------------
@@ -1040,41 +1249,63 @@ LEGAL = [
     {
         "path": "/disclaimer/",
         "title": "Disclaimer | %s" % BIZ["name"],
-        "description": ("Professional disclaimer: licensing, scope of services, and the limits of "
-                        "the information published on this site."),
+        "description": ("Professional disclaimer: licensing, capacity, independence, and the "
+                        "limits of the information published on this site."),
         "eyebrow": "Legal",
         "h1": "Disclaimer",
         "h1_plain": "Disclaimer",
         "lede": "What we are, what we are not, and what this site is for.",
         "trail": [("Home", "/"), ("Disclaimer", None)],
         "sections": [{"wrap": "narrow", "blocks": [
-            ("h2", "We are public insurance adjusters"),
-            ("p", "%s is a public insurance adjusting firm. Public insurance adjusters in Texas are "
-                  "licensed and regulated under chapter 4102 of the Texas Insurance Code by the "
-                  "Texas Department of Insurance. We represent policyholders in the presentation "
-                  "and negotiation of property insurance claims. We do not practice public "
-                  "adjusting in states where we are not licensed." % BIZ["name"]),
+            ("h2", "What we do"),
+            ("p", "%s is an independent claims consulting firm. Our work is damage assessment, "
+                  "scope and construction cost analysis, time-element quantification, coverage-"
+                  "adjacent technical analysis, appraisal and umpire service, and expert support "
+                  "to counsel. We are retained by policyholders, insurers, third-party "
+                  "administrators, risk pools, brokers and attorneys." % BIZ["name"]),
+            ("h2", "Licensing and capacity"),
+            ("p", "We hold Texas adjuster and public insurance adjuster licences, issued and "
+                  "regulated by the Texas Department of Insurance. Licence numbers appear in the "
+                  "footer of this site and can be verified directly with the department."),
+            ("p", "Holding licences on both sides is what allows either party to retain this "
+                  "firm. It does not mean we occupy both roles at once. On any individual matter "
+                  "we act in a single, stated capacity &mdash; as consultant, as a "
+                  "party-appointed appraiser, as umpire, or as an adjuster &mdash; identified in "
+                  "the engagement letter before work begins. We do not act for both parties to "
+                  "the same loss, and a conflict check is run before any matter is discussed in "
+                  "detail."),
+            ("h2", "Independence and compensation"),
+            ("p", "We are paid for time and deliverables, on an hourly or fixed-fee basis. We do "
+                  "not take a percentage of any settlement, award or recovery, and our "
+                  "compensation does not vary with the outcome of a matter. We accept no "
+                  "referral fees, commissions or other consideration from contractors, "
+                  "restoration companies, engineers, vendors or attorneys, in either direction."),
             ("h2", "We are not a law firm"),
             ("p", "Nothing on this site is legal advice, and we do not provide it. Several topics "
                   "discussed here &mdash; limitation periods, statutory remedies, pre-suit notice "
-                  "under chapter 542A, the effect of releases &mdash; are legal questions on which "
-                  "you should consult a licensed Texas attorney. Where we think a file needs "
-                  "counsel, we say so."),
+                  "under chapter 542A, the effect of releases, coverage interpretation &mdash; "
+                  "are legal questions on which you should consult a licensed Texas attorney. "
+                  "Where we think a matter needs counsel, we say so."),
             ("h2", "We are not contractors"),
-            ("p", "We do not repair, restore or reconstruct property, and chapter 4102 prohibits a "
-                  "public adjuster from participating directly or indirectly in the repair of "
-                  "property they adjusted. We accept no referral fees, commissions or other "
-                  "compensation from contractors, restoration companies, engineers or vendors."),
+            ("p", "We do not repair, restore or reconstruct property, and we do not participate "
+                  "directly or indirectly in the repair of property we have assessed. The "
+                  "selection of contractors is the client&rsquo;s alone."),
             ("h2", "No guarantee of outcome"),
-            ("p", "No firm can guarantee the result of an insurance claim. Every claim turns on its "
-                  "own policy wording, facts and evidence. Descriptions of our approach on this "
-                  "site describe method, not promised outcomes."),
+            ("p", "No firm can guarantee the result of a claim, an appraisal or a proceeding. "
+                  "Every matter turns on its own policy wording, facts and evidence. Descriptions "
+                  "of our approach on this site describe method, not promised outcomes, and "
+                  "nothing here should be read as a prediction about any particular file."),
             ("h2", "Calculators and reference material"),
             ("p", "The calculators, timelines, unit costs and statutory summaries published here "
                   "are planning aids assembled from published sources and ordinary industry "
-                  "convention. They are not appraisals, not coverage opinions and not legal "
-                  "deadlines. Verify anything with a deadline attached against your policy and "
-                  "with counsel."),
+                  "convention. They are not appraisals, not coverage opinions, not expert "
+                  "reports and not legal deadlines. Verify anything with a deadline attached "
+                  "against the governing document and with counsel."),
+            ("h2", "No relationship formed here"),
+            ("p", "Using this site, running a calculator or sending an enquiry does not create a "
+                  "professional relationship and does not put us under any duty to you. That "
+                  "relationship begins only when a written engagement agreement is signed by "
+                  "both parties. Do not send confidential or privileged material before then."),
         ]}],
     },
     {

@@ -15,7 +15,8 @@ import re
 import shutil
 from datetime import date
 
-from siteconfig import BIZ, STATUTE, NAV, FOOTER_SERVING, TODAY, YEAR
+from siteconfig import (BIZ, STATUTE, FEES, NAV, FOOTER_SERVING, TODAY, YEAR,
+                        license_line)
 
 from content.industries import INDUSTRIES
 from content.services import SERVICES
@@ -85,13 +86,13 @@ def org_node():
         "legalName": BIZ["legal_name"],
         "url": url("/"),
         "description": (
-            f"{BIZ['name']} is a firm of {BIZ['descriptor']} representing churches, school "
-            f"districts, municipalities and large commercial property owners across "
+            f"{BIZ['name']} is a firm of {BIZ['descriptor']}. We assess, scope, quantify and "
+            f"document large commercial and institutional property losses across "
             f"{BIZ['region']}."
         ),
         "telephone": PHONE,
         "email": EMAIL,
-        "priceRange": "Contingency fee",
+        "priceRange": "Hourly, fixed-fee or per-project",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": BIZ["city"],
@@ -106,15 +107,19 @@ def org_node():
         "areaServed": [{"@type": "State", "name": "Texas"}]
                       + [{"@type": "City", "name": a["city"]} for a in AREAS],
         "knowsAbout": [
-            "public insurance adjusting", "commercial property damage claims",
-            "business interruption", "insurance appraisal", "hail and windstorm claims",
+            "claims consulting", "property damage assessment", "commercial property claims",
+            "construction cost estimating", "insurance appraisal", "expert witness",
+            "business interruption", "hail and windstorm damage",
             "ordinance and law coverage", "Texas Insurance Code chapter 542",
         ],
         "openingHours": BIZ["hours"],
         "sameAs": [],
     }
-    if BIZ.get("license"):
-        node["hasCredential"] = BIZ["license"]
+    creds = [c for c in (BIZ.get("license_ia") and "Texas adjuster licence",
+                         BIZ.get("license_pa") and "Texas public insurance adjuster licence",
+                         BIZ.get("credential")) if c]
+    if creds:
+        node["hasCredential"] = creds
     if BIZ.get("founded"):
         node["foundingDate"] = BIZ["founded"]
     return node
@@ -300,12 +305,13 @@ def head(page):
 
 
 def topbar():
-    lic = f" &middot; {esc(BIZ['license'])}" if BIZ.get("license") else ""
+    lic = license_line()
+    lic = f" &middot; {lic}" if lic else ""
     return f"""<div class="topbar">
   <div class="wrap">
     <div class="tb-left">
       <span><span class="dot"></span><span class="tb-long">Texas &amp; Gulf Coast &middot; statewide response</span><span class="tb-short">Statewide Texas</span></span>
-      <span class="tb-hide">Licensed public insurance adjusters &middot; {STATUTE['chapter']}{lic}</span>
+      <span class="tb-hide">Independent consulting for policyholders, insurers, pools and counsel{lic}</span>
     </div>
     <div><a href="tel:{PHONE_HREF}">{PHONE}</a></div>
   </div>
@@ -356,7 +362,7 @@ def header(page):
     <nav class="nav" aria-label="Primary">{nav_html(current)}</nav>
     <div class="mast-cta">
       <a class="mast-phone" href="tel:{PHONE_HREF}">{PHONE}</a>
-      <a class="btn btn--sm" href="/contact/">Request a claim review</a>
+      <a class="btn btn--sm" href="/contact/">Discuss a matter</a>
     </div>
     <button class="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -371,7 +377,7 @@ def header(page):
   </div>
   <nav aria-label="All pages">{drawer_groups()}</nav>
   <div class="drawer-foot">
-    <a class="btn" href="/contact/">Request a claim review <span class="arw">&rarr;</span></a>
+    <a class="btn" href="/contact/">Discuss a matter <span class="arw">&rarr;</span></a>
     <p style="margin-top:18px;font-family:var(--mono);font-size:14px;">
       <a href="tel:{PHONE_HREF}" style="text-decoration:none;">{PHONE}</a><br>
       <a href="mailto:{EMAIL}" style="text-decoration:none;">{EMAIL}</a>
@@ -394,17 +400,17 @@ def crumbs(trail):
             + "".join(lis) + "</ol></div></nav>\n")
 
 
-def cta_band(heading=None, dek=None, primary=("Request a claim review", "/contact/"),
+def cta_band(heading=None, dek=None, primary=("Discuss a matter", "/contact/"),
              secondary=("See how we work", "/how-we-work/")):
-    heading = heading or "Bring us in before the carrier&rsquo;s number becomes <em>the</em> number."
-    dek = dek or ("The first inspection sets the shape of the whole file. We can join a claim at "
-                  "any stage, but the earlier the scope is documented properly, the less of it has "
-                  "to be argued back later.")
+    heading = heading or "Get the number established before it becomes <em>a dispute</em>."
+    dek = dek or ("The first inspection sets the shape of the whole file. We can join a matter at "
+                  "any stage and from either side, but the earlier the loss is documented "
+                  "properly, the less of it has to be argued later.")
     return f"""<section class="ctaband">
   <div class="wrap">
     <div class="cols cols--7-5">
       <div>
-        <p class="eyebrow">Talk to an adjuster</p>
+        <p class="eyebrow">Talk to a consultant</p>
         <h2>{heading}</h2>
         <p class="dek">{dek}</p>
         <div class="btn-row">
@@ -419,9 +425,9 @@ def cta_band(heading=None, dek=None, primary=("Request a claim review", "/contac
           <a href="mailto:{EMAIL}" style="color:#cfd5d9;">{EMAIL}</a>
         </p>
         <ul class="checks" style="margin-top:26px;">
-          <li>No fee unless the claim pays.</li>
-          <li>Policy and loss reviewed before you commit to anything.</li>
-          <li>Emergency and catastrophe response across Texas.</li>
+          <li>Retained by policyholders, insurers, pools, brokers and counsel.</li>
+          <li>Hourly or fixed fee &mdash; never a percentage of the settlement.</li>
+          <li>Conflict check before we discuss any matter in detail.</li>
         </ul>
       </div>
     </div>
@@ -435,23 +441,25 @@ def footer():
     srv = "".join(f'<li><a href="{s["path"]}">{s["nav_label"]}</a></li>' for s in SERVICES)
     tls = "".join(f'<li><a href="{t["path"]}">{t["nav_label"]}</a></li>' for t in TOOLS)
     ars = "".join(f'<li><a href="{a["path"]}">{a["nav_label"]}</a></li>' for a in AREAS)
-    lic = f'<br>{esc(BIZ["license"])}' if BIZ.get("license") else ""
+    lic = license_line()
+    lic = f"<br>{lic}" if lic else ""
     return f"""<footer class="footer">
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
         <span class="wm-name">Claims<b>Consultant</b></span>
         <span class="wm-sub">{esc(BIZ['tagline'])}</span>
-        <p>Licensed Texas public insurance adjusters working large institutional and
-           commercial property losses &mdash; churches, school districts, municipalities,
-           campuses and portfolios. We represent the policyholder. Only the policyholder.</p>
+        <p>Independent claims consultants working large institutional and commercial
+           property losses across Texas &mdash; churches, school districts, municipalities,
+           campuses and portfolios. Retained by either side. The method does not change
+           with the client.</p>
         <div class="footer-contact">
           <a href="tel:{PHONE_HREF}">{PHONE}</a>
           <a href="mailto:{EMAIL}">{EMAIL}</a>
         </div>
       </div>
       <div class="fnav">
-        <div><h4>Who we serve</h4><ul>{ind}</ul></div>
+        <div><h4>Property types</h4><ul>{ind}</ul></div>
         <div><h4>Claim services</h4><ul>{srv}</ul></div>
         <div><h4>Tools &amp; calculators</h4><ul>{tls}</ul></div>
         <div>
@@ -459,6 +467,7 @@ def footer():
           <h4 style="margin-top:26px;">Firm</h4>
           <ul>
             <li><a href="/about/">About the firm</a></li>
+            <li><a href="/who-we-work-for/">Who we work for</a></li>
             <li><a href="/how-we-work/">How we work</a></li>
             <li><a href="/fees/">Fees &amp; engagement</a></li>
             <li><a href="/blog/">Insights</a></li>
@@ -480,13 +489,16 @@ def footer():
       </div>
     </div>
     <p class="disclaimer">
-      {esc(BIZ['name'])} is a public insurance adjusting firm licensed under {STATUTE['chapter']}.
-      We are not a law firm and do not provide legal advice; we do not practice public adjusting in
-      states where we are not licensed, and we do not adjust claims on behalf of insurers.
-      Calculators, timelines and figures published on this site are planning aids built from
-      published statutory deadlines and industry cost conventions. They are not appraisals, not
-      coverage opinions, and not a substitute for reading your own policy. Coverage is determined by
-      the policy or interlocal agreement in force at the date of loss. Serving {FOOTER_SERVING}.
+      {esc(BIZ['name'])} is an independent claims consulting firm providing damage assessment,
+      scope and cost analysis, time-element quantification, appraisal and expert support. We
+      hold Texas adjuster and public insurance adjuster licences, which is what allows us to be
+      retained by either party; on any individual matter we act in one capacity only, stated in
+      the engagement letter, and we never act for both parties to the same loss. We are not a
+      law firm and do not provide legal advice. Calculators,
+      timelines and figures published on this site are planning aids built from published
+      statutory deadlines and industry cost conventions. They are not appraisals, not coverage
+      opinions, and not a substitute for reading the policy. Coverage is determined by the policy
+      or coverage document in force at the date of loss. Serving {FOOTER_SERVING}.
     </p>
   </div>
 </footer>
@@ -727,11 +739,11 @@ def article_page(post, related):
     <div class="prose">{render_blocks(post['body'], prose=True)}</div>
     <div class="stack">{toc_html}
       <div class="feature feature--wash">
-        <p class="kicker">Working a live claim?</p>
-        <h3 style="margin-top:10px;">Have the file reviewed before you sign anything.</h3>
+        <p class="kicker">Working a live file?</p>
+        <h3 style="margin-top:10px;">Have the loss measured independently.</h3>
         <p style="font-size:15px;color:var(--slate);margin-top:12px;">
-          Policy read, scope compared, position stated in writing. No fee unless the claim pays.</p>
-        <a class="btn btn--sm mt-m" href="/contact/">Request a review <span class="arw">&rarr;</span></a>
+          Policy read, scope measured, conclusions stated in writing. Hourly or fixed fee.</p>
+        <a class="btn btn--sm mt-m" href="/contact/">Discuss a matter <span class="arw">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -753,17 +765,17 @@ def article_page(post, related):
 def homepage():
     page = {
         "path": "/",
-        "title": "Texas Commercial Public Adjusters | Churches, Schools, Cities",
+        "title": "Texas Claims Consultants | Commercial Property Loss Experts",
         "description": (
-            "Large-loss public adjusters for Texas churches, school districts, municipalities and "
-            "commercial property owners. We document, value and negotiate. No recovery, no fee."
+            "Independent claims consultants for large Texas commercial property losses. Scope, "
+            "cost analysis, business interruption and appraisal — retained by either side."
         ),
         "page_type": "WebPage",
         "schema": [
             service_schema(
-                "Commercial public adjusting",
-                "Public insurance adjusting for institutional and large commercial property losses in Texas.",
-                "/", "Public Insurance Adjusting"),
+                "Commercial claims consulting",
+                "Independent claims consulting on institutional and large commercial property losses in Texas.",
+                "/", "Claims Consulting"),
             itemlist_schema("/", "Industries served",
                             [(i["nav_label"], i["path"]) for i in INDUSTRIES]),
         ],
@@ -802,36 +814,36 @@ def homepage():
   <div class="wrap">
     <div class="cols cols--7-5">
       <div>
-        <p class="eyebrow">Public insurance adjusters &middot; {STATUTE['chapter']}</p>
-        <h1>The carrier brought<br>its own adjuster.<br><em>Bring yours.</em></h1>
-        <p class="lede">We are licensed public adjusters who work one side of the table: yours.
-          Churches, school districts, cities, campuses and commercial portfolios across Texas hire
-          us to document the loss properly, value it under the policy actually in force, and argue
-          the difference until the number is right.</p>
+        <p class="eyebrow">Independent claims consulting &middot; Texas</p>
+        <h1>Two parties.<br>Two estimates.<br><em>One</em> set of facts.</h1>
+        <p class="lede">Large property losses stall because nobody has established what actually
+          happened to the building. We do that work. Policyholders, insurers, risk pools, brokers
+          and attorneys retain us for the same thing &mdash; a measured, documented, defensible
+          account of the damage and what it costs to put right.</p>
         <div class="btn-row">
-          <a class="btn" href="/contact/">Request a claim review <span class="arw">&rarr;</span></a>
+          <a class="btn" href="/contact/">Discuss a matter <span class="arw">&rarr;</span></a>
           <a class="btn btn--ghost" href="/tools/">Run the numbers first</a>
         </div>
         <div class="hero-meta">
           <span>Large commercial &amp; institutional only</span>
-          <span>No recovery, no fee</span>
-          <span>Statewide Texas response</span>
+          <span>Either side of the file</span>
+          <span>Fee never tied to the outcome</span>
         </div>
       </div>
       <div>
         <div class="ledger">
           <div class="ledger-head"><b>Texas claim clock</b><span>Ch. 542</span></div>
           <dl style="margin:0;">
-            <div class="ledger-row"><dt>Carrier must acknowledge your claim</dt><dd>15 days</dd></div>
-            <div class="ledger-row"><dt>Accept or reject, after it has what it asked for</dt><dd>15 bus. days</dd></div>
+            <div class="ledger-row"><dt>Insurer must acknowledge the claim</dt><dd>15 days</dd></div>
+            <div class="ledger-row"><dt>Accept or reject, once it has what it asked for</dt><dd>15 bus. days</dd></div>
             <div class="ledger-row"><dt>Pay, after notice of acceptance</dt><dd>5 bus. days</dd></div>
             <div class="ledger-row"><dt>Pre-suit notice on weather losses (ch. 542A)</dt><dd>61 days</dd></div>
             <div class="ledger-row"><dt>Typical suit limitation in Texas policies</dt><dd>2 years</dd></div>
-            <div class="ledger-row"><dt>Statutory public adjuster fee cap</dt><dd>{STATUTE['fee_cap']}</dd></div>
+            <div class="ledger-row"><dt>Appraisal panel: signatures that bind</dt><dd>2 of 3</dd></div>
           </dl>
           <div class="ledger-foot">Deadlines run from written notice, not from the day the damage
-            happened. Most institutions lose leverage in the first two weeks, before anyone has read
-            the policy. <a href="/tools/texas-claim-deadline-calculator/">Date your own claim &rarr;</a></div>
+            happened. Most large files lose months in the first two weeks, before anyone has read
+            the policy. <a href="/tools/texas-claim-deadline-calculator/">Date a claim &rarr;</a></div>
         </div>
       </div>
     </div>
@@ -842,22 +854,22 @@ def homepage():
   <div class="wrap">
     <div class="cols cols--5-7">
       <div>
-        <p class="eyebrow">The asymmetry</p>
-        <h2>An insurer&rsquo;s adjuster is paid by the insurer.<br><em>That is the whole problem.</em></h2>
+        <p class="eyebrow">Why large files stall</p>
+        <h2>Most claim disputes are not about coverage.<br><em>They are about scope.</em></h2>
       </div>
       <div class="stack">
-        <p>Nothing about that arrangement is scandalous. It is simply how the industry is built. The
-        adjuster who arrives after your roof opens up works for the company writing the check, uses
-        the company's estimating templates, and applies the company's reading of the policy. They may
-        be entirely honest and still produce a number that is tens or hundreds of thousands of dollars
-        short of what the wording actually owes you.</p>
-        <p>The gap is rarely fraud. It is scope. A missed layer of decking. Code upgrades treated as
-        betterment. Overhead and profit stripped from a job that plainly needs a general contractor.
-        Business interruption calculated on last year's revenue when the building was already at
-        capacity. Depreciation applied to labor. Each item is arguable; none of them argue themselves.</p>
-        <p>Our job is to build the other estimate &mdash; the one with the same level of detail, the
-        same software, the same standards of proof, and an opposite incentive &mdash; and then to sit
-        across the table until the two are reconciled.</p>
+        <p>Two competent people can walk the same damaged building and produce estimates that differ
+        by a third. Not because either is dishonest, but because a large loss contains dozens of
+        judgment calls and nobody wrote down the evidence for any of them. A missed layer of decking.
+        Code upgrades treated as betterment. Overhead and profit on a job that may or may not need a
+        general contractor. Business interruption modeled on a revenue trend nobody tested.</p>
+        <p>Each of those is answerable with facts. Most of them never get answered, because the
+        people arguing are also the people with a position, and the underlying measurements were
+        never taken to a standard that would settle anything.</p>
+        <p>That is the work. A measured survey, a line-item scope, specialists where the question is
+        technical, and a written basis for every judgment call &mdash; produced to the same standard
+        regardless of which party retained us. A number that only holds up for the side that paid
+        for it is not worth having.</p>
         <a class="tlink" href="/how-we-work/">How a file gets built <span class="arw">&rarr;</span></a>
       </div>
     </div>
@@ -871,14 +883,14 @@ def homepage():
       <h2>Institutions and large commercial property. <em>Nothing smaller.</em></h2>
       <p class="dek">A 40,000-square-foot sanctuary, a district with nineteen campuses and one
       blanket limit, a city hall with a FEMA obligation running alongside the insurance claim &mdash;
-      these are not big houses. They are different claims, with different wording, different
+      these are not big houses. They are different losses, with different wording, different
       valuation rules and different politics.</p>
     </div>
     <div class="stats stats--4 mt-l">
-      <div class="stat"><span class="sv">10%</span><span class="sl">Statutory cap on a Texas public adjuster&rsquo;s fee ({STATUTE['fee_cite']}). Ours is contingent, agreed in writing, and payable only on what is recovered.</span></div>
-      <div class="stat"><span class="sv">15</span><span class="sl">Days a Texas carrier has to acknowledge a claim and begin its investigation once you give written notice.</span></div>
-      <div class="stat"><span class="sv">3</span><span class="sl">Parties in an appraisal: your appraiser, theirs, and an umpire. Two signatures set the amount of loss and bind the file.</span></div>
-      <div class="stat"><span class="sv">1</span><span class="sl">Side of the table we sit on. We never adjust for insurers, and we take no referral money from contractors.</span></div>
+      <div class="stat"><span class="sv">0%</span><span class="sl">Of any settlement. We bill hourly or by fixed fee, so the analysis does not move with the outcome &mdash; which is the only reason both sides can rely on it.</span></div>
+      <div class="stat"><span class="sv">{STATUTE['ack_days']}</span><span class="sl">Days a Texas insurer has to acknowledge a claim and begin its investigation once written notice is given.</span></div>
+      <div class="stat"><span class="sv">3</span><span class="sl">Parties to an appraisal: two appraisers and an umpire. Two signatures set the amount of loss and bind the file.</span></div>
+      <div class="stat"><span class="sv">0</span><span class="sl">Referral money taken from contractors, restoration firms or vendors, in either direction. You choose who does the work.</span></div>
     </div>
   </div>
 </section>
@@ -933,42 +945,43 @@ def homepage():
         <div class="steps mt-l">
           <div class="step"><div><h3>Policy before property</h3></div><div>
             <p>We read the declarations, the forms, the endorsements and the schedule of values
-            before we walk the building. Half of what is arguable later is decided by wording you
-            already own &mdash; coinsurance, valuation basis, ordinance and law limits, named-storm
-            deductibles, the period of indemnity.</p></div></div>
+            before we walk the building. Half of what gets argued about later is already settled by
+            wording sitting in the file &mdash; coinsurance, valuation basis, ordinance and law
+            limits, named-storm deductibles, the period of indemnity.</p></div></div>
           <div class="step"><div><h3>Document while it is still true</h3></div><div>
             <p>Full photographic and measured survey, drone and moisture mapping where it helps,
             engineers or forensic accountants engaged where the loss warrants them. Evidence degrades:
             tarps go up, crews clean, and the thing you needed to prove disappears into a dumpster.</p></div></div>
           <div class="step"><div><h3>Build the estimate, then the argument</h3></div><div>
-            <p>A line-item scope in the same estimating platform the carrier uses, priced to your
-            market, with code upgrades, soft costs and time-element losses carried separately so
-            nothing can be quietly folded into a lump sum.</p></div></div>
-          <div class="step"><div><h3>Negotiate in writing</h3></div><div>
-            <p>Positions stated, differences itemised, deadlines cited. Where the gap will not close,
-            we advise on appraisal or on handing the matter to counsel &mdash; and we say so early
+            <p>A line-item scope in the industry-standard estimating platform, priced to the
+            local market, with code upgrades, soft costs and time-element losses carried
+            separately so nothing disappears into a lump-sum allowance.</p></div></div>
+          <div class="step"><div><h3>State the basis in writing</h3></div><div>
+            <p>Every judgment call recorded with the evidence behind it, differences between
+            positions itemized rather than described. Where a gap will not close on the facts, we
+            say what we think it needs &mdash; appraisal, a specialist, or counsel &mdash; early
             rather than after another six months of letters.</p></div></div>
         </div>
       </div>
       <div class="stack">
         <div class="feature feature--wash">
-          <p class="kicker">Before you sign anything</p>
-          <h3 style="margin-top:10px;">Three documents decide most of the claim.</h3>
+          <p class="kicker">Start here</p>
+          <h3 style="margin-top:10px;">Three documents decide most of the file.</h3>
           <ul class="checks mt-m">
             <li>The <strong>declarations page</strong> &mdash; limits, deductibles, valuation basis,
               and whether the schedule is blanket or per-location.</li>
             <li>The <strong>loss notice</strong> &mdash; its date starts every statutory clock in
               chapter 542.</li>
-            <li>The <strong>carrier&rsquo;s first estimate</strong> &mdash; not for its total, but for
-              what it silently leaves out.</li>
+            <li>The <strong>first estimate</strong> &mdash; not for its total, but for what it is
+              silent about.</li>
           </ul>
           <a class="btn btn--sm mt-m" href="/how-we-work/">See the full method <span class="arw">&rarr;</span></a>
         </div>
         <div class="callout">
           <h4>A note on timing</h4>
-          <p>You can hire a public adjuster at any point &mdash; before notice, mid-negotiation, after
-          a denial, even after a partial payment has been banked. What you cannot do is un-photograph
-          a building that has already been repaired.</p>
+          <p>We can be brought in at any point &mdash; before notice, mid-file, after a coverage
+          position has been taken, even after a partial payment. What nobody can do is
+          un-photograph a building that has already been repaired.</p>
         </div>
       </div>
     </div>
@@ -980,9 +993,9 @@ def homepage():
     <div class="cols cols--5-7">
       <div>
         <p class="eyebrow">Insights</p>
-        <h2>Written for the people who have to explain the claim to a board.</h2>
-        <p class="dek">No listicles. Policy wording, Texas statute, and the arguments that actually
-        move money on institutional files.</p>
+        <h2>Written for the people who have to explain the number to somebody else.</h2>
+        <p class="dek">No listicles. Policy wording, Texas statute, and the evidence that actually
+        resolves disputes on institutional files.</p>
         <div class="btn-row"><a class="btn btn--ghost" href="/blog/">All articles</a></div>
       </div>
       <div class="postlist">{recent}</div>
@@ -994,7 +1007,7 @@ def homepage():
   <div class="wrap">
     <div class="head-block">
       <p class="eyebrow">Common questions</p>
-      <h2>What boards, councils and facilities directors ask first.</h2>
+      <h2>What boards, councils, carriers and counsel ask first.</h2>
     </div>
     <div class="mt-l">{render_blocks([("faq", staticpages.HOME_FAQS)])}</div>
     <div class="mt-l rule-top">
@@ -1055,7 +1068,8 @@ def all_pages():
     out += [(a["path"], "0.7", "monthly") for a in AREAS]
     out += [("/blog/", "0.8", "weekly")]
     out += [(p["path"], "0.7", "monthly") for p in POSTS]
-    out += [("/about/", "0.7", "yearly"), ("/how-we-work/", "0.8", "yearly"),
+    out += [("/about/", "0.7", "yearly"), ("/who-we-work-for/", "0.8", "yearly"),
+            ("/how-we-work/", "0.8", "yearly"),
             ("/fees/", "0.7", "yearly"), ("/faq/", "0.7", "monthly"),
             ("/glossary/", "0.7", "yearly"), ("/contact/", "0.8", "yearly"),
             ("/privacy-policy/", "0.2", "yearly"), ("/terms/", "0.2", "yearly"),

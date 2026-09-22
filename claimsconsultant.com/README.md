@@ -1,9 +1,17 @@
 # claimsconsultant.com
 
-A 57-page static SEO authority site for **Claims Consultant**, a Texas public
-insurance adjusting firm working large commercial and institutional property
-losses — churches, school districts, cities, campuses, hospitals and
+A 58-page static SEO authority site for **Claims Consultant**, an independent
+Texas claims consulting firm working large commercial and institutional
+property losses — churches, school districts, cities, campuses, hospitals and
 portfolios.
+
+**Positioning:** the firm is *not* a policyholder-side advocate. It is retained
+by either party — policyholders, insurers, TPAs, risk pools, brokers and
+counsel — and bills hourly or by fixed fee, never a percentage of the
+settlement. That independence is the product, and it is load-bearing for the
+whole site: if anyone ever adds contingency-fee or "we fight the carrier" copy,
+the both-sides positioning collapses. See `/who-we-work-for/` and
+`/disclaimer/`.
 
 No CMS, no database, no build toolchain beyond Python 3. Upload the contents of
 this folder to any web host and it runs.
@@ -17,11 +25,19 @@ Everything a human needs to change is in **`siteconfig.py`**, marked `TODO`:
 | Key | Current value | Notes |
 | --- | --- | --- |
 | `phone_display` / `phone_href` | `(832) 503-5866` | Live. |
-| `city` / `latitude` / `longitude` | Austin | **Check this.** The phone is a Houston area code but the footer, contact page and `LocalBusiness` schema all say Austin. Local SEO keys off this — set it to wherever the business is actually based. |
-| `email` | `claims@claimsconsultant.com` | Confirm the mailbox exists; the contact form sends here. |
+| `city` / `latitude` / `longitude` | Houston | Set to Houston to match the area code. Change if the office is elsewhere — local SEO keys off it. |
+| `email` | `info@claimsconsultant.com` | Confirm the mailbox exists; the contact form sends here. |
 | `legal_name` | `Claims Consultant` | The registered entity name for the footer and schema. |
-| `license` | *(empty)* | Optional. While empty, the copy reads "licensed public insurance adjusters · Chapter 4102" with no number. Add e.g. `TDI #1234567` and it appears in the top bar and footer. |
-| `founded` | *(empty)* | Omitted from the schema while blank, so no invented founding date is published. Set the real year when you want it. |
+| `license_ia` | *(empty)* | Texas adjuster licence no. (Tex. Ins. Code ch. 4101). |
+| `license_pa` | *(empty)* | Texas public insurance adjuster licence no. (ch. 4102). |
+| `credential` | *(empty)* | Optional, e.g. `HAAG certified`. |
+| `founded` | *(empty)* | Omitted from the schema while blank, so no invented founding date is published. |
+
+The two licence numbers render automatically in the top bar and the footer via
+`license_line()` once filled, and the site reads correctly while they are
+blank. Holding both an IA and a PA licence is what the copy relies on to
+explain how one firm can be retained by either side — see `/about/` and
+`/faq/`.
 
 Then rebuild:
 
@@ -36,6 +52,12 @@ address. Everything on the site is either verifiable law, published industry
 convention, or a description of method. Add real credentials and results when
 you have them and can substantiate them — do not let anyone fill those gaps
 with invented numbers.
+
+**One thing to confirm with counsel:** the copy describes assessment,
+estimating, quantification, appraisal and expert work, and states that the firm
+acts in one licensed capacity per matter. Where the line falls between
+consulting and licensed adjusting for a given activity is a regulatory
+question, not a copywriting one.
 
 ---
 
@@ -53,9 +75,9 @@ with invented numbers.
 | `.htaccess` | HTTPS + non-www canonical, trailing slashes, compression, cache, security headers |
 | `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.svg`, `apple-touch-icon.png` | Generated |
 
-### Page inventory — 57 pages
+### Page inventory — 58 pages
 
-**Homepage** — `texas commercial public adjuster`
+**Homepage** — `texas claims consultant` / `commercial property loss consultant`
 
 **Who we serve** (`/who-we-serve/`) — 9 property types, one hub:
 churches & faith organizations · school districts & ISDs · cities &
@@ -78,7 +100,7 @@ denied & underpaid, policy review & pre-loss).
 | RCV vs ACV depreciation calculator | Effective age, depreciable base, ACV, recoverable depreciation |
 | Texas claim deadline calculator | Ch. 542 acknowledgement / accept-reject / payment, 542A pre-suit, limitation |
 | Commercial roof replacement estimator | By system, with tear-off, insulation, deck, flashing, curbs, O&P |
-| Public adjuster fee calculator | Net recovery, break-even settlement, fee as a share of the improvement |
+| Overhead, profit & general conditions | O&P, general conditions, occupied-building premium, bond, and the three-trade test |
 
 **Service areas** (`/service-areas/`) — Austin · Houston · Dallas–Fort Worth ·
 San Antonio · Corpus Christi & the Coastal Bend · Rio Grande Valley, plus a hub.
@@ -86,8 +108,8 @@ Each is written from the perils and policy problems specific to that metro.
 
 **Insights** (`/blog/`) — 8 long-form articles (1,300–1,750 words) plus a hub.
 
-**Firm** — `/about/`, `/how-we-work/`, `/fees/`, `/faq/`, `/glossary/`
-(30 terms), `/contact/`.
+**Firm** — `/about/`, `/who-we-work-for/`, `/how-we-work/`, `/fees/`, `/faq/`,
+`/glossary/` (33 terms), `/contact/`.
 
 **Legal** — `/privacy-policy/`, `/terms/`, `/disclaimer/`, `/accessibility/`,
 `/sitemap/`, `/404.html`.
@@ -125,10 +147,16 @@ entry in `content/tools.py`.
 
 ## Notes on the copy
 
-Written to be defensible. The statutory references (Tex. Ins. Code ch. 542,
-542A, 4102), the coinsurance and O&P conventions, the FEMA duplication-of-
-benefits point and the storm references are all real and checkable. Where a
-question is legal rather than adjusting, the copy says so and recommends
-counsel — deliberately, and it should stay that way.
+Written to be defensible, and written neutrally. The statutory references
+(Tex. Ins. Code ch. 542, 542A, 4101, 4102), the coinsurance and O&P
+conventions, the FEMA duplication-of-benefits point and the storm references
+are all real and checkable. Where a question is legal rather than technical,
+the copy says so and recommends counsel — deliberately, and it should stay
+that way.
+
+The copy never assumes the reader is the policyholder. Tables that set out
+competing positions give both, and the claim throughout is that the analysis
+does not change with the client. That is the firm's whole differentiator, so
+edits should preserve it.
 
 US spelling throughout.

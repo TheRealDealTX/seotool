@@ -17,10 +17,10 @@ SERVICES = [
         "card_title": "Commercial property damage claims",
         "card_blurb": ("The whole file, first notice to final release &mdash; scope, valuation, "
                        "documentation and negotiation."),
-        "title": "Commercial Property Damage Claims | Texas Adjusters",
-        "description": "Public adjusters for large commercial property damage claims in Texas. We scope, document, value and negotiate the loss for institutional policyholders.",
+        "title": "Commercial Property Damage | Texas Claims Consultants",
+        "description": "Independent claims consultants for large commercial property damage in Texas. We scope, document and value the loss to an evidentiary standard.",
         "eyebrow": "Service &middot; Full claim representation",
-        "h1": "Commercial property claims,<br>run as a <em>file</em>",
+        "h1": "Commercial losses,<br>established as <em>fact</em>",
         "h1_plain": "Commercial property damage claims",
         "lede": ("Insurers do not underpay large claims with a single dramatic decision. They do it "
                  "with forty small ones, each defensible on its own. The counter is not outrage. "
@@ -133,13 +133,12 @@ SERVICES = [
              "are workable. What is genuinely hard is a claim where repairs are complete, records "
              "are thin and the limitation period is close.</p>"),
             ("How much does it cost?",
-             "<p>A percentage of what is recovered, agreed in writing before we start, within the "
-             "statutory cap of %s set by %s. If nothing is recovered, there is no fee. On very "
-             "large losses the percentage is normally lower, and where a carrier has already made "
-             "an offer before we are engaged, that amount is usually carved out of the fee base "
-             "&mdash; we would rather agree that in the engagement letter than argue it at "
-             "settlement.</p>" % (STATUTE["fee_cap"], STATUTE["fee_cite"])),
-            ("Do we have to use a public adjuster for the whole claim?",
+             "<p>Hourly, or a fixed fee where the deliverable is well defined, agreed in writing "
+         "before we start and quoted against a written estimate of hours. Never a percentage "
+         "of the settlement and never contingent on the outcome &mdash; that constraint is "
+         "what lets the same analysis be handed to the other party, an appraisal panel or a "
+         "court without anyone discounting it for who paid. See <a href=\"/fees/\">fees and engagement terms</a>.</p>"),
+            ("Do we have to engage you for the whole matter?",
              "<p>No. Limited engagements are common on institutional files: the roofs only, the "
              "time-element loss only, the disputed supplement only. The engagement letter defines "
              "the scope and the fee applies to that scope.</p>"),
@@ -158,8 +157,8 @@ SERVICES = [
         "card_title": "Hurricane &amp; windstorm claims",
         "card_blurb": ("Named-storm deductibles, wind-versus-water causation, and coastal wording "
                        "that behaves differently from the rest of the state."),
-        "title": "Hurricane &amp; Windstorm Claims | Texas Public Adjusters",
-        "description": "Public adjusters for Texas hurricane and windstorm claims on commercial property. Named storm deductibles, wind-versus-flood causation and TWIA.",
+        "title": "Hurricane &amp; Windstorm Losses | Texas Claims Consultants",
+        "description": "Independent claims consultants for Texas hurricane and windstorm losses on commercial property. Named storm deductibles, wind-versus-flood causation and TWIA.",
         "eyebrow": "Service &middot; Named storm",
         "h1": "Wind, water, and the<br>line <em>between</em> them",
         "h1_plain": "Hurricane and windstorm damage claims",
@@ -268,8 +267,8 @@ SERVICES = [
         "card_title": "Hail damage claims",
         "card_blurb": ("Commercial roof systems, test cuts, and the wear-and-tear denial that "
                        "answers most Texas hail claims."),
-        "title": "Commercial Hail Damage Claims | Texas Roof Adjusters",
-        "description": "Public adjusters for commercial hail claims in Texas. Test cuts, membrane and insulation damage, HVAC coils, and the wear-and-tear denial.",
+        "title": "Commercial Hail Damage Claims | Texas Roof Consultants",
+        "description": "Independent claims consultants for commercial hail losses in Texas. Test cuts, membrane and insulation damage, HVAC coils, and the wear-and-tear denial.",
         "eyebrow": "Service &middot; Hail",
         "h1": "Hail damage you<br>cannot see from <em>the ground</em>",
         "h1_plain": "Commercial hail damage claims",
@@ -378,8 +377,8 @@ SERVICES = [
         "card_title": "Commercial fire &amp; smoke claims",
         "card_blurb": ("Where the smoke, water and code exposure reach far beyond anything that "
                        "actually burned."),
-        "title": "Commercial Fire Damage Claims | Texas Public Adjusters",
-        "description": "Public adjusters for commercial and institutional fire and smoke claims in Texas. Smoke residue, code upgrades, contents and business interruption.",
+        "title": "Commercial Fire Damage Claims | Texas Consultants",
+        "description": "Independent claims consultants for commercial fire and smoke losses in Texas. Smoke residue, code upgrades, contents and business interruption.",
         "eyebrow": "Service &middot; Fire &amp; smoke",
         "h1": "Most fire damage<br>is not <em>burned</em>",
         "h1_plain": "Commercial fire and smoke damage claims",
@@ -486,8 +485,8 @@ SERVICES = [
         "card_title": "Water damage &amp; freeze claims",
         "card_blurb": ("Pipe bursts, roof leaks and freeze events &mdash; where the exclusion "
                        "wording does most of the work."),
-        "title": "Commercial Water &amp; Freeze Claims | Texas Adjusters",
-        "description": "Public adjusters for commercial water damage and winter freeze claims in Texas. Burst pipes, sprinkler leaks, roof leaks and the exclusions carriers use.",
+        "title": "Commercial Water &amp; Freeze Losses | Texas Consultants",
+        "description": "Independent claims consultants for commercial water and freeze losses in Texas. Burst pipes, sprinkler leaks, roof leaks and the exclusions carriers use.",
         "eyebrow": "Service &middot; Water &amp; freeze",
         "h1": "Water claims are<br>won in the <em>exclusions</em>",
         "h1_plain": "Commercial water damage and freeze claims",
@@ -606,8 +605,8 @@ SERVICES = [
         "card_title": "Business interruption &amp; extra expense",
         "card_blurb": ("The half of the claim that is documented worst and disputed hardest, "
                        "because nobody was recording it while it happened."),
-        "title": "Business Interruption Claims | Texas Public Adjusters",
-        "description": "Public adjusters for Texas business interruption and extra expense claims. Period of restoration, continuing expenses, civil authority and contingent BI.",
+        "title": "Business Interruption Claims | Texas Consultants",
+        "description": "Independent claims consultants for Texas business interruption and extra expense. Period of restoration, continuing expenses, civil authority and contingent BI.",
         "eyebrow": "Service &middot; Time element",
         "h1": "The loss that keeps<br>running after the <em>water stops</em>",
         "h1_plain": "Business interruption and extra expense claims",
@@ -811,7 +810,7 @@ SERVICES = [
              "<p>Someone who knows the property type, can defend an estimate under pressure, and "
              "is genuinely willing to move toward the evidence &mdash; a panel that suspects your "
              "appraiser is simply an advocate loses you the umpire. We serve as appraiser on "
-             "commercial and institutional files, and where we are already the public adjuster on "
+             "commercial and institutional files, and where we are already the consultant on "
              "the claim we will tell you plainly whether that dual role is appropriate for your "
              "file or whether you are better served by someone independent.</p>"),
             ("What if the umpire gets it wrong?",
@@ -830,7 +829,7 @@ SERVICES = [
         "card_title": "Denied &amp; underpaid claim review",
         "card_blurb": ("A second opinion on a closed or short-paid file &mdash; what the letter "
                        "actually says, and whether it holds."),
-        "title": "Denied &amp; Underpaid Claims | Texas Public Adjusters",
+        "title": "Denied &amp; Underpaid Claims | Independent Review",
         "description": "Second opinion and reopening of denied or underpaid commercial insurance claims in Texas. Supplemental claims, reconsideration and appraisal.",
         "eyebrow": "Service &middot; Denials &amp; supplements",
         "h1": "A denial letter is<br>a <em>position</em>, not a verdict",
@@ -1007,7 +1006,7 @@ SERVICES = [
              "<p>It is a flat fee, quoted against the size and complexity of the schedule, and paid "
              "whether or not there is ever a claim &mdash; which is the opposite of how we are paid "
              "on claim work and is deliberate. You are buying independent analysis, not a "
-             "contingent interest.</p>"),
+             "interest in the conclusion.</p>"),
             ("Will this annoy our broker?",
              "<p>Good brokers welcome it, and several of the reviews we do arrive by broker "
              "referral. A written, independent assessment gives them something concrete to take to "
