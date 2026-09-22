@@ -1,3 +1,14 @@
+# seotool
+
+Static-site builds in this repository:
+
+| Folder | Site |
+| --- | --- |
+| repository root | [huttoroofs.com](huttoroofs.com) — see below |
+| [`claimsconsultant.com/`](claimsconsultant.com/) | claimsconsultant.com — 57-page SEO authority site for a Texas commercial public adjusting firm. Its own `build.py`, `validate.py` and README. |
+
+---
+
 # huttoroofs.com — static rebuild
 
 A static HTML rebuild of [huttoroofs.com](https://huttoroofs.com), replacing the

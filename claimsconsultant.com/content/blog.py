@@ -1,0 +1,1018 @@
+"""Eight long-form articles.
+
+House rule for this section: every piece has to teach a reader something they
+could act on without hiring us. If it reads like a brochure with subheadings,
+it does not go up.
+"""
+
+from siteconfig import BIZ, STATUTE
+
+P = BIZ["phone_display"]
+
+POSTS = [
+
+    # =====================================================================
+    {
+        "slug": "first-72-hours-after-a-commercial-property-loss",
+        "category": "Field guide",
+        "published": "2026-08-18",
+        "modified": "2026-09-02",
+        "read": "11",
+        "words": 1750,
+        "title": "The First 72 Hours After a Commercial Property Loss | Field Guide",
+        "description": ("What to photograph, what to keep, what to sign and what not to sign in "
+                        "the first three days after a major commercial or institutional property "
+                        "loss in Texas."),
+        "h1": "The first 72 hours<br>after a <em>major loss</em>",
+        "h1_plain": "The first 72 hours after a commercial property loss",
+        "blurb": ("Evidence has a shelf life. Almost everything that decides a large claim is "
+                  "either captured or destroyed in the first three days."),
+        "lede": ("Nobody is thinking clearly on the morning after a fire or a storm, which is "
+                 "exactly why the decisions made then carry so much weight later. This is the "
+                 "list we would want a facilities director to have taped inside a cupboard door."),
+        "body": [
+            ("p", "There is a particular kind of loss that ends badly for reasons that have "
+                  "nothing to do with the damage. The building is repaired, the settlement is "
+                  "reasonable on its face, and eighteen months later the organization discovers "
+                  "it absorbed several hundred thousand dollars it did not have to. Trace it "
+                  "back and the cause is almost never a dramatic error. It is that nobody "
+                  "photographed the ceiling before the volunteers pulled it down, or that the "
+                  "emergency restoration contract signed at eleven at night contained an "
+                  "assignment of benefits."),
+            ("p", "What follows is not legal advice and it is not a substitute for reading your "
+                  "policy. It is what we wish every institutional client had done before we "
+                  "arrived."),
+
+            ("h2", "Hour zero to six: safety, then evidence"),
+            ("p", "Life safety comes first and nothing here changes that. Once the building is "
+                  "secure and people are accounted for, the priority shifts immediately to "
+                  "capture, because the property is about to start changing."),
+            ("p", "Photograph everything before anything moves. Wide shots that establish the "
+                  "space, then medium shots that show the relationship between the damage and "
+                  "the building, then close-ups. Include a reference for scale. Photograph the "
+                  "undamaged areas too &mdash; six months from now, proving what a room looked "
+                  "like before demolition will matter more than you expect. Video walkthroughs "
+                  "with narration are unglamorous and extraordinarily useful."),
+            ("callout", "The single most valuable photograph", [
+                ("p", "On a water loss, it is the failed component before the plumber cuts it "
+                      "out. On a fire, it is the contents inventory before anything is cleared. "
+                      "On a storm, it is the high-water mark before the walls are washed. Each "
+                      "takes thirty seconds and each has settled arguments worth six figures."),
+            ]),
+            ("p", "Then start a log. A notebook, a shared document, anything with dates. Who "
+                  "attended, what was decided, which vendor arrived and when, what the carrier "
+                  "said on the phone. A contemporaneous log is worth more in a dispute than any "
+                  "reconstruction made later, and no one ever regrets having kept one."),
+
+            ("h2", "Hour six to twenty-four: mitigate, but do not destroy"),
+            ("p", "Every commercial property policy imposes a duty to protect the property from "
+                  "further damage. That duty is real and failing it gives the carrier a defense "
+                  "on everything that happened afterwards. Board up, tarp, extract water, get "
+                  "power to the building, start drying. Do not wait for an adjuster to authorise "
+                  "emergency mitigation; that is not how the obligation works."),
+            ("p", "What you should avoid is destroying evidence while discharging that duty. "
+                  "There is a difference between drying a building and gutting it. Before "
+                  "materials are removed, photograph them in place. Where anything must be "
+                  "disposed of, keep a representative sample and photograph the rest in the "
+                  "dumpster. Retain failed components &mdash; pipes, fittings, valves, electrical "
+                  "equipment &mdash; labelled and boxed. If subrogation or a product defect ever "
+                  "becomes relevant, that box is the case."),
+            ("checks", [
+                "Photograph before, during and after every mitigation activity.",
+                "Keep failed components; label them with location and date.",
+                "Retain a sample of any material you must dispose of.",
+                "Log moisture readings daily, by location, with the equipment used.",
+                "Keep every emergency invoice separate from the eventual repair contract.",
+            ]),
+
+            ("h2", "Read before you sign: three documents that arrive early"),
+            ("p", "Restoration companies monitor scanner traffic and arrive fast, which is "
+                  "genuinely useful. What they bring with them deserves a careful reading even "
+                  "at two in the morning."),
+            ("table", "What gets put in front of you in the first day",
+             ["Document", "What it does", "What to watch"], [
+                ["Work authorisation", "Permits emergency mitigation to begin.",
+                 "Scope and rate schedule; open-ended time and materials with no cap."],
+                ["Assignment of benefits", "Transfers your rights under the policy to the contractor.",
+                 "You lose control of that portion of the claim. Rarely necessary. Think hard."],
+                ["Direction to pay", "Instructs the insurer to pay the contractor directly.",
+                 "Less severe than an AOB, still a commitment. Confirm it applies to their invoice only."],
+             ]),
+            ("p", "None of these are inherently improper and all of them are easier to sign than "
+                  "to undo. If a vendor will not let you take an hour to read a contract during "
+                  "an emergency, that is information about the vendor."),
+
+            ("h2", "Day two: give notice, properly"),
+            ("p", "Notice starts the statutory clock. Under subchapter B of chapter 542 of the "
+                  "Texas Insurance Code, an insurer receiving written notice of a claim must "
+                  "generally acknowledge it, begin investigating and request what it reasonably "
+                  "needs within 15 days. Everything downstream &mdash; the accept-or-reject "
+                  "deadline, the payment deadline, the statutory interest exposure &mdash; runs "
+                  "from that sequence."),
+            ("p", "So give notice in writing, keep proof of when you sent it, and describe the "
+                  "loss accurately but without speculating about cause. &ldquo;Water damage "
+                  "throughout the north wing following the storm of 14 March&rdquo; is a "
+                  "description. &ldquo;The roof failed because it was old&rdquo; is a gift."),
+            ("callout", "If you are covered by a risk pool", [
+                ("p", "Many Texas districts, cities and other public entities cover property "
+                      "through an interlocal risk pool rather than an insurer. The statutory "
+                      "deadlines in chapter 542 may not apply in the same way. Your coverage "
+                      "document governs the notice requirements and the appeal route &mdash; "
+                      "read it rather than assuming the insurance code applies."),
+            ]),
+
+            ("h2", "Day two to three: set the file up so it can be proved"),
+            ("p", "This is the part organizations skip, and it is the part that determines "
+                  "whether the time-element claim is provable nine months from now. Open a "
+                  "separate general ledger account for loss-related costs on day two. Every "
+                  "invoice, every overtime hour, every rented piece of equipment, every hotel "
+                  "night for displaced staff or residents gets coded there. It takes your "
+                  "finance team twenty minutes to set up and saves an argument that would "
+                  "otherwise run for months."),
+            ("p", "At the same time, export anything that expires. Building management system "
+                  "logs frequently retain only thirty to ninety days of data. Access control "
+                  "and CCTV overwrite. Utility outage records are easiest to obtain close to the "
+                  "event. If any of those matter to your claim &mdash; and on a freeze claim the "
+                  "BMS logs are frequently the whole case &mdash; pull them this week."),
+            ("checks", [
+                "Separate GL account or cost code opened for loss-related spend.",
+                "BMS, thermostat, access control and CCTV data exported and stored off-system.",
+                "Utility outage confirmation requested for the property address and period.",
+                "Declarations page, full policy and schedule of values located and circulated internally.",
+                "One person designated as the single point of contact for the carrier.",
+            ]),
+
+            ("h2", "What not to do"),
+            ("p", "Do not give a recorded statement without preparing for it. You are entitled "
+                  "to understand what will be asked, to have someone present, and to correct "
+                  "yourself. Do not speculate about cause, age or prior condition &mdash; "
+                  "&ldquo;I think that roof was about twenty-five years old&rdquo; said casually "
+                  "on a recording will be quoted back to you for the next two years."),
+            ("p", "Do not accept a scope you have not read because the check attached to it "
+                  "would be useful this month. And do not sign a release. A payment is not a "
+                  "release, and most policies contemplate supplemental claims when the actual "
+                  "cost of repair exceeds the estimate. Signing a full and final release closes "
+                  "that door permanently."),
+            ("quote", "Nearly every claim we are asked to rescue was survivable in week one and "
+                      "difficult by month six. The damage did not change. The evidence did.",
+             "From the claims desk"),
+
+            ("h2", "When to call someone"),
+            ("p", "You do not need a public adjuster on every loss, and any firm that tells you "
+                  "otherwise is selling. Below the deductible, or where the carrier&rsquo;s "
+                  "estimate is clearly thorough and the number is right, representation costs "
+                  "you money for nothing."),
+            ("p", "Where it earns its keep is on losses large enough that a scope dispute is "
+                  "worth six figures, on buildings complex enough that a template estimate will "
+                  "miss things, on any claim with a meaningful time-element component, and on "
+                  "any file where the carrier has retained an engineer. On institutional "
+                  "property, that is most significant losses."),
+            ("p", "If you are inside the first 72 hours right now, the useful call is not about "
+                  "engagement. It is about what to photograph before the crews arrive. That "
+                  "conversation is free and it takes ten minutes."),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "texas-prompt-payment-of-claims-act-deadlines",
+        "category": "Texas statute",
+        "published": "2026-07-09",
+        "modified": "2026-08-30",
+        "read": "10",
+        "words": 1600,
+        "title": "Texas Prompt Payment of Claims Act: The Deadlines | Chapter 542",
+        "description": ("The deadlines chapter 542 of the Texas Insurance Code imposes on "
+                        "insurers, what chapter 542A changed for weather claims, and how to use "
+                        "the clock on a commercial file."),
+        "h1": "The deadlines your<br>insurer is <em>bound</em> by",
+        "h1_plain": "The Texas Prompt Payment of Claims Act",
+        "blurb": ("Chapter 542 puts hard dates on the carrier. Most commercial policyholders "
+                  "never learn they exist, which is why nobody enforces them."),
+        "lede": ("Texas law does not merely encourage insurers to move quickly. It sets specific "
+                 "deadlines, and attaches a financial consequence to missing them. Used "
+                 "deliberately, that timetable is the most useful pressure available to a "
+                 "policyholder who is being slow-walked."),
+        "body": [
+            ("p", "Ask a facilities director what leverage they have against a carrier that has "
+                  "gone quiet and the honest answer is usually none. They chase, they escalate, "
+                  "they ask for a supervisor, and the file continues to sit. What they generally "
+                  "do not do is cite the statute, because they do not know it applies to them."),
+            ("p", "It does, and it is short enough to read in an afternoon."),
+
+            ("h2", "The basic sequence"),
+            ("p", "Subchapter B of chapter 542 of the Texas Insurance Code &mdash; usually called "
+                  "the Prompt Payment of Claims Act &mdash; sets out a chain of obligations that "
+                  "begins when the insurer receives written notice of a claim."),
+            ("table", "The statutory timetable", ["Stage", "Deadline", "Notes"], [
+                ["Acknowledge the claim, commence investigation and request the items the insurer reasonably requires",
+                 "~15 days", "From receipt of written notice of the claim"],
+                ["Notify the claimant in writing whether the claim is accepted or rejected",
+                 "~15 business days", "From receipt of all items requested. Extendable in defined circumstances"],
+                ["Pay the claim",
+                 "~5 business days", "From the notice that the claim is accepted"],
+             ]),
+            ("p", "The consequence of missing them is what makes the timetable matter. An "
+                  "insurer that is liable for a claim and fails to comply becomes exposed to "
+                  "statutory interest on the amount of the claim plus reasonable "
+                  "attorney&rsquo;s fees. The rate, and how it is computed, depends on when the "
+                  "claim arose and whether it falls under chapter 542A."),
+            ("callout", "This is a summary, not the statute", [
+                ("p", "The provisions contain qualifications, exceptions and extension mechanisms "
+                      "that matter in a real dispute, and their application is a legal question. "
+                      "Read this as orientation and take the specifics to counsel. We are "
+                      "adjusters, not lawyers, and the distinction is one we take seriously."),
+            ]),
+
+            ("h2", "What chapter 542A changed"),
+            ("p", "In 2017 the legislature added chapter 542A, which applies to claims arising "
+                  "from forces of nature &mdash; wind, hail, rain, and similar perils. It is the "
+                  "chapter that governs a large share of Texas commercial property litigation, "
+                  "and it changed the landscape in two ways that matter to a policyholder."),
+            ("p", "First, it introduced a pre-suit notice requirement. A claimant must generally "
+                  "give the insurer written notice at least 61 days before filing suit, setting "
+                  "out the acts complained of, the amount alleged to be owed and the "
+                  "attorney&rsquo;s fees incurred to that point. The insurer may then request an "
+                  "inspection. Failing to give proper notice can affect the recovery of "
+                  "attorney&rsquo;s fees and, in some circumstances, lead to abatement."),
+            ("p", "Second, it changed how interest is calculated on covered claims within its "
+                  "scope, and it created a mechanism by which an insurer that accepts "
+                  "responsibility for an agent&rsquo;s conduct can have the agent dismissed from "
+                  "the suit."),
+            ("p", "The practical effect for a commercial policyholder is a compressed runway. If "
+                  "your policy carries a two-year suit limitation and you need 61 days of notice "
+                  "before filing, the date by which counsel must actually be engaged and ready "
+                  "is meaningfully earlier than the limitation date itself."),
+            ("html", '<a class="tlink" href="/tools/texas-claim-deadline-calculator/">'
+                     'Date your own claim against these deadlines <span class="arw">&rarr;</span></a>'),
+
+            ("h2", "How to actually use the clock"),
+            ("p", "The statute rewards precision, and precision is a matter of habit rather than "
+                  "expertise. Four practices do most of the work."),
+            ("h3", "Give notice in writing and keep proof"),
+            ("p", "Email with a read receipt, or a letter with delivery confirmation. A phone "
+                  "call to a claims line is not a record. The date of written notice is the peg "
+                  "everything else hangs from."),
+            ("h3", "Log every request and every response"),
+            ("p", "The accept-or-reject deadline runs from when the insurer has received all the "
+                  "items it reasonably requested. That makes the request log the central "
+                  "document. Every time the carrier asks for something, record what was asked "
+                  "and when; every time you send it, record what you sent and when. A file that "
+                  "shows the carrier had everything it needed on 3 April is a file where the "
+                  "clock is running."),
+            ("h3", "Respond completely and quickly"),
+            ("p", "Partial responses restart arguments. Where a request is genuinely "
+                  "unreasonable or duplicative, say so in writing and explain why, rather than "
+                  "ignoring it. Escalating document demands are a recognized delay technique, "
+                  "and the answer is a paper trail that makes the pattern visible."),
+            ("h3", "Put the deadline in the letter"),
+            ("p", "There is a striking difference in response rate between correspondence that "
+                  "asks for an update and correspondence that notes the date on which the "
+                  "insurer received the last requested item and the deadline that follows from "
+                  "it. Adjusters have supervisors, and supervisors have reports."),
+
+            ("h2", "Where the statute does not reach"),
+            ("p", "Two important exceptions for institutional policyholders."),
+            ("p", "If your property coverage is through an interlocal risk pool &mdash; the "
+                  "common arrangement for Texas school districts, cities and other public "
+                  "entities &mdash; the pool is not an insurer in the ordinary sense, and the "
+                  "prompt-payment machinery may not apply to it as it would to a carrier. Your "
+                  "leverage is the coverage document&rsquo;s own procedures and appeal route, "
+                  "plus the fact that pool members are also pool owners."),
+            ("p", "And if the coverage is through a surplus lines carrier, or is written outside "
+                  "the ordinary admitted market, the analysis can differ again. Establishing "
+                  "which set of rules applies is the first thing we do on any file, because "
+                  "running the wrong playbook wastes months."),
+            ("quote", "The deadlines are not a magic wand. They are a reason for a claims "
+                      "supervisor to look at a file that has been sitting in someone&rsquo;s "
+                      "queue for eleven weeks.",
+             "From the claims desk"),
+
+            ("h2", "A short checklist"),
+            ("checks", [
+                "Written notice given, with proof of the date it was received.",
+                "A dated log of every item the carrier requested and every item you supplied.",
+                "A calendar entry for the acknowledgement, accept-or-reject and payment deadlines.",
+                "The policy&rsquo;s suit limitation provision read and the date diarised.",
+                "If the loss is weather-related, the 61-day pre-suit notice requirement factored into that date.",
+                "Correspondence that cites dates rather than asking for updates.",
+            ]),
+            ("p", "None of this requires a lawyer or an adjuster. It requires somebody to keep a "
+                  "list. If the claim later needs either profession, that list is the most "
+                  "valuable thing you will hand them."),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "commercial-property-coinsurance-explained",
+        "category": "Policy wording",
+        "published": "2026-06-11",
+        "modified": "2026-08-14",
+        "read": "9",
+        "words": 1450,
+        "title": "Coinsurance on Commercial Property: The Clause That Cuts Claims",
+        "description": ("How the coinsurance clause works on a commercial property policy, why "
+                        "Texas institutions keep failing it, and the three ways to fix the "
+                        "exposure before a loss."),
+        "h1": "Coinsurance: the<br>clause nobody <em>reads</em>",
+        "h1_plain": "Commercial property coinsurance explained",
+        "blurb": ("It reduces every covered loss by the ratio of what you bought to what you "
+                  "should have bought &mdash; and it hurts most on partial claims."),
+        "lede": ("A church discovers it after a hailstorm. A district discovers it after a fire. "
+                 "The damage is covered, the limit is nowhere near exhausted, and the payment is "
+                 "still cut by a third. This is how that happens."),
+        "body": [
+            ("p", "Coinsurance is the most consequential clause in commercial property insurance "
+                  "that almost no policyholder can describe. It sits on the declarations page as "
+                  "a percentage next to each building&rsquo;s limit &mdash; 80%, 90%, sometimes "
+                  "100% &mdash; and it does nothing at all until there is a claim."),
+
+            ("h2", "What it actually does"),
+            ("p", "The clause requires you to carry insurance of at least the stated percentage "
+                  "of the property&rsquo;s value. If you do, losses are paid normally. If you do "
+                  "not, every covered loss is reduced by the ratio of what you carried to what "
+                  "you should have carried."),
+            ("p", "The arithmetic is unforgiving and simple:"),
+            ("table", "The coinsurance formula", ["Step", "Calculation"], [
+                ["Required insurance", "Property value at the date of loss &times; coinsurance percentage"],
+                ["Recovery ratio", "Limit carried &divide; required insurance"],
+                ["Loss payable", "Amount of loss &times; recovery ratio, less the deductible"],
+             ]),
+            ("p", "Work an example. A sanctuary would cost $24 million to rebuild today. The "
+                  "policy carries a $16 million limit with a 90% coinsurance clause. Required "
+                  "insurance is $21.6 million; the ratio is 74%. A $3.2 million hail and water "
+                  "loss &mdash; well within the limit, entirely covered &mdash; pays $2.37 "
+                  "million before the deductible. The other $830,000 is uninsured, not because "
+                  "of anything to do with the damage, but because of a number on a schedule."),
+            ("html", '<a class="tlink" href="/tools/coinsurance-penalty-calculator/">'
+                     'Run your own figures <span class="arw">&rarr;</span></a>'),
+            ("callout", "The critical detail", [
+                ("p", "The test is applied at the date of loss, using the property&rsquo;s value "
+                      "then. Not the value when the policy was bound, not the value in the "
+                      "appraisal from the last refinance. Construction costs move; the required "
+                      "amount moves with them, and the limit does not."),
+            ]),
+
+            ("h2", "Why Texas institutions fail it so consistently"),
+            ("p", "Three reasons, and none of them involve negligence."),
+            ("h3", "Statements of value go stale"),
+            ("p", "Most institutional schedules were assembled once, for a specific reason "
+                  "&mdash; a bond issue, a refinance, a merger &mdash; and have been rolled "
+                  "forward with a small annual inflation factor ever since. That factor has not "
+                  "matched what actually happened to commercial construction costs in Texas "
+                  "since 2020."),
+            ("h3", "Buildings change and schedules do not"),
+            ("p", "A congregation adds a family life center. A district encloses a breezeway and "
+                  "buys the adjacent property. A city converts a warehouse into a maintenance "
+                  "facility. Each of those changes the replacement value; none of them "
+                  "automatically reaches the statement of values."),
+            ("h3", "Nobody owns the number"),
+            ("p", "The broker reports what the client supplies. The client assumes the broker "
+                  "checks. The board approves a renewal summary that shows premium, not "
+                  "adequacy. The value sits unexamined until a claim tests it, at which point "
+                  "the carrier examines it very carefully indeed."),
+
+            ("h2", "Three ways out, in order"),
+            ("steps", [
+                ("Agreed value",
+                 "<p>An agreed value endorsement suspends the coinsurance clause for the policy "
+                 "term in exchange for a signed statement of values the insurer accepts. It is "
+                 "the cleanest solution available, it is frequently less expensive than people "
+                 "expect, and a surprising number of institutions already have it and do not "
+                 "know. Look at your declarations page before you do anything else.</p>"),
+                ("Revalue and raise the limits",
+                 "<p>A professional valuation, or at minimum a current cost-per-square-foot "
+                 "review by construction class and occupancy. Then adjust the limits at renewal. "
+                 "It costs premium, and it costs far less than a penalty applied to every claim "
+                 "for the next five years.</p>"),
+                ("Contest the value at claim time",
+                 "<p>The fallback, and a legitimate one. The required amount depends on the "
+                 "property&rsquo;s actual value at the date of loss, which is a question of "
+                 "evidence rather than the carrier&rsquo;s assertion. Where a penalty is being "
+                 "applied on a valuation that overstates what the building would really cost to "
+                 "reproduce, that valuation is contestable &mdash; and on older or unusual "
+                 "buildings it is frequently wrong.</p>"),
+            ]),
+
+            ("h2", "Two adjacent traps"),
+            ("p", "Blanket coverage feels like the answer, and mostly it is: a blanket limit "
+                  "responds anywhere on the schedule rather than trapping recovery at one "
+                  "building&rsquo;s value. But blanket cover is usually conditioned on the "
+                  "accuracy of the reported values, and a <strong>margin clause</strong> or "
+                  "occurrence limit of liability endorsement can cap recovery at a fixed "
+                  "percentage &mdash; commonly 110% or 115% &mdash; of the value reported for "
+                  "the affected location. Understate the value and the blanket limit above it "
+                  "becomes decorative."),
+            ("p", "The second trap is <strong>functional replacement cost</strong>, which "
+                  "appears frequently on older churches and civic buildings. It permits the "
+                  "carrier to rebuild with modern equivalent materials rather than matching what "
+                  "was there. It is not automatically wrong &mdash; for some buildings it is "
+                  "sensible and cheaper &mdash; but it should be a decision the organization "
+                  "made knowingly."),
+            ("quote", "The cheapest hour in commercial insurance is the one spent reading the "
+                      "declarations page while it can still be changed.",
+             "From the claims desk"),
+
+            ("h2", "What to do this week"),
+            ("checks", [
+                "Find the declarations page. Look at the figure next to each building&rsquo;s limit. If it says 80, 90 or 100, the clause is live.",
+                "If it says agreed value, confirm the signed statement of values is current &mdash; that is the condition of the suspension.",
+                "Get a current replacement cost per square foot for your construction class and occupancy, and multiply it out.",
+                "Compare that figure against the limit, and apply the percentage. Now you know your ratio.",
+                "If there is a shortfall, raise it with your broker at least 90 days before renewal, when something can still be done about it.",
+            ]),
+            ("p", "This is the rare insurance problem with a genuinely simple fix, available only "
+                  "in advance. After a loss, all that remains is the argument."),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "documenting-a-commercial-hail-roof-claim",
+        "category": "Field guide",
+        "published": "2026-05-20",
+        "modified": "2026-07-28",
+        "read": "10",
+        "words": 1550,
+        "title": "Documenting a Commercial Hail Roof Claim in Texas",
+        "description": ("Test cuts, soft-metal corroboration, storm data and maintenance records "
+                        "&mdash; how to build a commercial hail roof claim that withstands a "
+                        "carrier&rsquo;s engineering report."),
+        "h1": "Hail damage the<br>engineer <em>cannot</em> dismiss",
+        "h1_plain": "Documenting a commercial hail roof claim",
+        "blurb": ("The carrier's engineer will write that the damage is wear. Here is the "
+                  "evidence that makes that report untenable."),
+        "lede": ("On a commercial roof, the difference between a paid claim and a denied one is "
+                 "rarely the damage. It is whether anybody produced evidence in the first month "
+                 "that a consulting engineer, retained in month four, cannot simply write around."),
+        "body": [
+            ("p", "Here is the sequence, and it is remarkably consistent. Storm in April. Claim "
+                  "reported in May. Carrier&rsquo;s adjuster inspects in June, notes some "
+                  "damage, and refers the matter to an engineering consultant. Report lands in "
+                  "August concluding that the observed condition is consistent with normal "
+                  "weathering and long-term deterioration rather than a discrete hail event. "
+                  "Denial follows in September."),
+            ("p", "That report is not fraudulent. It is a professional opinion assembled largely "
+                  "from a visual inspection, four months after the event, on a roof that has "
+                  "since had a Texas summer. Beating it requires evidence collected before it "
+                  "was written."),
+
+            ("h2", "What hail actually does to a commercial roof"),
+            ("p", "Residential hail claims are argued over shingles, where impact is visible as "
+                  "a bruise or a fracture on the surface. Commercial low-slope roofing fails "
+                  "differently, and the difference is the whole argument."),
+            ("p", "On a modified bitumen or single-ply membrane over rigid insulation, a "
+                  "significant hailstone transmits energy through the membrane into the "
+                  "insulation board beneath it. The board fractures. The membrane, being "
+                  "flexible, may show only a faint bruise, displaced granules, or nothing "
+                  "discernible from above. The roof does not leak. It has, however, lost a "
+                  "material part of its remaining service life, and it will begin leaking in "
+                  "eighteen months to three years as the bruised membrane weathers through."),
+            ("p", "By which time the carrier has an easy and superficially reasonable position: "
+                  "this roof is old, it is leaking, that is what old roofs do."),
+            ("callout", "Which is why test cuts matter", [
+                ("p", "A test cut is a small square removed through the full assembly, "
+                      "photographed in place, then patched. It shows fractured insulation, "
+                      "displaced granules and membrane damage directly, on the date it is taken. "
+                      "It is the only direct evidence of what happened under the membrane, and "
+                      "it is the piece of evidence carriers most often decline to propose."),
+            ]),
+
+            ("h2", "The five-part evidence package"),
+            ("h3", "1. Test cuts, properly executed"),
+            ("p", "Two to four per roof section, located to represent the full range of "
+                  "condition rather than only the worst spots &mdash; a package that only "
+                  "samples the damage invites the argument that the sample was selective. "
+                  "Photograph the location on the roof plan, the cut in place, the removed "
+                  "sample with a scale, and the patch. Have them taken by a qualified roofing "
+                  "consultant, ideally with the carrier&rsquo;s representative present and "
+                  "invited in writing."),
+            ("h3", "2. Soft-metal corroboration"),
+            ("p", "Hail large enough to damage a membrane leaves marks on softer surfaces all "
+                  "over the property. Spatter on oxidised metal flashing, dents in gutters, "
+                  "downspouts, gravel stops and coping, damage to vents, curbs and rooftop "
+                  "mechanical cabinets, and impact on air-conditioning condenser fins. These "
+                  "establish that stones of a given size landed here, on this date, from this "
+                  "direction. They are also frequently a separate claim item in their own right."),
+            ("h3", "3. Storm data for your coordinates"),
+            ("p", "Not the regional summary and not the nearest official reporting station, "
+                  "which may be fifteen miles away. Address-specific hail and wind data is "
+                  "commercially available and inexpensive, and it either supports the reported "
+                  "date of loss or tells you early that it does not &mdash; which is itself "
+                  "worth knowing before you build a file."),
+            ("h3", "4. Maintenance and condition history"),
+            ("p", "The wear-and-tear defense depends on the roof having been in poor condition "
+                  "already. Service records, prior inspection and infrared survey reports, "
+                  "warranty documentation and repair invoices all rebut it. A roof under an "
+                  "active manufacturer&rsquo;s warranty, inspected annually, is a very different "
+                  "proposition from one nobody has walked in six years."),
+            ("h3", "5. Dated imagery"),
+            ("p", "Aerial and satellite imagery is available by date for most of urban Texas. "
+                  "Before-and-after comparison around the date of loss is powerful, and it also "
+                  "answers the intervening-storm argument in metros like Dallas&ndash;Fort Worth "
+                  "where multiple hail events complicate attribution."),
+
+            ("h2", "Reading their engineer&rsquo;s report"),
+            ("p", "When the report arrives, read it for what it does not say. These documents "
+                  "are usually more limited than their conclusions suggest, and the limitations "
+                  "are stated in the methodology section that nobody reads."),
+            ("table", "What to look for in a carrier&rsquo;s engineering report",
+             ["Look for", "Why it matters"], [
+                ["Scope of inspection", "Visual only? How many roof sections? Were test cuts taken, and if not, why not?"],
+                ["Date of inspection", "How long after the loss? What weather intervened?"],
+                ["Data sources", "Which weather station, and how far away? Was address-specific data used?"],
+                ["Concessions", "Reports frequently acknowledge some storm-related damage while concluding it is not the primary cause. That concession is a starting point."],
+                ["Assumptions about age and condition", "Often stated without documentary support. Your maintenance records are the answer."],
+             ]),
+            ("p", "Then get your own. Disagreement without a comparable expert report is just "
+                  "disagreement, and a panel or a court will treat it that way."),
+
+            ("h2", "Two arguments worth preparing for"),
+            ("p", "<strong>Cosmetic damage exclusions.</strong> Some Texas commercial policies "
+                  "exclude damage to roof surfacing that is merely cosmetic and does not affect "
+                  "function. Where one applies, the entire claim becomes an argument about "
+                  "function and remaining service life &mdash; which requires a manufacturer or "
+                  "engineering opinion, not a contractor&rsquo;s letter."),
+            ("p", "<strong>Repair versus replacement.</strong> The carrier will price patching. "
+                  "The test is whether repair genuinely restores the roof to its pre-loss "
+                  "condition and service life. Widespread insulation fracture beneath an intact "
+                  "membrane usually cannot be patched back to a warrantable system, and the "
+                  "manufacturer will often say so in writing. That letter frequently ends the "
+                  "argument."),
+            ("quote", "A test cut costs a few hundred dollars and patches in ten minutes. We have "
+                      "watched that decision swing seven-figure claims.",
+             "From the claims desk"),
+
+            ("h2", "The short version"),
+            ("checks", [
+                "Get on the roof early, with a qualified consultant, and take test cuts.",
+                "Photograph soft-metal corroboration everywhere on the property, not just the roof.",
+                "Buy address-specific storm data for the date of loss before you build the claim.",
+                "Assemble maintenance, inspection and warranty records &mdash; they are the answer to wear and tear.",
+                "Invite the carrier&rsquo;s representative to the inspection in writing, and record that you did.",
+                "Read their engineering report for its limitations before you respond to its conclusions.",
+            ]),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "ordinance-and-law-coverage-explained",
+        "category": "Policy wording",
+        "published": "2026-04-14",
+        "modified": "2026-07-02",
+        "read": "9",
+        "words": 1400,
+        "title": "Ordinance and Law Coverage: Rebuilding to Code",
+        "description": ("How ordinance or law coverage works in three parts, why the limits are "
+                        "usually far too small on older Texas churches, schools and civic "
+                        "buildings, and what to do about it."),
+        "h1": "Rebuilding to<br><em>today&rsquo;s</em> code",
+        "h1_plain": "Ordinance and law coverage explained",
+        "blurb": ("A fire in a 1962 building triggers 2026 code. The gap between the two is "
+                  "covered only to the extent somebody bought a limit for it."),
+        "lede": ("This is the clause that decides large losses on older institutional buildings, "
+                 "and the one where the default limit is most often set by nobody in particular, "
+                 "years ago, without reference to what the building would actually require."),
+        "body": [
+            ("p", "A standard property policy pays to repair or replace what was damaged, with "
+                  "materials of like kind and quality. It is a restoration promise: put the "
+                  "building back the way it was."),
+            ("p", "Building codes do not permit that. Once a repair exceeds whatever threshold "
+                  "the local jurisdiction treats as substantial, the work &mdash; and sometimes "
+                  "the entire structure &mdash; must be brought up to current requirements. "
+                  "Sprinklers where there were none. Current egress widths and travel distances. "
+                  "Accessibility. Energy code. Structural and wind provisions written decades "
+                  "after the building went up."),
+            ("p", "None of that is restoring the building to its prior condition, so none of it "
+                  "is covered by the basic insuring agreement. Which is what ordinance or law "
+                  "coverage exists to address."),
+
+            ("h2", "The three parts"),
+            ("p", "Ordinance or law coverage is conventionally written in three coverages, each "
+                  "with its own limit. Understanding which is which is the difference between "
+                  "thinking you are covered and being covered."),
+            ("table", "The three coverages", ["Coverage", "What it pays for", "Common failure"], [
+                ["A &mdash; Undamaged portion",
+                 "The value of the undamaged part of the building that a law or ordinance requires you to demolish.",
+                 "Frequently included within the building limit rather than in addition to it"],
+                ["B &mdash; Demolition cost",
+                 "The cost of demolishing that undamaged portion and removing the debris.",
+                 "Limit set as a small percentage; badly undersized on large or contaminated structures"],
+                ["C &mdash; Increased cost of construction",
+                 "The additional cost of rebuilding to current code rather than to the prior specification.",
+                 "The big one, and usually the most inadequate. Often 10% of the building limit"],
+             ]),
+            ("p", "On a $12 million school building, a 10% Coverage C limit is $1.2 million. Ask "
+                  "your building official what a substantial renovation of a 1968 campus would "
+                  "trigger &mdash; full fire suppression, current egress, accessibility "
+                  "throughout, energy code envelope and mechanical upgrades &mdash; and you will "
+                  "quickly establish whether $1.2 million is a serious number."),
+
+            ("h2", "The enforcement question"),
+            ("p", "Coverage generally responds to what the law actually requires and the "
+                  "jurisdiction actually enforces, not to what would be nice to do while the "
+                  "building is open. That distinction produces most of the disputes."),
+            ("p", "Which makes one document unusually valuable: a written statement from the "
+                  "building official setting out what the jurisdiction will require for this "
+                  "repair, at this scale, on this building. It converts an argument about code "
+                  "interpretation into a documented requirement. Ask for it early &mdash; it "
+                  "routinely takes several weeks &mdash; and put the request in writing so the "
+                  "timeline is on the record."),
+            ("callout", "Watch the trigger threshold", [
+                ("p", "Many jurisdictions set substantial improvement or substantial damage at a "
+                      "percentage of the building&rsquo;s value &mdash; 50% is a common figure, "
+                      "particularly in floodplain administration. Whether a repair crosses that "
+                      "line can therefore depend on the valuation used, which means the scope "
+                      "dispute and the code dispute are connected."),
+            ]),
+
+            ("h2", "Where it bites hardest in Texas"),
+            ("p", "Three categories of institutional building are disproportionately exposed."),
+            ("h3", "Mid-century churches and civic buildings"),
+            ("p", "Assembly occupancies built before modern fire and life-safety codes. "
+                  "Sprinklering an unsprinklered sanctuary, bringing egress up to current "
+                  "standards and adding accessible routes can cost more than the fire that "
+                  "triggered it. Historic designation narrows the options further."),
+            ("h3", "Older school campuses"),
+            ("p", "A 1970s campus undergoing substantial repair can face accessibility, egress, "
+                  "fire alarm and suppression, and energy code work across the whole building. "
+                  "On a multi-campus district hit by one storm, that exposure is repeated."),
+            ("h3", "Any building with a low-slope roof"),
+            ("p", "This one surprises people. A full roof tear-off frequently triggers current "
+                  "energy code insulation requirements, which means thicker insulation than what "
+                  "was there, which means extending mechanical curbs and raising rooftop units, "
+                  "modifying drainage and possibly adding tapered insulation. That is ordinance "
+                  "and law exposure on an ordinary hail claim, and it is regularly left off the "
+                  "carrier&rsquo;s estimate entirely."),
+            ("html", '<a class="tlink" href="/tools/commercial-roof-replacement-cost-estimator/">'
+                     'Price a code-compliant re-roof <span class="arw">&rarr;</span></a>'),
+
+            ("h2", "What to do about it"),
+            ("steps", [
+                ("Find out what you have",
+                 "<p>Look for the ordinance or law endorsement on your policy and read the three "
+                 "limits. If Coverage C is expressed as a percentage of the building limit, "
+                 "multiply it out for your largest structures. Many institutions discover the "
+                 "coverage is either absent or nominal.</p>"),
+                ("Find out what you would need",
+                 "<p>Ask your building official, in writing, what a substantial repair to your "
+                 "principal buildings would trigger today. Then have a contractor or consultant "
+                 "price that work. The comparison usually takes an afternoon and it is the most "
+                 "useful pre-loss exercise an older institution can do.</p>"),
+                ("Fix it at renewal",
+                 "<p>Increasing ordinance and law limits is normally among the cheaper "
+                 "adjustments available on a commercial property program, particularly relative "
+                 "to the exposure it closes. Raise it 90 days out, with the numbers in hand.</p>"),
+            ]),
+            ("quote", "We have never seen an institution regret buying more ordinance and law "
+                      "coverage. We have watched several discover, in the worst week of their "
+                      "year, exactly how little 10% buys.",
+             "From the claims desk"),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "building-a-business-interruption-claim",
+        "category": "Time element",
+        "published": "2026-03-10",
+        "modified": "2026-06-19",
+        "read": "10",
+        "words": 1550,
+        "title": "Building a Business Interruption Claim That Holds Up",
+        "description": ("How commercial business interruption claims are actually calculated, "
+                        "where carriers attack the assumptions, and the records to start keeping "
+                        "on day one."),
+        "h1": "The interruption claim,<br>built to <em>survive</em>",
+        "h1_plain": "Building a business interruption claim",
+        "blurb": ("Six variables, each contestable. The one that decides the number is the "
+                  "period of restoration, and it is decided by your construction schedule."),
+        "lede": ("Time-element losses are the largest under-recovered component of commercial "
+                 "property claims, not because coverage is narrow, but because the proof is "
+                 "assembled nine months late by people reconstructing events from memory."),
+        "body": [
+            ("p", "Property damage has a satisfying quality: you can photograph it, measure it "
+                  "and price it. The income loss behind it has none of those properties. It is a "
+                  "counterfactual &mdash; what the organization would have earned had the loss "
+                  "not occurred &mdash; and counterfactuals are argued, not observed."),
+            ("p", "Which is why the carrier retains a forensic accountant early, and why you "
+                  "should too."),
+
+            ("h2", "What the coverage actually pays"),
+            ("p", "Business income coverage pays the net profit the operation would have earned "
+                  "plus the continuing normal operating expenses it had to keep paying during "
+                  "the period of restoration. It does not pay lost revenue &mdash; the most "
+                  "common error in a first-draft claim &mdash; and it does not pay expenses that "
+                  "stopped."),
+            ("p", "Extra expense coverage pays costs incurred to continue operating or to speed "
+                  "the repair, generally to the extent they reduce the overall loss. On many "
+                  "institutional claims it is the larger half, because the instinct is always to "
+                  "keep going at any cost."),
+            ("table", "The six variables", ["Variable", "What it is", "How the carrier attacks it"], [
+                ["Projected revenue", "What the operation would have earned.", "Your growth assumption was optimistic"],
+                ["Margin", "The profit rate applied to lost revenue.", "Wrong definition used; policy defines it differently"],
+                ["Continuing expenses", "Costs that ran while producing nothing.", "You should have cut them"],
+                ["Saved expenses", "Costs that stopped.", "More was saved than you credited"],
+                ["Period of restoration", "How long repair should reasonably have taken.", "It should have taken less time"],
+                ["Extra expense", "Spend to keep going or speed repair.", "Not reasonable, not necessary, did not reduce the loss"],
+             ]),
+
+            ("h2", "The period of restoration is the whole argument"),
+            ("p", "Read the definition in your policy. It does not say the period you were "
+                  "actually closed. It says, in substance, the period that should reasonably be "
+                  "required to repair or replace the damaged property, exercising due diligence "
+                  "and dispatch. Those last four words carry the entire dispute."),
+            ("p", "If the rebuild took nine months and the carrier&rsquo;s consultant opines it "
+                  "should have taken five, the last four months are yours unless you can explain "
+                  "them. And the explanations are almost always good ones: permitting, long-lead "
+                  "equipment, the carrier&rsquo;s own delay in authorising a scope, specialist "
+                  "trade availability after a regional catastrophe, code review, supply "
+                  "constraints."),
+            ("p", "But they have to be recorded as they happen. A construction schedule "
+                  "maintained from week one, with the cause of every variance noted and dated, "
+                  "is the single most valuable document in a time-element negotiation. "
+                  "Reconstructing it afterwards from emails is possible and never as "
+                  "persuasive."),
+            ("callout", "Extended period of indemnity", [
+                ("p", "Reopening is not recovery. Congregations, students, guests and customers "
+                      "return gradually, and a policy without an extended period of indemnity "
+                      "endorsement stops paying the day operations resume. Where the endorsement "
+                      "exists, it typically covers a stated number of days of ramp-back. Check "
+                      "for it on day one &mdash; it is frequently the last third of the claim."),
+            ]),
+            ("html", '<a class="tlink" href="/tools/business-interruption-calculator/">'
+                     'Model the six variables <span class="arw">&rarr;</span></a>'),
+
+            ("h2", "Setting up the capture"),
+            ("p", "This takes your finance team about twenty minutes in week one and saves "
+                  "months of argument."),
+            ("checks", [
+                "Open a separate general ledger account or cost code for all loss-related expenditure, and use it without exception.",
+                "Log every incremental cost as it is incurred: overtime, temporary premises, rented equipment, expedited freight, additional staffing.",
+                "Track what actually stopped &mdash; the saved-expenses credit will be proposed by the carrier, so propose it yourself first and correctly.",
+                "Maintain a dated construction schedule with the cause of every delay noted.",
+                "Preserve the operating data that establishes the baseline: two years of monthly performance, by department or revenue stream.",
+                "Record the ramp-back after reopening, so the extended period can be quantified if the endorsement exists.",
+            ]),
+
+            ("h2", "Translating it for institutions"),
+            ("p", "The vocabulary in the policy is commercial, and it maps onto institutional "
+                  "operations with a little work."),
+            ("table", "Institutional income streams that interrupt",
+             ["Organization", "Interrupted streams"], [
+                ["Church", "Tithes and offerings, facility rentals, pre-school and day-care fees, events, bookstore and cafe"],
+                ["School district", "Cafeteria and athletics revenue, facility rentals, community education, extra expense for portables and bussing"],
+                ["City", "Facility rentals, utility revenue, permit and program fees &mdash; but extra expense is usually the dominant component"],
+                ["University", "Housing, dining, parking, athletics, conferences and summer camps, research continuity"],
+                ["Hospital", "Case volume by department, measured at contribution margin rather than gross charges"],
+             ]),
+            ("p", "Public entities frequently assume there is nothing to claim because they do "
+                  "not have revenue in the commercial sense. That is usually wrong on two "
+                  "counts: auxiliary income streams do interrupt, and extra expense &mdash; the "
+                  "cost of continuing to deliver the service &mdash; is often substantial and "
+                  "recoverable."),
+
+            ("h2", "When the carrier&rsquo;s accountant arrives"),
+            ("p", "Treat it as a formal process from the first request. That accountant works "
+                  "for the insurer, will ask for several years of financial records, and will "
+                  "test every assumption you have made. That is their job and there is nothing "
+                  "improper about it."),
+            ("p", "What is unwise is responding informally: sending unreconciled spreadsheets, "
+                  "answering questions verbally, or allowing document production to become "
+                  "open-ended. Engage a qualified professional on your side, route the "
+                  "production through one person, and put the methodology in writing before the "
+                  "numbers are exchanged. On a claim of any size the cost of that is small "
+                  "against the swing in the answer."),
+            ("quote", "We have never seen a carrier dispute a time-element claim that was "
+                      "documented weekly from day one. We have seen dozens dismantled that were "
+                      "assembled in month nine.",
+             "From the claims desk"),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "insurance-appraisal-vs-litigation-in-texas",
+        "category": "Dispute resolution",
+        "published": "2026-02-05",
+        "modified": "2026-05-16",
+        "read": "9",
+        "words": 1400,
+        "title": "Appraisal or Litigation on a Deadlocked Texas Claim",
+        "description": ("When the appraisal clause is the right tool on a commercial property "
+                        "claim, when it is the wrong one, and what the process actually involves "
+                        "in Texas."),
+        "h1": "Appraisal, or a<br><em>lawsuit</em>?",
+        "h1_plain": "Appraisal vs litigation on a Texas insurance claim",
+        "blurb": ("Appraisal resolves the amount of loss, fast and bindingly. It cannot resolve "
+                  "coverage. Choosing wrong costs months."),
+        "lede": ("Almost every commercial property policy contains an appraisal clause, and "
+                 "almost no policyholder has read it. It is a contractual mechanism for breaking "
+                 "a deadlock over how much the damage costs &mdash; and it is either exactly the "
+                 "right tool or exactly the wrong one."),
+        "body": [
+            ("p", "The clause is usually a single paragraph. If the parties fail to agree on the "
+                  "amount of loss, either may demand appraisal. Each selects a competent and "
+                  "impartial appraiser. The two appraisers select an umpire, or a court appoints "
+                  "one. Any two of the three who agree set the amount of loss, and that "
+                  "determination binds both parties."),
+            ("p", "That is the whole machine. Its simplicity is the point, and also the source "
+                  "of every mistake made with it."),
+
+            ("h2", "The distinction that governs everything"),
+            ("p", "Appraisal decides <strong>how much</strong>. It does not decide "
+                  "<strong>whether</strong>."),
+            ("p", "A panel can determine that the loss amounts to $2.4 million and the carrier "
+                  "can still decline to pay it on the basis that the cause of loss was excluded, "
+                  "that notice was late, or that a condition was breached. In practice, paying "
+                  "an appraisal award and then denying coverage is an awkward position for an "
+                  "insurer to occupy &mdash; but it remains available, and a policyholder who "
+                  "invokes appraisal expecting it to resolve a coverage dispute has bought "
+                  "nothing."),
+            ("table", "Which tool fits", ["The real dispute is...", "The route"], [
+                ["We agree it is covered; we disagree about the cost.", "Appraisal. This is exactly what it is for."],
+                ["They say the cause of loss is excluded.", "Coverage dispute. Counsel first."],
+                ["They say notice was late or a condition was breached.", "Coverage dispute. Counsel first."],
+                ["They have denied outright without meaningful investigation.", "Counsel. There may be extra-contractual exposure."],
+                ["Partly a scope dispute, partly causation.", "Take advice. Texas panels often allocate between covered and non-covered causes, but how that is handled should be agreed up front."],
+             ]),
+
+            ("h2", "Why appraisal is often the better route"),
+            ("p", "On a straightforward amount-of-loss dispute, appraisal is faster, cheaper and "
+                  "more predictable than litigation by a wide margin. A well-run panel resolves "
+                  "in weeks to a few months. The cost is your appraiser&rsquo;s fee and half the "
+                  "umpire&rsquo;s &mdash; against years of discovery, depositions, expert "
+                  "reports and motion practice."),
+            ("p", "It also removes the dispute from a forum where the policyholder&rsquo;s "
+                  "practical problem &mdash; the building is not repaired and the money is not "
+                  "there &mdash; counts for nothing, and puts it in front of construction people "
+                  "who look at the building."),
+            ("p", "And for institutions, there is a governance advantage worth naming: appraisal "
+                  "is a contractual process rather than public litigation against an insurer. "
+                  "For a school board, a city council or a church membership, that is "
+                  "frequently a materially easier thing to approve."),
+
+            ("h2", "Why it sometimes is not"),
+            ("p", "Finality cuts both ways. Texas courts generally uphold appraisal awards absent "
+                  "fraud, accident, or the panel exceeding its authority &mdash; for instance by "
+                  "deciding coverage rather than amount. If you go into an appraisal "
+                  "under-prepared and the award comes back low, there is very little to be done "
+                  "about it."),
+            ("p", "There is also a strategic dimension. On a claim where the carrier&rsquo;s "
+                  "handling has been poor enough to raise extra-contractual exposure, invoking "
+                  "appraisal and accepting an award can affect the posture of that claim. This "
+                  "is squarely a question for counsel, and it should be answered before the "
+                  "demand is sent rather than afterwards."),
+            ("callout", "The umpire decides the number", [
+                ("p", "In a split panel, the umpire is the decision. Who is proposed, who is "
+                      "resisted and what their background is &mdash; roofing, general "
+                      "construction, engineering, forensic accounting &mdash; deserves as much "
+                      "attention as everything else in the process combined. A great deal of "
+                      "appraisal strategy is umpire selection."),
+            ]),
+
+            ("h2", "Preparing properly"),
+            ("p", "The single biggest predictor of the outcome is the quality of the scope you "
+                  "bring. A panel reconciles two positions; if yours is a contractor&rsquo;s "
+                  "one-page proposal and theirs is a 60-page line-item estimate, the umpire has "
+                  "very little to work with on your side."),
+            ("checks", [
+                "A complete, defensible line-item estimate in the industry-standard format, priced to your market.",
+                "Photographic and measured documentation supporting every disputed line.",
+                "Expert reports where causation or repairability is in issue &mdash; engineering, manufacturer, roofing consultant.",
+                "A written summary of exactly which items are disputed and why, so the panel can work efficiently.",
+                "An appraiser who knows your property type and can defend the estimate under challenge.",
+                "Agreement, ideally in writing, on how the panel will treat causation allocation if it arises.",
+            ]),
+            ("p", "A large share of appraisals settle between the two appraisers before the "
+                  "umpire ever rules. That outcome is usually a function of one side arriving "
+                  "with a package the other cannot argue with."),
+            ("quote", "Appraisal rewards preparation more than advocacy. The panel is looking at "
+                      "the building, not listening to the speech.",
+             "From the claims desk"),
+
+            ("h2", "One practical note"),
+            ("p", "Either party can invoke appraisal, and policyholders do so far less often than "
+                  "insurers. That asymmetry is worth noticing. A well-documented policyholder "
+                  "with a thorough scope and a competent appraiser is frequently in a strong "
+                  "position in that forum &mdash; considerably stronger than in a correspondence "
+                  "war with a claims department that has no deadline to meet."),
+        ],
+    },
+
+    # =====================================================================
+    {
+        "slug": "what-a-public-adjuster-does-on-a-commercial-claim",
+        "category": "The basics",
+        "published": "2026-01-15",
+        "modified": "2026-06-04",
+        "read": "8",
+        "words": 1300,
+        "title": "What a Public Adjuster Actually Does on a Commercial Claim",
+        "description": ("The three kinds of adjuster, what a public adjuster does on a large "
+                        "institutional loss, how the fee works in Texas, and when you should not "
+                        "hire one."),
+        "h1": "What a public adjuster<br>actually <em>does</em>",
+        "h1_plain": "What a public adjuster does on a commercial claim",
+        "blurb": ("Three kinds of adjuster, one of whom works for you. And an honest account of "
+                  "when hiring one is a waste of money."),
+        "lede": ("The phrase means very little to most facilities directors until the week they "
+                 "need one, at which point they are being called by four firms and cannot tell "
+                 "the difference between any of them."),
+        "body": [
+            ("p", "Start with the taxonomy, because it explains everything else."),
+            ("table", "Three kinds of adjuster", ["Type", "Who pays them", "Whose interest"], [
+                ["Staff adjuster", "The insurance company, as an employee.", "The insurer&rsquo;s"],
+                ["Independent adjuster", "The insurance company, as a contractor.", "The insurer&rsquo;s. &ldquo;Independent&rdquo; means independent of the insurer&rsquo;s payroll, not of its interest."],
+                ["Public adjuster", "The policyholder, from the recovery.", "Yours"],
+             ]),
+            ("p", "Only the third represents you. This is not a moral claim about the other two "
+                  "&mdash; most carrier adjusters we deal with are competent and reasonable "
+                  "people &mdash; it is a structural one. They are paid by the party writing the "
+                  "check, use that party&rsquo;s templates, and apply that party&rsquo;s "
+                  "reading of the policy."),
+
+            ("h2", "What the work consists of"),
+            ("h3", "Reading the policy properly"),
+            ("p", "Declarations, forms, endorsements, schedule of values. Not to find loopholes, "
+                  "but because a large share of what is arguable later is already decided by "
+                  "wording you own: valuation basis, coinsurance or agreed value, ordinance and "
+                  "law limits, deductible mechanics, the time-element structure. On institutional "
+                  "programs we routinely find extensions the client did not know existed."),
+            ("h3", "Documenting the loss to an evidentiary standard"),
+            ("p", "A measured survey of the whole property rather than a sample. Indexed "
+                  "photography. Test cuts, moisture mapping, drone and thermal where they earn "
+                  "their place. Engineers, industrial hygienists and forensic accountants "
+                  "engaged where the loss warrants them. This is the part that decays fastest, "
+                  "and the reason engagement timing matters so much."),
+            ("h3", "Building the estimate"),
+            ("p", "A line-item scope in the same estimating platform the carrier uses, priced to "
+                  "your market and your occupancy, with code work, soft costs, contents and "
+                  "time-element losses carried separately so nothing disappears into a lump sum. "
+                  "This is the document the negotiation actually happens over."),
+            ("h3", "Negotiating, in writing, to a conclusion"),
+            ("p", "Positions itemised and dated. Supplements filed as real costs come in. "
+                  "Statutory deadlines cited where they apply. And an honest recommendation "
+                  "about appraisal or counsel when the gap will not close &mdash; made early "
+                  "rather than after another six months of letters."),
+
+            ("h2", "How the fee works in Texas"),
+            ("p", "Public adjusters in Texas are licensed under chapter 4102 of the Insurance "
+                  "Code and regulated by the Texas Department of Insurance. Compensation is "
+                  "capped: a public insurance adjuster&rsquo;s fee may not exceed 10% of the "
+                  "amount of the claim settlement. The engagement must be in writing and must "
+                  "state the services and the compensation."),
+            ("p", "Chapter 4102 also prohibits a public adjuster from participating, directly or "
+                  "indirectly, in the repair of the property they adjusted. That rule is the "
+                  "reason to use a licensed public adjuster rather than a contractor who offers "
+                  "to handle your claim: a roofer whose compensation is the roof has an interest "
+                  "in the scope."),
+            ("callout", "Two things to negotiate", [
+                ("p", "<strong>The carve-out.</strong> If the carrier has already offered a "
+                      "number before you engage anyone, ask that it be excluded from the fee "
+                      "base so the percentage applies only to the improvement. It is negotiable "
+                      "and it should be written down. <strong>Third-party costs.</strong> "
+                      "Engineers and forensic accountants are normally the client&rsquo;s direct "
+                      "cost. Agree how they are authorised before any are engaged."),
+            ]),
+            ("html", '<a class="tlink" href="/tools/public-adjuster-fee-calculator/">'
+                     'Work out whether it pays <span class="arw">&rarr;</span></a>'),
+
+            ("h2", "When you should not hire one"),
+            ("p", "An honest answer is worth more than a pitch, so: there are several situations "
+                  "where engaging a public adjuster costs you money for very little."),
+            ("checks", [
+                "The loss will not clear your deductible. Run that arithmetic before you do anything else.",
+                "The carrier&rsquo;s estimate is genuinely thorough and the number is right. It happens more often than the industry admits.",
+                "The real problem is a coverage denial rather than a scope dispute. That needs a lawyer; an adjuster cannot fix it.",
+                "The claim is small enough that a fixed-fee consultation or a one-off estimate review gets you what you need.",
+            ]),
+            ("p", "Where representation earns its keep is on losses large enough that a scope "
+                  "dispute is worth six figures, on buildings complex enough that a template "
+                  "estimate will miss things, on any claim with a meaningful time-element "
+                  "component, and on any file where the carrier has already retained an "
+                  "engineer. For institutional property, that describes most significant "
+                  "losses."),
+
+            ("h2", "Choosing between firms"),
+            ("checks", [
+                "Ask whether they are licensed in Texas under chapter 4102, and check it with the Texas Department of Insurance yourself.",
+                "Ask who will actually work the file &mdash; the person in the room, or someone you will never meet.",
+                "Ask how many claims of your property type and size they handle at once. Capacity is the constraint that quietly determines outcomes.",
+                "Ask whether they take any compensation from contractors. The answer should be an immediate no.",
+                "Ask what they would advise if the claim turns out to be straightforward. A firm that cannot imagine that scenario is telling you something.",
+                "Read the cancellation provision in the engagement letter before you sign it.",
+            ]),
+            ("quote", "The right question is not what the fee is. It is what the net is, after "
+                      "the fee, against what you would otherwise have accepted.",
+             "From the claims desk"),
+        ],
+    },
+]
+
+for _p in POSTS:
+    _p["path"] = "/blog/%s/" % _p["slug"]
+    _p["og_type"] = "article"
+    _p["page_type"] = "Article"

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Nothing here is behind a login; crawl it all.
+Sitemap: https://claimsconsultant.com/sitemap.xml
