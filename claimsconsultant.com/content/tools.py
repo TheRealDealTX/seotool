@@ -172,7 +172,7 @@ DEPREC = _calc(
      + _f("Deductible", "ded", "50000", "", prefix="$")
      + "</div>"
      + '<div class="field-row field-row--2">'
-     + _f("Depreciate labor?", "labor", "yes", "", options=[("yes", "Yes — carrier is depreciating labor"),
+     + _f("Depreciate labor?", "labor", "yes", "", options=[("yes", "Yes — depreciate labor"),
                                                              ("no", "No — materials only")])
      + _f("Labor share of cost", "laborshare", "45", "Typical for roofing and finishes.", suffix="%")
      + "</div>"),
@@ -207,8 +207,8 @@ CABINET = _calc(
      + '<div class="field-row field-row--2">'
      + _f("Countertop replacement", "tops", "4200", "Tops rarely survive box removal.", prefix="$")
      + _f("Door profile still available?", "matching", "no", "",
-          options=[("yes", "Yes — matching boxes can be sourced"),
-                   ("no", "No — line or profile discontinued")])
+          options=[("yes", "Yes — can be sourced"),
+                   ("no", "No — discontinued")])
      + "</div>"),
     "Indicated scope cost", "partial",
     "The partial-repair path: refinishing what is sound, replacing what is not.",
@@ -287,7 +287,7 @@ OANDP = _calc(
      + _f("Occupied-building premium", "occupancy", "8",
           "Night work, phasing, protection, noise and dust control.", suffix="%")
      + _f("Building occupied during work?", "occupied", "yes", "",
-          options=[("yes", "Yes — apply the premium"), ("no", "No — vacant")])
+          options=[("yes", "Yes — apply premium"), ("no", "No — vacant")])
      + "</div>"
      + '<div class="field-row field-row--2">'
      + _f("General conditions", "gc", "9", "Supervision, temporary utilities, logistics.", suffix="%")

@@ -258,9 +258,8 @@ FONTS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
     '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    'family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500'
-    '&amp;family=IBM+Plex+Sans:wght@400;500;600'
-    '&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">'
+    'family=Archivo:wght@400;500;600;700'
+    '&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">'
 )
 
 
@@ -291,7 +290,7 @@ def head(page):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{attr(page["title"])}">
 <meta name="twitter:description" content="{attr(page["description"])}">
-{extra}<meta name="theme-color" content="#101a22">
+{extra}<meta name="theme-color" content="#0f1319">
 <meta name="format-detection" content="telephone=yes">
 {FONTS}
 <link rel="stylesheet" href="/assets/css/site.css">
@@ -423,10 +422,10 @@ def cta_band(heading=None, dek=None, primary=("Discuss a matter", "/contact/"),
         </div>
       </div>
       <div class="cta-side">
-        <p class="kicker" style="color:#9aa3a9;">Direct line</p>
+        <p class="kicker" style="color:#98a2b0;">Direct line</p>
         <a class="cta-phone" href="tel:{PHONE_HREF}">{PHONE}</a>
         <p style="margin-top:14px;font-size:14.5px;">
-          <a href="mailto:{EMAIL}" style="color:#cfd5d9;">{EMAIL}</a>
+          <a href="mailto:{EMAIL}" style="color:#ccd4de;">{EMAIL}</a>
         </p>
         <ul class="checks" style="margin-top:26px;">
           <li>Retained by policyholders, insurers, pools, brokers and counsel.</li>
@@ -1172,8 +1171,8 @@ def build_manifest():
         "short_name": BIZ["name"],
         "start_url": "/",
         "display": "standalone",
-        "background_color": "#fbf8f3",
-        "theme_color": "#101a22",
+        "background_color": "#ffffff",
+        "theme_color": "#0f1319",
         "icons": [
             {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"},
             {"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"},
@@ -1186,17 +1185,17 @@ def build_manifest():
 
 # The mark: a ruled ledger in a brass frame. Defined once, in a 64-unit grid,
 # and rendered both as SVG (favicon) and as raw PNG (touch icon).
-INK = (0x10, 0x1a, 0x22)
-BRASS = (0xb9, 0x8a, 0x3c)
-PAPER = (0xfb, 0xf8, 0xf3)
+INK = (0x0f, 0x13, 0x19)
+ACCENT = (0x4a, 0x8f, 0xe0)
+PAPER = (0xff, 0xff, 0xff)
 MARK = [                      # (x, y, w, h, color)
-    (6.0, 6.0, 52.0, 1.6, BRASS),      # frame top
-    (6.0, 56.4, 52.0, 1.6, BRASS),     # frame bottom
-    (6.0, 6.0, 1.6, 52.0, BRASS),      # frame left
-    (56.4, 6.0, 1.6, 52.0, BRASS),     # frame right
+    (6.0, 6.0, 52.0, 1.6, ACCENT),     # frame top
+    (6.0, 56.4, 52.0, 1.6, ACCENT),    # frame bottom
+    (6.0, 6.0, 1.6, 52.0, ACCENT),     # frame left
+    (56.4, 6.0, 1.6, 52.0, ACCENT),    # frame right
     (17.0, 22.0, 30.0, 3.0, PAPER),    # rule one
     (17.0, 30.5, 21.0, 3.0, PAPER),    # rule two
-    (17.0, 39.0, 30.0, 3.0, BRASS),    # rule three, the total
+    (17.0, 39.0, 30.0, 3.0, ACCENT),   # rule three, the total
 ]
 
 

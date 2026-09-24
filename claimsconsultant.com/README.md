@@ -85,6 +85,29 @@ question, not a copywriting one.
 | `content/` | All page copy, written in a small block vocabulary |
 | `validate.py` | Post-build checks — run it every time |
 | `assets/css/site.css` | The single stylesheet |
+
+### Design system
+
+Cool neutrals, one accent, one typeface. Everything is a token on `:root`.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--ink` | `#0f1319` | Body text, dark bands |
+| `--slate` | `#4d5867` | Secondary text |
+| `--slate-2` | `#626d81` | Meta, eyebrows, breadcrumbs |
+| `--paper` | `#ffffff` | Page |
+| `--paper-2` | `#f3f5f8` | Alternating bands |
+| `--line` | `#d5dbe3` | Every rule and border |
+| `--accent` | `#17509c` | Links, emphasis, markers |
+| `--accent-2` | `#4a8fe0` | The accent on dark bands |
+
+**Archivo** carries all text; **JetBrains Mono** is for data, eyebrows and
+calculator numerics only. Emphasis inside a heading is a colour shift, not an
+italic — a grotesk italic reads as a slant.
+
+Every foreground/background pair in use clears WCAG AA (4.5:1); the tightest
+is `--slate-2` on `--paper-2` at 4.78:1. Re-check with the ratio formula
+before changing any neutral.
 | `assets/js/site.js` | The single script: nav, accordions, seven calculators |
 | `.htaccess` | HTTPS + non-www canonical, trailing slashes, compression, cache, security headers |
 | `sitemap.xml`, `robots.txt`, `site.webmanifest`, `favicon.svg`, `apple-touch-icon.png` | Generated |
