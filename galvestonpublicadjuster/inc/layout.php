@@ -52,10 +52,14 @@ function business_schema() {
         'image' => SITE_URL . '/assets/img/og.png',
         'logo' => SITE_URL . '/assets/img/logo.svg',
         'description' => 'Licensed Texas public adjuster for Galveston County homeowners and businesses: TWIA windstorm, hurricane, fire, flood and denied or underpaid property insurance claims.',
-        'address' => ['@type' => 'PostalAddress', 'addressLocality' => CITY, 'addressRegion' => REGION, 'addressCountry' => 'US'],
+        'legalName' => FIRM,
+        'identifier' => ['@type' => 'PropertyValue', 'name' => 'Texas Department of Insurance license', 'value' => LICENSE_NO],
+        'address' => ['@type' => 'PostalAddress', 'streetAddress' => STREET, 'addressLocality' => ADDR_CITY, 'addressRegion' => REGION, 'postalCode' => ZIP, 'addressCountry' => 'US'],
+        'openingHours' => 'Mo-Fr 09:00-18:00',
+        'sameAs' => [SISTER_SITE],
         'geo' => ['@type' => 'GeoCoordinates', 'latitude' => GEO_LAT, 'longitude' => GEO_LNG],
         'areaServed' => array_map(fn($a) => ['@type' => 'Place', 'name' => "$a, TX"], AREAS),
-        'founder' => ['@type' => 'Person', 'name' => AUTHOR, 'jobTitle' => AUTHOR_ROLE],
+        'founder' => ['@type' => 'Person', 'name' => AUTHOR, 'jobTitle' => AUTHOR_ROLE, 'image' => SITE_URL . AUTHOR_PHOTO],
         'priceRange' => 'Contingency fee — no recovery, no fee',
     ];
 }
@@ -132,6 +136,7 @@ function render_page(array $m, string $body) {
       <p>Licensed Texas public adjusting for Galveston Island and all of Galveston County. We represent policyholders — never insurance companies.</p>
       <p class="foot-phone"><?= phone_link('', icon('phone', 18) . ' ' . PHONE) ?></p>
       <p><a href="mailto:<?= LEAD_EMAIL ?>"><?= LEAD_EMAIL ?></a></p>
+      <p class="small"><?= FIRM ?> · TX License #<?= LICENSE_NO ?><br><?= STREET ?>, <?= ADDR_CITY ?>, TX <?= ZIP ?><br>Office hours: <?= HOURS ?></p>
     </div>
     <div>
       <h3>Claims We Handle</h3>
@@ -162,7 +167,7 @@ function render_page(array $m, string $body) {
     </div>
   </div>
   <div class="wrap footer-legal">
-    <p>© <?= date('Y') ?> <?= SITE_NAME ?>. Public adjusters are licensed by the Texas Department of Insurance. We are not a law firm and do not provide legal advice. Information on this site is general and educational; always read your own policy. <a href="/privacy-policy/">Privacy Policy</a> · <a href="/contact/">Contact</a></p>
+    <p>© <?= date('Y') ?> <?= SITE_NAME ?>, a service of <?= FIRM ?>, Texas public adjuster license #<?= LICENSE_NO ?>, <?= STREET ?>, <?= ADDR_CITY ?>, TX <?= ZIP ?>. Public adjusters are licensed by the Texas Department of Insurance. We are not a law firm and do not provide legal advice. Information on this site is general and educational; always read your own policy. <a href="/privacy-policy/">Privacy Policy</a> · <a href="/contact/">Contact</a></p>
   </div>
 </footer>
 <div class="callbar"><?= phone_link('callbar-btn', icon('phone', 20) . ' Call ' . PHONE) ?><a class="callbar-btn alt" href="/contact/">Free Review</a></div>
@@ -175,6 +180,7 @@ function render_page(array $m, string $body) {
       <p>Talk to a Galveston public adjuster today. Call for an expert consultation: <?= phone_link('strong-link') ?></p>
     </div>
     <?= lead_form('popup', true) ?>
+    <p class="small muted center" style="margin:-14px 0 18px"><?= FIRM ?> · TX License #<?= LICENSE_NO ?></p>
   </div>
 </div>
 <script src="/assets/js/site.js?v=<?= @filemtime(ROOT . '/assets/js/site.js') ?>" defer></script>

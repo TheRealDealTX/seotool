@@ -55,7 +55,8 @@ Then clear the site cache (`agency-hosting_clearWebsiteCacheV1`).
 - **DNS:** the domain is not in this Hostinger account's domain list and its Hostinger DNS zone is
   empty. Point `galvestonpublicadjuster.com` at the site (A record `72.60.128.114`, or the Hostinger
   nameservers shown in hPanel). The Let's Encrypt certificate finishes once DNS resolves.
-- **TDI advertising rule (Bulletin B-0006-26, July 2026):** public adjuster ads must show the
-  business address and license number. Add both to `inc/config.php` and the footer.
+- **Firm details** (legal name, TDI license #3356839, Belton address, office hours, headshot) come from
+  txpublicadjusting.com and live in `inc/config.php`. They appear in the footer on every page, the popup,
+  the About and Contact pages and the JSON-LD, which meets TDI Bulletin B-0006-26's address and license rule.
 - **Content review:** manufacturer wind ratings, statute references and storm data were researched
   in September 2026 and cite their sources. Review them, especially the rows marked "verify".

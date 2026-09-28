@@ -19,7 +19,7 @@ $related = array_slice(array_values(array_filter(blog_posts(), fn($p) => $p['slu
     <a href="/blog/" style="color:#9fc3dc;text-decoration:none">← All claim guides</a>
     <div class="post-meta" style="color:#cfe4f3;margin-top:14px"><span class="tag"><?= e($post['category']) ?></span><span><?= (int)$post['read_minutes'] ?> min read</span></div>
     <h1><?= e($post['title']) ?></h1>
-    <div class="byline"><span class="avatar"><?= e($initials) ?></span><div>By <strong style="color:#fff"><?= AUTHOR ?></strong>, <?= AUTHOR_ROLE ?><br><time datetime="<?= e($post['date']) ?>"><?= fmt_date($post['date']) ?></time></div></div>
+    <div class="byline"><img class="avatar photo" src="<?= AUTHOR_PHOTO ?>" alt="<?= AUTHOR ?>" width="72" height="72" loading="lazy"><div>By <strong style="color:#fff"><?= AUTHOR ?></strong>, <?= AUTHOR_ROLE ?><br><time datetime="<?= e($post['date']) ?>"><?= fmt_date($post['date']) ?></time></div></div>
   </div>
   <?= wave_divider() ?>
 </section>
@@ -28,7 +28,7 @@ $related = array_slice(array_values(array_filter(blog_posts(), fn($p) => $p['slu
     <article class="prose">
       <?= $post['html'] ?>
       <?php if ($faqs): ?><h2>Frequently asked questions</h2><?= faq_block($faqs, $meta['schema']) ?><?php endif ?>
-      <div class="author-box"><span class="avatar"><?= e($initials) ?></span><div><strong><?= AUTHOR ?></strong> is a <?= strtolower(AUTHOR_ROLE) ?> serving Galveston Island and Galveston County. Joseph represents policyholders on TWIA windstorm, hurricane, fire, flood and denied claims. <a href="/about/">More about Joseph</a> · <?= phone_link('', PHONE) ?></div></div>
+      <div class="author-box"><img class="avatar photo" src="<?= AUTHOR_PHOTO ?>" alt="<?= AUTHOR ?>" width="72" height="72" loading="lazy"><div><strong><?= AUTHOR ?></strong> is a licensed Texas public adjuster serving Galveston Island and Galveston County. Joseph represents policyholders on TWIA windstorm, hurricane, fire, flood and denied claims. <a href="/about/">More about Joseph</a> · <?= phone_link('', PHONE) ?></div></div>
       <?= banner('Want a second opinion on your claim? Call for an expert consultation.', 'Free review — no recovery, no fee.') ?>
       <p class="small muted">This article is general information, not legal advice. Every policy and claim is different.</p>
     </article>

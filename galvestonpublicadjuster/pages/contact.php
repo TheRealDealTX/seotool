@@ -12,7 +12,7 @@ $err = isset($_GET['error']);
       <h1>Call for an Expert Consultation</h1>
       <p class="lede">Tell us about your storm, fire, flood or denied claim. <?= AUTHOR ?> will review it and call you back — free, with no obligation.</p>
       <p><?= phone_link('btn btn-cta btn-lg', icon('phone', 22) . ' ' . PHONE) ?></p>
-      <ul class="hero-trust"><li><?= icon('check', 18) ?> No recovery, no fee</li><li><?= icon('check', 18) ?> Galveston County</li><li><?= icon('check', 18) ?> <a href="mailto:<?= LEAD_EMAIL ?>" style="color:#fff"><?= LEAD_EMAIL ?></a></li></ul>
+      <ul class="hero-trust"><li><?= icon('check', 18) ?> No recovery, no fee</li><li><?= icon('check', 18) ?> Office hours <?= HOURS ?></li><li><?= icon('check', 18) ?> TX License #<?= LICENSE_NO ?></li><li><?= icon('check', 18) ?> <a href="mailto:<?= LEAD_EMAIL ?>" style="color:#fff"><?= LEAD_EMAIL ?></a></li></ul>
     </div>
     <div class="hero-card">
       <h2>Request your free review</h2>

@@ -73,7 +73,7 @@ $posts = array_slice(blog_posts(), 0, 3);
       <p>The adjuster your insurance company sends is paid by the insurance company. Their estimate is a starting point — and it routinely leaves out creased shingles, code-required upgrades, matching, overhead and profit, contents and hidden water damage.</p>
       <ul class="checks">
         <li>We read your entire policy — endorsements, exclusions and deductibles</li>
-        <li>We build a line-by-line estimate in the same software the carriers use</li>
+        <li>We build a line-by-line estimate in Xactimate — the same software the carriers use — backed by Matterport 3D imaging</li>
         <li>We photograph, measure and moisture-map the damage before repairs</li>
         <li>We handle every call, email and re-inspection so you don't have to</li>
         <li>We push back on denials and lowball offers with evidence, not arguments</li>
@@ -139,9 +139,10 @@ $posts = array_slice(blog_posts(), 0, 3);
 <section class="section alt" id="review">
   <div class="wrap split">
     <div class="reveal">
+      <img class="adjuster-photo" src="<?= AUTHOR_PHOTO ?>" alt="<?= AUTHOR ?>, licensed Texas public adjuster" width="320" height="320" loading="lazy" style="margin:0 0 20px">
       <span class="kicker">Meet your adjuster</span>
       <h2>Local, licensed and personally involved</h2>
-      <p><?= AUTHOR ?> is a licensed Texas public adjuster who works claims across Galveston Island, Bolivar, Tiki Island, Jamaica Beach and the mainland. Every file gets his personal attention — no call centers, no hand-offs.</p>
+      <p><?= AUTHOR ?> is a licensed Texas public adjuster who works claims across Galveston Island, Bolivar, Tiki Island, Jamaica Beach and the mainland. Every file gets Joseph's personal attention — no call centers, no hand-offs. (<?= FIRM ?>, TX License #<?= LICENSE_NO ?>.)</p>
       <p>When you call a Galveston public adjuster from our office, you get straight answers: whether your claim is worth pursuing, what's missing, and what it realistically should pay. If you don't need us, we'll tell you.</p>
       <p><a class="btn btn-outline" href="/about/">About <?= AUTHOR ?> <?= icon('arrow', 16) ?></a></p>
     </div>

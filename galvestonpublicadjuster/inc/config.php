@@ -8,6 +8,15 @@ const LEAD_EMAIL  = 'jditt@risepublicadjusting.com';
 const MAIL_FROM   = 'noreply@galvestonpublicadjuster.com';
 const AUTHOR      = 'Joseph Dittman';
 const AUTHOR_ROLE = 'Licensed Texas Public Adjuster';
+const AUTHOR_PHOTO = '/assets/img/joseph-dittman.webp';
+// Firm details (from txpublicadjusting.com). TDI requires address + license number on advertising.
+const FIRM        = 'Rise Public Adjusting LLC';
+const LICENSE_NO  = '3356839';
+const STREET      = '5514 Imogen Dr.';
+const ADDR_CITY   = 'Belton';
+const ZIP         = '76513';
+const HOURS       = 'Mon–Fri 9 AM–6 PM';
+const SISTER_SITE = 'https://txpublicadjusting.com/';
 const CITY        = 'Galveston';
 const REGION      = 'TX';
 const GEO_LAT     = 29.3013;

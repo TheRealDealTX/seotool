@@ -313,3 +313,7 @@ table.data tr:nth-child(even) td { background: #f8fbfd; }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .gust { animation: none; } * { scroll-behavior: auto !important; } }
 .center { text-align: center; } .muted { color: var(--muted); } .mt { margin-top: 32px; } .small { font-size: .9rem; }
+
+.photo { border-radius: 50%; object-fit: cover; flex: none; background: #0b2540; }
+.avatar.photo { padding: 0; }
+.adjuster-photo { width: min(320px, 70%); aspect-ratio: 1; border-radius: 50%; object-fit: cover; box-shadow: var(--shadow-lg); border: 6px solid #fff; display: block; margin: 0 auto 20px; }
