@@ -94,7 +94,6 @@ if (!sd_write_json("leads/$id.json", $lead)) $fail('We could not save your reque
 // ------------------------------------------------------------------ email
 $s = sd_settings();
 $to = filter_var($s['lead_recipient'] ?? '', FILTER_VALIDATE_EMAIL) ? $s['lead_recipient'] : 'info@smokedamage.com';
-$from = filter_var($s['mail_from'] ?? '', FILTER_VALIDATE_EMAIL) ? $s['mail_from'] : 'no-reply@smokedamage.com';
 $line = fn($k, $v) => str_pad($k . ':', 20) . ($v === '' ? '—' : $v) . "\n";
 $body = "New claim review request from SmokeDamage.com\n\n"
     . $line('Name', $lead['full_name']) . $line('Phone', $lead['phone']) . $line('Email', $lead['email'])
@@ -105,14 +104,9 @@ $body = "New claim review request from SmokeDamage.com\n\n"
     . "\nWhat happened:\n" . ($lead['message'] ?: '—') . "\n\n"
     . "Lead ID: $id\nView in admin (attachments are stored privately there): https://smokedamage.com/admin/?s=lead&id=" . rawurlencode($id) . "\n";
 $subject = 'Claim review request: ' . preg_replace('/[\r\n]+/', ' ', $lead['full_name'] . ' — ' . $lead['city'] . ($lead['claim_status'] ? ' (' . $lead['claim_status'] . ')' : ''));
-$headers = [
-    'From' => 'SmokeDamage.com <' . $from . '>',
-    'Reply-To' => preg_replace('/[\r\n]+/', '', $lead['email']),
-    'Content-Type' => 'text/plain; charset=UTF-8',
-    'X-Mailer' => 'SmokeDamage.com',
-];
-$sent = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-f' . $from);
-$lead['email_sent'] = (bool)$sent;
+[$sent, $info] = sd_send_mail($to, $subject, $body, $lead['email']);
+$lead['email_sent'] = $sent;
+$lead['email_info'] = $info;
 sd_write_json("leads/$id.json", $lead);
 
 sd_json(['ok' => true, 'id' => $id]);

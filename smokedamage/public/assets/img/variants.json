@@ -1,0 +1,292 @@
+{
+ "adjuster-documenting": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1275
+ },
+ "attic-insulation": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1440
+ },
+ "austin": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1919,
+  "height": 1127
+ },
+ "burned-furniture": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1495
+ },
+ "burned-house": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1276
+ },
+ "commercial-fire": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1278
+ },
+ "contents-damage": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "contents-inventory": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1280
+ },
+ "dallas": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 978
+ },
+ "ductwork": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1323
+ },
+ "electronics": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1280
+ },
+ "hero-fire-house": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1363
+ },
+ "houston": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1507
+ },
+ "hvac-vent": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2400,
+  "height": 1600
+ },
+ "inspection": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1276
+ },
+ "multifamily": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1280
+ },
+ "office-interior": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1440
+ },
+ "paperwork-review": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1280
+ },
+ "restaurant": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1272
+ },
+ "san-antonio": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1280
+ },
+ "smoke-hallway": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1367
+ },
+ "smoke-interior": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "smoke-kitchen": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1360
+ },
+ "soot-ceiling": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1536
+ },
+ "texas-business": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1281
+ },
+ "texas-home": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1281
+ },
+ "texas-landscape": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1281
+ },
+ "warehouse": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 2048,
+  "height": 1365
+ },
+ "wildfire": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "width": 1920,
+  "height": 1291
+ }
+}

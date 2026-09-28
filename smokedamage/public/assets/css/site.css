@@ -545,3 +545,4 @@ body { padding-bottom: 72px; }
 fieldset.q-block { border: 0; border-bottom: 1px solid var(--line); margin: 0; padding: 18px 0; min-width: 0; }
 fieldset.q-block > legend { float: left; width: 100%; }
 fieldset.q-block > legend + * { clear: both; }
+@media (min-width: 900px) { .doc-groups { grid-template-columns: 2fr 1fr 1fr; } .doc-group:first-child .doc-grid { grid-template-columns: 1fr 1fr; } }

@@ -119,8 +119,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') !== 'login
                 $new['popup_delay_seconds'] = max(0, min(120, (int)($_POST['popup_delay_seconds'] ?? 5)));
                 $mf = trim((string)($_POST['mail_from'] ?? ''));
                 if ($mf !== '' && filter_var($mf, FILTER_VALIDATE_EMAIL)) $new['mail_from'] = $mf;
+                $new['smtp_host'] = preg_replace('/[^a-z0-9.\-]/i', '', (string)($_POST['smtp_host'] ?? ''));
+                $new['smtp_port'] = in_array((int)($_POST['smtp_port'] ?? 465), [465, 587], true) ? (int)$_POST['smtp_port'] : 465;
+                $su = trim((string)($_POST['smtp_user'] ?? ''));
+                $new['smtp_user'] = filter_var($su, FILTER_VALIDATE_EMAIL) ? $su : '';
+                if ((string)($_POST['smtp_pass'] ?? '') !== '') $new['smtp_pass'] = (string)$_POST['smtp_pass'];
+                if (!empty($_POST['smtp_clear'])) { unset($new['smtp_pass']); }
                 sd_write_json('settings.json', $new); $msg = 'Settings saved. They apply immediately.';
             }
+        } elseif ($a === 'test_email') {
+            [$ok, $info] = sd_send_mail(sd_settings()['lead_recipient'], 'SmokeDamage.com test email', "This is a test of lead notifications from the SmokeDamage.com admin.\nSent " . date('r') . "\n");
+            if ($ok) $msg = 'Test email sent to ' . sd_settings()['lead_recipient'] . ' (' . $info . ').'; else $err = 'Test email failed: ' . $info;
         } elseif ($a === 'site_change') {
             $fields = ['phone_display', 'email', 'licensed_address', 'blog_author', 'ga4_id', 'gsc_verification', 'bing_verification', 'social'];
             $data = [];
@@ -223,6 +232,7 @@ if ($S === 'dashboard'):
     $pend = count(array_filter(sd_read_json('requests.json', []), fn($r) => $r['status'] === 'pending'));
     $semrush = !empty($auto['semrush_connected']); ?>
 <h1>Dashboard</h1>
+<?php if (empty($settings['smtp_pass'])) echo '<p class="msg err">Lead email notifications are not configured yet — new leads are saved here but not emailed. <a href="/admin/?s=settings">Set up SMTP in Settings</a>.</p>'; ?>
 <div class="cards">
 <div class="card"><small>New leads</small><b><?= $new ?></b> <span class="pill"><?= count($leads) ?> total</span></div>
 <div class="card"><small>Last event scan</small><b><?= h($auto['last_event_scan'] ?? ($scan['last_scan'] ?? '—')) ?></b></div>
@@ -249,7 +259,7 @@ if (!$leads) echo '<tr><td colspan="11">No leads yet.</td></tr>'; ?>
 <?php elseif ($S === 'lead' && safe_id($_GET['id'] ?? '')): $l = sd_read_json('leads/' . $_GET['id'] . '.json', null); if (!$l) { echo '<p>Not found.</p>'; } else { ?>
 <h1><?= h($l['full_name']) ?></h1>
 <dl class="kv"><?php foreach (['received_at' => 'Received', 'phone' => 'Phone', 'email' => 'Email', 'property_type' => 'Property type', 'city' => 'Texas city', 'zip' => 'ZIP', 'date_of_loss' => 'Date of loss', 'insurance_company' => 'Insurance company', 'claim_status' => 'Claim status', 'source' => 'Source', 'referrer' => 'Referrer'] as $k => $lab) echo '<dt>' . h($lab) . '</dt><dd>' . h($k === 'received_at' ? when($l[$k]) : ($l[$k] ?? '')) . '</dd>'; ?>
-<dt>Damage types</dt><dd><?= h(implode(', ', $l['damage'] ?? [])) ?></dd><dt>Email notification</dt><dd><?= !empty($l['email_sent']) ? 'Sent' : '<span class="bad">Not sent — follow up from here</span>' ?></dd></dl>
+<dt>Damage types</dt><dd><?= h(implode(', ', $l['damage'] ?? [])) ?></dd><dt>Email notification</dt><dd><?= !empty($l['email_sent']) ? 'Sent' : '<span class="bad">Not sent — follow up from here</span>' ?> <small><?= h($l['email_info'] ?? ($l['email_error'] ?? '')) ?></small></dd></dl>
 <h2>What happened</h2><pre><?= h($l['message'] ?: '—') ?></pre>
 <h2>Documents</h2><?php if (empty($l['files'])) echo '<p>None uploaded.</p>'; else { echo '<ul>'; foreach ($l['files'] as $f) echo '<li><a href="/admin/?s=file&id=' . h($l['id']) . '&f=' . h($f['stored']) . '">' . h($f['name']) . '</a> (' . round($f['size'] / 1024) . ' KB)</li>'; echo '</ul>'; } ?>
 <h2>Follow-up</h2><form method="post"><?= csrf_field() ?><input type="hidden" name="action" value="lead_status"><input type="hidden" name="id" value="<?= h($l['id']) ?>">
@@ -322,9 +332,16 @@ if (!$q) echo '<tr><td colspan="5">No requests.</td></tr>'; ?></table></div>
 <form method="post"><?= csrf_field() ?><input type="hidden" name="action" value="settings">
 <div class="row"><label for="lr">Lead recipient email</label><input id="lr" name="lead_recipient" type="email" value="<?= h($settings['lead_recipient']) ?>" required style="width:280px"></div>
 <div class="row"><label for="mf">Send notifications from</label><input id="mf" name="mail_from" type="email" value="<?= h($settings['mail_from']) ?>" style="width:280px"></div>
+<h2>Email delivery (SMTP)</h2>
+<p>This host doesn't provide PHP mail(), so lead notifications are sent through your mailbox's SMTP server. For Hostinger email use <b>smtp.hostinger.com</b>, port <b>465</b>, the full mailbox address and its password. Leads are always saved here even if email fails.</p>
+<div class="row"><label for="sh">SMTP host</label><input id="sh" name="smtp_host" value="<?= h($settings['smtp_host'] ?? 'smtp.hostinger.com') ?>" style="width:220px"><label for="sp">Port</label><select id="sp" name="smtp_port"><?php foreach ([465, 587] as $o) echo '<option' . ((int)($settings['smtp_port'] ?? 465) === $o ? ' selected' : '') . '>' . $o . '</option>'; ?></select></div>
+<div class="row"><label for="su">Mailbox (username)</label><input id="su" name="smtp_user" type="email" value="<?= h($settings['smtp_user'] ?? '') ?>" placeholder="info@smokedamage.com" style="width:260px"></div>
+<div class="row"><label for="spw">Mailbox password</label><input id="spw" name="smtp_pass" type="password" autocomplete="new-password" placeholder="<?= !empty($settings['smtp_pass']) ? 'saved — leave blank to keep' : 'not set' ?>" style="width:260px"><label><input type="checkbox" name="smtp_clear" value="1"> clear saved password</label></div>
+<h2>Popup</h2>
 <div class="row"><label><input type="checkbox" name="popup_enabled" value="1" <?= !empty($settings['popup_enabled']) ? 'checked' : '' ?>> Show the claim-review popup to first-time visitors</label></div>
 <div class="row"><label for="pd">Popup delay (seconds)</label><input id="pd" name="popup_delay_seconds" type="number" min="0" max="120" value="<?= (int)$settings['popup_delay_seconds'] ?>" style="width:90px"></div>
 <button>Save settings</button></form>
+<form method="post" style="margin-top:10px"><?= csrf_field() ?><input type="hidden" name="action" value="test_email"><button class="btn2">Send test email to lead recipient</button></form>
 <h2>Published site details (change requests)</h2>
 <p>These values are compiled into every page. Enter only what should change; the automation applies it and republishes.</p>
 <dl class="kv"><?php foreach (['brand' => 'Brand', 'company' => 'Company', 'license_number' => 'TDI license #', 'licensed_address' => 'Licensed address (from TDI record)', 'phone_display' => 'Phone', 'email' => 'Email', 'blog_author' => 'Blog author', 'ga4_id' => 'GA4 measurement ID'] as $k => $lab) echo '<dt>' . h($lab) . '</dt><dd>' . h($site[$k] ?? '') . '</dd>'; ?></dl>
