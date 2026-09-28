@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /home.html
+Disallow: /_pages/
+Sitemap: https://converseroofer.com/sitemap.xml

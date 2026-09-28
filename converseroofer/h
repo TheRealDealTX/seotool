@@ -1,0 +1,11 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: hws
+date: Mon, 28 Sep 2026 00:29:34 GMT
+content-type: text/html; charset=UTF-8
+vary: Accept-Encoding
+platform: hostinger
+alt-svc: h3=":443"; ma=86400
+x-processing-time: 0.001
+
