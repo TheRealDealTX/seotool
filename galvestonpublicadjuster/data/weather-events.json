@@ -1,0 +1,13 @@
+[
+    {
+        "date": "2024-07-08",
+        "max_gust_mph": 87,
+        "max_sustained_mph": 60,
+        "sources": [
+            "Open-Meteo model (Galveston Island)"
+        ],
+        "alerts": [],
+        "summary": "Winds reached 87 mph (gusts) / 60 mph (sustained) around Galveston on July 8, 2024. At these speeds, older or 60–70 mph-rated shingles commonly crease, lift or blow off; inspect your roof and document damage before filing a windstorm claim.",
+        "detected": "2026-09-27"
+    }
+]

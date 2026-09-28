@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 dist/
+galvestonpublicadjuster/data/private/
+galvestonpublicadjuster/data/posts-generated/
+*.tmp
