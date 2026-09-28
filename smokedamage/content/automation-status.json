@@ -1,0 +1,11 @@
+{
+ "last_event_scan": "2026-09-28",
+ "next_event_scan": "2026-10-05",
+ "last_blog_generated": "2026-09-28",
+ "next_blog_generation": "2026-09-30",
+ "semrush_connected": false,
+ "notes": [
+  "Initial launch: 7 verified events and 5 articles published on 2026-09-28.",
+  "2026-09-28: Semrush connector reachable but the account has no API units (https://www.semrush.com/mcp-access); keyword selection uses the imported CSV queue until units are added."
+ ]
+}
