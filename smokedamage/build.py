@@ -249,9 +249,9 @@ def analytics_head():
         out += f'<meta name="msvalidate.01" content="{esc(SITE["bing_verification"])}">\n'
     if SITE["ga4_id"]:
         gid = esc(SITE["ga4_id"])
-        out += (f'<script async src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>\n'
-                f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}"
-                f"gtag('js',new Date());gtag('config','{gid}',{{anonymize_ip:true}});</script>\n")
+        out += (f'<!-- Google tag (gtag.js) -->\n<script async src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>\n'
+                f"<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){{dataLayer.push(arguments);}}\n"
+                f"  gtag('js', new Date());\n\n  gtag('config', '{gid}');\n</script>\n")
     return out
 
 

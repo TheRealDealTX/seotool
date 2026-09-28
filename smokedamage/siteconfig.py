@@ -33,7 +33,7 @@ SITE = {
     "popup_delay_seconds": 5,
     "social": {},  # e.g. {"facebook": "https://..."} - only real profiles
     # Analytics / verification IDs. Empty = not loaded.
-    "ga4_id": "",
+    "ga4_id": "G-SGWMERWRQV",
     "gsc_verification": "",
     "bing_verification": "",
 }
