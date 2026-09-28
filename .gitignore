@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 dist/
+smokedamage/__pycache__/
+smokedamage/private/

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /contact/thank-you/
+Disallow: /home.html
+Disallow: /*?s=
+Disallow: /search/
+
+Sitemap: https://smokedamage.com/sitemap.xml

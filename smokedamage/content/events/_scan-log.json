@@ -1,0 +1,80 @@
+{
+  "last_scan": "2026-09-28",
+  "window": [
+    "2025-09-01",
+    "2026-09-28"
+  ],
+  "created": [
+    "ross-fire-palo-pinto-jack-counties",
+    "hunggate-fire-randall-county",
+    "oak-cliff-apartment-explosion-dallas",
+    "valero-port-arthur-refinery-explosion",
+    "four-seasons-containers-fire-tyler",
+    "the-colony-house-explosion-fire",
+    "mariposa-park-apartments-fire-fort-worth"
+  ],
+  "rejected": [
+    {
+      "name": "Lavender Fire (Oldham/Potter counties, Feb. 17, 2026)",
+      "reason": "Acreage (18,423) found only via Wikipedia/Watch Duty; one home and two shops reported lost by local news. No official agency figures located; did not meet verification bar."
+    },
+    {
+      "name": "Nacogdoches County gas well blowout and fire near Etoile (Apr. 2026)",
+      "reason": "Well-site fire; only three homes evacuated as a precaution and no offsite property damage reported."
+    },
+    {
+      "name": "LyondellBasell Bayport Choate plant fire, Pasadena (Mar. 2026)",
+      "reason": "Source article blocked (403); property impacts and protective actions could not be verified."
+    },
+    {
+      "name": "Kimberly-Clark distribution center fire (Apr. 7, 2026)",
+      "reason": "Occurred in Ontario, California, not Texas."
+    },
+    {
+      "name": "Texas Gulf Seafood warehouse fire, Galveston (Aug. 2026)",
+      "reason": "Single-building fire; details not verified from an official source."
+    },
+    {
+      "name": "F&F Composite warehouse fire, north Fort Worth (Jul. 2026)",
+      "reason": "Single-building fire; details not verified from an official source."
+    },
+    {
+      "name": "Odessa fatal residential fire (Jun. 2026)",
+      "reason": "Single residence; significant for a firefighter fatality but not a multi-structure or large-loss property event."
+    },
+    {
+      "name": "Other small 2026 Panhandle wildfires (8 Ball, Yellow, Cabin Creek, etc.)",
+      "reason": "No verified structure losses; acreage only from non-official listings."
+    },
+    {
+      "name": "Watson Grinding explosion 'July 2026' (search-engine summary)",
+      "reason": "Misdated result; event occurred January 24, 2020 and is in the history timeline."
+    }
+  ],
+  "sources_checked": [
+    "https://abc7amarillo.com/news/local/hunggate-fire-burns-more-than-14000-acres-in-randall-county-texas-am-forest-service-juan-rodriguez-wildfire-austin-jones-canyon-prairie-mobile-home-park",
+    "https://en.wikipedia.org/wiki/2026_Dallas_apartment_explosion",
+    "https://en.wikipedia.org/wiki/2026_Kimberly-Clark_distribution_center_fire",
+    "https://en.wikipedia.org/wiki/2026_Texas_wildfires",
+    "https://fortworthreport.org/2026/08/25/at-least-1-firefighter-injured-multiple-families-displaced-in-3-alarm-fort-worth-apartment-fire/",
+    "https://fortworthreport.org/2026/09/01/ross-fire-burns-90000-acres-in-palo-pinto-jack-counties-157-structures-destroyed/",
+    "https://kfdm.com/news/local/tcex-issues-final-air-emissions-report-on-valero-port-arthur-refinery-explosion-and-fire",
+    "https://tfsweb.tamu.edu/about/news/",
+    "https://tfsweb.tamu.edu/ross-fire-becomes-largest-summer-wildfire-in-texas/",
+    "https://www.aol.com/articles/many-homes-lost-hunggate-wildfire-205210017.html",
+    "https://www.cbsnews.com/news/valero-oil-refinery-explosion-texas-smoke-flames/",
+    "https://www.cbsnews.com/texas/news/denton-county-the-colony-house-fire-explosion/",
+    "https://www.cbsnews.com/texas/news/gas-explosion-dallas-apartment-ntsb-report-7-1-2026/",
+    "https://www.cbsnews.com/texas/news/ross-fire-near-palo-pinto-high-wildfire-risk/",
+    "https://www.fox4news.com/news/home-explodes-colony-fire-damages-nearby-houses",
+    "https://www.houstonchronicle.com/news/houston-texas/article/industrial-fire-reported-bay-area-boulevard-22074180.php",
+    "https://www.houstonpublicmedia.org/articles/news/public-safety/2026/04/21/549647/nacogdoches-explosion-etoile-oil-gas-fire-evacuation/",
+    "https://www.kbtx.com/2026/09/03/texas-am-forest-service-says-what-sparked-second-largest-wildfire-north-texas-history/",
+    "https://www.kltv.com/2025/11/21/industrial-fire-prompts-evacuation-smith-county-road-1151/",
+    "https://www.kltv.com/2026/01/14/fire-marshal-releases-details-tyler-recycling-plant-fire/",
+    "https://www.nbcdfw.com/news/local/massive-apartment-fire-in-fort-worth/4067342/",
+    "https://www.nbcdfw.com/news/local/ntsb-report-dallas-fire-apartment-building-explosion/4043728/",
+    "https://www.newschannel10.com/2026/02/24/lavender-fire-destroys-valle-de-oro-home-where-man-lived-more-than-20-years/",
+    "https://www.tdem.texas.gov/press-release/5-16-26"
+  ]
+}

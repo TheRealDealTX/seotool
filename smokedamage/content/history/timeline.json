@@ -1,0 +1,377 @@
+[
+  {
+    "id": "ross-fire-2026",
+    "year": 2026,
+    "date": "Ignited August 24, 2026",
+    "name": "Ross Fire",
+    "location": "Palo Pinto and Jack counties",
+    "type": "Wildfire",
+    "summary": "The Ross Fire ignited on August 24, 2026, along U.S. Highway 180 in Palo Pinto County and spread into Jack County. The Texas A&M Forest Service called it the largest summertime wildfire in Texas since detailed statewide records began in 2005 and reported it as human-caused, from equipment or vehicle use associated with a roadside start. The National Weather Service ranked it the second-largest wildfire in North Texas history, behind the 2011 Possum Kingdom Complex.",
+    "impacts": "The Texas A&M Forest Service estimated the fire at 90,400 acres as of Sept. 4, 2026, with 167 structures destroyed (including 18 occupied residences), 95 damaged and 453 saved. Later figures reported by local media differ slightly.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Ross Fire becomes largest summer wildfire in Texas – Texas A&M Forest Service",
+        "url": "https://tfsweb.tamu.edu/ross-fire-becomes-largest-summer-wildfire-in-texas/"
+      },
+      {
+        "title": "Ross Fire 100% contained – CBS Texas",
+        "url": "https://www.cbsnews.com/texas/news/ross-fire-near-palo-pinto-high-wildfire-risk/"
+      },
+      {
+        "title": "Ross Fire burns 90,000 acres in Palo Pinto, Jack counties – Fort Worth Report",
+        "url": "https://fortworthreport.org/2026/09/01/ross-fire-burns-90000-acres-in-palo-pinto-jack-counties-157-structures-destroyed/"
+      }
+    ]
+  },
+  {
+    "id": "crabapple-fire-2025",
+    "year": 2025,
+    "date": "March 15–22, 2025",
+    "name": "Crabapple Fire",
+    "location": "Gillespie County",
+    "type": "Wildfire",
+    "summary": "The Crabapple Fire started on the afternoon of March 15, 2025, in Gillespie County. According to the Texas A&M Forest Service and Fredericksburg Fire EMS, it was declared 100% contained on March 22, 2025. One firefighter was injured.",
+    "impacts": "9,858 acres; 9 residences and 20 outbuildings destroyed, 2 residences and 4 outbuildings damaged (Texas A&M Forest Service and Fredericksburg Fire EMS, as reported by FOX 7 Austin).",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Crabapple Fire now 100% contained, officials say – FOX 7 Austin",
+        "url": "https://www.fox7austin.com/news/crabapple-fire-update-march-22"
+      }
+    ]
+  },
+  {
+    "id": "smokehouse-creek-fire-2024",
+    "year": 2024,
+    "date": "February 26 – March 16, 2024",
+    "name": "Smokehouse Creek Fire",
+    "location": "Hutchinson, Roberts and Hemphill counties and other parts of the northeastern Panhandle; into Oklahoma",
+    "type": "Wildfire",
+    "summary": "The Smokehouse Creek Fire started north of Stinnett in Hutchinson County on February 26, 2024, when a decayed power pole broke and brought a power line into contact with dry grass, according to the Texas House Investigative Committee on the Panhandle Wildfires. It advanced about 95 miles into Oklahoma and became the largest wildfire in Texas history. The Texas A&M Forest Service declared it 100% contained on March 16, 2024.",
+    "impacts": "An estimated 1.058 million acres burned across Texas and Oklahoma (House committee report); the Texas A&M Forest Service lists 1,054,153 acres. The committee reported that three people were killed in the 2024 Panhandle fires and destroyed an estimated 138 homes and businesses, and that 76 homes in or around Canadian burned or were heavily damaged.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Investigative Committee on the Panhandle Wildfires – Report (Texas House of Representatives)",
+        "url": "https://www.house.texas.gov/pdfs/committees/reports/interim/88interim/House-Interim-Committee-on-The-Panhandle-Wildfires-Report.pdf"
+      },
+      {
+        "title": "Texas A&M Forest Service honors law enforcement officers",
+        "url": "https://tfsweb.tamu.edu/texas-am-forest-service-honors-law-enforcement-officers/"
+      },
+      {
+        "title": "As the largest wildfire in Texas history burns… – Texas A&M Forest Service",
+        "url": "https://tfsweb.tamu.edu/as-the-largest-wildfire-in-texas-history-burns-texas-am-forest-service-encourages-caution-as-wildfire-potential-increases-over-the-weekend/"
+      }
+    ]
+  },
+  {
+    "id": "windy-deuce-fire-2024",
+    "year": 2024,
+    "date": "February 26 – March 16, 2024",
+    "name": "Windy Deuce Fire",
+    "location": "Moore and Hutchinson counties (Fritch / Lake Meredith area)",
+    "type": "Wildfire",
+    "summary": "The Windy Deuce Fire was reported on the evening of February 26, 2024, at a small pumpjack site where power lines contacted tree limbs, according to the Texas House Investigative Committee on the Panhandle Wildfires. It jumped the southern edge of Lake Meredith, destroyed numerous homes on the south side of Fritch and threatened Borger. The Texas A&M Forest Service declared it 100% contained on March 16, 2024.",
+    "impacts": "144,045 acres burned by February 27, 2024 (House committee report). The report notes news outlets counted more than 50 homes destroyed in and around Fritch.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Investigative Committee on the Panhandle Wildfires – Report (Texas House of Representatives)",
+        "url": "https://www.house.texas.gov/pdfs/committees/reports/interim/88interim/House-Interim-Committee-on-The-Panhandle-Wildfires-Report.pdf"
+      },
+      {
+        "title": "As the largest wildfire in Texas history burns… – Texas A&M Forest Service",
+        "url": "https://tfsweb.tamu.edu/as-the-largest-wildfire-in-texas-history-burns-texas-am-forest-service-encourages-caution-as-wildfire-potential-increases-over-the-weekend/"
+      }
+    ]
+  },
+  {
+    "id": "south-fork-dairy-explosion-2023",
+    "year": 2023,
+    "date": "April 10, 2023",
+    "name": "South Fork Dairy explosion and fire",
+    "location": "Near Dimmitt, Castro County",
+    "type": "Explosion and fire",
+    "summary": "An explosion and fire at the South Fork Dairy near Dimmitt killed nearly 18,000 cows and critically injured one person. The Texas State Fire Marshal's Office found the fire was accidental, starting with an engine fire in a manure vacuum truck that was cleaning part of the barn; it did not determine the cause of the engine fire.",
+    "impacts": "Nearly 18,000 cattle killed; one person critically injured.",
+    "insurance_note": "Agricultural and commercial fires can raise claims for buildings, equipment, livestock, stored feed and business income. Farm and commercial policies vary widely, so coverage depends on the specific policy and the facts of the loss.",
+    "sources": [
+      {
+        "title": "Investigation finds Texas dairy farm explosion was accidental – The Texas Tribune",
+        "url": "https://www.texastribune.org/2023/05/19/cows-dairy-farm-texas-investigation/"
+      }
+    ]
+  },
+  {
+    "id": "eastland-complex-2022",
+    "year": 2022,
+    "date": "March 17, 2022",
+    "name": "Eastland Complex",
+    "location": "Eastland County (Carbon, Gorman, Lake Leon area)",
+    "type": "Wildfire",
+    "summary": "The Eastland Complex was a group of four wildfires that ignited on March 17, 2022, in Eastland County. The Kidd Fire burned through the community of Carbon, and evacuations were ordered in Carbon, Lake Leon, Gorman and surrounding rural areas. Deputy Sergeant Barbara Fenley died in the line of duty while assisting with evacuations.",
+    "impacts": "54,513 acres (Texas A&M Forest Service list of largest Texas wildfires). Structures in Carbon were destroyed; published home counts vary.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Eastland Complex Update, March 17 – InciWeb",
+        "url": "https://inciweb.wildfire.gov/incident-publication/txtxs-eastland-complex/eastland-complex-update-march-17-1000-pm"
+      },
+      {
+        "title": "Wildfire Update – Texas A&M Forest Service",
+        "url": "https://tfsweb.tamu.edu/?p=15752"
+      },
+      {
+        "title": "30 Largest Wildfires in Texas History 1988–2022 – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/30%20Largest/30LargestWildfiresTX.pdf"
+      }
+    ]
+  },
+  {
+    "id": "watson-grinding-explosion-2020",
+    "year": 2020,
+    "date": "January 24, 2020",
+    "name": "Watson Grinding and Manufacturing explosion",
+    "location": "Houston, Harris County",
+    "type": "Explosion and fire",
+    "summary": "Shortly after 4:30 a.m., propylene that had leaked inside the Watson Grinding and Manufacturing facility in Houston exploded. The U.S. Chemical Safety Board (CSB) found the leak came from a degraded, poorly crimped rubber hose that disconnected inside a coating booth. Two workers and a nearby resident were killed.",
+    "impacts": "Three deaths; the CSB reports hundreds of neighboring homes were damaged.",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Watson Grinding Fatal Explosion and Fire – U.S. Chemical Safety Board",
+        "url": "https://www.csb.gov/watson-grinding-fatal-explosion-and-fire-/"
+      },
+      {
+        "title": "CSB Releases Final Report on 2020 Fatal Propylene Release and Explosion at Watson Grinding",
+        "url": "https://www.csb.gov/csb-releases-final-report-on-2020-fatal-propylene-release-and-explosion-at-the-watson-grinding-facility-in-houston-texas/"
+      }
+    ]
+  },
+  {
+    "id": "tpc-port-neches-explosion-2019",
+    "year": 2019,
+    "date": "November 27, 2019",
+    "name": "TPC Group Port Neches explosions and fire",
+    "location": "Port Neches, Jefferson County",
+    "type": "Explosion and fire",
+    "summary": "A series of explosions at the TPC Group chemical plant in Port Neches destroyed part of the facility after piping in butadiene service ruptured, according to the U.S. Chemical Safety Board. Officials ordered a mandatory evacuation of residents within four miles of the plant, and fires burned at the facility for more than a month.",
+    "impacts": "The CSB reports $450 million in onsite property damage and $153 million in offsite damage to nearby homes and businesses; several workers and members of the public reported injuries.",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "TPC Port Neches Explosions and Fire – U.S. Chemical Safety Board",
+        "url": "https://www.csb.gov/tpc-port-neches-explosions-and-fire/"
+      },
+      {
+        "title": "CSB Releases New Safety Video on 2019 Explosions and Fires",
+        "url": "https://www.csb.gov/csb-releases-new-safety-video-on-2019-explosions-and-fires/"
+      }
+    ]
+  },
+  {
+    "id": "kmco-crosby-explosion-2019",
+    "year": 2019,
+    "date": "April 2, 2019",
+    "name": "KMCO chemical facility explosion and fire",
+    "location": "Crosby, Harris County",
+    "type": "Explosion and fire",
+    "summary": "A strainer ruptured at the KMCO facility in Crosby, releasing isobutylene that formed a vapor cloud and ignited, according to the U.S. Chemical Safety Board. One employee was killed, two were seriously injured and at least 28 other workers were hurt. Local authorities issued a shelter-in-place order for residents within one mile.",
+    "impacts": "Portions of the facility were substantially damaged by the explosion and fires (CSB).",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "CSB Releases Final Report Into Fatal 2019 Explosion and Fire (KMCO)",
+        "url": "https://www.csb.gov/csb-releases-final-report-into-fatal-2019-explosion-and-fire/"
+      }
+    ]
+  },
+  {
+    "id": "itc-deer-park-tank-fire-2019",
+    "year": 2019,
+    "date": "March 17–20, 2019",
+    "name": "ITC Deer Park tank farm fire",
+    "location": "Deer Park, Harris County",
+    "type": "Industrial fire",
+    "summary": "A fire that began on March 17, 2019, at the Intercontinental Terminals Company tank farm burned for three days and destroyed fifteen 80,000-barrel storage tanks, according to the U.S. Chemical Safety Board. A shelter-in-place order was issued for the entire City of Deer Park because of benzene-related air quality concerns, and a seven-mile stretch of the Houston Ship Channel was closed.",
+    "impacts": "Over $150 million in property damage at the facility (CSB); schools and businesses closed or modified operations.",
+    "insurance_note": "A long-burning industrial fire can raise questions about smoke and soot deposits on nearby property and business interruption from closures. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "CSB Releases Final Report on 2019 Massive Tank Farm Fire at ITC Deer Park",
+        "url": "https://www.csb.gov/csb-releases-final-report-on-2019-massive-tank-farm-fire-at-the-intercontinental-terminals-company-facility-in-deer-park-texas/"
+      },
+      {
+        "title": "Intercontinental Terminals Company (ITC) Tank Fire – U.S. Chemical Safety Board",
+        "url": "https://www.csb.gov/intercontinental-terminals-company-itc-tank-fire/"
+      }
+    ]
+  },
+  {
+    "id": "west-fertilizer-explosion-2013",
+    "year": 2013,
+    "date": "April 17, 2013",
+    "name": "West Fertilizer Company explosion",
+    "location": "West, McLennan County",
+    "type": "Explosion and fire",
+    "summary": "A massive explosion involving stored ammonium nitrate occurred at a fertilizer storage and distribution facility in West. The U.S. Chemical Safety Board reported 14 deaths, including 12 volunteer firefighters, and hundreds of injuries.",
+    "impacts": "The CSB describes block after block of devastated homes, schools and care facilities.",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "West Fertilizer Explosion and Fire – U.S. Chemical Safety Board",
+        "url": "https://www.csb.gov/west-fertilizer-explosion-and-fire-/"
+      }
+    ]
+  },
+  {
+    "id": "bastrop-county-complex-2011",
+    "year": 2011,
+    "date": "September 4, 2011 (burned 37 days)",
+    "name": "Bastrop County Complex Fire",
+    "location": "Bastrop County",
+    "type": "Wildfire",
+    "summary": "The Bastrop Complex ignited on September 4, 2011, and was caused by power lines, according to the Texas A&M Forest Service. It burned for 37 days The Texas A&M Forest Service lists it as the Texas wildfire with the most homes lost.",
+    "impacts": "32,400 acres; 1,660 homes destroyed and 1,091 saved (Texas A&M Forest Service 2011 wildfire report). TFS also reports 36 commercial buildings destroyed.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "2011 Texas Wildfires: Common Denominators of Home Destruction – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/Case%20Studies/2011%20Wildfires/2011%20Texas%20Wildfires.pdf"
+      },
+      {
+        "title": "Bastrop – A Story of Wildfire and Restoration – Texas A&M Forest Service",
+        "url": "https://tfsweb.tamu.edu/bastrop-a-story-of-wildfire-and-restoration/"
+      }
+    ]
+  },
+  {
+    "id": "texas-wildfire-season-2011",
+    "year": 2011,
+    "date": "2011",
+    "name": "2011 Texas wildfire season",
+    "location": "Statewide",
+    "type": "Wildfire",
+    "summary": "The Texas A&M Forest Service describes the 2011 season as unprecedented: 31,453 wildfires burned 4,011,709 acres, the most in a single Texas season. Four firefighters and six civilians were killed, and homes were destroyed in more than half of the state's 254 counties.",
+    "impacts": "2,947 homes destroyed and 38,962 homes saved (Texas A&M Forest Service).",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "2011 Texas Wildfires: Common Denominators of Home Destruction – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/Case%20Studies/2011%20Wildfires/2011%20Texas%20Wildfires.pdf"
+      }
+    ]
+  },
+  {
+    "id": "possum-kingdom-complex-2011",
+    "year": 2011,
+    "date": "April 9, 2011 (burned 34 days)",
+    "name": "Possum Kingdom Complex",
+    "location": "Palo Pinto, Young and Stephens counties",
+    "type": "Wildfire",
+    "summary": "The Possum Kingdom Complex started on April 9, 2011, and was caused by lightning, according to the Texas A&M Forest Service. Burning uphill through rugged, juniper-covered terrain around Possum Kingdom Lake, it exposed hilltop and ridge homes to some of the most extreme fire behavior of the 2011 season.",
+    "impacts": "126,734 acres; 168 homes destroyed and 1,249 saved (Texas A&M Forest Service).",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "2011 Texas Wildfires: Common Denominators of Home Destruction – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/Case%20Studies/2011%20Wildfires/2011%20Texas%20Wildfires.pdf"
+      }
+    ]
+  },
+  {
+    "id": "rockhouse-fire-2011",
+    "year": 2011,
+    "date": "April 9, 2011 (burned 37 days)",
+    "name": "Rockhouse Fire",
+    "location": "Jeff Davis and Presidio counties (Marfa to Fort Davis)",
+    "type": "Wildfire",
+    "summary": "The Rockhouse Fire started as an electrical fire in a home near Marfa on April 9, 2011, and ran 32 miles in one afternoon, burning through the town of Fort Davis, according to the Texas A&M Forest Service. A loss of power also cut the area's electrically powered water system, hindering firefighters. The fire threatened the University of Texas' McDonald Observatory.",
+    "impacts": "314,444 acres; 23 homes destroyed and 108 saved (Texas A&M Forest Service).",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "2011 Texas Wildfires: Common Denominators of Home Destruction – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/Case%20Studies/2011%20Wildfires/2011%20Texas%20Wildfires.pdf"
+      },
+      {
+        "title": "30 Largest Wildfires in Texas History 1988–2022 – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/30%20Largest/30LargestWildfiresTX.pdf"
+      }
+    ]
+  },
+  {
+    "id": "east-amarillo-complex-2006",
+    "year": 2006,
+    "date": "March 12, 2006",
+    "name": "East Amarillo Complex",
+    "location": "Hutchinson, Gray, Roberts and Hemphill counties",
+    "type": "Wildfire",
+    "summary": "On March 12, 2006, high winds downed power lines and started the Borger and I-40 wildfires, which together were named the East Amarillo Complex, according to the National Weather Service in Amarillo. The March 12–19 Panhandle outbreak caused eleven civilian deaths and a firefighter death, and eight towns were evacuated. The East Amarillo Complex remains the largest Texas wildfire on the Texas A&M Forest Service's 1988–2022 list.",
+    "impacts": "907,245 acres (Borger fire 479,549; I-40 fire 427,696). NWS reported the March 12–19 outbreak destroyed over 40 structures, including 32 homes, and about 700 miles of fencing.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "The Dryline, Spring/Summer 2006 – National Weather Service Amarillo",
+        "url": "https://www.weather.gov/media/ama/Dryline_06SpringSummerfinal.pdf"
+      },
+      {
+        "title": "30 Largest Wildfires in Texas History 1988–2022 – Texas A&M Forest Service",
+        "url": "https://ticc.tamu.edu/FireInformation/30%20Largest/30LargestWildfiresTX.pdf"
+      }
+    ]
+  },
+  {
+    "id": "cross-plains-fire-2005",
+    "year": 2005,
+    "date": "December 27, 2005",
+    "name": "Cross Plains Fire (2005–2006 Texas–Oklahoma wildfires)",
+    "location": "Cross Plains, Callahan County",
+    "type": "Wildfire",
+    "summary": "During the 2005–2006 Texas and Oklahoma wildfire outbreaks, a grass fire entered the Central Texas town of Cross Plains on December 27, 2005, burning through the community and killing two residents in their homes. Across Texas, more than 2.2 million acres burned in 2005–2006, according to a Wildland Fire Lessons Learned Center case study citing Texas Forest Service data.",
+    "impacts": "116 homes, one church and several other structures destroyed in Cross Plains. From January 2005 to September 2006, Texas wildfires claimed 19 lives and destroyed 734 homes.",
+    "insurance_note": "A large wildfire can raise claims for structures destroyed outright as well as for nearby homes and businesses affected by smoke, soot and ash, damaged fencing and outbuildings, contents losses, and additional living expenses during evacuation or repairs. What a policy covers depends on its language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Case Study: Lives Lost – Lessons Learned, The 2005–2006 Texas and Oklahoma Wildfires – Wildland Fire Lessons Learned Center",
+        "url": "https://lessonslearned-prod-media-bucket.s3.us-gov-west-1.amazonaws.com/s3fs-public/2023-02/OK_TX_2005_06_Case_Study1.pdf"
+      }
+    ]
+  },
+  {
+    "id": "bp-texas-city-refinery-explosion-2005",
+    "year": 2005,
+    "date": "March 23, 2005",
+    "name": "BP Texas City refinery explosion",
+    "location": "Texas City, Galveston County",
+    "type": "Explosion and fire",
+    "summary": "During the restart of an isomerization unit, a distillation tower was overfilled and overpressurized, causing a geyser-like release from a vent stack and a series of explosions, according to the U.S. Chemical Safety Board. Many of the victims were in or near work trailers placed close to the vent stack.",
+    "impacts": "15 workers killed and 180 injured (CSB).",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "BP America (Texas City) Refinery Explosion – U.S. Chemical Safety Board",
+        "url": "https://www.csb.gov/bp-america-texas-city-refinery-explosion/"
+      }
+    ]
+  },
+  {
+    "id": "texas-city-disaster-1947",
+    "year": 1947,
+    "date": "April 16–17, 1947",
+    "name": "Texas City disaster",
+    "location": "Texas City, Galveston County",
+    "type": "Explosion and fire",
+    "summary": "The SS Grandcamp, carrying ammonium nitrate, exploded at the Texas City docks at 9:12 a.m. on April 16, 1947; the SS High Flyer exploded at 1:10 a.m. the next day. The blasts destroyed the Monsanto Chemical Company plant and all of the city's firefighting equipment, and flying debris ignited further fires across the city and industrial area, according to the Handbook of Texas.",
+    "impacts": "576 known dead and thousands injured; at least 1,000 residences and buildings damaged or destroyed; property damage of about $67 million (Handbook of Texas).",
+    "insurance_note": "An industrial explosion or fire can raise questions about blast damage to nearby buildings (windows, doors, ceilings), smoke and soot deposits, contents, and business interruption for neighboring businesses. Coverage depends on the policy language and the facts of each loss.",
+    "sources": [
+      {
+        "title": "Texas City Disaster – Handbook of Texas Online (TSHA)",
+        "url": "https://www.tshaonline.org/handbook/entries/texas-city-disaster"
+      }
+    ]
+  }
+]
