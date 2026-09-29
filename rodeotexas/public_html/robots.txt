@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*/report/
+Disallow: /favorites/
+
+Sitemap: https://rodeotexas.org/sitemap.xml
