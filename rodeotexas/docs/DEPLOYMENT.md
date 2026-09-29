@@ -64,8 +64,9 @@ Hostinger cron runs in **server time (UTC)** and Chicago shifts between UTC−6 
 * To change the day/hour edit `import.weekly_weekday` / `import.weekly_hour_local` in config and
   the cron hours accordingly.
 
-hPanel → **Advanced → Cron Jobs** → “Custom” → paste the schedule and command. (It was created
-through the Hostinger API during deployment; see the verification notes.)
+hPanel → **Advanced → Cron Jobs** → “Custom” → paste the schedule and command (or create it with
+the Hostinger API operation `hosting_cron-jobs_create`). After the first Monday, check
+Admin → Import history for a run started by `cron`.
 
 ### Optional daily 7-day check
 
