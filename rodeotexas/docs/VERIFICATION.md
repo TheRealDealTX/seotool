@@ -64,9 +64,15 @@ source, its events untouched; one research record → draft + review item. Reque
 check → backup (DB dump + WordPress files moved, uploads & Search Console file kept) → extract → migrate → seed → admin →
 import → cleanup (package + installer deleted); wrong token → 404; config.php written 0600 outside the web root.
 
-## Production
+## Production (deployed 2026-09-30)
 
-* Database `u401386392_rodeo` created on Hostinger (via API).
-* **Files not yet deployed:** the Hostinger file-upload API returns 404 for this account (tested for rodeotexas.org and the
-  main domain), and a remote-download installer variant was not used for security reasons. The live site is still the
-  original WordPress. See docs/DEPLOYMENT.md §7 for the File Manager upload steps.
+* Installer run on Hostinger: backup (WordPress DB `u401386392_ryOlF`: 40 tables, 38,067 rows → 1.8 MB dump; 32 WordPress
+  files/folders moved to `domains/rodeotexas.org/backups/wp-20260930/`), extract, migrate, seed (21 articles, 184 legacy
+  events, 199 redirects), admin, first import (139 fetched → 3 published, 1 held for review, 0 errors, 5/5 sources OK).
+* Found on the live server: one line used PHP 8.4-only syntax and failed on the site's PHP 8.2. The domain was switched to
+  **PHP 8.4** (restores service immediately) and the code was fixed; the whole suite now also passes on PHP 8.2 (111/111).
+* LiteSpeed still served cached WordPress pages for old URLs → site cache cleared via the Hostinger API.
+* Hostinger replaces the Content-Security-Policy response header with `upgrade-insecure-requests`; the admin CSP is
+  therefore also sent as a `<meta>` tag (in the upgrade package).
+* Live `tests/http.php`: **52 passed, 3 pending** — the import API (2) and admin CSP meta (1) are in the upgrade package
+  that is not yet uploaded. All 21 articles, 199 redirects, 184 legacy URLs, forms, admin security and Event JSON-LD pass.

@@ -35,6 +35,8 @@ function admin_header(string $title): void
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<?php /* Hostinger's server replaces the CSP response header, so the policy is repeated here (frame-ancestors is covered by X-Frame-Options: DENY). */ ?>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'none'; object-src 'none'">
 <title><?= e($title) ?> · Rodeo Texas admin</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="<?= e(asset('assets/css/admin.css')) ?>">

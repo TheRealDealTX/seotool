@@ -18,7 +18,7 @@ final class Dates
 
     public static function now(string $tz = 'America/Chicago'): DateTimeImmutable
     {
-        return new DateTimeImmutable(self::$now ?? 'now', new DateTimeZone('UTC'))
+        return (new DateTimeImmutable(self::$now ?? 'now', new DateTimeZone('UTC')))
             ->setTimezone(new DateTimeZone($tz));
     }
 

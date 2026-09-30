@@ -126,7 +126,7 @@ section('Admin security');
 $a = req($base . '/admin/');
 t('Admin requires login', $a['code'] === 302 && str_contains((string) ($a['h']['location'] ?? ''), 'page=login'));
 $login = req($base . '/admin/?page=login');
-t('Admin has strict CSP & noindex', str_contains((string) ($login['h']['content-security-policy'] ?? ''), "script-src 'self'") && str_contains((string) ($login['h']['x-robots-tag'] ?? ''), 'noindex'));
+t('Admin has strict CSP (header or meta) & noindex', (str_contains((string) ($login['h']['content-security-policy'] ?? ''), "script-src 'self'") || str_contains($login['body'], 'http-equiv="Content-Security-Policy" content="default-src \'self\'')) && str_contains((string) ($login['h']['x-robots-tag'] ?? ''), 'noindex'));
 t('No public tracking scripts in admin', !str_contains($login['body'], 'googletagmanager'));
 $ck = (string) ($a['h']['set-cookie'] ?? '');
 t('Admin session cookie is HttpOnly + SameSite=Strict' . (str_starts_with($base, 'https') ? ' + Secure' : ''), stripos($ck, 'httponly') !== false && stripos($ck, 'samesite=strict') !== false && (!str_starts_with($base, 'https') || stripos($ck, 'secure') !== false), $ck);

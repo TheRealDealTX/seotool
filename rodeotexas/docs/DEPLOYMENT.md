@@ -42,7 +42,7 @@ active. If the certificate ever lapses: hPanel → **Security → SSL** → inst
 
 | Setting | Value | Why |
 | --- | --- | --- |
-| PHP version | 8.2 or newer (8.3 fine) | code targets PHP ≥ 8.0 |
+| PHP version | 8.4 (set 2026-09-30); 8.2+ works | code tested on PHP 8.2 and 8.4 |
 | Extensions | pdo_mysql, curl, intl, mbstring, zip, gd | already enabled |
 | `display_errors` | Off | errors go to `app/storage/logs/` |
 | `max_execution_time` | ≥ 300 | manual “Run import” from the admin |
