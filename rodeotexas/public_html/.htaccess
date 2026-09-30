@@ -6,6 +6,8 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+# Pass the Authorization header to PHP (used by /api/import/)
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
 # 1) HTTPS and the bare domain (canonical host)
 RewriteCond %{HTTPS} !=on

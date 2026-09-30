@@ -117,6 +117,10 @@ t('Valid contact message accepted (303 → thank-you)', $real['code'] === 303 &&
 $tampered = req($base . '/submit-event/', ['post' => ['_ft' => '123.abc', 'title' => 'X', 'start_date' => '2030-01-01', 'city' => 'Austin', 'email' => 'a@b.co', 'confirm_texas' => '1']]);
 t('Forged form token rejected', $tampered['code'] === 200 && str_contains($tampered['body'], 'expired'));
 
+section('Import API');
+t('Import API refuses requests without a token', req($base . '/api/import/sources/')['code'] === 401);
+t('Import API refuses a wrong token', req($base . '/api/import/', ['post' => ['x' => 1], 'headers' => ['Authorization: Bearer wrong']])['code'] === 401);
+
 section('Admin security');
 @unlink($jar);   // fresh session so the cookie is issued on this request
 $a = req($base . '/admin/');

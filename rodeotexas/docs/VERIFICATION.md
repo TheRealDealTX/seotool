@@ -3,7 +3,7 @@
 Environment: local PHP 8.4 + MariaDB 10.11 (code targets the Hostinger server's PHP 8.2), Chromium via Playwright,
 live source feeds for the import. Production deployment status is at the end.
 
-## Automated integration tests — `tests/run.php`: **101 passed, 0 failed**
+## Automated integration tests — `tests/run.php`: **111 passed, 0 failed**
 
 | Area | What was proven |
 | --- | --- |
@@ -25,8 +25,9 @@ live source feeds for the import. Production deployment status is at the end.
 | Search/filters | name, city, venue, exact ZIP, ZIP-area fallback, literal `%`/`_`, association, level, type, date overlap, hostile values ignored, drafts hidden |
 | Forms | honeypot, too-fast, tampered token, cross-form token, per-IP rate limit |
 | Auth | password hashed (bcrypt), short passwords rejected, lockout after 5 failures |
+| External routine | pushed Texas record imported / Oklahoma skipped; research records held as drafts; re-push = no change; reported fetch failure marks source failed with events untouched; token accept/reject/revoke; only hash stored; inactive source refused |
 
-## End-to-end HTTP tests — `tests/http.php`: **53 passed, 0 failed**
+## End-to-end HTTP tests — `tests/http.php`: **55 passed, 0 failed**
 
 All public pages 200; titles/descriptions/canonicals/OG tags; analytics tag on public pages and **absent from admin**;
 `/includes` and `/pages` blocked; 404 for unknown URLs; **all 21 articles at original URLs; all 199 retired URLs 301 to the
@@ -51,6 +52,12 @@ discarded; valid contact message stored; admin requires login; admin CSP + noind
 `140 fetched, 4 new (3 published, 1 held for review), 136 filtered, 0 errors; 5/5 sources OK` — PBR Rattler Days
 (Dickies Arena, Oct 2–4 2026), Fort Worth Stock Show & Rodeo (Jan 15–Feb 6 2027), Brazos Valley Fair and Rodeo (Bryan,
 Oct 23–25 2026); Stephenville “Rodeo Heritage” held for review (no link in the feed). Second run: 140 unchanged.
+
+## External runner (local site, live sources)
+
+`tools/external-import.php` fetched Dickies Arena (40), Destination Bryan (4), Stephenville (30), Mesquite (52) —
+all unchanged on the server (no duplicates); Freeman Coliseum answered HTTP 403 that day → reported as a failed
+source, its events untouched; one research record → draft + review item. Requests without/with a wrong token → 401.
 
 ## Installer (simulated Hostinger directory with a fake WordPress)
 

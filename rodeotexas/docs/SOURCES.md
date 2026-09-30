@@ -28,6 +28,30 @@ Every source below was checked for a machine-readable format, `robots.txt` and t
 
 Details and quotes from each terms page are in the `access_note` of each source (Admin → Sources).
 
+## External weekly routine (how imports run)
+
+The weekly crawl runs **outside the web server**, as a scheduled Claude Code routine
+(Mondays 6:52 AM America/Chicago; the scheduler handles daylight saving). Each run:
+
+1. starts a fresh cloud session with this repository and runs
+   `php rodeotexas/tools/external-import.php` — it asks the site which sources to fetch
+   (`GET /api/import/sources/`), fetches them with the same adapters (robots.txt honoured) and posts
+   the records to `POST /api/import/`; a source that cannot be fetched is reported as failed and its
+   events stay untouched;
+2. researches **official** organizer, venue and association pages (never aggregators whose terms forbid
+   reuse) for upcoming Texas rodeos not yet listed, writes them to a JSON file with their `source_url`,
+   and posts them to the `weekly-research` source — these are **always held as drafts in the review queue**;
+3. reports a short summary in the session.
+
+The server does all validation (Texas-only, dedupe, admin locks, explicit-only cancellations, review
+rules), so the routine can never publish something the rules would not. Authentication: a token created
+in **Admin → Account → External weekly import routine** (only its hash is stored), saved in the cloud
+environment as the variable `RODEOTEXAS_IMPORT_TOKEN`. Revoke it there at any time.
+
+Manual run of the same thing from any computer with PHP 8:
+`RODEOTEXAS_IMPORT_TOKEN=… php tools/external-import.php [--research=file.json] [--only=slug]`.
+The server-side cron in docs/DEPLOYMENT.md §6 remains available as an alternative but is not needed.
+
 ## Adapters (`app/adapters/`)
 
 Each adapter only **fetches and normalizes**; it never writes to the database.
@@ -38,6 +62,7 @@ Each adapter only **fetches and normalizes**; it never writes to the database.
 | `ical` | `IcalAdapter` | `url`, `timezone` |
 | `jsonld` | `JsonLdAdapter` | `urls` or `sitemap_url` + `url_pattern`, `max_pages`, `timezone` |
 | `csv` | `CsvAdapter` | (file uploaded in the admin or `--file=`) |
+| `push` | `PushAdapter` | records are posted by the external routine (e.g. `weekly-research`) |
 
 Common keys: `require_keywords`, `exclude_keywords`, `exclude_acts`, `title_strip_regex`,
 `title_replace`, `default_venue`, `unknown_location` (`skip`|`review`), `min_delay`.

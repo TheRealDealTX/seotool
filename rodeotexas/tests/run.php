@@ -240,6 +240,33 @@ $r9 = Importer::run('manual', 'single', [$csvSrc], $csvFile);
 t('Re-uploading the same CSV creates nothing', $r9['stats']['created'] === 0);
 @unlink($csvFile);
 
+section('External routine (pushed records)');
+$pushSrc = (int) Db::val("SELECT id FROM sources WHERE slug = 'weekly-research'");
+$pushRec = ['uid' => 'research:test-1', 'title' => 'Pushed Research Rodeo', 'start_date' => date('Y-m-d', strtotime('+120 days')),
+    'end_date' => date('Y-m-d', strtotime('+121 days')), 'venue' => ['name' => 'Arena', 'city' => 'Llano', 'state' => 'TX', 'postal_code' => '78643'],
+    'source_url' => 'https://fixture.test/research', 'performances' => [], 'categories' => []];
+$p1 = Importer::runPushed($pushSrc, [$pushRec, array_merge($pushRec, ['uid' => 'research:ok', 'title' => 'Tulsa Rodeo', 'venue' => ['city' => 'Tulsa', 'state' => 'OK']])], null);
+t('Pushed Texas record imported, Oklahoma one skipped', $p1['stats']['created'] === 1 && $p1['stats']['skipped_outside_texas'] === 1, json_encode($p1['stats']));
+t('Research records are never auto-published', Db::val("SELECT publish_state FROM events WHERE title = 'Pushed Research Rodeo'") === 'draft');
+$p2 = Importer::runPushed($pushSrc, [$pushRec], null);
+t('Pushing the same record again changes nothing', $p2['stats']['unchanged'] === 1 && $p2['stats']['created'] === 0);
+$snap2 = Db::val('SELECT MD5(GROUP_CONCAT(CONCAT_WS("|", id, title, start_date, status, publish_state) ORDER BY id)) FROM events');
+$p3 = Importer::runPushed($tec, null, 'HTTP 403 from source');
+t('Reported fetch failure marks the source failed', $p3['status'] === 'failed');
+t('…and leaves existing events untouched', Db::val('SELECT MD5(GROUP_CONCAT(CONCAT_WS("|", id, title, start_date, status, publish_state) ORDER BY id)) FROM events') === $snap2);
+$tokA = RT\RemoteImport::generateToken();
+$_SERVER['HTTP_AUTHORIZATION'] = 'Bearer ' . $tokA;
+t('Import token accepted', RT\RemoteImport::authorized());
+$_SERVER['HTTP_AUTHORIZATION'] = 'Bearer ' . $tokA . 'x';
+t('Wrong token rejected', !RT\RemoteImport::authorized());
+t('Only the token hash is stored', Db::val("SELECT value FROM settings WHERE name = 'import_api_token_sha256'") === hash('sha256', $tokA));
+RT\RemoteImport::revokeToken();
+$_SERVER['HTTP_AUTHORIZATION'] = 'Bearer ' . $tokA;
+t('Revoked token rejected', !RT\RemoteImport::authorized());
+[$hc] = RT\RemoteImport::handle('{"source":"prorodeo","records":[]}');
+t('Push to an inactive source refused', $hc === 404);
+unset($_SERVER['HTTP_AUTHORIZATION']);
+
 // ------------------------------------------------------------------ search & filters
 section('Search and filters');
 $f = static fn(array $in) => EventRepo::search(EventRepo::filtersFrom($in));

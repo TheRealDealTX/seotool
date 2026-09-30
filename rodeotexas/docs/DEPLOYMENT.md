@@ -49,7 +49,14 @@ active. If the certificate ever lapses: hPanel → **Security → SSL** → inst
 | `session.cookie_secure/httponly/samesite` | set by the app itself | no change needed |
 | `allow_url_fopen` | may stay On | the app uses cURL |
 
-## 6. Cron — weekly import, Monday 7:00 AM Central
+## 6. Weekly import
+
+**In use: the external routine** (docs/SOURCES.md, “External weekly routine”). It runs Mondays at
+6:52 AM America/Chicago outside the server and posts events to `/api/import/`. Setup: Admin → Account →
+*Create token*, then add it to the Claude Code cloud environment as `RODEOTEXAS_IMPORT_TOKEN`.
+Nothing needs to be scheduled on Hostinger.
+
+### Alternative: server cron (not needed while the routine is active)
 
 Hostinger cron runs in **server time (UTC)** and Chicago shifts between UTC−6 (CST) and UTC−5
 (CDT). Schedule both candidate hours; the script checks the Chicago clock and runs once:

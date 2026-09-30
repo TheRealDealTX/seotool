@@ -79,6 +79,10 @@ try {
             rt_page('about');
         case $path === '/privacy-policy/':
             rt_page('privacy');
+        case $path === '/api/import/':
+            rt_page('api-import');
+        case $path === '/api/import/sources/':
+            rt_page('api-import', ['what' => 'sources']);
         case $path === '/api/events/':
         case $path === '/api/events.json':
             rt_page('api-events');

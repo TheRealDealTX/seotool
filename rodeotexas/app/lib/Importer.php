@@ -26,6 +26,8 @@ final class Importer
     private string $mode = 'weekly';
     /** @var resource|null */
     private $lock = null;
+    /** Records delivered by the external routine instead of fetched here: ['records' => [...]] or ['error' => '…']. */
+    private ?array $pushed = null;
 
     public const STAT_KEYS = ['sources_ok', 'sources_failed', 'fetched', 'created', 'published', 'drafted', 'updated',
         'matched', 'unchanged', 'conflicts', 'review', 'skipped_filter', 'skipped_outside_texas', 'skipped_no_location',
@@ -42,6 +44,20 @@ final class Importer
     {
         $imp = new self();
         return $imp->execute($trigger, $mode, $sourceIds, $csvFile, $startedBy);
+    }
+
+    /**
+     * Import records that were fetched OUTSIDE this server (the weekly external
+     * routine posts them to /api/import/). Exactly the same validation, Texas
+     * check, dedupe, lock and review rules apply as for a local fetch. When the
+     * routine reports that fetching failed, the source is marked failed and its
+     * existing events are left untouched.
+     */
+    public static function runPushed(int $sourceId, ?array $records, ?string $error, string $startedBy = 'external routine'): array
+    {
+        $imp = new self();
+        $imp->pushed = $error !== null ? ['error' => $error] : ['records' => $records ?? []];
+        return $imp->execute('routine', 'single', [$sourceId], null, $startedBy);
     }
 
     public static function lockFile(): string
@@ -84,9 +100,9 @@ final class Importer
             if ($sourceIds !== null) {
                 $sql = 'SELECT * FROM sources WHERE id IN ' . Db::in('s', $sourceIds, $params);
             } elseif ($mode === 'daily') {
-                $sql = "SELECT * FROM sources WHERE enabled = 1 AND daily_check = 1 AND adapter <> 'csv' AND access_status = 'active'";
+                $sql = "SELECT * FROM sources WHERE enabled = 1 AND daily_check = 1 AND adapter NOT IN ('csv', 'push') AND access_status = 'active'";
             } else {
-                $sql = "SELECT * FROM sources WHERE enabled = 1 AND adapter <> 'csv' AND access_status = 'active'";
+                $sql = "SELECT * FROM sources WHERE enabled = 1 AND adapter NOT IN ('csv', 'push') AND access_status = 'active'";
             }
             $sources = Db::all($sql . ' ORDER BY id', $params);
             if (!$sources) {
@@ -157,6 +173,7 @@ final class Importer
             'ical'       => Adapters\IcalAdapter::class,
             'jsonld'     => Adapters\JsonLdAdapter::class,
             'csv'        => Adapters\CsvAdapter::class,
+            'push'       => Adapters\PushAdapter::class,
         ];
         $cls = $map[$src['adapter']] ?? null;
         if ($cls === null) {
@@ -172,6 +189,7 @@ final class Importer
             'ical'       => Adapters\IcalAdapter::describe(),
             'jsonld'     => Adapters\JsonLdAdapter::describe(),
             'csv'        => Adapters\CsvAdapter::describe(),
+            'push'       => Adapters\PushAdapter::describe(),
         ];
     }
 
@@ -193,7 +211,15 @@ final class Importer
         }
         Db::update('sources', ['last_run_at' => now_utc()], 'id = :id', ['id' => $sid]);
         try {
-            $records = $adapter->fetch();
+            if ($this->pushed !== null) {
+                if (isset($this->pushed['error'])) {
+                    throw new \RuntimeException('External routine could not fetch this source: ' . $this->pushed['error']);
+                }
+                $records = array_values(array_filter($this->pushed['records'], 'is_array'));
+                $this->log('info', count($records) . ' record(s) received from the external routine', [], $sid);
+            } else {
+                $records = $adapter->fetch();
+            }
         } catch (\Throwable $e) {
             $this->stats['sources_failed']++;
             $this->log('error', 'Source failed — existing events left unchanged: ' . $e->getMessage(), [], $sid);
