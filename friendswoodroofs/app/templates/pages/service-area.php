@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $geo = config('geo');
 $cities = (array) config('service_cities', ['Friendswood']);
 partial('page-hero', [

@@ -1,4 +1,5 @@
-<?php partial('page-hero', [
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+partial('page-hero', [
     'title'   => 'Privacy Policy',
     'lead'    => 'How the Friendswood Roofers website handles the information you share with us.',
     'actions' => false,

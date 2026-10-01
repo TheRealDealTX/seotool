@@ -77,8 +77,12 @@ These steps fit hPanel on shared, Cloud or Agency hosting.
 3. **Upload the files.** Pick one:
    - **File Manager (simplest):** run `tools/package.sh`, upload
      `dist/friendswoodroofs-public_html.zip` **into** `public_html` and extract it there.
-     The app ends up in `public_html/app/`, which the root `.htaccess` and `app/.htaccess`
-     block from the web (tested on Apache: every `/app/...` URL returns the 404 page).
+     The app ends up in `public_html/app/`. Hostinger's Agency platform **ignores
+     `.htaccess`** and serves files directly, so protection is done in PHP: every
+     file in `app/` starts with `defined('FR_APP') || exit;`, runtime data (secret,
+     rate-limit records, logs) is stored in `.php` files that exit on direct access,
+     and the zip contains no non-PHP files under `app/`. HTTPS and www→apex
+     redirects are handled in `app/src/router.php` for the same reason.
      Delete any default `index.html` or `default.php` Hostinger placed in `public_html`.
      Step-by-step: `UPLOAD-INSTRUCTIONS.txt`.
    - **If you can write next to `public_html`:** use `dist/friendswoodroofs-deploy.zip`
@@ -96,7 +100,8 @@ These steps fit hPanel on shared, Cloud or Agency hosting.
 5. **Create `app/config/mail.php`** (`public_html/app/config/mail.php` with the File Manager zip; see next section).
 6. **Check the site:** open `/`, `/sitemap.xml`, `/robots.txt`, a missing page (should show the
    custom 404 with status 404), then submit a test estimate request.
-7. **Search Console:** add the domain property and submit `https://friendswoodroofs.com/sitemap.xml`.
+7. **Purge Hostinger's cache/CDN** after every upload (hPanel → Performance/Cache), or visitors may see an old cached page.
+8. **Search Console:** add the domain property and submit `https://friendswoodroofs.com/sitemap.xml`.
 
 If you see "Site configuration error: the 'app' folder was not found", the `app`
 folder is not in either expected location.

@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * Estimate request form. Works as a normal POST without JavaScript; site.js
  * enhances it with inline validation and an in-page submit.

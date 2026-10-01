@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 return [
 'body' => <<<'HTML'
 <p class="article-lead">During a roof inspection in Friendswood, a roofer checks the roof surface, flashing, vents, edges and drainage, looks in the attic when it is accessible, and documents what they find with photos. Afterward you should get a plain-language explanation of the roof's condition and, if work is needed, a written estimate. You should not have to go on the roof yourself, and you should not feel pressured to commit to anything on the spot.</p>

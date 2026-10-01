@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * SMTP settings for the estimate form. COPY this file to mail.php in the same
  * folder and fill in the real values. mail.php is never committed to git and

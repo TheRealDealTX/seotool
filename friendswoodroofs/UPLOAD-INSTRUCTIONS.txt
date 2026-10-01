@@ -2,37 +2,48 @@ FRIENDSWOOD ROOFERS - MANUAL UPLOAD (Hostinger hPanel File Manager)
 ====================================================================
 
 Use friendswoodroofs-public_html.zip. Everything goes INSIDE public_html.
+(This Hostinger platform serves files directly and ignores .htaccess, so the
+private "app" folder is protected in PHP instead: every file in it exits
+immediately if requested from a browser.)
 
-1. hPanel > friendswoodroofs.com website > Files > File Manager > open public_html.
-   Delete Hostinger's default files there (default.php / index.html), if any.
+FIRST UPLOAD
+1. hPanel > friendswoodroofs.com > Files > File Manager > open public_html.
+   Delete Hostinger's default files (default.php / index.html), if any.
+2. Upload friendswoodroofs-public_html.zip into public_html and Extract it
+   there (current folder, not a new subfolder). Then delete the zip.
+   You should see public_html/index.php, public_html/assets/, public_html/app/.
 
-2. Upload friendswoodroofs-public_html.zip into public_html and Extract it there
-   (extract to the current folder, not into a new subfolder). You should see:
-       public_html/index.php
-       public_html/.htaccess        (hidden file - must be present)
-       public_html/assets/
-       public_html/app/             (private code; blocked from the web)
-   Then delete the zip file.
-   Tip: if .htaccess isn't visible, turn on "Show hidden files" in File Manager.
+UPDATING AN EXISTING UPLOAD
+1. Upload the new zip into public_html and Extract with "overwrite" / replace.
+   Your app/config/mail.php is NOT in the zip, so it is kept.
+2. Delete these leftovers from older uploads if they exist (they are readable
+   from the web and no longer needed):
+     public_html/app/composer.json
+     public_html/app/composer.lock
+     public_html/app/docs/                      (whole folder)
+     public_html/app/storage/secret.key
+     public_html/app/vendor/composer/installed.json
+     public_html/app/vendor/phpmailer/phpmailer/README.md
+     public_html/app/vendor/phpmailer/phpmailer/SECURITY.md
+     public_html/app/vendor/phpmailer/phpmailer/VERSION
+     public_html/app/vendor/phpmailer/phpmailer/composer.json
+     public_html/app/vendor/phpmailer/phpmailer/LICENSE
+     any *.log or *.json files in public_html/app/storage/logs and .../ratelimit
+   Also delete public_html/README.md, public_html/UPLOAD-INSTRUCTIONS.txt or a
+   nested public_html/public_html/ folder if an earlier zip created them.
 
-3. hPanel > Advanced > PHP Configuration: PHP 8.1 or newer (8.2/8.3 recommended).
-   hPanel > Security > SSL: make sure SSL is active.
-
-4. EMAIL (needed for the estimate form to deliver to teamwriteforus.today@gmail.com):
-   a. hPanel > Emails: create a mailbox, e.g. estimates@friendswoodroofs.com
+ALWAYS
+3. PURGE THE CACHE: hPanel > friendswoodroofs.com > Performance (or Cache /
+   CDN) > Purge all / Clear cache. The CDN may still be serving the old
+   WordPress homepage at https://friendswoodroofs.com/ until you do this.
+4. PHP 8.1 or newer (Advanced > PHP Configuration). SSL active (Security > SSL).
+5. EMAIL (estimate form -> teamwriteforus.today@gmail.com):
+   a. Emails: create a mailbox, e.g. estimates@friendswoodroofs.com
    b. File Manager: public_html/app/config/ -> copy mail.example.php to mail.php,
-      edit mail.php: set username and from_email to that mailbox, password to its password.
-   c. hPanel > Emails > DNS / Authentication: enable SPF and DKIM, add DMARC.
-   Until mail.php exists, the form tells visitors the request could not be sent
-   and asks them to call (no false success).
-
-5. Check in a browser:
-   https://friendswoodroofs.com/            home page
-   https://friendswoodroofs.com/sitemap.xml
-   https://friendswoodroofs.com/app/config/site.php   -> must show the "page not found" page
-   then send a test estimate request.
-
-6. Optional: article launch date = "launch_date" in public_html/app/config/site.php.
-
-Security note: public_html/app is protected by two .htaccess rules (the main
-.htaccess and app/.htaccess). This was tested on Apache; do not delete either file.
+      set username and from_email to the mailbox and password to its password.
+   c. Emails > DNS / Authentication: enable SPF and DKIM, add DMARC.
+6. Check in a browser (use a private window):
+   https://friendswoodroofs.com/                      new homepage
+   https://www.friendswoodroofs.com/                  redirects to the line above
+   https://friendswoodroofs.com/app/config/mail.php   must be a BLANK page
+   then send a test estimate request and confirm it arrives in Gmail.

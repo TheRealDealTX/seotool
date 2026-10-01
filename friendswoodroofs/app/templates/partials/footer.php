@@ -1,3 +1,4 @@
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess) ?>
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">

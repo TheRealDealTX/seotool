@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $questions = require FR_APP . '/content/planner.php';
 
 // Server-side summary (used when JavaScript is unavailable).

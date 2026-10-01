@@ -1,3 +1,4 @@
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess) ?>
 <section class="page-hero page-hero--center">
   <div class="container narrow page-hero-inner">
     <p class="eyebrow eyebrow--light">Error 404</p>

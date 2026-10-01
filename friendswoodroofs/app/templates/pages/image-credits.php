@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $images = require FR_APP . '/content/images.php';
 partial('page-hero', [
     'title'   => 'Image Credits',

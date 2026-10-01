@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 use PHPMailer\PHPMailer\Exception as MailException;
 use PHPMailer\PHPMailer\PHPMailer;
 

@@ -1,4 +1,5 @@
-<?php partial('page-hero', [
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+partial('page-hero', [
     'eyebrow' => 'What we do',
     'title'   => 'Roofing Services in Friendswood, TX',
     'lead'    => 'Residential roofing services for Friendswood homeowners, each starting with a careful assessment and a written estimate.',

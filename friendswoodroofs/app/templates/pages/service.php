@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $page */
 $s = $page['service'];
 partial('page-hero', ['eyebrow' => 'Roofing services', 'title' => $s['h1'], 'lead' => '', 'service' => $s['slug']]);

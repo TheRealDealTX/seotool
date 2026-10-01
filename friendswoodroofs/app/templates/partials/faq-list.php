@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $items list of [question, answer]  @var string $headingLevel */
 $headingLevel ??= 'h3';
 ?>

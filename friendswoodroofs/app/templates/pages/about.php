@@ -1,4 +1,5 @@
-<?php partial('page-hero', [
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+partial('page-hero', [
     'eyebrow' => 'About us',
     'title'   => 'About Friendswood Roofers',
     'lead'    => 'Friendswood Roofers is a roofing company focused on one thing: helping Friendswood homeowners make sound, well-informed decisions about their roofs.',

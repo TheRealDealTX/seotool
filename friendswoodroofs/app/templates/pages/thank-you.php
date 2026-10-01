@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $sent = !empty($_SESSION['estimate_sent']);
 unset($_SESSION['estimate_sent']);
 ?>

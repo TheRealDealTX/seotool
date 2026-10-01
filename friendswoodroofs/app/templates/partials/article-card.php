@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $a article  @var string $headingLevel */
 $headingLevel ??= 'h3';
 $hidden ??= false;

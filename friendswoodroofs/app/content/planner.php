@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * Roofing Project Planner questions. Used by templates/pages/planner.php for
  * both the server-rendered summary (no JavaScript) and, via data attributes,

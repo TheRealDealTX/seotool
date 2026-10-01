@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array|null $only list of slugs to show (default all)  @var string $headingLevel */
 $only ??= null;
 $headingLevel ??= 'h3';

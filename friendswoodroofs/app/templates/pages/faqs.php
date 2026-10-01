@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $groups = faq_groups();
 partial('page-hero', [
     'eyebrow' => 'FAQs',

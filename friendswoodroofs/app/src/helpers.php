@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 /** Escape for HTML text and attribute context. */
 function e(?string $value): string
 {

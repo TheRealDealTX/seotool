@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 return [
 'body' => <<<'HTML'
 <p class="article-lead">For most Friendswood homes, asphalt shingles are the lower-cost, widely familiar option, while metal roofing costs more upfront but is often chosen for durability, wind performance and a longer expected service life. Neither is automatically better. The right choice depends on your budget, how long you plan to stay, the look you want and your home's roof design.</p>

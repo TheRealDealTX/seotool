@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $cats = article_categories();
 // Server-side filter so category links work without JavaScript.
 $active = isset($_GET['category']) && is_string($_GET['category']) && isset($cats[$_GET['category']]) ? $_GET['category'] : 'all';

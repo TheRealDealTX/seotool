@@ -1,4 +1,5 @@
-<?php /** @var array $trail list of [label, path] */ ?>
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+/** @var array $trail list of [label, path] */ ?>
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <div class="container">
     <ol>

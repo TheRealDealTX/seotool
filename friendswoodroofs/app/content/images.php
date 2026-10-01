@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * Photo registry. Every photo is an openly licensed image from Wikimedia
  * Commons, cropped to 3:2 and resized to 480/960/1600px WebP. These are

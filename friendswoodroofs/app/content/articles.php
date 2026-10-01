@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * Blog articles. Each renders at /blog/{slug}/ with its body from
  * content/articles/{slug}.php.

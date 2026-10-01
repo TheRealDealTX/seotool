@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 return [
 'body' => <<<'HTML'
 <p class="article-lead">The best way to choose among Friendswood roofers is to compare them on evidence, not on who knocks first or promises the most. Get at least two or three written estimates, ask each contractor the same questions, confirm insurance and local presence, and be wary of anyone who pressures you to sign quickly, especially right after a storm.</p>

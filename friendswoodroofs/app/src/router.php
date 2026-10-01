@@ -1,8 +1,22 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 function dispatch(string $path, string $method): void
 {
+    // Canonical scheme and host. Done here because the Hostinger platform
+    // ignores .htaccess. Only applies to the production host names.
+    $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+    $prodHost = (string) parse_url((string) config('base_url'), PHP_URL_HOST);
+    if ($host === $prodHost || $host === 'www.' . $prodHost) {
+        $insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? (is_https() ? 'https' : 'http')) === 'http';
+        if ($insecure || $host !== $prodHost) {
+            redirect(rtrim((string) config('base_url'), '/') . ($_SERVER['REQUEST_URI'] ?? '/'));
+            return;
+        }
+    }
+
     // Collapse duplicate slashes and normalise /index.php to /
     $clean = (string) preg_replace('#/+#', '/', $path);
     if ($clean === '/index.php') {

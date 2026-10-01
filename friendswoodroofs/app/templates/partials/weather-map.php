@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /*
  * Live RainViewer radar embed centered on Friendswood, TX.
  * RainViewer's terms allow embedding its live radar maps provided the

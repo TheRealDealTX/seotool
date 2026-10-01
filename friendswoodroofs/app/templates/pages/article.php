@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $page */
 $a = $page['article'];
 $c = article_content($a['slug']);

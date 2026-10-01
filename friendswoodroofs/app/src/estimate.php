@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 /** Pages that host the estimate form; used to validate the return path. */
 const FORM_PAGES = ['/', '/contact/', '/roofing-project-planner/'];
 

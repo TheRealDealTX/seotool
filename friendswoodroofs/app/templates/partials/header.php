@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $page */
 $current = $page['path'];
 $isCurrent = fn (string $p) => $current === $p ? ' aria-current="page"' : '';

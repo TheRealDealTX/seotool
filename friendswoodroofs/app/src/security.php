@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 function is_https(): bool
 {
     return (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
@@ -60,20 +62,24 @@ function csrf_valid(?string $token): bool
     return is_string($token) && !empty($_SESSION['csrf']) && hash_equals((string) $_SESSION['csrf'], $token);
 }
 
-/** Persistent random secret used for signing and hashing (auto-created). */
+/**
+ * Persistent random secret used for signing and hashing (auto-created).
+ * Stored as a .php file that exits immediately, because the host serves
+ * files directly and ignores .htaccess.
+ */
 function app_secret(): string
 {
     static $secret = null;
     if ($secret !== null) {
         return $secret;
     }
-    $file = FR_APP . '/storage/secret.key';
+    $file = storage_dir('') . '/secret.php';
     if (is_file($file)) {
-        $secret = trim((string) file_get_contents($file));
+        $secret = (string) (include $file);
     }
-    if (empty($secret)) {
+    if (!is_string($secret) || strlen($secret) < 32) {
         $secret = bin2hex(random_bytes(32));
-        @file_put_contents($file, $secret, LOCK_EX);
+        @file_put_contents($file, "<?php\ndefined('FR_APP') || exit;\nreturn '" . $secret . "';\n", LOCK_EX);
         @chmod($file, 0600);
     }
     return $secret;
@@ -98,9 +104,12 @@ function form_age(?string $token): ?int
     return time() - (int) $m[1];
 }
 
+/** First line of every runtime data file: makes a direct web request output nothing. */
+const STORAGE_GUARD = "<?php exit; ?>\n";
+
 function storage_dir(string $sub): string
 {
-    $dir = FR_APP . '/storage/' . $sub;
+    $dir = rtrim(FR_APP . '/storage/' . $sub, '/');
     if (!is_dir($dir)) {
         @mkdir($dir, 0700, true);
     }
@@ -120,14 +129,15 @@ function storage_dir(string $sub): string
 function rate_limit_allow(string $action, int $max, int $windowSeconds): bool
 {
     $key  = hash('sha256', $action . '|' . client_ip() . '|' . app_secret());
-    $file = storage_dir('ratelimit') . '/' . $key . '.json';
+    $file = storage_dir('ratelimit') . '/' . $key . '.php';
     $fh = @fopen($file, 'c+');
     if (!$fh) {
         return true; // fail open rather than block real customers
     }
     flock($fh, LOCK_EX);
     $now  = time();
-    $hits = json_decode((string) stream_get_contents($fh), true);
+    $raw  = (string) stream_get_contents($fh);
+    $hits = json_decode(str_starts_with($raw, STORAGE_GUARD) ? substr($raw, strlen(STORAGE_GUARD)) : $raw, true);
     $hits = array_values(array_filter(is_array($hits) ? $hits : [], fn ($t) => is_int($t) && $t > $now - $windowSeconds));
     $allowed = count($hits) < $max;
     if ($allowed) {
@@ -135,13 +145,13 @@ function rate_limit_allow(string $action, int $max, int $windowSeconds): bool
     }
     ftruncate($fh, 0);
     rewind($fh);
-    fwrite($fh, json_encode($hits));
+    fwrite($fh, STORAGE_GUARD . json_encode($hits));
     flock($fh, LOCK_UN);
     fclose($fh);
 
     // Occasionally prune stale files.
     if (random_int(1, 50) === 1) {
-        foreach (glob(dirname($file) . '/*.json') ?: [] as $f) {
+        foreach (glob(dirname($file) . '/*.php') ?: [] as $f) {
             if (filemtime($f) < $now - 86400) {
                 @unlink($f);
             }
@@ -171,6 +181,7 @@ function clean_text(mixed $value, int $max): string
 
 function app_log(string $channel, string $message): void
 {
+    $file = storage_dir('logs') . '/' . $channel . '.log.php';
     $line = '[' . date('c') . '] ' . $message . "\n";
-    @file_put_contents(storage_dir('logs') . '/' . $channel . '.log', $line, FILE_APPEND | LOCK_EX);
+    @file_put_contents($file, (is_file($file) ? '' : STORAGE_GUARD) . $line, FILE_APPEND | LOCK_EX);
 }

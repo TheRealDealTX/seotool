@@ -1,4 +1,5 @@
-<?php partial('page-hero', [
+<?php defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+partial('page-hero', [
     'eyebrow' => 'Contact us',
     'title'   => 'Contact Friendswood Roofers',
     'lead'    => 'Call us or send an estimate request. Tell us what is going on with your roof and we will follow up to talk it through.',

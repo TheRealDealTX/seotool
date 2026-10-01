@@ -1,0 +1,12 @@
+/* Loaded only when JavaScript is off (<noscript> in the page head).
+   Keeps the navigation usable without the menu script. */
+.has-sub:hover .sub-menu,
+.has-sub:focus-within .sub-menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+
+@media (max-width: 1279px) {
+  .site-header { position: relative; }
+  .header-inner { flex-wrap: wrap; }
+  .nav-toggle { display: none; }
+  .site-nav { position: static; visibility: visible; opacity: 1; transform: none; width: 100%; padding: 0 0 16px; border-top: 0; }
+  .has-sub .sub-menu { display: block; }
+}

@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 return [
 'body' => <<<'HTML'
 <p class="article-lead">If the damage is limited to one area and the rest of the roof is in good shape, a repair is usually the sensible choice. If problems are spread across the roof, leaks keep returning in different places, or the decking underneath is failing, replacement is usually the better long-term value. An inspection of the whole roof, not just the obvious problem spot, is what tells you which situation you are in.</p>

@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 /*
  * Application bootstrap. Called from public_html/index.php after it has
  * defined FR_APP (this folder) and FR_PUBLIC (the web root).
@@ -13,8 +15,14 @@ if (PHP_VERSION_ID < 80100) {
 
 ini_set('display_errors', '0');
 ini_set('log_errors', '1');
-if (is_dir(FR_APP . '/storage/logs') && is_writable(FR_APP . '/storage/logs')) {
-    ini_set('error_log', FR_APP . '/storage/logs/php-error.log');
+// PHP error log lives in a .php file whose first line exits, so it can't be
+// read over the web (the host serves files directly and ignores .htaccess).
+$frErrorLog = FR_APP . '/storage/logs/php-error.log.php';
+if (is_dir(dirname($frErrorLog)) && is_writable(dirname($frErrorLog))) {
+    if (!is_file($frErrorLog)) {
+        @file_put_contents($frErrorLog, "<?php exit; ?>\n");
+    }
+    ini_set('error_log', $frErrorLog);
 }
 error_reporting(E_ALL);
 

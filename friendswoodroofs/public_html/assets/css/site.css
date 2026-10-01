@@ -140,9 +140,7 @@ code { font-size: .9em; background: var(--slate-100); padding: .1em .35em; borde
 .sub-menu li + li { margin-top: 0; }
 .sub-menu a { display: block; padding: .55em .8em; border-radius: var(--radius-sm); color: var(--slate-900); text-decoration: none; font-weight: 600; font-size: .95rem; }
 .sub-menu a:hover, .sub-menu a[aria-current="page"] { background: var(--slate-100); color: var(--navy); }
-.has-sub.is-open .sub-menu,
-.no-js .has-sub:hover .sub-menu,
-.no-js .has-sub:focus-within .sub-menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.has-sub.is-open .sub-menu { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
 .nav-actions { display: flex; align-items: center; gap: 10px; }
 .btn-call { padding-left: 1em; padding-right: 1em; }
 
@@ -186,16 +184,10 @@ code { font-size: .9em; background: var(--slate-100); padding: .1em .35em; borde
   .sub-toggle { width: 48px; height: 48px; }
   .sub-menu { position: static; display: none; width: 100%; min-width: 0; box-shadow: none; border: 0; padding: 0 0 10px 10px; opacity: 1; visibility: visible; transform: none; }
   .has-sub.is-open .sub-menu { display: block; }
-  .no-js .has-sub .sub-menu { display: block; }
   .nav-actions { flex-direction: column; align-items: stretch; margin-top: 18px; gap: 12px; }
   .nav-actions .btn { min-height: 52px; }
   body.nav-open { overflow: hidden; }
-
-  /* Without JavaScript the menu is simply shown below the header. */
-  .no-js .site-header { position: relative; }
-  .no-js .header-inner { flex-wrap: wrap; }
-  .no-js .nav-toggle { display: none; }
-  .no-js .site-nav { position: static; visibility: visible; opacity: 1; transform: none; width: 100%; padding: 0 0 16px; border-top: 0; }
+  /* No-JavaScript layout: assets/css/nojs.css (loaded in <noscript>). */
 }
 @media (max-width: 420px) {
   .brand-name { font-size: 1.02rem; }

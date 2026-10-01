@@ -1,5 +1,6 @@
 # Secrets and runtime data - never commit
 app/config/mail.php
+app/storage/secret.php
 app/storage/secret.key
 app/storage/logs/*
 !app/storage/logs/.gitkeep

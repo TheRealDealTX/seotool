@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var array $page  @var string $content */
 $isHome    = $page['path'] === '/';
 $noindex   = !empty($page['noindex']) || !config('indexable', true);
@@ -49,6 +50,7 @@ $hasForm   = !empty($page['form']) && $page['template'] !== 'thank-you';
 <link rel="preload" as="image" href="/assets/img/hero-roofing-crew-960.webp" imagesrcset="/assets/img/hero-roofing-crew-480.webp 480w, /assets/img/hero-roofing-crew-960.webp 960w, /assets/img/hero-roofing-crew-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
 <?php endif; ?>
 <link rel="stylesheet" href="<?= e(asset('assets/css/site.css')) ?>">
+<noscript><link rel="stylesheet" href="<?= e(asset('assets/css/nojs.css')) ?>"></noscript>
 <script src="<?= e(asset('assets/js/site.js')) ?>" defer></script>
 <?= json_ld($page['schema'] ?? []) ?>
 </head>

@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * FAQ page content, grouped by topic. Items marked 'home' => true also appear
  * on the homepage.

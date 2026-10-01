@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 return [
 'body' => <<<'HTML'
 <p class="article-lead">A simple roof maintenance routine in Friendswood comes down to four habits: look at your roof from the ground every season, check the attic for moisture, keep gutters and valleys draining, and schedule a professional check before hurricane season and after major storms. You do not need to climb onto the roof to do any of the homeowner steps below.</p>

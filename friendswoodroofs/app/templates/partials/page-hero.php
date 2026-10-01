@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var string $title  @var string $lead  @var string $eyebrow  @var bool $actions */
 $eyebrow ??= '';
 $actions ??= true;

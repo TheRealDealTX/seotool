@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
+
 /**
  * Structured data. Only verified business details are used: name, website,
  * phone and the city served. No street address, ratings, reviews,

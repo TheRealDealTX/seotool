@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
  * Service pages. Each entry renders at /services/{slug}/ through
  * templates/pages/service.php. Copy is factual and avoids promises about

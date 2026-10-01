@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /** @var string $title  @var string $text  @var string $service optional service slug to prefill */
 $title ??= 'Ready to talk about your roof?';
 $text  ??= 'Tell us what you are seeing and we will explain your options in plain language, with a written estimate before any work begins.';

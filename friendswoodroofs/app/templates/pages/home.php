@@ -1,4 +1,5 @@
 <?php
+defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 $geo = config('geo');
 $latest = array_slice(articles(), 0, 3, true);
 ?>
