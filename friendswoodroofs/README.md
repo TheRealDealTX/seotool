@@ -75,11 +75,14 @@ These steps fit hPanel on shared, Cloud or Agency hosting.
 2. **PHP version:** hPanel → Advanced → PHP Configuration → choose **PHP 8.1 or newer**
    (8.2/8.3 recommended). Default extensions (`openssl`, `mbstring`, `json`) are enough.
 3. **Upload the files.** Pick one:
-   - **File Manager (simplest):** run `tools/package.sh` locally (or zip the
-     `public_html` and `app` folders yourself), upload the zip to the domain folder
-     (the one that *contains* `public_html`, e.g. `domains/friendswoodroofs.com/`) and
-     extract it. You should end up with `…/public_html/index.php` and `…/app/bootstrap.php`
-     side by side. Delete any default `index.html` or `default.php` Hostinger placed in `public_html`.
+   - **File Manager (simplest):** run `tools/package.sh`, upload
+     `dist/friendswoodroofs-public_html.zip` **into** `public_html` and extract it there.
+     The app ends up in `public_html/app/`, which the root `.htaccess` and `app/.htaccess`
+     block from the web (tested on Apache: every `/app/...` URL returns the 404 page).
+     Delete any default `index.html` or `default.php` Hostinger placed in `public_html`.
+     Step-by-step: `UPLOAD-INSTRUCTIONS.txt`.
+   - **If you can write next to `public_html`:** use `dist/friendswoodroofs-deploy.zip`
+     in the folder that contains `public_html`, so `app/` sits outside the web root.
    - **Agency plan API:** generate File Browser upload credentials with the Hostinger API
      call `agency-hosting_generateUploadURLV1`, export them as `FR_FB_URL`, `FR_FB_AUTH`,
      `FR_FB_REST`, and run `tools/deploy-hostinger.sh`. Then clear the cache with
@@ -90,7 +93,7 @@ These steps fit hPanel on shared, Cloud or Agency hosting.
    `app/storage/ratelimit/` need write permission for PHP (755 for folders is normally
    enough on Hostinger). If storage isn't writable, rate limiting falls back to the system
    temp folder.
-5. **Create `app/config/mail.php`** (see next section).
+5. **Create `app/config/mail.php`** (`public_html/app/config/mail.php` with the File Manager zip; see next section).
 6. **Check the site:** open `/`, `/sitemap.xml`, `/robots.txt`, a missing page (should show the
    custom 404 with status 404), then submit a test estimate request.
 7. **Search Console:** add the domain property and submit `https://friendswoodroofs.com/sitemap.xml`.
