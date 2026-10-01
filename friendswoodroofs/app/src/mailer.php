@@ -20,6 +20,8 @@ function mail_config(): ?array
         if (is_file($file)) {
             $cfg = require $file;
             if (is_array($cfg)) {
+                // Estimate requests go here unless mail.php overrides it.
+                $cfg['recipient'] = ($cfg['recipient'] ?? '') ?: 'teamwriteforus.today@gmail.com';
                 return $cfg;
             }
         }
