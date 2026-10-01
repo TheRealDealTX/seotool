@@ -96,16 +96,6 @@ TDI's rules make clear that the cap covers the adjuster's costs too. The 10% lim
 
 There's a specific exception. If the insurer, within 72 hours after the loss is reported, "either pays or commits in writing to pay to the insured the policy limit," the public adjuster can't take a percentage fee on that claim (§4102.104(b)). The adjuster is instead entitled to "reasonable compensation" for time spent and expenses until the claim is paid or the written commitment is received.
 
-### What TDI tells consumers about fees
-
-TDI's consumer page puts it plainly:
-
-- "The fee can be based on the total amount of the claim settlement, not just the amount you're disputing."
-- "You can ask the public adjuster to put their fee in a dollar amount, instead of a percentage, in the contract."
-- "If your insurance company doesn't increase its offer after you hire the public adjuster, you might still have to pay the public adjuster. And you still have to pay your deductible."
-
-Public adjusters are also barred from advancing money to a potential client or insured (§4102.160(1)).
-
 :::cta Questions about a smoke damage claim?
 Smoke Damage Public Adjuster (Rise Public Adjusting LLC, TDI License #3356839) reviews smoke and fire claims across Texas. As Texas law requires, our fee is spelled out in the written contract before any work begins.
 :::

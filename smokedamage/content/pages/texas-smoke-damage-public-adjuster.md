@@ -187,7 +187,7 @@ You choose your own contractors. If your claim involves legal questions, an atto
 
 Our fee is typically a contingency fee tied to the claim payment. The fee and terms are set in a written contract that you review before signing, and Texas regulates public adjuster contracts and compensation.
 
-Under Texas Insurance Code §4102.104, a public adjuster may be paid by an hourly fee, a flat rate, a percentage of the amount paid, or another method, and "the total commission received may not exceed 10 percent of the amount of the insurance settlement on the claim." TDI's rules state that this limit includes the adjuster's expenses and costs. TDI also notes that the fee can be based on the total settlement, not just the disputed amount, and that you can ask for the fee to be stated in dollars instead of a percentage.
+Under Texas Insurance Code §4102.104, a public adjuster may be paid by an hourly fee, a flat rate, a percentage of the amount paid, or another method, and "the total commission received may not exceed 10 percent of the amount of the insurance settlement on the claim." TDI's rules state that this limit includes the adjuster's expenses and costs.
 
 Texas law requires public adjuster contracts to allow the client to cancel by written notice within 72 hours of signing. TDI's consumer page on [public adjusters](https://www.tdi.texas.gov/tips/public-adjusters.html) explains fees and contracts from the consumer's perspective, and we encourage you to read it.
 

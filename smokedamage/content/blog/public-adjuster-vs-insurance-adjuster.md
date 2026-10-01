@@ -105,7 +105,7 @@ A Texas public adjuster must have a written contract, on a form approved by the 
 
 ### Fees
 
-A Texas public adjuster's total commission may not exceed 10 percent of the insurance settlement on the claim. TDI's rules include the adjuster's expenses and costs within that cap. Fees may be hourly, flat, a percentage, or another method. TDI also points out that the fee can be based on the total settlement, not just the disputed amount, and that you might still owe a fee if the insurer's offer doesn't increase. TDI encourages consumers to ask what the adjuster charges and notes that you can try to negotiate a lower fee.
+A Texas public adjuster's total commission may not exceed 10 percent of the insurance settlement on the claim. TDI's rules include the adjuster's expenses and costs within that cap. Fees may be hourly, flat, a percentage, or another method. TDI encourages consumers to ask what the adjuster charges and notes that you can try to negotiate a lower fee.
 
 ### Limits on what public adjusters can do
 
