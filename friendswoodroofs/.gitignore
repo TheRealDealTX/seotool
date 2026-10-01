@@ -7,3 +7,4 @@ app/storage/logs/*
 app/storage/ratelimit/*
 !app/storage/ratelimit/.gitkeep
 dist/
+app/storage/lscache-purged-*.php

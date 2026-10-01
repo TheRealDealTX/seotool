@@ -19,6 +19,21 @@ function send_security_headers(): void
     header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; "
         . "frame-src {$frame}; connect-src 'self'; font-src 'self'; form-action 'self'; base-uri 'self'; "
         . "frame-ancestors 'self'; object-src 'none'");
+    // The host runs LiteSpeed, which still had full-page cache entries from the
+    // old WordPress install (e.g. the homepage). Never let LiteSpeed cache our
+    // pages, and purge its cache once after every upload (the marker file name
+    // changes whenever the app code is re-uploaded).
+    header('X-LiteSpeed-Cache-Control: no-cache');
+    $marker = storage_dir('') . '/lscache-purged-' . (int) @filemtime(FR_APP . '/src/router.php') . '.php';
+    if (!is_file($marker)) {
+        header('X-LiteSpeed-Purge: *');
+        @file_put_contents($marker, STORAGE_GUARD);
+        foreach (glob(storage_dir('') . '/lscache-purged-*.php') ?: [] as $old) {
+            if ($old !== $marker) {
+                @unlink($old);
+            }
+        }
+    }
     header('X-Content-Type-Options: nosniff');
     header('Referrer-Policy: strict-origin-when-cross-origin');
     header('X-Frame-Options: SAMEORIGIN');
