@@ -18,7 +18,6 @@ partial('page-hero', ['eyebrow' => 'Roofing services', 'title' => $s['h1'], 'lea
     </div>
     <figure class="split-media" data-reveal>
       <?= photo($s['image'], '(min-width: 900px) 45vw, 100vw', true) ?>
-      <figcaption><?= photo_credit($s['image']) ?></figcaption>
     </figure>
   </div>
 </section>

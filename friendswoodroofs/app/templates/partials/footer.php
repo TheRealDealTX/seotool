@@ -39,14 +39,12 @@
       <ul class="footer-links">
         <li><a href="/privacy-policy/">Privacy Policy</a></li>
         <li><a href="/terms-of-use/">Terms of Use</a></li>
-        <li><a href="/image-credits/">Image Credits</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="container">
       <p>&copy; <?= date('Y') ?> Friendswood Roofers. Serving homeowners in Friendswood, TX.</p>
-      <p>Photos on this site are illustrative stock images, not company projects.</p>
     </div>
   </div>
 </footer>

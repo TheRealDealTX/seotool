@@ -31,8 +31,7 @@ $latest = array_slice(articles(), 0, 3, true);
       <p><a class="link-arrow" href="/about/">How we approach every roof <?= icon('arrow', 'icon icon-sm') ?></a></p>
     </div>
     <figure class="split-media" data-reveal>
-      <?= photo('asphalt-shingles-closeup', '(min-width: 900px) 45vw, 100vw') ?>
-      <figcaption><?= photo_credit('asphalt-shingles-closeup') ?></figcaption>
+      <?= photo('roofing-crew-installation', '(min-width: 900px) 45vw, 100vw') ?>
     </figure>
   </div>
 </section>
@@ -94,7 +93,7 @@ $latest = array_slice(articles(), 0, 3, true);
     </div>
     <div class="material-grid">
       <article class="card material-card" data-reveal>
-        <div class="card-media"><?= photo('asphalt-shingles-closeup', '(min-width: 900px) 30vw, 100vw') ?></div>
+        <div class="card-media"><?= photo('hero-roofing-crew', '(min-width: 900px) 30vw, 100vw') ?></div>
         <div class="card-body">
           <h3>Asphalt shingles</h3>
           <p>The most common residential roofing material. Available as three-tab, dimensional (architectural) and impact-resistant products in many colors. Lower upfront cost and simple repairs.</p>

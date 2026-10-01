@@ -158,11 +158,6 @@ function page_meta(): array
             'title' => 'Terms of Use | Friendswood Roofers',
             'description' => 'Terms that apply to using the Friendswood Roofers website, its content, the Roofing Project Planner and the estimate request form.',
         ],
-        '/image-credits/' => [
-            'template' => 'image-credits', 'crumb' => 'Image Credits',
-            'title' => 'Image Credits | Friendswood Roofers',
-            'description' => 'Sources and licenses for the illustrative photos used on the Friendswood Roofers website.',
-        ],
         '/thank-you/' => [
             'template' => 'thank-you', 'crumb' => 'Request Received',
             'title' => 'Thank You | Friendswood Roofers',

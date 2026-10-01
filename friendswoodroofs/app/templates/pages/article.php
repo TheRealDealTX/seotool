@@ -25,7 +25,6 @@ $minutes = max(1, (int) round($words / 220));
   <div class="container narrow">
     <figure class="article-figure">
       <?= photo($a['image'], '(min-width: 820px) 760px, 100vw', true) ?>
-      <figcaption><?= photo_credit($a['image']) ?></figcaption>
     </figure>
 
     <div class="prose article-body">

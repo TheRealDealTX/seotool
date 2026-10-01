@@ -143,18 +143,6 @@ function image_info(string $key): ?array
     return $images[$key] ?? null;
 }
 
-/** Short credit line for a photo ("Photo: Name, CC BY 4.0"). */
-function photo_credit(string $key): string
-{
-    $img = image_info($key);
-    if (!$img) {
-        return '';
-    }
-    return 'Illustrative photo: ' . e($img['author']) . ', '
-        . ($img['license_url'] ? '<a href="' . e($img['license_url']) . '" rel="noopener license">' . e($img['license']) . '</a>' : e($img['license']))
-        . ' &middot; <a href="/image-credits/">Image credits</a>';
-}
-
 /** Current request path (no query string), always starting with "/". */
 function request_path(): string
 {

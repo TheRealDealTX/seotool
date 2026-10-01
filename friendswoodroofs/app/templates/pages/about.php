@@ -15,7 +15,6 @@ partial('page-hero', [
     </div>
     <figure class="split-media" data-reveal>
       <?= photo('roofing-crew-trucks', '(min-width: 900px) 45vw, 100vw') ?>
-      <figcaption><?= photo_credit('roofing-crew-trucks') ?></figcaption>
     </figure>
   </div>
 </section>

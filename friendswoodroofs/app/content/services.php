@@ -9,7 +9,7 @@ return [
     'roof-repair' => [
         'name'  => 'Roof Repair',
         'icon'  => 'wrench',
-        'image' => 'shingle-damage',
+        'image' => 'shingle-tear-off',
         'card'  => 'Leaks, missing or damaged shingles, flashing failures and other localized problems, assessed and repaired at the source.',
         'title' => 'Roof Repair in Friendswood, TX | Friendswood Roofers',
         'description' => 'Roof repair for Friendswood, TX homes: leaks, damaged shingles, flashing and vent problems. Learn the process and cost factors, then request an estimate.',
@@ -57,7 +57,7 @@ return [
     'roof-replacement' => [
         'name'  => 'Roof Replacement',
         'icon'  => 'home',
-        'image' => 'shingle-bundles-on-roof',
+        'image' => 'roofing-crew-installation',
         'card'  => 'Complete tear-off and new roof system when repairs no longer make sense, with clear options for materials and scope.',
         'title' => 'Roof Replacement in Friendswood, TX | Friendswood Roofers',
         'description' => 'Thinking about a new roof in Friendswood, TX? See what a full roof replacement includes, how the process works and what affects cost. Request an estimate.',
@@ -107,7 +107,7 @@ return [
     'roof-inspections' => [
         'name'  => 'Roof Inspections',
         'icon'  => 'search',
-        'image' => 'worn-shingles-eaves',
+        'image' => 'roof-inspection-team',
         'card'  => 'A documented look at your roof\'s condition, with photos and plain-language notes, before you decide on repairs or replacement.',
         'title' => 'Roof Inspections in Friendswood, TX | Friendswood Roofers',
         'description' => 'Book a roof inspection in Friendswood, TX. Learn what we check, how the visit works and what you receive afterward, then request an estimate.',
@@ -154,7 +154,7 @@ return [
     'storm-damage-roof-repair' => [
         'name'  => 'Storm Damage Roof Repair',
         'icon'  => 'storm',
-        'image' => 'wind-damaged-roof',
+        'image' => 'roof-damage-documentation',
         'card'  => 'Assessment and repair after wind, hail, falling limbs or tropical weather, with photo documentation you can keep.',
         'title' => 'Storm Damage Roof Repair in Friendswood, TX | Friendswood Roofers',
         'description' => 'Storm damage roof repair for Friendswood, TX homes after wind, hail or tropical weather. Learn what to do first, what we document and how repairs work.',
@@ -204,7 +204,7 @@ return [
     'asphalt-shingle-roofing' => [
         'name'  => 'Asphalt Shingle Roofing',
         'icon'  => 'layers',
-        'image' => 'asphalt-shingles-closeup',
+        'image' => 'hero-roofing-crew',
         'card'  => 'Installation and repair of the most common residential roofing material, with guidance on shingle types and roof system components.',
         'title' => 'Asphalt Shingle Roofing in Friendswood, TX | Friendswood Roofers',
         'description' => 'Asphalt shingle roof installation and repair in Friendswood, TX. Compare shingle types, see what a full shingle roof system includes and request an estimate.',

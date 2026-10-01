@@ -1,11 +1,10 @@
 <?php
 defined('FR_APP') || exit; // no direct web access (host ignores .htaccess)
 /**
- * Photo registry. Every photo is an openly licensed image from Wikimedia
- * Commons, cropped to 3:2 and resized to 480/960/1600px WebP. These are
- * illustrative stock photos, NOT Friendswood Roofers projects; captions and
- * the /image-credits/ page say so. Replace with the company's own photos
- * when available (keep the same file names and sizes, or add new keys).
+ * Photo registry. Every photo is public domain or CC0 (Wikimedia Commons),
+ * so no on-site credit is required. Source details are kept here for the
+ * record only and are not shown on the site. Cropped to 3:2, 480/960/1600px
+ * WebP. Replace with the company's own photos when available.
  */
 return [
     'hero-roofing-crew' => [
@@ -15,46 +14,6 @@ return [
         'author' => 'Win Henderson / FEMA',
         'license' => 'Public domain', 'license_url' => '',
         'source' => 'https://commons.wikimedia.org/wiki/File:FEMA_-_44364_-_Roof_repair_workers_in_Oklahoma.jpg',
-    ],
-    'shingle-damage' => [
-        'alt' => 'Close-up of asphalt shingles with torn and missing tabs',
-        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
-        'title' => 'Asphalt shingles damage',
-        'author' => 'Samuel Bolton',
-        'license' => 'CC BY-SA 4.0', 'license_url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-        'source' => 'https://commons.wikimedia.org/wiki/File:Asphalt_shingles_damage.jpg',
-    ],
-    'shingle-bundles-on-roof' => [
-        'alt' => 'Bundles of new shingles staged on a roof ridge above a gutter',
-        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
-        'title' => 'Shingles atop roof',
-        'author' => 'Joe Mabel',
-        'license' => 'CC BY 4.0', 'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
-        'source' => 'https://commons.wikimedia.org/wiki/File:Shingles_atop_roof.jpg',
-    ],
-    'worn-shingles-eaves' => [
-        'alt' => 'Aged asphalt shingles with curling edges and granule loss near the eaves',
-        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
-        'title' => 'Faster wear of asphalt shingles along eaves',
-        'author' => 'Dale Mahalko',
-        'license' => 'CC BY-SA 3.0', 'license_url' => 'https://creativecommons.org/licenses/by-sa/3.0/',
-        'source' => 'https://commons.wikimedia.org/wiki/File:Faster_wear_of_asphalt_shingles_along_eaves.JPG',
-    ],
-    'wind-damaged-roof' => [
-        'alt' => 'House roof with patches of shingles blown off by high wind',
-        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
-        'title' => 'WindDamageRoof',
-        'author' => 'Infrogmation',
-        'license' => 'CC BY-SA 2.5', 'license_url' => 'https://creativecommons.org/licenses/by-sa/2.5/',
-        'source' => 'https://commons.wikimedia.org/wiki/File:WindDamageRoof.jpg',
-    ],
-    'asphalt-shingles-closeup' => [
-        'alt' => 'Rows of gray architectural asphalt shingles on a residential roof',
-        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
-        'title' => 'Shingle Roof 1 2017-04-21',
-        'author' => 'FASTILY',
-        'license' => 'CC BY-SA 4.0', 'license_url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
-        'source' => 'https://commons.wikimedia.org/wiki/File:Shingle_Roof_1_2017-04-21.jpg',
     ],
     'standing-seam-metal-roof' => [
         'alt' => 'Aerial view of a single-story home with a gray standing seam metal roof',
@@ -87,5 +46,37 @@ return [
         'author' => 'USDA Forest Service, Northern Region',
         'license' => 'Public domain', 'license_url' => '',
         'source' => 'https://commons.wikimedia.org/wiki/File:Getting_a_new_roof_(5954796326).jpg',
+    ],
+    'shingle-tear-off' => [
+        'alt' => 'Two roofers removing old shingles from a house roof',
+        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
+        'title' => 'Roofing felt',
+        'author' => 'Wikimedia Commons',
+        'license' => 'Public domain', 'license_url' => '',
+        'source' => 'https://commons.wikimedia.org/wiki/File:Roofing_felt.jpg',
+    ],
+    'roofing-crew-installation' => [
+        'alt' => 'Roofing crew installing a new roof from scaffolding',
+        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
+        'title' => '17. Shingle and Gutter Installation.',
+        'author' => 'NPS photo',
+        'license' => 'Public domain', 'license_url' => '',
+        'source' => 'https://commons.wikimedia.org/wiki/File:17._Shingle_and_Gutter_Installation._(ae4c763d-b0e6-4a40-a84e-aefeb6c69e4f).jpg',
+    ],
+    'roof-damage-documentation' => [
+        'alt' => 'Inspector with a clipboard documenting damage on a roof after a storm',
+        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
+        'title' => 'FEMA - 44370 - FEMA PA officer documenting damages to a roof in OK',
+        'author' => 'FEMA',
+        'license' => 'Public domain', 'license_url' => '',
+        'source' => 'https://commons.wikimedia.org/wiki/File:FEMA_-_44370_-_FEMA_PA_officer_documenting_damages_to_a_roof_in_OK.jpg',
+    ],
+    'roof-inspection-team' => [
+        'alt' => 'Two people inspecting rooftop vents and equipment during a roof inspection',
+        'w' => 1600, 'h' => 1067, 'widths' => [480, 960, 1600],
+        'title' => 'FEMA - 44377 - Preliminary Damage Assessment partners on roof in OK',
+        'author' => 'FEMA',
+        'license' => 'Public domain', 'license_url' => '',
+        'source' => 'https://commons.wikimedia.org/wiki/File:FEMA_-_44377_-_Preliminary_Damage_Assessment_partners_on_roof_in_OK.jpg',
     ],
 ];

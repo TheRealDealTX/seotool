@@ -181,9 +181,10 @@ Use an existing article as a template.
 
 **Images:** register photos in `app/content/images.php` and provide
 `<key>-480.webp`, `<key>-960.webp` and `<key>-1600.webp` (3:2) in `public_html/assets/img/`.
-All current photos are openly licensed Wikimedia Commons images, credited on
-`/image-credits/` and captioned as illustrative. Replace them with your own project
-photos when you have them, and only caption a photo as your work if it is.
+All current photos are public domain or CC0 (Wikimedia Commons), so no on-site
+credit is required; their sources are recorded in `app/content/images.php` only.
+Replace them with your own project photos when you have them. If you ever add a
+CC BY / CC BY-SA photo, that license requires a visible credit.
 
 ## Publication dates
 
@@ -254,7 +255,7 @@ Please confirm or edit these items. They are business decisions or legal details
 6. **Terms of use:** governing law (Texas) and the limitation-of-liability wording. Consider a lawyer's review.
 7. **Windstorm/TWIA and permit notes** (service area, storm page, FAQs, articles): general guidance only.
    Confirm they match your experience.
-8. **Photos:** all are illustrative stock with credits. Swap in real project photos when available.
+8. **Photos:** public-domain/CC0 stock photos with no on-site credits. Swap in real project photos when available.
 9. **SMTP credentials and DNS records** (SPF/DKIM/DMARC), then a live test submission.
 10. **Hostinger deployment** of this folder to the friendswoodroofs.com website (Agency plan).
 

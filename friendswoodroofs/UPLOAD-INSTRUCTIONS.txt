@@ -29,6 +29,12 @@ UPDATING AN EXISTING UPLOAD
      public_html/app/vendor/phpmailer/phpmailer/composer.json
      public_html/app/vendor/phpmailer/phpmailer/LICENSE
      any *.log or *.json files in public_html/app/storage/logs and .../ratelimit
+     public_html/app/templates/pages/image-credits.php
+     these old photos in public_html/assets/img/ (replaced; each has -480,
+     -960 and -1600 versions):
+       shingle-damage-*.webp, shingle-bundles-on-roof-*.webp,
+       worn-shingles-eaves-*.webp, wind-damaged-roof-*.webp,
+       asphalt-shingles-closeup-*.webp
    Also delete public_html/README.md, public_html/UPLOAD-INSTRUCTIONS.txt or a
    nested public_html/public_html/ folder if an earlier zip created them.
 

@@ -25,8 +25,8 @@ partial('page-hero', [
     <h2>Acceptable use</h2>
     <p>Please use the website lawfully. Do not submit false information, attempt to interfere with the website's operation or security, send automated or bulk submissions, or use the forms to send unsolicited messages.</p>
 
-    <h2>Content and images</h2>
-    <p>The text and design of this website belong to Friendswood Roofers unless otherwise noted. Photographs are openly licensed stock images used for illustration, credited on the <a href="/image-credits/">Image Credits</a> page under their respective licenses. They do not show Friendswood Roofers projects.</p>
+    <h2>Website content</h2>
+    <p>The content and design of this website belong to Friendswood Roofers unless otherwise noted. Please do not copy or republish them without permission.</p>
 
     <h2>Links to other websites</h2>
     <p>Links to other websites, such as government weather and insurance resources, are provided for convenience. We are not responsible for their content, availability or practices.</p>
