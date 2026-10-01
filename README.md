@@ -1,5 +1,9 @@
 # huttoroofs.com — static rebuild
 
+> This repository also contains a separate site, **friendswoodroofs.com**, in
+> [`friendswoodroofs/`](friendswoodroofs/README.md) (PHP, deployed on its own).
+> The Hutto `deploy.sh` skips that folder.
+
 A static HTML rebuild of [huttoroofs.com](https://huttoroofs.com), replacing the
 WordPress/Elementor site. No PHP, no database, no plugins — just HTML, one CSS
 file, one JS file and local images. Upload the repo root to any web host.

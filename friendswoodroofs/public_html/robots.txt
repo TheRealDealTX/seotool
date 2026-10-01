@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /submit-estimate/
+
+Sitemap: https://friendswoodroofs.com/sitemap.xml

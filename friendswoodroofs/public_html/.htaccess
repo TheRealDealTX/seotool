@@ -1,0 +1,60 @@
+# Friendswood Roofers - Apache / LiteSpeed configuration (Hostinger)
+
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+ErrorDocument 404 /index.php
+ErrorDocument 403 /index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Force HTTPS (Hostinger may terminate TLS at a proxy, so check both).
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+  # 2. Canonical host: www -> apex.
+  RewriteCond %{HTTP_HOST} ^www\.friendswoodroofs\.com$ [NC]
+  RewriteRule ^ https://friendswoodroofs.com%{REQUEST_URI} [L,R=301,NE]
+
+  # 3. Block hidden files and private folders if they were uploaded here.
+  RewriteRule (^|/)\.(?!well-known/) - [F]
+  RewriteRule ^(app|vendor|storage|config|tools)(/|$) - [F,NC]
+
+  # 4. Serve real files directly; everything else goes to the PHP router.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+# Block direct access to sensitive file types.
+<FilesMatch "\.(env|ini|log|lock|json|md|sh|dist|key)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# Long cache for versioned static assets (URLs include ?v=filemtime).
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript text/javascript application/json application/xml image/svg+xml application/manifest+json
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+</IfModule>

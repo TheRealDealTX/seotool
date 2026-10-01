@@ -1,0 +1,13 @@
+{
+    "name": "friendswoodroofers/site",
+    "description": "Friendswood Roofers website (PHP, no build step)",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.1",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

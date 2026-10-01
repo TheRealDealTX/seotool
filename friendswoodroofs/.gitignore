@@ -1,0 +1,8 @@
+# Secrets and runtime data - never commit
+app/config/mail.php
+app/storage/secret.key
+app/storage/logs/*
+!app/storage/logs/.gitkeep
+app/storage/ratelimit/*
+!app/storage/ratelimit/.gitkeep
+dist/
