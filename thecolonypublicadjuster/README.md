@@ -3,7 +3,7 @@
 A static HTML + PHP rebuild of [thecolonypublicadjuster.com](https://thecolonypublicadjuster.com/) for Hostinger
 web hosting. It has no database, CMS or build step on the server. The only PHP is the contact form handler.
 
-**Deliverable:** `thecolonypublicadjuster-site.zip`. It contains the generated site, ready to upload.
+**Deliverable:** `thecolonypublicadjuster-site.zip` (full site) and `thecolonypublicadjuster-update-google-tag.zip` (HTML-only update adding the Google Analytics tag G-EVQS4TKQT9).
 
 ## Upload to Hostinger
 
