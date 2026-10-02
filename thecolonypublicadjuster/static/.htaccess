@@ -1,0 +1,68 @@
+# The Colony Public Adjuster — Hostinger (Apache/LiteSpeed) configuration
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+Options -Indexes
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://thecolonypublicadjuster.com/$1 [R=301,L]
+
+# Force non-www
+RewriteCond %{HTTP_HOST} ^www\.thecolonypublicadjuster\.com$ [NC]
+RewriteRule ^(.*)$ https://thecolonypublicadjuster.com/$1 [R=301,L]
+
+# Directories always end with a slash
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+# Old / alternate URLs -> current pages
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^(feed|comments/feed)/?$ /blog/ [R=301,L]
+RewriteRule ^(about-us)/?$ /about/ [R=301,L]
+RewriteRule ^(contact-us)/?$ /contact/ [R=301,L]
+RewriteRule ^(faq)/?$ /faqs/ [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php)(/.*)?$ / [R=301,L]
+</IfModule>
+
+# Security headers
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(webp|jpg|png|svg|ico|woff2)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript image/svg+xml application/json application/xml text/xml text/plain
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType text/html "access plus 0 seconds"
+</IfModule>
+
+# Block access to hidden and source files
+<FilesMatch "^\.|\.(md|py|sh|log|ini)$">
+Require all denied
+</FilesMatch>
+<Files ".htaccess">
+Require all denied
+</Files>
