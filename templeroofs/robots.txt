@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thank-you/
+Disallow: /blog/?q=
+
+Sitemap: https://templeroofs.com/sitemap.xml

@@ -1,3 +1,11 @@
 __pycache__/
 *.pyc
 dist/
+# Temple Roofers runtime data (never commit)
+templeroofs/storage/cache/*.json
+templeroofs/storage/cache/*.lock
+templeroofs/storage/ratelimit/*.json
+templeroofs/storage/logs/*.log
+templeroofs/storage/secret.php
+templeroofs/storage/undelivered-leads/
+templeroofs-private/
