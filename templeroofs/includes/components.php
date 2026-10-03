@@ -94,7 +94,7 @@ function service_card(array $s, bool $withImage = true): string
     $out = '<article class="card card--service reveal">';
     if ($withImage) {
         $out .= '<a class="card__media" href="' . e($s['url']) . '" tabindex="-1" aria-hidden="true">'
-            . img($s['image'], '', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw'])
+            . img($s['image'], '', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw', 'decorative' => true])
             . '</a>';
     }
     $out .= '<div class="card__body">' . ($withImage ? '<span class="card__badge" aria-hidden="true">' . icon($s['icon'] ?? 'home') . '</span>' : '') . '<h3 class="card__title"><a href="' . e($s['url']) . '">' . e($s['name']) . '</a></h3>'
@@ -107,7 +107,7 @@ function post_card(array $p, string $headingTag = 'h3'): string
 {
     return '<article class="card card--post reveal">'
         . '<a class="card__media" href="' . e($p['url']) . '" tabindex="-1" aria-hidden="true">'
-        . img($p['image'], '', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw']) . '</a>'
+        . img($p['image'], '', ['sizes' => '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw', 'decorative' => true]) . '</a>'
         . '<div class="card__body">'
         . '<p class="card__meta"><a class="tag" href="/blog/category/' . e($p['category']) . '/">' . e(category_name($p['category'])) . '</a>'
         . '<time datetime="' . e($p['date']->format('Y-m-d')) . '">' . e(format_date($p['date'])) . '</time></p>'

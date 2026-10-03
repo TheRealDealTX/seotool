@@ -69,7 +69,7 @@ layout_start([
       </ul>
       <p>Not sure? The <a href="/tools/storm-damage-checklist/">storm damage self-check</a> walks you through what you can safely look for from the ground.</p>
     </div>
-    <div class="split__media reveal"><figure class="media-frame"><?= img('hail-damaged-shingles', 'Close-up of asphalt shingles showing storm damage', ['sizes' => '(max-width: 900px) 100vw, 50vw']) ?></figure></div>
+    <div class="split__media reveal"><figure class="media-frame"><?= img('wind-damaged-roof', '', ['sizes' => '(max-width: 900px) 100vw, 50vw']) ?></figure></div>
   </div>
 </section>
 

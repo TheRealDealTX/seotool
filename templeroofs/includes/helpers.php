@@ -87,8 +87,10 @@ function img(string $key, string $alt = '', array $o = []): string
     $m = image_manifest()[$key] ?? [];
     $w = (int) ($m['w'] ?? 1600);
     $h = (int) ($m['h'] ?? 1067);
-    if ($alt === '') {
-        $alt = $m['alt'] ?? '';
+    // The manifest alt text was written while viewing each photo, so it is
+    // preferred over page-supplied text whenever it exists.
+    if (!empty($m['alt']) && empty($o['decorative'])) {
+        $alt = $m['alt'];
     }
     $base = '/assets/images/' . $key;
     $srcset = [];

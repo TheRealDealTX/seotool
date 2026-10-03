@@ -1,0 +1,242 @@
+{
+  "hero-texas-home-roof": {
+    "w": 1600,
+    "h": 900,
+    "alt": "Two-story brick and stone suburban home with a dark asphalt shingle roof under a clear blue sky",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6",
+    "author": "",
+    "license": "Unsplash License",
+    "note": "Cropped 16:9; a yard sign and house number were retouched out."
+  },
+  "asphalt-shingles-closeup": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Close-up of dark architectural asphalt shingles on a residential roof",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1635424710928-0544e8512eae",
+    "author": "",
+    "license": "Unsplash License",
+    "note": "Tight crop of the shingle field from a wider photo of a roofer on a shingle roof."
+  },
+  "roofer-inspecting-roof": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Roofer standing on a damaged shingle roof of a brick house, inspecting the problem area with a ladder against the wall",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1632759145351-1d592919f522",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "roofer-installing-shingles": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Roofing crew wearing hard hats and fall-protection harnesses installing new shingles on a house roof",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:On_base_housing_gets_new_shingles_for_roofs_(5566725).jpg",
+    "author": "U.S. Air Force photo by Airman 1st Class Jonathan Whitely",
+    "license": "Public Domain Mark",
+    "note": ""
+  },
+  "hail-damaged-shingles": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Inspector walking a hail-damaged metal roof to document storm damage",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_44371_-_FEMA_PA_inspection_of_a_hail_damaged_roof_in_OK.jpg",
+    "author": "Win Henderson",
+    "license": "Public Domain Mark",
+    "note": "Substitute: no suitable public-domain close-up of hail-damaged asphalt shingles was found; shows a hail-damage roof inspection (metal roof) instead."
+  },
+  "hail-stones": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Handful of hailstones collected after a storm, held over a wet car hood",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hailstones.jpg",
+    "author": "Bdahl",
+    "license": "Public Domain Mark",
+    "note": "Source is 1280px wide; upscaled slightly for the 1600 size."
+  },
+  "storm-clouds-over-homes": {
+    "w": 1600,
+    "h": 900,
+    "alt": "Dark storm clouds rolling in over a town skyline",
+    "source": "wordpress-photos",
+    "source_url": "https://wordpress.org/photos/photo/113634ff3a/",
+    "author": "Topher",
+    "license": "CC0",
+    "note": "Storm over a small city skyline rather than a purely residential street."
+  },
+  "roof-replacement-tear-off": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Workers tearing off old asphalt shingles during a roof replacement",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:US_Navy_070323-N-4238B-246_From_left_to_right,_Constructionman_Apprentice_Nicole_Ramnes,_Chief_Explosive_Ordnance_Disposal_Jeff_Reinhofer,_and_Lt._Tim_Ferracci_assigned_to_Explosive_Ordnance_Disposal_Unit_(EODU)_2,_remove_shing.jpg",
+    "author": "U.S. Navy photo by Mass Communication Specialist Seaman Kelly E. Barnes",
+    "license": "Public Domain Mark",
+    "note": ""
+  },
+  "standing-seam-metal-roof": {
+    "w": 1600,
+    "h": 900,
+    "alt": "Aerial view of a ranch-style home with a dark standing seam metal roof",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Standing_seam_metal_roof_4.jpg",
+    "author": "Wikideas1",
+    "license": "CC0",
+    "note": ""
+  },
+  "commercial-flat-roof": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Rooftop HVAC packaged units on a flat commercial roof",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rooftop_Packaged_Units.JPG",
+    "author": "P199",
+    "license": "Public Domain Mark",
+    "note": "Source is 1471px wide; upscaled slightly for the 1600 size."
+  },
+  "central-texas-neighborhood": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "New brick and painted-brick homes with shingle roofs along a sunny suburban sidewalk",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1592595896551-12b371d546d5",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "water-stained-ceiling": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Water-stained ceiling with mold growth spreading from a roof leak",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Homes_in_Need_(20220125-RD-LSC-0345).jpg",
+    "author": "USDAgov",
+    "license": "Public Domain Mark",
+    "note": "Cropped to the ceiling area of a wider USDA photo."
+  },
+  "gutter-downspout": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Bronze rain gutter and downspout along the eave of a painted-brick home with an asphalt shingle roof",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1592595896616-c37162298647",
+    "author": "",
+    "license": "Unsplash License",
+    "note": "Crop of the same source photo used for roof-summer-sun (2 keys max)."
+  },
+  "wind-damaged-roof": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Storm-damaged house with workers repairing the roof decking and a fallen tree in the yard",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_40806_-_Workers_cleaning_a_damagaed_roof_in_Arkansas.jpg",
+    "author": "Win Henderson",
+    "license": "Public Domain Mark",
+    "note": ""
+  },
+  "roof-vents-attic": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Shingle roof with a round gable attic vent and roof vent pipes along the ridge",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c",
+    "author": "",
+    "license": "Unsplash License",
+    "note": "Crop of the same source photo used for brick-home-shingle-roof (2 keys max)."
+  },
+  "roof-summer-sun": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Painted-brick home with an asphalt shingle roof on a bright, sunny summer day",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1592595896616-c37162298647",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "homeowner-insurance-paperwork": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Person signing paperwork at a desk with a pen",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "gutter-cleaning-maintenance": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Rain gutter clogged with fallen autumn leaves",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tarakl%C4%B1_Eski_Evleri_Oluk_Kiremitler_ve_Yapraklar,_Sakarya_2014-1.jpg",
+    "author": "Hamdigumus",
+    "license": "CC0",
+    "note": "Gutter sits below a clay barrel-tile roof edge (photographed in Turkey); the focus is the leaf-clogged gutter."
+  },
+  "lakeside-texas-homes": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Lake cottages and boathouses along a Texas Hill Country lake inlet with bluebonnets in bloom",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bluebonnets_and_lake_cottages_along_an_inlet_of_Lake_Lyndon_B._Johnson_in_Marble_Falls_in_the_Texas_Hill_Country_LCCN2014632970.tif",
+    "author": "Carol M. Highsmith",
+    "license": "Public Domain Mark",
+    "note": ""
+  },
+  "small-town-texas-street": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Historic storefronts on a courthouse square main street in a Central Texas town",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Buildings_on_the_square_surrounding_the_Williamson_County_Courthouse_in_Georgetown,_Texas_LCCN2014633714.tif",
+    "author": "Carol M. Highsmith",
+    "license": "Public Domain Mark",
+    "note": "Georgetown, Texas courthouse square; ordinary storefront signage is visible."
+  },
+  "lightning-storm": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Lightning bolts striking from a dark thunderstorm at night",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "brick-home-shingle-roof": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Two-story red brick home with a tan asphalt shingle roof and landscaped yard",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1598228723793-52759bba239c",
+    "author": "",
+    "license": "Unsplash License",
+    "note": "House number retouched out."
+  },
+  "roof-flashing-chimney": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Brick chimney rising through an asphalt shingle roof with dormers",
+    "source": "unsplash",
+    "source_url": "https://images.unsplash.com/photo-1584738766473-61c083514bf4",
+    "author": "",
+    "license": "Unsplash License",
+    "note": ""
+  },
+  "emergency-roof-tarp": {
+    "w": 1600,
+    "h": 1067,
+    "alt": "Blue emergency tarps covering storm-damaged roofs on brick homes in Texas",
+    "source": "wikimedia",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FEMA_-_29543_-_Blue_roof_tarps_in_Texas.jpg",
+    "author": "Earl Armstrong",
+    "license": "Public Domain Mark",
+    "note": ""
+  }
+}

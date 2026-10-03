@@ -33,7 +33,7 @@ $temple = $areas['temple-tx'] ?? null;
     <div class="card-grid card-grid--3">
       <?php foreach ($areas as $a): ?>
       <article class="card card--area reveal">
-        <a class="card__media" href="<?= e($a['url']) ?>" tabindex="-1" aria-hidden="true"><?= img($a['image'], '', ['sizes' => '(max-width: 640px) 100vw, 33vw']) ?></a>
+        <a class="card__media" href="<?= e($a['url']) ?>" tabindex="-1" aria-hidden="true"><?= img($a['image'], '', ['sizes' => '(max-width: 640px) 100vw, 33vw', 'decorative' => true]) ?></a>
         <div class="card__body">
           <h3 class="card__title"><a href="<?= e($a['url']) ?>"><?= e($a['city']) ?>, TX</a></h3>
           <p class="card__meta"><?= icon('map-pin') ?> <?= e($a['distance_note']) ?></p>

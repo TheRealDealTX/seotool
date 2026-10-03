@@ -6,7 +6,7 @@ return [
   'seo_title' => 'Hail Damage Roof Repair Temple TX | Free Inspection',
   'meta_description' => 'Hail damage roof repair in Temple, TX. We find bruised shingles, granule loss and dented metal, document it with photos and give a written estimate.',
   'primary_keyword' => 'hail damage roof repair Temple',
-  'image' => 'hail-damaged-shingles',
+  'image' => 'hail-stones',
   'image_alt' => 'Close-up of asphalt shingles with dark hail impact marks and missing granules',
   'icon' => 'hail',
   'card_summary' => 'Hail impact inspections that look for bruising, cracked mats and granule loss, plus repair or replacement with impact-resistant shingle options.',

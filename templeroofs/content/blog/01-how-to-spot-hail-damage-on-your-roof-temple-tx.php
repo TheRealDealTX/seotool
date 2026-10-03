@@ -7,7 +7,7 @@ return [
   'meta_description' => 'How to spot hail damage on your roof in Temple, TX from the ground: granule loss, cracked shingles, dented vents and gutters, and when to call a pro.',
   'focus_keyword' => 'hail damage on your roof',
   'category' => 'storm-hail-damage',
-  'image' => 'hail-damaged-shingles',
+  'image' => 'hail-stones',
   'image_alt' => 'Close-up of asphalt shingles with dark circular hail impact marks and missing granules',
   'excerpt' => 'Hail can damage a roof without leaving an obvious hole. Here is how Temple homeowners can check for hail damage safely from the ground and decide when to call for an inspection.',
   'body' => <<<'HTML'

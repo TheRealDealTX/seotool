@@ -1,0 +1,164 @@
+Temple Roofers - image credits
+==============================
+
+All photos below are stock or public-domain images used under licenses that permit commercial use without attribution
+(Unsplash License, CC0, or public domain). Credits are listed for good practice. These are generic illustrative photos,
+not photos of Temple Roofers' own projects. Some images were cropped, resized, or lightly retouched.
+
+hero-texas-home-roof
+  Shows:   Two-story brick and stone suburban home with a dark asphalt shingle roof under a clear blue sky
+  Source:  unsplash - https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+  Note:    Cropped 16:9; a yard sign and house number were retouched out.
+
+asphalt-shingles-closeup
+  Shows:   Close-up of dark architectural asphalt shingles on a residential roof
+  Source:  unsplash - https://images.unsplash.com/photo-1635424710928-0544e8512eae
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+  Note:    Tight crop of the shingle field from a wider photo of a roofer on a shingle roof.
+
+roofer-inspecting-roof
+  Shows:   Roofer standing on a damaged shingle roof of a brick house, inspecting the problem area with a ladder against the wall
+  Source:  unsplash - https://images.unsplash.com/photo-1632759145351-1d592919f522
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+roofer-installing-shingles
+  Shows:   Roofing crew wearing hard hats and fall-protection harnesses installing new shingles on a house roof
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:On_base_housing_gets_new_shingles_for_roofs_(5566725).jpg
+  Author:  U.S. Air Force photo by Airman 1st Class Jonathan Whitely
+  License: Public Domain Mark
+
+hail-damaged-shingles
+  Shows:   Inspector walking a hail-damaged metal roof to document storm damage
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:FEMA_-_44371_-_FEMA_PA_inspection_of_a_hail_damaged_roof_in_OK.jpg
+  Author:  Win Henderson
+  License: Public Domain Mark
+  Note:    Substitute: no suitable public-domain close-up of hail-damaged asphalt shingles was found; shows a hail-damage roof inspection (metal roof) instead.
+
+hail-stones
+  Shows:   Handful of hailstones collected after a storm, held over a wet car hood
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Hailstones.jpg
+  Author:  Bdahl
+  License: Public Domain Mark
+  Note:    Source is 1280px wide; upscaled slightly for the 1600 size.
+
+storm-clouds-over-homes
+  Shows:   Dark storm clouds rolling in over a town skyline
+  Source:  wordpress-photos - https://wordpress.org/photos/photo/113634ff3a/
+  Author:  Topher
+  License: CC0
+  Note:    Storm over a small city skyline rather than a purely residential street.
+
+roof-replacement-tear-off
+  Shows:   Workers tearing off old asphalt shingles during a roof replacement
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:US_Navy_070323-N-4238B-246_From_left_to_right,_Constructionman_Apprentice_Nicole_Ramnes,_Chief_Explosive_Ordnance_Disposal_Jeff_Reinhofer,_and_Lt._Tim_Ferracci_assigned_to_Explosive_Ordnance_Disposal_Unit_(EODU)_2,_remove_shing.jpg
+  Author:  U.S. Navy photo by Mass Communication Specialist Seaman Kelly E. Barnes
+  License: Public Domain Mark
+
+standing-seam-metal-roof
+  Shows:   Aerial view of a ranch-style home with a dark standing seam metal roof
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Standing_seam_metal_roof_4.jpg
+  Author:  Wikideas1
+  License: CC0
+
+commercial-flat-roof
+  Shows:   Rooftop HVAC packaged units on a flat commercial roof
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Rooftop_Packaged_Units.JPG
+  Author:  P199
+  License: Public Domain Mark
+  Note:    Source is 1471px wide; upscaled slightly for the 1600 size.
+
+central-texas-neighborhood
+  Shows:   New brick and painted-brick homes with shingle roofs along a sunny suburban sidewalk
+  Source:  unsplash - https://images.unsplash.com/photo-1592595896551-12b371d546d5
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+water-stained-ceiling
+  Shows:   Water-stained ceiling with mold growth spreading from a roof leak
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Homes_in_Need_(20220125-RD-LSC-0345).jpg
+  Author:  USDAgov
+  License: Public Domain Mark
+  Note:    Cropped to the ceiling area of a wider USDA photo.
+
+gutter-downspout
+  Shows:   Bronze rain gutter and downspout along the eave of a painted-brick home with an asphalt shingle roof
+  Source:  unsplash - https://images.unsplash.com/photo-1592595896616-c37162298647
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+  Note:    Crop of the same source photo used for roof-summer-sun (2 keys max).
+
+wind-damaged-roof
+  Shows:   Storm-damaged house with workers repairing the roof decking and a fallen tree in the yard
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:FEMA_-_40806_-_Workers_cleaning_a_damagaed_roof_in_Arkansas.jpg
+  Author:  Win Henderson
+  License: Public Domain Mark
+
+roof-vents-attic
+  Shows:   Shingle roof with a round gable attic vent and roof vent pipes along the ridge
+  Source:  unsplash - https://images.unsplash.com/photo-1598228723793-52759bba239c
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+  Note:    Crop of the same source photo used for brick-home-shingle-roof (2 keys max).
+
+roof-summer-sun
+  Shows:   Painted-brick home with an asphalt shingle roof on a bright, sunny summer day
+  Source:  unsplash - https://images.unsplash.com/photo-1592595896616-c37162298647
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+homeowner-insurance-paperwork
+  Shows:   Person signing paperwork at a desk with a pen
+  Source:  unsplash - https://images.unsplash.com/photo-1450101499163-c8848c66ca85
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+gutter-cleaning-maintenance
+  Shows:   Rain gutter clogged with fallen autumn leaves
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Tarakl%C4%B1_Eski_Evleri_Oluk_Kiremitler_ve_Yapraklar,_Sakarya_2014-1.jpg
+  Author:  Hamdigumus
+  License: CC0
+  Note:    Gutter sits below a clay barrel-tile roof edge (photographed in Turkey); the focus is the leaf-clogged gutter.
+
+lakeside-texas-homes
+  Shows:   Lake cottages and boathouses along a Texas Hill Country lake inlet with bluebonnets in bloom
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Bluebonnets_and_lake_cottages_along_an_inlet_of_Lake_Lyndon_B._Johnson_in_Marble_Falls_in_the_Texas_Hill_Country_LCCN2014632970.tif
+  Author:  Carol M. Highsmith
+  License: Public Domain Mark
+
+small-town-texas-street
+  Shows:   Historic storefronts on a courthouse square main street in a Central Texas town
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:Buildings_on_the_square_surrounding_the_Williamson_County_Courthouse_in_Georgetown,_Texas_LCCN2014633714.tif
+  Author:  Carol M. Highsmith
+  License: Public Domain Mark
+  Note:    Georgetown, Texas courthouse square; ordinary storefront signage is visible.
+
+lightning-storm
+  Shows:   Lightning bolts striking from a dark thunderstorm at night
+  Source:  unsplash - https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+brick-home-shingle-roof
+  Shows:   Two-story red brick home with a tan asphalt shingle roof and landscaped yard
+  Source:  unsplash - https://images.unsplash.com/photo-1598228723793-52759bba239c
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+  Note:    House number retouched out.
+
+roof-flashing-chimney
+  Shows:   Brick chimney rising through an asphalt shingle roof with dormers
+  Source:  unsplash - https://images.unsplash.com/photo-1584738766473-61c083514bf4
+  Author:  Unknown (Unsplash contributor)
+  License: Unsplash License
+
+emergency-roof-tarp
+  Shows:   Blue emergency tarps covering storm-damaged roofs on brick homes in Texas
+  Source:  wikimedia - https://commons.wikimedia.org/wiki/File:FEMA_-_29543_-_Blue_roof_tarps_in_Texas.jpg
+  Author:  Earl Armstrong
+  License: Public Domain Mark
+
+og-image.jpg - 1200x630 center crop of hero-texas-home-roof (same source and license).
