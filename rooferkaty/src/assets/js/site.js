@@ -1,0 +1,137 @@
+/* Katy Roofer — site interactions: header, nav, scroll effects, forms. */
+(function () {
+  "use strict";
+  var doc = document.documentElement;
+  doc.classList.add("js");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ----- mobile nav ----- */
+  var nav = document.querySelector(".nav");
+  document.querySelectorAll("[data-nav-toggle]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      document.body.style.overflow = open ? "hidden" : "";
+      document.querySelector(".menu-btn").setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  });
+
+  /* ----- scroll-linked effects (one rAF loop) ----- */
+  var header = document.querySelector(".site-header");
+  var bar = document.querySelector(".progress span");
+  var parallax = [].slice.call(document.querySelectorAll("[data-parallax]"));
+  var stepLists = [].slice.call(document.querySelectorAll(".steps"));
+  var ticking = false;
+
+  function onScroll() {
+    var y = window.scrollY;
+    var h = doc.scrollHeight - window.innerHeight;
+    if (header) header.classList.toggle("scrolled", y > 24);
+    if (bar) bar.style.transform = "scaleX(" + (h > 0 ? Math.min(y / h, 1) : 0) + ")";
+    if (!reduce) {
+      parallax.forEach(function (el) {
+        var r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        el.style.transform = "translate3d(0," + (r.top * -0.18).toFixed(1) + "px,0)";
+      });
+    }
+    stepLists.forEach(function (list) {
+      var r = list.getBoundingClientRect();
+      var mid = window.innerHeight * 0.6;
+      var p = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      list.style.setProperty("--p", p.toFixed(3));
+      list.querySelectorAll(".step").forEach(function (s) {
+        s.classList.toggle("lit", s.getBoundingClientRect().top < mid);
+      });
+    });
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
+  }, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
+
+  /* ----- reveal + counters ----- */
+  function countUp(el) {
+    var end = parseFloat(el.getAttribute("data-count"));
+    var dec = (el.getAttribute("data-count").split(".")[1] || "").length;
+    if (reduce) { el.textContent = end.toFixed(dec); return; }
+    var start = null, dur = 1600;
+    function step(t) {
+      if (!start) start = t;
+      var p = Math.min((t - start) / dur, 1);
+      el.textContent = (end * (1 - Math.pow(1 - p, 3))).toFixed(dec);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        e.target.querySelectorAll("[data-count]").forEach(countUp);
+        if (e.target.hasAttribute("data-count")) countUp(e.target);
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll("[data-reveal], [data-count]").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll("[data-reveal]").forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* ----- article table of contents ----- */
+  var toc = document.querySelector(".toc ul");
+  var heads = [].slice.call(document.querySelectorAll(".prose h2"));
+  if (toc && heads.length) {
+    heads.forEach(function (h, i) {
+      if (!h.id) h.id = "s" + (i + 1) + "-" + h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40);
+      var li = document.createElement("li"), a = document.createElement("a");
+      a.href = "#" + h.id; a.textContent = h.textContent; li.appendChild(a); toc.appendChild(li);
+    });
+    var links = toc.querySelectorAll("a");
+    window.addEventListener("scroll", function () {
+      var cur = 0;
+      heads.forEach(function (h, i) { if (h.getBoundingClientRect().top < 140) cur = i; });
+      links.forEach(function (a, i) { a.classList.toggle("active", i === cur); });
+    }, { passive: true });
+  } else if (toc) {
+    toc.closest(".box").remove();
+  }
+
+  /* ----- lead forms ----- */
+  document.querySelectorAll("form.lead-form").forEach(function (form) {
+    var t = form.querySelector("input[name=t]");
+    if (t) t.value = String(Date.now());
+    var page = form.querySelector("input[name=page]");
+    if (page) page.value = location.pathname;
+    form.addEventListener("submit", function (ev) {
+      if (!window.fetch || !window.FormData) return;
+      ev.preventDefault();
+      var status = form.querySelector(".form-status");
+      var btn = form.querySelector("button[type=submit]");
+      var label = btn.innerHTML;
+      btn.disabled = true; btn.textContent = "Sending…";
+      status.className = "form-status";
+      fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
+        .then(function (r) { return r.json().catch(function () { return { ok: r.ok }; }); })
+        .then(function (res) {
+          if (res.ok) {
+            window.location.href = "/thank-you/";
+          } else {
+            status.textContent = res.message || "Something went wrong. Please call us instead.";
+            status.className = "form-status err";
+            btn.disabled = false; btn.innerHTML = label;
+          }
+        })
+        .catch(function () {
+          status.textContent = "We couldn't send that just now. Please call (512) 297-7580.";
+          status.className = "form-status err";
+          btn.disabled = false; btn.innerHTML = label;
+        });
+    });
+  });
+
+  /* ----- footer year ----- */
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
+})();

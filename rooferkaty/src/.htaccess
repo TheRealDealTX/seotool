@@ -1,0 +1,28 @@
+# rooferkaty.com (Hostinger). index.php serves the homepage; folders serve index.html.
+DirectoryIndex index.php index.html
+ErrorDocument 404 /404.html
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Force https and drop www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://rooferkaty.com/$1 [R=301,L]
+# Never serve the internal homepage file or include folder directly
+RewriteRule ^home\.html$ / [R=301,L]
+RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json
+</IfModule>
