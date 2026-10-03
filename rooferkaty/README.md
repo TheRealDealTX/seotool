@@ -6,7 +6,7 @@ A static HTML/PHP site for **Katy Roofer** (phone (512) 297-7580). It is modeled
 
 ## Upload to Hostinger
 1. Open hPanel, then **Websites → rooferkaty.com → File Manager → public_html**.
-2. Delete the placeholder `default.php` or `index.html` if one is there.
+2. Delete everything already in `public_html` (old site files, `default.php`, any `index.html`). Extracting over an old upload can leave stale files behind.
 3. Upload `rooferkaty-hostinger-upload.zip`, right-click it and choose **Extract** into `public_html`, then delete the zip.
 4. Create a mailbox called `no-reply@rooferkaty.com` (hPanel → Emails). The form sends mail as this address.
 5. Recommended for reliable delivery: open `includes/config.php` and fill in `smtp_user` / `smtp_pass` with that mailbox's login. Forms then send through Hostinger SMTP instead of PHP `mail()`.
@@ -27,7 +27,8 @@ The address that receives the forms is set only in `includes/config.php`. It nev
 ## How it works
 - `index.php` serves `home.html` for `/`, adds trailing slashes and returns real 404s. There is deliberately no root `index.html`. This keeps the site working on Hostinger setups that ignore `.htaccess`.
 - `.htaccess` (honored on standard shared hosting) forces https, drops `www`, and adds caching and compression.
-- Scroll effects live in `assets/js/site.js`: reveal-on-scroll, hero parallax, a reading-progress bar, a shrinking sticky header, animated counters and a scroll-filled process timeline. All of them respect `prefers-reduced-motion`.
+- Scroll effects live in `assets/js/site.js`: text and cards fade in, plus a reading-progress bar, a shrinking sticky header, animated counters and a scroll-filled process timeline. Photos have no effects and are always visible. Everything respects `prefers-reduced-motion`.
+- Asset paths (images, CSS, JS, icons) are relative, so pages also render when opened straight from the unzipped folder. Page links are absolute (`/blog/`), so moving between pages needs the real server.
 - SEO: every page has a unique title and description, a canonical URL, Open Graph tags and JSON-LD (`RoofingContractor` plus Service, FAQPage, BlogPosting, BreadcrumbList and WebApplication), along with `sitemap.xml` and `robots.txt`.
 
 ## Editing & rebuilding

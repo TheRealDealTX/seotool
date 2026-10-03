@@ -13,7 +13,7 @@ def card_grid_services(exclude=None):
 
 
 def post_card(p, i=0):
-    return (f'<article class="card img-card" data-reveal style="--d:{(i % 3) * 0.08:.2f}s"><div class="img">{img(p["image"], p.get("image_alt", p["h1"]))}</div>'
+    return (f'<article class="card img-card" style="--d:{(i % 3) * 0.08:.2f}s"><div class="img">{img(p["image"], p.get("image_alt", p["h1"]))}</div>'
             f'<div class="body"><span class="tag">{e(p.get("category", "Guide"))}</span>'
             f'<div class="meta-row"><span>{icon("calendar")} {B.fmt_date(p["date"])}</span><span>{icon("clock")} {p.get("read_minutes", 6)} min</span></div>'
             f'<h3><a class="card-link" href="/blog/{p["slug"]}/" style="color:inherit;text-decoration:none">{e(p["h1"])}</a></h3>'
@@ -22,7 +22,7 @@ def post_card(p, i=0):
 
 def prose_page(item, crumbs, aside, eyebrow, meta="", lead_img=True, after_body=""):
     body = B.prep_body(item["body"])
-    lead = f'<div class="lead-img" data-reveal="clip">{img(item["image"], item.get("image_alt", item["h1"]), eager=False, sizes="(max-width: 1080px) 100vw, 760px")}</div>' if lead_img else ""
+    lead = f'<div class="lead-img">{img(item["image"], item.get("image_alt", item["h1"]), eager=False, sizes="(max-width: 1080px) 100vw, 760px")}</div>' if lead_img else ""
     return (B.page_hero(crumbs, e(item["h1"]), item["intro"], bg=item["image"], eyebrow=eyebrow, meta=meta) +
             f'<section class="section"><div class="wrap layout"><article class="prose">{lead}{body}{after_body}</article>'
             f'<aside class="aside">{aside}</aside></div></section>')
@@ -84,7 +84,7 @@ def build_areas():
 
     url = "/areas/"
     crumbs = [("Home", "/"), ("Service Areas", url)]
-    cards = "".join(f"""<article class="card img-card" data-reveal style="--d:{(i % 3) * 0.08:.2f}s"><div class="img">{img(a['image'], a.get('image_alt', a['name']))}</div>
+    cards = "".join(f"""<article class="card img-card" style="--d:{(i % 3) * 0.08:.2f}s"><div class="img">{img(a['image'], a.get('image_alt', a['name']))}</div>
 <div class="body"><span class="tag">{e(a.get('county', ''))}</span><h3><a class="card-link" href="/areas/{a['slug']}/" style="color:inherit;text-decoration:none">{e(a['name'])}</a></h3>
 <p>{e(a['short'])}</p><span class="more">Roofing in {e(a['name'])} {icon('arrow')}</span></div></article>""" for i, a in enumerate(B.AREAS))
     main = (B.page_hero(crumbs, "Areas We Serve Around Katy, TX", "Based in Katy and working across Harris, Fort Bend and Waller counties, from the Brazos River to the Energy Corridor.",
@@ -94,7 +94,7 @@ def build_areas():
 <p>Katy is where we live and work. We cover every Katy ZIP code (77449, 77450, 77493 and 77494), from older homes around Old Town Katy and Nottingham Country to newer master-planned communities like Cinco Ranch, Cane Island, Elyson, Jordan Ranch, Tamarron and Pine Mill Ranch.</p>
 <p>Because Katy spans three counties and dozens of HOAs, we keep track of the shingle color and material rules that apply in each community, so your new roof gets approved the first time.</p>
 <a class="btn" href="/free-roof-inspection/">Free inspection in Katy {icon('arrow')}</a></div>
-<div class="media" data-reveal="clip">{img('suburban-home', 'Suburban home under storm clouds in Katy, Texas')}</div></div>
+<div class="media">{img('suburban-home', 'Suburban home under storm clouds in Katy, Texas')}</div></div>
 <div class="section-head" data-reveal><h2>Nearby communities</h2><p>Each community has its own housing stock, HOA rules and storm exposure. Here's what we see in each.</p></div>
 <div class="grid g3">{cards}</div></div></section>""" + B.form_section("areas-form") + B.final_cta())
     B.add(url, B.page(url, "Roofing Service Areas Near Katy, TX | Katy Roofer",
@@ -135,7 +135,7 @@ def build_blog():
     url = "/blog/"
     crumbs = [("Home", "/"), ("Blog", url)]
     first = B.POSTS[0]
-    feature = f"""<article class="card img-card blog-feature" data-reveal>
+    feature = f"""<article class="card img-card blog-feature">
 <div class="img" style="aspect-ratio:auto;min-height:320px">{img(first['image'], first.get('image_alt', first['h1']))}</div>
 <div class="body" style="padding:36px"><span class="tag">Latest · {e(first.get('category', ''))}</span>
 <div class="meta-row"><span>{icon('calendar')} {B.fmt_date(first['date'])}</span><span>{icon('clock')} {first.get('read_minutes', 6)} min</span></div>
@@ -174,7 +174,7 @@ def build_inspection():
                     for i, (ic, t, d) in enumerate(checks))
     main = f"""
 <section class="hero hero-home" style="min-height:auto">
-<div class="hero-bg" data-parallax style="background-image:url(/assets/img/roofer-shingles.webp)"></div>
+<div class="hero-bg" style="background-image:url(/assets/img/roofer-shingles.webp)"></div>
 <div class="wrap">
 <div>{B.crumbs_html(crumbs)}
 <div data-reveal><span class="eyebrow"><span class="dot"></span> $0 · No obligation</span></div>
@@ -202,7 +202,7 @@ def build_inspection():
 </div></div></section>
 
 <section class="section"><div class="wrap split">
-<div class="media" data-reveal="clip">{img('hero-roofer', 'Roofer kneeling on a shingle roof during a free roof inspection in Katy')}</div>
+<div class="media">{img('hero-roofer', 'Roofer kneeling on a shingle roof during a free roof inspection in Katy')}</div>
 <div data-reveal="right"><span class="eyebrow">When to book</span><h2>Good times to get a free roof inspection</h2>
 <ul class="checks">
 <li>{icon('check-circle')}<span><strong>After hail or high winds</strong> — even if you don't see damage from the ground</span></li>
@@ -268,7 +268,7 @@ def build_weather():
 <tr><td>Dec–Feb</td><td>Occasional freezes, cold fronts with wind</td><td>Clear gutters, check flashing before spring</td></tr>
 </tbody></table></div>
 <p>Read our <a href="/blog/hurricane-season-roof-prep-katy-tx/">hurricane season roof prep guide</a> and <a href="/blog/how-to-spot-hail-damage-on-your-katy-roof/">how to spot hail damage</a>.</p></div>
-<div class="media" data-reveal="clip">{img('storm-clouds', 'Dark storm clouds rolling over Katy, Texas')}</div>
+<div class="media">{img('storm-clouds', 'Dark storm clouds rolling over Katy, Texas')}</div>
 </div></section>
 {B.faq_html(WEATHER_FAQS, "Katy weather & roof FAQs")}
 {B.final_cta("Storm just passed? Get a free roof inspection", bg="storm-dark")}"""
@@ -465,7 +465,7 @@ def build_about():
 <p>We do it differently. Every job starts with a <a href="/free-roof-inspection/">free roof inspection</a> and a photo report. We recommend what your roof needs, not what makes the biggest invoice, and we build roofs for Katy's real conditions: heat, humidity, hail and hurricane-force wind.</p>
 <p>From Cinco Ranch and Cane Island to Fulshear, Cypress and the Energy Corridor, we're proud to be the Katy roofer neighbors recommend to neighbors.</p>
 <a class="btn" href="tel:{TEL}">{icon('phone')} {PHONE}</a></div>
-<div class="media" data-reveal="clip">{img('hero-roofer', 'Katy Roofer roofer working on a shingle roof of a brick home')}</div>
+<div class="media">{img('hero-roofer', 'Katy Roofer roofer working on a shingle roof of a brick home')}</div>
 </div></section>
 <section class="section section-soft"><div class="wrap"><div class="section-head" data-reveal><span class="eyebrow">How we work</span><h2>Six promises on every roof</h2></div>
 <div class="grid g3">{cards}</div></div></section>

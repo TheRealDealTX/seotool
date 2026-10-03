@@ -34,7 +34,7 @@ def build_home():
 <span class="more" style="color:#fff">Book yours {icon('arrow')}</span></article>""" + services)
 
     posts = "".join(
-        f"""<article class="card img-card" data-reveal style="--d:{i * 0.1:.1f}s"><div class="img">{img(p['image'], p.get('image_alt', p['h1']))}</div>
+        f"""<article class="card img-card" style="--d:{i * 0.1:.1f}s"><div class="img">{img(p['image'], p.get('image_alt', p['h1']))}</div>
 <div class="body"><span class="tag">{e(p.get('category', 'Guide'))}</span><div class="meta-row"><span>{B.fmt_date(p['date'])}</span><span>{p.get('read_minutes', 6)} min read</span></div>
 <h3><a class="card-link" href="/blog/{p['slug']}/" style="color:inherit;text-decoration:none">{e(p['h1'])}</a></h3><p>{e(p['excerpt'])}</p>
 <span class="more">Read article {icon('arrow')}</span></div></article>""" for i, p in enumerate(B.POSTS[:3]))
@@ -46,7 +46,7 @@ def build_home():
 
     main = f"""
 <section class="hero hero-home">
-<div class="hero-bg" data-parallax style="background-image:url(/assets/img/hero-roofer.webp)"></div>
+<div class="hero-bg" style="background-image:url(/assets/img/hero-roofer.webp)"></div>
 <div class="wrap">
 <div>
 <div data-reveal><span class="eyebrow"><span class="dot"></span> Free roof inspections in Katy, TX</span></div>
@@ -98,7 +98,7 @@ def build_home():
 
 <section class="section">
 <div class="wrap split">
-<div class="media" data-reveal="clip">{img('roofer-shingles', 'Katy roofer in a safety harness inspecting asphalt shingles during a free roof inspection')}
+<div class="media">{img('roofer-shingles', 'Katy roofer in a safety harness inspecting asphalt shingles during a free roof inspection')}
 <div class="media-badge"><span class="ico">{icon('check')}</span><span>Every inspection includes a photo report you keep</span></div></div>
 <div data-reveal="right">
 <span class="eyebrow">Free roof inspections</span>
@@ -189,7 +189,7 @@ def build_home():
 <div class="chips" style="margin:22px 0"><a href="/">Katy, TX</a>{areas}</div>
 <p style="font-size:.95rem">ZIP codes: 77449 · 77450 · 77493 · 77494 · 77441 · 77423 · 77433 · 77406 · 77469 · 77077 · 77084 · 77094</p>
 </div>
-<div class="media" data-reveal="clip">{img('brick-homes', 'Brick two-story homes with asphalt shingle roofs in a Katy, Texas subdivision')}</div>
+<div class="media">{img('brick-homes', 'Brick two-story homes with asphalt shingle roofs in a Katy, Texas subdivision')}</div>
 </div>
 </section>
 
@@ -218,7 +218,7 @@ def build_home():
 </ul>
 <p>Whether you need a quick leak repair or a complete re-roof, the first step with this Katy roofer is always the same: a free inspection and an honest answer.</p>
 </div>
-<div class="media" data-reveal="clip">{img('home-porch', 'Two-story home with a new roof in Katy, TX')}</div>
+<div class="media">{img('home-porch', 'Two-story home with a new roof in Katy, TX')}</div>
 </div>
 </section>
 

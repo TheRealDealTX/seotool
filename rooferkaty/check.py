@@ -48,6 +48,10 @@ for url, h in pages.items():
     for img in re.findall(r"<img [^>]*>", h):
         if 'alt="' not in img or 'alt=""' in img:
             errors.append(f"{url}: img without alt")
+    page_dir = os.path.dirname(os.path.join(DIST, "home.html" if url == "/" else url.lstrip("/") + ("index.html" if url.endswith("/") else "")))
+    for rel_asset in re.findall(r'(?:href|src)="((?:\.\./)*(?:assets|favicon|apple-touch|site\.web|web-app)[^"#?]*)', h) + re.findall(r"url\(((?:\.\./)*assets/[^)]+)\)", h):
+        if not os.path.isfile(os.path.normpath(os.path.join(page_dir, rel_asset))):
+            errors.append(f"{url}: missing asset {rel_asset}")
     for href in re.findall(r'(?:href|src)="(/[^"#?]*)', h):
         if href.startswith("//"):
             continue

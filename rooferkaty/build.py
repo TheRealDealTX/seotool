@@ -222,7 +222,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     pre = f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else ""
-    js = "".join(f'<script src="/assets/js/{s}.js?v=2" defer></script>' for s in ("site",) + tuple(scripts))
+    js = "".join(f'<script src="/assets/js/{s}.js?v=4" defer></script>' for s in ("site",) + tuple(scripts))
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
@@ -253,7 +253,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
-{pre}<link rel="stylesheet" href="/assets/css/site.css?v=2">
+{pre}<link rel="stylesheet" href="/assets/css/site.css?v=4">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -320,7 +320,7 @@ def faq_html(faqs, heading="Frequently asked questions"):
 def final_cta(title="Get a straight answer about your roof", text=None, bg="home-sunset"):
     text = text or "Book a free roof inspection with a local Katy roofer. You'll get photos of what we find, a plain-English explanation and an honest recommendation."
     return f"""<section class="section cta-final">
-<div class="hero-bg" data-parallax style="background-image:url(/assets/img/{bg}.webp)"></div>
+<div class="hero-bg" style="background-image:url(/assets/img/{bg}.webp)"></div>
 <div class="wrap" data-reveal><span class="eyebrow">Free · No obligation</span><h2>{e(title)}</h2><p>{e(text)}</p>
 <div class="hero-actions"><a class="btn" href="/free-roof-inspection/">Book free inspection {icon("arrow")}</a>
 <a class="btn btn-outline-light" href="tel:{TEL}">{icon("phone")} {PHONE}</a></div></div></section>"""
@@ -329,7 +329,7 @@ def final_cta(title="Get a straight answer about your roof", text=None, bg="home
 def page_hero(crumbs, h1, lead, bg="storm-clouds", eyebrow=None, meta=""):
     eb = f'<span class="eyebrow">{e(eyebrow)}</span>' if eyebrow else ""
     return f"""<section class="hero hero-page">
-<div class="hero-bg" data-parallax style="background-image:url(/assets/img/{bg}.webp)"></div>
+<div class="hero-bg" style="background-image:url(/assets/img/{bg}.webp)"></div>
 <div class="wrap">{crumbs_html(crumbs)}<div data-reveal>{eb}<h1>{h1}</h1><p class="lead">{e(lead)}</p>{meta}</div></div></section>"""
 
 
@@ -359,6 +359,10 @@ def write(path, htmltext):
         rel = path.strip("/")
     out = os.path.join(DIST, rel)
     os.makedirs(os.path.dirname(out), exist_ok=True)
+    # Relative asset paths: images/CSS/JS load even from a local preview or a subfolder install.
+    pre = "/" if rel == "404.html" else "../" * rel.count("/")  # 404 is served at any depth
+    htmltext = re.sub(r'(src|href)="/(assets/|favicon|apple-touch-icon|site\.webmanifest|web-app-manifest)', lambda m: f'{m.group(1)}="{pre}{m.group(2)}', htmltext)
+    htmltext = htmltext.replace("url(/assets/", f"url({pre}assets/")
     with open(out, "w", encoding="utf-8") as f:
         f.write(htmltext)
 
