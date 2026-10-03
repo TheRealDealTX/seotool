@@ -7,7 +7,46 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
 
 (async () => {
   const browser = await chromium.launch();
-  const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
+  // Fresh visitor: the Free Claim Review popup should open ~4 seconds after load.
+  const pctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  const pp = await pctx.newPage();
+  await pp.goto(base + '/about-us/', { waitUntil: 'load' });
+  await pp.waitForTimeout(2500);
+  ok(!(await pp.isVisible('#claim-popup')), 'popup: hidden before 4 seconds');
+  await pp.waitForSelector('#claim-popup[open]', { timeout: 4000 });
+  ok(await pp.isVisible('#claim-popup [name="full_name"]'), 'popup: opens after ~4 seconds with the form');
+  await pp.keyboard.press('Escape');
+  ok(!(await pp.isVisible('#claim-popup')), 'popup: Escape closes it');
+  await pp.goto(base + '/services/', { waitUntil: 'load' });
+  await pp.waitForTimeout(5000);
+  ok(!(await pp.isVisible('#claim-popup')), 'popup: stays closed after dismissal');
+  await pp.goto(base + '/contact/', { waitUntil: 'load' });
+  ok((await pp.$$('#claim-popup')).length === 0, 'popup: not included on the contact page');
+  await pctx.close();
+  // Popup on a phone, submitted successfully.
+  const mctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const mp = await mctx.newPage();
+  await mp.goto(base + '/', { waitUntil: 'load' });
+  await mp.waitForSelector('#claim-popup[open]', { timeout: 7000 });
+  const fits = await mp.evaluate(() => { const r = document.querySelector('#claim-popup').getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth + 1; });
+  ok(fits, 'popup: fits the phone screen');
+  await mp.fill('#claim-popup [name="full_name"]', 'Popup Test');
+  await mp.fill('#claim-popup [name="phone"]', '956-555-0199');
+  await mp.fill('#claim-popup [name="email"]', 'popup@example.com');
+  await mp.fill('#claim-popup [name="location"]', 'Edinburg');
+  await mp.selectOption('#claim-popup [name="claim_type"]', 'Hail damage');
+  await mp.selectOption('#claim-popup [name="claim_status"]', 'Not filed yet');
+  await mp.fill('#claim-popup [name="message"]', 'Hail dented gutters and roof vents.');
+  await mp.check('#claim-popup [name="privacy_ack"]');
+  await mp.click('#claim-popup button[type="submit"]');
+  await mp.waitForSelector('#claim-popup .form-success', { timeout: 20000 }).catch(async () => console.log('STATUS:', await mp.textContent('#claim-popup .form-status'), await mp.$$eval('#claim-popup .field-error', e => e.map(x => x.textContent))));
+  ok(/Thank you!/.test(await mp.textContent('#claim-popup .form-success')), 'popup: submission success message');
+  await mctx.close();
+
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+  // Keep the popup out of the way for the remaining tests.
+  await ctx.addInitScript(() => { try { localStorage.setItem('mpa-popup-until', String(Date.now() + 864e5)); } catch (e) {} });
+  const page = await ctx.newPage();
   const errors = [];
   page.on('pageerror', e => errors.push(e.message));
 
@@ -97,7 +136,8 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   ok(/Thank you! Your Free Claim Review request has been received/.test(done), 'form: JS submission success message ' + done.slice(0, 200).replace(/\s+/g, ' '));
 
   // Mobile navigation.
-  const m = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  const m = await ctx.newPage();
+  await m.setViewportSize({ width: 390, height: 844 });
   await m.goto(base + '/');
   await m.click('.nav-toggle');
   ok(await m.isVisible('#main-nav a[href="/about-us/"]'), 'mobile nav opens');

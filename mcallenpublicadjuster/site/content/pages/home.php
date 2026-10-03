@@ -2,7 +2,7 @@
 return [
     'template'    => 'home',
     'title'       => 'McAllen Public Adjuster',
-    'seo_title'   => 'McAllen Public Adjuster | Hail, Storm, Fire & Water Claim Help',
+    'seo_title'   => 'McAllen Public Adjuster | +1 (832) 503-5866',
     'description' => 'McAllen Public Adjuster helps Hidalgo County homeowners and businesses document hail, storm, fire, and water damage claims. Free claim review.',
     'lead'        => 'Licensed Texas public adjusting for homeowners and business owners in McAllen, Hidalgo County, and the Rio Grande Valley (RGV).',
     'image'       => '/wp-content/uploads/2026/02/McAllen-Public-Adjuster-Site-Image.webp',

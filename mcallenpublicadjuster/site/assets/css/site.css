@@ -704,3 +704,32 @@ tbody tr:last-child td { border-bottom: 0; }
 /* Keep slide-in animations from causing sideways scroll on phones (clip keeps sticky working). */
 main { overflow-x: clip; }
 .blog-search input, .search-404 input { min-width: 0; }
+
+/* ---- Free Claim Review popup ---- */
+.popup { width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); padding: 0; border: 0; border-radius: var(--radius-lg); background: #fff; color: var(--ink); box-shadow: 0 30px 80px rgba(8, 18, 30, .45); overflow: auto; overscroll-behavior: contain; }
+.popup:not([open]) { display: none; }
+.popup.is-fallback-open { display: block; position: fixed; inset: 0; margin: auto; z-index: 200; height: fit-content; }
+.popup::backdrop { background: rgba(8, 18, 30, .62); backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); }
+.popup[open] { animation: popupIn .35s var(--ease) both; }
+.popup[open]::backdrop { animation: fadeIn .3s ease both; }
+@keyframes popupIn { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.popup-inner { position: relative; padding: 28px 28px 20px; border-top: 5px solid var(--gold); }
+.popup-close { position: absolute; top: 14px; right: 14px; width: 40px; height: 40px; border-radius: 50%; border: 0; background: var(--gray); color: var(--navy); display: grid; place-items: center; cursor: pointer; transition: background-color .2s, color .2s; }
+.popup-close:hover { background: var(--navy); color: #fff; }
+.popup-head { display: flex; gap: 14px; align-items: center; padding-right: 44px; margin-bottom: 10px; }
+.popup-head h2 { font-size: clamp(1.3rem, 4vw, 1.6rem); margin: 2px 0 0; }
+.popup-icon { width: 52px; height: 52px; flex: none; border-radius: 14px; background: var(--gold); color: var(--navy); display: grid; place-items: center; }
+.popup-icon .icon { width: 26px; height: 26px; }
+.popup-text { color: var(--muted); font-size: .95rem; margin-bottom: 16px; }
+.popup .form-grid { gap: 10px 12px; margin-bottom: 14px; }
+.popup .field input, .popup .field select, .popup .field textarea { padding: 10px 12px; }
+.popup-dismiss { display: block; margin: 10px auto 0; background: none; border: 0; color: var(--muted); font-size: .88rem; text-decoration: underline; cursor: pointer; padding: 6px 10px; }
+.popup-dismiss:hover { color: var(--navy); }
+@media (max-width: 600px) {
+  .popup { width: 100vw; max-width: 100vw; max-height: 92vh; max-height: 92dvh; margin: auto 0 0; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+  .popup-inner { padding: 22px 18px 16px; }
+  .popup[open] { animation-name: sheetIn; }
+  @keyframes sheetIn { from { transform: translateY(100%); } to { transform: none; } }
+}
+body.popup-open { overflow: hidden; }

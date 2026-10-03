@@ -121,6 +121,64 @@
     Object.keys(map).forEach(function (id) { var h = document.getElementById(id); if (h) tio.observe(h); });
   }
 
+
+  /* ---- Free Claim Review popup (opens 4 seconds after page load) ---- */
+  var popup = document.querySelector('[data-claim-popup]');
+  if (popup) {
+    var DELAY = 4000;
+    var SNOOZE_DAYS = 7;      // after "No thanks" / close
+    var DONE_DAYS = 90;       // after a successful submission
+    var store = {
+      get: function (k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } },
+      set: function (k, v) { try { window.localStorage.setItem(k, v); } catch (e) {} },
+      sget: function (k) { try { return window.sessionStorage.getItem(k); } catch (e) { return null; } },
+      sset: function (k, v) { try { window.sessionStorage.setItem(k, v); } catch (e) {} }
+    };
+    var lastFocus = null;
+    var suppressed = function () {
+      var until = parseInt(store.get('mpa-popup-until') || '0', 10);
+      return (until && Date.now() < until) || store.sget('mpa-popup-shown') === '1';
+    };
+    var busy = function () {
+      // Don't interrupt someone who is typing in another form or using the mobile menu.
+      var a = document.activeElement;
+      return document.body.classList.contains('nav-open') || (a && a.closest && a.closest('form') && !popup.contains(a));
+    };
+    var openPopup = function () {
+      if (popup.open || suppressed()) return;
+      if (busy()) { setTimeout(openPopup, 2000); return; }
+      lastFocus = document.activeElement;
+      store.sset('mpa-popup-shown', '1');
+      if (typeof popup.showModal === 'function') popup.showModal(); else { popup.setAttribute('open', ''); popup.classList.add('is-fallback-open'); }
+      document.body.classList.add('popup-open');
+      var first = popup.querySelector('input:not([type="hidden"]):not([tabindex="-1"])');
+      if (first) first.focus({ preventScroll: true });
+      if (window.gtag) window.gtag('event', 'popup_shown', { popup: 'free_claim_review' });
+    };
+    var closePopup = function () {
+      var submitted = !!popup.querySelector('.form-success');
+      store.set('mpa-popup-until', String(Date.now() + (submitted ? DONE_DAYS : SNOOZE_DAYS) * 86400000));
+      if (popup.open && typeof popup.close === 'function') popup.close();
+      popup.removeAttribute('open'); popup.classList.remove('is-fallback-open');
+      document.body.classList.remove('popup-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+    };
+    popup.querySelectorAll('[data-popup-close]').forEach(function (b) { b.addEventListener('click', closePopup); });
+    popup.addEventListener('cancel', function (e) { e.preventDefault(); closePopup(); });   // Escape key
+    popup.addEventListener('click', function (e) { if (e.target === popup) closePopup(); }); // backdrop click
+    // A successful submission inside the popup: remember it so the popup doesn't return.
+    var doneObserver = new MutationObserver(function () {
+      if (popup.querySelector('.form-success')) {
+        doneObserver.disconnect();
+        store.set('mpa-popup-until', String(Date.now() + DONE_DAYS * 86400000));
+        var d = popup.querySelector('.popup-dismiss'); if (d) d.textContent = 'Close';
+      }
+    });
+    doneObserver.observe(popup, { childList: true, subtree: true });
+    var schedule = function () { if (!suppressed()) setTimeout(openPopup, DELAY); };
+    if (document.readyState === 'complete') schedule(); else window.addEventListener('load', schedule);
+  }
+
   /* ---- Free Claim Review forms ---- */
   var forms = document.querySelectorAll('form[data-claim-form]');
   function refreshToken(form) {

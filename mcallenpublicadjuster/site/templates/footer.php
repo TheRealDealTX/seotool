@@ -66,6 +66,12 @@
   <a class="mobile-bar-call" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> Call Now</a>
   <a class="mobile-bar-review" href="/free-claim-review/"><?= icon('clipboard', 'icon icon-sm') ?> Free Claim Review</a>
 </div>
+<?php
+$noPopupPaths = ['/free-claim-review/', '/contact/', '/privacy-policy/', '/terms-of-use/'];
+if (empty($page['no_popup']) && empty($page['noindex']) && !in_array($page['path'] ?? '', $noPopupPaths, true)) {
+    component('popup-form');
+}
+?>
 <script src="/assets/js/site.js?v=<?= e(asset_version('js/site.js')) ?>" defer></script>
 <?php foreach ($page['scripts'] ?? [] as $s): ?>
 <script src="<?= e($s) ?>" defer></script>
