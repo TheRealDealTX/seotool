@@ -29,6 +29,16 @@ PHONE = "(512) 297-7580"
 TEL = "+15122977580"
 TODAY = dt.date(2026, 10, 3)
 GEO = (29.7858, -95.8245)
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JWYNK4EPC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7JWYNK4EPC');
+</script>
+"""
 
 e = html.escape
 
@@ -226,7 +236,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8">
+{GTAG}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">

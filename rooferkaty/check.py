@@ -28,6 +28,8 @@ for base, _, files in os.walk(DIST):
 
 titles, descs = {}, {}
 for url, h in pages.items():
+    if h.count("G-7JWYNK4EPC") != 2 or h.find("googletagmanager.com/gtag/js") > h.find("<meta charset"):
+        errors.append(f"{url}: Google tag missing or not first in <head>")
     if "teamwriteforus" in h or "gmail" in h.lower():
         errors.append(f"{url}: recipient email exposed")
     for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
