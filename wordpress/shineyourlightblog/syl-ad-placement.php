@@ -347,7 +347,8 @@ final class SYL_Ad_Placement {
 		if ( self::disabled() ) {
 			return;
 		}
-		$show_feed = ! is_singular() && ( is_home() || is_front_page() || is_archive() || is_search() );
+		// The front page is a static Elementor page (singular), so test it before is_singular().
+		$show_feed = is_front_page() || is_home() || is_archive() || is_search();
 		?>
 <script data-no-optimize="1" data-no-defer="1" data-cfasync="false">
 (function () {
