@@ -1,0 +1,368 @@
+{
+ "source": "U.S. Census Bureau 2024 Gazetteer Files (internal points of places and ZCTAs)",
+ "places": [
+  {
+   "name": "Alamo",
+   "lat": 26.181,
+   "lon": -98.1175,
+   "kind": "city"
+  },
+  {
+   "name": "Alton",
+   "lat": 26.2888,
+   "lon": -98.3106,
+   "kind": "city"
+  },
+  {
+   "name": "Donna",
+   "lat": 26.161,
+   "lon": -98.0389,
+   "kind": "city"
+  },
+  {
+   "name": "Edcouch",
+   "lat": 26.2937,
+   "lon": -97.9631,
+   "kind": "city"
+  },
+  {
+   "name": "Edinburg",
+   "lat": 26.3183,
+   "lon": -98.1534,
+   "kind": "city"
+  },
+  {
+   "name": "Elsa",
+   "lat": 26.2978,
+   "lon": -97.9936,
+   "kind": "city"
+  },
+  {
+   "name": "Granjeno",
+   "lat": 26.1371,
+   "lon": -98.3034,
+   "kind": "city"
+  },
+  {
+   "name": "Hidalgo",
+   "lat": 26.1089,
+   "lon": -98.2462,
+   "kind": "city"
+  },
+  {
+   "name": "La Joya",
+   "lat": 26.2579,
+   "lon": -98.4764,
+   "kind": "city"
+  },
+  {
+   "name": "La Villa",
+   "lat": 26.2963,
+   "lon": -97.9269,
+   "kind": "city"
+  },
+  {
+   "name": "McAllen",
+   "lat": 26.225,
+   "lon": -98.2461,
+   "kind": "city"
+  },
+  {
+   "name": "Mercedes",
+   "lat": 26.1538,
+   "lon": -97.9129,
+   "kind": "city"
+  },
+  {
+   "name": "Mission",
+   "lat": 26.2041,
+   "lon": -98.3252,
+   "kind": "city"
+  },
+  {
+   "name": "Palmhurst",
+   "lat": 26.2583,
+   "lon": -98.2953,
+   "kind": "city"
+  },
+  {
+   "name": "Palmview",
+   "lat": 26.2319,
+   "lon": -98.3816,
+   "kind": "city"
+  },
+  {
+   "name": "Peñitas",
+   "lat": 26.2583,
+   "lon": -98.4386,
+   "kind": "city"
+  },
+  {
+   "name": "Pharr",
+   "lat": 26.1634,
+   "lon": -98.1939,
+   "kind": "city"
+  },
+  {
+   "name": "Progreso",
+   "lat": 26.0961,
+   "lon": -97.9566,
+   "kind": "city"
+  },
+  {
+   "name": "Progreso Lakes",
+   "lat": 26.069,
+   "lon": -97.9607,
+   "kind": "city"
+  },
+  {
+   "name": "San Juan",
+   "lat": 26.1894,
+   "lon": -98.1518,
+   "kind": "city"
+  },
+  {
+   "name": "Sullivan City",
+   "lat": 26.2752,
+   "lon": -98.5644,
+   "kind": "city"
+  },
+  {
+   "name": "Weslaco",
+   "lat": 26.1605,
+   "lon": -97.9877,
+   "kind": "city"
+  },
+  {
+   "name": "Abram",
+   "lat": 26.2116,
+   "lon": -98.4119,
+   "kind": "community"
+  },
+  {
+   "name": "Doolittle",
+   "lat": 26.3599,
+   "lon": -98.1164,
+   "kind": "community"
+  },
+  {
+   "name": "Hargill",
+   "lat": 26.4423,
+   "lon": -98.0146,
+   "kind": "community"
+  },
+  {
+   "name": "La Blanca",
+   "lat": 26.3048,
+   "lon": -98.0286,
+   "kind": "community"
+  },
+  {
+   "name": "Linn",
+   "lat": 26.5633,
+   "lon": -98.1289,
+   "kind": "community"
+  },
+  {
+   "name": "Llano Grande",
+   "lat": 26.1308,
+   "lon": -97.9684,
+   "kind": "community"
+  },
+  {
+   "name": "Lopezville",
+   "lat": 26.2452,
+   "lon": -98.1537,
+   "kind": "community"
+  },
+  {
+   "name": "Los Ebanos",
+   "lat": 26.2397,
+   "lon": -98.5522,
+   "kind": "community"
+  },
+  {
+   "name": "Monte Alto",
+   "lat": 26.3744,
+   "lon": -97.9727,
+   "kind": "community"
+  },
+  {
+   "name": "Murillo",
+   "lat": 26.2641,
+   "lon": -98.1228,
+   "kind": "community"
+  },
+  {
+   "name": "North Alamo",
+   "lat": 26.2161,
+   "lon": -98.1266,
+   "kind": "community"
+  },
+  {
+   "name": "Olivarez",
+   "lat": 26.2285,
+   "lon": -97.9931,
+   "kind": "community"
+  },
+  {
+   "name": "San Carlos",
+   "lat": 26.2957,
+   "lon": -98.0631,
+   "kind": "community"
+  },
+  {
+   "name": "Sharyland (West)",
+   "lat": 26.2718,
+   "lon": -98.3404,
+   "kind": "community"
+  }
+ ],
+ "zips": [
+  {
+   "zip": "78501",
+   "lat": 26.2158,
+   "lon": -98.2396
+  },
+  {
+   "zip": "78503",
+   "lat": 26.1623,
+   "lon": -98.2487
+  },
+  {
+   "zip": "78504",
+   "lat": 26.2776,
+   "lon": -98.2373
+  },
+  {
+   "zip": "78516",
+   "lat": 26.1445,
+   "lon": -98.1213
+  },
+  {
+   "zip": "78537",
+   "lat": 26.1732,
+   "lon": -98.058
+  },
+  {
+   "zip": "78538",
+   "lat": 26.3672,
+   "lon": -97.974
+  },
+  {
+   "zip": "78539",
+   "lat": 26.2807,
+   "lon": -98.1833
+  },
+  {
+   "zip": "78540",
+   "lat": 26.5491,
+   "lon": -97.9916
+  },
+  {
+   "zip": "78541",
+   "lat": 26.4521,
+   "lon": -98.2768
+  },
+  {
+   "zip": "78542",
+   "lat": 26.4325,
+   "lon": -98.0899
+  },
+  {
+   "zip": "78543",
+   "lat": 26.3012,
+   "lon": -98.0051
+  },
+  {
+   "zip": "78549",
+   "lat": 26.4893,
+   "lon": -98.0297
+  },
+  {
+   "zip": "78557",
+   "lat": 26.1095,
+   "lon": -98.2535
+  },
+  {
+   "zip": "78558",
+   "lat": 26.2927,
+   "lon": -98.0237
+  },
+  {
+   "zip": "78560",
+   "lat": 26.2653,
+   "lon": -98.4858
+  },
+  {
+   "zip": "78562",
+   "lat": 26.2838,
+   "lon": -97.8912
+  },
+  {
+   "zip": "78563",
+   "lat": 26.6723,
+   "lon": -98.255
+  },
+  {
+   "zip": "78565",
+   "lat": 26.2435,
+   "lon": -98.561
+  },
+  {
+   "zip": "78570",
+   "lat": 26.1715,
+   "lon": -97.911
+  },
+  {
+   "zip": "78572",
+   "lat": 26.2015,
+   "lon": -98.3572
+  },
+  {
+   "zip": "78573",
+   "lat": 26.2962,
+   "lon": -98.3
+  },
+  {
+   "zip": "78574",
+   "lat": 26.3112,
+   "lon": -98.3729
+  },
+  {
+   "zip": "78576",
+   "lat": 26.3171,
+   "lon": -98.4637
+  },
+  {
+   "zip": "78577",
+   "lat": 26.1634,
+   "lon": -98.1939
+  },
+  {
+   "zip": "78579",
+   "lat": 26.0892,
+   "lon": -97.9463
+  },
+  {
+   "zip": "78589",
+   "lat": 26.1512,
+   "lon": -98.1593
+  },
+  {
+   "zip": "78595",
+   "lat": 26.3146,
+   "lon": -98.5404
+  },
+  {
+   "zip": "78596",
+   "lat": 26.0973,
+   "lon": -97.9997
+  },
+  {
+   "zip": "78599",
+   "lat": 26.217,
+   "lon": -97.988
+  }
+ ]
+}

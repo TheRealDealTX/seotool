@@ -1,3 +1,11 @@
 __pycache__/
 *.pyc
 dist/
+mcallenpublicadjuster/site/includes/config.local.php
+mcallenpublicadjuster/site/data/.secret
+mcallenpublicadjuster/site/data/cache/*.json
+mcallenpublicadjuster/site/data/cache/*.lock
+mcallenpublicadjuster/site/data/cache/*.gz
+mcallenpublicadjuster/site/data/logs/*.log*
+mcallenpublicadjuster/site/data/ratelimit/*
+!mcallenpublicadjuster/site/data/ratelimit/.htaccess

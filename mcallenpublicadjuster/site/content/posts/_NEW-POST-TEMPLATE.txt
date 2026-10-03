@@ -1,0 +1,36 @@
+<?php
+/*
+ * HOW TO ADD A NEW BLOG ARTICLE
+ * 1. Copy this file to content/posts/<your-url-slug>.php  (lowercase letters, numbers, hyphens only).
+ *    The article will be live at https://mcallenpublicadjuster.com/<your-url-slug>/
+ * 2. Fill in the fields below. Keep 'date' as the real publish date (never backdate).
+ * 3. Put a 1200x675 landscape image (no text on it) in /assets/img/featured/ and reference it in 'image'.
+ * 4. Upload the file. The blog list, homepage, RSS feed, sitemap, and author page update automatically.
+ * Tip: run `php -l your-file.php` (or use Hostinger's file editor carefully) — a typo can break the page.
+ */
+return [
+    'title'       => 'Article Title (shown as the H1)',
+    'seo_title'   => 'Search Title Under 62 Characters | McAllen Public Adjuster',
+    'description' => 'Meta description, 120-150 characters.',
+    'date'        => '2026-10-03',
+    'updated'     => '2026-10-03',
+    'category'    => 'Claim Process',  // Hail Claims, Roof Claims, Wind & Storm Claims, Hurricane Claims, Fire Claims, Water Damage Claims, Claim Process, Commercial Claims, Weather Records, Building Codes
+    'excerpt'     => 'One or two sentences for the article card.',
+    'image'       => '/assets/img/featured/your-image.webp',
+    'image_alt'   => 'Describe the image',
+    'sources'     => [
+        ['Source name', 'https://example.gov/page'],
+    ],
+    'faqs' => [
+        ['q' => 'Question?', 'a' => '<p>Answer.</p>'],
+    ],
+    'body' => <<<'HTML'
+<div class="key-takeaways"><h2>Key takeaways</h2><ul><li>Point one</li></ul></div>
+<p>Introduction…</p>
+<h2>First section</h2>
+<p>Text…</p>
+[[cta]]
+<h2>Second section</h2>
+<p>Text…</p>
+HTML,
+];

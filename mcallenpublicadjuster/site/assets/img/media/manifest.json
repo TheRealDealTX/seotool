@@ -1,0 +1,804 @@
+{
+ "service-storm-damage-claims.webp": {
+  "w": 768,
+  "h": 432,
+  "variants": {
+   "480": "/assets/img/media/service-storm-damage-claims-480.webp",
+   "768": "/assets/img/featured/service-storm-damage-claims.webp"
+  }
+ },
+ "page-free-claim-review.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-free-claim-review-480.webp",
+   "960": "/assets/img/media/page-free-claim-review-960.webp",
+   "1200": "/assets/img/featured/page-free-claim-review.webp"
+  }
+ },
+ "service-underpaid-insurance-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-underpaid-insurance-claims-480.webp",
+   "960": "/assets/img/media/service-underpaid-insurance-claims-960.webp",
+   "1200": "/assets/img/featured/service-underpaid-insurance-claims.webp"
+  }
+ },
+ "replacement-cost-vs-actual-cash-value-texas.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/replacement-cost-vs-actual-cash-value-texas-480.webp",
+   "960": "/assets/img/media/replacement-cost-vs-actual-cash-value-texas-960.webp",
+   "1200": "/assets/img/featured/replacement-cost-vs-actual-cash-value-texas.webp"
+  }
+ },
+ "page-terms-of-use.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/page-terms-of-use-480.webp",
+   "640": "/assets/img/featured/page-terms-of-use.webp"
+  }
+ },
+ "page-storm-lookup.webp": {
+  "w": 768,
+  "h": 432,
+  "variants": {
+   "480": "/assets/img/media/page-storm-lookup-480.webp",
+   "768": "/assets/img/featured/page-storm-lookup.webp"
+  }
+ },
+ "service-smoke-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-smoke-damage-claims-480.webp",
+   "960": "/assets/img/media/service-smoke-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-smoke-damage-claims.webp"
+  }
+ },
+ "service-water-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-water-damage-claims-480.webp",
+   "960": "/assets/img/media/service-water-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-water-damage-claims.webp"
+  }
+ },
+ "page-local-building-codes.webp": {
+  "w": 768,
+  "h": 432,
+  "variants": {
+   "480": "/assets/img/media/page-local-building-codes-480.webp",
+   "768": "/assets/img/featured/page-local-building-codes.webp"
+  }
+ },
+ "page-storm-history.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-storm-history-480.webp",
+   "960": "/assets/img/media/page-storm-history-960.webp",
+   "1200": "/assets/img/featured/page-storm-history.webp"
+  }
+ },
+ "service-commercial-property-claims.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/service-commercial-property-claims-480.webp",
+   "640": "/assets/img/featured/service-commercial-property-claims.webp"
+  }
+ },
+ "mcallen-hail-season-storm-data.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/mcallen-hail-season-storm-data-480.webp",
+   "960": "/assets/img/media/mcallen-hail-season-storm-data-960.webp",
+   "1200": "/assets/img/featured/mcallen-hail-season-storm-data.webp"
+  }
+ },
+ "service-fire-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-fire-damage-claims-480.webp",
+   "960": "/assets/img/media/service-fire-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-fire-damage-claims.webp"
+  }
+ },
+ "page-weather-events.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-weather-events-480.webp",
+   "960": "/assets/img/media/page-weather-events-960.webp",
+   "1200": "/assets/img/featured/page-weather-events.webp"
+  }
+ },
+ "service-denied-insurance-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-denied-insurance-claims-480.webp",
+   "960": "/assets/img/media/service-denied-insurance-claims-960.webp",
+   "1200": "/assets/img/featured/service-denied-insurance-claims.webp"
+  }
+ },
+ "hurricane-damage-mcallen-homeowners-guide.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/hurricane-damage-mcallen-homeowners-guide-480.webp",
+   "960": "/assets/img/media/hurricane-damage-mcallen-homeowners-guide-960.webp",
+   "1200": "/assets/img/featured/hurricane-damage-mcallen-homeowners-guide.webp"
+  }
+ },
+ "page-about-us.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-about-us-480.webp",
+   "960": "/assets/img/media/page-about-us-960.webp",
+   "1200": "/assets/img/featured/page-about-us.webp"
+  }
+ },
+ "service-wind-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-wind-damage-claims-480.webp",
+   "960": "/assets/img/media/service-wind-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-wind-damage-claims.webp"
+  }
+ },
+ "why-property-insurance-claims-are-delayed-texas.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/why-property-insurance-claims-are-delayed-texas-480.webp",
+   "960": "/assets/img/media/why-property-insurance-claims-are-delayed-texas-960.webp",
+   "1200": "/assets/img/featured/why-property-insurance-claims-are-delayed-texas.webp"
+  }
+ },
+ "page-privacy-policy.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/page-privacy-policy-480.webp",
+   "640": "/assets/img/featured/page-privacy-policy.webp"
+  }
+ },
+ "service-hail-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-hail-damage-claims-480.webp",
+   "960": "/assets/img/media/service-hail-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-hail-damage-claims.webp"
+  }
+ },
+ "wind-damage-insurance-claims-mcallen-tx.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/wind-damage-insurance-claims-mcallen-tx-480.webp",
+   "960": "/assets/img/media/wind-damage-insurance-claims-mcallen-tx-960.webp",
+   "1200": "/assets/img/featured/wind-damage-insurance-claims-mcallen-tx.webp"
+  }
+ },
+ "freeze-damage-burst-pipe-claims-rio-grande-valley.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/freeze-damage-burst-pipe-claims-rio-grande-valley-480.webp",
+   "960": "/assets/img/media/freeze-damage-burst-pipe-claims-rio-grande-valley-960.webp",
+   "1200": "/assets/img/featured/freeze-damage-burst-pipe-claims-rio-grande-valley.webp"
+  }
+ },
+ "service-insurance-claim-supplements.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-insurance-claim-supplements-480.webp",
+   "960": "/assets/img/media/service-insurance-claim-supplements-960.webp",
+   "1200": "/assets/img/featured/service-insurance-claim-supplements.webp"
+  }
+ },
+ "page-services.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-services-480.webp",
+   "960": "/assets/img/media/page-services-960.webp",
+   "1200": "/assets/img/featured/page-services.webp"
+  }
+ },
+ "service-hurricane-damage-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-hurricane-damage-claims-480.webp",
+   "960": "/assets/img/media/service-hurricane-damage-claims-960.webp",
+   "1200": "/assets/img/featured/service-hurricane-damage-claims.webp"
+  }
+ },
+ "page-claim-tools.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-claim-tools-480.webp",
+   "960": "/assets/img/media/page-claim-tools-960.webp",
+   "1200": "/assets/img/featured/page-claim-tools.webp"
+  }
+ },
+ "page-sitemap.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-sitemap-480.webp",
+   "960": "/assets/img/media/page-sitemap-960.webp",
+   "1200": "/assets/img/featured/page-sitemap.webp"
+  }
+ },
+ "service-delayed-insurance-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-delayed-insurance-claims-480.webp",
+   "960": "/assets/img/media/service-delayed-insurance-claims-960.webp",
+   "1200": "/assets/img/featured/service-delayed-insurance-claims.webp"
+  }
+ },
+ "building-codes-insurance-repairs-mcallen.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/building-codes-insurance-repairs-mcallen-480.webp",
+   "640": "/assets/img/featured/building-codes-insurance-repairs-mcallen.webp"
+  }
+ },
+ "insurance-company-disputes-storm-damage.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/insurance-company-disputes-storm-damage-480.webp",
+   "960": "/assets/img/media/insurance-company-disputes-storm-damage-960.webp",
+   "1200": "/assets/img/featured/insurance-company-disputes-storm-damage.webp"
+  }
+ },
+ "page-author-joseph-dittman.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-author-joseph-dittman-480.webp",
+   "960": "/assets/img/media/page-author-joseph-dittman-960.webp",
+   "1200": "/assets/img/featured/page-author-joseph-dittman.webp"
+  }
+ },
+ "document-commercial-property-damage-after-storm.webp": {
+  "w": 768,
+  "h": 432,
+  "variants": {
+   "480": "/assets/img/media/document-commercial-property-damage-after-storm-480.webp",
+   "768": "/assets/img/featured/document-commercial-property-damage-after-storm.webp"
+  }
+ },
+ "page-service-areas.webp": {
+  "w": 768,
+  "h": 432,
+  "variants": {
+   "480": "/assets/img/media/page-service-areas-480.webp",
+   "768": "/assets/img/featured/page-service-areas.webp"
+  }
+ },
+ "service-residential-property-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-residential-property-claims-480.webp",
+   "960": "/assets/img/media/service-residential-property-claims-960.webp",
+   "1200": "/assets/img/featured/service-residential-property-claims.webp"
+  }
+ },
+ "service-insurance-estimate-review.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-insurance-estimate-review-480.webp",
+   "960": "/assets/img/media/service-insurance-estimate-review-960.webp",
+   "1200": "/assets/img/featured/service-insurance-estimate-review.webp"
+  }
+ },
+ "page-claim-documentation-checklist.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-claim-documentation-checklist-480.webp",
+   "960": "/assets/img/media/page-claim-documentation-checklist-960.webp",
+   "1200": "/assets/img/featured/page-claim-documentation-checklist.webp"
+  }
+ },
+ "service-insurance-appraisal.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/service-insurance-appraisal-480.webp",
+   "640": "/assets/img/featured/service-insurance-appraisal.webp"
+  }
+ },
+ "noaa-weather-records-document-property-damage-mcallen.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/noaa-weather-records-document-property-damage-mcallen-480.webp",
+   "960": "/assets/img/media/noaa-weather-records-document-property-damage-mcallen-960.webp",
+   "1200": "/assets/img/featured/noaa-weather-records-document-property-damage-mcallen.webp"
+  }
+ },
+ "how-to-review-underpaid-roof-insurance-estimate.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/how-to-review-underpaid-roof-insurance-estimate-480.webp",
+   "960": "/assets/img/media/how-to-review-underpaid-roof-insurance-estimate-960.webp",
+   "1200": "/assets/img/featured/how-to-review-underpaid-roof-insurance-estimate.webp"
+  }
+ },
+ "service-roof-damage-insurance-claims.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/service-roof-damage-insurance-claims-480.webp",
+   "960": "/assets/img/media/service-roof-damage-insurance-claims-960.webp",
+   "1200": "/assets/img/featured/service-roof-damage-insurance-claims.webp"
+  }
+ },
+ "page-claim-calculator.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-claim-calculator-480.webp",
+   "960": "/assets/img/media/page-claim-calculator-960.webp",
+   "1200": "/assets/img/featured/page-claim-calculator.webp"
+  }
+ },
+ "water-damage-vs-flood-damage-mcallen.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/water-damage-vs-flood-damage-mcallen-480.webp",
+   "960": "/assets/img/media/water-damage-vs-flood-damage-mcallen-960.webp",
+   "1200": "/assets/img/featured/water-damage-vs-flood-damage-mcallen.webp"
+  }
+ },
+ "page-weather.webp": {
+  "w": 1200,
+  "h": 675,
+  "variants": {
+   "480": "/assets/img/media/page-weather-480.webp",
+   "960": "/assets/img/media/page-weather-960.webp",
+   "1200": "/assets/img/featured/page-weather.webp"
+  }
+ },
+ "page-contact.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/page-contact-480.webp",
+   "640": "/assets/img/featured/page-contact.webp"
+  }
+ },
+ "Are-Public-Adjusters-Worth-It.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Are-Public-Adjusters-Worth-It-480.webp",
+   "960": "/assets/img/media/Are-Public-Adjusters-Worth-It-960.webp",
+   "1440": "/assets/img/media/Are-Public-Adjusters-Worth-It-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/Are-Public-Adjusters-Worth-It.webp"
+  }
+ },
+ "Claim-Preparation.webp": {
+  "w": 640,
+  "h": 427,
+  "variants": {
+   "480": "/assets/img/media/Claim-Preparation-480.webp",
+   "640": "/wp-content/uploads/2026/02/Claim-Preparation.webp"
+  }
+ },
+ "Fire-Insurance-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Fire-Insurance-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/Fire-Insurance-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/Fire-Insurance-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/Fire-Insurance-Public-Adjuster.webp"
+  }
+ },
+ "How-to-Find-a-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/How-to-Find-a-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/How-to-Find-a-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/How-to-Find-a-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/How-to-Find-a-Public-Adjuster.webp"
+  }
+ },
+ "Initial-Consultation.webp": {
+  "w": 640,
+  "h": 427,
+  "variants": {
+   "480": "/assets/img/media/Initial-Consultation-480.webp",
+   "640": "/wp-content/uploads/2026/02/Initial-Consultation.webp"
+  }
+ },
+ "League-City-Public-Adjuster-BG.webp": {
+  "w": 1920,
+  "h": 1281,
+  "variants": {
+   "480": "/assets/img/media/League-City-Public-Adjuster-BG-480.webp",
+   "960": "/assets/img/media/League-City-Public-Adjuster-BG-960.webp",
+   "1440": "/assets/img/media/League-City-Public-Adjuster-BG-1440.webp",
+   "1920": "/wp-content/uploads/2026/02/League-City-Public-Adjuster-BG.webp"
+  }
+ },
+ "Negotiation.webp": {
+  "w": 640,
+  "h": 427,
+  "variants": {
+   "480": "/assets/img/media/Negotiation-480.webp",
+   "640": "/wp-content/uploads/2026/02/Negotiation.webp"
+  }
+ },
+ "Policy-Analysis.webp": {
+  "w": 640,
+  "h": 360,
+  "variants": {
+   "480": "/assets/img/media/Policy-Analysis-480.webp",
+   "640": "/wp-content/uploads/2026/02/Policy-Analysis.webp"
+  }
+ },
+ "Property-Inspection.webp": {
+  "w": 640,
+  "h": 427,
+  "variants": {
+   "480": "/assets/img/media/Property-Inspection-480.webp",
+   "640": "/wp-content/uploads/2026/02/Property-Inspection.webp"
+  }
+ },
+ "Resolution.webp": {
+  "w": 640,
+  "h": 427,
+  "variants": {
+   "480": "/assets/img/media/Resolution-480.webp",
+   "640": "/wp-content/uploads/2026/02/Resolution.webp"
+  }
+ },
+ "What-Is-a-Public-Adjuster-and-How-to-Hire-One.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-Is-a-Public-Adjuster-and-How-to-Hire-One-480.webp",
+   "960": "/assets/img/media/What-Is-a-Public-Adjuster-and-How-to-Hire-One-960.webp",
+   "1440": "/assets/img/media/What-Is-a-Public-Adjuster-and-How-to-Hire-One-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/What-Is-a-Public-Adjuster-and-How-to-Hire-One.webp"
+  }
+ },
+ "What-Is-a-Public-Claims-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-Is-a-Public-Claims-Adjuster-480.webp",
+   "960": "/assets/img/media/What-Is-a-Public-Claims-Adjuster-960.webp",
+   "1440": "/assets/img/media/What-Is-a-Public-Claims-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/What-Is-a-Public-Claims-Adjuster.webp"
+  }
+ },
+ "When-Is-It-Too-Late-to-Hire-a-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/02/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster.webp"
+  }
+ },
+ "Fire-Insurance-Adjuster-1.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Fire-Insurance-Adjuster-1-480.webp",
+   "960": "/assets/img/media/Fire-Insurance-Adjuster-1-960.webp",
+   "1440": "/assets/img/media/Fire-Insurance-Adjuster-1-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Fire-Insurance-Adjuster-1.webp"
+  }
+ },
+ "Fire-Insurance-Adjuster-2.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Fire-Insurance-Adjuster-2-480.webp",
+   "960": "/assets/img/media/Fire-Insurance-Adjuster-2-960.webp",
+   "1440": "/assets/img/media/Fire-Insurance-Adjuster-2-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Fire-Insurance-Adjuster-2.webp"
+  }
+ },
+ "Fire-Insurance-Adjuster-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Fire-Insurance-Adjuster-3-480.webp",
+   "960": "/assets/img/media/Fire-Insurance-Adjuster-3-960.webp",
+   "1440": "/assets/img/media/Fire-Insurance-Adjuster-3-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Fire-Insurance-Adjuster-3.webp"
+  }
+ },
+ "Fire-Insurance-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Fire-Insurance-Adjuster-480.webp",
+   "960": "/assets/img/media/Fire-Insurance-Adjuster-960.webp",
+   "1440": "/assets/img/media/Fire-Insurance-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Fire-Insurance-Adjuster.webp"
+  }
+ },
+ "Situations-Where-You-Should-Consider-Hiring-a-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Situations-Where-You-Should-Consider-Hiring-a-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/Situations-Where-You-Should-Consider-Hiring-a-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/Situations-Where-You-Should-Consider-Hiring-a-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Situations-Where-You-Should-Consider-Hiring-a-Public-Adjuster.webp"
+  }
+ },
+ "The-Moment-a-Claim-Changes-Knowing-When-to-Hire-a-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/The-Moment-a-Claim-Changes-Knowing-When-to-Hire-a-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/The-Moment-a-Claim-Changes-Knowing-When-to-Hire-a-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/The-Moment-a-Claim-Changes-Knowing-When-to-Hire-a-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/The-Moment-a-Claim-Changes-Knowing-When-to-Hire-a-Public-Adjuster.webp"
+  }
+ },
+ "Understanding-the-Cost-of-Hiring-a-Public-Adjuster.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Understanding-the-Cost-of-Hiring-a-Public-Adjuster-480.webp",
+   "960": "/assets/img/media/Understanding-the-Cost-of-Hiring-a-Public-Adjuster-960.webp",
+   "1440": "/assets/img/media/Understanding-the-Cost-of-Hiring-a-Public-Adjuster-1440.webp",
+   "1536": "/wp-content/uploads/2026/03/Understanding-the-Cost-of-Hiring-a-Public-Adjuster.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-1.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-1-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-1-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-1-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-1.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-2.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-2-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-2-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-2-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-2.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-3-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-3-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-3-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-3.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-4.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-4-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-4-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-4-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-4.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-5.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-5-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-5-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-5-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-5.webp"
+  }
+ },
+ "Document-Hail-Damage-for-an-Insurance-Claim-6.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-6-480.webp",
+   "960": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-6-960.webp",
+   "1440": "/assets/img/media/Document-Hail-Damage-for-an-Insurance-Claim-6-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Document-Hail-Damage-for-an-Insurance-Claim-6.webp"
+  }
+ },
+ "Hail-Damage-Claim-Supplements-1.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Hail-Damage-Claim-Supplements-1-480.webp",
+   "960": "/assets/img/media/Hail-Damage-Claim-Supplements-1-960.webp",
+   "1440": "/assets/img/media/Hail-Damage-Claim-Supplements-1-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-1.webp"
+  }
+ },
+ "Hail-Damage-Claim-Supplements-2.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Hail-Damage-Claim-Supplements-2-480.webp",
+   "960": "/assets/img/media/Hail-Damage-Claim-Supplements-2-960.webp",
+   "1440": "/assets/img/media/Hail-Damage-Claim-Supplements-2-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-2.webp"
+  }
+ },
+ "Hail-Damage-Claim-Supplements-4.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Hail-Damage-Claim-Supplements-4-480.webp",
+   "960": "/assets/img/media/Hail-Damage-Claim-Supplements-4-960.webp",
+   "1440": "/assets/img/media/Hail-Damage-Claim-Supplements-4-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-4.webp"
+  }
+ },
+ "Hail-Damage-Claim-Supplements-5.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Hail-Damage-Claim-Supplements-5-480.webp",
+   "960": "/assets/img/media/Hail-Damage-Claim-Supplements-5-960.webp",
+   "1440": "/assets/img/media/Hail-Damage-Claim-Supplements-5-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-5.webp"
+  }
+ },
+ "Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-1.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-1-480.webp",
+   "960": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-1-960.webp",
+   "1440": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-1-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-1.webp"
+  }
+ },
+ "Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-2.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-2-480.webp",
+   "960": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-2-960.webp",
+   "1440": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-2-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-2.webp"
+  }
+ },
+ "Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-3-480.webp",
+   "960": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-3-960.webp",
+   "1440": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-3-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-3.webp"
+  }
+ },
+ "Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-4.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-4-480.webp",
+   "960": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-4-960.webp",
+   "1440": "/assets/img/media/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-4-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-4.webp"
+  }
+ },
+ "Roof-Hail-Damage-Insurance-Claim-McAllen-1.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-1-480.webp",
+   "960": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-1-960.webp",
+   "1440": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-1-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Roof-Hail-Damage-Insurance-Claim-McAllen-1.webp"
+  }
+ },
+ "Roof-Hail-Damage-Insurance-Claim-McAllen-2.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-2-480.webp",
+   "960": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-2-960.webp",
+   "1440": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-2-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Roof-Hail-Damage-Insurance-Claim-McAllen-2.webp"
+  }
+ },
+ "Roof-Hail-Damage-Insurance-Claim-McAllen-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-3-480.webp",
+   "960": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-3-960.webp",
+   "1440": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-3-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Roof-Hail-Damage-Insurance-Claim-McAllen-3.webp"
+  }
+ },
+ "Roof-Hail-Damage-Insurance-Claim-McAllen-4.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-4-480.webp",
+   "960": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-4-960.webp",
+   "1440": "/assets/img/media/Roof-Hail-Damage-Insurance-Claim-McAllen-4-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/Roof-Hail-Damage-Insurance-Claim-McAllen-4.webp"
+  }
+ },
+ "What-to-Do-If-Your-Hail-Claim-Was-Denied-3.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-3-480.webp",
+   "960": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-3-960.webp",
+   "1440": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-3-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-3.webp"
+  }
+ },
+ "What-to-Do-If-Your-Hail-Claim-Was-Denied-4.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-4-480.webp",
+   "960": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-4-960.webp",
+   "1440": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-4-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-4.webp"
+  }
+ },
+ "What-to-Do-If-Your-Hail-Claim-Was-Denied-6.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-6-480.webp",
+   "960": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-6-960.webp",
+   "1440": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-6-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-6.webp"
+  }
+ },
+ "What-to-Do-If-Your-Hail-Claim-Was-Denied-7.webp": {
+  "w": 1536,
+  "h": 1024,
+  "variants": {
+   "480": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-7-480.webp",
+   "960": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-7-960.webp",
+   "1440": "/assets/img/media/What-to-Do-If-Your-Hail-Claim-Was-Denied-7-1440.webp",
+   "1536": "/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-7.webp"
+  }
+ }
+}

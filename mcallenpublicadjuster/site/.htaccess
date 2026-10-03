@@ -1,0 +1,90 @@
+# McAllen Public Adjuster — Apache / LiteSpeed configuration (Hostinger)
+
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1) Force HTTPS (Hostinger's CDN may terminate TLS and send X-Forwarded-Proto).
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$
+RewriteRule ^ https://mcallenpublicadjuster.com%{REQUEST_URI} [L,R=301]
+
+# 2) Canonical host: www -> apex.
+RewriteCond %{HTTP_HOST} ^www\.mcallenpublicadjuster\.com$ [NC]
+RewriteRule ^ https://mcallenpublicadjuster.com%{REQUEST_URI} [L,R=301]
+
+# 3) Block private folders and files from the web.
+RewriteRule ^(includes|templates|content|data|cron|tools)(/|$) - [F,L]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule \.(md|log|sql|ini|sh|bak|dist|lock|tmp)$ - [F,L]
+RewriteRule ^(composer\.(json|lock)|config\.local\.php|mpa-config\.php)$ - [F,L]
+
+# 4) Front controller: anything that is not a real file goes to index.php.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L,QSA]
+
+# Real directories without an index (e.g. /api/) also go to the router -> 404.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+
+# ---- Security headers ----------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+  # Enable HSTS only after HTTPS is confirmed working on the live domain:
+  # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  <FilesMatch "\.(woff2|webp|avif|png|jpg|jpeg|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+# ---- Compression + caching ----------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/rss+xml application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 hour"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType application/json "access plus 0 seconds"
+  ExpiresByType text/css "access plus 30 days"
+  ExpiresByType application/javascript "access plus 30 days"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ---- PHP settings (used when Hostinger runs PHP as an Apache/LSAPI module) ----
+<IfModule mod_php.c>
+  php_value upload_max_filesize 10M
+  php_value post_max_size 32M
+  php_flag display_errors Off
+  php_flag expose_php Off
+</IfModule>
