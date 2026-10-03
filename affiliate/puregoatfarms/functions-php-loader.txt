@@ -1,0 +1,3 @@
+
+// Pure Goat Farms: Amazon affiliate boxes (wp-content/plugins/pgf-amazon-affiliate). Delete this line to turn them off.
+if ( ! function_exists( 'pgf_aff_products' ) && file_exists( WP_CONTENT_DIR . '/plugins/pgf-amazon-affiliate/pgf-amazon-affiliate.php' ) ) { require_once WP_CONTENT_DIR . '/plugins/pgf-amazon-affiliate/pgf-amazon-affiliate.php'; }
