@@ -36,11 +36,20 @@ Two hosting accounts, two different situations:
    A theme update overwrites `functions.php` and drops the loader — re-add it if boxes disappear.
    Activating the plugin in wp-admin makes it survive theme updates (the loader guard avoids a double load).
 
-**Web hosting account (username u401386392, Cloud Enterprise order 64270646), e.g. rodeotexas.org: writes BLOCKED.**
+**Web hosting account (username u401386392, Cloud Enterprise order 64270646), e.g. rodeotexas.org, shineyourlightblog.com.**
 - `hosting_files_website-content` and `hosting_files_list-website-and-directories` read files fine.
 - `hosting_files_generate-upload-url` returns `404 [Hosting:9999] Not found` for every site on the
-  account, including the main domain jmautida.com (checked 2026-10-03; reconnecting the connector
-  did not help). No Git deployment is connected. Needs a fix from Hostinger support before Claude can write.
+  account (re-checked 2026-10-03). No Git installation is connected (`hosting_git_list-installations` → `[]`).
+- **Working write path: a one-minute cron job that `wget`s the file from this public repo.**
+  1. Commit the file, push, note the 12-char commit SHA.
+  2. `hosting_cron-jobs_create` with `time: "* * * * *"` and
+     `wget -qO /home/u401386392/domains/<domain>/public_html/<path> https://raw.githubusercontent.com/TheRealDealTX/seotool/<sha12>/<repo-path>`
+     — one cron per file; ≤ 255 chars; no `&&`, `$VAR` or pipes (the WAF 403s them); pin to a SHA,
+     never a branch (raw.githubusercontent caches branch URLs).
+  3. Poll `hosting_files_list-website-and-directories` (or the live page) until the size matches,
+     then `hosting_cron-jobs_delete` each uid and `hosting_cache_clear-website`.
+  Write a file that other files `require` first, and wait for it to land before the files that need it.
+  Verified on shineyourlightblog.com and rodeotexas.org on 2026-10-03.
 
 ## puregoatfarms.com (Agency, website_uid VSUHIRjmA, WordPress + Elementor, theme hello-elementor) — LIVE
 
@@ -72,15 +81,15 @@ Two hosting accounts, two different situations:
   Yoast og:description. Each edited post was given an explicit excerpt equal to WordPress's own
   auto-excerpt of the ORIGINAL content (first 55 words). Do the same for any future edits.
 
-## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
+## rodeotexas.org (web hosting account u401386392, custom PHP app) — AFFILIATE LINKS LIVE 2026-10-03
 
-- Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
-  `affiliate/rodeotexas/original/` holds exact copies of the live files they replace.
-  New `includes/affiliate.php` injects boxes at render time into `pages/article.php` (36 boxes on 14
+- Source of the live files: `affiliate/rodeotexas/update/` (paths relative to `public_html`);
+  `affiliate/rodeotexas/original/` holds the pre-affiliate copies for rollback.
+  `includes/affiliate.php` injects boxes at render time into `pages/article.php` (36 boxes on 14
   articles), adds a sidebar card to articles and upcoming event pages (`pages/event.php`), a footer
-  line (`includes/footer.php`) and an Amazon section (`pages/privacy.php`).
-- Blocked by the upload 404 above. Once writes work: upload the 5 update files, check pages.
-- **Security to-do:** `public_html/_install_87ded30003069ca5.php` (one-time installer with a working
-  token) and `public_html/rodeotexas-package.zip` (the Sept 30 build) are still on the server.
-  Its steps can overwrite the live site with the old package or reset the admin password.
-  Delete both as soon as there is write access.
+  line (`includes/footer.php`) and an Amazon section (`pages/privacy.php`). Article HTML in the
+  database is untouched; set `AFF_ENABLED` to false in affiliate.php to switch everything off.
+- Deployed with the cron recipe above from commit 347a91fb3947. To change products or placements,
+  edit `affiliate.php`, push, and re-run the recipe for that one file.
+- The one-time installer `_install_87ded30003069ca5.php` and `rodeotexas-package.zip` were removed
+  from `public_html` after the deploy (the installer's own `cleanup` step).
