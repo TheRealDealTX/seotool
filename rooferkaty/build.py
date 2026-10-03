@@ -222,7 +222,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     pre = f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else ""
-    js = "".join(f'<script src="/assets/js/{s}.js?v=1" defer></script>' for s in ("site",) + tuple(scripts))
+    js = "".join(f'<script src="/assets/js/{s}.js?v=2" defer></script>' for s in ("site",) + tuple(scripts))
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
@@ -253,7 +253,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
-{pre}<link rel="stylesheet" href="/assets/css/site.css?v=1">
+{pre}<link rel="stylesheet" href="/assets/css/site.css?v=2">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>

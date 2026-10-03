@@ -21,6 +21,11 @@
   var parallax = [].slice.call(document.querySelectorAll("[data-parallax]"));
   var stepLists = [].slice.call(document.querySelectorAll(".steps"));
   var ticking = false;
+  var pending = [].slice.call(document.querySelectorAll("[data-reveal]"));
+  function reveal(el) {
+    el.classList.add("in");
+    el.querySelectorAll("[data-count]").forEach(countUp);
+  }
 
   function onScroll() {
     var y = window.scrollY;
@@ -43,16 +48,25 @@
         s.classList.toggle("lit", s.getBoundingClientRect().top < mid);
       });
     });
+    // Safety net: reveal anything already on screen, even if the observer missed it.
+    if (pending.length) {
+      pending = pending.filter(function (el) {
+        if (el.classList.contains("in")) return false;
+        if (el.getBoundingClientRect().top < window.innerHeight) { reveal(el); return false; }
+        return true;
+      });
+    }
     ticking = false;
   }
   window.addEventListener("scroll", function () {
     if (!ticking) { ticking = true; requestAnimationFrame(onScroll); }
   }, { passive: true });
   window.addEventListener("resize", onScroll);
-  onScroll();
 
   /* ----- reveal + counters ----- */
   function countUp(el) {
+    if (el.getAttribute("data-done")) return;
+    el.setAttribute("data-done", "1");
     var end = parseFloat(el.getAttribute("data-count"));
     var dec = (el.getAttribute("data-count").split(".")[1] || "").length;
     if (reduce) { el.textContent = end.toFixed(dec); return; }
@@ -79,6 +93,8 @@
   } else {
     document.querySelectorAll("[data-reveal]").forEach(function (el) { el.classList.add("in"); });
   }
+  onScroll();
+  window.addEventListener("load", onScroll);
 
   /* ----- article table of contents ----- */
   var toc = document.querySelector(".toc ul");

@@ -365,7 +365,6 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, .08); margin-top: 56px; padding-top: 24px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: .85rem; }
 .footer-phone { font-family: var(--head); font-size: 1.4rem; font-weight: 800; color: #fff !important; display: inline-flex; gap: 10px; align-items: center; margin: 8px 0 14px; }
 
-@media (max-width: 560px) { .g4 { grid-template-columns: 1fr; } }
 
 /* mobile sticky call bar */
 .mobile-bar { display: none; }
@@ -375,15 +374,18 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .js [data-reveal="left"] { transform: translateX(-40px); }
 .js [data-reveal="right"] { transform: translateX(40px); }
 .js [data-reveal="zoom"] { transform: scale(.94); }
-.js [data-reveal="clip"] { opacity: 1; transform: none; clip-path: inset(0 0 100% 0 round 24px); transition: clip-path 1.2s var(--ease); }
+/* "clip" wipes the image inside the box, never the box itself: a fully clipped box has no visible area,
+   so the IntersectionObserver would never see it and the photo would stay blank. */
+.js [data-reveal="clip"] { opacity: 1; transform: none; }
+.js [data-reveal="clip"] > img { clip-path: inset(0 0 100% 0); transform: scale(1.08); transition: clip-path 1.2s var(--ease), transform 1.6s var(--ease); }
+.js [data-reveal="clip"].in > img { clip-path: inset(0 0 0 0); transform: none; }
 .js [data-reveal].in { opacity: 1; transform: none; }
-.js [data-reveal="clip"].in { clip-path: inset(0 0 0 0 round 24px); }
 .js .hero [data-reveal] { transition-duration: 1.1s; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .js [data-reveal] { opacity: 1; transform: none; clip-path: none; }
+  .js [data-reveal], .js [data-reveal="clip"] > img { opacity: 1; transform: none; clip-path: none; }
 }
 
 /* ---------- responsive ---------- */
@@ -428,3 +430,6 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
   .mobile-bar .btn { padding: 12px 10px; font-size: .92rem; }
   .scroll-cue { display: none; }
 }
+
+/* phones: single-column cards (must stay last so it beats the 1080px two-column rule) */
+@media (max-width: 560px) { .g4 { grid-template-columns: 1fr; } }

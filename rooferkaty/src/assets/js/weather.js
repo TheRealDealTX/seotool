@@ -128,18 +128,36 @@
   var alerts = document.querySelector("[data-wx-alerts]");
   if (!mini && !full && !cur) return;
 
-  fetch(API).then(function (res) { return res.json(); }).then(function (w) {
+  function getJSON(url, opts) {
+    // Give up after 10s so a slow API never leaves "Loading…" on screen.
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = ctl ? setTimeout(function () { ctl.abort(); }, 10000) : null;
+    opts = opts || {};
+    if (ctl) opts.signal = ctl.signal;
+    return fetch(url, opts).then(function (res) {
+      clearTimeout(timer);
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    });
+  }
+
+  getJSON(API).then(function (w) {
     if (mini) renderMini(mini, w);
     if (cur) renderCurrent(cur, w);
     if (full) renderForecast(full, w);
   }).catch(function () {
     [mini, cur, full].forEach(function (el) {
-      if (el) el.innerHTML = "<p>Live weather is temporarily unavailable. See the <a href='https://forecast.weather.gov/MapClick.php?lat=" + LAT + "&lon=" + LON + "' rel='noopener' target='_blank'>NWS forecast for Katy</a>.</p>";
+      if (!el) return;
+      var link = "<a href='https://forecast.weather.gov/MapClick.php?lat=" + LAT + "&lon=" + LON + "' rel='noopener' target='_blank' style='color:inherit'>National Weather Service forecast for Katy</a>";
+      el.innerHTML = el === mini
+        ? "<div class='eyebrow' style='color:var(--gold)'>Katy, TX weather</div><div class='wx-now'><div class='ic'>⛅</div><div><div style='font-family:var(--head);font-size:1.4rem;font-weight:800'>Live data is reloading</div>" +
+          "<div style='color:#aab8cb'>Open the full forecast or check the " + link + ".</div></div></div><a class='btn btn-sm btn-light' style='margin-top:18px;width:100%' href='/weather/'>Katy 7-day forecast</a>"
+        : "<p style='grid-column:1/-1'>Live weather is temporarily unavailable. Refresh in a moment, or see the " + link + ".</p>";
     });
   });
 
   if (alerts) {
-    fetch(ALERTS, { headers: { Accept: "application/geo+json" } }).then(function (res) { return res.json(); })
+    getJSON(ALERTS, { headers: { Accept: "application/geo+json" } })
       .then(function (d) { renderAlerts(alerts, d); })
       .catch(function () { alerts.innerHTML = "<p style='margin:0'>Alert feed unavailable — check <a href='https://www.weather.gov/hgx/' target='_blank' rel='noopener'>weather.gov/hgx</a>.</p>"; });
   }
