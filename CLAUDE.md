@@ -56,6 +56,22 @@ Two hosting accounts, two different situations:
   (slug => [heading text, box title, product keys]); boxes go at the end of the matching section.
 - Verified live 2026-10-03: all pages 200, no PHP errors, 13 boxes, footer and privacy text present.
 
+## shineyourlightblog.com (web hosting account u401386392, WordPress + Elementor + Yoast + LiteSpeed Cache)
+
+- Amazon tag for THIS site: `shineyourlightblog-20` (josephrayditt-20 and arriveoutdoors-20 links already in
+  older posts are also the owner's; leave them).
+- Hostinger can't write to this account, so edits go through the WordPress REST API with an Application
+  Password for user `claude` (administrator). The password is not stored here: ask the owner, or have
+  them create a new one in wp-admin → Users → Profile → Application Passwords.
+- 2026-10-03: affiliate links added to ~1,150 of 1,892 posts. Everything added is wrapped in
+  `<!-- shine-aff -->…<!-- /shine-aff -->` (disclosure paragraph + "Products we recommend" html block);
+  inline links carry `rel="sponsored nofollow noopener"` and the tag. Posts that already had Amazon links
+  were skipped. The 30 highest-traffic posts (GA, Sept 2026) got hand-picked products; the rest used
+  keyword/topic rules. WordPress revisions hold the pre-edit version of every post.
+- Gotcha: the disclosure is the first paragraph, so posts without an excerpt would get it as their
+  Yoast og:description. Each edited post was given an explicit excerpt equal to WordPress's own
+  auto-excerpt of the ORIGINAL content (first 55 words). Do the same for any future edits.
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
