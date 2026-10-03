@@ -5,15 +5,54 @@
   doc.classList.add("js");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ----- mobile nav ----- */
-  var nav = document.querySelector(".nav");
-  document.querySelectorAll("[data-nav-toggle]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var open = nav.classList.toggle("open");
-      document.body.style.overflow = open ? "hidden" : "";
-      document.querySelector(".menu-btn").setAttribute("aria-expanded", open ? "true" : "false");
+  /* ----- mobile menu (works without JS via :target; JS adds animation, scroll lock, Esc) ----- */
+  var menu = document.getElementById("mobile-menu");
+  var menuBtn = document.querySelector("[data-menu-open]");
+  var closeTimer, lockedY = 0;
+  // Pin the page while the menu is open (works on iOS too) and put it back exactly where it was.
+  function lockScroll() {
+    lockedY = window.scrollY;
+    document.body.style.top = -lockedY + "px";
+    document.body.classList.add("menu-locked");
+  }
+  function unlockScroll() {
+    if (!document.body.classList.contains("menu-locked")) return;
+    document.body.classList.remove("menu-locked");
+    document.body.style.top = "";
+    var html = doc.style.scrollBehavior; doc.style.scrollBehavior = "auto";
+    window.scrollTo(0, lockedY);
+    doc.style.scrollBehavior = html;
+  }
+  function openMenu() {
+    clearTimeout(closeTimer);
+    menu.classList.add("open");
+    menu.setAttribute("aria-hidden", "false");
+    menuBtn.setAttribute("aria-expanded", "true");
+    lockScroll();
+    requestAnimationFrame(function () { requestAnimationFrame(function () { menu.classList.add("visible"); }); });
+    var c = menu.querySelector(".mm-close"); if (c) c.focus({ preventScroll: true });
+  }
+  function closeMenu(focusBtn) {
+    if (!menu.classList.contains("open")) return;
+    menu.classList.remove("visible");
+    menu.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+    unlockScroll();
+    closeTimer = setTimeout(function () { menu.classList.remove("open"); }, reduce ? 0 : 300);
+    if (focusBtn) menuBtn.focus({ preventScroll: true });
+  }
+  if (menu && menuBtn) {
+    menuBtn.addEventListener("click", function (ev) { ev.preventDefault(); openMenu(); });
+    menu.querySelectorAll("[data-menu-close]").forEach(function (el) {
+      el.addEventListener("click", function (ev) { ev.preventDefault(); closeMenu(true); });
     });
-  });
+    menu.querySelectorAll(".mm-body a, .mm-foot a").forEach(function (el) {
+      el.addEventListener("click", function () { closeMenu(false); });
+    });
+    document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") closeMenu(true); });
+    window.addEventListener("resize", function () { if (window.innerWidth > 1080) closeMenu(false); });
+    window.addEventListener("pageshow", function () { closeMenu(false); });  // back button from bfcache
+  }
 
   /* ----- scroll-linked effects (one rAF loop) ----- */
   var header = document.querySelector(".site-header");

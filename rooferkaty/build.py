@@ -65,6 +65,7 @@ ICONS = {
     "cloud-rain": '<path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="M16 14v6M8 14v6M12 16v6"/>',
     "menu": '<path d="M4 6h16M4 12h16M4 18h16"/>',
     "x": '<path d="M18 6 6 18M6 6l12 12"/>',
+    "chevron": '<path d="m6 9 6 6 6-6"/>',
     "calculator": '<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M16 14v4M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/>',
     "ruler": '<path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.4 2.4 0 0 1 0-3.4l2.6-2.6a2.4 2.4 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2M11.5 9.5l2-2M8.5 6.5l2-2M17.5 15.5l2-2"/>',
     "clipboard": '<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/>',
@@ -146,7 +147,6 @@ def nav_html(active):
     ars = "".join(f"<li>{a('/areas/' + s['slug'] + '/', s['name'])}</li>" for s in AREAS)
     tools = "".join(f"<li>{a(h, l)}</li>" for h, l in NAV_TOOLS)
     return f"""<nav class="nav" id="nav" aria-label="Main">
-<button class="menu-btn nav-close" data-nav-toggle aria-label="Close menu">{icon("x")}</button>
 <ul>
 <li class="has-sub">{a('/services/', 'Services')}<ul class="sub">{svc}</ul></li>
 <li>{a('/free-roof-inspection/', 'Free Inspection')}</li>
@@ -157,6 +157,39 @@ def nav_html(active):
 <li>{a('/about/', 'About')}</li>
 <li>{a('/contact/', 'Contact')}</li>
 </ul></nav>"""
+
+
+def mobile_menu_html(active):
+    """Phone/tablet menu. Lives outside <header>: the header's backdrop-filter would trap a fixed panel inside it."""
+    def a(href, label, sub=False):
+        cur = ' aria-current="page"' if active == href else ""
+        return f'<a href="{href}"{cur}>{e(label)}</a>'
+
+    def group(label, href, items, is_open):
+        links = "".join(a(h, l) for h, l in items)
+        return (f'<details class="mm-group"{" open" if is_open else ""}><summary>{e(label)}{icon("chevron")}</summary>'
+                f'<div class="mm-sub">{a(href, "All " + label.lower())}{links}</div></details>')
+
+    svc = [("/free-roof-inspection/", "Free Roof Inspection")] + [("/services/" + s["slug"] + "/", s["name"]) for s in SERVICES]
+    ars = [("/", "Katy, TX")] + [("/areas/" + s["slug"] + "/", s["name"]) for s in AREAS]
+    tools = list(NAV_TOOLS)
+    return f"""<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+<a class="mm-backdrop" href="#" data-menu-close tabindex="-1" aria-hidden="true"></a>
+<div class="mm-panel" role="dialog" aria-modal="true" aria-label="Menu">
+<div class="mm-head">{LOGO}<a class="mm-close" href="#" data-menu-close aria-label="Close menu">{icon("x")}</a></div>
+<nav class="mm-body" aria-label="Mobile">
+{a('/free-roof-inspection/', 'Free Roof Inspection')}
+{group('Services', '/services/', svc, active.startswith('/services/'))}
+{group('Service Areas', '/areas/', ars, active.startswith('/areas/'))}
+{a('/weather/', 'Katy Weather')}
+{group('Tools', '/tools/', tools, active.startswith('/tools/'))}
+{a('/blog/', 'Blog')}
+{a('/about/', 'About')}
+{a('/contact/', 'Contact')}
+</nav>
+<div class="mm-foot"><a class="btn" href="/free-roof-inspection/">Book a free inspection {icon("arrow")}</a>
+<a class="btn btn-ghost" href="tel:{TEL}">{icon("phone")} Call {PHONE}</a></div>
+</div></div>"""
 
 
 LOGO = (f'<a class="logo" href="/" aria-label="{NAME} home"><span class="logo-mark">{icon("roof")}</span>'
@@ -232,7 +265,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     pre = f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else ""
-    js = "".join(f'<script src="/assets/js/{s}.js?v=4" defer></script>' for s in ("site",) + tuple(scripts))
+    js = "".join(f'<script src="/assets/js/{s}.js?v=7" defer></script>' for s in ("site",) + tuple(scripts))
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
@@ -263,7 +296,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap">
-{pre}<link rel="stylesheet" href="/assets/css/site.css?v=4">
+{pre}<link rel="stylesheet" href="/assets/css/site.css?v=7">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -277,8 +310,9 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 {LOGO}
 {nav_html(active or path)}
 <div class="header-cta"><a class="btn btn-ghost btn-sm" href="tel:{TEL}">{icon("phone")} {PHONE}</a><a class="btn btn-sm" href="/free-roof-inspection/">Free Inspection</a></div>
-<button class="menu-btn" data-nav-toggle aria-label="Open menu" aria-controls="nav" aria-expanded="false">{icon("menu")}</button>
+<a class="menu-btn" href="#mobile-menu" data-menu-open role="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">{icon("menu")}</a>
 </div></header>
+{mobile_menu_html(active or path)}
 <main id="main">
 {main}
 </main>
