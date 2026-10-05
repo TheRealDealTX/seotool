@@ -87,6 +87,20 @@ Two hosting accounts, two different situations:
   version) in the box only, never as an inline link on "Joie Spin 360" text. Nuna REVV uses a tagged
   search link (no ASIN could be verified as the REVV).
 
+## underdeskelliptical.com (Agency plan, WordPress + Elementor + Yoast + LiteSpeed Cache)
+
+- Amazon tag for THIS site: `underdeskellipticaljditt-20`. REST login `admin` (administrator) with an
+  Application Password named "Claude Affiliate" (not stored here).
+- 2026-10-05: every post hand-planned (53 of 55 edited) — brand reviews link the reviewed model; topic posts
+  link matching picks (motorized/manual/compact, walking pad, under-desk treadmill or bike, Fitbit for the
+  steps post). Wrapped in `<!-- udeaff -->`, box class `ude-aff-box`, original auto-excerpts set.
+  Privacy policy and /affiliate-disclosure/ already covered Amazon, so pages were not edited.
+- Posts 95 (DeskCycle Ellipse review) and 86 (Cubii Pro HD review) were left alone: they already link
+  Amazon with josephrayditt-20. Note the Cubii Pro HD post's link actually goes to the Cubii JR1 (B074F1S194).
+- Viamotion, Fousae, Geoneo, Fntkech and Flex Fitness have no Amazon listing naming the brand: tagged
+  search links are used for those.
+- All verified live: 53/53 posts 200 with one box, tagged links, disclosure, unchanged og:description.
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
