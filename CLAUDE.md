@@ -72,6 +72,21 @@ Two hosting accounts, two different situations:
   Yoast og:description. Each edited post was given an explicit excerpt equal to WordPress's own
   auto-excerpt of the ORIGINAL content (first 55 words). Do the same for any future edits.
 
+## 360carseat.com (web hosting account u401386392, WordPress + Elementor + Yoast + LiteSpeed Cache)
+
+- Amazon tag for THIS site: `360carseat-20`. Edits go through the WordPress REST API with an Application
+  Password ("Claude affiliate") for login `info@360carseat.com` (administrator; the username is the email).
+  The password is not stored here.
+- 2026-10-05: affiliate links added to 302 of 331 posts (56 hand-picked top-traffic posts from GA
+  Jul–Oct 2026, 246 by rules), wrapped in `<!-- 360aff -->` markers, box class `carseat-aff-box`.
+  Excerpts set to the original auto-excerpt (same Yoast gotcha as shineyourlightblog.com).
+  Amazon Associates section appended to the privacy policy page (id 3).
+- Safety rule for this niche: never link products that attach to a car seat or its harness (strap
+  covers, inserts, under-seat protectors, mirrors on the seat) — manufacturers warn they aren't crash-tested.
+- Joie Spin 360 / i-Spin 360 are not sold on Amazon US; posts about them link the Joie Chili Spin (US
+  version) in the box only, never as an inline link on "Joie Spin 360" text. Nuna REVV uses a tagged
+  search link (no ASIN could be verified as the REVV).
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
