@@ -101,6 +101,17 @@ Two hosting accounts, two different situations:
   search links are used for those.
 - All verified live: 53/53 posts 200 with one box, tagged links, disclosure, unchanged og:description.
 
+## carstereooutlethouston.com (WordPress + Elementor + Yoast; Amazon-affiliate storefront)
+
+- Amazon tag for THIS site: `carstereohouston-20`. REST login `nancy` (administrator), Application Password
+  "Claude Affiliate" (not stored here). Post URLs are `/post/<slug>/`; products are a `product` post type
+  at `/post/product/<slug>/` (27 listings, each already has a tagged amzn.to buy button — left alone).
+- 2026-10-05: 7 of 8 blog posts got hand-placed boxes + inline links (`<!-- csoaff -->`, box class
+  `cso-aff-box`), reusing the store's own products where they fit plus verified gap products (CarPlay /
+  Android Auto adapters, FM transmitter, aux receiver, Pioneer DMH-W2770NEX, Pioneer/Rockford speakers,
+  amp, PS-8 sub, LC2i). Post 371 (store launch) left alone. Amazon Associates section added to the
+  privacy policy. Original auto-excerpts set.
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
