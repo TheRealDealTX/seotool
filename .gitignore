@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 dist/
+
+# austinlandscapelighting.com
+sites/austinlandscapelighting.com/leads/

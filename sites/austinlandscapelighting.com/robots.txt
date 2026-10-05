@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /contact/send
+Disallow: /thank-you/
+Disallow: /lib/
+Disallow: /content/
+Disallow: /pages/
+
+Sitemap: https://austinlandscapelighting.com/sitemap.xml
