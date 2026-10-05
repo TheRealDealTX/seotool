@@ -65,7 +65,8 @@ title, description, H1 and body. Legal pages are `noindex`.
 ## Deploying
 
 Hostinger Agency website **UID `64Mujs88W`** (php-fpm 8.5, Phoenix, created
-2026-10-05 to replace the WordPress website `1AbSzNVGl`). Get upload
+2026-10-05 to replace the WordPress website `1AbSzNVGl`). Deployed and the
+domain moved on 2026-10-05; the existing SSL certificate carried over. Get upload
 credentials with the Hostinger API operation
 `agency-hosting_files_generate-upload-url` and run:
 
@@ -79,6 +80,6 @@ existing files directly and routes everything else to `index.php`; it ignores
 `.htaccess`, so all redirects live in `index.php`. There is deliberately no
 `index.html`.
 
-The old WordPress website (`1AbSzNVGl`) was left in place with its preview domain
-`linen-zebra-566015.hostingersite.com` so it can be re-linked if anything needs
-to roll back. Delete it from hPanel once the new site has been live for a while.
+The old WordPress website (`1AbSzNVGl`) was left in place; releasing the domain
+moved it to the temporary domain `ghostwhite-flamingo-551464.hostingersite.com`,
+so it can be re-linked if anything needs to roll back. Delete it from hPanel once the new site has been live for a while.

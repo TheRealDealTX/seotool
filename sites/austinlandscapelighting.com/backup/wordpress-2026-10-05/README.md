@@ -1,7 +1,7 @@
 # WordPress backup — austinlandscapelighting.com — taken 2026-10-05
 
 Content-level backup of the WordPress site (Hostinger Agency website UID
-`1AbSzNVGl`, preview domain `linen-zebra-566015.hostingersite.com`) taken before
+`1AbSzNVGl`, now on temporary domain `ghostwhite-flamingo-551464.hostingersite.com`) taken before
 austinlandscapelighting.com was moved to the custom PHP site (UID `64Mujs88W`).
 
 - `pages/` — rendered HTML of every URL in the Yoast sitemaps: home, service-areas,
@@ -14,6 +14,6 @@ austinlandscapelighting.com was moved to the custom PHP site (UID `64Mujs88W`).
   are not committed; resized copies live in `../../assets/img/`.
 
 No database dump or full-files archive was taken from this session. The
-WordPress website itself was **not deleted**: it still exists on its preview
+WordPress website itself was **not deleted**: it still exists on its temporary
 domain with its database, so a full backup can be taken from hPanel (Files →
 Backups) at any time, and the domain can be re-linked to it to roll back.
