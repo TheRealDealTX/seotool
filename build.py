@@ -86,6 +86,15 @@ def head(page):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DGV9MBJSR2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DGV9MBJSR2');
+</script>
 <title>{esc(page['title'])}</title>
 <meta name="description" content="{esc(page['description'])}">
 <link rel="canonical" href="{canonical}">
