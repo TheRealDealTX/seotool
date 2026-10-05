@@ -112,6 +112,18 @@ Two hosting accounts, two different situations:
   amp, PS-8 sub, LC2i). Post 371 (store launch) left alone. Amazon Associates section added to the
   privacy policy. Original auto-excerpts set.
 
+## nailzinbloom.com (WordPress + Elementor + Yoast)
+
+- Amazon tag for THIS site: `nailzinbloom-20`. REST login `info@nailzinbloom.com` (administrator), Application
+  Password "Claude" (not stored here).
+- 2026-10-05: 195 of 201 posts edited (`<!-- nzbaff -->`, box class `nzb-aff-box` "Get the look"). Inline links on
+  supplies the posts already name (top/base coat, cuticle oil, chrome powder, rhinestones, dotting tools,
+  liner brushes, stamping, UV lamp, gel polish…); gel posts map coats to gel coats; topic boxes for removal,
+  strength, longevity, stamping, chrome, press-ons, polish reviews. Off-topic posts (skincare, travel,
+  jewelry) only get matching non-nail items; 6 (waxing, outfits, sandals, posing, self-care, minimalist) skipped.
+- 10 existing amazon.com links had no tag (one carried Amazon's own ad tag `mh0b-20`); all now use
+  `nailzinbloom-20`. Amazon Associates section added to the privacy policy. Original auto-excerpts set.
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
