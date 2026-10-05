@@ -1,0 +1,53 @@
+# Military Housing Rentals: Reliable Housing for Every Move
+
+> A directory of on-base military family housing communities and military-friendly rentals, with guides for PCS moves, BAH and leases.
+
+The XML sitemap is at https://militaryhousingrentals.com/sitemap_index.xml
+
+## Pages
+- [Home](https://militaryhousingrentals.com/)
+- [All listings](https://militaryhousingrentals.com/properties/)
+- [Military bases](https://militaryhousingrentals.com/marine-bases/)
+- [Blog](https://militaryhousingrentals.com/blog/)
+- [Submit a property](https://militaryhousingrentals.com/submit-property/)
+- [Contact us](https://militaryhousingrentals.com/contact-us/)
+
+## Posts
+- [How to Find Off-Base Housing Near Your Duty Station](https://militaryhousingrentals.com/how-to-find-off-base-housing/)
+- [PCSing With Pets: Pet Policies, Paperwork, and Pet-Friendly Military Housing](https://militaryhousingrentals.com/pcs-with-pets-military-housing/)
+- [8 Renter-Friendly Upgrades to Make Base Housing Feel Like Home](https://militaryhousingrentals.com/renter-friendly-upgrades-for-base-housing/)
+- [Move-In and Move-Out Inspection Tips for Military Housing](https://militaryhousingrentals.com/move-in-move-out-inspection-tips/)
+- [Breaking a Lease on PCS Orders: The SCRA and Military Clauses Explained](https://militaryhousingrentals.com/scra-military-clause-breaking-a-lease/)
+- [BAH Explained: How the Military Housing Allowance Works](https://militaryhousingrentals.com/bah-explained-military-housing-allowance/)
+- [PCS Moving Checklist: A Step-by-Step Guide for Military Families](https://militaryhousingrentals.com/pcs-moving-checklist/)
+- [What Is Base Housing?](https://militaryhousingrentals.com/what-is-base-housing/)
+- [Renting vs. Buying: What’s Best for Military Families?](https://militaryhousingrentals.com/renting-vs-buying/)
+
+## Properties
+- [Comanche - Cavalry Family Housing](https://militaryhousingrentals.com/properties/comanche-cavalry-family-housing/)
+- [Airman Scott Village 1193 - Lackland Family Homes](https://militaryhousingrentals.com/properties/airman-scott-village-1193-lackland-family-homes/)
+- [Heritage Heights - Cavalry Family Housing](https://militaryhousingrentals.com/properties/heritage-heights-cavalry-family-housing/)
+- [Watkins Terrace - Fort Sam Houston Family Housing](https://militaryhousingrentals.com/properties/watkins-terrace-fort-sam-houston-family-housing/)
+- [Randolph Family Housing - JBSA-Randolph](https://militaryhousingrentals.com/properties/randolph-family-housing-jbsa-randolph/)
+- [George Moore Park - Fort Bliss Family Homes](https://militaryhousingrentals.com/properties/george-moore-park-fort-bliss-family-homes/)
+- [Nijmegen - Corvias at Fort Bragg](https://militaryhousingrentals.com/properties/nijmegen-corvias-fort-bragg/)
+- [Tarawa Terrace II - Camp Lejeune Family Housing](https://militaryhousingrentals.com/properties/tarawa-terrace-ii-camp-lejeune-family-housing/)
+- [Meriwether Landing - Liberty Military Housing](https://militaryhousingrentals.com/properties/meriwether-landing-liberty-military-housing/)
+- [Gardner Hills - Campbell Crossing](https://militaryhousingrentals.com/properties/gardner-hills-campbell-crossing/)
+- [SP Enlist - Naval Station Norfolk](https://militaryhousingrentals.com/properties/sp-enlist-naval-station-norfolk/)
+- [Stuart Mesa - Liberty Military Housing](https://militaryhousingrentals.com/properties/stuart-mesa-liberty-military-housing/)
+- [Dakota Ridge - Fort Carson Family Homes](https://militaryhousingrentals.com/properties/dakota-ridge-fort-carson-family-homes/)
+- [McGraw Village - Heritage Landing at Fort Benning](https://militaryhousingrentals.com/properties/mcgraw-village-heritage-landing-fort-benning/)
+
+## Military Bases
+- [Fort Hood (Cavazos)](https://militaryhousingrentals.com/bases/fort-cavazos/)
+- [Joint Base San Antonio](https://militaryhousingrentals.com/bases/joint-base-san-antonio/)
+- [Fort Bliss](https://militaryhousingrentals.com/bases/fort-bliss/)
+- [Fort Bragg](https://militaryhousingrentals.com/bases/fort-bragg/)
+- [Camp Lejeune](https://militaryhousingrentals.com/bases/camp-lejeune/)
+- [Joint Base Lewis-McChord](https://militaryhousingrentals.com/bases/joint-base-lewis-mcchord/)
+- [Fort Campbell](https://militaryhousingrentals.com/bases/fort-campbell/)
+- [Naval Station Norfolk](https://militaryhousingrentals.com/bases/naval-station-norfolk/)
+- [Camp Pendleton](https://militaryhousingrentals.com/bases/camp-pendleton/)
+- [Fort Carson](https://militaryhousingrentals.com/bases/fort-carson/)
+- [Fort Benning](https://militaryhousingrentals.com/bases/fort-benning/)
