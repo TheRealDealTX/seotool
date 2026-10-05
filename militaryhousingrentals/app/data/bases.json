@@ -1,0 +1,122 @@
+[
+ {
+  "slug": "fort-cavazos",
+  "name": "Fort Hood (Cavazos)",
+  "short": "Fort Hood",
+  "branch": "Army",
+  "city": "Killeen",
+  "state": "TX",
+  "image": {
+   "src": "/wp-content/uploads/2025/06/Fort-Cavazos-Hood.webp",
+   "alt": "Fort Cavazos (Hood)",
+   "w": 800,
+   "h": 500
+  },
+  "blurb": "One of the largest Army installations in the world, home to III Armored Corps in Central Texas. Renamed Fort Cavazos in 2023 and Fort Hood again in 2025."
+ },
+ {
+  "slug": "joint-base-san-antonio",
+  "name": "Joint Base San Antonio",
+  "short": "JBSA",
+  "branch": "Air Force / Army",
+  "city": "San Antonio",
+  "state": "TX",
+  "image": {
+   "src": "/wp-content/uploads/2025/06/Joint-Base-San-Antonio.webp",
+   "alt": "",
+   "w": 800,
+   "h": 500
+  },
+  "blurb": "Military City USA: JBSA-Lackland, JBSA-Fort Sam Houston and JBSA-Randolph form one of the largest joint bases in the Department of Defense."
+ },
+ {
+  "slug": "fort-bliss",
+  "name": "Fort Bliss",
+  "short": "Fort Bliss",
+  "branch": "Army",
+  "city": "El Paso",
+  "state": "TX",
+  "image": null,
+  "blurb": "A sprawling Army post in El Paso, Texas, home to the 1st Armored Division, with sunny weather and mountain views."
+ },
+ {
+  "slug": "fort-bragg",
+  "name": "Fort Bragg",
+  "short": "Fort Bragg",
+  "branch": "Army",
+  "city": "Fayetteville",
+  "state": "NC",
+  "image": null,
+  "blurb": "Home of the Airborne and Special Operations forces in North Carolina. Renamed Fort Liberty in 2023 and Fort Bragg again in 2025."
+ },
+ {
+  "slug": "camp-lejeune",
+  "name": "Camp Lejeune",
+  "short": "Camp Lejeune",
+  "branch": "Marine Corps",
+  "city": "Jacksonville",
+  "state": "NC",
+  "image": null,
+  "blurb": "Marine Corps Base Camp Lejeune on the North Carolina coast, home of II Marine Expeditionary Force, with miles of beaches."
+ },
+ {
+  "slug": "joint-base-lewis-mcchord",
+  "name": "Joint Base Lewis-McChord",
+  "short": "JBLM",
+  "branch": "Army / Air Force",
+  "city": "Tacoma",
+  "state": "WA",
+  "image": null,
+  "blurb": "A joint Army and Air Force installation south of Tacoma, Washington, between Puget Sound and Mount Rainier."
+ },
+ {
+  "slug": "fort-campbell",
+  "name": "Fort Campbell",
+  "short": "Fort Campbell",
+  "branch": "Army",
+  "city": "Clarksville",
+  "state": "KY",
+  "image": null,
+  "blurb": "Home of the 101st Airborne Division (Air Assault), straddling the Kentucky-Tennessee line near Clarksville."
+ },
+ {
+  "slug": "naval-station-norfolk",
+  "name": "Naval Station Norfolk",
+  "short": "NS Norfolk",
+  "branch": "Navy",
+  "city": "Norfolk",
+  "state": "VA",
+  "image": null,
+  "blurb": "The world's largest naval station, in the heart of Hampton Roads, Virginia."
+ },
+ {
+  "slug": "camp-pendleton",
+  "name": "Camp Pendleton",
+  "short": "Camp Pendleton",
+  "branch": "Marine Corps",
+  "city": "Oceanside",
+  "state": "CA",
+  "image": null,
+  "blurb": "Marine Corps Base Camp Pendleton stretches along 17 miles of Southern California coastline between Los Angeles and San Diego."
+ },
+ {
+  "slug": "fort-carson",
+  "name": "Fort Carson",
+  "short": "Fort Carson",
+  "branch": "Army",
+  "city": "Colorado Springs",
+  "state": "CO",
+  "image": null,
+  "blurb": "The Mountain Post, at the foot of the Rockies just south of Colorado Springs, home to the 4th Infantry Division."
+ },
+ {
+  "slug": "fort-benning",
+  "name": "Fort Benning",
+  "short": "Fort Benning",
+  "branch": "Army",
+  "city": "Columbus",
+  "state": "GA",
+  "image": null,
+  "blurb": "The home of the Infantry and Armor in west Georgia. Renamed Fort Moore in 2023 and Fort Benning again in 2025."
+ }
+]
