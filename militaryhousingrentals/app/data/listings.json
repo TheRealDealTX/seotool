@@ -105,19 +105,20 @@
   ],
   "description": "<p>Comanche I is a dedicated military housing community offering comfortable two-bedroom, one-bath homes located right on Fort Cavazos. Ideal for active-duty service members and their families, this small, quiet neighborhood provides the convenience of on-post living with easy access to major roads like Clear Creek and Tank Destroyer. Its single-story layout and recent upgrades to windows, doors, and exterior siding ensure both comfort and modern appeal.</p>\n\n\n\n<p>These homes come fully equipped with all major appliances, washer/dryer connections, central air conditioning, and newly installed privacy fencing. All utilities are included, giving military families one less thing to worry about when budgeting. Mature trees provide shade throughout the community, and added touches like a little free library help foster a friendly, close-knit atmosphere.</p>\n\n\n\n<p>Residents enjoy close proximity to key Fort Cavazos amenities including the PX, Commissary, Furniture Store, golf course, and recreation centers. With walking trails, basketball and tennis courts, and multiple playgrounds nearby, Comanche I offers the perfect mix of convenience and quality of life for those who serve.</p>",
   "operator": "Cavalry Family Housing",
-  "phone": null,
+  "phone": "(254) 285-2313",
   "email": null,
-  "hours": null,
-  "eligibility": null,
-  "pets": null,
-  "utilities": null,
-  "beds_range": null,
+  "hours": "Mon-Fri 7:30 am-4:30 pm; Sat-Sun closed",
+  "eligibility": "Active-duty service members (per operator floor-plan page description); rank band not published",
+  "pets": "2-pet limit, any mix of cats and dogs; breed restrictions apply (contact office); no pet fees or pet rent for military families",
+  "utilities": "All major utilities included in rent (electricity, water, gas)",
+  "beds_range": "2–3",
   "sqft_range": null,
   "schools": [],
   "nearby": [
-   "PX and Commissary",
-   "Clear Creek Rd and Tank Destroyer Blvd",
-   "Fort Hood golf course and recreation centers"
+   "PX (Exchange) and Commissary",
+   "Class Six / shoppette",
+   "Courses of Clear Creek golf course",
+   "Clear Creek Rd and Tank Destroyer Blvd"
   ],
   "highlights": [
    "Single-story homes on post",
@@ -125,7 +126,15 @@
    "New privacy fencing",
    "Recent window, door and siding upgrades"
   ],
-  "photo_note": null
+  "photo_note": null,
+  "sources": [
+   "https://www.cavalryfh.com/",
+   "https://www.cavalryfh.com/sitemap/",
+   "https://www.cavalryfh.com/pcs",
+   "https://www.cavalryfh.com/fort-hood-fort-hood/cavalry-family-housing-family-housing/floorplans/comanche-i-2-bd-519920/fp_name/occupancy_type/conventional/"
+  ],
+  "baths_range": null,
+  "phone_note": null
  },
  {
   "slug": "airman-scott-village-1193-lackland-family-homes",
@@ -226,18 +235,20 @@
    }
   ],
   "description": "<p>Airman Scott Village 1193 is a spacious two-bedroom, one-bath home located within the secure, gated community of Lackland Family Homes on Lackland Air Force Base in San Antonio. This residence offers military families the comfort and convenience of living on base with the added benefits of a walkable neighborhood and a strong sense of community. It’s an ideal housing option for active-duty service members stationed at Lackland AFB.</p>\n\n\n\n<p>The 1,193 sq. ft. floor plan features updated finishes, a fully equipped kitchen, and garage access—perfect for families who need functional space and modern features. Designed with military life in mind, this home includes curbside trash service, lawn care, and on-site maintenance to take the stress out of home upkeep. Pet-friendly policies and lighted walking trails make this a great place for the whole family, pets included.</p>\n\n\n\n<p>Residents enjoy access to a wide range of community amenities, including pools, playgrounds, picnic areas, basketball and tennis courts, a sand volleyball court, and a community center that regularly hosts resident events. With all of Lackland AFB’s facilities nearby, including schools, commissary, and medical services, Airman Scott Village 1193 offers everything a military household needs in one connected and supportive environment.</p>",
-  "operator": "Lackland Family Homes",
-  "phone": null,
+  "operator": "Lackland Family Homes (Balfour Beatty Communities)",
+  "phone": "(210) 674-9366",
   "email": null,
-  "hours": null,
-  "eligibility": null,
-  "pets": null,
-  "utilities": null,
-  "beds_range": null,
+  "hours": "Mon, Tue, Thu, Fri 8 am-5 pm; Wed 8 am-6 pm; Sat by appointment",
+  "eligibility": "E1-E6",
+  "pets": "Pets allowed; no pet deposit required (breed/count details not published)",
+  "utilities": "Water, gas and electric included; average monthly utilities included with rent",
+  "beds_range": "2–5",
   "sqft_range": null,
-  "schools": [],
+  "schools": [
+   "Lackland Elementary School"
+  ],
   "nearby": [
-   "Lackland schools, commissary and medical services",
+   "Base Exchange and Commissary",
    "Lighted walking trails",
    "Pools, playgrounds and community center"
   ],
@@ -247,7 +258,14 @@
    "Curbside trash, lawn care and on-site maintenance",
    "Pet friendly"
   ],
-  "photo_note": null
+  "photo_note": null,
+  "baths_range": "1–2",
+  "sources": [
+   "https://www.lacklandfamilyhomes.com/neighborhoods.aspx",
+   "https://www.lacklandfamilyhomes.com/floorplans.aspx",
+   "https://www.lacklandfamilyhomes.com/why-military-housing.aspx"
+  ],
+  "phone_note": null
  },
  {
   "slug": "heritage-heights-cavalry-family-housing",
@@ -272,22 +290,34 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Fort-Cavazos-Hood.webp",
-    "alt": "Fort Cavazos (Hood)",
-    "w": 800,
-    "h": 500
+    "src": "/assets/img/listings/heritage-heights-1.webp",
+    "alt": "Nine new homes completed in Heritage Heights",
+    "credit": "U.S. Army photo by Samantha Harms, Fort Cavazos Public Affairs (public domain)",
+    "source": "https://www.army.mil/article/267834"
+   },
+   {
+    "src": "/assets/img/listings/heritage-heights-2.webp",
+    "alt": "Interior of a new 3-bed/2-bath Heritage Heights home",
+    "credit": "U.S. Army photo by Samantha Harms, Fort Cavazos Public Affairs (public domain)",
+    "source": "https://www.army.mil/article/267834"
+   },
+   {
+    "src": "/assets/img/listings/heritage-heights-3.webp",
+    "alt": "Construction continues in Heritage Heights, April 15, 2024",
+    "credit": "Ayumi Davis, Fort Cavazos Public Affairs (public domain)",
+    "source": "https://www.army.mil/article/275439"
    }
   ],
   "description": "<p>Heritage Heights is one of the newest on-post neighborhoods at Fort Hood (known as Fort Cavazos from 2023 to 2025), built for junior enlisted Soldiers and their families. The neighborhood replaces the 1960s-era Chaffee Village, which began coming down in 2021, and is managed by Cavalry Family Housing, the Army&#8217;s privatized housing partner on post.</p>\n\n\n\n<p>Homes are single-family three-bedroom, two-bath designs with open floor plans, gathering spaces, and two-car garages. They are Energy Star certified and built to LEED design standards, so they run efficiently and stay comfortable through Central Texas summers. Hundreds of homes were completed in 2024, and more are planned through 2027.</p>\n\n\n\n<p>Outside your door you will find walking paths, community gardens, a dog park, and a playground. Cavalry Family Housing operates 11 neighborhoods on post, so contact the leasing office or visit their website for current availability, eligibility, and floor plan details.</p>",
-  "operator": "Cavalry Family Housing (Army RCI partnership)",
-  "phone": null,
+  "operator": "Cavalry Family Housing",
+  "phone": "(254) 285-2313",
   "email": null,
-  "hours": null,
+  "hours": "Mon-Fri 7:30 am-4:30 pm; Sat-Sun closed",
   "eligibility": "Junior enlisted Soldiers and their families",
-  "pets": null,
-  "utilities": null,
+  "pets": "2-pet limit, any mix of cats and dogs; breed restrictions apply; neighborhood includes a dog park",
+  "utilities": "Rent includes all major utilities (electricity, water, gas)",
   "beds_range": "3",
-  "sqft_range": null,
+  "sqft_range": "about 1,500",
   "schools": [],
   "nearby": [
    "Walking paths and community gardens",
@@ -299,7 +329,16 @@
    "Energy Star certified, built to LEED standards",
    "Open floor plans"
   ],
-  "photo_note": null
+  "photo_note": "Photos: U.S. government (public domain). Credits appear in the photo viewer.",
+  "baths_range": "2",
+  "sources": [
+   "https://www.army.mil/article/267834",
+   "https://www.army.mil/article/273141",
+   "https://www.army.mil/article/275439",
+   "https://www.cavalryfh.com/sitemap/",
+   "https://www.cavalryfh.com/chaffee-village-community-development-project"
+  ],
+  "phone_note": null
  },
  {
   "slug": "watkins-terrace-fort-sam-houston-family-housing",
@@ -324,28 +363,27 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Joint-Base-San-Antonio.webp",
-    "alt": "",
-    "w": 800,
-    "h": 500
+    "src": "/assets/img/bases/joint-base-san-antonio.webp",
+    "alt": "Quadrangle clock tower, JBSA-Fort Sam Houston (landmark, not a gate)",
+    "credit": "Photo by Sean Worrell, 502d Air Base Wing (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Watkins Terrace is a family housing neighborhood at JBSA-Fort Sam Houston in San Antonio, managed by Hunt Military Communities. The neighborhood offers single-story and two-story three- and four-bedroom homes, with three-bedroom plans of about 1,200 square feet and four-bedroom plans of about 1,380 square feet.</p>\n\n\n\n<p>Homes feature central air conditioning, washer and dryer hookups, and attached garages. Watkins Terrace is close to the on-post child development center, the elementary and high schools, and the MWR sports field, which makes daily routines easy for families with children. Pets are welcome, with breed and size restrictions.</p>\n\n\n\n<p>Residents have access to Fort Sam Houston&#8217;s community amenities, including three community pools, 16 playgrounds, basketball and tennis courts, walking trails, a self-help store, and 24-hour emergency maintenance. Active-duty families pay rent in arrears with no up-front rent or security deposit. Contact the housing office for current availability and rank eligibility.</p>",
-  "operator": "Hunt Military Communities",
-  "phone": null,
-  "email": null,
+  "operator": "Fort Sam Houston Family Housing (Hunt Military Communities)",
+  "phone": "(830) 282-1098",
+  "email": "ftsamfamilyhousing@huntcompanies.com",
   "hours": null,
-  "eligibility": "Has been marketed to E1–E6 families; confirm with the housing office",
-  "pets": "Pet friendly, with breed and size restrictions",
-  "utilities": "No up-front rent or security deposit for active duty; rent paid in arrears",
+  "eligibility": "Active duty, retirees, veterans, DoD employees, other service branches (community-wide; some homes active-duty only). Rank band for Watkins Terrace not published",
+  "pets": "Max 2 pets (dog, cat, bird or fish aquarium); banned dog breeds incl. Pit Bull/Staffordshire, Rottweiler, Presa Canario, Doberman, Chow Chow, Akita, Mastiff, Great Dane, Alaskan Malamute, wolf hybrids",
+  "utilities": "Rent equals BAH at with-dependent rate (BAH includes rent and utilities); utility allowance program",
   "beds_range": "3–4",
   "sqft_range": "1,200–1,380",
   "schools": [],
   "nearby": [
+   "Watkins Terrace Community Center",
+   "Ed Parker Youth Center",
    "Child development center",
-   "Elementary and high school on post",
-   "MWR sports field",
-   "3 community pools and 16 playgrounds"
+   "MWR sports field"
   ],
   "highlights": [
    "Single-story and two-story homes",
@@ -353,7 +391,15 @@
    "Central air and washer/dryer hookups",
    "24-hour emergency maintenance"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2–2.5",
+  "sources": [
+   "https://www.fortsamhoustonfamilyhousing.com/neighborhood/watkins-terrace",
+   "https://www.fortsamhoustonfamilyhousing.com/find-a-home",
+   "https://www.fortsamhoustonfamilyhousing.com/prospective-residents",
+   "https://www.fortsamhoustonfamilyhousing.com/contact-us"
+  ],
+  "phone_note": null
  },
  {
   "slug": "randolph-family-housing-jbsa-randolph",
@@ -379,26 +425,26 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Joint-Base-San-Antonio.webp",
-    "alt": "",
-    "w": 800,
-    "h": 500
+    "src": "/assets/img/bases/joint-base-san-antonio.webp",
+    "alt": "Quadrangle clock tower, JBSA-Fort Sam Houston (landmark, not a gate)",
+    "credit": "Photo by Sean Worrell, 502d Air Base Wing (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Randolph Family Housing offers historic homes inside the gates of JBSA-Randolph, the famous &#8220;Showplace of the Air Force&#8221; in Universal City, just northeast of San Antonio. Managed by Hunt Military Communities, the neighborhood is known for its stucco exteriors, original hardwood floors, and Spanish Colonial Revival character, with homes renovated since 2007.</p>\n\n\n\n<p>Most homes have four bedrooms, and some plans have five. The operator lists dozens of floor plans, such as a four-bedroom, three-bath layout of about 2,187 square feet. Features vary by home and include central air, Energy Star appliances, decorative fireplaces, patios, private backyards in select homes, and carport-style carriage houses.</p>\n\n\n\n<p>The gated, walkable community includes a pool, fitness center, community center, parks, and playgrounds, and trash, recycling, and bulk pickup are included. Housing is open to active duty across enlisted and officer ranks, and may also be available to retirees, DoD civilians, and Guard and Reserve members. Contact the leasing office for current availability.</p>",
   "operator": "Hunt Military Communities",
-  "phone": null,
-  "email": null,
+  "phone": "(830) 460-9130",
+  "email": "randolphleasing@huntcompanies.com",
   "hours": null,
-  "eligibility": "Active duty E1–E9 and O1–O8; may also be open to retirees, DoD civilians, Guard and Reserve",
-  "pets": "Pet friendly, with breed and size restrictions",
-  "utilities": "Utility allowance for active duty; trash, recycling and bulk pickup included",
+  "eligibility": "Active duty, retirees, veterans, DoD employees, other service branches, and civilians",
+  "pets": "New residents max 2 pets (dog, cat, bird or fish aquarium); banned breeds: Pit Bull/Staffordshire, Rottweiler, Doberman, Chow, wolf hybrids",
+  "utilities": "Rent equals BAH at with-dependent rate (BAH includes rent and utilities); utility allowance for active duty",
   "beds_range": "4–5",
-  "sqft_range": "1,422–2,187",
+  "sqft_range": "1,422–2,775",
   "schools": [],
   "nearby": [
    "Community pool and fitness center",
-   "Community center, parks and playgrounds"
+   "Parks and playgrounds",
+   "Community center"
   ],
   "highlights": [
    "Historic Spanish Colonial Revival homes",
@@ -406,7 +452,14 @@
    "Gated, walkable community",
    "Renovated since 2007"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2.5–3",
+  "sources": [
+   "https://www.randolphfamilyhousing.com/neighborhood/randolph",
+   "https://www.randolphfamilyhousing.com/contact-us",
+   "https://www.randolphfamilyhousing.com/prospective-residents"
+  ],
+  "phone_note": null
  },
  {
   "slug": "george-moore-park-fort-bliss-family-homes",
@@ -419,7 +472,7 @@
   "lng": -106.43194,
   "price": null,
   "beds": 3.0,
-  "baths": null,
+  "baths": 1.0,
   "sqft": null,
   "website": "https://www.fortblissfamilyhomes.com/neighborhoods/george-moore-park/george-moore-park-3br-e1-e6/",
   "amenities": [
@@ -429,20 +482,19 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-1.webp",
-    "alt": "Military Housing Rentals BG 1",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/fort-bliss.webp",
+    "alt": "Buffalo Soldier Gate, Fort Bliss, Aug. 20, 2021",
+    "credit": "Photo by Staff Sgt. Michael West (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>George Moore Park is a family housing neighborhood on Fort Bliss in El Paso, Texas, managed by Balfour Beatty Communities as part of Fort Bliss Family Homes. It is designed for junior enlisted Soldiers (E1-E6) and their families, with two- and three-bedroom homes that have one to two baths.</p>\n\n\n\n<p>The neighborhood&#8217;s biggest draw is its location. It is within walking distance of Logan Elementary School, the George Underwood Golf Course, and several shops and restaurants, so many errands can be done without getting in the car.</p>\n\n\n\n<p>Residents enjoy Fort Bliss Family Homes&#8217; pet-friendly communities, with pools, playgrounds, park areas, and sport courts across post. George Moore Park is one of 17 Fort Bliss Family Homes neighborhoods. Call the leasing office for current floor plans and availability.</p>",
-  "operator": "Balfour Beatty Communities (Fort Bliss Family Homes)",
-  "phone": null,
+  "operator": "Fort Bliss Family Homes (Balfour Beatty Communities)",
+  "phone": "(915) 564-0795",
   "email": null,
-  "hours": null,
-  "eligibility": "E1–E6",
-  "pets": "Pet friendly",
-  "utilities": null,
+  "hours": "Mon, Tue, Thu, Fri 8 am-5 pm; Wed 8 am-6 pm",
+  "eligibility": "E1-E6",
+  "pets": "Pet-friendly; no pet deposit required (breed/count details not published)",
+  "utilities": "Average monthly utilities included with rent",
   "beds_range": "2–3",
   "sqft_range": null,
   "schools": [
@@ -456,7 +508,14 @@
    "Walkable to school, golf, shops and restaurants",
    "Pools, playgrounds and sport courts across post"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "1–2",
+  "sources": [
+   "https://www.fortblissfamilyhomes.com/neighborhoods",
+   "https://www.fortblissfamilyhomes.com/",
+   "https://www.fortblissfamilyhomes.com/why-military-housing.aspx"
+  ],
+  "phone_note": null
  },
  {
   "slug": "nijmegen-corvias-fort-bragg",
@@ -481,28 +540,32 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-2.webp",
-    "alt": "Military Housing Rentals BG 2",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/fort-bragg.webp",
+    "alt": "Headquarters XVIII Airborne Corps and Fort Bragg sign, March 7, 2025",
+    "credit": "U.S. Army photo by Spc. Alexcia Rupert, 22nd Mobile Public Affairs Detachment (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Nijmegen is an on-post family housing neighborhood at Fort Bragg, North Carolina (called Fort Liberty from 2023 to 2025), managed by Corvias. The neighborhood offers three- and four-bedroom duplexes and townhomes with two to two-and-a-half baths, ranging from roughly 1,269 to 1,985 square feet depending on the floor plan.</p>\n\n\n\n<p>All homes include washer and dryer hookups, and many have garages and outdoor storage. Select ADA-compliant homes are available. Nijmegen sits just off Longstreet Road with quick access to the 82nd Airborne Division area, and it is less than five minutes from the South Post Commissary and Exchange.</p>\n\n\n\n<p>The Nijmegen Community Center has a fitness room for residents, and the neighborhood is near an elementary school and a dog park. Corvias also offers resort-style pools, basketball courts, playgrounds, and multimedia rooms across Fort Bragg. Contact Corvias for current availability and rank eligibility.</p>",
   "operator": "Corvias",
-  "phone": null,
-  "email": null,
-  "hours": null,
-  "eligibility": "E1–E9, O1–O3, W1–W3 (per a base guide; confirm with Corvias)",
-  "pets": null,
-  "utilities": null,
+  "phone": "(910) 495-0878",
+  "email": "Nijmegen@corvias.com",
+  "hours": "Mon-Fri 8:00 am-5:00 pm (community center)",
+  "eligibility": "Active-duty service members assigned within 50 miles of Fort Bragg with 12+ months remaining (installation-wide rule)",
+  "pets": "Pet-friendly; banned: Pit Bull/Staffordshire, Rottweiler, Presa Canario, Doberman, Chow Chow, wolf hybrids (FAQ also lists Great Dane, Akita, Malamute, Mastiff), aggressive dogs, exotic animals",
+  "utilities": "BAH covers rent; electric/gas metered under Army utility program with monthly baseline (rebate or bill above/below baseline); water/sewer not metered",
   "beds_range": "3–4",
   "sqft_range": "1,269–1,985",
   "schools": [
-   "Elementary school nearby"
+   "Hampton Primary (pre-K–1)",
+   "Irwin Intermediate (2–5)",
+   "Albritton Middle School",
+   "E.E. Smith High School"
   ],
   "nearby": [
+   "All American gate",
    "82nd Airborne Division area",
    "South Post Commissary and Exchange (under 5 minutes)",
+   "Nijmegen Community Center, 2 Douve Place",
    "Dog park"
   ],
   "highlights": [
@@ -511,7 +574,14 @@
    "Select ADA-compliant homes",
    "Community center fitness room"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "phone_note": "Nijmegen Community Center: (910) 436-4743",
+  "baths_range": "2–2.5",
+  "sources": [
+   "https://bragg.corviaspm.com/nijmegen/",
+   "https://bragg.corviaspm.com/",
+   "https://bragg.corviaspm.com/fort-bragg/fort-bragg/faqs/"
+  ]
  },
  {
   "slug": "tarawa-terrace-ii-camp-lejeune-family-housing",
@@ -538,19 +608,18 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-4.webp",
-    "alt": "Military Housing Rentals BG 4",
-    "w": 1920,
-    "h": 1276
+    "src": "/assets/img/bases/camp-lejeune.webp",
+    "alt": "Welcome sign at Holcomb Gate",
+    "credit": "Photo courtesy of U.S. Marine Corps (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Tarawa Terrace II is a large family housing neighborhood just inside the Wilson Gate at Marine Corps Base Camp Lejeune, North Carolina, off Bougainville Drive. Named for the World War II Marine Corps battle in the Gilbert Islands, the neighborhood is managed by Hunt Military Communities and includes 778 two-, three-, and four-bedroom townhomes.</p>\n\n\n\n<p>Floor plans include a three-bedroom, two-and-a-half-bath layout of about 1,618 square feet. Homes include screened patios, programmable thermostats, a dishwasher, garbage disposal, and microwave, walk-in closets and extra storage, air conditioning, and washer and dryer hookups. Select homes have fenced backyards or fireplaces.</p>\n\n\n\n<p>Tarawa Terrace II is open to E1-E5 active-duty Marines and Sailors and may also be available to retirees and people who work on the installation. Residents benefit from professional landscaping, on-site management, 24-hour emergency maintenance, and nearby parks and playgrounds. Contact Camp Lejeune Family Housing for current availability.</p>",
-  "operator": "Hunt Military Communities (Camp Lejeune Family Housing)",
-  "phone": null,
-  "email": null,
+  "operator": "Camp Lejeune Family Housing (Hunt Military Communities)",
+  "phone": "(910) 933-0935",
+  "email": "camplejeune@huntcompanies.com",
   "hours": null,
-  "eligibility": "E1–E5 active duty; may also be open to retirees and installation workers",
-  "pets": null,
+  "eligibility": "E1-E5 active duty, retirees, and those working on the installation",
+  "pets": "Pet friendly (details not published on site)",
   "utilities": null,
   "beds_range": "2–4",
   "sqft_range": "1,618–1,749",
@@ -566,7 +635,13 @@
    "Programmable thermostats",
    "Professional landscaping and 24-hour maintenance"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2–2.5",
+  "sources": [
+   "https://www.camplejeunefamilyhousing.com/neighborhood/tarawa-terrace-ii",
+   "https://www.camplejeunefamilyhousing.com/contact-us"
+  ],
+  "phone_note": null
  },
  {
   "slug": "meriwether-landing-liberty-military-housing",
@@ -592,20 +667,32 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-3.webp",
-    "alt": "Military Housing Rentals BG 3",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/listings/meriwether-landing-1.webp",
+    "alt": "Ribbon cutting opening Meriwether Landing, June 16, 2026",
+    "credit": "Photo by Sgt. Raven Jones, I Corps, JBLM (public domain)",
+    "source": "https://www.dvidshub.net/image/9757943/jblm-opens-new-housing-community"
+   },
+   {
+    "src": "/assets/img/listings/meriwether-landing-2.webp",
+    "alt": "Groundbreaking for the Meriwether Landing expansion, March 18, 2025",
+    "credit": "U.S. Army photo by Sgt. Rebecca Watkins, I Corps (public domain)",
+    "source": "https://www.dvidshub.net/image/8925008/liberty-military-housing-groundbreaking"
+   },
+   {
+    "src": "/assets/img/listings/meriwether-landing-3.webp",
+    "alt": "Meriwether Landing expansion groundbreaking",
+    "credit": "U.S. Army photo by Sgt. Rebecca Watkins, I Corps (public domain)",
+    "source": "https://www.dvidshub.net/image/8925012/liberty-military-housing-groundbreaking"
    }
   ],
   "description": "<p>Meriwether Landing is one of the newest military housing communities at Joint Base Lewis-McChord, Washington. It opened on Lewis North in 2025 and is managed by Liberty Military Housing. The neighborhood has more than 200 new-construction duplex and single-family homes near American Lake and Meriwether Elementary School.</p>\n\n\n\n<p>Floor plans are assigned by rank. For example, a two-story duplex for E5-E9 families has four bedrooms, two-and-a-half baths, and about 1,977 square feet, while officer and senior enlisted plans range up to about 2,500 square feet. Homes include attached two-car garages, fenced backyards, private patios, laundry rooms, air conditioning, pantries, walk-in closets, and modern flooring.</p>\n\n\n\n<p>Residents are close to five parks with playgrounds and have access to community center amenities, Liberty&#8217;s Little Libraries, and free monthly resident events. The community is pet friendly, allowing up to four pets with some breed restrictions. Visit Liberty Military Housing&#8217;s website for current availability.</p>",
   "operator": "Liberty Military Housing",
-  "phone": null,
+  "phone": "(253) 912-2112",
   "email": null,
-  "hours": null,
-  "eligibility": "Plans assigned by rank: E5–E9, O1–O3, and O4–O6/E9",
-  "pets": "Pet friendly, up to 4 pets; aggressive breeds restricted",
-  "utilities": null,
+  "hours": "Mon-Fri 8:00 am-4:00 pm; Sat-Sun closed",
+  "eligibility": "Floor plans designated O1-O3, E5-E6, E7-E9, O4-O6 and E9 (operator installation page lists E4-E6; Army article: 36 homes O1-O3, 176 homes E7-E9)",
+  "pets": "Max 4 pets (dogs, indoor cats, small caged animals, birds, goldfish); deposit per pet; banned: Pit Bull, Rottweiler, Doberman, Chow, wolf hybrids; no exotics",
+  "utilities": "No-cost utilities (operator)",
   "beds_range": "3–4",
   "sqft_range": "1,882–2,500",
   "schools": [
@@ -613,7 +700,9 @@
   ],
   "nearby": [
    "American Lake",
-   "Five parks with playgrounds"
+   "Lewis North",
+   "Five community parks",
+   "Community center"
   ],
   "highlights": [
    "New construction, opened 2025",
@@ -621,7 +710,17 @@
    "Fenced backyards and private patios",
    "Free monthly resident events"
   ],
-  "photo_note": null
+  "photo_note": "Photos: U.S. government (public domain). Credits appear in the photo viewer.",
+  "baths_range": "2–2.5",
+  "sources": [
+   "https://livelmh.com/installations/lewis-mcchord-jblm/meriwether-landing/",
+   "https://livelmh.com/installations/lewis-mcchord-jblm/meriwether-landing/floorplans/",
+   "https://livelmh.com/installations/lewis-mcchord-jblm/meriwether-landing/amenities/",
+   "https://livelmh.com/installations/lewis-mcchord-jblm/",
+   "https://www.army.mil/article/283864",
+   "https://www.army.mil/article/293350"
+  ],
+  "phone_note": null
  },
  {
   "slug": "gardner-hills-campbell-crossing",
@@ -645,25 +744,25 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-1.webp",
-    "alt": "Military Housing Rentals BG 1",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/fort-campbell.webp",
+    "alt": "Entrance sign outside Gate 3, June 4, 2015",
+    "credit": "U.S. Army photo by Sam Shore (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Gardner Hills is a family housing neighborhood in The Woodlands area of Fort Campbell, Kentucky, near Gate 1. It is part of Campbell Crossing, the Army&#8217;s privatized housing partnership on post, which has more than 4,000 homes across four communities. Different phases of Gardner Hills are designated for junior and senior noncommissioned officers.</p>\n\n\n\n<p>A typical floor plan, The Lydia, offers three bedrooms and about 1,632 square feet, with a kitchen open to the dining room, a primary suite with a private bath, a one-car garage, and a fenced yard. Residents get complimentary front and side lawn service, free 24/7 on-site maintenance, and access to a Home and Garden Self Help Center.</p>\n\n\n\n<p>Gardner Hills residents are served by The Commons at the Woodlands, with a meeting room and full kitchen, fitness room, splash park, walking trails, playgrounds, and tennis courts. Schools, a shoppette, and a coffee shop are nearby. Campbell Crossing is pet friendly (with breed restrictions) and is open to active duty, retirees, DoD civilians, and contractors. Contact the leasing office for availability.</p>",
-  "operator": "Campbell Crossing LLC",
-  "phone": null,
+  "operator": "Campbell Crossing",
+  "phone": "(931) 431-2693",
   "email": null,
-  "hours": null,
-  "eligibility": "Junior and senior NCOs (by phase); Campbell Crossing also serves retirees, DoD civilians and contractors",
-  "pets": "Pet friendly, with breed restrictions",
-  "utilities": null,
+  "hours": "Mon-Thu 8:00 am-5:00 pm; Fri 8:00 am-4:00 pm",
+  "eligibility": "Floor plans designated JNCO and SNCO/CGO (exact ranks not published)",
+  "pets": "Pet-friendly; breed restrictions apply; all pets must be approved by Campbell Crossing (post vet registration alone does not authorize)",
+  "utilities": "Rent includes all major utilities; utility allowance program (rebate if under, bill if over like-type-group average)",
   "beds_range": null,
   "sqft_range": null,
   "schools": [],
   "nearby": [
    "Gate 1",
+   "Gardner Hills Child Development Center, 7404 McAuliffe Way",
    "The Commons at the Woodlands (fitness room, splash park)",
    "Shoppette and coffee shop"
   ],
@@ -673,7 +772,15 @@
    "Free 24/7 on-site maintenance",
    "Home & Garden Self Help Center"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "sources": [
+   "https://www.campbellcrossingllc.com/",
+   "https://www.campbellcrossingllc.com/sitemap/",
+   "https://www.campbellcrossingllc.com/utility-program",
+   "https://www.army.mil/article/237558"
+  ],
+  "baths_range": null,
+  "phone_note": null
  },
  {
   "slug": "sp-enlist-naval-station-norfolk",
@@ -698,22 +805,21 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-2.webp",
-    "alt": "Military Housing Rentals BG 2",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/naval-station-norfolk.webp",
+    "alt": "Aerial view of Naval Station Norfolk",
+    "credit": "Photo by Petty Officer 2nd Class Christopher Stoltz, U.S. Navy (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>SP Enlist is an on-base military housing community at Naval Station Norfolk, Virginia, managed by Liberty Military Housing. Living inside the gates puts you close to the piers, the commissary, and the exchange at the world&#8217;s largest naval station.</p>\n\n\n\n<p>The community offers four-bedroom, two-and-a-half-bath townhomes of about 1,405 square feet. Homes feature a fully equipped kitchen with stainless-steel appliances, a detached one-car garage, a fenced rear yard, air conditioning, and carpet throughout.</p>\n\n\n\n<p>Residents enjoy on-base gated entry, a playground, basketball courts, and Liberty&#8217;s Little Libraries. Liberty manages more than 1,600 homes across ten communities in the Norfolk and Hampton Roads area and does not require credit checks or deposits for active-duty members. Contact Liberty Military Housing for current availability.</p>",
   "operator": "Liberty Military Housing",
-  "phone": null,
+  "phone": "(757) 233-0140",
   "email": null,
-  "hours": null,
-  "eligibility": null,
-  "pets": null,
-  "utilities": "Average utilities included; no credit check or deposit for active duty",
+  "hours": "Mon-Fri 8:00 am-5:00 pm; Sat-Sun closed",
+  "eligibility": "E1-E9",
+  "pets": "Up to 2 pets; breed restrictions; one-time refundable pet fee and PetScreening profile required",
+  "utilities": "No-cost utilities (operator)",
   "beds_range": "4",
-  "sqft_range": null,
+  "sqft_range": "1,405",
   "schools": [],
   "nearby": [
    "Naval Station Norfolk piers",
@@ -725,7 +831,14 @@
    "Detached one-car garage",
    "Fenced rear yard"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2.5",
+  "sources": [
+   "https://livelmh.com/installations/naval-station-norfolk/sp-enlist/",
+   "https://livelmh.com/installations/naval-station-norfolk/sp-enlist/floorplans/",
+   "https://livelmh.com/installations/naval-station-norfolk/"
+  ],
+  "phone_note": null
  },
  {
   "slug": "stuart-mesa-liberty-military-housing",
@@ -750,26 +863,29 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-4.webp",
-    "alt": "Military Housing Rentals BG 4",
-    "w": 1920,
-    "h": 1276
+    "src": "/assets/img/bases/camp-pendleton.webp",
+    "alt": "Marines at the Camp Pendleton main gate, Jan. 6, 2020",
+    "credit": "U.S. Marine Corps photo by Cpl. Dylan Chagnon (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Stuart Mesa is a military family housing community at Marine Corps Base Camp Pendleton in Oceanside, California, managed by Liberty Military Housing. It sits near Del Mar Beach and is close to the Marine Corps Exchange and Carlsbad Premium Outlets, with restaurants and shops within walking distance.</p>\n\n\n\n<p>The community offers two- to five-bedroom townhomes ranging from about 1,251 to 1,971 square feet, such as a three-bedroom, two-and-a-half-bath plan of about 1,377 square feet. Features include private patios, vaulted ceilings, walk-in closets, ceiling fans, and washer and dryer hookups, and garages are available.</p>\n\n\n\n<p>Stuart Mesa has some of the best amenities on base: a community pool, fitness center, three dog parks, 20 playgrounds and tot lots, nine basketball courts, a soccer field, BBQ and picnic areas, plus free community events and 24/7 maintenance. Contact Liberty Military Housing for current availability and eligibility.</p>",
   "operator": "Liberty Military Housing",
-  "phone": null,
+  "phone": "(760) 512-0455",
   "email": null,
-  "hours": null,
-  "eligibility": null,
-  "pets": null,
-  "utilities": null,
+  "hours": "Mon-Fri 8:30 am-5:30 pm; Sat 9:00 am-5:00 pm; Sun closed",
+  "eligibility": "E1-E9",
+  "pets": "Max 2 pets (dogs, birds, fish listed); deposit per pet; banned: Pit Bull, Rottweiler, Doberman, Chow, wolf hybrids; no exotics",
+  "utilities": "No-cost utilities (operator)",
   "beds_range": "2–5",
   "sqft_range": "1,251–1,971",
-  "schools": [],
+  "schools": [
+   "Stuart Mesa Elementary"
+  ],
   "nearby": [
    "Del Mar Beach",
-   "Marine Corps Exchange",
+   "I-5",
+   "Mainside Commissary and MCX (about 10 minutes)",
+   "Naval Hospital Camp Pendleton",
    "Carlsbad Premium Outlets"
   ],
   "highlights": [
@@ -778,7 +894,15 @@
    "Vaulted ceilings and walk-in closets",
    "Free community events and 24/7 maintenance"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "1–2.5",
+  "sources": [
+   "https://livelmh.com/installations/camp-pendleton-mcb/stuart-mesa/",
+   "https://livelmh.com/installations/camp-pendleton-mcb/stuart-mesa/floorplans/",
+   "https://livelmh.com/installations/camp-pendleton-mcb/",
+   "https://www.dvidshub.net/image/7139862/stuart-mesa-elementary-celebrates-month-military-child"
+  ],
+  "phone_note": null
  },
  {
   "slug": "dakota-ridge-fort-carson-family-homes",
@@ -791,7 +915,7 @@
   "lng": -104.79907,
   "price": null,
   "beds": 4.0,
-  "baths": null,
+  "baths": 2.5,
   "sqft": null,
   "website": "https://www.fortcarsonfamilyhomes.com/neighborhoods/dakota-ridge",
   "amenities": [
@@ -804,25 +928,24 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-3.webp",
-    "alt": "Military Housing Rentals BG 3",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/fort-carson.webp",
+    "alt": "ID check at a Fort Carson gate, April 16, 2020",
+    "credit": "U.S. Army photo by Pfc. Ashton Empty (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>Dakota Ridge is a family housing neighborhood at Fort Carson, Colorado, just south of Colorado Springs, managed by Balfour Beatty Communities as part of Fort Carson Family Homes. The neighborhood offers four-bedroom homes for noncommissioned officers in the ranks of E5-E6.</p>\n\n\n\n<p>Homes feature open floor plans, fully equipped kitchens, garages, patios, and fenced backyards, along with ceiling fans, central air, and washer and dryer hookups. With Pikes Peak views and easy access to the outdoors, it is a great fit for active families.</p>\n\n\n\n<p>Dakota Ridge is near Patriot Elementary School, Carson Middle School, and Cheyenne Shadows Golf Club. Fort Carson Family Homes neighborhoods include playgrounds, athletic courts, trails, and community gardens, and they are pet friendly. Contact the leasing office for current availability.</p>",
-  "operator": "Balfour Beatty Communities (Fort Carson Family Homes)",
-  "phone": null,
+  "operator": "Fort Carson Family Homes (Balfour Beatty Communities)",
+  "phone": "(719) 579-1606",
   "email": null,
-  "hours": null,
-  "eligibility": "E5–E6",
-  "pets": "Pet friendly",
-  "utilities": null,
+  "hours": "Mon, Tue, Thu, Fri 8 am-5 pm; Wed 8 am-6 pm",
+  "eligibility": "E5-E6",
+  "pets": "Pet-friendly neighborhoods (details not published)",
+  "utilities": "All utilities included (operator)",
   "beds_range": "4",
   "sqft_range": null,
   "schools": [
-   "Patriot Elementary School",
-   "Carson Middle School"
+   "Carson Middle School",
+   "Patriot Elementary School"
   ],
   "nearby": [
    "Cheyenne Shadows Golf Club",
@@ -834,7 +957,13 @@
    "Central air and ceiling fans",
    "Mountain views"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2.5",
+  "sources": [
+   "https://www.fortcarsonfamilyhomes.com/neighborhoods.aspx",
+   "https://www.fortcarsonfamilyhomes.com/"
+  ],
+  "phone_note": null
  },
  {
   "slug": "mcgraw-village-heritage-landing-fort-benning",
@@ -858,27 +987,27 @@
   ],
   "images": [
    {
-    "src": "/wp-content/uploads/2025/06/Military-Housing-Rentals-BG-1.webp",
-    "alt": "Military Housing Rentals BG 1",
-    "w": 1920,
-    "h": 1279
+    "src": "/assets/img/bases/fort-benning.webp",
+    "alt": "Leaders at the new 'Welcome to Fort Benning' sign, April 16, 2025",
+    "credit": "Photo by Patrick Albright, Fort Benning Public Affairs Office (public domain, via www.dvidshub.net)"
    }
   ],
   "description": "<p>McGraw Village is a family housing neighborhood at Fort Benning, Georgia (called Fort Moore from 2023 to 2025), managed by The Michaels Organization as part of Heritage Landing. The neighborhood offers single-family homes and duplexes for senior noncommissioned officers in the ranks of E6-E8.</p>\n\n\n\n<p>Homes feature two-car garages and backyards on sidewalk-lined streets. A popular floor plan, the Mourning Dove, offers three bedrooms, two-and-a-half baths, and about 1,720 square feet. Accessible floor plans are also available.</p>\n\n\n\n<p>McGraw Village is steps from McBride Elementary School and the child development center. The village center has a large pool, splash ground, and community center, and there is a dog park for four-legged family members. Heritage Landing has two- to five-bedroom homes across Fort Benning, so contact the Family Housing Welcome Center for current availability.</p>",
-  "operator": "The Michaels Organization (Heritage Landing)",
-  "phone": null,
-  "email": null,
-  "hours": null,
-  "eligibility": "E6–E8",
-  "pets": null,
+  "operator": "Heritage Landing (Michaels)",
+  "phone": "(888) 880-6530",
+  "email": "heritagelandingleasing@tmo.com",
+  "hours": "Mon-Fri 8:00 am-5:00 pm",
+  "eligibility": "E6-E8",
+  "pets": "Max 2 dogs/cats (small caged pets and fish exempt with approval); $250 refundable deposit per pet; must register with post vet; banned: Rottweiler, Doberman, Chow, wolf hybrids, Pit Bull/Staffordshire and mixes; no exotics",
   "utilities": null,
-  "beds_range": null,
-  "sqft_range": null,
+  "beds_range": "3–5",
+  "sqft_range": "1,718–2,903",
   "schools": [
    "McBride Elementary School"
   ],
   "nearby": [
    "Child development center",
+   "Village center with pool, splash ground and community center",
    "Dog park"
   ],
   "highlights": [
@@ -887,6 +1016,14 @@
    "Village center pool and splash ground",
    "Accessible floor plans available"
   ],
-  "photo_note": null
+  "photo_note": "No public photos of this neighborhood yet; the photo shows the installation. See the community's website for home photos.",
+  "baths_range": "2.5",
+  "sources": [
+   "https://liveatheritagelanding.com/neighborhoods-blog/mcgraw-village",
+   "https://liveatheritagelanding.com/floor-plans-blog?category=McGraw+Village",
+   "https://liveatheritagelanding.com/s/HL-Pet-Policy.pdf",
+   "https://liveatheritagelanding.com/apply-military"
+  ],
+  "phone_note": null
  }
 ]

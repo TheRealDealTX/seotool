@@ -13,12 +13,12 @@ $details = array_filter([
     'Installation'   => ['building', '<a href="/bases/' . e($b['slug']) . '/">' . e($b['name']) . '</a>'],
     'Managed by'     => ['home', e($l['operator'] ?? '')],
     'Eligibility'    => ['users', e($l['eligibility'] ?? '')],
-    'Floor plans'    => ['bed', e(trim(($l['beds_range'] ? $l['beds_range'] . ' bedrooms' : '') . ($l['sqft_range'] ? ' · ' . $l['sqft_range'] . ' sq ft' : ''), ' ·'))],
+    'Floor plans'    => ['bed', e(implode(' · ', array_filter([$l['beds_range'] ? $l['beds_range'] . ' bedrooms' : '', $l['baths_range'] ?? '' ? $l['baths_range'] . ' baths' : '', $l['sqft_range'] ? $l['sqft_range'] . ' sq ft' : ''])))],
     'Rent'           => ['calc', e($l['price'] ? price_label($l) : ($l['rent_note'] ?? 'Set by your BAH for active-duty residents. Call for current rates.'))],
     'Utilities'      => ['bolt', e($l['utilities'] ?? '')],
     'Pets'           => ['paw', e($l['pets'] ?? '')],
     'Office hours'   => ['clock', e($l['hours'] ?? '')],
-    'Phone'          => ['phone', $l['phone'] ? '<a href="tel:' . e(preg_replace('/[^0-9+]/', '', $l['phone'])) . '">' . e($l['phone']) . '</a>' : ''],
+    'Phone'          => ['phone', $l['phone'] ? '<a href="tel:' . e(preg_replace('/[^0-9+]/', '', $l['phone'])) . '">' . e($l['phone']) . '</a>' . (!empty($l['phone_note']) ? '<br><small class="muted">' . e($l['phone_note']) . '</small>' : '') : ''],
     'Email'          => ['mail', $l['email'] ? '<a href="mailto:' . e($l['email']) . '">' . e($l['email']) . '</a>' : ''],
 ], fn($v) => $v[1] !== '');
 
@@ -70,7 +70,7 @@ layout_start([
       </div>
     </header>
 
-    <div class="gallery" data-gallery>
+    <div class="gallery gallery-n<?= min(5, count($imgs)) ?>" data-gallery>
       <?php foreach (array_slice($imgs, 0, 5) as $i => $img): ?>
         <button type="button" class="gallery-item<?= $i === 0 ? ' gallery-main' : '' ?>" data-index="<?= $i ?>" aria-label="View photo <?= $i + 1 ?> of <?= count($imgs) ?>">
           <img src="<?= e($img['src']) ?>" alt="<?= e($img['alt'] ?: $l['title'] . ' photo ' . ($i + 1)) ?>" <?= $i ? 'loading="lazy"' : 'fetchpriority="high"' ?>>
@@ -115,7 +115,7 @@ layout_start([
 
         <?php if ($l['amenities']): ?>
         <section class="listing-section">
-          <h2>Amenities</h2>
+          <h2>Home features</h2>
           <ul class="amenities"><?php foreach ($l['amenities'] as $a): ?><li><?= icon('check') ?> <?= e($a) ?></li><?php endforeach; ?></ul>
         </section>
         <?php endif; ?>
@@ -136,6 +136,14 @@ layout_start([
         </section>
 
         <section class="listing-section"><?= widget_bah() ?></section>
+
+        <?php if (!empty($l['sources'])): ?>
+        <section class="listing-section sources">
+          <h2>Sources</h2>
+          <p class="fineprint">Details on this page were checked against these public sources. Rent, eligibility and availability change, so confirm with the community.</p>
+          <ul class="plain small"><?php foreach ($l['sources'] as $u): ?><li><a href="<?= e($u) ?>" target="_blank" rel="noopener nofollow"><?= e(preg_replace('#^https?://(www\.)?#', '', rtrim($u, '/'))) ?></a></li><?php endforeach; ?></ul>
+        </section>
+        <?php endif; ?>
       </div>
 
       <aside class="listing-side">

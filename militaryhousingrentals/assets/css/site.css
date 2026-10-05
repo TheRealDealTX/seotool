@@ -350,16 +350,20 @@ a.chip-dark:hover { color: #fff; background: var(--navy); }
 .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease, filter .2s; }
 .gallery-item:hover img { transform: scale(1.04); filter: brightness(.92); }
 .gallery-main { grid-row: span 2; }
-.gallery:has(.gallery-item:only-of-type) { grid-template-columns: 1fr; grid-template-rows: 440px; }
-.gallery:has(.gallery-item:nth-of-type(2):last-of-type) { grid-template-columns: 2fr 1fr; }
-.gallery:has(.gallery-item:nth-of-type(3):last-of-type) { grid-template-columns: 2fr 1fr; }
+.gallery-n1 { grid-template-columns: 1fr; grid-template-rows: 460px; }
+.gallery-n2 { grid-template-columns: 2fr 1fr; }
+.gallery-n2 .gallery-item:nth-of-type(2) { grid-row: span 2; }
+.gallery-n3 { grid-template-columns: 2fr 1fr; }
+.gallery-n4 { grid-template-columns: 2fr 1fr 1fr; }
+.gallery-n4 .gallery-item:nth-of-type(4) { grid-column: span 2; }
 .gallery-more { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(11, 31, 58, .55); color: #fff; font-weight: 800; font-size: 1.1rem; }
 .gallery-all { position: absolute; right: 14px; bottom: 14px; box-shadow: var(--shadow); background: var(--surface); }
 @media (max-width: 760px) {
   .gallery { grid-template-columns: 1fr 1fr; grid-template-rows: 260px 120px; }
   .gallery-main { grid-column: span 2; grid-row: auto; }
   .gallery-item:nth-of-type(n+4) { display: none; }
-  .gallery:has(.gallery-item:only-of-type) { grid-template-rows: 280px; }
+  .gallery-n1 { grid-template-columns: 1fr; grid-template-rows: 280px; }
+  .gallery-n2 .gallery-item:nth-of-type(2), .gallery-n4 .gallery-item:nth-of-type(4) { grid-row: auto; grid-column: auto; }
 }
 .photo-note { margin-top: 8px; }
 .listing-layout { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 40px; margin-top: 32px; align-items: start; }
@@ -524,3 +528,6 @@ a.chip-dark:hover { color: #fff; background: var(--navy); }
 .prose .widget ol, .prose .widget ul { padding-left: 22px; }
 .prose .widget li::marker { content: none; }
 @media (max-width: 640px) { .listing-price { text-align: left; } .listing-price strong { display: inline; margin-right: 8px; } .listing-head { gap: 8px; } }
+.listing-head > div:first-child { flex: 1 1 560px; }
+.listing-price { margin-left: auto; }
+.gallery-n1 { grid-template-rows: 400px; }

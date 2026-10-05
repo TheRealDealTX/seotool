@@ -7,10 +7,9 @@
   "city": "Killeen",
   "state": "TX",
   "image": {
-   "src": "/wp-content/uploads/2025/06/Fort-Cavazos-Hood.webp",
-   "alt": "Fort Cavazos (Hood)",
-   "w": 800,
-   "h": 500
+   "src": "/assets/img/bases/fort-cavazos.webp",
+   "alt": "Fort Hood sign at Frank W. Mayborn Gate, June 24, 2025",
+   "credit": "U.S. Army photo by Eric Franklin, Fort Hood Public Affairs (public domain, via www.dvidshub.net)"
   },
   "blurb": "One of the largest Army installations in the world, home to III Armored Corps in Central Texas. Renamed Fort Cavazos in 2023 and Fort Hood again in 2025."
  },
@@ -22,10 +21,9 @@
   "city": "San Antonio",
   "state": "TX",
   "image": {
-   "src": "/wp-content/uploads/2025/06/Joint-Base-San-Antonio.webp",
-   "alt": "",
-   "w": 800,
-   "h": 500
+   "src": "/assets/img/bases/joint-base-san-antonio.webp",
+   "alt": "Quadrangle clock tower, JBSA-Fort Sam Houston (landmark, not a gate)",
+   "credit": "Photo by Sean Worrell, 502d Air Base Wing (public domain, via www.dvidshub.net)"
   },
   "blurb": "Military City USA: JBSA-Lackland, JBSA-Fort Sam Houston and JBSA-Randolph form one of the largest joint bases in the Department of Defense."
  },
@@ -36,7 +34,11 @@
   "branch": "Army",
   "city": "El Paso",
   "state": "TX",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/fort-bliss.webp",
+   "alt": "Buffalo Soldier Gate, Fort Bliss, Aug. 20, 2021",
+   "credit": "Photo by Staff Sgt. Michael West (public domain, via www.dvidshub.net)"
+  },
   "blurb": "A sprawling Army post in El Paso, Texas, home to the 1st Armored Division, with sunny weather and mountain views."
  },
  {
@@ -46,7 +48,11 @@
   "branch": "Army",
   "city": "Fayetteville",
   "state": "NC",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/fort-bragg.webp",
+   "alt": "Headquarters XVIII Airborne Corps and Fort Bragg sign, March 7, 2025",
+   "credit": "U.S. Army photo by Spc. Alexcia Rupert, 22nd Mobile Public Affairs Detachment (public domain, via www.dvidshub.net)"
+  },
   "blurb": "Home of the Airborne and Special Operations forces in North Carolina. Renamed Fort Liberty in 2023 and Fort Bragg again in 2025."
  },
  {
@@ -56,7 +62,11 @@
   "branch": "Marine Corps",
   "city": "Jacksonville",
   "state": "NC",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/camp-lejeune.webp",
+   "alt": "Welcome sign at Holcomb Gate",
+   "credit": "Photo courtesy of U.S. Marine Corps (public domain, via www.dvidshub.net)"
+  },
   "blurb": "Marine Corps Base Camp Lejeune on the North Carolina coast, home of II Marine Expeditionary Force, with miles of beaches."
  },
  {
@@ -66,7 +76,11 @@
   "branch": "Army / Air Force",
   "city": "Tacoma",
   "state": "WA",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/joint-base-lewis-mcchord.webp",
+   "alt": "New JBLM headquarters sign, Feb. 1, 2010",
+   "credit": "Photo by Ingrid Barrentine, courtesy of the Northwest Guardian (public domain, via www.dvidshub.net)"
+  },
   "blurb": "A joint Army and Air Force installation south of Tacoma, Washington, between Puget Sound and Mount Rainier."
  },
  {
@@ -76,7 +90,11 @@
   "branch": "Army",
   "city": "Clarksville",
   "state": "KY",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/fort-campbell.webp",
+   "alt": "Entrance sign outside Gate 3, June 4, 2015",
+   "credit": "U.S. Army photo by Sam Shore (public domain, via www.dvidshub.net)"
+  },
   "blurb": "Home of the 101st Airborne Division (Air Assault), straddling the Kentucky-Tennessee line near Clarksville."
  },
  {
@@ -86,7 +104,11 @@
   "branch": "Navy",
   "city": "Norfolk",
   "state": "VA",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/naval-station-norfolk.webp",
+   "alt": "Aerial view of Naval Station Norfolk",
+   "credit": "Photo by Petty Officer 2nd Class Christopher Stoltz, U.S. Navy (public domain, via www.dvidshub.net)"
+  },
   "blurb": "The world's largest naval station, in the heart of Hampton Roads, Virginia."
  },
  {
@@ -96,7 +118,11 @@
   "branch": "Marine Corps",
   "city": "Oceanside",
   "state": "CA",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/camp-pendleton.webp",
+   "alt": "Marines at the Camp Pendleton main gate, Jan. 6, 2020",
+   "credit": "U.S. Marine Corps photo by Cpl. Dylan Chagnon (public domain, via www.dvidshub.net)"
+  },
   "blurb": "Marine Corps Base Camp Pendleton stretches along 17 miles of Southern California coastline between Los Angeles and San Diego."
  },
  {
@@ -106,7 +132,11 @@
   "branch": "Army",
   "city": "Colorado Springs",
   "state": "CO",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/fort-carson.webp",
+   "alt": "ID check at a Fort Carson gate, April 16, 2020",
+   "credit": "U.S. Army photo by Pfc. Ashton Empty (public domain, via www.dvidshub.net)"
+  },
   "blurb": "The Mountain Post, at the foot of the Rockies just south of Colorado Springs, home to the 4th Infantry Division."
  },
  {
@@ -116,7 +146,11 @@
   "branch": "Army",
   "city": "Columbus",
   "state": "GA",
-  "image": null,
+  "image": {
+   "src": "/assets/img/bases/fort-benning.webp",
+   "alt": "Leaders at the new 'Welcome to Fort Benning' sign, April 16, 2025",
+   "credit": "Photo by Patrick Albright, Fort Benning Public Affairs Office (public domain, via www.dvidshub.net)"
+  },
   "blurb": "The home of the Infantry and Armor in west Georgia. Renamed Fort Moore in 2023 and Fort Benning again in 2025."
  }
 ]

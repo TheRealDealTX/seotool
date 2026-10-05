@@ -270,7 +270,7 @@ function listing_card($l, $extra_class = '') {
     <p class="card-addr"><?= icon('pin') ?> <?= e($l['address']) ?></p>
     <ul class="facts">
       <?php if ($l['beds']): ?><li><?= icon('bed') ?> <?= e($l['beds_range'] ?: fmt_num($l['beds'])) ?> bd</li><?php endif; ?>
-      <?php if ($l['baths']): ?><li><?= icon('bath') ?> <?= e(fmt_num($l['baths'])) ?> ba</li><?php endif; ?>
+      <?php if ($l['baths']): ?><li><?= icon('bath') ?> <?= e($l['baths_range'] ?? '' ?: fmt_num($l['baths'])) ?> ba</li><?php endif; ?>
       <?php if ($l['sqft'] || $l['sqft_range']): ?><li><?= icon('ruler') ?> <?= e($l['sqft_range'] ?: fmt_num($l['sqft'])) ?> sq ft</li><?php endif; ?>
     </ul>
   </div>
