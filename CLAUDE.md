@@ -124,6 +124,19 @@ Two hosting accounts, two different situations:
 - 10 existing amazon.com links had no tag (one carried Amazon's own ad tag `mh0b-20`); all now use
   `nailzinbloom-20`. Amazon Associates section added to the privacy policy. Original auto-excerpts set.
 
+## arriveoutdoors.com (WordPress + Elementor + Yoast)
+
+- Amazon tag for THIS site: `arriveoutdoors-20`. REST login `info@arriveoutdoors.com` (administrator), Application
+  Password "Claude" (not stored here).
+- 2026-10-05: 23 of 29 posts hand-planned and edited (`<!-- aoaff -->`, box class `ao-aff-box` "Gear we
+  recommend"): scrambling posts → helmet/approach shoes/gloves/daypack; camera posts → Peak Design, GorillaPod,
+  the cameras compared; sun hoodies, Sawyer gravity, hygiene, survival, fire safety, bikepacking food, fishing,
+  CR-V camper, Camping 101 (kept its two josephrayditt-20 links). Original auto-excerpts set.
+- Skipped on purpose: the three gear-RENTAL posts (1076, 1056, 1048 — buy links would undercut them) and the
+  travel/logistics posts (1169 St. John villas, 1166 Guam freight, 696 Fire Island).
+- The site has no privacy-policy page, so there was nowhere to add the Amazon Associates section; posts carry
+  the disclosure line.
+
 ## rodeotexas.org (web hosting account u401386392, custom PHP app) — BUILT, NOT DEPLOYED
 
 - Changes are ready in `affiliate/rodeotexas/update/` (paths relative to `public_html`);
