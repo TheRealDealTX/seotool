@@ -8,6 +8,20 @@
 declare(strict_types=1);
 if (!defined('ALL_SITE')) { http_response_code(404); exit; }
 
+/** Google tag (gtag.js) emitted in the <head> of every page and post. */
+const GTAG_SNIPPET = <<<'HTML'
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5E1J8F43T7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5E1J8F43T7');
+</script>
+
+HTML;
+
 function render_page(array $page, string $content): void
 {
     $title = $page['title'];
@@ -37,6 +51,7 @@ function render_page(array $page, string $content): void
     echo '<link rel="canonical" href="' . e($canonical) . '">' . "\n";
     echo '<meta name="robots" content="' . e($robots) . '">' . "\n";
     echo '<meta name="theme-color" content="#070b14">' . "\n";
+    echo GTAG_SNIPPET;
     echo '<meta property="og:locale" content="en_US">' . "\n";
     echo '<meta property="og:type" content="' . $ogType . '">' . "\n";
     echo '<meta property="og:site_name" content="' . e(SITE_NAME) . '">' . "\n";
