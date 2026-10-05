@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
-Disallow: /templates/
 Disallow: /home.html
+Disallow: /contact.php
+Disallow: /thank-you/
 
-Sitemap: https://huttoroofs.com/sitemap.xml
+Sitemap: https://beltonbanners.com/sitemap.xml

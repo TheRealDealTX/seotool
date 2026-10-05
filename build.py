@@ -1,24 +1,30 @@
 #!/usr/bin/env python3
-"""Static site generator for huttoroofs.com.
+"""Static site generator for beltonbanners.com (Christina Dittman Creations).
 
 Renders every page from the shared layout in this file plus the page data in
-content/. No WordPress, no runtime dependencies - output is plain HTML that can
-be uploaded as-is.
+content/. Output is plain HTML (served by index.php on the host) plus the two
+hand-written PHP files that live alongside it (index.php, contact.php).
 
     python3 build.py            # writes the site into ./ (repo root)
+    python3 validate.py         # then check it
 """
 
+import json
 import os
 import re
 from datetime import date
 
-from siteconfig import BIZ, NEARBY, FOOTER_SERVING, NAV, TODAY
-from content.services import SERVICES
-from content.areas import AREAS
+from siteconfig import BIZ, NEARBY, FOOTER_SERVING, NAV, SIZES, TODAY
+from content.creations import CREATIONS, CATEGORIES, CATEGORY_LABEL, BY_SLUG as CREATION
+from content.occasions import OCCASIONS
 from content.blog import POSTS
+from content.legal import PRIVACY, TERMS
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = ROOT
+KW = "Belton Banners"
+P = BIZ["phone_display"]
+TEL = BIZ["phone_href"]
 
 
 # --------------------------------------------------------------------------
@@ -26,40 +32,55 @@ OUT = ROOT
 # --------------------------------------------------------------------------
 
 def esc(text):
-    """Escape a string for use inside an HTML attribute."""
-    return (
-        str(text)
-        .replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-    )
+    return (str(text).replace("&", "&amp;").replace("<", "&lt;")
+            .replace(">", "&gt;").replace('"', "&quot;"))
 
 
 def url(path):
     return BIZ["origin"].rstrip("/") + path
 
 
+def jsonld(obj):
+    return json.dumps(obj, ensure_ascii=False, separators=(",", ":"))
+
+
+def img(slug, alt, cls="", sizes="(max-width: 700px) 100vw, 50vw", loading="lazy", width=None, height=None):
+    """Responsive <img> for a gallery image rendered by build-assets."""
+    base = f"/assets/img/gallery/{slug}"
+    srcset = f"{base}-400.webp 400w, {base}-800.webp 800w, {base}.webp 1600w"
+    if not os.path.exists(os.path.join(ROOT, "assets/img/gallery", f"{slug}-800.webp")):
+        srcset = f"{base}.webp 1600w"
+    dims = f' width="{width}" height="{height}"' if width and height else ""
+    c = f' class="{cls}"' if cls else ""
+    return (f'<img{c} src="{base}-800.webp" srcset="{srcset}" sizes="{sizes}" alt="{esc(alt)}" '
+            f'loading="{loading}" decoding="async"{dims}>')
+
+
+def trim(text, n):
+    """Cut a string at a word boundary so it fits in n characters."""
+    if len(text) <= n:
+        return text
+    return text[:n].rsplit(" ", 1)[0].rstrip(",;:") + "."
+
+
+def pretty_date(iso):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return date(y, m, d).strftime("%B %-d, %Y")
+
+
 # --------------------------------------------------------------------------
 # Shared chrome
 # --------------------------------------------------------------------------
 
-def article_meta(page):
-    """Dates for blog posts. The blog index and sitemap read these back from
-    drop-in posts, so the template and the generator must agree on them."""
-    if not page.get("published"):
-        return ""
-    mod = page.get("modified", page["published"])
-    return (f'<meta property="article:published_time" content="{page["published"]}">\n'
-            f'<meta property="article:modified_time" content="{mod}">\n')
-
-
 def head(page):
-    """<head> for one page, including its JSON-LD graph."""
     canonical = url(page["path"])
-    og_image = url("/assets/img/Hutto-Roofers-Site-Icon.webp")
+    og_image = url(page.get("og_image", BIZ["og_image"]))
     schema = ",\n".join(page.get("schema", []))
-    robots = page.get("robots", "index, follow, max-image-preview:large")
+    robots = page.get("robots", "index, follow, max-image-preview:large, max-snippet:-1")
+    article = ""
+    if page.get("published"):
+        article = (f'<meta property="article:published_time" content="{page["published"]}">\n'
+                   f'<meta property="article:modified_time" content="{page.get("modified", page["published"])}">\n')
     return f"""<!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -69,9 +90,10 @@ def head(page):
 <meta name="description" content="{esc(page['description'])}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
+<meta name="theme-color" content="#2F1F10">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="{page.get('og_type', 'website')}">
-<meta property="og:site_name" content="{BIZ['name']}">
+<meta property="og:site_name" content="{BIZ['name']} | {KW}">
 <meta property="og:title" content="{esc(page['title'])}">
 <meta property="og:description" content="{esc(page['description'])}">
 <meta property="og:url" content="{canonical}">
@@ -80,216 +102,250 @@ def head(page):
 <meta name="twitter:title" content="{esc(page['title'])}">
 <meta name="twitter:description" content="{esc(page['description'])}">
 <meta name="twitter:image" content="{og_image}">
-{article_meta(page)}<meta name="geo.region" content="US-TX">
+{article}<meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="{BIZ['city']}, {BIZ['state_long']}">
 <meta name="geo.position" content="{BIZ['latitude']};{BIZ['longitude']}">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..700&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
 <script type="application/ld+json">
 {{"@context":"https://schema.org","@graph":[
 {schema}
 ]}}
 </script>
 </head>
-<body>
-<a class="skip-link" href="#content" style="position:absolute;left:-9999px">Skip to content</a>
+<body class="{page.get('body_class', '')}">
+<a class="skip-link" href="#content">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
 """
 
 
-def header(active=None):
+def header(active=None, light=False):
     links = []
     for label, href in NAV:
         current = ' aria-current="page"' if href == active else ""
         links.append(f'<a href="{href}"{current}>{label}</a>')
     links_html = "".join(links)
-    return f"""<div class="site">
+    return f"""<div class="site{' site--light' if light else ''}">
 <div class="announcement"><div class="container">
-<span>Roofing help for {BIZ['city']} homes and businesses</span>
-<a href="tel:{BIZ['phone_href']}">Call {BIZ['phone_display']}</a>
+<span class="announcement-copy"><span class="dot" aria-hidden="true"></span>{KW} &middot; hand-painted in {BIZ['city']}, {BIZ['state']} &middot; made to order</span>
+<span class="announcement-links"><a href="tel:{TEL}">Call {P}</a><a href="sms:{TEL}">Text us</a></span>
 </div></div>
-<header class="site-header"><div class="container nav-wrap">
-<a class="brand" href="/">
-<span class="brand-mark" aria-hidden="true">H</span>
-<span class="brand-copy"><strong>{BIZ['name']}</strong><span>{BIZ['city']}, {BIZ['state']}</span></span>
+<header class="site-header" id="top"><div class="container nav-wrap">
+<a class="brand" href="/" aria-label="{BIZ['name']} home">
+<img class="brand-logo" src="{BIZ['logo']}" alt="{BIZ['name']} logo" width="56" height="56">
+<span class="brand-copy"><strong>{BIZ['name']}</strong><span>{KW} &middot; {BIZ['city']}, {BIZ['state']}</span></span>
 </a>
-<nav class="nav-links" aria-label="Primary">{links_html}
-<a class="nav-cta" href="/#contact">Request an Estimate</a></nav>
-<button class="menu-btn" type="button" aria-expanded="false" aria-label="Open navigation">&#9776;</button>
+<nav class="nav-links" id="primary-nav" aria-label="Primary">{links_html}
+<a class="nav-cta" href="/contact-us/">Get a Quote</a></nav>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
 </div></header>
-<div class="header-placeholder"></div>
-<div class="header-sentinel" aria-hidden="true"></div>
 <main id="content">
 """
 
 
-def contact_section(heading=None, intro=None):
-    heading = heading or "Tell us what is happening with your roof."
-    intro = intro or (
-        "Whether you are dealing with a leak, storm concern, worn shingles or an aging roof, "
-        f"start the conversation here. {BIZ['name']} can help you organize the next step."
-    )
-    return f"""<section class="contact" id="contact"><div class="container contact-grid">
-<div class="contact-copy">
-<div class="eyebrow">Request an Estimate</div>
-<h2>{heading}</h2>
-<p>{intro}</p>
-<div class="contact-meta">
-<span>Call: {BIZ['phone_display']}</span>
-<span>Text: {BIZ['phone_display']}</span>
-<span>Email: {BIZ['email']}</span>
-<span>Serving {BIZ['city']}, {BIZ['state_long']} {BIZ['zip']} and {BIZ['county']}</span>
-</div>
-</div>
-<div class="contact-card">
-<form data-estimate-form method="post" action="#">
-<div class="form-grid">
-<div class="field"><label for="cf-name">Name</label><input id="cf-name" name="name" type="text" autocomplete="name" required></div>
-<div class="field"><label for="cf-phone">Phone</label><input id="cf-phone" name="phone" type="tel" autocomplete="tel" required></div>
-<div class="field full"><label for="cf-email">Email</label><input id="cf-email" name="email" type="email" autocomplete="email" required></div>
-<div class="field full"><label for="cf-address">Property address or {BIZ['city']} neighborhood</label><input id="cf-address" name="address" type="text" autocomplete="street-address"></div>
-<div class="field full"><label for="cf-service">What do you need?</label><select id="cf-service" name="service">
-<option>Roof repair</option><option>Roof leak repair</option><option>Roof replacement</option>
-<option>New roof installation</option><option>Hail damage roof repair</option><option>Storm damage roof repair</option>
-<option>Shingle roofing</option><option>Metal roofing</option><option>Roof inspection</option>
-<option>Commercial roofing</option><option>Emergency roof repair</option><option>Something else</option>
-</select></div>
-<div class="field full"><label for="cf-message">Tell us about the roof</label><textarea id="cf-message" name="message" rows="4" placeholder="Leak location, storm date, roof age, anything you have noticed..."></textarea></div>
-</div>
-<button class="btn btn-dark submit" type="submit">Send Estimate Request &rarr;</button>
-<p class="form-note">Prefer to talk it through? Call or text {BIZ['phone_display']}.</p>
-</form>
-</div>
-</div></section>
-"""
-
-
 def footer():
-    service_links = "".join(
-        f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES[:6]
-    )
-    area_links = "".join(
-        f'<a href="{a["path"]}">Roofing in {a["city"]}</a>' for a in AREAS
-    )
+    occ_links = "".join(f'<a href="/custom-banners/{o["slug"]}/">{o["label"]}</a>' for o in OCCASIONS)
     return f"""</main>
 <footer class="site-footer"><div class="container">
 <div class="footer-grid">
 <div class="footer-about">
 <a class="brand" href="/">
-<span class="brand-mark" aria-hidden="true">H</span>
-<span class="brand-copy"><strong>{BIZ['name']}</strong><span>{BIZ['city']}, {BIZ['state']}</span></span>
+<img class="brand-logo" src="{BIZ['logo']}" alt="{BIZ['name']} logo" width="64" height="64" loading="lazy">
+<span class="brand-copy"><strong>{BIZ['name']}</strong><span>{KW}</span></span>
 </a>
-<p>{BIZ['name']} provides roofing support for homes and businesses in {BIZ['city']}, {BIZ['state']} {BIZ['zip']}
-and across {BIZ['county']}. Contact us about roof repairs, replacements, inspections, storm and hail
-damage, metal roofing and commercial roofing needs.</p>
+<p>{BIZ['name']} specializes in custom hand-painted banners designed to make life’s most meaningful moments even more memorable. From weddings and birthdays to baby showers, engagements, graduations, church services and seasonal celebrations, each piece is thoughtfully crafted with care, creativity and attention to detail. Every banner is made to order in {BIZ['city']}, {BIZ['state_long']}.</p>
 <p><strong>{FOOTER_SERVING}</strong></p>
 </div>
 <div>
-<div class="footer-title">Roofing Services</div>
-<div class="footer-links">{service_links}<a href="/services/">All services</a></div>
+<div class="footer-title">Custom Banners</div>
+<div class="footer-links">{occ_links}<a href="/custom-banners/">All banner types</a></div>
 </div>
 <div>
-<div class="footer-title">Service Areas</div>
-<div class="footer-links">{area_links}<a href="/service-areas/">All service areas</a></div>
+<div class="footer-title">Quick Links</div>
+<div class="footer-links">
+<a href="/">Home</a>
+<a href="/about-christina-dittman-creations/">About {BIZ['name']}</a>
+<a href="/gallery/">Gallery</a>
+<a href="/how-it-works/">How It Works</a>
+<a href="/pricing-and-sizes/">Pricing &amp; Sizes</a>
+<a href="/design-your-banner/">Design Your Banner</a>
+<a href="/belton-banners/">{KW} in {BIZ['city']}, {BIZ['state']}</a>
+<a href="/faq/">FAQ</a>
+<a href="/blog/">Blog</a>
+<a href="/contact-us/">Contact Us</a>
+</div>
 </div>
 <div>
 <div class="footer-title">Contact</div>
 <div class="footer-links">
-<a href="tel:{BIZ['phone_href']}">Call: {BIZ['phone_display']}</a>
-<a href="sms:{BIZ['phone_href']}">Text: {BIZ['phone_display']}</a>
+<a href="tel:{TEL}">Call: {P}</a>
+<a href="sms:{TEL}">Text: {P}</a>
 <a href="mailto:{BIZ['email']}">{BIZ['email']}</a>
-<a href="/blog/">Roofing Blog</a>
-<span>{BIZ['city']}, {BIZ['state_long']} {BIZ['zip']}</span>
+<span>{BIZ['city']}, {BIZ['state_long']} &middot; {BIZ['county']}</span>
+<span>Made to order &middot; local pickup and delivery by arrangement</span>
 </div>
 </div>
 </div>
 <div class="footer-bottom">
-<span>&copy; {date.today().year} {BIZ['name']}. All Rights Reserved. {FOOTER_SERVING}.</span>
-<span class="footer-links" style="display:flex;gap:18px">
-<a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a href="/sitemap/">Sitemap</a>
-</span>
+<span>&copy; Copyright {date.today().year} {BIZ['name']}. All Rights Reserved. {KW} &middot; {BIZ['city']}, {BIZ['state']}.</span>
+<span class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a href="/sitemap/">Sitemap</a></span>
 </div>
 </div></footer>
-<a class="mobile-call" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_display']}</a>
+<a class="mobile-call" href="tel:{TEL}">Get a Banner Quote: {P}</a>
+<div class="lightbox" id="lightbox" hidden aria-hidden="true" role="dialog" aria-label="Image viewer">
+<button class="lb-close" type="button" aria-label="Close">&times;</button>
+<button class="lb-prev" type="button" aria-label="Previous image">&#8249;</button>
+<figure><img alt=""><figcaption></figcaption></figure>
+<button class="lb-next" type="button" aria-label="Next image">&#8250;</button>
 </div>
-<script src="/assets/js/site.js" defer></script>
+</div>
+<script src="/assets/js/site.js?v=1" defer></script>
 </body>
 </html>
 """
 
 
 def breadcrumbs(trail):
-    """trail: list of (label, href|None); last item is the current page."""
     parts = []
     for label, href in trail:
         if href:
             parts.append(f'<a href="{href}">{label}</a>')
         else:
             parts.append(f'<span aria-current="page">{label}</span>')
-    return '<nav class="breadcrumbs" aria-label="Breadcrumb">' + " / ".join(parts) + "</nav>"
+    return f'<nav class="breadcrumbs" aria-label="Breadcrumb">{"<span class=sep>/</span>".join(parts)}</nav>'
 
 
-def sub_hero(page):
-    """Compact hero for interior pages."""
-    img = page.get("hero_image", "/assets/img/LOCAL-HUTTO-ROOFING.webp")
-    alt = page.get("hero_alt", "Residential roof in Hutto, Texas")
-    actions = f"""<div class="hero-actions">
-<a class="btn btn-gold" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']} <span>&#8599;</span></a>
-<a class="btn btn-outline" href="#contact">{page.get('hero_cta', 'Request a Roof Estimate')}</a>
-</div>"""
-    visual = f"""<div class="hero-visual">
-<div class="hero-image"><img src="{img}" alt="{esc(alt)}" width="1408" height="768" loading="eager" decoding="async"></div>
-</div>"""
-    return f"""<section class="hero hero-sub" aria-labelledby="page-title"><div class="container hero-grid">
-<div class="hero-copy">
-{breadcrumbs(page['trail'])}
-<div class="eyebrow">{page['eyebrow']}</div>
-<h1 id="page-title" style="color:#fff">{page['h1']}</h1>
-<p>{page['hero_intro']}</p>
-{actions}
-</div>
-{visual}
+def sub_hero(page, trail, eyebrow=None, lead=None, extra=""):
+    return f"""<section class="sub-hero"><div class="container">
+{breadcrumbs(trail)}
+{f'<div class="eyebrow" data-reveal>{eyebrow}</div>' if eyebrow else ''}
+<h1 class="display" data-reveal data-split>{page['h1']}</h1>
+{f'<p class="lead" data-reveal>{lead}</p>' if lead else ''}
+{extra}
+</div><div class="sub-hero-art" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div></section>
+"""
+
+
+def section_head(eyebrow, heading, lead=None, center=True):
+    return (f'<div class="section-head{" center" if center else ""}">'
+            f'<div class="eyebrow" data-reveal>{eyebrow}</div>'
+            f'<h2 data-reveal data-split>{heading}</h2>'
+            f'{f"<p class=lead data-reveal>{lead}</p>" if lead else ""}</div>')
+
+
+def faq_section(faqs, heading="Questions, answered", intro=None, eyebrow="FAQ"):
+    items = "".join(
+        f'<details class="faq-item" data-reveal style="--i:{i}"><summary><span>{q}</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-body"><p>{a}</p></div></details>'
+        for i, (q, a) in enumerate(faqs)
+    )
+    return f"""<section class="faq"><div class="container narrow">
+{section_head(eyebrow, heading, intro)}
+<div class="faq-list">{items}</div>
 </div></section>
 """
 
 
-def sidebar(page):
-    """Standard interior-page sidebar: CTA card + contextual links."""
-    blocks = [f"""<div class="side-card">
-<h3>Talk to a {BIZ['city']} roofer</h3>
-<p>Describe what you are seeing on the roof and we will help you work out the useful next step.</p>
-<a class="btn btn-gold" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a>
-<p style="margin:14px 0 0;font-size:.82rem">Or email <a href="mailto:{BIZ['email']}" style="color:#c29a49">{BIZ['email']}</a></p>
-</div>"""]
-    for card in page.get("side_lists", []):
-        items = "".join(f'<a href="{href}">{label}</a>' for label, href in card["items"])
-        blocks.append(
-            f'<div class="side-card light"><h3>{card["title"]}</h3>'
-            f'<div class="side-list">{items}</div></div>'
-        )
-    return '<aside class="sidebar">' + "".join(blocks) + "</aside>"
+def cta_band(heading=None, text=None):
+    heading = heading or "Ready to create something beautiful?"
+    text = text or f"Let’s turn your idea into a hand-painted banner you’ll love - and keep. {KW} are made to order by {BIZ['name']}."
+    return f"""<section class="cta-band"><div class="container cta-inner">
+<div data-reveal>
+<h2 class="display">{heading}</h2>
+<p>{text}</p>
+</div>
+<div class="cta-actions" data-reveal>
+<a class="btn btn-light" href="/contact-us/">Order Your Custom Banner</a>
+<a class="btn btn-ghost-light" href="tel:{TEL}">Get a Quote: {P}</a>
+</div>
+<div class="cta-art" aria-hidden="true"><span></span><span></span><span></span></div>
+</section>
+"""
 
 
-def prose_page(page):
-    """Full interior page: hero + prose/sidebar + optional extra sections + CTA."""
-    return (
-        head(page)
-        + header(page.get("active"))
-        + sub_hero(page)
-        + '<section class="prose"><div class="container prose-grid">'
-        + '<div class="prose-body">' + page["body"] + "</div>"
-        + sidebar(page)
-        + "</div></section>"
-        + page.get("extra", "")
-        + contact_section(page.get("cta_heading"), page.get("cta_intro"))
-        + footer()
-    )
+def occasion_options(selected=None):
+    opts = ['<option value="">Choose an occasion</option>']
+    for o in OCCASIONS:
+        s = " selected" if o["slug"] == selected else ""
+        opts.append(f'<option{s}>{o["label"].replace(" Banners", "").replace(" & Scripture", "")}</option>')
+    opts.append("<option>Engagement / Anniversary</option><option>Something else</option>")
+    return "".join(opts)
+
+
+def size_options(selected=None):
+    return '<option value="">Not sure yet</option>' + "".join(
+        f'<option{" selected" if s == selected else ""}>{esc(s)}</option>' for s in SIZES)
+
+
+def contact_form(source, heading=None, intro=None, compact=False, occasion=None, product=None):
+    heading = heading or "Tell us about your moment"
+    intro = intro or ("Share the occasion, the date, the wording and any inspiration you have. "
+                      f"You’ll hear back with a sketch direction and a quote.")
+    product_field = (f'<input type="hidden" name="product" value="{esc(product)}">' if product else "")
+    return f"""<section class="contact" id="contact"><div class="container contact-grid">
+<div class="contact-copy" data-reveal>
+<div class="eyebrow">Get a Banner Quote</div>
+<h2 class="display">{heading}</h2>
+<p>{intro}</p>
+<div class="contact-meta">
+<a href="tel:{TEL}"><span class="ico" aria-hidden="true">☎</span> Call: {P}</a>
+<a href="sms:{TEL}"><span class="ico" aria-hidden="true">✉</span> Text: {P}</a>
+<a href="mailto:{BIZ['email']}"><span class="ico" aria-hidden="true">@</span> {BIZ['email']}</a>
+<span><span class="ico" aria-hidden="true">⌂</span> {BIZ['city']}, {BIZ['state_long']} &middot; serving {', '.join(NEARBY[:4])} and {BIZ['region']}</span>
+</div>
+<ul class="trust-list">
+<li>Every banner sketched for approval before painting</li>
+<li>Starting at $90-$100, quote confirmed up front</li>
+<li>Local pickup or delivery around Belton by arrangement</li>
+</ul>
+</div>
+<div class="contact-card" data-reveal>
+<form class="quote-form" method="post" action="/contact.php" novalidate>
+<input type="hidden" name="source" value="{esc(source)}">
+{product_field}
+<div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-grid">
+<div class="field"><label for="{source}-name">Name</label><input id="{source}-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="{source}-phone">Phone Number</label><input id="{source}-phone" name="phone" type="tel" autocomplete="tel"></div>
+<div class="field full"><label for="{source}-email">Email</label><input id="{source}-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="{source}-occasion">Occasion</label><select id="{source}-occasion" name="occasion">{occasion_options(occasion)}</select></div>
+<div class="field"><label for="{source}-size">Size</label><select id="{source}-size" name="size">{size_options()}</select></div>
+<div class="field"><label for="{source}-date">Event Date</label><input id="{source}-date" name="event_date" type="date"></div>
+<div class="field"><label for="{source}-wording">Wording / Name on the banner</label><input id="{source}-wording" name="wording" type="text" placeholder="Happy Birthday Everly"></div>
+<div class="field full"><label for="{source}-message">Message / Personalization Details</label><textarea id="{source}-message" name="message" rows="{3 if compact else 5}" placeholder="Colors, theme, hobbies, a verse, where it will hang, anything that helps..."></textarea></div>
+</div>
+<button class="btn btn-primary submit" type="submit"><span>Send My Request</span><span class="btn-arrow" aria-hidden="true">→</span></button>
+<p class="form-status" role="status" aria-live="polite"></p>
+<p class="form-note">By sending this form you agree to our <a href="/privacy-policy/">privacy policy</a>. Prefer to talk? Call or text {P}.</p>
+</form>
+</div>
+</div></section>
+"""
+
+
+def creation_card(c, i=0, link=True, show_price=True):
+    price = f'<span class="card-price">Starts at ${c["price"]}.00</span>' if show_price else ""
+    inner = f"""<div class="card-media">{img(c['image'], c['alt'], sizes="(max-width: 700px) 100vw, 33vw")}<span class="card-tag">{CATEGORY_LABEL[c['category']]}</span></div>
+<div class="card-body"><h3>{c['title']}</h3>{price}<span class="card-link">View banner →</span></div>"""
+    if link:
+        return f'<a class="creation-card" href="/creation/{c["slug"]}/" data-reveal data-tilt style="--i:{i % 6}" data-cat="{c["category"]}">{inner}</a>'
+    return f'<div class="creation-card" data-reveal style="--i:{i % 6}" data-cat="{c["category"]}">{inner}</div>'
+
+
+def post_card(p, i=0):
+    return f"""<a class="post-card" href="/{p['slug']}/" data-reveal style="--i:{i}">
+<div class="post-media">{img(p['image'], p['image_alt'], sizes="(max-width: 700px) 100vw, 33vw")}</div>
+<div class="post-body">
+<span class="post-meta">{pretty_date(p['published'])} &middot; {p['read_time']}</span>
+<h3>{p['title']}</h3>
+<p>{p['excerpt'][:160].rsplit(' ', 1)[0]}…</p>
+<span class="card-link">Read more →</span>
+</div></a>"""
 
 
 # --------------------------------------------------------------------------
@@ -297,1157 +353,1046 @@ def prose_page(page):
 # --------------------------------------------------------------------------
 
 def org_schema():
-    area = ",".join(
-        '{"@type":"City","name":"%s","address":{"@type":"PostalAddress","addressRegion":"TX","addressCountry":"US"}}' % c
-        for c in [BIZ["city"]] + NEARBY
-    )
-    return (
-        '{"@type":["RoofingContractor","LocalBusiness","Organization"],'
-        f'"@id":"{BIZ["origin"]}/#organization",'
-        f'"name":"{BIZ["name"]}","legalName":"{BIZ["name"]}",'
-        f'"url":"{BIZ["origin"]}","email":"{BIZ["email"]}","telephone":"+1-512-297-7580",'
-        '"priceRange":"$$$",'
-        f'"description":"{BIZ["name"]} is a roofing contractor serving {BIZ["city"]}, TX {BIZ["zip"]} and the '
-        'surrounding Williamson County communities with roof repair, roof replacement, roof installation, hail and '
-        'storm damage roof repair, shingle and metal roofing, roof inspections, commercial roofing and emergency '
-        'roof repair.",'
-        '"address":{"@type":"PostalAddress","addressLocality":"' + BIZ["city"] + '",'
-        '"addressRegion":"TX","postalCode":"' + BIZ["zip"] + '","addressCountry":"US"},'
-        '"geo":{"@type":"GeoCoordinates","latitude":"' + BIZ["latitude"] + '","longitude":"' + BIZ["longitude"] + '"},'
-        f'"areaServed":[{area},'
-        '{"@type":"AdministrativeArea","name":"Williamson County, Texas"}],'
-        '"openingHoursSpecification":[{"@type":"OpeningHoursSpecification",'
-        '"dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],'
-        '"opens":"09:00","closes":"17:00"}],'
-        f'"logo":{{"@type":"ImageObject","@id":"{BIZ["origin"]}/#logo",'
-        f'"url":"{url("/assets/img/Hutto-Roofers-Site-Icon.webp")}","width":"1500","height":"1500",'
-        f'"caption":"{BIZ["name"]}"}},'
-        f'"image":{{"@id":"{BIZ["origin"]}/#logo"}}}}'
-    )
+    return jsonld({
+        "@type": ["LocalBusiness", "Store"],
+        "@id": url("/#business"),
+        "name": BIZ["name"],
+        "alternateName": [KW, "CDC Belton Banners"],
+        "description": "Custom hand-painted banners for birthdays, weddings, baby showers, church services, graduations and seasonal celebrations, painted to order in Belton, Texas.",
+        "url": url("/"),
+        "telephone": P,
+        "email": BIZ["email"],
+        "logo": url(BIZ["logo"]),
+        "image": url(BIZ["og_image"]),
+        "priceRange": "$90 - $300",
+        "founder": {"@type": "Person", "name": BIZ["founder"]},
+        "address": {"@type": "PostalAddress", "addressLocality": BIZ["city"], "addressRegion": BIZ["state"], "addressCountry": "US"},
+        "geo": {"@type": "GeoCoordinates", "latitude": BIZ["latitude"], "longitude": BIZ["longitude"]},
+        "areaServed": [{"@type": "City", "name": c} for c in [BIZ["city"]] + NEARBY],
+        "knowsAbout": ["hand painted banners", "custom birthday banners", "wedding banners", "church banners", "scripture banners", "baby shower banners"],
+        "sameAs": [],
+    })
 
 
 def website_schema():
-    return (
-        '{"@type":"WebSite","@id":"' + BIZ["origin"] + '/#website","url":"' + BIZ["origin"] + '",'
-        '"name":"' + BIZ["name"] + '","inLanguage":"en-US",'
-        '"publisher":{"@id":"' + BIZ["origin"] + '/#organization"}}'
-    )
+    return jsonld({
+        "@type": "WebSite", "@id": url("/#website"), "url": url("/"),
+        "name": f"{BIZ['name']} | {KW}", "alternateName": KW,
+        "publisher": {"@id": url("/#business")}, "inLanguage": "en-US",
+    })
 
 
 def webpage_schema(page, wtype="WebPage"):
-    return (
-        '{"@type":"%s","@id":"%s#webpage","url":"%s","name":"%s",'
-        '"description":"%s","isPartOf":{"@id":"%s/#website"},'
-        '"about":{"@id":"%s/#organization"},"inLanguage":"en-US"}'
-        % (
-            wtype,
-            url(page["path"]),
-            url(page["path"]),
-            esc(page["title"]),
-            esc(page["description"]),
-            BIZ["origin"],
-            BIZ["origin"],
-        )
-    )
+    d = {"@type": wtype, "@id": url(page["path"]) + "#webpage", "url": url(page["path"]),
+         "name": page["title"], "description": page["description"],
+         "isPartOf": {"@id": url("/#website")}, "about": {"@id": url("/#business")},
+         "inLanguage": "en-US", "dateModified": TODAY}
+    if page.get("published"):
+        d["datePublished"] = page["published"]
+    return jsonld(d)
 
 
-def breadcrumb_schema(trail, path):
-    items = []
-    for i, (label, href) in enumerate(trail, start=1):
-        target = url(href) if href else url(path)
-        items.append(
-            '{"@type":"ListItem","position":%d,"name":"%s","item":"%s"}' % (i, esc(label), target)
-        )
-    return '{"@type":"BreadcrumbList","itemListElement":[' + ",".join(items) + "]}"
-
-
-def service_schema(page):
-    return (
-        '{"@type":"Service","@id":"%s#service","name":"%s",'
-        '"serviceType":"%s","description":"%s",'
-        '"provider":{"@id":"%s/#organization"},'
-        '"areaServed":[%s],'
-        '"availableChannel":{"@type":"ServiceChannel","servicePhone":{"@type":"ContactPoint","telephone":"+1-512-297-7580"},"serviceUrl":"%s"}}'
-        % (
-            url(page["path"]),
-            esc(page["service_name"]),
-            esc(page["service_type"]),
-            esc(page["description"]),
-            BIZ["origin"],
-            ",".join('{"@type":"City","name":"%s"}' % c for c in [BIZ["city"]] + NEARBY),
-            url(page["path"]),
-        )
-    )
+def breadcrumb_schema(trail):
+    return jsonld({"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": re.sub("<[^>]+>", "", label),
+         **({"item": url(href)} if href else {})}
+        for i, (label, href) in enumerate(trail)]})
 
 
 def faq_schema(faqs):
-    items = ",".join(
-        '{"@type":"Question","name":"%s","acceptedAnswer":{"@type":"Answer","text":"%s"}}'
-        % (esc(q), esc(re.sub(r"<[^>]+>", "", a)))
-        for q, a in faqs
-    )
-    return '{"@type":"FAQPage","mainEntity":[' + items + "]}"
+    return jsonld({"@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": re.sub("<[^>]+>", "", q),
+         "acceptedAnswer": {"@type": "Answer", "text": re.sub("<[^>]+>", "", a)}} for q, a in faqs]})
 
 
-def article_schema(page):
-    return (
-        '{"@type":"BlogPosting","@id":"%s#article","headline":"%s","description":"%s",'
-        '"datePublished":"%s","dateModified":"%s",'
-        '"author":{"@id":"%s/#organization"},"publisher":{"@id":"%s/#organization"},'
-        '"mainEntityOfPage":{"@id":"%s#webpage"},"inLanguage":"en-US",'
-        '"image":"%s"}'
-        % (
-            url(page["path"]),
-            esc(page["h1_plain"]),
-            esc(page["description"]),
-            page["published"],
-            page.get("modified", page["published"]),
-            BIZ["origin"],
-            BIZ["origin"],
-            url(page["path"]),
-            url(page.get("hero_image", "/assets/img/LOCAL-HUTTO-ROOFING.webp")),
-        )
-    )
+def service_schema(o):
+    return jsonld({
+        "@type": "Service", "@id": url(f"/custom-banners/{o['slug']}/") + "#service",
+        "name": f"Hand-painted {o['label'].lower()}", "serviceType": o["label"],
+        "provider": {"@id": url("/#business")},
+        "areaServed": [{"@type": "City", "name": c} for c in [BIZ["city"]] + NEARBY],
+        "url": url(f"/custom-banners/{o['slug']}/"),
+        "offers": {"@type": "Offer", "priceCurrency": "USD", "price": "90", "priceSpecification": {"@type": "PriceSpecification", "minPrice": "90", "priceCurrency": "USD"}},
+    })
 
 
-def faq_section(faqs, heading, intro):
-    details = "".join(
-        f"<details{' open' if i == 0 else ''}><summary>{q}</summary>{a}</details>"
-        for i, (q, a) in enumerate(faqs)
-    )
-    return f"""<section class="faq"><div class="container faq-grid">
-<div class="faq-intro"><div class="eyebrow">Frequently Asked Questions</div>
-<h2>{heading}</h2><p>{intro}</p></div>
-<div>{details}</div>
-</div></section>
-"""
+def product_schema(c):
+    return jsonld({
+        "@type": "Product", "@id": url(f"/creation/{c['slug']}/") + "#product",
+        "name": c["title"], "description": c["blurb"],
+        "image": url(f"/assets/img/gallery/{c['image']}.webp"),
+        "brand": {"@type": "Brand", "name": BIZ["name"]},
+        "category": CATEGORY_LABEL[c["category"]] + " banners",
+        "material": "Acrylic paint on kraft paper",
+        "offers": {"@type": "Offer", "url": url(f"/creation/{c['slug']}/"), "priceCurrency": "USD",
+                   "price": str(c["price"]), "availability": "https://schema.org/InStock",
+                   "itemCondition": "https://schema.org/NewCondition",
+                   "seller": {"@id": url("/#business")}},
+    })
+
+
+def article_schema(p):
+    return jsonld({
+        "@type": "BlogPosting", "@id": url(f"/{p['slug']}/") + "#article",
+        "headline": p["title"], "description": p["description"],
+        "image": url(f"/assets/img/gallery/{p['image']}.webp"),
+        "datePublished": p["published"], "dateModified": p["modified"],
+        "author": {"@type": "Person", "name": BIZ["founder"], "url": url("/about-christina-dittman-creations/")},
+        "publisher": {"@id": url("/#business")},
+        "mainEntityOfPage": url(f"/{p['slug']}/"),
+        "keywords": p["keyword"], "inLanguage": "en-US",
+    })
 
 
 # --------------------------------------------------------------------------
-# Writer
+# Output
 # --------------------------------------------------------------------------
 
 WRITTEN = []
 
 
 def write(path, html):
-    """path is a site path like /services/roof-repair-hutto-tx/ or /robots.txt"""
     if path.endswith("/"):
-        target = os.path.join(OUT, path.strip("/"), "index.html")
-    else:
-        target = os.path.join(OUT, path.lstrip("/"))
-    os.makedirs(os.path.dirname(target), exist_ok=True)
-    with open(target, "w", encoding="utf-8") as fh:
-        fh.write(html)
+        path = path + "index.html"
+    full = os.path.join(OUT, path.lstrip("/"))
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    with open(full, "w", encoding="utf-8") as f:
+        f.write(html)
     WRITTEN.append(path)
 
 
+PAGES = []  # (path, lastmod, priority) for sitemap.xml
+
+
+def register(path, lastmod=None, priority="0.7"):
+    PAGES.append((path, lastmod or TODAY, priority))
 
 
 # --------------------------------------------------------------------------
-# Homepage
-#
-# Keyword: "roofing hutto tx". The hero paragraph and the "Local Roofing
-# Focus" section below are written fresh for Hutto rather than carried over
-# from the sister sites, so this page is not a near-duplicate of templeroofs.
+# Interactive banner designer (used on the homepage and /design-your-banner/)
+# --------------------------------------------------------------------------
+
+def designer(full=False):
+    presets = [
+        ("birthday", "🎂 Birthday", "Happy Birthday", "Gabbie", "script", "kraft", "#F5F0E6", "sunflower", '48" x 30"'),
+        ("wedding", "💍 Wedding", "Welcome to our", "Wedding", "serif", "cream", "#6B4A2B", "leaf", '60" x 30"'),
+        ("baby", "🌙 Baby", "Over the moon for", "Baby Boy Orion", "script", "kraft", "#2E5AAC", "star", '48" x 30"'),
+        ("scripture", "✝️ Scripture", "Love the Lord your God", "Mark 12:30", "script", "kraft", "#B4232C", "heart", '36" x 30"'),
+        ("graduation", "🎓 Graduation", "Congrats Grad", "Class of 2026", "bold", "kraft", "#1A8084", "star", '48" x 30"'),
+        ("fall", "🍂 Fall", "Happy Fall", "Y’all!", "script", "grey", "#A9C7E8", "pumpkin", '36" x 30"'),
+    ]
+    preset_btns = "".join(
+        f'<button type="button" class="chip" data-preset data-p-line1="{esc(l1)}" data-p-line2="{esc(l2)}" data-p-style="{st}" data-p-paper="{pa}" data-p-ink="{ink}" data-p-motif="{mo}" data-p-size="{esc(sz)}">{label}</button>'
+        for key, label, l1, l2, st, pa, ink, mo, sz in presets)
+    inks = ["#F5F0E6", "#2F2F2F", "#B4232C", "#C0552B", "#F2C94C", "#5F8F3E", "#1A8084", "#2E5AAC", "#8A64A7", "#F4B6C2"]
+    ink_btns = "".join(f'<button type="button" class="swatch" data-ink="{c}" style="--c:{c}" aria-label="Ink {c}"></button>' for c in inks)
+    motifs = [("none", "None"), ("star", "Stars"), ("heart", "Hearts"), ("flower", "Flowers"), ("sunflower", "Sunflowers"),
+              ("balloon", "Balloons"), ("pumpkin", "Pumpkins"), ("leaf", "Greenery"), ("cross", "Cross"), ("truck", "Trucks")]
+    motif_btns = "".join(f'<button type="button" class="chip" data-motif="{k}">{v}</button>' for k, v in motifs)
+    sizes = "".join(f'<option{" selected" if s == SIZES[2] else ""}>{esc(s)}</option>' for s in SIZES)
+    return f"""<section class="designer" id="design"><div class="container">
+{section_head("Interactive", "Design your banner, live", f"Pick an occasion, type the wording, choose paper, lettering and a motif. The preview updates as you go - then send it straight to {BIZ['founder']} as a quote request.")}
+<div class="designer-grid" data-designer>
+<div class="designer-controls" data-reveal>
+<div class="ctl"><span class="ctl-label">Start from an occasion</span><div class="chips">{preset_btns}</div></div>
+<div class="ctl two">
+<label>Line one<input type="text" data-in-line1 maxlength="32" value="Happy Birthday"></label>
+<label>Line two (name)<input type="text" data-in-line2 maxlength="24" value="Gabbie"></label>
+</div>
+<div class="ctl"><span class="ctl-label">Lettering</span><div class="chips" data-styles>
+<button type="button" class="chip is-active" data-style="script">Script</button>
+<button type="button" class="chip" data-style="bold">Bold block</button>
+<button type="button" class="chip" data-style="serif">Elegant serif</button>
+</div></div>
+<div class="ctl"><span class="ctl-label">Paper</span><div class="chips" data-papers>
+<button type="button" class="chip is-active" data-paper="kraft">Kraft</button>
+<button type="button" class="chip" data-paper="cream">Cream</button>
+<button type="button" class="chip" data-paper="grey">Grey</button>
+<button type="button" class="chip" data-paper="black">Black</button>
+</div></div>
+<div class="ctl"><span class="ctl-label">Ink color</span><div class="swatches" data-inks>{ink_btns}</div></div>
+<div class="ctl"><span class="ctl-label">Motif</span><div class="chips" data-motifs>{motif_btns}</div></div>
+<div class="ctl two">
+<label>Size<select data-in-size>{sizes}</select></label>
+<label class="ctl-inline"><span>Wobble</span><input type="range" data-in-wobble min="0" max="10" value="4" aria-label="Hand-painted wobble"></label>
+</div>
+<div class="designer-actions">
+<a class="btn btn-primary" href="{'#contact' if not full else '/contact-us/'}" data-send-design><span>Send this design for a quote</span><span class="btn-arrow" aria-hidden="true">→</span></a>
+<button type="button" class="btn btn-ghost" data-shuffle>Surprise me</button>
+</div>
+</div>
+<div class="designer-stage" data-reveal>
+<div class="banner-preview" data-preview data-paper="kraft" data-style="script" data-motif="sunflower" style="--ink:#F5F0E6;--ratio:48/30;--wobble:4">
+<span class="tape t1" aria-hidden="true"></span><span class="tape t2" aria-hidden="true"></span>
+<span class="motif m1" aria-hidden="true"></span><span class="motif m2" aria-hidden="true"></span><span class="motif m3" aria-hidden="true"></span><span class="motif m4" aria-hidden="true"></span>
+<div class="bp-text"><span class="bp-line1">Happy Birthday</span><span class="bp-line2">Gabbie</span></div>
+</div>
+<p class="designer-summary" data-summary>48" x 30" &middot; kraft paper &middot; script lettering &middot; sunflowers</p>
+<p class="designer-note">This is a rough mock-up to get the conversation started. The real banner is sketched by hand and approved by you before painting.</p>
+</div>
+</div>
+</div></section>
+"""
+
+
+# --------------------------------------------------------------------------
+# Pages
 # --------------------------------------------------------------------------
 
 def build_home():
     page = {
         "path": "/",
-        "title": "Roofing Hutto TX | Hutto Roofing Company | Hutto Roofers",
-        "description": (
-            "Roofing in Hutto, TX. Hutto Roofers handles roof repair, replacement, hail and storm "
-            "damage, inspections and metal roofing in 78634. Call (512) 297-7580."
-        ),
+        "title": f"{KW} | {BIZ['name']} | Hand-Painted in Belton, TX",
+        "description": (f"{KW} by {BIZ['name']}: custom hand-painted banners for birthdays, weddings, baby showers, "
+                        f"church and graduations, made to order in Belton, TX. From $90."),
+        "body_class": "home",
     }
     faqs = [
-        ("How do I know if my roof needs repair or replacement?",
-         "It comes down to the roof's age, how widespread the problem is and the condition of the "
-         "shingles around it. An isolated leak on a ten-year-old roof is a repair. Repeated leaks, "
-         "widespread granule loss or shingles that crack when lifted point to replacement."),
-        ("Should I have my roof inspected after hail or strong wind in Hutto?",
-         "Yes, particularly since hail swaths in Central Texas are narrow &mdash; one Hutto "
-         "subdivision can be hit while the next is missed entirely. Check your gutters and AC "
-         "condenser for dents; if those are marked, the roof is worth looking at."),
-        ("What are common signs a Hutto roof needs attention?",
-         "Lifted, curled or missing shingles, ceiling stains, granules collecting where downspouts "
-         "discharge, deteriorated flashing, damaged pipe boots and any sagging visible in the roof "
-         "plane from across the street."),
-        ("Can a roof leak be repaired without replacing the whole roof?",
-         "Often, yes. If the source is localized and the surrounding shingles are still flexible "
-         "and well sealed, a targeted repair is the right answer. The deciding factor is the "
-         "condition of the roof around the leak."),
-        ("What roofing services does Hutto Roofers offer?",
-         "Roof repair, roof leak repair, roof replacement, new roof installation, hail damage "
-         "repair, storm damage repair, shingle roofing, metal roofing, roof inspections, "
-         "commercial roofing and emergency roof repair."),
-        ("What areas do you serve besides Hutto?",
-         "We work throughout Williamson County and the surrounding communities: Round Rock, "
-         "Pflugerville, Taylor, Georgetown and Manor."),
-        ("How do I contact Hutto Roofers?",
-         "Call or text " + BIZ["phone_display"] + ", email " + BIZ["email"] + ", or use the "
-         "estimate form on this page."),
+        (f"What are {KW}?", f"{KW} is the name people use for the custom hand-painted banners made by {BIZ['name']} in Belton, Texas. Every banner is lettered and illustrated by hand on kraft paper - no printing, no templates."),
+        ("How much does a custom hand-painted banner cost?", "Banners start at $90 to $100 depending on size and detail. You get a confirmed quote before any painting starts. See the pricing and sizes page for what affects the price."),
+        ("How long does a banner take?", "Most banners take a few days to a couple of weeks, depending on size, complexity and the current queue. Two to three weeks ahead is a comfortable lead time; rush requests are often possible."),
+        ("What sizes are available?", 'Standard sizes are 30" x 30", 36" x 30", 48" x 30", 60" x 30" and 36" x 60". Larger stage banners are possible on request.'),
+        (f"Do you deliver {KW.lower()} outside Belton?", f"Yes. {BIZ['name']} serves Belton, Temple, Killeen, Harker Heights, Salado and the rest of Bell County, with pickup or delivery arranged when the banner is ready."),
+        ("Can I keep the banner after the event?", "That is the whole point. Roll it (never fold it), store it dry, or frame it as wall art."),
+        (f"How do I order {KW.lower()}?", f"Use the contact form, call or text {P}, or email {BIZ['email']} with the occasion, the date, the wording and the size you have in mind."),
     ]
-    page["schema"] = [
-        org_schema(),
-        website_schema(),
-        webpage_schema(page),
-        faq_schema(faqs),
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page), faq_schema(faqs)]
+
+    why = [
+        ("Truly custom designs", "Every banner is created from scratch based on your vision - never reused or templated.", "✎"),
+        ("Hand-painted quality", "Each piece is painted by hand, giving it a unique, high-end feel you can’t replicate digitally.", "🖌"),
+        ("Made with care", "Your event matters. Every detail is handled with precision, patience and intention.", "♥"),
+        ("Designed to impress", "From photos to first impressions, your banner will stand out and elevate the whole event.", "✦"),
+        ("Simple, stress-free process", "Share your idea, approve your design, and we take care of the rest.", "✓"),
+        ("Local to Belton, TX", f"{KW} are painted right here in Bell County, with pickup or delivery around Belton, Temple and Killeen.", "⌂"),
     ]
+    why_html = "".join(
+        f'<article class="why-card" data-reveal data-tilt style="--i:{i}"><span class="why-icon" aria-hidden="true">{ic}</span><h3>{h}</h3><p>{t}</p></article>'
+        for i, (h, t, ic) in enumerate(why))
 
-    service_cards = "".join(
-        f"""<article class="service-card">
-<div class="service-num">{i:02d} / {s['nav_label'].upper()}</div>
-<h3>{s['nav_label']}</h3>
-<p>{s['card']}</p>
-<a class="service-link" href="{s['path']}">{s['card_cta']} &rarr;</a>
-</article>"""
-        for i, s in enumerate(HOME_SERVICE_CARDS, start=1)
-    )
+    occ_html = "".join(
+        f'<a class="occ-card" href="/custom-banners/{o["slug"]}/" data-reveal data-tilt style="--i:{i}"><span class="occ-icon" aria-hidden="true">{o["icon"]}</span><h3>{o["label"]}</h3><p>{o["intro"][:110].rsplit(" ", 1)[0]}…</p><span class="card-link">Explore →</span></a>'
+        for i, o in enumerate(OCCASIONS))
 
-    area_cards = "".join(
-        f"""<a class="link-card" href="{a['path']}">
-<h3>Roofing in {a['city']}, TX</h3>
-<p>{a['distance']} from Hutto &mdash; {a['drive']}.</p>
-<span class="service-link">View {a['city']} roofing &rarr;</span>
-</a>"""
-        for a in AREAS
-    )
+    strip = "".join(
+        f'<a class="strip-item" href="/creation/{c["slug"]}/" data-reveal style="--i:{i % 6}">{img(c["image"], c["alt"], sizes="(max-width: 700px) 80vw, 420px")}<span class="strip-caption"><strong>{c["title"]}</strong><span>Starts at ${c["price"]}.00</span></span></a>'
+        for i, c in enumerate(CREATIONS[:12]))
 
-    post_cards = "".join(
-        f"""<a class="link-card post-card" href="{p['path']}">
-<span class="post-date">{p['published']}</span>
-<h3>{p['h1_plain']}</h3>
-<p>{p['excerpt']}</p>
-<span class="service-link">Read the guide &rarr;</span>
-</a>"""
-        for p in POSTS[:3]
-    )
+    steps = [
+        ("Share your idea", "Tell us the occasion, the date, the wording and anything you love. A vague idea is enough."),
+        ("Sketch & approve", "Colors, lettering and layout take shape in a sketch you approve before any paint goes down."),
+        ("Painted by hand", "Every letter and illustration is painted by hand on kraft paper in the Belton studio."),
+        ("Pickup or delivery", "Your banner is finished, checked and ready for the party - rolled, never folded."),
+    ]
+    steps_html = "".join(
+        f'<li class="step" data-reveal style="--i:{i}"><span class="step-num">{i + 1:02d}</span><h3>{h}</h3><p>{t}</p></li>'
+        for i, (h, t) in enumerate(steps))
 
-    html = head(page) + header() + f"""
-<section class="hero" id="top" aria-labelledby="page-title"><div class="container hero-grid">
-<div class="hero-copy">
-<div class="eyebrow">Roofing Hutto TX</div>
-<h1 id="page-title" style="color:#fff">Hutto roofing for a <span class="gold-text">stronger roof</span> over your home or business.</h1>
-<p>A shingle in the yard, a stain spreading across the ceiling, a spring storm that leaves you
-unsure what happened up there &mdash; when that is the situation, you want a straight answer from
-someone local. {BIZ['name']} is a Hutto roofing company handling repairs, replacements,
-inspections and storm damage for homes and businesses across {BIZ['city']}, {BIZ['state']}
-{BIZ['zip']} and {BIZ['county']}.</p>
-<div class="hero-actions">
-<a class="btn btn-gold" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']} <span>&#8599;</span></a>
-<a class="btn btn-outline" href="#contact">Request a Roof Estimate</a>
-</div>
-<div class="hero-points">
-<div class="hero-point"><strong>Roof Repair</strong>Leaks, shingles &amp; flashing</div>
-<div class="hero-point"><strong>Roof Replacement</strong>Aging or storm-worn roofs</div>
-<div class="hero-point"><strong>Storm &amp; Hail</strong>Inspections after severe weather</div>
-</div>
-</div>
-<div class="hero-visual" aria-label="Hutto, Texas home with a prominent roofline">
-<div class="hero-image"><img src="/assets/img/LOCAL-HUTTO-ROOFING.webp" alt="Hutto, Texas home with a clean roofline" width="1408" height="768" fetchpriority="high" decoding="async"></div>
-<div class="hero-card">
-<span class="mini">Start with the roof condition</span>
-<strong>Clear answers before bigger decisions.</strong>
-<p>Talk with a {BIZ['city']} roofer about what you are seeing and the practical options for your property.</p>
-</div>
-</div>
-</div></section>
+    posts_html = "".join(post_card(p, i) for i, p in enumerate(sorted(POSTS, key=lambda p: p["published"], reverse=True)[:3]))
 
-<div class="trust-strip"><div class="container trust-grid">
-<div class="trust-item trust-intro">Roofing decisions made simpler.</div>
-<div class="trust-item"><span class="trust-icon">&#9670;</span><div><strong>Hutto Focus</strong><span>78634 and {BIZ['county']}</span></div></div>
-<div class="trust-item"><span class="trust-icon">&#9671;</span><div><strong>Clear Options</strong><span>Repair or replace</span></div></div>
-<div class="trust-item"><span class="trust-icon">&#8599;</span><div><strong>Easy Contact</strong><span>Call, text or request online</span></div></div>
+    body = f"""
+<section class="hero">
+<div class="hero-bg" data-parallax="0.35" aria-hidden="true">{img('hero-bg', '', cls='hero-img', sizes='100vw', loading='eager')}</div>
+<div class="hero-veil" aria-hidden="true"></div>
+<canvas class="paint-canvas" aria-hidden="true"></canvas>
+<div class="container hero-inner">
+<div class="eyebrow light" data-reveal><img src="{BIZ['logo']}" alt="" width="28" height="28" aria-hidden="true"> {BIZ['name']} &middot; {KW}</div>
+<h1 class="display hero-title" data-reveal data-split>Custom Hand-Painted <em class="stroke">{KW}</em> for Life’s Most Meaningful Moments</h1>
+<p class="lead light" data-reveal>Weddings, birthdays, baby showers, church services, graduations and everything in between - lettered and illustrated by hand in Belton, Texas, made with care and designed just for you.</p>
+<div class="hero-actions" data-reveal>
+<a class="btn btn-primary btn-lg" href="/contact-us/"><span>Order Your Custom Banner</span><span class="btn-arrow" aria-hidden="true">→</span></a>
+<a class="btn btn-ghost-light btn-lg" href="tel:{TEL}">Get a Quote: {P}</a>
+</div>
+<ul class="hero-stats" data-reveal>
+<li><strong data-count="100" data-suffix="%">100%</strong><span>hand-painted</span></li>
+<li><strong data-count="90" data-prefix="$">$90</strong><span>starting price</span></li>
+<li><strong data-count="5">5</strong><span>standard sizes</span></li>
+<li><strong>1</strong><span>artist, start to finish</span></li>
+</ul>
+</div>
+<a class="scroll-cue" href="#intro" aria-label="Scroll down"><span></span></a>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track">
+{"".join(f'<span>{w}</span><i>✦</i>' for w in ["Birthday banners", KW, "Wedding welcome signs", "Baby shower banners", "Children’s church banners", "Scripture verse banners", "Graduation banners", "Seasonal banners", KW, "Hand-lettered in Belton, TX"] * 2)}
 </div></div>
 
-<section class="about"><div class="container" style="padding:70px 0 0">
-<div class="section-head">
-<div><div class="eyebrow">Local Roofing Company</div>
-<h2>A Hutto roofing contractor, not a crew passing through.</h2></div>
-<p>People searching for a roofer in Hutto, TX after a storm get a lot of doors knocked on by
-companies that will not be here next season. We work this town year round.</p>
-</div>
-<p style="max-width:760px;color:var(--muted);margin-bottom:0">Homeowners looking for roofers in
-Hutto, Texas generally want three things: someone who will actually diagnose the problem, a
-straight answer on repair versus replacement, and a number they can trust. That is the whole job
-as we see it. Call or text <a href="tel:{BIZ['phone_href']}" style="color:var(--gold);font-weight:700">{BIZ['phone_display']}</a>
-and describe what your roof is doing.</p>
-</div></section>
-
-<section class="services" id="services"><div class="container">
-<div class="section-head">
-<div><div class="eyebrow">Roofing Services</div>
-<h2>Hutto roofing for the problems that cannot wait forever.</h2></div>
-<p>Every roof problem has a different starting point. A single leak may call for targeted repair,
-while aging materials or broad storm damage may need a larger plan. Our
-<a href="/services/" style="color:var(--gold)">Hutto roofing services</a> are organized around what
-your roof actually appears to need.</p>
-</div>
-<div class="service-grid">{service_cards}</div>
-<p style="margin-top:28px"><a class="btn btn-dark" href="/services/">See all roofing services <span>&rarr;</span></a></p>
-</div></section>
-
-<section class="about" id="about"><div class="container split">
-<div class="split-image">
-<div class="image-main"><img src="/assets/img/WHY-HUTTO-ROOFERS.webp" alt="Hutto, Texas home exterior showing roof and architectural details" width="1400" height="781" loading="lazy" decoding="async"></div>
-<div class="image-mini"><img src="/assets/img/A-practical-approach-to-your-roof-not-a-one-size-fits-all-answer.webp" alt="Roofing professional working on a residential roof in Hutto" width="1400" height="927" loading="lazy" decoding="async"></div>
+<section class="intro" id="intro"><div class="container split">
+<div class="split-media" data-reveal>
+<div class="brush-frame" data-brush>{img('custom-hand-painted-birthday-banner-2', CREATION['custom-hand-painted-birthday-banner-2']['alt'], sizes='(max-width: 900px) 100vw, 50vw')}</div>
+<div class="floating-card" data-parallax="-0.08"><img src="{BIZ['logo']}" alt="" width="72" height="72" aria-hidden="true"><div><strong>{BIZ['name']}</strong><span>{KW} &middot; est. in Belton, TX</span></div></div>
 </div>
 <div class="split-copy">
-<div class="eyebrow">Why {BIZ['name']}</div>
-<h2>A practical approach to your roof, not a one-size-fits-all answer.</h2>
-<p>A stain on the ceiling does not always tell you where a leak began. One missing shingle does not
-always mean you need a new roof. Good roofing decisions start with the condition of the system, the
-age of the materials and what is happening around the problem area.</p>
-<p>That is the approach behind {BIZ['name']}. Whether you are dealing with a sudden issue or
-planning ahead, a {BIZ['city']} roofer can help you review the situation and choose a sensible path
-forward.</p>
-<ul class="check-list">
-<li><span class="check">&#10003;</span><span>Residential and commercial Hutto roofing support</span></li>
-<li><span class="check">&#10003;</span><span>Repair and replacement options based on visible roof condition</span></li>
-<li><span class="check">&#10003;</span><span>Wind, hail and storm-related roof evaluations</span></li>
-<li><span class="check">&#10003;</span><span>Roof inspections for maintenance and future planning</span></li>
+<div class="eyebrow" data-reveal>Made with heart, designed for your moment</div>
+<h2 data-reveal data-split>Meet the artist behind {KW}</h2>
+<p data-reveal>{BIZ['name']} was built on a love for art, celebration and meaningful details. Every one of our {KW.lower()} is carefully hand-painted to reflect your unique story - no templates, no shortcuts. Just thoughtful craftsmanship and designs made to stand out at the party and on the wall afterward.</p>
+<p data-reveal>Based in Belton, Texas, {BIZ['founder']} paints birthday banners, wedding welcome signs, baby shower backdrops, children’s church and scripture banners, graduation banners and seasonal pieces for families, churches and businesses across Bell County.</p>
+<div class="btn-row" data-reveal><a class="btn btn-dark" href="/about-christina-dittman-creations/">Learn more about us</a><a class="btn btn-ghost" href="/gallery/">See the gallery</a></div>
+</div>
+</div></section>
+
+<section class="why"><div class="container">
+{section_head("Why choose " + BIZ['name'] + "?", f"Why Belton chooses {KW}", "Printed banners are easy, fast and forgettable. A hand-painted banner is the piece people photograph, talk about and keep.")}
+<div class="why-grid">{why_html}</div>
+</div></section>
+
+<section class="occasions"><div class="container">
+{section_head("Custom banners for every occasion", f"{KW} for every celebration", "Six kinds of banners we paint most often. Don’t see yours? Every banner is custom - just ask.")}
+<div class="occ-grid">{occ_html}</div>
+</div></section>
+
+<section class="gallery-strip"><div class="container">
+{section_head("Gallery", f"{BIZ['name']} - {KW} gallery", "A few of the banners painted in the studio. Scroll sideways, tap to open.", center=False)}
+<div class="strip-wrap"><div class="strip" data-strip>{strip}</div>
+<div class="strip-nav"><button type="button" class="strip-btn" data-strip-prev aria-label="Scroll gallery left">‹</button><button type="button" class="strip-btn" data-strip-next aria-label="Scroll gallery right">›</button></div></div>
+<p class="center" data-reveal><a class="btn btn-dark" href="/gallery/">See more creations</a></p>
+</div></section>
+
+{designer()}
+
+<section class="process"><div class="container">
+{section_head("How it works", "From idea to finished banner in four steps", f"Ordering {KW.lower()} is simple: you bring the moment, we bring the brushes.")}
+<ol class="steps">{steps_html}</ol>
+<p class="center" data-reveal><a class="btn btn-ghost" href="/how-it-works/">Read the full process</a></p>
+</div></section>
+
+<section class="local"><div class="container split reverse">
+<div class="split-copy">
+<div class="eyebrow" data-reveal>Belton, Texas</div>
+<h2 data-reveal data-split>Hand-painted banners from Belton, for Central Texas</h2>
+<p data-reveal>{KW} start in a home studio in Belton and end up at birthday parties in Temple, church classrooms in Killeen, wedding receptions in Salado and porches across Bell County. If you are within a short drive of Belton, pickup or delivery can be arranged when the banner is ready; if you are further away, ask - most things are possible.</p>
+<ul class="check-list" data-reveal>
+<li>Belton, Temple, Killeen, Harker Heights, Salado, Nolanville and Troy</li>
+<li>Churches, schools, families and small businesses</li>
+<li>Made to order - every quote confirmed before painting</li>
 </ul>
-<a class="btn btn-dark" href="#contact">Discuss Your Roof <span>&rarr;</span></a>
+<div class="btn-row" data-reveal><a class="btn btn-dark" href="/belton-banners/">{KW} in Belton, TX</a></div>
+</div>
+<div class="split-media" data-reveal>
+<div class="brush-frame" data-brush>{img('custom-painted-verse-banner-5', CREATION['custom-painted-verse-banner-5']['alt'], sizes='(max-width: 900px) 100vw, 50vw')}</div>
 </div>
 </div></section>
 
-<section class="process" id="process"><div class="container">
-<div class="section-head">
-<div><div class="eyebrow">Our Process</div>
-<h2 style="color:#fff">From roof concern to a clear next step.</h2></div>
-<p>A roofing project feels more manageable when the path is straightforward. Here is a simple way to
-begin working through your roofing needs.</p>
-</div>
-<div class="process-grid">
-<article class="step"><div class="step-num">01</div><h3>Tell Us What You See</h3><p>Share the property type, roof concern, leak symptoms and any recent storm information.</p></article>
-<article class="step"><div class="step-num">02</div><h3>Inspect the Roof</h3><p>A Hutto roofer reviews accessible roof areas, penetrations and the attic to understand the real condition.</p></article>
-<article class="step"><div class="step-num">03</div><h3>Review the Options</h3><p>Discuss repair, replacement or maintenance paths based on what the roof actually needs.</p></article>
-<article class="step"><div class="step-num">04</div><h3>Move Forward</h3><p>Choose a roofing scope that makes sense for the property, roof condition and project goals.</p></article>
-</div>
+{faq_section(faqs, f"{KW} - questions, answered", f"The questions we hear most about ordering custom hand-painted banners from {BIZ['name']}.")}
+
+<section class="posts"><div class="container">
+{section_head("Latest articles", "From the studio blog", "Ideas, wording tips and behind-the-scenes notes on hand-painted banners.")}
+<div class="post-grid">{posts_html}</div>
+<p class="center" data-reveal><a class="btn btn-ghost" href="/blog/">More articles</a></p>
 </div></section>
 
-<section class="materials"><div class="container">
-<div class="section-head">
-<div><div class="eyebrow">Roofing Options</div>
-<h2>Common roof systems for Hutto properties.</h2></div>
-<p>The right roof depends on the structure, slope, existing system, budget and performance
-priorities. These are common starting points to discuss with a {BIZ['city']} roofer.</p>
-</div>
-<div class="material-grid">
-<article class="material-card">
-<img src="/assets/img/Asphalt-Shingle-Roofing.webp" alt="Asphalt shingle roof on a Hutto, Texas home" width="1408" height="768" loading="lazy" decoding="async">
-<div class="material-content"><h3 style="color:#fff">Asphalt Shingle Roofing</h3><p>The default on most Hutto homes. Available in three-tab, architectural and Class 4 impact-resistant grades.</p></div>
-</article>
-<article class="material-card">
-<img src="/assets/img/New-Roof-Installation.webp" alt="New roof installation on a home in Hutto, Texas" width="1408" height="768" loading="lazy" decoding="async">
-<div class="material-content"><h3 style="color:#fff">New Roof Installation</h3><p>Complete roofing systems for replacement projects, additions and new construction.</p></div>
-</article>
-<article class="material-card">
-<img src="/assets/img/Repair-Maintenance.webp" alt="Roof repair and maintenance work in Hutto, Texas" width="1408" height="768" loading="lazy" decoding="async">
-<div class="material-content"><h3 style="color:#fff">Repair &amp; Maintenance</h3><p>Targeted work on specific roof concerns and the serviceable areas of an aging system.</p></div>
-</article>
-</div>
-</div></section>
+{cta_band()}
+{contact_form("home", heading="Ready for your own " + KW.lower() + "?", intro=f"Share the occasion, the date and the wording. {BIZ['founder']} will reply with a sketch direction and a quote - usually within a day.")}
+"""
+    write("/home.html", head(page) + header("/") + body + footer())
+    register("/", priority="1.0")
 
-<section class="local"><div class="container local-grid">
-<div class="local-copy">
-<div class="eyebrow">Local Roofing Focus</div>
-<h2>Roofing in Hutto, Texas, for the roofs that are actually here.</h2>
-<p>Most of Hutto's homes went up within a short span of years. Star Ranch, Emory Farms, Creek Bend,
-Cottonwood Creek and Legends of Hutto were built with similar roofing on similar timelines, and many
-of those roofs are now reaching the fifteen-to-twenty-year mark at the same time. The older homes
-around Old Town Hutto and along Brushy Creek are a different job: smaller roofs, a longer history of
-past repairs, and mature trees close to the house.</p>
-<p>{BIZ['county']} gets hail and high wind most springs, usually March through May, with a second
-round in the fall. Hail tends to fall in narrow bands, so one neighborhood can be hit while the next
-is untouched. After any significant storm, an inspection is the reliable way to know where your roof
-stands.</p>
-<p>Whatever the roof and whatever the season, the job of a Hutto roofer is the same: find the actual
-problem, explain it plainly, and fix what needs fixing at a fair price.</p>
-<div class="signal-list">
-<div class="signal">Missing or lifted shingles</div>
-<div class="signal">Ceiling or attic stains</div>
-<div class="signal">Hail impact concerns</div>
-<div class="signal">Wind-related roof damage</div>
-<div class="signal">Worn flashing or seals</div>
-<div class="signal">Granules in the gutters</div>
+
+def build_occasions_index():
+    page = {
+        "path": "/custom-banners/",
+        "title": f"Custom Hand-Painted Banners for Every Occasion | {KW}",
+        "description": f"Birthday, wedding, baby shower, church, graduation and seasonal banners, each painted by hand to order in Belton, TX by {BIZ['name']}. From $90.",
+        "h1": "Custom banners for every occasion",
+    }
+    trail = [("Home", "/"), ("Custom Banners", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema(trail),
+                      jsonld({"@type": "ItemList", "itemListElement": [
+                          {"@type": "ListItem", "position": i + 1, "name": o["label"], "url": url(f"/custom-banners/{o['slug']}/")}
+                          for i, o in enumerate(OCCASIONS)]})]
+    cards = "".join(
+        f"""<a class="occ-feature" href="/custom-banners/{o['slug']}/" data-reveal style="--i:{i % 3}">
+<div class="occ-feature-media">{img(CREATION[o['gallery'][0]]['image'], CREATION[o['gallery'][0]]['alt'], sizes='(max-width: 700px) 100vw, 33vw')}</div>
+<div class="occ-feature-body"><span class="occ-icon" aria-hidden="true">{o['icon']}</span><h2>{o['label']}</h2><p>{o['intro'][:150].rsplit(' ', 1)[0]}…</p><span class="card-link">See {o['nav_label'].lower()} banners →</span></div></a>"""
+        for i, o in enumerate(OCCASIONS))
+    body = sub_hero(page, trail, "Custom Banners", f"Every banner {BIZ['name']} paints is made to order, but most fall into one of six families. Pick yours to see examples, wording ideas and answers to common questions.") + f"""
+<section class="section"><div class="container"><div class="occ-feature-grid">{cards}</div></div></section>
+{designer(full=False)}
+{cta_band("Have something else in mind?", "Anniversaries, retirements, business openings, school events - if it deserves a banner, it can be painted.")}
+{contact_form("custom-banners")}
+"""
+    write(page["path"], head(page) + header("/custom-banners/") + body + footer())
+    register(page["path"], priority="0.9")
+
+
+def build_occasions():
+    for o in OCCASIONS:
+        path = f"/custom-banners/{o['slug']}/"
+        page = {"path": path, "title": o["title"], "description": o["description"], "h1": o["h1"]}
+        trail = [("Home", "/"), ("Custom Banners", "/custom-banners/"), (o["label"], None)]
+        page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), service_schema(o), faq_schema(o["faqs"])]
+        page["og_image"] = f"/assets/img/gallery/{CREATION[o['gallery'][0]]['image']}.webp"
+        sections = "".join(
+            f'<div class="prose-block" data-reveal><h2>{h}</h2>{"".join(f"<p>{p}</p>" for p in ps)}</div>' for h, ps in o["sections"])
+        ideas = "".join(f'<li data-reveal style="--i:{i}"><span class="idea-mark" aria-hidden="true">✎</span>{esc(t)}</li>' for i, t in enumerate(o["ideas"]))
+        gallery = "".join(creation_card(CREATION[s], i) for i, s in enumerate(o["gallery"]))
+        others = "".join(f'<a class="pill" href="/custom-banners/{x["slug"]}/">{x["icon"]} {x["label"]}</a>' for x in OCCASIONS if x is not o)
+        body = sub_hero(page, trail, o["label"], o["intro"]) + f"""
+<section class="section"><div class="container prose-grid">
+<div class="prose">{sections}
+<div class="prose-block" data-reveal><h2>Wording ideas for {o['label'].lower()}</h2><ul class="idea-list">{ideas}</ul></div>
 </div>
+<aside class="sidebar">
+<div class="side-card" data-reveal>
+<h3>Order a {o['nav_label'].lower()} banner</h3>
+<p>Starts at $90-$100. Sketch approved before painting. Pickup or delivery around Belton.</p>
+<a class="btn btn-primary" href="#contact">Request a quote</a>
+<a class="btn btn-ghost" href="tel:{TEL}">Call {P}</a>
 </div>
-<aside class="local-panel">
-<small>Contact {BIZ['name']}</small>
-<h3 style="color:#fff">Have a roof problem you want to talk through?</h3>
-<p>Start by describing what you are seeing. We can use that conversation to help identify the most
-useful next step.</p>
-<a class="contact-line" href="tel:{BIZ['phone_href']}">{BIZ['phone_display']} &rarr;</a>
-<a class="contact-line" href="mailto:{BIZ['email']}">{BIZ['email']} &rarr;</a>
-<a class="btn btn-gold panel-cta" href="#contact">Request an Estimate</a>
+<div class="side-card" data-reveal>
+<h3>Standard sizes</h3>
+<ul class="size-list">{"".join(f"<li>{esc(s)}</li>" for s in SIZES)}</ul>
+<a class="text-link" href="/pricing-and-sizes/">Pricing &amp; sizes →</a>
+</div>
+<div class="side-card" data-reveal>
+<h3>Other banner types</h3>
+<div class="pills">{others}</div>
+</div>
 </aside>
 </div></section>
-
-<section class="services"><div class="container">
-<div class="section-head">
-<div><div class="eyebrow">Service Areas</div>
-<h2>Roofing across Hutto and the towns around it.</h2></div>
-<p>{FOOTER_SERVING}. Each of those towns has its own building stock and its own storm pattern.</p>
-</div>
-<div class="link-grid">{area_cards}</div>
+<section class="section alt"><div class="container">
+{section_head("From the gallery", f"{o['label']} we’ve painted", None, center=False)}
+<div class="creation-grid">{gallery}</div>
+<p class="center" data-reveal><a class="btn btn-dark" href="/gallery/">See the full gallery</a></p>
 </div></section>
+{faq_section(o['faqs'], f"{o['label']}: common questions")}
+{contact_form(o['slug'], heading=f"Order your {o['nav_label'].lower()} banner", occasion=o['slug'])}
+"""
+        write(path, head(page) + header("/custom-banners/") + body + footer())
+        register(path, priority="0.8")
 
-<section class="materials"><div class="container">
-<div class="section-head">
-<div><div class="eyebrow">Roofing Blog</div>
-<h2>Straight answers for Central Texas homeowners.</h2></div>
-<p>Costs, lifespans, storm damage and material choices &mdash; written for the roofs we actually
-work on.</p>
-</div>
-<div class="link-grid">{post_cards}</div>
-<p style="margin-top:28px"><a class="btn btn-dark" href="/blog/">Read the blog <span>&rarr;</span></a></p>
+
+def build_gallery():
+    page = {
+        "path": "/gallery/",
+        "title": f"Gallery | Hand-Painted Banners | {KW}",
+        "description": f"Browse hand-painted birthday, baby shower, church, scripture and seasonal banners by {BIZ['name']} in Belton, TX. Made to order from $90.",
+        "h1": "Gallery of hand-painted banners",
+    }
+    trail = [("Home", "/"), ("Gallery", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema(trail),
+                      jsonld({"@type": "ItemList", "itemListElement": [
+                          {"@type": "ListItem", "position": i + 1, "name": c["title"], "url": url(f"/creation/{c['slug']}/")}
+                          for i, c in enumerate(CREATIONS)]})]
+    filters = '<button type="button" class="chip is-active" data-filter="all">All</button>' + "".join(
+        f'<button type="button" class="chip" data-filter="{k}">{v}</button>' for k, v in CATEGORIES)
+    cards = "".join(creation_card(c, i) for i, c in enumerate(CREATIONS))
+    body = sub_hero(page, trail, "Hand Painted Banners", f"Every banner here was painted by hand in Belton, Texas. Filter by occasion, tap a banner to see it closer, and use any of them as a starting point for your own.",
+                    extra=f'<div class="filters" data-filters role="group" aria-label="Filter gallery">{filters}</div>') + f"""
+<section class="section"><div class="container">
+<div class="creation-grid" data-gallery>{cards}</div>
+<p class="empty-note" data-empty hidden>No banners in this category yet - ask about one!</p>
 </div></section>
-
-""" + faq_section(
-        faqs,
-        "Questions about Hutto roofing.",
-        "Use these answers as a starting point when deciding whether it is time to contact a "
-        f"{BIZ['city']} roofer about a repair, inspection or replacement.",
-    ) + contact_section(None, "Whether you are dealing with a leak, storm concern, worn shingles or an aging roof, "
-        f"start the conversation here. A Hutto roofer from {BIZ['name']} will help you organize the next step.") + footer()
-
-    # No index.html in the document root: the host falls back to it for
-    # unknown file-style paths and returns 200. index.php (below) serves
-    # this file for "/" and a real 404 for everything else.
-    write("/home.html", html)
+{cta_band("Like what you see?", "Every banner in this gallery started as a quick message. Send yours and get a sketch direction and quote.")}
+{contact_form("gallery")}
+"""
+    write(page["path"], head(page) + header("/gallery/") + body + footer())
+    register(page["path"], priority="0.9")
 
 
-HOME_SERVICE_CARDS = []
-
-
-def _home_cards():
-    """Six headline services for the homepage grid."""
-    copy = {
-        "roof-repair-hutto-tx": (
-            "Isolated leaks, damaged shingles, flashing problems and failed pipe boots &mdash; "
-            "traced to the source before anything gets quoted.",
-            "Ask about roof repair"),
-        "roof-replacement-hutto-tx": (
-            "When roof age, repeated repairs or widespread wear make a full replacement the more "
-            "sensible project.",
-            "Plan a replacement"),
-        "hail-damage-roof-repair-hutto-tx": (
-            "Hail bruises the shingle mat without leaving anything visible from the ground. We "
-            "check the soft metals first, then the roof.",
-            "Request a hail check"),
-        "storm-damage-roof-repair-hutto-tx": (
-            "Wind, wind-driven rain and debris affect different parts of a roof. Assessment covers "
-            "every slope, not just the obvious one.",
-            "Request an inspection"),
-        "metal-roofing-hutto-tx": (
-            "Standing seam and exposed-fastener panel systems for long-hold homes, shops and "
-            "outbuildings around Hutto.",
-            "Discuss metal roofing"),
-        "commercial-roofing-hutto-tx": (
-            "Low-slope and metal roofs for the US-79 corridor, the Co-Op District and Hutto's "
-            "light-industrial buildings.",
-            "Talk commercial roofing"),
-    }
-    out = []
-    for slug, (card, cta) in copy.items():
-        svc = next(s for s in SERVICES if s["slug"] == slug)
-        out.append(dict(svc, card=card, card_cta=cta))
-    return out
-
-
-# --------------------------------------------------------------------------
-# Service pages, service-area pages, blog posts
-# --------------------------------------------------------------------------
-
-def build_services():
-    for svc in SERVICES:
-        others = [s for s in SERVICES if s["slug"] != svc["slug"]]
-        page = dict(svc)
-        page["active"] = "/services/"
-        page["hero_cta"] = "Request an Estimate"
-        page["cta_heading"] = f"Ready to talk about {svc['nav_label'].lower()} in {BIZ['city']}?"
-        page["cta_intro"] = (
-            f"Describe what you are seeing and we will tell you what it looks like and what it "
-            f"would take to put right. {BIZ['name']} covers {BIZ['city']} {BIZ['zip']} and "
-            f"{BIZ['county']}."
-        )
-        page["side_lists"] = [
-            {"title": "Other Hutto services",
-             "items": [(s["nav_label"], s["path"]) for s in others]},
-            {"title": "Service areas",
-             "items": [(f"Roofing in {a['city']}", a["path"]) for a in AREAS]},
-        ]
-        page["schema"] = [
-            org_schema(),
-            website_schema(),
-            webpage_schema(page),
-            breadcrumb_schema(svc["trail"], svc["path"]),
-            service_schema(svc),
-            faq_schema(svc["faqs"]),
-        ]
-        page["extra"] = faq_section(
-            svc["faqs"],
-            f"{svc['nav_label']} questions from Hutto homeowners.",
-            "Common questions about " + svc["keyword"] + ". If yours is not here, call or text "
-            f"{BIZ['phone_display']}.",
-        )
-        write(svc["path"], prose_page(page))
-
-
-def build_areas():
-    for area in AREAS:
-        others = [a for a in AREAS if a["slug"] != area["slug"]]
-        page = dict(area)
-        page["active"] = "/service-areas/"
-        page["hero_cta"] = f"Request a {area['city']} Estimate"
-        page["hero_intro"] = (
-            f"{BIZ['name']} is based in {BIZ['city']} and works across {area['city']}, "
-            f"{BIZ['state']} &mdash; {area['distance']} away, {area['drive']}. Same crew, same "
-            f"services, and close enough that a leak call does not sit in a queue for a week."
-        )
-        page["body"] = f"""
-<div class="fact-grid">
-<div class="fact"><strong>{area['distance']}</strong><span>from our Hutto base</span></div>
-<div class="fact"><strong>{area['county']}</strong><span>jurisdiction</span></div>
-<div class="fact"><strong>{area['population']}</strong><span>residents</span></div>
+def build_creations():
+    n = len(CREATIONS)
+    for i, c in enumerate(CREATIONS):
+        path = f"/creation/{c['slug']}/"
+        page = {
+            "path": path,
+            "title": f"{c['title']} | {BIZ['name']}",
+            "description": trim(f"{c['blurb'].split('. ')[0].rstrip('.')}. Hand-painted to order in Belton, TX by {BIZ['name']}. Starts at ${c['price']}.", 160),
+            "h1": c["title"],
+            "og_image": f"/assets/img/gallery/{c['image']}.webp",
+            "og_type": "product",
+        }
+        trail = [("Home", "/"), ("Hand Painted Banners", "/gallery/"), (c["title"], None)]
+        page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "ItemPage"), breadcrumb_schema(trail), product_schema(c)]
+        prev_c, next_c = CREATIONS[(i - 1) % n], CREATIONS[(i + 1) % n]
+        related = [x for x in CREATIONS if x["category"] == c["category"] and x is not c][:3]
+        if len(related) < 3:
+            related += [x for x in CREATIONS if x not in related and x is not c][:3 - len(related)]
+        related_html = "".join(creation_card(x, j) for j, x in enumerate(related))
+        details = "".join(f"<li>{d}</li>" for d in c["details"])
+        palette = "".join(f'<span class="swatch static" style="--c:{p}" title="{p}"></span>' for p in c["palette"])
+        occ = next((o for o in OCCASIONS if c["slug"] in o["gallery"]), None)
+        occ_link = f'<a class="pill" href="/custom-banners/{occ["slug"]}/">{occ["icon"]} More {occ["label"].lower()}</a>' if occ else ""
+        body = f"""
+<section class="product"><div class="container">
+{breadcrumbs(trail)}
+<div class="product-grid">
+<div class="product-media" data-reveal>
+<a class="zoomable" href="/assets/img/gallery/{c['image']}.webp" data-lightbox="creation" data-caption="{esc(c['title'])}">
+{img(c['image'], c['alt'], cls='product-img ' + c['orientation'], sizes='(max-width: 900px) 100vw, 60vw', loading='eager')}
+<span class="zoom-hint" aria-hidden="true">Tap to zoom</span></a>
+<div class="product-nav"><a href="/creation/{prev_c['slug']}/" rel="prev">‹ {prev_c['title']}</a><a href="/creation/{next_c['slug']}/" rel="next">{next_c['title']} ›</a></div>
 </div>
-{area['body']}
-<h2>Based in Hutto, working across {area['city']}</h2>
-<p>Our home market is {BIZ['city']}, {BIZ['state']} {BIZ['zip']} &mdash; see
-<a href="/">Hutto Roofers</a> for the full picture of what we do and how we work. {area['city']}
-is {area['distance']} from that base, {area['drive']}, which keeps response times short for
-repairs, inspections and storm calls alike.</p>
-<p>Call or text <a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a>, or email
-<a href="mailto:{BIZ['email']}">{BIZ['email']}</a>.</p>
+<div class="product-copy">
+<div class="eyebrow" data-reveal>{CATEGORY_LABEL[c['category']]} &middot; {KW}</div>
+<h1 class="display" data-reveal data-split>{c['title']}</h1>
+<p class="price" data-reveal>Starts at ${c['price']}.00</p>
+<p class="lead" data-reveal>{c['blurb']}</p>
+<dl class="spec" data-reveal>
+<div><dt>Painted wording</dt><dd>{esc(c['wording'])}</dd></div>
+<div><dt>Palette</dt><dd class="palette">{palette}</dd></div>
+<div><dt>Sizes</dt><dd>{", ".join(esc(s) for s in SIZES)}</dd></div>
+<div><dt>Made in</dt><dd>Belton, Texas &middot; hand-painted to order</dd></div>
+</dl>
+<ul class="check-list" data-reveal>{details}</ul>
+<div class="share" data-reveal><span>Share:</span>
+<a href="https://www.facebook.com/sharer/sharer.php?u={url(path)}" target="_blank" rel="noopener">Facebook</a>
+<a href="https://pinterest.com/pin/create/button/?url={url(path)}&amp;media={url('/assets/img/gallery/' + c['image'] + '.webp')}&amp;description={esc(c['title'])}" target="_blank" rel="noopener">Pinterest</a>
+<a href="mailto:?subject={esc(c['title'])}&amp;body={url(path)}">Email</a>
+<button type="button" class="text-btn" data-copy="{url(path)}">Copy link</button>
+</div>
+<div class="pills" data-reveal>{occ_link}<a class="pill" href="/gallery/">All hand painted banners</a></div>
+</div>
+</div>
+</div></section>
+<section class="order" id="order"><div class="container order-grid">
+<div class="order-copy" data-reveal>
+<div class="eyebrow">Order this design</div>
+<h2 class="display">Make it yours</h2>
+<p>Choose a size, tell us the name, date and any personalization, and a version of this banner will be sketched for your event. Starting at ${c['price']}.00; the final quote depends on size and detail and is confirmed before painting.</p>
+<ul class="trust-list"><li>Sketch approved by you before painting</li><li>Any wording, colors and motifs can change</li><li>Pickup or delivery around Belton, TX</li></ul>
+</div>
+<div class="contact-card" data-reveal>
+<form class="quote-form" method="post" action="/contact.php" novalidate>
+<input type="hidden" name="source" value="creation">
+<input type="hidden" name="product" value="{esc(c['title'])} (/creation/{c['slug']}/)">
+<div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+<div class="form-grid">
+<div class="field full"><label for="o-size">Size</label><select id="o-size" name="size" required><option value="">------</option>{"".join(f"<option>{esc(s)}</option>" for s in SIZES)}</select></div>
+<div class="field full"><label for="o-details">Personalization Details</label><textarea id="o-details" name="message" rows="4" placeholder="Name, wording, colors, theme, where it will hang..." required></textarea></div>
+<div class="field"><label for="o-date">Event Date</label><input id="o-date" name="event_date" type="date"></div>
+<div class="field"><label for="o-name">Name</label><input id="o-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="o-email">Email</label><input id="o-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="o-phone">Phone Number</label><input id="o-phone" name="phone" type="tel" autocomplete="tel"></div>
+</div>
+<button class="btn btn-primary submit" type="submit"><span>Send</span><span class="btn-arrow" aria-hidden="true">→</span></button>
+<p class="form-status" role="status" aria-live="polite"></p>
+<p class="form-note">Or call / text {P}.</p>
+</form>
+</div>
+</div></section>
+<section class="section alt"><div class="container">
+{section_head("You may also like", "More hand-painted banners", None, center=False)}
+<div class="creation-grid">{related_html}</div>
+<p class="center" data-reveal><a class="btn btn-dark" href="/gallery/">Load more</a></p>
+</div></section>
 """
-        page["side_lists"] = [
-            {"title": "Roofing services",
-             "items": [(s["nav_label"], s["path"]) for s in SERVICES]},
-            {"title": "Other service areas",
-             "items": [("Roofing in Hutto (main)", "/")]
-                      + [(f"Roofing in {a['city']}", a["path"]) for a in others]},
-        ]
-        page["cta_heading"] = f"Roofing help in {area['city']}, {BIZ['state']}"
-        page["cta_intro"] = (
-            f"Tell us the address and what the roof is doing. We cover {area['city']} from "
-            f"{BIZ['city']}, {area['distance']} away."
-        )
-        page["schema"] = [
-            org_schema(),
-            website_schema(),
-            webpage_schema(page),
-            breadcrumb_schema(area["trail"], area["path"]),
-            service_schema(area),
-        ]
-        write(area["path"], prose_page(page))
+        write(path, head(page) + header("/gallery/") + body + footer())
+        register(path, c["published"], "0.7")
 
 
-def build_posts():
-    for post in POSTS:
-        others = [p for p in POSTS if p["slug"] != post["slug"]]
-        page = dict(post)
-        page["active"] = "/blog/"
-        page["og_type"] = "article"
-        page["hero_intro"] = post["excerpt"]
-        page["hero_cta"] = "Request an Estimate"
-        page["body"] = (
-            f'<p class="article-meta"><span>Published {post["published"]}</span>'
-            f'<span class="read-time">{post["read_time"]}</span><span>{BIZ["name"]}</span></p>'
-            + post["body"]
-        )
-        page["side_lists"] = [
-            {"title": "More from the blog",
-             "items": [(p["h1_plain"], p["path"]) for p in others]},
-            {"title": "Roofing services",
-             "items": [(s["nav_label"], s["path"]) for s in SERVICES[:6]]},
-        ]
-        page["cta_heading"] = "Questions about your own roof?"
-        page["cta_intro"] = (
-            f"Articles describe the general case. For what is happening on your roof in "
-            f"{BIZ['city']}, call or text {BIZ['phone_display']} and describe it."
-        )
-        page["schema"] = [
-            org_schema(),
-            website_schema(),
-            webpage_schema(page),
-            breadcrumb_schema(post["trail"], post["path"]),
-            article_schema(post),
-        ]
-        write(post["path"], prose_page(page))
-
-
-# --------------------------------------------------------------------------
-# Drop-in blog posts
-#
-# A post can be added without touching Python: copy templates/blog-post.html
-# to blog/<slug>/index.html and fill in the placeholders. build_blog_index()
-# and the sitemap pick it up from its <title>, meta description, H1 and the
-# article:published_time meta tag.
-# --------------------------------------------------------------------------
-
-_DROPINS = None
-
-
-def discover_dropin_posts():
-    global _DROPINS
-    if _DROPINS is not None:
-        return _DROPINS
-    found = _DROPINS = []
-    blog_dir = os.path.join(OUT, "blog")
-    if not os.path.isdir(blog_dir):
-        return found
-    generated = {p["slug"] for p in POSTS}
-    for slug in sorted(os.listdir(blog_dir)):
-        fs = os.path.join(blog_dir, slug, "index.html")
-        if slug in generated or not os.path.isfile(fs):
-            continue
-        html = open(fs, encoding="utf-8").read()
-        # The template's instruction comment names the placeholders, so look
-        # for unfilled ones only outside comments.
-        if "{{" in re.sub(r"<!--.*?-->", "", html, flags=re.S):
-            print(f"  ! skipping blog/{slug}/: unfilled template placeholders")
-            continue
-
-        def grab(pattern, default=""):
-            m = re.search(pattern, html, re.S)
-            return m.group(1).strip() if m else default
-
-        title = grab(r"<title>(.*?)</title>")
-        h1 = re.sub(r"<[^>]+>", "", grab(r"<h1[^>]*>(.*?)</h1>"))
-        if not title or not h1:
-            print(f"  ! skipping blog/{slug}/: no <title> or <h1>")
-            continue
-        found.append({
-            "slug": slug,
-            "path": f"/blog/{slug}/",
-            "h1_plain": h1,
-            "excerpt": grab(r'<meta name="description" content="(.*?)">'),
-            "published": grab(r'<meta property="article:published_time" content="(.*?)">', "1970-01-01"),
-            "read_time": grab(r'<span class="read-time">(.*?)</span>', ""),
-            "dropin": True,
-        })
-        print(f"  + drop-in post: blog/{slug}/")
-    return found
-
-
-def all_posts():
-    """Generated posts plus drop-ins, newest first."""
-    return sorted(POSTS + discover_dropin_posts(), key=lambda p: p["published"], reverse=True)
-
-
-# --------------------------------------------------------------------------
-# Index pages
-# --------------------------------------------------------------------------
-
-def build_services_index():
+def build_about():
     page = {
-        "path": "/services/",
-        "title": "Roofing Services in Hutto, TX | Hutto Roofers",
-        "description": (
-            "All roofing services in Hutto, TX: repair, replacement, installation, hail and storm "
-            "damage, shingle, metal, inspection, commercial and emergency roofing."
-        ),
-        "h1": "Roofing Services in <span class=\"gold-text\">Hutto, TX</span>",
-        "h1_plain": "Roofing Services in Hutto, TX",
-        "eyebrow": "Hutto Roofing Services",
-        "active": "/services/",
-        "trail": [("Home", "/"), ("Services", None)],
-        "hero_intro": (
-            "Ten things we do, listed plainly. Most people arrive here knowing roughly what is "
-            "wrong and wanting to know what it involves &mdash; so each page covers what the work "
-            f"actually entails on a {BIZ['city']} roof, what drives the cost, and where the line "
-            "between repair and replacement falls."
-        ),
+        "path": "/about-christina-dittman-creations/",
+        "title": f"About {BIZ['name']} | The Artist Behind {KW}",
+        "description": "Every celebration deserves something personal. Something that feels like it was made just for that moment. That’s exactly where Christina Dittman Creations began.",
+        "h1": f"About {BIZ['name']}",
     }
-    cards = "".join(
-        f"""<a class="link-card" href="{s['path']}">
-<h3>{s['nav_label']}</h3>
-<p>{s['description'].split('.')[0]}.</p>
-<span class="service-link">Learn more &rarr;</span>
-</a>"""
-        for s in SERVICES
-    )
-    page["body"] = f"""
-<h2>Every roofing service we offer in Hutto</h2>
-<p>All of these are available across {BIZ['city']}, {BIZ['state']} {BIZ['zip']} and throughout
-{BIZ['county']}, plus {", ".join(NEARBY[:-1])} and {NEARBY[-1]}.</p>
-<div class="link-grid">{cards}</div>
-
-<h2>Not sure which one you need?</h2>
-<p>That is normal, and it is usually the right starting point. Most people know a symptom, not a
-diagnosis &mdash; a stain on the ceiling, a shingle in the yard, a neighbour getting a new roof after
-the last hail storm. A <a href="/services/roof-inspection-hutto-tx/">roof inspection</a> turns the
-symptom into an answer without committing you to anything.</p>
-<p>If water is coming in right now, skip the rest and go to
-<a href="/services/emergency-roof-repair-hutto-tx/">emergency roof repair</a> or call
-<a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a>.</p>
+    trail = [("Home", "/"), (f"About {BIZ['name']}", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "AboutPage"), breadcrumb_schema(trail),
+                      jsonld({"@type": "Person", "@id": url("/about-christina-dittman-creations/#person"), "name": BIZ["founder"],
+                              "jobTitle": "Artist and owner", "worksFor": {"@id": url("/#business")}, "url": url("/about-christina-dittman-creations/")})]
+    values = [
+        ("Hand-painted with care", "Every letter and illustration is painted by hand. Visible brushwork is part of the charm."),
+        ("Designed for your occasion", "No templates. The banner is drawn around your story, your colors and your theme."),
+        ("Attention to color, style and theme", "Palettes are matched to invitations, decorations or the room where the banner will hang."),
+        ("Personal, not mass-produced", "Each order is treated like it’s for a close friend or family member - because that level of care shows."),
+    ]
+    values_html = "".join(f'<article class="why-card" data-reveal data-tilt style="--i:{i}"><span class="why-icon" aria-hidden="true">✦</span><h3>{h}</h3><p>{t}</p></article>' for i, (h, t) in enumerate(values))
+    body = sub_hero(page, trail, "Our story", "Every celebration deserves something personal. Something that feels like it was made just for that moment. That’s exactly where Christina Dittman Creations began.") + f"""
+<section class="section"><div class="container split">
+<div class="split-media" data-reveal><div class="brush-frame" data-brush>{img('custom-hand-painted-birthday-banner-3', CREATION['custom-hand-painted-birthday-banner-3']['alt'], sizes='(max-width: 900px) 100vw, 50vw')}</div>
+<div class="floating-card" data-parallax="-0.08"><img src="{BIZ['logo']}" alt="" width="72" height="72" aria-hidden="true"><div><strong>{BIZ['founder']}</strong><span>Artist &middot; Belton, Texas</span></div></div></div>
+<div class="split-copy prose">
+<h2 data-reveal>How it started</h2>
+<p data-reveal>What started as a love for art, lettering and meaningful details grew into a passion for creating custom hand-painted banners that turn ordinary events into unforgettable experiences. Whether it’s a wedding, birthday, baby shower, engagement, graduation, church service or a once-in-a-lifetime celebration, each banner is designed to reflect your story.</p>
+<p data-reveal><strong>No templates. No shortcuts. Just thoughtful, handcrafted work.</strong></p>
+<p data-reveal>Today the studio is better known around Bell County simply as <a href="/belton-banners/">{KW}</a> - the place in Belton, Texas where a birthday banner, a church verse or a wedding welcome sign gets painted by hand.</p>
+</div>
+</div></section>
+<section class="section alt"><div class="container">
+{section_head("The heart behind the craft", "The small details matter", "A banner isn’t just decoration. It’s the backdrop to your photos. The focal point of your event. The piece people remember long after the celebration ends. That’s why every banner is:")}
+<div class="why-grid four">{values_html}</div>
+</div></section>
+<section class="section"><div class="container prose narrow">
+<h2 data-reveal>Custom made, start to finish</h2>
+<p data-reveal>Every banner begins with your vision. From the wording and colors to the overall style, each detail is carefully planned and brought to life by hand. Whether you want something elegant and minimal or bold and eye-catching, the goal is always the same: to create a piece that feels uniquely yours.</p>
+<p data-reveal>You’re not just ordering a banner - you’re collaborating on something meaningful.</p>
+<h2 data-reveal>Designed for life’s biggest moments</h2>
+<p data-reveal>{BIZ['name']} proudly creates banners for:</p>
+<ul class="check-list cols" data-reveal>
+<li><a href="/custom-banners/wedding-banners/">Weddings</a></li><li><a href="/custom-banners/birthday-banners/">Birthdays</a></li><li><a href="/custom-banners/baby-shower-banners/">Baby showers</a></li>
+<li>Engagement celebrations</li><li><a href="/custom-banners/graduation-banners/">Graduations</a></li><li><a href="/custom-banners/church-banners/">Church services and children’s church</a></li>
+<li><a href="/custom-banners/holiday-seasonal-banners/">Holidays and seasons</a></li><li>And all of life’s special occasions</li>
+</ul>
+<p data-reveal>If it matters to you, it matters here.</p>
+<h2 data-reveal>Made with care, meant to last</h2>
+<p data-reveal>There’s something special about handmade work. You can see it. You can feel it. Every brushstroke, every letter, every detail is created with intention. The result is more than just décor - it’s a keepsake you’ll want to hold onto long after the event is over.</p>
+</div></section>
+{cta_band("Let’s make something for your moment", f"Call or text {P}, or send a few details and {BIZ['founder']} will be in touch.")}
+{contact_form("about")}
 """
-    page["side_lists"] = [
-        {"title": "Service areas",
-         "items": [(f"Roofing in {a['city']}", a["path"]) for a in AREAS]},
-        {"title": "From the blog",
-         "items": [(p["h1_plain"], p["path"]) for p in POSTS[:4]]},
-    ]
-    page["schema"] = [
-        org_schema(), website_schema(), webpage_schema(page, "CollectionPage"),
-        breadcrumb_schema(page["trail"], page["path"]),
-        '{"@type":"ItemList","itemListElement":[' + ",".join(
-            '{"@type":"ListItem","position":%d,"name":"%s","url":"%s"}'
-            % (i, esc(s["service_name"]), url(s["path"]))
-            for i, s in enumerate(SERVICES, start=1)
-        ) + "]}",
-    ]
-    write("/services/", prose_page(page))
+    write(page["path"], head(page) + header("/about-christina-dittman-creations/") + body + footer())
+    register(page["path"], priority="0.8")
 
 
-def build_areas_index():
+def build_contact():
     page = {
-        "path": "/service-areas/",
-        "title": "Roofing Service Areas | Hutto, Round Rock, Taylor | Hutto Roofers",
-        "description": (
-            "Hutto Roofers service areas: Hutto, Round Rock, Pflugerville, Taylor, Georgetown and "
-            "Manor. Roof repair, replacement and storm damage across Central Texas."
-        ),
-        "h1": "Roofing <span class=\"gold-text\">Service Areas</span>",
-        "h1_plain": "Roofing Service Areas",
-        "eyebrow": "Where We Work",
-        "active": "/service-areas/",
-        "trail": [("Home", "/"), ("Service Areas", None)],
-        "hero_intro": (
-            f"{FOOTER_SERVING}. Hutto is our base, and everywhere else on this list is inside a "
-            "twenty-five minute drive &mdash; close enough that a storm call does not sit waiting."
-        ),
+        "path": "/contact-us/",
+        "title": f"Contact Us | Get a Custom Banner Quote | {KW}",
+        "description": f"Have an idea in mind? Contact {BIZ['name']} in Belton, TX for a custom hand-painted banner quote. Call or text {P}.",
+        "h1": "Contact Us",
     }
-    cards = "".join(
-        f"""<a class="link-card" href="{a['path']}">
-<h3>Roofing in {a['city']}, TX</h3>
-<p>{a['distance']} from Hutto &mdash; {a['drive']}. {a['county']}.</p>
-<span class="service-link">View {a['city']} &rarr;</span>
-</a>"""
-        for a in AREAS
-    )
-    page["body"] = f"""
-<h2>Hutto, TX &mdash; our home market</h2>
-<p>{BIZ['name']} is based in {BIZ['city']}, {BIZ['state']} {BIZ['zip']}, in {BIZ['county']}. The
-<a href="/">Hutto roofing homepage</a> covers what we do and what is particular about the roofs
-here.</p>
-
-<h2>Towns we also cover</h2>
-<div class="link-grid">{cards}</div>
-
-<h2>Why the area matters to the work</h2>
-<p>These six towns sit within about twenty miles of each other and share a climate, but they do not
-share a building stock. Taylor has a historic downtown with hundred-year-old low-slope commercial
-roofs. Georgetown has Sun City's thousands of phase-built homes alongside Victorian properties near
-the square. Round Rock spans four decades of construction. Hutto and Manor are near-twins &mdash;
-fast-growing towns where whole subdivisions reach replacement age together.</p>
-<p>Those differences change what a roofing visit involves, which is why each town has its own page
-rather than a name swapped into the same text.</p>
+    trail = [("Home", "/"), ("Contact Us", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "ContactPage"), breadcrumb_schema(trail)]
+    body = sub_hero(page, trail, "Let’s bring it to life", "Have an idea in mind? Whether you’re planning a wedding, celebrating a milestone, or creating something truly one-of-a-kind, I’d love to hear from you. Share your vision, event details and any inspiration you have, and we’ll start designing a custom hand-painted banner that fits your moment perfectly.") + f"""
+<section class="section contact-ways"><div class="container three">
+<a class="way" href="tel:{TEL}" data-reveal data-tilt style="--i:0"><span class="way-icon" aria-hidden="true">☎</span><strong>Call</strong><span>{P}</span></a>
+<a class="way" href="sms:{TEL}" data-reveal data-tilt style="--i:1"><span class="way-icon" aria-hidden="true">✉</span><strong>Text</strong><span>{P}</span></a>
+<a class="way" href="mailto:{BIZ['email']}" data-reveal data-tilt style="--i:2"><span class="way-icon" aria-hidden="true">@</span><strong>Email</strong><span>{BIZ['email']}</span></a>
+</div></section>
+{contact_form("contact", heading="Every order is personal, and it all starts right here", intro="Fill out the form below and I’ll be in touch soon - usually within a day. The more you share (date, size, wording, colors, inspiration photos later by text or email), the faster the sketch comes together.")}
+<section class="section alt"><div class="container narrow prose">
+<h2 data-reveal>What happens next</h2>
+<ol class="steps compact">
+<li class="step" data-reveal style="--i:0"><span class="step-num">01</span><h3>You send the details</h3><p>Occasion, date, size, wording and anything you love.</p></li>
+<li class="step" data-reveal style="--i:1"><span class="step-num">02</span><h3>Sketch and quote</h3><p>A design direction and a confirmed price come back to you.</p></li>
+<li class="step" data-reveal style="--i:2"><span class="step-num">03</span><h3>Painting</h3><p>Once approved, the banner is painted by hand in Belton.</p></li>
+<li class="step" data-reveal style="--i:3"><span class="step-num">04</span><h3>Pickup or delivery</h3><p>Rolled and ready for your event.</p></li>
+</ol>
+<p data-reveal>Serving Belton, Temple, Killeen, Harker Heights, Salado and the rest of Central Texas. <a href="/faq/">Read the FAQ</a> for sizes, timing and care.</p>
+</div></section>
 """
-    page["side_lists"] = [
-        {"title": "Roofing services",
-         "items": [(s["nav_label"], s["path"]) for s in SERVICES]},
+    write(page["path"], head(page) + header("/contact-us/") + body + footer())
+    register(page["path"], priority="0.9")
+
+
+def build_how_it_works():
+    page = {
+        "path": "/how-it-works/",
+        "title": f"How It Works | Ordering a Hand-Painted Banner | {KW}",
+        "description": f"How to order a custom hand-painted banner from {BIZ['name']} in Belton, TX: share your idea, approve a sketch, painting by hand, then pickup or delivery.",
+        "h1": "How ordering a hand-painted banner works",
+    }
+    trail = [("Home", "/"), ("How It Works", None)]
+    steps = [
+        ("Inspiration & idea", "You bring your vision - or even just a vague idea. The occasion, the date, where the banner will hang, a name, a verse, a theme. Photos of the invitation or the room help with colors.", "A message, a call or a text is enough to start."),
+        ("Concept development", "Colors, lettering style and layout start taking shape. Script or block? Kraft paper or cream? One big illustration or a border of small ones? This is where the banner becomes yours.", "You’ll get a quote at this stage, before anything is painted."),
+        ("Sketch & approval", "A draft is created so you can see the direction before painting begins. Change the wording, swap a motif, tweak a color - approval is the point of no surprises.", "Most sketches are approved in one or two rounds."),
+        ("Painting process", "This is where the magic happens. Each letter and illustration is painted by hand on kraft paper in the Belton studio, layer by layer, with visible brushwork that no printer can fake.", "A few days to a couple of weeks depending on detail."),
+        ("Final touches & delivery", "Details are refined, the banner is checked, rolled (never folded) and prepared for your event. Pickup in Belton or delivery nearby is arranged with you.", "Hang it with painter’s tape, clips or clothespins."),
     ]
-    page["schema"] = [
-        org_schema(), website_schema(), webpage_schema(page, "CollectionPage"),
-        breadcrumb_schema(page["trail"], page["path"]),
+    steps_html = "".join(
+        f'<li class="timeline-item" data-reveal style="--i:{i}"><div class="timeline-marker"><span>{i + 1:02d}</span></div><div class="timeline-body"><h2>{h}</h2><p>{t}</p><p class="note">{n}</p></div></li>'
+        for i, (h, t, n) in enumerate(steps))
+    faqs = [
+        ("How far in advance should I order?", "Two to three weeks ahead is comfortable for most banners. Easter, Christmas and May graduation season fill up earlier. Rush requests are often possible - ask."),
+        ("What do you need from me to start?", "The occasion, the event date, the wording (names, ages, a verse), the size you have in mind and anything that shows your style: invitation, colors, a photo of the room."),
+        ("Can I change the design after the sketch?", "Yes - that is what the sketch is for. Changes after painting has started may affect the price or timing."),
+        ("How do I hang the banner?", "Painter’s tape or removable mounting strips on the back corners, clips on a line, or clothespins on a string. Avoid regular tape on painted areas."),
     ]
-    write("/service-areas/", prose_page(page))
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(faqs),
+                      jsonld({"@type": "HowTo", "name": "How to order a custom hand-painted banner", "step": [
+                          {"@type": "HowToStep", "position": i + 1, "name": h, "text": re.sub("<[^>]+>", "", t)} for i, (h, t, n) in enumerate(steps)]})]
+    body = sub_hero(page, trail, "The process", "Creating a hand-painted banner is not a quick click-and-order process. It’s collaborative, intentional and personal. Here’s how it typically works.") + f"""
+<section class="section"><div class="container narrow"><ol class="timeline">{steps_html}</ol></div></section>
+{designer()}
+{faq_section(faqs, "Before you order")}
+{cta_band("Ready to start step one?", f"Send the details or call {P}.")}
+{contact_form("how-it-works")}
+"""
+    write(page["path"], head(page) + header("/how-it-works/") + body + footer())
+    register(page["path"], priority="0.8")
+
+
+def build_pricing():
+    page = {
+        "path": "/pricing-and-sizes/",
+        "title": f"Pricing & Sizes | Hand-Painted Banners from $90 | {KW}",
+        "description": f"Hand-painted banner pricing from {BIZ['name']} in Belton, TX: banners start at $90-$100 in five standard sizes. What affects the price and how quotes work.",
+        "h1": "Pricing and sizes",
+    }
+    trail = [("Home", "/"), ("Pricing & Sizes", None)]
+    faqs = [
+        ("Why don’t you list a fixed price per size?", "Because two banners of the same size can take very different amounts of work. A name in script with two small motifs is quicker than a full nativity scene with a verse. The quote reflects the actual design, and it is confirmed before painting."),
+        ("What is included in the starting price?", "Design consultation, a sketch for approval, the paint and paper, and the finished banner ready to hang. Delivery around Belton is arranged separately."),
+        ("Do you offer discounts for churches or multiple banners?", "Group and repeat orders are welcome - ask when you request the quote."),
+        ("How do I pay?", "Payment details are confirmed with your quote. Custom work that has started is not refundable."),
+    ]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(faqs)]
+    size_cards = ""
+    size_use = {
+        '30" x 30"': ("Square accent", "A door, a highchair backdrop, a small wall or a sign for a table."),
+        '36" x 30"': ("Classic", "Behind a cake table, a classroom wall or a mantel."),
+        '48" x 30"': ("Most popular", "A dining-room wall or the backdrop for a gift table."),
+        '60" x 30"': ("Wide backdrop", "A photo backdrop, a stage or a fellowship hall."),
+        '36" x 60"': ("Tall", "A classroom door, a stage side panel or a tall entryway wall."),
+    }
+    for i, s in enumerate(SIZES):
+        w, h = [int(x) for x in re.findall(r"(\d+)", s)]
+        label, use = size_use[s]
+        size_cards += f'<li class="size-card" data-reveal data-tilt style="--i:{i}"><div class="size-box" style="--w:{w};--h:{h}"><span>{esc(s)}</span></div><h3>{label}</h3><p>{use}</p></li>'
+    factors = [
+        ("Size", "Bigger paper, more paint, more time. The five standard sizes are listed below; larger banners are possible."),
+        ("Amount of lettering", "A name and a greeting is quick. A full verse with a reference takes longer and needs careful spacing."),
+        ("Illustrations", "Each painted motif - a tractor, a cowgirl portrait, a nativity scene - adds time. Three to six small motifs is typical."),
+        ("Detail and layering", "Camo borders, gingham, rope frames, shading and gradients are layered by hand."),
+        ("Timing", "Rush requests may add to the price when the schedule allows them at all."),
+    ]
+    factors_html = "".join(f'<article class="why-card" data-reveal style="--i:{i}"><span class="why-icon" aria-hidden="true">{i + 1}</span><h3>{h}</h3><p>{t}</p></article>' for i, (h, t) in enumerate(factors))
+    body = sub_hero(page, trail, "Honest pricing", f"Hand-painted banners from {BIZ['name']} start at $90 to $100. Most of the banners in the gallery are listed at “starts at $100”. The final price depends on size and detail, and it is confirmed with you before any painting begins.") + f"""
+<section class="section"><div class="container">
+<div class="price-hero" data-reveal>
+<div class="price-big"><span class="eyebrow">Banners start at</span><strong>$90<span>–</span>$100</strong><span class="eyebrow">quote confirmed before painting</span></div>
+<ul class="check-list"><li>Design consultation and sketch included</li><li>Painted by hand on kraft (or cream, grey, white) paper</li><li>Rolled and ready to hang</li><li>Pickup in Belton or delivery nearby by arrangement</li></ul>
+</div>
+{section_head("Five standard sizes", "Pick the size for the space", "All sizes are in inches, width by height. Not sure? Tell us where the banner will hang and we’ll suggest one.")}
+<ul class="size-grid">{size_cards}</ul>
+</div></section>
+<section class="section alt"><div class="container">
+{section_head("What affects the price", "Five things that move a quote up or down")}
+<div class="why-grid">{factors_html}</div>
+</div></section>
+{designer()}
+{faq_section(faqs, "Pricing questions")}
+{cta_band("Want a number for your banner?", "Send the size, the wording and the occasion and you’ll have a quote - no obligation.")}
+{contact_form("pricing")}
+"""
+    write(page["path"], head(page) + header("/pricing-and-sizes/") + body + footer())
+    register(page["path"], priority="0.8")
+
+
+FAQ_GROUPS = [
+    ("Ordering", [
+        ("How do I order a custom banner?", f"Use the contact form on any page, call or text {P}, or email {BIZ['email']}. Share the occasion, the date, the wording and the size, and you’ll get a sketch direction and a quote."),
+        ("How far ahead should I order?", "Two to three weeks is comfortable. Easter, Christmas and graduation season book earlier. Rush requests are often possible depending on the queue."),
+        ("Do I approve the design before it is painted?", "Yes. A sketch or detailed description is shared for approval first. Painting starts only after you say go."),
+        ("Can you work from a photo or a Pinterest idea?", "Absolutely. Inspiration photos are the fastest way to get the style right. The banner will be an original painting in that spirit, not a copy."),
+    ]),
+    ("Pricing", [
+        ("How much does a hand-painted banner cost?", "Banners start at $90 to $100. Size, the amount of lettering and the number of illustrations set the final quote, which is confirmed before painting."),
+        ("Is there a deposit?", "Payment terms are confirmed with your quote."),
+        ("Do you do group or church orders?", "Yes. Multiple banners in one style for a church season, a school or a group of families are welcome."),
+    ]),
+    ("Sizes & materials", [
+        ("What sizes do you offer?", 'Five standard sizes: 30" x 30", 36" x 30", 48" x 30", 60" x 30" and 36" x 60". Larger banners for stages are possible on request.'),
+        ("What are banners painted on?", "Kraft paper is the signature look. Cream, white and grey paper are available, and canvas can be arranged for banners that will be hung outdoors more often."),
+        ("What kind of paint is used?", "Acrylic paint, applied by hand with brushes. It dries matte and durable."),
+    ]),
+    ("Hanging & care", [
+        ("How do I hang my banner?", "Painter’s tape or removable mounting strips on the back corners, clips on a line, or clothespins. Avoid regular tape on painted areas."),
+        ("Can I use it outside?", "On a covered porch or under a tent, yes. Bring it in for rain and heavy wind."),
+        ("How do I store it?", "Roll it around a cardboard tube with the painted side out, wrap it loosely and keep it dry. Never fold it."),
+        ("Can I frame it?", "Yes - many banners end up framed as wall art. A poster frame or a custom frame with a mat both work."),
+    ]),
+    ("Local", [
+        (f"Where are {KW} made?", f"In {BIZ['founder']}’s studio in Belton, Texas, in Bell County."),
+        ("Do you deliver?", "Pickup in Belton and delivery to nearby towns - Temple, Killeen, Harker Heights, Salado, Nolanville, Troy - are arranged when the banner is ready."),
+        ("Do you ship?", "Shipping rolled banners further afield can be arranged on request; ask when you order."),
+    ]),
+]
+
+
+def build_faq():
+    page = {
+        "path": "/faq/",
+        "title": f"FAQ | Hand-Painted Banner Questions | {KW}",
+        "description": f"Answers about ordering hand-painted banners from {BIZ['name']} in Belton, TX: pricing, sizes, timing, materials, hanging, storage, delivery and more.",
+        "h1": "Frequently asked questions",
+    }
+    trail = [("Home", "/"), ("FAQ", None)]
+    allq = [q for _, qs in FAQ_GROUPS for q in qs]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "FAQPage"), breadcrumb_schema(trail), faq_schema(allq)]
+    groups = ""
+    for g, qs in FAQ_GROUPS:
+        items = "".join(f'<details class="faq-item" data-reveal style="--i:{i}"><summary><span>{q}</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-body"><p>{a}</p></div></details>' for i, (q, a) in enumerate(qs))
+        groups += f'<div class="faq-group" id="{g.lower().split()[0]}"><h2 data-reveal>{g}</h2><div class="faq-list">{items}</div></div>'
+    jump = "".join(f'<a class="pill" href="#{g.lower().split()[0]}">{g}</a>' for g, _ in FAQ_GROUPS)
+    body = sub_hero(page, trail, "Help", "Everything people ask before ordering a hand-painted banner. Not answered here? Call or text " + P + ".", extra=f'<div class="pills" data-reveal>{jump}</div>') + f"""
+<section class="section"><div class="container narrow">{groups}</div></section>
+{cta_band("Still have a question?", "Ask it in the form and you’ll hear back quickly.")}
+{contact_form("faq")}
+"""
+    write(page["path"], head(page) + header("/faq/") + body + footer())
+    register(page["path"], priority="0.7")
+
+
+def build_belton():
+    page = {
+        "path": "/belton-banners/",
+        "title": f"{KW} | Hand-Painted Banners in Belton, TX",
+        "description": f"{KW}: custom hand-painted birthday, wedding, church and seasonal banners made in Belton, Texas by {BIZ['name']}. Serving Temple, Killeen and Salado.",
+        "h1": f"{KW}: hand-painted in Belton, Texas",
+    }
+    trail = [("Home", "/"), (f"{KW} in Belton, TX", None)]
+    faqs = [
+        (f"Is {KW} the same as {BIZ['name']}?", f"Yes. {BIZ['name']} is the studio; {KW} is what people around Bell County call the banners it paints, and this site lives at beltonbanners.com."),
+        ("Where do you deliver around Belton?", "Pickup in Belton, and delivery to Temple, Killeen, Harker Heights, Salado, Nolanville, Troy and nearby towns when the banner is ready."),
+        ("Do you paint banners for Belton schools and churches?", "Yes - children’s church banners, VBS banners, senior-night and graduation banners, and classroom verse banners are regular orders."),
+        ("Can I see examples?", "The gallery shows banners painted in the studio, from first birthdays to Christmas services."),
+    ]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(faqs)]
+    towns = "".join(f'<li data-reveal style="--i:{i}"><span class="pin" aria-hidden="true">⌖</span>{t}</li>' for i, t in enumerate([BIZ["city"]] + NEARBY))
+    gallery = "".join(creation_card(c, i) for i, c in enumerate(CREATIONS[:6]))
+    body = sub_hero(page, trail, "Belton, Texas", f"{KW} is the local name for the custom hand-painted banners made by {BIZ['name']}. Every one is lettered and illustrated by hand in a Belton studio and carried to parties, churches, schools and porches across Bell County and Central Texas.") + f"""
+<section class="section"><div class="container split">
+<div class="split-copy prose">
+<h2 data-reveal>Why Belton families choose hand-painted</h2>
+<p data-reveal>A printed banner from a big-box store is identical to a thousand others. {KW} are painted one at a time - the name in script, the age painted like a road for a construction party, the family dog in the corner, a verse for Sunday school. They photograph like art because they are art, and they come home after the event instead of going in the trash.</p>
+<p data-reveal>Because the studio is local, the process is personal: a quick text to talk through the idea, a sketch to approve, pickup in Belton or delivery to Temple, Killeen, Harker Heights or Salado when the banner is ready.</p>
+<h2 data-reveal>What we paint for Belton</h2>
+<ul class="check-list" data-reveal>
+<li><a href="/custom-banners/birthday-banners/">Birthday banners</a> for kids, milestones and 21sts</li>
+<li><a href="/custom-banners/wedding-banners/">Wedding welcome signs</a> and sweetheart-table banners</li>
+<li><a href="/custom-banners/baby-shower-banners/">Baby shower and gender reveal</a> banners</li>
+<li><a href="/custom-banners/church-banners/">Children’s church and scripture</a> banners</li>
+<li><a href="/custom-banners/graduation-banners/">Graduation and senior-night</a> banners in school colors</li>
+<li><a href="/custom-banners/holiday-seasonal-banners/">Fall, Christmas and Easter</a> banners</li>
+</ul>
+</div>
+<div class="split-media" data-reveal>
+<div class="brush-frame" data-brush>{img('custom-hand-painted-birthday-banner-5', CREATION['custom-hand-painted-birthday-banner-5']['alt'], sizes='(max-width: 900px) 100vw, 50vw')}</div>
+</div>
+</div></section>
+<section class="section alt"><div class="container">
+{section_head("Service area", "Serving Belton and Central Texas", "Pickup in Belton; delivery arranged for the towns below and beyond.")}
+<ul class="town-list">{towns}</ul>
+</div></section>
+<section class="section"><div class="container">
+{section_head("Recent work", f"{KW} from the gallery", None, center=False)}
+<div class="creation-grid">{gallery}</div>
+<p class="center" data-reveal><a class="btn btn-dark" href="/gallery/">See the full gallery</a></p>
+</div></section>
+{faq_section(faqs, f"{KW} questions")}
+{cta_band(f"Order {KW.lower()} for your next event", f"Call or text {P}, or send the details below.")}
+{contact_form("belton")}
+"""
+    write(page["path"], head(page) + header(None) + body + footer())
+    register(page["path"], priority="0.8")
+
+
+def build_design_page():
+    page = {
+        "path": "/design-your-banner/",
+        "title": f"Design Your Banner Online | Live Preview | {KW}",
+        "description": f"Mock up your hand-painted banner: choose the occasion, wording, paper, lettering, ink color, motif and size, then send it to {BIZ['name']} as a quote request.",
+        "h1": "Design your banner",
+    }
+    trail = [("Home", "/"), ("Design Your Banner", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail)]
+    body = sub_hero(page, trail, "Interactive", "Play with the wording, paper, lettering and motifs until the mock-up feels right, then send it as a quote request. It lands in the form below with everything filled in.") + f"""
+{designer(full=False)}
+<section class="section alt"><div class="container narrow prose">
+<h2 data-reveal>A mock-up, not the finished art</h2>
+<p data-reveal>The designer is a quick way to describe what you want. The real banner is sketched by hand, with lettering and illustrations drawn for your words and your space, and you approve that sketch before painting. Think of this page as the start of the conversation.</p>
+<p data-reveal>Want to see what hand-painted lettering and motifs look like for real? Browse the <a href="/gallery/">gallery</a>, or read about the <a href="/how-it-works/">process</a>.</p>
+</div></section>
+{contact_form("design", heading="Send your design", intro="Your mock-up details are filled in below. Add the date, your contact details and anything else, and send.")}
+"""
+    write(page["path"], head(page) + header(None) + body + footer())
+    register(page["path"], priority="0.7")
 
 
 def build_blog_index():
+    posts = sorted(POSTS, key=lambda p: p["published"], reverse=True)
     page = {
         "path": "/blog/",
-        "title": "Roofing Blog | Central Texas Roof Advice | Hutto Roofers",
-        "description": (
-            "Roofing advice for Central Texas homeowners: new roof costs in Hutto, roof lifespans, "
-            "hail damage inspection, metal vs shingle and storm season prep."
-        ),
-        "h1": "The <span class=\"gold-text\">Hutto Roofers</span> Blog",
-        "h1_plain": "The Hutto Roofers Blog",
-        "eyebrow": "Roofing Blog",
-        "active": "/blog/",
-        "trail": [("Home", "/"), ("Blog", None)],
-        "hero_intro": (
-            "Practical answers for Central Texas homeowners &mdash; what roofs cost here, how long "
-            "they actually last, and what to do after the hail comes through. Written about the "
-            "roofs we work on, not roofs in general."
-        ),
+        "title": f"Blog | Hand-Painted Banner Ideas & Tips | {KW}",
+        "description": f"Articles from the {KW} studio: banner ideas for birthdays, weddings, church and seasons, wording tips, sizes and how to care for a hand-painted banner.",
+        "h1": "Latest articles",
     }
-    cards = "".join(
-        f"""<a class="link-card post-card" href="{p['path']}">
-<span class="post-date">{p['published']}{' &middot; ' + p['read_time'] if p.get('read_time') else ''}</span>
-<h3>{p['h1_plain']}</h3>
-<p>{p['excerpt']}</p>
-<span class="service-link">Read the guide &rarr;</span>
-</a>"""
-        for p in all_posts()
-    )
-    page["body"] = f"""
-<h2>Latest guides</h2>
-<div class="link-grid">{cards}</div>
-
-<h2>Have a question we have not covered?</h2>
-<p>Call or text <a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a>, or email
-<a href="mailto:{BIZ['email']}">{BIZ['email']}</a>. If it comes up often enough it will end up
-here.</p>
+    trail = [("Home", "/"), ("Blog", None)]
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema(trail),
+                      jsonld({"@type": "Blog", "@id": url("/blog/#blog"), "name": f"{BIZ['name']} blog", "blogPost": [{"@id": url(f"/{p['slug']}/") + "#article"} for p in posts]})]
+    cards = "".join(post_card(p, i) for i, p in enumerate(posts))
+    body = sub_hero(page, trail, "Blog", "Ideas, wording tips and notes from the studio on hand-painted banners.") + f"""
+<section class="section"><div class="container"><div class="post-grid">{cards}</div></div></section>
+{cta_band()}
 """
-    page["side_lists"] = [
-        {"title": "Roofing services",
-         "items": [(s["nav_label"], s["path"]) for s in SERVICES]},
-        {"title": "Service areas",
-         "items": [(f"Roofing in {a['city']}", a["path"]) for a in AREAS]},
-    ]
-    page["schema"] = [
-        org_schema(), website_schema(), webpage_schema(page, "Blog"),
-        breadcrumb_schema(page["trail"], page["path"]),
-        '{"@type":"ItemList","itemListElement":[' + ",".join(
-            '{"@type":"ListItem","position":%d,"name":"%s","url":"%s"}'
-            % (i, esc(p["h1_plain"]), url(p["path"]))
-            for i, p in enumerate(all_posts(), start=1)
-        ) + "]}",
-    ]
-    write("/blog/", prose_page(page))
+    write(page["path"], head(page) + header("/blog/") + body + footer())
+    register(page["path"], posts[0]["modified"], "0.7")
+
+    # /category/general/ - the only WordPress category archive, kept as a listing
+    cat = {
+        "path": "/category/general/",
+        "title": f"General | Blog Category | {BIZ['name']}",
+        "description": f"All articles in the General category of the {BIZ['name']} blog.",
+        "h1": "General",
+        "robots": "noindex, follow",
+    }
+    cat["schema"] = [org_schema(), website_schema(), webpage_schema(cat, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Blog", "/blog/"), ("General", None)])]
+    body = sub_hero(cat, [("Home", "/"), ("Blog", "/blog/"), ("General", None)], "Category") + f"""
+<section class="section"><div class="container"><div class="post-grid">{cards}</div></div></section>
+"""
+    write(cat["path"], head(cat) + header("/blog/") + body + footer())
 
 
-# --------------------------------------------------------------------------
-# Legal, HTML sitemap, 404
-# --------------------------------------------------------------------------
+def build_posts():
+    posts = sorted(POSTS, key=lambda p: p["published"], reverse=True)
+    for p in POSTS:
+        path = f"/{p['slug']}/"
+        page = {
+            "path": path, "title": p["seo_title"], "description": p["description"], "h1": p["title"],
+            "published": p["published"], "modified": p["modified"], "og_type": "article",
+            "og_image": f"/assets/img/gallery/{p['image']}.webp",
+        }
+        trail = [("Home", "/"), ("Blog", "/blog/"), (p["title"], None)]
+        page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), article_schema(p), faq_schema(p["faqs"])]
+        related = [x for x in posts if x is not p][:2]
+        related_html = "".join(post_card(x, i) for i, x in enumerate(related))
+        faq_html = "".join(f'<details class="faq-item" data-reveal style="--i:{i}"><summary><span>{i + 1}. {q}</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-body"><p>{a}</p></div></details>' for i, (q, a) in enumerate(p["faqs"]))
+        body = f"""
+<article class="post">
+<header class="post-hero"><div class="container narrow">
+{breadcrumbs([("Home", "/"), ("Blog", "/blog/"), ("Article", None)])}
+<div class="eyebrow" data-reveal><a href="/category/general/">General</a> &middot; {pretty_date(p['published'])} &middot; {p['read_time']}</div>
+<h1 class="display" data-reveal data-split>{p['title']}</h1>
+<p class="byline" data-reveal>By <a href="/about-christina-dittman-creations/">{BIZ['founder']}</a>, {BIZ['name']} &middot; Belton, TX</p>
+</div>
+<div class="container post-cover" data-reveal><div class="brush-frame" data-brush>{img(p['image'], p['image_alt'], sizes='(max-width: 1100px) 100vw, 1000px', loading='eager')}</div></div>
+</header>
+<div class="container narrow prose post-body" data-reveal>
+{p['body']}
+<h2>FAQs</h2>
+<div class="faq-list">{faq_html}</div>
+<div class="post-share"><span>Share:</span>
+<a href="https://www.facebook.com/sharer/sharer.php?u={url(path)}" target="_blank" rel="noopener">Facebook</a>
+<a href="https://pinterest.com/pin/create/button/?url={url(path)}&amp;media={url('/assets/img/gallery/' + p['image'] + '.webp')}&amp;description={esc(p['title'])}" target="_blank" rel="noopener">Pinterest</a>
+<a href="mailto:?subject={esc(p['title'])}&amp;body={url(path)}">Email</a>
+<button type="button" class="text-btn" data-copy="{url(path)}">Copy link</button></div>
+<div class="author-box"><img src="{BIZ['logo']}" alt="" width="72" height="72" aria-hidden="true"><div><strong>{BIZ['founder']}</strong><p>Artist and owner of {BIZ['name']} - {KW} - painting custom banners by hand in Belton, Texas. <a href="/about-christina-dittman-creations/">About the studio →</a></p></div></div>
+</div>
+</article>
+<section class="section alt"><div class="container">
+{section_head("Related articles", "Keep reading", None, center=False)}
+<div class="post-grid two">{related_html}</div>
+</div></section>
+{cta_band()}
+{contact_form(p['slug'])}
+"""
+        write(path, head(page) + header("/blog/") + body + footer())
+        register(path, p["modified"], "0.6")
+
 
 def build_legal():
-    from content.legal import PRIVACY_BODY, TERMS_BODY
-
-    for path, title, h1, desc, body in [
-        ("/privacy-policy/", f"Privacy Policy | {BIZ['name']}", "Privacy Policy",
-         f"Privacy Policy for {BIZ['name']}, covering what information the huttoroofs.com "
-         "website collects, how it is used and the choices you have.", PRIVACY_BODY),
-        ("/terms-of-use/", f"Terms of Use | {BIZ['name']}", "Terms of Use",
-         f"Terms of Use governing access to and use of the {BIZ['name']} website at "
-         "huttoroofs.com.", TERMS_BODY),
-    ]:
-        page = {
-            "path": path, "title": title, "description": desc,
-            "trail": [("Home", "/"), (h1, None)],
-        }
-        page["schema"] = [
-            org_schema(), website_schema(), webpage_schema(page),
-            breadcrumb_schema(page["trail"], path),
-        ]
-        html = (
-            head(page) + header()
-            + f"""<section class="hero hero-sub"><div class="container" style="padding:56px 0 50px">
-{breadcrumbs(page['trail'])}
-<div class="eyebrow">Legal</div>
-<h1 id="page-title" style="color:#fff;font-size:clamp(2.4rem,4vw,3.6rem)">{h1}</h1>
-</div></section>
-<section class="legal prose"><div class="container"><div class="prose-body">{body}</div></div></section>
+    for item in (PRIVACY, TERMS):
+        page = {"path": item["path"], "title": item["title"], "description": item["description"], "h1": item["h1"]}
+        trail = [("Home", "/"), (item["h1"], None)]
+        page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail)]
+        body = sub_hero(page, trail, item["effective"]) + f"""
+<section class="section"><div class="container narrow prose legal" data-reveal>{item['body']}</div></section>
 """
-            + footer()
-        )
-        write(path, html)
+        write(item["path"], head(page) + header(None) + body + footer())
+        register(item["path"], priority="0.3")
+
+
+def build_thank_you():
+    page = {
+        "path": "/thank-you/",
+        "title": f"Thank You | {BIZ['name']}",
+        "description": "Your banner request has been sent. Christina will be in touch soon.",
+        "h1": "Thank you - your request is on its way",
+        "robots": "noindex, nofollow",
+    }
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page)]
+    body = sub_hero(page, [("Home", "/"), ("Thank you", None)], "Sent", f"Thanks for reaching out to {BIZ['name']}. You’ll hear back soon, usually within a day. If it’s urgent, call or text {P}.") + f"""
+<section class="section"><div class="container narrow center">
+<div class="btn-row center" data-reveal><a class="btn btn-dark" href="/gallery/">Browse the gallery</a><a class="btn btn-ghost" href="/blog/">Read the blog</a></div>
+</div></section>
+"""
+    write(page["path"], head(page) + header(None) + body + footer())
 
 
 def build_sitemap_page():
     page = {
         "path": "/sitemap/",
         "title": f"Sitemap | {BIZ['name']}",
-        "description": (
-            f"Every page on huttoroofs.com: roofing services in {BIZ['city']}, TX, service areas "
-            "across Williamson County and the roofing blog."
-        ),
-        "trail": [("Home", "/"), ("Sitemap", None)],
+        "description": f"Every page on beltonbanners.com - {KW} by {BIZ['name']}.",
+        "h1": "Sitemap",
     }
-    page["schema"] = [
-        org_schema(), website_schema(), webpage_schema(page),
-        breadcrumb_schema(page["trail"], "/sitemap/"),
+    page["schema"] = [org_schema(), website_schema(), webpage_schema(page)]
+    groups = [
+        ("Main pages", [("Home", "/"), (f"About {BIZ['name']}", "/about-christina-dittman-creations/"), ("Gallery", "/gallery/"), ("How It Works", "/how-it-works/"), ("Pricing & Sizes", "/pricing-and-sizes/"), ("Design Your Banner", "/design-your-banner/"), (f"{KW} in Belton, TX", "/belton-banners/"), ("FAQ", "/faq/"), ("Contact Us", "/contact-us/"), ("Privacy Policy", "/privacy-policy/"), ("Terms of Use", "/terms-of-use/")]),
+        ("Custom banners", [("All custom banners", "/custom-banners/")] + [(o["label"], f"/custom-banners/{o['slug']}/") for o in OCCASIONS]),
+        ("Hand painted banners (gallery)", [(c["title"], f"/creation/{c['slug']}/") for c in CREATIONS]),
+        ("Blog", [("All articles", "/blog/"), ("Category: General", "/category/general/")] + [(p["title"], f"/{p['slug']}/") for p in POSTS]),
     ]
-
-    def links(items):
-        return '<div class="side-list">' + "".join(
-            f'<a href="{href}">{label}</a>' for label, href in items
-        ) + "</div>"
-
-    body = f"""
-<h2>Main pages</h2>
-{links([("Roofing Hutto TX (Home)", "/"), ("Roofing Services", "/services/"),
-        ("Service Areas", "/service-areas/"), ("Roofing Blog", "/blog/")])}
-<h2>Roofing services in {BIZ['city']}, {BIZ['state']}</h2>
-{links([(s["service_name"], s["path"]) for s in SERVICES])}
-<h2>Service areas</h2>
-{links([(a["service_name"], a["path"]) for a in AREAS])}
-<h2>Blog posts</h2>
-{links([(p["h1_plain"], p["path"]) for p in POSTS])}
-<h2>Legal</h2>
-{links([("Privacy Policy", "/privacy-policy/"), ("Terms of Use", "/terms-of-use/"),
-        ("XML Sitemap", "/sitemap.xml")])}
-"""
-    html = (
-        head(page) + header()
-        + f"""<section class="hero hero-sub"><div class="container" style="padding:56px 0 50px">
-{breadcrumbs(page['trail'])}
-<div class="eyebrow">Sitemap</div>
-<h1 id="page-title" style="color:#fff;font-size:clamp(2.4rem,4vw,3.6rem)">Sitemap</h1>
-</div></section>
-<section class="legal prose"><div class="container"><div class="prose-body">{body}</div></div></section>
-"""
-        + contact_section() + footer()
-    )
-    write("/sitemap/", html)
+    def li(items):
+        return "".join(f'<li><a href="{h}">{l}</a></li>' for l, h in items)
+    html = "".join(f'<div class="sitemap-group" data-reveal><h2>{g}</h2><ul>{li(items)}</ul></div>' for g, items in groups)
+    body = sub_hero(page, [("Home", "/"), ("Sitemap", None)]) + f'<section class="section"><div class="container sitemap-grid">{html}</div></section>'
+    write(page["path"], head(page) + header(None) + body + footer())
+    register(page["path"], priority="0.3")
 
 
 def build_404():
     page = {
         "path": "/404.html",
         "title": f"Page Not Found | {BIZ['name']}",
-        "description": "That page could not be found. Browse Hutto roofing services or call "
-                       f"{BIZ['phone_display']}.",
-        "robots": "noindex, follow",
-        "trail": [("Home", "/"), ("Not Found", None)],
+        "description": "That page isn’t here. Browse the gallery, custom banner types or contact us.",
+        "h1": "That page got painted over",
+        "robots": "noindex, nofollow",
     }
-    page["schema"] = [org_schema(), website_schema(), webpage_schema(page)]
-    body = f"""
-<p>The page you were looking for is not here. It may have moved, or the link may be out of date.</p>
-<h2>Roofing services</h2>
-<div class="side-list">{"".join(f'<a href="{s["path"]}">{s["service_name"]}</a>' for s in SERVICES)}</div>
-<h2>Service areas</h2>
-<div class="side-list">{"".join(f'<a href="{a["path"]}">{a["service_name"]}</a>' for a in AREAS)}</div>
-<p style="margin-top:24px"><a class="btn btn-dark" href="/">Back to the Hutto Roofers homepage <span>&rarr;</span></a></p>
-"""
-    html = (
-        head(page) + header()
-        + f"""<section class="hero hero-sub"><div class="container" style="padding:56px 0 50px">
-<div class="eyebrow">404</div>
-<h1 id="page-title" style="color:#fff;font-size:clamp(2.4rem,4vw,3.6rem)">Page not found</h1>
-<p style="color:#c6c2b9">Try one of the pages below, or call
-<a href="tel:{BIZ['phone_href']}" style="color:#c29a49">{BIZ['phone_display']}</a>.</p>
+    page["schema"] = [org_schema(), website_schema()]
+    body = sub_hero(page, [("Home", "/"), ("404", None)], "404", "The page you’re looking for isn’t here. Try one of these instead.") + f"""
+<section class="section"><div class="container narrow center">
+<div class="btn-row center" data-reveal><a class="btn btn-dark" href="/">Home</a><a class="btn btn-ghost" href="/gallery/">Gallery</a><a class="btn btn-ghost" href="/custom-banners/">Custom banners</a><a class="btn btn-ghost" href="/contact-us/">Contact</a></div>
 </div></section>
-<section class="legal prose"><div class="container"><div class="prose-body">{body}</div></div></section>
 """
-        + footer()
-    )
-    write("/404.html", html)
+    write("/404.html", head(page) + header(None) + body + footer())
 
-
-# --------------------------------------------------------------------------
-# Blog post template (templates/blog-post.html)
-#
-# Rendered through the same prose_page() as every generated post, so it can
-# never drift from the live design. Placeholders are {{UPPER_CASE}} tokens.
-# templates/ is excluded from the sitemap, validation and the deploy archive.
-# --------------------------------------------------------------------------
-
-def build_blog_template():
-    page = {
-        "path": "/blog/{{SLUG}}/",
-        "title": "{{TITLE}} | " + BIZ["name"],
-        "description": "{{META_DESCRIPTION}}",
-        "h1": "{{H1}}",
-        "h1_plain": "{{H1}}",
-        "eyebrow": "{{EYEBROW}}",
-        "published": "{{YYYY-MM-DD}}",
-        "read_time": "{{N}} min read",
-        "excerpt": "{{META_DESCRIPTION}}",
-        "hero_image": "/assets/img/LOCAL-HUTTO-ROOFING.webp",
-        "hero_alt": "{{HERO_IMAGE_ALT}}",
-        "active": "/blog/",
-        "og_type": "article",
-        "hero_intro": "{{META_DESCRIPTION}}",
-        "hero_cta": "Request an Estimate",
-        "trail": [("Home", "/"), ("Blog", "/blog/"), ("{{H1}}", None)],
-        "body": (
-            '<p class="article-meta"><span>Published {{YYYY-MM-DD}}</span>'
-            '<span class="read-time">{{N}} min read</span><span>' + BIZ["name"] + "</span></p>\n"
-            "<!-- ARTICLE BODY: replace everything between these markers. Use <h2> for sections,\n"
-            "     <h3> for sub-sections, <p>, <ul>/<ol>, and <div class=\"callout\"> for asides.\n"
-            "     Link to services with /services/<slug>/ and other posts with /blog/<slug>/. -->\n"
-            "{{BODY_HTML}}\n"
-            "<!-- END ARTICLE BODY -->"
-        ),
-        "side_lists": [
-            {"title": "More from the blog",
-             "items": [(p["h1_plain"], p["path"]) for p in POSTS]},
-            {"title": "Roofing services",
-             "items": [(s["nav_label"], s["path"]) for s in SERVICES[:6]]},
-        ],
-        "cta_heading": "Questions about your own roof?",
-        "cta_intro": (
-            f"Articles describe the general case. For what is happening on your roof in "
-            f"{BIZ['city']}, call or text {BIZ['phone_display']} and describe it."
-        ),
-    }
-    page["schema"] = [
-        org_schema(), website_schema(), webpage_schema(page),
-        breadcrumb_schema(page["trail"], page["path"]), article_schema(page),
-    ]
-    html = prose_page(page)
-    instructions = """<!--
-  HUTTO ROOFERS BLOG POST TEMPLATE
-  ================================
-  1. Copy this file to  blog/<slug>/index.html   (slug: lowercase-with-hyphens)
-  2. Replace every {{PLACEHOLDER}}:
-       {{SLUG}}              the folder name, e.g. roof-ventilation-basics
-       {{TITLE}}             page title, under 50 chars (" | Hutto Roofers" is appended)
-       {{META_DESCRIPTION}}  140-160 chars, includes the post's main keyword
-       {{H1}}                the headline; may differ from TITLE
-       {{EYEBROW}}           short category label, e.g. Roofing Costs
-       {{YYYY-MM-DD}}        publish date (appears twice)
-       {{N}}                 reading time in minutes (appears twice)
-       {{HERO_IMAGE_ALT}}    alt text for the hero image; change the src if you add an image
-       {{BODY_HTML}}         the article, as HTML
-  3. Run  python3 build.py  - the post is picked up automatically and added to
-     /blog/ and sitemap.xml. Then  python3 validate.py.
-  Leave everything else alone; header, footer, sidebar and schema come from the live design.
--->
-"""
-    html = html.replace("<!DOCTYPE html>\n", "<!DOCTYPE html>\n" + instructions, 1)
-    target = os.path.join(OUT, "templates", "blog-post.html")
-    os.makedirs(os.path.dirname(target), exist_ok=True)
-    with open(target, "w", encoding="utf-8") as fh:
-        fh.write(html)
-    WRITTEN.append("/templates/blog-post.html")
-
-
-# --------------------------------------------------------------------------
-# robots.txt + sitemap.xml
-# --------------------------------------------------------------------------
 
 def build_sitemap_xml():
-    entries = [("/", "1.0", "weekly"), ("/services/", "0.9", "monthly"),
-               ("/service-areas/", "0.8", "monthly"), ("/blog/", "0.7", "weekly")]
-    entries += [(s["path"], "0.9", "monthly") for s in SERVICES]
-    entries += [(a["path"], "0.7", "monthly") for a in AREAS]
-    entries += [(p["path"], "0.6", "monthly") for p in all_posts()]
-    entries += [("/sitemap/", "0.3", "yearly"), ("/privacy-policy/", "0.2", "yearly"),
-                ("/terms-of-use/", "0.2", "yearly")]
-    urls = "\n".join(
-        f"  <url>\n    <loc>{url(p)}</loc>\n    <lastmod>{TODAY}</lastmod>\n"
-        f"    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>"
-        for p, pri, freq in entries
-    )
-    write("/sitemap.xml",
-          '<?xml version="1.0" encoding="UTF-8"?>\n'
-          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          + urls + "\n</urlset>\n")
-
-
-def build_legacy_sitemaps():
-    """The WordPress site published sitemap_index.xml and page-sitemap.xml
-    (Rank Math). Keep both URLs alive so nothing indexed returns a 404."""
-    write("/sitemap_index.xml",
-          '<?xml version="1.0" encoding="UTF-8"?>\n'
-          '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          f"  <sitemap>\n    <loc>{url('/sitemap.xml')}</loc>\n    <lastmod>{TODAY}</lastmod>\n  </sitemap>\n"
-          "</sitemapindex>\n")
-    write("/page-sitemap.xml", open(os.path.join(OUT, "sitemap.xml"), encoding="utf-8").read())
-
-
-def build_htaccess():
-    """Apache/LiteSpeed config for the static site: index.html first (the
-    WordPress install preferred index.php), a real 404 page, and 301s for
-    the WordPress URL patterns that no longer exist."""
-    write("/.htaccess", """# huttoroofs.com - static site
-DirectoryIndex index.html index.htm
-ErrorDocument 404 /404.html
-Options -Indexes
-
-<IfModule mod_rewrite.c>
-RewriteEngine On
-# Old WordPress-only paths -> nearest static equivalent
-RewriteRule ^feed/?$ /blog/ [R=301,L]
-RewriteRule ^(wp-admin|wp-includes|wp-json|wp-login\\.php|xmlrpc\\.php)(/.*)?$ / [R=301,L]
-</IfModule>
-
-<IfModule mod_expires.c>
-ExpiresActive On
-ExpiresByType image/webp "access plus 1 year"
-ExpiresByType text/css "access plus 1 month"
-ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-""")
-
-
-def build_index_php():
-    """Front controller for the Hostinger H5G host. The platform serves
-    existing files directly and routes "/" and every unknown path to this
-    file (provided no index.html exists). It serves the homepage for "/" and
-    a real 404 for anything else - which .htaccess cannot do here, since the
-    host ignores it."""
-    write("/index.php", """<?php
-// huttoroofs.com - static site front controller. See README, "Hosting note".
-$path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
-$home = 'https://huttoroofs.com';
-
-// Canonical host and scheme (the host ignores .htaccess, so this is the only
-// place to enforce them; direct static-file requests are covered by canonical tags).
-$insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http';   // TLS ends upstream; REQUEST_SCHEME is always http here
-if ($insecure || ($_SERVER['HTTP_HOST'] ?? '') === 'www.huttoroofs.com') {
-    header('Location: ' . $home . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
-    exit;
-}
-
-if ($path === '/' || $path === '/index.php') {
-    header('Content-Type: text/html; charset=utf-8');
-    readfile(__DIR__ . '/home.html');
-    exit;
-}
-if (preg_match('#^/(feed|comments/feed)/?$#', $path)) {
-    header('Location: ' . $home . '/blog/', true, 301);
-    exit;
-}
-if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\\.php|xmlrpc\\.php)(/|$)#', $path)) {
-    header('Location: ' . $home . '/', true, 301);
-    exit;
-}
-if (substr($path, -1) !== '/' && is_dir(__DIR__ . $path)) {
-    header('Location: ' . $home . $path . '/', true, 301);
-    exit;
-}
-http_response_code(404);
-header('Content-Type: text/html; charset=utf-8');
-readfile(__DIR__ . '/404.html');
-""")
+    items = "".join(
+        f"<url><loc>{url(p)}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>\n"
+        for p, lm, pr in PAGES)
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + items + "</urlset>\n")
+    write("/sitemap.xml", xml)
+    # Yoast's sitemap index URL is in Search Console and robots history; keep it valid.
+    write("/sitemap_index.xml", ('<?xml version="1.0" encoding="UTF-8"?>\n'
+                                 '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                                 f"<sitemap><loc>{url('/sitemap.xml')}</loc><lastmod>{TODAY}</lastmod></sitemap>\n"
+                                 "</sitemapindex>\n"))
 
 
 def build_robots():
     write("/robots.txt",
-          "User-agent: *\n"
-          "Allow: /\n"
-          "Disallow: /templates/\n"
-          "Disallow: /home.html\n\n"
+          "User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\nDisallow: /thank-you/\n\n"
           f"Sitemap: {url('/sitemap.xml')}\n")
 
 
-# --------------------------------------------------------------------------
-# main
-# --------------------------------------------------------------------------
+def build_manifest():
+    write("/site.webmanifest", json.dumps({
+        "name": f"{BIZ['name']} | {KW}", "short_name": KW,
+        "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+                  {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}],
+        "theme_color": "#2F1F10", "background_color": "#FEF9ED", "display": "standalone"}, indent=2))
+
 
 def main():
-    global HOME_SERVICE_CARDS
-    HOME_SERVICE_CARDS = _home_cards()
-
     build_home()
-    build_services_index()
-    build_services()
-    build_areas_index()
-    build_areas()
-    build_posts()
+    build_occasions_index()
+    build_occasions()
+    build_gallery()
+    build_creations()
+    build_about()
+    build_contact()
+    build_how_it_works()
+    build_pricing()
+    build_faq()
+    build_belton()
+    build_design_page()
     build_blog_index()
-    build_blog_template()
+    build_posts()
     build_legal()
+    build_thank_you()
     build_sitemap_page()
     build_404()
     build_sitemap_xml()
-    build_legacy_sitemaps()
-    build_htaccess()
-    build_index_php()
     build_robots()
-
-    print(f"Built {len(WRITTEN)} files:")
-    for p in WRITTEN:
-        print("  " + p)
+    build_manifest()
+    print(f"wrote {len(WRITTEN)} files, {len(PAGES)} sitemap URLs")
 
 
 if __name__ == "__main__":

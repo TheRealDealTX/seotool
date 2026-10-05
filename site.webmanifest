@@ -1,6 +1,6 @@
 {
-  "name": "Hutto Roofers",
-  "short_name": "Hutto",
+  "name": "Christina Dittman Creations | Belton Banners",
+  "short_name": "Belton Banners",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#2F1F10",
+  "background_color": "#FEF9ED",
   "display": "standalone"
 }

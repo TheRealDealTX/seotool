@@ -1,38 +1,47 @@
-"""Business, locality and navigation constants for huttoroofs.com.
+"""Business, brand and navigation constants for beltonbanners.com.
 
-Imported by build.py and by every module under content/ so that the phone
-number, service-area list and other local facts are defined exactly once.
+Imported by build.py and every module under content/ so that the phone
+number, email, brand names and keyword strings are defined exactly once.
 """
 
 from datetime import date
 
 BIZ = {
-    "name": "Hutto Roofers",
-    "phone_display": "+1 (512) 297-7580",
-    "phone_short": "(512) 297-7580",
-    "phone_href": "+15122977580",
-    "email": "info@huttoroofs.com",
-    "origin": "https://huttoroofs.com",
-    "city": "Hutto",
+    "name": "Christina Dittman Creations",
+    "short": "CDC",
+    "brand_alt": "Belton Banners",           # the primary keyword, title-cased
+    "keyword": "belton banners",              # the primary keyword, as typed
+    "tagline": "Custom hand-painted banners for life's most meaningful moments",
+    "phone_display": "+1 817-729-2961",
+    "phone_short": "817-729-2961",
+    "phone_href": "+18177292961",
+    "email": "dittmanbanners@gmail.com",
+    "origin": "https://beltonbanners.com",
+    "city": "Belton",
     "state": "TX",
     "state_long": "Texas",
-    "zip": "78634",
-    "county": "Williamson County",
     "region": "Central Texas",
-    "latitude": "30.5427",
-    "longitude": "-97.5467",
+    "county": "Bell County",
+    "latitude": "31.0560",
+    "longitude": "-97.4642",
+    "founder": "Christina Dittman",
+    "logo": "/assets/img/brand/christina-dittman-creations-logo.webp",
+    "og_image": "/assets/img/brand/christina-dittman-creations-site-image.webp",
 }
 
-NEARBY = ["Round Rock", "Pflugerville", "Taylor", "Georgetown", "Manor"]
-# Rendered on every page footer. Uses &amp; because it is emitted directly into HTML.
-FOOTER_SERVING = "Serving Hutto, Round Rock, Pflugerville, Taylor, Georgetown &amp; Manor"
+NEARBY = ["Temple", "Killeen", "Harker Heights", "Salado", "Nolanville", "Troy", "Copperas Cove"]
+FOOTER_SERVING = "Serving Belton, Temple, Killeen, Harker Heights, Salado &amp; Central Texas"
+
+SIZES = ['30" x 30"', '36" x 30"', '48" x 30"', '60" x 30"', '36" x 60"']
 
 NAV = [
-    ("Services", "/services/"),
-    ("Service Areas", "/service-areas/"),
+    ("Custom Banners", "/custom-banners/"),
+    ("Gallery", "/gallery/"),
+    ("How It Works", "/how-it-works/"),
+    ("Pricing", "/pricing-and-sizes/"),
+    ("About", "/about-christina-dittman-creations/"),
     ("Blog", "/blog/"),
-    ("Why Us", "/#about"),
-    ("Contact", "/#contact"),
+    ("Contact", "/contact-us/"),
 ]
 
 TODAY = date.today().isoformat()

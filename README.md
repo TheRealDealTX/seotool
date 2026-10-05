@@ -1,178 +1,121 @@
-# huttoroofs.com — static rebuild
+# beltonbanners.com — Christina Dittman Creations ("Belton Banners")
 
-A static HTML rebuild of [huttoroofs.com](https://huttoroofs.com), replacing the
-WordPress/Elementor site. No PHP, no database, no plugins — just HTML, one CSS
-file, one JS file and local images. Upload the repo root to any web host.
+A custom HTML/PHP rebuild of [beltonbanners.com](https://beltonbanners.com),
+replacing the WordPress/Elementor site. No CMS, no database, no plugins: a
+Python generator writes plain HTML, a ten-line `index.php` fronts it on the
+host, and `contact.php` handles every form on the site.
 
 ## What's here
 
 | Path | What it is |
 | --- | --- |
-| `home.html`, `index.php` and the `*/index.html` files | The generated site — this is the deliverable |
-| `assets/css/site.css` | The single shared stylesheet |
-| `assets/js/site.js` | Sticky header + mobile nav (the only script) |
-| `assets/img/` | All images, downloaded from the original site |
-| `favicon.*`, `apple-touch-icon.png`, `site.webmanifest`, `web-app-manifest-*.png`, `googlecccfbf2f7e9e5ae4.html` | Root files carried over from the WordPress install (icons, PWA manifest, Google Search Console verification) — keep them |
-| `build.py` | Generator: shared layout, page templates, schema builders |
-| `siteconfig.py` | Business details, locality facts, navigation |
-| `content/` | Page copy — services, service areas, blog, legal |
-| `validate.py` | Post-build checks (run it after every build) |
-| `templates/blog-post.html` | Generated blog post template for drop-in posts |
+| `home.html`, `*/index.html`, `404.html` | The generated site — the deliverable |
+| `index.php` | Front controller for the Hostinger H5G host: serves `/`, 301s the old WordPress-only URLs, real 404s for everything else |
+| `contact.php` | Quote/contact form handler (validation, honeypot, `mail()` to the studio, private log copy) |
+| `assets/css/site.css` | The single stylesheet (tokens, layout, components, effects, responsive, reduced-motion) |
+| `assets/js/site.js` | Site behavior: sticky header, mobile nav, scroll reveals, parallax, counters, tilt, paint-trail cursor, gallery strip, filters, lightbox, the banner designer, AJAX forms |
+| `assets/img/brand/` | The original logo (kept), OG image, generated kraft/paper textures |
+| `assets/img/gallery/` | The 17 gallery photos + hero and blog images at 1600/800/400 px |
+| `wp-content/uploads/2026/03/` | The old WordPress media library at its original URLs (originals + the resized variants the old pages referenced), so every old image URL still returns 200 |
+| `favicon.*`, `apple-touch-icon.png`, `web-app-manifest-*.png`, `site.webmanifest` | Icons generated from the logo |
+| `build.py` | Generator: shared layout, page builders, JSON-LD, sitemap, robots, manifest |
+| `siteconfig.py` | Business details, keyword strings, sizes, navigation |
+| `content/` | Page data: `creations.py` (gallery), `occasions.py` (banner-type pages), `blog.py` (posts), `legal.py` |
+| `validate.py` | Post-build checks (run after every build) |
+| `deploy.sh` | Uploads the build to the Hostinger website through its File Browser API |
+| `backup/wordpress-2026-10-05/` | The WordPress site as it was: rendered HTML of every URL, REST API exports, Yoast sitemaps |
 
 ## Rebuilding
 
 ```sh
-python3 build.py      # regenerate every HTML file
+python3 build.py      # regenerate every HTML file (+ sitemap.xml, robots.txt, manifest)
 python3 validate.py   # verify the output
 ```
 
-No dependencies beyond the Python 3 standard library. `build.py` writes into the
-repo root, so the generated HTML is committed alongside its source.
+Python 3 standard library only (Pillow was used once to render the image
+sizes and favicons; they are committed). Preview locally with PHP so the front
+controller and the form handler run:
 
-Preview locally with `python3 -m http.server 8000`.
+```sh
+php -S 127.0.0.1:8085 /path/to/router.php   # see "Hosting note" — or open /home.html statically
+```
 
-## Page inventory (29 pages)
+## URLs
 
-**Homepage** — `roofing hutto tx`
+Every URL the WordPress site published is kept (checked by `validate.py`):
 
-**Services** (`/services/`) — one primary keyword each:
+- `/`, `/about-christina-dittman-creations/`, `/contact-us/`, `/gallery/`, `/privacy-policy/`, `/blog/`
+- `/hand-painted-banner/` — the original post, word for word
+- `/creation/<slug>/` — all 17 gallery pieces, same slugs, same order, same starting prices
+- `/category/general/` — kept as a listing (noindex)
+- `/sitemap_index.xml` (now points at `/sitemap.xml`); `post-/page-/creation-/category-sitemap.xml` 301 to `/sitemap.xml`
+- `/banner-type/hand-painted-banners/` → `/gallery/`; feeds → `/blog/`; attachment pages → their creation; `wp-admin` etc. → `/`
 
-| Page | Keyword |
-| --- | --- |
-| `/services/roof-repair-hutto-tx/` | roof repair hutto tx (+ roof leak repair hutto tx) |
-| `/services/roof-replacement-hutto-tx/` | roof replacement hutto tx |
-| `/services/roof-installation-hutto-tx/` | roof installation hutto tx |
-| `/services/hail-damage-roof-repair-hutto-tx/` | hail damage roof repair hutto tx |
-| `/services/storm-damage-roof-repair-hutto-tx/` | storm damage roof repair hutto tx |
-| `/services/shingle-roofing-hutto-tx/` | shingle roofing hutto tx |
-| `/services/metal-roofing-hutto-tx/` | metal roofing hutto tx |
-| `/services/roof-inspection-hutto-tx/` | roof inspection hutto tx |
-| `/services/commercial-roofing-hutto-tx/` | commercial roofing hutto tx |
-| `/services/emergency-roof-repair-hutto-tx/` | emergency roof repair hutto tx |
+New pages:
 
-**Service areas** (`/service-areas/`) — Round Rock, Pflugerville, Taylor,
-Georgetown, Manor. Each carries its own local detail (neighborhoods, drive time
-from Hutto, storm pattern, county) and links back to the Hutto homepage.
-
-**Blog** (`/blog/`) — six Central Texas homeowner guides, one keyword each:
-
-| Page | Keyword |
-| --- | --- |
-| `/blog/how-much-does-a-roof-replacement-cost-in-hutto-tx/` | how much does a roof replacement cost in hutto tx |
-| `/blog/best-roofing-materials-for-central-texas-heat/` | best roofing materials for central texas heat |
-| `/blog/shingle-vs-metal-roofing-which-is-right-for-you/` | shingle vs metal roofing |
-| `/blog/signs-you-need-a-new-roof/` | signs you need a new roof |
-| `/blog/how-long-does-a-roof-last-in-texas/` | how long does a roof last in texas |
-| `/blog/how-to-choose-a-roofing-contractor-in-hutto/` | how to choose a roofing contractor in hutto |
-
-**Other** — `/privacy-policy/`, `/terms-of-use/`, `/sitemap/`, `/404.html`,
-`/sitemap.xml`, `/robots.txt`.
-
-## How the content was sourced
-
-The original huttoroofs.com was a four-page site: homepage plus two legal pages
-and a sitemap. The sister sites (templeroofs.com, kyleroofs.com,
-copperascoveroofs.com) turned out to be the same single-page template with a
-different city name, so there were no service or area pages to port. What they
-supplied was the page architecture, section structure and writing voice; the
-service, area and blog pages here are written fresh against that pattern.
-
-Everything local is Hutto's own: **Williamson County**, **78634**, neighborhoods
-(Legends of Hutto, Star Ranch, Emory Farms, Creek Bend, Cottonwood Creek,
-Riverwalk), landmarks (Old Town Hutto, the Co-Op District, Brushy Creek, US-79,
-SH-130, FM 1660, Chris Kelley Boulevard) and Blackland Prairie weather. Nearby
-cities are Round Rock, Pflugerville, Taylor, Georgetown and Manor. The business
-name and phone number are Hutto Roofers' own throughout — nothing from the
-source sites was carried over.
-
-The homepage hero paragraph and its "Local Roofing Focus" section were rewritten
-so the page is not a near-duplicate of templeroofs.com.
-
-## Design
-
-Header, nav, footer, colors and fonts are reproduced from the original. The
-palette and type were lifted from the live site's own CSS:
-
-- Ink `#151513`, gold `#9a7324`, gold-2 `#c29a49`, cream `#f8f5ee`, paper `#fffdfa`
-- DM Serif Display for headings, DM Sans for body (Google Fonts)
-
-The original's header and footer were Elementor templates, so those are rebuilt
-here using the `.announcement` / `.site-header` / `.site-footer` classes that
-the site's own stylesheet already defined but did not use. Interior pages
-(services, areas, blog) add a compact hero, a prose/sidebar layout and a few
-components on top of the same tokens.
-
-## Deploying
-
-The site is live on the Hostinger Agency website UID `Y2Ln5wYMP`
-(huttoroofs.com; created 2026-09-21 as a plain php-fpm website to replace the
-WordPress website `Kq0nqTlGe`, which was deleted after the domain moved).
-`./deploy.sh` pushes the build through the website's File Browser upload API;
-its header comment explains the three credentials it needs. Clear the site
-cache afterwards.
-
-Deployed 2026-09-21. The WordPress site was backed up first — see
-`backup/wordpress-2026-09-21/README.md` for the files zip, database dump and
-restore steps.
-
-## Hosting note
-
-The site runs on a plain (php-fpm, no WordPress) Hostinger Agency website.
-The platform serves existing files directly, ignores `.htaccess`, and routes
-`/` and any unknown path to `index.php` — unless an `index.html` exists, in
-which case it answers unknown file-style paths with that file and a 200. So
-the build deliberately has **no `index.html`**: the homepage is rendered as
-`home.html` and a ten-line `index.php` serves it for `/`, 301s the old
-WordPress paths, and returns `404.html` with a real 404 status for everything
-else. (`home.html` is `Disallow`ed in robots.txt and canonicalises to `/`.)
-
-Local preview: `python3 -m http.server` will not run `index.php`, so open
-`/home.html` for the homepage; every other page previews normally.
-`wp-content/uploads/2026/09/` holds the old WordPress media library exactly
-as it was, so every image URL the old site ever exposed still returns 200;
-the static pages themselves use `/assets/img/`.
+- `/custom-banners/` + six banner-type pages: `birthday-banners`, `wedding-banners`, `baby-shower-banners`, `church-banners`, `graduation-banners`, `holiday-seasonal-banners`
+- `/how-it-works/`, `/pricing-and-sizes/`, `/faq/`, `/design-your-banner/`, `/belton-banners/` (local landing page), `/terms-of-use/`, `/sitemap/`, `/thank-you/` (noindex)
+- Two new posts: `/custom-birthday-banner-ideas/`, `/church-banner-ideas/`
 
 ## SEO
 
-Every page has a unique title and meta description, a single H1 carrying its
-keyword, a canonical URL, Open Graph and Twitter tags, and JSON-LD: a shared
-`RoofingContractor`/`LocalBusiness` graph plus per-page `Service`,
-`BreadcrumbList`, `FAQPage`, `BlogPosting` or `ItemList` as appropriate. The
-LocalBusiness data carries Hutto's address, 78634 postcode, coordinates and the
-`areaServed` list.
+Primary keyword **belton banners**; brand keyword **Christina Dittman Creations**.
+The homepage title is `Belton Banners | Christina Dittman Creations | Hand-Painted in Belton, TX`
+and the body mentions "Belton Banners" 29 times (validate.py enforces ≥ 14) and the
+brand 16 times. Every page has a unique title and description, one H1, canonical,
+Open Graph/Twitter tags and JSON-LD: `LocalBusiness` (alternateName "Belton Banners")
++ `WebSite` on every page, plus `Product` for creations, `Service` + `FAQPage` for
+banner types, `BlogPosting` + `FAQPage` for posts, `HowTo` on the process page,
+`BreadcrumbList` on interior pages, `ItemList` on collections.
 
-`validate.py` enforces this: valid JSON-LD, one H1, unique titles and
-descriptions, no broken internal links or missing assets, alt text on every
-image, keyword presence in the title, H1, meta description and body of every
-service, area and blog page, and — per the brief's QA step — no leftover
-source-city names, counties, zip codes, phone numbers or WordPress
-fingerprints anywhere in the build (only Hutto's 78634 and (512) 297-7580 may
-appear).
+## Interactive and visual features
 
-## Adding a blog post
+- **Banner designer** (home, `/design-your-banner/`, process and pricing pages): occasion
+  presets, wording, lettering style, paper, ink color, motif, size and "wobble"; live
+  preview; "Send this design for a quote" fills the contact form (or carries the design
+  to `/contact-us/` through sessionStorage).
+- Hero with parallax background, word-by-word title animation, animated brush-stroke
+  underline, animated counters, and a paint-splatter cursor trail (pointer devices only).
+- Scroll-reveal with stagger on every section, brush-reveal (clip-path) image frames,
+  scroll progress bar, blurred sticky header, marquee strip, tilt cards.
+- Gallery: category filters (deep-linkable with `#birthday` etc.), lightbox with
+  keyboard and swipe, draggable scroll-snap strip on the homepage.
+- FAQ accordions, copy-link buttons, AJAX forms with inline status.
+- Everything respects `prefers-reduced-motion`; every page works without JavaScript.
 
-Two ways, both end with `python3 build.py && python3 validate.py`.
+## Forms
 
-**As an HTML file (no Python):** copy `templates/blog-post.html` to
-`blog/<slug>/index.html` and replace the `{{PLACEHOLDERS}}` — the comment at
-the top of the template lists them. `build.py` finds any `blog/*/index.html` it
-did not generate itself, reads the title, description, H1 and
-`article:published_time`, and adds it to `/blog/` and `sitemap.xml`. The
-template is regenerated on every build from the live design, so it never
-drifts.
+All forms post to `/contact.php`, which emails `dittmanbanners@gmail.com`
+(From `noreply@beltonbanners.com`, Reply-To the sender) and appends a copy to
+`../inquiries/inquiries-YYYY-MM.txt` outside the document root. With JavaScript
+the response is JSON and shown inline; without it, the browser lands on
+`/thank-you/`. **Confirm an email actually arrives in the Gmail inbox** (and the
+spam folder) after the first real submission; the handler returns success when
+either the mail was accepted or the log copy was written.
 
-**In Python:** add a dict to `POSTS` in `content/blog.py`. This is what the six
-existing posts use, and it gives you the shared phone/business constants.
+## Hosting note
 
-`templates/` is excluded from the sitemap, from validation and from the deploy
-archive, and `robots.txt` disallows it.
+The site runs on Hostinger Agency website **`duFSuwfQj`** (plain php-fpm, PHP 8.5,
+Phoenix), created 2026-10-05. `beltonbanners.com` was moved to it from the
+WordPress website `yC3Lm7xR9`, which still exists untouched on
+`lavenderblush-fly-932440.hostingersite.com` as the rollback (link the domain
+back to it to revert). Delete it once the new site has been live for a while.
 
-## Known gaps
+The platform serves existing files directly, ignores `.htaccess`, and routes
+`/` and unknown paths to `index.php` — unless an `index.html` exists at the
+root. So the homepage is `home.html` served by `index.php` for `/` (and
+`home.html` is `Disallow`ed in robots.txt). Missing files inside existing
+directories are 404'd by the platform itself, which is why the resized media
+variants are real files rather than `index.php` rewrites.
 
+## Deploying
 
-- **The estimate form is not wired up.** It posts nowhere and shows a reminder
-  on submit. Point it at a form handler or CRM endpoint before going live
-  (`contact_section()` in `build.py`, and the submit handler in
-  `assets/js/site.js`).
-- **Cost figures are planning ranges**, not quotes, and are labelled as such on
-  the pages. Review them before publishing.
+```sh
+python3 build.py && python3 validate.py && ./deploy.sh
+```
+
+`deploy.sh` needs the three File Browser credentials from
+`agency-hosting_files_generate-upload-url` (see its header). Clear the site
+cache afterwards (`agency-hosting_cache_clear-website`).
+
+Deployed 2026-10-05 (145 site files + 113 media files).
