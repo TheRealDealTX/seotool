@@ -9,7 +9,7 @@
 declare(strict_types=1);
 
 require __DIR__ . '/lib/bootstrap.php';
-const ASSET_VERSION = '20261005';
+const ASSET_VERSION = '20261006';
 
 $uri  = $_SERVER['REQUEST_URI'] ?? '/';
 $path = parse_url($uri, PHP_URL_PATH) ?: '/';

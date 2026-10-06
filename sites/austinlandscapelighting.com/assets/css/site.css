@@ -142,8 +142,8 @@ h2.display { font-size: clamp(1.9rem, 3.6vw, 3rem); }
 .site-header.is-scrolled .nav { height: 70px; }
 .brand img { width: clamp(170px, 20vw, 250px); height: auto; filter: drop-shadow(0 0 12px rgba(255, 179, 71, .25)); }
 .nav__links ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; }
-.nav__links a { display: block; padding: .55em .9em; border-radius: 999px; color: var(--ink-2); font-weight: 600; font-size: .95rem; position: relative; transition: color .2s, background .2s; }
-.nav__links a:hover, .nav__links a[aria-current] { color: var(--ink); background: var(--glass-2); }
+.nav__links ul a { display: block; padding: .55em .9em; border-radius: 999px; color: var(--ink-2); font-weight: 600; font-size: .95rem; position: relative; transition: color .2s, background .2s; }
+.nav__links ul a:hover, .nav__links ul a[aria-current] { color: var(--ink); background: var(--glass-2); }
 .nav__links a[aria-current]::after { content: ""; position: absolute; left: 50%; bottom: 4px; width: 4px; height: 4px; border-radius: 50%; background: var(--amber); transform: translateX(-50%); box-shadow: 0 0 8px var(--amber); }
 .nav__mobile-cta { display: none; }
 .nav__actions { display: flex; align-items: center; gap: 12px; }
@@ -663,13 +663,17 @@ body.lights-off .hero-note { pointer-events: auto; }
   .topbar__inner span:nth-child(2) { display: none; }
 }
 @media (max-width: 960px) {
-  .nav__links { position: fixed; inset: var(--header-h) 0 0 0; background: rgba(7, 11, 20, .97); backdrop-filter: blur(16px); padding: 24px var(--pad) 40px; transform: translateY(-8px); opacity: 0; pointer-events: none; transition: all .3s var(--ease); overflow-y: auto; z-index: 49; }
-  .site-header.is-scrolled .nav__links { inset: 70px 0 0 0; }
-  .nav__links.is-open { opacity: 1; transform: none; pointer-events: auto; }
+  /* The header's backdrop-filter makes it the containing block, so the panel is
+     positioned absolutely under the header bar and sized from the viewport. */
+  .nav__links { position: absolute; top: 100%; left: 0; right: 0; height: calc(100vh - 100%); height: calc(100dvh - 100%); background: var(--night-1); border-top: 1px solid var(--line); padding: 24px var(--pad) 40px; transform: translateY(-8px); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s .3s; overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 49; }
+  .nav__links.is-open { opacity: 1; transform: none; visibility: visible; pointer-events: auto; transition: opacity .3s var(--ease), transform .3s var(--ease), visibility 0s; }
   .nav__links ul { flex-direction: column; gap: 4px; }
-  .nav__links a { font-size: 1.25rem; padding: .7em .6em; border-radius: 10px; }
+  .nav__links ul a { font-size: 1.25rem; padding: .7em .6em; border-radius: 10px; }
   .nav__links a[aria-current]::after { display: none; }
-  .nav__mobile-cta { display: grid; gap: 10px; margin-top: 24px; }
+  .nav__mobile-cta { display: grid; gap: 10px; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .nav__mobile-cta .btn { font-size: 1.05rem; padding: 1em 1.4em; }
+  .nav__mobile-cta .btn--primary { color: #1a1205; }
+  .nav__mobile-cta .btn--ghost { color: var(--ink); }
   .menu-btn { display: inline-flex; }
   .nav__cta { display: none; }
   .lights-toggle__label { display: none; }
