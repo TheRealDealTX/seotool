@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /home.html
+Disallow: /quote.php
+
+Sitemap: https://stonecoatedroofs.com/sitemap_index.xml
+Sitemap: https://stonecoatedroofs.com/sitemap.xml

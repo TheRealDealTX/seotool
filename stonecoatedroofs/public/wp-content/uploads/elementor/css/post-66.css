@@ -1,0 +1,42 @@
+.elementor-66 .elementor-element.elementor-element-58b0df8{--display:flex;--min-height:300px;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:center;--padding-top:50px;--padding-bottom:50px;--padding-left:10px;--padding-right:10px;}.elementor-66 .elementor-element.elementor-element-58b0df8:not(.elementor-motion-effects-element-type-background), .elementor-66 .elementor-element.elementor-element-58b0df8 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#B85A38;}.elementor-widget-breadcrumbs{font-family:var( --e-global-typography-secondary-font-family ), Sans-serif;font-weight:var( --e-global-typography-secondary-font-weight );}.elementor-66 .elementor-element.elementor-element-e08e7e8{font-family:"DM Sans", Sans-serif;font-size:11px;font-weight:600;color:#C2C2C2;}.elementor-66 .elementor-element.elementor-element-e08e7e8 a{color:#ECECEC;}.elementor-66 .elementor-element.elementor-element-e08e7e8 a:hover{color:#FFFFFF;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-66 .elementor-element.elementor-element-7b1b965 .elementor-heading-title{font-family:"Fraunces", Sans-serif;font-size:50px;font-weight:400;line-height:1.6em;color:#FFFFFF;}.elementor-66 .elementor-element.elementor-element-06e11c6{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--padding-top:50px;--padding-bottom:50px;--padding-left:10px;--padding-right:10px;}.elementor-widget-theme-post-content{color:var( --e-global-color-text );font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );}.elementor-66 .elementor-element.elementor-element-752ab4c{font-family:"DM Sans", Sans-serif;font-weight:400;}@media(max-width:767px){.elementor-66 .elementor-element.elementor-element-58b0df8{--min-height:0px;}.elementor-66 .elementor-element.elementor-element-7b1b965 .elementor-heading-title{font-size:35px;}}/* Start custom CSS for theme-post-content, class: .elementor-element-752ab4c */.postcont ul, .postcont ol {
+    margin-bottom: 25px;
+}
+.postcont h2 {
+    font-weight: 600;
+}
+.postcont h3 strong {
+    font-weight: 600;
+}
+.postcont h4 strong {
+    font-weight: 600;
+}
+.postcont h5 strong {
+    font-weight: 500;
+}
+.postcont h6 strong {
+    font-weight: 500;
+}
+.postcont tr:first-child {
+    background: #B85A38;
+    color: #fff;
+    text-align: center;
+    border:2px solid #B85A38;
+    font-weight: 700;
+}
+.postcont td {
+    padding: 15px;
+}
+.postcont .schema-faq-section {
+    background: #F2EBDD;
+    padding: 20px;
+    border:1px solid #C9BEA8;
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+.postcont .schema-faq-section p {
+    margin:10px 0 0 0;
+}
+.postcont .schema-faq-section .schema-faq-question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}/* End custom CSS */

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://stonecoatedroofs.com/sitemap_index.xml
