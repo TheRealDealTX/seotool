@@ -404,14 +404,19 @@ def region_of(key):
     return "Texas"
 
 
+REGION_PHRASE = {"Dallas–Fort Worth": "the rest of Dallas–Fort Worth", "Houston & Gulf Coast": "the Gulf Coast",
+                 "Central Texas": "Central Texas", "West Texas & Panhandle": "West Texas", "East Texas": "East Texas"}
+
+
 def build_areas():
     for a in AREAS:
         trail = [("Home", "/"), ("Service Area", "/service-area/"), (a["city"], a["path"])]
         region = region_of(a["key"])
         near = [AREA[k] for k in REGIONS.get(region, []) if k != a["key"]][:10] or [AREA[k] for k in FEATURED_CITIES if k != a["key"]][:8]
         side = '<div class="side-list"><h4>Nearby service areas</h4>' + "".join(f'<a href="{n["path"]}">{n["city"]} stone coated roofs</a>' for n in near) + '<a href="/service-area/">All Texas cities →</a></div>'
-        lede = a["lede"] or f"{BRAND} installs Class 4 stone coated steel roofing across {a['city']} and {region} — every leading brand, residential and commercial, with free inspections and insurance documentation."
-        meta = f'<span>Serving <b>{a["city"]}</b> &amp; {E(region)}</span><span>Free inspections</span><span><a href="tel:{BIZ["phone_href"]}" style="color:#fff">{BIZ["phone_display"]}</a></span>'
+        around = REGION_PHRASE.get(region, "the surrounding area")
+        lede = a["lede"] or f"{BRAND} installs Class 4 stone coated steel roofing across {a['city']} and {around} — every leading brand, residential and commercial, with free inspections and insurance documentation."
+        meta = f'<span>Serving <b>{a["city"]}</b> &amp; {E(around)}</span><span>Free inspections</span><span><a href="tel:{BIZ["phone_href"]}" style="color:#fff">{BIZ["phone_display"]}</a></span>'
         graph = [crumbs_ld(trail), {
             "@type": "Service", "name": f"Stone coated steel roofing in {a['city']}, TX", "serviceType": "Stone coated steel roof installation and replacement",
             "provider": {"@id": f"{ORIGIN}/#business"}, "areaServed": {"@type": "City", "name": f"{a['city']}, TX"}, "url": f"{ORIGIN}{a['path']}"}]
@@ -645,7 +650,7 @@ def write_sitemaps():
 
 def clean_output():
     """Remove previously generated pages (everything but assets, uploads and hand-written files)."""
-    keep = {"assets", "wp-content", "index.php", "quote.php", ".user.ini"}
+    keep = {"assets", "wp-content", "index.php", "quote.php", ".user.ini", "scr-leads", "scr-config.php"}
     for child in OUT.iterdir():
         if child.name in keep:
             continue

@@ -1,7 +1,10 @@
 <?php
 // Estimate-request handler for every lead form on stonecoatedroofs.com.
-// Each request is appended to a JSON-lines file OUTSIDE the web root and emailed
-// to the address(es) in ../scr-config.php (also outside the web root), e.g.:
+// Each request is appended to scr-leads/quote-requests.php: a PHP file whose first
+// line exits, so requesting it over the web returns an empty page — the JSON lines
+// after it are only readable through the file manager. (The host does not let PHP
+// write outside public_html; a folder above it is used instead when writable.)
+// If scr-config.php exists (here or one level up) the request is also emailed:
 //   <?php return ['to' => 'leads@example.com', 'from' => 'no-reply@stonecoatedroofs.com'];
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
@@ -37,20 +40,28 @@ if ($lead['email'] !== '' && !filter_var($lead['email'], FILTER_VALIDATE_EMAIL))
     out(422, ['ok' => false, 'error' => 'That email address looks incomplete.']);
 }
 
-$private = dirname(__DIR__);                                           // the folder above public_html
-$dir = $private . '/scr-leads';
-if (!is_dir($dir)) @mkdir($dir, 0700, true);
+$dir = null;
+foreach ([dirname(__DIR__) . '/scr-leads', __DIR__ . '/scr-leads'] as $cand) {
+    if ((is_dir($cand) || @mkdir($cand, 0700, true)) && is_writable($cand)) { $dir = $cand; break; }
+}
+if ($dir === null) $dir = sys_get_temp_dir();
+$guard = "<?php http_response_code(404); exit; ?>\n";
 
 // light rate limit: 5 requests per IP per 10 minutes
-$rl = $dir . '/rate-' . md5($lead['ip']) . '.txt';
-$hits = array_filter(array_map('intval', @file($rl, FILE_IGNORE_NEW_LINES) ?: []), function ($t) { return $t > time() - 600; });
+$rl = $dir . '/rate-' . md5($lead['ip']) . '.php';
+$hits = array_filter(array_map('intval', array_slice(@file($rl, FILE_IGNORE_NEW_LINES) ?: [], 1)), function ($t) { return $t > time() - 600; });
 if (count($hits) >= 5) out(429, ['ok' => false, 'error' => 'Too many requests — please call us instead.']);
 $hits[] = time();
-@file_put_contents($rl, implode("\n", $hits));
+@file_put_contents($rl, $guard . implode("\n", $hits));
 
-$saved = @file_put_contents($dir . '/quote-requests.jsonl', json_encode($lead, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX) !== false;
+$store = $dir . '/quote-requests.php';
+if (!is_file($store)) @file_put_contents($store, $guard);
+$saved = @file_put_contents($store, json_encode($lead, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX) !== false;
 
-$cfg = @include $private . '/scr-config.php';
+$cfg = null;
+foreach ([dirname(__DIR__) . '/scr-config.php', __DIR__ . '/scr-config.php'] as $c) {
+    if (is_file($c)) { $cfg = @include $c; break; }
+}
 $sent = false;
 if (is_array($cfg) && !empty($cfg['to'])) {
     $from = $cfg['from'] ?? 'no-reply@stonecoatedroofs.com';
