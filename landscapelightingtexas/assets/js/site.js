@@ -34,7 +34,11 @@
     var open = document.body.classList.toggle('nav-open');
     toggle.setAttribute('aria-expanded', open);
     toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open && header) header.classList.remove('is-hidden');
   });
+  // Close the menu after following a link or on Escape.
+  $$('.main-nav a').forEach(function (a) { a.addEventListener('click', function () { if (document.body.classList.contains('nav-open')) toggle.click(); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && document.body.classList.contains('nav-open')) toggle.click(); });
   $$('.submenu-toggle').forEach(function (b) {
     b.addEventListener('click', function () {
       var m = b.nextElementSibling, open = !m.classList.contains('is-open');

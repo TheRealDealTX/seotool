@@ -9,7 +9,7 @@ const PHONE       = '+1 (281) 704-7210';
 const PHONE_HREF  = 'tel:+12817047210';
 const EMAIL       = 'info@landscapelightingtexas.com';
 const HOURS       = 'Mon–Fri 8am–6pm CT';
-const ASSET_VER   = '20261006';
+const ASSET_VER   = '20261006b';
 
 // Where quote requests are emailed. The form also keeps a copy on the server
 // (storage/), so nothing is lost if mail delivery is not configured.
