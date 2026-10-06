@@ -37,6 +37,7 @@ ICON = "/wp-content/uploads/2025/08/cropped-Renter-News-Site-Icon"
 DEFAULT_OG = "/assets/img/og-default.webp"
 AUTHOR = {"name": "Renter News Staff", "path": "/news/author/renter-news-staff/"}
 PER_PAGE = 24
+GA_ID = "G-5SCMGXVXTS"  # Google Analytics 4
 NOW = datetime.now(timezone.utc)
 
 # Partner offers carried over from the WordPress sidebar.
@@ -250,6 +251,15 @@ def head(page):
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(full_title)}</title>
