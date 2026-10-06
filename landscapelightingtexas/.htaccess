@@ -1,0 +1,17 @@
+# For Apache/LiteSpeed hosts. (Hostinger's H5G platform ignores .htaccess and
+# already routes unknown paths to index.php; the PHP guards cover the rest.)
+Options -Indexes
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(inc|pages|posts|storage|tests)(/|$) - [R=404,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
