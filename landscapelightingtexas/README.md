@@ -47,3 +47,21 @@ the blog, sitemap and feed automatically.
 - Quote requests go to `QUOTE_TO` in `inc/config.php` via PHP `mail()`, and a
   copy is always written to `storage/quote-*.php` (guarded files, not web-readable).
 - Prices are planning ranges and are labelled as such.
+
+## Deploying
+
+Live since 2026-10-06 on the Hostinger Agency website **UID `rs1D44oFt`**
+(plain `php-fpm`, PHP 8.4). Upload with `./deploy.sh` (its header explains the
+three File Browser credentials from `agency-hosting_files_generate-upload-url`),
+then clear the cache with `agency-hosting_cache_clear-website`.
+
+The previous WordPress website (**UID `BJyIEIRCP`**) was not deleted: the domain
+was unlinked from it and moved to the new site, so its files and database are
+intact as a fallback. To roll back, unlink the domain from `rs1D44oFt` and link
+it to `BJyIEIRCP` again. Rendered copies of every old page and the old sitemaps
+are in `../backup/landscapelightingtexas-wordpress-2026-10-06/`.
+
+The H5G platform serves existing files directly and sends unknown paths to
+`index.php`; it ignores `.htaccess` (kept for other hosts). Unknown `*.php`
+paths get the platform's own 404, so `/wp-login.php` and `/xmlrpc.php` 404
+rather than redirect.
