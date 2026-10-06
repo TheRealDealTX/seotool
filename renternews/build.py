@@ -561,7 +561,7 @@ def build_home():
 <section class="band band-weather">
   <div class="wrap wx-band" data-wx-band>
     <div><span class="kicker">Live</span><h2>Weather where you live</h2>
-      <p>Current conditions, hourly and 7-day forecasts, air quality and National Weather Service alerts for any US city.</p>
+      <p>Current conditions, hourly and 7-day forecasts and National Weather Service alerts for any US city or ZIP code.</p>
       <a class="btn btn-light" href="/weather/">Open live weather {icon("arrow", "ico ico-sm")}</a></div>
     <div class="wx-band-now" data-wx-band-now><div class="skeleton" style="height:120px"></div></div>
   </div>
@@ -828,7 +828,7 @@ def build_weather():
     <form class="wx-search" data-wx-search autocomplete="off" role="search">
       <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
       <label class="sr" for="wxq">Search a city</label>
-      <input id="wxq" type="search" placeholder="Search a city or ZIP code…" data-wx-input>
+      <input id="wxq" type="search" placeholder="Search a US city or ZIP code…" data-wx-input>
       <ul class="wx-suggest" data-wx-suggest role="listbox"></ul>
     </form>
     <button class="btn btn-ghost" data-wx-locate type="button">Use my location</button>
@@ -843,12 +843,12 @@ def build_weather():
     <section class="wx-panel"><h2>Conditions</h2><div class="wx-details" data-wx-details><div class="skeleton" style="height:320px"></div></div></section>
   </div>
   <section class="wx-panel wx-tips"><h2>Weather tips for renters</h2><div data-wx-tips></div></section>
-  <p class="wx-credit">Forecast data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Alerts: <a href="https://www.weather.gov/" target="_blank" rel="noopener">National Weather Service</a>. Updated every 10 minutes while this page is open.</p>
+  <p class="wx-credit">Forecasts, observations and alerts: <a href="https://www.weather.gov/" target="_blank" rel="noopener">NOAA National Weather Service</a> (US locations). Place search: <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> (CC BY 4.0). Updated every 10 minutes while this page is open.</p>
 </div>"""
     simple_page("/weather/", "Live Weather Forecast for Renters",
-                "Live local weather: current conditions, hourly and 7-day forecasts, air quality, UV and National Weather Service alerts for any US city, plus renter tips.",
+                "Live local weather from the National Weather Service: current conditions, hourly and 7-day forecasts and active alerts for any US city or ZIP code, plus renter tips.",
                 inner, h1="Live Weather", wide=True, active="/weather/",
-                lede="Current conditions, hourly and 7-day forecasts, air quality and NWS alerts for any US city.",
+                lede="Current conditions, hourly and 7-day forecasts and active alerts from the National Weather Service for any US city or ZIP code.",
                 scripts=f'<script src="/assets/js/weather.js?v={ASSET_V}" defer></script>\n')
 
 

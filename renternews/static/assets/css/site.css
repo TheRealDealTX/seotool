@@ -580,6 +580,7 @@ input[type="range"] { width: 100%; accent-color: var(--brand-2); height: 28px; }
 .wxh-temp { font-size: clamp(64px, 10vw, 104px); font-weight: 800; line-height: .9; letter-spacing: -.05em; }
 .wxh-desc { font-size: 20px; font-weight: 700; }
 .wxh-sub { opacity: .85; font-size: 14.5px; }
+.wxh-detail { margin: 18px 0 0; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.18); font-size: 15px; opacity: .92; max-width: 90ch; }
 .wxh-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .wxh-stats div { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.16); border-radius: 14px; padding: 12px 14px; backdrop-filter: blur(6px); }
 .wxh-stats small { display: block; opacity: .8; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }

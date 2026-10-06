@@ -37,7 +37,7 @@ titles, descs = {}, {}
 pages = glob.glob(os.path.join(PUB, "**/*.html"), recursive=True)
 for f in pages:
     rel = "/" + os.path.relpath(f, PUB)
-    if "/wp-content/" in rel:
+    if "/wp-content/" in rel or re.match(r"/google[0-9a-f]+\.html$", rel):
         continue
     h = open(f, encoding="utf-8").read()
     if len(re.findall(r"<h1[\s>]", h)) != 1:

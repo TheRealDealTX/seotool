@@ -105,20 +105,23 @@
       .then(function () { btn.disabled = false; });
   });
 
-  /* ---------------- Weather helpers (shared with weather.js) ---------------- */
-  var WMO = {
-    0: ["Clear sky", "sun"], 1: ["Mainly clear", "sun"], 2: ["Partly cloudy", "partly"], 3: ["Overcast", "cloud"],
-    45: ["Fog", "fog"], 48: ["Freezing fog", "fog"], 51: ["Light drizzle", "rain"], 53: ["Drizzle", "rain"], 55: ["Heavy drizzle", "rain"],
-    56: ["Freezing drizzle", "rain"], 57: ["Freezing drizzle", "rain"], 61: ["Light rain", "rain"], 63: ["Rain", "rain"], 65: ["Heavy rain", "rain"],
-    66: ["Freezing rain", "rain"], 67: ["Freezing rain", "rain"], 71: ["Light snow", "snow"], 73: ["Snow", "snow"], 75: ["Heavy snow", "snow"],
-    77: ["Snow grains", "snow"], 80: ["Rain showers", "rain"], 81: ["Rain showers", "rain"], 82: ["Violent showers", "rain"],
-    85: ["Snow showers", "snow"], 86: ["Heavy snow showers", "snow"], 95: ["Thunderstorm", "storm"], 96: ["Thunderstorm with hail", "storm"], 99: ["Severe thunderstorm", "storm"]
+  /* ---------------- Weather (National Weather Service, api.weather.gov) ---------------- */
+  // NWS icon codes -> our animated icon kinds
+  var NWS_KIND = {
+    skc: "sun", few: "sun", hot: "sun", wind_skc: "sun", wind_few: "sun",
+    sct: "partly", bkn: "partly", wind_sct: "partly", wind_bkn: "partly",
+    ovc: "cloud", wind_ovc: "cloud", cold: "cloud",
+    rain: "rain", rain_showers: "rain", rain_showers_hi: "rain", fzra: "rain", rain_fzra: "rain", rain_sleet: "rain",
+    tsra: "storm", tsra_sct: "storm", tsra_hi: "storm", tornado: "storm", hurricane: "storm", tropical_storm: "storm",
+    snow: "snow", sleet: "snow", blizzard: "snow", rain_snow: "snow", snow_sleet: "snow", snow_fzra: "snow",
+    fog: "fog", haze: "fog", smoke: "fog", dust: "fog"
   };
-  function wxInfo(code, isDay) {
-    var w = WMO[code] || ["—", "cloud"], kind = w[1];
+  function wxInfo(iconUrl, text) {
+    var m = /\/icons\/land\/(day|night)\/([a-z_]+)/.exec(iconUrl || ""), isDay = !m || m[1] === "day";
+    var kind = (m && NWS_KIND[m[2]]) || "cloud";
     if (!isDay && (kind === "sun" || kind === "partly")) kind = kind === "sun" ? "moon" : "partlynight";
     var mood = { sun: "clear", partly: "clear", moon: "night", partlynight: "night", cloud: "cloud", fog: "fog", rain: "rain", snow: "snow", storm: "storm" }[kind];
-    return { text: w[0], kind: kind, mood: mood };
+    return { text: text || "", kind: kind, mood: mood, isDay: isDay };
   }
   function wxIcon(kind) {
     var sun = '<g class="sun-rays" stroke="#ffcf3f" stroke-width="3" stroke-linecap="round"><path d="M32 6v6M32 52v6M6 32h6M52 32h6M13.6 13.6l4.2 4.2M46.2 46.2l4.2 4.2M13.6 50.4l4.2-4.2M46.2 17.8l4.2-4.2"/></g><circle cx="32" cy="32" r="11" fill="#ffcf3f"/>';
@@ -138,47 +141,100 @@
     }
     return '<svg class="wx-ico" viewBox="0 0 64 64" aria-hidden="true">' + s + "</svg>";
   }
-  var DEFAULT_PLACE = { name: "New York", admin: "New York", lat: 40.7143, lon: -74.006 };
-  function getPlace() { try { return JSON.parse(store("rn-place")) || DEFAULT_PLACE; } catch (e) { return DEFAULT_PLACE; } }
+  var DEFAULT_PLACE = { name: "New York", admin: "NY", lat: 40.7143, lon: -74.006 };
+  function getPlace() { try { var p = JSON.parse(store("rn-place")); return p && p.lat ? p : DEFAULT_PLACE; } catch (e) { return DEFAULT_PLACE; } }
   function setPlace(p) { store("rn-place", JSON.stringify(p)); }
   function getUnit() { return store("rn-unit") || "f"; }
-  function forecastURL(p, unit, extra) {
-    var u = unit === "c";
-    return "https://api.open-meteo.com/v1/forecast?latitude=" + p.lat + "&longitude=" + p.lon +
-      "&current=temperature_2m,apparent_temperature,relative_humidity_2m,is_day,weather_code,wind_speed_10m,wind_direction_10m,wind_gusts_10m,pressure_msl,precipitation,cloud_cover,visibility,uv_index,dew_point_2m" +
-      "&hourly=temperature_2m,precipitation_probability,weather_code,is_day" +
-      "&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum,sunrise,sunset,uv_index_max,wind_speed_10m_max" +
-      "&temperature_unit=" + (u ? "celsius" : "fahrenheit") + "&wind_speed_unit=" + (u ? "kmh" : "mph") +
-      "&precipitation_unit=" + (u ? "mm" : "inch") + "&timezone=auto&forecast_days=7" + (extra || "");
-  }
-  var cache = {};
-  function fetchForecast(p, unit) {
-    var key = p.lat + "," + p.lon + unit;
-    if (!cache[key]) cache[key] = fetch(forecastURL(p, unit)).then(function (r) { if (!r.ok) throw new Error("wx"); return r.json(); });
-    return cache[key];
-  }
-  window.RNWX = { info: wxInfo, icon: wxIcon, getPlace: getPlace, setPlace: setPlace, getUnit: getUnit, setUnit: function (u) { store("rn-unit", u); }, fetch: fetchForecast, store: store };
+  function ss(k, v) { try { if (v === undefined) return JSON.parse(sessionStorage.getItem(k)); sessionStorage.setItem(k, JSON.stringify(v)); } catch (e) { return null; } }
 
-  function dayName(iso, i) { return i === 0 ? "Today" : new Date(iso + "T12:00").toLocaleDateString("en-US", { weekday: "short" }); }
+  var NWS = "https://api.weather.gov";
+  function getJSON(u) {
+    return fetch(u, { headers: { Accept: "application/geo+json" } }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+  function retry(u) { return getJSON(u).catch(function () { return new Promise(function (r) { setTimeout(r, 900); }).then(function () { return getJSON(u); }); }); }
+  function pointsFor(p) {
+    var key = "rn-pt:" + (+p.lat).toFixed(3) + "," + (+p.lon).toFixed(3), c = null;
+    try { c = JSON.parse(store(key)); } catch (e) {}
+    if (c && Date.now() - c.ts < 7 * 864e5) return Promise.resolve(c);
+    return retry(NWS + "/points/" + (+p.lat).toFixed(4) + "," + (+p.lon).toFixed(4)).then(function (d) {
+      var q = d.properties, rl = q.relativeLocation && q.relativeLocation.properties;
+      var pt = { ts: Date.now(), forecast: q.forecast, hourly: q.forecastHourly, stations: q.observationStations, tz: q.timeZone,
+        city: rl && rl.city, state: rl && rl.state };
+      store(key, JSON.stringify(pt)); return pt;
+    });
+  }
+  var C = function (f) { return f == null ? null : f * 1.8 + 32; };   // °C -> °F
+  // Normalized model, always in °F / mph / inHg-free units (hPa, miles); views convert.
+  function loadWeather(p, fresh) {
+    var ck = "rn-wx:" + (+p.lat).toFixed(3) + "," + (+p.lon).toFixed(3), hit = !fresh && ss(ck);
+    if (hit && Date.now() - hit.ts < 10 * 60000) return Promise.resolve(hit);
+    return pointsFor(p).then(function (pt) {
+      var obs = retry(pt.stations).then(function (s) {
+        var st = s.features && s.features[0]; if (!st) return null;
+        return retry(st.id + "/observations/latest").then(function (o) { o.properties.stationName = st.properties.name; return o.properties; });
+      }).catch(function () { return null; });
+      return Promise.all([retry(pt.forecast), retry(pt.hourly), obs]).then(function (r) {
+        var periods = r[0].properties.periods, hours = r[1].properties.periods, o = r[2];
+        var hourly = hours.slice(0, 25).map(function (h) {
+          return { t: h.startTime, temp: h.temperature, pop: (h.probabilityOfPrecipitation || {}).value || 0, icon: h.icon, text: h.shortForecast,
+            hum: (h.relativeHumidity || {}).value, wind: parseInt(h.windSpeed, 10) || 0, dir: h.windDirection, dew: C((h.dewpoint || {}).value) };
+        });
+        var daily = [];
+        periods.forEach(function (q, i) {
+          if (q.isDaytime) {
+            var night = periods[i + 1] && !periods[i + 1].isDaytime ? periods[i + 1] : null;
+            daily.push({ date: q.startTime, name: q.name, hi: q.temperature, lo: night ? night.temperature : null, icon: q.icon, text: q.shortForecast,
+              pop: Math.max((q.probabilityOfPrecipitation || {}).value || 0, night ? (night.probabilityOfPrecipitation || {}).value || 0 : 0),
+              wind: q.windSpeed, detail: q.detailedForecast, nightDetail: night && night.detailedForecast });
+          } else if (i === 0) {
+            daily.push({ date: q.startTime, name: q.name, hi: null, lo: q.temperature, icon: q.icon, text: q.shortForecast,
+              pop: (q.probabilityOfPrecipitation || {}).value || 0, wind: q.windSpeed, detail: q.detailedForecast });
+          }
+        });
+        var h0 = hourly[0], fresh = o && o.temperature && o.temperature.value != null && Date.now() - new Date(o.timestamp) < 3 * 3600e3;
+        var now = {
+          temp: fresh ? C(o.temperature.value) : h0.temp,
+          text: fresh && o.textDescription ? o.textDescription : h0.text,
+          icon: fresh && o.icon ? o.icon : h0.icon,
+          feels: fresh ? C((o.heatIndex || {}).value != null ? o.heatIndex.value : (o.windChill || {}).value != null ? o.windChill.value : o.temperature.value) : h0.temp,
+          hum: fresh && o.relativeHumidity.value != null ? o.relativeHumidity.value : h0.hum,
+          dew: fresh && o.dewpoint.value != null ? C(o.dewpoint.value) : h0.dew,
+          wind: fresh && o.windSpeed.value != null ? o.windSpeed.value / 1.609 : h0.wind,
+          dirDeg: fresh ? o.windDirection.value : null, dir: h0.dir,
+          gust: fresh && o.windGust.value != null ? o.windGust.value / 1.609 : null,
+          pressure: fresh && o.barometricPressure.value != null ? o.barometricPressure.value / 100 : null,
+          vis: fresh && o.visibility.value != null ? o.visibility.value / 1609.34 : null,
+          time: fresh ? o.timestamp : h0.t, station: fresh ? o.stationName : null
+        };
+        var model = { ts: Date.now(), tz: pt.tz, city: pt.city, state: pt.state, now: now, hourly: hourly, daily: daily };
+        ss(ck, model); return model;
+      });
+    });
+  }
+  function temp(f, unit) { return f == null ? "–" : Math.round(unit === "c" ? (f - 32) / 1.8 : f) + "°"; }
+  window.RNWX = { info: wxInfo, icon: wxIcon, getPlace: getPlace, setPlace: setPlace, getUnit: getUnit,
+    setUnit: function (u) { store("rn-unit", u); }, load: loadWeather, temp: temp, points: pointsFor, getJSON: retry, store: store };
 
   /* Header pill, sidebar card and home band */
   var mini = $("[data-wx-mini]"), card = $("[data-wx-card]"), band = $("[data-wx-band-now]");
   if (mini || card || band) {
     var place = getPlace(), unit = getUnit();
-    fetchForecast(place, unit).then(function (d) {
-      var c = d.current, inf = wxInfo(c.weather_code, c.is_day), t = Math.round(c.temperature_2m) + "°";
+    loadWeather(place).then(function (d) {
+      var c = d.now, inf = wxInfo(c.icon, c.text), t = temp(c.temp, unit);
       if (mini) mini.innerHTML = wxIcon(inf.kind) + "<span>" + place.name + " <b>" + t + "</b></span>";
       var days = function (n) {
-        var h = "";
-        for (var i = 1; i <= n; i++) h += "<div>" + dayName(d.daily.time[i], i) + wxIcon(wxInfo(d.daily.weather_code[i], 1).kind) +
-          "<b>" + Math.round(d.daily.temperature_2m_max[i]) + "°</b> " + Math.round(d.daily.temperature_2m_min[i]) + "°</div>";
+        var h = "", list = d.daily.slice(1, n + 1);
+        list.forEach(function (x) {
+          h += "<div>" + x.name.slice(0, 3) + wxIcon(wxInfo(x.icon).kind) + "<b>" + temp(x.hi, unit) + "</b> " + temp(x.lo, unit) + "</div>";
+        });
         return '<div class="wxc-days">' + h + "</div>";
       };
       var now = '<div class="wxc-now">' + wxIcon(inf.kind) + '<div><div class="wxc-temp">' + t + '</div><div class="wxc-city">' + place.name +
-        '</div><div class="wxc-desc">' + inf.text + " · Feels " + Math.round(c.apparent_temperature) + "°</div></div></div>";
+        '</div><div class="wxc-desc">' + inf.text + " · Feels " + temp(c.feels, unit) + "</div></div></div>";
       if (card) { card.dataset.mood = inf.mood; $(".wx-card-body", card).innerHTML = now + days(4); }
       if (band) band.innerHTML = now + days(6);
     }).catch(function () {
+      if (mini) mini.innerHTML = "<span>Weather</span>";
       if (card) $(".wx-card-body", card).innerHTML = '<p>Weather is unavailable right now. <a href="/weather/" style="color:#fff;text-decoration:underline">Try the weather page</a>.</p>';
       if (band) band.innerHTML = "<p>Live weather is unavailable right now.</p>";
     });

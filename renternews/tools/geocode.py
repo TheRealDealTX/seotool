@@ -1,17 +1,20 @@
 #!/usr/bin/env python3
-"""Fill content/geo.json with coordinates for every article's "city" field.
+"""Fill content/geo.json with coordinates for every article's "city" field
+("City, ST"), using the offline GeoNames list built by tools/cities.py.
+Unknown cities are printed so you can add them to content/geo.json by hand.
 
-Uses the Open-Meteo geocoding API (no key). Results are cached in
-content/geo.json and committed, so build.py never needs the network.
     python3 tools/geocode.py
 """
-import json, os, sys, urllib.parse, urllib.request
+import json, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from build import load_articles  # noqa: E402
 
-STATES = {"AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut","DE":"Delaware","DC":"District of Columbia","FL":"Florida","GA":"Georgia","HI":"Hawaii","ID":"Idaho","IL":"Illinois","IN":"Indiana","IA":"Iowa","KS":"Kansas","KY":"Kentucky","LA":"Louisiana","ME":"Maine","MD":"Maryland","MA":"Massachusetts","MI":"Michigan","MN":"Minnesota","MS":"Mississippi","MO":"Missouri","MT":"Montana","NE":"Nebraska","NV":"Nevada","NH":"New Hampshire","NJ":"New Jersey","NM":"New Mexico","NY":"New York","NC":"North Carolina","ND":"North Dakota","OH":"Ohio","OK":"Oklahoma","OR":"Oregon","PA":"Pennsylvania","RI":"Rhode Island","SC":"South Carolina","SD":"South Dakota","TN":"Tennessee","TX":"Texas","UT":"Utah","VT":"Vermont","VA":"Virginia","WA":"Washington","WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","PR":"Puerto Rico"}
+cities = json.load(open(os.path.join(ROOT, "static/assets/data/us-cities.json")))
+index = {}
+for name, st, lat, lon, _pop in cities:          # list is sorted by population: first wins
+    index.setdefault((name.lower(), st), [lat, lon])
 
 path = os.path.join(ROOT, "content/geo.json")
 geo = json.load(open(path)) if os.path.exists(path) else {}
@@ -20,12 +23,10 @@ for a in load_articles():
     if not city or city in geo:
         continue
     name, _, st = city.rpartition(", ")
-    q = urllib.parse.urlencode({"name": name, "count": 10, "country": "US", "format": "json"})
-    res = json.load(urllib.request.urlopen("https://geocoding-api.open-meteo.com/v1/search?" + q)).get("results", [])
-    hit = next((r for r in res if r.get("admin1") == STATES.get(st)), None)
+    hit = index.get((name.lower(), st))
     if hit:
-        geo[city] = [round(hit["latitude"], 4), round(hit["longitude"], 4)]
-        print("ok  ", city, geo[city])
+        geo[city] = hit
+        print("ok  ", city, hit)
     else:
-        print("MISS", city)
+        print("MISS", city, "- add [lat, lon] to content/geo.json by hand")
 json.dump(dict(sorted(geo.items())), open(path, "w"), indent=1)

@@ -112,7 +112,7 @@ PAGES = {
     "terms-of-service-desc": "The terms that govern your use of the Renter News website, articles, calculators and other features.",
     "privacy-policy-append": """
 <h2>9. Weather, maps and browser storage</h2>
-<p>Our <a href="/weather/">live weather</a> page and the weather widget fetch forecasts directly from your browser from Open-Meteo and, for US locations, alerts from the National Weather Service. If you choose "Use my location", your browser asks for permission and the coordinates are sent only to those weather services, never to Renter News. The city you pick, your theme and your checklist progress are saved in your browser's local storage and can be cleared at any time in your browser settings.</p>
+<p>Our <a href="/weather/">live weather</a> page and the weather widget fetch forecasts, observations and alerts directly from your browser from the National Weather Service (api.weather.gov). If you choose "Use my location", your browser asks for permission and the coordinates are sent only to the National Weather Service, never to Renter News. The city you pick, your theme and your checklist progress are saved in your browser's local storage and can be cleared at any time in your browser settings.</p>
 <p>The <a href="/fire-map/">fire map</a> loads map tiles from OpenStreetMap. Our calculators run entirely in your browser; the numbers you enter are not sent to us. Fonts are served by Google Fonts, and some older articles embed content from YouTube, Google Maps, X (Twitter) or Instagram, which may set their own cookies.</p>
 <h2>10. Sponsored links</h2>
 <p>Partner offers labeled "Sponsored" link to third-party sites that may track the referral. Their privacy policies apply once you leave Renter News.</p>

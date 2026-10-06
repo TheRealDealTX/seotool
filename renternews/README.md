@@ -18,7 +18,7 @@ deliverable**: upload its contents to `public_html`.
 | --- | --- |
 | **51 articles** | The 28 original WordPress posts (same `/news/<slug>/` URLs, same images under `/wp-content/uploads/`), plus 23 new, sourced articles from Aug–Oct 2026: 8 apartment fire/safety reports, 8 rent-market and policy stories, 7 renter guides |
 | **Sections** | `/news/` plus `/news/category/{fire,safety,rent-prices,housing-policy,tenant-rights,guides}/`, paginated WordPress-style (`/page/2/`) |
-| **Live weather** | `/weather/`: city search, geolocation, °F/°C, current conditions with animated sky, 24-hour chart, 7-day forecast, AQI, NWS alerts and renter tips (Open-Meteo + api.weather.gov, no keys). A mini widget sits in the top bar, sidebar and homepage |
+| **Live weather** | `/weather/`: US city and ZIP search, geolocation, °F/°C, current station observations with animated sky, 24-hour chart, 7-day forecast, NWS alerts and renter tips — all from the National Weather Service (api.weather.gov, free, no key). City/ZIP search runs offline on GeoNames lists in `static/assets/data/` (rebuild with `tools/cities.py`). A mini widget sits in the top bar, sidebar and homepage |
 | **Renter tools** | `/tools/`: rent affordability, roommate rent split, rent increase, move-in cost, rent vs. buy, renters insurance coverage, lease notice date (.ics export), fire safety checklist |
 | **Fire map** | `/fire-map/`: Leaflet + OpenStreetMap map of every incident covered, filterable by type and year |
 | **Search** | `/search/?q=` over a JSON index; old `/?s=` links redirect there |
