@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.last-deploy
+cebudavao-data/
+public/api/_data/

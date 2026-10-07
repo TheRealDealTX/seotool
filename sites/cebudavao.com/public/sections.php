@@ -1,0 +1,3 @@
+<?php
+// Generated: bare legacy section paths => hub.
+return ["food"=>"/category/food/","travel"=>"/category/travel/","culture"=>"/category/culture/","music"=>"/category/entertainment/","movies"=>"/category/entertainment/","entertainment"=>"/category/entertainment/","sports"=>"/category/sports/","news"=>"/news/","technology"=>"/category/tech/","tech"=>"/category/tech/","beach"=>"/category/travel/","hotels"=>"/category/travel/","events"=>"/category/culture/","festivals"=>"/category/culture/","finance"=>"/category/money/","real-estate"=>"/category/money/","jobs"=>"/category/money/","word-meanings"=>"/tools/bisaya-dictionary/","lifestyle"=>"/category/lifestyle/","health"=>"/category/lifestyle/","books"=>"/category/lifestyle/"];

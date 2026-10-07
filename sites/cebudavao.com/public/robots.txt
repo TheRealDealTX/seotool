@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /search/
+Disallow: /home.html
+
+Sitemap: https://cebudavao.com/sitemap.xml

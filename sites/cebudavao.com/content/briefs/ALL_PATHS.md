@@ -1,0 +1,133 @@
+# Every post path on the site (for internal linking)
+
+- `/events/kung-hei-fat-choy/` (culture) — Kung Hei Fat Choi vs Kung Hei Fat Choy vs Gong Xi Fa Cai
+- `/festivals/what-makes-the-sinulog-2012-festival-the-number-one-festival-in-the-philippines/` (culture) — Sinulog Festival guide
+- `/festivals/whats-so-interesting-about-the-kadayawan-festival/` (culture) — Kadayawan Festival guide
+- `/events/what-is-edsa-revolution/` (culture) — What was the EDSA People Power Revolution (Feb 22-25, 1986)
+- `/culture/cebus-and-davaos-different-fish/` (culture) — Fish names in Cebuano/Bisaya, Tagalog and English (lapu-lapu = grouper, bangus = milkfish,
+- `/culture/gwapo/` (culture) — Gwapo meaning (handsome), gwapa, guwapo, maganda/pogi/gwapito/gwapa kaayo, how to complime
+- `/culture/meaning-kalata-oi-tagalog-english/` (culture) — Oi/Uy meaning in Bisaya & Tagalog, and 'kalagot/kalain' type expressions of annoyance ('pi
+- `/word-meanings/meaning-wafa-tagalog-english/` (culture) — Wafa / wapa meaning in Bisaya (wa pa = not yet), plus 'ganda', 'ang ganda mo' meaning; com
+- `/word-meanings/meaning-kumbati-tagalog-english-2/` (culture) — Kumbati / kumbati meaning in Bisaya (to argue/fight back? — be careful
+- `/culture/meaning-of-nalibog-in-tagalog-and-english/` (culture) — Nalibog
+- `/personal/cebuano-expression-kayasa-mean/` (culture) — Kayasa / 'ka-yasa' meaning as a Cebuano expression of exasperation; list of common Cebuano
+- `/culture/what-does-pabebe-mean/` (culture) — Pabebe meaning (acting cute/baby-like), origin of the 2015 'Pabebe Girls' viral moment (me
+- `/culture/the-trouble-with-filipino-tongues/` (culture) — Languages of Cebu and Davao
+- `/culture/who-wants-tuko/` (culture) — The tuko (tokay gecko) in the Philippines
+- `/culture/how-to-court-a-cebuana-and-win-her-heart/` (culture) — Respectful guide to dating and courtship culture in Cebu (panliligaw traditions, meeting t
+- `/culture/list-of-personalities-from-cebu-most-people-dont-know-about/` (culture) — Famous people from Cebu
+- `/travel/destinations/cebu-and-davao-their-differences/` (travel) — Cebu vs Davao
+- `/guitars/guitars-in-cebu-and-guitars-all-over-the-world/` (culture) — Cebu guitars
+- `/food/secret-ingredients-of-cebu-lechon-revealed/` (food) — Cebu lechon
+- `/food/lechon-paksiw-roasted-suckling-pig-stew/` (food) — Lechon paksiw recipe (type
+- `/food/pinoy-barbecue-recipe/` (food) — Filipino pork barbecue recipe with banana ketchup-soy-7up marinade and basting sauce (type
+- `/food/my-favorite-cebu-siomai/` (food) — How to make siomai (type
+- `/food/kinilaw-na-malasugi-davao-style/` (food) — Kinilaw recipe Davao style (type
+- `/food/utan-bisaya-davao-style/` (food) — Utan Bisaya recipe (type
+- `/food/pritong-talakitok-fried-trevally/` (food) — How to cook talakitok (trevally) — fried talakitok recipe plus escabeche Bisaya style (typ
+- `/food/kitang-or-danggit-or-samaral-rabbitfish-or-spinefoot/` (food) — Samaral/danggit/kitang = rabbitfish (spinefoot); dried danggit as Cebu pasalubong; recipe 
+- `/food/pork-lomo-with-tomatoes-braised-pork-tenderloin-with-tomatoes/` (food) — Pork lomo (tenderloin) braised with tomatoes recipe, Filipino style (type
+- `/food/inihaw-na-bangus-or-sinugbang-bangus-grilled-milkfish/` (food) — Inihaw na bangus / sinugbang bangus recipe
+- `/food/how-to-make-puso-in-cebu/` (food) — Puso (hanging rice) — what it is, how to weave the coconut leaf pouch, how to cook (type
+- `/food/adobong-manok-baboy-recipe/` (food) — Chicken and pork adobo recipe (type
+- `/food/make-batchoy-davao-style/` (food) — Batchoy recipe (type
+- `/food/5-best-filipino-soups-to-eat-on-rainy-days/` (food) — 5+ Filipino soups for rainy days
+- `/food/sinigang-na-lapu-lapu-davao-style/` (food) — Sinigang na lapu-lapu (grouper) recipe (type
+- `/food/chicken-curry-pinoy-style/` (food) — Filipino chicken curry recipe with coconut milk, potatoes, carrots, bell pepper (type
+- `/food/bicol-express-davao-style/` (food) — Bicol Express recipe (type
+- `/food/how-to-grow-basil-in-the-philippines/` (lifestyle) — How to grow sweet basil and Thai basil in the Philippines climate
+- `/food/the-delectable-food-in-davao/` (food) — Davao food guide
+- `/food/the-cheapest-and-most-delicious-food-in-cebu/` (food) — Cheap and delicious Cebu food
+- `/food/boodle-experience-blackbeards-seafood-island/` (food) — What is a boodle fight (military origin, kamayan), how to set one up at home, food list, e
+- `/restaurants-2/top-ten-restaurants-in-davao/` (food) — Where to eat in Davao
+- `/music/complete-list-of-rock-bands-and-pop-bands-in-the-philippines-from-the-60s-to-present/` (entertainment) — Big list of Filipino (OPM) rock and pop bands by decade
+- `/music/complete-list-of-bisrock-bands/` (entertainment) — Bisrock
+- `/music/rock-singers-who-use-their-noses-when-they-sing/` (entertainment) — Nasal singing explained
+- `/movies/cebu-cinema-schedule/` (entertainment) — Cebu cinemas guide
+- `/movies/davao-cinema-schedule-what-movies-to-watch-this-week/` (entertainment) — Davao cinemas guide
+- `/entertainment/top-actors-who-played-batman-role/` (entertainment) — Every actor who played Batman in live action (Lewis Wilson 1943, Robert Lowery 1949, Adam 
+- `/entertainment/what-makes-denzel-washingtons-face-so-perfect/` (lifestyle) — Facial symmetry explained
+- `/books/different-seasons-review/` (lifestyle) — Review of Stephen King's Different Seasons (1982)
+- `/books/how-philippine-literature-differ-from-american-literature/` (culture) — Philippine literature vs American literature
+- `/travel/tips/how-to-get-to-plantation-bay-in-mactan/` (travel) — How to get to Plantation Bay Resort and Spa in Marigondon, Mactan from the airport/Cebu Ci
+- `/beach/en-route-to-the-real-beaches-of-davao-3/` (travel) — Beaches near Davao City
+- `/beach/list-of-resort-destinations-in-davao/` (travel) — Resorts in Davao and Samal
+- `/beach/pearl-farm-davao/` (travel) — Pearl Farm Beach Resort, Samal
+- `/beach/paradise-resort/` (travel) — Paradise Island Park & Beach Resort, Samal
+- `/travel/tips/how-to-reach-the-samal-island-in-davao/` (travel) — How to get to Samal Island from Davao City
+- `/travel/destinations/top-ten-summer-destinations-in-davao/` (travel) — Top Davao tourist spots
+- `/travel/destinations/cebu-tourist-spots/` (travel) — Top Cebu tourist spots
+- `/travel/tips/dangerous-places-davao-avoid/` (travel) — Is Davao safe for tourists? Davao's reputation for safety, city rules (smoking ban, firecr
+- `/travel/tips/how-to-reach-cebu-from-davao-by-land/` (travel) — Davao to Cebu by land and sea
+- `/travel/tips/sea-travel-from-cebu-to-boracay/` (travel) — Cebu to Boracay
+- `/travel/tips/air-sea-land-travel-from-manila-to-boracay/` (travel) — Manila to Boracay by air (Caticlan vs Kalibo), and by land+sea (bus/RoRo via Batangas–Cala
+- `/travel/tips/difference-between-sea-and-land-travel-from-manila-to-surigao/` (travel) — Manila to Surigao/Siargao
+- `/travel/tips/hotels-near-davao-airport/` (travel) — Where to stay near Davao International Airport (Francisco Bangoy)
+- `/hotels/hotels-in-davao-under-1000-pesos-a-night/` (travel) — Budget stays in Davao
+- `/travel/philippine-passport-requirements/` (travel) — DFA passport requirements for new applicants and renewal
+- `/travel/baggage-items-allowed-and-prohibited-on-a-flight-by-the-tsa/` (travel) — What you can and can't bring on flights in the Philippines
+- `/travel/flights-travel/cheap-flights-in-the-philippines/` (travel) — How to find cheap flights in the Philippines
+- `/travel/flights-travel/philippine-airlines-history/` (travel) — History of Philippine Airlines
+- `/travel/how-to-get-to-simala/` (travel) — How to get to Simala Shrine (Monastery of the Holy Eucharist) in Lindogon, Sibonga from Ce
+- `/travel/tips/how-to-get-to-eden-nature-park/` (travel) — How to get to Eden Nature Park & Resort in Toril, Davao
+- `/travel/tips/how-to-go-to-philippine-eagle-center/` (travel) — How to get to the Philippine Eagle Center in Malagos, Calinan
+- `/travel/tips/how-to-get-to-malagos-garden-resort/` (travel) — How to get to Malagos Garden Resort (Baguio District, Calinan)
+- `/travel/tips/how-to-get-to-magellans-cross/` (travel) — How to get to Magellan's Cross in downtown Cebu City (beside Basilica del Santo Niño)
+- `/travel/tips/how-to-reach-bantayan-island/` (travel) — How to get to Bantayan Island from Cebu City
+- `/travel/tips/how-to-go-to-isla-reta-beach-resort/` (travel) — How to get to Isla Reta Beach Resort on Talikud Island
+- `/travel/most-beautiful-island-ph-coron-palawan/` (travel) — Coron, Palawan travel guide
+- `/travel/taxi-procedure-davao-international-airport/` (travel) — Davao airport taxi guide
+- `/travel/yellow-taxis-at-mactan-international-airport/` (travel) — Mactan-Cebu Airport taxis
+- `/travel/destinations/marahan-in-marilog-district/` (travel) — Marilog District, Davao City
+- `/travel/tips/how-to-reach-the-highest-peak-in-the-philippines/` (travel) — Climbing Mount Apo (2,954 m), highest peak in the Philippines
+- `/travel/mileage-from-to-distance-between-cities/` (travel) — Distance between Philippine cities
+- `/fun-quizzes/name-these-philippine-travel-destinations/` (travel) — Intro + {{widget
+- `/real-estate/apartments-for-rent-in-cebu/` (money) — Renting an apartment in Cebu
+- `/real-estate/houses-for-rent-in-davao/` (money) — Renting a house or apartment in Davao
+- `/finance/updated-complete-list-of-banks-and-adresses-in-cebu/` (money) — Banks in Cebu
+- `/finance/bpi-atm-card-blocked-after-entering-correct-pin-three-times/` (money) — BPI card blocked or captured
+- `/jobs/updated-list-of-call-centers-in-cebu/` (money) — BPO/call center jobs in Cebu
+- `/travel/tips/find-jobs-in-davao/` (money) — How to find jobs in Davao
+- `/services/where-to-pay-water-bill-in-davao-city/` (money) — Where and how to pay your Davao City Water District bill
+- `/business/ayosdito/` (tech) — What happened to AyosDito? It merged with Sulit into OLX Philippines (around 2014) — hedge
+- `/news/superbalita-cebu/` (news) — SunStar Superbalita Cebu explained (Cebuano-language tabloid of SunStar), where to read it
+- `/news/davao-sun-star/` (news) — SunStar Davao and other Davao news sources (Mindanao Times, Edge Davao, MindaNews, GMA Reg
+- `/history/things-you-need-to-know-about-the-spratly-islands/` (news) — Spratly Islands & West Philippine Sea explainer
+- `/world-news/shocking-philippines-richest-country-world/` (news) — Fact check
+- `/whats-new/list-of-31-fake-news-sites-in-the-philippines/` (news) — How to spot fake news in the Philippines
+- `/personal/brothers-simian-crease-hands/` (lifestyle) — Simian crease (single transverse palmar crease)
+- `/health/10-signs-ovarian-cancer-women/` (lifestyle) — Ovarian cancer warning signs (bloating, pelvic pain, feeling full quickly, urinary urgency
+- `/news/pagasa-typhoon-signals-explained/` (news) — PAGASA Tropical Cyclone Wind Signals 1-5 explained, what to do at each level, rainfall war
+- `/news/cclex-cebu-cordova-bridge-guide/` (news) — Cebu-Cordova Link Expressway (CCLEX)
+- `/news/samal-island-davao-bridge-update/` (news) — Samal Island-Davao City Connector (SIDC) bridge explainer
+- `/news/etravel-philippines-registration-guide/` (travel) — eTravel Philippines
+- `/news/philsys-national-id-guide/` (money) — Philippine National ID (PhilSys)
+- `/travel/moalboal-sardine-run-guide/` (travel) — Moalboal guide
+- `/travel/kawasan-falls-canyoneering-badian/` (travel) — Kawasan Falls & Badian canyoneering guide
+- `/travel/oslob-whale-sharks-ethics/` (travel) — Oslob whale shark watching
+- `/travel/bohol-day-trip-from-cebu/` (travel) — Bohol from Cebu
+- `/travel/siargao-travel-guide/` (travel) — Siargao travel guide
+- `/travel/camiguin-island-guide/` (travel) — Camiguin island guide
+- `/travel/best-time-to-visit-cebu-and-davao/` (travel) — Best time to visit Cebu and Davao month by month
+- `/travel/cebu-itinerary-3-5-days/` (travel) — Cebu itinerary
+- `/travel/davao-itinerary-3-days/` (travel) — Davao 3-day itinerary
+- `/travel/digital-nomad-guide-cebu-davao/` (money) — Digital nomad guide to Cebu and Davao
+- `/food/davao-durian-guide/` (food) — Durian in Davao
+- `/food/cebu-street-food-guide/` (food) — Cebu street food
+- `/food/sutukil-mactan-explained/` (food) — Sutukil explained (sugba-tuwa-kilaw
+- `/food/filipino-pasalubong-guide-cebu-davao/` (food) — Best pasalubong from Cebu (dried mangoes, danggit, otap, rosquillos, chicharon from Carcar
+- `/sports/basketball-in-the-philippines-pba-uaap-mpbl/` (sports) — Basketball in the Philippines explained
+- `/sports/cebu-davao-boxing-legends/` (sports) — Boxing in Cebu and Mindanao
+- `/sports/pickleball-boom-philippines/` (sports) — The pickleball boom in the Philippines
+- `/sports/running-events-cebu-davao/` (sports) — Running in Cebu & Davao
+- `/sports/football-in-the-philippines-azkals-filipinas/` (sports) — Football in the Philippines
+- `/entertainment/p-pop-sb19-bini-guide/` (entertainment) — P-pop explained
+- `/entertainment/metro-manila-film-festival-guide/` (entertainment) — Metro Manila Film Festival (MMFF) guide
+- `/tech/mobile-legends-philippines-guide/` (tech) — Why Mobile Legends
+- `/tech/gcash-vs-maya-ewallet-guide/` (tech) — GCash vs Maya
+- `/tech/best-internet-providers-cebu-davao/` (tech) — Home internet in Cebu & Davao
+- `/culture/learn-bisaya-50-phrases/` (culture) — Learn Bisaya
+- `/culture/santo-nino-de-cebu-history/` (culture) — Santo Niño de Cebu
+- `/culture/indigenous-tribes-of-davao/` (culture) — Davao City's indigenous and Moro communities
+- `/lifestyle/cost-of-living-cebu-vs-davao/` (money) — Cost of living in Cebu vs Davao (2026 approximate ranges)
+- `/lifestyle/coffee-shops-and-cafe-culture-cebu-davao/` (lifestyle) — Cafe culture in Cebu and Davao
