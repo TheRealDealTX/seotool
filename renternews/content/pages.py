@@ -83,6 +83,8 @@ PAGES = {
 </ul>
 <h2>Independence and sponsored content</h2>
 <p>Coverage decisions are made by the editorial team alone. We do not accept payment for news coverage. Partner offers and advertising are labeled <em>Sponsored</em>, use sponsored links, and are kept separate from articles.</p>
+<h2>Affiliate links</h2>
+<p>Some pages include "Gear that could help" boxes with Amazon affiliate links to safety, emergency and moving products. As an Amazon Associate, Renter News earns from qualifying purchases. Editors choose which product types appear based on relevance to the story, never the other way around, and affiliate relationships do not influence our reporting.</p>
 <h2>Bylines and dates</h2>
 <p>Articles are published under the <a href="/news/author/renter-news-staff/">Renter News Staff</a> byline. Every article shows its publication date, and an update date when it has been materially changed.</p>
 <h2>Guides and tools</h2>
@@ -116,7 +118,7 @@ PAGES = {
 <p>The <a href="/fire-map/">fire map</a> loads map tiles from OpenStreetMap. Our calculators run entirely in your browser; the numbers you enter are not sent to us. Fonts are served by Google Fonts, and some older articles embed content from YouTube, Google Maps, X (Twitter) or Instagram, which may set their own cookies.</p>
 <h2>10. Google Analytics</h2>
 <p>We use Google Analytics to understand how readers use the site, such as which pages are visited and how people arrive. Google Analytics sets cookies and processes data under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
-<h2>11. Sponsored links</h2>
-<p>Partner offers labeled "Sponsored" link to third-party sites that may track the referral. Their privacy policies apply once you leave Renter News.</p>
+<h2>11. Sponsored and affiliate links</h2>
+<p>Renter News is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, Renter News earns from qualifying purchases. Amazon may use cookies to attribute purchases made after you follow one of our links. Partner offers labeled "Sponsored" link to third-party sites that may track the referral. Their privacy policies apply once you leave Renter News.</p>
 """,
 }

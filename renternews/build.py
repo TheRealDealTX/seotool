@@ -37,6 +37,9 @@ ICON = "/wp-content/uploads/2025/08/cropped-Renter-News-Site-Icon"
 DEFAULT_OG = "/assets/img/og-default.webp"
 AUTHOR = {"name": "Renter News Staff", "path": "/news/author/renter-news-staff/"}
 PER_PAGE = 24
+sys.path.insert(0, ROOT)
+from content.gear import (AMAZON_TAG as AMZ_TAG, DISCLOSURE as AMZ_DISCLOSURE, SIDEBAR as GEAR_SIDEBAR,  # noqa: E402
+                          BY_TOOL as GEAR_TOOLS, WEATHER as GEAR_WEATHER, GEAR_PAGE, PRODUCTS, picks_for_article)
 GA_ID = "G-5SCMGXVXTS"  # Google Analytics 4
 NOW = datetime.now(timezone.utc)
 
@@ -349,10 +352,10 @@ def footer(scripts=""):
     <div><h3>Renter News</h3><ul>
       <li><a href="/about/">About Us</a></li><li><a href="/editorial-policy/">Editorial Policy</a></li>
       <li><a href="/corrections-policy/">Corrections</a></li><li><a href="/frequently-asked-questions/">FAQs</a></li>
-      <li><a href="/contact/">Contact Us</a></li><li><a href="/fire-map/">Fire Map</a></li><li><a href="/weather/">Live Weather</a></li></ul></div>
+      <li><a href="/contact/">Contact Us</a></li><li><a href="/fire-map/">Fire Map</a></li><li><a href="/weather/">Live Weather</a></li><li><a href="/renter-safety-gear/">Safety Gear Picks</a></li></ul></div>
   </div>
   <div class="wrap footer-bottom">
-    <span>© {NOW.year} {SITE}. All rights reserved.</span>
+    <span>© {NOW.year} {SITE}. All rights reserved. {AMZ_DISCLOSURE}</span>
     <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="/sitemap_index.xml">Sitemap</a></span>
   </div>
 </footer>
@@ -455,6 +458,23 @@ def offers_box():
 </div>"""
 
 
+def gear_box(keys, title="Safety gear for renters", lede="", compact=False):
+    """Amazon Associates picks (content/gear.py). Search links, tagged, labeled."""
+    from content.gear import PRODUCTS, DISCLOSURE, amazon
+    if compact:
+        items = "".join(
+            f'<a href="{esc(amazon(PRODUCTS[k][1]))}" target="_blank" rel="sponsored nofollow noopener">'
+            f'{icon(PRODUCTS[k][3], "ico ico-sm")}{PRODUCTS[k][0]}</a>' for k in keys)
+        return (f'<section class="side-box side-tools gear-side"><h2 class="side-title">{title}</h2>{items}'
+                f'<p class="gear-disc">{DISCLOSURE} <a href="/renter-safety-gear/">See all picks</a></p></section>')
+    cards = "".join(f"""<a class="gear-card" href="{esc(amazon(PRODUCTS[k][1]))}" target="_blank" rel="sponsored nofollow noopener">
+  <span class="tool-ico">{icon(PRODUCTS[k][3])}</span><strong>{PRODUCTS[k][0]}</strong><small>{PRODUCTS[k][2]}</small>
+  <span class="go">Shop on Amazon {icon("arrow", "ico ico-sm")}</span></a>""" for k in keys)
+    lede_html = f"<p>{lede}</p>" if lede else ""
+    return f"""<section class="gear-box"><div class="gear-head"><h2>{title}</h2><span class="gear-tag">Affiliate links</span></div>{lede_html}
+<div class="gear-grid">{cards}</div><p class="gear-disc">{DISCLOSURE}</p></section>"""
+
+
 def wx_card():
     return """<section class="wx-card" data-wx-card aria-label="Local weather">
   <div class="wx-card-head"><span>Weather</span><a href="/weather/">Full forecast →</a></div>
@@ -484,6 +504,7 @@ def sidebar(exclude=None):
   {wx_card()}
   <section class="side-box"><h2 class="side-title">Latest News</h2><ol class="mini-list ranked">{"".join(mini(a, i + 1) for i, a in enumerate(latest))}</ol></section>
   {offers_box()}
+  {gear_box(GEAR_SIDEBAR, "Renter Safety Essentials", compact=True)}
   {g}
   <section class="side-box side-tools"><h2 class="side-title">Quick Tools</h2>
     {"".join(f'<a href="/tools/{t["slug"]}/">{icon(t["icon"], "ico ico-sm")}{t["name"]}</a>' for t in TOOLS[:5])}
@@ -720,6 +741,7 @@ def build_article(a, idx):
       {kp}{toc_html}
       <div class="prose">{body_html}</div>
       {src}{tags}
+      {gear_box(picks_for_article(a["slug"], a["category"]), "Gear that could help", "Practical items related to this story, picked by our editors.")}
       <div class="tool-cta"><span class="tool-ico">{icon(t['icon'])}</span><div><strong>{t['name']}</strong><p>{t['desc']}</p></div>
         <a class="btn" href="/tools/{t['slug']}/">Try it free</a></div>
       {share_bar(a)}
@@ -823,7 +845,8 @@ def build_tools():
             schema.append({"@type": "FAQPage", "mainEntity": [
                 {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": plain(a_).strip()}} for q, a_ in faq]})
         others = "".join(f'<a href="/tools/{o["slug"]}/">{icon(o["icon"], "ico ico-sm")}{o["name"]}</a>' for o in TOOLS if o is not t)
-        inner = f"""<div class="tool-app" data-tool="{t['slug']}">{TOOL_HTML[t['slug']]}</div>
+        inner = f"""<div class="tool-app" data-tool="{t['slug']}" data-amz-tag="{AMZ_TAG}">{TOOL_HTML[t['slug']]}</div>
+{gear_box(GEAR_TOOLS[t["slug"]], "Helpful gear", "")}
 <p class="disclaimer">Estimates are for planning only and are not financial, legal or insurance advice. Rules and costs vary by state, city and lease.</p>
 {faq_html}
 <section class="more-tools"><h2>More renter tools</h2><div class="side-tools">{others}</div></section>"""
@@ -853,8 +876,11 @@ def build_weather():
     <section class="wx-panel"><h2>Conditions</h2><div class="wx-details" data-wx-details><div class="skeleton" style="height:320px"></div></div></section>
   </div>
   <section class="wx-panel wx-tips"><h2>Weather tips for renters</h2><div data-wx-tips></div></section>
+  {GEAR_WEATHER_HTML}
   <p class="wx-credit">Forecasts, observations and alerts: <a href="https://www.weather.gov/" target="_blank" rel="noopener">NOAA National Weather Service</a> (US locations). Place search: <a href="https://www.geonames.org/" target="_blank" rel="noopener">GeoNames</a> (CC BY 4.0). Updated every 10 minutes while this page is open.</p>
 </div>"""
+    inner = inner.replace("{GEAR_WEATHER_HTML}", gear_box(GEAR_WEATHER, "Be ready for storms and outages",
+                          "A weather radio still sounds National Weather Service warnings when power or cell service is out."))
     simple_page("/weather/", "Live Weather Forecast for Renters",
                 "Live local weather from the National Weather Service: current conditions, hourly and 7-day forecasts and active alerts for any US city or ZIP code, plus renter tips.",
                 inner, h1="Live Weather", wide=True, active="/weather/",
@@ -897,6 +923,22 @@ def build_fire_map():
             "head_extra": head_extra,
             "schema": [org_schema(), website_schema(), crumbs(cr), {"@type": "WebPage", "url": url("/fire-map/"), "name": "Apartment Fire Map", "description": desc}]}
     write("/fire-map/", page_html(page, body, "/fire-map/", scripts))
+
+
+def build_gear_page():
+    from content.gear import DISCLOSURE
+    sections = "".join(gear_box(keys, title) for title, keys in GEAR_PAGE)
+    intro = f"""<div class="prose"><p>Most apartment fire deaths happen in homes without working smoke alarms, and many displaced renters lose
+the documents they need to start over. These are the practical items our coverage keeps coming back to. Check your lease first:
+landlords are often responsible for smoke and carbon monoxide alarms, so report a missing or broken one in writing before you buy your own.</p>
+<p><em>{DISCLOSURE} Links go to Amazon search results so you can compare current models, ratings and prices. We don't accept payment for these picks.</em></p></div>
+{sections}
+<div class="tool-cta"><span class="tool-ico">{icon("flame")}</span><div><strong>Not sure what you're missing?</strong><p>Score your apartment with our fire safety checklist and see what to fix first.</p></div>
+<a class="btn" href="/tools/fire-safety-checklist/">Take the checklist</a></div>"""
+    simple_page("/renter-safety-gear/", "Renter Safety Gear: Fire, Emergency and Moving Essentials",
+                "Practical gear for renters: smoke and CO alarms, fire extinguishers, escape ladders, go-bags, weather radios and moving supplies, chosen by Renter News editors.",
+                intro, h1="Renter Safety Gear", wide=True,
+                lede="Practical fire-safety, emergency and moving essentials for apartment renters, chosen by our editors.")
 
 
 def build_search():
@@ -964,7 +1006,7 @@ def build_feeds():
     post_entries = [(a["path"], a["mdt"].isoformat(), f"<image:image><image:loc>{url(a['image'])}</image:loc></image:image>") for a in ARTICLES]
     write("/post-sitemap.xml", urlset(post_entries))
     pages = ["/", "/news/", "/about/", "/contact/", "/frequently-asked-questions/", "/editorial-policy/", "/corrections-policy/",
-             "/privacy-policy/", "/terms-of-service/", "/weather/", "/fire-map/", "/tools/", AUTHOR["path"]] + [f"/tools/{t['slug']}/" for t in TOOLS]
+             "/privacy-policy/", "/terms-of-service/", "/weather/", "/fire-map/", "/tools/", "/renter-safety-gear/", AUTHOR["path"]] + [f"/tools/{t['slug']}/" for t in TOOLS]
     write("/page-sitemap.xml", urlset([(p, today, "") for p in pages]))
     cat_entries = []
     for k in CATS:
@@ -1035,6 +1077,7 @@ def main():
     build_weather()
     build_fire_map()
     build_search()
+    build_gear_page()
     build_404()
     build_feeds()
     build_htaccess()

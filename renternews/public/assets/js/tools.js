@@ -301,6 +301,12 @@
           ["ins", 6, "I have renters insurance and an inventory of my belongings", ""],
           ["docs", 2, "Copies of IDs and important documents are stored in the cloud", ""]]]
       ];
+      // Amazon Associates searches for items a renter can buy (tag set by build.py)
+      var TAG = root.dataset.amzTag, SHOP = {
+        "alarm-bed": "10 year sealed battery smoke alarm", co: "plug in carbon monoxide detector battery backup",
+        ext: "home fire extinguisher 2-A:10-B:C", lid: "kitchen fire blanket", battery: "lithium battery fireproof charging bag",
+        docs: "fireproof document bag", plan: "fire escape ladder 2 story"
+      };
       var state = store("rn-fire") || {}, box = $("[data-checklist]");
       box.innerHTML = GROUPS.map(function (g) {
         return '<div class="cl-group"><h3>' + g[0] + "</h3>" + g[1].map(function (it) {
@@ -322,7 +328,10 @@
         ring.style.stroke = score >= 80 ? "#0f9d8a" : score >= 50 ? "#e0b520" : "#e4572e";
         out("grade", score >= 90 ? "Excellent — you're well prepared." : score >= 70 ? "Good — a few gaps to close." : score >= 40 ? "Fair — fix the top items this week." : "At risk — start with your smoke alarms and escape plan.");
         todo.sort(function (a, b) { return b[1] - a[1]; });
-        $("[data-todo]").innerHTML = todo.length ? todo.slice(0, 5).map(function (t) { return "<li>" + t[2] + "</li>"; }).join("") : "<li>Nothing left. Re-check monthly!</li>";
+        $("[data-todo]").innerHTML = todo.length ? todo.slice(0, 5).map(function (t) {
+          var q = SHOP[t[0]], link = q && TAG ? ' <a class="shop-link" href="https://www.amazon.com/s?k=' + encodeURIComponent(q) + "&tag=" + TAG + '" target="_blank" rel="sponsored nofollow noopener">Shop &rarr;</a>' : "";
+          return "<li>" + t[2] + link + "</li>";
+        }).join("") : "<li>Nothing left. Re-check monthly!</li>";
       }
       $("[data-reset]").addEventListener("click", function () { $$("[data-id]").forEach(function (c) { c.checked = false; }); calc(); });
       box.addEventListener("change", calc); calc();
