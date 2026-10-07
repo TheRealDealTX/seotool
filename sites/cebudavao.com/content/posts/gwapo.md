@@ -5,8 +5,8 @@ category: culture
 places: cebu,davao
 keyword: maganda in tagalog
 description: Maganda in Tagalog means beautiful, and gwapo means handsome. Learn gwapa, pogi, gwapito and easy Bisaya and Tagalog compliments with a phrase table.
-image: face-portrait
-image_alt: Smiling Filipino man and woman posing for a portrait outdoors in Cebu
+image: tribal-davao
+image_alt: Smiling dancer in colourful costume during the Kadayawan festival street parade in Davao
 type: guide
 excerpt: What maganda, gwapo, gwapa, pogi and gwapito really mean, plus ready-to-use compliments in Bisaya and Tagalog.
 ---

@@ -878,5 +878,35 @@
   "license": "CC BY-SA 4.0",
   "source": "https://commons.wikimedia.org/wiki/File:Whale_shark_in_Oslob,_Cebu_02.jpg",
   "query": "whale shark Oslob"
+ },
+ "chocolate-hills": {
+  "file": "chocolate-hills.webp",
+  "w": 960,
+  "h": 720,
+  "title": "Chocolate Hills - edit",
+  "author": "Ramir Borja derivative work: MrPanyGoff",
+  "license": "CC BY-SA 3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Chocolate_Hills_-_edit.jpg",
+  "query": "Chocolate Hills Bohol"
+ },
+ "boracay": {
+  "file": "boracay.webp",
+  "w": 960,
+  "h": 720,
+  "title": "\"White Beach\" Boracay, Philippinen",
+  "author": "Grunderfam",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%22White_Beach%22_Boracay,_Philippinen.jpg",
+  "query": "White Beach Boracay"
+ },
+ "hands-palm": {
+  "file": "hands-palm.webp",
+  "w": 960,
+  "h": 720,
+  "title": "Open Palm of the Left Hand, Fingers",
+  "author": "Eyefive45",
+  "license": "CC BY-SA 4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Open_Palm_of_the_Left_Hand,_Fingers.jpg",
+  "query": "human hand palm lines"
  }
 }

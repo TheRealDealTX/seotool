@@ -7,6 +7,9 @@ live news wire and free reader tools.
 
 Hosted on the Hostinger Agency (Growth) plan as a plain php-fpm website,
 UID `gLBQLhLT2`, same server (72.60.128.114, Phoenix) as the other sites.
+Live since 2026-10-07: cebudavao.com was moved off the WordPress website
+`IqzyizTeQ`, which was **kept** (unlinked, files and database intact) as a
+rollback — see `backup/wordpress-2026-10-07/README.md`.
 
 ## Layout
 

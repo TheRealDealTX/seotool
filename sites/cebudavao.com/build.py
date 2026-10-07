@@ -72,14 +72,38 @@ def photo(key):
     return PHOTOS.get(key)
 
 
+# When a post's photo isn't in the library (Commons had no free match), use the
+# closest one that is. Chains are tried in order.
+IMAGE_ALIAS = {
+    "kawasan-falls": ["moalboal"], "puso-rice": ["barbecue-pinoy"], "cebu-guitar": ["guitar-band"],
+    "pearl-farm": ["samal-beach"], "davao-river": ["davao-city"], "simala-shrine": ["church-cebu"],
+    "plantation-bay": ["mactan-beach"], "lechon-roasting": ["cebu-lechon"], "boxing": ["basketball-court", "pickleball"],
+    "running-race": ["basketball-court", "pickleball"], "football-philippines": ["basketball-court", "pickleball"],
+    "basketball-court": ["pickleball"], "talikud-island": ["samal-beach"], "sinulog": ["santo-nino-basilica"],
+    "kadayawan": ["tribal-davao"], "davao-peoples-park": ["davao-city"], "malapascua": ["bantayan-island"],
+    "el-nido": ["coconut-trees"], "siargao": ["island-hopping"], "surfing": ["island-hopping"], "tarsier": ["bohol-loboc"],
+    "mall": ["cebu-it-park"], "bpo-office": ["cebu-it-park"], "spratly": ["island-hopping"], "edsa": ["manila-skyline"],
+    "rain-street": ["typhoon-satellite"], "snorkel-reef": ["moalboal"], "halo-halo": ["market-carbon"], "pancit": ["market-carbon"],
+    "rice-field": ["banaue"], "lapu-lapu-shrine": ["mactan-beach"], "baguio": ["banaue"], "atm": ["money-peso"],
+}
+
+
+def resolve_photo(key):
+    for k in [key] + IMAGE_ALIAS.get(key, []):
+        if k and k in PHOTOS:
+            return k
+    return None
+
+
 def image_for(post):
     """Return dict(src, src_sm, w, h, credit_html) for a post's lead image."""
     if post.get("wp_image"):
         return post["wp_image"]
-    for key in (post.get("image"), CATEGORY_FALLBACK_IMG.get(post["category"]), "cebu-skyline"):
+    for key in (resolve_photo(post.get("image")), resolve_photo(CATEGORY_FALLBACK_IMG.get(post["category"])), "cebu-skyline"):
         p = photo(key) if key else None
         if p:
             return {
+                "alt": None if key == post.get("image") else p["title"],
                 "src": f"/assets/img/photos/{key}.webp", "src_sm": f"/assets/img/photos/{key}-sm.webp",
                 "w": p["w"], "h": p["h"], "key": key,
                 "credit": f'Photo: {esc(p["author"])} / <a href="{esc(p["source"])}" rel="noopener" target="_blank">{esc(p["license"])}</a>, via Wikimedia Commons',
@@ -392,7 +416,7 @@ def card(p, size="md", show_cat=True):
     ex = f'<p class="card-ex">{esc(p["excerpt"])}</p>' if size in ("lg", "md") else ""
     sizes = "(max-width: 700px) 100vw, 640px" if size == "lg" else "(max-width: 700px) 50vw, 360px"
     return f'''<article class="card card-{size}">
-  <a class="card-img" href="{p["path"]}" tabindex="-1" aria-hidden="true">{img_tag(im, p["image_alt"], sizes=sizes)}</a>
+  <a class="card-img" href="{p["path"]}" tabindex="-1" aria-hidden="true">{img_tag(im, (im or {}).get("alt") or p["image_alt"], sizes=sizes)}</a>
   <div class="card-body">{badge}
     <h3 class="card-title"><a href="{p["path"]}">{esc(p["title"])}</a></h3>{ex}
     <p class="card-meta"><time datetime="{p["updated"]}">{fmt_date(p["updated"])}</time> · {max(1, round(p["words"] / 220))} min read</p>
@@ -477,7 +501,7 @@ def post_page(p, posts):
     figure = ""
     if im:
         cap = f'<figcaption>{im["credit"]}</figcaption>' if im.get("credit") else ""
-        figure = f'<figure class="lead-img">{img_tag(im, p["image_alt"], eager=True, sizes="(max-width: 1100px) 100vw, 760px")}{cap}</figure>'
+        figure = f'<figure class="lead-img">{img_tag(im, im.get("alt") or p["image_alt"], eager=True, sizes="(max-width: 1100px) 100vw, 760px")}{cap}</figure>'
     share_url = esc(ORIGIN + p["path"])
     share_t = esc(p["title"])
     share = f'''<div class="share" aria-label="Share this article"><span>Share</span>
