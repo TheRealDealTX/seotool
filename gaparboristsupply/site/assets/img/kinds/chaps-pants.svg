@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Chainsaw protective chaps</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M62 46 L116 46 L112 198 L72 198 Q56 120 62 46 Z" fill="#f26b1d"/>
+<path d="M178 46 L124 46 L128 198 L168 198 Q184 120 178 46 Z" fill="#f26b1d"/>
+<path d="M76 60 L88 186 M100 60 L98 186 M164 60 L152 186 M140 60 L142 186" fill="none" stroke="#f4efe2" stroke-dasharray="6 6"/>
+<rect x="56" y="28" width="128" height="20" rx="6" fill="#2f5d3a"/>
+<rect x="110" y="24" width="20" height="28" rx="4" fill="#9aa5a8"/>
+<path d="M60 100 h-12 M60 150 h-12 M180 100 h12 M180 150 h12" fill="none" stroke-width="6"/>
+<rect x="66" y="96" width="12" height="10" rx="2" fill="#c8e03c"/>
+<rect x="162" y="96" width="12" height="10" rx="2" fill="#c8e03c"/>
+</g>
+</svg>

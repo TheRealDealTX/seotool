@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Eye bolt with cable</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="78" y="96" width="16" height="104" rx="4" fill="#9aa5a8"/>
+<path d="M78 150 l16 -5 M78 160 l16 -5 M78 170 l16 -5 M78 180 l16 -5 M78 190 l16 -5" fill="none" stroke-width="2"/>
+<rect x="62" y="122" width="48" height="10" rx="3" fill="#9aa5a8"/>
+<rect x="68" y="108" width="36" height="16" rx="3" fill="#2f5d3a"/>
+<path d="M86 54 A24 24 0 1 1 85.9 54" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M86 54 A24 24 0 1 1 85.9 54" fill="none" stroke="#9aa5a8" stroke-width="12" />
+<path d="M108 56 Q124 46 140 62 Q150 72 166 72 H218" fill="none" stroke="#1f2a1f" stroke-width="13"/><path d="M108 56 Q124 46 140 62 Q150 72 166 72 H218" fill="none" stroke="#9aa5a8" stroke-width="7" stroke-dasharray="3 3"/>
+<path d="M108 56 Q114 84 140 84 Q154 84 166 80" fill="none" stroke="#1f2a1f" stroke-width="13"/><path d="M108 56 Q114 84 140 84 Q154 84 166 80" fill="none" stroke="#9aa5a8" stroke-width="7" stroke-dasharray="3 3"/>
+<rect x="150" y="62" width="28" height="26" rx="5" fill="#f26b1d"/>
+</g>
+</svg>

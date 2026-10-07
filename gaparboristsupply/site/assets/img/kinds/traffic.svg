@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Traffic safety cone</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M104 40 Q120 30 136 40 L176 186 H64 Z" fill="#f26b1d"/>
+<path d="M94.1 76 H145.9 L151.3 96 H88.7 Z" fill="#f4efe2"/>
+<path d="M81 124 H159 L165.6 148 H74.4 Z" fill="#f4efe2"/>
+<rect x="44" y="182" width="152" height="18" rx="5" fill="#2f5d3a"/>
+</g>
+</svg>

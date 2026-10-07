@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Rear-handle chainsaw</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="110" width="118" height="40" rx="20" fill="#1f2a1f"/>
+<rect x="16" y="110" width="118" height="40" rx="20" fill="none" stroke="#9aa5a8" stroke-width="5" stroke-dasharray="5 6"/>
+<rect x="22" y="116" width="112" height="28" rx="14" fill="#9aa5a8"/>
+<circle cx="36" cy="130" r="5" fill="#f4efe2"/>
+<path d="M160 100 Q160 64 188 64 Q212 64 212 92 L212 120" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M160 100 Q160 64 188 64 Q212 64 212 92 L212 120" fill="none" stroke="#2f5d3a" stroke-width="12" />
+<path d="M108 98 h58 q24 0 28 22 l6 40 q0 14 -14 14 h-78 q-10 0 -10 -10 v-56 q0 -10 10 -10z" fill="#f26b1d"/>
+<path d="M114 168 Q92 110 126 80 Q140 70 156 76" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M114 168 Q92 110 126 80 Q140 70 156 76" fill="none" stroke="#2f5d3a" stroke-width="9" />
+<path d="M100 76 l14 -6 l6 34 l-13 3z" fill="#1f2a1f"/>
+<rect x="140" y="120" width="40" height="22" rx="5" fill="#f4efe2"/>
+<path d="M146 131 L174 131" stroke="#1f2a1f" stroke-width="3" fill="none"/>
+<path d="M126 112 v20 M134 112 v20" fill="none"/>
+<circle cx="190" cy="152" r="6" fill="#c8e03c"/>
+</g>
+</svg>

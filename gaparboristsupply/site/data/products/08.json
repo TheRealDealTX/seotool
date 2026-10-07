@@ -1,0 +1,2877 @@
+[
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/",
+  "category": "/plant-care/cabling-and-bracing/cabling-hardware/",
+  "name": "Galvanized Eye Lag Screw",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "cable-hardware",
+  "price": 12,
+  "keyword": "eye lag screw",
+  "title": "Galvanized Eye Lag Screw for Tree Cabling",
+  "h1": "Galvanized Eye Lag Screw",
+  "meta": "Galvanized eye lag screw for light tree cabling and guying. How lag eyes anchor a cable, when to use a through-bolt instead, and how to install them cleanly.",
+  "tagline": "A galvanized lag eye for anchoring light cable systems in small to medium limbs.",
+  "summary": "This galvanized eye lag screw threads straight into sound wood and gives you a closed eye to terminate a cable on. It is the simple anchor for light cabling jobs in smaller leads where a through-bolt would be overkill. The galvanized finish holds up to weather while the tree closes wood around the shank.",
+  "highlights": [
+   "Closed eye for terminating cable with a thimble or dead-end",
+   "Lag (wood screw) thread bites into sound wood",
+   "Galvanized steel resists rust in the canopy",
+   "Installs from one side with a pilot hole and a bar through the eye",
+   "Suited to light cabling in smaller-diameter leads"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Eye lag screw (lag eye)"
+   ],
+   [
+    "Material",
+    "Galvanized steel"
+   ],
+   [
+    "Thread",
+    "Lag thread, single-side install"
+   ],
+   [
+    "Eye",
+    "Closed eye"
+   ],
+   [
+    "Typical use",
+    "Light-duty cable anchors in small to medium leads"
+   ],
+   [
+    "Standard",
+    "Install per ANSI A300 Part 3 and the hardware maker's instructions"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What an eye lag screw does in a cable system",
+    "p": [
+     "A cable system is only as good as its anchors. The galvanized eye lag screw is the lightest anchor in the cabling kit: you drill a pilot hole, thread the lag into sound wood until the eye sits just proud of the bark, and terminate your cable on the eye with a thimble or a preformed dead-end.",
+     "Because it goes in from one side, a lag eye is quick to set from a climbing position or out of a bucket. That makes it a good fit for light cabling in younger trees and smaller codominant leads, where you want support without drilling all the way through the stem.",
+     "Browse the rest of the anchors, cable and dead-ends in our <a href=\"/plant-care/cabling-and-bracing/cabling-hardware/\">cabling hardware</a> section.",
+     "Lag eyes are also handy beyond cabling. Crews use them to anchor guying on transplanted trees, to hang a light support for a leaning ornamental, or as a fixed point for a brace on a fence line tree. In each case the logic is the same: sound wood, a straight pilot hole, and a load that pulls in line with the shank."
+    ]
+   },
+   {
+    "h": "Lag eye or through-bolt",
+    "p": [
+     "Lags rely on thread engagement in the wood, so they are rated lower than a through-bolt with a washer and nut on the far side. On bigger leads, heavier loads, or wood with any question about soundness, step up to a through-bolt or a J-lag sized for the job.",
+     "Read the load ratings published by the hardware maker and match the anchor to the cable you are installing. The current reference for cabling and bracing in the US is ANSI A300 Part 3. If you are new to cabling, learn it from someone who installs systems regularly before you put a lag in a client's tree.",
+     "Think about the whole system, not just the anchor. Cable, termination and anchor should all be sized to work together, and the weakest piece sets the real capacity. A heavy cable on a light lag gives you a false sense of security."
+    ]
+   },
+   {
+    "h": "Installation tips from the field",
+    "p": [
+     "Drill a pilot hole sized to the lag's root diameter, in line with the direction the cable will pull. A lag set at an angle to the cable gets side-loaded at the eye. Thread it in with a bar through the eye and stop when the eye is just clear of the bark so the tree can grow without engulfing the termination too soon.",
+     "Inspect the tree before you drill. Do not set anchors in decay, cracks or included bark. Plan to re-inspect the system on a regular schedule, because trees grow, cables loosen, and hardware that was right five years ago may need adjustment."
+    ]
+   },
+   {
+    "h": "Working kit and records",
+    "p": [
+     "Keep a small kit together for cabling days: a selection of lag eyes, a long auger bit sized for the pilot, a bar or large screwdriver to turn the eye, thimbles, dead-ends and a tape to measure the leads. Having it all in one bag means fewer trips down the rope.",
+     "Write down what you installed, where, and when. A simple record on the work order lets the next inspection check that the anchor, cable and tension are still doing their job, and gives the client a reason to have the system looked at on schedule."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What size eye lag screw should I use for tree cabling?",
+    "a": "Size the lag to the cable and the lead. Lags are for light systems in smaller leads. Check the maker's ratings and ANSI A300 Part 3, and move to a through-bolt when the load or limb size calls for it."
+   },
+   {
+    "q": "Do I need a pilot hole for a lag eye?",
+    "a": "Yes. Drill a pilot hole close to the root diameter of the thread so the lag pulls in straight without splitting the wood or stripping out."
+   },
+   {
+    "q": "How far should the eye stick out from the bark?",
+    "a": "Leave the eye just clear of the bark. Too far out adds leverage on the shank; flush means the tree swallows the termination quickly."
+   },
+   {
+    "q": "Can I use a hardware-store eye screw instead?",
+    "a": "Use hardware sold for tree support with published ratings. Light-duty eye screws with bent or open eyes are not made for the loads a cable system sees."
+   }
+  ],
+  "use": [
+   "plant-health",
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/",
+  "category": "/plant-care/cabling-and-bracing/cabling-hardware/",
+  "name": "J-Lag Screws",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "cable-hardware",
+  "price": 14,
+  "keyword": "j-lag screw",
+  "title": "J-Lag Screws for Tree Cabling: Sizes and Install Tips",
+  "h1": "J-Lag Screws for Tree Cabling",
+  "meta": "J-lag screws give a cable system a hook-style anchor set into the lead. How they compare with eye lags, lag studs and through-bolts, and how to set them.",
+  "tagline": "Hook-style lag anchors for cabling leads with a cable that wraps the J.",
+  "summary": "J-lag screws are threaded tree cabling anchors with an open J-shaped hook in place of a closed eye. You drill a pilot hole, thread the J-lag into sound wood, and seat the cable termination over the hook. Arborists like them because the cable can be hooked on after the anchor is set.",
+  "highlights": [
+   "Open J hook lets you seat the termination after the anchor is in",
+   "Lag thread installs from one side of the lead",
+   "Galvanized finish for long service outdoors",
+   "Pairs with thimbles and preformed dead-ends",
+   "Faster to set than a through-bolt on light systems"
+  ],
+  "specs": [
+   [
+    "Type",
+    "J-lag (hook) screw"
+   ],
+   [
+    "Material",
+    "Galvanized steel"
+   ],
+   [
+    "Thread",
+    "Lag thread"
+   ],
+   [
+    "Head",
+    "Open J-shaped hook"
+   ],
+   [
+    "Install",
+    "Pilot hole, single side"
+   ],
+   [
+    "Standard",
+    "Install per ANSI A300 Part 3 and maker's instructions"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How J-lags fit into a cabling job",
+    "p": [
+     "On a typical cabling job you set one anchor in each lead, then run cable between them about two-thirds of the way from the weak union to the tops of the leads. A J-lag gives you a hook to drop the thimbled cable end onto, which makes tensioning and final termination easier when you are working alone in the canopy.",
+     "Because it installs from one side, a J-lag saves you drilling through the whole lead. That is a real advantage on light systems in younger trees, where you want to keep wounding to a minimum.",
+     "J-lags also suit retrofit work. When an existing system needs a second cable or a replacement run, a hook anchor lets you set hardware, then bring the new cable to it and hang the termination without threading anything through a closed eye.",
+     "Keep the hardware matched: J-lag, thimble, dead-end and cable from systems that are meant to work together, with published ratings for each part."
+    ]
+   },
+   {
+    "h": "J-lag, eye lag or lag stud",
+    "p": [
+     "A closed <a href=\"/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/\">eye lag screw</a> holds the termination captive. A J-lag lets you hook on after the fact, but the termination must stay seated against the hook. A lag stud, also called a lag-threaded rod, has lag thread on one end and machine thread on the other so you can add an amon-eye nut. All three rely on thread grip in the wood.",
+     "None of them match a through-bolt with a nut and washer on the far side for holding power. Choose the anchor by the published rating, the size of the lead and the load you expect, and follow ANSI A300 Part 3."
+    ]
+   },
+   {
+    "h": "Setting a J-lag cleanly",
+    "p": [
+     "Drill the pilot hole in line with the cable so the hook pulls straight. Thread the J-lag in until the hook sits just clear of the bark, with the open side facing away from the cable's pull so the termination cannot slip off.",
+     "Inspect the wood before drilling and stay out of decay, cracks and included bark. Re-inspect cable systems on a schedule; growth and storms change what the system is doing. If you are learning cabling, get supervised experience first.",
+     "Clean up after yourself: brush shavings out of the hole before threading, and keep the work order notes clear on which lead got which anchor."
+    ]
+   },
+   {
+    "h": "Inspection over the life of the system",
+    "p": [
+     "Every cable system needs follow-up. Leads grow, cables slacken or tighten, and storms can shift a termination off a hook if it was not seated properly. Put the tree on an inspection schedule and note the hardware type and install date on the work order.",
+     "On a re-inspection, look for the hook opening, any wear where the thimble rides, wood swelling over the J, and cracks or decay near the anchor. If the tree has outgrown a light system, replace it with heavier hardware rather than adding more of the same."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Which way should the hook of a J-lag face?",
+    "a": "Orient it so the cable pulls the termination into the bottom of the J, with the opening away from the line of pull."
+   },
+   {
+    "q": "Are J-lags as strong as through-bolts?",
+    "a": "No. Lag anchors depend on thread grip in wood. Use through-bolts for heavier loads or larger leads."
+   },
+   {
+    "q": "What is a lag stud?",
+    "a": "A rod with lag thread on one end and machine thread on the other. It takes an amon-eye nut, giving you an adjustable eye on a lag anchor."
+   },
+   {
+    "q": "Do J-lags need a pilot hole?",
+    "a": "Yes. Drill a pilot close to the thread's root diameter so the lag goes in straight and grips well."
+   }
+  ],
+  "use": [
+   "plant-health",
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/plant-care/plant-health-care/lac-balsam-tree-wound-treatment/",
+  "category": "/plant-care/",
+  "name": "Lac Balsam Tree Wound Treatment",
+  "brand": "lac-balsam",
+  "brand_name": "Lac Balsam",
+  "kind": "fluid",
+  "price": 30,
+  "keyword": "lac balsam",
+  "title": "Lac Balsam Tree Wound Treatment: When It Makes Sense",
+  "h1": "Lac Balsam Tree Wound Treatment",
+  "meta": "Lac Balsam tree wound dressing is a water-based, brush-on coating for bark wounds. Where it is useful, where it is not, and what current pruning standards say.",
+  "tagline": "A brush-on, water-based tree wound dressing for bark damage and grafts.",
+  "summary": "Lac Balsam is a water-based tree wound dressing that you brush onto damaged bark, where it dries to a flexible film. Arborists and orchard growers use it on bark tears, mower damage and graft unions rather than on routine pruning cuts.",
+  "highlights": [
+   "Water-based, cleans up with water",
+   "Brushes on and dries to a flexible coating",
+   "Used on bark tears, equipment damage and grafts",
+   "Not needed on routine, well-made pruning cuts"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Tree wound dressing"
+   ],
+   [
+    "Base",
+    "Water-based"
+   ],
+   [
+    "Application",
+    "Brush or spatula"
+   ],
+   [
+    "Cleanup",
+    "Water while wet"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where Lac Balsam fits",
+    "p": [
+     "Most current guidance, including ANSI A300, says wound dressings are not needed on ordinary pruning cuts. A good cut at the branch collar closes on its own. Lac Balsam earns its place on the jobs where you want to protect exposed cambium: a strip of bark torn off by a mower or a lowering mishap, a fresh graft, or a wound on a young tree you are trying to keep moist.",
+     "It is a niche product. If a client asks for wound paint on every cut, explain the standard and save the dressing for the cases above.",
+     "Some growers also like it on grafts, where it helps keep the union from drying out while the scion takes. On young street trees damaged during planting or by string trimmers, a coat can protect the wound while you sort out the cause, usually by mulching a ring so the trimmer stays away."
+    ]
+   },
+   {
+    "h": "Applying it",
+    "p": [
+     "Trim loose, ragged bark back to clean, attached tissue first. Brush a thin layer over the exposed wood and the wound edges, then let it dry. Check the product label for temperature limits and reapplication. Wash brushes in water before it sets.",
+     "A tub goes a long way since you only coat damaged areas. Keep the lid sealed between uses so it does not skin over, and store it where it will not freeze. If a wound keeps getting reopened, fix the cause; no dressing replaces good care."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is Lac Balsam the same as Lak Balsam?",
+    "a": "Yes. Lak Balsam is a common misspelling of Lac Balsam, the same water-based wound dressing."
+   },
+   {
+    "q": "Should I put Lac Balsam on every pruning cut?",
+    "a": "No. Standard practice is to leave proper pruning cuts undressed. Use it on bark damage, grafts and similar wounds."
+   }
+  ],
+  "use": [
+   "plant-health"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/plant-care/planting/tree-support-web-for-staking-trees-250/",
+  "category": "/plant-care/planting/",
+  "name": "Tree Support Web for Staking Trees, 250 ft",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 45,
+  "keyword": "tree support",
+  "title": "Tree Support Web for Staking Trees, 250 ft Roll",
+  "h1": "Tree Support Web for Staking Trees",
+  "meta": "Soft tree support web for staking newly planted trees. Wide webbing holds a tree to its stakes without girdling bark. Tips for stake support and removal timing.",
+  "tagline": "Soft, wide staking web on a roll for supporting newly planted trees.",
+  "summary": "This tree support web is a soft strap on a long roll for tying newly planted trees to their stakes. Wide webbing spreads the load on the bark, so the tree gets support without the cutting and girdling you get from wire or narrow twine.",
+  "highlights": [
+   "Wide, soft webbing that does not cut into bark",
+   "Long roll for crews planting many trees",
+   "Cut to length for each tree and stake",
+   "Allows some trunk movement, which builds taper",
+   "Easy to remove when the stakes come out"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Tree staking web"
+   ],
+   [
+    "Length",
+    "250 ft roll"
+   ],
+   [
+    "Use",
+    "Tie trees to stakes after planting"
+   ],
+   [
+    "Install",
+    "Loose figure-eight or loop around trunk and stake"
+   ],
+   [
+    "Removal",
+    "Typically after one growing season"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why use a web instead of wire",
+    "p": [
+     "A newly planted tree with a small root ball can rock in the wind before the roots grab the surrounding soil. Staking gives it a little help. The tie is where most staking goes wrong: wire, even inside a hose section, and thin twine can cut into the bark and girdle the trunk if they are forgotten.",
+     "A wide tree support web spreads the pressure over a larger patch of bark. It holds the trunk steady without clamping it. On a planting crew, a 250 ft roll goes a long way, since each tie only needs a short length.",
+     "The web is also kinder to the crew. It is easy to cut, quick to tie, and soft enough that nobody is fighting stiff wire with pliers on a planting day."
+    ]
+   },
+   {
+    "h": "Setting up stake support for trees",
+    "p": [
+     "Drive two or three stakes outside the root ball, not through it. Attach the web to each stake and loop it around the trunk loosely, low enough that the top of the tree can still sway. Some movement is good; it is what tells the trunk to add taper and strength.",
+     "Tie a loose figure-eight between trunk and stake so the web does not rub the bark. Keep the attachment at the stake tight and the loop at the trunk relaxed. For larger trees on windy sites, guying with cable and earth anchors may be a better choice; see our <a href=\"/plant-care/planting/\">planting supplies</a>.",
+     "On sites with mowers and trimmers, keep stakes and web where they can be seen. Bright stakes or a mulch ring keep equipment off the trunk while the tree establishes."
+    ]
+   },
+   {
+    "h": "Checking and removing ties",
+    "p": [
+     "Look at staked trees a few times through the season. Loosen anything that has tightened, and check for rubbing. Most trees can lose their stakes after one growing season once the roots have established. Leaving support on for years does the tree no favors.",
+     "Cut the web off cleanly rather than leaving it wrapped on the trunk. Forgotten ties are one of the most common reasons young street trees fail.",
+     "If bark under the tie has been rubbed raw, move the loop to fresh bark and loosen it. Small marks heal; deep rubbing does not."
+    ]
+   },
+   {
+    "h": "Staking as part of good planting",
+    "p": [
+     "Staking is a small part of getting a tree established. Planting at the right depth, with the root flare visible, mulched and watered through the first season, does far more for a tree than any tie. Treat the stake and web as a short-term aid, not a fix for a poorly planted tree.",
+     "For trees where you are unsure, try planting without stakes and keep an eye on them after the first few storms. If one starts to lean or rock, add support then. Many trees establish faster when left to move freely from the start."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How long should a tree stay staked?",
+    "a": "Usually one growing season. Check root establishment and remove the stakes and web as soon as the tree stands on its own."
+   },
+   {
+    "q": "How tight should a tree support web be?",
+    "a": "Snug at the stake and loose at the trunk, so the tree can sway a little without rubbing."
+   },
+   {
+    "q": "Does every new tree need staking?",
+    "a": "No. Many container and balled trees stand fine without it. Stake only when the tree is top-heavy, the site is windy, or people are likely to push on it."
+   }
+  ],
+  "use": [
+   "plant-health",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/plant-care/planting/wire-rope-clamps/",
+  "category": "/plant-care/planting/",
+  "name": "Wire Rope Clamps",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "cable-hardware",
+  "price": 5,
+  "keyword": "wire rope clamp",
+  "title": "Wire Rope Clamps: Sizes, Spacing and Correct Install",
+  "h1": "Wire Rope Clamps",
+  "meta": "Galvanized wire rope clamps for tree guying and cable work. How to size a wire rope clip, which side the saddle goes on, and why torque and count matter.",
+  "tagline": "Galvanized U-bolt wire rope clips for guying trees and making eyes in cable.",
+  "summary": "Wire rope clamps, also called wire rope clips or cable clamps, let you form an eye or join wire cable without swaging tools. On tree jobs they show up when guying newly planted trees to earth anchors or making temporary cable terminations. They are cheap and simple, but only work when installed the right way around and torqued.",
+  "highlights": [
+   "U-bolt and saddle design, the classic wire rope clip",
+   "Galvanized finish for outdoor service",
+   "Sized to match the cable diameter",
+   "No swaging or special tools, just a wrench",
+   "Used with thimbles to protect the cable eye"
+  ],
+  "specs": [
+   [
+    "Type",
+    "U-bolt wire rope clip"
+   ],
+   [
+    "Finish",
+    "Galvanized"
+   ],
+   [
+    "Sizing",
+    "Match clip size to cable diameter"
+   ],
+   [
+    "Saddle placement",
+    "On the live (load) end"
+   ],
+   [
+    "Count, spacing, torque",
+    "Per maker's table for each size"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where wire rope clamps fit on tree jobs",
+    "p": [
+     "In the planting world, wire cable clamps are the quick way to terminate guy cable on larger transplanted trees: cable from a collar on the trunk, down to an earth anchor, with a thimbled eye clamped at each end. They also come in handy for temporary cable work around the yard and shop.",
+     "For permanent tree cabling inside the canopy, preformed dead-ends are the usual termination. Pair clamps with <a href=\"/planting/duck-bill-earth-anchors-small/\">duckbill earth anchors</a> when you are guying from the ground.",
+     "Around the shop, clamps also hold a cable on a winch line or make a quick eye on a sling for dragging logs. Keep a few sizes in the truck with matching thimbles."
+    ]
+   },
+   {
+    "h": "Never saddle a dead horse",
+    "p": [
+     "The U-bolt goes on the dead end, the short tail. The saddle sits on the live end, the side that carries the load. Install a clip backward and the U-bolt crushes the loaded cable and cuts its strength a lot. Every clip on the run goes the same way.",
+     "Use a thimble in the eye so the cable does not kink around a tight bend. Put the first clip one saddle-width from the dead end, the next tight against the thimble, and any others evenly between.",
+     "Seat the cable fully into the thimble groove before tightening the first clip, and keep the thimble from rotating or falling out as you go. A loose thimble lets the eye collapse under load. Tighten the nuts evenly, alternating sides, so the saddle pulls down square on the cable rather than cocking to one side.",
+     "Use the right size. An oversized clip will not grip a small cable, and an undersized one will not close over the larger cable at all."
+    ]
+   },
+   {
+    "h": "Count, spacing and torque",
+    "p": [
+     "Each size has a minimum number of clips, a turnback length and a torque value published by the maker. Small cables usually need at least two clips and larger ones more. Follow the table that ships with the clamps rather than guessing.",
+     "Torque the nuts, put the cable under load, then retorque. Cable stretches and settles, and loose clips let the cable slip. Check guyed trees through the season and remove guying once the tree has rooted in.",
+     "Keep spare clamps dry and the threads clean. A rusty, galled thread will not reach the right torque, and that means a termination that can slip. Replace any clamp with a bent U-bolt or cracked saddle.",
+     "When you take a guy system down, inspect the cable where the clips sat. Crushed or kinked cable should not go back into service; cut it off and start fresh."
+    ]
+   },
+   {
+    "h": "Ratings and overhead work",
+    "p": [
+     "A clipped termination does not reach the full strength of the cable. That is fine for guying a tree. Do not use clipped terminations in life-support systems or as a substitute for rated rigging hardware."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a wire rope clamp and a wire rope clip?",
+    "a": "Nothing. Wire rope clamp, wire rope clip and cable clamp all describe the same U-bolt and saddle fitting."
+   },
+   {
+    "q": "Which side does the saddle go on?",
+    "a": "The saddle goes on the live, load-bearing side of the cable. The U-bolt goes on the dead-end tail."
+   },
+   {
+    "q": "How many clamps do I need?",
+    "a": "It depends on cable size. Use the maker's table; small cables generally take at least two clips, larger cables more."
+   },
+   {
+    "q": "Do I need to retighten wire rope clamps?",
+    "a": "Yes. Retorque after the first load and check them periodically."
+   }
+  ],
+  "use": [
+   "plant-health",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/planting/duck-bill-earth-anchors-small/",
+  "category": "/plant-care/planting/",
+  "name": "Duckbill Earth Anchors, Small",
+  "brand": "duckbill",
+  "brand_name": "Duckbill",
+  "kind": "cable-hardware",
+  "price": 39,
+  "keyword": "duckbill anchors",
+  "title": "Small Duckbill Anchors for Guying Newly Planted Trees",
+  "h1": "Small Duckbill Anchors for Tree Guying",
+  "meta": "Small duckbill anchors for guying newly planted trees. How duckbill earth anchors drive and set, how many to use per tree, and what to check during the season.",
+  "tagline": "Drive-in earth anchors for guying smaller newly planted trees.",
+  "summary": "Small duckbill anchors are drive-in earth anchors that let you guy a newly planted tree without wooden stakes. You drive the anchor into the ground with a drive rod, pull back on the cable, and the anchor turns sideways in the soil and locks. They are quick to set and out of the way once installed.",
+  "highlights": [
+   "Drive-in installation with a steel drive rod",
+   "Anchor rotates and locks when you pull the cable",
+   "Low profile, nothing for mowers to catch",
+   "Small size for smaller caliper trees",
+   "Use three anchors around the tree for even support"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Drive-in earth anchor"
+   ],
+   [
+    "Size",
+    "Small"
+   ],
+   [
+    "Install",
+    "Drive rod, then load-lock by pulling up"
+   ],
+   [
+    "Typical layout",
+    "Three anchors spaced around the tree"
+   ],
+   [
+    "Holding",
+    "Depends on soil type; see maker's chart"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How duckbill earth anchors work",
+    "p": [
+     "A duckbill earth anchor looks like a small metal bill with a cable attached. You set it on the end of a drive rod and hammer it into the ground at an angle away from the tree. Pull the rod out, then pull up hard on the cable. The anchor pivots crosswise in the soil, like a toggle bolt in drywall, and resists further pulling.",
+     "That load-lock step matters. An anchor that has not turned holds very little. Pull until you feel it set before attaching the guy to the tree.",
+     "The design is simple and that is the appeal. There are no stakes sticking up for kids or mowers to hit, and the only thing left above ground is the guy cable running to the trunk. On a commercial planting with many trees, a crew can set a set of duckbill earth anchors in minutes per tree."
+    ]
+   },
+   {
+    "h": "Guying a newly planted tree",
+    "p": [
+     "For most trees, three duckbill anchors spaced evenly around the root ball give support from every direction. Keep the anchors outside the root ball, and run each guy to a soft collar or strap on the trunk, never bare wire on bark.",
+     "Leave a little slack so the tree can move. Terminate the cable with a thimble and <a href=\"/plant-care/planting/wire-rope-clamps/\">wire rope clamps</a> or the hardware supplied in a duckbill anchor kit.",
+     "Angle the guys so they meet the trunk at roughly one-third to two-thirds of its height, with the anchor far enough out to give a reasonable angle. Flag the guys with tape or covers so people do not walk into them."
+    ]
+   },
+   {
+    "h": "Soil, size and limits",
+    "p": [
+     "Holding power depends on soil. Dense clay holds well; loose sand and wet soil hold less. Small anchors are for small trees. For larger caliper trees, step up to a bigger anchor size and check the maker's chart.",
+     "Call before you dig. Driving anchors into buried utility lines is a real hazard, so get locates done first.",
+     "A duckbill anchor kit typically includes the anchors with cable attached and the hardware to terminate them. Check what your kit includes and whether you need a drive rod, which is reusable and worth keeping in the truck."
+    ]
+   },
+   {
+    "h": "Removing the guying",
+    "p": [
+     "Plan to remove guys after a season or so, once the roots have established. Cut the cable at ground level and leave the anchor in place, or dig it out if the site needs it clear.",
+     "If the tree still moves too much at removal time, check the planting depth and root ball before you add the guys back. Guying cannot fix a tree planted too deep or a root ball that has fallen apart. Note anchor locations on the work order so the next crew knows where the cable runs are, especially near lawns that get aerated."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How deep do small duckbill anchors go?",
+    "a": "Drive them to the depth the maker specifies for the size, then load-lock. Deeper generally holds better in firm soil."
+   },
+   {
+    "q": "How many duckbill anchors per tree?",
+    "a": "Three, spaced evenly around the tree, is the common setup."
+   },
+   {
+    "q": "Can I reuse duckbill anchors?",
+    "a": "They are generally treated as single-use once set. Cut the cable and leave the anchor buried when removing guys."
+   }
+  ],
+  "use": [
+   "plant-health",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/",
+  "category": "/climbing/spurs/replacement-gaffs-and-parts/",
+  "name": "Distel Replacement Pads with Rings and Straps",
+  "brand": "distel",
+  "brand_name": "Distel",
+  "kind": "spur",
+  "price": 79,
+  "keyword": "distel",
+  "title": "Distel Replacement Pads with Rings and Straps",
+  "h1": "Distel Replacement Pads with Rings and Straps",
+  "meta": "Distel replacement pads with rings and straps refresh a worn set of Distel climbers. When to replace pads and straps, and what to inspect before the next climb.",
+  "tagline": "Fresh pads, rings and straps to put worn Distel climbers back in service.",
+  "summary": "Distel replacement pads with rings and straps let you rebuild the upper end of your Distel climbers when the old pads are cracked, compressed or the straps are worn. New pads restore comfort on long removals and keep the spur seated on your leg.",
+  "highlights": [
+   "Made to fit Distel tree climbers",
+   "Pads, rings and straps in one set",
+   "Restores comfort and fit on worn spurs",
+   "Cheaper than replacing the whole climber"
+  ],
+  "specs": [
+   [
+    "Fits",
+    "Distel tree climbers"
+   ],
+   [
+    "Includes",
+    "Pads, rings and straps"
+   ],
+   [
+    "Sold as",
+    "Pair"
+   ]
+  ],
+  "body": [
+   {
+    "h": "When to replace pads and straps",
+    "p": [
+     "Pads take a beating on removals. Once the foam is flattened, the leather is cracking, or the straps are stretched, frayed or cut, it is time to rebuild. Worn straps let the spur roll on your leg, and that is how gaffs cut out of the bark.",
+     "Swapping in Distel pads with new rings and straps is a straightforward job at the truck. Confirm the set matches your climber model before you order.",
+     "Replacing pads is also a chance to improve fit. If you have changed boots or the old straps never sat right, take the time to set the new ones up properly, with buckles where they do not dig in and strap tails secured so they do not catch.",
+     "Order the set once you know your model and size so the swap is a one-trip job."
+    ]
+   },
+   {
+    "h": "Inspect the whole climber",
+    "p": [
+     "While the pads are off, look over the shank and the gaff. Check for bends, cracks and loose hardware, and sharpen or replace dull gaffs following Distel's guidance. Browse <a href=\"/climbing/spurs/replacement-gaffs-and-parts/\">replacement gaffs and parts</a> for the rest. Spurs are for removals; climb with a properly rated lanyard and climbing system per ANSI Z133.",
+     "Remember that gaffs only belong in trees that are coming down. Spurs wound live trees, so climb on rope for pruning work."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will these pads fit other brands of climbers?",
+    "a": "They are made for Distel climbers. Fit on other brands is not assured."
+   },
+   {
+    "q": "How do I know my straps need replacing?",
+    "a": "Replace straps that are cut, frayed, stretched, stiff or have damaged buckles or stitching."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging-kits/speed-line-kit-with-carabiners/",
+  "category": "/rigging/rigging-kits/",
+  "name": "Speed Line Kit with Carabiners",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "rope",
+  "price": 260,
+  "keyword": "speed line kit",
+  "title": "Arborist Speed Line Kit with Carabiners",
+  "h1": "Arborist Speed Line Kit with Carabiners",
+  "meta": "Arborist speed line kit with carabiners for zipping brush and wood out of the tree. How a speedline is rigged, tensioned and anchored, plus safe working limits.",
+  "tagline": "A speedline setup for zipping brush and wood over obstacles to the drop zone.",
+  "summary": "This speed line kit gives you the line and connectors to run brush and light wood down a tensioned rope from the canopy to a drop zone away from the tree. It is the setup arborists reach for when the landing area is full of roofs, fences and gardens.",
+  "highlights": [
+   "Moves brush away from targets below the tree",
+   "Locking carabiners for clipping loads to the line",
+   "Faster cleanup with brush landing in one pile",
+   "Works with a pulley or carabiners riding the line",
+   "Pairs with a lowering device for tensioning and control"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Speedline kit"
+   ],
+   [
+    "Connectors",
+    "Locking carabiners"
+   ],
+   [
+    "Use",
+    "Zip-lining brush and light wood"
+   ],
+   [
+    "Anchoring",
+    "High anchor in tree, low anchor at drop zone"
+   ],
+   [
+    "Tensioning",
+    "Mechanical advantage or lowering device at the low anchor"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What a speedline does",
+    "p": [
+     "A speedline is a rope run at an angle from a high anchor in the tree to a low anchor on the ground away from the tree. The climber clips cut brush to the line with a carabiner or pulley and it slides down to the landing zone. Ground crew unclip it and drag it to the chipper.",
+     "It turns a tight backyard removal into a steady flow of brush to one spot. Instead of lowering every limb to a crowded drop zone under the tree, you send it over the shed and onto the driveway."
+    ]
+   },
+   {
+    "h": "Rigging the line",
+    "p": [
+     "Anchor the high end in a sound part of the tree above the work. Anchor the low end to a solid object: another tree, a stump, or the truck if your company allows it. Tension the line with a mechanical advantage system or by taking wraps on a lowering device. Too tight and you overload anchors; too slack and loads drag through the targets.",
+     "Use locking carabiners or a pulley to ride the line. A few loads in, check the anchors and retension. For a ready-to-go system from a known maker, compare this with the <a href=\"/rigging/rigging-kits/weaver-speed-line-kit/\">Weaver speed line kit</a>.",
+     "Pick the angle with care. Too steep and loads arrive fast and hit hard; too shallow and they stall halfway. A controlled line, where a ground worker can hold a friction wrap on the low end, gives you the option to slow or stop a load."
+    ]
+   },
+   {
+    "h": "Attaching loads",
+    "p": [
+     "Clip the carabiner to the line first, then to the brush, usually through a sling or around the butt of the branch. Keep loads small enough for the line and the anchors. Heavy wood on a speedline puts high forces on the top anchor.",
+     "Have a tag line or control line on anything that could swing. Ground crew stays clear of the line's path and the landing zone until the load stops.",
+     "Small, frequent loads are the rule. Several light bundles put far less stress on the anchors than one large limb, and they are easier for the ground crew to handle at the landing zone. Strip side branches from bulky brush so it rides cleanly instead of dragging through shrubs on the way down.",
+     "Keep extra carabiners on the line so the climber can send the next load while the ground crew is still unhooking the last one. A rope bag or bucket at the bottom collects returned connectors."
+    ]
+   },
+   {
+    "h": "Safety",
+    "p": [
+     "A speedline is rigging, not life support. Never clip yourself to it. Inspect rope, slings and carabiners before use and retire damaged gear. Work to ANSI Z133 and get trained on speedline setup before you run one over targets.",
+     "Brief the ground crew before the first load. Agree on calls for sending, clear and stop, and keep everyone out from under the line while brush is moving."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What knot should I use to attach a line to a carabiner?",
+    "a": "For rigging, a figure-eight on a bight or a bowline clipped into a locking carabiner is common. Use a knot you have been trained to tie and inspect, and dress it before loading."
+   },
+   {
+    "q": "How tight should a speedline be?",
+    "a": "Tight enough that loads clear the targets, no tighter. Over-tensioning multiplies the forces on both anchors."
+   },
+   {
+    "q": "Can I use a pulley instead of a carabiner on the line?",
+    "a": "Yes. A pulley runs faster and with less wear on the line. Carabiners slow loads down, which can help on steep lines."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging-pulleys/rock-exotica-downrigger/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "name": "Rock Exotica Downrigger",
+  "brand": "rock-exotica",
+  "brand_name": "Rock Exotica",
+  "kind": "pulley",
+  "price": 160,
+  "keyword": "rock exotica downrigger",
+  "title": "Rock Exotica Downrigger Rigging Pulley",
+  "h1": "Rock Exotica Downrigger",
+  "meta": "The Rock Exotica Downrigger is a rigging pulley for redirecting lowering lines. What a downrigger is used for on tree removals and how to set and inspect it.",
+  "tagline": "A rigging pulley for redirecting and managing lowering lines on removals.",
+  "summary": "The Rock Exotica Downrigger is a rigging pulley built for the lowering side of tree work, where you need to redirect a line cleanly and keep friction where you want it. Rock Exotica builds its hardware for rope access and rescue, and this pulley brings that build quality to arborist rigging.",
+  "highlights": [
+   "Rigging pulley from Rock Exotica",
+   "Redirects lowering lines with low rope wear",
+   "Clips into a sling or anchor with a carabiner",
+   "Machined hardware with clear markings"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Rock Exotica"
+   ],
+   [
+    "Type",
+    "Rigging pulley"
+   ],
+   [
+    "Ratings",
+    "Marked on the device; follow maker's instructions"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What is a downrigger used for?",
+    "p": [
+     "In tree work, a downrigger setup is about controlling where the lowering line runs. Hung from a sling in the tree, a pulley like this redirects the line so the load swings away from targets, or so the ground worker gets a better angle to the lowering device at the base.",
+     "It sees real dynamic forces when a piece is caught, so treat it as rigging hardware and size the rest of the system to match.",
+     "A redirect also keeps the lowering line off bark and out of tight crotches where it would wear. On big removals, a well-placed pulley can turn an awkward drop straight into the yard into a clean, controlled descent onto the lawn. Plan the angle before the first cut and check it once the first piece is down."
+    ]
+   },
+   {
+    "h": "Setting and inspecting it",
+    "p": [
+     "Hang the pulley from a sling choked or girth-hitched to a sound, well-sized part of the tree, and connect with a locking carabiner of suitable strength. Keep the line running in the sheave without rubbing the side plates.",
+     "Before each job, check that the sheave spins freely, the side plates close and lock, and there are no cracks, deep scores or rope burns. Retire hardware that has been shock loaded beyond its rating or dropped from height onto a hard surface. Rigging is not life support; keep it separate from your climbing system and work to ANSI Z133."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a downrigger used for in tree rigging?",
+    "a": "It redirects the lowering line so loads come down where you want them and the ground worker has a clean angle to the friction device."
+   },
+   {
+    "q": "Can I climb on a rigging pulley?",
+    "a": "Do not mix rigging and life-support gear. Use climbing hardware rated and intended for life support, per the maker's instructions."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "name": "CMI 5/8\" Steel Arborist Block",
+  "brand": "cmi",
+  "brand_name": "CMI",
+  "kind": "pulley",
+  "price": 150,
+  "keyword": "arborist block",
+  "title": "CMI 5/8\" Steel Arborist Block for Rigging",
+  "h1": "CMI 5/8\" Steel Arborist Block",
+  "meta": "CMI 5/8 in steel arborist block for rigging lines on removals. Where a steel-sheave arborist block fits, how to hang it, and what to inspect before every job.",
+  "tagline": "A steel-sheave rigging block for 5/8 in lowering lines on removal work.",
+  "summary": "The CMI 5/8 in steel arborist block is a rigging block for lowering wood on 5/8 in rope. A steel sheave stands up to the heat and wear of repeated heavy lowering, and CMI hardware has a long record in rope rescue and tree work.",
+  "highlights": [
+   "Sized for rigging lines up to 5/8 in",
+   "Steel sheave for durability under heavy use",
+   "Hangs from a sling high in the tree",
+   "Built by CMI, a long-time rescue hardware maker"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "CMI"
+   ],
+   [
+    "Rope",
+    "Up to 5/8 in"
+   ],
+   [
+    "Sheave",
+    "Steel"
+   ],
+   [
+    "Ratings",
+    "Marked on the block"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where an arborist block fits",
+    "p": [
+     "An arborist block is the top of a natural crotch alternative: hung from a sling above the work, it gives the rigging line a smooth, low-friction path. That cuts rope wear and puts the friction where it belongs, at the lowering device on the trunk, so the ground worker can let pieces run and stop them smoothly.",
+     "A 5/8 in block suits crews running 5/8 in rigging line for medium to heavy wood.",
+     "Steel adds weight compared with aluminum, but for a block that stays rigged in one place through a removal, durability is worth more than a few ounces. Pair it with a sling and lowering device rated to match.",
+     "It also suits crews who rig hard every day and want a block that outlasts the rope running through it."
+    ]
+   },
+   {
+    "h": "Hanging and inspecting",
+    "p": [
+     "Hang it on a properly rated sling, girth hitched or choked high enough to clear the piece, with the line running straight through the sheave. Keep the block above the cut so forces stay in line with the stem.",
+     "Before every job check that the sheave turns freely, side plates are straight and close properly, and there are no cracks or deformation. Retire a block that has been overloaded. Rigging gear must be kept separate from climbing gear, and crews should be trained to ANSI Z133."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What size rope fits this arborist block?",
+    "a": "It is sized for rigging lines up to 5/8 in diameter. Smaller lines will run but larger ones will not."
+   },
+   {
+    "q": "Why use a steel sheave?",
+    "a": "Steel resists wear and heat better than aluminum under repeated heavy lowering."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "name": "ISC Small Rigging Pulley for up to 5/8\" Rope",
+  "brand": "isc",
+  "brand_name": "ISC",
+  "kind": "pulley",
+  "price": 95,
+  "keyword": "small rigging pulley",
+  "title": "ISC Small Rigging Pulley for up to 5/8\" Rope",
+  "h1": "ISC Small Rigging Pulley for up to 5/8\" Rope",
+  "meta": "ISC small rigging pulley for rope up to 5/8 in. A compact pulley for light rigging, redirects and pull lines, with tips on where it fits and what to inspect.",
+  "tagline": "A compact ISC pulley for light rigging and redirects on lines up to 5/8 in.",
+  "summary": "The ISC small rigging pulley takes rope up to 5/8 in and packs a lot of capability into a small, light pulley. It is the one to carry for light rigging, redirects on pull lines and mechanical advantage setups where a full-size block is more than you need.",
+  "highlights": [
+   "Fits rope up to 5/8 in",
+   "Compact and light to carry on the saddle",
+   "Good for redirects and light rigging",
+   "ISC build quality from a rope-access hardware maker"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "ISC"
+   ],
+   [
+    "Rope",
+    "Up to 5/8 in"
+   ],
+   [
+    "Type",
+    "Small rigging pulley"
+   ],
+   [
+    "Ratings",
+    "Marked on the pulley"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where a small rigging pulley earns its place",
+    "p": [
+     "Not every piece needs a big block. A small rigging pulley handles light limbs, redirects a pull line around an obstacle, or acts as the moving pulley in a mechanical advantage system for tensioning a speedline or pulling over a small tree. Because it is light, it rides on the saddle without being in the way.",
+     "Keep heavier wood on a full-size block rated for the forces involved.",
+     "Small pulleys also help on the ground. Anchor one to a stump to turn a pull line so the crew can pull from a safe spot outside the fall zone, or use it to change the angle on a winch line. Having one in the rigging bag saves improvising with a carabiner, which adds friction and wears the rope."
+    ]
+   },
+   {
+    "h": "Use and inspection",
+    "p": [
+     "Clip it to a sling or anchor with a locking carabiner and keep the rope running cleanly in the sheave. Check the sheave and side plates before each use, and retire the pulley after a severe shock load or visible damage.",
+     "Rigging gear is not life support. Keep it separate from climbing gear, follow ISC's instructions, and work to ANSI Z133.",
+     "Wash out grit after muddy jobs; dirt in the bearing slows the sheave and wears the rope."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use smaller cord in this pulley?",
+    "a": "Smaller rope will run, but the sheave is designed for larger rigging lines. Very thin cord can jam between sheave and side plate, so use a pulley sized for it."
+   },
+   {
+    "q": "Is this pulley for heavy rigging?",
+    "a": "It is meant for light rigging and redirects. Use a full-size block for heavy wood."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-small-rigging-plate/",
+  "category": "/rigging/blocks-and-other-hardware/",
+  "name": "Petzl PAW Small Rigging Plate",
+  "brand": "petzl",
+  "brand_name": "Petzl",
+  "kind": "rigging-device",
+  "price": 30,
+  "keyword": "rigging plate",
+  "title": "Petzl PAW Small Rigging Plate for Anchors",
+  "h1": "Petzl PAW Small Rigging Plate",
+  "meta": "The Petzl PAW S rigging plate turns one anchor into several clean connection points. How arborists use a small rigging plate for SRT anchors and redirects.",
+  "tagline": "A small aluminum rigging plate for organizing carabiners at an anchor.",
+  "summary": "The Petzl PAW S is a small rigging plate that gives one anchor several neat connection points. Clip it to a sling or base anchor and you can hang a rope, a redirect and a backup without stacking carabiners on top of each other.",
+  "highlights": [
+   "Multiple holes for separate carabiners",
+   "Keeps connectors from cross-loading each other",
+   "Small, light aluminum plate",
+   "Useful for base-tied SRT anchors and rescue setups"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Petzl"
+   ],
+   [
+    "Model",
+    "PAW S"
+   ],
+   [
+    "Material",
+    "Aluminum"
+   ],
+   [
+    "Ratings",
+    "Marked on the plate"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why use a rigging plate",
+    "p": [
+     "Stacking carabiners on a single connector leads to cross-loading and a mess you cannot sort out quickly. A rigging plate spreads connections across separate holes. For an arborist, that might mean a base-anchored SRT line, a rescue line and a redirect all off one sling at the base of the tree, each on its own carabiner.",
+     "The Petzl PAW is a common choice among rope-access workers, and the small size is the right fit for most tree setups.",
+     "It also helps on removals with a rescue plan in place: the rescue line hangs ready on its own hole instead of buried under the working connections. Everyone on the crew can see at a glance what is clipped where, which matters when things need to happen fast."
+    ]
+   },
+   {
+    "h": "Use and inspection",
+    "p": [
+     "Clip the plate to the anchor through its top hole and load each lower hole with a single carabiner. Inspect for cracks, sharp edges and wear grooves before use. Life-support gear must be used per the maker's instructions and inspected, and climbers should be trained before setting up base anchors.",
+     "Pick carabiners that sit well in the plate holes and rotate freely. A connector jammed against the edge of a hole can be side-loaded. Keep the plate in your climbing kit rather than the rigging bag so it does not see the abuse rigging hardware takes."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the Petzl PAW used for?",
+    "a": "It organizes several carabiners at one anchor so each connection hangs separately and loads cleanly."
+   },
+   {
+    "q": "Can a rigging plate be part of a climbing system?",
+    "a": "Yes, if used per Petzl's instructions and within its rating. Inspect it before each use."
+   }
+  ],
+  "use": [
+   "climbing",
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "name": "Double Swing Pulley",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "pulley",
+  "price": 65,
+  "keyword": "double pulley",
+  "title": "Double Swing Pulley for a Double Pulley System",
+  "h1": "Double Swing Pulley for a Double Pulley System",
+  "meta": "Double swing pulley for a compact double pulley system: haul lines, pull lines and tensioning. How to rig a 2 pulley system and what to check before use.",
+  "tagline": "A two-sheave swing-side pulley for building compact mechanical advantage systems.",
+  "summary": "A double pulley puts two sheaves side by side in one frame, and this double swing pulley has side plates that open so you can load rope mid-line. It is the building block for a compact double pulley system: pulling over a tree, tensioning a speedline or hauling a heavy piece out of a ditch.",
+  "highlights": [
+   "Two sheaves in one frame for compact haul systems",
+   "Swing-open side plates let you load rope mid-line",
+   "Pairs with a second pulley for higher ratios",
+   "Useful for pull lines, speedlines and log handling",
+   "Clips to an anchor with a single locking carabiner"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Double sheave pulley"
+   ],
+   [
+    "Side plates",
+    "Swinging, open to load rope"
+   ],
+   [
+    "Sheaves",
+    "Two, side by side"
+   ],
+   [
+    "Connection",
+    "Single attachment point for a carabiner"
+   ],
+   [
+    "Ratings",
+    "Marked on the pulley"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What a double pulley system does",
+    "p": [
+     "Mechanical advantage lets one or two people put serious force on a rope. With two double pulleys, one anchored and one on the load, you can build a 4:1 system in a compact package. Add a progress capture or a friction hitch and you can hold what you gain. A single double pulley paired with a single pulley gives you a 3:1.",
+     "On tree jobs that means pulling a back-leaning tree over the notch, tensioning a speedline, or skidding a heavy log onto the trailer without a winch.",
+     "The compact frame matters in the field. Two single pulleys hanging side by side twist around each other and tangle; a double pulley keeps both rope parts in one plane and runs cleaner. Fewer separate pieces also means fewer carabiners to manage, which speeds setup and teardown on a busy day."
+    ]
+   },
+   {
+    "h": "Why swing side plates matter",
+    "p": [
+     "With fixed side plates you have to thread the rope through from the end. That is slow when the rope is already rigged with a running end tied off a hundred feet away. Swing plates let you open the pulley, drop the rope in, close it and clip it, all at the middle of the line.",
+     "Check that the plates close fully and the carabiner passes through both before loading. A pulley that is not closed can let the rope ride out under load.",
+     "Swing plates also make teardown fast. Once the pull is done, open the plates, lift the rope out and pack the pulley without pulling a hundred feet of line back through."
+    ]
+   },
+   {
+    "h": "Building a 2 pulley system",
+    "p": [
+     "The simplest 2 pulley system is a single pulley at the anchor and one at the load: rope tied off at one pulley, through the other and back, gives you 2:1 or 3:1 depending on where the end is tied. A double pulley at each end doubles the number of rope parts and the ratio.",
+     "Friction in each sheave eats into the theoretical advantage, so real-world output is less than the math says. Good bearings and correct rope diameter help. Keep ropes from twisting around each other between the pulleys, which adds friction fast.",
+     "More of the haul hardware is in our <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section."
+    ]
+   },
+   {
+    "h": "Safe use",
+    "p": [
+     "Mechanical advantage can easily overload anchors, slings and the tree itself. Know the forces you are making, and use hardware rated for them. When pulling trees over, keep everyone clear of the fall zone and the line's path if something breaks. Rigging gear is not life support; keep it separate from climbing gear and train crews to ANSI Z133.",
+     "Inspect the pulley before each job: sheaves spin freely, no cracks or bends, side plates tight on the axle.",
+     "Store it clean and dry, and keep it in the rigging bag rather than loose in the truck bed."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What ratio can I get with a double pulley?",
+    "a": "Two double pulleys rigged together give 4:1 theoretical advantage, or 5:1 if the rope end is tied to the moving pulley. Friction reduces the real output."
+   },
+   {
+    "q": "What is the difference between a double pulley and a tandem pulley?",
+    "a": "A double pulley has two sheaves side by side for mechanical advantage. A tandem pulley has two sheaves in line to ride a tensioned rope."
+   },
+   {
+    "q": "Do I need progress capture?",
+    "a": "For hauling and tensioning it is strongly recommended. A friction hitch or progress-capture pulley holds the load when you reset."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "name": "Petzl Tandem Pulley",
+  "brand": "petzl",
+  "brand_name": "Petzl",
+  "kind": "pulley",
+  "price": 60,
+  "keyword": "tandem pulley",
+  "title": "Petzl Tandem Pulley for Speedlines and Tyroleans",
+  "h1": "Petzl Tandem Pulley",
+  "meta": "The Petzl Tandem pulley runs two sheaves in line to ride a tensioned rope. How arborists use a tandem pulley on speedlines and how it compares to other pulleys.",
+  "tagline": "A two-sheave in-line pulley for riding tensioned lines and speedlines.",
+  "summary": "The Petzl Tandem pulley has two sheaves in line so it rides a tensioned rope smoothly, which is why it shows up on speedlines and tyrolean traverses. Among Petzl pulleys, it is the one built for moving along a line rather than redirecting one.",
+  "highlights": [
+   "Two in-line sheaves for riding a tensioned rope",
+   "Smooth travel on speedlines",
+   "Side plates open to install mid-line",
+   "Light, compact Petzl build"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Petzl"
+   ],
+   [
+    "Model",
+    "Tandem"
+   ],
+   [
+    "Sheaves",
+    "Two, in line"
+   ],
+   [
+    "Ratings",
+    "Marked on the pulley"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Using a tandem pulley on a speedline",
+    "p": [
+     "On a speedline, brush hung from a single pulley tends to tip and drag. A tandem pulley spreads the load along two sheaves, so it tracks straight and runs fast. Clip the brush to the pulley with a sling and locking carabiner and let it go.",
+     "Line angle and tension decide how fast loads arrive. Have a plan for stopping them at the bottom.",
+     "The side plates open so you can install it on the line without untying, which saves time when each load needs its own pulley. Many crews keep several on the line so the climber always has one ready while the ground crew collects the last load.",
+     "Stop the brush at the bottom with a soft landing, such as a brush pile, or by having the low end tied off on a friction device so it can be eased."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Check that both sheaves turn freely, side plates are not bent and the axles are tight. Retire after damage or a severe shock load. Speedlines are rigging, not life support, unless the whole system is designed and rated for that use; follow Petzl's instructions and train to ANSI Z133.",
+     "Keep the pulley clean of sap and grit, which slows the sheaves and wears the rope faster."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a tandem pulley and a double pulley?",
+    "a": "A tandem has two sheaves in line to ride along a rope. A double has two side by side for building mechanical advantage."
+   },
+   {
+    "q": "Can I use the Tandem on any rope?",
+    "a": "Use it within the rope diameter range Petzl lists for it."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "name": "Crosby Chain Choker Hook",
+  "brand": "crosby",
+  "brand_name": "Crosby",
+  "kind": "cable-hardware",
+  "price": 25,
+  "keyword": "chain choker hook",
+  "title": "Crosby Chain Choker Hook for Log Skidding",
+  "h1": "Crosby Chain Choker Hook",
+  "meta": "Crosby chain choker hook for making a sliding choker on logging chain. How choker hooks work for skidding logs and what to check before every pull.",
+  "tagline": "A choker hook that turns a length of chain into a sliding log choker.",
+  "summary": "A Crosby chain choker hook slides along a logging chain so you can wrap a log, pull the chain tight and drag it. It is a basic piece of wood-handling hardware for skidding logs to the loader or out of the backyard.",
+  "highlights": [
+   "Turns a length of chain into a sliding choker",
+   "Grips the log tighter as you pull",
+   "Forged hardware from Crosby",
+   "Useful for skidding with a tractor, mini skid steer or winch"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Crosby"
+   ],
+   [
+    "Type",
+    "Chain choker hook"
+   ],
+   [
+    "Fit",
+    "Match hook size to chain size"
+   ],
+   [
+    "Ratings",
+    "Marked on the hook"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How choker hooks work",
+    "p": [
+     "Wrap the chain around the log, pass the end back through the choker hook, and hook on to the machine or winch. When you pull, the chain cinches around the log. Release tension and the hook slides loose so you can unwrap.",
+     "Set the choker near the end of the log so it lifts slightly and slides instead of plowing into the ground.",
+     "A sliding choker is quicker than tying a log hitch every time and holds tighter on round wood. Keep a couple of chokers rigged on chain in the truck for pulling logs out of tight backyards to the loader or onto a trailer.",
+     "On a winch line, a short chain with a choker hook saves wear on the winch rope by keeping it off the bark and dirt.",
+     "Hooks also save the chain itself from the kinks a knotted chain picks up."
+    ]
+   },
+   {
+    "h": "Sizing and safety",
+    "p": [
+     "Use a hook matched to your chain size and grade, and keep the working load within the lowest-rated component. Inspect for spread throats, cracks and worn chain contact points. Stand clear of the chain and log when pulling; a chain that slips or breaks can whip. Do not use skidding hardware for overhead lifting unless it is rated for that.",
+     "Grease and rust-proof the hardware between jobs."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What size choker hook do I need?",
+    "a": "Match the choker hook to your chain size and grade so it slides correctly and holds the load."
+   },
+   {
+    "q": "Can I use a choker hook for lifting?",
+    "a": "Only if the hook and chain are rated for overhead lifting. Most choker setups are for skidding."
+   }
+  ],
+  "use": [
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "name": "Crosby Chain Connector",
+  "brand": "crosby",
+  "brand_name": "Crosby",
+  "kind": "cable-hardware",
+  "price": 18,
+  "keyword": "crosby chain connectors",
+  "title": "Crosby Chain Connectors for Chain Repair and Rigging",
+  "h1": "Crosby Chain Connectors",
+  "meta": "Crosby chain connectors join chain to chain, hooks or rings without welding. Where an arborist uses a chain connecting link and how to size and inspect one.",
+  "tagline": "A forged connecting link for joining chain, hooks and rings in the field.",
+  "summary": "Crosby chain connectors join two pieces of chain, or chain to a hook or ring, without welding. On a tree crew that means building a custom-length skidding chain, repairing a damaged one, or fitting a grab hook to the end.",
+  "highlights": [
+   "Joins chain to chain, hooks or rings",
+   "No welding, assemble in the field",
+   "Forged hardware from Crosby",
+   "Handy for building and repairing skidding chains"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Crosby"
+   ],
+   [
+    "Type",
+    "Chain connecting link"
+   ],
+   [
+    "Fit",
+    "Match link to chain size and grade"
+   ],
+   [
+    "Ratings",
+    "Marked on the link"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Using a chain connecting link",
+    "p": [
+     "A Crosby chain link is the quick fix when a chain is too short, a hook is damaged, or you want a ring on the end for a winch line. Join the pieces, assemble the link per Crosby's instructions, and the chain is back in service.",
+     "Match the connector to the chain size and grade so the weakest point is not the link itself.",
+     "They are also useful for linking a winch cable eye to a chain, or adding a shortening hook so one chain covers different log sizes. Keep a few links in the truck bin; a broken chain at the start of a big cleanup is a long trip back to the shop.",
+     "Clean and lightly oil connectors before storing them so the pins and bodies do not rust together."
+    ]
+   },
+   {
+    "h": "Inspection and limits",
+    "p": [
+     "Check connectors for cracks, wear and spread before each use, and replace any that look stretched. The working load of the assembly is that of its lowest-rated part. Use rated alloy components if the chain will ever be used for lifting, and keep chain work clear of people; a failing chain can whip.",
+     "Do not grind, heat or weld connecting links; it changes the steel.",
+     "Retire any link that will not assemble cleanly."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I reuse a Crosby chain connector?",
+    "a": "Follow Crosby's instructions for the specific link. Inspect it before reuse and replace if it is damaged or deformed."
+   },
+   {
+    "q": "Does the connector reduce chain strength?",
+    "a": "The assembly is limited by its lowest-rated component, so match the link to the chain grade."
+   }
+  ],
+  "use": [
+   "ground",
+   "rigging"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "name": "Galvanized Clevis",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "cable-hardware",
+  "price": 9,
+  "keyword": "clevis",
+  "title": "Galvanized Clevis: Uses, Sizing and Load Ratings",
+  "h1": "Galvanized Clevis",
+  "meta": "A galvanized clevis connects chain, cable and hardware with a removable pin. How a clevis is used on tree jobs, rated versus unrated hardware, and safe pinning.",
+  "tagline": "A galvanized pinned connector for chain, cable and hitch work around the yard.",
+  "summary": "A galvanized clevis is a U-shaped connector closed with a removable pin, used to join chain, cable, rings and hitch points. Around a tree service it shows up on equipment hitches, skidding chains, cable work and anywhere you need a solid, pinned connection.",
+  "highlights": [
+   "U-shaped body with removable pin",
+   "Galvanized finish for outdoor use",
+   "Connects chain, cable, rings and hitches",
+   "Simple, strong and easy to inspect",
+   "Choose rated hardware for any critical load"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Clevis with pin"
+   ],
+   [
+    "Finish",
+    "Galvanized"
+   ],
+   [
+    "Pin",
+    "Removable, secured to stop backing out"
+   ],
+   [
+    "Use",
+    "Connections for chain, cable and hitches"
+   ],
+   [
+    "Ratings",
+    "Use only marked, rated hardware for rigging loads"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What a clevis does",
+    "p": [
+     "A clevis is one of the oldest pieces of connecting hardware. The U-shaped body goes around whatever you are connecting, and a pin closes the open end. Unlike a hook, it cannot come unhooked when the load goes slack, and unlike a carabiner, it is built for steel-on-steel work like chain and hitches.",
+     "On a tree crew you will see a clevis on the hitch of a log trailer, at the end of a skidding chain, on cable runs for guying, or holding a snatch block to an anchor strap on a winch setup."
+    ]
+   },
+   {
+    "h": "Clevis, shackle and the difference that matters",
+    "p": [
+     "People use clevis and shackle loosely, and many shapes overlap. What matters for safety is whether the piece is rated. A rated shackle or clevis is marked with its working load and made to a known standard. Generic farm-store clevises are often unmarked, and their strength is unknown.",
+     "For hitching and general yard use, a galvanized clevis is fine. For anything that will hold a load over people, anchor a rigging system, or be part of a winch pull near the crew, use hardware with a marked working load limit and stay within it.",
+     "Browse rated rings, shackles and connectors in <a href=\"/rigging/blocks-and-other-hardware/rings-and-other-hardware/\">rings and other hardware</a>."
+    ]
+   },
+   {
+    "h": "Pinning and loading",
+    "p": [
+     "Make sure the pin goes all the way through both ears and is secured with its cotter, clip or nut so it cannot work loose under vibration. A pin that is only half seated, or a threaded pin that has backed out, is a common way connections fail.",
+     "Load the clevis in line through the bow and pin. Side-loading the ears bends the body and the pin. Do not substitute a bolt for the proper pin; the grade and fit may be wrong.",
+     "Size the clevis so the chain or hardware sits fully in the bow without being forced. A tight fit pries the ears apart under load.",
+     "If the pin is hard to start, check for a bent ear or burred threads before forcing it."
+    ]
+   },
+   {
+    "h": "Inspecting hardware",
+    "p": [
+     "Look for bent pins, spread ears, cracks, heavy rust and wear at the bow. Galvanizing slows corrosion but does not stop wear. Replace any clevis that has been overloaded or deformed; steel does not go back into shape safely. Keep the working load of the whole assembly within the rating of its weakest piece, and train the crew on rigging hardware per ANSI Z133.",
+     "Store spare clevises and pins together in a bin so pins do not get lost and replaced with bolts in a pinch. A labeled bin of rated hardware next to a separate bin of yard hardware keeps the two from getting mixed up on the truck.",
+     "When you buy, note the marking on rated hardware and keep the paperwork. Knowing what a clevis is rated for is what lets you use it with confidence."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a clevis and a shackle?",
+    "a": "The terms overlap. Both are pinned U-shaped connectors. What matters is whether the hardware is marked with a rated working load."
+   },
+   {
+    "q": "Can I use a galvanized clevis for tree rigging?",
+    "a": "Only if it is marked with a working load limit suitable for the forces involved. Unmarked clevises belong on hitches and general yard work."
+   },
+   {
+    "q": "How do I keep a clevis pin from backing out?",
+    "a": "Use the correct pin and secure it with its cotter pin, clip or locking nut. Check it during the job."
+   }
+  ],
+  "use": [
+   "ground",
+   "rigging"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/lowering-devices/buckingham-medium-portawrap/",
+  "category": "/rigging/lowering-devices/",
+  "name": "Buckingham Medium Portawrap",
+  "brand": "buckingham",
+  "brand_name": "Buckingham",
+  "kind": "rigging-device",
+  "price": 230,
+  "keyword": "portawrap",
+  "title": "Buckingham Medium Portawrap Lowering Device",
+  "h1": "Buckingham Medium Portawrap",
+  "meta": "The Buckingham medium Portawrap is a trunk-mounted friction device for lowering wood. How the port a wrap works, how many wraps to take, and how to inspect it.",
+  "tagline": "A medium friction lowering device for controlled lowering on everyday removals.",
+  "summary": "The Buckingham medium Portawrap is the classic friction lowering device: a tube with horns that you mount to the trunk and wrap the rigging line around. The ground worker controls how fast each piece comes down by adding wraps and holding tension on the tail. The medium size covers the rope sizes most tree crews rig with day to day.",
+  "highlights": [
+   "Friction lowering device mounted at the base of the tree",
+   "Adjust friction by the number of wraps",
+   "Horns keep the wraps from riding off",
+   "Medium size for common rigging line diameters",
+   "Simple design with no moving parts to service"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Buckingham"
+   ],
+   [
+    "Size",
+    "Medium"
+   ],
+   [
+    "Type",
+    "Friction lowering device"
+   ],
+   [
+    "Mounting",
+    "Sling, chain or strap around the trunk"
+   ],
+   [
+    "Friction control",
+    "Number of wraps plus tail tension"
+   ],
+   [
+    "Ratings",
+    "See Buckingham's instructions and markings"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How the port a wrap works",
+    "p": [
+     "A port a wrap turns the rigging line's energy into heat through friction on the tube. You anchor the device to the base of the tree or a nearby tree, run the line from the block above down to the tube, and wrap it around between the horns. Each wrap adds friction. The ground worker holds the tail and feeds or stops the line.",
+     "Without a lowering device, the friction comes from wraps around the trunk itself, which works but wears the bark and gives you less control. A Portawrap puts the friction in one consistent, inspectable spot and lets you set it to suit the load.",
+     "It is the right tool for crews that lower wood regularly but do not need a winch or capstan. See all <a href=\"/rigging/lowering-devices/\">lowering devices</a> to compare options."
+    ]
+   },
+   {
+    "h": "Choosing the number of wraps",
+    "p": [
+     "Light pieces need few wraps; heavy pieces and long falls need more. Too few and the ground worker cannot hold the load. Too many and the piece shock-loads the rigging when it stops instead of running a little to soften the catch. The art of rigging is letting pieces run just enough.",
+     "Start with more wraps than you think you need while you learn the device, and adjust as you get a feel for each tree. Keep the tail controlled at all times, with gloves on, and never wrap the tail around a hand.",
+     "Communication matters as much as wraps. The climber calls the cut, the ground worker confirms ready, and nobody stands between the device and the load. Agree on calls before the first piece."
+    ]
+   },
+   {
+    "h": "Mounting it properly",
+    "p": [
+     "Mount the Portawrap on the side of the trunk facing the block so the line runs in a straight path from above. Use a sling, chain or strap rated for the forces involved and set it so the device cannot slide up the trunk under load.",
+     "Some crews mount it on a neighboring tree to get the ground worker out of the drop zone. That works if the anchor tree is sound and the line runs clear. Keep the area around the device free of brush so the operator has good footing."
+    ]
+   },
+   {
+    "h": "Inspection and safety",
+    "p": [
+     "Check the tube and horns for grooves worn by rope, cracks and bends. Deep grooves can damage rope and reduce friction control. Inspect the mounting sling or chain every time you set up.",
+     "Rigging forces add up fast. Size every component, from block to sling to Portawrap, for the loads you plan to drop. Lowering devices are rigging equipment, not life support. Train ground workers on wraps and line handling before they run the device, and work to ANSI Z133.",
+     "Rope wear concentrates on the tube, so rotate which part of the line takes the wraps, and retire rope that shows glazing or heavy fuzzing."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What rope size fits the medium Portawrap?",
+    "a": "The medium is sized for the mid-range rigging lines most crews use. Check Buckingham's listed range for your rope before you buy."
+   },
+   {
+    "q": "Is a Portawrap the same as a port-a-wrap?",
+    "a": "Yes. Portawrap, port-a-wrap and port a wrap all refer to the same style of friction lowering device."
+   },
+   {
+    "q": "How many wraps should I use?",
+    "a": "It depends on load weight, fall distance and rope. Start with more friction while learning and reduce as you gain experience."
+   },
+   {
+    "q": "Medium or large Portawrap?",
+    "a": "Medium suits typical rigging. Choose the large for heavier wood and bigger rope."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/lowering-devices/good-rigging-control-system/",
+  "category": "/rigging/lowering-devices/",
+  "name": "Good Rigging Control System (GRCS)",
+  "brand": "good-rigging",
+  "brand_name": "Good Rigging",
+  "kind": "rigging-device",
+  "price": 2100,
+  "keyword": "grcs rigging",
+  "title": "GRCS Rigging: Good Rigging Control System",
+  "h1": "GRCS Rigging: Good Rigging Control System",
+  "meta": "The Good Rigging Control System combines a lowering device and winch for GRCS rigging. How the GRCS works on removals, pulls and lifts, and who needs one.",
+  "tagline": "A trunk-mounted lowering device and winch in one, for crews that rig big wood.",
+  "summary": "GRCS rigging means running your lowering line through the Good Rigging Control System, a trunk-mounted unit that combines a friction drum for lowering with a winch for lifting and tensioning. It lets one ground worker lower heavy wood, pull a top over or lift a piece off a roof with the same tool.",
+  "highlights": [
+   "Lowering device and winch in one unit",
+   "Mounts to the trunk with straps",
+   "Lower, lift, tension and pull with one setup",
+   "Removable winch handle",
+   "Built for crews rigging heavy wood regularly"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Good Rigging"
+   ],
+   [
+    "Model",
+    "Good Rigging Control System (GRCS)"
+   ],
+   [
+    "Type",
+    "Lowering device with winch"
+   ],
+   [
+    "Mounting",
+    "Straps around the trunk"
+   ],
+   [
+    "Functions",
+    "Lowering, lifting, tensioning, pulling"
+   ],
+   [
+    "Ratings",
+    "See Good Rigging's manual"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What the GRCS does",
+    "p": [
+     "A standard lowering device only adds friction. The Good Rigging Control System adds a winch drum, so you can also take in rope under load. That opens up jobs that used to need a crane or a lot of people: lifting a cut piece clear of a roof before lowering it, pre-tensioning the rigging line so a top does not drop before it catches, or pulling a leaning tree back over the notch.",
+     "When lowering, the rope wraps on the drum like on any friction device and the operator controls descent with the tail. Switch to winching and the same rope can be pulled in with the handle. Nothing gets re-rigged.",
+     "The design keeps the operator on the ground with full control. One person can manage what used to take a couple of people heaving on a pull line, and the drum gives them a mechanical advantage that hand-tensioning never could."
+    ]
+   },
+   {
+    "h": "Where it pays off",
+    "p": [
+     "Crews doing removals over houses, pools and gardens get the most from a GRCS. Being able to lift a piece rather than letting it swing into a target is a big deal. On take-downs where you need to pull a stem against its lean, a tensioned rigging line through the GRCS can replace a separate pull line and come-along setup.",
+     "It is a serious investment and a serious piece of gear. Many crews start with a <a href=\"/rigging/lowering-devices/buckingham-medium-portawrap/\">Portawrap</a> and add a GRCS once their work routinely needs lifting and pre-tensioning."
+    ]
+   },
+   {
+    "h": "Setup and operation",
+    "p": [
+     "Strap the unit to the trunk or a nearby anchor tree so the line runs straight from the block to the drum. Follow Good Rigging's manual for wraps, rope size and strapping. Keep the handle off the drum when you are not winching so it cannot spin.",
+     "Practice with light loads first. The winch makes it easy to put large forces into the rigging, the block, the sling and the tree itself, and those forces add up faster than most people expect.",
+     "Rope choice matters. Use rigging line in the diameter range the manual lists, in good condition, and keep it clean; grit on a winch drum wears rope fast. Watch for heat on long, heavy lowers and give the drum and rope time to cool between big pieces.",
+     "Store the unit in a case or secure spot on the truck so the drum and mounting hardware are not knocked around in transport."
+    ]
+   },
+   {
+    "h": "Safety",
+    "p": [
+     "Everything in the system must be rated for the loads: rope, block, slings and anchors. Inspect the GRCS, straps and rope before each job. It is rigging equipment, not life support. Operators should be trained on its use, and crews should work to ANSI Z133 with clear communication between climber and ground.",
+     "When pre-tensioning a top before the cut, agree on how much tension to apply. Too much can pull the piece off the stub early or split the stem. The climber should be out of the line of any piece that could swing before the operator starts winching."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is GRCS rigging?",
+    "a": "Rigging run through the Good Rigging Control System, a combined lowering device and winch that mounts to the trunk."
+   },
+   {
+    "q": "Can the GRCS lift loads?",
+    "a": "Yes. The winch can take in rope under load to lift or tension, within the limits in the manual."
+   },
+   {
+    "q": "Is the GRCS worth it for a small crew?",
+    "a": "If you routinely rig heavy wood over targets or need to pre-tension and pull, it can replace extra gear and labor. For occasional rigging, a friction device may be enough."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/lowering-devices/hobbs-h2-lowering-device/",
+  "category": "/rigging/lowering-devices/",
+  "name": "Hobbs H2 Lowering Device",
+  "brand": "hobbs",
+  "brand_name": "Hobbs",
+  "kind": "rigging-device",
+  "price": 1150,
+  "keyword": "hobbs lowering device",
+  "title": "Hobbs Lowering Device H2 for Heavy Tree Rigging",
+  "h1": "Hobbs Lowering Device H2",
+  "meta": "The Hobbs H2 lowering device mounts to the trunk to control heavy rigging. How a Hobbs lowering device works, who it suits, and how to set it up and inspect it.",
+  "tagline": "A trunk-mounted friction lowering device built for heavy rigging control.",
+  "summary": "The Hobbs lowering device H2 is a trunk-mounted friction device built for controlled lowering of heavy wood. It gives the ground worker a big, solid friction surface and positive control of the rigging line, so pieces come down smoothly and stop where they should.",
+  "highlights": [
+   "Mounts to the trunk with straps",
+   "Controls heavy rigging loads at the base",
+   "Ground worker sets friction by wraps",
+   "Rugged build for daily removal work",
+   "Keeps friction off the bark of the tree"
+  ],
+  "specs": [
+   [
+    "Model",
+    "Hobbs H2"
+   ],
+   [
+    "Type",
+    "Friction lowering device"
+   ],
+   [
+    "Mounting",
+    "Strapped to trunk or anchor tree"
+   ],
+   [
+    "Friction control",
+    "Wraps on the drum plus tail tension"
+   ],
+   [
+    "Ratings",
+    "See the maker's manual"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How a Hobbs lowering device works",
+    "p": [
+     "Like other friction devices, the Hobbs takes wraps of the rigging line, and the ground worker controls descent by holding the tail. The difference is in the size and build: a larger drum and solid mounting suited to heavier wood than a small tube device handles comfortably.",
+     "Mounted at the base, it puts friction in one controlled place instead of on the bark. The operator can let pieces run, then bring them to a smooth stop instead of a hard catch.",
+     "Because the device is strapped rather than chained, it sets up fast on trunks of different sizes and comes off cleanly when the removal is done. That matters on days with several removals where every minute spent rigging is a minute not cutting.",
+     "It also reduces bark wear on trees you are only pruning, where wrapping the trunk itself would leave scars."
+    ]
+   },
+   {
+    "h": "Who it suits",
+    "p": [
+     "Crews who rig big wood every week get the most from a Hobbs lowering device. If your work is mostly small pruning drops, a <a href=\"/rigging/lowering-devices/large-portawrap-lowering-device/\">large Portawrap</a> may do the job for less money. If you need to lift and pre-tension as well as lower, compare with the Good Rigging Control System, which adds a winch.",
+     "Whatever you pick, match the device to the rope diameter and load range in the maker's manual."
+    ]
+   },
+   {
+    "h": "Setting up",
+    "p": [
+     "Strap the device to the trunk on the side facing the rigging point so the line feeds straight onto the drum. Use straps in good condition and tighten them so the device cannot creep up the stem under load. Some crews prefer to mount on a neighboring tree to keep the operator out of the drop zone; the anchor tree has to be sound.",
+     "Clear the ground around the device for good footing. The operator needs room to manage the tail and step back from the line's path.",
+     "Keep the rope bag at the operator's feet and the tail running cleanly off the top, so it feeds without snagging when a big piece runs. A snag at the wrong moment turns a smooth lower into a shock load."
+    ]
+   },
+   {
+    "h": "Inspection and safety",
+    "p": [
+     "Check the drum and horns for rope grooves, cracks and loose hardware, and inspect the straps for cuts and UV damage. Rope wear at the drum is normal, but deep grooves need attention.",
+     "All components in a rigging system must be rated for the loads and inspected before use. Lowering devices are not life support. Train operators before they run heavy pieces and work to ANSI Z133.",
+     "Agree on calls between climber and ground before the first piece. Keep the device and its straps out of the sun and weather between jobs; UV and moisture shorten strap life. Record inspections so the whole crew knows the gear's history."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the Hobbs lowering device used for?",
+    "a": "Controlled lowering of heavy wood during removals, with friction set by the number of wraps on the drum."
+   },
+   {
+    "q": "How is the Hobbs different from a Portawrap?",
+    "a": "It is a larger, heavier-duty friction device with strap mounting, aimed at crews lowering big wood regularly."
+   },
+   {
+    "q": "Can it lift loads?",
+    "a": "It is a lowering device. For lifting and pre-tensioning, look at units with a built-in winch such as the GRCS."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/lowering-devices/large-portawrap-lowering-device/",
+  "category": "/rigging/lowering-devices/",
+  "name": "Large Portawrap Lowering Device",
+  "brand": "buckingham",
+  "brand_name": "Buckingham",
+  "kind": "rigging-device",
+  "price": 290,
+  "keyword": "porta wrap",
+  "title": "Large Porta Wrap Lowering Device for Heavy Rigging",
+  "h1": "Large Porta Wrap Lowering Device",
+  "meta": "The large porta wrap lowering device handles bigger rope and heavier wood. When to step up from a medium port-a-wrap, how to mount it, and how to set friction.",
+  "tagline": "The large friction lowering device for bigger rigging lines and heavy wood.",
+  "summary": "The large porta wrap is the bigger version of the classic friction lowering device, sized for heavier rigging lines and the bigger pieces that go with them. Mount it at the base, take wraps and the ground worker has full control of how fast each piece comes down.",
+  "highlights": [
+   "Large tube for bigger rigging lines",
+   "Friction set by number of wraps",
+   "Horns keep wraps in place",
+   "Simple, no moving parts",
+   "Suits crews lowering heavy wood"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Buckingham"
+   ],
+   [
+    "Size",
+    "Large"
+   ],
+   [
+    "Type",
+    "Friction lowering device"
+   ],
+   [
+    "Mounting",
+    "Sling, chain or strap to trunk"
+   ],
+   [
+    "Ratings",
+    "See Buckingham's markings and instructions"
+   ]
+  ],
+  "body": [
+   {
+    "h": "When to step up to the large size",
+    "p": [
+     "If you are rigging big wood on thicker rope, a medium device starts to run out of room. The large port-a-wrap has the surface and diameter for heavier lines and gives the ground worker more friction to work with. It also suits crews who run long lowers, where the heat built up on a smaller tube becomes an issue.",
+     "Smaller crews that mostly do pruning and light removals are usually better served by the <a href=\"/rigging/lowering-devices/buckingham-medium-portawrap/\">medium Portawrap</a>.",
+     "A larger tube also spreads heat over more surface, which helps on long lowers. If your rigging line has grown from medium to heavy over the years, the device should grow with it."
+    ]
+   },
+   {
+    "h": "Mounting and wraps",
+    "p": [
+     "Anchor the device to the trunk on the side facing the rigging point, with a sling, chain or strap rated for the load. Set it so it cannot ride up the stem. Wrap the line around the tube between the horns: more wraps for heavier pieces and longer drops, fewer for light ones.",
+     "Let pieces run a little before stopping them. A hard stop multiplies the force on the block, the sling and the top of the tree. The ground worker should hold the tail with gloved hands and never wrap it around a hand or arm.",
+     "Mount height matters too. Keep the device low enough that the operator can work it standing comfortably, but high enough that the tail does not drag in debris. Set the anchor before the climber goes up so rigging starts without delay."
+    ]
+   },
+   {
+    "h": "Rope care",
+    "p": [
+     "Friction devices create heat. On long lowers with heavy wood, the rope and tube can get hot enough to glaze rope fibers. Give the system a breather on big jobs, and inspect the rope for glazing and stiffness.",
+     "Keep the tube clean of sap and grit, which wears rope faster. A rope bag at the base keeps the tail off the dirt and ready to run.",
+     "Wash rope that has been through mud or sawdust, and let it dry before storage. Clean rope grips the tube more predictably, so the ground worker can feel exactly how much friction they have.",
+     "Retire rigging rope that shows core damage, flattening or heavy glazing; a lowering device cannot make up for a tired line."
+    ]
+   },
+   {
+    "h": "Inspection and safety",
+    "p": [
+     "Check the tube and horns for grooves, cracks and bends before each job, along with the mounting hardware. Retire a device with deep grooves that could cut rope. Lowering devices are rigging gear, not life support. Size every component for the load, train the crew, and work to ANSI Z133.",
+     "Brief ground workers who are new to the large device. It holds more and stops harder, so they should practice on modest pieces first and learn how quickly heavy wood builds speed on a long drop."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a porta wrap used for?",
+    "a": "It adds controlled friction to a rigging line so the ground worker can lower cut pieces smoothly from the tree."
+   },
+   {
+    "q": "Large or medium porta wrap?",
+    "a": "Choose the large for thicker rope and heavier wood; the medium covers most everyday rigging."
+   },
+   {
+    "q": "Can I put the porta wrap on another tree?",
+    "a": "Yes, if that tree is sound and the line runs clear. It can keep the operator out of the drop zone."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/",
+  "category": "/rigging/mechanical-advantage/",
+  "name": "Maasdam Continuous Rope Puller Replacement Handle",
+  "brand": "maasdam",
+  "brand_name": "Maasdam",
+  "kind": "parts",
+  "price": 30,
+  "keyword": "rope puller handle",
+  "title": "Maasdam Rope Puller Handle Replacement",
+  "h1": "Maasdam Rope Puller Handle (Replacement)",
+  "meta": "Replacement rope puller handle for the Maasdam continuous rope puller. Get a bent or lost handle replaced and the puller back to work pulling trees and logs.",
+  "tagline": "A replacement handle to get a Maasdam continuous rope puller back to work.",
+  "summary": "This replacement rope puller handle fits the Maasdam continuous rope puller and gets the tool working again when the original handle is bent, cracked or left behind on a job. The handle is the lever that drives the puller, so a damaged one is worth replacing rather than nursing along.",
+  "highlights": [
+   "Replacement handle for the Maasdam rope puller",
+   "Restores full leverage on the puller",
+   "Faster than replacing the whole tool",
+   "Worth keeping a spare in the truck"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Maasdam"
+   ],
+   [
+    "Fits",
+    "Maasdam continuous rope puller"
+   ],
+   [
+    "Type",
+    "Replacement operating handle"
+   ],
+   [
+    "Use",
+    "Drives the rope puller mechanism"
+   ],
+   [
+    "Note",
+    "Match to your puller model"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why replace the handle",
+    "p": [
+     "On a rope puller, the handle is what turns your effort into pulling force. A bent handle can bind, slip off, or fail to give full stroke, and that makes a pull slower and harder to control. A cracked handle can let go under load, which is the last thing you want with a tensioned rope in front of you.",
+     "Handles also go missing. They come off for storage, and one left in the grass at a job site is a common story. A spare in the truck bin keeps the puller working.",
+     "If you are buying the whole tool, see the <a href=\"/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/\">Maasdam rope puller kit</a>.",
+     "A worn pivot hole is another sign. If the handle wobbles where it attaches, the puller loses stroke and the jaws may not grip consistently. Replacing a twenty-dollar part is much cheaper than fighting a tool all day on a felling job."
+    ]
+   },
+   {
+    "h": "Fitting the new handle",
+    "p": [
+     "Check that the handle matches your Maasdam model before you order. Fit it per Maasdam's instructions, cycle the puller a few strokes without load to confirm smooth action, then make a light test pull before you put it to work on a tree.",
+     "Never extend the handle with a pipe or cheater bar. The handle length is matched to the tool's rating; extra leverage overloads the puller and the rope.",
+     "If the puller came secondhand, compare the handle to Maasdam's parts listing to confirm you are replacing like with like. Some older tools differ in detail, and a correct fit matters for safe operation. Keep the old handle out of service so nobody grabs it by mistake.",
+     "While the handle is off, it is a good moment to look over the jaws and frame."
+    ]
+   },
+   {
+    "h": "Rope puller care",
+    "p": [
+     "Keep the puller clean and lightly lubricated as the manual describes. Inspect the jaws or grips that hold the rope, since worn grips can slip. Check the hook, frame and rope for damage before every use.",
+     "Store it dry, with the handle stowed so it does not get bent under other gear in the truck. A little care keeps the tool working for years.",
+     "Keep a record of when parts were replaced. It helps track how hard the tool is being worked and when it may be time for a full overhaul."
+    ]
+   },
+   {
+    "h": "Safe use",
+    "p": [
+     "Rope pullers are for pulling and tensioning, not for lifting people. When pulling trees over, keep everyone outside the fall zone and clear of the rope's path if something gives. Size the rope, slings and anchors for the load, and train the crew per ANSI Z133.",
+     "Stand to the side of the rope when working the handle, not in line with it, so a slipped grip or broken rope does not come straight back at you."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will this handle fit other rope pullers?",
+    "a": "It is made for the Maasdam continuous rope puller. Fit on other brands is not assured."
+   },
+   {
+    "q": "Can I use a longer handle for more pull?",
+    "a": "No. A longer lever overloads the puller and rope. Use the handle supplied for the tool."
+   },
+   {
+    "q": "How do I know my handle needs replacing?",
+    "a": "Replace it if it is bent, cracked, worn at the pivot, or slips off during use."
+   }
+  ],
+  "use": [
+   "rigging",
+   "maintenance"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/",
+  "category": "/rigging/mechanical-advantage/",
+  "name": "Maasdam Continuous Rope Puller Kit",
+  "brand": "maasdam",
+  "brand_name": "Maasdam",
+  "kind": "rigging-device",
+  "price": 150,
+  "keyword": "maasdam rope puller",
+  "title": "Maasdam Rope Puller Kit: Rope Come Along for Tree Work",
+  "h1": "Maasdam Rope Puller Kit",
+  "meta": "Maasdam rope puller kit, a rope come along for pulling trees, tensioning lines and moving logs. How a continuous rope puller works and how to use it safely.",
+  "tagline": "A rope come along that pulls any length of rope for tree and yard work.",
+  "summary": "The Maasdam rope puller is a rope come along: a hand-operated puller that grips rope instead of winding cable on a drum. Because it works on a continuous length of rope, you can pull as far as your rope reaches, which makes it a favorite for pulling trees over, tensioning lines and dragging logs.",
+  "highlights": [
+   "Rope come along with unlimited pull length",
+   "Grips the rope with jaws, no drum to fill",
+   "Light enough to carry on most jobs",
+   "Uses rope instead of steel cable",
+   "Good for pulling trees, tensioning and skidding"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Maasdam"
+   ],
+   [
+    "Type",
+    "Continuous rope puller (rope come along)"
+   ],
+   [
+    "Operation",
+    "Hand lever"
+   ],
+   [
+    "Pull length",
+    "Limited only by rope length"
+   ],
+   [
+    "Ratings",
+    "See Maasdam's markings and manual"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How a continuous rope puller works",
+    "p": [
+     "A cable come along winds steel cable onto a drum, and when the drum is full you have to reset. A rope puller instead grips the rope with jaws and pulls it through as you work the handle. The rope passes out the back, so you can keep pulling as long as there is rope left.",
+     "Rope is lighter than cable, easier to handle, and kinder to bark when wrapped around a trunk. That is why a rope come along fits so naturally into a tree crew's kit.",
+     "The kit format helps too. Rather than buying puller, rope and hooks separately and hoping they match, the kit gives you a working setup on day one. Keep it in a bag in the truck so it is ready when a tree needs a pull."
+    ]
+   },
+   {
+    "h": "Where it earns its keep",
+    "p": [
+     "The common job is helping a tree fall the right way: rope high in the tree, rope puller anchored to another tree or stump out past the fall zone, and steady tension as the sawyer works the back cut. It is also handy for tensioning a speedline, pulling a hung-up top free from a safe distance, or skidding a log into position for bucking.",
+     "Pair it with pulleys from our <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section to redirect the pull or gain more force.",
+     "A rope puller also works as a backup on a stuck saw. If a bar gets pinched in a leaning stem, a little tension from the side can open the kerf enough to free it."
+    ]
+   },
+   {
+    "h": "Rope and anchors",
+    "p": [
+     "Use rope of the diameter and type the puller is designed for, in good condition. Glazed, cut or crushed rope can slip in the jaws. Anchor the puller to something solid with a rated sling, and keep the line of pull straight.",
+     "The force you put on the rope goes into the tree, the anchor and the hardware. Pulling hard on a tree with a weak union or a small anchor tree can cause failures you did not plan for. Think the whole system through before you start cranking.",
+     "Use a block or pulley to redirect the pull when the anchor tree is not in line with the direction of fall. A redirect at the base of the anchor tree keeps the puller operator out of the fall zone and lets them work from a comfortable stance."
+    ]
+   },
+   {
+    "h": "Safety",
+    "p": [
+     "Rope pullers are not for lifting people or for overhead lifting unless the manual says so. Keep the crew out of the fall zone and the rope's path. Do not extend the handle. Inspect the puller, hook and rope before each job, and train everyone who runs it per ANSI Z133.",
+     "Take steady, even strokes rather than hard jerks, and watch the tree as well as the puller. If something looks wrong, such as a crack opening in the wrong place, stop and reassess. Keep a spare handle; a lost or bent one ends the pull."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a rope come along?",
+    "a": "A hand-operated puller that grips and pulls rope, rather than winding steel cable on a drum like a cable come along."
+   },
+   {
+    "q": "What rope works with the Maasdam rope puller?",
+    "a": "Use the rope diameter and type Maasdam specifies. The kit may include rope sized for the puller."
+   },
+   {
+    "q": "Can I use it to pull a tree over?",
+    "a": "Yes, it is a common use. Anchor out past the fall zone, keep tension steady and keep everyone clear."
+   }
+  ],
+  "use": [
+   "rigging",
+   "felling",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/petzl-micro-traxion-pulley/",
+  "category": "/rigging/mechanical-advantage/",
+  "name": "Petzl Micro Traxion Pulley",
+  "brand": "petzl",
+  "brand_name": "Petzl",
+  "kind": "pulley",
+  "price": 130,
+  "keyword": "petzl micro traxion",
+  "title": "Petzl Micro Traxion Progress Capture Pulley",
+  "h1": "Petzl Micro Traxion Pulley",
+  "meta": "The Petzl Micro Traxion is a compact progress capture pulley with a ball-bearing sheave. How arborists use the micro traxion in haul systems and SRT setups.",
+  "tagline": "A small, efficient progress capture pulley for haul systems and SRT tending.",
+  "summary": "The Petzl Micro Traxion is a compact pulley with a built-in cam that lets rope run one way and locks it the other. That progress capture makes it the go-to piece for mechanical advantage haul systems, and arborists also use it to tend slack in single-rope climbing setups.",
+  "highlights": [
+   "Built-in cam for progress capture",
+   "Sealed ball-bearing sheave runs efficiently",
+   "Cam can be locked open to use as a simple pulley",
+   "Very compact and light",
+   "Popular in haul systems and SRT setups"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Petzl"
+   ],
+   [
+    "Model",
+    "Micro Traxion"
+   ],
+   [
+    "Weight",
+    "about 3 oz (85 g)"
+   ],
+   [
+    "Rope",
+    "8 to 11 mm"
+   ],
+   [
+    "Sheave",
+    "Sealed ball bearing"
+   ],
+   [
+    "Ratings",
+    "Marked on the device; see Petzl's instructions"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What progress capture does",
+    "p": [
+     "In a haul system, every time you reset the pulleys the load wants to slide back. Progress capture holds what you gained. The micro traxion does it in one small device: rope runs freely through the sheave as you pull, and the toothed cam grabs it the instant you let go.",
+     "That turns a simple 3:1 setup into something one person can run efficiently, pulling a tree over, tensioning a line or lifting a piece back onto a trailer.",
+     "Its efficiency is part of the appeal. A ball-bearing sheave wastes less of your effort than a carabiner or bushing pulley, so more of what you put in reaches the load. Over a long haul, that difference is noticeable in your arms."
+    ]
+   },
+   {
+    "h": "How arborists use the Micro Traxion",
+    "p": [
+     "Beyond haul systems, climbers use it in SRT. Paired with a rope wrench or mechanical device, it can tend slack so the climber does not have to hand-feed rope through the friction device on the way up. Some climbers also use it as part of a foot or knee ascender setup.",
+     "Any use in a life-support system must follow Petzl's instructions and the configuration the maker describes, and climbers should be trained before using it that way. Check that your rope's diameter falls within the range Petzl lists.",
+     "Because it is small and light, many climbers just leave one on the saddle. When a pull line needs tensioning or a stuck rope needs a haul, it is already there.",
+     "It packs small enough to live on the saddle."
+    ]
+   },
+   {
+    "h": "Rope and cam care",
+    "p": [
+     "The cam's teeth grip the rope sheath. Shock loading or a fall onto a toothed cam can damage the sheath, so keep it in systems where it is used as designed. Keep teeth clean of sap and grit with a brush; clogged teeth grip poorly.",
+     "Lock the cam open with its catch when you want a plain pulley. It is one of the reasons this piece is so versatile: one device, two jobs.",
+     "More pulleys and haul gear are in the <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section.",
+     "Wash it in fresh water after muddy or sappy jobs and let it dry before storage. Do not oil the cam teeth, since lubricant attracts grit and reduces grip. A light drop on the cam pivot, per Petzl's guidance, keeps the action smooth."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Before each use, check the sheave turns freely, the cam springs back and grips, the teeth are not worn or clogged, and the side plates and attachment hole show no cracks or wear. Retire the device if anything looks wrong or after a severe fall load. Follow ANSI Z133 and Petzl's instructions for life-support use.",
+     "Write the purchase date on your gear log; Petzl's instructions cover lifespan and inspection frequency, and a record makes those checks easy to keep up with."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the Petzl Micro Traxion used for?",
+    "a": "Progress capture in haul systems, and as a slack-tending pulley in SRT climbing setups."
+   },
+   {
+    "q": "What rope diameter fits the Micro Traxion?",
+    "a": "Petzl lists it for ropes about 8 to 11 mm. Check the current instructions for your rope."
+   },
+   {
+    "q": "Can I use it as a regular pulley?",
+    "a": "Yes. Lock the cam open and it runs as a simple pulley."
+   },
+   {
+    "q": "Can the Micro Traxion catch a fall?",
+    "a": "It is not designed as fall arrest. Use it only in the configurations Petzl describes."
+   }
+  ],
+  "use": [
+   "climbing",
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/",
+  "category": "/rigging/rigging-kits/",
+  "name": "Port-a-Wrap with Soft Anchor Rigging Sling",
+  "brand": "buckingham",
+  "brand_name": "Buckingham",
+  "kind": "rigging-device",
+  "price": 300,
+  "keyword": "port-a-wrap",
+  "title": "Port-a-Wrap with Soft Anchor Rigging Sling Kit",
+  "h1": "Port-a-Wrap with Soft Anchor Rigging Sling",
+  "meta": "A port-a-wrap friction lowering device paired with a soft anchor rigging sling for mounting it to the trunk. A ready rigging kit for crews lowering wood.",
+  "tagline": "A friction lowering device and soft anchor sling, ready to mount and rig.",
+  "summary": "This kit pairs a port-a-wrap friction lowering device with a soft anchor rigging sling, so you have the device and the means to mount it in one purchase. Wrap the sling around the trunk, clip the port-a-wrap on, and the ground worker is ready to lower.",
+  "highlights": [
+   "Friction lowering device plus mounting sling",
+   "Soft sling is kind to bark",
+   "Quick to set up at the base of the tree",
+   "Good starter rigging kit for growing crews"
+  ],
+  "specs": [
+   [
+    "Includes",
+    "Port-a-wrap and soft anchor rigging sling"
+   ],
+   [
+    "Type",
+    "Friction lowering device kit"
+   ],
+   [
+    "Mounting",
+    "Sling around trunk"
+   ],
+   [
+    "Ratings",
+    "See markings on each component"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why buy it as a kit",
+    "p": [
+     "A lowering device is only as good as its anchor. A soft sling spreads load over the bark, is easy to adjust for different trunk sizes, and packs small. Buying the two together means the sling is sized for the job rather than something grabbed from the truck.",
+     "It is a sensible first rigging setup for a crew moving from roping down limbs on a natural crotch to controlled lowering.",
+     "The soft sling also comes off easily when the job is done and packs into the same bag as the device, so the whole setup lives together on the truck. Nothing gets left behind at the base of a tree."
+    ]
+   },
+   {
+    "h": "Setup and care",
+    "p": [
+     "Wrap the sling around the trunk on the side facing the rigging point and connect the port-a-wrap so the line runs straight onto the tube. Take wraps to suit the load and keep the tail under control.",
+     "Inspect the sling for cuts, abrasion and UV fading, and the device for grooves and cracks, before every job. Lowering gear is rigging, not life support. Train ground workers on wraps and line handling, and follow ANSI Z133.",
+     "Size the setup to the work: this kit suits everyday rigging, while very heavy wood calls for larger devices and slings."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a port-a-wrap?",
+    "a": "A friction lowering device mounted at the base of the tree. Rope wraps around it so the ground worker can control descent."
+   },
+   {
+    "q": "Why use a soft sling to mount it?",
+    "a": "It adapts to trunk size, protects bark and is easy to carry and inspect."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/rigging-kits/weaver-speed-line-kit/",
+  "category": "/rigging/rigging-kits/",
+  "name": "Weaver Speed Line Kit",
+  "brand": "weaver",
+  "brand_name": "Weaver",
+  "kind": "rope",
+  "price": 280,
+  "keyword": "speed line",
+  "title": "Weaver Speed Line Kit for Arborist Brush Removal",
+  "h1": "Weaver Speed Line Kit",
+  "meta": "The Weaver speed line kit puts the rope and hardware for a speedline in one bag. How a speed line moves brush to the drop zone, how to rig it, and safe limits.",
+  "tagline": "A packaged speedline setup from Weaver for zipping brush to the drop zone.",
+  "summary": "A speed line lets you send brush down a tensioned rope from the canopy to a landing spot well away from the tree, and the Weaver speedline kit packages what you need to rig one. It is the answer for removals where the drop zone under the tree is crowded with roofs, decks and plantings.",
+  "highlights": [
+   "Packaged speedline setup from Weaver",
+   "Moves brush over targets to a clear landing zone",
+   "Speeds cleanup by landing brush in one spot",
+   "Keeps lowering line free for wood",
+   "Comes together in one bag for the truck"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Weaver"
+   ],
+   [
+    "Type",
+    "Speedline kit"
+   ],
+   [
+    "Use",
+    "Zip-lining brush and light wood"
+   ],
+   [
+    "Anchoring",
+    "High in tree, low at landing zone"
+   ],
+   [
+    "Ratings",
+    "See markings on each component"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why run a speed line",
+    "p": [
+     "On a tight lot, getting brush to the ground is easy. Getting it to the ground without hitting the house, the fence and the flower beds is the hard part. A speed line runs from a high anchor in the tree to a low anchor at the landing zone, and each bundle of brush slides down it, clearing everything underneath.",
+     "It changes the pace of a job. The climber keeps cutting and sending, the ground crew keeps clearing the landing zone, and the brush ends up next to the chipper instead of spread across the yard. Meanwhile the main lowering line stays free for wood.",
+     "It is also a cleaner job for the client. Fewer crushed shrubs and dented gutters means fewer callbacks and a better reputation for the crew. Many arborists who try a speed line on one tight job end up keeping a kit in the truck permanently."
+    ]
+   },
+   {
+    "h": "Rigging it",
+    "p": [
+     "Pick the high anchor above the work in sound wood, and the low anchor at the landing zone: a stump, another tree or a ground anchor your company approves. The line angle sets the speed. A steep line delivers fast and hard; a shallow one may stall loads halfway.",
+     "Tension the line with a mechanical advantage system or with wraps on a lowering device at the low end. A controllable low anchor lets you slacken the line to bring loads down gently into the pile. Over-tensioning multiplies forces on both anchors, so tension only enough to clear the targets.",
+     "For a store-assembled alternative, compare the <a href=\"/rigging-kits/speed-line-kit-with-carabiners/\">speed line kit with carabiners</a>.",
+     "Protect the bark at the high anchor with a sling or friction saver rather than running the line around a bare limb, and use a sling sized for the forces a loaded speed line can put on it."
+    ]
+   },
+   {
+    "h": "Sending loads",
+    "p": [
+     "Clip a pulley or carabiner to the line first, then to the brush with a sling. Keep loads small and trimmed so they ride clean. Several light bundles are easier on the anchors and the crew than one heavy limb. Have extra connectors on the line so the climber is not waiting for gear to come back.",
+     "Everyone stays out from under the line and the landing zone while loads are moving. Agree on calls for sending, clear and stop. If a load hangs up halfway, do not stand under it to free it; use the low anchor to slack and lower it.",
+     "Strip awkward side branches so bundles ride without catching. A tangle of twigs dragging along the line slows everything and wears the rope."
+    ]
+   },
+   {
+    "h": "Safety and inspection",
+    "p": [
+     "A speed line is rigging, not a life-support system. Never clip a person to it. Check the rope, slings, pulleys and carabiners before every job, and retire anything cut, glazed or deformed. Re-check the anchors and tension after the first few loads, since rope stretches and slings settle.",
+     "Train the crew to set up and run a speed line before using one over property, and work to ANSI Z133. The line cuts a job's risk only when everyone knows how it works and where to stand."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a speed line in tree work?",
+    "a": "A tensioned rope from a high anchor in the tree to a low anchor at the landing zone, used to slide brush away from targets."
+   },
+   {
+    "q": "How steep should a speed line be?",
+    "a": "Steep enough that loads slide without stalling, shallow enough that they arrive under control. A controllable low anchor lets you adjust."
+   },
+   {
+    "q": "Can I send wood down a speed line?",
+    "a": "Light wood, yes. Heavy pieces put large forces on the anchors; use the lowering line for those."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "name": "3/4\" Whoopie Sling",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 85,
+  "keyword": "whoopie sling",
+  "title": "3/4\" Whoopie Sling for Heavy Rigging Anchors",
+  "h1": "3/4\" Whoopie Sling",
+  "meta": "The 3/4 in whoopie sling is an adjustable rope sling for heavy rigging anchors. How a whoopie sling adjusts, why sailors and arborists use them, and inspection.",
+  "tagline": "An adjustable 3/4 in rope sling for anchoring heavy rigging blocks.",
+  "summary": "A 3/4 in whoopie sling is an adjustable rope sling made from hollow-braid rope, with a fixed eye at one end and an adjustable eye at the other. Arborists use them to hang heavy rigging blocks on trunks of any size, and the same design is popular in sailing for adjustable rigging.",
+  "highlights": [
+   "Adjustable length fits a wide range of trunk sizes",
+   "3/4 in diameter for heavy rigging",
+   "Hollow-braid construction adjusts by hand",
+   "Fixed eye and adjustable eye"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "3/4 in"
+   ],
+   [
+    "Construction",
+    "Hollow-braid rope, adjustable"
+   ],
+   [
+    "Ends",
+    "Fixed eye and adjustable eye"
+   ],
+   [
+    "Ratings",
+    "See tag and maker's information"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How a whoopie sling works",
+    "p": [
+     "A whoopie sling uses a hollow-braid rope buried inside itself. Slide the bury to make the adjustable eye larger or smaller; under load the outer braid squeezes down on the inner section and holds. The result is one sling that fits a small stem or a big trunk without wasting length or wraps.",
+     "Sailors use the same trick for adjustable shrouds and lashings, which is why you see the term whoopie sling with sailing. In tree work the 3/4 in size is for heavy rigging blocks and big wood.",
+     "Because it adjusts, one whoopie can do the work of several fixed-length slings, which saves space and weight in the rigging bag. It is also kind to bark, since there is no long tail wrapped around the trunk."
+    ]
+   },
+   {
+    "h": "Use and inspection",
+    "p": [
+     "Wrap the trunk, pass the fixed eye through the adjustable eye or connect with a shackle or carabiner, and snug it down. Make sure the adjustable section has the minimum bury the maker specifies before loading.",
+     "Check for cuts, abrasion, glazing and stiff or crushed spots before each use. Retire a sling that has been overloaded. Rigging slings are not life support; size every part of the system for the load and work to ANSI Z133."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Why is it called a whoopie sling?",
+    "a": "It is a traditional name for an adjustable buried-braid sling, used for years in sailing and now common in tree rigging."
+   },
+   {
+    "q": "3/4 in or 5/8 in whoopie sling?",
+    "a": "The 3/4 in suits heavy rigging and big blocks. The 5/8 in is lighter for everyday rigging."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "name": "5/8\" Whoopie Sling",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 75,
+  "keyword": "whoopie sling",
+  "title": "5/8\" Whoopie Sling: Adjustable Arborist Rigging Sling",
+  "h1": "5/8\" Whoopie Sling",
+  "meta": "The 5/8 in whoopie sling is an adjustable arborist rigging sling for blocks and lowering devices. How it adjusts, how to set it on a trunk, and when to retire.",
+  "tagline": "An adjustable 5/8 in rope sling for hanging blocks on any trunk size.",
+  "summary": "The 5/8 in whoopie sling is an adjustable arborist rigging sling: a hollow-braid rope with a fixed eye and an adjustable eye, sized for the everyday rigging most crews do. One sling fits stems from small to large, so you carry fewer slings and set blocks faster.",
+  "highlights": [
+   "Adjusts by hand to fit different trunk sizes",
+   "5/8 in diameter for everyday rigging",
+   "Fixed eye and adjustable eye",
+   "Lighter than heavy-duty 3/4 in slings",
+   "Packs small in the rigging bag"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "5/8 in"
+   ],
+   [
+    "Construction",
+    "Hollow-braid rope, adjustable"
+   ],
+   [
+    "Ends",
+    "Fixed eye and adjustable eye"
+   ],
+   [
+    "Typical use",
+    "Hanging rigging blocks and lowering devices"
+   ],
+   [
+    "Ratings",
+    "See tag and maker's information"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why crews carry whoopie slings",
+    "p": [
+     "A fixed-length sling either fits the trunk or it does not. Too long and you are taking wraps to use up the extra; too short and it will not go round. A whoopie sling adjusts. Pull the adjustable eye open, wrap the stem, choke or connect it, then slide it tight. Under load the braid grips itself and holds.",
+     "That flexibility is why the whoopie sling is one of the most common arborist slings. It handles block anchors high in the tree, base anchors for lowering devices, and redirects, all with one piece.",
+     "Compared with steel chain or webbing, rope slings are lighter, easier on bark and simpler to inspect by hand. A couple of 5/8 in whoopies in the bag handle most of what a typical residential crew rigs in a day."
+    ]
+   },
+   {
+    "h": "Setting it on the trunk",
+    "p": [
+     "Wrap the sling around the stem above a branch collar or crotch that will stop it sliding down, then pass the eye through or connect the eyes with a carabiner or shackle rated for the load. Slide the adjustable eye down until it is snug. Choked around the trunk, it bites tighter as load comes on.",
+     "Hang the block so the rigging line runs cleanly without rubbing the sling. When removing, slack the sling fully before trying to slide the eye open.",
+     "See other adjustable slings in the <a href=\"/rigging/rigging-slings/adjustable-slings/\">adjustable slings</a> section, including the heavier 3/4 in version.",
+     "On a tree you are pruning rather than removing, set the sling over a protective layer or choose a spot where the bark is thick, and avoid sawing the sling around under load, which scuffs bark and wears the sling. On removals, set it where the stem is sound and large enough for the forces the block will see.",
+     "Some climbers like to pre-set the whoopie on the ground at roughly the right size, then fine-tune it once it is around the stem, saving time aloft."
+    ]
+   },
+   {
+    "h": "Keeping the adjustment working",
+    "p": [
+     "A whoopie needs its minimum bury to hold. Never adjust the sling so short that the buried section is less than the maker's minimum. Some slings mark the limit; respect it.",
+     "Dirt and sap inside the braid make adjustment stiff and can wear fibers from the inside. Wash slings in clean water when they get filthy and let them dry out of the sun.",
+     "Store slings coiled loosely in a bag away from fuel, bar oil and battery acid. Chemicals can weaken synthetic fibers without much visible sign, and the truck bed is where that kind of damage happens."
+    ]
+   },
+   {
+    "h": "Inspection and retirement",
+    "p": [
+     "Before each job, run the sling through your hands and look for cuts, pulled strands, glazing from friction, stiff or flattened spots and discoloration from chemicals. Check the eyes and the adjustable section closely, since that is where wear concentrates.",
+     "Retire a sling that has been shock loaded beyond its rating or shows damage. Rigging slings are not life support. Size every component for the load, and train crews to ANSI Z133.",
+     "Keep a simple log of each sling's purchase date and any heavy loads it has caught. When in doubt, retire it; a new sling costs far less than a failure."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a whoopie sling used for in tree work?",
+    "a": "Anchoring rigging blocks, lowering devices and redirects to trunks of different sizes with one adjustable sling."
+   },
+   {
+    "q": "How does a whoopie sling hold its adjustment?",
+    "a": "The outer braid squeezes the buried inner section under load, gripping it so the eye does not slip."
+   },
+   {
+    "q": "How short can I adjust a whoopie sling?",
+    "a": "Only down to the minimum bury the maker specifies. Shorter than that, it may not hold."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/",
+  "category": "/rigging/rigging-slings/crane-slings/",
+  "name": "5/8\" x 20' Premium Crane Sling",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 130,
+  "keyword": "crane sling",
+  "title": "5/8\" x 20' Premium Crane Sling for Tree Picks",
+  "h1": "5/8\" x 20' Premium Crane Sling",
+  "meta": "The 5/8 in x 20 ft premium crane sling is a rope sling for crane-assisted removals. How crews choke and set a crane sling on picks, and what to inspect daily.",
+  "tagline": "A 5/8 in x 20 ft rope sling for setting chokers on crane-assisted removals.",
+  "summary": "This 5/8 in x 20 ft premium crane sling is a rope sling for choking pieces on crane-assisted tree removal. The 20 ft length wraps big wood with room to spare, and rope is easier on the climber's hands and the tree than steel.",
+  "highlights": [
+   "5/8 in rope sling for crane picks",
+   "20 ft length wraps large stems",
+   "Eyes at each end for choking and hooking",
+   "Lighter to carry aloft than chain or steel"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "5/8 in"
+   ],
+   [
+    "Length",
+    "20 ft"
+   ],
+   [
+    "Ends",
+    "Eyes at both ends"
+   ],
+   [
+    "Use",
+    "Choker for crane-assisted removals"
+   ],
+   [
+    "Ratings",
+    "See tag and maker's information"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How crews use a crane sling",
+    "p": [
+     "On a crane removal, the climber sets one or two slings on each pick, choked around the piece above its balance point, and hooks the eye onto the crane hook. The crane takes tension before the cut so the piece is supported the moment it comes free.",
+     "A 20 ft sling gives you enough length to choke a large stem or wrap a wide top. Rope is lighter to carry up the tree than steel and does not bite into the climber's gloves.",
+     "Many crews carry a matched pair so the climber can set two chokers on long or unbalanced pieces, controlling how the pick hangs once it is free.",
+     "Mark your crane slings so they are not mixed in with everyday rigging gear."
+    ]
+   },
+   {
+    "h": "Ratings and inspection",
+    "p": [
+     "Crane work involves high, sudden loads. Know the weight of each pick, and use slings with a rated capacity for the hitch you are using; a choker hitch carries less than a straight vertical pull. Follow the crane operator's and qualified rigger's direction on every pick.",
+     "Inspect crane slings daily for cuts, abrasion, heat damage and missing or unreadable tags, and remove damaged slings from service. Follow ANSI Z133 and the crane safety rules that apply to your work.",
+     "Store crane slings clean and dry, coiled loosely, away from fuel and bar oil. Keep the tags legible, and replace a sling whose tag is missing even if it looks fine."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a crane sling used for in tree work?",
+    "a": "It chokes cut pieces so a crane can hold and lift them free during a removal."
+   },
+   {
+    "q": "Does a choker hitch reduce sling capacity?",
+    "a": "Yes. A choker hitch has a lower rated capacity than a vertical hitch. Check the sling's tag."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-slings/crane-slings/endless-loop-round-slings/",
+  "category": "/rigging/rigging-slings/crane-slings/",
+  "name": "Endless Loop Round Slings",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 35,
+  "keyword": "round slings",
+  "title": "Endless Loop Round Slings for Tree Rigging and Cranes",
+  "h1": "Endless Loop Round Slings",
+  "meta": "Endless round slings are soft polyester slings for crane picks and heavy rigging. How a round sling is rated by color, how to pick a hitch, and how to inspect.",
+  "tagline": "Soft endless polyester slings for crane picks, rigging anchors and lifts.",
+  "summary": "Round slings are endless loops of load-bearing polyester fiber inside a protective cover. They are soft, flexible and grip wood well, which makes them a favorite for crane-assisted removals, heavy rigging anchors and lifting logs with a loader or excavator.",
+  "highlights": [
+   "Endless loop, use any part of the sling",
+   "Soft cover protects bark and grips wood",
+   "Color-coded by rated capacity",
+   "Light and flexible for carrying aloft",
+   "Works in vertical, choker and basket hitches"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Endless round sling"
+   ],
+   [
+    "Core",
+    "Polyester load yarns"
+   ],
+   [
+    "Cover",
+    "Protective polyester jacket"
+   ],
+   [
+    "Capacity coding",
+    "Color and tag indicate rating"
+   ],
+   [
+    "Hitches",
+    "Vertical, choker, basket"
+   ],
+   [
+    "Ratings",
+    "See tag on each sling"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why tree crews use round slings",
+    "p": [
+     "An endless sling has no eyes to wear out and no fixed contact point. You can rotate it so a different section takes the load each time, which spreads wear. The soft cover conforms to the wood and grips, and it is gentle on bark when you anchor a block to a tree you are keeping.",
+     "On crane removals, round slings are fast to set: choke the piece, drop the loop over the hook and go. With a loader or excavator, they wrap logs without the steel-on-wood slipping you get with chain.",
+     "They also pack small. A few round slings take up less room in the truck than the equivalent steel, and they do not rust or kink."
+    ]
+   },
+   {
+    "h": "Reading capacity and choosing a hitch",
+    "p": [
+     "Round slings are usually color-coded by rated capacity, and each sling carries a tag with its ratings for vertical, choker and basket hitches. The color helps you pick the right sling quickly, but the tag is what counts. A sling with a missing or unreadable tag should come out of service.",
+     "Hitch choice changes capacity. A choker hitch is rated well below vertical; a basket hitch can be rated higher if the legs are near vertical. Wide sling angles reduce capacity fast. Pick a sling with margin for the hitch you will use, and remember that tree work brings dynamic loads that static lifting tables do not show.",
+     "For rope-based crane slings, see the <a href=\"/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/\">5/8 in x 20 ft crane sling</a>.",
+     "When a pick needs two slings, set them so the piece hangs as planned once cut. A choker set too close to the end lets the piece tip; one set near the balance point keeps it level. Talk through each pick with the crane operator and the ground crew before the cut."
+    ]
+   },
+   {
+    "h": "Protecting the sling",
+    "p": [
+     "The cover protects the core, but a chainsaw cuts through both instantly. Keep the saw well clear of slings, and never cut a piece with the sling across your cut line. Sharp edges, such as metal or a freshly cut stub, can cut a loaded round sling; use wear pads where needed.",
+     "Keep round slings away from heat and chemicals. Bar oil, fuel and battery acid can weaken polyester. Store them dry, out of the sun, in a bag or bin."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Before each use, check the cover for cuts, holes and burns, and feel for knots, lumps or soft spots in the core. Exposed core yarns mean the sling is done. Look for melted or discolored areas from friction.",
+     "Retire any sling that is damaged or has been overloaded. Follow the maker's instructions, applicable sling standards and ANSI Z133 for tree work.",
+     "Keep a log of the slings on the truck and when each was put into service. Round slings tend to get used hard on crane days, and a record helps you spot the ones due for closer inspection. Clean mud off with fresh water and let them dry before packing."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a round sling and an endless sling?",
+    "a": "Round slings are a type of endless sling: a loop of polyester yarns inside a cover. Endless slings can also be webbing."
+   },
+   {
+    "q": "What do round sling colors mean?",
+    "a": "Colors are commonly used to indicate rated capacity, but always confirm with the tag on the sling."
+   },
+   {
+    "q": "Can I use a round sling to anchor a rigging block?",
+    "a": "Yes, if its rating suits the forces involved. Use wear protection on sharp edges."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/rigging-slings/heavy-duty-slings/1-2-bull-rope-rigging-sling/",
+  "category": "/rigging/rigging-slings/heavy-duty-slings/",
+  "name": "1/2\" Bull Rope Rigging Sling",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 45,
+  "keyword": "bull rope rigging sling",
+  "title": "1/2\" Bull Rope Rigging Sling for Block Anchors",
+  "h1": "1/2\" Bull Rope Rigging Sling",
+  "meta": "A 1/2 in bull rope rigging sling, the bull tail for tying off blocks and hanging pieces. How to choose a bull tail for rigging and inspect it before each job.",
+  "tagline": "A 1/2 in rope sling, or bull tail, for anchoring blocks and tying off pieces.",
+  "summary": "This 1/2 in bull rope rigging sling is a length of rigging rope with an eye spliced in one end, often called a bull tail. Arborists use it to anchor rigging blocks with a timber hitch or wraps, to tie off pieces, and as an all-purpose rigging connection.",
+  "highlights": [
+   "Spliced eye at one end, tail at the other",
+   "Ties to the tree with wraps and hitches",
+   "1/2 in rope for light to moderate rigging",
+   "Versatile, adjusts to any trunk size",
+   "Easy to inspect by hand"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "1/2 in"
+   ],
+   [
+    "Type",
+    "Spliced-eye rope sling (bull tail)"
+   ],
+   [
+    "Ends",
+    "Spliced eye and open tail"
+   ],
+   [
+    "Use",
+    "Block anchors, tie-offs, redirects"
+   ],
+   [
+    "Ratings",
+    "See tag and maker's information"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What a bull tail does",
+    "p": [
+     "Bull tail rigging is one of the oldest setups in tree work. A short length of strong rope with a spliced eye is tied around the stem, usually with a series of wraps and a timber hitch, cow hitch or similar knot, and the block is clipped to the eye. Because the tail is tied rather than fixed length, it fits any trunk size.",
+     "Bull rope, the strong double-braid line used for rigging, is what these slings are made from. In 1/2 in it suits light to moderate rigging: pruning drops, small removals and redirects.",
+     "It is also the sling to use when you are short on gear. A spare bull tail can stand in for a fixed sling, a tag line anchor or a pull-line tie-off, which is why many climbers keep one clipped to the saddle."
+    ]
+   },
+   {
+    "h": "Tying it off",
+    "p": [
+     "Wrap the stem enough times to spread the load and stop the sling sliding, then finish with a hitch you were trained on. Leave a reasonable tail. The eye should hang where the block can run without the rigging line rubbing the trunk.",
+     "A bull tail is also handy for tying off a piece before the cut, setting a natural crotch redirect, or anchoring a lowering device on a small tree. See other options in <a href=\"/rigging/rigging-slings/heavy-duty-slings/\">heavy-duty slings</a>.",
+     "Dress the wraps neatly so they lie flat and share the load. Crossed or bunched wraps can slip or pinch. When the job is done, the tied wraps come off quickly, which is part of why bull tails are still popular after decades of new gear."
+    ]
+   },
+   {
+    "h": "Choosing size and type",
+    "p": [
+     "For heavier wood, step up to a larger diameter or to a dedicated whoopie or loopie sling. A 1/2 in bull tail is the light end of the range, chosen because it is quick to tie and easy to carry.",
+     "Match the sling's rating to the forces in your rigging, not just the weight of the piece. A dropped piece stopped suddenly can put several times its weight into the block and sling.",
+     "Some crews keep a few lengths: a short bull tail for limbs and a longer one for big stems. Mark each one so it is easy to grab the right length from the bag. Spliced eyes should be made by someone trained to splice that rope type."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Check the splice for pulled or loose tucks, and the rope for cuts, glazing, flattened sections and chemical stains. Retire a sling that has been overloaded or shows core damage. Rigging slings are not life support. Work to ANSI Z133.",
+     "Store it clean and dry with the rest of the rigging gear, and keep it out of the sun when not in use.",
+     "Never use a rigging bull tail as part of a climbing system."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a bull tail in tree rigging?",
+    "a": "A spliced-eye rope sling that is tied around the stem to anchor a block or tie off a piece."
+   },
+   {
+    "q": "Is 1/2 in rope enough for a rigging sling?",
+    "a": "For light to moderate rigging, yes, within its rating. Use larger slings for heavier wood."
+   },
+   {
+    "q": "What knot do I use to tie off a bull tail?",
+    "a": "Several wraps finished with a timber hitch or similar hitch is common. Use a hitch you have been trained on and dress it well."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/rigging-slings/heavy-duty-webbing-slings/",
+  "category": "/rigging/rigging-slings/",
+  "name": "Heavy Duty Webbing Slings",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 30,
+  "keyword": "webbing sling",
+  "title": "Heavy Duty Webbing Sling for Tree Rigging",
+  "h1": "Heavy Duty Webbing Slings",
+  "meta": "A heavy duty webbing sling is a flat sewn arborist sling for block anchors, log lifts and rigging redirects. How to choose one and inspect it before each job.",
+  "tagline": "Flat sewn webbing slings for block anchors, log lifts and redirects.",
+  "summary": "A heavy duty webbing sling is a flat strap of sewn synthetic webbing that wraps the trunk or a log and grips well. Arborists use webbing slings to anchor blocks, set redirects, and lift or drag logs, and they lie flat against bark for less wear on trees you are keeping.",
+  "highlights": [
+   "Flat webbing spreads load across bark",
+   "Sewn eyes for connecting hardware",
+   "Light and easy to carry",
+   "Works as anchor, choker or basket sling"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Sewn webbing sling"
+   ],
+   [
+    "Ends",
+    "Sewn eyes"
+   ],
+   [
+    "Hitches",
+    "Vertical, choker, basket"
+   ],
+   [
+    "Ratings",
+    "See tag on each sling"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where a webbing sling fits",
+    "p": [
+     "Flat webbing is a good arborist sling where you want grip and bark protection. It wraps a stem or a log like a belt, so it spreads pressure and is less likely to slide. Use one as a block anchor on trees you are pruning, as a choker on logs for the loader, or as a basket around a short round.",
+     "Webbing packs flat and dries quickly, and a few in the truck cover a lot of jobs.",
+     "Webbing also works well for lifting logs with a loader or excavator, where its wide contact grips bark and reduces slipping. Pick lengths that suit the diameters you usually handle.",
+     "Keep them separate from climbing gear."
+    ]
+   },
+   {
+    "h": "Ratings and inspection",
+    "p": [
+     "Each sling carries a tag with its rated capacity by hitch. Choose a sling with margin for the hitch and the dynamic loads of tree work. Keep chainsaws and sharp edges well away; webbing cuts easily under load.",
+     "Before each use, check for cuts, burns, broken stitching, holes and a readable tag. Retire damaged slings. Rigging slings are not life support; follow ANSI Z133.",
+     "Store webbing out of sunlight, since UV weakens synthetic fibers over time.",
+     "Wash muddy slings in clean water and let them dry before packing."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Webbing sling or rope sling?",
+    "a": "Webbing grips and spreads load across bark; rope slings handle abrasion and are easier to adjust and inspect."
+   },
+   {
+    "q": "What does the tag on a webbing sling mean?",
+    "a": "It lists rated capacities for each hitch type. A sling without a readable tag should be removed from service."
+   }
+  ],
+  "use": [
+   "rigging",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/",
+  "category": "/rigging/rigging-slings/",
+  "name": "CMI Heavy Duty Loop Runners",
+  "brand": "cmi",
+  "brand_name": "CMI",
+  "kind": "sling",
+  "price": 18,
+  "keyword": "loop runner",
+  "title": "CMI Heavy Duty Loop Runner Slings",
+  "h1": "CMI Heavy Duty Loop Runners",
+  "meta": "CMI heavy duty loop runners are sewn webbing loops for anchors, redirects and light rigging. How arborists use a loop runner and what to check before each job.",
+  "tagline": "Sewn webbing loops for quick anchors, redirects and light rigging.",
+  "summary": "A CMI heavy duty loop runner is a sewn loop of webbing that you girth hitch, basket or choke around a limb to make a quick anchor. Arborists use loop runners for redirects, light rigging, anchoring pulleys and gear on the ground.",
+  "highlights": [
+   "Sewn webbing loop, no knots to tie",
+   "Girth hitch, basket or choke around limbs",
+   "Light and quick to carry on the saddle",
+   "CMI build quality"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "CMI"
+   ],
+   [
+    "Type",
+    "Sewn webbing loop runner"
+   ],
+   [
+    "Hitches",
+    "Girth, choker, basket"
+   ],
+   [
+    "Ratings",
+    "Marked on the runner"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How arborists use a loop runner",
+    "p": [
+     "A loop runner is the quickest anchor you can carry. Girth hitch it around a limb and clip a pulley for a redirect, or basket it around a stub to anchor a light rigging point. On the ground, use it to anchor a pulley at the base of a tree for a pull line.",
+     "Because they are sewn, there is no knot to untie after a load, and they weigh almost nothing on the saddle.",
+     "Carry a few in different lengths so you can wrap both small limbs and larger stems. Color-coding by length makes it easy to grab the right one from the saddle.",
+     "They also make tidy gear loops on the ground."
+    ]
+   },
+   {
+    "h": "Inspection and limits",
+    "p": [
+     "Girth hitches reduce a runner's strength compared with a straight pull, and sharp edges reduce it more. Check the marking for its rating and use runners within it. Inspect the stitching and webbing for cuts, burns and fraying before use.",
+     "If a runner is part of a climbing system, it must be rated for life support and used as CMI instructs. Keep rigging and climbing gear separate, and train to ANSI Z133.",
+     "Wash dirty runners in clean water and air dry them.",
+     "Retire any runner with a faded or missing marking."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a loop runner?",
+    "a": "A sewn loop of webbing used as a quick sling for anchors and redirects."
+   },
+   {
+    "q": "Can I use a loop runner for climbing?",
+    "a": "Only if it is rated for life support and used per CMI's instructions. Keep rigging runners separate."
+   }
+  ],
+  "use": [
+   "rigging",
+   "climbing"
+  ],
+  "level": "all"
+ }
+]

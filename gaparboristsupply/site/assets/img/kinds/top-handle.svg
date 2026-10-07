@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Top-handle chainsaw</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="26" y="116" width="100" height="36" rx="18" fill="#1f2a1f"/>
+<rect x="26" y="116" width="100" height="36" rx="18" fill="none" stroke="#9aa5a8" stroke-width="5" stroke-dasharray="5 6"/>
+<rect x="31" y="121" width="96" height="26" rx="13" fill="#9aa5a8"/>
+<circle cx="44" cy="134" r="5" fill="#f4efe2"/>
+<path d="M124 104 V66 Q124 54 136 54 H180 Q192 54 192 66 V104" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M124 104 V66 Q124 54 136 54 H180 Q192 54 192 66 V104" fill="none" stroke="#2f5d3a" stroke-width="12" />
+<rect x="152" y="51" width="22" height="10" rx="4" fill="#f26b1d"/>
+<path d="M112 100 h80 q14 0 14 14 v50 q0 12 -12 12 h-74 q-12 0 -12 -12 v-50 q0 -14 4 -14z" fill="#f26b1d"/>
+<path d="M104 86 l12 -4 l6 30 l-12 3z" fill="#1f2a1f"/>
+<rect x="140" y="118" width="46" height="22" rx="5" fill="#f4efe2"/>
+<path d="M147 129 L179 129" stroke="#1f2a1f" stroke-width="3" fill="none"/>
+<circle cx="206" cy="100" r="8" fill="none" stroke="#1f2a1f" stroke-width="5"/>
+<circle cx="206" cy="100" r="8" fill="none" stroke="#9aa5a8" stroke-width="2"/>
+</g>
+</svg>

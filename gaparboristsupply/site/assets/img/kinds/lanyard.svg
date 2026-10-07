@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Coiled flipline lanyard with snap</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 116 A70 46 0 1 1 180 116 A70 46 0 1 1 40 116" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M40 116 A70 46 0 1 1 180 116 A70 46 0 1 1 40 116" fill="none" stroke="#f26b1d" stroke-width="9" />
+<path d="M46 122 A68 44 0 1 1 182 122 A68 44 0 1 1 46 122" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M46 122 A68 44 0 1 1 182 122 A68 44 0 1 1 46 122" fill="none" stroke="#f26b1d" stroke-width="9" stroke-dasharray="2 10"/>
+<path d="M52 128 A66 42 0 1 1 184 128 A66 42 0 1 1 52 128" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M52 128 A66 42 0 1 1 184 128 A66 42 0 1 1 52 128" fill="none" stroke="#f26b1d" stroke-width="9" />
+<path d="M178 140 L196 156" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M178 140 L196 156" fill="none" stroke="#f26b1d" stroke-width="9" />
+<rect x="188" y="146" width="16" height="14" rx="4" transform="rotate(42 196 153)" fill="#9aa5a8"/>
+<path d="M198 160 Q216 176 206 194 Q196 206 182 198 Q176 194 180 186" fill="none" stroke="#1f2a1f" stroke-width="13"/><path d="M198 160 Q216 176 206 194 Q196 206 182 198 Q176 194 180 186" fill="none" stroke="#9aa5a8" stroke-width="7" />
+<path d="M180 186 L194 170" stroke="#1f2a1f" stroke-width="4" fill="none"/>
+<rect x="96" y="70" width="18" height="20" rx="4" fill="#9aa5a8"/>
+</g>
+</svg>

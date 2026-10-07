@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Handheld leaf blower</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M70 76 Q70 42 108 42 Q140 42 140 74" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M70 76 Q70 42 108 42 Q140 42 140 74" fill="none" stroke="#2f5d3a" stroke-width="12" />
+<path d="M154 100 L214 126 L210 150 L154 150 Z" fill="#9aa5a8"/>
+<path d="M46 108 Q46 72 90 72 h44 q30 0 30 40 v44 q0 30 -30 30 h-58 q-30 0 -30 -30 z" fill="#f26b1d"/>
+<circle cx="96" cy="140" r="28" fill="#f4efe2"/>
+<path d="M76 140 h40 M80 128 h32 M80 152 h32" fill="none"/>
+<rect x="120" y="86" width="34" height="20" rx="4" fill="#c8e03c"/>
+<rect x="104" y="40" width="14" height="10" rx="3" fill="#f26b1d"/>
+</g>
+</svg>

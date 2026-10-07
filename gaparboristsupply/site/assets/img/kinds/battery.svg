@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Power tool battery pack</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M74 70 h92 l12 34 h-116 z" fill="#6b8f3e"/>
+<path d="M92 82 h56" fill="none" stroke-width="5"/>
+<rect x="36" y="100" width="168" height="90" rx="14" fill="#2f5d3a"/>
+<rect x="50" y="118" width="76" height="56" rx="8" fill="#f4efe2"/>
+<path d="M92 124 L76 148 H90 L82 168 L104 140 H90 L100 124 Z" fill="#f26b1d"/>
+<rect x="140" y="124" width="12" height="18" rx="2" fill="#c8e03c"/>
+<rect x="156" y="124" width="12" height="18" rx="2" fill="#c8e03c"/>
+<rect x="172" y="124" width="12" height="18" rx="2" fill="#c8e03c"/>
+<rect x="140" y="152" width="44" height="16" rx="6" fill="#f26b1d"/>
+</g>
+</svg>

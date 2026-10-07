@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Arborist climbing saddle with bridge</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M88 150 A28 24 0 1 0 89 150" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M88 150 A28 24 0 1 0 89 150" fill="none" stroke="#6b8f3e" stroke-width="10" />
+<path d="M152 150 A28 24 0 1 0 153 150" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M152 150 A28 24 0 1 0 153 150" fill="none" stroke="#6b8f3e" stroke-width="10" />
+<path d="M26 66 Q120 112 214 66 L218 104 Q120 148 22 104 Z" fill="#2f5d3a"/>
+<path d="M34 84 Q120 124 206 84" fill="none" stroke="#f4efe2" stroke-dasharray="5 6"/>
+<path d="M66 116 Q120 186 174 116" fill="none" stroke="#1f2a1f" stroke-width="14"/><path d="M66 116 Q120 186 174 116" fill="none" stroke="#c8e03c" stroke-width="8" />
+<circle cx="120" cy="152" r="12" fill="none" stroke="#1f2a1f" stroke-width="10"/>
+<circle cx="120" cy="152" r="12" fill="none" stroke="#9aa5a8" stroke-width="5"/>
+<circle cx="28" cy="96" r="10" fill="none" stroke="#1f2a1f" stroke-width="9"/><circle cx="28" cy="96" r="10" fill="none" stroke="#9aa5a8" stroke-width="4"/>
+<circle cx="212" cy="96" r="10" fill="none" stroke="#1f2a1f" stroke-width="9"/><circle cx="212" cy="96" r="10" fill="none" stroke="#9aa5a8" stroke-width="4"/>
+<rect x="80" y="70" width="12" height="18" rx="3" fill="#f26b1d"/>
+<rect x="148" y="70" width="12" height="18" rx="3" fill="#f26b1d"/>
+</g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Rigging lowering device</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="120" cy="34" r="14" fill="none" stroke="#1f2a1f" stroke-width="13"/>
+<circle cx="120" cy="34" r="14" fill="none" stroke="#9aa5a8" stroke-width="7"/>
+<path d="M76 70 L164 58" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M76 70 L164 58" fill="none" stroke="#9aa5a8" stroke-width="12" />
+<rect x="94" y="48" width="52" height="144" rx="20" fill="#9aa5a8"/>
+<path d="M106 54 V186" fill="none" stroke="#f4efe2" stroke-width="4"/>
+<path d="M60 100 L180 82" fill="none" stroke="#1f2a1f" stroke-width="17"/><path d="M60 100 L180 82" fill="none" stroke="#c8e03c" stroke-width="11" />
+<path d="M94 126 L146 110" fill="none" stroke="#1f2a1f" stroke-width="17"/><path d="M94 126 L146 110" fill="none" stroke="#c8e03c" stroke-width="11" />
+<path d="M94 152 L146 136" fill="none" stroke="#1f2a1f" stroke-width="17"/><path d="M94 152 L146 136" fill="none" stroke="#c8e03c" stroke-width="11" />
+<path d="M146 162 Q140 184 112 204" fill="none" stroke="#1f2a1f" stroke-width="17"/><path d="M146 162 Q140 184 112 204" fill="none" stroke="#c8e03c" stroke-width="11" />
+</g>
+</svg>

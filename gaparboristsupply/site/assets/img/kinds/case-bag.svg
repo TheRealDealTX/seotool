@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Arborist gear bag</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M78 92 Q78 46 104 46 Q124 46 124 92" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M78 92 Q78 46 104 46 Q124 46 124 92" fill="none" stroke="#2f5d3a" stroke-width="9" />
+<path d="M116 92 Q116 46 142 46 Q162 46 162 92" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M116 92 Q116 46 142 46 Q162 46 162 92" fill="none" stroke="#2f5d3a" stroke-width="9" />
+<circle cx="102" cy="90" r="16" fill="#c8e03c"/><circle cx="102" cy="90" r="7" fill="none"/>
+<circle cx="136" cy="88" r="14" fill="#c8e03c"/><circle cx="136" cy="88" r="6" fill="none"/>
+<path d="M40 90 h160 l-10 104 q-1 8 -10 8 h-120 q-9 0 -10 -8 z" fill="#2f5d3a"/>
+<rect x="44" y="120" width="152" height="16" fill="#f26b1d"/>
+<rect x="88" y="152" width="64" height="32" rx="6" fill="#6b8f3e"/>
+<path d="M98 160 h44" fill="none"/>
+</g>
+</svg>

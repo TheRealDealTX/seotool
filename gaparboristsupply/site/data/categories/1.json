@@ -1,0 +1,2507 @@
+[
+ {
+  "path": "/books-and-training-materials/",
+  "name": "Books & Training",
+  "h1": "Arborist Books & Training Materials",
+  "keyword": "arborist books",
+  "title": "Arborist Books, Standards & Training Materials",
+  "meta": "Arborist books and training materials for climbers and crew leaders: ANSI Z133 and A300 standards, ISA certification study guides and field references.",
+  "kind": "book",
+  "intro": "Our arborist books and training materials cover the standards, study guides and field references that working tree crews actually lean on. Start with ANSI Z133 for safety and A300 for pruning practice, then build out from there.",
+  "guide": [
+   {
+    "h": "Why every crew needs a small library",
+    "p": [
+     "Gear wears out and gets replaced. What a climber knows stays on the truck every day. A short shelf of good arborist books gives a crew a shared language for how work gets done: what a proper pruning cut looks like, what a safe drop zone is, how a rigging load really behaves when a piece comes off the stem.",
+     "Books also settle arguments. When two climbers disagree about a tie-in point or how to set a lowering line, the answer is usually already written down by people who have spent decades studying it. Keeping the current standards in the cab means the crew leader can point to the page instead of relying on whoever talks loudest.",
+     "Books matter for crew leaders and business owners too. Bidding municipal work, writing a pruning spec or answering a client who asks why you will not top their tree all go better when you can cite the standard and the reasoning behind it."
+    ]
+   },
+   {
+    "h": "The standards: ANSI Z133 and ANSI A300",
+    "p": [
+     "ANSI Z133 is the American safety standard for arboricultural operations. It covers climbing systems, connectors, rigging, chainsaw use, electrical hazards, aerial lifts and traffic control. If you climb or run a crew in the US, it is the baseline your gear and procedures are measured against, and it is updated periodically, so make sure the copy you train from is current.",
+     "ANSI A300 is the tree care performance standard. Where Z133 is about keeping people safe, A300 is about doing right by the tree: pruning objectives, cut placement, support systems, lightning protection and more. Many municipal and utility contracts reference A300 directly, so knowing it is part of winning and keeping that work."
+    ]
+   },
+   {
+    "h": "Study guides and climbing references",
+    "p": [
+     "The ISA Certified Arborist Study Guide is the standard prep text for the Certified Arborist exam. It covers tree biology, soils, identification, pruning, diagnosis, safety and more, and it stays useful long after the test as a desk reference for the parts of the job that are not climbing.",
+     "For climbing technique, The Tree Climber's Companion by Jeff Jepson is a classic pocket guide that a lot of climbers started with, and it is often the book people mean when they ask for arborist books for beginners. Pair a field guide like that with hands-on training from a qualified instructor. No book replaces time on the rope under someone who can watch your system and correct it.",
+     "Rigging and tree risk assessment each have their own references as you move up. Add them when the work calls for it rather than buying a whole shelf at once."
+    ]
+   },
+   {
+    "h": "How to use books on a real crew",
+    "p": [
+     "Pick one topic a week for the tailgate meeting and read a page or two out loud: tie-in points, drop zone communication, chipper safety. Keep the standards in a dry bag in the truck so they do not turn into pulp. When a new climber joins, hand them the study guide and the climbing reference before you hand them a saddle.",
+     "Remember that books explain the why, while manufacturer instructions govern each specific device. Read both, follow both, and inspect life-support gear before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What are the best arborist books for a new climber?",
+    "a": "Start with the current ANSI Z133 safety standard, a climbing field guide such as The Tree Climber's Companion, and the ISA Certified Arborist Study Guide once you are ready to learn the wider science of tree care."
+   },
+   {
+    "q": "Is the ANSI Z133 standard required reading?",
+    "a": "If you work on trees in the US, Z133 is the safety standard employers, insurers and inspectors refer to. Every climber and crew leader should know what it says about their gear and tasks."
+   },
+   {
+    "q": "What is the difference between Z133 and A300?",
+    "a": "Z133 is about worker safety during tree work. A300 is about tree care practice, such as how and why to prune. Most professional crews keep both on hand."
+   },
+   {
+    "q": "Can I learn to climb trees from a book?",
+    "a": "A book is a good foundation, but climbing should be learned with hands-on training from a qualified instructor. Use books to reinforce what you practice, not to replace supervision."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/",
+  "name": "Climbing",
+  "h1": "Climbing Tree Gear for Arborists",
+  "keyword": "tree gear",
+  "title": "Climbing Tree Gear: Saddles, Spurs, Rope Tools & More",
+  "meta": "Climbing tree gear for working arborists: saddles, spurs, carabiners, friction devices, lanyards, helmets and throw line, explained by tree people.",
+  "kind": "saddle",
+  "intro": "This is the hub for all of our climbing tree gear: saddles, spurs, hardware, friction devices, lanyards, helmets and throw line. Whether you are building a first kit or replacing worn tree gear, the sections below get you to the right shelf fast.",
+  "guide": [
+   {
+    "h": "How the climbing department is organized",
+    "p": [
+     "Climbing gear breaks down by the job each piece does in your system. Saddles and harnesses are what you sit in. Rope tools, friction devices and hitch cord control how you move. Carabiners, rings, swivels and pulleys connect it all together. Lanyards and fliplines keep you positioned while you cut, and spurs get you up spars and removals.",
+     "Around that core sit the support items: helmets, throw weights and line for setting your tie-in, and gear bags for keeping it clean. Each subcategory has its own buying guide, so you can drill down to exactly what you need.",
+     "If you are not sure where something lives, start with the climbing gear section. It holds most of the hardware and devices, from ascenders to carabiners, and each listing explains what the item does in a working system."
+    ]
+   },
+   {
+    "h": "Building a first climbing kit",
+    "p": [
+     "A working kit starts with a saddle that fits, a climbing rope rated for arborist use, a friction hitch or mechanical device, connectors that meet ANSI Z133, a flipline or adjustable lanyard, a helmet and a throw line setup. Buy the saddle first and fit it in person if you can, because comfort decides how long you will stay productive in the tree.",
+     "If you are just starting, a moving rope system (MRS) with a hitch and micro pulley is simple to learn and inspect. Many climbers later add a stationary rope system (SRS) for long ascents and big canopies. Either way, get trained before you leave the ground.",
+     "Do not overlook the small items that make a kit usable on day one: a micro pulley to tend your hitch, a friction saver to protect your rope and the tree, a rope bag to keep the line clean, and a couple of gear carabiners for tools. A complete tree climbing kit is often the easiest way to get all of that matched and compatible in one go."
+    ]
+   },
+   {
+    "h": "New, used and wholesale gear",
+    "p": [
+     "We get asked about used tree climbing gear a lot. Hardware such as carabiners and pulleys can be inspected, but you rarely know how textile gear like rope, saddles and lanyards has been stored, loaded or exposed to chemicals. For life-support items, buy new from a source you trust and keep a record of when each item went into service.",
+     "Crews outfitting several climbers can save by standardizing on one or two connector models and one rope diameter. That keeps spares interchangeable and makes daily inspections faster."
+    ]
+   },
+   {
+    "h": "Safety and inspection",
+    "p": [
+     "Every piece of life-support tree gear should meet the applicable standard, be used per the manufacturer's instructions, and be inspected before each climb. Retire anything that has been shock loaded, cut, glazed, cracked or that you simply cannot vouch for. When in doubt, take it out of service.",
+     "Treat inspection as part of the climb, not a separate chore. Run your rope through your hands as you flake it out, check every connector gate as you clip it to your saddle, and look at stitching on your bridge and lanyard before you leave the ground. Keep a simple log for each climber's life-support gear with dates in service and any notes from inspections. When a crew shares gear, the log is how everyone knows what has happened to it.",
+     "Finally, pair good gear with good habits: a work plan, a clear drop zone, a trained ground person and an aerial rescue plan for every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What tree gear do I need to start climbing?",
+    "a": "At minimum: a fitted arborist saddle, an arborist climbing rope, a friction hitch or mechanical friction device, Z133-compliant locking connectors, a lanyard or flipline, a helmet and a throw line kit, plus proper training."
+   },
+   {
+    "q": "Is it safe to buy used climbing gear?",
+    "a": "Used metal hardware can sometimes be inspected and trusted, but used rope, saddles and lanyards are hard to evaluate. For life-support textiles, buying new is the safer choice."
+   },
+   {
+    "q": "What is the difference between MRS and SRS?",
+    "a": "In a moving rope system the rope runs over the anchor and moves as you climb. In a stationary rope system the rope is fixed and you move along it with a device. Both are common in tree work."
+   },
+   {
+    "q": "Do I need spurs to climb trees?",
+    "a": "Only for removals and some spar work. Spurs wound living trees, so they are not used for pruning trees that are staying, except in a rescue."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/",
+  "name": "Climbing Gear",
+  "h1": "Tree Climbing Gear & Arborist Climbing Equipment",
+  "keyword": "tree climbing gear",
+  "title": "Tree Climbing Gear & Arborist Climbing Equipment",
+  "meta": "Tree climbing gear for arborists: ascenders, friction devices, carabiners, lanyards, pulleys, friction savers and rope bags. Practical buying advice.",
+  "kind": "friction-device",
+  "intro": "Shop tree climbing gear built for real arborist work: ascenders, mechanical friction devices, carabiners, lanyards, pulleys, friction savers and storage. This is the arborist climbing equipment that sits between your saddle and your rope.",
+  "guide": [
+   {
+    "h": "What counts as climbing gear",
+    "p": [
+     "Your saddle and rope get most of the attention, but the small parts decide how smooth your day goes. This section holds the tree climbing equipment that connects and controls your system: ascenders and foot loops, mechanical friction devices for MRS and SRS, hitch cord and split tails, micro pulleys, swivels, rings, carabiners, snap hooks, lanyards and fliplines, chainsaw lanyards and friction savers.",
+     "Most of it is life-support gear, which means it should meet ANSI Z133 and the manufacturer's rating for the way you plan to use it. Read the instructions that come with each device. Many are approved only for specific rope diameters and constructions.",
+     "If you are not sure which subcategory fits, think about where the item sits in your system. Anything between your saddle and the rope is usually here; the saddle itself, spurs, helmets and throw line have their own departments."
+    ]
+   },
+   {
+    "h": "Matching gear to your climbing system",
+    "p": [
+     "Start with your rope diameter and system. An 11.7 mm rope and a mechanical device rated for 11 to 13 mm will not behave like a hitch tied on a 13 mm rope. Check that your friction device, rope grab and pulley all agree with the rope you actually climb on.",
+     "MRS climbers usually run a hitch cord or mechanical device, a micro pulley and a friction saver to protect the rope and the tree. SRS climbers add a rope wrench or SRT device, a chest harness and often a foot ascender. Spikes, which people also search as tree climbing spikes, live in the spurs department for removal work."
+    ]
+   },
+   {
+    "h": "Hardware that earns its keep",
+    "p": [
+     "Good connectors are cheap insurance. Use auto-locking carabiners that need at least two deliberate actions to open in any life-support position, and keep a few non-locking carabiners and gear hooks on your saddle for tools. Swivels reduce twist in your lanyard or rope bridge, and rings make a clean, low-friction point for slings and bridges.",
+     "Brands like Notch, Petzl, DMM, ISC and CMI make most of the hardware in this section. Mixing brands is fine as long as each part is compatible and rated for the job.",
+     "Pulleys deserve a special mention. A micro pulley below your hitch makes slack tending smooth and saves your hitch cord, while a larger pulley can help with haul systems and rescue setups. Friction savers protect both rope and tree at your tie-in, and they make MRS climbing noticeably easier because the rope runs over metal or rings instead of bark."
+    ]
+   },
+   {
+    "h": "Care, storage and retirement",
+    "p": [
+     "Keep textiles out of the sun and away from bar oil, fuel and battery acid. Store rope in a bag, not loose in the truck bed. Inspect every device and connector before each climb, and log when life-support items went into service so you know when they are due for retirement under the manufacturer's guidelines.",
+     "Clean hardware with fresh water and let it dry fully. Lubricate gates and cams only with what the manufacturer recommends, and wipe away excess so it does not collect grit. Retire textiles that have been cut, glazed, chemically contaminated or shock loaded, and retire metal gear that is cracked, deformed or worn into sharp edges. The cost of replacing a piece of tree climbing gear is always smaller than the cost of trusting one that should have been retired."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the most important piece of tree climbing gear?",
+    "a": "Every life-support component matters, but the parts that connect you to the rope, your friction device and connectors, deserve the most attention because they carry your full load on every climb."
+   },
+   {
+    "q": "Can I mix gear from different brands?",
+    "a": "Yes, as long as each component is compatible with the others, rated for your rope diameter, and used according to its own manufacturer's instructions."
+   },
+   {
+    "q": "How often should I inspect climbing equipment?",
+    "a": "Before every climb, plus a more thorough documented inspection at regular intervals. Retire anything damaged, shock loaded or past the manufacturer's lifespan."
+   },
+   {
+    "q": "Where are tree climbing spikes?",
+    "a": "Climbing spikes, also called spurs or gaffs, are in our spurs department along with replacement gaffs, pads and parts."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/",
+  "name": "Ascent & Descent",
+  "h1": "Tree Climbing Ascenders and Descenders",
+  "keyword": "tree climbing ascenders and descenders",
+  "title": "Tree Climbing Ascenders and Descenders",
+  "meta": "Tree climbing ascenders and descenders: hand ascenders, foot ascenders, rope grabs, belay and mechanical friction devices for MRS and SRS work.",
+  "kind": "ascender",
+  "intro": "Tree climbing ascenders and descenders move you up the rope and bring you back down under control. This section covers hand and foot ascenders, rope grabs, figure 8s, belay devices and the mechanical friction devices that run MRS and SRS systems.",
+  "guide": [
+   {
+    "h": "Choosing gear for the way you climb",
+    "p": [
+     "For SRS ascents, a hand ascender paired with a foot ascender or a chest-mounted device lets you walk up the rope efficiently. Descending and working the canopy is handled by your friction device, a rope wrench and hitch, or an all-in-one mechanical device. For MRS, ascent is usually done with a hitch and micro pulley, sometimes with a foot ascender added to save energy. Whatever you choose, confirm each device is rated for your rope diameter, use it per the manufacturer's instructions, get trained on it, and inspect it before every climb."
+    ]
+   },
+   {
+    "h": "Descent and control",
+    "p": [
+     "Coming down matters as much as going up. Mechanical friction devices and figure 8 descenders give smooth, controlled descents and can be set to add friction for heavier loads. Rope grabs help with positioning and lanyard adjustment, and a belay device can serve the ground crew during a rescue or when lowering a climber, where approved. Practice changeovers from ascent to descent low to the ground until they are second nature."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a belay device the same as a climbing friction device?",
+    "a": "Not always. Some belay devices are approved for rope access or tree work, others are not. Check the manufacturer's instructions for the uses each device is approved for."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/",
+  "name": "Foot Ascenders & Loops",
+  "h1": "Foot Ascenders & Foot Loops",
+  "keyword": "foot ascender",
+  "title": "Foot Ascenders & Foot Loops for Tree Climbing",
+  "meta": "Foot ascenders and foot loops for SRS and MRS tree climbing. Compare right and left foot ascenders, knee ascenders and adjustable footloops.",
+  "kind": "ascender",
+  "intro": "A foot ascender turns your legs into the engine of your climb, so you ride up the rope instead of pulling with your arms. We also carry foot loops for hand ascender setups and knee ascenders for rope walking systems.",
+  "guide": [
+   {
+    "h": "How foot ascenders and foot loops work",
+    "p": [
+     "A foot ascender is a toothed cam device that straps to your boot. When you stand, it locks onto the rope; when you lift your foot, it slides up. Paired with a hand ascender or chest device on a stationary rope, it lets you climb in a smooth step-stand-step rhythm that saves your arms for the work at the top.",
+     "Foot loops are simpler. A footloop is a sling or adjustable strap that clips to a hand ascender so you can stand in it. Many climbers start with a foot loop and a hand ascender, then add a foot ascender once they are climbing SRS regularly."
+    ]
+   },
+   {
+    "h": "Right foot, left foot and knee ascenders",
+    "p": [
+     "Most climbers run a foot ascender on the right foot, but left foot models exist, and some climbers run both for a rope walking style ascent. Knee ascenders mount higher on the leg and connect to the foot so the device moves with your knee, which some climbers find faster in long open ascents.",
+     "Match the device to your rope diameter and boot. A foot ascender should clamp snugly without crushing the boot, and the release should be easy to work with gloves on.",
+     "Rope matters as well. A foot ascender that grips cleanly on a firm, round 11.7 mm line may behave differently on a softer or fuzzier rope, so test it on the rope you actually climb before trusting it on a long ascent."
+    ]
+   },
+   {
+    "h": "Using them safely",
+    "p": [
+     "A foot ascender is not a life-support device on its own. It is there to help you climb, while your primary attachment stays on a device rated for life support. Keep the rope tended below you so the foot ascender feeds cleanly, and practice removing it while hanging before you need to do it high in a tree.",
+     "Inspect teeth, springs and straps before each climb. Worn or packed teeth slip, especially on muddy or icy rope.",
+     "If you are new to SRS, practice the whole ascent at low height with a trainer watching. It is easy to build a habit of loading the foot ascender awkwardly or letting slack build below your device, and both are much easier to correct on the ground than at the top of a tall tree. Wet, muddy or icy conditions call for extra attention, since teeth clog and grip falls off."
+    ]
+   },
+   {
+    "h": "Setting up your ascent system",
+    "p": [
+     "A common SRS ascent setup combines a hand ascender clipped to your bridge with a foot loop, a foot ascender on the right foot, and your friction device or rope wrench system already installed above. As you stand, the hand ascender slides up; as you sit, the friction device takes your weight. Some climbers add a chest harness with a chest ascender for a more efficient rope walk. Whatever you build, practice the full changeover from ascent to work mode close to the ground first.",
+     "Foot loops should be adjustable so you can set the height for your leg length. Too long and every step is wasted; too short and you cannot stand fully. Spend a few minutes tuning the length and the climb gets much easier."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a foot ascender for SRS?",
+    "a": "No, but most SRS climbers use one because it makes long ascents faster and much less tiring than arm-heavy methods."
+   },
+   {
+    "q": "What is the difference between a foot loop and a foot ascender?",
+    "a": "A foot loop is a strap you stand in, usually clipped to a hand ascender. A foot ascender is a cam device that grips the rope directly from your boot."
+   },
+   {
+    "q": "Can I use a foot ascender for MRS?",
+    "a": "Some climbers add one to an MRS ascent to help advance the hitch, but always follow the device instructions and keep your life-support system primary."
+   },
+   {
+    "q": "Do foot ascenders damage rope?",
+    "a": "Any toothed cam causes some wear. Use devices matched to your rope diameter, keep teeth clean, and inspect your rope regularly where the ascender runs."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/",
+  "name": "Mechanical Friction Devices",
+  "h1": "Mechanical Friction Devices & Climbing Friction Hitches",
+  "keyword": "climbing friction hitches",
+  "title": "Mechanical Friction Devices vs Climbing Friction Hitches",
+  "meta": "Mechanical friction devices that replace or work with climbing friction hitches. Compare MRS and SRS devices, rope wrenches and mechanical prusiks.",
+  "kind": "friction-device",
+  "intro": "Mechanical friction devices give you the control of climbing friction hitches with more consistent grab and release. Shop by system below: devices for MRS (moving rope) and devices for SRS (stationary rope).",
+  "guide": [
+   {
+    "h": "Device or hitch",
+    "p": [
+     "Friction hitches for tree climbing, like the Distel or Valdotain tied in hitch cord, are light, cheap and adjustable, but they glaze, change with heat and moisture, and need a trained eye to dress and set. A mechanical prusik or friction device trades some cost and weight for repeatable behavior, smoother descents and easier one-handed tending. Many climbers run both: a device for daily work, and hitch cord kept in the kit. Whatever you use must be approved for life support by its manufacturer, matched to your rope, inspected before each climb, and learned under proper training."
+    ]
+   },
+   {
+    "h": "MRS or SRS devices",
+    "p": [
+     "Devices are usually built for one system. MRS devices work on a doubled rope that runs over your tie-in, while SRS devices work on a single fixed line, often with a rope wrench. Some can be configured for both with accessories. Start by choosing your system, then shop the matching subcategory below.",
+     "Read the device instructions closely for rope diameter and construction limits before you buy."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a mechanical prusik safer than a friction hitch?",
+    "a": "Neither is automatically safer. Each is safe when correctly matched to the rope, set up per instructions and used by a trained climber."
+   },
+   {
+    "q": "Can I use friction cord with a rope wrench?",
+    "a": "Yes. Many SRS setups use a rope wrench with a hitch tied in friction cord. Check that the cord, wrench and rope are compatible."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/",
+  "name": "MRS Devices",
+  "h1": "Mechanical Prusik Devices for MRS",
+  "keyword": "mechanical prusik",
+  "title": "Mechanical Prusik Devices for MRS Climbing",
+  "meta": "Mechanical prusik devices for moving rope system tree climbing, including the Petzl Zigzag, Buckingham Throttle and Hitch Hiker 2, with fit and safety tips.",
+  "kind": "friction-device",
+  "intro": "A mechanical prusik for MRS replaces your hitch with a device that grips, releases and slack-tends predictably on a moving rope. These are built for doubled-rope climbing where the rope runs over your tie-in point.",
+  "guide": [
+   {
+    "h": "What to look for",
+    "p": [
+     "Check the rope diameter range first, then how the device tends slack as you advance, how smooth it feels on descent, and whether you can operate it easily with gloves. Some devices pair with a pulley or chain of links for self-tending. Use each one only in the configurations its manufacturer approves, inspect it before every climb, and get trained on it before you rely on it in the tree."
+    ]
+   },
+   {
+    "h": "Why climbers switch from hitches",
+    "p": [
+     "Many MRS climbers start on a Valdotain or Distel hitch and move to a mechanical prusik as they climb more. The main draws are consistency, since a device does not change with heat, moisture or how well it was dressed, and smoother, more controllable descents. The trade-offs are weight, cost and the need to learn a new set of behaviors. Keep a hitch cord in your kit and stay fluent in tying hitches, because you never know when you will need a backup."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can MRS devices be used on SRS?",
+    "a": "Some can be converted with accessories, but not all. Follow the manufacturer's instructions for which systems each device is approved for."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/",
+  "name": "SRS Devices",
+  "h1": "SRS Devices & Rope Wrenches",
+  "keyword": "srs devices",
+  "title": "SRS Devices & Rope Wrenches for Tree Climbing",
+  "meta": "SRS devices for stationary rope tree climbing: rope wrenches, adjustable rope wrenches and tethers that pair with a hitch for smooth descents and control.",
+  "kind": "friction-device",
+  "intro": "SRS devices let you work a stationary rope with control. The rope wrench family, including the ISC Rope Wrench and the Notch Flow, adds friction above a hitch so you can descend and move through the canopy smoothly.",
+  "guide": [
+   {
+    "h": "How rope wrenches fit in",
+    "p": [
+     "A rope wrench rides above your hitch on a short tether and bends the rope through a few contact points, adding friction so the hitch does not have to do all the work. Adjustable wrenches let you tune friction for rope diameter, temperature and how heavy you are with tools. They work with a tether and a hitch, not instead of one.",
+     "Follow the manufacturer's instructions for compatible ropes, hitches and tethers, inspect wear points before every climb, and learn SRS from a qualified trainer."
+    ]
+   },
+   {
+    "h": "Picking a setup",
+    "p": [
+     "Start by deciding how you want to climb. A rope wrench with a hitch is light and familiar to MRS climbers, and it suits climbers who want fine control. A tether choice matters too: rigid and semi-rigid tethers like the Notch Fusion keep the wrench aligned and help it tend itself. Consider how often you change between ropes of different diameters, and whether you want adjustable friction for different weather and rope conditions."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Does a rope wrench replace my hitch?",
+    "a": "No. A rope wrench adds friction above a hitch or approved device. You still need the hitch or device as part of the life-support system."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "name": "Rope Grabs",
+  "h1": "Rope Grabs & Lanyard Adjusters",
+  "keyword": "rope grab",
+  "title": "Rope Grabs & Lanyard Adjusters for Arborists",
+  "meta": "Rope grabs and lanyard adjusters for arborists: Petzl Micrograb, Climb Right rope grab and ART Positioner parts for positioning and lanyard control.",
+  "kind": "ascender",
+  "intro": "A rope grab clamps onto a rope to hold your position or adjust a lanyard. In tree work the most common use is fine-tuning your flipline or lanyard length so you can lean back and cut with both hands.",
+  "guide": [
+   {
+    "h": "Choosing a rope grab",
+    "p": [
+     "Match the grab to the rope or lanyard diameter it will run on, and check whether it is approved for work positioning, fall arrest or both. Lanyard adjusters like the Petzl Micrograb are made for specific lanyard setups. Replacement cams and springs keep devices like the ART Positioner working. Inspect cams for wear and debris before every climb, and use each device only as its manufacturer intended."
+    ]
+   },
+   {
+    "h": "Care and parts",
+    "p": [
+     "Rope grabs rely on a cam and spring to bite the rope cleanly. Sawdust, sap and grit can pack into the cam teeth and reduce grip, so brush them clean regularly. Replacement cams, such as those for the ART Positioner, keep a good device in service longer. Retire any rope grab with a cracked body, worn cam or weak spring. When adjusting a lanyard under load, move smoothly and keep your hands clear of the cam.",
+     "Keep the device instructions in your kit so anyone inspecting it knows the approved uses and limits."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can a rope grab be used as my main climbing device?",
+    "a": "Only if the manufacturer approves it for that use. Most rope grabs sold for arborists are for lanyard adjustment and positioning."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/",
+  "name": "Carabiners & Hardware",
+  "h1": "Arborist Carabiners & Climbing Hardware",
+  "keyword": "carabiners",
+  "title": "Carabiners & Climbing Hardware for Arborists",
+  "meta": "Climbing carabiners and hardware for arborists: auto-locking, screw gate and non-locking carabiners, snap hooks, quick links and saddle storage clips.",
+  "kind": "carabiner",
+  "intro": "Carabiners are the small parts you clip a hundred times a day, so it pays to get the right ones. This section covers climbing carabiners for life support, gear carabiners for tools, snap hooks, quick links and saddle storage.",
+  "guide": [
+   {
+    "h": "Life-support carabiners vs gear carabiners",
+    "p": [
+     "Not every carabiner belongs in your climbing system. For anything that holds you, ANSI Z133 calls for self-closing, self-locking connectors that take at least two deliberate actions to open, with a minimum breaking strength of 5,000 lbf (about 22.2 kN). In practice that means an auto-locking carabiner, usually a triple-action design, rated for climbing.",
+     "Non-locking and screw gate carabiners still have a place, just not as life support in a climbing line. They hang hand saws, water bottles, throw line bags and spare slings off your saddle. Keep the two jobs separate and mark or color-code them if it helps your crew."
+    ]
+   },
+   {
+    "h": "Shapes and what they do",
+    "p": [
+     "Oval carabiners keep loads centered and work well with pulleys and rope wrenches. D and offset-D shapes put the load near the spine, where the carabiner is strongest, and give a wider gate opening. A pearabiner, or HMS shape, has a wide end that suits hitches and bulky connections such as a rope bridge.",
+     "Steel carabiners are heavier but handle wear from rope and hardware better, which makes them a good fit for rigging and high-wear points. Aluminum carabiners are lighter and are what most climbers carry on the saddle. Captive-eye or bar designs keep a carabiner oriented on a rope wrench or device.",
+     "Gate design matters too. Keylock noses avoid snagging on rope and slings. Wide gate openings make it easier to clip thick rope or a saddle bridge. Some carabiners have a captive bar or clip that holds a device or pulley in the correct orientation and prevents cross-loading."
+    ]
+   },
+   {
+    "h": "Other climbing hardware",
+    "p": [
+     "Beyond carabiners, this section carries quick links and shackles for semi-permanent connections, connectors like the Notch Quickie for fast tie-ins, snap hooks for lanyards, and saddle storage hooks and clips. A good saddle storage setup keeps your carabiners, saws and slings in the same place every climb, which saves time and reduces dropped gear.",
+     "When you pick hardware, think about gate opening, gloved operation and whether a connector will stay oriented under load. Cross-loading, where the gate takes force, can drastically reduce strength.",
+     "Climbers often ask how many carabiners they need. A practical starting point is two or three auto-locking carabiners for your climbing system and lanyard, a spare locker for rescue or changes, and four to six non-locking or gear carabiners for tools and slings. Add more as your system grows."
+    ]
+   },
+   {
+    "h": "Inspection and retirement",
+    "p": [
+     "Check every carabiner before use. The gate should close and lock on its own every time. Look for grooves worn by rope, sharp edges, cracks, corrosion or any distortion. Retire any connector that has been dropped onto a hard surface from height, shock loaded or that fails to lock fully. Follow the manufacturer's instructions for each model.",
+     "Keep a few spare lockers in your kit. A gate that sticks with sap or grit at the top of a tree is not something you want to discover without a backup."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What carabiner do arborists use for climbing?",
+    "a": "For life support, arborists use self-closing, self-locking carabiners that need at least two deliberate actions to open and are rated for at least 5,000 lbf, which in practice means auto-locking climbing carabiners."
+   },
+   {
+    "q": "Can I use a screw gate carabiner in my climbing system?",
+    "a": "Screw gate carabiners are not self-locking, so they do not meet Z133 for life-support connectors in a climbing line. Use them for gear and rigging where appropriate."
+   },
+   {
+    "q": "What is a pearabiner?",
+    "a": "A pearabiner, also called an HMS carabiner, is a pear-shaped carabiner with a wide end that suits hitches, bridges and bulky connections."
+   },
+   {
+    "q": "Are steel carabiners better than aluminum?",
+    "a": "Steel resists wear and abrasion better but weighs more. Aluminum is lighter and is the usual choice for carrying on a saddle."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "name": "Auto-Locking Carabiners",
+  "h1": "Autolock Carabiners for Tree Climbing",
+  "keyword": "autolock carabiner",
+  "title": "Autolock Carabiners for Tree Climbing",
+  "meta": "Autolock carabiners for tree climbing from Petzl, DMM and Husqvarna. Triple-action auto locking climbing carabiners for life-support connections.",
+  "kind": "carabiner",
+  "intro": "An autolock carabiner closes and locks on its own every time you let go of the gate. For arborist life support, choose a triple-action auto locking carabiner rated for climbing, such as the Petzl Am'D or DMM Shadow.",
+  "guide": [
+   {
+    "h": "Why auto-locking matters",
+    "p": [
+     "In tree work you clip and unclip constantly, often while holding a saw or reaching around a limb. A screw gate can be left open by accident; an auto-locking carabiner cannot. ANSI Z133 calls for self-closing, self-locking connectors with at least two actions to open in life-support use. Pick a shape that suits the job, like an offset D for general use or an oval for pulleys, and check the gate operates cleanly with gloves. Inspect before every climb and retire any carabiner that does not lock fully."
+    ]
+   },
+   {
+    "h": "Choosing the right model",
+    "p": [
+     "Aluminum autolock carabiners like the DMM Shadow and Petzl Am'D are light enough to carry several on your saddle. Steel models handle wear better at high-friction spots. Look at gate opening for clipping thick rope, a keylock nose so it does not snag, and whether the shape works with your friction device or pulley. Locking carabiners for climbing should be checked for smooth gate action before every use, cleaned of sap and grit, and retired if the gate sticks or fails to lock on its own."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between twist-lock and triple-action carabiners?",
+    "a": "A twist-lock opens in two motions. A triple-action design adds a third step, usually lifting or pushing the sleeve, which helps prevent accidental opening from rope or bark rubbing the gate."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "name": "Quick Links & Hardware",
+  "h1": "Quick Links, Shackles & Climbing Hardware",
+  "keyword": "climbing hardware",
+  "title": "Quick Links, Shackles & Climbing Hardware",
+  "meta": "Climbing hardware for arborists: the Notch Quickie tie-in connector, Petzl Speedy link and stainless twisted shackles for bridges, slings and rigging.",
+  "kind": "carabiner",
+  "intro": "This climbing hardware covers the connectors that are not carabiners: quick-attach tie-in connectors, maillon-style links and shackles. They fill the gaps in a climbing or rigging setup where a carabiner is not the best fit.",
+  "guide": [
+   {
+    "h": "Where this hardware fits",
+    "p": [
+     "A tie-in connector like the Notch Quickie lets you attach and detach your rope end quickly without a carabiner. Quick links and shackles make semi-permanent connections, such as fixing a pulley to a sling or closing a rope bridge setup, where you want a connector that will not open by accident. Check each piece's rating, use it only in the way its maker approves, keep threaded links fully closed, and inspect threads and pins before every use."
+    ]
+   },
+   {
+    "h": "Shackles, links and inspection",
+    "p": [
+     "Stainless steel shackles and quick links resist corrosion and handle wear well, which makes them good for long-term setups like friction savers, rigging blocks or permanent anchors. Use pins and screw collars that close fully, and check them during the day, since vibration can loosen threads. Retire any piece with damaged threads, bent pins, cracks or wear grooves. Do not substitute generic hardware store links for rated climbing hardware in a life-support or rigging role."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can a quick link replace a carabiner?",
+    "a": "In some semi-permanent connections, yes, if it is rated for that use and fully closed. It is slower to open, so it is not ideal for connections you change often."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "name": "Non-Locking Carabiners",
+  "h1": "Non Locking Carabiners for Gear & Tools",
+  "keyword": "non locking carabiners",
+  "title": "Non Locking Carabiners for Arborist Gear",
+  "meta": "Non locking carabiners for racking tools, saws and slings on your saddle, including the Petzl Rollclip, DMM XSRE and Rock Exotica RockX accessory carabiners.",
+  "kind": "carabiner",
+  "intro": "Non locking carabiners keep your saddle organized. Use them to rack hand saws, slings, throw line and spare hardware, never as a life-support connector in your climbing system.",
+  "guide": [
+   {
+    "h": "Where they belong",
+    "p": [
+     "There are different types of carabiners for different jobs. A non locking carabiner is quick to clip with one hand, which is exactly why it is wrong for life support: a gate can be pushed open by a limb or rope. On the saddle, though, that speed is a plus. Pick rated climbing models over cheap keychain clips so they do not bend under a heavy saw, and give them a different color from your locking connectors so nobody grabs the wrong one."
+    ]
+   },
+   {
+    "h": "Picking gear carabiners",
+    "p": [
+     "A Petzl Rollclip has a built-in pulley, which can be handy for hitch tending in some setups when used as directed. Compact accessory carabiners, like the DMM XSRE or Rock Exotica RockX, are made for racking gear and save weight. Choose models with a gate that is easy to open with gloves and a keylock nose that will not snag on slings. Inspect them like any other carabiner, and retire any that are bent or have weak springs."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I climb on a non locking carabiner?",
+    "a": "No. Life-support connectors in tree climbing must be self-locking. Non locking carabiners are for gear only."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "name": "Saddle Storage",
+  "h1": "Saddle Hooks & Gear Storage Clips",
+  "keyword": "saddle hook",
+  "title": "Saddle Hooks, Chainsaw Hooks & Gear Clips",
+  "meta": "Saddle hooks and gear clips for arborists: chainsaw hooks, rope holders, lanyard management clips and tool hangers that keep your saddle organized.",
+  "kind": "carabiner",
+  "intro": "A good saddle hook gives every tool a home. Chainsaw hooks, lanyard clips and rope holders keep your saw, flipline and spare rope where you can find them without looking.",
+  "guide": [
+   {
+    "h": "Planning your saddle layout",
+    "p": [
+     "Climbers who stay organized aloft tend to rack gear the same way every time. A dedicated chainsaw hook keeps a top-handle saw hanging clear of your rope, ready to grab. A lanyard management clip, such as the ISC Nessie, keeps the tail of your lanyard out of the way. A large tool hook like the Rock Exotica Transporter can carry spare rope or a rigging setup to the top of the tree.",
+     "Think about which side you cut on, where your hand saw sits and which side your lanyard adjuster lives, then place hooks so nothing crosses over your primary rope or bridge.",
+     "Saddle rope holders and large hooks also help when you carry a rigging line or a second climbing rope into the tree. Keep the load balanced on both sides of your saddle so it does not pull you off center on long climbs.",
+     "Do a dry run on the ground. Hang everything you plan to carry, then sit in the saddle and reach for each item with your eyes closed. If you fumble for something, move it. A few minutes of setup saves a lot of frustration aloft."
+    ]
+   },
+   {
+    "h": "Fit and limits",
+    "p": [
+     "Check that hooks fit the gear loops or rails on your saddle and that they are rated for the weight you will hang. These are storage points only, not life-support attachment points. Inspect plastic hooks for cracks, especially after cold weather, and replace anything that has started to deform under a heavy saw.",
+     "Saddle hunters also use similar gear hangers, but tree workers carry heavier loads like chainsaws, so pick hardware sized for arborist use.",
+     "Weight limits are worth a second look if you carry a full-size saw aloft. A hook that handles a hand saw all day may flex or crack under a heavy chainsaw. Pick a chainsaw hook made for that load, and check the mounting point on the saddle is rated to carry it too."
+    ]
+   },
+   {
+    "h": "Keeping gear from dropping",
+    "p": [
+     "Dropped gear is a hazard to the ground crew. Use hooks with gates or retention where you can, tether hand saws, and keep the drop zone clear and communicated. A tidy saddle is part of a safe job site.",
+     "Count your gear before you go up and after you come down. It is an easy habit that catches a missing hook or a hand saw left in a crotch before it becomes a problem for the next person under the tree."
+    ]
+   },
+   {
+    "h": "Types of storage hooks",
+    "p": [
+     "Polymer hooks are light and gentle on rope and tools. Metal tool hooks carry heavier loads like a full-size chainsaw. Clips with gates or spring keepers hold gear more securely when you invert or move through the canopy. Some climbers mix several types: a heavy chainsaw hook on one side, polymer hooks for slings and lanyards, and a gated clip for the hand saw tether.",
+     "Consider the gear loops on your saddle. Some saddles use rails that accept clip-on hooks, while others use fixed loops that work better with carabiner-style storage.",
+     "Replace worn or cracked hooks as soon as you notice them, and keep a spare or two in your gear bag."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a saddle hook used for?",
+    "a": "A saddle hook hangs tools and gear, such as a chainsaw, rope or lanyard, from the gear loops on your arborist saddle so your hands stay free."
+   },
+   {
+    "q": "Can I clip my chainsaw to any carabiner?",
+    "a": "Use a hook or carabiner that fits your saw's lanyard and the saddle attachment. Many climbers prefer a dedicated chainsaw hook or a chainsaw lanyard so the saw hangs clear of their rope."
+   },
+   {
+    "q": "Are saddle hooks life-support rated?",
+    "a": "No. Storage hooks and clips are for gear only. Never attach your climbing system to them."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "name": "Screw Gate Carabiners",
+  "h1": "Screw Gate Carabiners",
+  "keyword": "screw gate carabiner",
+  "title": "Screw Gate Carabiners for Rigging and Gear",
+  "meta": "Screw gate carabiners from Petzl and SMC for rigging, gear hauling and fixed connections. Learn where a screw gate fits and where an autolock is required.",
+  "kind": "carabiner",
+  "intro": "A screw gate carabiner locks with a threaded sleeve you turn by hand. It is a strong, simple connector for rigging, hauling gear and semi-permanent setups, but it is not a self-locking life-support connector under ANSI Z133.",
+  "guide": [
+   {
+    "h": "When to use a screw gate",
+    "p": [
+     "Screw gates shine where a connection is made once and left alone, such as fixing a pulley to a sling in a rigging setup or closing a haul bag. They are inexpensive and often stronger than auto-lockers in the same size. Large steel screw gates, like the SMC heat-treated steel model, are popular for rigging because they shrug off wear. Always screw the sleeve fully closed, check it during the job, and keep auto-locking carabiners in your climbing system."
+    ]
+   },
+   {
+    "h": "Steel or aluminum",
+    "p": [
+     "Aluminum screw gates are light and good for gear and slings. Steel screw gates are heavier but tough and wear resistant, which suits rigging blocks, slings and other places where rope runs through the carabiner. HMS shapes, like the Petzl William, handle bulky connections and hitches. Inspect threads and sleeves for grit, keep them clean and dry, and retire any carabiner with damaged threads or a gate that will not close smoothly."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Why can't I use a screw gate carabiner for climbing?",
+    "a": "Z133 requires life-support connectors to be self-closing and self-locking. A screw gate depends on you to lock it, so it does not qualify."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "name": "Snap Hooks",
+  "h1": "Locking Snap Hooks & Rope Snaps",
+  "keyword": "snap hook",
+  "title": "Locking Snap Hooks & Climber Hooks for Arborists",
+  "meta": "Locking snap hooks for arborist lanyards and climbing lines: double-locking aluminum and steel rope snaps plus the Petzl Eashook. Fit and inspection tips.",
+  "kind": "carabiner",
+  "intro": "A locking snap hook is the classic connector at the end of a lanyard or climbing line. Self-closing, double-locking rope snaps clip fast with one hand and stay put on your saddle D-rings.",
+  "guide": [
+   {
+    "h": "Snap hooks vs carabiners",
+    "p": [
+     "Many climbers prefer a snap hook on the end of a flipline or lanyard because it is quick to clip and unclip with one hand, and its shape sits well on a saddle D-ring without rolling. Carabiners have larger gate openings and handle more types of connection. Both are common in tree work; what matters is that any snap hook in a life-support role is self-closing and self-locking with at least two deliberate actions to open, as ANSI Z133 calls for.",
+     "Old-style single-action snaps, sometimes still found on vintage climber hooks and gear, do not meet that requirement and should not be used for life support.",
+     "Snap hooks are also common on chainsaw lanyards, fall protection lanyards for aerial lifts and rigging lines, each with its own requirements. Make sure the snap you choose is rated for its role.",
+     "Climber hooks with a large gate opening also help when clipping around a thick stem or a wide saddle ring with gloves on. Try the gate with the gloves you actually wear before buying a set for the crew."
+    ]
+   },
+   {
+    "h": "Steel or aluminum",
+    "p": [
+     "Steel rope snaps are heavier but very durable, and they hold up well on lanyards that see daily abuse. Aluminum double-locking snaps save weight on a long climbing day. Open-style hooks like the Petzl Eashook are designed to work with specific rope terminations, so check compatibility before you buy.",
+     "Look at gate opening size, whether the snap fits your saddle rings and lanyard eye, and how easy the lock is to release with gloves.",
+     "Snap hooks with a locking feature are sometimes sold as snap hook with lock or locking snap hook. Either way, check the rating and the number of actions needed to open it before using it for life support.",
+     "Weight differences add up when you carry several snaps on a lanyard and a climbing line."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Check that the keeper and gate close and lock on their own every time. Look for rope wear grooves, cracks, bent gates, worn pivots and corrosion. Retire any snap that sticks open, has been shock loaded or shows deformation. Follow the manufacturer's instructions for service life.",
+     "Clean snaps with fresh water if they get sticky with sap or grit, dry them fully, and use only the lubricant the manufacturer recommends. A snap that is slow to close is a snap that needs attention before the next climb."
+    ]
+   },
+   {
+    "h": "Fitting a snap to your line",
+    "p": [
+     "Snaps are attached to a lanyard or rope with a sewn or spliced eye. A splice that is too loose lets the snap rotate and cross load; one that is too tight wears the rope. Many climbers buy lanyards with snaps already installed, or have them professionally spliced. If you replace the rope on an older lanyard, you can reuse the snap only if it passes inspection.",
+     "Think about how the snap will sit on your saddle. Some D-rings accept a snap better than a carabiner, while others work best with a narrow gate. Check that the snap cannot roll onto its gate or be cross loaded."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a locking snap hook?",
+    "a": "It is a self-closing hook with a gate that locks automatically and needs at least two separate actions to open, so it cannot be opened by accidental contact."
+   },
+   {
+    "q": "Can I put a snap hook on my climbing line?",
+    "a": "Yes, many climbers do, as long as the snap is life-support rated, self-locking and compatible with the rope termination and saddle hardware."
+   },
+   {
+    "q": "What are climber hooks?",
+    "a": "People use the term for different things, including snap hooks for lanyards and the spurs used on poles and trees. For spurs, see our climbing spurs department."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/chainsaw-lanyards/",
+  "name": "Chainsaw Lanyards",
+  "h1": "Chainsaw Lanyards & Chainsaw Straps",
+  "keyword": "chainsaw strap",
+  "title": "Chainsaw Lanyards & Chainsaw Straps for Climbers",
+  "meta": "Chainsaw lanyards and chainsaw straps for climbing arborists, including bungee lanyards with snaps, modular systems and the Weaver chainsaw strap.",
+  "kind": "lanyard",
+  "intro": "A chainsaw strap or lanyard tethers your saw to your saddle so you can cut, let go and keep both hands for climbing. Bungee models stretch with you and keep slack out of the way.",
+  "guide": [
+   {
+    "h": "Picking a chainsaw lanyard",
+    "p": [
+     "Length matters most. Too short and the saw fights you as you reach; too long and it swings into your rope or legs. Bungee lanyards keep the saw close when idle and stretch when you need reach. Use a snap or carabiner that fits your saw's attachment point and saddle hook. A saw lanyard is for the saw, not for you, so never clip your climbing system to it. Inspect stitching and bungee for cuts after every job, since it lives right next to the chain."
+    ]
+   },
+   {
+    "h": "Bungee, modular or fixed",
+    "p": [
+     "Bungee lanyards stretch when you reach and pull back when idle. Modular systems let you swap the lanyard between saws or attach points. A fixed strap, like the Weaver chainsaw strap, is simple and tough. All three ways to end a lanyard, whether a snap, a carabiner or a sewn eye, should fit your saw's attachment point. Avoid lanyards that let the saw hang below your feet or close to your climbing line."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a chainsaw lanyard?",
+    "a": "If you run a saw in the tree, yes. A tethered saw protects the crew below and lets you use both hands to move."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/",
+  "name": "Fliplines & Lanyards",
+  "h1": "Tree Climbing Lanyards & Fliplines",
+  "keyword": "tree climbing lanyard",
+  "title": "Tree Climbing Lanyards & Arborist Fliplines",
+  "meta": "Tree climbing lanyards and arborist fliplines: wire core, rope and 2 in 1 lanyards, pole straps and adjustable kits for positioning and removals.",
+  "kind": "lanyard",
+  "intro": "A tree climbing lanyard, often called a flipline, wraps the stem and holds you in position so you can cut with both hands. We carry rope, wire core and 2 in 1 designs plus adjustable kits.",
+  "guide": [
+   {
+    "h": "Rope, wire core or 2 in 1",
+    "p": [
+     "Rope lanyards are light, flexible and easy to adjust. A wire core flipline has a steel cable inside for cut resistance when you work close to the saw on removals. A 2 in 1 lanyard puts a second attachment point on the same line so you can stay connected while passing limbs. Pick a length that suits your trees, add an adjuster for fine positioning, and remember a wire core is cut resistant, not cut proof. Inspect before every climb and follow Z133 by staying tied in twice when cutting."
+    ]
+   },
+   {
+    "h": "Adjusters and length",
+    "p": [
+     "Most arborist fliplines run 8 to 16 feet. Longer lines wrap big stems; shorter ones are easier to handle on small trees. Adjusters include mechanical rope grabs, friction hitches with a micro pulley and dedicated wire-core adjusters. An adjustable pole strap is a simpler option for utility work. Whatever you choose, make sure the adjuster is rated for your lanyard diameter, and keep a stopper at the end of the line."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the difference between a flipline and a lanyard?",
+    "a": "The terms overlap. A flipline usually means a lanyard you flip around the trunk while climbing spars, while lanyard covers any adjustable positioning line."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "name": "Lanyard Kits",
+  "h1": "Climbing Lanyard Kits",
+  "keyword": "climbing lanyard",
+  "title": "Climbing Lanyard Kits & Wire Core Assemblies",
+  "meta": "Climbing lanyard kits with adjusters and connectors: wire core flipline kits and Petzl Grillon and Zillon positioning lanyards ready to clip on.",
+  "kind": "lanyard",
+  "intro": "A climbing lanyard kit gives you the line, adjuster and connectors in one ready-to-use setup. Choose a wire core flipline kit for removals or a Petzl Grillon or Zillon for everyday positioning.",
+  "guide": [
+   {
+    "h": "Why buy a kit",
+    "p": [
+     "A complete kit takes the guesswork out of matching the lanyard diameter to the adjuster and the connectors to your saddle. Wire rope lanyard assembly kits pair cable-core line with a matched adjuster and snaps. Mechanical positioning lanyards adjust smoothly with one hand under load. Confirm the length suits your trees, read the instructions for each component, and inspect the whole assembly before every climb."
+    ]
+   },
+   {
+    "h": "Choosing between kits",
+    "p": [
+     "Wire core kits suit removal climbers who spend time near the saw. Rope-based mechanical lanyards suit pruning and canopy work. Some kits are designed for specific saddles or snaps, so check the connector type. Make sure the kit's length suits the trees you climb and that the adjuster is easy to work with gloves. Store lanyard kits clean and dry, and replace any component that fails inspection with a matched part.",
+     "Kits also make good spares for the truck. When a lanyard gets nicked by a saw mid-job, a complete replacement lets the climber get back to work without improvising a setup from loose parts, which is never a good idea with life-support gear."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What length climbing lanyard should I get?",
+    "a": "Most climbers use something in the 8 to 16 foot range. Longer lanyards suit big stems; shorter ones are easier to manage on smaller trees."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/",
+  "name": "Rope Lanyards",
+  "h1": "Rope Lanyards for Tree Climbing",
+  "keyword": "rope lanyard",
+  "title": "Rope Lanyards for Tree Climbing & Arborists",
+  "meta": "Rope lanyards for tree climbing arborists: replacement lanyard rope, Micrograb add-on kits and magnetic lanyard management. Buying tips from tree people.",
+  "kind": "lanyard",
+  "intro": "A rope lanyard is the everyday positioning tool for most tree climbers: light, adjustable and easy on the hands. We carry replacement lanyard rope, adjuster add-on kits and gear to keep your arborist lanyard tidy.",
+  "guide": [
+   {
+    "h": "Why most climbers run a rope lanyard",
+    "p": [
+     "For pruning and general canopy work, a rope tree lanyard does nearly everything you need. It wraps a limb or stem, adjusts quickly, and is easy on bark and hands. Most climbing lanyards are made from the same kinds of arborist rope you climb on, often 11 to 13 mm, so they handle well with familiar hitches and mechanical adjusters.",
+     "For heavy removal work near the saw, many climbers switch to a wire core flipline for cut resistance. A rope lanyard is the better pick for most other work because it is lighter and gentler on the tree.",
+     "A rope lanyard also doubles as a second attachment point when you need to reposition your climbing line, which is why many climbers keep it clipped and ready at all times.",
+     "A tree lanyard also helps on big limb walks, where you can choke it around a lead above you for a second point of support while you reach out to make a cut. It gives a stable work position without relying on your climbing line alone, which is especially useful on long horizontal limbs."
+    ]
+   },
+   {
+    "h": "Adjusters and setup",
+    "p": [
+     "There are two common ways to adjust a lanyard. A friction hitch tied with hitch cord, often with a micro pulley to tend slack, is light and cheap. A mechanical adjuster like the Petzl Micrograb gives fast one-handed adjustment and smooth release. An add-on kit lets you build a mechanical setup on your own lanyard rope.",
+     "Whichever you choose, match the adjuster to the lanyard diameter, keep a stopper knot or termination at the tail, and follow the manufacturer's instructions for the system.",
+     "Practice adjusting the lanyard while hanging in your climbing system before using it at height. The motion should be smooth and controllable with one hand."
+    ]
+   },
+   {
+    "h": "Replacing and managing your lanyard",
+    "p": [
+     "A replacement rope lanyard without snaps lets you reuse your existing connectors and adjuster, provided they still pass inspection. Lanyard management clips and magnetic systems keep the tail coiled and out of your way so it does not snag on limbs or tangle with your climbing line.",
+     "Length is personal. Most climbers like a lanyard long enough to wrap the biggest stems they work on, typically 8 to 16 feet, with the tail managed so it does not hang in the way.",
+     "If you build your own, use a rope the adjuster maker approves and have terminations made by a qualified splicer or buy them pre-made. Life-support terminations are not the place to experiment."
+    ]
+   },
+   {
+    "h": "Inspection and safety",
+    "p": [
+     "Check the full length before every climb for cuts, glazing, flat spots, contamination and worn terminations. A lanyard lives near the saw, so it takes nicks; retire it at the first sign of a cut into the core. Per ANSI Z133, stay secured by two attachment points when operating a chainsaw in the tree.",
+     "Wash a dirty lanyard per the rope maker's instructions and let it dry away from direct heat or sunlight."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What rope is best for a lanyard?",
+    "a": "Most climbers use an arborist climbing rope around 11 to 13 mm that matches their adjuster and hitch. Check the adjuster's approved diameter range."
+   },
+   {
+    "q": "Rope lanyard or wire core flipline?",
+    "a": "Rope lanyards are lighter and better for pruning and general work. Wire core fliplines add cut resistance for removal work close to the saw."
+   },
+   {
+    "q": "How do I adjust a rope lanyard?",
+    "a": "Use a friction hitch with a micro pulley or a mechanical adjuster such as a Micrograb. Both let you shorten and lengthen the lanyard while positioned."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/friction-savers/",
+  "name": "Friction Savers",
+  "h1": "Friction Savers & Canopy Anchors",
+  "keyword": "friction saver",
+  "title": "Friction Savers for Tree Climbing Arborists",
+  "meta": "Friction savers for tree climbing: adjustable friction savers, ring-and-ring slings, anchor slings and the ART Ropeguide to protect rope, tree and climber.",
+  "kind": "sling",
+  "intro": "A friction saver sits between your rope and the tie-in limb, protecting the bark and your rope while making MRS climbing smoother. We carry adjustable friction savers, anchor slings and ring-style designs.",
+  "guide": [
+   {
+    "h": "Why use one",
+    "p": [
+     "Running a rope directly over bark wears the rope, heats it, and damages the cambium. An arborist friction saver gives the rope a smooth metal or ring path, cuts friction so advancing your hitch is easier, and keeps the tie-in clean. Adjustable friction savers fit a range of limb diameters, and cambium savers with rings can often be retrieved from the ground. Size the sling to the limb, rate it for life support, and inspect before every climb."
+    ]
+   },
+   {
+    "h": "Types of friction savers",
+    "p": [
+     "Ring-and-ring friction savers use two rings on a sling; they are light, cheap and simple. Adjustable friction savers let you set the length to fit different limb sizes. Anchor slings with steel or aluminum rings can be girth-hitched or wrapped around a stem. Some designs, like the ART Ropeguide, add a pulley for smoother rope travel. Retrievable designs can be set and retrieved from the ground with the right technique. Inspect slings and rings for wear before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a friction saver for SRS?",
+    "a": "Not always, because SRS anchors are often set differently, but many climbers still use an anchor sling or friction saver to protect the tree and rope."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/",
+  "name": "Gear Storage",
+  "h1": "Climbing Rope Storage, Rope Bags & Gear Bags",
+  "keyword": "climbing rope storage",
+  "title": "Climbing Rope Storage, Gear Bags & Organizers",
+  "meta": "Climbing rope storage and gear organizers for arborists: rope bags, haul bags and duffels that keep rope clean, dry and ready for the next job.",
+  "kind": "case-bag",
+  "intro": "Good climbing rope storage keeps your life-support gear clean, dry and out of the truck bed. Choose rope bags for individual lines and larger gear bags for saddles, hardware and the rest of your climbing kit.",
+  "guide": [
+   {
+    "h": "Why storage matters",
+    "p": [
+     "Rope and textiles fail from what happens between climbs as much as from climbing. Sunlight, bar oil, fuel, battery acid and grit all shorten their life. A rope left loose in a truck bed picks up sawdust and grit that work into the core and wear it from the inside. Proper climbing equipment storage is one of the cheapest ways to make gear last longer.",
+     "Bags also speed up the job. When each rope lives in its own bag and the saddle and hardware ride in a dedicated gear bag, setup at the tree is quick and you are less likely to leave something behind.",
+     "Storage is also part of an inspection routine. If every rope has its own bag and every bag has a tag with the rope's length and date in service, it is easy to see what is due for a closer look."
+    ]
+   },
+   {
+    "h": "Rope bags and gear bags",
+    "p": [
+     "A rope bag is sized for one or two climbing lines and usually has a wide mouth and a ground tarp or base so you can feed rope straight out of it. A gear bag or haul bag is larger and tougher, built to carry saddles, helmets, connectors and devices. Some climbers use a tarp-style bag that opens flat to keep rope off the ground at the base of the tree.",
+     "Think about the size of your kit, whether you hike into jobs, and whether you want backpack straps or a simple duffel. Bright colors are easier to spot in the brush pile.",
+     "For crews, consistent storage across the truck pays off. Keep the same bag style for each climber's rope and the same bag for rigging lines, labeled clearly, so anyone on the crew can find the right line in a hurry."
+    ]
+   },
+   {
+    "h": "Organizing your climbing kit",
+    "p": [
+     "A simple climbing gear organizer system helps: one bag per rope, labeled by length, and a separate bag for hardware. Keep a small pouch for spares like hitch cord and a backup carabiner. Store everything dry and out of direct sun, and never in the same compartment as fuel or bar oil.",
+     "Many climbers also use a rope tarp at the base of the tree. It keeps rope and gear off dirt, sap and rainwater, makes it easier to see what is laid out, and folds up quickly at the end of the job."
+    ]
+   },
+   {
+    "h": "Inspect when you pack",
+    "p": [
+     "Packing up is a good time for a quick look at your gear. Flake rope into the bag and run it through your hands to feel for flat spots or damage. Note anything suspect and remove it from service until it can be inspected properly.",
+     "If you find contamination such as fuel or oil on a life-support textile, retire it. These chemicals can weaken fibers in ways you cannot see."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How should I store climbing rope?",
+    "a": "Clean, dry, out of direct sunlight and away from fuel, oil and chemicals. A rope bag keeps it protected and ready to deploy."
+   },
+   {
+    "q": "What is the difference between a rope bag and a gear bag?",
+    "a": "A rope bag is sized to hold and deploy a climbing line. A gear bag or haul bag is larger and carries saddles, helmets and hardware."
+   },
+   {
+    "q": "Can I wash rope bags?",
+    "a": "Most can be rinsed or hand washed. Follow the maker's care instructions and let the bag dry fully before storing rope in it."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/gear-bags/",
+  "name": "Gear Bags",
+  "h1": "Climbing Gear Bags & Arborist Haul Bags",
+  "keyword": "climbing gear bag",
+  "title": "Climbing Gear Bags & Arborist Haul Bags",
+  "meta": "Climbing gear bags and arborist haul bags from Buckingham, Edelrid and Petzl. Rugged bags to carry saddles, rope, hardware and helmets to the job.",
+  "kind": "case-bag",
+  "intro": "A climbing gear bag keeps your saddle, rope, hardware and helmet together, protected and easy to carry. We carry arborist haul bags and large duffels from Buckingham, Edelrid and Petzl.",
+  "guide": [
+   {
+    "h": "What makes a good arborist gear bag",
+    "p": [
+     "Tree work is hard on bags. Look for heavy coated fabric that sheds water and sap, a stiff base so the bag stands open, and a wide opening so you can see what is inside. Backpack straps help when the job is a long walk from the truck. A drain grommet lets water out if the bag gets rained on.",
+     "Size the bag to your full kit. Most climbers carrying a saddle, one rope, a helmet and hardware need something in the medium to large range. A large duffel works well as a truck bag holding everything for a crew climber.",
+     "Inside pockets and loops help keep small items like hitch cord, spare carabiners and a first aid pouch from disappearing into the bottom of the bag. A light-colored lining makes it easier to see what is inside.",
+     "Arborist bags take more abuse than most climbing bags. They get dragged through brush, tossed in truck beds and left in the rain, so the toughest fabric you can afford usually pays for itself. Inspect seams and zippers each season and repair or replace before they fail."
+    ]
+   },
+   {
+    "h": "Haul bag or duffel",
+    "p": [
+     "A haul bag is a tall, tough cylinder with shoulder straps, built for dragging and hauling. It is a great arborist rope bag for a longer line plus some hardware. A duffel opens wide and suits a full kit you want to lay out on a tarp at the tree. Many climbers own one of each.",
+     "A small rope bag inside a big gear bag is a good combination: rope stays protected and ready to deploy, and everything else rides in the larger bag."
+    ]
+   },
+   {
+    "h": "Packing for protection",
+    "p": [
+     "Keep sharp items like hand saws and spurs in their own scabbards or a separate bag so they do not cut rope or textiles. Keep fuel, bar oil and battery packs out of the gear bag entirely. Dry the bag and the gear inside after wet jobs before closing it up for storage.",
+     "Use packing time for a quick look at your gear. Anything damaged should be tagged and kept out of the bag until it is properly inspected or retired.",
+     "Label bags with the climber's name or crew number so gear does not wander between trucks. A tag on the handle is enough."
+    ]
+   },
+   {
+    "h": "Choosing between brands",
+    "p": [
+     "Buckingham haul bags are simple and tough, built for crews. The Edelrid Kurt haul bag is designed to stand up and open wide for rope and gear. The Petzl Duffel 85 is a large-capacity bag that also works as a travel bag for climbing competitions or long jobs. Pick based on how you carry your kit and how much space it needs.",
+     "Whatever you choose, look for reinforcements at the base and handles, since that is where bags fail first.",
+     "Hang gear bags open to air out at the end of a wet week."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How big a climbing gear bag do I need?",
+    "a": "Lay out your full kit and pick a bag with room to spare. Most climbers want a medium to large haul bag or duffel for saddle, rope, helmet and hardware."
+   },
+   {
+    "q": "Can I store rope in a gear bag?",
+    "a": "Yes, as long as the rope is kept separate from sharp tools, fuel and oil. Many climbers keep rope in its own rope bag inside or next to the gear bag."
+   },
+   {
+    "q": "Are waterproof bags worth it?",
+    "a": "Coated, water-resistant bags help keep rope and textiles dry, but always dry gear thoroughly after wet jobs before storing it."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/rope-bags/",
+  "name": "Rope Bags",
+  "h1": "Rope Bags for Climbing & Rigging",
+  "keyword": "rope bag",
+  "title": "Climbing Rope Bags for Arborists",
+  "meta": "Climbing rope bags for arborists from Courant and Treehog. Rope bags that keep lines clean, deploy without tangles and protect your rope between jobs.",
+  "kind": "case-bag",
+  "intro": "A rope bag keeps your climbing line clean and lets it feed out tangle-free at the base of the tree. Pick a size that fits your rope length and diameter with a little room to spare.",
+  "guide": [
+   {
+    "h": "Sizing a rope bag",
+    "p": [
+     "Volume is usually listed in liters. Small rope bags suit short lanyards, throw line or a short climbing line, while larger ones hold a full-length climbing rope. Thicker rope and longer lengths need more room. Look for a stiff mouth that stays open, a stuff-not-coil design so you can feed rope in fast, and a tie-off loop for the tail. Keep each climbing rope bag free of fuel, oil and sharp tools, and inspect the rope as you flake it in."
+    ]
+   },
+   {
+    "h": "Features that matter",
+    "p": [
+     "A good rope bag has a strong base, sturdy handles or shoulder straps, and a closure that keeps rain and sawdust out. Many have a separate pocket for small hardware. Some, like the Courant Cargo and Cross bags, come in several sizes so a crew can match the bag to each rope. A tie-off point inside lets you keep the rope end accessible for setting a line. Bright colors stand out against brush and leaves, which helps when bags are spread around a site."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Should I coil or stuff my rope into a bag?",
+    "a": "Stuffing the rope in loosely, end first, usually deploys with fewer tangles than coiling, and it is much faster."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "name": "Hitch Cord & Split Tails",
+  "h1": "Hitch Cord & Split Tails for the Distel Hitch",
+  "keyword": "distel hitch",
+  "title": "Hitch Cord & Split Tails for the Distel Hitch",
+  "meta": "Hitch cord and split tails for the Distel hitch, Valdotain and other climbing friction hitches. Yale Beeline split tails and spliced eye and eye cords.",
+  "kind": "rope",
+  "intro": "Hitch cord is the heart of a traditional climbing system. Tie a Distel hitch, VT or other friction hitch with a split tail or eye and eye cord matched to your climbing rope.",
+  "guide": [
+   {
+    "h": "Matching cord to rope",
+    "p": [
+     "A hitch cord should be smaller in diameter than your climbing line and built to handle the heat of descents, which is why many are made with aramid or high-heat covers. An 8 mm cord on an 11 to 13 mm rope is a common starting point. A split tail is a length of cord with one terminated end that you tie into the hitch; an eye and eye has sewn or spliced eyes at both ends. Test any new hitch low and slow, retire glazed or stiff cord, and learn hitches under proper training."
+    ]
+   },
+   {
+    "h": "Split tail or eye and eye",
+    "p": [
+     "A split tail is tied directly into your hitch and is easy to adjust. An eye and eye cord has terminated ends that clip into a carabiner, which makes setup cleaner and helps with hitch tending using a pulley. Popular cords include the Yale Beeline in 8 mm, made with a high-heat cover. Practice tying and dressing your preferred hitch until it is consistent, and replace cords when they become glazed, stiff or fuzzy."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a Distel hitch?",
+    "a": "It is a common climbing friction hitch tied with a hitch cord onto the climbing rope. It grips under load and slides when tended or released."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/",
+  "name": "Eye & Eye Prusiks",
+  "h1": "Eye and Eye Prusiks & Hitch Climber Kits",
+  "keyword": "eye and eye prusik",
+  "title": "Eye and Eye Prusiks & Hitch Climber Kits",
+  "meta": "Eye and eye prusik cords, DMM Hitch Climber kits and hitch breakers for arborists. Spliced hitch cord that ties clean, consistent friction hitches.",
+  "kind": "rope",
+  "intro": "An eye and eye prusik is hitch cord with a terminated eye at each end, ready to tie a Valdotain, Distel or similar hitch. Pair it with a micro pulley and a hitch climber kit for a smooth MRS setup.",
+  "guide": [
+   {
+    "h": "Choosing an eye and eye",
+    "p": [
+     "Length depends on the hitch you tie and the rope diameter you climb. Spliced eyes are slimmer and fit through pulleys and carabiners easily; sewn eyes are common too. A hitch breaker sits above the hitch so it releases more smoothly. A hitch climber kit bundles a pulley, connectors and cord into one matched setup. Inspect cords for glazing and stiffness, follow each part's instructions, and test new setups close to the ground."
+    ]
+   },
+   {
+    "h": "Hitch climber setups",
+    "p": [
+     "A hitch climber pulley, like the DMM Hitch Climber, clips between the eyes of your eye and eye prusik and attaches to your bridge. This keeps the hitch in line and lets you tend slack smoothly with one hand. A hitch breaker, such as Big Jim's, sits on top of the hitch to make releasing it easier on descents. Hand-spliced eyes, like the Yale Beeline, are slim and consistent. Set up and test any new combination low to the ground."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How long should an eye and eye prusik be?",
+    "a": "It depends on the hitch and rope diameter. Many climbers use around 28 to 32 inches for a VT on 11 to 13 mm rope, then adjust to taste."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/",
+  "name": "Micro Pulleys",
+  "h1": "Micro Pulleys & Climbing Pulleys",
+  "keyword": "climbing pulley",
+  "title": "Climbing Pulleys & Micro Pulleys for Arborists",
+  "meta": "Climbing pulleys and micro pulleys for tree climbing: hitch-tending pulleys from DMM and CMI for MRS, lanyard and rescue setups. Selection tips.",
+  "kind": "pulley",
+  "intro": "A micro pulley tends your hitch so you can pull slack one-handed while you climb. These compact climbing pulleys from DMM and CMI are built for hitch tending, lanyards and light hauling.",
+  "guide": [
+   {
+    "h": "Choosing a micro pulley",
+    "p": [
+     "The most common arborist use is a pulley clipped below your friction hitch so you can tend slack as you advance. Check that the pulley side plates fit the hitch cord eyes and connectors, and that the sheave suits your rope diameter. Eccentric and hitch climber designs keep the hitch and pulley aligned. For rescue and light hauling, choose a pulley rated for those loads. Inspect sheaves and side plates before every climb."
+    ]
+   },
+   {
+    "h": "Types and materials",
+    "p": [
+     "Micro pulleys usually have aluminum side plates and a sheave on a bushing or bearing. Bearings run more smoothly but cost more. Eccentric pulleys, like the DMM Hitch Climber Eccentric, have a connection point that keeps the pulley oriented with your hitch. Rescue pulleys, like the CMI micro rescue pulley, are built for higher loads. Check ratings and compatibility with your hitch cord and connectors.",
+     "Keep sheaves free of sawdust and grit, and retire any pulley with cracked plates, a wobbling sheave or a worn axle. Micro pulley tree climbing setups only work well when the pulley spins freely."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a pulley for my hitch?",
+    "a": "It is not required, but a micro pulley makes slack tending much easier and reduces wear on your hitch cord."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/other-gear/",
+  "name": "Other Climbing Gear",
+  "h1": "Tree Climbing Accessories & Other Gear",
+  "keyword": "tree climbing accessories",
+  "title": "Tree Climbing Accessories & Specialty Gear",
+  "meta": "Tree climbing accessories that do not fit anywhere else: the DMM Captain Hook, the Sawpod chainsaw holster and soft canopy anchors for arborists.",
+  "kind": "sling",
+  "intro": "This is the shelf for useful tree climbing accessories that do not fit a neat category: the Sawpod saw holster, the DMM Captain Hook and soft canopy anchors.",
+  "guide": [
+   {
+    "h": "Small gear, real time savings",
+    "p": [
+     "A dedicated saw holster keeps a top-handle saw secure on your saddle when it is not running. A large gear hook carries rope or a rigging setup up the tree. A soft canopy anchor is a textile anchor you can set around a stem or limb for a tie-in. Each of these makes a common task safer or faster. Check whether an item is rated for life support or for gear only, follow its instructions, and inspect it with the rest of your kit."
+    ]
+   },
+   {
+    "h": "Choosing accessories",
+    "p": [
+     "The best accessories solve a problem you run into often. If you climb with a top-handle saw, a holster like the Sawpod keeps it secure. If you carry heavy gear aloft, a big hook like the DMM Captain Hook spreads the load. If you set many anchors, a soft canopy anchor gives you a quick, rated option. Avoid adding gear just because it is new; more items on your saddle means more weight and more things to snag."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a soft canopy anchor life-support rated?",
+    "a": "Rated textile anchors are designed for life support when used as directed. Always confirm the rating and instructions for the specific product."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/",
+  "name": "Rings",
+  "h1": "Climbing Rings for Arborists",
+  "keyword": "climbing rings",
+  "title": "Climbing Rings for Bridges, Slings & Anchors",
+  "meta": "Climbing rings for arborists from DMM and Petzl: anchor rings and open rings for rope bridges, friction savers and slings. Rated for life support.",
+  "kind": "carabiner",
+  "intro": "Climbing rings give a smooth, low-friction connection point for rope bridges, friction savers and anchor slings. We carry solid DMM anchor rings plus Petzl closed and open rings.",
+  "guide": [
+   {
+    "h": "Where rings help",
+    "p": [
+     "A ring on your saddle bridge lets your climbing system slide side to side as you move, and a pair of rings on a sling makes a simple retrievable friction saver. Open rings can be installed on a bridge or sling without unthreading it. Check the strength rating, match the inside diameter to the rope or sling, and inspect for grooves and sharp edges before each climb."
+    ]
+   },
+   {
+    "h": "Choosing rings",
+    "p": [
+     "Solid aluminum rings, like the DMM anchor rings, are light and smooth. Steel rings resist wear better in high-friction spots. Petzl offers both closed rings and open rings that can be added to a bridge without removing it. Ring size matters: a larger inside diameter lets a rope run more freely. Retire any ring with deep wear grooves, cracks or sharp edges.",
+     "Rings used as a friction saver pair should be sized so the smaller ring passes through the larger one for retrieval. Check that combination before you head up the tree, and keep the instructions for each ring with your kit."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What are climbing rings used for in tree work?",
+    "a": "Mostly for rope bridges on saddles and for ring-and-ring friction savers, where they give a smooth, strong connection."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/climbing-gear/swivels/",
+  "name": "Swivels",
+  "h1": "Climbing Swivels for Arborists",
+  "keyword": "climbing swivel",
+  "title": "Climbing Swivels: Petzl, CAMP & CMI",
+  "meta": "Climbing swivels for arborists, including the Petzl swivel range, the CAMP Enigma and the CMI California swivel. Reduce twist in your rope and lanyard.",
+  "kind": "carabiner",
+  "intro": "A climbing swivel lets your system rotate without twisting your rope, lanyard or bridge. We carry the Petzl Micro Swivel, the CAMP Enigma and the CMI California swivel.",
+  "guide": [
+   {
+    "h": "When a swivel helps",
+    "p": [
+     "Climbers often put a swivel between the bridge and their friction device so they can spin to face the work without twisting the rope. Swivels also help in rigging and rescue setups where loads rotate. Open-style swivels, like the Petzl Micro Swivel Open, can be attached to a bridge without removing it. Check the rating and compatibility with your connectors, and inspect the bearing for smooth rotation before every climb."
+    ]
+   },
+   {
+    "h": "Choosing a swivel",
+    "p": [
+     "Small swivels like the Petzl Micro Swivel are light and compact for climbing systems. Larger swivels such as the CAMP Enigma and the CMI California swivel handle heavier loads and suit rigging and rescue. Look at the strength rating, the size of the attachment eyes and how freely it rotates. Some climbers prefer to avoid swivels in their climbing system to reduce weight and complexity; it is a personal choice.",
+     "Inspect swivels before every climb: they should turn smoothly without grinding, and the eyes should be free of wear grooves or cracks."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a swivel on my saddle?",
+    "a": "Not necessarily, but many climbers like one to reduce rope twist and make turning in the tree easier."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/helmets/",
+  "name": "Helmets",
+  "h1": "Arborist Helmets & Tree Trimming Helmets",
+  "keyword": "tree trimming helmet",
+  "title": "Arborist Helmets & Tree Trimming Helmet Systems",
+  "meta": "Arborist helmets and tree trimming helmet systems from Petzl, Kask, Pfanner and Husqvarna. Climbing and forestry helmets with visors and hearing protection.",
+  "kind": "helmet",
+  "intro": "A tree trimming helmet has to handle overhead strikes, side impacts and a full day on your head. We carry climbing-style arborist helmets plus forestry systems with built-in visors and hearing protection.",
+  "guide": [
+   {
+    "h": "Choosing a helmet",
+    "p": [
+     "Climbing-style helmets like the Petzl Vertex Vent and Kask Super Plasma use a chinstrap to stay on during a fall and are common for climbers. Forestry systems often include a mesh visor and earmuffs, which suits ground crew and saw work. Look for the standards printed on the shell, such as ANSI Z89.1, and decide whether you need a vented or electrically rated helmet based on your work near power. Wear a properly fitted helmet whenever you are aloft or in the work zone, and replace it after a hard impact or as the manufacturer advises."
+    ]
+   },
+   {
+    "h": "Visors, hearing and accessories",
+    "p": [
+     "Many helmets accept clip-on visors and earmuffs, so you can build a full head protection system. A mesh visor keeps out sawdust and chips; a clear visor protects from fine debris. Earmuffs are essential around saws and chippers. Headlamps clip onto many climbing helmets for early starts and storm work. Make sure any accessory is compatible with your helmet model so it does not affect fit or protection."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use a regular hard hat for tree climbing?",
+    "a": "Many basic hard hats have no chinstrap and can come off in a fall. Climbing-style helmets are designed to stay on and are preferred aloft."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/",
+  "name": "Saddles & Harnesses",
+  "h1": "Tree Climbing Harnesses & Arborist Saddles",
+  "keyword": "tree climbing harness",
+  "title": "Tree Climbing Harness & Arborist Saddle Guide",
+  "meta": "Tree climbing harness and arborist saddle guide: Buckingham, Weaver, Petzl, DMM and Treemotion saddles plus chest harnesses, parts and accessories.",
+  "kind": "saddle",
+  "intro": "A tree climbing harness is the piece of gear you spend the whole day sitting in, so fit and comfort matter as much as features. Compare arborist saddles from Buckingham, Weaver, Petzl, DMM and Treemotion, plus chest harnesses and parts.",
+  "guide": [
+   {
+    "h": "Saddle vs harness",
+    "p": [
+     "In tree work, saddle and harness mean nearly the same thing: an arborist harness built for work positioning, with a wide waist belt, leg straps and attachment points for a climbing line and lanyard. What sets an arborist climbing harness apart from a rock climbing harness is support for hours of hanging, side D-rings for a lanyard, gear loops and rails for tools, and usually a rope bridge that lets your attachment point slide across the front.",
+     "Full body harnesses that include shoulder straps and a dorsal attachment are a different category, mainly for fall arrest in bucket trucks and aerial lifts. They are not a substitute for a work positioning saddle in the tree, and a tree saddle is not a fall arrest harness."
+    ]
+   },
+   {
+    "h": "How to choose a climbing saddle",
+    "p": [
+     "Start with how you climb. A climber doing mostly removals on spurs wants a stiff, supportive saddle with wide leg pads and sturdy side D-rings. A pruning climber working SRS all day wants something lighter with good freedom of movement and a comfortable sit. Look at the bridge setup, whether you can adjust it, and how the leg straps attach.",
+     "Fit is everything. Measure your waist and thighs, check the sizing chart, and if possible try the harness on and hang in it. Pressure points that seem minor on the ground become miserable after six hours in a tree. Many saddles adjust widely, but the waist pad should sit comfortably above your hips.",
+     "Consider gear capacity too. Climbers who carry a lot of tools want plenty of loops and rails. Climbers who work light want a saddle that carries just the essentials without bulk."
+    ]
+   },
+   {
+    "h": "Brands and styles",
+    "p": [
+     "Buckingham and Weaver build classic American saddles with a long track record in removals and utility work. European designs such as the Petzl Sequoia, DMM Kinisi and Treemotion focus on adjustability, light weight and a comfortable hang for long canopy days. Neither style is better in every case. Many experienced climbers own one of each for different kinds of work.",
+     "Chest harnesses, saddle parts and accessories round out the section. A chest harness helps keep you upright and is common in SRS setups, where it often carries an ascender. Replacement bridges, D-rings and leg straps keep a good saddle in service longer.",
+     "Weaver saddles are popular with utility and line clearance climbers. Full body harnesses are available in this section for aerial lift and rescue use, separate from tree climbing saddles."
+    ]
+   },
+   {
+    "h": "Inspection and retirement",
+    "p": [
+     "Inspect your saddle before every climb: stitching, webbing, buckles, D-rings, bridges and gear loops. Look for cuts, abrasion, heat damage, chemical stains and worn or deformed hardware. Replace bridges on the schedule the manufacturer gives, or sooner if worn. Follow the manufacturer's lifespan guidance, keep the saddle away from fuel and oil, and make sure every climber is trained in its use and in the requirements of ANSI Z133."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the best tree climbing harness for beginners?",
+    "a": "One that fits you well and suits the work you will do most. A mid-weight saddle with an adjustable bridge and good leg support is a comfortable all-round starting point."
+   },
+   {
+    "q": "Can I use a rock climbing harness to climb trees?",
+    "a": "Rock harnesses are not designed for hours of work positioning and usually lack side D-rings for a lanyard. Use an arborist saddle for tree work."
+   },
+   {
+    "q": "How often should I replace my saddle bridge?",
+    "a": "Follow the manufacturer's guidance and replace it sooner if you see abrasion, cuts, glazing or any damage. Bridges wear faster than the rest of the saddle."
+   },
+   {
+    "q": "Is a full body harness better for climbing trees?",
+    "a": "Full body harnesses are mainly for fall arrest, such as in aerial lifts. For climbing, an arborist saddle, sometimes with a chest harness, is the standard choice."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "name": "Buckingham Saddles",
+  "h1": "Buckingham Saddles for Arborists",
+  "keyword": "buckingham saddles",
+  "title": "Buckingham Saddles: Tree Climbing Saddles Compared",
+  "meta": "Buckingham saddles compared: Agility, Buckcraft and Ergovation tree climbing saddles. Fit, features and which Buckingham saddle suits your work.",
+  "kind": "saddle",
+  "intro": "Buckingham saddles have been on American tree crews for a long time, known for tough construction and solid support. Compare the Agility, Buckcraft and Ergovation to find the Buckingham tree saddle that suits how you climb.",
+  "guide": [
+   {
+    "h": "Comparing the models",
+    "p": [
+     "The Buckcraft is a classic utility and removal saddle with a stiff back and a straightforward layout. The Agility is lighter and more flexible, aimed at climbers who spend their day moving through the canopy. The Ergovation focuses on comfort over long days, with a design built around keeping pressure off the hips and legs.",
+     "All three are work positioning saddles with side D-rings for a lanyard. Look at the attachment points, bridge options and gear storage to decide which matches your system.",
+     "If you are not sure which suits you, think about how you spend most of your time. Spur work and removals point toward the Buckcraft. Long canopy days on rope point toward the Agility or Ergovation. If you split time between both, comfort over long hangs is usually the deciding factor.",
+     "Buckingham tree climbing equipment has a long history in American tree care, and the saddles reflect that: thick padding, tough webbing and hardware sized for daily use. The trade-off is that some models are heavier than European alternatives. For many climbers, especially those doing removals, that durability is the point."
+    ]
+   },
+   {
+    "h": "Fit and sizing",
+    "p": [
+     "Buckingham climbing saddles come in sizes based on waist measurement. Measure over the clothes you actually work in, check the size chart, and leave room for adjustment. Leg straps should support your thighs without pinching, and the back should sit above your hips. If you can, hang in a saddle before committing to it for daily work.",
+     "Leg straps on Buckingham saddles adjust differently from model to model, so read the fit instructions. Some climbers add padding or adjust strap placement to suit their build.",
+     "A good fit also improves safety, since a saddle that rides up or shifts can put you in awkward positions."
+    ]
+   },
+   {
+    "h": "Pairing with other Buckingham gear",
+    "p": [
+     "Buckingham also builds spurs, lanyards and bags, so some climbers keep their whole kit in one brand. That is not required. Any compatible, rated connector, lanyard or friction device can work with a Buckingham saddle as long as you follow each manufacturer's instructions.",
+     "Buckingham also makes replacement parts like bridges and D-rings for some models. Using genuine parts keeps the saddle within the manufacturer's approved configuration.",
+     "Mixing brands is common and works well when every part is compatible."
+    ]
+   },
+   {
+    "h": "Inspection and care",
+    "p": [
+     "Inspect stitching, webbing, buckles and D-rings before each climb. Keep the saddle away from fuel, bar oil and battery acid, dry it out after wet days and replace worn bridges promptly. Retire the saddle according to Buckingham's guidance or if anything looks wrong. Train with the saddle before using it for real work, and follow ANSI Z133.",
+     "Keep the saddle's manual with your gear records. It contains the approved attachment points and inspection criteria for that model, which is exactly what you need when checking it before work or training a new climber on it."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Which Buckingham saddle is best for removals?",
+    "a": "The Buckcraft has long been a favorite for removal and spur work thanks to its stiff, supportive design."
+   },
+   {
+    "q": "Are Buckingham saddles good for SRS climbing?",
+    "a": "Yes, with the right bridge and attachment setup. Lighter models like the Agility suit climbers who move a lot in the canopy."
+   },
+   {
+    "q": "How do I size a Buckingham tree saddle?",
+    "a": "Measure your waist over your work clothes and use Buckingham's size chart. Pick a size that leaves room to adjust."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/",
+  "name": "European Saddles",
+  "h1": "European Climbing Saddles",
+  "keyword": "european climbing saddle",
+  "title": "European Climbing Saddles: Petzl, DMM, Treemotion",
+  "meta": "European climbing saddles for arborists: the Petzl Sequoia, DMM Kinisi Max and Treemotion Pro. Lightweight, adjustable harnesses for long canopy days.",
+  "kind": "saddle",
+  "intro": "A European climbing saddle trades bulk for adjustability and freedom of movement. The Petzl Sequoia, DMM Kinisi Max and Treemotion Pro are built for long days in the canopy, especially on SRS.",
+  "guide": [
+   {
+    "h": "What sets them apart",
+    "p": [
+     "European-style saddles typically use lighter materials, a wide range of adjustment at the waist and legs, and bridge setups that let you swap or tune attachment points. Many climbers find they make SRS and canopy movement easier. Try the fit with your work clothes on, check that gear storage suits your tools, replace bridges per the maker's schedule, and inspect before every climb."
+    ]
+   },
+   {
+    "h": "Comparing popular models",
+    "p": [
+     "The Petzl Sequoia has a long history with arborists, with adjustable leg loops and a comfortable sit. The DMM Kinisi Max is built with SRS climbers in mind, with a focus on comfort and adjustability. The Treemotion Pro is known for its supportive design and wide range of customization. Each has its fans, so try one on if you can. Pay attention to bridge length, how attachment points sit, and how the gear loops work with your tools.",
+     "Many European saddles use replaceable bridges and modular parts, which helps them stay in service longer. Buy genuine replacement parts and follow the manufacturer's schedule for swapping bridges and other wear items."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Are European saddles good for spur work?",
+    "a": "They can be, but some climbers prefer a stiffer American saddle for long days on spurs. Fit and personal preference decide it."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "name": "Saddle Parts & Chest Harnesses",
+  "h1": "Arborist Saddle Parts & Chest Harnesses",
+  "keyword": "arborist saddle parts",
+  "title": "Arborist Saddle Parts & Chest Harnesses",
+  "meta": "Arborist saddle parts and chest harnesses: the Edelrid TreeRex bungee chest harness, Weaver chest box and SRT chest harnesses for your climbing setup.",
+  "kind": "saddle",
+  "intro": "Arborist saddle parts and chest harnesses keep a good saddle working and make SRS climbing easier. A chest harness keeps you upright and often carries a chest ascender.",
+  "guide": [
+   {
+    "h": "What to look for",
+    "p": [
+     "Chest harnesses come in bungee styles that stretch with you and fixed styles that hold an ascender in place. Confirm a chest harness or part is compatible with your saddle model. Replacement parts like bridges and leg straps should come from the saddle's manufacturer or be approved by them. Install per the instructions, inspect before every climb, and never improvise life-support parts."
+    ]
+   },
+   {
+    "h": "Popular options",
+    "p": [
+     "The Edelrid TreeRex bungee chest harness stretches to keep you upright without restricting movement. The Weaver chest box is a sturdy option for utility climbers. SRT chest harnesses are designed to hold a chest ascender in line for efficient ascents. Check fit across your shoulders and how it connects to your saddle. A chest harness that is too tight restricts breathing; too loose and it does not keep the ascender aligned.",
+     "Knowing the parts of a saddle makes inspection easier: waist belt, leg straps, side D-rings, bridge, attachment rings and gear loops. Check each one before every climb and replace worn parts with approved ones."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Does a chest harness make my saddle a full body harness?",
+    "a": "Not necessarily. Many arborist chest harnesses are for positioning and ascent only. Check the manufacturer's rating before relying on it for anything else."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/spurs/",
+  "name": "Spurs",
+  "h1": "Tree Climbing Spurs & Arborist Spikes",
+  "keyword": "arborist spikes",
+  "title": "Arborist Spikes & Tree Climbing Spurs",
+  "meta": "Arborist spikes and tree climbing spurs: aluminum and steel climbers, replacement gaffs, pads and straps from Buckingham, Climb Right, Notch and Distel.",
+  "kind": "spur",
+  "intro": "Arborist spikes, also called spurs or climbers, get you up a stem fast on removals and spar work. Compare aluminum and steel spurs, then keep them working with replacement gaffs, pads and straps.",
+  "guide": [
+   {
+    "h": "When to use spurs",
+    "p": [
+     "Arborist spikes are for removals and for climbing trees that are coming down. Each gaff punches a wound through the bark, so climbing a tree with spurs that you intend to keep is poor practice, and ANSI A300 limits spur use for pruning to specific situations such as aerial rescue. On a removal, spurs combined with a flipline let you work down a spar quickly, while most climbers stay tied in with their climbing line as well, giving two points of attachment while cutting."
+    ]
+   },
+   {
+    "h": "Choosing spurs and gaffs",
+    "p": [
+     "Aluminum spurs are lighter and easier on your knees over a long day; steel spurs are tougher and usually cost less. Fit the shank so it ends a few fingers below the knee, and pick wide pads that spread the load on your calf. Short gaffs suit thin-barked hardwoods, while longer gaffs reach through thick bark on conifers. Keep gaffs sharp with the maker's profile, wear stiff-shanked boots, learn spur climbing from a qualified trainer, and inspect straps, pads and gaffs before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use spurs to prune a tree?",
+    "a": "No. Spurs wound the tree and should only be used on removals, with limited exceptions such as an aerial rescue."
+   },
+   {
+    "q": "What gaff length do I need?",
+    "a": "Short gaffs for thin-barked hardwoods, longer gaffs for thick-barked conifers. Many climbers keep both."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/",
+  "name": "Aluminum Spurs",
+  "h1": "Aluminum Spurs for Tree Climbing",
+  "keyword": "aluminum spurs",
+  "title": "Aluminum Spurs: Lightweight Tree Climbing Spikes",
+  "meta": "Aluminum spurs for tree climbing from Climb Right and Notch. Lightweight climbers with Big Buck or steel support pads for long removal days.",
+  "kind": "spur",
+  "intro": "Aluminum spurs cut weight off your legs, which adds up over a long day of removals. We carry Climb Right aluminum climbers with different pad options and the Notch Ergo climbers.",
+  "guide": [
+   {
+    "h": "Why go aluminum",
+    "p": [
+     "Every step on spurs means lifting the spur with your leg. Lighter aluminum shanks reduce fatigue in your hips and knees, so you climb fresher at the end of the day. For climbers who are on spurs most days, the savings are worth the extra cost over steel.",
+     "Aluminum shanks are strong but can be more prone to wear in some spots, so inspect them closely, especially around the gaff mount and strap slots.",
+     "Lighter spurs also help on spar work where you climb, cut, flip your lanyard and climb again many times in a day. Every ounce saved on each leg adds up across hundreds of steps.",
+     "For occasional spur users, steel may be the more economical choice. For daily removal climbers, aluminum spurs are often the first upgrade they make."
+    ]
+   },
+   {
+    "h": "Pads, straps and fit",
+    "p": [
+     "Pads spread pressure across your calves. Big Buck style pads are wide and supportive, while steel-support pads add stiffness for heavy climbers or long climbs. Make sure the shank length fits your leg; the top should sit a few fingers below the knee joint.",
+     "Adjust straps snug but not tight enough to restrict circulation. Replacement pads and straps are available when the originals wear out.",
+     "Look at the stirrup too. It should sit squarely under the boot's arch and shank, and the lower strap should hold it firmly without pressing on the top of your foot. A badly placed stirrup can make even the lightest spur feel unstable on the stem. Wear your usual climbing boots when fitting new spurs."
+    ]
+   },
+   {
+    "h": "Gaffs and maintenance",
+    "p": [
+     "Choose a gaff length suited to the bark you climb, and keep it sharp with the correct profile. Replace gaffs when they wear short or get damaged. Inspect the whole spur before each climb, and only climb on spurs for removals, with proper training and a flipline.",
+     "Store aluminum spurs with gaff guards on so the points stay sharp and do not cut rope, bags or the climber reaching into the truck.",
+     "Carry a small file in the truck for touch-ups, following the maker's guidance for the correct gaff profile."
+    ]
+   },
+   {
+    "h": "Comparing models",
+    "p": [
+     "Climb Right aluminum climbers come with Big Buck pads or steel support pads, so you can pick the level of stiffness you want. Notch Ergo climbers are designed with an ergonomic shape for comfort on long days. Look at the shank shape, how the stirrup sits under your boot and the pad and strap system. Fit is personal, so try them on if you can and walk around before climbing.",
+     "Check that the climbers you choose accept the gaff length you want, and that replacement parts are available.",
+     "Before your first long day, wear the spurs for a few short climbs to set strap tension and pad position. Small fit problems become big ones over a full removal."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Are aluminum spurs as strong as steel?",
+    "a": "Quality aluminum spurs are designed for full-time professional use. Steel resists wear better, while aluminum saves weight."
+   },
+   {
+    "q": "Can I put different gaffs on aluminum spurs?",
+    "a": "Many models accept replacement gaffs in different lengths. Check compatibility with the spur's maker."
+   },
+   {
+    "q": "Do aluminum spurs need different maintenance?",
+    "a": "Inspect shanks and gaff mounts closely for wear, keep gaffs sharp, and follow the manufacturer's care guidance."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/spurs/buckingham-steel-spurs/",
+  "name": "Buckingham Steel Spurs",
+  "h1": "Buckingham Climbing Spikes: Steel Spurs",
+  "keyword": "buckingham climbing spikes",
+  "title": "Buckingham Climbing Spikes: Steel Spurs",
+  "meta": "Buckingham climbing spikes in steel: tree climbing spurs with Big Buck pads, T-pads or lower straps. Rugged, affordable spurs for removal work.",
+  "kind": "spur",
+  "intro": "Buckingham climbing spikes in steel are tough, proven spurs for removal work. Choose from setups with Big Buck pads, T-pads or lower strap configurations to suit your legs and climbing style.",
+  "guide": [
+   {
+    "h": "Steel spurs for daily work",
+    "p": [
+     "Steel shanks add weight compared with aluminum but resist wear and often cost less, which suits crews that buy spurs for several climbers. Pick a pad style that spreads load comfortably on your calf, fit the shank length to your leg, and keep gaffs sharp with the correct profile. Use spurs only for removals, with a flipline and proper training, and inspect before every climb."
+    ]
+   },
+   {
+    "h": "Pad and strap options",
+    "p": [
+     "Buckingham steel climbers come with different pad setups. Big Buck pads are wide and supportive for long days. T-pads are a simpler, lighter option. Lower strap configurations change how the spur holds to your boot and ankle. Choose the setup that feels secure without pinching, and replace pads and straps when they wear. Keep gaffs sharp and retire any spur with a cracked shank or damaged stirrup.",
+     "Steel spurs are also a good backup set for the truck, so a broken strap or worn gaff on your main climbers does not stop a removal halfway through."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I replace the gaffs on Buckingham steel spurs?",
+    "a": "Many Buckingham spurs accept replacement gaffs. Check the model and use compatible parts."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/",
+  "name": "Climber Pads",
+  "h1": "Climber Pads for Tree Spurs",
+  "keyword": "climber pads",
+  "title": "Climber Pads for Tree Climbing Spurs",
+  "meta": "Climber pads for tree climbing spurs, including Buckingham Big Buck pads and replacement pads for Gecko climbers. Better comfort on long spur days.",
+  "kind": "spur",
+  "intro": "Good climber pads spread the load of your spurs across your calf and make long removal days far more bearable. We carry Big Buck pads and replacement pads for Gecko climbers.",
+  "guide": [
+   {
+    "h": "Choosing pads",
+    "p": [
+     "Pads come in different widths and stiffness. Wider pads spread pressure better, while stiffer pads with metal supports keep the spur from rolling on your leg. Make sure the pad fits your spur model, attaches securely, and works with your strap setup. Replace pads when the foam is crushed or the straps wear, and inspect everything before each climb."
+    ]
+   },
+   {
+    "h": "Fit and replacement",
+    "p": [
+     "Buckingham Big Buck pads are a popular upgrade for many spurs, with versions that use buckles or hook-and-loop closures. Replacement pads for Gecko climbers keep those spurs comfortable. When fitting new pads, adjust the straps so the spur sits snug against your leg without cutting off circulation. Worn pads let the spur shift and rub, which is both uncomfortable and less stable on the stem.",
+     "Keep pads clean and dry after use. Sap and mud stiffen padding and wear out straps, and wet pads can rub skin raw on long days. Replace both pads at the same time so your legs stay balanced."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do climber pads fit all spurs?",
+    "a": "No. Pads are often made for specific spur models. Check compatibility before buying."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/spurs/replacement-gaffs-and-parts/",
+  "name": "Gaffs & Spur Parts",
+  "h1": "Climbing Gaffs & Replacement Spur Parts",
+  "keyword": "climbing gaffs",
+  "title": "Climbing Gaffs & Replacement Spur Parts",
+  "meta": "Climbing gaffs and replacement spur parts: Buckalloy tree gaffs, Edelrid Talon strap systems and Distel replacement pads with rings and straps.",
+  "kind": "spur",
+  "intro": "Replacement climbing gaffs and parts keep your spurs working longer. Swap worn or short gaffs, replace straps and pads, and change gaff length to suit the bark you climb.",
+  "guide": [
+   {
+    "h": "Picking replacement gaffs",
+    "p": [
+     "Tree gaffs must match the mounting style of your spurs, such as screw-and-dowel or other systems. Short gaffs suit thin-barked hardwoods; longer gaffs reach through thick bark on conifers. Install gaffs per the maker's instructions, keep them sharp with the correct profile, and retire gaffs that are worn short, bent or cracked. Inspect straps and pads before each climb too."
+    ]
+   },
+   {
+    "h": "Straps, pads and other parts",
+    "p": [
+     "Spur parts such as the Edelrid Talon upper strap system and Distel replacement pads with rings and straps let you rebuild worn spurs instead of replacing the whole set. Use parts made for your spur model. Bashlin gaffs and other brands may not be interchangeable, so check the mounting before you buy. Sharpen gaffs with a file using the correct profile, never on a grinder, which can overheat the steel.",
+     "If you are unsure about any part, ask the spur maker or take the spurs out of service until they can be checked. Spurs are life-critical gear when you are working a spar."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "When should I replace my gaffs?",
+    "a": "When they are worn below the manufacturer's minimum length, bent, cracked or cannot be sharpened to the correct profile."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/throw-weight-and-line/",
+  "name": "Throw Weights & Line",
+  "h1": "Throw Weights & Throw Line",
+  "keyword": "throw weight",
+  "title": "Arborist Throw Weight & Throw Line",
+  "meta": "Arborist throw weight and throw line for setting your climbing line, plus throw line storage cubes and launchers. Pick the right weight and line.",
+  "kind": "throw-line",
+  "intro": "A throw weight and throw line let you set your climbing line in the canopy from the ground. We carry arborist throw weights, throw line, storage cubes and launcher kits.",
+  "guide": [
+   {
+    "h": "Picking a throw weight",
+    "p": [
+     "Throw weights usually range from about 8 to 16 ounces. Lighter weights travel farther and slip through small crotches but may not pull line down through rough bark; heavier ones fall more reliably. Many climbers carry two sizes. Pair the weight with a slick throw line that runs smoothly and stores tangle-free in a cube or bag. Make sure the drop zone is clear before every throw and never throw near power lines."
+    ]
+   },
+   {
+    "h": "Storage and technique",
+    "p": [
+     "A throw line storage cube folds open on the ground so line feeds out without tangling, then folds closed for transport. Weights like the Petzl Jet have a rounded shape that slides through crotches and bark. Practice underhand and two-handed throws to place your line accurately. When the weight is over the right crotch, use it to pull up your climbing line or a heavier line, and check the crotch from different angles before you climb.",
+     "Always keep the ground crew clear while throwing."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "How heavy should my throw ball for tree work be?",
+    "a": "Most climbers start with something around 12 ounces and add a lighter and a heavier weight as needed."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/throw-weight-and-line/throw-line-kits/",
+  "name": "Throw Line Kits",
+  "h1": "Throw Line Kits & Launchers",
+  "keyword": "throw line kit",
+  "title": "Throw Line Kits & Throw Line Launchers",
+  "meta": "Throw line kits for arborists: starter kits with throw weights, line and a storage cube, plus the Big Shot throw line launcher for high tie-ins.",
+  "kind": "throw-line",
+  "intro": "A throw line kit bundles weights, line and a storage cube so you can start setting lines right away. For high tie-ins, a throw line launcher like the Big Shot reaches farther than throwing by hand.",
+  "guide": [
+   {
+    "h": "Starter kit or launcher",
+    "p": [
+     "A starter kit is the easiest way to begin: matched weights and arborist throw line with a cube that folds open for tangle-free deployment. A launcher uses a pole and band to send the weight much higher than a hand throw, which helps on tall trees. Launchers need care: clear the area, wear eye protection, keep everyone out of the line of fire, and follow the manufacturer's instructions."
+    ]
+   },
+   {
+    "h": "What comes in a kit",
+    "p": [
+     "A starter throw line kit typically includes one or two throw weights, a length of arborist throw line and a storage cube or bag. Some include a second line for setting two lines at once. Pick a kit with weights you will actually use and a line that suits your trees. Launchers like the Big Shot use a pole-mounted band to propel the weight. Inspect launcher bands and line for wear, and replace worn parts before they fail.",
+     "Keep the kit together in its bag so the cube, weights and line are ready on every job."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a launcher?",
+    "a": "For most trees a hand throw is enough. A launcher helps on very tall trees or when you need to hit a precise high crotch."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/throw-weight-and-line/throw-line/",
+  "name": "Throw Line",
+  "h1": "Arborist Throw Line",
+  "keyword": "arborist throw line",
+  "title": "Arborist Throw Line: Samson, Teufelberger & More",
+  "meta": "Arborist throw line from Samson, Teufelberger and others: slick, low-stretch throwline that runs clean through crotches for setting climbing lines.",
+  "kind": "throw-line",
+  "intro": "Arborist throw line is a thin, slick cord that carries your throw weight into the canopy and pulls your climbing line up after it. We carry Samson Zing-It, Teufelberger Dynaglide and other throwline.",
+  "guide": [
+   {
+    "h": "What to look for",
+    "p": [
+     "Good throw line is slick enough to run through crotches and over bark without hanging up, and stiff enough to resist tangling. Diameter is usually just under 2 to around 2.2 mm. Thinner line throws farther; thicker line is easier to handle. Bright colors help you see it in the canopy. Store it in a cube or bag, and replace it when the cover fuzzes or it starts to kink. Throw line is not life-support rope."
+    ]
+   },
+   {
+    "h": "Choosing between lines",
+    "p": [
+     "Samson Zing-It is a well-known slick throwline that resists abrasion. Teufelberger Dynaglide is another popular choice with very low stretch. Target line is a bright option designed for visibility in the canopy. Line length usually comes on spools long enough for tall trees. Pick a line that matches your throw weight and the height of the trees you climb. Keep a spare line in the truck so a damaged or stuck line does not stop the job."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use paracord as throw line?",
+    "a": "Paracord is rougher and stretchier, and it tends to hang up and tangle. Purpose-made arborist throw line runs much more cleanly."
+   }
+  ]
+ },
+ {
+  "path": "/climbing/tree-climbing-kits/",
+  "name": "Climbing Kits",
+  "h1": "Tree Climbing Gear Kits",
+  "keyword": "tree climbing gear kits",
+  "title": "Tree Climbing Gear Kits for Arborists",
+  "meta": "Tree climbing gear kits for arborists: rope climbing kits that bundle the core gear for a working system, with advice on fit, training and upgrades.",
+  "kind": "rope",
+  "intro": "Tree climbing gear kits bundle the core arborist gear for a working climbing system, saving you the job of matching every rope, connector and device yourself. Start with a kit, then personalize it as you learn what you like.",
+  "guide": [
+   {
+    "h": "What a climbing kit includes",
+    "p": [
+     "A typical arborist rope climbing kit includes a climbing rope, a hitch cord or friction device, a micro pulley, connectors, and often a friction saver and throw line. Some kits add a saddle, lanyard and helmet. Check exactly what is in a kit before buying so you know what you still need to add.",
+     "The value of a kit is compatibility. The rope diameter, hitch cord, pulley and connectors are chosen to work together, which matters a lot when you are new and do not yet know which combinations behave well.",
+     "Rope length is another thing to check. Climbing rope comes in lengths that suit different tree heights, and a kit rope should be long enough for the trees you work in with some extra for tying off.",
+     "Check whether connectors in the kit are auto-locking and rated for climbing, and that the rope and hitch cord come with terminations finished by a qualified maker."
+    ]
+   },
+   {
+    "h": "Kit vs building your own",
+    "p": [
+     "Experienced climbers often build their own setup piece by piece. For a newer climber or a crew outfitting a new hire, a kit gets reliable arborist tree climbing gear into service quickly. As you climb more, you will find preferences, maybe a different hitch, a mechanical device or a lighter rope, and you can swap parts as long as each new component is compatible.",
+     "Kits are also a good way to stock a backup set on the truck, so a damaged rope or device does not end the day.",
+     "Some climbers buy a kit as a starting point and keep the parts that work for them, then replace the rest over time. That is a perfectly good way to learn what you like without buying every option on its own."
+    ]
+   },
+   {
+    "h": "Fit the saddle separately",
+    "p": [
+     "If a kit does not include a saddle, choose one separately based on fit. If it does include one, check sizing carefully. A poorly fitting saddle is the one thing in a kit that is hard to live with, so make sure you can adjust or exchange it.",
+     "Sizing for helmets and lanyards matters too. A helmet should fit snugly with the chinstrap adjusted, and a lanyard should be long enough to wrap the stems you climb.",
+     "Hang in the saddle with the rest of the kit attached to check that everything sits where you expect it."
+    ]
+   },
+   {
+    "h": "Training and safety",
+    "p": [
+     "A kit is only as safe as the person climbing on it. Get hands-on training from a qualified instructor, read every component's instructions, and inspect your gear before every climb. All life-support components should meet ANSI Z133 and the manufacturer's ratings for your use.",
+     "Keep the instruction sheets that come with each component in your gear bag or a binder on the truck. They contain the approved configurations and inspection criteria for each device.",
+     "Plan regular practice of aerial rescue with the kit, too. Knowing your own system well is part of being able to help a climber in trouble."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Are tree climbing kits good for beginners?",
+    "a": "Yes. A kit gives you a matched, compatible system, which is ideal when you are learning, as long as you also get proper training."
+   },
+   {
+    "q": "Do climbing kits include a saddle?",
+    "a": "Some do and some do not. Check the contents list before you buy."
+   },
+   {
+    "q": "Can I upgrade parts in a kit later?",
+    "a": "Yes, as long as each new part is compatible with your rope and the rest of the system."
+   }
+  ]
+ },
+ {
+  "path": "/clothing/",
+  "name": "Clothing",
+  "h1": "Arborist Clothing & Apparel",
+  "keyword": "arborist clothing",
+  "title": "Arborist Clothing: Pants, Boots, Hats & Hoodies",
+  "meta": "Arborist clothing and apparel for tree work: climbing pants, chainsaw pants, arborist boots, hats, hoodies and shirts built for climbing and cutting.",
+  "kind": "apparel",
+  "intro": "Arborist clothing has to stretch for climbing, shed sawdust and sap, and stand up to brush and bark every day. Shop climbing pants, chainsaw pants, arborist boots, hats, hoodies and shirts built for tree work.",
+  "guide": [
+   {
+    "h": "Dress for the job",
+    "p": [
+     "Tree work covers a lot of ground. A climber needs pants that move with the leg and resist abrasion, plus boots that work with spurs or on rope. Ground crew need cut protection when running a saw, and everyone needs visibility near traffic and layers for cold mornings. Good arborist apparel is built around these jobs instead of looking like it.",
+     "Cotton work clothes still have a place, but technical fabrics with stretch panels and reinforced knees last longer and are more comfortable in the tree. Brands like Arborwear, Arbortec and Clogger build clothing specifically for tree crews.",
+     "Gloves are part of the outfit too. Climbers often prefer thin, grippy gloves for rope work, while ground crew want heavier gloves for brush hauling and chipper feeding.",
+     "Arborist shirts work best with a fitted cut that does not snag on limbs or rope, and long sleeves give protection from sun, sap and scratches. Forestry clothing for logging and land clearing tends to be heavier, built for brush and cold, while climbing apparel leans lighter and stretchier."
+    ]
+   },
+   {
+    "h": "Cut protection",
+    "p": [
+     "Chainsaw pants and chaps contain fibers designed to clog the saw's sprocket when cut, stopping the chain before it reaches your leg. In the US, look for labels showing compliance with ASTM F1897 for leg protection, and for chainsaw boots, ASTM F1818. Many climbers wear chainsaw-protective pants aloft as well as on the ground.",
+     "No cut protection is cut proof. It works alongside training, good technique and a well-maintained saw.",
+     "Chainsaw-protective clothing should be replaced after it has been cut into the protective layer. Patching protective pants or chaps is generally not recommended unless the manufacturer allows it. Wash them according to the label, since harsh detergents and high heat can reduce effectiveness."
+    ]
+   },
+   {
+    "h": "Boots, hats and layers",
+    "p": [
+     "Arborist boots range from lightweight climbing boots to full chainsaw-protective boots. Hats and caps keep sun and sawdust off and add warmth under a helmet in winter, while hoodies and sweatshirts layer well for cold starts. Choose layers you can shed as the day warms up, and keep loose cords and drawstrings away from the saw.",
+     "Weather sets the layering plan. In summer, look for lightweight, breathable fabrics that dry fast and protect from sun. In winter, a base layer, an insulating hoodie and a windproof jacket give you a range to work with. Rain gear should be tough enough to survive brush.",
+     "Logging apparel such as heavy canvas can work for ground crews on cold days, but it is often too stiff for climbing."
+    ]
+   },
+   {
+    "h": "Visibility and safety",
+    "p": [
+     "High-visibility colors help the ground crew and drivers see you. When working near traffic, follow the applicable traffic control rules for your site. Always pair clothing with the rest of your protective equipment: helmet, eye and hearing protection and gloves.",
+     "When choosing clothing for a crew, consider buying in a common color so crew members are easy to spot and recognize on the site."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What should arborists wear?",
+    "a": "Stretchy, durable pants or chainsaw-protective pants, supportive boots, layers for the weather, high visibility when needed, plus a helmet, eye and ear protection and gloves."
+   },
+   {
+    "q": "Do climbers need chainsaw pants?",
+    "a": "Many climbers wear them whenever they run a saw. Requirements vary by employer and task, so follow your company's safety policy and ANSI Z133."
+   },
+   {
+    "q": "What is the best arborist clothing brand?",
+    "a": "Arborwear, Arbortec and Clogger are all popular with tree crews. The best choice depends on fit and the work you do."
+   },
+   {
+    "q": "Is cotton okay for tree work?",
+    "a": "It works, but technical fabrics with stretch and reinforcement usually last longer and move better when climbing."
+   }
+  ]
+ },
+ {
+  "path": "/clothing/arborist-boots/",
+  "name": "Arborist Boots",
+  "h1": "Tree Climbing Boots & Arborist Boots",
+  "keyword": "tree climbing boots",
+  "title": "Tree Climbing Boots & Arborist Chainsaw Boots",
+  "meta": "Tree climbing boots and arborist chainsaw boots from Arbortec and Arbpro. Supportive boots for spurs, rope work and ground saw work, with fit tips.",
+  "kind": "boot",
+  "intro": "Tree climbing boots have to support your arches on spurs, grip on rope and bark, and protect your feet around saws. Compare arborist boots from Arbortec and Arbpro, including chainsaw-protective models.",
+  "guide": [
+   {
+    "h": "What makes a good climbing boot",
+    "p": [
+     "The best tree climbing boots combine a stiff shank, firm ankle support and a sole that grips. A stiff shank keeps the spur stirrup from crushing your arch and spreads load across the foot. Ankle support keeps you stable when you stand sideways on a stem. A sole with a defined heel helps foot ascenders and footlocking, and an aggressive tread grips wet bark and slopes.",
+     "Weight matters too. A lighter boot is easier on your legs over a long day of climbing. That is why many arborist climbing boots use lightweight materials while keeping the support where it counts.",
+     "Arborist boots often have extra features like reinforced toe caps that resist rope and bark wear, and hooks or loops that keep laces from snagging on spurs. Some arbpro boots use a clip and step system that makes lacing faster and keeps it secure.",
+     "Tree boots for climbing on rope only can be lighter and more flexible, but if you ever wear spurs, the stiff shank becomes essential. Many climbers own two pairs: a lighter boot for rope work and a supportive, stiff boot for spur work and removals. Matching boots to the day's work keeps your feet comfortable and stable."
+    ]
+   },
+   {
+    "h": "Chainsaw protection",
+    "p": [
+     "Chainsaw boots include cut-protective layers in the upper that clog a running chain. In the US, chainsaw-protective footwear is covered by ASTM F1818; in Europe, by the EN ISO 17249 standard with protection classes. Check the label for what each boot is certified to. For ground crew bucking and felling, and climbers who run a saw a lot, cut-protective boots add a layer of protection on top of training and good technique.",
+     "Steel or composite toe caps are common in arborist boots too. Check whether the toe and cut protection suit your work and any requirements from your employer."
+    ]
+   },
+   {
+    "h": "Models, fit and break-in",
+    "p": [
+     "The Arbortec Scafell Lite is a lightweight chainsaw boot built for climbers who want protection without heavy weight. Arbpro models like the Andrew Cervino and the Clip N Step focus on support and fit for climbing and ground work. Consider your mix of work: mostly climbing, mostly ground saw work, or a mix. Waterproof membranes help in wet climates but can be warmer in summer.",
+     "Fit tree boots in the afternoon when your feet are slightly swollen, with the socks you work in. Your heel should not lift, toes should have room, and the boot should feel secure laced. Break new boots in on the ground before a long climb on spurs. Arborist boots with lace-lock or quick-lace systems save time and stay tight."
+    ]
+   },
+   {
+    "h": "Care and replacement",
+    "p": [
+     "Clean off mud and sap, dry boots away from direct heat, and treat leather regularly. Replace boots when the shank softens, the sole wears smooth or any cut protection is damaged, because a cut-protective boot that has stopped a chain should be retired.",
+     "Replace laces as soon as they fray. A lace that snaps while you are on spurs is more than an inconvenience."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What are the best tree climbing boots?",
+    "a": "Boots with a stiff shank, strong ankle support, a grippy sole and a defined heel, sized well for your feet. Chainsaw protection is a plus for climbers who run saws."
+   },
+   {
+    "q": "Do I need chainsaw boots as a climber?",
+    "a": "Many climbers choose them. Requirements vary by employer and task, so follow your company policy and ANSI Z133."
+   },
+   {
+    "q": "Can I use regular work boots with spurs?",
+    "a": "Boots without a stiff shank let the spur stirrup press into your arch. Climbing-specific boots are far more comfortable and stable."
+   },
+   {
+    "q": "How long do arborist boots last?",
+    "a": "It depends on use, but replace them when the shank softens, soles wear out or cut protection is damaged."
+   }
+  ]
+ },
+ {
+  "path": "/clothing/hats-and-caps/",
+  "name": "Hats & Caps",
+  "h1": "Tree Hats, Caps & Neck Warmers",
+  "keyword": "tree hats",
+  "title": "Tree Hats, Caps & Neck Warmers for Arborists",
+  "meta": "Tree hats and caps for arborists: stocking caps, neck warmers and work hats from Arborwear and Husqvarna that fit under a helmet or wear on breaks.",
+  "kind": "apparel",
+  "intro": "Tree hats and caps keep sun, sawdust and cold off your head on and off the job. We carry Arborwear stocking caps and neck warmers plus Husqvarna hats.",
+  "guide": [
+   {
+    "h": "Hats for the job",
+    "p": [
+     "On the job, most of your time is under a helmet, so a hat needs to fit underneath it without changing how the helmet sits. A thin stocking cap or beanie adds warmth on cold mornings. A neck warmer keeps wind and sawdust out of your collar and can be pulled up over your face in bitter weather.",
+     "Off the helmet, a work hat with a brim keeps the sun off during brush hauling or chipper work. Many arborists also wear a tree logo hat as everyday crew gear.",
+     "Arborwear stocking caps and neck warmers are built for tree work with fabrics that hold up to bark and sawdust. Husqvarna hats are a good everyday option for the crew.",
+     "Look for flat seams and low-profile designs that will not create pressure points under the helmet suspension."
+    ]
+   },
+   {
+    "h": "Fit under a helmet",
+    "p": [
+     "Before you wear any hat under a helmet, adjust the helmet so it still fits snug and the chinstrap sits correctly. A bulky hat can loosen the fit and reduce protection. Choose thin, close-fitting materials and readjust the helmet when you take the hat off later in the day.",
+     "Some climbing helmets have winter liners designed for them. These are a good alternative to a separate hat, because they are designed not to affect the helmet's fit.",
+     "Take your helmet to try-ons where you can, or test any new hat at home under the helmet before wearing it on the job. If the helmet will not adjust snug over the hat, the hat is too thick for climbing."
+    ]
+   },
+   {
+    "h": "Layers and care",
+    "p": [
+     "In winter, layering a thin cap with a neck warmer works better than one thick hat. Wool and synthetic blends stay warm when damp from sweat. Wash hats regularly, since sawdust and sweat break down fabric over time.",
+     "Keep loose cords and pom-poms away from saws and rope. Anything that can catch is a hazard in the tree.",
+     "Sun protection is easy to overlook in summer. A brimmed hat during ground work, sunscreen and a neck covering help prevent sunburn on long days in the open.",
+     "A spare dry cap in the truck is a small thing that makes a big difference on wet winter days."
+    ]
+   },
+   {
+    "h": "Crew gear",
+    "p": [
+     "Many tree companies outfit their crew with matching hats and caps. A consistent look helps customers recognize your crew on site and adds a professional touch. Choose durable styles that hold up to daily wear, and remember to keep logos and colors visible but not distracting near traffic.",
+     "Off the job, a tree hat is also a simple way to show what you do. The same rules apply: pick something comfortable and tough enough to survive the truck cab.",
+     "Btr tree hats and tree logo hats are popular searches for crew wear; whichever brand you choose, pick quality fabric and stitching that last."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I wear a hat under my climbing helmet?",
+    "a": "Yes, if it is thin and the helmet still fits snugly with the chinstrap correctly adjusted."
+   },
+   {
+    "q": "What hat is best for cold weather tree work?",
+    "a": "A thin wool or synthetic stocking cap under your helmet plus a neck warmer works well for most climbers."
+   },
+   {
+    "q": "Do tree hats come in hi-vis colors?",
+    "a": "Some do. Bright colors help ground crew and drivers see you near the work area."
+   }
+  ]
+ },
+ {
+  "path": "/clothing/sweatshirts-and-jackets/",
+  "name": "Sweatshirts & Jackets",
+  "h1": "Climbing Hoodies, Sweatshirts & Jackets",
+  "keyword": "climbing hoodie",
+  "title": "Climbing Hoodies & Arborist Sweatshirts",
+  "meta": "Climbing hoodies and arborist sweatshirts from Arborwear: double-thick hooded sweatshirts and hi-vis pullovers built for cold days of tree work.",
+  "kind": "apparel",
+  "intro": "A good climbing hoodie or work sweatshirt is the layer you live in from fall through spring. We carry Arborwear double-thick hooded sweatshirts and safety yellow pullovers built for tree work.",
+  "guide": [
+   {
+    "h": "What makes a work hoodie last",
+    "p": [
+     "Tree work wrecks regular sweatshirts fast. Look for heavier fabric, reinforced seams and cuffs that hold their shape. Double-thick construction blocks wind and holds up to bark and brush. A hoodie should allow full arm movement for climbing and cutting without riding up your back.",
+     "Fit matters with a saddle. A sweatshirt that is too long bunches under the waist belt, while one that is too short leaves your back exposed when you reach.",
+     "Arborwear double-thick hooded sweatshirts are made with two layers of fabric for warmth and durability, and they come in colors like black and navy that hide sap and dirt. Look for kangaroo pockets that keep small items close but do not snag.",
+     "A climbing hoodie also has to work under a helmet. A hood that is too bulky pushes the helmet forward or gets in the way of the chinstrap, so many climbers wear the hood down while climbing and pull it up only during breaks. Pick a hood with a shape that lies flat when not in use."
+    ]
+   },
+   {
+    "h": "Visibility and safety",
+    "p": [
+     "Hi-vis pullovers in safety yellow help drivers and ground crew see you near traffic or in a busy drop zone. Follow your site's rules for visibility. Keep hood drawstrings tucked away from saws, chippers and rope, and consider removing them entirely if they get in the way.",
+     "High-visibility colors are especially useful during storm work and short winter days when light is low.",
+     "If you work near chippers, keep sleeves snug at the wrist and avoid anything loose that could be pulled into the feed."
+    ]
+   },
+   {
+    "h": "Layering for the day",
+    "p": [
+     "Cold mornings call for a base layer, a hoodie and a jacket you can shed as you warm up. Choose layers that are easy to take off and stash in the truck. Many climbers find a fitted sweatshirt better than a bulky jacket in the tree because it moves with them and does not snag.",
+     "Wash sweatshirts regularly to get sawdust and sap out of the fabric so they keep their warmth and last longer.",
+     "Landscaping hoodies and woodworking hoodies cover similar ground, but tree work is harder on fabric than most trades, so heavier construction pays off. Keep a spare hoodie in the truck for when the first one gets soaked."
+    ]
+   },
+   {
+    "h": "Jackets and rain gear",
+    "p": [
+     "When the weather turns wet or windy, a jacket over your hoodie keeps you working longer. Look for tough outer fabrics that survive brush, a cut that allows arm movement under a saddle, and cuffs that close around gloves. Avoid long, loose jackets that can catch on limbs, chippers or saws. In rain, a breathable waterproof jacket keeps you dry without trapping too much sweat.",
+     "For climbers, layering under a jacket can be tricky. Many prefer a fitted sweatshirt and a light shell rather than a heavy coat."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a hoodie safe to wear while climbing?",
+    "a": "Yes, if it fits well and the hood and drawstrings are kept clear of rope, saws and chippers."
+   },
+   {
+    "q": "Do you carry hi-vis sweatshirts?",
+    "a": "Yes, we carry safety yellow pullovers for crews working near traffic or in busy work zones."
+   },
+   {
+    "q": "What size sweatshirt should I get for climbing?",
+    "a": "Pick a size that allows full arm movement without bunching under your saddle belt."
+   }
+  ]
+ },
+ {
+  "path": "/clothing/tree-climbing-pants/",
+  "name": "Climbing Pants",
+  "h1": "Arborist Trousers & Tree Climbing Pants",
+  "keyword": "arborist trousers",
+  "title": "Arborist Trousers & Tree Climbing Pants",
+  "meta": "Arborist trousers and tree climbing pants: Arborwear Ascender pants, Clogger chainsaw pants and Arbortec suspenders. Stretch and cut protection.",
+  "kind": "chaps-pants",
+  "intro": "Arborist trousers have to stretch for climbing, survive bark and brush, and in many cases stop a running chain. Shop tree climbing pants, chainsaw pants and suspenders.",
+  "guide": [
+   {
+    "h": "Climbing pants vs chainsaw pants",
+    "p": [
+     "Climbing pants like the Arborwear Ascender focus on stretch, durability and comfort under a saddle. They resist abrasion from bark and rope and move freely when you step high or footlock. They do not stop a chainsaw.",
+     "Arborist chainsaw pants, such as the Clogger Zero, contain layers of long fibers that pull out and jam the saw's sprocket when cut. In the US, look for a label showing compliance with ASTM F1897. Many climbers wear chainsaw pants aloft, and ground crew should wear chainsaw protection whenever they run a saw.",
+     "Look for pants labeled for protection from the front of the leg, or all-around protection if you need it. Climbing chainsaw pants often have stretch panels behind the leg so you can climb comfortably.",
+     "Remember that protection only works where it covers. Chainsaw pants protect the areas marked on the label; know where those zones are."
+    ]
+   },
+   {
+    "h": "Fit and features",
+    "p": [
+     "Look for a gusseted crotch and articulated knees so you can climb without the pants binding. Reinforced knees and cuffs last longer. Make sure the waist sits comfortably under your saddle belt without bunching. Chainsaw pants can be heavier, so suspenders help keep them up and take pressure off the waist.",
+     "Tree pants come in different weights for summer and winter work. Ventilation zips are a plus in hot weather.",
+     "Lumberjack pants and forest pants are other common names for durable work pants. Arborwear Ascender pants are a popular choice with climbers for their stretch and durability. Clogger Zero pants combine chainsaw protection with a lighter feel. Arbortec heavy-duty suspenders are made to hold up protective pants.",
+     "Tree pants with a stretch fabric that dries quickly are more comfortable on long days, and they are easier to clean when sap and sawdust stick to them. Large thigh pockets with closures keep phones and small tools secure when you are upside down."
+    ]
+   },
+   {
+    "h": "Care for cut-protective pants",
+    "p": [
+     "Follow the washing instructions on the label, since harsh washing can reduce the effectiveness of protective fibers. Retire chainsaw pants that have been cut into the protective layer, or patch them only as the maker allows. Inspect them before each job for tears and worn spots.",
+     "Keep a spare pair of work pants in the truck. A tear high in the tree or a wet morning can make for a long day without a backup."
+    ]
+   },
+   {
+    "h": "Pairing with other gear",
+    "p": [
+     "Pants work as part of a system with chainsaw boots, gloves, eye and ear protection and a helmet. No pants are cut proof. Training, technique and a well-maintained saw are the first line of defense.",
+     "If you prefer, chainsaw chaps worn over regular work pants are another option for ground work. Chaps are easy to put on and take off, but many climbers find pants more comfortable aloft.",
+     "Take time to fit pants with your saddle on, since a pair that feels fine standing may bind when you sit in the harness."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do tree climbing pants protect against chainsaws?",
+    "a": "Standard climbing pants do not. Only chainsaw-protective pants with cut-resistant layers are designed to stop a running chain."
+   },
+   {
+    "q": "What are the best arborist trousers?",
+    "a": "Pants with stretch, reinforced knees and a good fit under your saddle. Choose chainsaw-protective pants if you run a saw."
+   },
+   {
+    "q": "Can I wear chainsaw pants while climbing?",
+    "a": "Yes. Many climbers do, and climbing-specific chainsaw pants are designed for it."
+   },
+   {
+    "q": "Why use suspenders with chainsaw pants?",
+    "a": "Chainsaw pants are heavier than regular pants, and suspenders keep them up without squeezing your waist under a saddle."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/",
+  "name": "Cutting & Pruning",
+  "h1": "Tree Pruners, Saws & Pruning Tools",
+  "keyword": "tree pruner",
+  "title": "Tree Pruner, Hand Saw & Pole Saw Guide",
+  "meta": "Tree pruner and pruning saw guide: hand saws, pole saws, pole pruners, poles, blades and hand pruners from Silky, Jameson, Marvin and Felco.",
+  "kind": "hand-saw",
+  "intro": "Pick the right tree pruner, hand saw or pole saw and the work goes faster with cleaner cuts. This department covers Silky hand saws, Jameson and Marvin pole tools, Felco hand pruners, poles and replacement blades.",
+  "guide": [
+   {
+    "h": "Hand tools still do most of the pruning",
+    "p": [
+     "Even on crews with a full lineup of chainsaws, much of the finest pruning work is done with hand tools. A sharp pull saw makes a clean cut with good control, without the noise or the extra hazard of a running saw. Hand saws are also lighter to carry in the tree and quick to use on small to mid-size limbs.",
+     "From the ground, pole saws and pole pruners let you reach deadwood, clear sidewalks and lift crowns without climbing. A good pole setup handles a lot of small-tree and street-tree work by itself.",
+     "Silky saws have a strong following among climbers for their sharp, fast-cutting blades. Felco hand pruners are known for durability and replaceable parts. Jameson and Marvin build pole tools that hold up to daily crew use."
+    ]
+   },
+   {
+    "h": "Hand saws, pole saws and pruners",
+    "p": [
+     "Hand saws come in straight and curved blades. Curved blades cut aggressively on the pull and suit overhead cuts, while straight blades give more control for precise cuts. A scabbard on your saddle or belt keeps the saw ready and protects you from the teeth.",
+     "Pole saws pair a saw head with fiberglass or aluminum poles, and pole pruners add a cutting head with a rope-pulled blade for small limbs. Bypass hand pruners handle the smallest cuts. Each tool in this department has its own section and buying guide.",
+     "Replacement blades keep favorite saws in service, and scabbards protect both the blade and the person carrying it. Poles come in sections that build to the length you need."
+    ]
+   },
+   {
+    "h": "Good pruning starts with good cuts",
+    "p": [
+     "The ANSI A300 standard describes how to make proper pruning cuts: cut outside the branch collar, avoid leaving stubs, and use the three-cut method on heavier limbs to prevent bark tearing. Sharp tools make this much easier. A dull saw tears wood and encourages rushed cuts.",
+     "Use the right tool for the size of the cut. A hand pruner for twigs, a hand saw for small and medium limbs, and a chainsaw only when the cut calls for it. Forcing a small tool through a large cut leads to tearing and poor results.",
+     "Clean cuts also save time. A clean, well-placed cut rarely needs to be redone, and a tree that is pruned well needs less correction work later. That is better for the tree and for your client relationships."
+    ]
+   },
+   {
+    "h": "Working near power lines",
+    "p": [
+     "Never use conductive poles near energized lines, and only qualified line-clearance arborists should work within the minimum approach distances to power lines. Fiberglass poles rated for electrical work are used for line clearance, but they still require training, inspection and the correct procedures under ANSI Z133.",
+     "Keep blades sheathed when moving around the site, wear eye protection and gloves when cutting, and keep the drop zone clear for the ground crew.",
+     "Wipe and dry all cutting tools at the end of the day."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the best tree pruner for small limbs?",
+    "a": "A sharp bypass hand pruner for the smallest cuts, then a pull saw or pole pruner as limbs get thicker or higher."
+   },
+   {
+    "q": "Curved or straight hand saw?",
+    "a": "Curved blades cut fast, especially overhead. Straight blades give more control for precise cuts. Many climbers carry one of each."
+   },
+   {
+    "q": "Can I use a pole saw near power lines?",
+    "a": "Only qualified line-clearance workers should prune near energized lines, using properly rated insulated tools and following ANSI Z133."
+   },
+   {
+    "q": "How do I keep pruning saw blades sharp?",
+    "a": "Most modern pull saws use hardened teeth that are not resharpened. Replace the blade when it dulls or bends."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/blades/",
+  "name": "Replacement Blades",
+  "h1": "Replacement Pruning Saw Blades",
+  "keyword": "pruning saw blades",
+  "title": "Replacement Pruning Saw Blades",
+  "meta": "Replacement pruning saw blades for arborist hand saws and pole saws, including the Notch 13 inch tri-edge blade and the Silky Sugoi replacement blade.",
+  "kind": "hand-saw",
+  "intro": "Fresh pruning saw blades bring a tired saw back to full speed. We carry replacement blades like the Notch 13 inch tri-edge and the Silky Sugoi blade.",
+  "guide": [
+   {
+    "h": "When to replace a blade",
+    "p": [
+     "Most modern pruning saws use impulse-hardened teeth that are very sharp but are not meant to be resharpened. When cuts slow down, the blade binds, or teeth are chipped or bent, swap in a new blade. Match the replacement to your saw model and mounting style, tighten it correctly, and check it before every use. Wear gloves when changing blades."
+    ]
+   },
+   {
+    "h": "Matching the blade",
+    "p": [
+     "Replacement blades are specific to each saw. The Silky Sugoi replacement blade fits the Sugoi frame, while the Notch 13 inch tri-edge saw blade fits compatible pole saw heads and handles. Tri-edge teeth cut on the pull stroke and clear chips fast. Check blade length, tooth style and the mounting pattern before buying. Keep a spare blade in the truck so a broken blade does not end the day.",
+     "Store spare blades in a sheath or the original packaging so the teeth stay sharp and nobody gets cut digging through the tool box. Wipe sap off with a solvent safe for the blade's coating."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I sharpen my pruning saw blade?",
+    "a": "Most hardened-tooth pull saw blades are not designed to be resharpened. Replace them when they dull."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/hand-saws-and-scabbards/",
+  "name": "Hand Saws & Scabbards",
+  "h1": "Arborist Hand Saws & Scabbards",
+  "keyword": "arborist hand saw",
+  "title": "Arborist Hand Saws & Scabbards: Silky Saws",
+  "meta": "Arborist hand saws and scabbards from Silky: the Zubat, Sugoi, Gomtaro and Gunfighter. Curved and straight pull saws with sheaths for climbers.",
+  "kind": "hand-saw",
+  "intro": "An arborist hand saw is the tool you reach for on almost every climb. We carry Silky pull saws including the Zubat, Sugoi, Gomtaro and Gunfighter, each with a scabbard to carry it on your saddle or belt.",
+  "guide": [
+   {
+    "h": "Curved or straight",
+    "p": [
+     "A curved hand saw bites hard on the pull stroke, which makes it fast for overhead cuts and larger limbs. A straight blade gives better control and a cleaner finish for precise pruning cuts. Many climbers carry a curved saw on one side of the saddle and a smaller straight saw on the other.",
+     "Length matters too. A saw with a long blade cuts larger limbs quickly but is heavier and harder to handle in tight spots. Saws around 300 to 330 mm, like the Gomtaro 300 and Gunfighter 330, are a popular middle ground.",
+     "The Silky Zubat is a classic curved arborist saw with an aggressive tooth pattern. The Sugoi is a large curved saw for fast cutting. The Gomtaro is a straight saw known for being tough and reliable, and it is also popular for cutting roots. The Gunfighter is designed with arborists in mind, with a scabbard built for carrying on a saddle.",
+     "A curved hand saw with a long blade is the go-to choice for many removal climbers, while pruning specialists often prefer a shorter straight blade."
+    ]
+   },
+   {
+    "h": "Scabbards and carrying",
+    "p": [
+     "A hand saw with a sheath is safer to carry and easier to reach. Most Silky saws come with a scabbard that clips to your saddle or belt. Mount it where you can draw and return the saw with one hand without looking, and check that the retention holds the saw securely when you are upside down in the tree.",
+     "Many climbers tether their hand saw so it cannot fall into the drop zone.",
+     "A tether can be as simple as a short cord between the saw handle and a saddle loop. Make sure it is long enough to make full strokes but short enough not to tangle with your climbing system."
+    ]
+   },
+   {
+    "h": "Cutting technique",
+    "p": [
+     "Pull saws cut on the pull stroke, so let the saw do the work and avoid forcing it on the push. Use the three-cut method on heavier limbs to prevent bark tearing, and make final cuts just outside the branch collar, as described in ANSI A300. Keep your free hand well away from the blade path.",
+     "When working aloft, position yourself so you are not reaching across your body or cutting toward your own rope or lanyard. A sharp saw cuts rope as easily as wood."
+    ]
+   },
+   {
+    "h": "Blade care",
+    "p": [
+     "Wipe sap off the blade after use and keep it dry to prevent rust. Most hardened-tooth blades are not resharpened; replace the blade when it dulls or bends. Replacement blades are available for many Silky models in our blades section.",
+     "Keep your hand saw scabbard clean too. Sawdust and sap build up inside and can make the saw stick, which is frustrating and unsafe when you need to draw it quickly.",
+     "Rust on a blade slows cuts and weakens teeth. A light coat of oil after cleaning helps in wet weather, but wipe off excess before use so it does not pick up grit."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is the best arborist hand saw?",
+    "a": "It depends on your work. Curved saws like the Zubat cut fast overhead, while straight saws give more control. Silky saws are a long-time favorite of climbers."
+   },
+   {
+    "q": "Do Silky saws come with a scabbard?",
+    "a": "Most models do. Check the product listing for what is included."
+   },
+   {
+    "q": "Can I replace the blade on a Silky saw?",
+    "a": "Yes, replacement blades are available for many Silky models."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/pole-saws-and-scabbards/",
+  "name": "Pole Saws & Scabbards",
+  "h1": "Pruning Saw on a Pole: Pole Saws & Heads",
+  "keyword": "pruning saw on a pole",
+  "title": "Pole Saws: Pruning Saw on a Pole & Saw Heads",
+  "meta": "Pole saws for arborists: a pruning saw on a pole with telescoping aluminum poles, Jameson pole saw kits and Marvin cast saw heads, plus blade advice.",
+  "kind": "pole-saw",
+  "intro": "A pruning saw on a pole lets you reach deadwood and clearance cuts from the ground. We carry telescoping pole saws, Jameson pruner and pole saw kits, and Marvin cast saw heads.",
+  "guide": [
+   {
+    "h": "Choosing a pole saw",
+    "p": [
+     "Telescoping pole saws are compact and quick to adjust, while sectional poles with a separate saw head are tougher and easier to repair. Pick a saw blade length that suits the size of the limbs you cut, and make sure the head fits your pole system. Fiberglass poles are needed for work near power, but only qualified line-clearance workers should be near energized lines. Wear a helmet and eye protection and stay out from under the cut."
+    ]
+   },
+   {
+    "h": "Heads, blades and scabbards",
+    "p": [
+     "A cast saw head, like the Marvin, mounts a pruning saw blade on the end of a pole. Saw blades for pole saws come in different lengths and tooth patterns. A pole saw scabbard protects the blade during transport and keeps the crew safe from the teeth. The Jameson LS kit combines a pruner, a pole saw and poles in one package. A telescoping aluminum pole saw like the Nobasu is light and compact, but aluminum is conductive and must not be used near power."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What is a pole saw used for?",
+    "a": "Pruning limbs out of reach from the ground, such as deadwood removal, crown raising and sidewalk clearance."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/poles-and-kits/",
+  "name": "Poles & Kits",
+  "h1": "Tree Poles & Pole Pruner Kits",
+  "keyword": "tree pole",
+  "title": "Tree Pole Sections & Pruner Pole Kits",
+  "meta": "Tree pole sections and pruner pole kits: Jameson fiberglass poles, foam-filled poles and ash peavey poles for pole saws, pruners and tree work.",
+  "kind": "pole-saw",
+  "intro": "A good tree pole system is the backbone of pruning from the ground. Mix and match fiberglass sections, foam-filled poles and kits to reach the cuts you need.",
+  "guide": [
+   {
+    "h": "Fiberglass, foam-filled and wood",
+    "p": [
+     "Fiberglass poles are the standard for pole saws and pole pruners because they are strong, light and resist conducting electricity when clean and dry. Hollow-core poles are lighter; foam-filled poles keep moisture from collecting inside, which helps preserve their dielectric properties. Wooden poles, such as ash, are still used for tools like peaveys, where toughness matters more than weight.",
+     "Foam-filled fiberglass poles are the usual pick for crews that do any work near utilities, but remember that only qualified line-clearance workers should be near energized lines.",
+     "Long pole saws for trees are typically built from multiple fiberglass sections, so choosing the right tree pole system early saves money and frustration later. Pick one system and stick with it so all sections and heads interchange."
+    ]
+   },
+   {
+    "h": "Building a pole system",
+    "p": [
+     "Sectional poles connect end to end, so you can carry a few short sections and assemble the length you need. Most systems use a snap-button or locking connection. Keep sections from the same system together and check that each connection seats fully.",
+     "A pole pruner uses a rope to pull a cutting blade through small limbs. Keep the pole saw rope in good shape and routed so it cannot snag. A stiff, straight pole makes the work much easier at full length.",
+     "Rope poles and robel poles show up in searches too. Whatever you call them, the key is a strong, straight, well-maintained pole that fits your heads."
+    ]
+   },
+   {
+    "h": "Care and inspection",
+    "p": [
+     "Wipe poles clean after use, store them dry and off the ground, and inspect for cracks, splinters and damaged ends before each job. A cracked fiberglass pole can fail under load and may not be safe near power. Retire damaged sections.",
+     "Wear a helmet and eye protection when working with poles, and keep the ground crew out of the drop zone.",
+     "Clean fiberglass poles with a mild cleaner made for the purpose and keep the surface free of deep scratches. Some crews apply a silicone or wax finish to help shed moisture, following the pole maker's advice. Damaged gel coat lets moisture into the fiberglass, which is a concern for any work near power."
+    ]
+   },
+   {
+    "h": "Kits and accessories",
+    "p": [
+     "A pole kit gives you sections, a saw head and a pruner head that work together, which is a good way to start a pole system. Add sections over time as you need more reach. Jameson poles are widely used in the trade, and their 8 foot hollow-core poles are a common choice. Six foot foam-filled poles are easier to carry and store. A peavey with a 12 foot ash pole is a different kind of tool, used for rolling and moving logs.",
+     "When tying a rope to a pole, such as for a pruner, follow the manufacturer's instructions for routing and attaching the rope.",
+     "Store pole sections in a rack or tube on the truck to keep them from bouncing around and cracking. Keep heads sheathed during transport."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Are fiberglass tree poles safe near power lines?",
+    "a": "Clean, dry, properly maintained fiberglass poles resist conduction, but only qualified line-clearance workers should be near energized lines, following ANSI Z133."
+   },
+   {
+    "q": "What is the advantage of foam-filled poles?",
+    "a": "Foam keeps moisture and contaminants from building up inside the pole, which helps maintain its insulating properties."
+   },
+   {
+    "q": "How long should my pole system be?",
+    "a": "Carry enough sections to reach your usual cuts. Many crews build to around 12 to 18 feet for routine pruning."
+   }
+  ]
+ },
+ {
+  "path": "/cutting-and-pruning/pruners-and-loppers/",
+  "name": "Pruners & Loppers",
+  "h1": "Tree Pruners: Hand Pruners & Pole Pruner Heads",
+  "keyword": "tree pruners",
+  "title": "Tree Pruners: Felco Hand Pruners & Marvin Heads",
+  "meta": "Tree pruners for arborists: Felco 2 hand pruners and Marvin pole pruner heads for clean cuts on small limbs, from the ground or up in the tree.",
+  "kind": "pruner",
+  "intro": "Tree pruners make the smallest, cleanest cuts. We carry the Felco 2 hand pruner and Marvin pole pruner heads for cutting small limbs from the ground.",
+  "guide": [
+   {
+    "h": "Hand pruners and pole pruner heads",
+    "p": [
+     "A bypass hand pruner like the Felco 2 handles small live twigs and branches with a clean scissor cut. For small limbs out of reach, a pole pruner head on a fiberglass pole uses a rope-driven blade to snip from the ground. Keep blades sharp and adjusted, oil the pivot, and replace worn blades. Wear eye protection and keep your free hand out of the cut."
+    ]
+   },
+   {
+    "h": "Choosing tools",
+    "p": [
+     "The Felco 2 is a classic bypass hand pruner with replaceable blades and parts. The Marvin pruner head and bull pruner head with single pulley mount on fiberglass poles for pruning from the ground. The bull pruner head handles slightly larger limbs. Look at cutting capacity, how the blade is driven and whether the head fits your poles. Clean sap off blades after use and keep them sharp for clean cuts that heal well.",
+     "Replacement blades and springs are available for many of these tools."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What size cuts can a pole pruner make?",
+    "a": "Pole pruners are for small limbs. Check the head's maximum cutting capacity and use a pole saw for anything larger."
+   }
+  ]
+ },
+ {
+  "path": "/jobsite/",
+  "name": "Jobsite",
+  "h1": "Arborist Jobsite Gear",
+  "keyword": "arborist jobsite gear",
+  "title": "Arborist Jobsite Gear: Bucket Truck & Site Safety",
+  "meta": "Arborist jobsite gear for tree crews: bucket truck and aerial lift accessories, fall protection, scabbards, outrigger pads and site safety equipment.",
+  "kind": "jobsite",
+  "intro": "Arborist jobsite gear covers everything around the tree that keeps the work moving and the crew safe: bucket truck accessories, aerial lift fall protection, outrigger pads, chocks and site safety equipment.",
+  "guide": [
+   {
+    "h": "Beyond the climber",
+    "p": [
+     "Climbing gear gets most of the attention, but a good jobsite runs on the gear around it. Wheel chocks and outrigger pads keep trucks and lifts stable. Bucket covers and scabbards protect equipment and tools. Fall protection keeps operators in aerial lifts connected. Each of these pieces prevents a specific problem that crews run into every week.",
+     "Organizing jobsite gear on the truck matters too. When chocks, cones, pads and first aid have a set place, setup and teardown go faster and nothing is left at the last job.",
+     "Rigging gear, chippers and stump grinders are their own topics, but the support gear around them matters just as much. Think about what slows your crew down or creates risk on a typical day, and buy gear that fixes those problems.",
+     "A wheel chock is the simplest piece of jobsite gear, and also one of the most important. Make chocking the truck the first step on every stop."
+    ]
+   },
+   {
+    "h": "Bucket trucks and aerial lifts",
+    "p": [
+     "Aerial lifts are a major part of tree work, especially for utility and municipal crews. Operators need a full body harness and a lanyard attached to the manufacturer's designated anchor point, plus tools that store safely in the bucket. Our bucket truck and aerial lift section covers harnesses, lanyards, scabbards and bucket accessories.",
+     "Follow the lift manufacturer's operating instructions, the applicable ANSI A92 standards and ANSI Z133 for tree work from aerial devices.",
+     "Bucket truck work brings its own hazards: overhead power lines, unstable ground and traffic. The right accessories and a disciplined setup routine help manage all three. Plan where the truck will sit, check overhead clearances and keep minimum approach distances from energized lines."
+    ]
+   },
+   {
+    "h": "Setting up a safe site",
+    "p": [
+     "Before work starts, a jobsite briefing should cover the work plan, hazards, drop zones, communication and emergency procedures. Set up traffic control where the work affects roads or sidewalks, following the applicable rules. Chock trucks, deploy outrigger pads on soft ground, and keep the chipper area clear.",
+     "Make sure the crew has first aid supplies and knows how to perform an aerial rescue if someone is climbing.",
+     "Fire extinguishers on every truck and chipper, plus eyewash where needed, round out a basic jobsite kit. Check them regularly and replace used or expired items."
+    ]
+   },
+   {
+    "h": "Choosing jobsite gear",
+    "p": [
+     "Look for gear that is built for daily use in rough conditions: composite outrigger pads that will not rot, chocks that suit your vehicle's tire size, covers that fit your bucket. Buying for the specific equipment on your trucks saves money and frustration.",
+     "Consistency helps on multi-truck crews. When every truck carries the same chocks, pads, cones and first aid kit, any crew member can set up any truck without hunting for gear. Make a checklist for each truck and review it regularly. Replace worn or damaged items before they become a problem."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What jobsite gear does a tree crew need?",
+    "a": "At minimum: wheel chocks, cones or traffic control gear, a first aid kit, fire extinguisher and appropriate fall protection and accessories for any aerial lift."
+   },
+   {
+    "q": "Do I need outrigger pads?",
+    "a": "On soft ground, asphalt or turf, outrigger pads spread the load and help keep the truck stable and protect the surface."
+   },
+   {
+    "q": "What fall protection is required in a bucket truck?",
+    "a": "Generally a full body harness with a lanyard attached to the lift's designated anchor. Follow the manufacturer, ANSI A92 and your employer's policy."
+   },
+   {
+    "q": "Where can I find bucket truck accessories?",
+    "a": "In our bucket truck and aerial lift gear section, including covers, scabbards and outrigger pads."
+   }
+  ]
+ },
+ {
+  "path": "/jobsite/bucket-truck-and-aerial-lift-gear/",
+  "name": "Bucket Truck & Lift Gear",
+  "h1": "Bucket Truck Harness & Aerial Lift Gear",
+  "keyword": "bucket truck harness",
+  "title": "Bucket Truck Harness & Aerial Lift Gear",
+  "meta": "Bucket truck harness, lanyard and aerial lift gear for tree crews: fall arrest, scabbards, bucket covers and outrigger pads for safe lift work.",
+  "kind": "saddle",
+  "intro": "From the bucket truck harness to tool scabbards and outrigger pads, this section has the gear tree crews use when working from aerial lifts.",
+  "guide": [
+   {
+    "h": "What lift operators need",
+    "p": [
+     "A bucket truck safety harness is a full body harness designed for fall arrest, worn with a lanyard attached to the lift's designated anchor point. Pair it with a shock-absorbing or self-retracting lanyard of an appropriate length, scabbards that keep tools organized in the bucket, and accessories like covers and outrigger pads. Follow the lift manufacturer's instructions, ANSI A92, ANSI Z133 and your employer's policy, and inspect harnesses and lanyards before every use."
+    ]
+   },
+   {
+    "h": "Tools in the bucket",
+    "p": [
+     "Bucket truck and aerial lift scabbards hold hand saws, pole saws and pruners securely at the edge of the bucket so they are ready to grab and cannot fall. Bucket covers keep rain and debris out when the truck is parked. Outrigger pads and wheel chocks keep the truck stable. Keep the bucket uncluttered, and never use the bucket as a crane or tie-in point for rigging unless the manufacturer specifically allows it.",
+     "Inspect scabbards for cracks and worn retention."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use my climbing saddle in a bucket truck?",
+    "a": "A tree climbing saddle is a work positioning harness, not a fall arrest harness. Use a full body harness for aerial lift fall protection unless the lift and policy allow otherwise."
+   }
+  ]
+ },
+ {
+  "path": "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/",
+  "name": "Bucket Truck Accessories",
+  "h1": "Bucket Truck Accessories",
+  "keyword": "bucket truck accessories",
+  "title": "Bucket Truck Accessories: Covers, Pads & Chocks",
+  "meta": "Bucket truck accessories for tree crews: two-man bucket covers, Bigfoot composite outrigger pads and wheel chocks that keep the truck stable and protected.",
+  "kind": "jobsite",
+  "intro": "The right bucket truck accessories protect your equipment and keep the truck stable on the job. We carry two-man bucket covers, composite outrigger pads and wheel chocks.",
+  "guide": [
+   {
+    "h": "The basics every truck needs",
+    "p": [
+     "Wheel chocks should go in place every time the truck is parked for work. Outrigger pads spread the load on soft ground and protect pavement and turf; composite pads are light and will not rot like wood. A bucket cover keeps rain and debris out of the bucket between jobs, protecting the liner and controls. Choose accessories sized for your specific truck and bucket, and follow the lift manufacturer's setup instructions."
+    ]
+   },
+   {
+    "h": "Two-man buckets and supplies",
+    "p": [
+     "Two-man bucket covers, like the Weaver cover, are sized for larger buckets used on utility and tree trucks. Other bucket truck supplies include scabbards, tool holders and storage that keep the bucket organized. Bucket truck parts such as liners and controls should come from the manufacturer or an approved supplier. Check accessories regularly for wear, especially chocks and outrigger pads that see daily abuse.",
+     "Store chocks and pads where they are easy to grab so setting them out is quick and becomes a habit on every stop."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Why use composite outrigger pads?",
+    "a": "They are strong, lighter than many alternatives and do not rot or split, so they last longer on a working truck."
+   }
+  ]
+ },
+ {
+  "path": "/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/",
+  "name": "Aerial Lift Fall Arrest",
+  "h1": "Fall Protection Harness and Lanyard for Aerial Lifts",
+  "keyword": "fall protection harness and lanyard",
+  "title": "Fall Protection Harness and Lanyard for Lifts",
+  "meta": "Fall protection harness and lanyard kits for bucket trucks, boom lifts and scissor lifts: Safewaze kits, retractable lanyards and the Petzl Absorbica.",
+  "kind": "lanyard",
+  "intro": "A fall protection harness and lanyard is required gear for most aerial lift work. We carry Safewaze fall protection kits, web retractable lanyards and the Petzl Absorbica energy-absorbing lanyard.",
+  "guide": [
+   {
+    "h": "Harness, lanyard and anchor",
+    "p": [
+     "Aerial lift fall protection is a system. The full body harness distributes forces across your thighs, pelvis, chest and shoulders. The lanyard connects your harness's dorsal D-ring to the lift's designated anchor point. Energy absorbers or self-retracting lanyards limit the force on your body if you are ejected from the bucket or basket.",
+     "Body belts and tree climbing saddles are not fall arrest harnesses. For fall arrest on a boom lift harness setup or bucket harness, use a full body harness rated for that purpose, typically to ANSI Z359 requirements.",
+     "Fall protection is the last line of defense. Good lift operation, a stable setup and staying inside the platform come first."
+    ]
+   },
+   {
+    "h": "Boom lifts, bucket trucks and scissor lifts",
+    "p": [
+     "On boom lifts and bucket trucks, the operator must be tied off to the anchor provided by the lift manufacturer. On scissor lifts, the guardrails are typically the primary protection, but many employers and lift manufacturers require a scissor lift harness and restraint lanyard too. Check your lift's manual and your company policy.",
+     "Lanyard length matters. Too long and you could be ejected and fall a long way before the lanyard catches. Many crews prefer a short lanyard or a restraint setup that keeps the operator inside the platform entirely.",
+     "Harnesses for bucket trucks often include features like a dorsal D-ring placement that works well in the bucket and padding for comfort over a full shift. Quick-connect leg and chest buckles make it easier to put the harness on correctly every time."
+    ]
+   },
+   {
+    "h": "Choosing a kit",
+    "p": [
+     "A fall protection kit bundles a harness and lanyard so you get a matched system. Check harness sizing, the lanyard's length and energy absorber, and the connector type for your lift's anchor. Retractable web lanyards stay taut and out of the way, which helps in a busy bucket.",
+     "The Safewaze economy fall protection kit is a simple way to equip a crew with a harness and lanyard. The six foot web retractable lanyard stays taut and reduces slack. The Petzl Absorbica-I is an energy-absorbing lanyard with a single connector, designed to limit forces in a fall. Choose components that are compatible with each other and with your lift.",
+     "Size harnesses for the operator who will wear them, and adjust straps every time a different person puts one on. A loose harness can cause serious injuries in a fall."
+    ]
+   },
+   {
+    "h": "Inspection and training",
+    "p": [
+     "Inspect harnesses and lanyards before each use for cuts, abrasion, heat damage, deployed energy absorbers and damaged hardware. Remove from service any equipment that has arrested a fall. Every lift operator should be trained in lift operation and fall protection, and a rescue plan should be in place.",
+     "Cherry picker and boom lift operators should never untie while the platform is elevated. Plan the work so you can reach what you need without leaning over the rails.",
+     "Store harnesses and lanyards clean, dry and away from sunlight and chemicals. Hang them up rather than leaving them crumpled in the bucket, where they can be damaged by tools, saws and debris."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a harness in a bucket truck?",
+    "a": "Yes. Operators in bucket trucks and boom lifts are generally required to wear a full body harness and lanyard attached to the designated anchor."
+   },
+   {
+    "q": "Is a scissor lift harness required?",
+    "a": "Requirements vary. Guardrails are the main protection, but many employers and manufacturers require a harness and restraint lanyard. Check your lift manual and policy."
+   },
+   {
+    "q": "Can I use my tree saddle for aerial lift fall protection?",
+    "a": "No. A tree climbing saddle is a work positioning harness. Use a full body fall arrest harness."
+   },
+   {
+    "q": "How often should I replace my fall protection harness?",
+    "a": "Follow the manufacturer's guidance and retire it immediately after a fall or if inspection shows damage."
+   }
+  ]
+ }
+]

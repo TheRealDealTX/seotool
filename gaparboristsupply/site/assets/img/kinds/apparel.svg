@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Hooded sweatshirt</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M86 72 Q88 30 120 30 Q152 30 154 72 Z" fill="#6b8f3e"/>
+<path d="M78 70 L40 94 L26 178 L52 184 L66 122 Z" fill="#2f5d3a"/>
+<path d="M162 70 L200 94 L214 178 L188 184 L174 122 Z" fill="#2f5d3a"/>
+<path d="M78 70 L162 70 L172 196 L68 196 Z" fill="#2f5d3a"/>
+<path d="M96 70 Q120 98 144 70 Q140 46 120 46 Q100 46 96 70 Z" fill="#1f2a1f"/>
+<rect x="68" y="182" width="104" height="14" rx="3" fill="#6b8f3e"/>
+<path d="M90 140 h60 l10 34 h-80 z" fill="#6b8f3e"/>
+<path d="M110 84 L108 116 M130 84 L132 116" fill="none" stroke="#f4efe2" stroke-width="3"/>
+<circle cx="108" cy="118" r="3" fill="#f26b1d" stroke="none"/><circle cx="132" cy="118" r="3" fill="#f26b1d" stroke="none"/>
+<path d="M150 108 l6 -10 l6 10 z" fill="#f26b1d"/>
+</g>
+</svg>

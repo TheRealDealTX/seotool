@@ -1,0 +1,429 @@
+[
+ {
+  "path": "/16-strand-climbing-rope/sassafras-16-strand-climbing-rope/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "tier": "standard",
+  "keywords": [
+   "16 strand climbing rope (vol 70, pos 26)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/24-strand-climbing-rope/courant-kalimba-bubblegum-11-9mm-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "full",
+  "keywords": [
+   "bubble gum rope (vol 90, pos 5)",
+   "courant kalimba (vol 30, pos 2)"
+  ],
+  "traffic": 3.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/24-strand-climbing-rope/yale-poison-moon-11-7mm-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "full",
+  "keywords": [
+   "poison ivy rope (vol 50, pos 1)"
+  ],
+  "traffic": 6.0,
+  "backlinks": 1
+ },
+ {
+  "path": "/accessory-carabiners/notch-magneato-rope-runner-tether/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "magneato (vol 140, pos 30)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/adjustable-slings/1-2-whoopie-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "standard",
+  "keywords": [
+   "whoopie slings (vol 210, pos 39)",
+   "whoopie sling arborist (vol 40, pos 35)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/auto-locking-carabiners/husqvarna-d-shaped-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard",
+  "keywords": [
+   "d shape carabiner (vol 260, pos 40)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/battery-powered-equipment/husqvarna-350i-power-axe-battery-powered-chainsaw/",
+  "category": "/jobsite/power-equipment/battery-powered-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna power axe 350i chainsaw (vol 590, pos 28)",
+   "husqvarna power axe 350i (vol 390, pos 34)",
+   "husqvarna 350i power axe battery chainsaw kit (vol 320, pos 27)",
+   "husqvarna power axe 350i battery powered chainsaw (vol 210, pos 38)",
+   "husqvarna 350i (vol 170, pos 40)",
+   "husqvarna power axe 350i electric chainsaw (vol 110, pos 28)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/battery-powered-equipment/husqvarna-t542ixp-top-handle-battery-powered-chainsaw-kit/",
+  "category": "/jobsite/power-equipment/battery-powered-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 542i xp (vol 140, pos 24)",
+   "husqvarna 542i xp (vol 140, pos 29)",
+   "t542i xp (vol 90, pos 37)",
+   "husqvarna 542i xp battery chainsaw (vol 40, pos 34)",
+   "husqvarna t542i xp chainsaw (vol 40, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 2
+ },
+ {
+  "path": "/blades/notch-13-tri-edge-saw-blade/",
+  "category": "/cutting-and-pruning/blades/",
+  "tier": "standard",
+  "keywords": [
+   "notch blade (vol 90, pos 22)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-330lk-string-trimmer/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 330lk (vol 1600, pos 12)",
+   "husqvarna 330lk attachments (vol 590, pos 19)",
+   "330lk husqvarna (vol 390, pos 3)",
+   "330lk husqvarna (vol 390, pos 3)",
+   "330lk husqvarna (vol 390, pos 14)",
+   "husqvarna 330lk weed eater (vol 170, pos 4)"
+  ],
+  "traffic": 41.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-525l-gas-powered-string-trimmer/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 525l (vol 1600, pos 25)",
+   "525l husqvarna (vol 480, pos 5)",
+   "525l husqvarna (vol 480, pos 11)",
+   "husqvarna 525ls (vol 320, pos 58)",
+   "husqvarna 525l trimmer price (vol 210, pos 5)",
+   "husqvarna 525l weed eater (vol 210, pos 11)"
+  ],
+  "traffic": 28.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-525lk-combination-tool-string-trimmer/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 525 (vol 320, pos 2)",
+   "husqvarna 525 (vol 320, pos 1)",
+   "husqvarna 525lk (vol 260, pos 3)",
+   "husqvarna 525 weed eater (vol 110, pos 4)",
+   "525lk (vol 90, pos 5)",
+   "525 husqvarna (vol 70, pos 2)"
+  ],
+  "traffic": 42.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-590bts-pro-backpack-blower/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 590bts backpack blower (vol 390, pos 26)",
+   "590bts (vol 170, pos 31)",
+   "husqvarna 590bts for sale (vol 70, pos 49)",
+   "husqvarna 590bts leaf blower (vol 50, pos 37)",
+   "husqvarna 590bts leaf blower (vol 50, pos 38)",
+   "husqvarna 590bts price (vol 50, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-k970-power-cutter/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna k970 (vol 720, pos 22)",
+   "k970 husqvarna (vol 320, pos 50)",
+   "husqvarna k970 saw (vol 260, pos 48)",
+   "husqvarna k 970 (vol 210, pos 60)",
+   "k970 (vol 210, pos 46)",
+   "k970 saw (vol 210, pos 57)"
+  ],
+  "traffic": 1.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/books-and-training-materials/ansi-a300-standard-for-tree-care/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard",
+  "keywords": [
+   "ansi a300 (vol 320, pos 39)",
+   "ansi a300 pruning standards (vol 170, pos 64)",
+   "ansi 300 (vol 110, pos 46)",
+   "ansi a300 standards (vol 90, pos 53)",
+   "ansi a300 tree care standards (vol 90, pos 43)",
+   "isa ansi a300 pruning standards (vol 90, pos 45)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/books-and-training-materials/ansi-z133-safety-standard-for-tree-work/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard",
+  "keywords": [
+   "ansi z133 (vol 320, pos 23)",
+   "z133 (vol 170, pos 21)",
+   "ansi z133 safety standard (vol 30, pos 17)",
+   "anzi z133 (vol 30, pos 21)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/books-and-training-materials/certified-arborist-study-guide/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard",
+  "keywords": [
+   "arborists certification study guide (vol 320, pos 37)",
+   "isa arborist study guide (vol 320, pos 25)",
+   "isa study guide (vol 210, pos 37)",
+   "isa arborist certification study guide (vol 170, pos 39)",
+   "isa book (vol 170, pos 36)",
+   "arborist certification study guide (vol 140, pos 35)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-chain/husqvarna-3-8-x-050-full-comp-chainsaw-chain/",
+  "category": "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna chainsaw chain (vol 880, pos 4)",
+   "husqvarna saw chain (vol 480, pos 10)",
+   "chainsaw chain for husqvarna (vol 390, pos 3)",
+   "husqvarna chainsaw chains (vol 320, pos 11)",
+   "husqvarna chain (vol 260, pos 11)",
+   "husqvarna chains (vol 170, pos 6)"
+  ],
+  "traffic": 49.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-chain/husqvarna-3-8-x-063-gauge-chainsaw-chain/",
+  "category": "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/",
+  "tier": "standard",
+  "keywords": [
+   "chainsaw blade husqvarna (vol 210, pos 13)",
+   "36 inch chainsaw bar and chain (vol 210, pos 44)",
+   "36 inch chainsaw chain (vol 70, pos 12)",
+   "husqvarna 36 inch chainsaw (vol 40, pos 47)",
+   "36 chain (vol 30, pos 13)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-chain/husqvarna-sp33g-semi-chisel-chain-325-x-050-gauge/",
+  "category": "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna x cut sp33g 20 inch chainsaw chain (vol 110, pos 34)",
+   "sp33g chain (vol 90, pos 4)",
+   "husqvarna x cut sp33g (vol 70, pos 2)",
+   "husqvarna sp33g chain (vol 70, pos 4)",
+   "husqvarna sp33g (vol 50, pos 22)",
+   "sp33g (vol 50, pos 23)"
+  ],
+  "traffic": 11.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-chaps/economy-apron-style-chainsaw-chaps/",
+  "category": "/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-chaps/",
+  "tier": "standard",
+  "keywords": [
+   "apron style chainsaw chaps (vol 110, pos 39)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-lanyards/bungee-chainsaw-lanyard-with-snap/",
+  "category": "/climbing/climbing-gear/chainsaw-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "bungee lanyard (vol 110, pos 8)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaw-lanyards/bungee-modular-chainsaw-lanyard-system/",
+  "category": "/climbing/climbing-gear/chainsaw-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "weaver leather bungee chain strap (vol 70, pos 42)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/chainsaws/husqvarna-562xp-mark-ii-chainsaw/",
+  "category": "/jobsite/power-equipment/chainsaws/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna 562xp (vol 2900, pos 50)",
+   "562 xp husqvarna (vol 1000, pos 43)",
+   "562xp (vol 1000, pos 33)",
+   "husqvarna 562 (vol 880, pos 44)",
+   "husqvarna chainsaw 562xp (vol 480, pos 52)",
+   "husqvarna 562xp mark ii (vol 480, pos 32)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climber-pads/replacement-pads-for-gecko-climbers/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard",
+  "keywords": [
+   "gecko patch (vol 90, pos 67)",
+   "gecko climbing gear (vol 50, pos 14)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing-rope/jameson-rope-sniper-rope-placement-tool/",
+  "category": "/rope/climbing-rope/",
+  "tier": "standard",
+  "keywords": [
+   "jameson rope sniper (vol 70, pos 9)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-grigri-belay-device/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "full",
+  "keywords": [
+   "grigri (vol 5400, pos 86)",
+   "petzl grigri (vol 1600, pos 66)",
+   "grigris (vol 1300, pos 88)",
+   "grigri belay device (vol 1000, pos 45)",
+   "belay device petzl grigri (vol 1000, pos 47)",
+   "petzl belay device (vol 210, pos 49)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-grigri-plus-belay-device/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "full",
+  "keywords": [
+   "grigri (vol 5400, pos 57)",
+   "grigri (vol 5400, pos 60)",
+   "petzl grigri belay device (vol 1300, pos 74)",
+   "grigris (vol 1300, pos 77)",
+   "grigri belay device (vol 1000, pos 68)",
+   "grigri climbing (vol 390, pos 30)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-huit-figure-8-descender/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "full",
+  "keywords": [
+   "figure 8 descender (vol 390, pos 43)",
+   "climbing figure 8 descender (vol 40, pos 34)",
+   "figure 8 climbing descender (vol 40, pos 35)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/handled-ascenders/petzl-ascension-hand-ascender/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "full",
+  "keywords": [
+   "petzl ascender (vol 590, pos 50)",
+   "petzl climbing ascender (vol 260, pos 50)",
+   "ascender for climbing (vol 260, pos 60)",
+   "hand ascender (vol 260, pos 35)",
+   "hand ascender (vol 260, pos 47)",
+   "jumar petzl (vol 210, pos 51)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/hitch-hiker-2/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/",
+  "tier": "full",
+  "keywords": [
+   "hitch hiker 2 (vol 480, pos 3)",
+   "hitchhicker bonchovy west 4pk (vol 260, pos 55)",
+   "hitchhiker 2 (vol 110, pos 7)",
+   "hitch climber (vol 110, pos 36)",
+   "hitch breaker (vol 40, pos 31)"
+  ],
+  "traffic": 13.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-mechanical-friction-device/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/",
+  "tier": "full",
+  "keywords": [
+   "petzl zigzag (vol 880, pos 18)",
+   "petzl zigzag plus (vol 320, pos 11)",
+   "zig zag climbing (vol 260, pos 42)",
+   "petzl zig zag (vol 260, pos 35)",
+   "petzl zig zag (vol 260, pos 37)",
+   "zigzag climbing (vol 210, pos 20)"
+  ],
+  "traffic": 3.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/isc-rope-wrench/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/",
+  "tier": "full",
+  "keywords": [
+   "rope wrench (vol 590, pos 44)",
+   "rope wrench (vol 590, pos 53)",
+   "isc rope wrench (vol 70, pos 31)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ }
+]

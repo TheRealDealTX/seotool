@@ -1,0 +1,384 @@
+[
+ {
+  "path": "/climbing/climbing-gear/gear-storage/gear-bags/edelrid-kurt-haulbag/",
+  "category": "/climbing/climbing-gear/gear-storage/gear-bags/",
+  "tier": "standard",
+  "keywords": [
+   "climbing haul bag (vol 90, pos 59)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/gear-bags/petzl-duffel-85l-large-gear-bag/",
+  "category": "/climbing/climbing-gear/gear-storage/gear-bags/",
+  "tier": "full",
+  "keywords": [
+   "85l backpack (vol 140, pos 26)",
+   "85l backpack (vol 140, pos 32)",
+   "85l (vol 50, pos 2)"
+  ],
+  "traffic": 1.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/rope-bags/courant-cross-rope-bag-23-36-l/",
+  "category": "/climbing/climbing-gear/gear-storage/rope-bags/",
+  "tier": "standard",
+  "keywords": [
+   "courant bag (vol 30, pos 30)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/rope-bags/treehog-40l-rope-bag/",
+  "category": "/climbing/climbing-gear/gear-storage/rope-bags/",
+  "tier": "standard",
+  "keywords": [
+   "tree hog (vol 40, pos 35)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/big-jims-hitch-breaker/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/",
+  "tier": "full",
+  "keywords": [
+   "hitch breaker (vol 40, pos 1)",
+   "hitch breaker (vol 40, pos 3)",
+   "climbing hitch (vol 40, pos 28)"
+  ],
+  "traffic": 9.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/dmm-hitch-climber-kit/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/",
+  "tier": "standard",
+  "keywords": [
+   "hitch climber pulley (vol 210, pos 17)",
+   "hitch climber (vol 110, pos 14)",
+   "hitch climber (vol 110, pos 16)",
+   "climbers kit dnd 5e (vol 70, pos 16)",
+   "hitch climber eccentric red blue pulley (vol 40, pos 28)",
+   "hitch climber eccentric red/blue (vol 40, pos 39)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-hand-spliced-eye-to-eye/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/",
+  "tier": "standard",
+  "keywords": [
+   "yale prism (vol 40, pos 66)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-8mm-bee-line-split-tail/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard",
+  "keywords": [
+   "split tale (vol 50, pos 14)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/mechanical-friction-devices/mrs-climbing-devices/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/",
+  "tier": "full",
+  "keywords": [
+   "mrs climbing kit (vol 40, pos 3)"
+  ],
+  "traffic": 3.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/mechanical-friction-devices/srs-climbing-devices/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/",
+  "tier": "standard",
+  "keywords": [
+   "mechanical prusik (vol 110, pos 50)",
+   "climber's support (vol 90, pos 56)",
+   "microclimber (vol 50, pos 80)",
+   "climber tools (vol 40, pos 55)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/cmi-micro-rescue-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard",
+  "keywords": [
+   "cmi micro rescue pulley 31 kn (vol 110, pos 22)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/dmm-hitch-climber-eccentric-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard",
+  "keywords": [
+   "hitch climber pulley (vol 210, pos 15)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/other-gear/dmm-captain-hook/",
+  "category": "/climbing/climbing-gear/other-gear/",
+  "tier": "standard",
+  "keywords": [
+   "dmm captain hook (vol 140, pos 23)",
+   "captain hook dmm (vol 70, pos 28)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/other-gear/the-sawpod/",
+  "category": "/climbing/climbing-gear/other-gear/",
+  "tier": "full",
+  "keywords": [],
+  "traffic": 0,
+  "backlinks": 1
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/dmm-anchor-rings/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "full",
+  "keywords": [
+   "dmm anchor rings (vol 480, pos 32)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/petzl-ring-open/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "standard",
+  "keywords": [
+   "petzl ring open (vol 140, pos 49)",
+   "petzl open ring (vol 40, pos 51)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/petzl-ring/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "standard",
+  "keywords": [
+   "petzl ring (vol 70, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/swivels/cmi-california-swivel/",
+  "category": "/climbing/climbing-gear/swivels/",
+  "tier": "standard",
+  "keywords": [
+   "cmi gear (vol 110, pos 22)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/swivels/petzl-micro-swivel-open/",
+  "category": "/climbing/climbing-gear/swivels/",
+  "tier": "standard",
+  "keywords": [
+   "petzl micro swivel (vol 70, pos 33)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/helmets/husqvarna-technical-forestry-helmet/",
+  "category": "/climbing/helmets/",
+  "tier": "full",
+  "keywords": [
+   "husqvarna helmet (vol 480, pos 44)",
+   "husqvarna hard hat (vol 140, pos 39)",
+   "husqvarna hard hat (vol 140, pos 50)",
+   "husqvarna forest helmet (vol 110, pos 41)",
+   "helmet husqvarna (vol 90, pos 34)",
+   "husqvarna safety helmet (vol 70, pos 29)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/helmets/kask-super-plasma-climbing-helmet/",
+  "category": "/climbing/helmets/",
+  "tier": "full",
+  "keywords": [
+   "kask super plasma (vol 390, pos 38)",
+   "super plasma helmet (vol 170, pos 33)",
+   "super plasma helmet (vol 170, pos 39)",
+   "kask arborist helmet (vol 140, pos 31)",
+   "kask climbing helmets (vol 30, pos 24)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/helmets/petzl-vertex-vent/",
+  "category": "/climbing/helmets/",
+  "tier": "full",
+  "keywords": [
+   "petzl helmet (vol 720, pos 50)",
+   "petzl vertex (vol 260, pos 43)",
+   "petzl vertex vent (vol 210, pos 38)",
+   "petzl helm (vol 140, pos 51)",
+   "petzl vertex vent helmet (vol 90, pos 42)",
+   "petzel vertex (vol 50, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/helmets/pfanner-protos-integral-arborist-helmet-system/",
+  "category": "/climbing/helmets/",
+  "tier": "full",
+  "keywords": [
+   "protos helmet (vol 1600, pos 38)",
+   "protos arborist helmet (vol 390, pos 37)",
+   "protos 2 (vol 320, pos 45)",
+   "proto helmet (vol 170, pos 37)",
+   "protos hard hat (vol 140, pos 32)",
+   "protos helmet limited edition (vol 110, pos 47)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-agility-saddle/",
+  "category": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "tier": "standard",
+  "keywords": [
+   "buckingham tree saddle (vol 70, pos 51)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-buckcraft-saddle/",
+  "category": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "tier": "standard",
+  "keywords": [
+   "buckingham tree saddle (vol 70, pos 25)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergovation/",
+  "category": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "tier": "standard",
+  "keywords": [
+   "buckingham ergovation (vol 40, pos 8)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/petzl-sequoia-climbing-harness/",
+  "category": "/climbing/saddles-and-harnesses/european-saddles/",
+  "tier": "standard",
+  "keywords": [
+   "petzl sequoia (vol 320, pos 16)",
+   "sequoia harness (vol 110, pos 18)",
+   "petzl sequoia tree care harness (vol 90, pos 21)",
+   "petzl sequoia harness (vol 90, pos 5)",
+   "petzl sequoia tree climbing harness (vol 70, pos 12)",
+   "petzl sequoia climbing harness (vol 70, pos 13)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/treemotion-pro-climbing-harness/",
+  "category": "/climbing/saddles-and-harnesses/european-saddles/",
+  "tier": "standard",
+  "keywords": [
+   "treemotion saddle (vol 170, pos 57)",
+   "treemotion (vol 110, pos 63)",
+   "treemotion pro (vol 110, pos 48)",
+   "treemotion harness (vol 70, pos 23)",
+   "treemotion harness (vol 70, pos 46)",
+   "treemotion evo (vol 70, pos 72)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/full-body-harnesses/",
+  "category": "/climbing/saddles-and-harnesses/",
+  "tier": "standard",
+  "keywords": [
+   "full body climbing harness (vol 320, pos 17)",
+   "full body climbing harness (vol 320, pos 20)",
+   "full body zipline harness (vol 50, pos 49)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-accessories/",
+  "category": "/climbing/saddles-and-harnesses/",
+  "tier": "standard",
+  "keywords": [
+   "saddle hip pinch eliminator (vol 70, pos 40)",
+   "saddlebag solutions (vol 50, pos 55)",
+   "saddlebag solutions (vol 50, pos 59)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-bungee-chest-harness/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard",
+  "keywords": [
+   "treerex (vol 170, pos 45)",
+   "treerex (vol 170, pos 51)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-chest-box/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "full",
+  "keywords": [
+   "part chest (vol 390, pos 36)",
+   "caving chest (vol 30, pos 54)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/weaver-saddles/",
+  "category": "/climbing/saddles-and-harnesses/",
+  "tier": "full",
+  "keywords": [
+   "weaver arborist (vol 320, pos 8)",
+   "weaver saddle (vol 210, pos 6)",
+   "weaver cougar saddle (vol 140, pos 11)",
+   "weaver saddles (vol 110, pos 4)",
+   "weaver climbing saddle (vol 90, pos 2)",
+   "weaver arborist saddle (vol 50, pos 5)"
+  ],
+  "traffic": 20.0,
+  "backlinks": 0
+ }
+]

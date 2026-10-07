@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img">
+<title>Gap Arborist Supply</title>
+<g stroke="#1f2a1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 26 V44" fill="none" stroke="#1f2a1f" stroke-width="7"/>
+<path d="M32 26 V44" fill="none" stroke="#f26b1d" stroke-width="4"/>
+<path d="M30.5 30 l3 2 M30.5 35 l3 2 M30.5 40 l3 2" fill="none" stroke="#f4efe2" stroke-width="1.2"/>
+<path d="M32 3 C42 3 47 9 46 15 C53 17 54 27 48 30 C46 36 38 36 35 32 H29 C26 36 18 36 16 30 C10 27 11 17 18 15 C17 9 22 3 32 3 Z" fill="#2f5d3a"/>
+<path d="M32 32 V20 M32 25 L25 19 M32 23 L39 17" fill="none" stroke="#f26b1d" stroke-width="2.5"/>
+<path d="M27 48 Q27 44 32 44 Q37 44 37 49 V55 Q37 61 32 61 Q27 61 27 56 Z" fill="none" stroke="#1f2a1f" stroke-width="5"/>
+<path d="M27 48 Q27 44 32 44 Q37 44 37 49 V55 Q37 61 32 61 Q27 61 27 56 Z" fill="none" stroke="#f26b1d" stroke-width="2.5"/>
+<path d="M27 50 V54" fill="none" stroke="#f4efe2" stroke-width="2.5"/>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Air filter and sprocket</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="22" y="78" width="110" height="100" rx="16" fill="#f26b1d"/>
+<rect x="36" y="92" width="82" height="72" rx="8" fill="#f4efe2"/>
+<path d="M48 92 v72 M60 92 v72 M72 92 v72 M84 92 v72 M96 92 v72 M108 92 v72" fill="none" stroke="#9aa5a8"/>
+<rect x="36" y="92" width="82" height="72" rx="8" fill="none"/>
+<polygon points="206,140 215.5,146.9 213.8,153.6 202.3,155.4 199.5,160 203.1,171.1 197.9,175.6 187.4,170.3 182.5,172.3 178.9,183.5 172,184 166.7,173.6 161.5,172.3 152,179.2 146.1,175.6 148,164 144.5,160 132.8,160 130.2,153.6 138.4,145.3 138,140 128.5,133.1 130.2,126.4 141.7,124.6 144.5,120 140.9,108.9 146.1,104.4 156.6,109.7 161.5,107.7 165.1,96.5 172,96 177.3,106.4 182.5,107.7 192,100.8 197.9,104.4 196,116 199.5,120 211.2,120 213.8,126.4 205.6,134.7" fill="#9aa5a8"/>
+<circle cx="172" cy="140" r="22" fill="#2f5d3a"/>
+<circle cx="172" cy="140" r="9" fill="#f4efe2"/>
+</g>
+</svg>

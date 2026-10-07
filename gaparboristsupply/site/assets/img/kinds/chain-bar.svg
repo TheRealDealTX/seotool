@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Chainsaw guide bar and chain</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="16" y="96" width="208" height="50" rx="25" fill="#1f2a1f"/>
+<rect x="16" y="96" width="208" height="50" rx="25" fill="none" stroke="#9aa5a8" stroke-width="6" stroke-dasharray="6 6"/>
+<rect x="23" y="103" width="194" height="36" rx="18" fill="#9aa5a8"/>
+<rect x="66" y="113" width="84" height="16" rx="5" fill="#f26b1d"/>
+<rect x="172" y="116" width="30" height="10" rx="5" fill="#1f2a1f"/>
+<circle cx="40" cy="121" r="7" fill="#f4efe2"/>
+<circle cx="40" cy="121" r="2" fill="#1f2a1f"/>
+<circle cx="160" cy="121" r="3" fill="#1f2a1f"/>
+</g>
+</svg>

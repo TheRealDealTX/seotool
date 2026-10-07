@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Felling axe and wedge</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M84 200 L142 44" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M84 200 L142 44" fill="none" stroke="#8a5a36" stroke-width="12" />
+<path d="M118 32 L160 44 L156 70 L118 62 Q98 74 74 72 Q86 50 74 26 Q98 24 118 32 Z" fill="#9aa5a8"/>
+<path d="M80 32 Q90 50 80 66" stroke="#f4efe2" fill="none"/>
+<path d="M120 200 L214 200 L214 166 Z" fill="#f26b1d"/>
+<path d="M150 194 L208 178 M176 194 L208 186" fill="none"/>
+</g>
+</svg>

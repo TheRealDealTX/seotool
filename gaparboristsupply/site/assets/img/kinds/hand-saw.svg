@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Curved pruning hand saw</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<polygon points="30,112 31.7,118.9 38.6,117.2 40.4,124 47.1,122 49.2,128.6 55.7,126.4 57.9,132.9 64.3,130.3 66.7,136.7 72.9,133.8 75.5,140 81.4,136.9 84.2,143 90,139.5 93,145.4 98.6,141.7 101.8,147.5 107.1,143.5 110.6,149.1 115.7,144.9 119.5,150.3 124.3,145.8 128.3,151 132.9,146.3 137.1,151.3 141.4,146.4 145.9,151.2 150,146" fill="#9aa5a8"/>
+<path d="M150 108 L30 98 Q20 104 30 112 Q90 150 150 146 Z" fill="#9aa5a8"/>
+<path d="M140 116 L50 108" stroke="#f4efe2" stroke-width="3" fill="none"/>
+<path d="M144 102 h44 q24 0 30 24 q4 18 -8 30 l-20 22 q-8 8 -16 0 l-4 -6 q-4 -8 2 -14 l8 -10 q4 -6 -2 -8 h-34 z" fill="#f26b1d"/>
+<circle cx="160" cy="122" r="5" fill="#9aa5a8"/>
+<circle cx="182" cy="122" r="5" fill="#9aa5a8"/>
+<path d="M200 140 l-12 14" fill="none"/>
+</g>
+</svg>

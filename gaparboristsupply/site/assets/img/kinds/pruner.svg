@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Bypass hand pruner</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M112 108 Q92 150 74 198" fill="none" stroke="#1f2a1f" stroke-width="24"/><path d="M112 108 Q92 150 74 198" fill="none" stroke="#f26b1d" stroke-width="18" />
+<path d="M132 108 Q150 150 166 198" fill="none" stroke="#1f2a1f" stroke-width="24"/><path d="M132 108 Q150 150 166 198" fill="none" stroke="#f26b1d" stroke-width="18" />
+<path d="M110 124 l8 6 l-8 6 l8 6 l-8 6 M130 124 l-8 6 l8 6 l-8 6 l8 6" fill="none"/>
+<path d="M118 112 Q150 76 148 44 Q170 70 138 116 Z" fill="#2f5d3a"/>
+<path d="M122 108 Q98 66 124 28 Q148 56 132 108 Z" fill="#9aa5a8"/>
+<path d="M124 40 Q112 66 124 96" stroke="#f4efe2" fill="none"/>
+<circle cx="124" cy="108" r="9" fill="#c8e03c"/>
+<circle cx="124" cy="108" r="3" fill="#1f2a1f"/>
+</g>
+</svg>

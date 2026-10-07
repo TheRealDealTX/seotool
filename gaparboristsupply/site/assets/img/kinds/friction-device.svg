@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Mechanical rope friction device</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M146 102 L200 138" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M146 102 L200 138" fill="none" stroke="#2f5d3a" stroke-width="10" />
+<rect x="190" y="128" width="22" height="20" rx="8" transform="rotate(34 201 138)" fill="#f26b1d"/>
+<rect x="90" y="38" width="60" height="134" rx="26" fill="#f26b1d"/>
+<circle cx="122" cy="78" r="12" fill="#9aa5a8"/>
+<circle cx="118" cy="122" r="12" fill="#9aa5a8"/>
+<path d="M106 18 V54 Q106 66 122 66 Q138 70 134 88 Q126 108 106 112 Q96 122 104 136 L102 210" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M106 18 V54 Q106 66 122 66 Q138 70 134 88 Q126 108 106 112 Q96 122 104 136 L102 210" fill="none" stroke="#c8e03c" stroke-width="9" />
+<circle cx="132" cy="180" r="12" fill="#9aa5a8"/>
+<circle cx="132" cy="180" r="5" fill="#1f2a1f"/>
+<circle cx="122" cy="78" r="3" fill="#1f2a1f"/><circle cx="118" cy="122" r="3" fill="#1f2a1f"/>
+</g>
+</svg>

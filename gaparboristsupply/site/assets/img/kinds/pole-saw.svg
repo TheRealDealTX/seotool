@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Pole pruning saw</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M38 202 L168 72" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M38 202 L168 72" fill="none" stroke="#2f5d3a" stroke-width="10" />
+<path d="M60 180 L84 156" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M60 180 L84 156" fill="none" stroke="#f26b1d" stroke-width="12" />
+<path d="M118 122 L130 110" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M118 122 L130 110" fill="none" stroke="#c8e03c" stroke-width="12" />
+<polygon points="172,84 170.9,77 177.7,78.9 176.3,71.8 183.4,73.3 181.7,66.3 188.9,67.3 187,60.2 194.3,60.9 192.2,53.8 199.7,54 197.4,46.8 204.9,46.7 202.4,39.5 210,38.9 207.4,31.6 215.1,30.7 212.3,23.4 220,22" fill="#9aa5a8"/>
+<path d="M158 76 Q186 40 218 20 Q206 56 176 90 Z" fill="#9aa5a8"/>
+<path d="M164 72 Q140 50 150 26 Q156 18 164 24" fill="none" stroke="#1f2a1f" stroke-width="12"/><path d="M164 72 Q140 50 150 26 Q156 18 164 24" fill="none" stroke="#9aa5a8" stroke-width="6" />
+<rect x="158" y="68" width="22" height="18" rx="4" transform="rotate(-45 169 77)" fill="#1f2a1f"/>
+<circle cx="182" cy="66" r="3" fill="#f4efe2" stroke="none"/>
+</g>
+</svg>

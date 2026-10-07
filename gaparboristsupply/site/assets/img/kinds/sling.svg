@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Eye-and-eye rigging sling</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M74 108 Q120 196 168 128" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M74 108 Q120 196 168 128" fill="none" stroke="#f26b1d" stroke-width="12" />
+<path d="M74 108 Q120 196 168 128" fill="none" stroke="#1f2a1f" stroke-width="2" stroke-dasharray="3 7"/>
+<path d="M74 108 A28 20 -30 1 1 82 96" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M74 108 A28 20 -30 1 1 82 96" fill="none" stroke="#f26b1d" stroke-width="10" />
+<path d="M166 132 A28 20 30 1 0 178 122" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M166 132 A28 20 30 1 0 178 122" fill="none" stroke="#f26b1d" stroke-width="10" />
+<rect x="70" y="102" width="20" height="26" rx="6" transform="rotate(-30 80 115)" fill="#2f5d3a"/>
+<rect x="152" y="118" width="20" height="26" rx="6" transform="rotate(35 162 131)" fill="#2f5d3a"/>
+</g>
+</svg>

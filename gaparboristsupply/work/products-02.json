@@ -1,0 +1,386 @@
+[
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/notch-flow-adjustable-rope-wrench/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/",
+  "tier": "standard",
+  "keywords": [
+   "notch rope wrench (vol 70, pos 29)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/kong-duck-emergency-belay-device/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "full",
+  "keywords": [
+   "kong duck ascender (vol 480, pos 43)",
+   "duck clamp (vol 90, pos 63)",
+   "duck kong (vol 70, pos 27)",
+   "kong duck rope clamp (vol 70, pos 53)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-replacement-cam/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard",
+  "keywords": [
+   "position cam (vol 90, pos 42)",
+   "art positioner (vol 70, pos 40)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/climb-right-rope-grab/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard",
+  "keywords": [
+   "grab a rope (vol 140, pos 25)",
+   "grab rope (vol 140, pos 23)",
+   "gripping rope (vol 70, pos 61)",
+   "climb right rope grab (vol 30, pos 7)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/petzl-micrograb-lanyard-adjuster/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard",
+  "keywords": [
+   "petzl rope grab (vol 140, pos 54)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/accessory-carabiners/petzl-mino-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "petzl mino carabiner (vol 40, pos 14)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-shadow-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "full",
+  "keywords": [
+   "dmm carabiner (vol 390, pos 28)",
+   "dmm carabiner (vol 390, pos 34)",
+   "dmm carabiners (vol 210, pos 25)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/petzl-amd-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "full",
+  "keywords": [
+   "petzl carabiner (vol 880, pos 35)",
+   "petzl carabiners (vol 390, pos 33)",
+   "petzl carabiners (vol 390, pos 42)",
+   "petzl climbing carabiner (vol 70, pos 27)",
+   "petzl am d carabiner (vol 40, pos 53)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/hardware/notch-v3-quickie/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard",
+  "keywords": [
+   "notch quickie (vol 140, pos 34)",
+   "notch v3 quickie (vol 90, pos 22)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-speedy-link/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard",
+  "keywords": [
+   "quick link climbing (vol 40, pos 61)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/hardware/stainless-steel-twisted-shackle/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard",
+  "keywords": [
+   "twist shackle (vol 50, pos 43)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-xsre-carabiners/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "standard",
+  "keywords": [
+   "dmm xsre (vol 110, pos 32)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/petzl-rollclip-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "standard",
+  "keywords": [
+   "petzl rollclip (vol 170, pos 46)",
+   "rollclip petzl (vol 90, pos 52)",
+   "roller carabiner (vol 70, pos 60)",
+   "petzl pulley carabiner (vol 70, pos 48)",
+   "petzl carabiner with pulley (vol 70, pos 57)",
+   "petzl roll clip (vol 50, pos 52)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/rock-exotica-rockx-accessory-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "full",
+  "keywords": [
+   "rockx accessory carabiner lightweight accessories (vol 70, pos 2)"
+  ],
+  "traffic": 9.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-amd-screw-lock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "tier": "standard",
+  "keywords": [
+   "petzl locking carabiner (vol 70, pos 23)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-william-screw-lock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "tier": "full",
+  "keywords": [
+   "screw lock carabiner (vol 590, pos 10)",
+   "screw in carabiner (vol 140, pos 10)",
+   "carabiner screw (vol 110, pos 4)",
+   "carabiner with screw (vol 90, pos 13)",
+   "screw lock carabiners (vol 70, pos 11)",
+   "petzl william locking carabiner belaying (vol 70, pos 18)"
+  ],
+  "traffic": 3.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/smc-large-heat-treated-steel-screw-locking-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "tier": "standard",
+  "keywords": [
+   "extra large heavy duty carabiner (vol 170, pos 36)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/aluminum-double-locking-snap-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "tier": "standard",
+  "keywords": [
+   "double hook apparatus (vol 40, pos 52)",
+   "aluminum snap hook (vol 30, pos 26)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/petzl-eashook-open-rope-snap/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "tier": "standard",
+  "keywords": [
+   "petzl eashook (vol 70, pos 46)",
+   "eashook petzl (vol 40, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/steel-locking-rope-snap/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "tier": "standard",
+  "keywords": [
+   "forest snap (vol 90, pos 48)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/steel-carabiners/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "carabiner steel (vol 50, pos 21)",
+   "power carabiner steel (vol 40, pos 37)",
+   "steel carabiner camp (vol 40, pos 54)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/chainsaw-lanyards/weaver-chainsaw-strap-with-snap/",
+  "category": "/climbing/climbing-gear/chainsaw-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "chainsaw belt (vol 70, pos 25)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/2-in-1-lanyards/2-in-1-wire-core-lanyard/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "2 in 1 lanyard tree climbing (vol 110, pos 53)",
+   "2 in 1 lanyard (vol 70, pos 34)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/basic-adjustable-lanyards/adjustable-pole-strap/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "pole climbing straps (vol 110, pos 23)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/2-in-1-wire-core-flipline-kit/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "standard",
+  "keywords": [
+   "flip line (vol 170, pos 60)",
+   "flipper line (vol 110, pos 54)",
+   "2 in 1 lanyard tree climbing (vol 110, pos 72)",
+   "steel core flip line (vol 50, pos 25)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-grillon-hook-work-positioning-lanyard/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "full",
+  "keywords": [
+   "petzl grillon (vol 480, pos 46)",
+   "grillon (vol 390, pos 46)",
+   "grillon petzl (vol 210, pos 39)",
+   "petzl positioning lanyard (vol 30, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-zillon-lanyard/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "full",
+  "keywords": [
+   "zillon (vol 1000, pos 26)",
+   "petzl zillon (vol 260, pos 43)",
+   "petzl zillion (vol 50, pos 51)",
+   "petzl zillion (vol 50, pos 59)",
+   "petzl zillion (vol 50, pos 69)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/magnetic-lanyard-management-system/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "magnetic lanyard (vol 140, pos 6)",
+   "magnet lanyard (vol 40, pos 4)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/petzl-micrograb-lanyard-add-on-kit/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "rope grab petzl (vol 90, pos 40)",
+   "micrograb petzl (vol 40, pos 39)",
+   "petzl micrograb (vol 40, pos 39)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/wire-core-lanyards/1-2-wire-core-flipline/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/",
+  "tier": "standard",
+  "keywords": [
+   "flip line (vol 170, pos 51)",
+   "flipper line (vol 110, pos 84)",
+   "flipper line (vol 110, pos 88)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/friction-savers/art-ropeguide-twinline/",
+  "category": "/climbing/climbing-gear/friction-savers/",
+  "tier": "standard",
+  "keywords": [
+   "art rope (vol 210, pos 18)",
+   "ropeguide (vol 30, pos 10)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/friction-savers/cmi-anchor-sling/",
+  "category": "/climbing/climbing-gear/friction-savers/",
+  "tier": "full",
+  "keywords": [
+   "climbing sling (vol 720, pos 69)",
+   "anchor sling (vol 140, pos 82)",
+   "climbing sling anchor (vol 40, pos 44)",
+   "climbing sling anchor (vol 40, pos 48)",
+   "anchor slings (vol 40, pos 84)",
+   "sling anchor (vol 30, pos 51)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/climbing/climbing-gear/gear-storage/gear-bags/buckingham-haul-bag/",
+  "category": "/climbing/climbing-gear/gear-storage/gear-bags/",
+  "tier": "standard",
+  "keywords": [
+   "haul bag (vol 140, pos 38)",
+   "rock climbing haul bag (vol 90, pos 49)",
+   "buckingham climbing bag (vol 50, pos 13)",
+   "haul bags (vol 40, pos 40)",
+   "buckingham bag (vol 40, pos 13)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ }
+]

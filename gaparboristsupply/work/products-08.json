@@ -1,0 +1,405 @@
+[
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/",
+  "category": "/plant-care/cabling-and-bracing/cabling-hardware/",
+  "tier": "full",
+  "keywords": [
+   "eye lag screw (vol 480, pos 50)",
+   "galvanized eye screw (vol 30, pos 40)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/",
+  "category": "/plant-care/cabling-and-bracing/cabling-hardware/",
+  "tier": "full",
+  "keywords": [
+   "lag stud (vol 50, pos 82)",
+   "i lag (vol 40, pos 61)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 1
+ },
+ {
+  "path": "/plant-care/plant-health-care/lac-balsam-tree-wound-treatment/",
+  "category": "/plant-care/",
+  "tier": "standard",
+  "keywords": [
+   "lac balsam (vol 170, pos 29)",
+   "lac balsam tree wound dressing (vol 50, pos 29)",
+   "lak balsam (vol 40, pos 19)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/plant-care/planting/tree-support-web-for-staking-trees-250/",
+  "category": "/plant-care/planting/",
+  "tier": "full",
+  "keywords": [
+   "tree support (vol 1000, pos 26)",
+   "tree supports (vol 880, pos 32)",
+   "tree with support (vol 260, pos 17)",
+   "tree stake support (vol 210, pos 39)",
+   "stake support for trees (vol 210, pos 51)",
+   "support a tree (vol 110, pos 20)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/plant-care/planting/wire-rope-clamps/",
+  "category": "/plant-care/planting/",
+  "tier": "full",
+  "keywords": [
+   "wire rope clamp (vol 1900, pos 23)",
+   "wire rope clamps (vol 1600, pos 14)",
+   "rope clamp (vol 1600, pos 31)",
+   "wire rope clip (vol 1300, pos 3)",
+   "wire rope cable clamps (vol 1000, pos 7)",
+   "wire cable clamps (vol 1000, pos 22)"
+  ],
+  "traffic": 16.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/planting/duck-bill-earth-anchors-small/",
+  "category": "/plant-care/planting/",
+  "tier": "full",
+  "keywords": [
+   "duckbill anchors (vol 480, pos 42)",
+   "duckbill earth anchors (vol 170, pos 29)",
+   "duckbill anchor (vol 170, pos 50)",
+   "duckbill earth anchor (vol 140, pos 44)",
+   "duckbill anchor kit (vol 90, pos 35)",
+   "duck bill anchors (vol 70, pos 48)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/",
+  "category": "/climbing/spurs/replacement-gaffs-and-parts/",
+  "tier": "standard",
+  "keywords": [
+   "distel (vol 260, pos 53)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging-kits/speed-line-kit-with-carabiners/",
+  "category": "/rigging/rigging-kits/",
+  "tier": "full",
+  "keywords": [
+   "knot to attach line to carabiner (vol 390, pos 64)",
+   "speed line kit arborist (vol 110, pos 13)",
+   "speed line kit (vol 90, pos 17)",
+   "notch speedline kit (vol 40, pos 32)",
+   "arborist speedline kit (vol 40, pos 16)",
+   "monkey beaver speedline kit (vol 40, pos 24)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging-pulleys/rock-exotica-downrigger/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard",
+  "keywords": [
+   "what is a downrigger used for (vol 40, pos 19)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard",
+  "keywords": [
+   "arborist block (vol 110, pos 78)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard",
+  "keywords": [
+   "small pulleys for 1/8 in cord (vol 50, pos 41)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-small-rigging-plate/",
+  "category": "/rigging/blocks-and-other-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "rigging plate (vol 260, pos 20)",
+   "petzl paw (vol 90, pos 20)",
+   "petzl paw rigging plate (vol 30, pos 20)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "full",
+  "keywords": [
+   "double pulley system (vol 390, pos 42)",
+   "2 pulley system (vol 170, pos 45)",
+   "double pulleys (vol 140, pos 10)",
+   "double pully (vol 110, pos 43)",
+   "2 pulleys (vol 90, pos 15)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard",
+  "keywords": [
+   "petzl pulleys (vol 90, pos 35)",
+   "pulley tandem (vol 70, pos 23)",
+   "tandem pulley (vol 70, pos 31)",
+   "double tandem pulley (vol 40, pos 37)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "chain choker hook (vol 70, pos 34)",
+   "choker hooks (vol 50, pos 48)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "tier": "standard",
+  "keywords": [
+   "crosby chain connectors (vol 50, pos 18)",
+   "crosby chain link (vol 40, pos 46)",
+   "crosby chain connecting link (vol 40, pos 47)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/",
+  "category": "/rigging/blocks-and-other-hardware/rings-and-other-hardware/",
+  "tier": "full",
+  "keywords": [
+   "clevis (vol 9900, pos 24)",
+   "clevice (vol 720, pos 62)"
+  ],
+  "traffic": 6.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/lowering-devices/buckingham-medium-portawrap/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "full",
+  "keywords": [
+   "portawrap (vol 590, pos 9)",
+   "port a wrap (vol 320, pos 33)",
+   "porta wrap kit (vol 40, pos 14)"
+  ],
+  "traffic": 2.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/lowering-devices/good-rigging-control-system/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "full",
+  "keywords": [
+   "grcs rigging (vol 210, pos 6)",
+   "good rigging control system (vol 170, pos 19)",
+   "grcs tree rigging (vol 90, pos 5)",
+   "grcs rigging system (vol 50, pos 13)",
+   "gcrs system (vol 50, pos 11)",
+   "grcs winch (vol 40, pos 7)"
+  ],
+  "traffic": 3.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/lowering-devices/hobbs-h2-lowering-device/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "full",
+  "keywords": [
+   "how tall is powerhouse hobbs (vol 50, pos 88)",
+   "hobbs lowering device (vol 40, pos 1)",
+   "fracture hobb (vol 40, pos 53)"
+  ],
+  "traffic": 9.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/lowering-devices/large-portawrap-lowering-device/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "full",
+  "keywords": [
+   "porta wrap (vol 590, pos 29)",
+   "port-a-wrap (vol 50, pos 40)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/",
+  "category": "/rigging/mechanical-advantage/",
+  "tier": "full",
+  "keywords": [
+   "rope handle (vol 590, pos 30)",
+   "rope pull handle (vol 90, pos 22)",
+   "pull handle for rope (vol 70, pos 22)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/",
+  "category": "/rigging/mechanical-advantage/",
+  "tier": "full",
+  "keywords": [
+   "rope puller (vol 480, pos 31)",
+   "rope come along (vol 480, pos 15)",
+   "maasdam rope puller (vol 480, pos 23)",
+   "rope pullers (vol 140, pos 22)",
+   "maasdam come along (vol 110, pos 31)",
+   "rope winch puller (vol 90, pos 15)"
+  ],
+  "traffic": 2.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/mechanical-advantage/petzl-micro-traxion-pulley/",
+  "category": "/rigging/mechanical-advantage/",
+  "tier": "full",
+  "keywords": [
+   "petzl micro traxion (vol 590, pos 75)",
+   "petzl micro traxion (vol 590, pos 77)",
+   "micro traxion (vol 590, pos 79)",
+   "microtraxion (vol 210, pos 82)",
+   "micro traxion petzl (vol 140, pos 76)",
+   "petzl micro traxion pulley (vol 110, pos 78)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/",
+  "category": "/rigging/rigging-kits/",
+  "tier": "standard",
+  "keywords": [
+   "port rap (vol 170, pos 18)",
+   "port-a-wrap (vol 50, pos 30)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-kits/weaver-speed-line-kit/",
+  "category": "/rigging/rigging-kits/",
+  "tier": "full",
+  "keywords": [
+   "speed line (vol 720, pos 51)",
+   "speedline kit (vol 110, pos 25)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "standard",
+  "keywords": [
+   "whoopie sling sailing (vol 170, pos 31)",
+   "whoopie sling sailinf (vol 170, pos 24)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "full",
+  "keywords": [
+   "whoopie sling (vol 480, pos 41)",
+   "whoopie sling arborist (vol 40, pos 14)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/",
+  "category": "/rigging/rigging-slings/crane-slings/",
+  "tier": "standard",
+  "keywords": [
+   "crane sling (vol 260, pos 24)",
+   "crane slings (vol 210, pos 73)",
+   "sling crane (vol 30, pos 69)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/crane-slings/endless-loop-round-slings/",
+  "category": "/rigging/rigging-slings/crane-slings/",
+  "tier": "full",
+  "keywords": [
+   "round slings (vol 480, pos 58)",
+   "round sling (vol 390, pos 36)",
+   "endless sling (vol 320, pos 21)",
+   "endless round slings (vol 140, pos 38)",
+   "endless slings (vol 140, pos 34)",
+   "roundslings (vol 110, pos 46)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/heavy-duty-slings/1-2-bull-rope-rigging-sling/",
+  "category": "/rigging/rigging-slings/heavy-duty-slings/",
+  "tier": "full",
+  "keywords": [
+   "bull tail rigging (vol 40, pos 1)",
+   "bull tail rigging (vol 40, pos 1)",
+   "bull tail rigging (vol 40, pos 5)"
+  ],
+  "traffic": 1.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/heavy-duty-webbing-slings/",
+  "category": "/rigging/rigging-slings/",
+  "tier": "standard",
+  "keywords": [
+   "webbing sling (vol 320, pos 31)",
+   "arborist sling (vol 210, pos 74)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ },
+ {
+  "path": "/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/",
+  "category": "/rigging/rigging-slings/",
+  "tier": "standard",
+  "keywords": [
+   "loop runner (vol 40, pos 14)"
+  ],
+  "traffic": 0.0,
+  "backlinks": 0
+ }
+]

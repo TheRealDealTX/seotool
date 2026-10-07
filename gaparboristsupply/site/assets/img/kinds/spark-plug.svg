@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Spark plug</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="110" y="22" width="20" height="24" rx="5" fill="#9aa5a8"/>
+<path d="M104 46 h32 v68 h-32 z" fill="#f4efe2"/>
+<rect x="104" y="62" width="32" height="10" fill="#f26b1d"/>
+<path d="M104 84 L136 84" stroke="#1f2a1f" stroke-width="3" fill="none"/><path d="M104 96 L136 96" stroke="#1f2a1f" stroke-width="3" fill="none"/>
+<rect x="88" y="112" width="64" height="32" rx="5" fill="#9aa5a8"/>
+<path d="M108 114 L108 142" stroke="#1f2a1f" stroke-width="3" fill="none"/><path d="M132 114 L132 142" stroke="#1f2a1f" stroke-width="3" fill="none"/>
+<rect x="102" y="144" width="36" height="42" rx="3" fill="#9aa5a8"/>
+<path d="M102 156 L138 150" fill="none"/><path d="M102 164 L138 158" fill="none"/><path d="M102 172 L138 166" fill="none"/><path d="M102 180 L138 174" fill="none"/>
+<path d="M120 186 v8 M132 186 v14 h-12" fill="none" stroke-width="5"/>
+</g>
+</svg>

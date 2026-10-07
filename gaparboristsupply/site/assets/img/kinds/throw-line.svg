@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Throw weight with throw line</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M152 58 Q114 18 82 46 Q50 80 82 112 Q112 140 74 168 Q44 188 66 202" fill="none" stroke="#1f2a1f" stroke-width="7"/>
+<path d="M152 58 Q114 18 82 46 Q50 80 82 112 Q112 140 74 168 Q44 188 66 202" fill="none" stroke="#c8e03c" stroke-width="3"/>
+<circle cx="154" cy="68" r="10" fill="none" stroke="#1f2a1f" stroke-width="9"/>
+<circle cx="154" cy="68" r="10" fill="none" stroke="#9aa5a8" stroke-width="4"/>
+<path d="M154 78 Q190 128 190 158 Q190 196 154 196 Q118 196 118 158 Q118 128 154 78 Z" fill="#f26b1d"/>
+<path d="M154 82 V194" fill="none" stroke="#f4efe2" stroke-dasharray="5 5"/>
+<path d="M132 120 Q154 112 176 120" fill="none"/>
+</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Tree climbing spur with gaff</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<rect x="104" y="36" width="64" height="52" rx="16" fill="#2f5d3a"/>
+<path d="M112 30 V176 Q112 194 140 194 H196" fill="none" stroke="#1f2a1f" stroke-width="18"/><path d="M112 30 V176 Q112 194 140 194 H196" fill="none" stroke="#9aa5a8" stroke-width="12" />
+<path d="M106 158 L92 210 L114 178 Z" fill="#9aa5a8"/>
+<rect x="100" y="48" width="78" height="12" rx="4" fill="#f26b1d"/>
+<rect x="100" y="70" width="78" height="12" rx="4" fill="#f26b1d"/>
+<rect x="120" y="44" width="10" height="20" rx="2" fill="#9aa5a8"/>
+<path d="M118 156 Q150 150 168 176" fill="none" stroke="#1f2a1f" stroke-width="15"/><path d="M118 156 Q150 150 168 176" fill="none" stroke="#f26b1d" stroke-width="9" />
+<circle cx="112" cy="110" r="4" fill="#1f2a1f"/><circle cx="112" cy="134" r="4" fill="#1f2a1f"/>
+</g>
+</svg>

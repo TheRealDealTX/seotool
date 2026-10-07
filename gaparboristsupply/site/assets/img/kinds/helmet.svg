@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Arborist climbing helmet</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M66 152 Q60 206 120 206 Q180 206 174 152" fill="none" stroke-width="4"/>
+<path d="M42 150 Q42 52 120 48 Q198 52 198 150 Z" fill="#f26b1d"/>
+<path d="M120 50 V150" fill="none" stroke-opacity=".35"/>
+<rect x="86" y="76" width="10" height="26" rx="5" fill="#f4efe2"/>
+<rect x="144" y="76" width="10" height="26" rx="5" fill="#f4efe2"/>
+<rect x="115" y="62" width="10" height="26" rx="5" fill="#f4efe2"/>
+<rect x="34" y="144" width="172" height="18" rx="9" fill="#2f5d3a"/>
+<rect x="100" y="120" width="40" height="18" rx="5" fill="#c8e03c"/>
+</g>
+</svg>

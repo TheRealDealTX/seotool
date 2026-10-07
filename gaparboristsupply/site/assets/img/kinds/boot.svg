@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Logger climbing boot</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M68 30 h66 l4 104 q44 8 66 30 q12 12 8 24 h-150 z" fill="#8a5a36"/>
+<rect x="64" y="26" width="76" height="16" rx="6" fill="#2f5d3a"/>
+<path d="M120 54 l14 8 M120 70 l14 8 M120 86 l14 8 M120 102 l14 8 M120 62 l14 -8 M120 78 l14 -8 M120 94 l14 -8 M120 110 l14 -8" fill="none" stroke="#f4efe2"/>
+<path d="M66 140 h76 q40 6 62 26" fill="none" stroke="#f26b1d" stroke-width="8"/>
+<path d="M60 184 h156 v6 q0 10 -10 10 h-56 v-2 h-40 v2 h-50 z" fill="#1f2a1f"/>
+<path d="M164 184 q28 -2 46 4" fill="none" stroke="#9aa5a8" stroke-width="3"/>
+</g>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>Outrigger pad ground mat</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M30 118 L30 140 L116 182 L116 160 Z" fill="#f26b1d"/>
+<path d="M30 118 L30 140 L116 182 L116 160 Z" fill="#1f2a1f" fill-opacity=".25"/>
+<path d="M116 160 L116 182 L212 136 L212 114 Z" fill="#f26b1d"/>
+<path d="M116 160 L116 182 L212 136 L212 114 Z" fill="#1f2a1f" fill-opacity=".1"/>
+<path d="M30 118 L124 72 L212 114 L116 160 Z" fill="#f26b1d"/>
+<path d="M76 118 L124 94 L168 116 L120 140 Z" fill="none" stroke="#f4efe2" stroke-dasharray="4 6"/>
+<path d="M48 132 Q52 158 74 158 Q90 156 90 146" fill="none" stroke="#1f2a1f" stroke-width="13"/><path d="M48 132 Q52 158 74 158 Q90 156 90 146" fill="none" stroke="#c8e03c" stroke-width="7" />
+<circle cx="124" cy="116" r="6" fill="#f4efe2"/>
+</g>
+</svg>

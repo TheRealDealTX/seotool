@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img">
+<title>First aid kit</title>
+<ellipse cx="120" cy="210" rx="84" ry="10" fill="#1f2a1f" opacity=".12"/>
+<g stroke="#1f2a1f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<path d="M96 70 V58 Q96 48 106 48 H134 Q144 48 144 58 V70" fill="none" stroke="#1f2a1f" stroke-width="16"/><path d="M96 70 V58 Q96 48 106 48 H134 Q144 48 144 58 V70" fill="none" stroke="#2f5d3a" stroke-width="10" />
+<rect x="36" y="68" width="168" height="128" rx="16" fill="#f26b1d"/>
+<path d="M36 100 H204" fill="none"/>
+<rect x="60" y="92" width="14" height="18" rx="3" fill="#9aa5a8"/>
+<rect x="166" y="92" width="14" height="18" rx="3" fill="#9aa5a8"/>
+<path d="M108 116 h24 v18 h18 v24 h-18 v18 h-24 v-18 h-18 v-24 h18 z" fill="#f4efe2"/>
+</g>
+</svg>
