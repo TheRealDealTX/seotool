@@ -7,13 +7,14 @@
   const G = window.Gap, money = n => '$' + Math.round(n).toLocaleString('en-US');
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const img = k => '/assets/img/kinds/' + k + '.svg';
+  const pic = p => p.i || img(p.k);
   const PRODUCTS = JSON.parse($('#tool-products').textContent || '[]');
   const fmt = (n, d = 1) => (+n).toLocaleString('en-US', { maximumFractionDigits: d });
 
   function recs(list) {
     const box = $('[data-tool-recs]'); if (!box) return;
-    box.innerHTML = list.slice(0, 4).map(p => `<article class="card" data-product='${esc(JSON.stringify({ p: p.p, n: p.n, pr: p.pr, k: p.k }))}'>
-      <a class="card-media" href="${esc(p.p)}" tabindex="-1" aria-hidden="true"><span class="rings"></span><img src="${img(p.k)}" alt="" loading="lazy"></a>
+    box.innerHTML = list.slice(0, 4).map(p => `<article class="card" data-product='${esc(JSON.stringify({ p: p.p, n: p.n, pr: p.pr, k: p.k, i: p.i }))}'>
+      <a class="card-media${p.i ? ' has-photo' : ''}" href="${esc(p.p)}" tabindex="-1" aria-hidden="true"><img class="${p.i ? 'is-photo' : 'is-illo'}" src="${pic(p)}" alt="" loading="lazy"></a>
       <div class="card-body"><p class="card-brand">${esc(p.bn)}</p><h3 class="card-title"><a href="${esc(p.p)}">${esc(p.n)}</a></h3>
       <div class="card-foot"><span class="price"><small>Typical</small> ${money(p.pr)}</span><button class="btn btn-sm btn-cart" type="button" data-add>Add</button></div></div></article>`).join('');
   }
@@ -66,7 +67,7 @@
         $('[data-budget-out]').textContent = money(budget);
         slotsEl.innerHTML = slots.map((s, i) => {
           const p = options[s][choice[s]], n = options[s].length;
-          return `<li class="kit-slot" style="animation-delay:${i * 40}ms"><img src="${img(p.k)}" alt="" width="56" height="56">
+          return `<li class="kit-slot" style="animation-delay:${i * 40}ms"><img src="${pic(p)}" alt="" width="56" height="56">
             <div><span class="role">${SLOTS[s].role}</span><a href="${esc(p.p)}">${esc(p.n)}</a><span class="why">${SLOTS[s].why}</span></div>
             <div class="slot-right"><span class="slot-price">${money(p.pr * qty(s))}</span>${n > 1 ? `<button class="swap" type="button" data-swap="${s}">Swap (${choice[s] + 1}/${n})</button>` : ''}</div></li>`;
         }).join('');
@@ -82,7 +83,7 @@
       form.addEventListener('input', fit); form.addEventListener('change', fit);
       $('[data-kit-add]').addEventListener('click', e => {
         const slots = slotsFor(), c = G.cart();
-        slots.forEach(s => { const p = options[s][choice[s]], hit = c.find(i => i.p === p.p); if (hit) hit.q += qty(s); else c.push({ p: p.p, n: p.n, pr: p.pr, k: p.k, q: qty(s) }); });
+        slots.forEach(s => { const p = options[s][choice[s]], hit = c.find(i => i.p === p.p); if (hit) hit.q += qty(s); else c.push({ p: p.p, n: p.n, pr: p.pr, k: p.k, i: p.i, q: qty(s) }); });
         G.setCart(c); G.toast(`Added ${slots.length} kit items · <a href="/cart/">View cart</a>`);
         e.target.textContent = 'Kit added ✓'; setTimeout(() => e.target.textContent = 'Add whole kit to cart', 1600);
       });

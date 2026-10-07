@@ -85,6 +85,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/24-strand-climbing-rope/courant-kalimba-bubblegum-11-9mm-climbing-rope/' => 
     array (
@@ -195,6 +206,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/courant/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/24-strand-climbing-rope/yale-poison-moon-11-7mm-climbing-rope/' => 
     array (
@@ -305,6 +327,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/accessory-carabiners/notch-magneato-rope-runner-tether/' => 
     array (
@@ -388,6 +421,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
     ),
     '/adjustable-slings/1-2-whoopie-sling/' => 
     array (
@@ -471,6 +515,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
     ),
     '/auto-locking-carabiners/husqvarna-d-shaped-carabiner/' => 
     array (
@@ -554,6 +609,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/battery-powered-equipment/husqvarna-350i-power-axe-battery-powered-chainsaw/' => 
     array (
@@ -665,6 +731,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-0.webp',
+        'sm' => '/assets/photos/chainsaw-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/battery-powered-equipment/husqvarna-t542ixp-top-handle-battery-powered-chainsaw-kit/' => 
     array (
@@ -777,6 +854,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/top-handle-0.webp',
+        'sm' => '/assets/photos/top-handle-0-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
+      ),
     ),
     '/blades/notch-13-tri-edge-saw-blade/' => 
     array (
@@ -860,6 +948,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-0.webp',
+        'sm' => '/assets/photos/hand-saw-0-sm.webp',
+        'title' => 'Dave has a go with the pruning saw',
+        'creator' => 'jennifrog',
+        'creator_url' => 'https://www.flickr.com/photos/38061770@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38061770@N00/6158415896',
+      ),
     ),
     '/blowers-and-other-equipment/husqvarna-330lk-string-trimmer/' => 
     array (
@@ -970,6 +1069,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-0.webp',
+        'sm' => '/assets/photos/power-tool-0-sm.webp',
+        'title' => 'Person using a string trimmer in a garden',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54573938488',
+      ),
     ),
     '/blowers-and-other-equipment/husqvarna-525l-gas-powered-string-trimmer/' => 
     array (
@@ -1082,6 +1192,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-1.webp',
+        'sm' => '/assets/photos/power-tool-1-sm.webp',
+        'title' => 'Trimming grass and weeds in a lush garden with a string trimmer',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54574042635',
+      ),
     ),
     '/blowers-and-other-equipment/husqvarna-525lk-combination-tool-string-trimmer/' => 
     array (
@@ -1194,6 +1315,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-2.webp',
+        'sm' => '/assets/photos/power-tool-2-sm.webp',
+        'title' => 'Hat string trimmer',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6036825/photo-image-public-domain-free-grass',
+      ),
     ),
     '/blowers-and-other-equipment/husqvarna-590bts-pro-backpack-blower/' => 
     array (
@@ -1306,6 +1438,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-3.webp',
+        'sm' => '/assets/photos/power-tool-3-sm.webp',
+        'title' => 'NCCC - Fuels Reduction',
+        'creator' => 'Joshua Tree National Park',
+        'creator_url' => 'https://www.flickr.com/photos/115357548@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/115357548@N08/51765717788',
+      ),
     ),
     '/blowers-and-other-equipment/husqvarna-k970-power-cutter/' => 
     array (
@@ -1424,6 +1567,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-4.webp',
+        'sm' => '/assets/photos/power-tool-4-sm.webp',
+        'title' => 'Leaf Blowers 09',
+        'creator' => 'hectorir',
+        'creator_url' => 'https://www.flickr.com/photos/30806435@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/30806435@N04/4118096648',
+      ),
     ),
     '/books-and-training-materials/ansi-a300-standard-for-tree-care/' => 
     array (
@@ -1508,6 +1662,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/book-0.webp',
+        'sm' => '/assets/photos/book-0-sm.webp',
+        'title' => 'Book Stack',
+        'creator' => 'byzantiumbooks',
+        'creator_url' => 'https://www.flickr.com/photos/10688882@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10688882@N00/24811541306',
+      ),
     ),
     '/books-and-training-materials/ansi-z133-safety-standard-for-tree-work/' => 
     array (
@@ -1592,6 +1757,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/book-1.webp',
+        'sm' => '/assets/photos/book-1-sm.webp',
+        'title' => 'May Book Stack',
+        'creator' => 'jenforless',
+        'creator_url' => 'https://www.flickr.com/photos/27086441@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/27086441@N00/2537854231',
+      ),
     ),
     '/books-and-training-materials/certified-arborist-study-guide/' => 
     array (
@@ -1676,6 +1852,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/book-2.webp',
+        'sm' => '/assets/photos/book-2-sm.webp',
+        'title' => 'Several thick hardcover books stacked on top of each other',
+        'creator' => 'Horia Varlan',
+        'creator_url' => 'https://www.flickr.com/photos/10361931@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10361931@N06/4268152821',
+      ),
     ),
     '/chainsaw-chain/husqvarna-3-8-x-050-full-comp-chainsaw-chain/' => 
     array (
@@ -1788,6 +1975,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-0.webp',
+        'sm' => '/assets/photos/chain-bar-0-sm.webp',
+        'title' => 'Cutting Edge',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/49188576927',
+      ),
     ),
     '/chainsaw-chain/husqvarna-3-8-x-063-gauge-chainsaw-chain/' => 
     array (
@@ -1871,6 +2069,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-1.webp',
+        'sm' => '/assets/photos/chain-bar-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
     ),
     '/chainsaw-chain/husqvarna-sp33g-semi-chisel-chain-325-x-050-gauge/' => 
     array (
@@ -1983,6 +2192,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-2.webp',
+        'sm' => '/assets/photos/chain-bar-2-sm.webp',
+        'title' => '20160823-FS-LSC-0474',
+        'creator' => 'USDAgov',
+        'creator_url' => 'https://www.flickr.com/photos/41284017@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/41284017@N08/28725898983',
+      ),
     ),
     '/chainsaw-chaps/economy-apron-style-chainsaw-chaps/' => 
     array (
@@ -2067,6 +2287,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-0.webp',
+        'sm' => '/assets/photos/chaps-pants-0-sm.webp',
+        'title' => 'Chainsaw Chaps',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/8610687085',
+      ),
     ),
     '/chainsaw-lanyards/bungee-chainsaw-lanyard-with-snap/' => 
     array (
@@ -2152,6 +2383,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/chainsaw-lanyards/bungee-modular-chainsaw-lanyard-system/' => 
     array (
@@ -2236,6 +2478,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/chainsaws/husqvarna-562xp-mark-ii-chainsaw/' => 
     array (
@@ -2360,6 +2613,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-1.webp',
+        'sm' => '/assets/photos/chainsaw-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
     ),
     '/climber-pads/replacement-pads-for-gecko-climbers/' => 
     array (
@@ -2444,6 +2708,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-0.webp',
+        'sm' => '/assets/photos/spur-0-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16380468763',
+      ),
     ),
     '/climbing-rope/jameson-rope-sniper-rope-placement-tool/' => 
     array (
@@ -2529,6 +2804,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/jameson/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-0.webp',
+        'sm' => '/assets/photos/throw-line-0-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/descenders/petzl-grigri-belay-device/' => 
     array (
@@ -2649,6 +2935,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/descenders/petzl-grigri-plus-belay-device/' => 
     array (
@@ -2769,6 +3066,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/descenders/petzl-huit-figure-8-descender/' => 
     array (
@@ -2890,6 +3198,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/handled-ascenders/petzl-ascension-hand-ascender/' => 
     array (
@@ -3009,6 +3328,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-0.webp',
+        'sm' => '/assets/photos/ascender-0-sm.webp',
+        'title' => '2011 Best Ranger Competition [Image 2 of 5]',
+        'creator' => 'DVIDSHUB',
+        'creator_url' => 'https://www.flickr.com/photos/28650594@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28650594@N03/5640880003',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/hitch-hiker-2/' => 
     array (
@@ -3129,6 +3459,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-mechanical-friction-device/' => 
     array (
@@ -3249,6 +3590,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/isc-rope-wrench/' => 
     array (
@@ -3368,6 +3720,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/notch-flow-adjustable-rope-wrench/' => 
     array (
@@ -3461,6 +3824,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/kong-duck-emergency-belay-device/' => 
     array (
@@ -3586,6 +3960,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/kong/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-1.webp',
+        'sm' => '/assets/photos/ascender-1-sm.webp',
+        'title' => 'Prusik climb',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5665572205',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-replacement-cam/' => 
     array (
@@ -3670,6 +4055,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/art/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/rope-grabs/climb-right-rope-grab/' => 
     array (
@@ -3753,6 +4149,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/climb-right/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-2.webp',
+        'sm' => '/assets/photos/ascender-2-sm.webp',
+        'title' => 'Georgia Guardsman in the Best Ranger Competition',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5666140072',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/rope-grabs/petzl-micrograb-lanyard-adjuster/' => 
     array (
@@ -3840,6 +4247,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-3.webp',
+        'sm' => '/assets/photos/ascender-3-sm.webp',
+        'title' => 'West Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/44298692982',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/accessory-carabiners/petzl-mino-carabiner/' => 
     array (
@@ -3922,6 +4340,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-shadow-carabiner/' => 
     array (
@@ -4051,6 +4480,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/petzl-amd-carabiner/' => 
     array (
@@ -4179,6 +4619,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/hardware/notch-v3-quickie/' => 
     array (
@@ -4262,6 +4713,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-0.webp',
+        'sm' => '/assets/photos/cable-hardware-0-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/393624',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-speedy-link/' => 
     array (
@@ -4344,6 +4806,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/hardware/stainless-steel-twisted-shackle/' => 
     array (
@@ -4427,6 +4900,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-1.webp',
+        'sm' => '/assets/photos/cable-hardware-1-sm.webp',
+        'title' => 'Eye Bolt',
+        'creator' => 'Clearly Ambiguous',
+        'creator_url' => 'https://www.flickr.com/photos/84617037@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/84617037@N00/428612624',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-xsre-carabiners/' => 
     array (
@@ -4509,6 +4993,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/petzl-rollclip-carabiner/' => 
     array (
@@ -4598,6 +5093,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-0.webp',
+        'sm' => '/assets/photos/pulley-0-sm.webp',
+        'title' => 'Block and Tackle',
+        'creator' => 'www.mgaylard.co.uk and thanks for looking',
+        'creator_url' => 'https://www.flickr.com/photos/16564965@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/16564965@N04/52721499095',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/rock-exotica-rockx-accessory-carabiner/' => 
     array (
@@ -4717,6 +5223,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/rock-exotica/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-amd-screw-lock-carabiner/' => 
     array (
@@ -4810,6 +5327,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-william-screw-lock-carabiner/' => 
     array (
@@ -4936,6 +5464,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/smc-large-heat-treated-steel-screw-locking-carabiner/' => 
     array (
@@ -5024,6 +5563,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/smc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/aluminum-double-locking-snap-hook/' => 
     array (
@@ -5107,6 +5657,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/petzl-eashook-open-rope-snap/' => 
     array (
@@ -5195,6 +5756,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/steel-locking-rope-snap/' => 
     array (
@@ -5278,6 +5850,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
     ),
     '/climbing/climbing-gear/chainsaw-lanyards/weaver-chainsaw-strap-with-snap/' => 
     array (
@@ -5362,6 +5945,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/2-in-1-lanyards/2-in-1-wire-core-lanyard/' => 
     array (
@@ -5446,6 +6040,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/basic-adjustable-lanyards/adjustable-pole-strap/' => 
     array (
@@ -5529,6 +6134,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-4.webp',
+        'sm' => '/assets/photos/lanyard-4-sm.webp',
+        'title' => 'Wood pole rescue',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16974622426',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/2-in-1-wire-core-flipline-kit/' => 
     array (
@@ -5613,6 +6229,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-grillon-hook-work-positioning-lanyard/' => 
     array (
@@ -5737,6 +6364,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-zillon-lanyard/' => 
     array (
@@ -5863,6 +6501,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/magnetic-lanyard-management-system/' => 
     array (
@@ -5945,6 +6594,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/petzl-micrograb-lanyard-add-on-kit/' => 
     array (
@@ -6029,6 +6689,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-4.webp',
+        'sm' => '/assets/photos/lanyard-4-sm.webp',
+        'title' => 'Wood pole rescue',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16974622426',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/wire-core-lanyards/1-2-wire-core-flipline/' => 
     array (
@@ -6113,6 +6784,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/climbing-gear/friction-savers/art-ropeguide-twinline/' => 
     array (
@@ -6196,6 +6878,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/art/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-1.webp',
+        'sm' => '/assets/photos/pulley-1-sm.webp',
+        'title' => 'Block and tackle',
+        'creator' => 'quinet',
+        'creator_url' => 'https://www.flickr.com/photos/91994044@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/91994044@N00/14200854012',
+      ),
     ),
     '/climbing/climbing-gear/friction-savers/cmi-anchor-sling/' => 
     array (
@@ -6321,6 +7014,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/gear-bags/buckingham-haul-bag/' => 
     array (
@@ -6405,6 +7109,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/gear-bags/edelrid-kurt-haulbag/' => 
     array (
@@ -6495,6 +7210,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-1.webp',
+        'sm' => '/assets/photos/case-bag-1-sm.webp',
+        'title' => 'STE-NL-WK3-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50325892901',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/gear-bags/petzl-duffel-85l-large-gear-bag/' => 
     array (
@@ -6622,6 +7348,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/rope-bags/courant-cross-rope-bag-23-36-l/' => 
     array (
@@ -6710,6 +7447,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/courant/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/rope-bags/treehog-40l-rope-bag/' => 
     array (
@@ -6799,6 +7547,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
+      ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/big-jims-hitch-breaker/' => 
     array (
@@ -6919,6 +7678,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/dmm-hitch-climber-kit/' => 
     array (
@@ -7008,6 +7778,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-hand-spliced-eye-to-eye/' => 
     array (
@@ -7102,6 +7883,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-8mm-bee-line-split-tail/' => 
     array (
@@ -7191,6 +7983,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/climbing/climbing-gear/micro-pulleys/cmi-micro-rescue-pulley/' => 
     array (
@@ -7280,6 +8083,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-3.webp',
+        'sm' => '/assets/photos/pulley-3-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/climbing/climbing-gear/micro-pulleys/dmm-hitch-climber-eccentric-pulley/' => 
     array (
@@ -7369,6 +8183,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-4.webp',
+        'sm' => '/assets/photos/pulley-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
     ),
     '/climbing/climbing-gear/other-gear/dmm-captain-hook/' => 
     array (
@@ -7459,6 +8284,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
     ),
     '/climbing/climbing-gear/other-gear/the-sawpod/' => 
     array (
@@ -7580,6 +8416,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/sawpod/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-1.webp',
+        'sm' => '/assets/photos/case-bag-1-sm.webp',
+        'title' => 'STE-NL-WK3-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50325892901',
+      ),
     ),
     '/climbing/climbing-gear/rings/dmm-anchor-rings/' => 
     array (
@@ -7705,6 +8552,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-0.webp',
+        'sm' => '/assets/photos/rigging-device-0-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894227',
+      ),
     ),
     '/climbing/climbing-gear/rings/petzl-ring-open/' => 
     array (
@@ -7795,6 +8653,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-1.webp',
+        'sm' => '/assets/photos/rigging-device-1-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982704071',
+      ),
     ),
     '/climbing/climbing-gear/rings/petzl-ring/' => 
     array (
@@ -7885,6 +8754,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-2.webp',
+        'sm' => '/assets/photos/rigging-device-2-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982705461',
+      ),
     ),
     '/climbing/climbing-gear/swivels/cmi-california-swivel/' => 
     array (
@@ -7975,6 +8855,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-3.webp',
+        'sm' => '/assets/photos/rigging-device-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982144423',
+      ),
     ),
     '/climbing/climbing-gear/swivels/petzl-micro-swivel-open/' => 
     array (
@@ -8064,6 +8955,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-4.webp',
+        'sm' => '/assets/photos/rigging-device-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
     ),
     '/climbing/helmets/husqvarna-technical-forestry-helmet/' => 
     array (
@@ -8190,6 +9092,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-0.webp',
+        'sm' => '/assets/photos/helmet-0-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9734106231',
+      ),
     ),
     '/climbing/helmets/kask-super-plasma-climbing-helmet/' => 
     array (
@@ -8318,6 +9231,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/kask/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-1.webp',
+        'sm' => '/assets/photos/helmet-1-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9737334576',
+      ),
     ),
     '/climbing/helmets/petzl-vertex-vent/' => 
     array (
@@ -8446,6 +9370,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-2.webp',
+        'sm' => '/assets/photos/helmet-2-sm.webp',
+        'title' => '3rd Regiment, Basic Camp, FHCC CST 2021',
+        'creator' => 'U.S. Army ROTC',
+        'creator_url' => 'https://www.flickr.com/photos/136737541@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/136737541@N05/51323491277',
+      ),
     ),
     '/climbing/helmets/pfanner-protos-integral-arborist-helmet-system/' => 
     array (
@@ -8575,6 +9510,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/pfanner/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-3.webp',
+        'sm' => '/assets/photos/helmet-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
     ),
     '/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-agility-saddle/' => 
     array (
@@ -8664,6 +9610,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-buckcraft-saddle/' => 
     array (
@@ -8753,6 +9710,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-1.webp',
+        'sm' => '/assets/photos/saddle-1-sm.webp',
+        'title' => 'JnpITA',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33903505151',
+      ),
     ),
     '/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergovation/' => 
     array (
@@ -8843,6 +9811,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
     ),
     '/climbing/saddles-and-harnesses/european-saddles/petzl-sequoia-climbing-harness/' => 
     array (
@@ -8937,6 +9916,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-3.webp',
+        'sm' => '/assets/photos/saddle-3-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
     ),
     '/climbing/saddles-and-harnesses/european-saddles/treemotion-pro-climbing-harness/' => 
     array (
@@ -9032,6 +10022,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-4.webp',
+        'sm' => '/assets/photos/saddle-4-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-bungee-chest-harness/' => 
     array (
@@ -9122,6 +10123,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-5.webp',
+        'sm' => '/assets/photos/saddle-5-sm.webp',
+        'title' => 'DSC_0054',
+        'creator' => 'BCRP',
+        'creator_url' => 'https://www.flickr.com/photos/63577817@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63577817@N04/8199050111',
+      ),
     ),
     '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-chest-box/' => 
     array (
@@ -9244,6 +10256,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-6.webp',
+        'sm' => '/assets/photos/saddle-6-sm.webp',
+        'title' => '160320-F-QP401-181',
+        'creator' => 'DoD News Photos',
+        'creator_url' => 'https://www.flickr.com/photos/127934495@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/127934495@N07/25354925433',
+      ),
     ),
     '/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-big-buck-pads/' => 
     array (
@@ -9359,6 +10382,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/climb-right/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-1.webp',
+        'sm' => '/assets/photos/spur-1-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16814256419',
+      ),
     ),
     '/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-steel-support-pads/' => 
     array (
@@ -9445,6 +10479,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/climb-right/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-2.webp',
+        'sm' => '/assets/photos/spur-2-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813825794',
+      ),
     ),
     '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-big-buck-pads/' => 
     array (
@@ -9569,6 +10614,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-3.webp',
+        'sm' => '/assets/photos/spur-3-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-lower-straps/' => 
     array (
@@ -9657,6 +10713,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-4.webp',
+        'sm' => '/assets/photos/spur-4-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-t-pads/' => 
     array (
@@ -9775,6 +10842,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-5.webp',
+        'sm' => '/assets/photos/spur-5-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
+      ),
     ),
     '/climbing/spurs/climber-pads/buckingham-big-buck-pads/' => 
     array (
@@ -9857,6 +10935,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-0.webp',
+        'sm' => '/assets/photos/spur-0-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16380468763',
+      ),
     ),
     '/climbing/spurs/climber-pads/buckingham-big-buck-velcro-pads/' => 
     array (
@@ -9939,6 +11028,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-1.webp',
+        'sm' => '/assets/photos/spur-1-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16814256419',
+      ),
     ),
     '/climbing/spurs/replacement-gaffs-and-parts/buckalloy-screw-and-dowel-style-replacement-tree-gaffs/' => 
     array (
@@ -10022,6 +11122,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-2.webp',
+        'sm' => '/assets/photos/spur-2-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813825794',
+      ),
     ),
     '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-upper-strap-system/' => 
     array (
@@ -10105,6 +11216,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-3.webp',
+        'sm' => '/assets/photos/spur-3-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line-kits/big-shot-throw-weight-launcher/' => 
     array (
@@ -10186,6 +11308,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-1.webp',
+        'sm' => '/assets/photos/throw-line-1-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line-kits/starter-throwline-kit/' => 
     array (
@@ -10267,6 +11400,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line-storage/' => 
     array (
@@ -10348,6 +11492,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line/samson-zing-it-1-75mm-throwline/' => 
     array (
@@ -10466,6 +11621,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-0.webp',
+        'sm' => '/assets/photos/throw-line-0-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line/target-line-throwline/' => 
     array (
@@ -10583,6 +11749,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-1.webp',
+        'sm' => '/assets/photos/throw-line-1-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line/teufelberger-dynaglide-throwline/' => 
     array (
@@ -10701,6 +11878,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-weights/petzl-jet-throw-weight/' => 
     array (
@@ -10783,6 +11971,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-0.webp',
+        'sm' => '/assets/photos/throw-line-0-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
     ),
     '/climbing/tree-climbing-kits/arborist-rope-climbing-kits/' => 
     array (
@@ -10902,6 +12101,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/clothing/arborist-boots/arbortec-scafell-lite-chainsaw-boots-lime-green/' => 
     array (
@@ -11021,6 +12231,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/arbortec/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/boot-0.webp',
+        'sm' => '/assets/photos/boot-0-sm.webp',
+        'title' => 'Old Boot, New Boot',
+        'creator' => 'General Wesc',
+        'creator_url' => 'https://www.flickr.com/photos/35518575@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35518575@N00/5198346327',
+      ),
     ),
     '/clothing/arborist-boots/arbpro-andrew-cervino-boots/' => 
     array (
@@ -11141,6 +12362,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/arbpro/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/boot-1.webp',
+        'sm' => '/assets/photos/boot-1-sm.webp',
+        'title' => 'Old Boot, New Boot',
+        'creator' => 'General Wesc',
+        'creator_url' => 'https://www.flickr.com/photos/35518575@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35518575@N00/5198346357',
+      ),
     ),
     '/clothing/arborist-boots/arbpro-clip-n-step-boots/' => 
     array (
@@ -11223,6 +12455,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arbpro/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/boot-2.webp',
+        'sm' => '/assets/photos/boot-2-sm.webp',
+        'title' => 'Dr Martens',
+        'creator' => 'apdk',
+        'creator_url' => 'https://www.flickr.com/photos/62337512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62337512@N00/3368220691',
+      ),
     ),
     '/clothing/hats-and-caps/arborwear-neck-warmer/' => 
     array (
@@ -11342,6 +12585,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-0.webp',
+        'sm' => '/assets/photos/apparel-0-sm.webp',
+        'title' => 'Crate Flannel Shirt',
+        'creator' => 'A Continuous Lean',
+        'creator_url' => 'https://www.flickr.com/photos/7393890@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7393890@N04/3294764637',
+      ),
     ),
     '/clothing/hats-and-caps/arborwear-stocking-cap/' => 
     array (
@@ -11461,6 +12715,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-1.webp',
+        'sm' => '/assets/photos/apparel-1-sm.webp',
+        'title' => 'Flannel plaid background',
+        'creator' => 'Ember Studio',
+        'creator_url' => 'https://www.flickr.com/photos/48013511@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48013511@N07/12951396883',
+      ),
     ),
     '/clothing/hats-and-caps/husqvarna-utforskare-hat/' => 
     array (
@@ -11580,6 +12845,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-2.webp',
+        'sm' => '/assets/photos/apparel-2-sm.webp',
+        'title' => 'woman taking her flannel shirt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/3284728/free-photo-image-dress-long-jeans-dance',
+      ),
     ),
     '/clothing/sweatshirts-and-jackets/arborwear-black-large-double-thick-hooded-sweatshirt/' => 
     array (
@@ -11700,6 +12976,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-3.webp',
+        'sm' => '/assets/photos/apparel-3-sm.webp',
+        'title' => 'Great flannel shirts for women are hard to come by. But flannel is our signature, inspired by top-notch menswear shirts - especially designed and tailored for you. Take up to 20% off this weekend on all flannels, including the Park City flannel pictured h',
+        'creator' => 'Tradlands',
+        'creator_url' => 'https://www.flickr.com/photos/87743767@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87743767@N07/24785884538',
+      ),
     ),
     '/clothing/sweatshirts-and-jackets/arborwear-navy-large-double-thick-hooded-sweatshirt/' => 
     array (
@@ -11820,6 +13107,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-0.webp',
+        'sm' => '/assets/photos/apparel-0-sm.webp',
+        'title' => 'Crate Flannel Shirt',
+        'creator' => 'A Continuous Lean',
+        'creator_url' => 'https://www.flickr.com/photos/7393890@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7393890@N04/3294764637',
+      ),
     ),
     '/clothing/sweatshirts-and-jackets/arborwear-safety-yellow-tech-double-thick-pullover-sweatshirt/' => 
     array (
@@ -11907,6 +13205,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-1.webp',
+        'sm' => '/assets/photos/apparel-1-sm.webp',
+        'title' => 'Flannel plaid background',
+        'creator' => 'Ember Studio',
+        'creator_url' => 'https://www.flickr.com/photos/48013511@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48013511@N07/12951396883',
+      ),
     ),
     '/clothing/tree-climbing-pants/arborwear-ascender-pants-coal/' => 
     array (
@@ -11991,6 +13300,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
+      ),
     ),
     '/clothing/tree-climbing-pants/heavy-duty-suspenders-for-chainsaw-pants-by-arbortec/' => 
     array (
@@ -12074,6 +13394,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/arbortec/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-2.webp',
+        'sm' => '/assets/photos/chaps-pants-2-sm.webp',
+        'title' => 'Safety Gear for Chainsaw',
+        'creator' => 'Living Off Grid',
+        'creator_url' => 'https://www.flickr.com/photos/25414532@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/25414532@N06/5314352479',
+      ),
     ),
     '/cutting-and-pruning/blades/sugoi-replacement-blade/' => 
     array (
@@ -12193,6 +13524,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-1.webp',
+        'sm' => '/assets/photos/hand-saw-1-sm.webp',
+        'title' => 'THOR\'s hammer, lopper, hatchet and pruning saw IMAG0257',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/12141006956',
+      ),
     ),
     '/cutting-and-pruning/hand-saws-and-scabbards/silky-gomtaro-pro-sentei-300mm-hand-saw/' => 
     array (
@@ -12313,6 +13655,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
     ),
     '/cutting-and-pruning/hand-saws-and-scabbards/silky-gunfighter-professional-saw-330mm-handsaw/' => 
     array (
@@ -12433,6 +13786,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-0.webp',
+        'sm' => '/assets/photos/hand-saw-0-sm.webp',
+        'title' => 'Dave has a go with the pruning saw',
+        'creator' => 'jennifrog',
+        'creator_url' => 'https://www.flickr.com/photos/38061770@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38061770@N00/6158415896',
+      ),
     ),
     '/cutting-and-pruning/hand-saws-and-scabbards/silky-sugoi/' => 
     array (
@@ -12560,6 +13924,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-1.webp',
+        'sm' => '/assets/photos/hand-saw-1-sm.webp',
+        'title' => 'THOR\'s hammer, lopper, hatchet and pruning saw IMAG0257',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/12141006956',
+      ),
     ),
     '/cutting-and-pruning/hand-saws-and-scabbards/silky-zubat-13-curved-hand-saw/' => 
     array (
@@ -12687,6 +14062,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
     ),
     '/cutting-and-pruning/pole-saws-and-scabbards/20-nobasu-4-section-telescoping-aluminum-polesaw/' => 
     array (
@@ -12805,6 +14191,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-0.webp',
+        'sm' => '/assets/photos/pole-saw-0-sm.webp',
+        'title' => 'Project 365 #211: 300718 A Cut Above',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/42842605715',
+      ),
     ),
     '/cutting-and-pruning/pole-saws-and-scabbards/jameson-ls-kit-pruner-pole-saw-and-poles/' => 
     array (
@@ -12894,6 +14291,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/jameson/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
     ),
     '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head/' => 
     array (
@@ -12979,6 +14387,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/marvin/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-2.webp',
+        'sm' => '/assets/photos/pole-saw-2-sm.webp',
+        'title' => '1974. Colville field crew checking tussock moth populations. Douglas-fir tussock moth control project. Grand Coulee Dam Headquarters, Colville Reservation, Washington.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/35679281040',
+      ),
     ),
     '/cutting-and-pruning/poles-and-kits/6-foam-filled-poles/' => 
     array (
@@ -13063,6 +14482,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-0.webp',
+        'sm' => '/assets/photos/pole-saw-0-sm.webp',
+        'title' => 'Project 365 #211: 300718 A Cut Above',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/42842605715',
+      ),
     ),
     '/cutting-and-pruning/poles-and-kits/jameson-8-hollow-core-pole/' => 
     array (
@@ -13152,6 +14582,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/jameson/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
     ),
     '/cutting-and-pruning/poles-and-kits/peavey-ash-pole-12-long/' => 
     array (
@@ -13236,6 +14677,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-2.webp',
+        'sm' => '/assets/photos/pole-saw-2-sm.webp',
+        'title' => '1974. Colville field crew checking tussock moth populations. Douglas-fir tussock moth control project. Grand Coulee Dam Headquarters, Colville Reservation, Washington.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/35679281040',
+      ),
     ),
     '/cutting-and-pruning/pruners-and-loppers/felco-2-hand-pruner/' => 
     array (
@@ -13359,6 +14811,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/felco/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pruner-0.webp',
+        'sm' => '/assets/photos/pruner-0-sm.webp',
+        'title' => 'Pruning shears - apple orchard - winter DSC_8276',
+        'creator' => 'Apple and Pear Australia Ltd',
+        'creator_url' => 'https://www.flickr.com/photos/113312228@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/113312228@N06/28115965045',
+      ),
     ),
     '/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-head-with-single-pulley/' => 
     array (
@@ -13448,6 +14911,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/marvin/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pruner-1.webp',
+        'sm' => '/assets/photos/pruner-1-sm.webp',
+        'title' => 'Person cutting thin branches with pruning shears',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/52280999860',
+      ),
     ),
     '/cutting-and-pruning/pruners-and-loppers/marvin-pruner-head/' => 
     array (
@@ -13537,6 +15011,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/marvin/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pruner-2.webp',
+        'sm' => '/assets/photos/pruner-2-sm.webp',
+        'title' => 'Autumn Scissors Pruning Shears Tool Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49931414813',
+      ),
     ),
     '/devices-for-mrs/buckingham-throttle/' => 
     array (
@@ -13653,6 +15138,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
     ),
     '/european-saddles/dmm-kinisi-max-harness/' => 
     array (
@@ -13736,6 +15232,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-1.webp',
+        'sm' => '/assets/photos/saddle-1-sm.webp',
+        'title' => 'JnpITA',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33903505151',
+      ),
     ),
     '/fall-protection/petzl-astro-bod-fast-international-harness/' => 
     array (
@@ -13826,6 +15333,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
     ),
     '/fluids/husqvarna-1-quart-premix-50-1-fuel-case/' => 
     array (
@@ -13937,6 +15455,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-0.webp',
+        'sm' => '/assets/photos/fluid-0-sm.webp',
+        'title' => 'Jerry Cans',
+        'creator' => 'Ozzy Delaney',
+        'creator_url' => 'https://www.flickr.com/photos/24931020@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24931020@N02/12679132043',
+      ),
     ),
     '/foot-ascenders-and-foot-loops/arborist-foot-loop/' => 
     array (
@@ -14020,6 +15549,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-0.webp',
+        'sm' => '/assets/photos/ascender-0-sm.webp',
+        'title' => '2011 Best Ranger Competition [Image 2 of 5]',
+        'creator' => 'DVIDSHUB',
+        'creator_url' => 'https://www.flickr.com/photos/28650594@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28650594@N03/5640880003',
+      ),
     ),
     '/foot-ascenders-and-foot-loops/cmi-foot-ascender/' => 
     array (
@@ -14134,6 +15674,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-1.webp',
+        'sm' => '/assets/photos/ascender-1-sm.webp',
+        'title' => 'Prusik climb',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5665572205',
+      ),
     ),
     '/foot-ascenders-and-foot-loops/saka-foldable-knee-ascender/' => 
     array (
@@ -14217,6 +15768,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-2.webp',
+        'sm' => '/assets/photos/ascender-2-sm.webp',
+        'title' => 'Georgia Guardsman in the Best Ranger Competition',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5666140072',
+      ),
     ),
     '/heavy-duty-slings/9-16-dead-eye-rigging-sling/' => 
     array (
@@ -14300,6 +15862,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
     ),
     '/helmets/land-helmet-ear-muff/' => 
     array (
@@ -14411,6 +15984,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-0.webp',
+        'sm' => '/assets/photos/eye-ear-0-sm.webp',
+        'title' => 'Mirrored Safety Glasses - Imprinted with Logo',
+        'creator' => 'Woodlands Ad Agency',
+        'creator_url' => 'https://www.flickr.com/photos/24236630@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24236630@N05/7644923536',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/bigfoot-composite-outrigger-pads/' => 
     array (
@@ -14495,6 +16079,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-0.webp',
+        'sm' => '/assets/photos/jobsite-0-sm.webp',
+        'title' => 'Man operating wood chipper on Milvia St in Berkeley',
+        'creator' => 'D Coetzee',
+        'creator_url' => 'https://www.flickr.com/photos/29507259@N02',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/29507259@N02/7537556444',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/weaver-two-man-bucket-truck-cover/' => 
     array (
@@ -14579,6 +16174,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-1.webp',
+        'sm' => '/assets/photos/jobsite-1-sm.webp',
+        'title' => 'The Wood Chipper Man',
+        'creator' => 'brookdaledude',
+        'creator_url' => 'https://www.flickr.com/photos/41373210@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41373210@N08/4625417266',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/wheel-chock/' => 
     array (
@@ -14692,6 +16298,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/traffic-0.webp',
+        'sm' => '/assets/photos/traffic-0-sm.webp',
+        'title' => 'Traffic Cone',
+        'creator' => 'pdugmore2001',
+        'creator_url' => 'https://www.flickr.com/photos/78528924@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/78528924@N00/6173960958',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-and-aerial-lift-scabbards/' => 
     array (
@@ -14804,6 +16421,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/6-web-retractable-fall-protection-lanyard/' => 
     array (
@@ -14889,6 +16517,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/petzl-absorbica-i/' => 
     array (
@@ -14980,6 +16619,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-economy-fall-protection-kit/' => 
     array (
@@ -15065,6 +16715,17 @@ return array (
       ),
       'level' => 'beginner',
       'brand_path' => '/safewaze/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-3.webp',
+        'sm' => '/assets/photos/saddle-3-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats-3x8/' => 
     array (
@@ -15148,6 +16809,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-2.webp',
+        'sm' => '/assets/photos/jobsite-2-sm.webp',
+        'title' => 'Cat Rescue',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410866650',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats/' => 
     array (
@@ -15265,6 +16937,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-3.webp',
+        'sm' => '/assets/photos/jobsite-3-sm.webp',
+        'title' => 'WINTERHAVEN GETTING READY',
+        'creator' => 'bill85704',
+        'creator_url' => 'https://www.flickr.com/photos/48804373@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48804373@N07/8254886147',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-light-bars-3-8-x-050/' => 
     array (
@@ -15355,6 +17038,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-3.webp',
+        'sm' => '/assets/photos/chain-bar-3-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-x-precision-chainsaw-bar/' => 
     array (
@@ -15448,6 +17142,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-0.webp',
+        'sm' => '/assets/photos/chain-bar-0-sm.webp',
+        'title' => 'Cutting Edge',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/49188576927',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/oregon-chainsaw-bar-325-x-050/' => 
     array (
@@ -15540,6 +17245,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/oregon/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-1.webp',
+        'sm' => '/assets/photos/chain-bar-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/husqvarna-powerbox-carrying-case/' => 
     array (
@@ -15625,6 +17341,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/the-classic-carrying-case-by-husqvarna/' => 
     array (
@@ -15736,6 +17463,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-1.webp',
+        'sm' => '/assets/photos/case-bag-1-sm.webp',
+        'title' => 'STE-NL-WK3-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50325892901',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-chaps/husqvarna-classic-chainsaw-chaps/' => 
     array (
@@ -15825,6 +17563,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-3.webp',
+        'sm' => '/assets/photos/chaps-pants-3-sm.webp',
+        'title' => 'Defensible space-thinning with chainsaw',
+        'creator' => '#ODF',
+        'creator_url' => 'https://www.flickr.com/photos/97482765@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/97482765@N07/16729822658',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-defenderpro-light-chainsaw-pants/' => 
     array (
@@ -15949,6 +17698,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-0.webp',
+        'sm' => '/assets/photos/chaps-pants-0-sm.webp',
+        'title' => 'Chainsaw Chaps',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/8610687085',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-denim-chainsaw-pants/' => 
     array (
@@ -16068,6 +17828,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-zero-gen-2-chainsaw-pants/' => 
     array (
@@ -16188,6 +17959,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-2.webp',
+        'sm' => '/assets/photos/chaps-pants-2-sm.webp',
+        'title' => 'Safety Gear for Chainsaw',
+        'creator' => 'Living Off Grid',
+        'creator_url' => 'https://www.flickr.com/photos/25414532@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/25414532@N06/5314352479',
+      ),
     ),
     '/jobsite/chainsaw-accessories/fluids/eagle-safety-green-safety-can/' => 
     array (
@@ -16305,6 +18087,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/eagle-safety/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-1.webp',
+        'sm' => '/assets/photos/fluid-1-sm.webp',
+        'title' => 'Gas Can Storage',
+        'creator' => 'Hugo-90',
+        'creator_url' => 'https://www.flickr.com/photos/32109282@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/32109282@N00/49732866582',
+      ),
     ),
     '/jobsite/chainsaw-accessories/fluids/husqvarna-2-stroke-premix-fuel-4-75-gallon/' => 
     array (
@@ -16423,6 +18216,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-2.webp',
+        'sm' => '/assets/photos/fluid-2-sm.webp',
+        'title' => 'Vintage Gas Can Money',
+        'creator' => 'ccPixs.com',
+        'creator_url' => 'https://www.flickr.com/photos/86530412@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86530412@N02/8266319168',
+      ),
     ),
     '/jobsite/chainsaw-accessories/fluids/husqvarna-xp-2-stroke-synthetic-blend-oil-12-8oz-bottle/' => 
     array (
@@ -16547,6 +18351,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-3.webp',
+        'sm' => '/assets/photos/fluid-3-sm.webp',
+        'title' => 'Man with gas can after Hurricane Sandy',
+        'creator' => 'WarmSleepy',
+        'creator_url' => 'https://www.flickr.com/photos/33498942@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33498942@N04/8143588667',
+      ),
     ),
     '/jobsite/chainsaw-accessories/fluids/husqvarna-xp-2-stroke-synthetic-blend-oil-6-4-oz-bottle/' => 
     array (
@@ -16666,6 +18481,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-4.webp',
+        'sm' => '/assets/photos/fluid-4-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/jobsite/chainsaw-accessories/fluids/no-spill-red-fuel-can/' => 
     array (
@@ -16786,6 +18612,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-0.webp',
+        'sm' => '/assets/photos/fluid-0-sm.webp',
+        'title' => 'Jerry Cans',
+        'creator' => 'Ozzy Delaney',
+        'creator_url' => 'https://www.flickr.com/photos/24931020@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24931020@N02/12679132043',
+      ),
     ),
     '/jobsite/chainsaw-accessories/wedges/hardhead-felling-wedge/' => 
     array (
@@ -16906,6 +18743,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-0.webp',
+        'sm' => '/assets/photos/wedge-axe-0-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Dan Edwards',
+        'creator_url' => 'https://stocksnap.io/author/13155',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-SEVPWIOFCM',
+      ),
     ),
     '/jobsite/chainsaw-accessories/wedges/logging-belt-kit/' => 
     array (
@@ -16990,6 +18838,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
     ),
     '/jobsite/chainsaw-accessories/wrenches-and-files/chainsaw-bar-wrench/' => 
     array (
@@ -17108,6 +18967,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wrench-file-0.webp',
+        'sm' => '/assets/photos/wrench-file-0-sm.webp',
+        'title' => 'chainsaw sharpening',
+        'creator' => 'nationalrural',
+        'creator_url' => 'https://www.flickr.com/photos/8228133@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8228133@N04/1113203678',
+      ),
     ),
     '/jobsite/chipper-knives/7-25-x-4-x-3-8-chipper-knife/' => 
     array (
@@ -17226,6 +19096,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
     ),
     '/jobsite/chipper-knives/chipper-knife-for-vermeer-bc1800xl/' => 
     array (
@@ -17309,6 +19190,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
     ),
     '/jobsite/chipper-knives/chipper-knife-for-vermeer-bc2100/' => 
     array (
@@ -17392,6 +19284,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/jobsite/landscaper-tools/grounds-keeper-rake-complete-rake/' => 
     array (
@@ -17511,6 +19414,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-4.webp',
+        'sm' => '/assets/photos/jobsite-4-sm.webp',
+        'title' => 'bucket truck and snowy trees',
+        'creator' => 'BryanAlexander',
+        'creator_url' => 'https://www.flickr.com/photos/36521954815@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/36521954815@N01/16022763435',
+      ),
     ),
     '/jobsite/landscaper-tools/grounds-keeper-rake-replacement-handle/' => 
     array (
@@ -17630,6 +19544,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-5.webp',
+        'sm' => '/assets/photos/jobsite-5-sm.webp',
+        'title' => 'Bandit 200xp wood chipper',
+        'creator' => 'Dorsey Photography',
+        'creator_url' => 'https://www.flickr.com/photos/72780460@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/72780460@N08/14586733053',
+      ),
     ),
     '/jobsite/landscaper-tools/grounds-keeper-rake-replacement-tines/' => 
     array (
@@ -17751,6 +19676,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-6.webp',
+        'sm' => '/assets/photos/jobsite-6-sm.webp',
+        'title' => 'Wood Chipper',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/8977863903',
+      ),
     ),
     '/jobsite/landscaper-tools/hasegawa-orchard-ladder/' => 
     array (
@@ -17869,6 +19805,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/hasegawa/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-7.webp',
+        'sm' => '/assets/photos/jobsite-7-sm.webp',
+        'title' => 'Touchdown',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410026809',
+      ),
     ),
     '/jobsite/logging-tools/axes-and-mauls/husqvarna-27-universal-axe/' => 
     array (
@@ -17959,6 +19906,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-1.webp',
+        'sm' => '/assets/photos/wedge-axe-1-sm.webp',
+        'title' => 'Axe wood hack - Credit to http://homedust.com/',
+        'creator' => 'Homedust',
+        'creator_url' => 'https://www.flickr.com/photos/159630537@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/159630537@N08/42294721892',
+      ),
     ),
     '/jobsite/logging-tools/axes-and-mauls/husqvarna-31-splitting-axe/' => 
     array (
@@ -18047,6 +20005,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-2.webp',
+        'sm' => '/assets/photos/wedge-axe-2-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Tim Wright',
+        'creator_url' => 'https://stocksnap.io/author/35280',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-W5Z4V44TFM',
+      ),
     ),
     '/jobsite/logging-tools/axes-and-mauls/husqvarna-multi-purpose-fiber-handle-axe-a2400/' => 
     array (
@@ -18165,6 +20134,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-3.webp',
+        'sm' => '/assets/photos/wedge-axe-3-sm.webp',
+        'title' => 'Axe in wood',
+        'creator' => 'brittgow',
+        'creator_url' => 'https://www.flickr.com/photos/26489950@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26489950@N03/4781607809',
+      ),
     ),
     '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-75-8ths-no-diameter/' => 
     array (
@@ -18289,6 +20269,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-0.webp',
+        'sm' => '/assets/photos/log-tool-0-sm.webp',
+        'title' => 'peavey handles (hand carved)',
+        'creator' => 'Stone Soup Institute, Harpswell, Maine',
+        'creator_url' => 'https://www.flickr.com/photos/92385698@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/92385698@N02/9819022265',
+      ),
     ),
     '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-35/' => 
     array (
@@ -18408,6 +20399,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-1.webp',
+        'sm' => '/assets/photos/log-tool-1-sm.webp',
+        'title' => 'New Jersey logging 4 of 6',
+        'creator' => 'rich701',
+        'creator_url' => 'https://www.flickr.com/photos/63490482@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63490482@N03/5806540608',
+      ),
     ),
     '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-50-refill/' => 
     array (
@@ -18528,6 +20530,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-2.webp',
+        'sm' => '/assets/photos/log-tool-2-sm.webp',
+        'title' => '5-33 Boat Building, Nova Scotia, Canada 1936',
+        'creator' => 'rich701',
+        'creator_url' => 'https://www.flickr.com/photos/63490482@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63490482@N03/6866124885',
+      ),
     ),
     '/jobsite/logging-tools/log-handling-tools/husqvarna-long-handle-hookaroon/' => 
     array (
@@ -18646,6 +20659,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-3.webp',
+        'sm' => '/assets/photos/log-tool-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894357',
+      ),
     ),
     '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-cant-hook/' => 
     array (
@@ -18769,6 +20793,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/logrite/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-4.webp',
+        'sm' => '/assets/photos/log-tool-4-sm.webp',
+        'title' => 'firewood',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064291',
+      ),
     ),
     '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-hookaroon/' => 
     array (
@@ -18888,6 +20923,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/logrite/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-5.webp',
+        'sm' => '/assets/photos/log-tool-5-sm.webp',
+        'title' => 'splitting firewood',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/65865991',
+      ),
     ),
     '/jobsite/logging-tools/log-handling-tools/logrite-log-carrier/' => 
     array (
@@ -19006,6 +21052,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/logrite/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-0.webp',
+        'sm' => '/assets/photos/log-tool-0-sm.webp',
+        'title' => 'peavey handles (hand carved)',
+        'creator' => 'Stone Soup Institute, Harpswell, Maine',
+        'creator_url' => 'https://www.flickr.com/photos/92385698@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/92385698@N02/9819022265',
+      ),
     ),
     '/jobsite/power-equipment/battery-powered-equipment/husqvarna-230ib-hand-held-battery-powered-leaf-blower/' => 
     array (
@@ -19124,6 +21181,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-5.webp',
+        'sm' => '/assets/photos/power-tool-5-sm.webp',
+        'title' => 'Leaf Blowers 06',
+        'creator' => 'hectorir',
+        'creator_url' => 'https://www.flickr.com/photos/30806435@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/30806435@N04/4117325805',
+      ),
     ),
     '/jobsite/power-equipment/battery-powered-equipment/husqvarna-qc500-quick-charge-battery-charger/' => 
     array (
@@ -19242,6 +21310,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/battery-0.webp',
+        'sm' => '/assets/photos/battery-0-sm.webp',
+        'title' => 'Cordless Drill',
+        'creator' => 'HomeSpot HQ',
+        'creator_url' => 'https://www.flickr.com/photos/86639298@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86639298@N02/8559707469',
+      ),
     ),
     '/jobsite/power-equipment/battery-powered-equipment/husqvarna-t540ixp-top-handle-battery-powered-chainsaw-kit/' => 
     array (
@@ -19372,6 +21451,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/top-handle-1.webp',
+        'sm' => '/assets/photos/top-handle-1-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
     ),
     '/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-125b-handheld-blower/' => 
     array (
@@ -19495,6 +21585,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-6.webp',
+        'sm' => '/assets/photos/power-tool-6-sm.webp',
+        'title' => 'NCCC - Fuels Reduction',
+        'creator' => 'Joshua Tree National Park',
+        'creator_url' => 'https://www.flickr.com/photos/115357548@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/115357548@N08/51765470651',
+      ),
     ),
     '/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-580bts-backpack-blower/' => 
     array (
@@ -19622,6 +21723,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-0.webp',
+        'sm' => '/assets/photos/power-tool-0-sm.webp',
+        'title' => 'Person using a string trimmer in a garden',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54573938488',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-3120xp-chainsaw-power-head-only/' => 
     array (
@@ -19750,6 +21862,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-2.webp',
+        'sm' => '/assets/photos/chainsaw-2-sm.webp',
+        'title' => 'Chainsaw Training',
+        'creator' => 'H Dragon',
+        'creator_url' => 'https://www.flickr.com/photos/81427512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/81427512@N00/2678816037',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-372xp-chainsaw/' => 
     array (
@@ -19872,6 +21995,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-3.webp',
+        'sm' => '/assets/photos/chainsaw-3-sm.webp',
+        'title' => 'Applied Physics',
+        'creator' => 'ksunderman',
+        'creator_url' => 'https://www.flickr.com/photos/87781195@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87781195@N05/13203635403',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-395xp-chainsaw/' => 
     array (
@@ -19999,6 +22133,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-4.webp',
+        'sm' => '/assets/photos/chainsaw-4-sm.webp',
+        'title' => 'New York National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/40253967023',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-450-rancher/' => 
     array (
@@ -20126,6 +22271,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-5.webp',
+        'sm' => '/assets/photos/chainsaw-5-sm.webp',
+        'title' => 'Stumpo getting cut',
+        'creator' => 'Sam Beebe',
+        'creator_url' => 'https://www.flickr.com/photos/28585409@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28585409@N04/5694764170',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-525pt5s-gas-powered-pole-saw/' => 
     array (
@@ -20248,6 +22404,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-0.webp',
+        'sm' => '/assets/photos/pole-saw-0-sm.webp',
+        'title' => 'Project 365 #211: 300718 A Cut Above',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/42842605715',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-550xp-mark-ii-chainsaw/' => 
     array (
@@ -20375,6 +22542,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-6.webp',
+        'sm' => '/assets/photos/chainsaw-6-sm.webp',
+        'title' => 'Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/51811532407',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-572xp-chainsaw/' => 
     array (
@@ -20503,6 +22681,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-7.webp',
+        'sm' => '/assets/photos/chainsaw-7-sm.webp',
+        'title' => 'Wisconsin National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/28645744470',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-592xp-chainsaw/' => 
     array (
@@ -20621,6 +22810,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-0.webp',
+        'sm' => '/assets/photos/chainsaw-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-t435-top-handle-chainsaw/' => 
     array (
@@ -20745,6 +22945,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/top-handle-2.webp',
+        'sm' => '/assets/photos/top-handle-2-sm.webp',
+        'title' => 'Chainsaw Tree Climber Serice',
+        'creator' => 'jacobavanzato',
+        'creator_url' => 'https://www.flickr.com/photos/98915111@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/98915111@N02/16152519186',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/' => 
     array (
@@ -20873,6 +23084,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/top-handle-3.webp',
+        'sm' => '/assets/photos/top-handle-3-sm.webp',
+        'title' => 'Tree Service Photography',
+        'creator' => 'jacobavanzato',
+        'creator_url' => 'https://www.flickr.com/photos/98915111@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/98915111@N02/15991012910',
+      ),
     ),
     '/jobsite/power-equipment/chainsaws/husqvarna-t540xp-mark-iii-top-handle-chainsaw/' => 
     array (
@@ -21002,6 +23224,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/top-handle-4.webp',
+        'sm' => '/assets/photos/top-handle-4-sm.webp',
+        'title' => 'David and Goliath',
+        'creator' => 'opticalreflex',
+        'creator_url' => 'https://www.flickr.com/photos/26922258@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26922258@N02/3094850112',
+      ),
     ),
     '/jobsite/power-equipment/parts/husqvarna-replacement-fuel-filter-for-t435-chainsaw/' => 
     array (
@@ -21118,6 +23351,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/jobsite/power-equipment/parts/ngk-bpmr7a-spark-plug/' => 
     array (
@@ -21243,6 +23487,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/ngk/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
+      ),
     ),
     '/jobsite/power-equipment/parts/ngk-cmr6h-spark-plug/' => 
     array (
@@ -21360,6 +23615,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/ngk/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
+      ),
     ),
     '/jobsite/power-equipment/parts/replacement-fuel-filter/' => 
     array (
@@ -21476,6 +23742,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
     ),
     '/jobsite/stump-grinding/700-series-greenteeth-pocket-straight/' => 
     array (
@@ -21563,6 +23840,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/green-manufacturing/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
     ),
     '/jobsite/stump-grinding/green-teeth-allen-head/' => 
     array (
@@ -21680,6 +23968,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/green-manufacturing/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/jobsite/stump-grinding/standard-stump-grinder-teeth/' => 
     array (
@@ -21767,6 +24066,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/landscaper-tools/corona-22-steel-leaf-rake-with-48-wood-handle/' => 
     array (
@@ -21884,6 +24194,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/corona/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-8.webp',
+        'sm' => '/assets/photos/jobsite-8-sm.webp',
+        'title' => 'Chipper',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/6941971832',
+      ),
     ),
     '/landscaper-tools/husqvarna-18v-4-gallon-backpack-sprayer/' => 
     array (
@@ -22002,6 +24323,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-1.webp',
+        'sm' => '/assets/photos/power-tool-1-sm.webp',
+        'title' => 'Trimming grass and weeds in a lush garden with a string trimmer',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54574042635',
+      ),
     ),
     '/landscaper-tools/husqvarna-trim-force-square-trimmer-line/' => 
     array (
@@ -22121,6 +24453,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
     ),
     '/lowering-devices/jail-brake-lowering-device/' => 
     array (
@@ -22237,6 +24580,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-5.webp',
+        'sm' => '/assets/photos/rigging-device-5-sm.webp',
+        'title' => 'Nautical #5',
+        'creator' => 'Graham B Finney',
+        'creator_url' => 'https://www.flickr.com/photos/188487900@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188487900@N02/51798984894',
+      ),
     ),
     '/micro-pulleys/dmm-hitch-climber-pulley-2/' => 
     array (
@@ -22359,6 +24713,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-0.webp',
+        'sm' => '/assets/photos/pulley-0-sm.webp',
+        'title' => 'Block and Tackle',
+        'creator' => 'www.mgaylard.co.uk and thanks for looking',
+        'creator_url' => 'https://www.flickr.com/photos/16564965@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/16564965@N04/52721499095',
+      ),
     ),
     '/other-gear/soft-canopy-anchor/' => 
     array (
@@ -22478,6 +24843,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
     ),
     '/parts-and-accessories/husqvarna-chainsaw-maintenance-kit-for-445-and-450/' => 
     array (
@@ -22595,6 +24971,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
     ),
     '/parts/bpmr8y-spark-plug/' => 
     array (
@@ -22716,6 +25103,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/ngk/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
+      ),
     ),
     '/parts/cmr7h-spark-plug/' => 
     array (
@@ -22832,6 +25230,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/ngk/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
+      ),
     ),
     '/parts/husqvarna-vari-cut-s45-diamond-wheel/' => 
     array (
@@ -22951,6 +25360,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/plant-care/cabling-and-bracing/bracing/bracing-rods/' => 
     array (
@@ -23038,6 +25458,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-2.webp',
+        'sm' => '/assets/photos/cable-hardware-2-sm.webp',
+        'title' => 'Stainless steel eye-bolt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6032390/photo-image-public-domain-free-silver',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cable/common-grade-cable/' => 
     array (
@@ -23126,6 +25557,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-3.webp',
+        'sm' => '/assets/photos/cable-hardware-3-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/413404',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cable/ehs-cable/' => 
     array (
@@ -23223,6 +25665,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-4.webp',
+        'sm' => '/assets/photos/cable-hardware-4-sm.webp',
+        'title' => 'Project 365 #278: 051011 Going Nuts',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/6214688085',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cabling-hardware/3-8-eye-bolt/' => 
     array (
@@ -23341,6 +25794,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-5.webp',
+        'sm' => '/assets/photos/cable-hardware-5-sm.webp',
+        'title' => 'Eye bolt snow bokeh',
+        'creator' => 'dsgetch',
+        'creator_url' => 'https://www.flickr.com/photos/66136677@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/66136677@N00/51782009502',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/' => 
     array (
@@ -23470,6 +25934,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-0.webp',
+        'sm' => '/assets/photos/cable-hardware-0-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/393624',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/' => 
     array (
@@ -23599,6 +26074,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-1.webp',
+        'sm' => '/assets/photos/cable-hardware-1-sm.webp',
+        'title' => 'Eye Bolt',
+        'creator' => 'Clearly Ambiguous',
+        'creator_url' => 'https://www.flickr.com/photos/84617037@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/84617037@N00/428612624',
+      ),
     ),
     '/plant-care/plant-health-care/lac-balsam-tree-wound-treatment/' => 
     array (
@@ -23686,6 +26172,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-1.webp',
+        'sm' => '/assets/photos/fluid-1-sm.webp',
+        'title' => 'Gas Can Storage',
+        'creator' => 'Hugo-90',
+        'creator_url' => 'https://www.flickr.com/photos/32109282@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/32109282@N00/49732866582',
+      ),
     ),
     '/plant-care/planting/tree-support-web-for-staking-trees-250/' => 
     array (
@@ -23805,6 +26302,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-4.webp',
+        'sm' => '/assets/photos/sling-4-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
     ),
     '/plant-care/planting/wire-rope-clamps/' => 
     array (
@@ -23930,6 +26438,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-2.webp',
+        'sm' => '/assets/photos/cable-hardware-2-sm.webp',
+        'title' => 'Stainless steel eye-bolt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6032390/photo-image-public-domain-free-silver',
+      ),
     ),
     '/planting/duck-bill-earth-anchors-small/' => 
     array (
@@ -24049,6 +26568,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-3.webp',
+        'sm' => '/assets/photos/cable-hardware-3-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/413404',
+      ),
     ),
     '/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/' => 
     array (
@@ -24132,6 +26662,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/distel/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-4.webp',
+        'sm' => '/assets/photos/spur-4-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/rigging-kits/speed-line-kit-with-carabiners/' => 
     array (
@@ -24250,6 +26791,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rigging-pulleys/rock-exotica-downrigger/' => 
     array (
@@ -24332,6 +26884,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/rock-exotica/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-1.webp',
+        'sm' => '/assets/photos/pulley-1-sm.webp',
+        'title' => 'Block and tackle',
+        'creator' => 'quinet',
+        'creator_url' => 'https://www.flickr.com/photos/91994044@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/91994044@N00/14200854012',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/' => 
     array (
@@ -24420,6 +26983,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/' => 
     array (
@@ -24508,6 +27082,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-3.webp',
+        'sm' => '/assets/photos/pulley-3-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-small-rigging-plate/' => 
     array (
@@ -24596,6 +27181,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-6.webp',
+        'sm' => '/assets/photos/rigging-device-6-sm.webp',
+        'title' => 'Arborist Cutting',
+        'creator' => 'matt.boman',
+        'creator_url' => 'https://www.flickr.com/photos/10384097@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10384097@N08/6109956022',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/' => 
     array (
@@ -24715,6 +27311,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-4.webp',
+        'sm' => '/assets/photos/pulley-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/' => 
     array (
@@ -24803,6 +27410,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-0.webp',
+        'sm' => '/assets/photos/pulley-0-sm.webp',
+        'title' => 'Block and Tackle',
+        'creator' => 'www.mgaylard.co.uk and thanks for looking',
+        'creator_url' => 'https://www.flickr.com/photos/16564965@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/16564965@N04/52721499095',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/' => 
     array (
@@ -24892,6 +27510,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-4.webp',
+        'sm' => '/assets/photos/cable-hardware-4-sm.webp',
+        'title' => 'Project 365 #278: 051011 Going Nuts',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/6214688085',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/' => 
     array (
@@ -24982,6 +27611,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-5.webp',
+        'sm' => '/assets/photos/cable-hardware-5-sm.webp',
+        'title' => 'Eye bolt snow bokeh',
+        'creator' => 'dsgetch',
+        'creator_url' => 'https://www.flickr.com/photos/66136677@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/66136677@N00/51782009502',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/' => 
     array (
@@ -25102,6 +27742,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-0.webp',
+        'sm' => '/assets/photos/cable-hardware-0-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/393624',
+      ),
     ),
     '/rigging/lowering-devices/buckingham-medium-portawrap/' => 
     array (
@@ -25231,6 +27882,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-0.webp',
+        'sm' => '/assets/photos/rigging-device-0-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894227',
+      ),
     ),
     '/rigging/lowering-devices/good-rigging-control-system/' => 
     array (
@@ -25355,6 +28017,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/good-rigging/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-1.webp',
+        'sm' => '/assets/photos/rigging-device-1-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982704071',
+      ),
     ),
     '/rigging/lowering-devices/hobbs-h2-lowering-device/' => 
     array (
@@ -25475,6 +28148,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-2.webp',
+        'sm' => '/assets/photos/rigging-device-2-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982705461',
+      ),
     ),
     '/rigging/lowering-devices/large-portawrap-lowering-device/' => 
     array (
@@ -25595,6 +28279,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-3.webp',
+        'sm' => '/assets/photos/rigging-device-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982144423',
+      ),
     ),
     '/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/' => 
     array (
@@ -25715,6 +28410,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/' => 
     array (
@@ -25835,6 +28541,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-4.webp',
+        'sm' => '/assets/photos/rigging-device-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
     ),
     '/rigging/mechanical-advantage/petzl-micro-traxion-pulley/' => 
     array (
@@ -25966,6 +28683,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-1.webp',
+        'sm' => '/assets/photos/pulley-1-sm.webp',
+        'title' => 'Block and tackle',
+        'creator' => 'quinet',
+        'creator_url' => 'https://www.flickr.com/photos/91994044@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/91994044@N00/14200854012',
+      ),
     ),
     '/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/' => 
     array (
@@ -26055,6 +28783,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-5.webp',
+        'sm' => '/assets/photos/rigging-device-5-sm.webp',
+        'title' => 'Nautical #5',
+        'creator' => 'Graham B Finney',
+        'creator_url' => 'https://www.flickr.com/photos/188487900@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188487900@N02/51798984894',
+      ),
     ),
     '/rigging/rigging-kits/weaver-speed-line-kit/' => 
     array (
@@ -26174,6 +28913,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/' => 
     array (
@@ -26261,6 +29011,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
     ),
     '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/' => 
     array (
@@ -26382,6 +29143,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
     ),
     '/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/' => 
     array (
@@ -26476,6 +29248,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
     ),
     '/rigging/rigging-slings/crane-slings/endless-loop-round-slings/' => 
     array (
@@ -26600,6 +29383,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
     ),
     '/rigging/rigging-slings/heavy-duty-slings/1-2-bull-rope-rigging-sling/' => 
     array (
@@ -26719,6 +29513,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-4.webp',
+        'sm' => '/assets/photos/sling-4-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
     ),
     '/rigging/rigging-slings/heavy-duty-webbing-slings/' => 
     array (
@@ -26810,6 +29615,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
     ),
     '/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/' => 
     array (
@@ -26901,6 +29717,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
     ),
     '/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/' => 
     array (
@@ -26985,6 +29812,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
     ),
     '/rope-bags/courant-cargo-bag-50l-blue/' => 
     array (
@@ -27070,6 +29908,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/courant/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
     ),
     '/rope-lanyards/replacement-rope-lanyard-without-snaps/' => 
     array (
@@ -27192,6 +30041,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
     ),
     '/rope/accessory-cord/sterling-shock-cord-by-the-foot/' => 
     array (
@@ -27275,6 +30135,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/sterling-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/rope/climbing-rope/12-strand-climbing-rope/samson-1-2-arbor-plex/' => 
     array (
@@ -27360,6 +30231,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/rope/climbing-rope/16-strand-climbing-rope/teufelberger-safety-blue-white-climbing-rope/' => 
     array (
@@ -27448,6 +30330,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rope/climbing-rope/16-strand-climbing-rope/teufelberger-ultra-vee-climbing-rope/' => 
     array (
@@ -27532,6 +30425,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/rope/climbing-rope/24-strand-climbing-rope/petzl-control-12-5mm-climbing-rope/' => 
     array (
@@ -27616,6 +30520,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/rope/climbing-rope/static-climbing-rope/sterling-11mm-htp-static-climbing-rope/' => 
     array (
@@ -27705,6 +30620,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/sterling-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/rope/climbing-rope/static-climbing-rope/sterling-workpro-12-5mm-static-climbing-rope/' => 
     array (
@@ -27790,6 +30716,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/sterling-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rope/rigging-rope/samson-1-2-rigging-rope/' => 
     array (
@@ -27915,6 +30852,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/rope/rigging-rope/samson-3-4-arbor-plex-rigging-rope/' => 
     array (
@@ -28041,6 +30989,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/rope/rigging-rope/samson-stable-braid-5-8-rigging-rope/' => 
     array (
@@ -28131,6 +31090,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/rope/rope-care-and-splicing/all-gear-heavy-duty-chafe-sleeve/' => 
     array (
@@ -28212,6 +31182,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/all-gear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
     ),
     '/rope/rope-care-and-splicing/chafe-sleeve/' => 
     array (
@@ -28293,6 +31274,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
     ),
     '/rope/tech-cordage/teufelberger-epicord-8mm-hitch-cord-by-the-foot/' => 
     array (
@@ -28377,6 +31369,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rope/tech-cordage/yale-r-i-n-g-rope-by-the-foot/' => 
     array (
@@ -28502,6 +31505,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/saddle-parts-and-shoulder-harnesses/tree-access-srt-chest-harness/' => 
     array (
@@ -28582,6 +31596,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-4.webp',
+        'sm' => '/assets/photos/saddle-4-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/saddle-storage/isc-nessie-lanyard-management-clip/' => 
     array (
@@ -28662,6 +31687,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
     ),
     '/saddle-storage/rock-exotica-transporter-xl/' => 
     array (
@@ -28748,6 +31784,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/rock-exotica/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/safety/communication/3m-peltor-lite-com-frs/' => 
     array (
@@ -28835,6 +31882,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/3m/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-1.webp',
+        'sm' => '/assets/photos/eye-ear-1-sm.webp',
+        'title' => 'MAY 18 Close-up of helmet and safety glasses',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/52149599431',
+      ),
     ),
     '/safety/communication/sena-33i-bluetooth-communication-system-with-mesh-intercom/' => 
     array (
@@ -28923,6 +31981,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/sena/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-2.webp',
+        'sm' => '/assets/photos/eye-ear-2-sm.webp',
+        'title' => '000ElmTreeVitality',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33607662022',
+      ),
     ),
     '/safety/communication/sena-integrated-communication-helmet-system/' => 
     array (
@@ -29005,6 +32074,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/sena/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-0.webp',
+        'sm' => '/assets/photos/helmet-0-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9734106231',
+      ),
     ),
     '/safety/eye-protection/erb-safety-o-n-e-live-free-camo-safety-glasses/' => 
     array (
@@ -29132,6 +32212,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-3.webp',
+        'sm' => '/assets/photos/eye-ear-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/safety/eye-protection/kask-zenith-visor/' => 
     array (
@@ -29258,6 +32349,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/kask/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-0.webp',
+        'sm' => '/assets/photos/eye-ear-0-sm.webp',
+        'title' => 'Mirrored Safety Glasses - Imprinted with Logo',
+        'creator' => 'Woodlands Ad Agency',
+        'creator_url' => 'https://www.flickr.com/photos/24236630@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24236630@N05/7644923536',
+      ),
     ),
     '/safety/eye-protection/petzl-visor-2018-alveo-and-vertex-helmets/' => 
     array (
@@ -29383,6 +32485,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-1.webp',
+        'sm' => '/assets/photos/eye-ear-1-sm.webp',
+        'title' => 'MAY 18 Close-up of helmet and safety glasses',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/52149599431',
+      ),
     ),
     '/safety/fall-protection/estex-fred-the-rescue-dummy/' => 
     array (
@@ -29508,6 +32621,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/first-aid-0.webp',
+        'sm' => '/assets/photos/first-aid-0-sm.webp',
+        'title' => 'First Aid Kit',
+        'creator' => 'dlg_images',
+        'creator_url' => 'https://www.flickr.com/photos/131260238@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/131260238@N08/16800384582',
+      ),
     ),
     '/safety/first-aid/bloodstopper-gauze-kit/' => 
     array (
@@ -29589,6 +32713,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/first-aid-1.webp',
+        'sm' => '/assets/photos/first-aid-1-sm.webp',
+        'title' => 'First aid kit',
+        'creator' => 'Marcin Wichary',
+        'creator_url' => 'https://www.flickr.com/photos/8399025@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8399025@N07/2615558474',
+      ),
     ),
     '/safety/first-aid/jag-system/' => 
     array (
@@ -29671,6 +32806,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
     ),
     '/safety/first-aid/woundseal-stop-bleeding-powder/' => 
     array (
@@ -29756,6 +32902,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/first-aid-2.webp',
+        'sm' => '/assets/photos/first-aid-2-sm.webp',
+        'title' => 'Level 0 first-aid kit (rev2)',
+        'creator' => 'jhritz',
+        'creator_url' => 'https://www.flickr.com/photos/29818924@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/29818924@N00/3863896260',
+      ),
     ),
     '/safety/gloves/husqvarna-technical-gloves/' => 
     array (
@@ -29882,6 +33039,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/gloves-0.webp',
+        'sm' => '/assets/photos/gloves-0-sm.webp',
+        'title' => 'leather work gloves composite P1010224 copy',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/51402349573',
+      ),
     ),
     '/safety/gloves/wonder-gloves/' => 
     array (
@@ -30009,6 +33177,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/gloves-1.webp',
+        'sm' => '/assets/photos/gloves-1-sm.webp',
+        'title' => 'SDIM1773 Carl\'s Leather Work Gloves',
+        'creator' => 'carlfbagge',
+        'creator_url' => 'https://www.flickr.com/photos/12535240@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/12535240@N05/14223692381',
+      ),
     ),
     '/safety/hearing-protection/husqvarna-ear-muff-hygiene-set/' => 
     array (
@@ -30094,6 +33273,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-2.webp',
+        'sm' => '/assets/photos/eye-ear-2-sm.webp',
+        'title' => '000ElmTreeVitality',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33607662022',
+      ),
     ),
     '/safety/hearing-protection/peltor-optime-helmet-mounted-muffs-white/' => 
     array (
@@ -30184,6 +33374,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/3m/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-3.webp',
+        'sm' => '/assets/photos/eye-ear-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/safety/traffic-control/18-drop-zone-cone/' => 
     array (
@@ -30303,6 +33504,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/traffic-1.webp',
+        'sm' => '/assets/photos/traffic-1-sm.webp',
+        'title' => 'Traffic cones',
+        'creator' => 'oatsy40',
+        'creator_url' => 'https://www.flickr.com/photos/68089229@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68089229@N06/22654103994',
+      ),
     ),
     '/safety/traffic-control/48-tree-work-ahead-sign/' => 
     array (
@@ -30392,6 +33604,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/traffic-2.webp',
+        'sm' => '/assets/photos/traffic-2-sm.webp',
+        'title' => 'Traffic cone in the foreground and road works in the background',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/47958765853',
+      ),
     ),
     '/safety/traffic-control/hi-viz-green-safety-vest-mesh-class-2-size-xl/' => 
     array (
@@ -30483,6 +33706,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-2.webp',
+        'sm' => '/assets/photos/apparel-2-sm.webp',
+        'title' => 'woman taking her flannel shirt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/3284728/free-photo-image-dress-long-jeans-dance',
+      ),
     ),
     '/shop-all/clogger-zero-light-and-cool-ul-chainsaw-chaps-apron-style/' => 
     array (
@@ -30573,6 +33807,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-3.webp',
+        'sm' => '/assets/photos/chaps-pants-3-sm.webp',
+        'title' => 'Defensible space-thinning with chainsaw',
+        'creator' => '#ODF',
+        'creator_url' => 'https://www.flickr.com/photos/97482765@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/97482765@N07/16729822658',
+      ),
     ),
     '/shop-all/endless-loop-polyester-round-sling-7-x-20-blue/' => 
     array (
@@ -30667,6 +33912,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
     ),
     '/shop-all/husqvarna-k770-power-cutter/' => 
     array (
@@ -30790,6 +34046,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-2.webp',
+        'sm' => '/assets/photos/power-tool-2-sm.webp',
+        'title' => 'Hat string trimmer',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6036825/photo-image-public-domain-free-grass',
+      ),
     ),
     '/shop-all/husqvarna-titanium-xpro-trimmer-line/' => 
     array (
@@ -30909,6 +34176,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
     '/shop-all/husqvarna-trimforce-trimmer-line/' => 
     array (
@@ -31028,6 +34306,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
     ),
     '/shop-all/notch-fusion-rope-wrench-tether/' => 
     array (
@@ -31111,6 +34400,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
     '/shop-all/polymer-hook-with-standard-end/' => 
     array (
@@ -31229,6 +34529,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/shop-all/stars-and-stripes-adjustable-friction-saver/' => 
     array (
@@ -31345,6 +34656,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-4.webp',
+        'sm' => '/assets/photos/sling-4-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
     ),
     '/shop/product/180-samson-zing-it-throwline/' => 
     array (
@@ -31463,6 +34785,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-1.webp',
+        'sm' => '/assets/photos/throw-line-1-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/shop/product/clogger-zero-chainsaw-pants/' => 
     array (
@@ -31582,6 +34915,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-0.webp',
+        'sm' => '/assets/photos/chaps-pants-0-sm.webp',
+        'title' => 'Chainsaw Chaps',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/8610687085',
+      ),
     ),
     '/shop/product/edelrid-static-rope-shorty-hanks-2/' => 
     array (
@@ -31700,6 +35044,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/shop/product/edelrid-static-rope-shorty-hanks/' => 
     array (
@@ -31819,6 +35174,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/shop/product/masdaam-continuous-rope-puller-kit/' => 
     array (
@@ -31936,6 +35302,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-6.webp',
+        'sm' => '/assets/photos/rigging-device-6-sm.webp',
+        'title' => 'Arborist Cutting',
+        'creator' => 'matt.boman',
+        'creator_url' => 'https://www.flickr.com/photos/10384097@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10384097@N08/6109956022',
+      ),
     ),
     '/spurs/notch-ergo-climbers/' => 
     array (
@@ -32025,6 +35402,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-5.webp',
+        'sm' => '/assets/photos/spur-5-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
+      ),
     ),
     '/static-climbing-rope/yale-phantom-pink-and-black-11mm-climbing-rope/' => 
     array (
@@ -32142,6 +35530,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/swivels/camp-enigma-swivel/' => 
     array (
@@ -32231,6 +35630,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/camp/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-3.webp',
+        'sm' => '/assets/photos/pulley-3-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/tree-climbing-pants/clogger-zero-ultra-mens-premium-chainsaw-pants/' => 
     array (
@@ -32326,6 +35736,17 @@ return array (
       ),
       'level' => 'pro',
       'brand_path' => '/clogger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
+      ),
     ),
     '/wedges/k-h-red-head-felling-wedge/' => 
     array (
@@ -32415,6 +35836,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/k-h-distributing/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-4.webp',
+        'sm' => '/assets/photos/wedge-axe-4-sm.webp',
+        'title' => 'Axe',
+        'creator' => 'AlphaTangoBravo / Adam Baker',
+        'creator_url' => 'https://www.flickr.com/photos/44124479650@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/44124479650@N01/4593738278',
+      ),
     ),
     '/wrenches-and-files/husqvarna-combination-tool-wrench/' => 
     array (
@@ -32533,6 +35965,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wrench-file-1.webp',
+        'sm' => '/assets/photos/wrench-file-1-sm.webp',
+        'title' => 'chainsaw sharpening',
+        'creator' => 'nationalrural',
+        'creator_url' => 'https://www.flickr.com/photos/8228133@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8228133@N04/1112350819',
+      ),
     ),
     '/wrenches-and-files/pferd-classic-round-files-per-dozen/' => 
     array (
@@ -32621,6 +36064,17 @@ return array (
       ),
       'level' => 'all',
       'brand_path' => '/pferd/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wrench-file-2.webp',
+        'sm' => '/assets/photos/wrench-file-2-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
     ),
   ),
   'categories' => 
@@ -32708,6 +36162,17 @@ return array (
         0 => '/books-and-training-materials/ansi-a300-standard-for-tree-care/',
         1 => '/books-and-training-materials/ansi-z133-safety-standard-for-tree-work/',
         2 => '/books-and-training-materials/certified-arborist-study-guide/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/book-0.webp',
+        'sm' => '/assets/photos/book-0-sm.webp',
+        'title' => 'Book Stack',
+        'creator' => 'byzantiumbooks',
+        'creator_url' => 'https://www.flickr.com/photos/10688882@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10688882@N00/24811541306',
       ),
     ),
     '/climbing/' => 
@@ -32905,6 +36370,17 @@ return array (
         105 => '/spurs/notch-ergo-climbers/',
         106 => '/swivels/camp-enigma-swivel/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-1.webp',
+        'sm' => '/assets/photos/saddle-1-sm.webp',
+        'title' => 'JnpITA',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33903505151',
+      ),
     ),
     '/climbing/climbing-gear/' => 
     array (
@@ -33074,6 +36550,17 @@ return array (
         72 => '/shop-all/stars-and-stripes-adjustable-friction-saver/',
         73 => '/swivels/camp-enigma-swivel/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/' => 
     array (
@@ -33138,6 +36625,17 @@ return array (
         14 => '/foot-ascenders-and-foot-loops/cmi-foot-ascender/',
         15 => '/foot-ascenders-and-foot-loops/saka-foldable-knee-ascender/',
         16 => '/shop-all/notch-fusion-rope-wrench-tether/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-0.webp',
+        'sm' => '/assets/photos/ascender-0-sm.webp',
+        'title' => '2011 Best Ranger Competition [Image 2 of 5]',
+        'creator' => 'DVIDSHUB',
+        'creator_url' => 'https://www.flickr.com/photos/28650594@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28650594@N03/5640880003',
       ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/' => 
@@ -33224,6 +36722,17 @@ return array (
         1 => '/foot-ascenders-and-foot-loops/cmi-foot-ascender/',
         2 => '/foot-ascenders-and-foot-loops/saka-foldable-knee-ascender/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-3.webp',
+        'sm' => '/assets/photos/ascender-3-sm.webp',
+        'title' => 'West Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/44298692982',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/' => 
     array (
@@ -33283,6 +36792,17 @@ return array (
         4 => '/devices-for-mrs/buckingham-throttle/',
         5 => '/shop-all/notch-fusion-rope-wrench-tether/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/' => 
     array (
@@ -33330,6 +36850,17 @@ return array (
         0 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/hitch-hiker-2/',
         1 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-mechanical-friction-device/',
         2 => '/devices-for-mrs/buckingham-throttle/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
       ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/' => 
@@ -33380,6 +36911,17 @@ return array (
         1 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/notch-flow-adjustable-rope-wrench/',
         2 => '/shop-all/notch-fusion-rope-wrench-tether/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
     ),
     '/climbing/climbing-gear/ascent-and-descent/rope-grabs/' => 
     array (
@@ -33428,6 +36970,17 @@ return array (
         0 => '/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-replacement-cam/',
         1 => '/climbing/climbing-gear/ascent-and-descent/rope-grabs/climb-right-rope-grab/',
         2 => '/climbing/climbing-gear/ascent-and-descent/rope-grabs/petzl-micrograb-lanyard-adjuster/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-3.webp',
+        'sm' => '/assets/photos/ascender-3-sm.webp',
+        'title' => 'West Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/44298692982',
       ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/' => 
@@ -33537,6 +37090,17 @@ return array (
         18 => '/saddle-storage/rock-exotica-transporter-xl/',
         19 => '/shop-all/polymer-hook-with-standard-end/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/' => 
     array (
@@ -33584,6 +37148,17 @@ return array (
         0 => '/auto-locking-carabiners/husqvarna-d-shaped-carabiner/',
         1 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-shadow-carabiner/',
         2 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/petzl-amd-carabiner/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
       ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/hardware/' => 
@@ -33633,6 +37208,17 @@ return array (
         1 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-speedy-link/',
         2 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/stainless-steel-twisted-shackle/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/' => 
     array (
@@ -33680,6 +37266,17 @@ return array (
         0 => '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-xsre-carabiners/',
         1 => '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/petzl-rollclip-carabiner/',
         2 => '/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/rock-exotica-rockx-accessory-carabiner/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
       ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/' => 
@@ -33763,6 +37360,17 @@ return array (
         1 => '/saddle-storage/rock-exotica-transporter-xl/',
         2 => '/shop-all/polymer-hook-with-standard-end/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/' => 
     array (
@@ -33810,6 +37418,17 @@ return array (
         0 => '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-amd-screw-lock-carabiner/',
         1 => '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-william-screw-lock-carabiner/',
         2 => '/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/smc-large-heat-treated-steel-screw-locking-carabiner/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
       ),
     ),
     '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/' => 
@@ -33893,6 +37512,17 @@ return array (
         1 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/petzl-eashook-open-rope-snap/',
         2 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/steel-locking-rope-snap/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
     ),
     '/climbing/climbing-gear/chainsaw-lanyards/' => 
     array (
@@ -33940,6 +37570,17 @@ return array (
         0 => '/chainsaw-lanyards/bungee-chainsaw-lanyard-with-snap/',
         1 => '/chainsaw-lanyards/bungee-modular-chainsaw-lanyard-system/',
         2 => '/climbing/climbing-gear/chainsaw-lanyards/weaver-chainsaw-strap-with-snap/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
       ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/' => 
@@ -33997,6 +37638,17 @@ return array (
         7 => '/climbing/climbing-gear/fliplines-and-lanyards/wire-core-lanyards/1-2-wire-core-flipline/',
         8 => '/rope-lanyards/replacement-rope-lanyard-without-snaps/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/' => 
     array (
@@ -34045,6 +37697,17 @@ return array (
         0 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/2-in-1-wire-core-flipline-kit/',
         1 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-grillon-hook-work-positioning-lanyard/',
         2 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-zillon-lanyard/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
       ),
     ),
     '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/' => 
@@ -34128,6 +37791,17 @@ return array (
         1 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/petzl-micrograb-lanyard-add-on-kit/',
         2 => '/rope-lanyards/replacement-rope-lanyard-without-snaps/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/climbing-gear/friction-savers/' => 
     array (
@@ -34175,6 +37849,17 @@ return array (
         0 => '/climbing/climbing-gear/friction-savers/art-ropeguide-twinline/',
         1 => '/climbing/climbing-gear/friction-savers/cmi-anchor-sling/',
         2 => '/shop-all/stars-and-stripes-adjustable-friction-saver/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
       ),
     ),
     '/climbing/climbing-gear/gear-storage/' => 
@@ -34261,6 +37946,17 @@ return array (
         4 => '/climbing/climbing-gear/gear-storage/rope-bags/treehog-40l-rope-bag/',
         5 => '/rope-bags/courant-cargo-bag-50l-blue/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/gear-bags/' => 
     array (
@@ -34343,6 +38039,17 @@ return array (
         1 => '/climbing/climbing-gear/gear-storage/gear-bags/edelrid-kurt-haulbag/',
         2 => '/climbing/climbing-gear/gear-storage/gear-bags/petzl-duffel-85l-large-gear-bag/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
     ),
     '/climbing/climbing-gear/gear-storage/rope-bags/' => 
     array (
@@ -34390,6 +38097,17 @@ return array (
         0 => '/climbing/climbing-gear/gear-storage/rope-bags/courant-cross-rope-bag-23-36-l/',
         1 => '/climbing/climbing-gear/gear-storage/rope-bags/treehog-40l-rope-bag/',
         2 => '/rope-bags/courant-cargo-bag-50l-blue/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
       ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/' => 
@@ -34441,6 +38159,17 @@ return array (
         2 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-hand-spliced-eye-to-eye/',
         3 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-8mm-bee-line-split-tail/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/' => 
     array (
@@ -34488,6 +38217,17 @@ return array (
         0 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/big-jims-hitch-breaker/',
         1 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/dmm-hitch-climber-kit/',
         2 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-hand-spliced-eye-to-eye/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
       ),
     ),
     '/climbing/climbing-gear/micro-pulleys/' => 
@@ -34538,6 +38278,17 @@ return array (
         1 => '/climbing/climbing-gear/micro-pulleys/dmm-hitch-climber-eccentric-pulley/',
         2 => '/micro-pulleys/dmm-hitch-climber-pulley-2/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
     ),
     '/climbing/climbing-gear/other-gear/' => 
     array (
@@ -34585,6 +38336,17 @@ return array (
         0 => '/climbing/climbing-gear/other-gear/dmm-captain-hook/',
         1 => '/climbing/climbing-gear/other-gear/the-sawpod/',
         2 => '/other-gear/soft-canopy-anchor/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
       ),
     ),
     '/climbing/climbing-gear/rings/' => 
@@ -34635,6 +38397,17 @@ return array (
         1 => '/climbing/climbing-gear/rings/petzl-ring-open/',
         2 => '/climbing/climbing-gear/rings/petzl-ring/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
     ),
     '/climbing/climbing-gear/swivels/' => 
     array (
@@ -34684,6 +38457,17 @@ return array (
         1 => '/climbing/climbing-gear/swivels/petzl-micro-swivel-open/',
         2 => '/swivels/camp-enigma-swivel/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
     ),
     '/climbing/helmets/' => 
     array (
@@ -34732,6 +38516,17 @@ return array (
         1 => '/climbing/helmets/kask-super-plasma-climbing-helmet/',
         2 => '/climbing/helmets/petzl-vertex-vent/',
         3 => '/climbing/helmets/pfanner-protos-integral-arborist-helmet-system/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-3.webp',
+        'sm' => '/assets/photos/helmet-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
       ),
     ),
     '/climbing/saddles-and-harnesses/' => 
@@ -34827,6 +38622,17 @@ return array (
         7 => '/european-saddles/dmm-kinisi-max-harness/',
         8 => '/saddle-parts-and-shoulder-harnesses/tree-access-srt-chest-harness/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/climbing/saddles-and-harnesses/buckingham-saddles/' => 
     array (
@@ -34909,6 +38715,17 @@ return array (
         1 => '/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-buckcraft-saddle/',
         2 => '/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergovation/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
     ),
     '/climbing/saddles-and-harnesses/european-saddles/' => 
     array (
@@ -34958,6 +38775,17 @@ return array (
         1 => '/climbing/saddles-and-harnesses/european-saddles/treemotion-pro-climbing-harness/',
         2 => '/european-saddles/dmm-kinisi-max-harness/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
     ),
     '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/' => 
     array (
@@ -35006,6 +38834,17 @@ return array (
         0 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-bungee-chest-harness/',
         1 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-chest-box/',
         2 => '/saddle-parts-and-shoulder-harnesses/tree-access-srt-chest-harness/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-5.webp',
+        'sm' => '/assets/photos/saddle-5-sm.webp',
+        'title' => 'DSC_0054',
+        'creator' => 'BCRP',
+        'creator_url' => 'https://www.flickr.com/photos/63577817@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63577817@N04/8199050111',
       ),
     ),
     '/climbing/spurs/' => 
@@ -35073,6 +38912,17 @@ return array (
         9 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-upper-strap-system/',
         10 => '/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/',
         11 => '/spurs/notch-ergo-climbers/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-2.webp',
+        'sm' => '/assets/photos/spur-2-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813825794',
       ),
     ),
     '/climbing/spurs/aluminum-spurs/' => 
@@ -35157,6 +39007,17 @@ return array (
         1 => '/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-steel-support-pads/',
         2 => '/spurs/notch-ergo-climbers/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-4.webp',
+        'sm' => '/assets/photos/spur-4-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
     ),
     '/climbing/spurs/buckingham-steel-spurs/' => 
     array (
@@ -35205,6 +39066,17 @@ return array (
         0 => '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-big-buck-pads/',
         1 => '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-lower-straps/',
         2 => '/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-t-pads/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-0.webp',
+        'sm' => '/assets/photos/spur-0-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16380468763',
       ),
     ),
     '/climbing/spurs/climber-pads/' => 
@@ -35255,6 +39127,17 @@ return array (
         1 => '/climbing/spurs/climber-pads/buckingham-big-buck-pads/',
         2 => '/climbing/spurs/climber-pads/buckingham-big-buck-velcro-pads/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-1.webp',
+        'sm' => '/assets/photos/spur-1-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16814256419',
+      ),
     ),
     '/climbing/spurs/replacement-gaffs-and-parts/' => 
     array (
@@ -35303,6 +39186,17 @@ return array (
         0 => '/climbing/spurs/replacement-gaffs-and-parts/buckalloy-screw-and-dowel-style-replacement-tree-gaffs/',
         1 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-upper-strap-system/',
         2 => '/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-5.webp',
+        'sm' => '/assets/photos/spur-5-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
       ),
     ),
     '/climbing/throw-weight-and-line/' => 
@@ -35359,6 +39253,17 @@ return array (
         5 => '/climbing/throw-weight-and-line/throw-line/teufelberger-dynaglide-throwline/',
         6 => '/climbing/throw-weight-and-line/throw-weights/petzl-jet-throw-weight/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line-kits/' => 
     array (
@@ -35407,6 +39312,17 @@ return array (
         0 => '/climbing/throw-weight-and-line/throw-line-kits/big-shot-throw-weight-launcher/',
         1 => '/climbing/throw-weight-and-line/throw-line-kits/starter-throwline-kit/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-1.webp',
+        'sm' => '/assets/photos/throw-line-1-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/climbing/throw-weight-and-line/throw-line/' => 
     array (
@@ -35454,6 +39370,17 @@ return array (
         0 => '/climbing/throw-weight-and-line/throw-line/samson-zing-it-1-75mm-throwline/',
         1 => '/climbing/throw-weight-and-line/throw-line/target-line-throwline/',
         2 => '/climbing/throw-weight-and-line/throw-line/teufelberger-dynaglide-throwline/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
       ),
     ),
     '/climbing/tree-climbing-kits/' => 
@@ -35535,6 +39462,17 @@ return array (
       'products' => 
       array (
         0 => '/climbing/tree-climbing-kits/arborist-rope-climbing-kits/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
       ),
     ),
     '/clothing/' => 
@@ -35636,6 +39574,17 @@ return array (
         10 => '/clothing/tree-climbing-pants/heavy-duty-suspenders-for-chainsaw-pants-by-arbortec/',
         11 => '/tree-climbing-pants/clogger-zero-ultra-mens-premium-chainsaw-pants/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-3.webp',
+        'sm' => '/assets/photos/apparel-3-sm.webp',
+        'title' => 'Great flannel shirts for women are hard to come by. But flannel is our signature, inspired by top-notch menswear shirts - especially designed and tailored for you. Take up to 20% off this weekend on all flannels, including the Park City flannel pictured h',
+        'creator' => 'Tradlands',
+        'creator_url' => 'https://www.flickr.com/photos/87743767@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87743767@N07/24785884538',
+      ),
     ),
     '/clothing/arborist-boots/' => 
     array (
@@ -35721,6 +39670,17 @@ return array (
         1 => '/clothing/arborist-boots/arbpro-andrew-cervino-boots/',
         2 => '/clothing/arborist-boots/arbpro-clip-n-step-boots/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/boot-1.webp',
+        'sm' => '/assets/photos/boot-1-sm.webp',
+        'title' => 'Old Boot, New Boot',
+        'creator' => 'General Wesc',
+        'creator_url' => 'https://www.flickr.com/photos/35518575@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35518575@N00/5198346357',
+      ),
     ),
     '/clothing/hats-and-caps/' => 
     array (
@@ -35805,6 +39765,17 @@ return array (
         1 => '/clothing/hats-and-caps/arborwear-stocking-cap/',
         2 => '/clothing/hats-and-caps/husqvarna-utforskare-hat/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-3.webp',
+        'sm' => '/assets/photos/apparel-3-sm.webp',
+        'title' => 'Great flannel shirts for women are hard to come by. But flannel is our signature, inspired by top-notch menswear shirts - especially designed and tailored for you. Take up to 20% off this weekend on all flannels, including the Park City flannel pictured h',
+        'creator' => 'Tradlands',
+        'creator_url' => 'https://www.flickr.com/photos/87743767@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87743767@N07/24785884538',
+      ),
     ),
     '/clothing/sweatshirts-and-jackets/' => 
     array (
@@ -35886,6 +39857,17 @@ return array (
         0 => '/clothing/sweatshirts-and-jackets/arborwear-black-large-double-thick-hooded-sweatshirt/',
         1 => '/clothing/sweatshirts-and-jackets/arborwear-navy-large-double-thick-hooded-sweatshirt/',
         2 => '/clothing/sweatshirts-and-jackets/arborwear-safety-yellow-tech-double-thick-pullover-sweatshirt/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-2.webp',
+        'sm' => '/assets/photos/apparel-2-sm.webp',
+        'title' => 'woman taking her flannel shirt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/3284728/free-photo-image-dress-long-jeans-dance',
       ),
     ),
     '/clothing/tree-climbing-pants/' => 
@@ -35974,6 +39956,17 @@ return array (
         0 => '/clothing/tree-climbing-pants/arborwear-ascender-pants-coal/',
         1 => '/clothing/tree-climbing-pants/heavy-duty-suspenders-for-chainsaw-pants-by-arbortec/',
         2 => '/tree-climbing-pants/clogger-zero-ultra-mens-premium-chainsaw-pants/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-3.webp',
+        'sm' => '/assets/photos/chaps-pants-3-sm.webp',
+        'title' => 'Defensible space-thinning with chainsaw',
+        'creator' => '#ODF',
+        'creator_url' => 'https://www.flickr.com/photos/97482765@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/97482765@N07/16729822658',
       ),
     ),
     '/cutting-and-pruning/' => 
@@ -36079,6 +40072,17 @@ return array (
         13 => '/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-head-with-single-pulley/',
         14 => '/cutting-and-pruning/pruners-and-loppers/marvin-pruner-head/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
     ),
     '/cutting-and-pruning/blades/' => 
     array (
@@ -36126,6 +40130,17 @@ return array (
       array (
         0 => '/blades/notch-13-tri-edge-saw-blade/',
         1 => '/cutting-and-pruning/blades/sugoi-replacement-blade/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-1.webp',
+        'sm' => '/assets/photos/hand-saw-1-sm.webp',
+        'title' => 'THOR\'s hammer, lopper, hatchet and pruning saw IMAG0257',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/12141006956',
       ),
     ),
     '/cutting-and-pruning/hand-saws-and-scabbards/' => 
@@ -36210,6 +40225,17 @@ return array (
         2 => '/cutting-and-pruning/hand-saws-and-scabbards/silky-sugoi/',
         3 => '/cutting-and-pruning/hand-saws-and-scabbards/silky-zubat-13-curved-hand-saw/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
     ),
     '/cutting-and-pruning/pole-saws-and-scabbards/' => 
     array (
@@ -36257,6 +40283,17 @@ return array (
         0 => '/cutting-and-pruning/pole-saws-and-scabbards/20-nobasu-4-section-telescoping-aluminum-polesaw/',
         1 => '/cutting-and-pruning/pole-saws-and-scabbards/jameson-ls-kit-pruner-pole-saw-and-poles/',
         2 => '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
       ),
     ),
     '/cutting-and-pruning/poles-and-kits/' => 
@@ -36340,6 +40377,17 @@ return array (
         1 => '/cutting-and-pruning/poles-and-kits/jameson-8-hollow-core-pole/',
         2 => '/cutting-and-pruning/poles-and-kits/peavey-ash-pole-12-long/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
     ),
     '/cutting-and-pruning/pruners-and-loppers/' => 
     array (
@@ -36388,6 +40436,17 @@ return array (
         0 => '/cutting-and-pruning/pruners-and-loppers/felco-2-hand-pruner/',
         1 => '/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-head-with-single-pulley/',
         2 => '/cutting-and-pruning/pruners-and-loppers/marvin-pruner-head/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pruner-2.webp',
+        'sm' => '/assets/photos/pruner-2-sm.webp',
+        'title' => 'Autumn Scissors Pruning Shears Tool Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49931414813',
       ),
     ),
     '/jobsite/' => 
@@ -36573,6 +40632,17 @@ return array (
         91 => '/wrenches-and-files/husqvarna-combination-tool-wrench/',
         92 => '/wrenches-and-files/pferd-classic-round-files-per-dozen/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-3.webp',
+        'sm' => '/assets/photos/jobsite-3-sm.webp',
+        'title' => 'WINTERHAVEN GETTING READY',
+        'creator' => 'bill85704',
+        'creator_url' => 'https://www.flickr.com/photos/48804373@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48804373@N07/8254886147',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/' => 
     array (
@@ -36631,6 +40701,17 @@ return array (
         7 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats-3x8/',
         8 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/' => 
     array (
@@ -36679,6 +40760,17 @@ return array (
         0 => '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/bigfoot-composite-outrigger-pads/',
         1 => '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/weaver-two-man-bucket-truck-cover/',
         2 => '/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/wheel-chock/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-0.webp',
+        'sm' => '/assets/photos/jobsite-0-sm.webp',
+        'title' => 'Man operating wood chipper on Milvia St in Berkeley',
+        'creator' => 'D Coetzee',
+        'creator_url' => 'https://www.flickr.com/photos/29507259@N02',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/29507259@N02/7537556444',
       ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/' => 
@@ -36767,6 +40859,17 @@ return array (
         1 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/petzl-absorbica-i/',
         2 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-economy-fall-protection-kit/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
     ),
     '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/' => 
     array (
@@ -36815,6 +40918,17 @@ return array (
       array (
         0 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats-3x8/',
         1 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-6.webp',
+        'sm' => '/assets/photos/jobsite-6-sm.webp',
+        'title' => 'Wood Chipper',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/8977863903',
       ),
     ),
     '/jobsite/chainsaw-accessories/' => 
@@ -36929,6 +41043,17 @@ return array (
         24 => '/wrenches-and-files/husqvarna-combination-tool-wrench/',
         25 => '/wrenches-and-files/pferd-classic-round-files-per-dozen/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-0.webp',
+        'sm' => '/assets/photos/chain-bar-0-sm.webp',
+        'title' => 'Cutting Edge',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/49188576927',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/' => 
     array (
@@ -36984,6 +41109,17 @@ return array (
         4 => '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-x-precision-chainsaw-bar/',
         5 => '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/oregon-chainsaw-bar-325-x-050/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-0.webp',
+        'sm' => '/assets/photos/chain-bar-0-sm.webp',
+        'title' => 'Cutting Edge',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/49188576927',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/' => 
     array (
@@ -37033,6 +41169,17 @@ return array (
         0 => '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-light-bars-3-8-x-050/',
         1 => '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-x-precision-chainsaw-bar/',
         2 => '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/oregon-chainsaw-bar-325-x-050/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-1.webp',
+        'sm' => '/assets/photos/chain-bar-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
       ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/' => 
@@ -37084,6 +41231,17 @@ return array (
         1 => '/chainsaw-chain/husqvarna-3-8-x-063-gauge-chainsaw-chain/',
         2 => '/chainsaw-chain/husqvarna-sp33g-semi-chisel-chain-325-x-050-gauge/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chain-bar-1.webp',
+        'sm' => '/assets/photos/chain-bar-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/' => 
     array (
@@ -37132,6 +41290,17 @@ return array (
       array (
         0 => '/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/husqvarna-powerbox-carrying-case/',
         1 => '/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/the-classic-carrying-case-by-husqvarna/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
       ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/' => 
@@ -37187,6 +41356,17 @@ return array (
         3 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-denim-chainsaw-pants/',
         4 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-zero-gen-2-chainsaw-pants/',
         5 => '/shop-all/clogger-zero-light-and-cool-ul-chainsaw-chaps-apron-style/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
       ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-chaps/' => 
@@ -37273,6 +41453,17 @@ return array (
         1 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-chaps/husqvarna-classic-chainsaw-chaps/',
         2 => '/shop-all/clogger-zero-light-and-cool-ul-chainsaw-chaps-apron-style/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-3.webp',
+        'sm' => '/assets/photos/chaps-pants-3-sm.webp',
+        'title' => 'Defensible space-thinning with chainsaw',
+        'creator' => '#ODF',
+        'creator_url' => 'https://www.flickr.com/photos/97482765@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/97482765@N07/16729822658',
+      ),
     ),
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/' => 
     array (
@@ -37322,6 +41513,17 @@ return array (
         0 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-defenderpro-light-chainsaw-pants/',
         1 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-denim-chainsaw-pants/',
         2 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-zero-gen-2-chainsaw-pants/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
       ),
     ),
     '/jobsite/chainsaw-accessories/fluids/' => 
@@ -37376,6 +41578,17 @@ return array (
         4 => '/jobsite/chainsaw-accessories/fluids/husqvarna-xp-2-stroke-synthetic-blend-oil-6-4-oz-bottle/',
         5 => '/jobsite/chainsaw-accessories/fluids/no-spill-red-fuel-can/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-0.webp',
+        'sm' => '/assets/photos/fluid-0-sm.webp',
+        'title' => 'Jerry Cans',
+        'creator' => 'Ozzy Delaney',
+        'creator_url' => 'https://www.flickr.com/photos/24931020@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24931020@N02/12679132043',
+      ),
     ),
     '/jobsite/chainsaw-accessories/wedges/' => 
     array (
@@ -37425,6 +41638,17 @@ return array (
         0 => '/jobsite/chainsaw-accessories/wedges/hardhead-felling-wedge/',
         1 => '/jobsite/chainsaw-accessories/wedges/logging-belt-kit/',
         2 => '/wedges/k-h-red-head-felling-wedge/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-5.webp',
+        'sm' => '/assets/photos/wedge-axe-5-sm.webp',
+        'title' => 'Axe',
+        'creator' => 'grongar',
+        'creator_url' => 'https://www.flickr.com/photos/70757891@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/70757891@N00/8362770480',
       ),
     ),
     '/jobsite/chainsaw-accessories/wrenches-and-files/' => 
@@ -37476,6 +41700,17 @@ return array (
         1 => '/wrenches-and-files/husqvarna-combination-tool-wrench/',
         2 => '/wrenches-and-files/pferd-classic-round-files-per-dozen/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wrench-file-1.webp',
+        'sm' => '/assets/photos/wrench-file-1-sm.webp',
+        'title' => 'chainsaw sharpening',
+        'creator' => 'nationalrural',
+        'creator_url' => 'https://www.flickr.com/photos/8228133@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8228133@N04/1112350819',
+      ),
     ),
     '/jobsite/chipper-knives/' => 
     array (
@@ -37525,6 +41760,17 @@ return array (
         0 => '/jobsite/chipper-knives/7-25-x-4-x-3-8-chipper-knife/',
         1 => '/jobsite/chipper-knives/chipper-knife-for-vermeer-bc1800xl/',
         2 => '/jobsite/chipper-knives/chipper-knife-for-vermeer-bc2100/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
       ),
     ),
     '/jobsite/landscaper-tools/' => 
@@ -37581,6 +41827,17 @@ return array (
         6 => '/landscaper-tools/husqvarna-trim-force-square-trimmer-line/',
         7 => '/shop-all/husqvarna-titanium-xpro-trimmer-line/',
         8 => '/shop-all/husqvarna-trimforce-trimmer-line/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-7.webp',
+        'sm' => '/assets/photos/jobsite-7-sm.webp',
+        'title' => 'Touchdown',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410026809',
       ),
     ),
     '/jobsite/logging-tools/' => 
@@ -37642,6 +41899,17 @@ return array (
         8 => '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-hookaroon/',
         9 => '/jobsite/logging-tools/log-handling-tools/logrite-log-carrier/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-3.webp',
+        'sm' => '/assets/photos/log-tool-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894357',
+      ),
     ),
     '/jobsite/logging-tools/axes-and-mauls/' => 
     array (
@@ -37692,6 +41960,17 @@ return array (
         1 => '/jobsite/logging-tools/axes-and-mauls/husqvarna-31-splitting-axe/',
         2 => '/jobsite/logging-tools/axes-and-mauls/husqvarna-multi-purpose-fiber-handle-axe-a2400/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-0.webp',
+        'sm' => '/assets/photos/wedge-axe-0-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Dan Edwards',
+        'creator_url' => 'https://stocksnap.io/author/13155',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-SEVPWIOFCM',
+      ),
     ),
     '/jobsite/logging-tools/forestry-tools/' => 
     array (
@@ -37741,6 +42020,17 @@ return array (
         0 => '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-75-8ths-no-diameter/',
         1 => '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-35/',
         2 => '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-50-refill/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-0.webp',
+        'sm' => '/assets/photos/log-tool-0-sm.webp',
+        'title' => 'peavey handles (hand carved)',
+        'creator' => 'Stone Soup Institute, Harpswell, Maine',
+        'creator_url' => 'https://www.flickr.com/photos/92385698@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/92385698@N02/9819022265',
       ),
     ),
     '/jobsite/logging-tools/log-handling-tools/' => 
@@ -37828,6 +42118,17 @@ return array (
         2 => '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-hookaroon/',
         3 => '/jobsite/logging-tools/log-handling-tools/logrite-log-carrier/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-3.webp',
+        'sm' => '/assets/photos/log-tool-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894357',
+      ),
     ),
     '/jobsite/power-equipment/' => 
     array (
@@ -37912,6 +42213,17 @@ return array (
         31 => '/parts/husqvarna-vari-cut-s45-diamond-wheel/',
         32 => '/shop-all/husqvarna-k770-power-cutter/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-4.webp',
+        'sm' => '/assets/photos/chainsaw-4-sm.webp',
+        'title' => 'New York National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/40253967023',
+      ),
     ),
     '/jobsite/power-equipment/battery-powered-equipment/' => 
     array (
@@ -37963,6 +42275,17 @@ return array (
         2 => '/jobsite/power-equipment/battery-powered-equipment/husqvarna-230ib-hand-held-battery-powered-leaf-blower/',
         3 => '/jobsite/power-equipment/battery-powered-equipment/husqvarna-qc500-quick-charge-battery-charger/',
         4 => '/jobsite/power-equipment/battery-powered-equipment/husqvarna-t540ixp-top-handle-battery-powered-chainsaw-kit/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/battery-3.webp',
+        'sm' => '/assets/photos/battery-3-sm.webp',
+        'title' => 'Screw Wooden Decking Fix Repair Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49932244457',
       ),
     ),
     '/jobsite/power-equipment/blowers-and-other-equipment/' => 
@@ -38018,6 +42341,17 @@ return array (
         5 => '/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-125b-handheld-blower/',
         6 => '/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-580bts-backpack-blower/',
         7 => '/shop-all/husqvarna-k770-power-cutter/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-4.webp',
+        'sm' => '/assets/photos/power-tool-4-sm.webp',
+        'title' => 'Leaf Blowers 09',
+        'creator' => 'hectorir',
+        'creator_url' => 'https://www.flickr.com/photos/30806435@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/30806435@N04/4118096648',
       ),
     ),
     '/jobsite/power-equipment/chainsaws/' => 
@@ -38078,6 +42412,17 @@ return array (
         10 => '/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/',
         11 => '/jobsite/power-equipment/chainsaws/husqvarna-t540xp-mark-iii-top-handle-chainsaw/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-3.webp',
+        'sm' => '/assets/photos/chainsaw-3-sm.webp',
+        'title' => 'Applied Physics',
+        'creator' => 'ksunderman',
+        'creator_url' => 'https://www.flickr.com/photos/87781195@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87781195@N05/13203635403',
+      ),
     ),
     '/jobsite/power-equipment/parts/' => 
     array (
@@ -38132,6 +42477,17 @@ return array (
         5 => '/parts/bpmr8y-spark-plug/',
         6 => '/parts/cmr7h-spark-plug/',
         7 => '/parts/husqvarna-vari-cut-s45-diamond-wheel/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
       ),
     ),
     '/jobsite/stump-grinding/' => 
@@ -38217,6 +42573,17 @@ return array (
         0 => '/jobsite/stump-grinding/700-series-greenteeth-pocket-straight/',
         1 => '/jobsite/stump-grinding/green-teeth-allen-head/',
         2 => '/jobsite/stump-grinding/standard-stump-grinder-teeth/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
       ),
     ),
     '/plant-care/' => 
@@ -38312,6 +42679,17 @@ return array (
         8 => '/plant-care/planting/wire-rope-clamps/',
         9 => '/planting/duck-bill-earth-anchors-small/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-3.webp',
+        'sm' => '/assets/photos/cable-hardware-3-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/413404',
+      ),
     ),
     '/plant-care/cabling-and-bracing/' => 
     array (
@@ -38402,6 +42780,17 @@ return array (
         4 => '/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/',
         5 => '/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-2.webp',
+        'sm' => '/assets/photos/cable-hardware-2-sm.webp',
+        'title' => 'Stainless steel eye-bolt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6032390/photo-image-public-domain-free-silver',
+      ),
     ),
     '/plant-care/cabling-and-bracing/cabling-hardware/' => 
     array (
@@ -38452,6 +42841,17 @@ return array (
         1 => '/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/',
         2 => '/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-5.webp',
+        'sm' => '/assets/photos/cable-hardware-5-sm.webp',
+        'title' => 'Eye bolt snow bokeh',
+        'creator' => 'dsgetch',
+        'creator_url' => 'https://www.flickr.com/photos/66136677@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/66136677@N00/51782009502',
+      ),
     ),
     '/plant-care/planting/' => 
     array (
@@ -38501,6 +42901,17 @@ return array (
         0 => '/plant-care/planting/tree-support-web-for-staking-trees-250/',
         1 => '/plant-care/planting/wire-rope-clamps/',
         2 => '/planting/duck-bill-earth-anchors-small/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-5.webp',
+        'sm' => '/assets/photos/jobsite-5-sm.webp',
+        'title' => 'Bandit 200xp wood chipper',
+        'creator' => 'Dorsey Photography',
+        'creator_url' => 'https://www.flickr.com/photos/72780460@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/72780460@N08/14586733053',
       ),
     ),
     '/rigging/' => 
@@ -38619,6 +43030,17 @@ return array (
         29 => '/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/',
         30 => '/shop-all/endless-loop-polyester-round-sling-7-x-20-blue/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-1.webp',
+        'sm' => '/assets/photos/rigging-device-1-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982704071',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/' => 
     array (
@@ -38678,6 +43100,17 @@ return array (
         7 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/',
         8 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-blocks/' => 
     array (
@@ -38726,6 +43159,17 @@ return array (
       array (
         0 => '/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/',
         1 => '/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-4.webp',
+        'sm' => '/assets/photos/pulley-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
       ),
     ),
     '/rigging/blocks-and-other-hardware/rigging-pulleys/' => 
@@ -38777,6 +43221,17 @@ return array (
         1 => '/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/',
         2 => '/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-4.webp',
+        'sm' => '/assets/photos/pulley-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
     ),
     '/rigging/blocks-and-other-hardware/rings-and-other-hardware/' => 
     array (
@@ -38826,6 +43281,17 @@ return array (
         0 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/',
         1 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/',
         2 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
       ),
     ),
     '/rigging/lowering-devices/' => 
@@ -38879,6 +43345,17 @@ return array (
         3 => '/rigging/lowering-devices/hobbs-h2-lowering-device/',
         4 => '/rigging/lowering-devices/large-portawrap-lowering-device/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-0.webp',
+        'sm' => '/assets/photos/rigging-device-0-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894227',
+      ),
     ),
     '/rigging/mechanical-advantage/' => 
     array (
@@ -38928,6 +43405,17 @@ return array (
         0 => '/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/',
         1 => '/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/',
         2 => '/rigging/mechanical-advantage/petzl-micro-traxion-pulley/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-3.webp',
+        'sm' => '/assets/photos/pulley-3-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
       ),
     ),
     '/rigging/rigging-kits/' => 
@@ -39015,6 +43503,17 @@ return array (
         1 => '/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/',
         2 => '/rigging/rigging-kits/weaver-speed-line-kit/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-3.webp',
+        'sm' => '/assets/photos/rigging-device-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982144423',
+      ),
     ),
     '/rigging/rigging-slings/' => 
     array (
@@ -39076,6 +43575,17 @@ return array (
         9 => '/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/',
         10 => '/shop-all/endless-loop-polyester-round-sling-7-x-20-blue/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
     ),
     '/rigging/rigging-slings/adjustable-slings/' => 
     array (
@@ -39125,6 +43635,17 @@ return array (
         0 => '/adjustable-slings/1-2-whoopie-sling/',
         1 => '/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/',
         2 => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
       ),
     ),
     '/rigging/rigging-slings/crane-slings/' => 
@@ -39211,6 +43732,17 @@ return array (
         1 => '/rigging/rigging-slings/crane-slings/endless-loop-round-slings/',
         2 => '/shop-all/endless-loop-polyester-round-sling-7-x-20-blue/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
     ),
     '/rigging/rigging-slings/heavy-duty-slings/' => 
     array (
@@ -39295,6 +43827,17 @@ return array (
         0 => '/heavy-duty-slings/9-16-dead-eye-rigging-sling/',
         1 => '/rigging/rigging-slings/heavy-duty-slings/1-2-bull-rope-rigging-sling/',
         2 => '/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
       ),
     ),
     '/rope/' => 
@@ -39402,6 +43945,17 @@ return array (
         17 => '/rope/tech-cordage/yale-r-i-n-g-rope-by-the-foot/',
         18 => '/static-climbing-rope/yale-phantom-pink-and-black-11mm-climbing-rope/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rope/climbing-rope/' => 
     array (
@@ -39463,6 +44017,17 @@ return array (
         9 => '/rope/climbing-rope/static-climbing-rope/sterling-workpro-12-5mm-static-climbing-rope/',
         10 => '/static-climbing-rope/yale-phantom-pink-and-black-11mm-climbing-rope/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/rope/climbing-rope/16-strand-climbing-rope/' => 
     array (
@@ -39512,6 +44077,17 @@ return array (
         0 => '/16-strand-climbing-rope/sassafras-16-strand-climbing-rope/',
         1 => '/rope/climbing-rope/16-strand-climbing-rope/teufelberger-safety-blue-white-climbing-rope/',
         2 => '/rope/climbing-rope/16-strand-climbing-rope/teufelberger-ultra-vee-climbing-rope/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
       ),
     ),
     '/rope/climbing-rope/24-strand-climbing-rope/' => 
@@ -39563,6 +44139,17 @@ return array (
         1 => '/24-strand-climbing-rope/yale-poison-moon-11-7mm-climbing-rope/',
         2 => '/rope/climbing-rope/24-strand-climbing-rope/petzl-control-12-5mm-climbing-rope/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
     ),
     '/rope/climbing-rope/static-climbing-rope/' => 
     array (
@@ -39612,6 +44199,17 @@ return array (
         0 => '/rope/climbing-rope/static-climbing-rope/sterling-11mm-htp-static-climbing-rope/',
         1 => '/rope/climbing-rope/static-climbing-rope/sterling-workpro-12-5mm-static-climbing-rope/',
         2 => '/static-climbing-rope/yale-phantom-pink-and-black-11mm-climbing-rope/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
       ),
     ),
     '/rope/rigging-rope/' => 
@@ -39663,6 +44261,17 @@ return array (
         1 => '/rope/rigging-rope/samson-3-4-arbor-plex-rigging-rope/',
         2 => '/rope/rigging-rope/samson-stable-braid-5-8-rigging-rope/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
     ),
     '/rope/rope-care-and-splicing/' => 
     array (
@@ -39711,6 +44320,17 @@ return array (
       array (
         0 => '/rope/rope-care-and-splicing/all-gear-heavy-duty-chafe-sleeve/',
         1 => '/rope/rope-care-and-splicing/chafe-sleeve/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
       ),
     ),
     '/rope/tech-cordage/' => 
@@ -39761,6 +44381,17 @@ return array (
         0 => '/rope/accessory-cord/sterling-shock-cord-by-the-foot/',
         1 => '/rope/tech-cordage/teufelberger-epicord-8mm-hitch-cord-by-the-foot/',
         2 => '/rope/tech-cordage/yale-r-i-n-g-rope-by-the-foot/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
       ),
     ),
     '/safety/' => 
@@ -39870,6 +44501,17 @@ return array (
         17 => '/safety/traffic-control/48-tree-work-ahead-sign/',
         18 => '/safety/traffic-control/hi-viz-green-safety-vest-mesh-class-2-size-xl/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-0.webp',
+        'sm' => '/assets/photos/helmet-0-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9734106231',
+      ),
     ),
     '/safety/communication/' => 
     array (
@@ -39956,6 +44598,17 @@ return array (
         1 => '/safety/communication/sena-33i-bluetooth-communication-system-with-mesh-intercom/',
         2 => '/safety/communication/sena-integrated-communication-helmet-system/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/helmet-0.webp',
+        'sm' => '/assets/photos/helmet-0-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9734106231',
+      ),
     ),
     '/safety/eye-protection/' => 
     array (
@@ -40006,6 +44659,17 @@ return array (
         1 => '/safety/eye-protection/kask-zenith-visor/',
         2 => '/safety/eye-protection/petzl-visor-2018-alveo-and-vertex-helmets/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-1.webp',
+        'sm' => '/assets/photos/eye-ear-1-sm.webp',
+        'title' => 'MAY 18 Close-up of helmet and safety glasses',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/52149599431',
+      ),
     ),
     '/safety/fall-protection/' => 
     array (
@@ -40054,6 +44718,17 @@ return array (
       array (
         0 => '/fall-protection/petzl-astro-bod-fast-international-harness/',
         1 => '/safety/fall-protection/estex-fred-the-rescue-dummy/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-5.webp',
+        'sm' => '/assets/photos/saddle-5-sm.webp',
+        'title' => 'DSC_0054',
+        'creator' => 'BCRP',
+        'creator_url' => 'https://www.flickr.com/photos/63577817@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63577817@N04/8199050111',
       ),
     ),
     '/safety/first-aid/' => 
@@ -40140,6 +44815,17 @@ return array (
         1 => '/safety/first-aid/jag-system/',
         2 => '/safety/first-aid/woundseal-stop-bleeding-powder/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/first-aid-2.webp',
+        'sm' => '/assets/photos/first-aid-2-sm.webp',
+        'title' => 'Level 0 first-aid kit (rev2)',
+        'creator' => 'jhritz',
+        'creator_url' => 'https://www.flickr.com/photos/29818924@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/29818924@N00/3863896260',
+      ),
     ),
     '/safety/gloves/' => 
     array (
@@ -40188,6 +44874,17 @@ return array (
       array (
         0 => '/safety/gloves/husqvarna-technical-gloves/',
         1 => '/safety/gloves/wonder-gloves/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/gloves-1.webp',
+        'sm' => '/assets/photos/gloves-1-sm.webp',
+        'title' => 'SDIM1773 Carl\'s Leather Work Gloves',
+        'creator' => 'carlfbagge',
+        'creator_url' => 'https://www.flickr.com/photos/12535240@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/12535240@N05/14223692381',
       ),
     ),
     '/safety/hearing-protection/' => 
@@ -40275,6 +44972,17 @@ return array (
         1 => '/safety/hearing-protection/husqvarna-ear-muff-hygiene-set/',
         2 => '/safety/hearing-protection/peltor-optime-helmet-mounted-muffs-white/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-2.webp',
+        'sm' => '/assets/photos/eye-ear-2-sm.webp',
+        'title' => '000ElmTreeVitality',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33607662022',
+      ),
     ),
     '/safety/traffic-control/' => 
     array (
@@ -40324,6 +45032,17 @@ return array (
         0 => '/safety/traffic-control/18-drop-zone-cone/',
         1 => '/safety/traffic-control/48-tree-work-ahead-sign/',
         2 => '/safety/traffic-control/hi-viz-green-safety-vest-mesh-class-2-size-xl/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/traffic-4.webp',
+        'sm' => '/assets/photos/traffic-4-sm.webp',
+        'title' => 'Traffic cone',
+        'creator' => 'grassrootsgroundswell',
+        'creator_url' => 'https://www.flickr.com/photos/88920309@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/88920309@N05/11371145396',
       ),
     ),
     '/shop/' => 
@@ -40413,6 +45132,17 @@ return array (
         3 => '/shop/product/edelrid-static-rope-shorty-hanks/',
         4 => '/shop/product/masdaam-continuous-rope-puller-kit/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-7.webp',
+        'sm' => '/assets/photos/jobsite-7-sm.webp',
+        'title' => 'Touchdown',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410026809',
+      ),
     ),
     '/shop/product/' => 
     array (
@@ -40464,6 +45194,17 @@ return array (
         2 => '/shop/product/edelrid-static-rope-shorty-hanks-2/',
         3 => '/shop/product/edelrid-static-rope-shorty-hanks/',
         4 => '/shop/product/masdaam-continuous-rope-puller-kit/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-7.webp',
+        'sm' => '/assets/photos/jobsite-7-sm.webp',
+        'title' => 'Touchdown',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410026809',
       ),
     ),
     '/climbing/saddles-and-harnesses/weaver-saddles/' => 
@@ -40547,6 +45288,17 @@ return array (
       array (
       ),
       'parent' => '/climbing/saddles-and-harnesses/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
     ),
     '/climbing/spurs/lightweight-spurs/' => 
     array (
@@ -40638,6 +45390,17 @@ return array (
       array (
       ),
       'parent' => '/climbing/spurs/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-3.webp',
+        'sm' => '/assets/photos/spur-3-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
     ),
     '/climbing/climbing-gear/mechanical-friction-devices/mrs-climbing-devices/' => 
     array (
@@ -40721,6 +45484,17 @@ return array (
       array (
       ),
       'parent' => '/climbing/climbing-gear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
     ),
     '/climbing/climbing-gear/mechanical-friction-devices/srs-climbing-devices/' => 
     array (
@@ -40778,6 +45552,17 @@ return array (
       array (
       ),
       'parent' => '/climbing/climbing-gear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
     ),
   ),
   'brands' => 
@@ -42931,6 +47716,17 @@ return array (
         7 => '/climbing/climbing-gear/carabiners-and-hardware/',
         8 => '/cutting-and-pruning/hand-saws-and-scabbards/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-4.webp',
+        'sm' => '/assets/photos/saddle-4-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
     ),
     '/guides/husqvarna-372xp-vs-572xp/' => 
     array (
@@ -43045,6 +47841,17 @@ return array (
         3 => '/jobsite/power-equipment/parts/',
         4 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/',
         5 => '/guides/chainsaw-spark-plug-guide/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-0.webp',
+        'sm' => '/assets/photos/chainsaw-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
       ),
     ),
     '/guides/silky-saw-comparison/' => 
@@ -43172,6 +47979,17 @@ return array (
         5 => '/cutting-and-pruning/hand-saws-and-scabbards/silky-gomtaro-pro-sentei-300mm-hand-saw/',
         6 => '/cutting-and-pruning/blades/sugoi-replacement-blade/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-0.webp',
+        'sm' => '/assets/photos/hand-saw-0-sm.webp',
+        'title' => 'Dave has a go with the pruning saw',
+        'creator' => 'jennifrog',
+        'creator_url' => 'https://www.flickr.com/photos/38061770@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38061770@N00/6158415896',
+      ),
     ),
     '/guides/how-to-choose-arborist-rope/' => 
     array (
@@ -43294,6 +48112,17 @@ return array (
         5 => '/rope/rope-care-and-splicing/',
         6 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/',
       ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
     ),
     '/guides/chainsaw-chaps-vs-chainsaw-pants/' => 
     array (
@@ -43414,6 +48243,17 @@ return array (
         2 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/',
         3 => '/clothing/tree-climbing-pants/',
         4 => '/safety/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chaps-pants-0.webp',
+        'sm' => '/assets/photos/chaps-pants-0-sm.webp',
+        'title' => 'Chainsaw Chaps',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/8610687085',
       ),
     ),
     '/guides/chainsaw-spark-plug-guide/' => 
@@ -43538,6 +48378,17 @@ return array (
         2 => '/jobsite/power-equipment/parts/ngk-bpmr7a-spark-plug/',
         3 => '/jobsite/power-equipment/chainsaws/',
         4 => '/jobsite/power-equipment/chainsaws/husqvarna-372xp-chainsaw/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
       ),
     ),
   ),
@@ -43805,6 +48656,2180 @@ return array (
     '/safety/chainsaw-protection/' => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/',
     '/volume-purchasing/' => '/shop-all/',
     '/brands/all/' => '/brands/',
+  ),
+  'images' => 
+  array (
+    'chainsaw' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/chainsaw-0.webp',
+        'sm' => '/assets/photos/chainsaw-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/chainsaw-1.webp',
+        'sm' => '/assets/photos/chainsaw-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/chainsaw-2.webp',
+        'sm' => '/assets/photos/chainsaw-2-sm.webp',
+        'title' => 'Chainsaw Training',
+        'creator' => 'H Dragon',
+        'creator_url' => 'https://www.flickr.com/photos/81427512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/81427512@N00/2678816037',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/chainsaw-3.webp',
+        'sm' => '/assets/photos/chainsaw-3-sm.webp',
+        'title' => 'Applied Physics',
+        'creator' => 'ksunderman',
+        'creator_url' => 'https://www.flickr.com/photos/87781195@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87781195@N05/13203635403',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/chainsaw-4.webp',
+        'sm' => '/assets/photos/chainsaw-4-sm.webp',
+        'title' => 'New York National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/40253967023',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/chainsaw-5.webp',
+        'sm' => '/assets/photos/chainsaw-5-sm.webp',
+        'title' => 'Stumpo getting cut',
+        'creator' => 'Sam Beebe',
+        'creator_url' => 'https://www.flickr.com/photos/28585409@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28585409@N04/5694764170',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/chainsaw-6.webp',
+        'sm' => '/assets/photos/chainsaw-6-sm.webp',
+        'title' => 'Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/51811532407',
+      ),
+      7 => 
+      array (
+        'src' => '/assets/photos/chainsaw-7.webp',
+        'sm' => '/assets/photos/chainsaw-7-sm.webp',
+        'title' => 'Wisconsin National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/28645744470',
+      ),
+    ),
+    'top-handle' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/top-handle-0.webp',
+        'sm' => '/assets/photos/top-handle-0-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/top-handle-1.webp',
+        'sm' => '/assets/photos/top-handle-1-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/top-handle-2.webp',
+        'sm' => '/assets/photos/top-handle-2-sm.webp',
+        'title' => 'Chainsaw Tree Climber Serice',
+        'creator' => 'jacobavanzato',
+        'creator_url' => 'https://www.flickr.com/photos/98915111@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/98915111@N02/16152519186',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/top-handle-3.webp',
+        'sm' => '/assets/photos/top-handle-3-sm.webp',
+        'title' => 'Tree Service Photography',
+        'creator' => 'jacobavanzato',
+        'creator_url' => 'https://www.flickr.com/photos/98915111@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/98915111@N02/15991012910',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/top-handle-4.webp',
+        'sm' => '/assets/photos/top-handle-4-sm.webp',
+        'title' => 'David and Goliath',
+        'creator' => 'opticalreflex',
+        'creator_url' => 'https://www.flickr.com/photos/26922258@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26922258@N02/3094850112',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/top-handle-5.webp',
+        'sm' => '/assets/photos/top-handle-5-sm.webp',
+        'title' => '100224-F-5278P-028',
+        'creator' => 'Air Combat Command',
+        'creator_url' => 'https://www.flickr.com/photos/47661569@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/47661569@N02/4463232836',
+      ),
+    ),
+    'pole-saw' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/pole-saw-0.webp',
+        'sm' => '/assets/photos/pole-saw-0-sm.webp',
+        'title' => 'Project 365 #211: 300718 A Cut Above',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/42842605715',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/pole-saw-2.webp',
+        'sm' => '/assets/photos/pole-saw-2-sm.webp',
+        'title' => '1974. Colville field crew checking tussock moth populations. Douglas-fir tussock moth control project. Grand Coulee Dam Headquarters, Colville Reservation, Washington.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/35679281040',
+      ),
+    ),
+    'hand-saw' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/hand-saw-0.webp',
+        'sm' => '/assets/photos/hand-saw-0-sm.webp',
+        'title' => 'Dave has a go with the pruning saw',
+        'creator' => 'jennifrog',
+        'creator_url' => 'https://www.flickr.com/photos/38061770@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38061770@N00/6158415896',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/hand-saw-1.webp',
+        'sm' => '/assets/photos/hand-saw-1-sm.webp',
+        'title' => 'THOR\'s hammer, lopper, hatchet and pruning saw IMAG0257',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/12141006956',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
+    ),
+    'pruner' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/pruner-0.webp',
+        'sm' => '/assets/photos/pruner-0-sm.webp',
+        'title' => 'Pruning shears - apple orchard - winter DSC_8276',
+        'creator' => 'Apple and Pear Australia Ltd',
+        'creator_url' => 'https://www.flickr.com/photos/113312228@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/113312228@N06/28115965045',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/pruner-1.webp',
+        'sm' => '/assets/photos/pruner-1-sm.webp',
+        'title' => 'Person cutting thin branches with pruning shears',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/52280999860',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/pruner-2.webp',
+        'sm' => '/assets/photos/pruner-2-sm.webp',
+        'title' => 'Autumn Scissors Pruning Shears Tool Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49931414813',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/pruner-3.webp',
+        'sm' => '/assets/photos/pruner-3-sm.webp',
+        'title' => 'THOR\'s hammer, garden trowel, weed digger and pruning shears',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/30173721920',
+      ),
+    ),
+    'chain-bar' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/chain-bar-0.webp',
+        'sm' => '/assets/photos/chain-bar-0-sm.webp',
+        'title' => 'Cutting Edge',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/49188576927',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/chain-bar-1.webp',
+        'sm' => '/assets/photos/chain-bar-1-sm.webp',
+        'title' => '2021/365/233 New Tools Are Fun',
+        'creator' => 'cogdogblog',
+        'creator_url' => 'https://www.flickr.com/photos/37996646802@N01',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/37996646802@N01/51432183709',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/chain-bar-2.webp',
+        'sm' => '/assets/photos/chain-bar-2-sm.webp',
+        'title' => '20160823-FS-LSC-0474',
+        'creator' => 'USDAgov',
+        'creator_url' => 'https://www.flickr.com/photos/41284017@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/41284017@N08/28725898983',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/chain-bar-3.webp',
+        'sm' => '/assets/photos/chain-bar-3-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
+    ),
+    'spark-plug' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/spark-plug-0.webp',
+        'sm' => '/assets/photos/spark-plug-0-sm.webp',
+        'title' => 'Spark plug',
+        'creator' => 'Razor512',
+        'creator_url' => 'https://www.flickr.com/photos/13144581@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/13144581@N00/2819656917',
+      ),
+    ),
+    'parts' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
+    ),
+    'fluid' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/fluid-0.webp',
+        'sm' => '/assets/photos/fluid-0-sm.webp',
+        'title' => 'Jerry Cans',
+        'creator' => 'Ozzy Delaney',
+        'creator_url' => 'https://www.flickr.com/photos/24931020@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24931020@N02/12679132043',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/fluid-1.webp',
+        'sm' => '/assets/photos/fluid-1-sm.webp',
+        'title' => 'Gas Can Storage',
+        'creator' => 'Hugo-90',
+        'creator_url' => 'https://www.flickr.com/photos/32109282@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/32109282@N00/49732866582',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/fluid-2.webp',
+        'sm' => '/assets/photos/fluid-2-sm.webp',
+        'title' => 'Vintage Gas Can Money',
+        'creator' => 'ccPixs.com',
+        'creator_url' => 'https://www.flickr.com/photos/86530412@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86530412@N02/8266319168',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/fluid-3.webp',
+        'sm' => '/assets/photos/fluid-3-sm.webp',
+        'title' => 'Man with gas can after Hurricane Sandy',
+        'creator' => 'WarmSleepy',
+        'creator_url' => 'https://www.flickr.com/photos/33498942@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33498942@N04/8143588667',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/fluid-4.webp',
+        'sm' => '/assets/photos/fluid-4-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
+    ),
+    'wedge-axe' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-0.webp',
+        'sm' => '/assets/photos/wedge-axe-0-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Dan Edwards',
+        'creator_url' => 'https://stocksnap.io/author/13155',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-SEVPWIOFCM',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-1.webp',
+        'sm' => '/assets/photos/wedge-axe-1-sm.webp',
+        'title' => 'Axe wood hack - Credit to http://homedust.com/',
+        'creator' => 'Homedust',
+        'creator_url' => 'https://www.flickr.com/photos/159630537@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/159630537@N08/42294721892',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-2.webp',
+        'sm' => '/assets/photos/wedge-axe-2-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Tim Wright',
+        'creator_url' => 'https://stocksnap.io/author/35280',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-W5Z4V44TFM',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-3.webp',
+        'sm' => '/assets/photos/wedge-axe-3-sm.webp',
+        'title' => 'Axe in wood',
+        'creator' => 'brittgow',
+        'creator_url' => 'https://www.flickr.com/photos/26489950@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26489950@N03/4781607809',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-4.webp',
+        'sm' => '/assets/photos/wedge-axe-4-sm.webp',
+        'title' => 'Axe',
+        'creator' => 'AlphaTangoBravo / Adam Baker',
+        'creator_url' => 'https://www.flickr.com/photos/44124479650@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/44124479650@N01/4593738278',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/wedge-axe-5.webp',
+        'sm' => '/assets/photos/wedge-axe-5-sm.webp',
+        'title' => 'Axe',
+        'creator' => 'grongar',
+        'creator_url' => 'https://www.flickr.com/photos/70757891@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/70757891@N00/8362770480',
+      ),
+    ),
+    'log-tool' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/log-tool-0.webp',
+        'sm' => '/assets/photos/log-tool-0-sm.webp',
+        'title' => 'peavey handles (hand carved)',
+        'creator' => 'Stone Soup Institute, Harpswell, Maine',
+        'creator_url' => 'https://www.flickr.com/photos/92385698@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/92385698@N02/9819022265',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/log-tool-1.webp',
+        'sm' => '/assets/photos/log-tool-1-sm.webp',
+        'title' => 'New Jersey logging 4 of 6',
+        'creator' => 'rich701',
+        'creator_url' => 'https://www.flickr.com/photos/63490482@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63490482@N03/5806540608',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/log-tool-2.webp',
+        'sm' => '/assets/photos/log-tool-2-sm.webp',
+        'title' => '5-33 Boat Building, Nova Scotia, Canada 1936',
+        'creator' => 'rich701',
+        'creator_url' => 'https://www.flickr.com/photos/63490482@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63490482@N03/6866124885',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/log-tool-3.webp',
+        'sm' => '/assets/photos/log-tool-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894357',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/log-tool-4.webp',
+        'sm' => '/assets/photos/log-tool-4-sm.webp',
+        'title' => 'firewood',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064291',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/log-tool-5.webp',
+        'sm' => '/assets/photos/log-tool-5-sm.webp',
+        'title' => 'splitting firewood',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/65865991',
+      ),
+    ),
+    'wrench-file' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/wrench-file-0.webp',
+        'sm' => '/assets/photos/wrench-file-0-sm.webp',
+        'title' => 'chainsaw sharpening',
+        'creator' => 'nationalrural',
+        'creator_url' => 'https://www.flickr.com/photos/8228133@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8228133@N04/1113203678',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/wrench-file-1.webp',
+        'sm' => '/assets/photos/wrench-file-1-sm.webp',
+        'title' => 'chainsaw sharpening',
+        'creator' => 'nationalrural',
+        'creator_url' => 'https://www.flickr.com/photos/8228133@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8228133@N04/1112350819',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/wrench-file-2.webp',
+        'sm' => '/assets/photos/wrench-file-2-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/wrench-file-3.webp',
+        'sm' => '/assets/photos/wrench-file-3-sm.webp',
+        'title' => '20160823-FS-LSC-0474',
+        'creator' => 'USDAgov',
+        'creator_url' => 'https://www.flickr.com/photos/41284017@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/41284017@N08/28725898983',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/wrench-file-4.webp',
+        'sm' => '/assets/photos/wrench-file-4-sm.webp',
+        'title' => 'Chainsaw sharpening on the Bivens Creek Fire, Montana, August 2025',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/54750763603',
+      ),
+    ),
+    'case-bag' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/case-bag-1.webp',
+        'sm' => '/assets/photos/case-bag-1-sm.webp',
+        'title' => 'STE-NL-WK3-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50325892901',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
+    ),
+    'chaps-pants' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/chaps-pants-0.webp',
+        'sm' => '/assets/photos/chaps-pants-0-sm.webp',
+        'title' => 'Chainsaw Chaps',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/8610687085',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/chaps-pants-1.webp',
+        'sm' => '/assets/photos/chaps-pants-1-sm.webp',
+        'title' => 'Chainsaw Safety',
+        'creator' => 'KSRE Photo',
+        'creator_url' => 'https://www.flickr.com/photos/43276854@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/43276854@N02/50515765973',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/chaps-pants-2.webp',
+        'sm' => '/assets/photos/chaps-pants-2-sm.webp',
+        'title' => 'Safety Gear for Chainsaw',
+        'creator' => 'Living Off Grid',
+        'creator_url' => 'https://www.flickr.com/photos/25414532@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/25414532@N06/5314352479',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/chaps-pants-3.webp',
+        'sm' => '/assets/photos/chaps-pants-3-sm.webp',
+        'title' => 'Defensible space-thinning with chainsaw',
+        'creator' => '#ODF',
+        'creator_url' => 'https://www.flickr.com/photos/97482765@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/97482765@N07/16729822658',
+      ),
+    ),
+    'boot' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/boot-0.webp',
+        'sm' => '/assets/photos/boot-0-sm.webp',
+        'title' => 'Old Boot, New Boot',
+        'creator' => 'General Wesc',
+        'creator_url' => 'https://www.flickr.com/photos/35518575@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35518575@N00/5198346327',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/boot-1.webp',
+        'sm' => '/assets/photos/boot-1-sm.webp',
+        'title' => 'Old Boot, New Boot',
+        'creator' => 'General Wesc',
+        'creator_url' => 'https://www.flickr.com/photos/35518575@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35518575@N00/5198346357',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/boot-2.webp',
+        'sm' => '/assets/photos/boot-2-sm.webp',
+        'title' => 'Dr Martens',
+        'creator' => 'apdk',
+        'creator_url' => 'https://www.flickr.com/photos/62337512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62337512@N00/3368220691',
+      ),
+    ),
+    'helmet' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/helmet-0.webp',
+        'sm' => '/assets/photos/helmet-0-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9734106231',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/helmet-1.webp',
+        'sm' => '/assets/photos/helmet-1-sm.webp',
+        'title' => 'Arches Canyoneering',
+        'creator' => 'ArchesNPS',
+        'creator_url' => 'https://www.flickr.com/photos/72578886@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/72578886@N08/9737334576',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/helmet-2.webp',
+        'sm' => '/assets/photos/helmet-2-sm.webp',
+        'title' => '3rd Regiment, Basic Camp, FHCC CST 2021',
+        'creator' => 'U.S. Army ROTC',
+        'creator_url' => 'https://www.flickr.com/photos/136737541@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/136737541@N05/51323491277',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/helmet-3.webp',
+        'sm' => '/assets/photos/helmet-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
+    ),
+    'eye-ear' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/eye-ear-0.webp',
+        'sm' => '/assets/photos/eye-ear-0-sm.webp',
+        'title' => 'Mirrored Safety Glasses - Imprinted with Logo',
+        'creator' => 'Woodlands Ad Agency',
+        'creator_url' => 'https://www.flickr.com/photos/24236630@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24236630@N05/7644923536',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/eye-ear-1.webp',
+        'sm' => '/assets/photos/eye-ear-1-sm.webp',
+        'title' => 'MAY 18 Close-up of helmet and safety glasses',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/52149599431',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/eye-ear-2.webp',
+        'sm' => '/assets/photos/eye-ear-2-sm.webp',
+        'title' => '000ElmTreeVitality',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33607662022',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/eye-ear-3.webp',
+        'sm' => '/assets/photos/eye-ear-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
+    ),
+    'gloves' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/gloves-0.webp',
+        'sm' => '/assets/photos/gloves-0-sm.webp',
+        'title' => 'leather work gloves composite P1010224 copy',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/51402349573',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/gloves-1.webp',
+        'sm' => '/assets/photos/gloves-1-sm.webp',
+        'title' => 'SDIM1773 Carl\'s Leather Work Gloves',
+        'creator' => 'carlfbagge',
+        'creator_url' => 'https://www.flickr.com/photos/12535240@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/12535240@N05/14223692381',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/gloves-2.webp',
+        'sm' => '/assets/photos/gloves-2-sm.webp',
+        'title' => 'Worn leather work gloves 20200225_100632',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/49585589503',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/gloves-3.webp',
+        'sm' => '/assets/photos/gloves-3-sm.webp',
+        'title' => 'leather work gloves wear progress 2020-09-18_10-42-37_487',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/50357854001',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/gloves-4.webp',
+        'sm' => '/assets/photos/gloves-4-sm.webp',
+        'title' => 'Work Gloves',
+        'creator' => 'vestman',
+        'creator_url' => 'https://www.flickr.com/photos/61417318@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/61417318@N00/7076641283',
+      ),
+    ),
+    'first-aid' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/first-aid-0.webp',
+        'sm' => '/assets/photos/first-aid-0-sm.webp',
+        'title' => 'First Aid Kit',
+        'creator' => 'dlg_images',
+        'creator_url' => 'https://www.flickr.com/photos/131260238@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/131260238@N08/16800384582',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/first-aid-1.webp',
+        'sm' => '/assets/photos/first-aid-1-sm.webp',
+        'title' => 'First aid kit',
+        'creator' => 'Marcin Wichary',
+        'creator_url' => 'https://www.flickr.com/photos/8399025@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8399025@N07/2615558474',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/first-aid-2.webp',
+        'sm' => '/assets/photos/first-aid-2-sm.webp',
+        'title' => 'Level 0 first-aid kit (rev2)',
+        'creator' => 'jhritz',
+        'creator_url' => 'https://www.flickr.com/photos/29818924@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/29818924@N00/3863896260',
+      ),
+    ),
+    'traffic' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/traffic-0.webp',
+        'sm' => '/assets/photos/traffic-0-sm.webp',
+        'title' => 'Traffic Cone',
+        'creator' => 'pdugmore2001',
+        'creator_url' => 'https://www.flickr.com/photos/78528924@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/78528924@N00/6173960958',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/traffic-1.webp',
+        'sm' => '/assets/photos/traffic-1-sm.webp',
+        'title' => 'Traffic cones',
+        'creator' => 'oatsy40',
+        'creator_url' => 'https://www.flickr.com/photos/68089229@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68089229@N06/22654103994',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/traffic-2.webp',
+        'sm' => '/assets/photos/traffic-2-sm.webp',
+        'title' => 'Traffic cone in the foreground and road works in the background',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/47958765853',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/traffic-3.webp',
+        'sm' => '/assets/photos/traffic-3-sm.webp',
+        'title' => 'Close-up of a traffic cone on the sidewalk next to a traffic sign pole',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/51290707865',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/traffic-4.webp',
+        'sm' => '/assets/photos/traffic-4-sm.webp',
+        'title' => 'Traffic cone',
+        'creator' => 'grassrootsgroundswell',
+        'creator_url' => 'https://www.flickr.com/photos/88920309@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/88920309@N05/11371145396',
+      ),
+    ),
+    'carabiner' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
+    ),
+    'pulley' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/pulley-0.webp',
+        'sm' => '/assets/photos/pulley-0-sm.webp',
+        'title' => 'Block and Tackle',
+        'creator' => 'www.mgaylard.co.uk and thanks for looking',
+        'creator_url' => 'https://www.flickr.com/photos/16564965@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/16564965@N04/52721499095',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/pulley-1.webp',
+        'sm' => '/assets/photos/pulley-1-sm.webp',
+        'title' => 'Block and tackle',
+        'creator' => 'quinet',
+        'creator_url' => 'https://www.flickr.com/photos/91994044@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/91994044@N00/14200854012',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/pulley-2.webp',
+        'sm' => '/assets/photos/pulley-2-sm.webp',
+        'title' => 'block and tackle',
+        'creator' => 'Joelk75',
+        'creator_url' => 'https://www.flickr.com/photos/75001512@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/75001512@N00/4143247025',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/pulley-3.webp',
+        'sm' => '/assets/photos/pulley-3-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/pulley-4.webp',
+        'sm' => '/assets/photos/pulley-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
+    ),
+    'ascender' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/ascender-0.webp',
+        'sm' => '/assets/photos/ascender-0-sm.webp',
+        'title' => '2011 Best Ranger Competition [Image 2 of 5]',
+        'creator' => 'DVIDSHUB',
+        'creator_url' => 'https://www.flickr.com/photos/28650594@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28650594@N03/5640880003',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/ascender-1.webp',
+        'sm' => '/assets/photos/ascender-1-sm.webp',
+        'title' => 'Prusik climb',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5665572205',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/ascender-2.webp',
+        'sm' => '/assets/photos/ascender-2-sm.webp',
+        'title' => 'Georgia Guardsman in the Best Ranger Competition',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5666140072',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/ascender-3.webp',
+        'sm' => '/assets/photos/ascender-3-sm.webp',
+        'title' => 'West Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/44298692982',
+      ),
+    ),
+    'friction-device' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
+    ),
+    'saddle' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/saddle-1.webp',
+        'sm' => '/assets/photos/saddle-1-sm.webp',
+        'title' => 'JnpITA',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33903505151',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/saddle-3.webp',
+        'sm' => '/assets/photos/saddle-3-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/saddle-4.webp',
+        'sm' => '/assets/photos/saddle-4-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/saddle-5.webp',
+        'sm' => '/assets/photos/saddle-5-sm.webp',
+        'title' => 'DSC_0054',
+        'creator' => 'BCRP',
+        'creator_url' => 'https://www.flickr.com/photos/63577817@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63577817@N04/8199050111',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/saddle-6.webp',
+        'sm' => '/assets/photos/saddle-6-sm.webp',
+        'title' => '160320-F-QP401-181',
+        'creator' => 'DoD News Photos',
+        'creator_url' => 'https://www.flickr.com/photos/127934495@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/127934495@N07/25354925433',
+      ),
+    ),
+    'spur' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/spur-0.webp',
+        'sm' => '/assets/photos/spur-0-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16380468763',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/spur-1.webp',
+        'sm' => '/assets/photos/spur-1-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16814256419',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/spur-2.webp',
+        'sm' => '/assets/photos/spur-2-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813825794',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/spur-3.webp',
+        'sm' => '/assets/photos/spur-3-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/spur-4.webp',
+        'sm' => '/assets/photos/spur-4-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/spur-5.webp',
+        'sm' => '/assets/photos/spur-5-sm.webp',
+        'title' => 'TVCF003',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549423240',
+      ),
+    ),
+    'lanyard' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/lanyard-4.webp',
+        'sm' => '/assets/photos/lanyard-4-sm.webp',
+        'title' => 'Wood pole rescue',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16974622426',
+      ),
+    ),
+    'rope' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
+    ),
+    'throw-line' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/throw-line-0.webp',
+        'sm' => '/assets/photos/throw-line-0-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/throw-line-1.webp',
+        'sm' => '/assets/photos/throw-line-1-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    'cable-hardware' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-0.webp',
+        'sm' => '/assets/photos/cable-hardware-0-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/393624',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-1.webp',
+        'sm' => '/assets/photos/cable-hardware-1-sm.webp',
+        'title' => 'Eye Bolt',
+        'creator' => 'Clearly Ambiguous',
+        'creator_url' => 'https://www.flickr.com/photos/84617037@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/84617037@N00/428612624',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-2.webp',
+        'sm' => '/assets/photos/cable-hardware-2-sm.webp',
+        'title' => 'Stainless steel eye-bolt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6032390/photo-image-public-domain-free-silver',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-3.webp',
+        'sm' => '/assets/photos/cable-hardware-3-sm.webp',
+        'title' => 'Eye Bolt - Basil Watson\'s Sopwith-Type Biplane, Melbourne, Victoria, 1916',
+        'creator' => 'Photographer: David Thompson',
+        'creator_url' => '',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://collections.museumsvictoria.com.au/items/413404',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-4.webp',
+        'sm' => '/assets/photos/cable-hardware-4-sm.webp',
+        'title' => 'Project 365 #278: 051011 Going Nuts',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/6214688085',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/cable-hardware-5.webp',
+        'sm' => '/assets/photos/cable-hardware-5-sm.webp',
+        'title' => 'Eye bolt snow bokeh',
+        'creator' => 'dsgetch',
+        'creator_url' => 'https://www.flickr.com/photos/66136677@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/66136677@N00/51782009502',
+      ),
+    ),
+    'power-tool' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/power-tool-0.webp',
+        'sm' => '/assets/photos/power-tool-0-sm.webp',
+        'title' => 'Person using a string trimmer in a garden',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54573938488',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/power-tool-1.webp',
+        'sm' => '/assets/photos/power-tool-1-sm.webp',
+        'title' => 'Trimming grass and weeds in a lush garden with a string trimmer',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54574042635',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/power-tool-2.webp',
+        'sm' => '/assets/photos/power-tool-2-sm.webp',
+        'title' => 'Hat string trimmer',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/6036825/photo-image-public-domain-free-grass',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/power-tool-3.webp',
+        'sm' => '/assets/photos/power-tool-3-sm.webp',
+        'title' => 'NCCC - Fuels Reduction',
+        'creator' => 'Joshua Tree National Park',
+        'creator_url' => 'https://www.flickr.com/photos/115357548@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/115357548@N08/51765717788',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/power-tool-4.webp',
+        'sm' => '/assets/photos/power-tool-4-sm.webp',
+        'title' => 'Leaf Blowers 09',
+        'creator' => 'hectorir',
+        'creator_url' => 'https://www.flickr.com/photos/30806435@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/30806435@N04/4118096648',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/power-tool-5.webp',
+        'sm' => '/assets/photos/power-tool-5-sm.webp',
+        'title' => 'Leaf Blowers 06',
+        'creator' => 'hectorir',
+        'creator_url' => 'https://www.flickr.com/photos/30806435@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/30806435@N04/4117325805',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/power-tool-6.webp',
+        'sm' => '/assets/photos/power-tool-6-sm.webp',
+        'title' => 'NCCC - Fuels Reduction',
+        'creator' => 'Joshua Tree National Park',
+        'creator_url' => 'https://www.flickr.com/photos/115357548@N08',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/115357548@N08/51765470651',
+      ),
+    ),
+    'battery' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/battery-0.webp',
+        'sm' => '/assets/photos/battery-0-sm.webp',
+        'title' => 'Cordless Drill',
+        'creator' => 'HomeSpot HQ',
+        'creator_url' => 'https://www.flickr.com/photos/86639298@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86639298@N02/8559707469',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/battery-1.webp',
+        'sm' => '/assets/photos/battery-1-sm.webp',
+        'title' => 'Battery Construction Cordless Drill Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49916988798',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/battery-2.webp',
+        'sm' => '/assets/photos/battery-2-sm.webp',
+        'title' => 'Drill Impact Drill Cordless Battery 103854 Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49906812437',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/battery-3.webp',
+        'sm' => '/assets/photos/battery-3-sm.webp',
+        'title' => 'Screw Wooden Decking Fix Repair Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49932244457',
+      ),
+    ),
+    'book' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/book-0.webp',
+        'sm' => '/assets/photos/book-0-sm.webp',
+        'title' => 'Book Stack',
+        'creator' => 'byzantiumbooks',
+        'creator_url' => 'https://www.flickr.com/photos/10688882@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10688882@N00/24811541306',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/book-1.webp',
+        'sm' => '/assets/photos/book-1-sm.webp',
+        'title' => 'May Book Stack',
+        'creator' => 'jenforless',
+        'creator_url' => 'https://www.flickr.com/photos/27086441@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/27086441@N00/2537854231',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/book-2.webp',
+        'sm' => '/assets/photos/book-2-sm.webp',
+        'title' => 'Several thick hardcover books stacked on top of each other',
+        'creator' => 'Horia Varlan',
+        'creator_url' => 'https://www.flickr.com/photos/10361931@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10361931@N06/4268152821',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/book-3.webp',
+        'sm' => '/assets/photos/book-3-sm.webp',
+        'title' => 'We\'ve got mad book stacking skills!',
+        'creator' => 'Missoula Public Library',
+        'creator_url' => 'https://www.flickr.com/photos/35152505@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35152505@N00/5509373015',
+      ),
+    ),
+    'jobsite' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/jobsite-0.webp',
+        'sm' => '/assets/photos/jobsite-0-sm.webp',
+        'title' => 'Man operating wood chipper on Milvia St in Berkeley',
+        'creator' => 'D Coetzee',
+        'creator_url' => 'https://www.flickr.com/photos/29507259@N02',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/29507259@N02/7537556444',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/jobsite-1.webp',
+        'sm' => '/assets/photos/jobsite-1-sm.webp',
+        'title' => 'The Wood Chipper Man',
+        'creator' => 'brookdaledude',
+        'creator_url' => 'https://www.flickr.com/photos/41373210@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41373210@N08/4625417266',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/jobsite-2.webp',
+        'sm' => '/assets/photos/jobsite-2-sm.webp',
+        'title' => 'Cat Rescue',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410866650',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/jobsite-3.webp',
+        'sm' => '/assets/photos/jobsite-3-sm.webp',
+        'title' => 'WINTERHAVEN GETTING READY',
+        'creator' => 'bill85704',
+        'creator_url' => 'https://www.flickr.com/photos/48804373@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48804373@N07/8254886147',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/jobsite-4.webp',
+        'sm' => '/assets/photos/jobsite-4-sm.webp',
+        'title' => 'bucket truck and snowy trees',
+        'creator' => 'BryanAlexander',
+        'creator_url' => 'https://www.flickr.com/photos/36521954815@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/36521954815@N01/16022763435',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/jobsite-5.webp',
+        'sm' => '/assets/photos/jobsite-5-sm.webp',
+        'title' => 'Bandit 200xp wood chipper',
+        'creator' => 'Dorsey Photography',
+        'creator_url' => 'https://www.flickr.com/photos/72780460@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/72780460@N08/14586733053',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/jobsite-6.webp',
+        'sm' => '/assets/photos/jobsite-6-sm.webp',
+        'title' => 'Wood Chipper',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/8977863903',
+      ),
+      7 => 
+      array (
+        'src' => '/assets/photos/jobsite-7.webp',
+        'sm' => '/assets/photos/jobsite-7-sm.webp',
+        'title' => 'Touchdown',
+        'creator' => 'juhansonin',
+        'creator_url' => 'https://www.flickr.com/photos/38869431@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/38869431@N00/2410026809',
+      ),
+      8 => 
+      array (
+        'src' => '/assets/photos/jobsite-8.webp',
+        'sm' => '/assets/photos/jobsite-8-sm.webp',
+        'title' => 'Chipper',
+        'creator' => 'photofarmer',
+        'creator_url' => 'https://www.flickr.com/photos/62528187@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62528187@N00/6941971832',
+      ),
+      9 => 
+      array (
+        'src' => '/assets/photos/jobsite-9.webp',
+        'sm' => '/assets/photos/jobsite-9-sm.webp',
+        'title' => '2003. Pollinating cones.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/42611579035',
+      ),
+    ),
+    'hero' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/hero-0.webp',
+        'sm' => '/assets/photos/hero-0-sm.webp',
+        'title' => 'Urban forestry, arborist taking out an over grown evergreen tree, safety gear, portable chain saw, North Seattle Trees, Seattle, Washington, USA',
+        'creator' => 'Wonderlane',
+        'creator_url' => 'https://www.flickr.com/photos/71401718@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/71401718@N00/7352351512',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/hero-1.webp',
+        'sm' => '/assets/photos/hero-1-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/hero-2.webp',
+        'sm' => '/assets/photos/hero-2-sm.webp',
+        'title' => 'Arborist Cutting',
+        'creator' => 'matt.boman',
+        'creator_url' => 'https://www.flickr.com/photos/10384097@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10384097@N08/6109956022',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/hero-3.webp',
+        'sm' => '/assets/photos/hero-3-sm.webp',
+        'title' => 'Arborist cutting down red cedar tree, wood chips spray out from the chain saw, backyard garden, Seattle, Washington, USA',
+        'creator' => 'Wonderlane',
+        'creator_url' => 'https://www.flickr.com/photos/71401718@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/71401718@N00/18246256241',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/hero-4.webp',
+        'sm' => '/assets/photos/hero-4-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/hero-5.webp',
+        'sm' => '/assets/photos/hero-5-sm.webp',
+        'title' => 'Arborist / tree surgeon',
+        'creator' => 'Picturepest',
+        'creator_url' => 'https://www.flickr.com/photos/59923990@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/59923990@N05/14811321067',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/hero-6.webp',
+        'sm' => '/assets/photos/hero-6-sm.webp',
+        'title' => '091717_Everglades_19',
+        'creator' => 'Eastern Incident Management Team',
+        'creator_url' => 'https://www.flickr.com/photos/152181634@N06',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/152181634@N06/36452531824',
+      ),
+      7 => 
+      array (
+        'src' => '/assets/photos/hero-7.webp',
+        'sm' => '/assets/photos/hero-7-sm.webp',
+        'title' => '091717_Everglades_18',
+        'creator' => 'Eastern Incident Management Team',
+        'creator_url' => 'https://www.flickr.com/photos/152181634@N06',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/152181634@N06/37290405855',
+      ),
+      8 => 
+      array (
+        'src' => '/assets/photos/hero-8.webp',
+        'sm' => '/assets/photos/hero-8-sm.webp',
+        'title' => 'Renaissance Certified Arborist company delivering wood chips for recycling by mulching the garden and back yard, fence, prayer flags, Old fence from Pioneer\'s Square, Seattle, Washington, USA',
+        'creator' => 'Wonderlane',
+        'creator_url' => 'https://www.flickr.com/photos/71401718@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/71401718@N00/15880850568',
+      ),
+      9 => 
+      array (
+        'src' => '/assets/photos/hero-9.webp',
+        'sm' => '/assets/photos/hero-9-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982705461',
+      ),
+      10 => 
+      array (
+        'src' => '/assets/photos/hero-10.webp',
+        'sm' => '/assets/photos/hero-10-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982704071',
+      ),
+    ),
+    'rigging-device' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/rigging-device-0.webp',
+        'sm' => '/assets/photos/rigging-device-0-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982894227',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/rigging-device-1.webp',
+        'sm' => '/assets/photos/rigging-device-1-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982704071',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/rigging-device-2.webp',
+        'sm' => '/assets/photos/rigging-device-2-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982705461',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/rigging-device-3.webp',
+        'sm' => '/assets/photos/rigging-device-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982144423',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/rigging-device-4.webp',
+        'sm' => '/assets/photos/rigging-device-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
+      5 => 
+      array (
+        'src' => '/assets/photos/rigging-device-5.webp',
+        'sm' => '/assets/photos/rigging-device-5-sm.webp',
+        'title' => 'Nautical #5',
+        'creator' => 'Graham B Finney',
+        'creator_url' => 'https://www.flickr.com/photos/188487900@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188487900@N02/51798984894',
+      ),
+      6 => 
+      array (
+        'src' => '/assets/photos/rigging-device-6.webp',
+        'sm' => '/assets/photos/rigging-device-6-sm.webp',
+        'title' => 'Arborist Cutting',
+        'creator' => 'matt.boman',
+        'creator_url' => 'https://www.flickr.com/photos/10384097@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10384097@N08/6109956022',
+      ),
+    ),
+    'sling' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
+      4 => 
+      array (
+        'src' => '/assets/photos/sling-4.webp',
+        'sm' => '/assets/photos/sling-4-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
+    ),
+    'apparel' => 
+    array (
+      0 => 
+      array (
+        'src' => '/assets/photos/apparel-0.webp',
+        'sm' => '/assets/photos/apparel-0-sm.webp',
+        'title' => 'Crate Flannel Shirt',
+        'creator' => 'A Continuous Lean',
+        'creator_url' => 'https://www.flickr.com/photos/7393890@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7393890@N04/3294764637',
+      ),
+      1 => 
+      array (
+        'src' => '/assets/photos/apparel-1.webp',
+        'sm' => '/assets/photos/apparel-1-sm.webp',
+        'title' => 'Flannel plaid background',
+        'creator' => 'Ember Studio',
+        'creator_url' => 'https://www.flickr.com/photos/48013511@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48013511@N07/12951396883',
+      ),
+      2 => 
+      array (
+        'src' => '/assets/photos/apparel-2.webp',
+        'sm' => '/assets/photos/apparel-2-sm.webp',
+        'title' => 'woman taking her flannel shirt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/3284728/free-photo-image-dress-long-jeans-dance',
+      ),
+      3 => 
+      array (
+        'src' => '/assets/photos/apparel-3.webp',
+        'sm' => '/assets/photos/apparel-3-sm.webp',
+        'title' => 'Great flannel shirts for women are hard to come by. But flannel is our signature, inspired by top-notch menswear shirts - especially designed and tailored for you. Take up to 20% off this weekend on all flannels, including the Park City flannel pictured h',
+        'creator' => 'Tradlands',
+        'creator_url' => 'https://www.flickr.com/photos/87743767@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87743767@N07/24785884538',
+      ),
+    ),
   ),
   'built' => '2026-10-07',
 );

@@ -677,3 +677,41 @@ dialog::backdrop { background: rgba(13, 28, 20, .55); backdrop-filter: blur(3px)
   .price-big { font-size: 2.4rem; }
   .stat b { font-size: 1.8rem; }
 }
+
+/* ---------- real photos ---------- */
+.card-media.has-photo { background: var(--forest-900); }
+.card-media .is-photo { width: 100%; height: 100%; object-fit: cover; transform: none; }
+.card:hover .card-media .is-photo { transform: scale(1.07); }
+.card-media.has-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(13, 28, 20, .25)); pointer-events: none; }
+.stage-photo { margin: 0; aspect-ratio: 4 / 3; background: var(--forest-900); }
+.stage-photo img { width: 100%; height: 100%; object-fit: cover; animation: none; filter: none; border-radius: 0; }
+.stage-note .credit, .stage-note .credit a { color: var(--ink-2); font-size: .74rem; }
+.dept-tile.has-photo { color: #fff; background: var(--forest-900); border: 0; min-height: 230px; }
+.dept-tile.has-photo::before { display: none; }
+.dept-photo { position: absolute; inset: 0; }
+.dept-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s var(--ease); }
+.dept-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13, 28, 20, .05) 25%, rgba(13, 28, 20, .88)); }
+.dept-tile.has-photo:hover .dept-photo img { transform: scale(1.08); }
+.dept-tile.has-photo:hover { color: #fff; }
+.dept-tile.has-photo .dept-count { color: var(--lime); }
+.cat-hero.has-photo { position: relative; }
+.cat-hero-photo { position: absolute; top: 0; right: 0; bottom: 0; width: 46%; pointer-events: none; }
+.cat-hero-photo img { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 45%); mask-image: linear-gradient(90deg, transparent 0, #000 45%); }
+.cat-hero.has-photo .wrap { position: relative; }
+.cat-hero.has-photo .cat-hero-row > div:first-child, .cat-hero.has-photo .lede { max-width: 640px; }
+.cat-hero.has-photo:not(.dept-hero) .cat-hero-photo img { opacity: .9; }
+.dept-hero.has-photo .cat-hero-photo img { opacity: .55; }
+@media (max-width: 860px) { .cat-hero-photo { width: 100%; opacity: .16; } .dept-hero.has-photo .cat-hero-photo { opacity: .5; } }
+.guide-art.has-photo img { width: 100%; height: 100%; object-fit: cover; }
+.guide-art.has-photo::before { display: none; }
+.guide-card:hover .guide-art.has-photo img { transform: scale(1.06); }
+.float-photo { padding: 0; overflow: hidden; border-radius: 50%; aspect-ratio: 1; border: 5px solid var(--cream); }
+.float-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.kit-slot img { object-fit: cover; padding: 0; height: 56px; }
+.cart-line img, .compare-items img, .suggest img, .sticky-buy img { object-fit: cover; padding: 0; }
+.compare-table thead img { width: 120px; height: 90px; object-fit: cover; padding: 0; }
+.flyer { object-fit: cover; padding: 0; }
+.credits-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; padding: 30px 0 70px; }
+.credit-item { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.credit-item img { width: 100%; height: auto; display: block; }
+.credit-item figcaption { padding: 10px 12px; font-size: .82rem; color: var(--ink-2); }

@@ -15,14 +15,14 @@ return [
     // When live, requests for any other host (www., the temporary domain) are
     // 301'd to the canonical origin.
     'canonical_host' => 'gaparboristsupply.com',
-    'email'       => 'hello@gaparboristsupply.com',
+    'email'       => 'info@gaparboristsupply.com',
 
     // Affiliate links. Per-product links go in data/affiliates.json
     // ({"/product/path/": "https://..."}). Products without one use the
     // fallback search URL below; {q} is replaced with the URL-encoded product name.
     // Add your Amazon Associates tag to amazon_tag to have it appended.
     'affiliate_fallback' => 'https://www.amazon.com/s?k={q}',
-    'amazon_tag'  => '',
+    'amazon_tag'  => 'gaparboristsupply-20',
 
     // Departments in navigation order.
     'departments' => [

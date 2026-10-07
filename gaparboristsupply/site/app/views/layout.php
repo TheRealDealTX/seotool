@@ -106,7 +106,7 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
     <div class="footer-brand">
       <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="" width="44" height="44"><span class="logo-text"><b>Gap</b> Arborist Supply</span></a>
       <p>Climbing, rigging, cutting and safety gear for tree care pros and serious homeowners, with straight-talking buying guides and free tools for the job.</p>
-      <p class="disclosure-note">Some links on this site are affiliate links. If you buy through them we may earn a commission at no cost to you. <a href="/affiliate-disclosure/">How that works</a>.</p>
+      <p class="disclosure-note">Some links on this site are affiliate links. If you buy through them we may earn a commission at no cost to you. As an Amazon Associate we earn from qualifying purchases. <a href="/affiliate-disclosure/">How that works</a>.</p>
     </div>
     <div>
       <h2>Shop</h2>
@@ -127,6 +127,7 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
         <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use/">Terms of use</a></li>
+        <li><a href="/image-credits/">Image credits</a></li>
       </ul>
     </div>
   </div>

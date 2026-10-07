@@ -7,7 +7,7 @@ $trail = [['Tools', '/tools/'], [$name, "/tools/$slug/"]];
 // Products the tool can recommend, embedded for the script.
 $byKind = [];
 $kitCats = ['/climbing/', '/rope/climbing-rope/', '/cutting-and-pruning/hand-saws-and-scabbards/'];
-foreach ($CAT['products'] as $p) if ($slug === 'climbing-kit-builder' ? array_filter($kitCats, fn($k) => str_starts_with($p['category'], $k)) : in_array($p['kind'], $kinds, true)) $byKind[] = ['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price'], 'k' => $p['kind'], 'c' => $p['category'], 'l' => $p['level'] ?? 'all', 'bn' => $p['brand_name'] ?? ''];
+foreach ($CAT['products'] as $p) if ($slug === 'climbing-kit-builder' ? array_filter($kitCats, fn($k) => str_starts_with($p['category'], $k)) : in_array($p['kind'], $kinds, true)) $byKind[] = ['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price'], 'k' => $p['kind'], 'c' => $p['category'], 'l' => $p['level'] ?? 'all', 'bn' => $p['brand_name'] ?? '', 'i' => $p['photo']['sm'] ?? ''];
 
 $copy = [
  'climbing-kit-builder' => ['Tree Climbing Kit Builder', 'Build a complete tree climbing gear kit for moving rope (MRS/DdRT), stationary rope (SRS/SRT) or spur removals, sized to your budget, then add it to your cart.',

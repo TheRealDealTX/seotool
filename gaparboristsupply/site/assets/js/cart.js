@@ -3,7 +3,7 @@
   'use strict';
   const G = window.Gap; if (!G) return;
   const $ = (s, r = document) => r.querySelector(s);
-  const { money, esc, kindImg } = G;
+  const { money, esc, imgOf } = G;
 
   // A shared list link (?list=path*qty,path*qty) merges into this visitor's cart once.
   const shared = new URLSearchParams(location.search).get('list');
@@ -12,7 +12,7 @@
       const c = G.cart();
       shared.split(',').forEach(tok => {
         const [p, q] = tok.split('*'), x = cat.find(i => i.p === p); if (!x) return;
-        const hit = c.find(i => i.p === p); if (hit) hit.q = Math.max(hit.q, +q || 1); else c.push({ p, n: x.n, pr: x.pr, k: x.k, q: +q || 1 });
+        const hit = c.find(i => i.p === p); if (hit) hit.q = Math.max(hit.q, +q || 1); else c.push({ p, n: x.n, pr: x.pr, k: x.k, i: x.i, q: +q || 1 });
       });
       G.setCart(c); history.replaceState(null, '', '/cart/'); G.toast('Shared gear list loaded');
     });
@@ -25,7 +25,7 @@
     $('[data-sum-items]').textContent = n; $('[data-sum-total]').textContent = money(t);
     $('[data-cart-empty]').hidden = c.length > 0;
     $('.cart-layout').hidden = !c.length;
-    lines.innerHTML = c.map(i => `<li class="cart-line" data-p="${esc(i.p)}"><img src="${kindImg(i.k)}" alt="" width="70" height="70">
+    lines.innerHTML = c.map(i => `<li class="cart-line" data-p="${esc(i.p)}"><img src="${imgOf(i)}" alt="" width="70" height="70">
       <div><a class="name" href="${esc(i.p)}">${esc(i.n)}</a><div class="unit">${money(i.pr)} typical each</div><button class="remove" type="button" data-remove>Remove</button></div>
       <div class="qty" data-line-qty><button type="button" aria-label="Less" data-d="-1">−</button><input type="number" min="1" max="99" value="${i.q}" aria-label="Quantity"><button type="button" aria-label="More" data-d="1">+</button></div>
       <span class="line-total">${money(i.q * i.pr)}</span></li>`).join('');
@@ -35,7 +35,7 @@
     $('[data-saved-count-inline]').textContent = s.length;
     $('[data-saved-empty]').hidden = s.length > 0;
     grid.innerHTML = s.map(i => `<article class="card" data-product='${esc(JSON.stringify(i))}'>
-      <a class="card-media" href="${esc(i.p)}"><span class="rings"></span><img src="${kindImg(i.k)}" alt=""></a>
+      <a class="card-media" href="${esc(i.p)}"><span class="rings"></span><img src="${imgOf(i)}" alt=""></a>
       <button class="heart on" type="button" aria-label="Remove from saved" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8 3.2 4 7 4c2.1 0 3.6 1.2 5 3 1.4-1.8 2.9-3 5-3 3.8 0 6.1 4 4.6 7.7C19.5 16.4 12 21 12 21z"/></svg></button>
       <div class="card-body"><h3 class="card-title"><a href="${esc(i.p)}">${esc(i.n)}</a></h3>
       <div class="card-foot"><span class="price"><small>Typical</small> ${money(i.pr)}</span><button class="btn btn-sm btn-cart" type="button" data-add>Add</button></div></div></article>`).join('');

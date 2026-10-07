@@ -23,6 +23,11 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
 $brands = array_filter($CAT['brands'], fn($b) => count($b['products']) > 0);
 uasort($brands, fn($a, $b) => count($b['products']) <=> count($a['products']));
 $brands = array_slice($brands, 0, 18);
+function hero_float(string $cls, string $kind): string {
+    global $CAT;
+    $ph = $CAT['images'][$kind][0] ?? null;
+    return $ph ? '<span class="float float-photo ' . $cls . '"><img src="' . e($ph['sm']) . '" alt=""></span>' : '<img class="float ' . $cls . '" src="' . kind_img($kind) . '" alt="">';
+}
 ?>
 <section class="hero">
   <canvas class="hero-canvas" aria-hidden="true"></canvas>
@@ -49,12 +54,12 @@ $brands = array_slice($brands, 0, 18);
     </div>
     <div class="hero-stage" aria-hidden="true">
       <div class="orbit">
-        <img class="float f1" src="<?= kind_img('saddle') ?>" alt="">
-        <img class="float f2" src="<?= kind_img('chainsaw') ?>" alt="">
-        <img class="float f3" src="<?= kind_img('carabiner') ?>" alt="">
-        <img class="float f4" src="<?= kind_img('hand-saw') ?>" alt="">
-        <img class="float f5" src="<?= kind_img('rope') ?>" alt="">
-        <img class="float f6" src="<?= kind_img('helmet') ?>" alt="">
+        <?= hero_float('f1', 'saddle') ?>
+        <?= hero_float('f2', 'chainsaw') ?>
+        <?= hero_float('f3', 'carabiner') ?>
+        <?= hero_float('f4', 'hand-saw') ?>
+        <?= hero_float('f5', 'rope') ?>
+        <?= hero_float('f6', 'helmet') ?>
       </div>
       <svg class="growth-rings" viewBox="0 0 400 400"><?php for ($i = 1; $i <= 9; $i++): ?><circle cx="200" cy="200" r="<?= 20 + $i * 19 + ($i % 3) * 3 ?>" style="--i:<?= $i ?>"/><?php endfor; ?></svg>
     </div>
@@ -70,8 +75,8 @@ $brands = array_slice($brands, 0, 18);
     </div>
     <div class="dept-grid">
 <?php foreach ($depts as $i => $d): ?>
-      <a class="dept-tile tilt reveal" href="<?= e($d['path']) ?>" style="--d:<?= $i ?>">
-        <span class="dept-art"><img src="<?= kind_img($d['kind']) ?>" alt="" loading="lazy" width="120" height="120"></span>
+      <a class="dept-tile tilt reveal<?= !empty($d['photo']) ? ' has-photo' : '' ?>" href="<?= e($d['path']) ?>" style="--d:<?= $i ?>">
+        <?php if (!empty($d['photo'])): ?><span class="dept-photo"><?= photo_img($d['photo'], $d['kind'], '', '(max-width: 520px) 50vw, 300px') ?></span><?php else: ?><span class="dept-art"><img src="<?= kind_img($d['kind']) ?>" alt="" loading="lazy" width="120" height="120"></span><?php endif; ?>
         <span class="dept-name"><?= e($d['name']) ?></span>
         <span class="dept-count"><?= count($d['products']) ?> items</span>
       </a>
@@ -181,7 +186,7 @@ $brands = array_slice($brands, 0, 18);
     <div class="guide-grid">
 <?php foreach (array_slice($CAT['guides'], 0, 3) as $g): ?>
       <a class="guide-card tilt reveal" href="<?= e($g['path']) ?>">
-        <span class="guide-art"><img src="<?= kind_img($g['kind']) ?>" alt="" loading="lazy"></span>
+        <span class="guide-art<?= !empty($g['photo']) ? ' has-photo' : '' ?>"><?= !empty($g['photo']) ? photo_img($g['photo'], $g['kind'], '', '(max-width: 700px) 100vw, 400px') : '<img src="' . kind_img($g['kind']) . '" alt="" loading="lazy">' ?></span>
         <span class="guide-meta"><?= (int)$g['read_minutes'] ?> min read</span>
         <h3><?= e($g['h1']) ?></h3>
         <p><?= e($g['dek']) ?></p>

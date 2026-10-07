@@ -20,8 +20,8 @@ $meta = [
 ];
 $isDept = $c['parent'] === null;
 ?>
-<section class="cat-hero<?= $isDept ? ' dept-hero' : '' ?>">
-  <div class="cat-hero-bg" aria-hidden="true"><img src="<?= kind_img($c['kind']) ?>" alt=""></div>
+<section class="cat-hero<?= $isDept ? ' dept-hero' : '' ?><?= !empty($c['photo']) ? ' has-photo' : '' ?>">
+  <?php if (!empty($c['photo'])): ?><div class="cat-hero-photo" aria-hidden="true"><img src="<?= e($c['photo']['src']) ?>" alt="" fetchpriority="high"></div><?php else: ?><div class="cat-hero-bg" aria-hidden="true"><img src="<?= kind_img($c['kind']) ?>" alt=""></div><?php endif; ?>
   <div class="wrap">
     <?= crumbs($trail) ?>
     <div class="cat-hero-row">

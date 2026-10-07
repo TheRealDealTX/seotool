@@ -46,14 +46,36 @@ them into `seo-data/build-plan.json`, which decides what gets a page:
 and fails if any of them doesn't end at a 200 within two hops. Current result on
 the live site: 490 serve directly, 290 redirect once, 0 broken.
 
-## Affiliate links (to do)
+## Photos
+
+Product, category and guide images are real photos from Openverse, licensed
+CC0, public domain or CC BY. They are representative of each type of gear, not
+the exact product, and the product page says so. Each product page credits its
+photo, and `/image-credits/` lists them all, as CC BY requires.
+
+- `scripts/fetch_photos.py` searches Openverse by product type and builds contact
+  sheets. Anonymous use is limited to 200 calls a day.
+- The chosen photos are recorded in `work/photos/picks.json`.
+- `scripts/process_photos.py` crops them to 4:3 WebP files in `site/assets/photos/`
+  and writes `site/data/images.json`.
+- `scripts/compile.php` gives each product a photo from its type, rotating
+  through the pool so neighbouring products differ.
+
+The downloaded candidate photos are not committed. Run `fetch_photos.py` again
+to re-pick. Once you have Amazon Product Advertising API access, the exact
+product images can replace these through the same `photo` field.
+
+## Affiliate links
 
 Every "Check price" button goes through `/go/?p=<product path>`, which 302s to
 the retailer. To set links:
 - **Per product:** create `site/data/affiliates.json` as `{"/product/path/": "https://…"}`.
 - **Fallback:** `affiliate_fallback` in `config.php`, currently an Amazon search
-  for the product name. Put your Associates tag in `amazon_tag` and it is appended
-  automatically.
+  for the product name.
+- **Associates tag:** `amazon_tag` is set to `gaparboristsupply-20`. It is added
+  to every Amazon link, both the fallback and per-product links, unless the link
+  already has a tag. The Amazon Associates disclosure is in the footer and on
+  `/affiliate-disclosure/`.
 
 ## Editing and deploying
 
@@ -87,7 +109,5 @@ There is deliberately no `index.html`. `.htaccess` is ignored, so redirects,
   high-traffic pages (372XP, 3120XP, Silky Sugoi and Gunfighter, NGK plugs,
   450 Rancher), and confirm the brand on items marked "Gap Arborist Supply"
   (generic or house items).
-- Product images are illustrations (`site/assets/img/kinds/*.svg`). Swap in
-  retailer images when the affiliate feeds are connected.
-- The contact address `hello@gaparboristsupply.com` in `config.php` needs a
+- The contact address `info@gaparboristsupply.com` in `config.php` needs a
   mailbox once the domain is live.

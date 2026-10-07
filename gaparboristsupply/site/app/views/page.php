@@ -12,7 +12,7 @@ $pages = [
    ['Get in touch', ["Email <a href=\"mailto:$mail\">$mail</a> with gear questions, corrections to a product page, or partnership enquiries. We read everything and reply as quickly as we can.", 'For orders, shipping and returns, contact the retailer you bought from: they handle payment and delivery.']],
  ]],
  'affiliate-disclosure' => ['Affiliate Disclosure', 'How Gap Arborist Supply earns money: some links are affiliate links, which pay us a commission at no extra cost to you.', [
-   ['How this site makes money', ["$n is supported by its readers. When you click a \"Check price\" link and buy from the retailer, we may earn a commission. You pay the same price either way.", 'Commissions never decide what we list or how we describe it. If a product is not right for a job, we say so.']],
+   ['How this site makes money', ["$n is supported by its readers. When you click a \"Check price\" link and buy from the retailer, we may earn a commission. You pay the same price either way.", "$n is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate we earn from qualifying purchases.", 'Commissions never decide what we list or how we describe it. If a product is not right for a job, we say so.']],
    ['Prices', ['The prices on this site are typical street prices for reference. The retailer\'s price at checkout is the one that counts.']],
  ]],
  'privacy-policy' => ['Privacy Policy', 'How Gap Arborist Supply handles your information.', [

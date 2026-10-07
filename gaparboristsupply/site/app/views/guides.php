@@ -9,6 +9,6 @@ $meta = ['title' => 'Arborist Gear Buying Guides', 'desc' => 'Practical buying g
 </div></section>
 <section class="wrap"><div class="guide-grid">
 <?php foreach ($CAT['guides'] as $g): ?>
-  <a class="guide-card tilt reveal" href="<?= e($g['path']) ?>"><span class="guide-art"><img src="<?= kind_img($g['kind']) ?>" alt="" loading="lazy"></span><span class="guide-meta"><?= (int)$g['read_minutes'] ?> min read</span><h2><?= e($g['h1']) ?></h2><p><?= e($g['dek']) ?></p></a>
+  <a class="guide-card tilt reveal" href="<?= e($g['path']) ?>"><span class="guide-art<?= !empty($g['photo']) ? ' has-photo' : '' ?>"><?= !empty($g['photo']) ? photo_img($g['photo'], $g['kind'], '', '(max-width: 700px) 100vw, 400px') : '<img src="' . kind_img($g['kind']) . '" alt="" loading="lazy">' ?></span><span class="guide-meta"><?= (int)$g['read_minutes'] ?> min read</span><h2><?= e($g['h1']) ?></h2><p><?= e($g['dek']) ?></p></a>
 <?php endforeach; ?>
 </div></section>

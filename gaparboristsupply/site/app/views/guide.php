@@ -12,7 +12,7 @@ $meta = [
 ];
 ?>
 <article>
-<section class="cat-hero guide-hero"><div class="wrap narrow">
+<section class="cat-hero guide-hero<?= !empty($g['photo']) ? ' has-photo' : '' ?>"><?php if (!empty($g['photo'])): ?><div class="cat-hero-photo" aria-hidden="true"><img src="<?= e($g['photo']['src']) ?>" alt=""></div><?php endif; ?><div class="wrap narrow">
   <?= crumbs($trail) ?>
   <p class="eyebrow"><?= (int)$g['read_minutes'] ?> min read</p>
   <h1><?= e($g['h1']) ?></h1>

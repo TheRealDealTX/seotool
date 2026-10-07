@@ -8,6 +8,7 @@
   const money = n => '$' + Math.round(n).toLocaleString('en-US');
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const kindImg = k => '/assets/img/kinds/' + k + '.svg';
+  const imgOf = x => x.i || kindImg(x.k);
 
   // ---- storage (browser only; wrapped so private mode never breaks the page) ----
   const store = {
@@ -24,10 +25,10 @@
       const c = Gap.cart(); const hit = c.find(i => i.p === item.p);
       if (hit) hit.q = Math.min(99, hit.q + q); else c.push({ ...item, q });
       Gap.setCart(c);
-      if (from) fly(from, item.k);
+      if (from) fly(from, item);
       toast(`Added <b>${esc(item.n)}</b> · <a href="/cart/">View cart</a>`);
     },
-    money, esc, kindImg, toast,
+    money, esc, kindImg, imgOf, toast,
     lite: null,
     async catalog() {
       if (Gap.lite) return Gap.lite;
@@ -51,11 +52,11 @@
     clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2800);
   }
 
-  function fly(fromEl, kind) {
+  function fly(fromEl, item) {
     const target = $('.cart-btn'); if (!target || reduce) return;
     const a = fromEl.getBoundingClientRect(), b = target.getBoundingClientRect();
     const img = document.createElement('img');
-    img.src = kindImg(kind); img.className = 'flyer'; img.alt = '';
+    img.src = imgOf(item); img.className = 'flyer'; img.alt = '';
     img.style.left = a.left + a.width / 2 - 30 + 'px'; img.style.top = a.top + a.height / 2 - 30 + 'px';
     document.body.appendChild(img);
     const dx = b.left + b.width / 2 - (a.left + a.width / 2), dy = b.top + b.height / 2 - (a.top + a.height / 2);
@@ -98,7 +99,7 @@
     const bar = $('.compare-bar'); if (!bar) return;
     const list = Gap.compare();
     bar.hidden = !list.length;
-    $('.compare-items', bar).innerHTML = list.map(i => `<span><img src="${kindImg(i.k)}" alt="">${esc(i.n)}</span>`).join('');
+    $('.compare-items', bar).innerHTML = list.map(i => `<span><img src="${imgOf(i)}" alt="">${esc(i.n)}</span>`).join('');
     const set = new Set(list.map(i => i.p));
     $$('[data-compare]').forEach(cb => { const host = cb.closest('[data-product]'); if (host) cb.checked = set.has(JSON.parse(host.dataset.product).p); });
   }
@@ -115,10 +116,10 @@
   document.addEventListener('click', async e => {
     if (e.target.closest('[data-compare-clear]')) { store.set('compare', []); renderCompareBar(); }
     if (e.target.closest('[data-compare-open]')) {
-      const cat = await Gap.catalog(), list = Gap.compare().map(c => cat.find(x => x.p === c.p) || { p: c.p, n: c.n, pr: c.pr, k: c.k, s: [] });
+      const cat = await Gap.catalog(), list = Gap.compare().map(c => cat.find(x => x.p === c.p) || { p: c.p, n: c.n, pr: c.pr, k: c.k, i: c.i, s: [] });
       const keys = [...new Set(list.flatMap(x => (x.s || []).map(s => s[0])))];
       const row = (label, f) => `<tr><th>${esc(label)}</th>${list.map(x => `<td>${f(x)}</td>`).join('')}</tr>`;
-      $('.compare-table').innerHTML = `<table><thead><tr><th></th>${list.map(x => `<td><img src="${kindImg(x.k)}" alt=""><a href="${esc(x.p)}">${esc(x.n)}</a></td>`).join('')}</tr></thead><tbody>`
+      $('.compare-table').innerHTML = `<table><thead><tr><th></th>${list.map(x => `<td><img src="${imgOf(x)}" alt=""><a href="${esc(x.p)}">${esc(x.n)}</a></td>`).join('')}</tr></thead><tbody>`
         + row('Typical price', x => money(x.pr)) + row('Brand', x => esc(x.bn || '—'))
         + keys.map(k => row(k, x => esc(((x.s || []).find(s => s[0] === k) || [, '—'])[1]))).join('') + '</tbody></table>';
       $('.compare-dialog').showModal();
@@ -139,7 +140,7 @@
         return [words.reduce((a, w) => a + (x.n.toLowerCase().includes(w) ? 3 : 1), 0), x];
       }).filter(Boolean).sort((a, b) => b[0] - a[0]).slice(0, 6).map(h => h[1]);
       idx = -1;
-      box.innerHTML = hits.map(x => `<a href="${esc(x.p)}"><img src="${kindImg(x.k)}" alt=""><span><b>${esc(x.n)}</b><small>${esc(x.bn)} · ${money(x.pr)}</small></span></a>`).join('')
+      box.innerHTML = hits.map(x => `<a href="${esc(x.p)}"><img src="${imgOf(x)}" alt=""><span><b>${esc(x.n)}</b><small>${esc(x.bn)} · ${money(x.pr)}</small></span></a>`).join('')
         + `<a class="s-all" href="/search/?q=${encodeURIComponent(input.value.trim())}">See all results for “${esc(input.value.trim())}”</a>`;
       box.hidden = false;
     };

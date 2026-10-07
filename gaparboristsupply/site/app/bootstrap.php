@@ -7,7 +7,7 @@ $CAT = require dirname(__DIR__) . '/data/catalog.php';
 $AFF = is_file(dirname(__DIR__) . '/data/affiliates.json')
     ? (json_decode(file_get_contents(dirname(__DIR__) . '/data/affiliates.json'), true) ?: []) : [];
 
-const ASSET_V = '1';
+const ASSET_V = '2';
 
 function e(?string $s): string { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 
@@ -20,14 +20,32 @@ function rich(string $s): string {
 function abs_url(string $path): string { global $CFG; return rtrim($CFG['origin'], '/') . $path; }
 function money(int $n): string { return '$' . number_format($n); }
 function kind_img(string $kind): string { return '/assets/img/kinds/' . preg_replace('/[^a-z\-]/', '', $kind) . '.svg'; }
+// Real photo <img> with a small/large srcset; falls back to the kind illustration.
+function photo_img(?array $ph, string $kind, string $alt, string $sizes = '(max-width: 600px) 50vw, 300px', string $lazy = 'lazy'): string {
+    if (!$ph) return '<img class="is-illo" src="' . kind_img($kind) . '" alt="' . e($alt) . '" loading="' . $lazy . '" width="160" height="160">';
+    return '<img class="is-photo" src="' . e($ph['sm']) . '" srcset="' . e($ph['sm']) . ' 600w, ' . e($ph['src']) . ' 1200w" sizes="' . e($sizes) . '" alt="' . e($alt) . '" loading="' . $lazy . '" width="600" height="450">';
+}
+function photo_credit(?array $ph): string {
+    if (!$ph) return '';
+    $t = $ph['source_url'] ? '<a href="' . e($ph['source_url']) . '" rel="nofollow noopener" target="_blank">' . e($ph['title']) . '</a>' : e($ph['title']);
+    $c = $ph['creator_url'] ? '<a href="' . e($ph['creator_url']) . '" rel="nofollow noopener" target="_blank">' . e($ph['creator']) . '</a>' : e($ph['creator']);
+    $l = $ph['license_url'] ? '<a href="' . e($ph['license_url']) . '" rel="nofollow noopener license" target="_blank">' . e($ph['license']) . '</a>' : e($ph['license']);
+    return "Photo: $t by $c, $l";
+}
+function card_data(array $p): string {
+    return e(json_encode(['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price'], 'k' => $p['kind'], 'i' => $p['photo']['sm'] ?? ''], JSON_UNESCAPED_SLASHES));
+}
+
 function product(string $path): ?array { global $CAT; return $CAT['products'][$path] ?? null; }
 function category(string $path): ?array { global $CAT; return $CAT['categories'][$path] ?? null; }
 
 function aff_url(array $p): string {
     global $CFG, $AFF;
-    if (!empty($AFF[$p['path']])) return $AFF[$p['path']];
-    $u = str_replace('{q}', rawurlencode($p['name']), $CFG['affiliate_fallback']);
-    if ($CFG['amazon_tag'] && str_contains($u, 'amazon.')) $u .= (str_contains($u, '?') ? '&' : '?') . 'tag=' . rawurlencode($CFG['amazon_tag']);
+    $u = !empty($AFF[$p['path']]) ? $AFF[$p['path']] : str_replace('{q}', rawurlencode($p['name']), $CFG['affiliate_fallback']);
+    // Every Amazon link carries the Associates tag, unless it already has one.
+    if ($CFG['amazon_tag'] && preg_match('#^https?://([a-z0-9-]+\.)*amazon\.#i', $u) && !preg_match('/[?&]tag=/', $u)) {
+        $u .= (str_contains($u, '?') ? '&' : '?') . 'tag=' . rawurlencode($CFG['amazon_tag']);
+    }
     return $u;
 }
 
@@ -107,10 +125,9 @@ function render(string $view, array $vars = [], int $status = 200): never {
 // ---- small view partials ---------------------------------------------------------
 
 function product_card(array $p, string $extra = ''): string {
-    $img = kind_img($p['kind']);
-    $data = e(json_encode(['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price'], 'k' => $p['kind']], JSON_UNESCAPED_SLASHES));
-    return '<article class="card tilt reveal ' . $extra . '" data-product="' . $data . '" data-brand="' . e($p['brand'] ?? '') . '" data-price="' . (int)$p['price'] . '" data-name="' . e(strtolower($p['name'])) . '">'
-        . '<a class="card-media" href="' . e($p['path']) . '" tabindex="-1" aria-hidden="true"><span class="rings"></span><img src="' . $img . '" alt="" loading="lazy" width="160" height="160"></a>'
+    $hasPhoto = !empty($p['photo']);
+    return '<article class="card tilt reveal ' . $extra . '" data-product="' . card_data($p) . '" data-brand="' . e($p['brand'] ?? '') . '" data-price="' . (int)$p['price'] . '" data-name="' . e(strtolower($p['name'])) . '">'
+        . '<a class="card-media' . ($hasPhoto ? ' has-photo' : '') . '" href="' . e($p['path']) . '" tabindex="-1" aria-hidden="true">' . ($hasPhoto ? '' : '<span class="rings"></span>') . photo_img($p['photo'] ?? null, $p['kind'], '') . '</a>'
         . '<button class="heart" type="button" aria-label="Save ' . e($p['name']) . '" data-save><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8 3.2 4 7 4c2.1 0 3.6 1.2 5 3 1.4-1.8 2.9-3 5-3 3.8 0 6.1 4 4.6 7.7C19.5 16.4 12 21 12 21z"/></svg></button>'
         . '<div class="card-body"><p class="card-brand">' . e($p['brand_name'] ?? '') . '</p>'
         . '<h3 class="card-title"><a href="' . e($p['path']) . '">' . e($p['name']) . '</a></h3>'

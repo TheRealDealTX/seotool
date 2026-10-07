@@ -15,7 +15,7 @@ foreach (TOOLS as $slug => $t) if (in_array($p['kind'], $t[3], true)) { $tool = 
 
 $ld = [
     '@type' => 'Product', 'name' => $p['name'], 'description' => $p['summary'],
-    'image' => abs_url(kind_img($p['kind'])), 'url' => abs_url($p['path']), 'category' => $cat['name'],
+    'image' => abs_url($p['photo']['src'] ?? kind_img($p['kind'])), 'url' => abs_url($p['path']), 'category' => $cat['name'],
 ];
 if ($p['brand_name'] ?? '') $ld['brand'] = ['@type' => 'Brand', 'name' => $p['brand_name']];
 $meta = [
@@ -23,18 +23,26 @@ $meta = [
     'jsonld' => array_filter([$ld, crumbs_ld($trail), faq_ld($p['faq'] ?? [])]),
     'body_class' => 'is-product',
 ];
-$data = e(json_encode(['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price'], 'k' => $p['kind']], JSON_UNESCAPED_SLASHES));
+$data = card_data($p);
+$ph = $p['photo'] ?? null;
 ?>
 <div class="wrap"><?= crumbs($trail) ?></div>
 
 <section class="pdp wrap" data-product="<?= $data ?>">
   <div class="pdp-stage reveal">
+<?php if ($ph): ?>
+    <figure class="stage stage-photo tilt-deep">
+      <?= photo_img($ph, $p['kind'], 'Representative photo for ' . $p['name'], '(max-width: 900px) 100vw, 600px', 'eager') ?>
+      <span class="stage-badge"><?= e($cat['name']) ?></span>
+    </figure>
+    <p class="stage-note">Representative photo. Check the retailer listing for the exact model, color and size.<br><span class="credit"><?= photo_credit($ph) ?></span></p>
+<?php else: ?>
     <div class="stage tilt-deep" data-kind="<?= e($p['kind']) ?>">
       <svg class="stage-rings" viewBox="0 0 400 400" aria-hidden="true"><?php for ($i = 1; $i <= 8; $i++): ?><circle cx="200" cy="200" r="<?= 24 + $i * 21 ?>" style="--i:<?= $i ?>"/><?php endfor; ?></svg>
       <img src="<?= kind_img($p['kind']) ?>" alt="<?= e($p['name']) ?> illustration" width="320" height="320">
       <span class="stage-badge"><?= e($cat['name']) ?></span>
     </div>
-    <p class="stage-note">Illustration. Product photos come from the retailer.</p>
+<?php endif; ?>
   </div>
 
   <div class="pdp-info">
@@ -118,5 +126,5 @@ $data = e(json_encode(['p' => $p['path'], 'n' => $p['name'], 'pr' => $p['price']
 <?php endif; ?>
 
 <div class="sticky-buy" data-product="<?= $data ?>" hidden>
-  <div class="wrap"><img src="<?= kind_img($p['kind']) ?>" alt="" width="40" height="40"><span class="sb-name"><?= e($p['name']) ?></span><span class="sb-price"><?= money((int)$p['price']) ?></span><button class="btn btn-sm btn-chain" type="button" data-add>Add to cart</button></div>
+  <div class="wrap"><img src="<?= e($ph['sm'] ?? kind_img($p['kind'])) ?>" alt="" width="40" height="40"><span class="sb-name"><?= e($p['name']) ?></span><span class="sb-price"><?= money((int)$p['price']) ?></span><button class="btn btn-sm btn-chain" type="button" data-add>Add to cart</button></div>
 </div>
