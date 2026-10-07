@@ -260,9 +260,12 @@ def page(path, title, description, body, graph=(), image=SITE_IMG, og_type="webs
 <meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(description)}"><meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{img}"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#12100e">
-<link rel="icon" href="/wp-content/uploads/2026/05/cropped-Stone-Coated-Roofs-Site-Icon-32x32.webp" sizes="32x32">
-<link rel="icon" href="/wp-content/uploads/2026/05/cropped-Stone-Coated-Roofs-Site-Icon-192x192.webp" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2026/05/cropped-Stone-Coated-Roofs-Site-Icon-180x180.webp">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileImage" content="/web-app-manifest-192x192.png">
 {FONTS}
 <link rel="stylesheet" href="/assets/css/site.css?v={CSS_V}">
 {extra_head}<script type="application/ld+json">{ld}</script>
@@ -650,7 +653,9 @@ def write_sitemaps():
 
 def clean_output():
     """Remove previously generated pages (everything but assets, uploads and hand-written files)."""
-    keep = {"assets", "wp-content", "index.php", "quote.php", ".user.ini", "scr-leads", "scr-config.php"}
+    keep = {"assets", "wp-content", "index.php", "quote.php", ".user.ini", "scr-leads", "scr-config.php",
+            "favicon.ico", "favicon.svg", "favicon-48x48.png", "favicon-96x96.png", "apple-touch-icon.png",
+            "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "site.webmanifest"}
     for child in OUT.iterdir():
         if child.name in keep:
             continue

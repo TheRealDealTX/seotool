@@ -26,7 +26,7 @@ class Page(HTMLParser):
     def __init__(self):
         super().__init__()
         self.h1 = 0; self.title = ""; self.desc = None; self.canon = None; self.ld = []; self.links = []; self.imgs = []
-        self._t = None; self.text = []; self.in_main = 0; self.skip = 0; self.main_text = []; self.robots = ""
+        self._t = None; self.icons = 0; self.text = []; self.in_main = 0; self.skip = 0; self.main_text = []; self.robots = ""
 
     def handle_starttag(self, t, a):
         a = dict(a)
@@ -40,7 +40,8 @@ class Page(HTMLParser):
         if t == "a" and a.get("href"): self.links.append(a["href"])
         if t == "img": self.imgs.append(a)
         if t == "main": self.in_main = 1
-        if t in ("link",) and a.get("rel") == "stylesheet" and a["href"].startswith("/"): self.links.append(a["href"])
+        if t == "link" and a.get("rel") in ("stylesheet", "icon", "apple-touch-icon", "manifest") and a["href"].startswith("/"): self.links.append(a["href"])
+        if t == "link" and a.get("rel") == "icon": self.icons += 1
         if t == "script" and a.get("src", "").startswith("/"): self.links.append(a["src"])
 
     def handle_endtag(self, t):
@@ -85,6 +86,7 @@ for x in json.loads((BACKUP / "api" / "media_all.json").read_text()):
 # 2. per-page SEO and links
 titles, descs = {}, {}
 for rel, p in pages.items():
+    if not p.icons: errors.append(f"{rel}: no favicon link")
     if rel == "/404.html":
         continue
     if p.h1 != 1: errors.append(f"{rel}: {p.h1} h1 tags")
@@ -130,7 +132,11 @@ for f in sorted((ROOT / "content" / "new").glob("*.html")):
     if norm(m["keyword"]) not in norm(p.title + " " + (p.desc or "")):
         warns.append(f"{rel}: keyword {m['keyword']!r} not in title/description")
 
-# 5. sitemap entries exist
+# 5. root icon files the browser asks for even without a <link>
+for f in ("favicon.ico", "apple-touch-icon.png", "site.webmanifest"):
+    if not (OUT / f).exists(): errors.append(f"missing /{f}")
+
+# 6. sitemap entries exist
 for u in re.findall(r"<loc>([^<]+)</loc>", (OUT / "sitemap.xml").read_text()):
     if not target(u.replace(ORIGIN, "")).exists(): errors.append(f"sitemap lists missing {u}")
     if u.replace(ORIGIN, "") in pages and "noindex" in pages[u.replace(ORIGIN, "")].robots: errors.append(f"sitemap lists noindex {u}")
