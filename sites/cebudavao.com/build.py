@@ -238,6 +238,18 @@ def footer_html():
 <ul class="search-results" data-search-results></ul></div></div>'''
 
 
+# Google Analytics 4 (Google tag), added to every page right after <head>.
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9MYPEPFWNZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9MYPEPFWNZ');
+</script>"""
+
+
 def page(path, title, description, body, *, ld=None, og_type="website", image=None, active="", robots=None,
          extra_head="", full_title=False, body_class=""):
     canonical = ORIGIN + path
@@ -248,6 +260,7 @@ def page(path, title, description, body, *, ld=None, og_type="website", image=No
     return f'''<!doctype html>
 <html lang="en-PH" id="top">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(t)}</title>
