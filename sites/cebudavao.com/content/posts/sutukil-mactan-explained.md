@@ -1,6 +1,8 @@
 ---
 title: Sutukil Explained: How to Order Seafood in Mactan Like a Local
 path: /food/sutukil-mactan-explained/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: sutukil

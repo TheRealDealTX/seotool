@@ -1,6 +1,8 @@
 ---
 title: CCLEX Guide: Using the Cebu-Cordova Link Expressway Bridge
 path: /news/cclex-cebu-cordova-bridge-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: cebu
 keyword: cclex

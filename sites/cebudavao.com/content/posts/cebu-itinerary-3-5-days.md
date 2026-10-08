@@ -1,6 +1,8 @@
 ---
 title: Cebu Itinerary: 3-Day and 5-Day Plans for First-Time Visitors
 path: /travel/cebu-itinerary-3-5-days/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: cebu itinerary

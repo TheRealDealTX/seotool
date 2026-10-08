@@ -1,6 +1,8 @@
 ---
 title: Sinigang na Lapu Lapu Recipe: Davao-Style Grouper Sour Soup
 path: /food/sinigang-na-lapu-lapu-davao-style/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: sinigang na lapu lapu

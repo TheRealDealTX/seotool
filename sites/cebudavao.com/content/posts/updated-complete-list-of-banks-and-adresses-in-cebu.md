@@ -1,6 +1,8 @@
 ---
 title: Banks in Cebu: Guide to Major, Savings and Digital Banks
 path: /finance/updated-complete-list-of-banks-and-adresses-in-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: cebu
 keyword: banks in cebu

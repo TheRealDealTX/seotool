@@ -1,6 +1,8 @@
 ---
 title: Internet Providers Cebu and Davao: Fiber, Starlink and 5G
 path: /tech/best-internet-providers-cebu-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: tech
 places: cebu,davao
 keyword: internet providers cebu

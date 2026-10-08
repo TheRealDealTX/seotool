@@ -1,6 +1,8 @@
 ---
 title: Kayasa Meaning: Cebuano Expressions of Annoyance Explained
 path: /personal/cebuano-expression-kayasa-mean/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: kayasa meaning

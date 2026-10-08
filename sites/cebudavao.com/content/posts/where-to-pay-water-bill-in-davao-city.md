@@ -1,6 +1,8 @@
 ---
 title: Davao City Water District Bill: Where and How to Pay
 path: /services/where-to-pay-water-bill-in-davao-city/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: davao
 keyword: davao city water district

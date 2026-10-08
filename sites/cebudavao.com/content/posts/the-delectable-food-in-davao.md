@@ -1,6 +1,8 @@
 ---
 title: Davao Food Guide: Durian, Tuna, Kinilaw and What to Eat
 path: /food/the-delectable-food-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: davao food

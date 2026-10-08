@@ -1,6 +1,8 @@
 ---
 title: Philippine Eagle Center Davao City: How to Get There
 path: /travel/tips/how-to-go-to-philippine-eagle-center/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: philippine eagle center

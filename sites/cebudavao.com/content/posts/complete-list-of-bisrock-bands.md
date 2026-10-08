@@ -1,6 +1,8 @@
 ---
 title: Visayan Songs and Bisrock: The Bands That Shaped Cebuano Rock
 path: /music/complete-list-of-bisrock-bands/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: cebu,davao
 keyword: visayan songs

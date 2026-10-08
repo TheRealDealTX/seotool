@@ -1,6 +1,8 @@
 ---
 title: Pork Lomo Recipe Filipino Style: Tenderloin Braised in Tomatoes
 path: /food/pork-lomo-with-tomatoes-braised-pork-tenderloin-with-tomatoes/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: other
 keyword: pork lomo recipe

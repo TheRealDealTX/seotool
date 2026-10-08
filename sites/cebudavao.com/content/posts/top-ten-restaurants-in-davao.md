@@ -1,6 +1,8 @@
 ---
 title: Best Seafood Restaurant in Davao and Top 10 Places to Eat
 path: /restaurants-2/top-ten-restaurants-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: seafood restaurant in davao

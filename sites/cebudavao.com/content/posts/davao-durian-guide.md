@@ -1,6 +1,8 @@
 ---
 title: Durian Davao Guide: Varieties, Season and Where to Buy
 path: /food/davao-durian-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: durian davao

@@ -1,6 +1,8 @@
 ---
 title: Jobs in Davao: How to Find IT, BPO and Government Work
 path: /travel/tips/find-jobs-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: davao
 keyword: jobs in davao

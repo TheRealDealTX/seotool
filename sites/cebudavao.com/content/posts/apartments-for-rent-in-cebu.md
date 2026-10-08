@@ -1,6 +1,8 @@
 ---
 title: Apartment for Rent in Cebu: Areas, Prices and Renting Tips
 path: /real-estate/apartments-for-rent-in-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: cebu
 keyword: apartment for rent in cebu

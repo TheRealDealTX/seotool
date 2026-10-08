@@ -1,6 +1,8 @@
 ---
 title: Samal Paradise Island: Beach Resort Guide, Day Trips and Tips
 path: /beach/paradise-resort/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: samal paradise island

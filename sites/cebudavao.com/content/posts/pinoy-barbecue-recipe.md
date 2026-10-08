@@ -1,6 +1,8 @@
 ---
 title: Filipino Barbecue Recipe: Sweet Pork BBQ with Banana Ketchup
 path: /food/pinoy-barbecue-recipe/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu,davao
 keyword: filipino barbecue recipe

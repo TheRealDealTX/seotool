@@ -1,6 +1,8 @@
 ---
 title: Philippine Fish Names in English, Bisaya and Tagalog
 path: /culture/cebus-and-davaos-different-fish/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: philippine fish names in english

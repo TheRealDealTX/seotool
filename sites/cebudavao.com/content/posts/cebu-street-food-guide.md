@@ -1,6 +1,8 @@
 ---
 title: Cebu Street Food Guide: 12 Local Eats and Where to Find Them
 path: /food/cebu-street-food-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: cebu street food

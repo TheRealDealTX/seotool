@@ -1,6 +1,8 @@
 ---
 title: Cebu Lechon Recipe: Crispy Lechon Belly With Classic Stuffing
 path: /food/secret-ingredients-of-cebu-lechon-revealed/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: lechon recipe

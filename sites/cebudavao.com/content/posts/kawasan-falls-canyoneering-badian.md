@@ -1,6 +1,8 @@
 ---
 title: Kawasan Falls Canyoneering Guide: Badian Costs, Safety, Tips
 path: /travel/kawasan-falls-canyoneering-badian/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: kawasan falls canyoneering

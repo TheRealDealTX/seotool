@@ -1,6 +1,8 @@
 ---
 title: Different Seasons Stephen King Review: Four Novellas Ranked
 path: /books/different-seasons-review/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: other
 keyword: different seasons stephen king

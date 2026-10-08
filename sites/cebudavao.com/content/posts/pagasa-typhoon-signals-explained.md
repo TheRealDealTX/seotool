@@ -1,6 +1,8 @@
 ---
 title: PAGASA Typhoon Signal Levels 1 to 5 Explained: What to Do
 path: /news/pagasa-typhoon-signals-explained/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: cebu,davao
 keyword: pagasa typhoon signal

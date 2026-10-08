@@ -1,6 +1,8 @@
 ---
 title: How to Activate BPI ATM Card and Fix a Blocked or Captured Card
 path: /finance/bpi-atm-card-blocked-after-entering-correct-pin-three-times/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: other
 keyword: how to activate bpi atm card

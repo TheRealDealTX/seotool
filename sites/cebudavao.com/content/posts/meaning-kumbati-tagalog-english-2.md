@@ -1,6 +1,8 @@
 ---
 title: Spare in Tagalog, Kumbati in Bisaya and Other Useful Words
 path: /word-meanings/meaning-kumbati-tagalog-english-2/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: spare in tagalog

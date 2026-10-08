@@ -1,6 +1,8 @@
 ---
 title: Plantation Bay Cebu: How to Get There From Airport and City
 path: /travel/tips/how-to-get-to-plantation-bay-in-mactan/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: plantation bay cebu

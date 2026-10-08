@@ -1,6 +1,8 @@
 ---
 title: Pearl Farm Davao: Guide to Pearl Farm Beach Resort, Samal
 path: /beach/pearl-farm-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: pearl farm davao

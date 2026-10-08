@@ -1,6 +1,8 @@
 ---
 title: Bohol Day Trip From Cebu: Chocolate Hills, Tarsiers and Loboc
 path: /travel/bohol-day-trip-from-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: bohol day trip from cebu

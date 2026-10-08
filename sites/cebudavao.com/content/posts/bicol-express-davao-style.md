@@ -1,6 +1,8 @@
 ---
 title: Bicol Express Ingredients and Procedure, Davao Style Recipe
 path: /food/bicol-express-davao-style/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: bicol express ingredients and procedure

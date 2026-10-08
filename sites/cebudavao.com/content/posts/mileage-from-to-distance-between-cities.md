@@ -1,6 +1,8 @@
 ---
 title: Mileage Between Two Cities: Philippine Distances and Travel Times
 path: /travel/mileage-from-to-distance-between-cities/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: mileage between two cities

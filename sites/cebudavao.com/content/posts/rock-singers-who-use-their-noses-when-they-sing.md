@@ -1,6 +1,8 @@
 ---
 title: Nasal Singing Explained: Famous Nasal Singers and How to Fix It
 path: /music/rock-singers-who-use-their-noses-when-they-sing/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: other
 keyword: nasal singing

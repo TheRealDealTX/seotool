@@ -1,6 +1,8 @@
 ---
 title: Cebu Pasalubong Guide: Best Treats from Cebu and Davao
 path: /food/filipino-pasalubong-guide-cebu-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu,davao
 keyword: cebu pasalubong

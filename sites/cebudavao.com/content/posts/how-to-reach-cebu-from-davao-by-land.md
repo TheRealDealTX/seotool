@@ -1,6 +1,8 @@
 ---
 title: Davao to Cebu by Land and Sea: Bus and Ferry Routes Compared
 path: /travel/tips/how-to-reach-cebu-from-davao-by-land/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu,davao
 keyword: davao to cebu by land

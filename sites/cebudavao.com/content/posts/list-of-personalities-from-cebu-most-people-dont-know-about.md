@@ -1,6 +1,8 @@
 ---
 title: Famous People From Cebu: Heroes, Singers, Designers and Saints
 path: /culture/list-of-personalities-from-cebu-most-people-dont-know-about/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: famous people from cebu

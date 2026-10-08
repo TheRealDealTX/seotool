@@ -1,6 +1,8 @@
 ---
 title: Cebu Guitars: Mactan's Guitar-Making Tradition and Buying Tips
 path: /guitars/guitars-in-cebu-and-guitars-all-over-the-world/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: cebu guitars

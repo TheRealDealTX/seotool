@@ -1,6 +1,8 @@
 ---
 title: Samal Island Ferry Schedule and How to Get There From Davao
 path: /travel/tips/how-to-reach-the-samal-island-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: samal island ferry schedule

@@ -1,6 +1,8 @@
 ---
 title: Yellow Cab Cebu Airport Guide: Taxis, Grab and MyBus at MCIA
 path: /travel/yellow-taxis-at-mactan-international-airport/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: yellow cab cebu

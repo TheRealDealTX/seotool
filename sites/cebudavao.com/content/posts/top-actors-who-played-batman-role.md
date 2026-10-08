@@ -1,6 +1,8 @@
 ---
 title: Who Played Batman? Every Live-Action Batman Actor Ranked
 path: /entertainment/top-actors-who-played-batman-role/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: other
 keyword: who played batman

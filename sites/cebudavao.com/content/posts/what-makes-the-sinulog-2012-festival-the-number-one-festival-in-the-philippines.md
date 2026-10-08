@@ -1,6 +1,8 @@
 ---
 title: Sinulog Festival Guide: History, Dance and Tips for Visitors
 path: /festivals/what-makes-the-sinulog-2012-festival-the-number-one-festival-in-the-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: sinulog festival

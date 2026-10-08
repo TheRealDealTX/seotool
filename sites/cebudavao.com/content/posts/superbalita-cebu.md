@@ -1,6 +1,8 @@
 ---
 title: SuperBalita Cebu: Where to Read SunStar's Bisaya News Today
 path: /news/superbalita-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: cebu
 keyword: superbalita cebu

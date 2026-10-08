@@ -1,6 +1,8 @@
 ---
 title: How to Grow Basil in the Philippines: Easy Care for Pots
 path: /food/how-to-grow-basil-in-the-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: other
 keyword: how to grow basil in the philippines

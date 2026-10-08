@@ -1,6 +1,8 @@
 ---
 title: Hotels Near Davao Airport: Where to Stay in Lanang and Damosa
 path: /travel/tips/hotels-near-davao-airport/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: hotels near davao airport

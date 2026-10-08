@@ -1,6 +1,8 @@
 ---
 title: Alugbati in English and Utan Bisaya Recipe, Davao Style
 path: /food/utan-bisaya-davao-style/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: alugbati in english

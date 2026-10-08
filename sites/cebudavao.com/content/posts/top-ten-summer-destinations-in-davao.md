@@ -1,6 +1,8 @@
 ---
 title: Tourist Spots in Davao: 12 Best Places to Visit in Davao City
 path: /travel/destinations/top-ten-summer-destinations-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: tourist spots in davao

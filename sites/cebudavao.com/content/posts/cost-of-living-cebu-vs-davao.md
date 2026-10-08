@@ -1,6 +1,8 @@
 ---
 title: Cost of Living Cebu vs Davao 2026: Rent, Food and Budgets
 path: /lifestyle/cost-of-living-cebu-vs-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: cebu,davao
 keyword: cost of living cebu

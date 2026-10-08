@@ -1,6 +1,8 @@
 ---
 title: GCash vs Maya: Which E-Wallet Is Better in the Philippines?
 path: /tech/gcash-vs-maya-ewallet-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: tech
 places: other
 keyword: gcash vs maya

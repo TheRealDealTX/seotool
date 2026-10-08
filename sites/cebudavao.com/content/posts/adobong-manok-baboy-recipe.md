@@ -1,6 +1,8 @@
 ---
 title: Adobong Manok Recipe with Pork: Ingredients and Procedure
 path: /food/adobong-manok-baboy-recipe/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: other
 keyword: adobong manok recipe

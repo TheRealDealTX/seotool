@@ -1,6 +1,8 @@
 ---
 title: How to Get to Eden Nature Park Davao by Shuttle, Taxi or Car
 path: /travel/tips/how-to-get-to-eden-nature-park/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: eden nature park davao

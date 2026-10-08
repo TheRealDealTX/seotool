@@ -1,6 +1,8 @@
 ---
 title: Oslob Whale Shark Watching: Ethics, Rules and Better Alternatives
 path: /travel/oslob-whale-sharks-ethics/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: oslob whale shark

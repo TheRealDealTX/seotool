@@ -1,6 +1,8 @@
 ---
 title: Cebu Tourist Spots: 14 Places to Visit from City to Islands
 path: /travel/destinations/cebu-tourist-spots/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: cebu tourist spots

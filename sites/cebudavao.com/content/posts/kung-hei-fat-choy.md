@@ -1,6 +1,8 @@
 ---
 title: Kung Hei Fat Choi Meaning, Spelling and How Cebu Celebrates
 path: /events/kung-hei-fat-choy/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: kung hei fat choi

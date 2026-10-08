@@ -1,6 +1,8 @@
 ---
 title: SM Cebu Cinema Showing Today: How to Check Cebu Movie Schedules
 path: /movies/cebu-cinema-schedule/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: cebu
 keyword: sm cebu cinema showing today

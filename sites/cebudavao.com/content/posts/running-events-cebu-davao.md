@@ -1,6 +1,8 @@
 ---
 title: Cebu Marathon and Running in Cebu and Davao: A Runner's Guide
 path: /sports/running-events-cebu-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: sports
 places: cebu,davao
 keyword: cebu marathon

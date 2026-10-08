@@ -1,6 +1,8 @@
 ---
 title: La Paz Batchoy Recipe Plus Davao Home-Style Batchoy
 path: /food/make-batchoy-davao-style/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: davao
 keyword: la paz batchoy recipe

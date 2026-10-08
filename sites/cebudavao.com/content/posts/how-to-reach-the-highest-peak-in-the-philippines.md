@@ -1,6 +1,8 @@
 ---
 title: Mount Apo Philippines: How to Climb the Country's Highest Peak
 path: /travel/tips/how-to-reach-the-highest-peak-in-the-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: mount apo philippines

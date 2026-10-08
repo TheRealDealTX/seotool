@@ -1,6 +1,8 @@
 ---
 title: Cafes in Cebu and Davao: Local Coffee and Cafe Culture Guide
 path: /lifestyle/coffee-shops-and-cafe-culture-cebu-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: cebu,davao
 keyword: cafes in cebu

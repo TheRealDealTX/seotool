@@ -1,6 +1,8 @@
 ---
 title: Philippines Travel Quiz: Can You Name These Destinations?
 path: /fun-quizzes/name-these-philippine-travel-destinations/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: philippines travel quiz

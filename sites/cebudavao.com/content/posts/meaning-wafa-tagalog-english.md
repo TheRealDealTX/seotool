@@ -1,6 +1,8 @@
 ---
 title: Wafa Meaning in Bisaya: Wa Pa, Ganda and Ang Ganda Mo
 path: /word-meanings/meaning-wafa-tagalog-english/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: wafa meaning

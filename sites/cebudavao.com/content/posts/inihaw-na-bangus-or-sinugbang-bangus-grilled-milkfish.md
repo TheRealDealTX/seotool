@@ -1,6 +1,8 @@
 ---
 title: How to Marinate Boneless Bangus for Inihaw na Bangus
 path: /food/inihaw-na-bangus-or-sinugbang-bangus-grilled-milkfish/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu,davao
 keyword: how to marinate boneless bangus

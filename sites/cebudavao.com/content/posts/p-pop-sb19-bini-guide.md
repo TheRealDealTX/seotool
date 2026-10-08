@@ -1,6 +1,8 @@
 ---
 title: P-pop Explained: SB19, BINI and the Rise of Filipino Pop
 path: /entertainment/p-pop-sb19-bini-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: other
 keyword: p-pop

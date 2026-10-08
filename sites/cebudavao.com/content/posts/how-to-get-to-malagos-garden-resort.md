@@ -1,6 +1,8 @@
 ---
 title: How to Get to Malagos Garden Resort in Calinan, Davao City
 path: /travel/tips/how-to-get-to-malagos-garden-resort/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: malagos garden resort

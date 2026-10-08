@@ -954,6 +954,7 @@ def write_php(rmap, live_paths):
 # --------------------------------------------------------------------------- main
 
 SCORE, POPULAR, FEATURED_ORDER = {}, [], []
+LAUNCH_DATE = "2026-10-07"
 
 
 def compute_scores(posts):
@@ -963,10 +964,16 @@ def compute_scores(posts):
     if os.path.exists(src):
         vol = json.load(open(src))
     new_paths = [p for p, *_ in plan.NEW]
+    today = datetime.fromisoformat(TODAY).date()
     for p in posts:
         s = vol.get(p["path"], 0)
         if p["path"] in new_paths:
             s += 3000 - new_paths.index(p["path"]) * 40
+        # Posts published after launch (the every-other-day news routine) lead
+        # the homepage and their sections for 10 days, newest first.
+        pub = datetime.fromisoformat(p["date"][:10]).date()
+        if p["source"] == "md" and p["date"] > LAUNCH_DATE and (today - pub).days <= 10:
+            s += 100000 + pub.toordinal()
         if p["category"] == "expat-living":
             s = -1
         SCORE[p["path"]] = s

@@ -1,6 +1,8 @@
 ---
 title: Who Owns the Spratly Islands? A Clear West Philippine Sea Guide
 path: /history/things-you-need-to-know-about-the-spratly-islands/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: other
 keyword: who owns the spratly islands

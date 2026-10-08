@@ -1,6 +1,8 @@
 ---
 title: House for Rent in Davao City: Best Areas, Prices and Tips
 path: /real-estate/houses-for-rent-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: davao
 keyword: house for rent in davao

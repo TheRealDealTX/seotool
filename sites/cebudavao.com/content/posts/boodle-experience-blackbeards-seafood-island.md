@@ -1,6 +1,8 @@
 ---
 title: Boodle Fight Definition: Origin, Food List and How to Host One
 path: /food/boodle-experience-blackbeards-seafood-island/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: other
 keyword: boodle fight

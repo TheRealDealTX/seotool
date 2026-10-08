@@ -1,6 +1,8 @@
 ---
 title: Kadayawan Festival Guide: Davao's August Harvest Celebration
 path: /festivals/whats-so-interesting-about-the-kadayawan-festival/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: davao
 keyword: kadayawan festival

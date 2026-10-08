@@ -1,6 +1,8 @@
 ---
 title: Taxi Davao Airport Guide: Queue, Fares, Grab and Tips
 path: /travel/taxi-procedure-davao-international-airport/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: taxi davao

@@ -1,6 +1,8 @@
 ---
 title: How to Make Puso: Cebu Hanging Rice in Woven Coconut Leaves
 path: /food/how-to-make-puso-in-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: how to make puso

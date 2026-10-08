@@ -1,6 +1,8 @@
 ---
 title: Fake News in the Philippines: How to Spot It and Fact-Check
 path: /whats-new/list-of-31-fake-news-sites-in-the-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: other
 keyword: fake news in the philippines

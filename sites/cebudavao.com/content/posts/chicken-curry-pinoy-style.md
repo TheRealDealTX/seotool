@@ -1,6 +1,8 @@
 ---
 title: Chicken Curry Recipe Pinoy Style With Coconut Milk and Potatoes
 path: /food/chicken-curry-pinoy-style/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: other
 keyword: chicken curry recipe pinoy style

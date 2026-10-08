@@ -1,6 +1,8 @@
 ---
 title: Cheap Food in Cebu: 10 Delicious Local Eats and Where to Go
 path: /food/the-cheapest-and-most-delicious-food-in-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: cheap food in cebu

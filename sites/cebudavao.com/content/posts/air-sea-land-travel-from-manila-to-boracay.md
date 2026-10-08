@@ -1,6 +1,8 @@
 ---
 title: RoRo Manila to Caticlan vs Flying: How to Get to Boracay
 path: /travel/tips/air-sea-land-travel-from-manila-to-boracay/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: roro manila to caticlan

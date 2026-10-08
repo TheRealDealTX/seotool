@@ -1,6 +1,8 @@
 ---
 title: eTravel Philippines: How to Register Free and Get Your QR Code
 path: /news/etravel-philippines-registration-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: etravel philippines

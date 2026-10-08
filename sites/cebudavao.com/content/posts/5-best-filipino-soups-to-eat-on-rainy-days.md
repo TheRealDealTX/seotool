@@ -1,6 +1,8 @@
 ---
 title: List of Filipino Soups: Best Pinoy Sabaw for Rainy Days
 path: /food/5-best-filipino-soups-to-eat-on-rainy-days/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: other
 keyword: list of filipino soups

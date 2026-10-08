@@ -1,6 +1,8 @@
 ---
 title: PBA Basketball and Beyond: UAAP, MPBL and Gilas Explained
 path: /sports/basketball-in-the-philippines-pba-uaap-mpbl/
+date: 2026-10-07
+updated: 2026-10-07
 category: sports
 places: cebu,davao
 keyword: pba basketball

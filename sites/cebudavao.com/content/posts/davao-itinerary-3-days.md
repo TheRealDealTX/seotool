@@ -1,6 +1,8 @@
 ---
 title: Davao Itinerary 3 Days: City, Highlands and Samal Island Plan
 path: /travel/davao-itinerary-3-days/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: davao itinerary

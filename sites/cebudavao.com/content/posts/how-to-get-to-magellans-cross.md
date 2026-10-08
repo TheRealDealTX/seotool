@@ -1,6 +1,8 @@
 ---
 title: How to Get to Magellan's Cross in Cebu City (and Its History)
 path: /travel/tips/how-to-get-to-magellans-cross/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: magellan's cross

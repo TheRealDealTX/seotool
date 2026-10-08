@@ -1,6 +1,8 @@
 ---
 title: Cebuanas and Courtship: A Respectful Guide to Dating in Cebu
 path: /culture/how-to-court-a-cebuana-and-win-her-heart/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: cebuanas

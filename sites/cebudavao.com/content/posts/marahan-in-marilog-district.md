@@ -1,6 +1,8 @@
 ---
 title: Marilog District Davao City: Cool Highlands, Marahan and Camping
 path: /travel/destinations/marahan-in-marilog-district/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: marilog district davao city

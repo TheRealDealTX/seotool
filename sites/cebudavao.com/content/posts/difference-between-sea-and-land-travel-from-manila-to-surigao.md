@@ -1,6 +1,8 @@
 ---
 title: Manila to Surigao by Land, Sea or Air: Complete Travel Guide
 path: /travel/tips/difference-between-sea-and-land-travel-from-manila-to-surigao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: manila to surigao by land

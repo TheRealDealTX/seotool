@@ -1,6 +1,8 @@
 ---
 title: Lechon Paksiw Recipe: Turn Leftover Roast Pig Into a Rich Stew
 path: /food/lechon-paksiw-roasted-suckling-pig-stew/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: lechon paksiw recipe

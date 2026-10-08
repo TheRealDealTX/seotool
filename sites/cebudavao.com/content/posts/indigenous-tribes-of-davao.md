@@ -1,6 +1,8 @@
 ---
 title: Davao Tribes: The 11 Indigenous and Moro Communities of Davao
 path: /culture/indigenous-tribes-of-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: davao
 keyword: davao tribes

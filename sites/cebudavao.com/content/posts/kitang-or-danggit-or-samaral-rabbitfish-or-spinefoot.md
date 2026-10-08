@@ -1,6 +1,8 @@
 ---
 title: Samaral Fish Recipe: Paksiw and Fried Danggit, Cebu Style
 path: /food/kitang-or-danggit-or-samaral-rabbitfish-or-spinefoot/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: samaral fish recipe

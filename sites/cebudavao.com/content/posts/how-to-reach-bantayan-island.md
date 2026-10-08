@@ -1,6 +1,8 @@
 ---
 title: How to Get to Bantayan Island from Cebu City and Mactan Airport
 path: /travel/tips/how-to-reach-bantayan-island/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: how to get to bantayan island

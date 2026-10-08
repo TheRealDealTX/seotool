@@ -1,6 +1,8 @@
 ---
 title: Talikud Island Beach Resort Guide: How to Get to Isla Reta
 path: /travel/tips/how-to-go-to-isla-reta-beach-resort/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: talikud island beach resort

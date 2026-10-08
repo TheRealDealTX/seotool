@@ -1,6 +1,8 @@
 ---
 title: Childish in Tagalog: Pabebe Meaning and Pinoy Slang Explained
 path: /culture/what-does-pabebe-mean/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: other
 keyword: childish in tagalog

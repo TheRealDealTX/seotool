@@ -1,6 +1,8 @@
 ---
 title: Learn Bisaya: 50 Essential Cebuano Phrases for Travellers
 path: /culture/learn-bisaya-50-phrases/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: learn bisaya

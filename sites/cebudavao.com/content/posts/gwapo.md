@@ -1,6 +1,8 @@
 ---
 title: Maganda in Tagalog and Gwapo Meaning: How to Compliment Filipinos
 path: /culture/gwapo/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: maganda in tagalog

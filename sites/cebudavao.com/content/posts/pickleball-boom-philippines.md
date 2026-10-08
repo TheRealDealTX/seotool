@@ -1,6 +1,8 @@
 ---
 title: Pickleball in the Philippines: Why It's Booming and How to Play
 path: /sports/pickleball-boom-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: sports
 places: cebu,davao
 keyword: pickleball in the philippines

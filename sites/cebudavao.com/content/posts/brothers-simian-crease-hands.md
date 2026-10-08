@@ -1,6 +1,8 @@
 ---
 title: Simian Crease Meaning: Single Palmar Crease Facts and Myths
 path: /personal/brothers-simian-crease-hands/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: other
 keyword: simian crease

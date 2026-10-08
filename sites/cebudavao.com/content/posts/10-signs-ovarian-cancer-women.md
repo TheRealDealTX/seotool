@@ -1,6 +1,8 @@
 ---
 title: 10 Warning Signs of Ovarian Cancer Every Woman Should Know
 path: /health/10-signs-ovarian-cancer-women/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: other
 keyword: 10 warning signs of ovarian cancer

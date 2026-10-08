@@ -1,6 +1,8 @@
 ---
 title: How to Get to Simala Shrine from Cebu City: Bus, Car and Tips
 path: /travel/how-to-get-to-simala/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: simala

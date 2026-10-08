@@ -1,6 +1,8 @@
 ---
 title: AyosDito: What Happened and Where to Buy and Sell Online Now
 path: /business/ayosdito/
+date: 2026-10-07
+updated: 2026-10-07
 category: tech
 places: other
 keyword: ayosdito

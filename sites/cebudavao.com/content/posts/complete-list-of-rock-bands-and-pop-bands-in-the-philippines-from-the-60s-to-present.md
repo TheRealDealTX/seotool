@@ -1,6 +1,8 @@
 ---
 title: List of Filipino Bands: OPM Rock and Pop From the 70s to Now
 path: /music/complete-list-of-rock-bands-and-pop-bands-in-the-philippines-from-the-60s-to-present/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: other
 keyword: list of filipino bands

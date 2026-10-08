@@ -1,6 +1,8 @@
 ---
 title: Short Stories in Philippine Literature vs American Writing
 path: /books/how-philippine-literature-differ-from-american-literature/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: other
 keyword: short stories in philippine literature

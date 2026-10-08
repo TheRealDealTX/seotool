@@ -1,6 +1,8 @@
 ---
 title: MMFF Guide: How the Metro Manila Film Festival Works
 path: /entertainment/metro-manila-film-festival-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: other
 keyword: mmff

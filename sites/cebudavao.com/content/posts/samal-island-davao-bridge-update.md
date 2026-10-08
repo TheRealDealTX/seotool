@@ -1,6 +1,8 @@
 ---
 title: Samal Bridge Update: The Samal Island-Davao City Connector
 path: /news/samal-island-davao-bridge-update/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: davao
 keyword: samal bridge

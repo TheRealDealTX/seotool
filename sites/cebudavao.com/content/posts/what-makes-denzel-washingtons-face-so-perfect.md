@@ -1,6 +1,8 @@
 ---
 title: Most Symmetrical Face: Why Denzel Washington Is Always Named
 path: /entertainment/what-makes-denzel-washingtons-face-so-perfect/
+date: 2026-10-07
+updated: 2026-10-07
 category: lifestyle
 places: other
 keyword: most symmetrical face

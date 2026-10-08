@@ -1,6 +1,8 @@
 ---
 title: Cheap Hotels in Davao: Can You Still Stay Under ₱1,000?
 path: /hotels/hotels-in-davao-under-1000-pesos-a-night/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: cheap hotels in davao

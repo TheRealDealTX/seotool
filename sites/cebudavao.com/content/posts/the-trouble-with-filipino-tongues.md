@@ -1,6 +1,8 @@
 ---
 title: What Language Is Spoken in Cebu Philippines? Bisaya Guide
 path: /culture/the-trouble-with-filipino-tongues/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: what language is spoken in cebu philippines

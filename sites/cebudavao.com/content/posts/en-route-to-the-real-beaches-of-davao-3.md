@@ -1,6 +1,8 @@
 ---
 title: Beaches Near Davao City: Samal, Talikud, Dahican and More
 path: /beach/en-route-to-the-real-beaches-of-davao-3/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: beaches near davao city

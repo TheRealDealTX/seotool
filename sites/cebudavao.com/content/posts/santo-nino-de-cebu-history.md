@@ -1,6 +1,8 @@
 ---
 title: Santo Niño de Cebu: History of the Philippines' Oldest Icon
 path: /culture/santo-nino-de-cebu-history/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu
 keyword: santo niño de cebu

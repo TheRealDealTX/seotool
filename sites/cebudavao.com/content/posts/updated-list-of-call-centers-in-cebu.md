@@ -1,6 +1,8 @@
 ---
 title: Call Centers in Cebu: Top BPO Employers, Pay and How to Apply
 path: /jobs/updated-list-of-call-centers-in-cebu/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: cebu
 keyword: call centers in cebu

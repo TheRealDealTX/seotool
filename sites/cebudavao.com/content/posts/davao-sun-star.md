@@ -1,6 +1,8 @@
 ---
 title: SunStar Davao and Other Davao News Sources: A Reader's Guide
 path: /news/davao-sun-star/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: davao
 keyword: sunstar davao

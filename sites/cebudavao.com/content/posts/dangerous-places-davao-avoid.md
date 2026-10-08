@@ -1,6 +1,8 @@
 ---
 title: Is Davao Safe for Tourists? City Rules and Safety Tips
 path: /travel/tips/dangerous-places-davao-avoid/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: is davao safe

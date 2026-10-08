@@ -1,6 +1,8 @@
 ---
 title: Davao Cinema Schedule: Where to Check Movies Showing This Week
 path: /movies/davao-cinema-schedule-what-movies-to-watch-this-week/
+date: 2026-10-07
+updated: 2026-10-07
 category: entertainment
 places: davao
 keyword: davao cinema schedule

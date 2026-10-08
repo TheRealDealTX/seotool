@@ -1,6 +1,8 @@
 ---
 title: Siargao Travel Guide: Cloud 9, Island Hopping and Getting There
 path: /travel/siargao-travel-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: siargao travel guide

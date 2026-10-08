@@ -1,6 +1,8 @@
 ---
 title: Samal Island Resorts and Davao Getaways: A Guide by Budget
 path: /beach/list-of-resort-destinations-in-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: davao
 keyword: samal island resorts

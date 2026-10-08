@@ -1,6 +1,8 @@
 ---
 title: DFA Passport Requirements for New Applicants and Renewal
 path: /travel/philippine-passport-requirements/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: dfa passport requirements

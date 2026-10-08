@@ -1,6 +1,8 @@
 ---
 title: Moalboal Sardine Run Guide: Turtles, Pescador and How to Go
 path: /travel/moalboal-sardine-run-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: moalboal sardine run

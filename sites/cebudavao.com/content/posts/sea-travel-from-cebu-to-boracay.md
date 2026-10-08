@@ -1,6 +1,8 @@
 ---
 title: Cebu to Boracay: Flights, Ferries and Overland Routes Compared
 path: /travel/tips/sea-travel-from-cebu-to-boracay/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu
 keyword: cebu to boracay

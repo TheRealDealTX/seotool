@@ -1,6 +1,8 @@
 ---
 title: What Is EDSA Revolution? The 1986 People Power Story
 path: /events/what-is-edsa-revolution/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: other
 keyword: what is edsa revolution

@@ -1,6 +1,8 @@
 ---
 title: Are Inhalers Allowed on Airplanes? Philippine Baggage Rules
 path: /travel/baggage-items-allowed-and-prohibited-on-a-flight-by-the-tsa/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: inhalers allowed on airplanes

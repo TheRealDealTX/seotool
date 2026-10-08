@@ -1,6 +1,8 @@
 ---
 title: Camiguin Travel Guide: White Island, Falls, Springs and Ferries
 path: /travel/camiguin-island-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: camiguin travel guide

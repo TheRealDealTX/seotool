@@ -1,6 +1,8 @@
 ---
 title: Nalibog Meaning: What Is the Tagalog of Mean and Confused?
 path: /culture/meaning-of-nalibog-in-tagalog-and-english/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: what is the tagalog of mean

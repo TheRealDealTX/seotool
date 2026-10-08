@@ -1,6 +1,8 @@
 ---
 title: Cebu vs Davao: Key Differences to Know Before You Visit or Move
 path: /travel/destinations/cebu-and-davao-their-differences/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu,davao
 keyword: cebu vs davao

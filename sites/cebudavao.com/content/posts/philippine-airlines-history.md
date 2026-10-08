@@ -1,6 +1,8 @@
 ---
 title: History of Philippine Airlines: Asia's Oldest Airline Name
 path: /travel/flights-travel/philippine-airlines-history/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: history of philippine airlines

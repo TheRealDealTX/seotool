@@ -1,6 +1,8 @@
 ---
 title: Filipino Boxers From Cebu and Mindanao: Legends and Gyms
 path: /sports/cebu-davao-boxing-legends/
+date: 2026-10-07
+updated: 2026-10-07
 category: sports
 places: cebu,davao
 keyword: filipino boxers

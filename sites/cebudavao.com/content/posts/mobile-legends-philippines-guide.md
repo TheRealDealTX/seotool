@@ -1,6 +1,8 @@
 ---
 title: Mobile Legends Philippines: Why MLBB Rules and How to Start
 path: /tech/mobile-legends-philippines-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: tech
 places: cebu,davao
 keyword: mobile legends philippines

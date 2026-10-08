@@ -1,6 +1,8 @@
 ---
 title: National ID Philippines Guide: PhilSys Registration and ePhilID
 path: /news/philsys-national-id-guide/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: other
 keyword: national id philippines

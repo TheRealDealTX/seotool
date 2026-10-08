@@ -1,6 +1,8 @@
 ---
 title: Philippines Football: Azkals, Filipinas and the Game's Rise
 path: /sports/football-in-the-philippines-azkals-filipinas/
+date: 2026-10-07
+updated: 2026-10-07
 category: sports
 places: other
 keyword: philippines football

@@ -1,6 +1,8 @@
 ---
 title: Cheap Flights in the Philippines: Seat Sales and Booking Tips
 path: /travel/flights-travel/cheap-flights-in-the-philippines/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: cheap flights in the philippines

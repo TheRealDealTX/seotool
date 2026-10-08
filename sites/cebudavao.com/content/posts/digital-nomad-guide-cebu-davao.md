@@ -1,6 +1,8 @@
 ---
 title: Digital Nomad Philippines Guide: Working From Cebu and Davao
 path: /travel/digital-nomad-guide-cebu-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: money
 places: cebu,davao
 keyword: digital nomad philippines

@@ -1,6 +1,8 @@
 ---
 title: Best Time to Visit Cebu and Davao: A Month-by-Month Guide
 path: /travel/best-time-to-visit-cebu-and-davao/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: cebu,davao
 keyword: best time to visit cebu

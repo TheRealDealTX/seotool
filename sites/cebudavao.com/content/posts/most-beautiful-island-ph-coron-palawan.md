@@ -1,6 +1,8 @@
 ---
 title: Most Beautiful Island in the Philippines? Coron, Palawan Guide
 path: /travel/most-beautiful-island-ph-coron-palawan/
+date: 2026-10-07
+updated: 2026-10-07
 category: travel
 places: other
 keyword: most beautiful island in the philippines

@@ -1,6 +1,8 @@
 ---
 title: How to Make Siomai: Cebu Siomai sa Tisa-Style Recipe
 path: /food/my-favorite-cebu-siomai/
+date: 2026-10-07
+updated: 2026-10-07
 category: food
 places: cebu
 keyword: how to make siomai

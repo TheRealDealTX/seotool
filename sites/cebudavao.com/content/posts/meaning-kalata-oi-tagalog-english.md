@@ -1,6 +1,8 @@
 ---
 title: Oi Meaning in Bisaya and Tagalog, Plus Words for Pissed Off
 path: /culture/meaning-kalata-oi-tagalog-english/
+date: 2026-10-07
+updated: 2026-10-07
 category: culture
 places: cebu,davao
 keyword: oi meaning

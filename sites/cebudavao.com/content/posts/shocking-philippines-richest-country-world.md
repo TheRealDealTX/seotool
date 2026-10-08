@@ -1,6 +1,8 @@
 ---
 title: Fact Check: Was the Philippines Richest Country in the World?
 path: /world-news/shocking-philippines-richest-country-world/
+date: 2026-10-07
+updated: 2026-10-07
 category: news
 places: other
 keyword: philippines richest country
