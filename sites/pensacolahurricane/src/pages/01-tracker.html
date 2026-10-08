@@ -1,0 +1,94 @@
+<!--{"path": "/hurricane-tracker/", "title": "Live Hurricane Tracker for Pensacola, FL | Pensacola Hurricane", "description": "Live hurricane tracking for Pensacola: active storms, NHC forecast cones, wind speed, distance to Pensacola, interactive wind map and every NWS watch and warning for Escambia County.", "nav": "/hurricane-tracker/", "group": "Main"}-->
+<section class="page-hero">
+<div class="container">
+<div class="crumbs"><a href="/">Home</a> / Live Hurricane Tracker</div>
+<div class="live-pill" style="background:#fff">Live data</div>
+<h1>Live Hurricane Tracking Dashboard for Pensacola</h1>
+<p class="lead">Every storm the National Hurricane Center is tracking in the Atlantic and Gulf, how far each one is from Pensacola, the official forecast cone, and the watches and warnings in effect for Escambia County right now.</p>
+</div>
+</section>
+
+<section class="section-tight">
+<div class="container">
+<h2>Watches &amp; warnings for Pensacola</h2>
+<p class="muted">Issued by the National Weather Service in Mobile, which covers Escambia and Santa Rosa counties.</p>
+<div data-nws-alerts><p class="loading">Loading alerts&hellip;</p></div>
+</div>
+</section>
+
+<section class="section-tight section-alt">
+<div class="container">
+<h2>Active tropical cyclones</h2>
+<p class="muted">Sorted by distance from downtown Pensacola. Updated from the NHC every few minutes &mdash; reload the page for the newest advisory.</p>
+<div data-storms><p class="loading">Loading active storms from the National Hurricane Center&hellip;</p></div>
+</div>
+</section>
+
+<section class="section-tight">
+<div class="container">
+<div class="grid grid-2">
+<div>
+<h2>7-day tropical outlook</h2>
+<div class="embed"><a href="https://www.nhc.noaa.gov/gtwo.php?basin=atlc&amp;fdays=7" target="_blank" rel="noopener"><img src="https://www.nhc.noaa.gov/xgtwo/two_atl_7d0.png" alt="NHC 7-day Atlantic tropical weather outlook" loading="lazy"></a></div>
+<p class="note">Hatched areas show where the NHC expects possible development. Yellow = low, orange = medium, red = high chance.</p>
+</div>
+<div>
+<h2>2-day tropical outlook</h2>
+<div class="embed"><a href="https://www.nhc.noaa.gov/gtwo.php?basin=atlc&amp;fdays=2" target="_blank" rel="noopener"><img src="https://www.nhc.noaa.gov/xgtwo/two_atl_2d0.png" alt="NHC 2-day Atlantic tropical weather outlook" loading="lazy"></a></div>
+<p class="note">Short-range development chances. A red X near the Gulf is the signal to start preparing.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-tight section-alt">
+<div class="container">
+<h2>Interactive wind &amp; storm map</h2>
+<p class="muted">Pan and zoom the live wind field over the Gulf. Switch layers (rain, pressure, waves) inside the map.</p>
+<div class="embed"><iframe title="Interactive wind map of the Gulf centered on Pensacola" loading="lazy" src="https://embed.windy.com/embed2.html?lat=27.5&amp;lon=-87.2&amp;detailLat=30.42&amp;detailLon=-87.22&amp;width=1100&amp;height=520&amp;zoom=5&amp;level=surface&amp;overlay=wind&amp;product=ecmwf&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=now&amp;pressure=true&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1"></iframe></div>
+</div>
+</section>
+
+<section class="section">
+<div class="container layout">
+<div class="prose">
+<h2>How to read a hurricane forecast for Pensacola</h2>
+<h3>The cone is about the center, not the impacts</h3>
+<p>The NHC forecast cone shows where the <em>center</em> of the storm is likely to go &mdash; historically, the center stays inside the cone about two-thirds of the time. Hurricane-force winds, surge and rain routinely extend well outside it. Hurricane Ivan's center came ashore near Gulf Shores, Alabama, about 30 miles west of Pensacola, yet the worst surge in Escambia County history followed because Pensacola sat in the storm's right-front quadrant.</p>
+<h3>The right side of the storm matters most</h3>
+<p>In the Northern Hemisphere, winds circle counter-clockwise, so the strongest winds and highest surge are usually on the right side of the track (east of the center for a northbound storm). A landfall anywhere from Mississippi to Alabama puts Pensacola on that dangerous side.</p>
+<h3>Watches, warnings and timing</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Product</th><th>What it means</th><th>Typical lead time</th></tr></thead>
+<tbody>
+<tr><td><strong>Tropical Storm Watch</strong></td><td>Sustained winds of 39&ndash;73 mph possible</td><td>~48 hours</td></tr>
+<tr><td><strong>Tropical Storm Warning</strong></td><td>Sustained winds of 39&ndash;73 mph expected</td><td>~36 hours</td></tr>
+<tr><td><strong>Hurricane Watch</strong></td><td>Sustained winds of 74 mph or more possible</td><td>~48 hours</td></tr>
+<tr><td><strong>Hurricane Warning</strong></td><td>Sustained winds of 74 mph or more expected</td><td>~36 hours</td></tr>
+<tr><td><strong>Storm Surge Warning</strong></td><td>Life-threatening inundation from rising water expected</td><td>~36 hours</td></tr>
+<tr><td><strong>Extreme Wind Warning</strong></td><td>Winds of 115 mph or more imminent &mdash; take shelter in an interior room</td><td>Minutes to an hour</td></tr>
+</tbody></table></div>
+<h3>Saffir-Simpson scale</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>Category</th><th>Sustained wind</th><th>Pensacola example</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>74&ndash;95 mph</td><td>Danny stalled over Mobile Bay with flooding rain (1997)</td></tr>
+<tr><td>2</td><td>96&ndash;110 mph</td><td>Erin near Navarre Beach (1995); Sally near Gulf Shores (2020)</td></tr>
+<tr><td>3</td><td>111&ndash;129 mph</td><td>Ivan (2004), Dennis (2005), Opal (1995)</td></tr>
+<tr><td>4</td><td>130&ndash;156 mph</td><td>Ivan crossed the Gulf as a Category 4 before weakening</td></tr>
+<tr><td>5</td><td>157+ mph</td><td>Michael hit Mexico Beach, about 130 miles east, in 2018</td></tr>
+</tbody></table></div>
+<p>The category only describes wind. Sally was &ldquo;only&rdquo; a Category 2, but its slow motion made it one of the costliest storms in Pensacola history because of rain and surge. Read more in our <a href="/storm-surge-flood-risk/">storm surge and flood risk center</a>.</p>
+</div>
+<aside class="sidebar">
+<div class="side-box"><h3>Next steps</h3><ul>
+<li><a href="/evacuation-zones/">Check your evacuation zone</a></li>
+<li><a href="/weather/">Pensacola radar &amp; forecast</a></li>
+<li><a href="/shelters-roads-outages/">Shelters &amp; road closures</a></li>
+<li><a href="/preparedness/">Build your checklist</a></li>
+<li><a href="/alerts/">Get storm alerts</a></li>
+</ul></div>
+<div class="side-box"><h3>Data sources</h3><p class="small">Storm data: <a href="https://www.nhc.noaa.gov/" target="_blank" rel="noopener">NOAA National Hurricane Center</a>. Alerts: <a href="https://www.weather.gov/mob/" target="_blank" rel="noopener">NWS Mobile/Pensacola</a>. Map: Windy.com (ECMWF model). Always follow official instructions from Escambia and Santa Rosa County.</p></div>
+</aside>
+</div>
+</section>

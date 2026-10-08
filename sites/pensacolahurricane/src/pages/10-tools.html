@@ -1,0 +1,126 @@
+<!--{"path": "/tools/", "title": "Hurricane Calculators: Deductible, Supplies, Generator Runtime & Damage Log | Pensacola Hurricane", "description": "Free interactive hurricane tools for Pensacola homeowners: Florida hurricane deductible calculator, emergency supply calculator, generator runtime and fuel calculator, and a printable storm damage documentation log.", "nav": "/tools/", "group": "Tools"}-->
+<section class="page-hero">
+<div class="container">
+<div class="crumbs"><a href="/">Home</a> / Interactive Hurricane Tools</div>
+<h1>Dedicated Interactive Hurricane Tools</h1>
+<p class="lead">Calculators that answer the questions Pensacola households actually ask before and after a storm. Everything runs in your browser &mdash; nothing you type is sent anywhere.</p>
+<div class="btn-row">
+<a class="btn btn-ghost" href="#deductible">Deductible</a>
+<a class="btn btn-ghost" href="#supplies">Supplies</a>
+<a class="btn btn-ghost" href="#generator">Generator</a>
+<a class="btn btn-ghost" href="#damage-log">Damage log</a>
+<a class="btn btn-ghost" href="/preparedness/">Checklist &amp; cost</a>
+</div>
+</div>
+</section>
+
+<section class="section-tight" id="deductible">
+<div class="container grid grid-2" style="align-items:start">
+<div class="tool">
+<h2 style="font-size:1.4rem">Hurricane deductible calculator</h2>
+<form data-deductible-form>
+<div class="form-grid">
+<div class="field full"><label for="d-type">Deductible type (see your declarations page)</label><select id="d-type" name="type"><option value="pct">Percentage of dwelling coverage</option><option value="flat">Flat dollar amount</option></select></div>
+<div class="field"><label for="d-cov">Dwelling coverage (Coverage A)</label><input id="d-cov" name="coverage" type="number" min="0" step="1000" value="300000"></div>
+<div class="field"><label for="d-pct">Hurricane deductible %</label><select id="d-pct" name="percent"><option>1</option><option selected>2</option><option>3</option><option>5</option><option>10</option></select></div>
+<div class="field"><label for="d-flat">Flat deductible ($)</label><input id="d-flat" name="flat" type="number" min="0" step="100" value="500"></div>
+<div class="field"><label for="d-dmg">Estimated wind damage ($)</label><input id="d-dmg" name="damage" type="number" min="0" step="500" value="18000"></div>
+</div>
+</form>
+<div data-deductible-out></div>
+</div>
+<div class="prose">
+<h3>How it works</h3>
+<p>A Florida hurricane deductible is usually a percentage of the <em>dwelling</em> limit, not of the damage. A 2% deductible on a $300,000 home means you pay the first $6,000 of hurricane damage. It applies once per calendar year across all hurricanes.</p>
+<p>If your estimated damage is close to the deductible, get a contractor's written estimate before deciding whether to file &mdash; hidden damage (decking, attic insulation, drywall, mold) often pushes the real cost well above a first impression.</p>
+<div class="quiet-box"><strong>Numbers don't match the insurer's?</strong> Adjuster estimates frequently leave out code upgrades, matching materials, or interior water damage. See our <a href="/insurance-claims/">claims guide</a>, or ask a Florida property-claims attorney such as <a href="{{FIRM_URL}}" target="_blank" rel="noopener">{{FIRM_NAME}}</a> for a free review of an underpaid hurricane claim.</div>
+</div>
+</div>
+</section>
+
+<section class="section-tight section-alt" id="supplies">
+<div class="container grid grid-2" style="align-items:start">
+<div class="tool">
+<h2 style="font-size:1.4rem">Emergency supply calculator</h2>
+<form data-supply-form>
+<div class="form-grid">
+<div class="field"><label for="s-adults">Adults</label><input id="s-adults" name="adults" type="number" min="0" value="2"></div>
+<div class="field"><label for="s-kids">Children</label><input id="s-kids" name="kids" type="number" min="0" value="1"></div>
+<div class="field"><label for="s-dogs">Dogs</label><input id="s-dogs" name="dogs" type="number" min="0" value="1"></div>
+<div class="field"><label for="s-cats">Cats</label><input id="s-cats" name="cats" type="number" min="0" value="0"></div>
+<div class="field full"><label for="s-days">Days without power or stores</label><input id="s-days" name="days" type="number" min="1" max="30" value="7"></div>
+</div>
+</form>
+</div>
+<div data-supply-out></div>
+</div>
+</section>
+
+<section class="section-tight" id="generator">
+<div class="container grid grid-2" style="align-items:start">
+<div class="tool">
+<h2 style="font-size:1.4rem">Generator runtime calculator</h2>
+<form data-generator-form>
+<div class="form-grid">
+<div class="field"><label for="g-rated">Generator running watts</label><input id="g-rated" name="rated" type="number" min="500" step="100" value="5000"></div>
+<div class="field"><label for="g-tank">Fuel tank (gallons)</label><input id="g-tank" name="tank" type="number" min="0.5" step="0.5" value="5"></div>
+<div class="field full"><label for="g-fuel">Fuel</label><select id="g-fuel" name="fuel"><option value="gas">Gasoline</option><option value="propane">Propane (gal)</option><option value="diesel">Diesel</option></select></div>
+<fieldset class="field full" style="border:0;padding:0;margin:0"><legend style="font-weight:600;font-size:.9rem;margin-bottom:6px">What will you run?</legend>
+<div class="form-grid">
+<label class="check"><input type="checkbox" name="fridge" checked> Refrigerator (200 W)</label>
+<label class="check"><input type="checkbox" name="freezer"> Chest freezer (150 W)</label>
+<label class="check"><input type="checkbox" name="fan" checked> Box fans (75 W)</label>
+<label class="check"><input type="checkbox" name="lights" checked> LED lights (60 W)</label>
+<label class="check"><input type="checkbox" name="tv"> TV (120 W)</label>
+<label class="check"><input type="checkbox" name="router" checked> Internet router (20 W)</label>
+<label class="check"><input type="checkbox" name="phone" checked> Phone/laptop charging (30 W)</label>
+<label class="check"><input type="checkbox" name="window_ac"> Window A/C (900 W)</label>
+<label class="check"><input type="checkbox" name="microwave"> Microwave (1,000 W)</label>
+<label class="check"><input type="checkbox" name="cpap"> CPAP (60 W)</label>
+<label class="check"><input type="checkbox" name="well"> Well pump (1,000 W)</label>
+<label class="check"><input type="checkbox" name="sump"> Sump pump (800 W)</label>
+</div></fieldset>
+<div class="field full"><label for="g-other">Other running watts</label><input id="g-other" name="other" type="number" min="0" step="10" value="0"></div>
+</div>
+</form>
+</div>
+<div>
+<div data-generator-out></div>
+<div class="callout" style="margin-top:20px"><h4>Carbon monoxide kills after hurricanes</h4><p style="margin:0">Carbon monoxide poisoning from portable generators is one of the leading causes of death after hurricanes. Run generators outdoors only, at least 20 feet from doors, windows and vents &mdash; never in a garage, even with the door open.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section-tight section-alt" id="damage-log">
+<div class="container">
+<div class="section-head"><h2>Storm damage documentation tool</h2><p>Record damage room by room as you photograph it. Entries are saved only in this browser on this device. Print the log or export it to a spreadsheet for your insurer, FEMA or contractor.</p></div>
+<div class="grid grid-2" style="align-items:start">
+<div class="tool">
+<form data-damage-form>
+<div class="form-grid">
+<div class="field"><label for="l-date">Date observed</label><input id="l-date" name="date" type="date" required></div>
+<div class="field"><label for="l-area">Room / area / item</label><input id="l-area" name="area" type="text" placeholder="e.g. Master bedroom ceiling" required></div>
+<div class="field full"><label for="l-desc">Describe the damage</label><textarea id="l-desc" name="desc" rows="3" placeholder="Water stain 4 ft wide, drywall sagging, carpet soaked" required></textarea></div>
+<div class="field"><label for="l-cause">Likely cause</label><select id="l-cause" name="cause"><option>Wind</option><option>Wind-driven rain through roof/opening</option><option>Storm surge / flood</option><option>Fallen tree</option><option>Power surge / outage (food loss)</option><option>Unknown</option></select></div>
+<div class="field"><label for="l-photos">Photo / video file names</label><input id="l-photos" name="photos" type="text" placeholder="IMG_2041-2050"></div>
+<div class="field full"><label for="l-cost">Estimated repair/replacement cost ($)</label><input id="l-cost" name="cost" type="number" min="0" step="10"></div>
+</div>
+<div class="btn-row"><button class="btn btn-warn" type="submit">Add to log</button></div>
+</form>
+</div>
+<div data-damage-log>
+<div data-damage-list></div>
+<div class="btn-row no-print"><button type="button" class="btn btn-dark" data-damage-print>Print log</button><button type="button" class="btn btn-outline" data-damage-csv>Export CSV</button></div>
+<div class="prose" style="margin-top:20px">
+<h4>Documentation tips</h4>
+<ul>
+<li>Shoot wide first, then close-up; include something for scale.</li>
+<li>Photograph serial numbers and model labels on damaged appliances and electronics.</li>
+<li>Keep damaged materials (a carpet sample, a shingle) until the adjuster has seen them.</li>
+<li>Write down the date and time you first noticed each leak.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
