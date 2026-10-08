@@ -51,12 +51,19 @@ NAV = [
     ("Prepare", "/preparedness/"),
     ("Tools", "/tools/"),
     ("History", "/hurricane-history/"),
-    ("Claims & Recovery", "/insurance-claims/"),
+    ("Claims", "/insurance-claims/"),
     ("Communities", "/communities/"),
     ("News", "/news/"),
 ]
 
 TODAY = date.today().isoformat()
+
+
+def asset_version(rel):
+    """Short content hash so a changed CSS/JS file gets a new URL (CDN and browser caches)."""
+    import hashlib
+    with open(os.path.join(SRC, "static", rel), "rb") as fh:
+        return hashlib.sha1(fh.read()).hexdigest()[:10]
 
 
 def esc(text):
@@ -130,7 +137,7 @@ def head(page):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v={TODAY}">
+<link rel="stylesheet" href="/assets/css/site.css?v={asset_version("assets/css/site.css")}">
 <script type="application/ld+json">
 {ld}
 </script>
@@ -221,7 +228,7 @@ Escambia County and Santa Rosa County officials. This site does not replace offi
 </div>
 </div>
 </footer>
-<script src="/assets/js/site.js?v={TODAY}" defer></script>
+<script src="/assets/js/site.js?v={asset_version("assets/js/site.js")}" defer></script>
 </body>
 </html>
 """

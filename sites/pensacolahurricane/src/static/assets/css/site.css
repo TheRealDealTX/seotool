@@ -64,11 +64,13 @@ li { margin-bottom: .35em; }
 .brand-copy { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-copy strong { font-family: var(--head); font-weight: 900; font-size: 1.2rem; letter-spacing: -.01em; }
 .brand-copy span { font-size: .74rem; color: #9fb4c7; text-transform: uppercase; letter-spacing: .08em; }
-.nav-links { display: flex; flex-wrap: wrap; gap: 4px; }
-.nav-links a { color: #dbe6ef; text-decoration: none; font-weight: 600; font-size: .9rem; padding: 8px 10px; border-radius: 8px; }
+.nav-links { display: flex; flex-wrap: nowrap; gap: 2px; }
+.nav-links a { color: #dbe6ef; text-decoration: none; font-weight: 600; font-size: .9rem; padding: 8px 9px; border-radius: 8px; white-space: nowrap; }
 .nav-links a:hover, .nav-links a[aria-current="page"] { background: rgba(255,255,255,.1); color: #fff; }
 .menu-btn { display: none; background: var(--warn); color: #fff; border: 0; border-radius: 8px; padding: 9px 14px; font-weight: 700; font-family: var(--head); cursor: pointer; }
-@media (max-width: 1060px) {
+/* The header gets a little more room than body content so the nine nav items fit on one row */
+.site-header .container { max-width: 1320px; }
+@media (max-width: 1180px) {
   .menu-btn { display: block; }
   .nav-links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--ink); flex-direction: column; padding: 10px 20px 20px; box-shadow: var(--shadow); }
   .nav-links.is-open { display: flex; }
