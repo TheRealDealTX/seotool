@@ -40,7 +40,7 @@
   var CLASS = { HU: "Hurricane", TS: "Tropical Storm", TD: "Tropical Depression", STS: "Subtropical Storm", STD: "Subtropical Depression", PTC: "Potential Tropical Cyclone", PC: "Post-Tropical Cyclone", TY: "Typhoon" };
 
   /* ---------- Mobile menu ---------- */
-  var menuBtn = $("[data-menu-btn]"), nav = $("#primary-nav");
+  var menuBtn = $("[data-menu-btn]"), nav = $(".nav-row");
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
@@ -453,6 +453,25 @@
         out.innerHTML = d.ok ? "<strong>You're on the list.</strong> We'll send Pensacola storm updates to " + esc(d.email) + ". You can unsubscribe from any message." : "<strong>" + esc(d.error || "Something went wrong.") + "</strong>";
         if (d.ok) f.reset();
       }).catch(function () { out.textContent = "Could not save right now — please try again in a minute."; });
+    });
+  });
+
+  /* ---------- Free case review (lead) forms ---------- */
+  $$("[data-lead-form]").forEach(function (f) {
+    var out = f.querySelector("[data-lead-out]"), btn = f.querySelector("button[type=submit]");
+    f.addEventListener("submit", function (e) {
+      e.preventDefault();
+      out.className = "lead-out"; out.textContent = "Sending\u2026"; btn.disabled = true;
+      var body = new URLSearchParams(new FormData(f));
+      body.append("page", location.pathname);
+      fetch("/api/lead.php", { method: "POST", body: body }).then(function (r) { return r.json(); }).then(function (d) {
+        if (d.ok) {
+          out.innerHTML = "<strong>Thank you, " + esc(d.name) + ".</strong> Your request was received. A member of The Lawgical Firm's team will contact you shortly. For immediate help call <a href=\"tel:+14074334131\">(407) 433-4131</a>.";
+          f.querySelectorAll("input:not([type=checkbox]), textarea").forEach(function (el) { el.value = ""; });
+          if (window.gtag) window.gtag("event", "generate_lead");
+        } else { out.className = "lead-out is-error"; out.textContent = d.error || "Something went wrong. Please call (407) 433-4131."; }
+      }).catch(function () { out.className = "lead-out is-error"; out.textContent = "We couldn't send your request. Please call (407) 433-4131."; })
+        .then(function () { btn.disabled = false; });
     });
   });
 

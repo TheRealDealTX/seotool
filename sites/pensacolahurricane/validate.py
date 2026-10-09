@@ -8,7 +8,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
-PHRASE = "pensacola hurricane"
+PHRASE = "Pensacola Hurricane"   # exact case, as the client asked
 MIN_HOME = 14
 
 errors = []
@@ -33,7 +33,7 @@ home = pages.get("home.html")
 if not home:
     errors.append("home.html missing")
 else:
-    n = visible_text(home).lower().count(PHRASE)
+    n = visible_text(home).count(PHRASE)
     print(f"homepage visible uses of 'Pensacola Hurricane': {n}")
     if n < MIN_HOME:
         errors.append(f"homepage uses the phrase {n} times (< {MIN_HOME})")

@@ -36,24 +36,30 @@ SITE = {
     "lon": -87.2169,
 }
 
-# Claims-help resource referenced (lightly) on the claims, recovery and tools pages.
+# The law firm this site advertises. Florida Bar Rule 4-7.12 requires every
+# advertisement to name the responsible firm and the city of an office; those
+# disclosures render in the footer, the CTA band and the lead form from here.
 FIRM = {
     "name": "The Lawgical Firm",
+    "legal_name": "The Lawgical Firm, P.A.",
+    "site": "https://thelawgicalfirm.com/",
     "url": "https://thelawgicalfirm.com/residential-property-insurance-claims/hurricane-windstorm/",
     "phone_display": "(407) 433-4131",
     "phone_href": "+14074334131",
+    "street": "3191 Maguire Blvd, Ste 160",
+    "city": "Orlando",
+    "region": "FL",
+    "zip": "32803",
 }
 
 NAV = [
-    ("Storm Tracker", "/hurricane-tracker/"),
-    ("Weather", "/weather/"),
-    ("Evacuation", "/evacuation-zones/"),
-    ("Prepare", "/preparedness/"),
-    ("Tools", "/tools/"),
-    ("History", "/hurricane-history/"),
-    ("Claims", "/insurance-claims/"),
-    ("Communities", "/communities/"),
-    ("News", "/news/"),
+    ("Denied Claims", "/denied-hurricane-claim/"),
+    ("Underpaid Claims", "/underpaid-hurricane-claim/"),
+    ("Delayed Claims", "/delayed-hurricane-claim/"),
+    ("Claim Help", "/insurance-claims/"),
+    ("Hurricane Isaias", "/hurricane-isaias-claims/"),
+    ("Our Attorneys", "/the-lawgical-firm/"),
+    ("Storm Center", "/hurricane-tracker/"),
 ]
 
 TODAY = date.today().isoformat()
@@ -83,6 +89,19 @@ def head(page):
             "name": SITE["name"],
             "description": SITE["tagline"],
             "inLanguage": "en-US",
+            "publisher": {"@id": SITE["origin"] + "/#firm"},
+        },
+        {
+            "@type": "LegalService",
+            "@id": SITE["origin"] + "/#firm",
+            "name": FIRM["legal_name"],
+            "url": FIRM["site"],
+            "telephone": FIRM["phone_href"],
+            "address": {"@type": "PostalAddress", "streetAddress": FIRM["street"], "addressLocality": FIRM["city"],
+                        "addressRegion": FIRM["region"], "postalCode": FIRM["zip"], "addressCountry": "US"},
+            "areaServed": [{"@type": "City", "name": "Pensacola, FL"}, {"@type": "AdministrativeArea", "name": "Escambia County, FL"},
+                           {"@type": "AdministrativeArea", "name": "Santa Rosa County, FL"}, {"@type": "State", "name": "Florida"}],
+            "knowsAbout": ["Hurricane insurance claims", "Denied property insurance claims", "Underpaid insurance claims", "Windstorm damage claims"],
         },
         {
             "@type": "WebPage",
@@ -156,53 +175,76 @@ def header(active):
 <div class="container alertbar-inner">
 <span class="alertbar-dot" aria-hidden="true"></span>
 <span class="alertbar-text" data-alertbar-text>Checking National Weather Service alerts for Pensacola&hellip;</span>
-<a class="alertbar-link" href="/hurricane-tracker/">Live tracker &rarr;</a>
+<a class="alertbar-link" href="/free-case-review/">Storm damage? Free claim review &rarr;</a>
 </div>
 </div>
 <header class="site-header">
 <div class="container nav-wrap">
 <a class="brand" href="/" aria-label="Pensacola Hurricane home">
 <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#e4572e"/><path d="M24 9c-6 0-11 3-13 8 4-3 9-4 13-3-5 2-8 6-8 10 0 5 4 9 9 9 6 0 11-3 13-8-4 3-9 4-13 3 5-2 8-6 8-10 0-5-4-9-9-9z" fill="#fff"/><circle cx="24" cy="24" r="3.2" fill="#e4572e"/></svg>
-<span class="brand-copy"><strong>Pensacola Hurricane</strong><span>Escambia &amp; Santa Rosa storm center</span></span>
+<span class="brand-copy"><strong>Pensacola Hurricane</strong><span>Storm claim help &middot; {FIRM['name']}</span></span>
 </a>
+<div class="nav-actions">
+<a class="nav-phone" href="tel:{FIRM['phone_href']}" aria-label="Call {FIRM['name']} at {FIRM['phone_display']}"><span class="nav-phone-label">Free review</span>{FIRM['phone_display']}</a>
+<a class="btn btn-warn nav-cta" href="/free-case-review/">Free Case Review</a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-btn>Menu</button>
-<nav class="nav-links" id="primary-nav" aria-label="Primary">{links}</nav>
 </div>
+</div>
+<nav class="nav-row" aria-label="Primary"><div class="container"><div class="nav-links" id="primary-nav">{links}</div></div></nav>
 </header>
 <main id="content">
 """
 
 
-def footer():
+def cta_band():
+    return f"""<section class="claim-cta">
+<div class="container claim-cta-inner">
+<div>
+<div class="eyebrow" style="color:#ffb199">Free case review &middot; No upfront fees</div>
+<h2>Hurricane claim denied, delayed or underpaid?</h2>
+<p>Talk to the attorneys at {FIRM['name']} about your Pensacola-area hurricane claim. We review your policy and the insurer's estimate at no cost, and you pay no attorney fee unless there is a recovery.</p>
+</div>
+<div class="claim-cta-actions">
+<a class="btn btn-warn btn-lg" href="/free-case-review/">Start my free case review</a>
+<a class="btn btn-ghost btn-lg" href="tel:{FIRM['phone_href']}">Call {FIRM['phone_display']}</a>
+</div>
+</div>
+</section>
+"""
+
+
+def footer(show_cta=True):
     return f"""</main>
-<footer class="site-footer">
+{cta_band() if show_cta else ""}<footer class="site-footer">
 <div class="container">
 <div class="footer-grid">
 <div class="footer-about">
 <a class="brand brand-footer" href="/"><strong>Pensacola Hurricane</strong></a>
-<p>An independent hurricane information center for Pensacola, Pensacola Beach, Perdido Key, Gulf Breeze,
-Warrington, Milton, Pace and Navarre. Live data comes from the National Hurricane Center, the National
-Weather Service (Mobile/Pensacola office) and Escambia and Santa Rosa County emergency management.</p>
-<p class="footer-emergency"><strong>Life-threatening emergency? Call 911.</strong> Follow evacuation orders from
-Escambia County and Santa Rosa County officials. This site does not replace official instructions.</p>
+<p>Hurricane claim help for Pensacola, Pensacola Beach, Perdido Key, Gulf Breeze, Warrington, Milton, Pace,
+Navarre and all of Escambia and Santa Rosa counties, sponsored by <a href="{FIRM['site']}" target="_blank" rel="noopener">{FIRM['legal_name']}</a>,
+a Florida property insurance claims law firm.</p>
+<p class="footer-firm"><strong>{FIRM['legal_name']}</strong><br>{FIRM['street']}<br>{FIRM['city']}, {FIRM['region']} {FIRM['zip']}<br>
+<a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a><br><span class="small">Representing property owners throughout Florida, including the Pensacola area.</span></p>
 </div>
 <div>
-<div class="footer-title">Track &amp; Prepare</div>
+<div class="footer-title">Claim Help</div>
+<div class="footer-links">
+<a href="/free-case-review/">Free Case Review</a>
+<a href="/denied-hurricane-claim/">Denied Hurricane Claims</a>
+<a href="/underpaid-hurricane-claim/">Underpaid Hurricane Claims</a>
+<a href="/delayed-hurricane-claim/">Delayed Hurricane Claims</a>
+<a href="/insurance-claims/">Roof, Water &amp; Wind Claims</a>
+<a href="/hurricane-isaias-claims/">Hurricane Isaias Claims</a>
+<a href="/the-lawgical-firm/">Our Attorneys</a>
+</div>
+</div>
+<div>
+<div class="footer-title">Storm Resources</div>
 <div class="footer-links">
 <a href="/hurricane-tracker/">Live Hurricane Tracker</a>
-<a href="/weather/">Pensacola Weather Center</a>
+<a href="/weather/">Pensacola Weather</a>
 <a href="/evacuation-zones/">Evacuation Zone Checker</a>
-<a href="/preparedness/">Preparedness Checklist</a>
-<a href="/storm-surge-flood-risk/">Storm Surge &amp; Flood Risk</a>
-<a href="/alerts/">Hurricane Alerts Sign-Up</a>
-</div>
-</div>
-<div>
-<div class="footer-title">During &amp; After</div>
-<div class="footer-links">
-<a href="/shelters-roads-outages/">Shelters, Roads &amp; Outages</a>
-<a href="/tools/">Hurricane Calculators</a>
-<a href="/insurance-claims/">Insurance Claims Center</a>
+<a href="/tools/">Deductible &amp; Damage Tools</a>
 <a href="/recovery/">Recovery Resources</a>
 <a href="/hurricane-history/">Hurricane History</a>
 <a href="/news/">Hurricane News</a>
@@ -222,16 +264,53 @@ Escambia County and Santa Rosa County officials. This site does not replace offi
 </div>
 </div>
 </div>
+<p class="footer-legal">Attorney advertising. This website is sponsored by {FIRM['legal_name']}, which is responsible for its content; principal office: {FIRM['city']}, Florida.
+The information on this site is general information, not legal advice, and reading it or contacting us does not create an attorney-client relationship.
+Fees: no attorney fee unless there is a recovery; ask how case costs are handled under the written fee agreement. Past results do not guarantee a similar outcome. The hiring of a lawyer is an important decision that should not be based solely on advertisements.
+In a life-threatening emergency, call 911 and follow instructions from Escambia County and Santa Rosa County officials.</p>
 <div class="footer-bottom">
-<span>&copy; {date.today().year} Pensacola Hurricane. Educational information only &mdash; not legal, insurance or engineering advice.</span>
+<span>&copy; {date.today().year} Pensacola Hurricane &middot; {FIRM['legal_name']}</span>
 <span><a href="/about/">About</a> &middot; <a href="/disclaimer/">Disclaimer</a> &middot; <a href="/privacy-policy/">Privacy</a> &middot; <a href="/sitemap/">Sitemap</a></span>
 </div>
 </div>
 </footer>
+<div class="call-bar" aria-label="Contact {FIRM['name']}">
+<a href="tel:{FIRM['phone_href']}">Call {FIRM['phone_display']}</a>
+<a href="/free-case-review/" class="call-bar-cta">Free Case Review</a>
+</div>
 <script src="/assets/js/site.js?v={asset_version("assets/js/site.js")}" defer></script>
 </body>
 </html>
 """
+
+
+ISSUES = ["My claim was denied", "My claim was underpaid / offer is too low", "My claim is delayed / no response",
+          "I haven't filed yet", "Partial denial (e.g. roof or flood)", "Something else"]
+STORMS = ["Hurricane Isaias (2026)", "Hurricane Sally (2020)", "Another storm / not sure"]
+
+
+def lead_form(n, compact=False):
+    """Free case review form; posts to /api/lead.php. n keeps element ids unique per page."""
+    opts = lambda xs: "".join(f"<option>{esc(x)}</option>" for x in xs)
+    msg = "" if compact else (f'<div class="field full"><label for="lf{n}-msg">What happened? (optional)</label>'
+                              f'<textarea id="lf{n}-msg" name="message" rows="3" placeholder="Roof damage from Isaias; insurer offered $3,200 but the roofer estimate is $21,000&hellip;"></textarea></div>'
+                              f'<div class="field"><label for="lf{n}-ins">Insurance company (optional)</label><input id="lf{n}-ins" name="insurer" type="text"></div>')
+    return f"""<form class="lead-form" data-lead-form>
+<div class="form-grid">
+<div class="field"><label for="lf{n}-name">Name</label><input id="lf{n}-name" name="name" type="text" autocomplete="name" required></div>
+<div class="field"><label for="lf{n}-phone">Phone</label><input id="lf{n}-phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="field{" full" if compact else ""}"><label for="lf{n}-email">Email</label><input id="lf{n}-email" name="email" type="email" autocomplete="email"></div>
+<div class="field{" full" if compact else ""}"><label for="lf{n}-zip">Property ZIP or city</label><input id="lf{n}-zip" name="location" type="text" autocomplete="postal-code" placeholder="32561 / Pensacola Beach" required></div>
+<div class="field full"><label for="lf{n}-issue">What's going on with your claim?</label><select id="lf{n}-issue" name="issue" required>{opts(ISSUES)}</select></div>
+<div class="field{" full" if compact else ""}"><label for="lf{n}-storm">Storm</label><select id="lf{n}-storm" name="storm">{opts(STORMS)}</select></div>
+{msg}
+<input type="text" name="website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+<label class="check full small"><input type="checkbox" name="sms_consent" value="1"> I agree to receive text messages from {FIRM['legal_name']} about my inquiry. Msg &amp; data rates may apply; reply STOP to opt out.</label>
+</div>
+<button class="btn btn-warn btn-block" type="submit">Get my free case review</button>
+<p class="form-note">Free and confidential. Submitting this form does not create an attorney-client relationship. Prefer to talk? Call <a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a>.</p>
+<div class="lead-out" data-lead-out role="status" aria-live="polite"></div>
+</form>"""
 
 
 def expand(body):
@@ -241,6 +320,17 @@ def expand(body):
     body = body.replace("{{FIRM_PHONE}}", FIRM["phone_display"])
     body = body.replace("{{FIRM_TEL}}", FIRM["phone_href"])
     body = body.replace("{{TODAY}}", TODAY)
+    body = body.replace("{{FIRM_LEGAL}}", FIRM["legal_name"])
+    body = body.replace("{{FIRM_SITE}}", FIRM["site"])
+    n = 0
+    while "{{LEAD_FORM" in body:
+        n += 1
+        compact = body.find("{{LEAD_FORM_COMPACT}}")
+        full = body.find("{{LEAD_FORM}}")
+        if compact != -1 and (full == -1 or compact < full):
+            body = body.replace("{{LEAD_FORM_COMPACT}}", lead_form(n, compact=True), 1)
+        else:
+            body = body.replace("{{LEAD_FORM}}", lead_form(n), 1)
     return body
 
 
@@ -295,7 +385,7 @@ def main():
     pages = load_pages()
     for p in pages:
         body = p["body"].replace("{{SITEMAP}}", sitemap_html(pages))
-        html = head(p) + header(p.get("nav")) + body + footer()
+        html = head(p) + header(p.get("nav")) + body + footer(show_cta=p.get("cta", True))
         f = out_file(p["path"])
         os.makedirs(os.path.dirname(f), exist_ok=True)
         with open(f, "w", encoding="utf-8") as fh:
