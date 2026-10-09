@@ -27,11 +27,41 @@ NAV = [("Home", "/"), ("About", "/about"), ("Projects", "/projects-1"), ("Journa
 e = html.escape
 
 
-def room(r, extra=""):
-    style = ";".join(f"--{k}:{r[k]}" for k in ("wall", "wall2", "sofa", "art", "ceil") if k in r)
-    return (f'<div class="room {r.get("cls", "")} {extra}" style="{style}" aria-hidden="true">'
-            '<div class="ceil"></div><div class="panel"></div><div class="art"></div><div class="lamp"></div>'
-            '<div class="skirt"></div><div class="floor"></div><div class="sofa"></div><div class="plant"></div></div>')
+# Photographs: StockSnap.io, CC0 (public domain). name -> (alt text, width, height of the 960px file)
+IMAGES = {
+    "english-sitting-room-fireplace": ("A sitting room with striped sofas, a fireplace and built-in bookshelves", 960, 540),
+    "living-room-piano-lounge-chair": ("A living room with an upright piano, a leather lounge chair and a Persian rug", 960, 622),
+    "painted-kitchen-island-blue-stools": ("A white kitchen with a painted island and blue bar stools", 960, 640),
+    "paint-roller-dark-paint": ("A paint roller applying dark paint to a wall", 960, 643),
+    "kitchen-paint-colour-tins": ("Four open tins of paint in pink, teal, saffron and oxblood", 960, 640),
+    "warm-kitchen-worktop": ("A kitchen worktop in warm window light with a coffee maker and a range cooker", 960, 641),
+    "dark-green-tiled-bathroom": ("A bathroom with dark green tiles, a round lit mirror and a timber vanity", 960, 1438),
+    "grey-tiled-bathroom-basin": ("A grey tiled bathroom wall above a white basin", 960, 640),
+    "beamed-ceiling-pendant-lights": ("A vaulted ceiling with exposed timber beams and copper pendant lights", 960, 640),
+    "timber-ceiling-detail": ("A boarded timber ceiling radiating from an octagonal centre", 960, 640),
+    "grey-feature-wall-living-room": ("A living room with a dark grey feature wall and a lime green armchair", 960, 629),
+    "teal-painted-wall-drawers": ("A teal painted wall behind a small wooden chest of drawers", 960, 1354),
+    "garden-room-open-doors": ("Glazed doors open onto a garden room full of plants", 960, 600),
+    "kitchen-bay-window-sink": ("A farmhouse kitchen sink beneath a bay window", 960, 640),
+    "light-bedroom-curtains": ("A light bedroom with sheer curtains, a timber floor and plum cushions", 960, 634),
+    "vintage-dining-room": ("A dining room with dark carved chairs and sunlight from tall windows", 960, 640),
+    "cloakroom-roll-top-bath": ("A small bathroom with a roll-top bath and dark panelled walls", 960, 1438),
+    "dark-snug-sofa-lamp": ("A dark snug with a sofa, cushions and a brass table lamp", 960, 640),
+    "patterned-armchair": ("A mustard patterned armchair in a white room", 960, 640),
+    "pale-blue-loveseat": ("A pale blue loveseat with patterned cushions", 960, 640),
+    "decorating-paintbrush": ("A clean decorating paintbrush on a pale grey background", 960, 640),
+    "eclectic-drawing-room": ("An eclectic drawing room with a chandelier, flowers and a brick wall", 960, 640),
+    "blue-sofa-white-wall": ("A pale blue sofa against a plain wall with a framed print", 960, 638),
+}
+
+
+def photo(name, cls="", eager=False, sizes="(max-width: 860px) 100vw, 50vw"):
+    alt, w, h = IMAGES[name]
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    # Arch frames crop landscape photos hard, so they always get the full 960px file.
+    srcset = "" if "arch" in cls else f'srcset="/assets/img/{name}-560.webp 560w, /assets/img/{name}.webp 960w" sizes="{sizes}" '
+    return (f'<figure class="photo {cls}"><img src="/assets/img/{name}.webp" {srcset}'
+            f'width="{w}" height="{h}" alt="{e(alt)}" {load} decoding="async"></figure>')
 
 
 def layout(path, title, desc, body, schema=None, current=None):
@@ -107,13 +137,15 @@ def layout(path, title, desc, body, schema=None, current=None):
 """
 
 
-def page_hero(eyebrow, h1, lede, crumbs=None, blob="var(--plaster)"):
+def page_hero(eyebrow, h1, lede, crumbs=None, blob="var(--plaster)", img=None):
     c = ""
     if crumbs:
         c = '<nav class="crumbs" aria-label="Breadcrumb">' + " / ".join(
             f'<a href="{h}">{e(n)}</a>' if h else e(n) for n, h in crumbs) + "</nav>"
-    return f"""<section class="page-hero">
-  <div class="blob" style="--blob:{blob}" data-speed=".15" aria-hidden="true"></div>
+    media = (f'<div class="page-hero-photo reveal">{photo(img, "arch", eager=True, sizes="(max-width: 860px) 90vw, 420px")}</div>'
+             if img else f'<div class="blob" style="--blob:{blob}" data-speed=".15" aria-hidden="true"></div>')
+    return f"""<section class="page-hero{' has-photo' if img else ''}">
+  {media}
   <div class="wrap" style="position:relative">
     {c}
     <span class="eyebrow reveal">{eyebrow}</span>
@@ -125,7 +157,7 @@ def page_hero(eyebrow, h1, lede, crumbs=None, blob="var(--plaster)"):
 
 def guide_card(g):
     return f"""<a class="card" href="/journal/{g['slug']}">
-  <div class="thumb">{room(g['room'])}</div>
+  <div class="thumb">{photo(g['img'], sizes="(max-width: 700px) 100vw, 400px")}</div>
   <div class="body"><span class="meta">{e(g['kicker'])}</span><h3>{e(g['short'])}</h3><p>{e(g['desc'][:118].rsplit(' ', 1)[0])}…</p></div>
 </a>"""
 
@@ -153,19 +185,18 @@ def home():
             for i, (c, n, t) in enumerate(opts)) + "</div>"
 
     mixer = f"""<div class="mixer">
-  <div class="reveal-l">{room({"wall": "#7c8a68", "sofa": "#e9c6b1", "art": "#c8952c"})}</div>
+  <div class="reveal-l mixer-photo" style="--wall:#9aa889">{photo("blue-sofa-white-wall")}<div class="tint" aria-hidden="true"></div></div>
   <div class="mixer-controls reveal">
-    <div><span class="eyebrow">Try it</span><h2>Build a room scheme</h2>
-    <p class="lede">Pick a wall colour, a sofa and some art. Good schemes balance one strong colour with two that support it.</p></div>
-    <div class="mixer-group"><h4>Walls</h4>{dots("wall", [("#7c8a68", "sage", "calm and easy to live with."), ("#b4552e", "terracotta", "warm and sociable."), ("#22314a", "navy", "deep, cocooning and great at night."), ("#e9e1d3", "warm white", "light, with colour coming from the furniture."), ("#c8952c", "ochre", "sunny, even on grey days.")])}</div>
-    <div class="mixer-group"><h4>Sofa</h4>{dots("sofa", [("#e9c6b1", "blush", "soft contrast that flatters every wall."), ("#22314a", "navy", "a grounding anchor for lighter walls."), ("#2f5d5a", "teal", "rich and jewel-like."), ("#6e2a25", "oxblood", "a touch of drama."), ("#d9cdb8", "stone", "quiet and versatile.")])}</div>
-    <div class="mixer-group"><h4>Art</h4>{dots("art", [("#c8952c", "ochre", "a warm spark of light."), ("#b4552e", "terracotta", "an earthy accent."), ("#efe7da", "pale", "restful and airy."), ("#2f5d5a", "teal", "a cool counterpoint.")])}</div>
-    <p class="mixer-note" aria-live="polite">Walls in sage, a blush sofa and ochre on the walls — calm, warm and easy to live with.</p>
+    <div><span class="eyebrow">Try it</span><h2>Paint the wall</h2>
+    <p class="lede">The same sofa, the same print — a completely different room. Tap a colour to see how the wall changes the mood.</p></div>
+    <div class="mixer-group"><h4>Wall colour</h4>{dots("wall", [("#9aa889", "sage", "calm and easy to live with, and lovely with pale blue."), ("#c9734f", "terracotta", "warm and sociable; the blue sofa suddenly looks cooler and crisper."), ("#3d4c66", "navy", "deep and cocooning — the sofa and print glow against it."), ("#d9a441", "ochre", "sunny even on grey days, with the blue as a fresh contrast."), ("#e3b9a6", "plaster pink", "soft and skin-warm; a gentle partner for blue."), ("#4f7a72", "deep teal", "rich and tonal with the sofa — a very grown-up look."), ("#f1ebe0", "warm white", "light and simple, letting the furniture carry the colour.")])}</div>
+    <p class="mixer-note" aria-live="polite">Sage — calm and easy to live with, and lovely with pale blue.</p>
   </div>
 </div>"""
 
     body = f"""
 <section class="hero">
+  <div class="hero-photo">{photo("english-sitting-room-fireplace", "arch", eager=True, sizes="(max-width: 820px) 80vw, 560px")}</div>
   <div class="swatches" aria-hidden="true">
     <div class="sw a" data-name="Terracotta" data-speed=".35" data-rot=".02"></div>
     <div class="sw d" data-name="" data-speed=".6"></div>
@@ -185,7 +216,7 @@ def home():
 
 <section class="section">
   <div class="wrap split">
-    <div class="reveal-l">{room({"wall": "#b4552e", "sofa": "#22314a", "art": "#efe7da"}, "parallax")}</div>
+    <div class="reveal-l">{photo("living-room-piano-lounge-chair", "tall parallax-wrap")}</div>
     <div class="reveal">
       <span class="eyebrow">Our approach</span>
       <h2>Homes should look like the people who live in them.</h2>
@@ -248,10 +279,10 @@ def home():
 def about():
     body = page_hero("About", "A journal for people who love <em>rooms</em>",
                      "Practical, honest decorating advice — colour, paper, panelling and the details that make a house a home.",
-                     [("Home", "/"), ("About", None)]) + f"""
+                     [("Home", "/"), ("About", None)], img="eclectic-drawing-room") + f"""
 <section class="section">
   <div class="wrap split">
-    <div class="reveal-l">{room({"wall": "#2f5d5a", "sofa": "#e9c6b1", "art": "#c8952c", "cls": "wallpaper"})}</div>
+    <div class="reveal-l">{photo("patterned-armchair", "tall")}</div>
     <div class="prose reveal">
       <h2>What we believe</h2>
       <p>Good interior design is less about following trends and more about understanding how a household lives. A kitchen used by a family of five needs different paint from a weekend cottage; a north-facing bedroom needs a different white from a sunny sitting room.</p>
@@ -273,16 +304,16 @@ def about():
 
 def projects():
     cards = "".join(f"""<article class="card">
-  <div class="thumb">{room(p)}</div>
+  <div class="thumb">{photo(p['img'], sizes="(max-width: 700px) 100vw, 400px")}</div>
   <div class="body"><span class="meta">{e(p['place'])}</span><h3>{e(p['name'])}</h3><p>{e(p['text'])}</p></div>
 </article>""" for p in PROJECTS)
     body = page_hero("Projects", "Room schemes to <em>borrow</em>",
-                     "Six concept schemes — illustrated palettes for sitting rooms, kitchens, bedrooms and more. Take the colours, the ideas or the whole thing.",
+                     "Six rooms we keep coming back to — garden rooms, kitchens, bedrooms and more, with the ideas worth borrowing from each.",
                      [("Home", "/"), ("Projects", None)], blob="#c9d1bb") + f"""
 <section class="section">
   <div class="wrap">
     <div class="grid stagger">{cards}</div>
-    <p class="reveal" style="margin-top:3rem;color:var(--ink-2);font-size:.92rem">These are illustrative concept schemes created for this journal, not photographs of client projects.</p>
+    <p class="reveal" style="margin-top:3rem;color:var(--ink-2);font-size:.92rem">These are inspiration images (royalty-free CC0 photography), not photographs of client projects.</p>
   </div>
 </section>"""
     return layout("/projects-1", f"Projects: Room Schemes | {BRAND}", "Interior design room schemes to borrow: country sitting room, townhouse kitchen, striped attic bedroom, midnight dining room, papered cloakroom and terracotta snug.", body, current="/projects-1")
@@ -292,7 +323,7 @@ def press():
     rows = "".join(f'<li><a href="{u}" rel="noopener" target="_blank"><span class="src">{e(s)}</span><span class="t">{e(t)}</span><span aria-hidden="true">↗</span></a></li>' for s, t, u, _ in PRESS)
     body = page_hero("Press", "Further <em>reading</em>",
                      "Decorating features from around the web that we return to again and again, paired with our own guides on the same subjects.",
-                     [("Home", "/"), ("Press", None)], blob="#e8d3a8") + f"""
+                     [("Home", "/"), ("Press", None)], img="decorating-paintbrush") + f"""
 <section class="section">
   <div class="wrap">
     <ul class="press-list reveal">{rows}</ul>
@@ -306,7 +337,7 @@ def press():
 def contact():
     body = page_hero("Contact", "Say <em>hello</em>",
                      "Questions about a guide, a colour you can't decide on, or an idea for a feature? We'd love to hear from you.",
-                     [("Home", "/"), ("Contact", None)], blob="#cfd9d6") + f"""
+                     [("Home", "/"), ("Contact", None)], img="pale-blue-loveseat") + f"""
 <section class="section">
   <div class="wrap split" style="align-items:start">
     <div class="reveal-l">
@@ -342,7 +373,9 @@ def slugify(s):
 def guide(g):
     path = f"/journal/{g['slug']}"
     toc = "".join(f'<li><a href="#{slugify(h)}">{e(h)}</a></li>' for h, _ in g["sections"])
-    secs = "".join(f'<h2 id="{slugify(h)}">{e(h)}</h2>{b}' for h, b in g["sections"])
+    img2, cap2 = g["img2"]
+    fig2 = f'<div class="reveal inline-photo">{photo(img2, "wide", sizes="(max-width: 960px) 100vw, 700px")}<p class="caption">{e(cap2)}</p></div>'
+    secs = "".join(f'<h2 id="{slugify(h)}">{e(h)}</h2>{b}' + (fig2 if i == 0 else "") for i, (h, b) in enumerate(g["sections"]))
     pal = "".join(f'<div class="{"light" if len(p) > 2 else ""}" style="background:{p[1]}">{e(p[0])}<br>{p[1].upper()}</div>' for p in g["palette"])
     faq = "".join(f"<details><summary>{e(q)}</summary><p>{e(a)}</p></details>" for q, a in g["faq"])
     others = [o for o in GUIDES if o is not g][:3]
@@ -355,11 +388,10 @@ def guide(g):
         "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in g["faq"]],
     }]
     body = page_hero(g["kicker"], e(g["title"]), e(g["intro"]),
-                     [("Home", "/"), ("Journal", "/journal"), (g["short"], None)], blob=g["palette"][0][1]) + f"""
+                     [("Home", "/"), ("Journal", "/journal"), (g["short"], None)], img=g["img"]) + f"""
 <section class="section">
   <div class="wrap article">
     <article class="prose">
-      <div class="reveal" style="max-width:520px;margin-bottom:2rem">{room(g['room'])}</div>
       <h3 style="margin-top:0">The palette</h3>
       <div class="palette-row stagger">{pal}</div>
       {secs}
@@ -380,6 +412,7 @@ def privacy():
     body = page_hero("Privacy", "Privacy notice", "Short and simple.", [("Home", "/"), ("Privacy", None)]) + f"""
 <section class="section"><div class="wrap prose">
 <p>{BRAND} does not use analytics, advertising cookies or tracking scripts, and does not store personal data on this website. Our contact form opens an email in your own mail application; we only receive what you choose to send.</p>
+<p>Photography is from <a href="https://stocksnap.io/" rel="noopener">StockSnap</a> and released under the CC0 public-domain licence.</p>
 <p>Web fonts are loaded from Google Fonts, which may log your IP address as part of serving the files. Our host keeps standard server logs for security purposes.</p>
 <p>Questions? Email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </div></section>"""
@@ -410,6 +443,7 @@ def main():
     shutil.copy(ROOT / "src" / "site.css", OUT / "assets" / "site.css")
     shutil.copy(ROOT / "src" / "site.js", OUT / "assets" / "site.js")
     shutil.copy(ROOT / "src" / "index.php", OUT / "index.php")
+    shutil.copytree(ROOT / "src" / "img", OUT / "assets" / "img")
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     urls = ["/", "/about", "/projects-1", "/journal", "/press", "/contact", "/privacy"] + [f"/journal/{g['slug']}" for g in GUIDES]
     (OUT / "sitemap.xml").write_text(

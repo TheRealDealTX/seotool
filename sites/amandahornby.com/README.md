@@ -8,6 +8,15 @@ The previous owner is a working interior designer, so the site does not use her
 name as a brand, her biography, contact details or project photographs. The
 footer and About page say the domain changed hands.
 
+## Photography
+
+All photos are from StockSnap.io under CC0 (public domain, no attribution
+required), found through the Openverse API. They live in `src/img/` as WebP at
+960px and 560px wide; `IMAGES` in `build.py` holds alt text and dimensions.
+StockSnap only serves 960px-wide files to non-browser clients, so hero images
+use the full 960px file. The Projects page says they are inspiration images,
+not client work.
+
 ## Backlinks
 
 All 837 backlinks in the Semrush export point at the homepage (`/`,

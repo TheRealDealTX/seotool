@@ -13,7 +13,7 @@ GUIDES = [
         "desc": "Kitchen cupboard paint ideas and a step-by-step method for painting cabinets with a durable, brush-mark-free finish — from degreasing and priming to choosing the right sheen.",
         "kicker": "Kitchens",
         "intro": "Repainting kitchen cupboards is the single most transformative thing you can do to a kitchen without replacing it. Done well, a painted kitchen looks bespoke; done in a hurry, it chips within a month. Here is how to choose the colour and how to get the finish right.",
-        "room": {"wall": "#e9e1d3", "sofa": "#2f5d5a", "art": "#c8952c", "cls": ""},
+        "img": "painted-kitchen-island-blue-stools", "img2": ("paint-roller-dark-paint", "Rolling a dark paint colour onto a smooth, primed surface."),
         "palette": [("Deep teal", "#2f5d5a"), ("Inky navy", "#22314a"), ("Sage", "#7c8a68"), ("Clay", "#b4552e"), ("Warm putty", "#d8cbb4", True)],
         "sections": [
             ("Choosing a cupboard colour", """
@@ -60,7 +60,7 @@ GUIDES = [
         "desc": "Colourful kitchen paint ideas — how to choose bold colours for kitchen walls, units and islands, and how to balance them with worktops, floors and light.",
         "kicker": "Kitchens",
         "intro": "The kitchen is where the household gathers, so it deserves a colour that lifts the mood. You don't need to paint every surface a bright shade to make a kitchen feel colourful — it's about where the colour goes and what it sits next to.",
-        "room": {"wall": "#c8952c", "sofa": "#22314a", "art": "#b4552e", "cls": ""},
+        "img": "kitchen-paint-colour-tins", "img2": ("warm-kitchen-worktop", "Warm light, natural timber and a pale worktop give strong colour something to sit against."),
         "palette": [("Saffron", "#c8952c"), ("Tomato", "#c0472f"), ("Cobalt", "#2c4a8a"), ("Pistachio", "#b7c39a", True), ("Blush", "#e9c6b1", True)],
         "sections": [
             ("Pick one hero colour", """
@@ -100,7 +100,7 @@ GUIDES = [
         "desc": "Bathroom wallpaper ideas — which papers survive steam, where to hang them, pattern ideas for small bathrooms and cloakrooms, and how to protect wallpaper in a wet room.",
         "kicker": "Bathrooms",
         "intro": "Wallpaper is the quickest way to give a bathroom character. Yes, you can wallpaper a bathroom — the trick is choosing the right paper for the right wall and ventilating the room properly.",
-        "room": {"wall": "#7c8a68", "sofa": "#e9e1d3", "art": "#e9c6b1", "cls": "wallpaper"},
+        "img": "dark-green-tiled-bathroom", "img2": ("grey-tiled-bathroom-basin", "Tiles take the splashes around the basin, leaving the walls above free for paper."),
         "palette": [("Moss", "#7c8a68"), ("Plaster", "#e9c6b1", True), ("Petrol", "#2f5d5a"), ("Chalk", "#efe7da", True), ("Rust", "#9c4a2a")],
         "sections": [
             ("Which wallpapers work in bathrooms", """
@@ -139,7 +139,7 @@ GUIDES = [
         "desc": "Ceiling design ideas — painting a ceiling dark, tented fabric ceilings, wallpapered ceilings, colour-drenching and how to make a low ceiling feel taller.",
         "kicker": "Ceilings",
         "intro": "The ceiling is the fifth wall, and the one most often forgotten. Brilliant white is the default, but a coloured, papered or tented ceiling can change the whole mood of a room.",
-        "room": {"wall": "#e9e1d3", "sofa": "#b4552e", "art": "#22314a", "ceil": "#22314a", "cls": ""},
+        "img": "beamed-ceiling-pendant-lights", "img2": ("timber-ceiling-detail", "A boarded timber ceiling — proof that the fifth wall can be the most interesting one."),
         "palette": [("Midnight", "#1f2a3c"), ("Oxblood", "#6e2a25"), ("Forest", "#33473a"), ("Old rose", "#c99a8a"), ("Parchment", "#efe4cf", True)],
         "sections": [
             ("Painting a ceiling dark", """
@@ -181,7 +181,7 @@ GUIDES = [
         "desc": "Feature wall ideas for bedrooms and living rooms — paint, wallpaper, panelling, murals, colour blocking and choosing which wall to feature.",
         "kicker": "Walls",
         "intro": "A feature wall gives a room a focal point and a dose of personality without committing the whole room to one bold idea. The best ones feel like a deliberate part of the scheme, not an afterthought.",
-        "room": {"wall": "#b4552e", "wall2": "#e9c6b1", "sofa": "#7c8a68", "art": "#efe7da", "cls": "stripe"},
+        "img": "grey-feature-wall-living-room", "img2": ("teal-painted-wall-drawers", "A single wall of soft teal turns a simple chest of drawers into a vignette."),
         "palette": [("Terracotta", "#b4552e"), ("Ochre", "#c8952c"), ("Sage", "#7c8a68"), ("Navy", "#22314a"), ("Stone", "#d9cdb8", True)],
         "sections": [
             ("Which wall to choose", """
@@ -215,18 +215,18 @@ GUIDES = [
 ]
 
 PROJECTS = [
-    {"name": "The Garden Room", "place": "Country house sitting room", "wall": "#7c8a68", "sofa": "#e9c6b1", "art": "#c8952c", "cls": "",
-     "text": "Sage walls drenched over the woodwork, a blush linen sofa and ochre art — a scheme built around the view of the garden."},
-    {"name": "The Townhouse Kitchen", "place": "Victorian terrace kitchen", "wall": "#e9e1d3", "sofa": "#22314a", "art": "#b4552e", "cls": "",
-     "text": "Inky navy base units, putty walls and unlacquered brass. The island carries a single run of terracotta tiles."},
-    {"name": "The Striped Bedroom", "place": "Attic bedroom", "wall": "#e9c6b1", "wall2": "#f6ebe1", "sofa": "#2f5d5a", "art": "#7c8a68", "cls": "stripe",
-     "text": "A soft pink stripe that disguises the sloping ceiling, with a teal velvet headboard and green accents."},
-    {"name": "The Midnight Dining Room", "place": "Georgian dining room", "wall": "#33473a", "ceil": "#1f2a3c", "sofa": "#6e2a25", "art": "#c8952c", "cls": "",
-     "text": "Forest-green walls under a midnight ceiling, oxblood upholstery and candlelight — a room designed for long suppers."},
-    {"name": "The Papered Cloakroom", "place": "Ground-floor cloakroom", "wall": "#2f5d5a", "sofa": "#efe7da", "art": "#e9c6b1", "cls": "wallpaper",
-     "text": "A petrol-blue spotted paper above a chalk-white panelled dado. Small room, big personality."},
-    {"name": "The Study Snug", "place": "Library and snug", "wall": "#b4552e", "sofa": "#22314a", "art": "#efe7da", "cls": "",
-     "text": "Terracotta from skirting to ceiling, navy wool upholstery and alcove shelving painted a shade deeper."},
+    {"name": "The Garden Room", "place": "Garden room", "img": "garden-room-open-doors",
+     "text": "Glazed doors thrown open to the planting. Keep the frames a soft, chalky colour and let the greenery do the rest."},
+    {"name": "The Farmhouse Kitchen", "place": "Kitchen", "img": "kitchen-bay-window-sink",
+     "text": "A ceramic sink under a bay window. Pale units and plenty of light make this a kitchen that could take a bold island colour."},
+    {"name": "The Light Bedroom", "place": "Bedroom", "img": "light-bedroom-curtains",
+     "text": "Floor-length sheer curtains, warm timber and soft plum accents — a calm room built around morning light."},
+    {"name": "The Dining Room", "place": "Dining room", "img": "vintage-dining-room",
+     "text": "Dark carved chairs, a well-used table and sunlight through tall windows. Collected rather than decorated."},
+    {"name": "The Roll-Top Bathroom", "place": "Bathroom", "img": "cloakroom-roll-top-bath",
+     "text": "A roll-top bath, a patterned floor and dark panelled walls: proof that a small bathroom can be dramatic."},
+    {"name": "The Evening Snug", "place": "Snug", "img": "dark-snug-sofa-lamp",
+     "text": "Deep-coloured walls, a brass lamp and a pile of cushions. A room designed for evenings."},
 ]
 
 PRESS = [

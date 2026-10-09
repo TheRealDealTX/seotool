@@ -52,6 +52,7 @@
   var heads = Array.prototype.map.call(tocLinks, function (a) { return d.getElementById(a.hash.slice(1)); });
 
   var para = d.querySelectorAll('[data-speed]');
+  var imgs = d.querySelectorAll('.parallax-wrap img,.hero-photo img,.page-hero-photo img');
   var hs = d.querySelector('.hscroll'), track = hs && hs.querySelector('.hscroll-track');
   function sizeHs() {
     if (!hs || !track) return;
@@ -75,6 +76,12 @@
       para.forEach(function (el) {
         var r = el.getBoundingClientRect(), mid = r.top + r.height / 2 - window.innerHeight / 2;
         el.style.transform = 'translate3d(0,' + (mid * -parseFloat(el.dataset.speed)).toFixed(1) + 'px,0) rotate(' + (el.dataset.rot ? (mid * el.dataset.rot).toFixed(2) : 0) + 'deg)';
+      });
+      imgs.forEach(function (im) {
+        var r = im.parentNode.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        var p = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+        im.style.transform = 'translate3d(0,' + (p * -7).toFixed(2) + '%,0) scale(1.14)';
       });
       if (hs && track && window.innerWidth > 820) {
         var r = hs.getBoundingClientRect(), span = hs.offsetHeight - window.innerHeight;
@@ -123,22 +130,16 @@
     })();
   }
 
-  // Room scheme mixer
+  // Wall colour picker: tints the wall area of the photo
   var mixer = d.querySelector('.mixer');
   if (mixer) {
-    var room = mixer.querySelector('.room'), note = mixer.querySelector('.mixer-note');
-    var state = {};
-    mixer.querySelectorAll('.dots').forEach(function (g) {
-      var prop = g.dataset.prop;
-      g.querySelectorAll('.dot').forEach(function (b) {
-        if (b.getAttribute('aria-pressed') === 'true') state[prop] = b.dataset.name;
-        b.addEventListener('click', function () {
-          g.querySelectorAll('.dot').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
-          b.setAttribute('aria-pressed', 'true');
-          room.style.setProperty('--' + prop, b.dataset.color);
-          state[prop] = b.dataset.name;
-          if (note) note.textContent = 'Walls in ' + state.wall + ', a ' + state.sofa + ' sofa and ' + state.art + ' on the walls — ' + (b.dataset.tip || '');
-        });
+    var frame = mixer.querySelector('.mixer-photo'), note = mixer.querySelector('.mixer-note');
+    mixer.querySelectorAll('.dot').forEach(function (b) {
+      b.addEventListener('click', function () {
+        mixer.querySelectorAll('.dot').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+        b.setAttribute('aria-pressed', 'true');
+        frame.style.setProperty('--wall', b.dataset.color);
+        if (note) note.textContent = b.dataset.name.charAt(0).toUpperCase() + b.dataset.name.slice(1) + ' — ' + b.dataset.tip;
       });
     });
   }
