@@ -187,11 +187,22 @@ def header(active):
 <div class="nav-actions">
 <a class="nav-phone" href="tel:{FIRM['phone_href']}" aria-label="Call {FIRM['name']} at {FIRM['phone_display']}"><span class="nav-phone-label">Free review</span>{FIRM['phone_display']}</a>
 <a class="btn btn-warn nav-cta" href="/free-case-review/">Free Case Review</a>
-<button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-btn>Menu</button>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-btn>
+<span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span><span class="menu-label">Menu</span>
+</button>
 </div>
 </div>
-<nav class="nav-row" aria-label="Primary"><div class="container"><div class="nav-links" id="primary-nav">{links}</div></div></nav>
+<div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+<nav class="nav-row" id="primary-nav" aria-label="Primary"><div class="container">
+<div class="nav-links">{links}</div>
+<div class="nav-drawer-cta">
+<a class="btn btn-warn" href="/free-case-review/">Free Case Review</a>
+<a class="btn btn-outline-light" href="tel:{FIRM['phone_href']}">Call {FIRM['phone_display']}</a>
+<p>No upfront fees &middot; {FIRM['legal_name']}</p>
+</div>
+</div></nav>
 </header>
+<div class="nav-backdrop" data-nav-backdrop hidden></div>
 <main id="content">
 """
 
@@ -274,6 +285,7 @@ In a life-threatening emergency, call 911 and follow instructions from Escambia 
 </div>
 </div>
 </footer>
+<a class="to-top" href="#content" aria-label="Back to top" data-to-top>&uarr;</a>
 <div class="call-bar" aria-label="Contact {FIRM['name']}">
 <a href="tel:{FIRM['phone_href']}">Call {FIRM['phone_display']}</a>
 <a href="/free-case-review/" class="call-bar-cta">Free Case Review</a>

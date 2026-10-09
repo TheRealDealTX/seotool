@@ -39,13 +39,95 @@
   }
   var CLASS = { HU: "Hurricane", TS: "Tropical Storm", TD: "Tropical Depression", STS: "Subtropical Storm", STD: "Subtropical Depression", PTC: "Potential Tropical Cyclone", PC: "Post-Tropical Cyclone", TY: "Typhoon" };
 
-  /* ---------- Mobile menu ---------- */
-  var menuBtn = $("[data-menu-btn]"), nav = $(".nav-row");
+  /* ---------- Mobile menu (slide-in drawer) ---------- */
+  var menuBtn = $("[data-menu-btn]"), nav = $(".nav-row"), backdrop = $("[data-nav-backdrop]"), header = $(".site-header");
+  var mq = window.matchMedia("(max-width: 960px)");
+  function menuOpen() { return nav && nav.classList.contains("is-open"); }
+  function setMenu(open) {
+    if (!menuBtn || !nav) return;
+    if (open) {
+      // Drawer starts right under the header, wherever the header is on screen.
+      document.documentElement.style.setProperty("--drawer-top", Math.max(0, Math.round(header.getBoundingClientRect().bottom)) + "px");
+      if (backdrop) { backdrop.hidden = false; requestAnimationFrame(function () { backdrop.classList.add("is-visible"); }); }
+    } else if (backdrop) {
+      backdrop.classList.remove("is-visible");
+      setTimeout(function () { if (!menuOpen()) backdrop.hidden = true; }, 300);
+    }
+    nav.classList.toggle("is-open", open);
+    document.documentElement.classList.toggle("menu-open", open);
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    var label = menuBtn.querySelector(".menu-label"); if (label) label.textContent = open ? "Close" : "Menu";
+    if (open) { var first = nav.querySelector("a"); if (first) first.focus({ preventScroll: true }); }
+  }
   if (menuBtn && nav) {
-    menuBtn.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    menuBtn.addEventListener("click", function () { setMenu(!menuOpen()); });
+    if (backdrop) backdrop.addEventListener("click", function () { setMenu(false); });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a") && menuOpen()) setMenu(false); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menuOpen()) { setMenu(false); menuBtn.focus(); } });
+    var onMq = function () { if (!mq.matches && menuOpen()) setMenu(false); };
+    if (mq.addEventListener) mq.addEventListener("change", onMq); else if (mq.addListener) mq.addListener(onMq);
+    window.addEventListener("pageshow", function () { if (menuOpen()) setMenu(false); });
+  }
+
+  /* ---------- Scroll effects: header state, progress bar, back-to-top ---------- */
+  var progress = $("[data-scroll-progress]"), toTop = $("[data-to-top]"), ticking = false;
+  function onScroll() {
+    ticking = false;
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (header) header.classList.toggle("is-scrolled", y > 40);
+    if (progress) progress.style.transform = "scaleX(" + (max > 0 ? Math.min(1, y / max) : 0) + ")";
+    if (toTop) toTop.classList.toggle("is-visible", y > 700);
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+  if (toTop) toTop.addEventListener("click", function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); });
+
+  /* ---------- Reveal on scroll + count-up stats ---------- */
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    var groups = [
+      [".section-head, .prose > h2, .page-hero .container > *, .claim-cta-inner > *", ""],
+      [".card, .step, .stat, .tool, .side-box, .side-cta, .tactic-list li, .faq details, .timeline li, .table-wrap, .callout, .quiet-box", ""],
+      [".lead-card", "reveal-zoom"]
+    ];
+    var targets = [];
+    groups.forEach(function (g) {
+      $$(g[0]).forEach(function (el) {
+        if (el.closest(".hero") && !el.classList.contains("lead-card")) return;   // keep the hero text instant
+        if (el.classList.contains("reveal")) return;
+        el.classList.add("reveal"); if (g[1]) el.classList.add(g[1]);
+        // stagger siblings in the same grid/list
+        var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.classList.contains("reveal"); });
+        el.style.setProperty("--i", Math.min(sibs.indexOf(el), 6));
+        targets.push(el);
+      });
     });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    targets.forEach(function (el) { io.observe(el); });
+    document.documentElement.classList.add("motion");
+    // Safety net: never leave anything hidden (e.g. anchors jumped past, print, odd browsers).
+    setTimeout(function () { targets.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.bottom < 0) el.classList.add("is-in"); }); }, 1200);
+    window.addEventListener("beforeprint", function () { targets.forEach(function (el) { el.classList.add("is-in"); }); });
+
+    var counters = $$(".stat strong").filter(function (el) { return /^\D*\d+\D*$/.test(el.textContent) && !/^\D*0\D*$/.test(el.textContent); });
+    var cio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        cio.unobserve(en.target);
+        var el = en.target, m = /^(\D*)(\d+)(\D*)$/.exec(el.textContent), end = +m[2], t0 = null;
+        function step(ts) {
+          if (!t0) t0 = ts;
+          var p = Math.min(1, (ts - t0) / 1100), v = Math.round(end * (1 - Math.pow(1 - p, 3)));
+          el.textContent = m[1] + v + m[3];
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cio.observe(el); });
   }
 
   /* ---------- NWS alerts for Pensacola (alert bar + lists) ---------- */
