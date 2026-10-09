@@ -29,7 +29,7 @@ while IFS= read -r f; do
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . -type f \( -path './.git/*' -o -path './dist/*' -o -path './templates/*' \
-          -o -path './content/*' -o -path './backup/*' -o -name '*.py' -o -path '*/__pycache__/*' \
+          -o -path './content/*' -o -path './backup/*' -o -path './sites/*' -o -name '*.py' -o -path '*/__pycache__/*' \
           -o -name 'README.md' -o -name '.gitignore' -o -name 'deploy.sh' \) -prune -o -type f -print | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]
