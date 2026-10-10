@@ -3,7 +3,7 @@
 A static rebuild of **ollieharperstudio.com** as a modern illustration-studio
 site. It keeps the topic and URL structure of the domain's 2014–2017 era, when it
 was an LA commercial illustration studio on Squarespace. No CMS, no database:
-generated HTML, one CSS file, one JS file and original SVG artwork.
+generated HTML, one CSS file, one JS file and royalty-free (CC0) photography.
 
 - **Staging (live now):** https://darkblue-quail-416052.hostingersite.com
   (Hostinger Agency Growth, website UID `IBqTPWf6a`, Phoenix, PHP 8.3 php-fpm)
@@ -26,10 +26,11 @@ open `/home.html` for the homepage there.
 | File | What it is |
 | --- | --- |
 | `build.py` | Layout, all page copy, JSON-LD, sitemap, robots |
-| `art.py` | Every illustration, drawn as SVG (no stock images) |
+| `art.py` | The coloring-page line art (interactive SVG), favicon, lipstick shades |
+| `assets/photos/` | CC0 photos as 480/960px WebP, plus `credits.json` (source, creator, license, alt text) |
 | `assets/css/site.css`, `assets/js/site.js` | Styles and effects |
 | `index.php` | Front controller: homepage, legacy 301s, 404/410 |
-| `home.html`, `*/index.html`, `404.html`, `410.html`, `sitemap.xml`, `robots.txt`, `assets/img/*.svg` | Generated output (committed) |
+| `home.html`, `*/index.html`, `404.html`, `410.html`, `sitemap.xml`, `robots.txt` | Generated output (committed) |
 
 ## SEO research behind the page list
 
@@ -78,7 +79,7 @@ The 2017 studio belonged to a real, still-working illustrator, and the
 Apartment Therapy links credit her by name. The rebuild does **not** use her
 name, bio, client list or artwork, and `/about/` states that the studio
 relaunched under new ownership and isn't affiliated with the domain's previous
-owner. All artwork is drawn in `art.py`. Keep it that way: presenting the site as
+owner, and that the photography is stock imagery rather than client work. Keep it that way: presenting the site as
 her studio would be impersonation, and is also a common reason expired-domain
 sites get flagged.
 
@@ -87,15 +88,51 @@ sites get flagged.
 Cream paper, ink outlines, and a tomato / blush / mustard / sage / cobalt
 palette. Fraunces for display type, DM Sans for body. Effects:
 
-- Animated morphing color blobs and floating SVG objects
-- Coffee steam and twinkling sparkles
-- Staggered scroll reveals and a split-line hero headline
-- Rotated marquee
-- 3D tilt cards and a cursor-following glow
-- Paper grain overlay
+- Hero photos unveil with a clip-path wipe, then drift in a slow Ken Burns zoom
+  over an offset color block and a floating disc
+- Spinning "commissions open" sticker on the homepage hero
+- Full-bleed photo cards with 3D tilt and hover zoom
+- Gallery tiles that rotate and zoom on hover
+- Staggered scroll reveals, a split-line hero headline and a rotated marquee
+- Cursor-following glow, mouse parallax on the hero and a paper grain overlay
 - Interactive coloring page: palette, custom color, undo, "surprise me", SVG download
 
 Everything respects `prefers-reduced-motion`.
+
+## Photography
+
+All photos are **CC0 (public domain)** from [StockSnap](https://stocksnap.io),
+found through the [Openverse](https://openverse.org) API. They're free for
+commercial use, need no attribution and need no permission. Each one is cropped
+to 4:3 and saved as 480px and 960px WebP. To swap a photo, replace both
+`assets/photos/<name>-480.webp` and `-960.webp` and update its entry in
+`credits.json`; the `alt` text there is what the pages use.
+
+| Key | Alt text | Source |
+| --- | --- | --- |
+| `hero` | Artist's palette, paint tubes and brushes on a wooden studio table | [paint-supplies-TCHBOFXNQ1](https://stocksnap.io/photo/paint-supplies-TCHBOFXNQ1) |
+| `studio` | An illustrator painting a watercolor wash with a fine brush | [painting-painter-BEWOYG4VRW](https://stocksnap.io/photo/painting-painter-BEWOYG4VRW) |
+| `projects` | Designer working on a laptop beside printed layout sketches | [office-work-42H3JH8QI5](https://stocksnap.io/photo/office-work-42H3JH8QI5) |
+| `lipsticks` | A pile of black lipstick tubes on white fur | [lipstick-beauty-LIDZNETFVF](https://stocksnap.io/photo/lipstick-beauty-LIDZNETFVF) |
+| `culinary` | Overhead view of a brunch table with waffles, eggs and coffee | [breakfast-food-OC8WX0E0X3](https://stocksnap.io/photo/breakfast-food-OC8WX0E0X3) |
+| `fashion` | Fashion portrait of a woman in a camel coat with a faux-fur collar | [fashion-woman-2JSWQ7PQIU](https://stocksnap.io/photo/fashion-woman-2JSWQ7PQIU) |
+| `styling` | Styled interior with a patterned orange armchair and side table | [house-interior-XCOZ3XTV7M](https://stocksnap.io/photo/house-interior-XCOZ3XTV7M) |
+| `coloring` | Rainbow row of colored pencils on a pink background | [colorful-pencils-UFDTNK6BWQ](https://stocksnap.io/photo/colorful-pencils-UFDTNK6BWQ) |
+| `thoughts` | Hands writing in a notebook next to coffee and a croissant | [journal-notepad-DPKNIIN5X3](https://stocksnap.io/photo/journal-notepad-DPKNIIN5X3) |
+| `contact` | Minimal desk with a notebook, keyboard and a cup of coffee | [office-desk-0EFDQKW84D](https://stocksnap.io/photo/office-desk-0EFDQKW84D) |
+| `about` | An artist's studio crowded with brushes, paint pots and canvases | [paint-brushes-AQ051P63XP](https://stocksnap.io/photo/paint-brushes-AQ051P63XP) |
+| `map` | Red-brick corner building with a busy restaurant patio | [houses-apartments-C958DA23C4](https://stocksnap.io/photo/houses-apartments-C958DA23C4) |
+| `tile-latte` | Latte with rosetta latte art in a red cup | [coffee-latte-ZJZWZJL0DB](https://stocksnap.io/photo/coffee-latte-ZJZWZJL0DB) |
+| `tile-croissant` | Golden croissant on a white plate | [croissant-pastry-3020ACDE09](https://stocksnap.io/photo/croissant-pastry-3020ACDE09) |
+| `tile-lemon` | Fresh lemons scattered on a white surface | [lemons-fruits-W28QPZPAK6](https://stocksnap.io/photo/lemons-fruits-W28QPZPAK6) |
+| `tile-pizza` | Hands slicing a pepperoni and olive pizza | [pizza-food-R926LU1YEA](https://stocksnap.io/photo/pizza-food-R926LU1YEA) |
+| `tile-sunglasses` | Yellow sunglasses on a split blue and pink background | [sunglasses-summer-EVAARS1W4M](https://stocksnap.io/photo/sunglasses-summer-EVAARS1W4M) |
+| `tile-heel` | Black heels and white trousers stepping up stone stairs | [fashion-woman-UOQEL3GJBA](https://stocksnap.io/photo/fashion-woman-UOQEL3GJBA) |
+| `tile-lipstick` | Colorful eyeshadow palette and makeup on a dark table | [beauty-makeup-34MSYVUYS0](https://stocksnap.io/photo/beauty-makeup-34MSYVUYS0) |
+| `tile-pencil` | Fan of colored pencils on a turquoise background | [colored-pencil-KDFVIYEYB2](https://stocksnap.io/photo/colored-pencil-KDFVIYEYB2) |
+| `tile-chair` | Cozy living room with bookshelves, a fireplace and armchairs | [house-home-6KJ12UWOKQ](https://stocksnap.io/photo/house-home-6KJ12UWOKQ) |
+| `tile-plant` | Succulent in a tin can against a pale blue wall | [house-plant-SUSVDM9A0A](https://stocksnap.io/photo/house-plant-SUSVDM9A0A) |
+| `tile-lamp` | Desk with a lamp in front of a bold patterned wallpaper | [office-work-3TJ6NCTIRT](https://stocksnap.io/photo/office-work-3TJ6NCTIRT) |
 
 ## Going live checklist
 

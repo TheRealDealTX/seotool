@@ -37,13 +37,25 @@ NAV = [
 PAGES = []  # (path, lastmod) for the sitemap
 
 
-def art(name, cls="", eager=False):
-    """Inline an SVG from art.py so its CSS animations run."""
-    return f'<div class="{cls}">{ART[name]}</div>' if cls else ART[name]
+# Royalty-free (CC0) photography, see assets/photos/credits.json and the README.
+PHOTOS = json.loads((ROOT / "assets/photos/credits.json").read_text(encoding="utf-8"))
 
 
-def img(name, alt, w=200, h=200):
-    return f'<img src="/assets/img/{name}.svg" alt="{escape(alt)}" width="{w}" height="{h}" loading="lazy">'
+def photo(name, cls="photo", eager=False, sizes="(max-width: 920px) 100vw, 50vw"):
+    """A framed, responsive WebP photo. Hero photos load eagerly, everything else lazily."""
+    p = PHOTOS[name]
+    srcset = ", ".join(f"/assets/photos/{name}-{w}.webp {w}w" for w in p["widths"])
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    return (f'<div class="{cls}"><img src="/assets/photos/{name}-{p["widths"][-1]}.webp" srcset="{srcset}" sizes="{sizes}" '
+            f'alt="{escape(p["alt"])}" width="960" height="720" {load} decoding="async"></div>')
+
+
+def art(name, cls="photo", eager=False):
+    return photo(name, cls, eager)
+
+
+def img(name, alt=None, w=None, h=None):
+    return photo(name, "tile-photo", sizes="(max-width: 920px) 50vw, 25vw")
 
 
 def breadcrumbs(trail):
@@ -123,7 +135,7 @@ def layout(path, title, desc, body, schema=(), og_type="website", current=None):
         <li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
     </div>
     <div class="footer-word" aria-hidden="true">Ollie Harper Studio</div>
-    <div class="legal"><span>© {date.today().year} {NAME}. All illustrations on this site are original studio artwork.</span><span>Drawn with a lot of coffee.</span></div>
+    <div class="legal"><span>© {date.today().year} {NAME}. Photography: CC0 / royalty-free.</span><span>Drawn with a lot of coffee.</span></div>
   </div>
 </footer>
 <script src="/assets/js/site.js?v={TODAY}" defer></script>
@@ -144,7 +156,7 @@ def page_hero(trail, eyebrow, h1, lede, art_name, actions=""):
     crumbs, crumb_schema = breadcrumbs(trail)
     return f"""<section class="page-hero"><div class="wrap">
   <div>{crumbs}<span class="eyebrow">{eyebrow}</span><h1>{h1}</h1><p class="lede">{lede}</p>{actions}</div>
-  <div class="hero-art reveal">{art(art_name)}</div>
+  <div class="hero-art reveal">{art(art_name, "photo hero-photo", eager=True)}</div>
 </div></section>""", crumb_schema
 
 
@@ -210,7 +222,7 @@ def home():
     <p class="lede">We draw for food, fashion, beauty and lifestyle brands — menus, packaging, campaigns, editorial and coloring books that people actually want to keep.</p>
     <div class="hero-actions"><a class="btn" href="/contact/">Start a project <span class="arrow">→</span></a><a class="btn ghost" href="/projects/">See how we work</a></div>
   </div>
-  <div class="hero-art">{art("hero")}</div>
+  <div class="hero-art">{art("hero", "photo hero-photo", eager=True)}<div class="sticker" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><path id="ring" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs><text font-family="DM Sans, sans-serif" font-size="10.5" font-weight="700" fill="#1d1a24"><textPath href="#ring" textLength="286" lengthAdjust="spacing">COMMISSIONS OPEN • DRAWN BY HAND • </textPath></text></svg><b>OH</b></div></div>
 </div></section>
 {marquee(["Menus", "Packaging", "Campaigns", "Editorial", "Lookbooks", "Coloring books", "Murals", "Merch"])}
 <section class="section"><div class="wrap">
@@ -219,7 +231,7 @@ def home():
   <div class="cards">{card_html}</div>
 </div></section>
 <section class="section alt"><div class="wrap split">
-  <div class="reveal">{art("projects")}</div>
+  <div class="reveal">{art("studio")}</div>
   <div class="reveal"><span class="eyebrow">Commercial illustration</span><h2>Artwork that does a job — and looks good doing it.</h2>
     <p>A good commercial illustration has to work harder than a photo. It has to explain a product, carry a brand's personality and still read at thumbnail size. We design every piece around where it will live, so the line weight, palette and composition hold up from a 30-second scroll to a six-foot window decal.</p>
     <p>Typical commissions include campaign key art, seasonal promo cards, product packaging, event posters, editorial spot illustrations, tote and tee graphics, and the small brand moments in between: thank-you cards, menu boards, stickers.</p>
@@ -289,8 +301,8 @@ def culinary():
     <h2 class="reveal">The ingredients-first approach</h2>
     <p>We start every food project in the kitchen or behind the bar. Tasting the product, watching how it's made and photographing references gives the drawings the small truths that make them believable — the exact color of a matcha, the way a particular pastry flakes. Then we simplify: a strong silhouette, a limited palette and a confident line so the artwork reads instantly from across a room.</p>
     <blockquote>The best menu art makes someone order something they didn't come in for.</blockquote>
-    <h2 class="reveal">Recent sketchbook</h2>
-    {gallery([("tile-latte", "Seasonal latte"), ("tile-croissant", "Butter croissant"), ("tile-lemon", "Meyer lemon"), ("tile-pizza", "Slice of the day")])}
+    <h2 class="reveal">On the reference board</h2>
+    {gallery([("tile-latte", "Seasonal latte"), ("tile-croissant", "Butter croissant"), ("tile-lemon", "Fresh lemons"), ("tile-pizza", "Slice of the day")])}
     <h2 class="reveal">Questions about food illustration</h2>{faq_html}
   </article>
   <aside class="aside">
@@ -306,7 +318,7 @@ def culinary():
 
 
 def fashion():
-    hero, crumb = page_hero([("Home", "/"), ("Fashion &amp; Beauty", "/images/")], "Fashion &amp; beauty illustration",
+    hero, crumb = page_hero([("Home", "/"), ("Fashion & Beauty", "/images/")], "Fashion &amp; beauty illustration",
                             "Fashion illustration with a point of view.",
                             "Lookbooks, beauty launches, how-to guides, lingerie and accessories, editorial spots and window art — drawn with attitude.",
                             "fashion", '<div class="hero-actions"><a class="btn" href="/contact/">Commission fashion art <span class="arrow">→</span></a></div>')
@@ -339,7 +351,7 @@ def fashion():
       <li><strong>Window and in-store art</strong> sized for vinyl, print or hand-painting.</li>
     </ul>
     <h2 class="reveal">A small accessories edit</h2>
-    {gallery([("tile-sunglasses", "Cat-eye sunglasses"), ("tile-heel", "Cobalt slingback"), ("tile-lipstick", "Plum bullet"), ("tile-pencil", "Sketch pencil")])}
+    {gallery([("tile-sunglasses", "Cat-eye sunglasses"), ("tile-heel", "Night-out heels"), ("tile-lipstick", "The full palette"), ("tile-pencil", "Color pencils")])}
     <h2 class="reveal">Color that sells</h2>
     <p>We build a fashion palette from the product outward: the hero color of the collection, one supporting tone and one surprise accent. That discipline keeps a series of illustrations recognizable across a whole season, whether it's printed on a shopping bag or animated in a story.</p>
     <h2 class="reveal">Questions about fashion illustration</h2>{faq_html}
@@ -360,7 +372,7 @@ def coloring():
     hero, crumb = page_hero([("Home", "/"), ("Coloring Book", "/coloring-book/")], "Coloring book",
                             "Rooms to color, dream up and make your own.",
                             "Hand-drawn interiors and patterns for all ages. Try a page right here — pick a color, click a shape, and download your finished room.",
-                            "styling", '<div class="hero-actions"><a class="btn" href="#studio">Start coloring <span class="arrow">↓</span></a></div>')
+                            "coloring", '<div class="hero-actions"><a class="btn" href="#studio">Start coloring <span class="arrow">↓</span></a></div>')
     palette = ''.join(
         f'<button type="button" style="--sw:{c}" data-color="{c}" aria-label="{n}" aria-pressed="{"true" if i == 0 else "false"}"></button>'
         for i, (n, c) in enumerate([("Tomato", "#ef5b3c"), ("Blush", "#f4a7b9"), ("Mustard", "#f2b134"), ("Sage", "#8fb39a"),
@@ -416,7 +428,7 @@ def coloring():
 
 
 def styling():
-    hero, crumb = page_hero([("Home", "/"), ("Styling &amp; Set Direction", "/set-stylingdirection/")], "Prop styling &amp; set direction",
+    hero, crumb = page_hero([("Home", "/"), ("Styling & Set Direction", "/set-stylingdirection/")], "Prop styling &amp; set direction",
                             "Sets, props and palettes with a story.",
                             "Art direction for shoots, launches and windows — where illustration, props and photography share one look.",
                             "styling", '<div class="hero-actions"><a class="btn" href="/contact/">Plan a shoot <span class="arrow">→</span></a></div>')
@@ -434,7 +446,7 @@ def styling():
       <li><strong>Window and pop-up design</strong> for retail and events.</li>
     </ul>
     <h2 class="reveal">Our styling kit</h2>
-    {gallery([("tile-chair", "The mustard chair"), ("tile-plant", "Always a plant"), ("tile-lamp", "Warm light"), ("tile-pencil", "Sketch first")])}
+    {gallery([("tile-chair", "The cozy corner"), ("tile-plant", "Always a plant"), ("tile-lamp", "Pattern and light"), ("tile-pencil", "Color first")])}
     <h2 class="reveal">How we plan a set</h2>
     <ol class="steps">
       <li class="reveal"><h3>Story</h3><p>One sentence that describes the moment the picture captures.</p></li>
@@ -568,7 +580,7 @@ def thoughts():
 {cta()}"""
         article = {"@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "datePublished": p["date"],
                    "dateModified": p["modified"], "author": {"@id": ORIGIN + "/#org"}, "publisher": {"@id": ORIGIN + "/#org"},
-                   "mainEntityOfPage": ORIGIN + path, "image": f"{ORIGIN}/assets/img/{p['art']}.svg"}
+                   "mainEntityOfPage": ORIGIN + path, "image": f"{ORIGIN}/assets/photos/{p['art']}-960.webp"}
         write(path, layout(path, f"{p['title']} | Ollie Harper", p["desc"], body, [crumb_schema, article], og_type="article", current="/thoughts/"))
 
     hero, crumb = page_hero([("Home", "/"), ("Thoughts", "/thoughts/")], "The journal", "Thoughts, sketches &amp; ingredients.",
@@ -586,7 +598,7 @@ def thoughts():
 
 def about():
     hero, crumb = page_hero([("Home", "/"), ("About", "/about/")], "About the studio", "Small studio. Big color.",
-                            "Ollie Harper is an independent illustration studio for brands that want artwork with warmth, wit and an appetite for color.", "hero")
+                            "Ollie Harper is an independent illustration studio for brands that want artwork with warmth, wit and an appetite for color.", "about")
     body = f"""{hero}
 <section class="section" style="padding-top:0"><div class="wrap layout">
   <article class="prose">
@@ -598,7 +610,7 @@ def about():
     <li><a href="/images/">Fashion &amp; beauty illustration</a></li><li><a href="/coloring-book/">Coloring books</a>, standard and custom</li>
     <li><a href="/set-stylingdirection/">Prop styling &amp; set direction</a></li></ul>
     <h2 class="reveal">A note on this website</h2>
-    <p>Ollie Harper Studio relaunched in {date.today().year} under new ownership. The studio is not affiliated with any illustrator or business that previously used this web address, and all artwork shown here is original to the current studio.</p>
+    <p>Ollie Harper Studio relaunched in {date.today().year} under new ownership. The studio is not affiliated with any illustrator or business that previously used this web address, and the photography used across the site is royalty-free (CC0) stock imagery for mood and reference, not client work.</p>
   </article>
   <aside class="aside"><div class="panel ink reveal"><h3>Say hello</h3><p>New projects, collaborations or just a favorite lipstick shade.</p><a class="btn" href="/contact/">Contact</a></div></aside>
 </div></section>
@@ -662,10 +674,6 @@ def error_pages():
 
 
 def assets():
-    out = ROOT / "assets/img"
-    out.mkdir(parents=True, exist_ok=True)
-    for name, data in ART.items():
-        (out / f"{name}.svg").write_text(data, encoding="utf-8")
     (ROOT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
 
 
