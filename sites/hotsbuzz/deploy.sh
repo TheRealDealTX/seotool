@@ -1,5 +1,5 @@
 #!/bin/bash
-# Deploy ./public to the hotsbuzz Hostinger Agency website (plain php-fpm
+# Deploy ./public to the hotsbuzz Hostinger Agency website UID Rgklz2dNn (plain php-fpm
 # website, currently on its temporary domain). Same mechanism as the repo-root
 # deploy.sh: files go one by one through the website's File Browser TUS API.
 # Get the three credentials from the Hostinger API call

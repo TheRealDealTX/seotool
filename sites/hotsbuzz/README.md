@@ -59,6 +59,13 @@ paths to `index.php`. Because of that there is deliberately **no `index.html`**:
 homepage is `home.html`, served by `index.php`, and unknown paths get `404.html`
 with a real 404.
 
+### Where it lives
+
+Hostinger Agency website UID **`Rgklz2dNn`** (order 1008744732, phoenix, php-fpm 8.5),
+created 2026-10-10 on the temporary domain
+**https://springgreen-goshawk-823337.hostingersite.com**. Deployed with `./deploy.sh`.
+Hostinger's placeholder `default.php` was deleted after the first upload.
+
 ### Temporary domain → hotsbuzz.com
 
 While the site lives on the temporary Hostinger domain, `STAGING = True` in
@@ -67,7 +74,8 @@ While the site lives on the temporary Hostinger domain, `STAGING = True` in
 Canonicals, sitemap and JSON-LD already point at `https://hotsbuzz.com`.
 
 On the day hotsbuzz.com is connected:
-1. Point the domain at the website in hPanel (add hotsbuzz.com as the website's domain).
+1. Point hotsbuzz.com's nameservers/DNS at Hostinger, then attach it to website `Rgklz2dNn`
+   (`agency-hosting_domains_change-website` from the temporary domain, or hPanel).
 2. Set `STAGING = False`, then run `python3 build.py && python3 validate.py && ./deploy.sh`, and clear the cache.
 3. Check that `http://hotsbuzz.com/` and `https://www.hotsbuzz.com/` 301 to `https://hotsbuzz.com/`.
 4. Add the site to Google Search Console and submit `/sitemap.xml`.
