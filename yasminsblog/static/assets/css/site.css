@@ -110,7 +110,8 @@ a { color: inherit; }
 .hero-stack { position: absolute; inset: 0; }
 .stack-card { position: absolute; width: 72%; aspect-ratio: 4/5; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 6px solid var(--card);
   transition: transform .8s var(--ease); animation: bob 7s ease-in-out infinite alternate; }
-.stack-card svg { width: 100%; height: 100%; }
+.stack-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.35)); }
+.stack-card span { z-index: 1; }
 .stack-card span { position: absolute; left: 14px; bottom: 14px; background: var(--card); color: var(--ink); border-radius: 999px; padding: 4px 12px; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .sc0 { left: 0; top: 8%; transform: rotate(-8deg); }
 .sc1 { left: 26%; top: 0; transform: rotate(5deg); animation-delay: -2.4s; }
@@ -146,14 +147,10 @@ a { color: inherit; }
 .card:hover { transform: translateY(-6px); }
 .card-link { position: absolute; inset: 0; z-index: 1; }
 .card-art { aspect-ratio: 3/2; overflow: hidden; }
-.card-art svg, .feature-art svg { width: 100%; height: 100%; transition: transform 1.2s var(--ease); }
-.card:hover .card-art svg, .feature:hover .feature-art svg { transform: scale(1.06); }
-.cover .sh { transform-box: fill-box; transform-origin: center; transition: transform 1.2s var(--ease); }
-.card:hover .s1, .feature:hover .s1 { transform: translate(-3%, 2%) scale(1.06); }
-.card:hover .s2, .feature:hover .s2 { transform: translateY(-6%); }
-.card:hover .s3, .feature:hover .s3 { transform: translateX(8%); }
-.card:hover .s5, .feature:hover .s5 { transform: rotate(140deg); }
-.card:hover .s6, .feature:hover .s6 { transform: translateX(-6%); }
+.card-art img, .feature-art img, .stack-card img, .plate-art img, .strip-item img, .post-hero-art img, .figure img, .credit-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card-art img, .feature-art img { transition: transform 1.2s var(--ease), filter .6s; }
+.card:hover .card-art img, .feature:hover .feature-art img { transform: scale(1.07); filter: saturate(1.15); }
+.card-art, .feature-art, .plate-art { background: var(--line); }
 .card-body { padding: 20px 22px 26px; }
 .card h3 { font: 700 23px/1.15 var(--serif); letter-spacing: -.01em; margin: 10px 0 8px; }
 .card p { margin: 0; color: var(--ink-2); font-size: 15.5px; }
@@ -183,8 +180,10 @@ a { color: inherit; }
 
 .strip { display: flex; gap: 20px; overflow-x: auto; padding: 4px max(16px, calc((100% - 1240px) / 2)) 26px; scroll-snap-type: x mandatory; scrollbar-width: thin; }
 .strip-item { flex: 0 0 min(300px, 72vw); margin: 0; scroll-snap-align: start; }
-.strip-item svg { border-radius: 18px; aspect-ratio: 4/5; width: 100%; height: auto; box-shadow: var(--shadow); transition: transform .6s var(--ease); }
-.strip-item:hover svg { transform: rotate(-2deg) scale(1.03); }
+.strip-item { text-decoration: none; }
+.strip-item figure { margin: 0; }
+.strip-item img { border-radius: 18px; aspect-ratio: 4/5; height: auto; box-shadow: var(--shadow); transition: transform .6s var(--ease); }
+.strip-item:hover img { transform: rotate(-2deg) scale(1.03); }
 .strip-item figcaption { font: italic 500 18px var(--serif); margin-top: 12px; }
 
 .cta-band { text-align: center; background: var(--mustard); color: #14110f; }
@@ -208,8 +207,9 @@ a { color: inherit; }
 /* post */
 .post-hero { position: relative; overflow: hidden; isolation: isolate; padding: clamp(60px, 10vw, 140px) 0 clamp(40px, 6vw, 70px); }
 .post-hero-art { position: absolute; inset: 0; z-index: -2; }
-.post-hero-art svg { width: 100%; height: 120%; }
-.post-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 10%, transparent) 0%, color-mix(in srgb, var(--bg) 35%, transparent) 55%, var(--bg) 98%); }
+.post-hero-art img { height: 125%; animation: kenburns 24s ease-out both; }
+@keyframes kenburns { from { scale: 1.12; } to { scale: 1; } }
+.post-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(10,8,7,.15) 0%, rgba(10,8,7,.25) 50%, var(--bg) 99%); }
 .post-hero h1 { font-size: clamp(40px, 6vw, 80px); margin: 14px 0 18px; }
 .post-hero-text { background: color-mix(in srgb, var(--bg) 70%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: clamp(22px, 4vw, 44px); border-radius: var(--radius); }
 .dek { font: italic 400 clamp(19px, 2vw, 24px)/1.45 var(--serif); color: var(--ink-2); margin: 0 0 20px; }
@@ -229,7 +229,18 @@ a { color: inherit; }
 .plates { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 2em 0; }
 .plate { margin: 0; }
 .plate-art { position: relative; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); aspect-ratio: 4/5; }
-.plate-art svg { width: 100%; height: 100%; }
+.plate-art img { transition: transform 1s var(--ease); }
+.plate:hover .plate-art img { transform: scale(1.05); }
+.figure { margin: 2em 0; }
+.figure img { height: auto; border-radius: 18px; box-shadow: var(--shadow); }
+.figure figcaption, .hero-credit { font-size: 14px; color: var(--ink-2); margin-top: 10px; line-height: 1.5; }
+.hero-credit { margin: 0 0 14px; font-size: 13px; }
+.credit { display: block; font-size: 12px; opacity: .8; margin-top: 2px; }
+.credit a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; }
+.prose .credit a { text-decoration-color: currentColor; }
+.credit-list { list-style: none; padding: 0; }
+.credit-list li { display: flex; gap: 16px; align-items: center; padding: 14px 0; border-top: 1px solid var(--line); font-size: 15px; line-height: 1.5; }
+.credit-thumb { flex: 0 0 96px; height: 72px; border-radius: 10px; overflow: hidden; }
 .plate-no { position: absolute; top: 12px; left: 12px; background: var(--card); padding: 3px 10px; border-radius: 999px; font: 700 12px var(--sans); }
 .plate figcaption { font-size: 15px; color: var(--ink-2); margin-top: 10px; line-height: 1.55; }
 .plate figcaption strong { color: var(--ink); display: block; font: 700 19px var(--serif); }

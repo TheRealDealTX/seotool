@@ -8,13 +8,15 @@ Standard library only, plus Pillow (optional) for the Open Graph PNGs.
 import html
 import json
 import os
-import random
 import shutil
 from datetime import date
 from email.utils import format_datetime
 from datetime import datetime, timezone
 
 from content import SITE, CATEGORIES, TAGS, POSTS
+from images import IMAGES, PLATES
+
+PHOTOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "photos.json"), encoding="utf-8"))
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
@@ -23,15 +25,6 @@ UPDATED = SITE["updated"]
 VERSION = UPDATED.replace("-", "")
 
 esc = html.escape
-
-PALETTES = [
-    ("#f6efe4", "#e8553a", "#1f3a5f", "#f2b134", "#14110f"),   # pastrami & mustard
-    ("#efe7ff", "#6b3b5b", "#ff7a59", "#2b2d42", "#ffd166"),   # neon dusk
-    ("#e9f3ef", "#1f6f6a", "#f2b134", "#e8553a", "#14110f"),   # subway tile
-    ("#fff1e6", "#d62246", "#4b88a2", "#f4b942", "#1b1b1e"),   # candy store
-    ("#f3f0e8", "#2d6a4f", "#e76f51", "#264653", "#e9c46a"),   # lemon grove
-    ("#fdf0d5", "#c1121f", "#003049", "#669bbc", "#780000"),   # diner
-]
 
 NAV = [("Home", "/"), ("Journal", "/mamablog"), ("Food", "/mamablog/category/Food"),
        ("Culture", "/mamablog/category/Culture"), ("Photography", "/mamablog/category/Photography"),
@@ -42,91 +35,53 @@ def slug_of(p):
     return p["path"].rsplit("/", 1)[-1]
 
 
-def pal_for(key):
-    return PALETTES[sum(map(ord, key)) % len(PALETTES)]
+# --------------------------------------------------------------- photos
+LICENSE_LABEL = {"cc0": "CC0", "pdm": "Public Domain"}
 
 
-# --------------------------------------------------------------- cover art
-def cover_svg(key, title="", variant=0, cls="cover"):
-    """Seeded Bauhaus-style composition: unique per post, no stock photos."""
-    rnd = random.Random(f"{key}:{variant}")
-    bg, a, b, c, ink = pal_for(key + str(variant))
-    W, H = 1200, 800
-    s = [f'<svg class="{cls}" viewBox="0 0 {W} {H}" preserveAspectRatio="xMidYMid slice" role="img" aria-label="{esc(title)}" xmlns="http://www.w3.org/2000/svg">',
-         f'<rect width="{W}" height="{H}" fill="{bg}"/>']
-    # big disc
-    cx, cy, r = rnd.randint(250, 950), rnd.randint(200, 600), rnd.randint(220, 360)
-    s.append(f'<circle class="sh s1" cx="{cx}" cy="{cy}" r="{r}" fill="{a}"/>')
-    # half disc
-    hx, hy, hr = rnd.randint(100, 1100), rnd.choice([0, H]), rnd.randint(160, 300)
-    sweep = 1 if hy == H else 0
-    s.append(f'<path class="sh s2" d="M{hx-hr} {hy} A{hr} {hr} 0 0 {sweep} {hx+hr} {hy} Z" fill="{b}"/>')
-    # stripes
-    sx, sy = rnd.randint(0, 900), rnd.randint(0, 600)
-    for i in range(rnd.randint(4, 7)):
-        s.append(f'<rect class="sh s3" x="{sx}" y="{sy + i*26}" width="{rnd.randint(180, 320)}" height="11" rx="5" fill="{ink}"/>')
-    # dot grid
-    gx, gy = rnd.randint(40, 1000), rnd.randint(40, 640)
-    dots = "".join(f'<circle cx="{gx + i*28}" cy="{gy + j*28}" r="5"/>' for i in range(6) for j in range(4))
-    s.append(f'<g class="sh s4" fill="{c}">{dots}</g>')
-    # quarter arc ring
-    ax, ay, ar = rnd.randint(200, 1000), rnd.randint(150, 650), rnd.randint(90, 170)
-    s.append(f'<circle class="sh s5" cx="{ax}" cy="{ay}" r="{ar}" fill="none" stroke="{c}" stroke-width="34" stroke-dasharray="{int(ar*1.6)} {int(ar*5)}"/>')
-    # squiggle
-    px, py = rnd.randint(80, 700), rnd.randint(120, 700)
-    d = f"M{px} {py} " + " ".join(f"q 40 {(-1)**k * 60} 80 0" for k in range(rnd.randint(4, 6)))
-    s.append(f'<path class="sh s6" d="{d}" fill="none" stroke="{ink}" stroke-width="14" stroke-linecap="round"/>')
-    s.append("</svg>")
-    return "".join(s)
+def license_label(m):
+    lic = m["license"]
+    return LICENSE_LABEL.get(lic) or f"CC {lic.upper()} {m['license_version']}"
 
 
-def og_png(key, title, dest):
-    """1200x630 share image: same palette and shapes, plus the title."""
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-    except ImportError:
-        return False
-    rnd = random.Random(f"{key}:0")
-    bg, a, b, c, ink = pal_for(key + "0")
-    im = Image.new("RGB", (1200, 630), bg)
-    d = ImageDraw.Draw(im)
-    cx, cy, r = rnd.randint(700, 1050), rnd.randint(150, 480), rnd.randint(200, 300)
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=a)
-    hr = rnd.randint(140, 220)
-    d.pieslice([900 - hr, 630 - hr, 900 + hr, 630 + hr], 180, 360, fill=b)
-    for i in range(6):
-        d.rounded_rectangle([60, 470 + i * 22, 300, 479 + i * 22], 4, fill=ink)
-    for i in range(6):
-        for j in range(3):
-            d.ellipse([820 + i * 26, 60 + j * 26, 830 + i * 26, 70 + j * 26], fill=c)
+def photo(name, alt, cls="", sizes="(max-width: 640px) 100vw, 33vw", eager=False):
+    m = PHOTOS[name]
+    return (f'<img class="{cls}" src="/assets/img/photos/{name}.webp" '
+            f'srcset="/assets/img/photos/{name}-sm.webp 800w, /assets/img/photos/{name}.webp {m["w"]}w" sizes="{sizes}" '
+            f'width="{m["w"]}" height="{m["h"]}" alt="{esc(alt)}" '
+            + ('fetchpriority="high" ' if eager else 'loading="lazy" ') + 'decoding="async">')
 
-    def font(size, bold=True):
-        for f in ("/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf" if bold else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-                  "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf"):
-            if os.path.exists(f):
-                return ImageFont.truetype(f, size)
-        return ImageFont.load_default()
 
-    words, lines, cur, ft = title.split(), [], "", font(58)
-    for w in words:
-        t = (cur + " " + w).strip()
-        if d.textlength(t, font=ft) > 700 and cur:
-            lines.append(cur)
-            cur = w
-        else:
-            cur = t
-    lines.append(cur)
-    lines = lines[:4]
-    pad = 18
-    y = 70
-    d.text((60, 40 - 10), "YASMIN'S BLOG", font=font(26, False), fill=ink)
-    for ln in lines:
-        w = d.textlength(ln, font=ft)
-        d.rectangle([60 - 8, y + 20, 60 + w + 8, y + 76 + 8], fill=bg)
-        d.text((60, y + 18), ln, font=ft, fill=ink)
-        y += 76 + pad
-    im.save(dest, "PNG", optimize=True)
-    return True
+def credit(name):
+    m = PHOTOS[name]
+    who = f'<a href="{esc(m["creator_url"])}" rel="nofollow noopener" target="_blank">{esc(m["creator"])}</a>' if m.get("creator_url") else esc(m["creator"] or "unknown")
+    lic = f'<a href="{esc(m["license_url"])}" rel="license nofollow noopener" target="_blank">{license_label(m)}</a>'
+    return f'Photo: <a href="{esc(m["landing"])}" rel="nofollow noopener" target="_blank">{esc(m["title"])}</a> by {who}, {lic}'
+
+
+def hero_of(p):
+    return IMAGES[slug_of(p)]["hero"]
+
+
+def card_img(p, sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 400px", eager=False):
+    name, alt, _ = hero_of(p)
+    return photo(name, alt, sizes=sizes, eager=eager)
+
+
+def figure(name, alt, cap, cls="figure"):
+    return (f'<figure class="{cls} reveal">{photo(name, alt, sizes="(max-width: 800px) 100vw, 760px")}'
+            f'<figcaption>{esc(cap)} <span class="credit">{credit(name)}</span></figcaption></figure>')
+
+
+def og_photo(name, dest):
+    """1200x630 share image cropped from the post's hero photo."""
+    from PIL import Image
+    im = Image.open(os.path.join(ROOT, "static/assets/img/photos", name + ".webp")).convert("RGB")
+    r = max(1200 / im.width, 630 / im.height)
+    im = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
+    l, t = (im.width - 1200) // 2, (im.height - 630) // 2
+    os.makedirs(os.path.dirname(dest), exist_ok=True)
+    im.crop((l, t, l + 1200, t + 630)).save(dest, "JPEG", quality=82, optimize=True, progressive=True)
 
 
 # --------------------------------------------------------------- layout
@@ -146,7 +101,7 @@ def crumbs(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": HOST + u} for i, (n, u) in enumerate(items)]}
 
 
-def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-default.png",
+def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-default.jpg",
          og_type="website", body_class="", extra_head=""):
     canonical = HOST + (path if path != "/" else "/")
     nav = "".join(
@@ -202,7 +157,7 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
     <div class="footer-grid">
       <div><p class="footer-lede">{esc(SITE['description'])}</p></div>
       <div><h2>Read</h2><ul>{''.join(f'<li><a href="/mamablog/category/{k}">{k}</a></li>' for k in CATEGORIES)}<li><a href="/mamablog">All posts</a></li></ul></div>
-      <div><h2>Site</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy</a></li><li><a href="/mamablog/feed.xml">RSS</a></li></ul></div>
+      <div><h2>Site</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy</a></li><li><a href="/photo-credits">Photo credits</a></li><li><a href="/mamablog/feed.xml">RSS</a></li></ul></div>
     </div>
     <p class="fine">&copy; {date.today().year} {SITE['name']}. Independent and reader-supported.</p>
   </div>
@@ -221,7 +176,7 @@ def fmt_cats(p):
 def card(p, big=False, i=0):
     return f"""<article class="card reveal{' card-big' if big else ''}" data-cat="{p['category']}" style="--d:{(i % 3) * 80}ms" data-search="{esc((p['title'] + ' ' + p['description']).lower())}">
   <a class="card-link" href="{p['path']}" aria-label="{esc(p['title'])}"></a>
-  <div class="card-art tilt">{cover_svg(slug_of(p), p['title'])}</div>
+  <div class="card-art tilt">{card_img(p)}</div>
   <div class="card-body">
     <div class="meta">{fmt_cats(p)}<span>{p['read']} min read</span></div>
     <h3>{esc(p['h1'])}</h3>
@@ -271,12 +226,12 @@ def write(path, content):
 def build_home():
     feat = POSTS[0]
     rest = [p for p in POSTS if p is not feat]
-    photo_posts = [p for p in POSTS if p.get("photos")]
+    photo_posts = [p for p in POSTS if slug_of(p) in PLATES]
     cats = "".join(f"""<a class="cat-tile reveal" href="/mamablog/category/{k}" style="--d:{i*90}ms">
       <span class="cat-num">0{i+1}</span><span class="cat-name">{k}</span><span class="cat-desc">{esc(v)}</span>
       <span class="cat-count">{sum(1 for p in POSTS if p['category']==k)} stories →</span></a>""" for i, (k, v) in enumerate(CATEGORIES.items()))
-    strip = "".join(f'<figure class="strip-item reveal" style="--d:{i*70}ms">{cover_svg(slug_of(p), cap, variant=i+1)}<figcaption>{esc(cap)}</figcaption></figure>'
-                    for p in photo_posts for i, (cap, _) in enumerate(p["photos"]))
+    strip = "".join(f'<a class="strip-item reveal" href="{p["path"]}" style="--d:{i*70}ms"><figure>{photo(name, cap, sizes="300px")}<figcaption>{esc(cap)}</figcaption></figure></a>'
+                    for p in photo_posts for i, (cap, _, name) in enumerate(PLATES[slug_of(p)]))
     body = f"""
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grain"></div></div>
@@ -289,7 +244,7 @@ def build_home():
     </div>
     <div class="hero-art reveal" aria-hidden="true">
       <div class="hero-stack">
-        {''.join(f'<div class="stack-card sc{i}">{cover_svg(slug_of(p), p["title"])}<span>{esc(p["category"])}</span></div>' for i, p in enumerate(POSTS[1:4]))}
+        {''.join(f'<div class="stack-card sc{i}">{card_img(p, sizes="360px", eager=True)}<span>{esc(p["category"])}</span></div>' for i, p in enumerate([POSTS[-1], POSTS[2], POSTS[1]]))}
       </div>
       <div class="badge"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">NEW YORK · FOOD · CULTURE · PHOTOGRAPHY · </textPath></text></svg><span>✦</span></div>
     </div>
@@ -300,7 +255,7 @@ def build_home():
   <div class="wrap">
     <div class="feature reveal">
       <a class="card-link" href="{feat['path']}" aria-label="{esc(feat['title'])}"></a>
-      <div class="feature-art tilt">{cover_svg(slug_of(feat), feat['title'])}</div>
+      <div class="feature-art tilt">{card_img(feat, sizes="(max-width: 980px) 100vw, 700px")}</div>
       <div class="feature-body">
         <p class="kicker">Featured · {feat['category']}</p>
         <h2 class="display">{esc(feat['h1'])}</h2>
@@ -381,12 +336,20 @@ def build_collection(path, kicker, h1, lede, posts, title, desc, crumb):
 def build_post(p, idx):
     slug = slug_of(p)
     og = f"/assets/img/og/{slug}.png"
-    have_og = og_png(slug, p["title"], os.path.join(OUT, og.lstrip("/")))
+    hname, halt, hcap = hero_of(p)
+    og = f"/assets/img/og/{slug}.jpg"
+    og_photo(hname, os.path.join(OUT, og.lstrip("/")))
+    have_og = True
     photos = ""
-    if p.get("photos"):
+    if slug in PLATES:
         photos = '<div class="plates">' + "".join(
-            f'<figure class="plate reveal" style="--d:{i*80}ms"><div class="plate-art tilt">{cover_svg(slug, cap, variant=i+1)}<span class="plate-no">{i+1}/4</span></div><figcaption><strong>{esc(cap)}</strong> {esc(txt)}</figcaption></figure>'
-            for i, (cap, txt) in enumerate(p["photos"])) + "</div>"
+            f'<figure class="plate reveal" style="--d:{i*80}ms"><div class="plate-art tilt">{photo(name, cap, sizes="(max-width: 640px) 100vw, 370px")}<span class="plate-no">{i+1}/4</span></div><figcaption><strong>{esc(cap)}</strong> {esc(txt)} <span class="credit">{credit(name)}</span></figcaption></figure>'
+            for i, (cap, txt, name) in enumerate(PLATES[slug])) + "</div>"
+    # Inline figures go before the 2nd and 4th section headings.
+    parts = p["body"].split("<h2>")
+    for n, (name, alt, cap) in enumerate(IMAGES[slug]["inline"]):
+        parts[min(1 + n * 2, len(parts) - 1)] += figure(name, alt, cap) + "\n"
+    body_html = "<h2>".join(parts)
     faq_html, faq_schema = "", []
     if p.get("faq"):
         faq_html = '<section class="faq"><h2>FAQ</h2>' + "".join(
@@ -401,16 +364,17 @@ def build_post(p, idx):
     body = f"""
 <article class="post">
   <header class="post-hero">
-    <div class="post-hero-art" aria-hidden="true">{cover_svg(slug, p['title'], cls='cover parallax')}</div>
+    <div class="post-hero-art">{photo(hname, halt, cls="parallax", sizes="100vw", eager=True)}</div>
     <div class="wrap narrow post-hero-text">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/mamablog">Journal</a> / <a href="/mamablog/category/{p['category']}">{p['category']}</a></nav>
       <h1 class="display reveal">{esc(p['h1'])}</h1>
       <p class="dek reveal">{esc(p['dek'])}</p>
+      <p class="hero-credit">{esc(hcap)} <span class="credit">{credit(hname)}</span></p>
       <div class="meta reveal">{fmt_cats(p)}<span>{p['read']} min read</span><span>Updated <time datetime="{UPDATED}">{datetime.strptime(UPDATED, '%Y-%m-%d').strftime('%B %-d, %Y')}</time></span></div>
     </div>
   </header>
   <div class="wrap narrow prose">
-    {p['body']}
+    {body_html}
     {photos}
     {p.get('after', '')}
     {faq_html}
@@ -425,12 +389,12 @@ def build_post(p, idx):
     schema = [crumbs([("Home", "/"), ("Journal", "/mamablog"), (p["category"], f"/mamablog/category/{p['category']}"), (p["h1"], p["path"])]),
               {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"][:110], "description": p["description"],
                "mainEntityOfPage": HOST + p["path"], "url": HOST + p["path"], "datePublished": UPDATED, "dateModified": UPDATED,
-               "image": HOST + (og if have_og else "/assets/img/og-default.png"), "articleSection": p["category"],
+               "image": HOST + (og if have_og else "/assets/img/og-default.jpg"), "articleSection": p["category"],
                "keywords": p["keyword"], "author": {"@id": HOST + "/#org"}, "publisher": ORG, "inLanguage": "en-US"},
               *faq_schema]
     write(p["path"], page(path=p["path"], title=f"{p['title']} | {SITE['name']}" if len(p["title"]) < 52 else p["title"],
                           description=p["description"], body=body, schema=schema, og_type="article",
-                          og_image=og if have_og else "/assets/img/og-default.png", body_class="post-page",
+                          og_image=og if have_og else "/assets/img/og-default.jpg", body_class="post-page",
                           extra_head=f'<meta property="article:modified_time" content="{UPDATED}">\n'))
 
 
@@ -476,6 +440,20 @@ def build_static_pages():
     write("/privacy-policy", page(path="/privacy-policy", title=f"Privacy Policy | {SITE['name']}", description="The Yasmin's Blog privacy policy: what our static site collects and how it is used.",
                                   body=privacy, schema=[crumbs([("Home", "/"), ("Privacy policy", "/privacy-policy")])]))
 
+    used = {}
+    for p in POSTS:
+        im = IMAGES[slug_of(p)]
+        for name, *_ in [im["hero"], *im["inline"]] + [(n,) for *_, n in PLATES.get(slug_of(p), [])]:
+            used.setdefault(name, p)
+    rows = "".join(f'<li><a class="credit-thumb" href="{p["path"]}">{photo(name, PHOTOS[name]["title"], sizes="120px")}</a><div><strong>{esc(PHOTOS[name]["title"])}</strong><br><span class="credit">{credit(name)}</span><br><small>Used in <a href="{p["path"]}">{esc(p["h1"])}</a></small></div></li>' for name, p in used.items())
+    credits_body = hero_small("Credits", "Photo credits", "Every photo on Yasmin's Blog is used under a free licence that allows commercial use. Thank you to the photographers.", "credits") + f"""
+<section class="section tight"><div class="wrap narrow prose">
+<p>Photos were sourced through <a href="https://openverse.org" rel="noopener" target="_blank">Openverse</a> and are licensed under Creative Commons (CC BY, CC BY-SA), CC0 or the Public Domain Mark. Images have been resized and cropped for the web; CC BY-SA photos remain available under the same licence. Photographers who would like an image credited differently or removed can <a href="/contact">contact us</a>.</p>
+<ul class="credit-list">{rows}</ul>
+</div></section>"""
+    write("/photo-credits", page(path="/photo-credits", title=f"Photo Credits | {SITE['name']}", description="Photo credits and licences for the Creative Commons and public domain images used on Yasmin's Blog.",
+                                 body=credits_body, schema=[crumbs([("Home", "/"), ("Photo credits", "/photo-credits")])]))
+
     nf = f"""<section class="hero-small notfound"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
 <p class="kicker">Error 404</p><h1 class="display">This page took the wrong train.</h1>
 <p class="lede">The page you're after isn't here. It may have moved when the site was rebuilt.</p>
@@ -486,7 +464,7 @@ def build_static_pages():
 
 
 def build_feeds():
-    urls = ["/", "/mamablog", "/about", "/contact", "/privacy-policy"] + [p["path"] for p in POSTS] + \
+    urls = ["/", "/mamablog", "/about", "/contact", "/privacy-policy", "/photo-credits"] + [p["path"] for p in POSTS] + \
            [f"/mamablog/category/{k}" for k in CATEGORIES] + [f"/mamablog/tag/{t}" for t in TAGS]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sm += [f"  <url><loc>{esc(HOST + u)}</loc><lastmod>{UPDATED}</lastmod></url>" for u in urls]
@@ -503,7 +481,7 @@ def build_feeds():
 def build_assets():
     shutil.copytree(os.path.join(ROOT, "static"), OUT, dirs_exist_ok=True)
     os.makedirs(os.path.join(OUT, "assets/img/og"), exist_ok=True)
-    og_png("yasmins-blog-home", "New York food, culture & photography", os.path.join(OUT, "assets/img/og-default.png"))
+    og_photo("katzs-delicatessen-storefront-houston-street", os.path.join(OUT, "assets/img/og-default.jpg"))
     try:
         from PIL import Image, ImageDraw
         for size in (180, 512):

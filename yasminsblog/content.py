@@ -100,15 +100,9 @@ POSTS = [
         "tags": ["human.nyc"],
         "dek": "The \"4 Photos\" series takes four frames and nothing else. This time it's the Italian port city most travelers rush past on the way to Positano.",
         "read": 3,
-        "photos": [
-            ("The lungomare", "Salerno's seafront promenade runs for more than a kilometer under palm and holm-oak trees. At dusk the whole city seems to come out to walk it."),
-            ("Lemon stalls", "The Amalfi Coast's sfusato lemons are huge, knobbly and fragrant. Market stalls stack them next to bottles of limoncello."),
-            ("Up the steps", "The centro storico climbs the hill in narrow staircases and arches. Look up and you'll see laundry lines and the castle on the ridge."),
-            ("Duomo bells", "The cathedral of San Matteo, consecrated in the 11th century, has a Romanesque bell tower that still marks the hours over the old town."),
-        ],
         "body": """
 <p>Salerno is where the Amalfi Coast road starts. Ferries run from its harbor to Amalfi and Positano, and most visitors only see it from the dock. That's a shame. The city has a long seafront promenade, a medieval old town and a cathedral with more than 900 years of history.</p>
-<p>The "4 Photos" format is simple: four frames that together give you the feel of a place. Here they are below as illustrated plates, each with a caption.</p>
+<p>The "4 Photos" format is simple: four frames that together give you the feel of a place. Here they are, each with a caption.</p>
 """,
         "after": """
 <h2>If you go</h2>
@@ -131,15 +125,9 @@ POSTS = [
         "tags": ["new+york", "human.nyc"],
         "dek": "Floor-to-ceiling bins, retro wrappers and halvah by the slab: a Lower East Side institution in four frames.",
         "read": 4,
-        "photos": [
-            ("The wall of bins", "Clear bins run floor to ceiling, holding jelly beans, gummies, malt balls and more licorice than you knew existed."),
-            ("Retro wrappers", "Economy Candy is known for nostalgia candy: brands you remember from childhood and some you thought had been discontinued."),
-            ("Halvah & dried fruit", "Some of its Lower East Side roots show at the counter: halvah, nuts and dried fruit sold by weight."),
-            ("Rivington Street", "The storefront at 108 Rivington Street has been selling sweets to the neighborhood since 1937."),
-        ],
         "body": """
 <p><strong>Economy Candy</strong> has been on the Lower East Side since 1937, which makes it one of the oldest candy stores in New York City. It started as a neighborhood shop selling sweets to a working-class, largely immigrant population. It has since become a destination, packed with tourists, kids and adults hunting for a candy bar they haven't seen in thirty years.</p>
-<p>The "4 Photos" series takes four frames that together give you the feel of a place. Here they are below as illustrated plates, each with a caption.</p>
+<p>The "4 Photos" series takes four frames that together give you the feel of a place. Here they are, each with a caption.</p>
 """,
         "after": """
 <h2>Visiting Economy Candy</h2>

@@ -61,9 +61,20 @@ tilted marquee, scroll-reveal animation, 3D tilt on cards, cover-art shapes
 that move on hover, parallax post headers, a reading-progress bar and a
 hide-on-scroll header. Everything respects `prefers-reduced-motion`.
 
-There are no stock photos. Each post gets **seeded generative cover art**
-(inline SVG, so each post's art is unique and stays the same between builds),
-plus a matching 1200×630 Open Graph PNG made with Pillow.
+**Photos** are real, royalty-free images (CC0, Public Domain, CC BY or
+CC BY-SA, all free for commercial use), found through
+[Openverse](https://openverse.org) and checked one by one. Place-specific
+posts show the actual place (the Katz's, Porto Rico, Economy Candy and 2 Bros
+storefronts, Salerno itself). Generic food shots are never captioned as a
+particular restaurant.
+
+- `images.py`: which photo goes where (hero, inline figures, the "4 Photos" plates), with alt text and captions.
+- `photos.json`: title, author, licence and source for every photo. It feeds the per-image credit lines and `/photo-credits`.
+- `static/assets/img/photos/<name>.webp` (1600px) and `-sm.webp` (800px), served with `srcset`. Open Graph images are 1200×630 JPEG crops of each post's hero.
+
+CC BY and CC BY-SA require attribution, so keep the credit lines and the
+`/photo-credits` page. To swap a photo, drop the new files into the photos
+folder, add its entry to `photos.json` and point `images.py` at it.
 
 ## Hosting (Hostinger Agency, plain php-fpm website)
 
