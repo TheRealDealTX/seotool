@@ -118,6 +118,10 @@ if ($slug === 'contact' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         $row = ['at' => gmdate('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? '', 'name' => $f('name', 120),
                 'email' => $f('email', 200), 'topic' => $f('topic', 40), 'message' => $f('message', 5000)];
         @file_put_contents($dir . '/messages.jsonl', json_encode($row) . "\n", FILE_APPEND | LOCK_EX);
+        $from = filter_var($row['email'], FILTER_VALIDATE_EMAIL) ? str_replace(["\r", "\n"], '', $row['email']) : '';
+        @mail('info@asmith.photography', '[asmith.photography] ' . $row['topic'] . ' from ' . str_replace(["\r", "\n"], ' ', $row['name']),
+              $row['message'] . "\n\n-- " . $row['name'] . ' <' . $from . '>',
+              'From: info@asmith.photography' . "\r\n" . ($from ? 'Reply-To: ' . $from : ''));
     }
     header('Location: /contact?sent=1', true, 303);
     exit;

@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parent
 PUB = ROOT / "public"
 SITE = "https://asmith.photography"
 NAME = "asmith.photography"
+EMAIL = "info@asmith.photography"
 TAGLINE = "Los Angeles Photography Journal"
 PUBLISHED = "2026-10-10"
 
@@ -85,7 +86,7 @@ def footer():
     return f'''<footer class="site-footer"><div class="wrap">
 <p class="foot-big" aria-hidden="true">asmith<b>.</b>photo</p>
 <div class="foot-cols">
-<div><h2>About this journal</h2><p>{NAME} is an independent journal about how commercial, editorial, skate and sport photography gets made in Los Angeles. It is not affiliated with, or endorsed by, any photographer, brand, athlete or publication it mentions; names are used only to describe the kind of work discussed.</p></div>
+<div><h2>About this journal</h2><p>Stories on how commercial, editorial, skate and sport photography gets made in Los Angeles.</p><p style="margin-top:14px"><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
 <div><h2>Sections</h2><ul>{cats}</ul></div>
 <div><h2>Most read</h2><ul>{picks}</ul></div>
 <div><h2>Site</h2><ul><li><a href="/journal">All stories</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/credits">Photo credits</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
@@ -95,7 +96,8 @@ def footer():
 
 
 ORG = {"@type": "Organization", "@id": SITE + "/#org", "name": NAME, "url": SITE + "/",
-       "logo": {"@type": "ImageObject", "url": SITE + "/assets/img/icon-512.png"}}
+       "email": EMAIL, "logo": {"@type": "ImageObject", "url": SITE + "/assets/img/icon-512.png"},
+       "contactPoint": {"@type": "ContactPoint", "contactType": "editorial", "email": EMAIL}}
 WEBSITE = {"@type": "WebSite", "@id": SITE + "/#website", "name": NAME, "url": SITE + "/",
            "description": "An independent Los Angeles photography journal: skate, footwear, editorial, sport and personal work.",
            "publisher": {"@id": SITE + "/#org"}, "inLanguage": "en-US"}
@@ -330,7 +332,7 @@ def build_about():
 
 
 def build_contact():
-    body = head_block("Contact", "Say <em>hello</em>", "Story ideas, corrections, image credit questions or a spot we should know about. Send a note and it will be read.") + f'''
+    body = head_block("Contact", "Say <em>hello</em>", f'Story ideas, corrections, image credit questions or a spot we should know about. Use the form or email <a href="mailto:{EMAIL}">{EMAIL}</a>.') + f'''
 <section style="padding-bottom:clamp(64px,9vw,120px)"><div class="wrap two">
 <div>
 <div class="notice" role="status">Thanks, your message is in. Expect a reply within a few days.</div>
@@ -439,6 +441,10 @@ if ($slug === 'contact' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {{
         $row = ['at' => gmdate('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? '', 'name' => $f('name', 120),
                 'email' => $f('email', 200), 'topic' => $f('topic', 40), 'message' => $f('message', 5000)];
         @file_put_contents($dir . '/messages.jsonl', json_encode($row) . "\\n", FILE_APPEND | LOCK_EX);
+        $from = filter_var($row['email'], FILTER_VALIDATE_EMAIL) ? str_replace(["\\r", "\\n"], '', $row['email']) : '';
+        @mail('{EMAIL}', '[{NAME}] ' . $row['topic'] . ' from ' . str_replace(["\\r", "\\n"], ' ', $row['name']),
+              $row['message'] . "\\n\\n-- " . $row['name'] . ' <' . $from . '>',
+              'From: {EMAIL}' . "\\r\\n" . ($from ? 'Reply-To: ' . $from : ''));
     }}
     header('Location: /contact?sent=1', true, 303);
     exit;

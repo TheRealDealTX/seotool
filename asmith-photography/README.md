@@ -14,7 +14,7 @@ The old domain was the portfolio of a working photographer. Rebuilding it as
 *his* portfolio would mean impersonating a real person and claiming client
 work (Nike SB, Vans, Stacy Adams …) we did not shoot. Instead each old URL is
 now an article about **how that kind of shoot is made**: same topic, same
-keyword, honest framing. The footer and `/about` say the site is independent
+keyword, honest framing. The `/about` page says the site is independent
 and not affiliated with any photographer, brand or publication it names.
 The article copy never claims to have shot the named brands or people and
 never mentions the previous owner.
@@ -85,7 +85,7 @@ unknown paths to `index.php`. There is deliberately **no `index.html`** at the
 root. `index.php` serves `home.html` for `/`, maps each slug to
 `pages/<slug>.html`, does the legacy 301s, returns a real 404, and stores
 contact-form posts in `../asmith-messages/messages.jsonl` (outside the web
-root). On `asmith.photography` it forces https + non-www; on any other host
+root) and emails them to info@asmith.photography via PHP `mail()`. On `asmith.photography` it forces https + non-www; on any other host
 it sends `X-Robots-Tag: noindex` (Hostinger's temp domain also serves its own
 robots.txt blocking Googlebot).
 
