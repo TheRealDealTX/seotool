@@ -151,6 +151,23 @@
     canvas.parentNode.addEventListener("mouseleave", function () { pointer.x = pointer.y = -999; });
   }
 
+  /* parallax photo bands */
+  var pars = $$("[data-parallax]");
+  if (pars.length && !reduce) {
+    var ticking = false;
+    function para() {
+      pars.forEach(function (el) {
+        var r = el.parentNode.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        var p = (r.top + r.height / 2 - window.innerHeight / 2) / window.innerHeight;
+        el.style.transform = "translate3d(0," + (p * -12) + "%,0)";
+      });
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(para); } }, { passive: true });
+    para();
+  }
+
   /* journal filters */
   var filterBtns = $$(".filters button");
   filterBtns.forEach(function (b) {

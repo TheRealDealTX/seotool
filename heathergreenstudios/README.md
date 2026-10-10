@@ -11,7 +11,7 @@ datacenter, php-fpm 8.3. Contact email: info@heathergreenstudios.com.
 ## Build and deploy
 
 ```sh
-python3 build.py     # writes ./public (stdlib only)
+python3 build.py     # writes ./public (needs Pillow for photo dimensions)
 ./deploy.sh          # uploads ./public to public_html (see header for credentials)
 ```
 
@@ -68,8 +68,13 @@ Home, `/printmaking/`, `/bisbee-art-guide/`, `/journal/`, `/about/`,
 ## Content and brand
 
 All article text is newly written; nothing was copied from the old blog. No
-images from the old blog are used either: every illustration is generated SVG
-"print" artwork (Mule Mountain ridges, sun discs, halftone and hatching). The
+images from the old blog are used either. Photos in `src/assets/img/photos/`
+are CC0 / public-domain: the WordPress Photo Directory (modern shots of art
+supplies, books, a gallery, postcards, Arizona desert) and rawpixel's public-domain
+scans (Russell Lee's 1940 Bisbee photos, a 1991 Bisbee view, an 18th-century
+printmaker's-workshop engraving), found through Openverse. No credit is required.
+The 1940 shots get a sepia duotone in CSS. Generative SVG "print" artwork still
+fills the remaining accents. The
 site does not present itself as the original artist. The About page explains
 the domain's history and states that the journal is independent and not
 affiliated with her.

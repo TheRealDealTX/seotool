@@ -290,3 +290,41 @@ th{font-family:var(--serif);font-weight:600;background:var(--paper-2)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .reveal,.split .w>span{opacity:1;transform:none}
 }
+
+/* ---------- photography ---------- */
+.plate-photo img,.post-card .art img,.card-img img,.photo-band img{width:100%;height:100%;object-fit:cover;display:block}
+.post-card .art img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.post-card:hover .art img{transform:scale(1.08)}
+.plate-photo{background:var(--ink)}
+.plate-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(22,19,15,.35));pointer-events:none}
+.plate-photo .tag{z-index:2}
+.duotone{filter:grayscale(1) sepia(.55) saturate(1.35) hue-rotate(-12deg) contrast(1.08) brightness(.98)}
+.photo-fig{position:relative;background:var(--card)}
+.photo-fig img{width:100%;height:auto;display:block;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.photo-fig:hover img{transform:scale(1.03)}
+.photo-fig{overflow:hidden}
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:2em 0}
+.photo-grid figure{margin:0!important;box-shadow:none!important;border-radius:16px}
+.photo-grid img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .6s}
+.photo-grid figure:hover img{transform:scale(1.06);filter:none}
+.photo-grid figcaption{font-size:.8rem;padding:8px 12px}
+@media (max-width:700px){.photo-grid{grid-template-columns:1fr}.photo-grid img{aspect-ratio:16/10}}
+
+/* technique cards with photos */
+.card-photo{padding-top:0}
+.card-img{display:block;margin:0 -30px 22px;height:150px;overflow:hidden;border-radius:var(--radius) var(--radius) 0 0}
+.card-img img{transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s;filter:saturate(.85)}
+.card-photo:hover .card-img img{transform:scale(1.1);filter:saturate(1.1)}
+.card-photo .blob{display:none}
+.card-photo::after{content:"";position:absolute;left:30px;right:30px;bottom:0;height:4px;border-radius:4px 4px 0 0;background:var(--accent,var(--copper));transform:scaleX(.25);transform-origin:0 50%;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card-photo:hover::after{transform:none}
+.card-photo h3{padding-top:18px}
+
+/* parallax photo band */
+.photo-band{position:relative;height:min(78vh,640px);overflow:hidden;display:flex;align-items:flex-end;color:var(--paper)}
+.photo-band-img{position:absolute;inset:-14% 0;will-change:transform}
+.photo-band::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(22,19,15,.15) 0%,rgba(22,19,15,.25) 45%,rgba(22,19,15,.85) 100%)}
+.photo-band::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(184,96,44,.35),rgba(31,138,131,.3));mix-blend-mode:color}
+.photo-band-text{position:relative;z-index:2;padding-bottom:64px;width:100%}
+.photo-band-text p{font:500 italic clamp(2rem,5vw,4rem)/1.1 var(--serif);max-width:18ch;margin:0 0 14px}
+.photo-band-text .cap{font:600 .78rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--sand)}

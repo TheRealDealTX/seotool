@@ -23,7 +23,7 @@ ORIGIN = "https://heathergreenstudios.com"
 SITE = "HGS Studio Journal"
 EMAIL = "info@heathergreenstudios.com"
 TODAY = "2026-10-10"
-ASSET_V = "1"
+ASSET_V = "2"
 
 NAV = [
     ("Printmaking", "/printmaking/"),
@@ -100,6 +100,34 @@ def art_svg(seed, w=800, h=500, label=""):
         parts.append(f'<line x1="20" y1="{y:.0f}" x2="{w - 20}" y2="{y:.0f}" stroke="{bg}" stroke-width="3" stroke-dasharray="12 9" opacity=".9"/>')
     parts.append("</svg>")
     return "".join(parts)
+
+
+PHOTO_DIR = ROOT / "src" / "assets" / "img" / "photos"
+
+POST_PHOTOS = {
+    "/2011/07/how-to-print-linoleum-block.html": ("printing-blocks-relief-carved", "Carved relief printing blocks arranged in a wooden frame"),
+    "/2009/03/dos-and-donts-of-collecting-artists.html": ("art-gallery-framed-paintings", "Framed artworks lining the walls of a gallery corridor"),
+    "/2009/02/original-art-for-little-scratch.html": ("hand-painting-with-fine-brush", "An artist's hand painting with a fine brush on white paper"),
+    "/2011/04/paper-quilts.html": ("colored-paper-sheets", "Stacked sheets of colored paper"),
+    "/2012/02/stitches-and-folds.html": ("antique-sewing-machine", "An antique sewing machine"),
+    "/2009/06/great-reference-for-artists-books.html": ("handmade-books", "Handmade books with decorated covers"),
+    "/2012/03/wall-musings.html": ("graphite-drawing-pencils", "Graphite drawing pencils from hard to soft"),
+    "/2015/01/call-to-artists-mail-art-exchange.html": ("envelopes-mail-art", "Blank envelopes on a wooden table, ready for mail art"),
+    "/2009/03/date-night-bisbee-after-5.html": ("bisbee-main-street-1940", "Main Street in Bisbee, Arizona, in 1940"),
+    "/2011/11/my-paper-anniversary.html": ("book-pages-paper", "The fanned-out paper pages of an open book"),
+    "/2015/04/life-is-process-as-is-art.html": ("watercolor-palette-studio", "A watercolor palette and brush on a studio table"),
+    "/journal/how-to-hang-art/": ("framed-print-on-wall", "A framed print hanging on a dark wall above a plant"),
+}
+
+
+def photo(name, alt, cls="", eager=False, sizes="(max-width: 860px) 100vw, 60vw"):
+    """<img> for a file in assets/img/photos, with real dimensions."""
+    from PIL import Image  # optional dependency only needed for dimensions
+    with Image.open(PHOTO_DIR / f"{name}.webp") as im:
+        w, h = im.size
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    c = f' class="{cls}"' if cls else ""
+    return f'<img{c} src="/assets/img/photos/{name}.webp" alt="{esc(alt)}" width="{w}" height="{h}" {load} decoding="async" sizes="{sizes}">'
 
 
 def mark_svg():
@@ -232,7 +260,7 @@ def cta():
 def post_card(p, idx=0):
     d = f" reveal-d{idx % 3 + 1}" if idx else ""
     return f"""<a class="post-card reveal{d}" href="{p['path']}" data-cat="{slugify(p['cat'])}">
-  <div class="art">{art_svg(p['seed'], label=p['h1'])}</div>
+  <div class="art">{photo(*POST_PHOTOS[p['path']], sizes="(max-width: 700px) 100vw, 33vw") if p['path'] in POST_PHOTOS else art_svg(p['seed'], label=p['h1'])}</div>
   <div class="body"><span class="meta">{p['cat']} · {p['read']} min read</span><h3>{esc(p['h1'])}</h3><p>{esc(p['desc'])}</p></div>
 </a>"""
 
@@ -244,13 +272,13 @@ def page_home():
         "/2009/03/dos-and-donts-of-collecting-artists.html",
         "/journal/how-to-hang-art/")]
     techniques = [
-        ("01", "Relief", "Linocut and woodcut: carve away what you don't want to print.", "/2011/07/how-to-print-linoleum-block.html", "#b8602c"),
-        ("02", "Collagraph", "Build a plate from texture, then print it like an etching.", "/2011/04/paper-quilts.html", "#1f8a83"),
-        ("03", "Monotype", "Paint on a plate, pull one unique print, then a ghost.", "/printmaking/#monotype", "#d98a4e"),
-        ("04", "Book arts", "Fold, stitch and bind prints into objects you can hold.", "/2009/06/great-reference-for-artists-books.html", "#46b8ac"),
+        ("01", "Relief", "Linocut and woodcut: carve away what you don't want to print.", "/2011/07/how-to-print-linoleum-block.html", "#b8602c", ("printing-blocks-relief-carved", "Carved relief printing blocks")),
+        ("02", "Collagraph", "Build a plate from texture, then print it like an etching.", "/2011/04/paper-quilts.html", "#1f8a83", ("colored-paper-sheets", "Sheets of colored paper")),
+        ("03", "Monotype", "Paint on a plate, pull one unique print, then a ghost.", "/printmaking/#monotype", "#d98a4e", ("watercolor-palette-studio", "A paint palette and brush on a studio table")),
+        ("04", "Book arts", "Fold, stitch and bind prints into objects you can hold.", "/2009/06/great-reference-for-artists-books.html", "#46b8ac", ("handmade-books", "Handmade books with decorated covers")),
     ]
-    tech = "".join(f"""<a class="card reveal reveal-d{i % 3 + 1}" href="{u}"><span class="blob" style="background:{c}"></span><span class="num">{n}</span><h3>{t}</h3><p>{d}</p></a>"""
-                   for i, (n, t, d, u, c) in enumerate(techniques))
+    tech = "".join(f"""<a class="card card-photo reveal reveal-d{i % 3 + 1}" href="{u}" style="--accent:{c}"><span class="card-img">{photo(*img, sizes="(max-width: 700px) 100vw, 25vw")}</span><span class="blob" style="background:{c}"></span><span class="num">{n}</span><h3>{t}</h3><p>{d}</p></a>"""
+                   for i, (n, t, d, u, c, img) in enumerate(techniques))
     latest = sorted(POSTS, key=lambda p: p["date"], reverse=True)
     words = ["Linocut", "Collagraph", "Monotype", "Artists' books", "Mail art", "Bisbee art walk", "Works on paper", "Ghost prints"]
     marquee = "".join(f"<span>{w}</span>" for w in words * 2)
@@ -281,7 +309,7 @@ def page_home():
       <p class="reveal">We write about how prints are made, how to tell an original from a reproduction, how to hang what you buy and where to see art in Bisbee. Everything here is written for working artists and curious collectors alike.</p>
       <a class="btn btn-ghost reveal" href="/about/">About the journal <span class="arr">→</span></a>
     </div>
-    <div class="plate reveal reveal-d2">{art_svg(2009, 800, 1000, "Abstract print of the Mule Mountains at sunset")}<span class="tag">Plate no. 2009</span></div>
+    <div class="plate plate-photo reveal reveal-d2">{photo("printing-blocks-relief-carved", "Carved relief printing blocks in a wooden frame", sizes="(max-width: 860px) 100vw, 45vw")}<span class="tag">Relief blocks</span></div>
   </div>
 </section>
 
@@ -311,9 +339,14 @@ def page_home():
   </div>
 </section>
 
+<section class="photo-band" aria-label="Main Street, Bisbee, 1940">
+  <div class="photo-band-img" data-parallax>{photo("bisbee-main-street-mule-mountains-1940", "Main Street in Bisbee, Arizona, in 1940, with the Mule Mountains behind", cls="duotone", sizes="100vw")}</div>
+  <div class="wrap photo-band-text"><p class="split">Copper built the town. Artists kept it alive.</p><span class="cap">Main Street, Bisbee · 1940</span></div>
+</section>
+
 <section class="section" style="background:var(--paper-2)">
   <div class="wrap intro">
-    <div class="plate reveal">{art_svg(85603, 800, 1000, "Abstract print of Old Bisbee's canyon streets")}<span class="tag">Old Bisbee</span></div>
+    <div class="plate plate-photo reveal">{photo("bisbee-arizona-hillside-town", "Old Bisbee's brick buildings and hillside houses below the Mule Mountains", sizes="(max-width: 860px) 100vw, 45vw")}<span class="tag">Old Bisbee</span></div>
     <div>
       <span class="eyebrow reveal">Bisbee, Arizona</span>
       <h2 class="split">A mining camp that became an art town</h2>
@@ -389,7 +422,7 @@ def page_post(p):
     html_body = page_hero(crumbs, p["cat"], esc(p["h1"]), esc(p["desc"]), meta) + f"""
 <section class="section-tight" style="padding-top:20px"><div class="wrap article-layout">
   <article class="prose">
-    <figure>{art_svg(p['seed'], 1200, 600, p['h1'])}<figcaption>Illustration: an abstract relief-print study in copper and turquoise.</figcaption></figure>
+    <figure class="photo-fig">{photo(*POST_PHOTOS[p['path']], eager=True, sizes="(max-width: 960px) 100vw, 780px") if p['path'] in POST_PHOTOS else art_svg(p['seed'], 1200, 600, p['h1'])}</figure>
     {body}
     {faq_html(p['faq'])}
   </article>
@@ -404,7 +437,7 @@ def page_post(p):
          "datePublished": p["date"], "dateModified": p["updated"],
          "mainEntityOfPage": ORIGIN + p["path"], "author": {"@id": ORIGIN + "/#org"},
          "publisher": {"@id": ORIGIN + "/#org"}, "articleSection": p["cat"],
-         "image": ORIGIN + "/assets/img/og.png"},
+         "image": ORIGIN + (f"/assets/img/photos/{POST_PHOTOS[p['path']][0]}.webp" if p['path'] in POST_PHOTOS else "/assets/img/og.png")},
         crumbs_schema(crumbs)]
     if p["faq"]:
         schema.append(faq_schema(p["faq"]))
@@ -451,6 +484,7 @@ def page_printmaking():
                      "A field guide to the main printmaking techniques: how each works, what you need and where to start. Short versions here, with full how-tos in the journal.") + f"""
 <section class="section-tight" style="padding-top:20px"><div class="wrap article-layout">
   <article class="prose">
+    <figure class="photo-fig">{photo("printmakers-workshop-engraving", "An 18th-century engraving of a printmaker's workshop with a rolling press", eager=True, sizes="(max-width: 960px) 100vw, 780px")}<figcaption>A printmaker's workshop, from an 18th-century engraving. The rolling press has barely changed since.</figcaption></figure>
     <h2 id="what-makes-a-print">What makes a print a print?</h2>
     <p>Printmaking transfers an image from a prepared surface, called the matrix, onto paper. The matrix might be a block of linoleum, a copper plate, a sheet of plexiglass or a collaged board. Because the matrix can be inked again, one image can exist as several original impressions. That's what makes original prints the most affordable way to own a real artist's work, as explained in our <a href="/2009/03/dos-and-donts-of-collecting-artists.html">collecting guide</a>.</p>
 
@@ -459,6 +493,7 @@ def page_printmaking():
 
     <h2 id="relief">Relief: linocut and woodcut</h2>
     <p>Carve away everything you don't want to print, roll ink across the surface and press paper onto it. Linoleum is soft and even, wood has grain that can become part of the image. Read the full guide: <a href="/2011/07/how-to-print-linoleum-block.html">How to Print a Linoleum Block</a>.</p>
+    <figure class="photo-fig">{photo("printing-blocks-relief-carved", "Carved relief printing blocks arranged in a frame", sizes="(max-width: 960px) 100vw, 780px")}</figure>
     <h3>Reduction prints</h3>
     <p>A multi-color print from a single block: print the lightest color across the whole edition, carve away what should stay that color, print the next color and repeat. The block is destroyed as you go, so the edition size is fixed from the start.</p>
 
@@ -486,7 +521,7 @@ def page_printmaking():
     <div class="aside-box toc"><h4>On this page</h4><ul>
       <li><a href="#compare">At a glance</a></li><li><a href="#relief">Relief</a></li><li><a href="#collagraph">Collagraph</a></li>
       <li><a href="#monotype">Monotype</a></li><li><a href="#intaglio">Intaglio</a></li><li><a href="#paper">Paper</a></li><li><a href="#faq">Questions</a></li></ul></div>
-    <div class="plate" style="aspect-ratio:3/4">{art_svg(1975, 600, 800, "Abstract etching study")}<span class="tag">Study</span></div>
+    <div class="plate plate-photo" style="aspect-ratio:3/4">{photo("drawing-pencils-art-supplies", "Drawing pencils and art supplies laid out on a table", sizes="300px")}<span class="tag">Studio tools</span></div>
   </aside>
 </div></section>{cta()}"""
     schema = [crumbs_schema(crumbs), faq_schema(faq),
@@ -508,7 +543,7 @@ def page_bisbee():
                      "How a copper-mining camp in the Mule Mountains became one of Arizona's most creative small towns, and how to explore its galleries, studios and art walk.") + f"""
 <section class="section-tight" style="padding-top:20px"><div class="wrap article-layout">
   <article class="prose">
-    <figure>{art_svg(85603, 1200, 600, "Abstract print of Bisbee's canyon streets")}<figcaption>Old Bisbee climbs the canyon walls of Tombstone Canyon and Brewery Gulch.</figcaption></figure>
+    <figure class="photo-fig">{photo("bisbee-arizona-hillside-town", "Old Bisbee's brick commercial buildings with houses climbing the hills behind", eager=True, sizes="(max-width: 960px) 100vw, 780px")}<figcaption>Old Bisbee climbs the canyon walls of Tombstone Canyon and Brewery Gulch.</figcaption></figure>
     <h2 id="from-copper-to-canvas">From copper to canvas</h2>
     <p>Bisbee was founded in 1880 on one of the richest copper deposits in the world. The Copper Queen and its neighbors produced copper, gold, silver and a vivid, much-prized turquoise known as <em>Bisbee Blue</em>. When large-scale mining ended in the mid-1970s, the town emptied out, and artists moved in. Victorian houses were cheap, the light was extraordinary and the canyon streets felt like nowhere else in America.</p>
     <p>Half a century later, Old Bisbee's brick storefronts hold galleries, working studios, bookshops and cafes, and the town's arts calendar is busier than many cities'.</p>
@@ -522,6 +557,11 @@ def page_bisbee():
       <div class="t"><b>Today</b>Galleries, studios, festivals and a monthly evening art walk define the town.</div>
     </div>
 
+    <div class="photo-grid">
+      <figure>{photo("bisbee-arizona-canyon-1940", "Bisbee seen from above in 1940, filling the canyon below bare hills", cls="duotone", sizes="(max-width: 700px) 100vw, 260px")}<figcaption>The town in its canyon, 1940</figcaption></figure>
+      <figure>{photo("bisbee-main-street-1940", "Cars parked along Main Street in Bisbee in 1940", cls="duotone", sizes="(max-width: 700px) 100vw, 260px")}<figcaption>Main Street, 1940</figcaption></figure>
+      <figure>{photo("bisbee-housetops-1940", "Rooftops of hillside houses in Bisbee in 1940", cls="duotone", sizes="(max-width: 700px) 100vw, 260px")}<figcaption>Hillside housetops, 1940</figcaption></figure>
+    </div>
     <h2 id="where-to-look">Where to look</h2>
     <h3>Main Street</h3>
     <p>The heart of Old Bisbee: a winding street of galleries, studios and shops in turn-of-the-century buildings, climbing gently uphill from the Copper Queen Plaza.</p>
@@ -535,6 +575,7 @@ def page_bisbee():
     <h2 id="art-walk">The art walk</h2>
     <p>Bisbee has long held a monthly evening gallery walk on the second Saturday, when galleries stay open late, artists are on hand and the streets fill with music. Participating venues and hours change, so check current local listings. For tips on pacing the evening, read <a href="/2009/03/date-night-bisbee-after-5.html">Date Night in Bisbee</a>.</p>
 
+    <figure class="photo-fig">{photo("arizona-desert-mountains", "Sunlit desert mountains rising above scrubland in southern Arizona", sizes="(max-width: 960px) 100vw, 780px")}<figcaption>The high desert of southern Arizona on the road to Bisbee.</figcaption></figure>
     <h2 id="plan-your-visit">Plan your visit</h2>
     <ul>
       <li><strong>Altitude:</strong> about 5,300 feet. Evenings are cool and the stairs are steep. Bring water and good shoes.</li>
@@ -587,7 +628,7 @@ def page_about():
     <p>Story ideas, corrections, exhibition news and mail-art inquiries are always welcome: <a href="mailto:{EMAIL}">{EMAIL}</a>, or use the <a href="/contact/">contact form</a>.</p>
   </article>
   <aside class="aside">
-    <div class="plate" style="aspect-ratio:3/4">{art_svg(2015, 600, 800, "Abstract print of a desert sunrise")}<span class="tag">Since 2009</span></div>
+    <div class="plate plate-photo" style="aspect-ratio:3/4">{photo("bisbee-arizona-canyon-1940", "Bisbee, Arizona, seen from above in 1940", cls="duotone", sizes="300px")}<span class="tag">Bisbee · 1940</span></div>
   </aside>
 </div></section>{cta()}"""
     schema = [crumbs_schema(crumbs), {"@type": "AboutPage", "url": ORIGIN + "/about/", "about": {"@id": ORIGIN + "/#org"}}]
@@ -605,7 +646,7 @@ def page_contact():
     <h2 style="font-size:1.8rem">Email us directly</h2>
     <p><a href="mailto:{EMAIL}" style="font:600 1.3rem var(--serif)">{EMAIL}</a></p>
     <p>We usually reply within a few days.</p>
-    <div class="plate" style="aspect-ratio:4/3;margin-top:30px">{art_svg(520, 800, 600, "Abstract print of a mailed postcard")}<span class="tag">Mail art welcome</span></div>
+    <div class="plate plate-photo" style="aspect-ratio:4/3;margin-top:30px">{photo("vintage-postcards", "Boxes of vintage postcards for sale", sizes="(max-width: 860px) 100vw, 40vw")}<span class="tag">Mail art welcome</span></div>
   </div>
   <div class="reveal reveal-d1">
     <div id="form-note" hidden></div>
