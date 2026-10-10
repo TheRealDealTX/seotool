@@ -1,0 +1,67 @@
+{
+  "slug": "something-about-magazine-film",
+  "title": "Film Photography Magazine Work: Stocks, Scans, Grain",
+  "description": "Film photography magazine work, explained: choosing stocks like Portra 400 and Tri-X, scanning for print, and why independent editors still love grain.",
+  "h1": "Film Photography Magazine Work: Stocks, Scans and Grain",
+  "dek": "Independent print titles keep asking for film. Here's how a film photography magazine story gets shot, scanned and delivered, and why the grain still matters on paper.",
+  "sections": [
+    {
+      "h2": "Why indie editors still ask for film",
+      "paras": [
+        "Plenty of small print titles commission work on film, and a film photography magazine story has a different rhythm from a digital one. Fewer frames, more deliberate choices, and a look that sits naturally on uncoated paper. Editors at independent magazines often say the same thing in different words: film images feel finished before anyone touches them.",
+        "There's also a practical reason. A roll of 36 or a roll of 10 on medium format forces the photographer to edit in camera, so the contact sheet arrives with fewer near-duplicates. For a magazine with a small team, that saves real time at the layout stage."
+      ]
+    },
+    {
+      "h2": "Choosing stocks for the story",
+      "paras": [
+        "Kodak Portra 400 is the default for good reason: it handles overexposure gracefully, renders skin tones warmly and works in LA's harsh midday sun if you rate it at 200 and let the highlights roll off. Portra 800 is the pick for interiors and dusk. For black and white, Kodak Tri-X and Ilford HP5 Plus both push well to 1600 when you're shooting in bars or at night on Broadway.",
+        "Keep the stock consistent across a story. Switching between a cool and a warm film halfway through a feature makes spreads feel stitched together. If you need two stocks, assign them to separate parts of the story, color for portraits and black and white for street scenes, for example.",
+        "Meter for the shadows with color negative. Underexposure is the most common reason scans look muddy, and no amount of correction brings back detail that isn't on the negative."
+      ]
+    },
+    {
+      "h2": "Scanning for print",
+      "paras": [
+        "The scan is where film work for a magazine succeeds or fails. Ask your lab for high-resolution TIFF scans rather than default JPEGs; a Fuji Frontier or Noritsu scan at its largest size is usually enough for a full page, and a drum or Hasselblad Flextight scan is worth paying for a cover or a spread.",
+        "Agree on color with the lab and the art director before the rest of the roll is scanned. Labs make interpretive choices, and a scan that looks good on a monitor may print heavy. Send a test page through the magazine's printer if the budget allows.",
+        "Dust and scratches are part of the medium, but clean them on the frames that run large. Leave the grain alone. Noise reduction on a film scan makes it look like a phone photo."
+      ]
+    },
+    {
+      "h2": "Working with the photo desk",
+      "paras": [
+        "Film adds steps to a magazine schedule, so plan them in. Allow two to five working days for developing and scanning, longer for push processing or a specialist black-and-white lab. Tell the photo editor the date the scans will arrive, not just the shoot date, and hold to it.",
+        "Send contact sheets before final scans. A lab can produce low-resolution scans of every frame quickly, and the editor can pick selects from them. Only those selects then go out for high-resolution scanning and cleanup, which keeps lab bills reasonable and gives the designer early images to build layouts with.",
+        "Keep the negatives organized. Sleeve each roll, label it with the story name and date, and store the sleeves flat and cool. Independent titles sometimes come back years later for an anniversary issue or a book, and a clear archive makes that request easy. For a film photography magazine contributor, the negative file is part of the job, not an afterthought, and it's often the only original that exists."
+      ]
+    },
+    {
+      "h2": "Why grain prints well",
+      "paras": [
+        "Grain is random in a way digital noise isn't, and on paper that randomness reads as texture rather than error. It breaks up flat areas of sky and wall, hides small focus misses, and makes a 400-speed portrait feel close and physical.",
+        "If you're new to film photography for magazine work, start with one camera, one lens and one stock, shoot a test roll at the location, and get it scanned before the real day. The practice roll will tell you more than any guide."
+      ]
+    }
+  ],
+  "notes_title": "Kit list",
+  "notes": [
+    "35mm SLR or rangefinder plus a medium format body for portraits",
+    "Portra 400 rated at 200 for sun, Portra 800 for interiors",
+    "Tri-X or HP5 Plus for black and white, push to 1600 at night",
+    "Handheld incident meter; meter for shadows on color negative",
+    "Ask the lab for TIFF scans at full size, test one roll first",
+    "Label every roll with location and push/pull notes"
+  ],
+  "pull_quote": "Film doesn't make a picture better. It makes the photographer slower, and slower is often better.",
+  "image_queries": [
+    "35mm film camera",
+    "film negatives contact sheet",
+    "kodak portra film roll"
+  ],
+  "related": [
+    "downtown-for-something-about-magazine",
+    "car-window-for-damaged-goods-magazine",
+    "leica-sofort-campaign-2"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "football",
+  "title": "Football Photography: Friday Night Lights to College",
+  "description": "A field guide to football photography at high school and college games in LA: long lenses, high ISO under stadium lights, positioning and sideline safety.",
+  "h1": "Football Photography Under Friday Night Lights",
+  "dek": "From a dim high school field to a packed college stadium, football photography rewards preparation more than luck. Lenses, settings, positioning and sideline safety.",
+  "sections": [
+    {
+      "h2": "Reading the game before you shoot it",
+      "paras": [
+        "Good football photography starts with knowing football. The play develops in a predictable shape: a snap, a handoff or a drop, a hole or a throw. If you know down and distance, you know whether to expect a run up the middle or a pass downfield, and you can set up for it instead of chasing it.",
+        "Watch the quarterback's feet and the formation. A shotgun set on third and long means a pass, so frame the receivers or the quarterback's release. Short yardage near the goal line means a pile, and the shot is a back leaping over the line. Every decision you make with the long lens follows from that read.",
+        "Pick a side and a position based on the offense. Most photographers stay 10 to 20 yards ahead of the line of scrimmage, moving down the sideline with each series, so the action comes toward the lens rather than away from it."
+      ]
+    },
+    {
+      "h2": "Lenses and settings for night games",
+      "paras": [
+        "Friday night high school games in Los Angeles are lit by poles that were installed decades ago, and the light is dim and uneven. A 400mm f/2.8 is the classic tool, but a 70-200mm f/2.8 on a modern full-frame body with clean high ISO gets you most of the way at a smaller school field.",
+        "Start at 1/1000s, f/2.8 and auto ISO capped at 12800 or higher. Freezing contact matters more than noise; denoise tools handle grain well now, but nothing fixes motion blur on a ball carrier's face. Set white balance manually from a gray card under the lights, since old fixtures can flicker and shift color frame to frame.",
+        "College stadiums are brighter and more even. Under the lights at the Rose Bowl in Pasadena or a big conference venue, you can stop down to f/4 for more depth of field and keep ISO reasonable. Daytime games bring the opposite problem: hard shadows under helmets. Expose for the faces and let the field go bright."
+      ]
+    },
+    {
+      "h2": "Sideline safety",
+      "paras": [
+        "The sideline is part of the field of play when a run goes out of bounds. Players moving at full speed do not see photographers, and they will not stop. Stay behind the restraining line, keep a monopod short and close to your body, and never sit on a stool directly in a likely out-of-bounds lane.",
+        "Watch the play, not the back of the camera. Chimping after a big play is how photographers get flattened. Keep both eyes open when you shoot, so the non-shooting eye can see a sweep coming your way.",
+        "Respect the chain crew, the officials and the team area between the 25-yard lines. High school games usually require a credential from the athletic director; college games go through the sports information office. Follow their rules on where you can stand."
+      ]
+    },
+    {
+      "h2": "Beyond the action frame",
+      "paras": [
+        "The best football coverage has more than tackles. Marching bands, players kneeling before kickoff, a lineman steaming under the lights at halftime, a coach on a headset, a student section in face paint. These frames carry the feel of a Friday night better than a tenth sharp touchdown catch.",
+        "A wide lens on a second body makes this easier. A 24-70mm or a 35mm prime catches the team tunnel, the huddle and the celebration after the final whistle. Keep it around your neck all game so you never have to swap lenses at the wrong moment.",
+        "Edit tight. A gallery of 30 strong frames, with a mix of action, reaction and atmosphere, beats 300 near-duplicates. That restraint is what separates football photography that tells a story from a pile of sharp pictures."
+      ]
+    },
+    {
+      "h2": "Delivering on deadline",
+      "paras": [
+        "Football coverage is often wanted the same night. Shoot raw plus JPEG, tag strong frames in camera as you go and use halftime to transfer and caption a first batch. A laptop in a weatherproof bag behind the bench area, where allowed, saves an hour after the game.",
+        "Caption with names and numbers while the roster is in front of you. Get the spelling of every player from the official program or the team's sports information staff, never from memory, and note the quarter and the play so an editor can place each image."
+      ]
+    }
+  ],
+  "notes_title": "Kit list",
+  "notes": [
+    "400mm f/2.8 or 70-200mm f/2.8 plus a full-frame body with clean high ISO",
+    "Second body with 24-70mm for sideline atmosphere and celebrations",
+    "Short monopod kept close to the body, never extended into the lane",
+    "Start at 1/1000s, f/2.8, auto ISO with a high cap",
+    "Gray card for white balance under old stadium lights",
+    "Credential from the athletic director or sports information office"
+  ],
+  "pull_quote": "Watch the play, not the back of the camera. A sweep does not stop for photographers.",
+  "image_queries": [
+    "high school football night game",
+    "football quarterback throwing",
+    "stadium lights football field"
+  ],
+  "related": [
+    "baseball-teens",
+    "ucla-water-polo",
+    "dave-roberts-for-ucla"
+  ]
+}

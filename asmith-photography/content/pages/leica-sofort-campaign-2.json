@@ -1,0 +1,61 @@
+{
+  "slug": "leica-sofort-campaign-2",
+  "title": "Leica Sofort-Style Instant Camera Campaign Photography",
+  "description": "How to approach campaign photography for an instant camera like the Leica Sofort: shooting a camera as product, using instant prints as props, real moments.",
+  "h1": "Shooting an Instant Camera Campaign: Lessons From the Leica Sofort",
+  "dek": "The Leica Sofort is Leica's instant camera, and campaigns for that kind of product face a fun paradox: you are photographing a camera, and the prints it makes, with another camera.",
+  "sections": [
+    {
+      "h2": "Photographing a camera brand",
+      "paras": [
+        "The Leica Sofort is Leica's instant camera, and it sits in a product category that is unusually self-aware. Anyone shooting a campaign for an instant camera is making pictures about picture-making. The audience includes photographers, who will notice every detail, and casual users who mostly want to know that the camera is fun and the prints look good.",
+        "Instant cameras are sold on experience: the click, the whir, the print appearing in someone's hand, the small object passed around a table. A campaign has to show that experience, the camera as a design object, and the prints themselves, ideally within the same set of images.",
+        "A useful planning exercise is to write the campaign as a sequence: a camera on a shelf, a camera in a hand, a frame being taken, a print developing, prints being shared. Each step suggests a setup, and together they make a set that can run as a carousel, a short sequence on a product page or a series of posters."
+      ]
+    },
+    {
+      "h2": "The camera as a product object",
+      "paras": [
+        "Camera bodies are full of small details: dials, lens rings, textured grips, a viewfinder window, a logo badge. Shoot them like jewelry. A 100mm macro lens, a soft key from above, and a gridded strip light skimming along the body bring out texture on matte plastic and leatherette, while black flags keep the lens glass deep and clean.",
+        "Lens glass is the hardest part. Front elements reflect everything, so place a black card with a small cutout for your own lens directly in front of the product, or shoot from a slight angle and let a controlled softbox reflection describe the curve. A single clean highlight on the lens reads as quality.",
+        "Shoot each color variant of the camera under identical lighting and camera position. Instant cameras often come in several colors, and the set needs to look like a family on a product page. A seamless matched to each body color, or a single neutral gray for the whole range, keeps the variants consistent and lets an art director lay them out side by side."
+      ]
+    },
+    {
+      "h2": "Instant prints as props and proof",
+      "paras": [
+        "The prints are the strongest prop you have, and they also serve as proof of what the camera can do. Shoot real prints made by the product on the day. Fake or digitally inserted images undermine trust quickly in a category where photographers are the audience.",
+        "Plan scenes around the print's life: the print emerging, a hand holding it up against the scene it captured, a scatter of prints on a table after a party, prints tucked into a mirror frame or pinned on a corkboard. The hand-against-scene frame, with the print sharp and the real scene soft behind it, explains the product instantly.",
+        "Instant film is sensitive to temperature and light while developing. Keep packs cool, shade freshly ejected prints from strong sun, and give them time to develop fully before the hero shot. Photograph prints flat on a copy stand afterward too, since the client will want clean scans for social posts."
+      ]
+    },
+    {
+      "h2": "Real moments in real places",
+      "paras": [
+        "Instant cameras live at gatherings: birthdays, beach days, road trips, backyard dinners. Cast friend groups who actually know each other, give them the camera and a few packs of film, and let them use it while you shoot around them. Locations such as a Silver Lake backyard, a picnic at Griffith Park or a sunset on the Venice breakwater give warm, easy settings without heavy production.",
+        "Use a 35mm lens and natural light, and stay close enough to be part of the group. The best frames are often the ones where someone is laughing at a print, not posing with the camera. Mix in a few deliberate hero frames of the camera in a hand, raised to an eye, so the product is clearly identifiable.",
+        "Done well, a Leica Sofort-style campaign shows a product that disappears into a good afternoon, and leaves a stack of prints behind as evidence."
+      ]
+    }
+  ],
+  "notes_title": "Shot list",
+  "notes": [
+    "Product hero for each color variant under identical lighting",
+    "Lens glass detail with a black card and one clean highlight",
+    "Real prints made on the day; no inserted images",
+    "Hand holding print against the scene it captured",
+    "Friend group using the camera naturally, 35mm, available light",
+    "Flat copy-stand captures of the best prints for social"
+  ],
+  "pull_quote": "An instant camera campaign is proven by the prints on the table, not by the camera in the hand.",
+  "image_queries": [
+    "instant camera prints table",
+    "hand holding instant photo",
+    "friends instant camera party"
+  ],
+  "related": [
+    "etnia-barcelona-vintage-collection-campaign",
+    "personal-weekly",
+    "lifestyle-book-1"
+  ]
+}

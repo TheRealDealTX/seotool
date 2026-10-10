@@ -1,0 +1,68 @@
+{
+  "slug": "fila-spring-2017",
+  "title": "Fila Spring 2017-Style Lookbook: Casting and Movement",
+  "description": "Producing a sportswear lookbook in the Fila Spring 2017 spirit: casting athletic models, capturing movement, bold primary colors and street-to-court styling.",
+  "h1": "The Fila Spring 2017 Lookbook Approach: Movement in Primary Color",
+  "dek": "A Fila Spring 2017-type lookbook is a production puzzle: dozens of looks, models who can actually move, bold primaries and styling that has to work on the street and on court.",
+  "sections": [
+    {
+      "h2": "What a sportswear lookbook has to deliver",
+      "paras": [
+        "A spring sportswear lookbook, the kind of brief a name like Fila Spring 2017 points to, is less about one perfect campaign image and more about volume and consistency. A lookbook might need thirty to sixty outfits shot in a day or two, each clear enough for buyers, press and e-commerce, while still feeling like a story rather than a catalog.",
+        "That means the plan matters more than the inspiration. Before the shoot, lock the look order, the number of frames per look and which looks get a movement shot. Group looks by color so set changes are minimal, and schedule the hardest movement looks for the morning, while models are fresh.",
+        "Build a simple tracking sheet with look numbers, product codes, model, setup and frame counts, and have a digital tech tick off each look as it is captured and tagged in Capture One. On a fast-moving lookbook day, a missed back view or an unshot colorway is the most common and most expensive mistake."
+      ]
+    },
+    {
+      "h2": "Casting for athletic movement",
+      "paras": [
+        "Sportswear looks wrong on someone who cannot move. Cast models with real athletic backgrounds, such as former college athletes, dancers, tennis players or skaters, and ask agencies for motion tests rather than just digitals. A ten-second phone clip of a model jogging, jumping and turning tells you more than any polaroid.",
+        "Mix builds and ages across the cast so the clothes read as wearable, and cast at least one pair who can be shot together. Duo frames, two people rallying a ball or walking in step, help a lookbook feel social instead of a parade of solo poses.",
+        "On the day, warm up the models with a few minutes of stretching. Cold muscles produce stiff jumps, and a lookbook movement frame needs height and extension."
+      ]
+    },
+    {
+      "h2": "Freezing and suggesting motion",
+      "paras": [
+        "Use two techniques and alternate them. For frozen action, shoot at 1/1000s or faster in daylight, or use strobes at short flash durations in the studio. Ask for jumps, skips, racquet swings and quick turns, and shoot bursts so you can choose the frame with the cleanest silhouette and the clothes fully extended.",
+        "For suggested motion, slow down. Panning at 1/30s with a model jogging past gives a sharp body against streaked background, which reads as energy without any athletic pose. Rear-curtain sync with a strobe at 1/15s freezes the model at the end of a movement trail, a trick that suits a bright, playful sportswear story.",
+        "Keep one static frame for every look regardless. Buyers need to see the garment standing still, front and back, with nothing blurred."
+      ]
+    },
+    {
+      "h2": "Locations that bridge court and street",
+      "paras": [
+        "A spring sportswear book benefits from two or three locations within a short drive. In Los Angeles, a public tennis court in Griffith Park, a stretch of sidewalk in Silver Lake and a white cyc studio in Hollywood can all be covered in a single day if the schedule is tight and the court booking is confirmed in advance.",
+        "Shoot court setups early, before the surface gets hot and the light goes overhead, then move to street locations around midday where building shade softens the sun. Finish in the studio for the static product frames, where controlled light makes color matching for e-commerce straightforward."
+      ]
+    },
+    {
+      "h2": "Bold primaries and street-to-court styling",
+      "paras": [
+        "Spring sportswear often runs on primaries: true red, cobalt, sunshine yellow, with white and navy to rest the eye. On a white cyclorama those colors leap; on location they need careful backgrounds. Pastel stucco in Silver Lake, the painted walls around the Arts District and blue-sky rooftops all hold primaries without clashing.",
+        "Street-to-court styling means each piece is shown two ways. A track jacket goes over a tennis skirt on court, then over jeans and a hoodie on a sidewalk. Plan pairs of setups, one sport and one street, and let the stylist rebuild looks between them. A Fila Spring 2017-style book that shows both contexts gives buyers ideas for how to merchandise the pieces.",
+        "In post, protect saturation without letting primaries clip. Check reds and yellows in the RGB histogram, since those channels blow out first, and match color against swatches from the garment samples. Before delivery, review the full set as a grid sorted by look number to catch any piece that drifted in tone between morning and afternoon light."
+      ]
+    }
+  ],
+  "notes_title": "Shot list",
+  "notes": [
+    "Every look: static front, static back, one movement frame",
+    "Movement: 1/1000s jumps, 1/30s pans, rear-curtain sync at 1/15s",
+    "Cast athletes or dancers; request motion test clips from agencies",
+    "Warm up talent before movement setups",
+    "Pair setups: one court look, one street look per key piece",
+    "Check red and yellow channels for clipping; match to fabric swatches"
+  ],
+  "pull_quote": "Sportswear only looks honest on someone who can actually move in it, so cast the jump before the face.",
+  "image_queries": [
+    "athlete jumping colorful sportswear",
+    "tennis player motion blur",
+    "streetwear model primary colors"
+  ],
+  "related": [
+    "fila-2016",
+    "nike-running",
+    "stacy-adams-spring-2017"
+  ]
+}

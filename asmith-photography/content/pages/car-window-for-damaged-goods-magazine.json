@@ -1,0 +1,67 @@
+{
+  "slug": "car-window-for-damaged-goods-magazine",
+  "title": "Car Window Photography: Reflections, Motion and Framing",
+  "description": "Car window photography for an indie print magazine: working with reflections, motion blur at slow shutter speeds, and using the car itself as the frame.",
+  "h1": "Car Window Photography: The Car as Frame for an Indie Magazine",
+  "dek": "Car window photography turns glass, reflections and movement into a frame within the frame. Here's how to approach it for an independent print story in Los Angeles.",
+  "sections": [
+    {
+      "h2": "Why the car works as a frame",
+      "paras": [
+        "In Los Angeles, a lot of life is seen through glass. Car window photography uses that fact: the window frame crops the world into a rectangle, the glass adds reflections, and the motion of the car gives every scene a sense of passing. For an indie print magazine, it's a natural way to tell a story about the city without a single location.",
+        "There are two directions to work in. Shooting out, from inside the car toward the street, puts the viewer in the passenger seat. Shooting in, from outside toward a driver or passenger, turns the car into a portrait studio with a built-in frame and a layer of reflected city over the face."
+      ]
+    },
+    {
+      "h2": "Working with reflections",
+      "paras": [
+        "Reflections are the material here, not a problem to remove. A polarizer lets you control them: rotate it to cut the glare completely, or back it off to let a palm tree or a neon sign ghost over your subject's face. Check the effect at each angle, since polarizers work strongest at around 35 degrees to the glass.",
+        "When shooting in, park so the background behind you is interesting, because that's what will appear in the glass. A street of signs in Koreatown or a row of palms on a Silver Lake hill gives layers; a blank wall gives nothing. Expose for the face inside and let the reflections sit at whatever density they land.",
+        "Tinted rear windows act as built-in ND filters and can make a passenger glow against a darker interior. Front windows are usually clearer."
+      ]
+    },
+    {
+      "h2": "Motion and shutter speed",
+      "paras": [
+        "Shooting out of a moving car, shutter speed decides the mood. At 1/500s the street freezes into a crisp postcard; at 1/30s or 1/15s, roadside objects streak while distant hills stay sharp. Brace the camera against the door frame, never against the glass, which carries vibration from the road.",
+        "Always have a dedicated driver. Whoever shoots should not be behind the wheel, and for shots of a driver from a following car, a camera car with a second driver and agreed routes on quiet streets is the only safe way to work. Freeways are best left to permitted productions.",
+        "Night drives through Downtown or along Sunset are rich with color. Raise ISO to 3200, open to f/1.8 and use street lights and signal glow as moving key lights."
+      ]
+    },
+    {
+      "h2": "Lighting inside the car",
+      "paras": [
+        "A parked car is a small, dark studio with a huge window. In daylight, the windshield and side glass act as a soft key from above and in front, and the dashboard bounces warm light under the chin. Often the only addition needed is a small white card on the passenger's lap to open the shadows.",
+        "At night, interior light becomes a choice. A small battery LED tucked under the dash, gelled to match street lighting, gives a subtle glow without looking staged. Avoid the car's own dome light; it's usually green and overhead, the least flattering angle there is.",
+        "Shooting in from outside at night, the balance is between the face and the city reflected on the glass. Underexpose the reflection a stop, let the interior LED carry the face, and the two layers will separate. Small changes in your position move the reflections a lot, so step left and right before settling on a frame. In car window photography, that half step is often the difference between a busy frame and a clear one."
+      ]
+    },
+    {
+      "h2": "Editing for print",
+      "paras": [
+        "A sequence of car window photography reads like a road movie when it runs in order. Lay out the edit as a journey: departure, city, a portrait, a long blur, arrival. Keep grain and slight softness; the glass adds both anyway, and cleaning them up removes the feeling of being in the car.",
+        "Check smudges and dust on the window before every take. A fingerprint in the wrong place can sit right over an eye."
+      ]
+    }
+  ],
+  "notes_title": "On set",
+  "notes": [
+    "Never shoot and drive; use a dedicated driver every time",
+    "Circular polarizer to dial reflections in or out",
+    "Brace on the door frame, not the glass, to avoid vibration",
+    "1/30s for streaked roadside motion, 1/500s to freeze",
+    "Park so the scene behind you reflects well on the glass",
+    "Clean windows before each setup; carry microfiber cloths"
+  ],
+  "pull_quote": "In this city the windshield is the most common frame there is. The trick is to treat the glass as part of the picture.",
+  "image_queries": [
+    "portrait through car window",
+    "car window reflection city",
+    "night drive motion blur"
+  ],
+  "related": [
+    "downtown-for-something-about-magazine",
+    "something-about-magazine-film",
+    "park-and-ride-film"
+  ]
+}

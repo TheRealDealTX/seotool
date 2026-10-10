@@ -1,0 +1,69 @@
+{
+  "slug": "kilian-martin-for-stern-magazine",
+  "title": "Kilian Martin and Photographing Freestyle Skateboarding",
+  "description": "Kilian Martin is a Spanish freestyle skateboarder. Here is how freestyle skating is photographed for a European news magazine feature in Los Angeles.",
+  "h1": "Kilian Martin and the Craft of Photographing Freestyle Skating",
+  "dek": "Freestyle skating, the style Kilian Martin is known for, is fluid and technical. Photographing it for a news magazine calls for different choices than street skating.",
+  "sections": [
+    {
+      "h2": "Why freestyle is different",
+      "paras": [
+        "Kilian Martin is a Spanish freestyle skateboarder known for a flowing, technical style that looks closer to dance than to the rail-and-stair approach of most street skating. That makes freestyle a distinct photographic problem.",
+        "Street skate photos usually capture a single peak moment: the top of an ollie, the middle of a grind. Freestyle tricks are often continuous movements, with the board spinning, flipping and rolling through the skater’s hands and feet. The best moment may not be the highest one.",
+        "For a photographer, that means paying closer attention to body position and board orientation than to raw height. A frame where the board is edge-on to the lens can look like nothing is happening, while the same moment from forty-five degrees can show the whole trick."
+      ]
+    },
+    {
+      "h2": "Shooting for a news magazine",
+      "paras": [
+        "A feature for a general-interest European news magazine such as Stern has a different audience than a skate title. Readers may not know what freestyle is, so the pictures need to explain the discipline as well as show it.",
+        "That suggests a mix: one or two striking action frames, a sequence that shows how a trick unfolds, and portraits that introduce the person behind it. Wider frames that show location help readers place the story, especially if it is set in Los Angeles.",
+        "Coordinate with the writer early. A news feature often has a specific angle, such as the discipline’s history, the skater’s career or a city setting, and the picture editor will want images that support it. Ask which spreads are planned so you can shoot horizontals and verticals accordingly."
+      ]
+    },
+    {
+      "h2": "Capturing movement",
+      "paras": [
+        "For crisp freestyle moments, shoot at 1/1000s or faster in daylight and use continuous autofocus with a tracking area. Burst mode lets you choose the frame where the board’s position is most readable. Watch the hands as closely as the feet; in freestyle they often carry as much of the trick as the board does.",
+        "Motion blur can tell the story better than a frozen frame. Panning at around 1/30s with a 35mm or 50mm lens, following the skater across a smooth surface, keeps the face sharp while the background streaks. Rear-curtain flash at slow shutter speeds adds a sharp final moment on top of a blurred trail.",
+        "Long sequences work well for freestyle. A locked-off camera and a composite of fifteen or twenty frames can show an entire combination in one image."
+      ]
+    },
+    {
+      "h2": "Locations in LA",
+      "paras": [
+        "Freestyle needs smooth, open ground more than obstacles. Empty parking structures, schoolyards on weekends with permission, the plazas around Downtown’s Broadway and the concrete near the LA River all work. Griffith Park offers paths and open space with hills behind. Whatever the spot, check the background for clutter such as parked cars, signage and passersby, which pull attention from a precise, balanced movement.",
+        "Pay attention to surface and backdrop together. A clean wall or open sky keeps the shape of the trick readable, which matters more in freestyle than almost any other discipline.",
+        "Surface quality matters for safety as well as style. Freestyle tricks rely on small wheels and smooth ground, and a crack or pebble can end a session. Sweep the area with a push broom before shooting and keep foot traffic out of the space."
+      ]
+    },
+    {
+      "h2": "Portraits and context",
+      "paras": [
+        "A news feature needs a person, not just a performance. Plan a quiet portrait away from the skating, with natural window light or open shade, and let the subject choose how they want to be shown.",
+        "Avoid putting words in anyone’s mouth. Captions for a profile of someone like Kilian Martin should describe what is in the frame and leave quotes to the reporter’s interview.",
+        "A profile of someone like Kilian Martin also benefits from small details: worn griptape, a board’s scuffed tail, hands holding a deck. These frames help a layout breathe between the bigger action spreads and give readers a sense of the person’s craft."
+      ]
+    }
+  ],
+  "notes_title": "Kit list",
+  "notes": [
+    "Fast standard zoom (24-70mm f/2.8) for flexible framing",
+    "35mm or 50mm prime for panning at slow shutter speeds",
+    "One speedlight with rear-curtain sync for blur plus freeze",
+    "Tripod for locked-off freestyle sequences",
+    "ND filter to allow slow shutter speeds in bright sun",
+    "Reflector for open-shade portraits"
+  ],
+  "pull_quote": "Freestyle is a sentence, not a word; sometimes you need the whole sequence to read it.",
+  "image_queries": [
+    "freestyle skateboarding",
+    "skateboarder motion blur",
+    "skateboard trick plaza"
+  ],
+  "related": [
+    "skateboarding",
+    "shaun-white-for-oakley",
+    "thrasher-magazine"
+  ]
+}
