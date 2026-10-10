@@ -28,7 +28,6 @@ $routes = [
     'bud-light-my-team-can' => 1,
     'car-window-for-damaged-goods-magazine' => 1,
     'contact' => 1,
-    'credits' => 1,
     'dave-roberts-for-ucla' => 1,
     'disney-interactive' => 1,
     'dodgers-billy-gasparino-for-c-magazine' => 1,
@@ -73,6 +72,7 @@ $routes = [
     'womens-march-los-angeles' => 1
 ];
 $redirects = [
+    '/credits' => '/about',
     '/fila-spring-2017-new' => '/fila-spring-2017',
     '/etnia-barcelona-vintage-campaign-2016' => '/etnia-barcelona-vintage-collection-campaign',
     '/leica-sofort-campaign-3' => '/leica-sofort-campaign-2',

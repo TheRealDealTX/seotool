@@ -40,7 +40,7 @@ distinct paths after merging.
 
 Also handled: trailing slashes and upper-case variants 301 to the canonical
 slug, `/m/<slug>` 301s to `/<slug>`, query strings (`?ref=…`) are ignored.
-New pages: `/journal` (filterable index), `/about`, `/credits`.
+New pages: `/journal` (filterable index), `/about`. `/credits` (removed) 301s to `/about`.
 The full list is `content/plan.json`; `validate.py` checks every entry routes.
 
 ## Layout
@@ -51,7 +51,7 @@ The full list is `content/plan.json`; `validate.py` checks every entry routes.
 | `content/plan.json` | Slug → category, focus keyword, angle; legacy redirects |
 | `content/pages/*.json` | Article copy (title, description, h1, dek, sections, notes, pull quote, related) |
 | `content/BRIEF.md` | The writing rules the copy follows |
-| `content/credits.json` | Licence + attribution for every image |
+| `content/credits.json` | Source + licence record for every image (all CC0; not shown on the site) |
 | `fetch_images.py` | Pulls CC0 / CC BY / public-domain photos from Openverse (StockSnap first) |
 | `content/image-picks.json`, `image-blocklist.txt` | Hand-picked overrides / rejected images |
 | `contact_sheet.py` | Labelled contact sheets for reviewing the picked images |

@@ -89,9 +89,9 @@ def footer():
 <div><h2>About this journal</h2><p>Stories on how commercial, editorial, skate and sport photography gets made in Los Angeles.</p><p style="margin-top:14px"><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
 <div><h2>Sections</h2><ul>{cats}</ul></div>
 <div><h2>Most read</h2><ul>{picks}</ul></div>
-<div><h2>Site</h2><ul><li><a href="/journal">All stories</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/credits">Photo credits</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
+<div><h2>Site</h2><ul><li><a href="/journal">All stories</a></li><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
 </div>
-<div class="foot-base"><span>&copy; <span data-year>2026</span> {NAME}</span><span>Images are Creative Commons / public domain; see <a href="/credits">credits</a>.</span></div>
+<div class="foot-base"><span>&copy; <span data-year>2026</span> {NAME}</span></div>
 </div></footer>'''
 
 
@@ -260,7 +260,7 @@ def build_article(p):
 <div class="meta"><span>{e(cat)}</span><span>{mins} min read</span><span>Frame {p["frame"]}</span></div>
 </div></header>
 <div class="wrap article">
-<div class="prose">{"".join(secs)}<p class="credit">{credit_line(p["slug"])}</p></div>
+<div class="prose">{"".join(secs)}</div>
 <aside class="aside"><div class="aside-inner">
 <div class="toc-box"><p class="mono" style="color:var(--muted);margin:0 0 12px">In this story</p><nav class="toc" aria-label="Contents">{"".join(toc)}</nav></div>
 {f'<div class="notes"><h2>{e(p.get("notes_title") or "Field notes")}</h2><ol>{notes}</ol></div>' if notes else ""}
@@ -320,48 +320,35 @@ def build_about():
 <h2>What this is not</h2>
 <p>This site does not represent any photographer, and it does not claim to have photographed the brands, athletes, musicians or publications that appear in story titles. Those names describe the genre of work being discussed. Nothing here is sponsored or endorsed by them.</p>
 <p>This domain previously hosted a photographer's portfolio. The journal is a new and separate publication with no connection to that photographer. If you came looking for their work, search for them directly.</p>
-<h2>About the pictures</h2>
-<p>Images on this site are Creative Commons or public-domain photographs chosen to illustrate each subject. They are not from the shoots described. Every image is credited on its story and on the <a href="/credits">photo credits</a> page.</p>
 </div>
 <div class="develop reveal">{img_tag("about", "Vintage camera and accessories laid out on a table", sizes="(max-width: 860px) 100vw, 45vw")}
-<p class="credit">{credit_line("about")}</p></div>
+</div>
 </div></section>'''
     return page("/about", "About This Los Angeles Photography Journal",
-                f"About {NAME}: an independent journal on how skate, footwear, editorial and sport photography is made in Los Angeles, and how its images are credited.",
+                f"About {NAME}: an independent journal on how skate, footwear, editorial and sport photography is made in Los Angeles.",
                 body, current="/about", image="about", ld=[crumbs_ld([("Home", "/"), ("About", "/about")])])
 
 
 def build_contact():
-    body = head_block("Contact", "Say <em>hello</em>", f'Story ideas, corrections, image credit questions or a spot we should know about. Use the form or email <a href="mailto:{EMAIL}">{EMAIL}</a>.') + f'''
+    body = head_block("Contact", "Say <em>hello</em>", f'Story ideas, corrections, collaborations or a spot we should know about. Use the form or email <a href="mailto:{EMAIL}">{EMAIL}</a>.') + f'''
 <section style="padding-bottom:clamp(64px,9vw,120px)"><div class="wrap two">
 <div>
 <div class="notice" role="status">Thanks, your message is in. Expect a reply within a few days.</div>
 <form class="form" id="contact-form" method="post" action="/contact">
 <div class="field"><label for="name">Name</label><input id="name" name="name" required maxlength="120" autocomplete="name"></div>
 <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required maxlength="200" autocomplete="email"></div>
-<div class="field"><label for="topic">About</label><select id="topic" name="topic"><option>Story idea</option><option>Correction</option><option>Photo credit</option><option>Something else</option></select></div>
+<div class="field"><label for="topic">About</label><select id="topic" name="topic"><option>Story idea</option><option>Correction</option><option>Something else</option></select></div>
 <div class="field"><label for="message">Message</label><textarea id="message" name="message" required maxlength="5000"></textarea></div>
 <div class="hp" aria-hidden="true"><label for="website">Leave empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
 <p><button class="btn" type="submit">Send message {ARROW}</button></p>
 </form></div>
 <div class="develop reveal">{img_tag("contact", "Photographer holding a camera lens up to the viewer", sizes="(max-width: 860px) 100vw, 45vw")}
-<p class="credit">{credit_line("contact")}</p></div>
+</div>
 </div></section>'''
     return page("/contact", "Contact the Journal",
-                f"Contact {NAME}: send story ideas, corrections, Los Angeles photo spots or questions about image credits to the journal's editors.",
+                f"Contact {NAME}: send story ideas, corrections, Los Angeles photo spots and collaboration ideas to the journal's editors.",
                 body, current="/contact", image="contact", ld=[crumbs_ld([("Home", "/"), ("Contact", "/contact")])])
 
-
-def build_credits():
-    items = []
-    for key, c in sorted(CREDITS.items()):
-        where = f'<a href="/{key}">{e(BY_SLUG[key]["h1"])}</a>' if key in BY_SLUG else e(key.replace("-", " ").title())
-        items.append(f"<li><strong>{where}</strong><br>{credit_line(key)}</li>")
-    body = head_block("Credits", "Photo <em>credits</em>", "Every photograph on this site is used under a Creative Commons licence or is in the public domain. Thank you to the photographers who share their work.") + f'''
-<section><div class="wrap plain"><ul class="credits-list">{"".join(items)}</ul></div></section>'''
-    return page("/credits", "Photo Credits and Licences",
-                f"Photo credits for {NAME}: creators, titles and Creative Commons licences for every illustrative image used across the journal.",
-                body, ld=[crumbs_ld([("Home", "/"), ("Credits", "/credits")])])
 
 
 def build_404():
@@ -469,7 +456,7 @@ def main():
         shutil.copy(f, PUB / f.name)
 
     (PUB / "home.html").write_text(build_home())
-    out = {"journal": build_journal(), "about": build_about(), "contact": build_contact(), "credits": build_credits()}
+    out = {"journal": build_journal(), "about": build_about(), "contact": build_contact()}
     for p in PAGES:
         out[p["slug"]] = build_article(p)
     for slug, h in out.items():
@@ -478,7 +465,7 @@ def main():
     (PUB / "index.php").write_text(index_php(out.keys()))
     (PUB / "robots.txt").write_text(f"User-agent: *\nDisallow: /pages/\nDisallow: /home.html\n\nSitemap: {SITE}/sitemap.xml\n")
     urls = [("/", "1.0")] + [("/journal", "0.9")] + [(f"/{p['slug']}", "0.8") for p in PAGES] + \
-           [("/about", "0.5"), ("/contact", "0.5"), ("/credits", "0.3")]
+           [("/about", "0.5"), ("/contact", "0.5")]
     sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{PUBLISHED}</lastmod><priority>{pr}</priority></url>\n" for u, pr in urls)
     (PUB / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
     print(f"built home + {len(out)} pages + 404")

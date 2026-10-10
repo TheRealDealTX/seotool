@@ -40,7 +40,7 @@ class P(HTMLParser):
         else: self.text.append(d)
 
 
-routes = {"/", "/journal", "/about", "/contact", "/credits"} | {"/" + p[0] for p in plan["pages"]}
+routes = {"/", "/journal", "/about", "/contact"} | {"/" + p[0] for p in plan["pages"]}
 files = {"/": PUB / "home.html"} | {r: PUB / "pages" / f"{r[1:]}.html" for r in routes if r != "/"}
 titles, descs = {}, {}
 for route, f in files.items():
