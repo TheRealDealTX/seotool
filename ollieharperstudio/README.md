@@ -141,6 +141,6 @@ to 4:3 and saved as 480px and 960px WebP. To swap a photo, replace both
 2. `python3 build.py && ./deploy.sh` (production build: drops noindex), then clear the cache.
 3. Check that `https://ollieharperstudio.com/robots.txt` is ours (the preview domain
    serves Hostinger's own robots.txt), and that `www` and `http` 301 to `https://ollieharperstudio.com`.
-4. Create the mailbox `hello@ollieharperstudio.com`, or change `EMAIL` in `build.py`.
+4. Create the mailbox `info@ollieharperstudio.com`, or change `EMAIL` in `build.py`.
 5. Add the domain to Google Search Console, submit `sitemap.xml`, and consider
    disavowing the spam anchors ("Buy Backlinks", "PBN Network Service"…).

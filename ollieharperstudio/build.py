@@ -18,7 +18,7 @@ from art import ART, FAVICON, SHADES
 ROOT = Path(__file__).resolve().parent
 ORIGIN = "https://ollieharperstudio.com"
 NAME = "Ollie Harper Studio"
-EMAIL = "hello@ollieharperstudio.com"
+EMAIL = "info@ollieharperstudio.com"
 STAGING = os.environ.get("STAGING") == "1"
 TODAY = date.today().isoformat()
 FONTS = ("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700"
@@ -135,7 +135,7 @@ def layout(path, title, desc, body, schema=(), og_type="website", current=None):
         <li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
     </div>
     <div class="footer-word" aria-hidden="true">Ollie Harper Studio</div>
-    <div class="legal"><span>© {date.today().year} {NAME}. Photography: CC0 / royalty-free.</span><span>Drawn with a lot of coffee.</span></div>
+    <div class="legal"><span>© {date.today().year} {NAME}.</span><span>Drawn with a lot of coffee.</span></div>
   </div>
 </footer>
 <script src="/assets/js/site.js?v={TODAY}" defer></script>
