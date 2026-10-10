@@ -14,7 +14,7 @@ SITE = {
         "Yasmin's Blog is an independent New York journal about food, "
         "neighborhood institutions, culture and street photography."
     ),
-    "email": "hello@yasminsblog.com",
+    "email": "info@yasminsblog.com",
     "updated": "2026-10-10",
 }
 

@@ -88,7 +88,7 @@ def card_img(p, sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, 400px"
 
 def figure(name, alt, cap, cls="figure"):
     return (f'<figure class="{cls} reveal">{photo(name, alt, sizes="(max-width: 800px) 100vw, 760px")}'
-            f'<figcaption>{esc(cap)} <span class="credit">{credit(name)}</span></figcaption></figure>')
+            f'<figcaption>{esc(cap)}</figcaption></figure>')
 
 
 def og_photo(name, dest):
@@ -175,9 +175,9 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
     <div class="footer-grid">
       <div><p class="footer-lede">{esc(SITE['description'])}</p></div>
       <div><h2>Read</h2><ul>{''.join(f'<li><a href="/mamablog/category/{k}">{k}</a></li>' for k in CATEGORIES)}<li><a href="/mamablog">All posts</a></li></ul></div>
-      <div><h2>Site</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy</a></li><li><a href="/photo-credits">Photo credits</a></li><li><a href="/mamablog/feed.xml">RSS</a></li></ul></div>
+      <div><h2>Site</h2><ul><li><a href="/about">About</a></li><li><a href="/contact">Contact</a></li><li><a href="/privacy-policy">Privacy</a></li><li><a href="/mamablog/feed.xml">RSS</a></li></ul></div>
     </div>
-    <p class="fine">&copy; {date.today().year} {SITE['name']}. Independent and reader-supported.</p>
+    <p class="fine">&copy; {date.today().year} {SITE['name']}. Independent and reader-supported. <a href="/photo-credits">Photo credits</a></p>
   </div>
 </footer>
 <script src="/assets/js/site.js?v={JS_V}" defer></script>
@@ -361,7 +361,7 @@ def build_post(p, idx):
     photos = ""
     if slug in PLATES:
         photos = '<div class="plates">' + "".join(
-            f'<figure class="plate reveal" style="--d:{i*80}ms"><div class="plate-art tilt">{photo(name, cap, sizes="(max-width: 640px) 100vw, 370px")}<span class="plate-no">{i+1}/4</span></div><figcaption><strong>{esc(cap)}</strong> {esc(txt)} <span class="credit">{credit(name)}</span></figcaption></figure>'
+            f'<figure class="plate reveal" style="--d:{i*80}ms"><div class="plate-art tilt">{photo(name, cap, sizes="(max-width: 640px) 100vw, 370px")}<span class="plate-no">{i+1}/4</span></div><figcaption><strong>{esc(cap)}</strong> {esc(txt)}</figcaption></figure>'
             for i, (cap, txt, name) in enumerate(PLATES[slug])) + "</div>"
     # Inline figures go before the 2nd and 4th section headings.
     parts = p["body"].split("<h2>")
@@ -391,7 +391,7 @@ def build_post(p, idx):
     </div>
     <figure class="post-hero-media">
       <div class="post-hero-frame">{photo(hname, halt, sizes="(max-width: 1240px) 100vw, 1240px", eager=True)}</div>
-      <figcaption class="hero-credit">{esc(hcap)} <span class="credit">{credit(hname)}</span></figcaption>
+      <figcaption class="hero-credit">{esc(hcap)}</figcaption>
     </figure>
   </header>
   <div class="wrap narrow prose">
@@ -437,7 +437,7 @@ def build_static_pages():
 <section class="section tight"><div class="wrap narrow prose reveal">
 <div class="contact-card">
 <p>The best way to reach the editors is by email:</p>
-<p class="big-link"><a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
+<p class="big-link"><a href="mailto:""" + SITE['email'] + """">""" + SITE['email'] + """</a></p>
 <p>Tell us about a New York spot worth covering, a place that has closed or changed, or anything we got wrong. We read everything, but we can't reply to every message.</p>
 </div>
 <h2>Corrections</h2>
@@ -456,7 +456,7 @@ def build_static_pages():
 <h2>Links</h2>
 <p>Posts link to other websites. Their privacy practices are their own.</p>
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:hello@yasminsblog.com">hello@yasminsblog.com</a>.</p>
+<p>Questions about this policy: <a href="mailto:""" + SITE['email'] + """">""" + SITE['email'] + """</a>.</p>
 </div></section>"""
     write("/privacy-policy", page(path="/privacy-policy", title=f"Privacy Policy | {SITE['name']}", description="The Yasmin's Blog privacy policy: what our static site collects and how it is used.",
                                   body=privacy, schema=[crumbs([("Home", "/"), ("Privacy policy", "/privacy-policy")])]))
@@ -467,12 +467,11 @@ def build_static_pages():
         for name, *_ in [im["hero"], *im["inline"]] + [(n,) for *_, n in PLATES.get(slug_of(p), [])]:
             used.setdefault(name, p)
     rows = "".join(f'<li><a class="credit-thumb" href="{p["path"]}">{photo(name, PHOTOS[name]["title"], sizes="120px")}</a><div><strong>{esc(PHOTOS[name]["title"])}</strong><br><span class="credit">{credit(name)}</span><br><small>Used in <a href="{p["path"]}">{esc(p["h1"])}</a></small></div></li>' for name, p in used.items())
-    credits_body = hero_small("Credits", "Photo credits", "Every photo on Yasmin's Blog is used under a free licence that allows commercial use. Thank you to the photographers.", "credits") + f"""
+    credits_body = hero_small("Credits", "Photo credits", "Licences for the photos used on this site.", "credits") + f"""
 <section class="section tight"><div class="wrap narrow prose">
-<p>Photos were sourced through <a href="https://openverse.org" rel="noopener" target="_blank">Openverse</a> and are licensed under Creative Commons (CC BY, CC BY-SA), CC0 or the Public Domain Mark. Images have been resized and cropped for the web; CC BY-SA photos remain available under the same licence. Photographers who would like an image credited differently or removed can <a href="/contact">contact us</a>.</p>
 <ul class="credit-list">{rows}</ul>
 </div></section>"""
-    write("/photo-credits", page(path="/photo-credits", title=f"Photo Credits | {SITE['name']}", description="Photo credits and licences for the Creative Commons and public domain images used on Yasmin's Blog.",
+    write("/photo-credits", page(path="/photo-credits", extra_head='<meta name="robots" content="noindex, follow">\n', title=f"Photo Credits | {SITE['name']}", description="Photo credits and licences for the Creative Commons and public domain images used on Yasmin's Blog.",
                                  body=credits_body, schema=[crumbs([("Home", "/"), ("Photo credits", "/photo-credits")])]))
 
     nf = f"""<section class="hero-small notfound"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
@@ -485,7 +484,7 @@ def build_static_pages():
 
 
 def build_feeds():
-    urls = ["/", "/mamablog", "/about", "/contact", "/privacy-policy", "/photo-credits"] + [p["path"] for p in POSTS] + \
+    urls = ["/", "/mamablog", "/about", "/contact", "/privacy-policy"] + [p["path"] for p in POSTS] + \
            [f"/mamablog/category/{k}" for k in CATEGORIES] + [f"/mamablog/tag/{t}" for t in TAGS]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     sm += [f"  <url><loc>{esc(HOST + u)}</loc><lastmod>{UPDATED}</lastmod></url>" for u in urls]

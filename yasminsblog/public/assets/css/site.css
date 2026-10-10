@@ -272,6 +272,7 @@ a { color: inherit; }
 .footer-grid a:hover { color: var(--mustard); }
 .footer-lede { font: italic 400 22px/1.4 var(--serif); max-width: 36ch; margin: 0; }
 .fine { margin-top: 50px; font-size: 13px; color: #9b8f83; }
+.fine a { color: inherit; margin-left: 8px; }
 
 /* reveal */
 .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease) var(--d, 0ms), transform .9s var(--ease) var(--d, 0ms); }
