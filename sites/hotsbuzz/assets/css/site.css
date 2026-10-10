@@ -382,8 +382,3 @@ p { margin: 0 0 1em; }
 .phero--photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, color-mix(in srgb, var(--c2) 94%, transparent) 0%, color-mix(in srgb, var(--c1) 70%, transparent) 55%, color-mix(in srgb, var(--c1) 20%, transparent) 100%); }
 .phero--photo .phero__art { z-index: 2; width: clamp(110px, 14vw, 180px); }
 .season__list img, .card__media img, .feature__media img, .post__cover img { background: var(--paper-3); }
-.credits { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 18px; }
-.credits li { background: var(--paper-2); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); font-size: .88rem; }
-.credits img { aspect-ratio: 16/10; object-fit: cover; width: 100%; }
-.credits div { padding: 12px 14px; }
-.credits b { display: block; font-size: .95rem; }

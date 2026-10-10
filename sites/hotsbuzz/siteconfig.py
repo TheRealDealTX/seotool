@@ -14,7 +14,7 @@ SITE = {
         "masterpieces. That’s why we gather crafts you can make as gifts or as "
         "home decoration, not just for yourself but for your close friends too."
     ),
-    "email": "hello@hotsbuzz.com",
+    "email": "info@hotsbuzz.com",
     "founded": "2016",
 }
 

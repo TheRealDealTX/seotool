@@ -7,8 +7,8 @@
 Reads photos.json (key -> source photo + alt text), writes
 assets/photos/<key>-800.webp and -1600.webp (16:10 crops). Needs ImageMagick.
 Every photo is royalty-free: the Pexels License, CC0 or public domain (the
-latter found through Openverse). None requires attribution; /image-credits/
-credits them anyway.
+latter found through Openverse). None requires attribution; photos.json keeps
+each photo's source page and license on record.
 """
 
 import json

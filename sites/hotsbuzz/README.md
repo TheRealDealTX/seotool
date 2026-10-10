@@ -85,9 +85,9 @@ On the day hotsbuzz.com is connected:
 
 ## Known gaps
 
-- `hello@hotsbuzz.com` (Contact page) needs a real mailbox or forwarder.
+- `info@hotsbuzz.com` (Contact page, privacy policy, JSON-LD) needs a real mailbox or forwarder.
 - Photos are royalty-free stock (24 from Pexels under the Pexels License, 7 CC0
-  from rawpixel via Openverse). None requires attribution; `/image-credits/` lists them
-  anyway. They illustrate each project's subject rather than showing the exact finished
+  from rawpixel via Openverse). None requires attribution; `photos.json` records each
+  photo's source page and license. They illustrate each project's subject rather than showing the exact finished
   craft, so swap in your own project photos when you can (add the file to
   `assets/photos/` and an entry to `photos.json`). That is better for image search and Pinterest.

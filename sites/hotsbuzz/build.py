@@ -245,7 +245,6 @@ def footer():
       <li><a href="/about/">About us</a></li>
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/privacy-policy/">Privacy policy</a></li>
-      <li><a href="/image-credits/">Image credits</a></li>
       <li><a href="/feed.xml">RSS feed</a></li>
     </ul></div>
   </div>
@@ -616,28 +615,6 @@ def page_static(posts):
 <p>Questions about this policy: <a href="mailto:{SITE['email']}">{SITE['email']}</a>.</p>''')
 
 
-def page_credits(posts):
-    names = {p["slug"]: strip_tags(p["title"]) for p in posts}
-    names.update({"cat-" + c["slug"]: strip_tags(c["name"]) + " (category)" for c in CATEGORIES})
-    names["home"] = "Homepage"
-    lic = {"pexels": ("Pexels License (free to use)", "https://www.pexels.com/license/"),
-           "cc0": ("CC0 1.0 (public domain dedication)", "https://creativecommons.org/publicdomain/zero/1.0/"),
-           "pdm": ("Public Domain Mark 1.0", "https://creativecommons.org/publicdomain/mark/1.0/")}
-    items = []
-    for key, ph in PHOTOS.items():
-        if not has_photo(key):
-            continue
-        ln, lu = lic[ph["license"]]
-        by = f" by {esc(ph['creator'])}" if ph.get("creator") else ""
-        items.append(f'''<li><img src="/assets/photos/{key}-800.webp" alt="" width="800" height="500" loading="lazy"><div><b>{names.get(key, key)}</b>
-Photo{by} via <a href="{esc(ph['landing'])}" rel="nofollow noopener" target="_blank">{esc(ph['source'].title())}</a> · <a href="{lu}" rel="nofollow noopener" target="_blank">{ln}</a></div></li>''')
-    simple_page("/image-credits/", "Image Credits | HotsBuzz",
-                "Sources and licenses for the photos used on HotsBuzz. Every photo is a royalty-free stock image under the Pexels License, CC0 or public domain.",
-                "Image credits", f'''
-<p>The photos on HotsBuzz are royalty-free stock images: free to use under the <strong>Pexels License</strong>, released under <strong>CC0</strong>, or marked as <strong>public domain</strong>. None of them requires payment or attribution. We credit the photographers here anyway, with thanks.</p>
-<ul class="credits">{"".join(items)}</ul>''')
-
-
 def page_404():
     write("404.html", head("Page not found | HotsBuzz", "Sorry, this page could not be found. Browse every HotsBuzz DIY project and craft idea instead.", "/404.html").replace(
         '<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">') + header() + f'''
@@ -652,7 +629,7 @@ def page_404():
 
 def page_feeds(posts):
     urls = [("/", TODAY, "1.0"), ("/projects/", TODAY, "0.8"), ("/about/", TODAY, "0.4"),
-            ("/contact/", TODAY, "0.3"), ("/privacy-policy/", TODAY, "0.2"), ("/image-credits/", TODAY, "0.1")]
+            ("/contact/", TODAY, "0.3"), ("/privacy-policy/", TODAY, "0.2")]
     urls += [(f"/category/{c['slug']}/", TODAY, "0.7") for c in CATEGORIES]
     urls += [(p["url"], p["date"], "0.6") for p in posts]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
@@ -695,7 +672,6 @@ def main():
     for p in posts:
         page_post(p, posts)
     page_static(posts)
-    page_credits(posts)
     page_404()
     page_feeds(posts)
     # Card data for render_og.mjs (social images); not deployed.
