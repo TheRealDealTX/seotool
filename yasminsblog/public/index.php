@@ -14,7 +14,7 @@ $live = in_array($host, ['yasminsblog.com', 'www.yasminsblog.com'], true);
 function go($to) { header('Location: ' . $to, true, 301); exit; }
 function serve($file) {
     header('Content-Type: text/html; charset=utf-8');
-    header('Cache-Control: public, max-age=600');
+    header('Cache-Control: public, max-age=0, must-revalidate');   // assets are versioned with ?v=hash, so HTML must never go stale
     readfile($file);
     exit;
 }

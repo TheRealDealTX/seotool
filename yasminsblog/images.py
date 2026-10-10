@@ -18,8 +18,8 @@ IMAGES = {
         "inline": [],
     },
     "little-tong-noodle-shop": {
-        "hero": ("yunnan-crossing-the-bridge-rice-noodles", "A bowl of Yunnan crossing-the-bridge rice noodles", "Crossing-the-bridge mixian, Yunnan's most famous noodle dish."),
-        "inline": [("yunnan-rice-noodles-spicy-soup", "Yunnan-style rice noodles in a spicy red broth", "Spicy, sour and fragrant: mixian comes in endless variations.")],
+        "hero": ("yunnan-rice-noodles-spicy-soup", "Yunnan-style rice noodles in a spicy red broth", "Spicy, sour and fragrant: Yunnan rice noodles come in endless variations."),
+        "inline": [("yunnan-crossing-the-bridge-rice-noodles", "A bowl of Yunnan crossing-the-bridge rice noodles", "Crossing-the-bridge mixian, Yunnan's most famous noodle dish.")],
     },
     "mountain-province": {
         "hero": ("coffee-beans", "A bowl of coffee beans", "Philippine coffee spans Arabica, Robusta, Liberica and Excelsa."),
@@ -38,8 +38,8 @@ IMAGES = {
         "inline": [("dollar-pizza-slice-counter-new-york", "People eating slices outside a 2 Bros. Pizza shop at night", "The cheap slice: eaten standing up, any hour.")],
     },
     "defining-your-own-rules-welcome-to-the-new-age-of-spirituality": {
-        "hero": ("tarot-card-and-candle", "A tarot-style card beside a candle on a moon-shaped holder", "Cards, candles and a practice of your own."),
-        "inline": [("metaphysical-shop-window", "Window of a metaphysical shop with hanging lanterns and stars", "Metaphysical shops double as gathering places.")],
+        "hero": ("metaphysical-shop-window", "Window of a metaphysical shop with hanging lanterns and stars", "Metaphysical shops double as gathering places."),
+        "inline": [("tarot-card-and-candle", "A tarot-style card beside a candle on a moon-shaped holder", "Cards, candles and a practice of your own.")],
     },
     "pies-thighs-and-all-things-nice": {
         "hero": ("fried-chicken-biscuit-collard-greens", "Fried chicken with a biscuit and collard greens", "Fried chicken, a biscuit and greens: Southern comfort food."),
@@ -58,7 +58,7 @@ IMAGES = {
         "inline": [],
     },
     "24-hours-in-new-orleans-a-mini-mardi-gras-bender": {
-        "hero": ("mardi-gras-parade-new-orleans", "A Mardi Gras parade float in New Orleans", "A Mardi Gras parade rolls through New Orleans."),
+        "hero": ("krewe-of-orpheus-leviathan-float-new-orleans", "The Krewe of Orpheus Leviathan float, a giant sea dragon, at Mardi Gras World in New Orleans", "The Krewe of Orpheus' Leviathan float at Mardi Gras World, where many of the city's parade floats are built."),
         "inline": [("french-quarter-cast-iron-balcony", "Cast-iron balcony with hanging flower baskets in the French Quarter", "The French Quarter's cast-iron balconies.")],
     },
     "turkish-immigrant-restaurant-owners-in-new-york-amp-london": {

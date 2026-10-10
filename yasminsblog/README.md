@@ -70,7 +70,9 @@ particular restaurant.
 
 - `images.py`: which photo goes where (hero, inline figures, the "4 Photos" plates), with alt text and captions.
 - `photos.json`: title, author, licence and source for every photo. It feeds the per-image credit lines and `/photo-credits`.
-- `static/assets/img/photos/<name>.webp` (1600px) and `-sm.webp` (800px), served with `srcset`. Open Graph images are 1200×630 JPEG crops of each post's hero.
+- `static/assets/img/photos/<name>.webp` (up to 2000px) and `-sm.webp` (1000px), served with `srcset`. Get the largest original: Flickr photo pages list `_k` (2048px) and `_h` (1600px) versions, while Openverse only gives 1024px. Open Graph images are 1200×630 JPEG crops of each post's hero.
+
+Layouts keep photos landscape (16:9 or 4:3, never tall crops) so nothing gets magnified. Asset URLs carry a `?v=<content hash>` and HTML is sent with `max-age=0`, so the host's CDN never mixes new pages with old CSS or images.
 
 CC BY and CC BY-SA require attribution, so keep the credit lines and the
 `/photo-credits` page. To swap a photo, drop the new files into the photos

@@ -1,19 +1,17 @@
-// Yasmin's Blog: header, nav, theme, scroll reveal, tilt, parallax, filters.
+// Yasmin's Blog: header, nav, theme, scroll reveal, tilt, filters.
 (function () {
   var d = document, root = d.documentElement, body = d.body;
   root.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var fine = window.matchMedia('(pointer: fine)').matches;
 
-  // Header state + reading progress + parallax, in one rAF-throttled scroll handler.
+  // Header state + reading progress, in one rAF-throttled scroll handler.
   var header = d.querySelector('.site-header'), lastY = 0, ticking = false;
-  var parallax = d.querySelector('.parallax');
   function onScroll() {
     var y = window.scrollY, h = root.scrollHeight - innerHeight;
     header.classList.toggle('scrolled', y > 10);
     header.classList.toggle('hide', y > 300 && y > lastY && !body.classList.contains('nav-open'));
     root.style.setProperty('--p', h > 0 ? (y / h).toFixed(4) : 0);
-    if (parallax && !reduce) parallax.style.transform = 'translateY(' + (y * 0.25) + 'px)';
     lastY = y; ticking = false;
   }
   addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });

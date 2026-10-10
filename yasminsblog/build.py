@@ -22,7 +22,21 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
 HOST = SITE["host"]
 UPDATED = SITE["updated"]
-VERSION = UPDATED.replace("-", "")
+
+
+import functools
+
+
+@functools.lru_cache(maxsize=None)
+def fhash(path):
+    """Short content hash, used as a ?v= cache-buster so the host's CDN never serves a stale file."""
+    import hashlib
+    with open(os.path.join(ROOT, path), "rb") as f:
+        return hashlib.sha1(f.read()).hexdigest()[:10]
+
+
+CSS_V = fhash("static/assets/css/site.css")
+JS_V = fhash("static/assets/js/site.js")
 
 esc = html.escape
 
@@ -46,8 +60,12 @@ def license_label(m):
 
 def photo(name, alt, cls="", sizes="(max-width: 640px) 100vw, 33vw", eager=False):
     m = PHOTOS[name]
-    return (f'<img class="{cls}" src="/assets/img/photos/{name}.webp" '
-            f'srcset="/assets/img/photos/{name}-sm.webp 800w, /assets/img/photos/{name}.webp {m["w"]}w" sizes="{sizes}" '
+    big, sm = f"assets/img/photos/{name}.webp", f"assets/img/photos/{name}-sm.webp"
+    from PIL import Image
+    with Image.open(os.path.join(ROOT, "static", sm)) as im:
+        smw = im.width
+    return (f'<img class="{cls}" src="/{big}?v={fhash("static/" + big)}" '
+            f'srcset="/{sm}?v={fhash("static/" + sm)} {smw}w, /{big}?v={fhash("static/" + big)} {m["w"]}w" sizes="{sizes}" '
             f'width="{m["w"]}" height="{m["h"]}" alt="{esc(alt)}" '
             + ('fetchpriority="high" ' if eager else 'loading="lazy" ') + 'decoding="async">')
 
@@ -131,7 +149,7 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
+<link rel="stylesheet" href="/assets/css/site.css?v={CSS_V}">
 <script>try{{var t=localStorage.getItem('yb-theme');if(t)document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 {extra_head}{jsonld(*schema)}
 </head>
@@ -162,7 +180,7 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
     <p class="fine">&copy; {date.today().year} {SITE['name']}. Independent and reader-supported.</p>
   </div>
 </footer>
-<script src="/assets/js/site.js?v={VERSION}" defer></script>
+<script src="/assets/js/site.js?v={JS_V}" defer></script>
 </body>
 </html>
 """
@@ -230,7 +248,7 @@ def build_home():
     cats = "".join(f"""<a class="cat-tile reveal" href="/mamablog/category/{k}" style="--d:{i*90}ms">
       <span class="cat-num">0{i+1}</span><span class="cat-name">{k}</span><span class="cat-desc">{esc(v)}</span>
       <span class="cat-count">{sum(1 for p in POSTS if p['category']==k)} stories →</span></a>""" for i, (k, v) in enumerate(CATEGORIES.items()))
-    strip = "".join(f'<a class="strip-item reveal" href="{p["path"]}" style="--d:{i*70}ms"><figure>{photo(name, cap, sizes="300px")}<figcaption>{esc(cap)}</figcaption></figure></a>'
+    strip = "".join(f'<a class="strip-item reveal" href="{p["path"]}" style="--d:{i*70}ms"><figure>{photo(name, cap, sizes="340px")}<figcaption>{esc(cap)}</figcaption></figure></a>'
                     for p in photo_posts for i, (cap, _, name) in enumerate(PLATES[slug_of(p)]))
     body = f"""
 <section class="hero">
@@ -244,7 +262,7 @@ def build_home():
     </div>
     <div class="hero-art reveal" aria-hidden="true">
       <div class="hero-stack">
-        {''.join(f'<div class="stack-card sc{i}">{card_img(p, sizes="360px", eager=True)}<span>{esc(p["category"])}</span></div>' for i, p in enumerate([POSTS[-1], POSTS[2], POSTS[1]]))}
+        {''.join(f'<div class="stack-card sc{i}">{card_img(p, sizes="(max-width: 980px) 330px, 400px", eager=True)}<span>{esc(p["category"])}</span></div>' for i, p in enumerate([POSTS[-1], POSTS[2], POSTS[1]]))}
       </div>
       <div class="badge"><svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs><text><textPath href="#circ">NEW YORK · FOOD · CULTURE · PHOTOGRAPHY · </textPath></text></svg><span>✦</span></div>
     </div>
@@ -364,14 +382,17 @@ def build_post(p, idx):
     body = f"""
 <article class="post">
   <header class="post-hero">
-    <div class="post-hero-art">{photo(hname, halt, cls="parallax", sizes="100vw", eager=True)}</div>
+    <div class="blob b1" aria-hidden="true"></div><div class="blob b2" aria-hidden="true"></div>
     <div class="wrap narrow post-hero-text">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/mamablog">Journal</a> / <a href="/mamablog/category/{p['category']}">{p['category']}</a></nav>
       <h1 class="display reveal">{esc(p['h1'])}</h1>
       <p class="dek reveal">{esc(p['dek'])}</p>
-      <p class="hero-credit">{esc(hcap)} <span class="credit">{credit(hname)}</span></p>
       <div class="meta reveal">{fmt_cats(p)}<span>{p['read']} min read</span><span>Updated <time datetime="{UPDATED}">{datetime.strptime(UPDATED, '%Y-%m-%d').strftime('%B %-d, %Y')}</time></span></div>
     </div>
+    <figure class="post-hero-media">
+      <div class="post-hero-frame">{photo(hname, halt, sizes="(max-width: 1240px) 100vw, 1240px", eager=True)}</div>
+      <figcaption class="hero-credit">{esc(hcap)} <span class="credit">{credit(hname)}</span></figcaption>
+    </figure>
   </header>
   <div class="wrap narrow prose">
     {body_html}
