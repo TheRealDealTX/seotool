@@ -1,0 +1,5 @@
+# hotsbuzz.com - static site (the Hostinger Agency platform ignores this file;
+# routing lives in index.php). Kept for portability to plain Apache hosts.
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+Options -Indexes

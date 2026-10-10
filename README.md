@@ -19,6 +19,12 @@ file, one JS file and local images. Upload the repo root to any web host.
 | `validate.py` | Post-build checks (run it after every build) |
 | `templates/blog-post.html` | Generated blog post template for drop-in posts |
 
+## Other sites in this repo
+
+`sites/hotsbuzz/` is a separate, self-contained rebuild of hotsbuzz.com with its own
+build, validate and deploy scripts. See `sites/hotsbuzz/README.md`. The root `deploy.sh`
+skips `sites/`.
+
 ## Rebuilding
 
 ```sh
