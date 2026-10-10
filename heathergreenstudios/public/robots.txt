@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /home.html
+Disallow: /contact.php
+
+Sitemap: https://heathergreenstudios.com/sitemap.xml
