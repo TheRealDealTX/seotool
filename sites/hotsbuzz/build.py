@@ -93,6 +93,27 @@ def asset(path):
     return f"{path}?v={ASSET_V}"
 
 
+PHOTOS = json.loads((ROOT / "photos.json").read_text(encoding="utf-8")) if (ROOT / "photos.json").exists() else {}
+
+
+def has_photo(key):
+    return key in PHOTOS and (ROOT / "assets" / "photos" / f"{key}-1600.webp").exists()
+
+
+def img(key, alt, sizes="(max-width: 760px) 100vw, 33vw", loading="lazy", priority=False, cls=""):
+    """Responsive photo for `key` (post slug, cat-<slug> or home); falls back to the SVG cover."""
+    c = f' class="{cls}"' if cls else ""
+    load = ' fetchpriority="high"' if priority else f' loading="{loading}"'
+    if has_photo(key):
+        return (f'<img{c} src="/assets/photos/{key}-1600.webp" srcset="/assets/photos/{key}-800.webp 800w, '
+                f'/assets/photos/{key}-1600.webp 1600w" sizes="{sizes}" alt="{esc(alt)}" width="1600" height="1000"{load} decoding="async">')
+    return f'<img{c} src="/assets/covers/{key}.svg" alt="{esc(alt)}" width="1200" height="750"{load} decoding="async">'
+
+
+def photo_alt(key, fallback):
+    return PHOTOS.get(key, {}).get("alt") or fallback
+
+
 # --------------------------------------------------------------- cover art ---
 
 def cover_svg(seed, cat, motif_name, w=1200, h=750, big=True):
@@ -136,7 +157,7 @@ NAV = [(c["short"], f"/category/{c['slug']}/") for c in CATEGORIES if c["slug"] 
 
 def head(title, desc, path, og_type="website", image=None, jsonld=None, extra=""):
     url = ORIGIN + path
-    img = ORIGIN + (image or "/assets/og/home.jpg")
+    og_img = ORIGIN + (image or "/assets/og/home.jpg")
     robots = "noindex, nofollow" if STAGING else "index, follow, max-image-preview:large"
     ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     return f'''<!doctype html>
@@ -153,7 +174,7 @@ def head(title, desc, path, og_type="website", image=None, jsonld=None, extra=""
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{img}">
+<meta property="og:image" content="{og_img}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,6 +245,7 @@ def footer():
       <li><a href="/about/">About us</a></li>
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/privacy-policy/">Privacy policy</a></li>
+      <li><a href="/image-credits/">Image credits</a></li>
       <li><a href="/feed.xml">RSS feed</a></li>
     </ul></div>
   </div>
@@ -269,7 +291,7 @@ def card(p, eager=False, size=""):
     return f'''<article class="card {size} reveal" data-tilt style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}"
   data-cat="{p['category']}" data-level="{p['difficulty'].lower()}" data-time="{time_bucket(p['minutes'])}" data-search="{esc((p['title'] + ' ' + p['keyword'] + ' ' + p['excerpt'] + ' ' + c['name']).lower())}">
   <a class="card__link" href="{p['url']}">
-    <div class="card__media"><span class="tape" aria-hidden="true"></span><img src="/assets/covers/{p['slug']}.svg" alt="{esc(strip_tags(p['title']))} cover illustration" width="1200" height="750" loading="{loading}" decoding="async"></div>
+    <div class="card__media"><span class="tape" aria-hidden="true"></span>{img(p['slug'], photo_alt(p['slug'], strip_tags(p['title'])), loading=loading)}</div>
     <div class="card__body">
       <span class="pill" style="--pc:{c['c1']}">{c['short']}</span>
       <h3 class="card__title">{p['title']}</h3>
@@ -287,6 +309,7 @@ def page_home(posts):
     fc = CAT[feat["category"]]
     counts = {c["slug"]: sum(1 for p in posts if p["category"] == c["slug"]) for c in CATEGORIES}
     tiles = "".join(f'''<a class="tile reveal" href="/category/{c['slug']}/" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']};--d:{i * 60}ms" data-tilt>
+  {img("cat-" + c["slug"], "", sizes="(max-width: 600px) 100vw, 25vw", cls="tile__photo") if has_photo("cat-" + c["slug"]) else ""}
   <span class="tile__art" aria-hidden="true"><svg viewBox="0 0 100 100" color="#fff" fill="#fff">{motif(c['motif'], c['accent'])}</svg></span>
   <span class="tile__name">{c['name']}</span><span class="tile__count">{counts[c['slug']]} projects</span>
 </a>''' for i, c in enumerate(CATEGORIES))
@@ -308,7 +331,7 @@ def page_home(posts):
     for i, (m, s) in enumerate(holiday_season):
         c = CAT[s]
         items = [p for p in posts if p["category"] == s][:3]
-        lis = "".join(f'<li><a href="{p["url"]}"><img src="/assets/covers/{p["slug"]}.svg" alt="" width="1200" height="750" loading="lazy"><span>{p["title"]}</span></a></li>' for p in items)
+        lis = "".join(f'<li><a href="{p["url"]}">{img(p["slug"], "", sizes="(max-width: 860px) 120px, 22vw")}<span>{p["title"]}</span></a></li>' for p in items)
         season_panels += f'''<div class="season__panel" role="tabpanel" data-panel="{s}"{"" if i == 0 else " hidden"} style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}">
   <div class="season__intro"><h3>{c['name']}</h3><p>{c['blurb']}</p><a class="btn btn--light" href="/category/{s}/">See all {c['short']} crafts</a></div>
   <ul class="season__list">{lis}</ul></div>'''
@@ -349,7 +372,7 @@ def page_home(posts):
 
 <section class="section wrap">
   <a class="feature reveal" href="{feat['url']}" style="--c1:{fc['c1']};--c2:{fc['c2']};--acc:{fc['accent']}" data-tilt>
-    <div class="feature__media"><img src="/assets/covers/{feat['slug']}.svg" alt="{esc(strip_tags(feat['title']))} cover illustration" width="1200" height="750" fetchpriority="high"></div>
+    <div class="feature__media">{img(feat['slug'], photo_alt(feat['slug'], strip_tags(feat['title'])), sizes="(max-width: 860px) 100vw, 55vw")}</div>
     <div class="feature__body">
       <span class="feature__flag">Fresh on HotsBuzz</span>
       <h2>{feat['title']}</h2>
@@ -420,7 +443,8 @@ def page_category(c, posts):
                       "mainEntity": {"@type": "ItemList", "itemListElement": [
                           {"@type": "ListItem", "position": i + 1, "url": ORIGIN + p["url"]} for i, p in enumerate(items)]}}]
     write(f"category/{c['slug']}/index.html", head(title, desc, path, image=f"/assets/og/cat-{c['slug']}.jpg", jsonld=ld) + header(path) + f'''
-<section class="phero" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}">
+<section class="phero{' phero--photo' if has_photo('cat-' + c['slug']) else ''}" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}">
+  {img('cat-' + c['slug'], '', sizes='100vw', priority=True, cls='phero__photo') if has_photo('cat-' + c['slug']) else ''}
   <div class="phero__art" aria-hidden="true"><svg viewBox="0 0 100 100" color="#fff" fill="#fff">{motif(c['motif'], c['accent'])}</svg></div>
   <div class="wrap">
     {crumbs}
@@ -482,15 +506,15 @@ def page_post(p, posts):
     toc_html = "".join(f'<li><a href="#{a}">{b}</a></li>' for a, b in toc)
     plain_title = strip_tags(p["title"])
     title = plain_title if len(plain_title) > 48 else f"{plain_title} | HotsBuzz"
-    img = f"/assets/og/{p['slug']}.jpg"
+    og_img = f"/assets/og/{p['slug']}.jpg"
     ld = [crumbs_ld, {"@context": "https://schema.org", "@graph": [
         {"@type": "BlogPosting", "@id": ORIGIN + path + "#article", "headline": plain_title,
          "description": strip_tags(p["description"]), "datePublished": p["date"], "dateModified": p["date"],
-         "mainEntityOfPage": ORIGIN + path, "image": ORIGIN + img, "articleSection": strip_tags(c["name"]),
+         "mainEntityOfPage": ORIGIN + path, "image": ORIGIN + og_img, "articleSection": strip_tags(c["name"]),
          "keywords": p["keyword"], "wordCount": p["words"],
          "author": {"@type": "Organization", "name": SITE["name"] + " Team", "url": ORIGIN + "/about/"},
          "publisher": {"@id": ORIGIN + "/#org"}},
-        {"@type": "HowTo", "name": plain_title, "description": strip_tags(p["excerpt"]), "image": ORIGIN + img,
+        {"@type": "HowTo", "name": plain_title, "description": strip_tags(p["excerpt"]), "image": ORIGIN + og_img,
          "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": strip_tags(p["cost"]).replace("$", "")},
          "supply": [{"@type": "HowToSupply", "name": strip_tags(m)} for m in p["materials"]],
          "tool": [{"@type": "HowToTool", "name": strip_tags(t)} for t in p["tools"]],
@@ -501,7 +525,7 @@ def page_post(p, posts):
         ORG,
     ]}]
     extra = f'<meta property="article:published_time" content="{p["date"]}">\n<meta property="article:section" content="{esc(strip_tags(c["name"]))}">\n'
-    write(f"{p['slug']}/index.html", head(title, strip_tags(p["description"]), path, og_type="article", image=img, jsonld=ld, extra=extra) + header() + f'''
+    write(f"{p['slug']}/index.html", head(title, strip_tags(p["description"]), path, og_type="article", image=og_img, jsonld=ld, extra=extra) + header() + f'''
 <article class="post" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}" data-slug="{p['slug']}">
   <header class="post__hero">
     <div class="wrap post__hero-in">
@@ -512,7 +536,7 @@ def page_post(p, posts):
         <p class="post__ex">{p['excerpt']}</p>
         <p class="post__by">By the {SITE['name']} team · <time datetime="{p['date']}">{fmt_date(p['date'])}</time></p>
       </div>
-      <figure class="post__cover" data-tilt><span class="tape" aria-hidden="true"></span><img src="/assets/covers/{p['slug']}.svg" alt="{esc(plain_title)} cover illustration" width="1200" height="750" fetchpriority="high"></figure>
+      <figure class="post__cover" data-tilt><span class="tape" aria-hidden="true"></span>{img(p['slug'], photo_alt(p['slug'], plain_title), sizes="(max-width: 860px) 100vw, 50vw", priority=True)}</figure>
     </div>
     <ul class="wrap facts">
       <li><span>Skill level</span>{chip_level(p['difficulty'])}</li>
@@ -592,6 +616,28 @@ def page_static(posts):
 <p>Questions about this policy: <a href="mailto:{SITE['email']}">{SITE['email']}</a>.</p>''')
 
 
+def page_credits(posts):
+    names = {p["slug"]: strip_tags(p["title"]) for p in posts}
+    names.update({"cat-" + c["slug"]: strip_tags(c["name"]) + " (category)" for c in CATEGORIES})
+    names["home"] = "Homepage"
+    lic = {"pexels": ("Pexels License (free to use)", "https://www.pexels.com/license/"),
+           "cc0": ("CC0 1.0 (public domain dedication)", "https://creativecommons.org/publicdomain/zero/1.0/"),
+           "pdm": ("Public Domain Mark 1.0", "https://creativecommons.org/publicdomain/mark/1.0/")}
+    items = []
+    for key, ph in PHOTOS.items():
+        if not has_photo(key):
+            continue
+        ln, lu = lic[ph["license"]]
+        by = f" by {esc(ph['creator'])}" if ph.get("creator") else ""
+        items.append(f'''<li><img src="/assets/photos/{key}-800.webp" alt="" width="800" height="500" loading="lazy"><div><b>{names.get(key, key)}</b>
+Photo{by} via <a href="{esc(ph['landing'])}" rel="nofollow noopener" target="_blank">{esc(ph['source'].title())}</a> · <a href="{lu}" rel="nofollow noopener" target="_blank">{ln}</a></div></li>''')
+    simple_page("/image-credits/", "Image Credits | HotsBuzz",
+                "Sources and licenses for the photos used on HotsBuzz. Every photo is a royalty-free stock image under the Pexels License, CC0 or public domain.",
+                "Image credits", f'''
+<p>The photos on HotsBuzz are royalty-free stock images: free to use under the <strong>Pexels License</strong>, released under <strong>CC0</strong>, or marked as <strong>public domain</strong>. None of them requires payment or attribution. We credit the photographers here anyway, with thanks.</p>
+<ul class="credits">{"".join(items)}</ul>''')
+
+
 def page_404():
     write("404.html", head("Page not found | HotsBuzz", "Sorry, this page could not be found. Browse every HotsBuzz DIY project and craft idea instead.", "/404.html").replace(
         '<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">') + header() + f'''
@@ -606,7 +652,7 @@ def page_404():
 
 def page_feeds(posts):
     urls = [("/", TODAY, "1.0"), ("/projects/", TODAY, "0.8"), ("/about/", TODAY, "0.4"),
-            ("/contact/", TODAY, "0.3"), ("/privacy-policy/", TODAY, "0.2")]
+            ("/contact/", TODAY, "0.3"), ("/privacy-policy/", TODAY, "0.2"), ("/image-credits/", TODAY, "0.1")]
     urls += [(f"/category/{c['slug']}/", TODAY, "0.7") for c in CATEGORIES]
     urls += [(p["url"], p["date"], "0.6") for p in posts]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
@@ -649,11 +695,12 @@ def main():
     for p in posts:
         page_post(p, posts)
     page_static(posts)
+    page_credits(posts)
     page_404()
     page_feeds(posts)
     # Card data for render_og.mjs (social images); not deployed.
     (ROOT / ".og.json").write_text(json.dumps(
-        [{"file": "home", "title": "DIY projects, DIY ideas, crafts &amp; more", "label": SITE["domain"], "cover": "cat-creative-crafts"}]
+        [{"file": "home", "title": "DIY projects, DIY ideas, crafts &amp; more", "label": SITE["domain"], "cover": "home"}]
         + [{"file": f"cat-{c['slug']}", "title": c["name"], "label": "Category", "cover": f"cat-{c['slug']}"} for c in CATEGORIES]
         + [{"file": p["slug"], "title": p["title"], "label": CAT[p["category"]]["short"], "cover": p["slug"]} for p in posts],
         ensure_ascii=False, indent=0), encoding="utf-8")

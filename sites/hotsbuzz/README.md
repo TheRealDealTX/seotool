@@ -8,7 +8,8 @@ the huttoroofs.com site at the repo root, and the root `deploy.sh` skips
 
 ```sh
 python3 build.py && python3 validate.py         # regenerate ./public and check it
-node render_og.mjs && python3 build.py          # only after adding/renaming posts: social images + icons
+python3 fetch_photos.py                         # only after editing photos.json: download + crop photos
+node render_og.mjs && python3 build.py          # only after adding posts or changing photos: social images
 ./deploy.sh                                     # upload ./public (see header for credentials)
 ```
 
@@ -24,7 +25,9 @@ built-in server with a router that serves real files and falls back to `index.ph
 | `build.py` | Generator: layout, pages, JSON-LD, sitemap, feed, cover art |
 | `siteconfig.py` | Site name, origin, categories and colors, the `STAGING` switch |
 | `content/posts_*.py` | The 23 tutorials (schema in `content/SCHEMA.md`) |
-| `motifs.py` | SVG motifs used for the generated cover art and decor |
+| `photos.json` | The photo for each post, category and the homepage: source, license, alt text |
+| `fetch_photos.py` | Downloads those photos and writes 800/1600px WebP crops to `assets/photos/` |
+| `motifs.py` | SVG motifs for decor and the fallback cover art (used only if a photo is missing) |
 | `assets/` | `site.css`, `site.js`, `og/` social images (rendered) |
 | `static/` | Root files copied as-is: `index.php`, icons, manifest |
 | `validate.py` | Post-build checks: one H1, unique titles and descriptions, valid JSON-LD, no broken links |
@@ -83,5 +86,8 @@ On the day hotsbuzz.com is connected:
 ## Known gaps
 
 - `hello@hotsbuzz.com` (Contact page) needs a real mailbox or forwarder.
-- Cover art is generated illustration, not photography. Swap in real project
-  photos as they are made, for better image search and Pinterest performance.
+- Photos are royalty-free stock (24 from Pexels under the Pexels License, 7 CC0
+  from rawpixel via Openverse). None requires attribution; `/image-credits/` lists them
+  anyway. They illustrate each project's subject rather than showing the exact finished
+  craft, so swap in your own project photos when you can (add the file to
+  `assets/photos/` and an entry to `photos.json`). That is better for image search and Pinterest.

@@ -369,3 +369,21 @@ p { margin: 0 0 1em; }
   .js .reveal { opacity: 1; transform: none; }
   .hero__title .hl { background-size: 100% 100%; }
 }
+
+/* photos */
+.tile__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.tile:has(.tile__photo)::before { z-index: 1; background: linear-gradient(180deg, color-mix(in srgb, var(--c2) 10%, transparent) 20%, color-mix(in srgb, var(--c2) 92%, transparent) 88%), linear-gradient(135deg, color-mix(in srgb, var(--c1) 45%, transparent), transparent 60%); }
+.tile:has(.tile__photo) .tile__art { width: 92px; right: 14px; top: 14px; z-index: 2; }
+.tile:has(.tile__photo) .tile__name, .tile:has(.tile__photo) .tile__count { z-index: 2; text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.tile:hover .tile__photo { transform: scale(1.08); }
+.phero--photo { min-height: 380px; display: flex; align-items: flex-end; }
+.phero--photo > .wrap { position: relative; z-index: 2; }
+.phero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.phero--photo::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, color-mix(in srgb, var(--c2) 94%, transparent) 0%, color-mix(in srgb, var(--c1) 70%, transparent) 55%, color-mix(in srgb, var(--c1) 20%, transparent) 100%); }
+.phero--photo .phero__art { z-index: 2; width: clamp(110px, 14vw, 180px); }
+.season__list img, .card__media img, .feature__media img, .post__cover img { background: var(--paper-3); }
+.credits { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 18px; }
+.credits li { background: var(--paper-2); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); font-size: .88rem; }
+.credits img { aspect-ratio: 16/10; object-fit: cover; width: 100%; }
+.credits div { padding: 12px 14px; }
+.credits b { display: block; font-size: .95rem; }
