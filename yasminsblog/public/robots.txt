@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /home.html
+
+Sitemap: https://www.yasminsblog.com/sitemap.xml
