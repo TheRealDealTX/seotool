@@ -67,25 +67,47 @@ plus a matching 1200×630 Open Graph PNG made with Pillow.
 
 ## Hosting (Hostinger Agency, plain php-fpm website)
 
-The platform serves existing files directly, ignores `.htaccess`, and sends
-every other path to `index.php`. So:
+**Live (staging):** https://darkorange-lobster-110332.hostingersite.com
+on Agency Growth order `1008744732`, website UID **`X7EvpZ4Zq`**, PHP 8.3,
+created 2026-10-10.
 
-- There is no root `index.html`. The homepage is `home.html`, served by
-  `index.php` at `/`.
-- Pages are stored at `<path>/index.html`, and `index.php` serves them at the
-  slash-less legacy URL with a 200. Trailing-slash variants 301 to the
-  canonical form, and case variants and common aliases 301 as well.
+How the platform behaves, and how the build works around it:
+
+- It serves existing files directly, ignores `.htaccess`, and sends every
+  other path to `index.php`.
+- **Any URL that matches a real directory is 301'd to `<url>/` before PHP
+  runs.** So pages are stored as `_pages/<path>.html` (for example
+  `_pages/mamablog/2018/1/20/katz-deli-some-delicious-pastrami.html`), not
+  `<path>/index.html`, and `index.php` serves them at the slash-less legacy
+  URL with a 200. Never upload a directory whose path matches a page URL.
+  `_pages/` is disallowed in robots.txt.
+- There is no root `index.html`: `index.php` serves `home.html` at `/`.
+- Trailing-slash, case and alias variants 301 to the canonical URL.
 - On `yasminsblog.com` / `www.yasminsblog.com`, http and non-www 301 to
   `https://www.yasminsblog.com` (the host the old site ranked on).
-- On **any other host** (for example the temporary `*.hostingersite.com`
-  domain) every routed page gets `X-Robots-Tag: noindex, nofollow`, so the
-  staging copy can't compete with the real domain. This switches off by itself
-  once the real domain points at the site, with no rebuild needed.
+- On **any other host** (the temporary domain) every routed page sends
+  `X-Robots-Tag: noindex, nofollow`. This switches off by itself once the real
+  domain is attached, with no rebuild needed.
 
-Deploy with `./deploy.sh` (see the header comment for credentials).
+Deploy with `./deploy.sh` (see its header for credentials), then clear the
+cache (`agency-hosting_cache_clear-website`). The deploy script only uploads,
+and old files stay on the server. To remove one, use the File Browser REST API
+with the same credentials:
+`curl -X DELETE -H "X-Auth: …" -H "X-Auth-Rest: …" "<url-without-/tus>/resources/public_html/<path>"`.
+
+Local preview that behaves like the host: `php -S 127.0.0.1:8099 -t public devrouter.php`.
+
+## Going live on yasminsblog.com
+
+1. Once the domain is registered, attach it:
+   `agency-hosting_domains_change-website` (website `X7EvpZ4Zq`, from
+   `darkorange-lobster-110332.hostingersite.com` to `yasminsblog.com`), and
+   link `www.yasminsblog.com` too. Point DNS at Hostinger and wait for SSL.
+2. Check that `https://yasminsblog.com/…` 301s to `https://www.…` and that the
+   `X-Robots-Tag` header is gone.
+3. Submit `https://www.yasminsblog.com/sitemap.xml` in Google Search Console.
 
 ## Before going live
 
-- Point the domain at the website, then submit `sitemap.xml` in Search Console.
 - Set up the `hello@yasminsblog.com` mailbox, or change `SITE["email"]` in `content.py`.
 - Recheck the visit details in the posts (hours, which shops are still open).

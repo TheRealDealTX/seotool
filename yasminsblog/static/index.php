@@ -34,7 +34,7 @@ $path = str_replace(' ', '+', $path);            // "porto rico" -> "porto+rico"
 // Squarespace RSS: /mamablog?format=rss
 if (preg_match('/(^|&)format=rss(&|$)/', $qs)) {
     header('Content-Type: application/rss+xml; charset=utf-8');
-    readfile(__DIR__ . '/mamablog/feed.xml');
+    readfile(__DIR__ . '/_pages/mamablog/feed.xml');
     exit;
 }
 
@@ -47,27 +47,34 @@ $aliases = [
     '/privacy' => '/privacy-policy', '/mamablog/category/photography' => '/mamablog/category/Photography',
     '/mamablog/category/food' => '/mamablog/category/Food', '/mamablog/category/culture' => '/mamablog/category/Culture',
     '/mamablog/category/travel' => '/mamablog/category/Travel', '/feed' => '/mamablog/feed.xml',
+    '/mamablog/rss' => '/mamablog/feed.xml',
 ];
 $trim = rtrim($path, '/');
 if (isset($aliases[$trim])) go($aliases[$trim]);
 
-// Canonical form has no trailing slash.
-if ($path !== $trim && is_file(__DIR__ . $trim . '/index.html')) go($trim);
-if (is_file(__DIR__ . $path . '/index.html')) serve(__DIR__ . $path . '/index.html');
-
-// Case-insensitive match for posts/tags (/mamablog/Tag/New+York etc.).
-$want = strtolower($trim);
-$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/mamablog', FilesystemIterator::SKIP_DOTS));
-foreach ($it as $f) {
-    if ($f->getFilename() !== 'index.html') continue;
-    $rel = substr(dirname($f->getPathname()), strlen(__DIR__));
-    if (strtolower($rel) === $want) go($rel);
+if ($trim === '/mamablog/feed.xml') {
+    header('Content-Type: application/rss+xml; charset=utf-8');
+    readfile(__DIR__ . '/_pages/mamablog/feed.xml');
+    exit;
 }
 
-// /mamablog/2018/1/20/slug-with-extra-bits -> best effort by slug.
+// Canonical form has no trailing slash.
+$pages = __DIR__ . '/_pages';
+if ($path !== $trim && is_file($pages . $trim . '.html')) go($trim);
+if (is_file($pages . $path . '.html')) serve($pages . $path . '.html');
+
+// Case-insensitive match (/mamablog/Tag/New+York, /About etc.).
+$want = strtolower($trim);
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($pages, FilesystemIterator::SKIP_DOTS));
+foreach ($it as $f) {
+    $rel = substr($f->getPathname(), strlen($pages), -5);
+    if (substr($f->getPathname(), -5) === '.html' && strtolower($rel) === $want) go($rel);
+}
+
+// /mamablog/2018/1/20/slug/extra or a wrong date -> the post with that slug.
 if (preg_match('#^/mamablog/\d{4}/\d{1,2}/\d{1,2}/([^/]+)#', $path, $m)) {
-    foreach (glob(__DIR__ . '/mamablog/*/*/*/' . $m[1], GLOB_ONLYDIR) ?: [] as $d) {
-        go(substr($d, strlen(__DIR__)));
+    foreach (glob($pages . '/mamablog/*/*/*/' . $m[1] . '.html') ?: [] as $f) {
+        go(substr($f, strlen($pages), -5));
     }
 }
 

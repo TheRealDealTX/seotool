@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /home.html
+Disallow: /_pages/
 
 Sitemap: https://www.yasminsblog.com/sitemap.xml

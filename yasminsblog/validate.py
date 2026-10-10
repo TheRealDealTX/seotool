@@ -31,8 +31,9 @@ class P(HTMLParser):
 def exists(u):
     p = unquote(u.split("#")[0].split("?")[0])
     if p in ("", "/"): return True
-    f = os.path.join(OUT, p.lstrip("/"))
-    return os.path.isfile(f) or os.path.isfile(os.path.join(f, "index.html"))
+    if p == "/mamablog/feed.xml": return os.path.isfile(os.path.join(OUT, "_pages/mamablog/feed.xml"))
+    if os.path.isfile(os.path.join(OUT, p.lstrip("/"))): return True
+    return os.path.isfile(os.path.join(OUT, "_pages", p.rstrip("/").lstrip("/") + ".html"))
 
 for dp, _, fs in os.walk(OUT):
     for fn in fs:

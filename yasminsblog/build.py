@@ -254,10 +254,15 @@ def hero_small(kicker, h1, lede, key):
 def write(path, content):
     if path == "/":
         dest = os.path.join(OUT, "home.html")
+    elif path == "/mamablog/feed.xml":
+        dest = os.path.join(OUT, "_pages", "mamablog", "feed.xml")
     elif path.endswith(".html") or path.endswith(".xml") or path.endswith(".txt"):
         dest = os.path.join(OUT, path.lstrip("/"))
     else:
-        dest = os.path.join(OUT, path.lstrip("/"), "index.html")
+        # Pages live in _pages/<path>.html, NOT <path>/index.html: the host's web
+        # server 301s any URL matching a real directory to a trailing-slash form
+        # before PHP runs, which would break the slash-less legacy URLs.
+        dest = os.path.join(OUT, "_pages", path.lstrip("/") + ".html")
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, "w", encoding="utf-8") as f:
         f.write(content)
@@ -487,7 +492,7 @@ def build_feeds():
     sm += [f"  <url><loc>{esc(HOST + u)}</loc><lastmod>{UPDATED}</lastmod></url>" for u in urls]
     sm.append("</urlset>")
     write("/sitemap.xml", "\n".join(sm) + "\n")
-    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\n\nSitemap: {HOST}/sitemap.xml\n")
+    write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /_pages/\n\nSitemap: {HOST}/sitemap.xml\n")
     pub = format_datetime(datetime.strptime(UPDATED, "%Y-%m-%d").replace(tzinfo=timezone.utc))
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{HOST}{p['path']}</link><guid>{HOST}{p['path']}</guid><pubDate>{pub}</pubDate><category>{p['category']}</category><description>{esc(p['description'])}</description></item>""" for p in POSTS)
     write("/mamablog/feed.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
