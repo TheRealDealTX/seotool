@@ -43,5 +43,5 @@ the noindex header automatically on the real domain.
 1. Link amandahornby.com to the website (`agency-hosting_domains_change-website`
    or hPanel) and point DNS at Hostinger.
 2. Wait for SSL, then check `/`, `/about`, `http://www.amandahornby.com/` (should 301).
-3. Set the contact address in `build.py` (`EMAIL`) to an inbox that exists, rebuild, deploy.
+3. Make sure the info@amandahornby.com inbox exists (it is `EMAIL` in `build.py`).
 4. Submit `https://amandahornby.com/sitemap.xml` in Search Console.

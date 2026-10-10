@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "public"
 ORIGIN = "https://amandahornby.com"
 BRAND = "The Painted Room"
-EMAIL = "hello@amandahornby.com"
+EMAIL = "info@amandahornby.com"
 TODAY = date.today().isoformat()
 FONTS = "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Manrope:wght@400;500;600&display=swap"
 
@@ -123,7 +123,6 @@ def layout(path, title, desc, body, schema=None, current=None):
       <div>
         <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span>{BRAND}</a>
         <p>An independent journal about colour, pattern and rooms that feel lived in — paint, paper, panelling and the confidence to use them.</p>
-        <p class="notice">This domain was previously the website of an interior designer. {BRAND} is an independent publication and is not affiliated with the previous owner.</p>
       </div>
       <div><h4>Explore</h4><ul>{menu}</ul></div>
       <div><h4>Journal</h4><ul>{guides}</ul></div>
