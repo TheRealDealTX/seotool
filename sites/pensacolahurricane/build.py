@@ -22,15 +22,13 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 OUT = os.path.join(ROOT, "public")
 
-# The site runs on a temporary *.hostingersite.com address until the
-# pensacolahurricane.com domain is pointed at it. While STAGING is True every
-# page is noindex and robots.txt blocks crawlers, so the temporary address
-# never gets indexed. Flip it to False (and rebuild + redeploy) at launch.
-STAGING = True
+# Live on destinhurricane.com (2026-10-11). Set STAGING back to True to make
+# every page noindex and block crawlers in robots.txt (e.g. on a test domain).
+STAGING = False
 
 SITE = {
     "name": "Pensacola Hurricane",
-    "origin": "https://pensacolahurricane.com",
+    "origin": "https://destinhurricane.com",
     "tagline": "Hurricane tracking, preparedness and recovery for Pensacola, Florida",
     "lat": 30.4213,
     "lon": -87.2169,

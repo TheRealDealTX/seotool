@@ -4,7 +4,7 @@
 // 404s on the web; download it from hPanel File Manager). If
 // ../data/lead-config.php exists, each lead is also emailed. That file is
 // created on the server only (never committed):
-//   <?php return ['to' => ['intake@example.com'], 'from' => 'leads@pensacolahurricane.com'];
+//   <?php return ['to' => ['intake@example.com'], 'from' => 'leads@destinhurricane.com'];
 require __DIR__ . '/_lib.php';
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     ph_json(['ok' => false, 'error' => 'POST only'], 405);
@@ -55,7 +55,7 @@ if (is_file($cfgFile)) {
     $to = array_filter((array) ($cfg['to'] ?? []), fn($e) => filter_var($e, FILTER_VALIDATE_EMAIL));
     if ($to) {
         $from = filter_var($cfg['from'] ?? '', FILTER_VALIDATE_EMAIL) ?: 'leads@' . preg_replace('/[^a-z0-9.\-]/i', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
-        $body = "New free case review request from PensacolaHurricane.com\n\n";
+        $body = "New free case review request from " . ($_SERVER['HTTP_HOST'] ?? 'the website') . "\n\n";
         foreach ($lead as $k => $v) {
             $body .= str_pad(ucwords(str_replace('_', ' ', $k)) . ':', 16) . ($k === 'message' ? "\n" : ' ') . $v . "\n";
         }

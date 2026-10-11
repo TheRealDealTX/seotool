@@ -70,3 +70,14 @@ The site is a Florida lawyer advertisement. Footer and /disclaimer/ carry the
 firm name, office city, no-attorney-client-relationship, past-results and fee
 disclosures. Avoid unverifiable quality claims ("best", "top-rated", "expert",
 "specialist") and testimonials or results without the firm's sign-off.
+
+## destinhurricane.com (2026-10-11)
+
+The client asked for this site to be served on destinhurricane.com (registered
+at GoDaddy, nameservers pixel/byte.dns-parking.com → Hostinger). `SITE["origin"]`,
+`index.php` (https + www → apex redirect) and `lead.php` now use that domain and
+`STAGING` is off (indexable). As of 2026-10-11 Hostinger had not yet detected the
+nameserver change, so its DNS zone was empty and SSL setup was pending. Once
+`dns_records_reset` for the domain succeeds (or hPanel shows the domain as
+connected), the zone should hold `@ ALIAS destinhurricane.com.cdn.hstgr.net.`
+and `www CNAME www.destinhurricane.com.cdn.hstgr.net.`.

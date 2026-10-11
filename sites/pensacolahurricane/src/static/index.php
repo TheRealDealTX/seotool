@@ -1,15 +1,15 @@
 <?php
-// pensacolahurricane.com - static site front controller. The host serves real
+// Pensacola Hurricane (served on destinhurricane.com) - static site front controller. The host serves real
 // files directly; anything else lands here.
 $path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
-$home = 'https://pensacolahurricane.com';
+$home = 'https://destinhurricane.com';
 
-// Canonical host/scheme once the real domain is live (the temporary
-// *.hostingersite.com address is left alone).
-if (substr($host, -strlen('pensacolahurricane.com')) === 'pensacolahurricane.com') {
+// Canonical host/scheme on the live domain (the *.hostingersite.com preview
+// address is left alone and marked noindex below).
+if (substr($host, -strlen('destinhurricane.com')) === 'destinhurricane.com') {
     $insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http';
-    if ($insecure || $host === 'www.pensacolahurricane.com') {
+    if ($insecure || $host === 'www.destinhurricane.com') {
         header('Location: ' . $home . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
         exit;
     }
