@@ -90,6 +90,7 @@ function render_page(array $m, string $body) {
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['description']) ?>">
 <link rel="canonical" href="<?= e($canon) ?>">
+<link rel="alternate" type="application/rss+xml" title="<?= SITE_NAME ?> Blog" href="<?= SITE_URL ?>/feed.xml">
 <?php if (!empty($m['noindex'])): ?><meta name="robots" content="noindex, follow">
 <?php endif ?>
 <meta property="og:type" content="<?= e($m['og_type'] ?? 'website') ?>">

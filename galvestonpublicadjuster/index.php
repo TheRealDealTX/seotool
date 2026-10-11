@@ -17,6 +17,11 @@ if (($host === 'www.galvestonpublicadjuster.com') || ($insecure && str_ends_with
     header('Location: ' . SITE_URL . $uri, true, 301);
     exit;
 }
+// Any other host that reaches this code (the Hostinger preview domain, the bare IP) serves a full
+// copy of the site. Keep those copies out of search engines so only the canonical domain is indexed.
+if ($host !== parse_url(SITE_URL, PHP_URL_HOST) && PHP_SAPI !== 'cli-server') {
+    header('X-Robots-Tag: noindex, nofollow');
+}
 
 const ROUTES = [
     '/'                         => 'home',

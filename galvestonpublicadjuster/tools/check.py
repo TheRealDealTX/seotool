@@ -35,5 +35,16 @@ for p in PAGES + posts:
     for k, want in TARGETS.get(p, {}).items():
         if counts[k] != want: flag.append(f'{k}={counts[k]}≠{want}')
     bad += bool(flag)
+    if 'type="application/rss+xml"' not in doc: flag.append('NO-RSS-LINK')
     print(f"{'FAIL' if flag else 'ok  '} {p:55} gpa={counts['galveston public adjuster']:2} twia={counts['twia expert']:2} title={len(title):2} {' '.join(flag)}")
+
+# Sitemap: every <lastmod> is a real date, never in the future, never before launch (see PAGE_UPDATED in inc/config.php).
+import datetime
+today = datetime.date.today().isoformat()
+sm = get('/sitemap.xml')
+dates = re.findall(r'<lastmod>([^<]*)</lastmod>', sm)
+smflag = [d for d in dates if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', d) or d > today or d < '2026-09-28']
+if len(dates) != sm.count('<url>'): smflag.append('missing lastmod')
+bad += bool(smflag)
+print(f"{'FAIL' if smflag else 'ok  '} /sitemap.xml ({len(dates)} urls, lastmod {min(dates)}..{max(dates)}) {' '.join(smflag)}")
 sys.exit(1 if bad else 0)

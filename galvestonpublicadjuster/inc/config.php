@@ -45,3 +45,23 @@ const NAV = [
 
 const AREAS = ['Galveston Island', 'Jamaica Beach', 'Bolivar Peninsula', 'Tiki Island', 'Texas City',
     'La Marque', 'Hitchcock', 'Santa Fe', 'Dickinson', 'League City', 'Kemah', 'Friendswood', 'Bacliff', 'San Leon'];
+
+// Launch date, and the last material edit of each static page (pages/<name>.php). The sitemap's
+// <lastmod> comes from here, not from file mtimes (every deploy rewrites every mtime). Bump a
+// page's date when you change its content; pages that list runtime data (home, blog, weather)
+// also take the newest item they show.
+const LAUNCH_DATE  = '2026-09-28';
+const PAGE_UPDATED = [
+    'home'            => '2026-09-28',
+    'about'           => '2026-09-28',
+    'twia'            => '2026-09-28',
+    'fire'            => '2026-09-28',
+    'calculators'     => '2026-09-28',
+    'windstorm-rules' => '2026-09-28',
+    'local-code'      => '2026-09-28',
+    'storm-history'   => '2026-09-28',
+    'weather-events'  => '2026-09-28',
+    'blog'            => '2026-09-28',
+    'contact'         => '2026-09-28',
+    'privacy'         => '2026-09-28',
+];

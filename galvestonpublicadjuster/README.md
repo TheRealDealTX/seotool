@@ -10,8 +10,9 @@ https://linen-sandpiper-973090.hostingersite.com. Server path: `/home/u914589053
 
 | Path | What it is |
 | --- | --- |
-| `index.php` | Front controller: routes, trailing-slash and canonical-host redirects, 404s, `sitemap.xml`, `feed.xml` |
-| `inc/config.php` | Phone, lead email, author, nav, service area, the 70 mph weather threshold |
+| `index.php` | Front controller: routes, trailing-slash and canonical-host redirects, `X-Robots-Tag: noindex` on any other host (the preview domain), 404s, `sitemap.xml`, `feed.xml` |
+| `inc/config.php` | Phone, lead email, author, nav, service area, the 70 mph weather threshold, `PAGE_UPDATED` dates |
+| `inc/sitemap.php` | Sitemap. `<lastmod>` comes from `PAGE_UPDATED` (static pages), the newest post (home, blog) or the last weather check — never from file mtimes, which every deploy resets |
 | `inc/layout.php` | `<head>`, JSON-LD, top banner, header, footer, 5-second popup, lead form, CTA banners |
 | `inc/art.php` | Inline SVG illustrations and the wind gauge |
 | `inc/content.php` | Blog and weather-event data access |
@@ -40,12 +41,40 @@ The Hostinger cron runs `17 12 * * 1`:
   deployed. Without a key the cron does nothing once the queue is empty. You can also keep adding
   JSON posts to `data/blog-queue/` and redeploy.
 
+## Search Console: "Discovered - currently not indexed"
+
+Google first reported this on 10/3/26 for 13 of the 16 sitemap URLs, all with *Last crawled: N/A*. The pages
+are fine (200, fast, self-canonical, no `noindex`, linked from the nav and footer of every page): Google found
+them in the sitemap but has not scheduled a crawl yet, which is normal for a domain launched on 9/28/26 with
+no backlinks. What is in the code is done; what remains is in Search Console and off-site:
+
+1. **URL inspection → Request indexing** for each of the 13 URLs (one at a time, about 10 per day are
+   accepted). This is the only direct way to pull a never-crawled URL forward.
+2. **Sitemaps → add `https://galvestonpublicadjuster.com/feed.xml`** next to `sitemap.xml`. Google accepts
+   RSS as a sitemap and polls it more often for new posts. Every page also now advertises the feed with
+   `<link rel="alternate" type="application/rss+xml">`.
+3. **Link to the site from txpublicadjusting.com** (footer or a "Galveston" service-area page) and from the
+   Google Business Profile. The sister site is the one established domain that can pass crawl priority here;
+   today it does not link to galvestonpublicadjuster.com at all.
+4. **Keep lastmod honest.** When you materially edit a page, bump its date in `PAGE_UPDATED`
+   (`inc/config.php`). Blog posts and the weather page move on their own. Dates that jump on every deploy
+   teach Google to ignore the sitemap's lastmod entirely.
+5. **www certificate.** `https://www.galvestonpublicadjuster.com` fails the TLS handshake: the platform
+   certificate was issued on 9/27 before the `www` DNS record existed and does not cover it. Hostinger
+   does not let `www` be linked separately (`agency-hosting_domains_link-to-website` rejects it), so
+   re-issue the apex certificate (`agency-hosting_ssl_reinstall-website`, or hPanel → SSL → Reinstall) now
+   that `www` resolves; expect a few minutes without a valid certificate while it re-issues.
+
+Validation in Search Console takes one to three weeks after the request. If URLs move from "Discovered" to
+"Crawled - currently not indexed", the cause is content/quality, not crawling, and the fix is more links
+and more substantive pages, not anything technical.
+
 ## Deploying
 
 ```sh
 # credentials from agency-hosting_generateUploadURLV1 (expire after a few hours)
 export GPA_FB_URL=… GPA_FB_AUTH=… GPA_FB_REST=…
-python3 tools/check.py            # against a local `php -S 127.0.0.1:8099 index.php`
+python3 tools/check.py            # against a local `php -S 127.0.0.1:8099 index.php` (pages, keywords, sitemap lastmod)
 ./deploy.sh                       # never --init after launch
 ```
 Then clear the site cache (`agency-hosting_clearWebsiteCacheV1`).
