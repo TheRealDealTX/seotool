@@ -73,4 +73,4 @@ if (is_file($cfgFile)) {
 if ($saved === false && !$mailed) {
     ph_json(['ok' => false, 'error' => 'We could not save your request. Please call (407) 433-4131.'], 500);
 }
-ph_json(['ok' => true, 'name' => explode(' ', $lead['name'])[0]]);
+ph_json(['ok' => true, 'name' => explode(' ', $lead['name'])[0], 'saved' => $saved !== false, 'mailed' => (bool) $mailed]);
