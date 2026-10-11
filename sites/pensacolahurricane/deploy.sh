@@ -1,7 +1,6 @@
 #!/bin/bash
 # Deploy public/ to the Hostinger Agency website UID JWAYmkIOa
-# (temporary address violet-squid-690755.hostingersite.com until
-# pensacolahurricane.com is connected).
+# (preview address darkorchid-turtle-604356.hostingersite.com; see README).
 #
 # Get credentials from the Hostinger API call `agency-hosting_files_generate-upload-url`
 # for website_uid JWAYmkIOa (they expire after a few hours):

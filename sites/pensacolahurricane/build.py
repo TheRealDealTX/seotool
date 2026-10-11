@@ -140,7 +140,7 @@ def head(page):
 <meta name="description" content="{esc(page['description'])}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
-<meta name="theme-color" content="#0b1b2b">
+<meta name="theme-color" content="#000046">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{SITE['name']}">
@@ -155,7 +155,7 @@ def head(page):
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={asset_version("assets/css/site.css")}">
 <script type="application/ld+json">
 {ld}
@@ -181,9 +181,10 @@ def header(active):
 <header class="site-header">
 <div class="container nav-wrap">
 <a class="brand" href="/" aria-label="Pensacola Hurricane home">
-<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#e4572e"/><path d="M24 9c-6 0-11 3-13 8 4-3 9-4 13-3-5 2-8 6-8 10 0 5 4 9 9 9 6 0 11-3 13-8-4 3-9 4-13 3 5-2 8-6 8-10 0-5-4-9-9-9z" fill="#fff"/><circle cx="24" cy="24" r="3.2" fill="#e4572e"/></svg>
+<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#c58911"/><path d="M24 9c-6 0-11 3-13 8 4-3 9-4 13-3-5 2-8 6-8 10 0 5 4 9 9 9 6 0 11-3 13-8-4 3-9 4-13 3 5-2 8-6 8-10 0-5-4-9-9-9z" fill="#fff"/><circle cx="24" cy="24" r="3.2" fill="#01017c"/></svg>
 <span class="brand-copy"><strong>Pensacola Hurricane</strong><span>Storm claim help &middot; {FIRM['name']}</span></span>
 </a>
+<a class="firm-badge" href="/the-lawgical-firm/" aria-label="Sponsored by {FIRM['legal_name']}"><span>Sponsored by</span><img src="/assets/img/lawgical-logo-white.png" alt="{FIRM['name']}" width="110" height="41"></a>
 <div class="nav-actions">
 <a class="nav-phone" href="tel:{FIRM['phone_href']}" aria-label="Call {FIRM['name']} at {FIRM['phone_display']}"><span class="nav-phone-label">Free review</span>{FIRM['phone_display']}</a>
 <a class="btn btn-warn nav-cta" href="/free-case-review/">Free Case Review</a>
@@ -198,6 +199,7 @@ def header(active):
 <div class="nav-drawer-cta">
 <a class="btn btn-warn" href="/free-case-review/">Free Case Review</a>
 <a class="btn btn-outline-light" href="tel:{FIRM['phone_href']}">Call {FIRM['phone_display']}</a>
+<img class="drawer-logo" src="/assets/img/lawgical-logo-white.png" alt="{FIRM['name']}" width="132" height="49" loading="lazy">
 <p>No upfront fees &middot; {FIRM['legal_name']}</p>
 </div>
 </div></nav>
@@ -211,7 +213,7 @@ def cta_band():
     return f"""<section class="claim-cta">
 <div class="container claim-cta-inner">
 <div>
-<div class="eyebrow" style="color:#ffb199">Free case review &middot; No upfront fees</div>
+<div class="eyebrow" style="color:#f3c35a">Free case review &middot; No upfront fees</div>
 <h2>Hurricane claim denied, delayed or underpaid?</h2>
 <p>Talk to the attorneys at {FIRM['name']} about your Pensacola-area hurricane claim. We review your policy and the insurer's estimate at no cost, and you pay no attorney fee unless there is a recovery.</p>
 </div>
@@ -234,6 +236,7 @@ def footer(show_cta=True):
 <p>Hurricane claim help for Pensacola, Pensacola Beach, Perdido Key, Gulf Breeze, Warrington, Milton, Pace,
 Navarre and all of Escambia and Santa Rosa counties, sponsored by <a href="{FIRM['site']}" target="_blank" rel="noopener">{FIRM['legal_name']}</a>,
 a Florida property insurance claims law firm.</p>
+<a class="footer-logo" href="/the-lawgical-firm/"><img src="/assets/img/lawgical-logo-white.png" alt="{FIRM['name']}" width="165" height="62" loading="lazy"></a>
 <p class="footer-firm"><strong>{FIRM['legal_name']}</strong><br>{FIRM['street']}<br>{FIRM['city']}, {FIRM['region']} {FIRM['zip']}<br>
 <a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a><br><span class="small">Representing property owners throughout Florida, including the Pensacola area.</span></p>
 </div>
@@ -320,6 +323,7 @@ def lead_form(n, compact=False):
 <label class="check full small"><input type="checkbox" name="sms_consent" value="1"> I agree to receive text messages from {FIRM['legal_name']} about my inquiry. Msg &amp; data rates may apply; reply STOP to opt out.</label>
 </div>
 <button class="btn btn-warn btn-block" type="submit">Get my free case review</button>
+<div class="lead-firm"><img src="/assets/img/lawgical-logo.png" alt="{FIRM['name']}" width="118" height="42" loading="lazy"><span>Your review is handled by the attorneys at {FIRM['legal_name']}</span></div>
 <p class="form-note">Free and confidential. Submitting this form does not create an attorney-client relationship. Prefer to talk? Call <a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a>.</p>
 <div class="lead-out" data-lead-out role="status" aria-live="polite"></div>
 </form>"""

@@ -8,8 +8,15 @@ in `build.py`; the header phone/CTA, footer attorney-advertising disclosures,
 CTA band and lead form all render from it.
 
 **Hosting:** Hostinger Agency website UID `JWAYmkIOa` (php-fpm, Phoenix),
-temporary address **https://violet-squid-690755.hostingersite.com**.
-Created 2026-10-08. The real domain is not connected yet.
+Created 2026-10-08 on the temporary address violet-squid-690755.hostingersite.com.
+On 2026-10-10 the website's domain was changed (outside this repo) to
+**destinhurricane.com**, with preview address
+**https://darkorchid-turtle-604356.hostingersite.com**; the old temporary address
+no longer serves. pensacolahurricane.com is not connected yet.
+
+Brand: The Lawgical Firm's navy (#00007C/#01017C) and gold (#C58911/#E09900),
+Outfit for headings (closest free match to the firm's Euclid Circular), and the
+firm's logos in `src/static/assets/img/` (copied from thelawgicalfirm.com).
 
 ## Layout
 
