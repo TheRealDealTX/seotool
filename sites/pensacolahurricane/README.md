@@ -71,13 +71,18 @@ firm name, office city, no-attorney-client-relationship, past-results and fee
 disclosures. Avoid unverifiable quality claims ("best", "top-rated", "expert",
 "specialist") and testimonials or results without the firm's sign-off.
 
-## destinhurricane.com (2026-10-11)
+## destinhurricane.com (live 2026-10-11)
 
-The client asked for this site to be served on destinhurricane.com (registered
-at GoDaddy, nameservers pixel/byte.dns-parking.com → Hostinger). `SITE["origin"]`,
-`index.php` (https + www → apex redirect) and `lead.php` now use that domain and
-`STAGING` is off (indexable). As of 2026-10-11 Hostinger had not yet detected the
-nameserver change, so its DNS zone was empty and SSL setup was pending. Once
-`dns_records_reset` for the domain succeeds (or hPanel shows the domain as
-connected), the zone should hold `@ ALIAS destinhurricane.com.cdn.hstgr.net.`
-and `www CNAME www.destinhurricane.com.cdn.hstgr.net.`.
+The site is served on **https://destinhurricane.com** (registered at GoDaddy).
+Hostinger's own DNS refused to create a zone for the domain for hours after the
+nameservers were switched ("Domain not pointing to Hostinger"), so DNS is hosted
+at GoDaddy instead:
+
+- `A @ → 72.60.128.114` (the website's server)
+- `CNAME www → destinhurricane.com`
+
+Hostinger issued Let's Encrypt certificates for the apex and `www` once those
+records resolved (`agency-hosting_ssl_reinstall-website` re-triggers them).
+`index.php` redirects http:// and www. to https://destinhurricane.com. The
+*.hostingersite.com preview address was removed when the domain was re-linked;
+there is no preview URL anymore. pensacolahurricane.com is not connected.
