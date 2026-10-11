@@ -3,9 +3,12 @@
 // Every lead is appended to ../data/leads.php (first line exits, so the file
 // 404s on the web; download it from hPanel File Manager). If
 // ../data/lead-config.php exists, each lead is also emailed. That file is
-// created on the server only (never committed):
-//   <?php return ['to' => ['intake@example.com'], 'from' => 'leads@destinhurricane.com'];
+// created on the server only (never committed) and must start with the guard
+// so a direct web request for it gets a 404:
+//   <?php if (!defined('PH_LEAD')) { http_response_code(404); exit; }
+//   return ['to' => ['intake@example.com'], 'from' => 'leads@destinhurricane.com'];
 require __DIR__ . '/_lib.php';
+define('PH_LEAD', true);
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     ph_json(['ok' => false, 'error' => 'POST only'], 405);
 }
