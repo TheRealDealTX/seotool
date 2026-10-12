@@ -15,7 +15,8 @@ LEGACY = ["about.html", "contact.html", "services.html", "gardens.html", "garden
 
 errors = []
 titles, descs = {}, {}
-files = sorted(glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "gardens", "*.html")))
+files = sorted(glob.glob(os.path.join(ROOT, "*.html")) + glob.glob(os.path.join(ROOT, "gardens", "*.html"))
+               + glob.glob(os.path.join(ROOT, "blog", "*.html")))
 for f in files:
     rel = os.path.relpath(f, ROOT)
     s = open(f, encoding="utf-8").read()
@@ -52,6 +53,18 @@ for rel in LEGACY:
         errors.append(f"legacy URL missing: /{rel}")
 if not os.path.exists(os.path.join(ROOT, "index.php")) or os.path.exists(os.path.join(ROOT, "index.html")):
     errors.append("expected index.php and no index.html (see README)")
+
+# Blog posts must be published exactly three days apart.
+from datetime import date
+sys.path.insert(0, ROOT)
+from content_blog import POSTS
+dates = sorted(date.fromisoformat(p["date"]) for p in POSTS)
+for a, b in zip(dates, dates[1:]):
+    if (b - a).days != 3:
+        errors.append(f"blog dates not 3 days apart: {a} -> {b}")
+for p in POSTS:
+    if not os.path.exists(os.path.join(ROOT, "blog", p["slug"] + ".html")):
+        errors.append(f"missing post {p['slug']}")
 
 if errors:
     print("\n".join(errors))

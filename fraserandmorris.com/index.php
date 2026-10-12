@@ -31,6 +31,10 @@ $redirects = [
     '/gardens/index.html' => '/gardens.html',
     '/gardens/' => '/gardens.html',
     '/gardens' => '/gardens.html',
+    '/blog' => '/blog/',
+    '/blog/index.html' => '/blog/',
+    '/journal' => '/blog/',
+    '/news' => '/blog/',
     '/press.html' => '/about.html',
     '/news.html' => '/about.html',
     '/pdfs/GardensIllustrated.pdf' => '/gardens/artists.html',
@@ -43,6 +47,13 @@ if (preg_match('#^/pdfs/#i', $path)) {
     header('Location: ' . $base . '/about.html', true, 301);
     exit;
 }
+// Directory URLs such as /blog/ -> their index.html.
+if (substr($path, -1) === '/' && strpos($path, '..') === false && is_file(__DIR__ . $path . 'index.html')) {
+    header('Content-Type: text/html; charset=utf-8');
+    readfile(__DIR__ . $path . 'index.html');
+    exit;
+}
+
 // Old per-garden image folders (e.g. /gardens/fox/fox1.jpg) -> that garden's page.
 if (preg_match('#^/gardens/([a-z]+)/[^/]+\.(jpe?g|png|gif)$#i', $path, $m) && is_file(__DIR__ . '/gardens/' . strtolower($m[1]) . '.html')) {
     header('Location: ' . $base . '/gardens/' . strtolower($m[1]) . '.html', true, 301);

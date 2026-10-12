@@ -168,6 +168,35 @@
     else if (/[?&]error=1/.test(q)) { status.className = "form-status err"; status.textContent = "Sorry, something went wrong. Please check the form and try again, or email us directly."; }
   }
 
+  /* ---------- Blog: category filter + reading progress ---------- */
+  doc.querySelectorAll("[data-filters]").forEach(function (group) {
+    var buttons = group.querySelectorAll("[data-filter]");
+    var cards = doc.querySelectorAll(".post-card[data-cat]");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var f = btn.getAttribute("data-filter");
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+        cards.forEach(function (c) {
+          c.hidden = !(f === "all" || c.getAttribute("data-cat") === f);
+          if (!c.hidden) c.classList.add("in");
+        });
+      });
+    });
+  });
+  var bar = doc.querySelector(".read-progress span");
+  var article = doc.querySelector("article.prose");
+  if (bar && article) {
+    var upd = function () {
+      var r = article.getBoundingClientRect();
+      var total = r.height - window.innerHeight * 0.5;
+      var pct = Math.min(1, Math.max(0, -r.top / (total > 0 ? total : 1)));
+      bar.style.transform = "scaleX(" + pct.toFixed(3) + ")";
+    };
+    window.addEventListener("scroll", upd, { passive: true });
+    window.addEventListener("resize", upd);
+    upd();
+  }
+
   var year = doc.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
 })();

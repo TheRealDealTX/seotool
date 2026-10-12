@@ -30,6 +30,15 @@ carries backlinks is rebuilt at its **exact old path**:
 | `/gardens/study.html` | study garden design | Ranked |
 | `/gardens/print.html` | house garden design | Ranked |
 
+## Blog
+
+`/blog/` lists eight garden design articles at `/blog/<slug>.html`, published
+three days apart (21 Sep to 12 Oct 2026). Copy lives in `content_blog.py`. To add
+a post, append an entry with a `date` three days after the newest one, then rebuild
+(`validate.py` enforces the three-day spacing). Each post gets `BlogPosting`
+schema, a link to a related garden page, previous/next links and its own sitemap
+`lastmod`. The index has category filters; posts have a reading-progress bar.
+
 `index.php` 301s `/index.html`, `/gardens/` and similar old paths. Note: the host
 serves static file extensions (`.pdf`, `.jpg`) itself and never passes them to
 PHP, so `/pdfs/GardensIllustrated.pdf` (old ranking, no traffic, no backlinks)
@@ -45,12 +54,21 @@ The garden pages describe how each type of garden is designed.
 | --- | --- |
 | `build.py` | Generator: layout, page templates, schema (`python3 build.py`) |
 | `content.py` | Copy for the nine garden pages and the homepage FAQ |
+| `content_blog.py` | Blog articles (dated three days apart) |
 | `validate.py` | Post-build checks: one H1, unique titles and descriptions, JSON-LD, alt text, broken links, legacy URLs |
 | `assets/css/site.css`, `assets/js/site.js` | Styles and behavior (mobile nav, reveals, parallax, petals, seasons tabs) |
 | `assets/img/*.webp` | Royalty-free photos (Pexels license), resized and converted |
 | `index.php` | Serves `home.html` at `/`, legacy 301s, real 404s, `noindex` header on non-production hosts |
 | `contact.php` | Form handler; emails enquiries to info@fraserandmorris.com |
 | `deploy.sh` | Uploads the build through the Hostinger File Browser TUS API |
+
+## Notes
+
+- The frosted header background is on `.site-header::before`, not the header
+  itself. A `backdrop-filter` on the header would become the containing block for
+  the fixed mobile menu and clip it to the header bar once the page is scrolled.
+- CSS and JS links carry a content-hash `?v=` so the Hostinger CDN never serves a
+  stale copy after a deploy.
 
 ## Build & deploy
 

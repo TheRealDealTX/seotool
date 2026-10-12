@@ -11,6 +11,7 @@ import os
 from datetime import date
 
 from content import GARDENS, HOME_FAQ
+from content_blog import POSTS
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ORIGIN = "https://fraserandmorris.com"
@@ -38,6 +39,7 @@ NAV = [
     ("Gardens", "/gardens.html"),
     ("Services", "/services.html"),
     ("About", "/about.html"),
+    ("Blog", "/blog/"),
     ("Contact", "/contact.html"),
 ]
 
@@ -128,6 +130,10 @@ ALT = {
     "allium-field": "Purple alliums standing above green foliage",
     "salvia": "Purple salvia flowers in a summer border",
     "meadow-path": "Mown path running through long meadow grasses",
+    "tulips": "Red, pink and yellow tulips in flower against a blue sky",
+    "tulip-buds": "A single red tulip open among green tulip buds",
+    "grasses-autumn": "Ornamental grass seedheads glowing in golden autumn light",
+    "maple-autumn": "Red Japanese maple leaves in autumn above an old garden wall",
 }
 
 
@@ -213,7 +219,7 @@ def footer():
         <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       </div>
       <div><h4>Gardens</h4><ul>{gardens}<li><a href="/gardens.html">All gardens</a></li></ul></div>
-      <div><h4>Studio</h4><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
       <div><h4>Areas</h4><ul><li>North London</li><li>South London</li><li>Oxfordshire</li><li>Suffolk &amp; Sussex</li></ul></div>
     </div>
     <div class="footer-bottom"><span>&copy; <span id="year">{date.today().year}</span> {NAME}. Garden design &amp; planting.</span><span>London &middot; Oxfordshire &middot; Suffolk &middot; Sussex</span></div>
@@ -221,7 +227,13 @@ def footer():
   <div class="footer-big" aria-hidden="true">Fraser&amp;Morris</div>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top"><svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/></svg>{ICON["up"]}</button>
-<script src="/assets/js/site.js" defer></script>"""
+<script src="/assets/js/site.js?v={asset_version("assets/js/site.js")}" defer></script>"""
+
+
+def asset_version(rel):
+    import hashlib
+    with open(os.path.join(ROOT, rel), "rb") as fh:
+        return hashlib.md5(fh.read()).hexdigest()[:8]
 
 
 def page(path, title, description, body, current, schema=None, og_image="hero-garden-path", light=False, robots="index,follow"):
@@ -252,7 +264,7 @@ def page(path, title, description, body, current, schema=None, og_image="hero-ga
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v={asset_version("assets/css/site.css")}">
 {jsonld({"@context": "https://schema.org", "@graph": graph})}
 </head>
 <body>
@@ -441,6 +453,11 @@ def build_home():
 </div></section>
 
 <section class="section section--cream"><div class="wrap">
+  <div class="section-head reveal"><div><p class="eyebrow">From the journal</p><h2>Garden design <em>ideas &amp; advice</em></h2></div><a class="btn btn--dark" href="/blog/">Read the blog {ICON["arrow"]}</a></div>
+  {post_cards(posts_sorted()[:3])}
+</div></section>
+
+<section class="section"><div class="wrap">
   <div class="section-head reveal" style="justify-content:center;text-align:center"><div><p class="eyebrow">Questions</p><h2>Frequently asked</h2></div></div>
   {faq_html(HOME_FAQ)}
 </div></section>
@@ -692,6 +709,125 @@ def build_404():
     return page("/404.html", "Page Not Found | Fraser & Morris", "The page you were looking for could not be found.", body, "", light=True, robots="noindex,follow")
 
 
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+def nice_date(iso):
+    y, m, d = iso.split("-")
+    return f"{int(d)} {MONTHS[int(m) - 1]} {y}"
+
+
+def read_time(post):
+    words = len(strip_tags(post["body"]).split())
+    return max(3, round(words / 220))
+
+
+def posts_sorted():
+    return sorted(POSTS, key=lambda p: p["date"], reverse=True)
+
+
+def post_cards(posts):
+    out = []
+    for i, p in enumerate(posts):
+        out.append(
+            f'<a class="post-card reveal" data-delay="{i % 3}" href="/blog/{p["slug"]}.html">'
+            f'<span class="post-card__img">{pic(p["image"], ALT[p["image"]])}<span class="post-card__cat">{esc(p["category"])}</span></span>'
+            f'<span class="post-card__body"><span class="post-meta"><time datetime="{p["date"]}">{nice_date(p["date"])}</time> &middot; {read_time(p)} min read</span>'
+            f'<h3>{strip_tags(p["h1"])}</h3><p>{esc(p["excerpt"])}</p><span class="post-card__more">Read article {ICON["arrow"]}</span></span></a>'
+        )
+    return '<div class="posts">' + "".join(out) + "</div>"
+
+
+def build_blog_index():
+    ordered = posts_sorted()
+    lead, rest = ordered[0], ordered[1:]
+    crumbs = [("Home", "/"), ("Blog", "/blog/")]
+    feature = f"""<a class="post-feature reveal" href="/blog/{lead['slug']}.html">
+  <span class="post-feature__img reveal-img">{pic(lead["image"], ALT[lead["image"]], extra=' style="width:100%;height:100%;object-fit:cover"')}</span>
+  <span class="post-feature__body"><span class="eyebrow">Latest &middot; {esc(lead["category"])}</span><h2>{lead["h1"]}</h2>
+  <span class="post-meta"><time datetime="{lead['date']}">{nice_date(lead['date'])}</time> &middot; {read_time(lead)} min read</span>
+  <p>{esc(lead["excerpt"])}</p><span class="btn btn--dark">Read article {ICON["arrow"]}</span></span>
+</a>"""
+    cats = sorted({p["category"] for p in POSTS})
+    filters = '<button class="tab" type="button" data-filter="all" aria-pressed="true">All</button>' + "".join(
+        f'<button class="tab" type="button" data-filter="{esc(c)}" aria-pressed="false">{esc(c)}</button>' for c in cats)
+    cards = post_cards(rest).replace('<a class="post-card', '<a data-cat="X" class="post-card')
+    # tag each card with its category for the filter
+    parts = cards.split('data-cat="X"')
+    cards = parts[0] + "".join(f'data-cat="{esc(p["category"])}"' + parts[i + 1] for i, p in enumerate(rest))
+    body = f"""
+<section class="plain-hero"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span aria-current="page">Blog</span></nav>
+  <p class="eyebrow">The journal</p>
+  <h1>Garden design <em>articles &amp; ideas</em></h1>
+  <p class="lead">Practical advice on garden design and planting from the Fraser &amp; Morris studio: courtyards, shade, trees, bulbs, borders and how to make a garden work in every season.</p>
+</div></section>
+<section class="section" style="padding-top:70px"><div class="wrap">
+  {feature}
+  <div class="section-head reveal" style="margin-top:clamp(70px,9vw,110px)"><div><p class="eyebrow">All articles</p><h2>More from <em>the journal</em></h2></div><div class="tabs" data-filters role="group" aria-label="Filter articles by category">{filters}</div></div>
+  {cards}
+</div></section>
+{cta()}
+"""
+    schema = [breadcrumbs(crumbs), {"@type": "Blog", "@id": ORIGIN + "/blog/#blog", "url": ORIGIN + "/blog/", "name": "Fraser & Morris Garden Design Blog",
+              "publisher": {"@id": ORIGIN + "/#business"},
+              "blogPost": [{"@type": "BlogPosting", "headline": strip_tags(p["h1"]), "url": f"{ORIGIN}/blog/{p['slug']}.html", "datePublished": p["date"]} for p in ordered]}]
+    return page("/blog/", "Garden Design Blog: Articles & Planting Ideas | Fraser & Morris",
+                "Garden design articles and planting advice from Fraser & Morris: courtyard gardens, shade plants, small trees, bulbs, dahlias and year-round planting.",
+                body, "/blog/", schema, light=True, og_image=lead["image"])
+
+
+def build_post(p):
+    path = f"/blog/{p['slug']}.html"
+    crumbs = [("Home", "/"), ("Blog", "/blog/"), (strip_tags(p["h1"]), path)]
+    g = GARDEN_BY_SLUG[p["related_garden"]]
+    ordered = posts_sorted()
+    idx = ordered.index(p)
+    newer = ordered[idx - 1] if idx > 0 else None
+    older = ordered[idx + 1] if idx + 1 < len(ordered) else None
+    more = [q for q in ordered if q is not p][:3]
+    pager = '<nav class="pager" aria-label="More articles">'
+    pager += (f'<a href="/blog/{older["slug"]}.html"><small>&larr; Previous</small>{strip_tags(older["h1"])}</a>' if older else "<span></span>")
+    pager += (f'<a class="next" href="/blog/{newer["slug"]}.html"><small>Next &rarr;</small>{strip_tags(newer["h1"])}</a>' if newer else "<span></span>")
+    pager += "</nav>"
+    meta = (f'<p class="post-meta post-meta--hero fade-up d2"><time datetime="{p["date"]}">{nice_date(p["date"])}</time>'
+            f'<span>&middot;</span>{esc(p["category"])}<span>&middot;</span>{read_time(p)} min read</p>')
+    body = f"""
+{photo_hero(p["image"], "Fraser &amp; Morris journal", p["h1"], esc(p["excerpt"]), crumbs, meta)}
+<div class="read-progress" aria-hidden="true"><span></span></div>
+<section class="section"><div class="wrap prose-grid">
+  <article class="prose reveal">{p["body"].strip()}{pager}</article>
+  <aside class="aside">
+    <div class="aside-card reveal"><h3>About this article</h3><dl>
+      <div><dt>Published</dt><dd><time datetime="{p['date']}">{nice_date(p['date'])}</time></dd></div>
+      <div><dt>Category</dt><dd>{esc(p["category"])}</dd></div>
+      <div><dt>Reading time</dt><dd>{read_time(p)} minutes</dd></div>
+      <div><dt>Written by</dt><dd>The Fraser &amp; Morris studio</dd></div>
+    </dl></div>
+    <a class="card reveal" href="/gardens/{g['slug']}.html" style="aspect-ratio:4/3">{pic(g["hero"], ALT[g["hero"]])}<span class="arrow">{ICON["arrow"]}</span><span class="card__body" style="transform:none"><span class="card__tag">Related garden</span><h3>{esc(g["nav"])}</h3></span></a>
+    <div class="aside-card aside-card--dark reveal"><h3>Planning a garden?</h3><p>Tell us about your space and we will arrange a consultation visit.</p><a class="btn" href="/contact.html">Get in touch {ICON["arrow"]}</a></div>
+  </aside>
+</div></section>
+<section class="section section--cream"><div class="wrap">
+  <div class="section-head reveal"><div><p class="eyebrow">Keep reading</p><h2>More from <em>the journal</em></h2></div><a class="btn btn--dark" href="/blog/">All articles {ICON["arrow"]}</a></div>
+  {post_cards(more)}
+</div></section>
+{cta()}
+"""
+    schema = [breadcrumbs(crumbs), {
+        "@type": "BlogPosting", "headline": strip_tags(p["h1"]), "description": p["description"],
+        "datePublished": p["date"], "dateModified": p["date"], "url": ORIGIN + path,
+        "mainEntityOfPage": ORIGIN + path, "image": f"{ORIGIN}/assets/img/{p['image']}.webp",
+        "articleSection": p["category"], "wordCount": len(strip_tags(p["body"]).split()),
+        "author": {"@id": ORIGIN + "/#business"}, "publisher": {"@id": ORIGIN + "/#business"},
+        "isPartOf": {"@id": ORIGIN + "/blog/#blog"},
+    }]
+    html_out = page(path, p["title"], p["description"], body, "/blog/", schema, og_image=p["image"])
+    html_out = html_out.replace('<meta property="og:type" content="website">',
+                                f'<meta property="og:type" content="article">\n<meta property="article:published_time" content="{p["date"]}">')
+    return path, html_out
+
+
 def write(rel, content):
     p = os.path.join(ROOT, rel)
     os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -706,14 +842,19 @@ def main():
     for g in GARDENS:
         path, content = build_garden(g)
         pages[path.lstrip("/")] = content
+    pages["blog/index.html"] = build_blog_index()
+    for post in POSTS:
+        path, content = build_post(post)
+        pages[path.lstrip("/")] = content
     for rel, content in pages.items():
         write(rel, content)
 
-    urls = ["/", "/about.html", "/services.html", "/gardens.html"] + [f"/gardens/{g['slug']}.html" for g in GARDENS] + ["/contact.html", "/privacy.html"]
+    urls = ["/", "/about.html", "/services.html", "/gardens.html"] + [f"/gardens/{g['slug']}.html" for g in GARDENS] + ["/blog/"] + [f"/blog/{p['slug']}.html" for p in posts_sorted()] + ["/contact.html", "/privacy.html"]
     prio = {"/": "1.0", "/gardens.html": "0.9", "/services.html": "0.9"}
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u in urls:
-        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>{prio.get(u, '0.7')}</priority></url>")
+        lastmod = next((p["date"] for p in POSTS if f"/blog/{p['slug']}.html" == u), TODAY)
+        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{lastmod}</lastmod><priority>{prio.get(u, '0.7')}</priority></url>")
     sm.append("</urlset>\n")
     write("sitemap.xml", "\n".join(sm))
     write("robots.txt", f"User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
