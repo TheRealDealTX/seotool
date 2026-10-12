@@ -39,12 +39,17 @@
   onScroll();
 
   /* nav */
+  // The open state lives on <html>: locking scroll there (not on <body>) keeps the sticky header working.
   var navToggle = $(".nav-toggle");
-  if (navToggle) navToggle.addEventListener("click", function () {
-    var open = document.body.classList.toggle("nav-open");
+  function setNav(open) {
+    doc.classList.toggle("nav-open", open);
+    if (!navToggle) return;
     navToggle.setAttribute("aria-expanded", open);
     navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-  });
+  }
+  if (navToggle) navToggle.addEventListener("click", function () { setNav(!doc.classList.contains("nav-open")); });
+  $$(".nav a").forEach(function (a) { a.addEventListener("click", function () { setNav(false); }); });
+  window.matchMedia("(min-width: 961px)").addEventListener("change", function (e) { if (e.matches) setNav(false); });
   $$(".nav__dropbtn").forEach(function (b) {
     b.addEventListener("click", function () {
       var li = b.parentNode, open = li.classList.toggle("is-open");
@@ -58,8 +63,7 @@
   });
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") {
-      document.body.classList.remove("nav-open");
-      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+      setNav(false);
       $$(".nav__drop.is-open").forEach(function (li) { li.classList.remove("is-open"); });
     }
   });
