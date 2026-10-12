@@ -166,7 +166,7 @@ def head(page):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <meta name="apple-mobile-web-app-title" content="Pensacola Hurricane">
 <meta name="application-name" content="Pensacola Hurricane">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="manifest" href="/manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
