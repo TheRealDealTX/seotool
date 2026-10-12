@@ -215,9 +215,22 @@
   });
 
   // ---- mobile nav ----
-  const toggle = $('.nav-toggle');
-  toggle?.addEventListener('click', () => { const open = document.body.classList.toggle('nav-open'); toggle.setAttribute('aria-expanded', open); });
-  document.addEventListener('click', e => { if (document.body.classList.contains('nav-open') && !e.target.closest('.mainnav, .nav-toggle')) { document.body.classList.remove('nav-open'); toggle.setAttribute('aria-expanded', 'false'); } });
+  const toggle = $('.nav-toggle'), drawer = $('#mainnav');
+  const setNav = open => {
+    document.body.classList.toggle('nav-open', open);
+    toggle?.setAttribute('aria-expanded', open);
+    if (open) $('.nav-close', drawer)?.focus(); else if (document.activeElement && drawer?.contains(document.activeElement)) toggle?.focus();
+  };
+  toggle?.addEventListener('click', () => setNav(!document.body.classList.contains('nav-open')));
+  $('.nav-close')?.addEventListener('click', () => setNav(false));
+  $('.nav-scrim')?.addEventListener('click', () => setNav(false));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('nav-open')) setNav(false); });
+  drawer?.addEventListener('click', e => {
+    const sub = e.target.closest('.sub-toggle');
+    if (sub) { const li = sub.closest('.dept'), open = !li.classList.contains('open'); li.classList.toggle('open', open); sub.setAttribute('aria-expanded', open); return; }
+    if (e.target.closest('a')) setNav(false);
+  });
+  matchMedia('(min-width: 961px)').addEventListener('change', e => { if (e.matches) setNav(false); });
 
   // ---- reveal on scroll ----
   if ('IntersectionObserver' in window && !reduce) {

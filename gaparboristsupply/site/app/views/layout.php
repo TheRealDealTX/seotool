@@ -72,12 +72,18 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
       <a href="/cart/" class="icon-btn cart-btn" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span class="badge" data-cart-count hidden>0</span></a>
     </div>
   </div>
+  <div class="nav-scrim" aria-hidden="true"></div>
   <nav class="mainnav" id="mainnav" aria-label="Departments">
+    <div class="drawer-head">
+      <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="" width="34" height="34"><span class="logo-text"><b>Gap</b> Arborist Supply</span></a>
+      <button class="nav-close" type="button" aria-label="Close menu">×</button>
+    </div>
     <div class="wrap">
       <ul class="dept-list">
 <?php foreach ($depts as $d): ?>
         <li class="dept"><a href="<?= e($d['path']) ?>"><?= e($d['name']) ?></a>
 <?php if ($d['children']): ?>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show <?= e($d['name']) ?> categories"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
           <div class="mega"><div class="mega-inner">
             <div class="mega-cols">
 <?php foreach (array_slice($d['children'], 0, 12) as $cp): $ch = $CAT['categories'][$cp]; ?>
@@ -91,6 +97,8 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
 <?php endforeach; ?>
         <li class="dept dept-alt"><a href="/brands/">Brands</a></li>
         <li class="dept dept-alt"><a href="/tools/">Tools</a></li>
+        <li class="dept drawer-only"><a href="/guides/">Buying guides</a></li>
+        <li class="dept drawer-only"><a href="/cart/">Cart &amp; saved gear</a></li>
       </ul>
     </div>
   </nav>

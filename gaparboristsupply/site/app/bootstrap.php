@@ -7,7 +7,7 @@ $CAT = require dirname(__DIR__) . '/data/catalog.php';
 $AFF = is_file(dirname(__DIR__) . '/data/affiliates.json')
     ? (json_decode(file_get_contents(dirname(__DIR__) . '/data/affiliates.json'), true) ?: []) : [];
 
-const ASSET_V = '2';
+const ASSET_V = '3';
 
 function e(?string $s): string { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 
