@@ -166,8 +166,12 @@
       });
     });
     if (q) q.addEventListener("input", apply);
-    var h = location.hash.slice(1), pre = chips.filter(function (c) { return c.dataset.filter === h; })[0];
-    if (pre) pre.click();
+    var fromHash = function () {
+      var h = location.hash.slice(1), pre = chips.filter(function (c) { return c.dataset.filter === (h || "all"); })[0];
+      if (pre) { pre.click(); if (h) window.scrollTo(0, 0); }
+    };
+    window.addEventListener("hashchange", fromHash);
+    fromHash();
   }
 
   /* Exposure lab */
