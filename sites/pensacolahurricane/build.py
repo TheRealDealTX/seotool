@@ -61,6 +61,7 @@ NAV = [
 ]
 
 TODAY = date.today().isoformat()
+GA_ID = "G-26F0N02ESV"   # Google Analytics 4 tag, on every page
 
 
 def asset_version(rel):
@@ -134,11 +135,20 @@ def head(page):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>
 <title>{esc(page['title'])}</title>
 <meta name="description" content="{esc(page['description'])}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
-<meta name="theme-color" content="#000046">
+<meta name="theme-color" content="#01017c">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{SITE['name']}">
@@ -150,7 +160,13 @@ def head(page):
 {article}<meta name="geo.region" content="US-FL">
 <meta name="geo.placename" content="Pensacola, Florida">
 <meta name="geo.position" content="{SITE['lat']};{SITE['lon']}">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<meta name="apple-mobile-web-app-title" content="Pensacola Hurricane">
+<meta name="application-name" content="Pensacola Hurricane">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
