@@ -7,11 +7,24 @@
   var onScroll = function () { header && header.classList.toggle('scrolled', window.scrollY > 10); };
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
+  // Mobile menu: full-screen overlay; closes on link tap, Escape, or widening past the breakpoint.
   var toggle = document.querySelector('.nav-toggle');
-  if (toggle) toggle.addEventListener('click', function () {
-    var open = document.body.classList.toggle('nav-open');
-    toggle.setAttribute('aria-expanded', open);
-  });
+  var setMenu = function (open) {
+    document.body.classList.toggle('nav-open', open);
+    document.documentElement.classList.toggle('nav-lock', open);
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+    }
+  };
+  if (toggle) {
+    toggle.addEventListener('click', function () { setMenu(!document.body.classList.contains('nav-open')); });
+    document.querySelectorAll('.nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && document.body.classList.contains('nav-open')) { setMenu(false); toggle.focus(); }
+    });
+    window.matchMedia('(min-width: 921px)').addEventListener('change', function (m) { if (m.matches) setMenu(false); });
+  }
 
   // Scroll reveal, staggered within each parent.
   var items = document.querySelectorAll('.reveal');
