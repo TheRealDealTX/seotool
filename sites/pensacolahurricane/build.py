@@ -42,12 +42,17 @@ FIRM = {
     "legal_name": "The Lawgical Firm, P.A.",
     "site": "https://thelawgicalfirm.com/",
     "url": "https://thelawgicalfirm.com/residential-property-insurance-claims/hurricane-windstorm/",
-    "phone_display": "(407) 433-4131",
-    "phone_href": "+14074334131",
+    "phone_display": "(850) 203-3385",          # Pensacola-area line
+    "phone_href": "+18502033385",
+    # Principal office (named in the attorney-advertising disclosure).
     "street": "3191 Maguire Blvd, Ste 160",
     "city": "Orlando",
     "region": "FL",
     "zip": "32803",
+    # Local office(s) shown on the site; add the Pensacola office here when available.
+    "offices": [
+        {"label": "Destin office", "street": "34990 Emerald Coast Pkwy, Ste 359", "city": "Destin", "region": "FL", "zip": "32541"},
+    ],
 }
 
 NAV = [
@@ -96,8 +101,9 @@ def head(page):
             "name": FIRM["legal_name"],
             "url": FIRM["site"],
             "telephone": FIRM["phone_href"],
-            "address": {"@type": "PostalAddress", "streetAddress": FIRM["street"], "addressLocality": FIRM["city"],
-                        "addressRegion": FIRM["region"], "postalCode": FIRM["zip"], "addressCountry": "US"},
+            "address": [{"@type": "PostalAddress", "streetAddress": o["street"], "addressLocality": o["city"],
+                         "addressRegion": o["region"], "postalCode": o["zip"], "addressCountry": "US"}
+                        for o in FIRM["offices"] + [FIRM]],
             "areaServed": [{"@type": "City", "name": "Pensacola, FL"}, {"@type": "AdministrativeArea", "name": "Escambia County, FL"},
                            {"@type": "AdministrativeArea", "name": "Santa Rosa County, FL"}, {"@type": "State", "name": "Florida"}],
             "knowsAbout": ["Hurricane insurance claims", "Denied property insurance claims", "Underpaid insurance claims", "Windstorm damage claims"],
@@ -251,8 +257,9 @@ def footer(show_cta=True):
 Navarre and all of Escambia and Santa Rosa counties, sponsored by <a href="{FIRM['site']}" target="_blank" rel="noopener">{FIRM['legal_name']}</a>,
 a Florida property insurance claims law firm.</p>
 <a class="footer-logo" href="/the-lawgical-firm/"><img src="/assets/img/lawgical-logo-white.png" alt="{FIRM['name']}" width="165" height="62" loading="lazy"></a>
-<p class="footer-firm"><strong>{FIRM['legal_name']}</strong><br>{FIRM['street']}<br>{FIRM['city']}, {FIRM['region']} {FIRM['zip']}<br>
-<a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a><br><span class="small">Representing property owners throughout Florida, including the Pensacola area.</span></p>
+<p class="footer-firm"><strong>{FIRM['legal_name']}</strong><br><a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a><br>
+{"".join(f"<span class='small'>{o['label']}:</span><br>{o['street']}<br>{o['city']}, {o['region']} {o['zip']}<br>" for o in FIRM['offices'])}<span class="small">Principal office:</span><br>{FIRM['street']}<br>{FIRM['city']}, {FIRM['region']} {FIRM['zip']}<br>
+<span class="small">Representing property owners throughout Florida, including the Pensacola and Destin areas.</span></p>
 </div>
 <div>
 <div class="footer-title">Claim Help</div>
@@ -292,7 +299,7 @@ a Florida property insurance claims law firm.</p>
 </div>
 </div>
 </div>
-<p class="footer-legal">Attorney advertising. This website is sponsored by {FIRM['legal_name']}, which is responsible for its content; principal office: {FIRM['city']}, Florida.
+<p class="footer-legal">Attorney advertising. This website is sponsored by {FIRM['legal_name']}, which is responsible for its content; principal office: {FIRM['city']}, Florida; additional office in {', '.join(o['city'] for o in FIRM['offices'])}, Florida.
 The information on this site is general information, not legal advice, and reading it or contacting us does not create an attorney-client relationship.
 Fees: no attorney fee unless there is a recovery; ask how case costs are handled under the written fee agreement. Past results do not guarantee a similar outcome. The hiring of a lawyer is an important decision that should not be based solely on advertisements.
 In a life-threatening emergency, call 911 and follow instructions from Escambia County and Santa Rosa County officials.</p>

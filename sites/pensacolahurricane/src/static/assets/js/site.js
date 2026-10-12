@@ -548,11 +548,11 @@
       body.append("page", location.pathname);
       fetch("/api/lead.php", { method: "POST", body: body }).then(function (r) { return r.json(); }).then(function (d) {
         if (d.ok) {
-          out.innerHTML = "<strong>Thank you, " + esc(d.name) + ".</strong> Your request was received. A member of The Lawgical Firm's team will contact you shortly. For immediate help call <a href=\"tel:+14074334131\">(407) 433-4131</a>.";
+          out.innerHTML = "<strong>Thank you, " + esc(d.name) + ".</strong> Your request was received. A member of The Lawgical Firm's team will contact you shortly. For immediate help call <a href=\"tel:+18502033385\">(850) 203-3385</a>.";
           f.querySelectorAll("input:not([type=checkbox]), textarea").forEach(function (el) { el.value = ""; });
           if (window.gtag) window.gtag("event", "generate_lead");
-        } else { out.className = "lead-out is-error"; out.textContent = d.error || "Something went wrong. Please call (407) 433-4131."; }
-      }).catch(function () { out.className = "lead-out is-error"; out.textContent = "We couldn't send your request. Please call (407) 433-4131."; })
+        } else { out.className = "lead-out is-error"; out.textContent = d.error || "Something went wrong. Please call (850) 203-3385."; }
+      }).catch(function () { out.className = "lead-out is-error"; out.textContent = "We couldn't send your request. Please call (850) 203-3385."; })
         .then(function () { btn.disabled = false; });
     });
   });
