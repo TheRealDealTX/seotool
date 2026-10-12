@@ -83,14 +83,19 @@ em, .script { font-family: var(--display); font-style: italic; font-weight: 500;
 /* Header */
 .site-header {
   position: fixed; inset: 0 0 auto; z-index: 50; color: #fff;
-  transition: background .4s, color .4s, box-shadow .4s, padding .4s; padding: 22px 0;
+  transition: color .4s, padding .4s; padding: 22px 0;
 }
-.site-header.solid, .site-header.light {
-  background: rgba(255, 253, 249, .88); color: var(--ink); padding: 12px 0;
+/* The frosted bar lives on ::before. A backdrop-filter on the header itself would make it
+   the containing block for the fixed mobile menu and trap the menu inside the bar. */
+.site-header::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: rgba(255, 253, 249, .88); box-shadow: 0 1px 0 var(--line);
   -webkit-backdrop-filter: saturate(1.4) blur(14px); backdrop-filter: saturate(1.4) blur(14px);
-  box-shadow: 0 1px 0 var(--line);
+  opacity: 0; transition: opacity .4s;
 }
-.site-header.light:not(.solid) { background: transparent; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 22px 0; }
+.site-header.solid { color: var(--ink); padding: 12px 0; }
+.site-header.solid::before { opacity: 1; }
+.site-header.light { color: var(--ink); }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: baseline; gap: .55em; text-decoration: none; line-height: 1; }
 .brand-mark { font: 600 1.9rem/1 var(--display); letter-spacing: .08em; }
@@ -121,13 +126,18 @@ em, .script { font-family: var(--display); font-style: italic; font-weight: 500;
 
 @media (max-width: 980px) {
   .burger { display: block; z-index: 2; }
+  .brand { position: relative; z-index: 2; }
   .menu {
-    position: fixed; inset: 0; flex-direction: column; justify-content: center; gap: 0;
-    background: var(--noir); color: #fff; padding: 90px 30px 40px; overflow-y: auto;
-    clip-path: circle(0 at calc(100% - 44px) 44px); transition: clip-path .7s var(--ease);
+    position: fixed; inset: 0; height: 100vh; height: 100dvh; flex-direction: column; justify-content: flex-start; gap: 0;
+    background: var(--noir); color: #fff; padding: 96px 24px 40px; overflow-y: auto; overscroll-behavior: contain;
+    clip-path: circle(0 at calc(100% - 44px) 44px); visibility: hidden;
+    transition: clip-path .7s var(--ease), visibility 0s linear .7s;
   }
-  .nav-open .menu { clip-path: circle(150% at calc(100% - 44px) 44px); }
+  .menu > li:first-child { margin-top: auto; }
+  .menu > li:last-child { margin-bottom: auto; }
+  .nav-open .menu { clip-path: circle(150% at calc(100% - 44px) 44px); visibility: visible; transition: clip-path .7s var(--ease), visibility 0s; }
   .nav-open .site-header { color: #fff; }
+  .nav-open .site-header::before { opacity: 0; }
   .menu a { font: 500 1.9rem/1.2 var(--display); letter-spacing: 0; text-transform: none; text-align: center; padding: .3em; }
   .menu .sub { position: static; opacity: 1; visibility: visible; transform: none; background: none; color: rgba(255, 255, 255, .7); box-shadow: none; display: flex; flex-wrap: wrap; justify-content: center; padding: 0 0 10px; }
   .menu .sub a { font: 600 .74rem/1 var(--sans); letter-spacing: .14em; text-transform: uppercase; padding: .7em .8em; }

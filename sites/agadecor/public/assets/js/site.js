@@ -12,14 +12,16 @@
   onScrollHeader();
   window.addEventListener("scroll", onScrollHeader, { passive: true });
   if (burger) {
-    burger.addEventListener("click", function () {
-      var open = d.body.classList.toggle("nav-open");
+    var setNav = function (open) {
+      d.body.classList.toggle("nav-open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.setAttribute("aria-label", open ? "Close menu" : "Menu");
       d.body.style.overflow = open ? "hidden" : "";
-    });
-    d.querySelectorAll(".menu a").forEach(function (a) {
-      a.addEventListener("click", function () { d.body.classList.remove("nav-open"); d.body.style.overflow = ""; burger.setAttribute("aria-expanded", "false"); });
-    });
+    };
+    burger.addEventListener("click", function () { setNav(!d.body.classList.contains("nav-open")); });
+    d.querySelectorAll(".menu a").forEach(function (a) { a.addEventListener("click", function () { setNav(false); }); });
+    d.addEventListener("keydown", function (e) { if (e.key === "Escape" && d.body.classList.contains("nav-open")) { setNav(false); burger.focus(); } });
+    window.addEventListener("resize", function () { if (window.innerWidth > 980) setNav(false); });
   }
 
   /* Hero headline: split words for staggered rise */
