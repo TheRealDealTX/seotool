@@ -1,0 +1,4 @@
+# Ignored by the Hostinger Agency platform (see README); kept for portability to Apache hosts.
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+Options -Indexes
