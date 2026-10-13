@@ -31,8 +31,8 @@ foreach (["$data/brands.json", "$data/brands-extra.json", "$data/brands-extra2.j
     if (is_file($bf)) foreach (load_json($bf) as $b) { $brands[$b['path']] = $b; }
 }
 $guides = [];
-if (is_file("$data/guides.json")) {
-    foreach (load_json("$data/guides.json") as $g) { $guides[$g['path']] = $g; }
+foreach (glob("$data/guides*.json") as $f) {
+    foreach (load_json($f) as $g) { $guides[$g['path']] = $g; }
 }
 $plan = load_json("$root/seo-data/build-plan.json");
 

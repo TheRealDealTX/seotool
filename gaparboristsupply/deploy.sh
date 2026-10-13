@@ -29,6 +29,6 @@ while IFS= read -r f; do
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . -type f \( -path './data/products/*' -o -path './data/categories/*' \
-          -o -name 'brands.json' -o -name 'guides.json' \) -prune -o -type f -print | sort)
+          -o -name 'brands*.json' -o -name 'guides*.json' \) -prune -o -type f -print | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]

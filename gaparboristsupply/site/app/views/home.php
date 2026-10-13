@@ -1,8 +1,8 @@
 <?php
 defined('GAP') || exit;
 $meta = [
-    'title' => 'Arborist Gear & Tree Climbing Supply Store',
-    'desc' => 'Arborist gear for climbers and crews: saddles, rope, rigging, Silky saws, Husqvarna chainsaws and safety gear, with buying guides and free tree-work tools.',
+    'title' => 'Arborist Supplies & Tree Climbing Gear Store',
+    'desc' => 'Arborist supplies for climbers and crews: saddles, rope, rigging, Silky saws, Husqvarna chainsaws and safety gear, with buying guides and free tree-work tools.',
     'canonical' => '/',
     'body_class' => 'is-home',
 ];
