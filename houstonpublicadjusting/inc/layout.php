@@ -135,6 +135,15 @@ function page_start(array $p): void {
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-58XW341WNJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-58XW341WNJ');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($p['title']) ?></title>
 <meta name="description" content="<?= e($p['desc']) ?>">
@@ -161,9 +170,14 @@ function page_start(array $p): void {
 <meta name="twitter:description" content="<?= e($p['desc']) ?>">
 <meta name="twitter:image" content="<?= e($image) ?>">
 <meta name="theme-color" content="#13202d">
-<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Houston PA">
+<meta name="application-name" content="Houston Public Adjusters">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="<?= asset('/assets/css/site.css') ?>">
