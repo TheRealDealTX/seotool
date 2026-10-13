@@ -330,3 +330,6 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 .copy .ver-credit { text-align: left; margin: 0 0 6px; }
 .copyright-page .ver-credit { text-align: left; font-size: .85rem; }
 .v-anchor { display: inline; }
+.steps { padding-left: 1.2em; margin: 8px 0 14px; color: var(--muted); }
+.steps li { margin-bottom: 6px; }
+.steps strong { color: var(--text); }

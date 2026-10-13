@@ -138,7 +138,9 @@
       const doc = new DOMParser().parseFromString(html, 'text/html');
       const main = doc.getElementById('main');
       if (!main) throw new Error('no main');
-      const finalUrl = new URL(res.url || u.href);
+      // only adopt the response URL for real redirects: offline, the service worker
+      // answers with the cached /offline/ shell and we must stay on the requested page
+      const finalUrl = new URL(res.redirected && res.url ? res.url : u.href);
       finalUrl.hash = u.hash;
       $('#main').replaceWith(main);
       document.title = doc.title;
@@ -803,38 +805,102 @@
     btn.disabled = true;
     let n = 0;
     try {
-      for (const b of list) {
-        const url = `/data/${ver}/${b.slug}.json`;
-        const res = await fetch(url, { cache: 'no-cache' });
-        if (res.ok) await cache.put(url, res);
-        btn.textContent = `Downloading… ${Math.round(++n / list.length * 100)}%`;
+      // also fetch the version that fills this one's gaps (AB -> Ang Pulong sa Dios)
+      const vers = await getVers();
+      const want = [ver, ...(vers[ver].fallback || []).slice(0, 1)];
+      const urls = want.flatMap(k => list.map(b => `/data/${k}/${b.slug}.json`));
+      for (const url of urls) {
+        if (!(await cache.match(url))) {
+          const res = await fetch(url, { cache: 'no-cache' });
+          if (!res.ok) throw new Error(res.status);
+          await cache.put(url, res);
+        }
+        btn.textContent = `Downloading… ${Math.round(++n / urls.length * 100)}%`;
       }
       for (const u of ['/data/books.json', '/data/versions.json', '/data/votd.json', '/offline/']) await cache.add(u).catch(() => {});
       const done = store.get('offline', {}); done[ver] = Date.now(); store.set('offline', done);
       btn.innerHTML = icon('check') + ' Downloaded';
-      toast('Saved for offline reading');
+      toast('Saved — you can now read it without a connection');
       const st = $('[data-offline-status]'); if (st) initApp($('#main'));
     } catch (e) {
       btn.textContent = label; btn.disabled = false; toast('Download failed — check your connection');
     }
   }
   // offline shell: render a chapter from downloaded data when the page itself isn't cached
+  // Offline shell: the service worker serves the cached /offline/ page for any page
+  // that isn't saved on the device; render the requested route from downloaded data.
   async function initOffline(main) {
-    const m = location.pathname.match(/^\/([a-z]+)\/([a-z0-9]+)\/(\d+)\/(?:(\d+)\/)?$/);
-    if (!m) return;
-    const [, ver, book, ch, v] = m;
-    try {
-      const [d, { by }, vers] = await Promise.all([getChapter(ver, book, ch), getBooks(), getVers()]);
+    let books, vers;
+    try { [books, vers] = await Promise.all([getBooks(), getVers()]); } catch (e) { return; }
+    const { list, by } = books;
+    const path = location.pathname;
+    const done = store.get('offline', {});
+    const have = Object.keys(vers).filter(k => done[k]);
+    const versionLinks = (mk) => $$('.topbar .ver-switch a').forEach(a => { a.setAttribute('href', mk(a.dataset.ver)); });
+    const notDownloaded = ver => `<p class="notice">${esc(vers[ver].label)} isn’t downloaded on this device. ${have.length
+      ? 'Downloaded: ' + have.map(k => `<a href="/${k}/">${esc(vers[k].label)}</a>`).join(', ') + '.'
+      : 'Connect to the internet and download a version on the <a href="/app/">Get the app</a> page.'}</p>`;
+    let m;
+
+    // chapter or verse
+    if ((m = path.match(/^\/([a-z]+)\/([a-z0-9]+)\/(\d+)\/(?:(\d+)\/)?$/)) && vers[m[1]] && by[m[2]]) {
+      const [, ver, book, ch, v] = m;
       const b = by[book];
+      main.dataset.switch = '1';
+      versionLinks(k => urlFor(k, book, ch));
+      markVersion(ver);
+      let d;
+      try { d = await getChapter(ver, book, ch); } catch (e) {
+        main.innerHTML = `<div class="wrap narrow"><h1>${esc(bookName(b, vers, ver))} ${ch}</h1>${notDownloaded(ver)}</div>`; return;
+      }
+      const idx = list.indexOf(b);
+      const prev = +ch > 1 ? [book, +ch - 1] : idx > 0 ? [list[idx - 1].slug, list[idx - 1].verses.length] : null;
+      const next = +ch < b.verses.length ? [book, +ch + 1] : idx < list.length - 1 ? [list[idx + 1].slug, 1] : null;
+      const lbl = r => `${esc(bookName(by[r[0]], vers, ver))} ${r[1]}`;
       main.dataset.page = 'chapter';
-      main.innerHTML = `<div class="reader-bar"><button type="button" class="picker-btn" data-action="picker" data-book="${book}" data-ch="${ch}"><span>${esc(bookName(b, vers, ver))} ${ch}</span>${icon('down')}</button></div>
+      main.innerHTML = `<div class="reader-bar">${prev ? `<a class="icon-btn" rel="prev" href="${urlFor(ver, prev[0], prev[1])}" aria-label="Previous chapter">${icon('left')}</a>` : '<span class="icon-btn"></span>'}
+        <button type="button" class="picker-btn" data-action="picker" data-book="${book}" data-ch="${ch}"><span>${esc(bookName(b, vers, ver))} ${ch}</span>${icon('down')}</button>
+        ${next ? `<a class="icon-btn" rel="next" href="${urlFor(ver, next[0], next[1])}" aria-label="Next chapter">${icon('right')}</a>` : '<span class="icon-btn"></span>'}</div>
         <div class="wrap reader-wrap"><article class="chapter" lang="${vers[ver].lang}" data-ver="${ver}" data-book="${book}" data-ch="${ch}">
-        <h1><span class="book-title">${esc(bookName(b, vers, ver))}</span> <span class="ch-num">${ch}</span></h1><p class="notice">Offline copy</p>
+        <h1><span class="book-title">${esc(bookName(b, vers, ver))}</span> <span class="ch-num">${ch}</span></h1>
         <div class="verses">${d.rows.map(r => `<span class="v${r[2] === ver ? '' : ' fb'}" id="v${r[0]}" data-v="${r[0]}"${r[1] > r[0] ? ` data-to="${r[1]}"` : ''}>${Array.from({ length: r[1] - r[0] }, (_, j) => `<span class="v-anchor" id="v${r[0] + j + 1}"></span>`).join('')}<a class="vn" href="${urlFor(ver, book, ch, r[0])}">${rangeLabel(r)}</a> ${verseHtml(r[3], r[2])}${r[2] === ver ? '' : ` <span class="fb-tag" data-src="${r[2]}">${esc(vers[r[2]].short)}</span>`}</span> `).join('')}</div></article>
-        <nav class="chapter-foot">${+ch > 1 ? `<a class="btn ghost" href="${urlFor(ver, book, +ch - 1)}">${icon('left')} Previous</a>` : '<span></span>'}${+ch < b.verses.length ? `<a class="btn" href="${urlFor(ver, book, +ch + 1)}">Next ${icon('right')}</a>` : '<span></span>'}</nav></div>`;
+        <nav class="chapter-foot">${prev ? `<a class="btn ghost" href="${urlFor(ver, prev[0], prev[1])}">${icon('left')} ${lbl(prev)}</a>` : '<span></span>'}${next ? `<a class="btn" href="${urlFor(ver, next[0], next[1])}">${lbl(next)} ${icon('right')}</a>` : '<span></span>'}</nav>
+        <p class="ver-credit">Offline copy · ${esc(vers[ver].fullTitle || vers[ver].label)}</p></div>`;
+      document.title = `${bookName(b, vers, ver)} ${ch} | Holy Bible Words`;
       initChapter(main);
       if (v) scrollToHash('#v' + v);
-    } catch (e) { /* stay on the offline message */ }
+      return;
+    }
+
+    // book: chapter grid
+    if ((m = path.match(/^\/([a-z]+)\/([a-z0-9]+)\/$/)) && vers[m[1]] && by[m[2]]) {
+      const [, ver, book] = m; const b = by[book];
+      main.dataset.switch = '1'; versionLinks(k => urlFor(k, book)); markVersion(ver);
+      main.innerHTML = `<div class="wrap"><header class="page-head"><h1>${esc(bookName(b, vers, ver))}</h1><p class="muted">${esc(vers[ver].label)} · offline</p></header>
+        ${done[ver] ? '' : notDownloaded(ver)}
+        <ul class="num-grid">${b.verses.map((_, i) => `<li><a href="${urlFor(ver, book, i + 1)}">${i + 1}</a></li>`).join('')}</ul></div>`;
+      return;
+    }
+
+    // version: books grid
+    if ((m = path.match(/^\/([a-z]+)\/$/)) && vers[m[1]]) {
+      const ver = m[1];
+      main.dataset.switch = '1'; versionLinks(k => `/${k}/`); markVersion(ver);
+      const grid = t => `<ul class="book-grid">${list.filter(b => b.t === t).map(b => `<li><a href="${urlFor(ver, b.slug)}">${esc(bookName(b, vers, ver))}<small>${b.verses.length}</small></a></li>`).join('')}</ul>`;
+      main.innerHTML = `<div class="wrap"><header class="page-head"><h1>${esc(vers[ver].label)}</h1><p class="muted">Offline</p></header>
+        ${done[ver] ? '' : notDownloaded(ver)}
+        <section class="books-section"><h2>Old Testament</h2>${grid('ot')}</section><section class="books-section"><h2>New Testament</h2>${grid('nt')}</section></div>`;
+      return;
+    }
+
+    // anything else (home, search, …): an offline start page
+    const last = store.get('last', null);
+    const ver = have.includes(prefVer()) ? prefVer() : have[0] || prefVer();
+    main.innerHTML = `<div class="wrap narrow"><header class="page-head"><h1>You’re offline</h1>
+      <p class="muted">${have.length ? 'You can keep reading the versions saved on this device.' : 'No version is downloaded on this device yet.'}</p></header>
+      ${last && by[last.book] ? `<section class="continue"><h2>Continue reading</h2><a class="continue-link" href="${urlFor(have.includes(last.ver) ? last.ver : ver, last.book, last.ch)}${last.v > 1 ? '#v' + last.v : ''}">${esc(bookName(by[last.book], vers, have.includes(last.ver) ? last.ver : ver))} ${last.ch}</a></section>` : ''}
+      ${have.length ? `<section><h2>Saved on this device</h2><div class="ver-cards">${have.map(k => `<a class="ver-card" href="/${k}/"><strong>${esc(vers[k].label)}</strong><span>Downloaded · read offline</span>${icon('right')}</a>`).join('')}</div></section>`
+        : '<p class="notice">Connect to the internet, open the <a href="/app/">Get the app</a> page and tap a version to download it.</p>'}</div>`;
   }
 
   // ---------- boot ----------

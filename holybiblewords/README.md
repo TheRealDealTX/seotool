@@ -101,16 +101,17 @@ Hostinger web hosting, account `u401386392`, document root
 header of that file for the credentials), then clear the cache. Bump
 `ASSET_VER` / the service-worker cache names when CSS or JS changes.
 
-**What's still on the server.** The WordPress install was left in place untouched:
-`wp-admin/`, `wp-includes/`, `wp-config.php`, the database. Only its `index.php` and
-`.htaccess` were replaced, so WordPress no longer serves any page, but the files
-are a full rollback. Copies of the two replaced files are in `backup/wordpress/`
-and on the server as `.wordpress-index.php.bak` / `.wordpress-htaccess.bak`.
-`wp-login.php` is still reachable, as it was before. Once you're happy with the new
-site, take a full hPanel backup and delete the WordPress files and database.
+**WordPress was removed** on 2026-10-13. Its files were deleted from
+`public_html` (the content had been exported to `sources/` first). Its database
+tables were **not** dropped: this hosting account runs about 39 sites on 7
+shared databases, so they need care. If you want those few MB back, find the
+table prefix in phpMyAdmin and drop only that prefix's tables.
 
-**Rollback:** upload `backup/wordpress/index.php` as `index.php` and
-`backup/wordpress/htaccess` as `.htaccess`, then clear the cache.
+**Offline / home-screen app:** iOS keeps the Home Screen app's storage separate
+from Safari's, so downloads must be made from inside the installed app (the
+`/app/` page says so). When offline, the service worker answers any page that
+isn't cached with the `/offline/` shell, and `initOffline()` in `app.js` renders
+the requested home/version/book/chapter from the downloaded `/data/` files.
 
 **Search Console:** submit `https://holybiblewords.com/sitemap_index.xml`. The
 verification file `googlecccfbf2f7e9e5ae4.html` is still in place.

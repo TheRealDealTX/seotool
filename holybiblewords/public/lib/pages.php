@@ -448,6 +448,10 @@ function page_app(): array {
         . '<h2>Desktop</h2><p>In Chrome or Edge, click the install icon at the right of the address bar.</p>'
         . '</div></div>'
         . '<section class="offline-box"><h2>Read offline</h2><p>Download a whole version to this device so you can read without a connection.</p>'
+        . '<ol class="steps"><li><strong>On iPhone and iPad, open the app from your Home Screen first</strong> and download from inside it. '
+        . 'Safari and the Home Screen app keep separate storage, so a download made in Safari isn’t available in the app.</li>'
+        . '<li>Tap a version below and wait until it says <strong>Downloaded</strong> (a few seconds on Wi-Fi).</li>'
+        . '<li>That’s it. With no connection, open the app as usual: it shows your downloaded versions and you can read any book and chapter.</li></ol>'
         . '<div class="offline-actions">'
         . implode('', array_map(fn($k) => '<button class="btn ghost" type="button" data-action="offline" data-ver="' . $k . '">' . icon('download') . ' ' . e(versions()[$k]['label']) . '</button>', array_keys(versions())))
         . '</div><p class="muted" data-offline-status></p></section></div>';
