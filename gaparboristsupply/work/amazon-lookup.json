@@ -3983,6 +3983,36 @@
   "note": "Husqvarna OEM worm gear for 550XP Mark II",
   "title": "Husqvarna OEM 545 Mark II, 550 XP Mark II Worm Gear 0.325\""
  },
+ "/jobsite/power-equipment/parts/husqvarna-worm-wheel-for-562xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husqvarna worm wheel 577601101 (B00TD4R4WG) found but fit for 562XP not confirmed",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/inside-felling-dog-for-572xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husqvarna felling dog 503719701 (B013TD0R2A) lists 570/575/372, not 572XP",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/muffler-for-husqvarna-562xp-chainsaw/": {
+  "asin": "B015T23MNK",
+  "match": "exact",
+  "note": "OEM muffler lists 562XP",
+  "title": "Husqvarna OEM Chainsaw Muffler Assembly 581914801 Fits 562XP 560XP 555"
+ },
+ "/jobsite/power-equipment/parts/muffler-gasket-for-husqvarna-372xp-x-torque-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket gasket/kit listings; no Husqvarna-branded",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/needle-bearing-for-3-8-gauge-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only clutch drum kits, no single bearing listing",
+  "title": ""
+ },
  "/jobsite/power-equipment/parts/ngk-bpmr7a-spark-plug/": {
   "asin": "B000BYNN3G",
   "match": "exact",
@@ -3994,6 +4024,12 @@
   "match": "variant",
   "note": "Same plug, 4-pack",
   "title": "NGK (3365) CMR6H Spark Plug - Pack of 4"
+ },
+ "/jobsite/power-equipment/parts/oil-pump-assembly-for-395xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket-branded 395XP oil pumps",
+  "title": ""
  },
  "/jobsite/power-equipment/parts/oil-pump-assembly-for-husqvarna-550xp-mark-ii-chainsaw/": {
   "asin": null,
@@ -4007,11 +4043,65 @@
   "note": "Felling dog results did not confirm 572XP fitment; no safe match.",
   "title": ""
  },
+ "/jobsite/power-equipment/parts/recoil-starter-handle-for-500-series-chainsaws/": {
+  "asin": "B00TD54PFE",
+  "match": "variant",
+  "note": "Genuine Husqvarna starter handle; fits 50/51/55, 372, 395 etc; 500 series scope uncertain",
+  "title": "Husqvarna Genuine 503543901 Starter Handle OEM"
+ },
  "/jobsite/power-equipment/parts/replacement-fuel-filter/": {
   "asin": "B008TSZWBC",
   "match": "similar",
   "note": "Generic in-tank filter",
   "title": "Oregon 07-200 In-Tank Fuel Filter Chain Saw Replacement Part"
+ },
+ "/jobsite/power-equipment/parts/replacement-screw-for-husqvarna-395xp-muffler/": {
+  "asin": "B013TE0M9M",
+  "match": "exact",
+  "note": "OEM 395XP muffler bolt number 503218901",
+  "title": "Husqvarna Part Number 503218901 Bolt"
+ },
+ "/jobsite/power-equipment/parts/replacement-sprocket-nose-for-husqvarna-light-bars/": {
+  "asin": null,
+  "match": "none",
+  "note": "No specific Husqvarna sprocket nose part found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/start-stop-switch-for-husqvarna-372xp/": {
+  "asin": "B00455TL2E",
+  "match": "exact",
+  "note": "Genuine switch lists 372XP",
+  "title": "Husqvarna Genuine 503718201 Start Stop Switch for 365 372XP 390XP 345RX 345FXT"
+ },
+ "/jobsite/power-equipment/parts/starter-cord-for-husqvarna-395xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket recoil assemblies",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/starter-pawl-and-spring-kit-for-husqvarna-550xp-mark-ii-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna pawl+spring kit for 550XP Mk II found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/starter-pawl-for-husqvarna-chainsaw/": {
+  "asin": "B00TD3SG4W",
+  "match": "variant",
+  "note": "Genuine Husqvarna starter pawl; model fit not confirmed",
+  "title": "Husqvarna 537245601 Starter Pawl OEM"
+ },
+ "/jobsite/stump-grinding/1100-series-compatible-stump-grinder-teeth/": {
+  "asin": "B0DTJL391X",
+  "match": "similar",
+  "note": "Carbide 1100 series teeth, 12 pack",
+  "title": "12 Pack Carbide Stump Grinder Teeth '1100 Series' Genuine Greenteeth (Green, 3-Sided, 1100-G)"
+ },
+ "/jobsite/stump-grinding/700-series-compatible-stump-grinder-teeth/": {
+  "asin": "B0DTJLQGXQ",
+  "match": "similar",
+  "note": "Carbide 700 series teeth, 12 pack",
+  "title": "12 Pack Carbide Stump Grinder Teeth '700 Series' Genuine Greenteeth (Green, 3-Sided, 700TH-G)"
  },
  "/jobsite/stump-grinding/700-series-greenteeth-pocket-straight/": {
   "asin": "B0D9BSQD64",
@@ -4019,10 +4109,28 @@
   "note": "6-pack; item is single pocket",
   "title": "Greenteeth 700 Series LoPro Pocket 6 Pack (Straight)"
  },
+ "/jobsite/stump-grinding/900-series-green-teeth-spacer/": {
+  "asin": null,
+  "match": "none",
+  "note": "Spacer not sold separately on Amazon; only included with teeth kits",
+  "title": ""
+ },
  "/jobsite/stump-grinding/green-teeth-allen-head/": {
   "asin": null,
   "match": "none",
   "note": "No Allen head bolt listing found",
+  "title": ""
+ },
+ "/jobsite/stump-grinding/lo-pro-stump-grinder-bolt/": {
+  "asin": "B07FB1RFB6",
+  "match": "similar",
+  "note": "LoPro tooth/pocket bolt, 1-3/4 in, 10 pack",
+  "title": "LP-134 Greenteeth LoPro Bolt 10 Pack (1-3/4\")"
+ },
+ "/jobsite/stump-grinding/pocket-for-standard-stump-grinder-teeth/": {
+  "asin": null,
+  "match": "none",
+  "note": "'Standard' pocket too ambiguous",
   "title": ""
  },
  "/jobsite/stump-grinding/standard-stump-grinder-teeth/": {
@@ -4030,6 +4138,12 @@
   "match": "similar",
   "note": "Generic carbide bolt-on teeth, pack",
   "title": "10 PACK 2-7/8in Lx3/4in W Stump Grinder Teeth with 5/8in Nuts Carbide Tipped"
+ },
+ "/jobsite/stump-grinding/treehog-mesh-stump-grinding-guard-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "No TreeHog listing found",
+  "title": ""
  },
  "/landscaper-tools/corona-22-steel-leaf-rake-with-48-wood-handle/": {
   "asin": null,
@@ -4043,11 +4157,83 @@
   "note": "",
   "title": "Husqvarna 4-Gallon Battery Backpack Sprayer 18V"
  },
+ "/landscaper-tools/husqvarna-4-gallon-backpack-sprayer/": {
+  "asin": "B07P11RRXQ",
+  "match": "exact",
+  "note": "Manual pump 596765901",
+  "title": "Husqvarna 4 Gallon Backpack Sprayer, Lawn Sprayer, Garden Sprayer, 150 PSI"
+ },
+ "/landscaper-tools/husqvarna-48oz-handheld-sprayer/": {
+  "asin": "B07NXW832V",
+  "match": "exact",
+  "note": "596766102",
+  "title": "Husqvarna 48 oz. Handheld Sprayer"
+ },
+ "/landscaper-tools/husqvarna-blue-ehs-metal-blade-14/": {
+  "asin": "B08K2FYMW8",
+  "match": "variant",
+  "note": "14 in Blue EHS metal blade; alt 20mm arbor B08K367MTB",
+  "title": "HUSQVARNA 14 1/8 1 Blue EHS Metal (542751496)"
+ },
+ "/landscaper-tools/husqvarna-felling-bar-with-cant-hook/": {
+  "asin": "B0DJD1VVRW",
+  "match": "exact",
+  "note": "Felling lever with cant hook",
+  "title": "Husqvarna 31 In Felling Lever With Cant Hook"
+ },
  "/landscaper-tools/husqvarna-trim-force-square-trimmer-line/": {
   "asin": "B09RQ6FBSS",
   "match": "exact",
   "note": "Square .095 3lb",
   "title": "Husqvarna Genuine 529337503 Trim Force Square Trimmer Line 3lb .095"
+ },
+ "/landscaper-tools/jameson-non-conductive-soil-probe-48-inch/": {
+  "asin": null,
+  "match": "none",
+  "note": "Candidate B07Q2PH1KK title does not name Jameson; unconfirmed",
+  "title": ""
+ },
+ "/landscaper-tools/jameson-rams-horn-nylon-twin-prong-vine-puller-and-lifter/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/lanyard-kits/camp-gyro-lanyard-single/": {
+  "asin": null,
+  "match": "none",
+  "note": "No single CAMP Gyro lanyard listing",
+  "title": ""
+ },
+ "/lanyard-kits/camp-gyro-lanyard-twin/": {
+  "asin": null,
+  "match": "none",
+  "note": "No twin CAMP Gyro arborist lanyard listing",
+  "title": ""
+ },
+ "/lanyard-kits/dmm-nomad-lanyard-zuu7/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/lanyard-kits/dmm-nomad-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/log-handling-tools/logrite-bts-hauler-with-wide-tires/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/lowering-devices/cmi-lcd-lowering-control-device/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
  },
  "/lowering-devices/jail-brake-lowering-device/": {
   "asin": null,
@@ -4061,11 +4247,41 @@
   "note": "May be unavailable",
   "title": "DMM Hitch Climber Pulley - Triple Attachment"
  },
+ "/micro-pulleys/dmm-pinto-rig-pulley-v2/": {
+  "asin": "B0DFXLRX5P",
+  "match": "variant",
+  "note": "Pinto Rig 2 (V2) in purple; color may differ",
+  "title": "DMM Pinto Rig 2"
+ },
+ "/micro-pulleys/r-easy-climbing-lanyard-adjusting-pulley-pre-order-item/": {
+  "asin": null,
+  "match": "none",
+  "note": "No R-Easy listing found",
+  "title": ""
+ },
+ "/other-gear/nylon-loop-runners/": {
+  "asin": "B08WPYVSBF",
+  "match": "similar",
+  "note": "Arborist 1-in nylon sewn loop runners",
+  "title": "RNA Rock-N-Arbor Nylon Loop Runners - 7000 lbf Slings, 1-Inch Tubular Webbing"
+ },
  "/other-gear/soft-canopy-anchor/": {
   "asin": "B00S129KJQ",
   "match": "similar",
   "note": "Retrievable textile canopy anchor",
   "title": "CAMP Herbol Cambium Saver Arborist Retrievable Anchor 120cm"
+ },
+ "/parts-and-accessories/corona-pole-clip-spring/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party compatible springs",
+  "title": ""
+ },
+ "/parts-and-accessories/husqvarna-chainsaw-maintenance-kit-fits-135-435-and-440/": {
+  "asin": "B08NLY198L",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 599333401 135/435/440 Chainsaw Maintenance Kit"
  },
  "/parts-and-accessories/husqvarna-chainsaw-maintenance-kit-for-445-and-450/": {
   "asin": "B08NLRJYD1",
@@ -4085,10 +4301,70 @@
   "note": "Same plug, 6-pack",
   "title": "NGK 6 Pack of Replacement Spark Plugs # CMR7H-6PK"
  },
+ "/parts/husqvarna-clutch-cover-for-t540ixp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540i XP clutch cover found",
+  "title": ""
+ },
+ "/parts/husqvarna-replacement-hand-guard-for-562xp/": {
+  "asin": "B00TD5BA2A",
+  "match": "exact",
+  "note": "",
+  "title": "Genuine OEM Husqvarna Hand Guard for Chainsaws / 556, 562XP, 562XP/XPG / 525250602"
+ },
+ "/parts/husqvarna-starter-pulley-assembly-for-562xp-mark-ii/": {
+  "asin": "B00TD558I2",
+  "match": "variant",
+  "note": "Lists 562XP; Mark II fit not confirmed",
+  "title": "Husqvarna Starter Pulley Assy Part # 505158101"
+ },
  "/parts/husqvarna-vari-cut-s45-diamond-wheel/": {
   "asin": null,
   "match": "none",
   "note": "No S45 listing found",
+  "title": ""
+ },
+ "/parts/spring-cassette-assembly-for-husqvarna-chainsaw-recoil/": {
+  "asin": "B00TD5X0E6",
+  "match": "variant",
+  "note": "Husqvarna spring cassette assy; model-specific",
+  "title": "Husqvarna Rp Spring Cassette Addy Part # 505157902"
+ },
+ "/parts/westcoast-clutch-cover-for-husqvarna-chainsaws/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
+  "title": ""
+ },
+ "/parts/westcoast-saw-3-point-felling-dogs-for-husqvarna-saws/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
+  "title": ""
+ },
+ "/parts/westcoast-saw-3-point-felling-dogs-for-stihl-chainsaws/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
+  "title": ""
+ },
+ "/parts/westcoast-saw-muffler-for-echo-cs-2511t/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
+  "title": ""
+ },
+ "/parts/westcoast-saw-muffler-for-stihl-ms201t/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
+  "title": ""
+ },
+ "/parts/westcoast-saw-muffler-for-t540-xp-mark-iii/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Westcoast Saw-branded listing found",
   "title": ""
  },
  "/plant-care/cabling-and-bracing/bracing/bracing-rods/": {
@@ -4109,11 +4385,77 @@
   "note": "7-wire galvanized strand; EHS grade unconfirmed, large spool",
   "title": "1/4in Galvanized Steel Strand Cable Guy Wire Rope 1x7 (5000 Feet)"
  },
+ "/plant-care/cabling-and-bracing/cabling-accessories/11-16-ship-auger-bit/": {
+  "asin": "B0041FJ0LK",
+  "match": "similar",
+  "note": "11/16 ship auger, 24 in",
+  "title": "Greenlee 70PT-11/16 Auger Bit, 11/16-Inch X 24-Inch"
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/13-16-ship-auger-bit/": {
+  "asin": "B00004RGZF",
+  "match": "similar",
+  "note": "13/16 ship auger, 17 in",
+  "title": "DEWALT Drill Bit, Ship Auger, 13/16 Inch x 17 Inch (DW1684)"
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/5-16-x-24-ship-auger-bit/": {
+  "asin": null,
+  "match": "none",
+  "note": "No true 5/16 x 24 ship auger brand listing",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/5-8-ship-auger-bit/": {
+  "asin": "B00004RGZC",
+  "match": "similar",
+  "note": "5/8 ship auger, 17 in",
+  "title": "DEWALT Drill Bit, Ship Auger, 5/8 Inch x 17 Inch (DW1681)"
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/havens-grips/": {
+  "asin": "B0002RI50S",
+  "match": "variant",
+  "note": "Sized for typical tree cable; other sizes exist",
+  "title": "Klein Tools 1604-20 Haven's Grip for Messenger and Guy Strand Cable, 0.125-0.50 in"
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/hit-cable-cutter/": {
+  "asin": null,
+  "match": "none",
+  "note": "HIT brand cutters exist but model not determinable",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/preformed-line-products-tree-cabling-lag-spinner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only unbranded Lag Spinner (B00EZD4X92)",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-accessories/weaver-nylon-basket-for-cable/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching Weaver basket",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/1-2-turnbuckle/": {
+  "asin": "B00LGYU93C",
+  "match": "similar",
+  "note": "1/2 in galvanized turnbuckle",
+  "title": "US Cargo Control Jaw and Jaw Turnbuckle, 1/2\" x 6\", Hot-Dipped Galvanized"
+ },
  "/plant-care/cabling-and-bracing/cabling-hardware/3-8-eye-bolt/": {
   "asin": "B000P3ZSK4",
   "match": "similar",
   "note": "3/8 eye bolt with nut",
   "title": "Koch 105080 Forged Eye Bolt with Nut, 3/8 by 6, Galvanized"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/5-8-eye-bolt/": {
+  "asin": "B008XN8FPI",
+  "match": "similar",
+  "note": "5/8 in eye bolt w/ nut, 10 in",
+  "title": "5/8\"-11 X 10\" Hot Dipped Galvanized Forged Eye Bolt with Hex Nut"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/ammon-eye-nut/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match",
+  "title": ""
  },
  "/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/": {
   "asin": "B07KNJ494X",
@@ -4121,17 +4463,53 @@
   "note": "Galvanized closed eye lag screw",
   "title": "Galvanized Forged Lag Screw Eye Bolts 1/2in x 3-1/4in (5 pack)"
  },
+ "/plant-care/cabling-and-bracing/cabling-hardware/galvanized-flat-washer/": {
+  "asin": "B000CZ4FZO",
+  "match": "similar",
+  "note": "5/8 in galvanized flat washer",
+  "title": "Hillman 25 Pcs Galvanized Flat Washers (5/8\")"
+ },
  "/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/": {
   "asin": "B00340CDA8",
   "match": "similar",
   "note": "J lag hook for cabling; zinc plated not galvanized",
   "title": "Lag Screw Hook, Zinc Plated, 0.5in x 6in"
  },
+ "/plant-care/cabling-and-bracing/cabling-hardware/preformed-line-products-dead-end-cable-grips/": {
+  "asin": "B00N9B6HD6",
+  "match": "variant",
+  "note": "PLP Tree-Grip 1/4 in; other sizes exist",
+  "title": "PLP, 1/4\" TREE-GRIP Dead-end, TG-1251"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/rig-guy-beveled-washer/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Rig Guy listing",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/rig-guy-finishing-caps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Rig Guy listing",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/rig-guy-wire-hub-stop/": {
+  "asin": null,
+  "match": "none",
+  "note": "Candidate B00USMO2RW AM Leonard RG201 wire stop; not named Rig Guy/hub stop",
+  "title": ""
+ },
  "/plant-care/plant-health-care/lac-balsam-tree-wound-treatment/": {
   "asin": "B005117K6K",
   "match": "exact",
   "note": "Lac Balsam tube",
   "title": "Compo Artificial Lac Balsam"
+ },
+ "/plant-care/planting/duck-bill-earth-anchors-drive-rods-large-rod/": {
+  "asin": "B005TI96N0",
+  "match": "variant",
+  "note": "Large rod (88 anchors)",
+  "title": "Duckbill Earth Anchor Hand Drive Rod 3/4 Inch Diameter x 48 Inches Long"
  },
  "/plant-care/planting/tree-support-web-for-staking-trees-250/": {
   "asin": "B003YW50IS",
@@ -4151,10 +4529,46 @@
   "note": "Duckbill 40 series small; pack of 4 kit",
   "title": "Rittenhouse Duckbill Root Ball Anchor Kit - Small Earth Anchors - 40 (Pack of 4)"
  },
+ "/pruners-and-loppers/corona-bull-tree-pruner-head/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Corona Bull head found",
+  "title": ""
+ },
+ "/pruners-and-loppers/corona-bypass-pruner-1-capacity/": {
+  "asin": "B00004R9YQ",
+  "match": "variant",
+  "note": "Corona 1 in bypass; several models match",
+  "title": "Corona BP 3180D Forged Classic Bypass Pruner with 1\" Cutting Capacity"
+ },
+ "/prusik-loops/dmm-pinto-pulley-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only a SherrillTree-branded Pinto+prusik set; no DMM-titled set",
+  "title": ""
+ },
+ "/prusik-loops/sirius-8mm-loop-prusik-with-aluminum-ring/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sirius 8mm prusik with ring listing found",
+  "title": ""
+ },
+ "/prusik-loops/yale-bee-line-8mm-loop-prusik-with-aluminum-ring/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only eye-to-eye Bee-Line prusiks without ring",
+  "title": ""
+ },
  "/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/": {
   "asin": null,
   "match": "none",
   "note": "No Distel listing found",
+  "title": ""
+ },
+ "/replacement-gaffs-and-parts/edelrid-talon-replacement-cuff-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only separate Talon plastic cuff/strap parts; not confirmed as cuff system",
   "title": ""
  },
  "/rigging-kits/speed-line-kit-with-carabiners/": {
@@ -4163,11 +4577,59 @@
   "note": "Speedline kit; carabiner config unverified",
   "title": "CMI Speed Line Kit"
  },
+ "/rigging-kits/speed-line-kit-with-snap-hooks/": {
+  "asin": "B0D9SJ29GG",
+  "match": "similar",
+  "note": "Generic speedline kit with snap hooks",
+  "title": "ProClimb Arborist Speedline Kit - 7075 Aluminum Snaphook, 1\" Nylon Webbing, 29kN, 40\" Six Pack"
+ },
  "/rigging-pulleys/rock-exotica-downrigger/": {
   "asin": "B0GKQ4Y9TC",
   "match": "exact",
   "note": "",
   "title": "Rock Exotica DownRigger"
+ },
+ "/rigging-rope/1-2-husky-bull-rope-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husky line appears sold as AllGear Double Braid Arborist Bull Rope (e.g. B0BKLVGLL3) but title does not name Husky",
+  "title": ""
+ },
+ "/rigging-rope/3-4-husky-bull-rope-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husky not named in listing titles (AllGear B0BKLSDYVG candidate)",
+  "title": ""
+ },
+ "/rigging-rope/5-8-husky-bull-rope-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husky not named in listing titles (AllGear B0BKLSJ1JB candidate)",
+  "title": ""
+ },
+ "/rigging-rope/5-8-mammoth-rigging-line/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Mammoth listing found",
+  "title": ""
+ },
+ "/rigging-rope/sterling-3-4-kraken-rigging-line-x-200/": {
+  "asin": null,
+  "match": "none",
+  "note": "Kraken is a Notch product, not Sterling",
+  "title": ""
+ },
+ "/rigging-rope/teufelberger-bomber-line-1-2-x-150/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Teufelberger Bomber Line found",
+  "title": ""
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-1-2-rigging-block/": {
+  "asin": "B077SYXFPV",
+  "match": "variant",
+  "note": "CMI block rated for 1/2 in rope; exact model unconfirmed",
+  "title": "CMI Micro Arborist Block - RP162"
  },
  "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/": {
   "asin": null,
@@ -4175,11 +4637,65 @@
   "note": "CMI 5/8 pulley listing has stainless plates, steel block unconfirmed; not selected",
   "title": ""
  },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-rp145-arborist-block/": {
+  "asin": "B00D9FKGG6",
+  "match": "exact",
+  "note": "RP145 per listing description",
+  "title": "CMI Zinc-Plated Steel Arborist Block for 3/4-inch Rope"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/dmm-large-impact-block/": {
+  "asin": "B00S11WXGO",
+  "match": "exact",
+  "note": "",
+  "title": "DMM Large Impact Rigging Block"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-5-8-rigging-block-blue-with-orange-wheel/": {
+  "asin": "B00455R76Q",
+  "match": "variant",
+  "note": "ISC 5/8 aluminum block; color/wheel unconfirmed",
+  "title": "ISC Medium Cast Aluminum Arborist Rigging Block (5/8\" Rope) RP054A"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-5-8-small-rigging-pulley-red-with-orange-wheel/": {
+  "asin": "B07CZ11JKX",
+  "match": "exact",
+  "note": "",
+  "title": "ISC 2.2 ton (5/8\" line) Red Pulley Block (Orange Wheel)"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-large-rigging-pulley-grey-with-red-wheel-for-up-to-o25mm-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC large 25mm grey/red pulley found",
+  "title": ""
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-medium-rigging-pulley-for-up-to-o20mm-rope-150kn-blue-with-green-wheel/": {
+  "asin": "B09SFYYWLC",
+  "match": "variant",
+  "note": "Medium ISC block, 20mm rope; listing shows 300kN MBS, color unconfirmed",
+  "title": "ISC RP-255 200 Series Medium Rigging Block"
+ },
  "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/": {
   "asin": null,
   "match": "none",
   "note": "ISC small pulleys found are 1/2in rope; 5/8 model had no ASIN",
   "title": ""
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-red-with-grey-wheel-for-1-2-rope/": {
+  "asin": "B00455PSQC",
+  "match": "variant",
+  "note": "Small ISC 1/2 in pulley with grey sheave; frame color unconfirmed",
+  "title": "ISC Small 13mm Forged Impact Pulley Block"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-plates/dmm-bat-x-small-rigging-plate-orange/": {
+  "asin": "B00B5T2EEU",
+  "match": "exact",
+  "note": "",
+  "title": "DMM 62 x 62 x 8mm Bat Rigging Plate, X-Small, Orange"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-medium-rigging-plate/": {
+  "asin": "B000T29RDA",
+  "match": "exact",
+  "note": "Black version B00JWZJLS6 also exists",
+  "title": "Petzl, Paw M Rigging Plate"
  },
  "/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-small-rigging-plate/": {
   "asin": "B00JWZJO9C",
@@ -4187,17 +4703,53 @@
   "note": "Same brand/model/size",
   "title": "Petzl PAW Small Rigging Plate Black"
  },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/cmi-2-service-pulley/": {
+  "asin": "B001OPH3WI",
+  "match": "exact",
+  "note": "",
+  "title": "CMI 2 inch Service Line Pulley Bushing - RP114"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/cmi-5-8-stainless-steel-heavy-duty-rope-pulley/": {
+  "asin": "B001OPKE42",
+  "match": "variant",
+  "note": "CMI 5/8 in pulley with stainless sides; exact model unconfirmed",
+  "title": "CMI Arborist Pulley 5/8\" Rope"
+ },
  "/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/": {
   "asin": "B0BZGZGKF6",
   "match": "similar",
   "note": "Generic double sheave swing-plate pulley",
   "title": "Fusion Climb Aluminum Alloy Double Pulley Swing Plate 32kN"
  },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/large-single-pulley-aluminum-70kn-bushing/": {
+  "asin": "B07TCN6QR8",
+  "match": "similar",
+  "note": "Aluminum single pulley 70kN; bushing not confirmed",
+  "title": "ISC Large Single SHEAVE Aluminum PRUSSIK Pulley 70KN 5/8IN Rope Capacity"
+ },
  "/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/": {
   "asin": "B09ZNFSTMZ",
   "match": "exact",
   "note": "Petzl Tandem P21",
   "title": "Petzl Tandem Double Pulley for Tyrolean Traverses"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/rock-exotica-omni-block-2-0-double/": {
+  "asin": "B00WL0V45M",
+  "match": "exact",
+  "note": "",
+  "title": "Rock Exotica Omni-Block 2.0\" Double Pulley"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/rock-exotica-omni-block-2-6/": {
+  "asin": "B01HIQ274U",
+  "match": "exact",
+  "note": "",
+  "title": "Rock Exotica Omni-Block 2.6\" Swivel Pulley Black"
+ },
+ "/rigging/blocks-and-other-hardware/rings-and-other-hardware/amh-round-sling-hook/": {
+  "asin": null,
+  "match": "none",
+  "note": "No AMH listing found",
+  "title": ""
  },
  "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/": {
   "asin": "B00B1GT1S4",
@@ -4211,6 +4763,12 @@
   "note": "Crosby connecting link; model/size uncertain",
   "title": "Crosby G-335 Missing Link Connecting Link 5/8 in"
  },
+ "/rigging/blocks-and-other-hardware/rings-and-other-hardware/fioris-ring-by-ftc/": {
+  "asin": null,
+  "match": "none",
+  "note": "No FTC Fioris ring found",
+  "title": ""
+ },
  "/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/": {
   "asin": "B000FM9CNY",
   "match": "similar",
@@ -4222,6 +4780,12 @@
   "match": "exact",
   "note": "601MN = medium",
   "title": "Buckingham 601MN Port-A-Wrap"
+ },
+ "/rigging/lowering-devices/buckingham-portawrap-mini/": {
+  "asin": null,
+  "match": "none",
+  "note": "Mini (601M) not surfaced with ASIN",
+  "title": ""
  },
  "/rigging/lowering-devices/good-rigging-control-system/": {
   "asin": null,
@@ -4241,11 +4805,59 @@
   "note": "Buckingham large Port-A-Wrap",
   "title": "Buckingham 601LN Port-A-Wrap III (Large)"
  },
+ "/rigging/lowering-devices/rigging-rope-wrench-120kg/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching 120 kg rope wrench found",
+  "title": ""
+ },
+ "/rigging/lowering-devices/stein-rcw-3001-lowering-device-complete/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Stein listing found",
+  "title": ""
+ },
+ "/rigging/lowering-devices/stein-winch-kit-for-rcw-3001/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Stein listing found",
+  "title": ""
+ },
+ "/rigging/mechanical-advantage/fiddle-block-set-120ft/": {
+  "asin": null,
+  "match": "none",
+  "note": "No fiddle block set with 120 ft rope found",
+  "title": ""
+ },
+ "/rigging/mechanical-advantage/fiddle-block-set-150ft/": {
+  "asin": null,
+  "match": "none",
+  "note": "No fiddle block set with 150 ft rope found",
+  "title": ""
+ },
+ "/rigging/mechanical-advantage/fiddle-block-set-75ft/": {
+  "asin": null,
+  "match": "none",
+  "note": "No fiddle block set with 75 ft rope found",
+  "title": ""
+ },
+ "/rigging/mechanical-advantage/fiddle-blocks-set-without-rope/": {
+  "asin": "B0BLB9WZPL",
+  "match": "similar",
+  "note": "Two fiddle blocks, no rope",
+  "title": "USR Standard Fiddle Block Kit Anodized Aluminum Uni-Body Frame - Tree Pulling"
+ },
  "/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/": {
   "asin": "B0046RDC3K",
   "match": "variant",
   "note": "Maasdam handle replacement kit for rope/cable pullers",
   "title": "Maasdam MPPHRK Handle Assembly Replacement Kit"
+ },
+ "/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-kit/": {
+  "asin": "B0046RDC6W",
+  "match": "exact",
+  "note": "",
+  "title": "Maasdam MPPRPRK Rope Puller Replacement Kit"
  },
  "/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/": {
   "asin": "B07M7993HY",
@@ -4253,16 +4865,46 @@
   "note": "Rope length choice varies",
   "title": "Maasdam Rope Puller Kit with 120' Rope, Spliced Hook and Loopie Sling"
  },
+ "/rigging/mechanical-advantage/petzl-jag-double-pulley/": {
+  "asin": "B00RNJLNXY",
+  "match": "exact",
+  "note": "",
+  "title": "Petzl, Jag Pulley, High-Efficiency Double Pulley"
+ },
  "/rigging/mechanical-advantage/petzl-micro-traxion-pulley/": {
   "asin": "B0078FWCJW",
   "match": "exact",
   "note": "Same brand/model",
   "title": "Petzl Micro Traxion Pulley Ropeclamp"
  },
+ "/rigging/rigging-kits/cmi-speed-line-kit/": {
+  "asin": "B07G1SQDPR",
+  "match": "exact",
+  "note": "",
+  "title": "CMI Speed Line Kit"
+ },
+ "/rigging/rigging-kits/isc-1-2-rigging-block-with-sars/": {
+  "asin": "B086DHJRCV",
+  "match": "variant",
+  "note": "ISC RP048 block + sling combo, sold by R&L Supply",
+  "title": "R&L SUPPLY 1/2\" ISC RP048 Block & 2-6FT LOOPIE Sling Rigging Combo KIT"
+ },
+ "/rigging/rigging-kits/isc-5-8-aluminum-rigging-block-with-5-8-dead-eye-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC block+dead-eye sling kit found",
+  "title": ""
+ },
  "/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/": {
   "asin": null,
   "match": "none",
   "note": "No Buckingham Port-a-Wrap + soft anchor sling kit found",
+  "title": ""
+ },
+ "/rigging/rigging-kits/port-a-wrap-with-whoopie-sling-5-8/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham Port-a-Wrap + whoopie kit found",
   "title": ""
  },
  "/rigging/rigging-kits/weaver-speed-line-kit/": {
@@ -4271,11 +4913,47 @@
   "note": "Weaver Arborist Speedline Kit",
   "title": "Weavor Arborist Speedline Kit"
  },
+ "/rigging/rigging-slings/adjustable-slings/1-2-soft-anchor-rigging-sling-for-porta-wrap-x-8/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 1/2 in 8 ft soft anchor sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/adjustable-slings/3-4-soft-anchor-rigging-sling-for-porta-wrap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No clear match",
+  "title": ""
+ },
+ "/rigging/rigging-slings/adjustable-slings/3-4-whoopie-ring-sling-with-xl-ring/": {
+  "asin": "B07CH2QC7S",
+  "match": "similar",
+  "note": "3/4 in whoopie sling with XL ring",
+  "title": "Notch Rope Logic X-Rigging XL Beast Whoopie Sling 3/4\" Tenex-Tec 3-5 Ft. (36338)"
+ },
  "/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/": {
   "asin": "B0CC5FKPKD",
   "match": "similar",
   "note": "Generic 3/4 in adjustable hollow-braid whoopie",
   "title": "Arbo Space 3/4 LPX 12 Strand Hollow Braid Whoopie Sling"
+ },
+ "/rigging/rigging-slings/adjustable-slings/3-8-loopie-sling-2-4/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 3/8 in loopie found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/adjustable-slings/5-8-loopie-sling-2-8ft/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only 5/8 2-6 ft or 3/4 2-8 ft loopies; spec mismatch",
+  "title": ""
+ },
+ "/rigging/rigging-slings/adjustable-slings/5-8-soft-anchor-rigging-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No clear match",
+  "title": ""
  },
  "/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/": {
   "asin": "B0BLT4HGWV",
@@ -4283,10 +4961,46 @@
   "note": "Generic 5/8 in adjustable whoopie",
   "title": "Pelican Rope Brainiac Arborist Whoopie Sling 5/8 in"
  },
+ "/rigging/rigging-slings/adjustable-slings/double-head-whoopie-ring-sling-2-xl-rings/": {
+  "asin": "B07CH4JKHH",
+  "match": "similar",
+  "note": "3/4 in double-head whoopie with two Beast (XL) rings",
+  "title": "NOTCH T-Rex Double Head Whoopie Sling with 2 Beast Rings, 3-5' x 3/4\""
+ },
+ "/rigging/rigging-slings/adjustable-slings/double-ring-3-4-soft-anchor-sling-with-2-xl-rings/": {
+  "asin": "B087V76889",
+  "match": "similar",
+  "note": "3/4 in two-ring sling; ring size unconfirmed",
+  "title": "ROPE Logic X-Rigging Double Head Whoopie Sling 3/4\" Tenex 3-5 ft."
+ },
+ "/rigging/rigging-slings/adjustable-slings/double-ring-7-8-soft-anchor-rigging-sling-2-xl-rings/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 7/8 in double-ring sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/crane-slings/2-eye-to-eye-webbing-sling/": {
+  "asin": "B000VLBXB8",
+  "match": "similar",
+  "note": "2 in eye-to-eye web sling; length differs/unspecified",
+  "title": "Lift All EE2602NFX6 Eye-Eye Web Sling, Nylon, 2\" x 6', 2-ply, Flat-Eye, Yellow"
+ },
  "/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/": {
   "asin": null,
   "match": "none",
   "note": "Only single-eye 5/8x20 slings found (eyes at both ends not matched)",
+  "title": ""
+ },
+ "/rigging/rigging-slings/crane-slings/5-8-x-20-standard-crane-sling/": {
+  "asin": "B0BS9T7M41",
+  "match": "similar",
+  "note": "5/8 in x 20 ft rope sling",
+  "title": "RNA Trex Dead Eye Sling - 5/8\" x 20 Ft, Heavy-Duty Rigging Sling for Arborists & Utility Work"
+ },
+ "/rigging/rigging-slings/crane-slings/5-8-x-30-premium-crane-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 5/8 x 30 ft single sling found",
   "title": ""
  },
  "/rigging/rigging-slings/crane-slings/endless-loop-round-slings/": {
@@ -4301,6 +5015,30 @@
   "note": "Only wire rope slings found, not fiber bull rope",
   "title": ""
  },
+ "/rigging/rigging-slings/heavy-duty-slings/1-2-spider-leg-balancing-sling/": {
+  "asin": "B08SR34HB9",
+  "match": "similar",
+  "note": "1/2 in spider leg",
+  "title": "Rope Logic 1/2 x 14' Spider Leg Rigging"
+ },
+ "/rigging/rigging-slings/heavy-duty-slings/1-2-tenex-tec-dead-eye-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 1/2 in Tenex-TEC dead-eye sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/heavy-duty-slings/3-8-spider-leg-balancing-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 3/8 in spider leg found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/heavy-duty-slings/5-8-12-strand-dead-eye-rigging-sling/": {
+  "asin": "B0C6ZPZV7J",
+  "match": "similar",
+  "note": "5/8 in 12-strand dead-eye sling",
+  "title": "Arbo Space 5/8 LPX 12 Strand Polyester Hollow Braid Dead Eye Sling for Arborist (15')"
+ },
  "/rigging/rigging-slings/heavy-duty-webbing-slings/": {
   "asin": "B07CY28447",
   "match": "similar",
@@ -4313,10 +5051,58 @@
   "note": "No 'heavy duty loop runner' found; closest CMI sewn runner",
   "title": "CMI Sewn Runner 1x30"
  },
+ "/rigging/rigging-slings/ring-slings/3-4-dead-eye-ring-sling-x-15/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 3/4 x 15 ft dead-eye ring sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/ring-slings/dead-eye-ring-sling-with-beast-ring/": {
+  "asin": "B07CGR7PSP",
+  "match": "similar",
+  "note": "Eye sling with Beast ring",
+  "title": "Notch Rope Logic X-Rigging X-Large Beast Ring 12' Sling with Eye (36336)"
+ },
  "/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/": {
   "asin": null,
   "match": "none",
   "note": "No double-eye 3/4x25 sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/ring-slings/retrievable-ring-sling-3-4/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 3/4 in retrievable ring sling found",
+  "title": ""
+ },
+ "/rigging/rigging-slings/ring-slings/retrievable-ring-sling-9-16/": {
+  "asin": "B0C58PB5YW",
+  "match": "similar",
+  "note": "9/16 in retrievable ring sling",
+  "title": "Arbo Space 9/16\" LDB Retrievable Ring Sling (5 feet)"
+ },
+ "/rigging/rigging-slings/ring-slings/thimble-loop-rigging-sling-1-2-x-35-with-28mm-ring/": {
+  "asin": "B07CH6Q9FP",
+  "match": "similar",
+  "note": "1/2 in loop with 28mm ring; 36 in vs 35 in",
+  "title": "Notch Rope Logic 1/2\" x 36\" Tenex X-Rigging w/Large Ring Loop (35801)"
+ },
+ "/rigging/rigging-slings/ring-slings/thimble-loop-rigging-sling-3-4-x-35-with-28mm-ring/": {
+  "asin": "B07CHC2NS5",
+  "match": "similar",
+  "note": "3/4 in loop with 38x28mm ring; 36 in vs 35 in",
+  "title": "Notch 3/4\" x 36\" Tenex X-Rigging w/X-Large Beast Ring Loop (36337)"
+ },
+ "/ring-slings/5-8-bull-rope-thimble-sling-with-large-ring/": {
+  "asin": "B0C58WXWNQ",
+  "match": "similar",
+  "note": "5/8 in bull rope ring sling",
+  "title": "Arbo Space 5/8\" LDB Bull Rope Ring Sling (10feet)"
+ },
+ "/ring-slings/double-headed-rigging-sling-5-8-x-15-long/": {
+  "asin": null,
+  "match": "none",
+  "note": "No double-headed 5/8 x 15 ft sling listing found",
   "title": ""
  },
  "/rings-and-other-hardware/tfb-20-cerebrus-rigging-block/": {
@@ -4331,6 +5117,12 @@
   "note": "Searched; no LFB-20 listing found",
   "title": ""
  },
+ "/rings-and-other-hardware/tylaska-basilisk-lfb28/": {
+  "asin": "B0CVNLN7QV",
+  "match": "variant",
+  "note": "Tylaska LFB listing; LFB-10 size, page mentions LFB-28 in family",
+  "title": "Tylaska Arborist Long Friction Block (LFB 10)"
+ },
  "/rings-and-other-hardware/tylaska-lfb-10-basilisk-low-friction-device/": {
   "asin": "B0CVNLN7QV",
   "match": "exact",
@@ -4343,16 +5135,82 @@
   "note": "Model unspecified in our name; FR6-L is one Tylaska low friction ring, low confidence",
   "title": "Tylaska Low Friction Ring (FR6-L Low Friction Ring, Aluminum)"
  },
+ "/rings/dmm-matt-gray-anchor-rings/": {
+  "asin": null,
+  "match": "none",
+  "note": "No DMM anchor rings listing found",
+  "title": ""
+ },
+ "/rope-bags/all-gear-heavy-duty-rope-bag/": {
+  "asin": null,
+  "match": "none",
+  "note": "No All Gear rope bag found",
+  "title": ""
+ },
  "/rope-bags/courant-cargo-bag-50l-blue/": {
   "asin": null,
   "match": "none",
   "note": "No Courant Cargo Bag 50L Blue found",
   "title": ""
  },
+ "/rope-bags/dmm-transit-rope-bag-30-l/": {
+  "asin": "B00S11ZSPW",
+  "match": "exact",
+  "note": "",
+  "title": "DMM Transit Rope Bag - Black 30L"
+ },
+ "/rope-bags/dmm-transit-rope-bag-45-l/": {
+  "asin": "B00S11ZUUK",
+  "match": "exact",
+  "note": "",
+  "title": "DMM Transit Rope Bag, Black, 45L, BI22BLK-45"
+ },
+ "/rope-bags/gap-arborist-supply-heavy-duty-bull-rope-bag/": {
+  "asin": "B083GCZCPG",
+  "match": "similar",
+  "note": "Generic bull rope bag, heavy duty",
+  "title": "WEAVER ARBORIST Heavy-Duty Collapsible Bull Rope Bag, Grey"
+ },
+ "/rope-care-and-splicing/high-wall-rope-thimble/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching thimble listing",
+  "title": ""
+ },
+ "/rope-lanyards/bandit-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching lanyard listing",
+  "title": ""
+ },
+ "/rope-lanyards/blue-craze-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No All Gear Blue Craze lanyard listing",
+  "title": ""
+ },
  "/rope-lanyards/replacement-rope-lanyard-without-snaps/": {
   "asin": null,
   "match": "none",
   "note": "No snapless replacement rope lanyard found",
+  "title": ""
+ },
+ "/rope-lanyards/yale-imori-green-and-black-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Imori lanyard listing",
+  "title": ""
+ },
+ "/rope-lanyards/yale-phantom-green-and-purple-lanyard-with-double-locking-snap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Phantom lanyard listing",
+  "title": ""
+ },
+ "/rope-lanyards/yale-phantom-pink-and-black-lanyard-with-double-locking-snap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Phantom lanyard listing",
   "title": ""
  },
  "/rope/accessory-cord/sterling-shock-cord-by-the-foot/": {
@@ -4367,6 +5225,18 @@
   "note": "Same brand/model/diameter",
   "title": "Samson Arbor-Plex 12-Strand 1/2in Climbing Rope 120'"
  },
+ "/rope/climbing-rope/12-strand-climbing-rope/samson-true-blue-rope/": {
+  "asin": "B0179XJE5W",
+  "match": "exact",
+  "note": "",
+  "title": "Samson 1/2\" True-Blue 12 Strand Climbing Rope"
+ },
+ "/rope/climbing-rope/12-strand-climbing-rope/yale-buzz-line/": {
+  "asin": "B00D9FKEY0",
+  "match": "exact",
+  "note": "Listing spelled Buzzz; 120 ft; may be unavailable",
+  "title": "Yale Buzzz 12-Strand Climbing Line - 1/2\" X 120 Foot"
+ },
  "/rope/climbing-rope/16-strand-climbing-rope/teufelberger-safety-blue-white-climbing-rope/": {
   "asin": "B08FCXR13F",
   "match": "variant",
@@ -4379,11 +5249,143 @@
   "note": "No Ultra-Vee listing found",
   "title": ""
  },
+ "/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-plus-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "XTC 16 Plus not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-spearmint-climbing-rope/": {
+  "asin": "B0179XJR72",
+  "match": "exact",
+  "note": "",
+  "title": "Yale XTC Spearmint 16 Strand Climbing Rope (1/2\")"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/all-gear-11-8mm-blue-craze-2-climbing-rope/": {
+  "asin": "B08M6DDN5R",
+  "match": "exact",
+  "note": "Title lacks brand text but URL/specs AllGear Craze II",
+  "title": "Arborist Tree Climbing Rope (AllGear Blue Craze II 11.8mm)"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/all-gear-11-8mm-cherry-bomb-2-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Cherry Bomb 11mm only; no Cherry Bomb 2 11.8mm",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/all-gear-11-8mm-mardi-gras-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Mardi Gras not found",
+  "title": ""
+ },
  "/rope/climbing-rope/24-strand-climbing-rope/petzl-control-12-5mm-climbing-rope/": {
   "asin": "B085DJ43NN",
   "match": "exact",
   "note": "Same brand/model/diameter",
   "title": "Petzl Control 12.5mm Rope Orange 60M"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/samson-hyperclimb-cool-climbing-line/": {
+  "asin": null,
+  "match": "none",
+  "note": "HyperClimb not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/samson-velocity-cool-11mm-climbing-rope/": {
+  "asin": "B07PGLDTZW",
+  "match": "exact",
+  "note": "May be unavailable",
+  "title": "Samson Velocity Cool 24 Strand Climbing Rope (11mm)"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/samson-velocity-hot-11mm-climbing-rope/": {
+  "asin": "B0179XBLRG",
+  "match": "exact",
+  "note": "",
+  "title": "Samson Velocity Hot 24-Strand Climbing Rope (11mm)"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/samson-voyager-11-8mm-climbing-rope/": {
+  "asin": "B07NY51LT2",
+  "match": "exact",
+  "note": "May be unavailable",
+  "title": "Samson Voyager Rope 11.8mm (15/32\")"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/teufelberger-drenaline-stars-and-stripes-climbing-line/": {
+  "asin": "B08MB9G3BW",
+  "match": "variant",
+  "note": "Blue/orange/yellow colorway, not Stars and Stripes",
+  "title": "Teufelberger drenaLINE Climbing Rope"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/teufelberger-fly-11mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Teufelberger Fly not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/teufelberger-tachyon-green-black-and-white-climbing-rope/": {
+  "asin": "B0DTHYC1L4",
+  "match": "variant",
+  "note": "Different colorway/length",
+  "title": "Teufelberger Tachyon Climbing Rope 11.5mm x 3600ft, OrangeBlue"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/teufelberger-tachyon-orange-and-blue-climbing-rope/": {
+  "asin": "B0DTHYC1L4",
+  "match": "variant",
+  "note": "Orange/blue but 3600 ft spool, not hank",
+  "title": "Teufelberger Tachyon Climbing Rope 11.5mm x 3600ft, OrangeBlue"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-bandit-11mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale Bandit not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-blaze-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale Blaze not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-calamine-11-7mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale Calamine not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-imori-green-12mm-climbing-line/": {
+  "asin": "B088X4FKQF",
+  "match": "variant",
+  "note": "Imori green and black colorway",
+  "title": "Yale Cordage Imori (Black/Green)"
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-kernmaster-blue-orange-11mm-static-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "KernMaster not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-kernmaster-safari-11mm-static-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "KernMaster not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/yale-prism-11-7mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale Prism not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/courant-squir-red-11mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Courant Squir not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/petzl-axis-11mm-climbing-line/": {
+  "asin": "B01MSWB8LI",
+  "match": "exact",
+  "note": "Red 150 ft hank",
+  "title": "PETZL Axis 11mm x 46meter 150ft Static Rope"
  },
  "/rope/climbing-rope/static-climbing-rope/sterling-11mm-htp-static-climbing-rope/": {
   "asin": "B08SR3561W",
@@ -4391,11 +5393,77 @@
   "note": "Sterling HTP 11mm; length/color differ; title lacks brand",
   "title": "HTP Static Climbing Line 7/16in (11mm) x 600' Orange"
  },
+ "/rope/climbing-rope/static-climbing-rope/sterling-htp-static-13mm-rope/": {
+  "asin": "B01634PLZ0",
+  "match": "exact",
+  "note": "",
+  "title": "Sterling Rope HTP Red 13mm (1/2\") x 150'"
+ },
  "/rope/climbing-rope/static-climbing-rope/sterling-workpro-12-5mm-static-climbing-rope/": {
   "asin": "B081HH54VP",
   "match": "exact",
   "note": "Same brand/model/diameter",
   "title": "Sterling WorkPro 1/2in (12.5mm) x 200' Neon Green Static Rope"
+ },
+ "/rope/climbing-rope/static-climbing-rope/teufelberger-km-iii-max-orange-yellow/": {
+  "asin": null,
+  "match": "none",
+  "note": "Listings titled New England Ropes/Maxim, not Teufelberger KM III Max orange/yellow",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/teufelberger-km-iii-max-slime-green/": {
+  "asin": null,
+  "match": "none",
+  "note": "KM III Max slime green not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/teufelberger-km-iii-static-rope-per-foot/": {
+  "asin": "B0120USIGU",
+  "match": "variant",
+  "note": "KM III 600 ft spool, not by the foot",
+  "title": "Teufelberger New England Ropes 440409 Km III .44 in. x 600 ft. Red"
+ },
+ "/rope/climbing-rope/static-climbing-rope/teufelberger-x-static-static-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "X-Static not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/yale-cordage-32-strand-static-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale 32-strand static not found",
+  "title": ""
+ },
+ "/rope/climbing-rope/static-climbing-rope/yale-scandere-purple-gray-11-7mm-static-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Yale Scandere not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/1-2-sterling-atlas-rigging-rope/": {
+  "asin": "B081583TRL",
+  "match": "exact",
+  "note": "200 ft",
+  "title": "Sterling Atlas (1/2\") 200' Neon Green Rigging Line (No Splice)"
+ },
+ "/rope/rigging-rope/3-8-samson-tenex-by-the-foot/": {
+  "asin": "B0818J6V2Y",
+  "match": "variant",
+  "note": "1/2 in size; 3/8 in not found",
+  "title": "Samson Rope by The Foot 1/2\" Tenex Rope Blue"
+ },
+ "/rope/rigging-rope/5-8-yale-polydyne-rigging-rope/": {
+  "asin": "B00USNQ2QA",
+  "match": "exact",
+  "note": "600 ft; may be unavailable",
+  "title": "Yale PD5860 Polydyne Double Braid Rigging Rope - 0.625 Inch x 600 Feet, White"
+ },
+ "/rope/rigging-rope/9-16-yale-polydyne-rigging-rope/": {
+  "asin": "B0048YM27I",
+  "match": "exact",
+  "note": "",
+  "title": "9/16\" Yale Polydyne Bull Rope"
  },
  "/rope/rigging-rope/samson-1-2-rigging-rope/": {
   "asin": "B07JMWNY2F",
@@ -4408,6 +5476,18 @@
   "match": "exact",
   "note": "Samson Arbor-Plex 3/4in (may be unavailable)",
   "title": "Riggin Line Rope Rigging Samson Arbor-Plex 3/4in x 150'"
+ },
+ "/rope/rigging-rope/samson-pro-master-5-8-rigging-rope/": {
+  "asin": "B00WTQ9O8C",
+  "match": "exact",
+  "note": "Listing says 3-strand",
+  "title": "Samson Pro-Master 3-Strand Bull Rope, 5/8\" x 150'"
+ },
+ "/rope/rigging-rope/samson-stable-braid-1-rigging-rope/": {
+  "asin": "B07NQNCP38",
+  "match": "variant",
+  "note": "1 in not found; 3/4 in closest",
+  "title": "Samson Stable Braid Rigging Rope Green 3/4\" x 200' (No Splice)"
  },
  "/rope/rigging-rope/samson-stable-braid-3-4-rigging-rope/": {
   "asin": "B07NQNCP38",
@@ -4433,6 +5513,54 @@
   "note": "Same brand/model/diameter; 200' hank",
   "title": "Samson Stable Braid (Red) 9/16\" x 200'"
  },
+ "/rope/rigging-rope/samson-tenex-tec-rope-by-the-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "Tenex-TEC by the foot not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/sterling-altas-9-16-rigging-rope/": {
+  "asin": "B08SR55X2Y",
+  "match": "exact",
+  "note": "200 ft",
+  "title": "Sterling Atlas Rigging Line 9/16\" x 200' Blue (No Splice)"
+ },
+ "/rope/rigging-rope/sterling-atlas-3-4-rigging-rope/": {
+  "asin": "B0814R63XQ",
+  "match": "exact",
+  "note": "200 ft",
+  "title": "Sterling Atlas 19mm (3/4\") x 200' Rigging Line Neon Green (No Splice)"
+ },
+ "/rope/rigging-rope/teufelberger-12mm-sirius-bull-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Sirius bull rope not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/teufelberger-14mm-sirius-bull-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Sirius bull rope not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/teufelberger-16mm-sirius-bull-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Sirius bull rope not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/yale-double-esterlon-3-4-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Esterlon not found",
+  "title": ""
+ },
+ "/rope/rigging-rope/yale-double-esterlon-5-8-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "Esterlon not found",
+  "title": ""
+ },
  "/rope/rope-care-and-splicing/all-gear-heavy-duty-chafe-sleeve/": {
   "asin": null,
   "match": "none",
@@ -4445,16 +5573,58 @@
   "note": "Generic slide-on rope chafe sleeve",
   "title": "WILDKEN Rope Protector Arborist Sleeve"
  },
+ "/rope/tech-cordage/10mm-polyester-core-bee-line/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Rope Logic prusiks, not by the foot",
+  "title": ""
+ },
+ "/rope/tech-cordage/sterling-9mm-rit-hitch-cord-by-the-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "No by-the-foot hitch cord found",
+  "title": ""
+ },
  "/rope/tech-cordage/teufelberger-epicord-8mm-hitch-cord-by-the-foot/": {
   "asin": "B08SR44ZX3",
   "match": "variant",
   "note": "Teufelberger EPIcord 8mm but pre-spliced, not by-the-foot",
   "title": "Rope Logic EPIcord Moddled Orange 8mm x 32in Spliced Prusik"
  },
+ "/rope/tech-cordage/teufelberger-sirius-reep-schnur-per-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "Sirius Reepschnur not found",
+  "title": ""
+ },
+ "/rope/tech-cordage/yale-bee-line-8mm-hitch-cord-by-the-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only prusik loops, not by the foot",
+  "title": ""
+ },
  "/rope/tech-cordage/yale-r-i-n-g-rope-by-the-foot/": {
   "asin": null,
   "match": "none",
   "note": "No Yale R.I.N.G. rope found",
+  "title": ""
+ },
+ "/rope/winch-line-and-synthetic-cable/yale-5-16-ultrex-winch-line-with-chook/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 5/16 Ultrex with chook found",
+  "title": ""
+ },
+ "/rope/winch-line-and-synthetic-cable/yale-cordage-3-8-ultrex-winch-line-with-chook/": {
+  "asin": "B00OAFGT56",
+  "match": "variant",
+  "note": "Same Ultrex 3/8 line but without chook",
+  "title": "Yale Cordage 3/8\" x 200 ft Ultrex UHMWPE Synthetic Winch Line"
+ },
+ "/rope/winch-line-and-synthetic-cable/yale-cordage-chook/": {
+  "asin": null,
+  "match": "none",
+  "note": "Chook only sold bundled under Rope Logic title",
   "title": ""
  },
  "/saddle-parts-and-shoulder-harnesses/tree-access-srt-chest-harness/": {
