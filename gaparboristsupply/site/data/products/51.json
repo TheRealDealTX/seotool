@@ -1,0 +1,1856 @@
+[
+ {
+  "path": "/climbing/climbing-gear/swivels/dmm-mini-swivel/",
+  "category": "/climbing/climbing-gear/swivels/",
+  "name": "DMM Mini Swivel",
+  "brand": "dmm",
+  "brand_name": "DMM",
+  "kind": "carabiner",
+  "price": 45,
+  "keyword": "dmm mini swivel",
+  "title": "DMM Mini Swivel for Climbing and Rigging Setups",
+  "h1": "DMM Mini Swivel",
+  "meta": "The DMM Mini Swivel is a compact swivel that lets carabiners and devices turn freely so ropes don't twist. Where it fits in a climbing kit, and how to inspect it.",
+  "tagline": "A compact DMM swivel that stops rope twist between connectors and devices.",
+  "summary": "The DMM Mini Swivel is a small, lightweight swivel that lets two connections rotate independently, so your rope and devices stop fighting each other. It is the size climbers reach for when a full rescue swivel is more than the job needs.",
+  "highlights": [
+   "Compact swivel from DMM",
+   "Lets carabiners and devices rotate freely",
+   "Helps keep climbing and tag lines from twisting",
+   "Small and light enough to live on the saddle",
+   "Strength rating marked on the body"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Compact swivel"
+   ],
+   [
+    "Brand",
+    "DMM"
+   ],
+   [
+    "Material",
+    "Aluminum body"
+   ],
+   [
+    "Rating",
+    "Marked on the swivel"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where a small swivel earns its place",
+    "p": [
+     "Rope twist builds up any time a line runs over and over through the same system. On a long SRS ascent it shows up as kinks below your device, and on a tag line or haul line it shows up as hockles and a rope that will not coil. A swivel between the anchor and the device lets the rope unwind instead.",
+     "Climbers often put the DMM Mini Swivel under a rope wrench or between a bridge and a pulley, and some use it at the bottom of a throw line or haul rope. Because it is compact, it adds little length to the system. Browse other options in our <a href=\"/climbing/climbing-gear/swivels/\">swivels</a> if you need a larger size or a version with an integrated attachment point."
+    ]
+   },
+   {
+    "h": "Inspection and limits",
+    "p": [
+     "Check that it spins smoothly under light load, that both eyes are free of sharp edges and grooves, and that there is no play or grit in the bearing. Clean off sap with warm water and let it dry fully.",
+     "Read the strength marking on the body before you put it into a system, and never load a swivel sideways across its eyes. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do I need a swivel for SRS climbing?",
+    "a": "Not always, but a small swivel under the device helps a lot with twisting ropes and long ascents. Many climbers keep one in the kit for that reason."
+   },
+   {
+    "q": "Can I use it for rigging?",
+    "a": "Only within its marked rating. Light tag lines and haul lines are fine, but heavy rigging calls for a rated rigging swivel."
+   }
+  ],
+  "use": [
+   "climbing",
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "name": "SMC Apex Pulley 1.5",
+  "brand": "smc",
+  "brand_name": "SMC",
+  "kind": "pulley",
+  "price": 99,
+  "keyword": "smc apex pulley 1.5",
+  "title": "SMC Apex Pulley 1.5 for Haul Systems and Redirects",
+  "h1": "SMC Apex Pulley 1.5",
+  "meta": "The SMC Apex Pulley 1.5 is a mid-size pulley for mechanical advantage, redirects and light rigging. How it differs from the Apex Direct and how to inspect it.",
+  "tagline": "A mid-size SMC pulley for haul systems, redirects and light rigging work.",
+  "summary": "The SMC Apex Pulley 1.5 is the standard Apex in the larger 1.5 size, with a bigger sheave than the 1.1 for smoother running under load. Tree crews use it in pull systems, redirects, and light rigging where a micro pulley is too small.",
+  "highlights": [
+   "Larger 1.5 size in the SMC Apex line",
+   "Bigger sheave runs more efficiently",
+   "Suits 3:1 and 5:1 pull systems",
+   "Good for redirects and tag lines",
+   "Rope range and rating marked on the side plate"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Single pulley"
+   ],
+   [
+    "Brand",
+    "SMC"
+   ],
+   [
+    "Line",
+    "Apex"
+   ],
+   [
+    "Size",
+    "1.5"
+   ],
+   [
+    "Rope range and rating",
+    "Marked on the side plate"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Apex vs. Apex Direct",
+    "p": [
+     "SMC sells the Apex in more than one style, and the Apex Direct is a close cousin rather than this exact pulley. This is the standard Apex in the 1.5 size. Both share the larger sheave, so the choice usually comes down to how the side plates open and how the pulley clips into your system. Check the listing photos and the side-plate markings before you buy a replacement to match a kit.",
+     "Compare sizes and styles in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> section if you are building a pull kit from scratch."
+    ]
+   },
+   {
+    "h": "Using it on tree work",
+    "p": [
+     "A 1.5 size pulley is a good middle ground for crews. It is light enough to carry up the tree for a redirect, and the bigger sheave makes a noticeable difference when you are pulling a 3:1 to tension a felling line or hauling a saw to the climber.",
+     "It is not a rigging block. Do not use it to block down heavy wood or take shock loads. Spin the sheave before each use, look for cracks, burrs or play at the axle, and clean out sap and grit. Retire it after a hard drop unless SMC says otherwise. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is the Apex 1.5 the same as the Apex Direct 1.5?",
+    "a": "No. They are related SMC pulleys in the same size, but the side-plate design differs. Match the exact model if you are replacing one in a kit."
+   },
+   {
+    "q": "Can I use it for blocking down limbs?",
+    "a": "No. Use a rated rigging block for heavy or shock-loaded rigging and keep this pulley for pull systems and redirects."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "name": "Weaver Deluxe Work Suspenders",
+  "brand": "weaver",
+  "brand_name": "Weaver",
+  "kind": "saddle",
+  "price": 55,
+  "keyword": "weaver deluxe work suspenders",
+  "title": "Weaver Deluxe Work Suspenders for Climbing Saddles",
+  "h1": "Weaver Deluxe Work Suspenders",
+  "meta": "Weaver Deluxe Work Suspenders clip to your climbing saddle and move the weight of a loaded saddle onto your shoulders. Fit tips and what they are not built for.",
+  "tagline": "Padded suspenders that take the weight of a loaded saddle off your hips.",
+  "summary": "Weaver Deluxe Work Suspenders clip to a climbing saddle and share the weight of saws, carabiners and lanyards across your shoulders. This is the plain version without the hydration pack, for climbers who want the support and nothing extra on their back.",
+  "highlights": [
+   "Clips to the climbing saddle",
+   "Spreads saddle weight onto the shoulders",
+   "Padded shoulder straps",
+   "Plain version without hydration pack",
+   "Comfort item, not fall protection"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Saddle suspenders"
+   ],
+   [
+    "Brand",
+    "Weaver"
+   ],
+   [
+    "Attachment",
+    "Clips to the saddle"
+   ],
+   [
+    "Hydration pack",
+    "Not included"
+   ],
+   [
+    "Use",
+    "Comfort only, not life support"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why suspenders help on long days",
+    "p": [
+     "A saddle loaded with a top-handle saw, a hand saw, a lanyard, spare carabiners and a few slings pulls hard on your hips, and that weight sags the saddle down your legs as the day goes on. Suspenders lift the saddle back into place and put part of the load on your shoulders, which most climbers notice by the third tree.",
+     "This is the plain deluxe suspender. Weaver also sells a version with a hydration pack built in, so make sure you have the one you want. Other shoulder harness options are in our <a href=\"/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/\">saddle parts and shoulder harnesses</a>."
+    ]
+   },
+   {
+    "h": "Fit and care",
+    "p": [
+     "Adjust the straps so the saddle sits where it normally rides with the suspenders slack-free but not pulling the waist belt up. Route them clear of your bridge, lanyard and tie-in points so they never interfere with anything that carries load.",
+     "They are not fall protection and must never be clipped into as an attachment point. Check the clips and stitching when you inspect the saddle, and wash them by hand when they get stiff with sweat and sap."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Do these include the hydration pack?",
+    "a": "No. This is the version without the pack. Weaver sells the hydration pack version separately."
+   },
+   {
+    "q": "Will they fit my saddle?",
+    "a": "They are made to clip to Weaver saddles and fit many other saddles with suitable attachment points. Check the listing and your saddle before ordering."
+   }
+  ],
+  "use": [
+   "climbing",
+   "apparel"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/",
+  "category": "/rope/rigging-rope/",
+  "name": "Sterling Kraken Rigging Line 5/8\" x 200'",
+  "brand": "sterling-rope",
+  "brand_name": "Sterling Rope",
+  "kind": "rope",
+  "price": 499,
+  "keyword": "sterling kraken rigging line",
+  "title": "Sterling Kraken Rigging Line 5/8 in x 200 ft",
+  "h1": "Sterling Kraken Rigging Line 5/8\" x 200'",
+  "meta": "Sterling Kraken rigging line in 5/8 in x 200 ft is a lowering rope for everyday removals and tall trees. Sizing, block and device fit, and inspection advice.",
+  "tagline": "A 5/8 inch, 200 foot Sterling rigging line for everyday removal work.",
+  "summary": "Sterling Kraken rigging line in 5/8 inch by 200 feet is a lowering rope sized for the mid-weight wood most crews handle every day. The 200 foot length lets you rig from high in a tall tree and still reach the lowering device at the base.",
+  "highlights": [
+   "5/8 inch diameter for everyday rigging",
+   "200 foot length for tall trees",
+   "Runs in common arborist blocks and lowering devices",
+   "Lighter to carry than 3/4 inch line",
+   "Breaking strength listed on the rope tag"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "5/8 in (about 16 mm)"
+   ],
+   [
+    "Length",
+    "200 ft"
+   ],
+   [
+    "Brand",
+    "Sterling Rope"
+   ],
+   [
+    "Use",
+    "Arborist rigging and lowering"
+   ],
+   [
+    "Rated strength",
+    "See Sterling's tag"
+   ]
+  ],
+  "body": [
+   {
+    "h": "5/8 inch vs. 3/4 inch Kraken",
+    "p": [
+     "Kraken also comes in 3/4 inch, which is the heavy-wood size. The 5/8 inch line is what most crews run day to day. It is lighter to haul up the tree, easier to handle on a lowering device, and it fits a wider range of blocks and pulleys. Step up to 3/4 inch when the pieces get big enough that you are near the working load limit of the 5/8 line.",
+     "The 200 foot hank gives you enough rope for a tall removal with the block high in the tree and wraps on a device at the base. Other diameters and lengths are in our <a href=\"/rope/rigging-rope/\">rigging rope</a> section."
+    ]
+   },
+   {
+    "h": "Working within the rope's limits",
+    "p": [
+     "Rigging loads are dynamic. A piece that weighs a few hundred pounds can put several times that into the rope when it is caught short, so keep loads well below the strength on the tag and let the lowering device run.",
+     "Inspect the rope before each job for glazing, cuts, crushed sections and pulled strands, and retire any section that has been shock loaded hard. Keep rigging lines separate from climbing lines and never use a rigging rope for life support."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is 5/8 inch Kraken strong enough for removals?",
+    "a": "For most everyday removal work, yes, as long as loads stay within the rated strength with a good safety margin. Very large wood calls for 3/4 inch line."
+   },
+   {
+    "q": "Can I use it as a climbing line?",
+    "a": "No. Rigging rope is not made or rated for life support. Use a dedicated arborist climbing rope."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "name": "DMM Perfect O Carabiner with Captiv Bar",
+  "brand": "dmm",
+  "brand_name": "DMM",
+  "kind": "carabiner",
+  "price": 30,
+  "keyword": "dmm perfect o captiv",
+  "title": "DMM Perfect O Carabiner with Captiv Bar",
+  "h1": "DMM Perfect O Carabiner with Captiv Bar",
+  "meta": "The DMM Perfect O with Captiv bar is a symmetrical oval auto-locking carabiner that stays in position on a pulley or device. How the Captiv bar helps arborists.",
+  "tagline": "A symmetrical oval auto-locker with a Captiv bar to hold it in position.",
+  "summary": "The DMM Perfect O with Captiv bar is a symmetrical oval auto-locking carabiner with a captive bar that keeps whatever it holds from rotating out of position. Arborists use it on pulleys, rope wrenches and lanyard adjusters that need to sit square and stay put.",
+  "highlights": [
+   "Symmetrical oval keeps devices centered",
+   "Captiv bar holds the carabiner in orientation",
+   "Auto-locking gate",
+   "Good on hitch-tending pulleys and adjusters",
+   "Strength ratings marked on the spine"
+  ],
+  "specs": [
+   [
+    "Shape",
+    "Oval (symmetrical)"
+   ],
+   [
+    "Material",
+    "Aluminum"
+   ],
+   [
+    "Gate",
+    "Auto-locking"
+   ],
+   [
+    "Feature",
+    "Captiv bar"
+   ],
+   [
+    "Brand",
+    "DMM"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What the Captiv bar does",
+    "p": [
+     "The plain Perfect O is a favorite for devices because the oval shape keeps them centered. The Captiv version adds a small bar inside the carabiner that captures the connection, so the carabiner cannot flip around and cross-load. That matters on a device that sees a lot of movement, like a hitch-tending pulley or a lanyard adjuster on a saddle ring.",
+     "If you already run plain Perfect O carabiners, the Captiv model is a drop-in upgrade for the spots where you keep catching a carabiner in the wrong orientation. See other locking options in our <a href=\"/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/\">auto-locking carabiners</a>."
+    ]
+   },
+   {
+    "h": "Inspection",
+    "p": [
+     "Before each climb, check that the gate opens, closes and locks fully on its own, that the Captiv bar is intact and seated, and that there are no grooves from rope wear or sharp burrs. Rinse out grit and sap, and never file or lubricate it with anything DMM does not approve.",
+     "Retire the carabiner after a significant fall or drop onto a hard surface. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is the Captiv bar removable?",
+    "a": "It is designed to stay in place once fitted. Follow DMM's instructions and do not modify it."
+   },
+   {
+    "q": "Why choose an oval over an HMS shape?",
+    "a": "An oval keeps pulleys and devices centered on the carabiner. An HMS shape suits hitches and belaying better."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "name": "Big 8 Stainless Steel Rescue Descender",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "friction-device",
+  "price": 49,
+  "keyword": "stainless steel rescue 8 descender",
+  "title": "Big 8 Stainless Steel Rescue Descender",
+  "h1": "Big 8 Stainless Steel Rescue Descender",
+  "meta": "The Big 8 stainless steel rescue descender is a large figure 8 with ears for lowering and controlled descents. Steel vs. aluminum, uses, and inspection tips.",
+  "tagline": "A large stainless figure 8 with ears for lowering and rescue descents.",
+  "summary": "The Big 8 stainless steel rescue descender is a large figure 8 with ears, made in stainless steel rather than aluminum for better wear resistance. It suits lowering, rope access practice and aerial rescue drills where the device sees a lot of rope.",
+  "highlights": [
+   "Large figure 8 with ears",
+   "Stainless steel for long wear life",
+   "Ears help stop the rope girth-hitching",
+   "Handles larger rope diameters",
+   "Heavier than the aluminum version"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Rescue figure 8 descender"
+   ],
+   [
+    "Material",
+    "Stainless steel"
+   ],
+   [
+    "Design",
+    "Large 8 with ears"
+   ],
+   [
+    "Rope range",
+    "See device markings"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Stainless vs. aluminum",
+    "p": [
+     "This is the stainless steel version of the big rescue 8. The aluminum version is lighter, but rope running fast over aluminum wears grooves into it, especially when the rope is dirty. Stainless steel resists that wear and holds up better on a device that gets used for training, lowering a lot of loads, or living in a rescue kit in the truck.",
+     "The trade-off is weight and heat. Steel is heavier to carry, and on a long fast descent the device gets hot, so control your speed. Compare it with other devices in our <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a> section."
+    ]
+   },
+   {
+    "h": "Use and inspection",
+    "p": [
+     "A figure 8 is a simple device with no auto-stop, so a backup such as a friction hitch or a belay is standard practice. The ears help keep the rope from slipping over the top and forming a girth hitch, but you still need to rig it correctly.",
+     "Check for sharp edges, grooves and cracks before each use and confirm your rope diameter suits the device. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb. Practice rescue lowering under qualified instruction."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Why buy stainless instead of aluminum?",
+    "a": "Stainless wears much more slowly under running rope, so it lasts longer in a busy rescue or training kit. It is heavier."
+   },
+   {
+    "q": "Does a figure 8 lock off on its own?",
+    "a": "No. It has no automatic brake, so always use a backup and a proper lock-off when you stop."
+   }
+  ],
+  "use": [
+   "climbing",
+   "safety"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/shop-all/standard-5-8-crane-sling-kit/",
+  "category": "/rigging/rigging-slings/crane-slings/",
+  "name": "Standard 5/8\" Crane Sling Kit",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 249,
+  "keyword": "5/8 crane sling kit",
+  "title": "Standard 5/8 in Crane Sling Kit for Tree Removal",
+  "h1": "Standard 5/8\" Crane Sling Kit",
+  "meta": "A standard 5/8 in crane sling kit gives a crane crew a matched set of rope chokers for picking wood. What a kit covers, how crews use it, and rating checks.",
+  "tagline": "A matched set of 5/8 inch rope crane slings for crane-assisted removals.",
+  "summary": "This standard 5/8 crane sling kit gives a crane removal crew a set of matched 5/8 inch rope chokers instead of a single sling. Having more than one sling rigged means the climber can set the next pick while the last one is still on the hook.",
+  "highlights": [
+   "Set of 5/8 inch rope crane slings",
+   "Standard (not premium) construction",
+   "Lets the climber pre-rig the next pick",
+   "Ratings shown on each sling's tag",
+   "For crane-assisted tree removal"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "5/8 in"
+   ],
+   [
+    "Type",
+    "Rope crane slings, kit"
+   ],
+   [
+    "Grade",
+    "Standard"
+   ],
+   [
+    "Contents and lengths",
+    "See listing"
+   ],
+   [
+    "Ratings",
+    "See tag on each sling"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why buy slings as a kit",
+    "p": [
+     "Crane removals run on rhythm. The operator takes one pick to the ground while the climber chokes the next piece, and that only works if you have spare slings on hand. A kit gets you a matched set in one order, so the crew is working with slings of the same diameter, construction and rating.",
+     "This is the standard grade in 5/8 inch. Individual slings in 20 and 30 foot lengths, plus premium versions, are in our <a href=\"/rigging/rigging-slings/crane-slings/\">crane slings</a> section if you want to build the set yourself."
+    ]
+   },
+   {
+    "h": "Rating and inspection",
+    "p": [
+     "Every pick needs to stay within the sling's rated load for the hitch you are using, and a choker hitch rates lower than a straight vertical pull. Know the weight of the piece, or estimate it conservatively, before it leaves the tree.",
+     "Inspect each sling before every job for cuts, abrasion, heat damage, crushed strands and damaged eyes, and remove any sling with a missing or unreadable tag. Crane work is governed by ANSI Z133, crane standards, and the operator's plan, and only trained crews should rig picks."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What does the kit include?",
+    "a": "A set of 5/8 inch standard crane slings. Check the listing for the exact number and lengths."
+   },
+   {
+    "q": "What is the difference between standard and premium?",
+    "a": "The premium slings use a higher grade construction. Compare tags and ratings before choosing."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/cmi-ropejack/",
+  "category": "/rigging/mechanical-advantage/",
+  "name": "CMI RopeJack",
+  "brand": "cmi",
+  "brand_name": "CMI",
+  "kind": "rigging-device",
+  "price": 349,
+  "keyword": "cmi ropejack",
+  "title": "CMI RopeJack Rope Puller for Tree Work",
+  "h1": "CMI RopeJack",
+  "meta": "The CMI RopeJack is a hand-operated rope puller for tensioning a pull line when felling or directing trees. How crews use it, what to check, and safety notes.",
+  "tagline": "A hand-operated rope puller for tensioning pull lines on felling jobs.",
+  "summary": "The CMI RopeJack is a hand-operated rope puller that lets one ground worker put steady, controlled tension on a pull line. Tree crews use it to help direct a lean tree or hold tension on a top while the cut is made.",
+  "highlights": [
+   "Hand-operated rope pulling device",
+   "Puts controlled tension on a pull line",
+   "One person can operate it",
+   "Works on rope, no cable needed",
+   "Carry bag sold separately"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Rope puller"
+   ],
+   [
+    "Brand",
+    "CMI"
+   ],
+   [
+    "Operation",
+    "Manual"
+   ],
+   [
+    "Rated capacity and rope range",
+    "See CMI's markings"
+   ]
+  ],
+  "body": [
+   {
+    "h": "How crews use a RopeJack",
+    "p": [
+     "Pulling a tree over by hand or with a simple 3:1 works until the tree is heavy or the lean is wrong. A rope puller lets you build tension a little at a time and hold it, so the faller can make the back cut knowing the line is already loaded. It anchors to a stump or a sling around a stem and takes up the pull line as you work it.",
+     "Because it uses the rope you already carry, it is quicker to set up than a cable come-along. CMI also sells a dedicated carry bag, and other pulling options are in our <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section."
+    ]
+   },
+   {
+    "h": "Setup and limits",
+    "p": [
+     "Anchor it to something that is stronger than the pull, keep everyone well out of the line of pull and the fall zone, and never stand in the bight of the rope. Read CMI's capacity and rope range on the device and stay inside them.",
+     "Pull lines can fail suddenly. Use rope in good condition, inspect the device for wear on the grabbing parts before each job, and make sure the crew knows the plan before the saw starts. Felling with tension lines is skilled work and should only be done by trained crews following ANSI Z133."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can the RopeJack pull a tree over on its own?",
+    "a": "It adds controlled tension to help direct a tree, but proper felling cuts and a plan still do the work. It is not a substitute for a winch on very heavy pulls."
+   },
+   {
+    "q": "What rope does it take?",
+    "a": "Check CMI's markings and instructions for the rope diameter range before you set it up."
+   }
+  ],
+  "use": [
+   "rigging",
+   "felling"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/",
+  "name": "Yale Veritas 10mm Sewn Eye-to-Eye Hitch Cord",
+  "brand": "yale-cordage",
+  "brand_name": "Yale Cordage",
+  "kind": "rope",
+  "price": 49,
+  "keyword": "yale veritas 10mm",
+  "title": "Yale Veritas 10mm Sewn Eye-to-Eye Hitch Cord",
+  "h1": "Yale Veritas 10mm Sewn Eye-to-Eye",
+  "meta": "Yale Veritas 10mm sewn eye-to-eye hitch cord is a heavier friction hitch cord for arborist climbing lines. How it compares with 8mm and when climbers choose it.",
+  "tagline": "A 10 mm sewn eye-to-eye hitch cord from Yale for friction hitches.",
+  "summary": "Yale Veritas 10mm sewn eye-to-eye hitch cord is the heavier version of Yale's Veritas cord, with a sewn eye at each end for tying friction hitches on an arborist climbing line. The extra diameter gives a smoother, less grabby hitch on many ropes and a bit more material to wear.",
+  "highlights": [
+   "10 mm hitch cord",
+   "Sewn eye at each end",
+   "Smoother feel than thinner cord on many lines",
+   "More material to wear before retirement",
+   "For MRS and SRS friction hitches"
+  ],
+  "specs": [
+   [
+    "Brand",
+    "Yale Cordage"
+   ],
+   [
+    "Diameter",
+    "10 mm"
+   ],
+   [
+    "Terminations",
+    "Sewn eye at each end"
+   ],
+   [
+    "Use",
+    "Friction hitch cord"
+   ]
+  ],
+  "body": [
+   {
+    "h": "10mm vs. 8mm Veritas",
+    "p": [
+     "Veritas also comes in 8 mm. Thinner cord bites harder on the climbing line and suits larger or slicker ropes, while 10 mm cord grips less aggressively, tends with less chatter, and gives more wear life before glazing. Many climbers on 11 to 13 mm lines prefer the 10 mm because it releases more smoothly when they descend.",
+     "Hitch behavior depends on the pairing, so match the cord to your climbing line and test it low to the ground. Compare lengths and diameters in our <a href=\"/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/\">eye-and-eye prusiks</a>."
+    ]
+   },
+   {
+    "h": "Wear and retirement",
+    "p": [
+     "Hitch cord is the hardest-working part of a moving-rope system. Check it every climb for glazing, stiff or melted spots, cuts, and worn stitching at the sewn eyes. Replace it at the first sign of heat damage rather than waiting.",
+     "Tie the hitch the way you were trained, dress and set it before you weight it, and always back-test it before leaving the ground. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will 10mm cord grip my rope?",
+    "a": "It depends on your climbing line's diameter and cover. Test the hitch low and add a wrap if it slips."
+   },
+   {
+    "q": "What hitches can I tie with it?",
+    "a": "Common arborist friction hitches such as the Distel, Valdotain Tresse and Michoacan, as taught in your training."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/shop-all/r-easy-rks-30-gear-bag-pre-order-item/",
+  "category": "/climbing/climbing-gear/gear-storage/gear-bags/",
+  "name": "R-Easy RKS 30 Gear Bag",
+  "brand": "r-easy",
+  "brand_name": "R-Easy",
+  "kind": "case-bag",
+  "price": 79,
+  "keyword": "r-easy rks 30 gear bag",
+  "title": "R-Easy RKS 30 Gear Bag for Climbing Kit",
+  "h1": "R-Easy RKS 30 Gear Bag",
+  "meta": "The R-Easy RKS 30 gear bag keeps a climbing kit together between jobs. What a 30-size bag holds, how arborists pack it, and care tips for keeping gear dry.",
+  "tagline": "A compact gear bag for keeping a climbing kit together and off the truck floor.",
+  "summary": "The R-Easy RKS 30 gear bag is a compact bag for carrying a climbing kit from the truck to the tree. The 30 size suits a personal kit of hardware, hitch cords and a short rope rather than a full crew load.",
+  "highlights": [
+   "Compact size for a personal climbing kit",
+   "Keeps hardware and soft goods together",
+   "Easy carry from truck to tree",
+   "Helps protect gear from grit and chemicals"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Gear bag"
+   ],
+   [
+    "Brand",
+    "R-Easy"
+   ],
+   [
+    "Size",
+    "RKS 30 (see listing for volume)"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What fits in a 30-size bag",
+    "p": [
+     "A bag in this size holds the everyday kit: a rope wrench or mechanical device, a few carabiners, hitch cords, a pulley, a lanyard and maybe a short climbing line. It is not meant for a 200 foot rigging rope or a full saddle with everything clipped on. Many climbers keep one small bag for hardware and a separate rope bag for lines.",
+     "If you need more room, look at larger options in our <a href=\"/climbing/climbing-gear/gear-storage/gear-bags/\">gear bags</a> section. This listing was once a pre-order item, so check current availability before you plan around it."
+    ]
+   },
+   {
+    "h": "Keeping gear in good shape",
+    "p": [
+     "The real job of a gear bag is to keep life-support gear away from fuel, bar oil, battery acid and sharp tools in the truck. Pack soft goods so they are not crushed under hardware, and never store a wet rope or harness zipped in a bag for days.",
+     "Empty the bag regularly, shake out grit and sawdust, and let it dry in the shade. Inspect your gear when you unpack it, not just when you climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is the RKS 30 big enough for a climbing rope?",
+    "a": "It may hold a short line with a small hardware kit. For long ropes, use a dedicated rope bag."
+   },
+   {
+    "q": "Is it still a pre-order item?",
+    "a": "Availability changes. Use the Check price button to see current stock."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/",
+  "name": "KM III Max Black Lanyard (Without Hardware)",
+  "brand": "pmi",
+  "brand_name": "PMI",
+  "kind": "lanyard",
+  "price": 69,
+  "keyword": "kmiii max lanyard",
+  "title": "KM III Max Black Lanyard Without Hardware",
+  "h1": "KM III Max Black Lanyard (Without Hardware)",
+  "meta": "The KM III Max black lanyard without hardware is a rope-only positioning lanyard for climbers who fit their own adjuster and snaps. How to set it up and inspect it.",
+  "tagline": "A rope-only KM III Max lanyard for climbers who choose their own hardware.",
+  "summary": "The KM III Max black lanyard without hardware is a length of KM III Max static kernmantle rope made up as a positioning lanyard, supplied without snaps or an adjuster. It is for climbers who already own the hardware they like, or who are replacing a worn lanyard rope on an existing 2-in-1 setup.",
+  "highlights": [
+   "KM III Max static kernmantle rope",
+   "Black colorway",
+   "Supplied rope only, no hardware",
+   "Good for rebuilding a worn 2-in-1 lanyard",
+   "Firm, easy-to-grip rope for positioning"
+  ],
+  "specs": [
+   [
+    "Rope",
+    "KM III Max"
+   ],
+   [
+    "Color",
+    "Black"
+   ],
+   [
+    "Construction",
+    "Static kernmantle"
+   ],
+   [
+    "Hardware",
+    "Not included"
+   ],
+   [
+    "Length",
+    "See listing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why buy a lanyard without hardware",
+    "p": [
+     "Lanyard rope wears out long before a good adjuster or snap does. Buying the rope alone lets you rebuild a 2-in-1 or adjustable lanyard around hardware you already trust, and it lets you choose your own adjuster, carabiners or snaps if the kit options do not suit how you climb.",
+     "The KM III Max rope is a firm static kernmantle line that holds up well against bark and is easy to grip. If you would rather buy it ready to go, see the complete setups in our <a href=\"/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/\">rope lanyards</a>."
+    ]
+   },
+   {
+    "h": "Setting it up safely",
+    "p": [
+     "Make sure the rope diameter suits the adjuster or hitch you plan to use, and that every connector is rated for life support. Terminations must be made by a qualified person or follow the manufacturer's instructions exactly. If you are unsure, buy a complete lanyard instead.",
+     "Inspect the rope before each climb for cuts, glazed or stiff spots, and core damage, and retire it if the cover is cut through or it has been chainsaw-nicked. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What hardware do I need to make it usable?",
+    "a": "Typically an adjuster or friction hitch setup and rated connectors at each end. Follow the hardware maker's instructions for compatibility."
+   },
+   {
+    "q": "Is KM III Max the same rope as standard KM III?",
+    "a": "They are related ropes in the same family. Check the listing for diameter before matching hardware."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "name": "1/2\" Wire Core Flipline Kit",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "lanyard",
+  "price": 139,
+  "keyword": "1/2 wire core flipline kit",
+  "title": "1/2 in Wire Core Flipline Kit for Spur Climbing",
+  "h1": "1/2\" Wire Core Flipline Kit",
+  "meta": "The 1/2 in wire core flipline kit is a ready-to-use positioning setup for spur climbing and removals, with a steel core for cut resistance. What it covers and checks.",
+  "tagline": "A ready-to-climb 1/2 inch wire core flipline with adjuster and hardware.",
+  "summary": "This 1/2 wire core flipline kit is a single-leg positioning lanyard built on half-inch rope with a steel core, supplied as a kit with the adjuster and hardware. It is the classic setup for spur climbing on removals, where the saw works close to the lanyard.",
+  "highlights": [
+   "1/2 inch rope with steel wire core",
+   "Single-leg flipline, supplied as a kit",
+   "Adjuster and hardware included (see listing)",
+   "Cut resistance for removal work",
+   "Solid grip in the adjuster"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "1/2 in"
+   ],
+   [
+    "Core",
+    "Steel wire core"
+   ],
+   [
+    "Type",
+    "Single-leg flipline kit"
+   ],
+   [
+    "Includes",
+    "Flipline, adjuster and hardware (see listing)"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Single-leg kit vs. 2-in-1",
+    "p": [
+     "Do not confuse it with the 2-in-1 wire core kit, which has two legs so you can stay tied in while passing limbs. This is the single-leg version: one wire core flipline with its adjuster and hardware. It is simpler, lighter on the saddle, and a common choice for straight spar work or as a second lanyard alongside a rope one.",
+     "If you already own an adjuster, the flipline alone is also sold separately. Compare complete setups in our <a href=\"/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/\">lanyard kits</a>."
+    ]
+   },
+   {
+    "h": "What the wire core does and does not do",
+    "p": [
+     "The steel core adds cut resistance, which helps when you are cutting a top or face close to your lanyard. It is not cut-proof. A running chain can still cut through, so keep the saw clear of the lanyard and make sure the bar is never near it on a cut.",
+     "Wire core lanyards must never be used near energized lines. Inspect the cover and core for kinks, broken wires, cuts and worn eyes before every climb. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a wire core flipline chainsaw-proof?",
+    "a": "No. The steel core resists cuts, but a chainsaw can still sever it. Keep the saw away from your lanyard."
+   },
+   {
+    "q": "Can I use it near power lines?",
+    "a": "No. Wire core lanyards conduct electricity and must never be used near energized conductors."
+   }
+  ],
+  "use": [
+   "climbing",
+   "felling"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/",
+  "category": "/safety/traffic-control/",
+  "name": "Spring-Loaded Stand for Roll-Up Traffic Signs",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "traffic",
+  "price": 99,
+  "keyword": "spring loaded sign stand",
+  "title": "Spring-Loaded Sign Stand for Roll-Up Traffic Signs",
+  "h1": "Spring-Loaded Stand for Roll-Up Traffic Signs",
+  "meta": "A spring-loaded sign stand holds roll-up traffic signs upright in wind on roadside tree jobs. How it works, setup tips, and how it fits into your work zone kit.",
+  "tagline": "A folding, spring-loaded stand that keeps roll-up work zone signs upright.",
+  "summary": "A spring-loaded sign stand holds a roll-up traffic sign upright on a roadside tree job, and the springs let the sign flex in gusts and passing traffic instead of blowing over. It folds flat so it rides in the truck with the signs.",
+  "highlights": [
+   "Holds roll-up work zone signs",
+   "Springs let the sign flex in wind",
+   "Folding legs for compact storage",
+   "Sets up quickly on pavement or shoulder",
+   "Pairs with standard roll-up signs"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Spring-loaded sign stand"
+   ],
+   [
+    "Use",
+    "Roll-up traffic signs"
+   ],
+   [
+    "Storage",
+    "Folds flat"
+   ],
+   [
+    "Sign compatibility",
+    "See listing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why the springs matter",
+    "p": [
+     "A rigid stand catches every gust and every truck that passes close, and a sign lying in the road is no help to anyone. Spring-loaded stands let the sign tip back and return on its own, so it stays readable through a windy afternoon. Most have adjustable legs to sit level on a crowned road or soft shoulder.",
+     "Pair the stand with signs and cones from our <a href=\"/safety/traffic-control/\">traffic control</a> section to build a complete roadside kit."
+    ]
+   },
+   {
+    "h": "Setting up a work zone",
+    "p": [
+     "Tree work beside a road needs advance warning so drivers slow down before they reach the chipper and the drop zone. Place signs far enough ahead for the road speed, follow the MUTCD and any local or permit requirements, and use trained flaggers where traffic must be stopped.",
+     "Check the stand's springs, pins and leg locks before each job, and keep the sign face clean so it stays reflective. Take signs down as soon as the work zone is cleared so drivers trust them when they see them."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Does it come with a sign?",
+    "a": "The stand is sold on its own. Check the listing for which roll-up sign sizes it accepts."
+   },
+   {
+    "q": "How far ahead should I place the sign?",
+    "a": "It depends on road speed and conditions. Follow the MUTCD, your permit, and your company's traffic control plan."
+   }
+  ],
+  "use": [
+   "safety",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "name": "All Gear Copperhead 11.7mm Climbing Rope, 200 ft",
+  "brand": "all-gear",
+  "brand_name": "All Gear",
+  "kind": "rope",
+  "price": 249,
+  "keyword": "all gear copperhead climbing rope",
+  "title": "All Gear Copperhead 11.7mm Climbing Rope, 200 ft",
+  "h1": "All Gear Copperhead 11.7mm Climbing Rope (200 ft)",
+  "meta": "All Gear Copperhead climbing rope in 11.7mm x 200 ft is a 24-strand arborist line for MRS and SRS. Diameter, length, device fit and inspection notes for climbers.",
+  "tagline": "An 11.7 mm, 24-strand arborist climbing line in a 200 foot length.",
+  "summary": "All Gear Copperhead climbing rope is an 11.7 mm 24-strand arborist climbing line, and this 200 foot length suits tall trees and climbers who want rope to spare for SRS. The 24-strand cover gives a smooth, round line that works with friction hitches and mechanical devices.",
+  "highlights": [
+   "11.7 mm 24-strand arborist climbing line",
+   "200 foot length for tall trees",
+   "Round, firm cover for hitches and devices",
+   "Works for MRS and SRS",
+   "Strength and standard info on the tag"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "11.7 mm"
+   ],
+   [
+    "Length",
+    "200 ft"
+   ],
+   [
+    "Construction",
+    "24-strand"
+   ],
+   [
+    "Brand",
+    "All Gear"
+   ],
+   [
+    "Use",
+    "Arborist climbing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why 200 feet",
+    "p": [
+     "A 150 foot line covers most trees in MRS, but SRS uses rope from the anchor to the ground, so tall trees and basal anchors eat length fast. A 200 foot Copperhead gives you room for a high tie-in, a long redirect, or a canopy anchor on a big tree, with enough tail left to stay safe. You can always cut a damaged section and still have a usable line.",
+     "Shorter lengths and other 24-strand lines are in our <a href=\"/rope/climbing-rope/24-strand-climbing-rope/\">24-strand climbing rope</a> section."
+    ]
+   },
+   {
+    "h": "Device fit and care",
+    "p": [
+     "At 11.7 mm, Copperhead sits in the range most arborist devices and rope wrenches accept, but always check the device maker's rope list before pairing them. Test your hitch or device low to the ground on a new rope, because a fresh cover can run differently once it breaks in.",
+     "Keep the rope in a bag away from fuel, bar oil and battery acid, wash it as All Gear recommends, and inspect it end to end for cuts, glazing, and core shots. Retire it if in doubt. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is Copperhead good for SRS?",
+    "a": "Yes, at 11.7 mm it suits many SRS devices. Check the device maker's approved rope list first."
+   },
+   {
+    "q": "Should I buy 150 ft or 200 ft?",
+    "a": "Choose 200 ft for tall trees, SRS with basal anchors, or if you want length to spare. 150 ft suits most MRS climbing."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/other-gear/soft-anchor-webbing-sling/",
+  "category": "/rigging/rigging-slings/",
+  "name": "Soft Anchor Webbing Sling",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "sling",
+  "price": 39,
+  "keyword": "soft anchor webbing sling",
+  "title": "Soft Anchor Webbing Sling for Tree Anchors",
+  "h1": "Soft Anchor Webbing Sling",
+  "meta": "A soft anchor webbing sling wraps a trunk or limb to make an anchor for a lowering device, block or redirect. Webbing vs. rope slings, uses and inspection tips.",
+  "tagline": "A flat webbing sling for building soft anchors around stems and limbs.",
+  "summary": "A soft anchor webbing sling wraps around a trunk or limb to give you an anchor point for a block, pulley or lowering device without metal on the bark. The flat webbing spreads the load and packs down small.",
+  "highlights": [
+   "Flat webbing spreads load on the bark",
+   "Makes anchors for blocks, pulleys and devices",
+   "Light and packs small",
+   "Rating on the sewn tag",
+   "Webbing alternative to rope soft anchor slings"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Webbing anchor sling"
+   ],
+   [
+    "Material",
+    "Webbing"
+   ],
+   [
+    "Length and rating",
+    "See tag"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Webbing vs. rope soft anchors",
+    "p": [
+     "Soft anchor slings also come in rope, which is a different product. The webbing version is flatter and lighter, lies smoothly against the bark, and is easy to stuff in a pocket or bag. Rope slings hold up better to abrasion and are easier to adjust on the stem, so many crews carry both.",
+     "Use a webbing sling to anchor a lowering device at the base, hang a pulley for a redirect, or set a block on a stem. Rope and ring options are in our <a href=\"/rigging/rigging-slings/\">rigging slings</a> section."
+    ]
+   },
+   {
+    "h": "Rating and wear",
+    "p": [
+     "Check the tag for the sling's rated strength and remember that the hitch you use changes it: a choker or basket hitch rates differently from a straight pull. Keep loads well under the rating, especially in rigging where loads are dynamic.",
+     "Webbing cuts and abrades more easily than rope, so pad it over sharp bark edges and keep it away from the saw. Retire it if it is cut, frayed, melted, stiff with chemicals, or if the tag is gone. If you use it for a climbing anchor, it must be rated for life support. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use it for a climbing anchor?",
+    "a": "Only if the sling is rated for life support and you are trained to build that anchor. Check the tag and the maker's instructions."
+   },
+   {
+    "q": "Is webbing as durable as a rope sling?",
+    "a": "Webbing is lighter but less resistant to cuts and abrasion. Pad it on rough bark and inspect it often."
+   }
+  ],
+  "use": [
+   "rigging",
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/safety/first-aid/blood-stopper-kit/",
+  "category": "/safety/first-aid/",
+  "name": "Buckingham Blood Stopper Kit",
+  "brand": "buckingham",
+  "brand_name": "Buckingham",
+  "kind": "first-aid",
+  "price": 45,
+  "keyword": "blood stopper kit",
+  "title": "Blood Stopper Kit for Chainsaw Cuts on the Job",
+  "h1": "Blood Stopper Kit",
+  "meta": "A blood stopper kit puts bleeding control supplies on your saddle or belt where you can reach them fast after a chainsaw cut. What it is for and how to carry it.",
+  "tagline": "A compact bleeding control kit that rides on your saddle or belt.",
+  "summary": "A blood stopper kit puts bleeding control supplies on your body, in a pouch that clips to a climbing saddle or work belt. Chainsaw cuts bleed fast, and a kit within reach can save the minutes it takes to get to the truck.",
+  "highlights": [
+   "Compact bleeding control pouch",
+   "Rides on a saddle or belt",
+   "Reachable with one hand",
+   "For climbers and ground workers",
+   "Pairs with first aid training"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Bleeding control kit with pouch"
+   ],
+   [
+    "Brand",
+    "Buckingham"
+   ],
+   [
+    "Contents",
+    "See listing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why carry it on your body",
+    "p": [
+     "A deep cut from a chainsaw or hand saw can bleed dangerously in minutes. A kit in the truck is not much use to a climber 60 feet up or a ground worker at the far end of a lot. Carrying the kit on your saddle or belt means you, or the person next to you, can start bleeding control right away.",
+     "Buckingham also sells the kit in green, which is the same idea in another color. See trauma kits and larger first aid supplies in our <a href=\"/safety/first-aid/\">first aid</a> section."
+    ]
+   },
+   {
+    "h": "Training and upkeep",
+    "p": [
+     "Supplies only help if someone knows how to use them. Make sure everyone on the crew has current first aid training that covers severe bleeding, and that the crew has a plan for aerial rescue and calling for help.",
+     "Check the kit regularly. Replace anything that is used, wet, torn, or past its date, and make sure the pouch closure still holds. Keep the kit in the same place on every saddle so anyone can find it fast."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is this a replacement for a full first aid kit?",
+    "a": "No. It is for immediate bleeding control on your body. Keep a full first aid kit in the truck too."
+   },
+   {
+    "q": "Do I need training to use it?",
+    "a": "Yes. Get first aid training that covers severe bleeding so you can use the supplies correctly."
+   }
+  ],
+  "use": [
+   "safety"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/",
+  "category": "/cutting-and-pruning/blades/",
+  "name": "Silky Gomboy 210mm Medium Teeth Replacement Blade",
+  "brand": "silky",
+  "brand_name": "Silky",
+  "kind": "hand-saw",
+  "price": 29,
+  "keyword": "silky gomboy 210mm blade",
+  "title": "Silky Gomboy 210mm Medium Teeth Replacement Blade",
+  "h1": "Silky Gomboy 210mm Medium Teeth Blade (Blade Only)",
+  "meta": "The Silky Gomboy 210mm medium teeth replacement blade fits the Gomboy 210 folding saw. Tooth choice, when to swap the blade, and how to fit it with the right screws.",
+  "tagline": "A 210 mm medium-tooth replacement blade for the Silky Gomboy folding saw.",
+  "summary": "The Silky Gomboy 210mm medium teeth blade is a replacement blade for the Gomboy 210 folding saw, sold without the handle. Medium teeth are the all-round choice for pruning live wood in small to mid-size limbs.",
+  "highlights": [
+   "Fits the Silky Gomboy 210 folding saw",
+   "210 mm blade length",
+   "Medium teeth for general pruning",
+   "Blade only, no handle",
+   "Swap a dull blade instead of buying a new saw"
+  ],
+  "specs": [
+   [
+    "Blade length",
+    "210 mm"
+   ],
+   [
+    "Teeth",
+    "Medium"
+   ],
+   [
+    "Fits",
+    "Silky Gomboy 210"
+   ],
+   [
+    "Sold as",
+    "Blade only"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Choosing medium teeth",
+    "p": [
+     "Silky makes Gomboy blades with different tooth sizes. Medium teeth cut a bit slower than large teeth but leave a cleaner face and feel smoother in green wood, which is why many climbers keep them on a pruning saw. Large teeth suit faster cutting in bigger limbs, and fine teeth suit small, precise cuts.",
+     "Make sure the blade length matches your handle. A 210 mm blade fits only the Gomboy 210 handle. Other Silky blades are in our <a href=\"/cutting-and-pruning/blades/\">replacement blades</a> section."
+    ]
+   },
+   {
+    "h": "When and how to replace it",
+    "p": [
+     "Silky blades use hardened, impulse-hardened teeth that are not designed to be filed, so when the saw starts to push instead of pull through the cut, or a few teeth are bent or missing, it is time for a new blade. Swapping the blade costs far less than a new saw.",
+     "Fold the saw, remove the pivot and lock screws, fit the new blade, and tighten the screws so the blade locks firmly open with no play. Replace worn screws if needed. Handle the blade with gloves, because new Silky teeth are very sharp."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will this fit a Gomboy 240 or 300?",
+    "a": "No. Each Gomboy size has its own blade. This one fits the 210 mm handle only."
+   },
+   {
+    "q": "Can I sharpen the teeth?",
+    "a": "Silky teeth are impulse-hardened and not meant to be filed. Replace the blade when it gets dull."
+   }
+  ],
+  "use": [
+   "pruning",
+   "maintenance"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/",
+  "category": "/cutting-and-pruning/hand-saws-and-scabbards/",
+  "name": "Fanno 13\" Fixed Blade Orchard Saw",
+  "brand": "fanno",
+  "brand_name": "Fanno",
+  "kind": "hand-saw",
+  "price": 45,
+  "keyword": "fanno 13 orchard saw",
+  "title": "Fanno 13 in Fixed Blade Orchard Saw for Pruning",
+  "h1": "Fanno 13\" Fixed Blade Orchard Saw",
+  "meta": "The Fanno 13 in fixed blade orchard saw is a pull-stroke pruning saw for orchards, landscapes and climbers. Blade length, scabbard use, and care tips for long life.",
+  "tagline": "A 13 inch fixed-blade pruning saw for orchard and tree work.",
+  "summary": "The Fanno 13 inch fixed blade orchard saw is a straightforward pull-stroke pruning saw with a 13 inch blade fixed to the handle. It is built for steady cutting in fruit trees, ornamentals and climbing work where a folding saw is too small.",
+  "highlights": [
+   "13 inch fixed blade",
+   "Pull-stroke cutting",
+   "Rides in a scabbard on the belt or saddle",
+   "Suits orchard and landscape pruning",
+   "Simple, durable design"
+  ],
+  "specs": [
+   [
+    "Blade length",
+    "13 in"
+   ],
+   [
+    "Blade type",
+    "Fixed"
+   ],
+   [
+    "Brand",
+    "Fanno"
+   ],
+   [
+    "Cutting stroke",
+    "Pull"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Fixed blade vs. folding",
+    "p": [
+     "A folding saw is handy in a pocket, but a fixed blade saw is stiffer, quicker to draw from a scabbard, and handles longer cuts without flexing at the pivot. At 13 inches, this Fanno has enough reach for limbs that are past folding saw size but not big enough to justify a chainsaw.",
+     "It needs a scabbard, so plan on one if you do not already have one that fits. Scabbards and other pruning saws are in our <a href=\"/cutting-and-pruning/hand-saws-and-scabbards/\">hand saws and scabbards</a> section."
+    ]
+   },
+   {
+    "h": "Pruning and care",
+    "p": [
+     "Let the pull stroke do the work and keep the blade straight in the cut so it does not bind. Make a small undercut on heavier limbs to prevent bark tearing, then finish outside the branch collar.",
+     "Wipe sap off the blade after use and keep it lightly oiled to prevent rust. When the teeth get dull or damaged, replace the blade rather than forcing the cut. When climbing, keep the saw in its scabbard and tethered or secured, and keep your hands and lanyard clear of the cut."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is a 13 inch saw too big for climbing?",
+    "a": "Many climbers carry a 13 inch fixed saw on their saddle. It is a common middle size between small folders and long pruning saws."
+   },
+   {
+    "q": "Does it come with a scabbard?",
+    "a": "Check the listing. Many fixed blade saws are sold with or without a scabbard."
+   }
+  ],
+  "use": [
+   "pruning",
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/",
+  "category": "/climbing/saddles-and-harnesses/",
+  "name": "Weaver WLC-160 Saddle with 2\" Nylon Leg Straps",
+  "brand": "weaver",
+  "brand_name": "Weaver",
+  "kind": "saddle",
+  "price": 189,
+  "keyword": "weaver wlc-160 saddle",
+  "title": "Weaver WLC-160 Saddle with 2 in Nylon Leg Straps",
+  "h1": "Weaver WLC-160 Saddle with 2\" Nylon Leg Straps",
+  "meta": "The Weaver WLC-160 saddle with 2 in nylon leg straps is a basic tree climbing saddle for new climbers and spur work. Fit, leg strap style and inspection tips.",
+  "tagline": "A basic Weaver tree climbing saddle fitted with 2 inch nylon leg straps.",
+  "summary": "The Weaver WLC-160 saddle with 2 inch nylon leg straps is a basic tree climbing saddle, set up here with nylon webbing leg straps instead of padded leg loops. It is a simple, affordable saddle for new climbers, occasional climbers and spur work.",
+  "highlights": [
+   "Basic Weaver climbing saddle",
+   "2 inch nylon leg straps",
+   "Simple, affordable design",
+   "Suits spur climbing and occasional use",
+   "Sized to fit, check the size chart"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Basic climbing saddle"
+   ],
+   [
+    "Brand",
+    "Weaver"
+   ],
+   [
+    "Model",
+    "WLC-160"
+   ],
+   [
+    "Leg straps",
+    "2 in nylon"
+   ],
+   [
+    "Sizing",
+    "See Weaver's size chart"
+   ]
+  ],
+  "body": [
+   {
+    "h": "What the leg straps change",
+    "p": [
+     "The WLC-160 is offered with different leg strap options. This version uses 2 inch nylon straps, which are light, simple and easy to adjust. They are not as plush as padded leg loops, so climbers who spend long hours hanging in the saddle often prefer a padded setup, while spur climbers and occasional users find the nylon straps perfectly fine.",
+     "If you want more padding, more attachment points or a modern bridge, compare it with other options in our <a href=\"/climbing/saddles-and-harnesses/\">saddles and harnesses</a> section."
+    ]
+   },
+   {
+    "h": "Fit and inspection",
+    "p": [
+     "Size the saddle to your waist, not your pant size, and adjust it so it sits snug on your hips and cannot slide over them when you lean back. Set the leg straps so they support you without cutting in.",
+     "Inspect the saddle before every climb for cuts, abrasion, worn stitching, damaged D-rings and buckles that do not lock. Retire it after a significant fall or chemical exposure. Saddles are life-support gear: use must follow ANSI Z133, Weaver's instructions, and your training."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is the WLC-160 a good first saddle?",
+    "a": "It is a simple, affordable saddle that suits new and occasional climbers. Full-time climbers often move to a more padded saddle later."
+   },
+   {
+    "q": "How do I pick the size?",
+    "a": "Measure your waist where the saddle will sit and use Weaver's size chart."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "beginner"
+ },
+ {
+  "path": "/hardware/notch-ce-quickie/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "name": "Notch CE Quickie",
+  "brand": "notch-equipment",
+  "brand_name": "Notch Equipment",
+  "kind": "carabiner",
+  "price": 32,
+  "keyword": "notch ce quickie",
+  "title": "Notch CE Quickie Connector for Climbing Setups",
+  "h1": "Notch CE Quickie",
+  "meta": "The Notch CE Quickie is a compact connector for low-profile links in a tree climbing setup. How it differs from the V3 Quickie, where climbers use it, and checks.",
+  "tagline": "A compact Notch connector for low-profile links in a climbing setup.",
+  "summary": "The Notch CE Quickie is a compact connector for making quick, low-profile links in a tree climbing setup, in the CE-marked version named in the product title. Climbers use it where a full carabiner is bulky and they want a link that stays in place.",
+  "highlights": [
+   "Compact, low-profile connector",
+   "CE version of the Notch Quickie",
+   "Stays in place where carabiners flop around",
+   "Small enough to leave rigged",
+   "Ratings marked on the part"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Connector hardware"
+   ],
+   [
+    "Brand",
+    "Notch Equipment"
+   ],
+   [
+    "Version",
+    "CE"
+   ],
+   [
+    "Ratings",
+    "Marked on the part"
+   ]
+  ],
+  "body": [
+   {
+    "h": "CE Quickie vs. V3",
+    "p": [
+     "Notch has made more than one version of the Quickie, including the V3. This is the CE version. Before you replace one in an existing setup, check the markings and dimensions on the part you have, since versions can differ in size, gate design and markings.",
+     "Quickies are popular for semi-permanent links such as attaching a device or pulley to a bridge, where you do not unclip often. Other small connectors are in our <a href=\"/climbing/climbing-gear/carabiners-and-hardware/hardware/\">carabiners and hardware</a> section."
+    ]
+   },
+   {
+    "h": "Using it correctly",
+    "p": [
+     "A quick-link style connector is only full strength when it is closed and tightened as the maker directs, so treat it as a semi-permanent link, not something to open and close all day. Load it along its main axis and keep it from being cross-loaded or levered against a device.",
+     "Inspect it before each climb for cracks, grooves, burrs and a closure that will not seat fully, and retire it after a hard drop. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use it instead of a carabiner everywhere?",
+    "a": "No. It suits semi-permanent links. Use locking carabiners where you clip and unclip often."
+   },
+   {
+    "q": "Is the CE version different from the V3?",
+    "a": "They are different versions of the Quickie. Check the markings and Notch's information before swapping one for the other."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/",
+  "category": "/jobsite/stump-grinding/",
+  "name": "Greenteeth 900 Series Pocket (Straight)",
+  "brand": "green-manufacturing",
+  "brand_name": "Green Manufacturing",
+  "kind": "parts",
+  "price": 29,
+  "keyword": "greenteeth 900 series pocket",
+  "title": "Greenteeth 900 Series Straight Pocket for Stump Grinders",
+  "h1": "Greenteeth 900 Series Pocket (Straight)",
+  "meta": "The Greenteeth 900 Series straight pocket is a replacement tooth pocket for cutter wheels using the 900 Series system. When to replace pockets and how to keep them tight.",
+  "tagline": "A straight replacement pocket for Greenteeth 900 Series cutter wheels.",
+  "summary": "The Greenteeth 900 Series straight pocket is a replacement pocket for stump grinder cutter wheels set up with the 900 Series system. The pocket holds the tooth to the wheel, so a worn or damaged pocket has to be replaced to keep the grinder cutting cleanly.",
+  "highlights": [
+   "Fits Greenteeth 900 Series wheels",
+   "Straight pocket style",
+   "Replaces worn or damaged pockets",
+   "Keeps teeth seated and aligned",
+   "Sold as a single pocket"
+  ],
+  "specs": [
+   [
+    "System",
+    "Greenteeth 900 Series"
+   ],
+   [
+    "Style",
+    "Straight pocket"
+   ],
+   [
+    "Use",
+    "Stump grinder cutter wheels"
+   ],
+   [
+    "Sold as",
+    "Single pocket"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Match the series and pocket style",
+    "p": [
+     "Greenteeth makes several tooth systems, and a 700 Series pocket will not fit a 900 Series wheel. Check the series on your wheel and teeth before you order. Within a series, pockets come in straight and angled styles that set where each tooth sits across the cut, so replace a straight pocket with a straight pocket in the same position on the wheel.",
+     "Matching 900 Series teeth and other grinder parts are in our <a href=\"/jobsite/stump-grinding/\">stump grinding</a> section."
+    ]
+   },
+   {
+    "h": "When to replace a pocket",
+    "p": [
+     "Pockets take a beating from rocks, roots and soil. Replace one when it is cracked, worn thin, bent, or no longer holds the tooth tight. A loose pocket lets the tooth shift, which wears the wheel, causes vibration and can throw parts.",
+     "Shut the machine down, remove the key, and let the wheel stop before you work on it. Torque the bolts to the manufacturer's spec, check them again after the first few stumps, and always wear eye and face protection when grinding."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will a 900 Series pocket fit a 700 Series wheel?",
+    "a": "No. Each Greenteeth series uses its own pockets and teeth. Match the series on your wheel."
+   },
+   {
+    "q": "What is the difference between straight and angled pockets?",
+    "a": "They set the tooth at different positions across the cut. Replace a pocket with the same style in the same spot on the wheel."
+   }
+  ],
+  "use": [
+   "ground",
+   "maintenance"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "name": "Teufelberger Safety Blue Hi-Vee Climbing Rope",
+  "brand": "teufelberger",
+  "brand_name": "Teufelberger",
+  "kind": "rope",
+  "price": 199,
+  "keyword": "safety blue hi-vee",
+  "title": "Teufelberger Safety Blue Hi-Vee Climbing Rope",
+  "h1": "Teufelberger Safety Blue Hi-Vee",
+  "meta": "Teufelberger Safety Blue Hi-Vee is a classic 16-strand arborist climbing rope with a hi-vis cover. Why climbers still pick it, hitch fit, and inspection advice.",
+  "tagline": "A classic high-visibility 16-strand climbing rope for moving-rope climbing.",
+  "summary": "Teufelberger Safety Blue Hi-Vee is a classic 16-strand arborist climbing rope with a high-visibility cover, originally from New England Ropes, now part of Teufelberger. It is a firm, durable line that has been a standard for moving-rope climbing with friction hitches for years.",
+  "highlights": [
+   "Classic 16-strand arborist climbing line",
+   "High-visibility cover",
+   "Firm, durable feel",
+   "Works well with traditional friction hitches",
+   "Sold in several lengths"
+  ],
+  "specs": [
+   [
+    "Construction",
+    "16-strand"
+   ],
+   [
+    "Diameter",
+    "1/2 in"
+   ],
+   [
+    "Brand",
+    "Teufelberger (New England Ropes)"
+   ],
+   [
+    "Use",
+    "Arborist climbing"
+   ],
+   [
+    "Length",
+    "See listing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Why climbers still pick Hi-Vee",
+    "p": [
+     "Safety Blue Hi-Vee is a traditional 16-strand rope: firm, round and hard-wearing. It holds its shape in a friction hitch, resists bark abrasion, and stays visible on the ground and in the canopy. Climbers who learned on a 16-strand line often come back to it for moving-rope work.",
+     "Being 1/2 inch, it is thicker than many modern 11 to 12 mm lines, so it suits hitches and devices rated for that diameter. Compare it with other lines in our <a href=\"/rope/climbing-rope/16-strand-climbing-rope/\">16-strand climbing rope</a> section."
+    ]
+   },
+   {
+    "h": "Hitch cord pairing and care",
+    "p": [
+     "Pair the rope with a hitch cord the maker approves for that diameter and test the hitch low before climbing. A new rope runs stiffer and can feel different until the cover breaks in.",
+     "Keep it in a bag, away from fuel, bar oil and chemicals, and inspect it end to end before every climb for cuts, glazing, flat spots and pulled strands. Never use a climbing line for rigging. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is Safety Blue Hi-Vee good for SRS?",
+    "a": "It is mainly a moving-rope line. Check your SRS device maker's approved rope list before using it for SRS."
+   },
+   {
+    "q": "Who makes Safety Blue Hi-Vee?",
+    "a": "It was developed by New England Ropes, which is part of Teufelberger."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "name": "Samson V-Licious Rockies 11.4mm Climbing Rope, 150 ft",
+  "brand": "samson-rope",
+  "brand_name": "Samson Rope",
+  "kind": "rope",
+  "price": 229,
+  "keyword": "samson v-licious climbing rope",
+  "title": "Samson V-Licious Rockies 11.4mm Climbing Rope, 150 ft",
+  "h1": "Samson V-Licious Rockies 11.4mm (150 ft)",
+  "meta": "Samson V-Licious climbing rope in the Rockies color, 11.4mm x 150 ft, is a 24-strand arborist line for MRS and SRS. Diameter, device fit and inspection notes.",
+  "tagline": "An 11.4 mm, 24-strand Samson climbing line in the Rockies color, 150 ft.",
+  "summary": "Samson V-Licious climbing rope is a 24-strand arborist climbing line, and this listing is the Rockies colorway in 11.4 mm by 150 feet. The slimmer diameter keeps it light in the bag and smooth in many mechanical devices.",
+  "highlights": [
+   "11.4 mm 24-strand climbing line",
+   "Rockies colorway",
+   "150 foot length for most trees",
+   "Light and smooth in devices",
+   "Used for MRS and SRS"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "11.4 mm"
+   ],
+   [
+    "Length",
+    "150 ft"
+   ],
+   [
+    "Construction",
+    "24-strand"
+   ],
+   [
+    "Brand",
+    "Samson Rope"
+   ],
+   [
+    "Color",
+    "Rockies"
+   ]
+  ],
+  "body": [
+   {
+    "h": "The 11.4mm size and 150 foot length",
+    "p": [
+     "V-Licious comes in more than one diameter and color, so check the listing before you reorder. At 11.4 mm this is the slimmer version, which saves weight and runs smoothly through many rope wrenches and SRS devices. A slimmer line can feel grabbier in some friction hitches, so match your hitch cord to it.",
+     "150 feet covers most trees climbed with a moving-rope system and many SRS climbs. If you work tall trees with basal anchors, look at 200 foot lengths in our <a href=\"/rope/climbing-rope/24-strand-climbing-rope/\">24-strand climbing rope</a> section."
+    ]
+   },
+   {
+    "h": "Pairing and inspection",
+    "p": [
+     "Always check that your device or rope wrench lists 11.4 mm in its approved rope range, and test the system low to the ground before you leave it. New rope can run differently once the cover breaks in.",
+     "Inspect the rope from end to end before each climb for cuts, glazing, soft or stiff spots and exposed core, and keep it bagged away from saws and chemicals. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is 11.4mm too thin for my device?",
+    "a": "Many arborist devices accept it, but some do not. Check the device maker's approved rope range."
+   },
+   {
+    "q": "Does the color change the rope?",
+    "a": "No. Rockies is a colorway. Diameter and construction are what matter for performance."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/rigging-rope/9-16-mammoth-rigging-line/",
+  "category": "/rope/rigging-rope/",
+  "name": "9/16\" Mammoth Rigging Line",
+  "brand": "mammoth",
+  "brand_name": "Mammoth",
+  "kind": "rope",
+  "price": 229,
+  "keyword": "9/16 mammoth rigging line",
+  "title": "9/16 in Mammoth Rigging Line for Light Rigging",
+  "h1": "9/16\" Mammoth Rigging Line",
+  "meta": "Mammoth rigging line in 9/16 in is a lighter lowering rope for limb work, pruning drops and smaller removals. How it compares with 5/8 in and how to inspect it.",
+  "tagline": "A 9/16 inch Mammoth lowering line for lighter rigging and limb work.",
+  "summary": "Mammoth rigging line in 9/16 inch is a lighter lowering rope for limb removal, pruning drops and smaller trees. It is easier to carry and handle than 5/8 inch line, and it runs smoothly through compact blocks and pulleys.",
+  "highlights": [
+   "9/16 inch diameter for lighter rigging",
+   "Lighter to carry than 5/8 inch line",
+   "Runs in compact blocks and pulleys",
+   "Good for limb drops and smaller removals",
+   "Rated strength on the tag"
+  ],
+  "specs": [
+   [
+    "Diameter",
+    "9/16 in (about 14 mm)"
+   ],
+   [
+    "Brand",
+    "Mammoth"
+   ],
+   [
+    "Use",
+    "Arborist rigging and lowering"
+   ],
+   [
+    "Length and strength",
+    "See listing and tag"
+   ]
+  ],
+  "body": [
+   {
+    "h": "9/16 inch vs. 5/8 inch",
+    "p": [
+     "Mammoth also comes in 5/8 inch, which is the everyday removal size. The 9/16 line trades some strength for lighter weight and easier handling. Crews often carry it for pruning jobs where limbs need to be lowered over a roof or garden, and for smaller removals where the wood never gets heavy.",
+     "When the pieces get bigger, step up to 5/8 or 3/4 inch. Compare sizes in our <a href=\"/rope/rigging-rope/\">rigging rope</a> section."
+    ]
+   },
+   {
+    "h": "Working safely with lighter line",
+    "p": [
+     "A thinner rope reaches its limit sooner, and rigging loads spike when a piece is caught short. Keep loads well under the rated strength, let the lowering device run, and use a larger line if you are unsure about the weight.",
+     "Check that blocks, pulleys and lowering devices are sized for 9/16 inch rope. Inspect it before each job for cuts, glazing, crushed sections and pulled strands, and never use rigging line for climbing."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is 9/16 inch enough for removals?",
+    "a": "It suits smaller removals and limb lowering. Use 5/8 or 3/4 inch line for heavy wood."
+   },
+   {
+    "q": "Will it fit my rigging block?",
+    "a": "Most arborist blocks accept 9/16 inch rope, but check the block's rope range before use."
+   }
+  ],
+  "use": [
+   "rigging"
+  ],
+  "level": "pro"
+ },
+ {
+  "path": "/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/",
+  "category": "/cutting-and-pruning/pole-saws-and-scabbards/",
+  "name": "Jameson Composite Lock Saw Head",
+  "brand": "jameson",
+  "brand_name": "Jameson",
+  "kind": "pole-saw",
+  "price": 49,
+  "keyword": "jameson pole saw head",
+  "title": "Jameson Composite Lock Saw Head for Pole Saws",
+  "h1": "Jameson Composite Lock Saw Head",
+  "meta": "The Jameson composite lock saw head mounts a pruning saw blade to a Jameson pole with a locking connection. What fits, how crews use it, and safety near power lines.",
+  "tagline": "A pole saw head with a locking fitting for Jameson pruning poles.",
+  "summary": "The Jameson composite lock saw head mounts a pruning saw blade to the end of a Jameson pole using a locking connection, so the head stays put while you cut overhead. It lets you swap or replace the saw end without buying a whole new pole.",
+  "highlights": [
+   "Fits Jameson poles with a locking connection",
+   "Composite head body",
+   "Holds a pole saw blade",
+   "Replace the head instead of the whole pole",
+   "For overhead pruning from the ground"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Pole saw head"
+   ],
+   [
+    "Brand",
+    "Jameson"
+   ],
+   [
+    "Connection",
+    "Locking (Jameson pole system)"
+   ],
+   [
+    "Blade",
+    "See listing"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Fit and connection",
+    "p": [
+     "Jameson poles use more than one connection style, so check that your poles use the matching lock fitting before ordering. A secure connection matters on a pole saw, because any wobble at the head turns into a sloppy cut and lost energy at the end of a long pole.",
+     "Blades, scabbards and full pole saw kits are in our <a href=\"/cutting-and-pruning/pole-saws-and-scabbards/\">pole saws and scabbards</a> section."
+    ]
+   },
+   {
+    "h": "Cutting overhead safely",
+    "p": [
+     "Stand to the side of the limb so the piece cannot fall on you, wear a helmet and eye protection, and make an undercut on heavier limbs to stop the bark tearing. Let the saw's teeth do the work rather than forcing the stroke.",
+     "Fiberglass and composite poles are not automatically safe near power lines. Keep the minimum approach distance for your qualification, and leave line clearance work to qualified line-clearance arborists. Inspect the head and its fitting for cracks before each use and replace damaged parts."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Will it fit any brand of pole?",
+    "a": "It is made for Jameson poles with the matching lock connection. Check your pole before buying."
+   },
+   {
+    "q": "Does it include a blade?",
+    "a": "Check the listing. Heads and blades are often sold separately."
+   }
+  ],
+  "use": [
+   "pruning",
+   "ground"
+  ],
+  "level": "all"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "name": "ISC Phlotich Pulley",
+  "brand": "isc",
+  "brand_name": "ISC",
+  "kind": "pulley",
+  "price": 55,
+  "keyword": "isc phlotich pulley",
+  "title": "ISC Phlotich Pulley for Hitch Tending and Haul Kits",
+  "h1": "ISC Phlotich Pulley",
+  "meta": "The ISC Phlotich pulley is a compact pulley for tending friction hitches and building small haul systems in a climbing kit. Where it fits and what to inspect.",
+  "tagline": "A compact ISC pulley for hitch tending and small haul systems.",
+  "summary": "The ISC Phlotich pulley is a compact pulley from ISC for tree climbing setups, sized for tending a friction hitch or building a small mechanical advantage system. Its small size keeps the hitch close to the pulley and the bridge tidy.",
+  "highlights": [
+   "Compact ISC pulley",
+   "Suits hitch tending on a climbing system",
+   "Useful in small haul and pull systems",
+   "Clips to a locking carabiner",
+   "Rope range and rating marked on the side plate"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Micro pulley"
+   ],
+   [
+    "Brand",
+    "ISC"
+   ],
+   [
+    "Rope range and rating",
+    "Marked on the side plate"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Where a micro pulley fits",
+    "p": [
+     "On a moving-rope system, a small pulley below the friction hitch lets the hitch be tended as you advance, so you climb with one hand free and the hitch stays clean. It also gives you a sheave for a quick 3:1 to tension a line or lift a light load.",
+     "ISC makes several compact pulleys, so check the markings if you are matching an existing setup. More options are in our <a href=\"/climbing/climbing-gear/micro-pulleys/\">micro pulleys</a> section."
+    ]
+   },
+   {
+    "h": "Inspection and use",
+    "p": [
+     "Before each climb, spin the sheave, look for cracks, burrs, or play at the axle, and make sure the side plates open and close as ISC intends. Clean sap and grit out of the sheave and keep it away from chemicals.",
+     "Use a locking carabiner, keep loads in line with the pulley, and stay within the rope range and rating on the side plate. Retire it after a hard drop. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training, and the gear should be inspected before every climb."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use it for rigging?",
+    "a": "Only for light pulls and redirects within its rating. Use a rigging block for lowering wood."
+   },
+   {
+    "q": "Will it fit my climbing rope?",
+    "a": "Check the rope range on the side plate against your line's diameter."
+   }
+  ],
+  "use": [
+   "climbing"
+  ],
+  "level": "pro"
+ }
+]
