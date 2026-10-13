@@ -130,6 +130,9 @@ VERSIONS = {
         "desc": "Cebuano",
         "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission.",
         "italics": False, "fallback": ["ceb", "ta"],
+        # Off until the Philippine Bible Society licenses the full text. While off
+        # it isn't built or served, and /ml/ URLs redirect to /ceb/ (index.php).
+        "enabled": False,
     },
     "ceb": {
         "prefix": "ceb", "short": "APSD", "name": "Ang Pulong sa Dios",
@@ -296,6 +299,8 @@ def main():
     ceb_gaps = sum(n for chs in shape.values() for n in chs.values()) - len(ceb_text)
 
     texts = {"ta": kjv, "ml": ml, "ceb": ceb_text}
+    texts = {k: t for k, t in texts.items() if VERSIONS[k].get("enabled", True)}
+    published = {k: {f: x for f, x in v.items() if f != "enabled"} for k, v in VERSIONS.items() if k in texts}
     OUT.mkdir(parents=True, exist_ok=True)
     books_meta = []
     for i, (slug, code, en, ceb, abbr) in enumerate(BOOKS):
@@ -322,7 +327,7 @@ def main():
         (OUT / ver / "search.tsv").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     (OUT / "books.json").write_text(json.dumps(books_meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    (OUT / "versions.json").write_text(json.dumps(VERSIONS, ensure_ascii=False, indent=1), encoding="utf-8")
+    (OUT / "versions.json").write_text(json.dumps(published, ensure_ascii=False, indent=1), encoding="utf-8")
 
     votd = []
     for ref in VOTD.replace("\n", " ").split(";"):

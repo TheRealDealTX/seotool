@@ -334,7 +334,14 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .seg button { border: 0; background: transparent; color: var(--muted); padding: 7px 12px; border-radius: 10px; font: 600 .88rem var(--sans); cursor: pointer; }
 .seg button.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
 .set-row input[type=range] { width: 160px; accent-color: var(--accent); }
-.img-preview { width: 100%; border-radius: 14px; display: block; margin-bottom: 12px; }
+.img-preview { width: 100%; max-width: 420px; aspect-ratio: 1; border-radius: 14px; display: block; margin: 0 auto 12px; background: var(--surface-2); }
+.bg-picker { display: flex; gap: 8px; overflow-x: auto; padding: 2px 2px 8px; scrollbar-width: none; }
+.bg-picker button, .bg-own { flex: 0 0 56px; height: 56px; border-radius: 12px; border: 2px solid transparent; background-size: cover; background-position: center;
+  color: #fff; font: 700 .7rem var(--sans); cursor: pointer; box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+.bg-picker button[aria-checked="true"], .bg-own.on { border-color: var(--accent); box-shadow: 0 0 0 2px var(--surface) inset; }
+.bg-own { display: grid; place-items: center; align-content: center; gap: 2px; background: var(--surface-2); color: var(--text); font-weight: 600; }
+.bg-own .ic { width: 18px; height: 18px; }
+.bg-credit { font-size: .75rem; min-height: 1.2em; margin: 0 0 10px; }
 
 #toast { position: fixed; left: 50%; bottom: calc(var(--tab) + 18px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); z-index: 70;
   background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-size: .92rem; opacity: 0; pointer-events: none; transition: .25s; max-width: 90vw; }

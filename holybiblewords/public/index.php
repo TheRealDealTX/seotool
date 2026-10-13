@@ -40,7 +40,13 @@ if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php|autho
     redirect(preg_match('#^/category/#', $path) ? '/blog/' : '/');
 }
 if (preg_match('#^/((ml|ta|post|page|category)-sitemap\d*|main-sitemap)\.(xml|xsl)$#', $path)) redirect('/sitemap_index.xml');
-// WordPress de-duplicated slugs: /ml/genesis/13-2/7-2/ -> /ml/genesis/13/7/
+// Ang Biblia, 2011 (/ml/) is switched off until it is licensed: send its readers
+// to the same place in Ang Pulong sa Dios, the other Cebuano version.
+if (!isset($vers['ml']) && preg_match('#^/ml(/.*)?$#', $path, $m)) {
+    $rest = preg_replace('#/(\d+)-\d+(?=/)#', '/$1', $m[1] ?? '/');
+    redirect('/ceb' . ($rest === '' ? '/' : $rest));
+}
+// WordPress de-duplicated slugs: /ta/genesis/13-2/7-2/ -> /ta/genesis/13/7/
 if (preg_match("#^/($verRe)/([a-z0-9]+)/(\d+)(?:-\d+)?/(?:(\d+)(?:-\d+)?/)?$#", $path, $m) && str_contains($path, '-')) {
     redirect(url_for($m[1], $m[2], (int)$m[3], isset($m[4]) && $m[4] !== '' ? (int)$m[4] : null));
 }

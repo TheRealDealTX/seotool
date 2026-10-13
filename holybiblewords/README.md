@@ -1,7 +1,11 @@
 # holybiblewords.com — Bible web app
 
 A PHP + vanilla-JS Bible app that replaces the WordPress site at
-[holybiblewords.com](https://holybiblewords.com). Three versions:
+[holybiblewords.com](https://holybiblewords.com). Two versions are live: KJV and Ang
+Pulong sa Dios. Ang Biblia, 2011 is switched off (`"enabled": False` in
+`tools/build_data.py`) until it is licensed. Its `/ml/` URLs 301 to the same place
+under `/ceb/`, and its source data stays in `sources/`. Flip the flag and rebuild to
+bring it back.
 
 | URL prefix | Version | Text source | Coverage |
 | --- | --- | --- | --- |
@@ -36,6 +40,13 @@ and its title stay unchanged and the copyright notice is shown. The notice is in
 `VERSIONS["ceb"]` in `tools/build_data.py`. It appears in the footer of every page, under
 each chapter and verse that uses it, and on `/ceb/`. Don't edit the text. If it ever
 is changed, the license requires publishing a list of the changes.
+
+## Verse-image backgrounds
+
+`public/assets/img/bg/`: eight landscape photos from Unsplash (via picsum.photos),
+free to use under the [Unsplash License](https://unsplash.com/license). Photographers
+are listed in `credits.json` and credited under the preview. Users can also pick
+their own photo; it never leaves the device.
 
 ## Features
 

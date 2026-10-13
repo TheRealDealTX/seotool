@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Holy Bible Words",
   "short_name": "Holy Bible",
-  "description": "Read the King James Version, Ang Biblia, 2011 and Ang Pulong sa Dios — verse of the day, highlights, reading plan and offline reading.",
+  "description": "Read the King James Version and Ang Pulong sa Dios — verse of the day, highlights, reading plan, search and offline reading.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
@@ -47,16 +47,6 @@
     {
       "name": "King James Version",
       "url": "/ta/",
-      "icons": [
-        {
-          "src": "/assets/img/icon-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "Ang Biblia, 2011",
-      "url": "/ml/",
       "icons": [
         {
           "src": "/assets/img/icon-192.png",

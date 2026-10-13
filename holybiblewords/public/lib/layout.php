@@ -19,7 +19,7 @@ function render_page(array $p): void {
     $vers = versions();
     $canon = SITE_URL . ($p['canonical'] ?? '/');
     $title = $p['title'];
-    $desc = $p['description'] ?? 'Read the Holy Bible online: King James Version (KJV) and Ang Biblia, 2011, with easy chapter and verse navigation, search, and a daily verse.';
+    $desc = $p['description'] ?? 'Read the Holy Bible online: King James Version (KJV) and Ang Pulong sa Dios, with easy chapter and verse navigation, search, and a daily verse.';
     $img = SITE_URL . ($p['og_image'] ?? '/assets/img/og-image.webp');
     $lang = $ver ? $vers[$ver]['lang'] : 'en';
     $app = in_native_app();
@@ -105,7 +105,6 @@ if(s.lh)d.style.setProperty('--reader-lh',s.lh);}catch(e){}
     <div class="foot-brand"><img src="/assets/img/logo-64.png" width="28" height="28" alt=""> <?= SITE_NAME ?> — Read the Bible online</div>
     <nav class="foot-links" aria-label="Footer">
       <a href="/ta/">King James Version (KJV)</a>
-      <a href="/ml/">Ang Biblia, 2011</a>
       <a href="/ceb/">Ang Pulong sa Dios</a>
       <a href="/blog/">Blog</a>
       <a href="/app/">Get the app</a>

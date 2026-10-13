@@ -11,21 +11,6 @@
   "italics": true,
   "fallback": []
  },
- "ml": {
-  "prefix": "ml",
-  "short": "AB",
-  "name": "Ang Biblia, 2011",
-  "label": "Ang Biblia, 2011",
-  "lang": "ceb",
-  "nameKey": "ceb",
-  "desc": "Cebuano",
-  "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission.",
-  "italics": false,
-  "fallback": [
-   "ceb",
-   "ta"
-  ]
- },
  "ceb": {
   "prefix": "ceb",
   "short": "APSD",

@@ -84,7 +84,7 @@ function page_home(): array {
     }
     $body = '<section class="hero"><div class="wrap">'
         . '<h1>Read the Holy Bible Online</h1>'
-        . '<p class="lead">The King James Version and Ang Biblia, 2011 in one place. Jump to any chapter or verse, switch versions without losing your place, and get a new verse every day.</p>'
+        . '<p class="lead">The King James Version and Ang Pulong sa Dios (Cebuano) in one place. Jump to any chapter or verse, switch versions without losing your place, and get a new verse every day.</p>'
         . jump_box($ver)
         . '<div class="chips">' . $pop . '</div>'
         . '</div></section>'
@@ -101,7 +101,7 @@ function page_home(): array {
         . '</div>';
     return [
         'title' => 'Holy Bible Words | Read The Bible Online',
-        'description' => 'Explore the Holy Bible online with Holy Bible Words – the complete King James Version and Ang Biblia, 2011, easy chapter and verse navigation, and an inspiring verse of the day.',
+        'description' => 'Explore the Holy Bible online with Holy Bible Words – the complete King James Version and Ang Pulong sa Dios, easy chapter and verse navigation, and an inspiring verse of the day.',
         'canonical' => '/', 'body' => $body, 'type' => 'home', 'ver' => $ver,
         'switch' => version_alternates(fn($k) => "/$k/"),
         'jsonld' => [
@@ -416,7 +416,7 @@ function page_votd(string $ver): array {
         . '<section><h2>Previous days</h2><ol class="results past-votd">' . $past . '</ol></section>' . credits(version_chain($ver)) . '</div>';
     return [
         'title' => 'Verse of the Day | ' . SITE_NAME,
-        'description' => 'Today’s Bible verse of the day from the King James Version and Ang Biblia, 2011. A new verse every day.',
+        'description' => 'Today’s Bible verse of the day from the King James Version and Ang Pulong sa Dios. A new verse every day.',
         'canonical' => '/verse-of-the-day/', 'body' => $body, 'ver' => $ver, 'type' => 'votd',
         'switch' => version_alternates(fn($k) => '/verse-of-the-day/?v=' . $k), 'data' => ['ver' => $ver],
     ];

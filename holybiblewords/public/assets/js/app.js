@@ -45,7 +45,14 @@
     hl: store.get('hl', {}), bm: store.get('bm', {}), notes: store.get('notes', {}),
     save() { store.set('hl', this.hl); store.set('bm', this.bm); store.set('notes', this.notes); },
   };
-  const prefVer = () => store.get('ver', 'ta');
+  // Ang Biblia, 2011 ('ml') was retired; its readers move to Ang Pulong sa Dios
+  const prefVer = () => { const v = store.get('ver', 'ta'); return v === 'ml' ? 'ceb' : v; };
+  (() => {
+    const done = store.get('offline', {});
+    if (done.ml) { done.ceb = done.ceb || done.ml; delete done.ml; store.set('offline', done); }   // AB downloads included APSD
+    const last = store.get('last', null);
+    if (last?.ver === 'ml') { last.ver = 'ceb'; store.set('last', last); }
+  })();
 
   // ---------- data ----------
   let booksP, versP;
@@ -63,8 +70,8 @@
     return chapterCache.get(k);
   }
   // version shown side by side / compared with `v`
-  const DEFAULT_PAIR = { ta: 'ceb', ml: 'ta', ceb: 'ta' };
-  const pairVer = v => (settings.pver && settings.pver !== 'auto' && settings.pver !== v ? settings.pver : DEFAULT_PAIR[v] || 'ta');
+  const DEFAULT_PAIR = { ta: 'ceb', ceb: 'ta' };
+  const pairVer = v => (VERS?.[settings.pver] && settings.pver !== v ? settings.pver : DEFAULT_PAIR[v] || 'ta');
   // rows of a chapter (from the API) that overlap verses n..to
   const rowsFor = (d, n, to = n) => d.rows.filter(r => r[1] >= n && r[0] <= to);
   const rangeLabel = r => (r[0] === r[1] ? `${r[0]}` : `${r[0]}–${r[1]}`);
@@ -478,14 +485,26 @@
     });
   }
 
-  // verse image (1080×1080 canvas)
-  function drawVerseImage(text, ref) {
+  // verse image (1080×1080 canvas) with a choice of background
+  const BG_PHOTOS = ['110', '1015', '1018', '1035', '1022', '16', '1043', '29'];
+  let bgCredits = null;
+  const loadImage = src => new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = src; });
+  function drawVerseImage(text, ref, bg) {
     const S = 1080, c = document.createElement('canvas'); c.width = c.height = S;
     const g = c.getContext('2d');
-    const grad = g.createLinearGradient(0, 0, S, S); grad.addColorStop(0, '#1d5aa0'); grad.addColorStop(1, '#1f9a5a');
-    g.fillStyle = grad; g.fillRect(0, 0, S, S);
-    g.fillStyle = 'rgba(255,255,255,.08)'; g.beginPath(); g.arc(S * .85, S * .12, 260, 0, 7); g.fill();
-    g.beginPath(); g.arc(S * .1, S * .95, 220, 0, 7); g.fill();
+    if (bg) {
+      // cover-fit the photo, then darken it so white text stays readable
+      const k = Math.max(S / bg.naturalWidth, S / bg.naturalHeight), w = bg.naturalWidth * k, h = bg.naturalHeight * k;
+      g.drawImage(bg, (S - w) / 2, (S - h) / 2, w, h);
+      const shade = g.createLinearGradient(0, 0, 0, S);
+      shade.addColorStop(0, 'rgba(0,0,0,.35)'); shade.addColorStop(.5, 'rgba(0,0,0,.5)'); shade.addColorStop(1, 'rgba(0,0,0,.6)');
+      g.fillStyle = shade; g.fillRect(0, 0, S, S);
+    } else {
+      const grad = g.createLinearGradient(0, 0, S, S); grad.addColorStop(0, '#1d5aa0'); grad.addColorStop(1, '#1f9a5a');
+      g.fillStyle = grad; g.fillRect(0, 0, S, S);
+      g.fillStyle = 'rgba(255,255,255,.08)'; g.beginPath(); g.arc(S * .85, S * .12, 260, 0, 7); g.fill();
+      g.beginPath(); g.arc(S * .1, S * .95, 220, 0, 7); g.fill();
+    }
     const quote = `“${text}”`;
     let size = 64, lines;
     const wrap = sz => {
@@ -497,25 +516,62 @@
     do { lines = wrap(size); size -= 4; } while (lines.length * size * 1.45 > S - 380 && size > 26);
     size += 4; const lh = size * 1.45;
     g.fillStyle = '#fff'; g.textAlign = 'center'; g.textBaseline = 'middle';
+    g.shadowColor = 'rgba(0,0,0,.45)'; g.shadowBlur = bg ? 18 : 0; g.shadowOffsetY = bg ? 2 : 0;
     const top = (S - 120 - lines.length * lh) / 2 + lh / 2;
+    g.font = `${size}px Georgia, 'Times New Roman', serif`;
     lines.forEach((l, i) => g.fillText(l, S / 2, top + i * lh));
     g.font = `600 40px system-ui, -apple-system, 'Segoe UI', sans-serif`;
     g.fillText(ref, S / 2, top + lines.length * lh + 40);
-    g.font = `500 28px system-ui, -apple-system, sans-serif`; g.fillStyle = 'rgba(255,255,255,.8)';
+    g.font = `500 28px system-ui, -apple-system, sans-serif`; g.fillStyle = 'rgba(255,255,255,.85)';
     g.fillText('holybiblewords.com', S / 2, S - 70);
     return c;
   }
   function imageSheet(text, ref) {
-    const c = drawVerseImage(text, ref);
-    const url = c.toDataURL('image/png');
-    const body = openSheet('Verse image', `<img class="img-preview" src="${url}" alt="${esc(ref)}">
-      <div class="verse-actions"><a class="btn" download="${esc(ref.replace(/[^\w]+/g, '-'))}.png" href="${url}">${icon('download')} Save image</a>
+    let choice = store.get('imgbg', '110'), own = null, canvas = null;
+    const opts = [['', 'Color', null], ...BG_PHOTOS.map(id => [id, '', `/assets/img/bg/bg-${id}-thumb.jpg`])];
+    const body = openSheet('Verse image', `<img class="img-preview" alt="${esc(ref)}">
+      <div class="bg-picker" role="radiogroup" aria-label="Background">
+        ${opts.map(([id, label, thumb]) => `<button type="button" role="radio" data-bg="${id}" aria-label="${id ? 'Photo background' : 'Color background'}"
+          style="${thumb ? `background-image:url(${thumb})` : 'background:linear-gradient(135deg,#1d5aa0,#1f9a5a)'}">${label}</button>`).join('')}
+        <label class="bg-own" title="Use my photo">${icon('image')}<span>My photo</span><input type="file" accept="image/*" hidden></label>
+      </div>
+      <p class="muted bg-credit"></p>
+      <div class="verse-actions"><a class="btn" data-save-img>${icon('download')} Save image</a>
       <button class="btn ghost" type="button" data-share-img>${icon('share')} Share</button></div>`);
-    $('[data-share-img]', body).onclick = () => c.toBlob(b => {
-      const file = new File([b], 'verse.png', { type: 'image/png' });
+    const preview = $('.img-preview', body), credit = $('.bg-credit', body), save = $('[data-save-img]', body);
+    const render = async () => {
+      let bg = null;
+      $$('[data-bg]', body).forEach(b => b.setAttribute('aria-checked', String(!own && b.dataset.bg === choice)));
+      $('.bg-own', body).classList.toggle('on', !!own);
+      credit.textContent = '';
+      try {
+        if (own) bg = own;
+        else if (choice) {
+          bg = await loadImage(`/assets/img/bg/bg-${choice}.jpg`);
+          bgCredits ??= await fetch('/assets/img/bg/credits.json').then(r => r.json()).catch(() => []);
+          const cr = bgCredits.find(x => x.id === choice);
+          if (cr) credit.innerHTML = `Photo: <a href="${esc(cr.source)}" target="_blank" rel="noopener">${esc(cr.author)}</a> on Unsplash`;
+        }
+      } catch (e) { bg = null; toast('Couldn’t load that photo'); }
+      canvas = drawVerseImage(text, ref, bg);
+      const url = canvas.toDataURL('image/jpeg', .9);
+      preview.src = url; save.href = url; save.download = ref.replace(/[^\w]+/g, '-') + '.jpg';
+    };
+    body.addEventListener('click', e => {
+      const b = e.target.closest('[data-bg]'); if (!b) return;
+      choice = b.dataset.bg; own = null; store.set('imgbg', choice); render();
+    });
+    $('.bg-own input', body).addEventListener('change', async e => {
+      const f = e.target.files?.[0]; if (!f) return;
+      const url = URL.createObjectURL(f);
+      try { own = await loadImage(url); render(); } catch (err) { toast('That file isn’t an image'); }
+    });
+    $('[data-share-img]', body).onclick = () => canvas && canvas.toBlob(b => {
+      const file = new File([b], 'verse.jpg', { type: 'image/jpeg' });
       if (navigator.canShare?.({ files: [file] })) shareIt({ files: [file], title: ref, text: ref });
       else toast('Use “Save image”, then share it from your photos');
-    });
+    }, 'image/jpeg', .9);
+    render();
   }
 
   // listen (speech synthesis)
