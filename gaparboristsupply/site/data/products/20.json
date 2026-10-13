@@ -38,7 +38,8 @@
     "h": "When to replace the link",
     "p": [
      "A pole pruner takes a beating. It gets dropped in the bed of the truck, yanked through crotches and twisted when a limb pinches the blade. The link between the lever and the blade is one of the parts that pays for that. Once it bends even slightly, the blade stops closing fully against the hook and you get chewed, half-cut limbs that have to be torn off.",
-     "Check the link whenever the cut feels rough or the head hangs open. Look for a bend, cracks around the holes or holes that have worn oval. Any of those means it is time for a new one."
+     "Check the link whenever the cut feels rough or the head hangs open. Look for a bend, cracks around the holes or holes that have worn oval. Any of those means it is time for a new one.",
+     "It helps to understand why the link fails first. Most bends come from twisting the pole while the blade is still in the cut, or from forcing a limb that is beyond the head's capacity. Let the blade finish its stroke, back the hook out straight, and switch to a pole saw for anything thick. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -93,6 +94,10 @@
    [
     "Fits",
     "Jameson Big Mouth pruner heads"
+   ],
+   [
+    "Install",
+    "Hooks in place with basic hand tools"
    ]
   ],
   "body": [
@@ -100,7 +105,8 @@
     "h": "Why the spring matters",
     "p": [
      "The Big Mouth is built for bigger bites than a standard pole pruner, and the spring works hard to open that wider jaw every time you let off the rope. Over a season of clearing lines or lifting canopies, springs lose tension, stretch or snap at the hook.",
-     "A tired spring shows up as a blade that drifts open slowly, or one that doesn't open far enough to get over the next limb. Swapping it takes a few minutes and makes the tool feel new again."
+     "A tired spring shows up as a blade that drifts open slowly, or one that doesn't open far enough to get over the next limb. Swapping it takes a few minutes and makes the tool feel new again.",
+     "Springs also wear faster when the head is stored with the blade closed under tension, or left wet and dirty. Hang the pruner with the jaw open if you can, and wipe off sap and grit at the end of the day. A little care spreads replacement out, but springs are still consumables and should be treated that way. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -155,6 +161,10 @@
    [
     "Fits",
     "Jameson heavy duty pruner heads (confirm model)"
+   ],
+   [
+    "Install",
+    "Hooks in place with basic hand tools"
    ]
   ],
   "body": [
@@ -162,7 +172,8 @@
     "h": "Signs it is time",
     "p": [
      "Pole pruners get used hard on line clearance, orchard and storm work. The spring is the part that keeps the blade ready for the next cut, and it is usually the first thing to tire out. If the blade opens slowly, stops partway or the spring is visibly stretched with gaps between coils, replace it.",
-     "Running a pruner with a bad spring wastes time on every cut and puts more strain on your shoulders, since you end up working the rope and the pole to reset the jaw."
+     "Running a pruner with a bad spring wastes time on every cut and puts more strain on your shoulders, since you end up working the rope and the pole to reset the jaw.",
+     "Heat, sap and grit speed up spring fatigue, and so does storing the head with the blade pulled closed. Clean the head at the end of the day and store it with the jaw open where you can. Even with good care, a spring is a consumable part. Buying two at a time means the next one is already in the truck when the blade starts dragging. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -198,11 +209,11 @@
   "kind": "parts",
   "price": 6,
   "keyword": "jameson saw head bolts",
-  "title": "Jameson Saw Head Lower Black Bolts: Replacement",
-  "h1": "Jameson Saw Head Lower Black Bolts",
-  "meta": "Replacement lower black bolts for Jameson pole saw heads. Keep the blade tight on the head so the pole saw cuts straight and doesn't wobble or loosen in use.",
+  "title": "Jameson Saw Head Bolts: Lower Black Replacements",
+  "h1": "Jameson Saw Head Bolts, Lower Black",
+  "meta": "Replacement lower black Jameson saw head bolts for pole saw heads. Keep the blade tight on the head so the saw cuts straight and doesn't wobble or work loose.",
   "tagline": "Replacement lower bolts that hold the blade tight on a Jameson pole saw head.",
-  "summary": "These Jameson saw head lower black bolts are the replacement fasteners for the lower blade mount on Jameson pole saw heads. Worn or lost bolts let the blade rock on the head, and a wobbling pole saw blade binds, wanders and wears fast.",
+  "summary": "These lower black Jameson saw head bolts are the replacement fasteners for the lower blade mount on Jameson pole saw heads. Worn or lost bolts let the blade rock on the head, and a wobbling pole saw blade binds, wanders and wears fast.",
   "highlights": [
    "Replacement lower bolts for Jameson pole saw heads",
    "Keeps the blade tight and true",
@@ -232,7 +243,8 @@
     "h": "Why spare bolts help",
     "p": [
      "Pole saw blades get swapped more often than any other part on a pole kit. Every blade change is a chance to drop a bolt in the grass or round off a head. Having spare lower bolts in the truck means a lost fastener doesn't end the pole work for the day.",
-     "Loose or worn bolts are also a cutting problem. If the blade can shift even a little, the kerf wanders, the blade binds in the cut and the saw head takes the stress."
+     "Loose or worn bolts are also a cutting problem. If the blade can shift even a little, the kerf wanders, the blade binds in the cut and the saw head takes the stress.",
+     "Bolts also wear in ways that aren't obvious. Threads stretch after repeated tightening, heads round off from the wrong wrench, and corrosion makes them seize so the next blade change turns into a fight. If a bolt fights you on the way out, replace it rather than reusing it. Use the correct size wrench or driver to avoid rounding the new ones. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -267,7 +279,7 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "parts",
   "price": 15,
-  "keyword": "pole male ferrule",
+  "keyword": "male ferrule",
   "title": "Male Ferrule for Sectional Pruning Poles",
   "h1": "Male Ferrule for Sectional Poles",
   "meta": "Replacement pole male ferrule for sectional fiberglass pruning poles. Repair a worn or damaged joint so pole sections lock together firmly again on the job.",
@@ -298,7 +310,8 @@
     "h": "What the ferrule does",
     "p": [
      "Sectional poles let you build reach as you need it, and the joints are what make that work. The male ferrule carries the lock button or locking feature and takes the bending load where two sections meet. A damaged ferrule makes the whole pole feel sloppy and can let a section slip apart overhead.",
-     "Common causes are dropping the pole on a joint, prying with a pole saw stuck in a cut and dirt grinding away at the fit over time."
+     "Common causes are dropping the pole on a joint, prying with a pole saw stuck in a cut and dirt grinding away at the fit over time.",
+     "A loose joint is more than an annoyance. It changes how the tool behaves overhead. The head can rotate as you pull the pruner rope, a pole saw can twist off line mid-stroke, and the extra flex makes it harder to place the tool accurately on small stems. On a long pole, slop at one joint multiplies at the head. Catching a worn ferrule early keeps the pole tight and saves the section before the tube itself is damaged by the movement."
     ]
    },
    {
@@ -333,7 +346,7 @@
   "brand_name": "Marvin",
   "kind": "parts",
   "price": 5,
-  "keyword": "marvin cap screw washer nut",
+  "keyword": "marvin cap screw",
   "title": "Marvin Cap Screw, Washer and Nut: Pruner Hardware",
   "h1": "Marvin Cap Screw, Washer and Nut",
   "meta": "Marvin cap screw, washer and nut set for Marvin pole pruner and saw heads. Replace worn or lost hardware so the head stays tight and the blade moves freely.",
@@ -353,6 +366,10 @@
    [
     "Fits",
     "Marvin pole tool heads (confirm position and model)"
+   ],
+   [
+    "Purpose",
+    "Replacement fasteners for worn or lost hardware"
    ]
   ],
   "body": [
@@ -360,7 +377,8 @@
     "h": "Keep the head tight",
     "p": [
      "Marvin pruner and saw heads are simple, tough tools, and the hardware that holds them together is what keeps them cutting right. Vibration, blade changes and the odd drop work fasteners loose over time. A worn screw or missing washer can let the blade shift off the hook, which turns a clean bypass cut into a crushed, torn stub.",
-     "Replacing the full set at once keeps everything matched and avoids mixing worn and new parts."
+     "Replacing the full set at once keeps everything matched and avoids mixing worn and new parts.",
+     "Check head hardware as part of your regular pole tool inspection. Look for a nut that has backed off, a washer that is cupped or missing, or a screw with worn threads or a bent shank. Any of those can let the head drift out of adjustment, and a part that falls off overhead is easy to lose in leaf litter or brush. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -395,12 +413,12 @@
   "brand_name": "Marvin",
   "kind": "parts",
   "price": 8,
-  "keyword": "marvin pruner spring",
+  "keyword": "marvin ph4 pruner spring",
   "title": "Marvin PH4 Pruner Spring: Replacement Return Spring",
   "h1": "Marvin PH4 Pruner Spring",
-  "meta": "Marvin pruner spring, part PH4, for Marvin pole pruner heads. Replace a weak or broken spring so the blade opens fast and the pruner is ready for each cut.",
+  "meta": "Marvin PH4 pruner spring, a replacement return spring for Marvin pole pruner heads. Restore a fast, positive blade return so the jaw is ready for each cut.",
   "tagline": "Replacement return spring for Marvin pole pruner heads.",
-  "summary": "The Marvin pruner spring, part PH4, returns the blade to open after each cut on a Marvin pole pruner. Once it weakens, the head hangs closed and every cut takes longer.",
+  "summary": "The Marvin PH4 pruner spring is the return spring that pulls the blade back open after each cut on a Marvin pole pruner. Once it weakens, the head hangs closed and every cut takes longer.",
   "highlights": [
    "Return spring for Marvin pole pruner heads",
    "Part number PH4",
@@ -426,7 +444,8 @@
     "h": "A small part that sets the pace",
     "p": [
      "A pole pruner is only as fast as its spring. When the spring is fresh, you pull, cut, let off and the jaw is open for the next limb. When it is worn, you are shaking the pole and waiting. On a long day of clearance pruning, that adds up.",
-     "Replace the spring when it shows gaps between coils at rest, the hook end is worn thin, or the blade no longer opens fully on its own."
+     "Replace the spring when it shows gaps between coils at rest, the hook end is worn thin, or the blade no longer opens fully on its own.",
+     "Springs fatigue faster when the head is stored wet, packed with sap or left with the blade pulled closed. Clean the head at the end of the day and hang it with the jaw open where you can. That spreads out replacement, but springs are still consumables. Buying a couple at once means the next one is waiting when the blade starts dragging. Keep a small parts box in the truck with the springs, bolts and links your heads use. A ten minute repair in the yard beats losing half a day of pole work to a part you could have had on hand."
     ]
    },
    {
@@ -481,6 +500,10 @@
    [
     "Fits",
     "Marvin poles (confirm diameter)"
+   ],
+   [
+    "Position",
+    "Butt (bottom) end of the pole"
    ]
   ],
   "body": [
@@ -488,7 +511,8 @@
     "h": "Why it matters",
     "p": [
      "The butt of a pole spends its life being set down in dirt, gravel and wet grass. Without a cap, the open end chews up and packs with mud, and moisture can get inside the tube. A missing cap is easy to ignore, but the damage builds up and it shortens pole life.",
-     "A good end cap also gives a cleaner contact point when you plant the pole to steady a cut or rest your arms."
+     "A good end cap also gives a cleaner contact point when you plant the pole to steady a cut or rest your arms.",
+     "End caps go missing more than any other pole part. They get knocked off on tailgates, pulled off in mud or split when a pole is dropped butt first onto concrete. It is worth checking the caps every time you load the poles, the same way you check blades and ropes. A spare cap or two in the parts box means you never have to run an open-ended pole until the next order arrives."
     ]
    },
    {
@@ -543,6 +567,10 @@
    [
     "Fits",
     "Marvin pruner heads (confirm pole diameter)"
+   ],
+   [
+    "Purpose",
+    "Joins pruner head to top pole section"
    ]
   ],
   "body": [
@@ -550,7 +578,8 @@
     "h": "What the adaptor does",
     "p": [
      "The adaptor takes every twist and pry the pruner sees and passes it into the pole. That makes it a wear item. If the head turns on the pole, clicks under load or sits crooked, the adaptor is often the culprit.",
-     "A solid head matters for accuracy. When you are reaching for a crossing limb 15 feet up, you need the blade to go where you aim it, not rotate off the branch."
+     "A solid head matters for accuracy. When you are reaching for a crossing limb 15 feet up, you need the blade to go where you aim it, not rotate off the branch.",
+     "Adaptors usually fail gradually. You might notice the head creeping out of line with the pole after a few hard cuts, a crack at the base of the fitting, or a fastener that keeps working loose no matter how often you tighten it. Don't keep running a pruner in that state. A head that lets go overhead can fall on the operator or a ground worker, and the blade and hook are sharp. Replace a damaged adaptor before going back to work."
     ]
    },
    {
@@ -605,6 +634,10 @@
    [
     "Fits",
     "Marvin saw heads (confirm pole diameter)"
+   ],
+   [
+    "Purpose",
+    "Joins saw head to top pole section"
    ]
   ],
   "body": [
@@ -612,7 +645,8 @@
     "h": "Why it wears",
     "p": [
      "Pole saws are pushed, pulled and pried constantly. Every time a blade pinches and gets wrenched free, the adaptor takes the load. Over time it can crack or loosen on the pole, and you will feel it as play between the head and the pole or a saw that rotates when you start a cut.",
-     "A tight adaptor keeps the blade in line with your stroke, so the saw tracks straight and you spend less energy fighting it."
+     "A tight adaptor keeps the blade in line with your stroke, so the saw tracks straight and you spend less energy fighting it.",
+     "Most adaptor damage comes from prying. When a blade gets pinched in a cut, it is tempting to lever the pole sideways to free it. That puts a big bending load right on the fitting. Instead, ease off, change your angle or relieve the pinch from another cut. Make an undercut on heavier limbs so they don't pinch in the first place. Treating the adaptor kindly keeps the whole pole saw tight and safe overhead, and saves you from a head that lets go and falls toward the crew."
     ]
    },
    {
@@ -647,12 +681,12 @@
   "brand_name": "Silky",
   "kind": "case-bag",
   "price": 15,
-  "keyword": "silky leg straps",
+  "keyword": "silky elastic leg straps",
   "title": "Silky Elastic Leg Straps for Saw Scabbards",
   "h1": "Silky Elastic Leg Straps",
   "meta": "Silky elastic leg straps hold a long saw scabbard against your thigh so it doesn't swing or snag while climbing, walking brush or working off a ladder.",
   "tagline": "Elastic thigh straps that keep a long Silky scabbard from swinging.",
-  "summary": "Silky leg straps are elastic straps that hold the bottom of a saw scabbard against your thigh. On longer saws the scabbard tip swings, catches on brush and slaps your leg, and a leg strap stops that.",
+  "summary": "Silky elastic leg straps hold the bottom of a saw scabbard against your thigh. On longer saws the scabbard tip swings, catches on brush and slaps your leg, and a leg strap stops that.",
   "highlights": [
    "Holds a scabbard tip against the thigh",
    "Stops swinging and snagging",
@@ -667,6 +701,10 @@
    [
     "Use",
     "Silky saw scabbards"
+   ],
+   [
+    "Material",
+    "Elastic strap"
    ]
   ],
   "body": [
@@ -674,7 +712,8 @@
     "h": "Why use a leg strap",
     "p": [
      "A long curved hand saw rides on the saddle or belt, and the scabbard hangs well down your leg. Without anything holding it, the tip catches on branches as you move through the canopy and bangs your knee on every step on the ground. A leg strap anchors it so the saw stays where you expect it when you reach down to draw it.",
-     "The elastic gives as your leg bends, so it holds the scabbard without cutting off circulation or limiting movement on a climb."
+     "The elastic gives as your leg bends, so it holds the scabbard without cutting off circulation or limiting movement on a climb.",
+     "It also helps saw safety. A scabbard that stays put means the saw goes back into it cleanly every time, rather than you fumbling for a moving target with a sharp blade in your hand. And a scabbard tip that isn't flapping around is less likely to hook a branch and pull the saw partway out while you move. Ground crews walking through brush get the same benefit."
     ]
    },
    {
@@ -704,15 +743,15 @@
  {
   "path": "/cutting-and-pruning/pole-saws-and-scabbards/phoenix-saw-head/",
   "category": "/cutting-and-pruning/pole-saws-and-scabbards/",
-  "name": "Phoenix Pole Saw Head",
+  "name": "Phoenix Saw Head",
   "brand": "phoenix",
   "brand_name": "Phoenix",
   "kind": "pole-saw",
   "price": 45,
   "keyword": "phoenix saw head",
   "title": "Phoenix Saw Head for Pole Saws",
-  "h1": "Phoenix Pole Saw Head",
-  "meta": "The Phoenix saw head mounts a pruning blade to a sectional pole for reaching limbs from the ground. Check blade and pole fit, then cut clean overhead with less strain.",
+  "h1": "Phoenix Saw Head",
+  "meta": "The Phoenix saw head mounts a pruning blade to a sectional pole for cutting limbs overhead from the ground. Check blade and pole fit before you order.",
   "tagline": "A pole saw head that turns a sectional pole into an overhead pruning saw.",
   "summary": "The Phoenix saw head is a pole saw head that clamps a pruning saw blade to the top of a pole, so you can cut limbs overhead from the ground. It is the business end of a pole saw setup and the part that takes the most abuse.",
   "highlights": [
@@ -729,6 +768,10 @@
    [
     "Use",
     "Mounting a pole saw blade to a pole"
+   ],
+   [
+    "Blade",
+    "Sold separately unless listed"
    ]
   ],
   "body": [
@@ -736,7 +779,8 @@
     "h": "Where it fits in a pole kit",
     "p": [
      "A pole saw is three things: the pole, the head and the blade. The head holds the blade at the right angle and carries every push and pull into the pole. When a head cracks, the bolt holes wear or the pole fitting loosens, the blade wobbles and the saw stops tracking straight.",
-     "A fresh saw head brings back a stiff, predictable tool for lifting canopies, clearing deadwood and cutting back from structures where you can't climb or don't need to."
+     "A fresh saw head brings back a stiff, predictable tool for lifting canopies, clearing deadwood and cutting back from structures where you can't climb or don't need to.",
+     "Pole saw heads usually fail at stress points: around the blade bolt holes, at the base where the head meets the pole fitting, and on the hook or guide if the head has one. Most of that damage comes from prying the pole to free a pinched blade. Instead, relieve the pinch with an undercut or a cut from another angle. Inspect the head whenever you change blades and replace it at the first crack, since a head that breaks overhead drops a sharp blade toward the operator."
     ]
    },
    {
@@ -773,7 +817,7 @@
   "price": 40,
   "keyword": "silky pole saw head",
   "title": "Silky Pole Saw Head for Standard Poles",
-  "h1": "Silky Saw Head for Standard Poles",
+  "h1": "Silky Pole Saw Head for Standard Poles",
   "meta": "Silky pole saw head that fits standard sectional poles, so you can run a Silky blade on the pole system you already own. Clean, fast pull-stroke cuts overhead.",
   "tagline": "Run a Silky pole saw blade on a standard sectional pole.",
   "summary": "This Silky pole saw head lets you mount a Silky pole saw blade on a standard pruning pole instead of a Silky telescoping pole. If your crew already runs sectional fiberglass poles, it is a way to get Silky's pull-stroke cutting on the same kit.",
@@ -802,7 +846,8 @@
     "h": "Why crews use it",
     "p": [
      "Silky pole saw blades have a reputation for cutting fast on the pull stroke with impulse-hardened teeth. Many crews like that blade but prefer the reach, stiffness or dielectric features of the sectional poles they already own. This head bridges the two.",
-     "It is also a tidy way to standardize: one pole system on the truck, with saw and pruner heads that swap as the job changes from lifting canopy to clearing deadwood."
+     "It is also a tidy way to standardize: one pole system on the truck, with saw and pruner heads that swap as the job changes from lifting canopy to clearing deadwood.",
+     "There is a practical side too. Telescoping poles are quick to adjust but can be heavy and harder to keep tight at full extension. Sectional poles let you add exactly the reach you need, and they are simple to repair because each section can be replaced on its own. Putting a Silky blade on a sectional pole gives you the cutting speed of one system with the reach and repairability of the other. Inspect the head and blade bolts each time you change blades."
     ]
    },
    {
@@ -868,7 +913,8 @@
     "h": "Why cover the blade",
     "p": [
      "A pole saw blade rides in the truck or on the rack between jobs, and an uncovered blade is a hazard. It catches on rope bags, chews up tarps and slices hands when someone grabs the poles in a hurry. Teeth also dull fast when they rattle against steel and gravel.",
-     "A scabbard sized for the blade stays on during travel and keeps the hook tip from snagging anything on the way."
+     "A scabbard sized for the blade stays on during travel and keeps the hook tip from snagging anything on the way.",
+     "It also saves money. Pole saw blades are not cheap, and teeth that bang against tools and the truck bed lose their edge long before they wear out from cutting. A blade that stays covered between jobs cuts faster for longer and needs replacing less often. On crews that share poles, a scabbard on every blade is a simple rule that protects everyone who handles the gear."
     ]
    },
    {
@@ -904,12 +950,12 @@
   "brand_name": "Weaver",
   "kind": "case-bag",
   "price": 32,
-  "keyword": "weaver 16 pole saw scabbard",
-  "title": "Weaver 16\" Pole Saw Scabbard: Blade Cover",
-  "h1": "Weaver Pole Saw Scabbard for 16\" Blades",
-  "meta": "Weaver 16 pole saw scabbard sized for 16 inch blades. Keeps teeth covered in the truck and on site, so the blade stays sharp and nobody gets cut handling poles.",
+  "keyword": "weaver 16 inch pole saw scabbard",
+  "title": "Weaver 16 Inch Pole Saw Scabbard: Blade Cover",
+  "h1": "Weaver 16 Inch Pole Saw Scabbard",
+  "meta": "Weaver 16 inch pole saw scabbard sized for 16 inch blades. Keeps teeth covered in the truck and on site so the blade stays sharp and nobody gets cut.",
   "tagline": "A blade cover sized for 16 inch pole saw blades.",
-  "summary": "The Weaver 16 pole saw scabbard covers a 16 inch pole saw blade during transport and storage. Longer blades are more exposed and harder to manage, so a properly sized cover matters even more.",
+  "summary": "The Weaver 16 inch pole saw scabbard covers a 16 inch pole saw blade during transport and storage. Longer blades are more exposed and harder to manage, so a properly sized cover matters even more.",
   "highlights": [
    "Sized for 16 inch pole saw blades",
    "Protects teeth from dulling in transport",
@@ -935,7 +981,8 @@
     "h": "Covering a long blade",
     "p": [
      "A 16 inch pole saw blade gives you a big bite for heavier limbs, and a lot of exposed teeth when the pole is lying in the truck. Without a cover it snags rope, cuts into bags and puts the crew at risk when they grab poles off the rack.",
-     "The scabbard slides over the blade and stays on until you are ready to cut, protecting the teeth from rocks, steel and other tools."
+     "The scabbard slides over the blade and stays on until you are ready to cut, protecting the teeth from rocks, steel and other tools.",
+     "Covered blades also stay sharper. Teeth that rattle against steel, gravel and other tools lose their edge long before they wear out from cutting, and a dull pole saw is slow, tiring and harder to control overhead. Keeping a scabbard on between cuts is one of the cheapest ways to get more life from a blade. On crews that share poles, a scabbard on every blade is a simple rule that protects everyone who handles the gear."
     ]
    },
    {
@@ -1007,7 +1054,8 @@
     "h": "Two tools, one holster",
     "p": [
      "Fine pruning means switching between hand pruners and a hand saw all day: pruners for small stems, saw for anything bigger. Carrying them in separate holsters crowds the saddle and puts tools on different sides. This Weaver scabbard keeps both together so you can reach for either without looking.",
-     "The rubberized build sheds sap and water and wipes clean, which matters when you are working in wet canopy or resinous conifers."
+     "The rubberized build sheds sap and water and wipes clean, which matters when you are working in wet canopy or resinous conifers.",
+     "Having both tools on one holster also simplifies your saddle layout. Fewer separate holsters means fewer things to snag on branches and more room for carabiners, a lanyard and a chainsaw if the job calls for one. It works on the ground too. Hedge and shrub work, cleanup pruning around a landscape and dressing cuts on the ground all go faster when the right blade is always in the same place on your belt."
     ]
    },
    {
@@ -1043,8 +1091,8 @@
   "kind": "pole-saw",
   "price": 60,
   "keyword": "jameson hollow core poles",
-  "title": "Jameson 6' Hollow Core Poles: Fiberglass Pole Sections",
-  "h1": "Jameson 6' Hollow Core Poles",
+  "title": "Jameson Hollow Core Poles, 6 ft Fiberglass Sections",
+  "h1": "Jameson Hollow Core Poles, 6 ft",
   "meta": "Jameson hollow core poles in 6 foot fiberglass sections for pole saws and pruners. Lightweight, stiff and modular, so you build reach as each cut demands.",
   "tagline": "Six foot fiberglass pole sections for building Jameson pole saw and pruner kits.",
   "summary": "Jameson hollow core poles are fiberglass pole sections that lock together to build reach for pole saws and pole pruners. The 6 foot length is a handy size for the truck and lets you add reach in small steps.",
@@ -1077,7 +1125,8 @@
     "h": "Why sectional poles",
     "p": [
      "A single long pole is awkward to transport and too much tool for low cuts. Sectional poles let you start short and add sections as you reach higher, so you carry only as much weight overhead as the cut needs. Six foot sections fit easily in most trucks and give fine control over total reach.",
-     "Hollow core poles are lighter than foam-filled poles, which makes a real difference over a day of overhead work. The trade-off is that the inside of the tube is open, so keep end caps on and keep the poles clean and dry."
+     "Hollow core poles are lighter than foam-filled poles, which makes a real difference over a day of overhead work. The trade-off is that the inside of the tube is open, so keep end caps on and keep the poles clean and dry.",
+     "For most tree crews, a pole kit is two to four sections plus a saw head and a pruner head. Starting with a couple of 6 foot hollow core poles gives a manageable kit for lifting canopies and clearing low limbs, and you can add sections as the work demands. Check that the locking buttons engage fully at every joint before you raise the pole."
     ]
    },
    {
@@ -1113,8 +1162,8 @@
   "kind": "pole-saw",
   "price": 85,
   "keyword": "jameson b-lite poles",
-  "title": "Jameson 8' B-Lite Poles: Fiberglass Pole Sections",
-  "h1": "Jameson 8' B-Lite Poles",
+  "title": "Jameson B-Lite Poles, 8 ft Fiberglass Sections",
+  "h1": "Jameson B-Lite Poles, 8 ft",
   "meta": "Jameson B-Lite poles in 8 foot fiberglass sections for pole saws and pruners. Lighter sections that build reach fast and ease shoulder strain on long days.",
   "tagline": "Eight foot B-Lite fiberglass pole sections for Jameson pole tool kits.",
   "summary": "Jameson B-Lite poles are 8 foot fiberglass pole sections built for pole saw and pruner kits where weight overhead matters. Longer sections mean fewer joints for a given reach, which keeps the pole stiffer and quicker to assemble.",
@@ -1147,7 +1196,8 @@
     "h": "Where 8 ft sections shine",
     "p": [
      "If most of your pole work is high, 8 foot sections get you there with fewer joints than 6 foot poles. Fewer joints means less flex and less play at the head, which helps when you are trying to place a pruner on a small stem near the top of your reach.",
-     "Weight is the other half. A pole held overhead all day wears out shoulders, and lighter sections let you keep cutting accurately later in the shift."
+     "Weight is the other half. A pole held overhead all day wears out shoulders, and lighter sections let you keep cutting accurately later in the shift.",
+     "Longer sections do take more room in the truck, and an 8 foot pole can be unwieldy in tight yards or under low wires. Many crews run a mix: 8 foot sections for reach on open sites and a shorter section for fine-tuning length. As long as the fittings match, you can build the total length you need from whatever sections you have. Check that every locking button engages fully before raising the pole, and stand clear of the drop zone when cutting overhead."
     ]
    },
    {
@@ -1177,17 +1227,17 @@
  {
   "path": "/cutting-and-pruning/poles-and-kits/jameson-foam-filled-base-pole/",
   "category": "/cutting-and-pruning/poles-and-kits/",
-  "name": "Jameson Foam-Filled Base Pole",
+  "name": "Jameson Foam Filled Base Pole",
   "brand": "jameson",
   "brand_name": "Jameson",
   "kind": "pole-saw",
   "price": 110,
-  "keyword": "jameson foam filled pole",
-  "title": "Jameson Foam-Filled Base Pole for Pole Tools",
-  "h1": "Jameson Foam-Filled Base Pole",
-  "meta": "Jameson foam filled pole for the base section of a pole saw or pruner kit. Foam core keeps moisture and dirt out of the tube for a solid, durable bottom section.",
+  "keyword": "jameson foam filled base pole",
+  "title": "Jameson Foam Filled Base Pole for Pole Tools",
+  "h1": "Jameson Foam Filled Base Pole",
+  "meta": "Jameson foam filled base pole for sectional pole saw and pruner kits. The foam core keeps moisture and dirt out of the tube for a solid bottom section.",
   "tagline": "A foam-core base section that anchors a Jameson sectional pole kit.",
-  "summary": "The Jameson foam filled pole is a base section for sectional pole saw and pruner kits. Its foam core fills the inside of the fiberglass tube so moisture, dirt and debris can't collect inside, and the base end gives you a solid section to grip and plant.",
+  "summary": "The Jameson foam filled base pole is a base section for sectional pole saw and pruner kits. Its foam core fills the inside of the fiberglass tube so moisture, dirt and debris can't collect inside, and the base end gives you a solid section to grip and plant.",
   "highlights": [
    "Base section for sectional pole kits",
    "Foam-filled fiberglass core",
@@ -1217,7 +1267,8 @@
     "h": "Why foam-filled",
     "p": [
      "A hollow pole is lighter, but the open tube can collect water, dirt and condensation over time. A foam core fills that space. That is why many utility and line clearance crews favor foam-filled poles, especially for the sections nearest the operator's hands.",
-     "As the base section, this is the pole you hold and the one that gets planted on the ground. A solid, sealed section there makes the whole kit feel more stable."
+     "As the base section, this is the pole you hold and the one that gets planted on the ground. A solid, sealed section there makes the whole kit feel more stable.",
+     "Build your kit from the base up. With a sound base section in hand, add hollow or B-Lite sections above it to reach the height you need, keeping the heavier section low where it is easiest to control. Check that every locking fitting engages fully before raising the pole."
     ]
    },
    {
@@ -1253,10 +1304,10 @@
   "brand_name": "Husqvarna",
   "kind": "pruner",
   "price": 25,
-  "keyword": "husqvarna hand pruner",
+  "keyword": "husqvarna classic hand pruner",
   "title": "Husqvarna Classic Hand Pruner: Bypass Pruning Shears",
   "h1": "Husqvarna Classic Hand Pruner",
-  "meta": "The Husqvarna Classic hand pruner is a bypass pruning shear for clean cuts on small live stems. A solid, affordable pick for climbers, ground crews and gardeners.",
+  "meta": "The Husqvarna Classic hand pruner is a bypass shear for clean cuts on small live stems. An affordable pick for climbers, ground crews and gardeners.",
   "tagline": "A straightforward bypass hand pruner for clean cuts on small stems.",
   "summary": "The Husqvarna Classic hand pruner is a bypass pruning shear for small live branches, suckers and fine detail work. It is the tool you reach for when a saw is overkill and a clean cut matters.",
   "highlights": [
@@ -1284,7 +1335,8 @@
     "h": "Where it fits on the job",
     "p": [
      "Good pruning cuts start with the right tool. A bypass pruner slices like scissors, leaving a clean edge that seals well on live wood, unlike an anvil pruner that tends to crush. On a structural prune or a crown clean, a hand pruner handles suckers, water sprouts and small laterals faster than a saw.",
-     "Climbers carry one on the saddle for detail work, and ground crews use them for cleaning up shrubs, dressing cuts and trimming brush before it goes through the chipper."
+     "Climbers carry one on the saddle for detail work, and ground crews use them for cleaning up shrubs, dressing cuts and trimming brush before it goes through the chipper.",
+     "For arborists, cut quality matters as much as speed. A clean bypass cut just outside the branch collar gives the tree the best chance to close the wound. Ragged, crushed cuts and long stubs invite decay. Good hand pruners make it easy to do the job right on the small stuff, which is most of the cuts in a fine pruning job."
     ]
    },
    {
@@ -1350,7 +1402,8 @@
     "h": "Why a kit",
     "p": [
      "Building a pole pruner from parts means matching the head, adapter, poles and pull rope. A kit takes care of that. You get a head, poles that fit it and the hardware to put them together, so you can go straight to cutting.",
-     "The Big Mouth head opens wider than a standard pole pruner, which lets it take bigger stems in one bite. That saves switching to a pole saw for every limb that is a little too thick for a standard head."
+     "The Big Mouth head opens wider than a standard pole pruner, which lets it take bigger stems in one bite. That saves switching to a pole saw for every limb that is a little too thick for a standard head.",
+     "A kit is also a good starting point for new crews or a second truck. Everything matches, so there is no guessing about which adapter fits which pole or whether the rope suits the pulley. As parts wear, Jameson springs, blades, links and hardware are easy to replace, so the kit can stay in service for years."
     ]
    },
    {
@@ -1387,7 +1440,7 @@
   "price": 95,
   "keyword": "jameson big mouth pruner",
   "title": "Jameson Big Mouth Pruner: Pulley Pole Pruner Head",
-  "h1": "Jameson Big Mouth Pulley Pruner",
+  "h1": "Jameson Big Mouth Pruner with Pulley",
   "meta": "The Jameson Big Mouth pruner is a pulley pole pruner head with a wide jaw for larger stems. Pulley leverage makes overhead cuts easier on arms and shoulders.",
   "tagline": "A wide-jaw pole pruner head with pulley leverage for bigger overhead cuts.",
   "summary": "The Jameson Big Mouth pruner is a pulley pole pruner head with a wider jaw than a standard head. The pulley multiplies your pull on the rope, so cutting larger stems overhead takes less effort.",
@@ -1416,7 +1469,8 @@
     "h": "Why the pulley helps",
     "p": [
      "A pole pruner without a pulley relies on your arm strength through a straight pull. Adding a pulley gives mechanical advantage, so the same pull delivers more force at the blade. On bigger stems near the top of the head's capacity, that is the difference between one clean cut and a stuck blade.",
-     "Paired with the Big Mouth's wider opening, it is a strong choice for lifting canopies, clearing sidewalks and dropping small limbs off structures."
+     "Paired with the Big Mouth's wider opening, it is a strong choice for lifting canopies, clearing sidewalks and dropping small limbs off structures.",
+     "Cut quality matters on pole work just as it does aloft. Cut just outside the branch collar, avoid leaving stubs and don't tear bark by pulling a limb down before the cut finishes. For heavier limbs, make a small undercut with a pole saw first so the bark doesn't strip. Keep a spare spring and pull rope in the truck, since those are the parts that wear first. Store the head clean and dry, with the blade sheathed if you have a cover."
     ]
    },
    {
@@ -1482,7 +1536,8 @@
     "h": "Matching your pole system",
     "p": [
      "Pole tools are only as good as their connections. Jameson offers heads for different pole fittings, and the CompositLock version of the Big Mouth is for crews whose poles use that system. Matching head and pole avoids adapters and the play that comes with them.",
-     "The Big Mouth jaw takes larger stems than a standard pruner head, so you can handle more cuts before switching to a pole saw."
+     "The Big Mouth jaw takes larger stems than a standard pruner head, so you can handle more cuts before switching to a pole saw.",
+     "As with any pole pruner, the head is only part of the system. Good poles, a sound pull rope and fresh springs make the difference between clean cuts and fighting the tool all day. Before heading out, check that the head is locked fully on the pole, the rope runs free through the pulley and the blade opens and closes fully. Keep a spare spring and rope in the truck. Store the head clean and dry, and replace a bent blade or worn link instead of forcing the tool through cuts."
     ]
    },
    {
@@ -1552,7 +1607,8 @@
     "h": "Ready out of the box",
     "p": [
      "Buying just a head often means a second order for an adapter and rope. This version includes both, so if you already have poles, you can fit the head, run the rope and get to work. It is a good way to add a pruner to a pole saw setup or replace a worn head on an existing kit.",
-     "The pulley gives a mechanical advantage over a straight pull, which matters on the bigger stems and on long days overhead."
+     "The pulley gives a mechanical advantage over a straight pull, which matters on the bigger stems and on long days overhead.",
+     "This setup suits arborists who mostly climb but want a pole pruner for jobs where climbing isn't worth it, such as lifting canopies over sidewalks and drives or clearing small deadwood. It is also handy for orchard and landscape crews. Cut just outside the branch collar and avoid tearing bark by finishing each cut before pulling limbs down. For heavier stems, switch to a pole saw. Keep spare springs and a rope in the truck."
     ]
    },
    {
@@ -1590,7 +1646,7 @@
   "keyword": "marvin bull pruner",
   "title": "Marvin Bull Pruner with Adapter: Heavy Pole Pruner",
   "h1": "Marvin Bull Pruner with Adapter",
-  "meta": "The Marvin bull pruner is a heavy-duty pole pruner head, supplied here with the pole adapter. Built for bigger, tougher cuts overhead on clearance and orchard work.",
+  "meta": "The Marvin bull pruner is a heavy-duty pole pruner head, supplied with the pole adapter. Built for bigger, tougher cuts overhead on clearance and orchard work.",
   "tagline": "Marvin's heavy-duty pole pruner head, supplied with the pole adapter.",
   "summary": "The Marvin bull pruner is a heavy-duty pole pruner head made for tougher, larger cuts than a standard head. This version includes the adapter, so it is ready to mount on a compatible pole.",
   "highlights": [
@@ -1622,7 +1678,8 @@
     "h": "When to choose the bull",
     "p": [
      "Marvin pruners have long been a staple on orchard and clearance crews. The bull pruner is the heavier version, made for the cuts that stall a standard head. If your work involves a lot of thick stems overhead, the stouter build pays off in fewer stuck blades and less wear.",
-     "Including the adapter means you can fit it straight to your pole instead of ordering parts separately."
+     "Including the adapter means you can fit it straight to your pole instead of ordering parts separately.",
+     "Heavier heads do add weight at the end of the pole, which you feel over a long day. Many crews keep a standard pruner for general work and switch to the bull pruner for the jobs that need it. Either way, good cut technique matters. Seat the hook fully, cut just outside the branch collar and finish each cut before pulling the limb down, so bark doesn't tear back. Store the head clean and dry, and keep spare springs and rope in the truck."
     ]
    },
    {
@@ -1692,7 +1749,8 @@
     "h": "A dependable all-rounder",
     "p": [
      "For lifting canopies, clearing suckers and trimming small limbs overhead, a standard pole pruner is the quickest tool on the truck. The Marvin head is simple: a bypass blade, a hook, a spring and a rope. Fewer parts means fewer things to go wrong, and everything that does wear can be replaced.",
-     "With the adapter included, you can fit it straight to a compatible pole."
+     "With the adapter included, you can fit it straight to a compatible pole.",
+     "It suits a wide range of users: orchard crews pruning fruit trees, landscapers lifting canopies over walks and drives, and climbing arborists who want a ground tool for quick jobs. The adapter lets you build it into a sectional pole kit alongside a saw head. Keep spare springs and rope on hand, since those wear first. Check the hardware at each blade change, and store the head clean and dry."
     ]
    },
    {
@@ -1729,7 +1787,7 @@
   "price": 25,
   "keyword": "pole pruner rope",
   "title": "Pole Pruner Rope: Braided Polyester Cord",
-  "h1": "Pole Pruner Braided Polyester Cord",
+  "h1": "Pole Pruner Rope, Braided Polyester Cord",
   "meta": "Braided polyester pole pruner rope for replacing a frayed or glazed pull cord. Low stretch for a crisp cut and a firm grip on every pull overhead.",
   "tagline": "Replacement braided polyester pull cord for pole pruners.",
   "summary": "This braided polyester pole pruner rope replaces the pull cord on a pole pruner head. Polyester stretches little, so more of your pull goes into the cut, and the braid gives a firm grip.",
@@ -1758,7 +1816,8 @@
     "h": "Why replace the cord",
     "p": [
      "The pull cord takes friction through the pulley, abrasion along the pole and plenty of UV. Once it frays, glazes or gets stiff, it slips through gloves and drags in the pulley. A worn cord can also snap mid-cut, leaving the blade stuck in a limb overhead.",
-     "Polyester holds up well to sun and wear and stretches less than nylon, so the cut feels crisp rather than spongy."
+     "Polyester holds up well to sun and wear and stretches less than nylon, so the cut feels crisp rather than spongy.",
+     "Replacing the cord is cheap and quick, and most crews do it at least once a season on pruners that see daily use. Keep a spare length in the truck. While the head is apart, check the pulley for wear, sharp edges or a sticky bearing, since a rough pulley shreds a new cord quickly. A cord that runs smoothly also makes the pruner far less tiring to use on a long day of overhead cuts."
     ]
    },
    {
@@ -1796,7 +1855,7 @@
   "keyword": "art spiderjack",
   "title": "ART SpiderJack 2.1 Dyneema: MRS Friction Device",
   "h1": "ART SpiderJack 2.1 Dyneema",
-  "meta": "The ART SpiderJack is a mechanical friction device for moving rope systems. This 2.1 Dyneema version gives smooth, adjustable control for working through the canopy.",
+  "meta": "The ART SpiderJack is a mechanical friction device for moving rope systems. This 2.1 Dyneema version gives smooth, adjustable control in the canopy.",
   "tagline": "A mechanical friction hitch for moving rope systems from ART.",
   "summary": "The ART SpiderJack is a mechanical friction device that replaces a friction hitch on a moving rope system (MRS). This 2.1 Dyneema version is an earlier generation of the SpiderJack, known for smooth tending and adjustable friction.",
   "highlights": [
@@ -1825,7 +1884,8 @@
     "h": "What it does",
     "p": [
      "On a moving rope system, the friction hitch is what you control your descent and positioning with. A mechanical device like the SpiderJack does the same job without a cord that glazes and wears. Climbers like how it tends slack and how predictably it grabs and releases, especially on long working days.",
-     "Being mechanical, it behaves the same from one climb to the next, as long as it is set up correctly and matched to your rope."
+     "Being mechanical, it behaves the same from one climb to the next, as long as it is set up correctly and matched to your rope.",
+     "If you are moving from a traditional hitch, expect a learning curve. Set the device up on the ground, hang-test it and practice descents low in the tree before relying on it for production work. Many climbers pair it with a micro pulley for slack tending. Because this is an older generation, make sure replacement parts are available and that you have the correct instructions for this version."
     ]
    },
    {
@@ -1894,7 +1954,8 @@
     "h": "Why the tether matters",
     "p": [
      "In SRS setups, how components connect affects how they tend and how they load. A flexible tether keeps a device positioned without making the system stiff. Over time tethers abrade, get stiff with sap and grit, or get cut, and they need replacing.",
-     "Using the correct tether for the device keeps the system configured the way the manufacturer tested it."
+     "Using the correct tether for the device keeps the system configured the way the manufacturer tested it.",
+     "Before replacing it, take a close look at what wore the old tether out. Cuts and abrasion usually point to a sharp edge on a connector, a rough bark contact or a routing problem. Fixing the cause means the new tether lasts longer. Keep a spare in the gear bag, since a damaged tether is a reason to stop and fix the setup, not to keep climbing. Keep a record of when it went into service, along with your other soft goods. Small parts like this get overlooked in inspections, so make them part of your routine."
     ]
    },
    {
@@ -1931,7 +1992,7 @@
   "keyword": "rope runner",
   "title": "Rope Runner SRS Climbing Device",
   "h1": "Rope Runner (Vertec)",
-  "meta": "The Rope Runner is a mechanical friction device for stationary rope systems, with smooth descent control and good slack tending for working and moving in the tree.",
+  "meta": "The Rope Runner is a mechanical friction device for stationary rope systems, with smooth descent control and good slack tending for work in the tree.",
   "tagline": "A mechanical friction device for stationary rope tree climbing.",
   "summary": "The Rope Runner is a mechanical friction device built for stationary rope systems (SRS). It gives smooth descent control and tends slack well, so climbers can ascend, work and move laterally on a single tied-off line.",
   "highlights": [
@@ -1948,6 +2009,10 @@
    [
     "System",
     "SRS (stationary rope)"
+   ],
+   [
+    "Typical setup",
+    "Bridge attachment with a hitch-tending pulley and foot ascender"
    ]
   ],
   "body": [
@@ -1955,7 +2020,8 @@
     "h": "How climbers use it",
     "p": [
      "SRS climbing changed how a lot of arborists work big trees, and devices like the Rope Runner are a big part of that. It sits on the rope at the bridge, gives controlled friction for descent and lets you move around the canopy on a stationary line. Paired with a hitch tending pulley and a foot ascender, it is a full working system.",
-     "The appeal is consistency: the device behaves the same climb to climb, without the wear and adjustment of a friction hitch."
+     "The appeal is consistency: the device behaves the same climb to climb, without the wear and adjustment of a friction hitch.",
+     "If you are moving from MRS to SRS, take time to learn the system before production work. Practice low in a tree, get comfortable with rope management and changeovers, and learn how the device behaves with your specific rope. Rope diameter, construction and wear all change how a mechanical device feels. Have a qualified climber check your setup, and practice rescue so you know how to descend in a worst case."
     ]
    },
    {
@@ -1992,7 +2058,7 @@
   "keyword": "camp tree access evo",
   "title": "CAMP Tree Access Evo: Arborist Climbing Saddle",
   "h1": "CAMP Tree Access Evo",
-  "meta": "The CAMP Tree Access Evo is a European-style arborist saddle with a bridge attachment, built for comfort on long climbs and for both MRS and SRS work in the tree.",
+  "meta": "The CAMP Tree Access Evo is a European-style arborist saddle with a bridge, built for comfort on long climbs and for both MRS and SRS work in the tree.",
   "tagline": "A European-style bridge saddle from CAMP for full-day tree work.",
   "summary": "The CAMP Tree Access Evo is a European-style arborist climbing saddle built around a bridge attachment. It is made for climbers who spend long hours in the tree and want a saddle that moves well and supports them in a working position.",
   "highlights": [
@@ -2021,7 +2087,8 @@
     "h": "Why a bridge saddle",
     "p": [
      "A bridge lets your climbing system slide side to side as you turn, so you can face your work without twisting against the tie-in. That freedom, plus a well-padded waist and leg loops, is why many production climbers favor European-style saddles for long days in the canopy.",
-     "The Tree Access Evo is CAMP's take on that design, with attachment points for lanyards, chainsaws and tools."
+     "The Tree Access Evo is CAMP's take on that design, with attachment points for lanyards, chainsaws and tools.",
+     "Comfort matters for safety as well as productivity. A saddle that pinches or digs in tires you faster, and a tired climber makes more mistakes. When choosing a saddle, think about how you climb: mostly SRS or MRS, spurs or no spurs, and what tools you carry. A European-style saddle like this one suits climbers who move around the canopy a lot and value freedom of movement."
     ]
    },
    {

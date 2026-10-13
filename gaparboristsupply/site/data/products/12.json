@@ -39,14 +39,16 @@
     "h": "Where a ring fits in a cable system",
     "p": [
      "Most tree cabling is point to point: one cable between two leads. On multi-stem trees, some arborists use a hub layout where cables from several leads meet at a central ring. The ring lets each cable pull in its own direction while sharing the load across the crown.",
-     "A forged ring holds its shape better than a welded or bent ring, which matters when it sits in the tree for years. Size the ring and the cable together so thimbles and terminations seat properly, and follow the cabling hardware maker's ratings for every component in the system. Browse matching parts in <a href=\"/plant-care/cabling-and-bracing/\">cabling and bracing</a>."
+     "A forged ring holds its shape better than a welded or bent ring, which matters when it sits in the tree for years. Size the ring and the cable together so thimbles and terminations seat properly, and follow the cabling hardware maker's ratings for every component in the system. Browse matching parts in <a href=\"/plant-care/cabling-and-bracing/\">cabling and bracing</a>.",
+     "Hub layouts also reduce the number of anchor points drilled into each lead compared with running many separate cables. That said, the layout still has to suit the tree. A qualified arborist should look at defects, lead angles and target areas before deciding on a ring-based system."
     ]
    },
    {
     "h": "Install and inspect",
     "p": [
      "Cabling should be designed and installed by a qualified arborist following ANSI A300 support system practice. Keep all hardware in the system rated and compatible, and avoid mixing unknown parts.",
-     "Check installed rings on every inspection cycle for wear where cables bear, corrosion, and any sign of distortion. Replace a ring that shows wear or bending rather than trying to judge how much strength is left."
+     "Check installed rings on every inspection cycle for wear where cables bear, corrosion, and any sign of distortion. Replace a ring that shows wear or bending rather than trying to judge how much strength is left.",
+     "Keep records of what was installed, where, and when, so the next inspection has something to compare against. Cabling hardware is a long-term commitment for the tree and the client, and a ring that looked fine five years ago can tell a different story today."
     ]
    }
   ],
@@ -76,7 +78,7 @@
   "price": 35,
   "keyword": "husqvarna pole saw bar",
   "title": "Husqvarna Pole Saw Bar, 12 in, 44 DL",
-  "h1": "Husqvarna 12 in Pole Saw Bar, 44 DL",
+  "h1": "Husqvarna Pole Saw Bar, 12 in, 44 DL",
   "meta": "Husqvarna pole saw bar, 12 inch, with 44 drive links for gas powered pole saws. How to confirm fit, which chain to pair it with, and when to replace a bar.",
   "tagline": "A 12 in replacement bar for Husqvarna gas pole saws, 44 drive link chain.",
   "summary": "This Husqvarna pole saw bar is a 12 inch replacement guide bar for gas powered pole saws that run a 44 drive link chain. When the rails are worn or the tip is tired, a fresh bar brings back straight, efficient cuts overhead.",
@@ -110,14 +112,16 @@
     "h": "Confirming fit",
     "p": [
      "Pole saw bars are not universal. Match the mount pattern, gauge and drive link count to your saw before ordering. The fastest check is the numbers stamped on your current bar and the specs in your operator's manual.",
-     "Pair this bar with a matching 44 drive link chain. A chain with the wrong pitch or gauge will not seat in the groove or on the sprocket, and running a mismatched setup wears everything out fast. Matching chain is in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/\">chainsaw bars</a> and the chain section."
+     "Pair this bar with a matching 44 drive link chain. A chain with the wrong pitch or gauge will not seat in the groove or on the sprocket, and running a mismatched setup wears everything out fast. Matching chain is in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/\">chainsaw bars</a> and the chain section.",
+     "Write the bar's part numbers on the inside of your saw case or in the truck log. When the bar wears out mid-season, you can reorder the right one in minutes instead of guessing from a worn stamp."
     ]
    },
    {
     "h": "When to replace a bar",
     "p": [
      "On a pole saw, a bad bar shows up as cuts that wander or a chain that leans in the groove. Dress light rail burrs with a flat file, flip the bar at each chain change so it wears evenly, and keep the oil hole clear.",
-     "Replace the bar when the rails are worn uneven, the groove is too shallow to hold the drive links, or the nose is damaged. A new bar costs less than the time lost fighting a crooked cut at the end of a pole."
+     "Replace the bar when the rails are worn uneven, the groove is too shallow to hold the drive links, or the nose is damaged. A new bar costs less than the time lost fighting a crooked cut at the end of a pole.",
+     "Pole saws spend a lot of time cutting small, springy limbs at a long reach, which loads the bar unevenly. Keep the chain correctly tensioned and let the saw do the cutting rather than forcing it, and the bar will last longer and cut straighter. Clean the groove with a scraper at each chain change."
     ]
    }
   ],
@@ -181,14 +185,16 @@
     "h": "Why run a light bar",
     "p": [
      "A long bar on a 70 cc or bigger saw puts a lot of weight out front. A light bar trims that, so the saw balances closer to your hands. On a day of bucking or felling, that means less fatigue and better control at the end of the cut.",
-     "Light bars still need to be matched correctly. Order the length your saw can pull well, and pair it with a 3/8 pitch, .063 gauge chain with the right drive link count. More bars are in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/\">chainsaw bars</a>."
+     "Light bars still need to be matched correctly. Order the length your saw can pull well, and pair it with a 3/8 pitch, .063 gauge chain with the right drive link count. More bars are in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/\">chainsaw bars</a>.",
+     "On a typical removal, the big saw comes out for the trunk and the spar wood, and that is where a long bar earns its keep. Shaving weight off the nose makes it easier to keep the bar level through a long back cut and to hold the saw steady while bucking."
     ]
    },
    {
     "h": "Care and wear",
     "p": [
      "Keep the oil holes and groove clean, check the sprocket nose for play, and file off rail burrs. Flip the bar at chain changes so both rails wear evenly.",
-     "Light bars can be less forgiving of pinches and pry loads than solid bars, so avoid levering with the bar. Replace it if the rails are uneven, the groove is shallow, or the bar is bent."
+     "Light bars can be less forgiving of pinches and pry loads than solid bars, so avoid levering with the bar. Replace it if the rails are uneven, the groove is shallow, or the bar is bent.",
+     "Check the sprocket nose for play at every chain change and grease it if your bar calls for it. Run the oiler at a setting that keeps the chain wet in long cuts. A dry bar on a big saw overheats quickly and wears rails out fast."
     ]
    }
   ],
@@ -218,7 +224,7 @@
   "price": 25,
   "keyword": "husqvarna pole saw chain",
   "title": "Husqvarna Pole Saw Chain, 3/8 Micro .050, 44 DL",
-  "h1": "Husqvarna 3/8 Micro x .050 44 DL Pole Saw Chain",
+  "h1": "Husqvarna Pole Saw Chain, 3/8 Micro x .050, 44 DL",
   "meta": "Husqvarna pole saw chain in 3/8 micro pitch, .050 gauge, 44 drive links for gas pole saws. How to confirm fit, keep it sharp, and know when to replace it.",
   "tagline": "A 44 drive link replacement chain for Husqvarna gas pole saws.",
   "summary": "This Husqvarna pole saw chain is a 3/8 micro, .050 gauge, 44 drive link loop for gas powered pole saws with a matching 12 in bar. A sharp chain is what makes overhead pruning cuts fast and clean instead of a slow grind at full reach.",
@@ -252,14 +258,16 @@
     "h": "Getting the right loop",
     "p": [
      "Three numbers decide fit: pitch, gauge and drive link count. This loop is 3/8 micro pitch, .050 gauge and 44 drive links. Confirm all three against your bar or manual, since pole saws from different years can run different chain.",
-     "Keep a spare loop on the truck. Swapping a dull chain takes a few minutes, while filing a pole saw chain in the field is slow. See matching options in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>."
+     "Keep a spare loop on the truck. Swapping a dull chain takes a few minutes, while filing a pole saw chain in the field is slow. See matching options in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>.",
+     "Label each spare loop with its size, or keep them in marked bags. On a crew with several saws, chains get mixed up, and a loop with the wrong drive link count wastes time at the truck."
     ]
    },
    {
     "h": "Sharpening and wear",
     "p": [
      "Use the file size and angles your chain maker recommends, and keep the depth gauges in spec. A pole saw cuts at awkward angles and often contacts bark grit, so it dulls faster than you might expect.",
-     "Retire a chain when the cutters are filed back to the wear mark, when you see cracked tie straps, or when it stretches enough to need constant tensioning."
+     "Retire a chain when the cutters are filed back to the wear mark, when you see cracked tie straps, or when it stretches enough to need constant tensioning.",
+     "Watch for bark grit and dirt when pruning low limbs or cutting near the ground. Dirt dulls a chain in seconds. Keep the bar oiled, check tension when the chain is cold and again after it warms, and clean the sprocket area so packed chips do not throw off the cut."
     ]
    }
   ],
@@ -319,14 +327,16 @@
     "h": "Picking the right loop",
     "p": [
      "Pitch and gauge are stamped on most bars, and drive link count is the number of links that ride in the groove. Count them on your old chain or look up your bar. A chain that is one link off will not tension correctly.",
-     "If your saw or pole saw runs 3/8 micro pitch at .050, this is the chain family to match. Not sure? Bring the bar numbers and browse <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a> for the matching loop."
+     "If your saw or pole saw runs 3/8 micro pitch at .050, this is the chain family to match. Not sure? Bring the bar numbers and browse <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a> for the matching loop.",
+     "When in doubt, take the old chain or bar to the counter or read the numbers into your order notes. Getting pitch, gauge and length right the first time saves a return trip and a day without a saw."
     ]
    },
    {
     "h": "Keeping it cutting",
     "p": [
      "File at the angles the chain maker lists, with the right round file size, and lower the depth gauges a little every few sharpenings. Keep the bar oiled and check tension often while the chain is new.",
-     "Replace the chain when cutters reach the wear mark, tie straps crack, or the chain keeps stretching. A worn chain chews up the sprocket and bar nose too."
+     "Replace the chain when cutters reach the wear mark, tie straps crack, or the chain keeps stretching. A worn chain chews up the sprocket and bar nose too.",
+     "Keep a dedicated file kit with the right round file, a depth gauge tool and a flat file for each chain size on the truck. Touch up the chain at fuel stops instead of waiting until it is dull. Short, regular sharpening keeps cutters even and the saw cutting straight."
     ]
    }
   ],
@@ -394,14 +404,16 @@
     "h": "Why skip tooth",
     "p": [
      "Skip chain removes some cutters from a standard sequence. Fewer cutters mean less drag and more room for chips, which helps a saw pull a long bar through large diameter wood. The tradeoff is a slightly rougher cut and a bit more vibration on small wood.",
-     "Full chisel cutters cut fast in clean wood but dull quicker in dirty bark. Use it for felling and bucking big logs, not for stump work near the ground. More loops are in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>."
+     "Full chisel cutters cut fast in clean wood but dull quicker in dirty bark. Use it for felling and bucking big logs, not for stump work near the ground. More loops are in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>.",
+     "Skip chain also needs less power per foot of bar, which helps a saw that is near the limit of its bar length. Many cutters keep a skip loop for their longest bar and run full-comp chain on shorter bars for cleaner cuts."
     ]
    },
    {
     "h": "Filing and fit",
     "p": [
      "File full chisel with the correct round file and keep the top plate angle consistent. Check depth gauges every few sharpenings.",
-     "Order the drive link count that matches your bar length, and confirm your bar is 3/8 pitch and .050 gauge. Running a skip chain on a bar and sprocket in good condition gives the best result."
+     "Order the drive link count that matches your bar length, and confirm your bar is 3/8 pitch and .050 gauge. Running a skip chain on a bar and sprocket in good condition gives the best result.",
+     "Keep the cutters the same length around the loop. Uneven cutters make a skip chain pull to one side and leave a rough, curved cut. Check chain tension often in the first hour of a new loop, as new chain stretches a little before it settles in."
     ]
    }
   ],
@@ -431,7 +443,7 @@
   "price": 25,
   "keyword": "stihl ms200t chain",
   "title": "Stihl MS200T Chain: Oregon 3/8 Low Pro x .050",
-  "h1": "Oregon 3/8 Low Pro x .050 Chain for Stihl MS200T",
+  "h1": "Oregon Stihl MS200T Chain, 3/8 Low Pro x .050",
   "meta": "Oregon replacement Stihl MS200T chain in 3/8 low profile, .050 gauge. How to pick the loop for your bar, sharpen it, and run it safely aloft.",
   "tagline": "Replacement 3/8 low profile chain for the Stihl MS200T top-handle saw.",
   "summary": "This Oregon replacement for Stihl MS200T chain is a 3/8 low profile, .050 gauge loop that fits the classic top-handle climbing saw. A sharp chain is what lets a small saw make clean pruning cuts and quick limb removals aloft.",
@@ -465,14 +477,16 @@
     "h": "Matching your MS200T",
     "p": [
      "The MS200T ran 12 and 14 in bars in 3/8 low profile and .050 gauge. Count the drive links on your old loop or read your bar to choose the right length, typically 44 links on a 12 in bar and 50 on a 14 in.",
-     "Many climbers keep two or three sharp loops in the truck so the saw never goes up dull. Browse more loops in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>."
+     "Many climbers keep two or three sharp loops in the truck so the saw never goes up dull. Browse more loops in <a href=\"/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/\">chainsaw chain</a>.",
+     "The MS200T was discontinued, but many are still working in trees, and newer Stihl top-handle saws often use a similar chain size. Confirm your bar stamp before you assume it is the same."
     ]
    },
    {
     "h": "Sharpening and safe use",
     "p": [
      "Low profile chain uses a smaller file than standard 3/8. Use the size Oregon lists, hold a steady angle, and keep depth gauges in spec. A dull chain makes you push the saw, which is exactly what you do not want aloft.",
-     "Top-handle saws are for trained arborists working in the tree, secured with a lanyard and a separate tie-in. Follow ANSI Z133 and the saw manual."
+     "Top-handle saws are for trained arborists working in the tree, secured with a lanyard and a separate tie-in. Follow ANSI Z133 and the saw manual.",
+     "Keep the saw clean and the chain tensioned so it does not throw off when you cut at odd angles. A sharp chain lets a small top-handle saw make clean pruning cuts without tearing bark, which is better for the tree as well as for you."
     ]
    }
   ],
@@ -533,14 +547,16 @@
     "h": "Why every climber needs one",
     "p": [
      "A dropped saw can kill someone on the ground and ruins the saw. A saw lanyard ties the saw to your saddle so you can let go of it to move, reset your lanyard or handle a limb without it falling.",
-     "Attach the lanyard to the saw's tie ring and clip the other end to a dedicated tool attachment point on your saddle. Keep the length short enough that the saw does not hang near your legs. See other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>."
+     "Attach the lanyard to the saw's tie ring and clip the other end to a dedicated tool attachment point on your saddle. Keep the length short enough that the saw does not hang near your legs. See other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>.",
+     "A basic lanyard is also the easiest to inspect and replace. Many climbers keep one on every saw so they never have to move a lanyard between saws on the job."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "A saw lanyard is a tool tether. Never clip it into your climbing system or use it to hold your weight.",
-     "Check the snap gate, spring and the lanyard itself before each climb. Look for cuts, heat damage from the muffler and worn stitching. Replace it if anything looks off."
+     "Check the snap gate, spring and the lanyard itself before each climb. Look for cuts, heat damage from the muffler and worn stitching. Replace it if anything looks off.",
+     "Keep the saw lanyard short enough that the saw cannot reach your legs if it swings, but long enough to make your cuts. Store it with the saw, away from fuel and bar oil, and keep the snap clean so the gate closes fully every time."
     ]
    }
   ],
@@ -600,14 +616,16 @@
     "h": "Bungee versus fixed",
     "p": [
      "A fixed saw lanyard has a set length: too short and it limits your reach, too long and the saw swings and catches. A bungee lanyard solves both by stretching under use and contracting when the saw hangs.",
-     "Many climbers like a bungee lanyard for pruning and removals where they cut at different reaches all day. Compare other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>."
+     "Many climbers like a bungee lanyard for pruning and removals where they cut at different reaches all day. Compare other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>.",
+     "The carabiner end makes it quick to move the saw between tool points or hand it to another climber. Use a carabiner that suits tool attachment and keep it separate from your life-support connectors so there is no confusion."
     ]
    },
    {
     "h": "Use and care",
     "p": [
      "Clip the carabiner to a tool point on your saddle and the other end to the saw's tie ring. It is a tool tether only, never part of your climbing system.",
-     "Bungee loses stretch with age and sun. Check for a cut or stiff sheath, hot muffler damage and a sticky carabiner gate. Replace it when it no longer pulls the saw back in."
+     "Bungee loses stretch with age and sun. Check for a cut or stiff sheath, hot muffler damage and a sticky carabiner gate. Replace it when it no longer pulls the saw back in.",
+     "Keep the lanyard away from the muffler while the saw is hot, especially when hanging it from your saddle. Heat damage to bungee can be hard to spot, so look closely at the area nearest the saw. Store it out of the sun when it is not in use."
     ]
    }
   ],
@@ -667,14 +685,16 @@
     "h": "Where it fits",
     "p": [
      "Most top-handle saws have a tie ring at the rear, but rear-handle saws and some pole saws do not. A strap with a ring gives you a dedicated point to clip a lanyard so the saw can be carried aloft or hoisted safely.",
-     "Fit the strap snug around a solid part of the saw, clear of the chain, controls and the muffler. Then clip a saw lanyard to the ring. More options are in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>."
+     "Fit the strap snug around a solid part of the saw, clear of the chain, controls and the muffler. Then clip a saw lanyard to the ring. More options are in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>.",
+     "A strap is also handy when hoisting a larger saw to a climber on a tag line. The ring gives the ground worker a clear place to clip, and the climber can transfer the saw to a lanyard without fumbling."
     ]
    },
    {
     "h": "Checks before climbing",
     "p": [
      "Pull test the strap with the saw before you leave the ground. It should not slide, twist into the controls or rest against hot parts.",
-     "Inspect the strap for cuts and heat damage and the ring for wear. This strap is for tools only and must never be used as part of a climbing system."
+     "Inspect the strap for cuts and heat damage and the ring for wear. This strap is for tools only and must never be used as part of a climbing system.",
+     "Replace the strap if it has been near fuel spills, solvent or excessive heat, since these can weaken webbing without obvious signs. Keep the ring and strap clean of sap and sawdust so you can spot wear during each inspection."
     ]
    }
   ],
@@ -734,14 +754,16 @@
     "h": "Why rings on both ends",
     "p": [
      "Rings let you build the setup you want. Add a snap at the saddle end and a small carabiner at the saw, or girth one ring to a tool loop. You can swap connectors without replacing the whole lanyard.",
-     "The bungee keeps the saw close when you let go and gives you reach when you cut. That combination cuts down on snags in tight canopies. Compare other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>."
+     "The bungee keeps the saw close when you let go and gives you reach when you cut. That combination cuts down on snags in tight canopies. Compare other styles in <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>.",
+     "Because the rings are separate from the connectors, you can match each end to the job. Some climbers use a larger connector at the saddle for gloved hands and a smaller one on the saw so it does not bang into the controls."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Attach the saddle end to a tool point and the saw end to the saw's tie ring or a saw strap. Never connect a saw lanyard to your life-support system.",
-     "Check the bungee for lost stretch, cuts or muffler burns, and the rings for wear. Replace the lanyard once it stops pulling the saw back in reliably."
+     "Check the bungee for lost stretch, cuts or muffler burns, and the rings for wear. Replace the lanyard once it stops pulling the saw back in reliably.",
+     "Check that the connectors you add are closed and seated in the rings before each climb. Keep the lanyard away from the muffler and store it out of sun and heat when it is not in use, since bungee breaks down over time."
     ]
    }
   ],
@@ -801,14 +823,16 @@
     "h": "Why climbers wear saw pants",
     "p": [
      "Chaps work well on the ground, but they flap, catch and get hot when you climb. Saw pants put the cut-resistant layers into the trouser itself, so there is nothing loose to snag on a limb or your saddle.",
-     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with brown accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>."
+     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with brown accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>.",
+     "On a removal you might climb, cut, rappel and then drag brush for an hour, all in the same pants. That is where a light, stretchy saw pant pays off. You are not taking chaps on and off between jobs, and you are less likely to skip protection because it is too hot."
     ]
    },
    {
     "h": "Fit, rating and care",
     "p": [
      "Check the label for the protection type and class, and make sure it meets what your employer and ANSI Z133 call for on your work. Saw protection only works if it fits, so choose a size that covers you without bunching.",
-     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched."
+     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched.",
+     "Saw protection reduces injury risk but does not make you cut-proof. Keep a sharp chain, a working chain brake, good footing and two hands on the saw whenever you can. Pair the pants with saw boots, gloves, a helmet with face screen and hearing protection."
     ]
    }
   ],
@@ -869,14 +893,16 @@
     "h": "Why climbers wear saw pants",
     "p": [
      "Chaps work well on the ground, but they flap, catch and get hot when you climb. Saw pants put the cut-resistant layers into the trouser itself, so there is nothing loose to snag on a limb or your saddle.",
-     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with orange accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>."
+     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with orange accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>.",
+     "On a removal you might climb, cut, rappel and then drag brush for an hour, all in the same pants. That is where a light, stretchy saw pant pays off. You are not taking chaps on and off between jobs, and you are less likely to skip protection because it is too hot."
     ]
    },
    {
     "h": "Fit, rating and care",
     "p": [
      "Check the label for the protection type and class, and make sure it meets what your employer and ANSI Z133 call for on your work. Saw protection only works if it fits, so choose a size that covers you without bunching.",
-     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched."
+     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched.",
+     "Saw protection reduces injury risk but does not make you cut-proof. Keep a sharp chain, a working chain brake, good footing and two hands on the saw whenever you can. Pair the pants with saw boots, gloves, a helmet with face screen and hearing protection."
     ]
    }
   ],
@@ -937,14 +963,16 @@
     "h": "Why climbers wear saw pants",
     "p": [
      "Chaps work well on the ground, but they flap, catch and get hot when you climb. Saw pants put the cut-resistant layers into the trouser itself, so there is nothing loose to snag on a limb or your saddle.",
-     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with lime green accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>."
+     "The BreatheFlex Pro is Arbortec's lighter, more breathable line, made for long days and hot weather. This version pairs Realtree camo with lime green accents. Compare colors and fits in <a href=\"/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/\">chainsaw pants</a>.",
+     "On a removal you might climb, cut, rappel and then drag brush for an hour, all in the same pants. That is where a light, stretchy saw pant pays off. You are not taking chaps on and off between jobs, and you are less likely to skip protection because it is too hot."
     ]
    },
    {
     "h": "Fit, rating and care",
     "p": [
      "Check the label for the protection type and class, and make sure it meets what your employer and ANSI Z133 call for on your work. Saw protection only works if it fits, so choose a size that covers you without bunching.",
-     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched."
+     "Wash as Arbortec instructs. Any cut that reaches the protective layer means the pants are done and should be replaced, not patched.",
+     "Saw protection reduces injury risk but does not make you cut-proof. Keep a sharp chain, a working chain brake, good footing and two hands on the saw whenever you can. Pair the pants with saw boots, gloves, a helmet with face screen and hearing protection."
     ]
    }
   ],
@@ -1005,14 +1033,16 @@
     "h": "What the 585 is for",
     "p": [
      "A saw this size earns its keep on removals and storm work with large trunks, felling big spars and bucking heavy wood on the ground. It pulls long bars that smaller saws would struggle with.",
-     "It is a ground saw. Climbers working aloft use top-handle or small rear-handle saws, then the big saw finishes the trunk on the ground. Browse other models in <a href=\"/jobsite/power-equipment/chainsaws/\">chainsaws</a>."
+     "It is a ground saw. Climbers working aloft use top-handle or small rear-handle saws, then the big saw finishes the trunk on the ground. Browse other models in <a href=\"/jobsite/power-equipment/chainsaws/\">chainsaws</a>.",
+     "A big saw like this is also handy for stump cuts, slabbing and bucking the butt log after a removal. Match the bar length to the wood you cut most often rather than the biggest tree you might see once a year."
     ]
    },
    {
     "h": "Buying and setup notes",
     "p": [
      "The 585 may be harder to find new than current Husqvarna models, so check parts support and confirm the exact specs, bar mount and recommended bar lengths with Husqvarna or the seller.",
-     "Run it with chaps or saw pants, a helmet with face and hearing protection, gloves and saw boots. Keep the chain brake, chain catcher and throttle lockout in working order, and follow ANSI Z133 and the operator's manual."
+     "Run it with chaps or saw pants, a helmet with face and hearing protection, gloves and saw boots. Keep the chain brake, chain catcher and throttle lockout in working order, and follow ANSI Z133 and the operator's manual.",
+     "Keep the air filter clean, the chain sharp and the bar oiled. A large saw works hard in big wood and overheats or wears out fast if the basics slip. Run fresh, correctly mixed fuel and store it with an empty or stabilized tank."
     ]
    }
   ],
@@ -1072,14 +1102,16 @@
     "h": "How a rescue 8 works",
     "p": [
      "Rope wraps through the large hole and around the neck, and friction controls the speed of the descent. The ears keep the rope from riding up and forming a girth hitch, and they give you a place to tie off.",
-     "In tree work, a rescue 8 shows up in aerial rescue kits and some lowering setups. It is simple and light, but it does not self-brake, so the operator must keep a brake hand on the rope at all times. See other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "In tree work, a rescue 8 shows up in aerial rescue kits and some lowering setups. It is simple and light, but it does not self-brake, so the operator must keep a brake hand on the rope at all times. See other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "Rescue 8s are also used for rappelling from a tie-in point when a climber needs to get down fast, or for lowering an injured climber with a team on the ground. They work best on ropes that fall within their sized range."
     ]
    },
    {
     "h": "Safety and inspection",
     "p": [
      "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Practice aerial rescue with a qualified trainer before you rely on it.",
-     "Check for grooves worn by the rope, sharp edges, cracks and any damage from drops. Aluminum wears faster than steel, so retire a device with deep grooves."
+     "Check for grooves worn by the rope, sharp edges, cracks and any damage from drops. Aluminum wears faster than steel, so retire a device with deep grooves.",
+     "Store the descender in the rescue bag with clear labels and a set of instructions so anyone on the crew can find it fast. Train with it regularly so the setup is familiar if you ever need it on a real rescue."
     ]
    }
   ],
@@ -1139,14 +1171,16 @@
     "h": "What the Maestro S does",
     "p": [
      "In a rescue, you often need to lower, then raise a little to clear an edge or release a load. The Maestro S combines a descender with a pulley and cam, so the same device handles both jobs.",
-     "For tree crews, it fits aerial rescue and technical lowering systems. It is a specialized tool, best for teams that train on rope rescue. Other devices are in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "For tree crews, it fits aerial rescue and technical lowering systems. It is a specialized tool, best for teams that train on rope rescue. Other devices are in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "The integrated pulley also lets the Maestro S act as a progress-capture device in a haul system. That saves building a separate pulley and rope grab and speeds up changeovers on a rescue."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "The Maestro S is sized for 10.5 to 11.5 mm rope. Check your rope against Petzl's compatibility list, since many arborist climbing lines are larger. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers.",
-     "Inspect the cam, pulley sheave, handle and side plate before each use, and follow Petzl's inspection procedure and records."
+     "Inspect the cam, pulley sheave, handle and side plate before each use, and follow Petzl's inspection procedure and records.",
+     "Rescue gear only works if the team knows it. Run regular drills with the Maestro S and record who has trained on it. Keep it in a dedicated rescue bag so it is ready when it is needed."
     ]
    }
   ],
@@ -1206,14 +1240,16 @@
     "h": "How the RIG works",
     "p": [
      "The rope runs around a cam. Squeeze the handle to release and descend, and let go to stop. The hinged side plate lets you load the rope without unclipping the device from your harness.",
-     "For tree work, the RIG suits rescue and some SRS descents, but check rope diameter first. Many arborist climbing ropes are larger than its range. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "For tree work, the RIG suits rescue and some SRS descents, but check rope diameter first. Many arborist climbing ropes are larger than its range. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "The RIG is light enough to carry as a backup descender on a big climb. Some crews keep one in an aerial rescue kit for fast descents with a casualty when the rope is in range."
     ]
    },
    {
     "h": "Training and inspection",
     "p": [
      "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Self-braking devices still need a brake hand on the rope.",
-     "Inspect the cam, handle, side plate and wear surfaces, and look for grooves worn by rope. Follow Petzl's inspection procedure and keep records."
+     "Inspect the cam, handle, side plate and wear surfaces, and look for grooves worn by rope. Follow Petzl's inspection procedure and keep records.",
+     "Learn how to lock off the RIG and how to control a fast descent before you rely on it. Keep the device clean and dry, and store it away from chemicals and sharp hardware that could damage wear surfaces."
     ]
    }
   ],
@@ -1273,14 +1309,16 @@
     "h": "Where it fits",
     "p": [
      "A figure 8 is the most basic friction descender: rope through the large eye, around the neck, and onto your carabiner. Friction depends on your brake hand and rope type, so there is no automatic lock.",
-     "Tree crews use 8s mainly for rescue and rappel, not for working positioning. Keep one in the rescue bag and train with it. See other devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "Tree crews use 8s mainly for rescue and rappel, not for working positioning. Keep one in the rescue bag and train with it. See other devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "A figure 8 is also cheap and simple, which is useful for a backup or for a crew member who does not climb every day. Keep it in a labeled rescue bag with a compatible rope and carabiner."
     ]
    },
    {
     "h": "Safety and inspection",
     "p": [
      "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Learn tie-off methods from a qualified trainer.",
-     "Check for rope grooves, sharp edges, cracks and drop damage. Retire the descender if wear grooves are deep or any edge is sharp."
+     "Check for rope grooves, sharp edges, cracks and drop damage. Retire the descender if wear grooves are deep or any edge is sharp.",
+     "Practice rescues with the full kit at least a few times a year so the crew is ready. Keep the descender clean and dry, and store it away from sharp tools or heavy hardware that could gouge the wear surfaces."
     ]
    }
   ],
@@ -1340,14 +1378,16 @@
     "h": "Why a foot ascender",
     "p": [
      "Your legs are stronger than your arms. A foot ascender grabs the rope as you step down and slides up as you lift your foot, so every step moves you up the line.",
-     "Most climbers use it with a hand ascender and a chest or hip setup. It helps most on tall trees with a long climb to the tie-in point. See related gear in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "Most climbers use it with a hand ascender and a chest or hip setup. It helps most on tall trees with a long climb to the tie-in point. See related gear in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "Climbers who switch to SRS often find a foot ascender is the single biggest improvement to their ascent speed. It also saves energy for the actual tree work once you reach the top."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Choose the side for your dominant foot and adjust the strap so the ascender sits firmly on your boot. Practice low until the rope feeds smoothly.",
-     "A foot ascender is an ascent aid, not your life-support connection. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam teeth, spring and strap before every climb."
+     "A foot ascender is an ascent aid, not your life-support connection. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam teeth, spring and strap before every climb.",
+     "Keep the cam clean of sap and bark, which can reduce grip on the rope. Store the ascender in your climbing bag where it will not get crushed or bent, and replace the strap when it wears."
     ]
    }
   ],
@@ -1377,7 +1417,7 @@
   "keyword": "ct quick step replacement strap",
   "title": "CT Quick Step Replacement Strap for Foot Ascender",
   "h1": "CT Quick Step Replacement Strap",
-  "meta": "A CT Quick Step replacement strap for the Climbing Technology foot ascender. When to swap a worn strap, how to fit it to your boot, and what to inspect before you climb again.",
+  "meta": "A CT Quick Step replacement strap for the Climbing Technology foot ascender. When to swap a worn strap, how to fit it, and what to check first.",
   "tagline": "A replacement foot strap that keeps a Quick Step snug on your boot.",
   "summary": "This CT Quick Step replacement strap fits the Climbing Technology Quick Step foot ascender and keeps it seated on your boot. When the original strap is frayed or stretched, a new one restores a solid, secure fit.",
   "highlights": [
@@ -1406,14 +1446,16 @@
     "h": "When to replace the strap",
     "p": [
      "The strap takes a beating from bark, spurs and boot buckles. Once it frays, stretches or the buckle slips, the ascender can shift on your boot and the rope will not feed cleanly.",
-     "Replacing the strap is cheaper than a new ascender and keeps it working the way it should. See more parts in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "Replacing the strap is cheaper than a new ascender and keeps it working the way it should. See more parts in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "Swap the strap before it fails, not after. A strap that slips during a long ascent turns a quick climb into a frustrating one and can cause you to lose your footing on the rope."
     ]
    },
    {
     "h": "Fit and inspection",
     "p": [
      "Follow Climbing Technology's instructions to thread the strap, then adjust it so the ascender sits firmly over your boot. Try a few steps on a rope low to the ground.",
-     "Inspect the strap and the ascender cam before every climb. If the cam teeth are worn or the spring is weak, replace the ascender too."
+     "Inspect the strap and the ascender cam before every climb. If the cam teeth are worn or the spring is weak, replace the ascender too.",
+     "Keep a spare strap in your climbing bag. It weighs almost nothing and can save a day if the original breaks on the job. Store the ascender and strap away from sun and heat when not in use."
     ]
    }
   ],
@@ -1473,14 +1515,16 @@
     "h": "Why mount on a spur",
     "p": [
      "Standard foot ascenders fit on a boot, which can clash with spur straps. A spur-mounted ascender sits on the spur itself, so you get both: a quick rope ascent and spurs on for the removal.",
-     "Spurs are for removals only, not for pruning live trees. Use this device where spurs are appropriate. Compare foot ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "Spurs are for removals only, not for pruning live trees. Use this device where spurs are appropriate. Compare foot ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "On large removals with a tall first limb, a spur-mounted ascender gets you to your work position faster than spurring all the way. Once there, you can switch to spurring and flipline work as the removal goes."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Mount it following Climbing Technology's instructions and check compatibility with your spur model. Practice the rope ascent low first.",
-     "The ascender is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam, spring and mounting hardware before every climb."
+     "The ascender is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam, spring and mounting hardware before every climb.",
+     "Keep the cam and spring clean of bark and sap, which can reduce grip. Check that the mounting hardware has not loosened after a day on spurs, and inspect the spur straps and pads too."
     ]
    }
   ],
@@ -1539,14 +1583,16 @@
     "h": "What it does",
     "p": [
      "On a single rope, most of the effort is in the ascent. A foot-worn aid like the Talon grips the rope as you step and slides as you lift, turning the climb into a steady walk.",
-     "It pairs with a hand ascender and a proper SRS system. Check Edelrid's instructions for the rope diameters and setup it is designed for. Related gear is in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "It pairs with a hand ascender and a proper SRS system. Check Edelrid's instructions for the rope diameters and setup it is designed for. Related gear is in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "Foot-worn ascent aids are popular with climbers who work tall trees or do several climbs a day, since saving energy on the way up leaves more for the work at the top. Talk to a trainer about how it fits your system."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Fit it to your boot as Edelrid describes and practice low before going high.",
-     "It is an ascent aid only, not life support. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam, spring and straps before every climb."
+     "It is an ascent aid only, not life support. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam, spring and straps before every climb.",
+     "Keep the device clean of sap and bark so it grips evenly. Store it in your climbing bag where it will not be crushed or bent, and replace straps or worn parts according to Edelrid's guidance."
     ]
    }
   ],
@@ -1605,14 +1651,16 @@
     "h": "How it helps",
     "p": [
      "Every step you take with a foot ascender moves you up the rope. Your arms only need to slide the hand ascender up, so you reach the tie-in point with energy left to work.",
-     "It shines on tall trees and on days with several climbs. Compare other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "It shines on tall trees and on days with several climbs. Compare other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "Many climbers who move to SRS add a foot ascender early, since it makes the biggest difference to ascent speed. The Jet Step is designed with tree work in mind and fits common arborist setups."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Adjust the strap so the ascender sits firmly on your boot and the rope feeds smoothly. Practice close to the ground.",
-     "It is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam teeth, spring and strap before each climb."
+     "It is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cam teeth, spring and strap before each climb.",
+     "Clean sap and bark from the cam after each day of climbing. Store the ascender in your climbing bag away from sharp tools, and replace the strap when it frays or stretches."
     ]
    }
   ],
@@ -1671,14 +1719,16 @@
     "h": "How it works",
     "p": [
      "A foot ascender on its own can lag behind your stride. The Knee Ascent system clips the ascender to your harness through an elastic cord at the knee, so it lifts with your leg on every step.",
-     "Paired with a foot ascender and a chest or hand ascender, it creates a rope-walking setup for long SRS ascents. See related gear in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "Paired with a foot ascender and a chest or hand ascender, it creates a rope-walking setup for long SRS ascents. See related gear in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "Climbers who rope walk a lot, especially on tall trees, often say the knee system makes the foot ascender feel like part of their leg. It cuts down on the hitch in the stride that slows a climb."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Adjust the length so the bungee keeps light tension without pulling your leg out of line. Follow Petzl's setup steps exactly and test low.",
-     "It is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the bungee, webbing and connectors before every climb."
+     "It is an ascent aid only. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the bungee, webbing and connectors before every climb.",
+     "Bungee loses stretch over time, so watch for a slack feel or a cord that no longer pulls the ascender up. Replace worn parts according to Petzl's guidance and store the system out of sun and heat."
     ]
    }
   ],
@@ -1737,14 +1787,16 @@
     "h": "How a foot loop helps",
     "p": [
      "Clip the foot loop to your hand ascender, step into it, and stand up. Then slide your hitch or chest device up and repeat. Your legs do the heavy lifting instead of your arms.",
-     "Foot loops are light and quick to deploy, which makes them handy for occasional SRS climbs or as a backup. Compare other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>."
+     "Foot loops are light and quick to deploy, which makes them handy for occasional SRS climbs or as a backup. Compare other options in <a href=\"/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/\">foot ascenders and foot loops</a>.",
+     "A foot loop is also a useful rescue and self-rescue tool, since it lets you stand and take weight off your system to clear a problem. Many climbers keep one clipped to their saddle for that reason alone."
     ]
    },
    {
     "h": "Sizing and inspection",
     "p": [
      "Adjust the length so you can stand comfortably with the hand ascender at about face height. Practice the rhythm low to the ground.",
-     "A foot loop is an ascent aid, not your life-support connection. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the webbing and stitching for wear before each climb."
+     "A foot loop is an ascent aid, not your life-support connection. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the webbing and stitching for wear before each climb.",
+     "Keep the foot loop clean and dry, and store it away from sun, heat and chemicals. Replace it if the webbing fades, stiffens or shows cuts, even if the stitching still looks good."
     ]
    }
   ],
@@ -1803,14 +1855,16 @@
     "h": "Why two handles",
     "p": [
      "A standard hand ascender has one grip. The Quick Arbor adds a second handle so both hands can drive the device up the rope, spreading the effort and helping you keep a steady rhythm.",
-     "It pairs well with a foot ascender for a full rope-walking system. Compare other handled ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "It pairs well with a foot ascender for a full rope-walking system. Compare other handled ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "On long ascents with heavy gear, a double-handled ascender can make a real difference to how fresh you feel at the top. Try one before buying if you can, since grip and fit matter."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Follow Climbing Technology's instructions for rope diameter and connection points, and test on the ground first.",
-     "An ascender is not a descent device. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, safety catch and frame before every climb."
+     "An ascender is not a descent device. Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, safety catch and frame before every climb.",
+     "Keep the cam clean of sap and bark so it grips evenly, and check that the handles have not cracked from drops or impacts. Store the ascender in your climbing bag away from heavy hardware."
     ]
    }
   ],
@@ -1869,14 +1923,16 @@
     "h": "Why a safety pin",
     "p": [
      "On a busy climb, the rope can push against a cam or a branch can knock it. The safety pin on the Ultrasafe helps keep the rope captured until you choose to release it.",
-     "It pairs with a foot ascender and your SRS device for a fast ascent. Compare other handled ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "It pairs with a foot ascender and your SRS device for a fast ascent. Compare other handled ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "A safety pin is extra security, not a replacement for good technique. Watch how the rope runs through the ascender and keep branches and other ropes clear of the cam while you climb."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Check ISC's instructions for rope diameter and the correct connection points. Practice loading and unloading the rope with the pin on the ground.",
-     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, pin and frame before every climb."
+     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, pin and frame before every climb.",
+     "Clean sap and bark from the cam after each day, and check that the pin moves freely and seats fully. Store the ascender in your climbing bag away from sharp tools and heavy hardware."
     ]
    }
   ],
@@ -1935,14 +1991,16 @@
     "h": "How climbers use it",
     "p": [
      "Slide the Futura up the rope and stand on a foot loop or foot ascender clipped below it. On a rope-walking system, it rides above the chest or hip device as the upper handled clamp.",
-     "Outside of climbing, crews use handled ascenders to grab a line for hauling or for progress capture in a simple pull system. See other ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>."
+     "Outside of climbing, crews use handled ascenders to grab a line for hauling or for progress capture in a simple pull system. See other ascenders in <a href=\"/climbing/climbing-gear/ascent-and-descent/\">ascent and descent</a>.",
+     "Choose the hand that suits your climbing. Many climbers use a right-hand ascender on the upper position and keep their left hand for tending the system or a second device."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Check Kong's instructions for compatible rope diameters and connection points. Practice on the ground first.",
-     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, safety catch and frame before every use."
+     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the cam teeth, spring, safety catch and frame before every use.",
+     "Keep the cam clean of sap and bark so it grips evenly, and store the ascender in your climbing bag away from heavy hardware. Retire it if the cam teeth are worn smooth or the frame shows damage."
     ]
    }
   ],
@@ -2002,14 +2060,16 @@
     "h": "Why switch from a hitch",
     "p": [
      "A friction hitch works, but it needs tying, dressing and frequent cord replacement. The Unicender gives consistent friction from a machined device, tends easily and does not glaze like a hitch cord.",
-     "Climbers who want one device across both MRS and SRS often look at the Unicender. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/\">devices for MRS</a>."
+     "Climbers who want one device across both MRS and SRS often look at the Unicender. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/\">devices for MRS</a>.",
+     "The Unicender also helps climbers who are hard on hitch cords, since there is no cord to glaze or wear through. It does take some learning, so practice with a qualified trainer before using it on the job."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Use the rope diameters and setup Rock Exotica lists, and practice low first. Friction varies by rope, so test your rope with the device before climbing high.",
-     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cams, springs, wear surfaces and connection points before each climb."
+     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Check the cams, springs, wear surfaces and connection points before each climb.",
+     "Keep the device clean of sap and grit, which can change how it grips the rope. Store it in your climbing bag away from sharp tools, and follow Rock Exotica's guidance on wear parts and service."
     ]
    }
   ],
@@ -2068,14 +2128,16 @@
     "h": "What the Chicane does",
     "p": [
      "A Zigzag is built for MRS, where the doubled rope supplies extra friction. On a single rope, it needs more. The Chicane sits below the Zigzag and adds that friction so descents stay controlled.",
-     "Climbers who already own a Zigzag can add SRS without buying a whole new device. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/\">devices for SRS</a>."
+     "Climbers who already own a Zigzag can add SRS without buying a whole new device. Compare devices in <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/\">devices for SRS</a>.",
+     "The Chicane also lets you adjust friction on the fly, which helps when switching between steep and gentle descents or between ropes of different diameter within Petzl's range. On long descents from tall trees, being able to add a little friction keeps the speed steady and the device cooler, which is easier on both the rope and the climber."
     ]
    },
    {
     "h": "Setup and inspection",
     "p": [
      "Follow Petzl's setup steps exactly and use the rope diameters they list. Test the system low first.",
-     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the Chicane and Zigzag for wear grooves, damaged parts and smooth action before every climb."
+     "Life-support gear must meet the applicable standard (ANSI Z133 and the manufacturer's instructions), be inspected before every use, and be used only by trained climbers. Inspect the Chicane and Zigzag for wear grooves, damaged parts and smooth action before every climb.",
+     "Keep both devices clean of sap and grit, which can change how they grip and release. Store them in your climbing bag away from heavy hardware, and replace wear parts as Petzl instructs."
     ]
    }
   ],

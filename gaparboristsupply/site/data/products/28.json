@@ -2,14 +2,14 @@
  {
   "path": "/prusik-loops/dmm-pinto-pulley-prusik/",
   "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
-  "name": "DMM Pinto Pulley and Prusik Set",
+  "name": "DMM Pinto Pulley Prusik Set",
   "brand": "dmm",
   "brand_name": "DMM",
   "kind": "pulley",
   "price": 75,
   "keyword": "dmm pinto pulley prusik",
   "title": "DMM Pinto Pulley Prusik Set for Arborists",
-  "h1": "DMM Pinto Pulley and Prusik Set",
+  "h1": "DMM Pinto Pulley Prusik Set",
   "meta": "The DMM Pinto pulley prusik set pairs a compact pulley with a hitch cord loop for tending slack, small haul systems, and simple rope tools on the tree job.",
   "tagline": "A compact DMM pulley paired with a prusik loop for hitch tending and small haul systems.",
   "summary": "The DMM Pinto pulley prusik set combines a small, efficient pulley with a matching prusik loop, so you have the two pieces most climbers reach for when they build a hitch-tending setup or a quick mechanical advantage. It is a tidy way to add a pulley and hitch to a climbing kit in one purchase.",
@@ -75,7 +75,7 @@
   "brand_name": "Sirius",
   "kind": "sling",
   "price": 32,
-  "keyword": "8mm loop prusik with ring",
+  "keyword": "sirius 8mm loop prusik",
   "title": "Sirius 8mm Loop Prusik with Aluminum Ring",
   "h1": "Sirius 8mm Loop Prusik with Aluminum Ring",
   "meta": "The Sirius 8mm loop prusik with aluminum ring gives climbers a ready-made hitch cord with a ring for a clean, low-friction tie-in on rope tools and lanyards.",
@@ -107,7 +107,8 @@
     "h": "Where a ring loop prusik fits",
     "p": [
      "A loop prusik is the simplest hitch there is: wrap it around the host rope, pass it through itself, and clip in. Adding an aluminum ring gives the carabiner a round, smooth surface to ride on, which spreads the load and cuts down on the cord wear you see when a carabiner sits directly on the loop.",
-     "Climbers use these as adjusters on a rope lanyard, as a backup hitch while they set up, or as a grab point when building a quick haul. An 8 mm cord holds well on many 11 to 13 mm arborist lines, but the bite changes with rope construction, so test it low on your own rope before you rely on it."
+     "Climbers use these as adjusters on a rope lanyard, as a backup hitch while they set up, or as a grab point when building a quick haul. An 8 mm cord holds well on many 11 to 13 mm arborist lines, but the bite changes with rope construction, so test it low on your own rope before you rely on it.",
+     "Because the ring is already in place, there is nothing to splice or sew. Keep a spare loop on the saddle so you can swap out a glazed adjuster mid-job or add a quick backup while you reset a tie-in point."
     ]
    },
    {
@@ -136,17 +137,17 @@
  {
   "path": "/prusik-loops/yale-bee-line-8mm-loop-prusik-with-aluminum-ring/",
   "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
-  "name": "Yale Bee Line 8mm Loop Prusik with Aluminum Ring",
+  "name": "Yale Bee Line Loop Prusik with Aluminum Ring",
   "brand": "yale-cordage",
   "brand_name": "Yale Cordage",
   "kind": "sling",
   "price": 35,
-  "keyword": "yale bee line prusik",
-  "title": "Yale Bee Line 8mm Loop Prusik with Aluminum Ring",
-  "h1": "Yale Bee Line 8mm Loop Prusik with Aluminum Ring",
-  "meta": "The Yale Bee Line prusik is an 8mm hitch cord loop with an aluminum ring, made for lanyard adjusters, backup hitches, and quick grab points on climbing lines.",
+  "keyword": "yale bee line loop prusik",
+  "title": "Yale Bee Line Loop Prusik with Aluminum Ring",
+  "h1": "Yale Bee Line Loop Prusik with Aluminum Ring",
+  "meta": "The Yale Bee Line loop prusik is an 8mm hitch cord loop with an aluminum ring for lanyard adjusters, backup hitches, and quick grab points on climbing lines.",
   "tagline": "Yale's heat-resistant 8 mm Bee Line hitch cord in a ready loop with an aluminum ring.",
-  "summary": "The Yale Bee Line prusik puts Yale's well-known 8 mm Bee Line hitch cord into a closed loop with an aluminum ring, ready to tie on a lanyard or climbing line. Bee Line is built to handle the heat a friction hitch makes, which is why so many climbers use it for adjusters and hitches.",
+  "summary": "The Yale Bee Line loop prusik puts Yale's well-known 8 mm Bee Line hitch cord into a closed loop with an aluminum ring, ready to tie on a lanyard or climbing line. Bee Line is built to handle the heat a friction hitch makes, which is why so many climbers use it for adjusters and hitches.",
   "highlights": [
    "Made from Yale Bee Line 8 mm hitch cord",
    "Cord built to resist hitch heat",
@@ -178,7 +179,8 @@
     "p": [
      "Bee Line has a heat-resistant core with a polyester cover, which helps it hold up to the friction a hitch generates when you descend or adjust under load. The cover has a firm hand that grips host rope well without feeling grabby once it is broken in.",
      "As a ring loop it is quick to use. Tie a prusik or similar hitch on a rope lanyard as an adjuster, or set it on a climbing line as a backup while you rig your system. The ring keeps the carabiner from sawing on the cord and makes the loop easier to clip and unclip with gloves on.",
-     "Grip depends on the host rope. Test the hitch on your own lanyard or climbing line close to the ground before you trust it aloft."
+     "Grip depends on the host rope. Test the hitch on your own lanyard or climbing line close to the ground before you trust it aloft.",
+     "Many climbers keep two or three of these loops on the saddle: one as a lanyard adjuster, one as a spare, and one for building a quick haul or a backup on a rigging line when the ground crew needs a hand."
     ]
    },
    {
@@ -212,7 +214,7 @@
   "brand_name": "Edelrid",
   "kind": "spur",
   "price": 119,
-  "keyword": "edelrid talon replacement cuffs",
+  "keyword": "edelrid talon replacement cuff",
   "title": "Edelrid Talon Replacement Cuff System for Spurs",
   "h1": "Edelrid Talon Replacement Cuff System",
   "meta": "Edelrid Talon replacement cuffs restore the upper pads and straps on Talon climbing spurs, so worn cuffs can be swapped without replacing the whole set.",
@@ -232,6 +234,10 @@
    [
     "Includes",
     "Upper cuff system"
+   ],
+   [
+    "Use",
+    "Refitting worn spurs"
    ]
   ],
   "body": [
@@ -239,7 +245,8 @@
     "h": "When to replace spur cuffs",
     "p": [
      "Cuffs take a beating. Sweat, sap, and rubbing against bark break down padding and stretch straps, and a cuff that has packed flat no longer spreads load across your calf. You notice it as rubbing, a shank that rotates when you set a gaff, or sore shins after a removal day.",
-     "If the shanks are straight and the gaffs are sharp and within the manufacturer's wear limits, new cuffs bring the spurs back to a good working fit. Confirm you have Talon spurs before ordering, since cuff systems are model specific."
+     "If the shanks are straight and the gaffs are sharp and within the manufacturer's wear limits, new cuffs bring the spurs back to a good working fit. Confirm you have Talon spurs before ordering, since cuff systems are model specific.",
+     "Fresh cuffs also make the spurs safer to use. A cuff that holds the shank firmly against the leg helps each gaff go in straight and stay set, which matters most when you are tired late in a long removal and your footwork starts to slip."
     ]
    },
    {
@@ -294,6 +301,10 @@
    [
     "Connectors",
     "Snap hooks"
+   ],
+   [
+    "Load type",
+    "Brush and light wood"
    ]
   ],
   "body": [
@@ -336,10 +347,10 @@
   "brand_name": "Husky",
   "kind": "rope",
   "price": 159,
-  "keyword": "1/2 bull rope",
+  "keyword": "husky bull rope",
   "title": "1/2 Inch Husky Bull Rope Rigging Rope",
   "h1": "1/2\" Husky Bull Rope Rigging Rope",
-  "meta": "Husky Bull Rope in 1/2 inch is a double braid rigging rope for light rigging, limb lowering, and pruning work. See what loads it suits, how to size it, and how to care for it.",
+  "meta": "Husky Bull Rope in 1/2 inch is a double braid rigging rope for light rigging, limb lowering, and pruning work. Learn how to size it and care for it.",
   "tagline": "A 1/2 in double braid bull rope for light rigging, limb lowering, and pruning work.",
   "summary": "Husky Bull Rope in 1/2 inch is a double braid rigging line made for lowering wood on tree removals, with a firm braid that runs well through blocks and lowering devices. The 1/2 inch size is light enough to carry up the tree and quick to handle on smaller pieces.",
   "highlights": [
@@ -402,7 +413,7 @@
   "brand_name": "Husky",
   "kind": "rope",
   "price": 379,
-  "keyword": "3/4 bull rope",
+  "keyword": "husky bull rope",
   "title": "3/4 Inch Husky Bull Rope Rigging Rope",
   "h1": "3/4\" Husky Bull Rope Rigging Rope",
   "meta": "Husky Bull Rope in 3/4 inch is a double braid rigging rope for heavy wood and big removal work. See what loads it suits, how to size it, and how to care for it.",
@@ -468,10 +479,10 @@
   "brand_name": "Husky",
   "kind": "rope",
   "price": 259,
-  "keyword": "5/8 bull rope",
+  "keyword": "husky bull rope",
   "title": "5/8 Inch Husky Bull Rope Rigging Rope",
   "h1": "5/8\" Husky Bull Rope Rigging Rope",
-  "meta": "Husky Bull Rope in 5/8 inch is a double braid rigging rope for general removal rigging and mid-size wood. See what loads it suits, how to size it, and how to care for it.",
+  "meta": "Husky Bull Rope in 5/8 inch is a double braid rigging rope for general removal rigging and mid-size wood. Learn how to size it, match hardware, and care for it.",
   "tagline": "A 5/8 in double braid bull rope for general removal rigging and mid-size wood.",
   "summary": "Husky Bull Rope in 5/8 inch is a double braid rigging line made for lowering wood on tree removals, with a firm braid that runs well through blocks and lowering devices. The 5/8 inch size is the all-round choice many crews keep on the truck for everyday removals.",
   "highlights": [
@@ -537,7 +548,7 @@
   "keyword": "mammoth rigging line",
   "title": "5/8 Inch Mammoth Rigging Line for Tree Removal",
   "h1": "5/8\" Mammoth Rigging Line",
-  "meta": "Mammoth rigging line in 5/8 inch is a heavy-duty arborist lowering rope for everyday removals. Learn how to match it to blocks and devices and when to retire it.",
+  "meta": "Mammoth rigging line in 5/8 inch is a heavy-duty arborist lowering rope for everyday removals. Learn how to match it to blocks and devices and when to retire.",
   "tagline": "A 5/8 in rigging line for everyday lowering on tree removals.",
   "summary": "Mammoth rigging line in 5/8 inch is a lowering rope for removal work, sized for the mid-weight wood most crews handle day to day. At 5/8 inch it runs through common arborist blocks and lowering devices and still carries easily up the tree.",
   "highlights": [
@@ -554,6 +565,10 @@
    [
     "Use",
     "Arborist rigging / lowering"
+   ],
+   [
+    "Typical role",
+    "Everyday removal lowering line"
    ]
   ],
   "body": [
@@ -597,7 +612,7 @@
   "kind": "rope",
   "price": 699,
   "keyword": "sterling kraken rigging line",
-  "title": "Sterling Kraken 3/4 Inch Rigging Line, 200 ft",
+  "title": "Sterling Kraken Rigging Line, 3/4 in x 200 ft",
   "h1": "Sterling Kraken Rigging Line 3/4\" x 200'",
   "meta": "Sterling Kraken rigging line in 3/4 inch by 200 feet is built for heavy arborist rigging on big removals. See how to size it, match hardware, and care for it.",
   "tagline": "A 3/4 in x 200 ft rigging line from Sterling for heavy removal work.",
@@ -629,7 +644,8 @@
     "p": [
      "A 3/4 inch line is for the days when wood gets heavy: big leaders, trunk wood, and pieces you would not trust to a 5/8 inch rope. The 200 foot length gives enough to reach from a high block to a lowering device at the base with plenty left to work with, even on tall trees.",
      "Heavy rope needs heavy hardware. Pair it with a block, sling, and lowering device rated for 3/4 inch line and for the forces you expect, and keep the anchor sound. A big line does not make a weak anchor any stronger.",
-     "Check Sterling's published ratings and working load guidance before you size it to a specific job."
+     "Check Sterling's published ratings and working load guidance before you size it to a specific job.",
+     "Long heavy rope is also heavy to carry, so most crews set it up with a light line first and haul the rigging line into position rather than climbing with it."
     ]
    },
    {
@@ -695,7 +711,8 @@
     "p": [
      "A light rigging line earns its spot on pruning jobs and small removals, where pieces are manageable and you want a rope you can tie fast and pull without a crew. Use it to lower limbs over roofs and gardens, as a tag line, or as a pull line when felling small trees.",
      "Know where the size stops. Heavier wood, long drops, and pieces that will be caught hard need a bigger rope and hardware rated for those loads. Match pulleys and lowering devices to 1/2 inch rope so the line runs smoothly and wears evenly.",
-     "Check Teufelberger's ratings and guidance before sizing it to a particular piece."
+     "Check Teufelberger's ratings and guidance before sizing it to a particular piece.",
+     "A 150 foot length covers most residential trees with enough tail for the ground worker. It also packs into a small rope bag, so it can ride along on pruning jobs where you might not expect to rig at all."
     ]
    },
    {
@@ -724,17 +741,17 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-1-2-rigging-block/",
   "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
-  "name": "CMI 1/2\" Rigging Block",
+  "name": "CMI Rigging Block for 1/2 in Rope",
   "brand": "cmi",
   "brand_name": "CMI",
   "kind": "pulley",
   "price": 149,
   "keyword": "cmi rigging block",
-  "title": "CMI 1/2 Inch Rigging Block for Arborist Lowering",
-  "h1": "CMI 1/2\" Rigging Block",
-  "meta": "The CMI 1/2 inch rigging block redirects light rigging lines on pruning and removal jobs. See how to hang it, match rope size, and inspect it before use.",
+  "title": "CMI Rigging Block for 1/2 Inch Rope",
+  "h1": "CMI Rigging Block for 1/2 in Rope",
+  "meta": "The CMI rigging block for 1/2 inch rope redirects light rigging lines on pruning and removal jobs. See how to hang it, match rope size, and inspect it.",
   "tagline": "A rigging block sized for 1/2 in rope for light lowering work.",
-  "summary": "The CMI 1/2 inch rigging block is a pulley block sized for half-inch rigging rope, used to redirect the line from the piece to a lowering device at the base. Using a block instead of a natural crotch reduces friction on the tree and wear on the rope.",
+  "summary": "The CMI rigging block for 1/2 inch rope is a pulley block used to redirect the line from the piece to a lowering device at the base. Using a block instead of a natural crotch reduces friction on the tree and wear on the rope.",
   "highlights": [
    "Sized for 1/2 in rigging rope",
    "Redirects line with less friction than a natural crotch",
@@ -750,6 +767,10 @@
    [
     "Use",
     "Arborist rigging block"
+   ],
+   [
+    "Typical role",
+    "Redirect for a lowering line"
    ]
   ],
   "body": [
@@ -757,7 +778,8 @@
     "h": "How the block is used",
     "p": [
      "Hang the block from a sling choked or girth-hitched around a sound anchor above the work. The rigging line runs through the sheave down to a lowering device at the base, where the ground worker controls the descent. Because the sheave turns, the line runs freely and the ground worker gets consistent, predictable friction from the device.",
-     "Remember that the block and anchor see roughly double the load on the rope, since the line pulls from both sides. Choose a sling and anchor that can handle that, and keep drops short to limit shock loads."
+     "Remember that the block and anchor see roughly double the load on the rope, since the line pulls from both sides. Choose a sling and anchor that can handle that, and keep drops short to limit shock loads.",
+     "A small block is easy to carry up on the saddle, so you can set it as you go rather than sending it up on a line. That makes it a good fit for pruning jobs where you lower a handful of limbs over a roof, garden, or fence, then move on to the next tree."
     ]
    },
    {
@@ -794,7 +816,7 @@
   "keyword": "cmi rp145",
   "title": "CMI RP145 Arborist Rigging Block",
   "h1": "CMI RP145 Arborist Block",
-  "meta": "The CMI RP145 arborist block redirects rigging lines on removals with less friction than a natural crotch. See how it hangs, what it pairs with, and checks to make.",
+  "meta": "The CMI RP145 arborist block redirects rigging lines on removals with less friction than a natural crotch. See how it hangs and what to check before each job.",
   "tagline": "CMI's arborist rigging block for redirecting lowering lines on removals.",
   "summary": "The CMI RP145 arborist block is a rigging block made to hang from a sling and redirect a lowering line on tree removals. It replaces a natural crotch with a turning sheave, which saves the rope, protects the tree, and gives the ground crew smoother control.",
   "highlights": [
@@ -812,6 +834,10 @@
    [
     "Use",
     "Arborist rigging block"
+   ],
+   [
+    "Typical role",
+    "Redirect for a lowering line"
    ]
   ],
   "body": [
@@ -819,7 +845,8 @@
     "h": "Putting the RP145 to work",
     "p": [
      "Set the block on a sling above the piece you are removing, run the rigging line through the sheave, and take it down to a lowering device at the base. With the block carrying the redirect, the ground worker controls the descent with the device instead of fighting crotch friction.",
-     "The anchor and block take roughly twice the load on the rope because the line pulls from both sides. Size slings and anchors to that, and choose a rope that fits the sheave as listed by CMI. Check CMI's ratings for this model before you size it to a job."
+     "The anchor and block take roughly twice the load on the rope because the line pulls from both sides. Size slings and anchors to that, and choose a rope that fits the sheave as listed by CMI. Check CMI's ratings for this model before you size it to a job.",
+     "Placement matters as much as the block itself. Hang it above the piece and as close to the trunk as the work allows, so the load hangs in line with the stem and the anchor is not levered sideways."
     ]
    },
    {
@@ -853,12 +880,12 @@
   "brand_name": "DMM",
   "kind": "pulley",
   "price": 399,
-  "keyword": "dmm impact block",
+  "keyword": "dmm large impact block",
   "title": "DMM Large Impact Block for Heavy Rigging",
   "h1": "DMM Large Impact Block",
   "meta": "The DMM Large Impact Block is a rigging block for heavy arborist lowering on big removals. Learn how it hangs, what rope it suits, and how to inspect it.",
   "tagline": "A large DMM rigging block for heavy wood and big removal work.",
-  "summary": "The DMM Impact Block in the large size is a rigging block built for the heavier end of arborist work, where big pieces and dynamic loads put real force on the redirect. It hangs from a sling on the anchor and gives the rigging line a smooth, efficient path to the lowering device.",
+  "summary": "The DMM Large Impact Block is a rigging block built for the heavier end of arborist work, where big pieces and dynamic loads put real force on the redirect. It hangs from a sling on the anchor and gives the rigging line a smooth, efficient path to the lowering device.",
   "highlights": [
    "Large rigging block for heavy arborist work",
    "Built to take dynamic rigging loads",
@@ -874,6 +901,10 @@
    [
     "Use",
     "Heavy arborist rigging block"
+   ],
+   [
+    "Typical role",
+    "Redirect for a lowering line"
    ]
   ],
   "body": [
@@ -881,7 +912,8 @@
     "h": "Heavy rigging with the Impact Block",
     "p": [
      "On big removals, the redirect point takes the most punishment. The block sees roughly twice the line load because the rope pulls from both sides, and a piece that drops before the catch adds more. A large block built for impact loading gives you margin where you need it most.",
-     "Pair it with rope inside DMM's listed diameter range, a sling rated for the load, and a lowering device sized to match. Keep drops short, let the rope run a little to soften the catch, and choose sound anchors. Check DMM's published ratings for the large size before planning a lift."
+     "Pair it with rope inside DMM's listed diameter range, a sling rated for the load, and a lowering device sized to match. Keep drops short, let the rope run a little to soften the catch, and choose sound anchors. Check DMM's published ratings for the large size before planning a lift.",
+     "Larger blocks are heavier, so most climbers send them up on a line once the anchor sling is set rather than wearing them while climbing. Plan the setup before you go up so the block, sling, and lowering device are matched and ready."
     ]
    },
    {
@@ -910,14 +942,14 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-5-8-rigging-block-blue-with-orange-wheel/",
   "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
-  "name": "ISC 5/8\" Rigging Block (Blue with Orange Wheel)",
+  "name": "ISC Rigging Block for 5/8 in Rope (Blue/Orange)",
   "brand": "isc",
   "brand_name": "ISC",
   "kind": "pulley",
   "price": 289,
   "keyword": "isc rigging block",
-  "title": "ISC 5/8 Inch Rigging Block, Blue with Orange Wheel",
-  "h1": "ISC 5/8\" Rigging Block (Blue with Orange Wheel)",
+  "title": "ISC Rigging Block for 5/8 Inch Rope, Blue/Orange",
+  "h1": "ISC Rigging Block for 5/8 in Rope (Blue/Orange)",
   "meta": "The ISC rigging block for 5/8 inch rope is a mid-size arborist block for everyday removals. See how it hangs, what it pairs with, and what to inspect.",
   "tagline": "A mid-size ISC rigging block for 5/8 in rope on everyday removals.",
   "summary": "The ISC rigging block for 5/8 inch rope is a mid-size block for the everyday removal work most crews do, with a blue frame and orange wheel that are easy to spot in the gear bag. It gives your lowering line a smooth redirect that saves rope and protects the tree.",
@@ -947,7 +979,8 @@
     "h": "Where it fits in a rigging system",
     "p": [
      "A rigging pulley replaces a natural crotch as the redirect for your lowering line. Hang it from a rated sling on a sound anchor above the work, run the rope through the sheave, and take it down to a lowering device at the base. The ground worker gets steady, predictable friction from the device instead of uneven crotch friction.",
-     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job."
+     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job.",
+     "For most crews, 5/8 inch is the everyday rigging size, so this block sees steady use on removals of all kinds. It rides on the saddle without much bother and can be set as you climb."
     ]
    },
    {
@@ -976,14 +1009,14 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-5-8-small-rigging-pulley-red-with-orange-wheel/",
   "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
-  "name": "ISC 5/8\" Small Rigging Pulley (Red with Orange Wheel)",
+  "name": "ISC Small Rigging Pulley for 5/8 in Rope (Red/Orange)",
   "brand": "isc",
   "brand_name": "ISC",
   "kind": "pulley",
   "price": 219,
   "keyword": "isc small rigging pulley",
   "title": "ISC Small Rigging Pulley for 5/8 Inch Rope",
-  "h1": "ISC 5/8\" Small Rigging Pulley (Red with Orange Wheel)",
+  "h1": "ISC Small Rigging Pulley for 5/8 in Rope (Red/Orange)",
   "meta": "The ISC small rigging pulley takes 5/8 inch rope in a compact frame for limb lowering and lighter removals. See how to hang it and what to check before use.",
   "tagline": "A compact ISC rigging pulley for 5/8 in rope.",
   "summary": "The ISC small rigging pulley for 5/8 inch rope packs a rigging redirect into a compact red frame with an orange wheel. It is a good fit for limb lowering and lighter removal work where a full-size block is more than you need.",
@@ -1017,7 +1050,8 @@
     "h": "Where it fits in a rigging system",
     "p": [
      "A rigging pulley replaces a natural crotch as the redirect for your lowering line. Hang it from a rated sling on a sound anchor above the work, run the rope through the sheave, and take it down to a lowering device at the base. The ground worker gets steady, predictable friction from the device instead of uneven crotch friction.",
-     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job."
+     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job.",
+     "The small frame rides on a saddle without getting in the way, so you can set it as you climb and keep moving."
     ]
    },
    {
@@ -1087,7 +1121,8 @@
     "h": "Where it fits in a rigging system",
     "p": [
      "A rigging pulley replaces a natural crotch as the redirect for your lowering line. Hang it from a rated sling on a sound anchor above the work, run the rope through the sheave, and take it down to a lowering device at the base. The ground worker gets steady, predictable friction from the device instead of uneven crotch friction.",
-     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job."
+     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job.",
+     "A large pulley is heavy, so most climbers set the anchor sling first and haul the pulley up on a line rather than climbing with it."
     ]
    },
    {
@@ -1161,7 +1196,8 @@
     "h": "Where it fits in a rigging system",
     "p": [
      "A rigging pulley replaces a natural crotch as the redirect for your lowering line. Hang it from a rated sling on a sound anchor above the work, run the rope through the sheave, and take it down to a lowering device at the base. The ground worker gets steady, predictable friction from the device instead of uneven crotch friction.",
-     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job."
+     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job.",
+     "Because it covers both 5/8 and 3/4 inch lines, many crews treat the medium as their do-everything rigging pulley."
     ]
    },
    {
@@ -1190,14 +1226,14 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-red-with-grey-wheel-for-1-2-rope/",
   "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
-  "name": "ISC Small Rigging Pulley for 1/2\" Rope (Red with Grey Wheel)",
+  "name": "ISC Small Rigging Pulley for 1/2 Inch Rope",
   "brand": "isc",
   "brand_name": "ISC",
   "kind": "pulley",
   "price": 189,
-  "keyword": "isc small rigging pulley 1/2",
+  "keyword": "isc small rigging pulley for 1/2 inch rope",
   "title": "ISC Small Rigging Pulley for 1/2 Inch Rope",
-  "h1": "ISC Small Rigging Pulley for 1/2\" Rope (Red with Grey Wheel)",
+  "h1": "ISC Small Rigging Pulley for 1/2 Inch Rope",
   "meta": "The ISC small rigging pulley for 1/2 inch rope is a light, compact redirect for limb lowering and pruning jobs. See how it is used and what to inspect.",
   "tagline": "A compact ISC rigging pulley for 1/2 in rope and light lowering.",
   "summary": "The ISC small rigging pulley for 1/2 inch rope is a compact redirect for light rigging, limb lowering, and pruning jobs where weight in the tree matters. The red frame and grey wheel make it easy to grab the right pulley for a half-inch line.",
@@ -1231,7 +1267,8 @@
     "h": "Where it fits in a rigging system",
     "p": [
      "A rigging pulley replaces a natural crotch as the redirect for your lowering line. Hang it from a rated sling on a sound anchor above the work, run the rope through the sheave, and take it down to a lowering device at the base. The ground worker gets steady, predictable friction from the device instead of uneven crotch friction.",
-     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job."
+     "Size it to the rope and the load. The pulley and anchor see roughly twice the rope tension because the line pulls from both sides, and pieces that fall before the catch add shock load. Keep drops short and let the rope run slightly to soften the stop. Check ISC's published ratings before sizing it to a job.",
+     "The small frame rides on a saddle without getting in the way, so you can set it as you climb and keep moving."
     ]
    },
    {
@@ -1260,14 +1297,14 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-plates/dmm-bat-x-small-rigging-plate-orange/",
   "category": "/rigging/blocks-and-other-hardware/",
-  "name": "DMM Bat Rigging Plate X-Small (Orange)",
+  "name": "DMM Bat X-Small Rigging Plate (Orange)",
   "brand": "dmm",
   "brand_name": "DMM",
   "kind": "rigging-device",
   "price": 45,
-  "keyword": "dmm bat rigging plate",
+  "keyword": "dmm bat x-small rigging plate",
   "title": "DMM Bat X-Small Rigging Plate, Orange",
-  "h1": "DMM Bat Rigging Plate X-Small (Orange)",
+  "h1": "DMM Bat X-Small Rigging Plate (Orange)",
   "meta": "The DMM Bat X-Small rigging plate gives climbers and riggers a compact multi-point anchor for organizing carabiners, pulleys, and lines in a tidy system.",
   "tagline": "A compact DMM rigging plate for organizing connectors at an anchor.",
   "summary": "The DMM Bat X-Small rigging plate is a compact aluminum plate that gives you several connection holes at one point, so carabiners, pulleys, and rope tools can hang side by side without stacking on one another. In tree work it keeps anchors, retrievable setups, and small haul systems neat and easy to read.",
@@ -1297,7 +1334,8 @@
     "h": "What a rigging plate does",
     "p": [
      "Stack three carabiners on one anchor sling and they twist, bind, and cross-load. A rigging plate gives each connector its own hole, spread out and easy to see. Climbers use small plates at a base anchor, on a canopy anchor for a stationary rope system, or to hang a pulley and a hitch side by side in a small haul.",
-     "The X-Small size is meant for compact, lighter setups. It is not a heavy rigging component for catching big wood. Check DMM's listed strength for this plate and keep the whole system within the lowest-rated part."
+     "The X-Small size is meant for compact, lighter setups. It is not a heavy rigging component for catching big wood. Check DMM's listed strength for this plate and keep the whole system within the lowest-rated part.",
+     "A small plate also makes rope rescue setups easier to build and check, because every connector is visible at a glance. Keep it on the saddle or in the rescue kit so it is there when you need to organize a busy anchor quickly."
     ]
    },
    {
@@ -1332,7 +1370,7 @@
   "brand_name": "Petzl",
   "kind": "rigging-device",
   "price": 39,
-  "keyword": "petzl paw rigging plate",
+  "keyword": "petzl paw medium rigging plate",
   "title": "Petzl PAW Medium Rigging Plate for Arborists",
   "h1": "Petzl PAW Medium Rigging Plate",
   "meta": "The Petzl PAW medium rigging plate organizes carabiners and pulleys at one anchor for tidy climbing and rigging setups. See uses, care, and inspection tips.",
@@ -1364,7 +1402,8 @@
     "h": "Using the PAW on tree jobs",
     "p": [
      "Anchors get crowded fast: a climbing line, a backup, a pulley for a haul, a rope for the ground. Clipping all of that into one carabiner invites twisting and cross-loading. The PAW gives each piece its own hole so loads line up and the system is easy to check at a glance.",
-     "Common tree uses include a base anchor for a stationary rope system, a canopy anchor point, a rescue setup, or a hub for a small mechanical advantage. Load the plate along its intended axis and keep the system within the rating of the weakest part. Check Petzl's technical notice for the PAW medium."
+     "Common tree uses include a base anchor for a stationary rope system, a canopy anchor point, a rescue setup, or a hub for a small mechanical advantage. Load the plate along its intended axis and keep the system within the rating of the weakest part. Check Petzl's technical notice for the PAW medium.",
+     "The medium size gives enough holes for a busy anchor without getting bulky on the saddle. Spread connectors so they do not rub against one another, and use the top hole for the anchor sling and the lower holes for everything that hangs from it."
     ]
    },
    {
@@ -1394,14 +1433,14 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/cmi-2-service-pulley/",
   "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
-  "name": "CMI 2\" Service Pulley",
+  "name": "CMI 2 Inch Service Pulley",
   "brand": "cmi",
   "brand_name": "CMI",
   "kind": "pulley",
   "price": 45,
-  "keyword": "cmi service pulley",
+  "keyword": "cmi 2 inch service pulley",
   "title": "CMI 2 Inch Service Pulley for Rope Systems",
-  "h1": "CMI 2\" Service Pulley",
+  "h1": "CMI 2 Inch Service Pulley",
   "meta": "The CMI 2 inch service pulley is a compact pulley for hauling gear, building small mechanical advantage, and redirecting light lines on tree jobs.",
   "tagline": "A compact 2 in CMI pulley for hauling and light rope systems.",
   "summary": "The CMI 2 inch service pulley is a small, simple pulley for the everyday rope jobs around a tree site: hauling gear up to a climber, adding a redirect to a tag line, or building a small mechanical advantage. It is light enough to clip on a saddle and forget about until you need it.",
@@ -1431,7 +1470,8 @@
     "h": "Everyday uses",
     "p": [
      "A service pulley earns its spot by being handy. Send it up with a throw line to hang a gear-haul line, put it at the base to redirect a pull rope away from a hazard, or use it with a prusik to build a quick 3:1 for tensioning a line. Larger sheaves run more efficiently, but a 2 inch pulley is a good balance of size and weight for small jobs.",
-     "Keep the loads light. A service pulley is not a heavy rigging block, and it should not be used to catch falling wood. Check CMI's listed rating and rope range for this pulley."
+     "Keep the loads light. A service pulley is not a heavy rigging block, and it should not be used to catch falling wood. Check CMI's listed rating and rope range for this pulley.",
+     "Because it is cheap and light, many crews keep a couple in the truck alongside a few prusik loops and a spare length of rope, so there is always a simple haul system ready when a climber needs a saw, a pole tool, or a water bottle sent up."
     ]
    },
    {
@@ -1461,17 +1501,17 @@
  {
   "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/cmi-5-8-stainless-steel-heavy-duty-rope-pulley/",
   "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
-  "name": "CMI 5/8\" Stainless Steel Heavy Duty Rope Pulley",
+  "name": "CMI Stainless Steel Pulley for 5/8 in Rope",
   "brand": "cmi",
   "brand_name": "CMI",
   "kind": "pulley",
   "price": 99,
   "keyword": "cmi stainless steel pulley",
-  "title": "CMI 5/8 Inch Stainless Steel Heavy Duty Pulley",
-  "h1": "CMI 5/8\" Stainless Steel Heavy Duty Rope Pulley",
-  "meta": "The CMI 5/8 inch stainless steel heavy duty rope pulley handles hauling and redirects on rough job sites. See where it fits, rope sizing, and inspection.",
+  "title": "CMI Stainless Steel Pulley, 5/8 Inch Heavy Duty",
+  "h1": "CMI Stainless Steel Pulley for 5/8 in Rope",
+  "meta": "The CMI stainless steel pulley for 5/8 inch rope is a heavy duty pulley for hauling and redirects on rough job sites. See rope sizing and inspection tips.",
   "tagline": "A tough stainless steel pulley for 5/8 in rope on hard-working rope systems.",
-  "summary": "The CMI 5/8 inch stainless steel heavy duty rope pulley is built for the rough side of tree work, where gear gets dragged, dropped in the chips, and left in the rain. Stainless construction stands up to abrasion and corrosion better than aluminum, at the cost of some weight.",
+  "summary": "The CMI stainless steel pulley for 5/8 inch rope is a heavy duty pulley built for the rough side of tree work, where gear gets dragged, dropped in the chips, and left in the rain. Stainless construction stands up to abrasion and corrosion better than aluminum, at the cost of some weight.",
   "highlights": [
    "Stainless steel construction",
    "Sized for 5/8 in rope",
@@ -1498,7 +1538,8 @@
     "h": "Why stainless",
     "p": [
      "Steel and stainless pulleys trade weight for durability. On a ground-based setup, a redirect at the base of a tree, or a mechanical advantage system that lives in the truck, that extra weight does not matter much, and the toughness pays off in years of service. Rope running across grit and sap wears aluminum faster than steel.",
-     "Use it with rope inside CMI's listed diameter range and within the published rating. Remember that a redirect sees close to twice the line tension, so size the anchor and sling to match."
+     "Use it with rope inside CMI's listed diameter range and within the published rating. Remember that a redirect sees close to twice the line tension, so size the anchor and sling to match.",
+     "Stainless also holds up to the kind of treatment ground gear gets: being tossed in a truck box, run over by a chipper's feed line, or left in a wet rope bag overnight. Keep it for the ground and send lighter aluminum hardware up the tree, where every ounce on the saddle counts over a long day."
     ]
    },
    {
@@ -1533,8 +1574,8 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "pulley",
   "price": 89,
-  "keyword": "large single pulley 70kn",
-  "title": "Large Aluminum Single Pulley, 70 kN Bushing Sheave",
+  "keyword": "large single pulley",
+  "title": "Large Single Pulley, Aluminum, 70 kN Bushing",
   "h1": "Large Single Pulley, Aluminum, 70 kN, Bushing",
   "meta": "This large single pulley with an aluminum frame, bushing sheave, and 70 kN rating suits redirects, haul systems, and light rigging on tree jobs.",
   "tagline": "A large aluminum single pulley rated 70 kN with a bushing sheave.",
@@ -1569,7 +1610,8 @@
     "h": "Bushing versus ball bearing",
     "p": [
      "A bushing sheave turns on a plain sleeve rather than ball bearings. It is a little less efficient, but it handles grit, sawdust, and heavy static loads well and needs little care. For redirects, tensioning, and haul systems on a tree job, that is a reasonable trade.",
-     "A large sheave reduces how sharply the rope bends, which cuts rope wear and friction. Use rope within the manufacturer's diameter range and remember that 70 kN is a breaking strength, not a working load. Apply the stated working load guidance and keep the whole system within the weakest component's rating."
+     "A large sheave reduces how sharply the rope bends, which cuts rope wear and friction. Use rope within the manufacturer's diameter range and remember that 70 kN is a breaking strength, not a working load. Apply the stated working load guidance and keep the whole system within the weakest component's rating.",
+     "The aluminum frame keeps it light enough to carry up the tree, so it can serve as a canopy redirect for a pull line as well as a ground-level pulley. Clip it with a carabiner rated for the load and keep the gate closed and locked."
     ]
    },
    {
@@ -1603,7 +1645,7 @@
   "brand_name": "Rock Exotica",
   "kind": "pulley",
   "price": 179,
-  "keyword": "rock exotica omni block double",
+  "keyword": "rock exotica omni-block 2.0 double",
   "title": "Rock Exotica Omni-Block 2.0 Double Pulley",
   "h1": "Rock Exotica Omni-Block 2.0 Double",
   "meta": "The Rock Exotica Omni-Block 2.0 double is a swiveling two-sheave pulley for mechanical advantage systems, haul setups, and tensioning on tree jobs.",
@@ -1635,7 +1677,8 @@
     "h": "Building mechanical advantage",
     "p": [
      "Two sheaves let you build a 4:1 or 5:1 with a pair of pulleys, which is enough to tension a speedline, take slack out of a pull line, or lift a hung limb off a roof. The swivel lets the pulley line up with the load so ropes do not twist around each other, a common headache with fixed double pulleys.",
-     "Mechanical advantage multiplies force, which also means it can overload an anchor or rope without anyone feeling it. Keep the system within the rating of the weakest component and check Rock Exotica's published ratings for this pulley."
+     "Mechanical advantage multiplies force, which also means it can overload an anchor or rope without anyone feeling it. Keep the system within the rating of the weakest component and check Rock Exotica's published ratings for this pulley.",
+     "Because the side plates open, you can load the pulley onto a rope that is already rigged, which saves time when you need to add a system partway through a job without untying anything."
     ]
    },
    {
@@ -1669,7 +1712,7 @@
   "brand_name": "Rock Exotica",
   "kind": "pulley",
   "price": 149,
-  "keyword": "rock exotica omni block 2.6",
+  "keyword": "rock exotica omni-block 2.6",
   "title": "Rock Exotica Omni-Block 2.6 Swivel Pulley",
   "h1": "Rock Exotica Omni-Block 2.6",
   "meta": "The Rock Exotica Omni-Block 2.6 is a swiveling pulley with a 2.6 inch sheave for redirects, haul systems, and climbing setups. See how arborists use it.",
@@ -1701,7 +1744,8 @@
     "h": "Why a bigger sheave helps",
     "p": [
      "Rope loses efficiency and wears faster when it bends tightly over a small wheel. A 2.6 inch sheave gives a gentler bend, so a haul system runs smoother and your rope lasts longer. The swivel lets the pulley turn to face the load, so lines stay untwisted even when the pull angle changes.",
-     "Arborists use it as a redirect for a pull line, in a mechanical advantage system, or as part of a rescue kit. Check Rock Exotica's published ratings and rope range before planning a setup, and keep loads within the weakest link."
+     "Arborists use it as a redirect for a pull line, in a mechanical advantage system, or as part of a rescue kit. Check Rock Exotica's published ratings and rope range before planning a setup, and keep loads within the weakest link.",
+     "The opening side plates mean you can load the pulley onto a line that is already rigged, so you can add a redirect partway through a job without untying anything. It is a small detail that saves real time when a ground worker needs to change a pull angle quickly."
     ]
    },
    {
@@ -1755,6 +1799,10 @@
    [
     "Use",
     "Lifting and rigging with round slings"
+   ],
+   [
+    "Pairs with",
+    "Round slings"
    ]
   ],
   "body": [
@@ -1762,7 +1810,8 @@
     "h": "Why a round sling hook",
     "p": [
      "Round slings are strong and soft on wood, but they lose strength when pinched over a narrow hook or sharp edge. A round sling hook has a broader bearing surface so the sling sits flat and the load spreads across its full width.",
-     "On crane removals it connects slings to the load line, and in ground rigging it gives a quick attachment for a sling to a pulling or lifting system. Check the hook's marked working load limit and use it within that rating, with the latch closed and the load seated in the bowl, never on the tip."
+     "On crane removals it connects slings to the load line, and in ground rigging it gives a quick attachment for a sling to a pulling or lifting system. Check the hook's marked working load limit and use it within that rating, with the latch closed and the load seated in the bowl, never on the tip.",
+     "Hooks speed up crane picks because the rigger can hang or release a sling quickly. That speed only helps if every pick is planned, every sling is sized to the piece, and the crane operator, rigger, and climber agree on signals before the first cut."
     ]
    },
    {
@@ -1816,6 +1865,10 @@
    [
     "Use",
     "Redirects, sling connections, anchors"
+   ],
+   [
+    "Gate",
+    "None (closed ring)"
    ]
   ],
   "body": [
@@ -1823,7 +1876,8 @@
     "h": "How arborists use rigging rings",
     "p": [
      "A ring is the simplest piece of hardware in the kit and one of the most useful. Spliced or girth-hitched to a sling, it becomes a smooth redirect for a pull line or light rigging line with less heat and wear than running over bark. Paired with another ring, it can form part of a retrievable friction saver setup.",
-     "Rings add friction compared with a pulley, so they are better for light loads or where some friction helps. Check FTC's listed rating and use the ring with rope and slings it is designed for. Do not use it to catch heavy, falling wood unless the manufacturer rates it for that."
+     "Rings add friction compared with a pulley, so they are better for light loads or where some friction helps. Check FTC's listed rating and use the ring with rope and slings it is designed for. Do not use it to catch heavy, falling wood unless the manufacturer rates it for that.",
+     "Rings are also easy to inspect and hard to misuse, since there is no gate to leave open or cross-load. That simplicity is why so many climbers carry a spare or two on the saddle for whatever comes up during the day."
     ]
    },
    {
@@ -1858,7 +1912,7 @@
   "brand_name": "Buckingham",
   "kind": "friction-device",
   "price": 79,
-  "keyword": "buckingham port a wrap mini",
+  "keyword": "buckingham port-a-wrap mini",
   "title": "Buckingham Port-A-Wrap Mini Lowering Device",
   "h1": "Buckingham Port-A-Wrap Mini",
   "meta": "The Buckingham Port-A-Wrap Mini is a compact friction lowering device for light rigging on pruning and small removal jobs. See how it works and what to check.",
@@ -1890,7 +1944,8 @@
     "h": "How a Port-A-Wrap works",
     "p": [
      "Anchor the device to the base of a tree or another solid point with a sling, and take a number of wraps of the rigging line around the barrel. More wraps add friction; fewer wraps let the rope run more easily. The ground worker holds the tail and controls the descent of each piece, letting the rope run a little to soften the catch.",
-     "The Mini is made for lighter work: limbs over a roof, small wood, and pruning cuts on a light rigging line. Bigger wood and larger rope call for a full-size device. Check Buckingham's rope range and ratings before you choose it for a job."
+     "The Mini is made for lighter work: limbs over a roof, small wood, and pruning cuts on a light rigging line. Bigger wood and larger rope call for a full-size device. Check Buckingham's rope range and ratings before you choose it for a job.",
+     "Because it is small and light, the Mini is easy to carry into back yards and set up on a small tree or fence post that would not suit a larger device."
     ]
    },
    {
@@ -1956,7 +2011,8 @@
     "h": "Where a light rigging device fits",
     "p": [
      "Not every rigging job needs a big Port-A-Wrap at the base of the tree. When you are lowering small limbs over a roof, pruning deadwood with a rope, or taking down a small ornamental, a compact friction device gives you control without the bulk. The 120 kg limit makes the boundary clear: this is for small, light pieces.",
-     "Remember that a falling piece can generate a force much higher than its weight. Keep pieces well under the limit, drop them short, and let the rope run a little on the catch. Use rope within the diameter range the maker lists, and follow their instructions for setup."
+     "Remember that a falling piece can generate a force much higher than its weight. Keep pieces well under the limit, drop them short, and let the rope run a little on the catch. Use rope within the diameter range the maker lists, and follow their instructions for setup.",
+     "A small device like this is also handy as a backup in the truck, so a crew can run two light rigging lines at once on a pruning job. That lets one ground worker lower while another resets the second line and clears brush from the drop zone."
     ]
    },
    {
@@ -2022,7 +2078,8 @@
     "h": "What the RCW adds to a rigging system",
     "p": [
      "A friction device at the base lets you lower wood, but it cannot pull. The RCW mounts to the trunk, takes wraps of the rigging line like a friction device, and adds a winch so the ground crew can pre-tension the line, lift a piece clear of its cut, or take slack out before the catch. Pre-tensioning cuts the drop distance and the shock load.",
-     "It works best on heavy removals where control matters: wood over structures, big leaders, and pieces that need to be lifted a few inches before they swing. Use rope within Stein's listed diameter range and check Stein's ratings for the RCW 3001 before planning a lift."
+     "It works best on heavy removals where control matters: wood over structures, big leaders, and pieces that need to be lifted a few inches before they swing. Use rope within Stein's listed diameter range and check Stein's ratings for the RCW 3001 before planning a lift.",
+     "Mounting the device on the trunk also means the ground worker stands off to the side of the drop zone instead of in front of it."
     ]
    },
    {
