@@ -1,0 +1,40 @@
+[
+ {
+  "slug": "estex",
+  "path": "/estex/",
+  "name": "Estex",
+  "keyword": "estex",
+  "title": "Estex Rescue Dummies & Arborist Training Gear",
+  "meta": "Estex rescue training gear for tree crews, including Fred the rescue dummy, for practicing aerial rescue and lowering a climber safely before a real emergency.",
+  "intro": "Estex makes training gear that tree crews use to practice aerial rescue. The best known Estex product among arborists is Fred the rescue dummy, a weighted stand-in for an injured climber.",
+  "about": [
+   "Aerial rescue is one of those skills nobody wants to use and every crew needs to have. Practicing on a live volunteer limits how realistic the drill can be, so a lot of companies train with a rescue dummy instead. A dummy like Fred lets the crew rig, lift, and lower a dead weight in the tree, which is a lot closer to the real thing than talking it through on the ground.",
+   "Run rescue drills with a qualified trainer, set them up on sound trees and anchors, and follow the applicable standard (ANSI Z133 and your company's emergency plan). All life-support gear used during a drill, including the climber's saddle, rope, and hardware, must meet the applicable standard, be inspected before use, and be used by trained people. Check the dummy itself for wear and damage, and keep it out of the weather between sessions so it lasts."
+  ],
+  "known_for": [
+   "Fred the rescue dummy",
+   "Aerial rescue training for tree crews",
+   "Arborist safety training gear"
+  ],
+  "aliases": ["Fred the rescue dummy"]
+ },
+ {
+  "slug": "zan",
+  "path": "/zan/",
+  "name": "ZAN",
+  "keyword": "zan",
+  "title": "ZAN Headwear & Work Accessories",
+  "meta": "ZAN headwear and work accessories for tree crews who spend long days outside, with gear to help keep sun, sweat, dust, and cold in check on the job.",
+  "intro": "ZAN is a brand tree workers know for headwear and outdoor work accessories. ZAN gear is the kind of small, practical kit that makes a long day climbing, bucking, or dragging brush a little more comfortable.",
+  "about": [
+   "A tree job puts you out in the sun, the wind, and the sawdust from start to finish. Simple accessories worn under or around a helmet help manage sweat, keep dust and chips off your neck, and take the edge off a cold morning. ZAN is one of the names people reach for in that category.",
+   "Anything you wear under a helmet should not interfere with the fit or adjustment of the helmet, hearing protection, or eye protection. Check that your helmet still sits correctly and the chinstrap and suspension are adjusted properly with the accessory on, and follow the helmet maker's instructions."
+  ],
+  "known_for": [
+   "Headwear for outdoor work",
+   "Accessories worn under a helmet",
+   "Comfort gear for long days outside"
+  ],
+  "aliases": ["ZANheadgear"]
+ }
+]
