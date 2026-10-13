@@ -90,6 +90,7 @@ if(s.lh)d.style.setProperty('--reader-lh',s.lh);}catch(e){}
     <a href="/plan/" data-nav="plan"><?= icon('calendar') ?><span>Plan</span></a>
     <a href="/saved/" data-nav="saved"><?= icon('bookmark') ?><span>Saved</span></a>
   </nav>
+  <button class="icon-btn theme-btn" type="button" data-action="theme" aria-label="Dark mode" aria-pressed="false" title="Dark mode"><?= icon('moon', 'i-moon') ?><?= icon('sun', 'i-sun') ?></button>
   <button class="icon-btn" type="button" data-action="settings" aria-label="Reading settings"><?= icon('type') ?></button>
 </header>
 <div id="progress" aria-hidden="true"></div>
@@ -160,6 +161,7 @@ function svg_sprite(): string {
         'home' => '<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/>',
         'book' => '<path d="M2 4.5c3-1.3 6.3-1 10 1.2 3.7-2.2 7-2.5 10-1.2v15c-3-1.3-6.3-1-10 1.2-3.7-2.2-7-2.5-10-1.2zM12 5.7v15"/>',
         'search' => '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+        'moon' => '<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>',
         'sun' => '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
         'calendar' => '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
         'bookmark' => '<path d="M6 3h12v18l-6-4-6 4z"/>',

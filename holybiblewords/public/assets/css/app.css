@@ -64,6 +64,15 @@ h2 { font-size: 1.25rem; }
 .ver-switch a:hover { text-decoration: none; color: var(--text); }
 .ver-switch a.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.15); }
 .mainnav { display: none; }
+.theme-btn .i-sun { display: none; }
+.topbar .theme-btn[aria-pressed="true"] { background: transparent; color: var(--text); }
+.topbar .theme-btn[aria-pressed="true"]:hover { background: var(--surface-2); }
+:root[data-theme="dark"] .theme-btn .i-sun { display: inline; }
+:root[data-theme="dark"] .theme-btn .i-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] .theme-btn .i-sun { display: inline; }
+  :root[data-theme="auto"] .theme-btn .i-moon { display: none; }
+}
 .icon-btn { display: inline-grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 10px; background: transparent;
   color: var(--text); cursor: pointer; flex: none; }
 .icon-btn:hover { background: var(--surface-2); text-decoration: none; }
@@ -92,6 +101,7 @@ h2 { font-size: 1.25rem; }
   .ver-switch { margin-left: 18px; order: 1; }
   .mainnav { margin-left: auto; order: 2; }
   .topbar > .icon-btn { order: 3; }
+  .topbar > .icon-btn + .icon-btn { margin-left: -6px; }
 }
 
 /* ---- buttons, chips ---- */
@@ -310,7 +320,7 @@ mark { background: var(--mark); color: inherit; border-radius: 3px; padding: 0 1
 .img-preview { width: 100%; border-radius: 14px; display: block; margin-bottom: 12px; }
 
 #toast { position: fixed; left: 50%; bottom: calc(var(--tab) + 18px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px); z-index: 70;
-  background: #1c2622; color: #fff; padding: 10px 16px; border-radius: 12px; font-size: .92rem; opacity: 0; pointer-events: none; transition: .25s; max-width: 90vw; }
+  background: var(--text); color: var(--bg); padding: 10px 16px; border-radius: 12px; font-size: .92rem; opacity: 0; pointer-events: none; transition: .25s; max-width: 90vw; }
 #toast.show { opacity: 1; transform: translate(-50%, 0); }
 @media (min-width: 900px) { #toast { bottom: 24px; } }
 

@@ -23,9 +23,21 @@
   };
   const settings = Object.assign({ theme: 'auto', font: 'serif', size: 19, lh: 1.75, layout: 'verses', nums: true, parallel: false, pver: 'auto' }, store.get('settings', {}));
   const saveSettings = () => { store.set('settings', settings); applySettings(); };
+  const darkMQ = matchMedia('(prefers-color-scheme: dark)');
+  const isDark = () => settings.theme === 'dark' || (settings.theme === 'auto' && darkMQ.matches);
   function applySettings() {
     const d = document.documentElement;
     d.dataset.theme = settings.theme; d.dataset.font = settings.font; d.dataset.layout = settings.layout;
+    // browser / phone status-bar colour follows the chosen theme, not just the system one
+    document.querySelectorAll('meta[name=theme-color]').forEach(m => {
+      m.dataset.orig ??= m.content;
+      m.content = settings.theme === 'auto' ? m.dataset.orig : isDark() ? '#11161c' : settings.theme === 'sepia' ? '#f3ead8' : '#1b5e8f';
+    });
+    document.querySelectorAll('[data-action=theme]').forEach(b => {
+      b.setAttribute('aria-pressed', String(isDark()));
+      b.setAttribute('aria-label', isDark() ? 'Light mode' : 'Dark mode');
+      b.title = isDark() ? 'Light mode' : 'Dark mode';
+    });
     d.dataset.nums = settings.nums ? 'on' : 'off';
     d.style.setProperty('--reader-size', settings.size + 'px'); d.style.setProperty('--reader-lh', settings.lh);
   }
@@ -145,6 +157,7 @@
       $('#main').replaceWith(main);
       document.title = doc.title;
       document.documentElement.lang = doc.documentElement.lang;
+      applySettings();
       const sw = $('.ver-switch', doc), cur = $('.topbar .ver-switch');
       if (sw && cur) cur.replaceWith(sw);
       const canon = $('link[rel=canonical]', doc);
@@ -652,6 +665,7 @@
     const b = e.target.closest('[data-action]'); if (!b) return;
     const a = b.dataset.action;
     if (a === 'settings') openSettings();
+    else if (a === 'theme') { settings.theme = isDark() ? 'light' : 'dark'; saveSettings(); toast(isDark() ? 'Dark mode on' : 'Dark mode off'); }
     else if (a === 'picker') openPicker(b.dataset.book, +b.dataset.ch);
     else if (a === 'parallel') { settings.parallel = !settings.parallel; saveSettings(); setParallel(settings.parallel); }
     else if (a === 'listen') { speaking ? stopListening() : startListening(+(captureAnchor()?.v || 1)); }
@@ -906,6 +920,7 @@
   // ---------- boot ----------
   applySettings();
   getVers().catch(() => {});
+  darkMQ.addEventListener?.('change', applySettings);
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
   }
