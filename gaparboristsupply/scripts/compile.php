@@ -27,7 +27,7 @@ foreach (glob("$data/categories/*.json") as $f) {
     foreach (load_json($f) as $c) { $categories[$c['path']] = $c; }
 }
 $brands = [];
-foreach (["$data/brands.json", "$data/brands-extra.json"] as $bf) {
+foreach (["$data/brands.json", "$data/brands-extra.json", "$data/brands-extra2.json"] as $bf) {
     if (is_file($bf)) foreach (load_json($bf) as $b) { $brands[$b['path']] = $b; }
 }
 $guides = [];
