@@ -150,7 +150,7 @@
   "keyword": "notch rc grapple",
   "title": "Notch RC Grapple: Line Retrieval Hook for Arborists",
   "h1": "Notch RC Grapple",
-  "meta": "The Notch RC Grapple is a small grapple for snagging and retrieving lines, lanyards, and hung gear in the canopy. How crews use it and what to watch for on the job.",
+  "meta": "The Notch RC Grapple is a small grapple for snagging and retrieving lines, lanyards, and hung gear in the canopy. How crews use it and what to watch for.",
   "tagline": "A small grapple for snagging stuck lines and hung gear out of the canopy.",
   "summary": "The Notch RC Grapple is a compact retrieval grapple that tree crews use to snag a stuck throw line, a dropped lanyard tail, or a rope that will not come back down. Tie it to a light line, toss or lower it, and hook what you need instead of sending a climber up for it.",
   "highlights": [
@@ -218,10 +218,10 @@
   "brand_name": "Husqvarna",
   "kind": "parts",
   "price": 34,
-  "keyword": "husqvarna 550xp mark ii tune up kit",
+  "keyword": "550 xp mark ii tune-up kit",
   "title": "Husqvarna 550 XP Mark II Tune-Up Kit (Also 545 II)",
   "h1": "Husqvarna 545 Mark II / 550 XP Mark II Tune-Up Kit",
-  "meta": "A Husqvarna 550 XP Mark II tune-up kit with service parts for the 545 Mark II too. What a tune-up covers, when to do it, and how it keeps a ground saw cutting hard.",
+  "meta": "A Husqvarna 550 XP Mark II tune-up kit that also fits the 545 Mark II. What a tune-up covers, when to do it, and how it keeps a ground saw cutting hard.",
   "tagline": "Service parts for a routine tune-up on the 545 Mark II and 550 XP Mark II saws.",
   "summary": "A Husqvarna 550 XP Mark II tune-up kit puts the common wear parts for a routine service in one package, and it fits the 545 Mark II as well. It is the easy way to bring a hard-working ground saw back to clean starts and full power after a season of bucking and limbing.",
   "highlights": [
@@ -287,7 +287,7 @@
   "price": 29,
   "keyword": "husqvarna k770 belt",
   "title": "Husqvarna K770 Belt: Replacement Cut-Off Saw Drive Belt",
-  "h1": "Husqvarna Drive Belt for K770 Cut-Off Saw",
+  "h1": "Husqvarna K770 Belt for Cut-Off Saw",
   "meta": "Replacement Husqvarna K770 belt for the K770 power cutter. Signs a drive belt is worn, how to fit and tension it, and why to keep a spare in the truck box.",
   "tagline": "A replacement drive belt to keep a Husqvarna K770 power cutter on the job.",
   "summary": "The Husqvarna K770 belt is the replacement drive belt for the K770 cut-off saw, the power cutter many crews carry for cutting cable, bolts, and hardware on removals and storm work. A worn belt slips and stalls the blade, so a spare in the truck box keeps the saw working.",
@@ -324,7 +324,8 @@
     "h": "Fitting and tension",
     "p": [
      "With the engine off and the blade removed or guarded, remove the belt guard, release the tension, and slip the old belt off. Fit the new belt, set tension as the operator's manual describes, and refit the guard before you start the saw.",
-     "Run the saw briefly, then recheck tension, because a new belt seats in. Wear eye, hearing, and respiratory protection when cutting, and keep the blade guard set to throw sparks and debris away from you and the crew."
+     "Run the saw briefly, then recheck tension, because a new belt seats in. Wear eye, hearing, and respiratory protection when cutting, and keep the blade guard set to throw sparks and debris away from you and the crew.",
+     "Store the spare belt flat in its packaging, out of sun and away from fuel, so it is in good shape when you finally need it."
     ]
    }
   ],
@@ -352,7 +353,7 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "power-tool",
   "price": 39,
-  "keyword": "9/16 ship auger bit",
+  "keyword": "ship auger bit",
   "title": "9/16 Ship Auger Bit for Tree Cabling and Bracing",
   "h1": "9/16\" Ship Auger Bit",
   "meta": "A 9/16 ship auger bit for drilling clean through-holes for cabling and bracing hardware. Why a ship auger suits green wood, sizing tips, and drilling advice.",
@@ -421,7 +422,7 @@
   "keyword": "rigguy wire stops",
   "title": "Rigguy Wire Stops for Tree Cabling and Guying",
   "h1": "Rigguy Wire Stops",
-  "meta": "Rigguy wire stops terminate wire rope or strand without bulky clamps, for tree cabling and guying. Sizing, installation basics, and inspection advice for arborists.",
+  "meta": "Rigguy wire stops terminate wire rope or strand without bulky clamps, for tree cabling and guying. Sizing, installation basics, and inspection for arborists.",
   "tagline": "Compact wire terminations for tree cabling and guying work.",
   "summary": "Rigguy wire stops are compact terminations that hold the end of wire rope or strand, used by arborists for cabling, guying, and tree support systems. They replace stacks of wire rope clips on some installs, which makes for a neater, faster job in the canopy.",
   "highlights": [
@@ -450,7 +451,8 @@
     "h": "Where wire stops fit",
     "p": [
      "Steel cabling systems and tree guying both need a reliable way to end the wire. Traditional methods use thimbles and wire rope clips or preformed dead-ends. A wire stop is a compact alternative on some systems: the wire passes through the anchor hole or hardware and the stop holds it on the far side.",
-     "The result is a tidy install with fewer parts hanging in the canopy, and less time aloft with a wrench. Look through our <a href=\"/plant-care/cabling-and-bracing/cabling-hardware/\">cabling hardware</a> for compatible wire and anchors."
+     "The result is a tidy install with fewer parts hanging in the canopy, and less time aloft with a wrench. Look through our <a href=\"/plant-care/cabling-and-bracing/cabling-hardware/\">cabling hardware</a> for compatible wire and anchors.",
+     "Fewer parts also means fewer places for a mistake. With clips, every saddle has to be on the live side and every nut torqued; with a stop sized correctly, the termination is a single, consistent piece that is easy to check from a distance on later inspections."
     ]
    },
    {
@@ -484,12 +486,12 @@
   "brand_name": "SMC",
   "kind": "pulley",
   "price": 79,
-  "keyword": "smc apex pulley",
+  "keyword": "smc apex 1.1 pulley",
   "title": "SMC Apex 1.1 Pulley for Arborist Rigging Systems",
   "h1": "SMC Apex 1.1 Pulley",
-  "meta": "The SMC Apex pulley in the 1.1 size is a compact, rescue-grade pulley for redirects, haul systems, and light rigging. How tree crews use it and how to inspect it.",
+  "meta": "The SMC Apex 1.1 pulley is a compact, rescue-grade pulley for redirects, haul systems, and light rigging. How tree crews use it and how to inspect it.",
   "tagline": "A compact rescue-grade pulley for redirects, haul systems, and light rigging.",
-  "summary": "The SMC Apex pulley in the 1.1 size is a compact pulley from a well-known rescue hardware maker, and tree crews use it for redirects, mechanical advantage systems, and light rigging. It is small enough to carry on the saddle but built for real rope work.",
+  "summary": "The SMC Apex 1.1 pulley is a compact pulley from a well-known rescue hardware maker, and tree crews use it for redirects, mechanical advantage systems, and light rigging. It is small enough to carry on the saddle but built for real rope work.",
   "highlights": [
    "Compact pulley from SMC",
    "Good for redirects and haul systems",
@@ -520,7 +522,8 @@
     "h": "Using a compact pulley on tree jobs",
     "p": [
      "A small, strong pulley is one of the most useful pieces in the rigging bag. Use it as a redirect to change the direction of a pull, as the moving pulley in a 3:1 for tensioning a line, or to take friction out of a tag line that has to run around a stem.",
-     "For climbers it can work in a pulley-saver setup or as part of a haul system to lift a saw or a heavier tool. Compare sizes and styles in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> before you choose."
+     "For climbers it can work in a pulley-saver setup or as part of a haul system to lift a saw or a heavier tool. Compare sizes and styles in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> before you choose.",
+     "Compared with running rope over a carabiner, a pulley cuts friction and rope wear considerably, which you notice on every pull of a haul system and in the life of your tag lines."
     ]
    },
    {
@@ -555,12 +558,12 @@
   "brand_name": "SMC",
   "kind": "pulley",
   "price": 89,
-  "keyword": "smc apex direct pulley",
+  "keyword": "smc apex direct 1.1 pulley",
   "title": "SMC Apex Direct 1.1 Pulley for Rigging and Haul Systems",
   "h1": "SMC Apex Direct 1.1 Pulley",
-  "meta": "The SMC Apex Direct pulley is a compact, rescue-grade pulley for redirects and haul systems on tree jobs. Where the 1.1 size fits, what to check, and how to care for it.",
+  "meta": "The SMC Apex Direct 1.1 pulley is a compact, rescue-grade pulley for redirects and haul systems on tree jobs. Where it fits, what to check, and care tips.",
   "tagline": "A compact SMC pulley in the Apex Direct style for redirects and haul systems.",
-  "summary": "The SMC Apex Direct pulley in the 1.1 size is a compact, rescue-grade pulley that tree crews use for redirects, haul systems, and light rigging. It sits in the same family as the standard Apex, so check the configuration against how you plan to clip it into your system.",
+  "summary": "The SMC Apex Direct 1.1 pulley is a compact, rescue-grade pulley that tree crews use for redirects, haul systems, and light rigging. It sits in the same family as the standard Apex, so check the configuration against how you plan to clip it into your system.",
   "highlights": [
    "Compact SMC pulley, Apex Direct style",
    "Redirects, haul systems, and light rigging",
@@ -591,14 +594,16 @@
     "h": "What it does on the job",
     "p": [
      "On a tree crew a small pulley gets used constantly: redirecting a lowering line around a stem, building a 3:1 to tension a tag line, or hauling a saw up to the climber. A compact rescue-style pulley handles these tasks with less friction than a carabiner and less weight than a full rigging block.",
-     "Before buying, compare the Apex Direct with the standard Apex and other options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> so the attachment style suits the way you rig."
+     "Before buying, compare the Apex Direct with the standard Apex and other options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> so the attachment style suits the way you rig.",
+     "A pulley that lives on the saddle or in the rigging bag gets used far more than one left in the truck. Its small size means you can carry it all day and reach for it whenever a rope is rubbing over a limb or a pull needs a cleaner angle."
     ]
    },
    {
     "h": "Care and checks",
     "p": [
      "Keep loads inside the marked rating and use rope within the marked diameter range. Do not use a compact pulley as a block for blocking down heavy wood.",
-     "Check the sheave for smooth spin, the side plates for cracks or burrs, and the axle for play before each use. Wash out sap and grit and let it dry. If it goes into a climbing or rescue system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training."
+     "Check the sheave for smooth spin, the side plates for cracks or burrs, and the axle for play before each use. Wash out sap and grit and let it dry. If it goes into a climbing or rescue system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training.",
+     "Store it dry and away from chemicals, and keep track of its history. A pulley that has been dropped from height onto rock or concrete should be retired unless the maker says otherwise."
     ]
    }
   ],
@@ -626,7 +631,7 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "rope",
   "price": 420,
-  "keyword": "3/4 mammoth rigging line",
+  "keyword": "mammoth rigging line",
   "title": "3/4 Mammoth Rigging Line for Heavy Tree Rigging",
   "h1": "3/4\" Mammoth Rigging Line",
   "meta": "A 3/4 Mammoth rigging line for heavy blocking, big negative rigging, and removals. Why crews choose 3/4 inch rope, how to match hardware, and how to inspect it.",
@@ -658,7 +663,8 @@
     "h": "When 3/4 inch rope makes sense",
     "p": [
      "Most crews run 1/2 or 5/8 inch rope for everyday rigging, then step up to 3/4 inch when the wood gets big. Heavy tops, long leaders, and large blocked-down rounds all generate shock loads that a thicker line handles with more margin and less stretch-related surprise.",
-     "The tradeoff is weight and bulk. A 3/4 inch line is heavier to carry, takes more room in the bag, and needs a block and lowering device rated for that diameter. Compare it with other lines in our <a href=\"/rope/rigging-rope/\">rigging rope</a> before you commit."
+     "The tradeoff is weight and bulk. A 3/4 inch line is heavier to carry, takes more room in the bag, and needs a block and lowering device rated for that diameter. Compare it with other lines in our <a href=\"/rope/rigging-rope/\">rigging rope</a> before you commit.",
+     "Choose the length by the tallest trees you rig. You need enough rope to reach from the ground to the rigging point and back down to the lowering device with a few wraps and some tail to spare."
     ]
    },
    {
@@ -692,12 +698,12 @@
   "brand_name": "Marlow",
   "kind": "rope",
   "price": 310,
-  "keyword": "marlow raptor rigging rope",
+  "keyword": "marlow raptor 14mm rigging rope",
   "title": "Marlow Raptor 14mm Rigging Rope for Arborists",
   "h1": "Marlow Raptor 14mm Rigging Rope",
-  "meta": "Marlow Raptor rigging rope in 14mm, a mid-size line for everyday tree rigging. Where it fits, what hardware to pair it with, and how to inspect and retire it.",
+  "meta": "Marlow Raptor 14mm rigging rope is a mid-size line for everyday tree rigging. Where it fits, what hardware to pair it with, and how to inspect and retire it.",
   "tagline": "A 14mm Marlow rigging line for everyday pruning and removal rigging.",
-  "summary": "Marlow Raptor rigging rope in 14mm is a mid-size rigging line from a long-established British rope maker, sized for everyday removal and pruning rigging. At about 9/16 inch it suits most standard rigging blocks and lowering devices crews already own.",
+  "summary": "Marlow Raptor 14mm rigging rope is a mid-size rigging line from a long-established British rope maker, sized for everyday removal and pruning rigging. At about 9/16 inch it suits most standard rigging blocks and lowering devices crews already own.",
   "highlights": [
    "14mm Marlow rigging line",
    "Everyday removal and pruning rigging",
@@ -728,14 +734,16 @@
     "h": "Where a 14mm line fits",
     "p": [
      "A 14mm rigging line covers a lot of daily work: lowering limbs on pruning jobs, negative rigging small to mid-size tops, and speed-lining brush to the drop zone. It is lighter and easier to handle than a 16 or 18mm line, so it gets used rather than left on the truck.",
-     "For big wood, step up to a heavier line such as the 18mm Raptor. See all our <a href=\"/rope/rigging-rope/\">rigging rope</a> options to build a set that covers your jobs."
+     "For big wood, step up to a heavier line such as the 18mm Raptor. See all our <a href=\"/rope/rigging-rope/\">rigging rope</a> options to build a set that covers your jobs.",
+     "A mid-size line also makes a good second rope on bigger jobs, used as a tag line or for small pieces while the heavy line handles the main rigging. Having two rigging lines set up keeps the climber cutting while the ground crew clears."
     ]
    },
    {
     "h": "Pairing and inspection",
     "p": [
      "Check the rope range on your block, porta-wrap, and slings, and use the maker's rated strength with a working load limit that allows for shock loading. Knots, sharp bends, and edges all cut into strength.",
-     "Inspect before every job for cut strands, glazing from friction, stiff or flat sections, and core damage. Keep it clean and away from fuel and bar oil. Rigging operations should follow ANSI Z133 and be run by trained crew."
+     "Inspect before every job for cut strands, glazing from friction, stiff or flat sections, and core damage. Keep it clean and away from fuel and bar oil. Rigging operations should follow ANSI Z133 and be run by trained crew.",
+     "Keep a simple log of each rope's age, use, and any big shock loads so the crew knows when it is due for retirement."
     ]
    }
   ],
@@ -765,7 +773,7 @@
   "keyword": "marlow raptor 18mm rigging rope",
   "title": "Marlow Raptor 18mm Rigging Rope for Heavy Rigging",
   "h1": "Marlow Raptor 18mm Rigging Rope",
-  "meta": "Marlow Raptor 18mm rigging rope is a heavier line for big removals and blocking down wood. How it compares with 14mm, what hardware it needs, and how to inspect it.",
+  "meta": "Marlow Raptor 18mm rigging rope is a heavier line for big removals and blocking down wood. How it compares with 14mm, what hardware it needs, and checks.",
   "tagline": "A heavier 18mm Marlow rigging line for big removals and blocking down wood.",
   "summary": "Marlow Raptor 18mm rigging rope is the heavier line in the Raptor family, sized for removals where you block down large wood and want more strength margin. At about 3/4 inch it calls for full-size rigging blocks and lowering devices rated for that diameter.",
   "highlights": [
@@ -798,14 +806,16 @@
     "h": "Why step up to 18mm",
     "p": [
      "When the wood gets big, shock loads climb fast. An 18mm line gives you more strength and more material to wear before it is compromised, which is why crews reserve a heavy line for blocking down trunks and large leaders.",
-     "It weighs more and takes up more room, so most crews pair it with a lighter line like the 14mm Raptor for daily work. Compare the full range in our <a href=\"/rope/rigging-rope/\">rigging rope</a> section."
+     "It weighs more and takes up more room, so most crews pair it with a lighter line like the 14mm Raptor for daily work. Compare the full range in our <a href=\"/rope/rigging-rope/\">rigging rope</a> section.",
+     "Heavier rope also gives the ground worker more to hold. With a few wraps on a porta-wrap or bollard, an 18mm line lets the ground crew let the run of the rope absorb energy and bring a big piece to a stop more gently than a skinny line would."
     ]
    },
    {
     "h": "Hardware and inspection",
     "p": [
      "Use blocks, porta-wraps, and slings that list 18mm or 3/4 inch rope in their range. Set a working load limit from the maker's rated strength with room for shock, and remember knots and tight bends reduce strength.",
-     "Before every job, check for cut strands, glazing, flat or stiff spots, and core damage, and retire any rope that has taken a severe shock load. Heavy rigging should follow ANSI Z133 and be planned by a qualified crew leader."
+     "Before every job, check for cut strands, glazing, flat or stiff spots, and core damage, and retire any rope that has taken a severe shock load. Heavy rigging should follow ANSI Z133 and be planned by a qualified crew leader.",
+     "Store it coiled loosely or flaked in a bag, out of sun and away from fuel and chemicals, and keep a record of the jobs it has done."
     ]
    }
   ],
@@ -833,9 +843,9 @@
   "kind": "rope",
   "price": 270,
   "keyword": "sta-set rigging rope",
-  "title": "Teufelberger Sta-Set 5/8 Rigging Rope",
+  "title": "Teufelberger Sta-Set Rigging Rope, 5/8 Inch",
   "h1": "Teufelberger Sta-Set Rigging Rope 5/8\"",
-  "meta": "Sta-Set rigging rope in 5/8 inch is a polyester double braid line used for rigging, tag lines, and pulling. What it does well, hardware fit, and inspection advice.",
+  "meta": "Sta-Set rigging rope in 5/8 inch is a polyester double braid for rigging, tag lines, and pulling. What it does well, hardware fit, and inspection advice.",
   "tagline": "A 5/8 inch polyester double braid line for rigging, tag lines, and pulling.",
   "summary": "Sta-Set rigging rope is a polyester double braid line from New England Ropes, now part of Teufelberger, and the 5/8 inch size is a common choice for general rigging and pulling work. It holds its shape, runs smoothly through hardware, and resists abrasion well.",
   "highlights": [
@@ -868,7 +878,8 @@
     "h": "What Sta-Set is good at",
     "p": [
      "Sta-Set has been around a long time and shows up in many applications, from marine work to tree crews. A polyester double braid stays firm and round, which helps it run through blocks and lowering devices without flattening, and it holds up to the dirt and bark of daily rigging.",
-     "In 5/8 inch it works for lowering limbs, rigging moderate tops, and as a pull line for directional felling. For lighter or heavier work, compare other lines in our <a href=\"/rope/rigging-rope/\">rigging rope</a>."
+     "In 5/8 inch it works for lowering limbs, rigging moderate tops, and as a pull line for directional felling. For lighter or heavier work, compare other lines in our <a href=\"/rope/rigging-rope/\">rigging rope</a>.",
+     "Low stretch is the other reason crews like it. When you are pulling a tree over with a 3:1 or snugging a tag line, a rope that does not stretch much means less wasted pull and more direct control."
     ]
    },
    {
@@ -904,9 +915,9 @@
   "kind": "pulley",
   "price": 329,
   "keyword": "cmi arborist rigging block",
-  "title": "CMI 1 Inch Arborist Rigging Block for Heavy Rigging",
-  "h1": "CMI 1\" Arborist Rigging Block",
-  "meta": "The CMI arborist rigging block in the 1 inch size handles big rope and heavy blocking on removals. How to hang it, match the rope, and inspect it before each job.",
+  "title": "CMI Arborist Rigging Block for 1 Inch Rope",
+  "h1": "CMI Arborist Rigging Block, 1\"",
+  "meta": "The CMI arborist rigging block in the 1 inch size takes big rope for heavy blocking on removals. How to hang it, match the rope, and inspect it before each job.",
   "tagline": "A heavy-duty CMI rigging block for large rope and big removal work.",
   "summary": "The CMI arborist rigging block in the 1 inch size is a full-size block for heavy removal rigging, made to accept rope up to the large diameters crews use for blocking down big wood. It hangs from a sling at the rigging point and gives the lowering line a smooth, strong path.",
   "highlights": [
@@ -939,14 +950,16 @@
     "h": "Where a full-size block fits",
     "p": [
      "A rigging block takes the lowering line through a strong, large sheave at the rigging point so the load comes down under control and friction is managed at the porta-wrap instead of on the tree. A 1 inch block is made for heavy rigging where crews run big rope and block down large wood.",
-     "Hang it with a sling rated for the job, high and close to the stem, and keep the line running straight into the sheave. Compare sizes in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> before choosing."
+     "Hang it with a sling rated for the job, high and close to the stem, and keep the line running straight into the sheave. Compare sizes in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> before choosing.",
+     "A block also protects the rope. Running a heavy lowering line over a bare crotch burns the bark and the rope, while a sheave lets the line move cleanly and puts the friction where the ground worker can control it."
     ]
    },
    {
     "h": "Ratings and inspection",
     "p": [
      "Read the block's marked rating and remember the force on a rigging point can be close to double the load on the line when the rope runs back down the tree. Plan with that in mind and use slings, rope, and lowering devices that match.",
-     "Before each job, check the sheave for smooth spin and wear grooves, the side plates for cracks or bends, and the axle and bushings for play. Retire the block if it has taken a severe shock load. Rigging should follow ANSI Z133."
+     "Before each job, check the sheave for smooth spin and wear grooves, the side plates for cracks or bends, and the axle and bushings for play. Retire the block if it has taken a severe shock load. Rigging should follow ANSI Z133.",
+     "Keep a record of the block's service history, especially any big shock loads, so the crew knows its condition."
     ]
    }
   ],
@@ -974,9 +987,9 @@
   "kind": "pulley",
   "price": 239,
   "keyword": "cmi aluminum rigging block",
-  "title": "CMI 3/4 Inch Aluminum Rigging Block",
-  "h1": "CMI 3/4\" Aluminum Rigging Block",
-  "meta": "The CMI aluminum rigging block in the 3/4 inch size is a lighter block for removal rigging. How it compares with a 1 inch block, how to hang it, and what to inspect.",
+  "title": "CMI Aluminum Rigging Block for 3/4 Inch Rope",
+  "h1": "CMI Aluminum Rigging Block, 3/4\"",
+  "meta": "The CMI aluminum rigging block in the 3/4 inch size is a lighter block for removal rigging. How it compares with a 1 inch block, how to hang it, and checks.",
   "tagline": "A lighter aluminum CMI block for everyday removal rigging up to 3/4 inch rope.",
   "summary": "The CMI aluminum rigging block in the 3/4 inch size is a full-function rigging block built lighter, for crews who rig often and want less weight to haul up the tree. It takes the common rigging rope sizes up to 3/4 inch.",
   "highlights": [
@@ -1013,7 +1026,8 @@
     "h": "Why choose an aluminum block",
     "p": [
      "Every pound counts when you are carrying gear aloft and setting rigging points all day. An aluminum block gives you a proper rigging block, with a large sheave and a strong frame, at a weight that makes it easier to send up and reposition.",
-     "The 3/4 inch size covers the rope most crews use for daily rigging. For the biggest wood, a 1 inch block may be the better tool. See all our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to compare."
+     "The 3/4 inch size covers the rope most crews use for daily rigging. For the biggest wood, a 1 inch block may be the better tool. See all our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to compare.",
+     "A lighter block also makes it easier to reposition the rigging point as the removal comes down. Rather than leaving a heavy block where it is and rigging from a poor angle, the climber can move it to a better spot quickly."
     ]
    },
    {
@@ -1050,7 +1064,7 @@
   "keyword": "isc compact rigging pulley",
   "title": "ISC Compact Rigging Pulley for Light Removal Rigging",
   "h1": "ISC Compact Rigging Pulley",
-  "meta": "The ISC compact rigging pulley is a small rigging block for pruning and light removal work. Where it fits, how it compares with larger blocks, and how to inspect it.",
+  "meta": "The ISC compact rigging pulley is a small rigging block for pruning and light removal work. Where it fits, how it compares with larger blocks, and checks.",
   "tagline": "A small ISC rigging pulley for pruning and light removal rigging.",
   "summary": "The ISC compact rigging pulley is a small rigging block for pruning and light removal work, where a full-size block is more than you need. This version has a grey frame and a grey sheave, and it hangs from a sling at the rigging point like a larger block.",
   "highlights": [
@@ -1083,14 +1097,16 @@
     "h": "Where a compact block fits",
     "p": [
      "Plenty of rigging is not heavy rigging: lowering limbs over a roof on a pruning job, taking small tops in pieces, or controlling brush over a fence. A compact rigging pulley handles these jobs with less weight than a full-size block, so you are more likely to rig the piece than to drop it and hope.",
-     "Step up to a medium or large block when the wood gets bigger. Compare sizes in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a>."
+     "Step up to a medium or large block when the wood gets bigger. Compare sizes in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a>.",
+     "A compact block is light enough to send up with the climber at the start of the job and leave on the saddle until needed. That makes it easier to rig a limb over a target rather than take the chance of a free drop."
     ]
    },
    {
     "h": "Ratings and checks",
     "p": [
      "Check the marked rope range and rating, and remember the rigging point sees close to double the line load. Keep shock loads modest by limiting drop distance and letting the ground worker run the friction smoothly.",
-     "Before each use, spin the sheave, check the side plates and frame for cracks or bends, and look for grooves in the sheave. Clean off sap and grit. Rigging should follow ANSI Z133 and the maker's instructions."
+     "Before each use, spin the sheave, check the side plates and frame for cracks or bends, and look for grooves in the sheave. Clean off sap and grit. Rigging should follow ANSI Z133 and the maker's instructions.",
+     "Store it clean and dry, and retire it if it has been shock loaded beyond its rating or dropped onto a hard surface from height."
     ]
    }
   ],
@@ -1157,14 +1173,16 @@
     "h": "A block for heavier removals",
     "p": [
      "When you are rigging tops and leaders on a removal, you need a block that can take a heavier line and the shock that comes with blocking wood. The medium ISC rigging pulley takes rope up to 20mm, so it works with the 5/8 and 3/4 inch class lines many crews run for removals.",
-     "It is heavier than a compact pulley, but far more appropriate for big pieces. Compare it with other <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to find the right size for your work."
+     "It is heavier than a compact pulley, but far more appropriate for big pieces. Compare it with other <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to find the right size for your work.",
+     "Because the frame is built for a heavier line, it also tolerates the wear of daily removal work better than smaller pulleys. Pair it with a rigging sling and lowering device rated for the same rope and load range."
     ]
    },
    {
     "h": "Rating and inspection",
     "p": [
      "Read the marked rating on the pulley before use and plan for the rigging point to see close to double the line load. Match the sling, rope, and lowering device to the same working range.",
-     "Inspect the sheave, side plates, and axle before every job, looking for cracks, bends, grooves, and play. Retire the pulley after a severe shock load or any damage you cannot rule out. Rigging should follow ANSI Z133 and the maker's instructions."
+     "Inspect the sheave, side plates, and axle before every job, looking for cracks, bends, grooves, and play. Retire the pulley after a severe shock load or any damage you cannot rule out. Rigging should follow ANSI Z133 and the maker's instructions.",
+     "Store it clean and dry and keep a simple record of the jobs it has done."
     ]
    }
   ],
@@ -1194,7 +1212,7 @@
   "keyword": "smc apex direct 1.5",
   "title": "SMC Apex Direct 1.5 Pulley for Rigging and Haul Systems",
   "h1": "SMC Apex Direct 1.5 Pulley",
-  "meta": "The SMC Apex Direct 1.5 is a larger rescue-grade pulley for haul systems, redirects, and light rigging. How tree crews use it, sizing notes, and inspection advice.",
+  "meta": "The SMC Apex Direct 1.5 is a larger rescue-grade pulley for haul systems, redirects, and light rigging. How tree crews use it, sizing notes, and inspection.",
   "tagline": "A larger SMC rescue-grade pulley for haul systems and light rigging.",
   "summary": "The SMC Apex Direct 1.5 is a rescue-grade pulley in a larger size than the 1.1 version, giving a bigger sheave for haul systems, redirects, and light rigging. Tree crews use it where a micro pulley is too small but a full rigging block is more than the job needs.",
   "highlights": [
@@ -1227,14 +1245,16 @@
     "h": "Why a larger sheave helps",
     "p": [
      "A bigger sheave bends the rope less and generally runs more efficiently, which you feel when you are pulling through a 3:1 to tension a line, hauling a heavy tool to the climber, or redirecting a lowering line around a stem.",
-     "The 1.5 size sits between compact pulleys and true rigging blocks. Compare it with the 1.1 and other options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to match the pulley to your system."
+     "The 1.5 size sits between compact pulleys and true rigging blocks. Compare it with the 1.1 and other options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-blocks/\">rigging blocks</a> to match the pulley to your system.",
+     "It also suits tag lines that have to run around a stem or over a fence. The larger sheave reduces wear on the rope and makes the ground worker's job easier."
     ]
    },
    {
     "h": "Use within the rating",
     "p": [
      "Read the side-plate markings for the rope range and strength and keep loads well inside them. Do not use it in place of a rigging block for blocking down heavy wood.",
-     "Before each use, spin the sheave, check the side plates and axle for cracks, burrs, or play, and clean off sap and grit. If it goes into a climbing or rescue system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training."
+     "Before each use, spin the sheave, check the side plates and axle for cracks, burrs, or play, and clean off sap and grit. If it goes into a climbing or rescue system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training.",
+     "Store it dry and away from chemicals, and retire it after a drop from height onto a hard surface unless the maker says otherwise."
     ]
    }
   ],
@@ -1300,7 +1320,8 @@
     "h": "Use and inspection",
     "p": [
      "Load the plate in line with the direction the maker shows, use correctly sized carabiners, and keep everything inside the marked rating. Spread angles between anchor legs increase the force on each leg, so keep them narrow.",
-     "Check for cracks, burrs, deformation, and worn edges in the holes before each use. Retire the plate if it has been dropped from height onto a hard surface or shock loaded. If it is part of a life-support system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training."
+     "Check for cracks, burrs, deformation, and worn edges in the holes before each use. Retire the plate if it has been dropped from height onto a hard surface or shock loaded. If it is part of a life-support system, life-support use must follow ANSI Z133, the manufacturer's instructions, and your training.",
+     "Store it with your other rigging hardware, away from chemicals, and keep it clean so you can see any damage at a glance."
     ]
    }
   ],
@@ -1330,7 +1351,7 @@
   "keyword": "petzl spin l2",
   "title": "Petzl SPIN L2 Double Pulley with Swivel",
   "h1": "Petzl SPIN L2 Pulley",
-  "meta": "The Petzl SPIN L2 is a double pulley with a built-in swivel for haul systems and rigging. How tree crews use it, why the swivel helps, and how to inspect and care for it.",
+  "meta": "The Petzl SPIN L2 is a double pulley with a built-in swivel for haul systems and rigging. How tree crews use it, why the swivel helps, and care tips.",
   "tagline": "A swiveling double pulley for haul systems, redirects, and rope work.",
   "summary": "The Petzl SPIN L2 is a double pulley with a built-in swivel and sealed ball-bearing sheaves, made for haul systems and rope work where efficiency matters. Tree crews use it to build mechanical advantage for tensioning lines, pulling tops, and lifting gear.",
   "highlights": [
@@ -1363,7 +1384,8 @@
     "h": "Why a double pulley with a swivel",
     "p": [
      "A double pulley lets you build higher ratios, such as a 4:1 or 5:1, with fewer parts. The integrated swivel lets the pulley turn to line up with the load, so the rope strands do not twist around each other as you haul. That matters when you are pulling a lean out of a tree or tensioning a speed line across a yard.",
-     "Petzl's side plates open so you can load the rope without unclipping the pulley from its anchor. See our other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> for single options to pair it with."
+     "Petzl's side plates open so you can load the rope without unclipping the pulley from its anchor. See our other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> for single options to pair it with.",
+     "Sealed ball bearings keep friction low, so more of your pull goes into the load. That matters on long hauls or when you are building a high ratio system."
     ]
    },
    {
@@ -1400,7 +1422,7 @@
   "keyword": "progress capture pulley",
   "title": "Progress Capture Pulley 40kN with Double Bushing",
   "h1": "Progress Capture Pulley 40kN, Double Bushing",
-  "meta": "A 40kN progress capture pulley with double bushings, shaped to work with a prusik in haul systems. How a progress capture pulley works and how to inspect it before use.",
+  "meta": "A 40kN progress capture pulley with double bushings, made to work with a prusik in haul systems. How progress capture works and how to inspect it before use.",
   "tagline": "A pulley shaped to tend a prusik, so a haul system holds every pull.",
   "summary": "A progress capture pulley is a pulley with square-edged side plates that let a prusik or friction hitch sit against it without being pulled into the sheave. This one carries a 40kN rating and uses double bushings, and crews use it to build haul systems that hold their gain between pulls.",
   "highlights": [
@@ -1433,14 +1455,16 @@
     "h": "How progress capture works",
     "p": [
      "In a haul system you pull, then you have to reset. Without something to hold the rope, you lose what you just gained. A progress capture pulley works with a prusik on the line: as you pull, rope runs through the pulley and the prusik slides against the side plates. When you let go, the prusik grabs and the load stays put.",
-     "On tree jobs that might mean pulling a top over in a felling setup, tensioning a speed line, or lifting a heavy piece off a structure. Find more options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a>."
+     "On tree jobs that might mean pulling a top over in a felling setup, tensioning a speed line, or lifting a heavy piece off a structure. Find more options in our <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a>.",
+     "The square-edged side plates are what make it work. A rounded pulley can drag the prusik into the sheave, where it fails to grab, while a progress capture pulley stops the hitch at the side plates every time."
     ]
    },
    {
     "h": "Bushings, rating, and inspection",
     "p": [
      "Bushings are simple and durable and handle high static loads, though they spin with more friction than ball bearings. Keep loads within the rating and remember mechanical advantage makes it easy to overload anchors and trees.",
-     "Check the sheave, side plates, and axle for wear, cracks, and play before each use, and inspect the prusik for glazing. Rescue and life-support use must follow the manufacturer's instructions, ANSI Z133, and proper training."
+     "Check the sheave, side plates, and axle for wear, cracks, and play before each use, and inspect the prusik for glazing. Rescue and life-support use must follow the manufacturer's instructions, ANSI Z133, and proper training.",
+     "Store it clean and dry, and keep it with the prusiks you use with it so the system is complete when you need it."
     ]
    }
   ],
@@ -1467,10 +1491,10 @@
   "brand_name": "Rock Exotica",
   "kind": "pulley",
   "price": 99,
-  "keyword": "rock exotica omni block",
+  "keyword": "rock exotica omni-block",
   "title": "Rock Exotica Omni-Block 1.1 Swivel Pulley",
   "h1": "Rock Exotica Omni-Block 1.1",
-  "meta": "The Rock Exotica Omni-Block 1.1 is a swiveling pulley that opens with the carabiner still in place. How tree crews use it for redirects, haul systems, and climbing.",
+  "meta": "The Rock Exotica Omni-Block 1.1 is a swivel pulley that opens with the carabiner still in place. How tree crews use it for redirects, haul systems, and climbing.",
   "tagline": "A swiveling Rock Exotica pulley that loads rope without unclipping.",
   "summary": "The Rock Exotica Omni-Block 1.1 is a compact swivel pulley whose side plates open while it stays clipped to the anchor, so you can load the rope without dropping anything. Tree climbers and rigging crews use it for redirects, haul systems, and climbing system setups.",
   "highlights": [
@@ -1503,14 +1527,16 @@
     "h": "Why crews like the Omni-Block",
     "p": [
      "Being able to open a pulley without unclipping it is a real advantage aloft. You can drop the rope in mid-system, keep the pulley attached to the anchor, and avoid fumbling hardware over a drop zone. The swivel lets the pulley line up with the load so ropes do not twist.",
-     "Climbers use it in SRT base anchors, redirects, and haul systems, and rigging crews use it for tag lines and light tensioning. Compare it with other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a>."
+     "Climbers use it in SRT base anchors, redirects, and haul systems, and rigging crews use it for tag lines and light tensioning. Compare it with other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a>.",
+     "The rounded frame and smooth sheave keep friction low, so it works well in haul systems and anywhere a rope needs to change direction without much wear."
     ]
    },
    {
     "h": "Limits and inspection",
     "p": [
      "Read the marked rope range and rating and keep loads inside them. It is not a rigging block for blocking down wood.",
-     "Before each use, check that the side plates close and lock fully, the swivel turns freely, and the sheave spins smoothly with no grooves or play. Rinse off grit and sap. Life-support use must follow the maker's instructions, ANSI Z133, and your training."
+     "Before each use, check that the side plates close and lock fully, the swivel turns freely, and the sheave spins smoothly with no grooves or play. Rinse off grit and sap. Life-support use must follow the maker's instructions, ANSI Z133, and your training.",
+     "Store it clean and dry, away from chemicals, and retire it after a drop from height onto a hard surface unless the maker says otherwise."
     ]
    }
   ],
@@ -1541,7 +1567,7 @@
   "keyword": "petzl spin l1d",
   "title": "Petzl SPIN L1D Swivel Pulley with Becket",
   "h1": "Petzl SPIN L1D Pulley",
-  "meta": "The Petzl SPIN L1D is a swivel pulley with a becket for building haul systems and tensioning lines. How tree crews use it, what the becket adds, and inspection tips.",
+  "meta": "The Petzl SPIN L1D is a swivel pulley with a becket for building haul systems and tensioning lines. How tree crews use it, what the becket adds, and checks.",
   "tagline": "A swivel pulley with a becket for building compact haul systems.",
   "summary": "The Petzl SPIN L1D is a single swivel pulley with a becket, an extra attachment point below the sheave, and sealed ball-bearing efficiency. Tree crews use it to build compact haul systems, tension speed lines, and redirect ropes with low friction.",
   "highlights": [
@@ -1574,14 +1600,16 @@
     "h": "What the becket adds",
     "p": [
      "A becket is an extra attachment point on the pulley. It lets you tie or clip the end of the rope directly to the pulley, which is how you build a compact 3:1 or 5:1 with fewer carabiners. The swivel keeps strands from twisting as you haul.",
-     "On tree jobs that might be a quick system to tension a speed line, pull a lean out of a tree, or lift a stuck saw. Pair it with the SPIN L2 and other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> for higher ratios."
+     "On tree jobs that might be a quick system to tension a speed line, pull a lean out of a tree, or lift a stuck saw. Pair it with the SPIN L2 and other <a href=\"/rigging/blocks-and-other-hardware/rigging-pulleys/\">rigging pulleys</a> for higher ratios.",
+     "Because the side plates open while the pulley stays clipped, you can load the rope in mid-system without dropping anything over the work zone."
     ]
    },
    {
     "h": "Use and care",
     "p": [
      "Stay inside the marked rope range and rating and plan forces before you pull, because mechanical advantage makes overloading easy.",
-     "Before each use, spin the sheave, check the swivel and becket for wear or deformation, and confirm the side plates close fully. Rinse and dry it after dirty jobs. Life-support use must follow the maker's instructions, ANSI Z133, and your training."
+     "Before each use, spin the sheave, check the swivel and becket for wear or deformation, and confirm the side plates close fully. Rinse and dry it after dirty jobs. Life-support use must follow the maker's instructions, ANSI Z133, and your training.",
+     "Retire it after a drop from height onto a hard surface unless Petzl's guidance says otherwise, and keep a record of its use."
     ]
    }
   ],
@@ -1611,7 +1639,7 @@
   "keyword": "isc rigging rope wrench",
   "title": "ISC Rigging Rope Wrench for Light Lowering",
   "h1": "ISC Rigging Rope Wrench (70kg)",
-  "meta": "The ISC rigging rope wrench adds controllable friction for lowering light loads up to 70kg. Where it fits on pruning jobs, how it differs from a porta-wrap, and checks.",
+  "meta": "The ISC rigging rope wrench adds friction for lowering light loads up to 70kg. Where it fits on pruning jobs, how it differs from a porta-wrap, and checks.",
   "tagline": "A friction device for lowering light limbs and brush in the canopy.",
   "summary": "The ISC rigging rope wrench is a friction device for lowering light loads, listed for up to 70kg, that crews use when a porta-wrap at the base is more than the job needs. It helps a climber or ground worker control small limbs and brush on pruning jobs.",
   "highlights": [
@@ -1644,14 +1672,16 @@
     "h": "Light lowering in the canopy",
     "p": [
      "Plenty of pruning cuts are too heavy to drop over a roof or a garden but nowhere near the size that needs a full rigging block and porta-wrap. A light-duty rope wrench adds just enough friction to let a limb down slowly and in control.",
-     "It works with smaller rope and lighter loads than heavy lowering devices, so it is quick to set and easy to carry. See our other <a href=\"/rigging/lowering-devices/\">lowering devices</a> when the wood gets bigger."
+     "It works with smaller rope and lighter loads than heavy lowering devices, so it is quick to set and easy to carry. See our other <a href=\"/rigging/lowering-devices/\">lowering devices</a> when the wood gets bigger.",
+     "Unlike a porta-wrap at the base of the tree, a light device like this can be set close to the work, which suits single-person pruning setups where the climber controls the descent of small limbs."
     ]
    },
    {
     "h": "Know the limits",
     "p": [
      "The 70kg figure is a hard limit, not a guide. Shock loading a light device by letting pieces free-fall onto it multiplies the force, so keep pieces small and catch them with little slack.",
-     "Follow ISC's instructions for rope size, setup, and inspection. Check for wear grooves, cracks, and burrs before each use. Do not use it as a climbing device unless the maker says it is designed for that. Rigging should follow ANSI Z133 and be done by trained crew."
+     "Follow ISC's instructions for rope size, setup, and inspection. Check for wear grooves, cracks, and burrs before each use. Do not use it as a climbing device unless the maker says it is designed for that. Rigging should follow ANSI Z133 and be done by trained crew.",
+     "Store it clean and dry, and keep it with the rope it was set up for so the system stays matched."
     ]
    }
   ],
@@ -1711,14 +1741,16 @@
     "h": "Why a dedicated bag",
     "p": [
      "A mechanical advantage kit is only useful if all the parts are there when you need them. Keeping the RopeJack, its carabiners, and slings in their own bag means the kit comes out complete, every time, rather than pieces drifting into other bags on the truck.",
-     "A bag also keeps grit and moisture off the hardware. Browse our <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section for gear to round out the kit."
+     "A bag also keeps grit and moisture off the hardware. Browse our <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> section for gear to round out the kit.",
+     "When the pull needs to happen fast, such as a tree that sits back on the saw, nobody wants to search the truck for a missing carabiner. A dedicated bag keeps the kit ready."
     ]
    },
    {
     "h": "Packing and care",
     "p": [
      "Pack the hardware so it does not rattle or rub against sharp edges, and keep the bag away from fuel, bar oil, and chemicals. Let wet gear dry before you pack it away.",
-     "Use the time when you pack the bag to inspect the kit: check slings for cuts and the hardware for cracks or burrs. The bag itself is storage only and is not a load-bearing item."
+     "Use the time when you pack the bag to inspect the kit: check slings for cuts and the hardware for cracks or burrs. The bag itself is storage only and is not a load-bearing item.",
+     "Check the bag itself for torn seams, worn bottoms, and broken zippers or closures, and replace it before it starts losing gear. A clear label on the outside helps the crew grab the right bag on a busy job."
     ]
    }
   ],
@@ -1748,7 +1780,7 @@
   "keyword": "petzl jag traxion",
   "title": "Petzl JAG TRAXION Progress Capture Double Pulley",
   "h1": "Petzl JAG TRAXION Double Pulley",
-  "meta": "The Petzl JAG TRAXION is a double pulley with built-in progress capture for compact haul systems. How tree crews use it, setting up a 4:1, and inspection basics.",
+  "meta": "The Petzl JAG TRAXION is a double pulley with built-in progress capture for compact haul systems. How tree crews use it, setting up a 4:1, and inspection.",
   "tagline": "A double pulley with built-in progress capture for compact haul systems.",
   "summary": "The Petzl JAG TRAXION is a double pulley with built-in progress capture, so a haul system holds the load each time you stop pulling. It is the heart of Petzl's JAG system kits, and tree crews use it to tension lines and pull tops with a compact, efficient 4:1.",
   "highlights": [
@@ -1781,14 +1813,16 @@
     "h": "How tree crews use it",
     "p": [
      "Pair the JAG TRAXION with a second double pulley and you have a compact 4:1 that grabs and holds every pull. That makes it handy for tensioning a speed line, pulling a lean out of a tree before the cut, or lifting a stuck piece off a structure. Because it holds on its own, you can reset without needing a second person on a prusik.",
-     "See our other <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> gear for kits and accessories."
+     "See our other <a href=\"/rigging/mechanical-advantage/\">mechanical advantage</a> gear for kits and accessories.",
+     "Efficient ball-bearing sheaves mean less of your pull is lost to friction, which matters when you need to move something heavy with a small crew."
     ]
    },
    {
     "h": "Use and inspection",
     "p": [
      "Mechanical advantage makes it easy to exceed what an anchor, sling, or tree can handle, so plan the forces before you pull and stay well inside the marked rating.",
-     "Before each use, check the cam for free movement and clean teeth, spin the sheaves, and look for cracks, wear, or deformation. Rinse off grit and sap. Rescue and life-support use must follow the maker's instructions, ANSI Z133, and proper training."
+     "Before each use, check the cam for free movement and clean teeth, spin the sheaves, and look for cracks, wear, or deformation. Rinse off grit and sap. Rescue and life-support use must follow the maker's instructions, ANSI Z133, and proper training.",
+     "Store it dry and away from chemicals, and retire it after a drop from height or any damage you cannot rule out."
     ]
    }
   ],
@@ -1818,7 +1852,7 @@
   "keyword": "ring sling",
   "title": "1/2 Inch Ring Sling with Medium Ring for Rigging",
   "h1": "1/2\" Soft Anchor Ring Sling with Medium Ring",
-  "meta": "A 1/2 inch ring sling with a medium ring gives an adjustable rigging point that sets in seconds. How a ring sling works, sizing tips, and inspection advice for crews.",
+  "meta": "A 1/2 inch ring sling with a medium ring gives an adjustable rigging point that sets in seconds. How a ring sling works, sizing tips, and inspection advice.",
   "tagline": "An adjustable rope sling with a medium ring for quick rigging points.",
   "summary": "A ring sling with a medium ring is an adjustable rope sling that lets you set a rigging point at any height and wrap it to the stem in seconds. This version uses 1/2 inch rope and a medium ring, a common combination for everyday rigging.",
   "highlights": [
@@ -1851,14 +1885,16 @@
     "h": "Why a ring sling",
     "p": [
      "A fixed-length sling either fits the stem or it does not. A ring sling lets you wrap the stem, pass the tail through the ring, and adjust until the block sits exactly where you want it. It sets quickly, holds well, and comes down easily when the job moves on.",
-     "Use it for rigging points, block anchors, and as a choker for natural crotch rigging. Find more in our <a href=\"/rigging/rigging-slings/adjustable-slings/\">adjustable slings</a>."
+     "Use it for rigging points, block anchors, and as a choker for natural crotch rigging. Find more in our <a href=\"/rigging/rigging-slings/adjustable-slings/\">adjustable slings</a>.",
+     "Because it adjusts, one ring sling can cover a wide range of stem sizes. That means fewer slings to carry up the tree and less time spent swapping slings when the first one does not fit."
     ]
    },
    {
     "h": "Ratings and inspection",
     "p": [
      "Read the tag for the rated strength and keep working loads well below it. A choked hitch reduces strength, and a rigging point under a running line can see close to double the load.",
-     "Check the rope for cuts, glazing, and flat spots, and the ring for cracks, burrs, or wear grooves before each use. Retire the sling if the tag is missing. Rigging should follow ANSI Z133."
+     "Check the rope for cuts, glazing, and flat spots, and the ring for cracks, burrs, or wear grooves before each use. Retire the sling if the tag is missing. Rigging should follow ANSI Z133.",
+     "Store it dry and away from fuel and chemicals, and keep a record of its use, especially any big shock loads."
     ]
    }
   ],
@@ -1885,12 +1921,12 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "sling",
   "price": 59,
-  "keyword": "tenex rigging sling",
-  "title": "Tenex Rigging Sling 1/2 Inch x 4 Foot Soft Anchor",
+  "keyword": "tenex soft anchor rigging sling",
+  "title": "Tenex Soft Anchor Rigging Sling, 1/2 Inch x 4 Foot",
   "h1": "1/2\" x 4' Tenex Soft Anchor Rigging Sling",
-  "meta": "A Tenex rigging sling in 1/2 inch by 4 foot for soft anchors and rigging points. Why Tenex works well as sling material, sizing advice, and inspection tips for crews.",
+  "meta": "A 1/2 inch by 4 foot Tenex soft anchor rigging sling for rigging points and anchors. Why Tenex suits slings, sizing advice, and inspection tips for crews.",
   "tagline": "A 4 foot Tenex soft anchor sling for rigging points and anchors.",
-  "summary": "A Tenex rigging sling made in 1/2 inch by 4 foot is a soft anchor sling built from Samson's Tenex single braid polyester, which splices easily and holds up to abrasion. Crews use it to set rigging points, anchor blocks, and build soft anchors on stems.",
+  "summary": "This 1/2 inch by 4 foot Tenex soft anchor rigging sling is built from Samson's Tenex single braid polyester, which splices easily and holds up to abrasion. Crews use it to set rigging points, anchor blocks, and build soft anchors on stems.",
   "highlights": [
    "1/2 inch Tenex rope",
    "4 foot length",
@@ -1921,14 +1957,16 @@
     "h": "Why Tenex for slings",
     "p": [
      "Tenex is a 12 strand single braid polyester rope from Samson. It splices cleanly into strong eyes, it is firm enough to hold its shape, and polyester resists abrasion and holds up to sun and weather. Those traits make it a common choice for rigging and anchor slings.",
-     "At 4 feet, this sling suits small and mid-size stems for rigging points and soft anchors. Look through our <a href=\"/rigging/rigging-slings/adjustable-slings/\">adjustable slings</a> for other lengths."
+     "At 4 feet, this sling suits small and mid-size stems for rigging points and soft anchors. Look through our <a href=\"/rigging/rigging-slings/adjustable-slings/\">adjustable slings</a> for other lengths.",
+     "Soft slings are also kinder to the tree you are leaving behind than chain or wire, and they are lighter to carry aloft. A short sling like this lives easily on the saddle or in the rigging bag."
     ]
    },
    {
     "h": "Ratings and inspection",
     "p": [
      "Read the tag for its rated strength and remember a choker or girth hitch reduces it. A rigging point can see close to double the line load when the line runs back to the ground.",
-     "Inspect before each use for cuts, glazing, flat spots, and pulled strands, and check the splices for slipping. Retire the sling if the tag is gone or it has been severely shock loaded. Rigging should follow ANSI Z133."
+     "Inspect before each use for cuts, glazing, flat spots, and pulled strands, and check the splices for slipping. Retire the sling if the tag is gone or it has been severely shock loaded. Rigging should follow ANSI Z133.",
+     "Store it dry and away from fuel and chemicals, and keep a record of its use."
     ]
    }
   ],
@@ -1958,7 +1996,7 @@
   "keyword": "tylaska dtr20",
   "title": "Tylaska DTR20 Arborist Rigging Ring",
   "h1": "Tylaska DTR20 Arborist Rigging Ring",
-  "meta": "The Tylaska DTR20 arborist rigging ring is a machined low-friction ring for rigging points and redirects. How crews use rigging rings and what to inspect before use.",
+  "meta": "The Tylaska DTR20 arborist rigging ring is a machined low-friction ring for rigging points and redirects. How crews use rigging rings and what to check.",
   "tagline": "A machined Tylaska ring for low-friction rigging points and redirects.",
   "summary": "The Tylaska DTR20 arborist rigging ring is a machined ring from a maker known for marine and rigging hardware, used by tree crews as a low-friction rigging point or redirect. Rope runs smoothly over its rounded profile, with no moving parts to wear out.",
   "highlights": [
@@ -1991,14 +2029,16 @@
     "h": "How rigging rings are used",
     "p": [
      "A rigging ring sits in a sling at the rigging point and gives the line a smooth, rounded surface to run over. It is simpler than a block, with no sheave or bearings, and it adds a bit of friction that can help a ground worker control lighter loads.",
-     "Crews also use rings as redirects and as connection points in soft anchors. Browse our <a href=\"/rigging/blocks-and-other-hardware/rings-and-other-hardware/\">rings and rigging hardware</a> for related gear."
+     "Crews also use rings as redirects and as connection points in soft anchors. Browse our <a href=\"/rigging/blocks-and-other-hardware/rings-and-other-hardware/\">rings and rigging hardware</a> for related gear.",
+     "Because there are no moving parts, a ring is simple to set and hard to break. It lives easily on the saddle or in a sling, and it is a good choice for jobs where a block would be more than you need."
     ]
    },
    {
     "h": "Use and inspection",
     "p": [
      "Check the maker's rating and rope range and keep loads well within them. A rigging point can see close to double the line load, so plan for it.",
-     "Before each use, look for grooves worn by the rope, cracks, sharp edges, and deformation. Retire the ring if it has taken a severe shock load. Rigging should follow ANSI Z133."
+     "Before each use, look for grooves worn by the rope, cracks, sharp edges, and deformation. Retire the ring if it has taken a severe shock load. Rigging should follow ANSI Z133.",
+     "Store it clean and dry, and retire it after a drop from height onto a hard surface unless the maker says otherwise."
     ]
    }
   ],
@@ -2028,7 +2068,7 @@
   "keyword": "climbing technology steel ring",
   "title": "Climbing Technology Steel Ring for Arborist Use",
   "h1": "Climbing Technology Steel Ring",
-  "meta": "The Climbing Technology steel ring is a durable connection ring for friction savers, anchors, and redirects. Where steel beats aluminum and how to inspect it before use.",
+  "meta": "The Climbing Technology steel ring is a durable ring for friction savers, anchors, and redirects. Where steel beats aluminum and how to inspect it before use.",
   "tagline": "A durable steel ring for friction savers, anchors, and redirects.",
   "summary": "The Climbing Technology steel ring is a durable connection ring that arborists use in friction savers, anchors, and redirects. Steel holds up to rope wear better than aluminum, which matters for gear that sees rope running over it all day.",
   "highlights": [
@@ -2061,14 +2101,17 @@
     "h": "Where steel rings fit",
     "p": [
      "Rings show up all over a climbing setup: the ends of a friction saver, anchor points, and redirects. When rope runs over a ring repeatedly, aluminum wears grooves faster. Steel lasts longer and handles abrasion better, at the cost of a little extra weight.",
-     "Compare it with other <a href=\"/climbing/climbing-gear/rings/\">climbing rings</a> to choose size and material."
+     "Compare it with other <a href=\"/climbing/climbing-gear/rings/\">climbing rings</a> to choose size and material.",
+     "On a friction saver, the ring takes rope wear every time you advance or descend. A steel ring lasts much longer under that kind of use, and it is less likely to develop the sharp grooves that can damage your climbing line.",
+     "Steel rings also work as anchor points for redirects and as connection points in rigging setups where you want a simple, durable piece of hardware that will not wear out quickly."
     ]
    },
    {
     "h": "Use and inspection",
     "p": [
      "Check the rating and the maker's instructions before putting the ring into service. Use it only in configurations the maker approves.",
-     "Before each climb, look for grooves, cracks, rust pitting, and sharp edges, and retire the ring if you find any. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training."
+     "Before each climb, look for grooves, cracks, rust pitting, and sharp edges, and retire the ring if you find any. Life-support use must follow ANSI Z133, the manufacturer's instructions, and your training.",
+     "Store it dry to prevent rust, and keep it away from chemicals. Wipe it down after wet or sappy climbs, and do not apply oils or coatings unless the maker approves them for use with rope."
     ]
    }
   ],
