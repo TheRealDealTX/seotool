@@ -588,7 +588,8 @@
       input.addEventListener('keydown', async e => {
         if (e.key !== 'Enter') return;
         e.preventDefault();
-        const r = await fetch('/api/ref?' + new URLSearchParams({ q: input.value, v: ver })).then(r => r.json()).catch(() => null);
+        const r = await fetch('/api/ref?' + new URLSearchParams({ q: input.value, v: ver })).then(r => r.json())
+          .catch(async () => { const x = await parseRef(input.value); return x && { url: urlFor(ver, x.book, x.ch, x.v) }; });
         if (r?.url) { closeSheet(true); navigate(r.url); }
         else { const first = $('[data-pick]', grid); if (first) showChapters(first.dataset.pick); }
       });
@@ -841,6 +842,112 @@
     }
   }
   // offline shell: render a chapter from downloaded data when the page itself isn't cached
+  // ---------- offline search (runs on the device over downloaded books) ----------
+  const NUMWORD = { i: '1', ii: '2', iii: '3', first: '1', second: '2', third: '3', '1st': '1', '2nd': '2', '3rd': '3' };
+  const normKey = t => String(t).toLowerCase().trim()
+    .replace(/^(iii|ii|i|first|second|third|1st|2nd|3rd)\s+/, m => NUMWORD[m.trim()])
+    .replace(/[^a-z0-9]/g, '');
+  let bookMap = null;
+  async function findBook(name) {
+    const { list } = await getBooks();
+    if (!bookMap) {
+      bookMap = {};
+      list.forEach(b => [b.slug, b.names.en, b.names.ceb, b.names.ceb.replace(/^(\d )?Mga (Taga-)?/, '$1'), ...b.abbr]
+        .forEach(k => { k = normKey(k); if (k && !(k in bookMap)) bookMap[k] = b.slug; }));
+    }
+    const k = normKey(name);
+    if (!k) return null;
+    if (bookMap[k]) return bookMap[k];
+    if (k.length >= 3) for (const b of list) if ([b.slug, normKey(b.names.en), normKey(b.names.ceb)].some(c => c.startsWith(k))) return b.slug;
+    return null;
+  }
+  /** "jn 3:16", "Juan 3 16", "1 cor 13" -> { book, ch, v } (same rules as parse_ref() in bible.php) */
+  async function parseRef(q) {
+    const m = String(q).trim().match(/^((?:[1-3]|i{1,3})?\s*\p{L}[\p{L}\s.\-]*?)\s*(\d+)?(?:\s*[:.\s]\s*(\d+))?\s*$/iu);
+    if (!m) return null;
+    const slug = await findBook(m[1]);
+    if (!slug) return null;
+    const b = (await getBooks()).by[slug];
+    let ch = m[2] ? +m[2] : null, v = m[3] ? +m[3] : null;
+    if (ch !== null && (ch < 1 || ch > b.verses.length)) return null;
+    if (v !== null && (v < 1 || v > b.verses[ch - 1])) return null;
+    if (ch !== null && v === null && b.verses.length === 1 && ch > 1 && ch <= b.verses[0]) { v = ch; ch = 1; }
+    return { book: slug, ch, v };
+  }
+  const fold = t => String(t).toLowerCase().replace(/[\[\]]/g, '').normalize('NFD').replace(/\p{M}/gu, '').replace(/[‘’]/g, "'");
+  const reEsc = t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const bookTextCache = new Map();
+  async function bookText(ver, slug) {
+    const k = ver + '/' + slug;
+    if (!bookTextCache.has(k)) bookTextCache.set(k, fetch(`/data/${k}.json`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => d.c)
+      .catch(e => { bookTextCache.delete(k); throw e; }));
+    return bookTextCache.get(k);
+  }
+  /** All words must match (whole-word prefix, like the server); "quoted phrases" match exactly. */
+  async function searchOffline(ver, q, testament) {
+    const terms = [];
+    for (const m of fold(q).matchAll(/"([^"]+)"|(\S+)/g)) {
+      const t = (m[1] ?? m[2].replace(/[^\p{L}\p{N}'-]/gu, '')).trim();
+      if (t) terms.push(t);
+    }
+    if (!terms.length) return { terms, results: [] };
+    const res = terms.map(t => new RegExp('(?<!\\p{L})' + reEsc(t), 'u'));
+    const { list } = await getBooks();
+    const results = [];
+    for (const b of list) {
+      if (testament && b.t !== testament) continue;
+      const chapters = await bookText(ver, b.slug);
+      chapters.forEach((vs, ci) => vs.forEach((t, vi) => {
+        if (!t) return;
+        const f = fold(t);
+        if (terms.every(x => f.includes(x)) && res.every(r => r.test(f))) results.push([b.slug, ci + 1, vi + 1, t]);
+      }));
+    }
+    return { terms, results };
+  }
+  function highlight(html, terms) {
+    return terms.reduce((h, t) => h.replace(new RegExp('(?<!\\p{L})(' + reEsc(esc(t)) + ')', 'giu'), '<mark>$1</mark>'), html);
+  }
+  async function renderOfflineSearch(main, vers) {
+    const sp = new URLSearchParams(location.search);
+    const q = (sp.get('q') || '').trim(), t = ['ot', 'nt'].includes(sp.get('t')) ? sp.get('t') : '';
+    const done = store.get('offline', {});
+    const have = Object.keys(vers).filter(k => done[k]);
+    let ver = vers[sp.get('v')] ? sp.get('v') : prefVer();
+    if (!have.includes(ver) && have.length) ver = have[0];
+    const { by } = await getBooks();
+    main.dataset.page = 'search'; main.dataset.ver = ver; main.dataset.switch = '1';
+    $$('.topbar .ver-switch a').forEach(a => a.setAttribute('href', '/search/?' + new URLSearchParams({ q, v: a.dataset.ver, t })));
+    markVersion(ver);
+    const form = `<form class="jump" action="/search/" method="get" role="search"><input type="hidden" name="v" value="${ver}">
+      <input id="q" name="q" type="search" value="${esc(q)}" placeholder="Search, or type a verse: John 3:16" autocomplete="off" enterkeyhint="search" aria-label="Search the Bible">
+      <button type="submit" aria-label="Search">${icon('search')}</button></form>`;
+    const head = `<div class="wrap"><header class="page-head"><h1>Search the Bible</h1><p class="muted">Offline search · ${esc(vers[ver].label)}</p></header>${form}`;
+    if (!have.length) { main.innerHTML = head + '<p class="notice">Download a version on the <a href="/app/">Get the app</a> page to search without a connection.</p></div>'; return; }
+    if (!q) { main.innerHTML = head + '<p class="muted">Search by word or phrase (use "quotes" for an exact phrase), or type a reference like <em>Psalm 23</em> or <em>Juan 3:16</em>.</p></div>'; return; }
+    const ref = await parseRef(q);
+    if (ref) { navigate(urlFor(ver, ref.book, ref.ch, ref.v), { push: false }); return; }
+    main.innerHTML = head + '<p class="muted">Searching…</p></div>';
+    let out;
+    try { out = await searchOffline(ver, q, t); } catch (e) {
+      main.innerHTML = head + `<p class="notice">${esc(vers[ver].label)} isn’t fully downloaded on this device. Connect and download it again on the <a href="/app/">Get the app</a> page.</p></div>`; return;
+    }
+    const chip = (k, l) => `<a class="chip${k === t ? ' on' : ''}" href="/search/?${new URLSearchParams({ q, v: ver, t: k })}">${l}</a>`;
+    const verChips = have.length > 1 ? have.map(k => `<a class="chip${k === ver ? ' on' : ''}" href="/search/?${new URLSearchParams({ q, v: k, t })}">${esc(vers[k].short)}</a>`).join('') : '';
+    const PAGE = 50;
+    const row = ([s, c, v, txt]) => `<li><a href="${urlFor(ver, s, c, v)}"><strong>${esc(bookName(by[s], vers, ver))} ${c}:${v}</strong><span>${highlight(verseHtml(txt, ver), out.terms)}</span></a></li>`;
+    main.innerHTML = head + `<div class="chips">${chip('', 'All')}${chip('ot', 'Old Testament')}${chip('nt', 'New Testament')}${verChips ? '<span style="width:12px"></span>' + verChips : ''}</div>
+      <p class="muted">${out.results.length.toLocaleString()} result${out.results.length === 1 ? '' : 's'} for <strong>${esc(q)}</strong> in ${esc(vers[ver].label)} (offline)</p>
+      <ol class="results">${out.results.slice(0, PAGE).map(row).join('')}</ol>
+      ${out.results.length > PAGE ? '<p><button class="btn ghost" type="button" data-more>Show more</button></p>' : ''}</div>`;
+    let shown = PAGE;
+    const more = $('[data-more]', main);
+    if (more) more.onclick = () => {
+      $('.results', main).insertAdjacentHTML('beforeend', out.results.slice(shown, shown + PAGE).map(row).join(''));
+      shown += PAGE; if (shown >= out.results.length) more.remove();
+    };
+  }
+
   // Offline shell: the service worker serves the cached /offline/ page for any page
   // that isn't saved on the device; render the requested route from downloaded data.
   async function initOffline(main) {
@@ -907,11 +1014,14 @@
       return;
     }
 
-    // anything else (home, search, …): an offline start page
+    if (path === '/search/') { await renderOfflineSearch(main, vers); return; }
+
+    // anything else (home, …): an offline start page
     const last = store.get('last', null);
     const ver = have.includes(prefVer()) ? prefVer() : have[0] || prefVer();
     main.innerHTML = `<div class="wrap narrow"><header class="page-head"><h1>You’re offline</h1>
-      <p class="muted">${have.length ? 'You can keep reading the versions saved on this device.' : 'No version is downloaded on this device yet.'}</p></header>
+      <p class="muted">${have.length ? 'You can keep reading and searching the versions saved on this device.' : 'No version is downloaded on this device yet.'}</p></header>
+      ${have.length ? `<form class="jump" action="/search/" method="get" role="search"><input type="hidden" name="v" value="${ver}"><input name="q" type="search" placeholder="Search, or type a verse: John 3:16" autocomplete="off" enterkeyhint="search" aria-label="Search the Bible"><button type="submit" aria-label="Search">${icon('search')}</button></form>` : ''}
       ${last && by[last.book] ? `<section class="continue"><h2>Continue reading</h2><a class="continue-link" href="${urlFor(have.includes(last.ver) ? last.ver : ver, last.book, last.ch)}${last.v > 1 ? '#v' + last.v : ''}">${esc(bookName(by[last.book], vers, have.includes(last.ver) ? last.ver : ver))} ${last.ch}</a></section>` : ''}
       ${have.length ? `<section><h2>Saved on this device</h2><div class="ver-cards">${have.map(k => `<a class="ver-card" href="/${k}/"><strong>${esc(vers[k].label)}</strong><span>Downloaded · read offline</span>${icon('right')}</a>`).join('')}</div></section>`
         : '<p class="notice">Connect to the internet, open the <a href="/app/">Get the app</a> page and tap a version to download it.</p>'}</div>`;

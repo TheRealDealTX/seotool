@@ -112,6 +112,8 @@ from Safari's, so downloads must be made from inside the installed app (the
 `/app/` page says so). When offline, the service worker answers any page that
 isn't cached with the `/offline/` shell, and `initOffline()` in `app.js` renders
 the requested home/version/book/chapter from the downloaded `/data/` files.
+Search works offline too: `renderOfflineSearch()` scans the downloaded book files on
+the device (same matching rules as the server) and parses references locally.
 
 **Search Console:** submit `https://holybiblewords.com/sitemap_index.xml`. The
 verification file `googlecccfbf2f7e9e5ae4.html` is still in place.
