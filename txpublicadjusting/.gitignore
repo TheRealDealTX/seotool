@@ -1,0 +1,4 @@
+site/storage/leads-*.csv
+site/storage/secret.php
+site/app/config.local.php
+txpa-private/
