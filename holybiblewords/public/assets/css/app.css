@@ -56,11 +56,11 @@ h2 { font-size: 1.25rem; }
   padding: 0 12px; padding-top: env(safe-area-inset-top); height: calc(var(--top) + env(safe-area-inset-top));
   background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: saturate(1.4) blur(12px);
   -webkit-backdrop-filter: saturate(1.4) blur(12px); border-bottom: 1px solid var(--line); }
-.brand { display: flex; align-items: center; gap: 8px; color: var(--text); font-weight: 650; font-size: 1.02rem; white-space: nowrap; }
+.brand { display: flex; align-items: center; gap: 8px; min-height: 44px; min-width: 40px; color: var(--text); font-weight: 650; font-size: 1.02rem; white-space: nowrap; }
 .brand:hover { text-decoration: none; }
 .brand b { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .ver-switch { display: inline-flex; padding: 3px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); margin-left: auto; }
-.ver-switch a { padding: 5px 13px; border-radius: 999px; font-weight: 650; font-size: .86rem; color: var(--muted); letter-spacing: .02em; }
+.ver-switch a { display: inline-flex; align-items: center; min-height: 36px; padding: 0 13px; border-radius: 999px; font-weight: 650; font-size: .86rem; color: var(--muted); letter-spacing: .02em; }
 .ver-switch a:hover { text-decoration: none; color: var(--text); }
 .ver-switch a.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.15); }
 .mainnav { display: none; }
@@ -80,7 +80,25 @@ h2 { font-size: 1.25rem; }
 #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--brand); z-index: 50; transition: width .2s, opacity .3s; opacity: 0; }
 #progress.on { opacity: 1; width: 70%; transition: width 2s cubic-bezier(.1,.6,.2,1); }
 #progress.done { opacity: 0; width: 100%; }
-@media (max-width: 420px) { .brand span { display: none; } }
+/* phones: icon-only brand, nothing may shrink or push the buttons off screen */
+.brand, .brand img, .ver-switch, .topbar > .icon-btn { flex: none; }
+@media (max-width: 599px) {
+  .topbar { gap: 6px; padding: 0 8px; }
+  .brand span { display: none; }
+  .ver-switch { margin: 0 auto; }
+  .topbar > .icon-btn { width: 44px; height: 44px; }
+  /* reader bar: let the book/chapter button use all spare width */
+  .topbar ~ main .reader-bar { gap: 0; padding: 6px 4px; }
+  .reader-bar .picker-btn { padding: 8px 8px 8px 10px; gap: 2px; flex: 1 1 auto; justify-content: center; }
+  .reader-bar .reader-tools { margin-left: 0; }
+  .reader-bar .reader-tools .icon-btn, .reader-bar > .icon-btn { width: 38px; }
+}
+@media (max-width: 360px) {
+  .ver-switch a { padding: 0 10px; font-size: .82rem; }
+  .topbar > .icon-btn { width: 40px; }
+  .reader-bar .picker-btn { font-size: .92rem; }
+}
+}
 
 /* ---- bottom tab bar (mobile) ---- */
 .tabbar { position: fixed; z-index: 30; bottom: 0; left: 0; right: 0; display: flex; height: calc(var(--tab) + env(safe-area-inset-bottom));
