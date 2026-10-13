@@ -153724,6 +153724,8923 @@ return array (
         'source_url' => 'https://www.flickr.com/photos/41284017@N08/28725898983',
       ),
     ),
+    '/climbing/climbing-gear/swivels/dmm-mini-swivel/' => 
+    array (
+      'path' => '/climbing/climbing-gear/swivels/dmm-mini-swivel/',
+      'category' => '/climbing/climbing-gear/swivels/',
+      'name' => 'DMM Mini Swivel',
+      'brand' => 'dmm',
+      'brand_name' => 'DMM',
+      'kind' => 'carabiner',
+      'price' => 45,
+      'keyword' => 'dmm mini swivel',
+      'title' => 'DMM Mini Swivel for Climbing and Rigging Setups',
+      'h1' => 'DMM Mini Swivel',
+      'meta' => 'The DMM Mini Swivel is a compact swivel that lets carabiners and devices turn freely so ropes don\'t twist. Where it fits in a kit and how to inspect it.',
+      'tagline' => 'A compact DMM swivel that stops rope twist between connectors and devices.',
+      'summary' => 'The DMM Mini Swivel is a small, lightweight swivel that lets two connections rotate independently, so your rope and devices stop fighting each other. It is the size climbers reach for when a full rescue swivel is more than the job needs.',
+      'highlights' => 
+      array (
+        0 => 'Compact swivel from DMM',
+        1 => 'Lets carabiners and devices rotate freely',
+        2 => 'Helps keep climbing and tag lines from twisting',
+        3 => 'Small and light enough to live on the saddle',
+        4 => 'Strength rating marked on the body',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Compact swivel',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'DMM',
+        ),
+        2 => 
+        array (
+          0 => 'Material',
+          1 => 'Aluminum body',
+        ),
+        3 => 
+        array (
+          0 => 'Rating',
+          1 => 'Marked on the swivel',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a small swivel earns its place',
+          'p' => 
+          array (
+            0 => 'Rope twist builds up any time a line runs over and over through the same system. On a long SRS ascent it shows up as kinks below your device, and on a tag line or haul line it shows up as hockles and a rope that will not coil. A swivel between the anchor and the device lets the rope unwind instead.',
+            1 => 'Climbers often put the DMM Mini Swivel under a rope wrench or between a bridge and a pulley, and some use it at the bottom of a throw line or haul rope. Because it is compact, it adds little length to the system. Browse other options in our <a href="/climbing/climbing-gear/swivels/">swivels</a> if you need a larger size or a version with an integrated attachment point.',
+            2 => 'Clip it in with locking carabiners on both ends, and keep the gates facing away from the rope and the tree so nothing can press them open. A swivel adds one more link to the system, so keep it close to the device it serves rather than hanging it out on a long sling.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and limits',
+          'p' => 
+          array (
+            0 => 'Check that it spins smoothly under light load, that both eyes are free of sharp edges and grooves, and that there is no play or grit in the bearing. Clean off sap with warm water and let it dry fully.',
+            1 => 'Read the strength marking on the body before you put it into a system, and never load a swivel sideways across its eyes. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do I need a swivel for SRS climbing?',
+          'a' => 'Not always, but a small swivel under the device helps a lot with twisting ropes and long ascents. Many climbers keep one in the kit for that reason.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it for rigging?',
+          'a' => 'Only within its marked rating. Light tag lines and haul lines are fine, but heavy rigging calls for a rated rigging swivel.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
+    ),
+    '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/' => 
+    array (
+      'path' => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/',
+      'category' => '/rigging/blocks-and-other-hardware/rigging-blocks/',
+      'name' => 'SMC Apex Pulley 1.5',
+      'brand' => 'smc',
+      'brand_name' => 'SMC',
+      'kind' => 'pulley',
+      'price' => 99,
+      'keyword' => 'smc apex pulley 1.5',
+      'title' => 'SMC Apex Pulley 1.5 for Haul Systems and Redirects',
+      'h1' => 'SMC Apex Pulley 1.5',
+      'meta' => 'The SMC Apex Pulley 1.5 is a mid-size pulley for mechanical advantage, redirects and light rigging. How it differs from the Apex Direct and how to inspect it.',
+      'tagline' => 'A mid-size SMC pulley for haul systems, redirects and light rigging work.',
+      'summary' => 'The SMC Apex Pulley 1.5 is the standard Apex in the larger 1.5 size, with a bigger sheave than the 1.1 for smoother running under load. Tree crews use it in pull systems, redirects, and light rigging where a micro pulley is too small.',
+      'highlights' => 
+      array (
+        0 => 'Larger 1.5 size in the SMC Apex line',
+        1 => 'Bigger sheave runs more efficiently',
+        2 => 'Suits 3:1 and 5:1 pull systems',
+        3 => 'Good for redirects and tag lines',
+        4 => 'Rope range and rating marked on the side plate',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Single pulley',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'SMC',
+        ),
+        2 => 
+        array (
+          0 => 'Line',
+          1 => 'Apex',
+        ),
+        3 => 
+        array (
+          0 => 'Size',
+          1 => '1.5',
+        ),
+        4 => 
+        array (
+          0 => 'Rope range and rating',
+          1 => 'Marked on the side plate',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Apex vs. Apex Direct',
+          'p' => 
+          array (
+            0 => 'SMC sells the Apex in more than one style, and the Apex Direct is a close cousin rather than this exact pulley. This is the standard Apex in the 1.5 size. Both share the larger sheave, so the choice usually comes down to how the side plates open and how the pulley clips into your system. Check the listing photos and the side-plate markings before you buy a replacement to match a kit.',
+            1 => 'Compare sizes and styles in our <a href="/rigging/blocks-and-other-hardware/rigging-blocks/">rigging blocks</a> section if you are building a pull kit from scratch.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Using it on tree work',
+          'p' => 
+          array (
+            0 => 'A 1.5 size pulley is a good middle ground for crews. It is light enough to carry up the tree for a redirect, and the bigger sheave makes a noticeable difference when you are pulling a 3:1 to tension a felling line or hauling a saw to the climber.',
+            1 => 'It is not a rigging block. Do not use it to block down heavy wood or take shock loads. Spin the sheave before each use, look for cracks, burrs or play at the axle, and clean out sap and grit. Retire it after a hard drop unless SMC says otherwise. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the Apex 1.5 the same as the Apex Direct 1.5?',
+          'a' => 'No. They are related SMC pulleys in the same size, but the side-plate design differs. Match the exact model if you are replacing one in a kit.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it for blocking down limbs?',
+          'a' => 'No. Use a rated rigging block for heavy or shock-loaded rigging and keep this pulley for pull systems and redirects.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/smc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-0.webp',
+        'sm' => '/assets/photos/pulley-0-sm.webp',
+        'title' => 'Block and Tackle',
+        'creator' => 'www.mgaylard.co.uk and thanks for looking',
+        'creator_url' => 'https://www.flickr.com/photos/16564965@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/16564965@N04/52721499095',
+      ),
+    ),
+    '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/' => 
+    array (
+      'path' => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+      'category' => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/',
+      'name' => 'Weaver Deluxe Work Suspenders',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'saddle',
+      'price' => 55,
+      'keyword' => 'weaver deluxe work suspenders',
+      'title' => 'Weaver Deluxe Work Suspenders for Climbing Saddles',
+      'h1' => 'Weaver Deluxe Work Suspenders',
+      'meta' => 'Weaver Deluxe Work Suspenders clip to your climbing saddle and move the weight of a loaded saddle onto your shoulders. Fit tips and what they are not built for.',
+      'tagline' => 'Padded suspenders that take the weight of a loaded saddle off your hips.',
+      'summary' => 'Weaver Deluxe Work Suspenders clip to a climbing saddle and share the weight of saws, carabiners and lanyards across your shoulders. This is the plain version without the hydration pack, for climbers who want the support and nothing extra on their back.',
+      'highlights' => 
+      array (
+        0 => 'Clips to the climbing saddle',
+        1 => 'Spreads saddle weight onto the shoulders',
+        2 => 'Padded shoulder straps',
+        3 => 'Plain version without hydration pack',
+        4 => 'Comfort item, not fall protection',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Saddle suspenders',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+        2 => 
+        array (
+          0 => 'Attachment',
+          1 => 'Clips to the saddle',
+        ),
+        3 => 
+        array (
+          0 => 'Hydration pack',
+          1 => 'Not included',
+        ),
+        4 => 
+        array (
+          0 => 'Use',
+          1 => 'Comfort only, not life support',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why suspenders help on long days',
+          'p' => 
+          array (
+            0 => 'A saddle loaded with a top-handle saw, a hand saw, a lanyard, spare carabiners and a few slings pulls hard on your hips, and that weight sags the saddle down your legs as the day goes on. Suspenders lift the saddle back into place and put part of the load on your shoulders, which most climbers notice by the third tree.',
+            1 => 'This is the plain deluxe suspender. Weaver also sells a version with a hydration pack built in, so make sure you have the one you want. Other shoulder harness options are in our <a href="/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/">saddle parts and shoulder harnesses</a>.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and care',
+          'p' => 
+          array (
+            0 => 'Adjust the straps so the saddle sits where it normally rides with the suspenders slack-free but not pulling the waist belt up. Route them clear of your bridge, lanyard and tie-in points so they never interfere with anything that carries load.',
+            1 => 'They are not fall protection and must never be clipped into as an attachment point. Check the clips and stitching when you inspect the saddle, and wash them by hand when they get stiff with sweat and sap.',
+            2 => 'If you climb in heat, pair them with a separate hydration bladder or bottle so you are not coming down every hour to drink. Some climbers also hang a light radio or phone pouch from the straps, as long as nothing crosses the load-bearing parts of the saddle.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do these include the hydration pack?',
+          'a' => 'No. This is the version without the pack. Weaver sells the hydration pack version separately.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will they fit my saddle?',
+          'a' => 'They are made to clip to Weaver saddles and fit many other saddles with suitable attachment points. Check the listing and your saddle before ordering.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'apparel',
+      ),
+      'level' => 'all',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-5.webp',
+        'sm' => '/assets/photos/saddle-5-sm.webp',
+        'title' => 'DSC_0054',
+        'creator' => 'BCRP',
+        'creator_url' => 'https://www.flickr.com/photos/63577817@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/63577817@N04/8199050111',
+      ),
+    ),
+    '/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/' => 
+    array (
+      'path' => '/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/',
+      'category' => '/rope/rigging-rope/',
+      'name' => 'Sterling Kraken Rigging Line 5/8" x 200\'',
+      'brand' => 'sterling-rope',
+      'brand_name' => 'Sterling Rope',
+      'kind' => 'rope',
+      'price' => 499,
+      'keyword' => 'sterling kraken rigging line',
+      'title' => 'Sterling Kraken Rigging Line 5/8 in x 200 ft',
+      'h1' => 'Sterling Kraken Rigging Line 5/8" x 200\'',
+      'meta' => 'Sterling Kraken rigging line in 5/8 in x 200 ft is a lowering rope for everyday removals and tall trees. Sizing, block and device fit, and inspection advice.',
+      'tagline' => 'A 5/8 inch, 200 foot Sterling rigging line for everyday removal work.',
+      'summary' => 'Sterling Kraken rigging line in 5/8 inch by 200 feet is a lowering rope sized for the mid-weight wood most crews handle every day. The 200 foot length lets you rig from high in a tall tree and still reach the lowering device at the base.',
+      'highlights' => 
+      array (
+        0 => '5/8 inch diameter for everyday rigging',
+        1 => '200 foot length for tall trees',
+        2 => 'Runs in common arborist blocks and lowering devices',
+        3 => 'Lighter to carry than 3/4 inch line',
+        4 => 'Breaking strength listed on the rope tag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '5/8 in (about 16 mm)',
+        ),
+        1 => 
+        array (
+          0 => 'Length',
+          1 => '200 ft',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Sterling Rope',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'Arborist rigging and lowering',
+        ),
+        4 => 
+        array (
+          0 => 'Rated strength',
+          1 => 'See Sterling\'s tag',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => '5/8 inch vs. 3/4 inch Kraken',
+          'p' => 
+          array (
+            0 => 'Kraken also comes in 3/4 inch, which is the heavy-wood size. The 5/8 inch line is what most crews run day to day. It is lighter to haul up the tree, easier to handle on a lowering device, and it fits a wider range of blocks and pulleys. Step up to 3/4 inch when the pieces get big enough that you are near the working load limit of the 5/8 line.',
+            1 => 'The 200 foot hank gives you enough rope for a tall removal with the block high in the tree and wraps on a device at the base. Other diameters and lengths are in our <a href="/rope/rigging-rope/">rigging rope</a> section.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Working within the rope\'s limits',
+          'p' => 
+          array (
+            0 => 'Rigging loads are dynamic. A piece that weighs a few hundred pounds can put several times that into the rope when it is caught short, so keep loads well below the strength on the tag and let the lowering device run.',
+            1 => 'Inspect the rope before each job for glazing, cuts, crushed sections and pulled strands, and retire any section that has been shock loaded hard. Keep rigging lines separate from climbing lines and never use a rigging rope for life support.',
+            2 => 'Store the line in a rope bag away from fuel and bar oil, coil or flake it so it pays out cleanly, and keep track of its age and how hard it has been worked. A rope log for each rigging line makes retirement decisions easier.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is 5/8 inch Kraken strong enough for removals?',
+          'a' => 'For most everyday removal work, yes, as long as loads stay within the rated strength with a good safety margin. Very large wood calls for 3/4 inch line.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it as a climbing line?',
+          'a' => 'No. Rigging rope is not made or rated for life support. Use a dedicated arborist climbing rope.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/sterling-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/' => 
+    array (
+      'path' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/',
+      'name' => 'DMM Perfect O Carabiner with Captiv Bar',
+      'brand' => 'dmm',
+      'brand_name' => 'DMM',
+      'kind' => 'carabiner',
+      'price' => 30,
+      'keyword' => 'dmm perfect o',
+      'title' => 'DMM Perfect O Carabiner with Captiv Bar',
+      'h1' => 'DMM Perfect O Carabiner with Captiv Bar',
+      'meta' => 'The DMM Perfect O with Captiv bar is a symmetrical oval auto-locking carabiner that stays in position on a pulley or device. How the Captiv bar helps arborists.',
+      'tagline' => 'A symmetrical oval auto-locker with a Captiv bar to hold it in position.',
+      'summary' => 'The DMM Perfect O with Captiv bar is a symmetrical oval auto-locking carabiner with a captive bar that keeps whatever it holds from rotating out of position. Arborists use it on pulleys, rope wrenches and lanyard adjusters that need to sit square and stay put.',
+      'highlights' => 
+      array (
+        0 => 'Symmetrical oval keeps devices centered',
+        1 => 'Captiv bar holds the carabiner in orientation',
+        2 => 'Auto-locking gate',
+        3 => 'Good on hitch-tending pulleys and adjusters',
+        4 => 'Strength ratings marked on the spine',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Shape',
+          1 => 'Oval (symmetrical)',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Aluminum',
+        ),
+        2 => 
+        array (
+          0 => 'Gate',
+          1 => 'Auto-locking',
+        ),
+        3 => 
+        array (
+          0 => 'Feature',
+          1 => 'Captiv bar',
+        ),
+        4 => 
+        array (
+          0 => 'Brand',
+          1 => 'DMM',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What the Captiv bar does',
+          'p' => 
+          array (
+            0 => 'The plain Perfect O is a favorite for devices because the oval shape keeps them centered. The Captiv version adds a small bar inside the carabiner that captures the connection, so the carabiner cannot flip around and cross-load. That matters on a device that sees a lot of movement, like a hitch-tending pulley or a lanyard adjuster on a saddle ring.',
+            1 => 'If you already run plain Perfect O carabiners, the Captiv model is a drop-in upgrade for the spots where you keep catching a carabiner in the wrong orientation. See other locking options in our <a href="/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/">auto-locking carabiners</a>.',
+            2 => 'It is a small part, but on a busy saddle it saves a lot of fussing with carabiners that have rolled onto the gate. Keep a couple of plain Perfect O carabiners for spots where you clip and unclip all day, and use the Captiv version where the connection stays put.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection',
+          'p' => 
+          array (
+            0 => 'Before each climb, check that the gate opens, closes and locks fully on its own, that the Captiv bar is intact and seated, and that there are no grooves from rope wear or sharp burrs. Rinse out grit and sap, and never file or lubricate it with anything DMM does not approve.',
+            1 => 'Retire the carabiner after a significant fall or drop onto a hard surface. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the Captiv bar removable?',
+          'a' => 'It is designed to stay in place once fitted. Follow DMM\'s instructions and do not modify it.',
+        ),
+        1 => 
+        array (
+          'q' => 'Why choose an oval over an HMS shape?',
+          'a' => 'An oval keeps pulleys and devices centered on the carabiner. An HMS shape suits hitches and belaying better.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
+    ),
+    '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/' => 
+    array (
+      'path' => '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/',
+      'name' => 'Big 8 Stainless Steel Rescue Descender',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'friction-device',
+      'price' => 49,
+      'keyword' => 'big 8 stainless steel rescue descender',
+      'title' => 'Big 8 Stainless Steel Rescue Descender',
+      'h1' => 'Big 8 Stainless Steel Rescue Descender',
+      'meta' => 'The Big 8 stainless steel rescue descender is a large figure 8 with ears for lowering and controlled descents. Steel vs. aluminum, uses, and inspection tips.',
+      'tagline' => 'A large stainless figure 8 with ears for lowering and rescue descents.',
+      'summary' => 'The Big 8 stainless steel rescue descender is a large figure 8 with ears, made in stainless steel rather than aluminum for better wear resistance. It suits lowering, rope access practice and aerial rescue drills where the device sees a lot of rope.',
+      'highlights' => 
+      array (
+        0 => 'Large figure 8 with ears',
+        1 => 'Stainless steel for long wear life',
+        2 => 'Ears help stop the rope girth-hitching',
+        3 => 'Handles larger rope diameters',
+        4 => 'Heavier than the aluminum version',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rescue figure 8 descender',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Stainless steel',
+        ),
+        2 => 
+        array (
+          0 => 'Design',
+          1 => 'Large 8 with ears',
+        ),
+        3 => 
+        array (
+          0 => 'Rope range',
+          1 => 'See device markings',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Stainless vs. aluminum',
+          'p' => 
+          array (
+            0 => 'This is the stainless steel version of the big rescue 8. The aluminum version is lighter, but rope running fast over aluminum wears grooves into it, especially when the rope is dirty. Stainless steel resists that wear and holds up better on a device that gets used for training, lowering a lot of loads, or living in a rescue kit in the truck.',
+            1 => 'The trade-off is weight and heat. Steel is heavier to carry, and on a long fast descent the device gets hot, so control your speed. Compare it with other devices in our <a href="/climbing/climbing-gear/ascent-and-descent/">ascent and descent</a> section.',
+            2 => 'Many crews keep a steel 8 in the aerial rescue bag precisely because it is hard to damage. It handles rough storage in a truck box better than aluminum and still works on the day it is needed, provided someone has practiced with it.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use and inspection',
+          'p' => 
+          array (
+            0 => 'A figure 8 is a simple device with no auto-stop, so a backup such as a friction hitch or a belay is standard practice. The ears help keep the rope from slipping over the top and forming a girth hitch, but you still need to rig it correctly.',
+            1 => 'Check for sharp edges, grooves and cracks before each use and confirm your rope diameter suits the device. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb. Practice rescue lowering under qualified instruction.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Why buy stainless instead of aluminum?',
+          'a' => 'Stainless wears much more slowly under running rope, so it lasts longer in a busy rescue or training kit. It is heavier.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does a figure 8 lock off on its own?',
+          'a' => 'No. It has no automatic brake, so always use a backup and a proper lock-off when you stop.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'safety',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
+    ),
+    '/shop-all/standard-5-8-crane-sling-kit/' => 
+    array (
+      'path' => '/shop-all/standard-5-8-crane-sling-kit/',
+      'category' => '/rigging/rigging-slings/crane-slings/',
+      'name' => 'Standard 5/8" Crane Sling Kit',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 249,
+      'keyword' => '5/8 crane sling kit',
+      'title' => 'Standard 5/8 in Crane Sling Kit for Tree Removal',
+      'h1' => 'Standard 5/8" Crane Sling Kit',
+      'meta' => 'A standard 5/8 in crane sling kit gives a crane crew a matched set of rope chokers for picking wood. What a kit covers, how crews use it, and rating checks.',
+      'tagline' => 'A matched set of 5/8 inch rope crane slings for crane-assisted removals.',
+      'summary' => 'This standard 5/8 crane sling kit gives a crane removal crew a set of matched 5/8 inch rope chokers instead of a single sling. Having more than one sling rigged means the climber can set the next pick while the last one is still on the hook.',
+      'highlights' => 
+      array (
+        0 => 'Set of 5/8 inch rope crane slings',
+        1 => 'Standard (not premium) construction',
+        2 => 'Lets the climber pre-rig the next pick',
+        3 => 'Ratings shown on each sling\'s tag',
+        4 => 'For crane-assisted tree removal',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '5/8 in',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Rope crane slings, kit',
+        ),
+        2 => 
+        array (
+          0 => 'Grade',
+          1 => 'Standard',
+        ),
+        3 => 
+        array (
+          0 => 'Contents and lengths',
+          1 => 'See listing',
+        ),
+        4 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See tag on each sling',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why buy slings as a kit',
+          'p' => 
+          array (
+            0 => 'Crane removals run on rhythm. The operator takes one pick to the ground while the climber chokes the next piece, and that only works if you have spare slings on hand. A kit gets you a matched set in one order, so the crew is working with slings of the same diameter, construction and rating.',
+            1 => 'This is the standard grade in 5/8 inch. Individual slings in 20 and 30 foot lengths, plus premium versions, are in our <a href="/rigging/rigging-slings/crane-slings/">crane slings</a> section if you want to build the set yourself.',
+            2 => 'Standard slings are a solid choice for crews that run crane work regularly and want the convenience of a set without paying for premium construction on every sling. Mark each sling so the crew can track its age and use, and keep the kit in its own bag away from saws and fuel.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Rating and inspection',
+          'p' => 
+          array (
+            0 => 'Every pick needs to stay within the sling\'s rated load for the hitch you are using, and a choker hitch rates lower than a straight vertical pull. Know the weight of the piece, or estimate it conservatively, before it leaves the tree.',
+            1 => 'Inspect each sling before every job for cuts, abrasion, heat damage, crushed strands and damaged eyes, and remove any sling with a missing or unreadable tag. Crane work is governed by ANSI Z133, crane standards, and the operator\'s plan, and only trained crews should rig picks.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What does the kit include?',
+          'a' => 'A set of 5/8 inch standard crane slings. Check the listing for the exact number and lengths.',
+        ),
+        1 => 
+        array (
+          'q' => 'What is the difference between standard and premium?',
+          'a' => 'The premium slings use a higher grade construction. Compare tags and ratings before choosing.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
+    ),
+    '/rigging/mechanical-advantage/cmi-ropejack/' => 
+    array (
+      'path' => '/rigging/mechanical-advantage/cmi-ropejack/',
+      'category' => '/rigging/mechanical-advantage/',
+      'name' => 'CMI RopeJack',
+      'brand' => 'cmi',
+      'brand_name' => 'CMI',
+      'kind' => 'rigging-device',
+      'price' => 349,
+      'keyword' => 'cmi ropejack',
+      'title' => 'CMI RopeJack Rope Puller for Tree Work',
+      'h1' => 'CMI RopeJack',
+      'meta' => 'The CMI RopeJack is a hand-operated rope puller for tensioning a pull line when felling or directing trees. How crews use it, what to check, and safety notes.',
+      'tagline' => 'A hand-operated rope puller for tensioning pull lines on felling jobs.',
+      'summary' => 'The CMI RopeJack is a hand-operated rope puller that lets one ground worker put steady, controlled tension on a pull line. Tree crews use it to help direct a lean tree or hold tension on a top while the cut is made.',
+      'highlights' => 
+      array (
+        0 => 'Hand-operated rope pulling device',
+        1 => 'Puts controlled tension on a pull line',
+        2 => 'One person can operate it',
+        3 => 'Works on rope, no cable needed',
+        4 => 'Carry bag sold separately',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rope puller',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'CMI',
+        ),
+        2 => 
+        array (
+          0 => 'Operation',
+          1 => 'Manual',
+        ),
+        3 => 
+        array (
+          0 => 'Rated capacity and rope range',
+          1 => 'See CMI\'s markings',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How crews use a RopeJack',
+          'p' => 
+          array (
+            0 => 'Pulling a tree over by hand or with a simple 3:1 works until the tree is heavy or the lean is wrong. A rope puller lets you build tension a little at a time and hold it, so the faller can make the back cut knowing the line is already loaded. It anchors to a stump or a sling around a stem and takes up the pull line as you work it.',
+            1 => 'Because it uses the rope you already carry, it is quicker to set up than a cable come-along. CMI also sells a dedicated carry bag, and other pulling options are in our <a href="/rigging/mechanical-advantage/">mechanical advantage</a> section.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setup and limits',
+          'p' => 
+          array (
+            0 => 'Anchor it to something that is stronger than the pull, keep everyone well out of the line of pull and the fall zone, and never stand in the bight of the rope. Read CMI\'s capacity and rope range on the device and stay inside them.',
+            1 => 'Pull lines can fail suddenly. Use rope in good condition, inspect the device for wear on the grabbing parts before each job, and make sure the crew knows the plan before the saw starts. Felling with tension lines is skilled work and should only be done by trained crews following ANSI Z133.',
+            2 => 'After each job, clean sawdust and grit out of the moving parts, check that everything moves freely, and store it in its bag. A rope puller that is maintained works smoothly when the crew is under pressure.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can the RopeJack pull a tree over on its own?',
+          'a' => 'It adds controlled tension to help direct a tree, but proper felling cuts and a plan still do the work. It is not a substitute for a winch on very heavy pulls.',
+        ),
+        1 => 
+        array (
+          'q' => 'What rope does it take?',
+          'a' => 'Check CMI\'s markings and instructions for the rope diameter range before you set it up.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'felling',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-3.webp',
+        'sm' => '/assets/photos/rigging-device-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982144423',
+      ),
+    ),
+    '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/' => 
+    array (
+      'path' => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+      'category' => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/',
+      'name' => 'Yale Veritas 10mm Sewn Eye-to-Eye Hitch Cord',
+      'brand' => 'yale-cordage',
+      'brand_name' => 'Yale Cordage',
+      'kind' => 'rope',
+      'price' => 49,
+      'keyword' => 'yale veritas 10mm',
+      'title' => 'Yale Veritas 10mm Sewn Eye-to-Eye Hitch Cord',
+      'h1' => 'Yale Veritas 10mm Sewn Eye-to-Eye',
+      'meta' => 'Yale Veritas 10mm sewn eye-to-eye hitch cord is a heavier friction hitch cord for arborist climbing lines. How it compares with 8mm and when climbers choose it.',
+      'tagline' => 'A 10 mm sewn eye-to-eye hitch cord from Yale for friction hitches.',
+      'summary' => 'Yale Veritas 10mm sewn eye-to-eye hitch cord is the heavier version of Yale\'s Veritas cord, with a sewn eye at each end for tying friction hitches on an arborist climbing line. The extra diameter gives a smoother, less grabby hitch on many ropes and a bit more material to wear.',
+      'highlights' => 
+      array (
+        0 => '10 mm hitch cord',
+        1 => 'Sewn eye at each end',
+        2 => 'Smoother feel than thinner cord on many lines',
+        3 => 'More material to wear before retirement',
+        4 => 'For MRS and SRS friction hitches',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Brand',
+          1 => 'Yale Cordage',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '10 mm',
+        ),
+        2 => 
+        array (
+          0 => 'Terminations',
+          1 => 'Sewn eye at each end',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'Friction hitch cord',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => '10mm vs. 8mm Veritas',
+          'p' => 
+          array (
+            0 => 'Veritas also comes in 8 mm. Thinner cord bites harder on the climbing line and suits larger or slicker ropes, while 10 mm cord grips less aggressively, tends with less chatter, and gives more wear life before glazing. Many climbers on 11 to 13 mm lines prefer the 10 mm because it releases more smoothly when they descend.',
+            1 => 'Hitch behavior depends on the pairing, so match the cord to your climbing line and test it low to the ground. Compare lengths and diameters in our <a href="/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/">eye-and-eye prusiks</a>.',
+            2 => 'The sewn eyes are compact and neat, which keeps the hitch short and lets it sit close to a hitch-tending pulley. That saves a few inches of reach on every advance and makes the system easier to manage on long climbs.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Wear and retirement',
+          'p' => 
+          array (
+            0 => 'Hitch cord is the hardest-working part of a moving-rope system. Check it every climb for glazing, stiff or melted spots, cuts, and worn stitching at the sewn eyes. Replace it at the first sign of heat damage rather than waiting.',
+            1 => 'Tie the hitch the way you were trained, dress and set it before you weight it, and always back-test it before leaving the ground. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will 10mm cord grip my rope?',
+          'a' => 'It depends on your climbing line\'s diameter and cover. Test the hitch low and add a wrap if it slips.',
+        ),
+        1 => 
+        array (
+          'q' => 'What hitches can I tie with it?',
+          'a' => 'Common arborist friction hitches such as the Distel, Valdotain Tresse and Michoacan, as taught in your training.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
+    ),
+    '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/' => 
+    array (
+      'path' => '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/',
+      'category' => '/climbing/climbing-gear/gear-storage/gear-bags/',
+      'name' => 'R-Easy RKS 30 Gear Bag',
+      'brand' => 'r-easy',
+      'brand_name' => 'R-Easy',
+      'kind' => 'case-bag',
+      'price' => 79,
+      'keyword' => 'r-easy rks 30 gear bag',
+      'title' => 'R-Easy RKS 30 Gear Bag for Climbing Kit',
+      'h1' => 'R-Easy RKS 30 Gear Bag',
+      'meta' => 'The R-Easy RKS 30 gear bag keeps a climbing kit together between jobs. What a 30-size bag holds, how arborists pack it, and care tips for keeping gear dry.',
+      'tagline' => 'A compact gear bag for keeping a climbing kit together and off the truck floor.',
+      'summary' => 'The R-Easy RKS 30 gear bag is a compact bag for carrying a climbing kit from the truck to the tree. The 30 size suits a personal kit of hardware, hitch cords and a short rope rather than a full crew load.',
+      'highlights' => 
+      array (
+        0 => 'Compact size for a personal climbing kit',
+        1 => 'Keeps hardware and soft goods together',
+        2 => 'Easy carry from truck to tree',
+        3 => 'Helps protect gear from grit and chemicals',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Gear bag',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'R-Easy',
+        ),
+        2 => 
+        array (
+          0 => 'Size',
+          1 => 'RKS 30 (see listing for volume)',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What fits in a 30-size bag',
+          'p' => 
+          array (
+            0 => 'A bag in this size holds the everyday kit: a rope wrench or mechanical device, a few carabiners, hitch cords, a pulley, a lanyard and maybe a short climbing line. It is not meant for a 200 foot rigging rope or a full saddle with everything clipped on. Many climbers keep one small bag for hardware and a separate rope bag for lines.',
+            1 => 'If you need more room, look at larger options in our <a href="/climbing/climbing-gear/gear-storage/gear-bags/">gear bags</a> section. This listing was once a pre-order item, so check current availability before you plan around it.',
+            2 => 'A smaller bag is also easier to carry up a ladder or hang on a branch stub at the base of the tree, so your kit stays off wet ground while you set up. Look for a bag that opens wide enough to see what is inside at a glance.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Keeping gear in good shape',
+          'p' => 
+          array (
+            0 => 'The real job of a gear bag is to keep life-support gear away from fuel, bar oil, battery acid and sharp tools in the truck. Pack soft goods so they are not crushed under hardware, and never store a wet rope or harness zipped in a bag for days.',
+            1 => 'Empty the bag regularly, shake out grit and sawdust, and let it dry in the shade. Inspect your gear when you unpack it, not just when you climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the RKS 30 big enough for a climbing rope?',
+          'a' => 'It may hold a short line with a small hardware kit. For long ropes, use a dedicated rope bag.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is it still a pre-order item?',
+          'a' => 'Availability changes. Use the Check price button to see current stock.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-2.webp',
+        'sm' => '/assets/photos/case-bag-2-sm.webp',
+        'title' => 'REL-NL-WK7-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50326073447',
+      ),
+    ),
+    '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/' => 
+    array (
+      'path' => '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/',
+      'category' => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/',
+      'name' => 'KM III Max Black Lanyard (Without Hardware)',
+      'brand' => 'pmi',
+      'brand_name' => 'PMI',
+      'kind' => 'lanyard',
+      'price' => 69,
+      'keyword' => 'km iii max black lanyard',
+      'title' => 'KM III Max Black Lanyard Without Hardware',
+      'h1' => 'KM III Max Black Lanyard (Without Hardware)',
+      'meta' => 'The KM III Max black lanyard without hardware is a rope-only positioning lanyard for climbers who fit their own adjuster and snaps. Setup and inspection notes.',
+      'tagline' => 'A rope-only KM III Max lanyard for climbers who choose their own hardware.',
+      'summary' => 'The KM III Max black lanyard without hardware is a length of KM III Max static kernmantle rope made up as a positioning lanyard, supplied without snaps or an adjuster. It is for climbers who already own the hardware they like, or who are replacing a worn lanyard rope on an existing 2-in-1 setup.',
+      'highlights' => 
+      array (
+        0 => 'KM III Max static kernmantle rope',
+        1 => 'Black colorway',
+        2 => 'Supplied rope only, no hardware',
+        3 => 'Good for rebuilding a worn 2-in-1 lanyard',
+        4 => 'Firm, easy-to-grip rope for positioning',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Rope',
+          1 => 'KM III Max',
+        ),
+        1 => 
+        array (
+          0 => 'Color',
+          1 => 'Black',
+        ),
+        2 => 
+        array (
+          0 => 'Construction',
+          1 => 'Static kernmantle',
+        ),
+        3 => 
+        array (
+          0 => 'Hardware',
+          1 => 'Not included',
+        ),
+        4 => 
+        array (
+          0 => 'Length',
+          1 => 'See listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why buy a lanyard without hardware',
+          'p' => 
+          array (
+            0 => 'Lanyard rope wears out long before a good adjuster or snap does. Buying the rope alone lets you rebuild a 2-in-1 or adjustable lanyard around hardware you already trust, and it lets you choose your own adjuster, carabiners or snaps if the kit options do not suit how you climb.',
+            1 => 'The KM III Max rope is a firm static kernmantle line that holds up well against bark and is easy to grip. If you would rather buy it ready to go, see the complete setups in our <a href="/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/">rope lanyards</a>.',
+            2 => 'The black colorway also makes it easy to tell your positioning lanyard apart from a climbing line or a split tail at a glance, which helps when the saddle is crowded.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setting it up safely',
+          'p' => 
+          array (
+            0 => 'Make sure the rope diameter suits the adjuster or hitch you plan to use, and that every connector is rated for life support. Terminations must be made by a qualified person or follow the manufacturer\'s instructions exactly. If you are unsure, buy a complete lanyard instead.',
+            1 => 'Inspect the rope before each climb for cuts, glazed or stiff spots, and core damage, and retire it if the cover is cut through or it has been chainsaw-nicked. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What hardware do I need to make it usable?',
+          'a' => 'Typically an adjuster or friction hitch setup and rated connectors at each end. Follow the hardware maker\'s instructions for compatibility.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is KM III Max the same rope as standard KM III?',
+          'a' => 'They are related ropes in the same family. Check the listing for diameter before matching hardware.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
+    ),
+    '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/' => 
+    array (
+      'path' => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+      'category' => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/',
+      'name' => '1/2" Wire Core Flipline Kit',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'lanyard',
+      'price' => 139,
+      'keyword' => '1/2 wire core flipline kit',
+      'title' => '1/2 in Wire Core Flipline Kit for Spur Climbing',
+      'h1' => '1/2" Wire Core Flipline Kit',
+      'meta' => 'The 1/2 in wire core flipline kit is a ready-to-use positioning setup for spur climbing and removals, with a steel core for cut resistance. Kit notes, checks.',
+      'tagline' => 'A ready-to-climb 1/2 inch wire core flipline with adjuster and hardware.',
+      'summary' => 'This 1/2 wire core flipline kit is a single-leg positioning lanyard built on half-inch rope with a steel core, supplied as a kit with the adjuster and hardware. It is the classic setup for spur climbing on removals, where the saw works close to the lanyard.',
+      'highlights' => 
+      array (
+        0 => '1/2 inch rope with steel wire core',
+        1 => 'Single-leg flipline, supplied as a kit',
+        2 => 'Adjuster and hardware included (see listing)',
+        3 => 'Cut resistance for removal work',
+        4 => 'Solid grip in the adjuster',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '1/2 in',
+        ),
+        1 => 
+        array (
+          0 => 'Core',
+          1 => 'Steel wire core',
+        ),
+        2 => 
+        array (
+          0 => 'Type',
+          1 => 'Single-leg flipline kit',
+        ),
+        3 => 
+        array (
+          0 => 'Includes',
+          1 => 'Flipline, adjuster and hardware (see listing)',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Single-leg kit vs. 2-in-1',
+          'p' => 
+          array (
+            0 => 'Do not confuse it with the 2-in-1 wire core kit, which has two legs so you can stay tied in while passing limbs. This is the single-leg version: one wire core flipline with its adjuster and hardware. It is simpler, lighter on the saddle, and a common choice for straight spar work or as a second lanyard alongside a rope one.',
+            1 => 'If you already own an adjuster, the flipline alone is also sold separately. Compare complete setups in our <a href="/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/">lanyard kits</a>.',
+            2 => 'A kit saves you from piecing together an adjuster and connectors that may not suit each other. Check the listing for the exact hardware and length before you order, and make sure the adjuster is one you are trained to use.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'What the wire core does and does not do',
+          'p' => 
+          array (
+            0 => 'The steel core adds cut resistance, which helps when you are cutting a top or face close to your lanyard. It is not cut-proof. A running chain can still cut through, so keep the saw clear of the lanyard and make sure the bar is never near it on a cut.',
+            1 => 'Wire core lanyards must never be used near energized lines. Inspect the cover and core for kinks, broken wires, cuts and worn eyes before every climb. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is a wire core flipline chainsaw-proof?',
+          'a' => 'No. The steel core resists cuts, but a chainsaw can still sever it. Keep the saw away from your lanyard.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it near power lines?',
+          'a' => 'No. Wire core lanyards conduct electricity and must never be used near energized conductors.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'felling',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-4.webp',
+        'sm' => '/assets/photos/lanyard-4-sm.webp',
+        'title' => 'Wood pole rescue',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16974622426',
+      ),
+    ),
+    '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/' => 
+    array (
+      'path' => '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/',
+      'category' => '/safety/traffic-control/',
+      'name' => 'Spring-Loaded Stand for Roll-Up Traffic Signs',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'traffic',
+      'price' => 99,
+      'keyword' => 'spring-loaded sign stand',
+      'title' => 'Spring-Loaded Sign Stand for Roll-Up Traffic Signs',
+      'h1' => 'Spring-Loaded Stand for Roll-Up Traffic Signs',
+      'meta' => 'A spring-loaded sign stand holds roll-up traffic signs upright in wind on roadside tree jobs. How it works, setup tips, and how it fits into your work zone kit.',
+      'tagline' => 'A folding, spring-loaded stand that keeps roll-up work zone signs upright.',
+      'summary' => 'A spring-loaded sign stand holds a roll-up traffic sign upright on a roadside tree job, and the springs let the sign flex in gusts and passing traffic instead of blowing over. It folds flat so it rides in the truck with the signs.',
+      'highlights' => 
+      array (
+        0 => 'Holds roll-up work zone signs',
+        1 => 'Springs let the sign flex in wind',
+        2 => 'Folding legs for compact storage',
+        3 => 'Sets up quickly on pavement or shoulder',
+        4 => 'Pairs with standard roll-up signs',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Spring-loaded sign stand',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Roll-up traffic signs',
+        ),
+        2 => 
+        array (
+          0 => 'Storage',
+          1 => 'Folds flat',
+        ),
+        3 => 
+        array (
+          0 => 'Sign compatibility',
+          1 => 'See listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why the springs matter',
+          'p' => 
+          array (
+            0 => 'A rigid stand catches every gust and every truck that passes close, and a sign lying in the road is no help to anyone. Spring-loaded stands let the sign tip back and return on its own, so it stays readable through a windy afternoon. Most have adjustable legs to sit level on a crowned road or soft shoulder.',
+            1 => 'Pair the stand with signs and cones from our <a href="/safety/traffic-control/">traffic control</a> section to build a complete roadside kit.',
+            2 => 'Look for a stand whose leg spread and sign clamp suit the size of roll-up signs your crew carries. A stand that is too small for the sign blows over in wind, no matter how good the springs are. Weighted bases or sandbags help on very windy days.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setting up a work zone',
+          'p' => 
+          array (
+            0 => 'Tree work beside a road needs advance warning so drivers slow down before they reach the chipper and the drop zone. Place signs far enough ahead for the road speed, follow the MUTCD and any local or permit requirements, and use trained flaggers where traffic must be stopped.',
+            1 => 'Check the stand\'s springs, pins and leg locks before each job, and keep the sign face clean so it stays reflective. Take signs down as soon as the work zone is cleared so drivers trust them when they see them.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does it come with a sign?',
+          'a' => 'The stand is sold on its own. Check the listing for which roll-up sign sizes it accepts.',
+        ),
+        1 => 
+        array (
+          'q' => 'How far ahead should I place the sign?',
+          'a' => 'It depends on road speed and conditions. Follow the MUTCD, your permit, and your company\'s traffic control plan.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/traffic-2.webp',
+        'sm' => '/assets/photos/traffic-2-sm.webp',
+        'title' => 'Traffic cone in the foreground and road works in the background',
+        'creator' => 'Ivan Radic',
+        'creator_url' => 'https://www.flickr.com/photos/26344495@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/26344495@N05/47958765853',
+      ),
+    ),
+    '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/' => 
+    array (
+      'path' => '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/',
+      'category' => '/rope/climbing-rope/24-strand-climbing-rope/',
+      'name' => 'All Gear Copperhead 11.7mm Climbing Rope, 200 ft',
+      'brand' => 'all-gear',
+      'brand_name' => 'All Gear',
+      'kind' => 'rope',
+      'price' => 249,
+      'keyword' => 'all gear copperhead climbing rope',
+      'title' => 'All Gear Copperhead 11.7mm Climbing Rope, 200 ft',
+      'h1' => 'All Gear Copperhead 11.7mm Climbing Rope (200 ft)',
+      'meta' => 'All Gear Copperhead climbing rope in 11.7mm x 200 ft is a 24-strand arborist line for MRS and SRS. Diameter, length, device fit and inspection notes.',
+      'tagline' => 'An 11.7 mm, 24-strand arborist climbing line in a 200 foot length.',
+      'summary' => 'All Gear Copperhead climbing rope is an 11.7 mm 24-strand arborist climbing line, and this 200 foot length suits tall trees and climbers who want rope to spare for SRS. The 24-strand cover gives a smooth, round line that works with friction hitches and mechanical devices.',
+      'highlights' => 
+      array (
+        0 => '11.7 mm 24-strand arborist climbing line',
+        1 => '200 foot length for tall trees',
+        2 => 'Round, firm cover for hitches and devices',
+        3 => 'Works for MRS and SRS',
+        4 => 'Strength and standard info on the tag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '11.7 mm',
+        ),
+        1 => 
+        array (
+          0 => 'Length',
+          1 => '200 ft',
+        ),
+        2 => 
+        array (
+          0 => 'Construction',
+          1 => '24-strand',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'All Gear',
+        ),
+        4 => 
+        array (
+          0 => 'Use',
+          1 => 'Arborist climbing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why 200 feet',
+          'p' => 
+          array (
+            0 => 'A 150 foot line covers most trees in MRS, but SRS uses rope from the anchor to the ground, so tall trees and basal anchors eat length fast. A 200 foot Copperhead gives you room for a high tie-in, a long redirect, or a canopy anchor on a big tree, with enough tail left to stay safe. You can always cut a damaged section and still have a usable line.',
+            1 => 'Shorter lengths and other 24-strand lines are in our <a href="/rope/climbing-rope/24-strand-climbing-rope/">24-strand climbing rope</a> section.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Device fit and care',
+          'p' => 
+          array (
+            0 => 'At 11.7 mm, Copperhead sits in the range most arborist devices and rope wrenches accept, but always check the device maker\'s rope list before pairing them. Test your hitch or device low to the ground on a new rope, because a fresh cover can run differently once it breaks in.',
+            1 => 'Keep the rope in a bag away from fuel, bar oil and battery acid, wash it as All Gear recommends, and inspect it end to end for cuts, glazing, and core shots. Retire it if in doubt. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+            2 => 'Mark the ends with the purchase date and keep a simple log of use, so you can track its life and know when it was last inspected.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is Copperhead good for SRS?',
+          'a' => 'Yes, at 11.7 mm it suits many SRS devices. Check the device maker\'s approved rope list first.',
+        ),
+        1 => 
+        array (
+          'q' => 'Should I buy 150 ft or 200 ft?',
+          'a' => 'Choose 200 ft for tall trees, SRS with basal anchors, or if you want length to spare. 150 ft suits most MRS climbing.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/all-gear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
+    ),
+    '/other-gear/soft-anchor-webbing-sling/' => 
+    array (
+      'path' => '/other-gear/soft-anchor-webbing-sling/',
+      'category' => '/rigging/rigging-slings/',
+      'name' => 'Soft Anchor Webbing Sling',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 39,
+      'keyword' => 'soft anchor webbing sling',
+      'title' => 'Soft Anchor Webbing Sling for Tree Anchors',
+      'h1' => 'Soft Anchor Webbing Sling',
+      'meta' => 'A soft anchor webbing sling wraps a trunk or limb to make an anchor for a lowering device, block or redirect. Webbing vs. rope slings, uses and inspection tips.',
+      'tagline' => 'A flat webbing sling for building soft anchors around stems and limbs.',
+      'summary' => 'A soft anchor webbing sling wraps around a trunk or limb to give you an anchor point for a block, pulley or lowering device without metal on the bark. The flat webbing spreads the load and packs down small.',
+      'highlights' => 
+      array (
+        0 => 'Flat webbing spreads load on the bark',
+        1 => 'Makes anchors for blocks, pulleys and devices',
+        2 => 'Light and packs small',
+        3 => 'Rating on the sewn tag',
+        4 => 'Webbing alternative to rope soft anchor slings',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Webbing anchor sling',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Webbing',
+        ),
+        2 => 
+        array (
+          0 => 'Length and rating',
+          1 => 'See tag',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Webbing vs. rope soft anchors',
+          'p' => 
+          array (
+            0 => 'Soft anchor slings also come in rope, which is a different product. The webbing version is flatter and lighter, lies smoothly against the bark, and is easy to stuff in a pocket or bag. Rope slings hold up better to abrasion and are easier to adjust on the stem, so many crews carry both.',
+            1 => 'Use a webbing sling to anchor a lowering device at the base, hang a pulley for a redirect, or set a block on a stem. Rope and ring options are in our <a href="/rigging/rigging-slings/">rigging slings</a> section.',
+            2 => 'Webbing slings are also handy for short anchors around a branch union, as a basket for a pulley in the canopy, or as a quick strop when you need to hang a bag of gear. Carry one or two in different lengths so you can pick the right size for the stem.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Rating and wear',
+          'p' => 
+          array (
+            0 => 'Check the tag for the sling\'s rated strength and remember that the hitch you use changes it: a choker or basket hitch rates differently from a straight pull. Keep loads well under the rating, especially in rigging where loads are dynamic.',
+            1 => 'Webbing cuts and abrades more easily than rope, so pad it over sharp bark edges and keep it away from the saw. Retire it if it is cut, frayed, melted, stiff with chemicals, or if the tag is gone. If you use it for a climbing anchor, it must be rated for life support. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it for a climbing anchor?',
+          'a' => 'Only if the sling is rated for life support and you are trained to build that anchor. Check the tag and the maker\'s instructions.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is webbing as durable as a rope sling?',
+          'a' => 'Webbing is lighter but less resistant to cuts and abrasion. Pad it on rough bark and inspect it often.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
+    ),
+    '/safety/first-aid/blood-stopper-kit/' => 
+    array (
+      'path' => '/safety/first-aid/blood-stopper-kit/',
+      'category' => '/safety/first-aid/',
+      'name' => 'Buckingham Blood Stopper Kit',
+      'brand' => 'buckingham',
+      'brand_name' => 'Buckingham',
+      'kind' => 'first-aid',
+      'price' => 45,
+      'keyword' => 'blood stopper kit',
+      'title' => 'Blood Stopper Kit for Chainsaw Cuts on the Job',
+      'h1' => 'Blood Stopper Kit',
+      'meta' => 'A blood stopper kit puts bleeding control supplies on your saddle or belt where you can reach them fast after a chainsaw cut. What it is for and how to wear it.',
+      'tagline' => 'A compact bleeding control kit that rides on your saddle or belt.',
+      'summary' => 'A blood stopper kit puts bleeding control supplies on your body, in a pouch that clips to a climbing saddle or work belt. Chainsaw cuts bleed fast, and a kit within reach can save the minutes it takes to get to the truck.',
+      'highlights' => 
+      array (
+        0 => 'Compact bleeding control pouch',
+        1 => 'Rides on a saddle or belt',
+        2 => 'Reachable with one hand',
+        3 => 'For climbers and ground workers',
+        4 => 'Pairs with first aid training',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Bleeding control kit with pouch',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Buckingham',
+        ),
+        2 => 
+        array (
+          0 => 'Contents',
+          1 => 'See listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why carry it on your body',
+          'p' => 
+          array (
+            0 => 'A deep cut from a chainsaw or hand saw can bleed dangerously in minutes. A kit in the truck is not much use to a climber 60 feet up or a ground worker at the far end of a lot. Carrying the kit on your saddle or belt means you, or the person next to you, can start bleeding control right away.',
+            1 => 'Buckingham also sells the kit in green, which is the same idea in another color. See trauma kits and larger first aid supplies in our <a href="/safety/first-aid/">first aid</a> section.',
+            2 => 'Ground workers benefit too. The person running the chipper or bucking on the ground is just as exposed to saw cuts, and a kit on their belt is faster than running to the truck.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Training and upkeep',
+          'p' => 
+          array (
+            0 => 'Supplies only help if someone knows how to use them. Make sure everyone on the crew has current first aid training that covers severe bleeding, and that the crew has a plan for aerial rescue and calling for help.',
+            1 => 'Check the kit regularly. Replace anything that is used, wet, torn, or past its date, and make sure the pouch closure still holds. Keep the kit in the same place on every saddle so anyone can find it fast.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is this a replacement for a full first aid kit?',
+          'a' => 'No. It is for immediate bleeding control on your body. Keep a full first aid kit in the truck too.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I need training to use it?',
+          'a' => 'Yes. Get first aid training that covers severe bleeding so you can use the supplies correctly.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+      ),
+      'level' => 'all',
+      'brand_path' => '/buckingham/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/first-aid-1.webp',
+        'sm' => '/assets/photos/first-aid-1-sm.webp',
+        'title' => 'First aid kit',
+        'creator' => 'Marcin Wichary',
+        'creator_url' => 'https://www.flickr.com/photos/8399025@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8399025@N07/2615558474',
+      ),
+    ),
+    '/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/' => 
+    array (
+      'path' => '/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/',
+      'category' => '/cutting-and-pruning/blades/',
+      'name' => 'Silky Gomboy 210mm Medium Teeth Replacement Blade',
+      'brand' => 'silky',
+      'brand_name' => 'Silky',
+      'kind' => 'hand-saw',
+      'price' => 29,
+      'keyword' => 'silky gomboy 210mm',
+      'title' => 'Silky Gomboy 210mm Medium Teeth Replacement Blade',
+      'h1' => 'Silky Gomboy 210mm Medium Teeth Blade (Blade Only)',
+      'meta' => 'The Silky Gomboy 210mm medium teeth replacement blade fits the Gomboy 210 folding saw. Tooth choice, when to swap the blade, and how to fit it.',
+      'tagline' => 'A 210 mm medium-tooth replacement blade for the Silky Gomboy folding saw.',
+      'summary' => 'The Silky Gomboy 210mm medium teeth blade is a replacement blade for the Gomboy 210 folding saw, sold without the handle. Medium teeth are the all-round choice for pruning live wood in small to mid-size limbs.',
+      'highlights' => 
+      array (
+        0 => 'Fits the Silky Gomboy 210 folding saw',
+        1 => '210 mm blade length',
+        2 => 'Medium teeth for general pruning',
+        3 => 'Blade only, no handle',
+        4 => 'Swap a dull blade instead of buying a new saw',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Blade length',
+          1 => '210 mm',
+        ),
+        1 => 
+        array (
+          0 => 'Teeth',
+          1 => 'Medium',
+        ),
+        2 => 
+        array (
+          0 => 'Fits',
+          1 => 'Silky Gomboy 210',
+        ),
+        3 => 
+        array (
+          0 => 'Sold as',
+          1 => 'Blade only',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Choosing medium teeth',
+          'p' => 
+          array (
+            0 => 'Silky makes Gomboy blades with different tooth sizes. Medium teeth cut a bit slower than large teeth but leave a cleaner face and feel smoother in green wood, which is why many climbers keep them on a pruning saw. Large teeth suit faster cutting in bigger limbs, and fine teeth suit small, precise cuts.',
+            1 => 'Make sure the blade length matches your handle. A 210 mm blade fits only the Gomboy 210 handle. Other Silky blades are in our <a href="/cutting-and-pruning/blades/">replacement blades</a> section.',
+            2 => 'Keep a spare blade in the truck. When a blade gets bent on a hidden nail or dull from sandy bark in the middle of a job, a two-minute swap gets you back to work without a trip to the store.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'When and how to replace it',
+          'p' => 
+          array (
+            0 => 'Silky blades use hardened, impulse-hardened teeth that are not designed to be filed, so when the saw starts to push instead of pull through the cut, or a few teeth are bent or missing, it is time for a new blade. Swapping the blade costs far less than a new saw.',
+            1 => 'Fold the saw, remove the pivot and lock screws, fit the new blade, and tighten the screws so the blade locks firmly open with no play. Replace worn screws if needed. Handle the blade with gloves, because new Silky teeth are very sharp.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will this fit a Gomboy 240 or 300?',
+          'a' => 'No. Each Gomboy size has its own blade. This one fits the 210 mm handle only.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I sharpen the teeth?',
+          'a' => 'Silky teeth are impulse-hardened and not meant to be filed. Replace the blade when it gets dull.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'pruning',
+        1 => 'maintenance',
+      ),
+      'level' => 'all',
+      'brand_path' => '/silky/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-1.webp',
+        'sm' => '/assets/photos/hand-saw-1-sm.webp',
+        'title' => 'THOR\'s hammer, lopper, hatchet and pruning saw IMAG0257',
+        'creator' => 'el cajon yacht club',
+        'creator_url' => 'https://www.flickr.com/photos/60944636@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/60944636@N00/12141006956',
+      ),
+    ),
+    '/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/' => 
+    array (
+      'path' => '/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/',
+      'category' => '/cutting-and-pruning/hand-saws-and-scabbards/',
+      'name' => 'Fanno 13" Fixed Blade Orchard Saw',
+      'brand' => 'fanno',
+      'brand_name' => 'Fanno',
+      'kind' => 'hand-saw',
+      'price' => 45,
+      'keyword' => 'fixed blade orchard saw',
+      'title' => 'Fanno 13 in Fixed Blade Orchard Saw for Pruning',
+      'h1' => 'Fanno 13" Fixed Blade Orchard Saw',
+      'meta' => 'The Fanno 13 in fixed blade orchard saw is a pull-stroke pruning saw for orchards, landscapes and climbers. Blade length, scabbard use, and care tips.',
+      'tagline' => 'A 13 inch fixed-blade pruning saw for orchard and tree work.',
+      'summary' => 'The Fanno 13 inch fixed blade orchard saw is a straightforward pull-stroke pruning saw with a 13 inch blade fixed to the handle. It is built for steady cutting in fruit trees, ornamentals and climbing work where a folding saw is too small.',
+      'highlights' => 
+      array (
+        0 => '13 inch fixed blade',
+        1 => 'Pull-stroke cutting',
+        2 => 'Rides in a scabbard on the belt or saddle',
+        3 => 'Suits orchard and landscape pruning',
+        4 => 'Simple, durable design',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Blade length',
+          1 => '13 in',
+        ),
+        1 => 
+        array (
+          0 => 'Blade type',
+          1 => 'Fixed',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Fanno',
+        ),
+        3 => 
+        array (
+          0 => 'Cutting stroke',
+          1 => 'Pull',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Fixed blade vs. folding',
+          'p' => 
+          array (
+            0 => 'A folding saw is handy in a pocket, but a fixed blade saw is stiffer, quicker to draw from a scabbard, and handles longer cuts without flexing at the pivot. At 13 inches, this Fanno has enough reach for limbs that are past folding saw size but not big enough to justify a chainsaw.',
+            1 => 'It needs a scabbard, so plan on one if you do not already have one that fits. Scabbards and other pruning saws are in our <a href="/cutting-and-pruning/hand-saws-and-scabbards/">hand saws and scabbards</a> section.',
+            2 => 'Fanno saws have a following among orchard pruners and arborists because they are simple and well balanced. A fixed blade also has fewer parts to wear or loosen, which suits a saw that gets used hard every day.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Pruning and care',
+          'p' => 
+          array (
+            0 => 'Let the pull stroke do the work and keep the blade straight in the cut so it does not bind. Make a small undercut on heavier limbs to prevent bark tearing, then finish outside the branch collar.',
+            1 => 'Wipe sap off the blade after use and keep it lightly oiled to prevent rust. When the teeth get dull or damaged, replace the blade rather than forcing the cut. When climbing, keep the saw in its scabbard and tethered or secured, and keep your hands and lanyard clear of the cut.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is a 13 inch saw too big for climbing?',
+          'a' => 'Many climbers carry a 13 inch fixed saw on their saddle. It is a common middle size between small folders and long pruning saws.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it come with a scabbard?',
+          'a' => 'Check the listing. Many fixed blade saws are sold with or without a scabbard.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'pruning',
+        1 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/fanno/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/hand-saw-2.webp',
+        'sm' => '/assets/photos/hand-saw-2-sm.webp',
+        'title' => 'The stars must be in a very special position...',
+        'creator' => 'storebukkebruse',
+        'creator_url' => 'https://www.flickr.com/photos/8536261@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/8536261@N07/8541923262',
+      ),
+    ),
+    '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/' => 
+    array (
+      'path' => '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/',
+      'category' => '/climbing/saddles-and-harnesses/',
+      'name' => 'Weaver WLC-160 Saddle with 2" Nylon Leg Straps',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'saddle',
+      'price' => 189,
+      'keyword' => 'weaver wlc-160 saddle',
+      'title' => 'Weaver WLC-160 Saddle with 2 in Nylon Leg Straps',
+      'h1' => 'Weaver WLC-160 Saddle with 2" Nylon Leg Straps',
+      'meta' => 'The Weaver WLC-160 saddle with 2 in nylon leg straps is a basic tree climbing saddle for new climbers and spur work. Fit, leg strap style and inspection tips.',
+      'tagline' => 'A basic Weaver tree climbing saddle fitted with 2 inch nylon leg straps.',
+      'summary' => 'The Weaver WLC-160 saddle with 2 inch nylon leg straps is a basic tree climbing saddle, set up here with nylon webbing leg straps instead of padded leg loops. It is a simple, affordable saddle for new climbers, occasional climbers and spur work.',
+      'highlights' => 
+      array (
+        0 => 'Basic Weaver climbing saddle',
+        1 => '2 inch nylon leg straps',
+        2 => 'Simple, affordable design',
+        3 => 'Suits spur climbing and occasional use',
+        4 => 'Sized to fit, check the size chart',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Basic climbing saddle',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+        2 => 
+        array (
+          0 => 'Model',
+          1 => 'WLC-160',
+        ),
+        3 => 
+        array (
+          0 => 'Leg straps',
+          1 => '2 in nylon',
+        ),
+        4 => 
+        array (
+          0 => 'Sizing',
+          1 => 'See Weaver\'s size chart',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What the leg straps change',
+          'p' => 
+          array (
+            0 => 'The WLC-160 is offered with different leg strap options. This version uses 2 inch nylon straps, which are light, simple and easy to adjust. They are not as plush as padded leg loops, so climbers who spend long hours hanging in the saddle often prefer a padded setup, while spur climbers and occasional users find the nylon straps perfectly fine.',
+            1 => 'If you want more padding, more attachment points or a modern bridge, compare it with other options in our <a href="/climbing/saddles-and-harnesses/">saddles and harnesses</a> section.',
+            2 => 'It also makes a good backup saddle to keep in the truck for a second climber or a training day. Because it is simple, there are fewer parts to check and adjust. Spare leg straps and small parts are easy to find when they wear out.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and inspection',
+          'p' => 
+          array (
+            0 => 'Size the saddle to your waist, not your pant size, and adjust it so it sits snug on your hips and cannot slide over them when you lean back. Set the leg straps so they support you without cutting in.',
+            1 => 'Inspect the saddle before every climb for cuts, abrasion, worn stitching, damaged D-rings and buckles that do not lock. Retire it after a significant fall or chemical exposure. Saddles are life-support gear: use must follow ANSI Z133, Weaver\'s instructions, and your training.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the WLC-160 a good first saddle?',
+          'a' => 'It is a simple, affordable saddle that suits new and occasional climbers. Full-time climbers often move to a more padded saddle later.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I pick the size?',
+          'a' => 'Measure your waist where the saddle will sit and use Weaver\'s size chart.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'beginner',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-6.webp',
+        'sm' => '/assets/photos/saddle-6-sm.webp',
+        'title' => '160320-F-QP401-181',
+        'creator' => 'DoD News Photos',
+        'creator_url' => 'https://www.flickr.com/photos/127934495@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/127934495@N07/25354925433',
+      ),
+    ),
+    '/hardware/notch-ce-quickie/' => 
+    array (
+      'path' => '/hardware/notch-ce-quickie/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/hardware/',
+      'name' => 'Notch CE Quickie',
+      'brand' => 'notch-equipment',
+      'brand_name' => 'Notch Equipment',
+      'kind' => 'carabiner',
+      'price' => 32,
+      'keyword' => 'notch ce quickie',
+      'title' => 'Notch CE Quickie Connector for Climbing Setups',
+      'h1' => 'Notch CE Quickie',
+      'meta' => 'The Notch CE Quickie is a compact connector for low-profile links in a tree climbing setup. How it differs from the V3 Quickie and where climbers use it.',
+      'tagline' => 'A compact Notch connector for low-profile links in a climbing setup.',
+      'summary' => 'The Notch CE Quickie is a compact connector for making quick, low-profile links in a tree climbing setup, in the CE-marked version named in the product title. Climbers use it where a full carabiner is bulky and they want a link that stays in place.',
+      'highlights' => 
+      array (
+        0 => 'Compact, low-profile connector',
+        1 => 'CE version of the Notch Quickie',
+        2 => 'Stays in place where carabiners flop around',
+        3 => 'Small enough to leave rigged',
+        4 => 'Ratings marked on the part',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Connector hardware',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Notch Equipment',
+        ),
+        2 => 
+        array (
+          0 => 'Version',
+          1 => 'CE',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'Marked on the part',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'CE Quickie vs. V3',
+          'p' => 
+          array (
+            0 => 'Notch has made more than one version of the Quickie, including the V3. This is the CE version. Before you replace one in an existing setup, check the markings and dimensions on the part you have, since versions can differ in size, gate design and markings.',
+            1 => 'Quickies are popular for semi-permanent links such as attaching a device or pulley to a bridge, where you do not unclip often. Other small connectors are in our <a href="/climbing/climbing-gear/carabiners-and-hardware/hardware/">carabiners and hardware</a> section.',
+            2 => 'Because it is compact, it also helps keep a device close to the bridge, which can make a system feel tighter and more responsive. Plan where it goes in your setup before you close it, so you are not opening it again on the next climb.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Using it correctly',
+          'p' => 
+          array (
+            0 => 'A quick-link style connector is only full strength when it is closed and tightened as the maker directs, so treat it as a semi-permanent link, not something to open and close all day. Load it along its main axis and keep it from being cross-loaded or levered against a device.',
+            1 => 'Inspect it before each climb for cracks, grooves, burrs and a closure that will not seat fully, and retire it after a hard drop. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it instead of a carabiner everywhere?',
+          'a' => 'No. It suits semi-permanent links. Use locking carabiners where you clip and unclip often.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is the CE version different from the V3?',
+          'a' => 'They are different versions of the Quickie. Check the markings and Notch\'s information before swapping one for the other.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
+    ),
+    '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/' => 
+    array (
+      'path' => '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/',
+      'category' => '/jobsite/stump-grinding/',
+      'name' => 'Greenteeth 900 Series Pocket (Straight)',
+      'brand' => 'green-manufacturing',
+      'brand_name' => 'Green Manufacturing',
+      'kind' => 'parts',
+      'price' => 29,
+      'keyword' => 'greenteeth 900 series',
+      'title' => 'Greenteeth 900 Series Straight Pocket for Stump Grinders',
+      'h1' => 'Greenteeth 900 Series Pocket (Straight)',
+      'meta' => 'The Greenteeth 900 Series straight pocket is a replacement tooth pocket for 900 Series cutter wheels. When to replace pockets and how to keep them tight.',
+      'tagline' => 'A straight replacement pocket for Greenteeth 900 Series cutter wheels.',
+      'summary' => 'The Greenteeth 900 Series straight pocket is a replacement pocket for stump grinder cutter wheels set up with the 900 Series system. The pocket holds the tooth to the wheel, so a worn or damaged pocket has to be replaced to keep the grinder cutting cleanly.',
+      'highlights' => 
+      array (
+        0 => 'Fits Greenteeth 900 Series wheels',
+        1 => 'Straight pocket style',
+        2 => 'Replaces worn or damaged pockets',
+        3 => 'Keeps teeth seated and aligned',
+        4 => 'Sold as a single pocket',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'System',
+          1 => 'Greenteeth 900 Series',
+        ),
+        1 => 
+        array (
+          0 => 'Style',
+          1 => 'Straight pocket',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Stump grinder cutter wheels',
+        ),
+        3 => 
+        array (
+          0 => 'Sold as',
+          1 => 'Single pocket',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Match the series and pocket style',
+          'p' => 
+          array (
+            0 => 'Greenteeth makes several tooth systems, and a 700 Series pocket will not fit a 900 Series wheel. Check the series on your wheel and teeth before you order. Within a series, pockets come in straight and angled styles that set where each tooth sits across the cut, so replace a straight pocket with a straight pocket in the same position on the wheel.',
+            1 => 'Matching 900 Series teeth and other grinder parts are in our <a href="/jobsite/stump-grinding/">stump grinding</a> section.',
+            2 => 'Keep a few spare pockets and teeth in the truck along with the right wrench and bolts. Changing a damaged pocket on site saves a return trip and keeps the grinder cutting evenly, rather than running with a gap in the tooth pattern.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'When to replace a pocket',
+          'p' => 
+          array (
+            0 => 'Pockets take a beating from rocks, roots and soil. Replace one when it is cracked, worn thin, bent, or no longer holds the tooth tight. A loose pocket lets the tooth shift, which wears the wheel, causes vibration and can throw parts.',
+            1 => 'Shut the machine down, remove the key, and let the wheel stop before you work on it. Torque the bolts to the manufacturer\'s spec, check them again after the first few stumps, and always wear eye and face protection when grinding.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will a 900 Series pocket fit a 700 Series wheel?',
+          'a' => 'No. Each Greenteeth series uses its own pockets and teeth. Match the series on your wheel.',
+        ),
+        1 => 
+        array (
+          'q' => 'What is the difference between straight and angled pockets?',
+          'a' => 'They set the tooth at different positions across the cut. Replace a pocket with the same style in the same spot on the wheel.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'ground',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/green-manufacturing/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
+    ),
+    '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/' => 
+    array (
+      'path' => '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/',
+      'category' => '/rope/climbing-rope/16-strand-climbing-rope/',
+      'name' => 'Teufelberger Safety Blue Hi-Vee Climbing Rope',
+      'brand' => 'teufelberger',
+      'brand_name' => 'Teufelberger',
+      'kind' => 'rope',
+      'price' => 199,
+      'keyword' => 'safety blue hi-vee',
+      'title' => 'Teufelberger Safety Blue Hi-Vee Climbing Rope',
+      'h1' => 'Teufelberger Safety Blue Hi-Vee',
+      'meta' => 'Teufelberger Safety Blue Hi-Vee is a classic 16-strand arborist climbing rope with a hi-vis cover. Why climbers still pick it, hitch fit, and inspection advice.',
+      'tagline' => 'A classic high-visibility 16-strand climbing rope for moving-rope climbing.',
+      'summary' => 'Teufelberger Safety Blue Hi-Vee is a classic 16-strand arborist climbing rope with a high-visibility cover, originally from New England Ropes, now part of Teufelberger. It is a firm, durable line that has been a standard for moving-rope climbing with friction hitches for years.',
+      'highlights' => 
+      array (
+        0 => 'Classic 16-strand arborist climbing line',
+        1 => 'High-visibility cover',
+        2 => 'Firm, durable feel',
+        3 => 'Works well with traditional friction hitches',
+        4 => 'Sold in several lengths',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Construction',
+          1 => '16-strand',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '1/2 in',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Teufelberger (New England Ropes)',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'Arborist climbing',
+        ),
+        4 => 
+        array (
+          0 => 'Length',
+          1 => 'See listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why climbers still pick Hi-Vee',
+          'p' => 
+          array (
+            0 => 'Safety Blue Hi-Vee is a traditional 16-strand rope: firm, round and hard-wearing. It holds its shape in a friction hitch, resists bark abrasion, and stays visible on the ground and in the canopy. Climbers who learned on a 16-strand line often come back to it for moving-rope work.',
+            1 => 'Being 1/2 inch, it is thicker than many modern 11 to 12 mm lines, so it suits hitches and devices rated for that diameter. Compare it with other lines in our <a href="/rope/climbing-rope/16-strand-climbing-rope/">16-strand climbing rope</a> section.',
+            2 => 'The bright cover helps the ground crew track the climber\'s line in a dense canopy and keeps it easy to see on the ground near brush piles and the chipper.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Hitch cord pairing and care',
+          'p' => 
+          array (
+            0 => 'Pair the rope with a hitch cord the maker approves for that diameter and test the hitch low before climbing. A new rope runs stiffer and can feel different until the cover breaks in.',
+            1 => 'Keep it in a bag, away from fuel, bar oil and chemicals, and inspect it end to end before every climb for cuts, glazing, flat spots and pulled strands. Never use a climbing line for rigging. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is Safety Blue Hi-Vee good for SRS?',
+          'a' => 'It is mainly a moving-rope line. Check your SRS device maker\'s approved rope list before using it for SRS.',
+        ),
+        1 => 
+        array (
+          'q' => 'Who makes Safety Blue Hi-Vee?',
+          'a' => 'It was developed by New England Ropes, which is part of Teufelberger.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
+    ),
+    '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/' => 
+    array (
+      'path' => '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/',
+      'category' => '/rope/climbing-rope/24-strand-climbing-rope/',
+      'name' => 'Samson V-Licious Rockies 11.4mm Climbing Rope, 150 ft',
+      'brand' => 'samson-rope',
+      'brand_name' => 'Samson Rope',
+      'kind' => 'rope',
+      'price' => 229,
+      'keyword' => 'samson v-licious climbing rope',
+      'title' => 'Samson V-Licious Rockies 11.4mm Climbing Rope, 150 ft',
+      'h1' => 'Samson V-Licious Rockies 11.4mm (150 ft)',
+      'meta' => 'Samson V-Licious climbing rope in the Rockies color, 11.4mm x 150 ft, is a 24-strand arborist line for MRS and SRS. Diameter, device fit and inspection notes.',
+      'tagline' => 'An 11.4 mm, 24-strand Samson climbing line in the Rockies color, 150 ft.',
+      'summary' => 'Samson V-Licious climbing rope is a 24-strand arborist climbing line, and this listing is the Rockies colorway in 11.4 mm by 150 feet. The slimmer diameter keeps it light in the bag and smooth in many mechanical devices.',
+      'highlights' => 
+      array (
+        0 => '11.4 mm 24-strand climbing line',
+        1 => 'Rockies colorway',
+        2 => '150 foot length for most trees',
+        3 => 'Light and smooth in devices',
+        4 => 'Used for MRS and SRS',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '11.4 mm',
+        ),
+        1 => 
+        array (
+          0 => 'Length',
+          1 => '150 ft',
+        ),
+        2 => 
+        array (
+          0 => 'Construction',
+          1 => '24-strand',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Samson Rope',
+        ),
+        4 => 
+        array (
+          0 => 'Color',
+          1 => 'Rockies',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'The 11.4mm size and 150 foot length',
+          'p' => 
+          array (
+            0 => 'V-Licious comes in more than one diameter and color, so check the listing before you reorder. At 11.4 mm this is the slimmer version, which saves weight and runs smoothly through many rope wrenches and SRS devices. A slimmer line can feel grabbier in some friction hitches, so match your hitch cord to it.',
+            1 => '150 feet covers most trees climbed with a moving-rope system and many SRS climbs. If you work tall trees with basal anchors, look at 200 foot lengths in our <a href="/rope/climbing-rope/24-strand-climbing-rope/">24-strand climbing rope</a> section.',
+            2 => 'A bright, distinctive color also helps keep your climbing line separate from rigging ropes in the truck, and makes it easier to see in the canopy.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Pairing and inspection',
+          'p' => 
+          array (
+            0 => 'Always check that your device or rope wrench lists 11.4 mm in its approved rope range, and test the system low to the ground before you leave it. New rope can run differently once the cover breaks in.',
+            1 => 'Inspect the rope from end to end before each climb for cuts, glazing, soft or stiff spots and exposed core, and keep it bagged away from saws and chemicals. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is 11.4mm too thin for my device?',
+          'a' => 'Many arborist devices accept it, but some do not. Check the device maker\'s approved rope range.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does the color change the rope?',
+          'a' => 'No. Rockies is a colorway. Diameter and construction are what matter for performance.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    '/rigging-rope/9-16-mammoth-rigging-line/' => 
+    array (
+      'path' => '/rigging-rope/9-16-mammoth-rigging-line/',
+      'category' => '/rope/rigging-rope/',
+      'name' => '9/16" Mammoth Rigging Line',
+      'brand' => 'mammoth',
+      'brand_name' => 'Mammoth',
+      'kind' => 'rope',
+      'price' => 229,
+      'keyword' => 'mammoth rigging line',
+      'title' => '9/16 in Mammoth Rigging Line for Light Rigging',
+      'h1' => '9/16" Mammoth Rigging Line',
+      'meta' => 'Mammoth rigging line in 9/16 in is a lighter lowering rope for limb work, pruning drops and smaller removals. How it compares with 5/8 in and how to inspect it.',
+      'tagline' => 'A 9/16 inch Mammoth lowering line for lighter rigging and limb work.',
+      'summary' => 'Mammoth rigging line in 9/16 inch is a lighter lowering rope for limb removal, pruning drops and smaller trees. It is easier to carry and handle than 5/8 inch line, and it runs smoothly through compact blocks and pulleys.',
+      'highlights' => 
+      array (
+        0 => '9/16 inch diameter for lighter rigging',
+        1 => 'Lighter to carry than 5/8 inch line',
+        2 => 'Runs in compact blocks and pulleys',
+        3 => 'Good for limb drops and smaller removals',
+        4 => 'Rated strength on the tag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '9/16 in (about 14 mm)',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Mammoth',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Arborist rigging and lowering',
+        ),
+        3 => 
+        array (
+          0 => 'Length and strength',
+          1 => 'See listing and tag',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => '9/16 inch vs. 5/8 inch',
+          'p' => 
+          array (
+            0 => 'Mammoth also comes in 5/8 inch, which is the everyday removal size. The 9/16 line trades some strength for lighter weight and easier handling. Crews often carry it for pruning jobs where limbs need to be lowered over a roof or garden, and for smaller removals where the wood never gets heavy.',
+            1 => 'When the pieces get bigger, step up to 5/8 or 3/4 inch. Compare sizes in our <a href="/rope/rigging-rope/">rigging rope</a> section.',
+            2 => 'The lighter line is also easier on the ground worker running the lowering device, and it takes up less room in the truck. Some crews carry 9/16 inch as a second line for tag lines and pull lines alongside a heavier main rigging rope.',
+            3 => 'It flakes out cleanly into a bag and pays out quickly when the climber needs slack.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Working safely with lighter line',
+          'p' => 
+          array (
+            0 => 'A thinner rope reaches its limit sooner, and rigging loads spike when a piece is caught short. Keep loads well under the rated strength, let the lowering device run, and use a larger line if you are unsure about the weight.',
+            1 => 'Check that blocks, pulleys and lowering devices are sized for 9/16 inch rope. Inspect it before each job for cuts, glazing, crushed sections and pulled strands, and never use rigging line for climbing.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is 9/16 inch enough for removals?',
+          'a' => 'It suits smaller removals and limb lowering. Use 5/8 or 3/4 inch line for heavy wood.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will it fit my rigging block?',
+          'a' => 'Most arborist blocks accept 9/16 inch rope, but check the block\'s rope range before use.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
+    ),
+    '/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/' => 
+    array (
+      'path' => '/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/',
+      'category' => '/cutting-and-pruning/pole-saws-and-scabbards/',
+      'name' => 'Jameson Composite Lock Saw Head',
+      'brand' => 'jameson',
+      'brand_name' => 'Jameson',
+      'kind' => 'pole-saw',
+      'price' => 49,
+      'keyword' => 'jameson composite lock saw head',
+      'title' => 'Jameson Composite Lock Saw Head for Pole Saws',
+      'h1' => 'Jameson Composite Lock Saw Head',
+      'meta' => 'The Jameson composite lock saw head mounts a pruning saw blade to a Jameson pole with a locking connection. What fits, how it is used, and power line safety.',
+      'tagline' => 'A pole saw head with a locking fitting for Jameson pruning poles.',
+      'summary' => 'The Jameson composite lock saw head mounts a pruning saw blade to the end of a Jameson pole using a locking connection, so the head stays put while you cut overhead. It lets you swap or replace the saw end without buying a whole new pole.',
+      'highlights' => 
+      array (
+        0 => 'Fits Jameson poles with a locking connection',
+        1 => 'Composite head body',
+        2 => 'Holds a pole saw blade',
+        3 => 'Replace the head instead of the whole pole',
+        4 => 'For overhead pruning from the ground',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Pole saw head',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Jameson',
+        ),
+        2 => 
+        array (
+          0 => 'Connection',
+          1 => 'Locking (Jameson pole system)',
+        ),
+        3 => 
+        array (
+          0 => 'Blade',
+          1 => 'See listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Fit and connection',
+          'p' => 
+          array (
+            0 => 'Jameson poles use more than one connection style, so check that your poles use the matching lock fitting before ordering. A secure connection matters on a pole saw, because any wobble at the head turns into a sloppy cut and lost energy at the end of a long pole.',
+            1 => 'Blades, scabbards and full pole saw kits are in our <a href="/cutting-and-pruning/pole-saws-and-scabbards/">pole saws and scabbards</a> section.',
+            2 => 'Replacing a worn or broken head is far cheaper than replacing a full pole section, and keeping a spare head in the truck means a cracked fitting does not end the day. Make sure the replacement locks positively before you start cutting.',
+            3 => 'Clean sap off the head and blade after each use and store the pole so the head is not knocked around in the truck.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Cutting overhead safely',
+          'p' => 
+          array (
+            0 => 'Stand to the side of the limb so the piece cannot fall on you, wear a helmet and eye protection, and make an undercut on heavier limbs to stop the bark tearing. Let the saw\'s teeth do the work rather than forcing the stroke.',
+            1 => 'Fiberglass and composite poles are not automatically safe near power lines. Keep the minimum approach distance for your qualification, and leave line clearance work to qualified line-clearance arborists. Inspect the head and its fitting for cracks before each use and replace damaged parts.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will it fit any brand of pole?',
+          'a' => 'It is made for Jameson poles with the matching lock connection. Check your pole before buying.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it include a blade?',
+          'a' => 'Check the listing. Heads and blades are often sold separately.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'pruning',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/jameson/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-0.webp',
+        'sm' => '/assets/photos/pole-saw-0-sm.webp',
+        'title' => 'Project 365 #211: 300718 A Cut Above',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/42842605715',
+      ),
+    ),
+    '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/' => 
+    array (
+      'path' => '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/',
+      'category' => '/climbing/climbing-gear/micro-pulleys/',
+      'name' => 'ISC Phlotich Pulley',
+      'brand' => 'isc',
+      'brand_name' => 'ISC',
+      'kind' => 'pulley',
+      'price' => 55,
+      'keyword' => 'isc phlotich pulley',
+      'title' => 'ISC Phlotich Pulley for Hitch Tending and Haul Kits',
+      'h1' => 'ISC Phlotich Pulley',
+      'meta' => 'The ISC Phlotich pulley is a compact pulley for tending friction hitches and building small haul systems in a climbing kit. Where it fits and what to inspect.',
+      'tagline' => 'A compact ISC pulley for hitch tending and small haul systems.',
+      'summary' => 'The ISC Phlotich pulley is a compact pulley from ISC for tree climbing setups, sized for tending a friction hitch or building a small mechanical advantage system. Its small size keeps the hitch close to the pulley and the bridge tidy.',
+      'highlights' => 
+      array (
+        0 => 'Compact ISC pulley',
+        1 => 'Suits hitch tending on a climbing system',
+        2 => 'Useful in small haul and pull systems',
+        3 => 'Clips to a locking carabiner',
+        4 => 'Rope range and rating marked on the side plate',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Micro pulley',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'ISC',
+        ),
+        2 => 
+        array (
+          0 => 'Rope range and rating',
+          1 => 'Marked on the side plate',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a micro pulley fits',
+          'p' => 
+          array (
+            0 => 'On a moving-rope system, a small pulley below the friction hitch lets the hitch be tended as you advance, so you climb with one hand free and the hitch stays clean. It also gives you a sheave for a quick 3:1 to tension a line or lift a light load.',
+            1 => 'ISC makes several compact pulleys, so check the markings if you are matching an existing setup. More options are in our <a href="/climbing/climbing-gear/micro-pulleys/">micro pulleys</a> section.',
+            2 => 'Pair it with a hitch cord that suits your climbing line, and set the hitch so it sits snugly against the pulley without jamming. A well-tuned setup tends smoothly and is less tiring over a full day of climbing.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and use',
+          'p' => 
+          array (
+            0 => 'Before each climb, spin the sheave, look for cracks, burrs, or play at the axle, and make sure the side plates open and close as ISC intends. Clean sap and grit out of the sheave and keep it away from chemicals.',
+            1 => 'Use a locking carabiner, keep loads in line with the pulley, and stay within the rope range and rating on the side plate. Retire it after a hard drop. Life-support use must follow ANSI Z133, the manufacturer\'s instructions, and your training, and the gear should be inspected before every climb.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it for rigging?',
+          'a' => 'Only for light pulls and redirects within its rating. Use a rigging block for lowering wood.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will it fit my climbing rope?',
+          'a' => 'Check the rope range on the side plate against your line\'s diameter.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pulley-1.webp',
+        'sm' => '/assets/photos/pulley-1-sm.webp',
+        'title' => 'Block and tackle',
+        'creator' => 'quinet',
+        'creator_url' => 'https://www.flickr.com/photos/91994044@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/91994044@N00/14200854012',
+      ),
+    ),
+    '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/' => 
+    array (
+      'path' => '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/',
+      'category' => '/climbing/spurs/',
+      'name' => 'Weaver 26" Leather Upper Climber Straps',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'spur',
+      'price' => 32,
+      'keyword' => 'weaver leather upper climber straps',
+      'title' => 'Weaver Leather Upper Climber Straps, 26 Inch',
+      'h1' => 'Weaver 26" Leather Upper Climber Straps',
+      'meta' => 'Weaver leather upper climber straps in a 26 inch length hold your spurs snug below the knee. Fit tips, break-in advice and when to replace worn straps.',
+      'tagline' => 'Replacement 26 in leather upper straps that keep your spurs tight below the knee.',
+      'summary' => 'Weaver leather upper climber straps are the 26 inch straps that wrap the calf just below the knee and hold the top of your spur shanks against your leg. When the old pair cracks, stretches or the holes tear out, a fresh set brings back a solid, stable gaff.',
+      'highlights' => 
+      array (
+        0 => '26 in upper (calf) straps for tree climbers',
+        1 => 'Leather construction from Weaver Leather',
+        2 => 'Holds the shank tight so the gaff bites cleanly',
+        3 => 'Replaces stretched, cracked or torn straps',
+        4 => 'Sold for use with climber pads and lower straps',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Upper climber straps',
+        ),
+        1 => 
+        array (
+          0 => 'Length',
+          1 => '26 in',
+        ),
+        2 => 
+        array (
+          0 => 'Material',
+          1 => 'Leather',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why upper straps matter',
+          'p' => 
+          array (
+            0 => 'On spurs, the upper strap does most of the work of keeping the shank locked to your leg. If it is loose or stretched, the climber rolls on the calf, the gaff kicks out of the bark and you burn energy fighting it on every step. A firm 26 inch leather strap cinched over a good pad keeps the shank in line so the gaff sets where you put it.',
+            1 => 'Leather breaks in and shapes to your leg over the first few days. Expect to take up a hole or two as it settles. Pair new uppers with fresh lower straps if those are worn too, and see the rest of our <a href="/climbing/spurs/">climbing spurs and parts</a> for pads and gaffs.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Care and replacement',
+          'p' => 
+          array (
+            0 => 'Keep the leather clean and treat it with a leather conditioner now and then so it does not dry out and crack. Do not leave straps soaked in the truck or next to a heater. Check the buckle, keeper and stitching, and look for cracks or torn holes before each climb.',
+            1 => 'Spurs are for removals, not pruning live trees. Spur straps are part of your climbing system\'s footing, so replace them as soon as they are damaged, keep a lanyard around the stem at all times and follow ANSI Z133 and the maker\'s instructions.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Are these upper or lower straps?',
+          'a' => 'Upper. They go around the calf just below the knee. Lower straps go around the ankle and are sold separately.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will they fit spurs from other makers?',
+          'a' => 'Most standard spurs use similar upper strap slots, but check the strap width against your climbers before ordering.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-0.webp',
+        'sm' => '/assets/photos/spur-0-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16380468763',
+      ),
+    ),
+    '/rigging-rope/7-8-mammoth-rigging-line/' => 
+    array (
+      'path' => '/rigging-rope/7-8-mammoth-rigging-line/',
+      'category' => '/rope/rigging-rope/',
+      'name' => '7/8" Mammoth Rigging Line',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'rope',
+      'price' => 560,
+      'keyword' => '7/8 mammoth rigging line',
+      'title' => '7/8 Mammoth Rigging Line for Heavy Removals',
+      'h1' => '7/8" Mammoth Rigging Line',
+      'meta' => 'The 7/8 Mammoth rigging line is a heavy lowering rope for big wood and crane-free removals. When 7/8 inch makes sense, matching hardware and inspection tips.',
+      'tagline' => 'A 7/8 in rigging line for the heaviest blocking and lowering work.',
+      'summary' => 'The 7/8 Mammoth rigging line is the heaviest size in the line, built for crews that block down big trunk wood and lower heavy tops. It is more rope than most daily jobs need, which is exactly why it earns a spot on the truck for the big removals.',
+      'highlights' => 
+      array (
+        0 => '7/8 in diameter for heavy rigging',
+        1 => 'Sized for big blocked-down wood and heavy tops',
+        2 => 'Needs blocks and lowering devices rated for 7/8 in rope',
+        3 => 'More strength margin than 5/8 or 3/4 in line',
+        4 => 'Heavier to carry, so plan the setup',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '7/8 in (about 22 mm)',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Heavy arborist rigging and lowering',
+        ),
+        2 => 
+        array (
+          0 => 'Strength',
+          1 => 'See the maker\'s rated breaking strength',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'When to reach for 7/8 inch',
+          'p' => 
+          array (
+            0 => 'Most crews rig with 1/2 or 5/8 inch line and step up as the wood gets bigger. A 7/8 inch line is for the top of that range: long blocked trunk sections, heavy leaders and big tops where the shock load at the catch is serious. The larger rope gives you more strength margin and holds up better to the wraps on a lowering device.',
+            1 => 'The cost is weight and bulk. A long hank of 7/8 is a real carry, so many crews keep it for the jobs that need it and run smaller line the rest of the time. Your block, sling and porta-wrap or bollard must all be rated for a 7/8 inch rope. Compare sizes in our <a href="/rope/rigging-rope/">rigging rope</a> section.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and limits',
+          'p' => 
+          array (
+            0 => 'Before and after each job, run the line through your hands. Look for cut or pulled strands, glazed or melted sections, flat spots and core damage. Keep it dry, out of the sun and away from fuel and bar oil.',
+            1 => 'Rigging forces are dynamic and can be several times the weight of the piece. Work from the maker\'s rated strength, allow for knots and bends, retire rope after a severe shock load and keep rigging to trained crews working under ANSI Z133.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is 7/8 inch rope overkill?',
+          'a' => 'For everyday pruning and small removals, usually. It is meant for heavy blocking and big pieces where a smaller line would be working near its limit.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will 7/8 inch fit my rigging block?',
+          'a' => 'Only if the block\'s sheave is rated for that diameter. Check the block maker\'s rope range before you rig.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
+    ),
+    '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/' => 
+    array (
+      'path' => '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/',
+      'category' => '/climbing/climbing-gear/friction-savers/',
+      'name' => 'Weaver Leather Cambium Friction Saver',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'sling',
+      'price' => 55,
+      'keyword' => 'weaver leather cambium friction saver',
+      'title' => 'Weaver Leather Cambium Friction Saver',
+      'h1' => 'Weaver Leather Cambium Friction Saver',
+      'meta' => 'The Weaver leather cambium friction saver protects bark and your line at the tie-in point. How a ring-style cambium saver works, plus setup and inspection tips.',
+      'tagline' => 'A ring-style cambium saver that protects bark and rope at your tie-in point.',
+      'summary' => 'The Weaver leather cambium friction saver sits between your climbing line and the limb at your tie-in point, so the rope runs through rings instead of sawing across the bark. It protects the tree\'s cambium and saves wear on your rope on every climb.',
+      'highlights' => 
+      array (
+        0 => 'Ring-style cambium saver for MRS/DdRT tie-ins',
+        1 => 'Protects bark and cambium at the crotch',
+        2 => 'Cuts rope wear and heat at the anchor',
+        3 => 'Retrievable from the ground with the right setup',
+        4 => 'Simple design that is easy to inspect',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Cambium saver / friction saver',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+        2 => 
+        array (
+          0 => 'Design',
+          1 => 'Ring style',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'MRS/DdRT tie-in point',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What a cambium saver does',
+          'p' => 
+          array (
+            0 => 'When you climb on a doubled rope over a limb, every advance drags the line across the bark. That burns the cambium, leaves a scar on the tree and glazes your rope. A cambium saver puts a strap and rings at the crotch so the rope runs through hardware instead. Climbing feels smoother, and the tree takes far less damage.',
+            1 => 'Ring-style savers like this one are simple and tough. Set it with a throw line, run your climbing line through both rings and tie in as usual. With a retrieval setup you can pull it down from the ground at the end of the job. Compare other <a href="/climbing/climbing-gear/friction-savers/">friction savers</a> if you want an adjustable model.',
+            2 => 'A cambium saver also cuts the heat and friction you feel when advancing your hitch, so long climbs to a high tie-in take less effort.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setup and inspection',
+          'p' => 
+          array (
+            0 => 'Install it so both rings sit on the same side of the limb and the rope runs through them in the direction the maker shows. Choose a sound crotch sized for the saver. Before each climb, check the strap and stitching for cuts, abrasion and heat damage, and the rings for grooves or sharp edges.',
+            1 => 'Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it for SRS?',
+          'a' => 'A cambium saver is mainly used for MRS/DdRT climbing. Follow Weaver\'s instructions for any other use.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I get it down?',
+          'a' => 'Most climbers retrieve it from the ground using the climbing line and a retrieval method suited to ring savers. Practice it low before relying on it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'plant-health',
+      ),
+      'level' => 'all',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
+    ),
+    '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/' => 
+    array (
+      'path' => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/',
+      'name' => 'ISC Chipmunk Flex Tether with Apex Rope Wrench',
+      'brand' => 'isc',
+      'brand_name' => 'ISC',
+      'kind' => 'friction-device',
+      'price' => 150,
+      'keyword' => 'chipmunk flex tether with apex rope wrench',
+      'title' => 'ISC Chipmunk Flex Tether with Apex Rope Wrench',
+      'h1' => 'ISC Chipmunk Flex Tether with Apex Rope Wrench',
+      'meta' => 'The ISC Chipmunk flex tether with Apex rope wrench pairs a rope wrench and tether for hitch-based SRS climbing. How it works, setup notes and inspection points.',
+      'tagline' => 'A rope wrench and flexible tether combo for hitch-based SRS climbing.',
+      'summary' => 'This ISC Chipmunk flex tether with Apex rope wrench pairs a rope wrench with ISC\'s flexible Chipmunk tether, the combination many climbers use to run a friction hitch on a stationary rope. The wrench adds the friction a hitch alone cannot give on a single line, and the tether keeps it aligned.',
+      'highlights' => 
+      array (
+        0 => 'Rope wrench and flex tether in one combo',
+        1 => 'Adds friction so a hitch works on a single rope',
+        2 => 'Flexible tether keeps the wrench in line',
+        3 => 'Built for SRS work positioning and descent',
+        4 => 'Set up only as ISC shows',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rope wrench with tether',
+        ),
+        1 => 
+        array (
+          0 => 'System',
+          1 => 'SRS (stationary rope)',
+        ),
+        2 => 
+        array (
+          0 => 'Tether',
+          1 => 'Chipmunk flex tether',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'ISC',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How the combo works',
+          'p' => 
+          array (
+            0 => 'On a stationary rope, a friction hitch alone does not hold or descend smoothly because the rope does not double back on itself. A rope wrench solves that. The rope runs through the wrench above the hitch, adding friction, and the hitch does the gripping and tending. The flexible tether links the wrench to the hitch and keeps the two aligned as you move around the canopy.',
+            1 => 'Buying the wrench and tether together saves piecing it together and keeps the setup the way ISC tested it. Compare other <a href="/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/">SRS climbing devices</a> if you prefer a mechanical device.',
+            2 => 'Many climbers like a wrench setup because it keeps the familiar feel of a hitch while working on a single rope. You can descend smoothly, stop anywhere and advance with a hitch tender, which makes long limb walks and redirects more manageable than on a doubled line.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setup and inspection',
+          'p' => 
+          array (
+            0 => 'Use rope diameters and hitch cord ISC lists for the wrench, and build the system exactly as the instructions show, with approved connectors. Test the setup on the ground and at low height before climbing. Before each climb, check the wrench for grooves and sharp edges, and the tether for cuts, fuzzing and stiffness.',
+            1 => 'Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do I need a hitch with a rope wrench?',
+          'a' => 'Yes. The wrench adds friction, but a friction hitch tied below it does the gripping. Use the hitch cord ISC recommends.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I replace just the tether?',
+          'a' => 'Yes, the Chipmunk flex tether is available on its own. Replace it whenever it shows wear.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
+    ),
+    '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/' => 
+    array (
+      'path' => '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/',
+      'category' => '/climbing/climbing-gear/friction-savers/',
+      'name' => 'Retrieval Link for Friction Saver',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'parts',
+      'price' => 15,
+      'keyword' => 'friction saver retrieval link',
+      'title' => 'Friction Saver Retrieval Link for Ring Savers',
+      'h1' => 'Retrieval Link for Friction Saver',
+      'meta' => 'A friction saver retrieval link helps pull a ring friction saver down from the ground after the climb. How it works, rigging it and why it is not life support.',
+      'tagline' => 'A small link that makes pulling your friction saver down from the ground easier.',
+      'summary' => 'A friction saver retrieval link clips to the small ring of a ring-style friction saver so you can pull it out of the tree from the ground. It is a small, cheap part that saves a climb back up or a saver left hanging in the crotch.',
+      'highlights' => 
+      array (
+        0 => 'Helps retrieve a ring-style friction saver',
+        1 => 'Attaches at the small ring',
+        2 => 'Saves a climb back up to recover gear',
+        3 => 'Retrieval only, not load bearing',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Retrieval link',
+        ),
+        1 => 
+        array (
+          0 => 'Fits',
+          1 => 'Ring-style friction savers',
+        ),
+        2 => 
+        array (
+          0 => 'Load-bearing',
+          1 => 'No, retrieval only',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What it is for',
+          'p' => 
+          array (
+            0 => 'Ring friction savers are easy to set and hard to get down. Without help, pulling one out of a tight crotch often means the rings jam or the saver hangs up on bark. A retrieval link gives your retrieval line a clean point to pull from, so the small ring follows the big ring through and the saver drops out.',
+            1 => 'Set it up on the ground before you install the saver, and practice the retrieval low a few times so it is routine. Check that the link fits your saver\'s small ring. See more <a href="/climbing/climbing-gear/friction-savers/">friction savers</a> and parts.',
+            2 => 'A clean retrieval also protects the tree. Yanking on a stuck saver tears bark and can break small limbs, while a smooth pull lets the rings slide through the crotch without a fight. It saves the climber a trip back up and keeps the end of the day moving.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use and inspection',
+          'p' => 
+          array (
+            0 => 'The link is a retrieval aid and never part of your climbing system. Do not clip a life-support line to it, and do not use it to connect anything you hang on. Before each job, check it for cracks, bending and sharp edges, and replace it if it is damaged.',
+            1 => 'Keep the friction saver itself on a normal inspection schedule. Climbing gear must meet the applicable standard, follow ANSI Z133 and the maker\'s instructions, and be used by trained climbers.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I climb on the retrieval link?',
+          'a' => 'No. It is only for pulling the saver down. Keep it out of the life-support path.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will it fit my friction saver?',
+          'a' => 'It suits common ring-style savers. Check the small ring size on your saver before ordering.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-2.webp',
+        'sm' => '/assets/photos/parts-2-sm.webp',
+        'title' => 'Skoda Fabia Inlet Manifold',
+        'creator' => 'L.C.Nøttaasen',
+        'creator_url' => 'https://www.flickr.com/photos/35166455@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/35166455@N00/4717400798',
+      ),
+    ),
+    '/safety/eye-protection/kask-super-plasma-visor/' => 
+    array (
+      'path' => '/safety/eye-protection/kask-super-plasma-visor/',
+      'category' => '/safety/eye-protection/',
+      'name' => 'Kask Super Plasma Visor',
+      'brand' => 'kask',
+      'brand_name' => 'Kask',
+      'kind' => 'eye-ear',
+      'price' => 45,
+      'keyword' => 'kask super plasma visor',
+      'title' => 'Kask Super Plasma Visor for Climbing Helmets',
+      'h1' => 'Kask Super Plasma Visor',
+      'meta' => 'The Kask Super Plasma visor adds face and eye protection to your Kask helmet for cutting, chipping and grinding. Fit notes, care tips and when to replace it.',
+      'tagline' => 'A helmet-mounted visor that adds face protection to the Kask Super Plasma.',
+      'summary' => 'The Kask Super Plasma visor mounts to the front of the Kask Super Plasma helmet to shield your eyes and face from chips, sawdust and twigs. It flips up when you do not need it and drops into place when the saw starts.',
+      'highlights' => 
+      array (
+        0 => 'Made for the Kask Super Plasma helmet',
+        1 => 'Shields eyes and face from chips and debris',
+        2 => 'Flips up out of the way between cuts',
+        3 => 'Replaces a scratched or cracked visor',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Helmet visor',
+        ),
+        1 => 
+        array (
+          0 => 'Fits',
+          1 => 'Kask Super Plasma helmets',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Kask',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why a helmet visor helps',
+          'p' => 
+          array (
+            0 => 'Running a saw overhead sends a steady stream of chips at your face, and chipper and grinder work throws debris too. A visor mounted to the helmet stays with you as you move, flips up to read a cut or talk to the crew, and comes back down without hunting for glasses in a pocket.',
+            1 => 'Check the listing for which visor style this is and that it fits your helmet version, then compare it with the other <a href="/safety/eye-protection/">eye protection</a> we carry.',
+            2 => 'Grit and sawdust are not the only hazard. Twigs and small branches snap back at your face when you push through the canopy or drop a limb, and a visor takes that hit instead of your eyes. On a long day of trimming, being able to flip the visor down without stopping is what makes people actually use it. Keep a spare in the truck, since a badly scratched visor is hard to see through in low light.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use, care and limits',
+          'p' => 
+          array (
+            0 => 'Many climbers wear safety glasses under the visor, since a flipped-up visor protects nothing. Check the markings on the visor and your employer\'s rules to confirm it meets the eye protection standard required for your work.',
+            1 => 'Clean it with water and a soft cloth, not a dry rag, which scratches the surface. Replace the visor if it is cracked, deeply scratched or no longer stays in position. Inspect the helmet and its mounts at the same time, and follow ANSI Z133 and Kask\'s instructions.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will this visor fit other Kask helmets?',
+          'a' => 'It is made for the Super Plasma. Check Kask\'s compatibility list before fitting it to another model.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I still need safety glasses?',
+          'a' => 'Wearing safety glasses under the visor is a common practice and may be required by your employer. Check your site rules.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+      ),
+      'level' => 'all',
+      'brand_path' => '/kask/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-0.webp',
+        'sm' => '/assets/photos/eye-ear-0-sm.webp',
+        'title' => 'Mirrored Safety Glasses - Imprinted with Logo',
+        'creator' => 'Woodlands Ad Agency',
+        'creator_url' => 'https://www.flickr.com/photos/24236630@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/24236630@N05/7644923536',
+      ),
+    ),
+    '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/' => 
+    array (
+      'path' => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/',
+      'name' => 'Shembiner XL Chainsaw Hook',
+      'brand' => 'shembiner',
+      'brand_name' => 'Shembiner',
+      'kind' => 'carabiner',
+      'price' => 27,
+      'keyword' => 'shembiner xl chainsaw hook',
+      'title' => 'Shembiner XL Chainsaw Hook for Saddles',
+      'h1' => 'Shembiner XL Chainsaw Hook',
+      'meta' => 'The Shembiner XL chainsaw hook gives your climbing saw a dedicated spot on the saddle. How the XL size compares, where to mount it and why it is storage only.',
+      'tagline' => 'A saddle hook in XL size that gives your climbing saw its own place to hang.',
+      'summary' => 'The Shembiner XL chainsaw hook mounts on your saddle and gives a top-handle saw a dedicated place to hang between cuts. The XL size leaves room for larger saw lanyard rings and handles than the standard hook.',
+      'highlights' => 
+      array (
+        0 => 'Dedicated saddle hook for a climbing saw',
+        1 => 'XL size for larger rings and handles',
+        2 => 'Quick one-handed clip between cuts',
+        3 => 'Keeps the saw off gear loops',
+        4 => 'Storage only, not life support',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Chainsaw hook',
+        ),
+        1 => 
+        array (
+          0 => 'Size',
+          1 => 'XL',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Shembiner',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'Saw storage, not life support',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'A better place for the saw',
+          'p' => 
+          array (
+            0 => 'Hanging a top-handle saw from a general gear loop is awkward and wears the loop out. A Shembiner hook gives the saw its own spot, so you can park it with one hand and reach for the hand saw or adjust your lanyard without fumbling.',
+            1 => 'The XL is a good choice if your saw lanyard uses a larger ring or you hang the saw by the handle. If you need a different size, compare the rest of our <a href="/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/">saddle storage</a> options.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Mounting and safety',
+          'p' => 
+          array (
+            0 => 'Mount it on the side of the saddle where the saw hangs clear of your climbing line and lanyard and does not swing into your legs. Practice clipping it on the ground until it is automatic. Keep the saw on a saw lanyard as well, so a missed clip does not send it to the ground crew.',
+            1 => 'This hook is a storage accessory. Never use it for life support or rigging. Check it for cracks and wear, and use a chainsaw aloft only with training and in line with ANSI Z133.',
+            2 => 'Look the hook over when you inspect the rest of your saddle hardware. A bent or cracked hook can drop the saw without warning, and replacement is cheap compared to a damaged saw or an injury on the ground.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is the difference between the XL and XLS?',
+          'a' => 'They are different sizes in the Shembiner line. Check the listing dimensions against your saw lanyard ring before choosing.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I still need a saw lanyard?',
+          'a' => 'Yes. The hook parks the saw, and the lanyard keeps it tied to you if it slips.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
+    ),
+    '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/' => 
+    array (
+      'path' => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
+      'category' => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/',
+      'name' => '2-in-1 Hi-Vee Replacement Lanyard',
+      'brand' => 'samson-rope',
+      'brand_name' => 'Samson Rope',
+      'kind' => 'lanyard',
+      'price' => 75,
+      'keyword' => 'hi-vee replacement lanyard',
+      'title' => '2-in-1 Hi-Vee Replacement Lanyard Rope',
+      'h1' => '2-in-1 Hi-Vee Replacement Lanyard',
+      'meta' => 'A Hi-Vee replacement lanyard for 2-in-1 setups. Swap worn rope and reuse your hardware. What to check before you rebuild, plus inspection and retirement tips.',
+      'tagline' => 'Replacement Hi-Vee rope for a 2-in-1 adjustable positioning lanyard.',
+      'summary' => 'This Hi-Vee replacement lanyard is the rope for a 2-in-1 adjustable lanyard, sold so you can replace a worn line and keep your adjuster and snaps. It is the cheaper fix when the rope is tired but the hardware still passes inspection.',
+      'highlights' => 
+      array (
+        0 => 'Replacement rope for a 2-in-1 lanyard',
+        1 => 'Hi-Vee braided rope',
+        2 => 'Reuse hardware that passes inspection',
+        3 => 'Less money than a full kit',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Rope',
+          1 => 'Hi-Vee',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Replacement 2-in-1 lanyard rope',
+        ),
+        2 => 
+        array (
+          0 => 'Hardware',
+          1 => 'Not included',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Rebuilding a 2-in-1',
+          'p' => 
+          array (
+            0 => 'A 2-in-1 lanyard runs the tail back through the adjuster so the same rope gives you a flipline length and a shorter positioning length. The rope takes all the wear, especially where it runs through the adjuster and wraps the stem, so it usually goes long before the snaps and adjuster do.',
+            1 => 'Before you rebuild, check that the rope diameter matches your adjuster\'s rated range and that your snaps or carabiners still pass inspection. If any hardware is worn, replace it too. Complete builds are in our <a href="/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/">rope lanyards</a> section.',
+            2 => 'Rebuilding also lets you change the length. If your old lanyard always felt a little short on big stems, or long enough to get in the way, a new rope is the time to fix it. Mark the date you put it in service on a tag or in your gear log.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and limits',
+          'p' => 
+          array (
+            0 => 'Run the rope through your hands before every climb. Look for cuts, glazing, flat spots, pulled strands and damage near the eyes. Retire it after a shock load or any damage you cannot explain.',
+            1 => 'A rope lanyard is not cut resistant. Keep the saw away from it and use a wire-core flipline for heavy spar work. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does it come with snaps or an adjuster?',
+          'a' => 'No. It is the rope only. Reuse hardware that passes inspection or buy new pieces rated for the rope.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I know the rope fits my adjuster?',
+          'a' => 'Check the adjuster maker\'s rated rope diameter range against the Hi-Vee rope size listed.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/samson-rope/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
+    ),
+    '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/' => 
+    array (
+      'path' => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/',
+      'category' => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/',
+      'name' => 'Arborist Shackle',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'cable-hardware',
+      'price' => 15,
+      'keyword' => 'arborist shackle',
+      'title' => 'Arborist Shackle for Rigging and Hardware',
+      'h1' => 'Arborist Shackle',
+      'meta' => 'A load-rated arborist shackle for joining slings, rings and blocks in tree rigging. How to pick the right size, set the pin correctly and inspect it before use.',
+      'tagline' => 'A rated shackle for connecting slings, blocks and rings in rigging setups.',
+      'summary' => 'An arborist shackle is a simple, strong connector for joining slings, rigging rings and blocks. It is a staple in the rigging bag for the times a carabiner is the wrong tool, such as heavy static connections and hardware that stays put for the whole job.',
+      'highlights' => 
+      array (
+        0 => 'Strong metal connector for rigging',
+        1 => 'Joins slings, rings and blocks',
+        2 => 'Working load marked on the body',
+        3 => 'Compact and easy to stash in the bag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rigging shackle',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Steel',
+        ),
+        2 => 
+        array (
+          0 => 'Rating',
+          1 => 'See working load marked on the shackle',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a shackle fits',
+          'p' => 
+          array (
+            0 => 'In rigging, a shackle is the go-to when you need a strong connection that will not be opened and closed all day. Use it to hang a block on a sling, join a ring to a sling eye or connect hardware on a speedline anchor. It has a lot of strength for its size.',
+            1 => 'Size it by the working load marked on the shackle, not by feel, and make sure the bow is wide enough for the sling or eye without pinching it. See other <a href="/rigging/blocks-and-other-hardware/rings-and-other-hardware/">rings and rigging hardware</a> for more connectors.',
+            2 => 'Keep a few sizes in the rigging bag. A small shackle handles light hardware on pruning jobs, while bigger removals call for a larger shackle that matches the block and sling you are using. Mixed sizes mean you are not tempted to use the wrong one because it is the only one on the truck.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use and inspection',
+          'p' => 
+          array (
+            0 => 'Seat the pin fully and snug it. On a screw-pin shackle, check it during the job, since rope movement can back the pin out. Load the shackle in line with its body and avoid side loading.',
+            1 => 'Before each job, look for bending, a stretched bow, cracks, corrosion and damaged threads, and retire any shackle that has been overloaded or will not close cleanly. Rigging gear is not for life support. Follow ANSI Z133 and the maker\'s ratings, and keep rigging to trained crews.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use a shackle in my climbing system?',
+          'a' => 'Only if it is specifically rated and approved for life support. A rigging shackle is for moving wood.',
+        ),
+        1 => 
+        array (
+          'q' => 'How tight should the pin be?',
+          'a' => 'Snug by hand, fully seated, and checked during the job. Do not overtighten with a wrench unless the maker calls for it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-1.webp',
+        'sm' => '/assets/photos/cable-hardware-1-sm.webp',
+        'title' => 'Eye Bolt',
+        'creator' => 'Clearly Ambiguous',
+        'creator_url' => 'https://www.flickr.com/photos/84617037@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/84617037@N00/428612624',
+      ),
+    ),
+    '/books-and-training-materials/best-practices-for-safety-in-arboriculture/' => 
+    array (
+      'path' => '/books-and-training-materials/best-practices-for-safety-in-arboriculture/',
+      'category' => '/books-and-training-materials/',
+      'name' => 'Best Practices for Safety in Arboriculture',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'book',
+      'price' => 35,
+      'keyword' => 'best practices for safety in arboriculture',
+      'title' => 'Best Practices for Safety in Arboriculture',
+      'h1' => 'Best Practices for Safety in Arboriculture',
+      'meta' => 'Best Practices for Safety in Arboriculture is a safety reference for tree crews. Who it suits, how to use it for training and how it ties back to ANSI Z133.',
+      'tagline' => 'A safety reference for tree crews, foremen and anyone training new climbers.',
+      'summary' => 'Best Practices for Safety in Arboriculture is a reference for tree workers who want the safety side of the job laid out in one place. It suits new crew members learning the basics and foremen looking for material to anchor tailgate meetings.',
+      'highlights' => 
+      array (
+        0 => 'Safety-focused guide for tree care work',
+        1 => 'Useful for new climbers and ground workers',
+        2 => 'Good backing for tailgate safety meetings',
+        3 => 'Pairs with ANSI Z133 and hands-on training',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Topic',
+          1 => 'Tree care safety',
+        ),
+        1 => 
+        array (
+          0 => 'Format',
+          1 => 'Print',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Self-study and crew training',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Who it is for',
+          'p' => 
+          array (
+            0 => 'Most accidents in tree work come back to the same handful of causes: electrical contact, falls, struck-by incidents and chainsaw cuts. A best-practices guide gives a crew a shared way to talk about those hazards, plan the work and set up the drop zone before anyone starts the saw.',
+            1 => 'It is useful for a new ground worker learning the job, a climber studying for a credential or a foreman planning safety meetings. Read a section, then talk it through on the job site with the crew. Browse more <a href="/books-and-training-materials/">books and training materials</a> for rigging and climbing titles.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Using it well',
+          'p' => 
+          array (
+            0 => 'A book does not replace training. Use it alongside ANSI Z133, your company\'s written procedures and hands-on instruction from a qualified trainer. Check the edition date and compare it with the current version of the standard, since practices change over time.',
+            1 => 'Keep a copy in the truck or crew room, and come back to it when a near miss or a new job type raises questions.',
+            2 => 'The best way to use it is in short pieces. Pick one topic each week, such as work zone setup, aerial rescue readiness or electrical hazard awareness, and spend ten minutes on it before the first cut of the day. Ask the newest person on the crew to explain it back. That kind of steady review builds habits that hold up when the job gets busy or the weather turns.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does this book replace ANSI Z133?',
+          'a' => 'No. Use it alongside the current standard and your company\'s procedures.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is it suitable for beginners?',
+          'a' => 'Yes. It works for new crew members as well as experienced workers refreshing the basics.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/book-0.webp',
+        'sm' => '/assets/photos/book-0-sm.webp',
+        'title' => 'Book Stack',
+        'creator' => 'byzantiumbooks',
+        'creator_url' => 'https://www.flickr.com/photos/10688882@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10688882@N00/24811541306',
+      ),
+    ),
+    '/throw-line-storage/notch-throwline-pop-box/' => 
+    array (
+      'path' => '/throw-line-storage/notch-throwline-pop-box/',
+      'category' => '/climbing/throw-weight-and-line/',
+      'name' => 'Notch Throwline Pop Box',
+      'brand' => 'notch-equipment',
+      'brand_name' => 'Notch',
+      'kind' => 'case-bag',
+      'price' => 30,
+      'keyword' => 'notch throwline pop box',
+      'title' => 'Notch Throwline Pop Box for Throw Line Storage',
+      'h1' => 'Notch Throwline Pop Box',
+      'meta' => 'The Notch throwline pop box is a collapsible cube that holds throw line ready to feed out without tangles. How to pack it, use it and keep it clean on the job.',
+      'tagline' => 'A collapsible cube that keeps throw line ready to throw without tangles.',
+      'summary' => 'The Notch throwline pop box is a collapsible storage cube for throw line. It pops open on the ground so your line feeds out cleanly on each throw, then folds flat for the gear bag when the climbing line is set.',
+      'highlights' => 
+      array (
+        0 => 'Collapsible cube for throw line',
+        1 => 'Line feeds out cleanly when you throw',
+        2 => 'Folds flat for storage',
+        3 => 'Keeps line off wet ground and debris',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Throw line storage cube',
+        ),
+        1 => 
+        array (
+          0 => 'Design',
+          1 => 'Collapsible',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Notch',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why use a throw line cube',
+          'p' => 
+          array (
+            0 => 'Throw line tangles easily. Left in a pile on the ground it catches on twigs, picks up grit and knots itself just as the bag is going up. A pop box gives the line a clean home. Stuff it in loosely after each throw and it pays out smoothly the next time.',
+            1 => 'The box also keeps line off wet grass and out of sawdust, which helps it run through the canopy and last longer. See our <a href="/climbing/throw-weight-and-line/">throw weights and line</a> for line, bags and kits.',
+            2 => 'A cube also speeds up repeat throws. When the bag misses the target crotch, you pull the line back into the box and throw again without stopping to untangle a bird\'s nest at your feet. Over a day of setting lines in several trees, that time adds up, and the climber gets in the tree faster.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Packing and care',
+          'p' => 
+          array (
+            0 => 'Feed the line in loosely by hand rather than coiling it, so it comes out without twists. Keep the end tied to a loop in the box so the whole line cannot fly out with the bag. Shake out bark and leaves at the end of the day and let it dry if it gets wet.',
+            1 => 'Stand clear of the throw path and look out for the bag on the way down. Never throw near power lines.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I store two throw lines in it?',
+          'a' => 'It is best used with one line at a time so the lines do not tangle with each other.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it come with throw line?',
+          'a' => 'Plan on adding your own throw line and bag unless the listing says otherwise.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/notch-equipment/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-3.webp',
+        'sm' => '/assets/photos/case-bag-3-sm.webp',
+        'title' => 'Climbing Gear for Mt. Fuji',
+        'creator' => 'KE-TA',
+        'creator_url' => 'https://www.flickr.com/photos/41894154003@N01',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/41894154003@N01/1262155760',
+      ),
+    ),
+    '/clothing/hats-and-caps/arborwear-trucker-patch-cap/' => 
+    array (
+      'path' => '/clothing/hats-and-caps/arborwear-trucker-patch-cap/',
+      'category' => '/clothing/hats-and-caps/',
+      'name' => 'Arborwear Trucker Patch Cap',
+      'brand' => 'arborwear',
+      'brand_name' => 'Arborwear',
+      'kind' => 'apparel',
+      'price' => 28,
+      'keyword' => 'arborwear trucker patch cap',
+      'title' => 'Arborwear Trucker Patch Cap',
+      'h1' => 'Arborwear Trucker Patch Cap',
+      'meta' => 'The Arborwear trucker patch cap pairs a mesh back with a front logo patch. A breathable cap for ground days, drive time and off-hours wear. Fit and care notes.',
+      'tagline' => 'A mesh-back trucker cap with an Arborwear patch for ground days and drive time.',
+      'summary' => 'The Arborwear trucker patch cap is a classic mesh-back trucker hat with an Arborwear logo patch on the front. It is the cap for ground work, drive time between jobs and the end of the day when the helmet comes off.',
+      'highlights' => 
+      array (
+        0 => 'Classic trucker shape with a mesh back',
+        1 => 'Arborwear logo patch on the front',
+        2 => 'Adjustable snap back',
+        3 => 'Breathes well in warm weather',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Style',
+          1 => 'Trucker cap',
+        ),
+        1 => 
+        array (
+          0 => 'Back',
+          1 => 'Mesh',
+        ),
+        2 => 
+        array (
+          0 => 'Front',
+          1 => 'Logo patch',
+        ),
+        3 => 
+        array (
+          0 => 'Closure',
+          1 => 'Adjustable snap back',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'A cap for the in-between hours',
+          'p' => 
+          array (
+            0 => 'Tree work runs on a helmet, but there are plenty of hours when you are not wearing one: driving to the job, writing estimates, fueling saws and grabbing lunch. A trucker cap keeps the sun out of your eyes and the sawdust out of your hair, and the mesh back lets heat out on hot days.',
+            1 => 'The patch front gives it a clean, simple look. Browse the rest of our <a href="/clothing/hats-and-caps/">hats and caps</a> for other styles and colors.',
+            2 => 'Arborwear builds its clothing around tree work, and the cap fits that look. It pairs well with work pants and a hoodie on cold mornings and still breathes in the afternoon heat. Keep one in the truck for the drive between jobs, for a stop at the supply house, or for the days you are running the chipper or the stump grinder well away from overhead work. A light color stays cooler in direct sun, while a darker one hides bar oil and sap.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit, care and where not to wear it',
+          'p' => 
+          array (
+            0 => 'The snap back adjusts to most heads. Hand wash in cool water and let it air dry so the brim keeps its shape.',
+            1 => 'A cap is not head protection. Wear a helmet that meets the required standard any time you are climbing, in a bucket or on the ground in the drop zone, and keep the cap for the times you are clear of overhead work.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the cap adjustable?',
+          'a' => 'Yes, it uses an adjustable snap back.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I wear it under a helmet?',
+          'a' => 'No. A cap brim interferes with helmet fit. Wear the helmet on its own as the maker intends.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'apparel',
+      ),
+      'level' => 'all',
+      'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-0.webp',
+        'sm' => '/assets/photos/apparel-0-sm.webp',
+        'title' => 'Crate Flannel Shirt',
+        'creator' => 'A Continuous Lean',
+        'creator_url' => 'https://www.flickr.com/photos/7393890@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7393890@N04/3294764637',
+      ),
+    ),
+    '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head-with-adapter/' => 
+    array (
+      'path' => '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head-with-adapter/',
+      'category' => '/cutting-and-pruning/pole-saws-and-scabbards/',
+      'name' => 'Marvin Cast Saw Head with Adapter',
+      'brand' => 'marvin',
+      'brand_name' => 'Marvin',
+      'kind' => 'pole-saw',
+      'price' => 55,
+      'keyword' => 'marvin cast saw head with adapter',
+      'title' => 'Marvin Cast Saw Head with Adapter',
+      'h1' => 'Marvin Cast Saw Head with Adapter',
+      'meta' => 'The Marvin cast saw head with adapter mounts a pole saw blade on your pole. Why the adapter matters, how to fit it to your pole, and care tips for long service.',
+      'tagline' => 'A cast pole saw head with an adapter for mounting it to your pole.',
+      'summary' => 'The Marvin cast saw head with adapter holds a pruning blade on the end of a pole, with the adapter that joins the head to the pole itself. It is the part to buy when you are building a pole saw or the old head and fitting are both worn out.',
+      'highlights' => 
+      array (
+        0 => 'Cast pole saw head',
+        1 => 'Adapter included for mounting to the pole',
+        2 => 'Holds the blade solid in the cut',
+        3 => 'Rebuilds or upgrades an existing pole saw',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Pole saw head',
+        ),
+        1 => 
+        array (
+          0 => 'Construction',
+          1 => 'Cast',
+        ),
+        2 => 
+        array (
+          0 => 'Includes',
+          1 => 'Pole adapter',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Marvin',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why the adapter version',
+          'p' => 
+          array (
+            0 => 'A saw head on its own needs a matching fitting on the pole. The adapter version gives you that connection in the same purchase, which helps if you are building a pole saw from a bare pole or replacing a head that came off with a damaged fitting.',
+            1 => 'Check that the adapter matches your pole\'s size and type before you order, since makers use different fittings. Our <a href="/cutting-and-pruning/pole-saws-and-scabbards/">pole saws and scabbards</a> section has blades and complete saws if you need more parts.',
+            2 => 'A solid head matters most at full extension. Any play at the joint is multiplied at the end of a long pole, so the blade wobbles and the cut wanders. A fresh head and adapter take that slop out, and your cuts are easier to start and finish cleanly.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fitting and care',
+          'p' => 
+          array (
+            0 => 'Mount the adapter securely and attach the blade with the teeth facing back so it cuts on the pull. Tighten everything until there is no play, then check it again after the first few cuts. A loose blade binds and wanders, which makes clean cuts at the branch collar hard.',
+            1 => 'Wipe sap off after use and keep the blade guarded in storage. Replace the head if the casting cracks or the blade seat wears. Never use a pole tool near energized lines unless you are a qualified line-clearance arborist with rated equipment.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does it include a blade?',
+          'a' => 'Plan on supplying your own pole saw blade unless the listing says one is included.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will the adapter fit any pole?',
+          'a' => 'No. Confirm that it matches your pole\'s size and fitting before ordering.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'pruning',
+        1 => 'ground',
+        2 => 'maintenance',
+      ),
+      'level' => 'all',
+      'brand_path' => '/marvin/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
+    ),
+    '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/' => 
+    array (
+      'path' => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/hardware/',
+      'name' => 'Petzl Delta Link',
+      'brand' => 'petzl',
+      'brand_name' => 'Petzl',
+      'kind' => 'carabiner',
+      'price' => 15,
+      'keyword' => 'petzl delta',
+      'title' => 'Petzl Delta Link: Steel Delta Quick Link',
+      'h1' => 'Petzl Delta Link',
+      'meta' => 'The Petzl Delta link is a triangular steel quick link for closing harnesses and joining hardware for good. Where arborists use it and how to close and check it.',
+      'tagline' => 'A triangular steel quick link for semi-permanent connections.',
+      'summary' => 'The Petzl Delta link is a triangular steel quick link, often called a maillon, for connections that stay closed for long periods. Arborists use it to join hardware for good, such as attaching devices to a saddle bridge or closing a harness attachment point where the maker allows it.',
+      'highlights' => 
+      array (
+        0 => 'Delta (triangle) shape spreads three-way loads',
+        1 => 'Steel for strength and wear resistance',
+        2 => 'Threaded sleeve closure',
+        3 => 'For semi-permanent connections',
+        4 => 'Ratings marked on the link',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Shape',
+          1 => 'Delta (triangle)',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Steel',
+        ),
+        2 => 
+        array (
+          0 => 'Closure',
+          1 => 'Threaded sleeve',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Petzl',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'When a quick link beats a carabiner',
+          'p' => 
+          array (
+            0 => 'A carabiner is made to be opened and closed all day. A quick link is the opposite: you close it once and leave it, which makes it ideal for gear that should stay put. The delta shape keeps a three-way load centered in the link, which suits closing a harness or holding a device and a tether together.',
+            1 => 'Check Petzl\'s ratings and your saddle maker\'s instructions to confirm a Delta is approved for the connection you plan to use it on. See more <a href="/climbing/climbing-gear/carabiners-and-hardware/hardware/">climbing hardware</a> for rings and connectors.',
+            2 => 'Steel is heavier than aluminum but resists wear far better, which matters on a connection where a rope or another piece of hardware rubs all day.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Closing and inspecting it',
+          'p' => 
+          array (
+            0 => 'Screw the sleeve fully closed and snug it. A quick link is only rated when the sleeve is closed. Check it during the day, as vibration can work it open, and some climbers close it with a wrench where the maker allows.',
+            1 => 'Inspect before every climb for corrosion, cracks, bending and damaged threads, and retire it after a big fall or if the sleeve will not turn smoothly. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the Petzl Delta strong with the sleeve open?',
+          'a' => 'No. Its rating applies only with the sleeve fully closed. Never load it open.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it in place of a locking carabiner?',
+          'a' => 'Only for connections meant to stay closed and where your gear\'s maker approves it. It is not for clipping in and out.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
+    ),
+    '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/' => 
+    array (
+      'path' => '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/',
+      'category' => '/rigging/rigging-slings/heavy-duty-slings/',
+      'name' => '3/4" Ring Sling with Beast Ring',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 170,
+      'keyword' => 'ring sling with beast ring',
+      'title' => '3/4" Ring Sling with Beast Ring for Rigging',
+      'h1' => '3/4" Ring Sling with Beast Ring',
+      'meta' => 'A 3/4 inch ring sling with Beast ring makes a smooth, heavy-duty friction rigging point for big removals. Sizing notes, setup and inspection advice for crews.',
+      'tagline' => 'A 3/4 in rope sling with a large Beast ring for heavy friction rigging.',
+      'summary' => 'This 3/4 inch ring sling with Beast ring gives you a heavy-duty rigging point that is lighter than a big block. Choke the sling on the stem and run your rigging line over the large ring for friction, or clip a block to it.',
+      'highlights' => 
+      array (
+        0 => '3/4 in rope sling for heavy rigging',
+        1 => 'Large Beast ring for a broad rope path',
+        2 => 'Builds useful friction at the top',
+        3 => 'Lighter to carry than a big steel block',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Sling diameter',
+          1 => '3/4 in',
+        ),
+        1 => 
+        array (
+          0 => 'Ring',
+          1 => 'Beast ring',
+        ),
+        2 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See sling tag and ring markings',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Heavy rigging with a ring',
+          'p' => 
+          array (
+            0 => 'A large rigging ring lets the rope bend over a wide radius, which is easier on the line than a small ring and adds friction at the top. That friction takes some load off the lowering device and helps control big pieces. A 3/4 inch sling suits the heavy end of the work, where the rigging point has to carry large wood.',
+            1 => 'Match the sling and ring rating to your rigging line and the loads you plan to catch. Compare other <a href="/rigging/rigging-slings/heavy-duty-slings/">heavy-duty slings</a> for different lengths and ends.',
+            2 => 'Rings also make rigging quicker to set. There is no sheave to line up and nothing to jam, so the climber can hang the sling, run the line and get back to cutting. When the job calls for repeated heavy lowering with less friction, clip a block to the ring instead. Choose a sling length that lets you choke the stem with the ring sitting where the rope will run cleanly.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and limits',
+          'p' => 
+          array (
+            0 => 'Before each job, check the sling for cut or pulled strands, glazing, stiff spots and intact splices, and check the ring for grooves, gouges and sharp edges. Retire anything damaged or shock loaded beyond plan.',
+            1 => 'Rigging forces can be several times the weight of the piece. Use the maker\'s ratings, follow ANSI Z133 and keep rigging work to trained crews. Rigging gear is never used for life support.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can a ring replace a block?',
+          'a' => 'For some work. A ring adds friction and saves weight, while a block runs freer for repeated heavy lowering.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is 3/4 inch more sling than I need?',
+          'a' => 'For everyday pruning rigging, often. It is meant for heavy removal work and big wood.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-3.webp',
+        'sm' => '/assets/photos/sling-3-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982146938',
+      ),
+    ),
+    '/weaver-saddles/weaver-wlc-330-arborist-saddle/' => 
+    array (
+      'path' => '/weaver-saddles/weaver-wlc-330-arborist-saddle/',
+      'category' => '/climbing/saddles-and-harnesses/',
+      'name' => 'Weaver WLC-330 Arborist Saddle',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'saddle',
+      'price' => 239,
+      'keyword' => 'weaver wlc-330 arborist saddle',
+      'title' => 'Weaver WLC-330 Arborist Saddle',
+      'h1' => 'Weaver WLC-330 Arborist Saddle',
+      'meta' => 'The Weaver WLC-330 arborist saddle is a working saddle from Weaver Leather\'s WLC line. Who it suits, fitting advice and daily checks to make before you climb.',
+      'tagline' => 'A Weaver Leather arborist saddle for working climbers.',
+      'summary' => 'The Weaver WLC-330 arborist saddle is part of Weaver Leather\'s WLC line of tree climbing saddles. It suits climbers who want a straightforward, durable Weaver saddle for pruning and removals. Check Weaver\'s current spec sheet for exact sizing and attachment points before buying.',
+      'highlights' => 
+      array (
+        0 => 'Weaver Leather WLC series saddle',
+        1 => 'Built for pruning and removal work',
+        2 => 'Side D-rings for lanyard positioning',
+        3 => 'Sized fit for a secure, level hang',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Model',
+          1 => 'WLC-330',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Arborist climbing saddle',
+        ),
+        2 => 
+        array (
+          0 => 'Maker',
+          1 => 'Weaver Leather',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where the WLC-330 fits',
+          'p' => 
+          array (
+            0 => 'Weaver\'s WLC saddles run from basic models to fully featured ones. The WLC-330 is a working saddle for climbers who want something tough enough for spur work, bark and grit without paying for features they will not use. Side D-rings take a lanyard or flipline for positioning.',
+            1 => 'Comfort depends on how you climb. If you spend long hours sitting in the saddle, compare padding and attachment layouts in our <a href="/climbing/saddles-and-harnesses/weaver-saddles/">Weaver saddles</a> section and pick the one that fits your work.',
+            2 => 'A working saddle like the WLC-330 is also a sensible choice as a second saddle on the truck or as a first saddle for a new climber who is still learning what features matter. Whoever wears it, take time to adjust it properly before the first climb and recheck the fit after a few days of use, once the materials settle.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit, standards and inspection',
+          'p' => 
+          array (
+            0 => 'Fit the saddle with Weaver\'s sizing guide. It should sit snug on the hips with the leg straps set so you hang level. Confirm which attachment points are approved for your climbing system before setting it up.',
+            1 => 'Inspect before every climb: webbing, leather, stitching, buckles and D-rings. Retire the saddle if you find cuts, heat damage, cracks or distortion. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the WLC-330 good for a beginner?',
+          'a' => 'It can be. Fit and training matter more than the model. Get properly fitted and learn your system with a qualified trainer.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it for SRS?',
+          'a' => 'Check Weaver\'s instructions for approved attachment points and configurations before using it with any system.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-0.webp',
+        'sm' => '/assets/photos/saddle-0-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
+    ),
+    '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/' => 
+    array (
+      'path' => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
+      'category' => '/climbing/climbing-gear/gear-storage/gear-bags/',
+      'name' => 'Weaver Arborist Doctor-Style Canvas Tool Bag',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'case-bag',
+      'price' => 45,
+      'keyword' => 'weaver doctor-style canvas tool bag',
+      'title' => 'Weaver Doctor-Style Canvas Tool Bag for Arborists',
+      'h1' => 'Weaver Arborist Doctor-Style Canvas Tool Bag',
+      'meta' => 'The Weaver doctor-style canvas tool bag opens wide so gear and hand tools are easy to see and grab. What fits, how crews use it and how to keep it clean.',
+      'tagline' => 'A wide-mouth canvas tool bag that keeps climbing gear and hand tools in reach.',
+      'summary' => 'The Weaver doctor-style canvas tool bag opens wide at the top like an old doctor\'s bag, so you can see and grab gear without digging. It is a tidy home for hardware, hitch cords, files and hand tools on the truck and at the base of the tree.',
+      'highlights' => 
+      array (
+        0 => 'Doctor-style wide-mouth opening',
+        1 => 'Tough canvas construction',
+        2 => 'Holds hardware, cords and hand tools',
+        3 => 'Stands open at the base of the tree',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Style',
+          1 => 'Doctor\'s bag, wide opening',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Canvas',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why the doctor-style opening',
+          'p' => 
+          array (
+            0 => 'Most gear bags make you dig. A doctor-style bag opens wide at the top and stays open, so you can see every carabiner, hitch cord and file at a glance. Set it at the base of the tree and the ground crew can find what the climber is asking for without dumping the bag in the dirt.',
+            1 => 'Canvas is tough and handles bark, sap and the truck bed well. Compare other <a href="/climbing/climbing-gear/gear-storage/gear-bags/">gear bags</a> if you need a bigger bag or a rope bag.',
+            2 => 'A lot of climbers keep one bag for the climbing kit and a second for small tools, so nothing gets mixed up. Throw in a spare hitch cord, a few locking carabiners, a pulley, files, a scrench and a roll of tape, and you have a quick-grab kit that lives on the truck. The handles make it easy to carry from the truck to the tree in one trip, and the open top means the climber\'s requests can be filled fast. It also keeps small parts from getting lost in the bed of the truck.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Packing and care',
+          'p' => 
+          array (
+            0 => 'Keep life-support gear separate from fuel, bar oil and sharp tools. Fuel and oil can damage textiles, and loose saw files or blades can cut rope and slings. Small pouches or a divider help keep hardware organized.',
+            1 => 'Brush off sawdust and let the bag dry if it gets wet before closing it up. A dry, clean bag keeps your soft goods in better condition between jobs.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I store rope in it?',
+          'a' => 'Short hitch cords and lanyards fit fine. A full climbing line is better in a dedicated rope bag.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is canvas waterproof?',
+          'a' => 'Canvas sheds light rain but is not waterproof. Dry the bag and its contents after wet days.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-0.webp',
+        'sm' => '/assets/photos/case-bag-0-sm.webp',
+        'title' => 'army duffel bag',
+        'creator' => 'Prince Roy',
+        'creator_url' => 'https://www.flickr.com/photos/17352537@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/17352537@N00/20210201772',
+      ),
+    ),
+    '/other-gear/replacement-speed-line-bale/' => 
+    array (
+      'path' => '/other-gear/replacement-speed-line-bale/',
+      'category' => '/rigging/rigging-kits/',
+      'name' => 'Replacement Speed Line Bale',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'rigging-device',
+      'price' => 25,
+      'keyword' => 'speed line bale',
+      'title' => 'Replacement Speed Line Bale',
+      'h1' => 'Replacement Speed Line Bale',
+      'meta' => 'A replacement speed line bale for a speedline kit. Swap a worn or bent bale so loads run cleanly down the line. Fit checks, inspection and when to retire it.',
+      'tagline' => 'A replacement bale for keeping your speedline kit in working order.',
+      'summary' => 'This replacement speed line bale is a spare part for a speedline kit, the setup crews use to zip brush and light wood from the tree to the drop zone. A worn or bent bale makes the load hang badly on the line, so replacing it keeps the kit running smoothly.',
+      'highlights' => 
+      array (
+        0 => 'Spare part for a speedline kit',
+        1 => 'Replaces a worn, bent or lost bale',
+        2 => 'Keeps loads tracking cleanly down the line',
+        3 => 'Cheaper than replacing the whole kit',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Speedline replacement part',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Speedline brush and light wood removal',
+        ),
+        2 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See markings and kit instructions',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Keeping the speedline running',
+          'p' => 
+          array (
+            0 => 'A speedline moves brush and small wood along a tensioned line from the canopy to a landing zone, saving the ground crew a lot of dragging. Every part takes wear, and a bale that is bent, grooved or lost will make loads hang crooked or bind on the line.',
+            1 => 'Check that this bale matches your kit before you order, since speedline parts vary by maker. Our <a href="/rigging/rigging-kits/">rigging kits</a> section has complete speedline kits if you need more than one part.',
+            2 => 'Keeping spare parts on the truck means one damaged piece does not end the speedline for the day. Many crews keep a small parts kit with the speedline gear: a spare bale, connectors and slings, so a quick swap keeps the brush moving. Check the bale\'s fit on the trolley or pulley before you tension the line, since a part that seats poorly will show up as a load that swings or hangs up halfway down. It is a small part, but it decides how well everything else works together.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and safe use',
+          'p' => 
+          array (
+            0 => 'Inspect the bale before each use for bending, cracks, sharp edges and wear grooves. Retire it if it is deformed or no longer sits right on the hardware.',
+            1 => 'Keep the speedline loads light, keep the landing zone clear and make sure the line is anchored and tensioned according to the kit\'s instructions. Speedline gear is for moving wood, never for life support. Follow ANSI Z133 and train the crew before using it.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will this bale fit my speedline kit?',
+          'a' => 'Check your kit\'s maker and part details against the listing. Parts are not always interchangeable between kits.',
+        ),
+        1 => 
+        array (
+          'q' => 'What loads can a speedline carry?',
+          'a' => 'Brush and light wood. Follow the kit\'s ratings and keep loads within them.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'ground',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-4.webp',
+        'sm' => '/assets/photos/rigging-device-4-sm.webp',
+        'title' => 'Pulley Block Equipment Rigging Edited 2020',
+        'creator' => 'chimpwithcan',
+        'creator_url' => 'https://www.flickr.com/photos/188454520@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188454520@N02/49920521488',
+      ),
+    ),
+    '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/' => 
+    array (
+      'path' => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
+      'category' => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/',
+      'name' => 'Teufelberger Tachyon Ash Lanyard Kit',
+      'brand' => 'teufelberger',
+      'brand_name' => 'Teufelberger',
+      'kind' => 'lanyard',
+      'price' => 129,
+      'keyword' => 'tachyon ash lanyard kit',
+      'title' => 'Tachyon Ash Lanyard Kit for Tree Climbers',
+      'h1' => 'Tachyon Ash Lanyard Kit',
+      'meta' => 'The Tachyon ash lanyard kit is built on Teufelberger tachyon rope in ash for work positioning. What a kit covers, how climbers use it and how to inspect it.',
+      'tagline' => 'A positioning lanyard kit built on Teufelberger tachyon rope in ash.',
+      'summary' => 'The Tachyon ash lanyard kit puts Teufelberger\'s tachyon climbing rope, in its ash colorway, together with the parts for an adjustable positioning lanyard. It gives you a second point of attachment so you can lean back and work with both hands.',
+      'highlights' => 
+      array (
+        0 => 'Built on Teufelberger tachyon rope',
+        1 => 'Ash colorway, a subdued tone',
+        2 => 'Adjustable work-positioning lanyard',
+        3 => 'Tachyon holds hitches and runs through adjusters smoothly',
+        4 => 'Kit saves sourcing parts separately',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Rope',
+          1 => 'Teufelberger tachyon',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '11.5 mm',
+        ),
+        2 => 
+        array (
+          0 => 'Color',
+          1 => 'Ash',
+        ),
+        3 => 
+        array (
+          0 => 'Type',
+          1 => 'Positioning lanyard kit',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How climbers use it',
+          'p' => 
+          array (
+            0 => 'A positioning lanyard wraps the stem or a limb and holds you in place while you cut, flip up a spar or reposition. Snug the adjuster, lean back and you have both hands free for the saw.',
+            1 => 'Tachyon is a firm 11.5 mm rope that grips well under a hitch and feeds smoothly through mechanical adjusters. The ash color is quieter than the bright options, which some climbers prefer. Read the listing for the length and adjuster type, and see all our <a href="/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/">lanyard kits</a> to compare.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Before you climb on it',
+          'p' => 
+          array (
+            0 => 'Confirm every part is assembled as the maker specifies and that the adjuster is rated for the rope diameter. Inspect the rope, eyes and hardware before every climb, and retire it after a cut, glazing, a shock load or any damage you cannot explain.',
+            1 => 'A rope lanyard is not cut resistant, so keep the saw away from it and use a wire-core flipline for heavy spar work. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+            2 => 'Keep a record of when the lanyard went into service so you can track its age along with your climbing line.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does the ash color perform differently?',
+          'a' => 'No. Color is about visibility and preference. Performance is the same tachyon rope.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I replace just the rope later?',
+          'a' => 'Yes. Replacement tachyon lanyard rope is available, so you can keep hardware that still passes inspection.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'safety',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-1.webp',
+        'sm' => '/assets/photos/lanyard-1-sm.webp',
+        'title' => 'Fall protection field trials',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/15137306027',
+      ),
+    ),
+    '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/' => 
+    array (
+      'path' => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/',
+      'category' => '/climbing/climbing-gear/hitch-cord-and-split-tails/',
+      'name' => 'Yale 10mm Beeline Split Tail',
+      'brand' => 'yale-cordage',
+      'brand_name' => 'Yale Cordage',
+      'kind' => 'rope',
+      'price' => 30,
+      'keyword' => 'yale 10mm beeline split tail',
+      'title' => 'Yale 10mm Beeline Split Tail Hitch Cord',
+      'h1' => 'Yale 10mm Beeline Split Tail',
+      'meta' => 'The Yale 10mm Beeline split tail is a polyester hitch cord for friction hitch systems. Why climbers like Beeline, how to tie it in and when to retire it.',
+      'tagline' => 'A 10 mm Beeline hitch cord with an eye for tying a split tail system.',
+      'summary' => 'The Yale 10mm Beeline split tail is a length of Yale\'s Beeline polyester hitch cord made up as a split tail, the separate cord climbers use to tie a friction hitch onto their climbing line. Beeline is known for holding a hitch firmly and handling heat well.',
+      'highlights' => 
+      array (
+        0 => '10 mm Yale Beeline hitch cord',
+        1 => 'Made up as a split tail',
+        2 => 'Holds a friction hitch firmly',
+        3 => 'Polyester construction handles heat well',
+        4 => 'Replace it often, as hitch cord is a wear item',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Cord',
+          1 => 'Yale Beeline',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '10 mm',
+        ),
+        2 => 
+        array (
+          0 => 'Material',
+          1 => 'Polyester',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Yale Cordage',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why a split tail',
+          'p' => 
+          array (
+            0 => 'A split tail separates the hitch from the climbing line. Instead of tying the hitch with the rope\'s own tail, you tie it with a dedicated cord. When the hitch cord wears, you replace a short, cheap piece instead of cutting the end off your climbing rope.',
+            1 => 'A 10 mm Beeline cord suits common 11 to 13 mm climbing lines, but always test the hitch on your actual rope before climbing on it. See more <a href="/climbing/climbing-gear/hitch-cord-and-split-tails/">hitch cord and split tails</a> for other sizes and makers.',
+            2 => 'Beeline is made for hitch work and is known for handling the heat of long descents, so it stays consistent where cheaper cord can glaze. Many climbers keep two or three split tails in the bag so a worn one can be swapped mid-job.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and retirement',
+          'p' => 
+          array (
+            0 => 'Hitch cord takes heat and wear on every descent. Check it before each climb for glazing, stiffness, fuzzing, cover damage and wear at the eye, and retire it early. Many climbers replace hitch cord much sooner than any other soft good.',
+            1 => 'Dress and set the hitch carefully and test it on the ground before leaving it. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What hitch should I tie?',
+          'a' => 'Common choices are the Distel, Valdotain tresse and similar hitches. Learn and test them under a qualified trainer.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will 10 mm grip on my rope?',
+          'a' => 'It depends on your rope\'s diameter and cover. Test it on your line at ground level first.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
+    ),
+    '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/' => 
+    array (
+      'path' => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/',
+      'name' => 'D-Shaped Locksafe Carabiner with ANSI Gate',
+      'brand' => 'dmm',
+      'brand_name' => 'DMM',
+      'kind' => 'carabiner',
+      'price' => 30,
+      'keyword' => 'd-shaped locksafe carabiner',
+      'title' => 'D-Shaped Locksafe Carabiner with ANSI Gate',
+      'h1' => 'D-Shaped Locksafe Carabiner with ANSI Gate',
+      'meta' => 'A D-shaped Locksafe carabiner with a high-strength ANSI gate for climbing systems. Where the D shape helps, how the auto-lock works and how to inspect it.',
+      'tagline' => 'An auto-locking D carabiner with a high-strength gate for climbing systems.',
+      'summary' => 'This D-shaped Locksafe carabiner pairs DMM\'s Locksafe auto-locking gate with a gate built to ANSI gate-strength requirements. The D shape puts the load near the spine, where the carabiner is strongest.',
+      'highlights' => 
+      array (
+        0 => 'D shape keeps the load near the spine',
+        1 => 'Locksafe auto-locking gate',
+        2 => 'Gate made for ANSI gate-strength requirements',
+        3 => 'For connections in arborist climbing systems',
+        4 => 'Ratings marked on the spine',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Shape',
+          1 => 'D',
+        ),
+        1 => 
+        array (
+          0 => 'Gate',
+          1 => 'Locksafe auto-locking',
+        ),
+        2 => 
+        array (
+          0 => 'Gate strength',
+          1 => 'ANSI type; see markings',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'DMM',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why an ANSI gate matters',
+          'p' => 
+          array (
+            0 => 'Arborist systems load connectors in ways sport climbing does not, with gates pressed against stems, hardware and rope. A high-strength gate gives more margin if the gate itself is loaded. Check the markings on the carabiner to confirm the gate rating, and make sure it suits the standard your work requires.',
+            1 => 'A D shape is a good general choice for lanyard ends, saddle bridges and device connections. Locksafe gates lock automatically and take a deliberate twist-and-pull to open. See other <a href="/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/">auto-locking carabiners</a> to compare shapes.',
+            2 => 'Keep connectors in your climbing system separate from rigging hardware. A carabiner that has been used to move wood may have taken loads or damage you cannot see, and it should not go back on your saddle.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use and inspection',
+          'p' => 
+          array (
+            0 => 'Load the carabiner along its spine, keep the gate closed and locked, and watch for cross-loading against other hardware. Before every climb, check that the gate closes and locks fully on its own, and look for grooves, sharp edges, cracks and corrosion. Retire it after a big fall or a drop onto a hard surface.',
+            1 => 'Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What does ANSI gate mean?',
+          'a' => 'It refers to a gate built to meet ANSI gate-strength requirements. Confirm the rating stamped on the carabiner before use.',
+        ),
+        1 => 
+        array (
+          'q' => 'How does a Locksafe gate open?',
+          'a' => 'Twist the sleeve and pull it down, then open the gate. It relocks on its own when released.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-2.webp',
+        'sm' => '/assets/photos/carabiner-2-sm.webp',
+        'title' => 'carabiner',
+        'creator' => 'ani!',
+        'creator_url' => 'https://www.flickr.com/photos/53018729@N00',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/53018729@N00/10235172',
+      ),
+    ),
+    '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/' => 
+    array (
+      'path' => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/',
+      'name' => 'DMM Shadow Carabiner, Matt Gray',
+      'brand' => 'dmm',
+      'brand_name' => 'DMM',
+      'kind' => 'carabiner',
+      'price' => 22,
+      'keyword' => 'dmm shadow carabiner',
+      'title' => 'DMM Shadow Carabiner, Matt Gray',
+      'h1' => 'DMM Shadow Carabiner, Matt Gray',
+      'meta' => 'The DMM Shadow carabiner in matt gray is an aluminum auto-locking carabiner for arborist climbing connections. Gate, finish and inspection notes in one page.',
+      'tagline' => 'An aluminum auto-locking carabiner in a low-glare matt gray finish.',
+      'summary' => 'The DMM Shadow carabiner in matt gray is an aluminum auto-locking carabiner with a keylock nose that does not snag on rope or slings. The matt gray finish has a low-glare, understated look that many climbers like.',
+      'highlights' => 
+      array (
+        0 => 'Aluminum auto-locking carabiner',
+        1 => 'Keylock nose that will not snag',
+        2 => 'Matt gray, low-glare finish',
+        3 => 'Made in Wales by DMM',
+        4 => 'Ratings marked on the spine',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Material',
+          1 => 'Aluminum',
+        ),
+        1 => 
+        array (
+          0 => 'Gate',
+          1 => 'Auto-locking',
+        ),
+        2 => 
+        array (
+          0 => 'Nose',
+          1 => 'Keylock',
+        ),
+        3 => 
+        array (
+          0 => 'Finish',
+          1 => 'Matt gray',
+        ),
+        4 => 
+        array (
+          0 => 'Brand',
+          1 => 'DMM',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where the Shadow fits',
+          'p' => 
+          array (
+            0 => 'The Shadow is a general-purpose connector for arborist work: lanyard ends, connecting devices and clipping to saddle attachment points. The keylock nose runs smoothly through rope eyes and sling loops without hooking, which saves frustration when you are clipping in one-handed.',
+            1 => 'The matt gray finish is about looks, not performance. It is the same Shadow, just in a muted color. Compare other <a href="/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/">auto-locking carabiners</a> if you need a different shape or gate.',
+            2 => 'Some climbers use color to organize their saddle, with one color for the climbing system and another for lanyards or spare connectors. A matt gray carabiner stands out from the bright anodized colors many arborist connectors come in, so it is easy to set aside for one job. It also shows fewer scuffs from bark and grit than a glossy finish. Whatever system you use, keep it consistent so you can find the right carabiner by feel and sight while working aloft.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Use and inspection',
+          'p' => 
+          array (
+            0 => 'Load it along the spine with the gate closed and locked. Before each climb, check that the gate snaps shut and locks on its own, and look for grooves, cracks, sharp edges and corrosion. Retire it after a big fall or a drop onto a hard surface.',
+            1 => 'Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does the matt gray finish change the strength?',
+          'a' => 'No. Ratings are marked on the spine and are the same as for other Shadow colors.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is the Shadow good for rigging?',
+          'a' => 'It is a climbing connector. Use rigging hardware rated for the load when moving wood.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-3.webp',
+        'sm' => '/assets/photos/carabiner-3-sm.webp',
+        'title' => 'carabiner+chains',
+        'creator' => 'brenkee',
+        'creator_url' => 'https://www.flickr.com/photos/55128416@N05',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/55128416@N05/12835828245',
+      ),
+    ),
+    '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/' => 
+    array (
+      'path' => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/',
+      'category' => '/climbing/climbing-gear/hitch-cord-and-split-tails/',
+      'name' => 'Teufelberger 10mm Ocean Polyester Split Tail',
+      'brand' => 'teufelberger',
+      'brand_name' => 'Teufelberger',
+      'kind' => 'rope',
+      'price' => 28,
+      'keyword' => 'ocean polyester split tail',
+      'title' => 'Teufelberger 10mm Ocean Polyester Split Tail',
+      'h1' => 'Teufelberger 10mm Ocean Polyester Split Tail',
+      'meta' => 'The Teufelberger 10mm Ocean Polyester split tail is a hitch cord for friction hitch climbing systems. Why climbers use it, tying tips and when to replace it.',
+      'tagline' => 'A 10 mm Ocean Polyester hitch cord made up as a split tail.',
+      'summary' => 'The Teufelberger 10mm Ocean Polyester split tail is a hitch cord made from Ocean Polyester, set up as a split tail for tying a friction hitch on your climbing line. It is a long-running favorite for climbers who want a firm, predictable hitch.',
+      'highlights' => 
+      array (
+        0 => '10 mm Ocean Polyester hitch cord',
+        1 => 'Split tail for friction hitch systems',
+        2 => 'Polyester handles heat on descents',
+        3 => 'Predictable grip on common climbing lines',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Cord',
+          1 => 'Ocean Polyester',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '10 mm',
+        ),
+        2 => 
+        array (
+          0 => 'Material',
+          1 => 'Polyester',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Teufelberger',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why Ocean Polyester',
+          'p' => 
+          array (
+            0 => 'Ocean Polyester has been used as hitch cord for years because it grabs consistently and holds up to heat on long descents. In a split tail system it is tied onto the climbing line as a separate hitch, so when it wears out you replace a short piece of cord rather than cutting your rope.',
+            1 => 'Ten millimeter cord suits many common climbing lines, but grip changes with rope diameter and cover, so test the hitch on your own line before you leave the ground. See more <a href="/climbing/climbing-gear/hitch-cord-and-split-tails/">hitch cord and split tails</a> to compare.',
+            2 => 'Keep a spare split tail in your gear bag. A worn hitch cord is a reason to swap it on the spot, and having one ready means you do not have to cut the day short or climb on a cord you are not happy with.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspection and retirement',
+          'p' => 
+          array (
+            0 => 'Check the cord before every climb for glazing, stiffness, fuzzing, cuts and wear at the eye, and retire it early. Hitch cord is the fastest-wearing soft good in your system.',
+            1 => 'Dress and set the hitch carefully and use a micro pulley or hitch tender if your system calls for one. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'How long should a split tail last?',
+          'a' => 'It depends on how much you climb and descend. Inspect it every day and retire it at the first sign of glazing or damage.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it on a 13 mm rope?',
+          'a' => 'Test the hitch on your rope at ground level first, since grip varies with rope diameter and cover.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    '/full-body-harnesses/edelrid-flex-pro-ii-harness/' => 
+    array (
+      'path' => '/full-body-harnesses/edelrid-flex-pro-ii-harness/',
+      'category' => '/safety/fall-protection/',
+      'name' => 'Edelrid Flex Pro II Harness',
+      'brand' => 'edelrid',
+      'brand_name' => 'Edelrid',
+      'kind' => 'saddle',
+      'price' => 280,
+      'keyword' => 'edelrid flex pro ii harness',
+      'title' => 'Edelrid Flex Pro II Harness: Full Body Fall Protection',
+      'h1' => 'Edelrid Flex Pro II Harness',
+      'meta' => 'The Edelrid Flex Pro II harness is a full body harness for work at height and fall protection. Who it suits, fitting advice and the checks to make before use.',
+      'tagline' => 'A full body harness from Edelrid for work at height and fall protection.',
+      'summary' => 'The Edelrid Flex Pro II harness is a full body harness for work at height, built for workers who need fall arrest attachment and comfort for long shifts. Tree crews use full body harnesses in aerial lifts and for other at-height work.',
+      'highlights' => 
+      array (
+        0 => 'Full body harness for work at height',
+        1 => 'Fall arrest attachment point',
+        2 => 'Adjustable fit for long shifts',
+        3 => 'From Edelrid, a German maker of climbing and safety gear',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Full body harness',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Work at height, fall protection',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Edelrid',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a full body harness fits',
+          'p' => 
+          array (
+            0 => 'A tree climbing saddle is built for work positioning in the canopy. A full body harness is built for fall arrest, with an attachment point between the shoulder blades that keeps you upright if you fall. Tree crews most often need one in bucket trucks and aerial lifts, where many employers and lift makers call for full body fall protection.',
+            1 => 'Check the label and Edelrid\'s documentation for the standards it is certified to and the attachment points approved for each use. See more <a href="/safety/fall-protection/">fall protection</a> gear for lanyards and connectors.',
+            2 => 'Comfort matters more than people think with a full body harness. In a bucket, you may wear it all day, and a harness that rubs or rides up gets loosened or left off. Padding, adjustable shoulder and leg straps and a good fit make it easier to wear correctly for a full shift. Try it on with the clothing you work in.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and inspection',
+          'p' => 
+          array (
+            0 => 'Fit it with all straps snug and the back attachment centered between the shoulder blades. Leg straps should be tight enough that a flat hand fits underneath but not a fist.',
+            1 => 'Inspect before every use for cut or frayed webbing, damaged stitching, cracked buckles and bent hardware, and retire it after any fall arrest. Fall protection gear must meet the applicable standard, be used per the maker\'s instructions and ANSI Z133, and be used only by trained workers.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use a full body harness for tree climbing?',
+          'a' => 'It is built for fall arrest, not canopy work positioning. Use a tree climbing saddle for climbing unless the maker approves the harness for it.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I need one in a bucket truck?',
+          'a' => 'Many employers and lift makers require full body fall protection in aerial lifts. Follow your lift\'s instructions and company rules.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+        1 => 'bucket',
+      ),
+      'level' => 'all',
+      'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-1.webp',
+        'sm' => '/assets/photos/saddle-1-sm.webp',
+        'title' => 'JnpITA',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33903505151',
+      ),
+    ),
+    '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/' => 
+    array (
+      'path' => '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/',
+      'category' => '/rope/climbing-rope/24-strand-climbing-rope/',
+      'name' => 'Arbonaut Pink and Blue 11.5mm Climbing Rope',
+      'brand' => 'courant',
+      'brand_name' => 'Courant',
+      'kind' => 'rope',
+      'price' => 239,
+      'keyword' => 'arbonaut pink and blue 11.5mm climbing rope',
+      'title' => 'Arbonaut Pink and Blue 11.5mm Climbing Rope',
+      'h1' => 'Arbonaut Pink and Blue 11.5mm Climbing Rope',
+      'meta' => 'The Arbonaut pink and blue 11.5mm climbing rope is a tree line for MRS and SRS work. How 11.5 mm handles with hitches and devices, plus inspection tips.',
+      'tagline' => 'An 11.5 mm tree climbing line in a bright pink and blue pattern.',
+      'summary' => 'The Arbonaut pink and blue 11.5mm climbing rope is a tree climbing line in a mid-range diameter that works for both moving rope and stationary rope systems. The bright pink and blue pattern is easy to spot in the canopy and easy to tell apart from rigging line.',
+      'highlights' => 
+      array (
+        0 => '11.5 mm tree climbing rope',
+        1 => 'Pink and blue pattern for visibility',
+        2 => 'Mid-range diameter for hitches and devices',
+        3 => 'Suits MRS and SRS where devices allow',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '11.5 mm',
+        ),
+        1 => 
+        array (
+          0 => 'Color',
+          1 => 'Pink and blue',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Tree climbing, MRS and SRS',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why 11.5 mm',
+          'p' => 
+          array (
+            0 => 'An 11.5 mm line sits in the middle of the arborist range. It is thick enough to grip in the hand and hold a friction hitch well, and slim enough to run through most mechanical devices and pulleys. That makes it a practical do-everything rope if you climb both moving rope and stationary rope.',
+            1 => 'Always check that your hitch cord, pulley and any device are rated for an 11.5 mm rope before you climb, and test the hitch on the ground. Compare other <a href="/rope/climbing-rope/24-strand-climbing-rope/">climbing ropes</a> in this section.',
+            2 => 'The bright pattern helps the ground crew. They can follow your line through the canopy, see where it runs over limbs and tell at a glance which rope is yours when several lines are in the tree. It also makes it harder to grab the climbing line by mistake when bagging rigging rope at the end of the job.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Care and inspection',
+          'p' => 
+          array (
+            0 => 'Keep the rope in a bag, away from fuel, bar oil, sunlight and the saw. Inspect it before every climb, along the full length, for cuts, glazing, flat spots, cover damage and core showing. Retire it after a severe shock load or any damage you cannot explain.',
+            1 => 'Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use this rope for rigging?',
+          'a' => 'No. Keep climbing rope for climbing only, and use a dedicated rigging line for moving wood.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will it work with my SRS device?',
+          'a' => 'Check the device maker\'s approved rope range and list before using any rope with it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/courant/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
+    ),
+    '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/' => 
+    array (
+      'path' => '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/',
+      'category' => '/climbing/climbing-gear/fliplines-and-lanyards/',
+      'name' => 'Yale Phantom Lanyard (Green and Purple, No Hardware)',
+      'brand' => 'yale-cordage',
+      'brand_name' => 'Yale Cordage',
+      'kind' => 'lanyard',
+      'price' => 60,
+      'keyword' => 'yale phantom lanyard',
+      'title' => 'Yale Phantom Lanyard, Green and Purple (No Hardware)',
+      'h1' => 'Yale Phantom Lanyard, Green and Purple, Without Hardware',
+      'meta' => 'The Yale Phantom lanyard in green and purple, sold without hardware so you can build it with your own adjuster and connectors. Setup tips and inspection points.',
+      'tagline' => 'A green and purple rope lanyard sold bare so you can set it up your way.',
+      'summary' => 'The Yale Phantom lanyard in green and purple comes without hardware, so you choose the adjuster and connectors that suit how you climb. The green and purple pattern stands apart from your climbing line and from other crew members\' gear.',
+      'highlights' => 
+      array (
+        0 => 'Sold without hardware for a custom build',
+        1 => 'Green and purple colorway',
+        2 => 'Works with a mechanical adjuster or a friction hitch',
+        3 => 'Rope lanyard for positioning',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rope lanyard',
+        ),
+        1 => 
+        array (
+          0 => 'Rope',
+          1 => 'Yale Phantom',
+        ),
+        2 => 
+        array (
+          0 => 'Color',
+          1 => 'Green and purple',
+        ),
+        3 => 
+        array (
+          0 => 'Hardware',
+          1 => 'Not included',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Build it your way',
+          'p' => 
+          array (
+            0 => 'Buying a lanyard bare makes sense when you already have an adjuster you trust, or you want your connectors to match the rest of your saddle. Most climbers set it up as a 2-in-1 or a standard positioning lanyard with an adjuster and a locking connector at each end.',
+            1 => 'Match the adjuster to the rope diameter its maker lists, and make sure the eyes seat on your carabiners without side-loading the gate. If you would rather buy it ready to go, see our complete <a href="/climbing/climbing-gear/fliplines-and-lanyards/">fliplines and lanyards</a>.',
+            2 => 'Bright two-tone rope also helps on busy jobs. The ground crew can see which line is your lanyard at a glance, and you are less likely to grab the wrong tail when you are tired. Record the date it went into service so you know its age when inspection time comes around.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Safe use',
+          'p' => 
+          array (
+            0 => 'Keep the lanyard snug and above the saw\'s path, and never cut toward it. A rope lanyard is not cut resistant, so use a wire-core flipline for heavy spar work.',
+            1 => 'Check it before every climb for cuts, glazing, flat spots and eye damage, and retire it after a shock load. Life-support gear must meet the applicable standard, be used per the manufacturer\'s instructions and ANSI Z133, and be inspected before every climb. Get trained before you rely on it aloft.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What hardware do I need?',
+          'a' => 'A locking carabiner or snap at each end and an adjuster or friction hitch, all rated for life support and for the rope diameter.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is the green and purple the same rope as the pink and black?',
+          'a' => 'Yes, it is the same Phantom rope. Only the color differs.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/yale-cordage/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-2.webp',
+        'sm' => '/assets/photos/lanyard-2-sm.webp',
+        'title' => 'Arborist climbing on the tree',
+        'creator' => 'Yuliya Krasylenko',
+        'creator_url' => 'https://commons.wikimedia.org/wiki/User:Yuliya_Krasylenko',
+        'license' => 'CC BY 4.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/4.0/',
+        'source_url' => 'https://commons.wikimedia.org/w/index.php?curid=97167024',
+      ),
+    ),
+    '/shop-all/premium-5-8-crane-sling-kit/' => 
+    array (
+      'path' => '/shop-all/premium-5-8-crane-sling-kit/',
+      'category' => '/rigging/rigging-slings/crane-slings/',
+      'name' => 'Premium 5/8" Crane Sling Kit',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 399,
+      'keyword' => '5/8 crane sling kit',
+      'title' => 'Premium 5/8 Crane Sling Kit for Tree Removal',
+      'h1' => 'Premium 5/8" Crane Sling Kit',
+      'meta' => 'A premium 5/8 crane sling kit puts a matched set of rope chokers on the truck for crane-assisted tree removal. What it is for, how to use it, how to inspect it.',
+      'tagline' => 'A matched set of 5/8 in rope chokers for crews doing crane removals.',
+      'summary' => 'A premium 5/8 crane sling kit bundles several 5/8 in rope crane slings so a crew has chokers ready for every pick. Rope slings are lighter to climb with than chain or wire and easier on the climber\'s hands, which matters when you are setting picks all day.',
+      'highlights' => 
+      array (
+        0 => 'Several 5/8 in premium rope crane slings in one kit',
+        1 => 'Eyes at both ends for choker hitches',
+        2 => 'Lighter to carry aloft than chain or wire rope',
+        3 => 'Lets the climber pre-set the next pick',
+        4 => 'Rated slings: check each tag before use',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '5/8 in',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Rope crane slings, kit',
+        ),
+        2 => 
+        array (
+          0 => 'Ends',
+          1 => 'Eyes at both ends',
+        ),
+        3 => 
+        array (
+          0 => 'Use',
+          1 => 'Chokers for crane-assisted removals',
+        ),
+        4 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See tag on each sling',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why buy crane slings as a kit',
+          'p' => 
+          array (
+            0 => 'On a crane job the climber rarely uses just one sling. While one piece is in the air, the next choker is already going on, and a third may be waiting on a stem that needs two slings to balance. Buying 5/8 in premium crane slings as a kit means every sling on the truck matches in diameter and construction, so the crane operator and climber know what they are working with on every pick.',
+            1 => 'The 5/8 in size suits the bulk of residential crane removals: big enough for heavy wood, light enough that a climber can carry several on the saddle. Check the listing for the lengths included. Single slings are in our <a href="/rigging/rigging-slings/crane-slings/">crane slings</a> section.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Using and inspecting crane slings',
+          'p' => 
+          array (
+            0 => 'Crane work is no place to guess. The weight of every pick must stay within the working load limit marked on the sling, allowing for the choker hitch and the sling angle, and the crane operator should know the estimated weight before the cut. Use crane slings only on crane picks and only as the tag and the crane company\'s lift plan allow.',
+            1 => 'Inspect every sling before each job. Retire any sling with cut or abraded strands, glazing, chemical damage, a missing or unreadable tag, or damage at the eyes. Store the kit clean and dry, out of the sun and away from saw fuel. Everyone involved should be trained in crane-assisted tree work and ANSI Z133 requirements.',
+            2 => 'Mark each sling\'s length on a tag or with colored tape so the climber can call for the right one quickly. Over time, retire and replace slings one at a time as they fail inspection, and keep the kit complete.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What length crane slings come in the kit?',
+          'a' => 'Kits are usually built around common choker lengths. Check the product listing for the exact count and lengths before ordering.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use crane slings for regular rigging?',
+          'a' => 'Keep crane slings for crane picks. Shock loads from conventional rigging are a different job, and mixing uses makes it harder to track sling condition.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-4.webp',
+        'sm' => '/assets/photos/sling-4-sm.webp',
+        'title' => 'Caution - Tree Surgeon at work',
+        'creator' => 'Clint__Budd',
+        'creator_url' => 'https://www.flickr.com/photos/58827557@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58827557@N06/47249256141',
+      ),
+    ),
+    '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/' => 
+    array (
+      'path' => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/',
+      'category' => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/',
+      'name' => 'DMM Keanu Pip Pin',
+      'brand' => 'dmm',
+      'brand_name' => 'DMM',
+      'kind' => 'parts',
+      'price' => 25,
+      'keyword' => 'dmm keanu pip pin',
+      'title' => 'DMM Keanu Pip Pin: Spare Pin for the Keanu',
+      'h1' => 'DMM Keanu Pip Pin',
+      'meta' => 'The DMM Keanu pip pin is a spare locking pin for DMM\'s Keanu trolley. Why to carry a spare, how to check it, and why only the genuine DMM pin should be used.',
+      'tagline' => 'A spare DMM pip pin for the Keanu trolley, so one lost pin does not end the job.',
+      'summary' => 'The DMM Keanu pip pin is the spare locking pin for DMM\'s Keanu trolley pulley. Pip pins are small and easy to drop out of the tree, and a trolley without its pin is a trolley you cannot use.',
+      'highlights' => 
+      array (
+        0 => 'Genuine DMM spare for the Keanu',
+        1 => 'Keeps the trolley usable if a pin is lost',
+        2 => 'Small enough to live in the gear bag',
+        3 => 'Check fit and function before loading',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'DMM Keanu trolley',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Pip pin (spare)',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'DMM',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why carry a spare pip pin',
+          'p' => 
+          array (
+            0 => 'The Keanu is built to ride a tensioned line, and the pip pin is part of what lets you load it onto the line and close it securely. Pins get dropped in leaf litter, left in a pocket, or bent when the trolley is thrown in the truck. A spare in the gear bag costs little and keeps a speedline job moving.',
+            1 => 'Use only the DMM pin made for the Keanu. A pin from another device may look similar but differ in diameter, length or locking action. Other small hardware is in our <a href="/rigging/blocks-and-other-hardware/rings-and-other-hardware/">rings and other hardware</a> section.',
+            2 => 'Keep the spare pin somewhere you will find it, such as a small zip pocket in the gear bag or clipped in a labelled pouch with other Keanu bits. A pin rattling loose in the truck bed is as good as lost, and the time to discover it is missing is not when the speedline is already set and tensioned.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Check it before you load',
+          'p' => 
+          array (
+            0 => 'Before each use, confirm the pin goes fully home, the locking balls engage, and it cannot be pulled out without pressing the button. Replace a pin that is bent, sticky, corroded, or slow to lock. Keep it clean of sap and grit, which can stop the balls seating.',
+            1 => 'Speedlining and other tensioned-line work put real loads on hardware. Follow DMM\'s instructions for the Keanu and ANSI Z133, and make sure the crew is trained in tensioned-line rigging before using it.',
+            2 => 'If the pin was lost while the trolley was on a line, check the side plates and sheave too before putting it back in service.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will this pin fit other DMM pulleys?',
+          'a' => 'It is sold for the Keanu. Do not assume it fits other devices; check DMM\'s information for any other use.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use a hardware-store pip pin instead?',
+          'a' => 'No. Use the genuine DMM part so dimensions and locking action match what the device was designed and tested with.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/dmm/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-3.webp',
+        'sm' => '/assets/photos/parts-3-sm.webp',
+        'title' => 'Sharpening Chainsaw Blades',
+        'creator' => 'NCDOTcommunications',
+        'creator_url' => 'https://www.flickr.com/photos/39320593@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/39320593@N03/36914543386',
+      ),
+    ),
+    '/rings-and-other-hardware/cmi-neptune-rigging-hub/' => 
+    array (
+      'path' => '/rings-and-other-hardware/cmi-neptune-rigging-hub/',
+      'category' => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/',
+      'name' => 'CMI Neptune Rigging Hub',
+      'brand' => 'cmi',
+      'brand_name' => 'CMI',
+      'kind' => 'rigging-device',
+      'price' => 65,
+      'keyword' => 'cmi neptune rigging hub',
+      'title' => 'CMI Neptune Rigging Hub: Multi-Point Anchor Hub',
+      'h1' => 'CMI Neptune Rigging Hub',
+      'meta' => 'The CMI Neptune rigging hub gives several connectors their own place at one anchor. What a rigging hub does, where it helps in tree work, and how to inspect it.',
+      'tagline' => 'A multi-point hub from CMI for tidy anchors with several connectors.',
+      'summary' => 'The CMI Neptune rigging hub is a multi-point connector that gives carabiners, pulleys and slings their own attachment points at a single anchor. It keeps a busy anchor organized so each piece loads in line instead of crowding onto one carabiner.',
+      'highlights' => 
+      array (
+        0 => 'Multiple attachment points at one anchor',
+        1 => 'Keeps connectors from cross-loading each other',
+        2 => 'Useful for redirects, haul systems and rescue setups',
+        3 => 'Made by CMI, a rope rescue hardware maker',
+        4 => 'Check the marked rating before use',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rigging hub',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'CMI',
+        ),
+        2 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See markings on the hub',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What a rigging hub does on a tree job',
+          'p' => 
+          array (
+            0 => 'When three or four connectors end up on one carabiner, they twist, load across each other and become hard to unclip. A hub like the Neptune spreads them out. One point goes to the anchor sling, and the others take a pulley, a haul system, a lanyard or a backup, each hanging in its own line of pull.',
+            1 => 'Climbers use hubs at a rescue or haul anchor, and ground crews use them to keep a mechanical advantage system tidy. Compare other options in our <a href="/rigging/blocks-and-other-hardware/rings-and-other-hardware/">rings and other hardware</a> section.',
+            2 => 'A hub also makes a system easier to read at a glance. When every connector has its own point, anyone on the crew can see what is attached to what, which matters during a rescue or when a second climber needs to take over a setup. It also speeds up teardown at the end of the day, since nothing is trapped under anything else.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Loading and inspection',
+          'p' => 
+          array (
+            0 => 'Read the ratings marked on the hub and in CMI\'s instructions, and keep every load within them. Load the hub through its intended points, keep connectors seated where they belong, and avoid levering a carabiner across an edge of the hub.',
+            1 => 'Inspect before each use for cracks, deep gouges, sharp edges, deformation and corrosion. Retire a hub that has been dropped from height onto a hard surface if you have any doubt. When it is part of a life-support or rescue system, it must meet ANSI Z133 and the maker\'s instructions, and the people using it should be trained.',
+            2 => 'Keep a record of inspections and any drops or overloads.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is a rigging hub the same as a rigging plate?',
+          'a' => 'They do the same basic job of spreading connectors at one anchor. Hubs and plates differ in shape and hole layout, so pick the one that fits your setup and ratings.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it for climbing?',
+          'a' => 'Only where CMI\'s instructions allow it and the setup meets ANSI Z133. Check the markings and documentation first.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-5.webp',
+        'sm' => '/assets/photos/rigging-device-5-sm.webp',
+        'title' => 'Nautical #5',
+        'creator' => 'Graham B Finney',
+        'creator_url' => 'https://www.flickr.com/photos/188487900@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188487900@N02/51798984894',
+      ),
+    ),
+    '/throw-line-storage/cmi-throw-line-cube/' => 
+    array (
+      'path' => '/throw-line-storage/cmi-throw-line-cube/',
+      'category' => '/climbing/climbing-gear/gear-storage/',
+      'name' => 'CMI Throw Line Cube',
+      'brand' => 'cmi',
+      'brand_name' => 'CMI',
+      'kind' => 'case-bag',
+      'price' => 40,
+      'keyword' => 'cmi throw line cube',
+      'title' => 'CMI Throw Line Cube: Collapsible Throw Line Storage',
+      'h1' => 'CMI Throw Line Cube',
+      'meta' => 'The CMI throw line cube is a collapsible box that lets you stuff and throw line without tangles. How a cube speeds up line setting and how to pack it well.',
+      'tagline' => 'A collapsible cube that keeps throw line ready to fly and folds flat in the truck.',
+      'summary' => 'The CMI throw line cube is a collapsible fabric container that stands open on the ground so you can stuff throw line in and throw again without tangles. It folds flat for storage, which helps when gear space on the truck is tight.',
+      'highlights' => 
+      array (
+        0 => 'Stands open on the ground for quick stuffing',
+        1 => 'Lets line pay out cleanly on the next throw',
+        2 => 'Folds flat for storage',
+        3 => 'Holds throw line and a weight between jobs',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Collapsible throw line cube',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'CMI',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Throw line storage and deployment',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Faster line setting',
+          'p' => 
+          array (
+            0 => 'Setting a climbing line usually takes more than one throw. With a cube, the line goes straight back into the box after a miss, and the next throw pays out from the top without the snarls you get from a pile on the grass. That saves real time on a tall tree with a tight target crotch.',
+            1 => 'Stuff the line in loosely rather than coiling it, and keep the end tied off or clipped to the cube so you do not throw the whole line into the tree. See other options in <a href="/climbing/climbing-gear/gear-storage/">gear storage</a>.',
+            2 => 'Brightly colored throw line is easier to spot in a cube and in the canopy, and keeping the weight bag on top helps the line pay out in order.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Living with it on the job',
+          'p' => 
+          array (
+            0 => 'Set the cube on level ground clear of brush and sticks that can snag the line as it pays out. When the job is done, stuff the line back in with the weight on top, fold the cube down and keep it with the climbing kit so the next setup starts clean.',
+            1 => 'Keep throw line out of saw fuel and bar oil, and wash out grit and leaves now and then. Dirty line is harder to throw and wears faster.',
+            2 => 'If you work in wet weather, let the cube and line dry out before packing them away for long. Damp line packed tight in a closed bin can stay wet for days and pick up mildew, and a soggy cube does not stand up as well on the next job.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will a cube hold more than one throw line?',
+          'a' => 'Many climbers keep two lines in one cube, often in different colors. Keep them separate if you want them to stay tangle-free.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I need a cube or will a bag do?',
+          'a' => 'A bag works, but a cube that stands open is quicker to stuff and throw from, which is why most climbers prefer one.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/case-bag-1.webp',
+        'sm' => '/assets/photos/case-bag-1-sm.webp',
+        'title' => 'STE-NL-WK3-2-duffel-bag-10454',
+        'creator' => 'Trendhim',
+        'creator_url' => 'https://www.flickr.com/photos/148219711@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/148219711@N08/50325892901',
+      ),
+    ),
+    '/wedges/hard-body-spiked-felling-wedge/' => 
+    array (
+      'path' => '/wedges/hard-body-spiked-felling-wedge/',
+      'category' => '/jobsite/chainsaw-accessories/wedges/',
+      'name' => 'Hard Body Spiked Felling Wedge',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'wedge-axe',
+      'price' => 15,
+      'keyword' => 'spiked felling wedge',
+      'title' => 'Hard Body Spiked Felling Wedge for Back Cuts',
+      'h1' => 'Hard Body Spiked Felling Wedge',
+      'meta' => 'A hard body spiked felling wedge has spikes that help it bite and stay put in the back cut. How to use it for lifting, and when to retire a plastic wedge.',
+      'tagline' => 'A hard plastic felling wedge with spikes that help it stay put in the kerf.',
+      'summary' => 'A hard body spiked felling wedge is a plastic felling wedge with spikes or barbs on its faces that grip the wood so it is less likely to back out of the cut. The hard body takes heavy blows from an axe or sledge without mushrooming as fast as softer wedges.',
+      'highlights' => 
+      array (
+        0 => 'Spiked faces help the wedge grip the kerf',
+        1 => 'Hard body takes heavy driving',
+        2 => 'Plastic, so it will not damage a chain on contact',
+        3 => 'Use for lifting and keeping the back cut open',
+        4 => 'Cheap enough to keep several on the saw belt',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Material',
+          1 => 'Hard plastic',
+        ),
+        1 => 
+        array (
+          0 => 'Faces',
+          1 => 'Spiked for grip',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Back cut lifting and holding',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why spikes help',
+          'p' => 
+          array (
+            0 => 'Smooth plastic wedges can spit back out of a wet or frozen kerf, especially when you drive them hard or the tree settles. Spikes on the faces give the wedge some bite, so it stays where you set it while you drive it home or step around the stump.',
+            1 => 'Set the wedge in the back cut as soon as there is room, then drive it to keep the kerf open and lift the tree toward the face. Use plastic or composite wedges near a running chain, never steel. More options are in <a href="/jobsite/chainsaw-accessories/wedges/">felling wedges</a>.',
+            2 => 'Hard body wedges cost little, so it pays to carry several in different sizes. A thin wedge starts the lift in a narrow kerf, and a thicker one takes over once there is room. The spiked faces matter most on the first wedge in, when the kerf is tight and the wedge is most likely to pop out under the first few blows.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Wedge sense',
+          'p' => 
+          array (
+            0 => 'Stack wedges or use two side by side for more lift, and keep a few sizes on the belt. A wedge is not a substitute for a good face, proper hinge and correct back cut. Felling should follow ANSI Z133 and be done by trained sawyers with proper PPE.',
+            1 => 'Retire wedges with cracked bodies, deep cuts from the chain, or heads so mushroomed that they glance off when struck. A broken wedge in a loaded back cut is the last thing you want.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do spikes make a wedge harder to remove?',
+          'a' => 'A little, which is the point. Tap it from the side or drive a second wedge if you need to pull one.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I drive it with a steel sledge?',
+          'a' => 'Yes, that is what a hard body wedge is for, but expect the head to wear over time and replace it when it starts to fail.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'felling',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/wedge-axe-2.webp',
+        'sm' => '/assets/photos/wedge-axe-2-sm.webp',
+        'title' => 'Axe Wood',
+        'creator' => 'Tim Wright',
+        'creator_url' => 'https://stocksnap.io/author/35280',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://stocksnap.io/photo/axe-wood-W5Z4V44TFM',
+      ),
+    ),
+    '/clothing/sweatshirts-and-jackets/arborwear-navy-orange-tech-double-thick-pullover-sweatshirt/' => 
+    array (
+      'path' => '/clothing/sweatshirts-and-jackets/arborwear-navy-orange-tech-double-thick-pullover-sweatshirt/',
+      'category' => '/clothing/sweatshirts-and-jackets/',
+      'name' => 'Arborwear Tech Double Thick Pullover Sweatshirt (Navy/Orange)',
+      'brand' => 'arborwear',
+      'brand_name' => 'Arborwear',
+      'kind' => 'apparel',
+      'price' => 99,
+      'keyword' => 'arborwear tech double thick pullover',
+      'title' => 'Arborwear Tech Double Thick Pullover, Navy/Orange',
+      'h1' => 'Arborwear Tech Double Thick Pullover Sweatshirt, Navy/Orange',
+      'meta' => 'The Arborwear Tech Double Thick pullover in navy and orange is a two-layer work sweatshirt for cold mornings in the tree. Fit, warmth, and how it handles sweat.',
+      'tagline' => 'A heavy two-layer work sweatshirt in navy with orange, built for tree crews.',
+      'summary' => 'The Arborwear Tech Double Thick pullover is a heavyweight two-layer work sweatshirt in a technical fabric, here in navy with orange. It is the layer for cold mornings that you can keep on while climbing and dragging brush.',
+      'highlights' => 
+      array (
+        0 => 'Two-layer construction for warmth',
+        1 => 'Technical fabric that handles sweat',
+        2 => 'Navy body with orange accents',
+        3 => 'Pullover style, nothing to snag',
+        4 => 'Made for working, not lounging',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Style',
+          1 => 'Pullover sweatshirt',
+        ),
+        1 => 
+        array (
+          0 => 'Construction',
+          1 => 'Double layer technical fabric',
+        ),
+        2 => 
+        array (
+          0 => 'Color',
+          1 => 'Navy/orange',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Arborwear',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'A sweatshirt built for the job',
+          'p' => 
+          array (
+            0 => 'Ordinary hoodies stretch out at the cuffs and soak through on the first climb. The Tech Double Thick takes Arborwear\'s double-layer idea and builds it in a technical fabric, so it stays warm when the morning is cold and dries better once you start working hard.',
+            1 => 'The navy body hides sap and bar oil, and the orange gives a bit of contrast against the canopy. A pullover has no zipper to catch on a lanyard or saddle. See the rest of our <a href="/clothing/sweatshirts-and-jackets/">sweatshirts and jackets</a>.',
+            2 => 'Double-layer sweatshirts are popular with tree crews because one garment covers most of a cool day. You start the morning warm, keep it on through a climb, and only reach for a jacket when it rains or the wind picks up. The heavier fabric also takes the scrapes of brush dragging and chipper feeding better than a thin fleece, and holds its shape through repeated washing.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and care',
+          'p' => 
+          array (
+            0 => 'Size it to wear over a T-shirt or base layer and under a shell when it rains. Check that the length stays tucked under your saddle without riding up when you reach overhead.',
+            1 => 'Wash it cold, keep it away from saw fuel, and hang or tumble low to keep the fabric in shape. A sweatshirt is not high-visibility apparel; if your job requires hi-vis, wear a compliant vest or shirt over it.',
+            2 => 'The orange trim also makes it easier for a ground worker to pick you out against dark bark, though it does not replace proper visibility gear.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'How is the Tech version different from the regular Double Thick?',
+          'a' => 'It uses a technical fabric meant to manage sweat better, while keeping the two-layer warmth of the original.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it count as hi-vis clothing?',
+          'a' => 'No. Wear compliant high-visibility gear over it where roadside or jobsite rules require it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'apparel',
+      ),
+      'level' => 'all',
+      'brand_path' => '/arborwear/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-1.webp',
+        'sm' => '/assets/photos/apparel-1-sm.webp',
+        'title' => 'Flannel plaid background',
+        'creator' => 'Ember Studio',
+        'creator_url' => 'https://www.flickr.com/photos/48013511@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/48013511@N07/12951396883',
+      ),
+    ),
+    '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/' => 
+    array (
+      'path' => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/',
+      'name' => 'CAMP Turbofoot Spare Webbing',
+      'brand' => 'camp',
+      'brand_name' => 'CAMP',
+      'kind' => 'ascender',
+      'price' => 25,
+      'keyword' => 'camp turbofoot spare webbing',
+      'title' => 'CAMP Turbofoot Spare Webbing: Replacement Strap',
+      'h1' => 'CAMP Turbofoot Spare Webbing',
+      'meta' => 'CAMP Turbofoot spare webbing replaces the worn boot strap on your Turbofoot foot ascender. When to swap it, how to fit it, and what else to check.',
+      'tagline' => 'Replacement strap webbing to keep a CAMP Turbofoot foot ascender in service.',
+      'summary' => 'CAMP Turbofoot spare webbing is the replacement boot strap for CAMP\'s Turbofoot foot ascender. The webbing wears faster than the metal body, and a fresh strap brings back a secure fit on the boot.',
+      'highlights' => 
+      array (
+        0 => 'Factory replacement strap for the Turbofoot',
+        1 => 'Restores a snug fit on the boot',
+        2 => 'Cheaper than replacing the ascender',
+        3 => 'Swap it at the first sign of fraying',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'CAMP Turbofoot foot ascender',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Spare webbing strap',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'CAMP',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why the strap wears first',
+          'p' => 
+          array (
+            0 => 'A foot ascender lives on your boot. The webbing grinds against bark, gravel and spur straps, takes every step of a rope walk, and soaks up sap and mud. Long before the cam and body are worn out, the strap starts to fray, stretch and slip, and a foot ascender that shifts on your boot makes every step sloppier.',
+            1 => 'Spare webbing lets you refresh the fit without retiring a good ascender. Make sure it matches your Turbofoot version. Other foot gear is in <a href="/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/">foot ascenders and foot loops</a>.',
+            2 => 'Order spare webbing before the old strap fails completely. A strap that tears during a rope walk does not usually drop you, since the ascender is only one part of the system, but it does stop the climb and leaves you to work out a fix while hanging on the rope. Swapping the strap on the tailgate takes a few minutes.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fitting and checks',
+          'p' => 
+          array (
+            0 => 'Thread the new webbing exactly as CAMP\'s instructions show, then test the fit on your climbing boot before going up. The ascender should sit firmly and not twist when you step.',
+            1 => 'While the strap is off, inspect the cam teeth, spring and pivot, and look for cracks or heavy wear on the body. Clean sap and grit out of the cam. A foot ascender is part of your SRT ascent system: follow the maker\'s instructions and ANSI Z133, and be trained in the system you climb.',
+            2 => 'Retire the whole ascender if the cam is worn smooth, the spring is weak or the body is cracked, no matter how good the new strap looks.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Does it fit the Turbofoot Evo?',
+          'a' => 'Check CAMP\'s parts information for your exact model before ordering, since straps can differ between versions.',
+        ),
+        1 => 
+        array (
+          'q' => 'How often should I replace the webbing?',
+          'a' => 'Whenever it is frayed, cut, stiff with sap or no longer holds firmly on the boot.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/camp/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/ascender-1.webp',
+        'sm' => '/assets/photos/ascender-1-sm.webp',
+        'title' => 'Prusik climb',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/5665572205',
+      ),
+    ),
+    '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/' => 
+    array (
+      'path' => '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/',
+      'category' => '/climbing/spurs/',
+      'name' => 'Weaver Synthetic Upper Climber Straps',
+      'brand' => 'weaver',
+      'brand_name' => 'Weaver',
+      'kind' => 'spur',
+      'price' => 39,
+      'keyword' => 'weaver synthetic upper climber straps',
+      'title' => 'Weaver Synthetic Upper Climber Straps for Spurs',
+      'h1' => 'Weaver Synthetic Upper Climber Straps',
+      'meta' => 'Weaver synthetic upper climber straps replace worn calf straps on tree spurs. Why synthetic beats leather in the wet, how to fit them, and what to inspect.',
+      'tagline' => 'Replacement synthetic calf straps that hold spurs firm in wet weather.',
+      'summary' => 'Weaver synthetic upper climber straps replace the calf straps on your climbing spurs with a synthetic material that does not soak up water or stretch like old leather. Fresh uppers keep the shank tight to your leg so the gaff goes in at a consistent angle.',
+      'highlights' => 
+      array (
+        0 => 'Upper (calf) straps for climbing spurs',
+        1 => 'Synthetic material handles rain and sweat',
+        2 => 'Resists stretching better than worn leather',
+        3 => 'Brings back a firm fit on the leg',
+        4 => 'Pair with lower straps for a full refresh',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Position',
+          1 => 'Upper (calf)',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Synthetic',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Weaver',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why change the uppers',
+          'p' => 
+          array (
+            0 => 'The upper strap holds the top of the spur shank against your calf. When it stretches or loosens, the spur rocks on your leg, the gaff angle changes with every step, and your ankles do more work than they should. On a long removal that is tiring and makes cutting out more likely.',
+            1 => 'Synthetic straps shrug off rain and sweat and do not need the oiling leather does. Combine them with new lower straps to make an older set of spurs feel solid again. Browse spurs and parts in <a href="/climbing/spurs/">climbing spurs</a>.',
+            2 => 'Leather straps also crack and harden as they age, especially if they are stored wet or in a hot truck. Synthetic uppers avoid most of that, so a set of spurs that only comes out a few times a month stays ready to use. If your pads are flattened too, replace them at the same time so the new straps have something firm to hold against.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and inspection',
+          'p' => 
+          array (
+            0 => 'Check that the straps suit your spur model and your pads, then fit them so the shank sits snug without cutting off circulation. Buckles should close fully and the free ends should be secured so they do not catch on brush.',
+            1 => 'Inspect straps, buckles, pads, shanks and gaffs before every climb. Spurs are life-support gear on a removal: follow the manufacturer\'s instructions and ANSI Z133, use them only on removals or where rescue requires, and be trained before you climb on spurs.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will these fit non-Weaver spurs?',
+          'a' => 'Many spur straps are interchangeable, but check strap width and buckle style against your spurs before ordering.',
+        ),
+        1 => 
+        array (
+          'q' => 'Synthetic or leather straps?',
+          'a' => 'Synthetic holds up better in wet weather and needs less care. Some climbers still prefer how leather breaks in; both work when fitted correctly.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'maintenance',
+      ),
+      'level' => 'all',
+      'brand_path' => '/weaver/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-1.webp',
+        'sm' => '/assets/photos/spur-1-sm.webp',
+        'title' => 'Wood pole ascent',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16814256419',
+      ),
+    ),
+    '/micro-pulleys/2-bronze-swivel-snap/' => 
+    array (
+      'path' => '/micro-pulleys/2-bronze-swivel-snap/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/',
+      'name' => '2" Bronze Swivel Snap',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'carabiner',
+      'price' => 12,
+      'keyword' => 'bronze swivel snap',
+      'title' => '2 Inch Bronze Swivel Snap for Gear and Tool Lines',
+      'h1' => '2" Bronze Swivel Snap',
+      'meta' => 'A 2 inch bronze swivel snap for tool tethers, throw line bags and gear lines. Why bronze resists corrosion, where it helps on a job, and what it is not for.',
+      'tagline' => 'A small bronze swivel snap for gear lines and tethers, never for life support.',
+      'summary' => 'A 2 inch bronze swivel snap is a small snap hook with a swivel eye, made from corrosion-resistant bronze. Tree crews use it on tool tethers, throw line bags and gear lines where a swivel keeps things from twisting.',
+      'highlights' => 
+      array (
+        0 => 'About 2 in overall size',
+        1 => 'Bronze resists rust and corrosion',
+        2 => 'Swivel eye stops line twist',
+        3 => 'Handy for tethers, bags and gear lines',
+        4 => 'Not for life support or rigging loads',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Size',
+          1 => '2 in',
+        ),
+        1 => 
+        array (
+          0 => 'Material',
+          1 => 'Bronze',
+        ),
+        2 => 
+        array (
+          0 => 'Type',
+          1 => 'Swivel eye snap',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a small swivel snap earns its keep',
+          'p' => 
+          array (
+            0 => 'Little snaps solve a lot of small problems on a tree job. Clip one on the end of a throw line to attach a weight or a bag, put one on a hand saw tether, or use one to hang a water bottle or radio from a saddle gear loop. The swivel lets the item spin without putting twists in the cord.',
+            1 => 'Bronze does not rust like plated steel, so it keeps working after a season of rain and sap. Larger load-rated snaps are in <a href="/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/">snap hooks</a>.',
+            2 => 'Swivel snaps in this size are also useful on gear bags and tarps, and for clipping a rope bag to the truck rack so it does not blow away. Buying a few at once makes sense; they tend to wander off into other crew members\' kits over a season.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Know its limits',
+          'p' => 
+          array (
+            0 => 'This is a gear snap, not a connector for people or rigging. Never use it in a climbing system, lanyard, or anything that holds a climber or a load of wood. Life-support connectors must be rated and meet ANSI Z133 and the manufacturer\'s requirements.',
+            1 => 'Check the gate spring now and then. A snap that no longer closes on its own should be replaced before it drops a tool out of the tree.',
+            2 => 'Bronze can still wear at the gate and swivel. Rinse off sap and grit now and then, and replace any snap with a loose swivel or bent gate.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it on a throw line?',
+          'a' => 'Yes, a small swivel snap is a common way to attach a throw weight or bag. Do not use it to haul a climbing line under load.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is bronze stronger than steel?',
+          'a' => 'No. Bronze is chosen for corrosion resistance. This snap is for light gear only.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-4.webp',
+        'sm' => '/assets/photos/carabiner-4-sm.webp',
+        'title' => '3D-printed Carabiner Clip',
+        'creator' => 'Creative Tools',
+        'creator_url' => 'https://www.flickr.com/photos/33907867@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33907867@N02/15004955370',
+      ),
+    ),
+    '/rigging-rope/9-16-husky-bull-rope-rigging-rope/' => 
+    array (
+      'path' => '/rigging-rope/9-16-husky-bull-rope-rigging-rope/',
+      'category' => '/rope/rigging-rope/',
+      'name' => '9/16" Husky Bull Rope Rigging Rope',
+      'brand' => 'husky',
+      'brand_name' => 'Husky',
+      'kind' => 'rope',
+      'price' => 209,
+      'keyword' => '9/16 husky bull rope',
+      'title' => '9/16 Husky Bull Rope: Double Braid Rigging Line',
+      'h1' => '9/16" Husky Bull Rope Rigging Rope',
+      'meta' => '9/16 Husky Bull Rope is a double braid rigging line for lowering wood on removals. Where the 9/16 size fits between 1/2 and 5/8, and how to inspect it.',
+      'tagline' => 'A 9/16 in double braid lowering line between the light 1/2 and the heavier 5/8.',
+      'summary' => '9/16 Husky Bull Rope is a double braid arborist rigging line for lowering limbs and wood, in a size that sits between the common 1/2 in and 5/8 in lines. It gives more strength than a 1/2 in line while staying lighter to carry and handle than 5/8 in.',
+      'highlights' => 
+      array (
+        0 => 'Double braid rigging rope',
+        1 => '9/16 in diameter, about 14 mm',
+        2 => 'Runs well through blocks and lowering devices',
+        3 => 'A middle size for mixed pruning and removal work',
+        4 => 'Rigging only, not for climbing',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Construction',
+          1 => 'Double braid',
+        ),
+        1 => 
+        array (
+          0 => 'Diameter',
+          1 => '9/16 in (about 14 mm)',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Arborist rigging and lowering',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See maker\'s tag and data',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why choose 9/16',
+          'p' => 
+          array (
+            0 => 'Many crews carry a 1/2 in line for light rigging and a 5/8 in line for the heavy stuff. The 9/16 in size splits the difference. It handles larger limbs and moderate wood with more margin than 1/2 in, but it is lighter to drag up the tree, easier on the hands and fits a wider range of blocks than the bigger line.',
+            1 => 'The double braid has a firm cover that holds up to wraps on a lowering device and runs smoothly through rigging blocks. Compare sizes in <a href="/rope/rigging-rope/">rigging rope</a>.',
+            2 => 'Double braid also tends to hold its round shape on a capstan or bollard better than a loose single braid, which helps the line feed predictably on a long lowering. If your crew already has 1/2 in and 5/8 in lines, a 9/16 in line can fill the gap as a second lowering rope on mid-size removals.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Rigging safely',
+          'p' => 
+          array (
+            0 => 'Rig within the rope\'s working load, not its breaking strength, and remember that dynamic loads from dropping wood can multiply the force on the line, block and anchor. Match blocks, slings and lowering devices to the 9/16 in diameter and to the loads you plan to rig.',
+            1 => 'Inspect the rope before every job. Look for cuts, glazing, crushed sections, pulled strands and cover damage, and retire it if anything is doubtful. Keep it out of saw fuel and bar oil and store it clean and dry. Rigging rope is never a climbing line, and rigging should be planned by trained crew following ANSI Z133.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use 9/16 Husky Bull Rope for climbing?',
+          'a' => 'No. It is a rigging line. Use a rope made and rated for climbing.',
+        ),
+        1 => 
+        array (
+          'q' => 'Will it fit my rigging blocks?',
+          'a' => 'Check the rope diameter range marked on the block or in its instructions before using it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-2.webp',
+        'sm' => '/assets/photos/rope-2-sm.webp',
+        'title' => 'Coiling the Rope',
+        'creator' => 'blachswan',
+        'creator_url' => 'https://www.flickr.com/photos/40883175@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40883175@N06/34254142686',
+      ),
+    ),
+    '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/' => 
+    array (
+      'path' => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
+      'category' => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/',
+      'name' => 'Teufelberger 8mm Sewn Eye-to-Eye Prusik',
+      'brand' => 'teufelberger',
+      'brand_name' => 'Teufelberger',
+      'kind' => 'rope',
+      'price' => 40,
+      'keyword' => 'teufelberger 8mm sewn eye-to-eye prusik',
+      'title' => 'Teufelberger 8mm Sewn Eye-to-Eye Prusik',
+      'h1' => 'Teufelberger 8mm Sewn Eye-to-Eye Prusik',
+      'meta' => 'The Teufelberger 8mm sewn eye-to-eye prusik is a ready-made hitch cord for friction hitches on arborist climbing lines. Rope pairing and inspection tips.',
+      'tagline' => 'A slim, ready-made hitch cord with sewn eyes for responsive friction hitches.',
+      'summary' => 'The Teufelberger 8mm sewn eye-to-eye prusik is a ready-made hitch cord with a sewn eye at each end, built for tying friction hitches on your climbing line. The slim 8 mm diameter grabs firmly and tends smoothly on many common arborist ropes.',
+      'highlights' => 
+      array (
+        0 => '8 mm hitch cord',
+        1 => 'Sewn eye at each end',
+        2 => 'Compact terminations keep the hitch short',
+        3 => 'Ready to tie out of the bag',
+        4 => 'Pairs with many 11 to 13 mm climbing lines',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '8 mm',
+        ),
+        1 => 
+        array (
+          0 => 'Terminations',
+          1 => 'Sewn eye on each end',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Teufelberger',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why 8 mm',
+          'p' => 
+          array (
+            0 => 'Hitch cord diameter sets how a hitch grips. An 8 mm cord bites harder than a 10 mm cord on the same rope, so it suits climbers on slimmer lines or anyone who wants a hitch that grabs quickly. Sewn eyes are compact compared with knotted ends, which keeps the hitch short and closer to your hand.',
+            1 => 'How it behaves depends on your rope, hitch and climbing weight, so test it low before trusting it. Other cords are in <a href="/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/">eye-to-eye prusiks</a>.',
+            2 => 'An 8 mm cord is also lighter and less bulky on the saddle, which some climbers like for a backup or a second hitch on a dual system. The trade-off is that slimmer cord can wear faster than a thicker one, so check it closely and keep a spare in the bag.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Set up and care',
+          'p' => 
+          array (
+            0 => 'Tie a hitch you have been trained on, dress it neatly, and test it close to the ground before climbing. If it slips or binds, adjust wraps and braids. Pair it with a micro pulley to tend the hitch smoothly.',
+            1 => 'Friction hitches build heat, so watch for glazing, stiffness and fuzzing, and replace the cord at the first sign of damage or wear in the sewn eyes. A hitch cord is life-support gear: follow Teufelberger\'s instructions and ANSI Z133 and inspect it before every climb.',
+            2 => 'Carry the spare in a clean bag so grit does not get into the fibers before you need it.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What rope does an 8mm prusik suit?',
+          'a' => 'It is commonly used on 11 to 13 mm climbing lines. Always test the combination before climbing on it.',
+        ),
+        1 => 
+        array (
+          'q' => 'When should I retire the prusik?',
+          'a' => 'When you see glazing, cuts, stiffness, flat spots or wear at the sewn eyes, or if it fails inspection for any reason.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/teufelberger/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-3.webp',
+        'sm' => '/assets/photos/rope-3-sm.webp',
+        'title' => 'IMG_0397',
+        'creator' => 'hojaleaf',
+        'creator_url' => 'https://www.flickr.com/photos/55231619@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/55231619@N00/499171630',
+      ),
+    ),
+    '/shop-all/twist-lock-modified-d-steel-carabiner/' => 
+    array (
+      'path' => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/',
+      'name' => 'Twist-Lock Modified D Steel Carabiner',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'carabiner',
+      'price' => 18,
+      'keyword' => 'twist-lock modified d steel carabiner',
+      'title' => 'Twist-Lock Modified D Steel Carabiner for Tree Work',
+      'h1' => 'Twist-Lock Modified D Steel Carabiner',
+      'meta' => 'A twist-lock modified D steel carabiner pairs tough steel with an auto-locking gate. Where steel beats aluminum in tree work and how to inspect the gate.',
+      'tagline' => 'A durable steel modified D with an auto-locking twist gate for hard-wearing jobs.',
+      'summary' => 'A twist-lock modified D steel carabiner is a hard-wearing connector with a self-closing, twist-locking gate and an asymmetric D shape. Steel holds up to rope wear and rough handling better than aluminum, which suits rigging and ground work.',
+      'highlights' => 
+      array (
+        0 => 'Steel body for wear resistance',
+        1 => 'Modified D shape keeps loads near the spine',
+        2 => 'Twist-lock gate locks on its own',
+        3 => 'Good for rigging, haul systems and anchors',
+        4 => 'Check markings for ratings',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Material',
+          1 => 'Steel',
+        ),
+        1 => 
+        array (
+          0 => 'Shape',
+          1 => 'Modified D',
+        ),
+        2 => 
+        array (
+          0 => 'Gate',
+          1 => 'Twist-lock, auto-locking',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See markings on the spine',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'When steel makes sense',
+          'p' => 
+          array (
+            0 => 'Aluminum carabiners are light, which is why climbers like them on the saddle. Steel is heavier but far more resistant to grooving from rope, and it shrugs off being dropped, dragged and thrown in the truck. That makes a steel modified D a good fit for rigging points, lowering devices, haul systems and anchors.',
+            1 => 'The modified D keeps the load toward the strong spine while opening wide enough for rope eyes and slings. More auto-lockers are in <a href="/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/">auto-locking carabiners</a>.',
+            2 => 'Steel also makes sense where a carabiner meets a steel ring, chain or wire rope, since aluminum wears quickly against harder metal. Many crews keep a handful of steel twist-locks in the rigging bag for these jobs and leave the lighter aluminum connectors on the climbing saddle.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Gate checks and inspection',
+          'p' => 
+          array (
+            0 => 'A twist-lock gate should snap shut and lock on its own every time. Check it before every use, and keep sap and grit out of the sleeve. Load the carabiner along its spine, avoid cross-loading and three-way loading, and keep it away from edges that can lever the gate.',
+            1 => 'Retire a carabiner with a sticky gate, cracks, deep grooves, sharp edges or corrosion. Only use it for life support if it is marked and rated for that and meets ANSI Z133 and the manufacturer\'s instructions.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is steel stronger than aluminum?',
+          'a' => 'Steel carabiners often have higher strength ratings and wear better, but they weigh more. Always read the marked ratings.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I climb on it?',
+          'a' => 'Only if it is marked and certified for life support and suits your system. Life-support gear must meet ANSI Z133 and the manufacturer\'s instructions, be inspected before every use, and be used only by trained climbers.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'climbing',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-0.webp',
+        'sm' => '/assets/photos/carabiner-0-sm.webp',
+        'title' => 'Carabiner',
+        'creator' => 'mikemol',
+        'creator_url' => 'https://www.flickr.com/photos/28208534@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/28208534@N07/8350737864',
+      ),
+    ),
+    '/shop-all/petzl-avao-fast-international-version/' => 
+    array (
+      'path' => '/shop-all/petzl-avao-fast-international-version/',
+      'category' => '/safety/fall-protection/',
+      'name' => 'Petzl Avao Fast Harness (International Version)',
+      'brand' => 'petzl',
+      'brand_name' => 'Petzl',
+      'kind' => 'saddle',
+      'price' => 330,
+      'keyword' => 'petzl avao fast',
+      'title' => 'Petzl Avao Fast Harness, International Version',
+      'h1' => 'Petzl Avao Fast Harness (International Version)',
+      'meta' => 'The Petzl Avao Fast international version is a full-body fall arrest and work positioning harness. What international means, who it suits, and how to check it.',
+      'tagline' => 'A full-body work-at-height harness with FAST buckles, international certification.',
+      'summary' => 'The Petzl Avao Fast international version is a full-body harness for fall arrest, work positioning and suspension, with FAST automatic buckles that make it quick to put on. The international version is built to the certifications used outside North America, so check that it suits your jurisdiction.',
+      'highlights' => 
+      array (
+        0 => 'Full-body harness for work at height',
+        1 => 'FAST automatic buckles for quick on and off',
+        2 => 'Fall arrest and work positioning attachment points',
+        3 => 'International version, separate from the North American model',
+        4 => 'Suits bucket, utility and rope access work',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Full-body harness',
+        ),
+        1 => 
+        array (
+          0 => 'Buckles',
+          1 => 'FAST automatic',
+        ),
+        2 => 
+        array (
+          0 => 'Version',
+          1 => 'International',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Petzl',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where it fits in tree work',
+          'p' => 
+          array (
+            0 => 'Tree climbers usually work from a saddle, but a full-body harness comes into play in aerial lifts, on utility jobs, for rope access and anywhere fall arrest is required. The Avao Fast gives fall arrest attachment points along with positioning and suspension, and the FAST buckles let you get in and out without rethreading.',
+            1 => 'Petzl sells the Avao in different versions for different markets. The international version carries the certifications used outside North America, which may not be what your employer or local rules require. Compare options in <a href="/safety/fall-protection/">fall protection</a>.',
+            2 => 'Buckle style is one of the main selling points. FAST buckles open and close quickly with gloves on, so a worker getting in and out of a lift several times a day does not have to rethread straps every time, and the harness stays adjusted between uses.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit, inspection and training',
+          'p' => 
+          array (
+            0 => 'Size the harness to your body and work clothing, adjust it fully, and hang test it before work. Use the attachment points only for the purposes Petzl specifies, and pair it with connectors and lanyards suited to fall arrest.',
+            1 => 'Inspect webbing, stitching, buckles and attachment points before each use and keep a record. Retire it after a fall arrest or when inspection finds damage. Fall protection must follow the manufacturer\'s instructions and the rules for your work, including ANSI Z133 for tree work, and users must be trained.',
+            2 => 'Store the harness clean and dry, out of sunlight and away from fuel, oil and solvents, which can weaken webbing without obvious signs.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is the difference between the international and North American versions?',
+          'a' => 'They are built to different certification schemes. Choose the version that matches the standards required where you work.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use it as a tree climbing saddle?',
+          'a' => 'It is a work-at-height harness rather than a dedicated arborist saddle. For routine climbing, most arborists use a tree climbing saddle.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+        1 => 'bucket',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-2.webp',
+        'sm' => '/assets/photos/saddle-2-sm.webp',
+        'title' => 'Saving Tyr 6',
+        'creator' => 'ToobyDoo',
+        'creator_url' => 'https://www.flickr.com/photos/7977078@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7977078@N02/2876232015',
+      ),
+    ),
+    '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/' => 
+    array (
+      'path' => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/',
+      'category' => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/',
+      'name' => 'Petzl Sequoia Replacement Bridge (2019 Updated Version)',
+      'brand' => 'petzl',
+      'brand_name' => 'Petzl',
+      'kind' => 'saddle',
+      'price' => 45,
+      'keyword' => 'petzl sequoia replacement bridge',
+      'title' => 'Petzl Sequoia Replacement Bridge, 2019 Version',
+      'h1' => 'Petzl Sequoia Replacement Bridge (2019 Updated Version)',
+      'meta' => 'The Petzl Sequoia replacement bridge, 2019 updated version, swaps out a worn bridge on Sequoia saddles. How to check fit, when to replace it, what to inspect.',
+      'tagline' => 'The updated replacement bridge for Petzl Sequoia saddles, the part that wears first.',
+      'summary' => 'The Petzl Sequoia replacement bridge, 2019 updated version, is the replacement bridge for Petzl Sequoia tree climbing saddles. The bridge takes rope wear from your hitch and hardware every day, so replacing it on schedule keeps the saddle in service.',
+      'highlights' => 
+      array (
+        0 => 'Replacement bridge for Petzl Sequoia saddles',
+        1 => '2019 updated version',
+        2 => 'Cheaper than replacing the saddle',
+        3 => 'Install and check per Petzl\'s instructions',
+        4 => 'Inspect before every climb',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'Petzl Sequoia saddles (check model)',
+        ),
+        1 => 
+        array (
+          0 => 'Version',
+          1 => '2019 updated',
+        ),
+        2 => 
+        array (
+          0 => 'Type',
+          1 => 'Replacement saddle bridge',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Petzl',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why bridges get replaced',
+          'p' => 
+          array (
+            0 => 'The bridge is where your climbing system attaches, and everything slides along it all day. Carabiners, rings and hitch climbers grind at the rope, and sap, grit and heat speed up the wear. That is why a bridge is meant to be replaced long before the rest of the saddle.',
+            1 => 'Petzl updated the Sequoia bridge in 2019. Check which saddle and bridge you have before ordering so the new part matches your saddle\'s attachment points. Other parts are in <a href="/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/">saddle parts and shoulder harnesses</a>.',
+            2 => 'Many climbers mark the install date on a tag or in a logbook so they know how long the bridge has been in service. Keeping a spare bridge in the truck means a worn one can be swapped as soon as it fails inspection instead of being nursed through another week.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Install and inspect',
+          'p' => 
+          array (
+            0 => 'Follow Petzl\'s instructions for swapping the bridge, including how it is routed through the saddle\'s attachment points and how any connectors are closed. Have a competent person check it if you are unsure, and hang test before climbing.',
+            1 => 'Inspect the bridge before every climb for cuts, glazing, flat spots, core damage and wear at the ends. Retire it at the first doubt. A bridge is life-support gear and must meet ANSI Z133 and the manufacturer\'s requirements.',
+            2 => 'Check the connecting hardware at both ends of the bridge as well, since metal parts can wear sharp edges that damage a new bridge quickly.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will the 2019 bridge fit an older Sequoia?',
+          'a' => 'Check Petzl\'s compatibility information for your saddle\'s model and year before ordering.',
+        ),
+        1 => 
+        array (
+          'q' => 'How often should I replace the bridge?',
+          'a' => 'Whenever inspection shows wear or damage. Heavy climbers often go through bridges in a season or less.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-3.webp',
+        'sm' => '/assets/photos/saddle-3-sm.webp',
+        'title' => 'Tree Surgeon',
+        'creator' => 'Tim Sheerman-Chase',
+        'creator_url' => 'https://www.flickr.com/photos/68932647@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68932647@N00/7738607258',
+      ),
+    ),
+    '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/' => 
+    array (
+      'path' => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/',
+      'category' => '/rigging/rigging-slings/adjustable-slings/',
+      'name' => '5/8" Whoopie Ring Sling with Large Ring',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 110,
+      'keyword' => '5/8 whoopie ring sling',
+      'title' => '5/8 Whoopie Ring Sling with Large Ring',
+      'h1' => '5/8" Whoopie Ring Sling with Large Ring',
+      'meta' => 'A 5/8 whoopie ring sling with a large ring gives you an adjustable rigging point and a smooth ring for natural-crotch style lowering. Uses, setup, inspection.',
+      'tagline' => 'An adjustable 5/8 in sling with a large ring for a smooth, quick rigging point.',
+      'summary' => 'A 5/8 whoopie ring sling with a large ring combines an adjustable whoopie sling with a large rigging ring on the fixed eye. It gives you a low-friction point to run a rigging line through, set at the right spot on stems of many sizes.',
+      'highlights' => 
+      array (
+        0 => '5/8 in adjustable whoopie body',
+        1 => 'Large ring for a smooth rope path',
+        2 => 'Fits stems from small to large',
+        3 => 'Fast to set, no knots',
+        4 => 'Ratings on sling tag and ring markings',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '5/8 in',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Adjustable whoopie sling with ring',
+        ),
+        2 => 
+        array (
+          0 => 'Hardware',
+          1 => 'Large ring',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See sling tag and ring markings',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How a ring sling is used',
+          'p' => 
+          array (
+            0 => 'A ring sling gives you a rigging point that works like a natural crotch but with less wear on the tree and the rope. Run the rigging line through the ring, choke or girth the sling on the stem and snug it up with the adjustable eye. The whoopie body means one sling suits a wide range of stem sizes.',
+            1 => 'The large ring gives the rope room and a smooth bend. Some climbers pair two ring slings to create a friction point or a redirect. More adjustable slings are in <a href="/rigging/rigging-slings/adjustable-slings/">adjustable slings</a>.',
+            2 => 'Ring slings are light and quick to install compared with a block and sling, so many climbers keep one on the saddle for fast rigging points while pruning or doing light removal work. The large ring also accepts a range of rope diameters, which makes it handy when the rigging line on the truck changes from job to job.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Loads and inspection',
+          'p' => 
+          array (
+            0 => 'A ring adds friction compared with a block, which helps on some lowering jobs but also means more heat and wear. Keep loads within the lowest rating in the system, including the sling, ring, rope and anchor, and allow for shock loading.',
+            1 => 'Inspect the sling before every job for cut or pulled strands, glazing, crushed sections and splice damage, and check the ring for grooves, cracks or sharp edges. Retire anything doubtful. Rigging should be planned by a trained crew following ANSI Z133.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use a ring sling in place of a block?',
+          'a' => 'For lighter pieces and certain techniques, yes. Heavier rigging generally calls for a block, which reduces friction and wear.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I adjust a whoopie sling?',
+          'a' => 'Pull the tail to shorten the adjustable eye until it is snug. Follow the maker\'s instructions for minimum bury and tail length.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
+      ),
+    ),
+    '/12-strand-climbing-rope/mastodon-5-8-rigging-rope/' => 
+    array (
+      'path' => '/12-strand-climbing-rope/mastodon-5-8-rigging-rope/',
+      'category' => '/rope/rigging-rope/',
+      'name' => 'Mastodon 5/8 in. 12-Strand Rigging Rope',
+      'brand' => 'mastodon',
+      'brand_name' => 'Mastodon',
+      'kind' => 'rope',
+      'price' => 260,
+      'keyword' => 'mastodon 5/8 rigging rope',
+      'title' => 'Mastodon 5/8 Rigging Rope, 12-Strand',
+      'h1' => 'Mastodon 5/8 in. Rigging Rope',
+      'meta' => 'Mastodon 5/8 rigging rope is a 12-strand braided lowering line for removals and heavier wood. Why single braid is easy to splice and inspect, and how to rig it.',
+      'tagline' => 'A 5/8 in 12-strand lowering line for removals, easy to splice and inspect.',
+      'summary' => 'Mastodon 5/8 rigging rope is a 12-strand single-braid line for lowering heavier limbs and wood on removals. The 5/8 in size steps up from the 1/2 in version for bigger pieces, and the 12-strand braid is simple to inspect and splice.',
+      'highlights' => 
+      array (
+        0 => '5/8 in diameter',
+        1 => '12-strand single braid',
+        2 => 'Easy to inspect and splice',
+        3 => 'For lowering heavier wood on removals',
+        4 => 'Rigging only, not for climbing',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '5/8 in.',
+        ),
+        1 => 
+        array (
+          0 => 'Construction',
+          1 => '12-strand braid',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Rigging and lowering only',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'A step up in size',
+          'p' => 
+          array (
+            0 => 'The 1/2 in Mastodon line handles everyday pruning cuts and small wood. When the removals get bigger, the 5/8 in version adds strength and a thicker line that is easier to grip and wrap on a lowering device. It is a good main lowering line for crews who regularly take down large trees.',
+            1 => 'Single-braid construction shows its damage on the outside, so you can see cuts and pulled strands during inspection. It also takes a spliced eye quickly with a fid. Compare other lines in <a href="/rope/rigging-rope/">rigging rope</a>.',
+            2 => 'Bigger rope is also kinder to the hands when lowering heavy pieces, and it gives a ground worker more to hold onto when taking wraps on a lowering device. The trade-off is weight: a long 5/8 in line is a heavy coil to carry, so many crews keep it in a dedicated rope bag ready at the truck.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Rigging with it',
+          'p' => 
+          array (
+            0 => 'Match the rope to blocks, rings and lowering devices that accept 5/8 in line. Rig within the working load, and allow for shock loads from dropping pieces, which can be several times the weight of the wood.',
+            1 => 'Inspect before every job and retire the rope if you find cuts, heavy fuzzing, glazing, stiff or crushed sections or chemical damage. Keep it away from saw fuel and bar oil. This is a rigging line, not a climbing rope, and rigging should be done by trained crews following ANSI Z133.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I climb on Mastodon rigging rope?',
+          'a' => 'No. Use a rope made and rated for climbing.',
+        ),
+        1 => 
+        array (
+          'q' => 'Why choose 12-strand over double braid?',
+          'a' => '12-strand is simple to splice and inspect. Double braid has a protective cover and different handling. Both are common rigging choices.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-0.webp',
+        'sm' => '/assets/photos/rope-0-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    '/mechanical-advantage/winch-line-for-stein-ss-rcwinch/' => 
+    array (
+      'path' => '/mechanical-advantage/winch-line-for-stein-ss-rcwinch/',
+      'category' => '/rigging/mechanical-advantage/',
+      'name' => 'Stein SS RC Winch Line',
+      'brand' => 'stein',
+      'brand_name' => 'Stein',
+      'kind' => 'rope',
+      'price' => 95,
+      'keyword' => 'stein ss rc winch line',
+      'title' => 'Stein SS RC Winch Line: Replacement Rope',
+      'h1' => 'Stein SS RC Winch Line',
+      'meta' => 'A Stein SS RC winch line is the replacement rope for Stein\'s portable winch, for pulling trees and tensioning lines. How to match it and check it before a pull.',
+      'tagline' => 'Replacement rope for the Stein SS RC winch, sized to the drum and the job.',
+      'summary' => 'This Stein SS RC winch line is the replacement rope for Stein\'s portable winch, used to pull over trees, tension lines and move heavy wood. A rope matched to the winch runs properly on the drum and keeps the system working as designed.',
+      'highlights' => 
+      array (
+        0 => 'Replacement line for the Stein SS RC winch',
+        1 => 'Matched to the winch\'s rope requirements',
+        2 => 'For pulls, tensioning and directional felling assistance',
+        3 => 'Inspect before every pull',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'Stein SS RC winch',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Winch line',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Stein',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why use the matched line',
+          'p' => 
+          array (
+            0 => 'A portable winch is only as good as the rope on it. Diameter, construction and stretch affect how the line grips and stores on the drum, and a mismatched rope can slip, wear quickly or overload the winch. Ordering the line made for the SS RC winch takes the guesswork out of it.',
+            1 => 'Crews use a winch to pull trees over against a lean, tension a speedline, or skid logs where a vehicle cannot reach. Check the winch manual for rope type and diameter before ordering. Related gear is in <a href="/rigging/mechanical-advantage/">mechanical advantage</a>.',
+            2 => 'Keep the old rope as a reference when you order. Note its length, diameter and how it attaches to the winch, and compare those with the replacement. If the old line failed or showed unusual wear, work out why before you put a new rope on, so the same problem does not chew through it too.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Inspect and pull safely',
+          'p' => 
+          array (
+            0 => 'Before each pull, inspect the rope for cuts, abrasion, glazing, crushed sections and splice damage, and retire it if in doubt. Anchor the winch to something that will not move, and keep the crew out of the line of fire and the bight of the rope.',
+            1 => 'Winching puts high, steady loads on rope, slings and anchors. Know the ratings of every component, follow Stein\'s instructions and ANSI Z133, and make sure operators are trained.',
+            2 => 'Spool the new line onto the winch under light tension so it lays evenly and does not bite into itself on the first heavy pull.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will this rope fit other capstan winches?',
+          'a' => 'It is offered for the Stein SS RC winch. Check another winch\'s manual for its rope requirements before using it there.',
+        ),
+        1 => 
+        array (
+          'q' => 'How long does winch rope last?',
+          'a' => 'It depends on loads and use. Retire it when inspection shows wear or damage, not on a fixed schedule.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+        1 => 'felling',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/stein/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rope-1.webp',
+        'sm' => '/assets/photos/rope-1-sm.webp',
+        'title' => 'Walt coiling the rope at the summit',
+        'creator' => 'Tristan Higbee',
+        'creator_url' => 'https://www.flickr.com/photos/62264264@N03',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/62264264@N03/8305035257',
+      ),
+    ),
+    '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/' => 
+    array (
+      'path' => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
+      'category' => '/climbing/spurs/replacement-gaffs-and-parts/',
+      'name' => 'Edelrid Talon Lower Straps',
+      'brand' => 'edelrid',
+      'brand_name' => 'Edelrid',
+      'kind' => 'spur',
+      'price' => 45,
+      'keyword' => 'edelrid talon lower straps',
+      'title' => 'Edelrid Talon Lower Straps: Replacement Ankle Straps',
+      'h1' => 'Edelrid Talon Lower Straps',
+      'meta' => 'Edelrid Talon lower straps replace worn ankle straps on Edelrid Talon climbing spurs. When to swap them, how to fit them, and what else to inspect on spurs.',
+      'tagline' => 'Factory replacement ankle straps for Edelrid Talon climbing spurs.',
+      'summary' => 'Edelrid Talon lower straps are the replacement ankle straps for Edelrid Talon climbing spurs. They hold the foot stirrup firmly to your boot, so fresh straps keep the spur from rolling under your instep.',
+      'highlights' => 
+      array (
+        0 => 'Made for Edelrid Talon spurs',
+        1 => 'Holds the stirrup tight to the boot',
+        2 => 'Replaces frayed or stretched straps',
+        3 => 'Pair with the upper strap system for a full refresh',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'Edelrid Talon spurs',
+        ),
+        1 => 
+        array (
+          0 => 'Position',
+          1 => 'Lower (ankle)',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'Edelrid',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why lower straps matter',
+          'p' => 
+          array (
+            0 => 'The lower strap is what keeps the spur locked to your boot. When it stretches or frays, the stirrup shifts and the spur can roll, which changes the gaff angle and puts strain on your ankle. On a long removal that shows up as fatigue and a less secure stance.',
+            1 => 'Lower straps get hammered by bark, brush and boot laces, so they often wear out before the uppers. Replacing them is cheap compared with new spurs. More Talon parts, including gaffs and upper straps, are in <a href="/climbing/spurs/replacement-gaffs-and-parts/">replacement gaffs and parts</a>.',
+            2 => 'Climbers who change boots between seasons should recheck strap fit with each pair, since a different boot shape changes how the stirrup sits. Carrying a spare set in the truck is cheap insurance on a multi-day removal.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and inspection',
+          'p' => 
+          array (
+            0 => 'Install the straps following Edelrid\'s instructions and check they hold the stirrup firmly to your boot without pinching. Secure loose ends so they cannot catch on brush or the other spur.',
+            1 => 'Inspect straps, buckles, shanks and gaffs before every climb. Spurs are life-support gear on a removal: follow the manufacturer\'s instructions and ANSI Z133, and be trained before you climb on them.',
+            2 => 'Look for wear on the gaffs at the same time. Gaffs need sharpening and eventually replacement, and a dull gaff is more likely to cut out.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do these fit other spurs?',
+          'a' => 'They are made for Edelrid Talons. Check width and attachment before trying them on other spurs.',
+        ),
+        1 => 
+        array (
+          'q' => 'Should I replace uppers and lowers together?',
+          'a' => 'If both are worn, yes. Otherwise replace whichever fails inspection.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/edelrid/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/spur-2.webp',
+        'sm' => '/assets/photos/spur-2-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813825794',
+      ),
+    ),
+    '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/' => 
+    array (
+      'path' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
+      'category' => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/',
+      'name' => 'ISC Captive Eye Supersafe Carabiner',
+      'brand' => 'isc',
+      'brand_name' => 'ISC',
+      'kind' => 'carabiner',
+      'price' => 32,
+      'keyword' => 'isc captive eye supersafe carabiner',
+      'title' => 'ISC Captive Eye Supersafe Carabiner',
+      'h1' => 'ISC Captive Eye Supersafe Carabiner',
+      'meta' => 'The ISC captive eye Supersafe carabiner holds a rope eye or sling in place and locks with ISC\'s Supersafe gate. How climbers use it and how to inspect it.',
+      'tagline' => 'An auto-locking carabiner with a captive eye that holds terminations in position.',
+      'summary' => 'The ISC captive eye Supersafe carabiner is an auto-locking connector with a captive eye at one end that keeps a rope eye, sling or device in position. The Supersafe gate locks automatically, and the captive eye stops the carabiner from rotating into a cross-loaded position.',
+      'highlights' => 
+      array (
+        0 => 'Captive eye holds terminations in place',
+        1 => 'Prevents rotation and cross-loading',
+        2 => 'Supersafe auto-locking gate',
+        3 => 'Popular for lanyards and termination points',
+        4 => 'Made by ISC',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Gate',
+          1 => 'Supersafe auto-locking',
+        ),
+        1 => 
+        array (
+          0 => 'Feature',
+          1 => 'Captive eye',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'ISC',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See markings on the spine',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What the captive eye does',
+          'p' => 
+          array (
+            0 => 'A normal carabiner can turn under load so the rope eye slides toward the gate or the minor axis. A captive eye traps the termination in the correct position, so the carabiner stays oriented along its spine. That makes it a good choice at the end of a lanyard, on a rope termination, or on a device where you want a clean, consistent clip.',
+            1 => 'The Supersafe gate locks on its own when you let it close, which removes one more thing to think about aloft. Other auto-lockers are in <a href="/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/">auto-locking carabiners</a>.',
+            2 => 'Captive eye carabiners are also popular on micro pulleys and hitch climber setups, where you want the pulley or termination to stay in the same position on the carabiner every time you clip it. That consistency helps your system tend smoothly and makes inspection easier, since you always know where each part should sit.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Checks before every climb',
+          'p' => 
+          array (
+            0 => 'Confirm the gate closes and locks fully on its own and that the captive eye holds the termination as intended. Keep sap and grit out of the gate and sleeve. Retire the carabiner if it is cracked, deeply grooved, bent or has a sticky gate.',
+            1 => 'Carabiners in a climbing system are life-support gear. Life-support gear must meet ANSI Z133 and the manufacturer\'s instructions, be inspected before every use, and be used only by trained climbers.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I remove the captive eye?',
+          'a' => 'Follow ISC\'s instructions. The eye is meant to be installed with a termination in place; do not modify it.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is it suitable for a flipline?',
+          'a' => 'Captive eye carabiners are commonly used at lanyard ends. Check that it suits your lanyard\'s termination and ISC\'s guidance.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/isc/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/carabiner-1.webp',
+        'sm' => '/assets/photos/carabiner-1-sm.webp',
+        'title' => 'Carabiners and Pulley',
+        'creator' => 'psd',
+        'creator_url' => 'https://www.flickr.com/photos/45581782@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/45581782@N00/2411001794',
+      ),
+    ),
+    '/adjustable-slings/7-8-whoopie-sling/' => 
+    array (
+      'path' => '/adjustable-slings/7-8-whoopie-sling/',
+      'category' => '/rigging/rigging-slings/adjustable-slings/',
+      'name' => '7/8" Whoopie Sling',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 135,
+      'keyword' => '7/8 whoopie sling',
+      'title' => '7/8 Whoopie Sling for Heavy Rigging',
+      'h1' => '7/8" Whoopie Sling',
+      'meta' => 'A 7/8 whoopie sling is an adjustable rigging sling for heavy blocks and big wood. Why go up to 7/8 in, how to set it on large stems, and how to inspect it.',
+      'tagline' => 'A heavy-duty adjustable sling for big blocks, big stems and heavy removals.',
+      'summary' => 'A 7/8 whoopie sling is an adjustable arborist rigging sling sized for heavy removals and large rigging blocks. Like smaller whoopies, it has a fixed eye and an adjustable eye, so one sling fits stems of many sizes, with the extra strength that big wood calls for.',
+      'highlights' => 
+      array (
+        0 => '7/8 in hollow-braid body',
+        1 => 'Fixed eye and adjustable eye',
+        2 => 'Sized for heavy blocks and big stems',
+        3 => 'Adjusts to fit, no knots needed',
+        4 => 'Ratings on the sling tag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Diameter',
+          1 => '7/8 in',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Adjustable whoopie sling',
+        ),
+        2 => 
+        array (
+          0 => 'Ends',
+          1 => 'Fixed eye and adjustable eye',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See tag and maker\'s information',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'When to step up to 7/8',
+          'p' => 
+          array (
+            0 => 'Most crews start with 1/2 in and 5/8 in whoopies, which cover everyday rigging. When you are hanging a large block for heavy wood or rigging big leaders on a removal, a 7/8 in whoopie gives a stronger sling that matches heavier blocks and rope.',
+            1 => 'The adjustable eye lets you choke a large stem and pull the sling tight without tying a knot, then loosen it easily after the job. It is heavier than smaller slings, so it is a removal tool rather than an everyday pruning sling. Compare sizes in <a href="/rigging/rigging-slings/adjustable-slings/">adjustable slings</a>.',
+            2 => 'Large rigging blocks often have big sling attachment points designed for heavy slings, and a 7/8 in whoopie fits these well. Pairing a heavy block with a light sling makes the sling the weak point, so size them together.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Rigging and inspection',
+          'p' => 
+          array (
+            0 => 'Keep the rigging load within the sling\'s working load limit, allowing for the hitch, the sling angle and shock loading. Every piece in the system, including block, rope and anchor, needs to be sized for the same loads.',
+            1 => 'Inspect before every job for cut or pulled strands, glazing, crushed sections and damage near the splices and at the adjustable eye. Retire it if anything looks wrong. Heavy rigging should be planned by a trained crew following ANSI Z133.',
+            2 => 'Store heavy slings clean and dry, out of the sun and away from saw fuel, and coil them loosely so the adjustable eye does not take a permanent set.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is a 7/8 whoopie overkill for pruning?',
+          'a' => 'Usually. A 1/2 or 5/8 in sling is lighter and handles typical pruning loads. Save the 7/8 for heavy removal rigging.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I loosen a whoopie after a heavy load?',
+          'a' => 'Push slack back toward the adjustable eye by working the braid. Do not cut or pry at it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-1.webp',
+        'sm' => '/assets/photos/sling-1-sm.webp',
+        'title' => 'Climbing paraphernalia',
+        'creator' => 'Ruth and Dave',
+        'creator_url' => 'https://www.flickr.com/photos/95142644@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
+    ),
+    '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/' => 
+    array (
+      'path' => '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/',
+      'category' => '/climbing/climbing-gear/other-gear/',
+      'name' => 'Bulk Webbing by the Foot',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'sling',
+      'price' => 1,
+      'keyword' => 'bulk webbing by the foot',
+      'title' => 'Bulk Webbing by the Foot for Tree Work',
+      'h1' => 'Bulk Webbing by the Foot',
+      'meta' => 'Bulk webbing by the foot lets you cut exactly the length you need for gear loops, tethers and tie-downs. Where cut webbing fits in tree work and where not.',
+      'tagline' => 'Webbing sold by the foot for gear loops, tethers and other non-life-support jobs.',
+      'summary' => 'Bulk webbing by the foot is flat synthetic webbing sold in whatever length you need. Tree crews use it to make gear loops, tool tethers, bag straps and tie-downs, buying only as much as the job requires.',
+      'highlights' => 
+      array (
+        0 => 'Sold by the foot, cut to length',
+        1 => 'Flat synthetic webbing',
+        2 => 'Handy for gear loops, tethers and tie-downs',
+        3 => 'Seal cut ends to stop fraying',
+        4 => 'Homemade webbing items are not for life support',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Flat synthetic webbing',
+        ),
+        1 => 
+        array (
+          0 => 'Sold by',
+          1 => 'The foot',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Gear loops, tethers, tie-downs (not life support)',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Uses around the truck and the tree',
+          'p' => 
+          array (
+            0 => 'A few feet of webbing solves a lot of small jobs. Tie a loop to hang a hand saw on the saddle, make a handle for a rope bag, strap a gas can in the truck bed, or wrap a branch to keep a throw line from sawing into bark. Buying by the foot means you get the exact length and keep the rest on the roll.',
+            1 => 'Heat-seal the cut ends with a lighter or hot knife so they do not unravel. Other small gear is in <a href="/climbing/climbing-gear/other-gear/">other climbing gear</a>.',
+            2 => 'Webbing is also useful on the ground for bundling brush piles for hauling, tying off tarps, or making a quick handle for dragging a bag of rigging gear across a lawn. A roll in the truck often saves a trip to the hardware store.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Where webbing stops',
+          'p' => 
+          array (
+            0 => 'Knotted or homemade webbing should not be part of any climbing or rigging system that holds a person or a load of wood. Life-support slings and lanyards must be manufactured, rated and certified, and must meet ANSI Z133 and the maker\'s instructions.',
+            1 => 'Keep webbing away from saw fuel and sharp edges, and replace it when it shows cuts, fraying or sun fading. It is cheap, so there is no reason to keep using worn pieces.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I make my own friction saver from webbing?',
+          'a' => 'No. Use a manufactured, rated friction saver for anything in your climbing system.',
+        ),
+        1 => 
+        array (
+          'q' => 'How do I stop the ends fraying?',
+          'a' => 'Melt the cut ends carefully with a flame or hot knife until the fibers fuse.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-2.webp',
+        'sm' => '/assets/photos/sling-2-sm.webp',
+        'title' => 'D75_8819-1',
+        'creator' => 'Mark F. Levisay',
+        'creator_url' => 'https://www.flickr.com/photos/31395633@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/31395633@N08/52706266887',
+      ),
+    ),
+    '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/' => 
+    array (
+      'path' => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/',
+      'category' => '/climbing/climbing-gear/chainsaw-lanyards/',
+      'name' => 'Reecoil Full Reach Chainsaw Lanyard',
+      'brand' => 'reecoil',
+      'brand_name' => 'Reecoil',
+      'kind' => 'lanyard',
+      'price' => 65,
+      'keyword' => 'reecoil full reach chainsaw lanyard',
+      'title' => 'Reecoil Full Reach Chainsaw Lanyard',
+      'h1' => 'Reecoil Full Reach Chainsaw Lanyard',
+      'meta' => 'The Reecoil Full Reach chainsaw lanyard is a retractable saw tether with extra reach for long cuts aloft. How it compares to shorter lanyards and setup tips.',
+      'tagline' => 'A retractable saw tether with extra reach for climbers making long cuts aloft.',
+      'summary' => 'The Reecoil Full Reach chainsaw lanyard is a retractable tether that connects a saw to your saddle and gives extra reach for long cuts. It stretches when you reach out and pulls the saw back toward your hip when you let go, instead of leaving it swinging below you.',
+      'highlights' => 
+      array (
+        0 => 'Retractable design pulls the saw back to the hip',
+        1 => 'Extra reach for long cuts',
+        2 => 'Keeps the saw from hanging low',
+        3 => 'Connects saw to saddle',
+        4 => 'Reecoil design built for tree climbers',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Retractable chainsaw lanyard',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Reecoil',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Tethering a saw to a climbing saddle',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why reach matters',
+          'p' => 
+          array (
+            0 => 'A short lanyard can stop you before the bar reaches the cut, especially when you are working out on a limb or bucking a big leader. A lanyard with full reach lets you extend the saw to arm\'s length, and the retracting action brings it back close when you are done instead of letting it dangle by your knees.',
+            1 => 'Climbers who carry larger saws or work long laterals tend to like the extra length. Compare other tethers in <a href="/climbing/climbing-gear/chainsaw-lanyards/">chainsaw lanyards</a>.',
+            2 => 'Retractable lanyards also cut down on snagging. A bungee lanyard can catch on branches and stubs when the saw hangs low, while a retracting design keeps the saw tucked up out of the way between cuts. Hang the saw on the side opposite your lanyard and climbing line so they do not tangle.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setup and checks',
+          'p' => 
+          array (
+            0 => 'Attach the lanyard to a saddle point meant for a saw, never to your climbing bridge or life-support attachment. Connect the saw end to the saw\'s lanyard ring, and check that the lanyard cannot drag the saw into your climbing line or legs.',
+            1 => 'Inspect for cuts, frayed webbing, stretched or damaged retracting cord, and worn connectors before each climb. Saw lanyards are not life support, but they keep a running saw controlled near you. Work aloft with a saw only if you are trained and follow ANSI Z133.',
+            2 => 'Also check the saw\'s lanyard ring for wear and make sure the connector closes fully.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use it with a rear-handle saw?',
+          'a' => 'Saw lanyards are mainly used with top-handle saws aloft. Follow the saw and lanyard makers\' guidance.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it replace a bungee lanyard?',
+          'a' => 'Yes, it does the same job but retracts more cleanly, so the saw rides closer to your hip.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'safety',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/reecoil/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-3.webp',
+        'sm' => '/assets/photos/lanyard-3-sm.webp',
+        'title' => 'TVCF004',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33549425170',
+      ),
+    ),
+    '/devices-for-mrs/art-spiderjack-3/' => 
+    array (
+      'path' => '/devices-for-mrs/art-spiderjack-3/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/',
+      'name' => 'ART SpiderJack 3',
+      'brand' => 'art',
+      'brand_name' => 'ART',
+      'kind' => 'friction-device',
+      'price' => 330,
+      'keyword' => 'art spiderjack 3',
+      'title' => 'ART SpiderJack 3: MRS Mechanical Friction Device',
+      'h1' => 'ART SpiderJack 3',
+      'meta' => 'The ART SpiderJack 3 is a mechanical friction device that replaces a friction hitch on a moving rope system. How it climbs, tends and descends, what to check.',
+      'tagline' => 'ART\'s third-generation mechanical hitch for MRS climbers who want smooth tending.',
+      'summary' => 'The ART SpiderJack 3 is a mechanical friction device that takes the place of a friction hitch on a moving rope system (MRS). It is the third generation of ART\'s SpiderJack, built for smooth tending as you climb and controlled descent when you work your way down.',
+      'highlights' => 
+      array (
+        0 => 'Mechanical replacement for a friction hitch',
+        1 => 'Built for MRS (moving rope) climbing',
+        2 => 'Self-tends as you climb',
+        3 => 'Smooth, controlled descent',
+        4 => 'Replacement parts available',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Mechanical friction device',
+        ),
+        1 => 
+        array (
+          0 => 'System',
+          1 => 'MRS (moving rope)',
+        ),
+        2 => 
+        array (
+          0 => 'Generation',
+          1 => 'SpiderJack 3',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'ART',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why climbers switch to a mechanical hitch',
+          'p' => 
+          array (
+            0 => 'A friction hitch needs constant attention: dressing, setting, adjusting for wet rope and replacing cord as it glazes. A mechanical device like the SpiderJack 3 gives a consistent grip and release from day to day, tends smoothly with a pulley, and stays the same through a long day of work positioning.',
+            1 => 'The SpiderJack line has been around for years, and the third generation builds on earlier models such as the 2.1. Read ART\'s rope compatibility guidance before choosing a line. Compare devices in <a href="/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/">devices for MRS</a>.',
+            2 => 'The device also takes some of the guesswork out of switching ropes. A friction hitch tied to suit one line may behave very differently on another, while a mechanical hitch behaves more predictably within its listed rope range. That is a real benefit for climbers who move between crews or job types.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Training, inspection and wear parts',
+          'p' => 
+          array (
+            0 => 'Mechanical devices behave differently from hitches. Learn the SpiderJack 3 low and slow with someone experienced, and follow ART\'s instructions for setup and rope range. Do not climb on it until you can operate it without thinking.',
+            1 => 'Inspect before every climb for worn friction surfaces, cracks, bent parts and damage to any textile components, and replace wear parts as ART specifies. It is life-support gear: follow ANSI Z133 and the manufacturer\'s instructions.',
+            2 => 'Keep ART\'s instructions with the device and review them when you replace parts, since assembly matters.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use the SpiderJack 3 on SRS?',
+          'a' => 'It is designed for MRS. Check ART\'s instructions before using it in any other configuration.',
+        ),
+        1 => 
+        array (
+          'q' => 'Are parts available?',
+          'a' => 'Yes, ART offers replacement parts for the SpiderJack 3 so worn components can be swapped.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/art/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-0.webp',
+        'sm' => '/assets/photos/friction-device-0-sm.webp',
+        'title' => '100127-F-9898L-026',
+        'creator' => 'expertinfantry',
+        'creator_url' => 'https://www.flickr.com/photos/58297778@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/58297778@N04/5444263877',
+      ),
+    ),
+    '/climbing/saddles-and-harnesses/european-saddles/treeaustria-pro-climbing-harness/' => 
+    array (
+      'path' => '/climbing/saddles-and-harnesses/european-saddles/treeaustria-pro-climbing-harness/',
+      'category' => '/climbing/saddles-and-harnesses/european-saddles/',
+      'name' => 'Freeworker TreeAustria Pro Climbing Harness',
+      'brand' => 'freeworker',
+      'brand_name' => 'Freeworker',
+      'kind' => 'saddle',
+      'price' => 520,
+      'keyword' => 'treeaustria pro climbing harness',
+      'title' => 'TreeAustria Pro Climbing Harness by Freeworker',
+      'h1' => 'Freeworker TreeAustria Pro Climbing Harness',
+      'meta' => 'The TreeAustria Pro climbing harness is a European-style arborist saddle with a bridge attachment and a supportive sit. Who it suits and how to fit it.',
+      'tagline' => 'A European bridge saddle from Freeworker for long days working in the canopy.',
+      'summary' => 'The TreeAustria Pro climbing harness is a European-style arborist saddle from Freeworker, built around a bridge attachment for free movement at the waist. It is aimed at climbers who spend long days positioned in the tree and want a supportive sit.',
+      'highlights' => 
+      array (
+        0 => 'European-style arborist saddle',
+        1 => 'Bridge attachment for side-to-side movement',
+        2 => 'Supportive for long work positioning',
+        3 => 'Replacement bridges and parts available',
+        4 => 'From Freeworker, maker of the TreeAustria line',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Arborist climbing harness',
+        ),
+        1 => 
+        array (
+          0 => 'Style',
+          1 => 'European, bridge attachment',
+        ),
+        2 => 
+        array (
+          0 => 'Model',
+          1 => 'TreeAustria Pro',
+        ),
+        3 => 
+        array (
+          0 => 'Brand',
+          1 => 'Freeworker',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How it climbs',
+          'p' => 
+          array (
+            0 => 'A bridge saddle lets your climbing system slide side to side as you reach and turn, so you can work around the stem without fighting the attachment point. The TreeAustria design spreads your weight across the waist belt and leg loops so you can stay in position for hours.',
+            1 => 'The Pro was part of the TreeAustria line alongside models such as the 3.2. Compare it with other European saddles in <a href="/climbing/saddles-and-harnesses/european-saddles/">European saddles</a>.',
+            2 => 'Many climbers who choose TreeAustria saddles value how they feel after a full day rather than how they feel in the shop. Comfort depends on body shape, so what works for one climber may not work for another. A harness you can sit in comfortably all day is a harness you will use correctly and keep adjusted.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit and inspection',
+          'p' => 
+          array (
+            0 => 'Try the saddle on with your work clothes and hang in it before buying if you can. Leg loops and waist belt should hold you upright and comfortable without pinching, with the bridge sitting at the right height.',
+            1 => 'Inspect the bridge, webbing, stitching, buckles and connecting hardware before each climb, and replace wear parts such as the bridge on schedule. A saddle is life-support gear: follow the manufacturer\'s instructions and ANSI Z133, and retire it when inspection finds damage.',
+            2 => 'Keep a log of inspections and parts changes so you know the saddle\'s history.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I replace the bridge?',
+          'a' => 'Yes, TreeAustria bridges are replaceable. Use the part specified for your saddle model.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is a European saddle right for me?',
+          'a' => 'If you spend long periods positioned in the canopy and like free movement at the waist, a bridge saddle is a good fit. Try one before you commit.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/saddle-4.webp',
+        'sm' => '/assets/photos/saddle-4-sm.webp',
+        'title' => 'TVCF002',
+        'creator' => 'Symic',
+        'creator_url' => 'https://www.flickr.com/photos/73344134@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/73344134@N00/33804504181',
+      ),
+    ),
+    '/rigging/blocks-and-other-hardware/rigging-plates/cmi-maxi-rigging-plate/' => 
+    array (
+      'path' => '/rigging/blocks-and-other-hardware/rigging-plates/cmi-maxi-rigging-plate/',
+      'category' => '/rigging/blocks-and-other-hardware/',
+      'name' => 'CMI Maxi Rigging Plate',
+      'brand' => 'cmi',
+      'brand_name' => 'CMI',
+      'kind' => 'rigging-device',
+      'price' => 45,
+      'keyword' => 'cmi maxi rigging plate',
+      'title' => 'CMI Maxi Rigging Plate for Busy Anchors',
+      'h1' => 'CMI Maxi Rigging Plate',
+      'meta' => 'The CMI Maxi rigging plate is a large multi-hole plate that keeps carabiners, pulleys and slings organized at one anchor. Where it helps and how to inspect it.',
+      'tagline' => 'A large multi-hole plate from CMI to organize a crowded anchor.',
+      'summary' => 'The CMI Maxi rigging plate is a large rigging plate with multiple holes that turns a crowded anchor into an orderly one. Each carabiner, pulley or sling gets its own hole, so nothing loads across anything else.',
+      'highlights' => 
+      array (
+        0 => 'Large plate with multiple attachment holes',
+        1 => 'Keeps connectors from crowding one carabiner',
+        2 => 'Useful for haul systems and anchors',
+        3 => 'From CMI, a rope rescue hardware maker',
+        4 => 'Check marked ratings',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Rigging plate',
+        ),
+        1 => 
+        array (
+          0 => 'Size',
+          1 => 'Maxi (large)',
+        ),
+        2 => 
+        array (
+          0 => 'Brand',
+          1 => 'CMI',
+        ),
+        3 => 
+        array (
+          0 => 'Ratings',
+          1 => 'See markings on the plate',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where a big plate helps',
+          'p' => 
+          array (
+            0 => 'Anchors get busy fast. A haul system, a backup, a pulley and a lanyard can all want the same point. A rigging plate gives each one its own hole, keeps them hanging in line and makes it easy to unclip one without disturbing the others.',
+            1 => 'The Maxi size has more holes and room than a small plate, which suits larger systems and rescue setups. It is handy for ground anchors on mechanical advantage pulls too. Browse other gear in <a href="/rigging/blocks-and-other-hardware/">blocks and other hardware</a>.',
+            2 => 'A plate can also serve as a master point on a multi-anchor system, collecting several anchor slings into one place for a haul or lowering setup. Keep the layout simple and consistent so anyone on the crew can check it at a glance.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Loading and inspection',
+          'p' => 
+          array (
+            0 => 'Load the plate through its main attachment point and keep the connectors in their own holes. Know the ratings marked on the plate and keep every load within the weakest link of the system.',
+            1 => 'Inspect before each use for cracks, deep gouges, sharp edges, bending and corrosion. When used in a life-support or rescue system, follow ANSI Z133 and CMI\'s instructions and make sure the crew is trained.',
+            2 => 'Store the plate dry and away from corrosive chemicals, and file down small burrs only as the maker\'s instructions allow.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Do I need a rigging plate?',
+          'a' => 'If you regularly hang several connectors from one anchor, a plate keeps them organized and loading properly.',
+        ),
+        1 => 
+        array (
+          'q' => 'Maxi or smaller plate?',
+          'a' => 'A smaller plate is lighter for simple anchors. Choose the Maxi when you need more attachment points.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'rigging',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/cmi/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-6.webp',
+        'sm' => '/assets/photos/rigging-device-6-sm.webp',
+        'title' => 'Arborist Cutting',
+        'creator' => 'matt.boman',
+        'creator_url' => 'https://www.flickr.com/photos/10384097@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/10384097@N08/6109956022',
+      ),
+    ),
+    '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/' => 
+    array (
+      'path' => '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/',
+      'category' => '/jobsite/logging-tools/log-handling-tools/',
+      'name' => 'Husqvarna Pickaroon',
+      'brand' => 'husqvarna',
+      'brand_name' => 'Husqvarna',
+      'kind' => 'log-tool',
+      'price' => 45,
+      'keyword' => 'husqvarna pickaroon',
+      'title' => 'Husqvarna Pickaroon: Log Handling Hand Tool',
+      'h1' => 'Husqvarna Pickaroon',
+      'meta' => 'The Husqvarna pickaroon lets you hook, drag, flip and stack firewood rounds and small logs without bending over. How to use it, care tips and who it suits.',
+      'tagline' => 'A one-hand pick for dragging, flipping and stacking rounds without bending down.',
+      'summary' => 'The Husqvarna pickaroon is a short-handled pick that lets you grab, drag and toss firewood rounds and small logs without reaching down with your hands. It saves your back and fingers on any job where you are moving a lot of cut wood.',
+      'highlights' => 
+      array (
+        0 => 'Sharp steel pick head bites into wood',
+        1 => 'Short handle for one-hand use',
+        2 => 'Saves bending and lifting on cleanup',
+        3 => 'Keeps hands away from splinters and pinch points',
+        4 => 'Useful for firewood, cordwood and brush cleanup',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Pickaroon (hand log tool)',
+        ),
+        1 => 
+        array (
+          0 => 'Head',
+          1 => 'Steel pick',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Moving rounds, splits and small logs',
+        ),
+        3 => 
+        array (
+          0 => 'Handle length',
+          1 => 'Check listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What a pickaroon does on a tree job',
+          'p' => 
+          array (
+            0 => 'After the saw work is done, someone has to move the wood. A pickaroon puts a hardened point on the end of a handle so you can stick a round, drag it to the pile and flip it into the truck or onto the stack without bending over for every piece. On a big cleanup that adds up to a lot less strain on your back.',
+            1 => 'It also keeps your hands out of the way. Rounds roll, splits have sharp edges and stacks shift. Hooking a piece from arm\'s length is safer than grabbing it, especially when you are loading a dump body or feeding a splitter all afternoon.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Using and caring for it',
+          'p' => 
+          array (
+            0 => 'Swing the point into end grain or side grain with a short, controlled stroke, then pull. Work with the pile, not across your feet, and keep the point clear of your legs when you carry it. Do not use a pickaroon as a lever on big logs. That is a job for a peavey or cant hook.',
+            1 => 'Keep the point reasonably sharp with a file so it bites instead of glancing off, and check that the head is tight on the handle before each use. Check the listing for the current handle length and head design. For more tools for moving and stacking wood, see our <a href="/jobsite/logging-tools/log-handling-tools/">log handling tools</a>.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is a pickaroon the same as a hookaroon?',
+          'a' => 'The names are often used for the same thing: a pick on a handle for moving wood. Hookaroon usually means a longer handle, pickaroon a shorter one-hand tool.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I roll big logs with a pickaroon?',
+          'a' => 'No. It is made for rounds, splits and small logs. Use a peavey or cant hook to roll and lever heavy logs.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-5.webp',
+        'sm' => '/assets/photos/log-tool-5-sm.webp',
+        'title' => 'splitting firewood',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/65865991',
+      ),
+    ),
+    '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/' => 
+    array (
+      'path' => '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/',
+      'category' => '/jobsite/logging-tools/log-handling-tools/',
+      'name' => 'LogRite Pickaroon',
+      'brand' => 'logrite',
+      'brand_name' => 'LogRite',
+      'kind' => 'log-tool',
+      'price' => 85,
+      'keyword' => 'logrite pickaroon',
+      'title' => 'LogRite Pickaroon: Aluminum Handle Log Tool',
+      'h1' => 'LogRite Pickaroon',
+      'meta' => 'The LogRite pickaroon is a light hand tool for hooking, dragging and stacking firewood and small logs. See how crews use it and what to check before buying.',
+      'tagline' => 'A light aluminum-handled pickaroon for crews that move wood every day.',
+      'summary' => 'The LogRite pickaroon is a short pick on a lightweight aluminum handle, made for hooking, dragging and stacking rounds, splits and small logs. LogRite is known for its log handling tools, and this one is built for crews who move wood day after day.',
+      'highlights' => 
+      array (
+        0 => 'Lightweight aluminum handle',
+        1 => 'Steel point for a solid bite in wood',
+        2 => 'One-hand tool for rounds and splits',
+        3 => 'Cuts down on bending and grabbing',
+        4 => 'Pairs well with a LogRite cant hook or peavey',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Pickaroon (hand log tool)',
+        ),
+        1 => 
+        array (
+          0 => 'Handle',
+          1 => 'Aluminum',
+        ),
+        2 => 
+        array (
+          0 => 'Head',
+          1 => 'Steel point',
+        ),
+        3 => 
+        array (
+          0 => 'Length',
+          1 => 'Check listing for available lengths',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why crews like a LogRite pickaroon',
+          'p' => 
+          array (
+            0 => 'A LogRite pickaroon is about not touching every piece of wood with your hands. Stick the point in a round, drag it to the pile, and toss it into the truck or onto the splitter table. On a cleanup with a few cords of wood on the ground, that saves your back and keeps your fingers away from sharp edges and rolling rounds.',
+            1 => 'The aluminum handle keeps it light enough to swing all day, and it will not rot or loosen the way a wood handle can after a season in the truck.',
+            2 => 'It is a good match for firewood processing, cleanup after a removal, and any job where the crew is loading rounds into a dump trailer by hand. One worker with a pickaroon can keep pace with a saw far longer than one bending for every piece.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Getting the most from it',
+          'p' => 
+          array (
+            0 => 'Use short, controlled swings and pull toward the pile, not across your legs. A pickaroon is a hooking tool, not a pry bar. When a log is too big to drag, switch to a cant hook or peavey. Check the listing for current lengths, since a longer handle gives more reach and a shorter one is quicker in tight spots.',
+            1 => 'Touch up the point with a file when it starts glancing off, and check that the head is secure before each job. See the rest of our <a href="/jobsite/logging-tools/log-handling-tools/">log handling tools</a> for cant hooks, peaveys and log lifters.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Why choose an aluminum handle?',
+          'a' => 'Aluminum is light and does not rot, crack or swell in the weather the way wood can, so the tool stays tight and easy to swing.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I replace the point?',
+          'a' => 'Check the listing and LogRite\'s information for replacement parts for your model before you buy.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'ground',
+      ),
+      'level' => 'all',
+      'brand_path' => '/logrite/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/log-tool-0.webp',
+        'sm' => '/assets/photos/log-tool-0-sm.webp',
+        'title' => 'peavey handles (hand carved)',
+        'creator' => 'Stone Soup Institute, Harpswell, Maine',
+        'creator_url' => 'https://www.flickr.com/photos/92385698@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/92385698@N02/9819022265',
+      ),
+    ),
+    '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/' => 
+    array (
+      'path' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/',
+      'name' => 'Rope-Tek HitchHiker 2',
+      'brand' => 'rope-tek',
+      'brand_name' => 'Rope-Tek',
+      'kind' => 'friction-device',
+      'price' => 289,
+      'keyword' => 'hitchhiker 2',
+      'title' => 'Rope-Tek HitchHiker 2: Mechanical Climbing Device',
+      'h1' => 'Rope-Tek HitchHiker 2',
+      'meta' => 'The Rope-Tek HitchHiker 2 is a mechanical climbing device for arborists who want smooth slack tending and control. What it does, who it suits and safety notes.',
+      'tagline' => 'A mechanical device from Rope-Tek for climbers who want easy slack tending and control.',
+      'summary' => 'The Rope-Tek HitchHiker 2 is a mechanical climbing device for tree climbers who want smooth slack tending and fine control in the canopy. It is aimed at experienced climbers moving away from a plain friction hitch toward a more mechanical setup.',
+      'highlights' => 
+      array (
+        0 => 'Mechanical device for arborist climbing systems',
+        1 => 'Smooth slack tending as you advance',
+        2 => 'Fine control when working and descending',
+        3 => 'Second generation of the HitchHiker design',
+        4 => 'Check the listing for rope compatibility and setup',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Mechanical climbing device',
+        ),
+        1 => 
+        array (
+          0 => 'Maker',
+          1 => 'Rope-Tek',
+        ),
+        2 => 
+        array (
+          0 => 'Rope compatibility',
+          1 => 'See manufacturer instructions',
+        ),
+        3 => 
+        array (
+          0 => 'Setup',
+          1 => 'See manufacturer instructions',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Where the HitchHiker 2 fits',
+          'p' => 
+          array (
+            0 => 'Climbers search for the HitchHiker 2 when they want something between a friction hitch and a fully mechanical device: the familiar feel of a hitch-based system with less fiddling, better slack tending and consistent behavior from one climb to the next. It sits in the same part of the gear shop as the Petzl Zigzag and similar devices.',
+            1 => 'Exact configuration, rope diameter range and the systems it is approved for come from Rope-Tek, so read the instructions and the listing before you build your system around it. Compare it with other <a href="/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/">devices for MRS</a> to see what suits the way you climb.',
+            2 => 'Mechanical devices change how a climbing system feels compared with a friction hitch. Expect a learning period: how the device grabs, how it releases, and how much input it needs to descend smoothly will all feel different at first. Give yourself time on the ground and at low height to learn its habits before working with a saw.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Training and inspection',
+          'p' => 
+          array (
+            0 => 'Any device in your life-support system has to be used exactly as the manufacturer describes, with compatible rope and connectors, and in line with ANSI Z133 and your employer\'s procedures. Learn it low and slow, close to the ground, with a trained climber who knows the device before you take it aloft.',
+            1 => 'Inspect it before every climb for wear, cracks, bent parts and smooth movement, and keep it clean of sap and grit. Retire it if it has taken a big load or shows damage.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the HitchHiker 2 for MRS or SRS?',
+          'a' => 'Check Rope-Tek\'s instructions for the systems and configurations it is approved for. Do not use it in any setup the instructions do not cover.',
+        ),
+        1 => 
+        array (
+          'q' => 'What rope does it need?',
+          'a' => 'Use only rope diameters and types the manufacturer lists as compatible. Rope that is too thin, thick or stiff changes how any device grips.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-1.webp',
+        'sm' => '/assets/photos/friction-device-1-sm.webp',
+        'title' => 'Hot day in technical rescue training',
+        'creator' => 'Grand Canyon NPS',
+        'creator_url' => 'https://www.flickr.com/photos/50693818@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/50693818@N08/50472639371',
+      ),
+    ),
+    '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/' => 
+    array (
+      'path' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
+      'category' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/',
+      'name' => 'Petzl ZIGZAG PLUS Mechanical Prusik',
+      'brand' => 'petzl',
+      'brand_name' => 'Petzl',
+      'kind' => 'friction-device',
+      'price' => 289,
+      'keyword' => 'petzl zigzag plus',
+      'title' => 'Petzl ZIGZAG PLUS Mechanical Prusik for Arborists',
+      'h1' => 'Petzl ZIGZAG PLUS',
+      'meta' => 'The Petzl ZIGZAG PLUS is a mechanical prusik for tree climbers, built on the Zigzag with added friction control. How it compares, who it suits and care tips.',
+      'tagline' => 'Petzl\'s mechanical prusik with extra friction control for tree climbers.',
+      'summary' => 'The Petzl ZIGZAG PLUS is a mechanical prusik for arborists that builds on the original Zigzag with an added friction element, so it can be set up for a wider range of climbing systems. Climbers choose it for the smooth, precise descent control the Zigzag is known for.',
+      'highlights' => 
+      array (
+        0 => 'Mechanical prusik built on the Zigzag design',
+        1 => 'Added friction element for more control',
+        2 => 'Smooth, precise descent with the handle',
+        3 => 'Integrated pulley to tend slack',
+        4 => 'No hitch cord to tie or replace',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Mechanical prusik',
+        ),
+        1 => 
+        array (
+          0 => 'Maker',
+          1 => 'Petzl',
+        ),
+        2 => 
+        array (
+          0 => 'Rope compatibility',
+          1 => '11.5 to 13 mm (check Petzl instructions)',
+        ),
+        3 => 
+        array (
+          0 => 'Slack tending',
+          1 => 'Integrated pulley',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How the ZIGZAG PLUS differs from the Zigzag',
+          'p' => 
+          array (
+            0 => 'The standard Zigzag is a chain of links that replaces a friction hitch on a doubled rope. The ZIGZAG PLUS keeps that mechanism and adds an extra friction element, which gives more control and lets Petzl approve it for more ways of climbing. If you climb on more than one system, that flexibility is the main reason to pay the extra.',
+            1 => 'On the tree it behaves like a Zigzag: you advance it with the pulley, rest on it, and release with the handle for a controlled descent. Read Petzl\'s instructions for the exact configurations and rope types approved. See other <a href="/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/">devices for MRS</a> to compare.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Setup, training and inspection',
+          'p' => 
+          array (
+            0 => 'Rope choice matters with any mechanical prusik. Use only ropes within Petzl\'s listed range, and expect the feel to change with rope diameter, cover and wear. Practice close to the ground with a trained climber before you take it aloft, and follow ANSI Z133 and your company\'s procedures.',
+            1 => 'Inspect it before every climb: check the links and pulley for wear and grooving, make sure everything moves freely, and clean out sap and grit. Retire it if parts are worn past Petzl\'s limits or it has been shock loaded.',
+            2 => 'Keep a record of when you put it into service and how much use it gets, and replace worn parts or the whole device as Petzl\'s instructions describe. A mechanical prusik is precise but only as good as its condition.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Should I buy the Zigzag or the ZIGZAG PLUS?',
+          'a' => 'If you only climb on a doubled rope, the standard Zigzag may be all you need. The PLUS adds friction control and wider approved use, so it suits climbers who switch systems.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I still need a hitch cord?',
+          'a' => 'No. The links replace the friction hitch. You still need compatible rope, connectors and a properly set up system.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/petzl/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/friction-device-2.webp',
+        'sm' => '/assets/photos/friction-device-2-sm.webp',
+        'title' => 'Crimea_IMG_9320 1',
+        'creator' => 'kstepanoff',
+        'creator_url' => 'https://www.flickr.com/photos/68732633@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/68732633@N04/12693333643',
+      ),
+    ),
+    '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/' => 
+    array (
+      'path' => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/',
+      'category' => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/',
+      'name' => 'Boom Lift Shock-Absorbing Lanyard',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'lanyard',
+      'price' => 79,
+      'keyword' => 'boom lift lanyard',
+      'title' => 'Boom Lift Lanyard: Shock-Absorbing Fall Arrest',
+      'h1' => 'Boom Lift Lanyard, Shock-Absorbing',
+      'meta' => 'A boom lift lanyard connects your harness to the platform anchor and absorbs energy in a fall. Choosing the right length, fit and standards for aerial lifts.',
+      'tagline' => 'A shock-absorbing lanyard for connecting to the anchor in a boom lift or bucket.',
+      'summary' => 'A boom lift lanyard connects your full body harness to the anchor point in an aerial lift platform, and its shock absorber reduces the force on your body if you are thrown or fall from the basket. It is required personal protective equipment on most boom lift and bucket truck work.',
+      'highlights' => 
+      array (
+        0 => 'Shock-absorbing pack reduces fall forces',
+        1 => 'Connects harness to the platform anchor',
+        2 => 'Snap hooks for harness and anchor',
+        3 => 'For boom lifts and bucket trucks',
+        4 => 'Check listing for length and ratings',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Shock-absorbing lanyard',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Boom lifts and aerial platforms',
+        ),
+        2 => 
+        array (
+          0 => 'Length',
+          1 => 'Check listing',
+        ),
+        3 => 
+        array (
+          0 => 'Connectors',
+          1 => 'Snap hooks (check listing)',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why you tie in at the platform',
+          'p' => 
+          array (
+            0 => 'On a boom lift or bucket truck, a bump, a pothole or a sudden boom movement can catapult you out of the basket. A lanyard attached to the manufacturer\'s anchor point keeps you with the platform, and the shock absorber limits the force on your body if it catches you.',
+            1 => 'Shorter lanyards keep you from going over the rail at all, which is better than arresting a fall. Pick the shortest length that lets you work, and never tie off to the boom, a tree or a nearby pole.',
+            2 => 'On a bucket truck, the same applies: anchor to the point the manufacturer provides inside the bucket or on the boom tip, as the lift manual describes. Keep the lanyard routed so it cannot snag controls or get caught by the boom as it moves.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Standards, fit and inspection',
+          'p' => 
+          array (
+            0 => 'Use a lanyard that meets the standards your employer and the lift manufacturer require, and connect it to a full body harness at the back D-ring unless instructions say otherwise. Check the listing for length, connector type and ratings before buying, and confirm clearance requirements for your lift.',
+            1 => 'Inspect webbing, stitching, the shock pack and snap hooks before each use. Retire any lanyard that has arrested a fall or shows damage. Follow ANSI Z133, OSHA and your training. See more <a href="/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/">fall arrest for aerial lifts</a>.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use my climbing lanyard in a bucket?',
+          'a' => 'No. Aerial lift fall protection uses a full body harness and a lanyard rated for that use, attached to the lift\'s designated anchor.',
+        ),
+        1 => 
+        array (
+          'q' => 'How long should a boom lift lanyard be?',
+          'a' => 'As short as practical. A shorter lanyard limits how far you can move toward the rail. Check the lift manual for anchor and clearance guidance.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'bucket',
+        1 => 'safety',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-4.webp',
+        'sm' => '/assets/photos/lanyard-4-sm.webp',
+        'title' => 'Wood pole rescue',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/16974622426',
+      ),
+    ),
+    '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/arbormats-ground-protection-mat/' => 
+    array (
+      'path' => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/arbormats-ground-protection-mat/',
+      'category' => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/',
+      'name' => 'ArborMats Ground Protection Mat',
+      'brand' => 'arbormats',
+      'brand_name' => 'ArborMats',
+      'kind' => 'jobsite',
+      'price' => 299,
+      'keyword' => 'arbormats',
+      'title' => 'ArborMats Ground Protection Mat for Tree Crews',
+      'h1' => 'ArborMats Ground Protection Mat',
+      'meta' => 'ArborMats ground protection mats give trucks, lifts and stump grinders a temporary road over lawns and soft ground. How tree crews use them and what to check.',
+      'tagline' => 'Ground mats that keep trucks and machines from rutting lawns on tree jobs.',
+      'summary' => 'ArborMats are ground protection mats that tree crews lay down as a temporary road for trucks, lifts, loaders and stump grinders. They spread the load so you can cross lawns and soft ground without leaving ruts for the customer to look at.',
+      'highlights' => 
+      array (
+        0 => 'Temporary roadway over turf and soft ground',
+        1 => 'Spreads load from trucks and equipment',
+        2 => 'Traction surface for tires and tracks',
+        3 => 'Reusable from job to job',
+        4 => 'Check listing for size and load rating',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Ground protection mat',
+        ),
+        1 => 
+        array (
+          0 => 'Use',
+          1 => 'Turf, soft ground and hardscape',
+        ),
+        2 => 
+        array (
+          0 => 'Size and load rating',
+          1 => 'Check listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why mats pay off on residential work',
+          'p' => 
+          array (
+            0 => 'Getting a lift or a loaded chip truck into a back yard is often what makes a removal profitable. Leaving deep ruts in the lawn is what loses the next job. ArborMats spread the weight of tires and tracks over a larger area so soft ground holds up, and the crew leaves a yard that needs a rake, not a regrade.',
+            1 => 'Mats also protect pavers, irrigation heads and septic areas, and give the crew a cleaner, less slippery surface to work on in the wet.',
+            2 => 'Mats also make a difference on commercial and municipal jobs, where a crew might be crossing sports fields, cemeteries or landscaped medians. A clean exit keeps property managers happy and avoids repair bills that eat into the job\'s margin.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Laying and moving them',
+          'p' => 
+          array (
+            0 => 'Plan the route before the equipment arrives, lay mats ahead of the machine and overlap or connect them so edges do not lift. Check the listing for size, weight and load rating, and make sure the rating suits your heaviest machine.',
+            1 => 'Lift mats with enough people or with equipment, and keep your feet clear when setting them down. Hose them off before loading so you do not track mud to the next site. Compare other <a href="/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/">ground protection mats</a>.',
+            2 => 'Stack and strap them securely on the trailer.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will ArborMats hold a bucket truck?',
+          'a' => 'Check the load rating on the listing against your truck\'s weight and how it will be set up, including outrigger pads.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I put outriggers on a mat?',
+          'a' => 'Use outrigger pads made for that purpose and follow the lift manufacturer\'s setup instructions.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'ground',
+        1 => 'bucket',
+      ),
+      'level' => 'all',
+      'brand_path' => NULL,
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-9.webp',
+        'sm' => '/assets/photos/jobsite-9-sm.webp',
+        'title' => '2003. Pollinating cones.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/42611579035',
+      ),
+    ),
+    '/clothing/hats-and-caps/husqvarna-chainsaw-hat/' => 
+    array (
+      'path' => '/clothing/hats-and-caps/husqvarna-chainsaw-hat/',
+      'category' => '/clothing/hats-and-caps/',
+      'name' => 'Husqvarna Chainsaw Hat',
+      'brand' => 'husqvarna',
+      'brand_name' => 'Husqvarna',
+      'kind' => 'apparel',
+      'price' => 25,
+      'keyword' => 'husqvarna chainsaw hat',
+      'title' => 'Husqvarna Chainsaw Hat: Saw Logo Cap',
+      'h1' => 'Husqvarna Chainsaw Hat',
+      'meta' => 'A Husqvarna chainsaw hat for saw users and tree crews, for wear at the shop, the truck or around town. Fit, style and why it is not a substitute for a helmet.',
+      'tagline' => 'A Husqvarna saw cap for the shop, the truck and days off.',
+      'summary' => 'The Husqvarna chainsaw hat is a branded cap for anyone who runs Husqvarna saws, from tree crews to firewood cutters. It is made for everyday wear at the shop, on the drive and around town.',
+      'highlights' => 
+      array (
+        0 => 'Husqvarna chainsaw branding',
+        1 => 'Everyday cap for saw users',
+        2 => 'Adjustable fit (check listing)',
+        3 => 'Good gift for a saw fan',
+        4 => 'Off-job wear, not head protection',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Style',
+          1 => 'Cap',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Husqvarna',
+        ),
+        2 => 
+        array (
+          0 => 'Size and color',
+          1 => 'Check listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'A cap for saw people',
+          'p' => 
+          array (
+            0 => 'Plenty of tree workers run orange saws and are happy to say so. The Husqvarna chainsaw hat is a simple way to do that. Wear it in the shop while you sharpen chains, on the drive between jobs or on the weekend.',
+            1 => 'Check the listing for the current design, colors and closure, since Husqvarna updates its apparel line regularly. See more <a href="/clothing/hats-and-caps/">hats and caps</a> from saw and arborist brands.',
+            2 => 'Husqvarna has been making chainsaws for decades and its saws are a fixture on tree crews and in firewood yards. A logo cap is a simple way to show which saws you trust on the job.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Not for running the saw',
+          'p' => 
+          array (
+            0 => 'A cap is not head protection. When you run a chainsaw, climb or work under a tree, wear a helmet that meets the required standard, with eye and hearing protection. Keep the cap for the truck and the shop.',
+            1 => 'Cool, dry cotton or a mesh-back cap is comfortable in summer. In cold weather, a helmet liner under your helmet is the better choice on the job.',
+            2 => 'On the job, a cap can work under a hood or in the truck on a cold morning. Wash it as the label says to keep its shape, and keep a spare in the truck so you are not stuck with a sweaty one at the end of a long day.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the hat adjustable?',
+          'a' => 'Most styles have an adjustable back. Check the listing for the closure on the current version.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I wear it under my helmet?',
+          'a' => 'A brimmed cap will interfere with helmet fit. Use a thin helmet liner instead.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'apparel',
+      ),
+      'level' => 'all',
+      'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-2.webp',
+        'sm' => '/assets/photos/apparel-2-sm.webp',
+        'title' => 'woman taking her flannel shirt',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/3284728/free-photo-image-dress-long-jeans-dance',
+      ),
+    ),
+    '/clothing/hats-and-caps/rock-exotica-hat/' => 
+    array (
+      'path' => '/clothing/hats-and-caps/rock-exotica-hat/',
+      'category' => '/clothing/hats-and-caps/',
+      'name' => 'Rock Exotica Hat',
+      'brand' => 'rock-exotica',
+      'brand_name' => 'Rock Exotica',
+      'kind' => 'apparel',
+      'price' => 25,
+      'keyword' => 'rock exotica hat',
+      'title' => 'Rock Exotica Hat: Logo Cap for Climbers',
+      'h1' => 'Rock Exotica Hat',
+      'meta' => 'The Rock Exotica hat is a cap for climbers and riggers who know the brand\'s pulleys and hardware. For the shop, the truck and days off, not for climbing in.',
+      'tagline' => 'A Rock Exotica logo cap for rope and hardware nerds.',
+      'summary' => 'The Rock Exotica hat is a logo cap for climbers, riggers and rope access workers who know the brand\'s pulleys, swivels and connectors. It is an everyday cap for the shop, the truck and days off.',
+      'highlights' => 
+      array (
+        0 => 'Rock Exotica branding',
+        1 => 'Everyday cap for climbers and riggers',
+        2 => 'Check listing for style and fit',
+        3 => 'Good gift for a gear fan',
+        4 => 'Off-job wear, not head protection',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Style',
+          1 => 'Cap',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'Rock Exotica',
+        ),
+        2 => 
+        array (
+          0 => 'Size and color',
+          1 => 'Check listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'For people who know the hardware',
+          'p' => 
+          array (
+            0 => 'Rock Exotica makes hardware that shows up on a lot of arborist saddles and rigging setups, from pulleys to swivels and connectors. The Rock Exotica hat is for climbers who like the brand and want to wear it off the rope.',
+            1 => 'Check the listing for the current style, colors and closure. See more <a href="/clothing/hats-and-caps/">hats and caps</a> for the crew.',
+            2 => 'It also suits rope access techs, rescue teams and anyone who spends time around rope systems. A cap is an easy gift for a climber who already has every pulley and swivel they want, and a way to spot gear people at a climbing event.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Wear it off the job',
+          'p' => 
+          array (
+            0 => 'A cap is comfortable in the shop, at a climbing competition or on the drive home, but it is not head protection. In the tree or under it, wear a helmet that meets the required standard, with eye and hearing protection as needed.',
+            1 => 'In cold weather, a thin helmet liner keeps your head warm under a climbing helmet without upsetting the fit.',
+            2 => 'Wash it per the label to keep its shape, and keep it in the truck for the end of the day when the helmet comes off. A cap with a brim also helps keep sun off your face on the drive and at lunch.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is it adjustable?',
+          'a' => 'Check the listing for the closure and sizing on the current version.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I wear it under a helmet?',
+          'a' => 'A brimmed cap interferes with helmet fit. Use a helmet liner instead.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'apparel',
+      ),
+      'level' => 'all',
+      'brand_path' => '/rock-exotica/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-3.webp',
+        'sm' => '/assets/photos/apparel-3-sm.webp',
+        'title' => 'Great flannel shirts for women are hard to come by. But flannel is our signature, inspired by top-notch menswear shirts - especially designed and tailored for you. Take up to 20% off this weekend on all flannels, including the Park City flannel pictured h',
+        'creator' => 'Tradlands',
+        'creator_url' => 'https://www.flickr.com/photos/87743767@N07',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/87743767@N07/24785884538',
+      ),
+    ),
+    '/safety/communication/husqvarna-x-com-r-headset/' => 
+    array (
+      'path' => '/safety/communication/husqvarna-x-com-r-headset/',
+      'category' => '/safety/communication/',
+      'name' => 'Husqvarna X-COM R Headset',
+      'brand' => 'husqvarna',
+      'brand_name' => 'Husqvarna',
+      'kind' => 'eye-ear',
+      'price' => 449,
+      'keyword' => 'husqvarna x-com',
+      'title' => 'Husqvarna X-COM R Headset: Hearing and Crew Comms',
+      'h1' => 'Husqvarna X-COM R Headset',
+      'meta' => 'The Husqvarna X-COM R headset combines hearing protection with crew communication so climbers and ground crew can talk over the saw. Features, fit and care.',
+      'tagline' => 'Hearing protection with crew radio built in, so the climber and ground can talk.',
+      'summary' => 'The Husqvarna X-COM R headset is hearing protection with built-in crew communication, part of the Husqvarna X-COM line. It lets a climber and ground crew talk in a normal voice over a running saw or chipper instead of shouting and waving.',
+      'highlights' => 
+      array (
+        0 => 'Hearing protection with integrated crew comms',
+        1 => 'Talk between climber and ground over the saw',
+        2 => 'Phone connection (check listing)',
+        3 => 'Rechargeable battery',
+        4 => 'Check listing for helmet or headband mount',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Communication hearing protector',
+        ),
+        1 => 
+        array (
+          0 => 'Line',
+          1 => 'Husqvarna X-COM',
+        ),
+        2 => 
+        array (
+          0 => 'Power',
+          1 => 'Rechargeable battery',
+        ),
+        3 => 
+        array (
+          0 => 'Mounting and radio details',
+          1 => 'Check listing',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why crew comms change the job',
+          'p' => 
+          array (
+            0 => 'Most rigging problems start with a missed call. The climber says hold, the groundie hears let it run. With an X-COM headset, both can talk in a normal voice over a saw, a chipper or traffic, so lowering, felling and drop zone calls are clear the first time.',
+            1 => 'The X-COM R adds a built-in radio to Husqvarna\'s communication hearing protection. Check the listing for radio type, range, phone pairing and whether it mounts to a helmet or a headband, and make sure the whole crew is on compatible units. See more <a href="/safety/communication/">communication gear</a>.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fit, care and safe use',
+          'p' => 
+          array (
+            0 => 'Hearing protection only works if it seals. Fit the cups over your ears with no hair, glasses arms or hood in the way, and check the noise rating against your saws and chipper. Charge it each night so it does not die halfway through a removal.',
+            1 => 'Comms do not replace a clear plan. Agree on commands before the job starts, use a backup signal if a unit drops out, and follow ANSI Z133 communication requirements. Inspect cushions and replace them when they crack or stiffen.',
+            2 => 'Keep units clean and dry, store them out of direct sun, and keep the firmware current if the listing or Husqvarna\'s instructions call for it. Label each headset so crew members keep their own cushions and fit.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is the difference between X-COM R and X-COM Active?',
+          'a' => 'The R adds a built-in radio. Check the listings for current features of each before choosing.',
+        ),
+        1 => 
+        array (
+          'q' => 'Does it work with other brands of headset?',
+          'a' => 'Compatibility depends on the radio system. Check the listing, and test the full crew setup before relying on it on a job.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'safety',
+        1 => 'climbing',
+        2 => 'ground',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/eye-ear-1.webp',
+        'sm' => '/assets/photos/eye-ear-1-sm.webp',
+        'title' => 'MAY 18 Close-up of helmet and safety glasses',
+        'creator' => 'National Interagency Fire Center',
+        'creator_url' => 'https://www.flickr.com/photos/165415395@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/165415395@N07/52149599431',
+      ),
+    ),
+    '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/' => 
+    array (
+      'path' => '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/',
+      'category' => '/climbing/throw-weight-and-line/throw-line-kits/',
+      'name' => 'Throwball Kit',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'throw-line',
+      'price' => 95,
+      'keyword' => 'throwball kit',
+      'title' => 'Throwball Kit: Throw Weight and Line for Arborists',
+      'h1' => 'Throwball Kit',
+      'meta' => 'A throwball kit gives you throw weights, throw line and storage in one bag for setting climbing lines and rigging points. What to look for and how to use one.',
+      'tagline' => 'Throw weights, line and storage in one kit for setting lines in the canopy.',
+      'summary' => 'A throwball kit bundles throw weights, throw line and storage so you can set climbing and rigging lines high in the canopy without hunting for parts. It is the quickest way to get a complete, matched setup for line setting.',
+      'highlights' => 
+      array (
+        0 => 'Throw weights and throw line in one package',
+        1 => 'Storage keeps the line tangle-free',
+        2 => 'For setting climbing lines and rigging points',
+        3 => 'Good starter set for new climbers',
+        4 => 'Check listing for weights, line length and bag',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Throw line kit',
+        ),
+        1 => 
+        array (
+          0 => 'Includes',
+          1 => 'Throw weights, throw line and storage (check listing)',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Setting climbing and rigging lines',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why buy a kit',
+          'p' => 
+          array (
+            0 => 'Setting a good tie-in point starts with a clean throw. A kit gives you weights and line that work together, plus a bag or cube that lets the line pay out without knots. For a new climber, or a crew replacing a tangled mess, it is the simplest way to get set up.',
+            1 => 'Check the listing for what comes in this kit: the weight of the throw bags or balls, the line length and diameter, and the storage. Lighter weights suit small branches and thin forks; heavier ones carry line higher and through dense canopy. See more <a href="/climbing/throw-weight-and-line/throw-line-kits/">throw line kits</a>.',
+            2 => 'A kit also makes it easy to set up a second throw line for the crew truck, or to have a backup on hand when a line gets stuck in the canopy. Many climbers keep one kit with a lighter weight for small branches and a heavier one for tall trees.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Throwing safely',
+          'p' => 
+          array (
+            0 => 'Clear the drop zone before every throw. A throw weight coming back down can injure someone, and line can catch on deadwood or near power lines. Never throw near energized conductors.',
+            1 => 'Flake the line into its bag after each use, inspect it for cuts and glazing, and replace weights with torn covers or loose rings. Once the line is set, pull your climbing rope through and test the tie-in point before you load it.',
+            2 => 'Practice your throws on the ground to build accuracy.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What weight throw bag should I use?',
+          'a' => 'Many climbers carry two: a lighter one for small crotches and a heavier one for height. Check the listing for weights included.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use throw line for rigging?',
+          'a' => 'No. Throw line is only for pulling a rope into place. Never climb or lower loads on it.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'rigging',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/throw-line-2.webp',
+        'sm' => '/assets/photos/throw-line-2-sm.webp',
+        'title' => 'coiling',
+        'creator' => 'michael pollak',
+        'creator_url' => 'https://www.flickr.com/photos/22294215@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/22294215@N06/6796140986',
+      ),
+    ),
+    '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/' => 
+    array (
+      'path' => '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/',
+      'category' => '/jobsite/chainsaw-accessories/fluids/',
+      'name' => 'WD-40 Specialist Dry Graphite Lube',
+      'brand' => 'wd-40',
+      'brand_name' => 'WD-40',
+      'kind' => 'fluid',
+      'price' => 9,
+      'keyword' => 'wd-40 graphite',
+      'title' => 'WD-40 Graphite Dry Lube for Locks and Hardware',
+      'h1' => 'WD-40 Graphite Dry Lube',
+      'meta' => 'WD-40 graphite dry lube leaves a dry film that keeps locks, hinges and hardware moving without attracting sawdust and grit. Uses, cautions and what to avoid.',
+      'tagline' => 'A dry graphite lube for locks, hinges and hardware that should not get gummy.',
+      'summary' => 'WD-40 graphite dry lube from the Specialist line sprays on wet and dries to a graphite film, keeping locks, hinges and small mechanisms moving without the sticky residue that attracts sawdust and grit. It suits the truck, trailer and shop where wet oil just collects dirt.',
+      'highlights' => 
+      array (
+        0 => 'Dries to a graphite film',
+        1 => 'Less sticky residue to collect dust and chips',
+        2 => 'Good for locks, latches and hinges',
+        3 => 'Handy in dusty, sawdust-heavy settings',
+        4 => 'Read the label for compatible materials',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Dry graphite lubricant',
+        ),
+        1 => 
+        array (
+          0 => 'Brand',
+          1 => 'WD-40 Specialist',
+        ),
+        2 => 
+        array (
+          0 => 'Format',
+          1 => 'Aerosol (check listing)',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why a dry lube on a tree crew',
+          'p' => 
+          array (
+            0 => 'Saw work fills everything with dust and chips. Oil on a padlock, a tool box latch or a trailer hinge turns that dust into paste. A dry graphite lube goes on as a spray, the carrier evaporates, and a dry film is left behind that keeps parts moving without collecting gunk.',
+            1 => 'Use it on padlocks, truck box and trailer locks, hinges and other metal mechanisms in the shop and on the trucks. See more <a href="/jobsite/chainsaw-accessories/fluids/">chainsaw and shop fluids</a>.',
+            2 => 'Graphite lubes are an old shop standard for locks because graphite stays slick without being sticky. Shake the can well, spray a small amount into the lock or joint, work the mechanism a few times and let it dry before use. A little goes a long way.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Where not to use it',
+          'p' => 
+          array (
+            0 => 'Keep lubricants off ropes, slings, saddles and other textiles, and off friction surfaces that need grip. For life-support hardware such as carabiners and pulleys, follow the manufacturer\'s care instructions: many recommend cleaning in water and using only a lubricant they approve, applied sparingly and wiped clean.',
+            1 => 'It is not a bar and chain oil or a replacement for engine lubricants. Use the spray in a ventilated area, keep it away from heat and flame, and read the label before use.',
+            2 => 'Graphite can mark fabric and paint, so mask off or wipe away overspray. Store the can upright, out of the sun and away from the cab heater.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use graphite lube on carabiner gates?',
+          'a' => 'Check the carabiner maker\'s instructions first. Some approve light lubrication of the gate hinge; keep any lube away from rope contact areas and wipe off the excess.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is it the same as regular WD-40?',
+          'a' => 'No. Regular WD-40 is a wet multi-use product. The dry graphite lube is made to leave a dry film.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'maintenance',
+      ),
+      'level' => 'all',
+      'brand_path' => '/wd-40/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/fluid-2.webp',
+        'sm' => '/assets/photos/fluid-2-sm.webp',
+        'title' => 'Vintage Gas Can Money',
+        'creator' => 'ccPixs.com',
+        'creator_url' => 'https://www.flickr.com/photos/86530412@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86530412@N02/8266319168',
+      ),
+    ),
+    '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/' => 
+    array (
+      'path' => '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/',
+      'category' => '/jobsite/power-equipment/parts/',
+      'name' => 'Husqvarna 372XP Felling Dogs',
+      'brand' => 'husqvarna',
+      'brand_name' => 'Husqvarna',
+      'kind' => 'parts',
+      'price' => 20,
+      'keyword' => 'husqvarna 372xp felling dogs',
+      'title' => 'Husqvarna 372XP Felling Dogs: Replacement Spikes',
+      'h1' => 'Husqvarna 372XP Felling Dogs',
+      'meta' => 'Replacement Husqvarna 372XP felling dogs give the saw a solid pivot against the log for bucking and felling. Fitment, install tips and when to replace them.',
+      'tagline' => 'Replacement bumper spikes that give the 372XP a solid pivot in big wood.',
+      'summary' => 'Husqvarna 372XP felling dogs replace worn, bent or missing bumper spikes on the 372XP. Sharp felling dogs give the saw a pivot point against the log, so you can lever through big cuts with less effort and more control.',
+      'highlights' => 
+      array (
+        0 => 'Replacement felling dogs for the 372XP',
+        1 => 'Pivot point for bucking and felling',
+        2 => 'Replace bent or dull spikes',
+        3 => 'Bolt-on installation',
+        4 => 'Check listing for inner or outer dog',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'Husqvarna 372XP',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Felling dog (bumper spike)',
+        ),
+        2 => 
+        array (
+          0 => 'Install',
+          1 => 'Bolt-on',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Why felling dogs matter',
+          'p' => 
+          array (
+            0 => 'Felling dogs are the toothed spikes beside the bar. Set them into the wood and the saw pivots on them, so the bar walks through the cut with less push from you. On a 372XP bucking big rounds or cutting a felling notch, a solid set of dogs makes the saw feel stronger and steadier.',
+            1 => 'Dogs bend when the saw is dropped or pinched, and the points wear round after hard use. When they slip instead of biting, it is time to replace them.',
+            2 => 'The 372XP is a long-running pro saw, and many crews keep older units in service with good parts. Felling dogs are among the cheapest parts to replace and among the most noticeable when they are worn. If you also have bent bar studs or a cracked clutch cover from the same drop, fix those at the same time.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fitting the right part',
+          'p' => 
+          array (
+            0 => 'Check the listing for whether this is an inner or outer dog, or a set, and match it to your saw and any fitted options. Remove the bar and chain, take off the old dog, and fit the new one with the correct screws, tightened firmly. Make sure nothing rubs the chain.',
+            1 => 'Use genuine or listed compatible parts. See more <a href="/jobsite/power-equipment/parts/">power equipment parts</a> for your saws.',
+            2 => 'Check that the dogs sit flat against the saw body and that the screws are secure after the first tank of fuel, since new parts can settle in.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Will 372XP felling dogs fit other models?',
+          'a' => 'Some Husqvarna saws share parts, but check the part number on the listing against your saw before ordering.',
+        ),
+        1 => 
+        array (
+          'q' => 'Do I need special tools?',
+          'a' => 'Usually just the screwdriver or Torx bit for the dog screws, plus your scrench for the bar nuts.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'felling',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-0.webp',
+        'sm' => '/assets/photos/parts-0-sm.webp',
+        'title' => 'chainsaw',
+        'creator' => 'sf-dvs',
+        'creator_url' => 'https://www.flickr.com/photos/46207792@N00',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/46207792@N00/64064283',
+      ),
+    ),
+    '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/' => 
+    array (
+      'path' => '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/',
+      'category' => '/jobsite/power-equipment/parts/',
+      'name' => 'Husqvarna 562XP Felling Dogs',
+      'brand' => 'husqvarna',
+      'brand_name' => 'Husqvarna',
+      'kind' => 'parts',
+      'price' => 20,
+      'keyword' => 'husqvarna 562xp felling dogs',
+      'title' => 'Husqvarna 562XP Felling Dogs: Replacement Spikes',
+      'h1' => 'Husqvarna 562XP Felling Dogs',
+      'meta' => 'Replacement Husqvarna 562XP felling dogs restore a firm pivot point for bucking and felling with your 562XP. Fitment notes, install steps and when to replace.',
+      'tagline' => 'Replacement bumper spikes for the 562XP so the saw bites and pivots cleanly.',
+      'summary' => 'Husqvarna 562XP felling dogs replace the worn or bent bumper spikes on a 562XP. A sharp set gives the saw a firm pivot against the wood, which makes bucking and felling cuts smoother and less tiring.',
+      'highlights' => 
+      array (
+        0 => 'Replacement felling dogs for the 562XP',
+        1 => 'Firm pivot for bucking and felling',
+        2 => 'Replace bent or rounded spikes',
+        3 => 'Bolt-on installation',
+        4 => 'Check listing for inner or outer dog',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Fits',
+          1 => 'Husqvarna 562XP',
+        ),
+        1 => 
+        array (
+          0 => 'Type',
+          1 => 'Felling dog (bumper spike)',
+        ),
+        2 => 
+        array (
+          0 => 'Install',
+          1 => 'Bolt-on',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What worn dogs cost you',
+          'p' => 
+          array (
+            0 => 'The 562XP is a workhorse for felling and bucking on tree crews. When its felling dogs are bent or worn smooth, the saw slips instead of pivoting, and you end up pushing the bar through the cut. That wastes time, wears you out and makes it harder to keep a straight cut.',
+            1 => 'Replacing the dogs is a quick, cheap fix that brings back the bite and the leverage.',
+            2 => 'Bent dogs often come from the saw being dropped, getting caught in a pinch or bouncing off a log. Look them over whenever you clean the saw. A loose dog can also rattle, wear the mounting holes and eventually let the screws back out, so tighten them as part of routine maintenance.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Fitting the right part',
+          'p' => 
+          array (
+            0 => 'Check the listing for whether this is an inner dog, an outer dog or a set, and confirm the part number for your saw. Remove the bar and chain, take off the old dog, fit the new one with the right screws and tighten them well. Make sure the chain runs clear.',
+            1 => 'While you are there, check the chain catcher and clutch cover. See more <a href="/jobsite/power-equipment/parts/">power equipment parts</a> for the 562XP and other saws.',
+            2 => 'Keep a spare set in the parts box so a bent dog does not take a good saw out of service on a busy day.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I fit bigger felling dogs on a 562XP?',
+          'a' => 'Aftermarket dogs exist for many saws. Check that any part is made for your model and does not interfere with the chain or cover.',
+        ),
+        1 => 
+        array (
+          'q' => 'How often should I replace them?',
+          'a' => 'When they are bent, loose or worn so they no longer bite. Check them whenever you clean the saw.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'felling',
+        1 => 'maintenance',
+      ),
+      'level' => 'pro',
+      'brand_path' => '/husqvarna/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/parts-1.webp',
+        'sm' => '/assets/photos/parts-1-sm.webp',
+        'title' => 'Route Clearance',
+        'creator' => 'Georgia National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/40994485@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/40994485@N04/33581236171',
+      ),
+    ),
+    '/chainsaw-strap-with-carabiner/' => 
+    array (
+      'path' => '/chainsaw-strap-with-carabiner/',
+      'category' => '/climbing/climbing-gear/chainsaw-lanyards/',
+      'name' => 'Chainsaw Strap with Carabiner',
+      'brand' => 'gap',
+      'brand_name' => 'Gap Arborist Supply',
+      'kind' => 'lanyard',
+      'price' => 22,
+      'keyword' => 'chainsaw strap with carabiner',
+      'title' => 'Chainsaw Strap with Carabiner for Climbing Saws',
+      'h1' => 'Chainsaw Strap with Carabiner',
+      'meta' => 'A chainsaw strap with carabiner tethers your climbing saw to your saddle with a gated connector. Setup, length and the daily checks that keep it working.',
+      'tagline' => 'A saw strap with a carabiner end for a secure, easy-to-handle saw tether.',
+      'summary' => 'This chainsaw strap with carabiner keeps your top-handle saw attached to your saddle, so a fumbled saw ends up hanging at your side rather than dropping toward the crew. A carabiner is easier to work with gloves on than a small snap, and many climbers like a gate they can lock.',
+      'highlights' => 
+      array (
+        0 => 'Tethers a climbing saw to the saddle',
+        1 => 'Carabiner end is easy to clip with gloves',
+        2 => 'Keeps a dropped saw off the ground crew',
+        3 => 'Light, simple tool tether',
+      ),
+      'specs' => 
+      array (
+        0 => 
+        array (
+          0 => 'Type',
+          1 => 'Chainsaw strap',
+        ),
+        1 => 
+        array (
+          0 => 'Connector',
+          1 => 'Carabiner',
+        ),
+        2 => 
+        array (
+          0 => 'Use',
+          1 => 'Saw tether, not life support',
+        ),
+      ),
+      'body' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Setting it up',
+          'p' => 
+          array (
+            0 => 'Clip the carabiner through the lanyard ring or eyelet on the saw and attach the other end to the saw ring or tool D on your saddle, usually on the side away from your work-positioning lanyard. The saw can then hang out of the way while you move, and you can let go of it to free both hands.',
+            1 => 'Choose a length that lets you reach a full cut at arm\'s length without the strap pulling the saw back. Too long and the saw swings around your knees or snags your lanyard; too short and you fight it on every cut. Check how it hangs whenever you change saddles or move the saw ring.',
+            2 => 'For bungee, adjustable and snap-ended versions, see our <a href="/climbing/climbing-gear/chainsaw-lanyards/">chainsaw lanyards</a>.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Carabiner or snap',
+          'p' => 
+          array (
+            0 => 'A carabiner opens wider than most snaps and is easier to clip through a thick saw ring or a ring on a gloved hand. A snap is quicker to clip one-handed and less likely to cross-load on a small eyelet. Either works if it closes fully and suits the ring it goes on.',
+            1 => 'This is a tool tether, not life-support equipment, so never clip into it to position yourself. Look over the strap for cuts and abrasion and work the carabiner gate before each climb, and retire it when the webbing is worn or the gate sticks. Engage the chain brake before you let the saw hang.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Is the carabiner rated for climbing?',
+          'a' => 'Treat the whole strap as a tool tether. Even if the connector carries a rating, the strap is not made for life support, so use a rated lanyard and carabiners for positioning.',
+        ),
+        1 => 
+        array (
+          'q' => 'Should the strap be a bungee?',
+          'a' => 'A bungee strap stretches so you can cut farther from your body and then pulls the saw back in. A fixed strap is simpler and lighter. Both keep the saw from falling.',
+        ),
+      ),
+      'use' => 
+      array (
+        0 => 'climbing',
+        1 => 'safety',
+      ),
+      'level' => 'all',
+      'brand_path' => '/gap-arborist-supply/',
+      'photo' => 
+      array (
+        'src' => '/assets/photos/lanyard-0.webp',
+        'sm' => '/assets/photos/lanyard-0-sm.webp',
+        'title' => 'Fall Protection Training, 2013',
+        'creator' => 'Western Area Power Admin',
+        'creator_url' => 'https://www.flickr.com/photos/86561000@N05',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/86561000@N05/8813827776',
+      ),
+    ),
   ),
   'categories' => 
   array (
@@ -153819,6 +162736,7 @@ return array (
         9 => '/books-and-training-materials/the-tree-climbers-guide-4th-edition/',
         10 => '/books-and-training-materials/best-practices-for-rigging-3rd-edition/',
         11 => '/books-and-training-materials/knots-at-work-a-field-guide-for-the-modern-arborist/',
+        12 => '/books-and-training-materials/best-practices-for-safety-in-arboriculture/',
       ),
       'photo' => 
       array (
@@ -154518,6 +163436,50 @@ return array (
         596 => '/shop-all/the-splice-shop-deluxe-bullet-throw-weight/',
         597 => '/throw-line-storage/courant-pelican-throw-line-bag/',
         598 => '/weaver-saddles/weaver-wlc-760-saddle/',
+        599 => '/climbing/climbing-gear/swivels/dmm-mini-swivel/',
+        600 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+        601 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+        602 => '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/',
+        603 => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+        604 => '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/',
+        605 => '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/',
+        606 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+        607 => '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/',
+        608 => '/hardware/notch-ce-quickie/',
+        609 => '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/',
+        610 => '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/',
+        611 => '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/',
+        612 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+        613 => '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/',
+        614 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/',
+        615 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
+        616 => '/throw-line-storage/notch-throwline-pop-box/',
+        617 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
+        618 => '/weaver-saddles/weaver-wlc-330-arborist-saddle/',
+        619 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
+        620 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
+        621 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/',
+        622 => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+        623 => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+        624 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/',
+        625 => '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/',
+        626 => '/throw-line-storage/cmi-throw-line-cube/',
+        627 => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
+        628 => '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/',
+        629 => '/micro-pulleys/2-bronze-swivel-snap/',
+        630 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
+        631 => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+        632 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/',
+        633 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
+        634 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
+        635 => '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/',
+        636 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/',
+        637 => '/devices-for-mrs/art-spiderjack-3/',
+        638 => '/climbing/saddles-and-harnesses/european-saddles/treeaustria-pro-climbing-harness/',
+        639 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        640 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
+        641 => '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/',
+        642 => '/chainsaw-strap-with-carabiner/',
       ),
       'photo' => 
       array (
@@ -155051,6 +164013,40 @@ return array (
         424 => '/shop-all/2-ring-to-ring-friction-saver/',
         425 => '/shop-all/kwiklock-modified-d-steel-carabiner/',
         426 => '/shop-all/petzl-microflip-wire-core-replacement-lanyard/',
+        427 => '/climbing/climbing-gear/swivels/dmm-mini-swivel/',
+        428 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+        429 => '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/',
+        430 => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+        431 => '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/',
+        432 => '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/',
+        433 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+        434 => '/hardware/notch-ce-quickie/',
+        435 => '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/',
+        436 => '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/',
+        437 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+        438 => '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/',
+        439 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/',
+        440 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
+        441 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
+        442 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
+        443 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
+        444 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/',
+        445 => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+        446 => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+        447 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/',
+        448 => '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/',
+        449 => '/throw-line-storage/cmi-throw-line-cube/',
+        450 => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
+        451 => '/micro-pulleys/2-bronze-swivel-snap/',
+        452 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
+        453 => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+        454 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
+        455 => '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/',
+        456 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/',
+        457 => '/devices-for-mrs/art-spiderjack-3/',
+        458 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        459 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
+        460 => '/chainsaw-strap-with-carabiner/',
       ),
       'photo' => 
       array (
@@ -155177,6 +164173,12 @@ return array (
         64 => '/devices-for-mrs/notch-rope-runner-vertec-aeris-friction-body-kit/',
         65 => '/devices-for-srs/rock-exotica-akimbo-2/',
         66 => '/rope-grabs/notch-glide-rope-grab/',
+        67 => '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/',
+        68 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+        69 => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
+        70 => '/devices-for-mrs/art-spiderjack-3/',
+        71 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        72 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
       ),
       'photo' => 
       array (
@@ -155287,6 +164289,7 @@ return array (
         14 => '/foot-ascenders-and-foot-loops/camp-turbofoot-evo-foot-ascender/',
         15 => '/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/petzl-pantin-foot-ascender/',
         16 => '/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/weaver-foot-loop-ascender/',
+        17 => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
       ),
       'photo' => 
       array (
@@ -155372,6 +164375,10 @@ return array (
         18 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/replacement-parts-for-spiderjack-2-1/',
         19 => '/devices-for-mrs/notch-rope-runner-vertec-aeris-friction-body-kit/',
         20 => '/devices-for-srs/rock-exotica-akimbo-2/',
+        21 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+        22 => '/devices-for-mrs/art-spiderjack-3/',
+        23 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        24 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
       ),
       'photo' => 
       array (
@@ -155438,6 +164445,9 @@ return array (
         7 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/lockjack-sport-replacement-parts/',
         8 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/replacement-parts-for-spiderjack-2-1/',
         9 => '/devices-for-mrs/notch-rope-runner-vertec-aeris-friction-body-kit/',
+        10 => '/devices-for-mrs/art-spiderjack-3/',
+        11 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        12 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
       ),
       'photo' => 
       array (
@@ -155506,6 +164516,7 @@ return array (
         8 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/isc-squirrel-tether-kit/',
         9 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/singing-tree-rope-wrench-slick-pin/',
         10 => '/devices-for-srs/rock-exotica-akimbo-2/',
+        11 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
       ),
       'photo' => 
       array (
@@ -155776,6 +164787,15 @@ return array (
         101 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/isc-triple-action-swivel-snaphook/',
         102 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/steel-swivel-snap-hook/',
         103 => '/shop-all/kwiklock-modified-d-steel-carabiner/',
+        104 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+        105 => '/hardware/notch-ce-quickie/',
+        106 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/',
+        107 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
+        108 => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+        109 => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+        110 => '/micro-pulleys/2-bronze-swivel-snap/',
+        111 => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+        112 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
       ),
       'photo' => 
       array (
@@ -155881,6 +164901,11 @@ return array (
         46 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rock-o-orca-lock-carabiner/',
         47 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-o-wire-eye-carabiner/',
         48 => '/shop-all/kwiklock-modified-d-steel-carabiner/',
+        49 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+        50 => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+        51 => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+        52 => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+        53 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
       ),
       'photo' => 
       array (
@@ -155947,6 +164972,8 @@ return array (
         7 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/dmm-stainless-steel-thimble/',
         8 => '/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/dmm-prest-in-grommet/',
         9 => '/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/petzl-tanga-connector-positioning-ring/',
+        10 => '/hardware/notch-ce-quickie/',
+        11 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
       ),
       'photo' => 
       array (
@@ -156117,6 +165144,7 @@ return array (
         10 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-micro-vault/',
         11 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-parking-lot/',
         12 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/petzl-caritool/',
+        13 => '/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-xl-chainsaw-hook/',
       ),
       'photo' => 
       array (
@@ -156280,6 +165308,7 @@ return array (
         8 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/isc-triple-action-snaphook/',
         9 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/isc-triple-action-swivel-snaphook/',
         10 => '/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/steel-swivel-snap-hook/',
+        11 => '/micro-pulleys/2-bronze-swivel-snap/',
       ),
       'photo' => 
       array (
@@ -156354,6 +165383,8 @@ return array (
         15 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-standard-chainsaw-lanyard/',
         16 => '/climbing/climbing-gear/chainsaw-lanyards/teufelberger-antishock-chainsaw-lanayrd/',
         17 => '/climbing/climbing-gear/chainsaw-lanyards/weaver-chainsaw-lanyard-with-snap/',
+        18 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/',
+        19 => '/chainsaw-strap-with-carabiner/',
       ),
       'photo' => 
       array (
@@ -156480,6 +165511,11 @@ return array (
         65 => '/f-a-bartlett-expert-tree-company-products/yale-r-i-n-g-lanyard-without-snaps/',
         66 => '/rope-lanyards/bandit-replacement-lanyard-without-snap/',
         67 => '/shop-all/petzl-microflip-wire-core-replacement-lanyard/',
+        68 => '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/',
+        69 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+        70 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
+        71 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
+        72 => '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/',
       ),
       'photo' => 
       array (
@@ -156564,6 +165600,8 @@ return array (
         24 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-pink-lanyard-prusik-adjuster-kit/',
         25 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-r-i-n-g-positioning-lanyard-kit-with-triple-locking-snap/',
         26 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-r-i-n-g-positioning-lanyard-kit/',
+        27 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+        28 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
       ),
       'photo' => 
       array (
@@ -156685,6 +165723,8 @@ return array (
         28 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/yale-r-i-n-g-positioning-lanyard/',
         29 => '/f-a-bartlett-expert-tree-company-products/yale-r-i-n-g-lanyard-without-snaps/',
         30 => '/rope-lanyards/bandit-replacement-lanyard-without-snap/',
+        31 => '/2-in-1-lanyards/kmiii-max-black-lanyard-without-hardware/',
+        32 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
       ),
       'photo' => 
       array (
@@ -156779,6 +165819,8 @@ return array (
         35 => '/climbing/climbing-gear/friction-savers/teufelberger-pulleysaver/',
         36 => '/climbing/climbing-gear/friction-savers/yale-r-i-n-g-friction-saver/',
         37 => '/shop-all/2-ring-to-ring-friction-saver/',
+        38 => '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/',
+        39 => '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/',
       ),
       'photo' => 
       array (
@@ -156914,6 +165956,9 @@ return array (
         42 => '/climbing/climbing-gear/gear-storage/throw-line-storage/weaver-small-throwline-storage-bag/',
         43 => '/climbing/climbing-gear/gear-storage/throw-line-storage/weaver-throw-line-cube/',
         44 => '/gear-bags/arbortec-cobra-drykit-rope-bag-55l/',
+        45 => '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/',
+        46 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
+        47 => '/throw-line-storage/cmi-throw-line-cube/',
       ),
       'photo' => 
       array (
@@ -157020,6 +166065,8 @@ return array (
         13 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-back-pack-gear-storage-bag/',
         14 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-chasm-gear-bag/',
         15 => '/gear-bags/arbortec-cobra-drykit-rope-bag-55l/',
+        16 => '/shop-all/r-easy-rks-30-gear-bag-pre-order-item/',
+        17 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
       ),
       'photo' => 
       array (
@@ -157195,6 +166242,10 @@ return array (
         43 => '/eye-and-eye-prusiks/sterling-10mm-flex-sewn-eye-to-eye-prusik/',
         44 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/armor-prus-10mm-eye-to-eye-prusik/',
         45 => '/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/teufelberger-8mm-ocean-polyester-thimble-loop/',
+        46 => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+        47 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/',
+        48 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/',
+        49 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
       ),
       'photo' => 
       array (
@@ -157278,6 +166329,8 @@ return array (
         24 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/10mm-beeline-polyester-sewn-eye-to-eye-prusik/',
         25 => '/eye-and-eye-prusiks/sterling-10mm-flex-sewn-eye-to-eye-prusik/',
         26 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/armor-prus-10mm-eye-to-eye-prusik/',
+        27 => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+        28 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
       ),
       'photo' => 
       array (
@@ -157348,6 +166401,7 @@ return array (
         10 => '/micro-pulleys/dmm-pinto-rig-pulley-v2/',
         11 => '/micro-pulleys/r-easy-climbing-lanyard-adjusting-pulley-pre-order-item/',
         12 => '/micro-pulleys/cmi-rna-pulley/',
+        13 => '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/',
       ),
       'photo' => 
       array (
@@ -157413,6 +166467,7 @@ return array (
         6 => '/climbing/climbing-gear/other-gear/rock-exotica-enforcer-with-case/',
         7 => '/climbing/climbing-gear/other-gear/teufelberger-rope-tarp/',
         8 => '/other-gear/notch-rc-grapple/',
+        9 => '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/',
       ),
       'photo' => 
       array (
@@ -157545,6 +166600,7 @@ return array (
         4 => '/climbing/climbing-gear/swivels/petzl-swivel-nfpa-rated/',
         5 => '/climbing/climbing-gear/swivels/dmm-nexus-swivel/',
         6 => '/climbing/climbing-gear/swivels/petzl-swivel-open/',
+        7 => '/climbing/climbing-gear/swivels/dmm-mini-swivel/',
       ),
       'photo' => 
       array (
@@ -157773,6 +166829,11 @@ return array (
         65 => '/shop-all/10-5mm-replacement-rope-bridge-with-sewn-eyes/',
         66 => '/shop-all/11mm-replacement-rope-bridge-kmiii-max-black-and-yellow/',
         67 => '/weaver-saddles/weaver-wlc-760-saddle/',
+        68 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+        69 => '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/',
+        70 => '/weaver-saddles/weaver-wlc-330-arborist-saddle/',
+        71 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/',
+        72 => '/climbing/saddles-and-harnesses/european-saddles/treeaustria-pro-climbing-harness/',
       ),
       'photo' => 
       array (
@@ -157940,6 +167001,7 @@ return array (
         11 => '/european-saddles/teufelberger-treemotion-essential-climbing-saddle/',
         12 => '/climbing/saddles-and-harnesses/european-saddles/treeaustria-3-2-climbing-harness/',
         13 => '/climbing/saddles-and-harnesses/european-saddles/courant-koala-v1-3-climbing-harness/',
+        14 => '/climbing/saddles-and-harnesses/european-saddles/treeaustria-pro-climbing-harness/',
       ),
       'photo' => 
       array (
@@ -158036,6 +167098,8 @@ return array (
         36 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders-with-hydration-pack/',
         37 => '/shop-all/10-5mm-replacement-rope-bridge-with-sewn-eyes/',
         38 => '/shop-all/11mm-replacement-rope-bridge-kmiii-max-black-and-yellow/',
+        39 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+        40 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/',
       ),
       'photo' => 
       array (
@@ -158167,6 +167231,9 @@ return array (
         62 => '/climbing/spurs/straps/weaver-26-leather-lower-straps/',
         63 => '/climbing/spurs/straps/weaver-brahma-26-upper-climber-straps/',
         64 => '/climbing/spurs/straps/weaver-brahma-webb-lower-climber-straps/',
+        65 => '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/',
+        66 => '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/',
+        67 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
       ),
       'photo' => 
       array (
@@ -158488,6 +167555,7 @@ return array (
         25 => '/climbing/spurs/straps/weaver-26-leather-lower-straps/',
         26 => '/climbing/spurs/straps/weaver-brahma-26-upper-climber-straps/',
         27 => '/climbing/spurs/straps/weaver-brahma-webb-lower-climber-straps/',
+        28 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
       ),
       'photo' => 
       array (
@@ -158577,6 +167645,8 @@ return array (
         27 => '/climbing/throw-weight-and-line/throw-line/weaver-12oz-throw-weight-and-line-kit/',
         28 => '/shop-all/the-splice-shop-deluxe-bullet-throw-weight/',
         29 => '/throw-line-storage/courant-pelican-throw-line-bag/',
+        30 => '/throw-line-storage/notch-throwline-pop-box/',
+        31 => '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/',
       ),
       'photo' => 
       array (
@@ -158639,6 +167709,7 @@ return array (
         2 => '/shop-all/12-oz-throw-weight-and-line-kit/',
         3 => '/shop-all/14-oz-throw-weight-and-line-kit/',
         4 => '/shop-all/16-oz-throw-weight-and-line-kit/',
+        5 => '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/',
       ),
       'photo' => 
       array (
@@ -158949,6 +168020,10 @@ return array (
         45 => '/clothing/sweatshirts-and-jackets/teufelberger-artic-climbing-fleece-large/',
         46 => '/clothing/t-shirts/arborwear-transpiration-t-shirt-safety-yellow/',
         47 => '/hats-and-caps/helmet-liner-beanie-sportflex/',
+        48 => '/clothing/hats-and-caps/arborwear-trucker-patch-cap/',
+        49 => '/clothing/sweatshirts-and-jackets/arborwear-navy-orange-tech-double-thick-pullover-sweatshirt/',
+        50 => '/clothing/hats-and-caps/husqvarna-chainsaw-hat/',
+        51 => '/clothing/hats-and-caps/rock-exotica-hat/',
       ),
       'photo' => 
       array (
@@ -159156,6 +168231,9 @@ return array (
         8 => '/clothing/hats-and-caps/husqvarna-vandra-hat/',
         9 => '/clothing/hats-and-caps/rocktrucker-hat-black-mesh/',
         10 => '/hats-and-caps/helmet-liner-beanie-sportflex/',
+        11 => '/clothing/hats-and-caps/arborwear-trucker-patch-cap/',
+        12 => '/clothing/hats-and-caps/husqvarna-chainsaw-hat/',
+        13 => '/clothing/hats-and-caps/rock-exotica-hat/',
       ),
       'photo' => 
       array (
@@ -159257,6 +168335,7 @@ return array (
         8 => '/clothing/sweatshirts-and-jackets/arbortec-black-large-breathedry-waterproof-smock/',
         9 => '/clothing/sweatshirts-and-jackets/arborwear-blacksafety-yellow-tech-double-thick-pullover-sweatshirt/',
         10 => '/clothing/sweatshirts-and-jackets/teufelberger-artic-climbing-fleece-large/',
+        11 => '/clothing/sweatshirts-and-jackets/arborwear-navy-orange-tech-double-thick-pullover-sweatshirt/',
       ),
       'photo' => 
       array (
@@ -159568,6 +168647,10 @@ return array (
         99 => '/cutting-and-pruning/pruners-and-loppers/jameson-compositlock-pruner-head/',
         100 => '/cutting-and-pruning/pruners-and-loppers/jameson-heavy-duty-pruner/',
         101 => '/cutting-and-pruning/pruners-and-loppers/jameson-ja-14-fixed-pulley-pruner-kit/',
+        102 => '/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/',
+        103 => '/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/',
+        104 => '/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/',
+        105 => '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head-with-adapter/',
       ),
       'photo' => 
       array (
@@ -159643,6 +168726,7 @@ return array (
         15 => '/cutting-and-pruning/blades/silky-gunfighter-330mm-taper-ground-teeth-replacement-blade-blade-only/',
         16 => '/cutting-and-pruning/blades/silky-ibuki-390mm-replacement-blade/',
         17 => '/cutting-and-pruning/blades/silky-zubat-arborist-edition-replacement-blade/',
+        18 => '/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/',
       ),
       'photo' => 
       array (
@@ -159751,6 +168835,7 @@ return array (
         15 => '/cutting-and-pruning/hand-saws-and-scabbards/jameson-folding-tri-cut-hand-saw/',
         16 => '/cutting-and-pruning/hand-saws-and-scabbards/jameson-hand-saw-with-scabbard/',
         17 => '/cutting-and-pruning/hand-saws-and-scabbards/silky-tsurugi-curved-hand-saw-with-large-teeth-330mm/',
+        18 => '/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/',
       ),
       'photo' => 
       array (
@@ -159822,6 +168907,8 @@ return array (
         12 => '/cutting-and-pruning/pole-saws-and-scabbards/weaver-pruner-pouch-with-clip-8/',
         13 => '/cutting-and-pruning/pole-saws-and-scabbards/weaver-saw-scabbard-curved-back-with-pruner-pouch-hl-14/',
         14 => '/cutting-and-pruning/pole-saws-and-scabbards/weaver-saw-scabbard-curved-back-with-snap-rubberized-hl-14/',
+        15 => '/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/',
+        16 => '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head-with-adapter/',
       ),
       'photo' => 
       array (
@@ -160489,6 +169576,15 @@ return array (
         364 => '/shop-all/pferd-stump-vise/',
         365 => '/wrenches-and-files/pferd-8-depth-guage-file/',
         366 => '/wrenches-and-files/pferd-wooden-file-handle/',
+        367 => '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/',
+        368 => '/wedges/hard-body-spiked-felling-wedge/',
+        369 => '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/',
+        370 => '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/',
+        371 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/',
+        372 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/arbormats-ground-protection-mat/',
+        373 => '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/',
+        374 => '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/',
+        375 => '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/',
       ),
       'photo' => 
       array (
@@ -160578,6 +169674,8 @@ return array (
         26 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-d-ring-extender/',
         27 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-energy-absoring-lanyard-with-soft-eye/',
         28 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-shock-absorbing-lanyard/',
+        29 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/',
+        30 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/arbormats-ground-protection-mat/',
       ),
       'photo' => 
       array (
@@ -160751,6 +169849,7 @@ return array (
         7 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-d-ring-extender/',
         8 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-energy-absoring-lanyard-with-soft-eye/',
         9 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/safewaze-shock-absorbing-lanyard/',
+        10 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/',
       ),
       'photo' => 
       array (
@@ -160811,6 +169910,7 @@ return array (
       array (
         0 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats-3x8/',
         1 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/ground-protection-mats/',
+        2 => '/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/arbormats-ground-protection-mat/',
       ),
       'photo' => 
       array (
@@ -160987,6 +170087,8 @@ return array (
         75 => '/shop-all/pferd-stump-vise/',
         76 => '/wrenches-and-files/pferd-8-depth-guage-file/',
         77 => '/wrenches-and-files/pferd-wooden-file-handle/',
+        78 => '/wedges/hard-body-spiked-felling-wedge/',
+        79 => '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/',
       ),
       'photo' => 
       array (
@@ -161585,6 +170687,7 @@ return array (
         7 => '/jobsite/chainsaw-accessories/fluids/husqvarna-2-stroke-fuel-48-gallon-drum/',
         8 => '/jobsite/chainsaw-accessories/fluids/eagle-5-gallon-yellow-safety-can/',
         9 => '/jobsite/chainsaw-accessories/fluids/eagle-safety-can-replacement-funnel/',
+        10 => '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/',
       ),
       'photo' => 
       array (
@@ -161649,6 +170752,7 @@ return array (
         3 => '/jobsite/chainsaw-accessories/wedges/hi-viz-hardbody-felling-wedge/',
         4 => '/wedges/hardhead-jr-wedge/',
         5 => '/wedges/heavy-duty-multi-tool-holster/',
+        6 => '/wedges/hard-body-spiked-felling-wedge/',
       ),
       'photo' => 
       array (
@@ -161949,6 +171053,8 @@ return array (
         18 => '/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-35-refill/',
         19 => '/jobsite/logging-tools/log-handling-tools/husqvarna-12-timber-tongs/',
         20 => '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-peavey/',
+        21 => '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/',
+        22 => '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/',
       ),
       'photo' => 
       array (
@@ -162179,6 +171285,8 @@ return array (
         6 => '/log-handling-tools/logrite-12-milo-hand-log-tongs/',
         7 => '/jobsite/logging-tools/log-handling-tools/husqvarna-12-timber-tongs/',
         8 => '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-peavey/',
+        9 => '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/',
+        10 => '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/',
       ),
       'photo' => 
       array (
@@ -162438,6 +171546,8 @@ return array (
         194 => '/jobsite/power-equipment/parts/husqvarna-washer-for-395xp-front-anti-vibration-mount/',
         195 => '/parts-and-accessories/husqvarna-545-ii-550xp-ii-saw-tune-up-kit/',
         196 => '/parts/husqvarna-belt-for-k770-cut-off-saw/',
+        197 => '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/',
+        198 => '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/',
       ),
       'photo' => 
       array (
@@ -162866,6 +171976,8 @@ return array (
         146 => '/jobsite/power-equipment/parts/husqvarna-washer-for-395xp-front-anti-vibration-mount/',
         147 => '/parts-and-accessories/husqvarna-545-ii-550xp-ii-saw-tune-up-kit/',
         148 => '/parts/husqvarna-belt-for-k770-cut-off-saw/',
+        149 => '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/',
+        150 => '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/',
       ),
       'photo' => 
       array (
@@ -162975,6 +172087,7 @@ return array (
         13 => '/jobsite/stump-grinding/1100-series-greenteeth-wearsharp-teeth/',
         14 => '/jobsite/stump-grinding/green-bolt-stump-grinder-bolt/',
         15 => '/jobsite/stump-grinding/stein-modular-guard-system-replacement-panel/',
+        16 => '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/',
       ),
       'photo' => 
       array (
@@ -163670,6 +172783,20 @@ return array (
         141 => '/shop-all/4-endless-loop-polyester-round-sling/',
         142 => '/shop-all/5-16-soft-shackle/',
         143 => '/shop-all/5-8-soft-anchor-rigging-sling-with-tylaska-basilisk/',
+        144 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/',
+        145 => '/shop-all/standard-5-8-crane-sling-kit/',
+        146 => '/rigging/mechanical-advantage/cmi-ropejack/',
+        147 => '/other-gear/soft-anchor-webbing-sling/',
+        148 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/',
+        149 => '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/',
+        150 => '/other-gear/replacement-speed-line-bale/',
+        151 => '/shop-all/premium-5-8-crane-sling-kit/',
+        152 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/',
+        153 => '/rings-and-other-hardware/cmi-neptune-rigging-hub/',
+        154 => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/',
+        155 => '/mechanical-advantage/winch-line-for-stein-ss-rcwinch/',
+        156 => '/adjustable-slings/7-8-whoopie-sling/',
+        157 => '/rigging/blocks-and-other-hardware/rigging-plates/cmi-maxi-rigging-plate/',
       ),
       'photo' => 
       array (
@@ -163781,6 +172908,11 @@ return array (
         47 => '/rigging/blocks-and-other-hardware/rigging-pulleys/spin-l1d/',
         48 => '/rings-and-other-hardware/tylaska-dtr20-arborist-rigging-ring/',
         49 => '/shop-all/5-16-soft-shackle/',
+        50 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/',
+        51 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/',
+        52 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/',
+        53 => '/rings-and-other-hardware/cmi-neptune-rigging-hub/',
+        54 => '/rigging/blocks-and-other-hardware/rigging-plates/cmi-maxi-rigging-plate/',
       ),
       'photo' => 
       array (
@@ -163857,6 +172989,7 @@ return array (
         15 => '/rigging/blocks-and-other-hardware/rigging-blocks/isc-compact-rigging-pulley-grey-with-grey-wheel/',
         16 => '/rigging/blocks-and-other-hardware/rigging-blocks/isc-medium-rigging-pulley-for-20mm-rope-300kn-grey-with-green-wheel/',
         17 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-direct-1-5/',
+        18 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/',
       ),
       'photo' => 
       array (
@@ -164001,6 +173134,9 @@ return array (
         10 => '/rings-and-other-hardware/tylaska-lfb-14-basilisk-low-friction-device/',
         11 => '/rings-and-other-hardware/tylaska-dtr20-arborist-rigging-ring/',
         12 => '/shop-all/5-16-soft-shackle/',
+        13 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/',
+        14 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/',
+        15 => '/rings-and-other-hardware/cmi-neptune-rigging-hub/',
       ),
       'photo' => 
       array (
@@ -164140,6 +173276,8 @@ return array (
         8 => '/rigging/mechanical-advantage/petzl-jag-double-pulley/',
         9 => '/rigging/mechanical-advantage/cmi-ropejack-bag/',
         10 => '/rigging/mechanical-advantage/petzl-jag-traxion-double-pulley/',
+        11 => '/rigging/mechanical-advantage/cmi-ropejack/',
+        12 => '/mechanical-advantage/winch-line-for-stein-ss-rcwinch/',
       ),
       'photo' => 
       array (
@@ -164245,6 +173383,7 @@ return array (
         8 => '/rigging/rigging-kits/isc-1-2-rigging-block-with-loopie-sling/',
         9 => '/rigging/rigging-kits/cmi-1-2-aluminum-rigging-block-with-1-2-x-5-sars/',
         10 => '/rigging/rigging-kits/standard-rigging-kit/',
+        11 => '/other-gear/replacement-speed-line-bale/',
       ),
       'photo' => 
       array (
@@ -164367,6 +173506,12 @@ return array (
         57 => '/shop-all/3-4-soft-anchor-rigging-sling-with-tylaska-large-basilisk/',
         58 => '/shop-all/4-endless-loop-polyester-round-sling/',
         59 => '/shop-all/5-8-soft-anchor-rigging-sling-with-tylaska-basilisk/',
+        60 => '/shop-all/standard-5-8-crane-sling-kit/',
+        61 => '/other-gear/soft-anchor-webbing-sling/',
+        62 => '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/',
+        63 => '/shop-all/premium-5-8-crane-sling-kit/',
+        64 => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/',
+        65 => '/adjustable-slings/7-8-whoopie-sling/',
       ),
       'photo' => 
       array (
@@ -164445,6 +173590,8 @@ return array (
         17 => '/rigging/rigging-slings/adjustable-slings/3-4-soft-anchor-rigging-sling/',
         18 => '/rigging/rigging-slings/adjustable-slings/1-2-soft-anchor-ring-sling-with-medium-ring/',
         19 => '/rigging/rigging-slings/adjustable-slings/1-2-x-4-tenex-soft-anchor-rigging-sling/',
+        20 => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/',
+        21 => '/adjustable-slings/7-8-whoopie-sling/',
       ),
       'photo' => 
       array (
@@ -164548,6 +173695,8 @@ return array (
         7 => '/rigging/rigging-slings/crane-slings/5-8-x-30-standard-crane-sling/',
         8 => '/rigging/rigging-slings/crane-slings/4-eye-to-eye-webbing-sling/',
         9 => '/shop-all/4-endless-loop-polyester-round-sling/',
+        10 => '/shop-all/standard-5-8-crane-sling-kit/',
+        11 => '/shop-all/premium-5-8-crane-sling-kit/',
       ),
       'photo' => 
       array (
@@ -164665,6 +173814,7 @@ return array (
         21 => '/rigging/rigging-slings/ring-slings/7-8-teufelberger-t-rex-rigging-sling-x-20/',
         22 => '/rigging/rigging-slings/ring-slings/dead-eye-ring-sling-1-2/',
         23 => '/heavy-duty-slings/sterling-barc-2-0-rigging-web-chain/',
+        24 => '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/',
       ),
       'photo' => 
       array (
@@ -164963,6 +174113,15 @@ return array (
         137 => '/rope/tech-cordage/teufelberger-8mm-ocean-polyester-hitch-cord-by-the-foot/',
         138 => '/rope/tech-cordage/teufelberger-9-3mm-epicord-hitch-cord-by-the-foot/',
         139 => '/rope/tech-cordage/yale-10mm-bee-line-by-the-foot/',
+        140 => '/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/',
+        141 => '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/',
+        142 => '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/',
+        143 => '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/',
+        144 => '/rigging-rope/9-16-mammoth-rigging-line/',
+        145 => '/rigging-rope/7-8-mammoth-rigging-line/',
+        146 => '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/',
+        147 => '/rigging-rope/9-16-husky-bull-rope-rigging-rope/',
+        148 => '/12-strand-climbing-rope/mastodon-5-8-rigging-rope/',
       ),
       'photo' => 
       array (
@@ -165093,6 +174252,10 @@ return array (
         66 => '/rope/climbing-rope/16-strand-climbing-rope/samson-arborfreak-pine-beauty-rope/',
         67 => '/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-fire-climbing-rope/',
         68 => '/rope/climbing-rope/static-climbing-rope/courant-rebel-yellow-climbing-rope/',
+        69 => '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/',
+        70 => '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/',
+        71 => '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/',
+        72 => '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/',
       ),
       'photo' => 
       array (
@@ -165161,6 +174324,7 @@ return array (
         7 => '/rope/climbing-rope/16-strand-climbing-rope/courant-komora-climbing-rope/',
         8 => '/rope/climbing-rope/16-strand-climbing-rope/samson-arborfreak-pine-beauty-rope/',
         9 => '/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-fire-climbing-rope/',
+        10 => '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/',
       ),
       'photo' => 
       array (
@@ -165255,6 +174419,9 @@ return array (
         33 => '/rope/climbing-rope/24-strand-climbing-rope/teufelberger-drenaline-11-8mm-climbing-line/',
         34 => '/rope/climbing-rope/24-strand-climbing-rope/teufelberger-tachyon-pink-ash-climbing-rope/',
         35 => '/rope/climbing-rope/24-strand-climbing-rope/teufelberger-tachyon-ash-climbing-rope/',
+        36 => '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/',
+        37 => '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/',
+        38 => '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/',
       ),
       'photo' => 
       array (
@@ -165437,6 +174604,11 @@ return array (
         46 => '/rigging-rope/marlow-raptor-18mm-rigging-rope/',
         47 => '/rigging-rope/teufelberger-sta-set-rigging-rope-5-8/',
         48 => '/rope/rigging-rope/samson-3-4-pro-master-rigging-rope/',
+        49 => '/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/',
+        50 => '/rigging-rope/9-16-mammoth-rigging-line/',
+        51 => '/rigging-rope/7-8-mammoth-rigging-line/',
+        52 => '/rigging-rope/9-16-husky-bull-rope-rigging-rope/',
+        53 => '/12-strand-climbing-rope/mastodon-5-8-rigging-rope/',
       ),
       'photo' => 
       array (
@@ -165764,6 +174936,12 @@ return array (
         86 => '/safety/traffic-control/jbc-36-road-closed-sign/',
         87 => '/safety/traffic-control/jbc-36-work-area-ahead-sign/',
         88 => '/safety/traffic-control/plasticade-tree-work-ahead-sign/',
+        89 => '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/',
+        90 => '/safety/first-aid/blood-stopper-kit/',
+        91 => '/safety/eye-protection/kask-super-plasma-visor/',
+        92 => '/full-body-harnesses/edelrid-flex-pro-ii-harness/',
+        93 => '/shop-all/petzl-avao-fast-international-version/',
+        94 => '/safety/communication/husqvarna-x-com-r-headset/',
       ),
       'photo' => 
       array (
@@ -165869,6 +175047,7 @@ return array (
         8 => '/safety/communication/sena-communication-spare-parts-kit/',
         9 => '/safety/communication/sena-crane-operator-headset/',
         10 => '/shop-all/husqvarna-x-com-active-headband-style-communication-system/',
+        11 => '/safety/communication/husqvarna-x-com-r-headset/',
       ),
       'photo' => 
       array (
@@ -165956,6 +175135,7 @@ return array (
         26 => '/safety/eye-protection/petzl-vizen-mesh-face-shield-for-2019-vertex-and-stratos-helmets/',
         27 => '/safety/eye-protection/petzl-vizir-2019-version/',
         28 => '/safety/eye-protection/pfanner-protos-helmet-integrated-visor-mesh-screen-f39-fine-mesh/',
+        29 => '/safety/eye-protection/kask-super-plasma-visor/',
       ),
       'photo' => 
       array (
@@ -166023,6 +175203,8 @@ return array (
         6 => '/safety/fall-protection/fred-the-rescue-dummy-rubber-filler/',
         7 => '/safety/fall-protection/petzl-asap-lock-fall-arrestor/',
         8 => '/safety/fall-protection/petzl-newton-easyfit-international-version/',
+        9 => '/full-body-harnesses/edelrid-flex-pro-ii-harness/',
+        10 => '/shop-all/petzl-avao-fast-international-version/',
       ),
       'photo' => 
       array (
@@ -166123,6 +175305,7 @@ return array (
         4 => '/safety/first-aid/weaver-orange-first-aid-pouch/',
         5 => '/safety/first-aid/first-aid-kit/',
         6 => '/safety/first-aid/petzl-jag-haul-system-kit/',
+        7 => '/safety/first-aid/blood-stopper-kit/',
       ),
       'photo' => 
       array (
@@ -166366,6 +175549,7 @@ return array (
         4 => '/safety/traffic-control/jbc-36-road-closed-sign/',
         5 => '/safety/traffic-control/jbc-36-work-area-ahead-sign/',
         6 => '/safety/traffic-control/plasticade-tree-work-ahead-sign/',
+        7 => '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/',
       ),
       'photo' => 
       array (
@@ -166628,6 +175812,9 @@ return array (
         9 => '/climbing/saddles-and-harnesses/weaver-saddles/weaver-wlc-530-climbing-saddle/',
         10 => '/climbing/saddles-and-harnesses/weaver-saddles/weaver-wlc-560-saddle-with-2-floating-d-rings/',
         11 => '/weaver-saddles/weaver-wlc-760-saddle/',
+        12 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+        13 => '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/',
+        14 => '/weaver-saddles/weaver-wlc-330-arborist-saddle/',
       ),
       'children' => 
       array (
@@ -166778,6 +175965,9 @@ return array (
         57 => '/climbing/spurs/straps/weaver-26-leather-lower-straps/',
         58 => '/climbing/spurs/straps/weaver-brahma-26-upper-climber-straps/',
         59 => '/climbing/spurs/straps/weaver-brahma-webb-lower-climber-straps/',
+        60 => '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/',
+        61 => '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/',
+        62 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
       ),
       'children' => 
       array (
@@ -166879,6 +176069,9 @@ return array (
         7 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/lockjack-sport-replacement-parts/',
         8 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/replacement-parts-for-spiderjack-2-1/',
         9 => '/devices-for-mrs/notch-rope-runner-vertec-aeris-friction-body-kit/',
+        10 => '/devices-for-mrs/art-spiderjack-3/',
+        11 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rope-tek-hitchhiker-2/',
+        12 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
       ),
       'children' => 
       array (
@@ -166955,6 +176148,7 @@ return array (
         8 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/isc-squirrel-tether-kit/',
         9 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/singing-tree-rope-wrench-slick-pin/',
         10 => '/devices-for-srs/rock-exotica-akimbo-2/',
+        11 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
       ),
       'children' => 
       array (
@@ -167050,6 +176244,7 @@ return array (
         5 => '/rope/climbing-rope/24-strand-climbing-rope/all-gear-11-8mm-cherry-bomb-2-climbing-rope/',
         6 => '/rope/climbing-rope/24-strand-climbing-rope/all-gear-11-8mm-mardi-gras-climbing-rope/',
         7 => '/rope/winch-line-and-synthetic-cable/all-gear-branch-saver-synthetic-cable-system/',
+        8 => '/24-strand-climbing-rope/all-gear-copperhead-11-7mm-climbing-rope-200-feet/',
       ),
     ),
     '/alliance-equipment/' => 
@@ -167171,6 +176366,8 @@ return array (
         15 => '/clothing/tree-climbing-pants/arborwear-after-hours-belt-chain-design/',
         16 => '/clothing/sweatshirts-and-jackets/arborwear-blacksafety-yellow-tech-double-thick-pullover-sweatshirt/',
         17 => '/clothing/t-shirts/arborwear-transpiration-t-shirt-safety-yellow/',
+        18 => '/clothing/hats-and-caps/arborwear-trucker-patch-cap/',
+        19 => '/clothing/sweatshirts-and-jackets/arborwear-navy-orange-tech-double-thick-pullover-sweatshirt/',
       ),
     ),
     '/arbpro/' => 
@@ -167268,6 +176465,7 @@ return array (
         7 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/spiderjack-3-replacement-parts/',
         8 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/replacement-parts-for-spiderjack-2-1/',
         9 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/art-positioner-lanyard-add-on-kit/',
+        10 => '/devices-for-mrs/art-spiderjack-3/',
       ),
     ),
     '/buckingham/' => 
@@ -167339,6 +176537,7 @@ return array (
         40 => '/climbing/spurs/replacement-gaffs-and-parts/buckingham-magnetic-gaff-cover/',
         41 => '/climbing/spurs/replacement-gaffs-and-parts/buckingham-replacement-gaffs-dowel-style/',
         42 => '/climbing/spurs/straps/buckingham-universal-lower-straps/',
+        43 => '/safety/first-aid/blood-stopper-kit/',
       ),
     ),
     '/camp/' => 
@@ -167379,6 +176578,7 @@ return array (
         9 => '/foot-ascenders-and-foot-loops/camp-turboknee-ascent-system/',
         10 => '/saddle-parts-and-shoulder-harnesses/camp-tree-access-evo-ansi-replacement-bridge/',
         11 => '/foot-ascenders-and-foot-loops/camp-turbofoot-evo-foot-ascender/',
+        12 => '/foot-ascenders-and-foot-loops/camp-turbofoot-spare-webbing/',
       ),
     ),
     '/climb-right/' => 
@@ -167559,6 +176759,7 @@ return array (
         12 => '/rope/climbing-rope/16-strand-climbing-rope/courant-komora-climbing-rope/',
         13 => '/rope/climbing-rope/static-climbing-rope/courant-rebel-yellow-climbing-rope/',
         14 => '/throw-line-storage/courant-pelican-throw-line-bag/',
+        15 => '/24-strand-climbing-rope/arbonaut-pink-and-blue-11-5mm-climbing-rope/',
       ),
     ),
     '/distel/' => 
@@ -167677,6 +176878,11 @@ return array (
         55 => '/climbing/climbing-gear/gear-storage/saddle-storage-bags/dmm-6l-tool-bag/',
         56 => '/climbing/climbing-gear/swivels/dmm-nexus-swivel/',
         57 => '/shop-all/kwiklock-modified-d-steel-carabiner/',
+        58 => '/climbing/climbing-gear/swivels/dmm-mini-swivel/',
+        59 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-perfect-o-carabiner-with-captiv-bar/',
+        60 => '/auto-locking-carabiners/d-shaped-locksafe-carabiner-with-ansi-gate/',
+        61 => '/auto-locking-carabiners/dmm-shadow-carabiner-matt-gray/',
+        62 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/dmm-keanu-pip-pin/',
       ),
     ),
     '/eagle-safety/' => 
@@ -167780,6 +176986,8 @@ return array (
         12 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-replacement-gaffs/',
         13 => '/climbing/climbing-gear/friction-savers/edelrid-bicolor-cambium-saver/',
         14 => '/climbing/climbing-gear/gear-storage/throw-line-storage/edelrid-spring-bag/',
+        15 => '/full-body-harnesses/edelrid-flex-pro-ii-harness/',
+        16 => '/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-lower-straps/',
       ),
     ),
     '/fanno/' => 
@@ -167812,6 +177020,7 @@ return array (
         1 => '/cutting-and-pruning/hand-saws-and-scabbards/fanno-wooden-handle-13-hand-saw/',
         2 => '/hand-saws-and-scabbards/fanno-15-curved-blade-handsaw/',
         3 => '/cutting-and-pruning/blades/fanno-13-tri-edge-blade/',
+        4 => '/hand-saws-and-scabbards/fanno-13-fixed-blade-orchard-saw/',
       ),
     ),
     '/felco/' => 
@@ -167962,6 +177171,7 @@ return array (
         2 => '/jobsite/stump-grinding/900-series-green-teeth-spacer/',
         3 => '/jobsite/stump-grinding/1100-series-greenteeth-wearsharp-teeth/',
         4 => '/jobsite/stump-grinding/green-bolt-stump-grinder-bolt/',
+        5 => '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/',
       ),
     ),
     '/hasegawa/' => 
@@ -168093,6 +177303,9 @@ return array (
         43 => '/rigging/blocks-and-other-hardware/rigging-blocks/isc-compact-rigging-pulley-grey-with-grey-wheel/',
         44 => '/rigging/blocks-and-other-hardware/rigging-blocks/isc-medium-rigging-pulley-for-20mm-rope-300kn-grey-with-green-wheel/',
         45 => '/rigging/lowering-devices/isc-rigging-rope-wrench-70kg/',
+        46 => '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/',
+        47 => '/srs-climbing-devices/isc-chipmunk-flex-tether-with-apex-rope-wrench/',
+        48 => '/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-captive-eye-supersafe-carabiner/',
       ),
     ),
     '/jameson/' => 
@@ -168160,6 +177373,7 @@ return array (
         36 => '/cutting-and-pruning/pruners-and-loppers/jameson-compositlock-pruner-head/',
         37 => '/cutting-and-pruning/pruners-and-loppers/jameson-heavy-duty-pruner/',
         38 => '/cutting-and-pruning/pruners-and-loppers/jameson-ja-14-fixed-pulley-pruner-kit/',
+        39 => '/cutting-and-pruning/pole-saws-and-scabbards/jameson-composite-lock-saw-head/',
       ),
     ),
     '/k-h-distributing/' => 
@@ -168228,6 +177442,7 @@ return array (
         9 => '/safety/eye-protection/kask-mesh-visor-for-super-plasma-helmets/',
         10 => '/safety/eye-protection/kask-plastic-mesh-visor-for-zenith-helmets/',
         11 => '/safety/eye-protection/kask-zenith-visor-adaptors/',
+        12 => '/safety/eye-protection/kask-super-plasma-visor/',
       ),
     ),
     '/klein/' => 
@@ -168333,6 +177548,7 @@ return array (
         4 => '/log-handling-tools/logrite-bts-hauler-with-wide-tires/',
         5 => '/log-handling-tools/logrite-12-milo-hand-log-tongs/',
         6 => '/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-peavey/',
+        7 => '/jobsite/logging-tools/log-handling-tools/logrite-pickaroon/',
       ),
     ),
     '/marlow/' => 
@@ -168409,6 +177625,7 @@ return array (
         8 => '/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-with-adapter/',
         9 => '/cutting-and-pruning/pruners-and-loppers/marvin-pruner-with-adapter/',
         10 => '/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-with-adapter-double-pulley-and-rope/',
+        11 => '/cutting-and-pruning/pole-saws-and-scabbards/marvin-cast-saw-head-with-adapter/',
       ),
     ),
     '/notch-equipment/' => 
@@ -168457,6 +177674,8 @@ return array (
         17 => '/devices-for-mrs/notch-rope-runner-vertec-aeris-friction-body-kit/',
         18 => '/other-gear/notch-rc-grapple/',
         19 => '/rope-grabs/notch-glide-rope-grab/',
+        20 => '/hardware/notch-ce-quickie/',
+        21 => '/throw-line-storage/notch-throwline-pop-box/',
       ),
     ),
     '/oregon/' => 
@@ -168600,6 +177819,10 @@ return array (
         81 => '/safety/eye-protection/petzl-vizir-2019-version/',
         82 => '/safety/first-aid/petzl-jag-haul-system-kit/',
         83 => '/shop-all/petzl-microflip-wire-core-replacement-lanyard/',
+        84 => '/climbing/climbing-gear/carabiners-and-hardware/hardware/petzl-delta-link/',
+        85 => '/shop-all/petzl-avao-fast-international-version/',
+        86 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-sequoia-replacement-bridge-2019-updated-version/',
+        87 => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/petzl-zigzag-plus/',
       ),
     ),
     '/pfanner/' => 
@@ -168771,6 +177994,7 @@ return array (
         15 => '/devices-for-srs/rock-exotica-akimbo-2/',
         16 => '/rigging/blocks-and-other-hardware/rigging-plates/rock-exotica-tririg/',
         17 => '/rigging/blocks-and-other-hardware/rigging-pulleys/rock-exotica-omni-block-1-1/',
+        18 => '/clothing/hats-and-caps/rock-exotica-hat/',
       ),
     ),
     '/safetree-products/' => 
@@ -168898,6 +178122,8 @@ return array (
         30 => '/rope/rigging-rope/samson-pro-master-1-2-rigging-rope/',
         31 => '/rope/climbing-rope/16-strand-climbing-rope/samson-arborfreak-pine-beauty-rope/',
         32 => '/rope/rigging-rope/samson-3-4-pro-master-rigging-rope/',
+        33 => '/24-strand-climbing-rope/samson-v-licious-rockies-11-4mm-climbing-rope-150-feet/',
+        34 => '/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-hi-vee-replacement-lanyard/',
       ),
     ),
     '/sawpod/' => 
@@ -169013,6 +178239,7 @@ return array (
         20 => '/cutting-and-pruning/blades/silky-ibuki-390mm-replacement-blade/',
         21 => '/cutting-and-pruning/blades/silky-zubat-arborist-edition-replacement-blade/',
         22 => '/cutting-and-pruning/hand-saws-and-scabbards/silky-tsurugi-curved-hand-saw-with-large-teeth-330mm/',
+        23 => '/cutting-and-pruning/blades/silky-gomboy-210mm-medium-teeth-blade-blade-only/',
       ),
     ),
     '/simonds/' => 
@@ -169077,6 +178304,7 @@ return array (
         6 => '/rigging-pulleys/smc-apex-1-1-pulley/',
         7 => '/rigging-pulleys/smc-apex-direct-1-1-pulley/',
         8 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-direct-1-5/',
+        9 => '/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-pulley-1-5/',
       ),
     ),
     '/stein/' => 
@@ -169109,6 +178337,7 @@ return array (
         2 => '/jobsite/stump-grinding/stein-modular-guard-system/',
         3 => '/rigging/lowering-devices/stein-rc2001-lowering-bollard/',
         4 => '/jobsite/stump-grinding/stein-modular-guard-system-replacement-panel/',
+        5 => '/mechanical-advantage/winch-line-for-stein-ss-rcwinch/',
       ),
     ),
     '/sterling-rope/' => 
@@ -169156,6 +178385,7 @@ return array (
         16 => '/tech-cordage/sterling-tritech-11mm-rope-by-the-foot/',
         17 => '/eye-and-eye-prusiks/sterling-10mm-flex-sewn-eye-to-eye-prusik/',
         18 => '/heavy-duty-slings/sterling-barc-2-0-rigging-web-chain/',
+        19 => '/rigging-rope/sterling-5-8-kraken-rigging-line-x-200/',
       ),
     ),
     '/teufelberger/' => 
@@ -169257,6 +178487,10 @@ return array (
         70 => '/rigging-rope/teufelberger-sta-set-rigging-rope-5-8/',
         71 => '/rope/tech-cordage/teufelberger-8mm-ocean-polyester-hitch-cord-by-the-foot/',
         72 => '/rope/tech-cordage/teufelberger-9-3mm-epicord-hitch-cord-by-the-foot/',
+        73 => '/16-strand-climbing-rope/teufelberger-safety-blue-hi-vee/',
+        74 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/tachyon-ash-lanyard-kit/',
+        75 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-10mm-ocean-polyester-split-tail/',
+        76 => '/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-sewn-eye-to-eye-prusik/',
       ),
     ),
     '/weaver/' => 
@@ -169348,6 +178582,13 @@ return array (
         60 => '/cutting-and-pruning/pole-saws-and-scabbards/weaver-saw-scabbard-curved-back-with-snap-rubberized-hl-14/',
         61 => '/light-duty-slings/weaver-loop-runners/',
         62 => '/weaver-saddles/weaver-wlc-760-saddle/',
+        63 => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-deluxe-work-suspenders/',
+        64 => '/climbing/saddles-and-harnesses/basic-saddles/weaver-wlc-160-saddle-with-2-nylon-leg-straps/',
+        65 => '/climbing/spurs/straps/weaver-26-leather-upper-climber-straps/',
+        66 => '/climbing/climbing-gear/friction-savers/weaver-leather-cambium-friction-saver/',
+        67 => '/weaver-saddles/weaver-wlc-330-arborist-saddle/',
+        68 => '/climbing/climbing-gear/gear-storage/gear-bags/weaver-arborist-doctor-style-canvas-tool-bag/',
+        69 => '/climbing/spurs/straps/weaver-synthetic-upper-climber-straps/',
       ),
     ),
     '/wesco-boots/' => 
@@ -169524,6 +178765,9 @@ return array (
         80 => '/rope/climbing-rope/12-strand-climbing-rope/yale-xtc-12-arborist-rope/',
         81 => '/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-fire-climbing-rope/',
         82 => '/rope/tech-cordage/yale-10mm-bee-line-by-the-foot/',
+        83 => '/eye-and-eye-prusiks/yale-veritas-10mm-sewn-eye-to-eye/',
+        84 => '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-beeline-split-tail/',
+        85 => '/2-in-1-lanyards/yale-phantom-green-and-purple-lanyard-without-hardware/',
       ),
     ),
     '/husqvarna/' => 
@@ -169813,6 +179057,11 @@ return array (
         257 => '/safety/gloves/husqvarna-technical-saw-protection-glove/',
         258 => '/shop-all/husqvarna-3-16-chainsaw-files-2-pack/',
         259 => '/shop-all/husqvarna-5-32-chainsaw-files-2-pack/',
+        260 => '/jobsite/logging-tools/log-handling-tools/husqvarna-pickaroon/',
+        261 => '/clothing/hats-and-caps/husqvarna-chainsaw-hat/',
+        262 => '/safety/communication/husqvarna-x-com-r-headset/',
+        263 => '/jobsite/power-equipment/parts/husqvarna-372xp-felling-dogs/',
+        264 => '/jobsite/power-equipment/parts/husqvarna-562xp-felling-dogs/',
       ),
     ),
     '/ngk/' => 
@@ -169934,6 +179183,10 @@ return array (
         17 => '/rigging/blocks-and-other-hardware/rigging-blocks/cmi-1-arborist-rigging-block/',
         18 => '/rigging/blocks-and-other-hardware/rigging-blocks/cmi-3-4-aluminum-rigging-block/',
         19 => '/rigging/mechanical-advantage/cmi-ropejack-bag/',
+        20 => '/rigging/mechanical-advantage/cmi-ropejack/',
+        21 => '/rings-and-other-hardware/cmi-neptune-rigging-hub/',
+        22 => '/throw-line-storage/cmi-throw-line-cube/',
+        23 => '/rigging/blocks-and-other-hardware/rigging-plates/cmi-maxi-rigging-plate/',
       ),
     ),
     '/4srt/' => 
@@ -170373,6 +179626,27 @@ return array (
         212 => '/shop-all/4-endless-loop-polyester-round-sling/',
         213 => '/shop-all/5-16-soft-shackle/',
         214 => '/shop-all/5-8-soft-anchor-rigging-sling-with-tylaska-basilisk/',
+        215 => '/climbing/climbing-gear/ascent-and-descent/descenders/big-8-stainless-steel-rescue-descender/',
+        216 => '/shop-all/standard-5-8-crane-sling-kit/',
+        217 => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-wire-core-flipline-kit/',
+        218 => '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/',
+        219 => '/other-gear/soft-anchor-webbing-sling/',
+        220 => '/rigging-rope/7-8-mammoth-rigging-line/',
+        221 => '/climbing/climbing-gear/friction-savers/retrieval-link-for-friction-saver/',
+        222 => '/rigging/blocks-and-other-hardware/rings-and-other-hardware/arborist-shackle/',
+        223 => '/books-and-training-materials/best-practices-for-safety-in-arboriculture/',
+        224 => '/heavy-duty-slings/3-4-ring-sling-with-beast-ring/',
+        225 => '/other-gear/replacement-speed-line-bale/',
+        226 => '/shop-all/premium-5-8-crane-sling-kit/',
+        227 => '/wedges/hard-body-spiked-felling-wedge/',
+        228 => '/micro-pulleys/2-bronze-swivel-snap/',
+        229 => '/shop-all/twist-lock-modified-d-steel-carabiner/',
+        230 => '/rigging/rigging-slings/adjustable-slings/5-8-whoopie-ring-sling-with-large-ring/',
+        231 => '/adjustable-slings/7-8-whoopie-sling/',
+        232 => '/climbing/climbing-gear/other-gear/bulk-webbing-by-the-foot/',
+        233 => '/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/',
+        234 => '/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/',
+        235 => '/chainsaw-strap-with-carabiner/',
       ),
     ),
     '/land-helmets/' => 
@@ -170648,6 +179922,7 @@ return array (
         2 => '/saddle-accessories/reecoil-audax-1500-hydration-harness/',
         3 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-standard-chainsaw-lanyard/',
         4 => '/climbing/climbing-gear/gear-storage/rope-bags/reecoil-rope-bag/',
+        5 => '/climbing/climbing-gear/chainsaw-lanyards/reecoil-full-reach-chainsaw-lanyard/',
       ),
     ),
     '/atlas/' => 
@@ -171067,6 +180342,7 @@ return array (
       ),
       'products' => 
       array (
+        0 => '/jobsite/chainsaw-accessories/fluids/wd-40-specialist-dry-graphite-lube/',
       ),
     ),
     '/wonder-gloves-1/' => 
@@ -171160,6 +180436,967 @@ return array (
   ),
   'guides' => 
   array (
+    '/guides/biggest-husqvarna-chainsaw/' => 
+    array (
+      'path' => '/guides/biggest-husqvarna-chainsaw/',
+      'keyword' => 'biggest husqvarna chainsaw',
+      'title' => 'Biggest Husqvarna Chainsaw: 3120 XP and the Big Pro Saws',
+      'h1' => 'The Biggest Husqvarna Chainsaw, and the Lightest',
+      'meta' => 'The biggest Husqvarna chainsaw is the 3120 XP at 118.8 cc. See how it compares with the 395XP, 592XP, 572XP and 372XP, plus the lightest Husqvarna saws.',
+      'dek' => 'Which is the biggest Husqvarna chainsaw, who actually needs one, and the big pro saws and light top-handles most tree crews run instead.',
+      'read_minutes' => 7,
+      'kind' => 'chainsaw',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What is the biggest Husqvarna chainsaw?',
+          'p' => 
+          array (
+            0 => 'The biggest Husqvarna chainsaw is the 3120 XP. At 118.8 cc it is the largest and most powerful saw in Husqvarna\'s professional lineup, rated at about 8.4 hp (6.2 kW), and the power head alone weighs about 22.9 lb before you add a bar and chain. It is usually sold as a power head only, so you choose the bar and chain to suit the work.',
+            1 => 'Below the 3120 XP sits a group of large professional saws in the 90 cc class, then the 70 cc saws that most removal crews treat as their everyday big saw. At the other end of the range are the small top-handle saws climbers carry in the tree, which are the lightest Husqvarna chainsaws you can buy.',
+            2 => 'This guide works down the range from largest to lightest, with the figures we are confident of, and explains which size makes sense for real tree work. For full details on any model, see the product pages in our <a href="/jobsite/power-equipment/chainsaws/">chainsaws</a> section.',
+          ),
+          'list' => 
+          array (
+            0 => 'Husqvarna 3120 XP: 118.8 cc, the largest and most powerful',
+            1 => 'Husqvarna 395XP: 93.6 cc, classic carbureted big saw',
+            2 => 'Husqvarna 592XP: 92.7 cc, newer big saw with AutoTune',
+            3 => 'Husqvarna 390XP: 88 cc, a lighter big-saw option',
+            4 => 'Husqvarna 572XP and 372XP: about 70 cc, the removal-crew workhorses',
+            5 => 'Husqvarna T525: 27 cc, the lightest gas top-handle',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Husqvarna 3120 XP: who needs a 120 cc saw',
+          'p' => 
+          array (
+            0 => 'The <a href="/jobsite/power-equipment/chainsaws/husqvarna-3120xp-chainsaw-power-head-only/">Husqvarna 3120 XP</a> is built for very large wood: felling and bucking big-diameter trunks, slabbing with a chainsaw mill, and cutting wide stumps and butt logs that a 90 cc saw would labor through. It pulls long bars that smaller saws cannot keep up with, and it is a common choice for chainsaw milling because it holds speed in a long, wide cut.',
+            1 => 'For most tree services it is a specialty saw, not a daily one. A 3120 XP with a long bar is heavy to carry across a yard and tiring to hold in a bucking position all day. Crews that own one tend to bring it out for the biggest removals, storm work on old trees and milling jobs, and leave it on the truck the rest of the time.',
+            2 => 'Big saws like this use a decompression valve to make starting manageable. Many owners run .404 chain on longer bars for durability in big wood, though 3/8 in chain is also used depending on the bar setup. Check the operator\'s manual for the bar and chain combinations Husqvarna approves for the saw.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => '395XP, 592XP and 390XP: the 90 cc class',
+          'p' => 
+          array (
+            0 => 'For crews that regularly cut large wood but do not need a 120 cc saw, the 90 cc class is the sweet spot. The <a href="/jobsite/power-equipment/chainsaws/husqvarna-395xp-chainsaw/">395XP</a> is the classic choice: 93.6 cc, about 6.6 hp, a conventional carburetor and a long track record on felling and bucking jobs. It is heavy, simple and strong, and a lot of saw hands still prefer it.',
+            1 => 'The <a href="/jobsite/power-equipment/chainsaws/husqvarna-592xp-chainsaw/">592XP</a> is Husqvarna\'s newer saw in this class. At 92.7 cc it is rated at about 7.5 hp, and it uses AutoTune to manage the fuel mixture as conditions change. On paper and in the cut it is the more powerful of the two, and it is the one to look at if you want a modern big saw that several people can share without retuning.',
+            2 => 'The 390XP, at 88 cc, is a little lighter and was popular as a big saw that is still reasonable to carry. Husqvarna\'s 585 is another large professional saw a step below the 592XP. Availability of the older carbureted models varies by market, so check what is currently sold and supported where you work.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => '572XP and 372XP: the size most crews actually use',
+          'p' => 
+          array (
+            0 => 'If you asked a room of removal climbers and ground crew which Husqvarna they reach for first, most would name a 70 cc saw. The 572XP (70.6 cc, AutoTune) and the older 372XP (70.7 cc, carbureted) have enough power to run an 18 to 28 inch bar for felling and bucking, and they are light enough to carry around a job and handle while blocking down a spar.',
+            1 => 'These saws are not the biggest Husqvarna chainsaws, but they cover the large majority of residential removal work. A crew with one 70 cc saw and one 90 cc or larger saw can handle almost anything that comes up. We compare the two in detail in our <a href="/guides/husqvarna-372xp-vs-572xp/">Husqvarna 372XP vs 572XP</a> guide.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'The lightest Husqvarna chainsaw',
+          'p' => 
+          array (
+            0 => 'At the other end of the range, the lightest gas Husqvarna chainsaw is the <a href="/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/">T525</a> top-handle. It is a 27 cc saw that weighs about 5.9 lb as a power head and runs a 10 or 12 inch bar. It is built for pruning and light limb work aloft, where every ounce on the saddle matters.',
+            1 => 'Most production climbers step up to the T540XP, which has a 37.7 cc engine and runs a 12 to 16 inch bar, for more cutting speed on removals. Husqvarna also makes battery top-handle saws such as the T540i XP, which are quiet and start instantly, at the cost of carrying and charging batteries.',
+            2 => 'Top-handle saws are designed for trained arborists working in trees, not for general ground use. On the ground, run a rear-handle saw with both hands on the handles.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Bars, chain and fuel for big saws',
+          'p' => 
+          array (
+            0 => 'Bar length is where big saws earn their keep. A 90 cc or larger saw can pull a long bar through hardwood, but every inch of bar adds weight and makes the saw more front-heavy. Many crews keep a long bar for felling and big rounds and a shorter one for everyday bucking on the same power head.',
+            1 => 'Match pitch and gauge across your bars, chain and sprockets, and keep the oiler adjusted so a long bar gets enough oil. Our <a href="/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/">bars and chain</a> section covers common setups. Run fresh fuel at the ratio in the manual, keep the air filter clean, and check the decompression valve and spark plug at regular service intervals.',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'How to choose the right size Husqvarna',
+          'p' => 
+          array (
+            0 => 'Buy for the wood you cut every week, not the biggest tree you might see once a year. A saw that is too large wears you out and costs more in fuel, bars and chain. A saw that is too small burns time in big wood and gets overworked. For many tree services the right setup is a top-handle for the climber, a 50 to 60 cc saw for limbing and brush, a 70 cc saw for removals, and a 90 cc or larger saw for the largest trees.',
+            1 => 'Whatever size you run, wear chainsaw pants or chaps, a helmet with eye and hearing protection, gloves and boots, and get proper chainsaw and felling training. A big saw with a long bar has more kickback energy and is harder to control, so it rewards good technique and punishes bad habits.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is the biggest Husqvarna chainsaw?',
+          'a' => 'The Husqvarna 3120 XP. It has a 118.8 cc engine rated at about 8.4 hp and is the largest saw in Husqvarna\'s professional lineup.',
+        ),
+        1 => 
+        array (
+          'q' => 'What is the most powerful Husqvarna chainsaw?',
+          'a' => 'The 3120 XP is also the most powerful. Below it, the 592XP is rated at about 7.5 hp and the 395XP at about 6.6 hp.',
+        ),
+        2 => 
+        array (
+          'q' => 'What is the lightest Husqvarna chainsaw?',
+          'a' => 'Among gas saws, the T525 top-handle is the lightest, at about 5.9 lb for the power head. It is intended for trained arborists working in trees.',
+        ),
+        3 => 
+        array (
+          'q' => 'Does the Husqvarna 3120 XP come with a bar and chain?',
+          'a' => 'It is commonly sold as a power head only, so you add a bar and chain. Check the operator\'s manual for the approved bar lengths and chain types.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/jobsite/power-equipment/chainsaws/',
+        1 => '/jobsite/power-equipment/chainsaws/husqvarna-3120xp-chainsaw-power-head-only/',
+        2 => '/jobsite/power-equipment/chainsaws/husqvarna-395xp-chainsaw/',
+        3 => '/jobsite/power-equipment/chainsaws/husqvarna-592xp-chainsaw/',
+        4 => '/jobsite/power-equipment/chainsaws/husqvarna-572xp-chainsaw/',
+        5 => '/jobsite/power-equipment/chainsaws/husqvarna-372xp-chainsaw/',
+        6 => '/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/',
+        7 => '/guides/husqvarna-372xp-vs-572xp/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/chainsaw-6.webp',
+        'sm' => '/assets/photos/chainsaw-6-sm.webp',
+        'title' => 'Virginia National Guard',
+        'creator' => 'The National Guard',
+        'creator_url' => 'https://www.flickr.com/photos/33252741@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/33252741@N08/51811532407',
+      ),
+    ),
+    '/guides/longest-gas-pole-saw/' => 
+    array (
+      'path' => '/guides/longest-gas-pole-saw/',
+      'keyword' => 'longest gas pole saw',
+      'title' => 'Longest Gas Pole Saw: Reach, Models and Safety',
+      'h1' => 'Longest Gas Pole Saw: How Much Reach You Really Get',
+      'meta' => 'Looking for the longest gas pole saw? How reach is measured, telescoping gas vs battery vs manual poles, the Husqvarna pole saws, and power line safety rules.',
+      'dek' => 'What the longest gas pole saw can actually reach, when a manual pole goes higher, and how to stay safe working overhead.',
+      'read_minutes' => 7,
+      'kind' => 'pole-saw',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What makes the longest gas pole saw',
+          'p' => 
+          array (
+            0 => 'When people search for the longest gas pole saw, they usually want to cut limbs as high as possible from the ground without a ladder, a climb or a lift. The answer depends on two numbers that are easy to confuse: the tool\'s overall length, and the working reach you get once you hold it.',
+            1 => 'Overall length is the measurement from the end of the handle to the tip of the bar, with the shaft fully extended on a telescoping model. Working reach adds your own height and arm position. Manufacturers often quote a reach figure that assumes you are holding the saw at a steep angle, so treat it as a best case. In practice you rarely cut straight overhead, and every degree you lean the pole out costs you height.',
+            2 => 'The longest gas pole saws are telescoping professional models. They give the most reach of any powered pole saw, but they also put a heavy engine at one end and a cutting head at the other, which makes them tiring to hold fully extended.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Telescoping gas pole saws',
+          'p' => 
+          array (
+            0 => 'A telescoping gas pole saw lets you collapse the shaft for transport and low limbs, then extend it for high work. The <a href="/jobsite/power-equipment/chainsaws/husqvarna-525pt5s-gas-powered-pole-saw/">Husqvarna 525PT5S</a> is a common professional choice: a 25.4 cc X-Torq engine, a 12 inch bar and a telescoping shaft, built for crews that prune and clear all day.',
+            1 => 'When you compare models, look at extended length, weight, how the shaft locks, and how far the engine sits from your hands. A saw that balances well is easier to hold steady at full extension, which matters more than a few extra inches on the spec sheet. Also check the bar and chain size, since replacement <a href="/chainsaw-chain/husqvarna-3-8-micro-x-050-44dl-chain-fits-gas-poweredpole-saws/">pole saw chain</a> is a regular expense.',
+            2 => 'Gas pole saws handle thicker limbs and long days without battery swaps. The trade-offs are noise, fuel mixing and more maintenance than a battery saw.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Husqvarna pole saw options',
+          'p' => 
+          array (
+            0 => 'Husqvarna makes several pole saws that come up in searches for an extendable Husqvarna polesaw. The 525PT5S is the gas telescoping model. The 530iPT5 is the telescoping battery version; we list it as the <a href="/shop-all/husqvarna-530ipt-battery-powered-pole-saw-without-batteries-or-charger/">Husqvarna 530iPT</a>, sold as a tool only with a 10 inch bar on Husqvarna\'s 36V battery system.',
+            1 => 'For utility line clearance there is the Husqvarna MadSaw, a gas pole saw with a dielectric fiberglass shaft. It is a specialty tool for qualified line-clearance crews, not a homeowner upgrade. Some combi trimmers also accept a pole saw attachment, which is a good fit if you already own a split-shaft power head; see our <a href="/guides/husqvarna-330lk-vs-525l/">Husqvarna 330LK vs 525L</a> guide.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'Manual poles reach higher than any gas pole saw',
+          'p' => 
+          array (
+            0 => 'If maximum reach is the goal, a manual pole saw beats a powered one. Without an engine on the end, sectional and telescoping poles can be built much longer and still be controlled. Arborists commonly stack fiberglass sections to reach well past what any gas pole saw offers.',
+            1 => 'Telescoping manual poles such as the <a href="/cutting-and-pruning/pole-saws-and-scabbards/20-nobasu-4-section-telescoping-aluminum-polesaw/">Notch Nobasu 20 ft polesaw</a> or the Jameson telescoping poles extend quickly and pack small. Sectional fiberglass poles let you add exactly the length you need. A sharp pull-stroke pole saw blade cuts surprisingly fast, and a pole pruner handles small clean cuts. Browse our <a href="/cutting-and-pruning/poles-and-kits/">poles and kits</a> for options.',
+            2 => 'The trade-off is effort and diameter. A manual pole saw is slow on thick limbs, and the higher you go the harder it is to make a clean cut. Many crews carry both: a manual pole for reach and finish work, and a powered pole saw for volume.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Battery pole saws',
+          'p' => 
+          array (
+            0 => 'Battery pole saws are quieter, start instantly and need less maintenance. They suit residential pruning, noise-sensitive jobs and crews that already run a battery platform. Reach is similar to gas models in the same class, and run time depends on the battery size and the wood you are cutting.',
+            1 => 'For all-day production pruning in thick limbs, a gas pole saw still has the edge. For shorter jobs and finish work, many crews find a battery pole saw is the one that gets used most.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Power lines: the rule that matters most',
+          'p' => 
+          array (
+            0 => 'Most pole saws are not insulated, and even a dry wooden or fiberglass pole can conduct electricity if it is dirty, wet or damaged. Unless you are a qualified line-clearance arborist, keep yourself, the pole saw and any branch you are cutting at least 10 feet from overhead lines, and more for higher-voltage lines. The limb you cut can also fall into a line.',
+            1 => 'If a tree is near power lines, call the utility or a qualified line-clearance tree company. Dielectric tools like the MadSaw are rated and tested for line work, but they are only safe in the hands of trained, qualified workers following line-clearance procedures under ANSI Z133 and OSHA rules.',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'Using a long pole saw safely',
+          'p' => 
+          array (
+            0 => 'Stand to the side of the limb, never directly under it, and plan where the piece will fall before you start. Wear a helmet, eye protection and gloves, plus hearing protection with a powered saw. Make a small undercut first on larger limbs so the bark does not tear down the stem, then finish from the top.',
+            1 => 'Do not use a pole saw from a ladder, and keep other people well clear of the drop zone. Keep the chain or blade sharp so you are not forcing the cut at full extension.',
+          ),
+          'list' => 
+          array (
+            0 => 'Check for power lines before every cut',
+            1 => 'Stand to the side, not under the limb',
+            2 => 'Undercut larger limbs to prevent bark tearing',
+            3 => 'Wear a helmet, eye protection and gloves',
+            4 => 'Keep bystanders out of the drop zone',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is the longest gas pole saw?',
+          'a' => 'The longest gas pole saws are professional telescoping models. Compare each maker\'s extended length and listed reach, and remember that reach figures assume a steep working angle.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is the Husqvarna pole saw extendable?',
+          'a' => 'Yes. The 525PT5S gas pole saw and the 530iPT5 battery pole saw both have telescoping shafts.',
+        ),
+        2 => 
+        array (
+          'q' => 'What reaches higher, a gas pole saw or a manual pole saw?',
+          'a' => 'A manual pole saw. Without an engine on the end, sectional or telescoping poles can be made longer and still be controlled.',
+        ),
+        3 => 
+        array (
+          'q' => 'Can I use a pole saw near power lines?',
+          'a' => 'Not unless you are a qualified line-clearance arborist. Everyone else should keep themselves, the tool and the branch at least 10 feet from overhead lines and call the utility.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/cutting-and-pruning/pole-saws-and-scabbards/',
+        1 => '/cutting-and-pruning/poles-and-kits/',
+        2 => '/jobsite/power-equipment/chainsaws/husqvarna-525pt5s-gas-powered-pole-saw/',
+        3 => '/shop-all/husqvarna-530ipt-battery-powered-pole-saw-without-batteries-or-charger/',
+        4 => '/jobsite/power-equipment/chainsaws/husqvarna-madsaw-gas-powered-dielectric-pole-saw/',
+        5 => '/cutting-and-pruning/pole-saws-and-scabbards/20-nobasu-4-section-telescoping-aluminum-polesaw/',
+        6 => '/jobsite/power-equipment/battery-powered-equipment/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/pole-saw-1.webp',
+        'sm' => '/assets/photos/pole-saw-1-sm.webp',
+        'title' => '2009. Lorraine MacLauchlan (B.C. Ministry of Forests, Southern Interior Region) with pole-pruner to sample Douglas-fir tussock moth larvae, pre-spray. Testing the effectiveness of low-dose application rates of TM-Biocontrol-1. Kamloops, B.C.',
+        'creator' => 'USDA Forest Service',
+        'creator_url' => 'https://www.flickr.com/photos/151887236@N05',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/151887236@N05/39161789941',
+      ),
+    ),
+    '/guides/rope-pullers-for-tree-felling/' => 
+    array (
+      'path' => '/guides/rope-pullers-for-tree-felling/',
+      'keyword' => 'rope puller for tree felling',
+      'title' => 'Rope Puller for Tree Felling: Pullers, Winches and Kits',
+      'h1' => 'Choosing a Rope Puller for Tree Felling',
+      'meta' => 'How to choose a rope puller for tree felling: endless rope pullers, rope come alongs, pulley systems and winches like the GRCS, plus rope, anchors and setup.',
+      'dek' => 'How a rope puller for tree felling works, how it compares with come alongs, pulley systems and winches, and how to set one up safely.',
+      'read_minutes' => 7,
+      'kind' => 'rigging-device',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What a rope puller does in tree felling',
+          'p' => 
+          array (
+            0 => 'A rope puller for tree felling puts steady, controlled tension on a pull line tied high in the tree. Used with a proper notch and hinge, that tension helps a tree go where you planned: it can take out some back lean, keep a tree from sitting back on the bar, and give you a margin of control when the target area is tight.',
+            1 => 'It is not a way to drag a tree against heavy lean or to fix a bad notch. The hinge still steers the tree. The puller adds force in the felling direction, and it lets one person on the ground apply that force in small, measured increments instead of guessing with a team pulling by hand.',
+            2 => 'Rope pullers, rope come alongs, endless rope winches and lever pullers are names for closely related tools. This guide covers how they differ and how to pick one that fits your work.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Endless rope pullers vs cable come alongs',
+          'p' => 
+          array (
+            0 => 'An endless or continuous rope puller grips the rope itself with a pair of jaws. Each stroke of the lever pulls the rope through, and the jaws hold it between strokes. Because it is not winding rope onto a drum, the pull length is limited only by the length of rope you have. The <a href="/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/">Maasdam continuous rope puller</a> is the best-known example in tree work.',
+            1 => 'A cable come along winds steel cable onto a small drum. It is strong and compact, but the cable is short, so on a long pull you have to stop, re-rig and start again, which is the last thing you want with a tree half cut. That is why most arborists use a rope come along instead.',
+            2 => 'Whichever you use, check the rated capacity and the rope type and diameter the maker approves. A puller that slips on the wrong rope, or a rope that is weaker than the pull, turns a controlled job into an uncontrolled one.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Pulley systems and mechanical advantage',
+          'p' => 
+          array (
+            0 => 'A pulley system multiplies the force a person can put on the line. Fiddle block sets are a fast way to rig a simple mechanical advantage for pulling or tensioning, and a progress-capture pulley or rope grab lets you hold what you gain between pulls. Our <a href="/rigging/mechanical-advantage/">mechanical advantage</a> section has fiddle block sets and pulleys sized for rigging.',
+            1 => 'Real-world mechanical advantage is always lower than the theoretical number because of friction at each pulley and bend. Use rigging pulleys rather than carabiners at change-of-direction points, and keep the system simple enough that anyone on the crew can see how it is rigged.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'Winches for pulling and tensioning',
+          'p' => 
+          array (
+            0 => 'Some lowering devices include a winch. The <a href="/rigging/lowering-devices/good-rigging-control-system/">Good Rigging Control System (GRCS)</a> is a trunk-mounted capstan with a winch that crews use for lowering, lifting and tensioning a pull line. If you already rig with a GRCS, it can double as a felling puller, anchored to a sound tree in the right direction.',
+            1 => 'Portable gas capstan winches are another option for heavy, repeated pulls. They are fast but need training, and the operator must be able to stop and hold the load at any moment. Pulling with a truck is a common cause of accidents because the driver cannot feel the tension and the load can change suddenly, so a hand-operated puller or a winch with a dedicated operator is the safer choice.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Rope, anchors and rope length',
+          'p' => 
+          array (
+            0 => 'Use a low-stretch rigging rope for pulling. Stretchy rope stores energy and wastes your pulls. A double-braid line such as <a href="/rope/rigging-rope/samson-stable-braid-5-8-rigging-rope/">Samson Stable Braid</a> is a common choice. Check the rope\'s strength, condition and the diameter range your puller accepts.',
+            1 => 'Run enough rope that the puller and the person working it sit well outside the fall zone. Many crews plan for a pull line at least one and a half to two times the height of the tree. Anchor the puller to a sound tree or other solid anchor with a rated sling, such as a whoopie or soft anchor sling, and tie the pull line as high in the tree as you safely can for better leverage.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Setting up a pull safely',
+          'p' => 
+          array (
+            0 => 'Plan the fall, clear the area, cut the notch and agree on signals before anyone touches the puller. Most crews take up slack and set a moderate tension before the back cut, then add tension on the faller\'s call as the hinge forms. Over-tensioning before the cut can split the trunk or pull the tree before the hinge is ready.',
+            1 => 'Never stand in the bight of the rope or in line with a tensioned rope, which can snap back if something fails. Communication between the faller and the puller operator is everything. Learn these techniques from a qualified trainer, and follow ANSI Z133 and your company\'s procedures.',
+          ),
+          'list' => 
+          array (
+            0 => 'Plan the felling direction and escape routes',
+            1 => 'Anchor the puller outside the fall zone',
+            2 => 'Take up slack and set light tension before the back cut',
+            3 => 'Add tension only on the faller\'s call',
+            4 => 'Stay out of the bight and out of line with the rope',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'How to choose a rope puller',
+          'p' => 
+          array (
+            0 => 'For most tree services, a quality continuous rope puller, a dedicated length of low-stretch rigging rope, and a couple of anchor slings cover nearly every pull. Crews that already run a GRCS or a pulley system can use those for tensioning too.',
+            1 => 'Compare rated capacity, the rope diameters it accepts, handle length, weight on the carry, and whether replacement parts such as a <a href="/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/">replacement handle</a> are easy to find. Keep the jaws clean and inspect the puller and rope before each job.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is an endless rope puller?',
+          'a' => 'A lever tool that grips the rope with jaws and pulls it through with each stroke. Because it does not wind rope onto a drum, the pull length is limited only by the rope you have.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I use a cable come along to fell a tree?',
+          'a' => 'It can work for short pulls, but the short cable often means re-rigging mid-pull. Most arborists prefer a rope puller for felling.',
+        ),
+        2 => 
+        array (
+          'q' => 'How long should a pull line be?',
+          'a' => 'Long enough that the puller and its operator are well outside the fall zone. Many crews plan for at least one and a half to two times the tree\'s height.',
+        ),
+        3 => 
+        array (
+          'q' => 'Is the GRCS a winch?',
+          'a' => 'The GRCS is a lowering device with a built-in capstan winch, so crews also use it for lifting and tensioning a pull line.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/rigging/mechanical-advantage/',
+        1 => '/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/',
+        2 => '/rigging/lowering-devices/good-rigging-control-system/',
+        3 => '/rigging/mechanical-advantage/fiddle-block-set-150ft/',
+        4 => '/rope/rigging-rope/',
+        5 => '/rigging/rigging-slings/adjustable-slings/',
+        6 => '/jobsite/chainsaw-accessories/wedges/',
+        7 => '/guides/tree-lowering-devices/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-2.webp',
+        'sm' => '/assets/photos/rigging-device-2-sm.webp',
+        'title' => 'Tree Pruning in RVA (Carytown, Virginia)',
+        'creator' => 'Gamma Man',
+        'creator_url' => 'https://www.flickr.com/photos/51625243@N06',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/51625243@N06/48982705461',
+      ),
+    ),
+    '/guides/tree-lowering-devices/' => 
+    array (
+      'path' => '/guides/tree-lowering-devices/',
+      'keyword' => 'lowering device for tree work',
+      'title' => 'Lowering Device for Tree Work: Port-a-Wrap to GRCS',
+      'h1' => 'Choosing a Lowering Device for Tree Work',
+      'meta' => 'How to choose a lowering device for tree work: Port-a-Wrap, Hobbs H2, GRCS and other friction devices, plus the bull rope, slings and blocks that go with them.',
+      'dek' => 'How a lowering device for tree work controls rigged loads, how the main options compare, and the rope and hardware that complete the system.',
+      'read_minutes' => 8,
+      'kind' => 'rigging-device',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What a lowering device for tree work does',
+          'p' => 
+          array (
+            0 => 'A lowering device for tree work is a friction device mounted at the base of the tree or on a nearby anchor. The rigging line runs from the load, up through a block or crotch in the tree, and down to the device, where it takes a number of wraps around a drum or post. The friction from those wraps lets one person on the ground hold, run and stop heavy pieces with a manageable amount of tail tension.',
+            1 => 'Without a lowering device, the ground worker is relying on gloves, a tree trunk and luck. With one, they can let a piece run, slow it, and stop it where it needs to land. It protects the groundie\'s hands, reduces wear on the rope and gives the crew far more control over where wood ends up.',
+            2 => 'Tree limb lowering devices range from a simple aluminum post to trunk-mounted capstans with built-in winches. The right choice depends on how heavy your rigging is and whether you also need to lift and tension.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Port-a-Wrap: the simple friction device',
+          'p' => 
+          array (
+            0 => 'The Port-a-Wrap is the classic friction lowering device: a post with horns that you attach to the trunk with a sling, chain or strap. You add friction by taking more wraps and control the load with tail tension. It is light, inexpensive and easy to learn, and it handles a large share of residential rigging.',
+            1 => 'Buckingham makes them in several sizes. The <a href="/rigging/lowering-devices/buckingham-portawrap-mini/">Port-A-Wrap Mini</a> suits light rigging, the <a href="/rigging/lowering-devices/buckingham-medium-portawrap/">medium Portawrap</a> is the everyday size for many crews, and the large model takes bigger rope and heavier loads. Kits like the <a href="/rigging/rigging-kits/port-a-wrap-with-whoopie-sling-5-8/">Port-a-Wrap with a whoopie sling</a> give you the device and an anchor sling together.',
+            2 => 'The main limitation is that a Port-a-Wrap is for lowering only. Adding or removing wraps under load is awkward, so set the number of wraps for the expected load before the cut.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Hobbs H2: lowering and lifting',
+          'p' => 
+          array (
+            0 => 'The <a href="/rigging/lowering-devices/hobbs-h2-lowering-device/">Hobbs H2</a> is a trunk-mounted lowering device with a drum that you take wraps around, like a Port-a-Wrap, but with a mechanism that lets the operator take in rope as well as let it out. Hobbs markets it as a lowering and lifting device, so crews use it to take up slack, pre-tension a rigging line and make small lifts.',
+            1 => 'It costs considerably more than a Port-a-Wrap and is heavier to carry, but it gives a level of control that many removal crews find worth it on heavy rigging jobs. Follow the maker\'s manual for rope size, number of wraps and working limits.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'GRCS and other winch-equipped devices',
+          'p' => 
+          array (
+            0 => 'The <a href="/rigging/lowering-devices/good-rigging-control-system/">Good Rigging Control System (GRCS)</a> is a trunk-mounted capstan with a built-in winch, strapped to the tree. Crews use it to lower heavy pieces, lift loads, tension lines and pull trees over. It is one of the most capable tree rigging systems you can put on a trunk and one of the most expensive.',
+            1 => 'The Stein RCW 3001 is another heavy-duty trunk-mounted option, with an add-on winch kit. CMI\'s LCD and the Jail Brake are friction devices built for controlled lowering. For light rigging, a rigging rope wrench uses friction in a compact device, but stay within the load marked on it.',
+            2 => 'If you rig large wood every week, a winch-equipped device pays for itself in time and control. If most of your rigging is small to medium limbs, a Port-a-Wrap or similar friction device is plenty.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Bull rope and rigging rope',
+          'p' => 
+          array (
+            0 => 'The rigging line, often called a bull rope, carries the load. Most arborists use a double-braid polyester rigging rope for its strength and low stretch. Popular choices include <a href="/rope/rigging-rope/samson-stable-braid-5-8-rigging-rope/">Samson Stable Braid</a>, Samson Arbor-Plex, Teufelberger Sirius bull rope and Husky bull rope, in diameters such as 1/2, 5/8 and 3/4 inch.',
+            1 => 'Match the rope to your lowering device, block and slings. Every device has a rope diameter range, and running rope outside it can mean too little friction or too much heat and wear. Shock loads from a dropped piece can be many times the piece\'s weight, so plan rigging loads with a generous design factor, inspect rope before every job, and retire rope that is glazed, cut, or has been badly shock-loaded. See our <a href="/rope/rigging-rope/">rigging rope</a> section for options.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Slings, blocks and the rest of the system',
+          'p' => 
+          array (
+            0 => 'A lowering device is only one part of the rigging system. At the top, a rigging block on a sling gives the line a smooth, rated redirect instead of grinding over a natural crotch. At the bottom, an anchor sling attaches the device to the trunk. Every connection in between needs to be rated for the load.',
+            1 => 'Adjustable whoopie slings, dead-eye slings and ring slings are the common choices. Our <a href="/rigging/rigging-slings/">rigging slings</a> and <a href="/rigging/blocks-and-other-hardware/rigging-blocks/">rigging blocks</a> sections cover the main types. The system is only as strong as its weakest component.',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'Matching a lowering device to your work',
+          'p' => 
+          array (
+            0 => 'Think about the heaviest pieces you rig regularly, not the occasional giant, and the size of rope your crew already uses. Then decide whether you need lifting and tensioning or lowering alone.',
+          ),
+          'list' => 
+          array (
+            0 => 'Light pruning and small removals: Port-a-Wrap Mini or a rigging rope wrench',
+            1 => 'Everyday residential removals: medium or large Port-a-Wrap with an anchor sling',
+            2 => 'Heavy rigging with lifting or pre-tension: Hobbs H2',
+            3 => 'Heavy rigging, lifting, tensioning and pulling: GRCS or a similar winch-equipped device',
+          ),
+        ),
+        7 => 
+        array (
+          'h' => 'Training, communication and inspection',
+          'p' => 
+          array (
+            0 => 'Rigging puts large forces on people, trees and equipment. Learn it from a qualified trainer, and follow ANSI Z133, the manufacturer\'s instructions and your company\'s procedures. Agree on clear signals between the climber and the ground before any piece is cut.',
+            1 => 'Keep hands well clear of the wraps and the drum, wear gloves, and stand where a running line cannot catch you. Inspect the device, slings and rope before each job, and retire anything cracked, deformed or excessively worn.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What is a Port-a-Wrap?',
+          'a' => 'A friction lowering device attached to the base of a tree. The rigging line takes wraps around it, and the ground worker controls the load with tail tension.',
+        ),
+        1 => 
+        array (
+          'q' => 'What is the difference between a Port-a-Wrap and a GRCS?',
+          'a' => 'A Port-a-Wrap lowers loads only. The GRCS adds a capstan winch, so it can also lift, tension and pull, but it costs much more and weighs more.',
+        ),
+        2 => 
+        array (
+          'q' => 'What size bull rope should I use with a lowering device?',
+          'a' => 'Use a rope within the diameter range the device maker specifies, and rated for your loads. Many crews use 1/2, 5/8 or 3/4 inch double-braid rigging rope.',
+        ),
+        3 => 
+        array (
+          'q' => 'Is a Hobbs lowering device worth it?',
+          'a' => 'For crews that rig heavy wood often and want to take in rope or pre-tension lines, many find it worth the cost. For light rigging, a Port-a-Wrap is usually enough.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/rigging/lowering-devices/',
+        1 => '/rigging/lowering-devices/buckingham-medium-portawrap/',
+        2 => '/rigging/lowering-devices/hobbs-h2-lowering-device/',
+        3 => '/rigging/lowering-devices/good-rigging-control-system/',
+        4 => '/rope/rigging-rope/',
+        5 => '/rigging/rigging-slings/',
+        6 => '/rigging/blocks-and-other-hardware/rigging-blocks/',
+        7 => '/guides/rope-pullers-for-tree-felling/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/rigging-device-5.webp',
+        'sm' => '/assets/photos/rigging-device-5-sm.webp',
+        'title' => 'Nautical #5',
+        'creator' => 'Graham B Finney',
+        'creator_url' => 'https://www.flickr.com/photos/188487900@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/188487900@N02/51798984894',
+      ),
+    ),
+    '/guides/arborist-clothing/' => 
+    array (
+      'path' => '/guides/arborist-clothing/',
+      'keyword' => 'arborist clothing',
+      'title' => 'Arborist Clothing: Pants, Shirts and Brands That Last',
+      'h1' => 'Arborist Clothing: What Tree Workers Actually Wear',
+      'meta' => 'A practical guide to arborist clothing: climbing pants, chainsaw trousers like Arbortec BreatheFlex Pro, tree climbing shirts, boots, layers and top brands.',
+      'dek' => 'Arborist clothing that holds up to climbing, rigging and brush work, from climbing pants and chainsaw trousers to shirts, boots and the brands crews trust.',
+      'read_minutes' => 7,
+      'kind' => 'apparel',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What arborist clothing needs to do',
+          'p' => 
+          array (
+            0 => 'Arborist clothing takes more abuse than almost any other workwear. It scrapes on bark, catches on stubs, soaks up sweat on a hot climb, and has to move with you through every reach, step and knee-up into a crotch. Good tree work clothes stretch where you bend, resist abrasion where you rub, breathe when you sweat, and fit around a saddle without bunching.',
+            1 => 'It helps to separate two categories. Work clothing, like climbing pants and shirts, protects you from scrapes, sun and weather. Personal protective equipment, like chainsaw pants or chaps, is designed to stop a moving chain. Climbing pants are not cut protection, however tough they feel.',
+            2 => 'This guide covers both, plus boots, layers and the brands that tree crews tend to buy again.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Tree climbing pants',
+          'p' => 
+          array (
+            0 => 'Climbing pants are built for movement and abrasion. Look for a gusseted crotch, articulated or stretch knees, reinforced wear areas, and a waist that sits comfortably under a saddle belt. Pockets should not sit where leg loops or a lanyard will press on them.',
+            1 => 'Arborwear is the name many US climbers know best. The <a href="/clothing/tree-climbing-pants/arborwear-original-tree-climbers-pants-chestnut/">Original Tree Climbers\' Pants</a> are a heavy, durable classic, while the Ascender and Canopy pants are lighter for warm weather. Teufelberger\'s wayUP Light and Clogger\'s Spider pants are other popular climbing pants. Browse our <a href="/clothing/tree-climbing-pants/">climbing pants</a> for the range.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Chainsaw pants and the Arbortec BreatheFlex Pro',
+          'p' => 
+          array (
+            0 => 'When you run a saw, your legs need cut-resistant protection. Chainsaw pants have layers of long fibers that pull into the sprocket and stop the chain, and many climbers prefer them to chaps because they move better and do not snag. We cover the trade-offs in <a href="/guides/chainsaw-chaps-vs-chainsaw-pants/">chainsaw chaps vs chainsaw pants</a>.',
+            1 => 'Arbortec is a UK brand, often searched as "arbortech pants" or "arbor tech pants". Its BreatheFlex Pro chainsaw trousers are popular with climbers for their stretch panels and ventilation, and they come in several colors, camo versions and protection types. Clogger, from Australia, is the other big name, with lines such as the Zero, DefenderPro and Ascend. See our <a href="/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/">chainsaw pants</a> section to compare.',
+            2 => 'Check the label for the standard and protection type each pair meets, and make sure it matches what your work and employer require. Retire chainsaw pants after any cut into the protective layer.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'Tree climbing shirts and layers',
+          'p' => 
+          array (
+            0 => 'The best tree climbing shirts are long-sleeved more often than not. Sleeves protect your arms from bark, poison ivy, insects and sun, and a lightweight wicking fabric keeps you cooler than bare skin on a summer climb. Choose a cut long enough to stay tucked under a saddle and with enough shoulder room to reach overhead.',
+            1 => 'For roadside work, wear high-visibility colors or a vest that meets your traffic control requirements. In cold weather, layer a wicking base, a fleece or a heavy hoodie like the Arborwear Double Thick, and a waterproof shell such as Arbortec\'s BreatheDry smock. Our <a href="/clothing/sweatshirts-and-jackets/">sweatshirts and jackets</a> section covers mid and outer layers.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Boots for climbing and ground work',
+          'p' => 
+          array (
+            0 => 'Boots are part of your arborist clothing and part of your PPE. Chainsaw boots, such as the Arbortec Scafell Lite, Arbortec Kayo and HAIX Protector models, add cut protection in the front of the foot for saw work. Spur climbers often choose a stiff, tall boot with a strong shank, like the Wesco Highliner, to support the foot on gaffs.',
+            1 => 'Fit matters more than features. A boot that fits well, supports your ankle and grips bark is safer than an expensive boot that hurts. See our <a href="/clothing/arborist-boots/">arborist boots</a> section for options.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Arborist clothing brands at a glance',
+          'p' => 
+          array (
+            0 => 'A handful of arborist clothing brands show up on most crews. Each has a slightly different focus, so it is common to mix them.',
+          ),
+          'list' => 
+          array (
+            0 => 'Arborwear: US brand known for durable climbing pants, Double Thick sweatshirts and work shirts',
+            1 => 'Arbortec: UK brand known for BreatheFlex Pro chainsaw trousers, jackets and chainsaw boots',
+            2 => 'Clogger: Australian brand focused on light, cool chainsaw pants and chaps',
+            3 => 'Teufelberger: Austrian rope maker that also makes climbing pants and technical layers',
+            4 => 'HAIX and Wesco: boot makers popular for chainsaw and spur-climbing boots',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'Hats, gloves and small extras',
+          'p' => 
+          array (
+            0 => 'A thin helmet liner beanie or neck warmer keeps you warm under a helmet in winter without crowding the fit. Suspenders help keep heavier chainsaw pants up when your saddle belt is doing other work, and a low-profile webbing belt will not dig in under a saddle.',
+            1 => 'Gloves are worth buying in multiples: thin, grippy gloves for climbing and rope work, and heavier ones for brush and chipper duty. Our <a href="/safety/gloves/">gloves</a> section covers both.',
+          ),
+        ),
+        7 => 
+        array (
+          'h' => 'Fit, care and replacement',
+          'p' => 
+          array (
+            0 => 'Try climbing clothes on in a climbing position: knee high, arms overhead, and seated in a saddle if you can. Size for the layers you will wear underneath in cold weather. Wash chainsaw pants according to the label, since harsh cleaning can affect the protective layer, and repair small tears in work pants before they grow.',
+            1 => 'Replace clothing when it no longer protects you. Worn-through knees are a nuisance; a cut chainsaw pant is a hazard.',
+            2 => 'For a crew, it is worth setting a simple standard: chainsaw pants or chaps for anyone running a saw, long sleeves for climbers, and high-visibility layers for roadside jobs. Buying a couple of spare pairs of gloves and a backup layer for each truck saves a lost morning when someone shows up underdressed or soaked.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What do arborists wear?',
+          'a' => 'Durable climbing pants or chainsaw pants, long-sleeved shirts, boots with good support, gloves, and a helmet with eye and hearing protection. High-visibility layers are added for roadside work.',
+        ),
+        1 => 
+        array (
+          'q' => 'Are Arbortec and arbortech pants the same thing?',
+          'a' => 'Yes. The brand is Arbortec, a UK maker of arborist clothing. Arbortech and arbor tech are common misspellings.',
+        ),
+        2 => 
+        array (
+          'q' => 'Do tree climbing pants protect against a chainsaw?',
+          'a' => 'No. Climbing pants resist abrasion but are not cut protection. Wear chainsaw pants or chaps when you run a saw.',
+        ),
+        3 => 
+        array (
+          'q' => 'What are the best shirts for tree climbing?',
+          'a' => 'Lightweight, long-sleeved shirts in a wicking fabric, cut long enough to stay tucked under a saddle. Choose high-visibility colors for roadside work.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/clothing/',
+        1 => '/clothing/tree-climbing-pants/',
+        2 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/',
+        3 => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/arbortec-black-breatheflex-pro-chainsaw-pants/',
+        4 => '/clothing/tree-climbing-pants/arborwear-original-tree-climbers-pants-chestnut/',
+        5 => '/clothing/sweatshirts-and-jackets/',
+        6 => '/clothing/arborist-boots/',
+        7 => '/guides/chainsaw-chaps-vs-chainsaw-pants/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/apparel-0.webp',
+        'sm' => '/assets/photos/apparel-0-sm.webp',
+        'title' => 'Crate Flannel Shirt',
+        'creator' => 'A Continuous Lean',
+        'creator_url' => 'https://www.flickr.com/photos/7393890@N04',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/7393890@N04/3294764637',
+      ),
+    ),
+    '/guides/husqvarna-330lk-vs-525l/' => 
+    array (
+      'path' => '/guides/husqvarna-330lk-vs-525l/',
+      'keyword' => 'husqvarna 330lk',
+      'title' => 'Husqvarna 330LK vs 525L: Which Trimmer to Buy',
+      'h1' => 'Husqvarna 330LK vs 525L Weed Eater',
+      'meta' => 'Husqvarna 330LK vs 525L and 525LK compared: split shaft vs straight shaft, attachments, trimmer line size, fuel and which weed eater suits a tree crew best.',
+      'dek' => 'The Husqvarna 330LK, 525L and 525LK compared the way a tree and landscape crew would use them, plus line size, fuel and attachments.',
+      'read_minutes' => 6,
+      'kind' => 'power-tool',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Husqvarna 330LK vs 525L at a glance',
+          'p' => 
+          array (
+            0 => 'The Husqvarna 330LK and the 525L are both gas string trimmers with a loop handle, and both come up when crews shop for a dependable weed eater for cleanup around jobs. The key difference is the shaft. The 330LK has a split, detachable shaft that accepts attachments. The 525L has a one-piece straight shaft and is a dedicated trimmer.',
+            1 => 'The 525L belongs to Husqvarna\'s 525 professional series, with a 25.4 cc X-Torq engine. There is also a 525LK, which pairs that same 25.4 cc engine with a split shaft, so it is the professional-series answer to the 330LK. If you want attachments, you are choosing between the 330LK and the 525LK. If you want a straight trimmer, the 525L is the one.',
+            2 => 'For model details, see the <a href="/blowers-and-other-equipment/husqvarna-330lk-string-trimmer/">Husqvarna 330LK</a>, <a href="/blowers-and-other-equipment/husqvarna-525l-gas-powered-string-trimmer/">Husqvarna 525L</a> and <a href="/blowers-and-other-equipment/husqvarna-525lk-combination-tool-string-trimmer/">Husqvarna 525LK</a> pages.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Engine and power',
+          'p' => 
+          array (
+            0 => 'The 525 series is built for daily professional use, and its X-Torq engine is designed to reduce fuel use and emissions compared with older two-stroke designs. It is a light, quick-revving engine that suits long days of trimming along fences, beds and job-site edges.',
+            1 => 'The 330LK is aimed at buyers who want a capable combi power head at a lower price. Check the current Husqvarna spec sheet for its exact engine figures before you buy, since specifications can change between production years and markets.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Split shaft vs straight shaft',
+          'p' => 
+          array (
+            0 => 'A split shaft lets one engine drive several tools. With a combi power head like the 330LK or 525LK, you can swap the trimmer for attachments such as an edger, hedge trimmer, pole saw, cultivator or blower, provided they are listed as compatible. For a small crew or a homeowner with a lot of property, that saves buying and maintaining several engines.',
+            1 => 'A straight shaft like the 525L\'s is a little simpler and more rigid, with nothing to loosen or wear at the coupling. Crews that trim all day and already own dedicated edgers and hedge trimmers often prefer it.',
+            2 => 'For a tree crew, the deciding question is usually what else you need the engine to do. A split-shaft power head with a pole saw attachment can handle light clearance pruning around a job, then switch back to a trimmer for cleanup. A dedicated pole saw or trimmer is faster for heavy, repeated use, so think about how many hours each tool will really run.',
+            3 => 'If you are searching for a 525LK brush cutter attachment, check the manual for approved cutting attachments. Fitting a brush blade usually requires the right guard, and often a different handle and a harness. Never fit a blade to a trimmer that is not approved for it.',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'Trimmer line size for the 330LK and 525L',
+          'p' => 
+          array (
+            0 => 'One of the most common questions about the Husqvarna 330LK is what string size it takes. The right answer is in the operator\'s manual and on the trimmer head itself, which is marked or documented with the line diameter range it accepts. Heads can differ between model years and replacement heads, so check the head on your machine rather than going by someone else\'s.',
+            1 => 'Running thicker line than the head is rated for overloads the engine and clutch and makes the line harder to feed. Thinner line wears faster. Husqvarna sells round and shaped lines such as <a href="/shop-all/husqvarna-titanium-xpro-trimmer-line/">Titanium X-Pro</a> and TrimForce in several diameters, so you can match the size in your manual.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Weight, handling and the T525',
+          'p' => 
+          array (
+            0 => 'Both trimmers are loop-handle models, which are compact and easy to move around obstacles but put more strain on your arms over a long day than a bike-handle trimmer with a harness. A shoulder strap helps on long runs.',
+            1 => 'If you landed here searching for T525 weight, that is a different tool: the <a href="/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/">Husqvarna T525</a> is a small top-handle chainsaw weighing about 5.9 lb as a power head, designed for trained arborists working in trees.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'Fuel and maintenance',
+          'p' => 
+          array (
+            0 => 'Both trimmers run on a gas and two-stroke oil mix. Husqvarna specifies 50:1 for its two-stroke engines; check your manual and use fresh fuel. Premixed fuel such as <a href="/fluids/husqvarna-1-quart-premix-50-1-fuel-case/">Husqvarna 50:1 premix</a> avoids mixing errors and keeps well in storage.',
+            1 => 'Clean the air filter often in dusty conditions, check the spark plug, keep the cooling fins clear, and grease the gearhead at the intervals in the manual. On combi models, keep the coupling clean and fully tightened.',
+          ),
+          'list' => 
+          array (
+            0 => 'Use fresh 50:1 fuel or premix',
+            1 => 'Clean the air filter regularly',
+            2 => 'Check the spark plug and cooling fins',
+            3 => 'Grease the gearhead as the manual specifies',
+            4 => 'Use only the line size and attachments approved for your model',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'Which one should you buy?',
+          'p' => 
+          array (
+            0 => 'Pick the 525L if you want a dedicated professional trimmer that runs all day and you already own other tools for edging and hedges. Pick the 525LK if you want the same professional engine with the flexibility of attachments. Pick the 330LK if you want combi flexibility at a lower price and your trimming is more occasional.',
+            1 => 'Whatever you choose, wear eye protection, hearing protection, long pants and sturdy boots when trimming, and keep bystanders well back from the head.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What string size does the Husqvarna 330LK use?',
+          'a' => 'Check the operator\'s manual and the trimmer head on your machine for the line diameter range it accepts, since heads can vary by model year and replacement head.',
+        ),
+        1 => 
+        array (
+          'q' => 'Is the Husqvarna 525L a professional trimmer?',
+          'a' => 'Yes. It is part of Husqvarna\'s 525 professional series, with a 25.4 cc X-Torq engine and a straight shaft.',
+        ),
+        2 => 
+        array (
+          'q' => 'Can I put attachments on a 525L?',
+          'a' => 'No. The 525L has a one-piece straight shaft. The 525LK and 330LK have split shafts that accept compatible attachments.',
+        ),
+        3 => 
+        array (
+          'q' => 'How much does a Husqvarna T525 weigh?',
+          'a' => 'The T525 top-handle chainsaw weighs about 5.9 lb as a power head, before bar, chain and fuel.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/jobsite/power-equipment/blowers-and-other-equipment/',
+        1 => '/blowers-and-other-equipment/husqvarna-330lk-string-trimmer/',
+        2 => '/blowers-and-other-equipment/husqvarna-525l-gas-powered-string-trimmer/',
+        3 => '/blowers-and-other-equipment/husqvarna-525lk-combination-tool-string-trimmer/',
+        4 => '/shop-all/husqvarna-titanium-xpro-trimmer-line/',
+        5 => '/landscaper-tools/husqvarna-trim-force-square-trimmer-line/',
+        6 => '/jobsite/chainsaw-accessories/fluids/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/power-tool-1.webp',
+        'sm' => '/assets/photos/power-tool-1-sm.webp',
+        'title' => 'Trimming grass and weeds in a lush garden with a string trimmer',
+        'creator' => 'nenad53',
+        'creator_url' => 'https://www.flickr.com/photos/202780880@N02',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/202780880@N02/54574042635',
+      ),
+    ),
+    '/guides/arborist-supplies-checklist/' => 
+    array (
+      'path' => '/guides/arborist-supplies-checklist/',
+      'keyword' => 'arborist supplies',
+      'title' => 'Arborist Supplies: What a Tree Care Business Needs',
+      'h1' => 'Arborist Supplies: A Checklist for Every Role on the Crew',
+      'meta' => 'An arborist supplies checklist by role: climber, rigging, saws, ground crew, PPE and plant health care, with links to compare tree care gear and typical prices.',
+      'dek' => 'The arborist supplies a tree care business needs, organized by who uses them, with links to compare gear in each category.',
+      'read_minutes' => 8,
+      'kind' => 'jobsite',
+      'sections' => 
+      array (
+        0 => 
+        array (
+          'h' => 'How to use this arborist supplies checklist',
+          'p' => 
+          array (
+            0 => 'Arborist supplies cover everything from a climber\'s saddle to chipper knives and traffic cones. This checklist groups them by role on a typical tree crew: climber, rigging, saws, ground crew, safety and plant health care. Use it to equip a new crew, fill gaps in an existing one, or plan what to replace next season.',
+            1 => 'Gap Arborist Supply is an independent online buying guide, not a physical store. We show typical prices and send you to retailers to check current prices and buy. If you are searching for an arborist supply store near you, a local dealer is still the best place for saw service and fitting boots, but comparing gear online first helps you walk in knowing what you want.',
+            2 => 'Each section below links to the relevant category so you can compare products, and to our more detailed guides where we have them.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Climbers: tree climbing supplies',
+          'p' => 
+          array (
+            0 => 'The climber\'s kit is life-support equipment, and it is where quality matters most. A saddle, climbing rope, friction hitch or mechanical device, lanyard, carabiners, helmet and throw line make up the core. We walk through each piece in detail, from first kit to professional setup, in our <a href="/guides/tree-climbing-gear-checklist/">tree climbing gear checklist</a>.',
+            1 => 'For a business, plan on spares: a second climbing line for each climber, extra hitch cords and carabiners, and replacement parts for saddles and spurs. Start with our <a href="/climbing/">climbing</a> section, and see <a href="/rope/climbing-rope/">climbing rope</a> and <a href="/climbing/saddles-and-harnesses/">saddles and harnesses</a> for the two biggest purchases. All life-support gear must meet ANSI Z133 requirements and be used as the manufacturer instructs.',
+          ),
+        ),
+        2 => 
+        array (
+          'h' => 'Rigging equipment',
+          'p' => 
+          array (
+            0 => 'Tree rigging equipment lets you take down wood in controlled pieces instead of dropping it. The basics are rigging rope, slings, a rigging block and a lowering device at the base. Crews doing heavier removals add more blocks, rings, a winch-equipped device and mechanical advantage for lifting and pulling.',
+            1 => 'Browse <a href="/rope/rigging-rope/">rigging rope</a>, <a href="/rigging/rigging-slings/">rigging slings</a>, <a href="/rigging/blocks-and-other-hardware/">blocks and hardware</a> and <a href="/rigging/lowering-devices/">lowering devices</a>. Our <a href="/guides/tree-lowering-devices/">lowering device guide</a> compares the Port-a-Wrap, Hobbs H2 and GRCS, and our <a href="/guides/rope-pullers-for-tree-felling/">rope puller guide</a> covers pulling and tensioning for felling.',
+          ),
+          'list' => 
+          array (
+            0 => 'Bull rope sized for your blocks and lowering device',
+            1 => 'Anchor and block slings, such as whoopie and dead-eye slings',
+            2 => 'Rigging blocks and rings',
+            3 => 'A friction lowering device',
+            4 => 'A rope puller or mechanical advantage kit for felling pulls',
+          ),
+        ),
+        3 => 
+        array (
+          'h' => 'Saws and cutting tools',
+          'p' => 
+          array (
+            0 => 'Most tree services run a range of saws: a top-handle for the climber, a mid-size saw for limbing and brush, a 70 cc saw for removals and a larger saw for the biggest wood. See our <a href="/jobsite/power-equipment/chainsaws/">chainsaws</a> section and the <a href="/guides/biggest-husqvarna-chainsaw/">biggest Husqvarna chainsaw</a> guide for how the sizes compare.',
+            1 => 'Saws need a steady supply of <a href="/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/">bars and chain</a>, files, fuel, bar oil and <a href="/jobsite/power-equipment/parts/">replacement parts</a>. For hand tools, every climber needs a pruning saw, and the crew needs pole saws and pruners for clearance and finish work. See <a href="/cutting-and-pruning/">cutting and pruning</a> and our <a href="/guides/longest-gas-pole-saw/">pole saw guide</a>.',
+          ),
+        ),
+        4 => 
+        array (
+          'h' => 'Ground crew and tree felling equipment',
+          'p' => 
+          array (
+            0 => 'The ground crew moves the most wood and needs tools that survive it. Felling wedges and an axe or maul, a felling bar or cant hook, and log handling tools such as tongs and pickaroons make bucking and loading faster and easier on backs.',
+            1 => 'Look at <a href="/jobsite/chainsaw-accessories/wedges/">felling wedges</a>, <a href="/jobsite/logging-tools/">logging tools</a> and <a href="/jobsite/landscaper-tools/">landscaper tools</a> for rakes and cleanup gear. If you run your own chipper and grinder, keep spare <a href="/jobsite/chipper-knives/">chipper knives</a> and <a href="/jobsite/stump-grinding/">stump grinder teeth</a> on hand so a dull set does not end the day early.',
+          ),
+        ),
+        5 => 
+        array (
+          'h' => 'PPE and jobsite safety',
+          'p' => 
+          array (
+            0 => 'Every person on the crew needs a helmet, eye protection, hearing protection, gloves and boots, plus chainsaw pants or chaps for anyone who runs a saw. Our <a href="/safety/">safety</a> section covers each, and <a href="/guides/chainsaw-chaps-vs-chainsaw-pants/">chainsaw chaps vs chainsaw pants</a> explains the leg protection choice.',
+            1 => 'Beyond personal gear, each truck should carry a stocked <a href="/safety/first-aid/">first aid</a> kit with bleeding control, <a href="/safety/traffic-control/">traffic control</a> signs and cones for roadside work, and a reliable way for the climber and ground to talk, such as helmet radios. Crews with bucket trucks need fall protection for aerial lifts and, often, <a href="/jobsite/bucket-truck-and-aerial-lift-gear/ground-protection-mats/">ground protection mats</a>.',
+          ),
+        ),
+        6 => 
+        array (
+          'h' => 'Plant health care, cabling and planting',
+          'p' => 
+          array (
+            0 => 'Many tree services also offer cabling, bracing and planting. Cabling work needs cable or synthetic systems, eye bolts or lags, and the tools to install them correctly. Planting jobs need staking and support materials and sometimes earth anchors.',
+            1 => 'See <a href="/plant-care/cabling-and-bracing/">cabling and bracing</a> and <a href="/plant-care/planting/">planting</a>. Follow the current ANSI A300 standards and the manufacturer\'s instructions for any support system you install.',
+          ),
+        ),
+        7 => 
+        array (
+          'h' => 'Buying arborist supplies for a crew',
+          'p' => 
+          array (
+            0 => 'If you are equipping several crews, standardize where you can. Matching rope diameters, carabiner types, saw models and bar and chain sizes means fewer parts to stock and fewer mistakes on the truck. Keep an inspection log for life-support and rigging gear, and budget to retire it on schedule rather than when it fails.',
+            1 => 'If you buy in volume, ask retailers about commercial or wholesale pricing on consumables. Typical prices on this site are a guide to what a buyer would see, not a quote, so check the retailer for current pricing.',
+          ),
+          'list' => 
+          array (
+            0 => 'Saw chain, bars, files and fuel',
+            1 => 'Hitch cords, carabiners and slings that wear out',
+            2 => 'Gloves, earplugs and eye protection',
+            3 => 'First aid restocks',
+            4 => 'Chipper knives and grinder teeth',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Where can I buy arborist supplies?',
+          'a' => 'This site is an independent online buying guide. We list typical prices and link to retailers where you can check current prices and buy. Local dealers are useful for saw service and fitting.',
+        ),
+        1 => 
+        array (
+          'q' => 'Can I buy wholesale arborist supplies?',
+          'a' => 'Many retailers offer commercial or volume pricing to tree care businesses, especially on consumables. Ask the retailer directly.',
+        ),
+        2 => 
+        array (
+          'q' => 'What arborist supplies does a new tree service need first?',
+          'a' => 'Climbing gear for each climber, a basic rigging kit with rope, slings, a block and a lowering device, a range of chainsaws, PPE for everyone, and a first aid kit on every truck.',
+        ),
+        3 => 
+        array (
+          'q' => 'What is the difference between climbing gear and rigging equipment?',
+          'a' => 'Climbing gear supports the climber and is life-support equipment. Rigging equipment controls the wood being cut and lowered. Do not mix the two.',
+        ),
+      ),
+      'related_paths' => 
+      array (
+        0 => '/climbing/',
+        1 => '/rigging/',
+        2 => '/rope/',
+        3 => '/jobsite/power-equipment/chainsaws/',
+        4 => '/cutting-and-pruning/',
+        5 => '/jobsite/logging-tools/',
+        6 => '/safety/',
+        7 => '/plant-care/',
+        8 => '/guides/tree-climbing-gear-checklist/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/jobsite-5.webp',
+        'sm' => '/assets/photos/jobsite-5-sm.webp',
+        'title' => 'Bandit 200xp wood chipper',
+        'creator' => 'Dorsey Photography',
+        'creator_url' => 'https://www.flickr.com/photos/72780460@N08',
+        'license' => 'CC BY 2.0',
+        'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
+        'source_url' => 'https://www.flickr.com/photos/72780460@N08/14586733053',
+      ),
+    ),
     '/guides/tree-climbing-gear-checklist/' => 
     array (
       'path' => '/guides/tree-climbing-gear-checklist/',
@@ -171995,7 +182232,6 @@ return array (
     '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-10-5mm-r-i-n-g-lanyard-kit/' => '/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/',
     '/climbing/climbing-gear/gear-storage/gear-bags/courant-cross-pro-54l-gear-bag/' => '/climbing/climbing-gear/gear-storage/gear-bags/',
     '/climbing/climbing-gear/gear-storage/gear-bags/courant-dock-rope-bag-60l/' => '/climbing/climbing-gear/gear-storage/gear-bags/',
-    '/climbing/climbing-gear/micro-pulleys/isc-phlotich-pulley/' => '/climbing/climbing-gear/micro-pulleys/',
     '/climbing/helmets/kask-super-plasma-hi-viz-climbing-helmet/' => '/climbing/helmets/',
     '/climbing/helmets/petzl-strato-vent-helmet/' => '/climbing/helmets/',
     '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-ce-hip-leg-connection-kit/' => '/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/',
@@ -172004,25 +182240,16 @@ return array (
     '/climbing/spurs/aluminum-spurs/distel-climbers-with-quick-connect-lower-straps/' => '/climbing/spurs/aluminum-spurs/',
     '/crane-slings/3-endless-loop-polyester-round-sling/' => '/rigging/rigging-slings/crane-slings/',
     '/cutting-and-pruning/pole-saws-and-scabbards/21-sentei-4-section-telescoping-aluminum-polesaw/' => '/cutting-and-pruning/pole-saws-and-scabbards/',
-    '/devices-for-mrs/art-spiderjack-3/' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/',
     '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/husqvarna-technical-hi-vis-chainsaw-protective-pants/' => '/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/',
     '/jobsite/logging-tools/axes-and-mauls/husqvarna-fiber-handle-splitting-axe-s2800/' => '/jobsite/logging-tools/axes-and-mauls/',
-    '/jobsite/stump-grinding/900-series-greenteeth-pocket-straight/' => '/jobsite/stump-grinding/',
     '/lowering-devices/six-pack-lowering-device/' => '/rigging/lowering-devices/',
-    '/other-gear/soft-anchor-webbing-sling/' => '/climbing/climbing-gear/other-gear/',
     '/plant-care/cabling-and-bracing/cabling-hardware/heavy-duty-galvanized-thimble/' => '/plant-care/cabling-and-bracing/cabling-hardware/',
     '/rigging/blocks-and-other-hardware/rigging-pulleys/rock-exotica-omni-block-2-0/' => '/rigging/blocks-and-other-hardware/rigging-pulleys/',
-    '/rigging/mechanical-advantage/cmi-ropejack/' => '/rigging/mechanical-advantage/',
     '/rigging/mechanical-advantage/rock-exotica-aztek-pulley-kit/' => '/rigging/mechanical-advantage/',
     '/rigging/rigging-slings/adjustable-slings/3-4-loopie-sling/' => '/rigging/rigging-slings/adjustable-slings/',
     '/safety/communication/3m-peltor-lite-com-pro-iii/' => '/safety/communication/',
-    '/safety/eye-protection/kask-super-plasma-visor/' => '/safety/eye-protection/',
     '/safety/hearing-protection/3m-peltor-hygiene-kit-for-optime-95-muffs/' => '/safety/hearing-protection/',
     '/safety/traffic-control/36-tree-work-ahead-sign/' => '/safety/traffic-control/',
-    '/safety/traffic-control/spring-loaded-stand-for-roll-up-traffic-signs/' => '/safety/traffic-control/',
-    '/shop-all/premium-5-8-crane-sling-kit/' => '/rigging/rigging-slings/crane-slings/',
-    '/shop-all/standard-5-8-crane-sling-kit/' => '/rigging/rigging-slings/crane-slings/',
-    '/wedges/hard-body-spiked-felling-wedge/' => '/jobsite/chainsaw-accessories/wedges/',
     '/climbing-gear/' => '/climbing/climbing-gear/',
     '/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/' => '/climbing/climbing-gear/hitch-cord-and-split-tails/',
     '/climbing/climbing-gear/mechanical-friction-devices/' => '/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/',

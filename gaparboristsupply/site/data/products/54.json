@@ -906,5 +906,72 @@
    "maintenance"
   ],
   "level": "pro"
+ },
+ {
+  "path": "/chainsaw-strap-with-carabiner/",
+  "category": "/climbing/climbing-gear/chainsaw-lanyards/",
+  "name": "Chainsaw Strap with Carabiner",
+  "brand": "gap",
+  "brand_name": "Gap Arborist Supply",
+  "kind": "lanyard",
+  "price": 22,
+  "keyword": "chainsaw strap with carabiner",
+  "title": "Chainsaw Strap with Carabiner for Climbing Saws",
+  "h1": "Chainsaw Strap with Carabiner",
+  "meta": "A chainsaw strap with carabiner tethers your climbing saw to your saddle with a gated connector. Setup, length and the daily checks that keep it working.",
+  "tagline": "A saw strap with a carabiner end for a secure, easy-to-handle saw tether.",
+  "summary": "This chainsaw strap with carabiner keeps your top-handle saw attached to your saddle, so a fumbled saw ends up hanging at your side rather than dropping toward the crew. A carabiner is easier to work with gloves on than a small snap, and many climbers like a gate they can lock.",
+  "highlights": [
+   "Tethers a climbing saw to the saddle",
+   "Carabiner end is easy to clip with gloves",
+   "Keeps a dropped saw off the ground crew",
+   "Light, simple tool tether"
+  ],
+  "specs": [
+   [
+    "Type",
+    "Chainsaw strap"
+   ],
+   [
+    "Connector",
+    "Carabiner"
+   ],
+   [
+    "Use",
+    "Saw tether, not life support"
+   ]
+  ],
+  "body": [
+   {
+    "h": "Setting it up",
+    "p": [
+     "Clip the carabiner through the lanyard ring or eyelet on the saw and attach the other end to the saw ring or tool D on your saddle, usually on the side away from your work-positioning lanyard. The saw can then hang out of the way while you move, and you can let go of it to free both hands.",
+     "Choose a length that lets you reach a full cut at arm's length without the strap pulling the saw back. Too long and the saw swings around your knees or snags your lanyard; too short and you fight it on every cut. Check how it hangs whenever you change saddles or move the saw ring.",
+     "For bungee, adjustable and snap-ended versions, see our <a href=\"/climbing/climbing-gear/chainsaw-lanyards/\">chainsaw lanyards</a>."
+    ]
+   },
+   {
+    "h": "Carabiner or snap",
+    "p": [
+     "A carabiner opens wider than most snaps and is easier to clip through a thick saw ring or a ring on a gloved hand. A snap is quicker to clip one-handed and less likely to cross-load on a small eyelet. Either works if it closes fully and suits the ring it goes on.",
+     "This is a tool tether, not life-support equipment, so never clip into it to position yourself. Look over the strap for cuts and abrasion and work the carabiner gate before each climb, and retire it when the webbing is worn or the gate sticks. Engage the chain brake before you let the saw hang."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Is the carabiner rated for climbing?",
+    "a": "Treat the whole strap as a tool tether. Even if the connector carries a rating, the strap is not made for life support, so use a rated lanyard and carabiners for positioning."
+   },
+   {
+    "q": "Should the strap be a bungee?",
+    "a": "A bungee strap stretches so you can cut farther from your body and then pulls the saw back in. A fixed strap is simpler and lighter. Both keep the saw from falling."
+   }
+  ],
+  "use": [
+   "climbing",
+   "safety"
+  ],
+  "level": "all"
  }
 ]
