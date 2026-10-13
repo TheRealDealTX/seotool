@@ -47,3 +47,14 @@ plugins. Upload this folder's contents to `public_html/` on Hostinger.
 5. In Google Search Console, resubmit `https://houstonpublicadjusting.com/sitemap_index.xml`.
 
 Local preview: `php -S 127.0.0.1:8000 -t houstonpublicadjusting`
+
+## Live deployment (2026-10-13)
+
+Deployed to Hostinger Cloud account `u401386392` (`public_html` of houstonpublicadjusting.com) by
+uploading the files over the WordPress install; site cache cleared afterwards. The WordPress files
+and database were left in place (unused) and the Google verification file `google9d8d740410b54935.html`
+is untouched. `wp-content/uploads/` on the server already held the same images, so it was not re-uploaded.
+
+**Rollback to WordPress:** the original `index.php` and `.htaccess` are saved in `public_html/.wp-rollback/`
+(web access blocked). Copy `index.php.wordpress` → `index.php` and `htaccess.wordpress` → `.htaccess`,
+then clear the cache.
