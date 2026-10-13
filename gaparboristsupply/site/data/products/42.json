@@ -75,7 +75,7 @@
   "price": 60,
   "keyword": "yale phantom lanyard",
   "title": "Yale Phantom Lanyard, Pink and Black (No Hardware)",
-  "h1": "Yale Phantom Pink and Black Lanyard Without Hardware",
+  "h1": "Yale Phantom Lanyard, Pink and Black, Without Hardware",
   "meta": "The Yale Phantom lanyard in pink and black, sold without hardware so you can set it up with your own adjuster and carabiners. Setup tips and inspection notes.",
   "tagline": "A pink and black rope lanyard sold bare so you can build it your way.",
   "summary": "The Yale Phantom lanyard comes without hardware, so you pick the adjuster, snap or carabiners that fit your climbing style. The pink and black color makes it easy to tell apart from your climbing line and the rest of the crew's gear.",
@@ -207,7 +207,7 @@
   "brand_name": "DMM",
   "kind": "carabiner",
   "price": 32,
-  "keyword": "dmm ceros carabiner",
+  "keyword": "dmm ceros",
   "title": "DMM Ceros Locksafe Carabiner with Captive Bar",
   "h1": "DMM Ceros Locksafe Carabiner with Captive Bar",
   "meta": "The DMM Ceros Locksafe carabiner has a captive bar that holds a load in place and stops cross-loading. Where arborists use it and how to check it before use.",
@@ -559,6 +559,10 @@
    [
     "Topic",
     "Arborist knots and hitches"
+   ],
+   [
+    "Use",
+    "Climber and ground crew training"
    ]
   ],
   "body": [
@@ -603,7 +607,7 @@
   "kind": "jobsite",
   "price": 45,
   "keyword": "bucket truck scuff pad",
-  "title": "AE2129 Scuff Pad for Bucket Trucks",
+  "title": "AE2129 Bucket Truck Scuff Pad",
   "h1": "AE2129 Bucket Truck Scuff Pad",
   "meta": "The AE2129 scuff pad protects an aerial lift bucket from rubbing and wear. What a bucket truck scuff pad does, how to fit it, and how to keep the bucket clean.",
   "tagline": "A replacement scuff pad that protects an aerial lift bucket from wear.",
@@ -671,7 +675,7 @@
   "keyword": "chainsaw strap with snap",
   "title": "Chainsaw Strap with Snap for Climbing Saws",
   "h1": "Chainsaw Strap with Snap",
-  "meta": "A chainsaw strap with a snap keeps your climbing saw tethered to your saddle so it can't fall. How to set it up, where to clip it, and what to check each day.",
+  "meta": "A chainsaw strap with snap keeps your climbing saw tethered to your saddle so it can't fall. How to set it up, where to clip it and what to check every day.",
   "tagline": "A simple saw strap with a snap to keep your climbing saw tethered aloft.",
   "summary": "This chainsaw strap with snap tethers your saw to your saddle, so a dropped saw hangs from your hip instead of falling into the drop zone. It is one of the simplest pieces of gear on a climber's harness and one of the most useful.",
   "highlights": [
@@ -774,7 +778,8 @@
     "h": "Use and inspection",
     "p": [
      "This lanyard is for the saw only. Never use it for positioning, fall protection or rigging.",
-     "Check the webbing or cord and the stitching before each climb and replace it if it is cut, frayed or glazed. Engage the chain brake before letting the saw hang, and keep the ground crew out of the drop zone while you work."
+     "Check the webbing or cord and the stitching before each climb and replace it if it is cut, frayed or glazed. Engage the chain brake before letting the saw hang, and keep the ground crew out of the drop zone while you work.",
+     "If the lanyard has been run over, soaked in bar oil or caught in the chain, throw it away and fit a new one rather than trusting a damaged tether."
     ]
    }
   ],
@@ -873,7 +878,7 @@
   "keyword": "kong indy evo plus descender",
   "title": "KONG Indy Evo Plus Descender",
   "h1": "KONG Indy Evo Plus Descender",
-  "meta": "The KONG Indy Evo Plus is a self-braking descender for controlled descents and rope work. What it does, where it fits for tree workers, and training notes.",
+  "meta": "The KONG Indy Evo Plus descender is a self-braking device for controlled descents. What it does, where it fits for tree workers, and training notes.",
   "tagline": "A self-braking rope descender for controlled lowering and rope access work.",
   "summary": "The KONG Indy Evo Plus descender is a self-braking device for controlled descents on a single rope. Tree workers and rope access crews use this type of descender for rescue kits, access lines and stationary-rope work where a handled descender makes sense.",
   "highlights": [
@@ -976,7 +981,8 @@
     "h": "Safe use",
     "p": [
      "The PANTIN is an aid to climbing, not a primary attachment point. Always stay connected to the rope with your main ascent system or device.",
-     "Check the cam teeth, spring and strap before each climb, and keep mud and sap out of the cam. Follow Petzl's instructions, learn rope walking under supervision, and work within your crew's ANSI Z133 procedures."
+     "Check the cam teeth, spring and strap before each climb, and keep mud and sap out of the cam. Follow Petzl's instructions, learn rope walking under supervision, and work within your crew's ANSI Z133 procedures.",
+     "Wash mud off the PANTIN after dirty days and let it dry before packing it away. A cam packed with grit can slip on the rope, and a worn strap can let the ascender twist off your boot mid-step."
     ]
    }
   ],
@@ -1006,7 +1012,7 @@
   "keyword": "weaver foot loop ascender",
   "title": "Weaver Foot Loop Ascender",
   "h1": "Weaver Foot Loop Ascender",
-  "meta": "The Weaver foot loop ascender adds a foot loop to your climbing system so your legs help on the way up. Setup tips, sizing, and what to inspect before you climb.",
+  "meta": "The Weaver foot loop ascender adds a foot loop to your climbing system so your legs help on the way up. Setup tips, sizing and what to inspect before you climb.",
   "tagline": "A foot loop that lets your legs help on the climb up the rope.",
   "summary": "The Weaver foot loop ascender gives you a foot loop to push against while ascending, so your legs do more of the lifting. It is a simple add-on for climbers who want an easier ascent on a doubled or single rope.",
   "highlights": [
@@ -1042,7 +1048,8 @@
     "h": "Safety notes",
     "p": [
      "A foot loop is an aid, not a life-support connection. Stay tied in to your primary climbing system at all times.",
-     "Inspect the loop and stitching before each climb and replace it if worn or cut. Learn your ascent system low and slow with an experienced climber, and follow your crew's procedures under ANSI Z133."
+     "Inspect the loop and stitching before each climb and replace it if worn or cut. Learn your ascent system low and slow with an experienced climber, and follow your crew's procedures under ANSI Z133.",
+     "Check the foot loop length again whenever you change boots or switch between climbing systems, since a small change in setup can make the loop too long or too short to use comfortably."
     ]
    }
   ],
@@ -1072,7 +1079,7 @@
   "keyword": "ct quick roll hand ascender",
   "title": "CT Quick Roll Hand Ascender with Pulley",
   "h1": "CT Quick Roll Hand Ascender",
-  "meta": "The CT Quick Roll is a handled ascender with a built-in pulley for ascents and haul systems. How tree workers use it, setup notes and inspection before climbing.",
+  "meta": "The CT Quick Roll hand ascender has a built-in pulley for ascents and haul systems. How tree workers use it, setup notes and inspection before every climb.",
   "tagline": "A handled ascender with a built-in pulley for climbing and hauling.",
   "summary": "The CT Quick Roll hand ascender pairs a handled rope clamp with a built-in pulley. That makes it useful both for ascending a stationary rope and for building a quick progress-capture haul system.",
   "highlights": [
@@ -1089,6 +1096,10 @@
    [
     "Brand",
     "Climbing Technology"
+   ],
+   [
+    "Use",
+    "Ascent and haul systems"
    ]
   ],
   "body": [
@@ -1104,7 +1115,8 @@
     "h": "Safe use and inspection",
     "p": [
      "A hand ascender is part of a system. Never rely on it alone; stay connected with your primary device and a backup as instructed.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep the cam teeth clean and check the spring action each time you pick it up. A worn or clogged cam can slip under load, and that is a reason to retire the device rather than keep using it."
     ]
    }
   ],
@@ -1132,12 +1144,12 @@
   "brand_name": "ART",
   "kind": "parts",
   "price": 40,
-  "keyword": "replacement parts for the spiderjack 2:1",
+  "keyword": "spiderjack 2:1 replacement parts",
   "title": "SpiderJack 2:1 Replacement Parts",
-  "h1": "Replacement Parts for SpiderJack 2:1",
-  "meta": "Replacement parts for the ART SpiderJack 2:1 mechanical climbing device. What to replace, how to match parts to your version, and when to retire the device.",
+  "h1": "SpiderJack 2:1 Replacement Parts",
+  "meta": "SpiderJack 2:1 replacement parts for ART's mechanical MRS climbing device. What to replace, how to match parts to your version, and when to retire the device.",
   "tagline": "Genuine service parts to keep a SpiderJack climbing device running right.",
-  "summary": "These replacement parts for the SpiderJack 2:1 let you service worn components on ART's mechanical MRS climbing device. Using the right parts keeps the device working the way it was designed instead of retiring it early.",
+  "summary": "These SpiderJack 2:1 replacement parts let you service worn components on ART's mechanical MRS climbing device. Using the right parts keeps the device working the way it was designed instead of retiring it early.",
   "highlights": [
    "Service parts for the SpiderJack 2:1",
    "Keeps a mechanical MRS device in working order",
@@ -1171,7 +1183,8 @@
     "h": "Who should do the work",
     "p": [
      "Only replace parts that ART allows users to replace, and follow its service instructions exactly. If a part requires factory service, send the device back rather than improvising a repair.",
-     "After any service, function-test the device low to the ground before climbing. Retire it if you see cracks, deformation or wear beyond ART's limits, and keep a record of inspections as part of your ANSI Z133 program."
+     "After any service, function-test the device low to the ground before climbing. Retire it if you see cracks, deformation or wear beyond ART's limits, and keep a record of inspections as part of your ANSI Z133 program.",
+     "Clean and dry the device before any service work, and work on a clean bench so small parts do not go missing. Use only genuine parts; mixing parts from other devices can change how the SpiderJack grips and releases the rope."
     ]
    }
   ],
@@ -1219,6 +1232,10 @@
    [
     "Brand",
     "Rock Exotica"
+   ],
+   [
+    "Use",
+    "Backup and progress capture"
    ]
   ],
   "body": [
@@ -1234,7 +1251,8 @@
     "h": "Training and inspection",
     "p": [
      "Install a rope grab the right way up; a reversed grab will not lock. Test it on the rope at ground level before every use.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Store it clean and dry, away from chemicals and corrosive materials, and keep the cam moving freely. A grab that sticks or drags on the rope should come out of service until it has been checked."
     ]
    }
   ],
@@ -1262,7 +1280,7 @@
   "brand_name": "DMM",
   "kind": "carabiner",
   "price": 26,
-  "keyword": "dmm boa locksafe gate carabiner",
+  "keyword": "dmm boa locksafe",
   "title": "DMM Boa Locksafe Gate Carabiner",
   "h1": "DMM Boa Locksafe Gate Carabiner",
   "meta": "The DMM Boa Locksafe is a large D carabiner with an auto-locking gate for anchors and multiple connections. Where it fits on a tree rig and what to inspect.",
@@ -1301,7 +1319,8 @@
     "h": "Avoid multi-direction loading",
     "p": [
      "Even a big carabiner should be loaded along its spine. Avoid three-way loading and keep loads off the gate.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep track of how long it has been in service and how hard it has been used. Anchor carabiners take repeated loads, and wear can build up faster than on a carabiner that only sees occasional use."
     ]
    }
   ],
@@ -1368,7 +1387,8 @@
     "h": "Daily checks",
     "p": [
      "Open and release the gate several times to make sure it closes and locks on its own. Look for cracks, grooves, burrs or corrosion and keep it clean of grit and sap.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Store it with the rest of your climbing hardware, clean and dry, and away from chemicals."
     ]
    }
   ],
@@ -1416,6 +1436,10 @@
    [
     "Brand",
     "DMM"
+   ],
+   [
+    "Use",
+    "Redirects, hauling, hitch tending"
    ]
   ],
   "body": [
@@ -1431,7 +1455,8 @@
     "h": "Care and inspection",
     "p": [
      "Check that the wheel spins freely and that the gate closes and locks. Rinse out grit and sap, which can jam the wheel.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep the Revolver with your climbing gear, clean and dry, and retire it if the wheel wobbles, grinds or will not spin freely."
     ]
    }
   ],
@@ -1458,7 +1483,7 @@
   "brand_name": "DMM",
   "kind": "carabiner",
   "price": 30,
-  "keyword": "dmm rhino carabiner",
+  "keyword": "dmm rhino",
   "title": "DMM Rhino Locking Carabiner",
   "h1": "DMM Rhino Carabiner",
   "meta": "The DMM Rhino is a locking carabiner for heavy-use climbing and rigging connections. Where tree workers use it, how to load it correctly and what to inspect.",
@@ -1478,6 +1503,10 @@
    [
     "Brand",
     "DMM"
+   ],
+   [
+    "Gate",
+    "Locking"
    ]
   ],
   "body": [
@@ -1493,7 +1522,8 @@
     "h": "Load it right",
     "p": [
      "Load along the spine, avoid loading across the gate, and do not allow it to lever over an edge. Make sure the gate locks fully before you weight it.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep a record of when each carabiner went into service. Anchors and high-wear spots use up connectors faster, and a gear log makes it easier to know when to replace them."
     ]
    }
   ],
@@ -1564,7 +1594,8 @@
     "h": "Inspection",
     "p": [
      "Check the gate action and lock each time you clip it, and look for grooves where rope runs. Rinse off grit and sap and dry it before storage.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Store your ovals clean and dry with the rest of your hardware. If you mix them with rigging gear, mark the climbing ones so they never end up on a lowering line."
     ]
    }
   ],
@@ -1631,7 +1662,8 @@
     "h": "Checks and care",
     "p": [
      "Open and release the gate to confirm it closes and locks every time. Look for wear grooves, cracks and corrosion, and keep it clean and dry.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Steel carabiners are heavier than aluminum, so most climbers use them only where durability matters and keep lighter connectors elsewhere on the saddle."
     ]
    }
   ],
@@ -1658,7 +1690,7 @@
   "brand_name": "Petzl",
   "kind": "carabiner",
   "price": 22,
-  "keyword": "petzl bm'd carabiner",
+  "keyword": "petzl bm'd",
   "title": "Petzl Bm'D Locking Carabiner",
   "h1": "Petzl Bm'D Carabiner",
   "meta": "The Petzl Bm'D is a light asymmetric D locking carabiner for connecting devices and lanyards. Gate options, where it fits on a tree climbing saddle, and care.",
@@ -1701,7 +1733,8 @@
     "h": "Care and inspection",
     "p": [
      "Make sure the gate closes and locks on its own before every climb. Look for grooves, cracks, burrs or a sticky gate and clean it with warm water if needed.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep a log of when each carabiner went into service and retire any that have taken a hard fall or been dropped from height onto a hard surface."
     ]
    }
   ],
@@ -1767,7 +1800,8 @@
     "h": "Inspection and care",
     "p": [
      "Check that the wheel turns freely, the gate closes and locks, and there are no cracks or sharp edges. Rinse out grit and sap after dirty jobs.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Retire it if the wheel wobbles, grinds or will not spin, or if the side plates show cracks or deep wear. A worn pulley can damage your climbing rope as well as the hitch cord."
     ]
    }
   ],
@@ -1794,7 +1828,7 @@
   "brand_name": "Rock Exotica",
   "kind": "carabiner",
   "price": 35,
-  "keyword": "rock exotica rocko orca lock carabiner",
+  "keyword": "rock exotica rocko",
   "title": "Rock Exotica rockO Orca Lock Carabiner",
   "h1": "Rock Exotica rockO Orca Lock Carabiner",
   "meta": "The Rock Exotica rockO with Orca lock is a large aluminum auto-locking carabiner for anchors, devices and lanyards. Where it fits and how to inspect it daily.",
@@ -1833,7 +1867,8 @@
     "h": "Inspection and care",
     "p": [
      "Check that the gate snaps shut and locks every time. Look for wear grooves, cracks, burrs or corrosion and keep it free of sap and grit.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep your rockO carabiners clean and dry, and store them away from chemicals and corrosive materials. Mark them if you use them for different roles so they stay in the right place on your saddle."
     ]
    }
   ],
@@ -1899,7 +1934,8 @@
     "h": "Inspection",
     "p": [
      "Check the wire eye for kinks, fraying or a loose fit, and confirm the gate locks fully. Keep it clean of sap and grit.",
-     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training."
+     "Treat it as life-support gear: follow the manufacturer's instructions, check it before every climb, and retire it after a hard fall, a drop onto a hard surface, or any damage you can't explain. Use it within an ANSI Z133 program and only after proper training.",
+     "Keep track of when it went into service and check it as part of your regular gear inspection. If the eye has been bent or damaged, retire the carabiner rather than trying to repair it."
     ]
    }
   ],
@@ -1946,6 +1982,10 @@
    [
     "Brand",
     "DMM"
+   ],
+   [
+    "Load bearing",
+    "No"
    ]
   ],
   "body": [
@@ -1961,7 +2001,8 @@
     "h": "What a keeper is not",
     "p": [
      "A grommet is not load-bearing. It only holds the carabiner in place; all loads go through the sling and the carabiner.",
-     "Check the keeper during your pre-climb inspection, replace it if it is cracked or loose, and make sure it does not interfere with the gate. Fit it according to DMM's instructions and use your system within an ANSI Z133 program."
+     "Check the keeper during your pre-climb inspection, replace it if it is cracked or loose, and make sure it does not interfere with the gate. Fit it according to DMM's instructions and use your system within an ANSI Z133 program.",
+     "Keepers are especially useful on lanyards, where the carabiner is clipped and unclipped many times a day. A good keeper means the carabiner sits the same way every time you reach for it, so you can clip in faster and with fewer mistakes. Check that the sling or eye is still free to move as designed once the keeper is fitted."
     ]
    }
   ],
