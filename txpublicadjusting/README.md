@@ -15,7 +15,7 @@ genuinely useful tools.
 
 | Section | URLs | Notes |
 | --- | --- | --- |
-| Core | `/`, `/about-us/`, `/contact-us/`, `/privacy-policy/`, `/terms-of-use/` | Home has a quick-review form; About is Joseph Dittman's author page (Person schema with TDI license credential) |
+| Core | `/`, `/about-us/`, `/contact-us/`, `/privacy-policy/`, `/terms-of-use/` | Home has a quick-review form and a live "Texas storm watch" section (NWS forecast by city or location, active Texas alerts, last-24-hour storm reports); About is Joseph Dittman's author page (Person schema with TDI license credential) |
 | Services | `/services/` + 5 | Roof & hail, water, fire & smoke, hurricane & wind, denied & underpaid |
 | Commercial | `/commercial-claims/` + 10 | Down from 45 templated pages; the others 301 to the closest page or the hub |
 | Service areas | `/areas/` + 16 metro pages | Down from 411 city pages; the other ~395 301 to the nearest kept metro (matched by distance) |
@@ -72,9 +72,11 @@ guessed. Download them from the Hostinger File Manager.
 
 ## Go live on txpublicadjusting.com
 
-1. **Lead email.** Create `site/app/config.local.php` on the server with
-   `<?php $LEAD_EMAIL = 'you@yourdomain.com';`. Without it, leads are only saved to the
-   CSV.
+1. **Lead email.** Form submissions are emailed to `info@txpublicadjusting.com`
+   (`$LEAD_EMAIL` in `app/config.php`) and always logged to the leads CSV, which
+   has an `emailed` column showing whether the server accepted each send. After the
+   domain moves, make sure its SPF record allows Hostinger's mail servers, or the
+   emails may go to spam.
 2. **Search Console.** If the domain property is verified by DNS, nothing changes. If
    the old site was verified through Site Kit or an HTML tag, put the code in
    `GOOGLE_SITE_VERIFICATION` in `app/config.php`. Optionally set `GA4_ID`.

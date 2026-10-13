@@ -38,6 +38,7 @@ function render_home(): void
         ['q' => 'Is it too late if I already filed my claim or got a payment?', 'a' => 'Usually not. Many people call us after a low estimate, a partial payment or a denial. What matters is your policy\'s deadlines and the claim\'s status. <a href="/post/when-is-it-too-late-to-hire-a-public-adjuster/">When it is (and isn\'t) too late</a>.'],
         ['q' => 'Do you only work in one city?', 'a' => 'No. We\'re based in Belton and handle residential and commercial claims statewide, from El Paso to Beaumont and Amarillo to the Rio Grande Valley.'],
         ['q' => 'Can my roofer handle the insurance claim instead?', 'a' => 'Not legally. Texas Insurance Code §4102.163 bars contractors from acting as public adjusters on property they may repair. We can work alongside the contractor you choose. <a href="/post/can-a-public-adjuster-work-for-a-contractor/">Why the law separates the two</a>.'],
+        ['q' => 'When should I call a Texas public adjuster?', 'a' => 'Call when the loss is large, the estimate looks short, the claim is stalled, or the insurer denied something you believe is covered. A Texas public adjuster can also help before you file, so the damage is documented properly from day one.'],
         ['q' => 'Can I cancel if I change my mind?', 'a' => 'Yes. Every Texas public adjuster contract must let you rescind in writing within 72 hours of signing (§4102.103).'],
     ];
     $schema = schema_graph([schema_faq($faqs), ['@type' => 'WebPage', '@id' => CANONICAL_ORIGIN . '/#webpage', 'url' => CANONICAL_ORIGIN . '/', 'name' => 'Texas Public Adjuster', 'about' => ['@id' => CANONICAL_ORIGIN . '/#org'], 'isPartOf' => ['@id' => CANONICAL_ORIGIN . '/#website']]]);
@@ -74,7 +75,7 @@ function render_home(): void
     </div>
     <div class="hero__card glass" data-reveal>
       <p class="hero__card-title"><?= icon('shield') ?> Free claim review</p>
-      <p class="hero__card-sub">Tell us what happened. We'll tell you whether your estimate, denial or payment deserves a second look.</p>
+      <p class="hero__card-sub">Tell us what happened. A licensed Texas public adjuster will tell you whether your estimate, denial or payment deserves a second look.</p>
       <?= quick_form('home-hero') ?>
     </div>
   </div>
@@ -92,7 +93,7 @@ function render_home(): void
   <div class="section-head" data-reveal>
     <p class="eyebrow">Claims we handle</p>
     <h2 class="section-title">Residential and commercial property claims, start to finish</h2>
-    <p class="section-sub">Whether the claim is new, stalled, underpaid or denied, we take over the documentation and the negotiation.</p>
+    <p class="section-sub">Whether the claim is new, stalled, underpaid or denied, your Texas public adjuster takes over the documentation and the negotiation.</p>
   </div>
   <div class="grid grid--3 svc-grid">
     <?php foreach ($order as $slug): if (!isset($services[$slug])) continue; $s = $services[$slug]; ?>
@@ -112,12 +113,51 @@ function render_home(): void
   </div>
 </section>
 
+<section class="section section--navy wx" id="weather" data-weather>
+  <div class="hero__bg" aria-hidden="true"><span class="blob blob--1"></span><span class="grid-lines"></span></div>
+  <div class="wrap">
+    <div class="section-head section-head--row" data-reveal>
+      <div>
+        <p class="eyebrow"><span class="wx__live"></span> Live Texas weather</p>
+        <h2 class="section-title">Texas storm watch</h2>
+        <p class="section-sub wx__sub">Live National Weather Service alerts and forecasts. When severe weather hits, a Texas public adjuster's advice is the same every time: stay safe, then document the damage before anything is repaired or thrown away.</p>
+      </div>
+      <a class="btn btn--light" href="/tools/storm-report-lookup/"><?= icon('radar') ?> Look up past storms</a>
+    </div>
+    <div class="wx__grid">
+      <div class="wx__card" data-reveal>
+        <div class="wx__head">
+          <p class="wx__title"><?= icon('pin') ?> Forecast</p>
+          <div class="wx__controls">
+            <select data-wx-city aria-label="Choose a city">
+              <?php foreach ((require SITE_ROOT . '/app/texas.php')['metros'] as $slug => [$name, $lat, $lng]): ?>
+              <option value="<?= h($lat . ',' . $lng) ?>"<?= $slug === 'belton' ? ' selected' : '' ?>><?= h($name) ?></option>
+              <?php endforeach; ?>
+            </select>
+            <button type="button" class="wx__loc" data-wx-geo title="Use my location" aria-label="Use my location"><?= icon('pin') ?></button>
+          </div>
+        </div>
+        <div data-wx-forecast class="wx__forecast"><p class="wx__muted">Loading forecast…</p></div>
+      </div>
+      <div class="wx__card" data-reveal>
+        <div class="wx__head">
+          <p class="wx__title"><?= icon('shield') ?> Active Texas alerts</p>
+          <span class="wx__count" data-wx-count></span>
+        </div>
+        <div data-wx-alerts class="wx__alerts"><p class="wx__muted">Checking the National Weather Service…</p></div>
+      </div>
+    </div>
+    <div class="wx__strip" data-wx-reports data-reveal></div>
+    <p class="wx__src">Data: National Weather Service (api.weather.gov) and NWS Local Storm Reports via the Iowa Environmental Mesonet. Updated live; always follow official warnings.</p>
+  </div>
+</section>
+
 <section class="section section--tint">
   <div class="wrap split">
     <div data-reveal>
       <p class="eyebrow">Why it matters</p>
       <h2 class="section-title">The adjuster your insurer sends works for the insurer</h2>
-      <p>That isn't a conspiracy; it's the job. The carrier's adjuster scopes the loss for the company that pays it. A public adjuster is the only adjuster legally hired by, and working for, you.</p>
+      <p>That isn't a conspiracy; it's the job. The carrier's adjuster scopes the loss for the company that pays it. A Texas public adjuster is the only adjuster legally hired by, and working for, you.</p>
       <p>Most underpaid claims aren't denied outright. They're short: a missing roof slope, no code items, drywall patched instead of replaced, or contents depreciated to nothing. We find those gaps and prove them.</p>
       <a class="link-arrow" href="/post/public-adjuster-vs-independent-adjuster/">Public vs. company vs. independent adjusters <?= icon('arrow') ?></a>
     </div>
@@ -132,7 +172,7 @@ function render_home(): void
         </ul>
       </div>
       <div class="vs__col vs__col--us">
-        <p class="vs__title"><?= icon('shield') ?> Your public adjuster</p>
+        <p class="vs__title"><?= icon('shield') ?> Your Texas public adjuster</p>
         <ul>
           <li>Hired by you, legally required to represent only you</li>
           <li>Room-by-room, slope-by-slope documentation</li>
@@ -148,6 +188,7 @@ function render_home(): void
   <div class="section-head" data-reveal>
     <p class="eyebrow">How it works</p>
     <h2 class="section-title">A clear process from first call to final check</h2>
+    <p class="section-sub">Here's what working with a Texas public adjuster looks like, step by step.</p>
   </div>
   <ol class="timeline" data-timeline>
     <li data-reveal><span class="timeline__n">1</span><h3>Free claim review</h3><p>Send the estimate, denial letter or photos. We tell you honestly whether there's money left on the table.</p></li>
@@ -155,7 +196,7 @@ function render_home(): void
     <li data-reveal><span class="timeline__n">3</span><h3>Policy review</h3><p>Declarations, endorsements, deductibles and exclusions, so we claim everything the policy actually covers.</p></li>
     <li data-reveal><span class="timeline__n">4</span><h3>Detailed estimate</h3><p>A line-item Xactimate estimate, including the items carriers routinely leave out.</p></li>
     <li data-reveal><span class="timeline__n">5</span><h3>Negotiation</h3><p>We handle the carrier: re-inspections, supplements and, when the numbers won't move, appraisal.</p></li>
-    <li data-reveal><span class="timeline__n">6</span><h3>Settlement</h3><p>The insurer pays with you named on every check. Our fee is the agreed percentage, never more than 10%.</p></li>
+    <li data-reveal><span class="timeline__n">6</span><h3>Settlement</h3><p>The insurer pays with you named on every check. A Texas public adjuster's fee is the agreed percentage, never more than 10%.</p></li>
   </ol>
   <div class="center" data-reveal><a class="btn btn--primary btn--lg" href="/contact-us/">Start with a free review <?= icon('arrow') ?></a></div>
 </section>
@@ -170,7 +211,7 @@ function render_home(): void
     <div data-reveal>
       <p class="eyebrow">Meet your adjuster</p>
       <h2 class="section-title">Joseph Dittman, licensed Texas public adjuster</h2>
-      <p>Joseph leads <?= h(BIZ['name']) ?>, the public adjusting practice of <?= h(BIZ['legal_name']) ?>. When you hire us, you work with him directly, not a call center.</p>
+      <p>Joseph leads <?= h(BIZ['name']) ?>, the public adjusting practice of <?= h(BIZ['legal_name']) ?>. When you hire a Texas public adjuster from our firm, you work with Joseph directly, not a call center.</p>
       <ul class="checklist checklist--light">
         <li>Licensed by the Texas Department of Insurance (#<?= h(BIZ['license']) ?>)</li>
         <li>Xactimate estimates, the same software insurers use</li>
@@ -189,7 +230,7 @@ function render_home(): void
   <div class="section-head" data-reveal>
     <p class="eyebrow">Free claim tools</p>
     <h2 class="section-title">Check your claim yourself, before you call anyone</h2>
-    <p class="section-sub">Built for Texas policyholders. No sign-up, and nothing you enter leaves your browser.</p>
+    <p class="section-sub">Built by a Texas public adjuster for Texas policyholders. No sign-up, and nothing you enter leaves your browser.</p>
   </div>
   <div class="grid grid--3">
     <?php foreach (array_keys(tools_registry()) as $slug) echo tool_card($slug, 'tool-card--tile'); ?>
@@ -200,7 +241,7 @@ function render_home(): void
   <div class="wrap split split--map">
     <div data-reveal>
       <p class="eyebrow">Service areas</p>
-      <h2 class="section-title">One licensed adjuster, all 254 Texas counties</h2>
+      <h2 class="section-title">One licensed Texas public adjuster for all 254 counties</h2>
       <p>We're based in Belton, in Bell County, and travel to inspect properties statewide. Claims play out differently by region: hurricanes and TWIA on the coast, hail in the Panhandle and North Texas, freezes and burst pipes everywhere. Our regional pages cover what matters in each.</p>
       <div class="chips">
         <?php foreach (load_all('areas') as $slug => $a): ?>
@@ -223,7 +264,7 @@ function render_home(): void
     <div data-reveal><span data-count="15">15</span><p>days to acknowledge your claim and start investigating</p></div>
     <div data-reveal><span data-count="15">15</span><p>business days to accept or reject once they have everything they asked for</p></div>
     <div data-reveal><span data-count="5">5</span><p>business days to pay after accepting the claim</p></div>
-    <div data-reveal><span data-count="10" data-suffix="%">10%</span><p>maximum public adjuster fee under Texas law</p></div>
+    <div data-reveal><span data-count="10" data-suffix="%">10%</span><p>maximum Texas public adjuster fee under state law</p></div>
   </div>
   <div class="center" data-reveal><a class="link-arrow" href="/tools/texas-claim-deadline-calculator/">Calculate your insurer's deadlines <?= icon('arrow') ?></a></div>
 </section>
@@ -232,7 +273,7 @@ function render_home(): void
 <section class="section section--tint">
   <div class="wrap">
     <div class="section-head section-head--row" data-reveal>
-      <div><p class="eyebrow">Claim guides</p><h2 class="section-title">Plain-English answers from a licensed adjuster</h2></div>
+      <div><p class="eyebrow">Claim guides</p><h2 class="section-title">Plain-English answers from a Texas public adjuster</h2></div>
       <a class="btn btn--ghost" href="/blog/">All guides <?= icon('arrow') ?></a>
     </div>
     <div class="grid grid--3">
@@ -243,8 +284,9 @@ function render_home(): void
 <?php endif; ?>
 
 <section class="section wrap narrow">
-  <?= faq_html($faqs, 'Questions Texas property owners ask') ?>
+  <?= faq_html($faqs, 'Questions to ask a Texas public adjuster') ?>
 </section>
+<script src="<?= asset('/assets/js/weather.js') ?>" defer></script>
 <?php
     });
 }
@@ -709,17 +751,8 @@ function handle_contact(string $method): void
         $data['email'] = '';
     }
 
-    $csv = leads_file();
-    $new = !is_file($csv);
-    if ($fh = @fopen($csv, 'a')) {
-        if ($new) {
-            fputcsv($fh, array_keys($data));
-        }
-        fputcsv($fh, array_map(fn($v) => preg_match('/^[=+\-@]/', $v) ? "'" . $v : $v, $data));
-        fclose($fh);
-    }
-
     global $LEAD_EMAIL, $LEAD_FROM;
+    $sent = false;
     if ($LEAD_EMAIL) {
         $lines = [];
         foreach ($data as $k => $v) {
@@ -731,7 +764,18 @@ function handle_contact(string $method): void
         if ($data['email']) {
             $headers .= "\r\nReply-To: " . $data['email'];
         }
-        @mail($LEAD_EMAIL, 'New claim review request: ' . $data['name'] . ' (' . ($data['loss_type'] ?: 'claim') . ')', implode("\n", $lines), $headers);
+        $sent = @mail($LEAD_EMAIL, 'New claim review request: ' . $data['name'] . ' (' . ($data['loss_type'] ?: 'claim') . ')', implode("\n", $lines), $headers);
     }
+    $data['emailed'] = $LEAD_EMAIL ? ($sent ? 'yes' : 'FAILED') : 'no';
+    $csv = leads_file();
+    $new = !is_file($csv);
+    if ($fh = @fopen($csv, 'a')) {
+        if ($new) {
+            fputcsv($fh, array_keys($data));
+        }
+        fputcsv($fh, array_map(fn($v) => preg_match('/^[=+\-@]/', $v) ? "'" . $v : $v, $data));
+        fclose($fh);
+    }
+
     $respond(true, 'Thanks, we received your request. Joseph will reach out shortly, usually the same business day.');
 }

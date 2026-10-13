@@ -32,9 +32,9 @@ const BIZ = [
     'lng'           => -97.4645,
 ];
 
-// Where contact-form leads are emailed. Leave empty to only log them to the
-// private leads CSV (see leads_file() in lib.php). Better: set it in app/config.local.php (not committed).
-$LEAD_EMAIL = '';
+// Where contact-form leads are emailed (also always logged to the
+// private leads CSV, see leads_file() in lib.php). config.local.php can override it.
+$LEAD_EMAIL = 'info@txpublicadjusting.com';
 $LEAD_FROM  = 'no-reply@' . PRODUCTION_HOST;
 
 if (is_file(__DIR__ . '/config.local.php')) {
