@@ -42,3 +42,5 @@ $meta = [
   <p><?= rich($para) ?></p>
 <?php endforeach; ?>
 </div></section>
+
+<?= popular_block('', $b['path']) ?>

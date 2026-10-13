@@ -7,7 +7,7 @@ $CAT = require dirname(__DIR__) . '/data/catalog.php';
 $AFF = is_file(dirname(__DIR__) . '/data/affiliates.json')
     ? (json_decode(file_get_contents(dirname(__DIR__) . '/data/affiliates.json'), true) ?: []) : [];
 
-const ASSET_V = '3';
+const ASSET_V = '4';
 
 function e(?string $s): string { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 
@@ -135,6 +135,18 @@ function product_card(array $p, string $extra = ''): string {
         . '<div class="card-foot"><span class="price"><small>Typical</small> ' . money((int)$p['price']) . '</span>'
         . '<span class="card-actions"><label class="compare-tog" title="Compare"><input type="checkbox" data-compare> <span>Compare</span></label>'
         . '<button class="btn btn-sm btn-cart" type="button" data-add>Add</button></span></div></div></article>';
+}
+
+// "Popular searches": the department's most-searched pages, labeled with their top keyword.
+// $dept is a top-level path segment ("climbing"), or '' for the whole store.
+function popular_block(string $dept, string $self = '', string $heading = ''): string {
+    global $CAT;
+    $rows = array_values(array_filter($CAT['popular'][$dept] ?? $CAT['popular'][''] ?? [], fn($r) => $r[1] !== $self));
+    if (!$rows) return '';
+    $name = $dept !== '' && isset($CAT['categories']["/$dept/"]) ? $CAT['categories']["/$dept/"]['name'] : '';
+    $h = '<section class="section popular"><div class="wrap"><h2>' . e($heading ?: ($name ? "Popular in $name" : 'Popular searches')) . '</h2><ul class="popular-list">';
+    foreach (array_slice($rows, 0, 12) as [$label, $path]) $h .= '<li><a href="' . e($path) . '">' . e($label) . '</a></li>';
+    return $h . '</ul></div></section>';
 }
 
 function faq_block(array $faq, string $heading = 'Common questions'): string {

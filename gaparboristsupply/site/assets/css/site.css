@@ -465,6 +465,11 @@ input[type=range] { accent-color: var(--orange); width: 100%; }
 .use-tags { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .2em .8em; font-size: .8rem; font-weight: 700; }
 .tag-pro { background: var(--forest-900); color: var(--lime); border-color: var(--forest-900); }
+.popular { padding-top: 0; }
+.popular h2 { font-size: 1.25rem; margin: 0 0 12px; }
+.popular-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.popular-list a { display: inline-block; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .35em .9em; font-size: .875rem; font-weight: 700; text-decoration: none; color: inherit; }
+.popular-list a:hover, .popular-list a:focus-visible { border-color: var(--forest-900); }
 .pdp-detail { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 50px; padding-bottom: 40px; align-items: start; }
 .tab-list { display: flex; gap: 4px; border-bottom: 2px solid var(--line); margin-bottom: 24px; position: relative; overflow-x: auto; }
 .tab-list button { background: none; border: 0; padding: .8em 1.2em; font-weight: 800; cursor: pointer; color: var(--ink-2); font-size: 1rem; white-space: nowrap; }

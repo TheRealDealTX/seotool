@@ -77,3 +77,5 @@ $isDept = $c['parent'] === null;
   </div>
 </section>
 <?php endif; ?>
+
+<?= popular_block(explode('/', trim($c['path'], '/'))[0], $c['path']) ?>

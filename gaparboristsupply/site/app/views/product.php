@@ -125,6 +125,8 @@ $ph = $p['photo'] ?? null;
 </section>
 <?php endif; ?>
 
+<?= popular_block(explode('/', trim($p['category'], '/'))[0], $p['path']) ?>
+
 <div class="sticky-buy" data-product="<?= $data ?>" hidden>
   <div class="wrap"><img src="<?= e($ph['sm'] ?? kind_img($p['kind'])) ?>" alt="" width="40" height="40"><span class="sb-name"><?= e($p['name']) ?></span><span class="sb-price"><?= money((int)$p['price']) ?></span><button class="btn btn-sm btn-chain" type="button" data-add>Add to cart</button></div>
 </div>

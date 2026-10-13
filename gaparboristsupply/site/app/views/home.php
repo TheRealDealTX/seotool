@@ -197,6 +197,8 @@ function hero_float(string $cls, string $kind): string {
 </section>
 <?php endif; ?>
 
+<?= popular_block('', '/', 'Top searches') ?>
+
 <section class="section home-seo">
   <div class="wrap narrow prose reveal">
     <h2>A tree climbing store built around the work</h2>

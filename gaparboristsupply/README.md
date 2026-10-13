@@ -46,6 +46,25 @@ them into `seo-data/build-plan.json`, which decides what gets a page:
 and fails if any of them doesn't end at a 200 within two hops. Current result on
 the live site: 490 serve directly, 290 redirect once, 0 broken.
 
+## Internal links
+
+`scripts/autolink.php` runs inside `compile.php`. It adds keyword-anchored links
+to body copy and builds the "Popular searches" blocks:
+
+- **In-copy links.** The anchor phrases are the keywords each page ranked for in
+  the Semrush export (old URLs follow the redirect table), each page's own `keyword`,
+  short product names ("Silky Sugoi", "Husqvarna 372XP") and brand names. The
+  highest-volume match on a page wins. There is one link per target per page, up
+  to 4 new links on a product, 6 on a category, 8 on a guide and 4 on a brand page.
+  A target takes at most 30 of these links site-wide (60 for categories and brands).
+  A generic phrase only links to a product from inside that product's category.
+  Only body copy and Q&A answers are touched.
+- **Popular searches.** Every product, category and brand page, plus the homepage,
+  shows chips that link the department's highest-traffic pages, labeled with
+  their top keyword.
+
+Every link it adds is listed in `seo-data/internal-links.csv`.
+
 ## Photos
 
 Product, category and guide images are real photos from Openverse, licensed
