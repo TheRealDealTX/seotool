@@ -1,7 +1,7 @@
 [
  {
   "path": "/light-duty-slings/weaver-loop-runners/",
-  "category": "/rigging/rigging-slings/",
+  "category": "/rigging/rigging-slings/light-duty-slings/",
   "name": "Weaver Loop Runners",
   "brand": "weaver",
   "brand_name": "Weaver",
@@ -347,7 +347,7 @@
  },
  {
   "path": "/plant-care/cabling-and-bracing/cabling-accessories/9-16-ship-auger-bit/",
-  "category": "/plant-care/cabling-and-bracing/",
+  "category": "/plant-care/cabling-and-bracing/cabling-accessories/",
   "name": "9/16\" Ship Auger Bit",
   "brand": "gap",
   "brand_name": "Gap Arborist Supply",

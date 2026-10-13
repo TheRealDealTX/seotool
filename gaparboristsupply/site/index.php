@@ -107,7 +107,7 @@ $first = strtolower(explode('/', trim($path, '/'))[0] ?? '');
 if (isset(LEGACY[$first])) redirect(LEGACY[$first]);
 
 // Old store platforms: /Some-Product-Name/item/123, /X/image/item/..., /shop/product/slug/, /Name/folder/8
-if (preg_match('#^/(?:shop/product/)?([A-Za-z0-9%\-\.]+)/(?:image/)?(?:item|folder)\b#', $path, $m)
+if (preg_match('#^/(?:shop/product/)?(.+?)/(?:image/)?(?:item|folder)\b#', $path, $m)
     || preg_match('#^/shop/product/([a-z0-9\-]+)/?$#', $path, $m)
     || preg_match('#^/([A-Z][A-Za-z0-9\-]+)/?$#', $path, $m)) {
     redirect(fuzzy_target($m[1]));
@@ -115,5 +115,22 @@ if (preg_match('#^/(?:shop/product/)?([A-Za-z0-9%\-\.]+)/(?:image/)?(?:item|fold
 if (preg_match('#^/image/item/#', $path)) redirect('/shop-all/');
 // Old WordPress / WooCommerce paths
 if (preg_match('#^/(wp-admin|wp-login\.php|wp-content|wp-includes|xmlrpc\.php|feed|cart|checkout|my-account|product-category|product)(/|$)#', $path)) redirect('/');
+
+// The old store filed the same product under several folders (/24-strand-climbing-rope/x/ and
+// /rope/climbing-rope/24-strand-climbing-rope/x/). Match an unknown product URL on its slug,
+// then on its words, then fall back to the nearest category above it.
+$segs = array_values(array_filter(explode('/', strtolower($path)), 'strlen'));
+if (count($segs) >= 2 && preg_match('#^[a-z0-9\-]+$#', end($segs))) {
+    $slug = end($segs);
+    foreach ([$slug, preg_replace('#^the-splice-shop-#', '', $slug)] as $s) {
+        foreach ($CAT['products'] as $pp => $_) if (str_ends_with($pp, "/$s/")) redirect($pp);
+    }
+    $fz = fuzzy_target($slug);
+    if ($fz !== '/shop-all/') redirect($fz);
+    for ($q = '/' . implode('/', array_slice($segs, 0, -1)) . '/'; $q !== '/'; $q = dirname($q) === '/' ? '/' : dirname($q) . '/') {
+        if (isset($CAT['categories'][$q])) redirect($q);
+    }
+}
+if (in_array($path, ['/compare', '/compare/', '/default', '/default/', '/default.aspx', '/home', '/home/'], true)) redirect('/');
 
 render('404', [], 404);

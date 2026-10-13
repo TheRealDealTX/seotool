@@ -29630,7 +29630,7 @@ return array (
     '/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/' => 
     array (
       'path' => '/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/',
-      'category' => '/rigging/rigging-slings/',
+      'category' => '/rigging/rigging-slings/light-duty-slings/',
       'name' => 'CMI Heavy Duty Loop Runners',
       'brand' => 'cmi',
       'brand_name' => 'CMI',
@@ -84446,7 +84446,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/11-16-ship-auger-bit/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/11-16-ship-auger-bit/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => '11/16 Ship Auger Bit',
       'brand' => 'gap',
       'brand_name' => 'Gap Arborist Supply',
@@ -84540,7 +84540,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/13-16-ship-auger-bit/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/13-16-ship-auger-bit/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => '13/16 Ship Auger Bit',
       'brand' => 'gap',
       'brand_name' => 'Gap Arborist Supply',
@@ -84634,7 +84634,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/5-16-x-24-ship-auger-bit/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/5-16-x-24-ship-auger-bit/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => '5/16 x 24 Ship Auger Bit',
       'brand' => 'gap',
       'brand_name' => 'Gap Arborist Supply',
@@ -84733,7 +84733,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/5-8-ship-auger-bit/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/5-8-ship-auger-bit/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => '5/8 Ship Auger Bit',
       'brand' => 'gap',
       'brand_name' => 'Gap Arborist Supply',
@@ -84827,7 +84827,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/havens-grips/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/havens-grips/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => 'Havens Grip Cable Puller',
       'brand' => 'klein',
       'brand_name' => 'Klein Tools',
@@ -84920,7 +84920,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/hit-cable-cutter/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/hit-cable-cutter/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => 'HIT Cable Cutter',
       'brand' => 'hit',
       'brand_name' => 'HIT',
@@ -85013,7 +85013,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/preformed-line-products-tree-cabling-lag-spinner/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/preformed-line-products-tree-cabling-lag-spinner/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => 'Preformed Line Products Tree Cabling Lag Spinner',
       'brand' => 'preformed-line-products',
       'brand_name' => 'Preformed Line Products',
@@ -85106,7 +85106,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/weaver-nylon-basket-for-cable/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/weaver-nylon-basket-for-cable/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => 'Weaver Nylon Basket for Cable',
       'brand' => 'weaver',
       'brand_name' => 'Weaver',
@@ -145610,7 +145610,7 @@ return array (
     '/light-duty-slings/weaver-loop-runners/' => 
     array (
       'path' => '/light-duty-slings/weaver-loop-runners/',
-      'category' => '/rigging/rigging-slings/',
+      'category' => '/rigging/rigging-slings/light-duty-slings/',
       'name' => 'Weaver Loop Runners',
       'brand' => 'weaver',
       'brand_name' => 'Weaver',
@@ -146094,7 +146094,7 @@ return array (
     '/plant-care/cabling-and-bracing/cabling-accessories/9-16-ship-auger-bit/' => 
     array (
       'path' => '/plant-care/cabling-and-bracing/cabling-accessories/9-16-ship-auger-bit/',
-      'category' => '/plant-care/cabling-and-bracing/',
+      'category' => '/plant-care/cabling-and-bracing/cabling-accessories/',
       'name' => '9/16" Ship Auger Bit',
       'brand' => 'gap',
       'brand_name' => 'Gap Arborist Supply',
@@ -163194,7 +163194,8 @@ return array (
       'parent' => '/plant-care/',
       'children' => 
       array (
-        0 => '/plant-care/cabling-and-bracing/cabling-hardware/',
+        0 => '/plant-care/cabling-and-bracing/cabling-accessories/',
+        1 => '/plant-care/cabling-and-bracing/cabling-hardware/',
       ),
       'products' => 
       array (
@@ -163237,6 +163238,73 @@ return array (
         'license' => 'CC0',
         'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
         'source_url' => 'https://www.rawpixel.com/image/6032390/photo-image-public-domain-free-silver',
+      ),
+    ),
+    '/plant-care/cabling-and-bracing/cabling-accessories/' => 
+    array (
+      'path' => '/plant-care/cabling-and-bracing/cabling-accessories/',
+      'name' => 'Cabling Accessories',
+      'h1' => 'Tree Cabling Tools and Accessories',
+      'keyword' => 'tree cabling tools',
+      'title' => 'Tree Cabling Tools: Auger Bits, Cable Grips and Cutters',
+      'meta' => 'Tree cabling tools for installing support systems: ship auger bits for through-bolts, cable come-alongs, cable cutters, lag spinners and cable baskets.',
+      'kind' => 'cable-hardware',
+      'intro' => 'Tree cabling tools are the gear that goes in the bucket or the climbing kit alongside the hardware itself. Ship auger bits bore clean holes for eye bolts and rods, a Havens-style grip tensions the cable, a cutter trims it, and a lag spinner drives lags without wrecking your wrist.',
+      'guide' => 
+      array (
+        0 => 
+        array (
+          'h' => 'What goes in a cabling kit',
+          'p' => 
+          array (
+            0 => 'Match the auger bit to the hardware: the hole should be about 1/16 in larger than the bolt or rod so it slides through without play. Ship augers clear chips well in green wood, and a longer bit lets you bore through a wide stem in one pass. Keep a second bit of each size, because a dull or bent auger is the usual reason a hole wanders.',
+            1 => 'For cable, you need a way to take up slack before you terminate it. A cable grip and a small come-along let you snug the line so it sits with a little slack in calm air, as ANSI A300 Part 3 describes, rather than drum tight. A proper cable cutter gives a square end that seats in a dead-end grip; bolt cutters crush strands and fray the end.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Working at height with cabling tools',
+          'p' => 
+          array (
+            0 => 'Most cabling is done from a rope or a lift in the upper crown, so tools need lanyards or a bag. A nylon cable basket keeps a coil of EHS cable organized and feeds it out without kinks. A lag spinner on a drill makes eye lags far faster to install and keeps the lag straight in the hole.',
+            1 => 'Inspect the tools as you would any other gear: replace augers with chipped spurs, keep grip jaws clean so they bite the cable, and check that cutters still close fully. Follow the hardware maker\'s instructions and the A300 standard for where and how high to install a system.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'What size auger bit do I need for a 5/8 in eye bolt?',
+          'a' => 'Most arborists bore 11/16 in for 5/8 in hardware, about 1/16 in over the bolt diameter. Check the hardware maker\'s recommendation for the specific bolt or rod.',
+        ),
+      ),
+      'parent' => '/plant-care/cabling-and-bracing/',
+      'children' => 
+      array (
+      ),
+      'products' => 
+      array (
+        0 => '/plant-care/cabling-and-bracing/cabling-accessories/11-16-ship-auger-bit/',
+        1 => '/plant-care/cabling-and-bracing/cabling-accessories/13-16-ship-auger-bit/',
+        2 => '/plant-care/cabling-and-bracing/cabling-accessories/5-16-x-24-ship-auger-bit/',
+        3 => '/plant-care/cabling-and-bracing/cabling-accessories/5-8-ship-auger-bit/',
+        4 => '/plant-care/cabling-and-bracing/cabling-accessories/havens-grips/',
+        5 => '/plant-care/cabling-and-bracing/cabling-accessories/hit-cable-cutter/',
+        6 => '/plant-care/cabling-and-bracing/cabling-accessories/preformed-line-products-tree-cabling-lag-spinner/',
+        7 => '/plant-care/cabling-and-bracing/cabling-accessories/weaver-nylon-basket-for-cable/',
+        8 => '/plant-care/cabling-and-bracing/cabling-accessories/9-16-ship-auger-bit/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/cable-hardware-4.webp',
+        'sm' => '/assets/photos/cable-hardware-4-sm.webp',
+        'title' => 'Project 365 #278: 051011 Going Nuts',
+        'creator' => 'comedy_nose',
+        'creator_url' => 'https://www.flickr.com/photos/23408922@N07',
+        'license' => 'Public domain',
+        'license_url' => 'https://creativecommons.org/publicdomain/mark/1.0/',
+        'source_url' => 'https://www.flickr.com/photos/23408922@N07/6214688085',
       ),
     ),
     '/plant-care/cabling-and-bracing/cabling-hardware/' => 
@@ -164235,6 +164303,7 @@ return array (
         0 => '/rigging/rigging-slings/adjustable-slings/',
         1 => '/rigging/rigging-slings/crane-slings/',
         2 => '/rigging/rigging-slings/heavy-duty-slings/',
+        3 => '/rigging/rigging-slings/light-duty-slings/',
       ),
       'products' => 
       array (
@@ -164607,6 +164676,66 @@ return array (
         'license' => 'CC BY 2.0',
         'license_url' => 'https://creativecommons.org/licenses/by/2.0/',
         'source_url' => 'https://www.flickr.com/photos/95142644@N00/3584852771',
+      ),
+    ),
+    '/rigging/rigging-slings/light-duty-slings/' => 
+    array (
+      'path' => '/rigging/rigging-slings/light-duty-slings/',
+      'name' => 'Light-Duty Slings',
+      'h1' => 'Loop Runners and Light-Duty Slings',
+      'keyword' => 'loop runners',
+      'title' => 'Loop Runners and Light-Duty Slings for Arborists',
+      'meta' => 'Loop runners and light-duty slings for arborists: sewn nylon and polyester loops for pruning lines, tool lanyards, light rigging points and anchor work.',
+      'kind' => 'sling',
+      'intro' => 'Loop runners are sewn webbing loops that do a dozen small jobs: a quick anchor around a limb, a choke for a light pruning line, a tool hang point, or a short extension in a climbing system when it\'s rated for that. They\'re cheap, light and always worth having a few on the saddle.',
+      'guide' => 
+      array (
+        0 => 
+        array (
+          'h' => 'Choosing loop runners',
+          'p' => 
+          array (
+            0 => 'Runners come in lengths from about 2 ft to 6 ft or more and in nylon or polyester webbing. Nylon stretches a little more and handles shock better; polyester holds up better to UV and stays stiffer when wet. Pick a few lengths so you can basket or choke limbs of different sizes without tying knots in webbing.',
+            1 => 'Check the rating sewn on the label and keep light-duty slings to light-duty work. For removal rigging and anything that will see dynamic loads, step up to heavy-duty rope slings sized to your rigging line and block.',
+          ),
+        ),
+        1 => 
+        array (
+          'h' => 'Care and retirement',
+          'p' => 
+          array (
+            0 => 'Webbing is easy to cut, so keep it away from saw chains and sharp bark edges, and use a sleeve where it wraps a rough stub. Retire any runner with cut or fuzzed edges, glazing from heat, chemical stains or damaged stitching.',
+            1 => 'Store runners out of the sun and away from fuel. If a runner is used for life support, it must carry the right certification and be inspected like the rest of your climbing system.',
+          ),
+        ),
+      ),
+      'faq' => 
+      array (
+        0 => 
+        array (
+          'q' => 'Can I use a loop runner as a climbing anchor?',
+          'a' => 'Only if it is rated and certified for life support and used the way its maker allows. Many light-duty runners are meant for rigging small pieces and tool hanging, not for climbing.',
+        ),
+      ),
+      'parent' => '/rigging/rigging-slings/',
+      'children' => 
+      array (
+      ),
+      'products' => 
+      array (
+        0 => '/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/',
+        1 => '/light-duty-slings/weaver-loop-runners/',
+      ),
+      'photo' => 
+      array (
+        'src' => '/assets/photos/sling-0.webp',
+        'sm' => '/assets/photos/sling-0-sm.webp',
+        'title' => 'Untitled',
+        'creator' => 'Unknown',
+        'creator_url' => '',
+        'license' => 'CC0',
+        'license_url' => 'https://creativecommons.org/publicdomain/zero/1.0/',
+        'source_url' => 'https://www.rawpixel.com/image/5948349/free-public-domain-cc0-photo',
       ),
     ),
     '/rope/' => 

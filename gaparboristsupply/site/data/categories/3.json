@@ -1,0 +1,66 @@
+[
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-accessories/",
+  "name": "Cabling Accessories",
+  "h1": "Tree Cabling Tools and Accessories",
+  "keyword": "tree cabling tools",
+  "title": "Tree Cabling Tools: Auger Bits, Cable Grips and Cutters",
+  "meta": "Tree cabling tools for installing support systems: ship auger bits for through-bolts, cable come-alongs, cable cutters, lag spinners and cable baskets.",
+  "kind": "cable-hardware",
+  "intro": "Tree cabling tools are the gear that goes in the bucket or the climbing kit alongside the hardware itself. Ship auger bits bore clean holes for eye bolts and rods, a Havens-style grip tensions the cable, a cutter trims it, and a lag spinner drives lags without wrecking your wrist.",
+  "guide": [
+   {
+    "h": "What goes in a cabling kit",
+    "p": [
+     "Match the auger bit to the hardware: the hole should be about 1/16 in larger than the bolt or rod so it slides through without play. Ship augers clear chips well in green wood, and a longer bit lets you bore through a wide stem in one pass. Keep a second bit of each size, because a dull or bent auger is the usual reason a hole wanders.",
+     "For cable, you need a way to take up slack before you terminate it. A cable grip and a small come-along let you snug the line so it sits with a little slack in calm air, as ANSI A300 Part 3 describes, rather than drum tight. A proper cable cutter gives a square end that seats in a dead-end grip; bolt cutters crush strands and fray the end."
+    ]
+   },
+   {
+    "h": "Working at height with cabling tools",
+    "p": [
+     "Most cabling is done from a rope or a lift in the upper crown, so tools need lanyards or a bag. A nylon cable basket keeps a coil of EHS cable organized and feeds it out without kinks. A lag spinner on a drill makes eye lags far faster to install and keeps the lag straight in the hole.",
+     "Inspect the tools as you would any other gear: replace augers with chipped spurs, keep grip jaws clean so they bite the cable, and check that cutters still close fully. Follow the hardware maker's instructions and the A300 standard for where and how high to install a system."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "What size auger bit do I need for a 5/8 in eye bolt?",
+    "a": "Most arborists bore 11/16 in for 5/8 in hardware, about 1/16 in over the bolt diameter. Check the hardware maker's recommendation for the specific bolt or rod."
+   }
+  ]
+ },
+ {
+  "path": "/rigging/rigging-slings/light-duty-slings/",
+  "name": "Light-Duty Slings",
+  "h1": "Loop Runners and Light-Duty Slings",
+  "keyword": "loop runners",
+  "title": "Loop Runners and Light-Duty Slings for Arborists",
+  "meta": "Loop runners and light-duty slings for arborists: sewn nylon and polyester loops for pruning lines, tool lanyards, light rigging points and anchor work.",
+  "kind": "sling",
+  "intro": "Loop runners are sewn webbing loops that do a dozen small jobs: a quick anchor around a limb, a choke for a light pruning line, a tool hang point, or a short extension in a climbing system when it's rated for that. They're cheap, light and always worth having a few on the saddle.",
+  "guide": [
+   {
+    "h": "Choosing loop runners",
+    "p": [
+     "Runners come in lengths from about 2 ft to 6 ft or more and in nylon or polyester webbing. Nylon stretches a little more and handles shock better; polyester holds up better to UV and stays stiffer when wet. Pick a few lengths so you can basket or choke limbs of different sizes without tying knots in webbing.",
+     "Check the rating sewn on the label and keep light-duty slings to light-duty work. For removal rigging and anything that will see dynamic loads, step up to heavy-duty rope slings sized to your rigging line and block."
+    ]
+   },
+   {
+    "h": "Care and retirement",
+    "p": [
+     "Webbing is easy to cut, so keep it away from saw chains and sharp bark edges, and use a sleeve where it wraps a rough stub. Retire any runner with cut or fuzzed edges, glazing from heat, chemical stains or damaged stitching.",
+     "Store runners out of the sun and away from fuel. If a runner is used for life support, it must carry the right certification and be inspected like the rest of your climbing system."
+    ]
+   }
+  ],
+  "faq": [
+   {
+    "q": "Can I use a loop runner as a climbing anchor?",
+    "a": "Only if it is rated and certified for life support and used the way its maker allows. Many light-duty runners are meant for rigging small pieces and tool hanging, not for climbing."
+   }
+  ]
+ }
+]
