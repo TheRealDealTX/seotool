@@ -1,0 +1,19 @@
+{
+  "appId": "com.holybiblewords.app",
+  "appName": "Holy Bible Words",
+  "webDir": "www",
+  "server": {
+    "url": "https://holybiblewords.com",
+    "cleartext": false,
+    "allowNavigation": ["holybiblewords.com", "*.holybiblewords.com"],
+    "errorPath": "index.html"
+  },
+  "appendUserAgent": "HolyBibleWordsApp",
+  "backgroundColor": "#f4f7f5",
+  "android": { "allowMixedContent": false },
+  "ios": { "contentInset": "never", "limitsNavigationsToAppBoundDomains": true },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 800, "backgroundColor": "#ffffff", "showSpinner": false },
+    "LocalNotifications": { "iconColor": "#1b5e8f" }
+  }
+}

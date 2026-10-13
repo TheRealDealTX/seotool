@@ -1,0 +1,20 @@
+{
+ "ta": {
+  "prefix": "ta",
+  "short": "KJV",
+  "name": "King James Version",
+  "label": "King James Version (KJV)",
+  "lang": "en",
+  "nameKey": "en",
+  "copyright": "Public domain."
+ },
+ "ml": {
+  "prefix": "ml",
+  "short": "AB",
+  "name": "Ang Biblia, 2011",
+  "label": "Ang Biblia, 2011",
+  "lang": "ceb",
+  "nameKey": "ceb",
+  "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission."
+ }
+}

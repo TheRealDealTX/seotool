@@ -1,0 +1,65 @@
+<?php
+// JSON API used by app.js (and the offline cache).
+
+function json_out($data, int $status = 200, int $maxAge = 86400): void {
+    http_response_code($status);
+    header('Content-Type: application/json; charset=utf-8');
+    header('Cache-Control: public, max-age=' . $maxAge);
+    header('Access-Control-Allow-Origin: *');
+    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+}
+
+function api(string $path): void {
+    $vers = versions();
+    $seg = explode('/', trim(substr($path, 5), '/'));   // after "/api/"
+    $route = $seg[0] ?? '';
+
+    if ($route === 'chapter' && count($seg) === 4 && isset($vers[$seg[1]], books()[$seg[2]]) && ctype_digit($seg[3])) {
+        [$_, $ver, $slug, $c] = $seg;
+        $c = (int)$c;
+        $book = books()[$slug];
+        if ($c < 1 || $c > count($book['verses'])) { json_out(['error' => 'not found'], 404); return; }
+        json_out([
+            'ver' => $ver, 'book' => $slug, 'name' => book_name($book, $ver), 'ch' => $c,
+            'verses' => chapter_text($ver, $slug, $c),
+            'fallback' => $ver !== 'ta' && chapter_available($ver, $slug, $c) < $book['verses'][$c - 1] ? chapter_text('ta', $slug, $c) : null,
+        ]);
+        return;
+    }
+
+    if ($route === 'votd') {
+        $date = preg_match('/^\d{4}-\d{2}-\d{2}$/', $_GET['date'] ?? '') ? $_GET['date'] : site_today();
+        [$slug, $c, $v] = votd_for($date);
+        $out = ['date' => $date, 'book' => $slug, 'ch' => $c, 'v' => $v, 'text' => []];
+        foreach ($vers as $k => $_) {
+            $out['text'][$k] = verse_text($k, $slug, $c, $v);
+            $out['ref'][$k] = ref_label(books()[$slug], $k, $c, $v);
+        }
+        json_out($out, 200, 3600);
+        return;
+    }
+
+    if ($route === 'search') {
+        $ver = isset($vers[$_GET['v'] ?? '']) ? $_GET['v'] : 'ta';
+        $q = mb_substr(trim($_GET['q'] ?? ''), 0, 200);
+        $ref = parse_ref($q);
+        $t = in_array($_GET['t'] ?? '', ['ot', 'nt'], true) ? $_GET['t'] : '';
+        $res = $q === '' ? ['total' => 0, 'results' => []] : search($ver, $q, $t, max(0, (int)($_GET['offset'] ?? 0)), 30);
+        $rows = array_map(function ($r) use ($ver) {
+            $b = book_by_index($r[0]);
+            return ['book' => $b['slug'], 'ch' => $r[1], 'v' => $r[2], 'ref' => ref_label($b, $ver, $r[1], $r[2]), 'text' => $r[3]];
+        }, $res['results']);
+        json_out(['q' => $q, 'ver' => $ver, 'total' => $res['total'], 'results' => $rows,
+            'ref' => $ref ? ['book' => $ref[0], 'ch' => $ref[1], 'v' => $ref[2], 'url' => url_for($ver, $ref[0], $ref[1], $ref[2])] : null], 200, 3600);
+        return;
+    }
+
+    if ($route === 'ref') {
+        $ref = parse_ref($_GET['q'] ?? '');
+        $ver = isset($vers[$_GET['v'] ?? '']) ? $_GET['v'] : 'ta';
+        json_out($ref ? ['book' => $ref[0], 'ch' => $ref[1], 'v' => $ref[2], 'url' => url_for($ver, $ref[0], $ref[1], $ref[2])] : null);
+        return;
+    }
+
+    json_out(['error' => 'not found'], 404);
+}

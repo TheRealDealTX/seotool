@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /api/
+Disallow: /search/?
+
+Sitemap: https://holybiblewords.com/sitemap_index.xml

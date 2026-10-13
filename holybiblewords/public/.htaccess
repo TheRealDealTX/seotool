@@ -1,0 +1,32 @@
+# holybiblewords.com — every request that isn't a real file goes to index.php
+DirectoryIndex index.php
+Options -Indexes
+ErrorDocument 404 /index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^(lib|data/.*\.tsv) - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule mod_mime.c>
+AddType application/manifest+json .webmanifest
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "sw\.js$">
+Header set Cache-Control "no-cache"
+Header set Service-Worker-Allowed "/"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+ExpiresByType application/json "access plus 1 day"
+</IfModule>
