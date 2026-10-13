@@ -1,4 +1,5 @@
 """Requests every URL from the Semrush exports (ranking pages + backlink targets)
+and the Search Console exports
 against a running server and checks each one ends at a 200 within two redirects.
 
     python3 scripts/check_urls.py http://127.0.0.1:8080
@@ -21,6 +22,13 @@ for r in csv.DictReader(open(os.path.join(SEO, 'organic-positions-2026-06.csv'),
     urls[strip(r['URL'])] = 'organic'
 for r in csv.DictReader(open(os.path.join(SEO, 'backlinks-2026-10.csv'), encoding='utf-8-sig')):
     urls.setdefault(strip(r['Target url']), 'backlink')
+# Google Search Console exports (performance pages + coverage drilldowns)
+for name in sorted(os.listdir(SEO)):
+    if name.startswith('gsc-') and 'queries' not in name:
+        for r in csv.DictReader(open(os.path.join(SEO, name), encoding='utf-8-sig')):
+            u = r.get('url') or r.get('Top pages') or ''
+            if 'gaparboristsupply.com' in u:
+                urls.setdefault(strip(u), 'gsc')
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
