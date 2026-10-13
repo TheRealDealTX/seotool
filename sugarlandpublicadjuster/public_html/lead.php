@@ -5,6 +5,7 @@
  * so no lead is lost if mail delivery fails.
  */
 require __DIR__ . '/inc/config.php';
+require __DIR__ . '/inc/mailer.php';
 
 $wantsJson = stripos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false;
 
@@ -105,22 +106,10 @@ $lines = [
 ];
 $bodyText = implode("\r\n", $lines);
 
-$from = SITE['mail_from'];
-$headers = [
-    'From: ' . SITE['name'] . ' <' . $from . '>',
-    'MIME-Version: 1.0',
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: 8bit',
-    'X-Mailer: SLPA-Lead/1.0',
-];
-if ($lead['email'] !== '') {
-    $headers[] = 'Reply-To: ' . str_replace(["\r", "\n"], '', $lead['name']) . ' <' . $lead['email'] . '>';
-}
-$encSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
-$sent = @mail(SITE['lead_to'], $encSubject, $bodyText, implode("\r\n", $headers), '-f' . $from);
+[$sent, $method, $mailErr] = send_mail(SITE['lead_to'], $subject, $bodyText, $lead['email'], $lead['name']);
 
 if ($fh = @fopen($dir . '/mail.log', 'a')) {
-    fwrite($fh, $when . ' ' . ($sent ? 'sent' : 'FAILED') . ' ' . $lead['name'] . ' ' . $lead['phone'] . "\n");
+    fwrite($fh, $when . ' ' . ($sent ? 'sent' : 'FAILED') . ' via ' . $method . ($mailErr ? ' (smtp error: ' . $mailErr . ')' : '') . ' ' . $lead['name'] . ' ' . $lead['phone'] . "\n");
     fclose($fh);
 }
 

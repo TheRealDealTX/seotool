@@ -1,5 +1,5 @@
 # Sugar Land Public Adjuster — custom PHP site (replaced WordPress 2026-10-13).
-# The original WordPress .htaccess is kept in the repo under backup/.
+# The original WordPress .htaccess is kept in the repo under backup/ for reference..
 DirectoryIndex index.php index.html
 Options -Indexes
 ErrorDocument 404 /404.php
@@ -17,7 +17,7 @@ RewriteRule ^(.*)$ https://sugarlandpublicadjuster.com/$1 [R=301,L]
 RewriteRule ^(inc|content)(/|$) - [F,L]
 RewriteRule ^\.private(/|$) - [F,L]
 
-# Retired WordPress endpoints (the WordPress files are still on disk but inert)
+# Retired WordPress endpoints (WordPress was deleted 2026-10-13; old URLs 301 to the new site)
 RewriteRule ^(wp-admin|wp-includes|wp-json)(/.*)?$ / [R=301,L]
 RewriteRule ^(wp-login|xmlrpc|wp-signup|wp-activate|wp-cron|wp-trackback|wp-comments-post|wp-links-opml|wp-mail|wp-load|wp-settings|wp-blog-header|wp-config|wp-config-sample|default)\.php$ / [R=301,L]
 RewriteRule ^(license\.txt|readme\.html)$ / [R=301,L]

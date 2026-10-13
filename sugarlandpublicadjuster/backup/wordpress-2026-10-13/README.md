@@ -1,15 +1,21 @@
-# WordPress backup — sugarlandpublicadjuster.com (2026-10-13)
+# WordPress — sugarlandpublicadjuster.com (removed 2026-10-13)
 
-The custom PHP site replaced WordPress by overwriting only two files in
-`public_html`: `index.php` and `.htaccess`. Their WordPress originals are saved
-here (`index.php.txt`, `htaccess.txt`). Every other WordPress file
-(`wp-admin/`, `wp-includes/`, `wp-content/`, `wp-config.php`) and the MySQL
-database were left untouched on the server, and Hostinger's automatic daily
-backups cover the account.
+The custom PHP site went live on 2026-10-13 and WordPress was then deleted:
 
-New directories the PHP site added (`about-us/`, `blog/`, `services/`, …) would
-shadow WordPress permalinks, so delete them too if you ever roll back.
+- **Files removed:** `wp-admin/`, `wp-includes/`, every root `wp-*.php` file,
+  `xmlrpc.php`, and `wp-content/` plugins, themes, caches and upgrade folders.
+- **Kept:** `wp-content/uploads/2026/` (the media library), so every old image URL
+  still resolves. A full copy is in this repo under `public_html/wp-content/uploads/`.
+- **Database removed:** `u401386392_h7RiH` (the only database assigned to this
+  domain). The other databases on account `u401386392` belong to other sites and
+  were not touched.
+- `index.php.txt` and `htaccess.txt` here are the WordPress originals, kept for reference.
 
-**To roll back to WordPress:** upload `index.php.txt` as `public_html/index.php`
-and `htaccess.txt` as `public_html/.htaccess`, delete the new site
-directories, then clear the cache in hPanel.
+Before deletion the site's content was verified against the Yoast sitemaps:
+6 pages (home, about-us, contact, privacy-policy, services, terms-of-use), the
+`/blog/` posts page, 3 posts and 1 category (`general`) — all rebuilt at the same
+URLs. The Yoast redirects file was empty, and the media library had no uploads
+after March 2026.
+
+Restoring WordPress now requires a Hostinger backup (hPanel → Files → Backups;
+Cloud plans keep daily backups) for both files and the database.

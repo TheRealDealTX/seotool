@@ -67,7 +67,7 @@ ul, ol { padding-left: 1.3em; }
 .topbar a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-left: 18px; }
 .topbar a:hover { color: var(--lavender); }
 .topbar svg { width: 15px; height: 15px; fill: var(--accent); }
-.site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); transition: box-shadow .2s; }
+.site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); transition: box-shadow .2s; }
 .site-header.scrolled { box-shadow: 0 6px 22px rgba(46,7,63,.08); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 78px; gap: 20px; }
 .brand img { width: 210px; height: auto; }
@@ -91,8 +91,9 @@ ul, ol { padding-left: 1.3em; }
 
 @media (max-width: 1080px) {
   .nav-toggle { display: block; }
-  .site-nav { position: fixed; inset: 116px 0 0 0; background: #fff; flex-direction: column; align-items: stretch; padding: 16px; overflow-y: auto; transform: translateX(100%); transition: transform .25s; gap: 12px; }
-  .nav-open .site-nav { transform: none; }
+  .site-nav { position: fixed; top: var(--nav-top, 66px); left: 0; right: 0; bottom: 0; z-index: 49; background: #fff; flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 8px 16px 96px; overflow-y: auto; -webkit-overflow-scrolling: touch; overscroll-behavior: contain; transform: translateX(100%); visibility: hidden; transition: transform .25s, visibility 0s .25s; gap: 12px; border-top: 1px solid var(--line); }
+  .nav-open .site-nav { transform: none; visibility: visible; transition: transform .25s; }
+  .nav-cta { width: 100%; margin-top: 8px; }
   .site-nav > ul { flex-direction: column; }
   .site-nav > ul > li { border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; }
   .site-nav > ul > li > a { flex: 1; padding: 14px 6px; }
@@ -105,12 +106,11 @@ ul, ol { padding-left: 1.3em; }
   .nav-open { overflow: hidden; }
 }
 @media (max-width: 700px) {
-  .topbar-note, .hide-sm { display: none; }
+  .topbar-note, .topbar .hide-sm { display: none; }
   .topbar-inner { justify-content: center; }
   .topbar a { margin: 0 9px; }
   .brand img { width: 170px; }
   .header-inner { min-height: 66px; }
-  .site-nav { inset: 104px 0 0 0; }
 }
 
 /* Hero */

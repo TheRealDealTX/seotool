@@ -14,10 +14,17 @@
 
   /* Mobile nav */
   var toggle = doc.querySelector('.nav-toggle');
+  function setNavTop() { if (header) doc.documentElement.style.setProperty('--nav-top', Math.max(0, header.getBoundingClientRect().bottom) + 'px'); }
+  function closeNav() { body.classList.remove('nav-open'); if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); } }
   if (toggle) toggle.addEventListener('click', function () {
+    setNavTop();
     var open = body.classList.toggle('nav-open');
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
+  window.addEventListener('resize', function () { setNavTop(); if (window.innerWidth > 1080) closeNav(); });
+  doc.querySelectorAll('.site-nav a').forEach(function (a) { a.addEventListener('click', closeNav); });
+  doc.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeNav(); });
   doc.querySelectorAll('.sub-toggle').forEach(function (b) {
     b.addEventListener('click', function () {
       var sub = b.nextElementSibling, open = sub.classList.toggle('open');

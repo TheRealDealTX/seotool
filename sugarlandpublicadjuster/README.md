@@ -10,12 +10,12 @@ No database, no plugins. `public_html/` is uploaded as-is.
 | `public_html/inc/layout.php` | `<head>`, JSON-LD graph, header, footer, 4-second lead popup, components |
 | `public_html/inc/posts.php` | Blog registry — posts live at `/{slug}/`, bodies in `content/posts/{slug}.html` |
 | `public_html/inc/pages.php` | Page list for the XML and HTML sitemaps |
-| `public_html/lead.php` | Form handler: emails every lead to jditt@risepublicadjusting.com and keeps a CSV copy outside the web root (`../slpa-leads/leads.csv`) |
+| `public_html/lead.php` + `inc/mailer.php` | Form handler: emails every lead **from info@sugarlandpublicadjuster.com to jditt@risepublicadjusting.com** and keeps a CSV copy outside the web root (`../slpa-leads/leads.csv`, send log in `../slpa-leads/mail.log`) |
 | `public_html/sitemap.php` | Serves the Yoast-era URLs `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml`, `/category-sitemap.xml` |
 | `public_html/assets/js/tools.js` | All calculators/tools |
 | `public_html/assets/js/weather.js` | Live weather (NWS API, NOAA river gauge — no API keys) |
 | `public_html/wp-content/uploads/` | The original WordPress media, kept at the same URLs |
-| `backup/` | The WordPress `index.php` and `.htaccess` that were replaced, plus rollback steps |
+| `backup/` | Notes on the WordPress removal (files + database deleted 2026-10-13) |
 
 ## URLs kept from WordPress
 `/`, `/about-us/`, `/services/`, `/contact/`, `/blog/`, `/category/general/`,
@@ -42,3 +42,16 @@ See the header of `deploy.sh`, then clear the cache with `hosting_cache_clear-we
 2. Save the body HTML as `content/posts/{slug}.html` (no H1; end with an optional FAQ block of `<details class="faq-item">`).
 3. Create `{slug}/index.php` with the same two lines as the other post folders.
 Posts are authored by Joseph Dittman automatically; sitemaps and the blog index update themselves.
+
+## Lead email delivery
+Leads are sent as `info@sugarlandpublicadjuster.com` (an active Hostinger mailbox).
+If `../slpa-private/smtp.php` exists next to `public_html` (outside the web root),
+`inc/mailer.php` sends through Hostinger's authenticated SMTP as that mailbox;
+otherwise it falls back to PHP `mail()` with info@ as the From and envelope sender.
+The private file looks like:
+
+```php
+<?php return ['host' => 'smtp.hostinger.com', 'port' => 465, 'secure' => 'ssl',
+              'user' => 'info@sugarlandpublicadjuster.com', 'pass' => 'MAILBOX PASSWORD'];
+```
+Never commit that file.

@@ -10,7 +10,7 @@
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/posts.php';
 
-const ASSET_VER = '20261013';
+const ASSET_VER = '20261013b';
 
 /** Base JSON-LD nodes shared by every page. */
 function base_schema(): array
