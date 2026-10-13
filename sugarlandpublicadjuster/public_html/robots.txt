@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /content/
+Disallow: /lead.php
+Disallow: /thank-you/
+Disallow: /wp-admin/
+
+Sitemap: https://sugarlandpublicadjuster.com/sitemap_index.xml

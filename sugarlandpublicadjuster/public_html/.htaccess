@@ -1,0 +1,66 @@
+# Sugar Land Public Adjuster — custom PHP site (replaced WordPress 2026-10-13).
+# The original WordPress .htaccess is kept in the repo under backup/.
+DirectoryIndex index.php index.html
+Options -Indexes
+ErrorDocument 404 /404.php
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Canonical host (Hostinger's CDN already upgrades http:// to https://)
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://sugarlandpublicadjuster.com/$1 [R=301,L]
+
+# Private folders are never served
+RewriteRule ^(inc|content)(/|$) - [F,L]
+RewriteRule ^\.private(/|$) - [F,L]
+
+# Retired WordPress endpoints (the WordPress files are still on disk but inert)
+RewriteRule ^(wp-admin|wp-includes|wp-json)(/.*)?$ / [R=301,L]
+RewriteRule ^(wp-login|xmlrpc|wp-signup|wp-activate|wp-cron|wp-trackback|wp-comments-post|wp-links-opml|wp-mail|wp-load|wp-settings|wp-blog-header|wp-config|wp-config-sample|default)\.php$ / [R=301,L]
+RewriteRule ^(license\.txt|readme\.html)$ / [R=301,L]
+RewriteRule ^wp-content/(plugins|themes|upgrade|cache|litespeed|languages|ai1wm-backups)(/.*)?$ / [R=301,L]
+RewriteRule ^wp-content/.*\.php$ - [F,L]
+RewriteRule ^(.*/)?feed/?$ /blog/ [R=301,L]
+RewriteRule ^category/general/feed/?$ /blog/ [R=301,L]
+RewriteRule ^author/[^/]+/?$ /author/joseph-dittman/ [R=301,L]
+RewriteRule ^blog/page/[0-9]+/?$ /blog/ [R=301,L]
+RewriteRule ^category/general/page/[0-9]+/?$ /category/general/ [R=301,L]
+RewriteRule ^(about|about-sugar-land-public-adjuster)/?$ /about-us/ [R=301,L]
+RewriteRule ^contact-us/?$ /contact/ [R=301,L]
+RewriteRule ^sitemap\.xml$ /sitemap_index.xml [R=301,L]
+
+# Yoast-style XML sitemaps (same URLs the WordPress site published)
+RewriteRule ^(sitemap_index|page-sitemap|post-sitemap|category-sitemap)\.xml$ /sitemap.php?map=$1 [L,QSA]
+
+# Add the trailing slash to real directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+
+# Anything that is not a real file or directory is a 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /404.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+<FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico|woff2)$">
+Header set Cache-Control "public, max-age=31536000"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml application/xml text/plain image/svg+xml application/json
+</IfModule>
+
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
