@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /leads/
+Disallow: /thank-you/
+Disallow: /submit-lead.php
+
+Sitemap: https://houstonpublicadjusting.com/sitemap_index.xml
+Sitemap: https://houstonpublicadjusting.com/sitemap.xml
