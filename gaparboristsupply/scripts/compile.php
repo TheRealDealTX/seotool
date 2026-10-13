@@ -59,6 +59,9 @@ foreach ($COLLECTIONS as $path => $src) {
         'meta' => $p['meta'], 'kind' => $p['kind'], 'intro' => $p['summary'], 'guide' => $p['body'] ?? [], 'faq' => $p['faq'] ?? [], 'source' => $src];
 }
 foreach ($DROP as $from => $to) unset($products[$from]);
+// Products filed under a collection URL belong to that collection's source category.
+foreach ($products as &$p) if (isset($COLLECTIONS[$p['category']])) $p['category'] = $COLLECTIONS[$p['category']][0];
+unset($p);
 
 // ---- category tree ---------------------------------------------------------
 function parent_path(string $p): ?string {
