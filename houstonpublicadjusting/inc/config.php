@@ -15,9 +15,9 @@ const GEO_LNG     = '-95.3698';
 // Where lead-form submissions are delivered.
 const LEAD_TO     = 'jditt@risepublicadjusting.com';
 // The "From" address on lead emails. On Hostinger this must be a mailbox on a
-// domain hosted in the same account (create it in hPanel > Emails), otherwise
+// domain hosted in the same account (info@ already exists in hPanel > Emails), otherwise
 // mail() output is likely to be rejected or land in spam.
-const LEAD_FROM   = 'noreply@houstonpublicadjusting.com';
+const LEAD_FROM   = 'info@houstonpublicadjusting.com';
 
 // Optional authenticated SMTP (recommended). Leave SMTP_HOST empty to use PHP mail().
 // Hostinger: smtp.hostinger.com, port 465, user = the full mailbox address.

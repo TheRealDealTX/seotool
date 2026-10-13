@@ -25,7 +25,7 @@ plugins. Upload this folder's contents to `public_html/` on Hostinger.
 - Every form posts to `submit-lead.php`, which emails **jditt@risepublicadjusting.com** and also appends
   the lead to `leads/leads-YYYY-MM.jsonl` (web access blocked) as a backup.
 - Spam protection: honeypot field, 3-second minimum fill time, 5 submissions/hour per IP.
-- **Before launch:** create the mailbox `noreply@houstonpublicadjusting.com` in hPanel → Emails
+- **Before launch:** create the mailbox `info@houstonpublicadjusting.com` in hPanel → Emails
   (or change `LEAD_FROM` in `inc/config.php`). For best deliverability fill in the `SMTP_*`
   constants (smtp.hostinger.com, port 465) — otherwise PHP `mail()` is used.
 
