@@ -12,7 +12,18 @@
   "/sale-items/": "/shop-all/",
   "/new-products/": "/shop-all/",
   "/contact-us/": "/contact/",
-  "/shipping-and-handling/": "/shipping-returns/"
+  "/shipping-and-handling/": "/shipping-returns/",
+  "/invoice-details/": "/cart/",
+  "/invoice-payment-history/": "/cart/",
+  "/invoice-payment-receipt/": "/cart/",
+  "/invoice-payment/": "/cart/",
+  "/invoices/": "/cart/",
+  "/quick-order-pad/": "/shop-all/",
+  "/quotes-list/": "/contact/",
+  "/user-management/": "/cart/",
+  "/login.php": "/cart/",
+  "/login.php/": "/cart/",
+  "/terms-policies/": "/terms-of-use/"
  },
  "brands": [
   "/4srt/",
@@ -31,6 +42,9 @@
   "/the-splice-shop/",
   "/r-easy-climbing/",
   "/tree-austria/",
-  "/reecoil/"
- ]
+  "/reecoil/",
+  "/estex/",
+  "/zan/"
+ ],
+ "catlike": []
 }

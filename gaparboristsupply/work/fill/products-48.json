@@ -1,0 +1,152 @@
+[
+ {
+  "path": "/light-duty-slings/weaver-loop-runners/",
+  "category": "/rigging/rigging-slings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/micro-pulleys/cmi-rna-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/other-gear/notch-rc-grapple/",
+  "category": "/climbing/climbing-gear/other-gear/",
+  "tier": "standard"
+ },
+ {
+  "path": "/parts-and-accessories/husqvarna-545-ii-550xp-ii-saw-tune-up-kit/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/parts/husqvarna-belt-for-k770-cut-off-saw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-accessories/9-16-ship-auger-bit/",
+  "category": "/plant-care/cabling-and-bracing/",
+  "tier": "standard"
+ },
+ {
+  "path": "/plant-care/cabling-and-bracing/cabling-hardware/rig-guy-wire-stops/",
+  "category": "/plant-care/cabling-and-bracing/cabling-hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-pulleys/smc-apex-1-1-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-pulleys/smc-apex-direct-1-1-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-rope/3-4-mammoth-rigging-line/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-rope/marlow-raptor-14mm-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-rope/marlow-raptor-18mm-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging-rope/teufelberger-sta-set-rigging-rope-5-8/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-1-arborist-rigging-block/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-3-4-aluminum-rigging-block/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-compact-rigging-pulley-grey-with-grey-wheel/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/isc-medium-rigging-pulley-for-20mm-rope-300kn-grey-with-green-wheel/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-blocks/smc-apex-direct-1-5/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-blocks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-plates/rock-exotica-tririg/",
+  "category": "/rigging/blocks-and-other-hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-spin-l2-pulley/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/progress-capture-pulley-40kn-double-bushing/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/rock-exotica-omni-block-1-1/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/blocks-and-other-hardware/rigging-pulleys/spin-l1d/",
+  "category": "/rigging/blocks-and-other-hardware/rigging-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/lowering-devices/isc-rigging-rope-wrench-70kg/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/cmi-ropejack-bag/",
+  "category": "/rigging/mechanical-advantage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/mechanical-advantage/petzl-jag-traxion-double-pulley/",
+  "category": "/rigging/mechanical-advantage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/1-2-soft-anchor-ring-sling-with-medium-ring/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rigging/rigging-slings/adjustable-slings/1-2-x-4-tenex-soft-anchor-rigging-sling/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rings-and-other-hardware/tylaska-dtr20-arborist-rigging-ring/",
+  "category": null,
+  "tier": "standard"
+ },
+ {
+  "path": "/rings/ct-steel-ring/",
+  "category": null,
+  "tier": "standard"
+ }
+]

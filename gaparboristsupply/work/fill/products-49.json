@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/rope-grabs/notch-glide-rope-grab/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope-lanyards/bandit-replacement-lanyard-without-snap/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/accessory-cord/marlow-boa-9mm-prusik-cord/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/climbing-rope/12-strand-climbing-rope/yale-xtc-12-arborist-rope/",
+  "category": "/rope/climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/climbing-rope/16-strand-climbing-rope/courant-komora-climbing-rope/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/climbing-rope/16-strand-climbing-rope/samson-arborfreak-pine-beauty-rope/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/climbing-rope/16-strand-climbing-rope/yale-xtc-16-fire-climbing-rope/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/climbing-rope/static-climbing-rope/courant-rebel-yellow-climbing-rope/",
+  "category": "/rope/climbing-rope/static-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/samson-3-4-pro-master-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/teufelberger-8mm-ocean-polyester-hitch-cord-by-the-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/teufelberger-9-3mm-epicord-hitch-cord-by-the-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/yale-10mm-bee-line-by-the-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/3m-securefit-protective-eyewear-gray-lens/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/edge-brazeau-smoke-safety-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-o-n-e-ammo-sport-safety-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-o-n-e-breakout-safety-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-o-n-e-free-ride-safety-sun-glasses-metallic-frame/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-o-n-e-free-ride-safety-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-o-n-e-outride-safety-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-silver-mirror-safety-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-smoke-safety-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/kask-mesh-visor-for-super-plasma-helmets/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/kask-plastic-mesh-visor-for-zenith-helmets/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/kask-zenith-visor-adaptors/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/petzl-vizen-mesh-face-shield-for-2019-vertex-and-stratos-helmets/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/petzl-vizir-2019-version/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/pfanner-protos-helmet-integrated-visor-mesh-screen-f39-fine-mesh/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/first-aid/first-aid-kit/",
+  "category": "/safety/first-aid/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/first-aid/petzl-jag-haul-system-kit/",
+  "category": "/safety/first-aid/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/gloves/husqvarna-technical-saw-protection-glove/",
+  "category": "/safety/gloves/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/hearing-protection/3m-corded-hearing-protection-with-carry-case/",
+  "category": "/safety/hearing-protection/",
+  "tier": "standard"
+ }
+]
