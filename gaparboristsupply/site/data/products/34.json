@@ -120,7 +120,8 @@
     "h": "Buying the bare tool",
     "p": [
      "Buying tool-only makes sense if you already own Husqvarna 36V batteries from a top-handle saw, blower, or trimmer. If you are new to the platform, price a battery and charger alongside it, since runtime depends on the battery you pair with it.",
-     "Wear a helmet, eye protection, and gloves, keep the saw well clear of power lines, and only let trained workers operate it near energized conductors. Follow ANSI Z133 and the Husqvarna operator's manual for chain tension, lubrication, and maintenance."
+     "Wear a helmet, eye protection, and gloves, keep the saw well clear of power lines, and only let trained workers operate it near energized conductors. Follow ANSI Z133 and the Husqvarna operator's manual for chain tension, lubrication, and maintenance.",
+     "On a typical day it rides in the truck next to the climber's gear and comes out for the cleanup cuts nobody wants to climb for."
     ]
    }
   ],
@@ -148,12 +149,12 @@
   "brand_name": "Husqvarna",
   "kind": "pruner",
   "price": 89,
-  "keyword": "husqvarna pulley pruner",
+  "keyword": "husqvarna fixed pulley pruner",
   "title": "Husqvarna Fixed Pulley Pruner with Adapter and Rope",
   "h1": "Husqvarna Fixed Pulley Pruner with Adapter and Rope",
   "meta": "A Husqvarna fixed pulley pruner head with adapter and pull rope for clean pole cuts on small limbs. Where it fits in a pole kit and how to keep it cutting.",
   "tagline": "A rope-pull bypass pruner head that mounts on a pole for clean cuts out of reach.",
-  "summary": "This Husqvarna pulley pruner is a rope-operated pruner head that mounts to a pole with the included adapter. It makes clean, flush cuts on small limbs and suckers that are out of reach, without a saw.",
+  "summary": "This Husqvarna fixed pulley pruner is a rope-operated pruner head that mounts to a pole with the included adapter. It makes clean, flush cuts on small limbs and suckers that are out of reach, without a saw.",
   "highlights": [
    "Fixed pulley head for added cutting force",
    "Adapter for pole mounting included",
@@ -246,7 +247,8 @@
     "h": "Why a center mount matters",
     "p": [
      "When the blade sits off to one side of the pole, every pull stroke tries to roll the saw over, and the cut wanders. A center mount puts the blade right on the pole's axis, so your pull goes straight into the kerf. On long reaches that difference is easy to feel in your shoulders by the end of the day.",
-     "The head lets you swap blades as they wear and move between a saw and a pruner head on one set of poles. See the full range of <a href=\"/cutting-and-pruning/pole-saws-and-scabbards/\">pole saws and scabbards</a> for blades and covers."
+     "The head lets you swap blades as they wear and move between a saw and a pruner head on one set of poles. See the full range of <a href=\"/cutting-and-pruning/pole-saws-and-scabbards/\">pole saws and scabbards</a> for blades and covers.",
+     "A center mount also makes it easier to hook a hanger or stub and pull it free without the head twisting off line."
     ]
    },
    {
@@ -281,7 +283,7 @@
   "brand_name": "ISC",
   "kind": "carabiner",
   "price": 39,
-  "keyword": "isc quadlock carabiner",
+  "keyword": "isc offset oval quadlock carabiner",
   "title": "ISC Offset Oval Quadlock Carabiner with Captive Pin",
   "h1": "ISC Offset Oval Quadlock Carabiner with Captive Pin",
   "meta": "The ISC offset oval quadlock carabiner with a captive pin that keeps it oriented on a device or bridge. Gate action, uses on the saddle, and inspection tips.",
@@ -391,7 +393,8 @@
     "h": "Why tree crews pick the Zenith X2",
     "p": [
      "A climbing-style helmet stays on when you are upside down in a canopy or bent over a stump, which an old cap-style hard hat with no chinstrap will not. The Zenith X2 adds a hi-viz shell, a real advantage on roadside jobs, in storm cleanup, and anywhere a groundie or machine operator needs to see where you are.",
-     "Most crews outfit it with a mesh visor and helmet-mounted ear muffs so face and hearing protection are always on. Compare other <a href=\"/climbing/helmets/\">climbing helmets</a> if you want a vented or lighter shell."
+     "Most crews outfit it with a mesh visor and helmet-mounted ear muffs so face and hearing protection are always on. Compare other <a href=\"/climbing/helmets/\">climbing helmets</a> if you want a vented or lighter shell.",
+     "On a long day in the bucket or on a removal next to traffic, being easy to see is part of staying safe, not just a style choice."
     ]
    },
    {
@@ -427,9 +430,9 @@
   "kind": "hand-saw",
   "price": 35,
   "keyword": "notch sentei replacement blade",
-  "title": "Notch Sentei Replacement Saw Blade",
+  "title": "Notch Sentei Replacement Blade",
   "h1": "Notch Sentei Replacement Blade",
-  "meta": "A replacement blade for the Notch Sentei saw. Swap a dull or kinked blade instead of buying a whole new saw, and keep pruning cuts clean. Fit and care tips here.",
+  "meta": "A Notch Sentei replacement blade lets you swap a dull or kinked blade instead of buying a whole new saw and keep pruning cuts clean. Fit and care tips.",
   "tagline": "A fresh blade for your Notch Sentei saw when the old one is dull or bent.",
   "summary": "This Notch Sentei replacement blade lets you put a new blade on your existing Sentei saw instead of replacing the whole tool. Hardened pull-stroke teeth are hard to resharpen, so a new blade is the quickest way back to clean cuts.",
   "highlights": [
@@ -464,7 +467,8 @@
     "h": "Fitting and care",
     "p": [
      "Tighten the blade bolt firmly so the blade does not rock in the handle, and check it again after the first few cuts. Keep fingers clear of the teeth while swapping; wear gloves.",
-     "Wipe sap off the blade at the end of the day and give it a light coat of oil to slow rust. Cut on the pull stroke and let the teeth do the work; forcing the saw on the push is what kinks blades. Keep the saw in a scabbard on the saddle and in the truck."
+     "Wipe sap off the blade at the end of the day and give it a light coat of oil to slow rust. Cut on the pull stroke and let the teeth do the work; forcing the saw on the push is what kinks blades. Keep the saw in a scabbard on the saddle and in the truck.",
+     "If you run more than one Notch saw, label the spare blades in your kit so the right one is on hand when you need it."
     ]
    }
   ],
@@ -558,10 +562,10 @@
   "brand_name": "Yale Cordage",
   "kind": "lanyard",
   "price": 49,
-  "keyword": "phantom friction saver lanyard",
+  "keyword": "phantom replacement friction saver lanyard",
   "title": "Phantom Replacement Friction Saver Lanyard",
   "h1": "Phantom Replacement Friction Saver Lanyard",
-  "meta": "A replacement Phantom rope lanyard for an adjustable friction saver. Swap a worn or glazed rope section and keep using your rings and hardware. Fit and care tips.",
+  "meta": "A Phantom replacement friction saver lanyard for an adjustable friction saver. Swap a worn rope section and keep your rings and hardware. Fit and care tips.",
   "tagline": "A fresh rope section for your Phantom adjustable friction saver.",
   "summary": "This Phantom replacement friction saver lanyard is the rope section of an adjustable friction saver, sold on its own. When the rope is worn or glazed, you can replace it and keep the rings and hardware that are still in good shape.",
   "highlights": [
@@ -589,7 +593,8 @@
     "h": "Why replace just the rope",
     "p": [
      "On an adjustable friction saver the rope takes the wear: it rubs on bark, gets packed with sap and grit, and glazes from heat. The rings and adjuster usually outlast it by a long way. Swapping the rope section gets the saver back in service without paying for hardware you already own.",
-     "Make sure the replacement matches your saver's design and the hardware it was built around. If in doubt, compare it with the complete <a href=\"/climbing/climbing-gear/friction-savers/\">friction savers</a> we carry."
+     "Make sure the replacement matches your saver's design and the hardware it was built around. If in doubt, compare it with the complete <a href=\"/climbing/climbing-gear/friction-savers/\">friction savers</a> we carry.",
+     "A fresh rope section also restores the grip of the adjuster, which can slip on a rope that has gone glazed or flattened. Keep the old lanyard out of service once it is replaced so it never finds its way back into a climbing kit by mistake."
     ]
    },
    {
@@ -725,7 +730,8 @@
     "h": "How climbers use a ring",
     "p": [
      "Rings are the building blocks of a lot of climbing systems. Two rings on a sling make a ring-and-ring friction saver; a single ring on a cambium saver or anchor sling makes a smooth redirect; and a ring spliced into an eye-and-eye gives a hitch or device a clean bearing point.",
-     "Aluminum rings are lighter than steel and run rope smoothly, but they wear faster when a moving rope runs over them all day. For a high-wear tie-in point, some climbers choose steel instead. Compare other <a href=\"/climbing/climbing-gear/rings/\">climbing rings</a> if you are deciding."
+     "Aluminum rings are lighter than steel and run rope smoothly, but they wear faster when a moving rope runs over them all day. For a high-wear tie-in point, some climbers choose steel instead. Compare other <a href=\"/climbing/climbing-gear/rings/\">climbing rings</a> if you are deciding.",
+     "Rings also make it easy to build systems that can be retrieved from the ground, since rope runs cleanly through them."
     ]
    },
    {
@@ -795,7 +801,8 @@
     "h": "How a ring sling rigs",
     "p": [
      "Wrap the stem, pass the thimble loop through the ring, and cinch it down: the sling chokes tight and holds its position on a vertical spar better than a basket hitch. The ring or thimble then becomes the anchor for a block, a lowering line, or a redirect.",
-     "The thimble keeps the eye round and protects the rope where it bears on a carabiner or shackle. A 35 in sling suits small to medium stems; it will not wrap a big trunk. Look through our other <a href=\"/rigging/rigging-slings/heavy-duty-slings/\">heavy-duty slings</a> for longer and heavier options."
+     "The thimble keeps the eye round and protects the rope where it bears on a carabiner or shackle. A 35 in sling suits small to medium stems; it will not wrap a big trunk. Look through our other <a href=\"/rigging/rigging-slings/heavy-duty-slings/\">heavy-duty slings</a> for longer and heavier options.",
+     "Because it is short and light, it is easy to carry up on the saddle and set wherever the next rigging point needs to go."
     ]
    },
    {
@@ -829,10 +836,10 @@
   "brand_name": "Yale Cordage",
   "kind": "sling",
   "price": 69,
-  "keyword": "ring to ring friction saver",
+  "keyword": "ring-to-ring friction saver",
   "title": "XTC 16 Steel Ring-to-Ring Friction Saver",
   "h1": "XTC 16 Steel Ring-to-Ring Friction Saver",
-  "meta": "A ring-to-ring friction saver built on XTC 16-strand rope with steel rings. Protects the tie-in and your climb line, and is retrievable from the ground. Tips inside.",
+  "meta": "A ring-to-ring friction saver built on XTC 16-strand rope with steel rings. Protects the tie-in and climb line and can be retrieved from the ground.",
   "tagline": "A steel ring-to-ring friction saver on 16-strand rope for a protected tie-in.",
   "summary": "This ring-to-ring friction saver joins two steel rings with a length of XTC 16-strand rope. It protects the bark and your climbing line at the tie-in, and the two-ring design can be retrieved from the ground when you are done.",
   "highlights": [
@@ -861,7 +868,8 @@
     "h": "Why use a ring-to-ring saver",
     "p": [
      "In moving-rope climbing the line runs back and forth over the tie-in all day. Over bark that means heat, friction, and cambium damage, and a climb line full of grit. A friction saver gives the rope a smooth ring to run through instead, so climbing is easier and the tree is spared.",
-     "Steel rings resist grooving far better than aluminum where rope runs constantly. A ring-to-ring design can be pulled out from the ground by running the climb line through the small ring correctly. Compare other <a href=\"/climbing/climbing-gear/friction-savers/\">friction savers</a> if you want a rope-only or adjustable model."
+     "Steel rings resist grooving far better than aluminum where rope runs constantly. A ring-to-ring design can be pulled out from the ground by running the climb line through the small ring correctly. Compare other <a href=\"/climbing/climbing-gear/friction-savers/\">friction savers</a> if you want a rope-only or adjustable model.",
+     "It is also simple to inspect: two rings and one length of rope, with nothing hidden inside hardware."
     ]
    },
    {
@@ -898,7 +906,7 @@
   "keyword": "adjustable friction saver",
   "title": "Yale Phantom Adjustable Friction Saver",
   "h1": "Yale Phantom Adjustable Friction Saver",
-  "meta": "The Yale Phantom adjustable friction saver fits a wide range of stem sizes and protects your tie-in point. How the adjustment works, setup notes, and inspection.",
+  "meta": "The Yale Phantom adjustable friction saver fits a wide range of stem sizes and protects your tie-in. How the adjustment works, setup notes, and inspection.",
   "tagline": "An adjustable friction saver that fits small and large tie-in stems.",
   "summary": "The Yale Phantom adjustable friction saver lets you size the saver to the stem at your tie-in instead of carrying several fixed lengths. It protects the bark and your climb line while giving the rope a smooth path through the rings.",
   "highlights": [
@@ -934,7 +942,8 @@
     "h": "Setup and inspection",
     "p": [
      "Install it as the instructions show, set the length so the rings sit cleanly, and weight the system from the ground before climbing. Adjustable savers usually take a little more setup than a fixed ring-to-ring, and some are not designed for retrieval from the ground, so plan your exit.",
-     "Before every climb inspect the rope for cuts, glazing, and stiff spots, and check the rings and adjuster for grooves and secure grip. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers."
+     "Before every climb inspect the rope for cuts, glazing, and stiff spots, and check the rings and adjuster for grooves and secure grip. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers.",
+     "Practice installing and removing it on the ground first, so you know how the adjuster behaves before you are relying on it at the top of a tree."
     ]
    }
   ],
@@ -964,7 +973,7 @@
   "keyword": "double locking snap hook",
   "title": "Double Locking Snap Hook for Arborist Lanyards",
   "h1": "Double Locking Snap Hook",
-  "meta": "A double locking snap hook for flipline and lanyard ends, chosen for gloved use on a tree job. How it is used, what to check on the markings, and how to inspect it.",
+  "meta": "A double locking snap hook for flipline and lanyard ends, easy to clip with gloves. How it is used, what to check on the markings, and how to inspect it.",
   "tagline": "A double locking snap for lanyard ends and flipline connections.",
   "summary": "A double locking snap hook is the classic connector on the end of a flipline or lanyard. The keeper must be pushed open in two separate motions, which helps stop the gate from rolling open against a D-ring or limb.",
   "highlights": [
@@ -993,7 +1002,8 @@
     "h": "Where a snap hook belongs",
     "p": [
      "Snaps have been the go-to connector on fliplines for generations because they are quick to clip one-handed with gloves on. You will see them on lanyard ends, on rope-and-snap climbing setups, and on positioning lanyards in bucket trucks.",
-     "The double locking keeper needs two motions to open, so the gate cannot easily be pushed open by a D-ring or a branch. Compare other <a href=\"/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/\">snap hooks</a> if you need a specific gate size or material."
+     "The double locking keeper needs two motions to open, so the gate cannot easily be pushed open by a D-ring or a branch. Compare other <a href=\"/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/\">snap hooks</a> if you need a specific gate size or material.",
+     "Snaps are also common on ground-crew positioning lanyards and on rope-and-snap lanyards for bucket work, where quick clipping matters more than low weight."
     ]
    },
    {
@@ -1059,7 +1069,8 @@
     "h": "How a split tail fits your system",
     "p": [
      "In a moving-rope system the friction hitch is what holds you and lets you descend. A split tail is a separate length of cord that ties the hitch onto your climb line, so you can replace the wear-heavy hitch without cutting the end off your rope. Most climbers tie a Distel, VT, or similar hitch and tend it with a micro pulley.",
-     "The hitch cord has to suit your climbing line's diameter and cover. Too loose and the hitch slips; too grabby and it locks up. See our other <a href=\"/climbing/climbing-gear/hitch-cord-and-split-tails/\">hitch cords and split tails</a> to compare."
+     "The hitch cord has to suit your climbing line's diameter and cover. Too loose and the hitch slips; too grabby and it locks up. See our other <a href=\"/climbing/climbing-gear/hitch-cord-and-split-tails/\">hitch cords and split tails</a> to compare.",
+     "Hi-Vee is a popular pairing with Teufelberger climbing lines, but always confirm the combination on the ground. A hitch that is too grabby makes descending jerky, while one that is too slick may creep under load."
     ]
    },
    {
@@ -1093,12 +1104,12 @@
   "brand_name": "Petzl",
   "kind": "parts",
   "price": 29,
-  "keyword": "chicane replacement friction pins",
-  "title": "Replacement Friction Pins for the Chicane",
+  "keyword": "replacement friction pins for chicane",
+  "title": "Replacement Friction Pins for Chicane SRS Device",
   "h1": "Replacement Friction Pins for Chicane",
-  "meta": "Replacement friction pins for the Chicane SRS braking device. When to swap worn pins, how to check for wear, and why to follow the maker's service instructions.",
+  "meta": "Replacement friction pins for Chicane SRS braking devices. When to swap worn pins, how to check them for wear, and why to follow the service instructions.",
   "tagline": "Fresh friction pins to keep a Chicane braking smoothly on a stationary rope.",
-  "summary": "These replacement friction pins for the Chicane let you renew the wear surfaces that the rope runs across. Worn pins change how the device brakes, so swapping them restores smooth, predictable friction on a stationary rope.",
+  "summary": "These replacement friction pins for Chicane devices let you renew the wear surfaces that the rope runs across. Worn pins change how the device brakes, so swapping them restores smooth, predictable friction on a stationary rope.",
   "highlights": [
    "Wear parts for the Chicane",
    "Restore smooth braking",
@@ -1124,7 +1135,8 @@
     "h": "Why the pins wear",
     "p": [
      "Every foot of rope you descend drags across the friction surfaces of an SRS device. Grit in the rope speeds that up, and over time the pins develop grooves or flat spots. Worn pins change the friction you get, which can make the descent grabby in one spot and slippery in another.",
-     "Replacing the pins is cheaper than replacing the whole device, as long as the rest of it passes inspection. Browse other <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/\">SRS climbing devices</a> if your device is due for retirement."
+     "Replacing the pins is cheaper than replacing the whole device, as long as the rest of it passes inspection. Browse other <a href=\"/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/\">SRS climbing devices</a> if your device is due for retirement.",
+     "Climbers who descend long distances on dirty rope will see pin wear sooner, so keeping your rope clean helps the pins last."
     ]
    },
    {
@@ -1162,7 +1174,7 @@
   "keyword": "teufelberger kmtree",
   "title": "Teufelberger KMtree Static Climbing Rope, Purple/Green",
   "h1": "Teufelberger KMtree Static Climbing Rope (Purple/Green)",
-  "meta": "Teufelberger KMtree in purple and green, a static kernmantle climbing rope for SRS and MRS tree work. How it handles, what to pair it with, and how to inspect it.",
+  "meta": "Teufelberger KMtree in purple and green, a static kernmantle climbing rope for SRS and MRS tree work. How it handles, what to pair it with, and inspection.",
   "tagline": "A static kernmantle climbing rope for arborists who climb SRS and MRS.",
   "summary": "Teufelberger KMtree is a static kernmantle climbing rope for tree work, here in a purple and green colorway. Low stretch makes it efficient for stationary-rope ascents and gives mechanical devices a consistent rope to work on.",
   "highlights": [
@@ -1195,7 +1207,8 @@
     "h": "Where a static kernmantle rope shines",
     "p": [
      "In a stationary rope system, stretch is wasted effort: every bounce at the start of an ascent is energy you do not get back. A static kernmantle line keeps that to a minimum, so footlocking, rope walking, and ascending with a chest ascender feel direct. It also gives SRS devices a consistent diameter and firm cover to grip.",
-     "The same rope works for moving-rope climbing with a compatible hitch. See our other <a href=\"/rope/climbing-rope/static-climbing-rope/\">static climbing ropes</a> if you want to compare handling and diameter."
+     "The same rope works for moving-rope climbing with a compatible hitch. See our other <a href=\"/rope/climbing-rope/static-climbing-rope/\">static climbing ropes</a> if you want to compare handling and diameter.",
+     "Bright colors also make it easier for the ground crew to tell the climbing line apart from rigging lines, which matters when the drop zone gets busy."
     ]
    },
    {
@@ -1229,12 +1242,12 @@
   "brand_name": "Yale Cordage",
   "kind": "rope",
   "price": 250,
-  "keyword": "yale phantom climbing rope",
+  "keyword": "yale phantom 11mm climbing rope",
   "title": "Yale Phantom 11mm Climbing Rope, Green and Purple",
-  "h1": "Yale Phantom Green and Purple 11mm Climbing Rope",
-  "meta": "Yale Phantom 11mm climbing rope in green and purple, a static climbing line for SRS and moving rope work. How it handles, device fit, and inspection tips.",
+  "h1": "Yale Phantom 11mm Climbing Rope (Green and Purple)",
+  "meta": "Yale Phantom 11mm climbing rope in green and purple, a static climbing line for SRS and moving rope work. How it handles, device fit, and inspection.",
   "tagline": "An 11mm static climbing line for arborists running SRS devices or hitches.",
-  "summary": "Yale Phantom is an 11mm climbing rope for arborists, shown here in green and purple. Its low-stretch construction suits stationary-rope ascents and gives mechanical devices a consistent line to work on.",
+  "summary": "Yale Phantom 11mm climbing rope is an arborist line, shown here in green and purple. Its low-stretch construction suits stationary-rope ascents and gives mechanical devices a consistent line to work on.",
   "highlights": [
    "11 mm diameter",
    "Low stretch for efficient ascents",
@@ -1265,7 +1278,8 @@
     "h": "How the Phantom climbs",
     "p": [
      "An 11mm line is a popular size for stationary rope systems: light enough to haul and stuff in a bag, but with enough body for hitches and mechanical devices to grip. Low stretch means less bounce when you start an ascent and a more direct feel when rope walking.",
-     "Matching Phantom lanyards and friction saver rope are also available if you like a consistent setup. Compare other <a href=\"/rope/climbing-rope/static-climbing-rope/\">static climbing ropes</a> if you want a different diameter."
+     "Matching Phantom lanyards and friction saver rope are also available if you like a consistent setup. Compare other <a href=\"/rope/climbing-rope/static-climbing-rope/\">static climbing ropes</a> if you want a different diameter.",
+     "The green and purple colorway stands out against foliage and is easy to tell apart from the rigging lines on the ground. Yale makes Phantom in other colors as well, so crews can color-code each climber's line."
     ]
    },
    {
@@ -1302,7 +1316,7 @@
   "keyword": "stump grinder guard",
   "title": "Notch Tri-Guard II Stump Grinder Guard",
   "h1": "Notch Tri-Guard II Stump Grinder Guard",
-  "meta": "The Notch Tri-Guard II stump grinder guard sets up around the work to catch flying chips and rocks. Why crews carry one, how to set it, and its limits on the job.",
+  "meta": "The Notch Tri-Guard II stump grinder guard sets up beside the work to catch flying chips and rocks. Why crews carry one, how to set it, and its limits.",
   "tagline": "A portable debris guard that catches chips and rocks thrown by a stump grinder.",
   "summary": "The Notch Tri-Guard II is a portable stump grinder guard that stands between the cutter wheel and whatever you need to protect. It catches chips, dirt, and stones before they hit windows, cars, siding, or people.",
   "highlights": [
@@ -1330,7 +1344,8 @@
     "h": "Why carry a grinder guard",
     "p": [
      "A stump grinder throws material hard and far, and one rock through a sliding door wipes out the profit on the job. A portable guard set between the wheel and the house, car, or street catches most of that debris and keeps it close to the stump, which also makes cleanup faster.",
-     "It is especially useful on tight residential lots, along sidewalks, and next to parked cars. See the rest of our <a href=\"/jobsite/stump-grinding/\">stump grinding</a> gear for teeth and accessories."
+     "It is especially useful on tight residential lots, along sidewalks, and next to parked cars. See the rest of our <a href=\"/jobsite/stump-grinding/\">stump grinding</a> gear for teeth and accessories.",
+     "Crews that grind a lot of stumps in town often carry the guard on every job, the same way they carry cones and signs, because one prevented claim pays for it."
     ]
    },
    {
@@ -1368,7 +1383,7 @@
   "keyword": "sterling tritech",
   "title": "Sterling TriTech 11mm Rope by the Foot",
   "h1": "Sterling TriTech 11mm Rope by the Foot",
-  "meta": "Sterling TriTech 11mm rope sold by the foot for building custom lanyards and fliplines. What it is used for, how to spec a length, and splicing and inspection notes.",
+  "meta": "Sterling TriTech 11mm rope sold by the foot for building custom lanyards and fliplines. What it is used for, how to spec a length, and splicing notes.",
   "tagline": "11mm Sterling TriTech cut to length for custom lanyards and fliplines.",
   "summary": "Sterling TriTech 11mm rope is sold by the foot so you can build a custom lanyard, flipline, or positioning component at the exact length you want. It is the same rope Sterling uses in its TriTech lanyards.",
   "highlights": [
@@ -1407,7 +1422,8 @@
     "h": "Terminations and inspection",
     "p": [
      "Any eye or termination used for life support must be made by a qualified person using a method the rope maker approves, or tied with a knot you have been trained on. A home-made splice in rope you are not familiar with is not a shortcut worth taking.",
-     "Inspect the rope before each climb for cuts, glazing, and stiff or flat spots, and keep the saw well clear of any rope lanyard. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers."
+     "Inspect the rope before each climb for cuts, glazing, and stiff or flat spots, and keep the saw well clear of any rope lanyard. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers.",
+     "Keep a record of when the lanyard was built and what went into it, so you know its age and can retire it on schedule."
     ]
    }
   ],
@@ -1434,12 +1450,12 @@
   "brand_name": "Courant",
   "kind": "throw-line",
   "price": 49,
-  "keyword": "courant sushi throwline",
+  "keyword": "courant sushi 1.8mm throwline",
   "title": "Courant Sushi 1.8mm Throwline",
   "h1": "Courant Sushi 1.8mm Throwline",
   "meta": "Courant Sushi 1.8mm throwline for setting climbing and rigging lines. How the slick line handles in a cube, isolating limbs, and caring for your throw line.",
   "tagline": "A slick 1.8mm throwline for setting lines high in the canopy.",
-  "summary": "Courant Sushi is a 1.8mm throwline made for setting climbing and rigging lines. Its slick surface runs fast off a cube or bag and slides easily over bark when you isolate a limb.",
+  "summary": "Courant Sushi 1.8mm throwline is made for setting climbing and rigging lines. Its slick surface runs fast off a cube or bag and slides easily over bark when you isolate a limb.",
   "highlights": [
    "1.8 mm diameter",
    "Slick finish for long throws",
@@ -1466,7 +1482,8 @@
     "h": "How it handles",
     "p": [
      "A good throwline has to come off the pile cleanly, fly far behind the bag, and then slide over bark without hanging up while you isolate the limb. A slick, thin line like the Sushi does all three, so you get more height with less arm.",
-     "1.8mm is a common middle ground: thin enough to throw high, thick enough to handle and pull a climbing line without cutting your hands. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> if you prefer a thinner or stiffer line."
+     "1.8mm is a common middle ground: thin enough to throw high, thick enough to handle and pull a climbing line without cutting your hands. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> if you prefer a thinner or stiffer line.",
+     "The bright finish is easy to follow through the crown, so you can see which side of a limb the line went over before you start pulling."
     ]
    },
    {
@@ -1500,12 +1517,12 @@
   "brand_name": "FTC",
   "kind": "throw-line",
   "price": 55,
-  "keyword": "ftc stiffline",
+  "keyword": "ftc 1.6mm stiffline",
   "title": "FTC 1.6mm Stiffline Throw Line, Yellow, 80m",
   "h1": "FTC 1.6mm Stiffline Yellow 80m",
-  "meta": "FTC Stiffline in 1.6mm yellow, an 80m throw line with a stiff, tangle-resistant body for setting climbing lines. How it handles, storage, and when to choose it.",
+  "meta": "FTC 1.6mm Stiffline in yellow, an 80m throw line with a stiff, tangle-resistant body for setting climbing lines. How it handles and when to choose it.",
   "tagline": "An 80m, 1.6mm stiff throw line in bright yellow for long, high throws.",
-  "summary": "FTC Stiffline is a 1.6mm throw line in yellow, supplied in an 80m length. Its stiffer body resists tangling and pays out cleanly, while the thin diameter helps a throw bag reach high crotches.",
+  "summary": "FTC 1.6mm Stiffline is a throw line in yellow, supplied in an 80m length. Its stiffer body resists tangling and pays out cleanly, while the thin diameter helps a throw bag reach high crotches.",
   "highlights": [
    "1.6 mm diameter",
    "80 m length",
@@ -1535,7 +1552,8 @@
     "h": "Why a stiffer throw line",
     "p": [
      "Soft throw line flies well but can knot on itself in the cube or wrap around twigs in the canopy. A stiffer line holds its shape, comes off the pile with fewer snarls, and is easier to work back through branches when you are isolating a union.",
-     "At 1.6mm it is thin enough for long throws, and 80m is plenty for tall trees with line to spare. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> if you prefer a softer or thicker line."
+     "At 1.6mm it is thin enough for long throws, and 80m is plenty for tall trees with line to spare. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> if you prefer a softer or thicker line.",
+     "Stiffer line also makes it easier to flip the line off a twig or push it over a union with a pole, which saves resets on cluttered trees."
     ]
    },
    {
@@ -1572,7 +1590,7 @@
   "keyword": "notch acculine throw line",
   "title": "Notch Acculine 2.2mm Throw Line",
   "h1": "Notch Acculine 2.2mm Throw Line",
-  "meta": "Notch Acculine 2.2mm throw line, a heavier throw line that is easy on the hands and good for pulling up climb lines. How it handles, when to choose it, and care.",
+  "meta": "Notch Acculine 2.2mm throw line, a heavier throw line that is easy on the hands and good for pulling up climb lines. How it handles and when to choose it.",
   "tagline": "A 2.2mm throw line that is easy to grip and strong enough for hauling lines.",
   "summary": "Notch Acculine 2.2mm throw line is a slightly heavier throw line that is easy to grip and pull. It suits climbers who want a line that handles well with gloves and hauls a climbing line up without cutting into the hands.",
   "highlights": [
@@ -1600,7 +1618,8 @@
     "h": "When a thicker throw line makes sense",
     "p": [
      "Thin throw line flies further, but it can be hard to hold and harsh on the hands when you haul a long climbing line up through the crown. At 2.2mm, Acculine gives you more to grab, tangles less, and is easier to manage with gloves on. You give up a little height on the throw for that comfort.",
-     "It is a good choice for lower crotches, frequent line setting, and crews who use the throw line to pull up rigging lines. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> for thinner options."
+     "It is a good choice for lower crotches, frequent line setting, and crews who use the throw line to pull up rigging lines. Compare other <a href=\"/climbing/throw-weight-and-line/throw-line/\">throw lines</a> for thinner options.",
+     "Many climbers keep a thin line for high, hard throws and a thicker one like Acculine for everyday line setting and rigging jobs."
     ]
    },
    {
@@ -1637,7 +1656,7 @@
   "keyword": "weaver denali climbing harness",
   "title": "Weaver Denali Climbing Harness for Tree Work",
   "h1": "Weaver Denali Climbing Harness",
-  "meta": "The Weaver Denali climbing harness, a tree climbing saddle for arborists who want a supportive, practical harness. Fit, setup, and inspection notes before you buy.",
+  "meta": "The Weaver Denali climbing harness, a tree climbing saddle for arborists who want a supportive, practical harness. Fit, setup, and inspection notes.",
   "tagline": "A Weaver tree-climbing harness for daily climbing and work positioning.",
   "summary": "The Weaver Denali climbing harness is a tree climbing saddle for arborists who climb and position all day. Weaver has built saddles for tree workers for decades, and the Denali is a practical choice for climbers who want support and simple setup.",
   "highlights": [
@@ -1670,7 +1689,8 @@
     "h": "Choosing a harness for daily climbing",
     "p": [
      "Your saddle is the one piece of gear you are attached to all day, so fit and comfort decide how you feel at quitting time. Look at how the waist and leg loops carry your weight when you sit back, how the attachment points line up with your climbing and positioning systems, and whether there is room to hang a saw, handsaw, and a few carabiners.",
-     "Compare the Denali with our other <a href=\"/climbing/saddles-and-harnesses/\">saddles and harnesses</a> to find the right fit for your climbing style, whether that is mostly spurring removals or long pruning climbs."
+     "Compare the Denali with our other <a href=\"/climbing/saddles-and-harnesses/\">saddles and harnesses</a> to find the right fit for your climbing style, whether that is mostly spurring removals or long pruning climbs.",
+     "Try the harness on with your usual clothing and gear loaded before you commit, since a saddle that fits empty can feel very different with a saw hanging from it."
     ]
    },
    {
@@ -1705,9 +1725,9 @@
   "kind": "wedge-axe",
   "price": 15,
   "keyword": "hardhead jr wedge",
-  "title": "Hardhead Jr Felling Wedge",
+  "title": "Hardhead Jr Wedge for Felling and Bucking",
   "h1": "Hardhead Jr Wedge",
-  "meta": "The Hardhead Jr wedge, a compact felling and bucking wedge that keeps the kerf open and the bar free. When to use a small wedge, setting it, and when to replace it.",
+  "meta": "The Hardhead Jr wedge, a compact felling and bucking wedge that keeps the kerf open and the bar free. When to use a small wedge and when to replace it.",
   "tagline": "A compact plastic wedge for bucking and felling smaller trees.",
   "summary": "The Hardhead Jr wedge is a compact felling and bucking wedge for smaller wood. Tap it into the back cut or a bucking kerf to keep the saw from pinching and to help steer the tree toward the notch.",
   "highlights": [
@@ -1735,7 +1755,8 @@
     "h": "Where a small wedge earns its keep",
     "p": [
      "Not every cut needs a big felling wedge. On small trees, limbs on the ground, and bucking cuts, a compact wedge slips into a narrow kerf quickly and stops the bar from getting pinched. It is light enough to carry several on a belt or in a pocket.",
-     "For bigger trees and heavy back-leaners, step up to a larger wedge. See our full range of <a href=\"/jobsite/chainsaw-accessories/wedges/\">felling wedges</a> to build a set."
+     "For bigger trees and heavy back-leaners, step up to a larger wedge. See our full range of <a href=\"/jobsite/chainsaw-accessories/wedges/\">felling wedges</a> to build a set.",
+     "Junior wedges are also handy for limbing and for splitting a stubborn bucking cut open when the log settles onto the bar."
     ]
    },
    {
@@ -1770,7 +1791,7 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "case-bag",
   "price": 29,
-  "keyword": "heavy duty multi tool holster",
+  "keyword": "heavy duty multi-tool holster",
   "title": "Heavy Duty Multi-Tool Holster for Wedges and Tools",
   "h1": "Heavy Duty Multi-Tool Holster",
   "meta": "A heavy duty multi-tool holster that hangs from a belt to carry wedges, a scrench, and small tools while you fell and buck. What fits, how to wear it, and care.",
@@ -1801,7 +1822,8 @@
     "h": "Why sawyers carry a holster",
     "p": [
      "When the back cut starts to close, you need a wedge right now, not one sitting on the tailgate. A belt holster keeps two or three wedges, a scrench, and a file on your hip so they are always there when the saw stops, and they do not get lost in brush and sawdust.",
-     "Pair it with a logging belt and a set of plastic wedges for a complete felling kit. See our other <a href=\"/jobsite/chainsaw-accessories/wedges/\">wedges and holsters</a> for wedges to fill it."
+     "Pair it with a logging belt and a set of plastic wedges for a complete felling kit. See our other <a href=\"/jobsite/chainsaw-accessories/wedges/\">wedges and holsters</a> for wedges to fill it.",
+     "It also keeps the scrench handy for quick chain-tension checks, which saves a walk back to the truck every time the chain loosens after a few cuts. A tool you can reach is a tool you actually use."
     ]
    },
    {
@@ -1839,7 +1861,7 @@
   "keyword": "husqvarna file handle",
   "title": "Husqvarna File Handle for Chainsaw Files",
   "h1": "Husqvarna File Handle for Chain Saw File",
-  "meta": "A Husqvarna file handle for round chainsaw files. Gives a solid grip, steadier strokes, and a safer sharpening job on the tailgate. Fit, use, and care tips here.",
+  "meta": "A Husqvarna file handle for round chainsaw files. Gives a solid grip, steadier strokes, and a safer sharpening job on the tailgate. Fit and use tips here.",
   "tagline": "A simple grip for round chainsaw files, for steadier and safer sharpening.",
   "summary": "A Husqvarna file handle fits on the tang of a round chainsaw file and gives you a full grip while sharpening. It makes your strokes steadier and keeps the bare tang out of your palm.",
   "highlights": [
@@ -1867,7 +1889,8 @@
     "h": "Why use a file handle",
     "p": [
      "Filing a chain with a bare file is uncomfortable and inconsistent. A handle gives you leverage and control, so you can hold the angle and push every cutter the same number of strokes, which is how you get a chain that cuts straight.",
-     "It also keeps the pointed tang out of your palm. Keep one on each size of file in your kit. Find files and guides in our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section."
+     "It also keeps the pointed tang out of your palm. Keep one on each size of file in your kit. Find files and guides in our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section.",
+     "A good handle also lets you apply even pressure across the stroke so the file wears evenly instead of only in the middle. Files are cheap, but a handle makes each one last longer and do a better job while it lasts."
     ]
    },
    {
@@ -1901,7 +1924,7 @@
   "brand_name": "Gap Arborist Supply",
   "kind": "wrench-file",
   "price": 12,
-  "keyword": "guide bar dresser replacement file",
+  "keyword": "replacement file for guide bar dresser",
   "title": "Replacement File for Guide Bar Dresser",
   "h1": "Replacement File for Guide Bar Dresser",
   "meta": "A replacement flat file for a guide bar dresser. Swap a dull file and keep dressing chainsaw bar rails square and burr-free. Fit notes and bar care tips inside.",
@@ -1921,6 +1944,10 @@
    [
     "Fits",
     "Guide bar dresser (check model)"
+   ],
+   [
+    "Use",
+    "Squaring and deburring bar rails"
    ]
   ],
   "body": [
@@ -1928,7 +1955,8 @@
     "h": "When to swap the file",
     "p": [
      "Bar dresser files dull just like chain files. When the file skates over the rail instead of biting, or it takes many strokes to remove a burr, it is time for a new one. A dull file can also round over the rail edges you are trying to square.",
-     "Check that the file matches your dresser before ordering. Browse our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section for bar dressers and other sharpening tools."
+     "Check that the file matches your dresser before ordering. Browse our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section for bar dressers and other sharpening tools.",
+     "Keep a spare file in the sharpening kit so a dull one never stops you from dressing the bar at a chain change. Dressing only takes a few minutes, and it adds a lot of life to both the bar and the chain."
     ]
    },
    {
@@ -1993,7 +2021,8 @@
     "h": "Why a soft grip helps",
     "p": [
      "Field sharpening is usually done on a tailgate or a stump, often with cold hands. A soft, grippy handle is easier to hold steady than a hard plastic one, so the file stays at the right angle and each cutter gets the same strokes.",
-     "Keep a handle on each file size you carry. You can find files, guides, and bar tools in our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section."
+     "Keep a handle on each file size you carry. You can find files, guides, and bar tools in our <a href=\"/jobsite/chainsaw-accessories/wrenches-and-files/\">wrenches and files</a> section.",
+     "Handles also make it easier to see the file's angle relative to the cutter, so you can keep the top-plate angle consistent across the whole chain. A consistent angle on every tooth is what makes a chain run straight and cut fast."
     ]
    },
    {
