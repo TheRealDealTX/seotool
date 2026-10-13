@@ -28,34 +28,6 @@
   "query_impressions": 739
  },
  {
-  "path": "/climbing/climbing-gear/ascent-and-descent/jailbreak-hitch-breaker/",
-  "category": "/climbing/climbing-gear/ascent-and-descent/",
-  "tier": "standard",
-  "target_query": "jailbreak tree device (hitch-breaking tool for releasing a loaded friction hitch; only describe generally)",
-  "query_impressions": 496
- },
- {
-  "path": "/climbing/spurs/climb-right-honey-badger-climbing-spikes/",
-  "category": "/climbing/spurs/",
-  "tier": "standard",
-  "target_query": "climb right honey badger",
-  "query_impressions": 819
- },
- {
-  "path": "/climbing/spurs/replacement-gaffs-and-parts/magnetic-gaff-guards/",
-  "category": "/climbing/spurs/replacement-gaffs-and-parts/",
-  "tier": "standard",
-  "target_query": "magnetic gaff guards",
-  "query_impressions": 144
- },
- {
-  "path": "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/bucket-truck-chainsaw-holder/",
-  "category": "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/",
-  "tier": "standard",
-  "target_query": "chainsaw holder for bucket truck",
-  "query_impressions": 945
- },
- {
   "path": "/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/boom-lift-shock-absorbing-lanyard/",
   "category": "/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/",
   "tier": "standard",
@@ -84,25 +56,11 @@
   "query_impressions": 161
  },
  {
-  "path": "/clothing/arborist-boots/arbpro-evo-2-tree-climbing-boots/",
-  "category": "/clothing/arborist-boots/",
-  "tier": "standard",
-  "target_query": "arbpro evo 2 tree climbing boots",
-  "query_impressions": 432
- },
- {
   "path": "/safety/communication/husqvarna-x-com-r-headset/",
   "category": "/safety/communication/",
   "tier": "standard",
   "target_query": "husqvarna xcom",
   "query_impressions": 331
- },
- {
-  "path": "/jobsite/stump-grinding/stein-modular-guarding-system/",
-  "category": "/jobsite/stump-grinding/",
-  "tier": "standard",
-  "target_query": "stump grinder shield",
-  "query_impressions": 758
  },
  {
   "path": "/climbing/throw-weight-and-line/throw-line-kits/throwball-kit/",
@@ -131,26 +89,5 @@
   "tier": "standard",
   "target_query": "husqvarna 562xp felling dogs",
   "query_impressions": 292
- },
- {
-  "path": "/jobsite/power-equipment/parts/husqvarna-562xp-performance-muffler/",
-  "category": "/jobsite/power-equipment/parts/",
-  "tier": "standard",
-  "target_query": "husqvarna 562xp performance muffler",
-  "query_impressions": 224
- },
- {
-  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-chest-cruiser/",
-  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
-  "tier": "standard",
-  "target_query": "edelrid chest cruiser",
-  "query_impressions": 190
- },
- {
-  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/camp-equipment-hook/",
-  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
-  "tier": "standard",
-  "target_query": "camp equipment hook",
-  "query_impressions": 860
  }
 ]
