@@ -92,18 +92,28 @@ php -S localhost:8080 -t public tools/dev-router.php
 Needs PHP ≥ 8.1. There's no build step for CSS or JS. After you change `app.css` or `app.js`, bump
 `ASSET_VER` in `public/lib/bible.php` and the matching `?v=` / cache names in `public/sw.js`.
 
-## Going live (replacing WordPress)
+## Hosting — live since 2026-10-13
 
-1. **Back up the WordPress site** (files and database) in hPanel.
-2. Empty `public_html`, or move the WordPress files aside, so `wp-login.php`, `wp-admin/` etc. are gone.
-3. Upload the *contents* of `public/` to `public_html` (`./deploy.sh`, or hPanel File Manager).
-   PHP 8.1+ is required (the site runs 8.2 today).
-4. Clear the Hostinger/LiteSpeed cache and check `/`, `/ta/john/3/16/`, `/ml/genesis/1/`,
-   `/sitemap_index.xml`.
-5. In Google Search Console, submit `https://holybiblewords.com/sitemap_index.xml`.
+Hostinger web hosting, account `u401386392`, document root
+`domains/holybiblewords.com/public_html`, PHP 8.2, LiteSpeed + Hostinger CDN.
 
-Routing works with `.htaccess` (Apache/LiteSpeed). It also works on hosts that ignore
-`.htaccess` and send unknown paths to `index.php`, because there is no `index.html`.
+**Updating the site:** rebuild if the data changed, run `./deploy.sh` (see the
+header of that file for the credentials), then clear the cache. Bump
+`ASSET_VER` / the service-worker cache names when CSS or JS changes.
+
+**What's still on the server.** The WordPress install was left in place untouched:
+`wp-admin/`, `wp-includes/`, `wp-config.php`, the database. Only its `index.php` and
+`.htaccess` were replaced, so WordPress no longer serves any page, but the files
+are a full rollback. Copies of the two replaced files are in `backup/wordpress/`
+and on the server as `.wordpress-index.php.bak` / `.wordpress-htaccess.bak`.
+`wp-login.php` is still reachable, as it was before. Once you're happy with the new
+site, take a full hPanel backup and delete the WordPress files and database.
+
+**Rollback:** upload `backup/wordpress/index.php` as `index.php` and
+`backup/wordpress/htaccess` as `.htaccess`, then clear the cache.
+
+**Search Console:** submit `https://holybiblewords.com/sitemap_index.xml`. The
+verification file `googlecccfbf2f7e9e5ae4.html` is still in place.
 
 ## Mobile apps (Android & iOS)
 
