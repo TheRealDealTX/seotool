@@ -1,8 +1,26 @@
 {
+ "/12-strand-climbing-rope/mastodon-1-2-rigging-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Mastodon rope found",
+  "title": ""
+ },
  "/16-strand-climbing-rope/sassafras-16-strand-climbing-rope/": {
   "asin": null,
   "match": "none",
   "note": "No Sassafras listing on Amazon",
+  "title": ""
+ },
+ "/16-strand-climbing-rope/yale-xtc-16-white-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No white Yale XTC 16 found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/all-gear-sawtooth-11-7mm-climbing-rope-200-feet/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sawtooth listing found",
   "title": ""
  },
  "/24-strand-climbing-rope/courant-kalimba-bubblegum-11-9mm-climbing-rope/": {
@@ -11,10 +29,58 @@
   "note": "No Courant Kalimba listing found",
   "title": ""
  },
+ "/24-strand-climbing-rope/marlow-maverick-11-5mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Marlow Maverick found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/marlow-vega-11-7mm-lime-gray-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Marlow Vega climbing rope on Amazon results",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/marlow-vesper-11-8mm-blue-orange-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Marlow Vesper listing found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/marlow-vesper-11-8mm-purple-lime-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Marlow Vesper listing found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/teufelberger-gravity-line-aurora-11-5mm-x-200/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Gravity Line Aurora listing found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/yale-blue-moon-climbing-rope/": {
+  "asin": "B0BX4N8ZK5",
+  "match": "exact",
+  "note": "Yale Blue Moon 11.7mm; sold under RNR brand, currently unavailable",
+  "title": "Rock-N-Rescue Yale XTC-24 Blue Moon 11.7mm Climbing Rope"
+ },
+ "/24-strand-climbing-rope/yale-new-moon-11-7mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No New Moon listing; Blue Moon is a different model",
+  "title": ""
+ },
  "/24-strand-climbing-rope/yale-poison-moon-11-7mm-climbing-rope/": {
   "asin": null,
   "match": "none",
   "note": "No Poison Moon listing found",
+  "title": ""
+ },
+ "/24-strand-climbing-rope/yale-vantage-11-7mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Vantage listing found",
   "title": ""
  },
  "/accessory-carabiners/notch-magneato-rope-runner-tether/": {
@@ -23,11 +89,41 @@
   "note": "Notch Magneato for Rope Runner",
   "title": "Notch Magneato SRT Chest Harness Magnetic Attachment (99568)"
  },
+ "/accessory-carabiners/pensafe-tool-tether-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Pensafe listing found",
+  "title": ""
+ },
+ "/adjustable-slings/1-2-whoopie-sling-with-medium-ring/": {
+  "asin": "B0GKNQXHNK",
+  "match": "similar",
+  "note": "Generic 1/2 in whoopie sling with metal ring; ring size not stated",
+  "title": "VLMFPR Whoopie Sling, 1/2 Inch Braided Rope with Metal Ring, 3-5 Ft"
+ },
  "/adjustable-slings/1-2-whoopie-sling/": {
   "asin": "B0FM14ZHTM",
   "match": "similar",
   "note": "1/2 in 12-strand adjustable whoopie sling",
   "title": "Rope Logic Streaked Whoopie Sling 1/2\" Sterling Hollow Braid 3-5 ft. adj"
+ },
+ "/arborist-boots/haix-protector-prime-orange-chainsaw-boots/": {
+  "asin": "B081S9WT8F",
+  "match": "exact",
+  "note": "Same model and color",
+  "title": "HAIX Protector Prime Logger Boots, Class 2 Chainsaw, Hi-Vis Orange"
+ },
+ "/auto-locking-carabiners/camp-oval-xl-3lock-carabiner/": {
+  "asin": "B01CRFC5T4",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Camp Oval XL 3Lock Carabiner"
+ },
+ "/auto-locking-carabiners/dmm-ultra-o-locksafe-carabiner-with-captive-bar/": {
+  "asin": "B089KQGFHF",
+  "match": "variant",
+  "note": "Ultra O Locksafe without captive bar; captive bar version not found",
+  "title": "DMM Ultra O Locksafe Carabiner - Matt Grey"
  },
  "/auto-locking-carabiners/husqvarna-d-shaped-carabiner/": {
   "asin": null,
@@ -35,11 +131,53 @@
   "note": "No Husqvarna-branded carabiner found",
   "title": ""
  },
+ "/auto-locking-carabiners/isc-aluminum-hms-carabiner/": {
+  "asin": "B0CFRPMBY8",
+  "match": "variant",
+  "note": "ISC KH204 aluminum HMS, 3-pack; lock type (supersafe) not confirmed auto-locking",
+  "title": "ISC HMS Carabiner 3-Pack, Titanium/Turquoise"
+ },
+ "/auto-locking-carabiners/isc-aluminum-oval-triple-locking-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC aluminum oval triple-lock listing found",
+  "title": ""
+ },
+ "/auto-locking-carabiners/isc-compact-oval-supersafe-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC compact oval supersafe listing found",
+  "title": ""
+ },
+ "/auto-locking-carabiners/pro-climb-double-locking-aluminum-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only ProClimb Big D/snaphooks found; different named models",
+  "title": ""
+ },
  "/battery-powered-equipment/husqvarna-350i-power-axe-battery-powered-chainsaw/": {
   "asin": "B0CFBJPPQ5",
   "match": "variant",
   "note": "18 in bar kit, 16 in not listed",
   "title": "Husqvarna Power Axe 350i Chainsaw, 18 Inch, with Battery and Charger"
+ },
+ "/battery-powered-equipment/husqvarna-520ilx-40v-straight-shaft-battery-trimmer-bare-tool/": {
+  "asin": "B0GJTG9N5T",
+  "match": "exact",
+  "note": "Tool only",
+  "title": "Husqvarna 520iLX 16 inch Dual Direction Straight Shaft 40V Battery Powered Cordless String Trimmer, Battery and Charger NOT Included (Tool ONLY)"
+ },
+ "/battery-powered-equipment/husqvarna-k1-pace-saw/": {
+  "asin": "B0CH3YZG62",
+  "match": "variant",
+  "note": "K1 PACE 14 in kit with batteries/charger; 9 in version not found",
+  "title": "HUSQVARNA 970546702 K1 PACE 14\" W/2BAT, CHGR"
+ },
+ "/battery-powered-equipment/husqvarna-t542ixp-battery-powered-chainsaw-tool-only/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T542iXP listing found",
+  "title": ""
  },
  "/battery-powered-equipment/husqvarna-t542ixp-top-handle-battery-powered-chainsaw-kit/": {
   "asin": null,
@@ -52,6 +190,12 @@
   "match": "variant",
   "note": "13 in tri-edge blade; S21 with hook is B0996234SL",
   "title": "Notch S20 330mm Tri-Edge Pole Saw Blade (S20)"
+ },
+ "/blades/silky-zubat-replacement-blade-fine-tooth/": {
+  "asin": "B00AX95LBG",
+  "match": "exact",
+  "note": "330mm fine teeth blade",
+  "title": "Silky Replacement Blade Only ZUBAT 330mm Fine Teeth (279-33)"
  },
  "/blowers-and-other-equipment/husqvarna-330lk-string-trimmer/": {
   "asin": "B0CP63K8QJ",
@@ -70,6 +214,12 @@
   "match": "exact",
   "note": "Listing title says straight shaft",
   "title": "Husqvarna 525LK 25.4cc Professional 2-Cycle Straight Shaft String Trimmer"
+ },
+ "/blowers-and-other-equipment/husqvarna-560bts-65cc-backpack-blower/": {
+  "asin": "B0063PKKLA",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Husqvarna 560BTS 65.6cc 2-Stroke X-Torq Gas Powered Backpack Blower"
  },
  "/blowers-and-other-equipment/husqvarna-590bts-pro-backpack-blower/": {
   "asin": null,
@@ -95,11 +245,77 @@
   "note": "2017 edition, ISA",
   "title": "American National Standard Z133 Safety Requirements for Arboricultural Operations ANSI Z133-2017"
  },
+ "/books-and-training-materials/best-management-practices-tree-support-systems-and-cabling/": {
+  "asin": "1881956857",
+  "match": "exact",
+  "note": "ISA BMP, ISBN 9781881956853",
+  "title": "Best management practices Tree support Systems: Cabling, Bracing, Guying, and Propping"
+ },
+ "/books-and-training-materials/best-practices-for-srt-in-arboriculture/": {
+  "asin": null,
+  "match": "none",
+  "note": "No SRT best practices book found",
+  "title": ""
+ },
  "/books-and-training-materials/certified-arborist-study-guide/": {
   "asin": "1943378215",
   "match": "exact",
   "note": "4th edition",
   "title": "Arborists' Certification Study Guide, 4th Edition (Lilly, ISA)"
+ },
+ "/books-and-training-materials/groundie/": {
+  "asin": "097266792X",
+  "match": "exact",
+  "note": "Book by Jeff Jepson",
+  "title": "Groundie: Jeff Jepson"
+ },
+ "/books-and-training-materials/the-tree-climbers-companion/": {
+  "asin": "0972667938",
+  "match": "exact",
+  "note": "Jeff Jepson, 3rd ed",
+  "title": "Tree Climbers Companion: 3rd Edition, Revised and Expanded"
+ },
+ "/books-and-training-materials/to-fell-a-tree/": {
+  "asin": "0615338798",
+  "match": "exact",
+  "note": "Jeff Jepson",
+  "title": "To Fell a Tree: A Complete Guide to Tree Felling and Woodcutting Methods"
+ },
+ "/bucket-truck-accessories/fiberglass-scuff-pad-with-step/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching listing found",
+  "title": ""
+ },
+ "/cabling-accessories/large-3-forged-steel-rigging-ring/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only unspecific rigger ring; 3 in size not confirmed",
+  "title": ""
+ },
+ "/chainsaw-bars/husqvarna-12-chainsaw-bar-44-dl-fits-gas-powered-pole-saws/": {
+  "asin": "B015CXQTNQ",
+  "match": "exact",
+  "note": "12 in, 44 DL pole saw bar",
+  "title": "Husqvarna 12\" Double Guard Polesaw Bar (44 Drive Links) 585829144"
+ },
+ "/chainsaw-bars/husqvarna-light-bar-3-8-x-063/": {
+  "asin": "B09RQ4SV7P",
+  "match": "variant",
+  "note": "Husqvarna X-Tough Light 3/8 .063; length 32 in chosen, others exist",
+  "title": "Husqvarna OEM 599958405 X-Tough Light 32\" RSN Bar 3/8\" .063\" 105DL"
+ },
+ "/chainsaw-chain/husqvarna-3-8-micro-x-050-44dl-chain-fits-gas-poweredpole-saws/": {
+  "asin": "B083JKCTZJ",
+  "match": "exact",
+  "note": "3/8 mini .050 44DL",
+  "title": "Husqvarna 585422144 S93G 12\" Chain 3/8 Mini .050 44DL"
+ },
+ "/chainsaw-chain/husqvarna-3-8-micro-x-050-gauge-chainsaw-chain/": {
+  "asin": "B083JJTZR7",
+  "match": "variant",
+  "note": "Same chain type; 12 in/44DL chosen, other lengths exist",
+  "title": "Husqvarna X-Cut S93G 12 Inch Chainsaw Chain, 3/8\" Mini Pitch, .050\" Gauge, 44 Drive Link"
  },
  "/chainsaw-chain/husqvarna-3-8-x-050-full-comp-chainsaw-chain/": {
   "asin": "B07VGLH48Y",
@@ -113,17 +329,41 @@
   "note": "36 in length, other lengths exist",
   "title": "Husqvarna OEM 36\" Chain, H83-115 DL, 3/8\" .063\""
  },
+ "/chainsaw-chain/husqvarna-h47s-full-chisel-skip-tooth-chain-3-8-x-050-gauge/": {
+  "asin": "B01LRFFX8K",
+  "match": "exact",
+  "note": "H47S skip tooth, 84DL; may be unavailable",
+  "title": "OEM Husqvarna 501842784 (591132084) 24\" Skip Tooth Chain 3/8\" .050\" H47S-84"
+ },
  "/chainsaw-chain/husqvarna-sp33g-semi-chisel-chain-325-x-050-gauge/": {
   "asin": "B076VW9MKB",
   "match": "variant",
   "note": "18 in; other lengths exist",
   "title": "Husqvarna X-Cut SP33G 18 Inch Chainsaw Chain, .325\" Pitch, .050\" Gauge, 72 DL"
  },
+ "/chainsaw-chain/oregon-3-8-low-pro-x-050-chainsaw-chain-fits-stihl-ms200t/": {
+  "asin": "B00FYRVGHU",
+  "match": "variant",
+  "note": "Oregon 3/8 LP .050 50DL (14 in); 44DL/other loops exist",
+  "title": "Oregon 3/8 Inch Pitch, .050 Inch Gauge, 50 Drive Links for 14 Inch Bar - Fits Stihl Chainsaws"
+ },
  "/chainsaw-chaps/economy-apron-style-chainsaw-chaps/": {
   "asin": "B00V5HRPSC",
   "match": "similar",
   "note": "Apron style chaps",
   "title": "Oregon Apron-Style Chainsaw Chaps - 36in. (564132-36)"
+ },
+ "/chainsaw-lanyards/basic-chainsaw-lanyard-with-snap/": {
+  "asin": "B07MJDB2QX",
+  "match": "similar",
+  "note": "Non-bungee lanyard with snap",
+  "title": "AAS Snap & Eye Chainsaw Lanyard"
+ },
+ "/chainsaw-lanyards/bungee-chainsaw-lanyard-with-carabiner/": {
+  "asin": "B09D44CD8X",
+  "match": "similar",
+  "note": "Bungee lanyard with carabiner",
+  "title": "RNA Raider Chainsaw Lanyard With Carabiner - Neon Green"
  },
  "/chainsaw-lanyards/bungee-chainsaw-lanyard-with-snap/": {
   "asin": "B07V1XFWW1",
@@ -137,10 +377,46 @@
   "note": "No Weaver modular bungee lanyard found",
   "title": ""
  },
+ "/chainsaw-lanyards/chainsaw-strap-with-ring/": {
+  "asin": "B0DNMT8DS7",
+  "match": "similar",
+  "note": "Strap with 2 in ring; also has snap",
+  "title": "Bungee Chainsaw Strap with Long Snap, Black, with 2\" Ring"
+ },
+ "/chainsaw-lanyards/ring-and-ring-bungee-chainsaw-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ring-and-ring bungee lanyard found (only ring-and-snap/breakaway)",
+  "title": ""
+ },
+ "/chainsaw-pants/arbortec-breatheflex-pro-realtree-camo-chainsaw-pants-brown/": {
+  "asin": "B099X4SXFN",
+  "match": "variant",
+  "note": "Same model; Realtree brown colorway not found",
+  "title": "Arbortec Breatheflex Pro 1 UL Rated Chainsaw Pants"
+ },
+ "/chainsaw-pants/arbortec-breatheflex-pro-realtree-camo-orange-chainsaw-pants/": {
+  "asin": "B099X4SXFN",
+  "match": "variant",
+  "note": "Same model; Realtree orange colorway not found",
+  "title": "Arbortec Breatheflex Pro 1 UL Rated Chainsaw Pants"
+ },
+ "/chainsaw-pants/arbortec-breatheflex-pro-realtree-camo-pants-lime-green/": {
+  "asin": "B0FNS38L8R",
+  "match": "variant",
+  "note": "Arbortec BreatheFlex Pro in lime; not the Realtree camo colorway; listing unavailable",
+  "title": "AT4060 Breatheflex Pro Chainsaw Trousers Design A Class 1 - Lime"
+ },
  "/chainsaws/husqvarna-562xp-mark-ii-chainsaw/": {
   "asin": null,
   "match": "none",
   "note": "Only parts for 562XP Mark II found, not the saw",
+  "title": ""
+ },
+ "/chainsaws/husqvarna-585-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only 585 parts/chains found, not the saw",
   "title": ""
  },
  "/climber-pads/replacement-pads-for-gecko-climbers/": {
@@ -154,6 +430,12 @@
   "match": "exact",
   "note": "",
   "title": "Jameson Rope Sniper - Precision Arborist Tool for Effortless Rope Placement"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/descenders/big-8-aluminum-rescue-descender/": {
+  "asin": "B0BLC1S2WT",
+  "match": "similar",
+  "note": "Aluminum rescue figure 8 with ears",
+  "title": "ProClimb 40 kN Rescue Figure 8 Descender w/ Bent-Ears (Aluminum)"
  },
  "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-grigri-belay-device/": {
   "asin": "B07MJ89NHW",
@@ -173,6 +455,84 @@
   "note": "Antibrulure version; plain Huit B01EONZHOM unavailable",
   "title": "PETZL HUIT ANTIBRULURE Descender - Figure 8"
  },
+ "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-maestro-s-descender/": {
+  "asin": "B0833CCW6X",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Petzl Descender Maestro S, 10.5 to 11.5 mm ropes"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/descenders/petzl-rig-descender/": {
+  "asin": "B0797HSW59",
+  "match": "exact",
+  "note": "Same model",
+  "title": "PETZL Descender Rig, Compact self-braking descender"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/descenders/smc-escape-8-descender/": {
+  "asin": "B009NCLOCY",
+  "match": "exact",
+  "note": "SMC Escape 8",
+  "title": "SMC Personal Escape 8"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/ct-quick-step-foot-ascender/": {
+  "asin": "B00DBVHDR8",
+  "match": "exact",
+  "note": "Right foot version; left also exists",
+  "title": "Climbing Technology Quick Step Foot Ascender, Right Foot, Orange"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/ct-quick-step-replacement-strap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No replacement strap listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/ct-quick-tree-spur-mounted-ascender/": {
+  "asin": "B07W4QRNHS",
+  "match": "exact",
+  "note": "CT Quick Tree; left foot version",
+  "title": "Climbing Technology Quick Tree Ascender, Green"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/edelrid-talon-tree-cruiser/": {
+  "asin": "B08BZWYVJB",
+  "match": "exact",
+  "note": "Left; right is B08C1JG8ZW",
+  "title": "Edelrid Talon Tree Cruiser Left"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/notch-jet-step-foot-ascender/": {
+  "asin": "B07NF9RNYS",
+  "match": "exact",
+  "note": "Original Jet Step",
+  "title": "Notch Jet Step Foot Ascender (41001)"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/petzl-knee-ascent-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only separate Petzl knee ascent parts found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/ascent-and-descent/foot-ascenders-and-foot-loops/reecoil-foot-loop/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Reecoil foot loop found (lanyards only)",
+  "title": ""
+ },
+ "/climbing/climbing-gear/ascent-and-descent/handled-ascenders/ct-quick-arbor-double-hand-ascender/": {
+  "asin": "B07T9MXX5J",
+  "match": "exact",
+  "note": "Same model",
+  "title": "CT Quick'Arbor Double Hand Ascender"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/handled-ascenders/isc-ultrasafe-hand-ascender-with-safety-pin/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC Ultrasafe hand ascender found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/ascent-and-descent/handled-ascenders/kong-futura-hand-ascender/": {
+  "asin": "B008YVDWKW",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Kong Futura Hand Ascender"
+ },
  "/climbing/climbing-gear/ascent-and-descent/handled-ascenders/petzl-ascension-hand-ascender/": {
   "asin": "B00R53CW88",
   "match": "exact",
@@ -191,6 +551,12 @@
   "note": "Zigzag Plus is B07PFN66M6",
   "title": "PETZL Zigzag Descender for Arborists D022AA00"
  },
+ "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-mrs/rock-exotica-unicender/": {
+  "asin": "B00A3BQ8VQ",
+  "match": "exact",
+  "note": "Same model; may be unavailable",
+  "title": "Rock Exotica Unicender"
+ },
  "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/isc-rope-wrench/": {
   "asin": "B00MFWUZVU",
   "match": "exact",
@@ -203,11 +569,35 @@
   "note": "",
   "title": "Notch Flow Adjustable Rope Wrench (41603) Fits 11-13mm"
  },
+ "/climbing/climbing-gear/ascent-and-descent/mechanical-friction-devices/devices-for-srs/petzl-chicane-auxilary-brake/": {
+  "asin": "B07NCNHZTG",
+  "match": "exact",
+  "note": "Same model",
+  "title": "PETZL Chicane Auxiliary Braking Device for Zigzag"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/ct-roll-n-lock-rope-grab/": {
+  "asin": "B00CH3E5ZY",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Climbing Technology RollnLock Pulley"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/isc-rocker-ropegrab/": {
+  "asin": "B01LXKK9IB",
+  "match": "exact",
+  "note": "Same model",
+  "title": "ISC 108140 Rocker Rope Grab"
+ },
  "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/kong-duck-emergency-belay-device/": {
   "asin": "B01BM42N0C",
   "match": "exact",
   "note": "",
   "title": "Kong Duck Rope Clamp Ascender"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-release-lever/": {
+  "asin": "B013RPRJLW",
+  "match": "exact",
+  "note": "Fits Positioner 2",
+  "title": "ART Positioner Release Lever (fit Positioner 2 Black Cover Plate)"
  },
  "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-replacement-cam/": {
   "asin": null,
@@ -215,11 +605,23 @@
   "note": "No ART Positioner replacement cam found",
   "title": ""
  },
+ "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only ART Positioner lanyards found, no standalone",
+  "title": ""
+ },
  "/climbing/climbing-gear/ascent-and-descent/rope-grabs/climb-right-rope-grab/": {
   "asin": "B00DZVL9MY",
   "match": "exact",
   "note": "",
   "title": "Spyder Climb Right Rope Grab (Fits 1/2\" - 5/8\" Rope)"
+ },
+ "/climbing/climbing-gear/ascent-and-descent/rope-grabs/gibbs-klimair-bidirectional-lanyard-adjuster/": {
+  "asin": "B07B8X3W9M",
+  "match": "exact",
+  "note": "Klimair model",
+  "title": "Gibbs BI-Directional Ascender (Klimair)"
  },
  "/climbing/climbing-gear/ascent-and-descent/rope-grabs/petzl-micrograb-lanyard-adjuster/": {
   "asin": null,
@@ -232,6 +634,18 @@
   "match": "exact",
   "note": "",
   "title": "Petzl MINO Accessory Carabiner for Tool Management (Non-PPE)"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/3-in-1-dry-graphite/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 3-IN-ONE graphite dry lube listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-american-o/": {
+  "asin": null,
+  "match": "none",
+  "note": "No DMM American O listing found",
+  "title": ""
  },
  "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-shadow-carabiner/": {
   "asin": "B09YHKR1PJ",
@@ -1109,6 +1523,138 @@
   "note": "Husqvarna long handle hookaroon",
   "title": "Husqvarna Genuine 596292502 31.5\" Long Handle Sappie Hookaroon"
  },
+ "/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-cant-hook/": {
+  "asin": "B001BAMQ28",
+  "match": "variant",
+  "note": "42in; other lengths exist",
+  "title": "LogRite 42in Aluminum Handle Cant Hook"
+ },
+ "/jobsite/logging-tools/log-handling-tools/logrite-aluminum-handled-hookaroon/": {
+  "asin": "B004HIC1P8",
+  "match": "variant",
+  "note": "30in; other lengths exist",
+  "title": "LogRite 30in Hookaroon"
+ },
+ "/jobsite/logging-tools/log-handling-tools/logrite-log-carrier/": {
+  "asin": "B0843C3V2N",
+  "match": "exact",
+  "note": "",
+  "title": "LogRite Two Man Log Carrier"
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-230ib-hand-held-battery-powered-leaf-blower/": {
+  "asin": "B08PL38WYH",
+  "match": "exact",
+  "note": "Kit with battery and charger",
+  "title": "Husqvarna 230iB Battery Powered Cordless Leaf Blower"
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-qc500-quick-charge-battery-charger/": {
+  "asin": "B08K2TW367",
+  "match": "exact",
+  "note": "",
+  "title": "HUSQVARNA Charger, QC 500, 500 W (967965003)"
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-t540ixp-top-handle-battery-powered-chainsaw-kit/": {
+  "asin": "B0DCHV5P12",
+  "match": "variant",
+  "note": "Power head only, not kit",
+  "title": "Husq T540iXP 14in Battery Chainsaw Power Head Only"
+ },
+ "/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-125b-handheld-blower/": {
+  "asin": "B002P2ZVQ4",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 125B Gas Leaf Blower 952711925"
+ },
+ "/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-580bts-backpack-blower/": {
+  "asin": "B0CKLTBWGY",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 580BTS Gas Backpack Leaf Blower"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-3120xp-chainsaw-power-head-only/": {
+  "asin": "B0B6XXWH68",
+  "match": "exact",
+  "note": "Power head listing",
+  "title": "Husqvarna 3120XP Powerhead Chainsaw Engine"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-372xp-chainsaw/": {
+  "asin": "B008VGZZLO",
+  "match": "exact",
+  "note": "Same model; 20in bar kit",
+  "title": "Husqvarna 372XP 20in Chainsaw with 3/8in .050 Bar and Chain"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-395xp-chainsaw/": {
+  "asin": "B00X1O30JK",
+  "match": "exact",
+  "note": "May be unavailable",
+  "title": "Husqvarna 395XP 24in Chainsaw"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-450-rancher/": {
+  "asin": "B0BRNRXWJB",
+  "match": "exact",
+  "note": "20in version",
+  "title": "Husqvarna 450 Rancher 20 Inch Gas Chainsaw, 50.2-cc"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-525pt5s-gas-powered-pole-saw/": {
+  "asin": "B07BP6B2SG",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 525PT5S 12 inch 25.4cc 2-Cycle Professional Gas Pole Saw"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-550xp-mark-ii-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-572xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts/bars found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-592xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-t435-top-handle-chainsaw/": {
+  "asin": "B0812MY4XK",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna T435 12 in. 35.2cc Top Handle Gas Chainsaw"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-t525-top-handle-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts/accessories found, no saw listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-t540xp-mark-iii-top-handle-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only chains/parts found",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-replacement-fuel-filter-for-t435-chainsaw/": {
+  "asin": "B00455Q2TO",
+  "match": "variant",
+  "note": "OEM Husqvarna filter; T435 fitment listed by third parties",
+  "title": "Genuine OEM Husqvarna Fuel Filter 503443201"
+ },
+ "/jobsite/power-equipment/parts/ngk-bpmr7a-spark-plug/": {
+  "asin": "B000BYNN3G",
+  "match": "exact",
+  "note": "Single NGK BPMR7A",
+  "title": "NGK (4626) Spark Plug - BPMR7A"
+ },
+ "/jobsite/power-equipment/parts/ngk-cmr6h-spark-plug/": {
+  "asin": "B00BP31TJW",
+  "match": "variant",
+  "note": "Same plug, 4-pack",
+  "title": "NGK (3365) CMR6H Spark Plug - Pack of 4"
+ },
  "/jobsite/power-equipment/parts/oil-pump-assembly-for-husqvarna-550xp-mark-ii-chainsaw/": {
   "asin": null,
   "match": "none",
@@ -1119,6 +1665,318 @@
   "asin": null,
   "match": "none",
   "note": "Felling dog results did not confirm 572XP fitment; no safe match.",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/replacement-fuel-filter/": {
+  "asin": "B008TSZWBC",
+  "match": "similar",
+  "note": "Generic in-tank filter",
+  "title": "Oregon 07-200 In-Tank Fuel Filter Chain Saw Replacement Part"
+ },
+ "/jobsite/stump-grinding/700-series-greenteeth-pocket-straight/": {
+  "asin": "B0D9BSQD64",
+  "match": "variant",
+  "note": "6-pack; item is single pocket",
+  "title": "Greenteeth 700 Series LoPro Pocket 6 Pack (Straight)"
+ },
+ "/jobsite/stump-grinding/green-teeth-allen-head/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Allen head bolt listing found",
+  "title": ""
+ },
+ "/jobsite/stump-grinding/standard-stump-grinder-teeth/": {
+  "asin": "B0D72CD7P2",
+  "match": "similar",
+  "note": "Generic carbide bolt-on teeth, pack",
+  "title": "10 PACK 2-7/8in Lx3/4in W Stump Grinder Teeth with 5/8in Nuts Carbide Tipped"
+ },
+ "/landscaper-tools/corona-22-steel-leaf-rake-with-48-wood-handle/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only other brands/sizes (Truper 22in/48in is different brand)",
+  "title": ""
+ },
+ "/landscaper-tools/husqvarna-18v-4-gallon-backpack-sprayer/": {
+  "asin": "B08F37NQJC",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 4-Gallon Battery Backpack Sprayer 18V"
+ },
+ "/landscaper-tools/husqvarna-trim-force-square-trimmer-line/": {
+  "asin": "B09RQ6FBSS",
+  "match": "exact",
+  "note": "Square .095 3lb",
+  "title": "Husqvarna Genuine 529337503 Trim Force Square Trimmer Line 3lb .095"
+ },
+ "/lowering-devices/jail-brake-lowering-device/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching listing",
+  "title": ""
+ },
+ "/micro-pulleys/dmm-hitch-climber-pulley-2/": {
+  "asin": "B004BQ66QQ",
+  "match": "exact",
+  "note": "May be unavailable",
+  "title": "DMM Hitch Climber Pulley - Triple Attachment"
+ },
+ "/other-gear/soft-canopy-anchor/": {
+  "asin": "B00S129KJQ",
+  "match": "similar",
+  "note": "Retrievable textile canopy anchor",
+  "title": "CAMP Herbol Cambium Saver Arborist Retrievable Anchor 120cm"
+ },
+ "/parts-and-accessories/husqvarna-chainsaw-maintenance-kit-for-445-and-450/": {
+  "asin": "B08NLRJYD1",
+  "match": "exact",
+  "note": "",
+  "title": "Husqvarna 599333601 Maintenance Kit for 445, 450 chainsaws"
+ },
+ "/parts/bpmr8y-spark-plug/": {
+  "asin": "B0058JD7YY",
+  "match": "exact",
+  "note": "NGK single BPMR8Y (2218)",
+  "title": "NGK Spark Plug Single Piece Pack Stock Number 2218 BPMR8Y"
+ },
+ "/parts/cmr7h-spark-plug/": {
+  "asin": "B004NMTV6K",
+  "match": "variant",
+  "note": "Same plug, 6-pack",
+  "title": "NGK 6 Pack of Replacement Spark Plugs # CMR7H-6PK"
+ },
+ "/parts/husqvarna-vari-cut-s45-diamond-wheel/": {
+  "asin": null,
+  "match": "none",
+  "note": "No S45 listing found",
+  "title": ""
+ },
+ "/plant-care/cabling-and-bracing/bracing/bracing-rods/": {
+  "asin": "B00340BL1A",
+  "match": "similar",
+  "note": "Threaded tree bracing rod",
+  "title": "Threaded Tree Rod Lag Thread 3/4in x 6ft"
+ },
+ "/plant-care/cabling-and-bracing/cable/common-grade-cable/": {
+  "asin": "B00KROK4VO",
+  "match": "similar",
+  "note": "Generic galvanized cable",
+  "title": "Practice Sports 1/4in Galvanized Steel Wire Rope 7x19 100 Feet"
+ },
+ "/plant-care/cabling-and-bracing/cable/ehs-cable/": {
+  "asin": "B01D5JKX0E",
+  "match": "similar",
+  "note": "7-wire galvanized strand; EHS grade unconfirmed, large spool",
+  "title": "1/4in Galvanized Steel Strand Cable Guy Wire Rope 1x7 (5000 Feet)"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/3-8-eye-bolt/": {
+  "asin": "B000P3ZSK4",
+  "match": "similar",
+  "note": "3/8 eye bolt with nut",
+  "title": "Koch 105080 Forged Eye Bolt with Nut, 3/8 by 6, Galvanized"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/galvanized-eye-lag-screw/": {
+  "asin": "B07KNJ494X",
+  "match": "similar",
+  "note": "Galvanized closed eye lag screw",
+  "title": "Galvanized Forged Lag Screw Eye Bolts 1/2in x 3-1/4in (5 pack)"
+ },
+ "/plant-care/cabling-and-bracing/cabling-hardware/j-lag-screws/": {
+  "asin": "B00340CDA8",
+  "match": "similar",
+  "note": "J lag hook for cabling; zinc plated not galvanized",
+  "title": "Lag Screw Hook, Zinc Plated, 0.5in x 6in"
+ },
+ "/plant-care/plant-health-care/lac-balsam-tree-wound-treatment/": {
+  "asin": "B005117K6K",
+  "match": "exact",
+  "note": "Lac Balsam tube",
+  "title": "Compo Artificial Lac Balsam"
+ },
+ "/plant-care/planting/tree-support-web-for-staking-trees-250/": {
+  "asin": "B003YW50IS",
+  "match": "similar",
+  "note": "250ft staking strap",
+  "title": "DeepRoot ArborTie Tree Straps for Staking and Guying 250' Roll"
+ },
+ "/plant-care/planting/wire-rope-clamps/": {
+  "asin": "B07MY7581Y",
+  "match": "similar",
+  "note": "Generic galvanized U-bolt clips",
+  "title": "Cable Clamp Wire Rope Clamp Galvanized U Bolt"
+ },
+ "/planting/duck-bill-earth-anchors-small/": {
+  "asin": "B08VZ5YJ6V",
+  "match": "variant",
+  "note": "Duckbill 40 series small; pack of 4 kit",
+  "title": "Rittenhouse Duckbill Root Ball Anchor Kit - Small Earth Anchors - 40 (Pack of 4)"
+ },
+ "/replacement-gaffs-and-parts/distel-replacement-pads-with-rings-and-straps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Distel listing found",
+  "title": ""
+ },
+ "/rigging-kits/speed-line-kit-with-carabiners/": {
+  "asin": "B07G1SQDPR",
+  "match": "similar",
+  "note": "Speedline kit; carabiner config unverified",
+  "title": "CMI Speed Line Kit"
+ },
+ "/rigging-pulleys/rock-exotica-downrigger/": {
+  "asin": "B0GKQ4Y9TC",
+  "match": "exact",
+  "note": "",
+  "title": "Rock Exotica DownRigger"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/cmi-5-8-steel-arborist-block/": {
+  "asin": null,
+  "match": "none",
+  "note": "CMI 5/8 pulley listing has stainless plates, steel block unconfirmed; not selected",
+  "title": ""
+ },
+ "/rigging/blocks-and-other-hardware/rigging-blocks/isc-small-rigging-pulley-for-up-to-5-8-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "ISC small pulleys found are 1/2in rope; 5/8 model had no ASIN",
+  "title": ""
+ },
+ "/rigging/blocks-and-other-hardware/rigging-plates/petzl-paw-small-rigging-plate/": {
+  "asin": "B00JWZJO9C",
+  "match": "exact",
+  "note": "Same brand/model/size",
+  "title": "Petzl PAW Small Rigging Plate Black"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/double-swing-pulley/": {
+  "asin": "B0BZGZGKF6",
+  "match": "similar",
+  "note": "Generic double sheave swing-plate pulley",
+  "title": "Fusion Climb Aluminum Alloy Double Pulley Swing Plate 32kN"
+ },
+ "/rigging/blocks-and-other-hardware/rigging-pulleys/petzl-tandem-pulley/": {
+  "asin": "B09ZNFSTMZ",
+  "match": "exact",
+  "note": "Petzl Tandem P21",
+  "title": "Petzl Tandem Double Pulley for Tyrolean Traverses"
+ },
+ "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-choker-hook/": {
+  "asin": "B00B1GT1S4",
+  "match": "variant",
+  "note": "Crosby choker hook; size not specified, picked 10mm",
+  "title": "CROSBY 10MM CH Choker Hook A1355"
+ },
+ "/rigging/blocks-and-other-hardware/rings-and-other-hardware/crosby-chain-connector/": {
+  "asin": "B00B0XLQW2",
+  "match": "variant",
+  "note": "Crosby connecting link; model/size uncertain",
+  "title": "Crosby G-335 Missing Link Connecting Link 5/8 in"
+ },
+ "/rigging/blocks-and-other-hardware/rings-and-other-hardware/galvanized-clevis/": {
+  "asin": "B000FM9CNY",
+  "match": "similar",
+  "note": "Galvanized clevis with pin; rigging-grade, larger",
+  "title": "Campbell T3899919 Long Body Twisted Clevis, Forged Steel Galvanized"
+ },
+ "/rigging/lowering-devices/buckingham-medium-portawrap/": {
+  "asin": "B00455V6YU",
+  "match": "exact",
+  "note": "601MN = medium",
+  "title": "Buckingham 601MN Port-A-Wrap"
+ },
+ "/rigging/lowering-devices/good-rigging-control-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching listing",
+  "title": ""
+ },
+ "/rigging/lowering-devices/hobbs-h2-lowering-device/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching listing",
+  "title": ""
+ },
+ "/rigging/lowering-devices/large-portawrap-lowering-device/": {
+  "asin": "B00455TEEE",
+  "match": "exact",
+  "note": "Buckingham large Port-A-Wrap",
+  "title": "Buckingham 601LN Port-A-Wrap III (Large)"
+ },
+ "/rigging/mechanical-advantage/maasdam-continuous-rope-puller-replacement-handle/": {
+  "asin": "B0046RDC3K",
+  "match": "variant",
+  "note": "Maasdam handle replacement kit for rope/cable pullers",
+  "title": "Maasdam MPPHRK Handle Assembly Replacement Kit"
+ },
+ "/rigging/mechanical-advantage/masdaam-continuous-rope-puller-kit/": {
+  "asin": "B07M7993HY",
+  "match": "variant",
+  "note": "Rope length choice varies",
+  "title": "Maasdam Rope Puller Kit with 120' Rope, Spliced Hook and Loopie Sling"
+ },
+ "/rigging/mechanical-advantage/petzl-micro-traxion-pulley/": {
+  "asin": "B0078FWCJW",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "Petzl Micro Traxion Pulley Ropeclamp"
+ },
+ "/rigging/rigging-kits/port-a-wrap-with-soft-anchor-rigging-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham Port-a-Wrap + soft anchor sling kit found",
+  "title": ""
+ },
+ "/rigging/rigging-kits/weaver-speed-line-kit/": {
+  "asin": "B0B3S5CPZC",
+  "match": "exact",
+  "note": "Weaver Arborist Speedline Kit",
+  "title": "Weavor Arborist Speedline Kit"
+ },
+ "/rigging/rigging-slings/adjustable-slings/3-4-whoopie-sling/": {
+  "asin": "B0CC5FKPKD",
+  "match": "similar",
+  "note": "Generic 3/4 in adjustable hollow-braid whoopie",
+  "title": "Arbo Space 3/4 LPX 12 Strand Hollow Braid Whoopie Sling"
+ },
+ "/rigging/rigging-slings/adjustable-slings/5-8-whoopie-sling/": {
+  "asin": "B0BLT4HGWV",
+  "match": "similar",
+  "note": "Generic 5/8 in adjustable whoopie",
+  "title": "Pelican Rope Brainiac Arborist Whoopie Sling 5/8 in"
+ },
+ "/rigging/rigging-slings/crane-slings/5-8-x-20-premium-crane-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only single-eye 5/8x20 slings found (eyes at both ends not matched)",
+  "title": ""
+ },
+ "/rigging/rigging-slings/crane-slings/endless-loop-round-slings/": {
+  "asin": "B0821V9RKZ",
+  "match": "similar",
+  "note": "Generic polyester endless round sling",
+  "title": "20' Endless Loop Strap Polyester Round Sling Blue"
+ },
+ "/rigging/rigging-slings/heavy-duty-slings/1-2-bull-rope-rigging-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only wire rope slings found, not fiber bull rope",
+  "title": ""
+ },
+ "/rigging/rigging-slings/heavy-duty-webbing-slings/": {
+  "asin": "B07CY28447",
+  "match": "similar",
+  "note": "Generic sewn eye webbing sling",
+  "title": "Chenango Supply 4x6' Polyester 2-ply Eye & Eye Sling"
+ },
+ "/rigging/rigging-slings/light-duty-slings/cmi-heavy-duty-loop-runners/": {
+  "asin": "B001OPJLA0",
+  "match": "variant",
+  "note": "No 'heavy duty loop runner' found; closest CMI sewn runner",
+  "title": "CMI Sewn Runner 1x30"
+ },
+ "/rigging/rigging-slings/ring-slings/double-head-rigging-sling-3-4-x-25-long/": {
+  "asin": null,
+  "match": "none",
+  "note": "No double-eye 3/4x25 sling found",
   "title": ""
  },
  "/rings-and-other-hardware/tfb-20-cerebrus-rigging-block/": {
@@ -1145,6 +2003,72 @@
   "note": "Model unspecified in our name; FR6-L is one Tylaska low friction ring, low confidence",
   "title": "Tylaska Low Friction Ring (FR6-L Low Friction Ring, Aluminum)"
  },
+ "/rope-bags/courant-cargo-bag-50l-blue/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Courant Cargo Bag 50L Blue found",
+  "title": ""
+ },
+ "/rope-lanyards/replacement-rope-lanyard-without-snaps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No snapless replacement rope lanyard found",
+  "title": ""
+ },
+ "/rope/accessory-cord/sterling-shock-cord-by-the-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sterling shock cord found",
+  "title": ""
+ },
+ "/rope/climbing-rope/12-strand-climbing-rope/samson-1-2-arbor-plex/": {
+  "asin": "B0179XIU1G",
+  "match": "exact",
+  "note": "Same brand/model/diameter",
+  "title": "Samson Arbor-Plex 12-Strand 1/2in Climbing Rope 120'"
+ },
+ "/rope/climbing-rope/16-strand-climbing-rope/teufelberger-safety-blue-white-climbing-rope/": {
+  "asin": "B08FCXR13F",
+  "match": "variant",
+  "note": "Same model, different color (no blue/white found)",
+  "title": "Teufelberger Braided Safety Blue 1/2in x 147ft Orange/White"
+ },
+ "/rope/climbing-rope/16-strand-climbing-rope/teufelberger-ultra-vee-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Ultra-Vee listing found",
+  "title": ""
+ },
+ "/rope/climbing-rope/24-strand-climbing-rope/petzl-control-12-5mm-climbing-rope/": {
+  "asin": "B085DJ43NN",
+  "match": "exact",
+  "note": "Same brand/model/diameter",
+  "title": "Petzl Control 12.5mm Rope Orange 60M"
+ },
+ "/rope/climbing-rope/static-climbing-rope/sterling-11mm-htp-static-climbing-rope/": {
+  "asin": "B08SR3561W",
+  "match": "variant",
+  "note": "Sterling HTP 11mm; length/color differ; title lacks brand",
+  "title": "HTP Static Climbing Line 7/16in (11mm) x 600' Orange"
+ },
+ "/rope/climbing-rope/static-climbing-rope/sterling-workpro-12-5mm-static-climbing-rope/": {
+  "asin": "B081HH54VP",
+  "match": "exact",
+  "note": "Same brand/model/diameter",
+  "title": "Sterling WorkPro 1/2in (12.5mm) x 200' Neon Green Static Rope"
+ },
+ "/rope/rigging-rope/samson-1-2-rigging-rope/": {
+  "asin": "B07JMWNY2F",
+  "match": "variant",
+  "note": "Samson 1/2in rigging rope; model uncertain",
+  "title": "Samson Pro-Master 1/2in x 150' Rigging Rope"
+ },
+ "/rope/rigging-rope/samson-3-4-arbor-plex-rigging-rope/": {
+  "asin": "B01FSYZLDS",
+  "match": "exact",
+  "note": "Samson Arbor-Plex 3/4in (may be unavailable)",
+  "title": "Riggin Line Rope Rigging Samson Arbor-Plex 3/4in x 150'"
+ },
  "/rope/rigging-rope/samson-stable-braid-3-4-rigging-rope/": {
   "asin": "B07NQNCP38",
   "match": "exact",
@@ -1157,11 +2081,161 @@
   "note": "Searched; no 3/8 Stable Braid listing found",
   "title": ""
  },
+ "/rope/rigging-rope/samson-stable-braid-5-8-rigging-rope/": {
+  "asin": "B07NQQ74HR",
+  "match": "exact",
+  "note": "Same model/diameter; length/color chosen",
+  "title": "Samson Stable Braid Rigging Rope Yellow 5/8in x 200'"
+ },
  "/rope/rigging-rope/samson-stable-braid-9-16-rigging-rope/": {
   "asin": "B07F4DZ8VP",
   "match": "exact",
   "note": "Same brand/model/diameter; 200' hank",
   "title": "Samson Stable Braid (Red) 9/16\" x 200'"
+ },
+ "/rope/rope-care-and-splicing/all-gear-heavy-duty-chafe-sleeve/": {
+  "asin": null,
+  "match": "none",
+  "note": "No All Gear chafe sleeve found",
+  "title": ""
+ },
+ "/rope/rope-care-and-splicing/chafe-sleeve/": {
+  "asin": "B0791VRQDP",
+  "match": "similar",
+  "note": "Generic slide-on rope chafe sleeve",
+  "title": "WILDKEN Rope Protector Arborist Sleeve"
+ },
+ "/rope/tech-cordage/teufelberger-epicord-8mm-hitch-cord-by-the-foot/": {
+  "asin": "B08SR44ZX3",
+  "match": "variant",
+  "note": "Teufelberger EPIcord 8mm but pre-spliced, not by-the-foot",
+  "title": "Rope Logic EPIcord Moddled Orange 8mm x 32in Spliced Prusik"
+ },
+ "/rope/tech-cordage/yale-r-i-n-g-rope-by-the-foot/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale R.I.N.G. rope found",
+  "title": ""
+ },
+ "/saddle-parts-and-shoulder-harnesses/tree-access-srt-chest-harness/": {
+  "asin": "B08V9FQNN6",
+  "match": "exact",
+  "note": "Tree Access chest harness for SRT",
+  "title": "CAMP Tree Access ANSI ST Chest Harness"
+ },
+ "/saddle-storage/isc-nessie-lanyard-management-clip/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC Nessie found",
+  "title": ""
+ },
+ "/saddle-storage/rock-exotica-transporter-xl/": {
+  "asin": "B01N94RLLS",
+  "match": "variant",
+  "note": "XL size not found; standard Transporter",
+  "title": "Rock Exotica Transporter"
+ },
+ "/safety/communication/3m-peltor-lite-com-frs/": {
+  "asin": "B08J7TNMB3",
+  "match": "exact",
+  "note": "Same model; sold as case of 10",
+  "title": "3M PELTOR LiteCom FRS Headset MT53H7P3E4602-NA Hard Hat Attached 10/Case"
+ },
+ "/safety/communication/sena-33i-bluetooth-communication-system-with-mesh-intercom/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sena 33i found",
+  "title": ""
+ },
+ "/safety/communication/sena-integrated-communication-helmet-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "No specific Sena integrated helmet system match (name too generic)",
+  "title": ""
+ },
+ "/safety/eye-protection/erb-safety-o-n-e-live-free-camo-safety-glasses/": {
+  "asin": null,
+  "match": "none",
+  "note": "Model ERB 18043 appears to exist but no dp ASIN surfaced",
+  "title": "ERB 18043 One Nation Live Free Safety Glasses Camo Frame"
+ },
+ "/safety/eye-protection/kask-zenith-visor/": {
+  "asin": "B06XVWFJG3",
+  "match": "exact",
+  "note": "Clear visor kit",
+  "title": "KASK Safety Visor KIT ZEN VISOR, 500-Clear"
+ },
+ "/safety/eye-protection/petzl-visor-2018-alveo-and-vertex-helmets/": {
+  "asin": "B00GBFAS9G",
+  "match": "variant",
+  "note": "Tinted version; clear visor not found",
+  "title": "Petzl Vizir Shadow Eye Shield for Vertex and ALVEO"
+ },
+ "/safety/fall-protection/estex-fred-the-rescue-dummy/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching listing",
+  "title": ""
+ },
+ "/safety/first-aid/bloodstopper-gauze-kit/": {
+  "asin": "B0087P51PY",
+  "match": "variant",
+  "note": "BloodStopper compress; not a 'gauze kit' listing",
+  "title": "Honeywell Swift First Aid Bloodstopper Dressing"
+ },
+ "/safety/first-aid/jag-system/": {
+  "asin": "B01N2LGQIO",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "Petzl JAG System Pre-Rigged Haul Kit"
+ },
+ "/safety/first-aid/woundseal-stop-bleeding-powder/": {
+  "asin": "B01MRLD8IT",
+  "match": "exact",
+  "note": "Same brand/product",
+  "title": "WoundSeal Powder 4 Single-Use Applications"
+ },
+ "/safety/gloves/husqvarna-technical-gloves/": {
+  "asin": "B07JKT6TB2",
+  "match": "exact",
+  "note": "Size varies",
+  "title": "Husqvarna Technical Gloves - Medium"
+ },
+ "/safety/gloves/wonder-gloves/": {
+  "asin": "B006XNFIKU",
+  "match": "variant",
+  "note": "Closest Wonder Grip coated glove; confirm line",
+  "title": "Wonder Grip WG310M Extra Grip Seamless Knit Work Gloves"
+ },
+ "/safety/hearing-protection/husqvarna-ear-muff-hygiene-set/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna ear muff hygiene set found",
+  "title": ""
+ },
+ "/safety/hearing-protection/peltor-optime-helmet-mounted-muffs-white/": {
+  "asin": "B009POIKWC",
+  "match": "variant",
+  "note": "Optime helmet-mount; white color/model unconfirmed",
+  "title": "3M PELTOR Optime 101 Earmuffs H7P3E-01 Hard Hat Attached"
+ },
+ "/safety/traffic-control/18-drop-zone-cone/": {
+  "asin": "B07VGTX4VQ",
+  "match": "similar",
+  "note": "18in orange cone, multipack",
+  "title": "Xpose Safety 18 Inch Orange Traffic Cones, 12-Pack"
+ },
+ "/safety/traffic-control/48-tree-work-ahead-sign/": {
+  "asin": "B004XM1PGO",
+  "match": "similar",
+  "note": "48in Tree Work Ahead sign; diamond shape unconfirmed",
+  "title": "48in Safety Sign Tree Work Ahead"
+ },
+ "/safety/traffic-control/hi-viz-green-safety-vest-mesh-class-2-size-xl/": {
+  "asin": "B004EYIFR8",
+  "match": "similar",
+  "note": "Class 2 green mesh vest XL",
+  "title": "Safety Vest Class 2 Surveyor Hi-Vis Green Mesh XLarge"
  },
  "/shop-all/8mm-sirius-thimble-prusik/": {
   "asin": null,
@@ -1174,6 +2248,54 @@
   "match": "variant",
   "note": "Same brand/line; listing is UL-rated Pro 1, Type C and black not confirmed",
   "title": "Arbortec Breatheflex Pro 1 UL Rated Chainsaw Pants"
+ },
+ "/shop-all/clogger-zero-light-and-cool-ul-chainsaw-chaps-apron-style/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Clogger Zero Light and Cool apron found",
+  "title": ""
+ },
+ "/shop-all/endless-loop-polyester-round-sling-7-x-20-blue/": {
+  "asin": "B01IB3FOQM",
+  "match": "similar",
+  "note": "Generic blue endless polyester round sling 7x20",
+  "title": "Liftex ENR7X20PD Endless Round Sling 20ft"
+ },
+ "/shop-all/husqvarna-k770-power-cutter/": {
+  "asin": "B0H6NP4ZJL",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Husqvarna K770 14-Inch Gas Power Cutter"
+ },
+ "/shop-all/husqvarna-titanium-xpro-trimmer-line/": {
+  "asin": "B000N1XPMG",
+  "match": "variant",
+  "note": "Titanium Force; no X-Pro name found",
+  "title": "Husqvarna Titanium Force 0.095 String Trimmer Line 639005102"
+ },
+ "/shop-all/husqvarna-trimforce-trimmer-line/": {
+  "asin": "B0B135C5MY",
+  "match": "exact",
+  "note": "Same line; .095 chosen",
+  "title": "Husqvarna Trim Force .095 String Trimmer Line 1lb"
+ },
+ "/shop-all/notch-fusion-rope-wrench-tether/": {
+  "asin": "B08QYF2GQR",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "Notch Fusion Rope Wrench Tether (54440)"
+ },
+ "/shop-all/polymer-hook-with-standard-end/": {
+  "asin": null,
+  "match": "none",
+  "note": "No polymer tool hook found",
+  "title": ""
+ },
+ "/shop-all/stars-and-stripes-adjustable-friction-saver/": {
+  "asin": "B085VH3343",
+  "match": "similar",
+  "note": "Generic adjustable two-ring friction saver",
+  "title": "Pelican Rope 5/8in Prusik Arborist Friction Saver with Rings 8ft"
  },
  "/shop/product/180-samson-zing-it-throwline/": {
   "asin": "B00340B8ZE",
@@ -1198,5 +2320,53 @@
   "match": "none",
   "note": "Searched: no Edelrid shorty hank listing found",
   "title": ""
+ },
+ "/shop/product/masdaam-continuous-rope-puller-kit/": {
+  "asin": "B00USO5YTK",
+  "match": "variant",
+  "note": "Maasdam continuous rope puller; not kit",
+  "title": "Maasdam PRR-0 Pow'R Rope Puller"
+ },
+ "/spurs/notch-ergo-climbers/": {
+  "asin": "B0DTMX6CVV",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "Notch Ergo Steel Climbers (99695T)"
+ },
+ "/static-climbing-rope/yale-phantom-pink-and-black-11mm-climbing-rope/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Phantom found",
+  "title": ""
+ },
+ "/swivels/camp-enigma-swivel/": {
+  "asin": "B0CCS1C4K5",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "CAMP Enigma Openable Swivel"
+ },
+ "/tree-climbing-pants/clogger-zero-ultra-mens-premium-chainsaw-pants/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Zero Ultra found (only Zero Mk II)",
+  "title": ""
+ },
+ "/wedges/k-h-red-head-felling-wedge/": {
+  "asin": "B002LRON8U",
+  "match": "variant",
+  "note": "Same brand/model; size not specified",
+  "title": "10in K&H Red Head Falling Wedge (Each)"
+ },
+ "/wrenches-and-files/husqvarna-combination-tool-wrench/": {
+  "asin": "B004BQ1AMG",
+  "match": "exact",
+  "note": "Husqvarna scrench",
+  "title": "Husqvarna Chainsaw Scrench 531300385"
+ },
+ "/wrenches-and-files/pferd-classic-round-files-per-dozen/": {
+  "asin": "B08Q4WL2DY",
+  "match": "variant",
+  "note": "Sold as 6-pack, not dozen",
+  "title": "Pferd Chain Saw File Round 8in x 3/16in Classic Line 17038"
  }
 }
