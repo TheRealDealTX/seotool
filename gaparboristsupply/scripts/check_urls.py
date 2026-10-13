@@ -9,6 +9,7 @@ import csv
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -40,10 +41,15 @@ opener = urllib.request.build_opener(NoRedirect)
 
 
 def hit(u):
-    try:
-        return opener.open(base + u).status, None
-    except urllib.error.HTTPError as e:
-        return e.code, e.headers.get('Location')
+    for attempt in range(4):
+        try:
+            return opener.open(base + u, timeout=30).status, None
+        except urllib.error.HTTPError as e:
+            return e.code, e.headers.get('Location')
+        except (urllib.error.URLError, ConnectionError, TimeoutError):
+            if attempt == 3:
+                raise
+            time.sleep(2 ** attempt)
 
 
 bad = 0
