@@ -1,12 +1,18 @@
 # holybiblewords.com — Bible web app
 
 A PHP + vanilla-JS Bible app that replaces the WordPress site at
-[holybiblewords.com](https://holybiblewords.com). Two versions:
+[holybiblewords.com](https://holybiblewords.com). Three versions:
 
 | URL prefix | Version | Text source | Coverage |
 | --- | --- | --- | --- |
 | `/ta/` | King James Version (KJV) | eBible.org `eng-kjv` (public domain) | complete, 31,102 verses |
 | `/ml/` | Ang Biblia, 2011 (Cebuano) | the verses published on the old WordPress site | Genesis – 2 Kings, 10,026 verses |
+| `/ceb/` | Biblica® Open Ang Pulong sa Dios™ (Cebuano, "APSD") | eBible.org `cebocb` (CC BY-SA 4.0), used unchanged | complete |
+
+Verses a version doesn't have are filled from the next version in its chain, with a
+badge naming the source: **AB → APSD → KJV**, **APSD → KJV**. Ang Pulong sa Dios
+sometimes joins verses (e.g. 1 Cronicas 8:14–16). Those show as one range, and the
+joined verse URLs (`/ceb/1chronicles/8/15/`) 301 to the start of the range.
 
 The URL format of the old site is kept exactly: `/{ta|ml}/`, `/{ver}/{book}/`,
 `/{ver}/{book}/{chapter}/`, `/{ver}/{book}/{chapter}/{verse}/` with the same book
@@ -18,14 +24,22 @@ search and `wp-*` paths redirect to their new equivalents.
 
 Ang Biblia, 2011 is © Philippine Bible Society. Without permission it may only be
 quoted up to 500 verses. The site carries only what the old site already published,
-and verses that are missing show the KJV in their place, clearly labelled, with
-`noindex` on pages that have no Ang Biblia text. To add the rest, get the licensed
+and verses that are missing show Ang Pulong sa Dios in their place, clearly
+labelled, with `noindex` on pages that have no Ang Biblia text. To add the rest, get the licensed
 text from PBS (translations@bible.org.ph), drop it into `sources/ml-licensed/`
 (format in that folder's README) and rebuild. Nothing else needs changing.
 
+## Ang Pulong sa Dios — license terms
+
+CC BY-SA 4.0 from Biblica: free to publish (ads included), on condition that the text
+and its title stay unchanged and the copyright notice is shown. The notice is in
+`VERSIONS["ceb"]` in `tools/build_data.py`. It appears in the footer of every page, under
+each chapter and verse that uses it, and on `/ceb/`. Don't edit the text. If it ever
+is changed, the license requires publishing a list of the changes.
+
 ## Features
 
-- **Seamless version switching.** The KJV / AB toggle in the header keeps you on the same
+- **Seamless version switching.** The KJV / AB / APSD toggle in the header keeps you on the same
   book, chapter and verse, at the same scroll position, without a page reload.
 - **Navigation.** A book → chapter → verse picker (filter by name or type `John 3:16`),
   prev/next chapter, swipe left/right on phones, ← → keys, and a search box that
@@ -36,7 +50,7 @@ text from PBS (translations@bible.org.ph), drop it into `sources/ml-licensed/`
 - **Verse actions.** Tap a verse to highlight it (4 colors), bookmark it, add a note, copy,
   share, make a 1080×1080 image, compare versions, or listen. Highlights are tied to the
   verse, not the version, so they carry across.
-- **Side-by-side view** of both versions, **listen** (text-to-speech), and **full-text
+- **Side-by-side view** of two versions (choose which in Reading settings), **listen** (text-to-speech), and **full-text
   search** with OT/NT filters and "exact phrase" support.
 - **Bible in a Year** reading plan with progress, plus a *Mark as read* button on chapters.
 - **Saved**: bookmarks, highlights, notes and history. All of it stays on the device, in localStorage.
@@ -56,7 +70,7 @@ text from PBS (translations@bible.org.ph), drop it into `sources/ml-licensed/`
 | `public/` | **The deploy root** (upload this to `public_html`) |
 | `public/index.php` | Front controller: routing, redirects |
 | `public/lib/` | PHP: data access + reference parser + search (`bible.php`), page chrome (`layout.php`), pages, JSON API, sitemaps. Blocked from direct access by `.htaccess` |
-| `public/data/` | Generated Bible data: `books.json`, `versions.json`, `votd.json`, `{ta,ml}/{book}.json`, `{ta,ml}/search.tsv` |
+| `public/data/` | Generated Bible data: `books.json`, `versions.json`, `votd.json`, `{ta,ml,ceb}/{book}.json`, `{ta,ml,ceb}/search.tsv` |
 | `public/assets/` | `css/app.css`, `js/app.js` (the whole client app), icons |
 | `public/sw.js`, `manifest.webmanifest` | Service worker and PWA manifest |
 | `tools/build_data.py` | Builds `public/data/` from the sources |
@@ -70,7 +84,7 @@ JSON API (used by the app, cacheable): `/api/chapter/{ver}/{book}/{ch}`,
 ## Develop
 
 ```sh
-python3 tools/build_data.py        # downloads the KJV on first run
+python3 tools/build_data.py        # downloads the KJV and Ang Pulong sa Dios on first run
 python3 tools/build_content.py
 php -S localhost:8080 -t public tools/dev-router.php
 ```

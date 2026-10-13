@@ -4,7 +4,7 @@
 const SITE_URL  = 'https://holybiblewords.com';
 const SITE_NAME = 'Holy Bible Words';
 const DATA_DIR  = __DIR__ . '/../data';
-const ASSET_VER = '1';
+const ASSET_VER = '2';
 
 function versions(): array {
     static $v;
@@ -31,9 +31,9 @@ function book_name(array $book, string $ver): string {
     return $book['names'][versions()[$ver]['nameKey']];
 }
 
-function other_version(string $ver): string {
-    foreach (versions() as $k => $_) if ($k !== $ver) return $k;
-    return $ver;
+/** Versions consulted, in order, when $ver lacks a verse (e.g. ml -> ceb -> ta). */
+function version_chain(string $ver): array {
+    return array_merge([$ver], versions()[$ver]['fallback'] ?? []);
 }
 
 /** Chapters of a book: list of lists of verse text (null = not available). */
@@ -63,13 +63,51 @@ function e(?string $s): string {
     return htmlspecialchars($s ?? '', ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
-/** Verse text -> HTML. KJV [brackets] mark translator-supplied words. */
-function verse_html(string $text): string {
-    return preg_replace('/\[([^\]]*)\]/', '<i>$1</i>', e($text));
+/** Verse text -> HTML. In the KJV, [brackets] mark translator-supplied words (italics). */
+function verse_html(string $text, string $ver = 'ta'): string {
+    return empty(versions()[$ver]['italics']) ? e($text) : preg_replace('/\[([^\]]*)\]/', '<i>$1</i>', e($text));
 }
 
-function verse_plain(string $text): string {
-    return str_replace(['[', ']'], '', $text);
+function verse_plain(string $text, string $ver = 'ta'): string {
+    return empty(versions()[$ver]['italics']) ? $text : str_replace(['[', ']'], '', $text);
+}
+
+/**
+ * A chapter as displayed in $ver: one row per rendered verse, each
+ * ['n' => first verse, 'to' => last verse (ranges), 'text', 'src' => version the text came from].
+ * Missing verses are filled from the version's fallback chain; verses a
+ * translation joined with the previous one ("") extend that row's range.
+ */
+function resolve_chapter(string $ver, string $slug, int $c): array {
+    static $cache = [];
+    $key = "$ver/$slug/$c";
+    if (isset($cache[$key])) return $cache[$key];
+    $rows = [];
+    $count = books()[$slug]['verses'][$c - 1] ?? 0;
+    for ($n = 1; $n <= $count; $n++) {
+        foreach (version_chain($ver) as $src) {
+            $t = verse_text($src, $slug, $c, $n);
+            if ($t === null) continue;
+            if ($t === '') {
+                $last = count($rows) - 1;
+                if ($last >= 0 && $rows[$last]['src'] === $src && $rows[$last]['to'] === $n - 1) { $rows[$last]['to'] = $n; continue 2; }
+                continue;   // joined verse whose start came from another version: keep looking
+            }
+            $rows[] = ['n' => $n, 'to' => $n, 'text' => $t, 'src' => $src];
+            continue 2;
+        }
+    }
+    return $cache[$key] = $rows;
+}
+
+/** The displayed row that contains verse $v, or null. */
+function verse_display(string $ver, string $slug, int $c, int $v): ?array {
+    foreach (resolve_chapter($ver, $slug, $c) as $row) if ($v >= $row['n'] && $v <= $row['to']) return $row;
+    return null;
+}
+
+function range_label(array $row): string {
+    return $row['n'] === $row['to'] ? (string)$row['n'] : $row['n'] . '–' . $row['to'];
 }
 
 function url_for(string $ver, ?string $book = null, ?int $ch = null, ?int $v = null): string {

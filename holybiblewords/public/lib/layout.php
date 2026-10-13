@@ -105,11 +105,12 @@ if(s.lh)d.style.setProperty('--reader-lh',s.lh);}catch(e){}
     <nav class="foot-links" aria-label="Footer">
       <a href="/ta/">King James Version (KJV)</a>
       <a href="/ml/">Ang Biblia, 2011</a>
+      <a href="/ceb/">Ang Pulong sa Dios</a>
       <a href="/blog/">Blog</a>
       <a href="/app/">Get the app</a>
       <a href="/privacy-policy/">Privacy Policy</a>
     </nav>
-    <p class="copy">KJV: public domain. <?= e(versions()['ml']['copyright']) ?></p>
+    <div class="copy"><?= credits(array_keys(versions())) ?></div>
   </div>
 </footer>
 <nav class="tabbar" aria-label="App">

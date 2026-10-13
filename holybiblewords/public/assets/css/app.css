@@ -327,3 +327,6 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 @keyframes fade { from { opacity: .4; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 @media print { .topbar, .tabbar, .reader-bar, .site-footer, .verse-actions, .chapter-foot { display: none !important; } }
+.copy .ver-credit { text-align: left; margin: 0 0 6px; }
+.copyright-page .ver-credit { text-align: left; font-size: .85rem; }
+.v-anchor { display: inline; }

@@ -11,7 +11,7 @@ function books_grid(string $ver, string $testament): string {
     $h = '<ul class="book-grid">';
     foreach (books() as $slug => $b) {
         if ($b['t'] !== $testament) continue;
-        $partial = $b['available'][$ver] === 0 ? ' class="na" title="Not yet available in this version"' : '';
+        $partial = $b['available'][$ver] === 0 ? ' class="na" title="Not yet available in ' . e(versions()[$ver]['label']) . '"' : '';
         $h .= '<li><a href="' . url_for($ver, $slug) . '"' . $partial . ' data-book="' . $slug . '">'
             . e(book_name($b, $ver)) . '<small>' . count($b['verses']) . '</small></a></li>';
     }
@@ -21,22 +21,41 @@ function books_grid(string $ver, string $testament): string {
 function votd_card(string $ver, string $ymd, bool $h1 = false): string {
     [$slug, $c, $v] = votd_for($ymd);
     $book = books()[$slug];
-    $text = verse_text($ver, $slug, $c, $v);
-    $shownVer = $ver;
-    if ($text === null) { $shownVer = 'ta'; $text = verse_text('ta', $slug, $c, $v); }
+    $row = verse_display($ver, $slug, $c, $v);
+    $text = $row['text'];
+    $shownVer = $row['src'];
     $date = DateTimeImmutable::createFromFormat('!Y-m-d', $ymd)->format('l, F j, Y');
     $tag = $h1 ? 'h1' : 'h2';
-    $note = $shownVer !== $ver ? '<p class="note">Not yet available in ' . e(versions()[$ver]['label']) . ' — showing KJV.</p>' : '';
+    $note = fill_note($ver, $shownVer);
     return '<section class="votd" data-votd data-date="' . $ymd . '" data-ver="' . $ver . '" data-ref="' . "$slug.$c.$v" . '">'
         . '<div class="votd-head"><' . $tag . '>' . icon('sun') . ' Verse of the Day</' . $tag . '><time datetime="' . $ymd . '">' . $date . '</time></div>'
-        . '<blockquote class="votd-text" lang="' . e(versions()[$shownVer]['lang']) . '">' . verse_html($text) . '</blockquote>'
-        . '<p class="votd-ref"><a href="' . url_for($ver, $slug, $c, $v) . '">' . e(ref_label($book, $shownVer, $c, $v)) . ' <span class="badge">' . e(versions()[$shownVer]['short']) . '</span></a></p>'
+        . '<blockquote class="votd-text" lang="' . e(versions()[$shownVer]['lang']) . '">' . verse_html($text, $shownVer) . '</blockquote>'
+        . '<p class="votd-ref"><a href="' . url_for($ver, $slug, $c, $v) . '">' . e(book_name($book, $shownVer) . " $c:" . range_label($row)) . ' <span class="badge">' . e(versions()[$shownVer]['short']) . '</span></a></p>'
         . $note
         . '<div class="votd-actions">'
         . '<a class="btn" href="' . url_for($ver, $slug, $c) . '#v' . $v . '">' . icon('book') . ' Read chapter</a>'
         . '<button class="btn ghost" type="button" data-action="share-votd">' . icon('share') . ' Share</button>'
         . '<button class="btn ghost" type="button" data-action="image-votd">' . icon('image') . ' Image</button>'
         . '</div></section>';
+}
+
+/** "Not yet available in X — showing Y." when a fill-in version is used. */
+function fill_note(string $ver, string $src): string {
+    if ($src === $ver) return '';
+    return '<p class="note">Not yet available in ' . e(versions()[$ver]['label']) . ' — showing ' . e(versions()[$src]['label']) . '.</p>';
+}
+
+/** Credit lines for every version whose text appears on a page. */
+function credits(array $vers): string {
+    $h = '';
+    foreach (array_unique($vers) as $k) {
+        $v = versions()[$k];
+        $title = $v['fullTitle'] ?? $v['label'];
+        $h .= '<p class="ver-credit">' . (str_starts_with($v['copyright'], $title) ? '' : e($title) . ' — ') . e($v['copyright'])
+            . (isset($v['notice']) ? ' ' . e($v['notice']) : '')
+            . (isset($v['license']) ? ' <a href="' . e($v['license']) . '" rel="license noopener" target="_blank">License</a>' : '') . '</p>';
+    }
+    return $h;
 }
 
 function jump_box(string $ver, string $value = '', bool $autofocus = false): string {
@@ -60,7 +79,7 @@ function page_home(): array {
         $n = array_sum(array_map(fn($b) => $b['available'][$k], books()));
         $pct = round($n / 31102 * 100);
         $vcards .= '<a class="ver-card" href="/' . $k . '/" data-ver="' . $k . '"><strong>' . e($v['label']) . '</strong>'
-            . '<span>' . ($k === 'ta' ? 'English · complete Old and New Testament' : 'Cebuano · ' . ($pct < 100 ? "$pct% available, more coming" : 'complete')) . '</span>'
+            . '<span>' . e($v['desc']) . ($pct < 100 ? " · $pct% available, more coming" : '') . '</span>'
             . icon('right') . '</a>';
     }
     $body = '<section class="hero"><div class="wrap">'
@@ -84,7 +103,7 @@ function page_home(): array {
         'title' => 'Holy Bible Words | Read The Bible Online',
         'description' => 'Explore the Holy Bible online with Holy Bible Words – the complete King James Version and Ang Biblia, 2011, easy chapter and verse navigation, and an inspiring verse of the day.',
         'canonical' => '/', 'body' => $body, 'type' => 'home', 'ver' => $ver,
-        'switch' => ['ta' => '/ta/', 'ml' => '/ml/'],
+        'switch' => version_alternates(fn($k) => "/$k/"),
         'jsonld' => [
             ['@type' => 'WebSite', '@id' => SITE_URL . '/#website', 'url' => SITE_URL, 'name' => SITE_NAME, 'alternateName' => 'The Bible',
              'potentialAction' => ['@type' => 'SearchAction', 'target' => SITE_URL . '/search/?q={search_term_string}', 'query-input' => 'required name=search_term_string']],
@@ -140,16 +159,22 @@ function recommended_bibles(): string {
     return $h . '</div></section>';
 }
 
+function fill_names(string $ver): string {
+    $names = array_map(fn($k) => versions()[$k]['label'], versions()[$ver]['fallback'] ?? []);
+    return implode(', then ', $names);
+}
+
 function page_version(string $ver): array {
     $v = versions()[$ver];
     $n = array_sum(array_map(fn($b) => $b['available'][$ver], books()));
     $notice = $n < 31102 ? '<p class="notice">' . number_format($n) . ' of 31,102 verses are available in ' . e($v['label'])
-        . ' so far. Books not yet available are dimmed; their chapters open in KJV.</p>' : '';
+        . ' so far. Books not yet available are dimmed; their verses are shown from ' . e(fill_names($ver)) . ', clearly marked.</p>' : '';
     $body = '<div class="wrap">' . breadcrumbs([['Home', '/'], [$v['label'], null]])
-        . '<header class="page-head"><h1>' . e($v['label']) . '</h1><p class="muted">' . e($v['copyright']) . '</p></header>'
+        . '<header class="page-head"><h1>' . e($v['fullTitle'] ?? $v['label']) . '</h1><p class="muted">' . e($v['desc']) . '</p></header>'
         . jump_box($ver) . $notice
         . '<section class="books-section"><h2>Old Testament</h2>' . books_grid($ver, 'ot') . '</section>'
-        . '<section class="books-section"><h2>New Testament</h2>' . books_grid($ver, 'nt') . '</section></div>';
+        . '<section class="books-section"><h2>New Testament</h2>' . books_grid($ver, 'nt') . '</section>'
+        . '<section class="copyright-page"><h2>Copyright</h2>' . credits([$ver]) . '</section></div>';
     return [
         'title' => ($ver === 'ta' ? 'KJV' : $v['name']) . ' | ' . SITE_NAME,
         'description' => 'Read the ' . $v['label'] . ' Bible online. Choose a book of the Old or New Testament.',
@@ -169,9 +194,9 @@ function page_book(string $ver, string $slug): array {
         $grid .= '<li><a href="' . url_for($ver, $slug, $c) . '"' . $na . '>' . $c . '</a></li>';
     }
     $grid .= '</ul>';
-    $first = verse_text($ver, $slug, 1, 1);
-    $intro = $first ? '<blockquote class="book-open">' . verse_html($first) . ' <cite>' . e($name) . ' 1:1</cite></blockquote>' : '';
-    $notice = $book['available'][$ver] === 0 ? '<p class="notice">' . e($name) . ' is not yet available in ' . e(versions()[$ver]['label']) . '. Chapters open with the KJV text.</p>' : '';
+    $first = verse_display($ver, $slug, 1, 1);
+    $intro = $first ? '<blockquote class="book-open">' . verse_html($first['text'], $first['src']) . ' <cite>' . e(book_name($book, $first['src'])) . ' 1:' . range_label($first) . ' · ' . e(versions()[$first['src']]['short']) . '</cite></blockquote>' : '';
+    $notice = $book['available'][$ver] === 0 ? '<p class="notice">' . e($name) . ' is not yet available in ' . e(versions()[$ver]['label']) . '. Chapters open with the ' . e(fill_names($ver)) . ' text.</p>' : '';
     $crumbs = [['Home', '/'], [versions()[$ver]['label'], "/$ver/"], [$name, null]];
     $body = '<div class="wrap">' . breadcrumbs($crumbs)
         . '<header class="page-head"><h1>' . e($name) . '</h1><p class="muted">' . count($book['verses']) . ' chapter' . (count($book['verses']) > 1 ? 's' : '') . ' · ' . e(versions()[$ver]['label']) . '</p></header>'
@@ -199,7 +224,7 @@ function reader_bar(string $ver, string $slug, int $c, ?int $v = null): string {
         . '<span>' . e(book_name($book, $ver)) . ' ' . $c . ($v ? ":$v" : '') . '</span>' . icon('down') . '</button>'
         . $n
         . '<span class="reader-tools">'
-        . '<button type="button" class="icon-btn" data-action="parallel" aria-pressed="false" aria-label="Side-by-side with the other version" title="Side by side">' . icon('columns') . '</button>'
+        . '<button type="button" class="icon-btn" data-action="parallel" aria-pressed="false" aria-label="Side by side with another version" title="Side by side">' . icon('columns') . '</button>'
         . '<button type="button" class="icon-btn" data-action="listen" aria-label="Listen to this chapter" title="Listen">' . icon('play') . '</button>'
         . '</span></div>';
 }
@@ -213,18 +238,26 @@ function chapter_neighbors(string $slug, int $c): array {
     return [$prev, $next];
 }
 
+/**
+ * The chapter's verses. A row covering a range ("14–16") carries empty anchors
+ * for the joined verses so #v15 links still land on it. Rows filled from another
+ * version get class "fb" and a badge naming that version.
+ */
 function render_verses(string $ver, string $slug, int $c, ?int $mark = null): string {
-    $verses = chapter_text($ver, $slug, $c);
-    $kjv = $ver === 'ta' ? $verses : chapter_text('ta', $slug, $c);
     $h = '';
-    foreach ($kjv as $i => $fallback) {
-        $n = $i + 1;
-        $t = $verses[$i] ?? null;
-        $cls = 'v' . ($mark === $n ? ' marked' : '');
+    foreach (resolve_chapter($ver, $slug, $c) as $row) {
+        $n = $row['n'];
+        $cls = 'v' . ($mark !== null && $mark >= $n && $mark <= $row['to'] ? ' marked' : '');
         $extra = '';
-        if ($t === null) { $t = $fallback; $cls .= ' fb'; $extra = ' <span class="fb-tag" title="Not yet available in ' . e(versions()[$ver]['label']) . '">KJV</span>'; }
-        $h .= '<span class="' . $cls . '" id="v' . $n . '" data-v="' . $n . '"><a class="vn" href="' . url_for($ver, $slug, $c, $n) . '">' . $n . '</a> '
-            . verse_html($t) . $extra . '</span> ';
+        if ($row['src'] !== $ver) {
+            $cls .= ' fb';
+            $extra = ' <span class="fb-tag" data-src="' . $row['src'] . '" title="Not yet available in ' . e(versions()[$ver]['label']) . '; from ' . e(versions()[$row['src']]['label']) . '">' . e(versions()[$row['src']]['short']) . '</span>';
+        }
+        $anchors = '';
+        for ($j = $n + 1; $j <= $row['to']; $j++) $anchors .= '<span class="v-anchor" id="v' . $j . '"></span>';
+        $h .= '<span class="' . $cls . '" id="v' . $n . '" data-v="' . $n . '"' . ($row['to'] > $n ? ' data-to="' . $row['to'] . '"' : '') . '>' . $anchors
+            . '<a class="vn" href="' . url_for($ver, $slug, $c, $n) . '">' . range_label($row) . '</a> '
+            . verse_html($row['text'], $row['src']) . $extra . '</span> ';
     }
     return $h;
 }
@@ -232,12 +265,15 @@ function render_verses(string $ver, string $slug, int $c, ?int $mark = null): st
 function page_chapter(string $ver, string $slug, int $c): array {
     $book = books()[$slug];
     $name = book_name($book, $ver);
-    $avail = chapter_available($ver, $slug, $c);
+    $rows = resolve_chapter($ver, $slug, $c);
+    $srcs = array_values(array_unique(array_column($rows, 'src')));
+    $filled = array_sum(array_map(fn($r) => $r['src'] !== $ver ? $r['to'] - $r['n'] + 1 : 0, $rows));
     $total = $book['verses'][$c - 1];
     $notice = '';
-    if ($avail < $total) {
-        $notice = '<p class="notice">' . ($avail === 0 ? 'This chapter is' : ($total - $avail) . ' verse' . ($total - $avail > 1 ? 's' : '') . ' in this chapter are')
-            . ' not yet available in ' . e(versions()[$ver]['label']) . ' and ' . ($avail === 0 ? 'is' : 'are') . ' shown from the KJV.</p>';
+    if ($filled > 0) {
+        $from = implode(' and ', array_map(fn($k) => versions()[$k]['label'], array_diff($srcs, [$ver])));
+        $notice = '<p class="notice">' . ($filled >= $total ? 'This chapter is' : $filled . ' verse' . ($filled > 1 ? 's' : '') . ' in this chapter ' . ($filled > 1 ? 'are' : 'is'))
+            . ' not yet available in ' . e(versions()[$ver]['label']) . ' and ' . ($filled >= $total || $filled === 1 ? 'is' : 'are') . ' shown from ' . e($from) . ', marked with a badge.</p>';
     }
     [$prev, $next] = chapter_neighbors($slug, $c);
     $foot = '<nav class="chapter-foot" aria-label="Chapter">'
@@ -251,13 +287,12 @@ function page_chapter(string $ver, string $slug, int $c): array {
         . '<h1><span class="book-title">' . e($name) . '</span> <span class="ch-num">' . $c . '</span></h1>'
         . $notice
         . '<div class="verses">' . render_verses($ver, $slug, $c) . '</div>'
-        . '</article>' . $foot . '<p class="ver-credit">' . e(versions()[$ver]['label']) . ' — ' . e(versions()[$ver]['copyright']) . '</p></div>';
-    $first = verse_text($ver, $slug, $c, 1) ?? verse_text('ta', $slug, $c, 1);
+        . '</article>' . $foot . credits($srcs) . '</div>';
     return [
         'title' => "$name $c | " . SITE_NAME,
-        'description' => "Read $name chapter $c (" . versions()[$ver]['short'] . '): ' . mb_strimwidth(verse_plain($first), 0, 120, '…'),
+        'description' => "Read $name chapter $c (" . versions()[$ver]['short'] . '): ' . mb_strimwidth(verse_plain($rows[0]['text'], $rows[0]['src']), 0, 120, '…'),
         'canonical' => url_for($ver, $slug, $c), 'body' => $body, 'ver' => $ver, 'type' => 'chapter',
-        'noindex' => $avail === 0,
+        'noindex' => chapter_available($ver, $slug, $c) === 0,
         'switch' => version_alternates(fn($k) => url_for($k, $slug, $c)),
         'alternates' => version_alternates(fn($k) => url_for($k, $slug, $c)),
         'data' => ['ver' => $ver, 'book' => $slug, 'ch' => $c],
@@ -268,37 +303,40 @@ function page_chapter(string $ver, string $slug, int $c): array {
 function page_verse(string $ver, string $slug, int $c, int $v): array {
     $book = books()[$slug];
     $name = book_name($book, $ver);
-    $text = verse_text($ver, $slug, $c, $v);
-    $missing = $text === null;
-    $shown = $missing ? verse_text('ta', $slug, $c, $v) : $text;
-    $label = ref_label($book, $ver, $c, $v);
+    $row = verse_display($ver, $slug, $c, $v);
+    $src = $row['src'];
+    $missing = $src !== $ver;
+    $label = book_name($book, $src) . " $c:" . range_label($row);
     $count = $book['verses'][$c - 1];
 
     $compare = '';
     foreach (versions() as $k => $vv) {
         if ($k === $ver) continue;
-        $ot = verse_text($k, $slug, $c, $v);
-        if ($ot === null) continue;
-        $compare .= '<div class="compare-item" lang="' . e($vv['lang']) . '"><h2><a href="' . url_for($k, $slug, $c, $v) . '">' . e(ref_label($book, $k, $c, $v)) . ' · ' . e($vv['short']) . '</a></h2><p>' . verse_html($ot) . '</p></div>';
+        $t = verse_text($k, $slug, $c, $v);
+        if ($t === null) continue;
+        $orow = verse_display($k, $slug, $c, $v);
+        $compare .= '<div class="compare-item" lang="' . e($vv['lang']) . '"><h2><a href="' . url_for($k, $slug, $c, $orow['n']) . '">' . e(book_name($book, $k) . " $c:" . range_label($orow)) . ' · ' . e($vv['short']) . '</a></h2><p>' . verse_html($orow['text'], $k) . '</p></div>';
     }
+    $prevV = $row['n'] - 1;
+    $nextV = $row['to'] + 1;
     $nav = '<nav class="verse-nav" aria-label="Verse">'
-        . ($v > 1 ? '<a class="btn ghost" rel="prev" href="' . url_for($ver, $slug, $c, $v - 1) . '">' . icon('left') . " $name $c:" . ($v - 1) . '</a>' : '<span></span>')
-        . ($v < $count ? '<a class="btn ghost" rel="next" href="' . url_for($ver, $slug, $c, $v + 1) . '">' . "$name $c:" . ($v + 1) . ' ' . icon('right') . '</a>' : '<span></span>')
+        . ($prevV >= 1 ? '<a class="btn ghost" rel="prev" href="' . url_for($ver, $slug, $c, $prevV) . '">' . icon('left') . " $name $c:$prevV" . '</a>' : '<span></span>')
+        . ($nextV <= $count ? '<a class="btn ghost" rel="next" href="' . url_for($ver, $slug, $c, $nextV) . '">' . "$name $c:$nextV" . ' ' . icon('right') . '</a>' : '<span></span>')
         . '</nav>';
     $grid = '<ul class="num-grid small">';
     for ($i = 1; $i <= $count; $i++) {
-        $grid .= '<li><a href="' . url_for($ver, $slug, $c, $i) . '"' . ($i === $v ? ' aria-current="page"' : '') . '>' . $i . '</a></li>';
+        $grid .= '<li><a href="' . url_for($ver, $slug, $c, $i) . '"' . ($i >= $row['n'] && $i <= $row['to'] ? ' aria-current="page"' : '') . '>' . $i . '</a></li>';
     }
     $grid .= '</ul>';
     $crumbs = [['Home', '/'], [versions()[$ver]['label'], "/$ver/"], [$name, url_for($ver, $slug)], ["Chapter $c", url_for($ver, $slug, $c)], ["Verse $v", null]];
     $body = reader_bar($ver, $slug, $c, $v)
         . '<div class="wrap reader-wrap">' . breadcrumbs($crumbs)
         . '<article class="verse-page" data-ver="' . $ver . '" data-book="' . $slug . '" data-ch="' . $c . '" data-v="' . $v . '">'
-        . '<h1>' . e($label) . '</h1>'
-        . ($missing ? '<p class="notice">This verse is not yet available in ' . e(versions()[$ver]['label']) . '. Showing the KJV.</p>' : '')
-        . '<blockquote class="verse-card" lang="' . e(versions()[$missing ? 'ta' : $ver]['lang']) . '"><p>' . verse_html($shown) . '</p>'
-        . '<footer>' . e($label) . ' · ' . e(versions()[$missing ? 'ta' : $ver]['short']) . '</footer></blockquote>'
-        . '<div class="verse-actions" data-ref="' . "$slug.$c.$v" . '">'
+        . '<h1>' . e(ref_label($book, $ver, $c, $v)) . '</h1>'
+        . ($missing ? '<p class="notice">This verse is not yet available in ' . e(versions()[$ver]['label']) . '. Showing ' . e(versions()[$src]['label']) . '.</p>' : '')
+        . '<blockquote class="verse-card" lang="' . e(versions()[$src]['lang']) . '"><p>' . verse_html($row['text'], $src) . '</p>'
+        . '<footer>' . e($label) . ' · ' . e(versions()[$src]['short']) . '</footer></blockquote>'
+        . '<div class="verse-actions" data-ref="' . "$slug.$c.{$row['n']}" . '">'
         . '<button class="btn ghost" type="button" data-action="verse-copy">' . icon('copy') . ' Copy</button>'
         . '<button class="btn ghost" type="button" data-action="verse-share">' . icon('share') . ' Share</button>'
         . '<button class="btn ghost" type="button" data-action="verse-image">' . icon('image') . ' Image</button>'
@@ -308,19 +346,20 @@ function page_verse(string $ver, string $slug, int $c, int $v): array {
         . ($compare ? '<section class="compare">' . $compare . '</section>' : '')
         . $nav
         . '<h2 class="grid-title">More verses in ' . e("$name $c") . '</h2>' . $grid
+        . credits([$src])
         . '</article></div>';
-    $plain = verse_plain($shown);
+    $plain = verse_plain($row['text'], $src);
     return [
-        'title' => "$label | " . SITE_NAME,
+        'title' => ref_label($book, $ver, $c, $v) . ' | ' . SITE_NAME,
         'description' => mb_strimwidth($plain, 0, 155, '…'),
         'canonical' => url_for($ver, $slug, $c, $v), 'body' => $body, 'ver' => $ver, 'type' => 'verse',
         'noindex' => $missing,
         'switch' => version_alternates(fn($k) => url_for($k, $slug, $c, $v)),
-        'alternates' => array_filter(version_alternates(fn($k) => verse_text($k, $slug, $c, $v) !== null ? url_for($k, $slug, $c, $v) : null)),
+        'alternates' => array_filter(version_alternates(fn($k) => verse_text($k, $slug, $c, $v) ? url_for($k, $slug, $c, $v) : null)),
         'data' => ['ver' => $ver, 'book' => $slug, 'ch' => $c, 'v' => $v],
         'jsonld' => [
-            breadcrumb_ld([['Home', '/'], [versions()[$ver]['label'], "/$ver/"], [$name, url_for($ver, $slug)], ["$name $c", url_for($ver, $slug, $c)], [$label, url_for($ver, $slug, $c, $v)]]),
-            ['@type' => 'Quotation', 'text' => $plain, 'isPartOf' => ['@type' => 'Book', 'name' => versions()[$missing ? 'ta' : $ver]['label']], 'citation' => $label],
+            breadcrumb_ld([['Home', '/'], [versions()[$ver]['label'], "/$ver/"], [$name, url_for($ver, $slug)], ["$name $c", url_for($ver, $slug, $c)], [ref_label($book, $ver, $c, $v), url_for($ver, $slug, $c, $v)]]),
+            ['@type' => 'Quotation', 'text' => $plain, 'isPartOf' => ['@type' => 'Book', 'name' => versions()[$src]['fullTitle'] ?? versions()[$src]['label']], 'citation' => $label],
         ],
     ];
 }
@@ -332,7 +371,7 @@ function page_search(string $q, string $ver, string $t, int $page): array {
     foreach ($res['results'] as [$bi, $c, $v, $text]) {
         $b = book_by_index($bi);
         $list .= '<li><a href="' . url_for($ver, $b['slug'], $c, $v) . '"><strong>' . e(ref_label($b, $ver, $c, $v)) . '</strong>'
-            . '<span>' . highlight_terms(verse_html($text), $res['terms']) . '</span></a></li>';
+            . '<span>' . highlight_terms(verse_html($text, $ver), $res['terms']) . '</span></a></li>';
     }
     $filters = '';
     foreach (['' => 'All', 'ot' => 'Old Testament', 'nt' => 'New Testament'] as $k => $lbl) {
@@ -368,13 +407,13 @@ function page_votd(string $ver): array {
         $day = $d->modify("-$i day")->format('Y-m-d');
         [$s, $c, $v] = votd_for($day);
         $b = books()[$s];
-        $t = verse_text($ver, $s, $c, $v) ?? verse_text('ta', $s, $c, $v);
+        $row = verse_display($ver, $s, $c, $v);
         $past .= '<li><a href="' . url_for($ver, $s, $c, $v) . '"><time datetime="' . $day . '">' . (new DateTimeImmutable($day))->format('D, M j') . '</time>'
-            . '<strong>' . e(ref_label($b, $ver, $c, $v)) . '</strong><span>' . verse_html($t) . '</span></a></li>';
+            . '<strong>' . e(book_name($b, $row['src']) . " $c:" . range_label($row)) . ($row['src'] !== $ver ? ' · ' . e(versions()[$row['src']]['short']) : '') . '</strong><span>' . verse_html($row['text'], $row['src']) . '</span></a></li>';
     }
     $body = '<div class="wrap narrow">' . votd_card($ver, $today, true)
         . '<p class="muted">A new verse is chosen automatically every day at midnight in your time zone. Install the app to keep it one tap away.</p>'
-        . '<section><h2>Previous days</h2><ol class="results past-votd">' . $past . '</ol></section></div>';
+        . '<section><h2>Previous days</h2><ol class="results past-votd">' . $past . '</ol></section>' . credits(version_chain($ver)) . '</div>';
     return [
         'title' => 'Verse of the Day | ' . SITE_NAME,
         'description' => 'Today’s Bible verse of the day from the King James Version and Ang Biblia, 2011. A new verse every day.',

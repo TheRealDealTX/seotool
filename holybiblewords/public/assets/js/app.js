@@ -10,8 +10,10 @@
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const icon = n => `<svg class="ic" aria-hidden="true"><use href="#i-${n}"/></svg>`;
-  const verseHtml = t => esc(t).replace(/\[([^\]]*)\]/g, '<i>$1</i>');
-  const plain = t => String(t || '').replace(/[\[\]]/g, '');
+  let VERS = null;   // versions.json once loaded
+  // KJV [brackets] mark translator-supplied words (italics); other versions use brackets literally
+  const verseHtml = (t, ver = 'ta') => (VERS?.[ver]?.italics === false ? esc(t) : esc(t).replace(/\[([^\]]*)\]/g, '<i>$1</i>'));
+  const plain = t => String(t || '').replace(/\s+/g, ' ').trim();
   const native = () => window.Capacitor?.isNativePlatform?.() || document.body.classList.contains('native-app');
 
   // ---------- storage ----------
@@ -19,7 +21,7 @@
     get(k, d) { try { const v = localStorage.getItem('hbw.' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem('hbw.' + k, JSON.stringify(v)); } catch (e) { /* private mode */ } },
   };
-  const settings = Object.assign({ theme: 'auto', font: 'serif', size: 19, lh: 1.75, layout: 'verses', nums: true, parallel: false }, store.get('settings', {}));
+  const settings = Object.assign({ theme: 'auto', font: 'serif', size: 19, lh: 1.75, layout: 'verses', nums: true, parallel: false, pver: 'auto' }, store.get('settings', {}));
   const saveSettings = () => { store.set('settings', settings); applySettings(); };
   function applySettings() {
     const d = document.documentElement;
@@ -38,7 +40,7 @@
   const getBooks = () => booksP ??= fetch('/data/books.json').then(r => r.json()).then(list => {
     const by = {}; list.forEach((b, i) => { b.i = i; by[b.slug] = b; }); return { list, by };
   });
-  const getVers = () => versP ??= fetch('/data/versions.json').then(r => r.json());
+  const getVers = () => versP ??= fetch('/data/versions.json').then(r => r.json()).then(v => (VERS = v));
   const chapterCache = new Map();
   function getChapter(ver, book, ch) {
     const k = `${ver}/${book}/${ch}`;
@@ -48,7 +50,12 @@
     }
     return chapterCache.get(k);
   }
-  const otherVer = v => (v === 'ta' ? 'ml' : 'ta');
+  // version shown side by side / compared with `v`
+  const DEFAULT_PAIR = { ta: 'ceb', ml: 'ta', ceb: 'ta' };
+  const pairVer = v => (settings.pver && settings.pver !== 'auto' && settings.pver !== v ? settings.pver : DEFAULT_PAIR[v] || 'ta');
+  // rows of a chapter (from the API) that overlap verses n..to
+  const rowsFor = (d, n, to = n) => d.rows.filter(r => r[1] >= n && r[0] <= to);
+  const rangeLabel = r => (r[0] === r[1] ? `${r[0]}` : `${r[0]}–${r[1]}`);
   const bookName = (b, vers, ver) => b.names[vers[ver].nameKey];
   const urlFor = (ver, book, ch, v) => `/${ver}/` + (book ? `${book}/` : '') + (ch ? `${ch}/` : '') + (v ? `${v}/` : '');
   const keyOf = (book, ch, v) => `${book}.${ch}.${v}`;
@@ -157,7 +164,8 @@
     const el = document.getElementById(decodeURIComponent(hash.slice(1)));
     if (!el) return;
     el.scrollIntoView({ block: 'start' });
-    if (el.classList.contains('v')) { el.classList.add('flash'); setTimeout(() => el.classList.remove('flash'), 1800); }
+    const v = el.closest('.v');
+    if (v) { v.classList.add('flash'); setTimeout(() => v.classList.remove('flash'), 1800); }
   }
   document.addEventListener('click', e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
@@ -248,7 +256,7 @@
   function applyHomeVersion(ver) {
     markVersion(ver);
     $$('#main .book-grid a, #main .chip[data-keep-ver], #main .continue-link').forEach(a => {
-      a.setAttribute('href', a.getAttribute('href').replace(/^\/(ta|ml)\//, `/${ver}/`));
+      a.setAttribute('href', a.getAttribute('href').replace(/^\/[a-z]+\//, `/${ver}/`));
     });
     const f = $('#main form.jump input[name=v]'); if (f) f.value = ver;
     getBooks().then(async ({ by }) => {
@@ -286,17 +294,17 @@
   async function refreshVotd(card, ver, date) {
     try {
       const [d, vers] = await Promise.all([fetch('/api/votd?date=' + date).then(r => r.json()), getVers()]);
-      const shown = d.text[ver] ? ver : 'ta';
+      const shown = d.src[ver];
       card.dataset.date = date; card.dataset.ver = ver; card.dataset.ref = keyOf(d.book, d.ch, d.v);
       const dt = new Date(date + 'T12:00:00');
       $('time', card).textContent = dt.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
       $('time', card).setAttribute('datetime', date);
-      const q = $('.votd-text', card); q.innerHTML = verseHtml(d.text[shown]); q.lang = vers[shown].lang;
-      $('.votd-ref', card).innerHTML = `<a href="${urlFor(ver, d.book, d.ch, d.v)}">${esc(d.ref[shown])} <span class="badge">${esc(vers[shown].short)}</span></a>`;
+      const q = $('.votd-text', card); q.innerHTML = verseHtml(d.text[ver], shown); q.lang = vers[shown].lang;
+      $('.votd-ref', card).innerHTML = `<a href="${urlFor(ver, d.book, d.ch, d.v)}">${esc(d.ref[ver])} <span class="badge">${esc(vers[shown].short)}</span></a>`;
       let note = $('.note', card);
       if (shown !== ver) {
         if (!note) { note = document.createElement('p'); note.className = 'note'; $('.votd-ref', card).after(note); }
-        note.textContent = `Not yet available in ${vers[ver].label} — showing KJV.`;
+        note.textContent = `Not yet available in ${vers[ver].label} — showing ${vers[shown].label}.`;
       } else note?.remove();
       $('.votd-actions a', card).href = urlFor(ver, d.book, d.ch) + '#v' + d.v;
     } catch (e) { /* keep server-rendered verse */ }
@@ -304,8 +312,8 @@
   function votdPayload() {
     const card = $('[data-votd]');
     const { book, ch, v } = parseKey(card.dataset.ref);
-    const ref = $('.votd-ref a', card).textContent.trim().replace(/\s+(KJV|AB)$/, '');
     const short = $('.votd-ref .badge', card).textContent;
+    const ref = plain(Array.from($('.votd-ref a', card).childNodes).filter(n => n.nodeType === 3).map(n => n.textContent).join(''));
     return { text: plain($('.votd-text', card).textContent), ref, short, url: location.origin + urlFor(card.dataset.ver, book, ch, v) };
   }
 
@@ -362,16 +370,20 @@
     art.closest('.reader-wrap')?.classList.toggle('wide', on);
     $('[data-action=parallel]')?.setAttribute('aria-pressed', String(on));
     if (!on) return;
-    const { ver, book } = art.dataset; const o = otherVer(ver);
+    const { ver, book } = art.dataset; const o = pairVer(ver);
     try {
       const [d, vers] = await Promise.all([getChapter(o, book, art.dataset.ch), getVers()]);
       if (!art.isConnected || !art.classList.contains('parallel')) return;
+      const used = new Set();
       $$('.v', art).forEach(el => {
-        const i = el.dataset.v - 1;
-        const t = d.verses[i] ?? d.fallback?.[i];
+        const n = +el.dataset.v, to = +(el.dataset.to || n);
+        const rows = rowsFor(d, n, to).filter(r => !used.has(r[0]));
+        rows.forEach(r => used.add(r[0]));
         const span = document.createElement('span');
         span.className = 'par'; span.lang = vers[o].lang;
-        span.innerHTML = t ? `<b>${esc(vers[o].short)}</b>${verseHtml(t)}` : `<b>${esc(vers[o].short)}</b><em>Not yet available</em>`;
+        span.innerHTML = `<b>${esc(vers[o].short)}</b>` + (rows.length
+          ? rows.map(r => (rows.length > 1 || r[0] !== n || r[1] !== to ? `<sup>${rangeLabel(r)}</sup> ` : '') + verseHtml(r[3], r[2]) + (r[2] !== o ? ` <span class="fb-tag">${esc(vers[r[2]].short)}</span>` : '')).join(' ')
+          : '<em>See the verse above</em>');
         el.after(span);
       });
     } catch (e) { toast('Couldn’t load the other version'); }
@@ -382,11 +394,13 @@
     const [{ by }, vers] = await Promise.all([getBooks(), getVers()]);
     const b = by[book];
     const el = document.getElementById('v' + v);
-    const text = el ? plain(Array.from(el.childNodes).filter(n => !(n.classList?.contains('vn') || n.classList?.contains('fb-tag'))).map(n => n.textContent).join('')).trim() : '';
-    const ref = `${bookName(b, vers, ver)} ${ch}:${v}`;
+    const text = el ? plain(Array.from(el.childNodes).filter(n => !(n.classList?.contains('vn') || n.classList?.contains('fb-tag'))).map(n => n.textContent).join('')) : '';
+    const fbSrc = el?.querySelector('.fb-tag')?.dataset.src;
+    const to = +(el?.dataset.to || v);
+    const ref = `${bookName(b, vers, fbSrc || ver)} ${ch}:${v}${to > v ? '–' + to : ''}`;
     const k = keyOf(book, ch, v);
     const url = location.origin + urlFor(ver, book, ch, v);
-    const short = el?.classList.contains('fb') ? 'KJV' : vers[ver].short;
+    const short = vers[fbSrc || ver].short;
     const colors = ['yellow', 'green', 'blue', 'pink'];
     const body = openSheet(ref, `
       <p class="sheet-verse">${esc(text)}</p>
@@ -429,14 +443,18 @@
       } else if (a === 'image') {
         imageSheet(text, `${ref} · ${short}`);
       } else if (a === 'compare') {
-        const o = otherVer(ver);
         extra.innerHTML = '<p class="muted">Loading…</p>';
         try {
-          const d = await getChapter(o, book, ch);
-          const t = d.verses[v - 1];
-          extra.innerHTML = `<div class="compare-item" lang="${vers[o].lang}"><h2><a href="${urlFor(o, book, ch, v)}">${esc(bookName(b, vers, o))} ${ch}:${v} · ${esc(vers[o].short)}</a></h2>
-            <p>${t ? verseHtml(t) : '<em>Not yet available in ' + esc(vers[o].label) + '.</em>'}</p></div>`;
-        } catch (err) { extra.innerHTML = '<p class="muted">Couldn’t load the other version.</p>'; }
+          const others = Object.keys(vers).filter(k => k !== ver);
+          const parts = await Promise.all(others.map(async o => {
+            const d = await getChapter(o, book, ch);
+            const own = d.verses[v - 1] !== null;
+            const rows = rowsFor(d, v, to).filter(r => r[2] === o);
+            return `<div class="compare-item" lang="${vers[o].lang}"><h2><a href="${urlFor(o, book, ch, v)}">${esc(bookName(b, vers, o))} ${ch}:${rows.length ? rows.map(rangeLabel).join(', ') : v} · ${esc(vers[o].short)}</a></h2>
+              <p>${own && rows.length ? rows.map(r => verseHtml(r[3], o)).join(' ') : '<em>Not yet available in ' + esc(vers[o].label) + '.</em>'}</p></div>`;
+          }));
+          extra.innerHTML = `<div class="compare">${parts.join('')}</div>`;
+        } catch (err) { extra.innerHTML = '<p class="muted">Couldn’t load the other versions.</p>'; }
       } else if (a === 'listen') {
         closeSheet(); startListening(v);
       } else if (a === 'open') {
@@ -599,7 +617,8 @@
       <div class="set-row"><span>Line spacing</span>${seg('lh', [['1.5', 'Compact'], ['1.75', 'Normal'], ['2.05', 'Relaxed']])}</div>
       <div class="set-row"><span>Layout</span>${seg('layout', [['verses', 'Verse per line'], ['para', 'Paragraph']])}</div>
       <div class="set-row"><span>Verse numbers</span>${seg('nums', [['true', 'Show'], ['false', 'Hide']])}</div>
-      <div class="set-row"><span>Side-by-side versions</span>${seg('parallel', [['false', 'Off'], ['true', 'On']])}</div>
+      <div class="set-row"><span>Side by side</span>${seg('parallel', [['false', 'Off'], ['true', 'On']])}</div>
+      <div class="set-row"><span>Side by side with</span>${seg('pver', [['auto', 'Auto'], ...Object.entries(VERS || {}).map(([k, v]) => [k, v.short])])}</div>
       ${native() && window.Capacitor?.Plugins?.LocalNotifications ? `<div class="set-row"><span>Daily verse reminder</span>${seg('remind', [['false', 'Off'], ['true', '7:00 AM']])}</div>` : ''}
       <div class="set-row"><span>Offline reading</span><a href="/app/">Download a version</a></div>`);
     body.addEventListener('click', e => {
@@ -609,7 +628,7 @@
       else if (name === 'lh') val = +val;
       settings[name] = val; saveSettings();
       $$('button', b.parentElement).forEach(x => x.classList.toggle('on', x === b));
-      if (name === 'parallel') setParallel(val);
+      if (name === 'parallel' || (name === 'pver' && settings.parallel)) setParallel(settings.parallel);
       if (name === 'remind') setReminder(val);
     });
     $('[data-range=size]', body).addEventListener('input', e => { settings.size = +e.target.value; saveSettings(); });
@@ -722,7 +741,7 @@
     const box = $('#saved-app', main); if (!box) return;
     const [{ by }, vers] = await Promise.all([getBooks(), getVers()]);
     const ver = prefVer();
-    const textOf = async (book, ch, v) => { try { const d = await getChapter(ver, book, ch); return d.verses[v - 1] ?? d.fallback?.[v - 1] ?? ''; } catch (e) { return ''; } };
+    const textOf = async (book, ch, v) => { try { const d = await getChapter(ver, book, ch); const r = rowsFor(d, v)[0]; return r ? [r[3], r[2]] : ['', ver]; } catch (e) { return ['', ver]; } };
     const label = (book, ch, v) => `${bookName(by[book], vers, ver)} ${ch}${v ? ':' + v : ''}`;
     const show = async tab => {
       $$('.tabs [data-tab]', main).forEach(t => t.setAttribute('aria-selected', String(t.dataset.tab === tab)));
@@ -744,7 +763,7 @@
         const { book, ch, v } = parseKey(x.k);
         const t = await textOf(book, ch, v);
         return `<li class="saved-item"><a href="${urlFor(ver, book, ch)}#v${v}"><strong>${x.c ? `<span class="swatch" style="background:var(--hl-${x.c})"></span>` : ''}${esc(label(book, ch, v))}</strong>
-          <span>${verseHtml(t)}</span>${x.note ? `<span class="muted">✎ ${esc(x.note)}</span>` : ''}</a>
+          <span>${verseHtml(t[0], t[1])}</span>${x.note ? `<span class="muted">✎ ${esc(x.note)}</span>` : ''}</a>
           <button class="icon-btn" type="button" data-remove="${x.k}" aria-label="Remove">${icon('x')}</button></li>`;
       }));
       box.innerHTML = `<ol class="results">${rows.join('')}</ol>`;
@@ -801,7 +820,7 @@
   }
   // offline shell: render a chapter from downloaded data when the page itself isn't cached
   async function initOffline(main) {
-    const m = location.pathname.match(/^\/(ta|ml)\/([a-z0-9]+)\/(\d+)\/(?:(\d+)\/)?$/);
+    const m = location.pathname.match(/^\/([a-z]+)\/([a-z0-9]+)\/(\d+)\/(?:(\d+)\/)?$/);
     if (!m) return;
     const [, ver, book, ch, v] = m;
     try {
@@ -811,9 +830,7 @@
       main.innerHTML = `<div class="reader-bar"><button type="button" class="picker-btn" data-action="picker" data-book="${book}" data-ch="${ch}"><span>${esc(bookName(b, vers, ver))} ${ch}</span>${icon('down')}</button></div>
         <div class="wrap reader-wrap"><article class="chapter" lang="${vers[ver].lang}" data-ver="${ver}" data-book="${book}" data-ch="${ch}">
         <h1><span class="book-title">${esc(bookName(b, vers, ver))}</span> <span class="ch-num">${ch}</span></h1><p class="notice">Offline copy</p>
-        <div class="verses">${b.verses[ch - 1] ? Array.from({ length: b.verses[ch - 1] }, (_, i) => {
-          const t = d.verses[i] ?? d.fallback?.[i]; return t ? `<span class="v${d.verses[i] ? '' : ' fb'}" id="v${i + 1}" data-v="${i + 1}"><a class="vn" href="${urlFor(ver, book, ch, i + 1)}">${i + 1}</a> ${verseHtml(t)}</span> ` : '';
-        }).join('') : ''}</div></article>
+        <div class="verses">${d.rows.map(r => `<span class="v${r[2] === ver ? '' : ' fb'}" id="v${r[0]}" data-v="${r[0]}"${r[1] > r[0] ? ` data-to="${r[1]}"` : ''}>${Array.from({ length: r[1] - r[0] }, (_, j) => `<span class="v-anchor" id="v${r[0] + j + 1}"></span>`).join('')}<a class="vn" href="${urlFor(ver, book, ch, r[0])}">${rangeLabel(r)}</a> ${verseHtml(r[3], r[2])}${r[2] === ver ? '' : ` <span class="fb-tag" data-src="${r[2]}">${esc(vers[r[2]].short)}</span>`}</span> `).join('')}</div></article>
         <nav class="chapter-foot">${+ch > 1 ? `<a class="btn ghost" href="${urlFor(ver, book, +ch - 1)}">${icon('left')} Previous</a>` : '<span></span>'}${+ch < b.verses.length ? `<a class="btn" href="${urlFor(ver, book, +ch + 1)}">Next ${icon('right')}</a>` : '<span></span>'}</nav></div>`;
       initChapter(main);
       if (v) scrollToHash('#v' + v);
@@ -822,6 +839,7 @@
 
   // ---------- boot ----------
   applySettings();
+  getVers().catch(() => {});
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
   }

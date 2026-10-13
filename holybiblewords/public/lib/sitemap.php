@@ -44,7 +44,7 @@ function sitemap(string $name): bool {
             $c = $i + 1;
             if (chapter_available($ver, $slug, $c) === 0) continue;
             $paths[] = url_for($ver, $slug, $c);
-            foreach (chapter_text($ver, $slug, $c) as $j => $t) if ($t !== null) $paths[] = url_for($ver, $slug, $c, $j + 1);
+            foreach (chapter_text($ver, $slug, $c) as $j => $t) if ($t) $paths[] = url_for($ver, $slug, $c, $j + 1);
         }
         sitemap_urls($paths);
         return true;

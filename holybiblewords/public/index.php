@@ -74,6 +74,8 @@ if (preg_match("#^/($verRe)/(?:([a-z0-9]+)/(?:(\d+)/(?:(\d+)/)?)?)?$#", $path, $
     if (empty($m[4])) { render_page(page_chapter($ver, $slug, $c)); exit; }
     $v = (int)$m[4];
     if ($v < 1 || $v > $book['verses'][$c - 1]) not_found();
+    // a verse this translation joins with the previous one -> the start of that range
+    if (verse_text($ver, $slug, $c, $v) === '') redirect(url_for($ver, $slug, $c, verse_display($ver, $slug, $c, $v)['n']));
     render_page(page_verse($ver, $slug, $c, $v));
     exit;
 }

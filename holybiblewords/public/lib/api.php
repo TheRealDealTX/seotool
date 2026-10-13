@@ -22,7 +22,8 @@ function api(string $path): void {
         json_out([
             'ver' => $ver, 'book' => $slug, 'name' => book_name($book, $ver), 'ch' => $c,
             'verses' => chapter_text($ver, $slug, $c),
-            'fallback' => $ver !== 'ta' && chapter_available($ver, $slug, $c) < $book['verses'][$c - 1] ? chapter_text('ta', $slug, $c) : null,
+            // what the reader shows: [first verse, last verse, version, text]
+            'rows' => array_map(fn($r) => [$r['n'], $r['to'], $r['src'], $r['text']], resolve_chapter($ver, $slug, $c)),
         ]);
         return;
     }
@@ -32,8 +33,10 @@ function api(string $path): void {
         [$slug, $c, $v] = votd_for($date);
         $out = ['date' => $date, 'book' => $slug, 'ch' => $c, 'v' => $v, 'text' => []];
         foreach ($vers as $k => $_) {
-            $out['text'][$k] = verse_text($k, $slug, $c, $v);
-            $out['ref'][$k] = ref_label(books()[$slug], $k, $c, $v);
+            $row = verse_display($k, $slug, $c, $v);
+            $out['text'][$k] = $row['text'];
+            $out['src'][$k] = $row['src'];
+            $out['ref'][$k] = book_name(books()[$slug], $row['src']) . " $c:" . range_label($row);
         }
         json_out($out, 200, 3600);
         return;

@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Holy Bible Words",
   "short_name": "Holy Bible",
-  "description": "Read the King James Version and Ang Biblia, 2011 — verse of the day, highlights, reading plan and offline reading.",
+  "description": "Read the King James Version, Ang Biblia, 2011 and Ang Pulong sa Dios — verse of the day, highlights, reading plan and offline reading.",
   "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
@@ -10,16 +10,79 @@
   "background_color": "#f4f7f5",
   "theme_color": "#1b5e8f",
   "lang": "en",
-  "categories": ["books", "education", "lifestyle"],
+  "categories": [
+    "books",
+    "education",
+    "lifestyle"
+  ],
   "icons": [
-    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "/assets/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "/assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ],
   "shortcuts": [
-    { "name": "Verse of the Day", "url": "/verse-of-the-day/", "icons": [{ "src": "/assets/img/icon-192.png", "sizes": "192x192" }] },
-    { "name": "King James Version", "url": "/ta/", "icons": [{ "src": "/assets/img/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Ang Biblia, 2011", "url": "/ml/", "icons": [{ "src": "/assets/img/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Search", "url": "/search/", "icons": [{ "src": "/assets/img/icon-192.png", "sizes": "192x192" }] }
+    {
+      "name": "Verse of the Day",
+      "url": "/verse-of-the-day/",
+      "icons": [
+        {
+          "src": "/assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "King James Version",
+      "url": "/ta/",
+      "icons": [
+        {
+          "src": "/assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Ang Biblia, 2011",
+      "url": "/ml/",
+      "icons": [
+        {
+          "src": "/assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Ang Pulong sa Dios",
+      "url": "/ceb/",
+      "icons": [
+        {
+          "src": "/assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "url": "/search/",
+      "icons": [
+        {
+          "src": "/assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
   ]
 }

@@ -1,8 +1,8 @@
 /* Holy Bible Words service worker: app shell + offline reading. */
-const SHELL = 'hbw-shell-v1';
-const PAGES = 'hbw-pages-v1';
+const SHELL = 'hbw-shell-v2';
+const PAGES = 'hbw-pages-v2';
 const DATA = 'hbw-data';            // also filled by "Download for offline" on /app/
-const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=1', '/assets/js/app.js?v=1', '/assets/img/logo-64.png',
+const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=2', '/assets/js/app.js?v=2', '/assets/img/logo-64.png',
   '/assets/img/icon-192.png', '/data/books.json', '/data/versions.json', '/data/votd.json', '/manifest.webmanifest'];
 
 self.addEventListener('install', e => {
@@ -19,19 +19,35 @@ async function trimPages() {
   for (let i = 0; i < keys.length - 400; i++) await c.delete(keys[i]);
 }
 
-// Build an /api/chapter response from a downloaded book file.
+// Build an /api/chapter response from downloaded book files, following the
+// version's fallback chain (same rules as resolve_chapter() in lib/bible.php).
 async function chapterFromData(ver, book, ch) {
-  const hit = await caches.match(`/data/${ver}/${book}.json`);
-  if (!hit) return null;
-  const d = await hit.json();
-  const verses = d.c[ch - 1];
-  if (!verses) return null;
-  let fallback = null;
-  if (verses.some(v => v === null) && ver !== 'ta') {
-    const k = await caches.match(`/data/ta/${book}.json`);
-    if (k) fallback = (await k.json()).c[ch - 1];
+  const vres = await caches.match('/data/versions.json');
+  if (!vres) return null;
+  const vers = await vres.json();
+  if (!vers[ver]) return null;
+  const chain = [ver, ...(vers[ver].fallback || [])];
+  const texts = {};
+  for (const k of chain) {
+    const hit = await caches.match(`/data/${k}/${book}.json`);
+    if (hit) texts[k] = (await hit.json()).c[ch - 1] || null;
   }
-  return new Response(JSON.stringify({ ver, book, ch: +ch, verses, fallback }), { headers: { 'Content-Type': 'application/json' } });
+  if (!texts[ver]) return null;
+  const rows = [];
+  for (let n = 1; n <= texts[ver].length; n++) {
+    for (const k of chain) {
+      const t = texts[k]?.[n - 1];
+      if (t == null) continue;
+      if (t === '') {
+        const last = rows[rows.length - 1];
+        if (last && last[2] === k && last[1] === n - 1) { last[1] = n; break; }
+        continue;
+      }
+      rows.push([n, n, k, t]);
+      break;
+    }
+  }
+  return new Response(JSON.stringify({ ver, book, ch: +ch, verses: texts[ver], rows }), { headers: { 'Content-Type': 'application/json' } });
 }
 
 self.addEventListener('fetch', e => {

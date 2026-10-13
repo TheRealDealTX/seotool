@@ -6,7 +6,10 @@
   "label": "King James Version (KJV)",
   "lang": "en",
   "nameKey": "en",
-  "copyright": "Public domain."
+  "desc": "English · complete Old and New Testament",
+  "copyright": "Public domain.",
+  "italics": true,
+  "fallback": []
  },
  "ml": {
   "prefix": "ml",
@@ -15,6 +18,29 @@
   "label": "Ang Biblia, 2011",
   "lang": "ceb",
   "nameKey": "ceb",
-  "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission."
+  "desc": "Cebuano",
+  "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission.",
+  "italics": false,
+  "fallback": [
+   "ceb",
+   "ta"
+  ]
+ },
+ "ceb": {
+  "prefix": "ceb",
+  "short": "APSD",
+  "name": "Ang Pulong sa Dios",
+  "label": "Ang Pulong sa Dios",
+  "lang": "ceb",
+  "nameKey": "ceb",
+  "fullTitle": "Biblica® Open Ang Pulong sa Dios™",
+  "desc": "Cebuano · complete modern translation (Biblica® Open)",
+  "copyright": "Biblica® Open Ang Pulong sa Dios™ Katungod sa pagmantala © 2009, 2010, 2014, 2024 Biblica, Inc. Biblica® Open Cebuano Contemporary Bible™ Copyright © 2009, 2010, 2014, 2024 by Biblica, Inc. “Biblica” is a trademark registered in the United States Patent and Trademark Office by Biblica, Inc. Used with permission. Licensed under CC BY-SA 4.0.",
+  "notice": "The original Work by its copyright holders is available for free at www.biblica.com and open.bible.",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "italics": false,
+  "fallback": [
+   "ta"
+  ]
  }
 }

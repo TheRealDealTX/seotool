@@ -5,7 +5,10 @@ Output (all under public/data/):
   books.json            book table: slug, names per version, chapter/verse counts
   versions.json         version table (prefix, names, language, copyright)
   votd.json             verse-of-the-day reference list
-  <ver>/<book>.json     {"c": [[verse text | null, ...], ...]} one file per book
+  <ver>/<book>.json     {"c": [[verse text | "" | null, ...], ...]} one file per book.
+                        null = not available in this version; "" = this verse is
+                        joined with the one before it (the translation renders a
+                        range such as 14–16 as one verse).
   <ver>/search.tsv      one line per verse: book-index TAB chapter TAB verse TAB text
 
 Sources:
@@ -16,6 +19,8 @@ Sources:
                         any licensed text dropped into sources/ml-licensed/*.txt
                         as VPL lines ("GEN 1:1 Sa sinugdan ...", USFM book codes).
                         Licensed lines override the WordPress export.
+  Ang Pulong sa Dios (/ceb/) eBible.org cebocb VPL — Biblica® Open Ang Pulong sa
+                        Dios, CC BY-SA 4.0. Text is used unchanged.
 
 Run:  python3 tools/build_data.py
 """
@@ -32,6 +37,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "sources"
 OUT = ROOT / "public" / "data"
 KJV_URL = "https://ebible.org/Scriptures/eng-kjv_vpl.zip"
+CEB_URL = "https://ebible.org/Scriptures/cebocb_vpl.zip"
 
 # slug (kept from the WordPress URLs), USFM code, English name, Cebuano name,
 # extra search abbreviations
@@ -109,16 +115,34 @@ EBIBLE_CODES = {"SOL": "SNG", "EZE": "EZK", "JOE": "JOL", "NAH": "NAM", "MAR": "
                 "JOH": "JHN", "PHI": "PHP", "JAM": "JAS", "1JO": "1JN", "2JO": "2JN",
                 "3JO": "3JN"}
 
+# Order = order of the header switcher. "fallback" is the chain used for verses a
+# version doesn't have yet. "italics": [brackets] in the text mean italics (KJV only).
 VERSIONS = {
     "ta": {
         "prefix": "ta", "short": "KJV", "name": "King James Version",
         "label": "King James Version (KJV)", "lang": "en", "nameKey": "en",
-        "copyright": "Public domain.",
+        "desc": "English · complete Old and New Testament",
+        "copyright": "Public domain.", "italics": True, "fallback": [],
     },
     "ml": {
         "prefix": "ml", "short": "AB", "name": "Ang Biblia, 2011",
         "label": "Ang Biblia, 2011", "lang": "ceb", "nameKey": "ceb",
+        "desc": "Cebuano",
         "copyright": "Ang Biblia © 2011 Philippine Bible Society. Used with permission.",
+        "italics": False, "fallback": ["ceb", "ta"],
+    },
+    "ceb": {
+        "prefix": "ceb", "short": "APSD", "name": "Ang Pulong sa Dios",
+        "label": "Ang Pulong sa Dios", "lang": "ceb", "nameKey": "ceb",
+        "fullTitle": "Biblica® Open Ang Pulong sa Dios™",
+        "desc": "Cebuano · complete modern translation (Biblica® Open)",
+        "copyright": "Biblica® Open Ang Pulong sa Dios™ Katungod sa pagmantala © 2009, 2010, 2014, 2024 Biblica, Inc. "
+                     "Biblica® Open Cebuano Contemporary Bible™ Copyright © 2009, 2010, 2014, 2024 by Biblica, Inc. "
+                     "“Biblica” is a trademark registered in the United States Patent and Trademark Office by Biblica, Inc. "
+                     "Used with permission. Licensed under CC BY-SA 4.0.",
+        "notice": "The original Work by its copyright holders is available for free at www.biblica.com and open.bible.",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "italics": False, "fallback": ["ta"],
     },
 }
 
@@ -173,15 +197,45 @@ def clean(text):
     return re.sub(r"\s+", " ", text.replace("\xa0", " ")).strip()
 
 
-def kjv_lines():
-    cache = SRC / "cache" / "eng-kjv_vpl.txt"
+def ebible_lines(url, name):
+    cache = SRC / "cache" / name
     if not cache.exists():
         cache.parent.mkdir(parents=True, exist_ok=True)
-        print("downloading", KJV_URL)
-        raw = urllib.request.urlopen(KJV_URL, timeout=120).read()
+        print("downloading", url)
+        raw = urllib.request.urlopen(url, timeout=120).read()
         with zipfile.ZipFile(io.BytesIO(raw)) as z:
-            cache.write_bytes(z.read("eng-kjv_vpl.txt"))
+            cache.write_bytes(z.read(name))
     return cache.read_text(encoding="utf-8-sig").splitlines()
+
+
+def fit_versification(name, text, shape):
+    """Map a modern translation onto KJV verse numbers without altering its text.
+
+    Verses beyond the KJV count are appended to the last KJV verse of the chapter
+    (e.g. 3 John 1:15). Verses the translation joined with the previous one become
+    "" so the reader can show a range (e.g. 1 Chronicles 8:14–16)."""
+    out = {}
+    for (slug, c, v), t in sorted(text.items()):
+        if slug not in shape or c not in shape[slug]:
+            print(f"warning: {name} {slug} {c}:{v} has no KJV chapter, dropped")
+            continue
+        last = shape[slug][c]
+        if v > last:
+            out[(slug, c, last)] = (out.get((slug, c, last)) or "") + " " + t
+            print(f"note: {name} {slug} {c}:{v} appended to {c}:{last}")
+        else:
+            out[(slug, c, v)] = t
+    joined = 0
+    for slug, chs in shape.items():
+        for c, n in chs.items():
+            seen = False
+            for v in range(1, n + 1):
+                if (slug, c, v) in out:
+                    seen = True
+                elif seen:
+                    out[(slug, c, v)] = ""
+                    joined += 1
+    return out, joined
 
 
 VPL = re.compile(r"^([1-3A-Z]{3}) (\d+):(\d+) (.*)$")
@@ -204,7 +258,7 @@ def parse_vpl(lines, by_code):
 
 def main():
     by_code = {b[1]: b[0] for b in BOOKS}
-    kjv = parse_vpl(kjv_lines(), by_code)
+    kjv = parse_vpl(ebible_lines(KJV_URL, "eng-kjv_vpl.txt"), by_code)
     # KJV marks translator-supplied words with [brackets]; keep them as the
     # convention for italics (rendered as <i> by the site).
     if len(kjv) != 31102:
@@ -238,7 +292,10 @@ def main():
         print("warning: Ang Biblia verse outside KJV versification, dropped:", "/".join(map(str, k)))
         del ml[k]
 
-    texts = {"ta": kjv, "ml": ml}
+    ceb_text, ceb_joined = fit_versification("Ang Pulong sa Dios", parse_vpl(ebible_lines(CEB_URL, "cebocb_vpl.txt"), by_code), shape)
+    ceb_gaps = sum(n for chs in shape.values() for n in chs.values()) - len(ceb_text)
+
+    texts = {"ta": kjv, "ml": ml, "ceb": ceb_text}
     OUT.mkdir(parents=True, exist_ok=True)
     books_meta = []
     for i, (slug, code, en, ceb, abbr) in enumerate(BOOKS):
@@ -246,7 +303,7 @@ def main():
         avail = {}
         for ver, t in texts.items():
             chapters = [[t.get((slug, c, v)) for v in range(1, n + 1)] for c, n in enumerate(counts, 1)]
-            have = sum(1 for ch in chapters for x in ch if x)
+            have = sum(1 for ch in chapters for x in ch if x is not None)
             avail[ver] = have
             d = OUT / ver
             d.mkdir(exist_ok=True)
@@ -261,7 +318,7 @@ def main():
 
     for ver, t in texts.items():
         idx = {b[0]: i for i, b in enumerate(BOOKS)}
-        lines = [f"{idx[s]}\t{c}\t{v}\t{x}" for (s, c, v), x in sorted(t.items(), key=lambda kv: (idx[kv[0][0]], kv[0][1], kv[0][2]))]
+        lines = [f"{idx[s]}\t{c}\t{v}\t{x}" for (s, c, v), x in sorted(t.items(), key=lambda kv: (idx[kv[0][0]], kv[0][1], kv[0][2])) if x]
         (OUT / ver / "search.tsv").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     (OUT / "books.json").write_text(json.dumps(books_meta, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -280,6 +337,7 @@ def main():
 
     print(f"KJV verses: {len(kjv)}")
     print(f"Ang Biblia verses: {len(ml)} (WordPress export {from_site}, licensed files {licensed}) of 31102")
+    print(f"Ang Pulong sa Dios verses: {len(ceb_text) - ceb_joined} (+{ceb_joined} joined into ranges, {ceb_gaps} missing)")
     print(f"verse-of-the-day refs: {len(votd)}")
 
 
