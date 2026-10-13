@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/jobsite/power-equipment/parts/oil-pump-assembly-for-395xp-chainsaw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/oil-pump-assembly-for-husqvarna-550xp-mark-ii-chainsaw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/outer-felling-dog-for-572xp/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/recoil-starter-handle-for-500-series-chainsaws/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/replacement-screw-for-husqvarna-395xp-muffler/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/replacement-sprocket-nose-for-husqvarna-light-bars/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/start-stop-switch-for-husqvarna-372xp/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/starter-cord-for-husqvarna-395xp-chainsaw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/starter-pawl-and-spring-kit-for-husqvarna-550xp-mark-ii-chainsaw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/power-equipment/parts/starter-pawl-for-husqvarna-chainsaw/",
+  "category": "/jobsite/power-equipment/parts/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/1100-series-compatible-stump-grinder-teeth/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/700-series-compatible-stump-grinder-teeth/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/900-series-green-teeth-spacer/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/lo-pro-stump-grinder-bolt/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/pocket-for-standard-stump-grinder-teeth/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/jobsite/stump-grinding/treehog-mesh-stump-grinding-guard-system/",
+  "category": "/jobsite/stump-grinding/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/husqvarna-4-gallon-backpack-sprayer/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/husqvarna-48oz-handheld-sprayer/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/husqvarna-blue-ehs-metal-blade-14/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/husqvarna-felling-bar-with-cant-hook/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/jameson-non-conductive-soil-probe-48-inch/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/landscaper-tools/jameson-rams-horn-nylon-twin-prong-vine-puller-and-lifter/",
+  "category": "/jobsite/landscaper-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/lanyard-kits/camp-gyro-lanyard-single/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "standard"
+ },
+ {
+  "path": "/lanyard-kits/camp-gyro-lanyard-twin/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "standard"
+ },
+ {
+  "path": "/lanyard-kits/dmm-nomad-lanyard-zuu7/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "standard"
+ },
+ {
+  "path": "/lanyard-kits/dmm-nomad-lanyard/",
+  "category": "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/",
+  "tier": "standard"
+ },
+ {
+  "path": "/log-handling-tools/logrite-bts-hauler-with-wide-tires/",
+  "category": "/jobsite/logging-tools/log-handling-tools/",
+  "tier": "standard"
+ },
+ {
+  "path": "/lowering-devices/cmi-lcd-lowering-control-device/",
+  "category": "/rigging/lowering-devices/",
+  "tier": "standard"
+ },
+ {
+  "path": "/micro-pulleys/dmm-pinto-rig-pulley-v2/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/micro-pulleys/r-easy-climbing-lanyard-adjusting-pulley-pre-order-item/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/other-gear/nylon-loop-runners/",
+  "category": "/climbing/climbing-gear/other-gear/",
+  "tier": "standard"
+ }
+]

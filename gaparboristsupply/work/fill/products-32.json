@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/rope/rigging-rope/sterling-atlas-3-4-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/teufelberger-12mm-sirius-bull-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/teufelberger-14mm-sirius-bull-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/teufelberger-16mm-sirius-bull-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/yale-double-esterlon-3-4-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/rigging-rope/yale-double-esterlon-5-8-rigging-rope/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/10mm-polyester-core-bee-line/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/sterling-9mm-rit-hitch-cord-by-the-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/teufelberger-sirius-reep-schnur-per-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/tech-cordage/yale-bee-line-8mm-hitch-cord-by-the-foot/",
+  "category": "/rope/tech-cordage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-5-16-ultrex-winch-line-with-chook/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-cordage-3-8-ultrex-winch-line-with-chook/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-cordage-chook/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-ultrex-1-2-synthetic-winch-line-per-foot/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-ultrex-3-4-winch-line-rope-per-foot/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/rope/winch-line-and-synthetic-cable/yale-ultrex-5-16-synthetic-winch-line-cordage-per-foot/",
+  "category": "/rope/rigging-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-accessories/dmm-tendon/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-accessories/husqvarna-4-inch-climbers-wedge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-accessories/reecoil-audax-1500-hydration-harness/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-gear-loop-assembly/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-parts-and-shoulder-harnesses/tree-access-replacement-rope-bridge-with-gyro-3-swivel/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-storage/camp-kilo-tool-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-storage/notch-swinger-tool-carrier/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/saddle-storage/shembiner-xls-chainsaw-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/communication/replacement-microphone-for-sena-tufftalk-lite/",
+  "category": "/safety/communication/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/communication/retractable-lanyard-with-adhesive-backing-for-fox-40-whistle/",
+  "category": "/safety/communication/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/communication/sena-tufftalk-lite-helmet-mounted-earmuffs/",
+  "category": "/safety/communication/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/3m-mesh-screen-for-hard-hat-fits-peltor-muffs/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/3m-securefit-protective-eyewear-clear-lens/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-clear-safety-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/safety/eye-protection/erb-safety-smoke-sun-glasses/",
+  "category": "/safety/eye-protection/",
+  "tier": "standard"
+ }
+]

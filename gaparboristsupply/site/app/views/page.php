@@ -20,6 +20,10 @@ $pages = [
    ['Links to retailers', ['When you follow a link to a retailer, that retailer\'s privacy policy applies, and they may use cookies to credit the referral to us.']],
    ['Contact', ["Questions about privacy: <a href=\"mailto:$mail\">$mail</a>."]],
  ]],
+ 'shipping-returns' => ['Shipping & Returns', 'How shipping, returns and order questions work for gear you find on Gap Arborist Supply.', [
+   ['Who ships your order', ["$n does not take payment or ship orders itself. When you click \"Check price\" and buy, the retailer you buy from processes the payment, ships the order and handles any return or warranty claim under its own policies."]],
+   ['Returns and order questions', ['For a return, a missing package or a change to your order, contact the retailer through the order confirmation they emailed you. If you bought through Amazon, use Your Orders on Amazon.', "If a product page here has wrong details, or you need help choosing gear, email <a href=\"mailto:$mail\">$mail</a>."]],
+ ]],
  'terms-of-use' => ['Terms of Use', 'The terms for using the Gap Arborist Supply website.', [
    ['Using this site', ['The content on this site is general information about tree care equipment. It is not professional training or safety advice for your specific situation. Working at height, rigging and operating chainsaws are dangerous: always follow the manufacturer\'s instructions, applicable standards such as ANSI Z133, and your training.']],
    ['Product information', ['We work to keep product details accurate, but specifications, availability and prices change. Confirm details with the retailer and the manufacturer before you buy or use any product. Calculators and tools on this site give estimates only.']],

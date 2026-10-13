@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-voltige-chest-harness/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-ansi-spare-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-evo-knotted-rope-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-evo-rope-bones/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-shoulder-straps/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-webbing-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/tree-austria-stainless-steel-shackle/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/treeaustria-3-2-replacement-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/weaver-saddles/weaver-cougar-climbing-harness/",
+  "category": "/climbing/saddles-and-harnesses/weaver-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/weaver-saddles/weaver-cougar-with-batten-seat/",
+  "category": "/climbing/saddles-and-harnesses/weaver-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/weaver-saddles/weaver-wcl-390-saddle-with-batten-seat/",
+  "category": "/climbing/saddles-and-harnesses/weaver-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-l-pads/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-shin-cups/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-t-pads/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-weaver-procool-wrap-pads/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-climbers-with-super-climber-pads/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/aluminum-spurs/climb-right-climbers-with-ultra-light-pads/",
+  "category": "/climbing/spurs/aluminum-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-l-pads/",
+  "category": "/climbing/spurs/buckingham-steel-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-shin-cups/",
+  "category": "/climbing/spurs/buckingham-steel-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-weaver-procool-velcro-pads/",
+  "category": "/climbing/spurs/buckingham-steel-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-weaver-steel-support-pads/",
+  "category": "/climbing/spurs/buckingham-steel-spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/cast-aluminum-climber-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/climb-right-ultra-light-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/weaver-l-shaped-slot-climber-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/weaver-procool-climber-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/weaver-shin-cups/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/weaver-steel-support-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/climber-pads/weaver-super-climber-pads/",
+  "category": "/climbing/spurs/climber-pads/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/klein-steel-climbers/klein-climbers-with-big-buck-pads/",
+  "category": "/climbing/spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/klein-steel-climbers/klein-climbers-with-weaver-procool-wrap-pads/",
+  "category": "/climbing/spurs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/spurs/klein-steel-climbers/klein-steel-climbers-with-shin-cups/",
+  "category": "/climbing/spurs/",
+  "tier": "standard"
+ }
+]

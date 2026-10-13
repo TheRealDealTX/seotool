@@ -27,8 +27,8 @@ foreach (glob("$data/categories/*.json") as $f) {
     foreach (load_json($f) as $c) { $categories[$c['path']] = $c; }
 }
 $brands = [];
-if (is_file("$data/brands.json")) {
-    foreach (load_json("$data/brands.json") as $b) { $brands[$b['path']] = $b; }
+foreach (["$data/brands.json", "$data/brands-extra.json"] as $bf) {
+    if (is_file($bf)) foreach (load_json($bf) as $b) { $brands[$b['path']] = $b; }
 }
 $guides = [];
 if (is_file("$data/guides.json")) {
@@ -126,6 +126,9 @@ foreach ($brands as $path => $b) {
 // planned brand URLs with no brand entry fall back to the brand index
 foreach ($plan['brands'] as $b) if (!$exists($b['path']) && !isset($redirects[$b['path']])) $redirects[$b['path']] = '/brands/';
 $redirects += $DROP;
+// Old store system pages (accounts, lists, sale pages) from the Search Console exports.
+$other = is_file("$root/work/fill/other.json") ? load_json("$root/work/fill/other.json") : ['system' => []];
+foreach ($other['system'] as $from => $to) if (!$exists($from)) $redirects[$from] = $to;
 $redirects += [
     '/climbing-gear/'      => '/climbing/climbing-gear/',
     '/volume-purchasing/'  => '/shop-all/',

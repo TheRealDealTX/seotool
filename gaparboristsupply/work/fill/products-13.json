@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/ct-roll-n-lock-rope-grab/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/non-handled-ascenders/isc-rocker-ropegrab/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner-release-lever/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/art-positioner/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/gibbs-klimair-bidirectional-lanyard-adjuster/",
+  "category": "/climbing/climbing-gear/ascent-and-descent/rope-grabs/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/3-in-1-dry-graphite/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-american-o/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-captive-eye-locksafe-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-ultra-o-durolock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-ultra-o-locksafe-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-zodiac-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-mini-hms-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-offset-oval-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-pirate-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rockd-black-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rockd-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rocko-up-lock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/dmm-wallis-grommet/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/kong-corner-trap/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/hardware/singing-tree-milled-quickie/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-vault-lock/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/isc-gator-bent-gate-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/kong-oval-classic-steel-straight-gate-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/courant-honos-tool-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-stowaway/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-vault-wiregate/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-chainsaw-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/isc-iron-wizard-screwgate-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/smc-xl-steel-screw-lock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/edelrid-triton-double-locking-steel-snap/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/isc-double-action-swivel-snap-hook/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/",
+  "tier": "standard"
+ }
+]

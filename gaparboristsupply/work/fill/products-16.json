@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/teufelberger-10mm-sirius-loop-with-pinto-pulley/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/teufelberger-multisling/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/yale-beeline-10mm-loop-prusik-with-steel-ring/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-bsb-white-split-tail-with-tight-eye/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-black-beeline-split-tail/",
+  "category": "/climbing/climbing-gear/hitch-cord-and-split-tails/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/cmi-micro-hitch-tending-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/cmi-shackle-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/dmm-pinto-pulley-spacer/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/petzl-mobile-hitch-tending-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/petzl-rescue-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/singing-tree-rope-wrench-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/micro-pulleys/smc-crevasse-pulley/",
+  "category": "/climbing/climbing-gear/micro-pulleys/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/isc-aluminum-rings/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/isc-steel-rings/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/rings/smc-aluminum-ring/",
+  "category": "/climbing/climbing-gear/rings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/srs-basal-and-canopy-anchors/srt-basal-anchor-kit/",
+  "category": "/climbing/climbing-gear/other-gear/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/swivels/dmm-focus-swivel/",
+  "category": "/climbing/climbing-gear/swivels/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/climbing-gear/swivels/petzl-swivel-nfpa-rated/",
+  "category": "/climbing/climbing-gear/swivels/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergo-pro-harness/",
+  "category": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-navigator/",
+  "category": "/climbing/saddles-and-harnesses/buckingham-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/edelrid-treerex-arborist-saddle/",
+  "category": "/climbing/saddles-and-harnesses/european-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/husqvarna-climbing-harness/",
+  "category": "/climbing/saddles-and-harnesses/european-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/european-saddles/petzl-sequoia-srt-climbing-harness/",
+  "category": "/climbing/saddles-and-harnesses/european-saddles/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/full-body-harnesses/safewaze-fs-flex-185-full-body-harness/",
+  "category": "/safety/fall-protection/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergolite-replacement-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergovation-h-style-retro-fit-harness/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergovation-srt-bridge/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-retrofit-suspenders/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-replacement-rope-bridge-kit/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-seat-for-sequoia-and-sequoia-srt/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ },
+ {
+  "path": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-top-croll-chest-harness/",
+  "category": "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/",
+  "tier": "standard"
+ }
+]

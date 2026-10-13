@@ -132,6 +132,7 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
         <li><a href="/about/">About</a></li>
         <li><a href="/contact/">Contact</a></li>
         <li><a href="/brands/">Brands</a></li>
+        <li><a href="/shipping-returns/">Shipping &amp; returns</a></li>
         <li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use/">Terms of use</a></li>

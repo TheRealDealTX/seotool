@@ -1,0 +1,157 @@
+[
+ {
+  "path": "/12-strand-climbing-rope/mastodon-1-2-rigging-rope/",
+  "category": "/rope/climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/16-strand-climbing-rope/yale-xtc-16-white-climbing-rope/",
+  "category": "/rope/climbing-rope/16-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/all-gear-sawtooth-11-7mm-climbing-rope-200-feet/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/marlow-maverick-11-5mm-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/marlow-vega-11-7mm-lime-gray-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/marlow-vesper-11-8mm-blue-orange-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/marlow-vesper-11-8mm-purple-lime-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/teufelberger-gravity-line-aurora-11-5mm-x-200/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/yale-blue-moon-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/yale-new-moon-11-7mm-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/24-strand-climbing-rope/yale-vantage-11-7mm-climbing-rope/",
+  "category": "/rope/climbing-rope/24-strand-climbing-rope/",
+  "tier": "standard"
+ },
+ {
+  "path": "/accessory-carabiners/pensafe-tool-tether-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/",
+  "tier": "standard"
+ },
+ {
+  "path": "/adjustable-slings/1-2-whoopie-sling-with-medium-ring/",
+  "category": "/rigging/rigging-slings/adjustable-slings/",
+  "tier": "standard"
+ },
+ {
+  "path": "/arborist-boots/haix-protector-prime-orange-chainsaw-boots/",
+  "category": "/clothing/arborist-boots/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/camp-oval-xl-3lock-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/dmm-ultra-o-locksafe-carabiner-with-captive-bar/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/isc-aluminum-hms-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/isc-aluminum-oval-triple-locking-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/isc-compact-oval-supersafe-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/auto-locking-carabiners/pro-climb-double-locking-aluminum-carabiner/",
+  "category": "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/",
+  "tier": "standard"
+ },
+ {
+  "path": "/battery-powered-equipment/husqvarna-520ilx-40v-straight-shaft-battery-trimmer-bare-tool/",
+  "category": "/jobsite/power-equipment/battery-powered-equipment/",
+  "tier": "standard"
+ },
+ {
+  "path": "/battery-powered-equipment/husqvarna-k1-pace-saw/",
+  "category": "/jobsite/power-equipment/battery-powered-equipment/",
+  "tier": "standard"
+ },
+ {
+  "path": "/battery-powered-equipment/husqvarna-t542ixp-battery-powered-chainsaw-tool-only/",
+  "category": "/jobsite/power-equipment/battery-powered-equipment/",
+  "tier": "standard"
+ },
+ {
+  "path": "/blades/silky-zubat-replacement-blade-fine-tooth/",
+  "category": "/cutting-and-pruning/blades/",
+  "tier": "standard"
+ },
+ {
+  "path": "/blowers-and-other-equipment/husqvarna-560bts-65cc-backpack-blower/",
+  "category": "/jobsite/power-equipment/blowers-and-other-equipment/",
+  "tier": "standard"
+ },
+ {
+  "path": "/books-and-training-materials/best-management-practices-tree-support-systems-and-cabling/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard"
+ },
+ {
+  "path": "/books-and-training-materials/best-practices-for-srt-in-arboriculture/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard"
+ },
+ {
+  "path": "/books-and-training-materials/groundie/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard"
+ },
+ {
+  "path": "/books-and-training-materials/the-tree-climbers-companion/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard"
+ },
+ {
+  "path": "/books-and-training-materials/to-fell-a-tree/",
+  "category": "/books-and-training-materials/",
+  "tier": "standard"
+ },
+ {
+  "path": "/bucket-truck-accessories/fiberglass-scuff-pad-with-step/",
+  "category": "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/",
+  "tier": "standard"
+ }
+]

@@ -1,0 +1,36 @@
+{
+ "system": {
+  "/address-book/": "/cart/",
+  "/buy-again/": "/cart/",
+  "/bundleb2b/": "/contact/",
+  "/dashboard/": "/cart/",
+  "/order-detail/": "/cart/",
+  "/request-a-return/": "/shipping-returns/",
+  "/shopping-list/": "/cart/#saved",
+  "/shopping-lists/": "/cart/#saved",
+  "/trade-professional-application/": "/contact/",
+  "/sale-items/": "/shop-all/",
+  "/new-products/": "/shop-all/",
+  "/contact-us/": "/contact/",
+  "/shipping-and-handling/": "/shipping-returns/"
+ },
+ "brands": [
+  "/4srt/",
+  "/arb-climber/",
+  "/aspen-fuel/",
+  "/at-height/",
+  "/beaver-state-plastics/",
+  "/bigfoot/",
+  "/boss/",
+  "/gap-arborist-supply/",
+  "/land-helmets/",
+  "/paulhaul/",
+  "/preformed-line-products/",
+  "/razorback/",
+  "/rigguy/",
+  "/the-splice-shop/",
+  "/r-easy-climbing/",
+  "/tree-austria/",
+  "/reecoil/"
+ ]
+}
