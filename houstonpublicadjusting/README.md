@@ -25,8 +25,8 @@ plugins. Upload this folder's contents to `public_html/` on Hostinger.
 - Every form posts to `submit-lead.php`, which emails **jditt@risepublicadjusting.com** and also appends
   the lead to `leads/leads-YYYY-MM.jsonl` (web access blocked) as a backup.
 - Spam protection: honeypot field, 3-second minimum fill time, 5 submissions/hour per IP.
-- **Before launch:** create the mailbox `info@houstonpublicadjusting.com` in hPanel → Emails
-  (or change `LEAD_FROM` in `inc/config.php`). For best deliverability fill in the `SMTP_*`
+- **Before launch:** lead emails are sent from the existing mailbox `info@houstonpublicadjusting.com`
+  (`LEAD_FROM` in `inc/config.php`). For best deliverability fill in the `SMTP_*`
   constants (smtp.hostinger.com, port 465) — otherwise PHP `mail()` is used.
 
 ## Editing
@@ -48,13 +48,15 @@ plugins. Upload this folder's contents to `public_html/` on Hostinger.
 
 Local preview: `php -S 127.0.0.1:8000 -t houstonpublicadjusting`
 
-## Live deployment (2026-10-13)
+## Live deployment
 
-Deployed to Hostinger Cloud account `u401386392` (`public_html` of houstonpublicadjusting.com) by
-uploading the files over the WordPress install; site cache cleared afterwards. The WordPress files
-and database were left in place (unused) and the Google verification file `google9d8d740410b54935.html`
-is untouched. `wp-content/uploads/` on the server already held the same images, so it was not re-uploaded.
+Live on Hostinger Cloud account `u401386392` (`public_html` of houstonpublicadjusting.com), deployed
+2026-10-13 by uploading files through the hPanel file manager (TUS upload API), then clearing the cache.
 
-**Rollback to WordPress:** the original `index.php` and `.htaccess` are saved in `public_html/.wp-rollback/`
-(web access blocked). Copy `index.php.wordpress` → `index.php` and `htaccess.wordpress` → `.htaccess`,
-then clear the cache.
+WordPress was removed on 2026-10-13: core files, plugins, themes, `wp-config.php`, the WordPress
+installation record and its database (`u401386392_gJKEC`). Kept on the server: `wp-content/uploads/2026/`
+(all 248 original media files, so old image URLs still resolve; also committed here),
+`google9d8d740410b54935.html` (Search Console verification) and `.private/` (Hostinger's own).
+There is no WordPress rollback any more; Hostinger's automatic account backups are the only copy.
+
+Leads are emailed from `info@houstonpublicadjusting.com` to `jditt@risepublicadjusting.com`.
