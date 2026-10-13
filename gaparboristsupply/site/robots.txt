@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /cart/
+Disallow: /search/
+Disallow: /search.php
+Disallow: /go/
+Allow: /
+
+Sitemap: https://gaparboristsupply.com/sitemap.xml

@@ -11,7 +11,7 @@ return [
     // false while the site lives on the temporary *.hostingersite.com domain:
     // every page is noindex and robots.txt disallows everything. Flip to true
     // once gaparboristsupply.com points at this website.
-    'live'        => false,
+    'live'        => true,
     // When live, requests for any other host (www., the temporary domain) are
     // 301'd to the canonical origin.
     'canonical_host' => 'gaparboristsupply.com',

@@ -12,7 +12,9 @@ $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
 // Canonical host + https once the real domain is live.
 if ($CFG['live']) {
     $insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? 'https') === 'http';
-    if ($insecure || ($host !== '' && $host !== $CFG['canonical_host'])) redirect($CFG['origin'] . $uri);
+    // Only www is redirected: Hostinger's preview proxy rewrites redirects back to the
+    // *.hostingersite.com host, so redirecting the preview domain would loop.
+    if ($insecure || $host === 'www.' . $CFG['canonical_host']) redirect($CFG['origin'] . $uri);
 }
 
 // ---- machine files ------------------------------------------------------------
