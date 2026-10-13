@@ -110,6 +110,14 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
 
 <footer class="site-footer">
   <div class="canopy" aria-hidden="true"></div>
+  <nav class="wrap footer-topics" aria-label="Popular arborist gear">
+<?php foreach (footer_topics($CFG['departments']) as [$d, $links]): ?>
+    <div>
+      <h2><a href="<?= e($d['path']) ?>"><?= e($d['name']) ?></a></h2>
+      <ul><?php foreach ($links as [$label, $path]): ?><li><a href="<?= e($path) ?>"><?= e($label) ?></a></li><?php endforeach; ?></ul>
+    </div>
+<?php endforeach; ?>
+  </nav>
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <a class="logo" href="/"><img src="/assets/img/logo.svg" alt="" width="44" height="44"><span class="logo-text"><b>Gap</b> Arborist Supply</span></a>
@@ -124,7 +132,7 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
       <h2>Tools</h2>
       <ul><?php foreach (TOOLS as $slug => $t): ?><li><a href="/tools/<?= $slug ?>/"><?= e($t[0]) ?></a></li><?php endforeach; ?></ul>
       <h2>Guides</h2>
-      <ul><?php foreach (array_slice($CAT['guides'], 0, 4) as $g): ?><li><a href="<?= e($g['path']) ?>"><?= e($g['h1']) ?></a></li><?php endforeach; ?></ul>
+      <ul><?php foreach ($CAT['guides'] as $g): ?><li><a href="<?= e($g['path']) ?>"><?= e($g['h1']) ?></a></li><?php endforeach; ?></ul>
     </div>
     <div>
       <h2>Company</h2>
@@ -137,6 +145,8 @@ $depts = array_filter(array_map(fn($p) => $CAT['categories'][$p] ?? null, $CFG['
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use/">Terms of use</a></li>
         <li><a href="/image-credits/">Image credits</a></li>
+        <li><a href="/sitemap/">Site map</a></li>
+        <li><a href="/sitemap.xml">XML sitemap</a></li>
       </ul>
     </div>
   </div>

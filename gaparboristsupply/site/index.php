@@ -26,7 +26,7 @@ if ($path === '/robots.txt') {
 }
 if ($path === '/sitemap.xml') {
     header('Content-Type: application/xml; charset=utf-8');
-    $urls = ['/', '/shop-all/', '/brands/', '/guides/', '/tools/', '/about/', '/contact/', '/image-credits/'];
+    $urls = ['/', '/shop-all/', '/brands/', '/guides/', '/tools/', '/about/', '/contact/', '/image-credits/', '/sitemap/'];
     foreach (TOOLS as $slug => $_) $urls[] = "/tools/$slug/";
     foreach (['categories', 'products', 'brands', 'guides'] as $set) foreach ($CAT[$set] as $p => $_) $urls[] = $p;
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
@@ -55,7 +55,7 @@ if (str_starts_with($path, '/?')) redirect('/');
 if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('/\.[a-z0-9]{2,4}$/i', $path)) {
     $try = $path . '/';
     if (isset($CAT['products'][$try]) || isset($CAT['categories'][$try]) || isset($CAT['brands'][$try]) || isset($CAT['guides'][$try]) || isset($CAT['redirects'][$try])
-        || in_array($try, ['/shop-all/', '/brands/', '/guides/', '/tools/', '/cart/', '/about/', '/contact/', '/search/', '/affiliate-disclosure/', '/privacy-policy/', '/terms-of-use/', '/image-credits/', '/shipping-returns/'], true)
+        || in_array($try, ['/shop-all/', '/brands/', '/guides/', '/tools/', '/cart/', '/about/', '/contact/', '/search/', '/affiliate-disclosure/', '/privacy-policy/', '/terms-of-use/', '/image-credits/', '/shipping-returns/', '/sitemap/'], true)
         || isset(TOOLS[trim(substr($try, 7), '/')])) {
         redirect($try . (($q = parse_url($uri, PHP_URL_QUERY)) ? "?$q" : ''));
     }
@@ -71,6 +71,7 @@ switch ($path) {
     case '/cart/':     render('cart');
     case '/search/':   render('search', ['q' => trim((string)($_GET['q'] ?? ''))]);
     case '/image-credits/': render('credits');
+    case '/sitemap/':  render('sitemap');
     case '/about/': case '/contact/': case '/affiliate-disclosure/': case '/privacy-policy/': case '/terms-of-use/': case '/shipping-returns/':
         render('page', ['slug' => trim($path, '/')]);
 }

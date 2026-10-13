@@ -7,7 +7,7 @@ $CAT = require dirname(__DIR__) . '/data/catalog.php';
 $AFF = is_file(dirname(__DIR__) . '/data/affiliates.json')
     ? (json_decode(file_get_contents(dirname(__DIR__) . '/data/affiliates.json'), true) ?: []) : [];
 
-const ASSET_V = '4';
+const ASSET_V = '5';
 
 function e(?string $s): string { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8'); }
 
@@ -147,6 +147,34 @@ function popular_block(string $dept, string $self = '', string $heading = ''): s
     $h = '<section class="section popular"><div class="wrap"><h2>' . e($heading ?: ($name ? "Popular in $name" : 'Popular searches')) . '</h2><ul class="popular-list">';
     foreach (array_slice($rows, 0, 12) as [$label, $path]) $h .= '<li><a href="' . e($path) . '">' . e($label) . '</a></li>';
     return $h . '</ul></div></section>';
+}
+
+// Title case for a keyword used as link text; model codes ("372xp") go upper case.
+function kw_title(string $k): string {
+    return implode(' ', array_map(fn($w) => preg_match('/\d/', $w) ? strtoupper($w) : ucfirst($w), explode(' ', $k)));
+}
+
+// Footer topic columns: per department, its biggest subcategories under their search
+// keyword, then the department's most-searched pages. [[dept, [[label, path], ...]], ...]
+function footer_topics(array $deptPaths, int $per = 7): array {
+    global $CAT;
+    $out = [];
+    foreach ($deptPaths as $dp) {
+        if (!($d = $CAT['categories'][$dp] ?? null)) continue;
+        $kids = $d['children'];
+        usort($kids, fn($a, $b) => count($CAT['categories'][$b]['products']) <=> count($CAT['categories'][$a]['products']) ?: strcmp($a, $b));
+        $links = [];
+        foreach (array_slice($kids, 0, 4) as $k) {
+            $c = $CAT['categories'][$k];
+            $links[$k] = kw_title(trim($c['keyword'] ?? '') ?: $c['name']);
+        }
+        foreach ($CAT['popular'][trim($dp, '/')] ?? [] as [$label, $path]) {
+            if (count($links) >= $per) break;
+            if ($path !== $dp && !isset($links[$path]) && !in_array(strtolower($label), array_map('strtolower', $links), true)) $links[$path] = $label;
+        }
+        $out[] = [$d, array_map(fn($p, $l) => [$l, $p], array_keys($links), $links)];
+    }
+    return $out;
 }
 
 function faq_block(array $faq, string $heading = 'Common questions'): string {
