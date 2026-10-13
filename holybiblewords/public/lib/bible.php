@@ -4,7 +4,7 @@
 const SITE_URL  = 'https://holybiblewords.com';
 const SITE_NAME = 'Holy Bible Words';
 const DATA_DIR  = __DIR__ . '/../data';
-const ASSET_VER = '6';
+const ASSET_VER = '7';
 
 function versions(): array {
     static $v;

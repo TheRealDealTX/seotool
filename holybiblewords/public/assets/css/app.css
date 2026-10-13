@@ -98,7 +98,6 @@ h2 { font-size: 1.25rem; }
   .topbar > .icon-btn { width: 40px; }
   .reader-bar .picker-btn { font-size: .92rem; }
 }
-}
 
 /* ---- bottom tab bar (mobile) ---- */
 .tabbar { position: fixed; z-index: 30; bottom: 0; left: 0; right: 0; display: flex; height: calc(var(--tab) + env(safe-area-inset-bottom));
