@@ -1,6 +1,6 @@
 #!/bin/bash
 # Deploy site/ to the Hostinger Agency website for gaparboristsupply.com
-# (UID wvWrkASNv, temporary domain greenyellow-woodcock-344499.hostingersite.com).
+# (UID wvWrkASNv, temporary domain darkcyan-squid-333672.hostingersite.com).
 #
 # Pushes each built file through the website's File Browser TUS endpoint. Get the
 # three credentials from the Hostinger API call `agency-hosting_files_generate-upload-url`

@@ -5,7 +5,7 @@ gaparboristsupply.com under new ownership. It has no database and no CMS:
 content lives in JSON, a compile step turns it into one PHP array, and one
 front controller renders every page.
 
-**Live (temporary domain):** https://greenyellow-woodcock-344499.hostingersite.com
+**Live (temporary domain):** https://darkcyan-squid-333672.hostingersite.com
 on Hostinger Agency website `wvWrkASNv` (Agency Growth plan, plain php-fpm 8.5, Phoenix).
 While on the temporary domain, every page carries `noindex` (`'live' => false` in
 `site/app/config.php`).
