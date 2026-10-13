@@ -2315,11 +2315,65 @@
   "note": "Pro-Sentei blade 109-30 (300mm; no size in name)",
   "title": "Silky Replacement Blade GOMTARO 300mm Pro-Sentei Dual Teeth (109-30)"
  },
+ "/cutting-and-pruning/blades/silky-hayate-390mm-xl-teeth-replacement-blade-blade-only/": {
+  "asin": "B0014C4RE8",
+  "match": "variant",
+  "note": "Hayate XL blade only exists in 420mm",
+  "title": "Silky Replacement Blade Only Hayate 420mm XL Teeth (373-42)"
+ },
+ "/cutting-and-pruning/blades/silky-hayate-sickle-blade-replacement-blade-blade-only/": {
+  "asin": "B002GKB5OC",
+  "match": "exact",
+  "note": "Hayate sickle 375-70",
+  "title": "Silky Replacement Sickle Only for Hayate (375-70)"
+ },
+ "/cutting-and-pruning/blades/silky-pocketboy-replacement-blade/": {
+  "asin": "B000CE8RL8",
+  "match": "variant",
+  "note": "Size/teeth unspecified; closest 130mm medium",
+  "title": "Silky Replacement Blade Only POCKETBOY 130mm Medium Teeth (341-13)"
+ },
  "/cutting-and-pruning/blades/sugoi-replacement-blade/": {
   "asin": "B07SM2NSHY",
   "match": "variant",
   "note": "Name gives no length; 330mm blade chosen (360mm B0014C4RHA also exists)",
   "title": "Silky Replacement Blade Sugoi 330mm"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/fanno-wooden-handle-13-hand-saw/": {
+  "asin": "B000AYHJ1Y",
+  "match": "exact",
+  "note": "Fanno 13in saw; handle material not stated in listing",
+  "title": "Fanno 13\" Curved Pruning Saw"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/jameson-11-straight-blade-hand-saw/": {
+  "asin": "B07X5B8234",
+  "match": "variant",
+  "note": "Several 11in handle/scabbard versions; base wood handle chosen",
+  "title": "Jameson HS-11TE-SW 11\" Straight Blade Hand Saw With Wood Handle"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/jameson-13-ergonomic-handle-hand-saw/": {
+  "asin": "B01HC1BY9K",
+  "match": "variant",
+  "note": "Ergonomic-handle 13in Jameson; may be unavailable; alt HS-13TE-GUL-O B07X3729MN",
+  "title": "Jameson HS-13TE-G Pruning Hand Saw with 13-inch Barracuda Tri-Cut Blade"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/jameson-13-wooden-handle-hand-saw/": {
+  "asin": "B07X372S5X",
+  "match": "exact",
+  "note": "13in wood handle",
+  "title": "Jameson HS-13TE-WH 13\" Tri-Cut Hand Saw with Wood Handle"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/pocketboy-130-large-teeth/": {
+  "asin": "B0014C6R28",
+  "match": "exact",
+  "note": "346-13",
+  "title": "Silky Professional Series PocketBoy Folding Saw 130mm Large Teeth (346-13)"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/silky-gomtaro-300mm-hand-saw/": {
+  "asin": "B0014C4MZW",
+  "match": "exact",
+  "note": "300mm straight w/ scabbard; tooth size not specified, large chosen",
+  "title": "Silky GOMTARO Professional Hand Saw 300mm Large Teeth (102-30)"
  },
  "/cutting-and-pruning/hand-saws-and-scabbards/silky-gomtaro-pro-sentei-300mm-hand-saw/": {
   "asin": "B0014CA058",
@@ -2339,11 +2393,107 @@
   "note": "330mm",
   "title": "Silky Professional SUGOI Curved Hand Saw 330mm XL Teeth (390-33)"
  },
+ "/cutting-and-pruning/hand-saws-and-scabbards/silky-tsurugi-curved-hand-saw-with-medium-teeth/": {
+  "asin": "B00S11XGQK",
+  "match": "variant",
+  "note": "Size unspecified; 330mm medium curved chosen",
+  "title": "Silky Professional Series TSURUGI Curved Hand Saw 330mm Medium Teeth (456-33)"
+ },
  "/cutting-and-pruning/hand-saws-and-scabbards/silky-zubat-13-curved-hand-saw/": {
   "asin": "B0014C4QMG",
   "match": "exact",
   "note": "",
   "title": "Silky ZUBAT Professional Curved Hand Saw 330mm Large Teeth (270-33)"
+ },
+ "/cutting-and-pruning/hand-saws-and-scabbards/silky-zubat-arborist-edition-13-hand-saw/": {
+  "asin": "B06XYH4WLD",
+  "match": "exact",
+  "note": "330mm Zubat Arborist",
+  "title": "Silky ZUBAT Arborist Professional Hand Saw 330mm XL Teeth (722-33)"
+ },
+ "/cutting-and-pruning/parts-and-accessories/12-pruner-rope-insulator/": {
+  "asin": "B07X5BZZXN",
+  "match": "similar",
+  "note": "12in pruner rope insulator",
+  "title": "Jameson PRI-12 Pruner Rope Insulator, 12 Inch Pole Pruner Accessory"
+ },
+ "/cutting-and-pruning/parts-and-accessories/16-sentei-3-section-telescoping-aluminum-polesaw/": {
+  "asin": "B08MWM4SCX",
+  "match": "similar",
+  "note": "Same 16ft 3-section aluminum telescoping pole saw",
+  "title": "Notch 16' Sentei 3 Section Telescoping Aluminum Polesaw"
+ },
+ "/cutting-and-pruning/parts-and-accessories/female-ferrule-with-spring-clip/": {
+  "asin": "B00ZQ9ZL4K",
+  "match": "similar",
+  "note": "Female ferrule w/ spring clip for pruner poles",
+  "title": "Marvin Pruner Pole Extension Ferrule Coupler Female Z-126F"
+ },
+ "/cutting-and-pruning/parts-and-accessories/ja-34-link/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Jameson JA-34 link part found",
+  "title": ""
+ },
+ "/cutting-and-pruning/parts-and-accessories/jameson-big-mouth-pruner-spring/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Big Mouth spring listing found",
+  "title": ""
+ },
+ "/cutting-and-pruning/parts-and-accessories/jameson-heavy-duty-pruner-spring/": {
+  "asin": "B0D8R8VP8X",
+  "match": "variant",
+  "note": "Spring for Jameson PH-14/JA-14 heavy duty heads",
+  "title": "Jameson Replacement Pruner Spring - JAZ104"
+ },
+ "/cutting-and-pruning/parts-and-accessories/jameson-saw-head-lower-black-bolts/": {
+  "asin": null,
+  "match": "none",
+  "note": "No bolts listing found",
+  "title": ""
+ },
+ "/cutting-and-pruning/parts-and-accessories/male-ferrule/": {
+  "asin": "B00ZQ9ZS2U",
+  "match": "similar",
+  "note": "Male ferrule for sectional pruner poles",
+  "title": "Marvin Pruner Pole Extension Ferrule Coupler Male Z-126M"
+ },
+ "/cutting-and-pruning/parts-and-accessories/marvin-cap-screw-washer-nut/": {
+  "asin": "B0GFPRRFXM",
+  "match": "variant",
+  "note": "Aftermarket listing naming Marvin; Notch Z-105 B099635PQR title lacks Marvin",
+  "title": "BEAR FLAG EDITION for B1Z105 Pruner, Marvin, Cap Screw, Washer, Nut"
+ },
+ "/cutting-and-pruning/parts-and-accessories/marvin-ph4-pruner-spring/": {
+  "asin": "B09961RJDZ",
+  "match": "exact",
+  "note": "Z104 spring for PH4",
+  "title": "Notch Z104 Replacement Spring for Marvin PH4 Pruner Head"
+ },
+ "/cutting-and-pruning/parts-and-accessories/marvin-pole-end-cap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Marvin end cap listing found",
+  "title": ""
+ },
+ "/cutting-and-pruning/parts-and-accessories/marvin-pruner-head-adaptor/": {
+  "asin": "B01FSZ42AK",
+  "match": "variant",
+  "note": "Marvin pruner adapter w/ eye bolt; fit unconfirmed",
+  "title": "Pruner-MARVIN-Adapter WITH EYE Bolt Part No: A-B1Z142"
+ },
+ "/cutting-and-pruning/parts-and-accessories/marvin-saw-head-adaptor/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only heads-with-adapter or titles w/o Marvin",
+  "title": ""
+ },
+ "/cutting-and-pruning/parts-and-accessories/silky-elastic-leg-straps/": {
+  "asin": "B00HFXJBNW",
+  "match": "exact",
+  "note": "Silky elastic leg straps",
+  "title": "Silky 506-04-14 Elastic Cloth Tie Leg Straps With Cinch"
  },
  "/cutting-and-pruning/pole-saws-and-scabbards/20-nobasu-4-section-telescoping-aluminum-polesaw/": {
   "asin": "B08KBPW2KL",
@@ -2363,17 +2513,65 @@
   "note": "Cast Marvin U2 saw head sold under Notch; generic name so model assumed",
   "title": "Notch Marvin U2 Saw Head"
  },
+ "/cutting-and-pruning/pole-saws-and-scabbards/phoenix-saw-head/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Phoenix blades/pruner head found",
+  "title": ""
+ },
+ "/cutting-and-pruning/pole-saws-and-scabbards/silky-saw-head-for-standard-poles/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Silky saw head listing found",
+  "title": ""
+ },
+ "/cutting-and-pruning/pole-saws-and-scabbards/weaver-pole-saw-scabbard-fits-13-hook-tip-blades/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Weaver scabbard confirmed for 13in hook tip",
+  "title": ""
+ },
+ "/cutting-and-pruning/pole-saws-and-scabbards/weaver-pole-saw-scabbard-fits-16-blades/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Weaver scabbard stated for 16in",
+  "title": ""
+ },
+ "/cutting-and-pruning/pole-saws-and-scabbards/weaver-saw-scabbard-with-pruner-pouch-rubberized-hl-14/": {
+  "asin": "B01DUNHXJ4",
+  "match": "variant",
+  "note": "HL-14 code not confirmed; closest Weaver scabbard with pruner pouch",
+  "title": "Weaver Arborist Saw Scabbards with Pruner Pouch"
+ },
  "/cutting-and-pruning/poles-and-kits/6-foam-filled-poles/": {
   "asin": "B0037M1NGI",
   "match": "similar",
   "note": "Generic 6ft foam-core fiberglass pole",
   "title": "Jameson Fiberglass Base Pruner Pole with Foam Core - 6 Feet"
  },
+ "/cutting-and-pruning/poles-and-kits/jameson-6-hollow-core-poles/": {
+  "asin": "B00L21PFHE",
+  "match": "variant",
+  "note": "6ft hollow core Jameson; base pole; may be unavailable",
+  "title": "Jameson FG-6F Professional Hollow Core Base Poles, 6'"
+ },
+ "/cutting-and-pruning/poles-and-kits/jameson-8-b-lite-poles/": {
+  "asin": "B0DYKW54L6",
+  "match": "exact",
+  "note": "BL-8 B-Lite",
+  "title": "Jameson BL-8 Lightweight Hollow Core Extension Poles"
+ },
  "/cutting-and-pruning/poles-and-kits/jameson-8-hollow-core-pole/": {
   "asin": "B00L0KVGOS",
   "match": "exact",
   "note": "Jameson FG-8 hollow core 8ft",
   "title": "8 ft. Hollow Core Fiberglass Extension Pole"
+ },
+ "/cutting-and-pruning/poles-and-kits/jameson-foam-filled-base-pole/": {
+  "asin": "B0037M1NGI",
+  "match": "variant",
+  "note": "Length unspecified; 6ft foam core base",
+  "title": "Jameson Fiberglass Base Pruner Pole with Foam Core - 6 Feet, Yellow"
  },
  "/cutting-and-pruning/poles-and-kits/peavey-ash-pole-12-long/": {
   "asin": null,
@@ -2387,11 +2585,47 @@
   "note": "",
   "title": "Felco F-2 Classic Manual Hand Pruner"
  },
+ "/cutting-and-pruning/pruners-and-loppers/husqvarna-classic-hand-pruner/": {
+  "asin": "B08JNCJ7W3",
+  "match": "exact",
+  "note": "Husqvarna Classic bypass hand pruner",
+  "title": "Husqvarna Classic Pruner (599633001)"
+ },
+ "/cutting-and-pruning/pruners-and-loppers/jameson-big-mouth-pruner-kit/": {
+  "asin": "B07X13KHYS",
+  "match": "exact",
+  "note": "Jameson Big Mouth pruner kit",
+  "title": "JA-34 Big Mouth Pruner Kit"
+ },
+ "/cutting-and-pruning/pruners-and-loppers/jameson-big-mouth-pulley-pruner/": {
+  "asin": "B011ISWDPM",
+  "match": "variant",
+  "note": "Big Mouth pruner head, fixed pulley; pulley type unconfirmed",
+  "title": "Big Mouth Side-Cut Pruner, 1.75 in. (Jameson JA-34)"
+ },
+ "/cutting-and-pruning/pruners-and-loppers/jameson-compositlock-big-mouth-pruner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No standalone CompositLock Big Mouth listing",
+  "title": ""
+ },
+ "/cutting-and-pruning/pruners-and-loppers/jameson-pulley-pruner-with-adapter-and-rope/": {
+  "asin": "B078TMZR3W",
+  "match": "variant",
+  "note": "Pruner+adapter+20ft rope; alt JA-14 kit B007IC2UCY",
+  "title": "Jameson JA-34DP-PKG Big Mouth Side Cut Double Pulley Tree Pruner Kit"
+ },
  "/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-head-with-single-pulley/": {
   "asin": "B00VTT9EPI",
   "match": "exact",
   "note": "",
   "title": "Marvin 'Bull' 1-3/4\" Pruner Head with Single Pulley"
+ },
+ "/cutting-and-pruning/pruners-and-loppers/marvin-bull-pruner-with-adapter/": {
+  "asin": "B004BQ2YZ8",
+  "match": "exact",
+  "note": "Marvin Bull with adapter",
+  "title": "Marvin PH-5 Bull Pruner Head (1-3/4\" capacity) with Quick Change Adapter"
  },
  "/cutting-and-pruning/pruners-and-loppers/marvin-pruner-head/": {
   "asin": "B01FSYZ8UO",
@@ -2399,17 +2633,143 @@
   "note": "Generic name; PH4 Marvin pruner head chosen",
   "title": "Marvin Pruner Head with Round Casting 1 1/4\" Cut for Octagonal Poles PH4"
  },
+ "/cutting-and-pruning/pruners-and-loppers/marvin-pruner-with-adapter/": {
+  "asin": "B0BHMGWQZX",
+  "match": "exact",
+  "note": "Marvin PH4 with adapter",
+  "title": "Notch Marvin PH4 (1-1/4\" capacity) Pruner Head w/Adapter"
+ },
+ "/cutting-and-pruning/pruners-and-loppers/pole-pruner-braided-polyester-cord/": {
+  "asin": "B01FSZ41DI",
+  "match": "similar",
+  "note": "Polyester pole pruner rope",
+  "title": "Marvin Pole Pruner Rope Polyester 14' Z-125A"
+ },
+ "/devices-for-mrs/art-spiderjack-2-1-dyneema/": {
+  "asin": null,
+  "match": "none",
+  "note": "No SpiderJack listing found",
+  "title": ""
+ },
  "/devices-for-mrs/buckingham-throttle/": {
   "asin": "B0GTWYZXMV",
   "match": "exact",
   "note": "May be out of stock",
   "title": "Buckingham Throttle Rope Ascender & Descender"
  },
+ "/devices-for-srs/isc-chipmunk-flex-tether/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Chipmunk tether listing found",
+  "title": ""
+ },
+ "/devices-for-srs/rope-runner-vertec/": {
+  "asin": "B0DM9NMZGN",
+  "match": "exact",
+  "note": "Rope Runner Vertec",
+  "title": "Notch Rope Runner Vertec Ultimate Climbing & Work Positioning Device-99703"
+ },
+ "/european-saddles/camp-tree-access-evo/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only chest harness mentions Evo; no saddle listing",
+  "title": ""
+ },
+ "/european-saddles/catalyst-climbing-harness/": {
+  "asin": "B0DF8LVH59",
+  "match": "variant",
+  "note": "Catalyst harness size 1; size 2 also exists",
+  "title": "Notch Catalyst Harness-Size 1 (CATH-1)"
+ },
  "/european-saddles/dmm-kinisi-max-harness/": {
   "asin": "B0D2FG88XG",
   "match": "exact",
   "note": "Size not specified; Large listing (Medium B0D2DW8527)",
   "title": "DMM Kinisi Max Saddle - Large, Black"
+ },
+ "/european-saddles/dmm-kinisi-pro/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Kinisi Max found, not Pro",
+  "title": ""
+ },
+ "/european-saddles/fox-harness-by-r-easy-climbing-fabric-version-pre-order/": {
+  "asin": null,
+  "match": "none",
+  "note": "Not found on Amazon",
+  "title": ""
+ },
+ "/european-saddles/fox-harness-by-r-easy-climbing-leather-version-pre-order/": {
+  "asin": null,
+  "match": "none",
+  "note": "Not found on Amazon",
+  "title": ""
+ },
+ "/european-saddles/teufelberger-treemotion-essential-climbing-saddle/": {
+  "asin": "B0BY337C64",
+  "match": "variant",
+  "note": "Sizes S/M/L; Medium chosen",
+  "title": "Teufelberger treeMOTION Essential Saddle - Medium"
+ },
+ "/eye-and-eye-prusiks/8mm-black-beeline-eye-to-eye-prusik/": {
+  "asin": "B01N8196TJ",
+  "match": "variant",
+  "note": "Bee-Line 8mm black; length not given",
+  "title": "SherrillTree Bee Line Black 8mm x 28\" G Spliced Eye & Eye Prusik Cord"
+ },
+ "/eye-and-eye-prusiks/8mm-courant-phoenix-pink-dragon-sewn-eye-to-eye-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Courant listing found",
+  "title": ""
+ },
+ "/eye-and-eye-prusiks/multi-purpose-ring-sling/": {
+  "asin": "B0FCXLP5X5",
+  "match": "similar",
+  "note": "Ring sling for anchors/redirects",
+  "title": "Rigging Ring Sling Rope, 3/4\" x 6' Arborist Rope with #3 Aluminum Ring (40203)"
+ },
+ "/eye-and-eye-prusiks/samson-bail-out-xl-sewn-eye-to-eye-hitch-cord/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Samson Bail Out listing found",
+  "title": ""
+ },
+ "/eye-and-eye-prusiks/sterling-8mm-flex-sewn-eye-to-eye-prusik/": {
+  "asin": "B079G1HPSC",
+  "match": "exact",
+  "note": "Sterling Flex 8mm eye-to-eye; 28/30/32in exist",
+  "title": "Sterling Rope Company 8mm Flex Hitch Cord Eye to Eye 32\""
+ },
+ "/eye-and-eye-prusiks/sterling-8mm-rit-sewn-eye-to-eye-prusik/": {
+  "asin": "B079G4LKB6",
+  "match": "exact",
+  "note": "Sterling RIT 8mm eye-to-eye; 28/30/32in exist",
+  "title": "Sterling Rope Company RIT 8mm Eye to Eye 32\""
+ },
+ "/eye-and-eye-prusiks/yale-veritas-8mm-sewn-eye-to-eye/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Veritas listing found",
+  "title": ""
+ },
+ "/fall-arrest-for-aerial-lifts/fs-flex-285-pro-fall-protection-harness-with-hip-d-rings/": {
+  "asin": "B0C8BWLNJ5",
+  "match": "variant",
+  "note": "FS-FLEX285 3D harness; size XS shown; hip rings unconfirmed",
+  "title": "SafeWaze FS-FLEX285-QC-XS PRO+ Full Body Harness: 3D, QC Chest, QC Legs (XS)"
+ },
+ "/fall-arrest-for-aerial-lifts/safewaze-arc-flash-nylon-full-body-fall-arrest-harness/": {
+  "asin": "B0D9JNNTDL",
+  "match": "variant",
+  "note": "Safewaze arc flash harness w/ nylon webbing; exact model unconfirmed",
+  "title": "SafeWaze SW77125-UTQC-SL-L/XL Arc Flash Full Body Harness: Soft Dorsal & Sternal Loop, DE"
+ },
+ "/fall-protection/gap-arborist-supply-aerial-lift-evacuation-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "No comparable aerial lift evacuation kit found",
+  "title": ""
  },
  "/fall-protection/petzl-astro-bod-fast-international-harness/": {
   "asin": "B0G87R9F7X",
@@ -2423,11 +2783,23 @@
   "note": "6-pack of quarts as the case",
   "title": "Husqvarna 584309701 XP Pre-Mixed 2-Stroke Fuel and Engine Oil Quart (6 Pack)"
  },
+ "/fluids/husqvarna-x-guard-biodegradable-bar-and-chain-oil-gallon/": {
+  "asin": "B0DRMBVGLJ",
+  "match": "exact",
+  "note": "1 gal biodegradable",
+  "title": "Husqvarna Biodegradable Bar and Chain Oil Gallon"
+ },
  "/foot-ascenders-and-foot-loops/arborist-foot-loop/": {
   "asin": "B07X1KYN23",
   "match": "similar",
   "note": "Generic adjustable foot loop",
   "title": "NewDoar Foot Ascender Loop for Climbing Tree Arborist"
+ },
+ "/foot-ascenders-and-foot-loops/camp-turbospur-ascender-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Turbospur listing found",
+  "title": ""
  },
  "/foot-ascenders-and-foot-loops/cmi-foot-ascender/": {
   "asin": "B00266FA9C",
@@ -2435,11 +2807,119 @@
   "note": "Left foot; right is B002J8VXRU",
   "title": "CMI Foot Ascender Left"
  },
+ "/foot-ascenders-and-foot-loops/isc-stryder-foot-ascender/": {
+  "asin": "B072R2KMVZ",
+  "match": "exact",
+  "note": "ISC Stryder",
+  "title": "ISC STRYDER FOOT ASCENDER RP227A1 - ARBORIST"
+ },
  "/foot-ascenders-and-foot-loops/saka-foldable-knee-ascender/": {
   "asin": "B0BLZPXRNC",
   "match": "exact",
   "note": "",
   "title": "Climbing Innovations SAKA Folding Knee Ascender"
+ },
+ "/footlock-prusiks/ocean-polyester-foot-lock-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Ocean eye-and-eye prusiks, no footlock",
+  "title": ""
+ },
+ "/friction-savers/ansi-arborist-crane-tie-in-point-with-yale-r-i-n-g-rope/": {
+  "asin": "B0883F6VMT",
+  "match": "similar",
+  "note": "ANSI crane tie-in point; Yale rope not confirmed",
+  "title": "ROPE Logic ANSI Arborist Crane Tie-in Point"
+ },
+ "/friction-savers/camp-herbol-cambium-saver/": {
+  "asin": "B00S129ICA",
+  "match": "variant",
+  "note": "Listed in 90/120/150cm; our name gives no length",
+  "title": "CAMP Herbol Cambium Saver Arborist Retrievable Anchor 90cm 35 Inch"
+ },
+ "/friction-savers/cmi-friction-saver-with-aluminum-rings/": {
+  "asin": null,
+  "match": "none",
+  "note": "No CMI listing found",
+  "title": ""
+ },
+ "/friction-savers/gap-arborist-supply-op-friction-saver/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing matching OP friction saver specs",
+  "title": ""
+ },
+ "/full-body-harnesses/safewaze-comfort-leg-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Safewaze leg pad listing",
+  "title": ""
+ },
+ "/gear-bags/camp-spacecraft-45-l/": {
+  "asin": "B079YJRWQQ",
+  "match": "exact",
+  "note": "Same brand/model/size",
+  "title": "Camp Spacecraft Pack Gear Bag 45 Liter"
+ },
+ "/gear-bags/dmm-porter-45-liter-gear-bag/": {
+  "asin": "B0100RUGJM",
+  "match": "exact",
+  "note": "Same brand/model/size",
+  "title": "DMM Porter Bag - Black 45L"
+ },
+ "/gear-bags/notch-pro-access-bag/": {
+  "asin": "B085MJVBD6",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "Notch Pro Access Rope Bag (53444)"
+ },
+ "/gear-bags/petzl-transport-45l-gear-pack/": {
+  "asin": "B0CTKWBTBX",
+  "match": "exact",
+  "note": "Black; yellow also exists",
+  "title": "PETZL Pack TRANSPORT 45L Black"
+ },
+ "/hand-saws-and-scabbards/fanno-15-curved-blade-handsaw/": {
+  "asin": "B005ZDS83S",
+  "match": "exact",
+  "note": "Fanno 15in curved saw",
+  "title": "Fanno 15\" Curved D Handle Pruning Saw with Rakers"
+ },
+ "/hearing-protection/3m-peltor-over-the-head-earmuffs/": {
+  "asin": "B0DJRJ494G",
+  "match": "variant",
+  "note": "Name gives no model; X3A chosen from several Peltor over-the-head models",
+  "title": "3M Peltor X3A Over-the-Head Ear Muffs NRR 28 dB"
+ },
+ "/hearing-protection/husqvarna-professional-hearing-muff-protectors-for-helmet/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only headband protectors and full helmets found",
+  "title": ""
+ },
+ "/heavy-duty-slings/3-4-bull-rope-rigging-sling/": {
+  "asin": "B00BQLIGOE",
+  "match": "similar",
+  "note": "3/4in polyester bull rope sling with protected eye",
+  "title": "Bull Rope Sling, 3/4 in x 14 Ft, Orange"
+ },
+ "/heavy-duty-slings/3-4-tenex-tec-dead-eye-rigging-sling/": {
+  "asin": null,
+  "match": "none",
+  "note": "Listings are Rope Logic/Notch brand, not Samson-branded",
+  "title": ""
+ },
+ "/heavy-duty-slings/5-8-bull-rope-rigging-sling/": {
+  "asin": "B0HJXQ7VSY",
+  "match": "similar",
+  "note": "5/8in polyester spliced-eye sling; no exact 5/8 bull rope sling found",
+  "title": "ROPE Logic Dead Eye Sling - 5/8\" x 10 ft. Samson Tenex Tec (15304)"
+ },
+ "/heavy-duty-slings/9-16-dead-eye-rigging-sling-with-tylaska-lfb-14-basilisk/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Tylaska sling listing",
+  "title": ""
  },
  "/heavy-duty-slings/9-16-dead-eye-rigging-sling/": {
   "asin": null,
@@ -2447,17 +2927,59 @@
   "note": "No 9/16 in spliced-eye rigging sling found",
   "title": ""
  },
+ "/helmets/land-aeropro-vented-climbing-helmet/": {
+  "asin": "B0DP5KW9DJ",
+  "match": "exact",
+  "note": "Colorway not specified in our name",
+  "title": "Land Helmets AeroPro Safety Helmet Type 1 Class C Vented (Army Green)"
+ },
  "/helmets/land-helmet-ear-muff/": {
   "asin": "B08FF695HD",
   "match": "similar",
   "note": "Slot-mount flip-up hard hat ear muffs",
   "title": "Hard Hat Mounted Ear Muffs"
  },
+ "/helmets/land-safety-frontier-class-e-type-2-helmet/": {
+  "asin": "B0G4W2NXVJ",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Land Helmets Frontier ANSI Type 2 Class E Non-Vented Safety Helmet - White"
+ },
+ "/helmets/lift-radix-replacement-pad-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "HRX-22RK seen only in search page, no ASIN",
+  "title": ""
+ },
+ "/helmets/lift-radix-replacement-suspension-kit/": {
+  "asin": "B0CC42C35T",
+  "match": "variant",
+  "note": "LIFT Radix suspension; LUX naming may differ",
+  "title": "LIFT HRX-22RKB2 - RADIX LUX Suspension System"
+ },
+ "/helmets/pfanner-protos-neck-guard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No separate neck guard listing",
+  "title": ""
+ },
  "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/bigfoot-composite-outrigger-pads/": {
   "asin": "B00RC2Z3YW",
   "match": "exact",
   "note": "Size not specified; 12x12x2 chosen",
   "title": "BIGFOOT USA RV Pads Pad Outrigger Jack Trailer BLACK 12\"x12\"x2\""
+ },
+ "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/removable-hook-step/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching hook-on step",
+  "title": ""
+ },
+ "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/weaver-bucket-truck-cover-one-man-bucket/": {
+  "asin": "B00VX56H6M",
+  "match": "exact",
+  "note": "Weaver cover; fits one-man bucket",
+  "title": "Weaver Arborist Vinyl Bucket Cover with Bungee Strap for Utility Buckets"
  },
  "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-accessories/weaver-two-man-bucket-truck-cover/": {
   "asin": "B06XG5PH7H",
@@ -2476,6 +2998,24 @@
   "match": "similar",
   "note": "Hooks over bucket lip, inside mount",
   "title": "Chainsaw Scabbard - Plastic - Bucket Mounted (Inside Mount ONLY) (Lined)"
+ },
+ "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-and-aerial-lift-scabbards/ae-fiberglass-inside-mount-bucket-truck-scabbard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No AE listing",
+  "title": ""
+ },
+ "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-and-aerial-lift-scabbards/safetree-bucket-truck-scabbard-for-bucket-truck-outside-mount/": {
+  "asin": null,
+  "match": "none",
+  "note": "No SafeTree listing",
+  "title": ""
+ },
+ "/jobsite/bucket-truck-and-aerial-lift-gear/bucket-truck-and-aerial-lift-scabbards/safetree-scabbard-for-aerial-lifts/": {
+  "asin": null,
+  "match": "none",
+  "note": "No SafeTree listing",
+  "title": ""
  },
  "/jobsite/bucket-truck-and-aerial-lift-gear/fall-arrest-for-aerial-lifts/6-web-retractable-fall-protection-lanyard/": {
   "asin": "B0FX99DR7Y",
@@ -2507,11 +3047,29 @@
   "note": "HDPE traction tread mats, 12-pack",
   "title": "Mytee Products 12 Pk 3' x 8' 1/2\" Thick Heavy Duty Ground Protection Mats with Diamond Plated Tread"
  },
+ "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-3-8-x-50-professional-chainsaw-bar/": {
+  "asin": "B004CR19CU",
+  "match": "variant",
+  "note": "Husqvarna pro 3/8 .050 bar; length not given in our name",
+  "title": "Husqvarna HT-280 Pro RSN Chainsaw Guide Bar, 3/8\" pitch, .050 gauge"
+ },
  "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-light-bars-3-8-x-050/": {
   "asin": "B09RQ5WBMQ",
   "match": "variant",
   "note": "Length not specified; 28in X-Tough Light chosen",
   "title": "Husqvarna Genuine 599656793 X-Tough Light 28\" RSN Bar 3/8\" .050\" 93DL"
+ },
+ "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-sprocket-nose-chainsaw-bar-404/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna .404 bar found",
+  "title": ""
+ },
+ "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-x-force-narrow-kerf-pixel-chainsaw-bar-325-x-050/": {
+  "asin": "B07TC4CTR8",
+  "match": "variant",
+  "note": "X-Force .325x.050; length not given, Pixel/narrow kerf unconfirmed",
+  "title": "Husqvarna 596199780 X-Force 20 Inch Chainsaw Bar, .325\" Pitch .050\" Gauge, 80 Drive Links"
  },
  "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-bars/husqvarna-x-precision-chainsaw-bar/": {
   "asin": "B0C5BC82SZ",
@@ -2525,11 +3083,29 @@
   "note": "Length not specified; 20in",
   "title": "Oregon 200SLGK095 20-Inch Bar, .050-Inch Gauge, .325-Inch Pitch Chain Saw Bar"
  },
+ "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/husqvarna-h38-3-8-x-043-mini-chain-saw-chain/": {
+  "asin": "B00TPOS14Y",
+  "match": "variant",
+  "note": "H38 3/8 mini .043; 14in length",
+  "title": "Husqvarna Genuine 581807952 14\" 3/8 .043 52 DL H38 Saw Chain Loop"
+ },
+ "/jobsite/chainsaw-accessories/chainsaw-bars-and-chain/chainsaw-chain/husqvarna-h57s-404-x-063-semi-chisel-square-chisel-chain/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna H57S listing",
+  "title": ""
+ },
  "/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/husqvarna-powerbox-carrying-case/": {
   "asin": "B000BO919Q",
   "match": "exact",
   "note": "",
   "title": "Husqvarna Powerbox Carrying Chainsaw Case 100000107"
+ },
+ "/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/husqvarna-replacement-chainsaw-bar-scabbard/": {
+  "asin": "B08G3GNRN9",
+  "match": "variant",
+  "note": "Sized by bar length; 18-22in chosen",
+  "title": "Husqvarna Genuine 596703601 Chainsaw Scabbard 18\"-22\" Bar & Chain Cover"
  },
  "/jobsite/chainsaw-accessories/chainsaw-cases-and-scabbards/the-classic-carrying-case-by-husqvarna/": {
   "asin": "B00TD51VO2",
@@ -2542,6 +3118,18 @@
   "match": "none",
   "note": "Only Technical/Functional apron chaps or bundles found, no Classic chaps alone",
   "title": ""
+ },
+ "/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/arbortec-black-breatheflex-pro-chainsaw-pants/": {
+  "asin": "B0973L1WC3",
+  "match": "exact",
+  "note": "Black Breatheflex Pro; size not specified",
+  "title": "ARBORTEC Breatheflex Pro 1 UL Rated Chainsaw Pants Black Medium"
+ },
+ "/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/arbortec-blue-breatheflex-pro-chainsaw-pants/": {
+  "asin": "B0GTCT7WX7",
+  "match": "exact",
+  "note": "Blue Breatheflex Pro; may be unavailable",
+  "title": "Pro Chainsaw Trousers - Breatheflex Design C Class 1 - Blue by Arbortec Forestwear"
  },
  "/jobsite/chainsaw-accessories/chaps-and-protective-gear/chainsaw-pants/clogger-defenderpro-light-chainsaw-pants/": {
   "asin": null,
@@ -2566,6 +3154,12 @@
   "match": "exact",
   "note": "Size not specified; 5 gal",
   "title": "Eagle 5 Gallon Type I Green Safety Can UI50FSG"
+ },
+ "/jobsite/chainsaw-accessories/fluids/husqvarna-2-stroke-fuel-48-gallon-drum/": {
+  "asin": null,
+  "match": "none",
+  "note": "No drum size on Amazon",
+  "title": ""
  },
  "/jobsite/chainsaw-accessories/fluids/husqvarna-2-stroke-premix-fuel-4-75-gallon/": {
   "asin": null,
@@ -2597,6 +3191,12 @@
   "note": "Sold as dozen; may be unavailable",
   "title": "Hard-Head 10\" Falling Wedges (Dozen)"
  },
+ "/jobsite/chainsaw-accessories/wedges/hi-viz-hardbody-felling-wedge/": {
+  "asin": "B09D3ZGLCX",
+  "match": "similar",
+  "note": "Hi-vis polymer felling wedge; sold as kit",
+  "title": "RNA Professional Tree Felling Wedge Kit (Hi-Vis, 10 pack)"
+ },
  "/jobsite/chainsaw-accessories/wedges/logging-belt-kit/": {
   "asin": "B085JSJJB3",
   "match": "exact",
@@ -2609,11 +3209,47 @@
   "note": "Generic combo bar wrench/screwdriver",
   "title": "Husqvarna Chainsaw Scrench"
  },
+ "/jobsite/chainsaw-accessories/wrenches-and-files/husqvarna-3-8-depth-gauge/": {
+  "asin": "B087Z9B76T",
+  "match": "variant",
+  "note": "Husqvarna 3/8 depth gauge; LoPro Hobby version",
+  "title": "Husqvarna Genuine 596285104 3/8\" LoPro Hobby Filing Depth Gauge Tool"
+ },
+ "/jobsite/chainsaw-accessories/wrenches-and-files/husqvarna-stump-vise/": {
+  "asin": "B00455RD0Q",
+  "match": "exact",
+  "note": "Husqvarna filing/stump vise",
+  "title": "Husqvarna 596286001 Filing Vise"
+ },
+ "/jobsite/chainsaw-accessories/wrenches-and-files/pferd-chain-sharp-cs-x-filing-guide/": {
+  "asin": "B003M4JLE2",
+  "match": "variant",
+  "note": "CS-X comes in several file sizes; size not given",
+  "title": "PFERD TOOLS CS-X Chainsaw Chain Sharpener, 13/64\" File for 3/8\" Low Profile"
+ },
+ "/jobsite/chainsaw-accessories/wrenches-and-files/timber-savage-flat-file/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Timber Savage flat file",
+  "title": ""
+ },
+ "/jobsite/chainsaw-accessories/wrenches-and-files/timber-savage-round-chainsaw-files/": {
+  "asin": "B0CKNX4LKJ",
+  "match": "variant",
+  "note": "Sized by pitch; 3/16 12-pack",
+  "title": "Timber Savage Swiss Chainsaw Sharpening File 12 Pack 3/16"
+ },
  "/jobsite/chipper-knives/7-25-x-4-x-3-8-chipper-knife/": {
   "asin": "B0D7CKCK4H",
   "match": "similar",
   "note": "Same dimensions",
   "title": "ZTUOAUMA 7-1/4\" x 4\" x 3/8\" Brush Chipper Blade Knife"
+ },
+ "/jobsite/chipper-knives/9-x-5-5-x-5-8-chipper-knife/": {
+  "asin": "B0CQZ1WDMC",
+  "match": "similar",
+  "note": "Same 9 x 5.5 x 5/8 dims; 4-pack",
+  "title": "912-3001-47 Bandit Chipper Knives (4 Pack) 5/8 Holes 9 X 5-1/2 X 5/8"
  },
  "/jobsite/chipper-knives/chipper-knife-for-vermeer-bc1800xl/": {
   "asin": "B07T9NWRPH",
@@ -2626,6 +3262,18 @@
   "match": "none",
   "note": "No listing naming BC2100",
   "title": ""
+ },
+ "/jobsite/landscaper-tools/5-tine-pitchfork-with-54-fiberglass-handle/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only 57-58in fiberglass 5-tine forks found",
+  "title": ""
+ },
+ "/jobsite/landscaper-tools/bow-rake-with-54-wood-handle/": {
+  "asin": "B000KK02V2",
+  "match": "similar",
+  "note": "54in wood handle bow rake",
+  "title": "Truper 54 31356 Tru Tough 16 Teeth Welded Bow Rake, Wood Handle"
  },
  "/jobsite/landscaper-tools/grounds-keeper-rake-complete-rake/": {
   "asin": "B07B4MQNHF",
@@ -2644,6 +3292,12 @@
   "match": "exact",
   "note": "May be unavailable",
   "title": "Groundskeeper II Rake Tines - replacement tines (14 pack)"
+ },
+ "/jobsite/landscaper-tools/hasegawa-orchard-ladder-platform-style/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Hasegawa orchard ladder",
+  "title": ""
  },
  "/jobsite/landscaper-tools/hasegawa-orchard-ladder/": {
   "asin": null,
@@ -2669,6 +3323,18 @@
   "note": "",
   "title": "Husqvarna A2400 27\" Composite Multi-Purpose Axe"
  },
+ "/jobsite/logging-tools/forestry-tools/husqvarna-logger-tape-50-ft-15m/": {
+  "asin": "B0B6C6JJVT",
+  "match": "exact",
+  "note": "Husqvarna 50ft/15m logger tape",
+  "title": "Husqvarna 586997601 Lightweight 50' Forest Measuring Tape 15M"
+ },
+ "/jobsite/logging-tools/forestry-tools/spencer-75-diameter-tape-refill/": {
+  "asin": "B00455PULK",
+  "match": "exact",
+  "note": "Spencer 75ft diameter refill; may be unavailable",
+  "title": "Spencer 75' Diameter Tape Refill (Model 985DC) Feet/10ths 66319"
+ },
  "/jobsite/logging-tools/forestry-tools/spencer-logging-tape-75-8ths-no-diameter/": {
   "asin": "B00455PUBU",
   "match": "exact",
@@ -2686,6 +3352,18 @@
   "match": "variant",
   "note": "Third-party seller listing of Spencer 50 ft refill; verify model fit",
   "title": "Traverse Creek Incorporated Spencer Loggers Measuring Tape 50' Refill"
+ },
+ "/jobsite/logging-tools/forestry-tools/spencer-logging-tape-measure-50-with-nail-model-950/": {
+  "asin": "B001KIM1VM",
+  "match": "exact",
+  "note": "Model 950",
+  "title": "50' Spencer Logger Tape (Model 950) Each"
+ },
+ "/jobsite/logging-tools/forestry-tools/spencer-logging-tape-replacement-nail/": {
+  "asin": "B00X52PJRE",
+  "match": "exact",
+  "note": "Spencer replacement nail",
+  "title": "Spencer Logging Tape Nail"
  },
  "/jobsite/logging-tools/log-handling-tools/husqvarna-long-handle-hookaroon/": {
   "asin": "B087RKNGG3",
@@ -2711,11 +3389,35 @@
   "note": "",
   "title": "LogRite Two Man Log Carrier"
  },
+ "/jobsite/logging-tools/log-handling-tools/logrite-log-stand-attachment/": {
+  "asin": "B0046HE7H0",
+  "match": "exact",
+  "note": "LogRite universal log stand",
+  "title": "LogRite Log Stand"
+ },
  "/jobsite/power-equipment/battery-powered-equipment/husqvarna-230ib-hand-held-battery-powered-leaf-blower/": {
   "asin": "B08PL38WYH",
   "match": "exact",
   "note": "Kit with battery and charger",
   "title": "Husqvarna 230iB Battery Powered Cordless Leaf Blower"
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-540ixp-rear-handle-battery-chainsaw-kit/": {
+  "asin": "B0GK27J81C",
+  "match": "variant",
+  "note": "Tool only; no battery/charger kit found",
+  "title": "Husqvarna 540iXP 14\" .325 XP Rear Handle Battery Saw (Tool ONLY)"
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-bli200x-battery/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket listings seen",
+  "title": ""
+ },
+ "/jobsite/power-equipment/battery-powered-equipment/husqvarna-bli300-li-ion-battery/": {
+  "asin": "B0CGBLSL2M",
+  "match": "exact",
+  "note": "36V 9.4Ah",
+  "title": "Husqvarna BLi300 Battery"
  },
  "/jobsite/power-equipment/battery-powered-equipment/husqvarna-qc500-quick-charge-battery-charger/": {
   "asin": "B08K2TW367",
@@ -2735,6 +3437,12 @@
   "note": "",
   "title": "Husqvarna 125B Gas Leaf Blower 952711925"
  },
+ "/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-525bx-professional-handheld-blower/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts listings",
+  "title": ""
+ },
  "/jobsite/power-equipment/blowers-and-other-equipment/husqvarna-580bts-backpack-blower/": {
   "asin": "B0CKLTBWGY",
   "match": "exact",
@@ -2752,6 +3460,12 @@
   "match": "exact",
   "note": "Same model; 20in bar kit",
   "title": "Husqvarna 372XP 20in Chainsaw with 3/8in .050 Bar and Chain"
+ },
+ "/jobsite/power-equipment/chainsaws/husqvarna-390xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only parts listings",
+  "title": ""
  },
  "/jobsite/power-equipment/chainsaws/husqvarna-395xp-chainsaw/": {
   "asin": "B00X1O30JK",
@@ -2789,6 +3503,12 @@
   "note": "Only parts found",
   "title": ""
  },
+ "/jobsite/power-equipment/chainsaws/husqvarna-madsaw-gas-powered-dielectric-pole-saw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only battery 525iDEPS found, different model",
+  "title": ""
+ },
  "/jobsite/power-equipment/chainsaws/husqvarna-t435-top-handle-chainsaw/": {
   "asin": "B0812MY4XK",
   "match": "exact",
@@ -2807,11 +3527,461 @@
   "note": "Only chains/parts found",
   "title": ""
  },
+ "/jobsite/power-equipment/parts/3-8-7-tooth-clutch-drum-for-562xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "562XP fit unconfirmed on Husqvarna listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/325-7-tooth-rim-sprocket/": {
+  "asin": "B06Y547BHH",
+  "match": "similar",
+  "note": "Same pitch/teeth/type; 3-pack",
+  "title": "SPERTEK 3 x of .325\" 7T Chainsaw Drive Rim Sprocket"
+ },
+ "/jobsite/power-equipment/parts/325-7-tooth-spur-sprocket/": {
+  "asin": "B0BYKZQ66M",
+  "match": "similar",
+  "note": "Same pitch/teeth/type",
+  "title": "Archer Spur Chainsaw Sprocket .325-7T"
+ },
+ "/jobsite/power-equipment/parts/air-filter-assembly-for-echo-cs-2511t-chainsaw/": {
+  "asin": "B09LVX1K25",
+  "match": "exact",
+  "note": "Echo genuine CS-2511T",
+  "title": "Echo Genuine Air Filter Assembly for Chainsaw Engine/CS-2511T / A226001991"
+ },
+ "/jobsite/power-equipment/parts/air-filter-assembly-for-husqvarna-562xp/": {
+  "asin": "B088F6CYRP",
+  "match": "variant",
+  "note": "2-pack",
+  "title": "Husqvarna 2 Pack Genuine 522675003 Felt Air Filter Assembly Fits 562XP OEM"
+ },
+ "/jobsite/power-equipment/parts/air-filter-assembly-for-husqvarna-t435-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna T435 confirmed",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/air-filter-for-husqvarna-390xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna-branded 390XP filter confirmed",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/air-filter-for-t540xp-mark-ii/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/air-filter-pre-filter-for-husqvarna-3120xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Pre-filter not confirmed",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-372xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-395xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna listing confirming 395XP fit",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-562xp/": {
+  "asin": "B08CBGHHL3",
+  "match": "exact",
+  "note": "Husqvarna 505129705 lists 562XP fit",
+  "title": "Husqvarna OEM Antivibration Element Craftsman 550XP 555 560XP 562XP 505129705"
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-572xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 572XP-specific Husqvarna listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-592xp-cylinder-side/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 592XP cylinder-side listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/anti-vibration-element-for-husqvarna-592xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 592XP listing from Husqvarna",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/carburetor-assembly-for-husqvarna-t540xp-mark-ii/": {
+  "asin": "B011M854A4",
+  "match": "variant",
+  "note": "T540XP carb; Mark II not confirmed",
+  "title": "Husqvarna OEM Chainsaw Auto Tune Carburetor 579193001 Fits T540XP"
+ },
+ "/jobsite/power-equipment/parts/control-panel-for-husqvarna-t540ixp-battery-chain-saw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No control panel listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/coupling-for-husqvarna-395xp-chainsaw-tension-assembly/": {
+  "asin": "B00TD4A7KC",
+  "match": "exact",
+  "note": "501 53 74-01 coupling fits 395XP",
+  "title": "Husqvarna Coupling Part # 501537401"
+ },
+ "/jobsite/power-equipment/parts/cylinder-cover-for-husqvarna-550xp-mark-ii/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna cylinder cover for 550XP Mark II",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/cylinder-gasket-for-husqvarna-390xp-chainsaw/": {
+  "asin": "B005NH9YLG",
+  "match": "exact",
+  "note": "OEM gasket for 385/390",
+  "title": "Husqvarna OEM 385, 390 Cylinder Gasket"
+ },
+ "/jobsite/power-equipment/parts/cylinder-gasket-for-husqvarna-572xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party gasket listings",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/decompression-valve-for-husqvarna-372xp-x-torque-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husqvarna 503715301 listing B013TCRZN0 does not name model in title",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/front-handle-assembly-for-572xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only handle wrap kit 579504001, different part",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/front-handle-for-t540ixp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/fuel-filter-for-husqvarna-3120xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party filters",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/fuel-filter-for-husqvarna-545-550xp-and-562xp/": {
+  "asin": "B0DJD182M5",
+  "match": "variant",
+  "note": "Husqvarna OEM filter for 562XP/592XP",
+  "title": "Husqvarna OEM 562 XP, 592 XP Fuel Filter"
+ },
+ "/jobsite/power-equipment/parts/fuel-line-for-husqvarna-562xp/": {
+  "asin": "B00TD4CDTU",
+  "match": "exact",
+  "note": "573 99 35-03 fits 562XP",
+  "title": "Husqvarna Fuel Hose Part # 573993503"
+ },
+ "/jobsite/power-equipment/parts/fuel-tank-oil-cap-assembly-for-t540xp-mark-ii/": {
+  "asin": "B086KZVT3J",
+  "match": "variant",
+  "note": "T540XP tank cap; Mark II not stated",
+  "title": "Husqvarna Genuine 577878603 Tank Cap Assy Fits T540XP OEM"
+ },
+ "/jobsite/power-equipment/parts/fuel-tank-oil-cap-assembly/": {
+  "asin": null,
+  "match": "none",
+  "note": "Generic; no clear match",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-372xp-o-ring-for-clutch-side-crank-shaft-seal/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only crank seal 503260301, not O-ring",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-395xp-on-off-switch/": {
+  "asin": "B00TD49B7C",
+  "match": "variant",
+  "note": "OEM switch; 395XP fit only in description",
+  "title": "Husqvarna Switch On/off Part # 503717901"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-572xp-ignition-module-assembly/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party coils",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-572xp-mp-ignition-module-assembly/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party coils",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-592xp-front-anti-vibration-element/": {
+  "asin": null,
+  "match": "none",
+  "note": "No confirmed 592XP front AV",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-air-filter-cover-for-t540ixp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540i XP cover listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-anti-vibration-element-assembly-for-550xp-mark-ii/": {
+  "asin": "B08CBGHHL3",
+  "match": "variant",
+  "note": "550XP AV element; Mark II not stated",
+  "title": "Husqvarna OEM Antivibration Element Craftsman 550XP 555 560XP 562XP 505129705"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-anti-vibration-element-for-572xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna 572XP listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-bar-cover-nut/": {
+  "asin": "B004KAFN94",
+  "match": "variant",
+  "note": "Husqvarna 531300382 bar nuts, pack of 4",
+  "title": "Husqvarna Chainsaw Bar Nuts (4)"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-bearings-for-t540xp-mark-ii/": {
+  "asin": null,
+  "match": "none",
+  "note": "No bearing listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-bushing-for-chain-brake-hand-guard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No bushing listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-chain-brake-hand-guard-for-t540ixp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540i XP listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-chain-catcher/": {
+  "asin": "B013TE1AMK",
+  "match": "variant",
+  "note": "Generic item; Husqvarna chain catcher, model-specific",
+  "title": "Husqvarna Chain Catcher for Chainsaws / 346 XP, 351, 353, 357 XP, 359, 435, 440 E, 445, 450 & More / 503886301 503886302"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-chainsaw-starter-cord/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party cords",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-choke-control-stop-for-562xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 562XP choke listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-clutch-assembly-for-562xp/": {
+  "asin": "B09K4NQ62C",
+  "match": "exact",
+  "note": "Genuine clutch lists 562XP",
+  "title": "Husqvarna Genuine 589809002 Clutch ASM for 555 556 562XP 562XPG 560XP 560XPG"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-cooling-fan-for-t540ixp-battery-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No fan listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-cylinder-and-piston-kit-for-372xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket kits",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-cylinder-assembly-for-572xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party cylinders",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-cylinder-cover-assembly-for-t540xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540XP cylinder cover listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-decompression-valve-for-395xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "Husqvarna 575276901 listing fit unconfirmed",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-fuel-hose-assembly-for-t435-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only mower/other-model hoses",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-fuel-tank-oil-cap-assembly/": {
+  "asin": null,
+  "match": "none",
+  "note": "Generic; no clear match",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-inlet-pipe-assembly-for-550xp-mark-ii/": {
+  "asin": null,
+  "match": "none",
+  "note": "No model-confirmed inlet pipe",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-intel-pipe-assembly-for-550xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No model-confirmed inlet pipe",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-knee-joint-assembly-for-562xp/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 562XP knee joint listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-micro-switch-safety-switch-for-t540ixp-battery-saw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-recoil-starter-handle/": {
+  "asin": "B00TD54PFE",
+  "match": "variant",
+  "note": "Genuine Husqvarna starter handle; fits specific models",
+  "title": "Husqvarna Genuine 503543901 Starter Handle OEM"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-replaceable-nose-for-powermatch-bars/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna nose-only listing",
+  "title": ""
+ },
  "/jobsite/power-equipment/parts/husqvarna-replacement-fuel-filter-for-t435-chainsaw/": {
   "asin": "B00455Q2TO",
   "match": "variant",
   "note": "OEM Husqvarna filter; T435 fitment listed by third parties",
   "title": "Genuine OEM Husqvarna Fuel Filter 503443201"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-replacement-nose-for-3-8-chainsaw-bars/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna nose-only listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-screw-fits-t540ixp-clutch/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540iXP clutch screw listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-screw-for-395xp-muffler-support/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket muffler hardware",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-screw-for-anti-vibration-mount/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna screw listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-screw-for-chain-brake-handle/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna screw listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-screw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Too generic; no specific match",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-seal-for-372xp-x-torque-clutch-side/": {
+  "asin": "B001BAL94E",
+  "match": "variant",
+  "note": "OEM clutch-side crank seal for 371/372",
+  "title": "Husqvarna 503 26 03-01 OEM Crank Seal Clutch Side 371 372 503260301"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-spring-cassette-assembly-for-592xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 592XP-confirmed listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-starter-assembly-for-460-rancher/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only aftermarket starters",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-starter-assembly-for-t540xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only non-Husqvarna listing for Mark III",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-starter-pawl-and-spring-kit-for-572xp-chainsaw/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 572XP pawl kit listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-starter-pulley-for-592xp/": {
+  "asin": "B0DJD1FDRN",
+  "match": "exact",
+  "note": "Husqvarna OEM pulley, 592XP fit",
+  "title": "Husqvarna OEM 585, 592 XP Starter Pulley"
+ },
+ "/jobsite/power-equipment/parts/husqvarna-starter-rope-for-550xp-mark-ii/": {
+  "asin": null,
+  "match": "none",
+  "note": "No confirmed Mark II rope",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-t540ixp-chassis-for-flywheel-side/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-t540ixp-clutch-side-chassis/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-t540ixp-trigger-assembly/": {
+  "asin": null,
+  "match": "none",
+  "note": "No T540iXP trigger listing",
+  "title": ""
+ },
+ "/jobsite/power-equipment/parts/husqvarna-worm-wheel-for-550xp-mark-ii/": {
+  "asin": "B086KZ2HKN",
+  "match": "exact",
+  "note": "Husqvarna OEM worm gear for 550XP Mark II",
+  "title": "Husqvarna OEM 545 Mark II, 550 XP Mark II Worm Gear 0.325\""
  },
  "/jobsite/power-equipment/parts/ngk-bpmr7a-spark-plug/": {
   "asin": "B000BYNN3G",
