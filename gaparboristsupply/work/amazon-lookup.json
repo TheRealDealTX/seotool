@@ -647,17 +647,89 @@
   "note": "No DMM American O listing found",
   "title": ""
  },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-captive-eye-locksafe-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Perfecto Locksafe captive bar and Captive Eye Kwiklock found; different models",
+  "title": ""
+ },
  "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-shadow-carabiner/": {
   "asin": "B09YHKR1PJ",
   "match": "exact",
   "note": "",
   "title": "DMM Shadow Locksafe"
  },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-ultra-o-durolock-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No DMM Ultra O Durolock listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-ultra-o-locksafe-carabiner/": {
+  "asin": "B005GQ11W4",
+  "match": "exact",
+  "note": "Same brand/model",
+  "title": "DMM Aluminium Ultra 'o' Locksafe Carabiner (a327)"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/dmm-zodiac-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No DMM Zodiac found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-mini-hms-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only ISC HMS 3-pack, not Mini HMS",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/isc-offset-oval-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC offset oval found",
+  "title": ""
+ },
  "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/petzl-amd-carabiner/": {
   "asin": "B0D2WHM5NF",
   "match": "exact",
   "note": "",
   "title": "PETZL, AM'D Carabiner, Triact-Lock"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-pirate-carabiner/": {
+  "asin": "B0DK2B59ZD",
+  "match": "exact",
+  "note": "Auto-lock pear Pirate",
+  "title": "Rock Exotica Pirate Carabiner - Heavy Duty Locking Carabiner"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rockd-black-carabiner/": {
+  "asin": "B00IUWOUFQ",
+  "match": "exact",
+  "note": "Black auto-lock rockD",
+  "title": "Rock Exotica rockD Auto-Lock Black Carabiner C2A-B"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rockd-carabiner/": {
+  "asin": "B0FFVK6M8T",
+  "match": "exact",
+  "note": "Auto-lock rockD",
+  "title": "Rock Exotica rockD Auto-Lock Carabiner C2A"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/auto-locking-carabiners/rock-exotica-rocko-up-lock-carabiner/": {
+  "asin": "B07BZVZHKR",
+  "match": "variant",
+  "note": "rockO listing; Up-Lock not named in title, lock type unverified",
+  "title": "Rock Exotica Rocko Carabiner"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/dmm-wallis-grommet/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/configuration-aids-and-corner-traps/kong-corner-trap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
  },
  "/climbing/climbing-gear/carabiners-and-hardware/hardware/notch-v3-quickie/": {
   "asin": "B07TNRBJ1H",
@@ -671,17 +743,41 @@
   "note": "May be unavailable",
   "title": "PETZL - Speedy, Quick Link"
  },
+ "/climbing/climbing-gear/carabiners-and-hardware/hardware/singing-tree-milled-quickie/": {
+  "asin": "B07BTGDM6Z",
+  "match": "variant",
+  "note": "Cast Quickie, not milled",
+  "title": "Sherrill Cast Singing Tree Quickie - Complete Assembly"
+ },
  "/climbing/climbing-gear/carabiners-and-hardware/hardware/stainless-steel-twisted-shackle/": {
   "asin": "B071FV3H61",
   "match": "similar",
   "note": "Generic stainless twisted shackle",
   "title": "US STAINLESS Stainless Steel 316 Twist Shackle 1/4\" (6mm)"
  },
+ "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-vault-lock/": {
+  "asin": "B0C55MW6WN",
+  "match": "exact",
+  "note": "Same model, lime color",
+  "title": "Vault Lock Lime Racking Carabiner by DMM"
+ },
  "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/dmm-xsre-carabiners/": {
   "asin": "B071DMM21V",
   "match": "exact",
   "note": "Color varies",
   "title": "DMM XSRE Carabiner - Turquoise"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/isc-gator-bent-gate-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC Gator found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/kong-oval-classic-steel-straight-gate-carabiner/": {
+  "asin": "B0047QT8V0",
+  "match": "variant",
+  "note": "Title lacks brand; name matches; verify Kong",
+  "title": "Classic Steel Oval Carabiner Straight Gate"
  },
  "/climbing/climbing-gear/carabiners-and-hardware/non-locking-carabiners/petzl-rollclip-carabiner/": {
   "asin": "B0GD993H8K",
@@ -694,6 +790,36 @@
   "match": "exact",
   "note": "",
   "title": "Rock Exotica RockX Accessory Carabiner (Gray)"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/courant-honos-tool-hook/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-stowaway/": {
+  "asin": null,
+  "match": "none",
+  "note": "No DMM Stowaway found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/dmm-vault-wiregate/": {
+  "asin": "B084GP795G",
+  "match": "exact",
+  "note": "Same model, grey color",
+  "title": "DMM Vault Wiregate Carabiner - Matt Grey"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/saddle-storage/shembiner-chainsaw-hook/": {
+  "asin": "B07D4QF47F",
+  "match": "variant",
+  "note": "Shembiner XL carabiner/hook; closest same-brand item",
+  "title": "CMI Shembiner XL"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/isc-iron-wizard-screwgate-carabiner/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Sunbelt Ironwizard (other brand) found",
+  "title": ""
  },
  "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/petzl-amd-screw-lock-carabiner/": {
   "asin": "B019QNNHSI",
@@ -713,11 +839,29 @@
   "note": "May be unavailable",
   "title": "SMC NFPA Large Heat-treated Steel Locking D Carabiner"
  },
+ "/climbing/climbing-gear/carabiners-and-hardware/screw-gate-carabiners/smc-xl-steel-screw-lock-carabiner/": {
+  "asin": "B0CGBJCYVP",
+  "match": "variant",
+  "note": "Same brand; Large steel screw lock, XL size not found",
+  "title": "SMC Large Steel Locking Carabiner, Black"
+ },
  "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/aluminum-double-locking-snap-hook/": {
   "asin": "B07PRDV1P8",
   "match": "similar",
   "note": "Aluminum double-locking snap hook",
   "title": "ProClimb Forged Aluminum Snaphook - Double Action Self Locking Gate, Captive Eye 27 kN"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/edelrid-triton-double-locking-steel-snap/": {
+  "asin": "B00AYH9DSO",
+  "match": "variant",
+  "note": "Edelrid Triton steel snap; exact name differs",
+  "title": "EDELRID DSG Triton - Titan"
+ },
+ "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/isc-double-action-swivel-snap-hook/": {
+  "asin": "B07SHPZNQG",
+  "match": "exact",
+  "note": "Same brand/type",
+  "title": "ISC SH904 Double Action Swivel Snaphook"
  },
  "/climbing/climbing-gear/carabiners-and-hardware/snap-hooks/petzl-eashook-open-rope-snap/": {
   "asin": "B07F5CXGCG",
@@ -731,11 +875,47 @@
   "note": "Steel locking snap hook",
   "title": "ProClimb 23 kN Forged Steel Safety Snap Hook with Double-Action Gate"
  },
+ "/climbing/climbing-gear/chainsaw-lanyards/buckingham-chainsaw-lanyard-with-steel-ring/": {
+  "asin": "B075M8HH1Z",
+  "match": "exact",
+  "note": "Steel ring bungee lanyard",
+  "title": "Buckingham 25Y13-48A Chainsaw Lanyard, Nylon/Steel Ring, 48\", Green"
+ },
+ "/climbing/climbing-gear/chainsaw-lanyards/buckingham-hi-viz-chainsaw-lanyard-with-snap/": {
+  "asin": "B01FSYZ282",
+  "match": "exact",
+  "note": "Buckingham 25Y1350A hi-vis with snap (title lacks brand)",
+  "title": "Lanyard Chainsaw Strap 1\"X32\" With Snap Part No: A-B1AB25Y1350A"
+ },
+ "/climbing/climbing-gear/chainsaw-lanyards/husqvarna-chainsaw-eyelet/": {
+  "asin": "B00EWFAS88",
+  "match": "exact",
+  "note": "Husqvarna arborist eyelet",
+  "title": "Husqvarna 578077101 Arborist Chainsaw Eyelet for Saw Carrying Strap"
+ },
+ "/climbing/climbing-gear/chainsaw-lanyards/reecoil-big-boss-chainsaw-lanyard/": {
+  "asin": "B07BS3SXLG",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Reecoil Big Boss Green Nylon Lanyard for Heavy Duty Rear Handle Chainsaws"
+ },
  "/climbing/climbing-gear/chainsaw-lanyards/weaver-chainsaw-strap-with-snap/": {
   "asin": "B01DUNCVSW",
   "match": "variant",
   "note": "Weaver strap with ring and snap; adjustable version",
   "title": "Weaver Leather Weaver Arborist Adjustable Chain Saw Strap Orange, Large"
+ },
+ "/climbing/climbing-gear/chainsaw-lanyards/weaver-coil-bungee-chainsaw-lanyard/": {
+  "asin": "B0B3S8K747",
+  "match": "exact",
+  "note": "ASIN taken from clp URL",
+  "title": "WEAVER ARBORIST Coil Chainsaw Lanyard"
+ },
+ "/climbing/climbing-gear/chainsaw-lanyards/weaver-interchangeable-bungee-chainsaw-lanyard/": {
+  "asin": "B085JYY3BL",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Weaver Leather Interchangeable Bungee Strap"
  },
  "/climbing/climbing-gear/fliplines-and-lanyards/2-in-1-lanyards/2-in-1-wire-core-lanyard/": {
   "asin": null,
@@ -749,6 +929,24 @@
   "note": "Pole climbing strap; may be unavailable",
   "title": "Klein Tools 5301-22 Strap for Pole and Tree Climbers 1-1/4 x 26-Inch"
  },
+ "/climbing/climbing-gear/fliplines-and-lanyards/basic-adjustable-lanyards/safety-blue-hi-vee-adjustable-buckstrap/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Rope Logic/SHERRILLtree buckstraps; no Samson-branded listing",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/1-2-steel-core-positioning-lanyard-prusik-adjuster-kit/": {
+  "asin": "B07KFPRSK4",
+  "match": "similar",
+  "note": "1/2 in steel core flipline kit with adjuster; adjuster is Better Grab not prusik",
+  "title": "ProClimb Better Grab Steel Core Flipline Kit (1/2 inch x 10 feet)"
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/2-in-1-hi-vee-lanyard-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only New England Ropes 2-in-1 Lanyard (different brand)",
+  "title": ""
+ },
  "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/2-in-1-wire-core-flipline-kit/": {
   "asin": null,
   "match": "none",
@@ -761,16 +959,94 @@
   "note": "",
   "title": "PETZL GRILLON HOOK Adjustable Lanyard - 3 m"
  },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-microflip-wire-core-lanyard-kit/": {
+  "asin": "B01M2A2FZX",
+  "match": "exact",
+  "note": "Petzl Microflip; 5.5 m length",
+  "title": "Petzl MICROFLIP Wire Core Positioning Lanyard 5.5M"
+ },
  "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/petzl-zillon-lanyard/": {
   "asin": "B00JWZQTDG",
   "match": "exact",
   "note": "May be unavailable; 4m L22040 also exists",
   "title": "Petzl ZILLON adjustable lanyard for arborists 5.5m L22055"
  },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/sterling-tritech-lanyard-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party (Notch, RNA, Rope Logic) TriTech lanyards",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/sterling-tritech-lanyard-with-art-positioner/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sterling-branded listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/sterling-tritech-positioning-lanyard-kit-with-prusik-adjuster/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sterling-branded listing found",
+  "title": ""
+ },
  "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-imori-lanyard-kit-with-rope-grab/": {
   "asin": null,
   "match": "none",
   "note": "Searched: only Imori rope (not a lanyard kit with rope grab) surfaced; no qualifying listing",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-kernmaster-safari-art-positioner-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-r-i-n-g-lanyard-kit-with-triple-locking-snap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-r-i-n-g-lanyard-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/lanyard-kits/yale-safari-lanyard-kit/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-grabs-and-lanyard-adjusters/aluminum-prusik-snap-lanyard-adjuster/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only complete hip prusik w/ snap or lanyards; no standalone adjuster snap",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/2-in-1-blaze-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/assorted-rope-lanyard/": {
+  "asin": "B0CNSKFK93",
+  "match": "similar",
+  "note": "Generic rope positioning lanyard",
+  "title": "ProClimb Arborist Positioning Lanyard by Pelican Rope - 1/2 in x 8 ft Polyester Rope with Aluminum Snap Hook"
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/k1-keeper-by-teufelberger/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ASIN surfaced for K1 Keeper",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/lanyard-management-clips/": {
+  "asin": null,
+  "match": "none",
+  "note": "No matching clip listing found",
   "title": ""
  },
  "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/magnetic-lanyard-management-system/": {
@@ -785,11 +1061,41 @@
   "note": "No Petzl Micrograb lanyard add-on kit listing found",
   "title": ""
  },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/poison-moon-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/sterling-tritech-lanyard-with-triple-locking-snap/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Notch/Rope Logic TriTech fliplines, not Sterling-branded",
+  "title": ""
+ },
+ "/climbing/climbing-gear/fliplines-and-lanyards/rope-lanyards/yale-spearmint-lanyard-with-steel-double-locking-snap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
  "/climbing/climbing-gear/fliplines-and-lanyards/wire-core-lanyards/1-2-wire-core-flipline/": {
   "asin": "B0DNT1K43X",
   "match": "similar",
   "note": "Generic 1/2in steel wire core flipline kit, 10 ft",
   "title": "Steel Wire Core Flipline 1/2\" X 10ft Fall Protection Arborist Climbing Flip Line"
+ },
+ "/climbing/climbing-gear/friction-savers/ansi-arborist-crane-tie-in-point-with-carabiners/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only tie-in point without carabiners found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/ansi-arborist-crane-tie-in-point/": {
+  "asin": "B0883F6VMT",
+  "match": "similar",
+  "note": "Same kind of item, ANSI Z133 crane tie-in",
+  "title": "ROPE Logic ANSI Arborist Crane Tie-in Point"
  },
  "/climbing/climbing-gear/friction-savers/art-ropeguide-twinline/": {
   "asin": null,
@@ -797,11 +1103,83 @@
   "note": "No ART Ropeguide Twinline listing found",
   "title": ""
  },
+ "/climbing/climbing-gear/friction-savers/art-ropeguide/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/art-snakeanchor/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/buckingham-buck-supersaver/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ASIN surfaced for SuperSaver",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/buckingham-webbing-friction-saver/": {
+  "asin": "B0179XEO34",
+  "match": "variant",
+  "note": "Buckingham ring-and-ring webbing saver; 24 in size",
+  "title": "Buckingham 57S-24 Arbormaster Friction Saver (steel rings)"
+ },
+ "/climbing/climbing-gear/friction-savers/clogger-ropeguard-chainsaw-protective-rope-sleeve/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Clogger trousers found",
+  "title": ""
+ },
  "/climbing/climbing-gear/friction-savers/cmi-anchor-sling/": {
   "asin": "B07D5DX48C",
   "match": "variant",
   "note": "CMI anchor sling; 10 ft length (other lengths exist)",
   "title": "CMI Anchor Sling 10' Blue"
+ },
+ "/climbing/climbing-gear/friction-savers/dmm-retrieval-cone/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/fitch-saver-mid-line-attachable-redirect/": {
+  "asin": null,
+  "match": "none",
+  "note": "No match found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/km-tree-adjustable-friction-saver/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Rope Logic/Notch KMIII savers (other brands)",
+  "title": ""
+ },
+ "/climbing/climbing-gear/friction-savers/teufelberger-equaliza/": {
+  "asin": "B0759WY5YS",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Teufelberger Equaliza"
+ },
+ "/climbing/climbing-gear/friction-savers/teufelberger-fimbclimb/": {
+  "asin": "B0759S847Q",
+  "match": "exact",
+  "note": "Title typo FlmblCLIMB; same product",
+  "title": "Teufelberger FlmblCLIMB Adjustable Friction Saver (1.25 m - 4 ft.)"
+ },
+ "/climbing/climbing-gear/friction-savers/teufelberger-pulleysaver-replacement-lanyard/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only the pulleySaver itself, no replacement lanyard",
+  "title": ""
+ },
+ "/climbing/climbing-gear/gear-storage/gear-bags/arbortec-python-50l-backpack-gear-bag/": {
+  "asin": "B079C3VJGP",
+  "match": "exact",
+  "note": "Same model; may be unavailable",
+  "title": "Arbortec Python Lime Black Rucksack waterproof 50 Litre"
  },
  "/climbing/climbing-gear/gear-storage/gear-bags/buckingham-haul-bag/": {
   "asin": null,
@@ -815,11 +1193,23 @@
   "note": "Kurt Haulbag II (newer version); older Kurt B00NHPXH3C also exists",
   "title": "EDELRID Kurt Haulbag II"
  },
+ "/climbing/climbing-gear/gear-storage/gear-bags/petzl-duffel-65l-transport-bag/": {
+  "asin": "B0B1BHJQND",
+  "match": "exact",
+  "note": "Same model, black",
+  "title": "PETZL Bag DUFFEL 65L Black"
+ },
  "/climbing/climbing-gear/gear-storage/gear-bags/petzl-duffel-85l-large-gear-bag/": {
   "asin": "B09T1SDNLG",
   "match": "exact",
   "note": "Black 85L; yellow is a separate listing",
   "title": "PETZL Bag DUFFEL 85L Black"
+ },
+ "/climbing/climbing-gear/gear-storage/gear-bags/weaver-cavern-gear-bag/": {
+  "asin": "B08GMVDC34",
+  "match": "exact",
+  "note": "Same model",
+  "title": "Weaver Leather Arborist Cavern Gear Bag, Black"
  },
  "/climbing/climbing-gear/gear-storage/rope-bags/courant-cross-rope-bag-23-36-l/": {
   "asin": "B081ZF1V7M",
@@ -827,10 +1217,70 @@
   "note": "Listing shows 36L; 23L not confirmed",
   "title": "Courant Cross Rope Bag"
  },
+ "/climbing/climbing-gear/gear-storage/rope-bags/edelrid-caddy-ii/": {
+  "asin": "B0BVJJ9PD3",
+  "match": "exact",
+  "note": "Edelrid Caddy II",
+  "title": "EDELRID Caddy II - Deep Blue"
+ },
+ "/climbing/climbing-gear/gear-storage/rope-bags/husqvarna-backpack-rope-bag-30l/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Husqvarna 28L rope bag part 596936301 and 30L backpacks found; not same item",
+  "title": ""
+ },
  "/climbing/climbing-gear/gear-storage/rope-bags/treehog-40l-rope-bag/": {
   "asin": null,
   "match": "none",
   "note": "No TreeHog 40L rope bag listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/gear-storage/rope-bags/weaver-xl-rope-bag/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Weaver XL rope bag found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/gear-storage/throw-line-storage/falteimer-folding-cube/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Falteimer brand listing; Edelrid Falter is a different brand",
+  "title": ""
+ },
+ "/climbing/climbing-gear/gear-storage/throw-line-storage/ftc-matriosac-3-throwline-bag/": {
+  "asin": null,
+  "match": "none",
+  "note": "No FTC Matriosac listing found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/gear-storage/throw-line-storage/petzl-eclipse-throw-line-storage/": {
+  "asin": "B00JWZNCF4",
+  "match": "exact",
+  "note": "Petzl ECLIPSE",
+  "title": "PETZL Throw-Line Storage Eclipse"
+ },
+ "/climbing/climbing-gear/gear-storage/throw-line-storage/weaver-throwline-bucket/": {
+  "asin": "B0044TZVE8",
+  "match": "exact",
+  "note": "Weaver throw line bucket bag",
+  "title": "Weaver Leather Arborist Throw Line Bucket Bag, Red"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/10mm-beeline-eye-to-eye/": {
+  "asin": "B06XGYT42C",
+  "match": "exact",
+  "note": "Yale Cordage Bee-Line 10mm eye&eye, sold by SHERRILLtree; 28in",
+  "title": "Bee-Line 3/8-in. (10mm) x 28\" G-Spliced Eye & Eye Prusik Cord (33748)"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/10mm-black-beeline-eye-to-eye-prusik/": {
+  "asin": "B08SR7PBZ1",
+  "match": "variant",
+  "note": "Bee-Line black 10mm eye&eye under Rope Logic brand (Sherrill), 28in",
+  "title": "Rope Logic Bee-Line Black 10mm x 28\" G-Spliced Eye & Eye Prusik Cord"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/8mm-armor-prus-sewn-eye-to-eye-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Armor Prus listing found",
   "title": ""
  },
  "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/big-jims-hitch-breaker/": {
@@ -845,11 +1295,101 @@
   "note": "DMM Hitch Climber kit (pulley+carabiners+prusik); Set 1 (7/16) is B07CQHVRNL; Set 2 may be unavailable",
   "title": "DMM Hitch Climber Pulley Set - 1/2\" Ropes (Set 2)"
  },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/samson-3-8-tenex-prusik-sewn-eye-to-eye/": {
+  "asin": "B072VQ1BN7",
+  "match": "variant",
+  "note": "Samson Tenex 3/8in eye&eye, Rope Logic branded, hand spliced not sewn",
+  "title": "ROPE Logic Tenex Eye & Eye Prusik Cord, Yellow"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/samson-ice-tail-hand-spliced-eye-to-eye/": {
+  "asin": "B06XGPWJY9",
+  "match": "variant",
+  "note": "Samson Ice cord eye&eye, Rope Logic branded; 8mm",
+  "title": "Rope Logic Prusik Cord Ice 8 mm x 30\" G-Spliced Eye & Eye"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-8mm-hrc-sewn-eye-to-eye-prusik/": {
+  "asin": "B08SR391DX",
+  "match": "variant",
+  "note": "Teufelberger HRC 8mm sewn eye&eye under Rope Logic brand, 30in",
+  "title": "Rope Logic Prusik Cord HRC 8mm x 30\" Eye to Eye"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-9mm-epicord-sewn-eye-to-eye-prusik/": {
+  "asin": "B08SR6R96X",
+  "match": "exact",
+  "note": "Teufelberger epiCORD ~9mm sewn eye&eye, 30in",
+  "title": "ROPE Logic Teufelberger epiCORD Sewn Eye & Eye 11/32 in. (9.3mm) x 30 in., Blue"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-epicord-8mm-sewn-eye-to-eye-prusik/": {
+  "asin": "B06XGMMBJV",
+  "match": "variant",
+  "note": "Teufelberger epiCORD 8mm eye&eye, G-spliced (sewn) 30in, Sherrill listing",
+  "title": "epiCORD Moddled Orange 8mm x 30\" G Spliced Eye & Eye Hitchcord (35225)"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-epicord-9mm-foot-lock-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "No epiCORD 9mm foot lock prusik found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/teufelberger-ocean-polyester-10mm-sewn-eye-to-eye-prusik/": {
+  "asin": "B08SR52D7J",
+  "match": "variant",
+  "note": "Ocean Polyester 10mm eye&eye, Rope Logic branded, hand spliced not sewn",
+  "title": "Rope Logic Ocean Polyester 10mm Hand Spliced Eye & Eye 30\""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-eye-to-eye-sewn-prusik/": {
+  "asin": "B06XG875L5",
+  "match": "variant",
+  "note": "Bee-Line 8mm eye&eye, G-spliced (sewn), Rope Logic branded; Yale-branded one is hand spliced B00470PX1K",
+  "title": "ROPE Logic Bee-Line 5/16 in. (8mm) x 28 in. G-Spliced Eye & Eye Prusik Cord, Black"
+ },
  "/climbing/climbing-gear/hitch-cord-and-split-tails/eye-and-eye-prusiks/yale-8mm-beeline-hand-spliced-eye-to-eye/": {
   "asin": "B0179XJAEM",
   "match": "exact",
   "note": "Yale 8mm Bee-Line hand-spliced eye-to-eye; 34in. 24in version B00470PX1K unavailable",
   "title": "Yale 8mm Bee-Line Eye to Eye Prusik (5/16\" x 34\") Hand Spliced"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/footlock-prusiks/beeline-foot-lock-prusik/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Beeline foot lock prusik found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/6mm-ocean-polyester-thimble-loop/": {
+  "asin": null,
+  "match": "none",
+  "note": "No 6mm Ocean polyester thimble loop found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/teufelberger-10mm-sirius-loop-with-pinto-pulley/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Sirius loop with Pinto pulley found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/teufelberger-multisling/": {
+  "asin": "B07DQHT981",
+  "match": "exact",
+  "note": "Teufelberger Sirius multiSLING",
+  "title": "Teufelberger Sirius MultiSling"
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/prusik-loops/yale-beeline-10mm-loop-prusik-with-steel-ring/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Beeline 10mm loop with steel ring found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/teufelberger-bsb-white-split-tail-with-tight-eye/": {
+  "asin": null,
+  "match": "none",
+  "note": "No BSB white split tail found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-10mm-black-beeline-split-tail/": {
+  "asin": "B06XGLW3HM",
+  "match": "variant",
+  "note": "Bee-Line black 10mm split tail, Rope Logic branded, 5ft",
+  "title": "Rope Logic Split Tail Bee-Line G-Spliced Single Eye Rope, Black, 10mm x 5'"
  },
  "/climbing/climbing-gear/hitch-cord-and-split-tails/split-tails/yale-8mm-bee-line-split-tail/": {
   "asin": null,
@@ -857,17 +1397,59 @@
   "note": "Only Rope Logic 10mm split tail on Amazon; no Yale 8mm split tail",
   "title": ""
  },
+ "/climbing/climbing-gear/micro-pulleys/cmi-micro-hitch-tending-pulley/": {
+  "asin": "B001OPJB0K",
+  "match": "variant",
+  "note": "CMI micro pulley described as slack-tending for friction hitch; name differs, moderate confidence",
+  "title": "CMI Rescue Micro Pulley Alum S"
+ },
  "/climbing/climbing-gear/micro-pulleys/cmi-micro-rescue-pulley/": {
   "asin": "B001OPJB0K",
   "match": "exact",
   "note": "CMI rescue micro pulley, 7000 lb",
   "title": "Cmi Rescue Micro Pulley Alum S"
  },
+ "/climbing/climbing-gear/micro-pulleys/cmi-shackle-pulley/": {
+  "asin": "B003EMAD4O",
+  "match": "exact",
+  "note": "CMI Shackle Pulley RP144",
+  "title": "CMI Shackle Pulley"
+ },
  "/climbing/climbing-gear/micro-pulleys/dmm-hitch-climber-eccentric-pulley/": {
   "asin": "B0883H2VFD",
   "match": "exact",
   "note": "Color variants: Green B0884BH9H4, Red B084GF7QS4",
   "title": "DMM Hitch Climber Eccentric (Gold)"
+ },
+ "/climbing/climbing-gear/micro-pulleys/dmm-pinto-pulley-spacer/": {
+  "asin": "B00D8BOCZC",
+  "match": "exact",
+  "note": "DMM Pinto spacer",
+  "title": "DMM Pinto Pulley Spacer 12mm Width - PUL110SPA"
+ },
+ "/climbing/climbing-gear/micro-pulleys/petzl-mobile-hitch-tending-pulley/": {
+  "asin": "B0GP3N2G8B",
+  "match": "exact",
+  "note": "Petzl MOBILE current version",
+  "title": "Petzl, Mobile, Versatile Ultra-Compact Pulley, Yellow"
+ },
+ "/climbing/climbing-gear/micro-pulleys/petzl-rescue-pulley/": {
+  "asin": "B07C5XXYHN",
+  "match": "exact",
+  "note": "Petzl RESCUE pulley; spec on our page mentions prusik-minding/370g which may differ",
+  "title": "PETZL - Rescue, High-Strength Pulley with Swinging Side Plates"
+ },
+ "/climbing/climbing-gear/micro-pulleys/singing-tree-rope-wrench-pulley/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only Rope Wrench kits found, no standalone Singing Tree pulley",
+  "title": ""
+ },
+ "/climbing/climbing-gear/micro-pulleys/smc-crevasse-pulley/": {
+  "asin": "B00F3BX6GQ",
+  "match": "variant",
+  "note": "SMC CRx crevasse rescue pulley",
+  "title": "SMC CRX 1\" Crevasse Rescue Pulley, Black - 157307"
  },
  "/climbing/climbing-gear/other-gear/dmm-captain-hook/": {
   "asin": "B08TT9DVFS",
@@ -887,6 +1469,18 @@
   "note": "28mm shown; 26mm B00GPDX0QC, 40mm B005GQ16N8",
   "title": "DMM 28mm Aluminium Anchor Ring (r500-28)"
  },
+ "/climbing/climbing-gear/rings/isc-aluminum-rings/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC aluminum rings found",
+  "title": ""
+ },
+ "/climbing/climbing-gear/rings/isc-steel-rings/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ISC steel rings found",
+  "title": ""
+ },
  "/climbing/climbing-gear/rings/petzl-ring-open/": {
   "asin": "B0BSP1922C",
   "match": "exact",
@@ -899,17 +1493,41 @@
   "note": "Size S; older Ring L is B00GBBSQ9E",
   "title": "PETZL RING Connection Ring for Multiple Anchors and Harness Bridges - Size S"
  },
+ "/climbing/climbing-gear/rings/smc-aluminum-ring/": {
+  "asin": "B008ERFDPS",
+  "match": "variant",
+  "note": "SMC 28mm aluminum rigging ring",
+  "title": "SMC Rigging Ring (Red)"
+ },
+ "/climbing/climbing-gear/srs-basal-and-canopy-anchors/srt-basal-anchor-kit/": {
+  "asin": "B086ZXV6RY",
+  "match": "similar",
+  "note": "Generic SRT basal anchor; sling not kit",
+  "title": "ROPE Logic SRT Basal Anchor Sling"
+ },
  "/climbing/climbing-gear/swivels/cmi-california-swivel/": {
   "asin": "B07KY5PW2H",
   "match": "exact",
   "note": "May be unavailable",
   "title": "CMI California Swivel"
  },
+ "/climbing/climbing-gear/swivels/dmm-focus-swivel/": {
+  "asin": "B072LXQK4J",
+  "match": "exact",
+  "note": "DMM Focus swivel small; reviewer mentions possible recall",
+  "title": "DMM Focus Swivel - Small"
+ },
  "/climbing/climbing-gear/swivels/petzl-micro-swivel-open/": {
   "asin": "B0B61366P8",
   "match": "exact",
   "note": "Micro Swivel Open (P58 XSO)",
   "title": "Petzl P58 XSO Micro Compact Openable Swivel"
+ },
+ "/climbing/climbing-gear/swivels/petzl-swivel-nfpa-rated/": {
+  "asin": "B000T2BT22",
+  "match": "exact",
+  "note": "Petzl SWIVEL P58 S; NFPA category varies by listing",
+  "title": "PETZL, Swivel, Ball Bearing Swivel"
  },
  "/climbing/helmets/husqvarna-technical-forestry-helmet/": {
   "asin": "B08B3BGZ12",
@@ -947,11 +1565,35 @@
   "note": "Only third-party aftermarket Buckcraft listing; no Buckingham-brand one",
   "title": ""
  },
+ "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergo-pro-harness/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham Ergo Pro Harness found",
+  "title": ""
+ },
  "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-ergovation/": {
   "asin": "B0771S1HRS",
   "match": "exact",
   "note": "Size M; L is B0771SZLLL, S is B075S31DLN",
   "title": "Buckingham 169062-M Ergovation Tree Saddle"
+ },
+ "/climbing/saddles-and-harnesses/buckingham-saddles/buckingham-navigator/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham Navigator found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/european-saddles/edelrid-treerex-arborist-saddle/": {
+  "asin": "B08BZXPZBY",
+  "match": "variant",
+  "note": "TreeRex harness size S-M",
+  "title": "EDELRID TreeRex Triple Lock Harness Size 1 (S-M) Night/Oasis"
+ },
+ "/climbing/saddles-and-harnesses/european-saddles/husqvarna-climbing-harness/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna climbing harness found",
+  "title": ""
  },
  "/climbing/saddles-and-harnesses/european-saddles/petzl-sequoia-climbing-harness/": {
   "asin": "B00JWZIDBC",
@@ -959,11 +1601,47 @@
   "note": "Size 1; other sizes/SRT exist",
   "title": "Petzl SEQUOIA arborist harness size 1"
  },
+ "/climbing/saddles-and-harnesses/european-saddles/petzl-sequoia-srt-climbing-harness/": {
+  "asin": "B0G877DNNZ",
+  "match": "variant",
+  "note": "Sequoia SRT; sizes 0-2 exist, alt B07NCMQCR1",
+  "title": "PETZL SEQUOIA SRT Arborist Seat Harness for Single Rope Technique, Size 2"
+ },
  "/climbing/saddles-and-harnesses/european-saddles/treemotion-pro-climbing-harness/": {
   "asin": "B0C74X9NPB",
   "match": "exact",
   "note": "Medium; newer Pro X is B0FFDZMR34",
   "title": "Teufelberger treeMOTION Pro Saddle - Medium"
+ },
+ "/climbing/saddles-and-harnesses/full-body-harnesses/safewaze-fs-flex-185-full-body-harness/": {
+  "asin": "B01FB6F0KW",
+  "match": "exact",
+  "note": "FS-FLEX185 L/XL",
+  "title": "SafeWaze FS-FLEX185-L-XL Single D-Ring Harness, Grommet Leg Straps"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergolite-replacement-bridge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham ErgoLite bridge found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergovation-h-style-retro-fit-harness/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ErgoVation H-style retrofit found (possibly model 16906H2)",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-ergovation-srt-bridge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No ErgoVation SRT bridge found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/buckingham-retrofit-suspenders/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham retrofit suspenders found",
+  "title": ""
  },
  "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-bungee-chest-harness/": {
   "asin": "B08C1JC57S",
@@ -971,16 +1649,112 @@
   "note": "",
   "title": "EDELRID TreeRex Bungee Tree-Climbing Chest Harness"
  },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/edelrid-treerex-replacement-rope-bridge-kit/": {
+  "asin": "B08BZWYDRC",
+  "match": "exact",
+  "note": "TreeRex rope bridge set",
+  "title": "EDELRID TreeRex Rope Bridge Set for Harness"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-seat-for-sequoia-and-sequoia-srt/": {
+  "asin": "B07NCMZ6NH",
+  "match": "exact",
+  "note": "Petzl seat for Sequoia/Sequoia SRT",
+  "title": "PETZL Sequoia and Sequoia SRT Seat"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-top-croll-chest-harness/": {
+  "asin": "B009R7T8JG",
+  "match": "exact",
+  "note": "Petzl TOP CROLL",
+  "title": "Petzl TOP Croll Chest Harness"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/petzl-voltige-chest-harness/": {
+  "asin": "B008RLA32O",
+  "match": "exact",
+  "note": "Petzl Voltige",
+  "title": "PETZL VOLTIGE Adjustable Figure-8 Chest Harness - Black"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-ansi-spare-bridge/": {
+  "asin": "B00S11QY0K",
+  "match": "variant",
+  "note": "treeMOTION replacement bridge; CE listed, ANSI version unconfirmed",
+  "title": "Teufelberger TreeMotion/Bridge Replacement"
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-evo-knotted-rope-bridge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No evo knotted rope bridge listing found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-evo-rope-bones/": {
+  "asin": null,
+  "match": "none",
+  "note": "No evo rope bones found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-treemotion-shoulder-straps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No treeMOTION shoulder straps found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/teufelberger-webbing-bridge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Teufelberger webbing bridge found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/tree-austria-stainless-steel-shackle/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Tree Austria shackle found",
+  "title": ""
+ },
+ "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/treeaustria-3-2-replacement-bridge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Tree Austria 3.2 bridge found (only saddle)",
+  "title": ""
+ },
  "/climbing/saddles-and-harnesses/saddle-parts-and-shoulder-harnesses/weaver-chest-box/": {
   "asin": "B00VXQ2FE4",
   "match": "exact",
   "note": "Weaver arborist chest box",
   "title": "Weaver Leather Arborist Chest Box, Black"
  },
+ "/climbing/saddles-and-harnesses/weaver-saddles/weaver-cougar-climbing-harness/": {
+  "asin": "B075GV4BVH",
+  "match": "exact",
+  "note": "Weaver Cougar",
+  "title": "Weaver Arborist Cougar Tree Saddle Harness"
+ },
+ "/climbing/saddles-and-harnesses/weaver-saddles/weaver-cougar-with-batten-seat/": {
+  "asin": "B075H2LCYN",
+  "match": "variant",
+  "note": "Search tied Cougar batten seat to WLC-730; moderate confidence",
+  "title": "Weaver Arborist WLC-730 Saddle with Batten Seat"
+ },
+ "/climbing/saddles-and-harnesses/weaver-saddles/weaver-wcl-390-saddle-with-batten-seat/": {
+  "asin": "B01DUNKNSM",
+  "match": "exact",
+  "note": "WCL/WLC 390 batten seat",
+  "title": "Weaver Leather WLC 390 Saddle with Batten Seat"
+ },
  "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-big-buck-pads/": {
   "asin": null,
   "match": "none",
   "note": "No Climb Right aluminum climbers with Big Buck pads found",
+  "title": ""
+ },
+ "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-l-pads/": {
+  "asin": "B00KMSARTO",
+  "match": "exact",
+  "note": "Climb Right aluminum with L-pads; may be unavailable",
+  "title": "Climb Right, CTB Aluminum Tree Climbing Spurs & L-pads"
+ },
+ "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-shin-cups/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Climb Right shin cup climber listing found",
   "title": ""
  },
  "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-steel-support-pads/": {
@@ -989,11 +1763,41 @@
   "note": "No Climb Right aluminum climbers with steel support pads found",
   "title": ""
  },
+ "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-t-pads/": {
+  "asin": "B00470KGFS",
+  "match": "variant",
+  "note": "Aluminum climber with T pads; listing branded WoodlandPRO, may be unavailable",
+  "title": "Climb Right 2 Piece Aluminum Climber Kit with T Pads"
+ },
+ "/climbing/spurs/aluminum-spurs/climb-right-aluminum-climbers-with-weaver-procool-wrap-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "Climb Right aluminum climbers with Weaver ProCool pads not listed; only T-pad and Ultra-pad kits",
+  "title": ""
+ },
+ "/climbing/spurs/aluminum-spurs/climb-right-climbers-with-super-climber-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Climb Right climbers with Super Climber pads kit found (only separate Super Pad)",
+  "title": ""
+ },
+ "/climbing/spurs/aluminum-spurs/climb-right-climbers-with-ultra-light-pads/": {
+  "asin": "B007193SLQ",
+  "match": "exact",
+  "note": "Aluminum climbers with Ultra pads",
+  "title": "Climb Right 2 Piece 2-5/8\" Tree Climbers with Ultra Pads"
+ },
  "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-big-buck-pads/": {
   "asin": "B00GLZ5FUS",
   "match": "exact",
   "note": "Buckingham steel spur kit w/ Big Buck pads; may be unavailable",
   "title": "Steel Spur Kit with Big Buck Pads"
+ },
+ "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-l-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham steel climbers with L-pads listing found",
+  "title": ""
  },
  "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-lower-straps/": {
   "asin": null,
@@ -1001,11 +1805,29 @@
   "note": "No steel climbers with lower straps kit found",
   "title": ""
  },
+ "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-shin-cups/": {
+  "asin": "B07SRK9JRG",
+  "match": "exact",
+  "note": "Buckingham steel climbers with shin cup pads",
+  "title": "Buckingham Steel Spur Kit with Shin Cup Pads"
+ },
  "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-t-pads/": {
   "asin": "B00470MI3G",
   "match": "exact",
   "note": "May be unavailable",
   "title": "Buckingham Steel Climbers with T Pads"
+ },
+ "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-weaver-procool-velcro-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham steel climbers with Weaver ProCool velcro pads listing",
+  "title": ""
+ },
+ "/climbing/spurs/buckingham-steel-spurs/buckingham-steel-climbers-with-weaver-steel-support-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham steel climbers with Weaver steel support pads listing",
+  "title": ""
  },
  "/climbing/spurs/climber-pads/buckingham-big-buck-pads/": {
   "asin": "B0798KMCY8",
@@ -1019,17 +1841,167 @@
   "note": "No Big Buck Velcro pads listing found",
   "title": ""
  },
+ "/climbing/spurs/climber-pads/cast-aluminum-climber-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No cast aluminum climber pads listing found",
+  "title": ""
+ },
+ "/climbing/spurs/climber-pads/climb-right-ultra-light-pads/": {
+  "asin": "B00651TQVM",
+  "match": "exact",
+  "note": "Part 90070",
+  "title": "Climb Right 90070 Ultra Light Climber Pads"
+ },
+ "/climbing/spurs/climber-pads/weaver-l-shaped-slot-climber-pads/": {
+  "asin": "B00KMRNCZ6",
+  "match": "variant",
+  "note": "Weaver L-shaped pads; slotted not confirmed",
+  "title": "Weaver, L-shaped Climber Pads, #08-97158"
+ },
+ "/climbing/spurs/climber-pads/weaver-procool-climber-pads/": {
+  "asin": "B07QK8JJ25",
+  "match": "exact",
+  "note": "ProCool pads",
+  "title": "WEAVER ARBORIST ProCool Climber Pads with 26\" Brahma Webb Strap"
+ },
+ "/climbing/spurs/climber-pads/weaver-shin-cups/": {
+  "asin": "B00VX6OJ5W",
+  "match": "exact",
+  "note": "Weaver shin cups",
+  "title": "Weaver Arborist Shin Cup Pads Old Buckingham and Bashlin Climber"
+ },
+ "/climbing/spurs/climber-pads/weaver-steel-support-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Weaver steel support pads listing found",
+  "title": ""
+ },
+ "/climbing/spurs/climber-pads/weaver-super-climber-pads/": {
+  "asin": "B0044U4Q4S",
+  "match": "exact",
+  "note": "Super Climber pads 08-97157",
+  "title": "Weaver Leather Arborist Super Climber Pads, Tan/Black"
+ },
+ "/climbing/spurs/klein-steel-climbers/klein-climbers-with-big-buck-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Klein climbers with Big Buck pads found",
+  "title": ""
+ },
+ "/climbing/spurs/klein-steel-climbers/klein-climbers-with-weaver-procool-wrap-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Klein climbers with Weaver ProCool pads found",
+  "title": ""
+ },
+ "/climbing/spurs/klein-steel-climbers/klein-steel-climbers-with-shin-cups/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Klein steel climbers with shin cups found",
+  "title": ""
+ },
+ "/climbing/spurs/klein-steel-climbers/klein-steel-climbers-with-t-pads/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Klein steel climbers with T-pads found",
+  "title": ""
+ },
+ "/climbing/spurs/lightweight-spurs/distel-carbon-3-v-2020-tree-gaffs-with-velcro-straps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Distel Carbon 3 V listing found",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/adjustable-climber-sleeve-for-buckingham-steel-climbers/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham adjustable sleeve listing found",
+  "title": ""
+ },
  "/climbing/spurs/replacement-gaffs-and-parts/buckalloy-screw-and-dowel-style-replacement-tree-gaffs/": {
   "asin": "B005LV24AW",
   "match": "variant",
   "note": "Buckingham dowel & screw replaceable gaff; Buckalloy specifically unconfirmed",
   "title": "Buckingham NB9206A Replaceable Dowel and Screw Gaff"
  },
+ "/climbing/spurs/replacement-gaffs-and-parts/buckingham-gaff-shaping-gauge/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Buckingham gaff shaping gauge listing (only maintenance kits)",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/climb-right-replacement-gaffs/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party gaffs, no Climb Right branded",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/climb-right-steel-height-adjustment-sleeve-and-screws/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/climb-right-ultralight-pad-screws/": {
+  "asin": null,
+  "match": "none",
+  "note": "No listing found",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/distel-eye-bolt-m8x11/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Distel eye bolt listing found",
+  "title": ""
+ },
  "/climbing/spurs/replacement-gaffs-and-parts/edelrid-talon-upper-strap-system/": {
   "asin": "B08BJDPSHP",
   "match": "variant",
   "note": "Closest Edelrid Talon upper straps; not titled 'system'",
   "title": "EDELRID Talon Calf Upper Straps (Pair), Night"
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/klein-replacement-gaffs/": {
+  "asin": "B000F98LMA",
+  "match": "exact",
+  "note": "Klein tree climber replacement gaffs",
+  "title": "Klein Tools 07 Replacement Tree Climbing Gaffs"
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/replacement-gaffs-for-distel-and-gecko-climbers/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Distel/Gecko-specific gaffs listing for Distel; only Notch",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/replacement-gaffs-for-tree-hog-aluminum-climbers/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Tree Hog listing found",
+  "title": ""
+ },
+ "/climbing/spurs/replacement-gaffs-and-parts/weaver-padded-shank-cover/": {
+  "asin": "B00178K18K",
+  "match": "variant",
+  "note": "Weaver padded covers for climber shanks; name differs",
+  "title": "Weaver Leather Arborist Padded Covers, Red"
+ },
+ "/climbing/spurs/straps/buckingham-velcro-lower-straps/": {
+  "asin": "B0778VWKNJ",
+  "match": "exact",
+  "note": "Buckingham velcro lower straps",
+  "title": "Buckingham 21401C Hook and Loop Lower Straps"
+ },
+ "/climbing/spurs/straps/notch-gecko-quick-connect-lower-climber-straps/": {
+  "asin": "B0FZY47JK9",
+  "match": "variant",
+  "note": "Notch quick-connect lower straps; Lo-Pro naming",
+  "title": "Notch Quick Connect Lo-Pro Climber Straps - Pair (100081)"
+ },
+ "/climbing/spurs/straps/weaver-lower-synthetic-climber-straps/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Weaver lower synthetic straps listing confirmed",
+  "title": ""
  },
  "/climbing/throw-weight-and-line/throw-line-kits/big-shot-throw-weight-launcher/": {
   "asin": "B075VYX31B",
@@ -1067,17 +2039,59 @@
   "note": "1.8mm 150ft neon green; other lengths/colors exist",
   "title": "Teufelberger Dynaglide Arborist Throwline"
  },
+ "/climbing/throw-weight-and-line/throw-line/yale-long-shot-throwline/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Yale Long Shot listing found",
+  "title": ""
+ },
+ "/climbing/throw-weight-and-line/throw-line/yellow-polyethylene-throwline/": {
+  "asin": "B07X5C2P4D",
+  "match": "similar",
+  "note": "Polyethylene throw line, yellow/neon orange",
+  "title": "Jameson TL-PE-181000 1/8 in. Polyethylene Throw Line"
+ },
+ "/climbing/throw-weight-and-line/throw-weights/notch-throw-weight/": {
+  "asin": "B07895M6KQ",
+  "match": "variant",
+  "note": "Notch throw weight, welded ring; 16 oz size",
+  "title": "NOTCH 16 oz. Throw Weight - NTW-16"
+ },
  "/climbing/throw-weight-and-line/throw-weights/petzl-jet-throw-weight/": {
   "asin": "B077JJQSY9",
   "match": "exact",
   "note": "Weights: 250g B0GR1S91D2, 300g B009AG3V88, 350g B00994MHPY",
   "title": "PETZL - Jet, Throw-Bag"
  },
+ "/climbing/throw-weight-and-line/throw-weights/weaver-12oz-throw-weight/": {
+  "asin": "B0044TZVWU",
+  "match": "exact",
+  "note": "12 oz Weaver throw weight",
+  "title": "Weaver Arborist 12 oz Throw Weight Bag, Blaze Orange"
+ },
+ "/climbing/throw-weight-and-line/throw-weights/weaver-16oz-throw-weight/": {
+  "asin": "B07VMMY3WD",
+  "match": "exact",
+  "note": "16 oz Weaver throw weight",
+  "title": "Weaver Arborist 16 oz Throw Weight Bag, Hot Pink"
+ },
+ "/climbing/throw-weight-and-line/throw-weights/weaver-bullet-throw-weight/": {
+  "asin": "B0F51Z5DHG",
+  "match": "exact",
+  "note": "Weaver bullet throw weight",
+  "title": "Weaver Arborist Bullet Throw Weight"
+ },
  "/climbing/tree-climbing-kits/arborist-rope-climbing-kits/": {
   "asin": null,
   "match": "none",
   "note": "No complete arborist rope climbing kit with saddle, hitch cord, pulley found",
   "title": ""
+ },
+ "/clothing/arborist-boots/arbortec-kayo-chainsaw-climbing-boot/": {
+  "asin": "B0B1FWXKY6",
+  "match": "variant",
+  "note": "Kayo boot; size/color specific listing",
+  "title": "ARBORTEC Kayo Chainsaw Boots - Charcoal - Size 11 1/2"
  },
  "/clothing/arborist-boots/arbortec-scafell-lite-chainsaw-boots-lime-green/": {
   "asin": "B0D4MTRJWC",
@@ -1097,6 +2111,42 @@
   "note": "",
   "title": "ARBPRO CLIP'N STEP TREE CLIMBING BOOTS"
  },
+ "/clothing/arborist-boots/arbpro-evo-2-boots/": {
+  "asin": "B0966T6RSM",
+  "match": "exact",
+  "note": "Arbpro EVO 2 climbing boot (size-specific listing)",
+  "title": "Arbpro EVO Climbing Boots"
+ },
+ "/clothing/arborist-boots/wesco-highliner-10-boots-brown/": {
+  "asin": "B07N7QD6WP",
+  "match": "exact",
+  "note": "Brown Highliner 10 in",
+  "title": "Wesco Highliner Men's Boot BR9710100 Height 10\""
+ },
+ "/clothing/arborist-boots/wesco-highliner-black-10-boots/": {
+  "asin": "B00A6G2Q82",
+  "match": "exact",
+  "note": "Black Highliner 10 in",
+  "title": "Wesco Highliner 10\" Lineman Work Boot Black - 9710100"
+ },
+ "/clothing/hats-and-caps/arbortec-baseball-cap-black-and-lime/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Arbortec cap listing found",
+  "title": ""
+ },
+ "/clothing/hats-and-caps/arborwear-a-tree-trucker-cap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Arborwear A-Tree cap listing found",
+  "title": ""
+ },
+ "/clothing/hats-and-caps/arborwear-climb-trees-vintage-trucker-cap/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Arborwear Climb Trees cap listing found",
+  "title": ""
+ },
  "/clothing/hats-and-caps/arborwear-neck-warmer/": {
   "asin": null,
   "match": "none",
@@ -1109,11 +2159,35 @@
   "note": "No Arborwear stocking cap listing found",
   "title": ""
  },
+ "/clothing/hats-and-caps/arborwear-trucker-embroidered-logo-cap-black-charcoal/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Arborwear embroidered trucker cap listing found",
+  "title": ""
+ },
+ "/clothing/hats-and-caps/husqvarna-jakt-hat/": {
+  "asin": "B08CRTVG5Y",
+  "match": "exact",
+  "note": "Husqvarna Jakt hunt hat",
+  "title": "Husqvarna Mens Flat Hunt Hat, Camo (Xplorer Jakt)"
+ },
  "/clothing/hats-and-caps/husqvarna-utforskare-hat/": {
   "asin": null,
   "match": "none",
   "note": "No Husqvarna Utforskare hat listing found",
   "title": ""
+ },
+ "/clothing/hats-and-caps/husqvarna-vandra-hat/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Husqvarna Vandra hat found",
+  "title": ""
+ },
+ "/clothing/hats-and-caps/rocktrucker-hat-black-mesh/": {
+  "asin": "B08CNN478R",
+  "match": "similar",
+  "note": "Generic black mesh-back snapback trucker",
+  "title": "Trucker BLK Classic Foam Front Mesh Back Trucker Hat, Black"
  },
  "/clothing/sweatshirts-and-jackets/arborwear-black-large-double-thick-hooded-sweatshirt/": {
   "asin": "B00ZIA8F9U",
@@ -1127,11 +2201,29 @@
   "note": "Parent listing; select Navy / Large on page",
   "title": "Arborwear Double-Thick Hooded Pullover Sweatshirt for Men"
  },
+ "/clothing/sweatshirts-and-jackets/arborwear-orange-large-double-thick-hooded-sweatshirt/": {
+  "asin": "B00ZIA8F9U",
+  "match": "variant",
+  "note": "Same model; orange/Large not found, navy XS shown",
+  "title": "Arborwear Double-Thick Hooded Pullover Sweatshirt for Men, Navy - X-Small"
+ },
  "/clothing/sweatshirts-and-jackets/arborwear-safety-yellow-tech-double-thick-pullover-sweatshirt/": {
   "asin": "B09C93CJGL",
   "match": "variant",
   "note": "Two-tone Black/Safety Yellow, size M shown; Hi-Viz Yellow B01F725NZM",
   "title": "Arborwear Men's 400460 Tech 2-Tone Double Thick Hooded Pullover Sweatshirt, Black/Safety Yellow"
+ },
+ "/clothing/sweatshirts-and-jackets/class-3-safety-vest/": {
+  "asin": "B09HP5572Z",
+  "match": "similar",
+  "note": "ANSI Class 3 vest",
+  "title": "Dib Safety Reflective Safety Vest ANSI Class 3, Yellow Mesh L"
+ },
+ "/clothing/tree-climbing-pants/arbortec-heavy-duty-webbing-belt/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Arbortec webbing belt listing found",
+  "title": ""
  },
  "/clothing/tree-climbing-pants/arborwear-ascender-pants-coal/": {
   "asin": "B00JMB58Y6",
@@ -1139,11 +2231,89 @@
   "note": "Coal; 30x30 shown, other sizes via listing",
   "title": "Arborwear Ascender Pants Men's Work Utility Pants, Coal"
  },
+ "/clothing/tree-climbing-pants/arborwear-ascender-pants-driftwood/": {
+  "asin": "B00JMB58Y6",
+  "match": "variant",
+  "note": "Ascender pants; driftwood not found, coal shown",
+  "title": "Arborwear Ascender Pants Men's, Coal"
+ },
+ "/clothing/tree-climbing-pants/arborwear-canopy-pants-coal/": {
+  "asin": "B00JMB58YQ",
+  "match": "variant",
+  "note": "Canopy pant; coal not found, black shown",
+  "title": "Arborwear Men's Canopy Pant, Black, 32W x 32L"
+ },
+ "/clothing/tree-climbing-pants/arborwear-canopy-pants-driftwood/": {
+  "asin": "B00JMB58YQ",
+  "match": "variant",
+  "note": "Canopy pant; driftwood only women's, men's black shown",
+  "title": "Arborwear Men's Canopy Pant, Black, 32W x 32L"
+ },
+ "/clothing/tree-climbing-pants/arborwear-original-tree-climbers-pants-chestnut/": {
+  "asin": "B0GFBHL22F",
+  "match": "exact",
+  "note": "Original Tree Climbers pants chestnut",
+  "title": "Arborwear Original Tree Climbers Pants, Chestnut - 30W x 30L"
+ },
+ "/clothing/tree-climbing-pants/clogger-spider-pants-contrast-color/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Clogger Spider pants listing found",
+  "title": ""
+ },
+ "/clothing/tree-climbing-pants/clogger-spider-pants-gray-color/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Clogger Spider pants listing found",
+  "title": ""
+ },
+ "/clothing/tree-climbing-pants/edelrid-easy-glider-belt-night/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Edelrid Easy Glider Belt listing found",
+  "title": ""
+ },
  "/clothing/tree-climbing-pants/heavy-duty-suspenders-for-chainsaw-pants-by-arbortec/": {
   "asin": null,
   "match": "none",
   "note": "No Arbortec suspenders listing found",
   "title": ""
+ },
+ "/clothing/tree-climbing-pants/teufelberger-way-up-light-climbing-pants/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Teufelberger wayUP Light pants listing found",
+  "title": ""
+ },
+ "/communication/pfanner-protos-bluetooth-communication-system/": {
+  "asin": null,
+  "match": "none",
+  "note": "No Pfanner Protos Bluetooth system listing found",
+  "title": ""
+ },
+ "/cutting-and-pruning/blades/fanno-17-tri-edge-blade/": {
+  "asin": null,
+  "match": "none",
+  "note": "No standalone Fanno 17 in tri-edge blade found",
+  "title": ""
+ },
+ "/cutting-and-pruning/blades/jameson-16-tri-cut-saw-blade/": {
+  "asin": "B007ICC7T0",
+  "match": "exact",
+  "note": "16 in tri-cut blade",
+  "title": "Jameson SB-16TE 16-inch Barracuda Tri-Cut Replacement Blade"
+ },
+ "/cutting-and-pruning/blades/replacement-blade-for-hs-13te-lps-hand-saw/": {
+  "asin": null,
+  "match": "none",
+  "note": "Only third-party SB-13TE blades, no Jameson-branded listing",
+  "title": ""
+ },
+ "/cutting-and-pruning/blades/silky-gomtaro-pro-sentei-replacement-blade/": {
+  "asin": "B0014CA09E",
+  "match": "exact",
+  "note": "Pro-Sentei blade 109-30 (300mm; no size in name)",
+  "title": "Silky Replacement Blade GOMTARO 300mm Pro-Sentei Dual Teeth (109-30)"
  },
  "/cutting-and-pruning/blades/sugoi-replacement-blade/": {
   "asin": "B07SM2NSHY",
