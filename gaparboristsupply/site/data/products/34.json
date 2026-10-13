@@ -1010,7 +1010,8 @@
     "h": "Use and inspection",
     "p": [
      "Clip only to compatible D-rings and connectors so the snap cannot roll and load against its keeper. Do not clip a snap around a limb or back onto its own line unless it is designed for that.",
-     "Before each use, check that the keeper springs closed and locks on its own, and look for cracks, wear, corrosion, and bent parts. Retire it if it fails any check. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers."
+     "Before each use, check that the keeper springs closed and locks on its own, and look for cracks, wear, corrosion, and bent parts. Retire it if it fails any check. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers.",
+     "Store snaps dry and keep grit out of the keeper spring, which is what usually fails first."
     ]
    }
   ],
@@ -1143,7 +1144,8 @@
     "h": "Swapping and checking",
     "p": [
      "Install the pins exactly as the manufacturer's instructions show, and only if the maker permits user replacement. Check every fastener afterward and test the device on the ground, with your full weight and a backup, before you climb on it.",
-     "Inspect pins and frame before each climb for grooves, sharp edges, and cracks. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers."
+     "Inspect pins and frame before each climb for grooves, sharp edges, and cracks. Treat it as life-support equipment: it must meet ANSI Z133 and the manufacturer's instructions, be inspected before every climb, and be used only by trained climbers.",
+     "If you are unsure whether the pins are within limits, retire the device or send it for service."
     ]
    }
   ],
@@ -1352,7 +1354,8 @@
     "h": "Setting it up",
     "p": [
      "Place the guard on the side where debris would do the most damage, close enough to catch the throw but clear of the cutter wheel and the machine's swing. Reposition it as you work around the stump, and pick rocks and metal out of the work area before you start.",
-     "A guard reduces flying debris but does not replace a safe exclusion zone. Keep bystanders well back, wear eye, face, and hearing protection, and follow the grinder maker's manual and ANSI Z133."
+     "A guard reduces flying debris but does not replace a safe exclusion zone. Keep bystanders well back, wear eye, face, and hearing protection, and follow the grinder maker's manual and ANSI Z133.",
+     "Wipe the panels down after the job so dirt does not build up on the hinges and stiffen them."
     ]
    }
   ],
@@ -1490,7 +1493,8 @@
     "h": "Care and use",
     "p": [
      "Store it in a cube or bag so it pays out without tangles, and keep it clean; sap and grit slow it down. Check the line for nicks and thin spots, and cut out damage rather than throwing on it.",
-     "Throw lines are not life-support gear. Use them only to set your climbing or rigging line, and make sure the crew is clear of the drop zone when you throw or pull a bag down."
+     "Throw lines are not life-support gear. Use them only to set your climbing or rigging line, and make sure the crew is clear of the drop zone when you throw or pull a bag down.",
+     "A small cube clipped to the saddle or the throw bag keeps it ready for the next tree."
     ]
    }
   ],
@@ -1560,7 +1564,8 @@
     "h": "Handling and care",
     "p": [
      "Flake it into a throw cube or bag and let it pay out freely. Thin line can be hard on bare hands when pulling a heavy climbing line up, so wear gloves or use a thicker line for big hauls.",
-     "Check for nicks and thin spots and cut out damage. Throw line is not life-support gear; use it only to set your climbing or rigging line, and keep the crew out of the drop zone when throwing."
+     "Check for nicks and thin spots and cut out damage. Throw line is not life-support gear; use it only to set your climbing or rigging line, and keep the crew out of the drop zone when throwing.",
+     "Keeping a spare throw line in the truck saves a job when a line gets cut or stuck in the crown."
     ]
    }
   ],
@@ -1587,7 +1592,7 @@
   "brand_name": "Notch",
   "kind": "throw-line",
   "price": 45,
-  "keyword": "notch acculine throw line",
+  "keyword": "notch acculine 2.2mm throw line",
   "title": "Notch Acculine 2.2mm Throw Line",
   "h1": "Notch Acculine 2.2mm Throw Line",
   "meta": "Notch Acculine 2.2mm throw line, a heavier throw line that is easy on the hands and good for pulling up climb lines. How it handles and when to choose it.",
@@ -1626,7 +1631,8 @@
     "h": "Care and use",
     "p": [
      "Store it flaked in a cube or bag, keep it clean of sap and grit, and cut out nicked or worn sections. Pair it with a throw weight heavy enough to pull the thicker line through the canopy.",
-     "Throw line is not life-support gear. Use it only to set your climbing or rigging line, and keep everyone clear of the drop zone when throwing and when pulling a bag down."
+     "Throw line is not life-support gear. Use it only to set your climbing or rigging line, and keep everyone clear of the drop zone when throwing and when pulling a bag down.",
+     "Coil and bag it after each use so it is ready for the next tree."
     ]
    }
   ],
@@ -1733,7 +1739,7 @@
   "highlights": [
    "Compact size for smaller trees and logs",
    "Keeps the kerf open so the bar does not pinch",
-   "Safe to hit with the chain nearby",
+   "Plastic, so a chain touch does far less harm than steel",
    "Fits in a pocket or wedge pouch"
   ],
   "specs": [
@@ -1763,7 +1769,8 @@
     "h": "Using and replacing it",
     "p": [
      "Set the wedge as soon as the back cut is deep enough, before the kerf starts to close. Drive it with an axe or wedge hammer, not with the saw. A plastic wedge is used because a chain that touches it is not ruined the way it would be on steel.",
-     "Retire a wedge that is cracked, badly mushroomed, or chewed up by the chain, because it can spit out of the cut. Felling should only be done by trained workers following ANSI Z133 and with a clear escape route."
+     "Retire a wedge that is cracked, badly mushroomed, or chewed up by the chain, because it can spit out of the cut. Felling should only be done by trained workers following ANSI Z133 and with a clear escape route.",
+     "Carry at least two wedges so you can stack them or set a second one if the first is not enough."
     ]
    }
   ],
@@ -1897,7 +1904,8 @@
     "h": "Sharpening tips",
     "p": [
      "File on the push stroke only, lifting off on the return, and match the file size to your chain pitch. Count strokes per cutter so both sides stay even, and check the depth gauges every few sharpenings.",
-     "Set the chain brake or shut the saw off, wear gloves, and clamp the bar in a vise or stump vise. Replace the file once it stops biting cleanly."
+     "Set the chain brake or shut the saw off, wear gloves, and clamp the bar in a vise or stump vise. Replace the file once it stops biting cleanly.",
+     "Keep a spare file and handle in the truck in case one goes missing in the sawdust."
     ]
    }
   ],
@@ -1927,9 +1935,9 @@
   "keyword": "replacement file for guide bar dresser",
   "title": "Replacement File for Guide Bar Dresser",
   "h1": "Replacement File for Guide Bar Dresser",
-  "meta": "A replacement flat file for a guide bar dresser. Swap a dull file and keep dressing chainsaw bar rails square and burr-free. Fit notes and bar care tips inside.",
+  "meta": "A replacement file for guide bar dresser tools. Swap a dull file and keep dressing chainsaw bar rails square and burr-free. Fit notes and bar care tips inside.",
   "tagline": "A fresh flat file for your guide bar dresser.",
-  "summary": "This replacement file for a guide bar dresser restores the cutting edge on the tool you use to square up chainsaw bar rails. A sharp file cuts burrs off cleanly instead of skating over them.",
+  "summary": "This replacement file for guide bar dresser tools restores the cutting edge on the tool you use to square up chainsaw bar rails. A sharp file cuts burrs off cleanly instead of skating over them.",
   "highlights": [
    "Replacement flat file for a bar dresser",
    "Restores clean, fast cutting",
@@ -1963,7 +1971,8 @@
     "h": "Bar care basics",
     "p": [
      "Dress the rails at each chain change, flip the bar so it wears evenly, and clean the groove and oil holes. Replace the bar when the rails are badly worn or the groove is too shallow to hold the chain upright.",
-     "Wear gloves when handling the bar and chain, and keep the file clean with a file card so it keeps cutting."
+     "Wear gloves when handling the bar and chain, and keep the file clean with a file card so it keeps cutting.",
+     "Store the dresser and spare files in a dry case to keep them from rusting, and label which file fits which tool if you run more than one dresser."
     ]
    }
   ],
@@ -2029,7 +2038,8 @@
     "h": "Sharpening tips",
     "p": [
      "Match the file to your chain pitch, file on the push stroke only, and count strokes per cutter. Check depth gauges every few sharpenings and keep both sides even.",
-     "Shut off the saw or set the chain brake, wear gloves, and support the bar firmly while filing. Replace the file when it stops biting."
+     "Shut off the saw or set the chain brake, wear gloves, and support the bar firmly while filing. Replace the file when it stops biting.",
+     "Keep the handle and file in a dry pouch so the file does not rust between jobs, and carry a spare file and a depth gauge tool with it. A small kit like that makes it easy to touch up the chain at every refuel."
     ]
    }
   ],
