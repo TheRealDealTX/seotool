@@ -1,0 +1,88 @@
+<!--{"path": "/preparedness/", "title": "Hurricane Preparedness Checklist & Cost Calculator for Pensacola | Pensacola Hurricane", "description": "Build a personalized hurricane preparedness checklist for your Pensacola household and estimate the cost of water, food, shutters, a generator and evacuation with our free calculator.", "nav": "/preparedness/", "group": "Main"}-->
+<section class="page-hero">
+<div class="container">
+<div class="crumbs"><a href="/">Home</a> / Hurricane Preparedness</div>
+<h1>Hurricane Preparedness Checklist Generator &amp; Cost Calculator</h1>
+<p class="lead">Answer a few questions about your household and get a printable checklist built for a Pensacola hurricane &mdash; then see what it will cost before the stores run out.</p>
+</div>
+</section>
+
+<section class="section-tight">
+<div class="container grid grid-2" style="align-items:start">
+<div class="tool">
+<h2 style="font-size:1.4rem">1. Build my checklist</h2>
+<form data-checklist-form>
+<div class="form-grid">
+<div class="field"><label for="c-people">People in household</label><input id="c-people" name="people" type="number" min="1" max="20" value="3"></div>
+<div class="field"><label for="c-pets">Pets</label><input id="c-pets" name="pets" type="number" min="0" max="20" value="1"></div>
+<div class="field"><label for="c-days">Days to be self-sufficient</label><select id="c-days" name="days"><option value="3">3 days (minimum)</option><option value="7" selected>7 days (recommended)</option><option value="10">10 days</option><option value="14">14 days</option></select></div>
+<div class="field"><label for="c-home">Home type</label><select id="c-home" name="home"><option value="house">Single-family house</option><option value="condo">Condo / apartment</option><option value="mobile">Mobile / manufactured home</option><option value="rental">Renting</option></select></div>
+<div class="field full"><label for="c-zone">Evacuation zone</label><select id="c-zone" name="zone"><option value="unknown">I don't know yet</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option value="none">Not in a zone</option></select><div class="hint"><a href="/evacuation-zones/">Look up your zone</a></div></div>
+<label class="check"><input type="checkbox" name="infants"> Infants or young children</label>
+<label class="check"><input type="checkbox" name="seniors"> Older adults</label>
+<label class="check"><input type="checkbox" name="meds"> Refrigerated medicine</label>
+<label class="check"><input type="checkbox" name="medical"> Power-dependent medical equipment</label>
+<label class="check"><input type="checkbox" name="pool"> Swimming pool</label>
+<label class="check"><input type="checkbox" name="boat"> Boat</label>
+</div>
+<div class="btn-row"><button class="btn btn-warn" type="submit">Generate my checklist</button></div>
+</form>
+<div data-checklist-out></div>
+</div>
+<div class="tool" id="cost">
+<h2 style="font-size:1.4rem">2. Estimate the cost</h2>
+<form data-cost-form>
+<div class="form-grid">
+<div class="field"><label for="k-people">People</label><input id="k-people" name="people" type="number" min="1" value="3"></div>
+<div class="field"><label for="k-pets">Pets</label><input id="k-pets" name="pets" type="number" min="0" value="1"></div>
+<div class="field"><label for="k-days">Days of supplies</label><input id="k-days" name="days" type="number" min="3" max="21" value="7"></div>
+<div class="field"><label for="k-windows">Windows &amp; glass doors</label><input id="k-windows" name="windows" type="number" min="0" value="12"></div>
+<div class="field"><label for="k-shutters">Window protection</label><select id="k-shutters" name="shutters"><option value="none">Already have shutters / impact glass</option><option value="plywood" selected>Buy plywood</option><option value="panels">Buy storm panels</option></select></div>
+<div class="field"><label for="k-gen">Generator</label><select id="k-gen" name="generator"><option value="none">None / already own</option><option value="portable">Buy a portable generator</option><option value="inverter">Buy an inverter generator</option></select></div>
+<div class="field full"><label for="k-evac">If you evacuate</label><select id="k-evac" name="evac"><option value="none">Shelter in place</option><option value="family">Stay with family/friends</option><option value="hotel" selected>Hotel inland</option></select></div>
+</div>
+</form>
+<div data-cost-out></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container layout">
+<div class="prose">
+<h2>A Pensacola hurricane preparedness timeline</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>When</th><th>What to do</th></tr></thead>
+<tbody>
+<tr><td><strong>Before June 1</strong></td><td>Review insurance (wind, flood, hurricane deductible). Buy flood insurance now &mdash; NFIP policies usually take 30 days to start. Trim trees, check the roof, buy shutters or cut plywood and label each piece.</td></tr>
+<tr><td><strong>Storm in the 7-day outlook</strong></td><td>Check your zone. Refill prescriptions. Top up water, food and batteries. Make sure the car is serviced.</td></tr>
+<tr><td><strong>5 days out</strong></td><td>Fill gas tanks and generator fuel cans. Get cash. Photograph and video your home inside and out.</td></tr>
+<tr><td><strong>Watch issued (~48 h)</strong></td><td>Put up shutters, bring in outdoor items, move boats, secure important papers in a waterproof bag. Decide where you will go.</td></tr>
+<tr><td><strong>Warning issued (~36 h)</strong></td><td>If ordered to evacuate, go. Otherwise finish preparations, freeze water, fill bathtubs, charge everything, set fridge to coldest setting.</td></tr>
+<tr><td><strong>Tropical-storm winds arrive</strong></td><td>Stay inside, away from windows. Do not drive. Keep the NOAA radio on for tornado and extreme wind warnings.</td></tr>
+</tbody></table></div>
+<h2>Protecting a Pensacola home</h2>
+<p>Most homes built in Escambia and Santa Rosa counties since the early 2000s fall under Florida Building Code wind requirements; in this area design wind speeds generally run from roughly 140 to 160 mph or more depending on how close you are to the coast. Older homes benefit most from:</p>
+<ul>
+<li><strong>Opening protection</strong> &mdash; rated shutters or impact glass on every window, slider and garage door. A breached opening lets wind pressurize the house and lift the roof.</li>
+<li><strong>Roof-to-wall connections</strong> &mdash; hurricane clips or straps. A wind mitigation inspection documents these and can significantly lower the wind portion of your insurance premium.</li>
+<li><strong>Secondary water barrier</strong> &mdash; sealed roof decking keeps rain out when shingles blow off, the most common damage in Sally and Ivan.</li>
+</ul>
+<p>Florida's <a href="https://mysafeflhome.com/" target="_blank" rel="noopener">My Safe Florida Home</a> program has offered free wind-mitigation inspections and matching grants for qualifying homeowners when funded.</p>
+<div class="callout callout-blue"><h4>Don't forget the paperwork</h4><p style="margin:0">A ten-minute video walk-through of every room, closet, appliance and the roof is the single most valuable thing you can do for a future insurance claim. Upload it to cloud storage before the storm. Then use our <a href="/tools/#damage-log">storm damage log</a> afterwards.</p></div>
+</div>
+<aside class="sidebar">
+<div class="side-box"><h3>More tools</h3><ul>
+<li><a href="/tools/#supplies">Emergency supply calculator</a></li>
+<li><a href="/tools/#generator">Generator runtime calculator</a></li>
+<li><a href="/tools/#deductible">Hurricane deductible calculator</a></li>
+<li><a href="/evacuation-zones/">Evacuation zone checker</a></li>
+</ul></div>
+<div class="side-box"><h3>Official guides</h3><ul>
+<li><a href="https://www.floridadisaster.org/planprepare/" target="_blank" rel="noopener">FloridaDisaster.org Plan &amp; Prepare</a></li>
+<li><a href="https://www.ready.gov/hurricanes" target="_blank" rel="noopener">Ready.gov hurricanes</a></li>
+<li><a href="https://myescambia.com/our-services/public-safety/beready" target="_blank" rel="noopener">Escambia County BeReady</a></li>
+</ul></div>
+</aside>
+</div>
+</section>
