@@ -1,0 +1,28 @@
+# claimroofleak.com - Hostinger Cloud (LiteSpeed)
+DirectoryIndex index.html index.php
+Options -Indexes
+ErrorDocument 404 /index.php
+
+RewriteEngine On
+# canonical host: https://claimroofleak.com (www and http are redirected)
+RewriteCond %{HTTP_HOST} ^www\.claimroofleak\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?claimroofleak\.com$ [NC]
+RewriteRule ^ https://claimroofleak.com%{REQUEST_URI} [R=301,L]
+
+# keep stored leads off the web
+RewriteRule ^data(/|$) - [R=404,L]
+
+# "/" and anything that is not a real file/directory -> index.php (home or real 404)
+RewriteRule ^$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(css|js|svg|png|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>

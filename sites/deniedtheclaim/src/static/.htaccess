@@ -1,0 +1,27 @@
+# deniedtheclaim.com on Hostinger Cloud (LiteSpeed)
+DirectoryIndex index.html index.php
+Options -Indexes
+ErrorDocument 404 /index.php
+
+RewriteEngine On
+# www -> apex and http -> https, one hop
+RewriteCond %{HTTP_HOST} ^www\.deniedtheclaim\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?deniedtheclaim\.com$ [NC]
+RewriteRule ^ https://deniedtheclaim.com%{REQUEST_URI} [R=301,L]
+
+# Built HTML pages are not addressable by file name; home.html and 404.html go through index.php
+RewriteRule ^(home|404)\.html$ index.php [L]
+
+# Home and anything that is not a real file or directory -> front controller (real 404)
+RewriteRule ^$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+<FilesMatch "\.(css|js|png|svg|woff2)$">
+  Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+<FilesMatch "\.html$">
+  Header set Cache-Control "public, max-age=600"
+</FilesMatch>

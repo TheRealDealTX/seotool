@@ -1,0 +1,27 @@
+# claimhurricanetoday.com - Hostinger Cloud (LiteSpeed)
+DirectoryIndex index.html index.php
+Options -Indexes
+
+RewriteEngine On
+# Canonical host: https://claimhurricanetoday.com (www -> apex, http -> https)
+RewriteCond %{HTTP_HOST} ^www\.claimhurricanetoday\.com$ [NC,OR]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?claimhurricanetoday\.com$ [NC]
+RewriteRule ^ https://claimhurricanetoday.com%{REQUEST_URI} [R=301,L]
+
+# Keep private data out of reach
+RewriteRule ^data(/|$) - [R=404,L]
+
+# Home + anything that is not a real file/directory -> front controller (real 404s)
+RewriteRule ^$ index.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  <FilesMatch "\.(css|js|png|svg|ico|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
