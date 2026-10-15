@@ -1,0 +1,111 @@
+<!--{
+"path": "/hurricane-preparedness/",
+"title": "Destin Hurricane Preparedness Checklist & Prep Budget | Destin Hurricane",
+"description": "Build a Destin hurricane preparedness checklist for your household, zone and home type, estimate the cost, and follow a countdown from the first 7-day outlook to landfall on the Emerald Coast.",
+"nav": "/hurricane-preparedness/",
+"group": "Storm desk",
+"h1": "Destin hurricane preparedness: a checklist built for your house",
+"crumb": "Preparedness",
+"kicker": "Before the storm",
+"lede": "Answer a few questions and get a printable list sized to your household, home type and evacuation zone. Then price it, and work through the countdown below.",
+"faq_title": "Hurricane preparedness on the Emerald Coast",
+"faq": [
+ ["How much water should a Destin household store?", "At least one gallon per person per day for drinking, for several days. Okaloosa County's guide suggests a minimum three-day supply of medical items; Walton County's guide suggests supplies for seven days for every family member and pet. Fill bathtubs for flushing once a warning is issued."],
+ ["When should I put up shutters?", "Before tropical-storm-force winds arrive, which can be a day or more before landfall. Check the gust chart on our weather page and finish outdoor work before the first forecast gust of 39 mph."],
+ ["Does Florida have a hurricane supply sales-tax holiday?", "Florida has enacted disaster-preparedness sales-tax holidays in past years, and recent law has exempted some supplies year-round. Check the Florida Department of Revenue for what applies this year."],
+ ["What insurance check should I do before the season?", "Read your declarations page: dwelling limit, the hurricane deductible in dollars, whether you carry flood insurance (it usually takes 30 days to start), loss-of-use coverage and, for condo owners, loss-assessment coverage."]
+]
+}-->
+<section class="band band--tight">
+<div class="wrap">
+<div class="toolcard">
+<h2>1. Build the checklist</h2>
+<div class="toolcard-grid">
+<form data-checklist-form>
+<div class="fgrid">
+<div class="fld"><label for="ck-people">People</label><input id="ck-people" name="people" type="number" min="1" max="20" value="2"></div>
+<div class="fld"><label for="ck-pets">Pets</label><input id="ck-pets" name="pets" type="number" min="0" max="10" value="1"></div>
+<div class="fld"><label for="ck-days">Days on your own</label><select id="ck-days" name="days"><option value="3">3 days</option><option value="7" selected>7 days (Walton guide)</option><option value="10">10 days</option><option value="14">14 days</option></select></div>
+<div class="fld"><label for="ck-home">Home type</label><select id="ck-home" name="home"><option value="house">House</option><option value="condo">Condo or townhome</option><option value="mobile">Mobile or manufactured home</option><option value="rental">Renting</option></select></div>
+<div class="fld fld--full"><label for="ck-zone">Evacuation zone</label><select id="ck-zone" name="zone"><option value="unknown">Not sure yet</option><option>A</option><option>B</option><option>C</option><option>D</option><option>E</option><option value="none">Not in a zone</option></select><p class="hint"><a href="/okaloosa-walton-evacuation-zones/">Look up your zone</a></p></div>
+</div>
+<fieldset style="border:0;padding:0;margin:0 0 16px"><legend class="small" style="font-weight:700;margin-bottom:8px">Anything else?</legend>
+<div class="optgrid">
+<label class="tick"><input type="checkbox" name="infants"> <span>Babies or young kids</span></label>
+<label class="tick"><input type="checkbox" name="seniors"> <span>Older adults</span></label>
+<label class="tick"><input type="checkbox" name="meds"> <span>Refrigerated medicine</span></label>
+<label class="tick"><input type="checkbox" name="medical"> <span>Powered medical equipment</span></label>
+<label class="tick"><input type="checkbox" name="pool"> <span>Pool</span></label>
+<label class="tick"><input type="checkbox" name="boat"> <span>Boat</span></label>
+</div></fieldset>
+<button class="btn btn--coral" type="submit">Make my checklist</button>
+</form>
+<div data-checklist-out aria-live="polite"><div class="result"><p style="margin:0">Your list appears here, grouped by task, with boxes to tick off and a print button.</p></div></div>
+</div>
+</div>
+
+<div class="toolcard">
+<h2>2. Price it</h2>
+<div class="toolcard-grid">
+<form data-cost-form>
+<div class="fgrid">
+<div class="fld"><label for="c-people">People</label><input id="c-people" name="people" type="number" min="1" value="2"></div>
+<div class="fld"><label for="c-pets">Pets</label><input id="c-pets" name="pets" type="number" min="0" value="1"></div>
+<div class="fld"><label for="c-days">Days of supplies</label><input id="c-days" name="days" type="number" min="3" value="7"></div>
+<div class="fld"><label for="c-win">Windows and glass doors</label><input id="c-win" name="windows" type="number" min="0" value="10"></div>
+<div class="fld"><label for="c-shut">Window protection</label><select id="c-shut" name="shutters"><option value="none">Already have shutters or impact glass</option><option value="plywood">Buy plywood</option><option value="panels">Buy storm panels</option></select></div>
+<div class="fld"><label for="c-gen">Generator</label><select id="c-gen" name="generator"><option value="none">None, or already own one</option><option value="portable">Buy a portable</option><option value="inverter">Buy an inverter</option></select></div>
+<div class="fld fld--full"><label for="c-evac">If you leave</label><select id="c-evac" name="evac"><option value="none">Stay home</option><option value="family">Stay with family or friends</option><option value="hotel">Inland hotel</option></select></div>
+</div>
+</form>
+<div data-cost-out aria-live="polite"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band band--foam">
+<div class="wrap wrap--narrow">
+<h2>The Destin hurricane countdown</h2>
+<ol class="timeline">
+<li><span class="timeline-when">Before June 1</span><h3>Insurance and the house</h3><p>Read your declarations page and write your hurricane deductible in dollars. Buy flood coverage now; NFIP policies usually take 30 days. Trim trees, check the roof, cut and label plywood, and sign up for AlertOkaloosa or Alert Walton.</p></li>
+<li><span class="timeline-when">A system in the 7-day outlook</span><h3>Restock</h3><p>Refill prescriptions, top up water, food and batteries, and service the car. Boat owners: line up a haul-out or hurricane hole.</p></li>
+<li><span class="timeline-when">About 5 days out</span><h3>Fuel and photos</h3><p>Fill tanks and fuel cans, get cash, and film every room, closet and the roof for your insurance file.</p></li>
+<li><span class="timeline-when">Watch issued (~48 hours)</span><h3>Secure</h3><p>Shutters up, outdoor furniture, grills, kayaks and paddleboards inside. Documents in a waterproof pouch. Decide where you will go.</p></li>
+<li><span class="timeline-when">Warning or evacuation order</span><h3>Go, or hunker down</h3><p>If your zone is ordered out, leave before the bridges close. If not, fill tubs, freeze water, charge everything and pick your interior room.</p></li>
+<li><span class="timeline-when">Tropical-storm winds arrive</span><h3>Stay put</h3><p>No driving, no checking the beach. Keep a weather radio on for tornado and Extreme Wind Warnings.</p></li>
+</ol>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap split">
+<div class="article">
+<h2>Hardening a coastal home</h2>
+<p>Most of what fails in a Destin hurricane fails in a predictable order: an opening breaks, wind pressurizes the house, then the roof lifts. The upgrades that interrupt that chain:</p>
+<ul>
+<li><strong>Opening protection</strong> on every window, slider and the garage door: rated shutters or impact glass.</li>
+<li><strong>Roof-to-wall connections</strong> such as hurricane clips and straps. A wind-mitigation inspection documents them and can lower the wind portion of your premium.</li>
+<li><strong>A sealed roof deck</strong> (secondary water barrier) so rain stays out when shingles go.</li>
+<li><strong>Salt-air maintenance.</strong> Corroded fasteners and connectors on Gulf-front homes fail sooner; inspect them when the roof is serviced.</li>
+</ul>
+<p>Florida's My Safe Florida Home program has offered free wind-mitigation inspections and matching grants for eligible homeowners when the Legislature funds it. Check the program's site for current availability.</p>
+<div class="callout callout--sun"><h3>The ten-minute video that pays for itself</h3><p>Walk every room with your phone, open closets and cabinets, film appliances' model plates, the roof from the yard and the outside of the house. Upload it to the cloud. After the storm it is the best evidence of what you had and its condition. Then use our <a href="/hurricane-tools/#damage-log">damage log</a>.</p></div>
+</div>
+<aside class="rail">
+<div class="railbox"><h2>More tools</h2><ul>
+<li><a href="/hurricane-tools/#supplies">Supply quantities</a></li>
+<li><a href="/hurricane-tools/#generator">Generator runtime</a></li>
+<li><a href="/hurricane-tools/#deductible">Deductible math</a></li>
+<li><a href="/okaloosa-walton-evacuation-zones/">Zone lookup</a></li>
+</ul></div>
+<div class="railbox"><h2>Official guides</h2><ul>
+<li><a href="https://myokaloosa.com/emergency-management" target="_blank" rel="noopener">Okaloosa County EM</a></li>
+<li><a href="https://www.waltoncountyem.org/" target="_blank" rel="noopener">Walton County EM</a></li>
+<li><a href="https://www.floridadisaster.org/planprepare/" target="_blank" rel="noopener">FloridaDisaster.org</a></li>
+<li><a href="https://www.ready.gov/hurricanes" target="_blank" rel="noopener">Ready.gov</a></li>
+</ul></div>
+</aside>
+</div>
+</section>
+{{FAQ}}

@@ -1,0 +1,122 @@
+<!--{
+"path": "/hurricane-tools/",
+"title": "Hurricane Deductible Calculator Florida & Storm Tools | Destin Hurricane",
+"description": "Florida hurricane deductible calculator with the calendar-year rule, plus a storm damage log you can export for your Destin claim, an emergency supply calculator and a generator runtime estimator.",
+"nav": "/hurricane-tools/",
+"group": "Storm desk",
+"h1": "Hurricane deductible calculator and storm tools",
+"crumb": "Calculators",
+"kicker": "Free tools &middot; run in your browser",
+"lede": "Work out what a hurricane costs you before the insurer pays a cent, log damage the way an adjuster reads it, and size your supplies and generator. Nothing you type here is sent to us.",
+"faq_title": "About these tools",
+"faq": [
+ ["How is a Florida hurricane deductible calculated?", "Most Florida homeowners policies state the hurricane deductible as a percentage of the dwelling limit (Coverage A), commonly 2%, 5% or 10%, though some use a flat dollar amount. On a $400,000 dwelling limit, a 2% deductible is $8,000."],
+ ["What is the calendar-year rule?", "Under s. 627.701(5), for personal residential policies issued or renewed on or after May 1, 2005, the hurricane deductible applies on an annual basis to all covered hurricane losses in a calendar year with the same insurer or insurer group. For a later hurricane in the same year, the deductible is the greater of the remaining hurricane deductible or the all-other-perils deductible."],
+ ["When does the hurricane deductible apply instead of the regular one?", "Section 627.4025 defines the hurricane period as beginning when the NHC issues a hurricane warning for any part of Florida and ending 72 hours after the last hurricane watch or warning for Florida ends. Damage from a storm that never became a hurricane falls under the all-other-perils deductible."],
+ ["Where is my damage log saved?", "Only in this browser's local storage, on this device. Export it as a CSV file or print it before clearing your browser, and back up your photos separately."]
+]
+}-->
+<section class="band band--tight">
+<div class="wrap">
+<div class="toolcard" id="deductible">
+<h2>Hurricane deductible calculator</h2>
+<div class="toolcard-grid">
+<form data-deductible-form>
+<div class="fgrid">
+<div class="fld"><label for="d-type">Deductible type</label><select id="d-type" name="type"><option value="pct">Percent of dwelling limit</option><option value="flat">Flat dollar amount</option></select></div>
+<div class="fld"><label for="d-cov">Dwelling coverage (Coverage A)</label><input id="d-cov" name="coverage" type="number" min="0" step="1000" value="425000"></div>
+<div class="fld"><label for="d-pct">Hurricane deductible %</label><select id="d-pct" name="percent"><option value="1">1%</option><option value="2" selected>2%</option><option value="5">5%</option><option value="10">10%</option></select></div>
+<div class="fld"><label for="d-flat">Flat deductible ($)</label><input id="d-flat" name="flat" type="number" min="0" step="100" value="500"></div>
+<div class="fld"><label for="d-used">Already absorbed this calendar year ($)</label><input id="d-used" name="used" type="number" min="0" step="100" value="0"></div>
+<div class="fld"><label for="d-dmg">Estimated wind damage ($)</label><input id="d-dmg" name="damage" type="number" min="0" step="500" value="21000"></div>
+</div>
+<p class="hint">Your hurricane deductible is on the declarations page. Flood damage is excluded; it needs a separate flood claim.</p>
+</form>
+<div data-deductible-out aria-live="polite"></div>
+</div>
+</div>
+
+<div class="toolcard" id="damage-log" data-damage-log>
+<h2>Storm damage log</h2>
+<p>One line per damaged room, item or structure. Note the cause the way you saw it (wind tore off shingles; rain came through the broken slider; water rose to 14 inches), and reference the photo or video file. Saved only in this browser.</p>
+<form data-damage-form>
+<div class="fgrid">
+<div class="fld"><label for="g-date">Date found</label><input id="g-date" name="date" type="date" required></div>
+<div class="fld"><label for="g-area">Room, item or structure</label><input id="g-area" name="area" type="text" placeholder="Primary bedroom ceiling" required></div>
+<div class="fld fld--full"><label for="g-desc">What is damaged</label><input id="g-desc" name="desc" type="text" placeholder="Stain 4 ft wide, drywall sagging, insulation wet" required></div>
+<div class="fld"><label for="g-cause">Cause</label><select id="g-cause" name="cause"><option>Wind</option><option>Wind-driven rain through a storm opening</option><option>Storm surge / rising water</option><option>Fallen tree or debris</option><option>Power surge or outage</option><option>Not sure</option></select></div>
+<div class="fld"><label for="g-photos">Photo or video file names</label><input id="g-photos" name="photos" type="text" placeholder="IMG_2041-2049"></div>
+<div class="fld"><label for="g-cost">Estimated cost ($)</label><input id="g-cost" name="cost" type="number" min="0" step="10"></div>
+</div>
+<div class="btnrow" style="margin-top:0"><button class="btn btn--coral" type="submit">Add to log</button><button class="btn btn--line" type="button" data-damage-csv>Export CSV</button><button class="btn btn--line" type="button" data-print>Print</button></div>
+</form>
+<div data-damage-list style="margin-top:18px" aria-live="polite"></div>
+</div>
+
+<div class="toolcard" id="supplies">
+<h2>Emergency supply calculator</h2>
+<div class="toolcard-grid">
+<form data-supply-form>
+<div class="fgrid">
+<div class="fld"><label for="s-ad">Adults</label><input id="s-ad" name="adults" type="number" min="0" value="2"></div>
+<div class="fld"><label for="s-kid">Children</label><input id="s-kid" name="kids" type="number" min="0" value="1"></div>
+<div class="fld"><label for="s-dog">Dogs</label><input id="s-dog" name="dogs" type="number" min="0" value="1"></div>
+<div class="fld"><label for="s-cat">Cats</label><input id="s-cat" name="cats" type="number" min="0" value="0"></div>
+<div class="fld fld--full"><label for="s-days">Days</label><input id="s-days" name="days" type="number" min="1" max="21" value="7"></div>
+</div>
+</form>
+<div data-supply-out aria-live="polite"></div>
+</div>
+</div>
+
+<div class="toolcard" id="generator">
+<h2>Generator runtime estimator</h2>
+<div class="toolcard-grid">
+<form data-generator-form>
+<div class="fgrid">
+<div class="fld"><label for="gn-r">Rated running watts</label><input id="gn-r" name="rated" type="number" min="500" step="100" value="5000"></div>
+<div class="fld"><label for="gn-t">Tank size (gallons)</label><input id="gn-t" name="tank" type="number" min="0.5" step="0.5" value="5"></div>
+<div class="fld"><label for="gn-f">Fuel</label><select id="gn-f" name="fuel"><option value="gas">Gasoline</option><option value="propane">Propane</option><option value="diesel">Diesel</option></select></div>
+<div class="fld"><label for="gn-o">Other watts</label><input id="gn-o" name="other" type="number" min="0" step="10" value="0"></div>
+</div>
+<fieldset style="border:0;padding:0;margin:0"><legend class="small" style="font-weight:700;margin-bottom:8px">What will it run?</legend>
+<div class="optgrid">
+<label class="tick"><input type="checkbox" name="fridge" checked> <span>Refrigerator</span></label>
+<label class="tick"><input type="checkbox" name="freezer"> <span>Chest freezer</span></label>
+<label class="tick"><input type="checkbox" name="fan" checked> <span>Box fan</span></label>
+<label class="tick"><input type="checkbox" name="lights" checked> <span>LED lights</span></label>
+<label class="tick"><input type="checkbox" name="tv"> <span>TV</span></label>
+<label class="tick"><input type="checkbox" name="router" checked> <span>Internet router</span></label>
+<label class="tick"><input type="checkbox" name="phone" checked> <span>Phone chargers</span></label>
+<label class="tick"><input type="checkbox" name="window_ac"> <span>Window AC</span></label>
+<label class="tick"><input type="checkbox" name="microwave"> <span>Microwave</span></label>
+<label class="tick"><input type="checkbox" name="cpap"> <span>CPAP</span></label>
+<label class="tick"><input type="checkbox" name="well"> <span>Well pump</span></label>
+<label class="tick"><input type="checkbox" name="sump"> <span>Sump pump</span></label>
+</div></fieldset>
+</form>
+<div data-generator-out aria-live="polite"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="band band--foam">
+<div class="wrap split">
+<div class="article">
+<h2>Hurricane deductibles: the rules behind the calculator</h2>
+<p>Every Florida homeowners policy that covers wind carries two deductibles: an all-other-perils (AOP) deductible, often $1,000 to $2,500, and a hurricane deductible, usually a percentage of the dwelling limit. Section 627.701 governs how insurers may offer them, and s. 627.4025 decides which one applies to a given storm.</p>
+<h3>Which storms trigger it</h3>
+<p>The hurricane period starts when the National Hurricane Center issues a hurricane warning for any part of Florida and ends 72 hours after the last hurricane watch or warning for Florida is lifted. A tropical storm that never becomes a hurricane is an AOP loss.</p>
+<h3>One per calendar year</h3>
+<p>For personal residential policies issued or renewed since May 1, 2005, the hurricane deductible applies once per calendar year across policies with the same insurer or group. If you absorbed part of it in an earlier hurricane, a later one that year costs you the greater of what remains or your AOP deductible. The insurer may require you to report below-deductible hurricane losses, or keep receipts, so they count. That is why the calculator asks what you have already absorbed.</p>
+<h3>A Destin example</h3>
+<p>A Crystal Beach house insured for $425,000 with a 2% hurricane deductible has an $8,500 deductible. Isaias wind damage of $21,000 leaves the insurer owing about $12,500 before depreciation and limits. Damage of $7,000 produces no payment, but reporting it puts $7,000 toward the year's deductible.</p>
+<p>Insurer's estimate barely under your deductible? First estimates often miss interior water damage, matching and code upgrades. Read about <a href="/underpaid-hurricane-claim-destin/">underpaid hurricane claims in Destin</a> and the <a href="/news/hurricane-deductible-after-isaias/">deductible after Isaias</a>.</p>
+</div>
+<aside class="rail">
+<div class="railcall"><h2>Below-deductible estimate?</h2><p>Have the numbers checked for free.</p><a class="btn btn--coral" href="tel:{{FIRM_TEL}}">Call {{FIRM_PHONE}}</a><a class="btn btn--ghost" href="/free-case-review/">Free review</a></div>
+</aside>
+</div>
+</section>
+{{FAQ}}

@@ -1,0 +1,94 @@
+<!--{
+"path": "/okaloosa-walton-evacuation-zones/",
+"title": "Okaloosa County Evacuation Zones & Walton Zone Lookup | Destin Hurricane",
+"description": "Look up Okaloosa County evacuation zones (and Walton County zones) by address: Zones A-E around Destin, Fort Walton Beach and South Walton, nearest shelter sites, routes and bridge closures.",
+"nav": "/okaloosa-walton-evacuation-zones/",
+"group": "Storm desk",
+"h1": "Okaloosa County evacuation zones, plus Walton County, by address",
+"crumb": "Evacuation zones",
+"kicker": "Zone lookup",
+"lede": "Hurricane evacuation orders in Okaloosa and Walton counties are issued by zone, A through E. Enter an address to see its zone on the counties' own GIS maps and the closest shelter sites.",
+"faq_title": "Evacuation zone questions",
+"faq": [
+ ["Where does this zone lookup get its answer?", "For Okaloosa County, from the county's public Emergency_Layers GIS service, the same zone layer behind its official zone-search map, which the county says is based on 2020 storm-surge modeling. For Walton County, from the county's published storm-surge evacuation-zone layer. The address is matched by the U.S. Census Bureau geocoder."],
+ ["What if the lookup says the county data shows two zones?", "A few Okaloosa polygons carry one letter in their zone field and another in their description. When that happens we show the more cautious (lower) letter and flag it. Confirm with Okaloosa County Public Safety at 850-651-7150 or the county's own zone search."],
+ ["I am not in a zone. Do I still need to leave?", "Zones are drawn for storm surge. Leave anyway if you live in a mobile or manufactured home, which Okaloosa County says should always evacuate, in an RV, on a street that floods in heavy rain, or if you depend on powered medical equipment."],
+ ["How far do I need to go?", "Usually tens of miles, not hundreds. Okaloosa County's guide suggests staying as close as you can without being in danger, ideally with friends or family in a well-built home outside the evacuation area."],
+ ["Who handles evacuations on Eglin AFB and Hurlburt Field?", "The bases. The county layer marks base property separately and refers residents there to the base emergency operations center."]
+]
+}-->
+<section class="band band--tight">
+<div class="wrap wrap--narrow">
+<div class="toolcard">
+<h2>Find my evacuation zone</h2>
+<form data-zone-form>
+<div class="fgrid">
+<div class="fld fld--full"><label for="z-address">Street address</label><input id="z-address" name="address" type="text" autocomplete="street-address" placeholder="e.g. 1 Harbor Blvd, Destin, FL 32541" required><p class="hint">Add the city or ZIP. The address goes to the U.S. Census geocoder and county GIS services; we do not store it.</p></div>
+</div>
+<button class="btn btn--coral" type="submit">Check the zone</button>
+</form>
+<div data-zone-result aria-live="polite" style="margin-top:20px"></div>
+</div>
+<p class="note">Official sources: <a href="https://myokaloosa.gov/gis_ps" target="_blank" rel="noopener">Okaloosa County Public Safety GIS (zone search)</a> &middot; <a href="https://www.waltoncountyem.org/" target="_blank" rel="noopener">Walton County Emergency Management</a> &middot; <a href="https://www.floridadisaster.org/knowyourzone/" target="_blank" rel="noopener">Florida Know Your Zone</a></p>
+</div>
+</section>
+
+<section class="band band--foam">
+<div class="wrap">
+<h2>What the letters mean</h2>
+<p>Both counties use five surge-based zones. Zones are cumulative: when a higher letter is ordered out, every lower letter goes too. Walton County stresses that its zones describe storm-surge threat, not wind or storm category.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>Zone</th><th>Who is in it</th><th>Recent orders</th></tr></thead>
+<tbody>
+<tr><td><span class="zonebadge zonebadge--sm zone-A">A</span></td><td>Gulf-front and barrier-island property: Okaloosa Island, Holiday Isle, Destin's Gulf side, Miramar Beach and the 30A beaches, plus the lowest bayfront</td><td>Okaloosa ordered A out for Isaias (Oct. 8, 2026)</td></tr>
+<tr><td><span class="zonebadge zonebadge--sm zone-B">B</span></td><td>Low ground along Choctawhatchee Bay, Destin Harbor, the bayous and Santa Rosa Sound</td><td>Okaloosa ordered B out for Isaias</td></tr>
+<tr><td><span class="zonebadge zonebadge--sm zone-C">C</span></td><td>The next ring inland, still within reach of a strong surge</td><td>Walton ordered A&ndash;C out for Michael (2018)</td></tr>
+<tr><td><span class="zonebadge zonebadge--sm zone-D">D</span></td><td>Higher ground that floods only in severe surge scenarios</td><td>Storm-specific</td></tr>
+<tr><td><span class="zonebadge zonebadge--sm zone-E">E</span></td><td>The outer edge of the worst-case surge</td><td>Only for the most extreme forecasts</td></tr>
+</tbody></table></div>
+<p class="note">Orders depend on each storm's size, track and forecast surge. Okaloosa County notes that zones can change from year to year, so look yours up each season.</p>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap split">
+<div class="article">
+<h2>Leaving Destin: routes and choke points</h2>
+<p>Destin, Okaloosa Island and South Walton share one problem: every route out crosses water or funnels into a few highways. Plan which one you will use before you need it.</p>
+<div class="table-scroll"><table>
+<thead><tr><th>From</th><th>Main route north</th><th>Bridge to watch</th></tr></thead>
+<tbody>
+<tr><td><strong>Destin</strong></td><td>SR-293 across the bay to Niceville, then SR-85 north toward Crestview and I-10</td><td>Mid-Bay Bridge</td></tr>
+<tr><td><strong>Okaloosa Island</strong></td><td>US-98 west into Fort Walton Beach, then SR-85 north</td><td>Brooks Bridge (west) or Marler Bridge (east, into Destin)</td></tr>
+<tr><td><strong>Fort Walton Beach &amp; Mary Esther</strong></td><td>SR-85 north through Eglin to Crestview and I-10</td><td>Inland; watch for flooding on low roads</td></tr>
+<tr><td><strong>Miramar Beach &amp; Sandestin</strong></td><td>US-98 east to US-331, or west to SR-293</td><td>Clyde B. Wells Bridge (US-331) or Mid-Bay Bridge</td></tr>
+<tr><td><strong>Santa Rosa Beach &amp; 30A</strong></td><td>US-331 north to Freeport and I-10 at DeFuniak Springs</td><td>Clyde B. Wells Bridge over Choctawhatchee Bay</td></tr>
+</tbody></table></div>
+<p>Okaloosa County's hurricane guide says that once sustained winds reach 40 mph, the Florida Department of Transportation and local law enforcement decide whether to close a bridge. After that, nobody drives out and emergency crews may not be able to reach you. Check live closures on <a href="https://fl511.com/" target="_blank" rel="noopener">FL511</a> and see our <a href="/walton-okaloosa-hurricane-shelters/">shelters and bridges page</a>.</p>
+
+<h2>Run from water, hide from wind</h2>
+<p>Zones exist because surge kills more people than wind. If you are outside the zones in a sound, well-built home, staying put usually keeps the roads clear for people who must go. Okaloosa County recommends going to friends or family who live outside the evacuation zone rather than a public shelter when you can.</p>
+
+<h2>Special needs, pets and rides</h2>
+<ul>
+<li><strong>Special needs:</strong> register on the Florida Special Needs Registry (snr.flhealthresponse.com) before hurricane season. Okaloosa's special-needs shelter at Davidson Middle School in Crestview requires registration in advance; Walton's primary shelter at Freeport High School serves registered special-needs clients.</li>
+<li><strong>Pets:</strong> Okaloosa has pet-friendly shelters where the Panhandle Animal Welfare Society checks pets into a separate area; exotic pets are not allowed. Bring crates, food and vaccination records.</li>
+<li><strong>No car:</strong> in Okaloosa, schedule a ride to a shelter before the storm with EC Rider at 850-833-9168.</li>
+</ul>
+</div>
+<aside class="rail">
+<div class="railbox"><h2>Emergency management</h2><ul>
+<li><a href="https://myokaloosa.com/emergency-management" target="_blank" rel="noopener">Okaloosa County EM</a></li>
+<li><a href="tel:+18506517150">Okaloosa Public Safety 850-651-7150</a></li>
+<li><a href="https://www.waltoncountyem.org/" target="_blank" rel="noopener">Walton County EM</a></li>
+<li><a href="tel:+18508928065">Walton EM 850-892-8065</a></li>
+</ul></div>
+<div class="railbox"><h2>Plan the rest</h2><ul>
+<li><a href="/hurricane-preparedness/">Checklist builder</a></li>
+<li><a href="/destin-storm-surge/">Storm surge risk</a></li>
+<li><a href="/storm-alerts/">Alert sign-ups</a></li>
+</ul></div>
+</aside>
+</div>
+</section>
+{{FAQ}}

@@ -1,0 +1,86 @@
+<!--{
+"path": "/destin-weather/",
+"title": "Destin Weather & Radar: Live Conditions, Gusts, Rain | Destin Hurricane",
+"description": "Destin weather desk: live Destin Executive Airport observations, the NWS 7-day forecast, Eglin (KEVX) radar, a 72-hour gust chart and rainfall totals, built for watching a Gulf storm.",
+"nav": "/destin-weather/",
+"group": "Storm desk",
+"h1": "Destin weather desk: conditions, radar, gusts and rain",
+"crumb": "Weather & radar",
+"kicker": "Live data &middot; NWS",
+"lede": "The numbers that matter when a tropical system is in the Gulf: what the wind is doing at Destin's airport right now, when gusts are forecast to cross 39 mph, and how much rain is coming.",
+"faq_title": "Destin weather questions",
+"faq": [
+ ["Where do the current conditions come from?", "From the automated weather station at Destin Executive Airport (station ID KDTS), read live from the National Weather Service's public API. Values are as reported and can lag or drop out during a storm."],
+ ["Which radar covers Destin?", "The closest NWS radar is KEVX, the WSR-88D at Eglin Air Force Base, about 36 miles east-northeast of Destin in northern Walton County. The Mobile radar (KMOB) and Tallahassee radar (KTLH) overlap at the edges."],
+ ["What does the coral bar on the gust chart mean?", "Each bar is one hour; coral bars are hours with forecast gusts of 39 mph or more, the bottom of tropical-storm force. Ladders, roofs, boats and bridges get dangerous at that point, so finish outdoor preparations before the first coral bar."],
+ ["Is there a tide gauge in Destin?", "NOAA does not run an active water-level station in Destin. The nearest are Panama City Beach (8729210) to the east and Pensacola (8729840) to the west. During Isaias the Panama City Beach gauge measured about 5.6 feet above mean higher high water."]
+]
+}-->
+<section class="band band--tight">
+<div class="wrap tiles">
+<div class="toolcard" style="margin:0">
+<h2>Right now at Destin Executive Airport</h2>
+<div data-wx-current><p class="loading">Loading the latest observation&hellip;</p></div>
+</div>
+<div class="toolcard" style="margin:0">
+<h2>Eglin radar loop (KEVX)</h2>
+<img src="https://radar.weather.gov/ridge/standard/KEVX_loop.gif" alt="Animated NWS radar loop from the Eglin Air Force Base radar covering Destin" width="600" height="550" loading="lazy" style="border-radius:12px">
+<p class="note">Refreshes every few minutes. Wider view: <a href="https://radar.weather.gov/station/kmob/standard" target="_blank" rel="noopener">Mobile radar (KMOB)</a>.</p>
+</div>
+</div>
+</section>
+
+<section class="band band--tight band--foam">
+<div class="wrap">
+<h2>Seven-day forecast for Destin</h2>
+<div data-wx-forecast><p class="loading">Loading the forecast&hellip;</p></div>
+</div>
+</section>
+
+<section class="band band--tight">
+<div class="wrap tiles">
+<div class="toolcard" style="margin:0">
+<h2>Wind and gusts, next 72 hours</h2>
+<div data-wx-wind><p class="loading">Loading the gust forecast&hellip;</p></div>
+</div>
+<div class="toolcard" style="margin:0">
+<h2>Rain on the way</h2>
+<div data-wx-rain><p class="loading">Loading rainfall&hellip;</p></div>
+<h3 style="margin-top:18px;font-size:1.05rem">Weather Prediction Center, 7-day totals</h3>
+<a href="https://www.wpc.ncep.noaa.gov/qpf/p168i.gif" target="_blank" rel="noopener"><img src="https://www.wpc.ncep.noaa.gov/qpf/p168i.gif" alt="WPC seven-day precipitation forecast map for the United States" loading="lazy" width="719" height="545" style="border-radius:12px"></a>
+</div>
+</div>
+</section>
+
+<section class="band band--tight band--sand">
+<div class="wrap">
+<h2>Interactive radar map</h2>
+<div class="embed"><iframe title="Interactive radar map centered on Destin" loading="lazy" src="https://embed.windy.com/embed2.html?lat=30.39&amp;lon=-86.50&amp;detailLat=30.39&amp;detailLon=-86.50&amp;width=1100&amp;height=480&amp;zoom=8&amp;level=surface&amp;overlay=radar&amp;product=radar&amp;menu=&amp;message=true&amp;marker=true&amp;calendar=now&amp;pressure=&amp;type=map&amp;location=coordinates&amp;detail=&amp;metricWind=mph&amp;metricTemp=%C2%B0F&amp;radarRange=-1"></iframe></div>
+</div>
+</section>
+
+<section class="band">
+<div class="wrap split">
+<div class="article">
+<h2>Reading Destin weather when a storm is coming</h2>
+<p>Destin sits on a narrow strip between the Gulf and Choctawhatchee Bay, so it gets both the onshore Gulf wind and, as a storm passes, wind off the bay that can push water into the harbor and low streets. Four signals on this page are worth watching:</p>
+<ul>
+<li><strong>The first coral bar on the gust chart.</strong> That is when tropical-storm-force gusts are forecast to begin. Bridges may close once sustained winds reach about 40 mph, and outdoor work becomes dangerous. Have shutters up and boats secured before it.</li>
+<li><strong>Pressure falling at KDTS</strong> while wind backs from east to northeast: the center is approaching from the south.</li>
+<li><strong>Rain totals over 5 inches in 72 hours.</strong> Expect street flooding in low spots. During Isaias, Destin reported flooding on Sibert Avenue; in Sally, creeks across Okaloosa and Walton overflowed.</li>
+<li><strong>Spiral bands on radar.</strong> Bands on the east side of a landfalling storm spin up short-lived tornadoes, with little warning. The NHC flagged that risk across the Panhandle during Isaias. Know your interior room.</li>
+</ul>
+<h3>Where these numbers come from</h3>
+<p>Observations are from the KDTS station at Destin Executive Airport. Forecast text, gusts and rainfall are the official NWS Mobile gridded forecast for Destin, pulled from api.weather.gov in your browser. Walton County is forecast by NWS Tallahassee, so conditions toward Santa Rosa Beach can differ a little. Destin Hurricane does not alter any of it.</p>
+</div>
+<aside class="rail">
+<div class="railbox"><h2>More live data</h2><ul>
+<li><a href="/destin-hurricane-tracker/">Hurricane tracker</a></li>
+<li><a href="https://tidesandcurrents.noaa.gov/stationhome.html?id=8729210" target="_blank" rel="noopener">Panama City Beach gauge</a></li>
+<li><a href="https://water.noaa.gov/wfo/MOB" target="_blank" rel="noopener">River gauges (NWS Mobile)</a></li>
+<li><a href="https://www.weather.gov/mob/" target="_blank" rel="noopener">NWS Mobile</a> &middot; <a href="https://www.weather.gov/tae/" target="_blank" rel="noopener">NWS Tallahassee</a></li>
+</ul></div>
+</aside>
+</div>
+</section>
+{{FAQ}}
