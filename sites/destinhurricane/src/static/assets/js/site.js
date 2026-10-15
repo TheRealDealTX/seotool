@@ -285,8 +285,8 @@
     var zoneOut = q("[data-zone-result]");
     var OFFICIAL = '<a href="https://myokaloosa.gov/gis_ps" target="_blank" rel="noopener">Okaloosa County zone search</a>, <a href="https://www.waltoncountyem.org/" target="_blank" rel="noopener">Walton County Emergency Management</a> or <a href="https://www.floridadisaster.org/knowyourzone/" target="_blank" rel="noopener">floridadisaster.org/knowyourzone</a>';
     var MEANING = {
-      A: "Zone A is ordered out first: the Gulf-front and lowest bayfront land, including the barrier-island beaches. Okaloosa ordered Zones A and B out before Hurricane Isaias.",
-      B: "Zone B is the next ring of low ground along Choctawhatchee Bay, the bayous and Santa Rosa Sound. Expect to leave for most hurricane threats.",
+      A: "Zone A is ordered out first. It is the land most exposed to storm surge. Okaloosa ordered Zones A and B out the day before Hurricane Isaias.",
+      B: "Zone B is low coastal ground, including much of the barrier island and Destin's Gulf side on Okaloosa County's map. Okaloosa ordered Zones A and B out for Isaias, so expect to leave for most hurricane threats.",
       C: "Zone C sits a little higher but can still flood in a strong surge. Orders reach it for stronger or larger storms.",
       D: "Zone D floods only in severe surge scenarios. Watch the county's order for each storm.",
       E: "Zone E is the outermost zone and is ordered out only for the most extreme surge forecasts."

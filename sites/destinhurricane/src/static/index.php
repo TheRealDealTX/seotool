@@ -23,6 +23,35 @@ if ($path === '/' || $path === '/index.php' || $path === '/index.html') {
     readfile(__DIR__ . '/home.html');
     exit;
 }
+// Pages this domain served before the Destin rewrite (Oct 2026) -> their Destin replacements.
+$moved = [
+    '/denied-hurricane-claim/' => '/denied-hurricane-claim-destin/',
+    '/underpaid-hurricane-claim/' => '/underpaid-hurricane-claim-destin/',
+    '/delayed-hurricane-claim/' => '/delayed-hurricane-claim-destin/',
+    '/insurance-claims/' => '/destin-hurricane-claim-lawyer/',
+    '/hurricane-isaias-claims/' => '/hurricane-isaias-claims-destin/',
+    '/the-lawgical-firm/' => '/our-firm/',
+    '/hurricane-tracker/' => '/destin-hurricane-tracker/',
+    '/weather/' => '/destin-weather/',
+    '/evacuation-zones/' => '/okaloosa-walton-evacuation-zones/',
+    '/shelters-roads-outages/' => '/walton-okaloosa-hurricane-shelters/',
+    '/storm-surge-flood-risk/' => '/destin-storm-surge/',
+    '/preparedness/' => '/hurricane-preparedness/',
+    '/tools/' => '/hurricane-tools/',
+    '/hurricane-history/' => '/destin-hurricane-history/',
+    '/alerts/' => '/storm-alerts/',
+    '/recovery/' => '/after-the-storm/',
+];
+$key = rtrim($path, '/') . '/';
+$to = $moved[$key] ?? null;
+if (!$to && preg_match('#^/(news|communities)/[^/]+/?$#', $path, $m) && !is_dir(__DIR__ . $path)) {
+    $to = '/' . $m[1] . '/';
+}
+if ($to) {
+    header('Location: ' . $home . $to, true, 301);
+    exit;
+}
+
 if (substr($path, -1) !== '/' && is_dir(__DIR__ . $path) && strpos($path, '..') === false) {
     header('Location: ' . $path . '/', true, 301);
     exit;

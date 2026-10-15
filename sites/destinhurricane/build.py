@@ -274,7 +274,7 @@ def pagehead(page):
         form_title = page.get("form_title", "Free claim review")
         return (f'<header class="pagehead pagehead--form"><div class="wrap pagehead-grid"><div class="pagehead-text">{text}</div>'
                 f'<div class="formcard"><h2 class="formcard-title">{form_title}</h2>'
-                f'<p class="formcard-sub">Free, confidential, and read by the {FIRM["name"]} team.</p>{lead_form("hf", compact=True)}</div>'
+                f'<p class="formcard-sub">Free, confidential, and read by the team at {FIRM["name"]}.</p>{lead_form("hf", compact=True)}</div>'
                 f'</div></header>\n')
     return f'<header class="pagehead"><div class="wrap">{text}</div></header>\n'
 
@@ -316,7 +316,7 @@ def footer(show_card=True):
 <div class="wrap foot-grid">
 <div class="foot-brand">
 <a class="mark mark--foot" href="/">{MARK_SVG}<span class="mark-text"><b>Destin Hurricane</b><small>Okaloosa &amp; Walton storm desk</small></span></a>
-<p>Free hurricane tracking, evacuation and recovery information for Destin, Okaloosa Island, Fort Walton Beach, Niceville, Miramar Beach and Santa Rosa Beach, with storm-claim help from {FIRM['legal_name']}.</p>
+<p>Free hurricane tracking, evacuation and recovery information for Destin, Okaloosa Island, Fort Walton Beach, Niceville, Miramar Beach and Santa Rosa Beach, with storm-claim help from {FIRM['legal_name']}</p>
 </div>
 <div class="foot-col"><h2>Claim help</h2><ul>
 <li><a href="/destin-hurricane-claim-lawyer/">Hurricane claim lawyer</a></li>
@@ -396,7 +396,7 @@ def lead_form(n, compact=False):
 <label class="tick fld--full"><input type="checkbox" name="sms_consent" value="1"> <span>Text me about my inquiry (optional). Msg &amp; data rates may apply; reply STOP to opt out.</span></label>
 </div>
 <button class="btn btn--coral btn--wide" type="submit">Send my free claim review request</button>
-<p class="leadform-note">Reviewed by the attorneys and staff of {FIRM['legal_name']}. Rather talk? <a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a></p>
+<p class="leadform-note">Reviewed by the attorneys and staff of {FIRM['legal_name']} &middot; Rather talk? <a href="tel:{FIRM['phone_href']}">{FIRM['phone_display']}</a></p>
 <div class="leadform-out" data-lead-out role="status" aria-live="polite"></div>
 </form>"""
 
