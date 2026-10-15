@@ -1,5 +1,5 @@
 <?php
-// Pensacola Hurricane (served on destinhurricane.com) - static site front controller. The host serves real
+// Destin Hurricane (destinhurricane.com) - static site front controller. The host serves real
 // files directly; anything else lands here.
 $path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 $host = strtolower($_SERVER['HTTP_HOST'] ?? '');

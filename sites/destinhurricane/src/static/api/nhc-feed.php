@@ -1,9 +1,9 @@
 <?php
 // Latest National Hurricane Center Atlantic products (RSS), cached 10 minutes.
 require __DIR__ . '/_lib.php';
-$body = ph_cached_fetch('https://www.nhc.noaa.gov/index-at.xml', 600);
+$body = dh_cached_fetch('https://www.nhc.noaa.gov/index-at.xml', 600);
 if ($body === null) {
-    ph_json(['error' => 'NHC feed unavailable', 'items' => []], 502);
+    dh_json(['error' => 'NHC feed unavailable', 'items' => []], 502);
 }
 libxml_use_internal_errors(true);
 $xml = simplexml_load_string($body, 'SimpleXMLElement', LIBXML_NOCDATA | LIBXML_NONET);
@@ -17,4 +17,4 @@ if ($xml && isset($xml->channel->item)) {
         ];
     }
 }
-ph_json(['items' => $items], 200, 300);
+dh_json(['items' => $items], 200, 300);
