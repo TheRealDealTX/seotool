@@ -1,0 +1,12 @@
+# robots.txt for txpublicadjusting.com
+# Everything public may be crawled. Old WordPress URLs are intentionally NOT
+# blocked: they return 301 redirects or 410 Gone, and Google has to crawl them
+# to see that.
+
+User-agent: *
+Disallow: /app/
+Disallow: /content/
+Disallow: /storage/
+Disallow: /contact-submit/
+
+Sitemap: https://txpublicadjusting.com/sitemap.xml

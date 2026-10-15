@@ -20,11 +20,11 @@ function route(): void
         redirect(CANONICAL_ORIGIN . $path . ($query ? "?$query" : ''));
     }
 
+    // Hostinger serves the static site/robots.txt directly (it never reaches PHP).
+    // This only runs on hosts that route .txt to PHP, e.g. the local dev server.
     if ($path === '/robots.txt') {
         header('Content-Type: text/plain; charset=utf-8');
-        echo is_production()
-            ? "User-agent: *\nDisallow: /storage/\nDisallow: /app/\nDisallow: /content/\n\nSitemap: " . CANONICAL_ORIGIN . "/sitemap.xml\n"
-            : "User-agent: *\nDisallow: /\n";
+        echo is_production() ? file_get_contents(SITE_ROOT . '/robots.txt') : "User-agent: *\nDisallow: /\n";
         return;
     }
     if ($path === '/site.webmanifest') {
