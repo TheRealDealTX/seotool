@@ -27,6 +27,12 @@ function route(): void
             : "User-agent: *\nDisallow: /\n";
         return;
     }
+    if ($path === '/site.webmanifest') {
+        header('Content-Type: application/manifest+json; charset=utf-8');
+        header('Cache-Control: public, max-age=86400');
+        readfile(SITE_ROOT . '/app/site.webmanifest.json');
+        return;
+    }
     if ($path === '/sitemap.xml') {
         render_sitemap();
         return;

@@ -11,7 +11,7 @@
 const PRODUCTION_HOST = 'txpublicadjusting.com';
 // Optional: Google Search Console HTML-tag verification code and GA4 measurement ID.
 const GOOGLE_SITE_VERIFICATION = '';
-const GA4_ID = '';
+const GA4_ID = 'G-CKEW21291C';
 const CANONICAL_ORIGIN = 'https://txpublicadjusting.com';
 
 const BIZ = [

@@ -42,8 +42,10 @@ function render_head(array $m): void
 <meta property="og:image" content="<?= h(CANONICAL_ORIGIN . $og) ?>">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#051d40">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +53,15 @@ function render_head(array $m): void
 <link rel="stylesheet" href="<?= asset('/assets/css/site.css') ?>">
 <?= $m['schema'] ?? schema_graph([]) ?>
 <?php if (GA4_ID && is_production()): ?>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= h(GA4_ID) ?>"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','<?= h(GA4_ID) ?>');</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= h(GA4_ID) ?>');
+</script>
 <?php endif; ?>
 </head>
 <body class="<?= h($m['body_class'] ?? '') ?>">
