@@ -173,7 +173,7 @@ def head(page):
 MARK = ('<svg class="mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
         '<rect width="40" height="40" rx="6" fill="#13263f"/>'
         '<path d="M20 6a14 14 0 0 1 12 7c-4-2-9-2-12 1 4-1 8 1 9 5 1 5-3 9-9 9" fill="none" stroke="#19d3f0" stroke-width="3" stroke-linecap="round"/>'
-        '<path d="M4 30c4-3 8-3 12 0s8 3 12 0 6-3 8-1" fill="none" stroke="#e5322d" stroke-width="3" stroke-linecap="round"/></svg>')
+        '<path d="M4 30c4-3 8-3 12 0s8 3 12 0 6-3 8-1" fill="none" stroke="#d42a25" stroke-width="3" stroke-linecap="round"/></svg>')
 
 
 def masthead(active):
@@ -186,7 +186,7 @@ def masthead(active):
 <a class="logo" href="/" aria-label="HurricaneFlood.com home">{MARK}<span class="logo-txt"><b>HurricaneFlood</b><i>.com</i></span></a>
 <nav class="topnav" id="topnav" aria-label="Main">
 <ul>{links}</ul>
-<a class="btn btn-red topnav-cta" href="/free-case-review/">Free case review</a>
+<a class="btn btn-red topnav-cta" href="/free-case-review/">Free review</a>
 </nav>
 <button class="navtoggle" type="button" aria-expanded="false" aria-controls="topnav" data-navtoggle><span class="bars" aria-hidden="true"></span><span class="navtoggle-l">Menu</span></button>
 </div>
@@ -224,7 +224,7 @@ def footer(page):
 <div class="wrap foot-grid">
 <div class="foot-brand">
 <a class="logo logo-foot" href="/">{MARK}<span class="logo-txt"><b>HurricaneFlood</b><i>.com</i></span></a>
-<p>Plain-language Florida information on storm surge, flood, wind and wind-driven rain claims, sponsored by {FIRM['legal']}.</p>
+<p>Plain-language Florida information on storm surge, flood, wind and wind-driven rain claims, sponsored by {FIRM['legal']}</p>
 <a href="{FIRM['site']}" rel="noopener" target="_blank"><img src="/assets/img/lawgical-logo-white.png" alt="{FIRM['name']}" width="150" height="56" loading="lazy"></a>
 </div>
 <div><h2 class="foot-h">Guides</h2><ul class="foot-list">{guide_links}</ul></div>

@@ -30,6 +30,8 @@
     var steps = ww.querySelector("[data-steps]");
     var count = ww.querySelector("[data-count]");
     var reset = ww.querySelector("[data-reset]");
+    var pinMini = ww.querySelector("[data-pin-mini]");
+    var verdictMini = ww.querySelector("[data-verdict-mini]");
 
     var STEPS = {
       none: ["Answer the questions on the left. Each one is a clue adjusters and engineers look for."],
@@ -76,6 +78,8 @@
       else if (pos >= 67) { key = "water"; label = "Mostly flood / surge signs"; }
       else { key = "mixed"; label = "Mixed wind and water loss"; }
       verdict.textContent = label;
+      if (verdictMini) verdictMini.textContent = label;
+      if (pinMini) pinMini.style.left = pin.style.left;
       var list = STEPS[key].slice();
       if (denied) list.unshift("Your insurer has already blamed flood. A denial or partial denial can be challenged; have the letter, policy and photos reviewed before any deadline runs.");
       steps.innerHTML = "";
