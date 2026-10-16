@@ -19,7 +19,15 @@ $xml = [
 if (isset($xml[$path])) { $sitemap = $xml[$path]; require APP . '/views/sitemap.php'; exit; }
 if ($path === '/sitemap.xml' || $path === '/wp-sitemap.xml') redirect('/sitemap_index.xml');
 if ($path === '/llms.txt') { require APP . '/views/llms.php'; exit; }
-if (in_array($path, ['/feed/', '/feed', '/rss/', '/blog/feed/'], true)) { require APP . '/views/feed.php'; exit; }
+
+// RSS lives at /feed.xml. /feed/ is an HTML page (newest listings, guides and
+// the Fort Hood housing guide); feed readers that ask for XML there are sent on.
+if ($path === '/feed.xml') { require APP . '/views/feed.php'; exit; }
+if (in_array($path, ['/rss/', '/rss', '/rss.xml', '/atom.xml', '/blog/feed/', '/comments/feed/', '/category/blog/feed/', '/feed/rss/', '/feed/rss2/', '/feed/atom/', '/feed/rdf/'], true)) redirect('/feed.xml');
+if ($path === '/feed/' || $path === '/feed') {
+    $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+    if (preg_match('#application/(rss|atom)\+xml|application/xml|text/xml#i', $accept) && stripos($accept, 'text/html') === false) redirect('/feed.xml');
+}
 
 // WordPress-style trailing slash
 if (!str_ends_with($path, '/') && !preg_match('/\.[a-z0-9]{2,5}$/i', $path)) {
@@ -29,6 +37,7 @@ if (!str_ends_with($path, '/') && !preg_match('/\.[a-z0-9]{2,5}$/i', $path)) {
 
 $routes = [
     '/'                  => 'home',
+    '/feed/'             => 'latest',
     '/properties/'       => 'properties',
     '/marine-bases/'     => 'bases',
     '/blog/'             => 'blog',
@@ -40,7 +49,8 @@ $routes = [
 ];
 $aliases = [
     '/home/' => '/', '/bases/' => '/marine-bases/', '/military-bases/' => '/marine-bases/',
-    '/author/militaryhousing/' => '/blog/', '/comments/feed/' => '/feed/',
+    '/author/militaryhousing/' => '/blog/',
+    '/properties/feed/' => '/properties/', '/marine-bases/feed/' => '/marine-bases/', '/bases/feed/' => '/marine-bases/', '/bases/featured/feed/' => '/bases/featured/',
     '/contact/' => '/contact-us/', '/listings/' => '/properties/', '/bases/fort-hood/' => '/bases/fort-cavazos/',
     '/bases/fort-liberty/' => '/bases/fort-bragg/', '/bases/fort-moore/' => '/bases/fort-benning/',
 ];
@@ -53,6 +63,8 @@ if (preg_match('#^/properties/([a-z0-9-]+)/$#', $path, $m)) {
     $listing = listing($m[1]) ?? not_found();
     require APP . '/views/property.php'; exit;
 }
+// WordPress-era per-base feeds (/bases/joint-base-san-antonio/feed/) -> the base page
+if (preg_match('#^/bases/([a-z0-9-]+)/feed/$#', $path, $m) && base($m[1])) redirect('/bases/' . $m[1] . '/');
 if (preg_match('#^/bases/([a-z0-9-]+)/$#', $path, $m)) {
     $slug = $m[1];
     if ($slug !== 'featured' && !base($slug)) not_found();

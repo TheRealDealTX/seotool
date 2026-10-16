@@ -2,12 +2,13 @@
 
 > A directory of on-base military family housing communities and military-friendly rentals, with guides for PCS moves, BAH and leases.
 
-The XML sitemap is at https://militaryhousingrentals.com/sitemap_index.xml
+The XML sitemap is at https://militaryhousingrentals.com/sitemap_index.xml and the RSS feed is at https://militaryhousingrentals.com/feed.xml
 
 ## Pages
 - [Home](https://militaryhousingrentals.com/)
 - [All listings](https://militaryhousingrentals.com/properties/)
 - [Military bases](https://militaryhousingrentals.com/marine-bases/)
+- [Latest listings and guides (with the Fort Hood housing guide)](https://militaryhousingrentals.com/feed/)
 - [Blog](https://militaryhousingrentals.com/blog/)
 - [Submit a property](https://militaryhousingrentals.com/submit-property/)
 - [Contact us](https://militaryhousingrentals.com/contact-us/)

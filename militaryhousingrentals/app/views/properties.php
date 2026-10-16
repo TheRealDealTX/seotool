@@ -23,17 +23,18 @@ $pins = array_map(fn($l) => [
 
 layout_start([
     'title' => $archive['title'],
+    'full_title' => $archive['full_title'] ?? null,
     'description' => $archive['description'],
     'path' => $archive['path'],
     'image' => $archive['image'] ?? null,
     'nav' => '/properties/',
     'leaflet' => true,
-    'schema' => [$crumb_schema, [
+    'schema' => array_merge($archive['schema'] ?? [], [$crumb_schema, [
         '@type' => 'CollectionPage', 'url' => abs_url($archive['path']), 'name' => $archive['title'],
         'mainEntity' => ['@type' => 'ItemList', 'numberOfItems' => count($items), 'itemListElement' => array_map(fn($l, $i) => [
             '@type' => 'ListItem', 'position' => $i + 1, 'url' => abs_url('/properties/' . $l['slug'] . '/'), 'name' => $l['title'],
         ], $items, array_keys($items))],
-    ]],
+    ]]),
 ]);
 ?>
 <section class="page-hero<?= !empty($archive['hero_img']) ? ' page-hero-img' : '' ?>">

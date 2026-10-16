@@ -16,6 +16,7 @@ $lead = $all[0];
     <h1>Military housing blog</h1>
     <p class="lead">Practical guides for every stage of a PCS, from the day orders drop to the day you get your keys.</p>
     <label class="blog-search"><?= icon('search') ?><input type="search" placeholder="Search articles" data-post-search aria-label="Search articles"></label>
+    <p class="muted small">New here? Start with the <a href="/feed/">latest listings and guides</a>, including our <a href="/feed/#fort-hood-housing-guide">Fort Hood housing guide</a>, or subscribe by <a href="/feed.xml">RSS</a>.</p>
   </div>
 </section>
 <section class="section section-tight">

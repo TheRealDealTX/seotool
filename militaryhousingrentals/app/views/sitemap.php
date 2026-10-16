@@ -20,13 +20,14 @@ switch ($sitemap) {
     case 'page':
         $urls[] = ['/', $lastmod(listings())];
         foreach (['/properties/', '/marine-bases/', '/contact-us/', '/submit-property/', '/privacy-policy/', '/terms-of-use/'] as $u) $urls[] = [$u, $lastmod(listings())];
+        $urls[] = ['/feed/', max($lastmod(listings()), $lastmod(posts()), FEED_GUIDE_UPDATED)];
         break;
     case 'properties':
         foreach (listings() as $l) $urls[] = ['/properties/' . $l['slug'] . '/', $l['modified'] ?? $l['date'], listing_image($l)['src']];
         break;
     case 'bases':
         $urls[] = ['/bases/featured/', $lastmod(listings())];
-        foreach (bases() as $b) $urls[] = ['/bases/' . $b['slug'] . '/', $lastmod(listings_for_base($b['slug']) ?: listings())];
+        foreach (bases() as $b) $urls[] = ['/bases/' . $b['slug'] . '/', max($lastmod(listings_for_base($b['slug']) ?: listings()), $b['guide_updated'] ?? '')];
         break;
     case 'category':
         $urls[] = ['/blog/', $lastmod(posts())];

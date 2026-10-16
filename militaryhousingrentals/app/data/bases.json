@@ -11,7 +11,9 @@
    "alt": "Fort Hood sign at Frank W. Mayborn Gate, June 24, 2025",
    "credit": "U.S. Army photo by Eric Franklin, Fort Hood Public Affairs (public domain, via www.dvidshub.net)"
   },
-  "blurb": "One of the largest Army installations in the world, home to III Armored Corps in Central Texas. Renamed Fort Cavazos in 2023 and Fort Hood again in 2025."
+  "blurb": "One of the largest Army installations in the world, home to III Armored Corps in Central Texas. Renamed Fort Cavazos in 2023 and Fort Hood again in 2025.",
+  "guide_url": "/feed/#fort-hood-housing-guide",
+  "guide_label": "Fort Hood housing guide: neighborhoods, 2026 BAH and off-post options"
  },
  {
   "slug": "joint-base-san-antonio",
@@ -25,7 +27,15 @@
    "alt": "Quadrangle clock tower, JBSA-Fort Sam Houston (landmark, not a gate)",
    "credit": "Photo by Sean Worrell, 502d Air Base Wing (public domain, via www.dvidshub.net)"
   },
-  "blurb": "Military City USA: JBSA-Lackland, JBSA-Fort Sam Houston and JBSA-Randolph form one of the largest joint bases in the Department of Defense."
+  "blurb": "Military City USA: JBSA-Lackland, JBSA-Fort Sam Houston and JBSA-Randolph form one of the largest joint bases in the Department of Defense.",
+  "guide": "joint-base-san-antonio",
+  "seo": {
+   "full_title": "Joint Base San Antonio Housing: On-Base Communities, 2026 BAH & Off-Base Rentals",
+   "h1": "Joint Base San Antonio housing",
+   "description": "Joint Base San Antonio housing guide: Lackland Family Homes, Fort Sam Houston Family Housing and Randolph Family Housing, 2026 San Antonio BAH rates, Military Housing Office contacts and the best suburbs near each JBSA gate.",
+   "intro": "Family housing at JBSA-Lackland, JBSA-Fort Sam Houston and JBSA-Randolph, plus a guide to 2026 BAH, housing offices and where to rent off base near each installation. Compare the communities below, then contact the one nearest your duty location."
+  },
+  "guide_updated": "2026-10-16"
  },
  {
   "slug": "fort-bliss",

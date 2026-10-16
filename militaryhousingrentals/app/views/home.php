@@ -98,7 +98,7 @@ layout_start([
       </div>
     </div>
     <div class="scroller" data-scroller><?php foreach ($recent as $l) echo listing_card($l, 'scroller-item'); ?></div>
-    <p class="center"><a class="btn btn-primary btn-lg" href="/properties/">Explore all <?= count($all) ?> listings <?= icon('arrow') ?></a></p>
+    <p class="center btn-row"><a class="btn btn-primary btn-lg" href="/properties/">Explore all <?= count($all) ?> listings <?= icon('arrow') ?></a> <a class="btn btn-outline btn-lg" href="/feed/">What's new this week</a></p>
   </div>
 </section>
 

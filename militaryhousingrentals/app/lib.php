@@ -2,6 +2,8 @@
 // Shared helpers and the page layout.
 
 const APP = __DIR__;
+// Last substantive edit of the Fort Hood guide on /feed/ (also its Article dateModified)
+const FEED_GUIDE_UPDATED = '2026-10-16';
 
 function cfg($key = null) {
     static $c;
@@ -132,7 +134,7 @@ function layout_start(array $page) {
 <link rel="icon" href="<?= e(str_replace('.webp', '-32x32.webp', $c['icon'])) ?>" sizes="32x32">
 <link rel="icon" href="<?= e(str_replace('.webp', '-192x192.webp', $c['icon'])) ?>" sizes="192x192">
 <link rel="apple-touch-icon" href="<?= e(str_replace('.webp', '-180x180.webp', $c['icon'])) ?>">
-<link rel="alternate" type="application/rss+xml" title="<?= e($c['name']) ?> Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="<?= e($c['name']) ?> Feed" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -205,6 +207,7 @@ function layout_end() {
       <h3>Site</h3>
       <ul>
         <li><a href="/properties/">All Listings</a></li>
+        <li><a href="/feed/">Latest Listings &amp; Guides</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/submit-property/">Submit a Property</a></li>
         <li><a href="/contact-us/">Contact Us</a></li>
@@ -298,6 +301,33 @@ function post_card($p) {
 function post_html($slug) {
     $f = APP . "/data/posts/$slug.html";
     return is_file($f) ? file_get_contents($f) : '';
+}
+function guide_html($name) {
+    $f = APP . "/data/guides/$name.html";
+    return is_file($f) ? file_get_contents($f) : '';
+}
+function newest_posts($n = 3) {
+    $p = posts();
+    usort($p, fn($a, $b) => strcmp($b['date'], $a['date']));
+    return array_slice($p, 0, $n);
+}
+
+// Prepare long-form article HTML for display: give every h2 an id, collect a
+// table of contents, and turn a Yoast-style FAQ block into FAQPage schema.
+// Returns [html, toc, faq] where toc = [[id, text], ...] and faq = schema items.
+function article_prepare($html) {
+    $toc = [];
+    $html = preg_replace_callback('#<h2([^>]*)>(.*?)</h2>#s', function ($m) use (&$toc) {
+        if (preg_match('/id="([^"]+)"/', $m[1], $id)) $slug = $id[1];
+        else { $slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower(html_entity_decode(strip_tags($m[2])))), '-'); $m[1] .= ' id="' . $slug . '"'; }
+        $toc[] = [$slug, html_entity_decode(strip_tags($m[2]))];
+        return '<h2' . $m[1] . '>' . $m[2] . '</h2>';
+    }, $html);
+    $faq = [];
+    if (preg_match_all('#<strong class="schema-faq-question">(.*?)</strong>\s*<p class="schema-faq-answer">(.*?)</p>#s', $html, $mm, PREG_SET_ORDER)) {
+        foreach ($mm as $q) $faq[] = ['@type' => 'Question', 'name' => trim(strip_tags($q[1])), 'acceptedAnswer' => ['@type' => 'Answer', 'text' => trim(strip_tags($q[2]))]];
+    }
+    return [$html, $toc, $faq];
 }
 function reading_time($slug) {
     return max(1, (int)round(str_word_count(strip_tags(post_html($slug))) / 225));

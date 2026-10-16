@@ -2,8 +2,8 @@
 header('Content-Type: text/plain; charset=UTF-8');
 echo "# " . cfg('name') . ": " . cfg('tagline') . "\n\n";
 echo "> A directory of on-base military family housing communities and military-friendly rentals, with guides for PCS moves, BAH and leases.\n\n";
-echo "The XML sitemap is at " . abs_url('/sitemap_index.xml') . "\n\n## Pages\n";
-foreach (['/' => 'Home', '/properties/' => 'All listings', '/marine-bases/' => 'Military bases', '/blog/' => 'Blog', '/submit-property/' => 'Submit a property', '/contact-us/' => 'Contact us'] as $u => $t) echo "- [$t](" . abs_url($u) . ")\n";
+echo "The XML sitemap is at " . abs_url('/sitemap_index.xml') . " and the RSS feed is at " . abs_url('/feed.xml') . "\n\n## Pages\n";
+foreach (['/' => 'Home', '/properties/' => 'All listings', '/marine-bases/' => 'Military bases', '/feed/' => 'Latest listings and guides (with the Fort Hood housing guide)', '/blog/' => 'Blog', '/submit-property/' => 'Submit a property', '/contact-us/' => 'Contact us'] as $u => $t) echo "- [$t](" . abs_url($u) . ")\n";
 echo "\n## Posts\n";
 foreach (posts() as $p) echo "- [{$p['title']}](" . abs_url('/' . $p['slug'] . '/') . ")\n";
 echo "\n## Properties\n";

@@ -4,19 +4,7 @@ $html = post_html($p['slug']);
 // Interactive widgets embedded in specific guides
 if ($p['slug'] === 'bah-explained-military-housing-allowance') $html = preg_replace('#(<h2[^>]*>A Simple BAH Budgeting Rule</h2>)#', widget_bah() . '$1', $html, 1);
 if ($p['slug'] === 'pcs-moving-checklist') $html = preg_replace('#(<h2[^>]*>As Soon as You Have Orders</h2>)#', widget_pcs() . '$1', $html, 1);
-// Give every h2 an id for the table of contents
-$toc = [];
-$html = preg_replace_callback('#<h2([^>]*)>(.*?)</h2>#s', function ($m) use (&$toc) {
-    if (preg_match('/id="([^"]+)"/', $m[1], $id)) $slug = $id[1];
-    else { $slug = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower(html_entity_decode(strip_tags($m[2])))), '-'); $m[1] .= ' id="' . $slug . '"'; }
-    $toc[] = [$slug, html_entity_decode(strip_tags($m[2]))];
-    return '<h2' . $m[1] . '>' . $m[2] . '</h2>';
-}, $html);
-// Yoast FAQ block -> FAQPage schema
-$faq = [];
-if (preg_match_all('#<strong class="schema-faq-question">(.*?)</strong>\s*<p class="schema-faq-answer">(.*?)</p>#s', $html, $mm, PREG_SET_ORDER)) {
-    foreach ($mm as $q) $faq[] = ['@type' => 'Question', 'name' => trim(strip_tags($q[1])), 'acceptedAnswer' => ['@type' => 'Answer', 'text' => trim(strip_tags($q[2]))]];
-}
+[$html, $toc, $faq] = article_prepare($html);
 [$crumbs, $crumb_schema] = breadcrumbs([['Home', '/'], ['Blog', '/blog/'], [$p['title'], null]]);
 $schema = [$crumb_schema, [
     '@type' => 'BlogPosting', 'headline' => $p['title'], 'description' => $p['seo_desc'] ?: $p['excerpt'],
