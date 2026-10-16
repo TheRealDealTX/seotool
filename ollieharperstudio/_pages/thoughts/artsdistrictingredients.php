@@ -1,26 +1,49 @@
+<?php if (!defined('OH_PAGE')) { http_response_code(404); exit; } ?>
 <!doctype html>
 <html lang="en-US" class="no-js">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3VFC1CX1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7Q3VFC1CX1');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arts District Ingredients: How to Illustrate a Neighborhood Food Map | Ollie Harper</title>
+<title>How to Illustrate a Neighborhood Food Map | Ollie Harper</title>
 <meta name="description" content="How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://ollieharperstudio.com/thoughts/artsdistrictingredients/">
 <meta property="og:site_name" content="Ollie Harper Studio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Arts District Ingredients: How to Illustrate a Neighborhood Food Map | Ollie Harper">
+<meta property="og:title" content="How to Illustrate a Neighborhood Food Map | Ollie Harper">
 <meta property="og:description" content="How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.">
 <meta property="og:url" content="https://ollieharperstudio.com/thoughts/artsdistrictingredients/">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ollieharperstudio.com/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ollie Harper Studio — commercial illustration for food, fashion and lifestyle brands">
+<meta property="article:published_time" content="2026-10-09">
+<meta property="article:modified_time" content="2026-10-16">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Illustrate a Neighborhood Food Map | Ollie Harper">
+<meta name="twitter:description" content="How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.">
+<meta name="twitter:image" content="https://ollieharperstudio.com/assets/img/og.png">
 <meta name="theme-color" content="#f6efe6">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-12">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": "https://ollieharperstudio.com/favicon.svg", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ollieharperstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Thoughts", "item": "https://ollieharperstudio.com/thoughts/"}, {"@type": "ListItem", "position": 3, "name": "Arts District Ingredients", "item": "https://ollieharperstudio.com/thoughts/artsdistrictingredients/"}]}, {"@type": "BlogPosting", "headline": "Arts District Ingredients: drawing a neighborhood food map", "description": "How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.", "datePublished": "2015-11-14", "dateModified": "2026-10-12", "author": {"@id": "https://ollieharperstudio.com/#org"}, "publisher": {"@id": "https://ollieharperstudio.com/#org"}, "mainEntityOfPage": "https://ollieharperstudio.com/thoughts/artsdistrictingredients/", "image": "https://ollieharperstudio.com/assets/photos/map-960.webp"}]}</script>
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-16">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": {"@type": "ImageObject", "url": "https://ollieharperstudio.com/web-app-manifest-512x512.png", "width": 512, "height": 512}, "image": "https://ollieharperstudio.com/assets/img/og.png", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ollieharperstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Thoughts", "item": "https://ollieharperstudio.com/thoughts/"}, {"@type": "ListItem", "position": 3, "name": "Arts District Ingredients", "item": "https://ollieharperstudio.com/thoughts/artsdistrictingredients/"}]}, {"@type": "BlogPosting", "headline": "Arts District Ingredients: drawing a neighborhood food map", "description": "How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.", "datePublished": "2026-10-09", "dateModified": "2026-10-16", "author": {"@id": "https://ollieharperstudio.com/#org"}, "publisher": {"@id": "https://ollieharperstudio.com/#org"}, "mainEntityOfPage": "https://ollieharperstudio.com/thoughts/artsdistrictingredients/", "image": "https://ollieharperstudio.com/assets/photos/map-960.webp"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -33,7 +56,7 @@
 </header>
 <main id="main">
 <section class="page-hero"><div class="wrap" style="grid-template-columns:1fr">
-  <div><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/thoughts/">Thoughts</a> <span>/</span> Arts District Ingredients</nav><span class="eyebrow">Thoughts · <time datetime="2015-11-14">November 14, 2015</time></span><h1>Arts District Ingredients: drawing a neighborhood food map</h1><p class="lede">How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.</p></div>
+  <div><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/thoughts/">Thoughts</a> <span>/</span> Arts District Ingredients</nav><span class="eyebrow">Thoughts · <time datetime="2026-10-09">October 9, 2026</time></span><h1>Arts District Ingredients: drawing a neighborhood food map</h1><p class="lede">How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.</p></div>
 </div></section>
 <section class="section" style="padding-top:0"><div class="wrap layout">
   <article class="prose"><div class="reveal" style="margin-bottom:2rem"><div class="photo"><img src="/assets/photos/map-960.webp" srcset="/assets/photos/map-480.webp 480w, /assets/photos/map-960.webp 960w" sizes="(max-width: 920px) 100vw, 50vw" alt="Red-brick corner building with a busy restaurant patio" width="960" height="720" loading="lazy" decoding="async"></div></div><p>Some neighborhoods are best understood through your stomach. When we set out to draw an illustrated food map of a downtown arts district, the research phase was mostly lunch — and dinner, and a lot of coffee. Here is how we turn a neighborhood's restaurants, bakeries and bars into a map people actually pin to the fridge.</p>
@@ -78,6 +101,6 @@
     <div class="legal"><span>© 2026 Ollie Harper Studio.</span><span>Drawn with a lot of coffee.</span></div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=2026-10-12" defer></script>
+<script src="/assets/js/site.js?v=2026-10-16" defer></script>
 </body>
 </html>

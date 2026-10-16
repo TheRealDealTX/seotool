@@ -19,11 +19,18 @@ ROOT = Path(__file__).resolve().parent
 ORIGIN = "https://ollieharperstudio.com"
 NAME = "Ollie Harper Studio"
 EMAIL = "info@ollieharperstudio.com"
+GA_ID = "G-7Q3VFC1CX1"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
 STAGING = os.environ.get("STAGING") == "1"
 TODAY = date.today().isoformat()
-FONTS = ("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700"
-         "&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap")
-
 NAV = [
     ("Commercial", "/"),
     ("Culinary", "/culinary/"),
@@ -67,7 +74,8 @@ def breadcrumbs(trail):
 
 ORG = {
     "@type": "Organization", "@id": ORIGIN + "/#org", "name": NAME, "url": ORIGIN + "/",
-    "logo": ORIGIN + "/favicon.svg", "email": EMAIL,
+    "logo": {"@type": "ImageObject", "url": ORIGIN + "/web-app-manifest-512x512.png", "width": 512, "height": 512},
+    "image": ORIGIN + "/assets/img/og.png", "email": EMAIL,
     "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.",
     "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books",
                    "Prop styling", "Art direction"],
@@ -75,15 +83,18 @@ ORG = {
 WEBSITE = {"@type": "WebSite", "@id": ORIGIN + "/#website", "url": ORIGIN + "/", "name": NAME, "publisher": {"@id": ORIGIN + "/#org"}}
 
 
-def layout(path, title, desc, body, schema=(), og_type="website", current=None):
+def layout(path, title, desc, body, schema=(), og_type="website", current=None, published=None, modified=None):
     canonical = ORIGIN + path
     graph = [ORG, WEBSITE, *schema]
     nav = ''.join(f'<a href="{href}"{" aria-current=page" if href == (current or path) else ""}>{label}</a>'
                   for label, href in NAV)
+    article_meta = (f'<meta property="article:published_time" content="{published}">\n'
+                    f'<meta property="article:modified_time" content="{modified}">\n') if published else ""
     robots = '<meta name="robots" content="noindex, nofollow">' if STAGING else '<meta name="robots" content="index, follow, max-image-preview:large">'
     return f"""<!doctype html>
 <html lang="en-US" class="no-js">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)}</title>
@@ -95,13 +106,24 @@ def layout(path, title, desc, body, schema=(), og_type="website", current=None):
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(desc)}">
 <meta property="og:url" content="{canonical}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{ORIGIN}/assets/img/og.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ollie Harper Studio — commercial illustration for food, fashion and lifestyle brands">
+{article_meta}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{escape(title)}">
+<meta name="twitter:description" content="{escape(desc)}">
+<meta name="twitter:image" content="{ORIGIN}/assets/img/og.png">
 <meta name="theme-color" content="#f6efe6">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{FONTS}">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={TODAY}">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)}</script>
 </head>
@@ -144,10 +166,19 @@ def layout(path, title, desc, body, schema=(), og_type="website", current=None):
 """
 
 
+# Pages live in _pages/ and are served only through index.php, so every request (not just "/")
+# passes the canonical https/non-www redirect. The guard makes direct hits on the file a 404.
+PAGE_GUARD = "<?php if (!defined('OH_PAGE')) { http_response_code(404); exit; } ?>\n"
+
+
+def page_file(path):
+    return ROOT / "_pages" / ((path.strip("/") or "home") + ".php")
+
+
 def write(path, html, sitemap=True):
-    out = ROOT / ("home.html" if path == "/" else path.strip("/") + "/index.html")
+    out = page_file(path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(html, encoding="utf-8")
+    out.write_text(PAGE_GUARD + html, encoding="utf-8")
     if sitemap:
         PAGES.append(path)
 
@@ -258,8 +289,8 @@ def home():
   <aside class="aside"><div class="panel ink reveal"><h3>Quick brief</h3><p>Send what it's for, where it'll appear and when you need it. That's enough for a first quote.</p><a class="btn" href="/contact/">Contact the studio</a></div></aside>
 </div></section>
 {cta()}"""
-    write("/", layout("/", "Ollie Harper Studio — Commercial Illustration for Food, Fashion & Lifestyle Brands",
-                      "Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty artwork and coloring books for brands that love color.",
+    write("/", layout("/", "Ollie Harper Studio — Commercial Illustration for Brands",
+                      "Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty art and coloring books for brands that love color.",
                       body, [faq_schema, {"@type": "WebPage", "@id": ORIGIN + "/#webpage", "url": ORIGIN + "/",
                                           "name": "Commercial Illustration Studio", "isPartOf": {"@id": ORIGIN + "/#website"},
                                           "about": {"@id": ORIGIN + "/#org"}}]))
@@ -311,7 +342,7 @@ def culinary():
   </aside>
 </div></section>
 {cta("Hungry for a new menu?")}"""
-    write("/culinary/", layout("/culinary/", "Culinary Illustration — Menus, Café Boards & Food Packaging | Ollie Harper",
+    write("/culinary/", layout("/culinary/", "Culinary Illustration: Menus & Food Packaging | Ollie Harper",
                                "Food and drink illustration for restaurants, cafés and food brands: illustrated menus, seasonal drink boards, recipe cards and packaging.",
                                body, [crumb, faq_schema, {"@type": "Service", "name": "Culinary illustration", "serviceType": "Food illustration",
                                                           "provider": {"@id": ORIGIN + "/#org"}, "url": ORIGIN + "/culinary/"}]))
@@ -362,7 +393,7 @@ def fashion():
   </aside>
 </div></section>
 {cta("Let's dress up your next launch.")}"""
-    write("/images/", layout("/images/", "Fashion & Beauty Illustration — Lookbooks, Launches & Editorial | Ollie Harper",
+    write("/images/", layout("/images/", "Fashion & Beauty Illustration | Ollie Harper Studio",
                              "Fashion and beauty illustration for campaigns, lookbooks, cosmetics launches, how-to-wear guides, event posters and window displays.",
                              body, [crumb, faq_schema, {"@type": "Service", "name": "Fashion and beauty illustration", "serviceType": "Fashion illustration",
                                                         "provider": {"@id": ORIGIN + "/#org"}, "url": ORIGIN + "/images/"}], current="/images/"))
@@ -421,7 +452,7 @@ def coloring():
   </aside>
 </div></section>
 {cta("Want a coloring book of your own?", "Branded or bespoke, we'll draw a book your customers keep long after the visit.")}"""
-    write("/coloring-book/", layout("/coloring-book/", "Coloring Book — Hand-Drawn Rooms to Color Online & Print | Ollie Harper",
+    write("/coloring-book/", layout("/coloring-book/", "Coloring Book: Hand-Drawn Rooms to Color | Ollie Harper",
                                     "Hand-drawn interior coloring pages for adults and kids. Color a room online, download it to print, or commission a custom coloring book.",
                                     body, [crumb, faq_schema, {"@type": "CreativeWork", "name": "Rooms to Color", "genre": "Coloring book",
                                                                "creator": {"@id": ORIGIN + "/#org"}, "url": ORIGIN + "/coloring-book/"}]))
@@ -461,7 +492,7 @@ def styling():
   </aside>
 </div></section>
 {cta("Setting the scene for something new?")}"""
-    write("/set-stylingdirection/", layout("/set-stylingdirection/", "Prop Styling & Set Direction for Shoots, Launches & Windows | Ollie Harper",
+    write("/set-stylingdirection/", layout("/set-stylingdirection/", "Prop Styling & Set Direction | Ollie Harper Studio",
                                            "Prop styling, set design and art direction for product and editorial shoots, launch events and shop windows, with illustrated set pieces.",
                                            body, [crumb, {"@type": "Service", "name": "Prop styling and set direction", "serviceType": "Art direction",
                                                           "provider": {"@id": ORIGIN + "/#org"}, "url": ORIGIN + "/set-stylingdirection/"}]))
@@ -503,22 +534,22 @@ def projects():
   <div class="reveal">{art("culinary")}</div>
 </div></section>
 {cta()}"""
-    write("/projects/", layout("/projects/", "Illustration Projects — Menus, Launches, Coloring Books & Campaigns | Ollie Harper",
-                               "The illustration projects Ollie Harper Studio takes on — seasonal drink launches, illustrated menus, beauty series, coloring books and campaign art — and how each one runs.",
+    write("/projects/", layout("/projects/", "Illustration Projects & Process | Ollie Harper Studio",
+                               "Seasonal drink launches, illustrated menus, beauty series, coloring books and campaign art: the projects Ollie Harper Studio takes on and how each one runs.",
                                body, [crumb, {"@type": "CollectionPage", "name": "Projects", "url": ORIGIN + "/projects/", "isPartOf": {"@id": ORIGIN + "/#website"}}]))
 
 
 POSTS = [
     {
-        "slug": "lipstick-theory", "date": "2016-01-04", "modified": TODAY, "color": "#ffd9e2", "art": "lipsticks",
-        "title": "Lipstick Theory: What Your Lipstick Shade Says About You",
+        "slug": "lipstick-theory", "date": "2026-10-09", "modified": "2026-10-16", "color": "#ffd9e2", "art": "lipsticks",
+        "title": "Lipstick Theory: What Your Shade Says About You",
         "h1": "Lipstick Theory: what your shade says about you",
         "desc": "An illustrated guide to eight classic lipstick shades — red, coral, berry, nude, plum, fuchsia, brick and mauve — and the personality each one suggests.",
         "excerpt": "Eight classic shades, illustrated and read like a horoscope. Which one is yours?",
     },
     {
-        "slug": "artsdistrictingredients", "date": "2015-11-14", "modified": TODAY, "color": "#ffe1c4", "art": "map",
-        "title": "Arts District Ingredients: How to Illustrate a Neighborhood Food Map",
+        "slug": "artsdistrictingredients", "date": "2026-10-09", "modified": "2026-10-16", "color": "#ffe1c4", "art": "map",
+        "title": "How to Illustrate a Neighborhood Food Map",
         "h1": "Arts District Ingredients: drawing a neighborhood food map",
         "desc": "How to research, sketch and design an illustrated neighborhood food map — from eating your way through the district to the final printed postcard set.",
         "excerpt": "Eating your way through a neighborhood, then drawing it: our process for illustrated food maps.",
@@ -581,7 +612,8 @@ def thoughts():
         article = {"@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "datePublished": p["date"],
                    "dateModified": p["modified"], "author": {"@id": ORIGIN + "/#org"}, "publisher": {"@id": ORIGIN + "/#org"},
                    "mainEntityOfPage": ORIGIN + path, "image": f"{ORIGIN}/assets/photos/{p['art']}-960.webp"}
-        write(path, layout(path, f"{p['title']} | Ollie Harper", p["desc"], body, [crumb_schema, article], og_type="article", current="/thoughts/"))
+        write(path, layout(path, f"{p['title']} | Ollie Harper" if len(p["title"]) <= 45 else p["title"], p["desc"], body, [crumb_schema, article], og_type="article", current="/thoughts/",
+                           published=p["date"], modified=p["modified"]))
 
     hero, crumb = page_hero([("Home", "/"), ("Thoughts", "/thoughts/")], "The journal", "Thoughts, sketches &amp; ingredients.",
                             "Notes from the drawing table: illustrated series, process write-ups and the things we can't stop drawing.", "thoughts")
@@ -650,14 +682,15 @@ def privacy():
     crumbs, crumb = breadcrumbs([("Home", "/"), ("Privacy Policy", "/privacy-policy/")])
     body = f"""<section class="page-hero"><div class="wrap" style="grid-template-columns:1fr"><div>{crumbs}<h1>Privacy policy</h1><p class="lede">Last updated {TODAY}.</p></div></div></section>
 <section class="section" style="padding-top:0"><div class="wrap prose">
-<p>This website is a portfolio and does not use accounts, cookies for advertising or third-party tracking scripts.</p>
+<p>This website is a portfolio. It has no accounts and no advertising cookies.</p>
 <h2>Information you send us</h2><p>The contact form does not submit data to this website. It opens your own email app with your message pre-filled; we receive only what you choose to send, and use it only to reply and to quote for your project.</p>
 <h2>Server logs</h2><p>Our hosting provider keeps standard server logs (IP address, browser, pages requested) for security and performance. They are not used to identify visitors.</p>
-<h2>Fonts</h2><p>Typefaces are loaded from Google Fonts, which receives your IP address when the fonts download.</p>
+<h2>Analytics</h2><p>We use Google Analytics 4 to understand how visitors use the site (pages viewed, approximate location, device and browser). Google Analytics sets first-party cookies and processes this data on our behalf under <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+<h2>Fonts</h2><p>Typefaces are served from this website; no third-party font service is contacted.</p>
 <h2>Contact</h2><p>Questions about privacy: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </div></section>"""
     write("/privacy-policy/", layout("/privacy-policy/", "Privacy Policy | Ollie Harper Studio",
-                                     "How Ollie Harper Studio handles information sent through this website.", body, [crumb]))
+                                     "How Ollie Harper Studio handles information sent through this website: contact emails, server logs, analytics and fonts, and how to reach us about privacy.", body, [crumb]))
 
 
 def error_pages():
@@ -675,6 +708,13 @@ def error_pages():
 
 def assets():
     (ROOT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
+    # PNG/ICO icons are rendered from favicon.svg once and committed (see README).
+    manifest = {"name": NAME, "short_name": "Ollie Harper", "start_url": "/", "scope": "/", "display": "standalone",
+                "background_color": "#f6efe6", "theme_color": "#ef5b3c",
+                "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+                          {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+                          {"src": "/web-app-manifest-maskable-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}
+    (ROOT / "site.webmanifest").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
 def sitemap_and_robots():
@@ -682,11 +722,13 @@ def sitemap_and_robots():
     (ROOT / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n', encoding="utf-8")
     robots = ("User-agent: *\nDisallow: /\n" if STAGING else
-              f"User-agent: *\nDisallow: /home.html\nDisallow: /*.php$\n\nSitemap: {ORIGIN}/sitemap.xml\n")
+              f"User-agent: *\nAllow: /\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     (ROOT / "robots.txt").write_text(robots, encoding="utf-8")
 
 
 if __name__ == "__main__":
+    import shutil
+    shutil.rmtree(ROOT / "_pages", ignore_errors=True)
     assets()
     home(); culinary(); fashion(); coloring(); styling(); projects(); thoughts(); about(); contact(); privacy()
     error_pages()

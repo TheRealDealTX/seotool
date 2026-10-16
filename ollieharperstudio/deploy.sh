@@ -1,6 +1,6 @@
 #!/bin/bash
-# Deploy the static build to the Hostinger Agency website (UID IBqTPWf6a,
-# temporary domain darkblue-quail-416052.hostingersite.com).
+# Deploy the build to the Hostinger Agency website (UID IBqTPWf6a,
+# https://ollieharperstudio.com).
 #
 # Pushes the built files one by one through the website's File Browser TUS
 # endpoint. Get the three credentials from the Hostinger API call
@@ -9,8 +9,8 @@
 #   export OH_FB_URL='https://…/api/tus'      # "url" from the response
 #   export OH_FB_AUTH='…'                     # "auth_key"
 #   export OH_FB_REST='…'                     # "rest_auth_key"
-#   STAGING=1 python3 build.py && ./deploy.sh     # while on the temporary domain
-#   python3 build.py && ./deploy.sh               # once ollieharperstudio.com is attached
+#   python3 build.py && python3 validate.py && ./deploy.sh
+#
 #
 # Then clear the site cache (`agency-hosting_clearWebsiteCacheV1`, or hPanel).
 set -u
@@ -29,6 +29,6 @@ while IFS= read -r f; do
         -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
-done < <(find . \( -path '*/__pycache__' -o -name '*.py' -o -name 'README.md' -o -name 'deploy.sh' \) -prune -o -type f -print | sort)
+done < <(find . \( -path '*/__pycache__' -o -name '*.py' -o -name 'README.md' -o -name 'deploy.sh' -o -name 'router.php' \) -prune -o -type f -print | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]

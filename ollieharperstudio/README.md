@@ -5,23 +5,24 @@ site. It keeps the topic and URL structure of the domain's 2014–2017 era, when
 was an LA commercial illustration studio on Squarespace. No CMS, no database:
 generated HTML, one CSS file, one JS file and royalty-free (CC0) photography.
 
-- **Staging (live now):** https://darkblue-quail-416052.hostingersite.com
-  (Hostinger Agency Growth, website UID `IBqTPWf6a`, Phoenix, PHP 8.3 php-fpm)
-- **Production:** https://ollieharperstudio.com, once the domain is registered
-  and attached (see *Going live*).
+- **Live:** https://ollieharperstudio.com (since 2026-10-15). Hostinger Agency Growth,
+  website UID `IBqTPWf6a`, Phoenix, PHP 8.3 php-fpm. The temporary domain
+  `darkblue-quail-416052.hostingersite.com` was replaced by the real one.
 
 ## Build & deploy
 
 ```sh
-STAGING=1 python3 build.py   # temporary domain: noindex on every page, robots.txt Disallow: /
 python3 build.py             # production: indexable, sitemap in robots.txt
+python3 validate.py          # SEO + integrity checks; must report 0 errors before deploying
 ./deploy.sh                  # needs OH_FB_URL / OH_FB_AUTH / OH_FB_REST, see header comment
+STAGING=1 python3 build.py   # only for a preview copy: noindex everywhere, robots.txt Disallow: /
 ```
 
 The build uses only the Python 3 standard library. Each build writes its files into this directory.
-Local preview: `php -S 127.0.0.1:8099 -t .` plus a small router that serves
-`dir/index.html`. A plain `python3 -m http.server` won't run `index.php`, so
-open `/home.html` for the homepage there.
+Local preview: `php -S 127.0.0.1:8099 -t . router.php`, where `router.php` serves
+existing files directly and sends everything else to `index.php` (that's how the
+host behaves). A plain `python3 -m http.server` can't preview pages, because
+they're served by PHP.
 
 | File | What it is |
 | --- | --- |
@@ -29,8 +30,12 @@ open `/home.html` for the homepage there.
 | `art.py` | The coloring-page line art (interactive SVG), favicon, lipstick shades |
 | `assets/photos/` | CC0 photos as 480/960px WebP, plus `credits.json` (source, creator, license, alt text) |
 | `assets/css/site.css`, `assets/js/site.js` | Styles and effects |
-| `index.php` | Front controller: homepage, legacy 301s, 404/410 |
-| `home.html`, `*/index.html`, `404.html`, `410.html`, `sitemap.xml`, `robots.txt` | Generated output (committed) |
+| `index.php` | Front controller: https/non-www 301s, page routing, legacy 301s, 404/410 |
+| `validate.py` | Post-build checks: titles, descriptions, H1s, canonicals, Google tag, JSON-LD, links, icons, robots, sitemap |
+| `_pages/*.php`, `404.html`, `410.html`, `sitemap.xml`, `robots.txt`, `site.webmanifest` | Generated output (committed) |
+| `favicon.*`, `apple-touch-icon.png`, `web-app-manifest-*.png` | Icons rendered from `favicon.svg` (the OH mark) |
+| `googlecccfbf2f7e9e5ae4.html` | Google Search Console verification file. Keep it. |
+| `assets/fonts/` | Self-hosted Fraunces + DM Sans variable fonts (SIL OFL) |
 
 ## SEO research behind the page list
 
@@ -134,13 +139,48 @@ to 4:3 and saved as 480px and 960px WebP. To swap a photo, replace both
 | `tile-plant` | Succulent in a tin can against a pale blue wall | [house-plant-SUSVDM9A0A](https://stocksnap.io/photo/house-plant-SUSVDM9A0A) |
 | `tile-lamp` | Desk with a lamp in front of a bold patterned wallpaper | [office-work-3TJ6NCTIRT](https://stocksnap.io/photo/office-work-3TJ6NCTIRT) |
 
-## Going live checklist
+## Hosting
 
-1. Register ollieharperstudio.com and point it at Hostinger. Then attach it to website
-   `IBqTPWf6a` (`agency-hosting_domains_change-website`, from the temp domain).
-2. `python3 build.py && ./deploy.sh` (production build: drops noindex), then clear the cache.
-3. Check that `https://ollieharperstudio.com/robots.txt` is ours (the preview domain
-   serves Hostinger's own robots.txt), and that `www` and `http` 301 to `https://ollieharperstudio.com`.
-4. Create the mailbox `info@ollieharperstudio.com`, or change `EMAIL` in `build.py`.
-5. Add the domain to Google Search Console, submit `sitemap.xml`, and consider
-   disavowing the spam anchors ("Buy Backlinks", "PBN Network Service"…).
+The host serves any file that exists on disk directly, ignores `.htaccess`,
+and only runs `index.php` for paths that don't exist. Pages are therefore
+built as `_pages/<slug>.php` rather than `<slug>/index.html`. Every page request
+reaches `index.php`, which:
+
+- 301s `http://` and `www.` to `https://ollieharperstudio.com` in one hop
+  (adding a missing trailing slash in the same redirect),
+- serves `/culinary/` from `_pages/culinary.php` (and `/` from `_pages/home.php`),
+- 301s `/culinary` to `/culinary/`, and old Squarespace URLs to their new pages,
+- returns 404/410 for everything else.
+
+Each `_pages` file starts with a guard, so requesting it directly returns a 404.
+Don't put `index.html` files back in folders: the host would serve them
+without the redirects (`validate.py` flags any it finds).
+
+## SEO setup
+
+- Every page has a unique title (≤60 characters) and meta description (110–160),
+  one H1, a self-referencing canonical, Open Graph and Twitter tags (1200×630
+  `og.png`), and JSON-LD:
+  - an `Organization` + `WebSite` graph on every page
+  - `BreadcrumbList` on every page except the homepage
+  - `FAQPage`, `Service`, `BlogPosting`, `CollectionPage` etc. per page
+- Google tag `G-7Q3VFC1CX1` is the first thing in `<head>` on every page,
+  including the 404/410 pages. It's defined once as `GTAG` in `build.py`.
+  The privacy policy discloses Google Analytics.
+- Icons: `favicon.ico` (16/32/48), `favicon.svg`, 96px PNG, 180px
+  `apple-touch-icon.png`, plus 192/512px manifest icons and a maskable icon.
+  `site.webmanifest` is written by the build.
+- Fonts are self-hosted, preloaded and use `font-display: optional`, so there is no layout shift.
+  Lighthouse on the homepage (2026-10-16): Performance 91, Accessibility 93,
+  Best Practices 100, SEO 100, CLS 0.
+- `robots.txt` allows everything and lists the sitemap. The 2018 spam `.php`
+  URLs are deliberately *not* disallowed, so Google can recrawl them, get the 404
+  and drop them.
+
+## Next steps (manual)
+
+1. In Google Search Console, verify `https://ollieharperstudio.com` with the HTML-file method (the file is live), then
+   submit `https://ollieharperstudio.com/sitemap.xml`.
+2. Use *Removals* or wait for recrawl so the 2018 spam URLs drop out of the index.
+   Consider disavowing the spam anchors ("Buy Backlinks", "PBN Network Service"…).
+3. Create the mailbox `info@ollieharperstudio.com`; the contact form sends to it.

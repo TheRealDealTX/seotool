@@ -1,26 +1,47 @@
+<?php if (!defined('OH_PAGE')) { http_response_code(404); exit; } ?>
 <!doctype html>
 <html lang="en-US" class="no-js">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3VFC1CX1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7Q3VFC1CX1');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Fashion &amp; Beauty Illustration — Lookbooks, Launches &amp; Editorial | Ollie Harper</title>
+<title>Fashion &amp; Beauty Illustration | Ollie Harper Studio</title>
 <meta name="description" content="Fashion and beauty illustration for campaigns, lookbooks, cosmetics launches, how-to-wear guides, event posters and window displays.">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://ollieharperstudio.com/images/">
 <meta property="og:site_name" content="Ollie Harper Studio">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Fashion &amp; Beauty Illustration — Lookbooks, Launches &amp; Editorial | Ollie Harper">
+<meta property="og:title" content="Fashion &amp; Beauty Illustration | Ollie Harper Studio">
 <meta property="og:description" content="Fashion and beauty illustration for campaigns, lookbooks, cosmetics launches, how-to-wear guides, event posters and window displays.">
 <meta property="og:url" content="https://ollieharperstudio.com/images/">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ollieharperstudio.com/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ollie Harper Studio — commercial illustration for food, fashion and lifestyle brands">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fashion &amp; Beauty Illustration | Ollie Harper Studio">
+<meta name="twitter:description" content="Fashion and beauty illustration for campaigns, lookbooks, cosmetics launches, how-to-wear guides, event posters and window displays.">
+<meta name="twitter:image" content="https://ollieharperstudio.com/assets/img/og.png">
 <meta name="theme-color" content="#f6efe6">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-12">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": "https://ollieharperstudio.com/favicon.svg", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ollieharperstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Fashion & Beauty", "item": "https://ollieharperstudio.com/images/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is fashion illustration used for today?", "acceptedAnswer": {"@type": "Answer", "text": "Brands use fashion illustration for campaign art, lookbooks, how-to-wear guides, product launches, packaging, social content and window displays. It signals craft and gives a collection a mood that photography alone can't."}}, {"@type": "Question", "name": "Can you illustrate our actual products?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work from samples, tech packs or product photography, so colors, cuts and details are accurate — then style them with the attitude of the brand."}}, {"@type": "Question", "name": "Do you do beauty and cosmetics illustration?", "acceptedAnswer": {"@type": "Answer", "text": "Often. Lipstick, skincare and fragrance are a joy to draw: rich color, glossy surfaces and strong packaging shapes. See our Lipstick Theory series for an example."}}]}, {"@type": "Service", "name": "Fashion and beauty illustration", "serviceType": "Fashion illustration", "provider": {"@id": "https://ollieharperstudio.com/#org"}, "url": "https://ollieharperstudio.com/images/"}]}</script>
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-16">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": {"@type": "ImageObject", "url": "https://ollieharperstudio.com/web-app-manifest-512x512.png", "width": 512, "height": 512}, "image": "https://ollieharperstudio.com/assets/img/og.png", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ollieharperstudio.com/"}, {"@type": "ListItem", "position": 2, "name": "Fashion & Beauty", "item": "https://ollieharperstudio.com/images/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is fashion illustration used for today?", "acceptedAnswer": {"@type": "Answer", "text": "Brands use fashion illustration for campaign art, lookbooks, how-to-wear guides, product launches, packaging, social content and window displays. It signals craft and gives a collection a mood that photography alone can't."}}, {"@type": "Question", "name": "Can you illustrate our actual products?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work from samples, tech packs or product photography, so colors, cuts and details are accurate — then style them with the attitude of the brand."}}, {"@type": "Question", "name": "Do you do beauty and cosmetics illustration?", "acceptedAnswer": {"@type": "Answer", "text": "Often. Lipstick, skincare and fragrance are a joy to draw: rich color, glossy surfaces and strong packaging shapes. See our Lipstick Theory series for an example."}}]}, {"@type": "Service", "name": "Fashion and beauty illustration", "serviceType": "Fashion illustration", "provider": {"@id": "https://ollieharperstudio.com/#org"}, "url": "https://ollieharperstudio.com/images/"}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -88,6 +109,6 @@
     <div class="legal"><span>© 2026 Ollie Harper Studio.</span><span>Drawn with a lot of coffee.</span></div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=2026-10-12" defer></script>
+<script src="/assets/js/site.js?v=2026-10-16" defer></script>
 </body>
 </html>

@@ -1,4 +1,9 @@
 /* ollieharperstudio.com — single shared stylesheet */
+/* Self-hosted variable fonts (SIL OFL), preloaded in <head>. font-display: optional means the
+   text never re-flows when a font arrives late, which keeps layout shift (CLS) at zero. */
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 100 900; font-display: optional; src: url("/assets/fonts/fraunces.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; font-display: optional; src: url("/assets/fonts/fraunces-italic.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-style: normal; font-weight: 100 1000; font-display: optional; src: url("/assets/fonts/dm-sans.woff2") format("woff2"); }
 :root {
   --ink: #1d1a24;
   --ink-2: #4a4556;

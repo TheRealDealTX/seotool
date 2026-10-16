@@ -1,26 +1,47 @@
+<?php if (!defined('OH_PAGE')) { http_response_code(404); exit; } ?>
 <!doctype html>
 <html lang="en-US" class="no-js">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3VFC1CX1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7Q3VFC1CX1');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ollie Harper Studio — Commercial Illustration for Food, Fashion &amp; Lifestyle Brands</title>
-<meta name="description" content="Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty artwork and coloring books for brands that love color.">
-<meta name="robots" content="noindex, nofollow">
+<title>Ollie Harper Studio — Commercial Illustration for Brands</title>
+<meta name="description" content="Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty art and coloring books for brands that love color.">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://ollieharperstudio.com/">
 <meta property="og:site_name" content="Ollie Harper Studio">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ollie Harper Studio — Commercial Illustration for Food, Fashion &amp; Lifestyle Brands">
-<meta property="og:description" content="Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty artwork and coloring books for brands that love color.">
+<meta property="og:title" content="Ollie Harper Studio — Commercial Illustration for Brands">
+<meta property="og:description" content="Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty art and coloring books for brands that love color.">
 <meta property="og:url" content="https://ollieharperstudio.com/">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://ollieharperstudio.com/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ollie Harper Studio — commercial illustration for food, fashion and lifestyle brands">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ollie Harper Studio — Commercial Illustration for Brands">
+<meta name="twitter:description" content="Ollie Harper is a commercial illustration studio drawing menus, packaging, campaigns, fashion and beauty art and coloring books for brands that love color.">
+<meta name="twitter:image" content="https://ollieharperstudio.com/assets/img/og.png">
 <meta name="theme-color" content="#f6efe6">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-12">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": "https://ollieharperstudio.com/favicon.svg", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is commercial illustration?", "acceptedAnswer": {"@type": "Answer", "text": "Commercial illustration is artwork made to do a job for a business: sell a product, explain a menu, launch a campaign, decorate packaging or give a brand a recognizable look. Unlike gallery art, it's briefed, licensed for specific uses and delivered in the formats the brand needs."}}, {"@type": "Question", "name": "How much does a custom illustration cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the number of pieces, how detailed they are and how widely they'll be used. A single spot illustration for social media costs far less than a campaign hero image licensed for print, packaging and out-of-home. We quote every project individually after a short call."}}, {"@type": "Question", "name": "How long does a commission take?", "acceptedAnswer": {"@type": "Answer", "text": "Most single illustrations take one to two weeks from approved sketch to final files. Menu sets, packaging ranges and coloring books are scheduled in stages, typically four to eight weeks."}}, {"@type": "Question", "name": "What files will I receive?", "acceptedAnswer": {"@type": "Answer", "text": "Final artwork is delivered as layered source files plus print-ready PDF, high-resolution PNG and, for flat vector work, SVG — sized for every placement agreed in the brief."}}, {"@type": "Question", "name": "Do you work with small businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Independent cafés, restaurants, boutiques and makers are some of our favorite clients. We scope projects so they fit the budget without cutting the craft."}}]}, {"@type": "WebPage", "@id": "https://ollieharperstudio.com/#webpage", "url": "https://ollieharperstudio.com/", "name": "Commercial Illustration Studio", "isPartOf": {"@id": "https://ollieharperstudio.com/#website"}, "about": {"@id": "https://ollieharperstudio.com/#org"}}]}</script>
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/fraunces-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/dm-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=2026-10-16">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://ollieharperstudio.com/#org", "name": "Ollie Harper Studio", "url": "https://ollieharperstudio.com/", "logo": {"@type": "ImageObject", "url": "https://ollieharperstudio.com/web-app-manifest-512x512.png", "width": 512, "height": 512}, "image": "https://ollieharperstudio.com/assets/img/og.png", "email": "info@ollieharperstudio.com", "description": "Independent illustration studio for food, fashion, beauty and lifestyle brands.", "knowsAbout": ["Commercial illustration", "Food illustration", "Fashion illustration", "Coloring books", "Prop styling", "Art direction"]}, {"@type": "WebSite", "@id": "https://ollieharperstudio.com/#website", "url": "https://ollieharperstudio.com/", "name": "Ollie Harper Studio", "publisher": {"@id": "https://ollieharperstudio.com/#org"}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is commercial illustration?", "acceptedAnswer": {"@type": "Answer", "text": "Commercial illustration is artwork made to do a job for a business: sell a product, explain a menu, launch a campaign, decorate packaging or give a brand a recognizable look. Unlike gallery art, it's briefed, licensed for specific uses and delivered in the formats the brand needs."}}, {"@type": "Question", "name": "How much does a custom illustration cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the number of pieces, how detailed they are and how widely they'll be used. A single spot illustration for social media costs far less than a campaign hero image licensed for print, packaging and out-of-home. We quote every project individually after a short call."}}, {"@type": "Question", "name": "How long does a commission take?", "acceptedAnswer": {"@type": "Answer", "text": "Most single illustrations take one to two weeks from approved sketch to final files. Menu sets, packaging ranges and coloring books are scheduled in stages, typically four to eight weeks."}}, {"@type": "Question", "name": "What files will I receive?", "acceptedAnswer": {"@type": "Answer", "text": "Final artwork is delivered as layered source files plus print-ready PDF, high-resolution PNG and, for flat vector work, SVG — sized for every placement agreed in the brief."}}, {"@type": "Question", "name": "Do you work with small businesses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Independent cafés, restaurants, boutiques and makers are some of our favorite clients. We scope projects so they fit the budget without cutting the craft."}}]}, {"@type": "WebPage", "@id": "https://ollieharperstudio.com/#webpage", "url": "https://ollieharperstudio.com/", "name": "Commercial Illustration Studio", "isPartOf": {"@id": "https://ollieharperstudio.com/#website"}, "about": {"@id": "https://ollieharperstudio.com/#org"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -100,6 +121,6 @@
     <div class="legal"><span>© 2026 Ollie Harper Studio.</span><span>Drawn with a lot of coffee.</span></div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=2026-10-12" defer></script>
+<script src="/assets/js/site.js?v=2026-10-16" defer></script>
 </body>
 </html>
