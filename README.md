@@ -6,6 +6,11 @@ file, one JS file and local images. Upload the repo root to any web host.
 
 ## What's here
 
+> `puregoatfarms/` is unrelated to this site: it holds the article sources and
+> one-off importer used to publish a Milking & Dairy content cluster on
+> puregoatfarms.com (WordPress). See `puregoatfarms/README.md`. It is excluded
+> from the build, from `validate.py` and from `deploy.sh`.
+
 | Path | What it is |
 | --- | --- |
 | `home.html`, `index.php` and the `*/index.html` files | The generated site — this is the deliverable |
