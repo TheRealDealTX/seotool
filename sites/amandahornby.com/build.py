@@ -78,6 +78,15 @@ def layout(path, title, desc, body, schema=None, current=None):
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8970L42828"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8970L42828');
+</script>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -410,7 +419,7 @@ def guide(g):
 def privacy():
     body = page_hero("Privacy", "Privacy notice", "Short and simple.", [("Home", "/"), ("Privacy", None)]) + f"""
 <section class="section"><div class="wrap prose">
-<p>{BRAND} does not use analytics, advertising cookies or tracking scripts, and does not store personal data on this website. Our contact form opens an email in your own mail application; we only receive what you choose to send.</p>
+<p>{BRAND} uses Google Analytics to understand how visitors use the site, such as which pages are read and how people arrive. Google Analytics sets cookies and processes data such as your IP address and device information on Google's behalf; see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses this information</a>. We do not use advertising cookies, and we do not store personal data on this website. Our contact form opens an email in your own mail application; we only receive what you choose to send.</p>
 <p>Photography is from <a href="https://stocksnap.io/" rel="noopener">StockSnap</a> and released under the CC0 public-domain licence.</p>
 <p>Web fonts are loaded from Google Fonts, which may log your IP address as part of serving the files. Our host keeps standard server logs for security purposes.</p>
 <p>Questions? Email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
