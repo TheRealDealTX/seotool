@@ -5,7 +5,7 @@ content lives in `app/data/`.
 
 | Path | What it is |
 | --- | --- |
-| `index.php` | Router. Keeps every WordPress URL (`/properties/{slug}/`, `/bases/{slug}/`, `/{post}/`, sitemaps, `?p=ID`). RSS is at `/feed.xml`; `/feed/` is an HTML page and the old per-base `/feed/` URLs redirect to the base page |
+| `site.php` | Router (`index.php` is a one-line shim that requires it, because WordPress tooling on the host overwrites `index.php`; `.htaccess` rewrites to `site.php`). Keeps every WordPress URL (`/properties/{slug}/`, `/bases/{slug}/`, `/{post}/`, sitemaps, `?p=ID`). RSS is at `/feed.xml`; `/feed/` is an HTML page and the old per-base `/feed/` URLs redirect to the base page |
 | `app/data/listings.json` | Listings: address, beds/baths, floor-plan ranges, phone, hours, eligibility, pets, utilities, schools, photos, sources |
 | `app/data/bases.json` | Installations. Optional per-base keys: `guide` (name of a file in `app/data/guides/` rendered at the bottom of the base page with Article + FAQ schema), `seo` (`full_title`, `h1`, `intro`, `description` overrides), `guide_url`/`guide_label` (link to a guide that lives elsewhere) |
 | `app/data/guides/*.html` | Long-form housing guides. `fort-hood-housing.html` renders on `/feed/`; `joint-base-san-antonio.html` renders on `/bases/joint-base-san-antonio/`. Same markup as posts (h2 sections, optional `.schema-faq` block) |
@@ -14,7 +14,7 @@ content lives in `app/data/`.
 | `assets/` | CSS, JS, logo variants, public-domain photos |
 | `backup/` | Original WordPress `index.php`/`.htaccess` and a full content export, for rollback |
 
-Run locally: `php -S 127.0.0.1:8099 index.php` (or any router that sends non-files to `index.php`).
+Run locally: `php -S 127.0.0.1:8099 site.php` (or any router that serves real files and sends everything else to `site.php`).
 
 Images in `/wp-content/uploads/` stay on the server from the WordPress install.
 

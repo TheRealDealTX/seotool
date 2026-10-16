@@ -20,7 +20,7 @@ set -u
 cd "$(dirname "$0")" || exit 1
 
 # llms.txt is a real file on the server, so regenerate it from the data.
-php -r 'chdir("."); $_SERVER["REQUEST_URI"]="/llms.txt"; require "index.php";' > llms.txt 2>/dev/null
+php -r 'chdir("."); $_SERVER["REQUEST_URI"]="/llms.txt"; require "site.php";' > llms.txt 2>/dev/null
 
 fb() { curl -sS --max-time 300 -H "X-Auth: $MHR_FB_AUTH" -H "X-Auth-Rest: $MHR_FB_REST" "$@"; }
 

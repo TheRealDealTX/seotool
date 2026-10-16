@@ -1,9 +1,10 @@
 # militaryhousingrentals.com: custom PHP site.
 # Real files (images in /wp-content/uploads, /assets, robots.txt, ads.txt…) are
-# served directly. Every other request goes to index.php.
+# served directly. Every other request goes to site.php (index.php is left to
+# WordPress, whose updates overwrite it).
 
 Options -Indexes
-DirectoryIndex index.php
+DirectoryIndex site.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -17,10 +18,12 @@ RewriteRule ^ https://militaryhousingrentals.com%{REQUEST_URI} [R=301,L]
 RewriteRule ^app(/|$) - [F,L]
 RewriteRule (^|/)\.(?!well-known) - [F,L]
 
-RewriteRule ^index\.php$ - [L]
+RewriteRule ^site\.php$ - [L]
+RewriteRule ^index\.php$ / [R=301,L]
+RewriteRule ^$ /site.php [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /site.php [L]
 </IfModule>
 
 <IfModule mod_headers.c>
