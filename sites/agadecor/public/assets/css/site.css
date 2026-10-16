@@ -503,7 +503,7 @@ em, .script { font-family: var(--display); font-style: italic; font-weight: 500;
 .site-footer { background: var(--noir); color: rgba(245, 237, 230, .72); padding: 90px 0 40px; margin-top: 0; font-size: .95rem; }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(245, 237, 230, .12); }
 .site-footer .brand { color: #fff; margin-bottom: 1rem; }
-.site-footer h4 { font: 600 .7rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--champagne); margin-bottom: 1.2rem; }
+.site-footer .f-head { font: 600 .7rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--champagne); margin-bottom: 1.2rem; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; }
 .site-footer li { margin-bottom: .55em; }
 .site-footer a { text-decoration: none; transition: color .3s; }

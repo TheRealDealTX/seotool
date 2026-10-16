@@ -52,7 +52,15 @@ for path, f in routes.items():
         try: json.loads(ld)
         except Exception as e: errors.append(f"{where}: bad JSON-LD {e}")
     if not p.desc or len(p.desc) > 165: errors.append(f"{where}: description length {len(p.desc)}")
-    if len(p.title) > 90: errors.append(f"{where}: title too long ({len(p.title)})")
+    if len(p.title) > 60: errors.append(f"{where}: title too long ({len(p.title)})")
+    if len(p.desc) < 70: errors.append(f"{where}: description too short ({len(p.desc)})")
+    if "gtag/js?id=G-33GS6ZYMSE" not in src or "gtag('config', 'G-33GS6ZYMSE')" not in src: errors.append(f"{where}: Google tag missing")
+    if src.index("googletagmanager") > src.index("<title>"): errors.append(f"{where}: Google tag not first in <head>")
+    if 'name="robots" content="index, follow' not in src: errors.append(f"{where}: robots meta not indexable")
+    og = re.search(r'property="og:image" content="https://agadecor.com(/[^"]+)"', src)
+    if not og or not os.path.exists(os.path.join(PUB, og.group(1).lstrip("/"))): errors.append(f"{where}: og:image missing")
+    for icon in ("/favicon.ico", "/apple-touch-icon.png", "/site.webmanifest"):
+        if f'href="{icon}"' not in src: errors.append(f"{where}: no {icon} link")
     if p.title in titles: errors.append(f"{where}: duplicate title with {titles[p.title]}")
     if p.desc in descs: errors.append(f"{where}: duplicate description with {descs[p.desc]}")
     titles[p.title] = path; descs[p.desc] = path
@@ -71,6 +79,13 @@ for path, f in routes.items():
         for part in (im.get("srcset") or "").split(","):
             s2 = part.strip().split(" ")[0]
             if s2 and not os.path.exists(os.path.join(PUB, s2.lstrip("/"))): errors.append(f"{where}: missing srcset {s2}")
+
+for f in ("robots.txt", "favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest",
+          "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "googlecccfbf2f7e9e5ae4.html", "assets/img/logo.png"):
+    if not os.path.exists(os.path.join(PUB, f)): errors.append(f"missing root file {f}")
+for f in ("_404.html", "_410.html"):
+    s = open(os.path.join(PUB, "pages", f)).read()
+    if "noindex" not in s or "G-33GS6ZYMSE" not in s: errors.append(f"{f}: needs noindex + Google tag")
 
 if errors:
     print("\n".join(errors)); print(f"FAILED: {len(errors)} problems"); sys.exit(1)

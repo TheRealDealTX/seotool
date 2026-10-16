@@ -43,7 +43,9 @@ if ($isProd) {
     header('X-Robots-Tag: noindex, nofollow');
 }
 
-// robots.txt and sitemap.xml are generated so they can differ per host.
+// sitemap.xml is generated from the route table. robots.txt is a static file in
+// production (the host answers *.txt itself); this branch only runs on hosts that
+// route it here, such as a local preview.
 if ($path === '/robots.txt') {
     header('Content-Type: text/plain; charset=utf-8');
     echo $isProd
@@ -53,9 +55,11 @@ if ($path === '/robots.txt') {
 }
 if ($path === '/sitemap.xml') {
     header('Content-Type: application/xml; charset=utf-8');
-    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
-    foreach ($routes as $p => [$file, $lastmod, $prio]) {
-        echo '  <url><loc>' . htmlspecialchars(ORIGIN . $p) . "</loc><lastmod>$lastmod</lastmod><priority>$prio</priority></url>\n";
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
+        . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";
+    foreach ($routes as $p => [$file, $lastmod, $prio, $img]) {
+        echo '  <url><loc>' . htmlspecialchars(ORIGIN . $p) . "</loc><lastmod>$lastmod</lastmod><priority>$prio</priority>"
+            . '<image:image><image:loc>' . ORIGIN . "/assets/og/$img.jpg</image:loc></image:image></url>\n";
     }
     echo "</urlset>\n";
     exit;

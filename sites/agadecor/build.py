@@ -66,7 +66,7 @@ def footer_html():
         <p><a href="mailto:{SITE['email']}">{SITE['email']}</a></p>
       </div>
       <div>
-        <h4>Services</h4>
+        <p class="f-head">Services</p>
         <ul>
           <li><a href="/services">Plan · Design · Décor</a></li>
           <li><a href="/wedding-planing">Planning &amp; Packages</a></li>
@@ -75,7 +75,7 @@ def footer_html():
         </ul>
       </div>
       <div>
-        <h4>Rentals</h4>
+        <p class="f-head">Rentals</p>
         <ul>
           <li><a href="/decor-rental">Décor Rental</a></li>
           <li><a href="/decor-rental#backdrops">Flower Walls &amp; Backdrops</a></li>
@@ -86,7 +86,7 @@ def footer_html():
         </ul>
       </div>
       <div>
-        <h4>Studio</h4>
+        <p class="f-head">Studio</p>
         <ul>
           <li><a href="/about-us">About</a></li>
           <li><a href="/vendors">Chicago Venue Guide</a></li>
@@ -116,6 +116,8 @@ def org_schema():
         "url": ORIGIN + "/",
         "email": SITE["email"],
         "slogan": SITE["tagline"],
+        "logo": {"@type": "ImageObject", "url": ORIGIN + "/assets/img/logo.png", "width": 512, "height": 512},
+        "image": ORIGIN + "/assets/og/hero-aisle.jpg",
         "description": "Wedding and event décor studio serving Chicago and the North Shore: planning, design, custom florals and décor rentals.",
         "areaServed": [{"@type": "City", "name": c} for c in SITE["area_served"]],
         "knowsAbout": ["Wedding decor", "Event decor", "Wedding flowers", "Flower wall rental", "Wedding planning", "Décor rental"],
@@ -148,34 +150,75 @@ def faq_html(faqs):
     ) + "</div>"
 
 
-def layout(path, title, desc, body, schema=None, og_image="hero-aisle", header_class="", og_type="website", extra_head=""):
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-33GS6ZYMSE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-33GS6ZYMSE');
+</script>
+"""
+
+OG_USED = set()
+
+
+def layout(path, title, desc, body, schema=None, og_image="hero-aisle", header_class="", og_type="website",
+           extra_head="", robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+           published=None, modified=None):
+    OG_USED.add(og_image)
     canonical = ORIGIN + (path if path != "/" else "/")
-    graph = [org_schema(), {
+    og_url = f"{ORIGIN}/assets/og/{og_image}.jpg"
+    graph = [org_schema(), {"@type": "WebSite", "@id": ORIGIN + "/#site", "url": ORIGIN + "/", "name": SITE["name_plain"],
+                            "alternateName": SITE["name"], "publisher": {"@id": ORIGIN + "/#org"}, "inLanguage": "en-US"}, {
         "@type": "WebPage", "@id": canonical + "#webpage", "url": canonical, "name": title,
-        "description": desc, "isPartOf": {"@type": "WebSite", "@id": ORIGIN + "/#site", "url": ORIGIN + "/", "name": SITE["name_plain"]},
-        "primaryImageOfPage": ORIGIN + f"/assets/img/{og_image}.webp", "inLanguage": "en-US",
+        "description": desc, "isPartOf": {"@id": ORIGIN + "/#site"}, "about": {"@id": ORIGIN + "/#org"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": og_url, "width": 1200, "height": 630}, "inLanguage": "en-US",
+        **({"datePublished": published} if published else {}), "dateModified": modified or TODAY,
     }] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
+    # Preload the LCP image: the first eagerly loaded image in the page body.
+    m = re.search(r'<img src="(/assets/img/[^"]+)" srcset="([^"]+)" sizes="([^"]+)"[^>]*fetchpriority="high"', body)
+    preload = (f'<link rel="preload" as="image" href="{m.group(1)}" imagesrcset="{m.group(2)}" imagesizes="{m.group(3)}" fetchpriority="high">\n'
+               if m else "")
+    article = ""
+    if og_type == "article":
+        article = (f'<meta property="article:published_time" content="{published}">\n'
+                   f'<meta property="article:modified_time" content="{modified}">\n')
     return f"""<!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-US" class="no-js">
 <head>
-<meta charset="utf-8">
+{GTAG}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{canonical}">
 <meta name="theme-color" content="#120e0c">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{SITE['name']}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{ORIGIN}/assets/img/{og_image}.webp">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="{og_url}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{esc(title)}">
+{article}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{og_url}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap">
+{preload}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
@@ -240,7 +283,8 @@ META = {}    # path -> dict(title, desc, lastmod, priority)
 def add(path, title, desc, body, priority="0.7", **kw):
     assert path not in PAGES, path
     PAGES[path] = layout(path, title, desc, body, **kw)
-    META[path] = {"title": title, "desc": desc, "lastmod": TODAY, "priority": priority}
+    META[path] = {"title": title, "desc": desc, "lastmod": kw.get("modified") or TODAY, "priority": priority,
+                  "image": kw.get("og_image", "hero-aisle")}
 
 
 THEMES = [
@@ -463,7 +507,7 @@ def build_home():
 </section>
 {cta_block()}
 """
-    add("/", "Wedding & Event Decor Chicago | Flowers, Rentals & Design — AGA Décor",
+    add("/", "Wedding & Event Decor in Chicago | AGA Décor",
         "Wedding and event decor in Chicago and the North Shore: custom wedding flowers, flower wall rental, backdrops, linens and full plan-design-décor service.",
         body, priority="1.0", schema=[faq_schema(HOME_FAQ)], header_class="")
 
@@ -526,8 +570,8 @@ def build_services():
 </section>
 {cta_block(service="design")}
 """
-    add("/services", "Wedding Event Decoration Services | Plan · Design · Décor — AGA Décor",
-        "Full-service wedding and event decoration in Chicago: consultation and floor plan, theme and colour design, then complete ceremony and reception décor install.",
+    add("/services", "Wedding & Event Decoration Services Chicago | AGA Décor",
+        "Full-service wedding and event decoration in Chicago: consultation, floor plan, theme and colour design, then a complete ceremony and reception install.",
         body, priority="0.9", og_image="reception-blush",
         schema=[breadcrumb([("Home", "/"), ("Services", "/services")]), faq_schema(faqs),
                 {"@type": "Service", "name": "Wedding and event decoration", "serviceType": "Event decor",
@@ -612,8 +656,8 @@ def build_rental():
 </section>
 {cta_block("Build your rental list.", "Tell us the venue and guest count and we’ll suggest quantities, pair linens with centrepieces and send a single quote with delivery included.", "rental")}
 """
-    add("/decor-rental", "Flower Wall & Décor Rental Chicago | Backdrops, Linens, Furniture — AGA Décor",
-        "Flower wall rental in Chicago plus backdrops, linens, furniture, vases, gold stands and crystal décor. Delivery, set-up and tear-down included with every rental.",
+    add("/decor-rental", "Flower Wall & Décor Rental Chicago | AGA Décor",
+        "Flower wall rental in Chicago plus backdrops, linens, furniture, vases, gold stands and crystal décor — delivery, set-up and tear-down included.",
         body, priority="0.9", og_image="pink-hydrangea",
         schema=[breadcrumb([("Home", "/"), ("Décor Rental", "/decor-rental")]), faq_schema(faqs),
                 {"@type": "Service", "name": "Flower wall and décor rental", "serviceType": "Event decor rental",
@@ -621,23 +665,23 @@ def build_rental():
 
 
 SUBRENTALS = {
-    "/linens": ("Linens", "Wedding linen rental: tablecloths, overlays &amp; chair covers", "linen-texture", "Linen Rental Chicago | Tablecloths, Overlays & Chair Covers — AGA Décor",
-                "Wedding and event linen rental in Chicago: sequin and satin tablecloths, champagne overlays, chair covers, sashes, runners and napkins with delivery and set-up.",
+    "/linens": ("Linens", "Wedding linen rental: tablecloths, overlays &amp; chair covers", "linen-texture", "Wedding Linen Rental Chicago | AGA Décor",
+                "Wedding linen rental in Chicago: sequin and satin tablecloths, champagne overlays, chair covers, sashes, runners and napkins, delivered and set up.",
                 "linens",
                 "Linens are the largest surface in the room, so they set the mood before the first flower is placed. We stock satin, sequin, velvet and textured overlays in neutrals and seasonal colours, sized for rounds, banquets, cocktail tables and sweetheart tables.",
                 [("Colour first", "Pick linens after your florals so the petals pop rather than disappear — blush on ivory, burgundy on champagne, white on black."),
                  ("Mix textures", "A sequin head table with satin guest tables, or velvet runners over linen, adds depth without adding colour."),
                  ("Floor-length", "Floor-length cloths hide table legs and storage and photograph far better than lap-length."),
                  ("Chairs count too", "Chair covers and sashes are optional with Chiavari chairs, but they transform a banquet-hall chair.")]),
-    "/furniture": ("Furniture", "Event furniture rental: lounges, sweetheart &amp; acrylic tables", "head-table", "Event Furniture Rental Chicago | Lounge, Acrylic & Sweetheart Tables — AGA Décor",
-                   "Wedding furniture rental in Chicago: velvet loveseats, lounge vignettes, acrylic and half-round tables, Chiavari chairs and dessert tables, delivered and set up.",
+    "/furniture": ("Furniture", "Event furniture rental: lounges, sweetheart &amp; acrylic tables", "head-table", "Event & Wedding Furniture Rental Chicago | AGA Décor",
+                   "Wedding furniture rental in Chicago: velvet loveseats, lounge sets, acrylic and half-round tables, Chiavari chairs and dessert tables, delivered and set up.",
                    "furniture",
                    "Furniture turns a big room into a series of places: a lounge where grandparents can sit, a sweetheart table that feels like a stage, a dessert table that becomes a destination. Everything is delivered, placed to the floor plan and collected after.",
                    [("Sweetheart tables", "Acrylic, mirrored or skirted — sized for two with room for florals."),
                     ("Lounge vignettes", "Velvet loveseats, accent chairs, rugs and side tables for cocktail hour."),
                     ("Head tables", "60\" half-rounds and banquets to build long or curved head tables."),
                     ("Chairs", "Chiavari chairs in gold, silver and clear, with cushions to match your palette.")]),
-    "/vases": ("Vases & Glass", "Vase &amp; glassware rental for wedding centrepieces", "compote-arrangement", "Vase Rental for Wedding Centerpieces Chicago — AGA Décor",
+    "/vases": ("Vases & Glass", "Vase &amp; glassware rental for wedding centrepieces", "compote-arrangement", "Centerpiece Vase Rental Chicago | AGA Décor",
                "Rent wedding centerpiece vases in Chicago: glass cylinders, gold hexagon vessels, trumpet vases, bud vases, mercury votives and hurricanes for every table.",
                "glass",
                "The vessel decides the silhouette of every centrepiece. Mix heights — a tall trumpet vase on every other table and low clusters between — and the room feels designed rather than repeated.",
@@ -645,7 +689,7 @@ SUBRENTALS = {
                 ("Gold & ceramic", "Mini hexagons and compotes for low, lush garden arrangements."),
                 ("Bud clusters", "Five to nine bud vases down a banquet table read like a runner."),
                 ("Candle glass", "Mercury votives and hurricanes bring the warm glow photographers love.")]),
-    "/extras": ("Extras & Lighting", "Lighting, stands, crystal &amp; finishing touches", "candles", "Wedding Decor Extras Chicago | Up-Lighting, Crystal & Gold Stands — AGA Décor",
+    "/extras": ("Extras & Lighting", "Lighting, stands, crystal &amp; finishing touches", "candles", "Up-Lighting, Crystal & Gold Stand Rental | AGA Décor",
                 "Finishing touches for Chicago weddings and events: up-lighting, candelabra, gold floor urns, Paris stands, crystal holders, charger plates and signage.",
                 "metal",
                 "The extras are what guests remember without knowing why: a wash of up-lighting on bare walls, a gold urn at the entrance, a crystal tree catching candlelight. They’re easy to add to any rental or design package.",
@@ -740,7 +784,7 @@ def build_packages():
 </section>
 {cta_block(service="planning")}
 """
-    add("/wedding-planing", "Wedding Planning & Coordination Packages Chicago — AGA Décor",
+    add("/wedding-planing", "Wedding Planning & Coordination Chicago | AGA Décor",
         "Wedding planning and month-of coordination in Chicago, plus floral packages and à la carte décor. Tailored proposals with delivery, set-up and tear-down.",
         body, priority="0.8", og_image="bouquet-bride",
         schema=[breadcrumb([("Home", "/"), ("Services", "/services"), ("Planning & Packages", "/wedding-planing")]), faq_schema(faqs)])
@@ -783,7 +827,7 @@ def build_destination():
 </section>
 {cta_block(service="destination")}
 """
-    add("/destination-weddings", "Destination Wedding Décor & Honeymoon Planning — AGA Décor",
+    add("/destination-weddings", "Destination Wedding Décor & Honeymoons | AGA Décor",
         "Destination wedding decor designed for the location — beach, vineyard or villa — plus honeymoon planning so you can arrive relaxed. Based in Chicago.",
         body, priority="0.7", og_image="beach-arch",
         schema=[breadcrumb([("Home", "/"), ("Services", "/services"), ("Destination Weddings", "/destination-weddings")])])
@@ -842,8 +886,8 @@ def build_gallery():
 </div>
 {cta_block("Seen a look you love?", "Send us the theme name or a screenshot and we’ll show you how it could work at your venue, with your colours.")}
 """
-    add("/gallery", "Wedding Decor Inspiration Gallery | Themes & Palettes — AGA Décor",
-        "Browse wedding decor inspiration by theme: romantic blush, black white and gold, garden coral, dusty rose, vintage champagne, ceremony arches and flower walls.",
+    add("/gallery", "Wedding Decor Inspiration Gallery | AGA Décor",
+        "Wedding decor inspiration by theme: romantic blush, black white and gold, garden coral, dusty rose, vintage champagne, ceremony arches and flower walls.",
         body, priority="0.7", og_image="reception-toast",
         schema=[breadcrumb([("Home", "/"), ("Gallery", "/gallery")])])
 
@@ -902,7 +946,7 @@ def build_vendors():
 </section>
 {cta_block()}
 """
-    add("/vendors", "Chicago Wedding Venues & Vendor Guide — AGA Décor",
+    add("/vendors", "Chicago Wedding Venues & Vendor Guide | AGA Décor",
         "A guide to popular Chicago wedding venues — banquet halls, hotels, country clubs and gardens — with decor tips for each type of room and the vendors to book.",
         body, priority="0.6", og_image="ballroom",
         schema=[breadcrumb([("Home", "/"), ("About", "/about-us"), ("Venue Guide", "/vendors")])])
@@ -1033,7 +1077,7 @@ def build_privacy():
   </div>
 </section>
 """
-    add("/privacy-policy", "Privacy Policy — AGA Décor", "Privacy policy and image credits for agadecor.com.", body, priority="0.2", og_image="linen-texture")
+    add("/privacy-policy", "Privacy Policy | AGA Décor", "Privacy policy for agadecor.com: what AGA Décor collects from inquiries, how it is used and kept, plus photo credits for images on the site.", body, priority="0.2", og_image="linen-texture")
 
 
 def build_blog():
@@ -1066,10 +1110,11 @@ def build_blog():
   <div class="wrap"><p class="eyebrow reveal">Keep reading</p><h2 class="reveal">More from the journal</h2><div class="posts">{rel}</div></div>
 </section>"""
         schema = [breadcrumb(trail), {
-            "@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "image": ORIGIN + f"/assets/img/{p['image']}.webp",
+            "@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "image": {"@type": "ImageObject", "url": ORIGIN + f"/assets/og/{p['image']}.jpg", "width": 1200, "height": 630},
             "datePublished": p["published"], "dateModified": p["modified"], "mainEntityOfPage": ORIGIN + p["path"],
             "author": {"@id": ORIGIN + "/#org"}, "publisher": {"@id": ORIGIN + "/#org"}}]
-        add(p["path"], p["title"], p["desc"], body, priority="0.6", og_image=p["image"], og_type="article", schema=schema)
+        add(p["path"], p["title"], p["desc"], body, priority="0.6", og_image=p["image"], og_type="article", schema=schema,
+            published=p["published"], modified=p["modified"])
         META[p["path"]]["lastmod"] = p["modified"]
 
     cards = "".join(post_card(p) for p in blog.POSTS)
@@ -1078,7 +1123,7 @@ def build_blog():
                      "wedding-flowers", [("Home", "/"), ("Journal", "/blog")]) + f"""
 <section class="section"><div class="wrap"><div class="posts">{cards}</div></div></section>
 {cta_block()}"""
-    add("/blog", "Wedding Decor Ideas & Trends Journal — AGA Décor",
+    add("/blog", "Wedding Decor Ideas & Trends Journal | AGA Décor",
         "Wedding decor ideas, colour trends, wedding flower decoration tips and flower wall rental guides from AGA Décor, a Chicago wedding and event decor studio.",
         body, priority="0.7", og_image="wedding-flowers",
         schema=[breadcrumb([("Home", "/"), ("Journal", "/blog")]),
@@ -1109,7 +1154,7 @@ def build_404():
     </div>
   </div>
 </section>"""
-    return layout("/404", "Page not found — AGA Décor", "The page you were looking for could not be found.", body)
+    return layout("/404", "Page Not Found | AGA Décor", "The page you were looking for could not be found.", body, robots="noindex, follow")
 
 
 def build_410():
@@ -1122,7 +1167,7 @@ def build_410():
     <a class="btn btn-gold" href="/">Visit AGA Décor</a>
   </div>
 </section>"""
-    return layout("/410", "Page removed — AGA Décor", "This page has been permanently removed.", body, header_class="light")
+    return layout("/410", "Page Removed | AGA Décor", "This page has been permanently removed.", body, header_class="light", robots="noindex, follow")
 
 
 # --------------------------------------------------------------------------- write
@@ -1151,13 +1196,20 @@ def main():
         open(os.path.join(PAGES_DIR, fname), "w").write(doc)
         routes[path] = {"file": fname, **META[path]}
     open(os.path.join(PAGES_DIR, "_404.html"), "w").write(build_404())
+    # Share images: 1200x630 JPGs in assets/og (made from assets/img with Pillow, see README).
+    og_dir = os.path.join(PUB, "assets/og")
+    missing = [n for n in OG_USED if not os.path.exists(os.path.join(og_dir, n + ".jpg"))]
+    assert not missing, f"missing og images: {missing}"
+    for f in os.listdir(og_dir):
+        if f[:-4] not in OG_USED:
+            os.remove(os.path.join(og_dir, f))
     open(os.path.join(PAGES_DIR, "_410.html"), "w").write(build_410())
 
     def php(v):
         return "'" + str(v).replace("\\", "\\\\").replace("'", "\\'") + "'"
-    lines = ["<?php", "// Generated by build.py — do not edit. path => [file, lastmod, priority]", "return ["]
+    lines = ["<?php", "// Generated by build.py — do not edit. path => [file, lastmod, priority, og image]", "return ["]
     for path, r in routes.items():
-        lines.append(f"  {php(path)} => [{php(r['file'])}, {php(r['lastmod'])}, {php(r['priority'])}],")
+        lines.append(f"  {php(path)} => [{php(r['file'])}, {php(r['lastmod'])}, {php(r['priority'])}, {php(r['image'])}],")
     lines.append("];\n")
     open(os.path.join(PUB, "routes.php"), "w").write("\n".join(lines))
     print(f"built {len(routes)} pages + 404/410, css/js v{VERSION}")

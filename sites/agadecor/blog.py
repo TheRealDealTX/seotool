@@ -6,7 +6,7 @@ POSTS = [
     {
         "path": "/blog/wedding-flower-decoration-ideas",
         "short": "Wedding flower decoration ideas",
-        "title": "Wedding Flower Decoration Ideas: 14 Looks for Ceremony & Reception",
+        "title": "14 Wedding Flower Decoration Ideas | AGA Décor",
         "h1": "Wedding flower decoration ideas for every part of the day",
         "desc": "Wedding flower decoration ideas from aisle to after-party: ceremony arches, hanging installs, centrepieces, cake flowers and budget-smart tricks.",
         "category": "Florals", "image": "hero-aisle", "minutes": 7,
@@ -69,7 +69,7 @@ POSTS = [
     {
         "path": "/blog/wedding-reception-at-home-decorations",
         "short": "Wedding reception at home decorations",
-        "title": "Wedding Reception at Home Decorations: How to Style a Backyard Wedding",
+        "title": "Wedding Reception at Home Decorations | AGA Décor",
         "h1": "Wedding reception at home: decoration ideas for backyards & living rooms",
         "desc": "How to decorate a wedding reception at home: tent and lighting plans, backyard layouts, home wedding decoration ideas, rentals and a day-of checklist.",
         "category": "Planning", "image": "garden-reception", "minutes": 6,
@@ -127,7 +127,7 @@ POSTS = [
     {
         "path": "/blog/flower-wall-rental-guide",
         "short": "Flower wall rental guide",
-        "title": "Flower Wall Rental Guide: Sizes, Styles & What to Ask (Chicago)",
+        "title": "Flower Wall Rental Guide: Sizes & Styles | AGA Décor",
         "h1": "Flower wall rental: a practical guide to sizes, styles and placement",
         "desc": "Everything to know before a flower wall rental in Chicago: standard sizes, rose vs. greenery walls, placement, power and space needs, and questions to ask.",
         "category": "Rentals", "image": "pink-hydrangea", "minutes": 5,
@@ -179,9 +179,9 @@ POSTS = [
     {
         "path": "/single-post/2015/09/27/Give-me-everything-that-sparkles",
         "short": "Give me everything that sparkles!",
-        "title": "Give Me Everything That Sparkles! Glitz, Gold & Blush Wedding Décor",
+        "title": "Give Me Everything That Sparkles! Glitz & Gold Décor",
         "h1": "Give me everything that sparkles!",
-        "desc": "Glitz, gold and blush pink are timeless wedding décor elements — from a 1920s Gatsby theme to a modern Hollywood affair. How to style sparkle without overdoing it.",
+        "desc": "Glitz, gold and blush pink are timeless wedding décor, from a 1920s Gatsby theme to modern Hollywood glam. How to style sparkle without overdoing it.",
         "category": "Trends", "image": "crystal-chandelier", "minutes": 4,
         "published": "2015-09-27", "modified": "2026-10-09",
         "cta": "Dreaming of gold, crystal and blush? Ask about our crystal candle holders, sequin backdrops and gold stands.",
@@ -216,9 +216,9 @@ POSTS = [
     {
         "path": "/single-post/2015/11/15/Trends-of-2016",
         "short": "Trends of 2016: Lustre, Lavish & Sorbet",
-        "title": "Wedding Trends of 2016: Lustre, Lavish & Sorbet — and Where They Went",
+        "title": "Trends of 2016: Lustre, Lavish & Sorbet | AGA Décor",
         "h1": "Trends of 2016: Lustre, Lavish and Sorbet",
-        "desc": "Our three wedding décor trends for 2016 — Lustre, Lavish and Sorbet — first shown at a Chicago bridal expo, and how each has evolved into today’s wedding palettes.",
+        "desc": "Lustre, Lavish and Sorbet: our 2016 wedding décor trends from a Chicago bridal expo, and how each one evolved into today’s wedding palettes.",
         "category": "Trends", "image": "reception-blush", "minutes": 4,
         "published": "2015-11-15", "modified": "2026-10-09",
         "cta": "Want a palette that feels current but won’t date your photos? Let’s build one together.",
@@ -255,7 +255,7 @@ POSTS = [
     {
         "path": "/single-post/2014/03/01/Modern-Luxury-Bride-Northshore-Magazine",
         "short": "Modern luxury bridal style on the North Shore",
-        "title": "Modern Luxury Bride & North Shore Magazine Style: Wedding Décor Ideas",
+        "title": "Modern Luxury Bride & Northshore Magazine Style Décor",
         "h1": "Modern luxury bridal style, North Shore edition",
         "desc": "Magazine-worthy wedding décor for Chicago’s North Shore: how luxury bridal editorials style Evanston, Winnetka, Highland Park and Lake Forest celebrations.",
         "category": "Inspiration", "image": "ballroom", "minutes": 5,
