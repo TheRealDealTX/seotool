@@ -49,8 +49,9 @@ FIRM = {
     "city": "Orlando",
     "region": "FL",
     "zip": "32803",
-    # Local office(s) shown on the site; add the Pensacola office here when available.
+    # Local offices shown on the site (first one is the primary local office).
     "offices": [
+        {"label": "Pensacola office", "street": "13 Palafox Place, Ste 200", "city": "Pensacola", "region": "FL", "zip": "32502"},
         {"label": "Destin office", "street": "34990 Emerald Coast Pkwy, Ste 359", "city": "Destin", "region": "FL", "zip": "32541"},
     ],
 }
@@ -299,7 +300,7 @@ a Florida property insurance claims law firm.</p>
 </div>
 </div>
 </div>
-<p class="footer-legal">Attorney advertising. This website is sponsored by {FIRM['legal_name']}, which is responsible for its content; principal office: {FIRM['city']}, Florida; additional office in {', '.join(o['city'] for o in FIRM['offices'])}, Florida.
+<p class="footer-legal">Attorney advertising. This website is sponsored by {FIRM['legal_name']}, which is responsible for its content; principal office: {FIRM['city']}, Florida; additional offices in {' and '.join(o['city'] for o in FIRM['offices'])}, Florida.
 The information on this site is general information, not legal advice, and reading it or contacting us does not create an attorney-client relationship.
 Fees: no attorney fee unless there is a recovery; ask how case costs are handled under the written fee agreement. Past results do not guarantee a similar outcome. The hiring of a lawyer is an important decision that should not be based solely on advertisements.
 In a life-threatening emergency, call 911 and follow instructions from Escambia County and Santa Rosa County officials.</p>
