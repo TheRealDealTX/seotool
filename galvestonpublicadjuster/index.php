@@ -5,6 +5,7 @@ if (PHP_SAPI === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['REQUEST_U
 require __DIR__ . '/inc/config.php';
 require __DIR__ . '/inc/layout.php';
 require __DIR__ . '/inc/content.php';
+require __DIR__ . '/inc/links.php';
 require __DIR__ . '/inc/art.php';
 
 $uri  = $_SERVER['REQUEST_URI'] ?? '/';

@@ -11,9 +11,9 @@ echo page_hero(icon('user', 18) . ' About us', 'About Galveston Public Adjuster'
       <img class="adjuster-photo" src="<?= AUTHOR_PHOTO ?>" alt="<?= AUTHOR ?>, licensed Texas public adjuster" width="320" height="320" style="margin:0 0 20px">
       <span class="kicker">Meet your adjuster</span>
       <h2><?= AUTHOR ?></h2>
-      <p><?= AUTHOR ?> is a licensed Texas public adjuster who represents homeowners, landlords and businesses across Galveston Island and Galveston County. Joseph's focus is the claims that matter most on the coast: TWIA windstorm and hurricane losses, fire and smoke damage, flood and water claims, and claims that have been denied or underpaid.</p>
-      <p>Joseph handles each file personally — from the first inspection to the final payment. Joseph also writes the weekly guides on our <a href="/blog/">blog</a>, built on the questions Galveston owners ask most.</p>
-      <p>Galveston Public Adjuster is a service of <strong><?= FIRM ?></strong> (Texas Department of Insurance public adjuster license <strong>#<?= LICENSE_NO ?></strong>), the firm behind <a href="<?= SISTER_SITE ?>" rel="noopener">TX Public Adjusting</a>, which represents homeowners and businesses across Texas — from hurricanes on the coast to hail and tornadoes inland.</p>
+      <p><?= AUTHOR ?> is a licensed Texas public adjuster who represents homeowners, landlords and businesses across Galveston Island and Galveston County. Joseph's focus is the claims that matter most on the coast: <a href="/twia-claims-expert/">TWIA windstorm and hurricane losses</a>, <a href="/galveston-fire-claims/">fire and smoke damage</a>, flood and water claims, and claims that have been <?= post_link('how-to-successfully-appeal-an-insurance-denial', 'denied or underpaid', '/twia-claims-expert/') ?>.</p>
+      <p>Joseph handles each file personally — from the first inspection to the final payment. Joseph also writes the weekly guides on our <a href="/blog/">blog</a>, built on the questions Galveston owners ask most, and publishes the tools we use on real files: the <a href="/calculators/">shingle wind and claim payout calculators</a>, plain-English pages on <a href="/texas-windstorm-rules/">Texas windstorm rules</a> and <a href="/galveston-local-code/">Galveston's building code</a>, the island's <a href="/galveston-storm-history/">storm history</a>, and a weekly log of <a href="/weather-events/">70+ mph wind days</a>.</p>
+      <p><a href="/">Galveston Public Adjuster</a> is a service of <strong><?= FIRM ?></strong> (Texas Department of Insurance public adjuster license <strong>#<?= LICENSE_NO ?></strong>), the firm behind <a href="<?= SISTER_SITE ?>" rel="noopener">TX Public Adjusting</a>, which represents homeowners and businesses across Texas — from hurricanes on the coast to hail and tornadoes inland.</p>
       <p>Every claim is documented with <strong>Matterport 3D imaging</strong> and estimated in <strong>Xactimate</strong>, the same estimating software insurance carriers use, so nothing is overlooked and every line item can be defended.</p>
       <?= phone_link('btn btn-cta btn-lg', icon('phone', 20) . ' Call for an expert consultation') ?>
     </div>
@@ -38,3 +38,4 @@ echo page_hero(icon('user', 18) . ' About us', 'About Galveston Public Adjuster'
     <?= banner('Talk to Joseph about your claim.', 'Call for an expert consultation — free and without obligation.') ?>
   </div>
 </section>
+<?= related_section('about') ?>

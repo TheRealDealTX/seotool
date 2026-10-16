@@ -26,4 +26,6 @@ $err = isset($_GET['error']);
   <h2>What to have ready</h2>
   <ul class="checks"><li>Your policy or declarations page (TWIA, homeowners, flood)</li><li>The date of loss and your claim number, if filed</li><li>Photos or video of the damage</li><li>Any estimate, offer or denial letter from the insurer</li></ul>
   <p>Don't have everything? Call anyway — we can help you get it.</p>
+  <h2>While you wait</h2>
+  <ul class="checks"><li>Run the <a href="/calculators/#claim-calc">claim payout calculator</a> to compare the insurer's offer with the full loss.</li><li>Check the <a href="/texas-windstorm-rules/#deadlines">TWIA claim deadlines</a> — the one-year filing window is the one that bites.</li><li>Fire loss? Start with <a href="/galveston-fire-claims/">what fire estimates leave out</a>.</li><li>Browse the <a href="/blog/">claim guides</a> for your type of loss.</li></ul>
 </div></section>

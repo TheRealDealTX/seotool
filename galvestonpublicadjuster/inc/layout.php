@@ -74,11 +74,17 @@ function render_page(array $m, string $body) {
         '@type' => 'WebSite', '@id' => SITE_URL . '/#website', 'url' => SITE_URL . '/', 'name' => SITE_NAME,
         'publisher' => ['@id' => SITE_URL . '/#business'],
     ]], $m['schema'] ?? []);
+    // Breadcrumbs: visible trail at the top of <main> plus the matching BreadcrumbList. $m['crumbs']
+    // lists any parents between Home and this page, e.g. [['Blog', '/blog/']] on a post.
+    $crumbs = '';
     if ($path !== '/') {
-        $graph[] = ['@type' => 'BreadcrumbList', 'itemListElement' => [
-            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => SITE_URL . '/'],
-            ['@type' => 'ListItem', 'position' => 2, 'name' => $m['crumb'] ?? $m['title'], 'item' => $canon],
-        ]];
+        $trail = [['Home', '/']];
+        foreach ($m['crumbs'] ?? [] as $c) $trail[] = $c;
+        $trail[] = [$m['crumb'] ?? $m['title'], $path];
+        $graph[] = ['@type' => 'BreadcrumbList', 'itemListElement' => array_map(fn($i, $c) => [
+            '@type' => 'ListItem', 'position' => $i + 1, 'name' => $c[0], 'item' => SITE_URL . $c[1],
+        ], array_keys($trail), $trail)];
+        $crumbs = breadcrumbs($m['crumbs'] ?? [], $m['crumb'] ?? $m['title']);
     }
     $ld = json_encode(['@context' => 'https://schema.org', '@graph' => $graph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG);
     header('Content-Type: text/html; charset=utf-8');
@@ -127,6 +133,7 @@ function render_page(array $m, string $body) {
   </div>
 </header>
 <main id="main">
+<?= $crumbs ?>
 <?= $body ?>
 </main>
 <?= cta_band() ?>
@@ -144,10 +151,10 @@ function render_page(array $m, string $body) {
       <ul>
         <li><a href="/twia-claims-expert/">TWIA Windstorm Claims</a></li>
         <li><a href="/galveston-fire-claims/">Galveston Fire &amp; Smoke Claims</a></li>
-        <li><a href="/#claims">Hurricane &amp; Wind Damage</a></li>
-        <li><a href="/#claims">Flood &amp; Water Damage</a></li>
-        <li><a href="/#claims">Denied &amp; Underpaid Claims</a></li>
-        <li><a href="/#claims">Commercial Property Claims</a></li>
+        <li><a href="<?= post_url('hurricane-damage-claim-galveston', '/galveston-storm-history/') ?>">Hurricane &amp; Wind Damage</a></li>
+        <li><a href="<?= post_url('flood-insurance-claims-process-galveston', '/#claims') ?>">Flood &amp; Water Damage</a></li>
+        <li><a href="<?= post_url('why-would-insurance-deny-a-claim', '/#claims') ?>">Denied &amp; Underpaid Claims</a></li>
+        <li><a href="<?= post_url('commercial-public-adjuster-galveston', '/#claims') ?>">Commercial Property Claims</a></li>
       </ul>
     </div>
     <div>

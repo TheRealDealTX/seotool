@@ -106,7 +106,7 @@ echo page_hero(icon('calc', 18) . ' Free calculators', 'What Wind Does to Shingl
           <tr><td><strong>130–150 mph</strong></td><td><span class="tag red">Roof failure</span></td><td><span class="tag red">Decking exposed</span></td><td><span class="tag red">Widespread loss</span></td><td><span class="tag red">Missing shingles</span></td><td><span class="tag hot">Creasing, some loss</span></td></tr>
         </tbody>
       </table></div>
-      <p class="small muted">Typical outcomes for a properly installed roof in open coastal exposure. Aged sealant, poor nailing and beachfront exposure all lower the speed at which damage starts.</p>
+      <p class="small muted">Typical outcomes for a properly installed roof in open coastal exposure. Aged sealant, poor nailing and beachfront exposure all lower the speed at which damage starts. Check the <a href="/weather-events/">weather events log</a> for the peak gust on the day your roof was damaged.</p>
 
       <h3>What the test classes mean</h3>
       <div class="grid g3">
@@ -135,7 +135,7 @@ echo page_hero(icon('calc', 18) . ' Free calculators', 'What Wind Does to Shingl
       </tbody>
     </table></div>
     <p class="small muted">Wind warranties generally cover shingle blow-off for a limited period (often 15 years) and only when installed to the manufacturer's instructions. Terms change often — confirm against the manufacturer's current warranty document for your installation date. Compiled September 2026.</p>
-    <div class="callout warn"><?= icon('alert', 24) ?><div><strong>Claim tip:</strong> A shingle's wind rating is not a damage threshold your insurer gets to use against you. Aged sealant, installation defects and turbulence at ridges and corners mean roofs are routinely damaged below their rated speed — and that damage is still a covered windstorm loss.</div></div>
+    <div class="callout warn"><?= icon('alert', 24) ?><div><strong>Claim tip:</strong> A shingle's wind rating is not a damage threshold your insurer gets to use against you. Aged sealant, installation defects and turbulence at ridges and corners mean roofs are routinely damaged below their rated speed — and that damage is still a covered windstorm loss. If <a href="/twia-claims-expert/">TWIA</a> or your carrier called it "wear and tear," read <?= post_link('public-adjuster-for-roof-claim', 'our roof claim guide', '/twia-claims-expert/') ?>.</div></div>
   </div>
 </section>
 
@@ -177,7 +177,8 @@ echo page_hero(icon('calc', 18) . ' Free calculators', 'What Wind Does to Shingl
         </div>
       </div>
     </div>
-    <p class="small muted mt">Illustration only. Results depend on your policy, the documented damage and the outcome of negotiation; no recovery amount is guaranteed.</p>
+    <p class="small muted mt">Illustration only. Results depend on your policy, the documented damage and the outcome of negotiation; no recovery amount is guaranteed. Texas caps public adjuster fees at 10% — see the <a href="/texas-windstorm-rules/#pa">Texas public adjuster rules</a>. Think the offer is low? Read <?= post_link('home-insurance-adjuster-estimate-too-low', 'what to do when the adjuster\'s estimate is too low', '/blog/') ?>.</p>
   </div>
 </section>
+<?= related_section('calculators') ?>
 <script>document.addEventListener('input',function(e){if(e.target.id==='fee'){document.getElementById('fee-out').value=e.target.value+'%';}});</script>

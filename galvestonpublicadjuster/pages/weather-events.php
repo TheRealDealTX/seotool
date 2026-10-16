@@ -41,5 +41,8 @@ echo page_hero(icon('wind', 18) . ' Updated automatically every week', 'Galvesto
     <h2>How this page works</h2>
     <p>Once a week, our system pulls measured observations from the National Weather Service station at Scholes International Airport (KGLS) on Galveston Island and modeled daily wind maximums for the island from Open-Meteo. Any day with a gust or sustained wind at or above <?= WIND_EVENT_MPH ?> mph is logged here with its source. Modeled values are estimates; measured station data takes priority when available.</p>
     <p>Why 70 mph? It's roughly where older 60 mph–rated 3-tab shingles start to fail outright and where aged seal strips on higher-rated shingles begin to let go. Use the <a href="/calculators/">shingle wind damage calculator</a> to see what a given wind speed means for your roof.</p>
+    <h2>Had damage on one of these dates?</h2>
+    <p>Note the date: <a href="/texas-windstorm-rules/#deadlines">TWIA claims must be filed within one year</a> of the date of damage, and a dated wind record is strong evidence when an insurer says a roof is "wear and tear." Our <a href="/twia-claims-expert/">TWIA claims expert</a> page explains what to do after a denial or low offer, and the <?= post_link('hurricane-damage-claim-galveston', 'hurricane damage claim guide', '/blog/') ?> walks through filing step by step. For the island's major hurricanes before this log began, see <a href="/galveston-storm-history/">Galveston storm history</a>.</p>
   </div>
 </section>
+<?= related_section('weather-events') ?>

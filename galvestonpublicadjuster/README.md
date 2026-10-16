@@ -16,6 +16,7 @@ https://linen-sandpiper-973090.hostingersite.com. Server path: `/home/u914589053
 | `inc/layout.php` | `<head>`, JSON-LD, top banner, header, footer, 5-second popup, lead form, CTA banners |
 | `inc/art.php` | Inline SVG illustrations and the wind gauge |
 | `inc/content.php` | Blog and weather-event data access |
+| `inc/links.php` | Internal linking: the topic map (hub pages, blog categories, which links which), the "Related" sidebars, the "Keep reading" section under every hub page, "Read next" under every post, visible breadcrumbs, and the blog auto-linker |
 | `pages/*.php` | One file per page |
 | `api/lead.php` | Form handler: emails every lead to `jditt@risepublicadjusting.com` and logs it to `data/private/leads.php` (starts with `<?php exit;` so it cannot be read over the web) |
 | `cron/weekly.php` | Weekly job: 70+ mph wind check, then publishes the next blog post (CLI only) |
@@ -41,10 +42,28 @@ The Hostinger cron runs `17 12 * * 1`:
   deployed. Without a key the cron does nothing once the queue is empty. You can also keep adding
   JSON posts to `data/blog-queue/` and redeploy.
 
+## Internal linking
+
+Everything is driven by `inc/links.php` so links keep appearing as posts publish (nothing links to a post until
+`blog_post()` can find it in `data/published.json`):
+
+- **Hub pages** (`HUBS`) carry hand-written contextual links in their prose, a `related_list()` sidebar
+  (sibling hubs + 3 guides from their categories) and a `related_section()` at the bottom (3 guides + 3 hubs).
+- **Blog posts** get a visible breadcrumb (Home › Blog › post), a category-first "More guides" list, a
+  "Related resources" list of the hubs behind their category (`CATEGORY_HUBS`), a "Read next" block, and
+  **auto-links**: the first occurrence of each phrase in `AUTO_LINKS` (e.g. "proof of loss", "WPI-8",
+  "mortgage company", "appraisal") becomes a link — once per target, never inside an existing link or heading,
+  never to the post itself or a target the post already links by hand, never to an unpublished post, at most 6.
+  Add a phrase to `AUTO_LINKS` when you queue a post other posts talk about.
+- `/blog/` groups guides by category with the hubs for each category; the homepage and footer cards point at
+  the matching guide once it is published (`post_url()`), and at a hub page until then.
+- `tools/check.py` fails if any internal link is broken, or if an indexable page has fewer than 3 body links
+  out or fewer than 3 body links in (nav, footer and breadcrumbs don't count).
+
 ## Search Console: "Discovered - currently not indexed"
 
 Google first reported this on 10/3/26 for 13 of the 16 sitemap URLs, all with *Last crawled: N/A*. The pages
-are fine (200, fast, self-canonical, no `noindex`, linked from the nav and footer of every page): Google found
+are fine (200, fast, self-canonical, no `noindex`, linked from the nav and footer of every page, and since 10/16 from the body of related pages too — see *Internal linking*): Google found
 them in the sitemap but has not scheduled a crawl yet, which is normal for a domain launched on 9/28/26 with
 no backlinks. What is in the code is done; what remains is in Search Console and off-site:
 

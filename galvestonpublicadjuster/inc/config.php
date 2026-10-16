@@ -52,16 +52,16 @@ const AREAS = ['Galveston Island', 'Jamaica Beach', 'Bolivar Peninsula', 'Tiki I
 // also take the newest item they show.
 const LAUNCH_DATE  = '2026-09-28';
 const PAGE_UPDATED = [
-    'home'            => '2026-09-28',
-    'about'           => '2026-09-28',
-    'twia'            => '2026-09-28',
-    'fire'            => '2026-09-28',
-    'calculators'     => '2026-09-28',
-    'windstorm-rules' => '2026-09-28',
-    'local-code'      => '2026-09-28',
-    'storm-history'   => '2026-09-28',
-    'weather-events'  => '2026-09-28',
-    'blog'            => '2026-09-28',
-    'contact'         => '2026-09-28',
+    'home'            => '2026-10-16',
+    'about'           => '2026-10-16',
+    'twia'            => '2026-10-16',
+    'fire'            => '2026-10-16',
+    'calculators'     => '2026-10-16',
+    'windstorm-rules' => '2026-10-16',
+    'local-code'      => '2026-10-16',
+    'storm-history'   => '2026-10-16',
+    'weather-events'  => '2026-10-16',
+    'blog'            => '2026-10-16',
+    'contact'         => '2026-10-16',
     'privacy'         => '2026-09-28',
 ];

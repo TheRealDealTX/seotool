@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""QA against a running copy of the site: status codes, PHP errors, one H1, keyword counts.
+"""QA against a running copy of the site: status codes, PHP errors, one H1, keyword counts, internal links.
 
 Usage: python3 tools/check.py [base_url]   (default http://127.0.0.1:8099)
 Keyword counts are over visible text (head, scripts and styles removed), case-insensitive.
@@ -37,6 +37,35 @@ for p in PAGES + posts:
     bad += bool(flag)
     if 'type="application/rss+xml"' not in doc: flag.append('NO-RSS-LINK')
     print(f"{'FAIL' if flag else 'ok  '} {p:55} gpa={counts['galveston public adjuster']:2} twia={counts['twia expert']:2} title={len(title):2} {' '.join(flag)}")
+
+# Internal links: every in-page link resolves; every indexable page links out from its body (not
+# just the nav/footer) and is linked to from at least MIN_IN other pages' bodies. See inc/links.php.
+MIN_OUT, MIN_IN = 3, 3
+indexable = [p for p in PAGES + posts if p not in ('/privacy-policy/',)]
+body_links, inbound, checked, broken = {}, {p: set() for p in indexable}, {}, []
+for p in PAGES + posts:
+    doc = get(p)
+    main = re.search(r'<main id="main">(.*?)</main>', doc, re.S).group(1)
+    body = re.sub(r'<nav class="crumbs".*?</nav>', '', main, flags=re.S)
+    links = {l.split('#')[0] for l in re.findall(r'href="(/[^"]*)"', body)} - {p}
+    body_links[p] = links
+    for l in links:
+        if l in inbound: inbound[l].add(p)
+    for l in {l.split('#')[0] for l in re.findall(r'href="(/[^"]*)"', doc)}:
+        if l in checked: continue
+        try:
+            with urllib.request.urlopen(BASE + l) as r: checked[l] = r.status
+        except urllib.error.HTTPError as ex: checked[l] = ex.code
+        except Exception as ex: checked[l] = str(ex)
+        if checked[l] != 200: broken.append(f'{l} -> {checked[l]} (on {p})')
+for p in indexable:
+    flag = []
+    if len(body_links[p]) < MIN_OUT: flag.append(f'out={len(body_links[p])}<{MIN_OUT}')
+    if len(inbound[p]) < MIN_IN and p != '/': flag.append(f'in={len(inbound[p])}<{MIN_IN}')  # home: header brand + breadcrumbs on every page
+    bad += bool(flag)
+    print(f"{'FAIL' if flag else 'ok  '} links {p:49} out={len(body_links[p]):2} in={len(inbound[p]):2} {' '.join(flag)}")
+bad += bool(broken)
+print(f"{'FAIL' if broken else 'ok  '} {len(checked)} distinct internal URLs resolve" + (': ' + '; '.join(broken) if broken else ''))
 
 # Sitemap: every <lastmod> is a real date, never in the future, never before launch (see PAGE_UPDATED in inc/config.php).
 import datetime
