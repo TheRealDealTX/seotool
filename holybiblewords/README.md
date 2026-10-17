@@ -66,6 +66,21 @@ Kept on the device (`hbw.streak`). A day counts when the reader taps *Mark as re
 opens, explains, shares or makes an image of that day's verse. The streak stays alive
 until the end of the next day.
 
+## Streak reminder (push notifications)
+
+The streak card has *Remind me at 9 PM if I haven't read it*. The reminder fires at
+9 PM in the reader's own time zone, and only on days they haven't read the verse.
+- **Browsers and the Home Screen app** use Web Push (iPhone: iOS 16.4+, Home Screen
+  app only). `lib/push.php` implements VAPID + aes128gcm with ext-openssl and needs no
+  libraries. The key pair and subscriptions are created on the server in
+  `lib/private/`, which is blocked from the web and kept out of git.
+- **Cron:** Hostinger runs `/usr/bin/php …/public_html/lib/cron-reminders.php` every
+  15 minutes (cron uid `nX8r9OLfjA`). It sends to each subscriber whose local time is
+  past 9 PM and who hasn't read today, at most once a day, and deletes expired
+  subscriptions.
+- **Native app (Capacitor)** uses local notifications instead: two weeks of evening
+  reminders, rescheduled whenever the app opens or the verse is read.
+
 ## Features
 
 - **Seamless version switching.** The KJV / AB / APSD toggle in the header keeps you on the same

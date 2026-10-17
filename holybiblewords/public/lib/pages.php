@@ -27,7 +27,7 @@ function votd_card(string $ver, string $ymd, bool $h1 = false): string {
     $date = DateTimeImmutable::createFromFormat('!Y-m-d', $ymd)->format('l, F j, Y');
     $tag = $h1 ? 'h1' : 'h2';
     $note = fill_note($ver, $shownVer);
-    return '<section class="votd" data-votd data-date="' . $ymd . '" data-ver="' . $ver . '" data-ref="' . "$slug.$c.$v" . '">'
+    return '<section class="votd" id="votd" data-votd data-date="' . $ymd . '" data-ver="' . $ver . '" data-ref="' . "$slug.$c.$v" . '">'
         . '<div class="votd-head"><' . $tag . '>' . icon('sun') . ' Verse of the Day</' . $tag . '><time datetime="' . $ymd . '">' . $date . '</time></div>'
         . '<blockquote class="votd-text" lang="' . e(versions()[$shownVer]['lang']) . '">' . verse_html($text, $shownVer) . '</blockquote>'
         . '<p class="votd-ref"><a href="' . url_for($ver, $slug, $c, $v) . '">' . e(book_name($book, $shownVer) . " $c:" . range_label($row)) . ' <span class="badge">' . e(versions()[$shownVer]['short']) . '</span></a></p>'
@@ -72,11 +72,6 @@ function jump_box(string $ver, string $value = '', bool $autofocus = false): str
 function page_home(): array {
     $ver = 'ta';
     $today = site_today();
-    $popular = [['john', 3], ['psalms', 23], ['genesis', 1], ['romans', 8], ['1corinthians', 13], ['matthew', 5], ['proverbs', 3], ['isaiah', 40]];
-    $pop = '';
-    foreach ($popular as [$s, $c]) {
-        $pop .= '<a class="chip" href="' . url_for($ver, $s, $c) . '" data-keep-ver>' . e(ref_label(books()[$s], $ver, $c)) . '</a>';
-    }
     $vcards = '';
     foreach (versions() as $k => $v) {
         $n = array_sum(array_map(fn($b) => $b['available'][$k], books()));
@@ -86,10 +81,10 @@ function page_home(): array {
             . icon('right') . '</a>';
     }
     $body = '<section class="hero"><div class="wrap">'
+        . '<a class="streak-mini" href="#votd" data-streak-mini hidden aria-label="Your verse of the day streak"></a>'
         . '<h1>Read the Holy Bible Online</h1>'
         . '<p class="lead">The King James Version and Ang Pulong sa Dios (Cebuano) in one place. Jump to any chapter or verse, switch versions without losing your place, and get a new verse every day.</p>'
         . jump_box($ver)
-        . '<div class="chips">' . $pop . '</div>'
         . '</div></section>'
         . '<div class="wrap home-grid">'
         . votd_card($ver, $today)

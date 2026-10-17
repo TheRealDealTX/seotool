@@ -54,6 +54,25 @@ function api(string $path): void {
         return;
     }
 
+    if ($route === 'push') {
+        require_once __DIR__ . '/push.php';
+        $act = $seg[1] ?? '';
+        if ($act === 'key') { json_out(['key' => vapid_keys()['public'], 'hour' => REMINDER_HOUR], 200, 86400); return; }
+        if ($_SERVER['REQUEST_METHOD'] !== 'POST') { json_out(['error' => 'POST only'], 405, 0); return; }
+        $in = json_decode(file_get_contents('php://input', false, null, 0, 8192), true) ?: [];
+        if ($act === 'subscribe') {
+            $sub = $in['subscription'] ?? [];
+            $sub['tz'] = $in['tz'] ?? 'UTC';
+            $sub['hour'] = $in['hour'] ?? REMINDER_HOUR;
+            $ok = sub_save($sub);
+            if ($ok && !empty($in['read'])) sub_mark_read((string)$sub['endpoint'], (string)$in['read']);
+            json_out(['ok' => $ok], $ok ? 200 : 400, 0); return;
+        }
+        if ($act === 'read') { sub_mark_read((string)($in['endpoint'] ?? ''), (string)($in['date'] ?? '')); json_out(['ok' => true], 200, 0); return; }
+        if ($act === 'unsubscribe') { sub_delete((string)($in['endpoint'] ?? '')); json_out(['ok' => true], 200, 0); return; }
+        json_out(['error' => 'not found'], 404, 0); return;
+    }
+
     if ($route === 'votd') {
         $date = preg_match('/^\d{4}-\d{2}-\d{2}$/', $_GET['date'] ?? '') ? $_GET['date'] : site_today();
         [$slug, $c, $v] = votd_for($date);

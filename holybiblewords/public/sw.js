@@ -1,8 +1,8 @@
 /* Holy Bible Words service worker: app shell + offline reading. */
-const SHELL = 'hbw-shell-v9';
-const PAGES = 'hbw-pages-v9';
+const SHELL = 'hbw-shell-v10';
+const PAGES = 'hbw-pages-v10';
 const DATA = 'hbw-data';            // also filled by "Download for offline" on /app/
-const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=9', '/assets/js/app.js?v=9', '/assets/img/logo-64.png',
+const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=10', '/assets/js/app.js?v=10', '/assets/img/logo-64.png',
   '/assets/img/icon-192.png', '/data/books.json', '/data/versions.json', '/data/votd.json', '/manifest.webmanifest'];
 
 self.addEventListener('install', e => {
@@ -99,4 +99,24 @@ self.addEventListener('fetch', e => {
       return hit || (await net) || Response.error();
     })());
   }
+});
+
+// streak reminder (sent by lib/cron-reminders.php)
+self.addEventListener('push', e => {
+  let m = {};
+  try { m = e.data ? e.data.json() : {}; } catch (err) { /* plain text */ }
+  e.waitUntil(self.registration.showNotification(m.title || 'Verse of the Day', {
+    body: m.body || 'Read today’s verse to keep your streak.',
+    icon: '/assets/img/icon-192.png', badge: '/assets/img/icon-192.png',
+    tag: m.tag || 'streak', data: { url: m.url || '/verse-of-the-day/' },
+  }));
+});
+self.addEventListener('notificationclick', e => {
+  e.notification.close();
+  const url = new URL(e.notification.data?.url || '/', location.origin).href;
+  e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(list => {
+    const w = list.find(c => c.url.startsWith(location.origin));
+    if (w) { w.navigate(url).catch(() => {}); return w.focus(); }
+    return self.clients.openWindow(url);
+  }));
 });

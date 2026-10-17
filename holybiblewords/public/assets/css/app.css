@@ -396,3 +396,24 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 .week .ic { width: 16px; height: 16px; }
 .streak p { margin: 0; font-size: .88rem; }
 .votd-actions .btn.done { background: var(--surface); color: var(--green); border-color: var(--green); }
+
+/* streak badge at the top of the home page */
+.streak-mini { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 14px; padding: 7px 8px 7px 12px;
+  border-radius: 999px; background: rgba(255,255,255,.95); color: #1c2622; box-shadow: 0 4px 14px rgba(0,0,0,.15); font-size: .92rem; }
+.streak-mini:hover { text-decoration: none; }
+.streak-mini .streak-count { font-size: 1rem; color: #7a6a55; }
+.streak-mini .streak-count.on { color: #e0670b; }
+.streak-mini .streak-count .ic { width: 20px; height: 20px; }
+.mini-status { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; background: #e0670b; color: #fff; font-weight: 650; font-size: .82rem; }
+.streak-mini.done .mini-status { background: #1f9a5a; }
+.mini-status .ic { width: 15px; height: 15px; }
+.hero { padding-top: 22px; }
+
+/* reminder toggle under the streak */
+.reminder-btn { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 12px; padding: 10px 12px; border-radius: 12px;
+  border: 1px dashed var(--line); background: transparent; color: var(--text); font: 600 .9rem var(--sans); cursor: pointer; text-align: left; }
+.reminder-btn:hover { border-color: var(--accent); }
+.reminder-btn .ic { width: 18px; height: 18px; color: var(--accent); }
+.reminder-btn.on { border-style: solid; border-color: var(--green); color: var(--green); }
+.reminder-btn.on .ic { color: var(--green); }
+.reminder-btn small { margin-left: auto; color: var(--muted); font-weight: 500; }
