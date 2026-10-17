@@ -63,6 +63,11 @@ def page_file(r):
     return os.path.join(ROOT, "pages", "home.html" if r == "/" else r.strip("/") + ".html")
 
 
+for f in ["favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest",
+          "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "robots.txt", "sitemap.xml",
+          "googlecccfbf2f7e9e5ae4.html"]:
+    if not os.path.isfile(os.path.join(ROOT, f)):
+        errors.append("missing root file " + f)
 for r in REQUIRED:
     if r not in routes:
         errors.append("missing legacy route " + r)
@@ -101,6 +106,13 @@ for r in routes:
     for s in p.srcs:
         if s.startswith("/") and not os.path.isfile(os.path.join(ROOT, s.split("?")[0].lstrip("/"))):
             errors.append("%s: missing asset %s" % (r, s))
+    if src.count("googletagmanager.com/gtag/js?id=G-8097R535LY") != 1 or "gtag('config', 'G-8097R535LY')" not in src:
+        errors.append("%s: Google tag missing or duplicated" % r)
+    if r != "/404" and len(re.sub(r"&amp;", "&", p.title or "")) > 65:
+        errors.append("%s: title too long (%d)" % (r, len(p.title)))
+    for og in re.findall(r'property="og:image" content="https://organizedbyannefl\.com(/[^"]+)"', src):
+        if not os.path.isfile(os.path.join(ROOT, og.lstrip("/"))):
+            errors.append("%s: missing og:image %s" % (r, og))
     text = re.sub(r"<[^>]+>", " ", src)
     if re.search(r"\(\d{3}\)\s*\d{3}-\d{4}|\b\d{3}-\d{3}-\d{4}\b", text):
         errors.append("%s: contains a phone number" % r)

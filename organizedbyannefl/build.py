@@ -116,8 +116,12 @@ def ensure_small(name):
             im.resize((640, round(h * 640 / w)), Image.LANCZOS).save(dst, "WEBP", quality=74, method=6)
 
 
+IMG_ALT = {}
+
+
 def img(name, alt, sizes="100vw", lazy=True, cls="", extra=""):
     ensure_small(name)
+    IMG_ALT.setdefault(name, alt)
     w, h = img_dims(name)
     return ('<img src="/assets/img/{n}.webp" srcset="/assets/img/{n}-sm.webp 640w, /assets/img/{n}.webp {w}w" '
             'sizes="{s}" width="{w}" height="{h}" alt="{a}"{l}{c}{x}>').format(
@@ -149,7 +153,7 @@ def org_schema():
         "url": BIZ["origin"] + "/",
         "email": BIZ["email"],
         "image": BIZ["origin"] + "/assets/img/hero-living-room.webp",
-        "logo": BIZ["origin"] + "/favicon.svg",
+        "logo": {"@type": "ImageObject", "url": BIZ["origin"] + "/web-app-manifest-512x512.png", "width": 512, "height": 512},
         "slogan": "Organizing with a touch of design",
         "description": "Professional home organizing with a touch of design in Fort Lauderdale and Broward County, Florida.",
         "address": {"@type": "PostalAddress", "addressLocality": BIZ["city"], "addressRegion": BIZ["state"],
@@ -253,33 +257,74 @@ def footer():
         brand=brand(), email=BIZ["email"], mail=icon("mail"), svc=svc, year=date.today().year, arrow=icon("arrow-right"))
 
 
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8097R535LY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8097R535LY');
+</script>"""
+
+
+def ensure_og(name):
+    """1200x630 JPEG share image (Facebook, LinkedIn and others don't all take WebP)."""
+    dst = os.path.join(ROOT, "assets/og", name + ".jpg")
+    src = os.path.join(ROOT, "assets/img", name + ".webp")
+    if not os.path.exists(dst) or os.path.getmtime(dst) < os.path.getmtime(src):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        with Image.open(src) as im:
+            im = im.convert("RGB")
+            w, h = im.size
+            scale = max(1200 / w, 630 / h)
+            im = im.resize((round(w * scale), round(h * scale)), Image.LANCZOS)
+            left, top = (im.width - 1200) // 2, (im.height - 630) // 2
+            im.crop((left, top, left + 1200, top + 630)).save(dst, "JPEG", quality=82, optimize=True, progressive=True)
+    return name
+
+
 def layout(path, title, desc, body, schema=(), og_image="hero-living-room", og_type="website", extra_js="", head_extra=""):
     url = BIZ["origin"] + (path if path != "/" else "/")
     graph = {"@context": "https://schema.org", "@graph": [org_schema(), website_schema()] + list(schema)}
-    full_title = title if "Organized by Anne" in title else title + " | Organized by Anne"
+    # Brand suffix only when it fits Google's ~60-character title display.
+    full_title = title if "Organized by Anne" in title or len(html.unescape(title)) > 41 else title + " | Organized by Anne"
+    og = ensure_og(og_image)
     return """<!doctype html>
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+{gtag}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{t}</title>
 <meta name="description" content="{d}">
 <link rel="canonical" href="{u}">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Organized by Anne">
 <meta property="og:type" content="{ot}">
 <meta property="og:site_name" content="Organized by Anne">
 <meta property="og:title" content="{t}">
 <meta property="og:description" content="{d}">
 <meta property="og:url" content="{u}">
-<meta property="og:image" content="{o}/assets/img/{img}.webp">
+<meta property="og:image" content="{o}/assets/og/{img}.jpg">
+<meta property="og:image:secure_url" content="{o}/assets/og/{img}.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{alt}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{t}">
 <meta name="twitter:description" content="{d}">
-<meta name="twitter:image" content="{o}/assets/img/{img}.webp">
+<meta name="twitter:image" content="{o}/assets/og/{img}.jpg">
+<meta name="twitter:image:alt" content="{alt}">
 <meta name="theme-color" content="#fbf7f2">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{fonts}">
@@ -295,7 +340,8 @@ def layout(path, title, desc, body, schema=(), og_image="hero-living-room", og_t
 <script src="/assets/js/site.js?v={v}" defer></script>{xj}
 </body>
 </html>
-""".format(t=esc(full_title), d=esc(desc), u=url, ot=og_type, o=BIZ["origin"], img=og_image, fonts=FONTS, v=VERSION,
+""".format(t=esc(full_title), d=esc(desc), u=url, ot=og_type, o=BIZ["origin"], img=og, alt=esc(IMG_ALT.get(og_image, "Organized by Anne")),
+           gtag=GTAG, fonts=FONTS, v=VERSION,
            ld=json.dumps(graph, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/"), header=header(path), body=body,
            footer=footer(), xj=extra_js, he=head_extra)
 
@@ -453,7 +499,10 @@ def build_home():
     )
     schema = [faq_schema(faqs), {"@type": "WebPage", "@id": BIZ["origin"] + "/#webpage", "url": BIZ["origin"] + "/",
                                  "name": PC.HOME_TITLE, "about": {"@id": BIZ["origin"] + "/#business"}}]
-    write("/", layout("/", PC.HOME_TITLE, PC.HOME_DESC, body, schema))
+    preload = ('<link rel="preload" as="image" href="/assets/img/hero-living-room.webp" fetchpriority="high" '
+               'imagesrcset="/assets/img/hero-living-room-sm.webp 640w, /assets/img/hero-living-room.webp 1800w" '
+               'imagesizes="(max-width: 900px) 100vw, 46vw">\n')
+    write("/", layout("/", PC.HOME_TITLE, PC.HOME_DESC, body, schema, head_extra=preload))
 
 
 def build_about():
@@ -606,7 +655,9 @@ def build_post(p):
                "wordCount": words(p["body_html"]), "articleSection": html.unescape(p["category"]),
                "author": {"@type": "Organization", "name": BIZ["name"], "url": BIZ["origin"] + "/about"},
                "publisher": {"@id": BIZ["origin"] + "/#business"}}]
-    head = '<meta property="article:published_time" content="%sT09:00:00-04:00">\n' % p["date"]
+    head = ('<meta property="article:published_time" content="%sT09:00:00-04:00">\n'
+            '<meta property="article:modified_time" content="%sT09:00:00-04:00">\n'
+            '<meta property="article:section" content="%s">\n') % (p["date"], p["date"], esc(p["category"]))
     write(path, layout(path, p["title"], p["description"], body, schema, og_image=im, og_type="article", head_extra=head))
 
 
@@ -700,18 +751,23 @@ def build_404():
 
 
 def sitemap():
+    """XML sitemap with image entries (Google image sitemap extension)."""
     urls = []
-    for path in OUT:
+    for path, page in OUT.items():
         if path == "/404":
             continue
-        pr = "1.0" if path == "/" else "0.8" if path.count("/") == 1 else "0.6"
         lastmod = TODAY
         if path.startswith("/blog/"):
             lastmod = next(p["date"] for p in POSTS if "/blog/" + p["slug"] == path)
-        urls.append("<url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (
-            BIZ["origin"], path if path != "/" else "/", lastmod, pr))
-    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n'
-            % "\n".join(urls))
+        imgs, seen = [], set()
+        for src, alt in re.findall(r'<img src="(/assets/img/[^"]+)"[^>]*?alt="([^"]*)"', page):
+            if src not in seen:
+                seen.add(src)
+                imgs.append("<image:image><image:loc>%s%s</image:loc></image:image>" % (BIZ["origin"], src))
+        urls.append("<url><loc>%s%s</loc><lastmod>%s</lastmod>%s</url>" % (
+            BIZ["origin"], path if path != "/" else "/", lastmod, "".join(imgs)))
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+            'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n%s\n</urlset>\n' % "\n".join(urls))
 
 
 def out_file(path):

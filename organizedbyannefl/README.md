@@ -6,8 +6,9 @@ Services, Contact) positioned as "Organizing with a touch of design". This rebui
 keeps that positioning and the original URLs, and adds service pages, a blog and
 interactive tools.
 
-**Live (temporary domain):** https://aliceblue-whale-708226.hostingersite.com
-— Hostinger Agency Growth website UID `hj0ebIzH3` (php-fpm 8.3, Boston datacenter).
+**Live:** https://organizedbyannefl.com — Hostinger Agency Growth website UID `hj0ebIzH3`
+(php-fpm 8.3, Boston datacenter). The hostingersite.com preview domain is sent an
+`X-Robots-Tag: noindex` header by `index.php` so only the real domain gets indexed.
 
 ## Rebuilding
 
@@ -53,10 +54,20 @@ replace household items) — the blog covers each of those topics.
   30-day-declutter-challenge, closet-rod-calculator}`
 - `/service-area`, `/privacy-policy`, `/terms`, `/sitemap.xml`, `/robots.txt`
 
-## Notes before the real domain goes live
+## SEO setup
 
-- Canonicals, Open Graph URLs and the sitemap already point at `https://organizedbyannefl.com`.
-  `index.php` 301s `www.` and `http://` to it once the domain is attached.
+- Google tag `G-8097R535LY` in the `<head>` of every page (`GTAG` in `build.py`).
+- Google Search Console file verification: `googlecccfbf2f7e9e5ae4.html` at the root.
+- `sitemap.xml` with image entries (also in `robots.txt`); unique titles (<= 60 chars,
+  brand suffix only when it fits), descriptions, canonicals, Open Graph/Twitter cards with
+  1200x630 JPEG share images (`assets/og/`, generated), JSON-LD (`ProfessionalService`,
+  `WebSite`, `BreadcrumbList`, `Service`, `BlogPosting`, `FAQPage`, `WebApplication`).
+- Favicons: `favicon.ico` (48/32/16), `favicon.svg`, `favicon-96x96.png`,
+  `apple-touch-icon.png`, `site.webmanifest` + 192/512 and maskable icons.
+- `index.php` 301s `www.`, `http://`, trailing slashes, uppercase and old Wix paths.
+- `validate.py` enforces all of the above.
+
+## Notes
 - Contact form mail is sent with PHP `mail()` from `info@organizedbyannefl.com`;
   set up that mailbox (and SPF/DKIM) when the domain is connected. Submissions are
   also logged to `oba-submissions/submissions.log` in the site's home directory.

@@ -42,6 +42,8 @@ if ($path === '/') {
 }
 header('Content-Type: text/html; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
+// Keep the hostingersite.com preview domain out of search results; only the real domain is indexed.
+if ($host !== 'organizedbyannefl.com') header('X-Robots-Tag: noindex, nofollow');
 header('Referrer-Policy: strict-origin-when-cross-origin');
 if ($file) {
     header('Cache-Control: public, max-age=600');

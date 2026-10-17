@@ -4,8 +4,8 @@ literal braces must be doubled.
 """
 
 HOME_TITLE = "Professional Organizer in Fort Lauderdale | Organized by Anne"
-HOME_DESC = ("Organized by Anne is a professional organizer in Fort Lauderdale bringing calm, beautiful order to "
-             "closets, kitchens, pantries and whole homes across Broward County.")
+HOME_DESC = ("Professional organizer in Fort Lauderdale bringing calm, beautiful order to closets, kitchens, "
+             "pantries and whole homes across Broward County.")
 
 ROTATE = ["closets", "pantries", "home offices", "kitchens", "whole homes"]
 MARQUEE = ["Closets", "Pantries", "Kitchens", "Home offices", "Move-ins", "Bathrooms", "Laundry rooms", "Kids' rooms",
