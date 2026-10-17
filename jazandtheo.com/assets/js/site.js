@@ -91,12 +91,22 @@
   /* ---- Reveal on scroll ---- */
   var revealEls = $$(".reveal, .reveal-stagger, .img-reveal");
   if ("IntersectionObserver" in window && !reduce) {
+    // A clip-path hides an element from IntersectionObserver, so .img-reveal is watched via its parent.
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        if (!en.isIntersecting) return;
+        var t = en.target;
+        (t._revealTargets || [t]).forEach(function (x) { x.classList.add("in"); });
+        io.unobserve(t);
       });
     }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    revealEls.forEach(function (el) { io.observe(el); });
+    revealEls.forEach(function (el) {
+      if (el.classList.contains("img-reveal")) {
+        var p = el.parentElement;
+        (p._revealTargets = p._revealTargets || (p.matches(".reveal, .reveal-stagger") ? [p] : [])).push(el);
+        io.observe(p);
+      } else io.observe(el);
+    });
   } else {
     revealEls.forEach(function (el) { el.classList.add("in"); });
   }

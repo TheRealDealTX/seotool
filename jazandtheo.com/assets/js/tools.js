@@ -81,6 +81,13 @@
     return CITIES.map(function (c, i) { return '<option value="' + i + '"' + (i === sel ? " selected" : "") + ">" + esc(c[0]) + "</option>"; }).join("");
   }
   function todayISO() { var n = new Date(); return n.getFullYear() + "-" + pad(n.getMonth() + 1) + "-" + pad(n.getDate()); }
+  function cityToday(tz) {
+    try {
+      var o = {};
+      new Intl.DateTimeFormat("en-US", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date()).forEach(function (p) { o[p.type] = p.value; });
+      return [+o.year, +o.month - 1, +o.day];
+    } catch (e) { return parseISO(); }
+  }
   function parseISO(s) { var p = (s || todayISO()).split("-"); return [+p[0], +p[1] - 1, +p[2]]; }
   function dur(a, b) { var m = Math.round((b - a) / 60000); return m >= 60 ? Math.floor(m / 60) + " h " + (m % 60) + " min" : m + " min"; }
 
@@ -94,7 +101,7 @@
     var ci = parseInt(el.getAttribute("data-city") || "0", 10);
     if (compact) {
       el.innerHTML = '<div class="gh-readout" aria-live="polite"></div><p class="tool-note" style="color:#f1d7b4"></p>';
-      var c = CITIES[ci], d = parseISO(), ev = sunDay(d[0], d[1], d[2], c[1], c[2], c[3]);
+      var c = CITIES[ci], d = cityToday(c[3]), ev = sunDay(d[0], d[1], d[2], c[1], c[2], c[3]);
       $(".gh-readout", el).innerHTML =
         "<div><small>Evening golden hour</small><b>" + fmtTime(ev.goldPmStart, c[3]) + "</b></div>" +
         "<div><small>Sunset</small><b>" + fmtTime(ev.sunset, c[3]) + "</b></div>" +

@@ -66,6 +66,18 @@ SHARE_ICONS = {
     "link": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>',
 }
 
+# Alt text comes from the image manifest so it always describes the actual photo.
+def _load_alts():
+    try:
+        m = json.load(open(os.path.join(ROOT, "assets", "img", "manifest.json"), encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {k: re.sub(r"\s*\([^)]*\)", "", v.get("description", "")).strip().rstrip(".") for k, v in m.items()}
+
+
+ALT = _load_alts()
+
+
 # Image slots: 1600/800 webp (3:2); *-hero slots also have 2400 (16:9).
 def img_src(slot, w=1600):
     return f"/assets/img/{slot}-{w}.webp"
@@ -78,6 +90,7 @@ def img(slot, alt, cls="", eager=False, sizes="(max-width: 700px) 100vw, 50vw", 
     else:
         srcset = f"{img_src(slot, 800)} 800w, {img_src(slot, 1600)} 1600w"
         w, h, src = 1600, 1067, img_src(slot, 1600 if hero else 800)
+    alt = ALT.get(slot) or alt
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
     return f'<img src="{src}" srcset="{srcset}" sizes="{sizes}" width="{w}" height="{h}" alt="{e(alt)}"{c} {load}>'
@@ -567,7 +580,7 @@ GALLERY = [
 
 
 def build_home():
-    latest = POSTS[:4]
+    latest = POSTS[:5]
     popular_urls = ["/2018/03/gather-estate-wedding-arizona-mikayla-shung/", "/2018/11/red-sands-el-paso-tx-yasmin-jared/",
                     "/2019/12/our-entry-peg-rail-shelf-and-shiplap-for-christmas/", "/2019/01/downtown-el-paso-winter-engagement-jordanne-aidan/",
                     "/2018/04/arizona-sonoran-desert-museum-cactus-wedding-erin-ricky/", "/2020/08/lake-powell-desitination-wedding-mikay-ryker/"]
@@ -575,14 +588,14 @@ def build_home():
     tiles = [
         ("01", "Weddings", "/weddings/", "weddings-hero", "Bride and groom embracing outdoors", "Venue guides, timelines, budgets and the photos that matter most."),
         ("02", "Portraits", "/portraits/", "portraits-hero", "A couple laughing during a portrait session", "Engagement, senior and anniversary sessions — where to go and what to wear."),
-        ("03", "Home", "/lifestyle/", "lifestyle-hero", "A bright, simply styled living space", "Peg rails, shiplap, lighting and small changes with a big payoff."),
+        ("03", "Home", "/lifestyle/", "kitchen", "A bright, simply styled living space", "Peg rails, shiplap, lighting and small changes with a big payoff."),
         ("04", "Travel", "/category/travel/", "south-dakota-2", "Steam rising from a hot spring in Yellowstone", "Road trips across the Southwest and beyond, with a camera in hand."),
     ]
     tiles_html = "".join(
         f'<a class="tile" href="{u}">{img(s, a, sizes="(max-width: 640px) 50vw, 25vw")}<span class="arrow">{ARROW}</span><div class="num">{n}</div><h3>{t}</h3><p>{d}</p></a>'
         for n, t, u, s, a, d in tiles)
     gal = "".join(
-        f'<button type="button" class="{shape}" data-full="{img_src(s)}" data-caption="{e(cap)}">{img(s, cap, sizes="(max-width: 640px) 100vw, 33vw")}</button>'
+        f'<button type="button" class="{shape}" data-full="{img_src(s)}" data-caption="{e(ALT.get(s, cap))}">{img(s, cap, sizes="(max-width: 640px) 100vw, 33vw")}</button>'
         for s, cap, shape in GALLERY)
     places = [("El Paso", "/2026/09/el-paso-engagement-photo-locations/"), ("Red Sands", "/2018/11/red-sands-el-paso-tx-yasmin-jared/"),
               ("Tucson", "/2019/05/tucson-downtown-and-desert-senior-session/"), ("Sabino Canyon", "/2017/06/hannah-caleb-sabino-canyon-anniversary-session/"),
@@ -592,7 +605,7 @@ def build_home():
               ("Badlands &amp; Yellowstone", "/2018/05/south-dakota-yellowstone-trip/")]
     places_html = "".join(f'<a href="{u}">{n}</a>' for n, u in places)
     badge = ('<div class="badge" aria-hidden="true"><svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-37,0 a37,37 0 1,1 74,0 a37,37 0 1,1 -74,0"/></defs>'
-             '<text font-size="10.5" letter-spacing="3.2" fill="#1f1b18" font-family="Manrope, sans-serif" font-weight="700"><textPath href="#circ">WEDDINGS · PORTRAITS · HOME · TRAVEL ·</textPath></text></svg><b>&amp;</b></div>')
+             '<text font-size="8.2" letter-spacing="1.9" fill="#1f1b18" font-family="Manrope, sans-serif" font-weight="700"><textPath href="#circ">WEDDINGS · PORTRAITS · HOME · </textPath></text></svg><b>&amp;</b></div>')
     words = ["Weddings", "Engagements", "Desert light", "Senior portraits", "Peg rails &amp; shiplap", "Road trips", "Golden hour", "Home projects"]
     marquee = "".join(f"<span>{w}</span>" for w in words) * 2
     body = f'''
