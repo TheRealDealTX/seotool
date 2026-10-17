@@ -74,7 +74,7 @@ def card(r):
           <h2><a href="/resources/{r["slug"]}/">{escape(r["title"])}</a></h2>
           <p class="post-src">{escape(r["source"])}</p>
           <p>{escape(r["summary"])}</p>
-          <a class="post-more" href="/resources/{r["slug"]}/">Read and download →</a>
+          <a class="post-more" href="/resources/{r["slug"]}/">{'Read and download' if r.get('file') else 'Read more'} →</a>
         </article>"""
 
 
