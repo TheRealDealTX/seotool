@@ -46,7 +46,7 @@
     $('formView').classList.remove('hidden');
   }).catch(fallback);
 
-  // ---- remembered partner info ----
+  // ---- remembered contact info ----
   REMEMBER.forEach(function (k) { var v = recall(k); if (v && $(k)) $(k).value = v; });
 
   // ---- category boxes ----

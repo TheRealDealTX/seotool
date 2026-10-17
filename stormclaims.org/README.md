@@ -1,6 +1,6 @@
 # stormclaims.org
 
-Referral partner portal for Rise Public Adjusting. Not an SEO site: a single
+Referral portal for Rise Public Adjusting. Not an SEO site: a single
 landing page that embeds the Google Apps Script document-upload tool, plus a
 full-page `/upload/` route for sharing a direct link.
 
