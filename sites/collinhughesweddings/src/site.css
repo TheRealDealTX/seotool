@@ -251,7 +251,7 @@ section{position:relative}
 .ftr{background:#191512;color:#cbbfb3;padding:90px 0 30px;font-size:.95rem}
 .ftr .grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:50px}
 .ftr .logo{color:#fff;margin-bottom:22px}
-.ftr h4{font:500 .7rem/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:22px}
+.ftr .fh{font:500 .7rem/1 var(--sans);letter-spacing:.28em;text-transform:uppercase;color:#fff;margin-bottom:22px}
 .ftr ul{list-style:none;margin:0;padding:0}
 .ftr li{margin-bottom:10px}
 .ftr a{text-decoration:none;transition:color .3s}.ftr a:hover{color:var(--blush-2)}

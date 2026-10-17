@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Static build for collinhughesweddings.com. Writes everything into ./public."""
 import html, json, os, shutil
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "public")
@@ -9,7 +10,27 @@ SITE = "https://collinhughesweddings.com"
 NAME = "Collin Hughes Weddings"
 EMAIL = "info@collinhughesweddings.com"
 AREA = "Minneapolis & St. Paul, Minnesota"
-VER = "3"
+VER = "4"
+GA_ID = "G-3FFZD336L6"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
+_DIMS = {}
+IMAGES_USED = {}  # page path -> [(name, alt)] for the image sitemap
+_CUR = [None]
+
+
+def dims(name):
+    if name not in _DIMS:
+        with Image.open(os.path.join(SRC, "img", name + ".webp")) as im:
+            _DIMS[name] = im.size
+    return _DIMS[name]
 
 NAV = [("/", "Home"), ("/about/", "About"), ("/weddings/", "Weddings"),
        ("/collections/", "Collections"), ("/destination-weddings/", "Destination"),
@@ -20,9 +41,11 @@ e = html.escape
 
 def img(name, alt, cls="", w=None, h=None, lazy=True, extra=""):
     a = f' class="{cls}"' if cls else ""
-    dims = f' width="{w}" height="{h}"' if w else ""
-    ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
-    return f'<img src="/assets/img/{name}.webp" alt="{e(alt)}"{a}{dims}{ld}{extra}>'
+    w, h = dims(name)
+    ld = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high" decoding="async"'
+    if _CUR[0] is not None:
+        IMAGES_USED.setdefault(_CUR[0], []).append((name, alt))
+    return f'<img src="/assets/img/{name}.webp" alt="{e(alt)}"{a} width="{w}" height="{h}"{ld}{extra}>'
 
 
 def org_schema():
@@ -41,16 +64,26 @@ def org_schema():
     }
 
 
-def page(path, title, desc, body, schema=None, hero_img=None, solid=False, crumbs=None, robots="index,follow"):
+def page(path, title, desc, body, schema=None, hero_img=None, solid=False, crumbs=None, robots="index,follow",
+         og_type="website", og_alt=None, published=None):
     url = SITE + path
+    og = SITE + "/assets/og/" + (hero_img or "hills-couple") + ".jpg"
     graph = [org_schema(), {"@type": "WebSite", "@id": SITE + "/#site", "url": SITE + "/", "name": NAME,
                             "publisher": {"@id": SITE + "/#business"}}]
     if crumbs:
-        graph.append({"@type": "BreadcrumbList", "itemListElement": [
+        graph.append({"@type": "BreadcrumbList", "@id": url + "#breadcrumb", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + p} for i, (p, n) in enumerate(crumbs)]})
+    graph.append({"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": title, "description": desc,
+                  "isPartOf": {"@id": SITE + "/#site"}, "inLanguage": "en-US",
+                  "primaryImageOfPage": {"@type": "ImageObject", "url": og, "width": 1200, "height": 630},
+                  **({"breadcrumb": {"@id": url + "#breadcrumb"}} if crumbs else {})})
     graph += schema or []
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
-    og = SITE + "/assets/img/" + (hero_img or "hills-couple") + ".webp"
+    og = SITE + "/assets/og/" + (hero_img or "hills-couple") + ".jpg"
+    og_alt = og_alt or title
+    canon = f'<link rel="canonical" href="{url}">' if robots.startswith("index") else ""
+    art = (f'<meta property="article:published_time" content="{published}">'
+           f'<meta property="article:author" content="{NAME}">') if published else ""
     links = "".join(
         f'<li><a href="{p}"{" aria-current=\"page\"" if p == path else ""}{" class=\"cta\"" if p == "/contact/" else ""}>{"Inquire" if p == "/contact/" else n}</a></li>'
         for p, n in NAV)
@@ -60,17 +93,27 @@ def page(path, title, desc, body, schema=None, hero_img=None, solid=False, crumb
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{GTAG}
 <script>document.documentElement.className+=" js"</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="{robots}">
-<link rel="canonical" href="{url}">
-<meta property="og:type" content="website"><meta property="og:site_name" content="{NAME}">
+{canon}
+<meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{NAME}"><meta property="og:locale" content="en_US">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}"><meta property="og:image" content="{og}">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="{e(og_alt)}">{art}
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}"><meta name="twitter:image" content="{og}"><meta name="twitter:image:alt" content="{e(og_alt)}">
+<meta name="author" content="{NAME}">
 <meta name="theme-color" content="#1f1b18">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Collin Hughes">
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
 {preload}
@@ -111,11 +154,11 @@ def footer():
     <p>Documentary-minded wedding photography for couples who would rather live their day than pose through it. Based in the Twin Cities, travelling wherever love takes us.</p>
     <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
    </div>
-   <div><h4>Explore</h4><ul>
+   <div><p class="fh">Explore</p><ul>
     <li><a href="/about/">About the studio</a></li><li><a href="/weddings/">Real weddings</a></li>
     <li><a href="/collections/">Collections &amp; FAQ</a></li><li><a href="/destination-weddings/">Destination weddings</a></li>
     <li><a href="/contact/">Check your date</a></li></ul></div>
-   <div><h4>Recent stories</h4><ul>
+   <div><p class="fh">Recent stories</p><ul>
     <li><a href="/wedding-chrisjasmine/">Chris &amp; Jasmine — Newport, MN</a></li>
     <li><a href="/maddy-ben-surrey-uk/">Maddy &amp; Ben — Surrey, UK</a></li>
     <li><a href="/privacy-policy/">Privacy policy</a></li></ul></div>
@@ -152,6 +195,9 @@ def faq_html(faqs):
     return '<div class="faq">' + "".join(
         f'<details class="rv"><summary>{e(q)}</summary><div class="a"><p>{e(a)}</p></div></details>' for q, a in faqs) + "</div>"
 
+
+PUBLISHED = "2026-10-16"
+LASTMOD = "2026-10-17"
 
 STORIES = [
     {"path": "/wedding-chrisjasmine/", "title": "Chris &amp; Jasmine", "place": "Newport, Minnesota",
@@ -283,7 +329,7 @@ def home():
  </div>
 </section>
 {cta()}"""
-    return page("/", "Collin Hughes Weddings | Minneapolis & Destination Wedding Photographer",
+    return page("/", "Collin Hughes Weddings | Minneapolis Wedding Photographer",
                 "Collin Hughes Weddings — documentary-style wedding photography in Minneapolis–St. Paul, across Minnesota and at destination weddings in the UK and beyond.",
                 body, schema=[faq_schema(faqs)], hero_img="hills-couple")
 
@@ -335,7 +381,7 @@ def about():
  </div>
 </section>
 {cta()}"""
-    return page("/about/", "About Collin Hughes Weddings | Twin Cities Wedding Photography Studio",
+    return page("/about/", "About Collin Hughes | Twin Cities Wedding Photography",
                 "Meet Collin Hughes Weddings, a documentary-minded wedding photography studio in Minneapolis–St. Paul photographing Minnesota and destination weddings.",
                 body, hero_img="signing", crumbs=crumbs,
                 schema=[{"@type": "AboutPage", "url": SITE + "/about/", "about": {"@id": SITE + "/#business"}}])
@@ -391,12 +437,14 @@ def story_page(path, crumbs_name, title, desc, hero, hero_alt, eyebrow, h1, sub,
  </div>
 </section>
 {cta()}"""
-    schema = [{"@type": "BlogPosting", "headline": html.unescape(crumbs_name), "description": desc,
+    schema = [{"@type": "BlogPosting", "headline": html.unescape(crumbs_name) + " — " + html.unescape(sub), "description": desc,
+               "datePublished": PUBLISHED, "dateModified": PUBLISHED, "inLanguage": "en-US",
                "image": SITE + f"/assets/img/{hero}.webp", "url": SITE + path, "mainEntityOfPage": SITE + path,
                "author": {"@id": SITE + "/#business"}, "publisher": {"@id": SITE + "/#business"},
                "about": {"@type": "Event", "name": html.unescape(crumbs_name) + " wedding", "eventStatus": "https://schema.org/EventScheduled",
                          "location": {"@type": "Place", "name": dict(facts)["Location"]}}}]
-    return page(path, title, desc, body, hero_img=hero, crumbs=crumbs, schema=schema)
+    return page(path, title, desc, body, hero_img=hero, crumbs=crumbs, schema=schema, og_type="article",
+                og_alt=hero_alt, published=PUBLISHED)
 
 
 def chris_jasmine():
@@ -426,7 +474,7 @@ def chris_jasmine():
                ("table", "Reception table with roses and glassware"), ("peach-bouquet", "Bride's peach rose bouquet"),
                ("lawn-chairs", "Decorated chairs for the bride and groom on the lawn"), ("ring-hands", "Wedding rings and bouquet")]
     return story_page("/wedding-chrisjasmine/", "Chris & Jasmine",
-                      "Chris & Jasmine’s Newport, MN Wedding | Collin Hughes Weddings",
+                      "Chris & Jasmine’s Newport, MN Wedding | Collin Hughes",
                       "Chris and Jasmine’s late-summer riverside wedding in Newport, Minnesota, near St. Paul — a relaxed first look, golden-hour portraits and a packed dance floor.",
                       "lake-couple", "Chris and Jasmine by the water in Newport, Minnesota", "Real wedding · Newport, MN",
                       "Chris &amp; <em class=\"s\">Jasmine</em>", "A late-summer riverside wedding just outside St. Paul, Minnesota.",
@@ -509,8 +557,8 @@ def collections():
  </div>
 </section>
 {cta()}"""
-    return page("/collections/", "Wedding Photography Collections & FAQ | Collin Hughes Weddings",
-                "Wedding photography collections from Collin Hughes Weddings in Minneapolis–St. Paul: elopements, full-day coverage, second photographers, engagement sessions and albums.",
+    return page("/collections/", "Wedding Photography Collections & FAQ | Collin Hughes",
+                "Wedding photography collections from Collin Hughes Weddings in Minneapolis–St. Paul: elopements, full-day coverage, engagement sessions and heirloom albums.",
                 body, hero_img="rings-peony", crumbs=crumbs, schema=[faq_schema(COLLECTION_FAQS)])
 
 
@@ -551,7 +599,7 @@ def destination():
  <div class="narrow">{faq_html(faqs)}</div>
 </section>
 {cta("hills-couple", "Planning a wedding <em class=\"s\">abroad?</em>")}"""
-    return page("/destination-weddings/", "Destination Wedding Photographer UK & Europe | Collin Hughes Weddings",
+    return page("/destination-weddings/", "Destination Wedding Photographer UK & Europe | Collin Hughes",
                 "Destination wedding and elopement photography by Collin Hughes Weddings — English country weddings in Surrey and the Cotswolds, coastal elopements and Europe.",
                 body, hero_img="black-beach", crumbs=crumbs, schema=[faq_schema(faqs)])
 
@@ -608,8 +656,9 @@ def privacy():
 <p>Wedding images may be shared in our portfolio only with the couple’s permission. You can ask us to remove any image at any time.</p>
 <h2>Retention &amp; your rights</h2>
 <p>Inquiry emails are kept for as long as needed to respond and for our business records. You may ask to see, correct or delete your information by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
-<h2>Cookies</h2>
-<p>This site does not set cookies of its own. Fonts are loaded from Google Fonts, which may log standard request data.</p>
+<h2>Cookies &amp; analytics</h2>
+<p>We use Google Analytics to understand how visitors find and use the site — for example which pages are read most. Google Analytics sets cookies and collects information such as pages visited, approximate location, device and browser. We do not use it to identify you personally. You can opt out with Google’s <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener">Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+<p>Fonts are loaded from Google Fonts, which may log standard request data.</p>
 <h2>Contact</h2>
 <p>Questions about this policy: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 </div></section>"""
@@ -628,21 +677,43 @@ def notfound():
     return page("/404.html", "Page not found | Collin Hughes Weddings", "The page you were looking for could not be found.", body, robots="noindex,follow")
 
 
-def favicon():
-    return """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#1f1b18"/><text x="32" y="43" font-family="Georgia,serif" font-size="30" fill="#e8cfc2" text-anchor="middle">CH</text></svg>"""
+def render(fn, path):
+    _CUR[0] = path
+    try:
+        return fn()
+    finally:
+        _CUR[0] = None
+
+
+def og_images(names):
+    os.makedirs(os.path.join(OUT, "assets/og"))
+    for n in names:
+        with Image.open(os.path.join(SRC, "img", n + ".webp")) as im:
+            im = im.convert("RGB")
+            w, h = im.size
+            r = 1200 / 630
+            if w / h > r:
+                nw = int(h * r); box = ((w - nw) // 2, 0, (w + nw) // 2, h)
+            else:
+                nh = int(w / r); top = max(0, int((h - nh) * 0.35)); box = (0, top, w, top + nh)
+            im.crop(box).resize((1200, 630), Image.LANCZOS).save(os.path.join(OUT, "assets/og", n + ".jpg"), quality=82, optimize=True, progressive=True)
 
 
 def main():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
-    pages = {
-        "home.html": home(), "about/index.html": about(), "weddings/index.html": weddings(),
-        "wedding-chrisjasmine/index.html": chris_jasmine(), "maddy-ben-surrey-uk/index.html": maddy_ben(),
-        "collections/index.html": collections(), "destination-weddings/index.html": destination(),
-        "contact/index.html": contact(), "privacy-policy/index.html": privacy(), "404.html": notfound(),
-    }
-    for rel, content in pages.items():
+    routes = [
+        ("home.html", "/", home), ("about/index.html", "/about/", about), ("weddings/index.html", "/weddings/", weddings),
+        ("wedding-chrisjasmine/index.html", "/wedding-chrisjasmine/", chris_jasmine),
+        ("maddy-ben-surrey-uk/index.html", "/maddy-ben-surrey-uk/", maddy_ben),
+        ("collections/index.html", "/collections/", collections), ("destination-weddings/index.html", "/destination-weddings/", destination),
+        ("contact/index.html", "/contact/", contact), ("privacy-policy/index.html", "/privacy-policy/", privacy), ("404.html", None, notfound),
+    ]
+    heroes = set()
+    for rel, path, fn in routes:
+        content = render(fn, path)
+        heroes.update(__import__("re").findall(r'/assets/og/([\w-]+)\.jpg', content))
         p = os.path.join(OUT, rel)
         os.makedirs(os.path.dirname(p), exist_ok=True)
         with open(p, "w", encoding="utf-8") as f:
@@ -651,18 +722,32 @@ def main():
     shutil.copy(os.path.join(SRC, "site.css"), os.path.join(OUT, "assets/css/site.css"))
     shutil.copy(os.path.join(SRC, "site.js"), os.path.join(OUT, "assets/js/site.js"))
     shutil.copytree(os.path.join(SRC, "img"), os.path.join(OUT, "assets/img"))
-    for n in ("index.php", "send.php"):
+    og_images(sorted(heroes))
+    for n in ("index.php", "send.php", "googlecccfbf2f7e9e5ae4.html"):
         shutil.copy(os.path.join(SRC, n), os.path.join(OUT, n))
-    with open(os.path.join(OUT, "favicon.svg"), "w") as f:
-        f.write(favicon())
-    urls = ["/"] + ["/" + k[:-len("index.html")] for k in pages if k.endswith("/index.html")]
+    for n in os.listdir(os.path.join(SRC, "icons")):
+        shutil.copy(os.path.join(SRC, "icons", n), os.path.join(OUT, n))
+    with open(os.path.join(OUT, "site.webmanifest"), "w") as f:
+        json.dump({"name": NAME, "short_name": "Collin Hughes", "start_url": "/", "display": "standalone",
+                   "background_color": "#fffdf9", "theme_color": "#1f1b18",
+                   "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+                             {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}, f, indent=1)
+    xml = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for rel, path, fn in routes:
+        if path is None:
+            continue
+        seen, imgs = set(), []
+        for n, alt in IMAGES_USED.get(path, []):
+            if n not in seen:
+                seen.add(n); imgs.append(f"<image:image><image:loc>{SITE}/assets/img/{n}.webp</image:loc></image:image>")
+        xml.append(f"  <url><loc>{SITE}{path}</loc><lastmod>{LASTMOD}</lastmod>{''.join(imgs)}</url>")
+    xml.append("</urlset>\n")
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-                "".join(f"  <url><loc>{SITE}{u}</loc><lastmod>2026-10-16</lastmod></url>\n" for u in urls) + "</urlset>\n")
+        f.write("\n".join(xml))
     with open(os.path.join(OUT, "robots.txt"), "w") as f:
-        f.write(f"User-agent: *\nDisallow: /home.html\nDisallow: /send.php\n\nSitemap: {SITE}/sitemap.xml\n")
-    print("built", len(pages), "pages ->", OUT)
-
+        f.write(f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /send.php\n\nSitemap: {SITE}/sitemap.xml\n")
+    print("built", len(routes), "pages ->", OUT)
 
 if __name__ == "__main__":
     main()

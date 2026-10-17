@@ -3,10 +3,15 @@
 Static rebuild of a Minneapolis–St. Paul wedding photography site. `python3 build.py`
 writes everything into `public/`; `./deploy.sh` uploads `public/` to Hostinger.
 
-- **Hosting:** Hostinger Agency Growth, website UID `uaSy8Q59R`, temporary domain
-  https://wheat-squid-242818.hostingersite.com. When the domain is ready, link
-  `collinhughesweddings.com` to the website (`agency-hosting_domains_change-website`).
-  Canonicals, sitemap and schema already point at https://collinhughesweddings.com.
+- **Hosting:** Hostinger Agency Growth, website UID `uaSy8Q59R`, live at
+  https://collinhughesweddings.com (http and www 301 to it).
+- **Checks:** `python3 build.py && python3 validate.py` — titles ≤60 chars, descriptions
+  110–160, one H1, heading order, canonicals, OG/Twitter tags, valid JSON-LD, alt text and
+  dimensions on every image, no broken internal links, Google tag (G-3FFZD336L6) in every
+  `<head>`, favicon set, GSC verification file and sitemap.
+- **SEO extras:** 1200×630 JPG share images (`assets/og/`), image sitemap, WebPage /
+  BreadcrumbList / FAQPage / BlogPosting / LocalBusiness schema, favicon + web manifest
+  (`src/icons/`), GSC file `googlecccfbf2f7e9e5ae4.html`.
 - **Preserved URLs:** `/` (all ~3,800 backlinks; "collin hughes" rankings),
   `/wedding-chrisjasmine/` and `/maddy-ben-surrey-uk/` (old ranking pages).
   `index.php` 301s legacy WordPress paths (feed, category, wp-*) and returns real 404s.
