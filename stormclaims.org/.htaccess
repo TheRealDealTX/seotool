@@ -1,0 +1,4 @@
+ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.stormclaims\.org$ [NC]
+RewriteRule ^(.*)$ https://stormclaims.org/$1 [R=301,L]
