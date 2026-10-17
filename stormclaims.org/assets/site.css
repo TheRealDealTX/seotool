@@ -57,6 +57,10 @@ section{padding:28px 0}
 .tool-full{max-width:none;padding:0}
 .tool-full iframe{height:calc(100vh - 72px);min-height:900px}
 
+.launch{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:22px 24px}
+.launch h3{font-size:18px;margin:0 0 4px}
+.launch p{margin:0;color:var(--muted)}
+
 /* checklist */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
