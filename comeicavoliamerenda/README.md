@@ -13,11 +13,22 @@ python3 validate.py   # titles, descriptions, links, assets, JSON-LD, old-URL co
 ## Hosting
 
 - Hostinger Agency Growth website **`jlj9tGHeI`** (plain php-fpm, Boston datacenter)
-- Temporary domain: https://lightseagreen-pigeon-260471.hostingersite.com
-- While on `*.hostingersite.com`, `index.php` sends `X-Robots-Tag: noindex`.
-  Canonicals, sitemap and schema already point at `https://comeicavoliamerenda.com`.
-- When the domain is ready: link it with `agency-hosting_domains_change-website`
-  (or hPanel), wait for SSL, and the site needs no rebuild.
+- Live on **https://comeicavoliamerenda.com** since 2026-10-15 (preview domain
+  peachpuff-ostrich-737632.hostingersite.com, which `index.php` marks `noindex`).
+  `www.` and `http://` 301 to `https://comeicavoliamerenda.com`.
+- After `./deploy.sh`, clear the cache (`agency-hosting_cache_clear-website`).
+
+## SEO / tracking
+
+- Google tag `G-5HJ1T79TVS` (GA4) is the first thing in every page's `<head>` (`GTAG` in `build.py`).
+- Search Console file verification: `static/googlecccfbf2f7e9e5ae4.html` (served from the root).
+- Favicons: `favicon.ico` (16/32/48), `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`,
+  `site.webmanifest` with 192/512 icons.
+- Each page: unique title (≤60 chars) and description, canonical, robots `max-image-preview:large`,
+  Open Graph + Twitter cards with a 1200×630 JPG (`assets/img/og/`), JSON-LD (Organization, WebSite,
+  Article, BreadcrumbList, FAQPage, CollectionPage/ItemList), LCP image preload.
+- `sitemap.xml` includes image entries; `robots.txt` points to it.
+- `validate.py` enforces all of the above.
 
 The host serves existing files directly, ignores `.htaccess`, and sends unknown paths to
 `index.php`, so the homepage is `home.html` (there is deliberately no root `index.html`).

@@ -23,7 +23,8 @@ NAME = "Come i Cavoli a Merenda"
 EMAIL = "info@comeicavoliamerenda.com"
 TODAY = datetime.date(2026, 10, 12)
 PUBLISHED = "2026-10-12"
-VERSION = "1"
+MODIFIED = "2026-10-17"
+VERSION = "2"
 
 CATS = {
     "guides": dict(slug="earring-guides", name="Earring Guides", short="Guides",
@@ -168,33 +169,63 @@ def footer():
 </footer>"""
 
 
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HJ1T79TVS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5HJ1T79TVS');
+</script>"""
+
+
 def page(path, title, description, body, schema=None, active="", og_image="hoops-book", og_type="website",
-         robots="index, follow", body_class=""):
+         robots="index, follow, max-image-preview:large, max-snippet:-1", body_class="", og_alt=None, lcp=None):
     url = SITE + path
     graph = [org_schema(), website_schema()] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
-    ogimg = f"{SITE}/assets/img/{og_image}.webp"
+    ogimg = f"{SITE}/assets/img/og/{og_image}.jpg"
     bc = f' class="{body_class}"' if body_class else ""
+    art = ""
+    if og_type == "article":
+        art = (f'<meta property="article:published_time" content="{PUBLISHED}T09:00:00+00:00">\n'
+               f'<meta property="article:modified_time" content="{MODIFIED}T09:00:00+00:00">\n')
+    pre = ""
+    if lcp:
+        pre = (f'<link rel="preload" as="image" href="/assets/img/{lcp}-800.webp" imagesrcset="/assets/img/{lcp}-800.webp 800w, '
+               f'/assets/img/{lcp}.webp 1600w" imagesizes="(max-width: 1000px) 100vw, 820px" fetchpriority="high">\n')
     return f"""<!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-US" class="no-js">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="robots" content="{robots}">
 <link rel="canonical" href="{url}">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{ogimg}">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt or title)}">
+{art}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{ogimg}">
 <meta name="theme-color" content="#1d1424">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="manifest" href="/site.webmanifest">
+{pre}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
@@ -312,10 +343,11 @@ def article_page(a):
     crumbs = [("Home", "/"), (cat["name"], f"/{cat['slug']}/"), (a["h1"], a["url"])]
     schema = [
         {"@type": "Article", "@id": SITE + a["url"] + "#article", "headline": a["h1"], "description": a["description"],
-         "mainEntityOfPage": SITE + a["url"], "datePublished": PUBLISHED, "dateModified": PUBLISHED,
+         "mainEntityOfPage": SITE + a["url"], "datePublished": PUBLISHED, "dateModified": MODIFIED,
          "author": {"@id": SITE + "/#org"}, "publisher": {"@id": SITE + "/#org"}, "inLanguage": "en-US",
          "articleSection": cat["name"], "keywords": a["keyword"],
-         "image": f"{SITE}/assets/img/{a.get('image') or cat['image']}.webp", "wordCount": words},
+         "image": {"@type": "ImageObject", "url": f"{SITE}/assets/img/og/{a.get('image') or cat['image']}.jpg", "width": 1200, "height": 630},
+         "wordCount": words},
         breadcrumb_schema(crumbs),
         {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q,
                                              "acceptedAnswer": {"@type": "Answer", "text": strip_tags(ans)}} for q, ans in a["faqs"]]},
@@ -327,7 +359,7 @@ def article_page(a):
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/{cat['slug']}/">{cat['name']}</a></nav>
     <h1>{esc(a['h1'])}</h1>
     <p>{esc(a['description'])}</p>
-    <div class="meta-row"><a class="pill" href="/{cat['slug']}/">{cat['short']}</a><span>{mins} min read</span><span>Updated {TODAY.strftime('%B %-d, %Y')}</span></div>
+    <div class="meta-row"><a class="pill" href="/{cat['slug']}/">{cat['short']}</a><span>{mins} min read</span><span>Updated October 17, 2026</span></div>
   </div>
 </section>
 <div class="wrap">
@@ -350,7 +382,8 @@ def article_page(a):
 <section class="related"><div class="wrap"><div class="section-head"><h2>Keep reading</h2><a class="btn btn-dark" href="/{cat['slug']}/">All {cat['short'].lower()}</a></div><div class="cards">{rel}</div></div></section>"""
     body_class = "has-feature" if feature else ""
     return page(a["url"], a["title"], a["description"], body, schema, active=f"/{cat['slug']}/",
-                og_image=a.get("image") or cat["image"], og_type="article", body_class=body_class)
+                og_image=a.get("image") or cat["image"], og_type="article", body_class=body_class,
+                og_alt=a.get("image_alt") if a.get("image") else None, lcp=a.get("image"))
 
 
 def hub_page(key):
@@ -511,7 +544,7 @@ def home_page():
     <div><a class="btn btn-gold" href="/contact/">Ask us</a> <a class="btn btn-ghost" href="mailto:{EMAIL}">{EMAIL}</a></div>
   </div>
 </div></section>"""
-    return page("/", f"{NAME}: Earring Sizes, Piercings & Style Guide",
+    return page("/", f"{NAME}: Earring Sizes & Piercing Guide",
                 "Actual-size earring charts, gauge conversions, ear piercing guides and the stories behind famous earrings. An independent guide for beautifully mismatched ears.",
                 body, schema, active="/", og_image="ear-stack")
 
@@ -794,10 +827,15 @@ def main():
     write("/404.html", notfound_page())
 
     with open(os.path.join(DIST, "sitemap.xml"), "w") as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n')
+        imgs = {a["url"]: a["image"] for a in ARTICLES if a.get("image")}
+        imgs.update({f"/{c['slug']}/": c["image"] for c in CATS.values()})
+        imgs["/"] = "ear-stack"
         for u in urls:
             pr = "1.0" if u == "/" else "0.8" if u in {a["url"] for a in ARTICLES} or u.count("/") == 2 and u[1:-1] in [c["slug"] for c in CATS.values()] else "0.5"
-            f.write(f"  <url><loc>{SITE}{u}</loc><lastmod>{PUBLISHED}</lastmod><priority>{pr}</priority></url>\n")
+            im = f"<image:image><image:loc>{SITE}/assets/img/{imgs[u]}.webp</image:loc></image:image>" if u in imgs else ""
+            f.write(f"  <url><loc>{SITE}{u}</loc><lastmod>{MODIFIED}</lastmod><priority>{pr}</priority>{im}</url>\n")
         f.write("</urlset>\n")
     with open(os.path.join(DIST, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE}/sitemap.xml\n")
