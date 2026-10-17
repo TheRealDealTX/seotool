@@ -234,7 +234,7 @@
       fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (d) {
-          if (d.ok) { form.reset(); status.className = 'form-status ok'; status.textContent = 'Thank you — your note is on its way. We reply within two business days.'; }
+          if (d.ok) { if (window.gtag) gtag('event', 'generate_lead', { form_id: 'inquiry-form', event_type: (form.querySelector('[name="type"]') || {}).value }); form.reset(); status.className = 'form-status ok'; status.textContent = 'Thank you — your note is on its way. We reply within two business days.'; }
           else { status.className = 'form-status err'; status.textContent = (d.error || 'Something went wrong.') + ' You can also email info@evergrey-photography.com.'; }
         })
         .catch(function () { status.className = 'form-status err'; status.textContent = 'We could not send that right now. Please email info@evergrey-photography.com.'; })

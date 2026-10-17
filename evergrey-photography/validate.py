@@ -14,7 +14,7 @@ def route_ok(href):
     path = href.split("#")[0].split("?")[0]
     if path == "/":
         return True
-    if path.startswith("/assets/") or path in ("/favicon.svg", "/favicon.png", "/apple-touch-icon.png", "/contact.php"):
+    if path.startswith("/assets/") or path in ("/favicon.svg", "/favicon-96x96.png", "/favicon.ico", "/site.webmanifest", "/apple-touch-icon.png", "/contact.php"):
         return os.path.exists(PUB + path)
     return path.lstrip("/") in routes and path.lstrip("/") != "404"
 
@@ -58,6 +58,9 @@ for r in sorted(routes):
         try: json.loads(block)
         except ValueError as e: errors.append(f"{r}: bad JSON-LD {e}")
     if re.search(r"\{(ARROW|img:|icon)", s): errors.append(f"{r}: unrendered placeholder")
+    if s.count("gtag('config', 'G-BTLDQSK5EM')") != 1: errors.append(f"{r}: Google tag missing or duplicated")
+    for m in re.findall(r'content="https://www\.evergrey-photography\.com(/assets/[^"]+)"', s):
+        if not os.path.exists(PUB + m): errors.append(f"{r}: missing meta asset {m}")
 
 for k, v in list(titles.items()) + list(descs.items()):
     if len(v) > 1: errors.append(f"duplicate title/description on {v}")
@@ -65,6 +68,10 @@ for k, v in list(titles.items()) + list(descs.items()):
 # legacy URLs that carry traffic or backlinks must exist
 for need in ("index", "about", "post/kasha-justin", "post/sarina-riley", "post/florence-kyle", "blog", "contact"):
     if need not in routes: errors.append(f"missing legacy page /{need}")
+
+for f in ("googlecccfbf2f7e9e5ae4.html", "favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png",
+          "site.webmanifest", "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "robots.txt", "sitemap.xml"):
+    if not os.path.exists(os.path.join(PUB, f)): errors.append(f"missing root file {f}")
 
 print("\n".join(errors) if errors else f"OK — {len(routes)} pages checked")
 sys.exit(1 if errors else 0)

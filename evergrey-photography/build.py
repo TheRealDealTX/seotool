@@ -17,6 +17,18 @@ from PIL import Image
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import siteconfig as C  # noqa: E402
+
+FONTS = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Manrope:wght@400;500;600&amp;display=swap"
+
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BTLDQSK5EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BTLDQSK5EM');
+</script>"""
 from content import posts_a, posts_b, posts_c  # noqa: E402
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -31,6 +43,21 @@ POST_BY_SLUG = {p["slug"]: p for p in POSTS}
 SITEMAP = []
 
 esc = html.escape
+
+
+def og(key):
+    """1200x630 JPEG share image (Facebook/LinkedIn don't reliably read WebP)."""
+    d = os.path.join(IMG, "og")
+    os.makedirs(d, exist_ok=True)
+    out = os.path.join(d, key + ".jpg")
+    if not os.path.exists(out):
+        with Image.open(os.path.join(IMG, key + ".webp")) as im:
+            im = im.convert("RGB")
+            r = max(1200 / im.width, 630 / im.height)
+            im = im.resize((round(im.width * r), round(im.height * r)), Image.LANCZOS)
+            x, y = (im.width - 1200) // 2, (im.height - 630) // 2
+            im.crop((x, y, x + 1200, y + 630)).save(out, "JPEG", quality=82, optimize=True, progressive=True)
+    return key
 
 
 def url(route):
@@ -194,6 +221,7 @@ def page(route, title, desc, body, *, active="", over_hero=True, schema=None, og
     doc = f'''<!doctype html>
 <html lang="en-CA">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(t)}</title>
@@ -206,18 +234,28 @@ def page(route, title, desc, body, *, active="", over_hero=True, schema=None, og
 <meta property="og:title" content="{esc(t)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{C.SITE}/assets/img/{og_image}.webp">
+<meta property="og:image" content="{C.SITE}/assets/img/og/{og(og_image)}.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{esc(t)}">
 <meta property="og:locale" content="en_CA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(t)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{C.SITE}/assets/img/{og_image}.webp">
+<meta name="twitter:image" content="{C.SITE}/assets/img/og/{og_image}.jpg">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="The Evergrey Journal" href="/feed.xml">
+<meta name="apple-mobile-web-app-title" content="Evergrey">
+<meta name="author" content="{C.NAME}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap">
+<link rel="preload" as="style" href="{FONTS}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{FONTS}"></noscript>
 <link rel="stylesheet" href="/assets/css/site.css?v={VER}">
 {head_extra}<script type="application/ld+json">{ld}</script>
 </head>
@@ -236,7 +274,11 @@ def page(route, title, desc, body, *, active="", over_hero=True, schema=None, og
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(doc)
     if sitemap:
-        SITEMAP.append((canonical, lastmod or TODAY, priority))
+        imgs = []
+        for k in re.findall(r"/assets/img/([a-z0-9-]+?)(?:-sm)?\.webp", body):
+            if k not in imgs:
+                imgs.append(k)
+        SITEMAP.append((canonical, lastmod or TODAY, priority, imgs[:20]))
 
 
 def page_hero(h1, lead, image, alt, trail, cls="", eyebrow=""):
@@ -336,7 +378,7 @@ def build_home():
   <div class="hero-slides">{figs}</div>
   <div class="wrap">
     <span class="eyebrow light">Victoria, BC · Wedding &amp; Elopement Photographer</span>
-    <h1><span class="line"><span>Wild hearts,</span></span><span class="line"><span><em>West Coast</em> light,</span></span><span class="line"><span>honest photographs.</span></span></h1>
+    <h1><span class="line"><span>Victoria <em>wedding</em></span></span> <span class="line"><span>photography for</span></span> <span class="line"><span>wild hearts.</span></span></h1>
     <div class="hero-meta">
       <div><p class="lead">Evergrey Photography is a Victoria wedding photographer for couples who would rather feel their day than pose through it — weddings, elopements and engagements across Vancouver Island.</p>
       <div class="btn-row"><a class="btn light" href="/contact">Check your date {ARROW}</a><a class="btn ghost-light" href="/portfolio">View portfolio</a></div></div>
@@ -517,8 +559,8 @@ def service_page(route, h1, title, desc, hero, hero_alt, lead, intro_h2, intro, 
 
 def build_services():
     service_page(
-        "weddings", "Victoria <em>Wedding</em> Photography", "Victoria Wedding Photography | Evergrey Photography",
-        "Victoria wedding photography with a calm, documentary approach. Full-day coverage across Victoria, BC and Vancouver Island. Packages from $2,700 CAD.",
+        "weddings", "Wedding Photographer in <em>Victoria, BC</em>", "Wedding Photographer Victoria BC — Full-Day Coverage | Evergrey",
+        "Wedding photographer in Victoria, BC with a calm, documentary approach. Full-day coverage across Greater Victoria and Vancouver Island from $2,700 CAD.",
         "recessional-petals", "Guests throwing petals as a newly married couple walks back up the aisle",
         "Full-day, story-driven coverage for weddings across Greater Victoria and Vancouver Island — from the first buttonhole to the last dance.",
         "A Victoria wedding photographer who <em>knows the light</em>",
@@ -975,10 +1017,20 @@ def build_404():
 
 def write_static():
     with open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8") as fh:
-        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for loc, lm, pr in SITEMAP:
-            fh.write(f"  <url><loc>{loc}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>\n")
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                 'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n')
+        for loc, lm, pr, imgs in sorted(SITEMAP, key=lambda x: (-float(x[2]), x[0])):
+            im = "".join(f"<image:image><image:loc>{C.SITE}/assets/img/{k}.webp</image:loc></image:image>" for k in imgs)
+            fh.write(f"  <url><loc>{loc}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority>{im}</url>\n")
         fh.write("</urlset>\n")
+    items = "".join(
+        f"<item><title>{esc(p['h1'])}</title><link>{url('post/' + p['slug'])}</link><guid>{url('post/' + p['slug'])}</guid>"
+        f"<pubDate>{dt.datetime.fromisoformat(p['date']).strftime('%a, %d %b %Y 12:00:00 -0800')}</pubDate>"
+        f"<category>{esc(p['category'])}</category><description>{esc(p['excerpt'])}</description></item>\n" for p in POSTS)
+    with open(os.path.join(PUB, "feed.xml"), "w", encoding="utf-8") as fh:
+        fh.write('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+                 f'<title>The Evergrey Journal</title><link>{url("blog")}</link><description>Real weddings, Vancouver Island location guides and planning advice from {C.NAME}.</description>'
+                 f'<language>en-ca</language><atom:link href="{C.SITE}/feed.xml" rel="self" type="application/rss+xml"/>\n{items}</channel></rss>\n')
     with open(os.path.join(PUB, "robots.txt"), "w", encoding="utf-8") as fh:
         fh.write(f"User-agent: *\nAllow: /\nDisallow: /_pages/\nDisallow: /contact.php\n\nSitemap: {C.SITE}/sitemap.xml\n")
 
@@ -988,16 +1040,41 @@ def favicons():
            '<path d="M20 7 12.5 19h4L11 27.5h7V33h4v-5.5h7L23.5 19h4z" fill="#c4a275"/></svg>')
     open(os.path.join(PUB, "favicon.svg"), "w").write(svg)
     from PIL import ImageDraw
-    for size, name in ((96, "favicon.png"), (180, "apple-touch-icon.png"), (512, "assets/img/logo.png")):
-        im = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    pts = [(20, 7), (12.5, 19), (16.5, 19), (11, 27.5), (18, 27.5), (18, 33), (22, 33), (22, 27.5), (29, 27.5), (23.5, 19), (27.5, 19)]
+
+    def icon_png(size, radius=.22, pad=0.0):
+        big = size * 4  # supersample for smooth edges
+        im = Image.new("RGBA", (big, big), (0, 0, 0, 0))
         d = ImageDraw.Draw(im)
-        d.rounded_rectangle([0, 0, size - 1, size - 1], radius=int(size * .22), fill="#1b2420")
-        s = size / 40
-        pts = [(20, 7), (12.5, 19), (16.5, 19), (11, 27.5), (18, 27.5), (18, 33), (22, 33), (22, 27.5), (29, 27.5), (23.5, 19), (27.5, 19)]
-        d.polygon([(x * s, y * s) for x, y in pts], fill="#c4a275")
-        im.save(os.path.join(PUB, name))
-    if not os.path.exists(os.path.join(PUB, "favicon.ico")):
-        Image.open(os.path.join(PUB, "favicon.png")).save(os.path.join(PUB, "favicon.ico"), sizes=[(48, 48)])
+        d.rounded_rectangle([0, 0, big - 1, big - 1], radius=int(big * radius), fill="#1b2420")
+        s, off = big * (1 - 2 * pad) / 40, big * pad
+        d.polygon([(off + x * s, off + y * s) for x, y in pts], fill="#c4a275")
+        return im.resize((size, size), Image.LANCZOS)
+
+    icon_png(96).save(os.path.join(PUB, "favicon-96x96.png"))
+    icon_png(180, radius=0).save(os.path.join(PUB, "apple-touch-icon.png"))
+    icon_png(192, radius=0, pad=.1).save(os.path.join(PUB, "web-app-manifest-192x192.png"))
+    icon_png(512, radius=0, pad=.1).save(os.path.join(PUB, "web-app-manifest-512x512.png"))
+    icon_png(512).save(os.path.join(IMG, "logo.png"))
+    icon_png(256).save(os.path.join(PUB, "favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48)])
+    for stale in ("favicon.png",):
+        f = os.path.join(PUB, stale)
+        if os.path.exists(f):
+            os.remove(f)
+    manifest = {
+        "name": C.NAME, "short_name": "Evergrey", "start_url": "/", "display": "standalone",
+        "background_color": "#f6f4ef", "theme_color": "#1b2420",
+        "icons": [
+            {"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+            {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+            {"src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png"},
+        ],
+    }
+    with open(os.path.join(PUB, "site.webmanifest"), "w") as fh:
+        json.dump(manifest, fh, indent=2)
+    # Google Search Console HTML-file verification
+    with open(os.path.join(PUB, "googlecccfbf2f7e9e5ae4.html"), "w") as fh:
+        fh.write("google-site-verification: googlecccfbf2f7e9e5ae4.html")
 
 
 def main():

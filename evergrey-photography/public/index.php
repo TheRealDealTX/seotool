@@ -32,7 +32,7 @@ $aliases = [
     '/services' => '/weddings', '/wedding' => '/weddings', '/elopement' => '/elopements',
     '/engagement' => '/engagements', '/couples' => '/engagements',
     '/post' => '/blog', '/posts' => '/blog', '/journal' => '/blog', '/blog-1' => '/blog',
-    '/feed.xml' => '/blog', '/blog-feed.xml' => '/blog',
+    '/blog-feed.xml' => '/feed.xml', '/rss' => '/feed.xml',
 ];
 
 if ($path !== '/' && substr($path, -1) === '/') go(rtrim($path, '/') . $qs);
