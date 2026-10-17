@@ -6,12 +6,12 @@ SITE = {
     "email": "info@michellewhitephoto.com",
     "description": "Michelle White Photography — natural, light-filled wedding, elopement and interior photography based in Salt Lake City, Utah.",
 }
-MODIFIED = "2026-10-12"
+MODIFIED = "2026-10-17"
 
 # ------------------------------------------------------------------ home
-HOME_TITLE = "Michelle White Photography | Salt Lake City Wedding & Interior Photographer"
-HOME_DESC = ("Michelle White Photography — natural, editorial wedding, elopement and interior photography in Salt Lake City, "
-             "Park City and across Utah. Now booking 2027 and 2028.")
+HOME_TITLE = "Michelle White Photography | Salt Lake City Photographer"
+HOME_DESC = ("Michelle White Photography: natural, editorial wedding, elopement and interior photography in Salt Lake City, "
+             "Park City and across Utah.")
 HOME_FAQ = [
     ("Where is Michelle White Photo based?",
      "The studio is based in Salt Lake City, Utah, and photographs weddings and interiors throughout the Wasatch Front, Park City, "
@@ -28,8 +28,8 @@ HOME_FAQ = [
 ]
 
 # ------------------------------------------------------------------ about
-ABOUT_TITLE = "About Michelle White Photography | Salt Lake City Photographer"
-ABOUT_DESC = ("About Michelle White Photography: a Salt Lake City studio for weddings, elopements and interiors, "
+ABOUT_TITLE = "About Michelle White Photography | Salt Lake City"
+ABOUT_DESC = ("About Michelle White Photography, a Salt Lake City studio for weddings, elopements and interiors "
               "built on natural light, calm direction and timeless editing.")
 ABOUT_INTRO = """<p class="lede">Michelle White Photo exists for one reason: to make photographs that still feel true long after the day is over.</p>
 <p>The studio works the same way whether the subject is a couple, a family or a beautifully finished room. Find the best light. Slow down.
@@ -55,7 +55,7 @@ INCLUDED = [
 
 # ------------------------------------------------------------------ weddings
 WEDDINGS_TITLE = "Utah Wedding Photographer | Michelle White Photography"
-WEDDINGS_DESC = ("Natural, editorial wedding and elopement photography in Salt Lake City, Park City and across Utah by Michelle White Photo. "
+WEDDINGS_DESC = ("Natural, editorial wedding and elopement photography in Salt Lake City, Park City and across Utah. "
                  "View the portfolio and check your date.")
 WEDDINGS_INTRO = """<p class="lede">Your wedding should look like <em>yours</em> — not like a template.</p>
 <p>Coverage is documentary at heart: getting ready, the first look, the ceremony, the toasts and the dance floor are photographed as they happen.
@@ -106,9 +106,9 @@ WEDDING_FAQ = [
 ]
 
 # ------------------------------------------------------------------ interiors
-INTERIORS_TITLE = "Interior Photographer Salt Lake City | Michelle White Photography"
-INTERIORS_DESC = ("Interior and architectural photography in Salt Lake City and across Utah for designers, architects, builders and publications. "
-                  "Editorial, natural-light images by Michelle White Photo.")
+INTERIORS_TITLE = "Salt Lake City Interior Photographer | Michelle White Photo"
+INTERIORS_DESC = ("Editorial interior and architectural photography in Salt Lake City and across Utah for designers, "
+                  "architects, builders and publications.")
 INTERIORS_INTRO = """<p class="lede">A finished space deserves photographs that do it justice — and that make people want to step inside.</p>
 <p>Interior shoots are slow and deliberate. Each room is studied for its best hour of light, styled with care alongside the designer,
 and photographed with straight verticals, balanced exposures and colour that matches the materials in real life.</p>
@@ -140,7 +140,7 @@ INTERIOR_FAQ = [
 ]
 
 # ------------------------------------------------------------------ blog / contact
-BLOG_TITLE = "Journal | Wedding Stories & Planning Guides | Michelle White Photo"
+BLOG_TITLE = "Journal: Wedding Stories & Guides | Michelle White Photo"
 BLOG_DESC = "Wedding stories, styling inspiration and photography planning guides from Michelle White Photo in Salt Lake City, Utah."
 CONTACT_TITLE = "Contact Michelle White Photography | Check Your Date"
 CONTACT_DESC = "Contact Michelle White Photo for wedding, elopement and interior photography in Salt Lake City and Utah. Email info@michellewhitephoto.com."
@@ -152,7 +152,7 @@ POSTS = [
     {
         "slug": "mandi-and-riley-nelson",
         "short": "Mandi & Riley Nelson",
-        "title": "Mandi & Riley Nelson | Mountain Lake Wedding | Michelle White Photo",
+        "title": "Mandi & Riley Nelson Wedding | Michelle White Photo",
         "title_card": "Mandi & Riley Nelson: a mountain lake wedding",
         "h1": "Mandi &amp; Riley Nelson: <em>a mountain lake wedding</em>",
         "h1_plain": "Mandi & Riley Nelson: a mountain lake wedding",
@@ -193,11 +193,11 @@ rest falls into place. <a href="/weddings/">See more of our wedding work</a> or 
     {
         "slug": "sarah-winward",
         "short": "Sarah Winward florals",
-        "title": "Sarah Winward Florals & Wedding Photography | Michelle White Photo",
+        "title": "Sarah Winward Wedding Florals | Michelle White Photo",
         "title_card": "Sarah Winward: seasonal florals that photograph beautifully",
         "h1": "Sarah Winward: <em>seasonal florals that photograph beautifully</em>",
         "h1_plain": "Sarah Winward: seasonal florals that photograph beautifully",
-        "desc": "Why the seasonal, garden-style floral design of Salt Lake City florist Sarah Winward photographs so beautifully — and how to photograph wedding flowers well.",
+        "desc": "Why the seasonal, garden-style designs of Salt Lake City florist Sarah Winward photograph so beautifully, plus how to photograph wedding flowers.",
         "category": "Inspiration",
         "date": "2026-10-12", "date_display": "October 2026", "read": 5,
         "image": "floral-arch", "image_alt": "Linen-draped ceremony arch with loose garden roses and greenery",
@@ -232,7 +232,7 @@ wonderful in photographs. <a href="/weddings/">Explore our wedding portfolio</a>
     {
         "slug": "maris-spencer-2",
         "short": "Maris & Spencer",
-        "title": "Maris & Spencer | Summer Garden Wedding | Michelle White Photo",
+        "title": "Maris & Spencer Wedding | Michelle White Photo",
         "title_card": "Maris & Spencer: a summer garden wedding",
         "h1": "Maris &amp; Spencer: <em>a summer garden wedding</em>",
         "h1_plain": "Maris & Spencer: a summer garden wedding",
@@ -264,7 +264,7 @@ photo sessions. Comfortable people look relaxed in photographs — and they enjo
     {
         "slug": "rebecca-mike",
         "short": "Rebecca & Mike",
-        "title": "Rebecca & Mike | Timeless Black & White Wedding | Michelle White Photo",
+        "title": "Rebecca & Mike Wedding | Michelle White Photo",
         "title_card": "Rebecca & Mike: a timeless black-and-white wedding",
         "h1": "Rebecca &amp; Mike: <em>a timeless black-and-white wedding</em>",
         "h1_plain": "Rebecca & Mike: a timeless black-and-white wedding",
@@ -296,7 +296,7 @@ say so — it helps your photographer watch for the moments that suit it. <a hre
     {
         "slug": "madison-bryan-wedding",
         "short": "Madison & Bryan wedding",
-        "title": "Madison & Bryan Wedding | Golden-Hour Celebration | Michelle White Photo",
+        "title": "Madison & Bryan Wedding | Michelle White Photo",
         "title_card": "Madison & Bryan wedding: a golden-hour celebration",
         "h1": "Madison &amp; Bryan wedding: <em>a golden-hour celebration</em>",
         "h1_plain": "Madison & Bryan wedding: a golden-hour celebration",
@@ -328,7 +328,7 @@ most dramatic light of the day. Keep the plan flexible and watch the sky togethe
     {
         "slug": "wedding-photography-timeline-guide",
         "short": "Wedding photography timeline guide",
-        "title": "Wedding Photography Timeline Guide for Utah Couples | Michelle White Photo",
+        "title": "Wedding Photography Timeline Guide | Michelle White Photo",
         "title_card": "The wedding photography timeline guide",
         "h1": "The wedding photography <em>timeline guide</em>",
         "h1_plain": "The wedding photography timeline guide",
@@ -372,7 +372,7 @@ Allow extra travel time for canyon roads, and always have a covered plan for aft
     {
         "slug": "interior-photography-tips-for-designers",
         "short": "Interior photography tips",
-        "title": "Interior Photography Tips for Designers | Michelle White Photo",
+        "title": "Interior Photography Tips for Designers | Michelle White",
         "title_card": "Getting the most from your interior photoshoot",
         "h1": "Getting the most from your <em>interior photoshoot</em>",
         "h1_plain": "Getting the most from your interior photoshoot",

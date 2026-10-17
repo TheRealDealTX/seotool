@@ -8,8 +8,11 @@ shared layout, components and the page list.
 """
 import json
 import os
+import re
 import shutil
 from html import escape
+
+from PIL import Image
 
 import content as C
 
@@ -17,7 +20,31 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
 OUT = os.path.join(ROOT, "public")
 ORIGIN = C.SITE["origin"]
-V = "5"  # asset cache-buster
+V = "6"
+
+GTAG_ID = "G-FTGZF9WD7R"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GTAG_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GTAG_ID}');
+</script>"""
+
+_SIZES = {}
+
+
+def img_size(name):
+    """Pixel size of the full (1600w) WebP, so every <img> gets width/height and doesn't shift layout."""
+    if name not in _SIZES:
+        with Image.open(os.path.join(SRC, "img", name + ".webp")) as im:
+            _SIZES[name] = im.size
+    return _SIZES[name]
+
+
+OG_USED = set()  # asset cache-buster
 
 NAV = [
     ("Home", "/"),
@@ -34,8 +61,10 @@ def img(name, alt, cls="", eager=False, sizes="(max-width: 960px) 100vw, 50vw", 
     """Responsive <img> for an image in src/img (name without extension)."""
     loading = 'fetchpriority="high"' if eager else 'loading="lazy"'
     c = f' class="{cls}"' if cls else ""
+    w, h = img_size(name)
     return (f'<img{c} src="/assets/img/{name}.webp" srcset="/assets/img/{name}-sm.webp 800w, '
-            f'/assets/img/{name}.webp 1600w" sizes="{sizes}" alt="{escape(alt)}" {loading} decoding="async"{attrs}>')
+            f'/assets/img/{name}.webp 1600w" sizes="{sizes}" width="{w}" height="{h}" alt="{escape(alt)}" '
+            f'{loading} decoding="async"{attrs}>')
 
 
 def url(path):
@@ -80,8 +109,8 @@ BUSINESS_LD = {
     "alternateName": ["Michelle White Photography", "Michelle White"],
     "url": ORIGIN + "/",
     "email": C.SITE["email"],
-    "image": ORIGIN + "/assets/img/hero-couple-field.webp",
-    "logo": ORIGIN + "/favicon.svg",
+    "image": ORIGIN + "/assets/og/hero-couple-field.jpg",
+    "logo": {"@type": "ImageObject", "url": ORIGIN + "/web-app-manifest-512x512.png", "width": 512, "height": 512},
     "description": C.SITE["description"],
     "priceRange": "$$$",
     "address": {"@type": "PostalAddress", "addressLocality": "Salt Lake City", "addressRegion": "UT", "addressCountry": "US"},
@@ -125,15 +154,15 @@ def footer():
         <p style="max-width:34ch">Natural, light-filled wedding and interior photography from Salt Lake City, Utah — made to feel the way the day felt.</p>
       </div>
       <div>
-        <h4>Explore</h4>
+        <h2 class="foot-h">Explore</h2>
         <ul>{"".join(f'<li><a href="{h}">{l}</a></li>' for l, h in NAV[1:])}</ul>
       </div>
       <div>
-        <h4>Journal</h4>
+        <h2 class="foot-h">Journal</h2>
         <ul>{"".join(f'<li><a href="{post_url(p["slug"])}">{escape(p["short"])}</a></li>' for p in C.POSTS[:5])}</ul>
       </div>
       <div>
-        <h4>Say hello</h4>
+        <h2 class="foot-h">Say hello</h2>
         <ul>
           <li><a href="mailto:{e}">{e}</a></li>
           <li>Salt Lake City, Utah</li>
@@ -152,33 +181,48 @@ def footer():
 
 
 def page(path, title, desc, body, active=None, ld=None, og_image="hero-couple-field", og_type="website",
-         canonical=None, extra_head="", robots="index, follow", progress=False):
+         canonical=None, extra_head="", robots="index, follow", progress=False, og_alt=None):
     canonical = canonical if canonical is not None else url(path)
+    canon_tag = f'<link rel="canonical" href="{canonical}">\n' if canonical else ""
+    OG_USED.add(og_image)
+    og_alt = og_alt or title
+    # Preload the first high-priority (LCP) image.
+    m = re.search(r'<img[^>]*srcset="([^"]+)" sizes="([^"]+)"[^>]*fetchpriority="high"', body)
+    preload = (f'<link rel="preload" as="image" imagesrcset="{m.group(1)}" imagesizes="{m.group(2)}" fetchpriority="high">\n'
+               if m else "")
     graph = [BUSINESS_LD, WEBSITE_LD] + (ld or [])
     ld_json = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, indent=None)
-    og_img = f"{ORIGIN}/assets/img/{og_image}.webp"
+    og_img = f"{ORIGIN}/assets/og/{og_image}.jpg"
     return f"""<!doctype html>
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
+{GTAG}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)}</title>
 <meta name="description" content="{escape(desc)}">
 <meta name="robots" content="{robots}">
-<link rel="canonical" href="{canonical}">
+{canon_tag}<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{C.SITE['name']}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{escape(title)}">
 <meta property="og:description" content="{escape(desc)}">
-<meta property="og:url" content="{canonical}">
+<meta property="og:url" content="{canonical or url(path)}">
 <meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{escape(og_alt)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{escape(title)}">
 <meta name="twitter:description" content="{escape(desc)}">
 <meta name="twitter:image" content="{og_img}">
 <meta name="theme-color" content="#1c1a18">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+{preload}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={V}">
@@ -606,12 +650,12 @@ def build_post(p):
     ld = [breadcrumb_ld(items), {
         "@type": "BlogPosting", "headline": p["h1_plain"], "description": p["desc"], "url": url(path),
         "mainEntityOfPage": url(path), "datePublished": p["date"], "dateModified": C.MODIFIED,
-        "image": f"{ORIGIN}/assets/img/{p['image']}.webp",
+        "image": f"{ORIGIN}/assets/og/{p['image']}.jpg",
         "author": {"@type": "Organization", "name": C.SITE["name"], "url": ORIGIN + "/"},
         "publisher": {"@id": ORIGIN + "/#business"}}]
     extra = f'<meta property="article:published_time" content="{p["date"]}">\n'
     return page(path, p["title"], p["desc"], body, active="/blog/", ld=ld, og_image=p["image"],
-                og_type="article", extra_head=extra, progress=True)
+                og_type="article", extra_head=extra, progress=True, og_alt=p["image_alt"])
 
 
 def build_contact():
@@ -684,11 +728,15 @@ def build_404():
   </div>
 </section>"""
     return page("/404.html", "Page not found | Michelle White Photo", "The page you were looking for could not be found.",
-                body, robots="noindex, follow", canonical=url("/404.html"))
+                body, robots="noindex, follow", canonical="")
 
 
 # ---------------------------------------------------------------- write
+PAGES = {}
+
+
 def write(rel, html):
+    PAGES[rel] = html
     path = os.path.join(OUT, rel)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -704,8 +752,9 @@ def main():
     os.makedirs(os.path.join(OUT, "assets/js"))
     shutil.copy(os.path.join(SRC, "site.css"), os.path.join(OUT, "assets/css/site.css"))
     shutil.copy(os.path.join(SRC, "site.js"), os.path.join(OUT, "assets/js/site.js"))
-    for f in ("index.php", "contact.php", "favicon.svg", ".htaccess"):
+    for f in ("index.php", "contact.php", ".htaccess", "robots.txt", "googlecccfbf2f7e9e5ae4.html"):
         shutil.copy(os.path.join(SRC, f), os.path.join(OUT, f))
+    build_icons()
 
     # Homepage is home.html served by index.php (see README "Hosting note").
     write("home.html", build_home())
@@ -719,13 +768,68 @@ def main():
     write("privacy-policy/index.html", build_privacy())
     write("404.html", build_404())
 
-    urls = [("/", "1.0"), ("/about/", "0.8"), ("/weddings/", "0.9"), ("/interiors/", "0.9"), ("/blog/", "0.7"),
-            ("/contact/", "0.6"), ("/privacy-policy/", "0.2")] + [(post_url(p["slug"]), "0.6") for p in C.POSTS]
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    sm += [f"  <url><loc>{url(u)}</loc><lastmod>{C.MODIFIED}</lastmod><priority>{pr}</priority></url>" for u, pr in urls]
+    build_og()
+
+    urls = [("/", "home.html", "1.0"), ("/about/", "about/index.html", "0.8"), ("/weddings/", "weddings/index.html", "0.9"),
+            ("/interiors/", "interiors/index.html", "0.9"), ("/blog/", "blog/index.html", "0.7"),
+            ("/contact/", "contact/index.html", "0.6"), ("/privacy-policy/", "privacy-policy/index.html", "0.2")] + [
+        (post_url(p["slug"]), f"blog/{p['slug']}/index.html", "0.6") for p in C.POSTS]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for u, rel, pr in urls:
+        # Images in <main> only (the footer repeats nothing image-wise, but keep it scoped anyway).
+        main = PAGES[rel].split('<main id="main">', 1)[1].split("</main>", 1)[0]
+        imgs = list(dict.fromkeys(re.findall(r'src="(/assets/img/[\w-]+\.webp)"', main)))
+        im = "".join(f"<image:image><image:loc>{ORIGIN}{i}</image:loc></image:image>" for i in imgs)
+        sm.append(f"  <url><loc>{url(u)}</loc><lastmod>{C.MODIFIED}</lastmod><priority>{pr}</priority>{im}</url>")
     sm.append("</urlset>")
     write("sitemap.xml", "\n".join(sm) + "\n")
     print(f"built {len(urls) + 1} pages into {OUT}")
+
+
+def build_icons():
+    """Favicon set from src/icon-master.png (1024px)."""
+    import base64
+    import io
+    master = Image.open(os.path.join(SRC, "icon-master.png")).convert("RGBA")
+
+    def sized(n):
+        return master.resize((n, n), Image.LANCZOS)
+    sized(48).save(os.path.join(OUT, "favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48)])
+    sized(96).save(os.path.join(OUT, "favicon-96x96.png"), optimize=True)
+    # Apple ignores transparency, so give the touch icon a solid square background.
+    apple = Image.new("RGBA", (180, 180), (28, 26, 24, 255))
+    apple.alpha_composite(sized(180))
+    apple.convert("RGB").save(os.path.join(OUT, "apple-touch-icon.png"), optimize=True)
+    for n in (192, 512):
+        sized(n).save(os.path.join(OUT, f"web-app-manifest-{n}x{n}.png"), optimize=True)
+    buf = io.BytesIO()
+    sized(128).save(buf, "PNG", optimize=True)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    with open(os.path.join(OUT, "favicon.svg"), "w") as f:
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 128 128">'
+                f'<image width="128" height="128" xlink:href="data:image/png;base64,{b64}"/></svg>')
+    manifest = {
+        "name": C.SITE["name"], "short_name": "M. White Photo", "start_url": "/", "display": "standalone",
+        "background_color": "#f7f2eb", "theme_color": "#1c1a18",
+        "icons": [{"src": f"/web-app-manifest-{n}x{n}.png", "sizes": f"{n}x{n}", "type": "image/png", "purpose": "any"}
+                  for n in (192, 512)],
+    }
+    with open(os.path.join(OUT, "site.webmanifest"), "w") as f:
+        json.dump(manifest, f, indent=2)
+
+
+def build_og():
+    """1200x630 JPEG share images (social platforms handle JPEG more reliably than WebP)."""
+    os.makedirs(os.path.join(OUT, "assets/og"), exist_ok=True)
+    for name in sorted(OG_USED):
+        with Image.open(os.path.join(SRC, "img", name + ".webp")) as im:
+            im = im.convert("RGB")
+            tw, th = 1200, 630
+            scale = max(tw / im.width, th / im.height)
+            im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
+            left, top = (im.width - tw) // 2, max(0, (im.height - th) // 3)
+            im.crop((left, top, left + tw, top + th)).save(os.path.join(OUT, f"assets/og/{name}.jpg"), quality=82, optimize=True, progressive=True)
 
 
 if __name__ == "__main__":

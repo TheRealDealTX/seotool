@@ -389,7 +389,7 @@ body::after {
 .site-footer { background: var(--ink); color: rgba(247,242,235,.75); padding: clamp(70px, 9vw, 110px) 0 36px; font-size: .95rem; }
 .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 60px; border-bottom: 1px solid rgba(247,242,235,.14); }
 .site-footer .brand { color: var(--paper); margin-bottom: 22px; }
-.site-footer h4 { font: 600 .7rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--paper); margin-bottom: 20px; }
+.site-footer .foot-h { font: 600 .7rem/1 var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--paper); margin-bottom: 20px; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
 .site-footer li { margin-bottom: 10px; }
 .site-footer a { text-decoration: none; transition: color .3s; }

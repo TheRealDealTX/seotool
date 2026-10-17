@@ -3,7 +3,7 @@
 Static rebuild of michellewhitephoto.com, a Salt Lake City wedding and interiors photography site.
 It is a modern redesign, not a copy of the 2018 site.
 
-- **Temporary URL:** https://lavenderblush-mole-750761.hostingersite.com
+- **Live:** https://michellewhitephoto.com (temporary URL: https://lavenderblush-mole-750761.hostingersite.com)
 - **Hostinger:** Agency Growth plan, order 1008744732, website UID `TgdLuLxCB` (php-fpm 8.3, Phoenix datacenter)
 - **Email used on the site:** info@michellewhitephoto.com
 
@@ -38,6 +38,15 @@ The host's web server adds the trailing slash to directory paths before PHP runs
 and `/blog/tag|category/*` to their nearest pages. Unknown paths return `404.html` with a real 404.
 
 New pages: `/weddings/`, `/interiors/`, `/blog/` (journal), `/contact/`, `/privacy-policy/`, plus two new guides.
+
+## SEO and tracking
+
+- Google tag `G-FTGZF9WD7R` sits at the top of `<head>` on every page (`GTAG` in `build.py`).
+- Search Console HTML verification file: `src/googlecccfbf2f7e9e5ae4.html`, served at the site root.
+- Favicons, the touch icon and the web manifest are generated from `src/icon-master.png` by `build_icons()`.
+- 1200x630 JPEG share images go in `assets/og/` (`build_og()`). Every `<img>` has width/height, and the first hero image is preloaded.
+- Titles are 60 characters or fewer and descriptions 160 or fewer. `sitemap.xml` includes image entries. `robots.txt` is static,
+  because the host never routes `.txt` requests to PHP.
 
 ## Hosting note
 
