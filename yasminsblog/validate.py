@@ -37,12 +37,16 @@ def exists(u):
 
 for dp, _, fs in os.walk(OUT):
     for fn in fs:
-        if not fn.endswith(".html"): continue
+        if not fn.endswith(".html") or fn.startswith("google"): continue  # GSC file stays verbatim
         path = os.path.join(dp, fn); rel = os.path.relpath(path, OUT)
         p = P(); p.feed(open(path, encoding="utf-8").read())
         if p.h1 != 1: errors.append(f"{rel}: {p.h1} h1")
-        if not p.desc or not (50 <= len(p.desc) <= 170): errors.append(f"{rel}: description length {len(p.desc or '')}")
-        if not (10 <= len(p.title) <= 75): errors.append(f"{rel}: title length {len(p.title)}: {p.title}")
+        if not p.desc or not (50 <= len(p.desc) <= 160): errors.append(f"{rel}: description length {len(p.desc or '')}")
+        if not (10 <= len(p.title) <= 60): errors.append(f"{rel}: title length {len(p.title)}: {p.title}")
+        raw = open(path, encoding="utf-8").read()
+        if "googletagmanager.com/gtag/js?id=G-TSZCH0JK49" not in raw: errors.append(f"{rel}: missing Google tag")
+        if raw.find("G-TSZCH0JK49") > raw.find("<title>"): errors.append(f"{rel}: Google tag not at top of <head>")
+        if '<meta name="robots"' not in raw: errors.append(f"{rel}: no robots meta")
         if rel != "404.html":
             titles.setdefault(p.title, []).append(rel); descs.setdefault(p.desc, []).append(rel)
             if not p.canon: errors.append(f"{rel}: no canonical")
@@ -61,5 +65,11 @@ for f, col in [("7f8dfcc6-yasminsblog.com-organic.Positions-us-20220115-2026-10-
         for r in csv.DictReader(open(up + f)):
             u = re.sub(r"^https?://(www\.)?yasminsblog\.com", "", r[col]) or "/"
             if not exists(u): errors.append(f"legacy URL not built: {u}")
+for f in ["favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "manifest.json", "robots.txt",
+          "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "googlecccfbf2f7e9e5ae4.html",
+          "_pages/sitemap.xml"]:
+    if not os.path.isfile(os.path.join(OUT, f)): errors.append(f"missing {f}")
+for f in ["sitemap.xml", "index.html"]:
+    if os.path.exists(os.path.join(OUT, f)): errors.append(f"{f} must not be a static file (served by index.php)")
 print("\n".join(errors) or "OK: all checks passed")
 sys.exit(1 if errors else 0)

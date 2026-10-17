@@ -309,3 +309,4 @@ a { color: inherit; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+.collection-about { margin-bottom: 40px; }

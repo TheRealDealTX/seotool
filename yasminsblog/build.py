@@ -6,6 +6,7 @@
 Standard library only, plus Pillow (optional) for the Open Graph PNGs.
 """
 import html
+import re
 import json
 import os
 import shutil
@@ -13,7 +14,7 @@ from datetime import date
 from email.utils import format_datetime
 from datetime import datetime, timezone
 
-from content import SITE, CATEGORIES, TAGS, POSTS
+from content import SITE, CATEGORIES, TAGS, POSTS, CATEGORY_PAGES, TAG_PAGES
 from images import IMAGES, PLATES
 
 PHOTOS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "photos.json"), encoding="utf-8"))
@@ -108,7 +109,26 @@ def jsonld(*objs):
 
 
 ORG = {"@type": "Organization", "@id": HOST + "/#org", "name": SITE["name"], "url": HOST + "/",
-       "logo": {"@type": "ImageObject", "url": HOST + "/assets/img/logo-512.png"}}
+       "email": SITE["email"], "description": SITE["description"],
+       "logo": {"@type": "ImageObject", "url": HOST + "/web-app-manifest-512x512.png", "width": 512, "height": 512}}
+
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TSZCH0JK49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TSZCH0JK49');
+</script>"""
+
+ROBOTS_INDEX = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+
+def brand(t):
+    """Append the site name only while the title stays within ~60 characters."""
+    full = f"{t} | {SITE['name']}"
+    return full if len(full) <= 60 else t
 WEBSITE = {"@context": "https://schema.org", "@type": "WebSite", "@id": HOST + "/#website", "url": HOST + "/",
            "name": SITE["name"], "description": SITE["description"], "publisher": {"@id": HOST + "/#org"},
            "inLanguage": "en-US"}
@@ -120,7 +140,8 @@ def crumbs(items):
 
 
 def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-default.jpg",
-         og_type="website", body_class="", extra_head=""):
+         og_image_alt="Katz's Delicatessen on the Lower East Side, New York", og_type="website",
+         body_class="", extra_head="", robots=ROBOTS_INDEX):
     canonical = HOST + (path if path != "/" else "/")
     nav = "".join(
         f'<li><a href="{u}"{" aria-current=\"page\"" if (u == path or (u != "/" and path.startswith(u + "/"))) else ""}>{n}</a></li>'
@@ -128,11 +149,14 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
+<meta name="robots" content="{robots}">
 <link rel="canonical" href="{canonical}">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{SITE['name']}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
@@ -141,10 +165,18 @@ def page(*, path, title, description, body, schema=(), og_image="/assets/img/og-
 <meta property="og:image" content="{HOST}{og_image}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_image_alt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{HOST}{og_image}">
+<meta name="twitter:image:alt" content="{esc(og_image_alt)}">
 <meta name="theme-color" content="#14110f">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/logo-180.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/manifest.json">
 <link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="/mamablog/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -315,7 +347,7 @@ def build_home():
   </div>
 </section>"""
     write("/", page(path="/", title=f"{SITE['name']} | {SITE['tagline']}",
-                    description="Yasmin's Blog: an independent New York journal on food institutions, neighborhood shops, culture and street photography, from Katz's pastrami to the dollar slice.",
+                    description="An independent New York journal on food institutions, neighborhood shops, culture and street photography, from Katz's pastrami to the dollar slice.",
                     body=body, body_class="home",
                     schema=[WEBSITE, {"@context": "https://schema.org", **ORG},
                             {"@context": "https://schema.org", "@type": "Blog", "@id": HOST + "/mamablog#blog", "name": SITE["name"], "url": HOST + "/mamablog",
@@ -342,9 +374,10 @@ def build_index():
                                      "mainEntity": {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": HOST + p["path"]} for i, p in enumerate(POSTS)]}}]))
 
 
-def build_collection(path, kicker, h1, lede, posts, title, desc, crumb):
+def build_collection(path, kicker, h1, lede, posts, title, desc, crumb, about=""):
+    about_html = f'<div class="wrap narrow prose collection-about reveal">{about}</div>' if about else ""
     body = hero_small(kicker, esc(h1), esc(lede), path) + f"""
-<section class="section tight"><div class="wrap">{grid(posts)}
+<section class="section tight">{about_html}<div class="wrap">{grid(posts)}
 <p class="back reveal"><a href="/mamablog">← Back to all posts</a></p></div></section>"""
     write(path, page(path=path, title=title, description=desc, body=body,
                      schema=[crumbs(crumb), {"@context": "https://schema.org", "@type": "CollectionPage", "name": h1, "url": HOST + path,
@@ -410,10 +443,11 @@ def build_post(p, idx):
     schema = [crumbs([("Home", "/"), ("Journal", "/mamablog"), (p["category"], f"/mamablog/category/{p['category']}"), (p["h1"], p["path"])]),
               {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"][:110], "description": p["description"],
                "mainEntityOfPage": HOST + p["path"], "url": HOST + p["path"], "datePublished": UPDATED, "dateModified": UPDATED,
-               "image": HOST + (og if have_og else "/assets/img/og-default.jpg"), "articleSection": p["category"],
-               "keywords": p["keyword"], "author": {"@id": HOST + "/#org"}, "publisher": ORG, "inLanguage": "en-US"},
+               "image": {"@type": "ImageObject", "url": HOST + og, "width": 1200, "height": 630},
+               "articleSection": p["category"], "wordCount": len(re.sub(r"<[^>]+>", " ", p["body"] + p.get("after", "")).split()),
+               "keywords": p["keyword"], "author": {"@type": "Organization", "name": SITE["name"] + " Editors", "url": HOST + "/about"}, "publisher": ORG, "inLanguage": "en-US"},
               *faq_schema]
-    write(p["path"], page(path=p["path"], title=f"{p['title']} | {SITE['name']}" if len(p["title"]) < 52 else p["title"],
+    write(p["path"], page(path=p["path"], title=brand(p["title"]), og_image_alt=halt,
                           description=p["description"], body=body, schema=schema, og_type="article",
                           og_image=og if have_og else "/assets/img/og-default.jpg", body_class="post-page",
                           extra_head=f'<meta property="article:modified_time" content="{UPDATED}">\n'))
@@ -471,7 +505,7 @@ def build_static_pages():
 <section class="section tight"><div class="wrap narrow prose">
 <ul class="credit-list">{rows}</ul>
 </div></section>"""
-    write("/photo-credits", page(path="/photo-credits", extra_head='<meta name="robots" content="noindex, follow">\n', title=f"Photo Credits | {SITE['name']}", description="Photo credits and licences for the Creative Commons and public domain images used on Yasmin's Blog.",
+    write("/photo-credits", page(path="/photo-credits", robots="noindex, follow", title=f"Photo Credits | {SITE['name']}", description="Photo credits and licences for the Creative Commons and public domain images used on Yasmin's Blog.",
                                  body=credits_body, schema=[crumbs([("Home", "/"), ("Photo credits", "/photo-credits")])]))
 
     nf = f"""<section class="hero-small notfound"><div class="blob b1"></div><div class="blob b2"></div><div class="wrap">
@@ -479,17 +513,24 @@ def build_static_pages():
 <p class="lede">The page you're after isn't here. It may have moved when the site was rebuilt.</p>
 <div class="cta-row"><a class="btn" href="/">Go home</a><a class="btn ghost" href="/mamablog">Browse all posts</a></div></div></section>
 <section class="section tight"><div class="wrap"><div class="section-head"><h2 class="display">Popular stories</h2></div>{grid(POSTS[:3])}</div></section>"""
-    html_404 = page(path="/404", title=f"Page not found | {SITE['name']}", description="This page could not be found on Yasmin's Blog. Browse the journal or head back to the homepage.", body=nf)
-    write("/404.html", html_404.replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
+    html_404 = page(path="/404", robots="noindex", title=f"Page not found | {SITE['name']}", description="This page could not be found on Yasmin's Blog. Browse the journal or head back to the homepage.", body=nf)
+    write("/404.html", html_404)
 
 
 def build_feeds():
     urls = ["/", "/mamablog", "/about", "/contact", "/privacy-policy"] + [p["path"] for p in POSTS] + \
            [f"/mamablog/category/{k}" for k in CATEGORIES] + [f"/mamablog/tag/{t}" for t in TAGS]
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    sm += [f"  <url><loc>{esc(HOST + u)}</loc><lastmod>{UPDATED}</lastmod></url>" for u in urls]
+    imgs = {p["path"]: [IMAGES[slug_of(p)]["hero"], *IMAGES[slug_of(p)]["inline"]] + [(n, c, "") for c, _, n in PLATES.get(slug_of(p), [])] for p in POSTS}
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for u in urls:
+        im = "".join(f"<image:image><image:loc>{HOST}/assets/img/photos/{n}.webp</image:loc></image:image>" for n, *_ in imgs.get(u, []))
+        sm.append(f"  <url><loc>{esc(HOST + u)}</loc><lastmod>{UPDATED}</lastmod>{im}</url>")
     sm.append("</urlset>")
-    write("/sitemap.xml", "\n".join(sm) + "\n")
+    # The sitemap is served by index.php (so the bare-domain/http copies 301 to
+    # https://www). robots.txt must stay a static file: this host answers
+    # /robots.txt itself (404 if missing; its own Disallow file on preview hosts).
+    write("/_pages/sitemap.xml", "\n".join(sm) + "\n")
     write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /_pages/\n\nSitemap: {HOST}/sitemap.xml\n")
     pub = format_datetime(datetime.strptime(UPDATED, "%Y-%m-%d").replace(tzinfo=timezone.utc))
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{HOST}{p['path']}</link><guid>{HOST}{p['path']}</guid><pubDate>{pub}</pubDate><category>{p['category']}</category><description>{esc(p['description'])}</description></item>""" for p in POSTS)
@@ -502,17 +543,38 @@ def build_assets():
     shutil.copytree(os.path.join(ROOT, "static"), OUT, dirs_exist_ok=True)
     os.makedirs(os.path.join(OUT, "assets/img/og"), exist_ok=True)
     og_photo("katzs-delicatessen-storefront-houston-street", os.path.join(OUT, "assets/img/og-default.jpg"))
-    try:
-        from PIL import Image, ImageDraw
-        for size in (180, 512):
-            im = Image.new("RGB", (size, size), "#14110f")
-            d = ImageDraw.Draw(im)
-            r = size * 0.32
-            d.ellipse([size * .5 - r - size * .08, size * .5 - r, size * .5 + r - size * .08, size * .5 + r], fill="#e8553a")
-            d.rectangle([size * .56, size * .26, size * .72, size * .74], fill="#f2b134")
-            im.save(os.path.join(OUT, f"assets/img/logo-{size}.png"), "PNG", optimize=True)
-    except ImportError:
-        pass
+    make_icons()
+
+
+def make_icons():
+    """Favicon set drawn from the brand mark (tomato disc + mustard bar on ink)."""
+    from PIL import Image, ImageDraw
+
+    def mark(size, rounded=True, pad=0.0):
+        S = size * 8  # supersample, then downscale for clean edges
+        im = Image.new("RGBA", (S, S), (0, 0, 0, 0) if rounded else "#14110f")
+        d = ImageDraw.Draw(im)
+        if rounded:
+            d.rounded_rectangle([0, 0, S - 1, S - 1], radius=int(S * 0.22), fill="#14110f")
+        k = 1 - 2 * pad
+        cx, cy, r = S * (0.5 + (0.42 - 0.5) * k), S * 0.5, S * 0.31 * k
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], fill="#e8553a")
+        bx0, bx1 = S * (0.5 + (0.56 - 0.5) * k), S * (0.5 + (0.72 - 0.5) * k)
+        by0, by1 = S * (0.5 - 0.235 * k), S * (0.5 + 0.235 * k)
+        d.rounded_rectangle([bx0, by0, bx1, by1], radius=int(S * 0.03 * k), fill="#f2b134")
+        return im.resize((size, size), Image.LANCZOS)
+
+    out = lambda n: os.path.join(OUT, n)
+    mark(256).save(out("favicon.ico"), sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
+    mark(96).save(out("favicon-96x96.png"), optimize=True)
+    mark(180, rounded=False, pad=0.08).convert("RGB").save(out("apple-touch-icon.png"), optimize=True)
+    for n in (192, 512):  # maskable: full-bleed background, mark inside the safe zone
+        mark(n, rounded=False, pad=0.14).convert("RGB").save(out(f"web-app-manifest-{n}x{n}.png"), optimize=True)
+    with open(out("manifest.json"), "w") as f:
+        json.dump({"name": SITE["name"], "short_name": SITE["name"], "start_url": "/", "display": "standalone",
+                   "background_color": "#f6efe4", "theme_color": "#14110f",
+                   "icons": [{"src": f"/web-app-manifest-{n}x{n}.png", "sizes": f"{n}x{n}", "type": "image/png", "purpose": "any maskable"} for n in (192, 512)]},
+                  f, indent=1)
 
 
 def main():
@@ -527,13 +589,13 @@ def main():
     for k, v in CATEGORIES.items():
         posts = [p for p in POSTS if p["category"] == k]
         build_collection(f"/mamablog/category/{k}", "Section", k, v, posts,
-                         f"{k} | {SITE['name']}", f"{k} stories from Yasmin's Blog. {v}"[:158],
-                         [("Home", "/"), ("Journal", "/mamablog"), (k, f"/mamablog/category/{k}")])
+                         brand(CATEGORY_PAGES[k]["title"]), v,
+                         [("Home", "/"), ("Journal", "/mamablog"), (k, f"/mamablog/category/{k}")], CATEGORY_PAGES[k]["about"])
     for t, meta in TAGS.items():
         posts = [p for p in POSTS if t in p["tags"]]
         build_collection(f"/mamablog/tag/{t}", "Tag", meta["label"], meta["intro"], posts,
-                         f"{meta['label']}: Posts Tagged | {SITE['name']}", meta["intro"][:158],
-                         [("Home", "/"), ("Journal", "/mamablog"), (meta["label"], f"/mamablog/tag/{t}")])
+                         brand(TAG_PAGES[t]["title"]), meta["intro"],
+                         [("Home", "/"), ("Journal", "/mamablog"), (meta["label"], f"/mamablog/tag/{t}")], TAG_PAGES[t]["about"])
     build_static_pages()
     build_feeds()
     n = sum(len(f) for _, _, f in os.walk(OUT))

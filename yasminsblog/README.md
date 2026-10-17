@@ -112,17 +112,29 @@ with the same credentials:
 
 Local preview that behaves like the host: `php -S 127.0.0.1:8099 -t public devrouter.php`.
 
-## Going live on yasminsblog.com
+## Live
 
-1. Once the domain is registered, attach it:
-   `agency-hosting_domains_change-website` (website `X7EvpZ4Zq`, from
-   `darkorange-lobster-110332.hostingersite.com` to `yasminsblog.com`), and
-   link `www.yasminsblog.com` too. Point DNS at Hostinger and wait for SSL.
-2. Check that `https://yasminsblog.com/…` 301s to `https://www.…` and that the
-   `X-Robots-Tag` header is gone.
-3. Submit `https://www.yasminsblog.com/sitemap.xml` in Google Search Console.
+The site is live at **https://www.yasminsblog.com** (Hostinger website
+`X7EvpZ4Zq`, linked 2026-10-15, with SSL covering the bare and www hosts). http
+and bare-domain requests 301 to `https://www`. The preview domain
+(`honeydew-beaver-278948.hostingersite.com`) is noindexed by `index.php`, and
+Hostinger serves its own Disallow robots.txt there.
 
-## Before going live
+- **Google Search Console:** the verification file `googlecccfbf2f7e9e5ae4.html` is in `static/` and is published byte-for-byte. Never edit it, and the validator skips it. Submit `https://www.yasminsblog.com/sitemap.xml` in GSC.
+- **Google Analytics 4 (`G-TSZCH0JK49`):** the gtag snippet (`GTAG` in `build.py`) is the first thing in `<head>` on every page, including 404 and photo credits. `validate.py` fails the build if any page lacks it.
+- **Favicons:** `favicon.ico` (16–64px), `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png` (180px), and 192/512px maskable icons referenced from `manifest.json`. All are drawn by `make_icons()` in `build.py`.
+- **robots.txt** must stay a static file, because the host answers `/robots.txt` itself. **sitemap.xml** is served by `index.php` (from `_pages/sitemap.xml`) so non-canonical hosts redirect. It includes `<image:image>` entries for every post photo.
+
+## SEO checklist (enforced by `validate.py`)
+
+- One H1 per page, titles of 60 characters or fewer, descriptions of 50–160 characters, all unique.
+- A canonical on every page and a robots meta tag (`index, follow, max-image-preview:large` or `noindex` for 404 and credits).
+- Open Graph and Twitter tags with a 1200×630 image and alt text.
+- JSON-LD: BlogPosting (with ImageObject, wordCount, publisher logo), BreadcrumbList, FAQPage where there's an FAQ, CollectionPage for sections and tags, and WebSite plus Organization on the homepage.
+- Category and tag pages carry their own copy and keyword-led titles, because they ranked before.
+- No broken internal links, alt text on every image, and every legacy URL from the Semrush exports built.
+
+## Still to do
 
 - Set up the `info@yasminsblog.com` mailbox (the address used on the site; it's `SITE["email"]` in `content.py`).
 - Recheck the visit details in the posts (hours, which shops are still open).

@@ -40,6 +40,13 @@ if (preg_match('/(^|&)format=rss(&|$)/', $qs)) {
 
 if ($path === '/' || $path === '/index.php' || $path === '/home.html') serve(__DIR__ . '/home.html');
 
+// Not a static file, so bare-domain / http requests get the canonical 301 above.
+if ($path === '/sitemap.xml') {
+    header('Content-Type: application/xml; charset=utf-8');
+    readfile(__DIR__ . '/_pages/sitemap.xml');
+    exit;
+}
+
 // Old Squarespace and common aliases.
 $aliases = [
     '/home' => '/', '/blog' => '/mamablog', '/journal' => '/mamablog',

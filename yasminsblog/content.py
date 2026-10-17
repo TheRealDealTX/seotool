@@ -15,7 +15,7 @@ SITE = {
         "neighborhood institutions, culture and street photography."
     ),
     "email": "info@yasminsblog.com",
-    "updated": "2026-10-10",
+    "updated": "2026-10-17",
 }
 
 CATEGORIES = {
@@ -29,11 +29,11 @@ CATEGORIES = {
 TAGS = {
     "porto+rico+importing+co": {
         "label": "Porto Rico Importing Co",
-        "intro": "Everything we've written about Porto Rico Importing Co., the Greenwich Village coffee and tea merchant that has been roasting and selling beans since 1907.",
+        "intro": "Everything we've written about Porto Rico Importing Co., the Greenwich Village coffee and tea merchant selling beans since 1907.",
     },
     "jaden+smith": {
         "label": "Jaden Smith",
-        "intro": "Posts touching on celebrity-led spirituality and the new wave of self-styled wellness, a conversation that public figures like Jaden Smith helped bring into the mainstream.",
+        "intro": "Posts on celebrity-led spirituality and the new wave of self-styled wellness, a conversation public figures like Jaden Smith helped bring mainstream.",
     },
     "human.nyc": {
         "label": "human.nyc",
@@ -117,7 +117,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2020/6/13/4-photos-from-economy-candy",
-        "title": "4 Photos from Economy Candy, NYC's Lower East Side Candy Store",
+        "title": "4 Photos from Economy Candy, NYC's Classic Candy Store",
         "h1": "4 Photos from Economy Candy",
         "description": "Inside Economy Candy, the Lower East Side candy store on Rivington Street selling old-fashioned sweets since 1937. A four-photo essay plus a visitor's guide.",
         "keyword": "economy candy store nyc",
@@ -183,7 +183,7 @@ POSTS = [
         "path": "/mamablog/2019/11/2/young-women-come-together-at-photoville-for-this-is-18-a-zine-by-the-nytimes",
         "title": "Photoville and \"This Is 18\", a New York Times Zine",
         "h1": "Young Women Come Together at Photoville for \"This Is 18\"",
-        "description": "The New York Times' \"This Is 18\" project showed what life looks like for 18-year-old girls around the world, photographed by women. Here's why it resonated at Photoville.",
+        "description": "The New York Times' \"This Is 18\" project showed life for 18-year-old girls worldwide, photographed by women. Why it resonated at Photoville.",
         "keyword": "this is 18 new york times photoville",
         "category": "Culture",
         "tags": ["new+york", "human.nyc"],
@@ -212,9 +212,9 @@ POSTS = [
     },
     {
         "path": "/mamablog/2019/5/12/on-pole-dancing-with-shawanda-davis",
-        "title": "On Pole Dancing: Strength, Artistry and Community in New York",
+        "title": "On Pole Dancing: Strength, Artistry and Community in NYC",
         "h1": "On Pole Dancing: Strength, Artistry and Community",
-        "description": "Pole dancing has moved from the club to the studio and the competition stage. A look at pole fitness in New York: its history, the strength it takes and how to start.",
+        "description": "Pole dancing has moved from the club to the studio and the competition stage. NYC pole fitness: its history, the strength it takes and how to start.",
         "keyword": "pole dancing new york",
         "category": "Culture",
         "tags": ["new+york", "human.nyc"],
@@ -250,9 +250,9 @@ POSTS = [
     },
     {
         "path": "/mamablog/2019/5/9/more-than-skin-deep-with-byron-kim",
-        "title": "More Than Skin Deep: Stick and Poke Tattoos and the Hand-Poke Revival",
+        "title": "Stick and Poke Tattoos: Inside the Hand-Poke Revival",
         "h1": "More Than Skin Deep: The Hand-Poke Tattoo Revival",
-        "description": "Stick and poke tattoos have moved from DIY to fine-art studios in New York and Tokyo. What hand-poking is, how it differs from machine work and how to find an artist.",
+        "description": "Stick and poke tattoos moved from DIY to fine-art studios in NYC and Tokyo. What hand-poking is, how it differs from machine work and how to find an artist.",
         "keyword": "stick and poke tattoo",
         "category": "Culture",
         "tags": ["new+york", "human.nyc"],
@@ -290,7 +290,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2019/1/2/pies-thighs-and-all-things-nice",
-        "title": "Pies 'n' Thighs and All Things Nice: Brooklyn's Fried Chicken & Biscuits",
+        "title": "Pies 'n' Thighs Brunch: Brooklyn Fried Chicken & Biscuits",
         "h1": "Pies 'n' Thighs and All Things Nice",
         "description": "Pies 'n' Thighs in Williamsburg serves Southern comfort food: fried chicken, biscuits, donuts and pie. What to order for brunch and how to plan your visit.",
         "keyword": "pies n thighs brunch",
@@ -324,7 +324,7 @@ POSTS = [
     # ------------------------------------------------------------------ 2018
     {
         "path": "/mamablog/2018/12/17/defining-your-own-rules-welcome-to-the-new-age-of-spirituality",
-        "title": "Defining Your Own Rules: Welcome to the New Age of Spirituality",
+        "title": "Defining Your Own Rules: The New Age of Spirituality",
         "h1": "Defining Your Own Rules: Welcome to the New Age of Spirituality",
         "description": "Tarot, crystals, witchcraft and shops like Catland Books in Brooklyn: how a generation builds a DIY spirituality, plus what eggshells mean in witchcraft.",
         "keyword": "new age spirituality",
@@ -362,7 +362,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2018/10/30/its-more-than-just-a-slice-to-end-the-night",
-        "title": "It's More Than Just a Slice to End the Night: NYC's Dollar Pizza",
+        "title": "Dollar Pizza on the Lower East Side: More Than a Slice",
         "h1": "It's More Than Just a Slice to End the Night",
         "description": "The cheap slice is a New York institution. A guide to dollar pizza on the Lower East Side: its history, why prices crept up and where to get a late-night slice.",
         "keyword": "dollar pizza lower east side",
@@ -396,7 +396,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2018/10/20/porto-rico-importing-co",
-        "title": "Porto Rico Importing Co.: Greenwich Village's Coffee Institution Since 1907",
+        "title": "Porto Rico Importing Co.: NYC Coffee Shop Since 1907",
         "h1": "Porto Rico Importing Co.",
         "description": "Porto Rico Importing Co. has sold coffee and tea on Bleecker Street since 1907. A guide to the NYC coffee shop: what to buy, the bean bins and wholesale coffee.",
         "keyword": "porto rico coffee nyc",
@@ -438,7 +438,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2018/9/11/journalistic-inquiry-notes-quotes-and-details",
-        "title": "Journalistic Inquiry: Notes, Quotes and Details from a NYC Ramen Festival",
+        "title": "Ramen Quotes, Notes and Details from a NYC Ramen Festival",
         "h1": "Journalistic Inquiry: Notes, Quotes and Details",
         "description": "What reporting on a New York ramen festival teaches about food journalism: how to take notes, gather quotes and catch details. Plus our favorite ramen quotes.",
         "keyword": "ramen quotes",
@@ -483,7 +483,7 @@ POSTS = [
         "path": "/mamablog/2018/4/24/subway-photos-trial-no1",
         "title": "Subway Photos, Trial No. 1: Learning from Walker Evans",
         "h1": "Subway Photos, Trial No. 1",
-        "description": "A first attempt at New York subway portraits, inspired by Walker Evans' hidden-camera subway photography from 1938 to 1941. Notes on candid street photography and ethics.",
+        "description": "New York subway portraits inspired by Walker Evans' hidden-camera subway photography of 1938 to 1941, with notes on candid street photography and ethics.",
         "keyword": "walker evans subway photography",
         "category": "Photography",
         "tags": ["new+york", "human.nyc"],
@@ -519,7 +519,7 @@ POSTS = [
         "path": "/mamablog/2018/4/17/little-tong-noodle-shop",
         "title": "Little Tong Noodle Shop: Yunnan Mixian Comes to New York",
         "h1": "Little Tong Noodle Shop",
-        "description": "Little Tong Noodle Shop introduced many New Yorkers to Yunnan-style mixian rice noodles. The story of chef Simone Tong's East Village restaurant and what made it special.",
+        "description": "Little Tong Noodle Shop brought Yunnan mixian rice noodles to New York. The story of chef Simone Tong's East Village restaurant and what made it special.",
         "keyword": "little tong noodle shop",
         "category": "Food",
         "tags": ["new+york"],
@@ -548,7 +548,7 @@ POSTS = [
     },
     {
         "path": "/mamablog/2018/2/17/mountain-province",
-        "title": "Mountain Province: Filipino Coffee and a Lola's Kitchen in Williamsburg",
+        "title": "Mountain Province Coffee: Filipino Beans in Williamsburg",
         "h1": "Mountain Province",
         "description": "Mountain Province Espresso Bar in East Williamsburg served single-origin coffee from the Philippine highlands, plus Filipino baked goods. A Brooklyn café story.",
         "keyword": "mountain province coffee",
@@ -576,9 +576,9 @@ POSTS = [
     },
     {
         "path": "/mamablog/2018/1/20/katz-deli-some-delicious-pastrami",
-        "title": "Katz's Deli: Some Delicious Pastrami (and Why It Costs What It Does)",
+        "title": "Katz's Deli Pastrami: Why It's So Expensive & What to Order",
         "h1": "Katz's Deli: Some Delicious Pastrami",
-        "description": "A guide to Katz's Delicatessen on the Lower East Side: how the ticket system works, what to order, why the pastrami is so expensive and whether cats can eat pastrami.",
+        "description": "A guide to Katz's Delicatessen on the Lower East Side: how the ticket system works, what to order, why the pastrami costs so much and if cats can eat it.",
         "keyword": "katz deli pastrami",
         "category": "Food",
         "tags": ["new+york"],
@@ -631,3 +631,50 @@ POSTS = [
         ],
     },
 ]
+
+
+# Titles and longer intros for the section and tag pages (they ranked in
+# search before, so they get real copy instead of a bare list of posts).
+CATEGORY_PAGES = {
+    "Food": {
+        "title": "NYC Food: Delis, Noodle Shops, Coffee & Pizza",
+        "about": """<p>New York's food story is told best by its institutions: the delis, coffee merchants, candy stores and slice shops that have fed the same blocks for generations. This section covers them, from the hand-carved pastrami at <a href="/mamablog/2018/1/20/katz-deli-some-delicious-pastrami">Katz's Delicatessen</a> and the bean bins at <a href="/mamablog/2018/10/20/porto-rico-importing-co">Porto Rico Importing Co.</a> to the <a href="/mamablog/2018/10/30/its-more-than-just-a-slice-to-end-the-night">late-night dollar slice</a> on the Lower East Side.</p>
+<p>We also write about the newer arrivals that changed how the city eats, like Yunnan mixian at <a href="/mamablog/2018/4/17/little-tong-noodle-shop">Little Tong Noodle Shop</a>, Philippine coffee at <a href="/mamablog/2018/2/17/mountain-province">Mountain Province</a>, and the immigrant families behind the city's <a href="/mamablog/2020/5/5/turkish-immigrant-restaurant-owners-in-new-york-amp-london">Turkish restaurants</a>. Every guide is practical: what to order, when to go and what makes the place worth the trip.</p>""",
+    },
+    "Culture": {
+        "title": "NYC Culture: Spirituality, Tattoos, Dance & Zines",
+        "about": """<p>New York culture happens in studios, shops and festivals as much as in museums. This section looks at the communities reinventing how New Yorkers live and express themselves: the <a href="/mamablog/2018/12/17/defining-your-own-rules-welcome-to-the-new-age-of-spirituality">DIY spirituality</a> of tarot readers and occult bookstores, the <a href="/mamablog/2019/5/9/more-than-skin-deep-with-byron-kim">hand-poke tattoo revival</a>, <a href="/mamablog/2019/5/12/on-pole-dancing-with-shawanda-davis">pole dancing</a> as sport and art, and photography projects like <a href="/mamablog/2019/11/2/young-women-come-together-at-photoville-for-this-is-18-a-zine-by-the-nytimes">\"This Is 18\" at Photoville</a>.</p>
+<p>Each piece explains the scene's history, what it takes to take part and how to find good teachers, artists and spaces in the city.</p>""",
+    },
+    "Photography": {
+        "title": "NYC Photo Essays: Subway Portraits & Storefronts",
+        "about": """<p>Photo essays and notes on looking. The <a href="/mamablog/2020/6/13/4-photos-from-economy-candy">\"4 Photos\" series</a> sums up a place in four frames, from Economy Candy on Rivington Street to the seafront of <a href="/mamablog/2020/6/26/4-photos-from-salerno">Salerno</a>. Our <a href="/mamablog/2018/4/24/subway-photos-trial-no1">subway portraits</a> take their cue from Walker Evans' hidden-camera pictures of New York riders in 1938 to 1941.</p>
+<p>Along the way we share practical notes on street photography: light, lenses, patience and the ethics of photographing strangers in public.</p>""",
+    },
+    "Travel": {
+        "title": "Short Trips from NYC: New Orleans, Salerno & More",
+        "about": """<p>Short trips out of the city, planned around food, music and a good walk. Start with <a href="/mamablog/2020/3/28/24-hours-in-new-orleans-a-mini-mardi-gras-bender">24 hours in New Orleans</a> during Carnival season, with beignets, parades, the St. Charles streetcar and live music on Frenchmen Street. Or head to Italy's <a href="/mamablog/2020/6/26/4-photos-from-salerno">Salerno</a>, the port city at the start of the Amalfi Coast.</p>
+<p>Each guide is built for a short stay: what to see first, where to eat and how to get around without a car.</p>""",
+    },
+}
+
+TAG_PAGES = {
+    "porto+rico+importing+co": {
+        "title": "Porto Rico Importing Co.: Coffee on Bleecker Street",
+        "about": """<p><strong>Porto Rico Importing Co.</strong> is one of New York City's oldest coffee merchants. It was founded in <strong>1907</strong> in Greenwich Village, and its flagship at <strong>201 Bleecker Street</strong> still sells coffee by the pound from sacks and bins. Dozens of single-origin coffees, house blends, flavored coffees, decafs and loose-leaf teas are ground to order for espresso, drip, French press or pour-over.</p>
+<p>Porto Rico Importing has long been known for fair prices on whole-bean coffee. It also sells <strong>wholesale</strong> to cafés, restaurants and offices. Our <a href="/mamablog/2018/10/20/porto-rico-importing-co">full guide to Porto Rico Importing Co.</a> covers its history, what to buy, how to shop like a regular and how wholesale works. For more New York coffee, read about <a href="/mamablog/2018/2/17/mountain-province">Mountain Province</a>, the Williamsburg café that served beans from the highlands of the Philippines.</p>""",
+    },
+    "jaden+smith": {
+        "title": "Jaden Smith & the New Age of Spirituality",
+        "about": """<p>Celebrities have helped bring alternative spirituality into the mainstream, and few did it as openly as Jaden Smith, whose philosophical, unconventional takes on life reached a young audience online. These posts look at the bigger trend behind that: a generation building a personal spiritual practice from tarot, astrology, crystals, meditation and modern witchcraft.</p>
+<p>Start with <a href="/mamablog/2018/12/17/defining-your-own-rules-welcome-to-the-new-age-of-spirituality">Defining Your Own Rules</a>, our guide to New York's new-age scene, including Brooklyn's Catland Books and the folk practice of using eggshells for protection.</p>""",
+    },
+    "human.nyc": {
+        "title": "human.nyc: New York People, Portraits & Makers",
+        "about": """<p>The people you pass every day: riders on the subway, the counter staff at century-old shops, tattoo artists, dancers and photographers. Posts tagged human.nyc are about New Yorkers and the places where the city's characters show up, from the <a href="/mamablog/2018/4/24/subway-photos-trial-no1">subway car as a portrait studio</a> to the <a href="/mamablog/2019/5/9/more-than-skin-deep-with-byron-kim">hand-poke tattoo studio</a>.</p>""",
+    },
+    "new+york": {
+        "title": "New York City Stories: Food, Culture & Photos",
+        "about": """<p>The full New York archive of Yasmin's Blog: food institutions like Katz's Delicatessen, Economy Candy and Porto Rico Importing Co., the noodle shops and cafés that changed how the city eats, culture features on spirituality, tattoos and dance, and street photography from the subway to the Lower East Side.</p>""",
+    },
+}
