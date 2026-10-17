@@ -6,10 +6,22 @@ holiday decor, handmade gifts and organizing, plus five interactive DIY tools.
 No WordPress or database — HTML, one CSS file, two small JS files, local WebP
 images, and two tiny PHP files (front controller + form mailer).
 
-**Live (temporary domain):** https://mediumseagreen-wallaby-208321.hostingersite.com
-— Hostinger Agency Growth plan, website UID `WSPEsjCDT`, Phoenix datacenter, PHP 8.3.
-The temp domain sends `X-Robots-Tag: noindex` on PHP-routed pages; canonicals and
-the sitemap already point at `https://ohmtoherminediy.com`.
+**Live:** https://ohmtoherminediy.com — Hostinger Agency Growth plan, website UID
+`WSPEsjCDT`, Phoenix datacenter, PHP 8.3 (temporary domain
+mediumseagreen-wallaby-208321.hostingersite.com still answers, with `noindex`).
+
+## SEO setup
+
+- Google tag `G-9RMEEF538Z` is the first thing in `<head>` on every page (`GTAG` in `build.py`).
+- Search Console file verification: `/googlecccfbf2f7e9e5ae4.html` (in `src/root/`).
+- `/sitemap.xml` (every indexable page, with image entries), `/robots.txt`, RSS at `/feed/`.
+- Favicons: `favicon.ico` (16/32/48), `favicon.svg`, 32/96 px PNGs, `apple-touch-icon.png`,
+  192/512 px manifest icons.
+- Per page: unique title (≤ 60 chars; brand suffix only when it fits), meta description,
+  canonical, Open Graph/Twitter tags with a 1200×630 JPEG (`assets/img/og/`), JSON-LD
+  (Organization, WebSite + SearchAction, BreadcrumbList, BlogPosting, FAQPage,
+  CollectionPage, WebApplication), hero image preload.
+- `validate.py` fails the build if any of this is missing.
 
 ## Layout
 

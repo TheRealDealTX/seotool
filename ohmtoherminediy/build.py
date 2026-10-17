@@ -21,11 +21,26 @@ SITE = "https://ohmtoherminediy.com"
 NAME = "Oh, Mother Mine DIY"
 EMAIL = "info@ohmtoherminediy.com"
 TODAY = date(2026, 10, 17).isoformat()
-ASSET_V = "4"
+ASSET_V = "5"
+GA_ID = "G-9RMEEF538Z"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
 
 POSTS = sorted(POSTS_A + POSTS_B, key=lambda p: p["date"], reverse=True)
 BY_SLUG = {p["slug"]: p for p in POSTS}
 CAT = {c["slug"]: c for c in CATEGORIES}
+OG_ALT = {"og-default": "Oh, Mother Mine DIY — easy DIY home decor, makeovers and crafts for busy moms",
+          "art-studio": "Craft table full of paint jars and brushes", "paint-cans": "Rows of colorful paint cans"}
+OG_ALT.update({c["image"]: c["alt"] for c in CATEGORIES})
+OG_ALT.update({t["image"]: t["name"] for t in TOOLS})
+OG_ALT.update({p["image"]: p["image_alt"] for p in POSTS})
 
 esc = lambda s: html.escape(str(s), quote=True)
 
@@ -99,11 +114,13 @@ NAV = [("/", "Home"), ("/blog/", "DIY Projects"), ("/diys-for-moms/", "DIYs for 
 
 ORG = {
     "@type": "Organization", "@id": SITE + "/#org", "name": NAME, "url": SITE + "/",
-    "email": EMAIL, "logo": {"@type": "ImageObject", "url": SITE + "/apple-touch-icon.png", "width": 180, "height": 180},
+    "email": EMAIL, "logo": {"@type": "ImageObject", "url": SITE + "/icon-512.png", "width": 512, "height": 512},
     "sameAs": ["https://www.pinterest.com/ohmothermine/"],
 }
-WEBSITE = {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME,
-           "publisher": {"@id": SITE + "/#org"}, "inLanguage": "en-US"}
+WEBSITE = {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME, "alternateName": "Oh Mother Mine DIY",
+           "publisher": {"@id": SITE + "/#org"}, "inLanguage": "en-US",
+           "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": SITE + "/blog/?q={search_term_string}"},
+                               "query-input": "required name=search_term_string"}}
 
 
 def crumbs_schema(items):
@@ -122,9 +139,15 @@ def crumbs_html(items):
 
 
 def page(path, title, desc, body, schema=(), og_image="og-default.jpg", og_type="website",
-         extra_head="", scripts=(), active=None, footer_alt=False, robots="index, follow", full_title=None):
+         extra_head="", scripts=(), active=None, footer_alt=False, robots="index, follow", full_title=None, hero=None):
     canonical = SITE + path
-    t = full_title or ("%s | %s" % (title, NAME))
+    t = full_title or ("%s | %s" % (title, NAME) if len(title) + len(NAME) + 3 <= 60 else title)
+    og_key = os.path.splitext(og_image)[0]
+    og_url = "%s/assets/img/og/%s.jpg" % (SITE, og_key)
+    og_alt = OG_ALT.get(og_key, NAME)
+    preload = ""
+    if hero:
+        preload = ('<link rel="preload" as="image" href="/assets/img/%s.webp" imagesrcset="/assets/img/%s-sm.webp 720w, /assets/img/%s.webp 1024w" imagesizes="100vw" fetchpriority="high">\n' % (hero, hero, hero))
     graph = {"@context": "https://schema.org", "@graph": [ORG, WEBSITE] + list(schema)}
     nav = []
     for u, n in NAV:
@@ -136,6 +159,7 @@ def page(path, title, desc, body, schema=(), og_image="og-default.jpg", og_type=
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+{GTAG}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(t)}</title>
 <meta name="description" content="{esc(desc)}">
@@ -146,17 +170,26 @@ def page(path, title, desc, body, schema=(), og_image="og-default.jpg", og_type=
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE}/assets/img/{og_image}">
+<meta property="og:image" content="{og_url}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{SITE}/assets/img/{og_image}">
+<meta name="twitter:image" content="{og_url}">
+<meta name="twitter:image:alt" content="{esc(og_alt)}">
 <meta name="theme-color" content="#c8553d">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="{esc(NAME)} — latest DIY projects" href="{SITE}/feed/">
+{preload}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,500..700,100;1,9..144,500..700,100&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
@@ -386,7 +419,7 @@ def build_home():
 {newsletter()}"""
     return page("/", "DIY Home Decor, Crafts & Furniture Makeovers for Moms",
                 "Oh, Mother Mine DIY shares easy DIY home decor, chalk paint furniture makeovers, kids' crafts and handmade gifts for busy moms — plus free DIY calculators.",
-                body, schema, og_image="og-default.jpg",
+                body, schema, og_image="og-default.jpg", hero="hero-living",
                 full_title="Oh, Mother Mine DIY — Easy DIY Home Decor & Crafts for Moms")
 
 
@@ -425,11 +458,13 @@ def build_post(p):
     rel_tool = next((t for t in TOOLS if t["url"] in p["body"]), TOOLS[2])
     share_url = SITE + url_of(p)
     pin = "https://www.pinterest.com/pin/create/button/?url=%s&media=%s&description=%s" % (
-        share_url, SITE + "/assets/img/%s.webp" % p["image"], html.escape(p["h1"]).replace(" ", "%20"))
+        share_url, SITE + "/assets/img/og/%s.jpg" % p["image"], html.escape(p["h1"]).replace(" ", "%20"))
     fb = "https://www.facebook.com/sharer/sharer.php?u=" + share_url
     schema = [
         {"@type": "BlogPosting", "@id": share_url + "#article", "headline": p["h1"], "description": p["description"],
-         "image": SITE + "/assets/img/%s.webp" % p["image"], "datePublished": p["date"], "dateModified": p["date"],
+         "image": {"@type": "ImageObject", "url": SITE + "/assets/img/og/%s.jpg" % p["image"], "width": 1200, "height": 630},
+         "thumbnailUrl": SITE + "/assets/img/%s-sm.webp" % p["image"],
+         "datePublished": p["date"] + "T08:00:00-05:00", "dateModified": p.get("modified", p["date"]) + "T08:00:00-05:00",
          "author": {"@id": SITE + "/#org"}, "publisher": {"@id": SITE + "/#org"}, "mainEntityOfPage": share_url,
          "articleSection": c["name"], "keywords": p["keyword"], "wordCount": words, "inLanguage": "en-US"},
         crumbs_schema(crumbs), faq_schema(p["faq"]),
@@ -473,7 +508,8 @@ def build_post(p):
 </div></section>"""
     return page(url_of(p), p["title"], p["description"], page_body, schema,
                 og_image="%s.webp" % p["image"], og_type="article", active="/blog/", footer_alt=True,
-                extra_head='<meta property="article:published_time" content="%sT08:00:00-05:00">\n<meta property="article:section" content="%s">\n' % (p["date"], esc(c["name"])))
+                hero=p["image"],
+                extra_head='<meta property="article:published_time" content="%sT08:00:00-05:00">\n<meta property="article:modified_time" content="%sT08:00:00-05:00">\n<meta property="article:section" content="%s">\n<meta property="article:tag" content="%s">\n' % (p["date"], p.get("modified", p["date"]), esc(c["name"]), esc(p["keyword"])))
 
 
 def build_blog_index():
@@ -823,7 +859,7 @@ def main():
         shutil.copy(os.path.join(SRC, "root", fn), os.path.join(OUT, fn))
 
     from content.pages import PRIVACY, TERMS, DISCLOSURE
-    urls = []  # (path, lastmod, priority)
+    urls = []  # (path, lastmod, priority, [image keys])
     write("/home.html", build_home()); urls.append(("/", TODAY, "1.0"))
     write("/blog/", build_blog_index()); urls.append(("/blog/", TODAY, "0.9"))
     write("/diys-for-moms/", build_pillar()); urls.append(("/diys-for-moms/", TODAY, "0.9"))
@@ -842,12 +878,34 @@ def main():
     write("/sitemap/", build_sitemap_page()); urls.append(("/sitemap/", TODAY, "0.3"))
     write("/404.html", build_404())
 
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    # XML sitemap with image entries (every photo actually shown on each page)
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for u, lm, pr in urls:
-        sm.append("  <url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (SITE, u, lm, pr))
+        src = open(os.path.join(OUT, "home.html" if u == "/" else u.strip("/") + "/index.html"), encoding="utf-8").read()
+        keys = list(dict.fromkeys(re.findall(r'<img [^>]*src="/assets/img/([a-z0-9-]+?)(?:-sm)?\.webp"', src)))
+        imgs = "".join("<image:image><image:loc>%s/assets/img/%s.webp</image:loc></image:image>" % (SITE, k) for k in keys[:20])
+        sm.append("  <url><loc>%s%s</loc><lastmod>%s</lastmod><priority>%s</priority>%s</url>" % (SITE, u, lm, pr, imgs))
     sm.append("</urlset>")
     write("/sitemap.xml", "\n".join(sm) + "\n")
-    write("/robots.txt", "User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /send.php\n\nSitemap: %s/sitemap.xml\n" % SITE)
+    write("/robots.txt", "User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /send.php\nDisallow: /routes.json\n\nSitemap: %s/sitemap.xml\n" % SITE)
+
+    # RSS feed, served at /feed/ by index.php (old WordPress feed URL)
+    def rfc822(iso):
+        d = date.fromisoformat(iso)
+        return d.strftime("%a, %d %b %Y 08:00:00 -0500")
+    items = []
+    for p in POSTS:
+        items.append("<item><title>%s</title><link>%s%s</link><guid isPermaLink=\"true\">%s%s</guid><pubDate>%s</pubDate>"
+                     "<category>%s</category><description>%s</description>"
+                     "<enclosure url=\"%s/assets/img/og/%s.jpg\" type=\"image/jpeg\" length=\"%d\"/></item>"
+                     % (esc(p["h1"]), SITE, url_of(p), SITE, url_of(p), rfc822(p["date"]), esc(CAT[p["category"]]["name"]), esc(p["description"]),
+                        SITE, p["image"], os.path.getsize(os.path.join(OUT, "assets/img/og/%s.jpg" % p["image"]))))
+    feed = ('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+            "<title>%s</title><link>%s/</link><description>Easy DIY home decor, furniture makeovers, kids' crafts and handmade gifts for busy moms.</description>"
+            '<language>en-us</language><lastBuildDate>%s</lastBuildDate><atom:link href="%s/feed/" rel="self" type="application/rss+xml"/>%s</channel></rss>\n'
+            % (esc(NAME), SITE, rfc822(POSTS[0]["date"]), SITE, "".join(items)))
+    write("/feed.xml", feed)
     # slugs the front controller can redirect old flat/dated WordPress permalinks to
     write("/routes.json", json.dumps({"posts": [p["slug"] for p in POSTS], "categories": [c["slug"] for c in CATEGORIES]}))
     print("built %d pages into %s" % (len(urls) + 1, OUT))

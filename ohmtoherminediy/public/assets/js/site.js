@@ -204,6 +204,8 @@
       });
     });
     if (search) search.addEventListener("input", apply);
+    var q0 = new URLSearchParams(location.search).get("q");
+    if (search && q0) { search.value = q0; apply(); }
   }
 
   /* ---------- Forms (contact + newsletter) ---------- */

@@ -31,7 +31,12 @@ $routes = json_decode(@file_get_contents(__DIR__ . '/routes.json'), true) ?: ['p
 $p = rtrim($path, '/');
 
 // WordPress leftovers
-if (preg_match('#^/(feed|comments/feed|rss|blog/feed)$#', $p)) go('/blog/');
+if ($p === '/feed') {
+    header('Content-Type: application/rss+xml; charset=utf-8');
+    readfile(__DIR__ . '/feed.xml');
+    exit;
+}
+if (preg_match('#^/(comments/feed|rss|blog/feed|feed\.xml|rss\.xml|atom)$#', $p)) go('/feed/');
 if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php|wp-content)(/|$)#', $path)) go('/');
 if (preg_match('#^/(tag|tags)/#', $path)) go('/blog/');
 if (preg_match('#^/author/#', $path)) go('/about/');

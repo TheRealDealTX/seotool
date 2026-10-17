@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /home.html
 Disallow: /send.php
+Disallow: /routes.json
 
 Sitemap: https://ohmtoherminediy.com/sitemap.xml

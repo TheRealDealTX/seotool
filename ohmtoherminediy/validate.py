@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Post-build checks for ./public. Exit code 1 on any problem."""
-import json, os, re, sys
+import html, json, os, re, sys
 from html.parser import HTMLParser
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
@@ -32,19 +32,26 @@ def exists(u):
 
 for root, _, files in os.walk(OUT):
     for fn in files:
-        if not fn.endswith(".html"): continue
+        if not fn.endswith(".html") or fn.startswith("google"): continue
         path = os.path.join(root, fn); rel = os.path.relpath(path, OUT)
         src = open(path, encoding="utf-8").read()
         p = P(); p.feed(src)
         if p.h1 != 1: errors.append("%s: %d h1" % (rel, p.h1))
         if p.imgs_noalt: errors.append("%s: %d img without alt" % (rel, p.imgs_noalt))
         if "{{" in src: errors.append("%s: unreplaced token" % rel)
+        if src.count("googletagmanager.com/gtag/js?id=G-9RMEEF538Z") != 1 or "gtag('config', 'G-9RMEEF538Z')" not in src:
+            errors.append("%s: Google tag missing or duplicated" % rel)
+        if src.find("googletagmanager") > src.find("</head>"): errors.append("%s: Google tag not in <head>" % rel)
+        for m in re.findall(r'<meta (?:property|name)="(?:og|twitter):image" content="https://ohmtoherminediy.com(/[^"]+)"', src):
+            if not exists(m): errors.append("%s: missing social image %s" % (rel, m))
+        if not re.search(r'<link rel="canonical" href="https://ohmtoherminediy.com/', src): errors.append("%s: no canonical" % rel)
         t = re.search(r"<title>(.*?)</title>", src).group(1); d = re.search(r'name="description" content="(.*?)"', src).group(1)
         if rel != "404.html":
             if t in titles: errors.append("dup title %s / %s" % (rel, titles[t]))
             if d in descs: errors.append("dup desc %s / %s" % (rel, descs[d]))
             titles[t], descs[d] = rel, rel
             if len(d) > 165 or len(d) < 110: errors.append("%s: description length %d" % (rel, len(d)))
+            if len(html.unescape(t)) > 60: errors.append("%s: title %d chars" % (rel, len(html.unescape(t))))
         for l in p.ld:
             try: json.loads(l)
             except Exception as e: errors.append("%s: bad JSON-LD %s" % (rel, e))
@@ -55,6 +62,16 @@ for root, _, files in os.walk(OUT):
         for s_ in p.srcs:
             if s_ and s_.startswith("/") and not exists(s_): errors.append("%s: missing asset %s" % (rel, s_))
 
-print("%d pages checked" % len(titles))
+for f in ("sitemap.xml", "robots.txt", "feed.xml", "favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png",
+          "site.webmanifest", "googlecccfbf2f7e9e5ae4.html", "index.php", "home.html", "404.html"):
+    if not os.path.isfile(os.path.join(OUT, f)): errors.append("missing root file " + f)
+import xml.dom.minidom
+for f in ("sitemap.xml", "feed.xml"):
+    try: xml.dom.minidom.parse(os.path.join(OUT, f))
+    except Exception as e: errors.append("%s invalid XML: %s" % (f, e))
+locs = re.findall(r"<loc>https://ohmtoherminediy.com(/[^<]*)</loc>", open(os.path.join(OUT, "sitemap.xml")).read())
+for l in locs:
+    if not exists(l): errors.append("sitemap url missing: " + l)
+print("%d pages checked, %d sitemap urls" % (len(titles), len(locs)))
 for e in errors: print("ERROR", e)
 sys.exit(1 if errors else 0)
