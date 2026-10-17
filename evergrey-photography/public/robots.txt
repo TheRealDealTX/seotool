@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_pages/
+Disallow: /contact.php
+
+Sitemap: https://www.evergrey-photography.com/sitemap.xml
