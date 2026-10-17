@@ -4,13 +4,113 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwDvc96Sh6NipyenaSvLywpA1i6UvWjrzGKo-wRyn7v8evypRJRxLOBIv2bCQtlu6jQ/exec">
-<title>Opening the upload tool | Rise Public Adjusting</title>
+<title>Upload claim documents | Rise Public Adjusting</title>
+<meta name="description" content="Secure claim document upload for Rise Public Adjusting referral partners.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
-<script>location.replace("https://script.google.com/macros/s/AKfycbwDvc96Sh6NipyenaSvLywpA1i6UvWjrzGKo-wRyn7v8evypRJRxLOBIv2bCQtlu6jQ/exec");</script>
 </head>
-<body>
-<main class="hero"><div class="wrap"><p>Opening the upload tool… <a href="https://script.google.com/macros/s/AKfycbwDvc96Sh6NipyenaSvLywpA1i6UvWjrzGKo-wRyn7v8evypRJRxLOBIv2bCQtlu6jQ/exec">Tap here if it doesn't open.</a></p></div></main>
+<body data-api="https://script.google.com/macros/s/AKfycbwDvc96Sh6NipyenaSvLywpA1i6UvWjrzGKo-wRyn7v8evypRJRxLOBIv2bCQtlu6jQ/exec">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true">R</span>
+      <span><b>Rise Public Adjusting</b><span>Claim document upload</span></span>
+    </a>
+    <nav aria-label="Site">
+      <a href="/#checklist">What to send</a>
+      <a href="/#resources">Resources</a>
+      <a class="cta" href="sms:+18325035866">Text (832) 503-5866</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap form-wrap">
+  <div id="loading" class="loading"><p>Loading the upload tool…</p></div>
+
+  <div id="formView" class="hidden">
+    <form id="f" novalidate>
+      <section class="card fs">
+        <h2>Your information</h2>
+        <p class="sub">Saved on this device so you don't have to retype it next time.</p>
+        <div class="grid">
+          <div class="fld full"><label for="company">Company <i>*</i></label><input id="company" name="company" required autocomplete="organization"></div>
+          <div class="fld"><label for="repName">Your name <i>*</i></label><input id="repName" name="repName" required autocomplete="name"></div>
+          <div class="fld"><label for="repPhone">Your phone</label><input id="repPhone" name="repPhone" type="tel" autocomplete="tel"></div>
+          <div class="fld full"><label for="repEmail">Your email <i>*</i></label><input id="repEmail" name="repEmail" type="email" required autocomplete="email"></div>
+          <div class="fld full hidden" id="codeWrap"><label for="accessCode">Access code <i>*</i></label><input id="accessCode" name="accessCode" autocomplete="off"></div>
+        </div>
+      </section>
+
+      <section class="card fs">
+        <h2>Homeowner &amp; claim</h2>
+        <p class="sub">Uploads for the same homeowner and address go into the same claim file.</p>
+
+        <div id="fastfill" class="fastfill" role="button" tabindex="0" aria-label="Drop the insurance estimate to fill in the claim details">
+          <input id="fastfillInput" type="file" accept=".pdf" class="hidden">
+          <div class="ff-icon" aria-hidden="true">⚡</div>
+          <div>
+            <b>Have the carrier's estimate? Drop it here first.</b>
+            <span>We read the Xactimate or Symbility header and fill in the homeowner, address, claim and policy numbers, carrier, date and type of loss. The file is added to "Carrier letters &amp; estimates" for you.</span>
+          </div>
+        </div>
+        <div id="fillMsg" class="fill-msg hidden" role="status" aria-live="polite"></div>
+
+        <div class="grid">
+          <div class="fld full"><label for="insuredName">Insured / homeowner name <i>*</i></label><input id="insuredName" name="insuredName" required></div>
+          <div class="fld"><label for="insuredPhone">Homeowner phone</label><input id="insuredPhone" name="insuredPhone" type="tel"></div>
+          <div class="fld"><label for="insuredEmail">Homeowner email</label><input id="insuredEmail" name="insuredEmail" type="email"></div>
+          <div class="fld full"><label for="street">Loss address – street <i>*</i></label><input id="street" name="street" required placeholder="e.g. 1234 Main St" autocomplete="off"></div>
+          <div class="fld"><label for="city">City <i>*</i></label><input id="city" name="city" required></div>
+          <div class="fld third"><label for="state">State <i>*</i></label><input id="state" name="state" required value="TX" maxlength="2"></div>
+          <div class="fld third"><label for="zip">ZIP <i>*</i></label><input id="zip" name="zip" required inputmode="numeric" maxlength="10"></div>
+          <div class="fld"><label for="carrier">Insurance company</label><input id="carrier" name="carrier"></div>
+          <div class="fld"><label for="claimNumber">Claim #</label><input id="claimNumber" name="claimNumber"></div>
+          <div class="fld"><label for="policyNumber">Policy #</label><input id="policyNumber" name="policyNumber"></div>
+          <div class="fld"><label for="dateOfLoss">Date of loss</label><input id="dateOfLoss" name="dateOfLoss" type="date"></div>
+          <div class="fld full"><label for="lossType">Type of loss</label>
+            <select id="lossType" name="lossType"><option value="">Select…</option><option>Hail</option><option>Wind</option><option>Hail &amp; Wind</option><option>Water / Plumbing</option><option>Fire / Smoke</option><option>Freeze</option><option>Tree / Impact</option><option>Other</option></select>
+          </div>
+        </div>
+      </section>
+
+      <section class="card fs">
+        <h2>Documents</h2>
+        <p class="sub">Add files under each type. Tap "Add files" or drag them onto a box. <span id="maxNote">Up to 25 MB per file.</span></p>
+        <div id="cats" class="cats"></div>
+      </section>
+
+      <section class="card fs">
+        <h2>Notes</h2>
+        <p class="sub">Anything we should know — supplements needed, deadlines, links to large videos.</p>
+        <textarea id="notes" name="notes" rows="4" maxlength="2000"></textarea>
+        <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </section>
+
+      <div id="msg" class="msg hidden" role="alert"></div>
+      <div class="submit-row">
+        <button id="submitBtn" class="btn btn-primary btn-big" type="submit">Upload documents</button>
+        <span id="summary" class="summary">No files added yet</span>
+      </div>
+      <div id="bar" class="bar hidden"><i></i></div>
+    </form>
+  </div>
+
+  <div id="doneView" class="card done hidden">
+    <div class="done-check" aria-hidden="true">✓</div>
+    <h2>Received. Thank you.</h2>
+    <p id="doneText"></p>
+    <p>Questions or something urgent? Call or text Joseph at <a href="tel:+18325035866">(832) 503-5866</a>.</p>
+    <button id="againBtn" class="btn btn-ghost" type="button">Upload for another homeowner</button>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>Rise Public Adjusting · Texas Licensed Public Adjuster #3356839</span><span><a href="/">stormclaims.org</a></span></div></footer>
+
+<script src="/assets/scope-parser.js"></script>
+<script src="/assets/pdf-text.js"></script>
+<script src="/assets/portal.js"></script>
 </body>
 </html>

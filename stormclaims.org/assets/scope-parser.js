@@ -86,19 +86,57 @@
     return titleCase(s);
   }
 
-  /* Split a line into [{label,value}] at "Label:" boundaries. */
+  /* Split a line into [{label,value,index}] at "Label:" boundaries.
+     For each colon, take the longest known label ending there; otherwise
+     up to three capitalised words, so "JOHN DOE Home:" yields "Home". */
   function splitLabels(line) {
-    var re = /(^|\s)([A-Za-z][A-Za-z.#/&'\- ]{0,28}?):(?=\s|$)/g;
-    var out = [], m, last = null;
-    while ((m = re.exec(line))) {
-      var label = clean(m[2]);
-      if (/^\d+$/.test(label)) continue;
-      if (last) last.value = clean(line.slice(last.end, m.index));
-      last = { label: label, end: m.index + m[0].length, value: '' };
+    var out = [], last = null;
+    for (var i = 0; i < line.length; i++) {
+      if (line[i] !== ':') continue;
+      if (i + 1 < line.length && !/\s/.test(line[i + 1])) continue;      // "http://", "12:00"
+      if (i > 0 && /\d/.test(line[i - 1])) continue;                     // times
+      var before = line.slice(Math.max(0, i - 40), i);
+      var label = knownLabelAtEnd(before);
+      if (!label) {
+        var m = before.match(/(?:^|\s)((?:[A-Z][\w.#\/&'-]*)(?:\s+(?:[A-Z][\w.#\/&'-]*|of|de)){0,2})$/);
+        if (!m) continue;
+        label = m[1];
+      }
+      var start = i - label.length;
+      if (start > 0 && !/\s/.test(line[start - 1])) continue;
+      if (last) last.value = clean(line.slice(last.end, start));
+      last = { label: clean(label), index: start, end: i + 1, value: '' };
       out.push(last);
     }
     if (last) last.value = clean(line.slice(last.end));
     return out;
+  }
+
+  var KNOWN_LABEL_WORDS = [];
+  (function () {
+    var src = LABELS.map(function (l) { return l[1].source; }).join('|');
+    src.replace(/\(|\)|\^|\$/g, '').split('|').forEach(function (s) {
+      s = s.replace(/\\\./g, '.').replace(/\?/g, '').trim();
+      if (s && s.length > 1) KNOWN_LABEL_WORDS.push(s);
+    });
+    KNOWN_LABEL_WORDS.sort(function (a, b) { return b.length - a.length; });
+  }());
+
+  function knownLabelAtEnd(before) {
+    var low = before.toLowerCase();
+    for (var i = 0; i < KNOWN_LABEL_WORDS.length; i++) {
+      var w = KNOWN_LABEL_WORDS[i];
+      if (low.slice(-w.length) === w) {
+        var at = before.length - w.length;
+        if (at === 0 || /\s/.test(before[at - 1])) return before.slice(at);
+        // "Claim Rep." may appear as "Claim Rep" with the dot stripped; allow trailing dot variants
+      }
+      if (w.slice(-1) === '.' && low.slice(-(w.length - 1)) === w.slice(0, -1)) {
+        var at2 = before.length - (w.length - 1);
+        if (at2 === 0 || /\s/.test(before[at2 - 1])) return before.slice(at2);
+      }
+    }
+    return '';
   }
 
   function labelKey(label) {
@@ -136,13 +174,13 @@
 
   function parseDate(s) {
     s = clean(s);
-    var m = s.match(/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})/);
+    var m = s.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return m[0];
+    m = s.match(/(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{2,4})/);
     if (m) {
       var y = m[3].length === 2 ? '20' + m[3] : m[3];
       return y + '-' + ('0' + m[1]).slice(-2) + '-' + ('0' + m[2]).slice(-2);
     }
-    m = s.match(/(\d{4})-(\d{2})-(\d{2})/);
-    if (m) return m[0];
     var MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
     m = s.match(/([A-Za-z]{3})[a-z]*\.?\s+(\d{1,2}),?\s+(\d{4})/);
     if (m && MON[m[1].toLowerCase()]) return m[3] + '-' + ('0' + MON[m[1].toLowerCase()]).slice(-2) + '-' + ('0' + m[2]).slice(-2);
@@ -220,8 +258,8 @@
         for (var k = propertyIdx + 1; k <= propertyIdx + 3 && k < lines.length && !addr; k++) {
           var cand = lines[k];
           var p = splitLabels(cand);
-          if (p.length && labelKey(p[0].label)) break;            // next labelled line, stop
-          if (p.length) cand = cand.slice(0, cand.indexOf(p[0].label + ':')); // trailing label on same line
+          if (p.length && p[0].index === 0) break;                // next labelled line, stop
+          if (p.length) cand = cand.slice(0, p[0].index);          // trailing label on same line
           addr = splitAddress(propertyRaw + ', ' + clean(cand));
         }
       }
