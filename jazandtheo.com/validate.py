@@ -76,7 +76,7 @@ def target_exists(href):
 
 def main():
     pages = []
-    gen = open(os.path.join(ROOT, ".generated")).read().split()
+    gen = [g for g in open(os.path.join(ROOT, ".generated")).read().split() if g.endswith(".html")]
     for rel in gen + ["404.html"]:
         path = "/" + rel.replace("index.html", "") if rel != "home.html" else "/"
         pg = Page()

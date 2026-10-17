@@ -827,6 +827,19 @@ def build_xml():
     open(os.path.join(ROOT, "site.webmanifest"), "w").write(json.dumps(manifest, indent=2) + "\n")
 
 
+def build_date_redirects():
+    """Year and month folders exist only to hold posts; the host 403s a folder without an index, so 301 them to the journal."""
+    dirs = set()
+    for p in POSTS:
+        y, m = p["url"].strip("/").split("/")[:2]
+        dirs.update({f"{y}/", f"{y}/{m}/"})
+    for d in sorted(dirs):
+        full = os.path.join(ROOT, d, "index.php")
+        with open(full, "w") as f:
+            f.write("<?php\n// Date archive: send to the journal.\nheader('Location: /blog/', true, 301);\n")
+        GENERATED.append(d + "index.php")
+
+
 def clean_previous():
     mf = os.path.join(ROOT, ".generated")
     if os.path.exists(mf):
@@ -860,6 +873,7 @@ def main():
     build_sitemap_page(tags)
     build_404()
     build_xml()
+    build_date_redirects()
     open(os.path.join(ROOT, ".generated"), "w").write("\n".join(sorted(GENERATED)) + "\n")
     print(f"built {len(GENERATED)} pages ({len(POSTS)} posts, {len(tags)} tags, {len(TOOLS)} tools)")
 
