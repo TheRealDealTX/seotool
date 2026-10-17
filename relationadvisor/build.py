@@ -20,7 +20,18 @@ SITE = 'https://relationadvisor.com'
 NAME = 'RelationAdvisor'
 EMAIL = 'info@relationadvisor.com'
 TAGLINE = 'Let the relationship flow.'
-STAGING = os.environ.get('STAGING', '1') != '0'
+STAGING = os.environ.get('STAGING', '0') == '1'   # site is live on relationadvisor.com; STAGING=1 for a noindex preview
+PUBLISHED = '2026-10-16'                          # relaunch date of the rebuilt articles
+GA_ID = 'G-T8DR7RLN6E'
+GTAG = f'''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>'''
 TODAY = date.today()
 UPDATED_ISO = TODAY.isoformat()
 UPDATED_HUMAN = TODAY.strftime('%B %Y')
@@ -186,6 +197,21 @@ def img_tag(name, cls='', eager=False, sizes='(max-width: 700px) 100vw, 600px'):
             f'width="{m.get("width", 1600)}" height="{m.get("height", 1067)}" {load_attr}{c}>')
 
 
+def preload(name, sizes):
+    """Preload the above-the-fold (LCP) photo."""
+    if not name or name not in IMAGES:
+        return ''
+    return (f'<link rel="preload" as="image" href="/assets/img/{name}.webp" '
+            f'imagesrcset="/assets/img/{name}-sm.webp 640w, /assets/img/{name}.webp {IMAGES[name].get("width", 1600)}w" imagesizes="{sizes}" fetchpriority="high">\n')
+
+
+def clip(text, n=158):
+    """Trim a meta description at a word boundary."""
+    if len(text) <= n:
+        return text
+    return text[:n - 1].rsplit(' ', 1)[0].rstrip(',;:—-') + '…'
+
+
 def process_body(body):
     """Give every h2/h3 a unique id; return (html, toc)."""
     seen = {}
@@ -234,9 +260,32 @@ LOGO = (f'<a class="logo" href="/" aria-label="{NAME} home"><span class="logo-ma
         f'<span>Relation<b>Advisor</b></span></a>')
 
 
+def og_jpg(name):
+    """1200x630 JPEG share image (some social platforms still reject WebP)."""
+    name = name if name in IMAGES else 'hero'
+    dst = os.path.join(OUT, 'assets', 'og', f'{name}.jpg')
+    if not os.path.exists(dst):
+        from PIL import Image
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        im = Image.open(os.path.join(ROOT, 'assets', 'img', f'{name}.webp')).convert('RGB')
+        w, h = im.size
+        th = int(w * 630 / 1200)
+        if th <= h:
+            top = (h - th) // 2
+            im = im.crop((0, top, w, top + th))
+        else:
+            tw = int(h * 1200 / 630)
+            left = (w - tw) // 2
+            im = im.crop((left, 0, left + tw, h))
+        im.resize((1200, 630), Image.LANCZOS).save(dst, 'JPEG', quality=82, optimize=True, progressive=True)
+    return name, f'{SITE}/assets/og/{name}.jpg'
+
+
 def page(title, desc, path, body, active='', schema=None, og_image=None, og_type='website', extra_head=''):
     canonical = SITE + path
-    og_img = SITE + '/assets/img/' + (og_image or 'hero') + '.webp'
+    desc = clip(desc, 160)
+    og_name, og_img = og_jpg(og_image or 'hero')
+    og_alt = IMAGES.get(og_name, {}).get('alt', NAME)
     robots = '<meta name="robots" content="noindex, nofollow">' if STAGING else '<meta name="robots" content="index, follow, max-image-preview:large">'
     ld = ''
     if schema:
@@ -245,6 +294,7 @@ def page(title, desc, path, body, active='', schema=None, og_image=None, og_type
     return f'''<!doctype html>
 <html lang="en" class="no-js">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
@@ -256,11 +306,22 @@ def page(title, desc, path, body, active='', schema=None, og_image=None, og_type
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canonical}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{e(og_alt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{og_img}">
 <meta name="theme-color" content="#ff5d73">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="{NAME}" href="{SITE}/feed.xml">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -390,11 +451,14 @@ def build_post(p, posts_by_cat, by_slug):
     su, st = quote(share_url, safe=''), quote(p['h1'], safe='')
     cover = img_tag(p['img'], eager=True, sizes='(max-width: 1200px) 100vw, 1160px')
     art = {'@type': 'BlogPosting', '@id': share_url + '#article', 'headline': p['h1'][:110], 'description': p['description'],
-           'mainEntityOfPage': share_url, 'datePublished': UPDATED_ISO, 'dateModified': UPDATED_ISO,
+           'mainEntityOfPage': share_url, 'datePublished': PUBLISHED, 'dateModified': UPDATED_ISO,
            'author': {'@type': 'Organization', 'name': f'{NAME} Editorial Team', 'url': SITE + '/about/'},
            'publisher': {'@id': SITE + '/#org'}, 'articleSection': c['name'], 'wordCount': words(p['intro'] + p['body'])}
     if p['img']:
-        art['image'] = SITE + f'/assets/img/{p["img"]}.webp'
+        art['image'] = {'@type': 'ImageObject', 'url': SITE + f'/assets/img/{p["img"]}.webp',
+                        'width': IMAGES[p['img']].get('width', 1600), 'height': IMAGES[p['img']].get('height', 1067)}
+    art['keywords'] = p.get('keyword', '')
+    art['inLanguage'] = 'en-US'
     schema = org_schema() + [art, crumbs_schema(crumbs)]
     if p.get('faq'):
         schema.append({'@type': 'FAQPage', 'mainEntity': [
@@ -443,7 +507,9 @@ def build_post(p, posts_by_cat, by_slug):
     <div class="grid grid-3">{related}</div>
   </div>
 </section>'''
-    write(f'{p["slug"]}/index.html', page(p['title'] if len(p['title']) > 45 else f'{p["title"]} | {NAME}', p['description'], p['url'], html_body,
+    head = (f'<meta property="article:published_time" content="{PUBLISHED}">\n<meta property="article:modified_time" content="{UPDATED_ISO}">\n'
+            f'<meta property="article:section" content="{e(c["name"])}">\n' + preload(p['img'], '(max-width: 1200px) 100vw, 1160px'))
+    write(f'{p["slug"]}/index.html', page(p['title'] if len(p['title']) > 45 else f'{p["title"]} | {NAME}', p['description'], p['url'], html_body, extra_head=head,
                                          active=p['cat'], schema=schema, og_image=p['img'], og_type='article'))
 
 
@@ -479,7 +545,8 @@ def build_category(cat, items):
         'mainEntity': {'@type': 'ItemList', 'itemListElement': [
             {'@type': 'ListItem', 'position': i + 1, 'url': SITE + p['url'], 'name': p['h1']} for i, p in enumerate(items)]}}]
     write(f'category/{cat}/index.html', page(f'{c["name"]}: {len(items)} Guides & Ideas | {NAME}',
-          f'{c["lead"]} Browse {len(items)} {c["short"].lower()} articles on {NAME}.'[:158], path, body, active=cat, schema=schema, og_image=img))
+          clip(f'{c["lead"]} Browse {len(items)} {c["short"].lower()} articles on {NAME}.'), path, body, active=cat, schema=schema, og_image=img,
+          extra_head=preload(img, '(max-width: 900px) 100vw, 460px')))
 
 
 def build_blog(posts):
@@ -586,7 +653,7 @@ def build_home(posts, by_slug, posts_by_cat):
   <div class="wrap hero-grid">
     <div class="reveal in">
       <span class="eyebrow">♥ Relationship advice that actually helps</span>
-      <h1>Let the relationship <span class="grad-text"><em class="accent swap" data-words="flow.|grow.|glow.|heal.">flow.</em></span></h1>
+      <h1>Relationship advice that lets love <span class="grad-text"><em class="accent swap" data-words="flow.|grow.|glow.|heal.">flow.</em></span></h1>
       <p class="lead">Honest, warm guidance for every stage of love — crushes and first dates, the everyday work of a relationship, heartbreak and healing, and happily ever after.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="/blog/">Explore {len(posts)} guides {icon('arrow')}</a>
@@ -674,7 +741,7 @@ def build_home(posts, by_slug, posts_by_cat):
 </section>'''
     write('home.html', page(f'{NAME} — Relationship Advice, Dating Tips & Love Notes',
           'RelationAdvisor is your friendly guide to love: relationship advice, dating tips, questions to ask, breakup help, pickup lines, love notes and more.',
-          '/', body, active='home', schema=org_schema()))
+          '/', body, active='home', schema=org_schema(), extra_head=preload('hero', '(max-width: 900px) 92vw, 560px')))
 
 
 def simple_page(path, title, desc, h1, lead, inner, active='', eyebrow='', img=None):
@@ -780,7 +847,7 @@ def build_static(posts, posts_by_cat):
 <p>The Site is intended for adults and is not directed to children under 13. We do not knowingly collect information from children.</p>
 <h2>Changes and contact</h2>
 <p>We may update this policy from time to time; the date above shows the latest version. Questions? Contact <a href="mailto:{EMAIL}">{EMAIL}</a>.</p></div>'''
-    simple_page('/privacy-policy/', f'Privacy Policy | {NAME}', f'How {NAME} collects, uses and protects information when you visit our website or contact us.', 'Privacy policy', '', legal_privacy, eyebrow='Legal')
+    simple_page('/privacy-policy/', f'Privacy Policy | {NAME}', f'Read how {NAME} collects, uses and protects your information when you browse our relationship advice articles or contact us through the site.', 'Privacy policy', '', legal_privacy, eyebrow='Legal')
 
     legal_terms = f'''<div class="plain">
 <p><em>Last updated: {TODAY.strftime('%B %d, %Y')}</em></p>
@@ -797,7 +864,7 @@ def build_static(posts, posts_by_cat):
 <p>The Site is provided "as is" without warranties of any kind. To the fullest extent permitted by law, {NAME} is not liable for any damages arising from your use of the Site.</p>
 <h2>Changes</h2>
 <p>We may update these terms at any time by posting a new version here. Questions: <a href="mailto:{EMAIL}">{EMAIL}</a>.</p></div>'''
-    simple_page('/terms-of-use/', f'Terms of Use | {NAME}', f'The terms that apply when you use the {NAME} website and its relationship advice content.', 'Terms of use', '', legal_terms, eyebrow='Legal')
+    simple_page('/terms-of-use/', f'Terms of Use | {NAME}', f'The terms of use for {NAME}: how you may use and share our relationship advice, dating guides, lines and questions, plus our limits of liability.', 'Terms of use', '', legal_terms, eyebrow='Legal')
 
     disclaimer = f'''<div class="plain">
 <p>{NAME} publishes general relationship and dating information for educational and entertainment purposes. Our writers are not acting as your therapist, counselor, doctor or lawyer, and nothing on this Site is a substitute for professional advice tailored to your situation.</p>
@@ -817,7 +884,7 @@ def build_static(posts, posts_by_cat):
     cols += ('<section><h2>Pages</h2><ul><li><a href="/">Home</a></li><li><a href="/blog/">All articles</a></li><li><a href="/about/">About</a></li>'
              '<li><a href="/contact/">Contact</a></li><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li>'
              '<li><a href="/disclaimer/">Disclaimer</a></li></ul></section>')
-    simple_page('/sitemap/', f'Sitemap | {NAME}', f'Every page on {NAME}, organized by topic.', 'Sitemap', 'Every guide on the site, organized by topic.',
+    simple_page('/sitemap/', f'Sitemap | {NAME}', f'Browse every page on {NAME} in one place: all relationship advice, dating, breakup, marriage, questions, pickup lines and love note guides by topic.', 'Sitemap', 'Every guide on the site, organized by topic.',
                 f'<div class="sitemap-cols">{cols}</div>')
 
 
@@ -843,17 +910,31 @@ def build_404(posts, by_slug):
 
 # ---------------------------------------------------------------- non-HTML outputs
 def build_meta_files(posts):
-    urls = ['/', '/blog/', '/about/', '/contact/', '/sitemap/', '/privacy-policy/', '/terms-of-use/', '/disclaimer/'] + \
-           [f'/category/{c}/' for c in CAT_ORDER] + [p['url'] for p in posts]
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u in urls:
-        sm.append(f'  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED_ISO}</lastmod></url>')
+    pages = [('/', 'hero'), ('/blog/', None), ('/about/', 'about'), ('/contact/', 'contact'), ('/sitemap/', None),
+             ('/privacy-policy/', None), ('/terms-of-use/', None), ('/disclaimer/', None)] + \
+            [(f'/category/{c}/', (pool(c) or [None])[0]) for c in CAT_ORDER] + [(p['url'], p['img']) for p in posts]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for u, img in pages:
+        im = f'<image:image><image:loc>{SITE}/assets/img/{img}.webp</image:loc></image:image>' if img in IMAGES else ''
+        sm.append(f'  <url><loc>{SITE}{u}</loc><lastmod>{UPDATED_ISO}</lastmod>{im}</url>')
     sm.append('</urlset>')
     write('sitemap.xml', '\n'.join(sm) + '\n')
+    # RSS feed (newest relaunch first; all posts share the relaunch date)
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    pub = format_datetime(datetime.fromisoformat(PUBLISHED).replace(tzinfo=timezone.utc))
+    items = ''.join(
+        f'<item><title>{e(p["h1"])}</title><link>{SITE}{p["url"]}</link><guid isPermaLink="true">{SITE}{p["url"]}</guid>'
+        f'<category>{e(CATS[p["cat"]]["name"])}</category><description>{e(p["excerpt"])}</description><pubDate>{pub}</pubDate></item>\n'
+        for p in posts)
+    write('feed.xml', f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+          f'<title>{NAME}</title><link>{SITE}/</link><description>Relationship advice, dating tips, questions and love notes.</description>'
+          f'<language>en-us</language><atom:link href="{SITE}/feed.xml" rel="self" type="application/rss+xml"/>\n{items}</channel></rss>\n')
     if STAGING:
         write('robots.txt', '# Staging build — not for indexing\nUser-agent: *\nDisallow: /\n')
     else:
-        write('robots.txt', f'User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE}/sitemap.xml\n')
+        write('robots.txt', f'User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE}/sitemap.xml\n')
     idx = [{'t': p['h1'], 'u': p['url'], 'c': CATS[p['cat']]['short'], 'k': p.get('keyword', '') + ' ' + p.get('excerpt', '')} for p in posts]
     write('assets/search.json', json.dumps(idx, ensure_ascii=False, separators=(',', ':')))
     write('site.webmanifest', json.dumps({'name': NAME, 'short_name': NAME, 'icons': [
@@ -928,7 +1009,7 @@ if (preg_match('#^/category/({cats})/page/\\d+/?$#', $path, $m)) go('/category/'
 if (preg_match('#^/category/#', $path)) go('/blog/');
 if (preg_match('#^/author/#', $path)) go('/about/');
 if (preg_match('#^/page/\\d+/?$#', $path)) go('/blog/');
-if (preg_match('#^/(feed|comments/feed|rss)/?$#', $path)) go('/');
+if (preg_match('#^/(feed|comments/feed|rss)/?$#', $path)) go('/feed.xml');
 if (preg_match('#^/([a-z0-9-]+)/(feed|amp|embed|attachment)(/.*)?$#', $path, $m) && is_dir(__DIR__ . '/' . $m[1])) go('/' . $m[1] . '/');
 if (preg_match('#^/(wp-admin|wp-includes|wp-content|wp-json|wp-login\\.php|xmlrpc\\.php)(/|$)#', $path)) go('/');
 if (preg_match('#^/([a-z0-9-]+)$#', $path, $m) && is_dir(__DIR__ . '/' . $m[1])) go('/' . $m[1] . '/');

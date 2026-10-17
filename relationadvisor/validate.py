@@ -108,6 +108,15 @@ for f in pages:
         if href.endswith('.php') and os.path.isfile(target):
             continue
         err(f'{rel}: broken internal link/asset {href}')
+    if s.count("gtag('config', 'G-T8DR7RLN6E')") != 1 or 'googletagmanager.com/gtag/js?id=G-T8DR7RLN6E' not in s:
+        err(f'{rel}: Google tag missing or duplicated')
+    if rel != '404.html' and 'noindex' in s and os.environ.get('STAGING') != '1':
+        err(f'{rel}: noindex in a production build')
+    if not re.search(r'<link rel="canonical" href="https://relationadvisor\.com/', s):
+        err(f'{rel}: missing canonical')
+    og = re.search(r'<meta property="og:image" content="https://relationadvisor\.com(/[^"]+)"', s)
+    if not og or not os.path.isfile(os.path.join(OUT, og.group(1).lstrip('/'))):
+        err(f'{rel}: og:image missing')
     if 'hostingersite' in s:
         err(f'{rel}: temp domain leaked into page')
 

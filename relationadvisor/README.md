@@ -4,9 +4,10 @@ A static rebuild of the expired relationship-advice blog **relationadvisor.com**
 (a WordPress/HitMag site, 2018–2021), redesigned from scratch. Plain HTML, one
 CSS file, one JS file, local WebP photos and two small PHP files.
 
-**Staging:** https://cyan-hummingbird-576843.hostingersite.com — Hostinger Agency
-Growth website UID `28XI7AXR5` (php-fpm 8.3, Phoenix datacenter). It is
-`noindex` and `robots.txt` disallows everything until launch.
+**Live:** https://relationadvisor.com (launched 2026-10-16) — Hostinger Agency
+Growth website UID `28XI7AXR5` (php-fpm 8.3, Phoenix datacenter; preview domain
+pink-mouse-436843.hostingersite.com). Google Analytics 4 `G-T8DR7RLN6E` is on every
+page; Search Console is verified with `googlecccfbf2f7e9e5ae4.html` (in `static/`).
 
 ## Layout
 
@@ -23,9 +24,9 @@ Growth website UID `28XI7AXR5` (php-fpm 8.3, Phoenix datacenter). It is
 | `public/` | Build output (git-ignored) — this is what gets deployed |
 
 ```sh
-python3 build.py                 # staging build (noindex)
-python3 validate.py              # content + output checks
-STAGING=0 python3 build.py       # production build for launch
+python3 build.py                 # production build (default)
+python3 validate.py              # content + output + SEO checks
+STAGING=1 python3 build.py       # noindex preview build
 ```
 
 Local preview with routing: `php -S 127.0.0.1:8765 -t public <router>` where the
@@ -80,11 +81,28 @@ The placeholder `default.php` Hostinger creates on a new site was deleted.
 PHP `mail()` (honeypot + minimum-time spam checks). It will only deliver once
 that mailbox exists.
 
-## Launch checklist (when the domain is ready)
+## SEO setup
 
-1. Point relationadvisor.com at the website (Hostinger: `agency-hosting_domains_change-website`
-   from the temp domain to `relationadvisor.com`, or hPanel) and wait for SSL.
-2. `STAGING=0 python3 build.py && python3 validate.py && ./deploy.sh` — removes
-   `noindex`, publishes the real `robots.txt` with the sitemap.
-3. Create the info@relationadvisor.com mailbox and send a test through `/contact/`.
-4. Submit `https://relationadvisor.com/sitemap.xml` in Google Search Console.
+- Unique title/description per page (descriptions clipped to 160 chars at a word
+  boundary), one H1, canonical to `https://relationadvisor.com/…`, `index, follow,
+  max-image-preview:large`.
+- Open Graph + Twitter cards with 1200×630 JPEG share images generated from the
+  page photo (`public/assets/og/`), `og:locale`, `article:*` times and section.
+- JSON-LD: Organization, WebSite + SearchAction, BlogPosting (ImageObject, stable
+  `datePublished` = relaunch date), BreadcrumbList, FAQPage, CollectionPage/ItemList.
+- `sitemap.xml` with image entries, `feed.xml` (RSS; old `/feed/` 301s to it),
+  `robots.txt` with the sitemap. LCP photo preloaded on every page.
+- Favicons: `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`,
+  web-app manifest icons.
+- Backlinks (DataForSEO, Oct 2026): 12 pages on the domain have links; all
+  resolve. `/flirty-questions-to-ask-a-boy/` was not in Common Crawl and was added.
+  The homepage's ~1,560 referring domains are mostly spammy cheap-TLD links
+  (spam score 53) built while the domain redirected elsewhere.
+
+Lighthouse (desktop, live): SEO 100, Best Practices 100, Performance 88, Accessibility 96–97.
+
+## Open items
+
+- `https://www.relationadvisor.com` has no SSL certificate (the platform rejects
+  linking `www` via the API). `http://www` already 301s to the apex. Fix in hPanel
+  (SSL → include www) so https://www links don't show a certificate error.
