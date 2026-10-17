@@ -14,7 +14,7 @@ POSTS = [
 {
 "date": "2014-01-19", "slug": "crafty-great-grandmas-recipe",
 "title": "Crafty: Framing Great Grandma's Recipe",
-"seo_title": "Great Grandma Frame: How I Framed a Handwritten Family Recipe",
+"seo_title": "Great Grandma Frame: How to Frame a Family Recipe Card",
 "description": "A great grandma frame project: how we turned a stained, handwritten family recipe card into wall art for the kitchen in one afternoon.",
 "category": "crafty", "tags": ["great-grandma-frame", "picture-frames", "kitchen-art", "diy"],
 "image": "frames-brick", "image_alt": "Empty vintage picture frames leaning against a brick wall",
@@ -77,7 +77,7 @@ POSTS = [
 {
 "date": "2014-01-24", "slug": "mindfulness",
 "title": "Mindfulness (or: I'm Fifty! Days Into Homeownership)",
-"seo_title": "Mindfulness for Renovators (and a Molly Shannon 'I'm Fifty' Moment)",
+"seo_title": "Mindfulness for Renovators (and Molly Shannon's I'm Fifty)",
 "description": "A little mindfulness for anyone drowning in a house project, plus why Molly Shannon's Sally O'Malley 'I'm fifty!' is our renovation mood.",
 "category": "random-thoughts", "tags": ["mindfulness", "molly-shannon", "renovation-life"],
 "image": "stones", "image_alt": "Balanced stacked stones by water",
@@ -101,8 +101,8 @@ POSTS = [
 {
 "date": "2014-02-07", "slug": "akurum-cabinets",
 "title": "Our IKEA Akurum Cabinets: Base, Wall and Everything In Between",
-"seo_title": "IKEA Akurum Cabinets: Our Base & Wall Cabinet Install Guide",
-"description": "Installing IKEA Akurum cabinets in a split-level kitchen: base cabinets, wall cabinets on the suspension rail, hardware tips, and what changed when Sektion replaced Akurum.",
+"seo_title": "IKEA Akurum Cabinets: Base & Wall Cabinet Install Guide",
+"description": "Installing IKEA Akurum cabinets: base cabinets, wall cabinets on the suspension rail, hardware tips, and what changed when Sektion replaced Akurum.",
 "category": "kitchen", "tags": ["ikea-cabinets", "ikea-akurum", "kitchen-renovation", "suspension-rail"],
 "image": "kitchen-cabinets", "image_alt": "Cream kitchen cabinets with under-cabinet lighting",
 "body": """
@@ -134,7 +134,7 @@ POSTS = [
 {
 "date": "2014-02-17", "slug": "diy-gallery-wall-shelves-pt-2",
 "title": "DIY Gallery Wall Shelves, Pt. 2",
-"seo_title": "Gallery Wall Shelves with IKEA Ribba Frames (DIY Part 2)",
+"seo_title": "Gallery Wall Shelves with IKEA Ribba Frames (DIY Pt. 2)",
 "description": "Part 2 of our DIY gallery wall shelves: styling picture ledges with IKEA Ribba frames, plus Ribba frame instructions for swapping mats and photos.",
 "category": "crafty", "tags": ["ribba-frames", "gallery-wall", "picture-ledges", "ikea"],
 "image": "gallery-frame", "image_alt": "Framed art print leaning on a white shelf next to a plant",
@@ -199,7 +199,7 @@ POSTS = [
 {
 "date": "2014-05-18", "slug": "ikea-pax-closet-makeover", "new": True,
 "title": "Our IKEA Pax Closet Makeover (and a Hektar Lamp)",
-"seo_title": "IKEA Pax Planner Tips: Our Closet Makeover with a Hektar Lamp",
+"seo_title": "IKEA Pax Planner Tips: Closet Makeover + Hektar Lamp",
 "description": "Using the IKEA Pax planner to design a bedroom wardrobe in an awkward split-level closet, plus why the industrial IKEA Hektar lamp ended up on our dresser.",
 "category": "bedroom", "tags": ["ikea-pax", "ikea-hektar", "closet", "bedroom"],
 "image": "tools-flatlay", "image_alt": "Hand tools laid out on a wooden table",
@@ -224,8 +224,8 @@ POSTS = [
 {
 "date": "2014-06-22", "slug": "installing-cement-pavers",
 "title": "Installing Cement Pavers",
-"seo_title": "Installing Cement Pavers: Our DIY Patio Step-by-Step",
-"description": "How we installed cement pavers for a DIY backyard patio: excavation, gravel base, sand, edging and polymeric sand, plus cement pavers vs. rubber pavers from the big box store.",
+"seo_title": "Installing Cement Pavers: Our DIY Patio, Step by Step",
+"description": "How to install cement pavers for a DIY patio: excavation, gravel base, sand, edging and polymeric sand, plus cement vs. rubber pavers.",
 "category": "outsideyarddeck", "tags": ["cement-pavers", "patio", "diy-landscaping"],
 "image": "patio", "image_alt": "Two Adirondack chairs on a concrete paver patio at sunset",
 "body": """
@@ -251,8 +251,8 @@ POSTS = [
 {
 "date": "2014-07-07", "slug": "lilac-trimming",
 "title": "Lilac Trimming: Taming Our Overgrown Lilacs",
-"seo_title": "Trimming Lilacs: When and How to Prune an Overgrown Lilac Bush",
-"description": "Trimming lilacs the right way: when to prune (right after bloom), how to cut back an overgrown lilac bush or lilac tree, and how to rejuvenate it over three years.",
+"seo_title": "Trimming Lilacs: When & How to Prune an Overgrown Lilac",
+"description": "Trimming lilacs the right way: prune right after bloom, how to cut back an overgrown lilac bush or lilac tree, and rejuvenating it over three years.",
 "category": "outsideyarddeck", "tags": ["lilacs", "pruning", "gardening"],
 "image": "lilac", "image_alt": "Close-up of purple lilac blossoms",
 "body": """
@@ -280,8 +280,8 @@ POSTS = [
 {
 "date": "2014-08-10", "slug": "minnesota-ironman-bike-ride", "new": True,
 "title": "Training for the Minnesota Ironman Bike Ride",
-"seo_title": "Minnesota Ironman Bike Ride: Training on the Hiawatha Bike Trail",
-"description": "Getting ready for the Minnesota Ironman bike ride: training rides on the Hiawatha bike trail, spin class at Lakeville Lifetime Fitness, and why Stinger energy gel lives in my jersey.",
+"seo_title": "Minnesota Ironman Bike Ride: Training on the Hiawatha Trail",
+"description": "Training for the Minnesota Ironman bike ride: Hiawatha bike trail rides, spin class at Lakeville Lifetime Fitness and Stinger energy gel for fuel.",
 "category": "random-thoughts", "tags": ["minnesota-ironman-bike-ride", "hiawatha-bike-trail", "stinger-energy-gel", "lifetime-fitness"],
 "image": "cycling-road", "image_alt": "A cyclist riding down a road through rolling hills",
 "body": """
@@ -302,8 +302,8 @@ POSTS = [
 {
 "date": "2014-09-27", "slug": "ceilings-on-the-brain",
 "title": "Ceilings on the Brain",
-"seo_title": "White Tongue and Groove Ceiling Ideas (Behr Ceiling White vs. Dolphin Fin)",
-"description": "Ceilings on the brain: white tongue and groove ceiling ideas and pictures, plus choosing between Behr ceiling white and Behr Dolphin Fin off-white for a split-level living room.",
+"seo_title": "White Tongue and Groove Ceiling Ideas (Behr Whites Compared)",
+"description": "White tongue and groove ceiling ideas and pictures, plus Behr Ceiling White vs. Behr Dolphin Fin for a split-level living room ceiling.",
 "category": "living-room", "tags": ["tongue-and-groove", "behr-dolphin-fin", "ceilings", "paint"],
 "image": "wood-ceiling", "image_alt": "A wooden tongue and groove ceiling",
 "body": """
@@ -332,7 +332,7 @@ POSTS = [
 "date": "2014-10-12", "slug": "front-stoop-refresh", "new": True,
 "title": "Front Stoop Refresh: Paint, Planters and a Menards Wireless Doorbell",
 "seo_title": "Front Stoop Refresh with a Menards Wireless Doorbell",
-"description": "A one-weekend front stoop refresh on our split-level: painted door, new house numbers, planters, and installing a Menards wireless doorbell when the old wired one died.",
+"description": "A one-weekend split-level front stoop refresh: painted door, house numbers, planters and installing a Menards wireless doorbell.",
 "category": "outsideyarddeck", "tags": ["curb-appeal", "wireless-doorbell", "front-door"],
 "image": "front-door", "image_alt": "A white front door with a wooden arched frame and a flower planter",
 "body": """
@@ -359,8 +359,8 @@ POSTS = [
 {
 "date": "2014-11-16", "slug": "wallpaper-removal-and-gardz", "new": True,
 "title": "Main Bathroom Demo: Wallpaper Removal and Zinsser Gardz",
-"seo_title": "Wallpaper Removal & Zinsser Gardz (Home Depot): Fixing Torn Drywall",
-"description": "Main bathroom demo day: removing three layers of wallpaper, and how Zinsser Gardz problem-surface sealer from Home Depot saved our torn drywall before skim coating.",
+"seo_title": "Wallpaper Removal & Zinsser Gardz: Fixing Torn Drywall",
+"description": "Removing three layers of bathroom wallpaper, and how Zinsser Gardz from Home Depot sealed our torn drywall paper before skim coating.",
 "category": "main-bathroom", "tags": ["zinsser-gardz", "wallpaper-removal", "bathroom-renovation"],
 "image": "gutted-room", "image_alt": "A room mid-demolition with stripped walls and debris on the floor",
 "body": """
@@ -383,8 +383,8 @@ POSTS = [
 {
 "date": "2015-02-22", "slug": "main-bathroom-reveal", "new": True,
 "title": "Main Bathroom Reveal: Faux Wood Tiles, Mocha Grout and a Delta Faucet",
-"seo_title": "Main Bathroom Reveal: Faux Wood Tiles, Mocha Grout & Delta Faucet",
-"description": "Our main bathroom reveal: faux wood tile floors with mocha grout, an oil-rubbed bronze Delta faucet, new door hardware and how to remove a Weslock door knob.",
+"seo_title": "Bathroom Reveal: Faux Wood Tile, Mocha Grout, Delta Faucet",
+"description": "Our main bathroom reveal: faux wood tile floors with mocha grout, an oil rubbed bronze Delta faucet, and how to remove a Weslock door knob.",
 "category": "main-bathroom", "tags": ["faux-wood-tiles", "mocha-grout", "delta-faucet", "door-hardware"],
 "image": "bathroom-sink", "image_alt": "A dark tiled bathroom with a modern faucet and round sink",
 "body": """
@@ -417,8 +417,8 @@ POSTS = [
 {
 "date": "2015-04-19", "slug": "a-weekend-in-nyc", "new": True,
 "title": "A Weekend in NYC: Fig & Olive and Mung Bean Griddle Cakes",
-"seo_title": "A Weekend in NYC: Fig & Olive and Korean Mung Bean Griddle Cakes",
-"description": "A quick weekend away from the house: brunch at Fig & Olive in NYC, mung bean griddle cakes in Koreatown, and design ideas we brought home to Minneapolis.",
+"seo_title": "A Weekend in NYC: Fig & Olive and Mung Bean Griddle Cakes",
+"description": "A weekend away from the house: brunch at Fig & Olive in NYC, Korean mung bean griddle cakes in Koreatown, and design ideas we brought home.",
 "category": "random-thoughts", "tags": ["travel", "fig-and-olive", "mung-bean-griddle-cake", "food"],
 "image": "restaurant-plate", "image_alt": "A plated dish on a busy restaurant table with wine glasses",
 "body": """
@@ -440,8 +440,8 @@ POSTS = [
 {
 "date": "2015-06-14", "slug": "the-churchill-chair", "new": True,
 "title": "The Churchill Chair (and a Little Jimmy Rig)",
-"seo_title": "Restoration Hardware Churchill Chair: Our Library Chair Find",
-"description": "We found a secondhand Restoration Hardware Churchill leather chair for the living room, fixed a wobbly leg with a little jimmy rig, and learned how to care for the leather.",
+"seo_title": "Restoration Hardware Churchill Chair: Our Library Chair",
+"description": "We found a secondhand Restoration Hardware Churchill leather chair, fixed a wobbly leg with a little jimmy rig, and learned to care for it.",
 "category": "living-room", "tags": ["restoration-hardware-churchill", "jimmy-rig", "furniture", "thrifting"],
 "image": "wingback-chairs", "image_alt": "Two vintage wingback chairs against a stone wall",
 "body": """
@@ -463,8 +463,8 @@ POSTS = [
 {
 "date": "2015-08-09", "slug": "summer-reading-list", "new": True,
 "title": "Summer Reading List: Stephanie Plum and The Fran Lebowitz Reader",
-"seo_title": "Summer Reading: The Stephanie Plum Series & The Fran Lebowitz Reader",
-"description": "What we've been reading in the new Churchill chair: Janet Evanovich's Stephanie Plum series in order, and why The Fran Lebowitz Reader is the perfect book for renovators.",
+"seo_title": "Stephanie Plum Series & The Fran Lebowitz Reader: Our Picks",
+"description": "What we read in the new reading chair: the Stephanie Plum series by Janet Evanovich in order, and why The Fran Lebowitz Reader is a must.",
 "category": "random-thoughts", "tags": ["stephanie-plum-series", "the-fran-lebowitz-reader", "books"],
 "image": "reading", "image_alt": "A person reading a book outside by the water",
 "body": """
@@ -486,8 +486,8 @@ POSTS = [
 {
 "date": "2015-10-04", "slug": "vegas-baby", "new": True,
 "title": "Vegas, Baby: The TaylorMade Golf Experience and a Zara Haul",
-"seo_title": "Vegas Trip: TaylorMade Golf Experience & Shopping at Zara Las Vegas",
-"description": "A long weekend in Las Vegas: getting fitted at the TaylorMade Golf Experience, a Zara shopping spree on the Strip, and design ideas from the casinos.",
+"seo_title": "TaylorMade Golf Experience & Zara Las Vegas: Our Vegas Trip",
+"description": "A long weekend in Las Vegas: a club fitting at the TaylorMade Golf Experience, a Zara shopping haul on the Strip and casino design notes.",
 "category": "random-thoughts", "tags": ["taylormade-golf-experience", "zara", "travel", "las-vegas"],
 "image": "neon-open", "image_alt": "A glowing neon open sign in the dark",
 "body": """
@@ -509,8 +509,8 @@ POSTS = [
 {
 "date": "2015-11-15", "slug": "hallway-part-1-doors-and-hinges", "new": True,
 "title": "Hallway Part 1: New Doors and the Ryobi Hinge Template",
-"seo_title": "Hallway Part 1: Hanging Doors with a Ryobi Door Hinge Template",
-"description": "Hallway part 1: replacing hollow-core doors in our split-level hallway, mortising hinges with a Ryobi door hinge template, and choosing new door hardware.",
+"seo_title": "Hanging Doors with a Ryobi Door Hinge Template (Hallway Pt. 1)",
+"description": "Hallway part 1: replacing hollow-core doors, cutting hinge mortises with a Ryobi door hinge template, and picking new door hardware.",
 "category": "hallway", "tags": ["door-hardware", "ryobi-door-hinge-template", "doors", "hallway"],
 "image": "tool-wall", "image_alt": "A workshop wall full of hand tools",
 "body": """
@@ -569,7 +569,7 @@ POSTS = [
 "date": "2016-02-07", "slug": "nordeast-night-out", "new": True,
 "title": "A Night Out in Nordeast: The NE Minneapolis Bar Scene",
 "seo_title": "NE Minneapolis Bar Scene: Our Nordeast Night Out",
-"description": "Our favorite way to celebrate a finished project: a night out in the NE Minneapolis bar scene, brewery taprooms like Hammerheart Brewery, and meet El Jefe Guapo.",
+"description": "How we celebrate a finished project: the NE Minneapolis bar scene, a Hammerheart Brewery day trip, Bistro Le Roux and El Jefe Guapo.",
 "category": "random-thoughts", "tags": ["ne-minneapolis-bar-scene", "hammerheart-brewery", "el-jefe-guapo", "bistro-le-roux", "minneapolis-eats"],
 "image": "bar-crowd", "image_alt": "A crowded neighborhood bar with chalkboard menus",
 "body": """
@@ -593,7 +593,7 @@ POSTS = [
 {
 "date": "2016-03-16", "slug": "say-it-dont-spray-it",
 "title": "Say It, Don't Spray It",
-"seo_title": "Say It Don't Spray It: Spray Paint Lessons for Home Projects",
+"seo_title": "Say It, Don't Spray It: Spray Paint Lessons for DIYers",
 "description": "Say it, don't spray it: hard lessons from spray painting light fixtures and hardware, plus when to grab a brush instead of a can for home projects.",
 "category": "random-thoughts", "tags": ["spray-paint", "diy-fails", "hardware"],
 "image": "paint-roller", "image_alt": "A paint roller next to a half-painted wall",
@@ -621,7 +621,7 @@ POSTS = [
 {
 "date": "2016-05-08", "slug": "hola-arepa-review",
 "title": "Hola Arepa Review: From Food Truck to Our Favorite Minneapolis Restaurant",
-"seo_title": "Hola Arepa Minneapolis Review: From Food Truck to Restaurant",
+"seo_title": "Hola Arepa Minneapolis Review: Food Truck to Restaurant",
 "description": "Our Hola Arepa review: how the Minneapolis food truck became a restaurant on Nicollet, what to order, and why the arepas are worth the wait.",
 "category": "random-thoughts", "tags": ["hola-arepa", "minneapolis-eats", "restaurant-review"],
 "image": "street-sandwich", "image_alt": "A stuffed sandwich and juice on an outdoor table",

@@ -89,6 +89,19 @@ TAG_INTRO = {
 }
 
 IMG_SIZES = {}
+with open(os.path.join(ROOT, "legacy-urls.txt")) as _f:
+    LEGACY = {re.sub(r"^https?://[^/]+", "", u) for u in _f.read().split()}
+
+
+def fit_desc(text, n_posts=None):
+    """Meta description between ~120 and 158 characters, cut on a word boundary."""
+    text = text.strip()
+    if len(text) < 120:
+        more = f" {n_posts} stories" if n_posts else " Stories"
+        text += more + " from Hate to Love the Split, a Minneapolis split-level DIY and renovation blog."
+    if len(text) > 158:
+        text = text[:155].rsplit(" ", 1)[0].rstrip(",;:") + "..."
+    return text
 
 
 def esc(s):
@@ -219,40 +232,77 @@ def footer():
 </footer>"""
 
 
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8PT60RX4Q9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8PT60RX4Q9');
+</script>"""
+
+PUBLISHER = {"@type": "Organization", "@id": SITE["origin"] + "/#org", "name": SITE["name"], "url": SITE["origin"] + "/",
+             "email": SITE["email"], "logo": {"@type": "ImageObject", "url": SITE["origin"] + "/web-app-manifest-512x512.png",
+                                              "width": 512, "height": 512}}
+AUTHOR = {"@type": "Person", "@id": SITE["origin"] + "/about/#emelia", "name": SITE["author"], "url": SITE["origin"] + "/about/"}
+
+
 def page(path, title, description, body, current="", og_image="split-stairs", schema=None,
-         og_type="website", body_class="", noindex=False):
+         og_type="website", body_class="", noindex=False, og_alt="", preload=None, article=None):
     canonical = SITE["origin"] + path
-    w, h = img_size(og_image)
     ld = [{
-        "@context": "https://schema.org", "@type": "WebSite", "name": SITE["name"],
-        "url": SITE["origin"] + "/", "description": SITE["tagline"],
-        "publisher": {"@type": "Organization", "name": SITE["name"], "email": SITE["email"]},
+        "@context": "https://schema.org", "@type": "WebSite", "@id": SITE["origin"] + "/#website", "name": SITE["name"],
+        "alternateName": "hatetolovethesplit.com", "url": SITE["origin"] + "/", "description": SITE["tagline"],
+        "inLanguage": "en-US", "publisher": PUBLISHER,
     }]
     if schema:
         ld.extend(schema if isinstance(schema, list) else [schema])
-    ld_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
-    robots = '<meta name="robots" content="noindex,follow">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large">'
+    ld_html = "\n".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ld)
+    robots = "noindex,follow" if noindex else "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
+    og_img = f"{SITE['origin']}/assets/og/{og_image}.jpg"
+    art = ""
+    if article:
+        art = (f'<meta property="article:published_time" content="{article["date"]}T08:00:00-05:00">\n'
+               f'<meta property="article:modified_time" content="{article["date"]}T08:00:00-05:00">\n'
+               f'<meta property="article:author" content="{SITE["origin"]}/about/">\n'
+               f'<meta property="article:section" content="{esc(CATEGORIES[article["category"]][0])}">\n'
+               + "".join(f'<meta property="article:tag" content="{esc(tag_name(t))}">\n' for t in article["tags"]))
+    pre = (f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else "")
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{canonical}">
-{robots}
+<meta name="robots" content="{robots}">
+<meta name="author" content="{SITE['author']}">
 <meta name="theme-color" content="#211a2e">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{SITE['name']}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{SITE['origin']}/assets/img/{og_image}.webp">
-<meta property="og:image:width" content="{w}">
-<meta property="og:image:height" content="{h}">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt or title)}">
+{art}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{og_img}">
+<link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="{SITE['origin']}/feed/">
+{pre}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
@@ -272,7 +322,10 @@ def page(path, title, description, body, current="", og_image="split-stairs", sc
 
 def write(path, content):
     if path == "/":
-        dest = os.path.join(OUT, "home.html")
+        # The homepage is the tail of index.php, so there is no duplicate /home.html URL.
+        dest = os.path.join(OUT, "index.php")
+        with open(os.path.join(ROOT, "static", "index.php"), encoding="utf-8") as f:
+            content = f.read().rstrip() + "\n?>" + content
     elif path.endswith(".xml") or path.endswith(".txt") or path.endswith(".html"):
         dest = os.path.join(OUT, path.lstrip("/"))
     else:
@@ -280,7 +333,7 @@ def write(path, content):
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     with open(dest, "w", encoding="utf-8") as f:
         f.write(content)
-    if path.endswith("/"):
+    if path.endswith("/") and 'name="robots" content="noindex' not in content:
         PAGES.append(path)
 
 
@@ -338,7 +391,8 @@ def pager(base, n, total):
     return f'<nav class="pager" aria-label="Pagination">{prev}{"".join(out)}{nxt}</nav>'
 
 
-def listing(path, kicker, h1, intro, posts, image, alt, title, description, trail, paginate=True):
+def listing(path, kicker, h1, intro, posts, image, alt, title, description, trail, paginate=True, noindex=False):
+    description = fit_desc(description, len(posts))
     pages = math.ceil(len(posts) / PER_PAGE) if paginate else 1
     for n in range(1, pages + 1):
         chunk = posts[(n - 1) * PER_PAGE: n * PER_PAGE] if paginate else posts
@@ -348,8 +402,13 @@ def listing(path, kicker, h1, intro, posts, image, alt, title, description, trai
         body = hero_band(kicker, h1 + (f" <small>· page {n}</small>" if n > 1 else ""), intro, image, alt)
         body += f'<section class="wrap section">{bc}<div class="grid">{"".join(card(p) for p in chunk)}</div>{pager(path, n, pages)}</section>'
         schema = [bc_schema, {"@context": "https://schema.org", "@type": "CollectionPage", "name": h1,
-                              "url": SITE["origin"] + url, "description": description}]
-        write(url, page(url, t, description, body, current=path, og_image=image, schema=schema))
+                              "url": SITE["origin"] + url, "description": description, "isPartOf": {"@id": SITE["origin"] + "/#website"},
+                              "mainEntity": {"@type": "ItemList", "itemListElement": [
+                                  {"@type": "ListItem", "position": i + 1, "url": SITE["origin"] + q["url"], "name": q["title"]}
+                                  for i, q in enumerate(chunk)]}}]
+        d = description if n == 1 else f"Page {n}: " + description
+        write(url, page(url, t, fit_desc(d), body, current=path, og_image=image, schema=schema, og_alt=alt,
+                        preload=image, noindex=noindex and url not in LEGACY))
 
 
 # ------------------------------------------------------------------ builders
@@ -392,14 +451,17 @@ def build_post(p):
     schema = [bc_schema, {
         "@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"],
         "description": p["description"], "datePublished": p["date"], "dateModified": p["date"],
-        "mainEntityOfPage": SITE["origin"] + p["url"],
-        "image": {"@type": "ImageObject", "url": f"{SITE['origin']}/assets/img/{p['image']}.webp", "width": w, "height": h},
-        "author": {"@type": "Person", "name": SITE["author"]},
-        "publisher": {"@type": "Organization", "name": SITE["name"]},
+        "mainEntityOfPage": {"@type": "WebPage", "@id": SITE["origin"] + p["url"]},
+        "image": [{"@type": "ImageObject", "url": f"{SITE['origin']}/assets/img/{p['image']}.webp", "width": w, "height": h},
+                  f"{SITE['origin']}/assets/og/{p['image']}.jpg"],
+        "author": AUTHOR, "publisher": PUBLISHER, "inLanguage": "en-US", "isPartOf": {"@id": SITE["origin"] + "/#website"},
         "articleSection": cat_name, "keywords": ", ".join(tag_name(t) for t in p["tags"]), "wordCount": p["words"],
     }]
-    write(p["url"], page(p["url"], f"{p['seo_title']} | Hate to Love the Split", p["description"], body,
-                         og_image=p["image"], schema=schema, og_type="article", body_class="is-post"))
+    title = p["seo_title"] + " | Hate to Love the Split"
+    if len(title) > 62:
+        title = p["seo_title"]
+    write(p["url"], page(p["url"], title, p["description"], body, og_image=p["image"], og_alt=p["image_alt"],
+                         schema=schema, og_type="article", body_class="is-post", preload=p["image"], article=p))
 
 
 def build_home():
@@ -485,12 +547,13 @@ def build_home():
   </div>
 </div></section>"""
     schema = {"@context": "https://schema.org", "@type": "Blog", "name": SITE["name"], "url": SITE["origin"] + "/",
-              "description": SITE["tagline"], "author": {"@type": "Person", "name": SITE["author"]},
+              "description": SITE["tagline"], "author": AUTHOR, "publisher": PUBLISHER, "inLanguage": "en-US",
               "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": SITE["origin"] + p["url"],
                             "datePublished": p["date"]} for p in POSTS[:10]]}
-    write("/", page("/", "Hate to Love the Split | A Minneapolis Split-Level Renovation Blog",
-                    "Hate to Love the Split is a home renovation and DIY blog about falling in love with a 1970s Minneapolis split-level: kitchen, bathroom, hallway and yard projects, plus Twin Cities eats.",
-                    body, current="/", schema=schema, body_class="is-home"))
+    write("/", page("/", "Hate to Love the Split: A Minneapolis Split-Level DIY Blog",
+                    "A DIY home renovation blog about learning to love a 1970s Minneapolis split-level: kitchen, bathroom, hallway and yard projects, plus Twin Cities eats.",
+                    body, current="/", schema=schema, body_class="is-home", preload="split-stairs",
+                    og_alt="A bright split-level living room with a floating staircase"))
 
 
 def build_categories():
@@ -507,7 +570,7 @@ def build_tags():
         intro = TAG_INTRO.get(t, f"Every post on Hate to Love the Split tagged {name}.")
         listing(f"/tag/{t}/", "Tag", name, esc(intro), posts, posts[0]["image"], posts[0]["image_alt"],
                 f"{name} | Hate to Love the Split", intro, [("Home", "/"), (f"Tag: {name}", f"/tag/{t}/")],
-                paginate=False)
+                paginate=False, noindex=True)
 
 
 def build_archives():
@@ -518,11 +581,11 @@ def build_archives():
         listing(url, "Archive", label, f"Everything we posted in {label}.", posts, posts[0]["image"], posts[0]["image_alt"],
                 f"{label} Archive | Hate to Love the Split",
                 f"Posts from {label} on Hate to Love the Split: " + "; ".join(p["title"] for p in posts)[:140] + ".",
-                [("Home", "/"), ("Archive", "/archives/"), (label, url)], paginate=False)
+                [("Home", "/"), ("Archive", "/archives/"), (label, url)], paginate=False, noindex=True)
     for y, posts in BY_YEAR.items():
         listing(f"/{y}/", "Archive", y, f"Every story from {y}.", posts, posts[-1]["image"], posts[-1]["image_alt"],
                 f"{y} Archive | Hate to Love the Split", f"All {len(posts)} posts from {y} on Hate to Love the Split.",
-                [("Home", "/"), ("Archive", "/archives/"), (y, f"/{y}/")])
+                [("Home", "/"), ("Archive", "/archives/"), (y, f"/{y}/")], noindex=True)
     # full archive
     blocks = []
     for y in sorted(BY_YEAR, reverse=True):
@@ -553,7 +616,7 @@ def build_projects():
 </section>""")
     body = hero_band("Room by room", "Projects", "Every space in the split, and what we've done to it so far.", "brick-kitchen", "A white brick kitchen with open shelves")
     body += f'<div class="wrap section">{bc}<div class="projs">{"".join(blocks)}</div></div>'
-    write("/projects/", page("/projects/", "Split-Level Renovation Projects, Room by Room | Hate to Love the Split",
+    write("/projects/", page("/projects/", "Renovation Projects Room by Room | Hate to Love the Split",
                              "Our split-level renovation projects room by room: kitchen, main bathroom, hallway, living room, basement bar, bedroom closet, yard and crafts.",
                              body, current="/projects/", og_image="brick-kitchen", schema=bc_schema))
 
@@ -603,13 +666,15 @@ def build_pages():
 </form>""")
 
     simple_page("/privacy-policy/", "The fine print", "Privacy Policy", "reading", "A person reading a book",
-                "Privacy Policy | Hate to Love the Split", "The privacy policy for hatetolovethesplit.com.",
+                "Privacy Policy | Hate to Love the Split", "How hatetolovethesplit.com handles your information: contact form messages, server logs, Google Analytics cookies and how to reach us with questions.",
                 f"""<p>Last updated {date.today().strftime('%B %-d, %Y')}.</p>
 <p>Hate to Love the Split ("we") runs hatetolovethesplit.com. This page explains what information we collect and how we use it.</p>
 <h2>Information you send us</h2>
 <p>If you email us or use the contact form, we receive your name, email address and message. We use it only to reply to you and never sell or share it.</p>
 <h2>Server logs and cookies</h2>
-<p>Our web host keeps standard server logs (IP address, browser, pages requested) for security and performance. The site itself does not set advertising or tracking cookies. Fonts are loaded from Google Fonts, which may log your IP address.</p>
+<p>Our web host keeps standard server logs (IP address, browser, pages requested) for security and performance. Fonts are loaded from Google Fonts, which may log your IP address.</p>
+<h2>Analytics</h2>
+<p>We use Google Analytics to understand which posts people read. It sets cookies and collects anonymous usage data such as pages viewed, device type and approximate location. You can opt out with Google's <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out browser add-on</a>. The site does not run advertising.</p>
 <h2>Links</h2>
 <p>Posts may link to other websites. We are not responsible for their content or privacy practices.</p>
 <h2>Contact</h2>
@@ -625,16 +690,18 @@ def build_pages():
 def build_meta():
     today = date.today().isoformat()
     urls = []
-    for path in sorted(set(PAGES)):
-        if path == "/404/":
-            continue
-        lastmod = next((p["date"] for p in POSTS if p["url"] == path), today)
-        urls.append(f"<url><loc>{SITE['origin']}{path}</loc><lastmod>{lastmod}</lastmod></url>")
+    for path in sorted(set(PAGES), key=lambda u: (u != "/", u)):
+        post = next((p for p in POSTS if p["url"] == path), None)
+        lastmod = post["date"] if post else today
+        image = ""
+        if post:
+            image = (f"<image:image><image:loc>{SITE['origin']}/assets/img/{post['image']}.webp</image:loc></image:image>")
+        urls.append(f"<url><loc>{SITE['origin']}{path}</loc><lastmod>{lastmod}</lastmod>{image}</url>")
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                + "\n".join(urls) + "\n</urlset>\n")
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(urls) + "\n</urlset>\n")
     with open(os.path.join(OUT, "robots.txt"), "w", encoding="utf-8") as f:
-        f.write(f"User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE['origin']}/sitemap.xml\n")
+        f.write(f"User-agent: *\nAllow: /\nDisallow: /contact.php\n\nSitemap: {SITE['origin']}/sitemap.xml\n")
     # RSS feed (served at /feed/ by index.php)
     items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{SITE['origin']}{p['url']}</link><guid>{SITE['origin']}{p['url']}</guid><pubDate>{p['dt'].strftime('%a, %d %b %Y 08:00:00 +0000')}</pubDate><description>{esc(p['description'])}</description></item>""" for p in POSTS[:15])
     with open(os.path.join(OUT, "feed.xml"), "w", encoding="utf-8") as f:
@@ -643,8 +710,11 @@ def build_meta():
 
 def copy_static():
     shutil.copytree(os.path.join(ROOT, "assets"), os.path.join(OUT, "assets"))
-    for f in ("index.php", "contact.php", "favicon.svg", ".htaccess"):
-        shutil.copy(os.path.join(ROOT, "static", f), os.path.join(OUT, f))
+    # root files: favicons, manifest, Search Console verification, PHP helpers
+    # (index.php is written by build_home with the homepage appended)
+    for f in os.listdir(os.path.join(ROOT, "static")):
+        if f != "index.php":
+            shutil.copy(os.path.join(ROOT, "static", f), os.path.join(OUT, f))
 
 
 VERSION = date.today().strftime("%Y%m%d")
@@ -663,4 +733,4 @@ if __name__ == "__main__":
     build_projects()
     build_pages()
     build_meta()
-    print(f"built {len(set(PAGES))} pages into {OUT}")
+    print(f"built into {OUT}; {len(set(PAGES))} indexable pages")

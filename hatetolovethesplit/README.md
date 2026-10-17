@@ -16,13 +16,27 @@ python3 validate.py   # legacy URLs, broken links/assets, one H1, unique titles
 |---|---|
 | Hostinger plan | Agency Growth (order 1008744732) |
 | Website UID | `JpvYWffmb` (php-fpm 8.3, Boston datacenter) |
-| Temporary domain | https://skyblue-louse-827241.hostingersite.com |
+| Domain | https://hatetolovethesplit.com (live since 2026-10-16; preview: darkslateblue-finch-243678.hostingersite.com) |
 | Contact email | info@hatetolovethesplit.com |
 
-When the domain is ready: link `hatetolovethesplit.com` (and `www`) to website `JpvYWffmb`
-(`agency-hosting_domains_change-website` / `link-to-website`), wait for SSL, clear the cache.
-Canonicals, sitemap, Open Graph and JSON-LD already use `https://hatetolovethesplit.com`,
-and `index.php` 301s `www.` and plain-http requests to it once the domain is attached.
+`index.php` 301s `www.` and plain-http requests to `https://hatetolovethesplit.com`. The
+homepage HTML is appended to `index.php` at build time (no separate `home.html`, so no
+duplicate URL); `/index.php` and `/home.html` 301 to `/`.
+
+## SEO setup
+
+- Google tag `G-8PT60RX4Q9` is the first thing in `<head>` on every page (incl. 404).
+- Search Console verification file: `/googlecccfbf2f7e9e5ae4.html` (from `static/`).
+- Favicons + PWA manifest in `static/` (regenerate with `python3 tools_icons.py`, needs Pillow;
+  it also writes the 1200x630 JPG Open Graph images in `assets/og/`).
+- Every page: unique title (≤62 chars), meta description (110–160), canonical, robots,
+  Open Graph/Twitter tags with JPG image, article meta on posts, LCP image preload.
+- JSON-LD: WebSite, Organization (logo), Person, Blog, BlogPosting, BreadcrumbList,
+  CollectionPage + ItemList.
+- Indexing: posts, categories, hubs and every ranked legacy URL are indexed. Tag and date
+  archives that never ranked are `noindex,follow` (thin duplicates of posts) and left out of
+  `sitemap.xml`, which lists the 68 indexable URLs with post images.
+- `validate.py` enforces all of the above.
 
 ## What was rebuilt (and why)
 
