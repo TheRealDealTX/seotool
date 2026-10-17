@@ -4,7 +4,7 @@ A static rebuild of heathergreenstudios.com as **HGS Studio Journal**, an
 independent journal of printmaking, works on paper and the Bisbee, Arizona
 art scene. Plain HTML/CSS/JS plus two small PHP files; no database.
 
-**Live (temporary domain):** https://lightcoral-mole-192256.hostingersite.com
+**Live:** https://heathergreenstudios.com (temporary domain: https://lightcoral-mole-192256.hostingersite.com)
 Hostinger Agency Growth order `1008744732`, website UID `BzzTLgzXV`, Phoenix
 datacenter, php-fpm 8.3. Contact email: info@heathergreenstudios.com.
 
@@ -97,3 +97,26 @@ progress bar, a filterable journal and an active table of contents.
 2. Create the `info@heathergreenstudios.com` mailbox so `contact.php` mail is
    delivered (it sends with PHP `mail()`, From and To that address).
 3. Submit `sitemap.xml` in Search Console and disavow the spam backlinks.
+
+## SEO setup (2026-10-17)
+
+- **Google tag** `G-B8E9WWDC1B` is the first thing in `<head>` on every page,
+  including the 404 (`GTAG` in `build.py`). The privacy policy mentions it.
+- **Search Console** verification file `googlecccfbf2f7e9e5ae4.html` lives in
+  `src/` and is served from the site root.
+- **Favicons:** `favicon.ico` (16/32/48), `favicon.svg`, `favicon-96x96.png`,
+  `apple-touch-icon.png` (180), `web-app-manifest-192/512` and `site.webmanifest`.
+  The PNGs are in `src/icons/` and are copied to the root at build time.
+- **Titles and descriptions** for search results are set in `SEO` in `build.py`:
+  titles are 60 characters or less and descriptions 155 or less. Visible
+  headlines are unchanged.
+- **Social cards:** each page has a 1200×630 JPEG `og:image`, cut from its photo
+  into `assets/img/og/`, plus Twitter tags, `og:locale` and the article
+  published/modified times.
+- **Structured data:** Organization (512 px PNG logo), WebSite, BreadcrumbList,
+  BlogPosting, FAQPage, Article and AboutPage/ContactPage.
+- **Sitemap** with `<image:image>` entries, an RSS feed at `/feed.xml`,
+  `max-image-preview:large` robots directives, and heading levels that never skip.
+- **HTTPS:** `index.php` 301s `http://` and `www.` requests that reach PHP.
+  Existing files on plain http are served directly by the host, and the Agency
+  API has no force-HTTPS switch. Canonicals all point to `https://`.

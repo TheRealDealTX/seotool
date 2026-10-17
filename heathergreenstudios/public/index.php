@@ -6,7 +6,9 @@ $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
 
 function go($to) { header('Location: ' . $to, true, 301); exit; }
 
-if ($host === 'www.heathergreenstudios.com') {
+// TLS terminates upstream, so the original scheme arrives in X-Forwarded-Proto.
+$insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http';
+if ($insecure || $host === 'www.heathergreenstudios.com') {
     go('https://heathergreenstudios.com' . ($_SERVER['REQUEST_URI'] ?? '/'));
 }
 

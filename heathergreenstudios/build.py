@@ -22,8 +22,8 @@ OUT = ROOT / "public"
 ORIGIN = "https://heathergreenstudios.com"
 SITE = "HGS Studio Journal"
 EMAIL = "info@heathergreenstudios.com"
-TODAY = "2026-10-10"
-ASSET_V = "2"
+TODAY = "2026-10-17"
+ASSET_V = "3"
 
 NAV = [
     ("Printmaking", "/printmaking/"),
@@ -130,6 +130,69 @@ def photo(name, alt, cls="", eager=False, sizes="(max-width: 860px) 100vw, 60vw"
     return f'<img{c} src="/assets/img/photos/{name}.webp" alt="{esc(alt)}" width="{w}" height="{h}" {load} decoding="async" sizes="{sizes}">'
 
 
+GA_ID = "G-B8E9WWDC1B"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
+
+# Search-result titles (<= 60 chars) and meta descriptions (<= 155 chars).
+# Visible headlines and ledes come from the page/post data and stay as written.
+SEO = {
+    "/": ("Printmaking, Works on Paper & Bisbee Art | HGS Journal",
+          "An independent journal of printmaking, book arts and collecting original prints, with guides to the galleries and art walk of Bisbee, Arizona."),
+    "/printmaking/": ("Printmaking Techniques: Linocut to Etching | HGS Journal",
+          "A field guide to printmaking: linocut, woodcut, collagraph, monotype, drypoint and etching, with the tools each needs and how to choose paper."),
+    "/bisbee-art-guide/": ("Bisbee, Arizona Art Guide: Galleries & Art Walk",
+          "Bisbee, Arizona's art scene: copper-mining history, galleries on Main Street, Subway Street and Brewery Gulch, the art walk and visiting tips."),
+    "/journal/": ("Journal: Printmaking & Collecting Guides | HGS Journal",
+          "All journal posts: printmaking how-tos, advice on collecting and hanging original prints, book arts, mail art and Bisbee art walk notes."),
+    "/about/": ("About HGS Studio Journal | Bisbee Print & Paper",
+          "About HGS Studio Journal, an independent publication on printmaking, works on paper and Bisbee's art scene, and the history of this domain."),
+    "/contact/": ("Contact | HGS Studio Journal",
+          "Contact HGS Studio Journal at info@heathergreenstudios.com with story ideas, exhibition news, mail-art inquiries or questions about prints."),
+    "/privacy-policy/": ("Privacy Policy | HGS Studio Journal",
+          "Privacy policy for heathergreenstudios.com: what the contact form collects, server logs, analytics, fonts and how to reach us."),
+    "/2011/07/how-to-print-linoleum-block.html": ("How to Print a Linoleum Block (Hand or Press)",
+          "Step-by-step linocut printing: inking with a brayer, registering paper, burnishing by hand or pulling on a proof press, plus fixes for common problems."),
+    "/2009/03/dos-and-donts-of-collecting-artists.html": ("Collecting Artists' Prints: Dos and Don'ts",
+          "How to buy original prints with confidence: edition numbers, originals vs. reproductions, checking paper and signatures, and caring for prints."),
+    "/2009/02/original-art-for-little-scratch.html": ("Affordable Original Art: Prints vs. Giclées",
+          "How to own original art on a modest budget: small works, open studios, print editions, and when a giclée is the right choice."),
+    "/2011/04/paper-quilts.html": ("Collagraph Printmaking: Paper Quilts & Texture",
+          "Collagraph printmaking explained: build a plate from card, fabric and gel medium, ink it intaglio or relief, and piece prints together like a quilt."),
+    "/2012/02/stitches-and-folds.html": ("Sewing on Paper: Stitches and Folds Guide",
+          "How to sew on paper by machine and by hand: choosing paper and thread, stitch length, folding paper garments and sketchbook project ideas."),
+    "/2009/06/great-reference-for-artists-books.html": ("Making Artists' Books: Easy Bookbinding Structures",
+          "An introduction to artists' books: the pamphlet stitch, accordion and Japanese stab binding, the tools you need, and the book as an artwork."),
+    "/2012/03/wall-musings.html": ("Wall Drawing: Making an Eight-Hour Wall Drawing",
+          "Why draw directly on a gallery wall in one day? Wall drawing as performance, materials that work on drywall, and how to plan a durational drawing."),
+    "/2015/01/call-to-artists-mail-art-exchange.html": ("Mail Art: How to Start or Join a Mail Art Exchange",
+          "A practical guide to mail art: how to run an open call or swap, postal rules for decorated envelopes and postcards, and how to exhibit what arrives."),
+    "/2009/03/date-night-bisbee-after-5.html": ("Bisbee Art Walk: Date Night in Old Bisbee, AZ",
+          "Plan an evening on Bisbee's gallery walk: where to start in Old Bisbee, pacing Main Street, Subway Street and Brewery Gulch, and date-night tips."),
+    "/2011/11/my-paper-anniversary.html": ("Anniversary Art Gifts by Year: Paper, Cotton, Leather",
+          "Traditional anniversary materials as art prompts: paper prints and books for year one, cotton for year two, leather for year three, and more ideas."),
+    "/2015/04/life-is-process-as-is-art.html": ("Life Is a Process, as Is Art: Making Time for Art",
+          "Simplify, purge, transition: a practical framework for artists juggling family, teaching and a studio, and for making room to build a body of work."),
+    "/journal/how-to-hang-art/": ("How to Hang Art at the Right Height (Calculator)",
+          "Hang art like a gallery: the 57-inch rule, measuring for the nail, spacing gallery walls and art above sofas, plus a hanging-height calculator."),
+}
+
+# Social preview image per page: (file under /assets/img/og/, alt). Default: og.png.
+PAGE_OG = {
+    "/printmaking/": ("printmakers-workshop-engraving", "An 18th-century engraving of a printmaker's workshop"),
+    "/bisbee-art-guide/": ("bisbee-arizona-hillside-town", "Old Bisbee, Arizona, below the Mule Mountains"),
+    "/about/": ("bisbee-arizona-canyon-1940", "Bisbee, Arizona, seen from above in 1940"),
+    "/contact/": ("vintage-postcards", "Boxes of vintage postcards"),
+}
+
+
 def mark_svg():
     return ('<svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#16130f"/>'
             '<circle cx="31" cy="17" r="7" fill="#b8602c"/><path d="M4 33 L14 22 L21 28 L30 18 L44 31 A23 23 0 0 1 4 33Z" fill="#1f8a83"/>'
@@ -147,7 +210,7 @@ def org_schema():
         "@type": "Organization", "@id": ORIGIN + "/#org", "name": SITE,
         "alternateName": "Heather Green Studios Journal",
         "url": ORIGIN + "/", "email": EMAIL,
-        "logo": ORIGIN + "/assets/img/logo.svg",
+        "logo": {"@type": "ImageObject", "url": ORIGIN + "/assets/img/logo.png", "width": 512, "height": 512},
         "areaServed": "Bisbee, Arizona",
     }
 
@@ -170,6 +233,12 @@ def faq_schema(faq):
 # ---------------------------------------------------------------- layout
 def layout(*, path, title, desc, body, schema=None, og_type="website", extra_head="", robots="index,follow"):
     url = ORIGIN + path
+    title, desc = SEO.get(path, (title, desc))
+    og = PAGE_OG.get(path) or (POST_PHOTOS.get(path) if path in POST_PHOTOS else None)
+    if og:
+        og_img, og_alt = f"{ORIGIN}/assets/img/og/{og[0]}.jpg", og[1]
+    else:
+        og_img, og_alt = f"{ORIGIN}/assets/img/og.png", "HGS Studio Journal: ink, paper and the art of Bisbee"
     graph = [org_schema(), site_schema()] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     nav = "".join(
@@ -177,21 +246,34 @@ def layout(*, path, title, desc, body, schema=None, og_type="website", extra_hea
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<meta name="robots" content="{robots}">
+<meta name="robots" content="{robots}{",max-image-preview:large,max-snippet:-1" if robots.startswith("index") else ""}">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{SITE}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{ORIGIN}/assets/img/og.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{og_img}">
 <meta name="theme-color" content="#16130f">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="{SITE}" href="{ORIGIN}/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
@@ -229,14 +311,14 @@ def footer():
         <p style="margin-top:18px;max-width:34ch">An independent journal of printmaking, works on paper and the art scene of Bisbee, Arizona.</p>
         <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       </div>
-      <div><h4>Explore</h4><ul>{"".join(f'<li><a href="{u}">{n}</a></li>' for n, u in NAV)}</ul></div>
-      <div><h4>Guides</h4><ul>
+      <div><h2 class="h4">Explore</h2><ul>{"".join(f'<li><a href="{u}">{n}</a></li>' for n, u in NAV)}</ul></div>
+      <div><h2 class="h4">Guides</h2><ul>
         <li><a href="/2011/07/how-to-print-linoleum-block.html">Print a linoleum block</a></li>
         <li><a href="/2009/03/dos-and-donts-of-collecting-artists.html">Collecting prints</a></li>
         <li><a href="/journal/how-to-hang-art/">How to hang art</a></li>
         <li><a href="/2015/01/call-to-artists-mail-art-exchange.html">Mail art exchanges</a></li>
       </ul></div>
-      <div><h4>Recent</h4><ul>{recent}</ul></div>
+      <div><h2 class="h4">Recent</h2><ul>{recent}</ul></div>
     </div>
     <div class="foot-big" aria-hidden="true">Print · Paper · Bisbee</div>
     <div class="foot-bottom"><span>© <span data-year>2026</span> HGS Studio Journal · heathergreenstudios.com</span><span><a href="/privacy-policy/">Privacy</a> · <a href="/sitemap.xml">Sitemap</a></span></div>
@@ -427,8 +509,8 @@ def page_post(p):
     {faq_html(p['faq'])}
   </article>
   <aside class="aside">
-    <div class="aside-box toc"><h4>On this page</h4><ul>{toc_html}</ul></div>
-    <div class="aside-box"><h4>Keep reading</h4><ul>{rel_html}</ul></div>
+    <div class="aside-box toc"><h2 class="h4">On this page</h2><ul>{toc_html}</ul></div>
+    <div class="aside-box"><h2 class="h4">Keep reading</h2><ul>{rel_html}</ul></div>
   </aside>
 </div></section>
 {cta()}"""
@@ -437,13 +519,14 @@ def page_post(p):
          "datePublished": p["date"], "dateModified": p["updated"],
          "mainEntityOfPage": ORIGIN + p["path"], "author": {"@id": ORIGIN + "/#org"},
          "publisher": {"@id": ORIGIN + "/#org"}, "articleSection": p["cat"],
-         "image": ORIGIN + (f"/assets/img/photos/{POST_PHOTOS[p['path']][0]}.webp" if p['path'] in POST_PHOTOS else "/assets/img/og.png")},
+         "image": ORIGIN + (f"/assets/img/og/{POST_PHOTOS[p['path']][0]}.jpg" if p['path'] in POST_PHOTOS else "/assets/img/og.png"),
+         "inLanguage": "en-US"},
         crumbs_schema(crumbs)]
     if p["faq"]:
         schema.append(faq_schema(p["faq"]))
     return layout(path=p["path"], title=f'{p["title"]} | {SITE}', desc=p["desc"], body=html_body,
                   schema=schema, og_type="article",
-                  extra_head=f'<meta property="article:published_time" content="{p["date"]}">\n')
+                  extra_head=f'<meta property="article:published_time" content="{p["date"]}">\n<meta property="article:modified_time" content="{p["updated"]}">\n<meta property="article:section" content="{p["cat"]}">\n')
 
 
 def page_journal():
@@ -454,6 +537,7 @@ def page_journal():
     body = page_hero(crumbs, "The journal", "Notes from the press bed",
                      "Guides, essays and Bisbee dispatches, from the studio blog's first posts in 2009 to today.") + f"""
 <section class="section-tight" style="padding-top:10px"><div class="wrap">
+  <h2 class="sr-only">All journal posts</h2>
   <div class="filters" role="group" aria-label="Filter by topic">{btns}</div>
   <div class="posts">{"".join(post_card(p, i) for i, p in enumerate(posts))}</div>
 </div></section>{cta()}"""
@@ -518,7 +602,7 @@ def page_printmaking():
     {faq_html(faq)}
   </article>
   <aside class="aside">
-    <div class="aside-box toc"><h4>On this page</h4><ul>
+    <div class="aside-box toc"><h2 class="h4">On this page</h2><ul>
       <li><a href="#compare">At a glance</a></li><li><a href="#relief">Relief</a></li><li><a href="#collagraph">Collagraph</a></li>
       <li><a href="#monotype">Monotype</a></li><li><a href="#intaglio">Intaglio</a></li><li><a href="#paper">Paper</a></li><li><a href="#faq">Questions</a></li></ul></div>
     <div class="plate plate-photo" style="aspect-ratio:3/4">{photo("drawing-pencils-art-supplies", "Drawing pencils and art supplies laid out on a table", sizes="300px")}<span class="tag">Studio tools</span></div>
@@ -586,10 +670,10 @@ def page_bisbee():
     {faq_html(faq)}
   </article>
   <aside class="aside">
-    <div class="aside-box toc"><h4>On this page</h4><ul>
+    <div class="aside-box toc"><h2 class="h4">On this page</h2><ul>
       <li><a href="#from-copper-to-canvas">Copper to canvas</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#where-to-look">Where to look</a></li>
       <li><a href="#art-walk">The art walk</a></li><li><a href="#plan-your-visit">Plan your visit</a></li><li><a href="#faq">Questions</a></li></ul></div>
-    <div class="aside-box"><h4>Bisbee reading</h4><ul>
+    <div class="aside-box"><h2 class="h4">Bisbee reading</h2><ul>
       <li><a href="/2009/03/date-night-bisbee-after-5.html">Date night on the art walk</a></li>
       <li><a href="/2015/04/life-is-process-as-is-art.html">Life is a process, as is art</a></li>
       <li><a href="/2015/01/call-to-artists-mail-art-exchange.html">Mail art exchanges</a></li></ul></div>
@@ -674,7 +758,9 @@ def page_privacy():
     body = page_hero(crumbs, "Legal", "Privacy policy", f"Last updated {fmt_date(TODAY)}.") + f"""
 <section class="section-tight" style="padding-top:10px"><div class="wrap"><div class="prose">
 <h2>What we collect</h2>
-<p>This site doesn't use advertising trackers or set its own cookies. When you send a message through the contact form, we receive your name, email address and message so we can reply. Our web host keeps standard server logs (IP address, browser, pages requested) for security and maintenance.</p>
+<p>This site doesn't use advertising trackers. When you send a message through the contact form, we receive your name, email address and message so we can reply. Our web host keeps standard server logs (IP address, browser, pages requested) for security and maintenance.</p>
+<h2>Analytics</h2>
+<p>We use Google Analytics to understand which pages are read and how visitors find them. Google Analytics sets first-party cookies and receives your IP address, browser details and the pages you visit. We don't use it to identify individuals. You can block it with your browser's privacy settings or Google's opt-out add-on.</p>
 <h2>Fonts</h2>
 <p>Pages load typefaces from Google Fonts, which receives your IP address when the fonts are requested.</p>
 <h2>How we use it</h2>
@@ -706,10 +792,47 @@ def write(rel, text):
     f.write_text(text, encoding="utf-8")
 
 
+def write_og_images():
+    """1200x630 JPEG social cards cropped from the site photos, plus a raster logo."""
+    from PIL import Image, ImageOps
+    dest = OUT / "assets" / "img" / "og"
+    dest.mkdir(parents=True, exist_ok=True)
+    names = {v[0] for v in POST_PHOTOS.values()} | {v[0] for v in PAGE_OG.values()}
+    for n in sorted(names):
+        with Image.open(PHOTO_DIR / f"{n}.webp") as im:
+            ImageOps.fit(im.convert("RGB"), (1200, 630), Image.LANCZOS).save(dest / f"{n}.jpg", "JPEG", quality=82, optimize=True, progressive=True)
+    shutil.copy(ROOT / "src" / "icons" / "icon-512.png", OUT / "assets" / "img" / "logo.png")
+
+
+def rss_feed():
+    posts = sorted(POSTS, key=lambda p: p["date"], reverse=True)
+    items = "".join(
+        f"""
+  <item><title>{esc(p['h1'])}</title><link>{ORIGIN}{p['path']}</link><guid>{ORIGIN}{p['path']}</guid>
+    <pubDate>{rfc822(p['date'])}</pubDate><category>{esc(p['cat'])}</category><description>{esc(p['desc'])}</description></item>"""
+        for p in posts)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{SITE}</title><link>{ORIGIN}/</link><language>en-us</language>
+  <description>Printmaking, works on paper and the art of Bisbee, Arizona.</description>
+  <atom:link href="{ORIGIN}/feed.xml" rel="self" type="application/rss+xml"/>{items}
+</channel>
+</rss>
+"""
+
+
+def rfc822(iso):
+    from datetime import datetime
+    return datetime.strptime(iso, "%Y-%m-%d").strftime("%a, %d %b %Y 12:00:00 +0000")
+
+
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
-    shutil.copytree(ROOT / "src", OUT)
+    shutil.copytree(ROOT / "src", OUT, ignore=shutil.ignore_patterns("icons"))
+    for f in ["favicon.ico", "favicon-96x96.png", "apple-touch-icon.png", "web-app-manifest-192x192.png", "web-app-manifest-512x512.png"]:
+        shutil.copy(ROOT / "src" / "icons" / f, OUT / f)
     # Homepage is served by index.php (see README): no root index.html.
     write("/home.html", page_home())
     pages = ["/", "/printmaking/", "/bisbee-art-guide/", "/journal/", "/about/", "/contact/", "/privacy-policy/"]
@@ -726,12 +849,19 @@ def main():
     logo = mark_svg().replace(' class="brand-mark"', ' xmlns="http://www.w3.org/2000/svg"')
     write("/favicon.svg", logo)
     write("/assets/img/logo.svg", logo)
-    # sitemap
+    write_og_images()
+    # sitemap, with the photos each page shows
     urls = [(u, TODAY) for u in pages] + [(p["path"], p["updated"]) for p in POSTS]
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    sm += [f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod></url>" for u, d in urls]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for u, d in urls:
+        f = OUT / ("home.html" if u == "/" else (u.lstrip("/") + ("index.html" if u.endswith("/") else "")))
+        imgs = sorted(set(re.findall(r'src="(/assets/img/photos/[^"]+)"', f.read_text(encoding="utf-8"))))
+        img_xml = "".join(f"<image:image><image:loc>{ORIGIN}{i}</image:loc></image:image>" for i in imgs)
+        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod>{img_xml}</url>")
     sm.append("</urlset>")
     write("/sitemap.xml", "\n".join(sm) + "\n")
+    write("/feed.xml", rss_feed())
     write("/robots.txt", f"User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     print(f"built {len(pages) + len(POSTS) + 1} pages into {OUT.relative_to(ROOT)}/")
 
