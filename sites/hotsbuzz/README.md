@@ -69,7 +69,15 @@ created 2026-10-10 on the temporary domain
 **https://springgreen-goshawk-823337.hostingersite.com**. Deployed with `./deploy.sh`.
 Hostinger's placeholder `default.php` was deleted after the first upload.
 
-### Temporary domain → hotsbuzz.com
+### Live on hotsbuzz.com
+
+hotsbuzz.com is connected to the website and `STAGING = False`, so pages are
+indexable and robots.txt points to the sitemap. Every page carries the GA4 tag
+(`G-SQ495TKLCR`, set in `siteconfig.py`). The Search Console verification file
+`googlecccfbf2f7e9e5ae4.html` ships from `static/`. `index.php` 301s the old
+`*.hostingersite.com` hostname to hotsbuzz.com.
+
+### Temporary domain → hotsbuzz.com (done)
 
 While the site lives on the temporary Hostinger domain, `STAGING = True` in
 `siteconfig.py`. In that mode every page carries `noindex, nofollow` and

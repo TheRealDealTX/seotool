@@ -62,15 +62,24 @@ def exists(ref):
 
 
 titles, descs = {}, {}
-pages = [p for p in OUT.rglob("*.html")]
+pages = [p for p in OUT.rglob("*.html") if not p.name.startswith("google")]  # skip the GSC verification file
 for f in pages:
     rel = "/" + str(f.relative_to(OUT))
     pg = Page()
     pg.feed(f.read_text(encoding="utf-8"))
     if pg.h1 != 1:
         problems.append(f"{rel}: {pg.h1} <h1>")
-    if not pg.title or not pg.desc or not pg.canonical:
+    if not pg.title or not pg.desc or (not pg.canonical and rel != "/404.html"):
         problems.append(f"{rel}: missing title/description/canonical")
+    html_text = f.read_text(encoding="utf-8")
+    if "googletagmanager.com/gtag/js?id=G-SQ495TKLCR" not in html_text or "gtag('config', 'G-SQ495TKLCR')" not in html_text:
+        problems.append(f"{rel}: Google tag missing")
+    indexable = 'content="index, follow' in html_text
+    if indexable == (rel == "/404.html"):
+        problems.append(f"{rel}: wrong robots meta (pages must be indexable, 404 must not)")
+    for m in re.finditer(r'(?:og:image|twitter:image)" content="https://hotsbuzz\.com([^"]+)"', html_text):
+        if not exists(m.group(1)):
+            problems.append(f"{rel}: social image missing {m.group(1)}")
     if rel != "/404.html":
         titles.setdefault(pg.title, []).append(rel)
         descs.setdefault(pg.desc, []).append(rel)
@@ -98,11 +107,14 @@ for t, where in titles.items():
 for d, where in descs.items():
     if len(where) > 1:
         problems.append(f"duplicate description: {where}")
-for need in ("home.html", "index.php", "404.html", "robots.txt", "sitemap.xml", "favicon.ico"):
+for need in ("home.html", "index.php", "404.html", "robots.txt", "sitemap.xml", "favicon.ico", "favicon.svg",
+             "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest", "googlecccfbf2f7e9e5ae4.html"):
     if not (OUT / need).is_file():
         problems.append(f"missing {need}")
 if (OUT / "index.html").exists():
     problems.append("index.html must not exist (see README, Hosting)")
+if "Disallow: /\n" in (OUT / "robots.txt").read_text():
+    problems.append("robots.txt blocks the whole site")
 for loc in re.findall(r"<loc>https://hotsbuzz\.com([^<]*)</loc>", (OUT / "sitemap.xml").read_text()):
     if not exists(loc):
         problems.append(f"sitemap URL has no page: {loc}")

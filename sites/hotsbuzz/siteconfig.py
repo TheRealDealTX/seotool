@@ -16,48 +16,56 @@ SITE = {
     ),
     "email": "info@hotsbuzz.com",
     "founded": "2016",
+    # Google Analytics 4 measurement ID; the gtag snippet goes on every page.
+    "ga4": "G-SQ495TKLCR",
 }
 
-# True while the site lives on the temporary Hostinger domain: every page gets
-# <meta name="robots" content="noindex"> and robots.txt blocks crawling, so the
-# temporary hostname never competes with hotsbuzz.com in search. Flip to False
-# (and rebuild + redeploy) the day hotsbuzz.com is connected to the website.
-STAGING = True
+# True only while the site lives on a temporary hosting domain: every page then
+# gets <meta name="robots" content="noindex"> and robots.txt blocks crawling.
+# hotsbuzz.com is live (connected 2026-10), so this is False.
+STAGING = False
 
 # slug, name, short label, colors (gradient start, gradient end, accent), blurb
 CATEGORIES = [
     {
-        "slug": "diy-home-decor", "name": "DIY Home Decor", "short": "Home Decor",
+        "slug": "diy-home-decor", "seo_title": "DIY Home Decor Ideas: Easy Projects & Tutorials",
+        "name": "DIY Home Decor", "short": "Home Decor",
         "c1": "#12b5a0", "c2": "#0a5f69", "accent": "#ffd166", "motif": "frame",
         "blurb": "Budget-friendly makeovers, shelf styling and handmade accents that make a house feel like yours.",
     },
     {
-        "slug": "creative-crafts", "name": "Creative Crafts", "short": "Crafts",
+        "slug": "creative-crafts", "seo_title": "Creative Craft Ideas: Easy DIY Crafts & Gifts",
+        "name": "Creative Crafts", "short": "Crafts",
         "c1": "#8b5cf6", "c2": "#4c1d95", "accent": "#ffcf5c", "motif": "scissors",
         "blurb": "Paper, paint, wax and flowers: weekend crafts that double as thoughtful handmade gifts.",
     },
     {
-        "slug": "christmas-crafts", "name": "Christmas DIY & Crafts", "short": "Christmas",
+        "slug": "christmas-crafts", "seo_title": "Christmas Crafts & DIY Decorations | HotsBuzz",
+        "name": "Christmas DIY & Crafts", "short": "Christmas",
         "c1": "#e23a4e", "c2": "#14633c", "accent": "#ffe08a", "motif": "tree",
         "blurb": "Wreaths, ornaments and paper stars to make the merriest tree and mantel on the block.",
     },
     {
-        "slug": "halloween-crafts", "name": "Halloween Crafts", "short": "Halloween",
+        "slug": "halloween-crafts", "seo_title": "Halloween Crafts & DIY Decorations | HotsBuzz",
+        "name": "Halloween Crafts", "short": "Halloween",
         "c1": "#ff7a1a", "c2": "#2b1640", "accent": "#c6ff3d", "motif": "ghost",
         "blurb": "Spooky-cute pumpkins, ghosts and bats you can make in an evening, no carving knife required.",
     },
     {
-        "slug": "thanksgiving-crafts", "name": "Thanksgiving Crafts", "short": "Thanksgiving",
+        "slug": "thanksgiving-crafts", "seo_title": "Thanksgiving Crafts & DIY Table Decor | HotsBuzz",
+        "name": "Thanksgiving Crafts", "short": "Thanksgiving",
         "c1": "#e07a3a", "c2": "#6e3214", "accent": "#ffd38a", "motif": "leaf",
         "blurb": "Gratitude projects, harvest garlands and table decor for a warm, handmade Thanksgiving.",
     },
     {
-        "slug": "valentines-crafts", "name": "Valentine’s Crafts", "short": "Valentine’s",
+        "slug": "valentines-crafts", "seo_title": "Valentine’s Day Crafts & DIY Gift Ideas | HotsBuzz",
+        "name": "Valentine’s Crafts", "short": "Valentine’s",
         "c1": "#ff4d8d", "c2": "#a3124a", "accent": "#ffe1ec", "motif": "heart",
         "blurb": "Pop-up cards, heart garlands and jar gifts that say it better than store-bought.",
     },
     {
-        "slug": "st-patricks-day-crafts", "name": "St. Patrick’s Day Crafts", "short": "St. Patrick’s",
+        "slug": "st-patricks-day-crafts", "seo_title": "St. Patrick’s Day Crafts & DIY Decor | HotsBuzz",
+        "name": "St. Patrick’s Day Crafts", "short": "St. Patrick’s",
         "c1": "#2bb75a", "c2": "#0b5a2a", "accent": "#ffd400", "motif": "shamrock",
         "blurb": "Shamrocks, rainbows and pots of gold: lucky little crafts for kids and grown-ups alike.",
     },

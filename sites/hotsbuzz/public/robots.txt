@@ -1,3 +1,5 @@
-# Temporary hosting domain: keep it out of search until hotsbuzz.com is live.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /home.html
+
+Sitemap: https://hotsbuzz.com/sitemap.xml

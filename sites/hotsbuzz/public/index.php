@@ -14,6 +14,11 @@ if ($host === 'www.hotsbuzz.com' || ($insecure && $host === 'hotsbuzz.com')) {
     header('Location: https://hotsbuzz.com' . $uri, true, 301);
     exit;
 }
+// The old temporary Hostinger hostname now duplicates hotsbuzz.com: send it home.
+if (substr($host, -strlen('.hostingersite.com')) === '.hostingersite.com') {
+    header('Location: https://hotsbuzz.com' . $uri, true, 301);
+    exit;
+}
 if ($insecure && $host !== '') {
     header('Location: https://' . $host . $uri, true, 301);
     exit;

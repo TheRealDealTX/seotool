@@ -76,6 +76,11 @@ def strip_tags(s):
     return html.unescape(re.sub(r"<[^>]+>", "", s))
 
 
+def rfc822(iso):
+    from datetime import date as _d
+    return _d.fromisoformat(iso).strftime("%a, %d %b %Y 00:00:00 +0000")
+
+
 def fmt_date(iso):
     y, m, d = iso.split("-")
     months = ["January", "February", "March", "April", "May", "June", "July",
@@ -108,6 +113,14 @@ def img(key, alt, sizes="(max-width: 760px) 100vw, 33vw", loading="lazy", priori
         return (f'<img{c} src="/assets/photos/{key}-1600.webp" srcset="/assets/photos/{key}-800.webp 800w, '
                 f'/assets/photos/{key}-1600.webp 1600w" sizes="{sizes}" alt="{esc(alt)}" width="1600" height="1000"{load} decoding="async">')
     return f'<img{c} src="/assets/covers/{key}.svg" alt="{esc(alt)}" width="1200" height="750"{load} decoding="async">'
+
+
+def preload_photo(key, sizes):
+    """<link rel=preload> for a page's LCP photo, matching the <img> srcset."""
+    if not has_photo(key):
+        return ""
+    return (f'<link rel="preload" as="image" href="/assets/photos/{key}-1600.webp" imagesrcset="/assets/photos/{key}-800.webp 800w, '
+            f'/assets/photos/{key}-1600.webp 1600w" imagesizes="{sizes}" fetchpriority="high">\n')
 
 
 def photo_alt(key, fallback):
@@ -155,20 +168,34 @@ def cover_svg(seed, cat, motif_name, w=1200, h=750, big=True):
 NAV = [(c["short"], f"/category/{c['slug']}/") for c in CATEGORIES if c["slug"] not in HOLIDAYS]
 
 
-def head(title, desc, path, og_type="website", image=None, jsonld=None, extra=""):
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={SITE['ga4']}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{SITE['ga4']}');
+</script>"""
+
+
+def head(title, desc, path, og_type="website", image=None, jsonld=None, extra="", noindex=False, image_alt=None):
     url = ORIGIN + path
     og_img = ORIGIN + (image or "/assets/og/home.jpg")
-    robots = "noindex, nofollow" if STAGING else "index, follow, max-image-preview:large"
+    robots = "noindex, nofollow" if STAGING or noindex else "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    canonical = "" if noindex else f'<link rel="canonical" href="{url}">\n'
+    image_alt = image_alt or title
     ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="{robots}">
-<link rel="canonical" href="{url}">
+{canonical}<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{SITE['name']}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
@@ -177,11 +204,18 @@ def head(title, desc, path, og_type="website", image=None, jsonld=None, extra=""
 <meta property="og:image" content="{og_img}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(image_alt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{og_img}">
 <meta name="theme-color" content="#fff8ef" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#16121f" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -435,13 +469,13 @@ def page_category(c, posts):
     path = f"/category/{c['slug']}/"
     crumbs, crumbs_ld = breadcrumbs([("Home", "/"), (c["name"], path)])
     others = "".join(f'<a class="pill pill--lg" style="--pc:{o["c1"]}" href="/category/{o["slug"]}/">{o["short"]}</a>' for o in CATEGORIES if o is not c)
-    title = f"{strip_tags(c['name'])} Ideas & Tutorials | HotsBuzz"
-    desc = f"{strip_tags(c['blurb'])} {len(items)} step-by-step {strip_tags(c['short'])} projects with materials, time and cost."
+    title = c["seo_title"]
+    desc = f"{strip_tags(c['blurb'])} {len(items)} step-by-step projects with materials, time and cost."
     ld = [crumbs_ld, {"@context": "https://schema.org", "@type": "CollectionPage", "name": strip_tags(c["name"]),
                       "url": ORIGIN + path, "description": desc, "isPartOf": {"@id": ORIGIN + "/#site"},
                       "mainEntity": {"@type": "ItemList", "itemListElement": [
                           {"@type": "ListItem", "position": i + 1, "url": ORIGIN + p["url"]} for i, p in enumerate(items)]}}]
-    write(f"category/{c['slug']}/index.html", head(title, desc, path, image=f"/assets/og/cat-{c['slug']}.jpg", jsonld=ld) + header(path) + f'''
+    write(f"category/{c['slug']}/index.html", head(title, desc, path, image=f"/assets/og/cat-{c['slug']}.jpg", jsonld=ld, extra=preload_photo("cat-" + c["slug"], "100vw")) + header(path) + f'''
 <section class="phero{' phero--photo' if has_photo('cat-' + c['slug']) else ''}" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}">
   {img('cat-' + c['slug'], '', sizes='100vw', priority=True, cls='phero__photo') if has_photo('cat-' + c['slug']) else ''}
   <div class="phero__art" aria-hidden="true"><svg viewBox="0 0 100 100" color="#fff" fill="#fff">{motif(c['motif'], c['accent'])}</svg></div>
@@ -514,7 +548,6 @@ def page_post(p, posts):
          "author": {"@type": "Organization", "name": SITE["name"] + " Team", "url": ORIGIN + "/about/"},
          "publisher": {"@id": ORIGIN + "/#org"}},
         {"@type": "HowTo", "name": plain_title, "description": strip_tags(p["excerpt"]), "image": ORIGIN + og_img,
-         "estimatedCost": {"@type": "MonetaryAmount", "currency": "USD", "value": strip_tags(p["cost"]).replace("$", "")},
          "supply": [{"@type": "HowToSupply", "name": strip_tags(m)} for m in p["materials"]],
          "tool": [{"@type": "HowToTool", "name": strip_tags(t)} for t in p["tools"]],
          "step": [{"@type": "HowToStep", "position": i + 1, "name": strip_tags(s["title"]), "text": strip_tags(s["body"]),
@@ -523,8 +556,8 @@ def page_post(p, posts):
                                              "acceptedAnswer": {"@type": "Answer", "text": strip_tags(f["a"])}} for f in p["faq"]]},
         ORG,
     ]}]
-    extra = f'<meta property="article:published_time" content="{p["date"]}">\n<meta property="article:section" content="{esc(strip_tags(c["name"]))}">\n'
-    write(f"{p['slug']}/index.html", head(title, strip_tags(p["description"]), path, og_type="article", image=og_img, jsonld=ld, extra=extra) + header() + f'''
+    extra = preload_photo(p["slug"], "(max-width: 860px) 100vw, 50vw") + f'<meta property="article:published_time" content="{p["date"]}">\n<meta property="article:modified_time" content="{p["date"]}">\n<meta property="article:section" content="{esc(strip_tags(c["name"]))}">\n'
+    write(f"{p['slug']}/index.html", head(title, strip_tags(p["description"]), path, og_type="article", image=og_img, jsonld=ld, extra=extra, image_alt=photo_alt(p["slug"], plain_title)) + header() + f'''
 <article class="post" style="--c1:{c['c1']};--c2:{c['c2']};--acc:{c['accent']}" data-slug="{p['slug']}">
   <header class="post__hero">
     <div class="wrap post__hero-in">
@@ -593,13 +626,13 @@ def page_static(posts):
 <ul>{cats}</ul>
 <p>Have an idea you want to see, or a question about a project? <a href="/contact/">Get in touch</a>.</p>''',
                 lede="Make it. Gift it. Love it. Handmade projects for real homes and real budgets.")
-    simple_page("/contact/", "Contact HotsBuzz", "Get in touch with the HotsBuzz team with project questions, craft ideas or collaboration requests.",
+    simple_page("/contact/", "Contact HotsBuzz | DIY Project Questions & Ideas", "Contact the HotsBuzz team at info@hotsbuzz.com with questions about a DIY project, craft ideas you want to see, or photos of your finished makes.",
                 "Contact us", f'''
 <p>We love hearing from fellow makers. Questions about a tutorial, a project you want us to try, or a photo of your finished make: send it over.</p>
 <p class="contact-card"><span class="script">drop us a line</span><a class="btn btn--primary" href="mailto:{SITE['email']}" data-confetti>{SITE['email']}</a></p>
 <p>We read every message and reply as quickly as we can, usually within a few days.</p>''',
                 lede="Questions, ideas or show-and-tell. Our inbox is open.")
-    simple_page("/privacy-policy/", "Privacy Policy | HotsBuzz", "How HotsBuzz handles information when you visit hotsbuzz.com, including cookies, local storage and email correspondence.",
+    simple_page("/privacy-policy/", "Privacy Policy | HotsBuzz DIY Projects & Crafts", "How HotsBuzz handles information when you visit hotsbuzz.com, including Google Analytics, cookies, local storage and email correspondence.",
                 "Privacy policy", f'''
 <p><em>Last updated {fmt_date(TODAY)}.</em></p>
 <p>This policy explains what information {SITE['name']} ({SITE['domain']}) handles when you visit the site.</p>
@@ -607,6 +640,8 @@ def page_static(posts):
 <p>We do not ask you to create an account and we do not run sign-up forms. If you email us, we receive your email address and whatever you include in your message, and we use it only to reply.</p>
 <h2>Local storage</h2>
 <p>The site stores two small preferences in your browser’s local storage: your light or dark theme choice, and which materials you have ticked on a project checklist. They never leave your device and you can clear them at any time in your browser settings.</p>
+<h2>Analytics</h2>
+<p>We use Google Analytics to understand how visitors use the site, such as which projects are popular and how people find us. Google Analytics sets cookies and collects information like the pages you visit, how long you stay, your approximate location, and your device and browser type. We use this only in aggregate to improve HotsBuzz. You can learn how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">policies.google.com</a>, and opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener" target="_blank">Google Analytics opt-out browser add-on</a>.</p>
 <h2>Fonts and server logs</h2>
 <p>Fonts are served by Google Fonts, which receives your IP address when your browser requests them. Our host keeps standard server logs (IP address, browser, pages requested) for security and troubleshooting.</p>
 <h2>Third-party links</h2>
@@ -616,8 +651,7 @@ def page_static(posts):
 
 
 def page_404():
-    write("404.html", head("Page not found | HotsBuzz", "Sorry, this page could not be found. Browse every HotsBuzz DIY project and craft idea instead.", "/404.html").replace(
-        '<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">') + header() + f'''
+    write("404.html", head("Page not found | HotsBuzz", "Sorry, this page could not be found. Browse every HotsBuzz DIY project and craft idea instead.", "/404.html", noindex=True) + header() + f'''
 <section class="phero phero--plain nf"><div class="wrap">
   <div class="nf__art" aria-hidden="true"><svg viewBox="0 0 100 100" color="var(--coral)" fill="var(--coral)">{motif('yarn', 'var(--sun)')}</svg></div>
   <h1>Oops, this project came unraveled.</h1>
@@ -628,18 +662,24 @@ def page_404():
 
 
 def page_feeds(posts):
-    urls = [("/", TODAY, "1.0"), ("/projects/", TODAY, "0.8"), ("/about/", TODAY, "0.4"),
-            ("/contact/", TODAY, "0.3"), ("/privacy-policy/", TODAY, "0.2")]
-    urls += [(f"/category/{c['slug']}/", TODAY, "0.7") for c in CATEGORIES]
-    urls += [(p["url"], p["date"], "0.6") for p in posts]
-    write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(
-        f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n" for u, d, pr in urls) + "</urlset>\n")
+    newest = posts[0]["date"]
+    urls = [("/", newest, "1.0", "home"), ("/projects/", newest, "0.8", None), ("/about/", newest, "0.4", None),
+            ("/contact/", newest, "0.3", None), ("/privacy-policy/", newest, "0.2", None)]
+    urls += [(f"/category/{c['slug']}/", max(p["date"] for p in posts if p["category"] == c["slug"]), "0.7", "cat-" + c["slug"]) for c in CATEGORIES]
+    urls += [(p["url"], p["date"], "0.6", p["slug"]) for p in posts]
+
+    def image_tag(key):
+        if not key or not has_photo(key):
+            return ""
+        return f"<image:image><image:loc>{ORIGIN}/assets/photos/{key}-1600.webp</image:loc></image:image>"
+    write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "".join(
+        f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority>{image_tag(k)}</url>\n" for u, d, pr, k in urls) + "</urlset>\n")
     if STAGING:
         write("robots.txt", "# Temporary hosting domain: keep it out of search until hotsbuzz.com is live.\nUser-agent: *\nDisallow: /\n")
     else:
-        write("robots.txt", f"User-agent: *\nDisallow: /home.html\n\nSitemap: {ORIGIN}/sitemap.xml\n")
-    items = "".join(f'''<item><title>{esc(strip_tags(p["title"]))}</title><link>{ORIGIN}{p["url"]}</link><guid>{ORIGIN}{p["url"]}</guid><pubDate>{p["date"]}</pubDate><description>{esc(strip_tags(p["excerpt"]))}</description></item>''' for p in posts[:20])
-    write("feed.xml", f'''<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>{SITE['name']}</title><link>{ORIGIN}/</link><description>{SITE['tagline']}</description>{items}</channel></rss>\n''')
+        write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\n\nSitemap: {ORIGIN}/sitemap.xml\n")
+    items = "".join(f'''<item><title>{esc(strip_tags(p["title"]))}</title><link>{ORIGIN}{p["url"]}</link><guid>{ORIGIN}{p["url"]}</guid><pubDate>{rfc822(p["date"])}</pubDate><description>{esc(strip_tags(p["excerpt"]))}</description></item>''' for p in posts[:20])
+    write("feed.xml", f'''<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>{SITE['name']}</title><link>{ORIGIN}/</link><atom:link href="{ORIGIN}/feed.xml" rel="self" type="application/rss+xml"/><description>{SITE['tagline']}</description><language>en-us</language>{items}</channel></rss>\n''')
 
 
 # -------------------------------------------------------------------- main ---
