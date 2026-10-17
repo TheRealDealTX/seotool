@@ -85,6 +85,11 @@ def main():
         pg.feed(src)
         pg.raw = src
         pages.append(pg)
+        if "googletagmanager.com/gtag/js?id=G-WB1544R4K0" not in src:
+            errors.append(f"{path}: Google tag missing")
+        og = re.search(r'property="og:image" content="https://jazandtheo.com(/[^"]+)"', src)
+        if not og or not target_exists(og.group(1)):
+            errors.append(f"{path}: og:image missing or file not found")
         if pg.h1 != 1:
             errors.append(f"{path}: {pg.h1} h1 tags")
         if not pg.title:

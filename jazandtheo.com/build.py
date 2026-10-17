@@ -32,6 +32,8 @@ CATS = {
     "photography": ("Photography", "For photographers and the curious: learning the craft, gear, light and the business side."),
 }
 TAG_NAMES = {
+    "diy": "DIY",
+    "el-paso": "El Paso",
     "jaz-and-theo-weekly-adventures": "Jaz & Theo Weekly Adventures",
     "amy-and-jordan-business-course": "Amy and Jordan Business Course",
 }
@@ -45,6 +47,16 @@ NAV = [
     ("Shop", "/shop/"),
     ("About", "/about/"),
 ]
+
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WB1544R4K0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WB1544R4K0');
+</script>"""
 
 e = lambda s: html.escape(str(s), quote=True)
 
@@ -79,6 +91,22 @@ ALT = _load_alts()
 
 
 # Image slots: 1600/800 webp (3:2); *-hero slots also have 2400 (16:9).
+def og_src(slot):
+    """1200x630 JPEG share image for a slot, generated from the 1600px WebP (needs Pillow; committed)."""
+    rel = f"/assets/img/og/{slot}.jpg"
+    out = os.path.join(ROOT, rel.lstrip("/"))
+    src = os.path.join(ROOT, "assets", "img", f"{slot}-1600.webp")
+    if not os.path.exists(out) and os.path.exists(src):
+        from PIL import Image
+        os.makedirs(os.path.dirname(out), exist_ok=True)
+        im = Image.open(src).convert("RGB")
+        w, h = im.size
+        ch = round(w * 630 / 1200)
+        top = max(0, (h - ch) // 2)
+        im.crop((0, top, w, top + ch)).resize((1200, 630), Image.LANCZOS).save(out, "JPEG", quality=82, optimize=True, progressive=True)
+    return rel
+
+
 def img_src(slot, w=1600):
     return f"/assets/img/{slot}-{w}.webp"
 
@@ -244,11 +272,16 @@ def footer():
 <button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>'''
 
 
-def layout(path, title, desc, body, schema=None, og=None, solid=False, og_type="website", extra_head="", robots=None):
+def layout(path, title, desc, body, schema=None, og=None, solid=False, og_type="website", extra_head="", robots=None, og_alt=None, preload=None):
     graph = [org_schema(), website_schema()] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False).replace("</", "<\\/")
     canon = ORIGIN + path
     og_img = ORIGIN + (og or "/assets/img/og-default.jpg")
+    og_alt = og_alt or title
+    pre = ""
+    if preload:
+        srcset = f"{img_src(preload, 800)} 800w, {img_src(preload, 1600)} 1600w" + (f", {img_src(preload, 2400)} 2400w" if preload.endswith("-hero") else "")
+        pre = f'\n<link rel="preload" as="image" href="{img_src(preload)}" imagesrcset="{srcset}" imagesizes="100vw" fetchpriority="high">'
     tools_js = '\n<script src="/assets/js/tools.js" defer></script>' if 'data-tool="' in body else ""
     progress = '<div class="progress" aria-hidden="true"></div>' if og_type == "article" else ""
     robots_tag = f'\n<meta name="robots" content="{robots}">' if robots else '\n<meta name="robots" content="index, follow, max-image-preview:large">'
@@ -257,6 +290,7 @@ def layout(path, title, desc, body, schema=None, og=None, solid=False, og_type="
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{GTAG}
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{canon}">{robots_tag}
@@ -266,19 +300,24 @@ def layout(path, title, desc, body, schema=None, og=None, solid=False, og_type="
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(og_alt)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(desc)}">
-<meta name="twitter:image" content="{og_img}">{extra_head}
+<meta name="twitter:image" content="{og_img}">
+<meta name="twitter:image:alt" content="{e(og_alt)}">{extra_head}
 <meta name="theme-color" content="#231d2b">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Jaz &amp; Theo" href="/rss.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>{pre}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
 <script type="application/ld+json">{ld}</script>
@@ -311,6 +350,7 @@ def write(path, content):
 
 GENERATED = []
 SITEMAP = []  # (path, lastmod, priority)
+SITEMAP_IMAGES = {}  # path -> [image urls]
 
 
 # ---------------------------------------------------------------- components
@@ -405,7 +445,7 @@ def build_post(p, idx):
                 f'{cards_grid(related)}</div></section>')
     schema = [
         {"@type": "BlogPosting", "@id": url + "#article", "headline": p["title"], "description": p["description"],
-         "image": [ORIGIN + img_src(p["image"])], "datePublished": p["date"], "dateModified": MODIFIED if not p["is_new"] else p["date"],
+         "image": [ORIGIN + og_src(p["image"]), ORIGIN + img_src(p["image"])], "datePublished": p["date"], "dateModified": MODIFIED if not p["is_new"] else p["date"],
          "author": {"@type": "Organization", "name": "Jaz & Theo editors", "url": ORIGIN + "/about/"},
          "publisher": {"@id": ORIGIN + "/#org"}, "mainEntityOfPage": url, "articleSection": cat_name,
          "keywords": ", ".join([p.get("keyword", "")] + p.get("tags", [])), "inLanguage": "en-US",
@@ -418,8 +458,9 @@ def build_post(p, idx):
              f'\n<meta property="article:modified_time" content="{(MODIFIED if not p["is_new"] else p["date"])}T09:00:00-06:00">'
              f'\n<meta property="article:section" content="{cat_name}">')
     write(p["url"], layout(p["url"], p["seo_title"], p["description"], hero + article + rel_html, schema,
-                           og=img_src(p["image"]), og_type="article", extra_head=extra))
+                           og=og_src(p["image"]), og_alt=ALT.get(p["image"], p["image_alt"]), preload=p["image"], og_type="article", extra_head=extra))
     SITEMAP.append((p["url"], MODIFIED if not p["is_new"] else p["date"], "0.7"))
+    SITEMAP_IMAGES[p["url"]] = [img_src(p["image"])] + [img_src(m) for m in re.findall(r"<!--img:([^|>]+)\|", p["body_src"])]
 
 
 def in_cat(p, k):
@@ -460,7 +501,7 @@ def listing(path, h1, sub, posts, crumbs, title, desc, page=1, pages=1, base=Non
             extra += f'\n<link rel="prev" href="{ORIGIN}{base if page == 2 else f"{base}page/{page - 1}/"}">'
         if page < pages:
             extra += f'\n<link rel="next" href="{ORIGIN}{base}page/{page + 1}/">'
-    write(path, layout(path, title, desc, body, schema, solid=False, extra_head=extra))
+    write(path, layout(path, title, desc, body, schema, solid=False, extra_head=extra, og=og_src(posts[0]["image"]) if posts else None))
     SITEMAP.append((path, MODIFIED, "0.6" if page == 1 else "0.4"))
 
 
@@ -486,7 +527,7 @@ def build_categories():
             "wedding": ("Wedding Guides: Venues, Timelines & Photo Tips", "Wedding venue guides for El Paso, Tucson, Phoenix, the Gila Valley and Lake Powell, plus timelines, exits and how to choose a wedding photographer."),
             "portraits": ("Portrait Session Guides: Engagements & Seniors", "Engagement, senior and anniversary photo guides: the best locations in El Paso, Tucson, Phoenix, Los Angeles and Austin, plus outfit help."),
             "home": ("Home Projects: Peg Rails, Lighting & Shiplap", "DIY home projects and ideas: peg rail shelves, shiplap, hanging light fixtures, wall displays, windows, labels and cloth napkins."),
-            "travel": ("Travel: Southwest Road Trips & Adventures", "Road-trip guides and travel notes from the Southwest to South Dakota and Yellowstone, with photo tips for every stop."),
+            "travel": ("Travel: Southwest Road Trips & Adventures", "Road-trip guides and travel notes from the desert Southwest to Lake Powell, South Dakota's Badlands and Yellowstone, with photo tips for every stop."),
             "photography": ("Photography: Learning, Gear & Light", "Photography guides for beginners and working photographers: courses, golden hour, gear gift ideas and the business side."),
         }[k]
         listing(path, e(name), e(blurb), ps, [("Home", "/"), ("Journal", "/blog/"), (name, path)], titles[0], titles[1], eyebrow="Category")
@@ -502,13 +543,17 @@ def build_tags():
         name = tag_name(t)
         path = f"/tag/{t}/"
         n = len(ps)
-        desc = f"{n} Jaz & Theo {'story' if n == 1 else 'stories'} tagged {name}: guides on weddings, portraits, travel and home projects across Texas and Arizona."
+        desc = f"Read {n} Jaz & Theo {'story' if n == 1 else 'stories'} tagged {name}: practical guides to weddings, portraits, travel and home projects across Texas and Arizona."
         listing(path, e(name), f"{n} {'story' if n == 1 else 'stories'} tagged &ldquo;{e(name)}&rdquo;.", ps,
-                [("Home", "/"), ("Journal", "/blog/"), (name, path)], f"{name} — Jaz & Theo Journal"[:70], desc, eyebrow="Tag", filters=False)
+                [("Home", "/"), ("Journal", "/blog/"), (name, path)], f"{name} Guides & Stories | Jaz & Theo"[:60], desc, eyebrow="Tag", filters=False)
     return tags
 
 
 # ---------------------------------------------------------------- tools
+TOOL_OG = {"golden-hour": "golden-hour", "timeline": "timeline", "budget": "photo-cost", "chandelier": "lights", "pegrail": "peg-rail",
+           "napkins": "cloth-napkins", "exit-quiz": "wedding-exits", "outfit": "engagement-outfits"}
+
+
 def build_tools():
     path = "/tools/"
     body = (page_hero('Free tools for <em class="accent">planning</em> and making', "Calculators and planners we wish we had: golden hour times, wedding-day timelines, photography budgets and a few for the house.",
@@ -517,7 +562,8 @@ def build_tools():
             + f'<section class="section section-sand"><div class="wrap wrap-narrow">{tool_block("golden-hour", 2)}</div></section>' + cta_band())
     schema = [crumbs_schema([("Home", "/"), ("Tools", path)]), {"@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": ORIGIN + t["url"], "name": t["name"]} for i, t in enumerate(TOOLS)]}]
-    write(path, layout(path, "Free Wedding, Photo & Home Calculators | Jaz & Theo", "Free interactive tools: golden hour calculator, wedding day timeline builder, photography cost estimator, chandelier size and peg rail calculators.", body, schema))
+    write(path, layout(path, "Free Wedding, Photo & Home Calculators | Jaz & Theo", "Free interactive tools: golden hour calculator, wedding day timeline builder, photography cost estimator, chandelier size and peg rail calculators.", body, schema,
+                       og=og_src("tools-hero"), preload="tools-hero"))
     SITEMAP.append((path, MODIFIED, "0.8"))
     for t in TOOLS:
         crumbs = [("Home", "/"), ("Tools", "/tools/"), (t["short"], t["url"])]
@@ -534,7 +580,7 @@ def build_tools():
                   {"@type": "WebApplication", "name": t["name"], "url": ORIGIN + t["url"], "applicationCategory": "UtilitiesApplication",
                    "operatingSystem": "Any", "browserRequirements": "Requires JavaScript", "description": t["desc"],
                    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@id": ORIGIN + "/#org"}}]
-        write(t["url"], layout(t["url"], t["title"], t["desc"], body, schema))
+        write(t["url"], layout(t["url"], t["title"], t["desc"], body, schema, og=og_src(TOOL_OG.get(t["key"], "tools-hero"))))
         SITEMAP.append((t["url"], MODIFIED, "0.7"))
 
 
@@ -561,7 +607,7 @@ def hub(path, key):
             + f'<section class="section"><div class="wrap"><div class="section-head"><div class="eyebrow">From the journal</div><h2>{c["list_h2"]}</h2></div>{cards_grid(ps, feature_first=True)}</div></section>'
             + f'<section class="section section-sand"><div class="wrap wrap-narrow">{faq_html(c["faq"])}</div></section>' + cta_band())
     schema = [crumbs_schema(crumbs), faq_schema(c["faq"]), {"@type": "CollectionPage", "name": c["title"], "url": ORIGIN + path, "description": c["desc"]}]
-    write(path, layout(path, c["title"], c["desc"], body, schema, og=img_src(c["hero"])))
+    write(path, layout(path, c["title"], c["desc"], body, schema, og=og_src(c["hero"]), preload=c["hero"]))
     SITEMAP.append((path, MODIFIED, "0.9"))
 
 
@@ -698,7 +744,7 @@ def build_home():
     title = "Jaz & Theo — Wedding, Portrait & Home Journal"
     desc = "Wedding venue guides, engagement and senior photo spots from El Paso to Arizona and Austin, golden hour and timeline tools, and DIY home projects."
     write("/home.html", layout("/", title, desc, body, [{"@type": "WebPage", "@id": ORIGIN + "/#webpage", "url": ORIGIN + "/", "name": title, "isPartOf": {"@id": ORIGIN + "/#website"}}],
-                                og="/assets/img/og-default.jpg"))
+                                og="/assets/img/og-default.jpg", preload="home-hero"))
     SITEMAP.insert(0, ("/", MODIFIED, "1.0"))
 
 
@@ -731,7 +777,7 @@ def build_shop():
             + f'<div class="checklist"><ul>{shot}</ul></div><button type="button" class="btn btn-sm no-print" onclick="window.print()">Print this list</button></div></section>'
             + cta_band("Want a printable we haven&rsquo;t made yet?", "Tell us what would help you plan — a shot list, a packing list, a project plan — and we&rsquo;ll consider it for the shop."))
     write(path, layout(path, "Free Wedding Printables & Planners | Jaz & Theo Shop", "Free wedding and home printables: family photo shot list, wedding timeline builder, photography budget planner, peg rail plan and outfit palettes.",
-                       body, [crumbs_schema(crumbs)], og=img_src("shop-hero")))
+                       body, [crumbs_schema(crumbs)], og=og_src("shop-hero"), preload="shop-hero"))
     SITEMAP.append((path, MODIFIED, "0.7"))
 
 
@@ -744,7 +790,7 @@ def build_about():
             + f'<div class="stack-img reveal"><div class="main img-reveal">{img("camera-gear", "A film camera and lenses on a wooden table", sizes="(max-width: 960px) 100vw, 45vw")}</div><div class="accent-img">{img("kitchen", "A warm, simple kitchen corner", sizes="240px")}</div></div></div></section>'
             + cta_band())
     write(path, layout(path, "About Jaz & Theo — A Wedding, Portrait & Home Journal", "About Jaz & Theo: an independent journal about weddings, portraits, the desert Southwest and making a home, with free planning tools.", body,
-                       [crumbs_schema(crumbs), {"@type": "AboutPage", "url": ORIGIN + path, "name": "About Jaz & Theo"}]))
+                       [crumbs_schema(crumbs), {"@type": "AboutPage", "url": ORIGIN + path, "name": "About Jaz & Theo"}], og=og_src("about-hero"), preload="about-hero"))
     SITEMAP.append((path, MODIFIED, "0.5"))
 
 
@@ -798,7 +844,7 @@ def build_sitemap_page(tags):
              + "".join(sec(CATS[k][0] + " stories", [(p["title"], p["url"]) for p in POSTS if p["category"] == k]) for k in CATS)
              + sec("Tags", [(tag_name(t), f"/tag/{t}/") for t in sorted(tags)]))
     body = page_hero("Sitemap", "Every page on Jaz &amp; Theo in one place.", crumbs=crumbs) + f'<section class="prose-page"><div class="wrap"><div class="prose html-sitemap">{html_}</div></div></section>'
-    write(path, layout(path, "Sitemap | Jaz & Theo", "A complete list of Jaz & Theo pages: wedding, portrait, home and travel guides, free tools and categories.", body, [crumbs_schema(crumbs)]))
+    write(path, layout(path, "Sitemap | Jaz & Theo", "A complete list of every Jaz & Theo page: wedding venue guides, portrait locations, home projects, travel stories, free planning tools and categories.", body, [crumbs_schema(crumbs)]))
     SITEMAP.append((path, MODIFIED, "0.2"))
 
 
@@ -814,8 +860,11 @@ def build_404():
 
 # ---------------------------------------------------------------- feeds
 def build_xml():
-    urls = "".join(f"<url><loc>{ORIGIN}{p}</loc><lastmod>{m}</lastmod><priority>{pr}</priority></url>\n" for p, m, pr in SITEMAP)
-    open(os.path.join(ROOT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    def entry(p, m, pr):
+        imgs = "".join(f"<image:image><image:loc>{ORIGIN}{i}</image:loc></image:image>" for i in dict.fromkeys(SITEMAP_IMAGES.get(p, [])))
+        return f"<url><loc>{ORIGIN}{p}</loc><lastmod>{m}</lastmod><priority>{pr}</priority>{imgs}</url>\n"
+    urls = "".join(entry(*x) for x in SITEMAP)
+    open(os.path.join(ROOT, "sitemap.xml"), "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{urls}</urlset>\n')
     open(os.path.join(ROOT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\nDisallow: /contact/thanks/\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     items = ""
     for p in POSTS[:20]:
