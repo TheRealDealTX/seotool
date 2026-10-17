@@ -25,11 +25,23 @@ def exists(url):
     return os.path.isfile(os.path.join(f, "index.html")) if p.endswith("/") else os.path.isfile(f)
 
 errors, titles, descs = [], {}, {}
-pages = [os.path.join(d, f) for d, _, fs in os.walk(OUT) for f in fs if f.endswith(".html")]
+pages = [os.path.join(d, f) for d, _, fs in os.walk(OUT) for f in fs
+         if f.endswith(".html") and not f.startswith("google")]   # skip the Search Console token file
+GA_ID = "G-62Q6HGSD7C"
+for f in ("robots.txt", "sitemap.xml", "feed.xml", "favicon.ico", "favicon.svg", "favicon-96x96.png",
+          "apple-touch-icon.png", "site.webmanifest", "web-app-manifest-192x192.png",
+          "web-app-manifest-512x512.png", "googlecccfbf2f7e9e5ae4.html", "index.php", "contact.php"):
+    if not os.path.isfile(os.path.join(OUT, f)): errors_pre = print(f"missing root file {f}") or sys.exit(1)
 for path in pages:
     rel = os.path.relpath(path, OUT)
     h = open(path, encoding="utf-8").read()
     if h.count("<h1") != 1: errors.append(f"{rel}: {h.count('<h1')} h1")
+    if h.count(f"googletagmanager.com/gtag/js?id={GA_ID}") != 1 or f"gtag('config', '{GA_ID}')" not in h:
+        errors.append(f"{rel}: Google tag missing or duplicated")
+    for needle in ('rel="canonical"', 'rel="apple-touch-icon"', 'rel="manifest"', 'property="og:image"', 'width="'):
+        if needle not in h: errors.append(f"{rel}: missing {needle}")
+    for m in re.finditer(r'(?:og:image|twitter:image)" content="https://live-style\.co\.uk(/[^"]+)"', h):
+        if not exists(m.group(1)): errors.append(f"{rel}: broken og image {m.group(1)}")
     t = re.search(r"<title>(.*?)</title>", h).group(1)
     d = re.search(r'<meta name="description" content="(.*?)">', h).group(1)
     titles.setdefault(t, []).append(rel); descs.setdefault(d, []).append(rel)

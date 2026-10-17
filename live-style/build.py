@@ -24,7 +24,20 @@ OUT = os.path.join(ROOT, "public")
 ORIGIN = SITE["origin"]
 NAME = SITE["name"]
 ASSET_V = TODAY.replace("-", "")
+GA_ID = "G-62Q6HGSD7C"
+LAUNCHED = "2026-10-17"   # dateModified / lastmod for the rebuilt pages; bump when content changes
 esc = html.escape
+
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>
+"""
 
 
 # --------------------------------------------------------------------------- content
@@ -56,20 +69,46 @@ def nice_date(iso):
     return f"{d.day} {d.strftime('%B %Y')}"
 
 
+_DIMS = {}
+
+
+def jpeg_size(path):
+    """(width, height) of a JPEG, read from its SOF marker."""
+    if path not in _DIMS:
+        with open(path, "rb") as f:
+            data = f.read()
+        i = 2
+        while i < len(data):
+            marker, length = data[i + 1], int.from_bytes(data[i + 2:i + 4], "big")
+            if marker in (0xC0, 0xC1, 0xC2):
+                h, w = int.from_bytes(data[i + 5:i + 7], "big"), int.from_bytes(data[i + 7:i + 9], "big")
+                _DIMS[path] = (w, h)
+                break
+            i += 2 + length
+    return _DIMS[path]
+
+
 def img(name, alt, cls="", sizes="100vw", eager=False, thumb_only=False):
     """<img> with a 720px thumb and the 1600px original as srcset candidates."""
     full, thumb = f"/assets/img/{name}", f"/assets/img/thumbs/{name}"
     src = thumb if thumb_only else full
     srcset = f'{thumb} 720w, {full} 1600w'
+    w, h = jpeg_size(os.path.join(ROOT, src.lstrip("/")))
     loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
-    return f'<img{c} src="{src}" srcset="{srcset}" sizes="{sizes}" alt="{esc(alt)}" {loading}>'
+    return f'<img{c} src="{src}" srcset="{srcset}" sizes="{sizes}" width="{w}" height="{h}" alt="{esc(alt)}" {loading}>'
 
 
 # --------------------------------------------------------------------------- layout
 
-def head(title, description, path, og_image="hero-living-room.jpg", og_type="website", extra="", schema=None, noindex=False):
+def head(title, description, path, og_image="hero-living-room.jpg", og_type="website", extra="", schema=None,
+         noindex=False, preload=True, og_alt=None):
     canonical = ORIGIN + path
+    ow, oh = jpeg_size(os.path.join(ROOT, "assets", "img", og_image))
+    pre = ""
+    if preload:   # the hero image is the LCP element on every page that has one
+        pre = (f'<link rel="preload" as="image" href="/assets/img/{og_image}" '
+               f'imagesrcset="/assets/img/thumbs/{og_image} 720w, /assets/img/{og_image} 1600w" imagesizes="100vw" fetchpriority="high">\n')
     ld = ""
     if schema:
         ld = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + "</script>"
@@ -79,10 +118,13 @@ def head(title, description, path, og_image="hero-living-room.jpg", og_type="web
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title>
+{GTAG}<title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 {robots}
 <link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="en-GB" href="{canonical}">
+<link rel="alternate" hreflang="x-default" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="{NAME}" href="{ORIGIN}/feed.xml">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:locale" content="{SITE['locale']}">
 <meta property="og:type" content="{og_type}">
@@ -90,10 +132,20 @@ def head(title, description, path, og_image="hero-living-room.jpg", og_type="web
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{ORIGIN}/assets/img/{og_image}">
+<meta property="og:image:width" content="{ow}">
+<meta property="og:image:height" content="{oh}">
+<meta property="og:image:alt" content="{esc(og_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{ORIGIN}/assets/img/{og_image}">
 {extra}<meta name="theme-color" content="#f5efe6">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+{pre}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
@@ -460,16 +512,21 @@ def build_post(p, posts, idx):
 """
     article = {
         "@type": "BlogPosting", "@id": ORIGIN + p["path"] + "#article", "headline": p["title"],
-        "description": p["description"], "datePublished": p["date"], "dateModified": p.get("modified", TODAY),
+        "description": p["description"], "datePublished": p["date"], "dateModified": p.get("modified", LAUNCHED),
         "image": ORIGIN + "/assets/img/" + p["image"], "mainEntityOfPage": ORIGIN + p["path"],
         "author": {"@id": ORIGIN + "/#org"}, "publisher": {"@id": ORIGIN + "/#org"},
         "articleSection": cat_name, "keywords": ", ".join(p["tags"]), "wordCount": p["words"], "inLanguage": "en-GB",
     }
     nodes = [article, crumbs(items)] + ([faq_schema] if faq_schema else [])
     extra = (f'<meta property="article:published_time" content="{p["date"]}">\n'
-             f'<meta property="article:section" content="{esc(cat_name)}">\n')
-    write(p["path"], page(p["path"], f"{p['seo_title']} | {NAME}", p["description"], body,
-                          og_image=p["image"], og_type="article", extra=extra, schema=graph(*nodes)))
+             f'<meta property="article:modified_time" content="{p.get("modified", LAUNCHED)}">\n'
+             f'<meta property="article:section" content="{esc(cat_name)}">\n'
+             + "".join(f'<meta property="article:tag" content="{esc(t)}">\n' for t in p["tags"]))
+    title = f"{p['seo_title']} | {NAME}"
+    if len(title) > 60:   # keep the keyword-bearing part visible in results
+        title = p["seo_title"]
+    write(p["path"], page(p["path"], title, p["description"], body,
+                          og_image=p["image"], og_alt=p["image_alt"], og_type="article", extra=extra, schema=graph(*nodes)))
 
 
 def listing(path, title, h1, eyebrow, intro, items, posts, image, meta_desc, noindex=False):
@@ -515,16 +572,17 @@ def build_listings(posts, tag_intros, cat_intros):
         intro = cat_intros.get(slug, f"Stories filed under {name}.")
         listing(f"/category/{slug}/", f"{name} | {NAME}", name, "Section", intro,
                 [("Home", "/"), (name, f"/category/{slug}/")], ps, CATEGORY_IMAGES[slug],
-                trim(f"{name} on Live-Style: {intro}", 158))
+                trim(f"{name} on Live-Style: {intro}", 152))
     tags = {}
     for p in posts:
         for s, n in p["tag_slugs"]:
             tags.setdefault(s, [n, []])[1].append(p)
     for s, (n, ps) in sorted(tags.items()):
-        intro = tag_intros.get(s, f"Every Live-Style story tagged {n}.")
+        intro = tag_intros.get(s, f"Stories about {n} from Live-Style, the London interiors and lifestyle journal, "
+                                  f"including \u201c{ps[0]['title']}\u201d.")
         listing(f"/tag/{s}/", f"{n}: Tagged Stories | {NAME}", n, "Tag", intro,
                 [("Home", "/"), ("Journal", "/journal/"), (n, f"/tag/{s}/")], ps, ps[0]["image"],
-                trim(f"{n}: {intro}", 158), noindex=not indexable_tag(s, ps, tag_intros))
+                trim(intro, 155), noindex=not indexable_tag(s, ps, tag_intros))
     return tags, tag_intros
 
 
@@ -633,23 +691,58 @@ def build_404(posts):
 </section>
 <section class="section section-tint"><div class="wrap">{grid(posts[:3])}</div></section>
 """
-    html_ = page("/404.html", f"Page not found | {NAME}", "This page could not be found.", body, noindex=True)
+    html_ = page("/404.html", f"Page not found | {NAME}", "This page could not be found.", body, noindex=True, preload=False)
     with open(os.path.join(OUT, "404.html"), "w", encoding="utf-8") as f:
         f.write(html_)
 
 
 def build_sitemap(posts, tags):
-    urls = [("/", TODAY, "1.0"), ("/journal/", TODAY, "0.8"), ("/about/", TODAY, "0.5"),
-            ("/contact/", TODAY, "0.4"), ("/privacy-policy/", TODAY, "0.2")]
-    urls += [(f"/category/{s}/", TODAY, "0.6") for s, _ in CATEGORIES]
-    urls += [(f"/tag/{s}/", TODAY, "0.4") for s in sorted(tags)]
-    urls += [(p["path"], p.get("modified", TODAY), "0.7") for p in posts]
-    out = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for u, lm, pr in urls:
-        out.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>")
+    newest = max(p.get("modified", LAUNCHED) for p in posts)
+    urls = [("/", newest, "1.0", "hero-living-room.jpg"), ("/journal/", newest, "0.8", "home-green-study.jpg"),
+            ("/about/", LAUNCHED, "0.5", None), ("/contact/", LAUNCHED, "0.4", None), ("/privacy-policy/", LAUNCHED, "0.2", None)]
+    urls += [(f"/category/{s}/", newest, "0.6", CATEGORY_IMAGES[s]) for s, _ in CATEGORIES]
+    urls += [(f"/tag/{s}/", newest, "0.4", None) for s in sorted(tags)]
+    urls += [(p["path"], p.get("modified", LAUNCHED), "0.7", p["image"]) for p in posts]
+    out = ['<?xml version="1.0" encoding="UTF-8"?>',
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+           'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for u, lm, pr, im in urls:
+        image = f"<image:image><image:loc>{ORIGIN}/assets/img/{im}</image:loc></image:image>" if im else ""
+        out.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority>{image}</url>")
     out.append("</urlset>")
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
         f.write("\n".join(out) + "\n")
+
+
+def build_feed(posts):
+    """RSS 2.0 feed of the 20 newest stories at /feed.xml."""
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    items = []
+    for p in posts[:20]:
+        when = format_datetime(datetime.fromisoformat(p["date"]).replace(tzinfo=timezone.utc))
+        items.append(f"""  <item>
+    <title>{esc(p['title'])}</title>
+    <link>{ORIGIN}{p['path']}</link>
+    <guid isPermaLink="true">{ORIGIN}{p['path']}</guid>
+    <pubDate>{when}</pubDate>
+    <category>{esc(p['category'])}</category>
+    <description>{esc(p['excerpt'])}</description>
+  </item>""")
+    xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{NAME}</title>
+  <link>{ORIGIN}/</link>
+  <description>{esc(SITE['tagline'])}</description>
+  <language>en-gb</language>
+  <atom:link href="{ORIGIN}/feed.xml" rel="self" type="application/rss+xml"/>
+{chr(10).join(items)}
+</channel>
+</rss>
+"""
+    with open(os.path.join(OUT, "feed.xml"), "w", encoding="utf-8") as f:
+        f.write(xml)
 
 
 def copy_static():
@@ -671,6 +764,7 @@ def main():
     tags, tag_intros = build_listings(posts, tag_intros, cat_intros)
     build_static_pages(posts)
     build_404(posts)
+    build_feed(posts)
     build_sitemap(posts, {s: v for s, v in tags.items() if indexable_tag(s, v[1], tag_intros)})
     print(f"built {len(posts)} posts, {len(CATEGORIES)} categories, {len(tags)} tags -> public/")
 

@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /contact.php
+Disallow: /home.html
+
+Sitemap: https://live-style.co.uk/sitemap.xml

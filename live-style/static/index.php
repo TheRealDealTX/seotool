@@ -1,7 +1,7 @@
 <?php
 // live-style.co.uk front controller. The host serves existing files directly and
 // sends "/" plus every unknown path here (it ignores .htaccess), so this file
-// handles the homepage, robots.txt, legacy WordPress URLs and real 404s.
+// handles the homepage, legacy WordPress URLs and real 404s.
 $uri  = $_SERVER['REQUEST_URI'] ?? '/';
 $path = strtok($uri, '?');
 $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
@@ -15,21 +15,11 @@ if ($host === 'www.' . $prod || ($host === $prod && $insecure)) {
     go('https://' . $prod . $uri);
 }
 
-if ($path === '/robots.txt') {
-    header('Content-Type: text/plain; charset=utf-8');
-    if ($host !== $prod) {           // temporary/preview domains stay out of the index
-        echo "User-agent: *\nDisallow: /\n";
-    } else {
-        echo "User-agent: *\nDisallow: /contact.php\nDisallow: /home.html\n\nSitemap: https://$prod/sitemap.xml\n";
-    }
-    exit;
-}
-
 // Old WordPress query-string URLs.
 if ($path === '/' || $path === '/index.php') {
     if (isset($_GET['cat'])) go($_GET['cat'] === '134588537' ? '/category/january-cure/' : '/journal/');
     if (isset($_GET['s']) || isset($_GET['p']) || isset($_GET['page_id']) || isset($_GET['m'])) go('/journal/');
-    if (isset($_GET['feed'])) go('/');
+    if (isset($_GET['feed'])) go('/feed.xml');
     header('Content-Type: text/html; charset=utf-8');
     readfile(__DIR__ . '/home.html');
     exit;
@@ -37,7 +27,8 @@ if ($path === '/' || $path === '/index.php') {
 
 // Old WordPress paths.
 if (preg_match('#^/(wp-admin|wp-includes|wp-content|wp-json|wp-login\.php|xmlrpc\.php)(/|$)#', $path)) go('/');
-if (preg_match('#^/(comments/)?feed/?$#', $path)) go('/journal/');
+if (preg_match('#^/(comments/)?feed/?$#', $path)) go('/feed.xml');
+if (preg_match('#^/(sitemap_index|wp-sitemap|sitemap1|page-sitemap|post-sitemap)\.xml$#', $path)) go('/sitemap.xml');
 if (preg_match('#^/page/\d+/?$#', $path)) go('/journal/');
 if (preg_match('#^/author/[^/]+#', $path)) go('/about/');
 if (preg_match('#^/\d{4}(/\d{2}(/\d{2})?)?/?$#', $path)) go('/journal/');

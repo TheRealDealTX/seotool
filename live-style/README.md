@@ -12,14 +12,13 @@ python3 validate.py   # links, assets, one H1, unique titles/descriptions, JSON-
 ## Hosting
 
 - Hostinger Agency Growth plan, website UID `8ppHiZSjN` (UK datacentre, php-fpm 8.3).
-- Temporary domain: https://papayawhip-beaver-497975.hostingersite.com
-- When live-style.co.uk is ready, link it with `agency-hosting_domains_link-to-website` /
-  `agency-hosting_domains_change-website`. Canonicals, OG tags and the sitemap already use
-  `https://live-style.co.uk`; `index.php` forces https and strips `www.` on the real domain.
+- Live on https://live-style.co.uk (preview domain: violet-alpaca-464378.hostingersite.com).
+  The platform itself 301s http and `www.` to https://live-style.co.uk.
+- After each deploy, clear the cache (`agency-hosting_cache_clear-website`); the plan has a CDN.
 - Like the other Agency sites, the platform serves existing files directly and routes `/` plus
   unknown paths to `index.php` (it ignores `.htaccess`). So there is no root `index.html`: the
-  homepage is `home.html`, served by `index.php`, which also handles robots.txt (noindex everywhere
-  except the real domain), legacy WordPress redirects and real 404s.
+  homepage is `home.html`, served by `index.php`, which also handles legacy WordPress redirects
+  and real 404s. `.txt` requests are not routed to PHP, so `robots.txt` is a static file.
 - `contact.php` mails the contact form to info@live-style.co.uk with PHP `mail()`. Create
   that mailbox (or a forwarder) once the domain is live.
 
@@ -48,6 +47,20 @@ and doesn't use the original author's name.
 
 Tags with only one article (other than the three ranking tag pages) are `noindex` and left out of
 the sitemap.
+
+## SEO setup
+
+- Google tag `G-62Q6HGSD7C` (gtag.js) in the `<head>` of every page, 404 included (`GTAG` in `build.py`).
+- Search Console verification file `googlecccfbf2f7e9e5ae4.html` at the root (`static/`).
+- Favicons: `favicon.ico` (16/32/48), `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`,
+  `site.webmanifest` with 192/512 icons.
+- `sitemap.xml` (indexable pages only, with image entries), `robots.txt` pointing to it, RSS at `/feed.xml`.
+  Old `/feed/`, `/sitemap_index.xml` and `/wp-sitemap.xml` URLs 301 to these.
+- Every page: unique title (60 characters or fewer, with the keyword first) and meta description, canonical, hreflang en-GB,
+  Open Graph + Twitter tags with image size and alt, one H1, JSON-LD (Organization, WebSite plus
+  BlogPosting/FAQPage/BreadcrumbList/CollectionPage as relevant), width/height on every image and a preload for
+  the hero image (LCP).
+- `validate.py` enforces all of the above.
 
 ## Images
 
