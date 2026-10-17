@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /pages/
+Disallow: /lib/
+Disallow: /contact-submit
+
+Sitemap: https://organizedbyannefl.com/sitemap.xml
