@@ -80,7 +80,7 @@ POSTS = [
 <li><strong>Fall.</strong> Lean a board behind a cluster of small pumpkins, gourds, and a few cinnamon sticks in a crock.</li>
 <li><strong>Christmas.</strong> Tie a sprig of greenery and a bit of red ticking ribbon through the handle hole, or hang a vintage ornament from it.</li>
 </ol>
-{{img:kitchen-vintage|Vintage bread boards layered behind crocks and canisters on a farmhouse counter}}
+{{img:kitchen-vintage|A painted dresser of blue-and-white dishes shows how layered vintage pieces come together}}
 <h2>How to Arrange Cutting Board Decor So It Looks Collected</h2>
 <p>A few simple design habits make the difference between a pile of boards and a display that looks thoughtfully gathered over time:</p>
 <ul>
@@ -278,7 +278,7 @@ POSTS = [
 <p>Line up three or five mismatched globes along a shelf or windowsill, where sunlight brings out the texture of the glass. Grouping turns orphan globes into a collection.</p>
 <h2>Styling Tips for Light Globe Displays</h2>
 <p>Glass shines brightest with something solid underneath and a little light behind it. Set globes on warm wood, ironstone, or a stack of old books rather than straight onto a painted shelf. Mix textures, such as a ribbed globe beside a smooth milk glass shade, and keep the contents simple so the glass stays the star. A single moss ball, one vintage ornament, or a few sprigs of dried lavender is often enough. Near a window, morning sun through prismatic glass will scatter little rainbows across the room.</p>
-{{img:cloche|A glass cloche over a small vignette on a wooden base}}
+{{img:cloche|A glass cloche turns even a small treasure into a display}}
 <h2>Electrical and Glass Safety</h2>
 <p>Old globes are glass, and old fixtures are electrical, so a little caution goes a long way:</p>
 <ul>
@@ -398,7 +398,7 @@ POSTS = [
     {
         "slug": "rustic-tiered-tray-diy",
         "title": "DIY Tiered Tray: Build a Rustic Two-Tier Stand from Thrift Finds",
-        "seo_title": "DIY Tiered Tray: Rustic Two-Tier Stand from Thrift Finds",
+        "seo_title": "DIY Tiered Tray: Rustic Stand from Thrift Finds",
         "description": "Make a DIY tiered tray from thrifted cutting boards, plates, or tins and a center post. Includes sourcing tips, steps, styling ideas, and food-safety notes.",
         "keyword": "diy tiered tray",
         "category": "diy-repurpose",

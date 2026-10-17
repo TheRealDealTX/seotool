@@ -147,7 +147,7 @@ POSTS = [
 <h3>Choosing Ribbon, Twine and Toppers</h3>
 <p>The tie you choose changes the whole mood of the stack. Rough jute twine feels farmhouse and casual, red-and-white baker's twine feels sweet and a little playful, and a length of cream seam binding or a torn strip of muslin looks soft and antique. If you have a bit of old velvet ribbon or rickrack in the sewing basket, this is a lovely place to use it.</p>
 <p>For the topper, layered paper hearts are the easiest, but you can also use a small wooden heart, a vintage skeleton key, an old valentine card or a little bundle of dried lavender. Keep the topper in scale with the stack: a tiny heart gets lost on a tall pile of big books, while an oversized one looks top-heavy on two small volumes. Odd numbers usually look best, so try one large heart with two little ones tucked beside it.</p>
-{{img:valentine|Layered paper hearts cut from old book pages ready to top a stack of books}}
+{{img:valentine|A simple heart and a few letters say Valentine's without much fuss}}
 <h2>Variations to Try</h2>
 <ul>
 <li><strong>Book page wrap.</strong> Wrap each book in pages from a damaged book or in tea-stained sheet music. Our <a href="/easy-hymn-tea-stain-diy/">tea stained hymn pages</a> post shows how to get that warm aged color.</li>
@@ -315,7 +315,7 @@ POSTS = [
 <li>Rolls in a wire basket on a <a href="/rustic-tiered-tray-diy/">tiered tray</a> with small crocks and a jar of wooden spoons.</li>
 <li>A loaf under a glass cloche on the kitchen table for a bakery-window feel.</li>
 </ul>
-{{img:cutting-board|A faux bread loaf styled on a vintage cutting board with a flour sack towel}}
+{{img:cutting-board|A rustic loaf shows the look a faux bread project is aiming for}}
 <p>Faux bread pairs naturally with other vintage kitchen finds like old rolling pins, flour sifters and crocks. A spring board styled with eggs and greenery, like our <a href="/upcycled-vintage-cutting-board-for-spring/">spring cutting board decor</a>, would look lovely with a small round loaf tucked in.</p>
 <h2>Variations to Try</h2>
 <ul>
@@ -675,7 +675,7 @@ POSTS = [
 <p>Before you glue anything down, play with the layout. Some people like the numbers running in the same direction all the way around, like a true measuring frame, while others prefer to show off the advertising on the most visible top and bottom pieces. Try lining up the "1" of each yardstick at a corner for a tidy look, or mix and match brands and colors for something more eclectic. Take a quick photo of each arrangement on your phone so you can compare them side by side.</p>
 <p>Paint color matters, too. A classic black chalkboard is timeless and makes the yellowed yardsticks pop. A deep green chalkboard looks like an old schoolhouse board, and a cream or white painted panel gives a lighter cottage feel that works nicely with hand-stenciled lettering.</p>
 <p>Hang it in a kitchen, craft room or laundry room, or lean it on a shelf with crocks and old tools. A yardstick frame looks especially good in a room with other measuring tools, like sewing tapes, old rulers and a vintage scale.</p>
-{{img:barnwood|Weathered barn wood paired with old yardsticks for a rustic sign}}
+{{img:barnwood|Weathered barn wood makes a great backing for a yardstick sign}}
 <h2>Variations to Try</h2>
 <ul>
 <li><strong>Yardstick star.</strong> Cut five equal lengths and glue them into a five-point star for a rustic wall hanging.</li>

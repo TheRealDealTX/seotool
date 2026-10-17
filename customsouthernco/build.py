@@ -12,7 +12,7 @@ import shutil
 from datetime import date
 from pathlib import Path
 
-from siteconfig import CATEGORIES, NAV, SEASONS, SITE, TOOLS
+from siteconfig import CATEGORIES, IMAGE_ALT, NAV, SEASONS, SITE, TOOLS
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "site"
@@ -37,6 +37,8 @@ def load_posts():
 
 
 POSTS = load_posts()
+for _p in POSTS:  # writers described ideal photos; use what the chosen photo really shows
+    _p["image_alt"] = IMAGE_ALT.get(_p["image"], _p["image_alt"])
 BY_SLUG = {p["slug"]: p for p in POSTS}
 TOOL_BY_KEY = {t["key"]: t for t in TOOLS}
 
@@ -494,7 +496,7 @@ def render_body(p):
         key, _, cap = m.group(1).partition("|")
         key = key.strip()
         cap = cap.strip()
-        return f'<figure class="inline-fig reveal">{picture(key, cap or p["image_alt"])}<figcaption>{esc(cap)}</figcaption></figure>'
+        return f'<figure class="inline-fig reveal">{picture(key, IMAGE_ALT.get(key, cap))}<figcaption>{esc(cap)}</figcaption></figure>'
 
     b = re.sub(r"\{\{img:([^}]+)\}\}", img_sub, b)
     b = re.sub(r"\{\{tool:([a-z-]+)\}\}", lambda m: tool_widget(m.group(1)), b)
@@ -1095,6 +1097,25 @@ def build_root_files():
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="#2f3b2b"/><circle cx="32" cy="32" r="25" fill="none" stroke="#d9a441" stroke-width="2" stroke-dasharray="3 3"/><text x="32" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-weight="700" fill="#f6efe3">CS</text></svg>"""
 
 
+# Old WordPress image URLs that still have backlinks. The host serves file-style
+# paths directly (no index.php fallback), so give them real files.
+LEGACY_IMAGES = {
+    "wp-content/uploads/2020/06/B4BB8300-C15F-474A-84FC-6931559D1B60-768x1024.jpeg": "cutting-board",
+    "wp-content/uploads/2020/10/A1087DD1-86EA-4B4B-A166-D877381AD39F-1024x1024.jpeg": "pumpkins",
+}
+
+
+def build_legacy_images():
+    try:
+        from PIL import Image
+    except ImportError:
+        return
+    for path, key in LEGACY_IMAGES.items():
+        target = OUT / path
+        target.parent.mkdir(parents=True, exist_ok=True)
+        Image.open(IMG / f"{key}.webp").convert("RGB").save(target, "JPEG", quality=80)
+
+
 def build_icons():
     (OUT / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     try:
@@ -1135,6 +1156,7 @@ def main():
     build_static()
     build_root_files()
     build_icons()
+    build_legacy_images()
     print(f"built {len(POSTS)} posts, {len(CATEGORIES)} categories, {len(TOOLS)} tools -> {OUT}")
 
 

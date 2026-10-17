@@ -133,7 +133,7 @@ a:hover .link-arrow .ico, .link-arrow:hover .ico { transform: translateX(4px); }
 .m-secondary { display: flex; gap: 20px; margin-top: 24px !important; }
 .m-mail { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; color: var(--mustard) !important; }
 body.nav-open { overflow: hidden; }
-.nav-open .site-header { z-index: 120; background: var(--forest); border-color: transparent; box-shadow: none; }
+body.nav-open .site-header { z-index: 120; background: var(--forest) !important; border-color: transparent; box-shadow: none; }
 .nav-open .site-header .brand-text { color: var(--cream); }
 .nav-open .burger { background: var(--rust); }
 
@@ -247,6 +247,7 @@ body.nav-open { overflow: hidden; }
 .tabs button:hover { border-color: var(--forest); color: var(--forest); }
 .tabs button[aria-selected="true"] { background: var(--forest); border-color: var(--forest); color: #fff; }
 .season-panel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; animation: rise .5s var(--ease); }
+.season-panel[hidden] { display: none; }
 .season-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; display: flex; align-items: end; text-decoration: none; color: #fff; }
 .season-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
 .season-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(31, 27, 22, .85), transparent 60%); }

@@ -10,7 +10,7 @@ POSTS = [
         "keyword": "prince albert in a can",
         "category": "vintage-finds",
         "date": "2026-10-14",
-        "image": "albert-tin",
+        "image": "tobacco-tins",
         "image_alt": "A vintage red Prince Albert crimp cut tobacco pocket tin with a hinged lid resting on a weathered wooden table",
         "excerpt": "The full story of Prince Albert in a can: where the famous red tin came from, how to date yours, what it's worth, and that old prank call joke.",
         "body": """<p>If you have ever dug through a junk drawer, a granddaddy's workbench, or a flea market bin, chances are you have held <strong>Prince Albert in a can</strong>. That flat red tobacco tin with the dignified bearded gentleman on the front is one of the most recognizable pieces of American advertising ever made. It turns up everywhere, it has a joke attached to it that most of our grandparents knew by heart, and it is one of the friendliest places to start a collection of vintage tins.</p>
@@ -41,7 +41,7 @@ POSTS = [
 <p>This is the era of peak production and the tins you are most likely to find. The design settled into the familiar layout: red body, the prince's portrait, "Prince Albert" in bold lettering, and "Crimp Cut" wording. Through much of this period, tobacco products carried federal tax stamps, and pocket tins often had a paper revenue stamp pasted across the lid seam. Remnants of that stamp, or a printed reference to the tax paid, are good clues to an older tin.</p>
 <h3>Later Tins (1960s Onward)</h3>
 <p>Later tins tend to show more modern printing, simplified graphics, and packaging details that came along with newer labeling practices, such as metric net weights and product codes. Over time, metal packaging gave way to cheaper materials, and Prince Albert moved largely to pouches and other containers.</p>
-{{img:tobacco-tins|A stack of vintage pocket tobacco tins in different colors and designs}}
+{{img:albert-tin|A flat pocket tin with a hinged lid, the same shirt-pocket format that made Prince Albert famous}}
 
 <h2>How to Date a Prince Albert Tobacco Tin</h2>
 <p>Learning <strong>how to date a Prince Albert tobacco tin</strong> comes down to reading the clues printed and stamped on it. No single clue gives you an exact year, but several together can narrow things down nicely. Here is what we look for.</p>
@@ -450,7 +450,7 @@ POSTS = [
 <p>Old sleds, ice skates, galvanized buckets, wooden crates, grain sacks, and enamelware all make wonderful holiday decor. Old wooden spindles, doorknobs, and barn wood are perfect for DIY projects too. Try our <a href="/quick-vintage-door-knob-tree/">door knob Christmas tree</a> if you come home with a box of old knobs.</p>
 <h3>Quilts, Linens, and Ephemera</h3>
 <p>Red and white quilts, holiday tablecloths, old Christmas cards, and sheet music make for cozy, layered decor. Check textiles for stains, holes, and odors, and look closely at seams.</p>
-{{img:xmas-ornaments|A tray of colorful vintage glass Christmas ornaments at a holiday barn sale}}
+{{img:xmas-ornaments|A basket of colorful glass Christmas ornaments}}
 
 <h2>How to Shop a Christmas Barn Sale Like a Pro</h2>
 <h3>Go Early for Selection, Late for Deals</h3>
@@ -538,7 +538,7 @@ POSTS = [
 <h3>Trust Your Gut</h3>
 <p>If something seems too good to be true, too clean, or too cheap, take a closer look. And if you love something and the price is fair, don't walk away. You may not see it again.</p>
 
-{{img:antiques-shop|Shelves in an antique shop filled with crocks, tins, and vintage kitchenware}}
+{{img:antiques-shop|A crowded antique shop full of old clocks, lamps and frames}}
 
 <h2>How to Negotiate Fairly</h2>
 <p>Negotiation is part of the picking culture, but there's an art to doing it kindly.</p>
@@ -647,7 +647,7 @@ POSTS = [
 <li><strong>Ground lips.</strong> Some older jars have a rough, ground rim from older manufacturing methods.</li>
 </ul>
 
-{{img:mason-jars|A row of vintage canning jars in aqua and clear glass with zinc lids}}
+{{img:mason-jars|Mason jars still earning their keep, filled with dried fruit}}
 
 <h2>What Affects Vintage Jar Value?</h2>
 <p>Most vintage canning jars are common and typically sell for a few dollars to around $20, especially clear and aqua jars from the major makers. Uncommon colors, rare makers, unusual sizes, early closures, and embossing errors can push values much higher, sometimes into the hundreds for truly rare pieces. As with anything, condition drives value:</p>
@@ -758,7 +758,7 @@ POSTS = [
 <h3>Painted or Printed Jars</h3>
 <p>Some later jars and kitchen canisters have painted or printed designs on the outside. Skip the soaking for these, since long soaks and vinegar can loosen or dull old paint. Wipe the outside with a barely damp cloth and clean only the inside with soapy water and a brush. Test any cleaner on a small, hidden area first.</p>
 
-{{img:jars-shelf|Clean vintage jars displayed on a wooden shelf}}
+{{img:jars-shelf|Clean jars back in service on the pantry shelf}}
 
 <h2>What About Cloudy "Sick Glass"?</h2>
 <p>If your jar still looks cloudy after cleaning, you may be dealing with what collectors call "sick glass." This cloudiness isn't dirt. It's etching or damage to the surface of the glass, often from minerals, contents, or long exposure to moisture while buried or stored. Unfortunately, sick glass usually can't be fixed with household cleaning.</p>

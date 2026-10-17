@@ -542,7 +542,7 @@ POSTS = [
 <li><strong>Leave it silver.</strong> A shiny aluminum pumpkin next to white pumpkins and eucalyptus looks crisp and modern.</li>
 </ul>
 <p>One important note: once a mold is painted or glued, it should be decor only. Don't use it for food again.</p>
-{{img:kitchen-vintage|Vintage kitchenware like gelatin molds brings nostalgic charm to fall decorating.}}
+{{img:kitchen-vintage|A painted dresser full of vintage dishes is a natural home for fall decor.}}
 <h2>Styling Your Jello Mold Pumpkins</h2>
 <p>We like these grouped in threes or fives, mixing sizes and finishes. A large copper ring mold with a smaller aluminum mold beside it and a mini mold on a stack of cookbooks makes a charming kitchen vignette. Tuck a few into an open shelf with old cake stands, canisters, and a vintage <a href="/easy-vintage-cutting-board-decor/">cutting board</a> for a cozy fall kitchen look.</p>
 <p>They also make great table decorations for Thanksgiving. Put a mini mold pumpkin at each place setting with a name tag tied to the stem, or run a line of them down the center of the table on a burlap runner. Pair them with our <a href="/easy-pumpkin-funnel-diy/">funnel pumpkin</a> for a whole patch of kitchen-inspired pumpkins.</p>
@@ -621,7 +621,7 @@ POSTS = [
 <li><strong>Collections.</strong> Old keys, buttons, marbles, or a stack of tiny vintage books get new attention under glass.</li>
 <li><strong>Succulents.</strong> Small succulents can be displayed under a cloche for short periods; see the care notes below.</li>
 </ul>
-{{img:succulents|Small succulents and moss look fresh under a glass cloche for a spring display.}}
+{{img:succulents|Small succulents in simple pots are easy to tuck under a cloche.}}
 <h2>Variations to Try</h2>
 <p>Make a set of three cloches in different heights for a mantel grouping. Swap the contents with the seasons: pumpkins and acorns in fall, a little bottle-brush tree and snow in winter, and seashells in summer. For a farmhouse look, glue a small wooden spool or a vintage drawer pull on top instead of a knob. You can even turn a glass cloche into a sweet keepsake display for a baby's first shoes or a wedding cake topper.</p>
 <h2>Care and Safety Notes</h2>
@@ -698,7 +698,7 @@ POSTS = [
 <p>Old wood is rarely perfectly flat, which can make stencils tricky. A few tricks help. First, wipe the board with a damp cloth to remove dust and let it dry. Tape the stencil down firmly on all sides, and press the edges of each letter down with your fingertip before you paint. Repositionable spray adhesive on the back of the stencil helps it hug uneven surfaces.</p>
 <p>Next, use very little paint. Dip a stencil brush or makeup sponge in paint, then blot most of it off on a paper towel until it's almost dry. Dab straight up and down rather than brushing side to side, which pushes paint under the stencil. Two thin layers look much crisper than one heavy one.</p>
 <p>If a letter does bleed a little, let the paint dry and lightly sand the edge or touch it up with a small brush. A slightly imperfect, hand-painted look is part of the charm on an old board, so don't worry about perfection.</p>
-{{img:mason-jars|Vintage mason jars make perfect little vases for spring blooms.}}
+{{img:mason-jars|Mason jars are endlessly useful, from pantry storage to little spring vases.}}
 <h2>Choosing the Right Jar</h2>
 <p>A pint mason jar is the most common size for this project; it holds enough water for a small bouquet without making the board too heavy. Old blue or aqua jars add a lovely pop of color, and their slightly wavy glass looks beautiful with the sun behind it. If you find a vintage jar, our <a href="/how-to-date-ball-mason-jars/">guide to dating Ball mason jars</a> will help you figure out roughly how old it is. Wash jars thoroughly before using them, and our post on <a href="/how-to-clean-old-jars/">how to clean old jars</a> has tips for removing cloudiness and stubborn residue.</p>
 <h2>Variations to Try</h2>

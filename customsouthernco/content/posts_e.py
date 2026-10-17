@@ -104,7 +104,7 @@ POSTS = [
 <li>Look over condition: chips, cracks, haze and stains all affect value.</li>
 </ol>
 
-{{img:jars-shelf|Old aqua and clear Ball jars grouped by logo style make dating side by side much easier.}}
+{{img:jars-shelf|Rows of home-canned jars on the pantry shelf. Older jars deserve a closer look at the logo.}}
 
 <h2>Caring for the Jars You Find</h2>
 
@@ -209,7 +209,7 @@ POSTS = [
 
 <p>Popular tobacco graphics have been reproduced on new tins and tin signs for decades. Some are sold honestly as decor; others get passed off as old. Red flags include very bright, flat color with a modern sheen, crisp edges with no wear where hands would have rubbed, "aging" or rust that looks painted on or appears evenly all over, and a tin that feels lighter or thinner than comparable old ones. Our guide on <a href="/how-to-spot-reproduction-antiques/">how to spot reproduction antiques</a> goes deeper into these clues.</p>
 
-{{img:albert-tin|A well-worn Prince Albert tin showing the honest edge wear collectors expect on an old piece.}}
+{{img:albert-tin|A well-worn vintage pocket tobacco tin showing the honest edge wear collectors expect on an old piece.}}
 
 <h2>Spotlight: Prince Albert Tins</h2>
 
@@ -655,7 +655,7 @@ POSTS = [
 
 <p>Another option is wool dryer balls. Toss three to six in the dryer with your clothes to help fluff fabrics and shorten drying time a bit. They're reusable for a long time and pair nicely with a vinegar rinse.</p>
 
-{{img:laundry|A Mason jar of homemade softener looks right at home on an open laundry room shelf.}}
+{{img:laundry|Fresh laundry on the line, softened with a simple homemade rinse.}}
 
 <h2>Tips for the Best Results</h2>
 
@@ -911,7 +911,7 @@ POSTS = [
 <h3>Fall</h3>
 <p>Pumpkins and gourds stacked on the steps, mums in crocks, corn stalks tied to porch posts and a plaid throw on the rocker. For a fun twist, add a few <a href="/easy-pumpkin-funnel-diy/">funnel pumpkins</a> made from vintage kitchen funnels.</p>
 
-{{img:pumpkins|Pumpkins, mums and a plaid throw turn a summer porch into a fall welcome in an afternoon.}}
+{{img:pumpkins|A basket of small pumpkins and squash turns a summer porch into a fall welcome.}}
 
 <h3>Christmas</h3>
 <p>Fresh garland on the railing, a big wreath on the door, lanterns with LED candles and a pair of small evergreens in galvanized buckets. <a href="/the-christmas-barn-sale-trail/">Christmas barn sales</a> are a great place to find vintage sleds, ornaments and buckets for porch displays.</p>
