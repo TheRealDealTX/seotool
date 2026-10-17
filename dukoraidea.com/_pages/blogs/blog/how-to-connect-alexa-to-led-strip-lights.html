@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Connect Alexa to LED Lights: Strip Setup Guide</title>
+<meta name="description" content="How to connect Alexa to LED lights, step by step: pick the right strip or controller, pair it on 2.4 GHz Wi-Fi, set routines and fix common setup errors.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dukoraidea.com/blogs/blog/how-to-connect-alexa-to-led-strip-lights">
+<meta property="og:site_name" content="Dukora Idea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Connect Alexa to LED Lights: Strip Setup Guide">
+<meta property="og:description" content="How to connect Alexa to LED lights, step by step: pick the right strip or controller, pair it on 2.4 GHz Wi-Fi, set routines and fix common setup errors.">
+<meta property="og:url" content="https://dukoraidea.com/blogs/blog/how-to-connect-alexa-to-led-strip-lights">
+<meta property="og:image" content="https://dukoraidea.com/assets/img/gaming-rgb-setup.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Connect Alexa to LED Lights: Strip Setup Guide">
+<meta name="twitter:description" content="How to connect Alexa to LED lights, step by step: pick the right strip or controller, pair it on 2.4 GHz Wi-Fi, set routines and fix common setup errors.">
+<meta name="twitter:image" content="https://dukoraidea.com/assets/img/gaming-rgb-setup.webp">
+<meta name="theme-color" content="#0a0d1c">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=eaf5662b">
+<meta property="article:published_time" content="2026-08-04">
+<meta property="article:modified_time" content="2026-10-17">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dukoraidea.com/#org","name":"Dukora Idea","url":"https://dukoraidea.com/","logo":{"@type":"ImageObject","url":"https://dukoraidea.com/assets/img/logo-512.png","width":512,"height":512},"email":"info@dukoraidea.com","contactPoint":{"@type":"ContactPoint","email":"info@dukoraidea.com","contactType":"customer support"}},{"@type":"WebSite","@id":"https://dukoraidea.com/#website","url":"https://dukoraidea.com/","name":"Dukora Idea","publisher":{"@id":"https://dukoraidea.com/#org"},"inLanguage":"en-US"},{"@type":"BlogPosting","@id":"https://dukoraidea.com/blogs/blog/how-to-connect-alexa-to-led-strip-lights#article","headline":"How to Connect Alexa to LED Strip Lights (and Fix It When It Fails)","description":"How to connect Alexa to LED lights, step by step: pick the right strip or controller, pair it on 2.4 GHz Wi-Fi, set routines and fix common setup errors.","image":{"@type":"ImageObject","url":"https://dukoraidea.com/assets/img/gaming-rgb-setup.webp","width":1600,"height":1067},"datePublished":"2026-08-04","dateModified":"2026-10-17","author":{"@type":"Organization","name":"Dukora Idea","url":"https://dukoraidea.com/"},"publisher":{"@id":"https://dukoraidea.com/#org"},"mainEntityOfPage":"https://dukoraidea.com/blogs/blog/how-to-connect-alexa-to-led-strip-lights","articleSection":"Smart Lighting","keywords":"how to connect alexa to led lights","wordCount":1505,"inLanguage":"en-US"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dukoraidea.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://dukoraidea.com/blogs/blog"},{"@type":"ListItem","position":3,"name":"How to Connect Alexa to LED Strip Lights (and Fix It When It Fails)","item":"https://dukoraidea.com/blogs/blog/how-to-connect-alexa-to-led-strip-lights"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why won't my LED strip connect to Alexa?","acceptedAnswer":{"@type":"Answer","text":"The most common reason is that the controller only supports 2.4 GHz Wi-Fi while your phone is on 5 GHz. Split your router's bands or move away from the router during pairing, then relink the skill."}},{"@type":"Question","name":"Can I connect LED lights to Alexa without Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you use a Zigbee controller with an Echo that has a built-in Zigbee hub. Infrared remote-only controllers cannot connect to Alexa at all."}},{"@type":"Question","name":"Do I need an Echo speaker to control LED strips with Alexa?","acceptedAnswer":{"@type":"Answer","text":"No. The Alexa app on your phone can control linked strips, though an Echo makes hands-free voice commands and room groups easier."}},{"@type":"Question","name":"Can one LED strip work with both Alexa and Google Home?","acceptedAnswer":{"@type":"Answer","text":"Yes. Link the controller's app account to both assistants, or add a Matter controller to each. Both can control the strip."}}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="reading-progress" aria-hidden="true"></div>
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="/" aria-label="Dukora Idea home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="lgh" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#fff8e4"/><stop offset=".5" stop-color="#ffc56b"/><stop offset="1" stop-color="#ff8a5b"/></radialGradient></defs><path d="M20 3.5c-6.6 0-11.2 4.9-11.2 10.8 0 4 2.1 6.6 4.1 8.7 1.4 1.4 2 2.8 2 4.5h10.2c0-1.7.6-3.1 2-4.5 2-2.1 4.1-4.7 4.1-8.7C31.2 8.4 26.6 3.5 20 3.5z" fill="url(#lgh)"/><path d="M16.5 21.5c1.2-3 2.3-4.6 3.5-4.6s2.3 1.6 3.5 4.6" fill="none" stroke="#a24d10" stroke-width="1.6" stroke-linecap="round"/><rect x="14.8" y="29" width="10.4" height="3.2" rx="1.6" fill="#d9ddf2"/><rect x="16.3" y="33.2" width="7.4" height="2.8" rx="1.4" fill="#a3a9cc"/></svg><span>Dukora<small>Idea</small></span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+<nav class="main-nav" id="main-nav" aria-label="Main">
+<ul><li><a href="/collections/fairy-lights">Fairy Lights</a></li><li><a href="/collections/smart-lights">Smart Lights</a></li><li><a href="/blogs/blog" aria-current="page">Ideas & Blog</a></li><li><a href="/pages/light-tools">Light Tools</a></li><li><a href="/pages/about-us">About</a></li><li class="nav-cta"><a href="/pages/contact">Say hello</a></li></ul>
+<div class="nav-drawer-extra"><p>Lighting project questions? <a href="mailto:info@dukoraidea.com">info@dukoraidea.com</a></p></div>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="page-hero">
+<div class="bg"><img src="/assets/img/gaming-rgb-setup.webp" srcset="/assets/img/gaming-rgb-setup-800.webp 800w, /assets/img/gaming-rgb-setup.webp 1600w" sizes="100vw" width="1600" height="1067" alt="" fetchpriority="high"></div><canvas class="fireflies" aria-hidden="true"></canvas>
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/blogs/blog">Blog</a></li><li aria-current="page">How to Connect Alexa to LED Strip Lights (and Fix It When It Fails)</li></ol></nav>
+<h1>How to Connect Alexa to LED Strip Lights (and Fix It When It Fails)</h1><div class="post-meta"><span class="chip">Smart Lighting</span><span>Published Aug 4, 2026</span><span>Updated Oct 17, 2026</span><span>7 min read</span></div></div></section>
+<section class="section"><div class="wrap article-layout">
+<article class="prose"><p>If you have ever stood in a dark room saying "Alexa, turn on the lights" while your LED strip ignores you, this guide is for you. Learning how to connect Alexa to LED lights is mostly about one thing: getting the strip's controller onto your Wi-Fi first, then linking that controller's account to Alexa.</p>
+<p>Below you'll find the exact order of steps, what to check before you start, the naming tricks that make voice commands reliable, and a troubleshooting list for the errors people hit most often. The same process works for Google Home, so we cover that too.</p>
+
+<h2 id="what-you-need-before-you-start">What you need before you start</h2>
+<p>Alexa does not talk to the LED strip itself. It talks to the <strong>controller</strong>, the small box between the power supply and the strip. So the first question is whether your controller is smart at all.</p>
+<ul class="checklist">
+<li>A Wi-Fi (or Zigbee/Matter) LED controller. An infrared remote-only controller cannot connect to Alexa without being replaced.</li>
+<li>An Echo speaker, Echo display or the Alexa app on your phone.</li>
+<li>The controller's companion app, installed and signed in.</li>
+<li>Your Wi-Fi network name and password, and access to a <strong>2.4 GHz</strong> band.</li>
+<li>Your phone's Bluetooth and location turned on (many apps use them during pairing).</li>
+</ul>
+<p>Not sure what you have? Look at the controller box. If it only has a tiny IR receiver "eye" on a wire, it is remote-only. If the packaging mentions an app, Wi-Fi or "works with Alexa," you are set. If you need an upgrade, our <a href="/products/led-controller">Wi-Fi LED controller guide</a> explains pin counts and voltages so you buy one that fits your strip.</p>
+
+<h2 id="three-ways-alexa-can-control-led-strips">Three ways Alexa can control LED strips</h2>
+<h3>1. Wi-Fi controller plus an Alexa skill</h3>
+<p>This is the most common setup. The controller joins your home Wi-Fi, you create an account in its app, and then you enable that app's skill inside Alexa. Commands travel from Alexa to the app maker's cloud and back down to your strip.</p>
+<h3>2. Zigbee controller through an Echo with a built-in hub</h3>
+<p>Some Echo models include a Zigbee hub. A Zigbee LED controller pairs directly with Alexa, no extra app or account. It tends to respond faster and keeps working if the app maker's servers have a bad day.</p>
+<h3>3. Matter controller</h3>
+<p>Matter is the newer shared standard. A Matter controller can be added to Alexa, Google Home and Apple HomeKit at the same time by scanning one setup code. If you are buying new, Matter support is worth looking for.</p>
+
+<h2 id="how-to-connect-alexa-to-led-lights-step-by-step">How to connect Alexa to LED lights, step by step</h2>
+<p>These steps cover the Wi-Fi-plus-skill method, since it is what most strips ship with. Give yourself ten minutes.</p>
+<ol class="steps">
+<li><h3>Power the strip and put the controller in pairing mode</h3><p>Plug everything in. Most controllers enter pairing mode when they blink rapidly. If yours does not, switch it off and on three times in a row, or hold its button for about five seconds, until it flashes fast.</p></li>
+<li><h3>Add the device in the controller's app</h3><p>Open the app, tap "Add device," pick LED strip or light strip, and enter your Wi-Fi password. Keep your phone within a few feet of the controller. Wait for the app to confirm, then test colors and brightness from the app.</p></li>
+<li><h3>Rename the strip</h3><p>Give it a short, unique name like "desk lights" or "bed strip." Avoid names that clash with other devices or with Alexa words, such as "Echo" or "music."</p></li>
+<li><h3>Enable the skill in Alexa</h3><p>In the Alexa app, open More, then Skills &amp; Games, and search for the controller app's name. Tap Enable, sign in with the same account you made in step 2, and approve the link.</p></li>
+<li><h3>Discover devices</h3><p>Say "Alexa, discover devices," or tap Devices, the plus sign, then Add Device. Your strip should appear under Lights within a minute.</p></li>
+<li><h3>Put it in a group</h3><p>Add the strip to a room group, like Bedroom, alongside the Echo in that room. Then "Alexa, turn on the lights" works without naming the strip at all.</p></li>
+</ol>
+<figure class="reveal"><img src="/assets/img/smart-bulbs-phone.webp" srcset="/assets/img/smart-bulbs-phone-800.webp 800w, /assets/img/smart-bulbs-phone.webp 1600w" sizes="(max-width: 1080px) 100vw, 760px" width="1600" height="1067" alt="Smart bulbs next to a smartphone with a lighting app open" loading="lazy" decoding="async"><figcaption>Set up and test the strip in its own app before you link it to Alexa.</figcaption></figure>
+
+<h2 id="the-2-4-ghz-wi-fi-problem-and-how-to-fix-it">The 2.4 GHz Wi-Fi problem (and how to fix it)</h2>
+<p>Nearly every budget LED controller only speaks 2.4 GHz Wi-Fi. Many modern routers combine 2.4 GHz and 5 GHz under one network name, and your phone happily sits on 5 GHz. The result: pairing fails at 90% or "device not found."</p>
+<p>Here is how to work around it:</p>
+<ul>
+<li><strong>Split the bands.</strong> In your router settings, give the 2.4 GHz band its own name, such as "Home-2G." Pair the controller to that, then rename it back later if you like; the controller will keep working.</li>
+<li><strong>Stand farther from the router.</strong> Phones often drop to 2.4 GHz when the signal weakens. Walking to another room during pairing can do the trick.</li>
+<li><strong>Turn off band steering or "smart connect"</strong> temporarily if your router offers it.</li>
+<li><strong>Check the password.</strong> Some controllers dislike special characters or very long passwords, and most cannot join WPA3-only networks. A WPA2/WPA3 mixed mode usually works.</li>
+<li><strong>Avoid guest and captive-portal networks</strong> that require a sign-in page. Controllers cannot click "accept."</li>
+</ul>
+<div class="callout"><strong>Tip:</strong> If you have many smart devices, a dedicated 2.4 GHz network for them keeps things tidy and makes future pairing painless.</div>
+
+<h2 id="voice-commands-and-routines-worth-setting-up">Voice commands and routines worth setting up</h2>
+<p>Once linked, these commands work with most LED strips:</p>
+<ul>
+<li>"Alexa, turn on the desk lights."</li>
+<li>"Alexa, set the bed strip to 30 percent."</li>
+<li>"Alexa, make the desk lights purple."</li>
+<li>"Alexa, set the bed strip to warm white."</li>
+</ul>
+<p>Routines are where it gets fun. In the Alexa app, open Routines and try:</p>
+<ul>
+<li><strong>Wind-down:</strong> at 9:30 p.m., set the bedroom strip to a dim amber at 20 percent.</li>
+<li><strong>Wake-up:</strong> fade from off to soft white over 15 minutes before your alarm.</li>
+<li><strong>Movie mode:</strong> one phrase dims the overhead lights and turns the TV backlight blue.</li>
+<li><strong>Away:</strong> turn every strip off when you say "Alexa, I'm leaving."</li>
+</ul>
+<p>Choosing colors for those scenes? Our guide to <a href="/blogs/blog/led-strip-light-colors-meaning">what LED light colors mean</a> covers which shades help you relax and which keep you alert.</p>
+<figure class="reveal"><img src="/assets/img/red-led-strip-ceiling.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 1080px) 100vw, 760px" width="1600" height="1067" alt="Red LED strip glowing along a ceiling edge in a dark room" loading="lazy" decoding="async"><figcaption>A dim red or amber strip makes a gentle wind-down scene for routines.</figcaption></figure>
+
+<h2 id="connecting-led-strips-to-google-home-instead">Connecting LED strips to Google Home instead</h2>
+<p>The process mirrors Alexa. Set up the strip in its own app first, then open Google Home, tap the plus sign, choose "Works with Google," search for the controller's app, and sign in. For a Matter controller, choose "Matter-enabled device" and scan the code on the controller or its box.</p>
+<p>You can link the same Wi-Fi strip to both Alexa and Google Home. Each assistant will show it separately, and both will control it.</p>
+
+<h2 id="troubleshooting-when-alexa-won-t-find-or-control-your-strip">Troubleshooting: when Alexa won't find or control your strip</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Problem</th><th>Likely cause</th><th>What to try</th></tr></thead>
+<tbody>
+<tr><td>Pairing stalls in the strip's app</td><td>Phone on 5 GHz, weak signal</td><td>Split bands, move closer, retry pairing mode</td></tr>
+<tr><td>Alexa finds no devices</td><td>Skill linked to a different account</td><td>Disable the skill, re-enable, sign in with the same login</td></tr>
+<tr><td>"Device is unresponsive"</td><td>Controller dropped off Wi-Fi</td><td>Power-cycle the controller, then the router</td></tr>
+<tr><td>Wrong colors (red shows as green)</td><td>RGB order mismatch</td><td>Change the color order (RGB, GRB, BRG) in the app settings</td></tr>
+<tr><td>Alexa turns on the wrong thing</td><td>Similar device names</td><td>Rename to something distinct and rerun discovery</td></tr>
+<tr><td>Works in the app, not by voice</td><td>Stale device list</td><td>Delete the strip from Alexa and discover again</td></tr>
+</tbody>
+</table></div>
+<p>If the strip itself flickers or one end looks dimmer than the other, that is a power issue, not an Alexa one. Long runs often need power fed from both ends; our tutorial on <a href="/blogs/blog/how-to-cut-and-connect-led-strip-lights">cutting and connecting LED strips</a> shows how.</p>
+<div class="callout callout--warn"><strong>Safety:</strong> Always unplug the power supply before opening a controller or changing wiring. Keep the power brick in a ventilated spot, not buried under bedding or behind a couch cushion.</div>
+
+<h2 id="is-it-worth-replacing-a-remote-only-strip">Is it worth replacing a remote-only strip?</h2>
+<p>Usually, yes. If your strip works fine but came with only an IR remote, you don't need a new strip. A replacement Wi-Fi controller with the same voltage (5 V, 12 V or 24 V) and the same connector type (2-pin single color, 4-pin RGB, 5-pin RGBW) slots right in. Unplug the old controller, plug in the new one, and follow the steps above.</p>
+<p>If you are starting from scratch, a strip sold as a smart kit saves a step. Our <a href="/products/wifi-smart-led-strip-lights">smart LED strip lights guide</a> explains what to look for, from app features to waterproof ratings. And if you would rather control lamps than strips, <a href="/products/smart-led-light-bulbs">smart LED light bulbs</a> pair with Alexa the same way.</p>
+
+<h2 id="wrap-up">Wrap-up</h2>
+<p>Connecting Alexa to LED strip lights comes down to a smart controller, a 2.4 GHz connection and a linked account. Get those three right and voice control just works. Next, plan the strip itself: the <a href="/pages/light-tools">light tools</a> page has a calculator for strip length and power supply size, and our <a href="/blogs/blog/smart-bulbs">smart bulbs explainer</a> breaks down Wi-Fi vs Zigbee vs Matter if you want to expand your setup.</p></article>
+<aside class="sidebar"><nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#what-you-need-before-you-start">What you need before you start</a></li><li><a href="#three-ways-alexa-can-control-led-strips">Three ways Alexa can control LED strips</a></li><li><a href="#how-to-connect-alexa-to-led-lights-step-by-step">How to connect Alexa to LED lights, step by step</a></li><li><a href="#the-2-4-ghz-wi-fi-problem-and-how-to-fix-it">The 2.4 GHz Wi-Fi problem (and how to fix it)</a></li><li><a href="#voice-commands-and-routines-worth-setting-up">Voice commands and routines worth setting up</a></li><li><a href="#connecting-led-strips-to-google-home-instead">Connecting LED strips to Google Home instead</a></li><li><a href="#troubleshooting-when-alexa-won-t-find-or-control-your-strip">Troubleshooting: when Alexa won&#x27;t find or control your strip</a></li><li><a href="#is-it-worth-replacing-a-remote-only-strip">Is it worth replacing a remote-only strip?</a></li><li><a href="#wrap-up">Wrap-up</a></li></ol></nav>
+<div class="side-card"><h3>Battery life calculator</h3><p>How many nights will your battery fairy lights last?</p><a class="btn" href="/pages/light-tools#battery-calculator">Open the tool <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</aside></div></section>
+<section class="section section--cream" id="faq"><div class="wrap"><div class="section-head center reveal"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq reveal"><details><summary>Why won&#x27;t my LED strip connect to Alexa?</summary><p>The most common reason is that the controller only supports 2.4 GHz Wi-Fi while your phone is on 5 GHz. Split your router&#x27;s bands or move away from the router during pairing, then relink the skill.</p></details><details><summary>Can I connect LED lights to Alexa without Wi-Fi?</summary><p>Yes, if you use a Zigbee controller with an Echo that has a built-in Zigbee hub. Infrared remote-only controllers cannot connect to Alexa at all.</p></details><details><summary>Do I need an Echo speaker to control LED strips with Alexa?</summary><p>No. The Alexa app on your phone can control linked strips, though an Echo makes hands-free voice commands and room groups easier.</p></details><details><summary>Can one LED strip work with both Alexa and Google Home?</summary><p>Yes. Link the controller&#x27;s app account to both assistants, or add a Matter controller to each. Both can control the strip.</p></details></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Light guides</span><h2>Lights for this idea</h2></div><div class="grid grid-3"><a class="card card--guide reveal" href="/products/led-controller">
+<div class="card-media"><img src="/assets/img/gaming-rgb-setup-800.webp" srcset="/assets/img/gaming-rgb-setup-800.webp 800w, /assets/img/gaming-rgb-setup.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="800" height="534" alt="Gaming desk lit by RGB LED strips run from a smart controller" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Smart Lights</span>
+<h3>Wi-Fi LED Controller</h3><p>The small box between your power supply and your strip that turns a basic LED tape into a smart light.</p><span class="more">Open the guide &rarr;</span></div></a><a class="card card--guide reveal" href="/products/wifi-smart-led-strip-lights">
+<div class="card-media"><img src="/assets/img/red-led-strip-ceiling-800.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="800" height="534" alt="Red LED strip lights glowing along a ceiling edge in a dark room" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Smart Lights</span>
+<h3>Smart LED Strip Lights</h3><p>How Wi-Fi LED strips work, what to look for, and how to install them so they look built in.</p><span class="more">Open the guide &rarr;</span></div></a><a class="card card--guide reveal" href="/products/smart-led-light-bulbs">
+<div class="card-media"><img src="/assets/img/smart-home-bulbs-800.webp" srcset="/assets/img/smart-home-bulbs-800.webp 800w, /assets/img/smart-home-bulbs.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="800" height="534" alt="Smart LED light bulbs glowing pink next to a smartphone" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Smart Lights</span>
+<h3>Smart LED Light Bulbs</h3><p>Swap a bulb, open an app, and every lamp in the house can change color, dim and follow a schedule.</p><span class="more">Open the guide &rarr;</span></div></a></div></div></section>
+<section class="section section--cream"><div class="wrap"><div class="section-head section-head--row reveal"><div><span class="eyebrow">Keep glowing</span><h2>More ideas you'll like</h2></div><a class="link-arrow" href="/blogs/blog">All ideas <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="grid grid-3"><a class="card reveal" href="/blogs/blog/smart-bulbs" data-cat="smart-lighting">
+<div class="card-media"><img src="/assets/img/smart-bulbs-phone-800.webp" srcset="/assets/img/smart-bulbs-phone-800.webp 800w, /assets/img/smart-bulbs-phone.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="800" height="534" alt="Smart LED bulbs beside a smartphone on an orange background" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">Smart Lighting</span><span>5 min read</span></div>
+<h3>Smart Bulbs Explained: How They Work and How to Choose</h3><p>What smart bulbs actually do, how Wi-Fi, Zigbee, Bluetooth and Matter differ, and how to pick color, brightness and features for each room.</p><span class="more">Read the idea &rarr;</span></div></a><a class="card reveal" href="/blogs/blog/how-to-cut-and-connect-led-strip-lights" data-cat="diy-projects">
+<div class="card-media"><img src="/assets/img/red-led-strip-ceiling-800.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="800" height="534" alt="Red LED strip glowing along the edge of a ceiling in a dark room" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">DIY Projects</span><span>6 min read</span></div>
+<h3>How to Cut and Connect LED Strip Lights (Corners, Gaps and More)</h3><p>Find the cut marks, snip cleanly, then join strips with solderless clips or a soldering iron. Plus corners, gaps, waterproof strips and power injection.</p><span class="more">Read the idea &rarr;</span></div></a><a class="card reveal" href="/blogs/blog/led-strip-light-colors-meaning" data-cat="guides">
+<div class="card-media"><img src="/assets/img/rainbow-light-bulb-800.webp" srcset="/assets/img/rainbow-light-bulb-800.webp 534w, /assets/img/rainbow-light-bulb.webp 1067w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="534" height="800" alt="Light bulb against a rainbow-striped background" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">Guides</span><span>6 min read</span></div>
+<h3>LED Light Colors Meaning: What Each Color Does to Mood and Sleep</h3><p>What each LED strip color does to mood, focus and sleep, the best colors for bedtime and studying, and how Kelvin numbers describe white light.</p><span class="more">Read the idea &rarr;</span></div></a></div></div></section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div class="about">
+<a class="logo" href="/" aria-label="Dukora Idea home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="lgf" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#fff8e4"/><stop offset=".5" stop-color="#ffc56b"/><stop offset="1" stop-color="#ff8a5b"/></radialGradient></defs><path d="M20 3.5c-6.6 0-11.2 4.9-11.2 10.8 0 4 2.1 6.6 4.1 8.7 1.4 1.4 2 2.8 2 4.5h10.2c0-1.7.6-3.1 2-4.5 2-2.1 4.1-4.7 4.1-8.7C31.2 8.4 26.6 3.5 20 3.5z" fill="url(#lgf)"/><path d="M16.5 21.5c1.2-3 2.3-4.6 3.5-4.6s2.3 1.6 3.5 4.6" fill="none" stroke="#a24d10" stroke-width="1.6" stroke-linecap="round"/><rect x="14.8" y="29" width="10.4" height="3.2" rx="1.6" fill="#d9ddf2"/><rect x="16.3" y="33.2" width="7.4" height="2.8" rx="1.4" fill="#a3a9cc"/></svg><span>Dukora<small>Idea</small></span></a>
+<p style="margin-top:18px">DIY lighting ideas, light guides and tools for cozy, glowing spaces. Fairy lights, LED strips, smart bulbs and the little projects that make a room glow.</p>
+<p><a href="mailto:info@dukoraidea.com">info@dukoraidea.com</a></p>
+</div>
+<div><h3>Fairy &amp; String Lights</h3><ul><li><a href="/products/outdoor-fairy-lights">Outdoor Fairy Lights</a></li><li><a href="/products/battery-operated-fairy-lights">Battery Operated Fairy Lights</a></li><li><a href="/products/outdoor-string-lights">Waterproof Fairy Lights</a></li><li><a href="/products/garland-fairy-string-light">Battery Operated Garland</a></li><li><a href="/products/fake-ivy-leaves">Fake Ivy Leaves</a></li><li><a href="/products/string-lights">Firefly String Lights</a></li><li><a href="/products/fairy-lights">Silver Wire Fairy Lights</a></li><li><a href="/products/indoor-fairy-lights">Indoor Fairy Lights</a></li></ul></div>
+<div><h3>Smart Lights</h3><ul><li><a href="/products/wifi-smart-led-strip-lights">Smart LED Strip Lights</a></li><li><a href="/products/smart-led-light-bulbs">Smart LED Light Bulbs</a></li><li><a href="/products/led-controller">Wi-Fi LED Controller</a></li><li><a href="/collections/all">All light guides</a></li></ul>
+<h3 style="margin-top:28px">Light Tools</h3><ul><li><a href="/pages/light-tools#battery-calculator">Battery life calculator</a></li><li><a href="/pages/light-tools#strip-calculator">LED strip calculator</a></li><li><a href="/pages/light-tools#color-picker">Color & mood picker</a></li><li><a href="/pages/light-tools#patio-planner">Patio light planner</a></li></ul></div>
+<div><h3>Explore</h3><ul><li><a href="/blogs/blog">Ideas &amp; Blog</a></li><li><a href="/blogs/blog/create-your-mason-jar-fairy-lights-in-5-minutes">Mason jar fairy lights</a></li><li><a href="/pages/about-us">About Dukora</a></li><li><a href="/pages/contact">Contact</a></li><li><a href="/policies/privacy-policy">Privacy policy</a></li><li><a href="/policies/terms-of-service">Terms of service</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>&copy; <span data-year>2026</span> Dukora Idea. Made for night owls and fairy-light hoarders.</span><span>Ideas and guides only: we don't sell lights.</span></div>
+</div>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="/assets/js/site.js?v=eaf5662b" defer></script>
+</body>
+</html>

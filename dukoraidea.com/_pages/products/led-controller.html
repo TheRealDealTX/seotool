@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WiFi LED Controller Guide: Alexa &amp; Google Home Setup</title>
+<meta name="description" content="How a WiFi LED controller makes any strip smart: RGB vs RGBW vs addressable, matching voltage and pins, Alexa and Google Home setup, and common fixes.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://dukoraidea.com/products/led-controller">
+<meta property="og:site_name" content="Dukora Idea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WiFi LED Controller Guide: Alexa &amp; Google Home Setup">
+<meta property="og:description" content="How a WiFi LED controller makes any strip smart: RGB vs RGBW vs addressable, matching voltage and pins, Alexa and Google Home setup, and common fixes.">
+<meta property="og:url" content="https://dukoraidea.com/products/led-controller">
+<meta property="og:image" content="https://dukoraidea.com/assets/img/gaming-rgb-setup.webp">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="1067">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="WiFi LED Controller Guide: Alexa &amp; Google Home Setup">
+<meta name="twitter:description" content="How a WiFi LED controller makes any strip smart: RGB vs RGBW vs addressable, matching voltage and pins, Alexa and Google Home setup, and common fixes.">
+<meta name="twitter:image" content="https://dukoraidea.com/assets/img/gaming-rgb-setup.webp">
+<meta name="theme-color" content="#0a0d1c">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=eaf5662b">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://dukoraidea.com/#org","name":"Dukora Idea","url":"https://dukoraidea.com/","logo":{"@type":"ImageObject","url":"https://dukoraidea.com/assets/img/logo-512.png","width":512,"height":512},"email":"info@dukoraidea.com","contactPoint":{"@type":"ContactPoint","email":"info@dukoraidea.com","contactType":"customer support"}},{"@type":"WebSite","@id":"https://dukoraidea.com/#website","url":"https://dukoraidea.com/","name":"Dukora Idea","publisher":{"@id":"https://dukoraidea.com/#org"},"inLanguage":"en-US"},{"@type":"Article","@id":"https://dukoraidea.com/products/led-controller#guide","headline":"Wi-Fi LED Controller Guide: Make Any LED Strip Smart","description":"How a WiFi LED controller makes any strip smart: RGB vs RGBW vs addressable, matching voltage and pins, Alexa and Google Home setup, and common fixes.","image":{"@type":"ImageObject","url":"https://dukoraidea.com/assets/img/gaming-rgb-setup.webp","width":1600,"height":1067},"dateModified":"2026-10-17","datePublished":"2021-09-01","author":{"@type":"Organization","name":"Dukora Idea"},"publisher":{"@id":"https://dukoraidea.com/#org"},"mainEntityOfPage":"https://dukoraidea.com/products/led-controller","about":"wifi led controller","inLanguage":"en-US"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dukoraidea.com/"},{"@type":"ListItem","position":2,"name":"Smart Lights","item":"https://dukoraidea.com/collections/smart-lights"},{"@type":"ListItem","position":3,"name":"Wi-Fi LED Controller","item":"https://dukoraidea.com/products/led-controller"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can I make any LED strip smart?","acceptedAnswer":{"@type":"Answer","text":"Almost any low-voltage strip, as long as you pick a Wi-Fi controller that matches its type (single color, RGB, RGBW or addressable), its voltage and its current draw."}},{"@type":"Question","name":"Why are my LED colors wrong after changing the controller?","acceptedAnswer":{"@type":"Answer","text":"The channel order differs between strips. Look for an RGB order setting in the controller's app and switch it until red shows red."}},{"@type":"Question","name":"Does a Wi-Fi LED controller work with Google Home?","acceptedAnswer":{"@type":"Answer","text":"Most do through the controller app's link in Google Home, and Matter-certified controllers can be added directly."}},{"@type":"Question","name":"Why won't my LED controller connect to Wi-Fi?","acceptedAnswer":{"@type":"Answer","text":"Most controllers only support 2.4 GHz networks. Connect your phone to the 2.4 GHz band, reset the controller and pair it close to the router."}},{"@type":"Question","name":"Can one controller run two strips?","acceptedAnswer":{"@type":"Answer","text":"Yes, if they are the same type and voltage and the combined current stays within the controller's rating. A splitter cable makes it easy."}}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+<div class="wrap">
+<a class="logo" href="/" aria-label="Dukora Idea home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="lgh" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#fff8e4"/><stop offset=".5" stop-color="#ffc56b"/><stop offset="1" stop-color="#ff8a5b"/></radialGradient></defs><path d="M20 3.5c-6.6 0-11.2 4.9-11.2 10.8 0 4 2.1 6.6 4.1 8.7 1.4 1.4 2 2.8 2 4.5h10.2c0-1.7.6-3.1 2-4.5 2-2.1 4.1-4.7 4.1-8.7C31.2 8.4 26.6 3.5 20 3.5z" fill="url(#lgh)"/><path d="M16.5 21.5c1.2-3 2.3-4.6 3.5-4.6s2.3 1.6 3.5 4.6" fill="none" stroke="#a24d10" stroke-width="1.6" stroke-linecap="round"/><rect x="14.8" y="29" width="10.4" height="3.2" rx="1.6" fill="#d9ddf2"/><rect x="16.3" y="33.2" width="7.4" height="2.8" rx="1.4" fill="#a3a9cc"/></svg><span>Dukora<small>Idea</small></span></a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+<nav class="main-nav" id="main-nav" aria-label="Main">
+<ul><li><a href="/collections/fairy-lights">Fairy Lights</a></li><li><a href="/collections/smart-lights">Smart Lights</a></li><li><a href="/blogs/blog">Ideas & Blog</a></li><li><a href="/pages/light-tools">Light Tools</a></li><li><a href="/pages/about-us">About</a></li><li class="nav-cta"><a href="/pages/contact">Say hello</a></li></ul>
+<div class="nav-drawer-extra"><p>Lighting project questions? <a href="mailto:info@dukoraidea.com">info@dukoraidea.com</a></p></div>
+</nav>
+</div>
+</header>
+<main id="main">
+<section class="guide-hero dark"><canvas class="fireflies" aria-hidden="true"></canvas>
+<div class="wrap guide-grid">
+<div data-gallery class="reveal"><div class="gallery-main"><img src="/assets/img/gaming-rgb-setup.webp" srcset="/assets/img/gaming-rgb-setup-800.webp 800w, /assets/img/gaming-rgb-setup.webp 1600w" sizes="(max-width: 900px) 100vw, 560px" width="1600" height="1067" alt="Gaming desk lit by RGB LED strips run from a smart controller" fetchpriority="high"></div>
+<div class="gallery-thumbs"><button type="button" aria-pressed="true" data-src="/assets/img/gaming-rgb-setup.webp" data-alt="Gaming desk lit by RGB LED strips run from a smart controller" aria-label="Show photo 1"><img src="/assets/img/gaming-rgb-setup-800.webp" alt="" width="84" height="84" loading="lazy"></button><button type="button" aria-pressed="false" data-src="/assets/img/red-led-strip-ceiling.webp" data-alt="Wi-Fi LED Controller idea" aria-label="Show photo 2"><img src="/assets/img/red-led-strip-ceiling-800.webp" alt="" width="84" height="84" loading="lazy"></button><button type="button" aria-pressed="false" data-src="/assets/img/smart-bulbs-phone.webp" data-alt="Wi-Fi LED Controller idea" aria-label="Show photo 3"><img src="/assets/img/smart-bulbs-phone-800.webp" alt="" width="84" height="84" loading="lazy"></button></div></div>
+<div class="reveal" style="--rd:.1s"><nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/collections/smart-lights">Smart Lights</a></li><li aria-current="page">Wi-Fi LED Controller</li></ol></nav><span class="eyebrow">Dukora light guide</span>
+<h1>Wi-Fi LED Controller Guide: Make Any LED Strip Smart</h1><p class="tagline">The small box between your power supply and your strip that turns a basic LED tape into a smart light.</p>
+<ul class="highlights"><li>Upgrades existing strips</li><li>Works with Alexa/Google</li><li>Match pins and voltage</li><li>Schedules + music sync</li></ul>
+<div class="jump"><a class="btn" href="#guide">Read the guide <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn--ghost" href="#strip-calculator">Try the calculator</a><a class="btn btn--ghost" href="#specs">What to look for</a></div>
+</div></div></section>
+<section id="specs" style="scroll-margin-top:90px"><div class="wrap"><div class="specs-card reveal"><span class="eyebrow">Checklist</span><h2 style="font-size:clamp(1.5rem,2.6vw,2rem)">What to look for in wi-fi led controller</h2><dl class="specs"><div><dt>Strip type</dt><dd>Match the strip: single color, RGB (4-pin), RGBW (5-pin) or addressable (3-pin)</dd></div><div><dt>Voltage</dt><dd>Same as the strip and power supply: 5 V, 12 V or 24 V</dd></div><div><dt>Current rating</dt><dd>Above the strip&#x27;s draw; check amps per channel, not just total</dd></div><div><dt>Connectivity</dt><dd>2.4 GHz Wi-Fi for voice; Zigbee or Matter if you run a hub</dd></div><div><dt>Voice support</dt><dd>Alexa, Google Home or Apple HomeKit as you need</dd></div><div><dt>Extras</dt><dd>IR or RF remote backup, music sync, sunrise and sunset timers</dd></div><div><dt>Housing</dt><dd>Ventilated indoors; weatherproof box if near outdoor strips</dd></div></dl></div></div></section>
+<section class="section" id="guide" style="scroll-margin-top:60px"><div class="wrap article-layout">
+<article class="prose"><p>A wifi LED controller is the brain of an LED strip. It sits between the power supply and the strip, takes commands from an app, a remote or a voice assistant, and tells the LEDs what color and brightness to be. Swap the basic infrared box that came with an old strip for a Wi-Fi model, and that strip gains schedules, scenes and voice control without replacing a single meter of tape.</p>
+<p>This guide covers the types of controllers, how to match one to your strip, how to wire and pair it, and how to fix the problems people run into most.</p>
+
+<h2 id="what-a-wi-fi-led-controller-does">What a Wi-Fi LED controller does</h2>
+<p>LED strips don't have any intelligence of their own. Each color channel (red, green, blue and sometimes white) is switched on and off very fast by the controller, and the ratio of on to off sets the brightness of that channel. Mix the channels and you get any color you want. A smart wireless LED controller adds a radio and firmware on top, so that mixing can be driven by your phone, a schedule, music or a voice command.</p>
+<p>Most strips sold as "smart" are simply a regular strip with a Wi-Fi controller already attached. See the <a href="/products/wifi-smart-led-strip-lights">smart LED strip lights guide</a> for the strip side of the system.</p>
+
+<h2 id="types-of-controllers">Types of controllers</h2>
+<h3>Single color dimmers</h3>
+<p>Two wires, one channel. They dim a white strip and switch it on a schedule. Great for under-cabinet lights.</p>
+<h3>RGB controllers</h3>
+<p>The classic RGB controller has four pins: a shared positive and one each for red, green and blue. It fits the common color-changing strip.</p>
+<h3>RGBW and RGBCCT controllers</h3>
+<p>Five- or six-pin controllers add channels for white chips, so you get proper warm and cool whites alongside color.</p>
+<h3>Addressable controllers</h3>
+<p>Addressable (pixel) strips have a data wire instead of separate color channels, usually three pins. They need a controller that speaks the strip's chip protocol, and in return you get chasing effects and gradients.</p>
+
+<figure class="reveal"><img src="/assets/img/red-led-strip-ceiling.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 1080px) 100vw, 760px" width="1600" height="1067" alt="Red LED strip glowing along a ceiling edge" loading="lazy" decoding="async"><figcaption>A single controller can drive an entire ceiling run if it is sized for the current.</figcaption></figure>
+
+<h2 id="how-to-match-a-controller-to-your-strip">How to match a controller to your strip</h2>
+<p>The table above lists what to check. In practice, match these in order:</p>
+<ol>
+<li><strong>Pin count and strip type.</strong> Count the pads or wires at the strip's end and look at the labels (+, R, G, B, W, or +, DATA, GND).</li>
+<li><strong>Voltage.</strong> The controller must accept the same voltage as the strip and the power supply.</li>
+<li><strong>Current.</strong> Add up the strip's draw and keep it comfortably below the controller's rated amps per channel.</li>
+<li><strong>Connector.</strong> Many strips use a plug-in connector; if yours doesn't match, solderless adapters or screw terminals bridge the gap.</li>
+</ol>
+<p>Not sure how much current a run draws? The calculator below takes length, voltage and watts per meter and gives you the power supply size and current, which also tells you what the controller needs to handle.</p>
+<div class="tool reveal" data-tool="strip" id="strip-calculator">
+<h3>LED strip length and power supply calculator</h3>
+<p class="tool-intro">Size the power supply, find the cut interval and see whether a long run needs power injection.</p>
+<div class="tool-grid"><div>
+<div class="field"><span class="label">Units</span><div class="seg" data-k="unit" role="group" aria-label="Units"><button type="button" data-v="ft" aria-pressed="true">Feet</button><button type="button" data-v="m" aria-pressed="false">Meters</button></div></div>
+<div class="field"><label for="len-">Strip length <output data-out="len"></output></label><input id="len-" type="range" name="len" min="1" max="100" step="1" value="16"></div>
+<div class="field"><label for="dens-">LED type and density</label><select id="dens-" name="dens">
+<option value="30" data-w="7.2">5050 RGB, 30 LEDs/m (about 7.2 W/m)</option><option value="60" data-w="14.4" selected>5050 RGB, 60 LEDs/m (about 14.4 W/m)</option>
+<option value="120" data-w="9.6">2835 white, 120 LEDs/m (about 9.6 W/m)</option><option value="cob" data-w="10">COB dotless strip (about 10 W/m)</option></select></div>
+<div class="field"><label for="wpm-">Watts per meter (from the label)</label><input id="wpm-" type="number" name="wpm" min="1" max="40" step="0.1" value="14.4"></div>
+<div class="field"><span class="label">Voltage</span><div class="seg" data-k="volts" role="group" aria-label="Voltage"><button type="button" data-v="5" aria-pressed="false">5 V (USB)</button><button type="button" data-v="12" aria-pressed="true">12 V</button><button type="button" data-v="24" aria-pressed="false">24 V</button></div></div>
+<div class="field"><span class="label">Preview color</span><div class="swatch-row"><button type="button" data-c="#ffc56b" aria-pressed="true" style="background:#ffc56b" aria-label="Warm white"></button><button type="button" data-c="#ff4f8b" aria-pressed="false" style="background:#ff4f8b" aria-label="Pink"></button><button type="button" data-c="#8b6cff" aria-pressed="false" style="background:#8b6cff" aria-label="Purple"></button><button type="button" data-c="#3fb6ff" aria-pressed="false" style="background:#3fb6ff" aria-label="Blue"></button><button type="button" data-c="#5ee6c9" aria-pressed="false" style="background:#5ee6c9" aria-label="Mint"></button><button type="button" data-c="#ff5a3c" aria-pressed="false" style="background:#ff5a3c" aria-label="Red"></button></div></div>
+</div><div class="result" aria-live="polite">
+<div class="result-big" data-out="watts"></div>
+<div class="strip-vis" aria-hidden="true"></div>
+<div class="result-row"><span>Current draw</span><b data-out="amps"></b></div>
+<div class="result-row"><span>Power supply (20% headroom)</span><b data-out="psu"></b></div>
+<div class="result-row"><span>LEDs on the run</span><b data-out="leds"></b></div>
+<div class="result-row"><span>Cut marks</span><b data-out="cut"></b></div>
+<div class="result-row"><span>Power injection</span><b data-out="inject"></b></div>
+<p class="result-note">Each block in the preview is one powered section. Always check the watts-per-meter on your strip's label; it varies by brand.</p>
+</div></div></div>
+
+<h2 id="wiring-and-pairing-step-by-step">Wiring and pairing, step by step</h2>
+<ol class="steps">
+<li><h3>Unplug everything</h3><p>Disconnect the power supply from the wall before touching any connection.</p></li>
+<li><h3>Connect the strip</h3><p>Line up the arrow or + marking on the connector with the + pad on the strip. Reversing it is the most common reason nothing lights.</p></li>
+<li><h3>Connect the power supply</h3><p>Plug the supply's barrel jack or wires into the controller's input, observing polarity.</p></li>
+<li><h3>Pair the controller</h3><p>Power on, open the controller's app, and add the device on your 2.4 GHz Wi-Fi. Name it after the room or spot.</p></li>
+<li><h3>Link your voice assistant</h3><p>Enable the app's skill or link in the Alexa or Google Home app. Full walkthrough: <a href="/blogs/blog/how-to-connect-alexa-to-led-strip-lights">how to connect Alexa to LED lights</a>.</p></li>
+</ol>
+<div class="callout"><strong>Tip:</strong> If a controller ships with a remote, keep it. It still works when the Wi-Fi is down, which guests will appreciate.</div>
+
+<h2 id="using-a-wifi-led-controller-with-alexa-and-google-home">Using a WiFi LED controller with Alexa and Google Home</h2>
+<p>Once linked, an LED controller with Alexa or Google Home support works like any other smart light. You can say "set the desk light to blue" or "dim the bedroom strip to 20 percent," add it to room groups, and include it in routines such as sunset-on or a bedtime dim. A wifi LED controller with Google Home and Alexa support can usually be linked to both, and controllers that support Matter can be shared across ecosystems directly.</p>
+<p>Music sync is usually handled by the controller's own app or a built-in microphone, not by the voice assistant.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li><strong>Colors swapped:</strong> red shows as green? Most apps have a channel order setting (RGB, GRB, BRG); change it rather than rewiring.</li>
+<li><strong>Won't connect:</strong> make sure your phone is on 2.4 GHz during setup, reset the controller and try closer to the router.</li>
+<li><strong>Strip flickers:</strong> check the connector is fully seated and that the power supply is big enough.</li>
+<li><strong>Far end looks dim or yellowish:</strong> the run is too long for the voltage; add power at the far end.</li>
+<li><strong>Only part of an addressable strip lights:</strong> set the correct LED count and chip type in the app, and check the data arrow points away from the controller.</li>
+</ul>
+<p>For cutting, joining and corners, read <a href="/blogs/blog/how-to-cut-and-connect-led-strip-lights">how to cut and connect LED strip lights</a>.</p>
+
+<h2 id="safety-and-placement">Safety and placement</h2>
+<div class="callout callout--warn"><strong>Safety:</strong> Never exceed the controller's rated current, keep it ventilated rather than buried in insulation or fabric, and keep mains connections inside proper enclosures. Outdoors, mount the controller and power supply under cover or in a weatherproof box.</div>
+<p>Place the controller where its signal can reach the router: inside a metal channel or behind a TV can block Wi-Fi.</p>
+
+<h2 id="where-to-go-from-here">Where to go from here</h2>
+<p>If you're starting from scratch, a ready-made smart strip may be simpler. For lamps, look at <a href="/products/smart-led-light-bulbs">smart LED light bulbs</a>. And for planning a run, the <a href="/pages/light-tools">light tools</a> page has the strip calculator and color picker in one place.</p></article>
+<aside class="sidebar"><nav class="toc" aria-label="On this page"><h2>On this page</h2><ol><li><a href="#what-a-wi-fi-led-controller-does">What a Wi-Fi LED controller does</a></li><li><a href="#types-of-controllers">Types of controllers</a></li><li><a href="#how-to-match-a-controller-to-your-strip">How to match a controller to your strip</a></li><li><a href="#wiring-and-pairing-step-by-step">Wiring and pairing, step by step</a></li><li><a href="#using-a-wifi-led-controller-with-alexa-and-google-home">Using a WiFi LED controller with Alexa and Google Home</a></li><li><a href="#troubleshooting">Troubleshooting</a></li><li><a href="#safety-and-placement">Safety and placement</a></li><li><a href="#where-to-go-from-here">Where to go from here</a></li></ol></nav>
+<div class="side-card"><h3>Questions about wi-fi led controller?</h3><p>Tell us about your space and we'll point you to the right setup.</p><a class="btn" href="/pages/contact">Ask Dukora <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="side-card"><h3>Battery life calculator</h3><p>How many nights will your battery fairy lights last?</p><a class="btn" href="/pages/light-tools#battery-calculator">Open the tool <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</aside></div></section>
+<section class="section section--cream" id="faq"><div class="wrap"><div class="section-head center reveal"><span class="eyebrow">Questions</span><h2>Frequently asked questions</h2></div><div class="faq reveal"><details><summary>Can I make any LED strip smart?</summary><p>Almost any low-voltage strip, as long as you pick a Wi-Fi controller that matches its type (single color, RGB, RGBW or addressable), its voltage and its current draw.</p></details><details><summary>Why are my LED colors wrong after changing the controller?</summary><p>The channel order differs between strips. Look for an RGB order setting in the controller&#x27;s app and switch it until red shows red.</p></details><details><summary>Does a Wi-Fi LED controller work with Google Home?</summary><p>Most do through the controller app&#x27;s link in Google Home, and Matter-certified controllers can be added directly.</p></details><details><summary>Why won&#x27;t my LED controller connect to Wi-Fi?</summary><p>Most controllers only support 2.4 GHz networks. Connect your phone to the 2.4 GHz band, reset the controller and pair it close to the router.</p></details><details><summary>Can one controller run two strips?</summary><p>Yes, if they are the same type and voltage and the combined current stays within the controller&#x27;s rating. A splitter cable makes it easy.</p></details></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head section-head--row reveal"><div><span class="eyebrow">Related light guides</span><h2>Pairs well with</h2></div><a class="link-arrow" href="/collections/all">All guides <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="grid grid-3"><a class="card card--guide reveal" href="/products/wifi-smart-led-strip-lights">
+<div class="card-media"><img src="/assets/img/red-led-strip-ceiling-800.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="800" height="534" alt="Red LED strip lights glowing along a ceiling edge in a dark room" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Smart Lights</span>
+<h3>Smart LED Strip Lights</h3><p>How Wi-Fi LED strips work, what to look for, and how to install them so they look built in.</p><span class="more">Open the guide &rarr;</span></div></a><a class="card card--guide reveal" href="/products/smart-led-light-bulbs">
+<div class="card-media"><img src="/assets/img/smart-home-bulbs-800.webp" srcset="/assets/img/smart-home-bulbs-800.webp 800w, /assets/img/smart-home-bulbs.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="800" height="534" alt="Smart LED light bulbs glowing pink next to a smartphone" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Smart Lights</span>
+<h3>Smart LED Light Bulbs</h3><p>Swap a bulb, open an app, and every lamp in the house can change color, dim and follow a schedule.</p><span class="more">Open the guide &rarr;</span></div></a><a class="card card--guide reveal" href="/products/indoor-fairy-lights">
+<div class="card-media"><img src="/assets/img/warm-bedroom-lighting-800.webp" srcset="/assets/img/warm-bedroom-lighting-800.webp 534w, /assets/img/warm-bedroom-lighting.webp 1067w" sizes="(max-width: 620px) 100vw, (max-width: 1080px) 50vw, 290px" width="534" height="800" alt="Cozy bedroom with warm indoor fairy lights and macrame" loading="lazy" decoding="async"></div>
+<div class="card-body"><span class="tagline">Fairy Lights &amp; String Lights</span>
+<h3>Indoor Fairy Lights</h3><p>How to pick, power and hang fairy lights that make a room feel warm every single evening.</p><span class="more">Open the guide &rarr;</span></div></a></div></div></section>
+<section class="section section--cream"><div class="wrap"><div class="section-head reveal"><span class="eyebrow">Projects</span><h2>Ideas using wi-fi led controller</h2></div>
+<div class="grid grid-3"><a class="card reveal" href="/blogs/blog/how-to-connect-alexa-to-led-strip-lights" data-cat="smart-lighting">
+<div class="card-media"><img src="/assets/img/gaming-rgb-setup-800.webp" srcset="/assets/img/gaming-rgb-setup-800.webp 800w, /assets/img/gaming-rgb-setup.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="800" height="534" alt="Dark gaming desk glowing with RGB LED strip lighting" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">Smart Lighting</span><span>7 min read</span></div>
+<h3>How to Connect Alexa to LED Strip Lights (and Fix It When It Fails)</h3><p>Pair your LED strip with Alexa in about ten minutes: the app-skill method, the 2.4 GHz Wi-Fi trick, voice names that work, and fixes for every common error.</p><span class="more">Read the idea &rarr;</span></div></a><a class="card reveal" href="/blogs/blog/how-to-cut-and-connect-led-strip-lights" data-cat="diy-projects">
+<div class="card-media"><img src="/assets/img/red-led-strip-ceiling-800.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="800" height="534" alt="Red LED strip glowing along the edge of a ceiling in a dark room" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">DIY Projects</span><span>6 min read</span></div>
+<h3>How to Cut and Connect LED Strip Lights (Corners, Gaps and More)</h3><p>Find the cut marks, snip cleanly, then join strips with solderless clips or a soldering iron. Plus corners, gaps, waterproof strips and power injection.</p><span class="more">Read the idea &rarr;</span></div></a><a class="card reveal" href="/blogs/blog/strip-lights-sofa" data-cat="decor-ideas">
+<div class="card-media"><img src="/assets/img/red-led-strip-ceiling-800.webp" srcset="/assets/img/red-led-strip-ceiling-800.webp 800w, /assets/img/red-led-strip-ceiling.webp 1600w" sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 380px" width="800" height="534" alt="Red LED strip light glowing along a ceiling edge in a dark room" loading="lazy" decoding="async"></div>
+<div class="card-body"><div class="card-meta"><span class="chip">Decor Ideas</span><span>5 min read</span></div>
+<h3>LED Lights Under the Couch: A Floating-Sofa Glow Guide</h3><p>A soft strip of light under your sofa makes it look like it is floating. Here is how to choose, measure, mount and control LED lights under a couch.</p><span class="more">Read the idea &rarr;</span></div></a></div></div></section>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-grid">
+<div class="about">
+<a class="logo" href="/" aria-label="Dukora Idea home"><svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="lgf" cx="50%" cy="38%" r="60%"><stop offset="0" stop-color="#fff8e4"/><stop offset=".5" stop-color="#ffc56b"/><stop offset="1" stop-color="#ff8a5b"/></radialGradient></defs><path d="M20 3.5c-6.6 0-11.2 4.9-11.2 10.8 0 4 2.1 6.6 4.1 8.7 1.4 1.4 2 2.8 2 4.5h10.2c0-1.7.6-3.1 2-4.5 2-2.1 4.1-4.7 4.1-8.7C31.2 8.4 26.6 3.5 20 3.5z" fill="url(#lgf)"/><path d="M16.5 21.5c1.2-3 2.3-4.6 3.5-4.6s2.3 1.6 3.5 4.6" fill="none" stroke="#a24d10" stroke-width="1.6" stroke-linecap="round"/><rect x="14.8" y="29" width="10.4" height="3.2" rx="1.6" fill="#d9ddf2"/><rect x="16.3" y="33.2" width="7.4" height="2.8" rx="1.4" fill="#a3a9cc"/></svg><span>Dukora<small>Idea</small></span></a>
+<p style="margin-top:18px">DIY lighting ideas, light guides and tools for cozy, glowing spaces. Fairy lights, LED strips, smart bulbs and the little projects that make a room glow.</p>
+<p><a href="mailto:info@dukoraidea.com">info@dukoraidea.com</a></p>
+</div>
+<div><h3>Fairy &amp; String Lights</h3><ul><li><a href="/products/outdoor-fairy-lights">Outdoor Fairy Lights</a></li><li><a href="/products/battery-operated-fairy-lights">Battery Operated Fairy Lights</a></li><li><a href="/products/outdoor-string-lights">Waterproof Fairy Lights</a></li><li><a href="/products/garland-fairy-string-light">Battery Operated Garland</a></li><li><a href="/products/fake-ivy-leaves">Fake Ivy Leaves</a></li><li><a href="/products/string-lights">Firefly String Lights</a></li><li><a href="/products/fairy-lights">Silver Wire Fairy Lights</a></li><li><a href="/products/indoor-fairy-lights">Indoor Fairy Lights</a></li></ul></div>
+<div><h3>Smart Lights</h3><ul><li><a href="/products/wifi-smart-led-strip-lights">Smart LED Strip Lights</a></li><li><a href="/products/smart-led-light-bulbs">Smart LED Light Bulbs</a></li><li><a href="/products/led-controller">Wi-Fi LED Controller</a></li><li><a href="/collections/all">All light guides</a></li></ul>
+<h3 style="margin-top:28px">Light Tools</h3><ul><li><a href="/pages/light-tools#battery-calculator">Battery life calculator</a></li><li><a href="/pages/light-tools#strip-calculator">LED strip calculator</a></li><li><a href="/pages/light-tools#color-picker">Color & mood picker</a></li><li><a href="/pages/light-tools#patio-planner">Patio light planner</a></li></ul></div>
+<div><h3>Explore</h3><ul><li><a href="/blogs/blog">Ideas &amp; Blog</a></li><li><a href="/blogs/blog/create-your-mason-jar-fairy-lights-in-5-minutes">Mason jar fairy lights</a></li><li><a href="/pages/about-us">About Dukora</a></li><li><a href="/pages/contact">Contact</a></li><li><a href="/policies/privacy-policy">Privacy policy</a></li><li><a href="/policies/terms-of-service">Terms of service</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div>
+</div>
+<div class="footer-bottom"><span>&copy; <span data-year>2026</span> Dukora Idea. Made for night owls and fairy-light hoarders.</span><span>Ideas and guides only: we don't sell lights.</span></div>
+</div>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="/assets/js/site.js?v=eaf5662b" defer></script>
+</body>
+</html>
