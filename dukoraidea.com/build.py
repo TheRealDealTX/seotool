@@ -76,6 +76,17 @@ CATEGORIES = ["DIY Projects", "Decor Ideas", "Smart Lighting", "Guides", "Events
 
 E = html.escape
 
+# Google Analytics 4 tag, emitted at the top of <head> on every page (including the 404).
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPW2DBNKW1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZPW2DBNKW1');
+</script>"""
+
 
 def url(path):
     return SITE["origin"] + path
@@ -318,7 +329,7 @@ def full_title(t):
 
 
 def layout(*, path, title, description, body, image="mason-jar-fairy-lights", schema=(), og_type="website",
-           extra_head="", solid_header=False, progress=False, noindex=False, raw_title=False):
+           extra_head="", solid_header=False, progress=False, noindex=False, raw_title=False, image_alt=None, preload=None):
     canonical = url(path)
     t = title if raw_title else full_title(title)
     graph = [ORG, WEBSITE] + [s for s in schema if s]
@@ -332,6 +343,7 @@ def layout(*, path, title, description, body, image="mason-jar-fairy-lights", sc
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{E(t)}</title>
@@ -339,6 +351,7 @@ def layout(*, path, title, description, body, image="mason-jar-fairy-lights", sc
 {robots}
 <link rel="canonical" href="{canonical}">
 <meta property="og:site_name" content="{SITE['name']}">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{E(title)}">
 <meta property="og:description" content="{E(description)}">
@@ -346,19 +359,28 @@ def layout(*, path, title, description, body, image="mason-jar-fairy-lights", sc
 <meta property="og:image" content="{SITE['origin']}/assets/img/{image}.webp">
 <meta property="og:image:width" content="{w}">
 <meta property="og:image:height" content="{h}">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="{E(image_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{E(title)}">
 <meta name="twitter:description" content="{E(description)}">
 <meta name="twitter:image" content="{SITE['origin']}/assets/img/{image}.webp">
+<meta name="twitter:image:alt" content="{E(image_alt or title)}">
 <meta name="theme-color" content="#0a0d1c">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon-48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/atom+xml" title="Dukora Idea blog" href="{SITE['origin']}/blogs/blog.atom">
+<link rel="sitemap" type="application/xml" href="{SITE['origin']}/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
+{f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">' if preload else ''}
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -444,8 +466,16 @@ def light_string_svg():
 PAGES = {}  # path -> (html, lastmod, priority)
 
 
-def emit(path, doc, lastmod=TODAY, priority="0.6", sitemap=True):
-    PAGES[path] = (doc, lastmod, priority, sitemap)
+def emit(path, doc, lastmod=TODAY, priority="0.6", sitemap=True, images=()):
+    PAGES[path] = (doc, lastmod, priority, sitemap, list(images))
+
+
+def figs_in(body):
+    """(image, alt) pairs for every {{fig:...}} token in a content body (for the image sitemap)."""
+    out = []
+    for m in re.finditer(r"\{\{fig:([^}|]+)\|([^}|]*)", body):
+        out.append((m.group(1).strip(), m.group(2).strip()))
+    return out
 
 
 def page_hero(title, lead, image, trail, eyebrow=None, extra=""):
@@ -587,7 +617,9 @@ def build_home():
                  description="DIY lighting ideas, fairy light projects and smart LED guides. Make mason jar fairy lights, plan patio string lights and size LED strips with free tools.",
                  body=body, image="mason-jar-fairy-lights",
                  schema=[faq_schema(faq), {"@type": "WebPage", "@id": url("/") + "#webpage", "url": url("/"), "name": "Dukora Idea", "isPartOf": {"@id": SITE["origin"] + "/#website"}}])
-    emit("/", doc, priority="1.0")
+    emit("/", doc, priority="1.0", images=[("mason-jar-fairy-lights", "Mason jar filled with glowing fairy lights at night"),
+                                           ("garden-string-lights-night", "Garden patio lit with string lights"),
+                                           ("jar-fairy-lights-twilight", "Glass jar of fairy lights glowing at twilight")])
 
 
 def build_post(p):
@@ -624,9 +656,13 @@ def build_post(p):
         faq_schema(p["faq"]) if p.get("faq") else None,
     ]
     doc = layout(path=path, title=p["meta_title"], description=p["description"], body=html_body, image=p["image"],
-                 schema=schema, og_type="article", progress=True,
-                 extra_head=f'<meta property="article:published_time" content="{p["published"]}">\n<meta property="article:modified_time" content="{p["updated"]}">\n')
-    emit(path, doc, lastmod=p["updated"], priority="0.9" if p["slug"].startswith("create-your-mason") else "0.7")
+                 schema=schema, og_type="article", progress=True, image_alt=p["image_alt"],
+                 extra_head=(f'<meta property="article:published_time" content="{p["published"]}">\n'
+                             f'<meta property="article:modified_time" content="{p["updated"]}">\n'
+                             f'<meta property="article:section" content="{E(p["category"])}">\n'
+                             f'<meta property="article:tag" content="{E(p["keyword"])}">\n'))
+    emit(path, doc, lastmod=p["updated"], priority="0.9" if p["slug"].startswith("create-your-mason") else "0.7",
+         images=[(p["image"], p["image_alt"])] + figs_in(p["body"]))
 
 
 def build_product(p):
@@ -675,8 +711,11 @@ def build_product(p):
         crumbs_schema(trail),
         faq_schema(p["faq"]) if p.get("faq") else None,
     ]
-    doc = layout(path=path, title=p["meta_title"], description=p["description"], body=html_body, image=p["image"], schema=schema, og_type="article")
-    emit(path, doc, lastmod=p.get("updated", TODAY), priority="0.9" if p["slug"] in ("outdoor-fairy-lights", "wifi-smart-led-strip-lights") else "0.8")
+    doc = layout(path=path, title=p["meta_title"], description=p["description"], body=html_body, image=p["image"], schema=schema,
+                 og_type="article", image_alt=p["image_alt"],
+                 extra_head=f'<meta property="article:modified_time" content="{p.get("updated", TODAY)}">\n')
+    emit(path, doc, lastmod=p.get("updated", TODAY), priority="0.9" if p["slug"] in ("outdoor-fairy-lights", "wifi-smart-led-strip-lights") else "0.8",
+         images=[(p["image"], p["image_alt"])] + [(g, p["name"]) for g in p.get("gallery", []) if g in IMG] + figs_in(p["body"]))
 
 
 def build_collection(key):
@@ -856,13 +895,39 @@ def write():
         f = OUT / "home.html" if path == "/" else OUT / (path.lstrip("/") + ".html")
         f.parent.mkdir(parents=True, exist_ok=True)
         f.write_text(doc, encoding="utf-8")
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path, (_d, lastmod, prio, inc) in sorted(PAGES.items(), key=lambda kv: -float(kv[1][2])):
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for path, (_d, lastmod, prio, inc, images) in sorted(PAGES.items(), key=lambda kv: -float(kv[1][2])):
         if inc:
-            sm.append(f"<url><loc>{url(path) if path != '/' else SITE['origin'] + '/'}</loc><lastmod>{lastmod}</lastmod><priority>{prio}</priority></url>")
+            imgs, seen = "", set()
+            for name, _alt in images:
+                if name in IMG and name not in seen:
+                    seen.add(name)
+                    imgs += f"<image:image><image:loc>{SITE['origin']}/assets/img/{name}.webp</image:loc></image:image>"
+            sm.append(f"<url><loc>{url(path)}</loc><lastmod>{lastmod}</lastmod><priority>{prio}</priority>{imgs}</url>")
     sm.append("</urlset>")
     (ROOT / "sitemap.xml").write_text("\n".join(sm) + "\n")
+    (OUT / "blogs").mkdir(parents=True, exist_ok=True)
+    (OUT / "blogs" / "blog.atom").write_text(atom_feed(), encoding="utf-8")
     (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nDisallow: /_pages/\nDisallow: /contact\n\nSitemap: {SITE['origin']}/sitemap.xml\n")
+
+
+def atom_feed():
+    """Atom feed at /blogs/blog.atom, the same path the original Shopify blog used."""
+    x = lambda t: E(t, quote=False)
+    entries = ""
+    for p in POSTS:
+        link = url(f"/blogs/blog/{p['slug']}")
+        entries += (f"<entry><title>{x(p['title'])}</title><link rel=\"alternate\" type=\"text/html\" href=\"{link}\"/>"
+                    f"<id>{link}</id><published>{p['published']}T09:00:00Z</published><updated>{p['updated']}T09:00:00Z</updated>"
+                    f"<category term=\"{x(p['category'])}\"/><summary>{x(p['excerpt'])}</summary></entry>\n")
+    latest = max(p["updated"] for p in POSTS)
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">\n'
+            f'<title>Dukora Idea blog</title><subtitle>{x(SITE["tagline"])}</subtitle>\n'
+            f'<link rel="self" type="application/atom+xml" href="{url("/blogs/blog.atom")}"/>\n'
+            f'<link rel="alternate" type="text/html" href="{url("/blogs/blog")}"/>\n'
+            f'<id>{url("/blogs/blog")}</id><updated>{latest}T09:00:00Z</updated><author><name>Dukora Idea</name></author>\n'
+            f'{entries}</feed>\n')
 
 
 ASSET_V = "1"

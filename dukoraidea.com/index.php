@@ -11,6 +11,9 @@ if (PHP_SAPI === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['REQUEST_U
 }
 
 $home = 'https://dukoraidea.com';
+// Rendered pages. The host only allows files inside public_html, so they sit in ./_pages;
+// robots.txt disallows /_pages/ and every page has a canonical tag.
+$PAGES = __DIR__ . '/_pages';
 $uri  = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode(strtok($uri, '?'));
 $qpos = strpos($uri, '?');
@@ -64,7 +67,7 @@ if ($path === '/contact') go('/pages/contact');
 // Home.
 if ($path === '/' || $path === '/index.php' || $path === '/index.html') {
     if ($path !== '/') go('/' . $qs);
-    page(__DIR__ . '/_pages/home.html');
+    page($PAGES . '/home.html');
 }
 
 // Normalise: lowercase, no trailing slash.
@@ -85,7 +88,6 @@ $legacy = [
     '#^/blogs$#'                                   => '/blogs/blog',
     '#^/blogs/(news|blog)/tagged/.*$#'             => '/blogs/blog',
     '#^/blogs/news(/.*)?$#'                        => '/blogs/blog',
-    '#^/blogs/blog\.atom$#'                        => '/blogs/blog',
     '#^/pages/(contact-us|contact-information)$#'  => '/pages/contact',
     '#^/pages/(about|our-story)$#'                 => '/pages/about-us',
     '#^/policies/privacy$#'                        => '/policies/privacy-policy',
@@ -101,9 +103,17 @@ foreach ($legacy as $re => $to) {
     }
 }
 
+// Atom feed (same path as the original Shopify blog feed).
+if ($path === '/blogs/blog.atom') {
+    header('Content-Type: application/atom+xml; charset=utf-8');
+    header('Cache-Control: public, max-age=3600');
+    readfile($PAGES . '/blogs/blog.atom');
+    exit;
+}
+
 // Pre-rendered page?
 if (preg_match('#^/[a-z0-9][a-z0-9\-/]*$#', $path) && strpos($path, '..') === false) {
-    $file = __DIR__ . '/_pages' . $path . '.html';
+    $file = $PAGES . $path . '.html';
     if (is_file($file)) {
         if (!empty($redirect_after)) go($path . $qs);
         page($file);
@@ -113,4 +123,4 @@ if (preg_match('#^/[a-z0-9][a-z0-9\-/]*$#', $path) && strpos($path, '..') === fa
 // Unknown product or collection handles from the old store -> all light guides.
 if (preg_match('#^/(products|collections)/[a-z0-9\-]+$#', $path)) go('/collections/all');
 
-page(__DIR__ . '/_pages/404.html', 404);
+page($PAGES . '/404.html', 404);

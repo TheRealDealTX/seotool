@@ -104,7 +104,12 @@ def main():
     for path, f in paths.items():
         p = Page()
         p.name = path
-        p.feed(f.read_text(encoding="utf-8"))
+        doc = f.read_text(encoding="utf-8")
+        p.feed(doc)
+        if doc.count("googletagmanager.com/gtag/js?id=G-ZPW2DBNKW1") != 1 or "gtag('config', 'G-ZPW2DBNKW1')" not in doc:
+            err(f"{path}: Google tag missing or duplicated")
+        elif doc.index("G-ZPW2DBNKW1") > doc.index("</head>"):
+            err(f"{path}: Google tag not in <head>")
         if p.h1 != 1:
             err(f"{path}: {p.h1} h1 tags")
         if p.missing_alt:
@@ -158,11 +163,28 @@ def main():
         pth = loc[len(ORIGIN):] or "/"
         if pth not in paths:
             err(f"sitemap: {loc} has no page")
+    # Search Console verification file, favicons, feed
+    gsc = ROOT / "googlecccfbf2f7e9e5ae4.html"
+    if not gsc.is_file() or gsc.read_text().strip() != "google-site-verification: googlecccfbf2f7e9e5ae4.html":
+        err("GSC verification file missing or altered")
+    for f in ("favicon.ico", "favicon.svg", "favicon-32.png", "favicon-48.png", "favicon-96.png", "apple-touch-icon.png", "icon-192.png", "site.webmanifest", "robots.txt"):
+        if not (ROOT / f).is_file():
+            err(f"missing root file {f}")
+    feed = ET.parse(PAGES / "blogs" / "blog.atom").getroot()
+    entries = feed.findall("{http://www.w3.org/2005/Atom}entry")
+    for e in entries:
+        link = e.find("{http://www.w3.org/2005/Atom}link").get("href")
+        if link[len(ORIGIN):] not in paths:
+            err(f"feed: {link} has no page")
+    img_ns = "{http://www.google.com/schemas/sitemap-image/1.1}"
+    for loc in ET.parse(ROOT / "sitemap.xml").getroot().iter(img_ns + "loc"):
+        if not (ROOT / loc.text[len(ORIGIN) + 1:]).is_file():
+            err(f"sitemap image missing: {loc.text}")
     if errors:
         print("\n".join(errors))
         print(f"FAILED: {len(errors)} problem(s)")
         sys.exit(1)
-    print(f"OK: {len(paths)} pages, {len(locs)} sitemap URLs, {len(LEGACY)} legacy URLs present")
+    print(f"OK: {len(paths)} pages, {len(locs)} sitemap URLs, {len(entries)} feed entries, {len(LEGACY)} legacy URLs present, Google tag on every page")
 
 
 if __name__ == "__main__":
