@@ -36,3 +36,9 @@ NAV = [
 ]
 
 TODAY = date.today().isoformat()
+
+# Google Apps Script web-app endpoint (saved for upcoming use; not wired in yet).
+APPS_SCRIPT_URL = (
+    "https://script.google.com/macros/s/"
+    "AKfycbwDvc96Sh6NipyenaSvLywpA1i6UvWjrzGKo-wRyn7v8evypRJRxLOBIv2bCQtlu6jQ/exec"
+)
