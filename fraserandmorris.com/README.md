@@ -4,8 +4,9 @@ Static rebuild of the expired garden-design domain fraserandmorris.com, styled a
 modern plant-led garden design studio. HTML, one CSS file, one JS file and local
 WebP images, with a small PHP front controller and a contact form handler.
 
-**Temporary URL:** https://darkgoldenrod-lyrebird-960547.hostingersite.com
-(Hostinger Agency Growth plan, website UID `haI1jJ1FP`, UK datacenter, PHP 8.3).
+**Live:** https://fraserandmorris.com (Hostinger Agency Growth plan, website UID
+`haI1jJ1FP`, UK datacenter, PHP 8.3). Google Analytics 4: `G-NV7KRXJDDG`.
+Search Console HTML-file verification: `googlecccfbf2f7e9e5ae4.html` (keep it).
 
 ## Rebuilt URLs
 
@@ -58,9 +59,44 @@ The garden pages describe how each type of garden is designed.
 | `validate.py` | Post-build checks: one H1, unique titles and descriptions, JSON-LD, alt text, broken links, legacy URLs |
 | `assets/css/site.css`, `assets/js/site.js` | Styles and behavior (mobile nav, reveals, parallax, petals, seasons tabs) |
 | `assets/img/*.webp` | Royalty-free photos (Pexels license), resized and converted |
-| `index.php` | Serves `home.html` at `/`, legacy 301s, real 404s, `noindex` header on non-production hosts |
+| `_pages/` | Built pages as guarded PHP (generated; served only via `index.php`) |
+| `index.php` | Router: https + bare-domain 301s, serves `_pages/`, legacy 301s, real 404s, `noindex` header on non-production hosts |
 | `contact.php` | Form handler; emails enquiries to info@fraserandmorris.com |
 | `deploy.sh` | Uploads the build through the Hostinger File Browser TUS API |
+
+## Hosting: why pages live in `_pages/`
+
+The host serves any file that exists directly (ignoring `.htaccess`) and only
+routes unknown paths to `index.php`. Static `.html` files therefore could not be
+301-redirected from `http://` or `www.` (79 old backlinks use `http://www.`), and
+were sent with a one-year cache header. So `build.py` writes every page to
+`_pages/<url>.php` behind a guard (direct requests get a 404) and `index.php`
+serves them. That gives one canonical origin (`https://fraserandmorris.com`, 301
+from http and www), real 404s, legacy redirects, and sensible cache and security
+headers. `validate.py` fails if a static `.html` file reappears; `deploy.sh`
+prunes old `.html` files from the server. `gardens/index.php` exists only because
+`/gardens/` is a real folder (it holds `courtyard/courtyard2.jpg`).
+
+**`https://www.` certificate:** the platform certificate covers only
+`fraserandmorris.com`; Hostinger will not attach `www` as a separate domain on the
+agency plan. `http://www.` redirects correctly. To cover `https://www.` too,
+reinstall the SSL certificate in hPanel (the www CNAME is in place now, so the new
+certificate should include it).
+
+## SEO
+
+- One H1, unique title (25 to 65 characters) and description (110 to 165) per page,
+  all enforced by `validate.py`.
+- Canonical, Open Graph (1200×630 JPG in `assets/img/og/`) and Twitter tags.
+- JSON-LD graph: `ProfessionalService`/`LocalBusiness`, `WebSite`, `WebPage`, plus
+  `BreadcrumbList`, `Service`, `FAQPage`, `Blog`/`BlogPosting` and `ItemList` as relevant.
+- `sitemap.xml` with `lastmod` and image entries; `robots.txt` points to it.
+- Responsive images (`-800.webp` variants with `srcset`), hero image preload,
+  lazy loading below the fold, width/height on every image.
+- Favicon set: `favicon.ico`, `favicon.svg`, `favicon-96x96.png`,
+  `apple-touch-icon.png`, `site.webmanifest` with 192/512 icons.
+- Google tag first in `<head>` on every page (checked by `validate.py`).
+- Garden pages link to related blog posts and vice versa.
 
 ## Notes
 

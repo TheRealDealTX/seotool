@@ -184,7 +184,7 @@ POSTS = [
         "image": "country-topiary",
         "title": "Designing a Garden for Year-Round Interest | Fraser & Morris",
         "h1": "Designing a garden for <em>year-round interest</em>",
-        "description": "How to design a garden that looks good in all four seasons: evergreen structure, winter bark, seedheads, bulbs and a planting plan that keeps going from February to November.",
+        "description": "How to design a garden that looks good in all four seasons: evergreen structure, winter bark, seedheads, bulbs and a planting plan for every month.",
         "excerpt": "A garden that only looks good in June is half a garden. How to plan for every month of the year.",
         "related_garden": "country",
         "body": """
@@ -220,7 +220,7 @@ POSTS = [
         "date": "2026-10-06",
         "category": "Planting",
         "image": "grasses-autumn",
-        "title": "Naturalistic Planting With Grasses and Perennials | Fraser & Morris",
+        "title": "Naturalistic Planting: Grasses & Perennials | Fraser & Morris",
         "h1": "Naturalistic planting with <em>grasses and perennials</em>",
         "description": "How to create naturalistic, meadow-style planting with ornamental grasses and perennials: plant choice, matrix planting, repetition and maintenance.",
         "excerpt": "Soft, airy and full of movement: how to plant a border that looks as if it grew there by itself.",

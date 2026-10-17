@@ -469,7 +469,7 @@ section { position: relative; }
 .footer-big { font-family: var(--serif); font-size: clamp(3rem, 12vw, 10rem); line-height: .9; color: rgba(255, 255, 255, .05); white-space: nowrap; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); pointer-events: none; }
 .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; position: relative; }
 .site-footer .logo { color: #fff; margin-bottom: 18px; }
-.site-footer h4 { font-family: var(--sans); font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; font-weight: 700; }
+.site-footer .footer-h { font-family: var(--sans); font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--sage); margin-bottom: 18px; font-weight: 700; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .site-footer a { color: rgba(255, 255, 255, .8); text-decoration: none; }
 .site-footer a:hover { color: #fff; }

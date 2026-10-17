@@ -29,4 +29,18 @@ while IFS= read -r f; do
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . \( -path '*/__pycache__' -o -name '*.py' -o -name 'README.md' -o -name 'deploy.sh' -o -name '.gitignore' \) -prune -o -type f -print | sort)
 echo "uploaded=$ok failed=$fail"
-[ "$fail" -eq 0 ]
+[ "$fail" -eq 0 ] || exit 1
+
+# Prune .html files left on the server that no longer exist locally: the host
+# would serve them directly, bypassing index.php (redirects, headers, 404s).
+api=${FM_FB_URL%/tus}
+for dir in "" gardens/ blog/; do
+  fb "$api/resources/public_html/$dir" | python3 -c 'import json,sys
+for i in json.load(sys.stdin).get("items", []):
+    if not i["isDir"] and i["name"].endswith(".html"): print(i["name"])' | while IFS= read -r name; do
+    if [ ! -f "./$dir$name" ]; then
+      code=$(fb -X DELETE "$api/resources/public_html/$dir$name" -o /dev/null -w "%{http_code}")
+      echo "pruned $dir$name ($code)"
+    fi
+  done
+done

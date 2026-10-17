@@ -5,9 +5,11 @@ Writes every page into this directory. Run `python3 build.py`, then
 `python3 validate.py`. No dependencies beyond the standard library.
 """
 
+import glob
 import html
 import json
 import os
+import re
 from datetime import date
 
 from content import GARDENS, HOME_FAQ
@@ -67,10 +69,14 @@ def strip_tags(s):
     return "".join(out)
 
 
-def img(name, alt, w, h, cls="", lazy=True, extra=""):
+def img(name, alt, w, h, cls="", lazy=True, extra="", sizes=None):
     attrs = f' class="{cls}"' if cls else ""
     load = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
-    return f'<img src="/assets/img/{name}.webp" alt="{esc(alt)}" width="{w}" height="{h}"{attrs}{load}{extra}>'
+    srcset = ""
+    if f"{name}-800" in IMG_SIZE:
+        srcset = (f' srcset="/assets/img/{name}-800.webp 800w, /assets/img/{name}.webp {w}w"'
+                  f' sizes="{sizes or ("100vw" if not lazy else "(max-width: 900px) 100vw, 50vw")}"')
+    return f'<img src="/assets/img/{name}.webp"{srcset} alt="{esc(alt)}" width="{w}" height="{h}"{attrs}{load}{extra}>'
 
 
 IMG_SIZE = {}
@@ -98,9 +104,9 @@ def load_sizes():
             IMG_SIZE[f[:-5]] = (w, h)
 
 
-def pic(name, alt, cls="", lazy=True, extra=""):
+def pic(name, alt, cls="", lazy=True, extra="", sizes=None):
     w, h = IMG_SIZE[name]
-    return img(name, alt, w, h, cls, lazy, extra)
+    return img(name, alt, w, h, cls, lazy, extra, sizes)
 
 
 ALT = {
@@ -149,8 +155,8 @@ ORG = {
     "description": "Plant-led garden design and planting studio based in London, designing town, courtyard, family and country gardens.",
     "url": ORIGIN + "/",
     "email": EMAIL,
-    "image": ORIGIN + "/assets/img/hero-garden-path.webp",
-    "logo": ORIGIN + "/assets/img/logo.svg",
+    "image": ORIGIN + "/assets/img/og/hero-garden-path.jpg",
+    "logo": {"@type": "ImageObject", "url": ORIGIN + "/assets/img/logo-512.png", "width": 512, "height": 512},
     "priceRange": "££",
     "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"},
     "areaServed": ["London", "North London", "South London", "Oxfordshire", "Cotswolds", "Suffolk", "Sussex"],
@@ -218,9 +224,9 @@ def footer():
         <p>A plant-led garden design studio creating town, courtyard, family and country gardens across London, Oxfordshire, Suffolk and Sussex.</p>
         <p><a href="mailto:{EMAIL}">{EMAIL}</a></p>
       </div>
-      <div><h4>Gardens</h4><ul>{gardens}<li><a href="/gardens.html">All gardens</a></li></ul></div>
-      <div><h4>Studio</h4><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
-      <div><h4>Areas</h4><ul><li>North London</li><li>South London</li><li>Oxfordshire</li><li>Suffolk &amp; Sussex</li></ul></div>
+      <div><p class="footer-h">Gardens</p><ul>{gardens}<li><a href="/gardens.html">All gardens</a></li></ul></div>
+      <div><p class="footer-h">Studio</p><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+      <div><p class="footer-h">Areas</p><ul><li>North London</li><li>South London</li><li>Oxfordshire</li><li>Suffolk &amp; Sussex</li></ul></div>
     </div>
     <div class="footer-bottom"><span>&copy; <span id="year">{date.today().year}</span> {NAME}. Garden design &amp; planting.</span><span>London &middot; Oxfordshire &middot; Suffolk &middot; Sussex</span></div>
   </div>
@@ -236,12 +242,32 @@ def asset_version(rel):
         return hashlib.md5(fh.read()).hexdigest()[:8]
 
 
-def page(path, title, description, body, current, schema=None, og_image="hero-garden-path", light=False, robots="index,follow"):
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV7KRXJDDG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NV7KRXJDDG');
+</script>"""
+
+
+def page(path, title, description, body, current, schema=None, og_image="hero-garden-path", light=False,
+         robots="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1", hero=None):
     canonical = ORIGIN + ("/" if path == "/" else path)
-    graph = [ORG, WEBSITE] + (schema or [])
+    webpage = {"@type": "WebPage", "@id": canonical + "#webpage", "url": canonical, "name": title, "description": description,
+               "inLanguage": "en-GB", "isPartOf": {"@id": ORIGIN + "/#website"}, "about": {"@id": ORIGIN + "/#business"},
+               "primaryImageOfPage": {"@type": "ImageObject", "url": f"{ORIGIN}/assets/img/og/{og_image}.jpg", "width": 1200, "height": 630}}
+    graph = [ORG, WEBSITE, webpage] + (schema or [])
+    preload = ""
+    if hero and f"{hero}-800" in IMG_SIZE:
+        preload = (f'<link rel="preload" as="image" href="/assets/img/{hero}.webp" imagesrcset="/assets/img/{hero}-800.webp 800w, '
+                   f'/assets/img/{hero}.webp {IMG_SIZE[hero][0]}w" imagesizes="100vw" fetchpriority="high">\n')
     return f"""<!doctype html>
 <html lang="en-GB">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -253,18 +279,25 @@ def page(path, title, description, body, current, schema=None, og_image="hero-ga
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{ORIGIN}/assets/img/{og_image}.webp">
+<meta property="og:image" content="{ORIGIN}/assets/img/og/{og_image}.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(ALT.get(og_image, NAME))}">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(description)}">
-<meta name="twitter:image" content="{ORIGIN}/assets/img/{og_image}.webp">
+<meta name="twitter:image" content="{ORIGIN}/assets/img/og/{og_image}.jpg">
 <meta name="theme-color" content="#1c2b22">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/site.css?v={asset_version("assets/css/site.css")}">
+{preload}<link rel="stylesheet" href="/assets/css/site.css?v={asset_version("assets/css/site.css")}">
 {jsonld({"@context": "https://schema.org", "@graph": graph})}
 </head>
 <body>
@@ -463,9 +496,20 @@ def build_home():
 </div></section>
 {cta()}
 """
-    title = "Fraser & Morris | Garden Design London | Plant-Led Garden Designers"
+    title = "Garden Design London | Fraser & Morris Garden Designers"
     desc = "Fraser & Morris is a plant-led garden design studio in London creating courtyard, town, family and country gardens across London, Oxfordshire, Suffolk and Sussex."
-    return page("/", title, desc, body, "/", [faq_schema(HOME_FAQ)])
+    return page("/", title, desc, body, "/", [faq_schema(HOME_FAQ)], hero="hero-garden-path")
+
+
+def garden_posts(slug):
+    """Journal articles that link to this garden page, newest first (topped up with the latest posts)."""
+    ordered = sorted(POSTS, key=lambda p: p["date"], reverse=True)
+    picks = [p for p in ordered if p["related_garden"] == slug]
+    picks += [p for p in ordered if p not in picks]
+    return f"""<section class="section"><div class="wrap">
+  <div class="section-head reveal"><div><p class="eyebrow">From the journal</p><h2>Related <em>articles</em></h2></div><a class="btn btn--dark" href="/blog/">All articles {ICON["arrow"]}</a></div>
+  {post_cards(picks[:3])}
+</div></section>"""
 
 
 def build_garden(g):
@@ -492,6 +536,7 @@ def build_garden(g):
   <div class="section-head reveal" style="justify-content:center;text-align:center"><div><p class="eyebrow">Questions</p><h2>{esc(g["tag"])} FAQs</h2></div></div>
   {faq_html(g["faq"])}
 </div></section>
+{garden_posts(g["slug"])}
 <section class="section"><div class="wrap">
   <div class="section-head reveal"><div><p class="eyebrow">Explore</p><h2>Related <em>gardens</em></h2></div><a class="btn btn--dark" href="/gardens.html">All gardens {ICON["arrow"]}</a></div>
   {garden_cards(g["related"], related=True)}
@@ -504,7 +549,7 @@ def build_garden(g):
          "areaServed": ORG["areaServed"], "description": g["description"], "url": ORIGIN + path},
         faq_schema(g["faq"]),
     ]
-    return path, page(path, g["title"], g["description"], body, "/gardens.html", schema, og_image=g["hero"])
+    return path, page(path, g["title"], g["description"], body, "/gardens.html", schema, og_image=g["hero"], hero=g["hero"])
 
 
 def build_gardens_index():
@@ -527,7 +572,7 @@ def build_gardens_index():
         {"@type": "ListItem", "position": i + 1, "url": f"{ORIGIN}/gardens/{g['slug']}.html", "name": g["nav"]} for i, g in enumerate(GARDENS)]}]
     return page("/gardens.html", "Our Gardens: Courtyard, Town, Family & Country | Fraser & Morris",
                 "Explore the gardens Fraser & Morris designs: courtyard and town gardens in London, family gardens, lush shade gardens and country gardens in Oxfordshire.",
-                body, "/gardens.html", schema, og_image="lush-glasshouse")
+                body, "/gardens.html", schema, og_image="lush-glasshouse", hero="lush-glasshouse")
 
 
 def build_about():
@@ -576,7 +621,7 @@ def build_about():
 """
     return page("/about.html", "About Fraser & Morris | Plant-Led Garden Designers in London",
                 "About Fraser & Morris, a London garden design and planting studio creating plant-led town, courtyard, family and country gardens.",
-                body, "/about.html", [breadcrumbs(crumbs)], og_image="meadow-path")
+                body, "/about.html", [breadcrumbs(crumbs)], og_image="meadow-path", hero="meadow-path")
 
 
 def build_services():
@@ -626,7 +671,7 @@ def build_services():
     ]
     return page("/services.html", "Garden Design Services London | Planting Plans | Fraser & Morris",
                 "Garden design services from Fraser & Morris: full garden design, planting plans, build management and aftercare across London, Oxfordshire, Suffolk and Sussex.",
-                body, "/services.html", schema, og_image="hands-planting")
+                body, "/services.html", schema, og_image="hands-planting", hero="hands-planting")
 
 
 def build_contact():
@@ -693,7 +738,7 @@ def build_privacy():
 <p><small>Last updated {TODAY}.</small></p>
 </div></section>
 """
-    return page("/privacy.html", "Privacy Notice | Fraser & Morris", "How Fraser & Morris uses the personal information you send through this website.",
+    return page("/privacy.html", "Privacy Notice | Fraser & Morris", "How Fraser & Morris collects, uses and stores the personal information you send through this website, and how to ask us to see or delete it.",
                 body, "", [breadcrumbs([("Home", "/"), ("Privacy", "/privacy.html")])], light=True)
 
 
@@ -822,10 +867,21 @@ def build_post(p):
         "author": {"@id": ORIGIN + "/#business"}, "publisher": {"@id": ORIGIN + "/#business"},
         "isPartOf": {"@id": ORIGIN + "/blog/#blog"},
     }]
-    html_out = page(path, p["title"], p["description"], body, "/blog/", schema, og_image=p["image"])
+    html_out = page(path, p["title"], p["description"], body, "/blog/", schema, og_image=p["image"], hero=p["image"])
     html_out = html_out.replace('<meta property="og:type" content="website">',
                                 f'<meta property="og:type" content="article">\n<meta property="article:published_time" content="{p["date"]}">')
     return path, html_out
+
+
+PAGE_GUARD = "<?php if (!defined('FM_PAGE')) { http_response_code(404); exit; } ?>\n"
+
+
+def write_page(url_path, content):
+    """Pages live in _pages/ as guarded PHP; index.php is the only way to reach them."""
+    rel = url_path.lstrip("/")
+    rel = rel + "index.html" if rel.endswith("/") or rel == "" else rel
+    assert "<?" not in content, url_path
+    write(os.path.join("_pages", rel + ".php"), PAGE_GUARD + content)
 
 
 def write(rel, content):
@@ -837,27 +893,38 @@ def write(rel, content):
 
 def main():
     load_sizes()
-    pages = {"home.html": build_home(), "about.html": build_about(), "services.html": build_services(),
-             "contact.html": build_contact(), "gardens.html": build_gardens_index(), "privacy.html": build_privacy(), "404.html": build_404()}
+    import shutil
+    shutil.rmtree(os.path.join(ROOT, "_pages"), ignore_errors=True)
+    pages = {"/": build_home(), "/about.html": build_about(), "/services.html": build_services(),
+             "/contact.html": build_contact(), "/gardens.html": build_gardens_index(), "/privacy.html": build_privacy(), "/404.html": build_404()}
     for g in GARDENS:
         path, content = build_garden(g)
-        pages[path.lstrip("/")] = content
-    pages["blog/index.html"] = build_blog_index()
+        pages[path] = content
+    pages["/blog/"] = build_blog_index()
     for post in POSTS:
         path, content = build_post(post)
-        pages[path.lstrip("/")] = content
-    for rel, content in pages.items():
-        write(rel, content)
+        pages[path] = content
+    for url_path, content in pages.items():
+        write_page(url_path, content)
 
     urls = ["/", "/about.html", "/services.html", "/gardens.html"] + [f"/gardens/{g['slug']}.html" for g in GARDENS] + ["/blog/"] + [f"/blog/{p['slug']}.html" for p in posts_sorted()] + ["/contact.html", "/privacy.html"]
     prio = {"/": "1.0", "/gardens.html": "0.9", "/services.html": "0.9"}
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for u in urls:
         lastmod = next((p["date"] for p in POSTS if f"/blog/{p['slug']}.html" == u), TODAY)
-        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{lastmod}</lastmod><priority>{prio.get(u, '0.7')}</priority></url>")
+        imgs = sorted(set(re.findall(r'<img src="/assets/img/([a-z0-9-]+)\.webp"', pages[u])))[:10]
+        img_xml = "".join(f"<image:image><image:loc>{ORIGIN}/assets/img/{i}.webp</image:loc></image:image>" for i in imgs)
+        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{lastmod}</lastmod><priority>{prio.get(u, '0.7')}</priority>{img_xml}</url>")
     sm.append("</urlset>\n")
     write("sitemap.xml", "\n".join(sm))
-    write("robots.txt", f"User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
+    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /_pages/\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
+    for old in ["home.html", "about.html", "services.html", "contact.html", "gardens.html", "privacy.html", "404.html"]:
+        if os.path.exists(os.path.join(ROOT, old)):
+            os.remove(os.path.join(ROOT, old))
+    for d in ("gardens", "blog"):
+        for f in glob.glob(os.path.join(ROOT, d, "*.html")):
+            os.remove(f)
     print(f"built {len(pages)} pages")
 
 

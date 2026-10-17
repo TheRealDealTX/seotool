@@ -1,0 +1,137 @@
+<?php if (!defined('FM_PAGE')) { http_response_code(404); exit; } ?>
+<!doctype html>
+<html lang="en-GB">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NV7KRXJDDG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NV7KRXJDDG');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Family Garden Design in North London | Fraser &amp; Morris</title>
+<meta name="description" content="Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://fraserandmorris.com/gardens/highgate.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fraser & Morris">
+<meta property="og:title" content="Family Garden Design in North London | Fraser &amp; Morris">
+<meta property="og:description" content="Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.">
+<meta property="og:url" content="https://fraserandmorris.com/gardens/highgate.html">
+<meta property="og:image" content="https://fraserandmorris.com/assets/img/og/family-lawn.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Long family lawn with a stone path, weeping willow and mature trees">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Family Garden Design in North London | Fraser &amp; Morris">
+<meta name="twitter:description" content="Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.">
+<meta name="twitter:image" content="https://fraserandmorris.com/assets/img/og/family-lawn.jpg">
+<meta name="theme-color" content="#1c2b22">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/assets/img/family-lawn.webp" imagesrcset="/assets/img/family-lawn-800.webp 800w, /assets/img/family-lawn.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<link rel="stylesheet" href="/assets/css/site.css?v=90dc39f3">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["ProfessionalService","LocalBusiness"],"@id":"https://fraserandmorris.com/#business","name":"Fraser & Morris","alternateName":"Fraser and Morris","description":"Plant-led garden design and planting studio based in London, designing town, courtyard, family and country gardens.","url":"https://fraserandmorris.com/","email":"info@fraserandmorris.com","image":"https://fraserandmorris.com/assets/img/og/hero-garden-path.jpg","logo":{"@type":"ImageObject","url":"https://fraserandmorris.com/assets/img/logo-512.png","width":512,"height":512},"priceRange":"££","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"},"areaServed":["London","North London","South London","Oxfordshire","Cotswolds","Suffolk","Sussex"],"knowsAbout":["Garden design","Planting design","Courtyard garden design","Town garden design","Family garden design","Architectural planting"]},{"@type":"WebSite","@id":"https://fraserandmorris.com/#website","url":"https://fraserandmorris.com/","name":"Fraser & Morris","publisher":{"@id":"https://fraserandmorris.com/#business"}},{"@type":"WebPage","@id":"https://fraserandmorris.com/gardens/highgate.html#webpage","url":"https://fraserandmorris.com/gardens/highgate.html","name":"Family Garden Design in North London | Fraser & Morris","description":"Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.","inLanguage":"en-GB","isPartOf":{"@id":"https://fraserandmorris.com/#website"},"about":{"@id":"https://fraserandmorris.com/#business"},"primaryImageOfPage":{"@type":"ImageObject","url":"https://fraserandmorris.com/assets/img/og/family-lawn.jpg","width":1200,"height":630}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://fraserandmorris.com/"},{"@type":"ListItem","position":2,"name":"Gardens","item":"https://fraserandmorris.com/gardens.html"},{"@type":"ListItem","position":3,"name":"Family Gardens","item":"https://fraserandmorris.com/gardens/highgate.html"}]},{"@type":"Service","name":"Family garden design that grows with the family","serviceType":"Family garden design","provider":{"@id":"https://fraserandmorris.com/#business"},"areaServed":["London","North London","South London","Oxfordshire","Cotswolds","Suffolk","Sussex"],"description":"Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.","url":"https://fraserandmorris.com/gardens/highgate.html"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can a family garden still look beautiful?","acceptedAnswer":{"@type":"Answer","text":"Absolutely. The trick is a clear structure and robust planting in the busy areas, with the more delicate, beautiful planting placed where it will not be trampled."}},{"@type":"Question","name":"What is the best lawn for a family garden?","acceptedAnswer":{"@type":"Answer","text":"A hardwearing, rye-based turf laid on well-prepared, free-draining soil. In shaded areas, consider an alternative surface such as bark or gravel rather than a lawn that will wear out."}},{"@type":"Question","name":"Can you include a garden studio or play structure?","acceptedAnswer":{"@type":"Answer","text":"Yes. We plan them as part of the overall layout so they sit comfortably in the garden and can be screened by planting."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Fraser & Morris home"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 26C6 13 14 5 27 5c0 13-8 21-21 21z" fill="currentColor" opacity=".18"/><path d="M6 26C6 13 14 5 27 5c0 13-8 21-21 21zM6 26L19 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Fraser<span class="amp">&amp;</span>Morris</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul><li><a class="nav-link" href="/">Home</a></li><li class="has-sub"><button type="button" class="nav-link" aria-expanded="false" aria-controls="sub-gardens">Gardens <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button><ul class="sub" id="sub-gardens"><li><a href="/gardens.html">All gardens<small>Overview of our work</small></a></li><li><a href="/gardens/courtyard.html">Courtyard Gardens<small>Courtyard</small></a></li><li><a href="/gardens/belsize.html">Town Gardens<small>Town garden</small></a></li><li><a href="/gardens/highgate.html">Family Gardens<small>Family garden</small></a></li><li><a href="/gardens/family.html">Oxfordshire Gardens<small>Country family garden</small></a></li><li><a href="/gardens/country.html">Country Gardens<small>Architectural planting</small></a></li><li><a href="/gardens/fox.html">Lush &amp; Internal Gardens<small>Lush planting</small></a></li><li><a href="/gardens/artists.html">An Artist&#x27;s Garden<small>Artist&#x27;s garden</small></a></li><li><a href="/gardens/study.html">Study Gardens<small>Study garden</small></a></li><li><a href="/gardens/print.html">House &amp; Garden<small>House &amp; garden</small></a></li></ul></li><li><a class="nav-link" href="/services.html">Services</a></li><li><a class="nav-link" href="/about.html">About</a></li><li><a class="nav-link" href="/blog/">Blog</a></li><li><a class="nav-link" href="/contact.html">Contact</a></li></ul>
+      <a class="btn" href="/contact.html">Start your garden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="nav-contact">Garden design &amp; planting, London<br><a href="mailto:info@fraserandmorris.com">info@fraserandmorris.com</a></p>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="hero page-hero">
+  <div class="hero__media" data-parallax="0.25"><img src="/assets/img/family-lawn.webp" srcset="/assets/img/family-lawn-800.webp 800w, /assets/img/family-lawn.webp 1600w" sizes="100vw" alt="Long family lawn with a stone path, weeping willow and mature trees" width="1600" height="1067" fetchpriority="high"></div>
+  
+  <div class="hero__content"><div class="wrap">
+    <nav class="crumbs fade-up" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><a href="/gardens.html">Gardens</a><span>/</span><span aria-current="page">Family Gardens</span></nav>
+    <p class="eyebrow fade-up">Family garden design</p>
+    <h1 class="fade-up">Family garden design that grows <em>with the family</em></h1>
+    <p class="lead fade-up d2">Family garden design that balances play, entertaining and beautiful planting: robust lawns, hidden play spaces, edible beds and tough borders.</p>
+    <div class="hero__actions fade-up d3"><a class="btn" href="/contact.html">Discuss your garden <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div></div>
+</section>
+<section class="section"><div class="wrap prose-grid">
+  <article class="prose reveal"><p class="lead">A family garden has to do a lot. It is a playground, a dining room, a vegetable patch and somewhere for adults to sit quietly once the children are in bed. Good <strong>family garden design</strong> makes room for all of it without the garden looking like a compromise.</p>
+<h2>Start with how the family uses the space</h2>
+<p>Before anything is drawn we ask practical questions. Where do the children play now? Where does the ball go? Where does the sun land at teatime? Who gardens, and how much time do they have? The answers shape the layout far more than any style.</p>
+<ul>
+<li><strong>Open lawn</strong> where it can be seen from the kitchen, sized for games and laid on good ground so it survives them.</li>
+<li><strong>Hidden places</strong> such as a path through tall planting, a willow den or a seat under a tree, so the garden has something to explore.</li>
+<li><strong>A terrace big enough for the whole family</strong> to eat outside, with shade for summer lunches.</li>
+<li><strong>Edible planting:</strong> fruit trees, herbs by the door and a raised bed children can sow themselves.</li>
+</ul>
+<figure><div class="reveal-img"><img src="/assets/img/hands-seedling.webp" alt="Hands holding a young seedling in garden soil" width="1400" height="1050" loading="lazy"></div><figcaption>Raised beds and simple crops get children growing and eating from the garden.</figcaption></figure>
+<h2>Borders that survive a football</h2>
+<p>Delicate planting next to a lawn used for games does not last. We use resilient shrubs and perennials at the front of borders: hardy geraniums, hydrangeas, viburnums and grasses that bounce back. The more fragile treasures go further back, behind a low hedge or up on a raised bed.</p>
+<div class="pull">A family garden should change as the children do. Today's sandpit is tomorrow's herb garden.</div>
+<h2>Designing for change</h2>
+<p>Children grow up quickly. We plan family gardens in layers so that the play areas can become something else later. A sandpit becomes a pond or a herb bed, a play lawn becomes a meadow, a den becomes a garden studio. Getting the bones right (levels, paths, drainage, trees) means the garden can evolve without starting again.</p>
+<div class="duo"><div class="reveal-img"><img src="/assets/img/family-house-garden.webp" srcset="/assets/img/family-house-garden-800.webp 800w, /assets/img/family-house-garden.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Family house with a formal garden of rounded shrubs, white roses and a stone birdbath" width="1600" height="1068" loading="lazy" decoding="async"></div><div class="reveal-img"><img src="/assets/img/dahlias.webp" srcset="/assets/img/dahlias-800.webp 800w, /assets/img/dahlias.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Coral, peach and cream dahlias in full bloom" width="1600" height="1067" loading="lazy" decoding="async"></div></div><h2>Safety without fuss</h2>
+<p>We avoid poisonous and spiky plants near play areas, design water features that are safe for small children, and choose surfaces that are not slippery in winter. None of this needs to look municipal.</p></article>
+  <aside class="aside">
+    <div class="aside-card reveal"><h3>At a glance</h3><dl><div><dt>Typical size</dt><dd>100 to 400 m²</dd></div><div><dt>Best for</dt><dd>Families with young children</dd></div><div><dt>Season of interest</dt><dd>Spring to autumn</dd></div><div><dt>Signature plants</dt><dd><div class="palette"><span>Hardwearing lawn</span><span>Viburnum</span><span>Hydrangea paniculata</span><span>Geranium &#x27;Rozanne&#x27;</span><span>Apple &amp; pear</span><span>Herbs</span></div></dd></div></dl></div>
+    <div class="aside-card aside-card--dark reveal"><h3>Planning a family garden?</h3><p>Tell us about your space and we will arrange a consultation visit.</p><a class="btn" href="/contact.html">Get in touch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><p style="margin:16px 0 0;font-size:.9rem">Or email <a href="mailto:info@fraserandmorris.com" style="color:#fff">info@fraserandmorris.com</a></p></div>
+  </aside>
+</div></section>
+<section class="section section--cream"><div class="wrap">
+  <div class="section-head reveal" style="justify-content:center;text-align:center"><div><p class="eyebrow">Questions</p><h2>Family garden FAQs</h2></div></div>
+  <div class="faq"><details class="reveal"><summary>Can a family garden still look beautiful?</summary><div class="answer"><p>Absolutely. The trick is a clear structure and robust planting in the busy areas, with the more delicate, beautiful planting placed where it will not be trampled.</p></div></details><details class="reveal"><summary>What is the best lawn for a family garden?</summary><div class="answer"><p>A hardwearing, rye-based turf laid on well-prepared, free-draining soil. In shaded areas, consider an alternative surface such as bark or gravel rather than a lawn that will wear out.</p></div></details><details class="reveal"><summary>Can you include a garden studio or play structure?</summary><div class="answer"><p>Yes. We plan them as part of the overall layout so they sit comfortably in the garden and can be screened by planting.</p></div></details></div>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="section-head reveal"><div><p class="eyebrow">From the journal</p><h2>Related <em>articles</em></h2></div><a class="btn btn--dark" href="/blog/">All articles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="posts"><a class="post-card reveal" data-delay="0" href="/blog/autumn-bulb-planting-guide.html"><span class="post-card__img"><img src="/assets/img/tulips.webp" srcset="/assets/img/tulips-800.webp 800w, /assets/img/tulips.webp 1050w" sizes="(max-width: 900px) 100vw, 50vw" alt="Red, pink and yellow tulips in flower against a blue sky" width="1050" height="1400" loading="lazy" decoding="async"><span class="post-card__cat">Seasonal</span></span><span class="post-card__body"><span class="post-meta"><time datetime="2026-10-12">12 October 2026</time> &middot; 3 min read</span><h3>Autumn bulb planting: a guide to spring colour</h3><p>October and November are the months to plant for spring. A designer&#x27;s guide to bulbs that flower in sequence from February to June.</p><span class="post-card__more">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a><a class="post-card reveal" data-delay="1" href="/blog/how-to-use-dahlias-in-a-garden-border.html"><span class="post-card__img"><img src="/assets/img/dahlias.webp" srcset="/assets/img/dahlias-800.webp 800w, /assets/img/dahlias.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Coral, peach and cream dahlias in full bloom" width="1600" height="1067" loading="lazy" decoding="async"><span class="post-card__cat">Planting</span></span><span class="post-card__body"><span class="post-meta"><time datetime="2026-10-09">9 October 2026</time> &middot; 3 min read</span><h3>How to use dahlias in a garden border</h3><p>Generous, painterly and in flower until the frosts, dahlias can carry a border through late summer. Here&#x27;s how to use them.</p><span class="post-card__more">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a><a class="post-card reveal" data-delay="2" href="/blog/naturalistic-planting-with-grasses-and-perennials.html"><span class="post-card__img"><img src="/assets/img/grasses-autumn.webp" srcset="/assets/img/grasses-autumn-800.webp 800w, /assets/img/grasses-autumn.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="Ornamental grass seedheads glowing in golden autumn light" width="1600" height="1067" loading="lazy" decoding="async"><span class="post-card__cat">Planting</span></span><span class="post-card__body"><span class="post-meta"><time datetime="2026-10-06">6 October 2026</time> &middot; 3 min read</span><h3>Naturalistic planting with grasses and perennials</h3><p>Soft, airy and full of movement: how to plant a border that looks as if it grew there by itself.</p><span class="post-card__more">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span></a></div>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="section-head reveal"><div><p class="eyebrow">Explore</p><h2>Related <em>gardens</em></h2></div><a class="btn btn--dark" href="/gardens.html">All gardens <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <div class="cards cards--related"><a class="card reveal" data-delay="0" href="/gardens/family.html"><img src="/assets/img/country-house-garden.webp" srcset="/assets/img/country-house-garden-800.webp 800w, /assets/img/country-house-garden.webp 1048w" sizes="(max-width: 900px) 100vw, 50vw" alt="Country house with a manicured lawn and colourful flower beds" width="1048" height="1400" loading="lazy" decoding="async"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="card__body"><span class="card__tag">Country family garden</span><h3>Oxfordshire Gardens</h3><p>Generous borders, orchards and meadow for family homes in the Oxfordshire countryside.</p></span></a><a class="card reveal" data-delay="1" href="/gardens/belsize.html"><img src="/assets/img/town-house-door.webp" srcset="/assets/img/town-house-door-800.webp 800w, /assets/img/town-house-door.webp 1050w" sizes="(max-width: 900px) 100vw, 50vw" alt="Period town house entrance flanked by clipped topiary in terracotta pots" width="1050" height="1400" loading="lazy" decoding="async"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="card__body"><span class="card__tag">Town garden</span><h3>Town Gardens</h3><p>Narrow, overlooked plots behind period houses, planned as true outdoor rooms.</p></span></a><a class="card reveal" data-delay="2" href="/gardens/study.html"><img src="/assets/img/study-window.webp" srcset="/assets/img/study-window-800.webp 800w, /assets/img/study-window.webp 1050w" sizes="(max-width: 900px) 100vw, 50vw" alt="Window of a study looking out onto a green garden with hanging plants" width="1050" height="1400" loading="lazy" decoding="async"><span class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><span class="card__body"><span class="card__tag">Study garden</span><h3>Study Gardens</h3><p>Gardens around garden offices and writing rooms, designed for focus and calm.</p></span></a></div>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="cta reveal"><img src="/assets/img/fern-dark.webp" srcset="/assets/img/fern-dark-800.webp 800w, /assets/img/fern-dark.webp 1600w" sizes="(max-width: 900px) 100vw, 50vw" alt="" width="1600" height="1067" loading="lazy" decoding="async">
+    <p class="eyebrow">Start a conversation</p>
+    <h2>Let's talk about <em>your garden</em></h2>
+    <p>Tell us a little about your garden and what you would like from it. We will arrange a visit to see the space, talk through ideas and explain how we can help.</p>
+    <a class="btn" href="/contact.html">Book a consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 26C6 13 14 5 27 5c0 13-8 21-21 21z" fill="currentColor" opacity=".18"/><path d="M6 26C6 13 14 5 27 5c0 13-8 21-21 21zM6 26L19 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Fraser<span class="amp">&amp;</span>Morris</span></a>
+        <p>A plant-led garden design studio creating town, courtyard, family and country gardens across London, Oxfordshire, Suffolk and Sussex.</p>
+        <p><a href="mailto:info@fraserandmorris.com">info@fraserandmorris.com</a></p>
+      </div>
+      <div><p class="footer-h">Gardens</p><ul><li><a href="/gardens/courtyard.html">Courtyard Gardens</a></li><li><a href="/gardens/belsize.html">Town Gardens</a></li><li><a href="/gardens/highgate.html">Family Gardens</a></li><li><a href="/gardens/family.html">Oxfordshire Gardens</a></li><li><a href="/gardens/country.html">Country Gardens</a></li><li><a href="/gardens/fox.html">Lush &amp; Internal Gardens</a></li><li><a href="/gardens.html">All gardens</a></li></ul></div>
+      <div><p class="footer-h">Studio</p><ul><li><a href="/about.html">About</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/privacy.html">Privacy</a></li></ul></div>
+      <div><p class="footer-h">Areas</p><ul><li>North London</li><li>South London</li><li>Oxfordshire</li><li>Suffolk &amp; Sussex</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; <span id="year">2026</span> Fraser & Morris. Garden design &amp; planting.</span><span>London &middot; Oxfordshire &middot; Suffolk &middot; Sussex</span></div>
+  </div>
+  <div class="footer-big" aria-hidden="true">Fraser&amp;Morris</div>
+</footer>
+<button class="to-top" type="button" aria-label="Back to top"><svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+<script src="/assets/js/site.js?v=34ea9e61" defer></script>
+</body>
+</html>
