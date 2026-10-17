@@ -11,6 +11,7 @@ so the staging copy never competes with it in search.
 import html
 import json
 import os
+import shutil
 from datetime import date
 from pathlib import Path
 
@@ -26,6 +27,43 @@ VER = TODAY.replace("-", "")
 SITEMAP = []
 
 esc = html.escape
+
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GJD2ZCQXYM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GJD2ZCQXYM');
+</script>"""
+
+
+def _image_sizes():
+    from PIL import Image
+    return {f.stem: Image.open(f).size for f in (OUT / "assets" / "img").glob("*.webp")}
+
+
+SIZES = _image_sizes()
+
+
+def _og_images():
+    """1200x630 JPEG crops of every photo for social shares (WebP is not read everywhere)."""
+    from PIL import Image
+    og = OUT / "assets" / "og"
+    og.mkdir(exist_ok=True)
+    for f in (OUT / "assets" / "img").glob("*.webp"):
+        dest = og / (f.stem + ".jpg")
+        if dest.exists() and dest.stat().st_mtime >= f.stat().st_mtime:
+            continue
+        im = Image.open(f).convert("RGB")
+        scale = max(1200 / im.width, 630 / im.height)
+        im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
+        left, top = (im.width - 1200) // 2, (im.height - 630) // 2
+        im.crop((left, top, left + 1200, top + 630)).save(dest, "JPEG", quality=82, optimize=True, progressive=True)
+
+
+_og_images()
 
 # ------------------------------------------------------------------ icons (Lucide paths)
 ICONS = {
@@ -55,6 +93,7 @@ def icon(name):
 
 
 def img(name, alt, cls="", w=1200, h=800, eager=False):
+    w, h = SIZES.get(name, (w, h))
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
     return f'<img src="/assets/img/{name}.webp" alt="{esc(alt)}" width="{w}" height="{h}" {load}{c}>'
@@ -176,7 +215,7 @@ def strip(s):
 
 
 # ------------------------------------------------------------------ layout
-def page(path, title, desc, body, active=None, schema=(), og_img="hero-tv-glow", priority="0.7"):
+def page(path, title, desc, body, active=None, schema=(), og_img="hero-tv-glow", priority="0.7", preload=None):
     canonical = ORIGIN + path
     graph = {"@context": "https://schema.org", "@graph": [
         {"@type": "WebSite", "@id": ORIGIN + "/#website", "url": ORIGIN + "/", "name": BIZ["name"], "publisher": {"@id": BUSINESS_ID}},
@@ -188,6 +227,7 @@ def page(path, title, desc, body, active=None, schema=(), og_img="hero-tv-glow",
     doc = f'''<!doctype html>
 <html lang="en-IN" class="no-js">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -199,11 +239,26 @@ def page(path, title, desc, body, active=None, schema=(), og_img="hero-tv-glow",
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{ORIGIN}/assets/img/{og_img}.webp">
+<meta property="og:image" content="{ORIGIN}/assets/og/{og_img}.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(title)}">
 <meta property="og:locale" content="en_IN">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{ORIGIN}/assets/og/{og_img}.jpg">
 <meta name="theme-color" content="#06070c">
+<meta name="format-detection" content="telephone=no">
+<meta name="geo.region" content="IN-WB">
+<meta name="geo.placename" content="Kolkata">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+{f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">' if preload else ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -511,8 +566,8 @@ def build_home():
 {cta()}'''
     page("/", "LED LCD TV Service Centre Kolkata | RJB TV Repair",
          "LED LCD TV service centre in Kolkata for Samsung, Sony, LG and Videocon. Board-level repair of backlight, "
-         "power supply, mainboard and Smart TV faults across Kolkata, Howrah and Hooghly.",
-         body, active="", schema=[faq_schema(HOME_FAQ)], priority="1.0")
+         "power supply, mainboard and Smart TV faults.",
+         body, active="", schema=[faq_schema(HOME_FAQ)], priority="1.0", preload="living-room-led-tv")
 
 
 def build_repairing():
@@ -566,9 +621,9 @@ def build_repairing():
 <ol>{''.join(f"<li><strong>{t}.</strong> {d}</li>" for t, d in PROCESS)}</ol>
 {faq_block(faq)}
 </article>{sidebar(slug)}</div></section>{cta()}'''
-    page(path, "LED LCD TV Repairing in Kolkata | LED & LCD TV Repair Service",
-         "LED and LCD TV repairing in Kolkata: backlight, power supply, mainboard, T-con, lines on screen, sound and "
-         "Smart TV faults for all brands. Board-level diagnosis and a clear quote before work.",
+    page(path, "LED LCD TV Repairing in Kolkata | LED & LCD TV Repair",
+         "LED and LCD TV repairing in Kolkata for all brands: backlight, power supply, mainboard, T-con, lines on "
+         "screen, sound and Smart TV faults. Clear quote first.",
          body, active=slug, og_img="soldering-board",
          schema=[service_schema("LED LCD TV Repairing", "Multi-brand LED and LCD TV repair in Kolkata.", path),
                  crumbs_schema([("Home", "/"), ("LED LCD TV Repairing in Kolkata", path)]), faq_schema(faq)], priority="0.9")
@@ -629,12 +684,15 @@ def build_area(i, a):
     b = BRANDS.get(a["brand"]) if a["brand"] else None
     brand = b["name"] if b else ""
     h1 = f'{brand + " " if brand else ""}{a["kind"]} in {a["place"]}'
-    title = f'{h1} | {"Kolkata" if a["district"] in ("kolkata", "greater") else DISTRICTS[a["district"]]} TV Repair'
-    if len(title) > 68:
-        title = f"{h1} | RJB TV Repair"
+    title = f"{h1} | RJB TV Repair"
+    if len(title) > 60:
+        title = h1
     what = f'{brand} LED TV repair' if brand else "LCD and LED TV repair for all brands"
-    desc = (f'{what} in {a["place"]}, {DISTRICTS[a["district"]]}: no picture, no power, lines on screen, backlight, '
-            f'power supply and Smart TV faults. Board-level diagnosis and a clear quote.')
+    desc = (f'{what} in {a["place"]}: no picture, no power, lines on screen, backlight, power supply '
+            f'and Smart TV faults. Clear quote before work.')
+    if len(desc) > 160:
+        desc = (f'{what} in {a["place"]}: no picture, no power, lines on screen, backlight and Smart TV faults. '
+                f'Clear quote first.')
     if b:
         faults = b["faults"][i % 3: i % 3 + 4]
     else:
@@ -661,7 +719,7 @@ def build_area(i, a):
     dimg, dalt = DISTRICT_IMG[a["district"]]
     brand_link = (f'<p>For the full rundown on {brand} faults and models, see our <a href="{url(b["slug"])}">{brand} LED LCD TV service centre</a> page.</p>'
                   if b else '<p>See also our <a href="/led-lcd-tv-repairing-in-kolkata/">LED LCD TV repairing</a> page for every repair we offer.</p>')
-    body = page_hero(h1, desc.split(": ")[0] + " for homes across " + a["place"] + " and nearby. Board-level diagnosis, honest advice and a clear quote before any work.",
+    body = page_hero(h1, desc.split(": ")[0] + ", " + DISTRICTS[a["district"]] + ". Board-level diagnosis, honest advice and a clear quote before any work.",
                      [("Home", "/"), ("Service Areas", "/service-areas/"), (a["place"], path)], dimg, dalt,
                      f'{DISTRICTS[a["district"]]} · {"Multi-brand" if not b else brand}')
     body += f'''<section class="section"><div class="wrap layout"><article class="prose">
@@ -699,9 +757,9 @@ def build_areas_hub():
 <section class="section section-alt"><div class="wrap">
 <div class="section-head reveal"><h2>Local TV service pages</h2></div>
 <div class="grid g3">{cards}</div></div></section>{cta()}'''
-    page(path, "TV Repair Service Areas | Kolkata, Howrah, Hooghly & 24 Parganas",
-         "Areas covered by RJB LED LCD TV Service Centre: Kolkata, Howrah, Bally, Uttarpara, Chandannagar, Barrackpore, "
-         "Naihati, Budge Budge and more. LED, LCD and Smart TV repair.",
+    page(path, "TV Repair Service Areas | Kolkata, Howrah & Hooghly",
+         "LED, LCD and Smart TV repair areas: Kolkata, Howrah, Bally, Uttarpara, Chandannagar, Barrackpore, Naihati, "
+         "Budge Budge and more across greater Kolkata.",
          body, active="service-areas", og_img="howrah-bridge",
          schema=[crumbs_schema([("Home", "/"), ("Service Areas", path)]),
                  {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": ORIGIN + url(a["slug"]), "name": a["place"]} for i, a in enumerate(AREAS)]}],
@@ -812,7 +870,7 @@ def build_contact():
 <button class="btn btn-glow" type="submit">Send repair request {icon("send")}</button>
 <p class="form-note">We only use your details to reply to this request. See our <a href="/privacy-policy/">privacy policy</a>.</p>
 </form></div></section>'''
-    page(path, "Contact RJB LED LCD TV Service Centre | Book a TV Repair in Kolkata",
+    page(path, "Contact Us | Book a TV Repair in Kolkata | RJB TV Service",
          "Book an LED, LCD or Smart TV repair in Kolkata. Email info@rjbledlcdtvservicecentre.com or send the repair form with your TV's brand, model and fault.",
          body, active="contact", og_img="tv-remote",
          schema=[crumbs_schema([("Home", "/"), ("Contact", path)]), {"@type": "ContactPage", "url": ORIGIN + path}], priority="0.6")
@@ -843,7 +901,8 @@ def build_404():
 <div class="hero-actions" style="justify-content:center"><a class="btn btn-glow" href="/">Home {icon("arrow")}</a>
 <a class="btn btn-ghost" href="/led-lcd-tv-repairing-in-kolkata/">TV repairs</a><a class="btn btn-ghost" href="/contact/">Contact</a></div>
 </div></section>'''
-    page("/404.html", "Page Not Found | RJB LED LCD TV Service Centre", "This page could not be found.", body)
+    page("/404.html", "Page Not Found | RJB LED LCD TV Service Centre",
+         "This page could not be found. Browse LED, LCD and Smart TV repair services from RJB LED LCD TV Service Centre in Kolkata.", body)
 
 
 # ------------------------------------------------------------------ server files
@@ -944,6 +1003,15 @@ def build_static_files():
         '<rect x="8" y="14" width="48" height="32" rx="5" fill="none" stroke="#fff" stroke-width="4"/>'
         '<rect x="13" y="19" width="38" height="22" rx="2" fill="url(#g)"/><rect x="24" y="50" width="16" height="4" rx="2" fill="#fff"/></svg>',
         encoding="utf-8")
+    (OUT / "site.webmanifest").write_text(json.dumps({
+        "name": BIZ["name"], "short_name": "RJB TV Service", "start_url": "/", "display": "standalone",
+        "background_color": "#06070c", "theme_color": "#06070c",
+        "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+                  {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]},
+        indent=2), encoding="utf-8")
+    # Root files copied verbatim (Google Search Console verification, etc.)
+    for f in (ROOT / "static").iterdir():
+        shutil.copyfile(f, OUT / f.name)
     if STAGING:
         robots = "User-agent: *\nDisallow: /\n"
     else:

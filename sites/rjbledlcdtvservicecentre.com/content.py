@@ -121,10 +121,10 @@ BRANDS = {
     "samsung": {
         "slug": "samsung-led-lcd-tv-service-centre-kolkata",
         "name": "Samsung",
-        "title": "Samsung LED LCD TV Service Centre in Kolkata | Samsung TV Repair",
+        "title": "Samsung LED LCD TV Service Centre Kolkata | TV Repair",
         "h1": "Samsung LED LCD TV Service Centre in Kolkata",
         "desc": "Samsung TV repair in Kolkata: LED backlight, power supply, mainboard, lines on screen and "
-                "Smart TV faults on Crystal UHD, QLED and older LCD models. Independent Samsung TV service.",
+                "Smart TV faults on Crystal UHD, QLED and LCD models.",
         "img": "living-room-led-tv", "img_alt": "Samsung-style flat screen LED TV in a Kolkata living room",
         "card": "Crystal UHD, QLED and older LCD/LED Samsung sets: backlight strips, power boards, One Connect and Tizen faults.",
         "intro": [
@@ -156,10 +156,10 @@ BRANDS = {
     "sony": {
         "slug": "sony-led-lcd-tv-service-centre-kolkata",
         "name": "Sony",
-        "title": "Sony LED LCD TV Service Centre in Kolkata | Sony Bravia TV Repair",
+        "title": "Sony LED LCD TV Service Centre Kolkata | Bravia Repair",
         "h1": "Sony LED LCD TV Service Centre in Kolkata",
-        "desc": "Sony Bravia TV repair in Kolkata: no picture, red light blinking, backlight, power board, "
-                "Android TV and Google TV faults. Independent Sony LED LCD TV service centre.",
+        "desc": "Sony Bravia TV repair in Kolkata: no picture, blinking red light, backlight, power board, "
+                "Android TV and Google TV faults. Independent service.",
         "img": "living-room-wall-tv", "img_alt": "Wall-mounted Sony Bravia style television in a bright living room",
         "card": "Bravia LED, LCD and Android/Google TV models: blinking red light codes, backlights and software faults.",
         "intro": [
@@ -193,8 +193,8 @@ BRANDS = {
         "name": "LG",
         "title": "LG LED LCD TV Service Centre in Kolkata | LG TV Repair",
         "h1": "LG LED LCD TV Service Centre in Kolkata",
-        "desc": "LG TV repair in Kolkata: LED backlight strips, no picture, power supply, webOS and Magic Remote "
-                "faults on LG LED, NanoCell and LCD TVs. Independent LG TV service centre.",
+        "desc": "LG TV repair in Kolkata: LED backlight strips, no picture, power supply, webOS and Magic "
+                "Remote faults on LG LED, NanoCell and LCD TVs.",
         "img": "modern-living-tv", "img_alt": "LG style LED TV mounted in a modern white living room",
         "card": "LED, NanoCell and LCD sets: the well-known LG backlight strip fault, power boards and webOS issues.",
         "intro": [
@@ -225,10 +225,10 @@ BRANDS = {
     "videocon": {
         "slug": "videocon-led-lcd-tv-service-centre-kolkata",
         "name": "Videocon",
-        "title": "Videocon LED LCD TV Service Centre in Kolkata | Videocon TV Repair",
+        "title": "Videocon LED LCD TV Service Centre Kolkata | TV Repair",
         "h1": "Videocon LED LCD TV Service Centre in Kolkata",
-        "desc": "Videocon TV repair in Kolkata: LED and LCD Videocon televisions repaired at board level when "
-                "brand support and spare parts are hard to find. Backlight, power and mainboard faults.",
+        "desc": "Videocon TV repair in Kolkata: LED and LCD Videocon TVs repaired at board level, even when "
+                "spare parts are scarce. Backlight, power and mainboard faults.",
         "img": "minimal-tv-room", "img_alt": "Flat screen Videocon style LED TV on a wooden console",
         "card": "Videocon LED and LCD TVs kept running with board-level repair, even where official spares are scarce.",
         "intro": [

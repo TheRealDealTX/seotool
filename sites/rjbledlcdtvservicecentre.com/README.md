@@ -20,8 +20,8 @@ The host ignores `.htaccess` and routes `/` and unknown paths to `index.php`, so
 there is no root `index.html`: `index.php` serves `home.html`, 301s legacy URLs,
 adds trailing slashes and returns `404.html` with a real 404.
 
-**Going live:** link `rjbledlcdtvservicecentre.com` to the website, rebuild
-*without* `STAGING=1`, redeploy. `index.php` then also 301s `www.` and `http://`
+**Live since 2026-10-17** on rjbledlcdtvservicecentre.com (production build,
+indexable). Always build *without* `STAGING=1` now. `index.php` then also 301s `www.` and `http://`
 to `https://rjbledlcdtvservicecentre.com`. Canonicals already point there.
 
 ## URL inventory (from the Semrush positions + backlinks exports)
@@ -45,6 +45,15 @@ and `/tag/<slug>` 301s to them; the four `/tag/…-in-kolkata` tags 301 to the
 brand pages, other `/tag/*` to `/service-areas/`, `/author/admin/` to `/about/`.
 New pages: `/service-areas/`, `/led-vs-lcd-tv/` (targets "which is better led
 or lcd tv"), `/about/`, `/contact/`, `/privacy-policy/`.
+
+## SEO / tracking
+
+- Google tag `G-GJD2ZCQXYM` is the first thing in every page's `<head>` (`GTAG` in build.py).
+- `static/` is copied verbatim to the web root: `googlecccfbf2f7e9e5ae4.html` (Search Console).
+- Favicons: `favicon.ico` (16/32/48), `favicon.svg`, `favicon-96x96.png`,
+  `apple-touch-icon.png`, `web-app-manifest-*.png` + `site.webmanifest`.
+- Social shares use 1200x630 JPEGs generated into `assets/og/`.
+- `validate.py` also fails on a missing Google tag or a stray `noindex`.
 
 ## Notes
 
