@@ -140,7 +140,7 @@ def resource_page(r):
 def home_section():
     latest = RESOURCES[:3]
     items = "\n".join(f"""        <a class="res" href="/resources/{r["slug"]}/">
-          <span class="res-icon" aria-hidden="true">{'PDF' if r.get('file', '').lower().endswith('.pdf') else 'DOC'}</span>
+          <span class="res-icon" aria-hidden="true">{'PDF' if (r.get('file') or '').lower().endswith('.pdf') else 'GUIDE'}</span>
           <span class="res-body">
             <b>{escape(r["title"])}</b>
             <span>{escape(r["summary"])}</span>

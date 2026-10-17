@@ -7,6 +7,61 @@ write-up with no attachment. Run ../build.py after editing.
 
 RESOURCES = [
     {
+        "slug": "walking-on-a-stone-coated-steel-roof",
+        "title": "Walking on a Stone-Coated Steel Roof Without Damaging It",
+        "category": "Roof inspection",
+        "source": "Rise Public Adjusting field note, with a walkthrough video by Coach Lee Haight",
+        "date": "2026-10-17",
+        "published": "2026-10-17",
+        "file": None,
+        "file_label": "",
+        "summary": (
+            "Stone-coated steel dents and crushes under foot traffic. Before you step on one, know whether "
+            "it's direct-to-deck or on battens, whether it has foam inserts, and where it's safe to put "
+            "your weight. When in doubt, fly a drone instead."
+        ),
+        "body": """
+<p>Stone-coated steel looks like tile or shake, but under the stone coating it's a thin steel panel. It holds up well to hail and wind, and it's expensive, which is exactly why the inspection itself can turn into a problem: a careless walk across it leaves dents, crushed noses and cracked coating that weren't there before you showed up. The carrier will call that foot traffic, not storm damage, and it muddies the whole claim. Here's how to avoid being the cause.</p>
+
+<h2>First, figure out what you're standing on</h2>
+<p>There are two ways these roofs are installed, and they behave very differently under your weight.</p>
+<ul>
+  <li><b>Direct to deck.</b> The panels are fastened straight to the decking. The profile has air underneath it, so if there are <b>no foam inserts</b> (the shaped foam that fills the void under each course), the panel has nothing supporting it between the high points. Step in the wrong spot and the panel flattens. Treat an unfilled direct-to-deck roof as a roof you do not walk on.</li>
+  <li><b>On battens.</b> The panels sit on horizontal wood battens, usually with a counter-batten under them. The battens are the only solid support. You can walk this roof, but only along the batten lines, never in the open span between them.</li>
+</ul>
+<p>You can usually tell which one it is from the eave or a rake edge: look for the batten ends under the panels, or press gently on a low course to feel whether there's foam behind it.</p>
+
+<h2>If it's on battens, walk the battens</h2>
+<ol>
+  <li><b>Find the batten rows.</b> They run horizontally under each course, where the panel's nose is fastened. The fastener line gives them away.</li>
+  <li><b>Step on the nose of the panel, over the batten.</b> That's the line where your weight transfers straight into wood. Keep your foot flat and your weight centered.</li>
+  <li><b>Never step in the pan.</b> The flat or curved section between courses is unsupported. That's where the crushing happens.</li>
+  <li><b>Move slowly, soft soles, no gear bags dragging.</b> Stone coating also scrubs off under a twisting boot, which exposes bare steel.</li>
+  <li><b>Photograph your path.</b> If anyone later claims foot-traffic damage, you want to show where you walked and that it was over battens.</li>
+</ol>
+
+<h2>If it's direct to deck without foam, don't walk it</h2>
+<p>Inspect from the ladder at the eaves, from a neighboring roof section, or by drone. Document hail hits and wind damage from the air, then use close-ups from the edge where you can reach without putting weight on the field. If a carrier adjuster insists on walking it, note that in your file; the damage they cause is on them, not you.</p>
+
+<h2>Safer options that get the same evidence</h2>
+<ul>
+  <li><b>Drone.</b> High-resolution orthos and obliques catch hail bruising and displaced stone coating without a single footstep. Fly in flat light to see dents clearly.</li>
+  <li><b>Pole camera from the eave.</b> Good for soft metals, ridge caps and the first few courses.</li>
+  <li><b>Test squares from the edge.</b> Mark and photograph a 10×10 at the eave where you can reach it, rather than in the middle of the field.</li>
+</ul>
+
+<h2>Watch the walkthrough</h2>
+<p>Coach Lee Haight walks a six-figure stone-coated steel roof and shows exactly where to put your feet and why.</p>
+<div class="video">
+  <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcoachleehaight%2Fvideos%2F1026609126724680%2F&show_text=false" title="How to walk on a $100K roof" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+</div>
+<p class="video-link"><a href="https://www.facebook.com/coachleehaight/videos/how-to-walk-on-a-100k-roof-/1026609126724680/" target="_blank" rel="noopener">Open the video on Facebook →</a></p>
+
+<h2>Why this matters for the claim</h2>
+<p>On a tile or stone-coated roof the carrier's first move is often to blame mechanical damage. Every dent you can't explain is a dent they'll use. Walk it right, document your path, and send us the photos and drone files with the claim so the record shows the damage was there before anyone stepped on it.</p>
+""",
+    },
+    {
         "slug": "obsolete-concrete-roof-tiles-florida",
         "title": "Obsolete Concrete Roof Tiles Formerly Produced in Florida",
         "category": "Tile roofing",

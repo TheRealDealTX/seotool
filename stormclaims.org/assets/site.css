@@ -186,3 +186,8 @@ textarea{resize:vertical}
 .preview object{width:100%;height:760px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
 .article-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:28px;padding-top:18px;border-top:1px solid var(--line)}
 @media (max-width:600px){.tile-list{columns:1}.preview object{height:520px}}
+
+/* video embed */
+.video{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:var(--radius);overflow:hidden;margin:0 0 8px}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-link{font-size:14px}
