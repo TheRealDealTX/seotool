@@ -343,6 +343,7 @@ function page_verse(string $ver, string $slug, int $c, int $v): array {
         . '</div><section class="commentary" data-commentary hidden></section>'
         . '<a class="btn" href="' . url_for($ver, $slug, $c) . '#v' . $v . '">' . icon('book') . ' Read ' . e("$name $c") . ' in context</a>'
         . ($compare ? '<section class="compare">' . $compare . '</section>' : '')
+        . related_section($ver, $slug, $c, $v)
         . $nav
         . '<h2 class="grid-title">More verses in ' . e("$name $c") . '</h2>' . $grid
         . credits([$src])
@@ -361,6 +362,17 @@ function page_verse(string $ver, string $slug, int $c, int $v): array {
             ['@type' => 'Quotation', 'text' => $plain, 'isPartOf' => ['@type' => 'Book', 'name' => versions()[$src]['fullTitle'] ?? versions()[$src]['label']], 'citation' => $label],
         ],
     ];
+}
+
+function related_section(string $ver, string $slug, int $c, int $v): string {
+    $items = related_verses($ver, $slug, $c, $v, 6);
+    if (!$items) return '';
+    $h = '<section class="related" id="related"><h2>' . icon('link') . ' Verses with a similar message</h2><ol class="results">';
+    foreach ($items as $r) {
+        $h .= '<li><a href="' . e($r['url']) . '"><strong>' . e($r['ref']) . ($r['src'] !== $ver ? ' · ' . e(versions()[$r['src']]['short']) : '') . '</strong>'
+            . '<span>' . verse_html($r['text'], $r['src']) . '</span></a></li>';
+    }
+    return $h . '</ol><p class="ver-credit">' . RELATED_CREDIT . '</p></section>';
 }
 
 function page_search(string $q, string $ver, string $t, int $page): array {

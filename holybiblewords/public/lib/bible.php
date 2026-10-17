@@ -4,7 +4,7 @@
 const SITE_URL  = 'https://holybiblewords.com';
 const SITE_NAME = 'Holy Bible Words';
 const DATA_DIR  = __DIR__ . '/../data';
-const ASSET_VER = '10';
+const ASSET_VER = '11';
 
 // Public-domain commentaries served by /api/commentary (built by tools/build_commentary.py)
 const COMMENTARIES = [
@@ -186,6 +186,36 @@ function parse_ref(string $q): ?array {
     }
     return [$slug, $ch, $v];
 }
+
+// ---- related verses (OpenBible.info cross references, CC BY; tools/build_related.py) ----
+
+function related_verses(string $ver, string $slug, int $c, int $v, int $limit = 10): array {
+    $f = DATA_DIR . "/related/$slug.json";
+    if (!is_file($f)) return [];
+    static $cache = [];
+    $cache[$slug] ??= json_decode(file_get_contents($f), true)['r'];
+    $out = [];
+    foreach (array_slice($cache[$slug][$c - 1][$v - 1] ?? [], 0, $limit) as [$key, $votes]) {
+        if (!preg_match('/^(\d+)\.(\d+)\.(\d+)(?:-(\d+))?$/', $key, $m)) continue;
+        $b = book_by_index((int)$m[1]);
+        $rc = (int)$m[2]; $from = (int)$m[3]; $to = isset($m[4]) && $m[4] !== '' ? (int)$m[4] : $from;
+        $rows = []; $src = $ver;
+        foreach (resolve_chapter($ver, $b['slug'], $rc) as $row) {
+            if ($row['to'] >= $from && $row['n'] <= $to) { $rows[] = $row; $src = $row['src']; }
+        }
+        if (!$rows) continue;
+        $first = $rows[0]['n']; $last = max($to, end($rows)['to']);
+        $out[] = [
+            'book' => $b['slug'], 'ch' => $rc, 'v' => $from, 'to' => $to,
+            'ref' => book_name($b, $ver) . " $rc:" . ($first === $last ? $first : "{$first}–{$last}"),
+            'url' => url_for($ver, $b['slug'], $rc, $from),
+            'text' => implode(' ', array_column($rows, 'text')), 'src' => $src, 'votes' => (int)$votes,
+        ];
+    }
+    return $out;
+}
+
+const RELATED_CREDIT = 'Related verses from <a href="https://www.openbible.info/labs/cross-references/" rel="noopener" target="_blank">OpenBible.info</a> (CC BY)';
 
 // ---- verse of the day ----
 

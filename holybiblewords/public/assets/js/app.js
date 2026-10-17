@@ -385,6 +385,22 @@
     draw();
   }
 
+  // ---------- related verses (online; OpenBible.info cross references) ----------
+  async function showRelated(box, ver, book, ch, v) {
+    const [{ by }, vers] = await Promise.all([getBooks(), getVers()]);
+    const ref = `${bookName(by[book], vers, ver)} ${ch}:${v}`;
+    box.innerHTML = '<p class="muted">Finding related verses…</p>';
+    let d;
+    try {
+      if (navigator.onLine === false) throw new Error('offline');
+      d = await fetch(`/api/related/${ver}/${book}/${ch}/${v}`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    } catch (e) { box.innerHTML = '<p class="notice">Related verses need an internet connection.</p>'; return; }
+    box.innerHTML = `<div class="com-head"><h3>${icon('link')} Verses with a similar message</h3></div>
+      ${d.items.length ? `<ol class="results related-list">${d.items.map(r => `<li><a href="${r.url}"><strong>${esc(r.ref)}${r.src !== ver ? ' · ' + esc(r.short) : ''}</strong><span>${verseHtml(r.text, r.src)}</span></a></li>`).join('')}</ol>`
+        : `<p class="muted">No related verses listed for ${esc(ref)}.</p>`}
+      <p class="com-foot"><a href="${urlFor(ver, book, ch, v)}">Open the ${esc(ref)} page ${icon('right')}</a> · Cross references from OpenBible.info (CC BY)</p>`;
+  }
+
   // ---------- verse-of-the-day streak ----------
   const MILESTONES = [3, 7, 14, 21, 30, 50, 100, 150, 200, 365, 500, 1000];
   function streakInfo() {
@@ -407,7 +423,6 @@
     s.best = Math.max(s.best || 0, info.n); store.set('streak', s);
     toast(MILESTONES.includes(info.n) ? `🔥 ${info.n}-day streak! Keep it going` : info.n > 1 ? `🔥 ${info.n} days in a row` : 'Today’s verse read — streak started 🔥');
     renderStreak();
-    reminderReadToday();
   }
   function renderStreak() {
     const i = streakInfo();
@@ -430,81 +445,12 @@
     const msg = i.today ? 'You read today’s verse. See you tomorrow!'
       : i.n ? `Read today’s verse to keep your ${i.n}-day streak.` : 'Read the verse of the day every day to build a streak.';
     box.innerHTML = `<div class="streak-top"><span class="streak-count${i.n ? ' on' : ''}">${icon('flame')} ${i.n} day${i.n === 1 ? '' : 's'}</span>
-      <span class="muted">Best: ${i.best}</span></div><ol class="week">${days.join('')}</ol><p class="muted">${msg}</p>
-      <button type="button" class="reminder-btn${store.get('remind', false) ? ' on' : ''}" data-action="reminder">${icon('bell')}
-        ${store.get('remind', false) ? 'Reminder on · 9 PM <small>Tap to turn off</small>' : 'Remind me at 9 PM if I haven’t read it'}</button>`;
+      <span class="muted">Best: ${i.best}</span></div><ol class="week">${days.join('')}</ol><p class="muted">${msg}</p>`;
     box.hidden = false;
     $$('[data-action=votd-done]').forEach(b => {
       b.classList.toggle('done', i.today);
       b.innerHTML = icon('check') + (i.today ? ' Read today' : ' Mark as read');
     });
-  }
-
-  // ---------- streak reminder: web push (browsers, Home Screen app) or local notifications (native app) ----------
-  const REMIND_HOUR = 21;
-  const LN = () => window.Capacitor?.Plugins?.LocalNotifications;
-  const isIOS = () => /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  const standalone = () => navigator.standalone || matchMedia('(display-mode: standalone)').matches;
-  const pushSupported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-  const b64ToBytes = s => Uint8Array.from(atob((s + '='.repeat((4 - s.length % 4) % 4)).replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
-  const postJSON = (url, body) => fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-  async function pushSub() {
-    if (!pushSupported()) return null;
-    const reg = await navigator.serviceWorker.ready;
-    return reg.pushManager.getSubscription();
-  }
-  // native app: one notification per evening for the next two weeks, skipping days already read
-  async function scheduleLocalReminders() {
-    const ln = LN(); if (!ln) return;
-    const ids = Array.from({ length: 14 }, (_, i) => ({ id: 7100 + i }));
-    await ln.cancel({ notifications: ids }).catch(() => {});
-    if (!store.get('remind', false)) return;
-    const days = streakInfo().days, list = [];
-    for (let i = 0; i < 14; i++) {
-      const at = new Date(); at.setDate(at.getDate() + i); at.setHours(REMIND_HOUR, 0, 0, 0);
-      if (at <= new Date() || days[localDate(at)]) continue;
-      list.push({ id: 7100 + i, title: 'Keep your streak going 🔥', body: 'You haven’t read today’s Verse of the Day yet.', schedule: { at, allowWhileIdle: true }, extra: { url: '/verse-of-the-day/' } });
-    }
-    if (list.length) await ln.schedule({ notifications: list }).catch(() => {});
-  }
-  async function enableReminder() {
-    if (LN()) {
-      const p = await LN().requestPermissions().catch(() => ({}));
-      if (p.display !== 'granted') { toast('Notifications are turned off for this app in Settings'); return; }
-      store.set('remind', true); await scheduleLocalReminders();
-    } else {
-      if (!pushSupported()) {
-        toast(isIOS() && !standalone() ? 'On iPhone, add this site to your Home Screen, open it from there, then turn on reminders' : 'This browser can’t show reminders');
-        return;
-      }
-      const perm = await Notification.requestPermission();
-      if (perm !== 'granted') { toast('Allow notifications to get the reminder'); return; }
-      try {
-        const reg = await navigator.serviceWorker.ready;
-        const { key } = await fetch('/api/push/key').then(r => r.json());
-        const sub = (await reg.pushManager.getSubscription()) || await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToBytes(key) });
-        const res = await postJSON('/api/push/subscribe', { subscription: sub.toJSON(), tz: Intl.DateTimeFormat().resolvedOptions().timeZone, hour: REMIND_HOUR, read: streakInfo().today ? localDate() : '' });
-        if (!res.ok) throw new Error(res.status);
-        store.set('remind', true);
-      } catch (e) { toast('Couldn’t turn on the reminder. Check your connection and try again.'); return; }
-    }
-    toast('Reminder on — we’ll nudge you at 9 PM if you haven’t read the verse');
-    renderStreak();
-  }
-  async function disableReminder() {
-    store.set('remind', false);
-    if (LN()) await scheduleLocalReminders();
-    else {
-      const sub = await pushSub().catch(() => null);
-      if (sub) { postJSON('/api/push/unsubscribe', { endpoint: sub.endpoint }).catch(() => {}); sub.unsubscribe().catch(() => {}); }
-    }
-    toast('Reminder off'); renderStreak();
-  }
-  async function reminderReadToday() {
-    if (!store.get('remind', false)) return;
-    if (LN()) return scheduleLocalReminders();
-    const sub = await pushSub().catch(() => null);
-    if (sub) postJSON('/api/push/read', { endpoint: sub.endpoint, date: localDate() }).catch(() => {});
   }
 
   // ---------- chapter reader ----------
@@ -604,7 +550,7 @@
         <button type="button" data-a="image">${icon('image')}Image</button>
         <button type="button" data-a="compare">${icon('compare')}Compare</button>
         <button type="button" data-a="explain">${icon('bulb')}Explain</button>
-        <button type="button" data-a="open">${icon('right')}Verse page</button>
+        <button type="button" data-a="related">${icon('link')}Related</button>
       </div><div data-extra></div>`, onClose);
     body.addEventListener('click', async e => {
       const hl = e.target.closest('[data-hl]');
@@ -632,6 +578,9 @@
         shareIt({ title: ref, text: `“${text}” — ${ref} (${short})`, url });
       } else if (a === 'image') {
         imageSheet(text, `${ref} · ${short}`);
+      } else if (a === 'related') {
+        await showRelated(extra, ver, book, ch, v);
+        extra.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else if (a === 'explain') {
         await showCommentary(extra, ver, book, ch, v);
         extra.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -866,7 +815,6 @@
       <div class="set-row"><span>Verse numbers</span>${seg('nums', [['true', 'Show'], ['false', 'Hide']])}</div>
       <div class="set-row"><span>Side by side</span>${seg('parallel', [['false', 'Off'], ['true', 'On']])}</div>
       <div class="set-row"><span>Side by side with</span>${seg('pver', [['auto', 'Auto'], ...Object.entries(VERS || {}).map(([k, v]) => [k, v.short])])}</div>
-      <div class="set-row"><span>Streak reminder (9 PM)</span><button type="button" class="btn ghost" data-action="reminder">${store.get('remind', false) ? 'Turn off' : 'Turn on'}</button></div>
       <div class="set-row"><span>Offline reading</span><a href="/app/">Download a version</a></div>`);
     body.addEventListener('click', e => {
       const b = e.target.closest('[data-val]'); if (!b) return;
@@ -891,10 +839,6 @@
     else if (a === 'parallel') { settings.parallel = !settings.parallel; saveSettings(); setParallel(settings.parallel); }
     else if (a === 'listen') { speaking ? stopListening() : startListening(+(captureAnchor()?.v || 1)); }
     else if (a === 'votd-done') markVotdRead();
-    else if (a === 'reminder') {
-      (store.get('remind', false) ? disableReminder() : enableReminder())
-        .then(() => { if (b.closest('.sheet')) b.textContent = store.get('remind', false) ? 'Turn off' : 'Turn on'; });
-    }
     else if (a === 'explain-votd') {
       markVotdRead();
       const card = $('[data-votd]'); const { book, ch, v } = parseKey(card.dataset.ref);
@@ -1260,8 +1204,6 @@
   // ---------- boot ----------
   applySettings();
   getVers().catch(() => {});
-  // native app: drop the old 7 AM reminder and keep two weeks of streak reminders queued
-  if (LN()) { LN().cancel({ notifications: [{ id: 7001 }] }).catch(() => {}); scheduleLocalReminders(); }
   darkMQ.addEventListener?.('change', applySettings);
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));

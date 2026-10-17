@@ -409,11 +409,10 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 .mini-status .ic { width: 15px; height: 15px; }
 .hero { padding-top: 22px; }
 
-/* reminder toggle under the streak */
-.reminder-btn { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 12px; padding: 10px 12px; border-radius: 12px;
-  border: 1px dashed var(--line); background: transparent; color: var(--text); font: 600 .9rem var(--sans); cursor: pointer; text-align: left; }
-.reminder-btn:hover { border-color: var(--accent); }
-.reminder-btn .ic { width: 18px; height: 18px; color: var(--accent); }
-.reminder-btn.on { border-style: solid; border-color: var(--green); color: var(--green); }
-.reminder-btn.on .ic { color: var(--green); }
-.reminder-btn small { margin-left: auto; color: var(--muted); font-weight: 500; }
+
+/* related verses */
+.related { margin-top: 28px; }
+.related h2 { display: flex; align-items: center; gap: 8px; font-size: 1.1rem; }
+.related h2 .ic, .com-head h3 .ic { flex: none; }
+.related .ver-credit { text-align: left; margin-top: 10px; }
+.related-list a span { font-size: .98rem; }

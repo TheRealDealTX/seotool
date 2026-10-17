@@ -54,23 +54,13 @@ function api(string $path): void {
         return;
     }
 
-    if ($route === 'push') {
-        require_once __DIR__ . '/push.php';
-        $act = $seg[1] ?? '';
-        if ($act === 'key') { json_out(['key' => vapid_keys()['public'], 'hour' => REMINDER_HOUR], 200, 86400); return; }
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') { json_out(['error' => 'POST only'], 405, 0); return; }
-        $in = json_decode(file_get_contents('php://input', false, null, 0, 8192), true) ?: [];
-        if ($act === 'subscribe') {
-            $sub = $in['subscription'] ?? [];
-            $sub['tz'] = $in['tz'] ?? 'UTC';
-            $sub['hour'] = $in['hour'] ?? REMINDER_HOUR;
-            $ok = sub_save($sub);
-            if ($ok && !empty($in['read'])) sub_mark_read((string)$sub['endpoint'], (string)$in['read']);
-            json_out(['ok' => $ok], $ok ? 200 : 400, 0); return;
-        }
-        if ($act === 'read') { sub_mark_read((string)($in['endpoint'] ?? ''), (string)($in['date'] ?? '')); json_out(['ok' => true], 200, 0); return; }
-        if ($act === 'unsubscribe') { sub_delete((string)($in['endpoint'] ?? '')); json_out(['ok' => true], 200, 0); return; }
-        json_out(['error' => 'not found'], 404, 0); return;
+    if ($route === 'related' && count($seg) === 5 && isset($vers[$seg[1]], books()[$seg[2]]) && ctype_digit($seg[3]) && ctype_digit($seg[4])) {
+        [$_, $ver, $slug, $c, $v] = $seg;
+        $book = books()[$slug]; $c = (int)$c; $v = (int)$v;
+        if ($c < 1 || $c > count($book['verses']) || $v < 1 || $v > $book['verses'][$c - 1]) { json_out(['error' => 'not found'], 404); return; }
+        $items = array_map(fn($r) => $r + ['short' => $vers[$r['src']]['short']], related_verses($ver, $slug, $c, $v));
+        json_out(['ver' => $ver, 'book' => $slug, 'ch' => $c, 'v' => $v, 'items' => $items], 200, 604800);
+        return;
     }
 
     if ($route === 'votd') {
