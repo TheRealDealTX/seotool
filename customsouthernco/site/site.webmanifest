@@ -1,0 +1,20 @@
+{
+ "name": "Custom Southern Co.",
+ "short_name": "Custom Southern",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#f6efe3",
+ "theme_color": "#2f3b2b",
+ "icons": [
+  {
+   "src": "/favicon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/favicon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

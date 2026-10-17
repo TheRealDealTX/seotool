@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /home.html
+Disallow: /contact.php
+
+Sitemap: https://customsouthernco.com/sitemap.xml
