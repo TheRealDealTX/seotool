@@ -48,6 +48,24 @@ free to use under the [Unsplash License](https://unsplash.com/license). Photogra
 are listed in `credits.json` and credited under the preview. Users can also pick
 their own photo; it never leaves the device.
 
+## Commentary
+
+The **Explain** button (verse menu, verse pages, Verse of the Day) loads public-domain
+commentaries from `/api/commentary/{book}/{ch}/{v}`:
+- Matthew Henry's Concise Commentary (passage notes)
+- Jamieson-Fausset-Brown (verse notes)
+
+Both come from CrossWire SWORD modules. `tools/build_commentary.py` (with
+`tools/sword.py`) converts them into `public/data/commentary/`. It's online only and
+English only. On Cebuano pages the label is in Cebuano, with a Google Translate link.
+BibleRef.com's commentary is copyrighted, so it isn't used.
+
+## Verse-of-the-day streak
+
+Kept on the device (`hbw.streak`). A day counts when the reader taps *Mark as read*, or
+opens, explains, shares or makes an image of that day's verse. The streak stays alive
+until the end of the next day.
+
 ## Features
 
 - **Seamless version switching.** The KJV / AB / APSD toggle in the header keeps you on the same

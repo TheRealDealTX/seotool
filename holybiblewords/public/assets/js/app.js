@@ -199,6 +199,7 @@
       switchVersion(a.dataset.ver, a.getAttribute('href'));
       return;
     }
+    if (a.closest('[data-votd]')) markVotdRead();
     // verse numbers inside the reader open the verse sheet instead of navigating
     if (a.classList.contains('vn') && a.closest('.chapter')) return;
     e.preventDefault();
@@ -305,13 +306,14 @@
   function initVotd(main) {
     const card = $('[data-votd]', main);
     if (!card) return;
+    renderStreak();
     const want = localDate();
     const ver = main.dataset.page === 'home' ? prefVer() : card.dataset.ver;
     if (card.dataset.date !== want || card.dataset.ver !== ver) refreshVotd(card, ver, want);
     // roll over at local midnight if the page stays open
     const now = new Date(), next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 5);
     clearTimeout(initVotd.t);
-    initVotd.t = setTimeout(() => { const c = $('[data-votd]'); if (c) refreshVotd(c, c.dataset.ver, localDate()); }, next - now);
+    initVotd.t = setTimeout(() => { const c = $('[data-votd]'); if (c) { refreshVotd(c, c.dataset.ver, localDate()); renderStreak(); } }, next - now);
   }
   async function refreshVotd(card, ver, date) {
     try {
@@ -337,6 +339,96 @@
     const short = $('.votd-ref .badge', card).textContent;
     const ref = plain(Array.from($('.votd-ref a', card).childNodes).filter(n => n.nodeType === 3).map(n => n.textContent).join(''));
     return { text: plain($('.votd-text', card).textContent), ref, short, url: location.origin + urlFor(card.dataset.ver, book, ch, v) };
+  }
+
+  // ---------- commentary (online only; public-domain Matthew Henry + JFB) ----------
+  const comCache = new Map();
+  function getCommentary(book, ch, v) {
+    const k = `${book}/${ch}/${v}`;
+    if (!comCache.has(k)) comCache.set(k, fetch(`/api/commentary/${k}`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch(e => { comCache.delete(k); throw e; }));
+    return comCache.get(k);
+  }
+  async function showCommentary(box, ver, book, ch, v) {
+    const [{ by }, vers] = await Promise.all([getBooks(), getVers()]);
+    const cebuano = vers[ver]?.lang === 'ceb';
+    const name = `${bookName(by[book], vers, ver)} ${ch}`;
+    box.innerHTML = `<p class="muted">${cebuano ? 'Nagkarga sa komentaryo…' : 'Loading commentary…'}</p>`;
+    let d;
+    try {
+      if (navigator.onLine === false) throw new Error('offline');
+      d = await getCommentary(book, ch, v);
+    } catch (e) {
+      box.innerHTML = `<p class="notice">${cebuano ? 'Kinahanglan og internet ang komentaryo.' : 'Commentary needs an internet connection.'}</p>`;
+      return;
+    }
+    if (!d.items.length) { box.innerHTML = `<p class="muted">No commentary for ${esc(name)}:${v}.</p>`; return; }
+    let tab = d.items.find(x => x.id === store.get('comtab', 'mhcc')) ? store.get('comtab', 'mhcc') : d.items[0].id;
+    const draw = () => {
+      const it = d.items.find(x => x.id === tab);
+      const range = it.from === it.to ? `${it.from}` : `${it.from}–${it.to}`;
+      // cross-references point at the KJV; keep the reader in their version
+      const body = it.html.replace(/href="\/ta\//g, `href="/${ver}/`);
+      box.innerHTML = `<div class="com-head"><h3>${icon('bulb')} ${cebuano ? 'Komentaryo' : 'Commentary'} · ${esc(name)}:${range}</h3>
+        ${cebuano ? '<p class="muted">Kini nga komentaryo anaa lamang sa English.</p>' : ''}</div>
+        <div class="tabs" role="tablist">${d.items.map(x => `<button role="tab" type="button" data-com="${x.id}" aria-selected="${x.id === tab}">${esc(x.short)}</button>`).join('')}</div>
+        <div class="com-body" lang="en">${body}</div>
+        <p class="com-foot">${esc(it.name)} · public domain${cebuano ? ` · <a href="#" data-translate>${icon('compare')} Hubara sa Cebuano (Google Translate)</a>` : ''}</p>`;
+      $$('[data-com]', box).forEach(b => b.onclick = () => { tab = b.dataset.com; store.set('comtab', tab); draw(); });
+      const tr = $('[data-translate]', box);
+      if (tr) tr.onclick = e => {
+        e.preventDefault();
+        const text = $('.com-body', box).innerText.replace(/\s+\n/g, '\n').slice(0, 4500);
+        window.open('https://translate.google.com/?' + new URLSearchParams({ sl: 'en', tl: 'ceb', op: 'translate', text }), '_blank', 'noopener');
+      };
+    };
+    draw();
+  }
+
+  // ---------- verse-of-the-day streak ----------
+  const MILESTONES = [3, 7, 14, 21, 30, 50, 100, 150, 200, 365, 500, 1000];
+  function streakInfo() {
+    const s = store.get('streak', { days: {}, best: 0 });
+    const today = localDate(), d = new Date();
+    if (!s.days[today]) d.setDate(d.getDate() - 1);           // still alive until today ends
+    let n = 0;
+    while (s.days[localDate(d)]) { n++; d.setDate(d.getDate() - 1); }
+    return { n, best: Math.max(s.best || 0, n), today: !!s.days[today], days: s.days };
+  }
+  function markVotdRead() {
+    const s = store.get('streak', { days: {}, best: 0 });
+    const today = localDate();
+    if (s.days[today]) return;
+    s.days[today] = 1;
+    const keep = Object.keys(s.days).sort().slice(-800);         // plenty for the longest streaks
+    s.days = Object.fromEntries(keep.map(k => [k, 1]));
+    store.set('streak', s);
+    const info = streakInfo();
+    s.best = Math.max(s.best || 0, info.n); store.set('streak', s);
+    toast(MILESTONES.includes(info.n) ? `🔥 ${info.n}-day streak! Keep it going` : info.n > 1 ? `🔥 ${info.n} days in a row` : 'Today’s verse read — streak started 🔥');
+    renderStreak();
+  }
+  function renderStreak() {
+    const box = $('[data-streak]');
+    if (!box) return;
+    const i = streakInfo();
+    const days = [], d = new Date();
+    d.setDate(d.getDate() - 6);
+    for (let k = 0; k < 7; k++) {
+      const key = localDate(d);
+      days.push(`<li class="${i.days[key] ? 'done' : ''}${k === 6 ? ' today' : ''}" title="${d.toLocaleDateString(undefined, { weekday: 'long', month: 'short', day: 'numeric' })}">
+        <span>${d.toLocaleDateString(undefined, { weekday: 'narrow' })}</span><i>${i.days[key] ? icon('check') : ''}</i></li>`);
+      d.setDate(d.getDate() + 1);
+    }
+    const msg = i.today ? 'You read today’s verse. See you tomorrow!'
+      : i.n ? `Read today’s verse to keep your ${i.n}-day streak.` : 'Read the verse of the day every day to build a streak.';
+    box.innerHTML = `<div class="streak-top"><span class="streak-count${i.n ? ' on' : ''}">${icon('flame')} ${i.n} day${i.n === 1 ? '' : 's'}</span>
+      <span class="muted">Best: ${i.best}</span></div><ol class="week">${days.join('')}</ol><p class="muted">${msg}</p>`;
+    box.hidden = false;
+    $$('[data-action=votd-done]').forEach(b => {
+      b.classList.toggle('done', i.today);
+      b.innerHTML = icon('check') + (i.today ? ' Read today' : ' Mark as read');
+    });
   }
 
   // ---------- chapter reader ----------
@@ -435,7 +527,7 @@
         <button type="button" data-a="share">${icon('share')}Share</button>
         <button type="button" data-a="image">${icon('image')}Image</button>
         <button type="button" data-a="compare">${icon('compare')}Compare</button>
-        <button type="button" data-a="listen">${icon('play')}Listen</button>
+        <button type="button" data-a="explain">${icon('bulb')}Explain</button>
         <button type="button" data-a="open">${icon('right')}Verse page</button>
       </div><div data-extra></div>`, onClose);
     body.addEventListener('click', async e => {
@@ -464,6 +556,9 @@
         shareIt({ title: ref, text: `“${text}” — ${ref} (${short})`, url });
       } else if (a === 'image') {
         imageSheet(text, `${ref} · ${short}`);
+      } else if (a === 'explain') {
+        await showCommentary(extra, ver, book, ch, v);
+        extra.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else if (a === 'compare') {
         extra.innerHTML = '<p class="muted">Loading…</p>';
         try {
@@ -620,6 +715,10 @@
     $('[data-action=verse-share]', main).onclick = () => shareIt({ title: ref, text: `“${text}” — ${ref}`, url });
     $('[data-action=verse-image]', main).onclick = () => imageSheet(text, ref);
     save.onclick = () => { if (marks.bm[k]) delete marks.bm[k]; else marks.bm[k] = Date.now(); marks.save(); paint(); toast(marks.bm[k] ? 'Bookmarked' : 'Bookmark removed'); };
+    const com = $('[data-commentary]', main);
+    $('[data-action=verse-explain]', main).onclick = async () => {
+      com.hidden = false; await showCommentary(com, ver, book, ch, v); com.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
   }
 
   // ---------- picker ----------
@@ -726,8 +825,14 @@
     else if (a === 'picker') openPicker(b.dataset.book, +b.dataset.ch);
     else if (a === 'parallel') { settings.parallel = !settings.parallel; saveSettings(); setParallel(settings.parallel); }
     else if (a === 'listen') { speaking ? stopListening() : startListening(+(captureAnchor()?.v || 1)); }
-    else if (a === 'share-votd') { const p = votdPayload(); shareIt({ title: 'Verse of the Day — ' + p.ref, text: `“${p.text}” — ${p.ref} (${p.short})`, url: p.url }); }
-    else if (a === 'image-votd') { const p = votdPayload(); imageSheet(p.text, `${p.ref} · ${p.short}`); }
+    else if (a === 'votd-done') markVotdRead();
+    else if (a === 'explain-votd') {
+      markVotdRead();
+      const card = $('[data-votd]'); const { book, ch, v } = parseKey(card.dataset.ref);
+      showCommentary(openSheet('Commentary', ''), card.dataset.ver, book, ch, v);
+    }
+    else if (a === 'share-votd') { markVotdRead(); const p = votdPayload(); shareIt({ title: 'Verse of the Day — ' + p.ref, text: `“${p.text}” — ${p.ref} (${p.short})`, url: p.url }); }
+    else if (a === 'image-votd') { markVotdRead(); const p = votdPayload(); imageSheet(p.text, `${p.ref} · ${p.short}`); }
     else if (a === 'install') installApp();
     else if (a === 'offline') downloadVersion(b.dataset.ver, b);
   });

@@ -28,6 +28,32 @@ function api(string $path): void {
         return;
     }
 
+    if ($route === 'commentary' && count($seg) === 4 && isset(books()[$seg[1]]) && ctype_digit($seg[2]) && ctype_digit($seg[3])) {
+        [$_, $slug, $c, $v] = $seg;
+        $c = (int)$c; $v = (int)$v;
+        $book = books()[$slug];
+        if ($c < 1 || $c > count($book['verses']) || $v < 1 || $v > $book['verses'][$c - 1]) { json_out(['error' => 'not found'], 404); return; }
+        $items = [];
+        foreach (COMMENTARIES as $id => $meta) {
+            $f = DATA_DIR . "/commentary/$id/$slug.json";
+            if (!is_file($f)) continue;
+            $d = json_decode(file_get_contents($f), true);
+            $row = $d['m'][$c - 1];
+            // a verse without its own note belongs to the passage note before it
+            $from = $v;
+            while ($from > 1 && $row[$from - 1] === -1) $from--;
+            $i = $row[$from - 1];
+            if ($i === -1) continue;
+            // the whole passage this note covers within the chapter
+            $from = array_search($i, $row, true) + 1;
+            $to = max(array_keys($row, $i, true)) + 1;
+            while ($to < count($row) && $row[$to] === -1) $to++;
+            $items[] = ['id' => $id, 'name' => $meta['name'], 'short' => $meta['short'], 'from' => $from, 'to' => $to, 'html' => $d['e'][$i]];
+        }
+        json_out(['book' => $slug, 'ch' => $c, 'v' => $v, 'items' => $items, 'license' => 'Public domain'], 200, 604800);
+        return;
+    }
+
     if ($route === 'votd') {
         $date = preg_match('/^\d{4}-\d{2}-\d{2}$/', $_GET['date'] ?? '') ? $_GET['date'] : site_today();
         [$slug, $c, $v] = votd_for($date);

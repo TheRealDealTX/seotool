@@ -33,10 +33,13 @@ function votd_card(string $ver, string $ymd, bool $h1 = false): string {
         . '<p class="votd-ref"><a href="' . url_for($ver, $slug, $c, $v) . '">' . e(book_name($book, $shownVer) . " $c:" . range_label($row)) . ' <span class="badge">' . e(versions()[$shownVer]['short']) . '</span></a></p>'
         . $note
         . '<div class="votd-actions">'
-        . '<a class="btn" href="' . url_for($ver, $slug, $c) . '#v' . $v . '">' . icon('book') . ' Read chapter</a>'
+        . '<button class="btn" type="button" data-action="votd-done">' . icon('check') . ' Mark as read</button>'
+        . '<a class="btn ghost" href="' . url_for($ver, $slug, $c) . '#v' . $v . '">' . icon('book') . ' Read chapter</a>'
+        . '<button class="btn ghost" type="button" data-action="explain-votd">' . icon('bulb') . ' Explain</button>'
         . '<button class="btn ghost" type="button" data-action="share-votd">' . icon('share') . ' Share</button>'
         . '<button class="btn ghost" type="button" data-action="image-votd">' . icon('image') . ' Image</button>'
-        . '</div></section>';
+        . '</div>'
+        . '<div class="streak" data-streak hidden></div></section>';
 }
 
 /** "Not yet available in X — showing Y." when a fill-in version is used. */
@@ -341,7 +344,8 @@ function page_verse(string $ver, string $slug, int $c, int $v): array {
         . '<button class="btn ghost" type="button" data-action="verse-share">' . icon('share') . ' Share</button>'
         . '<button class="btn ghost" type="button" data-action="verse-image">' . icon('image') . ' Image</button>'
         . '<button class="btn ghost" type="button" data-action="verse-save">' . icon('bookmark') . ' Save</button>'
-        . '</div>'
+        . '<button class="btn ghost" type="button" data-action="verse-explain">' . icon('bulb') . ' Explain</button>'
+        . '</div><section class="commentary" data-commentary hidden></section>'
         . '<a class="btn" href="' . url_for($ver, $slug, $c) . '#v' . $v . '">' . icon('book') . ' Read ' . e("$name $c") . ' in context</a>'
         . ($compare ? '<section class="compare">' . $compare . '</section>' : '')
         . $nav

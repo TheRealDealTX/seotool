@@ -4,7 +4,13 @@
 const SITE_URL  = 'https://holybiblewords.com';
 const SITE_NAME = 'Holy Bible Words';
 const DATA_DIR  = __DIR__ . '/../data';
-const ASSET_VER = '8';
+const ASSET_VER = '9';
+
+// Public-domain commentaries served by /api/commentary (built by tools/build_commentary.py)
+const COMMENTARIES = [
+    'mhcc' => ['name' => "Matthew Henry's Concise Commentary", 'short' => 'Matthew Henry'],
+    'jfb'  => ['name' => 'Jamieson-Fausset-Brown Commentary', 'short' => 'JFB'],
+];
 
 function versions(): array {
     static $v;

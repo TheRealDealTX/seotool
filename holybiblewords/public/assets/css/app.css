@@ -367,3 +367,32 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 .steps { padding-left: 1.2em; margin: 8px 0 14px; color: var(--muted); }
 .steps li { margin-bottom: 6px; }
 .steps strong { color: var(--text); }
+
+/* ---- commentary ---- */
+.commentary { margin: 18px 0; }
+.com-head h3 { display: flex; align-items: center; gap: 8px; font-size: 1.05rem; margin: 6px 0 4px; }
+.com-head h3 .ic { color: #e0a100; }
+.com-head p { margin: 0 0 8px; font-size: .88rem; }
+.com-body { font: 1.02rem/1.7 var(--serif); background: var(--surface-2); border-radius: 14px; padding: 4px 16px; }
+.com-body h4 { font: 700 .95rem var(--sans); margin: 14px 0 4px; color: var(--accent); }
+.com-body p { margin: 10px 0; }
+.com-body strong { font-family: var(--sans); font-size: .92em; }
+.com-foot { font-size: .8rem; color: var(--muted); margin: 8px 0 0; }
+.com-foot a { display: inline-flex; align-items: center; gap: 4px; }
+.com-foot .ic { width: 14px; height: 14px; }
+
+/* ---- verse-of-the-day streak ---- */
+.streak { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.streak-top { display: flex; justify-content: space-between; align-items: center; }
+.streak-count { display: inline-flex; align-items: center; gap: 6px; font-weight: 750; font-size: 1.1rem; color: var(--muted); }
+.streak-count.on { color: #e0670b; }
+.streak-count .ic { width: 22px; height: 22px; }
+.streak-count.on .ic { fill: #ff9a1f; stroke: #e0670b; }
+.week { list-style: none; display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; padding: 0; margin: 12px 0 8px; }
+.week li { display: grid; justify-items: center; gap: 4px; font-size: .72rem; color: var(--muted); font-weight: 600; }
+.week i { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); border: 2px solid transparent; }
+.week li.today i { border-color: var(--accent); }
+.week li.done i { background: linear-gradient(135deg, #ff9a1f, #e0670b); color: #fff; }
+.week .ic { width: 16px; height: 16px; }
+.streak p { margin: 0; font-size: .88rem; }
+.votd-actions .btn.done { background: var(--surface); color: var(--green); border-color: var(--green); }
