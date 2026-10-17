@@ -17,6 +17,17 @@ NAME = "asmith.photography"
 EMAIL = "info@asmith.photography"
 TAGLINE = "Los Angeles Photography Journal"
 PUBLISHED = "2026-10-10"
+MODIFIED = "2026-10-17"
+GA_ID = "G-GBGJLEXB3Q"
+GTAG = f'''<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>'''
 
 plan = json.loads((ROOT / "content/plan.json").read_text())
 CATS = plan["categories"]
@@ -43,10 +54,39 @@ CSS_V, JS_V = asset_v("src/site.css"), asset_v("src/site.js")
 ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>'
 
 
+IMG_DIR = ROOT / "public/assets/img"
+OG_DIR = ROOT / "public/assets/og"
+_dims = {}
+
+
+def dims(key):
+    if key not in _dims:
+        from PIL import Image
+        with Image.open(IMG_DIR / f"{key}.webp") as im:
+            _dims[key] = im.size
+    return _dims[key]
+
+
+def og_image(key):
+    """1200x630 JPEG for social cards (WebP is not supported everywhere)."""
+    out = OG_DIR / f"{key}.jpg"
+    if not out.exists():
+        from PIL import Image
+        OG_DIR.mkdir(parents=True, exist_ok=True)
+        with Image.open(IMG_DIR / f"{key}.webp") as im:
+            im = im.convert("RGB"); w, h = im.size; r = 1200 / 630
+            if w / h > r:
+                nw = round(h * r); im = im.crop(((w - nw) // 2, 0, (w - nw) // 2 + nw, h))
+            else:
+                nh = round(w / r); im = im.crop((0, (h - nh) // 2, w, (h - nh) // 2 + nh))
+            im.resize((1200, 630), Image.LANCZOS).save(out, "JPEG", quality=82, optimize=True, progressive=True)
+    return f"{SITE}/assets/og/{key}.jpg"
+
+
 def img_tag(key, alt, cls="", eager=False, sizes="100vw"):
     return (f'<img src="/assets/img/{key}.webp" srcset="/assets/img/{key}-sm.webp 800w, /assets/img/{key}.webp 1600w" '
             f'sizes="{sizes}" alt="{e(alt)}"{f" class={chr(34)}{cls}{chr(34)}" if cls else ""} '
-            f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async" width="1600" height="1067">')
+            f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async" width="{dims(key)[0]}" height="{dims(key)[1]}">')
 
 
 def credit_line(key):
@@ -108,14 +148,17 @@ def crumbs_ld(items):
         {"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + u} for i, (n, u) in enumerate(items)]}
 
 
-def page(path, title, desc, body, current="", image="home-hero", ld=None, og_type="website", extra_head="", iris=False):
+def page(path, title, desc, body, current="", image="home-hero", ld=None, og_type="website", extra_head="", iris=False,
+         image_alt="", preload=True):
     url = SITE + ("/" if path == "/" else path)
     graph = [ORG, WEBSITE] + (ld or [])
-    full_title = title if NAME in title or len(title) + len(NAME) + 3 > 66 else f"{title} | {NAME}"
+    og = og_image(image)
+    full_title = title if NAME in title or len(title) + len(NAME) + 3 > 65 else f"{title} | {NAME}"
     return f'''<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+{GTAG}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(full_title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -123,18 +166,28 @@ def page(path, title, desc, body, current="", image="home-hero", ld=None, og_typ
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#0c0b0a">
 <meta property="og:site_name" content="{NAME}">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/assets/img/{image}.webp">
+<meta property="og:image" content="{og}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(image_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(desc)}">
-<meta name="twitter:image" content="{SITE}/assets/img/{image}.webp">
+<meta name="twitter:image" content="{og}">
+<meta name="twitter:image:alt" content="{e(image_alt or title)}">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/assets/img/icon-192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="/assets/img/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="asmith">
+{f'<link rel="preload" as="image" href="/assets/img/{image}.webp" imagesrcset="/assets/img/{image}-sm.webp 800w, /assets/img/{image}.webp 1600w" imagesizes="100vw" fetchpriority="high">' if preload else ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -248,6 +301,10 @@ def build_article(p):
             secs.append(f'<blockquote class="pull">{e(p["pull_quote"])}</blockquote>')
     notes = "".join(f"<li>{e(n)}</li>" for n in p.get("notes", []))
     related = "".join(card(BY_SLUG[s]) for s in p.get("related", []) if s in BY_SLUG)
+    same = [q for q in PAGES if q["cat"] == p["cat"] and q["slug"] != p["slug"] and q["slug"] not in p.get("related", [])]
+    i = PAGES.index(p)
+    same = sorted(same, key=lambda q: (PAGES.index(q) - i) % len(PAGES))[:5]   # rotate so every story gets links
+    more_links = "".join(f'<li><a href="/{q["slug"]}">{e(q["h1"])}</a></li>' for q in same)
     mins = max(1, round(p["words"] / 230))
     cat = CATS[p["cat"]]
     body = f'''<article>
@@ -260,11 +317,11 @@ def build_article(p):
 <div class="meta"><span>{e(cat)}</span><span>{mins} min read</span><span>Frame {p["frame"]}</span></div>
 </div></header>
 <div class="wrap article">
-<div class="prose">{"".join(secs)}</div>
+<div class="prose">{"".join(secs)}{f'<nav class="more-list" aria-label="More {e(cat)}"><h2>More {e(cat)}</h2><ul>{more_links}</ul></nav>' if more_links else ""}</div>
 <aside class="aside"><div class="aside-inner">
 <div class="toc-box"><p class="mono" style="color:var(--muted);margin:0 0 12px">In this story</p><nav class="toc" aria-label="Contents">{"".join(toc)}</nav></div>
 {f'<div class="notes"><h2>{e(p.get("notes_title") or "Field notes")}</h2><ol>{notes}</ol></div>' if notes else ""}
-<a class="btn ghost" href="/journal#{p["cat"]}">More {e(cat)} {ARROW}</a>
+<a class="btn ghost" href="/journal#{p["cat"]}">All {e(cat)} stories {ARROW}</a>
 </div></aside>
 </div>
 </article>
@@ -273,14 +330,17 @@ def build_article(p):
 <div class="grid">{related}</div></div></section>'''
     url = f"{SITE}/{p['slug']}"
     ld = [{"@type": "Article", "@id": url + "#article", "headline": p["h1"], "description": p["description"],
-           "image": [f"{SITE}/assets/img/{p['slug']}.webp"], "datePublished": PUBLISHED, "dateModified": PUBLISHED,
+           "image": {"@type": "ImageObject", "url": f"{SITE}/assets/img/{p['slug']}.webp",
+                     "width": dims(p["slug"])[0], "height": dims(p["slug"])[1]},
+           "thumbnailUrl": og_image(p["slug"]), "datePublished": PUBLISHED, "dateModified": MODIFIED,
+           "isPartOf": {"@id": SITE + "/#website"},
            "author": {"@id": SITE + "/#org"}, "publisher": {"@id": SITE + "/#org"},
            "mainEntityOfPage": url, "articleSection": cat, "keywords": p["kw"], "wordCount": p["words"],
            "inLanguage": "en-US"},
-          crumbs_ld([("Home", "/"), ("Journal", "/journal"), (cat, f"/journal#{p['cat']}"), (p["h1"], "/" + p["slug"])])]
-    head = f'<meta property="article:published_time" content="{PUBLISHED}">\n<meta property="article:section" content="{e(cat)}">\n'
+          crumbs_ld([("Home", "/"), ("Journal", "/journal"), (p["h1"], "/" + p["slug"])])]
+    head = f'<meta property="article:published_time" content="{PUBLISHED}">\n<meta property="article:modified_time" content="{MODIFIED}">\n<meta property="article:section" content="{e(cat)}">\n'
     return page("/" + p["slug"], p["title"], p["description"], body, current="/journal", image=p["slug"], ld=ld,
-                og_type="article", extra_head=head)
+                og_type="article", extra_head=head, image_alt=p["h1"])
 
 
 # ---------------------------------------------------------------- simple pages
@@ -298,6 +358,7 @@ def build_journal():
 <section style="padding-bottom:clamp(64px,9vw,120px)"><div class="wrap">
 <div class="filters" role="toolbar" aria-label="Filter stories">{chips}
 <div class="search"><label class="hp" for="q">Search stories</label><input id="q" type="search" placeholder="Search: fisheye, Venice, loafers…" autocomplete="off"></div></div>
+<h2 class="sr-only">All stories</h2>
 <div class="grid journal-grid">{"".join(card(p) for p in order)}</div>
 <p class="empty">Nothing on the reel matches that. Try another word.</p>
 </div></section>'''
@@ -307,7 +368,7 @@ def build_journal():
           crumbs_ld([("Home", "/"), ("Journal", "/journal")])]
     return page("/journal", "The Journal: Skate, Footwear, Editorial & Sport",
                 f"All {len(PAGES)} stories from the {NAME} journal: skate, footwear, editorial, sport, brand campaign and personal photography in Los Angeles.",
-                body, current="/journal", image="journal", ld=ld)
+                body, current="/journal", image="journal", ld=ld, preload=False)
 
 
 def build_about():
@@ -326,7 +387,7 @@ def build_about():
 </div></section>'''
     return page("/about", "About This Los Angeles Photography Journal",
                 f"About {NAME}: an independent journal on how skate, footwear, editorial and sport photography is made in Los Angeles.",
-                body, current="/about", image="about", ld=[crumbs_ld([("Home", "/"), ("About", "/about")])])
+                body, current="/about", image="about", ld=[crumbs_ld([("Home", "/"), ("About", "/about")])], preload=False)
 
 
 def build_contact():
@@ -347,7 +408,7 @@ def build_contact():
 </div></section>'''
     return page("/contact", "Contact the Journal",
                 f"Contact {NAME}: send story ideas, corrections, Los Angeles photo spots and collaboration ideas to the journal's editors.",
-                body, current="/contact", image="contact", ld=[crumbs_ld([("Home", "/"), ("Contact", "/contact")])])
+                body, current="/contact", image="contact", ld=[crumbs_ld([("Home", "/"), ("Contact", "/contact")])], preload=False)
 
 
 
@@ -355,7 +416,7 @@ def build_404():
     body = f'''<section class="lost"><div><p class="mono" style="color:var(--film)">Frame not found</p><h1>404</h1>
 <p>That negative is missing from the sleeve. Try the journal instead.</p>
 <p><a class="btn" href="/journal">Open the journal {ARROW}</a></p></div></section>'''
-    return page("/404", "Page Not Found", "This page could not be found.", body).replace(
+    return page("/404", "Page Not Found", "This page could not be found.", body, preload=False).replace(
         '<meta name="robots" content="index, follow, max-image-preview:large">', '<meta name="robots" content="noindex">')
 
 
@@ -464,10 +525,12 @@ def main():
     (PUB / "404.html").write_text(build_404())
     (PUB / "index.php").write_text(index_php(out.keys()))
     (PUB / "robots.txt").write_text(f"User-agent: *\nDisallow: /pages/\nDisallow: /home.html\n\nSitemap: {SITE}/sitemap.xml\n")
-    urls = [("/", "1.0")] + [("/journal", "0.9")] + [(f"/{p['slug']}", "0.8") for p in PAGES] + \
-           [("/about", "0.5"), ("/contact", "0.5")]
-    sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{PUBLISHED}</lastmod><priority>{pr}</priority></url>\n" for u, pr in urls)
-    (PUB / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
+    urls = [("/", "1.0", "home-hero")] + [("/journal", "0.9", "journal")] + \
+           [(f"/{p['slug']}", "0.8", p["slug"]) for p in PAGES] + [("/about", "0.5", "about"), ("/contact", "0.5", "contact")]
+    sm = "".join(f"<url><loc>{SITE}{u}</loc><lastmod>{MODIFIED}</lastmod><priority>{pr}</priority>"
+                 f"<image:image><image:loc>{SITE}/assets/img/{img}.webp</image:loc></image:image></url>\n" for u, pr, img in urls)
+    (PUB / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                                     f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{sm}</urlset>\n')
     print(f"built home + {len(out)} pages + 404")
 
 
