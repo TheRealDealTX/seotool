@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /home.html
+Disallow: /contact.php
+Disallow: /contact/thanks/
+
+Sitemap: https://jazandtheo.com/sitemap.xml
