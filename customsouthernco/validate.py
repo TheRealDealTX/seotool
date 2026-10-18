@@ -66,7 +66,7 @@ def url_to_file(u):
 
 
 titles, descs = {}, {}
-pages = sorted(SITE.rglob("*.html"))
+pages = sorted(f for f in SITE.rglob("*.html") if not f.name.startswith("google"))
 for f in pages:
     rel = "/" + str(f.relative_to(SITE)).replace("index.html", "")
     p = P()
@@ -83,6 +83,11 @@ for f in pages:
             errors.append(f"{rel}: bad JSON-LD {e}")
     for d in set(i for i in p.ids if p.ids.count(i) > 1):
         errors.append(f"{rel}: duplicate id {d}")
+    if text.count("googletagmanager.com/gtag/js?id=G-HEGE089B32") != 1 or "gtag('config', 'G-HEGE089B32')" not in text:
+        errors.append(f"{rel}: Google tag missing or duplicated")
+    og = re.search(r'property="og:image" content="https://customsouthernco.com(/[^"]+)"', text)
+    if not og or not url_to_file(og.group(1)).exists():
+        errors.append(f"{rel}: og:image missing")
     if "{{" in text:
         errors.append(f"{rel}: unrendered placeholder")
     for u in p.links:
@@ -129,6 +134,11 @@ sm = (SITE / "sitemap.xml").read_text()
 for s in MUST:
     if f"/{s}/</loc>" not in sm:
         errors.append(f"/{s}/ not in sitemap.xml")
+if not (SITE / "googlecccfbf2f7e9e5ae4.html").exists():
+    errors.append("Search Console verification file missing")
+for f in ["favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest", "robots.txt", "feed.xml"]:
+    if not (SITE / f).exists():
+        errors.append(f"missing {f}")
 if (SITE / "index.html").exists():
     errors.append("site/index.html must not exist (see README hosting note)")
 

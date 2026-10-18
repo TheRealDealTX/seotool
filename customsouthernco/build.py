@@ -18,7 +18,17 @@ ROOT = Path(__file__).resolve().parent
 OUT = ROOT / "site"
 IMG = ROOT / "assets" / "img"
 TODAY = date.today().isoformat()
-ASSET_V = "1"
+ASSET_V = "2"
+GA_ID = "G-HEGE089B32"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
 
 esc = html.escape
 
@@ -224,17 +234,32 @@ def footer():
 
 
 def page(path, title, description, body, *, schema=None, og_image="hero", og_type="website",
-         active="", body_class="", extra_head="", noindex=False, scripts=("site",)):
+         active="", body_class="", extra_head="", noindex=False, scripts=("site",), article=None,
+         og_alt=None, preload=None):
     canonical = SITE["url"] + path
     graph = [org_schema(), website_schema()] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     full_title = title if SITE["name"] in title else f"{title} | {SITE['name']}"
-    img_url = f"{SITE['url']}/assets/img/{og_image}.webp"
-    robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
+    img_url = f"{SITE['url']}/assets/og/{og_image}.jpg"
+    og_alt = og_alt or IMAGE_ALT.get(og_image, SITE["name"])
+    robots = "noindex, follow" if noindex else "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    art = ""
+    if article:
+        art = (f'<meta property="article:published_time" content="{article["published"]}T08:00:00-05:00">\n'
+               f'<meta property="article:modified_time" content="{article["modified"]}T08:00:00-05:00">\n'
+               f'<meta property="article:section" content="{esc(article["section"], quote=True)}">\n'
+               f'<meta name="author" content="{esc(SITE["author"], quote=True)}">\n')
+    pre = ""
+    if preload:
+        w, _ = img_size(preload)
+        sw, _ = img_size(preload, small=True)
+        pre = (f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" '
+               f'imagesrcset="/assets/img/{preload}-sm.webp {sw}w, /assets/img/{preload}.webp {w}w" imagesizes="100vw" fetchpriority="high">\n')
     js = "".join(f'<script src="/assets/js/{s}.js?v={ASSET_V}" defer></script>' for s in scripts)
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(full_title)}</title>
@@ -247,16 +272,25 @@ def page(path, title, description, body, *, schema=None, og_image="hero", og_typ
 <meta property="og:description" content="{esc(description, quote=True)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{img_url}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt, quote=True)}">
 <meta property="og:locale" content="en_US">
+{art}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title, quote=True)}">
 <meta name="twitter:description" content="{esc(description, quote=True)}">
 <meta name="twitter:image" content="{img_url}">
+<meta name="twitter:image:alt" content="{esc(og_alt, quote=True)}">
 <meta name="theme-color" content="#2f3b2b">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="{esc(SITE['name'], quote=True)} RSS" href="{SITE['url']}/feed.xml">
+{pre}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&display=swap">
@@ -553,7 +587,9 @@ def build_post(p):
             "@id": SITE["url"] + url + "#article",
             "headline": p["title"],
             "description": p["description"],
-            "image": f"{SITE['url']}/assets/img/{p['image']}.webp",
+            "image": {"@type": "ImageObject", "url": f"{SITE['url']}/assets/og/{p['image']}.jpg", "width": 1200, "height": 630},
+            "thumbnailUrl": f"{SITE['url']}/assets/img/{p['image']}-sm.webp",
+            "inLanguage": "en-US",
             "datePublished": p["date"],
             "dateModified": p.get("updated", p["date"]),
             "author": {"@type": "Organization", "name": SITE["author"], "url": SITE["url"] + "/about/"},
@@ -622,7 +658,9 @@ def build_post(p):
   </div>
 </section>"""
     write(url, page(url, p["seo_title"], p["description"], content, schema=schema, og_image=p["image"],
-                    og_type="article", body_class="is-post", scripts=("site", "tools") if tools_used else ("site",)))
+                    og_type="article", body_class="is-post", scripts=("site", "tools") if tools_used else ("site",),
+                    article={"published": p["date"], "modified": p.get("updated", p["date"]), "section": cat["name"]},
+                    preload=p["image"]))
 
 
 # --------------------------------------------------------------------------- listings
@@ -897,7 +935,7 @@ def build_home():
     }]
     html_out = page("/", f"{SITE['name']} | Vintage Finds & Repurposed DIY Decor",
                     "Custom Southern Co. shares the history of vintage finds like Prince Albert tins and Ball jars, plus easy repurposed decor DIY and Southern home tips.",
-                    body, schema=schema, body_class="is-home")
+                    body, schema=schema, body_class="is-home", preload="hero")
     (OUT / "home.html").write_text(html_out, encoding="utf-8")
 
 
@@ -1080,12 +1118,34 @@ def build_root_files():
     urls += [(f"/category/{k}/", TODAY, "0.6") for k in CATEGORIES]
     urls += [(f"/{p['slug']}/", p.get("updated", p["date"]), "0.8") for p in POSTS]
     urls += [(u, TODAY, "0.3") for u in ["/about/", "/contact/", "/privacy-policy/", "/terms-of-use/", "/sitemap/"]]
-    sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sm += "".join(f"  <url><loc>{SITE['url']}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n" for u, d, pr in urls)
+    images = {f"/{p['slug']}/": (p["image"], p["title"]) for p in POSTS}
+    images["/"] = ("hero", SITE["name"])
+
+    def img_tag(u):
+        if u not in images:
+            return ""
+        key, title = images[u]
+        return (f"<image:image><image:loc>{SITE['url']}/assets/img/{key}.webp</image:loc>"
+                f"<image:title>{esc(title)}</image:title></image:image>")
+
+    sm = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+          'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n')
+    sm += "".join(f"  <url><loc>{SITE['url']}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority>{img_tag(u)}</url>\n" for u, d, pr in urls)
     sm += "</urlset>\n"
     (OUT / "sitemap.xml").write_text(sm, encoding="utf-8")
     (OUT / "robots.txt").write_text(
-        f"User-agent: *\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE['url']}/sitemap.xml\n", encoding="utf-8")
+        f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {SITE['url']}/sitemap.xml\n", encoding="utf-8")
+    items = "".join(
+        f"""<item><title>{esc(p['title'])}</title><link>{SITE['url']}/{p['slug']}/</link><guid isPermaLink="true">{SITE['url']}/{p['slug']}/</guid>
+<pubDate>{date.fromisoformat(p['date']).strftime('%a, %d %b %Y')} 08:00:00 -0500</pubDate><category>{esc(CATEGORIES[p['category']]['name'])}</category><description>{esc(p['excerpt'])}</description></item>\n"""
+        for p in POSTS[:20])
+    (OUT / "feed.xml").write_text(
+        f"""<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>{esc(SITE['name'])}</title><link>{SITE['url']}/</link><description>{esc(SITE['tagline'])}</description><language>en-us</language>
+<atom:link href="{SITE['url']}/feed.xml" rel="self" type="application/rss+xml"/>
+{items}</channel></rss>\n""", encoding="utf-8")
+    for f in (ROOT / "static").iterdir():
+        shutil.copy(f, OUT / f.name)
     (OUT / "site.webmanifest").write_text(json.dumps({
         "name": SITE["name"], "short_name": SITE["short"], "start_url": "/", "display": "standalone",
         "background_color": "#f6efe3", "theme_color": "#2f3b2b",
@@ -1122,7 +1182,8 @@ def build_icons():
         from PIL import Image, ImageDraw, ImageFont
     except ImportError:
         return
-    for size, name in [(32, "favicon-32.png"), (180, "apple-touch-icon.png"), (192, "favicon-192.png"), (512, "favicon-512.png")]:
+    for size, name in [(32, "favicon-32.png"), (48, "favicon-48.png"), (96, "favicon-96x96.png"), (180, "apple-touch-icon.png"),
+                       (192, "favicon-192.png"), (512, "favicon-512.png")]:
         s = size * 4
         im = Image.new("RGBA", (s, s), (0, 0, 0, 0))
         d = ImageDraw.Draw(im)
@@ -1135,7 +1196,19 @@ def build_icons():
             font = ImageFont.load_default()
         d.text((s / 2, s / 2 + s * 0.02), "CS", fill="#f6efe3", font=font, anchor="mm")
         im.resize((size, size), Image.LANCZOS).save(OUT / name)
-    Image.open(OUT / "favicon-32.png").save(OUT / "favicon.ico", sizes=[(32, 32)])
+    Image.open(OUT / "favicon-512.png").save(OUT / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+
+
+def build_og_images():
+    """1200x630 JPEG share images: every platform accepts JPEG, not all accept WebP."""
+    from PIL import Image, ImageOps
+    out = OUT / "assets" / "og"
+    out.mkdir(parents=True, exist_ok=True)
+    for f in IMG.glob("*.webp"):
+        if f.stem.endswith("-sm"):
+            continue
+        with Image.open(f) as im:
+            ImageOps.fit(im.convert("RGB"), (1200, 630), Image.LANCZOS).save(out / f"{f.stem}.jpg", "JPEG", quality=82, optimize=True)
 
 
 # --------------------------------------------------------------------------- main
@@ -1157,6 +1230,7 @@ def main():
     build_root_files()
     build_icons()
     build_legacy_images()
+    build_og_images()
     print(f"built {len(POSTS)} posts, {len(CATEGORIES)} categories, {len(TOOLS)} tools -> {OUT}")
 
 
