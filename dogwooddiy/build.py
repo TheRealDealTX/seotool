@@ -113,14 +113,18 @@ def faq_ld(faq):
 
 def head(page):
     canonical = url(page["path"])
-    og_img = url(f"/assets/img/{page.get('img', 'hero-farmhouse')}.webp")
+    og_img = url(f"/assets/img/og/{page.get('img', 'hero-farmhouse')}.jpg")
+    og_alt = page.get("img_alt", f"{SITE['name']} - {page['title']}")
     graph = org_graph() + page.get("ld", [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
-    robots = '<meta name="robots" content="noindex, follow">\n' if page.get("noindex") else ""
+    robots = ('<meta name="robots" content="noindex, follow">\n' if page.get("noindex") else
+              '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">\n')
     art = ""
     if page.get("published"):
         art = (f'<meta property="article:published_time" content="{page["published"]}">\n'
-               f'<meta property="article:modified_time" content="{page.get("modified", page["published"])}">\n')
+               f'<meta property="article:modified_time" content="{page.get("modified", page["published"])}">\n'
+               f'<meta property="article:author" content="{url("/about/")}">\n'
+               f'<meta property="article:section" content="{esc(page.get("section", ""))}">\n')
     extra_js = '<script src="/assets/js/tools.js?v=' + ASSET_V + '" defer></script>\n' if page.get("tools") else ""
     preload = ""
     if page.get("preload"):
@@ -129,6 +133,15 @@ def head(page):
     return f"""<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={SITE["ga4"]}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{SITE["ga4"]}');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(page["title"])}</title>
@@ -139,12 +152,25 @@ def head(page):
 <meta property="og:title" content="{esc(page.get("og_title", page["title"]))}">
 <meta property="og:description" content="{esc(page["desc"])}">
 <meta property="og:url" content="{canonical}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{esc(og_alt)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(page.get("og_title", page["title"]))}">
+<meta name="twitter:description" content="{esc(page["desc"])}">
+<meta name="twitter:image" content="{og_img}">
+<meta name="twitter:image:alt" content="{esc(og_alt)}">
+<meta name="author" content="{esc(page.get("author", SITE["name"]))}">
 {art}<meta name="theme-color" content="#2f4a3a">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Dogwood DIY">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -274,8 +300,8 @@ TOOLS = {
     "wallpaper": {
         "slug": "wallpaper-removal-calculator", "name": "Wallpaper Remover Mix Calculator", "icon": "🧽",
         "short": "How much homemade remover solution to mix - fabric softener or vinegar recipe.",
-        "title": "Homemade Wallpaper Remover Calculator (Fabric Softener or Vinegar)",
-        "desc": "Mix the right amount of homemade wallpaper remover. Enter room size and layers to get gallons of solution, the hot water ratio and a time estimate.",
+        "title": "Homemade Wallpaper Remover Calculator | Dogwood DIY",
+        "desc": "Mix the right amount of homemade wallpaper remover. Enter room size and layers to get gallons of solution, the water ratio and a time estimate.",
         "img": "wallpaper-paint-roller", "related": "simple-wallpaper-removal",
     },
     "caulk": {
@@ -288,7 +314,7 @@ TOOLS = {
     "mulch": {
         "slug": "mulch-soil-calculator", "name": "Mulch & Soil Calculator", "icon": "🌱",
         "short": "Cubic yards and bags of mulch or soil for a new flower bed.",
-        "title": "Mulch & Soil Calculator: Cubic Yards and Bags for Flower Beds",
+        "title": "Mulch & Soil Calculator: Cubic Yards & Bags for Beds",
         "desc": "Calculate how much mulch, compost or garden soil you need in cubic yards and 2 or 3 cu ft bags - ideal after removing old shrubs.",
         "img": "garden-soil", "related": "remove-overgrown-shrubs-easy",
     },
@@ -401,9 +427,10 @@ def build_post(p):
     updated = p.get("updated", p["date"])
     faq_html = ""
     ld = [crumbs_ld([("Home", "/"), (cat["name"], f'/category/{p["cat"]}/'), (p["short"], path)]),
-          {"@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "image": url(f'/assets/img/{p["img"]}.webp'),
+          {"@type": "BlogPosting", "headline": p["h1"], "description": p["desc"], "image": [url(f'/assets/img/og/{p["img"]}.jpg'), url(f'/assets/img/{p["img"]}.webp')],
+           "wordCount": len(strip_tags(body).split()), "inLanguage": "en-US",
            "datePublished": p["date"], "dateModified": updated, "mainEntityOfPage": url(path),
-           "author": {"@type": "Person", "name": p.get("author", SITE["authors"][0]), "url": url("/about/")},
+           "author": {"@type": "Person", "@id": url("/about/#stephanie"), "name": p.get("author", SITE["authors"][0]), "url": url("/about/")},
            "publisher": {"@id": url("/#org")}, "articleSection": cat["name"]}]
     if p.get("faq"):
         ld.append(faq_ld(p["faq"]))
@@ -431,6 +458,7 @@ def build_post(p):
     page = {
         "path": path, "title": p["title"], "desc": p["desc"], "img": p["img"], "ld": ld,
         "published": p["date"], "modified": updated, "tools": ctx.get("tools"), "nav": "/blog/", "preload": p["img"],
+        "author": p.get("author", SITE["authors"][0]), "img_alt": p["img_alt"], "section": cat["name"],
     }
     original = f' · Originally published {fmt_date(p["date"])}' if p.get("updated") and p["updated"] != p["date"] else ""
     content = f"""<section class="article-hero"><div class="wrap">
@@ -569,7 +597,7 @@ def build_tools():
     cards = "".join(
         f'<a class="tool-card reveal d{i % 3}" href="/tools/{t["slug"]}/"><div class="ico" aria-hidden="true">{t["icon"]}</div><h3>{t["name"]}</h3><p>{t["short"]}</p></a>'
         for i, t in enumerate(TOOLS.values()))
-    page = {"path": "/tools/", "title": "Free DIY Calculators for Home & Garden Projects | Dogwood DIY",
+    page = {"path": "/tools/", "title": "Free DIY Calculators for Home & Garden | Dogwood DIY",
             "desc": "Free interactive DIY calculators: German schmear mortar, room paint, wallpaper remover mix, caulk and grout paint, mulch and soil, and a project budget planner.",
             "img": "woodworking", "ld": [crumbs_ld([("Home", "/"), ("DIY Tools", "/tools/")])]}
     content = page_hero("Free DIY calculators", "Quick answers to \"how much do I need?\" - built from the numbers we use on our own projects.",
@@ -596,13 +624,16 @@ def build_about():
     a = ABOUT
     page = {"path": "/about/", "title": a["title"], "desc": a["desc"], "img": "brick-house",
             "ld": [crumbs_ld([("Home", "/"), ("About", "/about/")]),
-                   {"@type": "AboutPage", "name": "About Dogwood DIY", "url": url("/about/"), "about": {"@id": url("/#org")}}]}
+                   {"@type": "AboutPage", "name": "About Dogwood DIY", "url": url("/about/"), "about": {"@id": url("/#org")}},
+                   {"@type": "Person", "@id": url("/about/#stephanie"), "name": "Stephanie Tilton", "url": url("/about/"),
+                    "worksFor": {"@id": url("/#org")}, "knowsAbout": ["Home renovation", "German schmear", "Gardening in clay soil", "DIY home decor"]},
+                   {"@type": "Person", "@id": url("/about/#jared"), "name": "Jared Tilton", "url": url("/about/"), "worksFor": {"@id": url("/#org")}}]}
     content = page_hero(a["h1"], a["lead"], [("Home", "/"), ("About", "/about/")], "About Dogwood DIY") + a["body"] + cta_band()
     write("/about/", page_html(page, content))
 
 
 def build_contact():
-    page = {"path": "/contact/", "title": "Contact Dogwood DIY | Questions, Collaborations & Project Help",
+    page = {"path": "/contact/", "title": "Contact Dogwood DIY | Project Questions & Collaborations",
             "desc": f"Get in touch with Jared and Stephanie at Dogwood DIY. Ask a project question, suggest a tutorial or talk collaborations - email {SITE['email']}.",
             "ld": [crumbs_ld([("Home", "/"), ("Contact", "/contact/")]), {"@type": "ContactPage", "url": url("/contact/")}]}
     content = page_hero("Say hello", "Project questions, tutorial requests, collaboration ideas or a photo of your own German schmear fireplace - we read everything.",
@@ -646,14 +677,20 @@ def build_404():
 
 
 def build_meta():
-    urls = [("/", "2026-10-17", "1.0")]
-    urls += [(f'/{p["slug"]}/', p.get("updated", p["date"]), "0.8") for p in POSTS]
-    urls += [("/blog/", "2026-10-17", "0.7"), ("/tools/", "2026-10-17", "0.7"), ("/about/", "2026-10-17", "0.6"), ("/contact/", "2026-10-17", "0.4")]
-    urls += [(f'/tools/{t["slug"]}/', "2026-10-17", "0.6") for t in TOOLS.values()]
-    urls += [(f"/category/{k}/", "2026-10-17", "0.5") for k in CATS]
-    urls += [(p, "2026-10-17", "0.2") for p in ("/disclaimer/", "/privacy-policy/", "/terms/")]
-    body = "".join(f"<url><loc>{url(u)}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n" for u, d, pr in urls)
-    write("/sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}</urlset>\n')
+    today = "2026-10-18"
+    urls = [("/", today, "1.0", ["hero-farmhouse"])]
+    urls += [(f'/{p["slug"]}/', p.get("updated", p["date"]), "0.8",
+              [p["img"]] + re.findall(r"\[\[img:([\w-]+)", p["body"])) for p in POSTS]
+    urls += [("/blog/", today, "0.7", []), ("/tools/", today, "0.7", []), ("/about/", today, "0.6", ["brick-house"]), ("/contact/", today, "0.4", [])]
+    urls += [(f'/tools/{t["slug"]}/', today, "0.6", [t["img"]]) for t in TOOLS.values()]
+    urls += [(f"/category/{k}/", today, "0.5", [c["img"]]) for k, c in CATS.items()]
+    urls += [(p, today, "0.2", []) for p in ("/disclaimer/", "/privacy-policy/", "/terms/")]
+    body = ""
+    for u, d, pr, imgs in urls:
+        im = "".join(f"<image:image><image:loc>{url('/assets/img/' + i + '.webp')}</image:loc></image:image>" for i in dict.fromkeys(imgs))
+        body += f"<url><loc>{url(u)}</loc><lastmod>{d}</lastmod><priority>{pr}</priority>{im}</url>\n"
+    write("/sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+          f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{body}</urlset>\n')
     write("/robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {url('/sitemap.xml')}\n")
     favicon = LOGO.replace('<svg viewBox="0 0 64 64" aria-hidden="true">', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">')
     write("/favicon.svg", favicon)

@@ -28,6 +28,15 @@ slugs, missing trailing slashes) and returns `404.html` with a real 404.
 `mail()` (honeypot spam check, redirects back to `/contact/?sent=1|0`). It
 will only deliver once the domain's DNS/mailbox is set up.
 
+## SEO setup
+
+- GA4 tag `G-37L4LEFEJ0` (set in `content/site.py` as `ga4`) at the top of every page's `<head>`.
+- Google Search Console verification file `static/googlecccfbf2f7e9e5ae4.html`, served from the web root.
+- Favicons: `favicon.ico`, `favicon.svg`, `favicon.png`, `apple-touch-icon.png`, `site.webmanifest` + 192/512 icons.
+- `sitemap.xml` (with image entries) is listed in `robots.txt`; `home.html` and `contact.php` are disallowed.
+- Titles kept to 60 characters or fewer, descriptions to 160 or fewer. Every page has a canonical URL, robots meta, Open Graph + Twitter tags with a 1200×630 JPEG (`assets/img/og/`), and JSON-LD (Organization, WebSite, BreadcrumbList, BlogPosting, FAQPage, Person, CollectionPage, WebApplication).
+- Static files on `http://` and `www.` are served directly by the host (it skips `index.php` for existing files), so they don't redirect. The canonical tags point them to `https://dogwooddiy.com`.
+
 ## What was rebuilt (and why)
 
 Source data: the Semrush organic positions export (Jan 2020) and the backlinks

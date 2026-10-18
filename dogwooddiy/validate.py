@@ -73,7 +73,7 @@ def main():
     pages = []
     for d, _, files in os.walk(ROOT):
         for f in files:
-            if f.endswith(".html"):
+            if f.endswith(".html") and not f.startswith("google"):
                 pages.append(os.path.join(d, f))
     for fp in sorted(pages):
         rel = "/" + os.path.relpath(fp, ROOT)

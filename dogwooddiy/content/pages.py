@@ -1,8 +1,8 @@
 """About and legal pages."""
 
 ABOUT = {
-    "title": "About Dogwood DIY | Meet Jared & Stephanie of the Dogwood House",
-    "desc": "Dogwood DIY is Jared and Stephanie Tilton's home renovation and garden blog. Follow along as we turn a 1960s brick ranch in North Carolina into a modern farmhouse.",
+    "title": "About Dogwood DIY | Meet Jared & Stephanie Tilton",
+    "desc": "Meet Jared and Stephanie Tilton of Dogwood DIY, renovating a 1960s brick ranch in North Carolina into a modern farmhouse one DIY project at a time.",
     "h1": "We're Jared &amp; Stephanie, the DIY'ers of the Dogwood House.",
     "lead": "Two people, one 1960s brick ranch, a lot of red clay and a running list of projects that never seems to get shorter.",
     "body": """
@@ -70,7 +70,7 @@ DISCLAIMER = {
 
 PRIVACY = {
     "title": "Privacy Policy | Dogwood DIY",
-    "desc": "How Dogwood DIY collects, uses and protects information when you visit dogwooddiy.com or contact us.",
+    "desc": "How Dogwood DIY collects, uses and protects information when you visit dogwooddiy.com, use our calculators or contact us by email or form.",
     "h1": "Privacy policy",
     "lead": "Short version: we collect very little, and we never sell it.",
     "body": """<p>Last updated: October 17, 2026</p>
@@ -90,7 +90,7 @@ PRIVACY = {
 
 TERMS = {
     "title": "Terms of Use | Dogwood DIY",
-    "desc": "Terms of use for dogwooddiy.com, including content ownership and use of our DIY guides and calculators.",
+    "desc": "Terms of use for dogwooddiy.com, covering how you may share our DIY guides, use our free calculators, and our limits on professional advice.",
     "h1": "Terms of use",
     "lead": "By using dogwooddiy.com you agree to these terms.",
     "body": """<p>Last updated: October 17, 2026</p>
