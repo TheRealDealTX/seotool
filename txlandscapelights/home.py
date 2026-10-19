@@ -1,6 +1,7 @@
 """Homepage for txlandscapelights.com. Primary keyword: "texas landscape lights" (14+ uses in visible copy)."""
 import json
 
+import photos
 import svgart
 from build import (cta_band, esc, faq_block, faq_schema, map_block, page, post_card, process_rail, quote_section, service_card)
 from siteconf import PHONE, SERVICES, TEL, TOOLS, WEATHER, icon
@@ -94,7 +95,7 @@ def build(posts):
 <div class="hero__cta"><a class="btn" href="/quote/">{icon("sparkles")} Get my free lighting plan</a><a class="btn btn--ghost" href="{TEL}">{icon("phone")} {PHONE}</a></div>
 <ul class="chips"><li>{icon("moon")} Free night demo</li><li>{icon("shield")} Built for Texas weather</li><li>{icon("bulb")} Warm 12V LED</li><li>{icon("pin")} Statewide service</li></ul>
 </div>
-<div class="hero__art"><div class="frame">{svgart.scene("hero")}<button class="switch" type="button" data-switch="hero-scene" aria-pressed="false"><span class="switch__t"></span><b>Lights off</b></button></div>
+<div class="hero__art"><div class="frame frame--photo">{photos.img("pool-string-lights", eager=True, sizes="(max-width: 900px) 100vw, 46vw", alt="Backyard pool and patio in Texas lit at dusk with string lights and palm uplighting")}<span class="frame__cap">{icon("bulb")} Warm 2700K string &amp; accent lighting</span></div>
 <div class="hero__badge">Free lighting plan<small>Houston · DFW · Austin · SA</small></div></div>
 </div></section>
 <section class="strip"><div class="wrap">
@@ -114,6 +115,17 @@ def build(posts):
 <h3>What you get with Texas Landscape Lights</h3>
 <ul class="checks"><li>A custom design built around your architecture, trees and how you use the yard</li><li>Professional low-voltage LED fixtures chosen for Texas heat, UV and moisture</li><li>Clean installation with concealed wire and protected beds and roots</li><li>Smart controls that follow the sunset all year, with optional app and zone control</li><li>A final visit after dark to aim and balance every fixture</li></ul>
 </div></div></section>"""
+
+    shots = [("tree-uplights", "Tree uplighting", "/services/tree-garden-lighting/"), ("facade-estate", "Architectural washing", "/services/architectural-lighting/"),
+             ("path-lights-walkway", "Path lighting", "/services/pathway-driveway-lighting/"), ("pergola-lights", "Covered patio downlights", "/services/patio-pool-lighting/"),
+             ("pool-courtyard", "Pool & courtyard", "/services/patio-pool-lighting/"), ("house-night", "Welcoming entries", "/inspiration/")]
+    gallery = f"""<section class="sec sec--tight"><div class="wrap">
+<div class="head head--row"><div><span class="eyebrow">Lighting ideas</span><h2>See what layered lighting can do</h2>
+<p class="lead">Real examples of the lighting styles Texas Landscape Lights designs and installs, from uplit oaks to string-lit pool decks.</p></div>
+<a class="btn btn--ghost" href="/inspiration/">More ideas {icon("arrow")}</a></div>
+<div class="gallery">{"".join(f'<a class="gallery__i" href="{u}">{photos.img(k, sizes="(max-width: 640px) 100vw, 33vw")}<span>{c}</span></a>' for k, c, u in shots)}</div>
+<p class="tsmall">Example photos are royalty-free images used to illustrate lighting styles. See <a href="/photo-credits/">photo credits</a>.</p>
+</div></section>"""
 
     svc_cards = "".join(service_card(s, i, "svc--wide" if i in (0, 6) else "") for i, s in enumerate(SERVICES))
     services = f"""<section class="sec sec--alt" id="services"><div class="wrap">
@@ -157,7 +169,7 @@ def build(posts):
 <p class="lead">Whether you are in a Houston bungalow, a Frisco new build, a limestone home west of Austin or a ranch outside San Antonio, Texas Landscape Lights can design a system that fits your home, your budget and your climate. Call <a href="{TEL}">{PHONE}</a> or <a href="/quote/">request your free lighting plan</a> today.</p>
 </div></div></section>"""
 
-    main = (hero + intro + services + weather_section() + visual + regions_section() + process_rail() + areas + why + tools_sec
+    main = (hero + intro + services + gallery + weather_section() + visual + regions_section() + process_rail() + areas + why + tools_sec
             + blog + quote_section("/", "Free lighting plan", "Tell Texas Landscape Lights about your project") + faq_block(FAQS, "Questions about Texas Landscape Lights", light=True)
             + closing + cta_band("Ready to see your home in a new light?", "Talk to Texas Landscape Lights about a custom lighting plan for your property, anywhere in Texas."))
     page("/", TITLE, DESC, main, schema=[faq_schema(FAQS)], priority="1.0", scripts=("site", "tools"))

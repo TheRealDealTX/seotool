@@ -7,6 +7,7 @@ import shutil
 from datetime import date
 from pathlib import Path
 
+import photos
 import svgart
 from siteconf import (ASSET_V, BASE, CATEGORIES, CITIES, EMAIL, NAME, PHONE, PHONE_E164, SERVICES, TEL, TOOLS, icon)
 
@@ -25,11 +26,30 @@ def load(group, slug):
     m = re.match(r"<!--meta (\{.*?\}) -->\s*", raw, re.S)
     meta = json.loads(m.group(1))
     body = raw[m.end():]
-    body = re.sub(r'<div class="art" data-art="(\w+)"></div>',
-                  lambda a: f'<div class="art">{svgart.art(a.group(1), p=f"{slug[:10]}-{a.group(1)}")}</div>', body)
+    hero = hero_photo(group, slug)
+    used = {hero}
+    def art(a):
+        theme = a.group(1)
+        pool = photos.THEME.get(theme, photos.THEME["facade"])
+        start = __import__("zlib").crc32(slug.encode()) % len(pool)
+        key = next((pool[(start + i) % len(pool)] for i in range(len(pool)) if pool[(start + i) % len(pool)] not in used), pool[start])
+        used.add(key)
+        return f'<figure class="art">{photos.img(key)}</figure>'
+    body = re.sub(r'<div class="art" data-art="(\w+)"></div>', art, body)
+    meta["photo"] = hero
     meta["body"] = body
     meta["slug"] = slug
     return meta
+
+
+def hero_photo(group, slug):
+    if group == "services":
+        return photos.SERVICE.get(slug, "facade-estate")
+    if group == "areas":
+        return photos.CITY.get(slug) or photos.pick("city", slug)
+    if group == "blog":
+        return photos.POST.get(slug, "house-night")
+    return photos.PAGE.get(slug, "house-night")
 
 
 def words(h):
@@ -97,7 +117,7 @@ def footer():
 <div><h4>Service areas</h4><ul>{ar}<li><a href="/service-areas/">All Texas areas →</a></li></ul></div>
 <div><h4>Company</h4><ul><li><a href="/about-us/">About us</a></li><li><a href="/our-process/">Our process</a></li><li><a href="/inspiration/">Ideas &amp; inspiration</a></li><li><a href="/tools/">Planning tools</a></li><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/contact/">Contact</a></li><li><a href="/quote/">Free quote</a></li></ul></div>
 </div>
-<div class="ftr__b"><span>© {date.today().year} {NAME}. All rights reserved.</span><nav><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a><a href="/sitemap.xml">Sitemap</a></nav></div>
+<div class="ftr__b"><span>© {date.today().year} {NAME}. All rights reserved.</span><nav><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-service/">Terms of Service</a><a href="/photo-credits/">Photo Credits</a><a href="/sitemap.xml">Sitemap</a></nav></div>
 </div></footer>
 <a class="fcall" href="{TEL}" aria-label="Call {PHONE}">{icon("phone")}</a>
 <button class="totop" aria-label="Back to top">{icon("up")}</button>"""
@@ -132,9 +152,9 @@ def popup():
 <div class="pop__bg" data-pop-close></div>
 <div class="pop__box">
 <button class="pop__x" type="button" aria-label="Close" data-pop-close>{icon("x")}</button>
-<div class="pop__side"><div><span class="eyebrow">Free lighting plan</span><h2>See your home in a new light</h2><p>Tell us a little about your property and we will put together a custom night-lighting plan, free and with no obligation.</p></div>
+<div class="pop__side">{photos.img("pool-string-lights", "pop__bg", alt="")}<div><span class="eyebrow">Free lighting plan</span><h2>See your home in a new light</h2><p>Tell us a little about your property and we will put together a custom night-lighting plan, free and with no obligation.</p></div>
 <a class="pop__ph" href="{TEL}">{icon("phone")} {PHONE}</a>
-<div class="pop__art" aria-hidden="true">{svgart.art("facade", p="pop")}</div></div>
+</div>
 <div class="pop__main"><h3 id="pop-t">Get your free quote</h3><p>Most requests get a reply within one business day.</p>{qform("popup-form", "popup", compact=True)}</div>
 </div></div>"""
 
@@ -189,7 +209,7 @@ def faq_schema(faqs):
 
 # ---------- page shell ----------
 
-def page(path, title, desc, main, schema=(), og_type="website", robots="index, follow, max-image-preview:large, max-snippet:-1", priority="0.6", lastmod=TODAY, scripts=("site",), crumbs=None, sitemap=True):
+def page(path, title, desc, main, schema=(), og_type="website", robots="index, follow, max-image-preview:large, max-snippet:-1", priority="0.6", lastmod=TODAY, scripts=("site",), crumbs=None, sitemap=True, image=None):
     url = BASE + path
     graph = [business_schema() if path == "/" else {"@type": "LocalBusiness", "@id": BUSINESS_ID, "name": NAME, "telephone": PHONE_E164, "url": f"{BASE}/"},
              {"@type": "WebSite", "@id": f"{BASE}/#website", "url": f"{BASE}/", "name": NAME, "publisher": {"@id": BUSINESS_ID}, "inLanguage": "en-US"},
@@ -219,8 +239,8 @@ def page(path, title, desc, main, schema=(), og_type="website", robots="index, f
 <meta name="theme-color" content="#1d1f22">
 <meta property="og:locale" content="en_US"><meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{NAME}">
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}"><meta property="og:url" content="{url}">
-<meta property="og:image" content="{BASE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}/assets/img/og-image.png">
+{og_image(image)}
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE + (photos.src(image) if image else "/assets/img/og-image.png")}">
 <meta name="geo.region" content="US-TX"><meta name="geo.placename" content="Texas">
 <link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -245,12 +265,21 @@ def page(path, title, desc, main, schema=(), og_type="website", robots="index, f
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(doc)
     if sitemap and "noindex" not in robots:
-        PAGES.append((path, lastmod, priority))
+        PAGES.append((path, lastmod, priority, image))
 
 
-def phero(eyebrow, h1, lede, trail, meta_line=""):
+def og_image(key):
+    if not key:
+        return f'<meta property="og:image" content="{BASE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'
+    p = photos.PHOTOS[key]
+    return (f'<meta property="og:image" content="{BASE}{photos.src(key)}"><meta property="og:image:width" content="{p["w"]}"><meta property="og:image:height" content="{p["h"]}">'
+            f'<meta property="og:image:alt" content="{esc(p["alt"])}">')
+
+
+def phero(eyebrow, h1, lede, trail, meta_line="", photo=None):
     cr = "".join(f'<li><a href="{u}">{esc(n)}</a></li>' if i < len(trail) - 1 else f'<li aria-current="page">{esc(n)}</li>' for i, (n, u) in enumerate(trail))
-    return f"""<section class="phero"><div class="wrap"><nav aria-label="Breadcrumb"><ol class="crumbs">{cr}</ol></nav>
+    bg = f'<div class="phero__img" aria-hidden="true">{photos.img(photo, "", eager=True, sizes="(max-width: 900px) 100vw, 60vw", alt="")}</div>' if photo else ""
+    return f"""<section class="phero{' phero--photo' if photo else ''}">{bg}<div class="wrap"><nav aria-label="Breadcrumb"><ol class="crumbs">{cr}</ol></nav>
 <span class="eyebrow">{esc(eyebrow)}</span><h1>{esc(h1)}</h1><p class="lead">{esc(lede)}</p>{meta_line}</div></section>"""
 
 
@@ -287,12 +316,12 @@ def build_content_page(group, slug, path, trail, kind, priority="0.7", extra_sch
     rel = f'<div class="prose"><h2>Keep exploring</h2></div>{related_links(related)}' if related else ""
     layout = "layout layout--full" if full else "layout"
     side = "" if full else aside(kind, slug, toc)
-    main = (phero(m["eyebrow"], m["h1"], m["lede"], trail)
+    main = (phero(m["eyebrow"], m["h1"], m["lede"], trail, photo=m["photo"])
             + f'<section class="sec"><div class="wrap {layout}"><div class="body">{body}{rel}</div>{side}</div></section>'
             + faq_block(faqs, faq_title, light=True)
             + (quote_section(path) if slug not in ("privacy-policy", "terms-of-service") else "")
             + cta_band())
-    page(path, m["title"], m["description"], main, schema=sch, priority=priority, crumbs=trail)
+    page(path, m["title"], m["description"], main, schema=sch, priority=priority, crumbs=trail, image=m["photo"])
     return m
 
 
@@ -305,14 +334,14 @@ def build_services():
         svc_schema = {"@type": "Service", "name": s["name"], "serviceType": m.get("keyword", s["name"]), "url": BASE + path, "provider": {"@id": BUSINESS_ID}, "areaServed": {"@type": "State", "name": "Texas"}, "description": m["description"]}
         build_content_page("services", s["slug"], path, [home, ("Services", "/services/"), (s["name"], path)], "services", "0.8", [svc_schema], rel)
     cards = "".join(service_card(s, i) for i, s in enumerate(SERVICES))
-    main = (phero("What we do", "Landscape Lighting Services in Texas", "Design, installation, repair and upgrades for every part of a Texas property, from the front elevation to the back fence.", [home, ("Services", "/services/")])
+    main = (phero("What we do", "Landscape Lighting Services in Texas", "Design, installation, repair and upgrades for every part of a Texas property, from the front elevation to the back fence.", [home, ("Services", "/services/")], photo=photos.PAGE["services"])
             + f'<section class="sec"><div class="wrap"><div class="hub">{cards}</div></div></section>'
             + process_rail() + quote_section("/services/") + cta_band())
-    page("/services/", "Landscape Lighting Services in Texas | Texas Landscape Lights", "Architectural, pathway, tree, patio, pool and commercial landscape lighting plus smart controls, repairs and LED upgrades for Texas homes. Free quote.", main, priority="0.9", crumbs=[home, ("Services", "/services/")])
+    page("/services/", "Landscape Lighting Services in Texas | Texas Landscape Lights", "Architectural, pathway, tree, patio, pool and commercial landscape lighting plus smart controls, repairs and LED upgrades for Texas homes. Free quote.", main, priority="0.9", crumbs=[home, ("Services", "/services/")], image=photos.PAGE["services"])
 
 
 def service_card(s, i, cls=""):
-    return (f'<a class="svc {cls}" href="/services/{s["slug"]}/"><div class="svc__art" aria-hidden="true">{svgart.art(s["art"], p=f"svc{i}").replace("<svg ", "<svg preserveAspectRatio=\"xMidYMid slice\" ", 1)}</div>'
+    return (f'<a class="svc {cls}" href="/services/{s["slug"]}/"><div class="svc__art">{photos.img(photos.SERVICE[s["slug"]], sizes="(max-width: 640px) 100vw, 40vw")}</div>'
             f'<span class="svc__n">{i + 1:02d}</span><h3>{esc(s["name"])}</h3><p>{esc(s["short"])}</p><span class="svc__go">Explore {icon("arrow")}</span></a>')
 
 
@@ -336,13 +365,13 @@ def build_areas():
         m = load("areas", c["slug"])
         svc = {"@type": "Service", "name": f'Landscape lighting in {c["name"]}', "serviceType": "Landscape lighting", "provider": {"@id": BUSINESS_ID}, "areaServed": {"@type": "City", "name": c["name"]}, "url": BASE + path}
         build_content_page("areas", c["slug"], path, [home, ("Service Areas", "/service-areas/"), (c["name"], path)], "areas", "0.8", [svc], rel, faq_title=f'Landscape lighting in {c["short"]}: FAQ')
-    main = (phero("Where we work", "Landscape Lighting Across Texas", "From Houston and the Gulf Coast to Dallas–Fort Worth, Austin, San Antonio and the Hill Country, we design and install lighting that suits each region's homes, trees and weather.", [home, ("Service Areas", "/service-areas/")])
+    main = (phero("Where we work", "Landscape Lighting Across Texas", "From Houston and the Gulf Coast to Dallas–Fort Worth, Austin, San Antonio and the Hill Country, we design and install lighting that suits each region's homes, trees and weather.", [home, ("Service Areas", "/service-areas/")], photo=photos.PAGE["service-areas"])
             + f'<section class="sec"><div class="wrap">{map_block(False)}</div></section>'
             + '<section class="sec sec--alt"><div class="wrap"><div class="head"><span class="eyebrow">City guides</span><h2>Choose your area</h2></div><div class="areas-hub">'
             + "".join(f'<a class="area" href="/service-areas/{c["slug"]}/"><small>{esc(c["county"])}</small><b>{esc(c["short"])}</b><p>{esc(c["blurb"])}</p></a>' for c in CITIES)
             + '</div><div class="prose" style="margin-top:34px"><p>Not on the list? We serve homeowners throughout Texas. Call <a href="' + TEL + '">' + PHONE + '</a> or <a href="/quote/">send us your project</a> and we will let you know how we can help in your city.</p></div></div></section>'
             + quote_section("/service-areas/") + cta_band())
-    page("/service-areas/", "Texas Service Areas | Texas Landscape Lights", "Landscape lighting in Houston, Dallas, Austin, San Antonio, Fort Worth, Plano, Frisco, Katy, Sugar Land, The Woodlands and across Texas. Free quote.", main, priority="0.9", crumbs=[home, ("Service Areas", "/service-areas/")])
+    page("/service-areas/", "Texas Service Areas | Texas Landscape Lights", "Landscape lighting in Houston, Dallas, Austin, San Antonio, Fort Worth, Plano, Frisco, Katy, Sugar Land, The Woodlands and across Texas. Free quote.", main, priority="0.9", crumbs=[home, ("Service Areas", "/service-areas/")], image=photos.PAGE["service-areas"])
 
 
 def map_block(home=True):
@@ -354,7 +383,7 @@ def map_block(home=True):
 
 
 def post_card(m):
-    return (f'<a class="post" href="/blog/{m["slug"]}/"><div class="post__art" aria-hidden="true">{svgart.art(svgart.POST_ART.get(m["slug"], "facade"), p="pc-" + m["slug"][:14]).replace("<svg ", "<svg preserveAspectRatio=\"xMidYMid slice\" ", 1)}</div>'
+    return (f'<a class="post" href="/blog/{m["slug"]}/"><div class="post__art">{photos.img(photos.POST.get(m["slug"], "house-night"), sizes="(max-width: 640px) 100vw, 33vw")}</div>'
             f'<div class="post__b"><span class="post__m">{CATEGORIES[m["category"]][0]} · {read_time(m)} min read</span><h3>{esc(m["h1"])}</h3><p>{esc(m["excerpt"])}</p></div></a>')
 
 
@@ -381,19 +410,20 @@ def build_blog():
         more = sorted(others, key=lambda p: (p["category"] != m["category"], p["date"]))[:3]
         art_ = {"@type": "BlogPosting", "headline": m["h1"], "description": m["description"], "datePublished": m["date"], "dateModified": m["date"],
                 "author": {"@type": "Organization", "name": NAME, "url": f"{BASE}/"}, "publisher": {"@id": BUSINESS_ID}, "mainEntityOfPage": BASE + path,
-                "image": f"{BASE}/assets/img/og-image.png", "articleSection": cat, "keywords": m.get("keyword", ""), "wordCount": words(body)}
+                "image": BASE + photos.src(m["photo"]), "articleSection": cat, "keywords": m.get("keyword", ""), "wordCount": words(body)}
         share = f'<div class="share"><span>Share this guide:</span><button type="button" data-copy>Copy link</button></div>'
-        main = (phero(m["eyebrow"], m["h1"], m["lede"], trail, meta_line)
-                + f'<section class="sec"><div class="wrap layout"><article class="body">{body}{share}</article>{aside("blog", m["slug"], toc)}</div></section>'
+        cover = f'<figure class="cover">{photos.img(m["photo"], eager=False, sizes="(max-width: 1100px) 100vw, 800px")}</figure>'
+        main = (phero(m["eyebrow"], m["h1"], m["lede"], trail, meta_line, photo=m["photo"])
+                + f'<section class="sec"><div class="wrap layout"><article class="body">{cover}{body}{share}</article>{aside("blog", m["slug"], toc)}</div></section>'
                 + faq_block(m.get("faqs"), "Questions about this topic", light=True)
                 + f'<section class="sec"><div class="wrap"><div class="head"><span class="eyebrow">Keep reading</span><h2>More from the blog</h2></div><div class="posts">{"".join(post_card(p) for p in more)}</div></div></section>'
                 + cta_band())
-        page(path, m["title"], m["description"], main, schema=[art_, faq_schema(m["faqs"])] if m.get("faqs") else [art_], og_type="article", priority="0.6", lastmod=m["date"], crumbs=trail)
+        page(path, m["title"], m["description"], main, schema=[art_, faq_schema(m["faqs"])] if m.get("faqs") else [art_], og_type="article", priority="0.6", lastmod=m["date"], crumbs=trail, image=m["photo"])
     def listing(path, h1, lede, items, trail, title, desc):
         chips = '<div class="presets" style="margin-bottom:28px"><a class="chip" href="/blog/">All posts</a>' + "".join(f'<a class="chip{" is-on" if path.endswith(k + "/") else ""}" href="/blog/category/{k}/">{v[0]}</a>' for k, v in CATEGORIES.items()) + "</div>"
-        main = (phero("Lighting journal", h1, lede, trail)
+        main = (phero("Lighting journal", h1, lede, trail, photo=photos.PAGE["blog"])
                 + f'<section class="sec"><div class="wrap">{chips}<div class="posts">{"".join(post_card(p) for p in items)}</div></div></section>' + cta_band())
-        page(path, title, desc, main, priority="0.7" if path == "/blog/" else "0.4", crumbs=trail)
+        page(path, title, desc, main, priority="0.7" if path == "/blog/" else "0.4", crumbs=trail, image=photos.PAGE["blog"])
     listing("/blog/", "Texas Landscape Lighting Blog", "Honest cost advice, design ideas and maintenance guides for lighting a Texas home.", posts, [home, ("Blog", "/blog/")],
             "Landscape Lighting Blog | Texas Landscape Lights", "Landscape lighting cost guides, design ideas, transformer sizing, LED upgrades and Texas storm and maintenance advice from Texas Landscape Lights.")
     for k, (n, d) in CATEGORIES.items():
@@ -415,10 +445,26 @@ def build_static_pages():
         trail = [home, (label, path)]
         form = f'<div class="qcard"><h3>{"Send us a message" if slug == "contact" else "Free consultation request"}</h3>{qform(slug + "-form", path)}</div>'
         cl = f'<ul class="contact-list"><li><a href="{TEL}">{icon("phone")}<span><small>Call or text</small><b>{PHONE}</b></span></a></li><li><a href="mailto:{EMAIL}">{icon("mail")}<span><small>Email</small><b>{EMAIL}</b></span></a></li><li><span>{icon("pin")}<span><small>Service area</small><b>Homeowners across Texas</b></span></span></li></ul>'
-        main = (phero(m["eyebrow"], m["h1"], m["lede"], trail)
+        main = (phero(m["eyebrow"], m["h1"], m["lede"], trail, photo=m["photo"])
                 + f'<section class="sec"><div class="wrap qsec"><div class="body">{m["body"]}{cl}</div>{form}</div></section>'
                 + faq_block(m.get("faqs"), "Before you reach out", light=True) + cta_band())
-        page(path, m["title"], m["description"], main, schema=[faq_schema(m["faqs"])] if m.get("faqs") else [], priority="0.8", crumbs=trail)
+        page(path, m["title"], m["description"], main, schema=[faq_schema(m["faqs"])] if m.get("faqs") else [], priority="0.8", crumbs=trail, image=m["photo"])
+    # photo credits (required by CC BY / BY-SA)
+    lic_url = {"by": "https://creativecommons.org/licenses/by/{v}/", "by-sa": "https://creativecommons.org/licenses/by-sa/{v}/",
+               "cc0": "https://creativecommons.org/publicdomain/zero/1.0/", "pdm": "https://creativecommons.org/publicdomain/mark/1.0/"}
+    lic_name = {"by": "CC BY {v}", "by-sa": "CC BY-SA {v}", "cc0": "CC0 1.0", "pdm": "Public Domain Mark 1.0"}
+    rows = "".join(
+        f'<tr><td><img src="{photos.src(k, True)}" width="120" height="{round(120 * p["h"] / p["w"])}" alt="{esc(p["alt"])}" loading="lazy"></td>'
+        f'<td><a href="{esc(p["src"])}" rel="nofollow noopener" target="_blank">{esc(p["title"])}</a></td><td>{esc(p["creator"])}</td>'
+        f'<td><a href="{lic_url[p["license"]].format(v=p["lv"])}" rel="nofollow noopener" target="_blank">{lic_name[p["license"]].format(v=p["lv"])}</a></td></tr>'
+        for k, p in photos.PHOTOS.items())
+    body = (f'<div class="prose"><p>The photographs on this site are royalty-free images published under Creative Commons or public-domain terms. '
+            f'They illustrate lighting styles and Texas cities and are not photos of Texas Landscape Lights projects unless stated. Images were resized and converted for the web; no other changes were made. '
+            f'Thank you to the photographers below.</p></div>'
+            f'<div class="table-wrap"><table><thead><tr><th>Photo</th><th>Title &amp; source</th><th>Photographer</th><th>License</th></tr></thead><tbody>{rows}</tbody></table></div>')
+    page("/photo-credits/", "Photo Credits | Texas Landscape Lights", "Credits and licenses for the royalty-free Creative Commons and public-domain photographs used on the Texas Landscape Lights website.",
+         phero("Credits", "Photo Credits", "The photographers and licenses behind the images on this site.", [home, ("Photo Credits", "/photo-credits/")])
+         + f'<section class="sec"><div class="wrap">{body}</div></section>', priority="0.2", crumbs=[home, ("Photo Credits", "/photo-credits/")])
     # thank you + 404
     page("/thank-you/", "Thank You | Texas Landscape Lights", "Thanks for contacting Texas Landscape Lights.",
          phero("Request received", "Thank you!", "Your request is in. We will be in touch shortly to talk through your project.", [home, ("Thank you", "/thank-you/")])
@@ -430,8 +476,10 @@ def build_static_pages():
 
 
 def write_extras():
-    urls = "".join(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>\n" for p, lm, pr in PAGES)
-    (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    def img_tag(key):
+        return f"<image:image><image:loc>{BASE}{photos.src(key)}</image:loc></image:image>" if key else ""
+    urls = "".join(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority>{img_tag(im)}</url>\n" for p, lm, pr, im in PAGES)
+    (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{urls}</urlset>\n')
     (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: /app/\n\nSitemap: {BASE}/sitemap.xml\n")
     (OUT / "site.webmanifest").write_text(json.dumps({"name": NAME, "short_name": "TX Lights", "icons": [
         {"src": "/assets/img/logo-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/assets/img/logo-512.png", "sizes": "512x512", "type": "image/png"}],

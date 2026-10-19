@@ -1,6 +1,7 @@
 """Interactive tool pages (/tools/...). Behaviour lives in src/assets/js/tools.js."""
 import json
 
+import photos
 import svgart
 from build import cta_band, esc, faq_block, faq_schema, page, phero, quote_section
 from siteconf import BASE, TOOLS, WEATHER, icon
@@ -207,14 +208,14 @@ def build():
         body = "".join(f'<div class="prose"><h2>{h}</h2>{p}</div>' for h, p in prose)
         app = {"@type": "WebApplication", "name": t["name"], "url": BASE + path, "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any",
                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "provider": {"@id": f"{BASE}/#business"}, "description": desc}
-        main = (phero("Free planning tool", t["name"], t["short"], trail)
+        main = (phero("Free planning tool", t["name"], t["short"], trail, photo=photos.TOOL[t["slug"]])
                 + f'<section class="sec"><div class="wrap">{box}</div></section>'
                 + f'<section class="sec sec--alt"><div class="wrap"><div class="body">{body}<div class="prose"><h2>More free tools</h2></div><div class="related">{others}</div></div></div></section>'
                 + faq_block(faqs, "Questions about this tool", light=True) + quote_section(path) + cta_band())
-        page(path, title, desc, main, schema=[app, faq_schema(faqs)], priority="0.7", scripts=("site", "tools"), crumbs=trail)
+        page(path, title, desc, main, schema=[app, faq_schema(faqs)], priority="0.7", scripts=("site", "tools"), crumbs=trail, image=photos.TOOL[t["slug"]])
     cards = "".join(f'<a class="tool" href="/tools/{t["slug"]}/"><span class="tool__i">{icon(t["icon"])}</span><h3>{esc(t["name"])}</h3><p>{esc(t["short"])}</p><span class="go">Open tool →</span></a>' for t in TOOLS)
-    main = (phero("Free planning tools", "Landscape Lighting Calculators & Tools", "Estimate fixtures, transformer size, voltage drop, energy cost and LED savings, explore color temperature and plan your timer around Texas sunsets.", [home, ("Tools", "/tools/")])
+    main = (phero("Free planning tools", "Landscape Lighting Calculators & Tools", "Estimate fixtures, transformer size, voltage drop, energy cost and LED savings, explore color temperature and plan your timer around Texas sunsets.", [home, ("Tools", "/tools/")], photo=photos.PAGE["tools"])
             + f'<section class="sec"><div class="wrap"><div class="tools">{cards}</div></div></section>'
             + f'<section class="sec sec--alt"><div class="wrap"><div class="head"><span class="eyebrow">Try it now</span><h2>Lighting visualizer</h2></div>{visualizer_box("hub-vis")}</div></section>'
             + quote_section("/tools/") + cta_band())
-    page("/tools/", "Free Landscape Lighting Calculators | Texas Landscape Lights", "Free landscape lighting calculators: visualizer, fixture estimator, transformer and voltage drop, energy cost, LED savings, color temperature and sunset timer.", main, priority="0.8", scripts=("site", "tools"), crumbs=[home, ("Tools", "/tools/")])
+    page("/tools/", "Free Landscape Lighting Calculators | Texas Landscape Lights", "Free landscape lighting calculators: visualizer, fixture estimator, transformer and voltage drop, energy cost, LED savings, color temperature and sunset timer.", main, priority="0.8", scripts=("site", "tools"), crumbs=[home, ("Tools", "/tools/")], image=photos.PAGE["tools"])
