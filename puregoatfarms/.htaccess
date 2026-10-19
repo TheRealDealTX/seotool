@@ -1,0 +1,30 @@
+# puregoatfarms.com — custom PHP site.
+# Real files are served directly; everything else goes to index.php, which
+# routes pages, 301s legacy WordPress URLs and returns real 404s.
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+ErrorDocument 404 /index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+# Private application code and form storage are never served directly.
+RewriteRule ^(app|storage)(/|$) - [F,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

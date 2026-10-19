@@ -1,0 +1,37 @@
+# Pure Goat Farms: Practical Goat Farming, Health & Dairy Guides
+
+Pure Goat Farms is a family-run dairy-goat farm (27 goats across six breeds) that publishes field-tested guides on goat milk production, dairy breeds, health and farm life, plus free goat calculators.
+
+## Guides
+- [How to Increase Goat Milk Production](https://puregoatfarms.com/how-to-increase-goat-milk-production/)
+- [Best Dairy Goat Breeds for Milk](https://puregoatfarms.com/best-dairy-goat-breeds-for-milk/)
+- [Do Goats Produce Milk Without Being Pregnant?](https://puregoatfarms.com/do-goats-produce-milk-without-being-pregnant/)
+- [How Often Do You Milk a Goat?](https://puregoatfarms.com/how-often-do-you-milk-a-goat/)
+- [How Much Milk Does a Goat Produce Per Day?](https://puregoatfarms.com/how-much-milk-does-a-goat-produce-per-day/)
+- [How Many Goats Do You Need to Make Cheese?](https://puregoatfarms.com/how-many-goats-do-you-need-to-make-cheese/)
+- [How Much Milk Can a Goat Really Give at Once?](https://puregoatfarms.com/how-much-milk-can-a-goat-really-give-at-once/)
+
+## Tools
+- [Goat Milk Yield Calculator](https://puregoatfarms.com/tools/goat-milk-yield-calculator/)
+- [Goat Milk Production Estimator](https://puregoatfarms.com/tools/goat-milk-production-estimator/)
+- [Goat Cheese Herd Calculator](https://puregoatfarms.com/tools/goat-cheese-herd-calculator/)
+- [Goat Gestation & Kidding Date Calculator](https://puregoatfarms.com/tools/goat-gestation-calculator/)
+- [Goat Feed & Hay Calculator](https://puregoatfarms.com/tools/goat-feed-calculator/)
+- [Dairy Goat Breed Finder](https://puregoatfarms.com/tools/dairy-goat-breed-finder/)
+- [Goat Milk Unit Converter](https://puregoatfarms.com/tools/goat-milk-converter/)
+
+## Pages
+- [Home](https://puregoatfarms.com/)
+- [About](https://puregoatfarms.com/about/)
+- [Start Here](https://puregoatfarms.com/start-here/)
+- [Goat FAQ](https://puregoatfarms.com/faq/)
+- [Contact](https://puregoatfarms.com/contact/)
+
+## Categories
+- [Milking & Dairy](https://puregoatfarms.com/category/milking-dairy/)
+- [Farm Life](https://puregoatfarms.com/category/farm-life/)
+- [Goat Breeds](https://puregoatfarms.com/category/goat-breeds/)
+- [Health & Care](https://puregoatfarms.com/category/health-care/)
+
+## Optional
+- [Sitemap index](https://puregoatfarms.com/sitemap_index.xml)
