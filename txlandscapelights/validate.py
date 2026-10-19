@@ -20,6 +20,8 @@ def visible_text(html):
 
 pages = {}
 for f in OUT.rglob("*.html"):
+    if f.name.startswith("google"):
+        continue
     rel = "/" + str(f.relative_to(OUT))
     url = "/" if rel == "/home.html" else rel.removesuffix("index.html")
     pages[url] = f.read_text()
@@ -62,6 +64,11 @@ if n < MIN_HOME_KEYWORD:
 if "(281) 704-7210" not in re.search(r"<title>(.*?)</title>", home).group(1):
     problems.append("homepage title is missing the phone number")
 
+for url, h in pages.items():
+    if h.count("G-CCJ95Y61X4") != 2:
+        problems.append(f"{url}: Google tag missing")
+if not (OUT / "googlecccfbf2f7e9e5ae4.html").is_file():
+    problems.append("Search Console verification file missing")
 sm = (OUT / "sitemap.xml").read_text()
 print(f"{len(pages)} html files, {sm.count('<loc>')} sitemap URLs")
 for p in problems:

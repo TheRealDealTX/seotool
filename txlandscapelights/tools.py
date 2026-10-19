@@ -217,4 +217,4 @@ def build():
             + f'<section class="sec"><div class="wrap"><div class="tools">{cards}</div></div></section>'
             + f'<section class="sec sec--alt"><div class="wrap"><div class="head"><span class="eyebrow">Try it now</span><h2>Lighting visualizer</h2></div>{visualizer_box("hub-vis")}</div></section>'
             + quote_section("/tools/") + cta_band())
-    page("/tools/", "Free Landscape Lighting Calculators | Texas Landscape Lights", "Free landscape lighting tools: visualizer, fixture estimator, transformer and voltage drop, energy cost, LED savings, color temperature and Texas sunset timer planner.", main, priority="0.8", scripts=("site", "tools"), crumbs=[home, ("Tools", "/tools/")])
+    page("/tools/", "Free Landscape Lighting Calculators | Texas Landscape Lights", "Free landscape lighting calculators: visualizer, fixture estimator, transformer and voltage drop, energy cost, LED savings, color temperature and sunset timer.", main, priority="0.8", scripts=("site", "tools"), crumbs=[home, ("Tools", "/tools/")])

@@ -202,10 +202,19 @@ def page(path, title, desc, main, schema=(), og_type="website", robots="index, f
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CCJ95Y61X4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CCJ95Y61X4');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
+{"" if "noindex" in robots else f'<link rel="canonical" href="{url}">'}
 <meta name="robots" content="{robots}">
 <meta name="theme-color" content="#1d1f22">
 <meta property="og:locale" content="en_US"><meta property="og:type" content="{og_type}"><meta property="og:site_name" content="{NAME}">
@@ -213,7 +222,7 @@ def page(path, title, desc, main, schema=(), og_type="website", robots="index, f
 <meta property="og:image" content="{BASE}/assets/img/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}/assets/img/og-image.png">
 <meta name="geo.region" content="US-TX"><meta name="geo.placename" content="Texas">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
@@ -389,7 +398,7 @@ def build_blog():
             "Landscape Lighting Blog | Texas Landscape Lights", "Landscape lighting cost guides, design ideas, transformer sizing, LED upgrades and Texas storm and maintenance advice from Texas Landscape Lights.")
     for k, (n, d) in CATEGORIES.items():
         listing(f"/blog/category/{k}/", f"{n}: Landscape Lighting {n}", d, [p for p in posts if p["category"] == k], [home, ("Blog", "/blog/"), (n, f"/blog/category/{k}/")],
-                f"{n} | Landscape Lighting Blog | Texas Landscape Lights", f"{d} Read the {n.lower()} from Texas Landscape Lights.")
+                f"{n} | Texas Landscape Lighting Blog", f"{d} Read the {n.lower()} from Texas Landscape Lights.")
     return posts
 
 
@@ -423,7 +432,7 @@ def build_static_pages():
 def write_extras():
     urls = "".join(f"<url><loc>{BASE}{p}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>\n" for p, lm, pr in PAGES)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
-    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: /app/\nDisallow: /thank-you/\n\nSitemap: {BASE}/sitemap.xml\n")
+    (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: /app/\n\nSitemap: {BASE}/sitemap.xml\n")
     (OUT / "site.webmanifest").write_text(json.dumps({"name": NAME, "short_name": "TX Lights", "icons": [
         {"src": "/assets/img/logo-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/assets/img/logo-512.png", "sizes": "512x512", "type": "image/png"}],
         "theme_color": "#1d1f22", "background_color": "#1d1f22", "display": "standalone"}, indent=1))

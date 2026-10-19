@@ -6,8 +6,8 @@ from build import (cta_band, esc, faq_block, faq_schema, map_block, page, post_c
 from siteconf import PHONE, SERVICES, TEL, TOOLS, WEATHER, icon
 from tools import visualizer_box
 
-TITLE = f"Texas Landscape Lights | Landscape Lighting Experts | {PHONE}"
-DESC = ("Texas Landscape Lights designs, installs and repairs custom LED landscape lighting for homes across Texas. "
+TITLE = f"Texas Landscape Lights | Landscape Lighting | {PHONE}"
+DESC = ("Texas Landscape Lights designs, installs and repairs LED landscape lighting for homes across Texas. "
         f"Free lighting plan and night demo. Call {PHONE}.")
 
 FAQS = [
@@ -147,7 +147,7 @@ def build(posts):
 <article class="card"><span class="card__k">04 · Clean work</span><h3>Respect for the landscape</h3><p>Wire is concealed, roots are avoided, beds are protected and the site is left cleaner than we found it.</p></article>
 <article class="card"><span class="card__k">05 · After dark</span><h3>We finish at night</h3><p>Glare and balance can only be judged after sunset, so every Texas Landscape Lights project ends with a night aiming visit.</p></article>
 <article class="card"><span class="card__k">06 · Honest advice</span><h3>Clear, written proposals</h3><p>You see fixture locations, scope and price in writing. If a repair beats a replacement, we will tell you.</p></article>
-</div></div></section>"""
+</div><p style="text-align:center;margin-top:28px"><a class="btn btn--ghost" href="/about-us/">More about Texas Landscape Lights {icon("arrow")}</a></p></div></section>"""
 
     blog = f"""<section class="sec sec--light"><div class="wrap">
 <div class="head head--row"><div><span class="eyebrow">From the blog</span><h2>Guides for lighting a Texas home</h2><p class="lead">Honest cost advice, design ideas and maintenance checklists from the Texas Landscape Lights team.</p></div><a class="btn btn--rust" href="/blog/">Read the blog {icon("arrow")}</a></div>
