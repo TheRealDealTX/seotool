@@ -10,22 +10,22 @@ ICONS = {
 TOOLS = [
     {"slug": "fabric-yardage-calculator", "short": "Fabric Yardage Calculator", "icon": "ruler",
      "title": "Fabric Yardage Calculator",
-     "seo": "Fabric Yardage Calculator: How Much Fabric Do I Need? | Kotric",
-     "desc": "Free fabric yardage calculator. Enter your piece size, quantity, seam allowance and bolt width to see how many yards (and meters) of fabric to buy, with a cutting layout.",
+     "seo": "Fabric Yardage Calculator: How Much Fabric to Buy",
+     "desc": "Free fabric yardage calculator: enter piece size, quantity, seam allowance and bolt width to see how many yards or meters to buy, with a cutting layout.",
      "blurb": "Find out exactly how much fabric to buy for any number of pieces, with a live cutting layout."},
     {"slug": "fleece-tie-blanket-calculator", "short": "Fleece Blanket Calculator", "icon": "blanket",
      "title": "Fleece Tie Blanket Calculator",
-     "seo": "No-Sew Fleece Tie Blanket Calculator (Size & Yardage) | Kotric",
-     "desc": "Work out how much fleece you need for a no-sew tie blanket in baby, lap, throw, twin or custom sizes — plus cut sizes, corner squares and the number of knots.",
+     "seo": "Fleece Tie Blanket Calculator: Size & Yardage",
+     "desc": "How much fleece you need for a no-sew tie blanket in baby, lap, throw, twin or custom sizes, plus cut sizes, corner squares and number of knots.",
      "blurb": "Fleece yardage, cut size, corner squares and knot count for any tie blanket."},
     {"slug": "sewing-unit-converter", "short": "Sewing Unit Converter", "icon": "swap",
      "title": "Sewing Unit Converter",
-     "seo": "Sewing Measurement Converter: cm to Inches & Fractions | Kotric",
+     "seo": "Sewing Converter: cm to Inches & Fractions | Kotric",
      "desc": "Convert sewing measurements between inches, fractions, centimeters, millimeters, yards and meters — and see the nearest standard seam allowance.",
      "blurb": "Convert cm, mm, yards and meters to inches with sewing-friendly fractions."},
     {"slug": "no-sew-method-quiz", "short": "No-Sew Method Quiz", "icon": "quiz",
      "title": "Which No-Sew Method Should I Use?",
-     "seo": "No-Sew Method Quiz: Fabric Glue, Fusible Web or Knots? | Kotric",
+     "seo": "No-Sew Method Quiz: Glue, Fusible Web or Knots?",
      "desc": "Answer four quick questions and find the best no-sew way to join fabric for your project: fabric glue, fusible web, hem tape, hot glue or knots.",
      "blurb": "Four questions to find the right bond: glue, fusible web, hem tape or knots."},
 ]
@@ -144,7 +144,7 @@ def build_tools(ctx):
     body = f'''<section class="page-hero"><div class="wrap">{crumbs}<span class="eyebrow">Free &amp; interactive</span><h1>Craft &amp; Sewing Tools</h1>
 <p class="lead" style="max-width:640px">Skip the mental math. These free tools work out fabric yardage, fleece blanket sizes and sewing conversions, and help you pick the right no-sew method — right in your browser.</p></div></section>
 <section class="section" style="padding-top:10px"><div class="wrap"><div class="tool-grid">{cards}</div></div></section>'''
-    yield "/tools/", page("/tools/", "Free Sewing & Fabric Craft Calculators and Tools | Kotric",
+    yield "/tools/", page("/tools/", "Free Sewing & Fabric Craft Calculators | Kotric",
                           "Free interactive sewing tools: fabric yardage calculator, fleece tie blanket calculator, sewing unit converter and a no-sew method quiz.",
                           body, [crumb_ld], og_img="scissors-and-thread")
     for t in TOOLS:

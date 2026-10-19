@@ -7,10 +7,10 @@ POSTS = [
         "slug": "upcycle-old-jeans",
         "title": "17 Clever Ways to Upcycle Old Jeans (Most Need No Sewing)",
         "h1": "17 Clever Ways to Upcycle Old Jeans",
-        "seo_title": "17 Ways to Upcycle Old Jeans: Easy Denim DIY Ideas | Kotric",
+        "seo_title": "17 Ways to Upcycle Old Jeans: Easy Denim DIY Ideas",
         "desc": "Turn worn-out jeans into tote bags, coasters, pot holders, rag rugs and more. Easy denim upcycling ideas, from no-sew to beginner sewing.",
         "cat": "fabric-crafts", "img": "old-jeans", "img_alt": "A pair of worn blue jeans ready to be upcycled",
-        "date": "2026-10-02", "read": 9,
+        "date": "2026-10-17", "read": 9,
         "body": """
 <p class="lead">Denim is one of the best fabrics a crafter can get for free. It is tough, it doesn't fray much, it softens with every wash, and nearly every household has a pair of jeans that no longer fits. Before you drop them in a donation bag, look at them as roughly a yard of heavy cotton twill, plus pockets, belt loops, rivets and seams you can reuse.</p>
 <p>Below are 17 ways to give old jeans a second life, sorted from "scissors only" to "an hour at the machine".</p>
@@ -87,10 +87,10 @@ POSTS = [
         "slug": "fabric-scrap-projects",
         "title": "25 Fabric Scrap Projects That Use Up Every Last Piece",
         "h1": "25 Fabric Scrap Projects That Use Up Every Last Piece",
-        "seo_title": "25 Fabric Scrap Projects: What to Do With Fabric Scraps | Kotric",
+        "seo_title": "25 Fabric Scrap Projects to Use Every Last Piece",
         "desc": "Fabric scrap ideas sorted by scrap size, from tiny snippets to fat-quarter leftovers: scrunchies, coasters, bunting, pet beds, quilts and more.",
         "cat": "fabric-crafts", "img": "colorful-fabrics", "img_alt": "A pile of bright, colorful fabric scraps",
-        "date": "2026-09-28", "read": 8,
+        "date": "2026-10-17", "read": 8,
         "body": """
 <p class="lead">Every fabric project leaves something behind: strips, corners, odd triangles and the last six inches of a print you loved. The trick to using scraps is to sort them by size first, because the size of the scrap decides which project it suits.</p>
 
@@ -166,10 +166,10 @@ POSTS = [
         "slug": "beginner-sewing-kit-essentials",
         "title": "Beginner Sewing Kit: The 15 Essentials (and What to Skip)",
         "h1": "The Beginner Sewing Kit: 15 Essentials and What to Skip",
-        "seo_title": "Beginner Sewing Kit Essentials: 15 Must-Have Tools | Kotric",
+        "seo_title": "Beginner Sewing Kit: 15 Must-Have Tools | Kotric",
         "desc": "Exactly what to put in a beginner sewing kit: needles, thread, scissors, pins, marking tools and more — plus the gadgets you don't need yet.",
         "cat": "sewing", "img": "pincushion-and-thread", "img_alt": "A pincushion full of pins surrounded by spools of thread",
-        "date": "2026-09-21", "read": 8,
+        "date": "2026-10-17", "read": 8,
         "body": """
 <p class="lead">You can spend a fortune on sewing gadgets, but a capable beginner kit fits in a shoebox and costs less than a takeaway dinner for two. Here is what genuinely earns its place, in the order you will reach for it.</p>
 
@@ -228,10 +228,10 @@ POSTS = [
         "slug": "hand-sewing-stitches-for-beginners",
         "title": "7 Hand Sewing Stitches Every Beginner Should Know",
         "h1": "7 Hand Sewing Stitches Every Beginner Should Know",
-        "seo_title": "7 Basic Hand Sewing Stitches for Beginners (Step by Step) | Kotric",
+        "seo_title": "7 Basic Hand Sewing Stitches for Beginners | Kotric",
         "desc": "Learn the running stitch, backstitch, whip stitch, slip stitch, blanket stitch, basting and the knot that starts them all — with when to use each one.",
         "cat": "sewing", "img": "thimble-and-spools", "img_alt": "A thimble beside colorful spools of sewing thread",
-        "date": "2026-09-14", "read": 7,
+        "date": "2026-10-17", "read": 7,
         "body": """
 <p class="lead">With seven stitches you can repair a hem, close a stuffed toy, attach a patch, finish a blanket edge and assemble a whole project by hand. Each one below takes minutes to learn.</p>
 
@@ -282,10 +282,10 @@ POSTS = [
         "slug": "fabric-glue-vs-fusible-web",
         "title": "Fabric Glue vs Fusible Web vs Hem Tape: Which No-Sew Method Wins?",
         "h1": "Fabric Glue vs Fusible Web vs Hem Tape",
-        "seo_title": "Fabric Glue vs Fusible Web vs Hem Tape: No-Sew Guide | Kotric",
+        "seo_title": "Fabric Glue vs Fusible Web vs Hem Tape | Kotric",
         "desc": "Compare the main no-sew fabric bonding methods — fabric glue, fusible web, iron-on hem tape and hot glue — for strength, washability and best uses.",
         "cat": "fabric-crafts", "img": "linen-swatches", "img_alt": "Neutral linen fabric swatches with eucalyptus leaves",
-        "date": "2026-09-07", "read": 7,
+        "date": "2026-10-17", "read": 7,
         "body": """
 <p class="lead">"No-sew" covers a lot of different products, and picking the wrong one is why some no-sew projects fall apart in the first wash. Here is how the main options really compare.</p>
 
@@ -337,10 +337,10 @@ POSTS = [
         "slug": "how-to-make-a-no-sew-fleece-blanket",
         "title": "How to Make a No-Sew Fleece Tie Blanket (Any Size)",
         "h1": "How to Make a No-Sew Fleece Tie Blanket",
-        "seo_title": "How to Make a No-Sew Fleece Tie Blanket: Sizes & Steps | Kotric",
+        "seo_title": "How to Make a No-Sew Fleece Tie Blanket (Any Size)",
         "desc": "Step-by-step guide to a no-sew fleece tie blanket: how much fleece to buy for baby, throw and twin sizes, how to cut the fringe and the best knot to use.",
         "cat": "diy-projects", "img": "folded-blankets", "img_alt": "A stack of soft folded blankets in green and grey",
-        "date": "2026-08-30", "read": 7,
+        "date": "2026-10-17", "read": 7,
         "body": """
 <p class="lead">A fleece tie blanket is the project that makes people fall in love with fabric crafts. No machine, no needle, no pattern — just two pieces of fleece, scissors and a couple of hours. It's a favorite for gifts, charity drives and classroom projects.</p>
 

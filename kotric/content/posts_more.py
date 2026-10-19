@@ -5,10 +5,10 @@ MORE = [
         "slug": "organize-fabric-stash",
         "title": "How to Organize Your Fabric Stash (A System That Actually Lasts)",
         "h1": "How to Organize Your Fabric Stash",
-        "seo_title": "How to Organize Your Fabric Stash: Fold, Sort & Store | Kotric",
+        "seo_title": "How to Organize Your Fabric Stash | Kotric",
         "desc": "A simple, repeatable system to organize fabric: purge, sort by type and color, fold to a uniform size, label, and keep the stash under control.",
         "cat": "organization", "img": "felt-fabric-stack", "img_alt": "Neatly stacked felt fabric sheets in a rainbow of colors",
-        "date": "2026-10-09", "read": 8,
+        "date": "2026-10-17", "read": 8,
         "body": """
 <p class="lead">A fabric stash is wonderful until you can't find anything in it. Then it becomes a pile of guilt you keep adding to. The good news: organizing fabric is a one-afternoon job, and keeping it tidy takes minutes a month once you have a system.</p>
 
@@ -76,10 +76,10 @@ MORE = [
         "slug": "sewing-room-organization-ideas",
         "title": "21 Sewing Room Organization Ideas for Any Size Space",
         "h1": "21 Sewing Room Organization Ideas for Any Size Space",
-        "seo_title": "21 Sewing Room Organization Ideas (Small Spaces Too) | Kotric",
+        "seo_title": "21 Sewing Room Organization Ideas | Kotric",
         "desc": "Practical sewing room and craft corner organization ideas: thread storage, pattern filing, pegboards, cutting stations and small-space hacks.",
         "cat": "organization", "img": "sewing-station", "img_alt": "A small sewing station with a sewing machine and iron",
-        "date": "2026-08-24", "read": 8,
+        "date": "2026-10-17", "read": 8,
         "body": """
 <p class="lead">You don't need a dedicated room to sew happily. You need a place for everything, a surface you can clear in two minutes and good light. These ideas work in a spare room, a corner of the bedroom or a closet.</p>
 
@@ -142,10 +142,10 @@ MORE = [
         "slug": "fabric-types-guide",
         "title": "Fabric Types Guide: 14 Common Fabrics and What to Make With Them",
         "h1": "Fabric Types Guide: 14 Fabrics and What to Make With Them",
-        "seo_title": "Fabric Types Guide for Beginners: 14 Common Fabrics | Kotric",
+        "seo_title": "Fabric Types Guide: 14 Common Fabrics | Kotric",
         "desc": "A beginner-friendly guide to cotton, linen, flannel, fleece, felt, denim, canvas, jersey and more — how each behaves and the best projects for it.",
         "cat": "sewing", "img": "dyed-fabric", "img_alt": "Close-up of hand-dyed fabric in blue and purple",
-        "date": "2026-08-17", "read": 9,
+        "date": "2026-10-17", "read": 9,
         "body": """
 <p class="lead">Choosing the right fabric is half the battle. The same pattern can look professional in one fabric and sad in another. Here's a plain-English guide to the fabrics you'll meet most often.</p>
 
@@ -214,10 +214,10 @@ MORE = [
         "slug": "sewing-hacks",
         "title": "20 Sewing Hacks That Make Every Project Easier",
         "h1": "20 Sewing Hacks That Make Every Project Easier",
-        "seo_title": "20 Genius Sewing Hacks and Tips for Beginners | Kotric",
+        "seo_title": "20 Genius Sewing Hacks for Beginners | Kotric",
         "desc": "Clever sewing hacks for threading needles, perfect seam allowances, sharp corners, easy hems and tidy workspaces — tested tips that save time.",
         "cat": "sewing", "img": "vintage-sewing-machine", "img_alt": "A vintage black sewing machine with gold detailing",
-        "date": "2026-08-10", "read": 7,
+        "date": "2026-10-17", "read": 7,
         "body": """
 <p class="lead">Small tricks add up. These are the hacks we wish someone had told us in our first year of sewing — no special gadgets required.</p>
 
@@ -270,10 +270,10 @@ MORE = [
         "slug": "how-to-sew-a-button",
         "title": "How to Sew a Button by Hand (Flat and Shank Buttons)",
         "h1": "How to Sew a Button by Hand",
-        "seo_title": "How to Sew a Button by Hand in 5 Minutes (Step by Step) | Kotric",
+        "seo_title": "How to Sew a Button by Hand in 5 Minutes | Kotric",
         "desc": "Learn how to sew on a two-hole, four-hole and shank button by hand, including how to make a thread shank so buttons don't pop off again.",
         "cat": "sewing", "img": "buttons", "img_alt": "Assorted buttons in different colors and sizes",
-        "date": "2026-08-03", "read": 5,
+        "date": "2026-10-17", "read": 5,
         "body": """
 <p class="lead">Sewing on a button takes about five minutes, and doing it properly means it won't fall off again next week. The secret most people skip is the thread shank.</p>
 
@@ -322,10 +322,10 @@ MORE = [
         "slug": "how-to-prewash-fabric",
         "title": "Should You Prewash Fabric? How and When to Do It",
         "h1": "Should You Prewash Fabric?",
-        "seo_title": "Should You Prewash Fabric Before Sewing? How to Do It | Kotric",
+        "seo_title": "Should You Prewash Fabric Before Sewing? | Kotric",
         "desc": "When to prewash fabric, which fabrics shrink the most, how to stop fraying in the wash and how to prewash cotton, linen, flannel, wool and more.",
         "cat": "sewing", "img": "cozy-craft-flatlay", "img_alt": "A cozy craft flatlay with knitted fabric, yarn and a notebook",
-        "date": "2026-07-27", "read": 6,
+        "date": "2026-10-17", "read": 6,
         "body": """
 <p class="lead">Short answer: if the finished project will be washed, wash the fabric first. Prewashing removes shrinkage, excess dye and the sizing chemicals that make new fabric stiff, so your project keeps its shape after its first trip through the laundry.</p>
 

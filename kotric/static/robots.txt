@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /home.html
 Disallow: /contact.php
+Disallow: /_pages/
 
 Sitemap: https://kotric.com/sitemap.xml

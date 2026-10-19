@@ -13,7 +13,8 @@ import sys
 from datetime import date
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-OUT = os.path.join(ROOT, "public")
+OUT = os.path.join(ROOT, "public")          # uploaded to public_html (assets, root files)
+PAGES = os.path.join(OUT, "_pages")         # HTML pages + feed; served only via index.php
 sys.path.insert(0, ROOT)
 
 from content import posts as POSTS_MOD  # noqa: E402
@@ -126,30 +127,59 @@ def breadcrumbs(trail):
     return f'<nav class="crumbs" aria-label="Breadcrumb">{vis}</nav>', ld
 
 
-def page(path, title, desc, body, schema=None, og_img="sewing-machine-orange-felt", og_type="website", progress=False, robots="index, follow"):
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1D6K5T4D2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q1D6K5T4D2');
+</script>"""
+
+
+def page(path, title, desc, body, schema=None, og_img="sewing-machine-orange-felt", og_type="website", progress=False,
+         robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1", published=None, modified=None):
     url = SITE + path
     schemas = schema or []
     ld = "".join(f'<script type="application/ld+json">{json.dumps(s, ensure_ascii=False)}</script>' for s in schemas)
     prog = '<div class="read-progress" aria-hidden="true"></div>' if progress else ""
+    canon = "" if robots.startswith("noindex") else f'<link rel="canonical" href="{url}">\n'
+    art = ""
+    if og_type == "article":
+        art = (f'<meta property="article:published_time" content="{published or BUILD_DATE}T08:00:00+00:00">\n'
+               f'<meta property="article:modified_time" content="{modified or BUILD_DATE}T08:00:00+00:00">\n'
+               f'<meta property="article:author" content="{SITE}/about/">\n')
     return f'''<!doctype html>
-<html lang="en">
+<html lang="en-US">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="{robots}">
-<link rel="canonical" href="{url}">
+{canon}<link rel="alternate" type="application/rss+xml" title="{NAME} feed" href="{SITE}/feed/">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{NAME}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
 <meta property="og:image" content="{SITE}{img_url(og_img)}">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="960">
+<meta property="og:image:height" content="{IMG[og_img]}">
+<meta property="og:image:type" content="image/jpeg">
+{art}<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{SITE}{img_url(og_img)}">
 <meta name="theme-color" content="#cf5a35">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
@@ -169,15 +199,15 @@ def page(path, title, desc, body, schema=None, og_img="sewing-machine-orange-fel
 
 
 ORG = {"@type": "Organization", "@id": SITE + "/#org", "name": NAME, "url": SITE + "/",
-       "logo": SITE + "/apple-touch-icon.png", "email": EMAIL}
+       "logo": SITE + "/web-app-manifest-512x512.png", "email": EMAIL}
 
 
 def write(path, content):
     """path is a URL path like /blog/ or a file like /404.html."""
     if path.endswith("/"):
-        fp = os.path.join(OUT, path.strip("/"), "index.html") if path != "/" else os.path.join(OUT, "home.html")
+        fp = os.path.join(PAGES, path.strip("/"), "index.html")
     else:
-        fp = os.path.join(OUT, path.lstrip("/"))
+        fp = os.path.join(PAGES, path.lstrip("/"))
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     with open(fp, "w", encoding="utf-8") as f:
         f.write(content)
@@ -269,13 +299,14 @@ def article(p, related):
               "author": {"@type": "Organization", "name": "The Kotric Team", "url": SITE + "/about/"},
               "publisher": ORG, "mainEntityOfPage": SITE + path, "articleSection": cat_name}
     schemas = [art_ld, crumb_ld] + ([fq_ld] if fq_ld else [])
-    return page(path, p["seo_title"], p["desc"], body, schemas, og_img=p["img"], og_type="article", progress=True)
+    return page(path, p["seo_title"], p["desc"], body, schemas, og_img=p["img"], og_type="article", progress=True,
+                published=p.get("published", p["date"]), modified=p["date"])
 
 
 def build():
     if os.path.isdir(OUT):
         shutil.rmtree(OUT)
-    os.makedirs(OUT)
+    os.makedirs(PAGES)
     shutil.copytree(os.path.join(ROOT, "assets"), os.path.join(OUT, "assets"))
     for f in os.listdir(os.path.join(ROOT, "static")):
         shutil.copy(os.path.join(ROOT, "static", f), os.path.join(OUT, f))
@@ -305,14 +336,42 @@ def build():
         write(path, html_out)
         urls.append((path, BUILD_DATE, "0.7"))
 
-    # sitemap.xml
+    # sitemap.xml with image entries (read back from each page's HTML)
+    import re
     urls.sort(key=lambda u: (u[0] != "/", u[0]))
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for u, lm, pr in urls:
-        sm.append(f"  <url><loc>{SITE}{u}</loc><lastmod>{lm}</lastmod><priority>{pr}</priority></url>")
+        fp = os.path.join(PAGES, u.strip("/"), "index.html")
+        imgs = []
+        main_html = open(fp, encoding="utf-8").read().split('<main id="main">', 1)[-1].split("</main>", 1)[0]
+        for src in re.findall(r'<img src="(/assets/img/[^"]+)"', main_html):
+            if src not in imgs:
+                imgs.append(src)
+        im = "".join(f"<image:image><image:loc>{SITE}{i}</image:loc></image:image>" for i in imgs[:10])
+        sm.append(f"  <url><loc>{SITE}{u}</loc><lastmod>{lm}</lastmod>{im}</url>")
     sm.append("</urlset>")
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
         f.write("\n".join(sm) + "\n")
+
+    # RSS feed, served at /feed/ by index.php
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    items = []
+    for p in posts:
+        d = datetime.fromisoformat(p.get("published", p["date"]) + "T08:00:00").replace(tzinfo=timezone.utc)
+        items.append(f"""<item><title>{esc(p["title"])}</title><link>{SITE}/{p["slug"]}/</link><guid isPermaLink="true">{SITE}/{p["slug"]}/</guid>
+<pubDate>{format_datetime(d)}</pubDate><category>{esc(CATEGORIES[p["cat"]][0])}</category><description>{esc(p["desc"])}</description></item>""")
+    now = format_datetime(datetime.now(timezone.utc))
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>{NAME}: {esc(TAGLINE)}</title><link>{SITE}/</link><description>Fabric craft ideas, no-sew DIY projects and sewing tutorials.</description>
+<language>en-us</language><lastBuildDate>{now}</lastBuildDate><atom:link href="{SITE}/feed/" rel="self" type="application/rss+xml"/>
+{"".join(items)}
+</channel></rss>
+"""
+    with open(os.path.join(PAGES, "feed.xml"), "w", encoding="utf-8") as f:
+        f.write(rss)
     print(f"built {len(urls)} indexable pages into {OUT}")
 
 

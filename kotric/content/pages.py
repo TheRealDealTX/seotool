@@ -134,8 +134,8 @@ def home(c):
         dict(c["ORG"], sameAs=[]),
         {"@type": "WebSite", "@id": c["SITE"] + "/#website", "url": c["SITE"] + "/", "name": "Kotric",
          "description": "Fabric crafts, DIY projects and sewing tutorials", "publisher": {"@id": c["SITE"] + "/#org"}}]}
-    return c["page"]("/", "Kotric | Fabric Crafts, No-Sew DIY Projects & Sewing Tutorials",
-                     "Easy fabric craft ideas, 41 no-sew DIY projects, beginner sewing tutorials, organizing tips and free craft calculators. Make something lovely with fabric today.",
+    return c["page"]("/", "Kotric: Fabric Crafts, No-Sew DIY Projects & Sewing",
+                     "Easy fabric craft ideas, 41 no-sew DIY projects, beginner sewing tutorials, organizing tips and free craft calculators. Make something with fabric today.",
                      body, [ws], og_img="sewing-machine-orange-felt")
 
 
@@ -215,8 +215,8 @@ def projects_page(c):
            "description": "41 no-sew DIY fabric projects using knots, fabric glue and fusible web.",
            "image": c["SITE"] + c["img_url"]("colorful-fabrics"), "dateModified": c["BUILD_DATE"], "datePublished": "2023-01-10",
            "author": {"@type": "Organization", "name": "The Kotric Team"}, "publisher": c["ORG"], "mainEntityOfPage": c["SITE"] + path}
-    return c["page"](path, "41 Amazing No-Sew DIY Fabric Projects (Easy Ideas) | Kotric",
-                     "41 easy no-sew DIY fabric projects: fleece tie blankets, knotted pillow covers, T-shirt bags, felt crafts, gifts and home décor made without a needle and thread.",
+    return c["page"](path, "41 Amazing No-Sew DIY Fabric Projects | Kotric",
+                     "41 easy no-sew DIY fabric projects: fleece tie blankets, knotted pillow covers, T-shirt bags, felt crafts, gifts and décor without a needle and thread.",
                      body, [art, il, crumb_ld, fq_ld], og_img="colorful-fabrics", og_type="article", progress=False)
 
 
@@ -297,8 +297,8 @@ def four_page(c):
     art = {"@context": "https://schema.org", "@type": "Article", "headline": "4 No-Sew DIY Fabric Projects You Can Finish This Weekend",
            "image": c["SITE"] + c["img_url"]("folded-blankets"), "dateModified": c["BUILD_DATE"], "datePublished": "2023-01-10",
            "author": {"@type": "Organization", "name": "The Kotric Team"}, "publisher": c["ORG"], "mainEntityOfPage": c["SITE"] + path}
-    return c["page"](path, "4 No-Sew DIY Fabric Projects: Easy Step-by-Step Tutorials | Kotric",
-                     "Four easy no-sew DIY fabric projects with step-by-step instructions: a fleece tie blanket, knotted pillow cover, T-shirt tote bag and fabric-wrapped storage bins.",
+    return c["page"](path, "4 No-Sew DIY Fabric Projects: Step-by-Step Guides",
+                     "Four easy no-sew DIY fabric projects with step-by-step instructions: a fleece tie blanket, knotted pillow cover, T-shirt tote and fabric-wrapped bins.",
                      body, [art, crumb_ld] + howtos, og_img="folded-blankets", og_type="article", progress=True)
 
 
@@ -394,8 +394,8 @@ def legal(c):
 <ul><li><strong>Messages you send us.</strong> If you use the contact form or email us, we receive your name, email address and message, and use them only to reply.</li>
 <li><strong>Server logs.</strong> Our host automatically records standard technical data such as IP address, browser type and pages requested, for security and performance.</li>
 <li><strong>Data stored on your device.</strong> Our interactive features (for example, the "I made this" checkboxes and tutorial step checklists) save your progress in your browser's local storage. This data never leaves your device and you can clear it at any time in your browser settings.</li></ul>
-<h2 id="cookies">Cookies</h2>
-<p>Kotric does not set advertising or tracking cookies. Fonts are loaded from Google Fonts, which may log your IP address as described in Google's privacy policy.</p>
+<h2 id="cookies">Cookies and analytics</h2>
+<p>We use <strong>Google Analytics</strong> to understand how visitors use the site (for example, which pages are read and how people arrive). Google Analytics sets cookies and collects information such as pages visited, approximate location, device and browser type. You can learn how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="nofollow noopener" target="_blank">policies.google.com/technologies/partner-sites</a> and opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="nofollow noopener" target="_blank">Google Analytics opt-out browser add-on</a>. We do not use advertising cookies. Fonts are loaded from Google Fonts, which may log your IP address as described in Google's privacy policy.</p>
 <h2 id="sharing">Sharing</h2><p>We do not sell or rent personal information. We share it only where required by law.</p>
 <h2 id="rights">Your rights</h2><p>You can ask us to access, correct or delete personal information you've sent us by emailing <a href="mailto:{e}">{e}</a>.</p>
 <h2 id="children">Children</h2><p>Kotric is intended for a general audience and does not knowingly collect information from children under 13.</p>
@@ -411,9 +411,9 @@ def legal(c):
 <h2 id="products">Product mentions</h2><p>When we mention a type of product (for example fabric glue or fusible web), it's because we find it useful. If we ever include affiliate links, they will be clearly disclosed on the page, and they never change what we recommend.</p>
 <h2 id="safety">Safety</h2><p>Always follow the safety instructions for irons, glue guns, blades and adhesives. Do not use small parts, ribbons or loose fringe in items intended for unsupervised infants.</p>
 <h2 id="contact">Questions</h2><p>Email <a href="mailto:{e}">{e}</a>.</p>'''
-    yield "/privacy-policy/", simple(c, "/privacy-policy/", "Privacy Policy", "Privacy Policy | Kotric", "How Kotric collects, uses and protects your information.", privacy), "0.2"
-    yield "/terms-of-use/", simple(c, "/terms-of-use/", "Terms of Use", "Terms of Use | Kotric", "The terms for using kotric.com, its content and free craft tools.", terms), "0.2"
-    yield "/disclaimer/", simple(c, "/disclaimer/", "Disclaimer", "Disclaimer | Kotric", "Kotric's content, product-mention and safety disclaimer.", disclaimer), "0.2"
+    yield "/privacy-policy/", simple(c, "/privacy-policy/", "Privacy Policy", "Privacy Policy | Kotric Fabric Crafts & Sewing", "Kotric's privacy policy: what information kotric.com collects, how it is used, cookies and analytics, and how to contact us about your data.", privacy), "0.2"
+    yield "/terms-of-use/", simple(c, "/terms-of-use/", "Terms of Use", "Terms of Use | Kotric Fabric Crafts & Sewing", "The terms for using kotric.com, including our craft tutorials, project content and free sewing and fabric calculators.", terms), "0.2"
+    yield "/disclaimer/", simple(c, "/disclaimer/", "Disclaimer", "Disclaimer | Kotric Fabric Crafts & Sewing", "Kotric's disclaimer covering our craft tutorials, product mentions and safety guidance for tools, irons, glue guns and adhesives.", disclaimer), "0.2"
 
 
 def sitemap_page(c):
@@ -425,7 +425,7 @@ def sitemap_page(c):
     tools = [(f'/tools/{t["slug"]}/', t["title"]) for t in TOOLS]
     legal_l = [("/privacy-policy/", "Privacy Policy"), ("/terms-of-use/", "Terms of Use"), ("/disclaimer/", "Disclaimer")]
     inner = f'<h2 id="pages">Pages</h2><ul>{li(main)}</ul><h2 id="categories">Categories</h2><ul>{li(cats)}</ul><h2 id="articles">Articles</h2><ul>{li(posts)}</ul><h2 id="tools">Tools</h2><ul>{li(tools)}</ul><h2 id="legal">Legal</h2><ul>{li(legal_l)}</ul>'
-    return simple(c, "/sitemap/", "Sitemap", "Sitemap | Kotric", "Every page on Kotric: projects, articles, categories and free craft tools.", inner)
+    return simple(c, "/sitemap/", "Sitemap", "Sitemap: All Kotric Projects, Guides & Tools", "Every page on Kotric: projects, articles, categories and free craft tools.", inner)
 
 
 def not_found(c):
