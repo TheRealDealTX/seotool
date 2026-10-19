@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /inc/
+Disallow: /content/
+
+Sitemap: https://insuranceadjustersalary.com/sitemap.xml

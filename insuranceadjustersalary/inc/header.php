@@ -17,7 +17,8 @@ $graph = array_merge([
         '@id'   => base_url() . '/#org',
         'name'  => SITE_NAME,
         'url'   => base_url() . '/',
-        'logo'  => base_url() . '/icon-192.png',
+        'logo'  => base_url() . '/icon-512.png',
+        'description' => SITE_TAGLINE,
     ],
     [
         '@type' => 'WebSite',
@@ -29,15 +30,42 @@ $graph = array_merge([
 ], $page['schema']);
 
 $current = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+
+// BreadcrumbList for regular pages (blog posts build their own in post-template.php)
+if ($page['type'] !== 'article' && $page['path'] !== '/' && empty($page['noindex'])) {
+    $names = ['tools' => 'Tools', 'insurance-adjuster-advice' => 'Insurance Adjuster Advice', 'about' => 'About',
+        'privacy-policy' => 'Privacy Policy', 'terms-of-use' => 'Terms of Use'];
+    $crumbs = [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => base_url() . '/']];
+    $isTool = in_array($page['path'], array_column(tools(), 'path'), true);
+    if ($isTool) {
+        $crumbs[] = ['@type' => 'ListItem', 'position' => 2, 'name' => 'Tools', 'item' => base_url() . '/tools/'];
+    }
+    $slug = trim($page['path'], '/');
+    $label = $names[$slug] ?? ($isTool ? array_column(tools(), 'name', 'path')[$page['path']] : $page['title']);
+    $crumbs[] = ['@type' => 'ListItem', 'position' => count($crumbs) + 1, 'name' => $label, 'item' => $canonical];
+    $graph[] = ['@type' => 'BreadcrumbList', 'itemListElement' => $crumbs];
+}
+$graph[] = ['@type' => 'WebPage', '@id' => $canonical . '#webpage', 'url' => $canonical,
+    'name' => $page['title'], 'description' => $page['description'], 'isPartOf' => ['@id' => base_url() . '/#website'], 'inLanguage' => 'en-US',
+    'primaryImageOfPage' => $ogImage];
 ?><!doctype html>
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <title><?= e($page['title']) ?></title>
 <meta name="description" content="<?= e($page['description']) ?>">
-<?php if (is_temporary_host()): ?>
-<meta name="robots" content="noindex, nofollow">
+<?php if (is_temporary_host() || !empty($page['noindex'])): ?>
+<meta name="robots" content="noindex, follow">
 <?php else: ?>
 <meta name="robots" content="index, follow, max-image-preview:large">
 <?php endif; ?>
@@ -48,10 +76,25 @@ $current = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 <meta property="og:description" content="<?= e($page['description']) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:alt" content="<?= e($page['title']) ?>">
+<meta property="og:locale" content="en_US">
+<?php if ($page['type'] === 'article' && !empty($page['published'])): ?>
+<meta property="article:published_time" content="<?= e($page['published']) ?>">
+<meta property="article:modified_time" content="<?= e($page['modified'] ?? $page['published']) ?>">
+<?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($page['title']) ?>">
+<meta name="twitter:description" content="<?= e($page['description']) ?>">
+<meta name="twitter:image" content="<?= e($ogImage) ?>">
 <meta name="theme-color" content="#121212">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">

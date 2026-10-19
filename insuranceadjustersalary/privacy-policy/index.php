@@ -1,6 +1,6 @@
 <?php
 require dirname(__DIR__) . '/inc/config.php';
-$page = ['title' => 'Privacy Policy | ' . SITE_NAME, 'description' => 'How Insurance Adjuster Salary handles information when you use our website and calculators.', 'path' => '/privacy-policy/', 'image' => 'laptop-notes.webp'];
+$page = ['title' => 'Privacy Policy | ' . SITE_NAME, 'description' => 'Privacy policy for Insurance Adjuster Salary: what we collect when you use our adjuster salary guides and calculators, cookies, analytics and affiliate links.', 'path' => '/privacy-policy/', 'image' => 'laptop-notes.webp'];
 require SITE_ROOT . '/inc/header.php';
 echo page_hero('Legal', 'Privacy Policy', 'Last updated October 19, 2026.', 'laptop-notes.webp', ['Privacy Policy' => null]);
 ?>

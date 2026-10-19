@@ -1,6 +1,6 @@
 <?php
 require dirname(__DIR__) . '/inc/config.php';
-$page = ['title' => 'Terms of Use | ' . SITE_NAME, 'description' => 'Terms of use for the Insurance Adjuster Salary website, salary data and calculators.', 'path' => '/terms-of-use/', 'image' => 'signing-documents.webp'];
+$page = ['title' => 'Terms of Use | ' . SITE_NAME, 'description' => 'Terms of use for Insurance Adjuster Salary: how to use our adjuster salary estimates, calculators and licensing information, plus affiliate link disclosures.', 'path' => '/terms-of-use/', 'image' => 'signing-documents.webp'];
 require SITE_ROOT . '/inc/header.php';
 echo page_hero('Legal', 'Terms of Use', 'Last updated October 19, 2026.', 'signing-documents.webp', ['Terms of Use' => null]);
 ?>

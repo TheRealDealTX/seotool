@@ -3,6 +3,7 @@ $page = [
     'title' => 'Page Not Found | ' . SITE_NAME,
     'description' => 'The page you were looking for has moved. Explore insurance adjuster salary guides, calculators and career advice.',
     'path' => '/404/',
+    'noindex' => true,
 ];
 require __DIR__ . '/header.php';
 ?>

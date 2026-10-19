@@ -50,6 +50,8 @@ $page = [
     'path' => post_url($post),
     'image' => $post['image'],
     'type' => 'article',
+    'published' => $post['date'],
+    'modified' => $post['updated'] ?? $post['date'],
     'schema' => $schema,
     'body_class' => 'has-hero',
 ];

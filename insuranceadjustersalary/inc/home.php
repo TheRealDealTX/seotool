@@ -33,7 +33,7 @@ $chart = ['texas' => [
 
 $page = [
     'title'       => 'Insurance Adjuster Salary in Texas (2026) & Nationwide Pay',
-    'description' => 'Insurance adjuster salary data for Texas and every state: staff, independent, CAT and public adjuster pay, Texas metro salaries, free calculators and fast licensing.',
+    'description' => 'Insurance adjuster salary data for Texas and every state: staff, independent, CAT and public adjuster pay, Texas metro salaries and free calculators.',
     'path'        => '/',
     'body_class'  => 'has-hero',
     'preload'     => 'hero-roof-inspection.webp',

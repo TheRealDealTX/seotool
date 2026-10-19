@@ -11,12 +11,26 @@ const ASSET_VER    = '20261019b';
 
 define('SITE_ROOT', dirname(__DIR__));
 
-/** Scheme + host the site is being served from (works on the temporary domain and after the move). */
+const GA_ID        = 'G-KLZBN543NX';
+
+/** Canonical origin. Always the real domain so canonicals, sitemap and schema never point at a preview host. */
 function base_url(): string
 {
-    $host = $_SERVER['HTTP_HOST'] ?? CANONICAL_HOST;
-    $host = preg_replace('/[^a-z0-9.\-:]/i', '', $host);
-    return 'https://' . $host;
+    $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+    if (str_contains($host, 'localhost') || str_starts_with($host, '127.')) {
+        return 'http://' . preg_replace('/[^a-z0-9.\-:]/i', '', $host);   // local preview
+    }
+    return 'https://' . CANONICAL_HOST;
+}
+
+// Collapse duplicate URLs: /index.php and /dir/index.php -> clean directory URL (301).
+if (PHP_SAPI !== 'cli') {
+    $reqPath = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+    if (preg_match('#^(.*/)index\.php$#', $reqPath, $m)) {
+        $qs = $_SERVER['QUERY_STRING'] ?? '';
+        header('Location: ' . $m[1] . ($qs !== '' ? '?' . $qs : ''), true, 301);
+        exit;
+    }
 }
 
 /** True while the site is on a Hostinger preview/temporary domain - keeps it out of Google until the real domain moves over. */
