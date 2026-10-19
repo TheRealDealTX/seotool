@@ -54,10 +54,12 @@ function render_page(array $page, string $main): void
 <meta name="twitter:description" content="<?= e($desc) ?>">
 <meta name="twitter:image" content="<?= e($image) ?>">
 <meta name="theme-color" content="#3B2A1E">
-<link rel="icon" href="/favicon.ico" sizes="48x48">
-<link rel="icon" href="<?= UPLOADS ?>cropped-Pure-Goat-Farms-Site-Icon-32x32.webp" sizes="32x32">
-<link rel="icon" href="<?= UPLOADS ?>cropped-Pure-Goat-Farms-Site-Icon-192x192.webp" sizes="192x192">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Pure Goat Farms">
+<meta name="application-name" content="Pure Goat Farms">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="Pure Goat Farms &raquo; Feed" href="<?= SITE_URL ?>/feed/">
 <link rel="preconnect" href="https://fonts.googleapis.com">

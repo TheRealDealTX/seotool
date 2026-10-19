@@ -62,7 +62,7 @@ function clean(string $key, int $max): string
 function send_mail(string $subject, string $body, string $replyTo = ''): bool
 {
     $headers = [
-        'From: Pure Goat Farms <no-reply@' . SITE_HOST . '>',
+        'From: Pure Goat Farms <' . SITE_EMAIL . '>',
         'Content-Type: text/plain; charset=UTF-8',
     ];
     if ($replyTo && filter_var($replyTo, FILTER_VALIDATE_EMAIL)) {
