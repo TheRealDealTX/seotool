@@ -87,11 +87,16 @@ p { margin: 0 0 1.1em; }
   transition: background .35s, box-shadow .35s, padding .35s;
   padding: 18px 0;
 }
-.site-header.scrolled, body:not(.has-hero) .site-header {
+/* The frosted background lives on a pseudo-element: backdrop-filter on the header itself would
+   become the containing block for the fixed mobile menu and squash it to the header's height. */
+.site-header::before {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0;
   background: rgba(18, 18, 18, .82); backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
-  box-shadow: 0 1px 0 rgba(190,153,103,.25); padding: 10px 0;
+  box-shadow: 0 1px 0 rgba(190,153,103,.25); transition: opacity .35s;
 }
+.site-header.scrolled, body:not(.has-hero) .site-header { padding: 10px 0; }
+.site-header.scrolled::before, body:not(.has-hero) .site-header::before { opacity: 1; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
 .brand-mark {

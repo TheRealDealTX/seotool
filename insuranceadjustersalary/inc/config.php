@@ -7,7 +7,7 @@ const COURSE_URL   = 'https://www.adjustingonline.com/courses/';
 const PROMO_CODE   = 'joe20';
 const CANONICAL_HOST = 'insuranceadjustersalary.com';
 const BLOG_BASE    = '/insurance-adjuster-advice/';
-const ASSET_VER    = '20261019';
+const ASSET_VER    = '20261019b';
 
 define('SITE_ROOT', dirname(__DIR__));
 
