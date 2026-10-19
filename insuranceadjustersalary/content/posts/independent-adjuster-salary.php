@@ -6,7 +6,7 @@ return [
     'description' => 'Independent adjuster salary explained: fee schedules, firm splits, daily rates, expenses and taxes, a gross vs net example, and how to get on IA rosters.',
     'keyword'     => 'independent adjuster salary',
     'date'        => '2026-07-08',
-    'updated'     => '2026-07-08',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'driving-field.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'How are independent insurance adjusters paid?', 'a' => 'Most are paid per claim on a fee schedule tied to the gross loss amount, or a daily rate on some desk and CAT assignments. The IA firm bills the carrier and typically splits the fee with the adjuster, commonly 65/35 to 75/25 in the adjuster\'s favor.'],
         ['q' => 'Do independent adjusters get benefits?', 'a' => 'No. Independent adjusters are usually 1099 contractors, so they buy their own health insurance, fund their own retirement and pay self-employment tax on top of income tax.'],
         ['q' => 'What expenses do independent adjusters pay?', 'a' => 'Typical expenses include travel, lodging, fuel, vehicle wear, ladders and tools, a laptop and phone, licensing and continuing education, and an Xactimate subscription.'],
+        ['q' => 'Is Texas a good state for independent adjusters?', 'a' => 'Yes. Texas is among the largest adjuster markets in the US, with spring hail and tornado claims, Gulf hurricanes from June through November and occasional winter freeze claims. Many IA firms also have large hubs in Dallas-Fort Worth, Houston, Austin and San Antonio.'],
         ['q' => 'How do I get on independent adjusting firm rosters?', 'a' => 'Get licensed (often with a Texas or Florida license), build an Xactimate profile, register on the online rosters of multiple IA firms, keep your licenses and certifications current, and be ready to deploy quickly when storms hit.'],
     ],
     'body'        => <<<'HTML'
@@ -64,6 +65,17 @@ return [
 
 <p>Splits often improve as you prove yourself. New adjusters may start at the low end; adjusters with clean files, fast cycle times and good reviews from carrier examiners can negotiate better splits or move to firms that offer them.</p>
 
+<h2 id="texas-independent-adjuster-salary">Independent Adjuster Work in Texas</h2>
+
+<p>Texas is among the largest adjuster job markets in the US, and it can keep an IA busy for most of the year. Many IA firms and carriers run large hubs in Dallas-Fort Worth, Houston, Austin and San Antonio, which means steady daily claims between storms. A typical Texas storm calendar looks like this:</p>
+<ul>
+<li><strong>March to June:</strong> Hail, wind and tornado claims across DFW, Central Texas and the Panhandle ("hail alley"). High-volume roof claims reward fast fee-schedule adjusters.</li>
+<li><strong>June to November:</strong> Gulf hurricane season, with deployments around Houston, Galveston, Corpus Christi and Beaumont.</li>
+<li><strong>December to February:</strong> Winter freezes can cause waves of burst-pipe water claims, as the February 2021 winter storm showed.</li>
+<li><strong>Year-round risk:</strong> Wildfire claims in West Texas and the Panhandle.</li>
+</ul>
+<p>For comparison, we estimate Texas staff adjusters earn a statewide median of about $76,800, with mid-career metro estimates near $80,600 in Dallas-Fort Worth, $79,900 in Houston and $81,400 in Austin. A Texas-based IA who works a spring hail season at home and one Gulf deployment can realistically land in the $70,000 to $120,000 active-year range. See our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide or the <a href="/salary-by-state/#TX">Texas salary data</a> for more.</p>
+
 <h2 id="independent-adjuster-expenses-and-taxes">Expenses and Taxes on 1099 Income</h2>
 
 <p>As a 1099 contractor you are running a small business. Common costs include:</p>
@@ -80,7 +92,7 @@ return [
 
 <h2 id="independent-adjuster-salary-gross-vs-net">Independent Adjuster Salary: Gross vs Net Example</h2>
 
-<p>Here is a simplified worked example for an adjuster who closes 120 field property claims in a year at an average billed fee of $1,000 on a 70/30 split. The figures are illustrative, not a forecast.</p>
+<p>Here is a simplified worked example for a Texas-based adjuster who closes 120 field property claims in a year, mostly DFW hail and Gulf Coast wind, at an average billed fee of $1,000 on a 70/30 split. The figures are illustrative, not a forecast.</p>
 
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Line item</th><th>Amount</th></tr></thead><tbody>
 <tr><td>Total fees billed (120 claims x $1,000)</td><td>$120,000</td></tr>
@@ -112,7 +124,7 @@ return [
 
 <p>Firms deploy adjusters from their rosters, so the goal is to be on several and be easy to say yes to.</p>
 <ol>
-<li><strong>Get licensed.</strong> A Texas all-lines license is widely used as a designated home state license thanks to its broad reciprocity, and a Florida 6-20 license opens hurricane work. A pre-licensing course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> covers the exam, and code joe20 takes 20% off.</li>
+<li><strong>Get licensed.</strong> The Texas all-lines license from the Texas Department of Insurance (TDI) is the most popular designated home state license nationally thanks to its broad reciprocity, and a Florida 6-20 license opens hurricane work. TDI-approved certification courses can satisfy the Texas exam requirement. You can take one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>. Use <strong>joe20</strong> for 20% off. See what the license is worth in our <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license salary</a> guide.</li>
 <li><strong>Learn Xactimate.</strong> Firms ask about your estimating level before anything else.</li>
 <li><strong>Register with multiple firms.</strong> Complete each firm's online profile, upload licenses, and list certifications and equipment.</li>
 <li><strong>Take carrier-specific training.</strong> Many carriers require their own certifications before they accept your estimates.</li>

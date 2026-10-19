@@ -13,7 +13,7 @@ $faqs = [
 ];
 
 $page = [
-    'title' => 'Public Adjuster Fee Calculator: Fees, Caps & PA Income',
+    'title' => 'Public Adjuster Fee Calculator: Texas 10% Cap & PA Income',
     'description' => 'Calculate public adjuster fees on any settlement, with Texas and Florida fee caps built in. See the homeowner net and what a public adjuster earns per year.',
     'path' => '/public-adjuster-fee-calculator/',
     'image' => 'signing-documents.webp',
@@ -21,7 +21,7 @@ $page = [
     'schema' => [tool_schema('Public Adjuster Fee Calculator', '/public-adjuster-fee-calculator/', 'Calculate public adjuster contingency fees, state caps and annual public adjuster income.'), faq_schema($faqs)],
 ];
 require SITE_ROOT . '/inc/header.php';
-echo page_hero('Free tool', 'Public Adjuster Fee Calculator', 'See exactly how a public adjuster gets paid on a claim &mdash; and what the policyholder keeps. Then model a public adjuster\'s annual income.', 'signing-documents.webp', ['Tools' => '/tools/', 'Public Adjuster Fee Calculator' => null]);
+echo page_hero('Free tool', 'Public Adjuster Fee Calculator', 'See exactly how a Texas public adjuster gets paid under the 10% fee cap &mdash; and what the policyholder keeps. Compare other states and model a public adjuster\'s annual income.', 'signing-documents.webp', ['Tools' => '/tools/', 'Public Adjuster Fee Calculator' => null]);
 ?>
 <section class="section">
   <div class="container">
@@ -30,8 +30,8 @@ echo page_hero('Free tool', 'Public Adjuster Fee Calculator', 'See exactly how a
         <div class="field">
           <span class="label">State rules</span>
           <div class="seg">
-            <input type="radio" name="cap" id="p-other" value="none" checked><label for="p-other">Other state</label>
-            <input type="radio" name="cap" id="p-tx" value="tx"><label for="p-tx">Texas (10% cap)</label>
+            <input type="radio" name="cap" id="p-tx" value="tx" checked><label for="p-tx">Texas (10% cap)</label>
+            <input type="radio" name="cap" id="p-other" value="none"><label for="p-other">Other state</label>
             <input type="radio" name="cap" id="p-fl" value="fl"><label for="p-fl">Florida (20% cap)</label>
             <input type="radio" name="cap" id="p-fle" value="fle"><label for="p-fle">FL emergency (10%)</label>
           </div>
@@ -47,8 +47,8 @@ echo page_hero('Free tool', 'Public Adjuster Fee Calculator', 'See exactly how a
           </div>
         </div>
         <div class="field">
-          <label for="p-fee">Public adjuster fee <output id="p-fee-out">15%</output></label>
-          <input type="range" id="p-fee" min="5" max="25" step="0.5" value="15">
+          <label for="p-fee">Public adjuster fee <output id="p-fee-out">10%</output></label>
+          <input type="range" id="p-fee" min="5" max="25" step="0.5" value="10">
           <div class="hint" id="p-cap-hint">Fees above the state cap are reduced automatically.</div>
         </div>
         <hr style="border:0;border-top:1px dashed var(--line);margin:26px 0">

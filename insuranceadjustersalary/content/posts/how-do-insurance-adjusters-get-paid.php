@@ -6,7 +6,7 @@ return [
     'description' => 'How do insurance adjusters get paid? Learn how W-2 salaries, 1099 fee bills, daily rates and public adjuster contingency fees work, plus payment timing.',
     'keyword'     => 'how do insurance adjusters get paid',
     'date'        => '2026-08-27',
-    'updated'     => '2026-08-27',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Pay & Compensation',
     'image'       => 'laptop-notes.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'How long does it take an independent adjuster to get paid?', 'a' => 'Many IA firms pay only after the claim file is closed and approved by the carrier, so a lag of two to six weeks or more after you submit is common. Daily-rate assignments are often paid weekly or biweekly.'],
         ['q' => 'How do public adjusters get paid?', 'a' => 'Public adjusters receive a contingency fee, typically 10% to 20% of the claim settlement, paid out of the insurance check. Many states cap the percentage, such as Texas at 10%.'],
         ['q' => 'Do insurance adjusters get commission for denying claims?', 'a' => 'No. Reputable carriers do not pay adjusters for denials, and every state has unfair claim settlement practices laws. Performance metrics usually focus on cycle time, file quality, accuracy and customer satisfaction.'],
+        ['q' => 'How do public adjusters get paid in Texas?', 'a' => 'Texas public adjusters earn a contingency fee capped at 10% of the settlement, paid out of the insurance proceeds. They must hold a Texas public adjuster license from the Texas Department of Insurance.'],
         ['q' => 'Are independent adjusters W-2 or 1099?', 'a' => 'Most independent adjusters are 1099 contractors who pay their own self-employment tax and expenses. Some long-term staffing assignments are paid as W-2 temporary employment instead.'],
     ],
     'body'        => <<<'HTML'
@@ -57,6 +58,16 @@ return [
 <p>Public adjusters work for the policyholder. They sign a contract with the homeowner or business, prepare and negotiate the claim, and are paid a percentage of the final settlement, typically 10% to 20%. Many states cap the percentage. Texas limits public adjuster fees to 10% of the settlement, and Florida caps them at 20% generally and 10% on claims tied to a declared state of emergency in the year after the declaration.</p>
 <p>The fee comes out of the insurance payment, often because the check is issued jointly to the policyholder and the public adjuster. If there is no recovery, there is usually no fee. Our <a href="/insurance-adjuster-advice/public-adjuster-salary/">public adjuster salary</a> guide shows the math, and the <a href="/public-adjuster-fee-calculator/">public adjuster fee calculator</a> lets you run your own numbers.</p>
 
+<h2 id="texas-adjuster-pay">How Texas adjusters get paid</h2>
+<p>Texas is among the largest adjuster job markets in the US, and all four pay models are common there. Many carriers and IA firms run large hubs in Dallas-Fort Worth, Houston, Austin and San Antonio, so staff W-2 jobs are plentiful. We estimate the Texas statewide staff median at about $76,800, in line with the national BLS median, with mid-career metro estimates of roughly:</p>
+<ul>
+<li>Austin ~$81,400, Dallas-Fort Worth ~$80,600 and Houston ~$79,900</li>
+<li>San Antonio ~$74,500, Beaumont-Port Arthur ~$73,000 and Corpus Christi ~$71,400</li>
+<li>Lubbock ~$69,100, El Paso ~$67,600 and McAllen ~$66,000</li>
+</ul>
+<p>For Texas independents, the storm calendar sets the pay calendar. Hail, wind and tornado claims peak from March through June across DFW, Central Texas and the Panhandle, so fee bills from spring deployments often land in early summer. Gulf hurricanes from June through November drive work in Houston, Galveston, Corpus Christi and Beaumont, and winter freezes can bring burst-pipe claims, as the February 2021 storm did.</p>
+<p>Texas public adjusters need a public adjuster license from the Texas Department of Insurance (TDI), and their contingency fee is capped at 10% of the settlement. More detail is in our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide.</p>
+
 <h2 id="payment-comparison">How do insurance adjusters get paid? Four models compared</h2>
 <div class="table-wrap"><table class="data-table">
 <thead><tr><th>Model</th><th>Who pays you</th><th>Basis</th><th>Typical timing</th><th>Taxes withheld?</th></tr></thead>
@@ -70,7 +81,7 @@ return [
 
 <h2 id="when-paychecks-arrive">When paychecks arrive: the cash-flow lag</h2>
 <p>Payment timing catches many new independents off guard. Because many IA firms do not pay until the carrier approves the closed file, there is commonly a lag of two to six weeks, sometimes longer, between finishing the work and seeing the money. Files sent back for corrections restart part of that clock.</p>
-<p>On a storm deployment, that means you may work four or five weeks and fund your own hotel, food and fuel before the first large payment lands. Practical ways to manage it:</p>
+<p>On a Houston hurricane deployment, that means you may work four or five weeks and fund your own hotel, food and fuel before the first large payment lands. Practical ways to manage it:</p>
 <ul>
 <li>Keep two to three months of living and travel expenses in reserve before your first deployment.</li>
 <li>Submit clean, complete files to avoid QA rejections that delay payment.</li>
@@ -94,6 +105,6 @@ return [
 
 <h2 id="which-model-fits">Which pay model fits you?</h2>
 <p>If you need predictable income and benefits, start as a staff adjuster. If you can handle uneven cash flow and travel, independent and CAT work has a higher ceiling. If you are comfortable selling your services to property owners, public adjusting rewards that. Many adjusters move between models over a career. To compare them with real numbers, try the <a href="/salary-calculator/">adjuster salary calculator</a>, or read our main <a href="/">insurance adjuster salary</a> guide.</p>
-<p>Every path starts with a license. An online pre-licensing course at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> covers the exam material, and the code "joe20" saves 20%.</p>
+<p>Every path starts with a license. Many adjusters choose the Texas all-lines license from TDI, the most popular designated home state license nationally because of its broad reciprocity, and TDI-approved certification courses can satisfy the exam requirement. You can take one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>. Use <strong>joe20</strong> for 20% off.</p>
 HTML,
 ];

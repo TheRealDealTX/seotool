@@ -6,7 +6,7 @@ return [
     'description' => 'Insurance adjuster salary in Florida: staff pay by role, Miami, Tampa, Orlando and Jacksonville estimates, hurricane CAT income, 6-20 license and PA fee caps.',
     'keyword'     => 'insurance adjuster salary florida',
     'date'        => '2026-04-09',
-    'updated'     => '2026-04-09',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'State Guides',
     'image'       => 'miami-skyline.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'What license do I need to be an adjuster in Florida?', 'a' => 'Florida residents adjusting for carriers or independent firms generally need the 6-20 all-lines adjuster license. Public adjusters need a separate public adjuster license, and continuing education is required to renew.'],
         ['q' => 'What is a Florida emergency adjuster license?', 'a' => 'After a declared disaster, Florida can issue temporary emergency adjuster licenses so carriers and firms can bring in enough adjusters to handle the surge. They are tied to a sponsoring employer and expire, so they are not a substitute for a full license.'],
         ['q' => 'How much can a public adjuster charge in Florida?', 'a' => 'Florida generally caps public adjuster fees at 20% of the settlement, and at 10% for claims tied to a declared state of emergency during the year after the declaration.'],
+        ['q' => 'Should I get a Florida or Texas adjuster license first?', 'a' => 'Many adjusters start with the Texas all-lines license as a designated home state license because of its broad reciprocity, then add a Florida non-resident license for hurricane deployments. Florida residents generally need the Florida 6-20 license.'],
         ['q' => 'Is Florida a good state for new adjusters?', 'a' => 'Yes, if you are comfortable with seasonal swings. Constant property and roofing claim volume creates trainee openings at carriers and steady demand for licensed independent adjusters every hurricane season.'],
     ],
     'body'        => <<<'HTML'
@@ -69,6 +70,21 @@ return [
 <p>Jacksonville is home to several large insurance and claims employers and tends to have lower living costs. Staff pay commonly falls between $57,000 and $78,000.</p>
 <p>See how Florida compares nationally on our <a href="/salary-by-state/">insurance adjuster salary by state</a> page.</p>
 
+<h2 id="florida-vs-texas-adjuster-pay">Florida vs Texas Adjuster Pay</h2>
+<p>Many working adjusters hold both licenses. Texas is the most common designated home state license because of its broad reciprocity, and a Florida license adds access to the country's heaviest hurricane market. Staff pay in both states sits close to the national BLS median of $76,790; the bigger difference is the type and timing of storm work.</p>
+
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Factor</th><th>Florida</th><th>Texas</th></tr></thead>
+<tbody>
+<tr><td>Staff adjuster pay (estimate)</td><td>Near the national median</td><td>About $76,800 statewide; Austin, DFW and Houston higher</td></tr>
+<tr><td>Main CAT drivers</td><td>Hurricanes, June-November</td><td>Hail and tornadoes March-June, Gulf hurricanes, winter freezes</td></tr>
+<tr><td>Common license</td><td>6-20 all-lines</td><td>All-lines (TDI), widely used as DHS</td></tr>
+<tr><td>Public adjuster fee cap</td><td>20%, or 10% after a declared emergency</td><td>10%</td></tr>
+</tbody>
+</table></div>
+
+<p>Texas offers more year-round storm variety; Florida offers the biggest hurricane surges. Compare the details in our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary Texas</a> guide, the <a href="/salary-by-state/#TX">Texas salary by state</a> entry, and what a <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license</a> is worth.</p>
+
 <h2 id="florida-6-20-license-and-emergency-licenses">The Florida 6-20 license and emergency licenses</h2>
 <p>Florida residents who adjust claims for insurers or independent firms generally need the <strong>6-20 all-lines adjuster license</strong>. It covers property, casualty and most other lines, which is why it is so widely held. You complete pre-licensing education or pass the state exam, submit fingerprints and apply, then complete continuing education to renew.</p>
 <p>Florida also issues <strong>emergency adjuster licenses</strong> after declared disasters. These temporary licenses let carriers and firms bring in out-of-state help quickly, but they are tied to a sponsoring employer and expire. If you want to work Florida storms year after year, a permanent license (resident 6-20 or a non-resident license) puts you at the front of the deployment list.</p>
@@ -87,7 +103,7 @@ return [
 <h2 id="getting-started-in-florida">Getting started as an adjuster in Florida</h2>
 <ol>
 <li>Decide whether you want a staff role with steady pay or independent work with storm-driven upside.</li>
-<li>Earn your 6-20 license through an approved pre-licensing course or the state exam.</li>
+<li>Earn your 6-20 license through an approved pre-licensing course or the state exam. <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> offers online pre-licensing courses. Use <strong>joe20</strong> for 20% off.</li>
 <li>Learn Xactimate and basic roof inspection before hurricane season starts.</li>
 <li>Register with several independent adjusting firms so you are on multiple deployment rosters.</li>
 <li>Build an emergency fund to carry you through quiet stretches between storms.</li>

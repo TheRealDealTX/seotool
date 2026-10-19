@@ -8,8 +8,7 @@
         <span class="brand-text">Insurance Adjuster <em>Salary</em></span>
       </a>
       <p>Independent pay research, calculators and career guides for staff, independent, catastrophe and public insurance adjusters.</p>
-      <a class="btn btn-gold btn-sm" href="<?= COURSE_URL ?>" target="_blank" rel="sponsored noopener">Get Certified This Week</a>
-      <p class="promo-note">Use <strong class="code-pill" data-copy="<?= PROMO_CODE ?>"><?= PROMO_CODE ?></strong> for 20% off.</p>
+      <?= cert_btn('btn btn-gold btn-sm') ?>
     </div>
     <div>
       <h3>Salary Guides</h3>

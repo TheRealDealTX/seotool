@@ -6,7 +6,7 @@ return [
     'description' => 'Claims adjuster salary in 2026: desk vs field pay, earnings by line of business, the trainee-to-manager career ladder, and what benefits are really worth.',
     'keyword'     => 'claims adjuster salary',
     'date'        => '2026-09-30',
-    'updated'     => '2026-09-30',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'office-team.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'How much does a senior claims adjuster make?', 'a' => 'Senior claims adjusters commonly earn $75,000 to $100,000, and complex or large-loss specialists often reach $85,000 to $120,000 or more.'],
         ['q' => 'Do field claims adjusters make more than desk adjusters?', 'a' => 'Usually, yes. Field property adjusters typically earn $62,000 to $90,000 versus $55,000 to $75,000 for desk property, and field roles often include a company car worth thousands a year.'],
         ['q' => 'What benefits do claims adjusters get?', 'a' => 'Staff claims adjusters typically receive health insurance, a 401(k) match, paid time off and tuition help for designations. Field staff often add a company car, gas card, laptop and phone.'],
+        ['q' => 'What is the average claims adjuster salary in Texas?', 'a' => 'We estimate the Texas statewide staff claims adjuster median at about $76,800, in line with the national BLS median of $76,790. Austin, Dallas-Fort Worth and Houston run slightly higher, at roughly $80,000 to $81,000 for mid-career staff.'],
         ['q' => 'How long does it take to become a senior claims adjuster?', 'a' => 'Most carriers promote strong adjusters to senior roles after about five years, sometimes sooner for people who earn designations and handle complex files well.'],
     ],
     'body'        => <<<'HTML'
@@ -53,6 +54,21 @@ return [
 </tbody>
 </table></div>
 <p>For deeper line-specific numbers, see our guides to <a href="/insurance-adjuster-advice/workers-comp-adjuster-salary/">workers comp adjuster salary</a> and <a href="/insurance-adjuster-advice/property-adjuster-salary/">property adjuster salary</a>.</p>
+
+<h2 id="texas-claims-adjuster-salary">Claims Adjuster Salary in Texas</h2>
+<p>Texas is among the largest adjuster job markets in the US, and many carriers and IA firms keep large claims hubs in Dallas-Fort Worth, Houston, Austin and San Antonio. We estimate the Texas statewide staff claims adjuster median at about <strong>$76,800</strong>, in line with the national BLS median. Mid-career staff pay by metro, based on our estimates:</p>
+<ul>
+<li><strong>Austin:</strong> ~$81,400</li>
+<li><strong>Dallas-Fort Worth:</strong> ~$80,600</li>
+<li><strong>Houston:</strong> ~$79,900</li>
+<li><strong>San Antonio:</strong> ~$74,500</li>
+<li><strong>Beaumont-Port Arthur:</strong> ~$73,000</li>
+<li><strong>Corpus Christi:</strong> ~$71,400</li>
+<li><strong>Lubbock:</strong> ~$69,100</li>
+<li><strong>El Paso:</strong> ~$67,600</li>
+<li><strong>McAllen:</strong> ~$66,000</li>
+</ul>
+<p>Field property adjusters in Texas tend to see the most overtime. Hail, wind and tornado claims peak from March through June across DFW, Central Texas and the Panhandle, and Gulf hurricane season (June through November) floods Houston, Galveston, Corpus Christi and Beaumont desks with claims. Winter freezes can add a burst-pipe surge too, as the February 2021 storm showed. For more, see our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide or the <a href="/salary-by-state/#TX">Texas row on our salary by state page</a>.</p>
 
 <h2 id="career-ladder">The claims career ladder and pay at each step</h2>
 <p>Carriers use fairly standard titles, though the names vary. Here is how pay usually rises as you move up:</p>
@@ -93,7 +109,7 @@ return [
 <h2 id="sample-path">A realistic 10-year pay path</h2>
 <p>Ranges are easier to picture as a timeline. Here is how one plausible career might unfold for a property adjuster who joins a regional carrier straight out of a training program:</p>
 <ul>
-<li><strong>Year 1:</strong> Desk trainee at about $52,000, handling small water and wind claims by phone and photos.</li>
+<li><strong>Year 1:</strong> Desk trainee at about $52,000, handling small water and wind claims from a Dallas-area hailstorm by phone and photos.</li>
 <li><strong>Years 2-3:</strong> Moves to a field territory at about $64,000 plus a company car, writing Xactimate estimates on site and working storm overtime.</li>
 <li><strong>Years 4-6:</strong> Promoted to senior field adjuster around $80,000 after earning the AIC, taking larger fires and contested water losses.</li>
 <li><strong>Years 7-10:</strong> Either moves to a large loss unit at $95,000 to $115,000 or into a supervisor seat at a similar figure, with a bonus.</li>
@@ -101,7 +117,7 @@ return [
 <p>Not every carrier pays on that schedule, and raises often slow in years with heavy catastrophe losses. Changing employers is frequently the quickest way to jump a pay band, especially once you have senior-level experience and a clean file record.</p>
 
 <h2 id="getting-started">Getting started and estimating your number</h2>
-<p>Most carriers hire trainees with a bachelor's degree or relevant experience, and many will sponsor the license after hiring. Arriving already licensed makes you a stronger candidate, especially for field roles. An online pre-licensing course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> is one option, and the code "joe20" takes 20% off.</p>
+<p>Most carriers hire trainees with a bachelor's degree or relevant experience, and many will sponsor the license after hiring. Arriving already licensed makes you a stronger candidate, especially for field roles. Many candidates start with the Texas all-lines license from the Texas Department of Insurance (TDI), the most popular designated home state license nationally because of its broad reciprocity, and TDI-approved certification courses can satisfy the exam requirement. An online course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> is one option. Use <strong>joe20</strong> for 20% off.</p>
 <p>To see where a specific offer lands, enter your state, line and years of experience in our <a href="/salary-calculator/">adjuster salary calculator</a>. Our <a href="/">insurance adjuster salary</a> hub has the full picture across staff, independent and public roles.</p>
 HTML,
 ];

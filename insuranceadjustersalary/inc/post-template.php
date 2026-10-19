@@ -99,6 +99,12 @@ require __DIR__ . '/header.php';
       <p style="font-size:.9rem">Try the free adjuster salary calculator.</p>
       <a class="btn btn-gold btn-sm" href="/salary-calculator/">Open calculator</a>
     </div>
+    <div class="card card-dark" style="margin-top:18px;padding:22px">
+      <div class="icon-wrap" style="margin-bottom:12px"><?= icon('star', 22) ?></div>
+      <h3 style="font-size:1.05rem;color:#fff">Get your Texas license</h3>
+      <p style="font-size:.9rem">Licensed in about a week with an online course.</p>
+      <?= cert_btn('btn btn-gold btn-sm', 'Get Certified') ?>
+    </div>
   </aside>
   <article class="prose">
     <?= $post['body'] ?>

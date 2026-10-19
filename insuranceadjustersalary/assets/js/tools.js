@@ -44,7 +44,9 @@
     cat.querySelectorAll('input[name=fee]').forEach(function (r) {
       r.addEventListener('change', function () {
         $('k-fee').value = r.value;
-        IAS.paintRange($('k-fee'));
+        if (r.dataset.days) $('k-days').value = r.dataset.days;
+        if (r.dataset.cpd) $('k-cpd').value = r.dataset.cpd;
+        ['k-fee', 'k-days', 'k-cpd'].forEach(function (id) { IAS.paintRange($(id)); });
       });
     });
     bind(cat, function () {

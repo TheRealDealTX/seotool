@@ -9,6 +9,10 @@ $top = array_slice($byMedian, 0, 10);
 $maxMedian = $top[0]['median'];
 $catLabel = ['H' => 'High', 'M' => 'Moderate', 'L' => 'Low'];
 $catClass = ['H' => 'tier-high', 'M' => 'tier-mid', 'L' => 'tier-low'];
+$metros = texas_metros();
+$tx = array_values(array_filter($states, fn($s) => $s['code'] === 'TX'))[0];
+// Texas first in the table
+usort($states, fn($a, $b) => ($b['code'] === 'TX') <=> ($a['code'] === 'TX') ?: strcmp($a['name'], $b['name']));
 
 $faqs = [
     ['q' => 'Which state pays insurance adjusters the most?',
@@ -22,7 +26,7 @@ $faqs = [
 ];
 
 $page = [
-    'title' => 'Insurance Adjuster Salary by State (2026): All 50 States',
+    'title' => 'Insurance Adjuster Salary by State (2026): Texas & All 50',
     'description' => 'Compare insurance adjuster salary by state. Search and sort estimated median pay, salary ranges, hourly wages and catastrophe claim demand for all 50 states.',
     'path' => '/salary-by-state/',
     'image' => 'miami-skyline.webp',
@@ -30,8 +34,33 @@ $page = [
     'schema' => [tool_schema('Insurance Adjuster Salary by State Explorer', '/salary-by-state/', 'Searchable, sortable estimates of insurance adjuster pay in every state.'), faq_schema($faqs)],
 ];
 require SITE_ROOT . '/inc/header.php';
-echo page_hero('Interactive explorer', 'Insurance Adjuster Salary by State', 'Search, sort and filter estimated adjuster pay for all 50 states and D.C. &mdash; plus where catastrophe claim demand is strongest for independent adjusters.', 'miami-skyline.webp', ['Tools' => '/tools/', 'Salary by State' => null]);
+echo page_hero('Interactive explorer', 'Insurance Adjuster Salary by State', 'Start with Texas &mdash; the biggest adjuster market and the most popular license &mdash; then search, sort and filter estimated pay for all 50 states and D.C.', 'miami-skyline.webp', ['Tools' => '/tools/', 'Salary by State' => null]);
 ?>
+<section class="section" id="texas">
+  <div class="container split">
+    <div class="reveal">
+      <span class="eyebrow">Texas spotlight</span>
+      <h2>Insurance adjuster salary in Texas</h2>
+      <p>Texas staff adjusters earn an estimated <strong>$<?= number_format($tx['median']) ?></strong> at the median (about $<?= number_format($tx['hourly'], 2) ?> an hour), in line with the national median. Pay is highest in Austin, Dallas-Fort Worth and Houston, where the big carriers and IA firms run their claim hubs. Catastrophe demand is rated <strong>High</strong>: spring hail in North and Central Texas, Gulf hurricanes from June to November, and winter freezes keep independent adjusters busy.</p>
+      <ul class="ticks">
+        <li><?= icon('check', 16) ?> Texas all-lines license: the most popular home-state license nationwide</li>
+        <li><?= icon('check', 16) ?> Public adjuster fees capped at 10% of the settlement</li>
+        <li><?= icon('check', 16) ?> Typical staff range: $<?= number_format($tx['low'] / 1000) ?>k&ndash;$<?= number_format($tx['high'] / 1000) ?>k</li>
+      </ul>
+      <div class="cert-inline" style="margin-top:22px"><?= cert_btn('btn btn-gold', 'Get Your Texas License') ?></div>
+    </div>
+    <div class="card reveal reveal-delay-1" style="padding:30px">
+      <h3>Texas metros (est. median)</h3>
+      <div class="bar-chart" style="gap:12px;margin-top:16px">
+<?php foreach ($metros as $m): ?>
+        <div class="bar-row" style="grid-template-columns:150px 1fr 80px"><span class="name"><?= e($m['name']) ?></span><span class="track"><span class="fill" style="width:0" data-width="<?= round(($m['median'] - 50000) / 35000 * 100) ?>%"></span></span><span class="amt">$<?= round($m['median'] / 1000, 1) ?>k</span></div>
+<?php endforeach; ?>
+      </div>
+      <p class="chart-note"><a href="<?= BLOG_BASE ?>insurance-adjuster-salary-texas/">Read the full Texas salary guide &rarr;</a></p>
+    </div>
+  </div>
+</section>
+
 <section class="section section-dark">
   <div class="container">
     <div class="section-head reveal">
@@ -77,7 +106,7 @@ echo page_hero('Interactive explorer', 'Insurance Adjuster Salary by State', 'Se
         </thead>
         <tbody>
 <?php foreach ($states as $s): ?>
-          <tr id="<?= $s['code'] ?>" data-name="<?= e($s['name']) ?>" data-code="<?= $s['code'] ?>" data-median="<?= $s['median'] ?>" data-hourly="<?= $s['hourly'] ?>" data-cat="<?= $s['cat'] ?>">
+          <tr id="<?= $s['code'] ?>"<?= $s['code'] === 'TX' ? ' class="row-tx"' : '' ?> data-name="<?= e($s['name']) ?>" data-code="<?= $s['code'] ?>" data-median="<?= $s['median'] ?>" data-hourly="<?= $s['hourly'] ?>" data-cat="<?= $s['cat'] ?>">
             <td><strong><?= e($s['name']) ?></strong></td>
             <td><div class="bar-cell">$<?= number_format($s['median']) ?><span class="mini"><i style="width:<?= round(($s['median'] - 60000) / 35000 * 100) ?>%"></i></span></div></td>
             <td>$<?= number_format($s['low'] / 1000) ?>k &ndash; $<?= number_format($s['high'] / 1000) ?>k</td>

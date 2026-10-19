@@ -14,15 +14,15 @@ $faqs = [
 ];
 
 $page = [
-    'title' => 'Insurance Adjuster Salary Calculator (2026) | Free Estimate',
-    'description' => 'Free insurance adjuster salary calculator. Estimate staff, independent, CAT and public adjuster pay by line of business, experience and state in seconds.',
+    'title' => 'Insurance Adjuster Salary Calculator: Texas & All States',
+    'description' => 'Free insurance adjuster salary calculator for Texas metros and every state. Estimate staff, independent, CAT and public adjuster pay in seconds.',
     'path' => '/salary-calculator/',
     'image' => 'analytics-laptop.webp',
     'scripts' => ['salary-model.js', 'tools.js'],
     'schema' => [tool_schema('Insurance Adjuster Salary Calculator', '/salary-calculator/', 'Estimate insurance adjuster pay by role, line, experience and state.'), faq_schema($faqs)],
 ];
 require SITE_ROOT . '/inc/header.php';
-echo page_hero('Free tool', 'Insurance Adjuster Salary Calculator', 'Estimate what you could earn as a staff, independent, catastrophe or public adjuster &mdash; adjusted for your line of business, experience and state.', 'analytics-laptop.webp', ['Tools' => '/tools/', 'Salary Calculator' => null]);
+echo page_hero('Free tool', 'Insurance Adjuster Salary Calculator', 'Estimate what you could earn as a staff, independent, catastrophe or public adjuster in Houston, Dallas-Fort Worth, Austin, San Antonio or anywhere else in Texas &mdash; or any other state.', 'analytics-laptop.webp', ['Tools' => '/tools/', 'Salary Calculator' => null]);
 ?>
 <section class="section">
   <div class="container">
@@ -50,11 +50,19 @@ echo page_hero('Free tool', 'Insurance Adjuster Salary Calculator', 'Estimate wh
             </select>
           </div>
           <div class="field">
-            <label for="c-state">State</label>
+            <label for="c-state">Texas metro or state</label>
             <select id="c-state" name="state">
-<?php foreach (states() as $s): ?>
-              <option value="<?= $s['index'] ?>"<?= $s['code'] === 'TX' ? ' selected' : '' ?>><?= e($s['name']) ?></option>
+              <optgroup label="Texas">
+                <option value="1" selected>Texas (statewide)</option>
+<?php foreach (texas_metros() as $m): ?>
+                <option value="<?= $m['index'] ?>">Texas - <?= e($m['name']) ?></option>
 <?php endforeach; ?>
+              </optgroup>
+              <optgroup label="Other states">
+<?php foreach (states() as $s): if ($s['code'] === 'TX') continue; ?>
+                <option value="<?= $s['index'] ?>"><?= e($s['name']) ?></option>
+<?php endforeach; ?>
+              </optgroup>
             </select>
           </div>
         </div>
@@ -100,7 +108,7 @@ echo page_hero('Free tool', 'Insurance Adjuster Salary Calculator', 'Estimate wh
       <li><strong>Role.</strong> Staff desk and field adjusters earn a W-2 salary. Independent, CAT and public adjusters earn per claim, per day or by percentage, so their ranges are much wider.</li>
       <li><strong>Line of business.</strong> Commercial and large-loss claims pay the most; auto material damage pays the least.</li>
       <li><strong>Experience.</strong> Pay climbs quickly over the first five years, then levels off. A ten-year adjuster earns roughly 15% more than a five-year adjuster.</li>
-      <li><strong>State.</strong> A regional wage index moves staff pay up or down. For 1099 roles, where carriers set national fee schedules, location counts for much less.</li>
+      <li><strong>Location.</strong> Texas metros are built in: Austin, Dallas-Fort Worth and Houston pay about 4&ndash;6% above the national median, while El Paso and McAllen pay less. A regional wage index covers every other state. For 1099 roles, where carriers set national fee schedules, location counts for much less.</li>
     </ul>
     <p>Want the detail behind the numbers? Read <a href="<?= BLOG_BASE ?>how-much-do-insurance-adjusters-make/">how much insurance adjusters make</a>, compare <a href="<?= BLOG_BASE ?>claims-adjuster-salary/">claims adjuster salary</a> by line, or see how <a href="<?= BLOG_BASE ?>independent-adjuster-salary/">independent adjuster pay</a> really works.</p>
     <h2 id="faq">Calculator FAQs</h2>

@@ -65,6 +65,12 @@ $current = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
 <header class="site-header" id="top">
+  <div class="promo-bar">
+    <div class="container promo-inner">
+      <span><?= icon('bolt', 14) ?> <span class="promo-long">Get your Texas adjuster license this week &mdash;</span> <a href="<?= COURSE_URL ?>" target="_blank" rel="sponsored noopener">Get Certified</a></span>
+      <?= promo_line('promo-code') ?>
+    </div>
+  </div>
   <div class="container header-inner">
     <a class="brand" href="/" aria-label="<?= e(SITE_NAME) ?> home">
       <span class="brand-mark"><?= icon('shield', 22) ?></span>
@@ -77,7 +83,7 @@ $current = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
         <li><a href="<?= e($href) ?>"<?= $active ?>><?= e($label) ?></a></li>
 <?php endforeach; ?>
       </ul>
-      <a class="btn btn-gold btn-sm nav-cta" href="<?= COURSE_URL ?>" target="_blank" rel="sponsored noopener">Get Certified</a>
+      <a class="btn btn-gold btn-sm nav-cta" href="<?= COURSE_URL ?>" target="_blank" rel="sponsored noopener">Get Certified <span class="nav-code">joe20 = 20% off</span></a>
     </nav>
     <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>

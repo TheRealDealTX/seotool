@@ -13,7 +13,7 @@ $faqs = [
 ];
 
 $page = [
-    'title' => 'CAT Adjuster Pay Calculator: Deployment Earnings Estimator',
+    'title' => 'CAT Adjuster Pay Calculator: Texas Storm Deployment Earnings',
     'description' => 'Estimate CAT adjuster pay for a catastrophe deployment. Enter days, claims per day, fees and split to see gross billing, expenses, taxes and net earnings.',
     'path' => '/cat-deployment-calculator/',
     'image' => 'tornado-storm.webp',
@@ -21,7 +21,7 @@ $page = [
     'schema' => [tool_schema('CAT Deployment Earnings Calculator', '/cat-deployment-calculator/', 'Estimate catastrophe adjuster deployment earnings after fee splits, expenses and taxes.'), faq_schema($faqs)],
 ];
 require SITE_ROOT . '/inc/header.php';
-echo page_hero('Free tool', 'CAT Deployment Earnings Calculator', 'What will that storm deployment really put in your pocket? Model fee-bill income, your split, daily expenses and taxes for any catastrophe assignment.', 'tornado-storm.webp', ['Tools' => '/tools/', 'CAT Calculator' => null]);
+echo page_hero('Free tool', 'CAT Deployment Earnings Calculator', 'What will that Texas hail or Gulf Coast hurricane deployment really put in your pocket? Model fee-bill income, your split, daily expenses and taxes for any catastrophe assignment.', 'tornado-storm.webp', ['Tools' => '/tools/', 'CAT Calculator' => null]);
 ?>
 <section class="section">
   <div class="container">
@@ -30,12 +30,12 @@ echo page_hero('Free tool', 'CAT Deployment Earnings Calculator', 'What will tha
         <div class="field">
           <span class="label">Storm / claim type</span>
           <div class="seg">
-            <input type="radio" name="fee" id="f-hail" value="550" checked><label for="f-hail">Hail / wind</label>
-            <input type="radio" name="fee" id="f-hur" value="900"><label for="f-hur">Hurricane</label>
-            <input type="radio" name="fee" id="f-flood" value="1100"><label for="f-flood">Flood</label>
-            <input type="radio" name="fee" id="f-com" value="2500"><label for="f-com">Commercial</label>
+            <input type="radio" name="fee" id="f-hail" value="550" data-days="45" data-cpd="3" checked><label for="f-hail">TX hail / wind</label>
+            <input type="radio" name="fee" id="f-hur" value="900" data-days="60" data-cpd="2" ><label for="f-hur">Gulf hurricane</label>
+            <input type="radio" name="fee" id="f-freeze" value="700" data-days="30" data-cpd="2.5"><label for="f-freeze">TX winter freeze</label>
+            <input type="radio" name="fee" id="f-com" value="2500" data-days="60" data-cpd="0.5"><label for="f-com">Commercial</label>
           </div>
-          <div class="hint">Sets a typical average fee per claim. Fine-tune it below.</div>
+          <div class="hint">Texas presets set a typical fee, length and pace. Fine-tune them below.</div>
         </div>
         <div class="field">
           <label for="k-fee">Average fee per claim <output id="k-fee-out">$550</output></label>
@@ -97,7 +97,7 @@ echo page_hero('Free tool', 'CAT Deployment Earnings Calculator', 'What will tha
 <section class="section section-soft">
   <div class="container narrow prose reveal">
     <h2>How CAT adjusters get paid</h2>
-    <p>Catastrophe adjusters are almost always independent contractors. The carrier pays the IA firm a fee for every claim based on a <strong>fee schedule</strong> tied to the gross loss &mdash; a $6,000 hail claim might bill $500, while a $60,000 hurricane claim can bill $1,500 or more. The firm keeps its share (often 25&ndash;35%) and pays the rest to you, usually a few weeks after each file is approved.</p>
+    <p>Catastrophe adjusters are almost always independent contractors. The carrier pays the IA firm a fee for every claim based on a <strong>fee schedule</strong> tied to the gross loss &mdash; a $6,000 Dallas hail claim might bill $500, while a $60,000 Houston hurricane claim can bill $1,500 or more. The firm keeps its share (often 25&ndash;35%) and pays the rest to you, usually a few weeks after each file is approved.</p>
     <p>Because you pay your own lodging, meals, fuel and software, the number that matters is net take-home per day worked. That is what this calculator shows. A long, busy deployment with simple claims often beats a short one with big losses &mdash; and a slow-starting storm can cut the math in half.</p>
     <p>For the full picture, read our guide to <a href="<?= BLOG_BASE ?>cat-adjuster-salary/">CAT adjuster salary</a>, see the sample fee schedule in <a href="<?= BLOG_BASE ?>insurance-adjuster-pay-rate/">insurance adjuster pay rates</a>, or compare against a staff role with the <a href="/salary-calculator/">insurance adjuster salary calculator</a>.</p>
     <h2 id="faq">CAT deployment FAQs</h2>

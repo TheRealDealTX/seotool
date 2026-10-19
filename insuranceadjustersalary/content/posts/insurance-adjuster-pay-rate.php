@@ -6,7 +6,7 @@ return [
     'description' => 'Insurance adjuster pay rate explained: hourly equivalents, daily rates, a sample IA fee schedule by gross loss, fee splits and overtime rules for staff roles.',
     'keyword'     => 'insurance adjuster pay rate',
     'date'        => '2026-09-16',
-    'updated'     => '2026-09-16',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Pay & Compensation',
     'image'       => 'analytics-laptop.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'What is a typical daily rate for an independent adjuster?', 'a' => 'Desk and daily CAT assignments commonly pay $400 to $700 per day. Experienced field and commercial adjusters often earn $500 to $800 or more per day.'],
         ['q' => 'How much does an independent adjuster get per claim?', 'a' => 'It depends on the gross loss. Small claims under $5,000 often pay about $350 to $600, claims between $25,000 and $50,000 around $1,000 to $2,000, and large losses $3,000 or more, before the IA firm takes its split.'],
         ['q' => 'Do staff insurance adjusters get paid overtime?', 'a' => 'Some do. Many experienced adjusters are classified as exempt salaried employees, but trainees and some auto or desk roles are non-exempt and earn time-and-a-half over 40 hours. Carriers also commonly pay extra during catastrophe duty.'],
+        ['q' => 'What is the insurance adjuster pay rate in Texas?', 'a' => 'We estimate Texas staff adjusters earn a median of about $76,800 a year, or roughly $36.92 an hour, in line with the national median. Austin, Dallas-Fort Worth and Houston run a little higher, at roughly $38 to $39 an hour for mid-career staff.'],
         ['q' => 'What fee split do independent adjusters get?', 'a' => 'IA firms commonly pay the adjuster 65% to 75% of the fee billed to the carrier, keeping 25% to 35% for themselves.'],
     ],
     'body'        => <<<'HTML'
@@ -49,6 +50,24 @@ return [
 </table></div>
 <p>The BLS median of $36.92 per hour sits in the upper-middle of this table. Benefits are not included; for field staff, a company car and equipment are often worth another $4 to $7 per hour.</p>
 
+<h2 id="texas-adjuster-pay-rate">Insurance adjuster pay rate in Texas</h2>
+<p>Texas is among the largest adjuster job markets in the US, with big carrier and IA firm hubs in Dallas-Fort Worth, Houston, Austin and San Antonio. We estimate the Texas statewide staff median at about $76,800 a year, or roughly $36.92 an hour, in line with the national BLS median. Metro estimates for mid-career staff adjusters:</p>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Texas metro</th><th>Estimated annual pay</th><th>Approximate hourly equivalent</th></tr></thead>
+<tbody>
+<tr><td>Austin</td><td>~$81,400</td><td>~$39.13</td></tr>
+<tr><td>Dallas-Fort Worth</td><td>~$80,600</td><td>~$38.75</td></tr>
+<tr><td>Houston</td><td>~$79,900</td><td>~$38.41</td></tr>
+<tr><td>San Antonio</td><td>~$74,500</td><td>~$35.82</td></tr>
+<tr><td>Beaumont-Port Arthur</td><td>~$73,000</td><td>~$35.10</td></tr>
+<tr><td>Corpus Christi</td><td>~$71,400</td><td>~$34.33</td></tr>
+<tr><td>Lubbock</td><td>~$69,100</td><td>~$33.22</td></tr>
+<tr><td>El Paso</td><td>~$67,600</td><td>~$32.50</td></tr>
+<tr><td>McAllen</td><td>~$66,000</td><td>~$31.73</td></tr>
+</tbody>
+</table></div>
+<p>These are estimates, not official BLS metro data. For independents, Texas daily and per-claim work follows the storm calendar: hail, wind and tornadoes peak from March through June in DFW, Central Texas and the Panhandle, Gulf hurricanes hit Houston, Galveston, Corpus Christi and Beaumont from June through November, and winter freezes can bring burst-pipe claims, as the February 2021 storm did. See our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide for the full picture.</p>
+
 <h2 id="daily-rates">Daily rates for independent and CAT work</h2>
 <p>Daily-rate assignments are popular with adjusters because they remove the risk of a slow claim count. Typical ranges:</p>
 <ul>
@@ -75,7 +94,7 @@ return [
 
 <h2 id="fee-splits">How fee splits change your take-home</h2>
 <p>The IA firm bills the carrier, then pays you a share. Splits commonly run from 65/35 to 75/25 in the adjuster's favor. The firm's cut covers carrier relationships, claim assignment, QA review, software access and getting you deployed in the first place.</p>
-<p>On a busy hail deployment where you close three $8,000 roof claims a day, the difference adds up quickly:</p>
+<p>On a busy Dallas-Fort Worth hail deployment where you close three $8,000 roof claims a day, the difference adds up quickly:</p>
 <ul>
 <li>3 claims x $700 fee = $2,100 billed per day</li>
 <li>At a 65% split: $1,365 per day to you</li>
@@ -109,7 +128,7 @@ return [
 <ul>
 <li><strong>Storm demand.</strong> After a major hurricane, firms raise daily rates and loosen experience requirements to staff up quickly. In quiet seasons, the reverse happens.</li>
 <li><strong>Line and complexity.</strong> Commercial, large loss and contents work pay more per day than residential roofs.</li>
-<li><strong>Licensing.</strong> Adjusters with Texas, Florida and other reciprocal licenses qualify for more deployments.</li>
+<li><strong>Licensing.</strong> Adjusters with Texas, Florida and other reciprocal licenses qualify for more deployments. The Texas all-lines license from the Texas Department of Insurance (TDI) is the most popular designated home state license, and TDI-approved certification courses can satisfy the exam requirement. You can take one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>. Use <strong>joe20</strong> for 20% off.</li>
 <li><strong>Location.</strong> Staff salaries track local labor markets; see <a href="/salary-by-state/">insurance adjuster salary by state</a> for regional estimates.</li>
 <li><strong>Track record.</strong> QA scores and cycle time determine who gets the better assignments and splits.</li>
 </ul>

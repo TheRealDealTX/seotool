@@ -39,3 +39,11 @@ requests redirect to `https://insuranceadjustersalary.com`.
 php -S 127.0.0.1:8000 -t .   # inner pages need a router that serves dir/index.php
 ./deploy.sh                   # see header for the IAS_FB_* credentials
 ```
+
+## Texas focus and the affiliate code
+
+- The site leans on Texas: Texas metro estimates and a claim-season calendar live in `inc/data.php`
+  (`texas_metros()`, `texas_seasons()`), calculators default to Texas, and every post has a Texas section.
+- Every "Get Certified" link must carry "Use joe20 for 20% off". Use `cert_btn()` / `promo_line()` from
+  `inc/config.php` in templates, and follow any AdjustingOnline link in post bodies with
+  `Use <strong>joe20</strong> for 20% off.`

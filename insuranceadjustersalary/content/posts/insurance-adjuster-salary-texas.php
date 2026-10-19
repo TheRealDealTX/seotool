@@ -3,10 +3,10 @@ return [
     'slug'        => 'insurance-adjuster-salary-texas',
     'title'       => 'Insurance Adjuster Salary in Texas (2026): Pay by City & License',
     'meta_title'  => 'Insurance Adjuster Salary Texas (2026): Pay by City & Role',
-    'description' => 'Insurance adjuster salary in Texas: staff pay by role, Houston, DFW, San Antonio and Austin estimates, CAT and IA income, and why the Texas license matters.',
+    'description' => 'Insurance adjuster salary in Texas: staff pay by role, estimates for nine metros, the Texas storm calendar, CAT income and how to get a Texas adjuster license.',
     'keyword'     => 'insurance adjuster salary texas',
     'date'        => '2026-04-28',
-    'updated'     => '2026-04-28',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'State Guides',
     'image'       => 'austin-skyline.webp',
@@ -14,8 +14,8 @@ return [
     'excerpt'     => 'What Texas adjusters really earn, from staff desk roles in Dallas to independent CAT work after Gulf hurricanes, plus why the Texas license opens doors nationwide.',
     'read_time'   => 7,
     'faqs'        => [
-        ['q' => 'How much do insurance adjusters make in Texas?', 'a' => 'Most Texas staff adjusters earn roughly $50,000 to $90,000 a year depending on line of business and experience, which tracks close to the national BLS median of $76,790. Independent and CAT adjusters can earn well above that in heavy hail or hurricane years.'],
-        ['q' => 'Which Texas city pays insurance adjusters the most?', 'a' => 'Houston and Dallas-Fort Worth tend to post slightly higher salaries than the rest of the state because they host large carrier offices, commercial claims teams and the most claim volume. San Antonio and Austin are usually close behind.'],
+        ['q' => 'How much do insurance adjusters make in Texas?', 'a' => 'Most Texas staff adjusters earn roughly $50,000 to $90,000 a year depending on line of business and experience. Our statewide median estimate is about $76,800, close to the national BLS median of $76,790. Independent and CAT adjusters can earn well above that in heavy hail or hurricane years.'],
+        ['q' => 'Which Texas city pays insurance adjusters the most?', 'a' => 'By our estimates, Austin (about $81,400), Dallas-Fort Worth (about $80,600) and Houston (about $79,900) pay the most for mid-career staff adjusters, thanks to large carrier offices and heavy claim volume. El Paso and McAllen sit at the lower end.'],
         ['q' => 'Can I use a Texas adjuster license in other states?', 'a' => 'Yes. Many non-residents get the Texas all-lines adjuster license as a designated home state (DHS) license because Texas has broad reciprocity, which makes it easier to add non-resident licenses in other states.'],
         ['q' => 'How much can a public adjuster charge in Texas?', 'a' => 'Texas caps public adjuster fees at 10% of the claim settlement. That cap shapes how Texas public adjusters build income, since they typically need larger claims or more volume than in states with higher caps.'],
         ['q' => 'Do I need a degree to become an adjuster in Texas?', 'a' => 'No. Texas requires a pre-licensing course or exam and fingerprints, not a college degree. Some carriers prefer a degree for trainee programs, but plenty of adjusters start with only the license.'],
@@ -23,10 +23,10 @@ return [
     'body'        => <<<'HTML'
 <p class="lead">The insurance adjuster salary Texas employers pay is shaped by one simple fact: Texas produces an enormous volume of property claims. Hail in the Panhandle and North Texas, hurricanes on the Gulf Coast, tornadoes, floods and freezes keep carriers and independent firms hiring year after year. This guide breaks down what Texas adjusters actually earn, how pay differs by city and role, and why the Texas license is one of the most useful credentials in the industry.</p>
 
-<div class="callout"><strong>Quick answer:</strong> Most Texas staff insurance adjusters earn about $50,000 to $90,000 a year, roughly in line with the national BLS median of $76,790. Entry-level roles start near $45,000 to $60,000, while experienced independent and CAT adjusters can earn $100,000 or more in active storm years.</div>
+<div class="callout"><strong>Quick answer:</strong> Most Texas staff insurance adjusters earn about $50,000 to $90,000 a year. Our statewide median estimate is about $76,800, in line with the national BLS median of $76,790. Entry-level roles start near $45,000 to $60,000, while experienced independent and CAT adjusters can earn $100,000 or more in active storm years.</div>
 
-<h2 id="insurance-adjuster-salary-texas-overview">Insurance adjuster salary: Texas at a glance</h2>
-<p>Nationally, the Bureau of Labor Statistics reports a median of $76,790 a year ($36.92 an hour) for claims adjusters, appraisers, examiners and investigators as of May 2024. Texas staff adjuster pay sits roughly in line with that figure. The state does not pay a large premium the way some high-cost coastal markets do, but it makes up for it with sheer opportunity: more claims, more employers and more chances to move into higher-paying specialties.</p>
+<h2 id="insurance-adjuster-salary-texas-overview">Insurance adjuster salary in Texas at a glance</h2>
+<p>Nationally, the Bureau of Labor Statistics reports a median of $76,790 a year ($36.92 an hour) for claims adjusters, appraisers, examiners and investigators as of May 2024. Texas staff adjuster pay sits roughly in line with that figure; our statewide staff median estimate is about $76,800. The state does not pay a large premium the way some high-cost coastal markets do, but it makes up for it with sheer opportunity: more claims, more employers and more chances to move into higher-paying specialties.</p>
 <p>Here is how Texas staff pay typically breaks down by role. These are industry estimates based on the national ranges we track, adjusted to the Texas market.</p>
 
 <div class="table-wrap"><table class="data-table">
@@ -36,7 +36,7 @@ return [
 <tr><td>Auto / material damage</td><td>$50,000 - $72,000</td><td>High volume in every metro</td></tr>
 <tr><td>Desk property</td><td>$55,000 - $75,000</td><td>Large hail and wind claim volume</td></tr>
 <tr><td>Field property</td><td>$62,000 - $90,000</td><td>Plus company car, gas card and benefits</td></tr>
-<tr><td>Workers comp</td><td>$55,000 - $82,000</td><td>Texas has a unique non-subscriber system</td></tr>
+<tr><td>Workers comp</td><td>$55,000 - $82,000</td><td>Only state where employers can opt out; see our <a href="/insurance-adjuster-advice/workers-comp-adjuster-salary/">workers comp</a> guide</td></tr>
 <tr><td>Bodily injury / casualty</td><td>$60,000 - $88,000</td><td>Litigation-heavy markets pay toward the top</td></tr>
 <tr><td>Senior / large loss</td><td>$85,000 - $120,000+</td><td>Commercial, complex and catastrophe files</td></tr>
 </tbody>
@@ -52,19 +52,38 @@ return [
 <li><strong>Tornadoes and freezes.</strong> Tornado outbreaks and winter events like burst pipes during hard freezes create sudden spikes in property claims.</li>
 <li><strong>Size and growth.</strong> Texas has one of the largest populations and fastest-growing housing stocks in the country, which means more insured homes, vehicles and businesses every year.</li>
 </ul>
+<h3>Texas storm calendar for adjusters</h3>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Season</th><th>Main perils</th><th>Where claims concentrate</th></tr></thead>
+<tbody>
+<tr><td>March - June</td><td>Hail, wind and tornadoes (peak)</td><td>Dallas-Fort Worth, Central Texas, the Panhandle "hail alley"</td></tr>
+<tr><td>June - November</td><td>Gulf hurricanes, surge and flood</td><td>Houston, Galveston, Corpus Christi, Beaumont</td></tr>
+<tr><td>December - February</td><td>Winter freezes, burst pipes</td><td>Statewide; the February 2021 winter storm caused huge numbers of burst-pipe claims</td></tr>
+<tr><td>Dry periods</td><td>Wildfire</td><td>West Texas and the Panhandle</td></tr>
+</tbody>
+</table></div>
 <p>That volume matters for pay. Carriers keep large regional claim centers in Texas, independent adjusting firms stage CAT teams there, and experienced adjusters rarely struggle to find work.</p>
 
-<h2 id="texas-salary-by-city">Insurance adjuster salary: Texas by city</h2>
-<p>Pay varies modestly across Texas metros. Treat these as estimates for mid-level staff adjusters; your specialty and employer matter more than your ZIP code.</p>
-<h3>Houston</h3>
-<p>Houston is the state's largest claims hub, with heavy commercial, energy, auto and hurricane exposure. Mid-level staff adjusters commonly land around $65,000 to $85,000, a bit above the state average. Bodily injury and large loss roles often pay more.</p>
-<h3>Dallas-Fort Worth</h3>
-<p>DFW hosts major carrier offices and sits squarely in hail alley. Expect roughly $63,000 to $85,000 for experienced staff roles, with strong demand for field property adjusters every spring.</p>
-<h3>San Antonio</h3>
-<p>San Antonio has a large concentration of auto and property claim centers. Salaries commonly run around $58,000 to $78,000, and it is one of the better places in Texas to land a trainee job.</p>
-<h3>Austin</h3>
-<p>Austin has fewer giant claim centers but plenty of field territory and hail exposure across Central Texas. Typical staff pay falls in the $60,000 to $80,000 range, with higher living costs eating into some of the advantage.</p>
-<p>For a comparison with other states, see our guide to <a href="/salary-by-state/">insurance adjuster salary by state</a>.</p>
+<h2 id="texas-salary-by-city">Texas adjuster pay by metro area</h2>
+<p>Pay varies modestly across Texas metros. The figures below are our estimates for typical mid-career staff adjusters, not official numbers; the BLS national median of $76,790 is the only official benchmark. Your specialty and employer matter more than your ZIP code.</p>
+
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Texas metro</th><th>Staff adjuster estimate (mid-career)</th><th>What drives demand</th></tr></thead>
+<tbody>
+<tr><td>Austin</td><td>~$81,400</td><td>Central Texas hail, growing housing stock, higher living costs</td></tr>
+<tr><td>Dallas-Fort Worth</td><td>~$80,600</td><td>Major carrier offices, hail alley, huge auto volume</td></tr>
+<tr><td>Houston</td><td>~$79,900</td><td>Largest claims hub, commercial, energy and hurricane exposure</td></tr>
+<tr><td>Texas statewide</td><td>~$76,800</td><td>In line with the national median</td></tr>
+<tr><td>San Antonio</td><td>~$74,500</td><td>Large auto and property claim centers, trainee hiring</td></tr>
+<tr><td>Beaumont-Port Arthur</td><td>~$73,000</td><td>Gulf hurricanes, industrial and commercial losses</td></tr>
+<tr><td>Corpus Christi</td><td>~$71,400</td><td>Coastal wind and hurricane claims</td></tr>
+<tr><td>Lubbock</td><td>~$69,100</td><td>Panhandle hail, wind and wildfire</td></tr>
+<tr><td>El Paso</td><td>~$67,600</td><td>Auto and desk claims, lower living costs</td></tr>
+<tr><td>McAllen</td><td>~$66,000</td><td>Rio Grande Valley auto and wind claims, bilingual demand</td></tr>
+</tbody>
+</table></div>
+
+<p>Austin, Dallas-Fort Worth and Houston lead because they host the most carrier offices, commercial claims teams and senior roles. Coastal metros like Beaumont and Corpus Christi pay a little less on staff salary but generate heavy storm work for independents. For a comparison with other states, see the <a href="/salary-by-state/#TX">Texas entry</a> on our <a href="/salary-by-state/">insurance adjuster salary by state</a> page.</p>
 
 <h2 id="independent-and-cat-adjusters-in-texas">Independent and CAT adjuster income in Texas</h2>
 <p>The biggest earnings swings in Texas belong to independent (1099) and catastrophe adjusters. After a major hail storm or hurricane, IA firms deploy adjusters for two weeks to several months. Seven-day workweeks and 12-hour days are common, and an efficient adjuster can close 2 to 5 simple hail claims a day.</p>
@@ -80,7 +99,18 @@ return [
 <li><strong>Immediate local demand.</strong> Texas itself is one of the busiest claims markets, so a Texas license lets you work where the storms are.</li>
 </ol>
 
-<div class="callout callout-tip"><strong>Pro tip:</strong> If you plan to work CAT, get the Texas all-lines license first, then add Florida and one or two other storm-prone states. Many adjusters complete an online pre-licensing course such as the one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> (promo code joe20 saves 20%).</div>
+<h2 id="how-to-get-a-texas-adjuster-license">How to get a Texas adjuster license</h2>
+<p>The Texas Department of Insurance (TDI) issues adjuster licenses. Most new adjusters choose the all-lines license, which covers property, casualty and workers comp and is the most popular designated home state license because of its broad reciprocity.</p>
+<ol>
+<li><strong>Choose the license.</strong> Apply for the Texas all-lines adjuster license through TDI, as a resident or as a non-resident designating Texas as your home state.</li>
+<li><strong>Complete a TDI-approved certification course.</strong> An approved course with its own final exam can satisfy the state exam requirement. <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> offers an online option. Use <strong>joe20</strong> for 20% off.</li>
+<li><strong>Get fingerprinted</strong> through the state's approved vendor for a background check.</li>
+<li><strong>Apply and pay the fee</strong> online through TDI/Sircon or NIPR.</li>
+<li><strong>Renew on schedule</strong> and complete continuing education.</li>
+</ol>
+<p>Curious what the license is worth in earnings? See our <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license salary</a> guide.</p>
+
+<div class="callout callout-tip"><strong>Pro tip:</strong> If you plan to work CAT, get the Texas all-lines license first, then add Florida and one or two other storm-prone states. Have Xactimate basics down before March, when hail season starts.</div>
 
 <h2 id="public-adjusters-and-the-texas-fee-cap">Public adjusters and the Texas 10% fee cap</h2>
 <p>Public adjusters work for policyholders rather than insurers and are paid a contingency fee. Nationally that fee typically runs 10% to 20% of the settlement, but Texas caps public adjuster fees at 10% of the settlement. That makes Texas a volume market: a PA on a $60,000 hail claim earns up to $6,000, so building a strong income usually means handling many claims or focusing on commercial and large losses.</p>
@@ -92,7 +122,7 @@ return [
 <li><strong>Learn Xactimate well.</strong> Fast, accurate estimates are the single biggest driver of IA income during hail season.</li>
 <li><strong>Stack licenses.</strong> A Texas license plus Florida and Louisiana keeps you deployable across the Gulf.</li>
 <li><strong>Earn designations.</strong> AIC or CPCU coursework often supports promotions at Texas carriers.</li>
-<li><strong>Target Houston or DFW.</strong> The largest metros offer the most senior roles and slightly higher pay.</li>
+<li><strong>Target Austin, DFW or Houston.</strong> The largest metros offer the most senior roles and slightly higher pay.</li>
 </ul>
 <p>Texas will keep generating claims as long as hail falls and hurricanes form in the Gulf. For the bigger national picture, start with our full <a href="/">insurance adjuster salary</a> guide.</p>
 HTML,

@@ -45,6 +45,7 @@ function fmt_date(string $ymd): string
 function nav_items(): array
 {
     return [
+        'Texas Pay'      => '/#texas',
         'Salary Guide'   => '/#salary-guide',
         'Tools'          => '/tools/',
         'By State'       => '/salary-by-state/',
@@ -156,13 +157,25 @@ function post_card(array $p): string
         . '</div></article>';
 }
 
+/** Promo line that must accompany every certification link (affiliate code). */
+function promo_line(string $class = 'cert-code'): string
+{
+    return '<span class="' . $class . '">Use <strong class="code-pill" data-copy="' . PROMO_CODE . '">' . PROMO_CODE . '</strong> for 20% off</span>';
+}
+
+/** "Get Certified" button with the promo code attached underneath. */
+function cert_btn(string $btnClass = 'btn btn-gold', string $label = 'Get Certified This Week'): string
+{
+    return '<span class="cert-wrap"><a class="' . e($btnClass) . '" href="' . COURSE_URL . '" target="_blank" rel="sponsored noopener">' . e($label) . ' ' . icon('arrow', 16) . '</a>' . promo_line() . '</span>';
+}
+
 /** Course call-to-action band (carried over from the original site). */
-function course_cta(string $heading = 'Become an Insurance Adjuster Within a Week'): string
+function course_cta(string $heading = 'Become a Texas Insurance Adjuster Within a Week'): string
 {
     return '<section class="cta-band"><div class="container cta-inner reveal">'
         . '<div><span class="eyebrow">Get licensed fast</span><h2>' . e($heading) . '</h2>'
-        . '<p>Take an online adjuster pre-licensing course, pass your exam and start applying for claims roles. Use code <strong class="code-pill" data-copy="' . PROMO_CODE . '">' . PROMO_CODE . '</strong> for 20% off.</p></div>'
-        . '<a class="btn btn-gold btn-lg" href="' . COURSE_URL . '" target="_blank" rel="sponsored noopener">Get Certified This Week ' . icon('arrow', 18) . '</a>'
+        . '<p>Take an online Texas all-lines pre-licensing course, get licensed and start applying for claims roles across Texas and every reciprocal state. Use code <strong class="code-pill" data-copy="' . PROMO_CODE . '">' . PROMO_CODE . '</strong> for 20% off.</p></div>'
+        . cert_btn('btn btn-gold btn-lg')
         . '</div></section>';
 }
 

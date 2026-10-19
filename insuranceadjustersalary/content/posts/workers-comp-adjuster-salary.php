@@ -6,7 +6,7 @@ return [
     'description' => 'Workers comp adjuster salary in 2026: pay at carriers, TPAs and self-insured employers, lost-time vs medical-only caseloads, state certifications and growth.',
     'keyword'     => 'workers comp adjuster salary',
     'date'        => '2026-06-02',
-    'updated'     => '2026-06-02',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'hardhat-worker.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'Do workers comp adjusters work from home?', 'a' => 'Many do. Workers compensation adjusting is mostly a desk role handled by phone, email and claim systems, so remote and hybrid positions are common at carriers and third party administrators.'],
         ['q' => 'What is the difference between lost-time and medical-only claims?', 'a' => 'Medical-only claims involve treatment but little or no missed work, so they are simpler and handled in high volume. Lost-time claims involve wage replacement benefits, return-to-work planning and often attorneys, so they are more complex and better paid.'],
         ['q' => 'Do I need a special license to adjust workers comp claims?', 'a' => 'Many states require an adjuster license that covers workers compensation, and some states with their own systems, such as Texas, Florida and California, expect adjusters to complete state-specific training or certification. Requirements change, so check with the state regulator.'],
+        ['q' => 'What is the workers comp adjuster salary in Texas?', 'a' => 'Our estimate is that Texas staff workers comp adjusters earn roughly $55,000 to $82,000, in line with national ranges, with Austin, Dallas-Fort Worth and Houston roles toward the top. These are estimates, not official Texas figures.'],
         ['q' => 'Is workers comp adjusting a stable career?', 'a' => 'Yes. Workplace injuries happen every day regardless of the weather, so workers comp adjusters typically earn steady W-2 salaries with benefits rather than the boom-and-bust income of catastrophe property work.'],
     ],
     'body'        => <<<'HTML'
@@ -79,17 +80,31 @@ return [
 
 <div class="callout callout-tip"><strong>Pro tip:</strong> Learn to calculate average weekly wage and benefit rates by hand for your state. Adjusters who get indemnity math right the first time avoid penalties and complaints, and that accuracy is exactly what supervisors look for when promoting to lost-time.</div>
 
+<h2 id="workers-comp-adjuster-salary-texas">Workers Comp Adjuster Salary in Texas</h2>
+
+<p>Texas is a large and unusual workers compensation market. It is the only state where private employers can opt out of workers' comp entirely. These employers are called nonsubscribers, and their injury claims are handled through occupational injury benefit plans or lawsuits rather than the state system. The rest of the system is overseen by the Texas Department of Insurance, Division of Workers' Compensation (DWC).</p>
+
+<p>For adjusters, that means Texas work comes in two flavors: claims inside the DWC system, with its own benefit rules, deadlines and dispute process, and nonsubscriber plan claims. Adjusters handling Texas workers comp claims are generally expected to hold the right license and demonstrate Texas workers comp knowledge or certification.</p>
+
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Texas role (estimate)</th><th>Typical base salary</th></tr></thead><tbody>
+<tr><td>Medical-only adjuster</td><td>$52,000 - $62,000</td></tr>
+<tr><td>Lost-time adjuster</td><td>$60,000 - $82,000</td></tr>
+<tr><td>Senior / litigation adjuster</td><td>$75,000 - $95,000+</td></tr>
+</tbody></table></div>
+
+<p>Texas pay tracks national ranges, with our statewide staff adjuster estimate near $76,800. Austin, Dallas-Fort Worth and Houston, where most carriers and TPAs have offices, tend to pay a bit more than San Antonio, El Paso or the Rio Grande Valley. See metro estimates in our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">Texas insurance adjuster salary</a> guide.</p>
+
 <h2 id="state-jurisdiction-certifications">State Jurisdiction Knowledge and Certifications</h2>
 
 <p>Workers compensation is governed state by state. Benefit formulas, waiting periods, medical fee schedules, filing deadlines and dispute processes all differ. That is why employers pay a premium for adjusters who know a specific jurisdiction well.</p>
 
 <p>Several large states expect workers comp adjusters to demonstrate state-specific knowledge:</p>
 <ul>
-<li><strong>Texas:</strong> Has its own workers compensation system and expects adjusters handling Texas claims to be licensed and familiar with Texas rules.</li>
+<li><strong>Texas:</strong> Has its own workers compensation system run by the TDI Division of Workers' Compensation and expects adjusters handling Texas claims to be licensed and familiar with Texas rules. Many adjusters start with the <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license</a>.</li>
 <li><strong>Florida:</strong> Uses specific adjuster license classes for workers compensation and has its own benefit structure.</li>
 <li><strong>California:</strong> Requires claims adjusters handling California workers comp to complete state-approved training and certification, and it is known as one of the most complex systems in the country.</li>
 </ul>
-<p>Requirements change, so confirm current rules with each state's regulator. Multi-state experience, especially California or another complex jurisdiction, is one of the clearest paths to the top of the workers compensation claims adjuster salary range. Our <a href="/salary-by-state/">insurance adjuster salary by state</a> page shows how regional pay differs.</p>
+<p>Requirements change, so confirm current rules with each state's regulator. Multi-state experience, especially California or another complex jurisdiction, is one of the clearest paths to the top of the workers compensation claims adjuster salary range. Our <a href="/salary-by-state/">insurance adjuster salary by state</a> page shows how regional pay differs, including <a href="/salary-by-state/#TX">Texas</a>.</p>
 
 <h2 id="workers-comp-adjuster-salary-w2-stability">Workers Comp Adjuster Salary: Steady W-2 Desk Pay</h2>
 
@@ -105,9 +120,9 @@ return [
 <h2 id="how-to-raise-workers-comp-adjuster-pay">How to Raise Your Workers Comp Adjuster Pay</h2>
 
 <ol>
-<li><strong>Get licensed early.</strong> An adjuster license makes you hireable at carriers and TPAs. A pre-licensing course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> (code joe20 for 20% off) covers the exam.</li>
+<li><strong>Get licensed early.</strong> An adjuster license makes you hireable at carriers and TPAs. A pre-licensing course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> covers the exam. Use <strong>joe20</strong> for 20% off.</li>
 <li><strong>Move from medical-only to lost-time</strong> within your first year or two.</li>
-<li><strong>Add a complex jurisdiction</strong> like California to your resume.</li>
+<li><strong>Add a complex jurisdiction</strong> like Texas or California to your resume.</li>
 <li><strong>Earn designations</strong> such as the AIC or a workers compensation claims professional credential.</li>
 <li><strong>Build litigation experience</strong> working with defense counsel and mediations.</li>
 <li><strong>Consider a self-insured employer</strong> once you have five or more years of experience.</li>

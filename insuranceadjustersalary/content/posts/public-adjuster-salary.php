@@ -6,7 +6,7 @@ return [
     'description' => 'Public adjuster salary explained: how contingency fees work, a worked fee example, Texas and Florida fee caps, and how PAs build a book of business.',
     'keyword'     => 'public adjuster salary',
     'date'        => '2026-08-12',
-    'updated'     => '2026-08-12',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'signing-documents.webp',
@@ -16,7 +16,7 @@ return [
     'faqs'        => [
         ['q' => 'How much does a public adjuster make a year?', 'a' => 'Public adjusters commonly earn $50,000 to $100,000 a year. Established PAs with a steady flow of commercial or large-loss claims can earn $150,000 or more.'],
         ['q' => 'How do public adjusters get paid?', 'a' => 'They are paid a contingency fee, a percentage of the insurance settlement, typically 10% to 20%. The fee is usually paid out of the claim check, and there is generally no fee if there is no recovery.'],
-        ['q' => 'What is the maximum a public adjuster can charge in Texas?', 'a' => 'Texas caps public adjuster fees at 10% of the settlement amount.'],
+        ['q' => 'What is the maximum a public adjuster can charge in Texas?', 'a' => 'Texas caps public adjuster fees at 10% of the settlement amount. Texas PAs must also hold a public adjuster license from the Texas Department of Insurance.'],
         ['q' => 'What can a public adjuster charge in Florida?', 'a' => 'Florida caps fees at 20% in general and at 10% for claims arising from a declared state of emergency during the year after the declaration.'],
         ['q' => 'Do public adjusters get a base salary?', 'a' => 'Independent PAs and firm owners usually do not. Some larger public adjusting firms pay staff adjusters a base salary plus a share of fees, but most income in the field is commission-based.'],
     ],
@@ -45,7 +45,7 @@ return [
 <p>These are gross fees before the PA's costs. If the PA works for a firm, the firm usually keeps a share and pays the adjuster a split. Marketing, travel, licensing, bonds, estimating software and sometimes outside experts such as engineers come out of what remains. Run your own scenarios with the <a href="/public-adjuster-fee-calculator/">public adjuster fee calculator</a>.</p>
 
 <h3>A worked year</h3>
-<p>Imagine a PA in a state with a 10% cap who settles 30 residential claims in a year with an average settlement of $45,000. That is $1.35 million in recoveries and $135,000 in gross fees. If that PA works under a firm that keeps half, the adjuster's share is $67,500, which sits squarely in the typical range. A firm owner or solo PA keeps the whole fee but also carries all the overhead.</p>
+<p>Imagine a Texas PA working under the state's 10% cap who settles 30 residential claims in a year with an average settlement of $45,000. That is $1.35 million in recoveries and $135,000 in gross fees. If that PA works under a firm that keeps half, the adjuster's share is $67,500, which sits squarely in the typical range. A firm owner or solo PA keeps the whole fee but also carries all the overhead.</p>
 
 <h2 id="state-fee-caps">State fee caps that limit a public adjuster salary</h2>
 <p>Many states limit what PAs can charge, which directly caps earnings per file. Two of the biggest markets:</p>
@@ -54,6 +54,20 @@ return [
 <li><strong>Florida:</strong> Fees are generally capped at 20%, but drop to 10% for claims tied to a declared state of emergency during the year after the declaration. Because so much Florida work follows hurricanes, a large share of PA fees there is earned at the lower rate.</li>
 </ul>
 <p>Other states set their own percentages, require specific contract language or cancellation periods, or limit fees on certain claim types. Always check the current rules with the state insurance department before signing clients. For broader pay comparisons, see our <a href="/salary-by-state/">insurance adjuster salary by state</a> estimates.</p>
+
+<h2 id="texas-public-adjuster-pay">Public Adjuster Pay in Texas (10% Fee Cap)</h2>
+<p>Texas is among the largest adjuster markets in the US, and it is a volume market for public adjusters. Every Texas PA needs a public adjuster license from the Texas Department of Insurance (TDI), and fees are capped at 10% of the settlement, so income depends on how many files you settle rather than on charging a higher percentage.</p>
+<p>Here is what the 10% cap looks like on typical Texas claims:</p>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Texas claim example</th><th>Settlement</th><th>Maximum PA fee (10%)</th></tr></thead>
+<tbody>
+<tr><td>Dallas-Fort Worth hail roof and gutters</td><td>$30,000</td><td>$3,000</td></tr>
+<tr><td>Austin burst-pipe water loss after a freeze</td><td>$45,000</td><td>$4,500</td></tr>
+<tr><td>Houston hurricane wind and interior damage</td><td>$110,000</td><td>$11,000</td></tr>
+<tr><td>Corpus Christi commercial hurricane loss</td><td>$600,000</td><td>$60,000</td></tr>
+</tbody>
+</table></div>
+<p>The Texas storm calendar shapes the pipeline. Hail, wind and tornado claims peak from March through June across DFW, Central Texas and the Panhandle. Gulf hurricanes run June through November around Houston, Galveston, Corpus Christi and Beaumont. Winter freezes from December through February, like the February 2021 storm, can produce waves of burst-pipe claims, and West Texas and the Panhandle carry wildfire risk. For comparison, we estimate Texas staff adjusters earn a median of about $76,800. See our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide for more.</p>
 
 <h2 id="public-adjuster-salary-ranges">Public adjuster salary by career stage</h2>
 <ol>
@@ -92,6 +106,6 @@ return [
 <p>A staff adjuster trades upside for stability: a salary near the BLS median of $76,790, benefits and claims delivered to their desk. An independent adjuster earns per claim from IA firms and rides the storm cycle. A public adjuster has the most entrepreneurial role of the three, with income tied directly to sales and settlement results. Our comparison of <a href="/insurance-adjuster-advice/how-much-do-insurance-adjusters-make/">how much insurance adjusters make</a> lays the three side by side.</p>
 
 <h2 id="getting-licensed">Getting started as a public adjuster</h2>
-<p>Most states require a dedicated public adjuster license, which usually involves a pre-licensing course, a state exam, fingerprinting and a surety bond. Some states also require prior adjusting experience or sponsorship. Plenty of PAs begin with a company or independent adjuster license to learn the trade. An online course at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> is one way to prepare for the exam, and the code "joe20" takes 20% off. Visit our <a href="/">insurance adjuster salary</a> hub for more career paths.</p>
+<p>Most states require a dedicated public adjuster license, which usually involves a pre-licensing course, a state exam, fingerprinting and a surety bond. Some states also require prior adjusting experience or sponsorship. Plenty of PAs begin with a company or independent adjuster license to learn the trade. In Texas, that often means starting with the TDI all-lines adjuster license, the most popular designated home state license nationally because of its broad reciprocity, before applying for the separate Texas public adjuster license. TDI-approved certification courses can satisfy the all-lines exam requirement. An online course at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> is one way to prepare. Use <strong>joe20</strong> for 20% off. Visit our <a href="/">insurance adjuster salary</a> hub for more career paths.</p>
 HTML,
 ];

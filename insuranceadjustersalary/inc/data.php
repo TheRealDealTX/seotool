@@ -86,3 +86,27 @@ function chart_data(): array
         ],
     ];
 }
+
+/** Texas metro wage index (staff adjusters, our estimates relative to the national median). */
+function texas_metros(): array
+{
+    $rows = [
+        ['Austin', 1.06], ['Dallas-Fort Worth', 1.05], ['Houston', 1.04], ['San Antonio', .97],
+        ['Beaumont-Port Arthur', .95], ['Corpus Christi', .93], ['Lubbock', .90], ['El Paso', .88], ['McAllen', .86],
+    ];
+    return array_map(fn($r) => ['name' => $r[0], 'index' => $r[1], 'median' => (int) (round(BLS_MEDIAN_ANNUAL * $r[1] / 100) * 100)], $rows);
+}
+
+/**
+ * Texas claim season planner: intensity 0-3 per month (Jan..Dec) for each hazard.
+ */
+function texas_seasons(): array
+{
+    return [
+        'hail'      => ['label' => 'Hail & wind',  'where' => 'DFW, Central Texas, Panhandle', 'm' => [0, 1, 2, 3, 3, 3, 1, 1, 1, 1, 0, 0]],
+        'tornado'   => ['label' => 'Tornadoes',    'where' => 'North Texas, Panhandle',        'm' => [0, 0, 1, 2, 3, 2, 1, 0, 0, 1, 1, 0]],
+        'hurricane' => ['label' => 'Hurricanes',   'where' => 'Houston, Galveston, Corpus Christi, Beaumont', 'm' => [0, 0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0]],
+        'freeze'    => ['label' => 'Winter freeze','where' => 'Statewide (burst pipes)',       'm' => [3, 3, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2]],
+        'wildfire'  => ['label' => 'Wildfire',     'where' => 'West Texas, Panhandle, Hill Country', 'm' => [1, 2, 3, 2, 1, 1, 2, 2, 1, 0, 1, 1]],
+    ];
+}

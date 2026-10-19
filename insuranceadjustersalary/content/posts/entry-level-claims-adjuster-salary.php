@@ -6,7 +6,7 @@ return [
     'description' => 'Entry level claims adjuster salary explained: trainee pay at carriers, first-year income, raises after licensing and AIC or CPCU, and a year 1-5 pay table.',
     'keyword'     => 'entry level claims adjuster salary',
     'date'        => '2026-03-19',
-    'updated'     => '2026-03-19',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Career Advice',
     'image'       => 'team-celebrate.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'Do claims adjuster trainees get paid during training?', 'a' => 'Yes. Carrier trainee programs are paid, full-time jobs. You earn your salary and benefits while you study for your license and learn estimating, coverage and claim handling.'],
         ['q' => 'How fast does an entry-level adjuster get a raise?', 'a' => 'Many carriers give a step increase after you complete training and get licensed, then annual merit raises. Moving from desk to field or into a specialty line within two to three years is usually the biggest jump.'],
         ['q' => 'Do I need a degree to get an entry-level adjuster job?', 'a' => 'Not always. Some large carriers prefer a four-year degree for formal trainee programs, but many hire candidates with customer service, construction or auto body experience, especially if they already hold an adjuster license.'],
+        ['q' => 'What does an entry level claims adjuster make in Texas?', 'a' => 'Our estimate is that Texas trainees earn about $45,000 to $60,000, in line with national ranges, with Austin, Dallas-Fort Worth and Houston offers toward the top. Texas spring hail and Gulf hurricane seasons also create overtime and storm-duty opportunities.'],
         ['q' => 'Is it better to start as a staff or independent adjuster?', 'a' => 'For most beginners, a staff role is the safer start: steady pay, benefits and structured training. Independent work pays per claim and can be lucrative, but firms usually prefer adjusters who already have claim experience.'],
     ],
     'body'        => <<<'HTML'
@@ -62,6 +63,15 @@ return [
 
 <div class="callout callout-tip"><strong>Pro tip:</strong> Ask whether a trainee role is exempt or non-exempt. An hourly, overtime-eligible role at $50,000 base can out-earn a $55,000 salaried role during storm season.</div>
 
+<h2 id="entry-level-claims-adjuster-salary-in-texas">Entry level claims adjuster salary in Texas</h2>
+<p>Texas is one of the best states to start a claims career. Large carriers and TPAs run claim centers across Dallas-Fort Worth, Houston, Austin and San Antonio, and the state's hail, hurricane and freeze seasons keep demand for new adjusters high. Our estimates put Texas trainee pay in the same $45,000 to $60,000 band as the national figures, with the statewide staff adjuster median near $76,800 once you have a few years in.</p>
+<ul>
+<li><strong>Austin and Dallas-Fort Worth:</strong> trainee offers often sit toward the top of the range; experienced staff estimates run about $81,400 and $80,600.</li>
+<li><strong>Houston:</strong> heavy property and auto volume plus Gulf storm duty; experienced staff estimate about $79,900.</li>
+<li><strong>San Antonio, El Paso and McAllen:</strong> lower living costs and somewhat lower pay, with experienced staff estimates of about $74,500, $67,600 and $66,000.</li>
+</ul>
+<p>Storm season matters for new Texas adjusters, too. Non-exempt trainees pulled onto spring hail or hurricane duty can earn substantial overtime in their first year. See more in our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary Texas</a> guide.</p>
+
 <h2 id="raises-after-licensing-and-designations">Raises after licensing and designations</h2>
 <p>The first real bump usually comes when you finish training and hold your license. Many carriers tie a step increase to licensing, and some require it before you take a full caseload. After that, professional designations become the main lever:</p>
 <ul>
@@ -69,7 +79,7 @@ return [
 <li><strong>CPCU (Chartered Property Casualty Underwriter).</strong> A more advanced, broader credential that signals readiness for senior, complex and leadership roles.</li>
 <li><strong>Xactimate certification.</strong> Not a designation, but a practical skill credential that property employers and IA firms value highly.</li>
 </ul>
-<p>Licensing also opens doors outside your first employer. A license in a large reciprocity state, such as the Texas all-lines license that many adjusters use as a designated home state license, lets you add other states and makes you deployable for storm work later in your career.</p>
+<p>Licensing also opens doors outside your first employer. A license in a large reciprocity state, such as the <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas all-lines license</a> that many adjusters use as a designated home state license, lets you add other states and makes you deployable for storm work later in your career.</p>
 <p>Designations rarely double your pay overnight, but they make promotions and specialty transfers much easier to win.</p>
 
 <h2 id="year-1-to-5-salary-progression">Year 1 to 5 salary progression</h2>
@@ -92,7 +102,7 @@ return [
 <h2 id="how-to-get-hired-as-an-entry-level-adjuster">How to get hired as an entry-level adjuster</h2>
 <p>Carriers hire trainees year-round, and there are thousands of openings each year from retirements and turnover, even as simple claims become more automated. To stand out:</p>
 <ol>
-<li><strong>Get licensed before you apply.</strong> A license shows commitment and shortens your training. Many candidates use an online pre-licensing course like <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> (code joe20 takes 20% off).</li>
+<li><strong>Get licensed before you apply.</strong> A license shows commitment and shortens your training. Many candidates use an online pre-licensing course like <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> . Use <strong>joe20</strong> for 20% off.</li>
 <li><strong>Lead with transferable experience.</strong> Customer service, roofing, construction, auto body, collections and claims support roles all translate well.</li>
 <li><strong>Show you can write and organize.</strong> Adjusters live in documentation. A clean resume and clear cover letter matter.</li>
 <li><strong>Be flexible on line and location.</strong> Auto and desk property roles hire the most trainees and are easier to land first.</li>
@@ -109,6 +119,6 @@ return [
 
 <h2 id="is-an-entry-level-claims-adjuster-salary-worth-it">Is an entry level claims adjuster salary worth it?</h2>
 <p>For most people, yes. You start with a paid, benefits-backed job, no student debt required, and a clear path into the $70,000 to $90,000 range within about five years if you specialize. The work is demanding, with heavy caseloads and frustrated customers, but the skills are portable across carriers, states and lines of business.</p>
-<p>To see how your expected pay compares by location, check <a href="/salary-by-state/">insurance adjuster salary by state</a>, or start with our main <a href="/">insurance adjuster salary</a> guide.</p>
+<p>To see how your expected pay compares by location, check <a href="/salary-by-state/">insurance adjuster salary by state</a> (including <a href="/salary-by-state/#TX">Texas</a>), or start with our main <a href="/">insurance adjuster salary</a> guide.</p>
 HTML,
 ];

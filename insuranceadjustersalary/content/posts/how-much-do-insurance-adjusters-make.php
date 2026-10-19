@@ -6,7 +6,7 @@ return [
     'description' => 'How much do insurance adjusters make? See 2026 pay for staff, independent, CAT and public adjusters, plus earnings by experience, line of business and state.',
     'keyword'     => 'how much do insurance adjusters make',
     'date'        => '2026-10-14',
-    'updated'     => '2026-10-14',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'docs-calculator.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'Which type of insurance adjuster makes the most money?', 'a' => 'Experienced independent CAT adjusters and established public adjusters have the highest ceilings, with big years reaching $150,000 to $250,000 or more. Those incomes are uneven, though, and slow years can drop well below a staff salary.'],
         ['q' => 'How much do entry-level insurance adjusters make?', 'a' => 'Trainee and entry-level staff adjusters typically start between $45,000 and $60,000, plus benefits. Field trainees often also get a company car and equipment.'],
         ['q' => 'Do insurance adjusters make more in Texas or Florida?', 'a' => 'Staff pay in both states runs close to the national median. The bigger difference is storm volume: independent adjusters in Texas and Florida can earn far more in active hail and hurricane seasons.'],
+        ['q' => 'How much do insurance adjusters make in Houston or Dallas?', 'a' => 'By our estimates, mid-career staff adjusters earn roughly $79,900 in Houston and $80,600 in Dallas-Fort Worth, slightly above the Texas statewide estimate of about $76,800. Independent adjusters in both metros can earn more during hail and hurricane seasons.'],
         ['q' => 'Is insurance adjusting a good career financially?', 'a' => 'For most people it offers a solid middle-class salary with a license that takes weeks, not years, to earn. The upside comes from moving into complex claims, large loss, CAT work or public adjusting.'],
     ],
     'body'        => <<<'HTML'
@@ -65,6 +66,24 @@ return [
 </tbody>
 </table></div>
 
+<h2 id="texas-adjuster-pay">How much do insurance adjusters make in Texas?</h2>
+<p>Texas is among the largest adjuster job markets in the country, and many IA firms and carriers run large claims hubs in Dallas-Fort Worth, Houston, Austin and San Antonio. Our estimate puts the Texas statewide staff adjuster median at roughly <strong>$76,800</strong>, essentially in line with the national BLS median of $76,790. Metro pay varies more than the statewide figure suggests:</p>
+<div class="table-wrap"><table class="data-table">
+<thead><tr><th>Texas metro</th><th>Estimated staff adjuster pay (mid-career)</th></tr></thead>
+<tbody>
+<tr><td>Austin</td><td>~$81,400</td></tr>
+<tr><td>Dallas-Fort Worth</td><td>~$80,600</td></tr>
+<tr><td>Houston</td><td>~$79,900</td></tr>
+<tr><td>San Antonio</td><td>~$74,500</td></tr>
+<tr><td>Beaumont-Port Arthur</td><td>~$73,000</td></tr>
+<tr><td>Corpus Christi</td><td>~$71,400</td></tr>
+<tr><td>Lubbock</td><td>~$69,100</td></tr>
+<tr><td>El Paso</td><td>~$67,600</td></tr>
+<tr><td>McAllen</td><td>~$66,000</td></tr>
+</tbody>
+</table></div>
+<p>These are our estimates, not official BLS metro figures. For independent and CAT adjusters, the Texas storm calendar matters more than the metro: hail, wind and tornado claims peak from March through June across DFW, Central Texas and the Panhandle, Gulf hurricanes run June through November around Houston, Galveston, Corpus Christi and Beaumont, and winter freezes like the February 2021 storm can trigger waves of burst-pipe claims. See our full <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide for more detail.</p>
+
 <h2 id="pay-by-experience">Pay by experience level</h2>
 <p>For staff adjusters, experience is the most predictable driver of pay. A common progression looks like this:</p>
 <ol>
@@ -90,7 +109,7 @@ return [
 <h2 id="what-drives-pay">What drives adjuster pay up or down</h2>
 <p>Beyond type and line, a handful of factors explain most of the gap between a $55,000 adjuster and a $110,000 one:</p>
 <ul>
-<li><strong>Licenses held.</strong> Adjusters licensed in several states, often starting with a Texas or Florida all-lines license, are eligible for more deployments and more job postings.</li>
+<li><strong>Licenses held.</strong> Adjusters licensed in several states, often starting with a Texas all-lines license from the Texas Department of Insurance (TDI), are eligible for more deployments and more job postings.</li>
 <li><strong>Software skills.</strong> Fluency in Xactimate for property estimating is close to mandatory for field and CAT work.</li>
 <li><strong>Location.</strong> Large metros and storm-prone states have more volume. Compare markets on our <a href="/salary-by-state/">insurance adjuster salary by state</a> page.</li>
 <li><strong>Willingness to travel.</strong> The biggest paydays go to people who can leave home for weeks on short notice.</li>
@@ -109,7 +128,7 @@ return [
 <li>Earn designations such as AIC or CPCU, which can support raises and promotions on the staff side.</li>
 <li>Track your real take-home after expenses, not just gross fees, if you work as a 1099 contractor.</li>
 </ol>
-<p>If you do not have a license yet, an online pre-licensing course is the fastest first step. AdjustingOnline offers state courses, and the code "joe20" takes 20% off at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>.</p>
+<p>If you do not have a license yet, an online pre-licensing course is the fastest first step. The Texas all-lines license is the most popular designated home state license nationally because of its broad reciprocity, and TDI-approved certification courses can satisfy the exam requirement. You can take one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>. Use <strong>joe20</strong> for 20% off. Our guide to <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">what a Texas adjuster license is worth</a> covers the payoff.</p>
 
 <h2 id="estimate-your-pay">How much do insurance adjusters make in your situation?</h2>
 <p>Ranges only go so far. Your number depends on your state, line, experience and how much you are willing to travel. Plug your details into the <a href="/salary-calculator/">adjuster salary calculator</a> to get a personalized estimate, then compare it against staff, independent and CAT scenarios before you choose a path.</p>

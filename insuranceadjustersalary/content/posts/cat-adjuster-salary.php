@@ -6,7 +6,7 @@ return [
     'description' => 'Cat adjuster salary in 2026: per-deployment earnings, storm seasons, daily rates vs fee schedules, real costs, burnout, and what a strong CAT year pays.',
     'keyword'     => 'cat adjuster salary',
     'date'        => '2026-06-18',
-    'updated'     => '2026-06-18',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'tornado-storm.webp',
@@ -49,9 +49,9 @@ return [
 <p>The examples below are illustrative, using typical fee and daily-rate ranges. Real results depend on the storm, the carrier, your speed and how many claims the firm assigns you.</p>
 
 <div class="table-wrap"><table class="data-table"><thead><tr><th>Scenario</th><th>Length</th><th>Pay basis</th><th>Estimated adjuster gross</th></tr></thead><tbody>
-<tr><td>Spring hail storm, residential roofs</td><td>3 weeks</td><td>~45 claims x $500 avg fee at 70%</td><td>About $15,750</td></tr>
+<tr><td>Spring hail storm in Dallas-Fort Worth, residential roofs</td><td>3 weeks</td><td>~45 claims x $500 avg fee at 70%</td><td>About $15,750</td></tr>
 <tr><td>Desk CAT after a hurricane</td><td>8 weeks, 7 days/week</td><td>$500/day daily rate</td><td>About $28,000</td></tr>
-<tr><td>Hurricane field deployment</td><td>10 weeks</td><td>~110 claims x $700 avg fee at 70%</td><td>About $53,900</td></tr>
+<tr><td>Texas Gulf Coast hurricane field deployment</td><td>10 weeks</td><td>~110 claims x $700 avg fee at 70%</td><td>About $53,900</td></tr>
 <tr><td>Experienced field, commercial and large loss</td><td>12 weeks</td><td>$750/day daily rate</td><td>About $63,000</td></tr>
 </tbody></table></div>
 
@@ -67,6 +67,19 @@ return [
 <li><strong>Winter storms:</strong> Freeze events cause burst pipes and roof collapse claims, sometimes in places with little CAT history.</li>
 </ul>
 <p>An adjuster who works hail in spring and hurricanes in fall can stay busy most of the year in an active season. In a quiet season, the gaps between deployments are what pull annual income down.</p>
+
+<h2 id="cat-adjuster-pay-in-texas">CAT Adjuster Pay in Texas: Hail Alley and the Gulf Coast</h2>
+
+<p>No state keeps catastrophe adjusters busier across more of the calendar than Texas. It sits in hail alley, borders the Gulf, and gets hit by tornadoes, freezes and wildfire, so a Texas-based CAT adjuster can often work multiple event types in one year without leaving the state.</p>
+
+<ul>
+<li><strong>March to June, hail and tornadoes:</strong> Dallas-Fort Worth, Central Texas and the Panhandle produce heavy residential roof volume, ideal for fee-schedule adjusters who close claims fast.</li>
+<li><strong>June to November, Gulf hurricanes:</strong> Houston, Galveston, Corpus Christi and Beaumont see wind and surge deployments that can run for months.</li>
+<li><strong>December to February, winter freezes:</strong> The February 2021 winter storm generated huge numbers of burst-pipe and water damage claims statewide.</li>
+<li><strong>Wildfire:</strong> West Texas and the Panhandle carry real wildfire risk in dry years.</li>
+</ul>
+
+<p>Texas pay follows the same fee schedules and daily rates described above; there is no special Texas rate. The advantage is volume and proximity: less travel, lower lodging costs and more deployments within driving distance, which raises net income. Texas staff adjusters earn roughly in line with the national BLS median of $76,790 (our estimate for Texas is about $76,800), with Dallas-Fort Worth and Houston running slightly higher. See the full breakdown in our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary Texas</a> guide or compare states on the <a href="/salary-by-state/#TX">salary by state</a> page.</p>
 
 <h2 id="cat-adjuster-deployment-life">What Deployment Life Is Really Like</h2>
 
@@ -102,7 +115,7 @@ return [
 <h2 id="how-to-become-a-cat-adjuster">How to Become a CAT Adjuster</h2>
 
 <ol>
-<li><strong>Get licensed.</strong> Many adjusters hold a Texas all-lines license as a designated home state license, plus a Florida 6-20 license for hurricane work. Florida also issues emergency licenses after declared disasters. A pre-licensing course like <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> (code joe20 saves 20%) covers the exam.</li>
+<li><strong>Get licensed.</strong> Many adjusters hold a Texas all-lines license as a designated home state license, plus a Florida 6-20 license for hurricane work. Florida also issues emergency licenses after declared disasters. A pre-licensing course like <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> covers the exam. Use <strong>joe20</strong> for 20% off. See what that license is worth in our <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license salary</a> guide.</li>
 <li><strong>Build Xactimate skills</strong> until you can write a full roof and interior estimate quickly.</li>
 <li><strong>Join several IA firm rosters</strong> and keep your profiles current.</li>
 <li><strong>Take a first deployment</strong>, even a desk or small hail storm, to build a track record.</li>

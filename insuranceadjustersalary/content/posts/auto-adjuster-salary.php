@@ -6,7 +6,7 @@ return [
     'description' => 'Auto adjuster salary in 2026: material damage, appraiser, liability, bodily injury and total loss pay, per-appraisal rates for IAs, and how to move up.',
     'keyword'     => 'auto adjuster salary',
     'date'        => '2026-05-14',
-    'updated'     => '2026-05-14',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'car-engine.webp',
@@ -17,6 +17,7 @@ return [
         ['q' => 'How much does an auto claims adjuster make?', 'a' => 'Staff auto claims adjusters typically earn $50,000 to $72,000 in material damage and appraisal roles, and $60,000 to $88,000 in bodily injury and casualty roles. Senior injury and complex liability adjusters can earn more.'],
         ['q' => 'What does a car insurance adjuster make as a field appraiser?', 'a' => 'Staff field appraisers commonly earn in the upper part of the $50,000 to $72,000 material damage range, often with a company car. Independent auto appraisers are usually paid per appraisal, commonly around $100 to $250 each.'],
         ['q' => 'Do bodily injury adjusters make more than material damage adjusters?', 'a' => 'Yes. Bodily injury adjusters evaluate medical records, negotiate with attorneys and hold larger settlement authority, so they typically earn $60,000 to $88,000, compared with $50,000 to $72,000 for most material damage roles.'],
+        ['q' => 'What does an auto adjuster make in Texas?', 'a' => 'Our estimate is that Texas staff auto adjusters earn about $50,000 to $72,000 in material damage roles and $60,000 to $88,000 in bodily injury, with Dallas-Fort Worth and Houston toward the top. Spring hail adds extra work for independent appraisers.'],
         ['q' => 'Is auto adjusting a good entry point into claims?', 'a' => 'Yes. Carriers hire large classes of auto trainees, the claims are high volume and teach core skills quickly, and auto adjusters commonly move into liability, bodily injury or property roles within a few years.'],
     ],
     'body'        => <<<'HTML'
@@ -71,13 +72,28 @@ return [
 
 <p>A rough illustration:</p>
 <ul>
-<li>4 appraisals a day x $150 average = $600 a day on a busy day</li>
+<li>4 appraisals a day x $150 average in Houston or Dallas-Fort Worth = $600 a day on a busy day</li>
 <li>Daily volume is rarely steady; about 160 full-volume days a year = roughly $96,000 billed</li>
 <li>After a firm split, if one applies, plus fuel, vehicle wear, software, insurance and self-employment tax, take-home is often closer to $55,000 to $70,000</li>
 </ul>
 <p>Many independent auto adjusters keep volume steady with daily work, then pick up hail CAT assignments, where dealer lots and neighborhoods produce huge numbers of vehicle claims at once. See our <a href="/insurance-adjuster-advice/independent-adjuster-salary/">independent adjuster salary</a> guide for a full gross-vs-net breakdown.</p>
 
 <div class="callout callout-tip"><strong>Pro tip:</strong> Hail season is the auto IA's best friend. After a major hail storm, appraisers set up at drive-in sites and can inspect far more vehicles per day than in normal field work.</div>
+
+<h2 id="auto-adjuster-salary-in-texas">Auto Adjuster Salary in Texas</h2>
+
+<p>Texas is one of the biggest auto claims markets in the country. Dallas-Fort Worth and Houston have enormous traffic volumes, long commutes and sprawling highway systems, which keep carriers hiring material damage, liability and injury adjusters year-round. Texas staff auto pay runs roughly in line with national ranges, and our statewide staff adjuster estimate sits near $76,800, close to the BLS national median.</p>
+
+<p>What makes Texas different is hail. Every spring, storms across DFW, Central Texas and the Panhandle damage huge numbers of vehicles at once, from dealer lots to parking garages. Carriers respond with drive-in hail catastrophe sites where appraisers inspect car after car, and independent appraisers can stack far more paid inspections per day than in normal field work.</p>
+
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Texas auto role (estimate)</th><th>Typical pay</th></tr></thead><tbody>
+<tr><td>Desk material damage</td><td>$50,000 - $65,000</td></tr>
+<tr><td>Field appraiser (DFW, Houston)</td><td>$55,000 - $72,000 + company car</td></tr>
+<tr><td>Bodily injury adjuster</td><td>$60,000 - $88,000</td></tr>
+<tr><td>Independent hail appraiser</td><td>Per-vehicle fees, peak March-June</td></tr>
+</tbody></table></div>
+
+<p>Spanish-language skills are especially valuable in Texas auto claims. For metro-by-metro estimates, see our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary Texas</a> guide.</p>
 
 <h2 id="what-affects-auto-claims-adjuster-pay">What Affects Auto Claims Adjuster Pay</h2>
 
@@ -107,10 +123,10 @@ return [
 
 <p>Auto claims is one of the easiest doors into the industry because carriers hire large trainee classes year-round. To stand out:</p>
 <ul>
-<li>Get your adjuster license before applying. An online course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> prepares you for the exam, and code joe20 takes 20% off.</li>
+<li>Get your adjuster license before applying. An online course from <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> prepares you for the exam. Use <strong>joe20</strong> for 20% off. Many auto adjusters choose the <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license</a> for its reciprocity.</li>
 <li>Highlight customer service, negotiation or automotive experience on your resume.</li>
 <li>Ask about field appraiser openings if you prefer driving to a desk.</li>
 </ul>
-<p>Pay varies by region, so check <a href="/salary-by-state/">insurance adjuster salary by state</a>, and model offers with the <a href="/salary-calculator/">Adjuster Salary Calculator</a>. Start in auto, build skills fast, and the jump to bodily injury pay is well within reach.</p>
+<p>Pay varies by region, so check <a href="/salary-by-state/">insurance adjuster salary by state</a> (start with <a href="/salary-by-state/#TX">Texas</a>), and model offers with the <a href="/salary-calculator/">Adjuster Salary Calculator</a>. Start in auto, build skills fast, and the jump to bodily injury pay is well within reach.</p>
 HTML,
 ];

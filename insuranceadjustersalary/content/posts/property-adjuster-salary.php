@@ -6,7 +6,7 @@ return [
     'description' => 'Property adjuster salary ranges for 2026: desk vs field, residential vs commercial, large loss, trainee to senior pay, plus the skills that raise your income.',
     'keyword'     => 'property adjuster salary',
     'date'        => '2026-07-23',
-    'updated'     => '2026-07-23',
+    'updated'     => '2026-10-19',
     'author'      => 'Insurance Adjuster Salary Editorial Team',
     'category'    => 'Salary Guides',
     'image'       => 'brick-home.webp',
@@ -18,6 +18,7 @@ return [
         ['q' => 'What does a property adjuster trainee make?', 'a' => 'Property adjuster trainees and entry-level hires commonly start between $45,000 and $60,000. Pay usually rises after the first year once you can handle files and inspections independently.'],
         ['q' => 'Do field property adjusters get a company car?', 'a' => 'Many carriers give field property adjusters a company car or vehicle allowance, a gas card, a laptop and a phone. Together with benefits, these perks often add $8,000 to $15,000 of value on top of base salary.'],
         ['q' => 'Do commercial property adjusters earn more than residential adjusters?', 'a' => 'Yes, in most cases. Commercial and large loss property claims are more complex, involve business interruption and coinsurance questions, and are usually handled by experienced adjusters in the $85,000 to $120,000+ range.'],
+        ['q' => 'How much do property adjusters make in Texas?', 'a' => 'We estimate Texas staff property adjusters earn around the statewide median of about $76,800, with Austin, Dallas-Fort Worth and Houston running closer to $80,000 for mid-career staff. Field adjusters can add storm overtime during hail and hurricane seasons.'],
         ['q' => 'Is Xactimate required to be a property adjuster?', 'a' => 'Practically, yes. Most carriers and independent adjusting firms estimate property damage in Xactimate, and strong Xactimate skills are one of the fastest ways to qualify for higher-paying field and large loss roles.'],
     ],
     'body'        => <<<'HTML'
@@ -58,9 +59,27 @@ return [
 </ul>
 <p>Those extras often add $8,000 to $15,000 of value a year. A field adjuster earning $72,000 with a company car is, in practical terms, ahead of a desk adjuster at $75,000 who drives a personal vehicle and pays for gas.</p>
 
+<h2 id="texas-property-adjuster-salary">What Texas Property Adjusters Earn</h2>
+
+<p>Texas is among the largest property claims markets in the US, and many carriers and IA firms run large hubs in Dallas-Fort Worth, Houston, Austin and San Antonio. We estimate the Texas statewide staff adjuster median at about $76,800, in line with the national BLS median. Estimated mid-career staff pay by metro:</p>
+
+<div class="table-wrap"><table class="data-table"><thead><tr><th>Texas metro</th><th>Estimated staff pay</th><th>Main property claim drivers</th></tr></thead><tbody>
+<tr><td>Austin</td><td>~$81,400</td><td>Spring hail, winter freeze pipe bursts</td></tr>
+<tr><td>Dallas-Fort Worth</td><td>~$80,600</td><td>Hail, wind and tornadoes (March-June)</td></tr>
+<tr><td>Houston</td><td>~$79,900</td><td>Gulf hurricanes and flooding (June-November)</td></tr>
+<tr><td>San Antonio</td><td>~$74,500</td><td>Hail and wind, freeze claims</td></tr>
+<tr><td>Beaumont-Port Arthur</td><td>~$73,000</td><td>Hurricanes and tropical storms</td></tr>
+<tr><td>Corpus Christi</td><td>~$71,400</td><td>Hurricanes and coastal wind</td></tr>
+<tr><td>Lubbock</td><td>~$69,100</td><td>Panhandle hail, wind and wildfire</td></tr>
+<tr><td>El Paso</td><td>~$67,600</td><td>Wind and occasional hail</td></tr>
+<tr><td>McAllen</td><td>~$66,000</td><td>Tropical storms and wind</td></tr>
+</tbody></table></div>
+
+<p>These figures are our estimates, not official BLS metro data. Texas field property adjusters often add meaningful storm overtime: hail alley claims peak from March through June, Gulf hurricanes threaten Houston, Galveston, Corpus Christi and Beaumont from June through November, and winter freezes like the February 2021 storm can produce thousands of burst-pipe claims at once. See our <a href="/insurance-adjuster-advice/insurance-adjuster-salary-texas/">insurance adjuster salary in Texas</a> guide for more.</p>
+
 <h2 id="residential-vs-commercial-property">Residential vs Commercial Property Claims</h2>
 
-<p>Home insurance adjuster salary sits at the lower and middle part of the property range. Residential claims are high volume: a pipe burst under a sink, a hail-damaged roof, a kitchen fire. Most residential adjusters stay in the $55,000 to $85,000 band depending on desk or field.</p>
+<p>Home insurance adjuster salary sits at the lower and middle part of the property range. Residential claims are high volume: a pipe burst under a sink, a hail-damaged roof in Dallas, a kitchen fire. Most residential adjusters stay in the $55,000 to $85,000 band depending on desk or field.</p>
 
 <p>Commercial property pays more because the files are harder. You deal with:</p>
 <ul>
@@ -99,7 +118,7 @@ return [
 <h2 id="how-to-become-a-property-adjuster">How to Get Hired as a Property Adjuster</h2>
 
 <ol>
-<li><strong>Get licensed.</strong> Most states require an adjuster license. Many non-residents use a Texas all-lines license as a designated home state license because of its broad reciprocity. An online pre-licensing course such as the one at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a> (code joe20 takes 20% off) covers the exam.</li>
+<li><strong>Get licensed.</strong> Most states require an adjuster license. The Texas all-lines license from the Texas Department of Insurance (TDI) is the most popular designated home state license nationally because of its broad reciprocity, and TDI-approved certification courses can satisfy the exam requirement. You can take one online at <a href="https://www.adjustingonline.com/courses/" rel="sponsored noopener" target="_blank">AdjustingOnline</a>. Use <strong>joe20</strong> for 20% off. Our guide to <a href="/insurance-adjuster-advice/texas-adjuster-license-salary/">Texas adjuster license salary</a> shows what the license is worth.</li>
 <li><strong>Learn Xactimate basics.</strong> Even a trainee who can sketch a room stands out.</li>
 <li><strong>Apply to carrier trainee programs.</strong> Large carriers hire property trainees regularly and train them on the job.</li>
 <li><strong>Move to the field.</strong> After a year or two on the desk, field property roles raise both pay and future options.</li>
