@@ -30,6 +30,16 @@ PHONE = "(512) 297-7580"
 TEL = "+15122977580"
 TODAY = dt.date(2026, 10, 19)
 GEO = (30.0499, -95.1847)
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WPRD3ZS55H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WPRD3ZS55H');
+</script>
+"""
 
 e = html.escape
 
@@ -333,17 +343,18 @@ def crumbs_html(crumbs):
 def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg", og_type="website",
          scripts=(), noindex=False, preload=None, extra_head="", popup=True):
     canonical = SITE + path
+    og_w, og_h = (1200, 630) if og_image == "og-image.jpg" else IMG_SIZES.get(og_image.rsplit(".", 1)[0], (1600, 1067))
     graph = [business_schema(),
              {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME,
               "publisher": {"@id": SITE + "/#business"}}] + list(schema)
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
     pre = f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else ""
-    js = "".join(f'<script src="/assets/js/{s}.js?v=1" defer></script>' for s in ("site",) + tuple(scripts))
+    js = "".join(f'<script src="/assets/js/{s}.js?v=2" defer></script>' for s in ("site",) + tuple(scripts))
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8">
+{GTAG}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -355,6 +366,9 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{SITE}/assets/img/{og_image}">
+<meta property="og:image:width" content="{og_w}">
+<meta property="og:image:height" content="{og_h}">
+<meta property="og:image:alt" content="{e(title)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
@@ -371,7 +385,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap">
-{pre}<link rel="stylesheet" href="/assets/css/site.css?v=1">
+{pre}<link rel="stylesheet" href="/assets/css/site.css?v=2">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>

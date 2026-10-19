@@ -3,7 +3,7 @@
 A static HTML/PHP site for **Kingwood Roofers** (phone (512) 297-7580), built on the same page set as rooferkaty.com but with its own design: maroon + pine green, Fraunces serif headings, two-tier header, arched hero, editorial service index, "storm desk" weather band and a lead popup.
 
 **Hosting:** Hostinger Agency Growth plan, website UID `jhGHXYw37` (php-fpm, PHP 8.5, Phoenix).
-Preview URL until DNS is connected: https://mediumslateblue-gazelle-304055.hostingersite.com/
+Live at https://rooferkingwood.com/ (preview: https://mediumslateblue-gazelle-304055.hostingersite.com/)
 
 **Deliverable:** `rooferkingwood-hostinger-upload.zip` (files at the zip root → extract into `public_html`), or push with `./deploy.sh`.
 
@@ -37,5 +37,6 @@ Needs Python 3 and ImageMagick `identify`. Copy lives in `content/` (format: `co
 ## Notes
 - `index.php` serves `home.html` for `/`, adds trailing slashes, returns real 404s, and only forces https / non-www on rooferkingwood.com itself so the preview domain keeps working.
 - Photos are CC0 / public-domain images (sources in `src/assets/img/CREDITS.md`). Swap in your own project photos with the same filenames.
-- No Google Analytics tag yet (rooferkaty has one); send a GA4 ID to add it.
+- Google tag `G-WPRD3ZS55H` is the first thing in `<head>` on every page, post, the thank-you page and 404 (check.py enforces it). The privacy policy discloses Google Analytics.
+- Search Console verification file `googlecccfbf2f7e9e5ae4.html` lives in `src/` and is served at the site root. Submit `https://rooferkingwood.com/sitemap.xml` in Search Console.
 - No street address, license numbers, reviews or years in business were invented.

@@ -20,7 +20,7 @@ def text_of(html):
 pages = {}
 for base, _, files in os.walk(DIST):
     for fn in files:
-        if fn.endswith(".html"):
+        if fn.endswith(".html") and not fn.startswith("google"):
             full = os.path.join(base, fn)
             rel = os.path.relpath(full, DIST)
             url = "/" if rel == "home.html" else "/" + rel[:-len("index.html")] if rel.endswith("index.html") else "/" + rel
@@ -28,6 +28,8 @@ for base, _, files in os.walk(DIST):
 
 titles, descs = {}, {}
 for url, h in pages.items():
+    if h.count("G-WPRD3ZS55H") != 2 or h.find("googletagmanager.com/gtag/js?id=G-WPRD3ZS55H") > h.find("<meta charset"):
+        errors.append(f"{url}: Google tag missing or not first in <head>")
     if "rooferkaty" in h or re.search(r"\bkaty\b", h, re.I):
         errors.append(f"{url}: leftover Katy reference")
     if "gmail" in h.lower():
@@ -99,6 +101,9 @@ if len(dates) < 10 or gaps != {3}:
     errors.append("blog dates are not >=10 posts spaced 3 days apart")
 
 # required files
+gsc = os.path.join(DIST, "googlecccfbf2f7e9e5ae4.html")
+if not os.path.isfile(gsc) or open(gsc).read().strip() != "google-site-verification: googlecccfbf2f7e9e5ae4.html":
+    errors.append("Search Console verification file missing or altered")
 for f in ["index.php", "home.html", "send.php", "includes/config.php", "404.html", "sitemap.xml", "robots.txt", ".htaccess",
           "favicon.ico", "favicon.svg", "assets/img/og-image.jpg"]:
     if not os.path.isfile(os.path.join(DIST, f)):

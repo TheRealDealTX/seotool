@@ -147,13 +147,13 @@
     if (!alertBox) return;
     if (!feats.length) {
       alertBox.classList.remove("active");
-      alertBox.innerHTML = "<h3>✅ No active National Weather Service alerts for Kingwood</h3><p style='margin:0;color:var(--muted)'>Checked " + stamp + ". This updates every time the page loads.</p>";
+      alertBox.innerHTML = "<h2>✅ No active National Weather Service alerts for Kingwood</h2><p style='margin:0;color:var(--muted)'>Checked " + stamp + ". This updates every time the page loads.</p>";
       return;
     }
     alertBox.classList.add("active");
     alertBox.innerHTML = feats.slice(0, 4).map(function (f) {
       var p = f.properties;
-      return "<h3>⚠️ " + esc(p.event) + "</h3><p style='margin:0 0 6px'>" + esc(p.headline) + "</p>" +
+      return "<h2>⚠️ " + esc(p.event) + "</h2><p style='margin:0 0 6px'>" + esc(p.headline) + "</p>" +
         "<p style='margin:0 0 14px;color:var(--muted);font-size:.9rem'>Until " + esc(new Date(p.ends || p.expires).toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit" })) + " · Source: NWS</p>";
     }).join("");
   }

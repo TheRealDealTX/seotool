@@ -142,7 +142,8 @@ def build_blog():
 <h3><a href="/blog/{p['slug']}/">{e(p['h1'])}</a></h3><p>{e(p['excerpt'])}</p><span class="link-arrow">Read the guide {icon('arrow')}</span></div></article>""" for p in B.POSTS)
     main = (B.page_hero(crumbs, "Kingwood Roofing Blog", "Practical guides for Kingwood homeowners on pine trees and roofs, storm prep, insurance claims, HOA approvals, materials and costs.",
                         image="forest-home", kicker="Guides & advice") +
-            f'<section class="section"><div class="wrap">{rows}</div></section>' + B.closer())
+            f'<section class="section"><div class="wrap"><div class="head" data-reveal><span class="kicker">Latest articles</span><h2>Roofing advice for Kingwood homeowners</h2>'
+            f'<p>Written by local roofers for the homes, trees, storms and village rules around Lake Houston. New guides every few days.</p></div>{rows}</div></section>' + B.closer())
     items = {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/blog/{p['slug']}/"} for i, p in enumerate(B.POSTS)]}
     B.add(url, B.page(url, "Kingwood Roofing Blog: Guides for Kingwood, TX Homeowners",
                       "Roofing advice from Kingwood roofers: pine tree damage, hurricane prep, replacement costs, HOA approval, hail, insurance claims and maintenance.",
@@ -234,7 +235,7 @@ def build_weather():
     crumbs = [("Home", "/"), ("Storm Desk", url)]
     main = f"""{B.page_hero(crumbs, "Kingwood, TX Weather &amp; Storm Desk", "Live conditions, National Weather Service alerts, a 24-hour wind and rain outlook and a 7-day forecast for Kingwood, with a daily roof-risk rating.", image="lightning", alt="Lightning over a dark sky near Kingwood", kicker="Live weather")}
 <section class="section tight"><div class="wrap">
-<div data-wx-alerts class="alert-strip" data-reveal><h3>Checking National Weather Service alerts for Kingwood…</h3></div>
+<div data-wx-alerts class="alert-strip" data-reveal><h2>Checking National Weather Service alerts for Kingwood…</h2></div>
 </div></section>
 <section class="section tight bg-pine"><div class="wrap">
 <div class="desk" data-wx-desk data-wx-full>
@@ -490,7 +491,10 @@ def build_tools():
     grid = "".join(f'<article class="tile" data-reveal style="--d:{(i % 3) * 0.08:.2f}s"><div class="ico">{icon(ic)}</div><h3><a href="{h}">{e(t)}</a></h3><p>{e(d)}</p><span class="link-arrow">Open {icon("arrow")}</span></article>'
                    for i, (h, ic, t, d) in enumerate(cards))
     main = (B.page_hero(crumbs, "Free Roofing Tools for Kingwood Homeowners", "Calculators and checklists to help you plan, budget and protect your roof. Free, instant and private.", image="shingles", kicker="Tools") +
-            f'<section class="section"><div class="wrap"><div class="grid g3">{grid}</div></div></section>' + B.closer())
+            f'''<section class="section"><div class="wrap"><div class="head" data-reveal><span class="kicker">Free &amp; private</span><h2>Plan, budget and protect your roof</h2>
+<p>These tools are built around Kingwood conditions: Houston-area installed prices, tall-pine shade and debris, village association rules and Gulf storm season. Everything runs in your browser, so nothing you type is stored or sent anywhere.</p>
+<p>Use the cost calculator for a planning range before you talk to any contractor, the pitch calculator to understand your roof's area and steepness, the storm damage self-check after hail, wind or a fallen limb, and the roof age estimator to see how many good years your current roof likely has left. When you're ready for exact numbers, a <a href="/free-roof-inspection/">free roof inspection</a> gives you measurements, photos and an itemized estimate.</p></div>
+<div class="grid g3">{grid}</div></div></section>''' + B.closer())
     B.add(url, B.page(url, "Free Roofing Calculators & Tools | Kingwood Roofers",
                       "Free roofing tools for Kingwood, TX homeowners: roof cost calculator, pitch and area calculator, storm damage self-check, roof lifespan estimator and weather.",
                       main, active="/tools/", schema=[B.crumbs_schema(crumbs)]), priority="0.7")
@@ -527,6 +531,14 @@ def build_about():
                       main, schema=[B.crumbs_schema(crumbs)]), priority="0.6")
 
 
+CONTACT_FAQS = [
+    {"q": "How fast can you come out?", "a": "Most free inspections in Kingwood are scheduled within a few days. Active leaks and trees or limbs on a roof get priority, and we can arrange emergency tarping."},
+    {"q": "What should I have ready when I call?", "a": "Your address, a rough idea of the roof's age, what you've noticed (leak, missing shingles, limb strike, hail) and the date of any recent storm. Photos from the ground help too."},
+    {"q": "Do you only work in Kingwood?", "a": "Kingwood is home base, and we also serve Atascocita, Humble, Porter, New Caney, Huffman and Crosby around Lake Houston."},
+    {"q": "Can I text instead of calling?", "a": "Yes. Call or text (512) 297-7580, or use the form on this page and we'll get back to you, usually the same business day."},
+]
+
+
 def build_contact():
     url = "/contact/"
     crumbs = [("Home", "/"), ("Contact", url)]
@@ -543,10 +555,10 @@ def build_contact():
 <div class="desk" data-wx-desk data-wx-compact style="margin-top:28px;background:var(--pine);color:#d8e3dc"><div class="desk-now"><span class="kicker light">Kingwood right now</span><p class="loading">Loading Kingwood weather…</p></div></div>
 </div>
 <div class="form-card" data-reveal style="--d:.1s">{B.lead_form('contact-form', heading='Send us a message', sub='We usually respond the same business day.', full=True)}</div>
-</div></section>""")
+</div></section>""" + B.faq_html(CONTACT_FAQS, "Before you call: quick answers"))
     B.add(url, B.page(url, "Contact Kingwood Roofers | Call (512) 297-7580",
                       "Contact Kingwood Roofers for a free roof inspection, roof repair or replacement quote in Kingwood, TX. Call (512) 297-7580 or send a request online.",
-                      main, schema=[B.crumbs_schema(crumbs), {"@type": "ContactPage", "url": SITE + url}], scripts=("weather",)), priority="0.6")
+                      main, schema=[B.crumbs_schema(crumbs), B.faq_schema(CONTACT_FAQS), {"@type": "ContactPage", "url": SITE + url}], scripts=("weather",)), priority="0.6")
 
 
 def build_simple():
@@ -554,14 +566,14 @@ def build_simple():
 <div><span class="kicker">Request received</span><h1>Thank you!</h1>
 <p class="lead" style="margin:0 auto 28px">Your request is on its way. A Kingwood roofer will call you shortly to schedule your free roof inspection. Need us sooner?</p>
 <div class="hero-actions" style="justify-content:center"><a class="btn btn-brass" href="tel:{TEL}">{icon('phone')} Call {PHONE}</a><a class="btn btn-ghost-light" href="/blog/">Read our roofing guides</a></div></div></div></section>"""
-    B.add("/thank-you/", B.page("/thank-you/", "Thank You | Kingwood Roofers", "Thanks for contacting Kingwood Roofers. We'll be in touch shortly.", main,
+    B.add("/thank-you/", B.page("/thank-you/", "Thank You | Kingwood Roofers, Kingwood TX", "Thanks for contacting Kingwood Roofers. Your free roof inspection request was received and a local roofer will call you shortly to schedule it.", main,
                                 noindex=True, popup=False), sitemap=False)
 
     main = f"""<section class="phero no-img" style="text-align:center"><div class="wrap" style="padding:110px 0;margin:0 auto">
 <div><span class="kicker">Error 404</span><h1>This page blew away</h1>
 <p class="lead" style="margin:0 auto 28px">The page you're looking for doesn't exist or has moved. Let's get you back under a solid roof.</p>
 <div class="hero-actions" style="justify-content:center"><a class="btn btn-brass" href="/">Back to home</a><a class="btn btn-ghost-light" href="/free-roof-inspection/">Free roof inspection</a></div></div></div></section>"""
-    B.write("/404.html", B.page("/404.html", "Page Not Found | Kingwood Roofers", "This page could not be found.", main, noindex=True))
+    B.write("/404.html", B.page("/404.html", "Page Not Found | Kingwood Roofers", "Sorry, this page could not be found. Head back to the Kingwood Roofers homepage or book a free roof inspection in Kingwood, TX.", main, noindex=True))
 
     legal = {
         "/privacy-policy/": ("Privacy Policy", f"""<p>Last updated: {B.fmt_date(B.TODAY.isoformat())}</p>
@@ -570,7 +582,7 @@ def build_simple():
 <h2>How we use it</h2><p>We use your information only to respond to your request, schedule inspections, provide estimates and service, and keep basic business records. We may call or text you about your request.</p>
 <h2>Sharing</h2><p>We do not sell or rent your personal information. We share it only with service providers who help us operate (such as email delivery), when required by law, or with your permission (for example, with your insurance adjuster at your request).</p>
 <h2>Third-party services</h2><p>Our weather features load forecast data from Open-Meteo and alerts from the National Weather Service, and our pages load fonts from Google Fonts. Those services may receive your IP address as part of normal web requests. Our calculators run entirely in your browser; nothing you enter in them is stored or sent.</p>
-<h2>Cookies and storage</h2><p>We don't use advertising cookies. Your browser's session storage is used only to remember that you've already seen or closed our inspection pop-up, so it doesn't keep reappearing.</p>
+<h2>Analytics and cookies</h2><p>We use Google Analytics to understand how visitors use this site, such as which pages are viewed and how people arrive. Google Analytics sets cookies and collects information such as your IP address, device and browser type, and pages visited. We use it only in aggregate to improve the site. You can learn how Google uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">policies.google.com/technologies/partner-sites</a> and opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics opt-out browser add-on</a>. We don't use advertising cookies. Your browser's session storage is also used to remember that you've already seen or closed our inspection pop-up, so it doesn't keep reappearing.</p>
 <h2>Your choices</h2><p>To ask us to update or delete information you've sent us, call {PHONE} or email info@rooferkingwood.com.</p>
 <h2>Changes</h2><p>We may update this policy from time to time. The date at the top shows the latest version.</p>"""),
         "/terms/": ("Terms of Use", f"""<p>Last updated: {B.fmt_date(B.TODAY.isoformat())}</p>
@@ -586,7 +598,7 @@ def build_simple():
         crumbs = [("Home", "/"), (name, url)]
         main = (B.page_hero(crumbs, name, f"{name} for rooferkingwood.com.") +
                 f'<section class="section"><div class="wrap"><article class="prose" style="max-width:820px">{body}</article></div></section>')
-        B.add(url, B.page(url, f"{name} | Kingwood Roofers", f"{name} for Kingwood Roofers (rooferkingwood.com), a roofing company serving Kingwood, TX.", main,
+        B.add(url, B.page(url, f"{name} | Kingwood Roofers", f"Read the {name.lower()} for rooferkingwood.com, the website of Kingwood Roofers, a local roofing company serving Kingwood, Humble and Lake Houston, TX.", main,
                           schema=[B.crumbs_schema(crumbs)]), priority="0.2")
 
 
