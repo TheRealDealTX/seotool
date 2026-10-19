@@ -2,9 +2,17 @@
 // URL routing, legacy WordPress redirects and machine-readable endpoints.
 defined('PGF') || exit;
 
+// True on a Hostinger preview address (*.hostingersite.com) used for testing.
+function is_preview_host(): bool
+{
+    return str_ends_with(strtolower($_SERVER['HTTP_HOST'] ?? ''), '.hostingersite.com');
+}
+
 function redirect(string $to, int $code = 301): never
 {
-    header('Location: ' . (str_starts_with($to, 'http') ? $to : SITE_URL . $to), true, $code);
+    // On a preview address, stay on it instead of bouncing to the live domain.
+    $base = is_preview_host() ? 'https://' . $_SERVER['HTTP_HOST'] : SITE_URL;
+    header('Location: ' . (str_starts_with($to, 'http') ? $to : $base . $to), true, $code);
     exit;
 }
 
@@ -41,6 +49,9 @@ const PAGES = [
 function dispatch(string $method, string $uri): void
 {
     $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+    if (is_preview_host()) {
+        header('X-Robots-Tag: noindex, nofollow');
+    }
     $path = parse_url($uri, PHP_URL_PATH) ?: '/';
     $path = '/' . ltrim(rawurldecode($path), '/');
 

@@ -61,32 +61,42 @@ the RSS feed and related-post blocks automatically.
 
 ## Hosting notes
 
-The current host (Hostinger Agency, website `VSUHIRjmA`) serves real files
-directly and sends every other path to `index.php`, the same way WordPress
-pretty permalinks work there today — no rewrite rules are needed. `.htaccess`
-is included for Apache/LiteSpeed hosts that honour it.
+The new site runs on its own **plain PHP website** on the Hostinger Agency
+plan: UID `6frlLGPcw`, PHP 8.3, Phoenix, preview address
+`https://darkorchid-squid-604225.hostingersite.com` (created 2026-10-19). The
+old WordPress site is UID `VSUHIRjmA`. It can't be overwritten in place: the
+platform locks WordPress core on managed WP sites (`index.php`, `wp-config.php`,
+`wp-admin`, `wp-includes` refuse moves/overwrites).
 
-`app/` and `storage/` are not meant to be web-reachable: `.htaccess` denies
-them, and every PHP file there exits immediately when requested directly.
+The platform serves real files directly, ignores `.htaccess`, and sends any
+other path to `index.php` — except nonexistent `*.php` paths (e.g.
+`/wp-login.php`), which get the platform's own 404. `.htaccess` is included
+for Apache/LiteSpeed hosts that honour it.
+
+On a `*.hostingersite.com` address the router keeps redirects on that host and
+sends `X-Robots-Tag: noindex`, so the preview can be tested without bouncing
+to the live domain or being indexed.
+
+`app/` and `storage/` are not protected by `.htaccess` here; every PHP file in
+them exits immediately with an empty response, so nothing is exposed.
 
 **Forms.** Contact and newsletter submissions are emailed to
 `info@puregoatfarms.com` with PHP `mail()` and logged to `pgf-storage/` one
-level above the web root (falls back to `storage/`). Logs are `.php` files that
-exit on request, so they are never served. If the host's `mail()` is unreliable,
-point `send_mail()` in `app/forms.php` at SMTP or a form service.
+level above the web root when writable, otherwise `storage/` (the case on
+this host). Logs are `.php` files that exit on request, so they are never
+served. If mail doesn't arrive, point `send_mail()` in `app/forms.php` at SMTP.
 
 ## Deploying
 
-1. Back up the WordPress site (files + database) in hPanel.
-2. Remove the WordPress files from `public_html` (keep `wp-content/uploads/`
-   or let this folder's copy replace it).
-3. Upload the contents of this folder to `public_html`.
-4. Clear the LiteSpeed/CDN cache.
-5. In Search Console, resubmit `https://puregoatfarms.com/sitemap_index.xml`
-   and inspect the homepage and the two original posts.
+Upload changed files to website `6frlLGPcw` through the File Browser TUS
+endpoint (`agency-hosting_files_generate-upload-url` gives the URL and keys;
+credentials expire after a few hours), then clear the site cache.
 
-Local preview: `php -S 127.0.0.1:8088 -t .` with a router that serves real
-files first, or any Apache with `.htaccess`.
+**Go-live (not yet done):** move `puregoatfarms.com` from website `VSUHIRjmA`
+to `6frlLGPcw`, make sure SSL is issued for `puregoatfarms.com` and
+`www.puregoatfarms.com`, clear cache, then resubmit
+`https://puregoatfarms.com/sitemap_index.xml` in Search Console. Keep
+`VSUHIRjmA` until the new site has been live for a while.
 
 ## To review before going live
 
