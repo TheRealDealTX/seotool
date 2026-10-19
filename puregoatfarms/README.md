@@ -92,13 +92,17 @@ Upload changed files to website `6frlLGPcw` through the File Browser TUS
 endpoint (`agency-hosting_files_generate-upload-url` gives the URL and keys;
 credentials expire after a few hours), then clear the site cache.
 
-**Go-live (not yet done):** move `puregoatfarms.com` from website `VSUHIRjmA`
-to `6frlLGPcw`, make sure SSL is issued for `puregoatfarms.com` and
-`www.puregoatfarms.com`, clear cache, then resubmit
-`https://puregoatfarms.com/sitemap_index.xml` in Search Console. Keep
-`VSUHIRjmA` until the new site has been live for a while.
+**Live since 2026-10-19 03:37 UTC.** `puregoatfarms.com` was unlinked from the
+WordPress website `VSUHIRjmA` and assigned to `6frlLGPcw`; the existing SSL
+certificate (apex + www) moved with it and the cache was cleared. The
+WordPress website still exists with its files and database intact but no
+domain. To roll back, unlink `puregoatfarms.com` from `6frlLGPcw` and link it
+to `VSUHIRjmA` again. Delete `VSUHIRjmA` once the new site has proven itself.
 
-## To review before going live
+Hostinger's CDN challenges headless browsers once (a 403 followed by a
+reload to 200); regular browsers, curl and Googlebot get a 200 directly.
+
+## Open items
 
 - Terms of Use had `[Insert State/Country]` placeholders; they now read
   "the laws of the United States and the state in which Pure Goat Farms
