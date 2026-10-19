@@ -43,3 +43,12 @@ serves `home.html` for `/`, handles redirects and returns real 404s.
 submission to `form-submissions.csv` one level above `public_html`.
 
 Photos are from Unsplash (free license), downloaded and served locally as WebP.
+
+## SEO setup
+- Google tag `G-3VM6161ZL8` is the first thing in `<head>` on every generated page (`GTAG` in `build.py`).
+- Search Console HTML verification file `googlecccfbf2f7e9e5ae4.html` lives in `static/` and is copied to the site root.
+- `sitemap.xml` (with image entries, stable lastmod dates), `robots.txt`, RSS at `/feed.xml` (`/feed/` 301s to it).
+- Favicons: `favicon.ico` (16/32/48), SVG, 32/48/96 PNG, apple-touch-icon, 192/512 manifest icons.
+- Per page: unique title + description, canonical, Open Graph + Twitter cards, `max-image-preview:large`,
+  JSON-LD (Organization, WebSite, BlogPosting, BreadcrumbList, FAQPage, WebApplication, CollectionPage).
+- Fonts are self-hosted and preloaded; images use `srcset` so phones load the 720px variants.

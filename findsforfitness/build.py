@@ -22,7 +22,18 @@ OUT = ROOT / "public"
 POSTS_DIR = ROOT / "content" / "posts"
 IMAGES = {k: v for k, v in json.loads((ROOT / "images.json").read_text()).items()}
 ORIGIN = SITE["origin"]
+GA_ID = "G-3VM6161ZL8"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
 VERSION = TODAY.replace("-", "")
+REWRITE_DATE = "2026-10-17"  # when the archived posts were rewritten for the relaunch
 esc = html.escape
 
 
@@ -59,6 +70,9 @@ LOGO = ('<svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><li
 
 
 # ---------------------------------------------------------------- helpers
+BG_SIZES = "(max-width: 900px) 720px, 100vw"
+
+
 def img_src(name, small=False):
     return f"/assets/img/{name}{'-sm' if small else ''}.webp"
 
@@ -67,7 +81,9 @@ def img_tag(name, alt, cls="", small=False, eager=False, sizes=None):
     w, h = (720, 480) if small else (1600, 1067)
     load = 'fetchpriority="high"' if eager else 'loading="lazy"'
     c = f' class="{cls}"' if cls else ""
-    return f'<img{c} src="{img_src(name, small)}" width="{w}" height="{h}" alt="{esc(alt)}" {load} decoding="async">'
+    # both variants are 3:2, so the browser can pick the 720px file on phones
+    srcset = "" if small else f' srcset="{img_src(name, True)} 720w, {img_src(name)} 1600w" sizes="{sizes or "100vw"}"'
+    return f'<img{c} src="{img_src(name, small)}"{srcset} width="{w}" height="{h}" alt="{esc(alt)}" {load} decoding="async">'
 
 
 def fmt_date(iso):
@@ -173,8 +189,10 @@ def footer():
 
 
 def page(*, path, title, description, body, current="", schema=None, og_image="runners-at-sunrise",
-         og_type="website", extra_head="", scripts=("site",), body_class="", robots="index,follow", published=None, modified=None):
+         og_type="website", extra_head="", scripts=("site",), body_class="", robots="index,follow", published=None, modified=None, og_alt=""):
     canonical = ORIGIN + path
+    if robots.startswith("index"):
+        robots += ",max-image-preview:large,max-snippet:-1,max-video-preview:-1"
     graph = [ORG, WEBSITE] + (schema or [])
     js = "".join(f'<script src="/assets/js/{s}.js?v={VERSION}" defer></script>' for s in scripts)
     art = ""
@@ -184,6 +202,7 @@ def page(*, path, title, description, body, current="", schema=None, og_image="r
     return f"""<!doctype html>
 <html lang="en">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
@@ -198,16 +217,23 @@ def page(*, path, title, description, body, current="", schema=None, og_image="r
 <meta property="og:site_name" content="{SITE['name']}">
 <meta property="og:image" content="{ORIGIN}{img_src(og_image)}">
 <meta property="og:image:width" content="1600"><meta property="og:image:height" content="1067">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="{esc(og_alt or title)}">
 {art}
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(description)}">
+<meta name="twitter:image" content="{ORIGIN}{img_src(og_image)}">
 <meta name="theme-color" content="#0b1015">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+<link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="{ORIGIN}/feed.xml">
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={VERSION}">
 {extra_head}
 {ld({"@context": "https://schema.org", "@graph": graph})}
@@ -235,7 +261,7 @@ def load_posts():
         meta = json.loads(m.group(1))
         meta["slug"] = f.stem
         meta["body_raw"] = m.group(2).strip()
-        meta.setdefault("updated", meta["published"] if meta["published"] >= "2026-01-01" else TODAY)
+        meta.setdefault("updated", meta["published"] if meta["published"] >= "2026-01-01" else REWRITE_DATE)
         if meta["image"] not in IMAGES:
             raise SystemExit(f"{f.name}: unknown image {meta['image']}")
         meta["img"] = IMAGES[meta["image"]]
@@ -248,6 +274,8 @@ def load_posts():
 
 
 TOOL_BY_SLUG = {t["slug"]: t for t in TOOLS}
+TOOLS_UPDATED = "2026-10-19"
+PAGES_UPDATED = "2026-10-17"
 
 
 def tool_cta(slug):
@@ -264,7 +292,9 @@ def render_body(p):
         uid = m.group(1)
         if uid not in IMAGES:
             raise SystemExit(f"{p['slug']}: unknown figure image {uid}")
-        return f'src="{img_src(IMAGES[uid])}" width="1600" height="1067" loading="lazy" decoding="async"'
+        n = IMAGES[uid]
+        return (f'src="{img_src(n)}" srcset="{img_src(n, True)} 720w, {img_src(n)} 1600w" '
+                f'sizes="(max-width: 800px) 100vw, 760px" width="1600" height="1067" loading="lazy" decoding="async"')
     body = re.sub(r'src="unsplash:([0-9a-f-]+)"', fig, body)
     body = re.sub(r'<div data-tool-cta="([a-z-]+)"></div>', lambda m: tool_cta(m.group(1)), body)
     toc = []
@@ -338,7 +368,7 @@ def post_page(p, posts):
     out = f"""
 <article class="post">
   <header class="post-hero">
-    <div class="post-hero-bg" aria-hidden="true">{img_tag(p['img'], '', eager=True)}</div>
+    <div class="post-hero-bg" aria-hidden="true">{img_tag(p['img'], '', eager=True, sizes=BG_SIZES)}</div>
     <div class="blobs" aria-hidden="true"><span></span><span></span></div>
     <div class="wrap post-hero-in">
       {crumbs_html(crumbs)}
@@ -361,7 +391,7 @@ def post_page(p, posts):
       <div class="toc-tool">{tool_html}</div>
     </aside>
     <div class="post-main">
-      <figure class="post-cover">{img_tag(p['img'], p['image_alt'])}</figure>
+      <figure class="post-cover">{img_tag(p['img'], p['image_alt'], sizes='(max-width: 1080px) 100vw, 860px')}</figure>
       <div class="prose">
 {body}
       </div>
@@ -381,7 +411,7 @@ def post_page(p, posts):
 {newsletter()}"""
     return page(path=url, title=p["seo_title"], description=p["description"], body=out,
                 current=f"/category/{p['category']}/", schema=schema, og_image=p["img"], og_type="article",
-                published=p["published"], modified=p["updated"], body_class="is-post")
+                published=p["published"], modified=p["updated"], body_class="is-post", og_alt=p["image_alt"])
 
 
 # ---------------------------------------------------------------- sections
@@ -443,7 +473,7 @@ def home(posts):
     latest_html = "".join(card(p) for p in latest)
     body = f"""
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true">{img_tag('runners-at-sunrise', '', eager=True)}</div>
+  <div class="hero-bg" aria-hidden="true">{img_tag('runners-at-sunrise', '', eager=True, sizes=BG_SIZES)}</div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
   <div class="grain" aria-hidden="true"></div>
   <div class="wrap hero-in">
@@ -532,7 +562,7 @@ def listing(path, title, h1, lede, items, crumbs, description, image="runners-at
     grid = "".join(card(p).replace('<article class="card', f'<article data-cat="{p["category"]}" class="card', 1) for p in items)
     body = f"""
 <section class="page-hero">
-  <div class="page-hero-bg" aria-hidden="true">{img_tag(image, '', eager=True)}</div>
+  <div class="page-hero-bg" aria-hidden="true">{img_tag(image, '', eager=True, sizes=BG_SIZES)}</div>
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap page-hero-in">{crumbs_html(crumbs)}<h1>{h1}</h1><p>{lede}</p></div>
 </section>
@@ -550,7 +580,7 @@ def tools_hub():
     crumbs = [("Home", "/"), ("Free Tools", "/tools/")]
     body = f"""
 <section class="page-hero">
-  <div class="page-hero-bg" aria-hidden="true">{img_tag('battle-ropes-hiit', '', eager=True)}</div>
+  <div class="page-hero-bg" aria-hidden="true">{img_tag('battle-ropes-hiit', '', eager=True, sizes=BG_SIZES)}</div>
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap page-hero-in">{crumbs_html(crumbs)}<h1>Free fitness calculators &amp; tools</h1>
   <p>Work out your BMI, calories, protein and water needs, plan race paces, find the right shoe type for flat feet, and time your intervals.</p></div>
@@ -575,7 +605,7 @@ def tool_page(t, posts):
     others = "".join(tool_card(o, i) for i, o in enumerate([o for o in TOOLS if o is not t][:3]))
     body = f"""
 <section class="page-hero page-hero-tool">
-  <div class="page-hero-bg" aria-hidden="true">{img_tag(t['image'], '', eager=True)}</div>
+  <div class="page-hero-bg" aria-hidden="true">{img_tag(t['image'], '', eager=True, sizes=BG_SIZES)}</div>
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap page-hero-in">{crumbs_html(crumbs)}<span class="tool-ico tool-ico-lg">{icon(t['icon'])}</span><h1>{t['name']}</h1><p>{esc(t['description'])}</p></div>
 </section>
@@ -601,7 +631,7 @@ def simple_page(path, title, h1, lede, content, description, image="runners-at-s
     crumbs = [("Home", "/"), (h1, path)]
     body = f"""
 <section class="page-hero page-hero-sm">
-  <div class="page-hero-bg" aria-hidden="true">{img_tag(image, '', eager=True)}</div>
+  <div class="page-hero-bg" aria-hidden="true">{img_tag(image, '', eager=True, sizes=BG_SIZES)}</div>
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap page-hero-in">{crumbs_html(crumbs)}<h1>{h1}</h1><p>{lede}</p></div>
 </section>
@@ -639,17 +669,17 @@ def legal_pages():
 <p>If we add affiliate links in the future, for example to retailers such as Amazon, we may earn a small commission when you buy through them at no extra cost to you. Any such links will be clearly disclosed on the page, and they will never change which products we recommend.</p>
 <p>Questions? Email {mail}.</p>""",
            "Finds For Fitness affiliate disclosure: how we choose the products we mention and how any future affiliate links would be disclosed.")
-    yield ("/privacy-policy/", "Privacy Policy | Finds For Fitness", "Privacy Policy", f"Last updated {fmt_date(TODAY)}.",
+    yield ("/privacy-policy/", "Privacy Policy | Finds For Fitness", "Privacy Policy", f"Last updated {fmt_date(PAGES_UPDATED)}.",
            f"""<p>This policy explains what information findsforfitness.com (&ldquo;we&rdquo;) collects and how we use it.</p>
 <h2>Information you give us</h2><p>If you use our contact form or newsletter sign-up, we receive your name (if given), email address and message. We use it only to reply to you or send the newsletter you asked for, and you can unsubscribe at any time.</p>
 <h2>Calculators and tools</h2><p>Our tools run in your browser. The numbers you enter are not sent to us. The water tracker saves your glasses count in your browser's local storage on your device only.</p>
-<h2>Cookies and analytics</h2><p>We do not use advertising cookies. Our hosting provider may keep standard server logs (IP address, browser, pages requested) for security and performance. Fonts are loaded from Google Fonts, which may receive your IP address.</p>
+<h2>Cookies and analytics</h2><p>We do not use advertising cookies. Our hosting provider may keep standard server logs (IP address, browser, pages requested) for security and performance. We use Google Analytics to understand how visitors use the site; it sets cookies and collects usage data such as pages viewed, device type and approximate location. You can opt out with Google's browser add-on or by blocking cookies.</p>
 <h2>Sharing</h2><p>We don't sell or rent personal information. We share it only when required by law.</p>
 <h2>Your rights</h2><p>You can ask us to access, correct or delete the information we hold about you by emailing {mail}.</p>
 <h2>Children</h2><p>This site is not directed to children under 13 and we don't knowingly collect their information.</p>
 <h2>Changes</h2><p>We may update this policy and will change the date above when we do.</p>""",
            "Read the Finds For Fitness privacy policy: what we collect through our contact form and newsletter, how our in-browser tools work, and your rights.")
-    yield ("/terms-of-service/", "Terms of Service | Finds For Fitness", "Terms of Service", f"Last updated {fmt_date(TODAY)}.",
+    yield ("/terms-of-service/", "Terms of Service | Finds For Fitness", "Terms of Service", f"Last updated {fmt_date(PAGES_UPDATED)}.",
            f"""<p>By using findsforfitness.com you agree to these terms.</p>
 <h2>Use of content</h2><p>Articles, images and tools on this site are for personal, non-commercial use. You may link to and quote short excerpts with attribution, but you may not republish whole articles without permission.</p>
 <h2>No professional advice</h2><p>Content is educational and is not medical advice. See our <a href="/disclaimers/">disclaimer</a>. You use the information at your own risk.</p>
@@ -734,7 +764,8 @@ $redirects = [
     '#^/terms(-of-use|-and-conditions)?/?$#' => '/terms-of-service/',
     '#^/category/health_news/?$#'        => '/blog/',
     '#^/category/uncategorized/?$#'      => '/blog/',
-    '#^/(page/\d+|feed|comments/feed|author/[^/]+)/?$#' => '/blog/',
+    '#^/(feed|comments/feed)/?$#'       => '/feed.xml',
+    '#^/(page/\d+|author/[^/]+)/?$#'    => '/blog/',
     '#^/category/([a-z_-]+)/page/\d+/?$#' => '/category/$1/',
     '#^/(wp-admin|wp-includes|wp-json|wp-content|wp-login\.php|xmlrpc\.php)(/|$)#' => '/',
 ];
@@ -782,6 +813,19 @@ header('Location: ' . $back . '?sent=1' . ($type === 'newsletter' ? '#nl-h' : ''
 """
 
 
+def rss(posts):
+    items = "".join(f"""<item><title>{esc(p['title'])}</title><link>{ORIGIN}/{p['slug']}/</link><guid>{ORIGIN}/{p['slug']}/</guid>
+<pubDate>{date.fromisoformat(p['published']).strftime('%a, %d %b %Y 08:00:00 +0000')}</pubDate><category>{esc(CATEGORIES[p['category']]['name'])}</category>
+<description>{esc(p['excerpt'])}</description></item>
+""" for p in posts[:20])
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>{SITE['name']}</title><link>{ORIGIN}/</link><description>{esc(SITE['description'])}</description><language>en-us</language>
+<atom:link href="{ORIGIN}/feed.xml" rel="self" type="application/rss+xml"/>
+{items}</channel></rss>
+"""
+
+
 def favicon_svg():
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">'
             '<stop offset="0" stop-color="#c6f432"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs>'
@@ -796,42 +840,48 @@ def main():
             continue
         shutil.rmtree(child) if child.is_dir() else child.unlink()
     posts = load_posts()
-    urls = [("/", TODAY, "1.0")]
+    newest = max(p["updated"] for p in posts)
+    urls = [("/", newest, "1.0", "runners-at-sunrise")]
 
     write("home.html", home(posts))
     for p in posts:
         write(f"{p['slug']}/index.html", post_page(p, posts))
-        urls.append((f"/{p['slug']}/", p["updated"], "0.8"))
+        urls.append((f"/{p['slug']}/", p["updated"], "0.8", p["img"]))
     write("blog/index.html", listing("/blog/", "Fitness, Weight Loss & Skin Care Blog | Finds For Fitness",
                                      "All articles", "Workouts, weight loss, skin care, gear guides and everyday health tips.",
                                      posts, [("Home", "/"), ("Blog", "/blog/")],
                                      "Browse every Finds For Fitness article: beginner workouts, weight loss nutrition, skin care routines, flat-feet gear guides and health tips.",
                                      filters=True, current="/blog/"))
-    urls.append(("/blog/", TODAY, "0.7"))
+    urls.append(("/blog/", newest, "0.7", None))
     for k, v in CATEGORIES.items():
         items = [p for p in posts if p["category"] == k]
         write(f"category/{k}/index.html", listing(f"/category/{k}/", f"{v['title']} | Finds For Fitness", v["title"], v["blurb"],
                                                   items, [("Home", "/"), (v["name"], f"/category/{k}/")],
                                                   f"{v['blurb']} Browse {len(items)} {v['name'].lower()} guides from Finds For Fitness.",
                                                   image=v["image"], current=f"/category/{k}/"))
-        urls.append((f"/category/{k}/", TODAY, "0.6"))
+        urls.append((f"/category/{k}/", max(p["updated"] for p in items), "0.6", v["image"]))
     write("tools/index.html", tools_hub())
-    urls.append(("/tools/", TODAY, "0.8"))
+    urls.append(("/tools/", TOOLS_UPDATED, "0.8", "battle-ropes-hiit"))
     for t in TOOLS:
         write(f"tools/{t['slug']}/index.html", tool_page(t, posts))
-        urls.append((f"/tools/{t['slug']}/", TODAY, "0.8"))
+        urls.append((f"/tools/{t['slug']}/", TOOLS_UPDATED, "0.8", t["image"]))
     for path, title, h1, lede, content, desc in legal_pages():
         write(f"{path.strip('/')}/index.html", simple_page(path, title, h1, lede, content, desc))
-        urls.append((path, TODAY, "0.3"))
+        urls.append((path, PAGES_UPDATED, "0.3", None))
     write("contact/index.html", contact_page())
-    urls.append(("/contact/", TODAY, "0.4"))
+    urls.append(("/contact/", PAGES_UPDATED, "0.4", None))
     write("sitemap/index.html", html_sitemap(posts))
-    urls.append(("/sitemap/", TODAY, "0.2"))
+    urls.append(("/sitemap/", newest, "0.2", None))
     write("404.html", not_found())
 
-    sm = "".join(f"<url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n" for u, d, pr in urls)
-    write("sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
-    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
+    sm = ""
+    for u, d, pr, im in urls:
+        img = f"<image:image><image:loc>{ORIGIN}{img_src(im)}</image:loc></image:image>" if im else ""
+        sm += f"<url><loc>{ORIGIN}{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority>{img}</url>\n"
+    write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+          f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{sm}</urlset>\n')
+    write("feed.xml", rss(posts))
+    write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     write("index.php", INDEX_PHP)
     write("contact.php", CONTACT_PHP)
     write("favicon.svg", favicon_svg())
@@ -840,7 +890,8 @@ def main():
         "background_color": "#0b1015", "theme_color": "#0b1015",
         "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"},
                   {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, indent=1))
-    for f in ("favicon-32.png", "apple-touch-icon.png", "icon-192.png", "icon-512.png"):
+    for f in ("favicon.ico", "favicon-32.png", "favicon-48.png", "favicon-96.png", "apple-touch-icon.png",
+              "icon-192.png", "icon-512.png", "googlecccfbf2f7e9e5ae4.html"):
         src = ROOT / "static" / f
         if src.exists():
             shutil.copy(src, OUT / f)

@@ -21,7 +21,8 @@ $redirects = [
     '#^/terms(-of-use|-and-conditions)?/?$#' => '/terms-of-service/',
     '#^/category/health_news/?$#'        => '/blog/',
     '#^/category/uncategorized/?$#'      => '/blog/',
-    '#^/(page/\d+|feed|comments/feed|author/[^/]+)/?$#' => '/blog/',
+    '#^/(feed|comments/feed)/?$#'       => '/feed.xml',
+    '#^/(page/\d+|author/[^/]+)/?$#'    => '/blog/',
     '#^/category/([a-z_-]+)/page/\d+/?$#' => '/category/$1/',
     '#^/(wp-admin|wp-includes|wp-json|wp-content|wp-login\.php|xmlrpc\.php)(/|$)#' => '/',
 ];

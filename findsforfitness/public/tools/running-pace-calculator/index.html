@@ -1,11 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3VM6161ZL8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3VM6161ZL8');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Running Pace Calculator: Pace, Time &amp; Splits</title>
 <meta name="description" content="Free running pace calculator. Enter a distance and time to get your pace per mile and per kilometer, speed and full race splits for 5K, 10K, half and marathon.">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://findsforfitness.com/tools/running-pace-calculator/">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
@@ -15,17 +24,24 @@
 <meta property="og:site_name" content="Finds For Fitness">
 <meta property="og:image" content="https://findsforfitness.com/assets/img/runners-at-sunrise.webp">
 <meta property="og:image:width" content="1600"><meta property="og:image:height" content="1067">
+<meta property="og:image:type" content="image/webp">
+<meta property="og:image:alt" content="Running Pace Calculator: Pace, Time &amp; Splits">
 
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Running Pace Calculator: Pace, Time &amp; Splits">
+<meta name="twitter:description" content="Free running pace calculator. Enter a distance and time to get your pace per mile and per kilometer, speed and full race splits for 5K, 10K, half and marathon.">
+<meta name="twitter:image" content="https://findsforfitness.com/assets/img/runners-at-sunrise.webp">
 <meta name="theme-color" content="#0b1015">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96.png" sizes="96x96" type="image/png">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=20261017">
+<link rel="alternate" type="application/rss+xml" title="Finds For Fitness" href="https://findsforfitness.com/feed.xml">
+<link rel="preload" href="/assets/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=20261019">
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://findsforfitness.com/#org", "name": "Finds For Fitness", "url": "https://findsforfitness.com/", "email": "info@findsforfitness.com", "logo": {"@type": "ImageObject", "url": "https://findsforfitness.com/icon-512.png", "width": 512, "height": 512}}, {"@type": "WebSite", "@id": "https://findsforfitness.com/#website", "name": "Finds For Fitness", "url": "https://findsforfitness.com/", "publisher": {"@id": "https://findsforfitness.com/#org"}, "inLanguage": "en-US"}, {"@type": "WebApplication", "name": "Running Pace Calculator", "url": "https://findsforfitness.com/tools/running-pace-calculator/", "applicationCategory": "HealthApplication", "operatingSystem": "Any", "description": "Free running pace calculator. Enter a distance and time to get your pace per mile and per kilometer, speed and full race splits for 5K, 10K, half and marathon.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://findsforfitness.com/"}, {"@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://findsforfitness.com/tools/"}, {"@type": "ListItem", "position": 3, "name": "Running Pace Calculator", "item": "https://findsforfitness.com/tools/running-pace-calculator/"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good 5K pace for a beginner?", "acceptedAnswer": {"@type": "Answer", "text": "Anything you can finish comfortably. Many new runners finish a 5K between 30 and 40 minutes, roughly 10 to 13 minutes per mile."}}, {"@type": "Question", "name": "How do I convert pace per km to pace per mile?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your per-kilometer pace by 1.609. For example, 6:00 per km is about 9:39 per mile."}}, {"@type": "Question", "name": "Are race predictions accurate?", "acceptedAnswer": {"@type": "Answer", "text": "The table assumes you hold the same pace, which gets harder over longer distances. Expect to run slightly slower per mile as the distance grows."}}]}]}</script>
 </head>
@@ -54,7 +70,7 @@
 <main id="main">
 
 <section class="page-hero page-hero-tool">
-  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/runners-at-sunrise.webp" width="1600" height="1067" alt="" fetchpriority="high" decoding="async"></div>
+  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/runners-at-sunrise.webp" srcset="/assets/img/runners-at-sunrise-sm.webp 720w, /assets/img/runners-at-sunrise.webp 1600w" sizes="(max-width: 900px) 720px, 100vw" width="1600" height="1067" alt="" fetchpriority="high" decoding="async"></div>
   <div class="blobs" aria-hidden="true"><span></span><span></span></div>
   <div class="wrap page-hero-in"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Free Tools</a><span class="sep">/</span><span aria-current="page">Running Pace Calculator</span></nav><span class="tool-ico tool-ico-lg"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2M9.5 2.5h5M19 6l1.5-1.5"/></svg></span><h1>Running Pace Calculator</h1><p>Free running pace calculator. Enter a distance and time to get your pace per mile and per kilometer, speed and full race splits for 5K, 10K, half and marathon.</p></div>
 </section>
@@ -132,6 +148,6 @@
     <button class="to-top" type="button" data-to-top aria-label="Back to top"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=20261017" defer></script><script src="/assets/js/tools.js?v=20261017" defer></script>
+<script src="/assets/js/site.js?v=20261019" defer></script><script src="/assets/js/tools.js?v=20261019" defer></script>
 </body>
 </html>

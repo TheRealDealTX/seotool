@@ -65,7 +65,7 @@ def resolve(ref):
 
 
 titles, descs = {}, {}
-files = [p for p in OUT.rglob("*.html")]
+files = [p for p in OUT.rglob("*.html") if not p.name.startswith("google")]  # skip GSC verification file
 for f in files:
     rel = "/" + str(f.relative_to(OUT))
     pg = Page()
