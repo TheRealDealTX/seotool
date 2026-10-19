@@ -73,7 +73,7 @@ titles, descs = {}, {}
 pages = []
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
-        if f.endswith(".html"):
+        if f.endswith(".html") and not f.startswith("google"):
             pages.append(os.path.join(dp, f))
 
 for page in sorted(pages):
@@ -87,8 +87,10 @@ for page in sorted(pages):
     if not p.title or not p.desc:
         errors.append(f"{rel}: missing title/description")
     else:
-        if len(p.desc) > 165:
+        if len(p.desc) > 160:
             errors.append(f"{rel}: description {len(p.desc)} chars")
+        if len(p.title) > 60 and rel != "404.html":
+            errors.append(f"{rel}: title {len(p.title)} chars")
         titles.setdefault(p.title, []).append(rel)
         descs.setdefault(p.desc, []).append(rel)
     for blob in p.ld:
@@ -117,6 +119,24 @@ for t, ps in titles.items():
 for d, ps in descs.items():
     if len(ps) > 1:
         errors.append(f"duplicate description: {ps}")
+
+# Every page carries the GA4 tag, canonical, and an existing OG image.
+for page in pages:
+    text = open(page, encoding="utf-8").read()
+    rel = os.path.relpath(page, ROOT)
+    if "googletagmanager.com/gtag/js?id=G-SHTGLL7B9B" not in text or "gtag('config', 'G-SHTGLL7B9B')" not in text:
+        errors.append(f"{rel}: missing Google tag")
+    if text.index("googletagmanager") > text.index("</head>"):
+        errors.append(f"{rel}: Google tag not in <head>")
+    if rel != "404.html" and 'rel="canonical"' not in text:
+        errors.append(f"{rel}: missing canonical")
+    for og in re.findall(r'property="og:image" content="https://zibetti\.co(/[^"]+)"', text):
+        if not os.path.exists(resolve(og)):
+            errors.append(f"{rel}: og:image {og} missing")
+for f in ("favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest",
+          "web-app-manifest-192x192.png", "web-app-manifest-512x512.png", "robots.txt", "googlecccfbf2f7e9e5ae4.html"):
+    if not os.path.exists(os.path.join(ROOT, f)):
+        errors.append(f"missing root file {f}")
 
 # Copy carried over from the old owners must not reappear.
 for page in pages:

@@ -8,7 +8,9 @@ Hand-written assets (css, js, images) live in site/assets and are not touched.
 import html
 import json
 import os
+import re
 import shutil
+import subprocess
 from datetime import date
 
 from posts import POSTS
@@ -19,6 +21,7 @@ ORIGIN = "https://zibetti.co"
 BRAND = "Zibetti Photo + Film"
 EMAIL = "info@zibetti.co"
 TODAY = date.today().isoformat()
+LASTMOD = {}  # per-URL lastmod overrides (blog posts use their own dates)
 
 NAV = [
     ("Portfolio", "/portfolio/"),
@@ -80,8 +83,8 @@ ORG = {
     "alternateName": ["Zibetti & Co", "Zibetti Photo and Film"],
     "url": ORIGIN + "/",
     "email": EMAIL,
-    "image": ORIGIN + "/assets/img/mountain-elopement-couple.webp",
-    "logo": ORIGIN + "/favicon.svg",
+    "image": ORIGIN + "/assets/og/mountain-elopement-couple.jpg",
+    "logo": ORIGIN + "/web-app-manifest-512x512.png",
     "description": "Destination wedding and elopement photographers and filmmakers based in Provo, Utah.",
     "address": {"@type": "PostalAddress", "addressLocality": "Provo", "addressRegion": "UT", "addressCountry": "US"},
     "areaServed": ["Utah", "United States", "Worldwide"],
@@ -156,36 +159,71 @@ def footer():
 <button class="to-top" type="button" aria-label="Back to top">{ICONS['up']}</button>"""
 
 
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SHTGLL7B9B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SHTGLL7B9B');
+</script>"""
+
+OG_IMAGES = set()  # filled as pages are built; build_og_images() renders a 1200x630 JPG for each
+
+
 def page(path, title, desc, body, *, schema=None, og_image="mountain-elopement-couple", on_hero=True,
-         og_type="website", tools_js=False, extra_head="", noindex=False):
+         og_type="website", tools_js=False, extra_head="", noindex=False, og_alt=None):
     canonical = ORIGIN + path
     graph = [ORG, WEBSITE] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
-    robots = '<meta name="robots" content="noindex,follow">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large">'
+    robots = '<meta name="robots" content="noindex,follow">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">'
     scripts = '<script src="/assets/js/site.js" defer></script>'
     if tools_js:
         scripts += '\n<script src="/assets/js/tools.js" defer></script>'
+    OG_IMAGES.add(og_image)
+    og_url = f"{ORIGIN}/assets/og/{og_image}.jpg"
+    # Preload the above-the-fold hero image (the first fetchpriority=high <img>) for a faster LCP.
+    preload = ""
+    m = re.search(r'<img src="(/assets/img/[^"]+)" srcset="([^"]+)" sizes="([^"]+)"[^>]*fetchpriority="high"', body)
+    if m:
+        preload = f'<link rel="preload" as="image" href="{m.group(1)}" imagesrcset="{m.group(2)}" imagesizes="{m.group(3)}" fetchpriority="high">\n'
     return f"""<!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-US" class="no-js">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 {robots}
 <link rel="canonical" href="{canonical}">
+<meta name="author" content="{BRAND}">
+<meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="{BRAND}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{ORIGIN}/assets/img/{og_image}.webp">
+<meta property="og:image" content="{og_url}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{esc(og_alt or title)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{og_url}">
 <meta name="theme-color" content="#15120f">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
+{preload}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
@@ -395,7 +433,7 @@ def build_home():
 {cta()}
 """
     schema = [{"@type": "WebPage", "@id": ORIGIN + "/#webpage", "url": ORIGIN + "/", "name": "Zibetti Photo + Film", "isPartOf": {"@id": ORIGIN + "/#website"}, "about": {"@id": ORIGIN + "/#business"}}]
-    add("/", page("/", "Zibetti Photo + Film | Utah Destination Wedding & Elopement Photographers",
+    add("/", page("/", "Zibetti Photo + Film | Utah Wedding & Elopement Photographer",
                   "Zibetti Photo + Film are destination wedding and elopement photographers and videographers based in Provo, Utah. Photo + film for adventurous couples, anywhere.",
                   body, schema=schema))
 
@@ -451,7 +489,7 @@ def build_about():
 {cta("Let’s do this thing, together.")}
 """
     schema = [crumbs_schema([("Home", "/"), ("About us", "/about-us/")]), {"@type": "AboutPage", "url": ORIGIN + "/about-us/", "name": "About Zibetti Photo + Film"}]
-    add("/about-us/", page("/about-us/", "About Us | Zibetti Photo + Film, Provo Utah Wedding Photographers",
+    add("/about-us/", page("/about-us/", "About Zibetti Photo + Film | Provo, Utah Photographers",
                            "Meet Zibetti Photo + Film — a Provo, Utah photo and film studio for destination weddings and elopements. Our story, our approach and where we work.",
                            body, schema=schema, og_image="photographer-on-cliff"))
 
@@ -534,7 +572,7 @@ def build_pricing():
     schema = [crumbs_schema([("Home", "/"), ("Pricing", "/pricing/")]),
               {"@type": "Service", "name": "Wedding and elopement photography and film", "provider": {"@id": ORIGIN + "/#business"}, "areaServed": "Worldwide",
                "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Collections", "itemListElement": offers}}]
-    add("/pricing/", page("/pricing/", "Pricing | Wedding & Elopement Photography Collections | Zibetti",
+    add("/pricing/", page("/pricing/", "Wedding & Elopement Photography Pricing | Zibetti",
                           "Starting prices for Utah elopements, Utah weddings, destination weddings, engagement sessions and wedding films — plus an interactive pricing estimator.",
                           body, schema=schema, og_image="gold-wedding-rings", tools_js=True))
 
@@ -589,7 +627,7 @@ def build_video():
     schema = [crumbs_schema([("Home", "/"), ("Film", "/video/")]),
               {"@type": "Service", "name": "Wedding videography", "serviceType": "Wedding film", "provider": {"@id": ORIGIN + "/#business"},
                "offers": {"@type": "Offer", "price": "3200", "priceCurrency": "USD", "description": "Video packages starting at"}}]
-    add("/video/", page("/video/", "Wedding Videography | Cinematic Wedding & Elopement Films | Zibetti",
+    add("/video/", page("/video/", "Wedding Videography & Elopement Films | Zibetti",
                         "Cinematic wedding and elopement films from Zibetti Photo + Film in Utah. Highlight films, full ceremony edits and clean audio — add film to any photo package.",
                         body, schema=schema, og_image="film-clapperboard"))
 
@@ -624,7 +662,7 @@ def build_faq():
     import re
     faq_schema = {"@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}} for q, a in FAQS]}
-    add("/faq/", page("/faq/", "FAQ | Wedding Photography & Film Questions | Zibetti Photo + Film",
+    add("/faq/", page("/faq/", "Wedding Photography & Film FAQ | Zibetti Photo + Film",
                       "Answers about image counts, delivery times, travel, photo + video, second shooters, booking and permits from Zibetti Photo + Film.",
                       body, schema=[crumbs_schema([("Home", "/"), ("FAQ", "/faq/")]), faq_schema], og_image="ceremony-chairs-lawn"))
 
@@ -720,7 +758,7 @@ def build_portfolio():
 </div>
 {cta()}
 """
-    add("/portfolio/", page("/portfolio/", "Portfolio | Wedding & Elopement Photography | Zibetti Photo + Film",
+    add("/portfolio/", page("/portfolio/", "Wedding & Elopement Photography Portfolio | Zibetti",
                             "Browse wedding, elopement and destination photography by Zibetti Photo + Film — mountains, deserts, coastlines and the details in between.",
                             body, schema=[crumbs_schema([("Home", "/"), ("Portfolio", "/portfolio/")]), {"@type": "CollectionPage", "url": ORIGIN + "/portfolio/", "name": "Portfolio"}],
                             og_image="black-sand-beach-elopement"))
@@ -734,7 +772,7 @@ def build_tools():
 <div class="tool-grid" style="margin-top:22px"><a class="tool-tile reveal" href="/pricing/#estimator"><span class="ico">{ICONS['calc']}</span><h3>Pricing Estimator</h3><p>Build a photo, film or photo + film collection and see a ballpark instantly.</p><span class="link-arrow" style="align-self:flex-start">Open the estimator →</span></a></div>
 </div></section>
 {cta()}"""
-    add("/tools/", page("/tools/", "Free Wedding Planning Tools | Golden Hour, Timeline & Location Finder",
+    add("/tools/", page("/tools/", "Free Wedding Planning Tools | Zibetti Photo + Film",
                         "Free wedding and elopement planning tools: golden hour calculator, wedding day timeline builder, Utah elopement location finder and pricing estimator.",
                         body, schema=[crumbs_schema([("Home", "/"), ("Tools", "/tools/")])], og_image="mountains-above-clouds"))
 
@@ -770,7 +808,7 @@ def build_tools():
   <p>Ready to turn the numbers into a plan? Try the <a href="/tools/wedding-day-timeline-builder/">wedding day timeline builder</a>, or read <a href="/blog/golden-hour-wedding-photos/">how to plan your wedding around golden hour</a>.</p>
 </div></section>
 {cta()}"""
-    add("/tools/golden-hour-calculator/", page("/tools/golden-hour-calculator/", "Golden Hour Calculator for Wedding & Elopement Photos | Zibetti",
+    add("/tools/golden-hour-calculator/", page("/tools/golden-hour-calculator/", "Golden Hour Calculator for Wedding Photos | Zibetti",
                                                 "Free golden hour calculator: find golden hour, blue hour, sunrise and sunset times for any date in Utah or anywhere in the world, built for wedding planning.",
                                                 body, schema=[crumbs_schema(trail), {"@type": "WebApplication", "name": "Golden Hour Calculator", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": ORIGIN + "/tools/golden-hour-calculator/"}],
                                                 og_image="sunset-sky", tools_js=True))
@@ -815,7 +853,7 @@ def build_tools():
   <p>Want the full playbook? Read our <a href="/blog/wedding-day-timeline-for-photos/">wedding day timeline guide</a>.</p>
 </div></section>
 """ + cta()
-    add("/tools/wedding-day-timeline-builder/", page("/tools/wedding-day-timeline-builder/", "Wedding Day Timeline Builder (Free) | Plan Around Sunset | Zibetti",
+    add("/tools/wedding-day-timeline-builder/", page("/tools/wedding-day-timeline-builder/", "Free Wedding Day Timeline Builder | Zibetti",
                                                       "Free wedding day timeline builder: enter your date, location and ceremony time to get a photo-friendly wedding or elopement schedule built around sunset.",
                                                       body, schema=[crumbs_schema(trail), {"@type": "WebApplication", "name": "Wedding Day Timeline Builder", "applicationCategory": "LifestyleApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": ORIGIN + "/tools/wedding-day-timeline-builder/"}],
                                                       og_image="reception-table-setting", tools_js=True))
@@ -851,8 +889,8 @@ def build_tools():
   <p>For a deeper dive, read <a href="/blog/best-places-to-elope-in-utah/">the best places to elope in Utah</a> and our step-by-step guide on <a href="/blog/how-to-elope-in-utah/">how to elope in Utah</a>.</p>
 </div></section>
 {cta()}"""
-    add("/tools/utah-elopement-location-finder/", page("/tools/utah-elopement-location-finder/", "Utah Elopement Location Finder | 20 Spots by Season & Scenery",
-                                                        "Find the perfect Utah elopement location. Filter 20 spots — Arches, Zion, Bryce, the Uintas, the Salt Flats and more — by season, scenery, hiking and drive time.",
+    add("/tools/utah-elopement-location-finder/", page("/tools/utah-elopement-location-finder/", "Utah Elopement Location Finder: 20 Spots by Season",
+                                                        "Find your Utah elopement location. Filter 20 spots, from Arches, Zion and Bryce to the Uintas and Salt Flats, by season, scenery, hiking and drive time.",
                                                         body, schema=[crumbs_schema(trail), {"@type": "WebApplication", "name": "Utah Elopement Location Finder", "applicationCategory": "TravelApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "url": ORIGIN + "/tools/utah-elopement-location-finder/"}],
                                                         og_image="red-rock-desert-road", tools_js=True))
 
@@ -866,7 +904,7 @@ def build_blog():
     schema = [crumbs_schema([("Home", "/"), ("Journal", "/blog/")]),
               {"@type": "Blog", "url": ORIGIN + "/blog/", "name": "The Zibetti Journal",
                "blogPost": [{"@type": "BlogPosting", "headline": p["title"], "url": f"{ORIGIN}/blog/{p['slug']}/", "datePublished": p["date"]} for p in POSTS]}]
-    add("/blog/", page("/blog/", "Journal | Elopement & Destination Wedding Planning Guides | Zibetti",
+    add("/blog/", page("/blog/", "Wedding & Elopement Planning Journal | Zibetti",
                        "Elopement and destination wedding planning guides from Zibetti Photo + Film: Utah locations, timelines, golden hour, travel tips and what to wear.",
                        body, schema=schema, og_image="mountain-valley-pines"))
 
@@ -909,9 +947,14 @@ def build_blog():
             "author": {"@type": "Organization", "name": BRAND, "url": ORIGIN + "/"}, "publisher": {"@id": ORIGIN + "/#business"}}]
         if p.get("faq"):
             schema.append({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]})
+        LASTMOD[url] = p.get("updated", p["date"])
         add(url, page(url, p["seo_title"], p["description"], body, schema=schema, og_image=p["image"], og_type="article",
                       tools_js=bool(p.get("tools_js")),
-                      extra_head=f'<meta property="article:published_time" content="{p["date"]}">\n'))
+                      og_alt=p["image_alt"],
+                      extra_head=(f'<meta property="article:published_time" content="{p["date"]}T09:00:00-06:00">\n'
+                                  f'<meta property="article:modified_time" content="{p.get("updated", p["date"])}T09:00:00-06:00">\n'
+                                  f'<meta property="article:section" content="{p["category"]}">\n'
+                                  f'<meta property="article:author" content="{ORIGIN}/about-us/">\n')))
 
 
 def build_legal():
@@ -947,7 +990,9 @@ def build_legal():
 
 def write_out():
     # wipe generated html (keep assets and hand-written root files)
-    keep = {"assets", "favicon.svg", "robots.txt", "index.php", "contact.php", ".htaccess"}
+    keep = {"assets", "favicon.svg", "favicon.ico", "favicon-96x96.png", "apple-touch-icon.png", "web-app-manifest-192x192.png",
+            "web-app-manifest-512x512.png", "site.webmanifest", "robots.txt", "index.php", "contact.php",
+            "googlecccfbf2f7e9e5ae4.html", ".htaccess"}
     for name in os.listdir(OUT):
         if name in keep:
             continue
@@ -968,13 +1013,33 @@ def write_out():
             f.write(text)
     urls = [p for p in PAGES if not p.endswith(".html")]
     prio = lambda u: "1.0" if u == "/" else ("0.9" if u.count("/") == 2 else "0.7")
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
     for u in urls:
-        sm.append(f"  <url><loc>{ORIGIN}{u}</loc><lastmod>{TODAY}</lastmod><priority>{prio(u)}</priority></url>")
+        imgs = []
+        for name in re.findall(r'<img src="/assets/img/([a-z0-9-]+?)(?:-sm)?\.webp"', PAGES[u].split("<footer")[0]):
+            if name not in imgs:
+                imgs.append(name)
+        sm.append(f"  <url>\n    <loc>{ORIGIN}{u}</loc>\n    <lastmod>{LASTMOD.get(u, TODAY)}</lastmod>\n    <priority>{prio(u)}</priority>")
+        for name in imgs[:12]:
+            sm.append(f"    <image:image><image:loc>{ORIGIN}/assets/img/{name}.webp</image:loc></image:image>")
+        sm.append("  </url>")
     sm.append("</urlset>")
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
         f.write("\n".join(sm) + "\n")
     print(f"built {len(PAGES)} pages -> {OUT}")
+
+
+def build_og_images():
+    """1200x630 JPG share images (Facebook, LinkedIn, iMessage and X all accept JPG; WebP support is patchy)."""
+    out = os.path.join(OUT, "assets", "og")
+    os.makedirs(out, exist_ok=True)
+    for name in sorted(OG_IMAGES):
+        dst = os.path.join(out, name + ".jpg")
+        if os.path.exists(dst):
+            continue
+        subprocess.run(["convert", os.path.join(OUT, "assets", "img", name + ".webp"), "-resize", "1200x630^",
+                        "-gravity", "center", "-extent", "1200x630", "-strip", "-quality", "82", dst], check=True)
 
 
 if __name__ == "__main__":
@@ -989,3 +1054,4 @@ if __name__ == "__main__":
     build_blog()
     build_legal()
     write_out()
+    build_og_images()
