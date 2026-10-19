@@ -262,7 +262,7 @@ def build_home():
 {B.final_cta("Ready for Missouri City roofers who tell it straight?")}
 """
     faq = B.faq_schema(HOME_FAQS)
-    html = B.page("/", "Missouri City Roofers | Roof Repair & Replacement | (512) 297-7580",
+    html = B.page("/", "Missouri City Roofers | Roof Repair & Roofing | (512) 297-7580",
                   "Missouri City Roofers: local roof repair, roof replacement and storm damage help in Missouri City, TX. Free photo-documented inspections. Call (512) 297-7580.",
-                  main, active="/", schema=[faq], scripts=("weather", "tools"))
+                  main, active="/", schema=[faq], scripts=("weather", "tools"), preload="hero-home")
     B.add("/", html, priority="1.0")

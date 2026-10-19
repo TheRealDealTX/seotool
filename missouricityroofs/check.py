@@ -20,7 +20,7 @@ def text_of(html):
 pages = {}
 for base, _, files in os.walk(DIST):
     for fn in files:
-        if fn.endswith(".html"):
+        if fn.endswith(".html") and not fn.startswith("google"):
             full = os.path.join(base, fn)
             rel = os.path.relpath(full, DIST)
             url = "/" if rel == "home.html" else "/" + rel[:-len("index.html")] if rel.endswith("index.html") else "/" + rel
@@ -28,6 +28,8 @@ for base, _, files in os.walk(DIST):
 
 titles, descs = {}, {}
 for url, h in pages.items():
+    if h.count("G-K3YRCSMJKS") != 2 or h.find("googletagmanager.com/gtag/js") > h.find("<meta charset"):
+        errors.append(f"{url}: Google tag missing or not first in <head>")
     for bad in ("katy", "rooferkaty", "cinco ranch", "fulshear", "gmail", "hutto"):
         if bad in h.lower():
             errors.append(f"{url}: leftover text '{bad}'")
@@ -68,6 +70,10 @@ for url, h in pages.items():
         if not os.path.isfile(os.path.join(DIST, bg.lstrip("/"))):
             errors.append(f"{url}: missing bg {bg}")
 
+for u, h in pages.items():
+    m = re.search(r'<link rel="canonical" href="([^"]+)"', h)
+    if not m or (u not in ("/404.html",) and m.group(1) != "https://missouricityroofs.com" + u):
+        errors.append(f"{u}: canonical wrong")
 for t, us in titles.items():
     if len(us) > 1:
         errors.append(f"duplicate title {t}: {us}")
@@ -99,14 +105,20 @@ if len(dates) < 10 or gaps != {3}:
     errors.append("blog dates are not >=10 posts spaced 3 days apart")
 
 # required files
-for f in ["index.php", "home.html", "send.php", "includes/config.php", "404.html", "sitemap.xml", "robots.txt", ".htaccess",
+if open(os.path.join(DIST, "googlecccfbf2f7e9e5ae4.html")).read().strip() != "google-site-verification: googlecccfbf2f7e9e5ae4.html":
+    errors.append("Search Console verification file missing or wrong")
+for f in ["index.php", "favicon-96x96.png", "apple-touch-icon.png", "site.webmanifest", "home.html", "send.php", "includes/config.php", "404.html", "sitemap.xml", "robots.txt", ".htaccess",
           "favicon.ico", "favicon.svg", "assets/img/og-image.jpg"]:
     if not os.path.isfile(os.path.join(DIST, f)):
         errors.append(f"missing {f}")
 if os.path.exists(os.path.join(DIST, "index.html")):
     errors.append("dist/index.html must not exist (index.php serves the homepage)")
 sm = open(os.path.join(DIST, "sitemap.xml")).read()
-print("sitemap urls:", sm.count("<loc>"), "| html pages:", len(pages))
+print("sitemap urls:", sm.count("<url>"), "| images:", sm.count("<image:image>"), "| html pages:", len(pages))
+indexable = {u for u, h in pages.items() if "noindex" not in h}
+in_sm = {l.replace("https://missouricityroofs.com", "") for l in re.findall(r"<url><loc>([^<]+)", sm)}
+if indexable != in_sm:
+    errors.append(f"sitemap mismatch: missing {sorted(indexable - in_sm)} extra {sorted(in_sm - indexable)}")
 
 z = zipfile.ZipFile(os.path.join(ROOT, "missouricityroofs-hostinger-upload.zip"))
 names = z.namelist()

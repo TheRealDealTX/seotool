@@ -101,7 +101,7 @@ def build_areas():
 <div class="intro-img" data-reveal>{img('home-trees', 'Home shaded by mature trees in an established Missouri City neighborhood')}</div></div>
 <div class="sec-head" data-reveal><h2>Nearby communities</h2><p>Each community has its own housing stock, HOA rules and storm exposure. Here's what we see in each.</p></div>
 <div class="post-grid">{cards}</div></div></section>""" + B.form_section("areas-form") + B.final_cta())
-    B.add(url, B.page(url, "Roofing Service Areas Near Missouri City, TX | Missouri City Roofers",
+    B.add(url, B.page(url, "Service Areas Near Missouri City, TX | Missouri City Roofers",
                       "Missouri City Roofers serves Missouri City, Sienna, Sugar Land, Stafford, Pearland, Fresno and Richmond. Free roof inspections in 77459 and 77489.",
                       main, schema=[B.crumbs_schema(crumbs)]), priority="0.7")
 
@@ -210,7 +210,7 @@ def build_inspection():
               {"@type": "Service", "name": "Free Roof Inspection in Missouri City, TX", "serviceType": "Roof inspection", "url": SITE + url,
                "provider": {"@id": SITE + "/#business"}, "areaServed": {"@type": "City", "name": "Missouri City, TX"},
                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}]
-    B.add(url, B.page(url, "Free Roof Inspection in Missouri City, TX | Missouri City Roofers",
+    B.add(url, B.page(url, "Free Roof Inspection in Missouri City, TX | No Obligation",
                       "Book a free roof inspection in Missouri City, TX. Local roofers check for hail, wind and leak damage and give you a photo report. No cost, no obligation.",
                       main, schema=schema, og_image="roofer-work.webp", popup=False), priority="0.9")
 
@@ -492,12 +492,12 @@ def build_simple():
     main = f"""<section class="center-hero"><div class="wrap" data-reveal><span class="kicker">Request received</span><h1>Thank you!</h1>
 <p class="lead">Your request is on its way. A Missouri City roofer will call you shortly to schedule your free roof inspection. Need us sooner?</p>
 <div class="actions"><a class="btn" href="tel:{TEL}">{icon('phone')} Call {PHONE}</a><a class="btn btn-line" href="/blog/">Read our roofing guides</a></div></div></section>"""
-    B.add("/thank-you/", B.page("/thank-you/", "Thank You | Missouri City Roofers", "Thanks for contacting Missouri City Roofers. We'll be in touch shortly.", main, noindex=True, popup=False), sitemap=False)
+    B.add("/thank-you/", B.page("/thank-you/", "Thank You | Missouri City Roofers", "Thanks for contacting Missouri City Roofers. A local roofer will call you shortly to schedule your free roof inspection in Missouri City, TX.", main, noindex=True, popup=False), sitemap=False)
 
     main = f"""<section class="center-hero"><div class="wrap"><span class="kicker">Error 404</span><h1>This page blew off the roof</h1>
 <p class="lead">The page you're looking for doesn't exist or has moved. Let's get you back on solid ground.</p>
 <div class="actions"><a class="btn" href="/">Back to home</a><a class="btn btn-line" href="/free-roof-inspection/">Free roof inspection</a></div></div></section>"""
-    B.write("/404.html", B.page("/404.html", "Page Not Found | Missouri City Roofers", "This page could not be found.", main, noindex=True, popup=False))
+    B.write("/404.html", B.page("/404.html", "Page Not Found | Missouri City Roofers", "This page could not be found. Head back to Missouri City Roofers for free roof inspections, roof repair and roof replacement in Missouri City, TX.", main, noindex=True, popup=False))
 
     legal = {
         "/privacy-policy/": ("Privacy Policy", f"""<p>Last updated: {B.fmt_date(B.TODAY.isoformat())}</p>
@@ -522,7 +522,7 @@ def build_simple():
         crumbs = [("Home", "/"), (name, url)]
         main = (f'<section class="center-hero slim"><div class="wrap">{B.crumbs_html(crumbs)}<h1>{name}</h1></div></section>'
                 f'<section class="section"><div class="wrap"><article class="prose narrow">{body}</article></div></section>')
-        B.add(url, B.page(url, f"{name} | Missouri City Roofers", f"{name} for Missouri City Roofers (missouricityroofs.com), a roofing company serving Missouri City, TX.", main,
+        B.add(url, B.page(url, f"{name} | Missouri City Roofers", f"{name} for Missouri City Roofers (missouricityroofs.com), a local roofing company offering free roof inspections, repairs and replacements in Missouri City, TX.", main,
                           schema=[B.crumbs_schema(crumbs)]), priority="0.2")
 
 

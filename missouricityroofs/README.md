@@ -38,6 +38,19 @@ A static HTML/PHP site for **Missouri City Roofers** (phone (512) 297-7580, emai
 - None of them repeat rooferkaty.com's photos.
 - Swap in real project photos when you have them, keeping the same filenames in `src/assets/img/`.
 
+## SEO setup
+- Google tag `G-K3YRCSMJKS` is the first thing in `<head>` on every page (`GTAG` in `build.py`).
+- Search Console verification file: `src/googlecccfbf2f7e9e5ae4.html`, served at the site root.
+- `sitemap.xml` lists all 37 indexable pages, with lastmod dates and each page's main image. `robots.txt` points to it.
+- Each page has:
+  - a unique title (62 characters or fewer) and meta description (120–160 characters)
+  - a canonical URL
+  - Open Graph and Twitter tags, including the image size
+  - one H1
+  - JSON-LD
+- Favicon set: `favicon.svg`, `favicon.ico`, a 96px PNG, an Apple touch icon and the PWA manifest icons.
+- Images are WebP at 1400px or smaller. The build also writes 800px copies for phones, served through `srcset`. The homepage hero image is preloaded.
+- The `*.hostingersite.com` preview domain serves Hostinger's own robots.txt, which blocks Google there. The real domain serves this site's own robots.txt.
+
 ## Not included
-- No Google Analytics tag. Send a GA4 ID if you want one.
 - No street address, license numbers, reviews or years in business were invented.

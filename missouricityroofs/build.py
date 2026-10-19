@@ -34,7 +34,18 @@ TEL = "+15122977580"
 EMAIL = "info@missouricityroofs.com"
 TODAY = dt.date(2026, 10, 19)
 GEO = (29.6186, -95.5377)
-ASSET_V = "1"
+ASSET_V = "2"
+GTAG_ID = "G-K3YRCSMJKS"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GTAG_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GTAG_ID}');
+</script>
+"""
 
 e = html.escape
 
@@ -46,11 +57,12 @@ def icon(name, cls="i"):
 IMG_SIZES = {}
 
 
-def img(key, alt, cls="", eager=False):
-    w, h = IMG_SIZES.get(key, (1600, 1067))
+def img(key, alt, cls="", eager=False, sizes="(max-width: 980px) 100vw, 50vw"):
+    w, h = IMG_SIZES.get(key, (1400, 933))
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     c = f' class="{cls}"' if cls else ""
-    return f'<img src="/assets/img/{key}.webp" alt="{e(alt)}" width="{w}" height="{h}" {load}{c}>'
+    srcset = f' srcset="/assets/img/{key}-800.webp 800w, /assets/img/{key}.webp {w}w" sizes="{sizes}"' if w > 800 else ""
+    return f'<img src="/assets/img/{key}.webp"{srcset} alt="{e(alt)}" width="{w}" height="{h}" {load}{c}>'
 
 
 # --------------------------------------------------------------------------- content
@@ -329,18 +341,23 @@ def aside_phone():
 
 # --------------------------------------------------------------------------- page shell
 def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg", og_type="website",
-         scripts=(), noindex=False, extra_head="", popup=True):
+         scripts=(), noindex=False, extra_head="", popup=True, preload=None):
     canonical = SITE + path
     graph = [business_schema(),
              {"@type": "WebSite", "@id": SITE + "/#website", "url": SITE + "/", "name": NAME,
               "publisher": {"@id": SITE + "/#business"}}] + list(schema)
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     robots = "noindex, follow" if noindex else "index, follow, max-image-preview:large"
+    og_key = og_image.rsplit(".", 1)[0]
+    ow, oh = (1200, 630) if og_image == "og-image.jpg" else IMG_SIZES.get(og_key, (1600, 1067))
+    if not noindex and og_image != "og-image.jpg":
+        PAGE_IMAGES[path] = og_image
+    pre = f'<link rel="preload" as="image" href="/assets/img/{preload}.webp" fetchpriority="high">\n' if preload else ""
     js = "".join(f'<script src="/assets/js/{s}.js?v={ASSET_V}" defer></script>' for s in ("site",) + tuple(scripts))
     return f"""<!doctype html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8">
+{GTAG}<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -352,6 +369,9 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{SITE}/assets/img/{og_image}">
+<meta property="og:image:width" content="{ow}">
+<meta property="og:image:height" content="{oh}">
+<meta property="og:image:alt" content="{e(title)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{e(title)}">
@@ -368,7 +388,7 @@ def page(path, title, desc, main, active=None, schema=(), og_image="og-image.jpg
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
+{pre}<link rel="stylesheet" href="/assets/css/site.css?v={ASSET_V}">
 {extra_head}<script type="application/ld+json">{ld}</script>
 </head>
 <body>
@@ -404,6 +424,7 @@ def write(path, htmltext):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     # Relative asset paths so pages also render from an unzipped folder (404 is served at any depth, so it stays absolute).
     pre = "/" if rel == "404.html" else "../" * rel.count("/")
+    htmltext = re.sub(r'(srcset="|, )/assets/', lambda m: f"{m.group(1)}{pre}assets/", htmltext)
     htmltext = re.sub(r'(src|href)="/(assets/|favicon|apple-touch-icon|site\.webmanifest|web-app-manifest)',
                       lambda m: f'{m.group(1)}="{pre}{m.group(2)}', htmltext)
     with open(out, "w", encoding="utf-8") as f:
@@ -411,6 +432,7 @@ def write(path, htmltext):
 
 
 SITEMAP = []
+PAGE_IMAGES = {}
 
 
 def add(path, htmltext, lastmod=None, priority="0.7", sitemap=True):
@@ -437,13 +459,20 @@ def main():
             out = os.popen(f'identify -format "%w %h" "{os.path.join(imgdir, fn)}"').read().split()
             if len(out) == 2:
                 IMG_SIZES[fn[:-5]] = (int(out[0]), int(out[1]))
+                if int(out[0]) > 800:  # mobile-size variant for srcset
+                    src = os.path.join(imgdir, fn)
+                    os.system(f'convert "{src}" -resize 800x -quality 70 "{src[:-5]}-800.webp"')
 
     build_home()
     build_main()
 
-    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{m}</lastmod><priority>{pr}</priority></url>\n" for p, m, pr in SITEMAP)
+    def sm_img(p):
+        key = PAGE_IMAGES.get(p, "hero-home.webp" if p == "/" else None)
+        return f"<image:image><image:loc>{SITE}/assets/img/{key}</image:loc></image:image>" if key else ""
+    urls = "".join(f"<url><loc>{SITE}{p}</loc><lastmod>{m}</lastmod><priority>{pr}</priority>{sm_img(p)}</url>\n" for p, m, pr in SITEMAP)
     open(os.path.join(DIST, "sitemap.xml"), "w").write(
-        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        f'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n{{urls}}</urlset>\n'.replace("{urls}", urls))
     open(os.path.join(DIST, "robots.txt"), "w").write(
         f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /includes/\nDisallow: /send.php\nDisallow: /thank-you/\n\nSitemap: {SITE}/sitemap.xml\n")
 
