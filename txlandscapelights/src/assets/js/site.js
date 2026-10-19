@@ -24,10 +24,14 @@
     burger && burger.setAttribute('aria-expanded', open);
     drawer && drawer.setAttribute('aria-hidden', !open);
     body.style.overflow = open ? 'hidden' : '';
+    if (open) setTimeout(() => $('.drawer__x') && $('.drawer__x').focus({ preventScroll: true }), 50);
   };
   burger && burger.addEventListener('click', () => setNav(!body.classList.contains('nav-open')));
   $('.scrim') && $('.scrim').addEventListener('click', () => setNav(false));
   drawer && drawer.addEventListener('click', e => { if (e.target.closest('a')) setNav(false); });
+  $('.drawer__x') && $('.drawer__x').addEventListener('click', () => { setNav(false); burger && burger.focus(); });
+  d.addEventListener('keydown', e => { if (e.key === 'Escape' && body.classList.contains('nav-open')) { setNav(false); burger && burger.focus(); } });
+  addEventListener('resize', () => { if (innerWidth > 1100 && body.classList.contains('nav-open')) setNav(false); });
 
   /* ---------- reveal + counters ---------- */
   if ('IntersectionObserver' in window) {

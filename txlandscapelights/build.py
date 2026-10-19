@@ -90,7 +90,7 @@ def header(cur):
     drawer = []
     for label, href, sub in nav_items():
         if sub:
-            drawer.append(f'<details><summary>{label}</summary><div><a href="{href}">Overview</a>{re.sub(r"</?(ul|li)[^>]*>", "", sub)}</div></details>')
+            drawer.append(f'<details><summary>{label}</summary><div><a href="{href}">{label} overview</a>{re.sub(r"</?(ul|li)[^>]*>", "", sub)}</div></details>')
         else:
             drawer.append(f'<a href="{href}">{label}</a>')
     return f"""<a class="skip" href="#main">Skip to content</a>
@@ -102,7 +102,13 @@ def header(cur):
 <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button></div>
 </div></header>
 <div class="scrim"></div>
-<nav class="drawer" id="drawer" aria-hidden="true" aria-label="Mobile">{"".join(drawer)}<a class="btn" href="{TEL}">{icon("phone")} Call {PHONE}</a></nav>"""
+<nav class="drawer" id="drawer" aria-hidden="true" aria-label="Mobile">
+<div class="drawer__top"><a class="logo" href="/" aria-label="{NAME} home">{svgart.logo_svg()}<span><b>Texas Landscape</b><small>Lights · Design · Install</small></span></a>
+<button class="drawer__x" type="button" aria-label="Close menu">{icon("x")}</button></div>
+<div class="drawer__nav">{"".join(drawer)}</div>
+<div class="drawer__cta"><a class="btn btn--block" href="/quote/">{icon("sparkles")} Get my free quote</a><a class="btn btn--ghost btn--block" href="{TEL}">{icon("phone")} Call {PHONE}</a>
+<a class="drawer__mail" href="mailto:{EMAIL}">{icon("mail")} {EMAIL}</a></div>
+</nav>"""
 
 
 def footer():
