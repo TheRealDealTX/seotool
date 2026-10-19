@@ -8,6 +8,7 @@ Standard library only.
 import html
 import json
 import os
+import re
 import shutil
 
 from content.site import SITE, NAV, FOOTER_COLS, TODAY
@@ -20,6 +21,17 @@ OUT = os.path.join(ROOT, "public")
 ORIGIN = SITE["origin"]
 FONTS = ("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800"
          "&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap")
+
+GA_ID = "G-PTQD14707B"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
 
 ICONS = {
     "chev": '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
@@ -45,7 +57,29 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-def img(name, alt, w=1200, h=800, cls="", lazy=True, extra=""):
+_DIMS = {}
+
+
+def dims(name):
+    """Real pixel size of /assets/img/<name>.webp (read from the WebP header)."""
+    if name not in _DIMS:
+        with open(os.path.join(OUT, "assets", "img", name + ".webp"), "rb") as f:
+            head = f.read(30)
+        if head[12:16] == b"VP8 ":
+            w = int.from_bytes(head[26:28], "little") & 0x3FFF
+            h = int.from_bytes(head[28:30], "little") & 0x3FFF
+        elif head[12:16] == b"VP8L":
+            b = int.from_bytes(head[21:25], "little")
+            w, h = (b & 0x3FFF) + 1, ((b >> 14) & 0x3FFF) + 1
+        else:  # VP8X
+            w = int.from_bytes(head[24:27], "little") + 1
+            h = int.from_bytes(head[27:30], "little") + 1
+        _DIMS[name] = (w, h)
+    return _DIMS[name]
+
+
+def img(name, alt, w=None, h=None, cls="", lazy=True, extra=""):
+    w, h = dims(name)
     c = f' class="{cls}"' if cls else ""
     l = ' loading="lazy" decoding="async"' if lazy else ' fetchpriority="high"'
     return f'<img src="/assets/img/{name}.webp" alt="{esc(alt)}" width="{w}" height="{h}"{c}{l}{extra}>'
@@ -108,7 +142,8 @@ def footer():
 def org_schema():
     return {
         "@type": "Organization", "@id": ORIGIN + "/#org", "name": SITE["name"], "url": ORIGIN + "/",
-        "email": SITE["email"], "logo": ORIGIN + "/favicon.svg",
+        "email": SITE["email"],
+        "logo": {"@type": "ImageObject", "url": ORIGIN + "/web-app-manifest-512x512.png", "width": 512, "height": 512},
         "contactPoint": {"@type": "ContactPoint", "email": SITE["email"], "contactType": "customer support"},
     }
 
@@ -131,8 +166,10 @@ def crumbs_html(trail):
 
 
 def layout(path, title, desc, body, schema=None, scripts=(), og_image="hero", og_type="website",
-           extra_head="", body_class="", robots="index,follow", canonical=None):
+           extra_head="", body_class="", robots="index,follow", canonical=None, hero_img=None):
     url = ORIGIN + (canonical or path)
+    ogw, ogh = dims(og_image)
+    hero_img = hero_img or og_image
     graph = [org_schema(), website_schema()] + (schema or [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     ld = ld.replace("</", "<\\/")
@@ -142,20 +179,34 @@ def layout(path, title, desc, body, schema=None, scripts=(), og_image="hero", og
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{GTAG}
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<meta name="robots" content="{robots}">
+<meta name="robots" content="{robots}, max-image-preview:large">
 <link rel="canonical" href="{url}">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{esc(SITE["name"])}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="{ORIGIN}/assets/img/{og_image}.webp">
+<meta property="og:image:width" content="{ogw}">
+<meta property="og:image:height" content="{ogh}">
+<meta property="og:image:alt" content="{esc(title)}">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+<meta name="twitter:image" content="{ORIGIN}/assets/img/{og_image}.webp">
 <meta name="theme-color" content="#0e0b16">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="VIP Gifts">
 <link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="Shop VIP Gifts Journal" href="{ORIGIN}/blog/feed.xml">
+<link rel="preload" as="image" href="/assets/img/{hero_img}.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}">
@@ -436,7 +487,7 @@ def build_home():
 </section>'''
     schema = [faq_schema(faqs), {"@type": "WebPage", "@id": ORIGIN + "/#webpage", "url": ORIGIN + "/",
                                   "name": P.HOME_TITLE, "isPartOf": {"@id": ORIGIN + "/#website"}}]
-    return layout("/", P.HOME_TITLE, P.HOME_DESC, body, schema=schema, canonical="/")
+    return layout("/", P.HOME_TITLE, P.HOME_DESC, body, schema=schema, canonical="/", og_image="hero")
 
 
 def build_guides_index():
@@ -449,7 +500,7 @@ def build_guides_index():
 <section class="section cream"><div class="wrap"><div class="sec-head reveal"><span class="eyebrow">Not sure where to start?</span><h2>Let the tools do the thinking</h2></div><div class="tool-grid">{tool_cards()}</div></div></section>'''
     schema = [crumbs_schema(trail), {"@type": "ItemList", "itemListElement": [
         {"@type": "ListItem", "position": i + 1, "url": f'{ORIGIN}/{g["slug"]}/', "name": g["menu"]} for i, g in enumerate(GUIDES)]}]
-    return layout("/gift-guides/", "Luxury Gift Guides – VIP Gift Ideas by Person & Occasion | Shop VIP Gifts",
+    return layout("/gift-guides/", "Luxury Gift Guides by Person & Occasion",
                   "Curated luxury gift guides for him, her, clients, couples and more. VIP gift ideas with price ranges, presentation tips and expert advice.",
                   body, schema=schema, og_image="gifts-stack")
 
@@ -495,7 +546,7 @@ def build_blog_index():
     body += f'''<section class="section"><div class="wrap"><div class="post-grid">{"".join(post_card(p) for p in POSTS)}</div></div></section>'''
     schema = [crumbs_schema(trail), {"@type": "Blog", "name": "Shop VIP Gifts Journal", "url": ORIGIN + "/blog/",
                                      "blogPost": [{"@type": "BlogPosting", "headline": p["h1"], "url": f'{ORIGIN}/blog/{p["slug"]}/'} for p in POSTS]}]
-    return layout("/blog/", "Gifting Blog – VIP Gift Ideas, Etiquette & Inspiration | Shop VIP Gifts",
+    return layout("/blog/", "Gifting Blog: VIP Gift Ideas & Etiquette",
                   "Expert articles on VIP gift ideas, corporate gift etiquette, luxury wrapping, gift baskets, card messages and holiday gift planning.",
                   body, schema=schema, og_image="gift-pink")
 
@@ -532,7 +583,9 @@ def build_post(p):
         "author": {"@type": "Organization", "name": SITE["name"], "url": ORIGIN + "/"}, "publisher": {"@id": ORIGIN + "/#org"}}]
     if p.get("faqs"):
         schema.append(faq_schema(p["faqs"]))
-    head = f'<meta property="article:published_time" content="{p["date"]}">\n'
+    head = (f'<meta property="article:published_time" content="{p["date"]}">\n'
+            f'<meta property="article:modified_time" content="{p["date"]}">\n'
+            f'<meta property="article:section" content="{esc(p["cat"])}">\n')
     return layout(path, p["title"], p["desc"], body, schema=schema, og_image=p["img"], og_type="article", extra_head=head)
 
 
@@ -554,7 +607,7 @@ def build_tools_index():
     body = page_hero(trail, "Free gifting tools", "Free interactive gift tools",
                      "Quizzes, planners and generators that make choosing, budgeting and writing for gifts quick and enjoyable.", "gifts-stack")
     body += f'<section class="section"><div class="wrap"><div class="tool-grid">{tool_cards()}</div></div></section>'
-    return layout("/tools/", "Free Gift Tools – Gift Finder, Budget Planner & More | Shop VIP Gifts",
+    return layout("/tools/", "Free Gift Tools: Finder, Planner & More | Shop VIP Gifts",
                   "Free interactive gifting tools: a gift finder quiz, holiday gift budget planner, gift message generator and anniversary gifts by year lookup.",
                   body, schema=[crumbs_schema(trail)], og_image="gifts-stack")
 
@@ -574,7 +627,7 @@ def build_sitemap_page(urls):
               ("Legal", [("Privacy Policy", "/privacy-policy/"), ("Terms of Use", "/terms/")])]
     inner = '<section class="section"><div class="narrow prose">' + "".join(
         f'<h2>{t}</h2><ul>' + "".join(f'<li><a href="{u}">{esc(n)}</a></li>' for n, u in links) + "</ul>" for t, links in groups) + "</div></section>"
-    return simple_page("/sitemap/", "Sitemap", "Sitemap | Shop VIP Gifts", "Every page on Shop VIP Gifts: gift guides, free tools, blog articles and site information.",
+    return simple_page("/sitemap/", "Sitemap", "Sitemap | Shop VIP Gifts", "Browse every page on Shop VIP Gifts: luxury gift guides, free interactive gifting tools, blog articles on gift ideas and etiquette, and site information.",
                        "Sitemap", "Sitemap", "", "gift-pattern", inner)
 
 
@@ -583,6 +636,21 @@ def build_404():
 <p style="color:rgba(255,255,255,.75);max-width:520px;margin:0 auto 30px">This gift seems to have been unwrapped already. Let's find you something even better.</p>
 <div class="hero-actions" style="justify-content:center"><a class="btn btn-gold" href="/">Back to home</a><a class="btn btn-ghost" href="/gift-guides/">Browse gift guides</a></div></div></section>'''
     return layout("/404.html", "Page Not Found | Shop VIP Gifts", "The page you were looking for could not be found.", body, robots="noindex,follow")
+
+
+def build_feed():
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    items = ""
+    for p in POSTS:
+        d = format_datetime(datetime.fromisoformat(p["date"]).replace(tzinfo=timezone.utc))
+        url = f'{ORIGIN}/blog/{p["slug"]}/'
+        items += (f"<item><title>{esc(p['h1'])}</title><link>{url}</link><guid>{url}</guid>"
+                  f"<pubDate>{d}</pubDate><description>{esc(p['excerpt'])}</description></item>\n")
+    return (f'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>\n'
+            f'<title>Shop VIP Gifts Journal</title><link>{ORIGIN}/blog/</link>'
+            f'<atom:link href="{ORIGIN}/blog/feed.xml" rel="self" type="application/rss+xml"/>'
+            f'<description>VIP gift ideas, gifting etiquette and inspiration.</description><language>en-us</language>\n{items}</channel></rss>\n')
 
 
 # ---------------------------------------------------------------- write
@@ -621,19 +689,30 @@ def main():
         write("home.html" if path == "/" else path.strip("/") + "/index.html", content)
     write("404.html", build_404())
 
-    # sitemap.xml
+    # sitemap.xml (lastmod: post date for posts, build date otherwise; image entries for each page's hero)
+    post_dates = {f'/blog/{p["slug"]}/': p["date"] for p in POSTS}
     prio = lambda u: "1.0" if u == "/" else "0.9" if u.count("/") == 2 and not u.startswith("/blog/") else "0.7"
-    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for path in pages:
-        sm.append(f"  <url><loc>{ORIGIN}{path}</loc><lastmod>{TODAY}</lastmod><priority>{prio(path)}</priority></url>")
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">']
+    for path, content in pages.items():
+        images = []
+        for src in re.findall(r'<img src="(/assets/img/[\w-]+\.webp)"', content):
+            if src not in images:
+                images.append(src)
+        imgs = "".join(f"<image:image><image:loc>{ORIGIN}{i}</image:loc></image:image>" for i in images[:10])
+        sm.append(f"  <url><loc>{ORIGIN}{path}</loc><lastmod>{post_dates.get(path, TODAY)}</lastmod>"
+                  f"<priority>{prio(path)}</priority>{imgs}</url>")
     sm.append("</urlset>")
     write("sitemap.xml", "\n".join(sm) + "\n")
     write("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /home.html\nDisallow: /contact.php\n\nSitemap: {ORIGIN}/sitemap.xml\n")
-    write("site.webmanifest", json.dumps({"name": SITE["name"], "short_name": "VIP Gifts", "icons": [{"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"}],
-                                          "theme_color": "#0e0b16", "background_color": "#0e0b16", "display": "standalone", "start_url": "/"}, indent=2))
-    write("favicon.svg", LOGO_SVG.replace('aria-hidden="true"', 'xmlns="http://www.w3.org/2000/svg"').replace(
-        '<rect x="6"', '<rect width="40" height="40" rx="9" fill="#0e0b16"/><rect x="6"', 1))
-    for f in ("index.php", "contact.php"):
+    write("site.webmanifest", json.dumps({
+        "name": SITE["name"], "short_name": "VIP Gifts", "description": P.HOME_DESC,
+        "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable"},
+                  {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}],
+        "theme_color": "#0e0b16", "background_color": "#0e0b16", "display": "standalone", "start_url": "/"}, indent=2))
+    write("blog/feed.xml", build_feed())
+    # PHP, favicons and the Search Console verification file
+    for f in os.listdir(os.path.join(ROOT, "server")):
         shutil.copy(os.path.join(ROOT, "server", f), os.path.join(OUT, f))
     print(f"built {len(pages)} pages + 404 into {OUT}")
 

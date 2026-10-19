@@ -29,3 +29,13 @@ python3 build.py && python3 validate.py
 ```
 Source: `build.py`, `content/` (copy), `server/` (PHP), `public/assets/` (CSS/JS/images). Output: `public/`.
 Images are royalty-free Unsplash photos, resized to WebP.
+
+## SEO setup
+- Google tag `G-PTQD14707B` in the `<head>` of every page (incl. 404) — `GTAG` in `build.py`.
+- Search Console file `googlecccfbf2f7e9e5ae4.html` at the root (kept in `server/`).
+- Favicons: `favicon.ico` (16/32/48), `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`, 192/512 manifest icons.
+- `sitemap.xml` (with image entries and per-post lastmod), `robots.txt`, RSS at `/blog/feed.xml`.
+- Every indexable page: title ≤ 60 chars, description 110–160, canonical, OG/Twitter tags, JSON-LD
+  (Organization, WebSite, BreadcrumbList, FAQPage, BlogPosting, ItemList, WebApplication as relevant).
+- Image `width`/`height` come from the real WebP dimensions; hero image is preloaded.
+- `validate.py` enforces all of the above.

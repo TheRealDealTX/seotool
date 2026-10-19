@@ -2,9 +2,9 @@
 
 from content.site import SITE
 
-HOME_TITLE = "VIP Gifts – Luxury Gift Ideas & Curated Gift Guides | Shop VIP Gifts"
-HOME_DESC = ("Shop VIP Gifts: curated VIP gift ideas and luxury gift guides for him, her, clients and the person who has "
-             "everything — plus a free gift finder, budget planner and card message generator.")
+HOME_TITLE = "VIP Gifts: Luxury Gift Ideas & Guides | Shop VIP Gifts"
+HOME_DESC = ("Curated VIP gift ideas and luxury gift guides for him, her, clients and the person who has everything, "
+             "plus free gift-finder and budgeting tools.")
 
 HOME_FAQS = [
     ("What is a VIP gift?", "A VIP gift is a present that makes someone feel truly valued — personal to them, the best quality you can manage and beautifully presented. Read <a href=\"/blog/vip-gift-ideas-what-makes-a-gift-feel-vip/\">what makes a gift feel VIP</a>."),
@@ -132,7 +132,7 @@ ANNIV_HTML = '''<div class="tool-shell overlap reveal in" data-anniv>
 TOOL_PAGES = [
     dict(
         path="/gift-finder/", name="Gift Finder",
-        title="Gift Finder Quiz – Find the Perfect VIP Gift in 60 Seconds | Shop VIP Gifts",
+        title="Gift Finder Quiz: Find the Perfect Gift | Shop VIP Gifts",
         desc="Free gift finder quiz: answer four questions about who it's for, the occasion, budget and interests to get six matched VIP gift ideas instantly.",
         eyebrow="Free tool · Gift Finder", h1='Gift Finder: the perfect VIP gift in <span class="shimmer">60 seconds</span>',
         lead="Four quick questions. Six ranked gift ideas from our curated guides. No sign-up, no email required.",
@@ -155,7 +155,7 @@ TOOL_PAGES = [
     ),
     dict(
         path="/gift-budget-planner/", name="Gift Budget Planner",
-        title="Gift Budget Planner – Free Holiday Gift Budget Calculator | Shop VIP Gifts",
+        title="Gift Budget Planner & Calculator | Shop VIP Gifts",
         desc="Free holiday gift budget planner and calculator: list everyone you're buying for, auto-split your budget by relationship and track what's left to spend.",
         eyebrow="Free tool · Budget planner", h1="Gift budget planner &amp; calculator",
         lead="List everyone you're buying for, set a total and let the planner split it fairly. Your list saves automatically in your browser.",
@@ -182,7 +182,7 @@ TOOL_PAGES = [
     ),
     dict(
         path="/gift-message-generator/", name="Gift Message Generator",
-        title="Gift Message Generator – What to Write in a Gift Card | Shop VIP Gifts",
+        title="Gift Message Generator | Shop VIP Gifts",
         desc="Free gift message generator: choose the occasion and tone (heartfelt, witty or formal), add a name and get ready-to-write gift card messages instantly.",
         eyebrow="Free tool · Message generator", h1="Gift message generator",
         lead="Pick an occasion and a tone, add their name, and get a polished card message in one tap. Shuffle for more ideas.",
@@ -203,8 +203,8 @@ TOOL_PAGES = [
     ),
     dict(
         path="/anniversary-gifts-by-year/", name="Anniversary Gifts by Year",
-        title="Anniversary Gifts by Year – Traditional & Modern Gift Chart | Shop VIP Gifts",
-        desc="Interactive anniversary gifts by year chart: traditional, modern, gemstone and flower for years 1–60, with VIP gift ideas. Enter your wedding date to find yours.",
+        title="Anniversary Gifts by Year: Interactive Chart",
+        desc="Interactive anniversary gifts by year chart: traditional, modern, gemstone and flower for years 1–60. Enter your wedding date to find yours.",
         eyebrow="Free tool · Anniversaries", h1="Anniversary gifts by year",
         lead="Enter your wedding date or tap a year to see the traditional and modern themes, gemstone, flower and VIP gift ideas.",
         image="anniversary", tool_html=ANNIV_HTML,

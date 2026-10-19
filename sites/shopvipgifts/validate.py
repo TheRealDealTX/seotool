@@ -74,7 +74,7 @@ def url_to_file(u):
 pages = {}
 for dp, _, files in os.walk(ROOT):
     for f in files:
-        if f.endswith(".html"):
+        if f.endswith(".html") and not f.startswith("google"):
             full = os.path.join(dp, f)
             rel = "/" + os.path.relpath(full, ROOT)
             p = Page()
@@ -140,6 +140,35 @@ home = open(os.path.join(ROOT, "home.html"), encoding="utf-8").read().lower()
 for kw in ("vip gift", "vip gifts"):
     if kw not in home:
         errors.append(f"home: keyword {kw!r} missing")
+
+# Site-wide SEO requirements
+import html as _html
+for dp, _, files in os.walk(ROOT):
+    for f in files:
+        if not f.endswith(".html") or f.startswith("google"):
+            continue
+        rel = "/" + os.path.relpath(os.path.join(dp, f), ROOT)
+        t = open(os.path.join(dp, f), encoding="utf-8").read()
+        for needle in ("googletagmanager.com/gtag/js?id=G-PTQD14707B", "gtag('config', 'G-PTQD14707B')",
+                       'rel="canonical"', 'href="/favicon.ico"', 'href="/apple-touch-icon.png"', 'property="og:image"'):
+            if needle not in t:
+                errors.append(f"{rel}: missing {needle}")
+        if t.index("googletagmanager") > t.index("</head>"):
+            errors.append(f"{rel}: gtag not in <head>")
+        if "noindex" in t:
+            continue
+        ti = _html.unescape(re.search(r"<title>(.*?)</title>", t).group(1))
+        d = _html.unescape(re.search(r'name="description" content="(.*?)"', t).group(1))
+        if len(ti) > 60:
+            errors.append(f"{rel}: title {len(ti)} chars")
+        if not 110 <= len(d) <= 160:
+            errors.append(f"{rel}: description {len(d)} chars")
+
+for f in ("favicon.ico", "favicon.svg", "favicon-96x96.png", "apple-touch-icon.png", "web-app-manifest-192x192.png",
+          "web-app-manifest-512x512.png", "site.webmanifest", "robots.txt", "sitemap.xml", "blog/feed.xml",
+          "googlecccfbf2f7e9e5ae4.html", "index.php", "contact.php"):
+    if not os.path.exists(os.path.join(ROOT, f)):
+        errors.append(f"missing root file {f}")
 
 print(f"checked {len(pages)} html files")
 if errors:

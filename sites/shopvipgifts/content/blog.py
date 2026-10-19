@@ -8,7 +8,7 @@ def fig(name, alt):
 POSTS = [
     {
         "slug": "vip-gift-ideas-what-makes-a-gift-feel-vip",
-        "title": "VIP Gift Ideas: What Makes a Gift Feel VIP (+ 25 Ideas) | Shop VIP Gifts",
+        "title": "VIP Gift Ideas: What Makes a Gift Feel VIP (+25)",
         "desc": "What makes a gift feel VIP? The three-part VIP gift formula, plus 25 VIP gift ideas for partners, parents, clients and friends at every budget.",
         "h1": "VIP gift ideas: what makes a gift feel VIP",
         "cat": "Gifting guide",
@@ -86,7 +86,7 @@ POSTS = [
     },
     {
         "slug": "corporate-gift-etiquette",
-        "title": "Corporate Gift Etiquette: The Complete Guide for 2026 | Shop VIP Gifts",
+        "title": "Corporate Gift Etiquette: The Complete 2026 Guide",
         "desc": "Corporate gift etiquette explained: budgets, gift policies, tax limits, branding, timing, international customs and how to write the card.",
         "h1": "Corporate gift etiquette: the complete guide",
         "cat": "Business gifting",
@@ -153,7 +153,7 @@ POSTS = [
     },
     {
         "slug": "luxury-gifts-under-100",
-        "title": "30 Luxury Gifts Under $100 That Feel Expensive | Shop VIP Gifts",
+        "title": "30 Luxury Gifts Under $100 That Feel Expensive",
         "desc": "Luxury gifts under $100 that look and feel high-end: leather goods, gourmet treats, jewelry, home and self-care ideas for him, her and clients.",
         "h1": "30 luxury gifts under $100 that feel expensive",
         "cat": "Gift ideas",
@@ -224,7 +224,7 @@ POSTS = [
     },
     {
         "slug": "how-to-wrap-gifts-like-a-luxury-boutique",
-        "title": "How to Wrap Gifts Like a Luxury Boutique (Step by Step) | Shop VIP Gifts",
+        "title": "How to Wrap Gifts Like a Luxury Boutique",
         "desc": "Learn how to wrap gifts like a luxury boutique: materials, the hidden-seam fold, ribbon techniques, color palettes and finishing touches that feel VIP.",
         "h1": "How to wrap gifts like a luxury boutique",
         "cat": "Presentation",
@@ -281,7 +281,7 @@ POSTS = [
     },
     {
         "slug": "experience-gifts-vs-material-gifts",
-        "title": "Experience Gifts vs Material Gifts: Which Makes People Happier? | Shop VIP Gifts",
+        "title": "Experience Gifts vs Material Gifts: Which Is Better?",
         "desc": "Experience gifts vs material gifts: what research says about happiness, when a physical gift is better, and how to combine both for a VIP gift.",
         "h1": "Experience gifts vs material gifts: which is better?",
         "cat": "Gifting guide",
@@ -332,7 +332,7 @@ POSTS = [
     },
     {
         "slug": "client-appreciation-gift-ideas",
-        "title": "25 Client Appreciation Gift Ideas That Build Loyalty | Shop VIP Gifts",
+        "title": "25 Client Appreciation Gift Ideas That Build Loyalty",
         "desc": "25 client appreciation gift ideas by budget, from gourmet boxes to VIP experiences, plus timing, personalization and note-writing tips for client gifts.",
         "h1": "25 client appreciation gift ideas that build loyalty",
         "cat": "Business gifting",
@@ -398,7 +398,7 @@ POSTS = [
     },
     {
         "slug": "how-to-build-a-luxury-gift-basket",
-        "title": "How to Build a Luxury Gift Basket (Step-by-Step Guide) | Shop VIP Gifts",
+        "title": "How to Build a Luxury Gift Basket: Step by Step",
         "desc": "How to build a luxury gift basket: choosing a theme, a hero item, containers, filler and arrangement, with 8 themed basket ideas and a shopping checklist.",
         "h1": "How to build a luxury gift basket",
         "cat": "DIY gifting",
@@ -451,7 +451,7 @@ POSTS = [
     },
     {
         "slug": "gifts-for-someone-who-has-everything",
-        "title": "Gifts for Someone Who Has Everything: 20 VIP Ideas | Shop VIP Gifts",
+        "title": "Gifts for Someone Who Has Everything: 20 Ideas",
         "desc": "Gift ideas for someone who has everything: experiences, consumable luxuries, personalized keepsakes and time — 20 VIP gifts that still surprise.",
         "h1": "Gifts for someone who has everything: 20 VIP ideas",
         "cat": "Gift ideas",
@@ -509,7 +509,7 @@ POSTS = [
     },
     {
         "slug": "what-to-write-in-a-gift-card",
-        "title": "What to Write in a Gift Card: 60+ Messages for Every Occasion | Shop VIP Gifts",
+        "title": "What to Write in a Gift Card: Messages & Examples",
         "desc": "What to write in a gift card: a simple formula plus 60+ heartfelt, funny and formal gift message examples for birthdays, anniversaries, clients and more.",
         "h1": "What to write in a gift card: messages for every occasion",
         "cat": "Gift messages",
@@ -572,7 +572,7 @@ POSTS = [
     },
     {
         "slug": "holiday-gift-planning-timeline",
-        "title": "Holiday Gift Planning Timeline: A Stress-Free Checklist | Shop VIP Gifts",
+        "title": "Holiday Gift Planning Timeline & Checklist",
         "desc": "A holiday gift planning timeline from October to December: budgeting, list-building, personalization and shipping deadlines for stress-free VIP gifting.",
         "h1": "Holiday gift planning timeline: a stress-free checklist",
         "cat": "Planning",
