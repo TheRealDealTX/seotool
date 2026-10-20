@@ -2,7 +2,7 @@
 return [
     'title'       => 'What to Do If Your Hail Claim Was Denied in Texas: A Step-by-Step Recovery Guide',
     'seo_title'   => 'Hail Claim Denied in Texas? Next Steps for San Antonio Owners',
-    'description' => 'Hail claim denied in Texas? Read the denial letter, gather evidence, request a reinspection, consider appraisal, and know when to call TDI or an attorney.',
+    'description' => 'Hail claim denied in Texas? How to read the denial letter, gather evidence, request a reinspection, and know when to call TDI or an attorney.',
     'kicker'      => 'Hail Claims',
     'image'       => '/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-in-Texas-1.webp',
     'image_alt'   => 'Large hailstones and a tape measure on a shingle roof with a clipboard and work gloves, brick house in the background',
@@ -137,6 +137,18 @@ return [
 
 <h3>Attorney</h3>
 <p>If the dispute is about coverage, or you are considering a lawsuit, talk to a Texas attorney. Weather-related claim lawsuits are subject to Insurance Code Chapter 542A, which requires written notice at least 61 days before filing suit, and many policies contain their own deadline to sue.</p>
+
+<h2>Partial denials and “paid but not enough” claims</h2>
+
+<p>Many hail claims are not denied outright. Instead, the insurer approves a few slopes, the gutters, or a repair instead of a replacement, and denies the rest. Or it pays, but the check will not come close to covering the work. These situations are handled a little differently from a full denial:</p>
+<ul>
+<li><strong>Compare scopes, not just totals.</strong> Put the insurer’s estimate next to your roofer’s estimate and go line by line. Look for missing slopes, wrong measurements, missing components like drip edge or starter, and missing interior repairs.</li>
+<li><strong>Check how depreciation was applied.</strong> Under replacement cost coverage, recoverable depreciation is usually released after the work is done. Under actual cash value or roof payment schedules, it may not be. Our <a href="/claim-calculator/">claim calculator</a> helps you see how the numbers fit together.</li>
+<li><strong>Request a supplement for missed items.</strong> Each item should come with photos, measurements, and a reason. See <a href="/hail-damage-claim-supplements-what-carriers-miss-in-their-scope-xactimate-insights/">hail damage claim supplements</a> for the items most often missed.</li>
+<li><strong>Consider appraisal</strong> if the disagreement is only about price or quantity on damage the insurer already accepted.</li>
+</ul>
+
+<p>Our <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a> page explains how a review of a partial payment works for San Antonio property owners.</p>
 
 <h2>Deadlines to keep in mind</h2>
 
