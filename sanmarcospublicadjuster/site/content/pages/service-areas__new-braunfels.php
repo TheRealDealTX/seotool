@@ -16,7 +16,7 @@ return [
         ['q' => 'What does a public adjuster cost?', 'a' => '<p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. You may rescind within 72 hours of signing.</p>'],
     ],
     'body' => <<<'HTML'
-<p>New Braunfels lies on Interstate 35 (I-35) southwest of San Marcos, mostly in Comal County with part of the city in Guadalupe County. The Comal and Guadalupe rivers run through town, and the city mixes historic neighborhoods, newer subdivisions, river-area homes, and busy commercial corridors. It is also home to the National Weather Service Austin/San Antonio office, which issues the forecasts and warnings for the region. When storm, freeze, or water damage strikes, a public adjuster in New Braunfels, TX can help you understand your policy and build a complete claim. San Marcos Public Adjuster works with property owners throughout the city.</p>
+<p>New Braunfels lies on Interstate 35 (I-35) southwest of San Marcos, mostly in Comal County with part of the city in Guadalupe County. The Comal and Guadalupe rivers run through town, and the city mixes established neighborhoods, newer subdivisions, river-area homes, and busy commercial corridors. It is also home to the National Weather Service Austin/San Antonio office, which issues the forecasts and warnings for the region. When storm, freeze, or water damage strikes, a public adjuster in New Braunfels, TX can help you understand your policy and build a complete claim. San Marcos Public Adjuster works with property owners throughout the city.</p>
 <p>We serve New Braunfels as one of the Central Texas communities around San Marcos and Hays County. We do not have a local office; we come to the property.</p>
 
 <h2>Severe weather and flooding in New Braunfels</h2>
@@ -24,7 +24,7 @@ return [
 <table>
 <thead><tr><th>Date</th><th>What the NWS documented</th></tr></thead>
 <tbody>
-<tr><td>October 17–18, 1998</td><td>Record flooding; <a href="https://www.weather.gov/ewx/wxevent-1998flood" target="_blank" rel="noopener">homes were washed off their foundations along the Guadalupe River from Canyon Lake to Seguin</a></td></tr>
+<tr><td>October 17–18, 1998</td><td>Major flooding; <a href="https://www.weather.gov/ewx/wxevent-1998flood" target="_blank" rel="noopener">homes were washed off their foundations along the Guadalupe River from Canyon Lake to Seguin</a></td></tr>
 <tr><td>October 30–31, 2013</td><td>The Halloween flood brought <a href="https://www.weather.gov/media/ewx/wxevents/ewx-20131031.pdf" target="_blank" rel="noopener">major flash flooding along the I-35 corridor from Georgetown to New Braunfels</a></td></tr>
 <tr><td>October 30, 2015</td><td>An <a href="https://www.weather.gov/media/ewx/wxevents/ewx-20151031.pdf" target="_blank" rel="noopener">EF-2 tornado</a> tracked about 8 miles from southwest of Geronimo to near the New Braunfels airport in Guadalupe County, damaging about 20 homes and destroying about 5</td></tr>
 <tr><td>October 30–31, 2015</td><td>Two-day rainfall reached 10.10 inches at 8.8 miles north-northeast of New Braunfels and 15.49 inches north of Canyon Lake</td></tr>
