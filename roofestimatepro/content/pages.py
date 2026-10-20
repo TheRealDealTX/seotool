@@ -157,7 +157,7 @@ HOW_HTML = f"""<section class="section section--paper" id="free-tools"><div clas
     <div class="card card--dark" data-reveal><span class="ico">{ico('search')}</span>
       <h3>Claim estimate review · ${REVIEW} per claim</h3>
       <ol class="check-list">
-        <li>Submit the claim on the <a href="/claim/">claim form</a> with the full carrier estimate (PDF or ESX) and your photos.</li>
+        <li>Submit the claim on the <a style="color:var(--peach)" href="/claim/">claim form</a> with the full carrier estimate (PDF or ESX) and your photos.</li>
         <li>Pay the ${REVIEW} review fee by Stripe checkout.</li>
         <li>An estimator compares the estimate to the roof line by line: quantities, missing items, labor charges and code items.</li>
         <li>You get a written list of what is missing or short, with quantities and reasons, ready to forward.</li>
@@ -166,8 +166,8 @@ HOW_HTML = f"""<section class="section section--paper" id="free-tools"><div clas
     <div class="card card--dark" data-reveal style="--d:.08s"><span class="ico">{ico('clip')}</span>
       <h3>Scope of damages · ${SCOPE} per property</h3>
       <ol class="check-list">
-        <li>Choose: build your own scope on <a href="https://pascope.com/" rel="noopener" target="_blank">PAscope.com</a>, or order a professional scope from us.</li>
-        <li>To order, use the <a href="/get-a-scope/">scope form</a>: address, type of damage, cause of loss, photos and measurements.</li>
+        <li>Choose: build your own scope on <a style="color:var(--peach)" href="https://pascope.com/" rel="noopener" target="_blank">PAscope.com</a>, or order a professional scope from us.</li>
+        <li>To order, use the <a style="color:var(--peach)" href="/get-a-scope/">scope form</a>: address, type of damage, cause of loss, photos and measurements.</li>
         <li>Pay the ${SCOPE} fee by Stripe checkout.</li>
         <li>You get an itemized scope by roof area, elevation and room, with quantities, repair methods and cause-of-loss notes.</li>
       </ol>

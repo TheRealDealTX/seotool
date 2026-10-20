@@ -47,11 +47,11 @@
 
   function klass(x) {
     if (x < 2) return ["Low slope", "Membrane roofing (TPO, PVC, EPDM, mod-bit, built-up or coatings). Shingles and tile are not allowed below 2/12."];
-    if (x < 4) return ["Low slope for shingles", "Shingles are allowed with two layers of underlayment; tile needs 2.5/12 or more. Walkable."];
-    if (x < 6.5) return ["Conventional, walkable", "All steep-slope products with standard underlayment. No steep labor charge."];
+    if (x < 4) return ["Low slope (shingles)", "Shingles are allowed with two layers of underlayment; tile needs 2.5/12 or more. Walkable."];
+    if (x < 6.5) return ["Walkable", "Conventional slope: all steep-slope products with standard underlayment. No steep labor charge."];
     if (x < 9.5) return ["Steep", "Roof jacks and fall protection needed; insurance estimates add a 7/12–9/12 steep charge."];
     if (x <= 12.5) return ["Very steep", "Slow, harnessed work; estimates add the 10/12–12/12 steep charge."];
-    return ["Extreme / mansard", "Over 12/12: highest steep charge, and shingles need the manufacturer's steep-slope nailing."];
+    return ["Extreme", "Over 12/12: highest steep charge, and shingles need the manufacturer's steep-slope nailing."];
   }
 
   function mats(x) {
