@@ -48,9 +48,12 @@ $navTopics = ['lamb', 'brining', 'baking', 'canning', 'goats', 'chickens-eggs', 
 <meta name="twitter:image" content="<?= e($ogImage) ?>">
 <meta name="theme-color" content="#1C352D">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/img/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Purely Wholesome">
+<meta name="application-name" content="Purely Wholesome">
 <link rel="alternate" type="application/rss+xml" title="<?= e(SITE_NAME) ?> Feed" href="/feed/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
