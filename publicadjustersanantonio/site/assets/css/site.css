@@ -870,3 +870,5 @@ h1, h2 { letter-spacing: -.02em; }
 
 .nav-item > a { white-space: nowrap; }
 @media (min-width: 1021px) and (max-width: 1280px) { .nav-item > a { padding: 10px 8px; font-size: .86rem; } .header-inner { gap: 14px; } }
+.topbar a { white-space: nowrap; }
+@media (max-width: 560px) { .topbar-links a[href="/weather/"] { display: none; } .topbar-links { gap: 14px !important; } }

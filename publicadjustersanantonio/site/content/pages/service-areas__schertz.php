@@ -39,6 +39,15 @@ return [
 </ul>
 <p>For newer homes, a frequent dispute is whether hail damage is "functional" or only "cosmetic," and whether a few damaged shingles justify full replacement. Policy language, manufacturer guidance, and matching all play a role. Our guide on <a href="/how-to-review-underpaid-roof-insurance-estimate/">reviewing an underpaid roof insurance estimate</a> walks through what to compare.</p>
 
+<h2>What to do first after storm damage in Schertz</h2>
+<ol>
+<li><strong>Stay out of floodwater</strong> and away from downed lines; never drive through a flooded crossing on Cibolo Creek or elsewhere.</li>
+<li><strong>Photograph the damage</strong> before cleanup, including all sides of the building, the roof from the ground, and any interior water stains.</li>
+<li><strong>Separate the water sources.</strong> Note whether water came from rising floodwater or from a roof, window, or pipe. The answer often decides which policy applies.</li>
+<li><strong>Mitigate and keep receipts</strong> for tarps, water extraction, and drying.</li>
+<li><strong>Report the claim promptly</strong> to every insurer that may be involved, including a flood carrier.</li>
+</ol>
+
 [[cta-storm]]
 
 <h2>Permits in Schertz</h2>

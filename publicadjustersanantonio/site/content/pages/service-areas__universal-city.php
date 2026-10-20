@@ -40,6 +40,15 @@ return [
 </ul>
 <p>For owners who do not live in the property, timing can be a challenge. Policies generally expect prompt notice and reasonable steps to prevent further damage, such as tarping or water extraction. Ask a tenant or property manager to take dated photos right away, and keep receipts for emergency work. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> can help.</p>
 
+<h2>A quick checklist for Universal City claims</h2>
+<ol>
+<li><strong>Photograph before cleanup:</strong> roof slopes visible from the ground, siding, windows, fences, gutters, and HVAC units, plus close-ups with a coin or ruler for scale.</li>
+<li><strong>Stop further damage</strong> with tarps or water shutoff, and save receipts.</li>
+<li><strong>Report promptly</strong> and record the claim number, adjuster names, and every conversation.</li>
+<li><strong>Know your numbers:</strong> your wind/hail deductible and coverage limits are on the declarations page. Our <a href="/claim-calculator/">claim calculator</a> shows how they affect payment.</li>
+<li><strong>Save the weather record</strong> for your date of loss, such as a measured gust at Randolph or a nearby hail report.</li>
+</ol>
+
 [[cta-storm]]
 
 <h2>Permits in Universal City</h2>

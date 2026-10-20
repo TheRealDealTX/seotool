@@ -40,6 +40,15 @@ return [
 </ul>
 <p>A common question in Converse is whether a claim is worth filing given the wind/hail deductible. Many Texas policies set that deductible as a percentage of the dwelling limit, so knowing the number up front matters. Our <a href="/claim-calculator/">claim settlement calculator</a> shows how the deductible, depreciation, and recoverable depreciation fit together.</p>
 
+<h2>Steps to take after storm damage in Converse</h2>
+<ol>
+<li><strong>Document first.</strong> Take wide and close-up photos of the roof (from the ground), siding, windows, gutters, fences, and AC units before anything is cleaned up or repaired.</li>
+<li><strong>Protect the property.</strong> Tarp roof openings and dry out wet areas, and keep receipts for materials and mitigation services.</li>
+<li><strong>Notify your insurer promptly</strong> and keep a log of every call, email, and inspection.</li>
+<li><strong>Check your deductible</strong> on the declarations page so you understand what you may pay out of pocket.</li>
+<li><strong>Save the storm record</strong> for your date of loss using our <a href="/weather-events/">recent weather events</a> page.</li>
+</ol>
+
 [[cta-storm]]
 
 <h2>Permits in Converse</h2>

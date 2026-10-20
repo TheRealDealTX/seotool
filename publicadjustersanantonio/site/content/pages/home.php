@@ -3,7 +3,7 @@ return [
     'template'    => 'home',
     'title'       => 'San Antonio Public Adjuster',
     'seo_title'   => 'San Antonio Public Adjuster | Free Claim Review | (832) 503-5866',
-    'description' => 'San Antonio Public Adjuster represents policyholders, not insurers, on hail, wind, flood, freeze, fire, and water damage claims in Bexar County. Free claim review.',
+    'description' => 'San Antonio Public Adjuster represents policyholders on hail, wind, flood, freeze, fire, and water damage claims in Bexar County. Free claim review.',
     'lead'        => 'Licensed Texas public adjusting for homeowners and business owners in San Antonio, Bexar County, and surrounding communities.',
     'image'       => '/wp-content/uploads/2026/03/San-Antonio-Public-Adjuster-Site-Image.webp',
     'image_alt'   => 'San Antonio Public Adjuster',

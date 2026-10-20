@@ -39,6 +39,16 @@ return [
 </ul>
 <p>We help with <a href="/services/hail-damage-claims/">hail damage</a>, <a href="/services/roof-damage-insurance-claims/">roof damage</a>, <a href="/services/wind-damage-claims/">wind damage</a>, <a href="/services/water-damage-claims/">water damage</a>, and <a href="/services/freeze-damage-claims/">freeze damage</a> claims, for both homes and <a href="/services/commercial-property-claims/">commercial properties</a>.</p>
 
+<h2>After a storm in Boerne: first steps</h2>
+<ol>
+<li><strong>Stay safe.</strong> Avoid flooded low water crossings and downed lines, and do not climb onto a wet or damaged roof.</li>
+<li><strong>Photograph everything</strong> before cleanup: each roof slope you can see from the ground, all sides of the house, outbuildings, fences, vehicles, and any hail stones next to a coin or ruler.</li>
+<li><strong>Prevent further damage</strong> with tarps or water extraction, and keep every receipt.</li>
+<li><strong>Report the claim promptly</strong> and write down the claim number and adjuster contacts.</li>
+<li><strong>Save the weather record</strong> for your date of loss from the NWS or NOAA.</li>
+</ol>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> walks through each step for hail, wind, water, and roof damage.</p>
+
 [[cta-storm]]
 
 <h2>Permits in Boerne and Kendall County</h2>

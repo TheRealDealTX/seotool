@@ -33,7 +33,7 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await mp.fill('#claim-popup [name="full_name"]', 'Popup Test');
   await mp.fill('#claim-popup [name="phone"]', '956-555-0199');
   await mp.fill('#claim-popup [name="email"]', 'popup@example.com');
-  await mp.fill('#claim-popup [name="location"]', 'Edinburg');
+  await mp.fill('#claim-popup [name="location"]', 'Leon Valley');
   await mp.selectOption('#claim-popup [name="claim_type"]', 'Hail damage');
   await mp.selectOption('#claim-popup [name="claim_status"]', 'Not filed yet');
   await mp.fill('#claim-popup [name="message"]', 'Hail dented gutters and roof vents.');
@@ -121,9 +121,9 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await page.click('button[type="submit"]');
   ok((await page.$$('.field.has-error')).length >= 6, 'form: client-side validation shows errors');
   await page.fill('[name="full_name"]', 'Browser Test');
-  await page.fill('[name="phone"]', '(956) 555-0101');
+  await page.fill('[name="phone"]', '(210) 555-0101');
   await page.fill('[name="email"]', 'browser@example.com');
-  await page.fill('[name="location"]', 'Mission');
+  await page.fill('[name="location"]', 'Helotes');
   await page.selectOption('[name="claim_type"]', 'Wind / storm damage');
   await page.selectOption('[name="claim_status"]', 'Claim underpaid / low offer');
   await page.fill('[name="message"]', 'Wind took shingles off after the storm.');

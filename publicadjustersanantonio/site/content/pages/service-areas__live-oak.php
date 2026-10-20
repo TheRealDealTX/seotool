@@ -39,6 +39,14 @@ return [
 </ul>
 <p>When water is involved, the source matters. Rising water from a creek or street is generally a flood-policy issue. Water that comes through a damaged roof, or from a pipe that burst during a freeze, is often evaluated under the homeowners policy. Insurers may also raise exclusions for long-term leaks or wear. Clear photos, timelines, and plumber or mitigation reports help show what happened. Our <a href="/freeze-damage-burst-pipe-claims-san-antonio/">freeze and burst pipe claims guide</a> covers this in detail.</p>
 
+<h2>First steps after a storm in Live Oak</h2>
+<ol>
+<li><strong>Stay safe</strong> and avoid flooded streets and low water crossings.</li>
+<li><strong>Document the damage</strong> with photos and video before cleanup, including the roof from the ground, every side of the house, fences, and interior water damage.</li>
+<li><strong>Prevent further damage</strong> and keep receipts for emergency work.</li>
+<li><strong>Report the claim promptly</strong> and log every contact with the insurer.</li>
+</ol>
+
 [[cta-storm]]
 
 <h2>Permits in Live Oak</h2>
