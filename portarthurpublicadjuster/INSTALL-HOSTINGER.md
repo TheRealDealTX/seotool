@@ -191,7 +191,7 @@ And these redirect (301): `/sitemap_index.xml`, `/post-sitemap.xml`, `/page-site
 2. Verify the **TDI license #3356839** on the TDI license lookup before launch
    (https://www.tdi.texas.gov/agent/agent-lookup.html). The number appears in
    `includes/config.php` (`license`) — change it there if needed and it updates site-wide.
-3. Optional analytics: put a GA4 ID (e.g. the one used on the old site, if any) in `analytics_id` in `includes/config.php`, and update the
+3. Google Analytics (G-L7RSXW5PY8) is hard-coded in `templates/head.php`; leave `analytics_id` in `includes/config.php`, and update the
    Privacy Policy (`content/pages/privacy-policy.php`) to mention it.
 4. Delete the old WordPress backup folder from the server once you're satisfied.
 

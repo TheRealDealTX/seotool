@@ -16,7 +16,7 @@ function sitemap_items(): array
             $file = MPA_ROOT . '/content/' . $type . '/' . $c['_name'] . '.php';
             $lastmod = $c['updated'] ?? $c['date'] ?? date('Y-m-d', (int) filemtime($file));
             // Live-data pages change constantly.
-            if (in_array($c['template'] ?? '', ['weather', 'weather-events'], true)) {
+            if (in_array($c['template'] ?? '', ['weather', 'weather-events', 'hurricane-tracker'], true)) {
                 $lastmod = date('Y-m-d');
             }
             $items[] = ['loc' => url($c['path']), 'lastmod' => $lastmod, 'image' => $c['image'] ?? null, 'title' => $c['title']];

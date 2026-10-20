@@ -134,7 +134,9 @@ used in Jefferson County. Fee wording everywhere: written contract, capped at 10
 * Unique title + meta description on every page; canonical URLs; Open Graph/Twitter tags; geo meta.
 * JSON-LD: WebSite, ProfessionalService/LocalBusiness (Jefferson + Orange counties and 14 cities),
   BreadcrumbList, BlogPosting with author Person (Joseph Dittman, Licensed Public Adjuster), Service, FAQPage.
-* XML sitemap (57 URLs) and RSS feed generated automatically.
+* XML sitemap (57 URLs, with images) and RSS feed generated automatically; robots.txt points to it.
+* Google tag G-L7RSXW5PY8 on every page (including 404); Google Search Console verification file `/googlecccfbf2f7e9e5ae4.html`.
+* Favicons: favicon.ico (16/32/48), favicon-96x96.png, SVG icon, apple-touch-icon, web manifest (192/512).
 
 ## 9. Test results (local, PHP 8.3 built-in server)
 

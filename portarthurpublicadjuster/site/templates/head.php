@@ -9,6 +9,15 @@ $ogType = ($page['_type'] ?? '') === 'post' ? 'article' : 'website';
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7RSXW5PY8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L7RSXW5PY8');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="geo.region" content="US-TX">
 <meta name="geo.placename" content="Port Arthur">
@@ -39,6 +48,7 @@ $ogType = ($page['_type'] ?? '') === 'post' ? 'article' : 'website';
 <meta name="twitter:image" content="<?= e(og_image($page)) ?>">
 <meta name="theme-color" content="#334443">
 <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
 <link rel="icon" href="/assets/img/logo-mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">

@@ -10,7 +10,7 @@ return [
     'faqs' => [
         ['q' => 'Do you sell my personal information?', 'a' => '<p>No. We do not sell, rent, or trade personal information, and we do not share it with third parties for their own marketing.</p>'],
         ['q' => 'Are my uploaded photos stored on the website?', 'a' => '<p>No. Files you upload with a Free Claim Review request are attached to the email sent to our team and are not kept on the web server.</p>'],
-        ['q' => 'Does this website use tracking cookies?', 'a' => '<p>The website itself sets no tracking cookies and uses no advertising cookies. No analytics service is enabled by default; if that changes, this policy will be updated first.</p>'],
+        ['q' => 'Does this website use tracking cookies?', 'a' => '<p>We use Google Analytics, which sets first-party analytics cookies (such as _ga) to measure site usage. We use no advertising cookies and do not run ad retargeting. You can block cookies in your browser or use the Google Analytics opt-out add-on.</p>'],
     ],
     'body' => <<<'HTML'
 <p><strong>Effective date: February 6, 2026<br>Last updated: October 20, 2026</strong></p>
@@ -52,9 +52,8 @@ return [
 
 <h2>Cookies, analytics, and advertising</h2>
 <ul>
-<li>The website itself sets no tracking cookies.</li>
+<li><strong>Google Analytics.</strong> We use Google Analytics (Google tag, measurement ID G-L7RSXW5PY8) to understand how visitors use the site&mdash;for example, which pages are viewed, how visitors arrive, general location (city level), device and browser type, and whether a form was submitted. Google Analytics sets first-party cookies (such as <code>_ga</code>) to do this. We do not send your name, email, phone number, or claim details to Google Analytics. Learn more at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites that use its services</a>; you can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</li>
 <li>We use no advertising cookies and do not run ad retargeting.</li>
-<li>No analytics service is enabled by default. If we enable Google Analytics or a similar service in the future, we will update this policy before or when it is turned on.</li>
 <li>You can block or delete cookies in your browser settings at any time.</li>
 </ul>
 
@@ -96,6 +95,6 @@ return [
 <p>For privacy questions or requests, contact Port Arthur Public Adjuster ([[company]]) by email at [[email]] or by phone at [[phone]].</p>
 
 <h2>Changes to this policy</h2>
-<p>We may update this Privacy Policy when the website or our practices change. Changes take effect when posted, and the "last updated" date at the top of this page shows the latest revision. Significant changes, such as enabling an analytics service, will be reflected here.</p>
+<p>We may update this Privacy Policy when the website or our practices change. Changes take effect when posted, and the "last updated" date at the top of this page shows the latest revision. Significant changes, such as adding or removing an analytics service, will be reflected here.</p>
 HTML,
 ];
