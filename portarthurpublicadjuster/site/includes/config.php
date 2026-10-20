@@ -29,6 +29,7 @@ $MPA_CONFIG = [
     'public_email'    => 'info@portarthurpublicadjuster.com',
     'author_name'     => 'Joseph Dittman',
     'author_title'    => 'Licensed Public Adjuster',
+    'author_email'    => 'jditt@risepublicadjusting.com',   // shown as Joseph Dittman's direct contact
     'service_area'    => 'Port Arthur, Jefferson County, and surrounding Southeast Texas communities',
     'lat'             => 29.8850,
     'lon'             => -93.9399,

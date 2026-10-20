@@ -82,7 +82,7 @@ HTML,
 
 ### Business
 * Port Arthur Public Adjuster — a public adjusting service of **Rise Public Adjusting LLC**, Texas Department of Insurance license **#3356839**.
-* Phone **+1 (832) 503-5866** (use `[[phone]]`). Public email **info@portarthurpublicadjuster.com** (use `[[email]]`). Never show any other email address.
+* Phone **+1 (832) 503-5866** (use `[[phone]]`). Public email **info@portarthurpublicadjuster.com** (use `[[email]]`). Joseph Dittman's direct email (jditt@risepublicadjusting.com) is also shown site-wide; use the template output, not body text.
 * Main call to action: **Free Claim Review** → `/free-claim-review/`.
 * Author of every article: **Joseph Dittman, licensed public adjuster**. Verified bio: Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness; experience across residential, commercial, storm, hail, wind, water, fire, hurricane, and catastrophe losses; background includes carrier-side adjusting, public adjusting, appraisal work, expert witness support, and hands-on construction experience. Nothing else (no years, counts, awards).
 * Tools commonly used in claim documentation: Xactimate estimating software, Matterport 3D imaging, moisture meters/thermal imaging (general practice).

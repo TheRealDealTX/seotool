@@ -29,6 +29,7 @@
         <li><?= icon('phone', 'icon icon-sm') ?> <a href="<?= e(tel_link()) ?>"><?= e(cfg('phone_display')) ?></a></li>
         <li><?= icon('chat', 'icon icon-sm') ?> <a href="sms:<?= e(cfg('phone_e164')) ?>">Text <?= e(cfg('phone_short')) ?></a></li>
         <li><?= icon('mail', 'icon icon-sm') ?> <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a></li>
+        <li><?= icon('user', 'icon icon-sm') ?> <span>Joseph Dittman, Licensed Public Adjuster:<br><a href="mailto:<?= e(cfg('author_email')) ?>"><?= e(cfg('author_email')) ?></a></span></li>
         <li><?= icon('map', 'icon icon-sm') ?> Serving <?= e(cfg('service_area')) ?>.</li>
       </ul>
       <a class="btn btn-gold btn-sm" href="/free-claim-review/">Free Claim Review</a>

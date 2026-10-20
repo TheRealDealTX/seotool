@@ -12,6 +12,7 @@ component('page-hero', ['page' => $page + ['hide_hero_cta' => true]]);
         <ul class="footer-contact" style="margin:0">
           <li><?= icon('phone', 'icon icon-sm') ?> <span><strong>Call or text:</strong> <a href="<?= e(tel_link()) ?>"><?= e(cfg('phone_display')) ?></a></span></li>
           <li><?= icon('mail', 'icon icon-sm') ?> <span><strong>Email:</strong> <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a></span></li>
+          <li><?= icon('user', 'icon icon-sm') ?> <span><strong>Contact Joseph Dittman directly</strong> (Licensed Public Adjuster): <a href="mailto:<?= e(cfg('author_email')) ?>"><?= e(cfg('author_email')) ?></a></span></li>
           <li><?= icon('map', 'icon icon-sm') ?> <span><strong>Service area:</strong> <?= e(cfg('service_area')) ?></span></li>
           <li><?= icon('shield', 'icon icon-sm') ?> <span><?= e(cfg('company')) ?> &middot; TDI License #<?= e(cfg('license')) ?></span></li>
         </ul>

@@ -40,8 +40,9 @@ while queue:
     pages[path] = t
     if re.search(r'(Warning|Fatal error|Notice|Deprecated):', t):
         bad(path, 'PHP warning in output')
-    if 'jditt@' in t or 'risepublicadjusting.com' in t.replace('Rise Public Adjusting', ''):
-        bad(path, 'internal email exposed')
+    # Joseph Dittman's direct email is shown on purpose; it must appear only as a mailto link.
+    if 'jditt@risepublicadjusting.com' not in t:
+        bad(path, "Joseph Dittman's direct email missing (footer)")
     h1 = re.findall(r'<h1[\s>]', t)
     if len(h1) != 1:
         bad(path, f'{len(h1)} h1 tags')

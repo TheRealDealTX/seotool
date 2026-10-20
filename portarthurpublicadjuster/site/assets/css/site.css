@@ -927,3 +927,4 @@ thead th { background: linear-gradient(120deg, var(--navy), var(--navy-3)); }
 @media (max-width: 1240px) and (min-width: 1081px) { .header-phone span { display: none; } .nav-item > a { padding-left: 8px; padding-right: 8px; font-size: .88rem; } }
 .img-failed img { display: none; }
 .img-failed::before { content: "Live image temporarily unavailable — use the official link."; display: grid; place-items: center; min-height: 220px; padding: 20px; text-align: center; border-radius: 18px; background: var(--cream); border: 1px dashed var(--line); color: var(--muted); }
+.author-box-contact { font-size: .95rem; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; } .author-box-contact .icon { color: var(--gold-dark); }

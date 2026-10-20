@@ -79,6 +79,7 @@ function person_schema(): array
         '@id'      => $site . '/author/joseph-dittman/#person',
         'name'     => cfg('author_name'),
         'jobTitle' => cfg('author_title'),
+        'email'    => 'mailto:' . cfg('author_email'),
         'url'      => $site . '/author/joseph-dittman/',
         'image'    => $site . '/assets/img/joseph-dittman.webp',
         'worksFor' => ['@id' => $site . '/#business'],

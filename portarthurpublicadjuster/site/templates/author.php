@@ -12,7 +12,8 @@ $posts = all_content('posts');
         <p class="eyebrow eyebrow-gold">Author &amp; Public Adjuster</p>
         <h1><?= e($page['h1'] ?? $page['title']) ?></h1>
         <p class="page-hero-lead"><?= e($page['lead'] ?? 'Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness.') ?></p>
-        <div class="hero-actions"><a class="btn btn-gold" href="/free-claim-review/">Request a Free Claim Review</a><a class="btn btn-outline-light" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> <?= e(cfg('phone_short')) ?></a></div>
+        <div class="hero-actions"><a class="btn btn-gold" href="/free-claim-review/">Request a Free Claim Review</a><a class="btn btn-outline-light" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> <?= e(cfg('phone_short')) ?></a><a class="btn btn-outline-light" href="mailto:<?= e(cfg('author_email')) ?>"><?= icon('mail', 'icon icon-sm') ?> Email Joseph</a></div>
+        <p class="small" style="margin-top:14px;color:#d6e1dd">Contact Joseph Dittman, Licensed Public Adjuster, directly at <a href="mailto:<?= e(cfg('author_email')) ?>" style="color:var(--gold-light)"><?= e(cfg('author_email')) ?></a></p>
       </div>
     </div>
   </div>

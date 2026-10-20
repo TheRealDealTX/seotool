@@ -280,6 +280,7 @@ $wave = '<svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria
       <h2 id="joseph-h">About Joseph Dittman, Licensed Public Adjuster</h2>
       <p>Joseph Dittman is a licensed Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness. His background includes carrier-side adjusting, public adjusting, appraisal work, expert witness support, and hands-on construction experience.</p>
       <p>He writes and reviews the guides on this site, covering residential, commercial, storm, wind, water, fire, hurricane, and catastrophe losses, so Port Arthur Public Adjuster readers get practical information grounded in Texas claim experience.</p>
+      <p><?= icon('mail', 'icon icon-sm') ?> Want to reach Joseph directly? Email <a href="mailto:<?= e(cfg('author_email')) ?>"><strong><?= e(cfg('author_email')) ?></strong></a>.</p>
       <a class="btn btn-navy" href="/author/joseph-dittman/">Read Joseph's profile</a>
     </div>
   </div>

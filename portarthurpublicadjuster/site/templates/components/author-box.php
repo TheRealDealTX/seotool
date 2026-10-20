@@ -4,6 +4,7 @@
     <p class="author-box-label">About the author</p>
     <p class="author-box-name"><a href="/author/joseph-dittman/">Joseph Dittman</a> <span>Licensed Public Adjuster</span></p>
     <p>Joseph Dittman is a licensed Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness. His background includes carrier-side adjusting, public adjusting, appraisal work, expert witness support, and hands-on construction experience across residential, commercial, storm, hail, wind, water, fire, hurricane, and catastrophe losses.</p>
+    <p class="author-box-contact"><?= icon('mail', 'icon icon-sm') ?> Contact Joseph directly: <a href="mailto:<?= e(cfg('author_email')) ?>"><?= e(cfg('author_email')) ?></a></p>
     <p class="author-box-links"><a href="/author/joseph-dittman/">Full profile and articles</a> &middot; <a href="/free-claim-review/">Request a Free Claim Review</a></p>
   </div>
 </aside>
