@@ -15,7 +15,7 @@ return [
         ['q' => 'What does a public adjuster charge?', 'a' => '<p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. You may rescind within 72 hours of signing.</p>'],
     ],
     'body' => <<<'HTML'
-<p>Converse is a city in northeast Bexar County, east of Loop 1604 near Joint Base San Antonio-Randolph, Live Oak, and Universal City. It includes established neighborhoods and many newer subdivisions. If you are searching for a public adjuster in Converse, TX, the claims we see most here involve hail, wind-damaged trees and fences, and water from heavy rain.</p>
+<p>Converse is a city in northeast Bexar County near Joint Base San Antonio-Randolph, Live Oak, and Universal City. It includes established neighborhoods and many newer subdivisions. If you are searching for a public adjuster in Converse, TX, the claims we see most here involve hail, wind-damaged trees and fences, and water from heavy rain.</p>
 <p>We help Converse property owners understand their policies, document their damage, and work their claims with the insurer. We do not keep an office in Converse; we come to the property.</p>
 
 <h2>Converse storm history</h2>
@@ -26,7 +26,6 @@ return [
 <li><strong>April 12, 2016:</strong> <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=623886" target="_blank" rel="noopener">2-inch hail dented cars in northeast San Antonio</a> as the giant-hail storm crossed the county.</li>
 <li><strong>July 30, 2017:</strong> estimated 65 mph winds <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=713574" target="_blank" rel="noopener">blew a large tree down onto a house in Converse</a>.</li>
 <li><strong>April 7, 2019:</strong> estimated 70 mph winds <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=814829" target="_blank" rel="noopener">knocked down trees at Montgomery Dr. and Glen Terrace</a> in Converse.</li>
-<li><strong>April 28, 2021:</strong> an NWS survey found estimated 80 mph winds damaged trees, fences, and power lines along a path about a mile wide and four miles long in northeast San Antonio and nearby unincorporated Bexar County.</li>
 </ul>
 <p>Winter Storm Uri in February 2021 also left about 2 inches of snow in Converse on top of ice and extreme cold. You can search these and other events with the <a href="/storm-lookup/">storm lookup tool</a> or browse the <a href="/storm-history/">Bexar County storm history</a>.</p>
 

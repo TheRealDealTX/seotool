@@ -2,7 +2,7 @@
 return [
     'title'       => 'Hail Damage Claim Supplements: What Carriers Miss in Their Scope (Xactimate Insights)',
     'seo_title'   => 'Hail Damage Claim Supplements: What Carriers Miss in Xactimate',
-    'description' => 'Hail damage claim supplements explained: roof and exterior items carriers often miss in Xactimate estimates and how San Antonio owners support each one.',
+    'description' => 'Hail damage claim supplements explained: roof and exterior items carriers often miss in Xactimate estimates, and how to support each one.',
     'kicker'      => 'Hail Claims',
     'image'       => '/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-What-Carriers-Miss-in-Their-Scope-Xactimate-Insights-1.webp',
     'image_alt'   => 'Hailstones on a shingle roof beside a printed insurance estimate and calculator',
@@ -105,6 +105,19 @@ return [
 <figure><img src="/wp-content/uploads/2026/04/Hail-Damage-Claim-Supplements-What-Carriers-Miss-in-Their-Scope-Xactimate-Insights-2-1024x683.webp" alt="Hailstones on a shingle roof with adjusters reviewing damage near a house" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Every slope, penetration, and soft metal item should be accounted for in the estimate.</figcaption></figure>
 
 [[cta]]
+
+<h2>Beyond the roof: exterior, interior, and mechanical items</h2>
+
+<p>Hail rarely stops at the shingles. Supplements often need to address other parts of the property that were reviewed quickly or not at all:</p>
+<ul>
+<li><strong>Exterior elevations.</strong> Dented gutters and downspouts, torn screens, cracked window glazing beads, chipped paint on trim, and damaged stucco or siding. Elevations facing the storm usually show the most damage.</li>
+<li><strong>Fences, patio covers, and outbuildings.</strong> These may fall under other structures coverage with its own limit. Photograph and measure them separately.</li>
+<li><strong>AC condensers.</strong> Bent fins can be combed in some cases and not in others. A written assessment from an HVAC technician carries more weight than a photo alone.</li>
+<li><strong>Interior water damage.</strong> If the roof leaked before it was replaced, ceilings, insulation, and paint may need repair. Interior damage that appears after the first inspection should be reported promptly with photos.</li>
+<li><strong>Metal roofs and trim.</strong> On standing-seam roofs, common toward the Hill Country edge, read your policy for any cosmetic damage exclusion and document whether dents affect seams, fasteners, or water shedding.</li>
+</ul>
+
+<p>Our guide on <a href="/how-to-document-hail-damage-for-an-insurance-claim/">how to document hail damage</a> explains how to photograph each of these, and the <a href="/storm-lookup/">storm lookup tool</a> helps confirm the storm date and reported hail size near the property.</p>
 
 <h2>Building codes, permits, and supplements</h2>
 
