@@ -72,6 +72,18 @@ return [
 <h3>Contents depreciation</h3>
 <p>Personal property paid at actual cash value is reduced for age and condition. Replacement-cost policies may pay the remainder after items are replaced; see our <a href="/replacement-cost-vs-actual-cash-value-texas/">RCV versus ACV guide</a>.</p>
 
+<h2>What to Do in the First Days After Smoke Exposure</h2>
+<p>Smoke residue can become harder to remove over time, so early steps matter:</p>
+<ul>
+<li><strong>Photograph before cleaning.</strong> Take close-ups of ceilings, wall corners, light fixtures, vent covers, window blinds, and the insides of cabinets. Wipe a small area with a white cloth and photograph the result.</li>
+<li><strong>Turn off the HVAC system</strong> if it is spreading odor, and photograph the filter before replacing it.</li>
+<li><strong>Avoid scrubbing surfaces yourself.</strong> The wrong cleaning method can smear soot deeper into paint and porous materials, making restoration harder.</li>
+<li><strong>Bag and set aside affected clothing and linens</strong> rather than washing them repeatedly at home before they are documented.</li>
+<li><strong>Write down when odor is strongest.</strong> Notes about smell on hot or humid days, or when the AC runs, help show residue is still present.</li>
+<li><strong>Report the claim</strong> and, if the fire was in a neighboring unit, note the date and location of that fire.</li>
+</ul>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists other records worth gathering. Renters and owners of units in shared buildings should also check whether the building&rsquo;s own policy and their individual policy each have a role.</p>
+
 <h2>How the Process Works</h2>
 <ol>
 <li>Free review of your situation and policy.</li>

@@ -73,6 +73,10 @@ return [
 <p><strong>Flooring matching.</strong> Continuous flooring that runs through several rooms may not be replaceable in just the wet area without a visible mismatch.</p>
 <p><strong>Slow claim handling.</strong> Water claims can stall while the insurer waits on reports. Our <a href="/services/delayed-insurance-claims/">delayed claims</a> page explains the Texas prompt-payment timeframes.</p>
 
+<h2>Signs of a Hidden Leak</h2>
+<p>Because so many San Marcos homes sit on slabs and run plumbing through attics and walls, leaks often stay hidden until damage spreads. Watch for a water bill that jumps without explanation, warm spots on a tile floor, the sound of running water when fixtures are off, cupping or lifting in wood or laminate flooring, baseboards that swell or separate, and musty odors in closets. When you notice any of these, shut off the water if you can, call a plumber or leak detection company, and photograph what you see before anything is opened up. Recording the date you first noticed each sign helps show the insurer that the loss was reported promptly once it was discovered.</p>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> covers the records worth keeping from day one.</p>
+
 <h2>How the Water Damage Claim Process Works</h2>
 <ol>
 <li>Stop the water, photograph everything, and start professional drying.</li>

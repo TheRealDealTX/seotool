@@ -65,7 +65,7 @@ return [
 <li><strong>Ask what is outstanding.</strong> Request a written list of anything the insurer still needs to make a decision.</li>
 <li><strong>Request reports.</strong> Ask for copies of inspection reports, photos, and any engineer's findings.</li>
 <li><strong>Protect the property.</strong> Continue reasonable mitigation and keep receipts; further damage from waiting can complicate the claim.</li>
-<li><strong>Use the right channel.</strong> If the adjuster is unresponsive, ask for a supervisor. The <a href="https://www.tdi.texas.gov/consumer/complaints.html" target="_blank" rel="noopener">Texas Department of Insurance</a> accepts consumer complaints.</li>
+<li><strong>Use the right channel.</strong> If the adjuster is unresponsive, ask for a supervisor. The <a href="https://www.tdi.texas.gov/consumer/complfrm.html" target="_blank" rel="noopener">Texas Department of Insurance</a> accepts consumer complaints.</li>
 </ul>
 <p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists the records insurers ask for most often.</p>
 
