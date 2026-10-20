@@ -2,7 +2,7 @@
 return [
     'title'       => 'San Marcos Building Codes and Insurance Repairs',
     'seo_title'   => 'San Marcos Building Codes & Insurance Repairs | 2021 I-Codes',
-    'description' => 'San Marcos building codes for insurance repairs: 2021 I-Codes in effect since April 1, 2023, the reroof permit rule, Permit Center contacts, and code coverage.',
+    'description' => 'San Marcos building codes for insurance repairs: 2021 I-Codes in effect since April 1, 2023, the reroof permit rule, Permit Center contacts, and more.',
     'lead'        => 'How the City of San Marcos building codes, permits, and inspections connect to a property insurance claim, and why a code requirement does not automatically mean your insurer pays for it.',
     'kicker'      => 'Local Resource',
     'image'       => '/assets/img/featured/page-local-building-codes.webp',

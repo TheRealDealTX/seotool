@@ -2,7 +2,7 @@
 return [
     'title'       => 'Areas We Serve Around San Marcos and Hays County',
     'seo_title'   => 'Service Areas | Hays County Public Adjuster for San Marcos',
-    'description' => 'Hays County public adjuster serving San Marcos, Kyle, Buda, Wimberley, Dripping Springs, New Braunfels, Lockhart, Seguin, Martindale, and nearby communities.',
+    'description' => 'Hays County public adjuster serving San Marcos, Kyle, Buda, Wimberley, Dripping Springs, New Braunfels, Lockhart, Seguin, Martindale, and nearby towns.',
     'lead'        => 'We help homeowners and business owners in San Marcos, across Hays County, and in neighboring Central Texas communities with hail, wind, flood, freeze, fire, and water damage claims.',
     'kicker'      => 'Service Areas',
     'image'       => '/assets/img/featured/page-service-areas.webp',

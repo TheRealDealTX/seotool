@@ -70,6 +70,17 @@ return [
 <li><strong>Missed systems</strong> like ductwork, electrical runs, and appliances that look intact but were exposed.</li>
 </ul>
 
+<h2>Building a Contents Inventory That Holds Up</h2>
+<p>For many households, the personal property list is the hardest part of a fire claim. A practical way to approach it:</p>
+<ol>
+<li><strong>Go room by room.</strong> Start with one room and list everything in it, including closets, drawers, and cabinets.</li>
+<li><strong>Use what you already have.</strong> Phone photos, social media pictures, holiday videos, bank and credit card statements, and online order histories can help you reconstruct what you owned and when you bought it.</li>
+<li><strong>Record the basics for each item:</strong> description, brand or model where known, quantity, approximate age, and a current replacement price.</li>
+<li><strong>Do not discard items early.</strong> Keep damaged property until it has been photographed and the insurer has had a chance to see it, unless it is a safety hazard.</li>
+<li><strong>Separate cleanable from non-salvageable.</strong> Restoration companies can often clean hard goods and some textiles; items that cannot be restored go on the replacement list.</li>
+</ol>
+<p>A complete, organized inventory tends to move faster and draws fewer follow-up questions than a partial one. It also makes depreciation easier to review line by line.</p>
+
 <h2>How the Fire Claim Process Works With Us</h2>
 <ol>
 <li>A free consultation to understand the loss and review your policy.</li>

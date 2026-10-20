@@ -2,7 +2,7 @@
 return [
     'title'       => 'Free Insurance Claim Tools for San Marcos Property Owners',
     'seo_title'   => 'Free Insurance Claim Tools | San Marcos & Hays County',
-    'description' => 'Free insurance claim tools for San Marcos and Hays County: settlement calculator, documentation checklist, storm lookup, live weather, and NOAA storm history.',
+    'description' => 'Free insurance claim tools for San Marcos and Hays County: settlement calculator, documentation checklist, storm lookup, live weather, and storm history.',
     'lead'        => 'Free, no-sign-up tools that help San Marcos and Hays County homeowners and business owners check the weather record, organize evidence, and understand the numbers on a property insurance claim.',
     'kicker'      => 'Resources',
     'image'       => '/assets/img/featured/page-claim-tools.webp',

@@ -2,7 +2,7 @@
 return [
     'template'    => 'storm-history',
     'title'       => 'San Marcos & Hays County Storm History',
-    'seo_title'   => 'San Marcos Storm History | Hays County Hail, Wind & Flood Records',
+    'seo_title'   => 'San Marcos Storm History | Hays County Hail & Wind Records',
     'description' => 'Search San Marcos and Hays County storm history from NOAA: hail, wind, tornado, flood, and winter storm records, notable local events, and claim tips.',
     'lead'        => 'A searchable record of hail, wind, tornado, flood, and winter weather in Hays County from the NOAA Storm Events Database, with the storms that shaped San Marcos and tips for using the data in an insurance claim.',
     'kicker'      => 'NOAA Storm Records',

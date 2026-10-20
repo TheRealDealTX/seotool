@@ -3,7 +3,7 @@ return [
     'template'    => 'storm-lookup',
     'title'       => 'Storm Event Lookup for San Marcos-Area Properties',
     'seo_title'   => 'Storm Event Lookup | Hail & Wind Reports Near San Marcos',
-    'description' => 'Storm event lookup for San Marcos and Hays County: search NOAA and NWS hail, wind, tornado, and flood reports near your city or ZIP code by date and distance.',
+    'description' => 'Storm event lookup for San Marcos and Hays County: search NOAA and NWS hail, wind, tornado, and flood reports near your city or ZIP code by date.',
     'lead'        => 'Search official NOAA and National Weather Service storm reports near a San Marcos-area city or ZIP code to see what was recorded around your date of loss.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-storm-lookup.webp',

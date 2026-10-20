@@ -65,6 +65,19 @@ return [
 </ul>
 <figure><img src="/assets/img/stock/water-damaged-ceiling-homeowners-meeting.webp" alt="Homeowners talking with an adjuster under a water-damaged ceiling" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>Attic and ceiling plumbing breaks often show up first as stains and sagging drywall.</figcaption></figure>
 
+<h2>Ice Storms: Damage Beyond the Plumbing</h2>
+<p>Not every freeze claim is about pipes. During the January&ndash;February 2023 ice storm, ice built up on trees across western and northern Hays County, and the weight brought down limbs and whole trees. That kind of loss is closer to a storm claim than a plumbing claim:</p>
+<ul>
+<li>Limbs that punctured roofing or crushed gutters, carports, and patio covers.</li>
+<li>Fences and outbuildings flattened by falling trees.</li>
+<li>Interior water damage where a limb opened the roof and rain or melting ice followed.</li>
+<li>Tree removal costs, which policies often cover only when the tree damaged a covered structure, and sometimes with a separate limit.</li>
+</ul>
+<p>Photograph each tree where it landed before it is cut up, and keep the tree service invoice. If wind was also part of the event, our <a href="/services/storm-damage-claims/">storm damage claims</a> page explains how mixed causes are handled.</p>
+
+<h2>Preparing Before the Next Hard Freeze</h2>
+<p>Prevention is not just good maintenance; it can also matter under the policy. Insulating attic and exterior-wall plumbing, knowing where the main shutoff is, and having a plan for vacant units all help. If you own rentals, write down what was done before each freeze, such as dripping faucets or shutting off water, so you can show reasonable care if a claim follows.</p>
+
 <h2>How the Freeze Claim Process Works</h2>
 <ol>
 <li><strong>Stop the water and dry out.</strong> Shut off the main, call a plumber, and start mitigation. Keep receipts and photos.</li>
