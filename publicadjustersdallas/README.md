@@ -62,9 +62,10 @@ Building-code research: `tools/notes/building-codes.md`.
   Only `index.php` and `.htaccess` were replaced; copies of the WordPress versions are in
   `backup/wordpress-live-2026-10-20/`. `.htaccess` returns 410 for all WordPress PHP entry points.
   Rollback = restore those two files and clear the cache.
-* **Email:** forms send with PHP `mail()` (`allow_mail_fallback`) to info@publicadjustersdallas.com until an SMTP
-  override with the mailbox password is added in `public_html/includes/config.local.php` (never commit it).
-  mail() messages may land in Junk.
+* **Email:** forms send through authenticated SMTP (smtp.hostinger.com:465, info@publicadjustersdallas.com) to
+  info@publicadjustersdallas.com. The mailbox password lives only on the server in
+  `public_html/includes/config.local.php` (blocked from the web; never commit it), which also turns the PHP `mail()`
+  fallback off. Verified with a live test submission on 2026-10-20.
 * **Cron (account cron jobs):** `*/15 * * * *` refresh-weather.php · `7 * * * *` update-weather-events.php ·
   `23 8 * * *` maintenance.php · `41 9 * * 1` update-storm-history.php
   (each `/usr/bin/php /home/u401386392/domains/publicadjustersdallas.com/public_html/cron/<script>`).
