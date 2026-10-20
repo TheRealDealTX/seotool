@@ -22,6 +22,26 @@ function e(?string $s): string
     return htmlspecialchars((string)$s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }
 
+/** Keep titles inside Google's ~65-character display: drop the brand suffix when it won't fit. */
+function seo_title(string $title): string
+{
+    $suffix = ' | ' . SITE_NAME;
+    if (mb_strlen($title) > 65 && str_ends_with($title, $suffix)) {
+        return mb_substr($title, 0, -mb_strlen($suffix));
+    }
+    return $title;
+}
+
+/** Meta descriptions over 160 characters get cut at a word boundary. */
+function seo_desc(string $desc): string
+{
+    if (mb_strlen($desc) <= 160) {
+        return $desc;
+    }
+    $cut = mb_substr($desc, 0, 157);
+    return rtrim(mb_substr($cut, 0, mb_strrpos($cut, ' ')), ' ,;:—-') . '…';
+}
+
 function canonical(string $path): string
 {
     return SITE_ORIGIN . $path;
@@ -84,12 +104,12 @@ const TOPICS = [
 ];
 
 const CATEGORIES = [
-    'recipes' => ['Recipes', 'Scratch cooking from the Purely Wholesome Farm kitchen.'],
-    'livestock-farming' => ['Livestock Farming', 'Goats, chickens and cattle: practical care from the barn.'],
-    'farming-tips' => ['Farming Tips', 'Hands-on homestead and kitchen know-how.'],
-    'smart-agriculture' => ['Smart Agriculture', 'Gardening, growing and smarter ways to work the land.'],
-    'farm-machinery' => ['Farm Machinery', 'Equipment that earns its keep on a small farm.'],
-    'general' => ['General', 'Crafts and odds and ends from around the farmhouse.'],
+    'recipes' => ['Recipes', 'Scratch cooking from the Purely Wholesome Farm kitchen: lamb chops and sauces, brined chicken, pumpkin pie, sourdough, soups and holiday baking.'],
+    'livestock-farming' => ['Livestock Farming', 'Practical livestock care from the barn: raising dairy and meat goats, kidding season, backyard chickens, eggs and cattle handling.'],
+    'farming-tips' => ['Farming Tips', 'Hands-on homestead and kitchen know-how from Purely Wholesome Farm: winter chores, gardening, preserving and cooking tips that work.'],
+    'smart-agriculture' => ['Smart Agriculture', 'Gardening, growing and smarter ways to work the land: beets, garlic, dandelions, garden sheds and sustainable small-farm practices.'],
+    'farm-machinery' => ['Farm Machinery', 'Farm equipment that earns its keep on a small homestead, from cream separators for dairy goats to the tools that make chores easier.'],
+    'general' => ['General', 'Farmhouse crafts and odds and ends from Purely Wholesome Farm: handmade wreaths, fabric crafts and simple projects for country living.'],
 ];
 
 function category_slug(string $name): string

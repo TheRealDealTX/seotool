@@ -37,5 +37,7 @@ switch ($slug) {
         $doc = require ROOT . '/content/pages/' . $slug . '.php';
         $crumbs[] = [$doc['title'], '/' . $slug . '/'];
         render('legal', ['doc' => $doc, 'crumbs' => $crumbs], ['title' => $doc['title'] . ' | ' . SITE_NAME,
-            'desc' => $doc['desc'] ?: $doc['title'] . ' for purelywholesome.com.', 'path' => '/' . $slug . '/', 'schema' => [breadcrumb_schema($crumbs)]]);
+            'desc' => $doc['desc'] ?: ($slug === 'privacy-policy'
+                ? 'How Purely Wholesome Farm collects, uses and protects your information, including cookies, analytics, contact form messages and newsletter sign-ups.'
+                : 'The terms for using purelywholesome.com: how you may use our recipes, guides and farm tools, our content rights, and the limits of the advice we share.'), 'path' => '/' . $slug . '/', 'schema' => [breadcrumb_schema($crumbs)]]);
 }

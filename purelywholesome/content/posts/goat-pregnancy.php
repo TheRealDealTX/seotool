@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "goat-pregnancy",
- "title": "Goat Pregnancy Guide: Gestation Length, Signs & Due Date Calculator",
+ "title": "Goat Pregnancy: Gestation Length, Signs & Due Date Calculator",
  "h1": "Goat Pregnancy: My Complete Guide from Breeding to Birth",
  "desc": "Goat pregnancy from breeding to birth: how long goats are pregnant, signs of pregnancy and labor, care by stage, and a due date calculator.",
  "excerpt": "When I first started breeding goats, I thought it would be simple — breed a doe, wait five months, and welcome cute, wobbly kids. But as I learned quickly, goat…",

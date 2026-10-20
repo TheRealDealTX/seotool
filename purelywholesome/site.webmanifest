@@ -1,0 +1,13 @@
+{
+  "name": "Purely Wholesome Farm",
+  "short_name": "Purely Wholesome",
+  "description": "Farm kitchen recipes, homestead guides and free farm tools.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F6F3",
+  "theme_color": "#1C352D",
+  "icons": [
+    { "src": "/assets/img/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/assets/img/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

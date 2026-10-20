@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "best-agricultural-practices-to-avoid-sweet-potato-weevil-infestation",
- "title": "Best Agricultural Practices to Avoid Sweet Potato Weevil Infestation",
+ "title": "Sweet Potato Weevil: How to Prevent an Infestation",
  "h1": "Best Agricultural Practices to Avoid Sweet Potato Weevil Infestation",
  "desc": "Avoid sweet potato weevil infestation with proven farming practices, crop rotation, sanitation, and biological control for healthier harvests.",
  "excerpt": "In a rural area, with farming as a major source of income, particularly sweet potatoes, farmers started to observe a disturbing trend. Tubers which appeared healthy on…",

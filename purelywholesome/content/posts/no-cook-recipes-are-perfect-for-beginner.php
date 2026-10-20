@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "no-cook-recipes-are-perfect-for-beginner",
- "title": "Why No-Cook Recipes Are Perfect For Beginner Cooks And Small Kitchens",
+ "title": "No-Cook Recipes for Beginner Cooks and Small Kitchens",
  "h1": "Why No-Cook Recipes Are Perfect For Beginner Cooks And Small Kitchens",
  "desc": "No-cook recipes are perfect for beginners and small kitchens—quick, healthy, and easy meals with minimal prep and cleanup.",
  "excerpt": "Key Takeaways No-cook recipes are perfect for beginners, simple, safe, and full of flavor. They save time, energy, and space, making them ideal for small or shared…",

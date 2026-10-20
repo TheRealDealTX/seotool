@@ -57,7 +57,7 @@ return json_decode(<<<'PWFJSON'
  },
  "best-agricultural-practices-to-avoid-sweet-potato-weevil-infestation": {
   "slug": "best-agricultural-practices-to-avoid-sweet-potato-weevil-infestation",
-  "title": "Best Agricultural Practices to Avoid Sweet Potato Weevil Infestation",
+  "title": "Sweet Potato Weevil: How to Prevent an Infestation",
   "h1": "Best Agricultural Practices to Avoid Sweet Potato Weevil Infestation",
   "desc": "Avoid sweet potato weevil infestation with proven farming practices, crop rotation, sanitation, and biological control for healthier harvests.",
   "excerpt": "In a rural area, with farming as a major source of income, particularly sweet potatoes, farmers started to observe a disturbing trend. Tubers which appeared healthy on…",
@@ -165,7 +165,7 @@ return json_decode(<<<'PWFJSON'
  },
  "farm-kitchen-cooking-equipment-guide": {
   "slug": "farm-kitchen-cooking-equipment-guide",
-  "title": "First Time Choosing Cooking Equipment for a Farm Kitchen: What You Need to Know",
+  "title": "Farm Kitchen Cooking Equipment: A First-Timer's Guide",
   "h1": "First Time Choosing Cooking Equipment for a Farm Kitchen: What You Need to Know",
   "desc": "First time choosing cooking equipment for a farm kitchen? Learn how to select durable, efficient equipment that fits your farm's needs.",
   "excerpt": "How Farm Kitchens Differ from Home Kitchens—and Why You Can’t Just Pick Any Equipment Many people shopping for farm kitchen equipment for the first time instinctively…",
@@ -273,7 +273,7 @@ return json_decode(<<<'PWFJSON'
  },
  "cattle-handling-equipment-tips": {
   "slug": "cattle-handling-equipment-tips",
-  "title": "Cattle Handling Equipment Tips That Make Ranch Work Safer and More Efficient",
+  "title": "Cattle Handling Equipment Tips for Safer Ranch Work",
   "h1": "Cattle Handling Equipment Tips That Make Ranch Work Safer and More Efficient",
   "desc": "Practical cattle handling equipment tips to improve ranch safety, cattle flow, durability, and labor efficiency.",
   "excerpt": "Working cattle has never been a simple job. It takes timing, patience, good instincts, and dependable tools. The right cattle handling equipment tips can completely…",
@@ -300,7 +300,7 @@ return json_decode(<<<'PWFJSON'
  },
  "create-an-efficient-garden-shed-workspace-for-sustainable-growing": {
   "slug": "create-an-efficient-garden-shed-workspace-for-sustainable-growing",
-  "title": "How to Create an Efficient Garden Shed Workspace for Sustainable Growing",
+  "title": "How to Set Up an Efficient Garden Shed Workspace",
   "h1": "How to Create an Efficient Garden Shed Workspace for Sustainable Growing",
   "desc": "Create an efficient garden shed workspace for sustainable growing with smart storage, tool care, and organised potting solutions.",
   "excerpt": "Sustainable gardening requires more than just seeds, soil, and sunlight. It requires careful planning and a highly organised system to ensure your crops thrive from…",
@@ -462,7 +462,7 @@ return json_decode(<<<'PWFJSON'
  },
  "the-modern-guide-to-cattle-handling-equipment-that-actually-works": {
   "slug": "the-modern-guide-to-cattle-handling-equipment-that-actually-works",
-  "title": "Steel, Sweat, and Smarter Systems: The Modern Guide to Cattle Handling Equipment That Actually Works",
+  "title": "The Modern Guide to Cattle Handling Equipment",
   "h1": "Steel, Sweat, and Smarter Systems: The Modern Guide to Cattle Handling Equipment That Actually Works",
   "desc": "Improve safety and efficiency with cattle handling equipment built for durability, smooth flow, and easy one-person operation on any ranch.",
   "excerpt": "Cattle handling equipment isn’t just a convenience—it’s the backbone of a safe, efficient, and profitable ranch. I’ve seen operations transform overnight simply by…",
@@ -813,7 +813,7 @@ return json_decode(<<<'PWFJSON'
  },
  "growing-garlic-at-home-beginners-guide-to-planting-harvesting": {
   "slug": "growing-garlic-at-home-beginners-guide-to-planting-harvesting",
-  "title": "Growing Garlic at Home: A Beginner's Guide to Planting, Harvesting, and Storing for Year-Round Flavor",
+  "title": "Growing Garlic at Home: Planting, Harvesting & Storing",
   "h1": "Growing Garlic at Home: A Beginner’s Guide to Planting, Harvesting, and Storing for Year-Round Flavor",
   "desc": "Growing garlic at home made easy with tips on planting, harvesting, and storing for fresh, flavorful bulbs year-round.",
   "excerpt": "There’s something deeply satisfying about pulling a fresh bulb from the soil and knowing you grew it yourself. That’s exactly what growing garlic at home…",
@@ -1164,7 +1164,7 @@ return json_decode(<<<'PWFJSON'
  },
  "revolutionizing-farming-sustainable-chemical-free-eco-friendly-agriculture-technology": {
   "slug": "revolutionizing-farming-sustainable-chemical-free-eco-friendly-agriculture-technology",
-  "title": "How Technology Is Supporting Sustainable and Chemical-Free Farming",
+  "title": "How Technology Supports Chemical-Free Farming",
   "h1": "How Technology Is Supporting Sustainable and Chemical-Free Farming",
   "desc": "Boost farm productivity and sustainability using technology. Adopt chemical-free, organic, and natural farming methods while conserving resources and soil health.",
   "excerpt": "Introduction to Technology in Sustainable and Chemical-Free Farming Farming decisions today are rarely simple. Input costs are rising, weather patterns are less…",
@@ -1409,7 +1409,7 @@ return json_decode(<<<'PWFJSON'
  },
  "no-cook-recipes-are-perfect-for-beginner": {
   "slug": "no-cook-recipes-are-perfect-for-beginner",
-  "title": "Why No-Cook Recipes Are Perfect For Beginner Cooks And Small Kitchens",
+  "title": "No-Cook Recipes for Beginner Cooks and Small Kitchens",
   "h1": "Why No-Cook Recipes Are Perfect For Beginner Cooks And Small Kitchens",
   "desc": "No-cook recipes are perfect for beginners and small kitchens—quick, healthy, and easy meals with minimal prep and cleanup.",
   "excerpt": "Key Takeaways No-cook recipes are perfect for beginners, simple, safe, and full of flavor. They save time, energy, and space, making them ideal for small or shared…",
@@ -4237,7 +4237,7 @@ return json_decode(<<<'PWFJSON'
  },
  "chicken-brining": {
   "slug": "chicken-brining",
-  "title": "Chicken Brine Ratio: The Best Salt-to-Water Ratio (and Salt Types)",
+  "title": "Chicken Brine Ratio: Best Salt-to-Water Ratio & Salt Types",
   "h1": "Chicken Brining: Finding the Best Salt Ratio for Chicken Brine",
   "desc": "The best salt-to-water ratio for chicken brine, how different salts measure up, and my step-by-step brining process. Includes a brine calculator.",
   "excerpt": "If you’ve ever wondered why some home-cooked chicken turns out dry while restaurant chicken stays juicy and flavorful, the secret isn’t an expensive ingredient — it’s…",
@@ -4498,7 +4498,7 @@ return json_decode(<<<'PWFJSON'
  },
  "goat-pregnancy": {
   "slug": "goat-pregnancy",
-  "title": "Goat Pregnancy Guide: Gestation Length, Signs & Due Date Calculator",
+  "title": "Goat Pregnancy: Gestation Length, Signs & Due Date Calculator",
   "h1": "Goat Pregnancy: My Complete Guide from Breeding to Birth",
   "desc": "Goat pregnancy from breeding to birth: how long goats are pregnant, signs of pregnancy and labor, care by stage, and a due date calculator.",
   "excerpt": "When I first started breeding goats, I thought it would be simple — breed a doe, wait five months, and welcome cute, wobbly kids. But as I learned quickly, goat…",
@@ -6642,7 +6642,7 @@ return json_decode(<<<'PWFJSON'
  },
  "bernat-handicrafter-cotton-yarn": {
   "slug": "bernat-handicrafter-cotton-yarn",
-  "title": "Bernat Handicrafter Cotton Yarn: My Choice for Kitchen Dish Cloths",
+  "title": "Bernat Handicrafter Cotton Yarn for Kitchen Dish Cloths",
   "h1": "Bernat Handicrafter Cotton Yarn: My Choice for Kitchen Dish Cloths",
   "desc": "Discover Bernat Handicrafter Cotton Yarn is the best for dish cloths. Compare with Lion Brand, Peaches and Creme, Dishie, and Paintbox yarns.",
   "excerpt": "When I first started making my own dish cloths, I didn’t realize just how much the yarn mattered. I thought any cotton would do, but after trying a few brands, I finally…",
@@ -7191,7 +7191,7 @@ return json_decode(<<<'PWFJSON'
  },
  "what-to-do-with-a-rooster": {
   "slug": "what-to-do-with-a-rooster",
-  "title": "What to Do With a Rooster: Keep, Rehome or Process? (Rooster vs Hen)",
+  "title": "What to Do With a Rooster: Keep, Rehome or Process?",
   "h1": "What to Do With a Rooster: Lessons from My Backyard Flock",
   "desc": "What to do with a rooster you didn't plan on: how to handle an aggressive rooster, rehoming options, keeping one with your hens, and rooster vs hen differences.",
   "excerpt": "When I first started raising chickens, I thought I had it all figured out. Buy some chicks, feed them well, and enjoy a basket of fresh eggs every morning. Simple…",

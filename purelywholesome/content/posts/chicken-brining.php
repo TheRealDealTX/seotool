@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "chicken-brining",
- "title": "Chicken Brine Ratio: The Best Salt-to-Water Ratio (and Salt Types)",
+ "title": "Chicken Brine Ratio: Best Salt-to-Water Ratio & Salt Types",
  "h1": "Chicken Brining: Finding the Best Salt Ratio for Chicken Brine",
  "desc": "The best salt-to-water ratio for chicken brine, how different salts measure up, and my step-by-step brining process. Includes a brine calculator.",
  "excerpt": "If you’ve ever wondered why some home-cooked chicken turns out dry while restaurant chicken stays juicy and flavorful, the secret isn’t an expensive ingredient — it’s…",

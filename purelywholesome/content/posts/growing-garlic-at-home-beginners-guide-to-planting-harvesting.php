@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "growing-garlic-at-home-beginners-guide-to-planting-harvesting",
- "title": "Growing Garlic at Home: A Beginner's Guide to Planting, Harvesting, and Storing for Year-Round Flavor",
+ "title": "Growing Garlic at Home: Planting, Harvesting & Storing",
  "h1": "Growing Garlic at Home: A Beginner’s Guide to Planting, Harvesting, and Storing for Year-Round Flavor",
  "desc": "Growing garlic at home made easy with tips on planting, harvesting, and storing for fresh, flavorful bulbs year-round.",
  "excerpt": "There’s something deeply satisfying about pulling a fresh bulb from the soil and knowing you grew it yourself. That’s exactly what growing garlic at home…",

@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "the-modern-guide-to-cattle-handling-equipment-that-actually-works",
- "title": "Steel, Sweat, and Smarter Systems: The Modern Guide to Cattle Handling Equipment That Actually Works",
+ "title": "The Modern Guide to Cattle Handling Equipment",
  "h1": "Steel, Sweat, and Smarter Systems: The Modern Guide to Cattle Handling Equipment That Actually Works",
  "desc": "Improve safety and efficiency with cattle handling equipment built for durability, smooth flow, and easy one-person operation on any ranch.",
  "excerpt": "Cattle handling equipment isn’t just a convenience—it’s the backbone of a safe, efficient, and profitable ranch. I’ve seen operations transform overnight simply by…",

@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "cattle-handling-equipment-tips",
- "title": "Cattle Handling Equipment Tips That Make Ranch Work Safer and More Efficient",
+ "title": "Cattle Handling Equipment Tips for Safer Ranch Work",
  "h1": "Cattle Handling Equipment Tips That Make Ranch Work Safer and More Efficient",
  "desc": "Practical cattle handling equipment tips to improve ranch safety, cattle flow, durability, and labor efficiency.",
  "excerpt": "Working cattle has never been a simple job. It takes timing, patience, good instincts, and dependable tools. The right cattle handling equipment tips can completely…",

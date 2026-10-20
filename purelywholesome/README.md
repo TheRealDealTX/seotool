@@ -4,11 +4,15 @@ A rebuild of the Purely Wholesome Farm WordPress/Elementor site as a small custo
 PHP site with no database and no plugins. Every URL the old site had in its
 sitemap or in Search Console still works: it either renders or 301s to its new home.
 
-**Temporary URL:** https://mediumslateblue-woodpecker-252575.hostingersite.com
-(Hostinger Agency website `ZST1Yj5FK`). The temporary host sends
-`X-Robots-Tag: noindex` and a disallow-all `robots.txt`, so it can't compete
-with the live domain. On `purelywholesome.com` both switch to indexable
-automatically (`is_production_host()` in `app/bootstrap.php`).
+**Live:** https://purelywholesome.com (Hostinger Agency website `ZST1Yj5FK`;
+DNS at GoDaddy, `@` A record `72.60.128.114`). The website's temporary address,
+https://mediumslateblue-woodpecker-252575.hostingersite.com, sends
+`X-Robots-Tag: noindex` and omits the Google tag, so it never competes with
+the real domain or skews analytics (`is_production_host()` in `app/bootstrap.php`).
+
+The old WordPress site is being moved to
+https://violet-finch-215265.hostingersite.com (shared hosting account
+`u401386392`, copied with hPanel's Copy Website tool).
 
 ## Why traffic dropped (from the Search Console and GA4 exports)
 
@@ -97,12 +101,32 @@ python3 _build/validate.py http://127.0.0.1:8099 old-urls.txt
 
 The Hostinger platform ignores `.htaccess` and sends unknown paths to
 `index.php`, so routing doesn't depend on rewrite rules. Don't add an
-`index.html`.
+`index.html`. The platform answers missing paths that look like static files
+(`.txt`, images) with its own 404 before PHP runs. That's why `robots.txt`,
+the favicons and the Search Console verification file
+(`googlecccfbf2f7e9e5ae4.html`) are real files at the root, not PHP routes.
+Sitemaps (`.xml`), the feed and `search-index.json` do reach PHP.
+
+## SEO checklist (what's in place)
+
+* Google tag `G-JB48YFCMM7` in the `<head>` of every page on the real domain
+  (`app/views/layout.php`); the privacy policy discloses Google Analytics.
+* Favicons from the original site icon: `/favicon.ico` (16/32/48),
+  `assets/img/favicon-96x96.png`, `/apple-touch-icon.png`, `/site.webmanifest`.
+* `/sitemap_index.xml` with post, page and category sitemaps (the Yoast URLs),
+  with lastmod and image entries; noindexed posts are left out. `robots.txt`
+  points to it.
+* Titles stay within about 65 characters: the brand suffix is dropped when it
+  won't fit (`seo_title()`), and over-long post titles were rewritten
+  (`_build/set_titles.py`). Descriptions are cut at 160 characters (`seo_desc()`).
+* Every page: one H1, canonical, Open Graph and Twitter tags (with image size
+  and alt text), JSON-LD (Organization, WebSite, BlogPosting, BreadcrumbList,
+  FAQPage, CollectionPage). Posts also carry `article:published_time` and
+  `article:modified_time`.
 
 ## Going live
 
-1. Point purelywholesome.com at website `ZST1Yj5FK` in Hostinger. Canonicals,
-   sitemaps and schema already use `https://purelywholesome.com`.
+1. ~~Point purelywholesome.com at website `ZST1Yj5FK`~~ (done 2026-10-20).
 2. In Search Console, submit `/sitemap_index.xml` and request indexing for the
    top 10 pages listed in `POPULAR` in `app/bootstrap.php`.
 3. Don't publish new paid placements. Recovery from a site-wide demotion

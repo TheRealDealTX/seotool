@@ -33,7 +33,7 @@ $homeFaq = [
     ['Does Purely Wholesome Farm accept guest posts?', 'We no longer publish paid guest posts. Everything on Purely Wholesome Farm is written for home cooks and homesteaders. If you have a question, a correction or a story to share, we would love to hear from you.'],
 ];
 render('home', compact('popular', 'latest', 'season', 'seasonLabel', 'seasonBlurb', 'counts', 'homeFaq', 'index'), [
-    'title' => 'Purely Wholesome Farm | Farm Kitchen Recipes, Homestead Guides & Tools',
+    'title' => 'Purely Wholesome Farm | Farm Recipes, Homestead Guides & Tools',
     'desc' => 'Purely Wholesome Farm shares scratch recipes, practical goat and chicken care, canning guides and free farm tools like a brine calculator and goat due date calculator.',
     'path' => '/',
     'preload' => $popular[0]['image'] ?? null,

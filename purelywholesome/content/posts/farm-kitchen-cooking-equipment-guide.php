@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "farm-kitchen-cooking-equipment-guide",
- "title": "First Time Choosing Cooking Equipment for a Farm Kitchen: What You Need to Know",
+ "title": "Farm Kitchen Cooking Equipment: A First-Timer's Guide",
  "h1": "First Time Choosing Cooking Equipment for a Farm Kitchen: What You Need to Know",
  "desc": "First time choosing cooking equipment for a farm kitchen? Learn how to select durable, efficient equipment that fits your farm's needs.",
  "excerpt": "How Farm Kitchens Differ from Home Kitchens—and Why You Can’t Just Pick Any Equipment Many people shopping for farm kitchen equipment for the first time instinctively…",

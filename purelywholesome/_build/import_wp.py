@@ -127,7 +127,7 @@ OVERRIDES = {
         title="How to Brine Brisket: Recipe, Brine Time & Corned Beef Method",
         desc="How to brine brisket at home: a simple brisket brine recipe, how long to brine, the corned beef variation and how to cook it after brining."),
     "what-to-do-with-a-rooster": dict(
-        title="What to Do With a Rooster: Keep, Rehome or Process? (Rooster vs Hen)",
+        title="What to Do With a Rooster: Keep, Rehome or Process?",
         h1="What to Do With a Rooster: Lessons from My Backyard Flock",
         desc="What to do with a rooster you didn't plan on: how to handle an aggressive rooster, rehoming options, keeping one with your hens, and rooster vs hen differences."),
     "how-to-keep-livestock-water-from-freezing": dict(
@@ -144,7 +144,7 @@ OVERRIDES = {
         title="Over Brined Chicken: Signs, How to Fix It & Safe Brine Times",
         desc="Brined your chicken too long? How to tell, how to fix over brined chicken, and safe brining times for every cut so it stays juicy rather than salty."),
     "chicken-brining": dict(
-        title="Chicken Brine Ratio: The Best Salt-to-Water Ratio (and Salt Types)",
+        title="Chicken Brine Ratio: Best Salt-to-Water Ratio & Salt Types",
         h1="Chicken Brining: Finding the Best Salt Ratio for Chicken Brine",
         desc="The best salt-to-water ratio for chicken brine, how different salts measure up, and my step-by-step brining process. Includes a brine calculator."),
     "pan-seared-lamb-chops": dict(
@@ -167,7 +167,7 @@ OVERRIDES = {
         title="How to Sterilize Mason Jars for Canning (Boil, Oven & Steam)",
         desc="How to sterilize mason jars for canning by boiling, steaming or in the oven, when you actually need to, and the mistakes that cause seals to fail."),
     "goat-pregnancy": dict(
-        title="Goat Pregnancy Guide: Gestation Length, Signs & Due Date Calculator",
+        title="Goat Pregnancy: Gestation Length, Signs & Due Date Calculator",
         desc="Goat pregnancy from breeding to birth: how long goats are pregnant, signs of pregnancy and labor, care by stage, and a due date calculator."),
     "sweet-pickle-recipe": dict(
         title="Old-Fashioned Sweet Pickle Recipe (Crisp, Canned or Fridge)",

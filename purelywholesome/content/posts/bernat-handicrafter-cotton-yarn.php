@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "bernat-handicrafter-cotton-yarn",
- "title": "Bernat Handicrafter Cotton Yarn: My Choice for Kitchen Dish Cloths",
+ "title": "Bernat Handicrafter Cotton Yarn for Kitchen Dish Cloths",
  "h1": "Bernat Handicrafter Cotton Yarn: My Choice for Kitchen Dish Cloths",
  "desc": "Discover Bernat Handicrafter Cotton Yarn is the best for dish cloths. Compare with Lion Brand, Peaches and Creme, Dishie, and Paintbox yarns.",
  "excerpt": "When I first started making my own dish cloths, I didn’t realize just how much the yarn mattered. I thought any cotton would do, but after trying a few brands, I finally…",

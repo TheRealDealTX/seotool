@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "create-an-efficient-garden-shed-workspace-for-sustainable-growing",
- "title": "How to Create an Efficient Garden Shed Workspace for Sustainable Growing",
+ "title": "How to Set Up an Efficient Garden Shed Workspace",
  "h1": "How to Create an Efficient Garden Shed Workspace for Sustainable Growing",
  "desc": "Create an efficient garden shed workspace for sustainable growing with smart storage, tool care, and organised potting solutions.",
  "excerpt": "Sustainable gardening requires more than just seeds, soil, and sunlight. It requires careful planning and a highly organised system to ensure your crops thrive from…",

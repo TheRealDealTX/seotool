@@ -2,7 +2,7 @@
 return json_decode(<<<'PWFJSON'
 {
  "slug": "what-to-do-with-a-rooster",
- "title": "What to Do With a Rooster: Keep, Rehome or Process? (Rooster vs Hen)",
+ "title": "What to Do With a Rooster: Keep, Rehome or Process?",
  "h1": "What to Do With a Rooster: Lessons from My Backyard Flock",
  "desc": "What to do with a rooster you didn't plan on: how to handle an aggressive rooster, rehoming options, keeping one with your hens, and rooster vs hen differences.",
  "excerpt": "When I first started raising chickens, I thought I had it all figured out. Buy some chicks, feed them well, and enjoy a basket of fresh eggs every morning. Simple…",

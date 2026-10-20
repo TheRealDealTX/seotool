@@ -1,7 +1,7 @@
 <?php
 /** @var string $content  @var array $page */
-$title = $page['title'] ?? SITE_NAME;
-$desc = $page['desc'] ?? '';
+$title = seo_title($page['title'] ?? SITE_NAME);
+$desc = seo_desc($page['desc'] ?? '');
 $path = $page['path'] ?? '/';
 $robots = $page['robots'] ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 $ogImage = canonical($page['og_image'] ?? '/assets/img/og-default.jpg');
@@ -11,6 +11,17 @@ $navTopics = ['lamb', 'brining', 'baking', 'canning', 'goats', 'chickens-eggs', 
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<?php if (is_production_host()): ?>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JB48YFCMM7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JB48YFCMM7');
+</script>
+<?php endif ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($desc) ?>">
@@ -23,10 +34,23 @@ $navTopics = ['lamb', 'brining', 'baking', 'canning', 'goats', 'chickens-eggs', 
 <meta property="og:description" content="<?= e($desc) ?>">
 <meta property="og:url" content="<?= e(canonical($path)) ?>">
 <meta property="og:image" content="<?= e($ogImage) ?>">
+<?php if (!empty($page['og_image_w'])): ?><meta property="og:image:width" content="<?= (int)$page['og_image_w'] ?>">
+<meta property="og:image:height" content="<?= (int)$page['og_image_h'] ?>">
+<?php else: ?><meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<?php endif ?>
+<meta property="og:image:alt" content="<?= e($page['og_image_alt'] ?? $title) ?>">
+<?php foreach ($page['article'] ?? [] as $prop => $val): ?><meta property="article:<?= e($prop) ?>" content="<?= e($val) ?>">
+<?php endforeach ?>
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($title) ?>">
+<meta name="twitter:description" content="<?= e($desc) ?>">
+<meta name="twitter:image" content="<?= e($ogImage) ?>">
 <meta name="theme-color" content="#1C352D">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/assets/img/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="alternate" type="application/rss+xml" title="<?= e(SITE_NAME) ?> Feed" href="/feed/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

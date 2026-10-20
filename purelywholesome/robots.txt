@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /app/
+Disallow: /content/
+Disallow: /_build/
+Disallow: /?s=
+Disallow: /*?s=
+Disallow: /search-index.json
+
+Sitemap: https://purelywholesome.com/sitemap_index.xml
