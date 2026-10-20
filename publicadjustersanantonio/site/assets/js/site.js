@@ -9,6 +9,7 @@
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('main-nav');
   function closeNav() {
+    if (!document.body.classList.contains('nav-open')) return;
     document.body.classList.remove('nav-open');
     if (toggle) { toggle.setAttribute('aria-expanded', 'false'); toggle.setAttribute('aria-label', 'Open menu'); }
   }
@@ -17,8 +18,15 @@
       var open = document.body.classList.toggle('nav-open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      if (open) { var first = nav.querySelector('a'); if (first) first.focus(); }
+      if (open) { var first = nav.querySelector('.nav-list a'); if (first) setTimeout(function () { first.focus({ preventScroll: true }); }, 60); }
     });
+    document.querySelectorAll('[data-nav-close]').forEach(function (el) {
+      el.addEventListener('click', function () { closeNav(); toggle.focus(); });
+    });
+    // Following a link (including #anchors on the same page) closes the drawer.
+    nav.querySelectorAll('a[href]').forEach(function (a) { a.addEventListener('click', closeNav); });
+    // Back to desktop width: never leave the page locked.
+    window.addEventListener('resize', function () { if (window.innerWidth > 1020) closeNav(); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
         if (document.body.classList.contains('nav-open')) { closeNav(); toggle.focus(); }

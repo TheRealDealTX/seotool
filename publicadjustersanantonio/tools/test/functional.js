@@ -140,11 +140,20 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await m.setViewportSize({ width: 390, height: 844 });
   await m.goto(base + '/');
   await m.click('.nav-toggle');
+  await m.waitForTimeout(450);   // drawer slide-in animation
   ok(await m.isVisible('#main-nav a[href="/about-us/"]'), 'mobile nav opens');
-  await m.click('.nav-item.has-sub .sub-toggle');
+  await m.click('#main-nav .nav-item.has-sub .sub-toggle');
   ok(await m.isVisible('a[href="/services/hail-damage-claims/"]'), 'mobile submenu opens');
   await m.keyboard.press('Escape');
+  await m.waitForTimeout(450);
   ok(!(await m.isVisible('#main-nav a[href="/about-us/"]')), 'mobile nav closes with Escape');
+  await m.click('.nav-toggle'); await m.waitForTimeout(450);
+  await m.click('.drawer-close'); await m.waitForTimeout(450);
+  ok(!(await m.isVisible('#main-nav a[href="/about-us/"]')), 'mobile nav closes with its X button');
+  await m.evaluate(() => window.scrollTo(0, 2000)); await m.click('.nav-toggle'); await m.waitForTimeout(450);
+  const top = await m.evaluate(() => document.getElementById('main-nav').getBoundingClientRect().top);
+  ok(top === 0, 'mobile nav covers the screen when opened mid-page (top=' + top + ')');
+  await m.click('.drawer-close'); await m.waitForTimeout(450);
   ok(await m.isVisible('.mobile-bar-call'), 'sticky mobile call bar visible');
 
   ok(errors.length === 0, 'no JavaScript errors ' + errors.join(' | '));

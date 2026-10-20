@@ -872,3 +872,103 @@ h1, h2 { letter-spacing: -.02em; }
 @media (min-width: 1021px) and (max-width: 1280px) { .nav-item > a { padding: 10px 8px; font-size: .86rem; } .header-inner { gap: 14px; } }
 .topbar a { white-space: nowrap; }
 @media (max-width: 560px) { .topbar-links a[href="/weather/"] { display: none; } .topbar-links { gap: 14px !important; } }
+
+/* ==========================================================================
+   Mobile header + navigation drawer (rebuilt)
+   ========================================================================== */
+.drawer-head, .nav-backdrop, .drawer-contact { display: none; }
+
+@media (max-width: 1020px) {
+  /* A backdrop-filter on the header makes it the containing block for the fixed
+     drawer (clipping it to the header). Use a solid header on small screens. */
+  .site-header, .site-header.is-scrolled { backdrop-filter: none; -webkit-backdrop-filter: none; background: var(--off); }
+  .site-header.is-scrolled { background: #fff; }
+  .header-inner { height: 68px; gap: 12px; }
+  .site-header.is-scrolled .header-inner { height: 62px; }
+  .nav-open::after { content: none; }
+  body.nav-open { overflow: hidden; touch-action: none; }
+
+  .nav-backdrop { display: block; position: fixed; inset: 0; z-index: 1; background: rgba(20, 20, 12, .55); backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); opacity: 0; visibility: hidden; transition: opacity .3s, visibility .3s; }
+  .nav-open .nav-backdrop { opacity: 1; visibility: visible; }
+
+  .main-nav, .nav-open .main-nav { display: flex; flex-direction: column; position: fixed; top: 0; right: 0; bottom: 0; left: auto; z-index: 2; width: min(400px, 100vw); height: 100vh; height: 100dvh; margin: 0; padding: 0; overflow: hidden; background: linear-gradient(170deg, var(--navy-2) 0%, var(--navy) 70%); box-shadow: -24px 0 60px rgba(0, 0, 0, .35); transform: translateX(100%); visibility: hidden; transition: transform .38s var(--ease), visibility .38s; animation: none; touch-action: pan-y; }
+  .nav-open .main-nav { transform: none; visibility: visible; }
+
+  .drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid rgba(255, 255, 255, .1); flex: none; }
+  .drawer-head .brand-name { color: #fff; font-size: 1.05rem; }
+  .drawer-head .brand-sub { color: var(--gold-light); font-size: .6rem; }
+  .drawer-head .brand img { width: 38px; height: 38px; }
+  .drawer-close { width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, .18); background: rgba(255, 255, 255, .06); color: #fff; display: grid; place-items: center; cursor: pointer; flex: none; }
+  .drawer-close:hover, .drawer-close:focus-visible { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .drawer-close .icon { width: 22px; height: 22px; }
+
+  .nav-list { display: block; flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 8px 18px; }
+  .nav-item { display: flex; flex-wrap: wrap; align-items: center; border-bottom: 1px solid rgba(255, 255, 255, .08); }
+  .nav-item > a { flex: 1; min-height: 52px; display: flex; align-items: center; padding: 0 4px; font-size: 1.05rem; font-weight: 600; color: #fff; white-space: normal; border-radius: 0; box-shadow: none !important; }
+  .nav-item.is-active > a { color: var(--gold-light); }
+  .sub-toggle { width: 48px; height: 48px; margin: 0; padding: 0; border-radius: 12px; display: grid; place-items: center; color: var(--gold-light); background: rgba(255, 255, 255, .05); }
+  .sub-toggle svg { width: 18px; height: 18px; transition: transform .25s var(--ease); }
+  .sub-toggle[aria-expanded="true"] { background: var(--gold); color: var(--navy); }
+  .sub-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+  .sub-menu, .sub-menu-wide { display: none; position: static; width: 100%; min-width: 0; columns: 1; margin: 0 0 12px; padding: 6px; border: 0; border-radius: 14px; background: rgba(255, 255, 255, .06); box-shadow: none; opacity: 1; visibility: visible; transform: none; }
+  .nav-item.has-sub:hover .sub-menu, .nav-item.has-sub:focus-within .sub-menu { display: none; }
+  .nav-item.has-sub.is-open .sub-menu { display: block; animation: subIn .25s var(--ease) both; }
+  @keyframes subIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+  .sub-menu a { display: flex; align-items: center; min-height: 44px; padding: 8px 12px; font-size: .95rem; color: #e9e7dd; border-radius: 10px; }
+  .sub-menu a:hover, .sub-menu a[aria-current] { background: rgba(255, 255, 255, .1); color: #fff; }
+
+  .nav-mobile-cta { display: grid; gap: 10px; flex: none; margin: 0; padding: 16px 18px calc(18px + env(safe-area-inset-bottom)); border-top: 1px solid rgba(255, 255, 255, .1); background: rgba(0, 0, 0, .12); }
+  .nav-mobile-cta .btn { min-height: 50px; }
+  .drawer-contact { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 12px; margin: 4px 0 0; font-size: .8rem; color: #c9c6b8; }
+  .drawer-contact a { color: #e9e7dd; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+
+  .header-actions { position: static; margin-left: auto; gap: 10px; }
+  .header-phone .icon { width: 44px; height: 44px; padding: 11px; }
+  .nav-toggle { width: 46px; height: 46px; }
+
+}
+
+/* Top bar on phones: just the essentials, on one line */
+@media (max-width: 760px) {
+  .topbar-inner { justify-content: center; min-height: 34px; }
+  .topbar-email { display: none !important; }
+  .topbar-links { gap: 18px !important; font-size: .8rem; }
+}
+@media (max-width: 380px) {
+  .topbar-weather { display: none !important; }
+}
+/* Undo the older rules that hid the first top-bar link and the weather link */
+@media (max-width: 560px) {
+  .topbar-links a:first-child { display: inline-flex; }
+  .topbar-links a.topbar-weather { display: inline-flex; }
+  .brand-name { font-size: 1.02rem; }
+  .brand-sub { font-size: .58rem; letter-spacing: .18em; }
+}
+@media (max-width: 380px) {
+  .topbar-links a.topbar-weather { display: none !important; }
+  .header-phone { display: none; }
+}
+
+/* Phones: hero and sections breathe better */
+@media (max-width: 600px) {
+  .hero { min-height: 0; }
+  .hero-inner { padding-top: 32px; padding-bottom: 48px; gap: 32px; }
+  .hero h1 { font-size: clamp(2rem, 9vw, 2.5rem); }
+  .hero-pill { font-size: .78rem; flex-wrap: wrap; }
+  .hero-pill b { white-space: nowrap; }
+  .hero-actions .btn { width: 100%; }
+  .hero-card { padding: 22px 18px; }
+  .hero-card::before { animation: none; }
+  .ticker-item { font-size: .85rem; }
+  .split-media::before { display: none; }
+  .split-media .media-badge { left: 12px; right: auto; bottom: 12px; padding: 12px 14px; font-size: .9rem; }
+  .bento-card, .compare-col { padding: 22px; }
+  .section-head { margin-bottom: 32px; }
+  .direct-card { flex-direction: row; align-items: flex-start; }
+  .results-bar { flex-wrap: wrap; gap: 12px; }
+}
+@media (max-width: 1020px) {
+  .nav-open .header-actions { visibility: hidden; }
+  html:has(body.nav-open) { overflow: hidden; }
+}

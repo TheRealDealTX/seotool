@@ -9,9 +9,9 @@ $bodyClass = 'type-' . ($page['_type'] ?? 'page') . ' tpl-' . ($page['template']
   <div class="container topbar-inner">
     <p class="topbar-note"><?= icon('shield', 'icon icon-sm') ?> Licensed Texas Public Adjusting Firm &middot; TDI License #<?= e(cfg('license')) ?></p>
     <p class="topbar-links">
-      <a href="/weather/"><span class="live-dot" aria-hidden="true"></span> Live SA weather</a>
-      <a href="mailto:<?= e(cfg('public_email')) ?>"><?= icon('mail', 'icon icon-sm') ?> <?= e(cfg('public_email')) ?></a>
-      <a href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> <?= e(cfg('phone_display')) ?></a>
+      <a class="topbar-weather" href="/weather/"><span class="live-dot" aria-hidden="true"></span> Live SA weather</a>
+      <a class="topbar-email" href="mailto:<?= e(cfg('public_email')) ?>"><?= icon('mail', 'icon icon-sm') ?> <?= e(cfg('public_email')) ?></a>
+      <a class="topbar-phone" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> <?= e(cfg('phone_display')) ?></a>
     </p>
   </div>
 </div>
@@ -22,6 +22,13 @@ $bodyClass = 'type-' . ($page['_type'] ?? 'page') . ' tpl-' . ($page['template']
       <span class="brand-text"><span class="brand-name">San Antonio</span><span class="brand-sub">Public Adjuster</span></span>
     </a>
     <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <div class="drawer-head">
+        <a class="brand" href="/" aria-label="San Antonio Public Adjuster home" tabindex="-1">
+          <img src="/assets/img/logo-mark.svg" alt="" width="40" height="40">
+          <span class="brand-text"><span class="brand-name">San Antonio</span><span class="brand-sub">Public Adjuster</span></span>
+        </a>
+        <button class="drawer-close" type="button" aria-label="Close menu" data-nav-close><?= icon('close', 'icon') ?></button>
+      </div>
       <ul class="nav-list">
         <?php foreach (primary_nav() as $item):
             [$label, $href] = $item;
@@ -47,8 +54,10 @@ $bodyClass = 'type-' . ($page['_type'] ?? 'page') . ' tpl-' . ($page['template']
       <div class="nav-mobile-cta">
         <a class="btn btn-gold btn-block" href="/free-claim-review/">Get a Free Claim Review</a>
         <a class="btn btn-outline-light btn-block" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> Call <?= e(cfg('phone_short')) ?></a>
+        <p class="drawer-contact"><a href="mailto:<?= e(cfg('public_email')) ?>"><?= icon('mail', 'icon icon-sm') ?> <?= e(cfg('public_email')) ?></a><span>TDI License #<?= e(cfg('license')) ?></span></p>
       </div>
     </nav>
+    <div class="nav-backdrop" data-nav-close aria-hidden="true"></div>
     <div class="header-actions">
       <a class="header-phone" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon') ?><span><small>Call now</small><?= e(cfg('phone_short')) ?></span></a>
       <a class="btn btn-gold btn-sm header-cta" href="/free-claim-review/">Free Claim Review</a>
