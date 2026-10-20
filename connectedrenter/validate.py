@@ -108,6 +108,9 @@ for f in files:
         descs[p.desc] = rel
         if not p.desc or len(p.desc) > 165:
             errors.append(f"{rel}: description length {len(p.desc or '')}")
+    for need in ('href="/favicon.svg"', 'href="/favicon-96x96.png" sizes="96x96"', 'name="apple-mobile-web-app-title"'):
+        if need not in s:
+            errors.append(f"{rel}: missing favicon tag {need}")
     if "googletagmanager.com/gtag/js?id=G-E1CR5DK1LV" not in s or "gtag('config', 'G-E1CR5DK1LV')" not in s:
         errors.append(f"{rel}: missing Google tag")
     if rel != "404.html":
@@ -137,7 +140,7 @@ for u in locs:
         errors.append(f"sitemap: {u} has no page")
 if len(locs) != len(files) - 1:
     errors.append(f"sitemap lists {len(locs)} URLs for {len(files) - 1} pages")
-for f in ("robots.txt", "favicon.ico", "favicon-32.png", "apple-touch-icon.png", "site.webmanifest", "googlecccfbf2f7e9e5ae4.html"):
+for f in ("robots.txt", "favicon.ico", "favicon.svg", "favicon-96x96.png", "favicon-32.png", "apple-touch-icon.png", "site.webmanifest", "googlecccfbf2f7e9e5ae4.html"):
     if not os.path.exists(os.path.join(ROOT, f)):
         errors.append(f"missing root file {f}")
 print(f"sitemap: {len(locs)} URLs")

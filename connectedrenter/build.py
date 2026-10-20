@@ -195,11 +195,14 @@ def page(path, title, desc, main, current=None, schema=None, og_type="website", 
 <meta name="twitter:description" content="{esc(desc)}">
 <meta name="twitter:image" content="{img}">
 <meta name="theme-color" content="#680404">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="{SITE}">
+<meta name="application-name" content="{SITE}">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -917,7 +920,8 @@ def build_support():
         f.write(f"User-agent: *\nAllow: /\nDisallow: /home.html\n\nSitemap: {ORIGIN}/sitemap.xml\n")
     with open(os.path.join(ROOT, "site.webmanifest"), "w") as f:
         json.dump({"name": SITE, "short_name": SITE, "start_url": "/", "display": "standalone", "background_color": "#fffaf1", "theme_color": "#680404",
-                   "icons": [{"src": "/icon-192.png", "sizes": "192x192", "type": "image/png"}, {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=1)
+                   "icons": [{"src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png"}, {"src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+                             {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}, {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}, f, indent=1)
 
 
 def build_og():
