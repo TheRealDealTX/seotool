@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dallas Public Adjuster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2d72"/><stop offset="1" stop-color="#071d4c"/></linearGradient>
+    <linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8be6f4"/><stop offset=".5" stop-color="#0ac4e0"/><stop offset="1" stop-color="#0992c2"/></linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <path d="M18 14h14.5C44.4 14 51 21.2 51 32s-6.6 18-18.5 18H18V14zm9 8v20h5.2c6.3 0 9.8-3.6 9.8-10s-3.5-10-9.8-10H27z" fill="url(#fg)"/>
+  <path d="M10 54h44" stroke="#0ac4e0" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+</svg>
