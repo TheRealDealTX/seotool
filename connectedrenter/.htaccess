@@ -1,0 +1,4 @@
+# connectedrenter.com - static site (Hostinger Agency hosting ignores this file; index.php does the routing)
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+Options -Indexes

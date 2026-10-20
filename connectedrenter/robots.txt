@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /home.html
+
+Sitemap: https://connectedrenter.com/sitemap.xml
