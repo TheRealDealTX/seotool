@@ -25,6 +25,12 @@ RewriteRule (^|/)\. - [F,L]
 RewriteRule \.(md|log|sql|ini|sh|bak|dist|lock|tmp)$ - [F,L]
 RewriteRule ^(composer\.(json|lock)|config\.local\.php|pad-config\.php)$ - [F,L]
 
+# 3b) The old WordPress install is still on disk (kept for rollback). Never run it.
+RewriteRule ^(wp-admin|wp-includes)(/|$) - [G,L]
+RewriteRule ^wp-content/(plugins|themes|upgrade|cache|litespeed|mu-plugins|languages)(/|$) - [G,L]
+RewriteRule ^wp-content/.*\.php$ - [G,L]
+RewriteRule ^(wp-[a-z-]+\.php|xmlrpc\.php|readme\.html|license\.txt|default\.php)$ - [G,L]
+
 # 4) Front controller: anything that is not a real file goes to index.php.
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

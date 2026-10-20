@@ -51,3 +51,20 @@ sh tools/package.sh                                    # build the upload ZIP
 
 Content rules for writers: `tools/CONTENT_SPEC.md`. Verified storm facts: `tools/notes/storm-facts.md`.
 Building-code research: `tools/notes/building-codes.md`.
+
+## Deployment (live since 2026-10-20)
+
+* **Live site:** Hostinger web hosting account `u401386392`, domain `publicadjustersdallas.com`, document root
+  `/home/u401386392/domains/publicadjustersdallas.com/public_html` (Apache/LiteSpeed, `.htaccess` active).
+  Files were uploaded one by one through the File Browser TUS API (`hosting_files_generate-upload-url`),
+  then the cache was cleared (`hosting_cache_clear-website`).
+* **Old WordPress site:** left on the server for rollback (core, `wp-config.php`, `wp-content/`, database untouched).
+  Only `index.php` and `.htaccess` were replaced; copies of the WordPress versions are in
+  `backup/wordpress-live-2026-10-20/`. `.htaccess` returns 410 for all WordPress PHP entry points.
+  Rollback = restore those two files and clear the cache.
+* **Email:** forms send with PHP `mail()` (`allow_mail_fallback`) to info@publicadjustersdallas.com until an SMTP
+  override with the mailbox password is added in `public_html/includes/config.local.php` (never commit it).
+  mail() messages may land in Junk.
+* **Cron (account cron jobs):** `*/15 * * * *` refresh-weather.php · `7 * * * *` update-weather-events.php ·
+  `23 8 * * *` maintenance.php · `41 9 * * 1` update-storm-history.php
+  (each `/usr/bin/php /home/u401386392/domains/publicadjustersdallas.com/public_html/cron/<script>`).
