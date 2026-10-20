@@ -5,7 +5,7 @@ component('page-hero', ['page' => $page]);
 ?>
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head reveal"><p class="eyebrow">16 claim services</p><h2>Property Insurance Claim Services</h2><p>Choose a claim type to learn about documentation, common insurer disputes, and how a public adjuster can help.</p></div>
+    <div class="section-head reveal"><p class="eyebrow"><?= count(service_cards()) ?> claim services</p><h2>Property Insurance Claim Services</h2><p>Choose a claim type to learn about documentation, common insurer disputes, and how a public adjuster can help.</p></div>
     <?php component('services-grid'); ?>
   </div>
 </section>

@@ -129,6 +129,28 @@ return [
 <li><strong>No repair work.</strong> A public adjuster may not take part in repairing or rebuilding the property on a claim they adjust. Texas law also does not allow your contractor to act as your public adjuster.</li>
 </ul>
 
+<h2>Questions to ask before you decide</h2>
+
+<p>Whether you are talking with the insurer’s adjuster or interviewing a public adjuster, a few direct questions can tell you a lot about how the claim will be handled.</p>
+
+<h3>For the insurance company’s adjuster</h3>
+<ul>
+<li>Are you a staff adjuster or an independent adjuster, and who is your supervisor?</li>
+<li>What parts of the damage are included in your estimate, and what was left out or is still under review?</li>
+<li>What information do you still need from me to make a decision?</li>
+<li>Will an engineer or other specialist be involved, and may I have a copy of any report you rely on?</li>
+</ul>
+
+<h3>For a public adjuster you are considering</h3>
+<ul>
+<li>What is your Texas public adjuster license number, and may I verify it with TDI?</li>
+<li>What is your fee, and how is it calculated on payments already made?</li>
+<li>Who will actually inspect the property and communicate with the insurer?</li>
+<li>How will you keep me informed, and how do I reach you?</li>
+</ul>
+
+<p>A reputable San Marcos public adjuster should answer these plainly and put the fee in writing before any work begins. Our guide on <a href="/how-to-find-a-public-adjuster/">how to find a public adjuster</a> covers more questions to ask.</p>
+
 <h2>Which one do you need?</h2>
 
 <p>You will always deal with the insurance adjuster. The real question is whether you also want someone working only for you. Many owners handle small, straightforward claims themselves. A public adjuster is more often worth considering when the damage is large or complicated, the estimate seems to leave out obvious work, the claim has stalled, or you simply do not have time to manage the process. Our guide <a href="/do-i-need-a-public-adjuster/">Do I Need a Public Adjuster?</a> walks through that decision, and our <a href="/services/hail-damage-claims/">hail damage claims</a> and <a href="/services/wind-damage-claims/">wind damage claims</a> pages explain how we handle storm losses.</p>

@@ -2,7 +2,7 @@
 return [
     'title'       => 'Hail Damage Claim Supplements: Missed Items, Hidden Damage, and Timing',
     'seo_title'   => 'Hail Damage Claim Supplements | San Marcos Public Adjuster',
-    'description' => 'How hail damage claim supplements work: commonly missed roof items, damage found during tear-off, code items, documentation, and timing for San Marcos owners.',
+    'description' => 'How hail damage claim supplements work: commonly missed roof items, damage found at tear-off, code items, documentation, and timing in San Marcos.',
     'kicker'      => 'Hail Claims',
     'image'       => '/assets/img/featured/hail-damage-claim-supplements.webp',
     'image_alt'   => 'Hail-damaged shingle roof with an insurance estimate being reviewed for missing items',
@@ -149,7 +149,7 @@ return [
 
 <h2>How a public adjuster can help with supplements</h2>
 
-<p>Preparing a supplement takes time: measuring, photographing, building a line-item estimate, and following up item by item. A public adjuster represents the policyholder, not the insurer or the contractor, and can handle that work on your behalf. Our <a href="/services/insurance-claim-supplements/">insurance claim supplements</a> service and <a href="/services/hail-damage-claims/">hail damage claims</a> service cover this for homes and businesses in San Marcos and nearby Central Texas communities.</p>
+<p>Preparing a supplement takes time: measuring, photographing, building a line-item estimate, and following up item by item. A public adjuster represents the policyholder, not the insurer or the contractor, and can handle that work on your behalf. Our <a href="/services/insurance-claim-supplements/">insurance claim supplements</a> service and <a href="/services/hail-damage-claims/">hail damage claims</a> service cover this work as a San Marcos public adjuster for homes and businesses in San Marcos and nearby Central Texas communities.</p>
 
 <p>Whether you work with a San Marcos public adjuster or handle it yourself, the approach is the same: document thoroughly, request in writing, and keep the deadlines in view. If you would like an independent look at your hail estimate, request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]]. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 HTML,

@@ -2,7 +2,7 @@
 return [
     'title'       => 'Why Property Insurance Claims Are Delayed in Texas (and How to Move a Stalled Claim)',
     'seo_title'   => 'Why Property Insurance Claims Are Delayed in Texas',
-    'description' => 'Why property insurance claims are delayed in Texas, what the Prompt Payment Act deadlines say, and practical steps San Marcos owners can take on a stalled claim.',
+    'description' => 'Why property insurance claims are delayed in Texas, what Prompt Payment Act deadlines require, and how San Marcos owners can move a stalled claim.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/why-property-insurance-claims-are-delayed-texas.webp',
     'image_alt'   => 'Property owner reviewing insurance claim correspondence and a calendar of claim deadlines',
@@ -130,7 +130,7 @@ return [
 
 <h2>When to involve a public adjuster or an attorney</h2>
 
-<p>A public adjuster represents the policyholder on the claim itself: documenting the loss, preparing a detailed estimate, answering the insurer's information requests, and handling day-to-day communication. Many owners bring in a public adjuster when a claim has stalled because the work of organizing and responding has become a second job. Our <a href="/services/delayed-insurance-claims/">delayed insurance claims</a> service is built around exactly that. If the problem is a low payment rather than a slow one, see our page on <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a>.</p>
+<p>A public adjuster represents the policyholder on the claim itself: documenting the loss, preparing a detailed estimate, answering the insurer's information requests, and handling day-to-day communication. Many owners bring in a public adjuster when a claim has stalled because the work of organizing and responding has become a second job. Our San Marcos public adjuster service for <a href="/services/delayed-insurance-claims/">delayed insurance claims</a> is built around exactly that. If the problem is a low payment rather than a slow one, see our page on <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a>.</p>
 
 <p>Some situations call for an attorney instead of, or in addition to, a public adjuster:</p>
 <ul>
@@ -144,6 +144,6 @@ return [
 
 <h2>Getting insurance claim help in San Marcos</h2>
 
-<p>A delayed claim is frustrating, but it is usually fixable with organization, clear written requests, and a firm grasp of the deadlines. If you would like a second set of eyes on where your claim stands, our San Marcos public adjuster team can review your file at no cost. Start with a <a href="/free-claim-review/">Free Claim Review</a>, or call [[phone]]. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
+<p>A delayed claim is frustrating, but it is usually fixable with organization, clear written requests, and a firm grasp of the deadlines. If you would like a second set of eyes on where your claim stands, a San Marcos public adjuster can review your file at no cost. Start with a <a href="/free-claim-review/">Free Claim Review</a>, or call [[phone]]. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 HTML,
 ];
