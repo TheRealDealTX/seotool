@@ -248,6 +248,7 @@
     if (!main.dataset.switch) markVersion(prefVer());
     else if (main.dataset.ver) store.set('ver', main.dataset.ver);
     updateReadLinks();
+    decorateProgress(main);
     ({ home: initHome, chapter: initChapter, verse: initVerse, votd: initVotd, plan: initPlan, saved: initSaved, app: initApp, offline: initOffline }[page] || (() => {}))(main);
   }
   function updateReadLinks() {
@@ -481,7 +482,7 @@
     window.removeEventListener('scroll', initChapter.onScroll);
     initChapter.onScroll = () => { clearTimeout(readSaveT); readSaveT = setTimeout(() => { if ($('.chapter')) remember(); }, 600); };
     window.addEventListener('scroll', initChapter.onScroll, { passive: true });
-    planButton(main, book, ch);
+    chapterReadButton(main, book, ch);
   }
   function pushHistory(item) {
     let h = store.get('history', []);
@@ -762,6 +763,7 @@
         const items = list.filter(b => f ? (bookName(b, vers, ver).toLowerCase().includes(f) || b.names.en.toLowerCase().includes(f) || b.slug.includes(f.replace(/ /g, '')) || b.abbr.includes(f.replace(/ /g, ''))) : b.t === testament);
         grid.innerHTML = items.map(b => `<li><a href="${urlFor(ver, b.slug)}" data-pick="${b.slug}" class="${b.slug === curBook ? 'cur' : ''}${b.available[ver] === 0 ? ' na' : ''}">${esc(bookName(b, vers, ver))}<small>${b.verses.length}</small></a></li>`).join('')
           || '<li class="muted">Press Enter to go to that reference</li>';
+        decorateProgress(grid);
       };
       draw();
       input.addEventListener('input', draw);
@@ -783,6 +785,7 @@
       body.innerHTML = `<div class="picker-crumb"><button type="button" data-back>${icon('left')} Books</button><span>${esc(bookName(b, vers, ver))}</span></div>
         <ul class="num-grid">${b.verses.map((_, i) => `<li><a href="${urlFor(ver, slug, i + 1)}" data-ch="${i + 1}"${slug === curBook && i + 1 === curCh ? ' aria-current="page"' : ''}>${i + 1}</a></li>`).join('')}</ul>
         <p class="muted">Tap a chapter to read it, or long-press to pick a verse.</p>`;
+      decorateProgress(body);
       $('[data-back]', body).onclick = showBooks;
       $$('[data-ch]', body).forEach(a => {
         let t;
@@ -890,7 +893,7 @@
     }
     let day = Math.min(364, Math.max(0, dayDiff(plan.start, localDate())));
     const draw = () => {
-      const done = Object.keys(plan.done).length;
+      const done = Object.keys(readCh()).length;
       const ver = prefVer();
       box.innerHTML = `<p><strong>${done}</strong> of ${total} chapters read · ${Math.round(done / total * 100)}%</p>
         <div class="plan-progress"><div style="width:${done / total * 100}%"></div></div>
@@ -898,7 +901,7 @@
         <button class="btn ghost" type="button" data-today>Today</button>
         <button class="btn ghost" type="button" data-d="1" ${day === 364 ? 'style="visibility:hidden"' : ''}>Day ${day + 2} ${icon('right')}</button></div>
         <div class="plan-day"><h2>Day ${day + 1} <small class="muted">${new Date(new Date(plan.start + 'T12:00:00').getTime() + day * 864e5).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })}</small></h2>
-        <ul>${days[day].map(([s, c]) => `<li><input type="checkbox" data-k="${s}.${c}" ${plan.done[s + '.' + c] ? 'checked' : ''} aria-label="Mark ${esc(bookName(by[s], vers, ver))} ${c} read">
+        <ul>${days[day].map(([s, c]) => `<li><input type="checkbox" data-k="${s}.${c}" ${isRead(s, c) ? 'checked' : ''} aria-label="Mark ${esc(bookName(by[s], vers, ver))} ${c} read">
           <a href="${urlFor(ver, s, c)}">${esc(bookName(by[s], vers, ver))} ${c}</a></li>`).join('')}</ul></div>
         <p><button class="btn ghost" type="button" data-reset>Restart plan</button></p>`;
     };
@@ -911,20 +914,86 @@
     };
     box.onchange = e => {
       const k = e.target.dataset.k; if (!k) return;
-      if (e.target.checked) plan.done[k] = 1; else delete plan.done[k];
-      store.set('plan', plan); draw();
+      const [bk, c] = k.split('.'); setRead(bk, +c, e.target.checked); draw();
     };
   }
-  function planButton(main, book, ch) {
-    const plan = store.get('plan', null); if (!plan) return;
+  // ---------- reading progress (chapters read, per book; shared with the reading plan) ----------
+  function readCh() {
+    let r = store.get('readch', null);
+    if (!r) {                                       // first run: start from the reading plan's ticks
+      r = {};
+      Object.keys(store.get('plan', null)?.done || {}).forEach(k => { r[k] = 1; });
+      store.set('readch', r);
+    }
+    return r;
+  }
+  const isRead = (book, ch) => !!readCh()[`${book}.${ch}`];
+  function setRead(book, ch, on) {
+    const r = readCh(), k = `${book}.${ch}`;
+    if (on) r[k] = Date.now(); else delete r[k];
+    store.set('readch', r);
+    decorateProgress();
+  }
+  const bookDone = (slug, n) => { const r = readCh(); let d = 0; for (let c = 1; c <= n; c++) if (r[`${slug}.${c}`]) d++; return d; };
+  async function decorateProgress(root = document) {
+    const { by, list } = await getBooks();
+    // progress bar along the bottom of every book tile (home, version pages, picker)
+    $$('.book-grid a[data-book], .book-grid a[data-pick]', root).forEach(a => {
+      const b = by[a.dataset.book || a.dataset.pick]; if (!b) return;
+      const n = b.verses.length, d = bookDone(b.slug, n);
+      let bar = a.querySelector('.bp');
+      a.classList.toggle('complete', d === n);
+      if (!d) { bar?.remove(); a.removeAttribute('title'); return; }
+      if (!bar) { bar = document.createElement('i'); bar.className = 'bp'; a.appendChild(bar); }
+      bar.style.setProperty('--p', (d / n * 100).toFixed(1) + '%');
+      a.title = `${d} of ${n} chapters read`;
+    });
+    // chapter numbers already read (book page, picker)
+    $$('.num-grid a[href]', root).forEach(a => {
+      const m = a.getAttribute('href').match(/^\/[a-z]+\/([a-z0-9]+)\/(\d+)\/$/);
+      if (m) a.classList.toggle('read', isRead(m[1], +m[2]));
+    });
+    // book page summary
+    const box = $('[data-book-progress]', root);
+    if (box) {
+      const b = by[box.dataset.book], n = b.verses.length, d = bookDone(b.slug, n);
+      let next = 0; for (let c = 1; c <= n; c++) if (!isRead(b.slug, c)) { next = c; break; }
+      const ver = $('#main').dataset.ver || prefVer();
+      box.innerHTML = `<div class="progress-row"><strong>${d} of ${n} chapter${n > 1 ? 's' : ''} read</strong><span class="muted">${Math.round(d / n * 100)}%</span></div>
+        <div class="plan-progress"><div style="width:${d / n * 100}%"></div></div>
+        ${next ? `<a class="btn" href="${urlFor(ver, b.slug, next)}">${icon('book')} ${d ? 'Continue with' : 'Start with'} chapter ${next}</a>` : `<p class="done-msg">${icon('check')} You’ve read the whole book!</p>`}`;
+      box.hidden = false;
+    }
+    return { list };
+  }
+  function chapterReadButton(main, book, ch) {
     const foot = $('.chapter-foot', main); if (!foot) return;
-    const k = `${book}.${ch}`;
     const b = document.createElement('button');
-    b.type = 'button'; b.className = 'btn ghost';
-    const paint = () => { b.innerHTML = icon('check') + (plan.done[k] ? ' Read' : ' Mark as read'); b.classList.toggle('on', !!plan.done[k]); };
+    b.type = 'button'; b.className = 'btn ghost read-btn';
+    const paint = () => { const r = isRead(book, ch); b.innerHTML = icon('check') + (r ? ' Read' : ' Mark as read'); b.classList.toggle('on', r); };
     paint();
-    b.onclick = () => { if (plan.done[k]) delete plan.done[k]; else plan.done[k] = 1; store.set('plan', plan); paint(); toast(plan.done[k] ? 'Marked as read' : 'Unmarked'); };
+    b.onclick = () => { const on = !isRead(book, ch); setRead(book, ch, on); paint(); toast(on ? 'Marked as read' : 'Marked as unread'); };
     foot.insertBefore(b, foot.lastElementChild);
+    // reaching the end of the chapter counts as reading it (after a scroll, or 15 s on a short chapter)
+    clearInterval(chapterReadButton.t);
+    if (isRead(book, ch) || !('IntersectionObserver' in window)) return;
+    const t0 = Date.now(); let seen = false, scrolled = false;
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) seen = true; });
+    io.observe(foot);
+    window.addEventListener('scroll', () => { scrolled = true; }, { passive: true, once: true });
+    chapterReadButton.t = setInterval(() => {
+      if (!foot.isConnected) { clearInterval(chapterReadButton.t); io.disconnect(); return; }
+      if (seen && (scrolled || Date.now() - t0 > 15000)) {
+        clearInterval(chapterReadButton.t); io.disconnect();
+        if (!isRead(book, ch)) {
+          setRead(book, ch, true); paint();
+          getBooks().then(({ by }) => getVers().then(vers => {
+            const bk = by[book], d = bookDone(book, bk.verses.length);
+            toast(`${bookName(bk, vers, prefVer())} ${ch} read · ${d}/${bk.verses.length} chapters`);
+          }));
+        }
+      }
+    }, 1500);
   }
 
   // ---------- saved ----------
@@ -940,6 +1009,25 @@
       if (tab === 'bookmarks') items = Object.entries(marks.bm).sort((a, b) => b[1] - a[1]).map(([k]) => ({ k }));
       if (tab === 'highlights') items = Object.entries(marks.hl).map(([k, c]) => ({ k, c }));
       if (tab === 'notes') items = Object.entries(marks.notes).sort((a, b) => b[1].ts - a[1].ts).map(([k, n]) => ({ k, note: n.text }));
+      if (tab === 'progress') {
+        const { list } = await getBooks();
+        const r = readCh(), all = list.reduce((n, b) => n + b.verses.length, 0), done = Object.keys(r).filter(k => by[k.split('.')[0]]).length;
+        const part = t => { const bs = list.filter(b => b.t === t); const n = bs.reduce((x, b) => x + b.verses.length, 0); const d = bs.reduce((x, b) => x + bookDone(b.slug, b.verses.length), 0); return [d, n]; };
+        const bar = (d, n) => `<div class="plan-progress"><div style="width:${n ? d / n * 100 : 0}%"></div></div>`;
+        const [od, on] = part('ot'), [nd, nn] = part('nt');
+        const rows = t => list.filter(b => b.t === t).map(b => {
+          const n = b.verses.length, d = bookDone(b.slug, n);
+          return `<li><a href="${urlFor(ver, b.slug)}"><span class="pb-name">${esc(bookName(b, vers, ver))}${d === n ? ' ' + icon('check') : ''}</span>
+            <span class="pb-bar"><i style="width:${d / n * 100}%"></i></span><span class="pb-n">${d}/${n}</span></a></li>`;
+        }).join('');
+        box.innerHTML = `<div class="progress-card"><div class="progress-row"><strong>Whole Bible</strong><span>${done} of ${all} chapters · ${Math.round(done / all * 100)}%</span></div>${bar(done, all)}
+          <div class="progress-row"><span>Old Testament</span><span class="muted">${od}/${on}</span></div>${bar(od, on)}
+          <div class="progress-row"><span>New Testament</span><span class="muted">${nd}/${nn}</span></div>${bar(nd, nn)}</div>
+          <p class="muted">A chapter counts as read when you reach its end, tap “Mark as read”, or tick it in the reading plan.</p>
+          <h2 class="grid-title">Old Testament</h2><ol class="progress-books">${rows('ot')}</ol>
+          <h2 class="grid-title">New Testament</h2><ol class="progress-books">${rows('nt')}</ol>`;
+        return;
+      }
       if (tab === 'history') {
         const h = store.get('history', []);
         box.innerHTML = h.length ? `<ol class="results">${h.map(x => `<li><a href="${urlFor(ver, x.book, x.ch)}${x.v > 1 ? '#v' + x.v : ''}"><strong>${esc(label(x.book, x.ch))}</strong><time>${new Date(x.ts).toLocaleString()}</time></a></li>`).join('')}</ol>

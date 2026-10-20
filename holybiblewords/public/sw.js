@@ -1,8 +1,8 @@
 /* Holy Bible Words service worker: app shell + offline reading. */
-const SHELL = 'hbw-shell-v11';
-const PAGES = 'hbw-pages-v11';
+const SHELL = 'hbw-shell-v12';
+const PAGES = 'hbw-pages-v12';
 const DATA = 'hbw-data';            // also filled by "Download for offline" on /app/
-const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=11', '/assets/js/app.js?v=11', '/assets/img/logo-64.png',
+const SHELL_URLS = ['/offline/', '/assets/css/app.css?v=12', '/assets/js/app.js?v=12', '/assets/img/logo-64.png',
   '/assets/img/icon-192.png', '/data/books.json', '/data/versions.json', '/data/votd.json', '/manifest.webmanifest'];
 
 self.addEventListener('install', e => {

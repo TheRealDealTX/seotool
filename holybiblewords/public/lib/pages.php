@@ -198,7 +198,8 @@ function page_book(string $ver, string $slug): array {
     $crumbs = [['Home', '/'], [versions()[$ver]['label'], "/$ver/"], [$name, null]];
     $body = '<div class="wrap">' . breadcrumbs($crumbs)
         . '<header class="page-head"><h1>' . e($name) . '</h1><p class="muted">' . count($book['verses']) . ' chapter' . (count($book['verses']) > 1 ? 's' : '') . ' · ' . e(versions()[$ver]['label']) . '</p></header>'
-        . $notice . $intro . '<h2 class="grid-title">Chapters</h2>' . $grid . '</div>';
+        . $notice . '<div class="book-progress" data-book-progress data-book="' . $slug . '" hidden></div>'
+        . $intro . '<h2 class="grid-title">Chapters</h2>' . $grid . '</div>';
     return [
         'title' => "$name | " . SITE_NAME,
         'description' => "Read the book of $name (" . versions()[$ver]['short'] . ') online, chapter by chapter.',
@@ -442,8 +443,8 @@ function page_plan(): array {
 }
 
 function page_saved(): array {
-    $body = '<div class="wrap narrow"><header class="page-head"><h1>Saved</h1><p class="muted">Bookmarks, highlights, notes and reading history are stored on this device.</p></header>'
-        . '<div class="tabs" role="tablist"><button role="tab" data-tab="bookmarks" aria-selected="true">Bookmarks</button><button role="tab" data-tab="highlights">Highlights</button><button role="tab" data-tab="notes">Notes</button><button role="tab" data-tab="history">History</button></div>'
+    $body = '<div class="wrap narrow"><header class="page-head"><h1>Saved</h1><p class="muted">Bookmarks, highlights, notes, reading history and progress are stored on this device.</p></header>'
+        . '<div class="tabs" role="tablist"><button role="tab" data-tab="bookmarks" aria-selected="true">Bookmarks</button><button role="tab" data-tab="highlights">Highlights</button><button role="tab" data-tab="notes">Notes</button><button role="tab" data-tab="history">History</button><button role="tab" data-tab="progress">Progress</button></div>'
         . '<div id="saved-app"><noscript><p class="notice">Saved items need JavaScript.</p></noscript></div></div>';
     return ['title' => 'Saved Verses | ' . SITE_NAME, 'canonical' => '/saved/', 'body' => $body, 'type' => 'saved', 'noindex' => true];
 }
