@@ -2,7 +2,7 @@
 return [
     'title'       => 'What to Do If Your Insurance Claim Was Denied in San Marcos',
     'seo_title'   => 'Denied Insurance Claim in San Marcos? Your Next Steps',
-    'description' => 'Denied insurance claim in San Marcos? Learn common denial reasons, how to read the letter, request the claim file, seek re-inspection, appraisal or a TDI complaint.',
+    'description' => 'Denied insurance claim in San Marcos? Common denial reasons, how to read the letter, and next steps: claim file, re-inspection, appraisal, TDI complaint.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/what-to-do-if-your-claim-was-denied-in-san-marcos.webp',
     'image_alt'   => 'Homeowner reviewing an insurance claim denial letter at a desk',
@@ -124,6 +124,10 @@ return [
 
 <h3>When to talk to an attorney</h3>
 <p>Public adjusters are not attorneys and cannot give legal advice. If the denial rests on how an exclusion should be interpreted, if you believe the insurer acted in bad faith, or if a deadline is getting close, consult a Texas attorney. Weather-related property claims are subject to <a href="https://statutes.capitol.texas.gov/Docs/IN/htm/IN.542A.htm" target="_blank" rel="noopener">Texas Insurance Code Chapter 542A</a>, which requires written notice at least 61 days before filing suit. Many policies also contain a contractual deadline to sue, often two years and one day from when the claim accrued. An attorney can tell you what applies to your situation.</p>
+
+<h2>Partial denials and underpayments</h2>
+
+<p>Not every denial is a flat "no." Many San Marcos-area claims end with the insurer paying for some items, such as gutters, window screens or a few shingles, while denying the rest. Others are technically approved but paid at an amount that will not cover the repair. These situations call for a slightly different approach. Start by separating what was denied (a coverage or causation decision) from what was underpaid (a valuation decision). The denied portion is usually addressed with evidence about cause and coverage. The underpaid portion is usually addressed with a detailed estimate, measurements and photos, and, if the disagreement persists, possibly appraisal. Our <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a> page explains how that review works.</p>
 
 <h2>Mistakes to avoid after a denial</h2>
 

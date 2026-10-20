@@ -2,7 +2,7 @@
 return [
     'title'       => 'How to Review an Underpaid Roof Insurance Estimate',
     'seo_title'   => 'How to Review an Underpaid Roof Insurance Estimate (Xactimate)',
-    'description' => 'How to review an underpaid roof insurance estimate line by line: squares, waste, starter, ridge, drip edge, flashing, steep charges, O&P, code items and matching.',
+    'description' => 'How to review an underpaid roof insurance estimate line by line: squares, waste, starter, ridge, drip edge, flashing, steep charges, O&P and code items.',
     'kicker'      => 'Roof Claims',
     'image'       => '/assets/img/featured/how-to-review-underpaid-roof-insurance-estimate.webp',
     'image_alt'   => 'Adjuster reviewing a roof insurance estimate and roof diagram on a computer',

@@ -2,7 +2,7 @@
 return [
     'title'       => 'Replacement Cost vs. Actual Cash Value in Texas Property Claims',
     'seo_title'   => 'Replacement Cost vs. Actual Cash Value in Texas | Claim Guide',
-    'description' => 'Replacement cost vs. actual cash value in Texas: how depreciation works, when recoverable depreciation is released, and how roof payment schedules change payouts.',
+    'description' => 'Replacement cost vs. actual cash value in Texas: how depreciation works, when held-back depreciation is paid, and how roof payment schedules cut payouts.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/replacement-cost-vs-actual-cash-value-texas.webp',
     'image_alt'   => 'Homeowners reviewing an insurance claim payment breakdown with a calculator',
@@ -140,6 +140,21 @@ return [
 <li><strong>Mortgage company endorsement.</strong> If you have a mortgage, checks may be payable to you and your lender, and the lender may control how funds are released.</li>
 <li><strong>Policy limits.</strong> The total cannot exceed the applicable coverage limit.</li>
 </ul>
+
+<h2>Questions to ask your adjuster about depreciation</h2>
+
+<p>You do not have to accept a depreciation figure you do not understand. Asking specific questions in writing often clarifies the numbers and sometimes reveals an error. Consider asking:</p>
+
+<ul>
+<li><strong>What age did you use for the roof (or other item), and where did that number come from?</strong> If the answer is an assumption, provide documents showing the actual installation date.</li>
+<li><strong>What expected life did you assume for this material?</strong> Different materials, such as composition shingles and standing-seam metal, have very different expected lives.</li>
+<li><strong>Which line items are depreciated, and at what percentage?</strong> Ask for an explanation of any line that seems out of step with the rest.</li>
+<li><strong>Is this depreciation recoverable or non-recoverable?</strong> The estimate summary usually separates the two. If it does not, ask.</li>
+<li><strong>What is the deadline to complete repairs and claim the holdback, and what documents do you need?</strong> Get the answer in writing so there is no confusion later.</li>
+<li><strong>If my contractor finds more damage, how should I submit it?</strong> Supplements are easier to handle before the final invoice than after.</li>
+</ul>
+
+<p>Keep every answer with your claim records. If the response does not resolve the disagreement, and the dispute is about the amount of the loss rather than coverage, the appraisal provision in your policy may be an option. Our <a href="/services/insurance-appraisal/">insurance appraisal</a> page explains how that process generally works. For questions about whether something is covered at all, or about legal deadlines, talk to a Texas attorney.</p>
 
 <h2>How a San Marcos public adjuster can help</h2>
 
