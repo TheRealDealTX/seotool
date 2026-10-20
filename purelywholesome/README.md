@@ -53,8 +53,8 @@ brine chicken": 16k impressions, 0.9% CTR).
   related posts, and an author and editorial box linking to a new
   `/editorial-policy/`.
 * **Redirects:** old duplicate URLs now point at the matching post, not the homepage
-  (`app/redirects.php`). WordPress image sizes (`-300x200.webp`) redirect to
-  the original. `/feed/`, `/?s=` and the Yoast sitemap URLs all still work.
+  (`app/redirects.php`). All 1,898 WordPress image-size URLs (`-300x200.webp`) exist
+  as real files. `/feed/`, `/?s=` and the Yoast sitemap URLs all still work.
 * **9 interactive tools** at `/tools/`, each also embedded in the relevant
   articles: brine calculator, lamb cooking calculator, lamb dinner plate
   builder, goat gestation calculator (with calendar export), goat temperature
@@ -84,6 +84,7 @@ brine chicken": 16k impressions, 0.9% CTR).
 | `content/posts/<slug>.php`, `content/index.php` | Post bodies and the metadata index (the source of truth now) |
 | `wp-content/uploads/` | The old media library at its original paths, plus `optimized/` WebP copies |
 | `_build/import_wp.py` | One-time importer from the WordPress scrape (kept for reference) |
+| `_build/make_variants.py` | Recreates WordPress resized image files (`-300x200.webp`). The host 404s missing images before PHP runs, so these must exist as real files |
 | `_build/validate.py` | Checks old URLs and crawls for broken links, H1s, meta and JSON-LD |
 
 ## Running and deploying
