@@ -66,7 +66,7 @@ return [
 <figure><img src="/assets/img/stock/water-damaged-ceiling-homeowners-meeting.webp" alt="Homeowners talking with an adjuster under a water-damaged ceiling" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>Attic and ceiling plumbing breaks often show up first as stains and sagging drywall.</figcaption></figure>
 
 <h2>Ice Storms: Damage Beyond the Plumbing</h2>
-<p>Not every freeze claim is about pipes. During the January&ndash;February 2023 ice storm, ice built up on trees across western and northern Hays County, and the weight brought down limbs and whole trees. That kind of loss is closer to a storm claim than a plumbing claim:</p>
+<p>Not every freeze claim is about pipes. During the January&ndash;February 2023 ice storm, NOAA recorded ice accumulations from about a quarter inch in Buda to about half an inch in Dripping Springs. Ice that heavy on tree limbs is a common source of property damage, and that kind of loss is closer to a storm claim than a plumbing claim:</p>
 <ul>
 <li>Limbs that punctured roofing or crushed gutters, carports, and patio covers.</li>
 <li>Fences and outbuildings flattened by falling trees.</li>
