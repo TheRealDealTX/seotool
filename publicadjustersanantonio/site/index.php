@@ -7,6 +7,16 @@ declare(strict_types=1);
 
 require __DIR__ . '/includes/bootstrap.php';
 
+// Canonical scheme + host. Hostinger's edge ignores the .htaccess host rules and
+// terminates TLS upstream (REQUEST_SCHEME is always http), so enforce them here.
+$canonHost = (string) parse_url(cfg('site_url'), PHP_URL_HOST);
+$reqHost = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+$insecure = strtolower((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')) === 'http';
+if ($reqHost === 'www.' . $canonHost || ($insecure && $reqHost === $canonHost)) {
+    header('Location: ' . rtrim(cfg('site_url'), '/') . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
+    exit;
+}
+
 $uri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode((string) parse_url($uri, PHP_URL_PATH));
 $path = '/' . ltrim(preg_replace('#/+#', '/', $path), '/');
