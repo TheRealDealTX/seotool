@@ -76,6 +76,9 @@ return [
 </ul>
 <p>If the insurer&rsquo;s numbers fall short, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> or <a href="/services/insurance-appraisal/">appraisal</a> may help resolve a disagreement over the amount of loss.</p>
 
+<h2>Fires at Businesses and Rental Properties</h2>
+<p>Commercial fires raise additional questions. A restaurant kitchen fire, a warehouse electrical fire, or a fire in one apartment unit can shut down operations, damage tenant improvements, and spread smoke to neighboring spaces. Business income and extra expense coverage, if purchased, may help with lost revenue and continuing costs during restoration, usually subject to a waiting period and the policy&rsquo;s definitions. Landlords may also have loss of rents coverage. Keep financial records, payroll reports, and lease documents together from the start. See <a href="/services/commercial-property-claims/">commercial property claims</a> or <a href="/services/residential-property-claims/">residential property claims</a> for more on each.</p>
+
 <h2>How Dallas Public Adjuster Can Help</h2>
 <p>Dallas Public Adjuster, a service of Rise Public Adjusting LLC, represents policyholders on fire losses throughout Dallas, Dallas County, and surrounding North Texas communities. We can document the building with photos and Matterport 3D imaging, prepare an Xactimate estimate, help organize the contents inventory, track living expenses, and communicate with your insurer. We do not perform repairs on claims we adjust, and we cannot guarantee a result. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 
