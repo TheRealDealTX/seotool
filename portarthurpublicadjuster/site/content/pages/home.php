@@ -2,7 +2,7 @@
 return [
     'template'    => 'home',
     'title'       => 'Port Arthur Public Adjuster',
-    'seo_title'   => 'Port Arthur Public Adjuster | Hurricane & TWIA Claim Help',
+    'seo_title'   => 'Port Arthur Public Adjuster | Call (832) 503-5866',
     'description' => 'Port Arthur Public Adjuster helps Jefferson County homeowners and businesses with hurricane, TWIA windstorm, flood, fire, and denied claims. Free claim review.',
     'lead'        => 'Licensed Texas public adjusting for homeowners and business owners in Port Arthur, Jefferson County, and Southeast Texas.',
     'image'       => '/wp-content/uploads/2026/02/Port-Arthur-Public-Adjuster-Site-Image.webp',
