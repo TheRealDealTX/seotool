@@ -1,0 +1,75 @@
+<?php
+/**
+ * Permanent (301) redirects for legacy WordPress URLs.
+ * Every original page and post keeps its exact URL, so these only cover
+ * WordPress-generated archives, shortlinks, and sitemaps.
+ */
+return [
+    'paths' => [
+        '/home/'                                  => '/',
+        '/category/general/'                      => '/blog/',
+        '/category/uncategorized/'                => '/blog/',
+        '/author/infohoustonpublicadjusting-com/' => '/author/joseph-dittman/',
+        '/author/admin/'                          => '/author/joseph-dittman/',
+        '/comments/feed/'                         => '/feed/',
+        '/category/general/feed/'                 => '/feed/',
+        '/sitemap_index.xml'                      => '/sitemap.xml',
+        '/wp-sitemap.xml'                         => '/sitemap.xml',
+        '/post-sitemap.xml'                       => '/sitemap.xml',
+        '/page-sitemap.xml'                       => '/sitemap.xml',
+        '/category-sitemap.xml'                   => '/sitemap.xml',
+        '/author-sitemap.xml'                     => '/sitemap.xml',
+        // Old WordPress attachment pages (Yoast sent these to the image file). Point them at the content instead.
+        '/after-the-flames-insurance-adjuster/after-the-flames-insurance-adjuster/' => '/after-the-flames-insurance-adjuster/',
+        '/do-i-need-a-public-adjuster/the-claim-decision-that-can-cost-you-thousands-do-i-need-a-public-adjuster_/' => '/do-i-need-a-public-adjuster/',
+        '/do-i-need-a-public-adjuster/how-to-choose-the-right-public-adjuster-in-san-marcos/' => '/do-i-need-a-public-adjuster/',
+        '/do-i-need-a-public-adjuster/7-signs-you-should-hire-a-public-adjuster/' => '/do-i-need-a-public-adjuster/',
+        '/roof-damage-public-adjuster/roof-damage-public-adjuster/' => '/roof-damage-public-adjuster/',
+        '/san-marcos-public-adjuster-site-image/'  => '/',
+        '/san-marcos-public-adjuster-site-icon/cropped-san-marcos-public-adjuster-site-icon-webp/' => '/',
+        '/san-marcos-public-adjuster-site-icon/'   => '/',
+        '/san-marcos-public-adjuster-logo/'        => '/',
+        '/forney-public-adjuster-site-image/'      => '/',
+        '/forney-public-adjuster-site-icon/cropped-forney-public-adjuster-site-icon-webp/' => '/',
+        '/forney-public-adjuster-site-icon/'       => '/',
+        '/forney-public-adjuster-site-logo/'       => '/',
+        '/home/league-city-public-adjuster-bg/'    => '/',
+        '/home/resolution/'                        => '/',
+        '/home/negotiation/'                       => '/',
+        '/home/claim-preparation/'                 => '/',
+        '/home/policy-analysis/'                   => '/',
+        '/home/property-inspection/'               => '/',
+        '/home/initial-consultation/'              => '/',
+        '/contact-us/'                            => '/contact/',
+        '/about/'                                 => '/about-us/',
+        '/claim-tools/claim-calculator/'          => '/claim-calculator/',
+        '/tools/'                                 => '/claim-tools/',
+        '/building-codes/'                        => '/local-building-codes/',
+        '/free-claim-review-form/'                => '/free-claim-review/',
+        '/faqs/'                                  => '/faq/',
+        '/areas-we-serve/'                        => '/service-areas/',
+    ],
+    // WordPress ?p= and ?page_id= shortlinks (IDs from the original site).
+    'ids' => [
+        246 => '/after-the-flames-insurance-adjuster/',
+        235 => '/do-i-need-a-public-adjuster/',
+        226 => '/roof-damage-public-adjuster/',
+        209 => '/what-is-a-public-adjuster-and-how-to-hire-one/',
+        191 => '/what-is-a-public-claims-adjuster/',
+        169 => '/how-to-find-a-public-adjuster/',
+        151 => '/when-is-it-too-late-to-hire-a-public-adjuster/',
+        103 => '/are-public-adjusters-worth-it/',
+        30  => '/terms-of-use/',
+        28  => '/contact/',
+        26  => '/blog/',
+        24  => '/services/',
+        22  => '/about-us/',
+        19  => '/',
+        3   => '/privacy-policy/',
+    ],
+    // ?attachment_id= links: the old site redirected these to the image file.
+    'attachments' => [
+        223 => '/wp-content/uploads/2026/02/San-Marcos-Public-Adjuster-Logo-Wh.webp',
+        202 => '/wp-content/uploads/2026/02/San-Marcos-Public-Adjuster-Logo-Wh.webp',
+    ],
+];

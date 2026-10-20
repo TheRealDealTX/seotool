@@ -1,0 +1,20 @@
+<?php
+return [
+    'template'    => 'home',
+    'title'       => 'San Marcos Public Adjuster',
+    'seo_title'   => 'San Marcos Public Adjuster | Free Claim Review | (832) 503-5866',
+    'description' => 'San Marcos Public Adjuster represents Hays County homeowners and businesses on hail, wind, flood, freeze, fire, and water damage claims. Free claim review.',
+    'lead'        => 'Licensed Texas public adjusting for homeowners and business owners in San Marcos, Hays County, and surrounding Central Texas communities.',
+    'image'       => '/wp-content/uploads/2026/02/San-Marcos-Public-Adjuster-Site-Image.webp',
+    'image_alt'   => 'San Marcos Public Adjuster',
+    'faqs' => [
+        ['q' => 'What does a San Marcos Public Adjuster do?', 'a' => '<p>A public adjuster is a claim professional licensed by the Texas Department of Insurance who represents the policyholder, not the insurance company. As a San Marcos Public Adjuster, we review your policy, inspect and document the damage, prepare a detailed line-item estimate, and communicate with your insurer about the claim. Our work covers hail, wind, storm, flood, freeze, fire, smoke, and water damage on homes, rentals, and commercial buildings.</p>'],
+        ['q' => 'How much does a public adjuster cost in Texas?', 'a' => '<p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. Texas public adjuster contracts must also use TDI-approved terms and give you 72 hours after signing to cancel. The <a href="/free-claim-review/">Free Claim Review</a> costs nothing and carries no obligation.</p>'],
+        ['q' => 'Is a public adjuster the same as the insurance company\'s adjuster?', 'a' => '<p>No. The adjuster your insurer sends (a staff or independent adjuster) evaluates the claim on the insurer\'s behalf. A public adjuster is hired by you and represents the insured only. Both may inspect the same roof or room, but they work for different parties. Read more in <a href="/public-adjuster-vs-insurance-adjuster/">public adjuster vs. insurance adjuster</a>.</p>'],
+        ['q' => 'Can you help if my claim was denied, underpaid, or already closed?', 'a' => '<p>Often, yes. We can review the denial or closing letter, your policy, and the insurer\'s estimate to see whether damage was missed or whether there is a basis to ask the insurer to reconsider, supplement, or reopen the claim. Results depend on the policy and the facts, so no one can promise a different outcome. See <a href="/services/denied-insurance-claims/">denied claims</a> and <a href="/services/underpaid-insurance-claims/">underpaid claims</a>. For lawsuits or deadlines to sue, consult a Texas attorney.</p>'],
+        ['q' => 'Does homeowners insurance cover flood damage in San Marcos?', 'a' => '<p>Standard homeowners and commercial property policies generally exclude flood. Flood coverage comes from the National Flood Insurance Program (NFIP) or a private flood policy, and NFIP policies typically have a 30-day waiting period. Water that enters through a storm-damaged roof or a burst pipe is usually handled differently from rising floodwater. Our <a href="/services/flood-damage-claims/">flood damage claims</a> page explains the difference.</p>'],
+        ['q' => 'How long do I have to file a property insurance claim?', 'a' => '<p>It depends on your policy. Most policies require prompt notice of a loss, and many Texas policies also set a contractual deadline to file suit. Check your policy\'s conditions section, report damage as soon as you discover it, and consult a Texas attorney about legal deadlines. See <a href="/when-is-it-too-late-to-hire-a-public-adjuster/">when it is too late to hire a public adjuster</a>.</p>'],
+        ['q' => 'What areas does San Marcos Public Adjuster serve?', 'a' => '<p>We serve San Marcos, Hays County, and surrounding Central Texas communities, including Kyle, Buda, Wimberley, Dripping Springs, New Braunfels, Lockhart, Seguin, and Martindale. See the full list on our <a href="/service-areas/">service areas</a> page.</p>'],
+    ],
+    'body' => '',
+];

@@ -1,0 +1,181 @@
+{
+ "source": "U.S. Census Bureau 2024 Gazetteer Files (internal points of places and ZCTAs)",
+ "places": [
+  {
+   "name": "Bear Creek",
+   "lat": 30.1824,
+   "lon": -97.9401,
+   "kind": "city"
+  },
+  {
+   "name": "Belterra",
+   "lat": 30.1885,
+   "lon": -97.9845,
+   "kind": "community"
+  },
+  {
+   "name": "Buda",
+   "lat": 30.0804,
+   "lon": -97.8557,
+   "kind": "city"
+  },
+  {
+   "name": "Driftwood",
+   "lat": 30.1331,
+   "lon": -98.0373,
+   "kind": "community"
+  },
+  {
+   "name": "Dripping Springs",
+   "lat": 30.1959,
+   "lon": -98.0937,
+   "kind": "city"
+  },
+  {
+   "name": "Hays",
+   "lat": 30.1215,
+   "lon": -97.8724,
+   "kind": "city"
+  },
+  {
+   "name": "Kyle",
+   "lat": 29.9941,
+   "lon": -97.8833,
+   "kind": "city"
+  },
+  {
+   "name": "Lockhart",
+   "lat": 29.8778,
+   "lon": -97.6826,
+   "kind": "city"
+  },
+  {
+   "name": "Martindale",
+   "lat": 29.845,
+   "lon": -97.8383,
+   "kind": "city"
+  },
+  {
+   "name": "Maxwell",
+   "lat": 29.8833,
+   "lon": -97.8008,
+   "kind": "community"
+  },
+  {
+   "name": "Mountain City",
+   "lat": 30.0392,
+   "lon": -97.8915,
+   "kind": "city"
+  },
+  {
+   "name": "New Braunfels",
+   "lat": 29.6993,
+   "lon": -98.1151,
+   "kind": "city"
+  },
+  {
+   "name": "Niederwald",
+   "lat": 29.9942,
+   "lon": -97.7757,
+   "kind": "city"
+  },
+  {
+   "name": "Redwood",
+   "lat": 29.8098,
+   "lon": -97.9093,
+   "kind": "community"
+  },
+  {
+   "name": "San Marcos",
+   "lat": 29.8736,
+   "lon": -97.9367,
+   "kind": "city"
+  },
+  {
+   "name": "Staples",
+   "lat": 29.7623,
+   "lon": -97.8245,
+   "kind": "city"
+  },
+  {
+   "name": "Uhland",
+   "lat": 29.9666,
+   "lon": -97.7881,
+   "kind": "city"
+  },
+  {
+   "name": "Wimberley",
+   "lat": 29.9848,
+   "lon": -98.0906,
+   "kind": "city"
+  },
+  {
+   "name": "Woodcreek",
+   "lat": 30.0266,
+   "lon": -98.1115,
+   "kind": "city"
+  }
+ ],
+ "zips": [
+  {
+   "zip": "78130",
+   "lat": 29.6936,
+   "lon": -98.0687
+  },
+  {
+   "zip": "78610",
+   "lat": 30.0795,
+   "lon": -97.841
+  },
+  {
+   "zip": "78619",
+   "lat": 30.1122,
+   "lon": -98.031
+  },
+  {
+   "zip": "78620",
+   "lat": 30.2256,
+   "lon": -98.1363
+  },
+  {
+   "zip": "78640",
+   "lat": 29.9949,
+   "lon": -97.8212
+  },
+  {
+   "zip": "78644",
+   "lat": 29.8726,
+   "lon": -97.6744
+  },
+  {
+   "zip": "78652",
+   "lat": 30.1346,
+   "lon": -97.8606
+  },
+  {
+   "zip": "78655",
+   "lat": 29.8161,
+   "lon": -97.8351
+  },
+  {
+   "zip": "78656",
+   "lat": 29.9045,
+   "lon": -97.8073
+  },
+  {
+   "zip": "78666",
+   "lat": 29.8817,
+   "lon": -97.9848
+  },
+  {
+   "zip": "78676",
+   "lat": 30.0388,
+   "lon": -98.1596
+  },
+  {
+   "zip": "78737",
+   "lat": 30.177,
+   "lon": -97.9567
+  }
+ ]
+}

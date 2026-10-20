@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 dist/
+sanmarcospublicadjuster/site/data/cache/*
+!sanmarcospublicadjuster/site/data/cache/.htaccess
+sanmarcospublicadjuster/site/data/logs/*
+!sanmarcospublicadjuster/site/data/logs/.htaccess
+sanmarcospublicadjuster/site/data/ratelimit/*
+!sanmarcospublicadjuster/site/data/ratelimit/.htaccess
+sanmarcospublicadjuster/site/includes/config.local.php
