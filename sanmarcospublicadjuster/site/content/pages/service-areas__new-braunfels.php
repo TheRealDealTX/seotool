@@ -55,6 +55,9 @@ return [
 <li><strong>Follow a checklist.</strong> Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists what insurers usually ask for.</li>
 </ol>
 
+<h2>Texas claim deadlines New Braunfels owners should know</h2>
+<p>Texas insurers must follow the Prompt Payment of Claims Act in <a href="https://statutes.capitol.texas.gov/Docs/IN/htm/IN.542.htm" target="_blank" rel="noopener">Texas Insurance Code Chapter 542</a>. In general, an insurer has 15 days after notice of a claim to acknowledge it, begin its investigation, and request the information it needs. After it receives everything it asked for, it generally has 15 business days to accept or reject the claim, or it can explain that it needs more time, up to 45 more days. Once it agrees to pay, payment is generally due within 5 business days. Deadlines can be extended after a declared weather catastrophe, and surplus lines insurers follow different timeframes. Keep a dated log of every request and response. For questions about lawsuits or deadlines to sue, consult a Texas attorney.</p>
+
 <h2>Permits in New Braunfels</h2>
 <p>The City of New Braunfels has its own permit office, and its code and permit requirements are separate from the City of San Marcos. Check with the city before roof replacement, structural work, or major water damage rebuilds. Properties outside city limits follow the requirements of Comal or Guadalupe County, as applicable. Insurers pay code-required upgrades only to the extent your policy’s ordinance or law coverage allows. For background, see our <a href="/local-building-codes/">building codes guide</a>.</p>
 

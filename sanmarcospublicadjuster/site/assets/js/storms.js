@@ -30,7 +30,7 @@
   function initMap() {
     var el = app.querySelector('[data-map]');
     if (!el || !window.L || map) return;
-    map = L.map(el, { scrollWheelZoom: false }).setView([26.27, -98.2], 9);
+    map = L.map(el, { scrollWheelZoom: false }).setView([29.97, -98.0], 10);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 15, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
     layer = L.layerGroup().addTo(map);
   }

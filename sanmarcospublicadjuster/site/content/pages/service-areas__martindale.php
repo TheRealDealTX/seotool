@@ -49,6 +49,9 @@ return [
 <li><strong>Small business losses.</strong> Building, inventory, and income questions under a commercial policy. See <a href="/services/commercial-property-claims/">commercial property claims</a>.</li>
 </ul>
 
+<h2>Documenting damage at river-area properties</h2>
+<p>When a storm brings both wind and rising water, the evidence for each cause can disappear quickly during cleanup. Before you tear anything out, photograph the high-water line on walls, fences, and outbuildings, and take separate photos of roof, window, and tree damage. Make a room-by-room list of damaged contents, and keep samples of flooring or drywall if you can safely do so. If you have both a flood policy and a homeowners policy, expect two adjusters and two separate claims, each with its own deadlines and paperwork. Keeping the records organized by cause helps each insurer see what it is responsible for. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> is a good place to start.</p>
+
 <h2>Permits in Martindale</h2>
 <p>Martindale is an incorporated city, so ask the City of Martindale what it requires before roof replacement, structural work, or rebuilding after water damage. Properties outside city limits in unincorporated Caldwell County follow county requirements, including any floodplain rules. Insurers pay code-required upgrades only to the extent your policy’s ordinance or law coverage allows. Our <a href="/local-building-codes/">building codes guide</a> explains the general rules.</p>
 

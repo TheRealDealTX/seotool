@@ -28,6 +28,6 @@ $c = $cur['data'] ?? null;
 <div class="wx-now">
   <p class="eyebrow eyebrow-gold mt-0">Now in San Marcos</p>
   <p class="wx-cond">Live conditions are temporarily unavailable.</p>
-  <p>The National Weather Service data feed did not respond. Please check back shortly, or see current conditions directly at <a href="https://forecast.weather.gov/MapClick.php?lat=26.2034&amp;lon=-98.23" target="_blank" rel="noopener" style="color:var(--gold-light)">weather.gov</a>.</p>
+  <p>The National Weather Service data feed did not respond. Please check back shortly, or see current conditions directly at <a href="https://forecast.weather.gov/MapClick.php?lat=<?= e((string) cfg('lat')) ?>&amp;lon=<?= e((string) cfg('lon')) ?>" target="_blank" rel="noopener" style="color:var(--gold-light)">weather.gov</a>.</p>
 </div>
 <?php endif; ?>

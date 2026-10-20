@@ -54,6 +54,9 @@ return [
 </ul>
 <p>Our <a href="/services/insurance-estimate-review/">insurance estimate review</a> and <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a> services cover these issues.</p>
 
+<h2>Why your date of loss matters</h2>
+<p>Insurers often ask exactly when the damage happened, especially for hail. If you noticed a leak months after spring storms, you may not know which storm caused it. A clear date of loss ties the damage to a specific weather event, helps the insurer apply the right deductible and policy period, and avoids arguments that the damage is old wear and tear. Write down when you first noticed the damage, save photos with their original timestamps, and note any storms you remember. Then compare those dates against NWS storm reports for Caldwell County and nearby Hays County. Report the claim as soon as you find damage, since policies require prompt notice. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists the records worth keeping.</p>
+
 <h2>Permits in Lockhart</h2>
 <p>The City of Lockhart has its own permit office, and its rules are separate from the City of San Marcos Permit Center. Check with the City of Lockhart before roof replacement or structural repair. Properties outside city limits in unincorporated Caldwell County follow county requirements. Whether your insurer pays for code-required upgrades depends on your policy’s ordinance or law coverage; our <a href="/local-building-codes/">building codes guide</a> explains the general rules.</p>
 

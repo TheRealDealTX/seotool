@@ -54,6 +54,9 @@ return [
 </table>
 <p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> walks through the full process.</p>
 
+<h2>When the wind estimate falls short</h2>
+<p>After a tornado or severe windstorm, the first estimate is often written quickly and may miss damage that is harder to see: lifted shingles that have not yet blown off, cracked trusses, damaged flashing, broken seals on windows, or interior damage that shows up days later. If you find more damage after the first inspection, report it and ask the insurer to reinspect. A supplement adds missed items or corrected pricing to an open claim, while appraisal is a policy process for resolving a disagreement over the amount of loss. Neither changes what the policy covers. Our <a href="/services/insurance-claim-supplements/">claim supplements</a> and <a href="/services/insurance-appraisal/">insurance appraisal</a> pages explain both.</p>
+
 <h2>Permits in Seguin</h2>
 <p>The City of Seguin has its own permit office, and its requirements are separate from the City of San Marcos. Ask the City of Seguin what it requires before a roof replacement, structural repair, or rebuild. Properties outside city limits in unincorporated Guadalupe County follow county requirements. Code-required upgrades are paid only to the extent your policy’s ordinance or law coverage allows; our <a href="/local-building-codes/">building codes guide</a> explains how that works.</p>
 

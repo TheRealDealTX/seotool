@@ -20,6 +20,6 @@ $days = !empty($fc['data']) ? forecast_days($fc['data']) : [];
 <?php endif; ?>
 <?php else: ?>
 <div class="wx-fallback">
-  <p class="mb-0"><strong>The 7-day forecast is temporarily unavailable.</strong> The National Weather Service feed did not respond. View the official forecast at <a href="https://forecast.weather.gov/MapClick.php?lat=26.2034&amp;lon=-98.23" target="_blank" rel="noopener">forecast.weather.gov</a>.</p>
+  <p class="mb-0"><strong>The 7-day forecast is temporarily unavailable.</strong> The National Weather Service feed did not respond. View the official forecast at <a href="https://forecast.weather.gov/MapClick.php?lat=<?= e((string) cfg('lat')) ?>&amp;lon=<?= e((string) cfg('lon')) ?>" target="_blank" rel="noopener">forecast.weather.gov</a>.</p>
 </div>
 <?php endif; ?>

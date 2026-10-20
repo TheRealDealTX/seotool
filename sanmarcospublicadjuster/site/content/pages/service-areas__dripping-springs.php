@@ -48,6 +48,9 @@ return [
 <h3>Businesses</h3>
 <p>Commercial properties may have business income coverage, separate deductibles, and different documentation needs. Our <a href="/services/commercial-property-claims/">commercial property claims</a> page explains what to gather.</p>
 
+<h2>Filing after a widespread hailstorm</h2>
+<p>After a storm like May 9, 2024, insurers, roofers, and adjusters across the area get busy at the same time. That can mean longer waits for inspections and estimates. Texas law sets deadlines in the Prompt Payment of Claims Act (Texas Insurance Code Chapter 542): an insurer generally has 15 days after notice to acknowledge the claim and begin its investigation, and 15 business days after receiving the information it requested to accept or reject the claim, with extensions allowed in some situations, including 15 extra days after a weather-related catastrophe declared by the insurance commissioner. Keep a written log of every contact and request. If your claim stalls, our <a href="/services/delayed-insurance-claims/">delayed insurance claims</a> page explains what we can do to help. For legal questions about deadlines, talk to a Texas attorney.</p>
+
 <h2>Permits in Dripping Springs</h2>
 <p>The City of Dripping Springs has its own permit office, and its requirements are separate from the City of San Marcos. Ask the city what is required before roof replacement or structural repair. Properties outside city limits in unincorporated Hays County do not need a county residential building permit, but septic, development, and floodplain rules still apply. Code-required upgrades are paid only to the extent your policy’s ordinance or law coverage allows; our <a href="/local-building-codes/">building codes guide</a> covers this.</p>
 

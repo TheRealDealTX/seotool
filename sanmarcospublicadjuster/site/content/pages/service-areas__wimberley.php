@@ -51,6 +51,9 @@ return [
 <li><strong>Mixed-cause losses.</strong> When wind, falling trees, and rising water all hit the same storm, each cause has to be documented on its own so the right policy responds.</li>
 </ul>
 
+<h2>Handling a flood claim and a homeowners claim together</h2>
+<p>After a Hill Country flood, many Wimberley property owners end up with two claims: a flood claim for rising water and a homeowners or commercial claim for wind, tree, or roof damage from the same storm. Each policy has its own adjuster, deductible, limits, and paperwork, and each insurer may point to the other. Clear photos of the high-water line, separate documentation of wind and tree damage, and a contents inventory make it easier to show which loss belongs where. San Marcos Public Adjuster can help organize both sides of the loss, and you can learn more about how these claims work on our <a href="/services/storm-damage-claims/">storm damage claims</a> page.</p>
+
 <h2>Permits in Wimberley and unincorporated Hays County</h2>
 <p>The City of Wimberley has its own permit office, separate from San Marcos. Check with the city before roof replacement, structural work, or rebuilding after a flood. Many homes with a Wimberley address are outside city limits, in unincorporated Hays County. The county does not issue residential building permits there, but it does regulate septic (OSSF), development, and floodplain matters, which can affect flood-damaged homes. Whether your insurer pays for code-related costs depends on your ordinance or law coverage; our <a href="/local-building-codes/">building codes guide</a> explains more.</p>
 
