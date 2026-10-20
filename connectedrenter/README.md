@@ -29,6 +29,17 @@ with a real 404 (the host ignores `.htaccess`). Preview locally with `python3 -m
 | Tools | `/tools/` + 9 interactive tools (affordability, moving cost, moving checklist, renters insurance, rent split, packing, truck size, inspection checklist, electricity bill) |
 | Other | `/about-us/`, `/privacy-policy/`, `/terms-of-use/`, `sitemap.xml`, `robots.txt` |
 
+## Design
+
+"Moving day" concept: Fraunces serif headlines with italic accents, Caveat handwriting, DM Sans body, and the
+original gold #DBA622 / maroon #680404 / red #ff2a13. Homepage pieces: full-photo hero with a moving-day ⇄
+move-in-day toggle, a pinned scroll story where a truck drives along the road, resources as cardboard boxes,
+tools as sticky notes on a corkboard, a pinned horizontal guide gallery, myth-vs-fact flip cards, a glowing
+Texas map, and courses as tickets. All motion respects `prefers-reduced-motion`.
+
+Photos: 23 Unsplash-License images listed in `photos.json` (credited on /about-us/), stored as
+`assets/img/photos/<slot>-{800,1600}.webp`.
+
 ## Source layout
 
 - `content/resources.py`, `content/blog.py` — page copy
