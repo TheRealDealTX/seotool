@@ -438,3 +438,15 @@ main.leaving { opacity: .55; transition: opacity .12s; }
 .pb-bar i { display: block; height: 100%; background: var(--brand); }
 .pb-n { font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .read-btn.on { color: var(--green); border-color: var(--green); }
+
+/* Cebuano translation popup (above sheets) */
+.tr-modal { position: fixed; inset: 0; z-index: 80; display: grid; place-items: end center; }
+@media (min-width: 700px) { .tr-modal { place-items: center; } }
+.tr-backdrop { position: absolute; inset: 0; background: rgba(8,14,12,.5); }
+.tr-box { position: relative; width: min(680px, 100%); height: min(82vh, 760px); display: flex; flex-direction: column; background: var(--surface);
+  border-radius: 20px 20px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,.25); overflow: hidden; padding-bottom: env(safe-area-inset-bottom);
+  transform: translateY(24px); opacity: 0; transition: transform .2s, opacity .2s; }
+@media (min-width: 700px) { .tr-box { border-radius: 20px; } }
+.tr-modal.open .tr-box { transform: none; opacity: 1; }
+.tr-box iframe { flex: 1; width: 100%; border: 0; background: var(--surface); }
+.com-translate { margin: 10px 0 0; }

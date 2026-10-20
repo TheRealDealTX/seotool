@@ -147,6 +147,7 @@
     }
     const token = ++navToken;
     stopListening();
+    closeTranslation();
     if (opts.push !== false) history.replaceState({ ...(history.state || {}), y: scrollY }, '');
     progress.className = 'on';
     $('#main').classList.add('leaving');
@@ -374,13 +375,12 @@
         ${cebuano ? '<p class="muted">Kini nga komentaryo anaa lamang sa English.</p>' : ''}</div>
         <div class="tabs" role="tablist">${d.items.map(x => `<button role="tab" type="button" data-com="${x.id}" aria-selected="${x.id === tab}">${esc(x.short)}</button>`).join('')}</div>
         <div class="com-body" lang="en">${body}</div>
-        <p class="com-foot">${esc(it.name)} · public domain${cebuano ? ` · <a href="#" data-translate>${icon('compare')} Hubara sa Cebuano (Google Translate)</a>` : ''}</p>`;
+        <p class="com-foot">${esc(it.name)} · public domain${cebuano ? `</p><p class="com-translate"><button type="button" class="btn ghost" data-translate>${icon('compare')} Hubara sa Cebuano</button>` : ''}</p>`;
       $$('[data-com]', box).forEach(b => b.onclick = () => { tab = b.dataset.com; store.set('comtab', tab); draw(); });
       const tr = $('[data-translate]', box);
       if (tr) tr.onclick = e => {
         e.preventDefault();
-        const text = $('.com-body', box).innerText.replace(/\s+\n/g, '\n').slice(0, 4500);
-        window.open('https://translate.google.com/?' + new URLSearchParams({ sl: 'en', tl: 'ceb', op: 'translate', text }), '_blank', 'noopener');
+        openTranslation(`${it.short} · ${name}:${range}`, $('.com-body', box).innerHTML);
       };
     };
     draw();
@@ -401,6 +401,28 @@
         : `<p class="muted">No related verses listed for ${esc(ref)}.</p>`}
       <p class="com-foot"><a href="${urlFor(ver, book, ch, v)}">Open the ${esc(ref)} page ${icon('right')}</a> · Cross references from OpenBible.info (CC BY)</p>`;
   }
+
+  // Cebuano translation popup: a same-origin page (/translate/) runs Google's free
+  // Website Translator on the commentary; it sits above any open sheet.
+  function openTranslation(title, html) {
+    window.hbwTranslatePayload = { title, html };
+    closeTranslation();
+    const wrap = document.createElement('div');
+    wrap.className = 'tr-modal';
+    wrap.innerHTML = `<div class="tr-backdrop" data-tr-close></div>
+      <div class="tr-box" role="dialog" aria-modal="true" aria-label="Hubad sa Cebuano">
+        <div class="sheet-head"><h2>Hubad sa Cebuano</h2><button class="icon-btn" type="button" data-tr-close aria-label="Close">${icon('x')}</button></div>
+        <iframe src="/translate/" title="Cebuano translation of the commentary"></iframe>
+      </div>`;
+    document.body.appendChild(wrap);
+    requestAnimationFrame(() => wrap.classList.add('open'));
+    $$('[data-tr-close]', wrap).forEach(b => b.addEventListener('click', closeTranslation));
+  }
+  function closeTranslation() {
+    const w = $('.tr-modal'); if (!w) return false;
+    w.remove(); return true;
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('.tr-modal')) { e.stopImmediatePropagation(); closeTranslation(); } }, true);
 
   // ---------- verse-of-the-day streak ----------
   const MILESTONES = [3, 7, 14, 21, 30, 50, 100, 150, 200, 365, 500, 1000];
@@ -1302,6 +1324,7 @@
     const u = ev?.notification?.extra?.url; if (u) navigate(u);
   });
   plugins?.App?.addListener?.('backButton', ({ canGoBack }) => {
+    if (closeTranslation()) return;
     if ($('#sheet-root').firstChild) closeSheet();
     else if (canGoBack) history.back();
     else plugins.App.exitApp();

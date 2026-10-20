@@ -102,6 +102,7 @@ switch ($path) {
     case '/saved/':  render_page(page_saved()); exit;
     case '/app/':    render_page(page_app()); exit;
     case '/offline/': render_page(page_offline()); exit;
+    case '/translate/': require __DIR__ . '/lib/translate-view.php'; exit;
     case '/blog/':   render_page(page_blog_index()); exit;
     case '/privacy-policy/': render_page(page_static('privacy-policy')); exit;
 }
