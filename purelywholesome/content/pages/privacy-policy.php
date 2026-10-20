@@ -1,0 +1,8 @@
+<?php
+return json_decode(<<<'PWFJSON'
+{
+ "title": "Privacy Policy",
+ "desc": "",
+ "html": "<p><strong>Effective Date:</strong> August 13, 2025</p>\n<p>At <strong><a href=\"/\">Purely Wholesome Farm</a></strong>, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your personal information when you interact with our website.</p>\n<h2 id=\"information-we-collect\">Information We Collect</h2>\n<p>We only collect personal details that you voluntarily provide to us, such as your <strong>name</strong> and <strong>email address</strong>, when you submit an inquiry or question through our contact form.</p>\n<h2 id=\"how-we-use-your-information\">How We Use Your Information</h2>\n<p>We use the information you provide solely for the purpose of <strong>responding to your inquiries, questions, or requests</strong>. Your details will <strong>not</strong> be used for any other purpose and will never be sold, rented, or shared with third parties.</p>\n<h2 id=\"data-security\">Data Security</h2>\n<p>We take appropriate measures to protect your personal information from unauthorized access, alteration, or disclosure.</p>\n<h2 id=\"your-consent\">Your Consent</h2>\n<p>By submitting your personal details through our contact form, you consent to our use of that information as described in this Privacy Policy.</p>\n<h2 id=\"changes-to-this-policy\">Changes to This Policy</h2>\n<p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>\n<h2 id=\"contact-us\">Contact Us</h2>\n<p>If you have any questions about this Privacy Policy, please reach out to us through our <a href=\"/contact-us/\">Contact</a> page.</p>"
+}
+PWFJSON, true);
