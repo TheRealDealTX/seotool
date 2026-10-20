@@ -363,7 +363,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tool-card--light small { color: var(--muted); }
 .tool-card--light .tool-card__go { color: var(--forest-3); }
 .try-it { position: relative; margin-top: 60px; }
-.try-it .hand { color: var(--peach); margin: 0 0 10px 10px; transform: rotate(-3deg); }
+.try-it .hand {
+  position: relative; z-index: 2; display: inline-block; margin: 0 0 18px 12px;
+  font-size: clamp(1.9rem, 3vw, 2.3rem); line-height: 1.2; color: var(--peach);
+  transform: rotate(-3deg); transform-origin: left bottom;
+}
 
 /* ---------- Tool component ---------- */
 .tool {

@@ -6,7 +6,7 @@ const SITE_NAME = 'Purely Wholesome Farm';
 const SITE_TAGLINE = 'Grow Better, Live Simpler';
 const SITE_ORIGIN = 'https://purelywholesome.com';   // canonical origin, whatever host serves the page
 const SITE_EMAIL = 'info@purelywholesome.com';
-const ASSET_VERSION = '20261020b';
+const ASSET_VERSION = '20261020c';
 const ROOT = __DIR__ . '/..';
 
 // Only the real domain may be indexed; the temporary preview host is noindexed so
