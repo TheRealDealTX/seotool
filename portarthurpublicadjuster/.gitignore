@@ -1,0 +1,7 @@
+site/includes/config.local.php
+site/data/cache/*.json
+site/data/cache/*.lock
+site/data/logs/*.log*
+site/data/ratelimit/*
+!site/data/ratelimit/.htaccess
+site/data/.secret

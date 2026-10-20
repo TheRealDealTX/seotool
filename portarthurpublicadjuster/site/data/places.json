@@ -1,0 +1,182 @@
+{
+ "source": "U.S. Census Bureau 2024 Gazetteer Files (internal points of places and ZCTAs); Sabine Pass and Pleasure Island added manually (both within the City of Port Arthur)",
+ "places": [
+  {
+   "name": "Beaumont",
+   "lat": 30.0849,
+   "lon": -94.1453,
+   "kind": "city"
+  },
+  {
+   "name": "Beauxart Gardens",
+   "lat": 29.9595,
+   "lon": -94.0356,
+   "kind": "city"
+  },
+  {
+   "name": "Bevil Oaks",
+   "lat": 30.1507,
+   "lon": -94.2709,
+   "kind": "city"
+  },
+  {
+   "name": "Central Gardens",
+   "lat": 29.988,
+   "lon": -94.0217,
+   "kind": "city"
+  },
+  {
+   "name": "China",
+   "lat": 30.0411,
+   "lon": -94.3376,
+   "kind": "city"
+  },
+  {
+   "name": "Fannett",
+   "lat": 29.9263,
+   "lon": -94.2433,
+   "kind": "city"
+  },
+  {
+   "name": "Groves",
+   "lat": 29.946,
+   "lon": -93.9167,
+   "kind": "city"
+  },
+  {
+   "name": "Hamshire",
+   "lat": 29.8548,
+   "lon": -94.3207,
+   "kind": "city"
+  },
+  {
+   "name": "Nederland",
+   "lat": 29.9693,
+   "lon": -94.0017,
+   "kind": "city"
+  },
+  {
+   "name": "Nome",
+   "lat": 30.0323,
+   "lon": -94.4205,
+   "kind": "city"
+  },
+  {
+   "name": "Pleasure Island",
+   "lat": 29.859,
+   "lon": -93.889,
+   "kind": "city"
+  },
+  {
+   "name": "Port Arthur",
+   "lat": 29.9,
+   "lon": -93.8944,
+   "kind": "city"
+  },
+  {
+   "name": "Port Neches",
+   "lat": 29.9608,
+   "lon": -93.9618,
+   "kind": "city"
+  },
+  {
+   "name": "Sabine Pass",
+   "lat": 29.7319,
+   "lon": -93.8941,
+   "kind": "city"
+  },
+  {
+   "name": "Taylor Landing",
+   "lat": 29.8664,
+   "lon": -94.1292,
+   "kind": "city"
+  }
+ ],
+ "zips": [
+  {
+   "zip": "77613",
+   "lat": 30.0277,
+   "lon": -94.3588
+  },
+  {
+   "zip": "77619",
+   "lat": 29.946,
+   "lon": -93.9167
+  },
+  {
+   "zip": "77622",
+   "lat": 29.8624,
+   "lon": -94.286
+  },
+  {
+   "zip": "77627",
+   "lat": 29.9904,
+   "lon": -94.007
+  },
+  {
+   "zip": "77629",
+   "lat": 29.9775,
+   "lon": -94.4331
+  },
+  {
+   "zip": "77640",
+   "lat": 29.8805,
+   "lon": -93.9412
+  },
+  {
+   "zip": "77642",
+   "lat": 29.958,
+   "lon": -93.8919
+  },
+  {
+   "zip": "77651",
+   "lat": 29.9806,
+   "lon": -93.948
+  },
+  {
+   "zip": "77655",
+   "lat": 29.7099,
+   "lon": -93.9394
+  },
+  {
+   "zip": "77701",
+   "lat": 30.0731,
+   "lon": -94.1055
+  },
+  {
+   "zip": "77702",
+   "lat": 30.0863,
+   "lon": -94.1283
+  },
+  {
+   "zip": "77703",
+   "lat": 30.1141,
+   "lon": -94.1093
+  },
+  {
+   "zip": "77705",
+   "lat": 29.9085,
+   "lon": -94.1752
+  },
+  {
+   "zip": "77706",
+   "lat": 30.1004,
+   "lon": -94.1669
+  },
+  {
+   "zip": "77707",
+   "lat": 30.0531,
+   "lon": -94.1661
+  },
+  {
+   "zip": "77708",
+   "lat": 30.1505,
+   "lon": -94.1534
+  },
+  {
+   "zip": "77713",
+   "lat": 30.0688,
+   "lon": -94.2597
+  }
+ ]
+}
