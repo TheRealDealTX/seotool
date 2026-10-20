@@ -40,3 +40,21 @@ sh tools/package.sh                                    # build the upload ZIP
 ```
 
 Content rules for writers: `tools/CONTENT_SPEC.md`. Verified storm facts: `tools/notes/storm-facts.md`.
+
+## Deployment (live since 2026-10-20)
+
+* **Live site:** Hostinger Agency website UID `O5wLD11Sm` (php-fpm, PHP 8.4, Phoenix), domain
+  `publicadjustersanantonio.com`, Let's Encrypt SSL. Files were pushed one by one through the
+  File Browser TUS API (`agency-hosting_files_generate-upload-url`); clear the cache afterwards
+  (`agency-hosting_cache_clear-website`).
+* **Private settings** (SMTP login for info@, cron key) live only on the server in
+  `public_html/includes/config.local.php` — never commit it. Forms send via authenticated SMTP
+  (smtp.hostinger.com:465) to info@publicadjustersanantonio.com; verified delivered to the Inbox.
+* **https / www:** Hostinger's edge ignores the `.htaccess` host rules, so `index.php` enforces
+  `https://publicadjustersanantonio.com` (301 for `http://` and `www.`).
+* **Old WordPress site:** still intact as Agency website `dSkQ6x8wt` (domain unlinked; reachable at
+  `peru-jaguar-359744.hostingersite.com`). Rollback = unlink the domain from `O5wLD11Sm` and link it
+  back to `dSkQ6x8wt`. A read-only copy of its files (11,514 files) was also downloaded before launch.
+* **Cron:** not set yet. Live weather refreshes on page load without it; the hourly NWS storm
+  reports and weekly NOAA history need one job in hPanel → Advanced → Cron Jobs (every 15 min):
+  `php <public_html path>/cron/run-all.php` (hPanel shows the exact path).
