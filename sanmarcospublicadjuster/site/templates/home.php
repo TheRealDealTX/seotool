@@ -150,7 +150,7 @@ $milestones = [
       </ul>
       <div class="direct-card">
         <img src="/assets/img/joseph-dittman.webp" alt="Joseph Dittman, licensed Texas public adjuster" width="64" height="64" loading="lazy" decoding="async">
-        <p><strong>Prefer to talk?</strong><br>Call <a href="<?= e(tel_link()) ?>"><?= e(cfg('phone_display')) ?></a> or email <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a></p>
+        <p><strong>Prefer to talk?</strong><br>Call <a href="<?= e(tel_link()) ?>"><?= e(cfg('phone_display')) ?></a> or email <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a>.<br>Reach Joseph Dittman, licensed public adjuster, directly: <a href="mailto:<?= e(cfg('author_email')) ?>"><?= e(cfg('author_email')) ?></a></p>
       </div>
     </div>
     <div class="form-card reveal-right">
@@ -309,6 +309,7 @@ $milestones = [
       <h2 id="joseph-h">Joseph Dittman, Licensed Texas Public Adjuster</h2>
       <p>Joseph Dittman is a licensed Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness. His background includes carrier-side adjusting, public adjusting, appraisal work, expert witness support, and hands-on construction experience.</p>
       <p>He writes and reviews every guide on this site, covering residential, commercial, storm, hail, wind, water, fire, and catastrophe losses, so San Marcos Public Adjuster readers get practical information grounded in Texas claim experience.</p>
+      <p><?= icon('mail', 'icon icon-sm') ?> Contact Joseph directly: <a href="mailto:<?= e(cfg('author_email')) ?>"><strong><?= e(cfg('author_email')) ?></strong></a></p>
       <a class="btn btn-navy" href="/author/joseph-dittman/">Read Joseph&rsquo;s profile</a>
     </div>
   </div>
@@ -340,6 +341,6 @@ $milestones = [
       <a class="btn btn-gold btn-lg" href="/free-claim-review/">Get a Free Claim Review</a>
       <a class="btn btn-outline-light btn-lg" href="<?= e(tel_link()) ?>"><?= icon('phone', 'icon icon-sm') ?> <?= e(cfg('phone_display')) ?></a>
     </div>
-    <p class="small" style="margin-top:18px;color:#c3c8d8">Email: <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a> &middot; Serving San Marcos, Hays County, and surrounding Central Texas communities.</p>
+    <p class="small" style="margin-top:18px;color:#c3c8d8">Email: <a href="mailto:<?= e(cfg('public_email')) ?>"><?= e(cfg('public_email')) ?></a> &middot; Joseph Dittman direct: <a href="mailto:<?= e(cfg('author_email')) ?>"><?= e(cfg('author_email')) ?></a></p>
   </div>
 </section>

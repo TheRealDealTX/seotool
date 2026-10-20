@@ -39,6 +39,6 @@ return [
 
 <h2>What happens next</h2>
 <p>Your request is emailed to our team. We review it and reach out by phone or email as soon as we can. If it looks like we can help, we explain how representation works and share a written contract with fees disclosed before any work begins. If your claim appears to be on track, we will tell you that too.</p>
-<p>Prefer to talk first? Call [[phone]] or email [[email]]. You can also learn more <a href="/about-us/">about San Marcos Public Adjuster</a> or see the <a href="/services/">claims we handle</a>.</p>
+<p>Prefer to talk first? Call [[phone]] or email [[email]]. To reach Joseph Dittman, licensed public adjuster, directly, email [[joseph-email]]. You can also learn more <a href="/about-us/">about San Marcos Public Adjuster</a> or see the <a href="/services/">claims we handle</a>.</p>
 HTML,
 ];

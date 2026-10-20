@@ -301,6 +301,7 @@ function render_shortcodes(string $html, array $page = []): string
     $map = [
         '[[phone]]'        => '<a href="' . e(tel_link()) . '">' . e(cfg('phone_display')) . '</a>',
         '[[email]]'        => '<a href="mailto:' . e(cfg('public_email')) . '">' . e(cfg('public_email')) . '</a>',
+        '[[joseph-email]]' => '<a href="mailto:' . e(cfg('author_email')) . '">' . e(cfg('author_email')) . '</a>',
         '[[license]]'      => e(cfg('license')),
         '[[company]]'      => e(cfg('company')),
     ];

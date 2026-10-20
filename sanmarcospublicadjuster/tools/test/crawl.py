@@ -42,7 +42,7 @@ while queue:
         bad(path, 'PHP warning in output')
     # Joseph Dittman's direct email is public on purpose; flag any other off-site address.
     for addr in set(a.rstrip('.') for a in re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', t)):
-        if addr not in ('info@sanmarcospublicadjuster.com', 'permitinfo@sanmarcostx.gov') and not addr.endswith(('.webp', '.png')):
+        if addr not in ('info@sanmarcospublicadjuster.com', 'jditt@risepublicadjusting.com', 'permitinfo@sanmarcostx.gov') and not addr.endswith(('.webp', '.png')):
             bad(path, 'unexpected email ' + addr)
     h1 = re.findall(r'<h1[\s>]', t)
     if len(h1) != 1:

@@ -29,6 +29,8 @@ $MPA_CONFIG = [
     'public_email'    => 'info@sanmarcospublicadjuster.com',
     'author_name'     => 'Joseph Dittman',
     'author_title'    => 'Licensed Texas Public Adjuster',
+    // Direct line to Joseph Dittman (shown on the homepage, footer, contact, about, and author pages).
+    'author_email'    => 'jditt@risepublicadjusting.com',
     'service_area'    => 'San Marcos, Hays County, and surrounding Central Texas communities',
     'lat'             => 29.8833,
     'lon'             => -97.9414,

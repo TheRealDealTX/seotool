@@ -43,6 +43,6 @@ return [
 <li><strong>No promises.</strong> Coverage depends on the policy and the facts, so the articles avoid guarantees.</li>
 <li><strong>Dated updates.</strong> Each article shows when it was published and last updated.</li>
 </ul>
-<p>Spot something that needs correcting? Email [[email]]. Have a question about your own claim? A <a href="/free-claim-review/">Free Claim Review</a> is the fastest way to share photos and documents, or call [[phone]]. You can also read more <a href="/about-us/">about San Marcos Public Adjuster</a>.</p>
+<p>Want to contact Joseph directly? Email [[joseph-email]]. Spot something that needs correcting? Email [[email]]. Have a question about your own claim? A <a href="/free-claim-review/">Free Claim Review</a> is the fastest way to share photos and documents, or call [[phone]]. You can also read more <a href="/about-us/">about San Marcos Public Adjuster</a>.</p>
 HTML,
 ];

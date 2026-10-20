@@ -22,6 +22,7 @@ return [
 <ul>
 <li><strong>Phone:</strong> [[phone]]</li>
 <li><strong>Email:</strong> [[email]]</li>
+<li><strong>Joseph Dittman, licensed public adjuster (direct):</strong> [[joseph-email]]</li>
 <li><strong>Online:</strong> the Free Claim Review form on this page, which accepts photos and PDFs</li>
 </ul>
 

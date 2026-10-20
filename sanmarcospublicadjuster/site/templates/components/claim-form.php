@@ -2,7 +2,7 @@
 $context = $context ?? '';
 $compact = !empty($compact);
 $fid = 'cf' . substr(md5(($context ?: 'form') . mt_rand()), 0, 6);
-$claimTypes = ['Hail damage', 'Wind / storm damage', 'Hurricane / tropical storm', 'Roof damage', 'Fire damage', 'Smoke damage', 'Water damage', 'Flood-related', 'Commercial property', 'Other'];
+$claimTypes = ['Hail damage', 'Wind / storm damage', 'Hurricane / tropical storm', 'Roof damage', 'Fire damage', 'Smoke damage', 'Water damage', 'Freeze / burst pipes', 'Flood-related', 'Commercial property', 'Other'];
 $statuses = ['Not filed yet', 'Filed - waiting on insurer', 'Inspection completed', 'Claim denied', 'Claim underpaid / low offer', 'Claim delayed', 'Claim closed / settled', 'Other'];
 ?>
 <form class="claim-form<?= $compact ? ' claim-form-compact' : '' ?>" action="/api/claim-review.php" method="post" enctype="multipart/form-data" novalidate data-claim-form>

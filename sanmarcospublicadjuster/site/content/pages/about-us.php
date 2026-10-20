@@ -25,6 +25,7 @@ return [
 <h2>Meet Joseph Dittman</h2>
 <p>Claims are led by <a href="/author/joseph-dittman/">Joseph Dittman</a>, a licensed Texas public adjuster, certified insurance appraiser, insurance umpire, and expert witness. His experience covers residential, commercial, storm, hail, wind, water, fire, hurricane, and catastrophe losses. His background includes carrier-side adjusting, public adjusting, appraisal work, expert witness support, and hands-on construction.</p>
 <p>Each part of that background is useful on a claim. Carrier-side work shows how insurers build and review estimates. Appraisal and umpire work shows how disagreements over the amount of a loss actually get resolved. Construction experience helps answer the practical question behind every estimate: what does it really take to put this building back? Joseph also writes and reviews the guides on our <a href="/blog/">insurance claim blog</a>.</p>
+<p>You can reach Joseph directly at [[joseph-email]], or use the general inbox [[email]].</p>
 
 <h2>Insurance company adjuster vs. public adjuster</h2>
 <p>Most people first meet an adjuster after they report a loss. That adjuster, whether a staff employee or an independent adjuster hired for a storm, is working on behalf of the insurance company. A public adjuster is licensed to work for the policyholder on the same claim. The roles compare like this:</p>

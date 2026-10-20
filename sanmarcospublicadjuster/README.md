@@ -51,3 +51,22 @@ sh tools/package.sh                                    # build the upload ZIP
 
 Content rules for writers: `tools/CONTENT_SPEC.md`. Verified facts: `tools/notes/local-facts.md`,
 `tools/notes/storm-facts.md`; photo list: `tools/notes/photos.md`.
+
+## Deployment (live since 2026-10-20)
+
+* **Live site:** Hostinger Agency website UID `HDWf3PRFQ` (php-fpm, PHP 8.4, Phoenix datacenter),
+  domain `sanmarcospublicadjuster.com`, SSL active. Files were uploaded one by one through the
+  File Browser TUS API (`agency-hosting_files_generate-upload-url`, target `public_html/<path>`);
+  clear the cache afterwards (`agency-hosting_cache_clear-website`).
+* **Private settings** (SMTP login for info@sanmarcospublicadjuster.com, cron key) live only on the
+  server in `public_html/includes/config.local.php` — never commit it. Forms send through
+  smtp.hostinger.com:465 to info@sanmarcospublicadjuster.com (verified with a live test submission).
+* **Joseph Dittman's direct email** (jditt@risepublicadjusting.com, `author_email` in config) is shown
+  on the homepage, footer, contact, about, author, and Free Claim Review pages; forms still go to info@.
+* **https / www:** `index.php` enforces `https://sanmarcospublicadjuster.com` (301 for `http://` and `www.`).
+* **Cron (set up via the API):** `refresh-weather.php` every 15 min, `update-weather-events.php` hourly,
+  `maintenance.php` daily, `update-storm-history.php` weekly (Mondays), each run as
+  `/usr/bin/php /home/u914589053/websites/HDWf3PRFQ/public_html/cron/<script>`.
+* **Old WordPress site:** still intact as Agency website `lpXMZxnhA` (domain unlinked; reachable at
+  `orange-sandpiper-412325.hostingersite.com`). Rollback = unlink the domain from `HDWf3PRFQ` and link
+  it back to `lpXMZxnhA`.

@@ -148,7 +148,7 @@ function clean_line(string $s, int $max): string
  */
 function validate_claim_form(array $post): array
 {
-    $allowedTypes = ['Hail damage', 'Wind / storm damage', 'Hurricane / tropical storm', 'Roof damage', 'Fire damage', 'Smoke damage', 'Water damage', 'Flood-related', 'Commercial property', 'Other'];
+    $allowedTypes = ['Hail damage', 'Wind / storm damage', 'Hurricane / tropical storm', 'Roof damage', 'Fire damage', 'Smoke damage', 'Water damage', 'Freeze / burst pipes', 'Flood-related', 'Commercial property', 'Other'];
     $allowedStatus = ['Not filed yet', 'Filed - waiting on insurer', 'Inspection completed', 'Claim denied', 'Claim underpaid / low offer', 'Claim delayed', 'Claim closed / settled', 'Other'];
 
     $d = [
