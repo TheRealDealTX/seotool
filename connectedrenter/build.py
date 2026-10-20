@@ -97,7 +97,7 @@ def header(current):
 <a class="brand" href="/" aria-label="{SITE} home"><img src="/assets/img/connected-renter-logo.png" alt="{SITE} — {TAGLINE}" width="524" height="139"></a>
 {nav(current)}
 <button class="search-btn" type="button" data-open-search aria-label="Search the site">{icon("search")}<span class="lbl">Search</span><kbd>Ctrl K</kbd></button>
-<button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">{icon("menu")}</button>
+<button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav">{icon("menu", "icon i-open")}{icon("x", "icon i-close")}</button>
 </div></header>"""
 
 
