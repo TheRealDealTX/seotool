@@ -42,7 +42,7 @@ return [
 [[cta-storm]]
 
 <h2>Permits in University Park</h2>
-<p>University Park issues its own building permits and conducts its own inspections. Its process is separate from both the City of Dallas Development Services Department and the Town of Highland Park, so confirm the requirements with the city before repairs begin. When code requirements add cost to a covered repair, payment usually depends on ordinance or law coverage, which is often limited. Our <a href="/local-building-codes/">building codes and insurance repairs guide</a> walks through how that works.</p>
+<p>University Park issues its own building permits and conducts its own inspections. Its process is separate from both the City of Dallas Planning &amp; Development Department and the Town of Highland Park, so confirm the requirements with the city before repairs begin. When code requirements add cost to a covered repair, payment usually depends on ordinance or law coverage, which is often limited. Our <a href="/local-building-codes/">building codes and insurance repairs guide</a> walks through how that works.</p>
 
 <h2>First steps after storm damage in University Park</h2>
 <ol>

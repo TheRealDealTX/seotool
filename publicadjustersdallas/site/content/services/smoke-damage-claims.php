@@ -25,7 +25,7 @@ return [
         ['q' => 'Can a public adjuster help if the insurer only offered cleaning?', 'a' => '<p>A public adjuster can review the scope, document areas that may need replacement rather than cleaning, and present that information to the insurer. Results depend on the policy and the facts.</p>'],
     ],
     'body' => <<<'HTML'
-<p>Smoke damage insurance claims are often underestimated, in Dallas and everywhere else. Smoke and soot move through open doors, attic spaces, wall cavities, and HVAC ducts, settling on surfaces far from the fire. Odor soaks into porous materials and can linger for months. Because much of this damage is hard to see, it is easy for a claim to be scoped too narrowly.</p>
+<p>Smoke damage insurance claims in Dallas are often underestimated. Smoke and soot move through open doors, attic spaces, wall cavities, and HVAC ducts, settling on surfaces far from the fire. Odor soaks into porous materials and can linger for months. Because much of this damage is hard to see, it is easy for a claim to be scoped too narrowly.</p>
 <p>This page explains how smoke damage happens, what a complete smoke claim usually includes, and how a public adjuster in Dallas can help. If your loss also involved flames or structural damage, see our <a href="/services/fire-damage-claims/">fire damage claims</a> page.</p>
 
 <h2>Sources of Smoke Damage</h2>
@@ -76,6 +76,12 @@ return [
 <li><strong>Re-cleaning</strong> when odor returns after the first cleaning attempt.</li>
 </ul>
 <p>An <a href="/services/insurance-estimate-review/">insurance estimate review</a> compares the insurer&rsquo;s scope with what the property actually needs. If the claim was paid low, see <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a>. Disagreements over the amount of loss may sometimes go to <a href="/services/insurance-appraisal/">appraisal</a>.</p>
+
+<h2>Shared Buildings: Apartments, Condos, and Strip Centers</h2>
+<p>Smoke claims in multi-unit buildings often involve more than one policy. In an apartment complex, the owner&rsquo;s commercial policy usually covers the building itself, while each resident&rsquo;s renters policy covers their belongings and, under many policies, additional living expenses. In a condo, the association&rsquo;s master policy and the unit owner&rsquo;s policy may split the building between them according to the declarations and bylaws. In a strip center or office building, landlord and tenant policies may each cover part of the loss, including tenant improvements and business income. Report the loss to every policy that may apply, and keep your own photos and records even if the building owner is handling the structure. See <a href="/services/commercial-property-claims/">commercial property claims</a> for business losses.</p>
+
+<h2>Documenting Smoke You Cannot Easily See</h2>
+<p>Light soot films and odor are hard to show in photos. Helpful steps include photographing white surfaces in bright light, wiping a clean cloth across walls and vents and photographing the result, noting where odor is strongest, and checking behind outlet and switch covers, inside light fixtures, and in the attic. When the scope is disputed, testing by a qualified professional may help document residue in hidden areas.</p>
 
 <h2>How Dallas Public Adjuster Can Help</h2>
 <p>Dallas Public Adjuster, a service of Rise Public Adjusting LLC, represents policyholders on smoke and fire losses across Dallas, Dallas County, and surrounding North Texas communities, including apartments, condos, and commercial spaces. We can inspect the property, document smoke damage room by room, prepare an Xactimate estimate, help organize the contents inventory, and communicate with your insurer. We cannot guarantee a result. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>

@@ -2,7 +2,7 @@
 return [
     'title'       => 'Building Codes and Insurance Repairs in Dallas: Permits and Ordinance or Law Coverage',
     'seo_title'   => 'Building Codes & Insurance Repairs in Dallas, TX',
-    'description' => 'How Dallas building codes affect insurance repairs: permits through Development Services, code-required upgrades, and how ordinance or law coverage pays.',
+    'description' => 'How Dallas building codes affect insurance repairs: permits through Planning and Development, code-required upgrades, and how ordinance or law coverage pays.',
     'kicker'      => 'Building Codes',
     'image'       => '/assets/img/featured/building-codes-insurance-repairs-dallas.webp',
     'image_alt'   => 'Roofer installing new underlayment and drip edge during a permitted roof replacement on a Dallas home',
@@ -22,7 +22,7 @@ return [
         ['FloodSmart (NFIP): flood insurance information, including Increased Cost of Compliance', 'https://www.floodsmart.gov/'],
     ],
     'faqs' => [
-        ['q' => 'Do I need a permit to replace my roof in Dallas?', 'a' => '<p>Re-roofing and most structural repairs inside Dallas city limits generally require a permit from the City of Dallas Development Services Department, applied for online through the city’s DallasNow permitting portal. Confirm the requirements for your project with the city. Suburbs such as Richardson, Garland, Irving, Plano, and the Park Cities have their own permit offices.</p>'],
+        ['q' => 'Do I need a permit to replace my roof in Dallas?', 'a' => '<p>Re-roofing and most structural repairs inside Dallas city limits generally require a permit from the City of Dallas Planning &amp; Development Department, applied for online through the city’s DallasNow permitting portal. Confirm the requirements for your project with the city. Suburbs such as Richardson, Garland, Irving, Plano, and the Park Cities have their own permit offices.</p>'],
         ['q' => 'Does homeowners insurance pay for code upgrades?', 'a' => '<p>Only as far as your policy provides. Ordinance or law coverage pays, up to its limit, for increased costs to comply with building codes when repairing covered damage. It is often a separate, limited coverage or an endorsement. Without it, the insurer may pay only to restore what was there before.</p>'],
         ['q' => 'How do I find out how much ordinance or law coverage I have?', 'a' => '<p>Check your declarations page and endorsements. The coverage may be shown as a dollar amount or as a percentage of the dwelling limit. If you cannot find it, ask your agent or insurer in writing.</p>'],
         ['q' => 'Will the insurer pay for code items before the work is done?', 'a' => '<p>Many policies pay ordinance or law amounts only after the work is completed, and some require that repairs be made at the same premises. Ask how and when code items will be paid before you sign a repair contract.</p>'],
@@ -31,7 +31,7 @@ return [
     ],
     'body' => <<<'HTML'
 <div class="key-takeaways"><h2>Key takeaways</h2><ul>
-<li>Re-roofing and most structural repairs in Dallas generally require a permit from the City of Dallas Development Services Department.</li>
+<li>Re-roofing and most structural repairs in Dallas generally require a permit from the City of Dallas Planning &amp; Development Department.</li>
 <li>Repairs must meet the city’s adopted International Residential Code and International Building Code, with local amendments.</li>
 <li>Code requirements do not automatically mean the insurer pays for upgrades. That depends on ordinance or law coverage.</li>
 <li>Ordinance or law coverage is often a separate, limited amount, and it is commonly paid after the work is completed.</li>
@@ -44,7 +44,7 @@ return [
 
 <h2>Permits through the City of Dallas</h2>
 
-<p>Inside Dallas city limits, building permits and inspections run through the City of Dallas Development Services Department. Permits are applied for online through the city’s DallasNow permitting portal. Re-roofing and most structural repairs generally require a permit, and electrical, plumbing, and mechanical work usually requires its own trade permits by licensed contractors. Confirm what your specific project needs with Development Services before work starts.</p>
+<p>Inside Dallas city limits, building permits and inspections run through the City of Dallas Planning &amp; Development Department. Permits are applied for online through the city’s DallasNow permitting portal. Re-roofing and most structural repairs generally require a permit, and electrical, plumbing, and mechanical work usually requires its own trade permits by licensed contractors. Confirm what your specific project needs with Planning &amp; Development before work starts.</p>
 
 <p>Dallas County is made up of many cities, and each one runs its own building inspection and permit office. If your property is in Highland Park, University Park, Richardson, Garland, Irving, Mesquite, Carrollton, Grand Prairie, Plano, Rowlett, or another suburb, contact that city instead. Requirements, amendments, and fees can differ from one city to the next, even across the street.</p>
 

@@ -248,7 +248,7 @@ $ticker = [
     <div class="reveal-left">
       <p class="eyebrow">Local building codes</p>
       <h2 id="codes-h">Dallas Building Codes and Your Repairs</h2>
-      <p>Roof replacements and many structural repairs inside Dallas city limits require permits and inspections through the City of Dallas <strong>Development Services Department</strong>. Suburban cities such as Highland Park, University Park, Richardson, and Garland run their own building inspection offices.</p>
+      <p>Roof replacements and many structural repairs inside Dallas city limits require permits and inspections through the City of Dallas <strong>Planning &amp; Development Department</strong>. Suburban cities such as Highland Park, University Park, Richardson, and Garland run their own building inspection offices.</p>
       <p>Code-required work can raise repair costs. Whether your insurer pays for it depends on your policy, usually through <em>ordinance or law</em> coverage, which often has its own limit. Code requirements alone don&rsquo;t create coverage.</p>
       <a class="btn btn-navy" href="/local-building-codes/">Dallas building code guide</a>
     </div>
@@ -256,7 +256,7 @@ $ticker = [
       <div class="table-wrap"><table class="code-table">
         <thead><tr><th scope="col">Topic</th><th scope="col">What to know</th></tr></thead>
         <tbody>
-          <tr><td>Permits</td><td>City of Dallas Development Services (inside city limits)</td></tr>
+          <tr><td>Permits</td><td>City of Dallas Planning &amp; Development (inside city limits)</td></tr>
           <tr><td>Suburbs</td><td>Each incorporated city has its own building office</td></tr>
           <tr><td>Inspections</td><td>Scheduled through the permitting office after work begins</td></tr>
           <tr><td>Insurance</td><td>Code upgrades may be covered by ordinance or law coverage, up to its limit</td></tr>

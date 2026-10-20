@@ -149,7 +149,7 @@ return [
 
 <h2>Why local knowledge matters in Dallas</h2>
 
-<p>Dallas-area buildings vary widely: brick-veneer homes on slab foundations, mid-century ranches in Lake Highlands and Richardson, older pier-and-beam homes near Lower Greenville and in Oak Cliff, and commercial buildings with flat TPO or modified-bitumen roofs. Each affects how a fire spreads and how repairs are scoped. Work inside Dallas city limits generally needs permits through the City of Dallas Development Services Department, while cities such as Highland Park, University Park, Richardson, Garland, and Irving have their own building inspection offices. An estimate that reflects how the building is actually constructed, and what the permit process requires, is easier to support.</p>
+<p>Dallas-area buildings vary widely: brick-veneer homes on slab foundations, mid-century ranches in Lake Highlands and Richardson, older pier-and-beam homes near Lower Greenville and in Oak Cliff, and commercial buildings with flat TPO or modified-bitumen roofs. Each affects how a fire spreads and how repairs are scoped. Work inside Dallas city limits generally needs permits through the City of Dallas Planning &amp; Development Department, while cities such as Highland Park, University Park, Richardson, Garland, and Irving have their own building inspection offices. An estimate that reflects how the building is actually constructed, and what the permit process requires, is easier to support.</p>
 
 <h2>Final thoughts</h2>
 

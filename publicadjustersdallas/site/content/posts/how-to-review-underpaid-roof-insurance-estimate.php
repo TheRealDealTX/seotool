@@ -136,7 +136,7 @@ return [
 
 <h2>Step 6: Check code-required items</h2>
 
-<p>Re-roofing in Dallas generally requires a permit through the City of Dallas Development Services Department, and suburban cities have their own permit offices. Work has to meet the city’s adopted International Residential Code, along with manufacturer installation requirements. Items such as drip edge, underlayment, flashing, and ventilation may be required by code even if the old roof lacked them. Whether the insurer pays for those upgrades often depends on ordinance or law coverage. See <a href="/building-codes-insurance-repairs-dallas/">building codes and insurance repairs in Dallas</a> for details, and our <a href="/local-building-codes/">local building codes</a> page for permit information.</p>
+<p>Re-roofing in Dallas generally requires a permit through the City of Dallas Planning &amp; Development Department, and suburban cities have their own permit offices. Work has to meet the city’s adopted International Residential Code, along with manufacturer installation requirements. Items such as drip edge, underlayment, flashing, and ventilation may be required by code even if the old roof lacked them. Whether the insurer pays for those upgrades often depends on ordinance or law coverage. See <a href="/building-codes-insurance-repairs-dallas/">building codes and insurance repairs in Dallas</a> for details, and our <a href="/local-building-codes/">local building codes</a> page for permit information.</p>
 
 <h2>Step 7: Review depreciation and the deductible</h2>
 

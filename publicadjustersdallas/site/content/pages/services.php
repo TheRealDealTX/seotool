@@ -99,7 +99,7 @@ return [
 <p>You do not need a public adjuster for every claim. Consider getting help if the claim is delayed or disputed, the offer will not cover repairs, the insurer keeps asking for more information, the paperwork feels overwhelming, or the damage is extensive or hidden. Getting involved early can prevent mistakes, but we can step in at most points in the process.</p>
 
 <h2>Serving Dallas property owners</h2>
-<p>Dallas has its own mix of claim challenges: hail-bruised shingles on brick-veneer homes, older pier-and-beam houses in Lakewood and Oak Cliff, Craftsman and Tudor homes in the Park Cities, and flat TPO and modified-bitumen roofs on apartments and warehouses. Repairs inside the city follow the City of Dallas Development Services Department's permit process, and each suburb has its own; see our <a href="/local-building-codes/">Dallas building codes guide</a>. We serve Dallas and every community on our <a href="/service-areas/">service areas</a> page.</p>
+<p>Dallas has its own mix of claim challenges: hail-bruised shingles on brick-veneer homes, older pier-and-beam houses in Lakewood and Oak Cliff, Craftsman and Tudor homes in the Park Cities, and flat TPO and modified-bitumen roofs on apartments and warehouses. Repairs inside the city follow the City of Dallas Planning &amp; Development Department's permit process, and each suburb has its own; see our <a href="/local-building-codes/">Dallas building codes guide</a>. We serve Dallas and every community on our <a href="/service-areas/">service areas</a> page.</p>
 <p>Ready to talk about your claim? Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>
 HTML,
 ];

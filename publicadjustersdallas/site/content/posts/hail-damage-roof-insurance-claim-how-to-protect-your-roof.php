@@ -153,7 +153,7 @@ return [
 <li>Permit fees and code-required items, where the policy covers them</li>
 </ul>
 
-<p>Re-roofing in the City of Dallas generally requires a permit through the City of Dallas Development Services Department. Suburbs such as Richardson, Garland, Irving, and Plano have their own permit offices. Code requirements do not automatically mean the insurer pays for upgrades. That depends on your ordinance or law coverage, which our <a href="/local-building-codes/">local building codes</a> page explains in more detail.</p>
+<p>Re-roofing in the City of Dallas generally requires a permit through the City of Dallas Planning &amp; Development Department. Suburbs such as Richardson, Garland, Irving, and Plano have their own permit offices. Code requirements do not automatically mean the insurer pays for upgrades. That depends on your ordinance or law coverage, which our <a href="/local-building-codes/">local building codes</a> page explains in more detail.</p>
 
 <h2>Repair or replace? How the decision is usually made</h2>
 

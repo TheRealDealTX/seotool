@@ -128,7 +128,7 @@ return [
 
 <h2>Building codes, permits, and supplements</h2>
 
-<p>Re-roofing generally requires a permit from the City of Dallas Development Services Department, and nearby cities such as Garland, Irving, Mesquite, and Richardson run their own permit and inspection offices. Repairs must meet the city’s adopted International Residential Code and International Building Code, which can require items the old roof never had.</p>
+<p>Re-roofing generally requires a permit from the City of Dallas Planning &amp; Development Department, and nearby cities such as Garland, Irving, Mesquite, and Richardson run their own permit and inspection offices. Repairs must meet the city’s adopted International Residential Code and International Building Code, which can require items the old roof never had.</p>
 
 <p>That does not mean the insurer automatically pays for every code item. Payment for code-required work depends on your ordinance or law coverage and its limit. When a code item is needed, document the requirement (a permit note, inspector comment, or code section from your contractor) and submit it as part of the supplement. Our <a href="/local-building-codes/">local building codes</a> page explains how this works in Dallas.</p>
 

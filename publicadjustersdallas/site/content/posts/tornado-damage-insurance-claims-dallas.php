@@ -143,7 +143,7 @@ return [
 
 <h2>Rebuilding: codes, permits, and estimates</h2>
 
-<p>Heavy tornado damage often means rebuilding to current code. Inside the city, that runs through the City of Dallas Development Services Department under the city's adopted International Residential Code and International Building Code. Garland, Rowlett, Irving, Richardson, and other suburbs have their own permit offices. Code-required upgrades are not automatically paid by the base dwelling coverage; that depends on your ordinance or law coverage and its limit. Our guide to <a href="/building-codes-insurance-repairs-dallas/">building codes and insurance repairs in Dallas</a> explains how this works.</p>
+<p>Heavy tornado damage often means rebuilding to current code. Inside the city, that runs through the City of Dallas Planning &amp; Development Department under the city's adopted International Residential Code and International Building Code. Garland, Rowlett, Irving, Richardson, and other suburbs have their own permit offices. Code-required upgrades are not automatically paid by the base dwelling coverage; that depends on your ordinance or law coverage and its limit. Our guide to <a href="/building-codes-insurance-repairs-dallas/">building codes and insurance repairs in Dallas</a> explains how this works.</p>
 
 <h3>Partial losses on a damaged street</h3>
 
