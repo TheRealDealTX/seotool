@@ -45,7 +45,7 @@ $MPA_CONFIG = [
     'smtp_user'       => 'info@portarthurpublicadjuster.com',
     'smtp_pass'       => '',               // set in a private override file
     'smtp_debug'      => 0,                // 0 in production
-    'allow_mail_fallback' => false,        // true = use PHP mail() when SMTP password is not set
+    'allow_mail_fallback' => true,         // use Hostinger's PHP mail() until an SMTP password is set (SMTP is preferred)
 
     'uploads_enabled'     => true,
     'upload_max_files'    => 3,
