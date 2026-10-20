@@ -203,3 +203,25 @@ And these redirect (301): `/sitemap_index.xml`, `/post-sitemap.xml`, `/page-site
 * Phone, email, license, SMTP recipient: `includes/config.php`.
 * Navigation and footer links: `includes/functions.php` (`primary_nav()`, `footer_nav()`).
 * The sitemap, RSS feed, blog list, related posts, and schema update automatically.
+
+## Deployment record (October 20, 2026)
+
+The site is live on a separate Agency Plan **php-fpm** website (UID `UwXzNYPkl`, PHP 8.3), and
+`portarthurpublicadjuster.com` was moved to it. The old WordPress website (UID `fF4aIqfKr`) was **not deleted**;
+it only lost the domain, so it can be restored by linking the domain back.
+
+Platform notes (they differ from classic shared hosting):
+
+* **`.htaccess` is ignored.** The platform serves existing files directly and sends everything else to
+  `index.php`. HTTPS and `www` → apex redirects are therefore done in `index.php`. PHP files in private
+  folders execute and print nothing, so no code is exposed.
+* **Private runtime files** (logs, caches, rate-limit files, the form secret) go to a randomly named folder
+  inside `data/` (its name is stored in `data/private-dir.php`), because PHP cannot write above `public_html`.
+* **`passthru()` is disabled**, so the four cron scripts run as separate jobs (times are UTC):
+  `*/15 * * * *` refresh-weather.php · `5 * * * *` update-weather-events.php ·
+  `20 8 * * *` maintenance.php · `40 9 * * 1` update-storm-history.php
+  (each as `/usr/bin/php /home/u914589053/websites/UwXzNYPkl/public_html/cron/<script>`).
+* **Email:** forms currently send with PHP `mail()` (`allow_mail_fallback`). The live test reached
+  info@portarthurpublicadjuster.com but landed in **Junk**. For reliable inbox delivery, create the SMTP
+  override (section 4) with the mailbox password. On this platform, use `includes/config.local.php`
+  (PHP cannot read files above `public_html`).

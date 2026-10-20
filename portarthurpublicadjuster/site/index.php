@@ -18,6 +18,14 @@ function redirect_to(string $to, int $code = 301): void
     exit;
 }
 
+// Canonical scheme + host. The platform ignores .htaccess and TLS ends upstream, so enforce
+// https://portarthurpublicadjuster.com here (static files rely on canonical tags).
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+$apex = (string) parse_url(cfg('site_url'), PHP_URL_HOST);
+if ($host === 'www.' . $apex || ($host === $apex && ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http')) {
+    redirect_to(rtrim(cfg('site_url'), '/') . ($uri === '' ? '/' : $uri));
+}
+
 // Paths that should never reach the app (old WordPress internals, probes).
 if (preg_match('#^/(wp-admin|wp-login\.php|xmlrpc\.php|wp-json|wp-includes|wp-cron\.php)#i', $path)) {
     http_response_code(410);

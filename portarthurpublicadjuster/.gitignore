@@ -5,3 +5,6 @@ site/data/logs/*.log*
 site/data/ratelimit/*
 !site/data/ratelimit/.htaccess
 site/data/.secret
+papa-private/
+site/data/private-dir.php
+site/data/p-*/

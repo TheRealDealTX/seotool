@@ -50,9 +50,46 @@ function reading_minutes(string $html): int
     return max(1, (int) round($words / 230));
 }
 
+/**
+ * Path inside data/. Logs, caches, rate-limit files and the form secret go to a
+ * private folder ABOVE public_html when it can be created there, because the
+ * Hostinger platform serves files directly and ignores .htaccess deny rules.
+ * Public storm data (storm-history.json, weather-events.json, places.json) stays in data/.
+ */
 function data_path(string $rel): string
 {
-    return MPA_ROOT . '/data/' . ltrim($rel, '/');
+    $rel = ltrim($rel, '/');
+    if (preg_match('#^(logs|cache|ratelimit)(/|$)|^\.secret$#', $rel)) {
+        return private_data_root() . '/' . $rel;
+    }
+    return MPA_ROOT . '/data/' . $rel;
+}
+
+function private_data_root(): string
+{
+    static $root = null;
+    if ($root === null) {
+        $outside = dirname(MPA_ROOT) . '/papa-private';
+        if ((is_dir($outside) || @mkdir($outside, 0700, true)) && is_writable($outside)) {
+            $root = $outside;
+        } else {
+            // No writable folder above public_html: use an unguessable folder inside data/.
+            // Its name is kept in a .php file, which the server executes instead of serving.
+            $nameFile = MPA_ROOT . '/data/private-dir.php';
+            $name = is_file($nameFile) ? (include $nameFile) : null;
+            if (!is_string($name) || !preg_match('/^p-[a-f0-9]{32}$/', $name)) {
+                $name = 'p-' . bin2hex(random_bytes(16));
+                @file_put_contents($nameFile, "<?php return '" . $name . "';\n", LOCK_EX);
+            }
+            $root = MPA_ROOT . '/data/' . $name;
+        }
+        foreach (['logs', 'cache', 'ratelimit'] as $d) {
+            if (!is_dir($root . '/' . $d)) {
+                @mkdir($root . '/' . $d, 0700, true);
+            }
+        }
+    }
+    return $root;
 }
 
 function read_json_file(string $file, $default = [])
