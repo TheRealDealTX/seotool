@@ -2,7 +2,7 @@
 return [
     'template'    => 'contact',
     'title'       => 'Request a Free Claim Review',
-    'seo_title'   => 'Free Claim Review | Dallas Public Adjuster',
+    'seo_title'   => 'Free Insurance Claim Review | Dallas Public Adjuster',
     'description' => 'Request a free claim review from a Dallas Public Adjuster. We look at your damage, policy, and insurer estimate and explain your options. No obligation.',
     'lead'        => 'Tell us about your property damage and your claim. A licensed Texas public adjuster will review it and give you a straight answer about your options.',
     'kicker'      => 'Free Claim Review',

@@ -42,6 +42,19 @@ return [
 
 <p>This guide shows how to review an underpaid roof insurance estimate line by line, the same order we follow at Dallas Public Adjuster. You do not need to be an estimator. You need the estimate, your policy’s declarations page, a few photos, and some patience. It is general information; your policy language controls.</p>
 
+<h2>Before you start: what to gather</h2>
+
+<ul>
+<li>The full insurer estimate, including the summary, the line items, and any photo report or roof diagram.</li>
+<li>Your declarations page and any roof endorsements or schedules.</li>
+<li>Your own photos of the roof, gutters, and other damage, taken as soon as possible after the storm.</li>
+<li>A roofer’s measurements or an aerial measurement report, if you have one.</li>
+<li>Anything that shows the roof’s age: a roofing invoice, permit record, or home inspection report.</li>
+<li>The date of the storm. Our <a href="/storm-lookup/">storm event lookup</a> can help you find NOAA hail and wind reports near your address.</li>
+</ul>
+
+<p>Lay the estimate out next to your photos. Most of the review is simply asking whether each line matches what is actually on your roof.</p>
+
 <h2>Step 1: Read the summary page</h2>
 
 <p>The summary is usually near the end of an Xactimate estimate. It shows:</p>
@@ -100,6 +113,12 @@ return [
 </ul>
 
 <figure><img src="/wp-content/uploads/2026/04/What-to-Do-If-Your-Hail-Claim-Was-Denied-in-Texas-4-1024x683.webp" alt="Two men at a desk reviewing printed roof damage photos with roof images on a monitor" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Matching each line item to photos and measurements is the core of an estimate review.</figcaption></figure>
+
+<h2>Repair or replace: the repairability question</h2>
+
+<p>Some of the largest gaps between an insurer’s estimate and a roofer’s bid come from a single decision: whether the roof can be repaired or needs to be replaced. An estimate that patches a few slopes may assume replacement shingles can be found to match and that the existing shingles can be lifted without breaking. On an older composition roof, brittle shingles may crack when lifted, and a discontinued product may not have a reasonable match.</p>
+
+<p>If you think a repair is not realistic, document why. A brittleness test performed by the roofer, photos of cracked tabs, and written information on product availability all help. Whether the policy requires matching beyond the damaged area depends on its wording and the facts, so raise the issue with evidence rather than assumption. Our article on <a href="/hail-damage-claim-supplements-what-carriers-miss-in-their-scope/">what carriers miss in hail claim scopes</a> covers related items.</p>
 
 <h2>Step 5: Look beyond the roof</h2>
 

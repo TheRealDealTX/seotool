@@ -1,7 +1,7 @@
 <?php
 return [
     'title'       => 'Privacy Policy',
-    'seo_title'   => 'Privacy Policy | Dallas Public Adjuster',
+    'seo_title'   => 'Website Privacy Policy | Dallas Public Adjuster',
     'description' => 'How Dallas Public Adjuster collects, uses, and protects information from our website, Free Claim Review forms, Google Analytics, and claim tools.',
     'lead'        => 'What information this website collects, how we use it, and the choices you have. Effective February 6, 2026; last updated October 20, 2026.',
     'kicker'      => 'Legal',

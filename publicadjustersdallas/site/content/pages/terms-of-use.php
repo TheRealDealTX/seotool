@@ -1,7 +1,7 @@
 <?php
 return [
     'title'       => 'Terms of Use',
-    'seo_title'   => 'Terms of Use | Dallas Public Adjuster',
+    'seo_title'   => 'Website Terms of Use | Dallas Public Adjuster',
     'description' => 'Terms of use for the Dallas Public Adjuster website, covering educational content, claim tools, weather data, forms, and how a client relationship begins.',
     'lead'        => 'The rules for using this website, its articles, and its claim tools. Effective February 6, 2026; last updated October 20, 2026.',
     'kicker'      => 'Legal',

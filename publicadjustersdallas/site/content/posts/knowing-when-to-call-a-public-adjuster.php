@@ -152,7 +152,7 @@ return [
 <li>Who will I communicate with, and how often will I get updates?</li>
 <li>Do you have experience with this type of loss?</li>
 </ul>
-<p>A reputable public adjuster will not pressure you to sign on the spot, will not promise a specific payout, and will not offer to do the repairs. Texas rules prohibit a public adjuster from taking part in the repair of a property on a claim they are adjusting.</p>
+<p>At Dallas Public Adjuster, we welcome these questions. A reputable public adjuster will not pressure you to sign on the spot, will not promise a specific payout, and will not offer to do the repairs. Texas rules prohibit a public adjuster from taking part in the repair of a property on a claim they are adjusting.</p>
 
 <h2>Final thoughts</h2>
 

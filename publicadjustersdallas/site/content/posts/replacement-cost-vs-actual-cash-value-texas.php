@@ -2,7 +2,7 @@
 return [
     'title'       => 'Replacement Cost vs. Actual Cash Value in Texas: How Depreciation Shapes Your Claim Check',
     'seo_title'   => 'Replacement Cost vs. Actual Cash Value: Texas Claims Guide',
-    'description' => 'Replacement cost vs. actual cash value in Texas: how depreciation, deductibles, roof payment schedules, and holdback work, with a worked Dallas roof example.',
+    'description' => 'Replacement cost vs. actual cash value in Texas: how depreciation, deductibles, roof schedules, and holdback work, with a worked Dallas roof example.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/replacement-cost-vs-actual-cash-value-texas.webp',
     'image_alt'   => 'Insurance estimate summary showing replacement cost, depreciation, and actual cash value next to a calculator',
