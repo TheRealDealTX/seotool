@@ -138,7 +138,7 @@ from the ground.</p>
 <p>Keep the evidence with the estimate: photos with a scale reference, a roof plan showing where each test was taken,
 the date and time, and a one-line result for each. When an adjuster or owner asks why a line item is there, the answer
 should be one photo away.</p>
-<p>If you are building the estimate for a claim, our <a href="/services/xactimate-roof-estimates/">Xactimate-format roof
+<p>If you are building the estimate for a claim, our <a href="/services/xactimate-roof-estimates/">Xactimate roof
 estimates</a> are built from exactly this kind of field data. If the carrier already wrote an estimate and ignored your
 test results, a <a href="/services/insurance-claim-estimate-review/">claim estimate review</a> lays out what is missing.</p>
 

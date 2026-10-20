@@ -23,7 +23,7 @@ breaks the job into the same pieces an insurance carrier, a lender or a careful 
 layer, the roofing product by the square, starter, hip and ridge cap by the linear foot, drip edge, underlayment,
 ice-and-water barrier in the valleys, flashing, pipe jacks, vents, steep and high-roof charges, haul-off and permits.
 Each line has a quantity, a unit and a unit price, so anyone reading it can check the math.</p>
-<p>We build every estimate from scratch, in the format carriers use: Xactimate-style line items, grouped by roof area
+<p>We build every estimate from scratch, in Xactimate: Xactimate line items, grouped by roof area
 and trade, with the measurements and notes that support each quantity. We do not copy the carrier's estimate and add
 to it, and we do not start from a template that assumes every roof is a simple gable.</p>
 
@@ -82,7 +82,7 @@ and their height, coping and edge metal, curbs for rooftop units, pipe and condu
 crickets and tapered insulation, expansion joints, and the terminations where the membrane meets walls and equipment.
 Miss a 3-foot parapet around a 40,000 sq ft building and the estimate can be off by thousands of square feet of
 flashing membrane.</p>
-<p>We build commercial estimates line by line, in the format carriers use, from the roof plan, aerial or drone
+<p>We build commercial estimates line by line, in Xactimate, from the roof plan, aerial or drone
 measurements, core-cut data and photos. Each line is tied to a measured quantity so a property manager, owner,
 carrier or appraiser can see where the number came from.</p>
 
@@ -248,10 +248,10 @@ numbers on a small repair scope yourself.</p>
 SERVICE_PAGES = {
     "xactimate-roof-estimates": {
         "title": "Xactimate Roof Estimates, Built from Scratch | Roof Estimate Pro",
-        "description": "Line-item residential roof estimates in the format carriers use, built from measurements and photos for contractors, public adjusters and homeowners.",
-        "h1": "Xactimate-style roof estimates, built from scratch",
+        "description": "Line-item residential roof estimates in Xactimate, built from measurements and photos for contractors, public adjusters and homeowners.",
+        "h1": "Xactimate roof estimates, built from scratch",
         "kicker": "Residential estimates",
-        "lede": "Line-item roof estimates in the format carriers use, with every quantity tied to a measurement and every accessory that belongs on the roof. For contractors, public adjusters and homeowners in Texas and across the U.S.",
+        "lede": "Line-item roof estimates in Xactimate, with every quantity tied to a measurement and every accessory that belongs on the roof. For contractors, public adjusters and homeowners in Texas and across the U.S.",
         "icon": "house",
         "service_type": "Roof estimating",
         "price_label": "Quoted per project",
@@ -286,7 +286,7 @@ SERVICE_PAGES = {
         "tools": ["roof-replacement-cost-calculator", "roof-square-footage-calculator", "roof-pitch-calculator", "shingle-calculator"],
         "faqs": [
             ("Do you use Xactimate?",
-             "<p>We build estimates with Xactimate-style line items, in the format carriers use, so a desk adjuster sees familiar line descriptions, units and organization. If your carrier or client needs a specific file type, tell us when you order and we will confirm what we can provide.</p>"),
+             "<p>We build estimates with Xactimate line items, so a desk adjuster sees familiar line descriptions, units and organization. If your carrier or client needs a specific file type, tell us when you order and we will confirm what we can provide.</p>"),
             ("How much does a full roof estimate cost?",
              "<p>Full estimates are quoted per project, because a single-story gable and a three-building complex are very different jobs. Send the details through the <a href=\"/get-estimate/\">estimate request form</a> and we will quote it before any work starts.</p>"),
             ("Can you estimate a roof without visiting it?",
@@ -296,7 +296,7 @@ SERVICE_PAGES = {
             ("Will the carrier have to accept your estimate?",
              "<p>No estimate binds a carrier. A well-documented line-item estimate gives the adjuster specific items and quantities to respond to, which is usually far more productive than arguing over a total. What a policy covers is a separate question for your policy, adjuster or attorney.</p>"),
         ],
-        "cta": ("Have a roof that needs a real number?", "Send the measurements and photos. We will quote the estimate first, then build it line by line in the format carriers use."),
+        "cta": ("Have a roof that needs a real number?", "Send the measurements and photos. We will quote the estimate first, then build it line by line in Xactimate."),
     },
     "commercial-roof-estimates": {
         "title": "Commercial Roof Estimates: TPO, PVC & Metal | Roof Estimate Pro",
@@ -458,7 +458,7 @@ SERVICE_PAGES = {
 # Hub card copy, per service slug.
 HUB_CARDS = {
     "xactimate-roof-estimates": ("Residential line-item estimates",
-        "Replacement and repair estimates built from scratch in the format carriers use, with every accessory, labor charge and quantity documented."),
+        "Replacement and repair estimates built from scratch in Xactimate, with every accessory, labor charge and quantity documented."),
     "commercial-roof-estimates": ("Commercial roof estimates",
         "TPO, PVC, EPDM, mod-bit, BUR, coatings and metal. Takeoffs by section with parapets, curbs and drains, and restore-vs-replace options."),
     "insurance-claim-estimate-review": ("Claim estimate review",
@@ -586,7 +586,7 @@ def build_hub(g):
         "The address, the deadline and what the number is for",
     ])
     get = _checks([
-        "Line items in the format carriers use, with quantities, units and unit prices",
+        "Line items in Xactimate, with quantities, units and unit prices",
         "Waste, steep and high charges shown as their own figures",
         "Notes that explain every quantity that isn't obvious",
         "Pricing for the property's market, not ours",
@@ -633,7 +633,7 @@ def build_hub(g):
         "description": "Line-item residential and commercial roof estimates, $50 claim estimate reviews and $200 scopes of damages, prepared remotely for Texas and other states.",
         "h1": "Roof estimating services",
         "kicker": "Professional services",
-        "lede": "When a free calculator is not enough, our estimators build the estimate for you: line-item residential and commercial estimates in the format carriers use, claim estimate reviews and scopes of damages. All remote, for every part of Texas and other states.",
+        "lede": "When a free calculator is not enough, our estimators build the estimate for you: line-item residential and commercial estimates in Xactimate, claim estimate reviews and scopes of damages. All remote, for every part of Texas and other states.",
         "hero_extra": (f'<div class="btn-row"><a class="btn btn--peach" href="/get-estimate/">Request an estimate {icon("arrow")}</a>'
                        f'<a class="btn btn--ghost-light" href="/claim/">Submit a claim for review</a></div>'),
         "trail": trail, "active": "/services/", "priority": "0.8", "html": main, "no_cta": True,

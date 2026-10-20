@@ -146,7 +146,7 @@ HOW_HTML = f"""<section class="section section--paper" id="free-tools"><div clas
   {_steps([
       ("Send details and files", 'Use the <a href="/get-estimate/">estimate request form</a>: address, roof type, what the estimate is for, and photos, measurement reports or the carrier estimate.'),
       ("We review and measure", "We check the files, reconcile the measurement report against the photos, ask for anything missing, and confirm the price and a delivery time."),
-      ("We write the line items", "Every line the roof calls for, in the format carriers use, with quantities, units and pricing for the property's market."),
+      ("We write the line items", "Every line the roof calls for, in Xactimate, with quantities, units and pricing for the property's market."),
       ("You review, we revise", "Questions and corrections are part of the job. If you change the scope, we tell you before anything changes in price."),
   ])}
 </div></section>
@@ -278,7 +278,7 @@ FAQS = [
     ("What services do you offer?",
      f"<p>Line-item <a href=\"/services/xactimate-roof-estimates/\">residential roof estimates</a>, <a href=\"/services/commercial-roof-estimates/\">commercial roof estimates</a>, a ${REVIEW} <a href=\"/services/insurance-claim-estimate-review/\">claim estimate review</a> and a ${SCOPE} <a href=\"/services/scope-of-damages/\">scope of damages</a>. All are prepared remotely.</p>"),
     ("Are your estimates in Xactimate format?",
-     "<p>Our estimates use Xactimate-style line items, in the format carriers use, so adjusters see familiar descriptions, units and organization. If you need a specific file type, ask when you order.</p>"),
+     "<p>Our estimates use Xactimate line items, so adjusters see familiar descriptions, units and organization. If you need a specific file type, ask when you order.</p>"),
     ("Are you a roofing company?",
      "<p>No. We prepare estimates and scopes; we don't sell or install roofs. We also don't decide coverage, give legal advice or negotiate with carriers on anyone's behalf.</p>"),
     ("Who are your clients?",

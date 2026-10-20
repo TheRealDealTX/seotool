@@ -199,7 +199,7 @@ def footer(scripts=""):
     <div class="foot-grid">
       <div class="foot-brand">
         <img src="/assets/img/logo-428.webp" width="428" height="101" alt="{BIZ['name']}" loading="lazy">
-        <p>Free roof estimating tools and professional Xactimate-format estimates for contractors, adjusters and property
+        <p>Free roof estimating tools and professional Xactimate estimates for contractors, adjusters and property
         owners. Based in Texas, serving every Texas county and clients across the U.S.</p>
         <div class="foot-contact">
           <a href="tel:{BIZ['phone_href']}">{icon('phone')}{BIZ['phone_display']}</a>
@@ -250,7 +250,7 @@ def page_hero(page, trail, extra=""):
 
 
 def cta_band(title="Need a number you can take to the bank, the bank or the carrier?",
-             text="Our estimators build line-item Xactimate-format estimates for roofs anywhere in Texas and across the U.S. Send us what you have and we will tell you exactly what it takes."):
+             text="Our estimators build line-item Xactimate estimates for roofs anywhere in Texas and across the U.S. Send us what you have and we will tell you exactly what it takes."):
     return f"""<section class="section section--tight cta-section"><div class="wrap">
   <div class="cta-band" data-reveal>
     <div><h2>{title}</h2><p>{text}</p></div>
@@ -297,7 +297,7 @@ def side_tools(exclude=None, n=6, title="Free estimating tools"):
 
 def side_cta():
     return (f'<div class="side-card side-card--cta"><h3>Want a pro to run the numbers?</h3>'
-            f'<p>Send photos, measurements or a carrier estimate. We build a line-item Xactimate-format estimate.</p>'
+            f'<p>Send photos, measurements or a carrier estimate. We build a line-item Xactimate estimate.</p>'
             f'<a class="btn btn--peach btn--sm" href="/get-estimate/">Request an estimate</a></div>')
 
 
@@ -313,7 +313,7 @@ def org_schema():
         "@type": "ProfessionalService", "@id": ORG_ID, "name": BIZ["name"], "url": url("/"),
         "logo": {"@type": "ImageObject", "url": url("/assets/img/org-logo.webp"), "width": 1000, "height": 1000},
         "image": url("/assets/img/og-image.jpg"),
-        "description": "Free roof estimating calculators and professional Xactimate-format roof estimates, claim estimate reviews and scopes of damages for Texas and the U.S.",
+        "description": "Free roof estimating calculators and professional Xactimate roof estimates, claim estimate reviews and scopes of damages for Texas and the U.S.",
         "telephone": "+1-210-903-9471", "email": BIZ["email"], "priceRange": "$50–$1,000",
         "address": {"@type": "PostalAddress", "streetAddress": BIZ["street"], "addressLocality": BIZ["city"],
                     "addressRegion": BIZ["state"], "postalCode": BIZ["zip"], "addressCountry": "US"},
@@ -660,7 +660,7 @@ def contact_aside(title, text):
 def build_get_estimate():
     path = "/get-estimate/"
     page = {"path": path, "title": "Request a Roof Estimate | Roof Estimate Pro",
-            "description": "Request a professional Xactimate-format roof estimate for a replacement, repair, insurance claim or commercial roof in Texas or any U.S. state."}
+            "description": "Request a professional Xactimate roof estimate for a replacement, repair, insurance claim or commercial roof in Texas or any U.S. state."}
     trail = [("Home", "/"), ("Get an estimate", None)]
     page["schema"] = [webpage_schema(page, "ContactPage")]
     fields = (f_input("name", "Full name", required=True, autocomplete="name")
@@ -676,7 +676,7 @@ def build_get_estimate():
     handoff = (f'<div class="callout" id="handoff" hidden>{icon("calc")}<p>We have attached your <b></b> results to the message below. '
                f'Add anything else you know about the roof and send it over.</p></div>')
     hero = page_hero({"h1": "Request a professional roof estimate", "kicker": "Get estimate",
-                      "lede": "Tell us about the roof. We build line-item, Xactimate-format estimates for replacements, repairs, insurance claims and commercial roofs anywhere in Texas and across the U.S."}, trail)
+                      "lede": "Tell us about the roof. We build line-item, Xactimate estimates for replacements, repairs, insurance claims and commercial roofs anywhere in Texas and across the U.S."}, trail)
     main = f"""{hero}
 <section class="section"><div class="wrap"><div class="contact-split">
   {contact_aside("Prefer to talk it through?", "Call, text or email. We work with contractors, public adjusters, desk adjusters and property owners, and we can usually tell you on the first call what the estimate will need.")}
@@ -730,7 +730,7 @@ def build_claim():
   {side}
   {form_shell("claim", fields, "Send claim for review")}
 </div></div></section>
-{cta_band("Want the full estimate instead?", "If the carrier's estimate is far off, we can write a complete Xactimate-format estimate from scratch for the claim.")}"""
+{cta_band("Want the full estimate instead?", "If the carrier's estimate is far off, we can write a complete Xactimate estimate from scratch for the claim.")}"""
     write(path, render(page, trail, main), priority="0.7")
 
 

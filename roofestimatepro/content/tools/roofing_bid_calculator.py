@@ -93,7 +93,7 @@ margin than markup, and confusing the two is one of the most common reasons roof
 which is a 42.9% markup.</p>
 
 <h3 id="op-convention">Insurance "10 and 10" overhead &amp; profit</h3>
-<p>On insurance work, Xactimate-style estimates add 10% overhead and 10% profit, each calculated on the line-item
+<p>On insurance work, Xactimate estimates add 10% overhead and 10% profit, each calculated on the line-item
 subtotal, for 20% of cost. That is a 20% markup, or a 16.7% margin, before commission. If you instead compound them
 (10% overhead on cost, then 10% profit on cost plus overhead), you get 1.10 × 1.10 = 1.21, a 21% markup.</p>
 <p><strong>This calculator compounds.</strong> In markup mode, overhead is added to direct cost first and the markup is
@@ -127,7 +127,7 @@ look at overhead per job and commission before you cut margin; if it lands well 
 decking allowances and drip edge are in your direct costs.</p>
 <p>To build the direct cost side, use the <a href="/tools/shingle-calculator/">shingle &amp; materials calculator</a> for a
 material takeoff and the <a href="/tools/roof-replacement-cost-calculator/">replacement cost calculator</a> for a
-full itemized retail estimate. If you want an Xactimate-format estimate built for an insurance job, see
+full itemized retail estimate. If you want an Xactimate estimate built for an insurance job, see
 <a href="/services/xactimate-roof-estimates/">Xactimate roof estimates</a>.</p>
 
 <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -146,7 +146,7 @@ faqs = [
      "<p>Divide annual overhead (everything not tied to a specific job) by the number of jobs you complete in a year, or "
      "by annual direct costs to get a percentage. $300,000 over 120 jobs is $2,500 per job.</p>"),
     ("Is 10 and 10 overhead and profit 20% or 21%?",
-     "<p>In Xactimate-style insurance estimates, 10% overhead and 10% profit are each figured on the subtotal, so it is "
+     "<p>In Xactimate insurance estimates, 10% overhead and 10% profit are each figured on the subtotal, so it is "
      "20% of cost. If profit is figured on cost plus overhead, it compounds to 21%. This calculator compounds; set "
      "overhead to 0% and markup to 20% to match the insurance convention.</p>"),
     ("Why does commission change the price so much?",

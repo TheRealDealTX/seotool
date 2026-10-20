@@ -9,16 +9,16 @@ DESCRIPTION = ("Free roof estimate calculators with Texas 2026 pricing: replacem
 
 FAQS = [
     ("Are the roof estimate calculators really free?",
-     "<p>Yes. All twelve tools are free to use with no sign-up. Your inputs are saved in your own browser so you can "
+     "<p>Yes. Every Roof Estimate Pro tool is free to use with no sign-up. Your inputs are saved in your own browser so you can "
      "come back to them, and you can print, save as PDF or share any estimate by link.</p>"),
-    ("How accurate are the calculators?",
+    ("How accurate are the Roof Estimate Pro calculators?",
      "<p>They are built the way an estimator prices a job, with line items, waste, labor adjustments for pitch and height, "
      "and regional pricing for Texas. With good measurements most results land within 10–15% of a professional bid. "
      "Every unit price is editable, so contractors can use their own costs.</p>"),
     ("Do you only work in Texas?",
      "<p>Texas is our home market and we cover every region of the state, from DFW and Houston to the Valley and the "
      "Panhandle. We also prepare estimates for properties in other states. Send us the address and we will confirm.</p>"),
-    ("What does a professional estimate cost?",
+    ("What does a professional estimate from Roof Estimate Pro cost?",
      f"<p>A claim estimate review is ${BIZ['price_claim_review']} per claim and a professional scope of damages is "
      f"${BIZ['price_scope']}. Full line-item estimates are quoted per project based on size and complexity. "
      "<a href=\"/get-estimate/\">Send us the details</a> for a price.</p>"),
@@ -68,10 +68,11 @@ def build(g):
     hero = f"""<section class="hero hero-home">{g['hero_bg']()}
   <div class="wrap">
     <div data-reveal>
-      <a class="eyebrow-pill" href="/tools/"><b>NEW</b> 12 free roof estimating tools {icon('arrow')}</a>
+      <a class="eyebrow-pill" href="/tools/"><b>NEW</b> 12 free Roof Estimate Pro tools {icon('arrow')}</a>
       <h1>Roof estimates you can <span class="grad-text">check, trust and use.</span></h1>
-      <p class="lede">Free calculators for replacement cost, squares, pitch, materials, insurance claims and more, loaded with
-      Texas 2026 pricing. When you need a line-item estimate in the format carriers use, our estimators build it for you.</p>
+      <p class="lede">Roof Estimate Pro gives you free calculators for replacement cost, squares, pitch, materials, insurance
+      claims and more, loaded with Texas 2026 pricing. When you need a line-item Xactimate estimate, the Roof Estimate Pro
+      estimators build it for you.</p>
       <div class="btn-row" style="margin-top:28px">
         <a class="btn btn--peach" href="/tools/roof-replacement-cost-calculator/">Start the cost calculator {icon('arrow')}</a>
         <a class="btn btn--ghost-light" href="/get-estimate/">Talk to an estimator</a>
@@ -86,7 +87,7 @@ def build(g):
 
     tools = f"""<section class="section section--paper" id="tools"><div class="wrap">
   <div class="section-head" data-reveal><span class="kicker">Free tools</span><h2>Every calculator a roof estimate needs</h2>
-    <p>Measure it, price it, order it, and check what insurance should pay. Each tool shows its math and lets you edit the unit prices.</p></div>
+    <p>Measure it, price it, order it, and check what insurance should pay. Every Roof Estimate Pro tool shows its math and lets you edit the unit prices.</p></div>
   <div class="grid grid--3">{''.join(tool_card(t) for t in TOOLS)}</div>
 </div></section>"""
 
@@ -102,16 +103,16 @@ def build(g):
 
     paths = f"""<section class="section"><div class="wrap">
   <div class="section-head" data-reveal><span class="kicker">Two ways to get your number</span><h2>Do it yourself, or hand it to a pro</h2>
-    <p>The tools are complete enough to estimate a roof on their own. When the number has to stand up to a carrier, a bank or a client, send it to us.</p></div>
+    <p>The tools are complete enough to estimate a roof on their own. When the number has to stand up to a carrier, a bank or a client, send it to Roof Estimate Pro.</p></div>
   <div class="grid grid--2">
     <div class="card" data-reveal><span class="ico">{icon('calc')}</span><h3>Use the free tools</h3>
-      <p>For contractors pricing a bid, homeowners sanity-checking a quote, and adjusters running a quick number.</p>
+      <p>Roof Estimate Pro calculators are for contractors pricing a bid, homeowners sanity-checking a quote, and adjusters running a quick number.</p>
       <ul class="check-list" style="margin-top:18px">
         <li>Itemized results with Texas regional pricing</li><li>Edit every unit price to match your costs</li>
         <li>Print, save as PDF or share a link</li><li>Inputs saved in your browser, no account needed</li></ul>
       <a class="btn btn--ghost" href="/tools/">Browse the tools {icon('arrow')}</a></div>
     <div class="card card--dark" data-reveal style="--d:.08s"><span class="ico">{icon('hardhat')}</span><h3>Get a professional estimate</h3>
-      <p>Line-item roof estimates built from scratch from your photos, measurement reports and carrier paperwork.</p>
+      <p>Roof Estimate Pro builds line-item Xactimate roof estimates from scratch from your photos, measurement reports and carrier paperwork.</p>
       <ul class="check-list" style="margin-top:18px;color:#d6e2e0">
         <li>Residential and commercial roofs</li><li>Claim estimate review: <b style="color:#fff">${BIZ['price_claim_review']}</b> per claim</li>
         <li>Scope of damages: <b style="color:#fff">${BIZ['price_scope']}</b> per property</li><li>Texas-wide, plus other states</li></ul>
@@ -120,7 +121,7 @@ def build(g):
 </div></section>"""
 
     who = f"""<section class="section section--paper"><div class="wrap">
-  <div class="section-head" data-reveal><span class="kicker">Who it's for</span><h2>Built for everyone who prices a roof</h2></div>
+  <div class="section-head" data-reveal><span class="kicker">Who it's for</span><h2>Roof Estimate Pro is built for everyone who prices a roof</h2></div>
   <div class="grid grid--4">
     <div class="card" data-reveal><span class="ico">{icon('hardhat')}</span><h3>Roofing contractors</h3><p>Bid faster with takeoffs and job costing, or send us the estimates and supplements you don't have time to write.</p></div>
     <div class="card" data-reveal style="--d:.06s"><span class="ico">{icon('briefcase')}</span><h3>Public &amp; desk adjusters</h3><p>Check carrier estimates line by line, run depreciation and ACV, and order a scope when you need one fast.</p></div>
@@ -134,8 +135,8 @@ def build(g):
     <div data-reveal>
       <span class="kicker">Professional estimates</span>
       <h2>Estimates that hold up when someone checks them</h2>
-      <p class="lede">We build every estimate from measurements and photos, item by item, the way carriers and appraisers
-      expect to see it: quantities you can verify, the code items that apply, and nothing padded.</p>
+      <p class="lede">Roof Estimate Pro builds every Xactimate estimate from measurements and photos, item by item, the way
+      carriers and appraisers expect to see it: quantities you can verify, the code items that apply, and nothing padded.</p>
       <div class="steps" style="grid-template-columns:1fr 1fr;margin-top:26px">
         <div class="step"><h3>Send the details</h3><p>Address, photos, measurement report or carrier estimate. Upload or email.</p></div>
         <div class="step"><h3>We measure &amp; scope</h3><p>An estimator reviews the roof and confirms the scope with you.</p></div>
@@ -155,7 +156,7 @@ def build(g):
       <span class="kicker">Texas first</span>
       <h2>Every corner of Texas, and roofs beyond it</h2>
       <p class="lede" style="color:#a9bbb8">Hail Alley in North Texas, hurricanes on the Gulf Coast, heat that cooks membranes
-      in Central and West Texas. Our pricing and estimates are built around Texas roofs, region by region, and we prepare
+      in Central and West Texas. Roof Estimate Pro pricing and estimates are built around Texas roofs, region by region, and we prepare
       estimates for properties in other states too.</p>
       <ul class="city-list" style="margin:18px 0 26px">{region_chips}<li>+ other U.S. states</li></ul>
       <a class="btn btn--peach" href="/areas/">See service areas {icon('arrow')}</a>
@@ -173,10 +174,12 @@ def build(g):
     blog = ""
     if posts:
         blog = f"""<section class="section"><div class="wrap">
-  <div class="section-head" data-reveal><span class="kicker">From the blog</span><h2>Field notes from working estimators</h2></div>
+  <div class="section-head" data-reveal><span class="kicker">From the blog</span><h2>Field notes from working estimators</h2><p>Guides on costs, claims and takeoffs from the Roof Estimate Pro estimating team.</p></div>
   <div class="grid grid--3">{''.join(post_card(p) for p in posts)}</div>
   <p style="text-align:center;margin-top:32px"><a class="btn btn--ghost" href="/blog/">All articles {icon('arrow')}</a></p>
 </div></section>"""
 
-    main = hero + tools + stats + paths + who + steps + texas + blog + g["faq_html"](FAQS) + g["cta_band"]()
+    main = hero + tools + stats + paths + who + steps + texas + blog + g["faq_html"](FAQS) + g["cta_band"](
+        text="Roof Estimate Pro estimators build line-item Xactimate estimates for roofs anywhere in Texas and across the U.S. "
+             "Send us what you have and we will tell you exactly what it takes.")
     g["write"]("/", g["render"](page, None, main, scripts=f'<script src="/assets/js/data.js?v={g["ASSET_V"]}" defer></script>\n'), priority="1.0")

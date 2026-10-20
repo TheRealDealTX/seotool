@@ -185,7 +185,7 @@ finishes hold their color far longer than SMP in Texas UV.</p>
 <h2 id="using-results">Using the results</h2>
 <p>The table gives a supplier-ready cut list: number of panels and cut length for each plane, plus trim pieces,
 closures, clips or screws, butyl tape and underlayment rolls. Installed cost adds labor scaled for pitch and region,
-optional tear-off, tax and overhead &amp; profit. If you need a full Xactimate-format metal roof estimate for a claim,
+optional tear-off, tax and overhead &amp; profit. If you need a full Xactimate metal roof estimate for a claim,
 our <a href="/services/xactimate-roof-estimates/">estimating team</a> can build one from your measurements.</p>
 """
 

@@ -178,7 +178,7 @@ Neither coating fixes structural ponding, and neither belongs on a roof with act
 
 <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
 <p><strong>Need a full commercial takeoff?</strong> Our <a href="/services/commercial-roof-estimates/">commercial roof
-estimates</a> are built line by line from your measurements, core cuts and photos, in the format carriers use.</p></div>
+estimates</a> are built line by line from your measurements, core cuts and photos, in Xactimate.</p></div>
 """
 
 faqs = [

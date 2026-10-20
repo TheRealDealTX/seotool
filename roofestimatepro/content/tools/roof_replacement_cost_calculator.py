@@ -177,7 +177,7 @@ faqs = [
      "calculator</a> if you are not sure of yours.</p>"),
     ("Can a professional estimator check my numbers?",
      "<p>Yes. Use the <em>Have a pro estimator review this</em> button. It sends your inputs to our team, and we can build "
-     "a full Xactimate-format estimate for contractors, adjusters or homeowners anywhere in Texas and most other states.</p>"),
+     "a full Xactimate estimate for contractors, adjusters or homeowners anywhere in Texas and most other states.</p>"),
 ]
 
 TOOL = {
