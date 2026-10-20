@@ -162,5 +162,7 @@ return [
 <h2>When to get help with a wind claim</h2>
 
 <p>Simple claims sometimes resolve without outside help. If the estimate looks thin, the insurer blames wear and tear, or you have a commercial loss with business interruption, a licensed public adjuster may be useful. Dallas Public Adjuster, a service of [[company]], helps Dallas County homeowners and businesses with <a href="/services/wind-damage-claims/">wind damage claims</a> by inspecting the property, documenting the damage pattern, preparing a detailed Xactimate estimate, and presenting the claim. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. Results depend on your policy and the facts of the loss.</p>
+
+<p>Not sure whether your damage is worth a claim, or whether the wind/hail deductible will swallow it? A free review from Dallas Public Adjuster can walk through the policy, the storm date, and the damage before you decide.</p>
 HTML,
 ];

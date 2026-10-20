@@ -43,6 +43,9 @@ return [
 <h2>Permits in Carrollton</h2>
 <p>The City of Carrollton has its own building inspection and permit office, and its requirements apply across all three counties the city covers. Confirm permit requirements before roofing or structural repairs. Code upgrades required during a repair are generally paid only under ordinance or law coverage, up to its limit. See our <a href="/local-building-codes/">local building codes guide</a>.</p>
 
+<h2>Before you accept the first estimate</h2>
+<p>After a large hail or wind event, a first estimate is often prepared quickly. Before you sign off, compare it with what you see on the property: every roof slope, gutters, vents, siding, windows, fencing, and interior damage. Check whether the estimate includes items such as code-required underlayment, steep-roof charges, and permit costs where they apply. If the numbers look short, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> can show what may be missing.</p>
+
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the full property, document damage with photos, measurements, and Matterport 3D imaging where useful, and prepare a detailed Xactimate estimate. We review your policy and the insurer's estimate, explain the differences, and handle communication with the carrier. If your claim was <a href="/services/underpaid-insurance-claims/">underpaid</a> or <a href="/services/delayed-insurance-claims/">delayed</a>, we can review where it stands. We cannot guarantee a result; coverage depends on your policy and the facts.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

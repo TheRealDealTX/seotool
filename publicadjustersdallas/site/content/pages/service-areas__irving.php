@@ -44,6 +44,9 @@ return [
 <h2>Permits in Irving</h2>
 <p>The City of Irving has its own building inspection and permit office, separate from the City of Dallas. Confirm what your project requires before roofing or structural work starts. When repairs must meet current code, those extra costs are typically covered only under ordinance or law coverage, up to its limit. See our <a href="/local-building-codes/">local building codes guide</a>.</p>
 
+<h2>Timing matters on Irving claims</h2>
+<p>Report damage promptly and keep a written log of every call, email, and inspection. Texas prompt-payment rules generally give insurers 15 days after notice to acknowledge a claim and start investigating, and 15 business days after receiving requested items to accept or reject it, with extensions in some situations. Many policies also include contractual deadlines, so check yours and talk to a Texas attorney about any legal deadline. If your claim is moving slowly, see our <a href="/services/delayed-insurance-claims/">delayed insurance claims</a> page.</p>
+
 <h2>How we help Irving policyholders</h2>
 <p>As a Dallas Public Adjuster, we inspect the full property, document damage with photos, measurements, and Matterport 3D imaging where it helps, and build a detailed Xactimate estimate. We review the insurer's estimate, explain the gaps, and handle communication with the carrier. If your claim was <a href="/services/underpaid-insurance-claims/">underpaid</a>, <a href="/services/denied-insurance-claims/">denied</a>, or stalled, we can review it with you. We cannot guarantee a result; coverage depends on your policy.</p>
 <p>Start with a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

@@ -43,6 +43,9 @@ return [
 <h2>Permits in Rowlett</h2>
 <p>The City of Rowlett has its own building inspection and permit office, separate from the City of Dallas, and its requirements apply in both counties. Confirm permit requirements before roofing or structural work begins. If code requirements raise the cost of a covered repair, those costs are generally paid only under ordinance or law coverage, up to its limit. Our <a href="/local-building-codes/">building codes guide</a> explains more.</p>
 
+<h2>After a Rowlett storm: protect the claim</h2>
+<p>Take reasonable steps to prevent further damage, such as tarping the roof and boarding windows, and keep receipts. Photograph everything before cleanup or tree removal. Report the claim promptly and keep a log of every call, email, and inspection. Check your declarations page for a separate wind/hail deductible. If you must leave the home, track added living costs, since many policies include additional living expense coverage. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> covers the details.</p>
+
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the full property, document damage with photos, measurements, and Matterport 3D imaging where useful, and prepare a detailed Xactimate estimate. We compare it with the insurer's, handle communication with the carrier, and help with <a href="/services/insurance-claim-supplements/">supplements</a>, <a href="/services/underpaid-insurance-claims/">underpaid claims</a>, or <a href="/services/insurance-appraisal/">appraisal</a> when there is a dispute over the amount of loss. We cannot guarantee any outcome; coverage depends on your policy.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

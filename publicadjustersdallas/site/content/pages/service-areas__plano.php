@@ -44,6 +44,9 @@ return [
 <h2>Permits in Plano</h2>
 <p>The City of Plano has its own building inspection and permit office, separate from the City of Dallas, and its rules apply on both sides of the county line. Confirm permit requirements before roofing or structural work begins. Code-required upgrades are generally paid only under ordinance or law coverage, up to its limit. See our <a href="/local-building-codes/">local building codes guide</a>.</p>
 
+<h2>Checking your Plano policy before storm season</h2>
+<p>A few minutes with your declarations page can prevent surprises later. Look for the wind/hail deductible, which is often a percentage of the dwelling limit; whether your roof is covered at replacement cost or actual cash value; any cosmetic-damage exclusion; and your ordinance or law limit. Our <a href="/claim-calculator/">claim calculator</a> can help you estimate how a percentage deductible affects a payment.</p>
+
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster serving Collin County neighbors as well as Dallas County, we inspect the full property, document the damage, prepare a detailed Xactimate estimate, and compare it with the insurer's. We handle communication with the carrier and can review an estimate you think is short through an <a href="/services/insurance-estimate-review/">insurance estimate review</a>. We cannot guarantee a result; coverage depends on your policy and the facts.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

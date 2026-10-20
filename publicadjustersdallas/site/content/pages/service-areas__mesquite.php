@@ -36,11 +36,21 @@ return [
 <p>Downbursts and brief tornadoes lift shingles, topple trees and fences, and damage metal roofs on churches, shops, and outbuildings. See <a href="/services/wind-damage-claims/">wind damage claims</a> and <a href="/services/tornado-damage-claims/">tornado damage claims</a>.</p>
 <h3>Water and flood</h3>
 <p>Heavy rain can bring two very different kinds of claims. Water entering through storm damage or from a plumbing failure is often handled under your homeowners policy as <a href="/services/water-damage-claims/">water damage</a>. Surface water rising into a home or garage is flood, which requires separate flood coverage. Knowing which applies early can save time. Learn more on our <a href="/services/flood-damage-claims/">flood damage claims</a> page.</p>
+<h3>Commercial and rental properties</h3>
+<p>Retail centers, warehouses, churches, and rental homes face the same storms with different policies. Low-slope and metal roofs, rooftop units, and multiple buildings under one policy need organized documentation. See <a href="/services/commercial-property-claims/">commercial property claims</a>.</p>
 
 [[cta-storm]]
 
 <h2>Permits in Mesquite</h2>
 <p>The City of Mesquite has its own building inspection and permit office, separate from the City of Dallas. Confirm permit requirements before re-roofing or structural repairs. If code requirements add cost to a covered repair, payment generally depends on ordinance or law coverage, up to its limit. Our <a href="/local-building-codes/">building codes guide</a> explains more.</p>
+
+<h2>Steps to take after a Mesquite storm</h2>
+<ol>
+<li><strong>Protect the property.</strong> Tarp roof openings, board windows, and move belongings away from leaks. Save receipts for emergency work.</li>
+<li><strong>Document before cleanup.</strong> Photograph the roof, gutters, siding, fences, vehicles, and interior damage. For water, photograph the high-water line and note where the water came from.</li>
+<li><strong>Check your deductible.</strong> Many Texas policies have a separate wind/hail deductible, often a percentage of the dwelling limit, listed on the declarations page.</li>
+<li><strong>Report promptly and keep a log</strong> of every call and inspection. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> can help you stay organized.</li>
+</ol>
 
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the property, document the damage, prepare a detailed Xactimate estimate, and compare it with the insurer's scope. We handle communication with the carrier and can help with <a href="/services/insurance-claim-supplements/">supplements</a> or an <a href="/services/insurance-appraisal/">appraisal</a> when you and the insurer disagree on the amount of loss. We cannot guarantee an outcome; coverage depends on your policy.</p>

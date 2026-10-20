@@ -45,6 +45,16 @@ return [
 <h2>Permits in Grand Prairie</h2>
 <p>The City of Grand Prairie has its own building inspection and permit office, and its requirements apply across the city regardless of county. Confirm what your project needs before roofing or structural work begins. Code-required upgrades are generally paid only under ordinance or law coverage, up to its limit. Our <a href="/local-building-codes/">building codes guide</a> explains more.</p>
 
+<h2>Practical tips after a Grand Prairie storm</h2>
+<ul>
+<li>Photograph damage from several angles before tarping or cleanup, including close-ups of hail strikes on soft metals.</li>
+<li>Note the date and time of the storm and compare it with NOAA reports near your address.</li>
+<li>Check your declarations page for a separate wind/hail deductible, which is often a percentage of the dwelling limit rather than a flat dollar amount.</li>
+<li>Do not let anyone remove damaged roofing, siding, or fencing until it has been documented.</li>
+<li>Keep receipts for emergency repairs and, if you must move out, for added living expenses.</li>
+<li>Keep a written log of every call and inspection. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> has the full list.</li>
+</ul>
+
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the property, document the damage, prepare a detailed Xactimate estimate, and compare it with the insurer's. We handle communication with the carrier and help with <a href="/services/insurance-claim-supplements/">supplements</a> or <a href="/services/denied-insurance-claims/">denied claims</a>. We cannot guarantee any outcome; coverage depends on your policy and the facts of the loss.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

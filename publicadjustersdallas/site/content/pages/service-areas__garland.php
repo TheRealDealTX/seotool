@@ -37,11 +37,23 @@ return [
 <p>Brick veneer protects walls, but composition shingle roofs, gutters, window screens, garage doors, and AC fins take the impact. Insurers sometimes approve spot repairs where a full slope or full roof may be warranted. Our <a href="/services/hail-damage-claims/">hail damage claims</a> page covers what to photograph.</p>
 <h3>Industrial and commercial buildings</h3>
 <p>Garland's warehouses, shops, and metal buildings face roof panel, wall, and overhead door damage in severe wind. Tilt-wall and metal structures need estimates that reflect their actual systems. Learn about <a href="/services/commercial-property-claims/">commercial property claims</a>.</p>
+<h3>Freeze and water damage</h3>
+<p>Winter Storm Uri in February 2021 brought single-digit lows to Dallas County, and hard freezes can burst pipes in attics and exterior walls. Water damage from a sudden pipe break is often covered, while long-term leaks may not be. See <a href="/services/freeze-damage-claims/">freeze damage claims</a>.</p>
 
 [[cta-storm]]
 
 <h2>Permits in Garland</h2>
 <p>The City of Garland has its own building inspection and permit office, separate from the City of Dallas. Confirm permit requirements before roofing or structural repairs begin. If code requirements raise the cost of a covered repair, those costs are generally paid only under ordinance or law coverage, up to its limit. Our <a href="/local-building-codes/">building codes guide</a> explains how to handle code items in a claim.</p>
+
+<h2>After a major Garland storm</h2>
+<p>When a tornado or widespread windstorm hits, many neighbors file at once, contractors get busy, and insurers bring in outside adjusters. A few habits can protect your claim:</p>
+<ul>
+<li>Photograph every area of damage before tarping, tree removal, or debris cleanup, and keep receipts for emergency work.</li>
+<li>Ask for the insurer's estimate in writing and compare it item by item with what you see on the property.</li>
+<li>If you have to leave the home, track hotel, meal, and other added costs; many policies include additional living expense coverage.</li>
+<li>Be cautious about signing anything that assigns your claim rights or lets a contractor deal with the insurer for you.</li>
+</ul>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lays out the full list.</p>
 
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the property, document damage with photos and measurements, prepare a detailed Xactimate estimate, and compare it line by line with the insurer's. We handle communication with the carrier and help with <a href="/services/insurance-claim-supplements/">supplements</a> when damage is found later. We cannot guarantee any outcome; coverage depends on your policy and the facts.</p>

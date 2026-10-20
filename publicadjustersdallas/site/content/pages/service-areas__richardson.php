@@ -43,6 +43,9 @@ return [
 <h2>Permits in Richardson</h2>
 <p>The City of Richardson has its own building inspection and permit office. Its requirements apply on both the Dallas County and Collin County sides of the city, and they are separate from the City of Dallas. Before roofing or structural work starts, confirm what is required. Code-related upgrade costs are generally paid only under ordinance or law coverage, up to its limit; see our <a href="/local-building-codes/">local building codes guide</a>.</p>
 
+<h2>After a windstorm in Richardson: what to keep</h2>
+<p>Large wind events like the one in May 2024 produce a rush of claims at once, and details get lost. Keep a simple file with photos of every damaged item before cleanup, tree removal invoices, tarping and board-up receipts, and notes from each call with the insurer. Texas prompt-payment rules generally give insurers 15 days after notice to acknowledge a claim and begin investigating, with extra time after a declared weather catastrophe. If your claim seems stuck, our <a href="/services/delayed-insurance-claims/">delayed insurance claims</a> page explains what to ask for.</p>
+
 <h2>How we help</h2>
 <p>As a Dallas Public Adjuster, we inspect the full property, photograph and measure the damage, prepare a detailed Xactimate estimate, and compare it with the insurer's. We handle communication with the carrier and, where the numbers do not line up, prepare supplements or discuss appraisal. If your claim from the 2024 windstorm or a recent hailstorm was <a href="/services/underpaid-insurance-claims/">underpaid</a> or <a href="/services/denied-insurance-claims/">denied</a>, we can review it with you. We cannot guarantee a result; coverage depends on your policy.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>

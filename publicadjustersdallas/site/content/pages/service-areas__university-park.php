@@ -44,6 +44,14 @@ return [
 <h2>Permits in University Park</h2>
 <p>University Park issues its own building permits and conducts its own inspections. Its process is separate from both the City of Dallas Development Services Department and the Town of Highland Park, so confirm the requirements with the city before repairs begin. When code requirements add cost to a covered repair, payment usually depends on ordinance or law coverage, which is often limited. Our <a href="/local-building-codes/">building codes and insurance repairs guide</a> walks through how that works.</p>
 
+<h2>First steps after storm damage in University Park</h2>
+<ol>
+<li><strong>Stay safe and prevent further damage.</strong> Tarp roof openings, board broken windows, and shut off water to a burst line. Keep receipts; reasonable emergency repairs are often reimbursable.</li>
+<li><strong>Photograph before cleanup.</strong> Capture the roof, gutters, windows, fences, fallen limbs, and interior stains, with wide shots and close-ups.</li>
+<li><strong>Report the claim promptly</strong> and write down your claim number, adjuster name, and every conversation. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> can help.</li>
+<li><strong>Be careful with quick fixes.</strong> Do not let anyone remove damaged materials before they are documented.</li>
+</ol>
+
 <h2>What working with us looks like</h2>
 <p>As a Dallas Public Adjuster serving the Park Cities, we start by listening to what happened and reading your policy. We then inspect the property, document the damage, and prepare a detailed Xactimate estimate. We compare it with the insurer's estimate, explain the differences, and handle communication with the carrier. If you already have an estimate you think is short, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> is a good first step. We cannot guarantee any outcome; coverage depends on your policy and the facts of the loss.</p>
 <p>Request a <a href="/free-claim-review/">Free Claim Review</a> or call [[phone]].</p>
