@@ -44,6 +44,7 @@ $ogType = ($page['_type'] ?? '') === 'post' ? 'article' : 'website';
 <meta name="twitter:image" content="<?= e(og_image($page)) ?>">
 <meta name="theme-color" content="#3E3F29">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
 <link rel="icon" href="/assets/img/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
