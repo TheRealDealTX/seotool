@@ -434,9 +434,9 @@ p { margin: 0 0 1em; }
 .price-panel .pp-body .fields { gap: 12px 14px; }
 @media (max-width: 560px) { .price-panel .pp-body .fields { grid-template-columns: 1fr; } }
 .rows { display: grid; gap: 10px; }
-.row-item { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)) 44px; align-items: end; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: #fbfdfc; animation: rowin .25s ease; }
+.row-item { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); align-items: end; padding: 12px; border: 1px solid var(--line); border-radius: 14px; background: #fbfdfc; animation: rowin .25s ease; }
 @keyframes rowin { from { opacity: 0; transform: translateY(-6px); } }
-.row-del { width: 44px; height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
+.row-del { justify-self: end; width: 44px; height: 46px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; color: var(--muted); cursor: pointer; display: grid; place-items: center; }
 .row-del:hover { color: var(--danger); border-color: #fdba74; }
 .row-del svg { width: 18px; height: 18px; }
 .add-row { margin-top: 10px; }
