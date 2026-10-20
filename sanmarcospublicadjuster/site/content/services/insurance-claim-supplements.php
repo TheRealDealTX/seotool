@@ -71,7 +71,16 @@ return [
 <h2>Supplements and Recoverable Depreciation</h2>
 <p>On many replacement cost policies, the insurer pays actual cash value first and holds back depreciation until repairs are complete. Requesting that recoverable depreciation is a separate step from a supplement. When you finish repairs, you may need to send invoices for the completed work to release the held-back depreciation, and also submit a supplement for anything new. Watch the policy deadline for claiming depreciation. Our article on <a href="/replacement-cost-vs-actual-cash-value-texas/">replacement cost vs. actual cash value</a> explains the mechanics.</p>
 
-<h2>How We Help</h2>
+<h2>Common Supplement Mistakes to Avoid</h2>
+<ul>
+<li><strong>Covering up damage before it is documented.</strong> Once new decking or drywall is installed, the evidence is gone. Photograph first, with a tape measure in the frame.</li>
+<li><strong>Submitting a lump sum.</strong> A single figure from a contractor is hard for an insurer to evaluate. Line items with quantities and prices are easier to review.</li>
+<li><strong>Mixing old and new damage.</strong> Including pre-existing deterioration alongside storm damage can undermine the credibility of the whole request.</li>
+<li><strong>Missing the policy deadline.</strong> Supplements, reopening requests, and depreciation claims can each have time limits.</li>
+<li><strong>Losing track of what was sent.</strong> Keep copies of every submission and the insurer's response to each item.</li>
+</ul>
+
+<h2>How a San Marcos Public Adjuster Helps With Supplements</h2>
 <p>We review the original estimate, inspect the property, and document missed or hidden damage. We prepare supplemental line items with supporting photos and measurements, communicate with the adjuster, and track each item until it is resolved. If the insurer and policyholder still disagree on the amount, <a href="/services/insurance-appraisal/">insurance appraisal</a> may be an option to discuss. For a fresh look at what the first estimate included, see <a href="/services/insurance-estimate-review/">insurance estimate review</a>, and for hail roofs specifically, our article on <a href="/hail-damage-claim-supplements/">hail damage claim supplements</a>.</p>
 <p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. We cannot guarantee that supplemental items will be paid. If you have found more damage, a licensed <a href="/">San Marcos public adjuster</a> can help you sort out the next step. Request a <a href="/free-claim-review/">Free Claim Review</a>.</p>
 HTML,

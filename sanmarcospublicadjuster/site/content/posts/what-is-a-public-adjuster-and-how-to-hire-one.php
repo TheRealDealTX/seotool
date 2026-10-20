@@ -2,7 +2,7 @@
 return [
     'title'       => 'What Is a Public Adjuster and How to Hire One in Texas',
     'seo_title'   => 'What Is a Public Adjuster & How to Hire One in San Marcos',
-    'description' => 'What is a public adjuster, and how do you hire one in Texas? A step-by-step guide for San Marcos owners: TDI license check, contract terms, fees, 72-hour cancel.',
+    'description' => 'What is a public adjuster, and how do you hire one? A Texas step-by-step guide for San Marcos: TDI license check, contract terms, fees, 72-hour cancel.',
     'kicker'      => 'Hiring a Public Adjuster',
     'image'       => '/wp-content/uploads/2026/02/What-Is-a-Public-Adjuster-and-How-to-Hire-One.webp',
     'image_alt'   => 'Public adjuster standing on a residential roof partly covered with a blue tarp after storm damage',

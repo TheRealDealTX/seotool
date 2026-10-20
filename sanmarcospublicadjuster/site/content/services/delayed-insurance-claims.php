@@ -71,7 +71,13 @@ return [
 
 <figure><img src="/assets/img/stock/organized-claim-documentation-folder.webp" alt="Labeled claim folders for photos, receipts, estimates, and weather data next to a laptop" width="1536" height="1024" loading="lazy" decoding="async"><figcaption>An organized claim file makes it harder for requests to fall through the cracks.</figcaption></figure>
 
-<h2>How a Public Adjuster Helps With a Delayed Claim</h2>
+<h2>Reservation of Rights Letters</h2>
+<p>Sometimes a delay is accompanied by a letter saying the insurer is investigating "under a reservation of rights." That letter generally means the insurer is continuing to look at the claim while preserving its ability to deny all or part of it later based on policy terms. It is not a denial, but it is a signal that coverage is in question. Read the policy provisions it cites, respond to reasonable information requests promptly, and consider consulting a Texas attorney, especially if the letter mentions misrepresentation, late notice, or an exclusion that could defeat the whole claim.</p>
+
+<h2>Recorded Statements and Examinations</h2>
+<p>Insurers may ask for a recorded statement, a sworn proof of loss, or, under some policies, an examination under oath. These requests can add weeks to a claim. Ask what the request is for, prepare by reviewing your timeline and documents, and answer accurately. If you are asked to give an examination under oath, it is wise to talk with a Texas attorney first.</p>
+
+<h2>How a San Marcos Public Adjuster Helps With a Delayed Claim</h2>
 <ol>
 <li><strong>File review.</strong> We review the correspondence, the policy, and what has been submitted to identify gaps.</li>
 <li><strong>Complete documentation.</strong> We inspect and document the damage and prepare a line-item estimate so the insurer has what it needs to evaluate the loss.</li>
@@ -79,6 +85,9 @@ return [
 <li><strong>Escalation when appropriate.</strong> If the file is complete and the claim is still stalled, we help you decide on next steps, including supervisor review or a TDI complaint.</li>
 </ol>
 <p>Delays often hide other problems. Once a decision arrives, the claim may be partly <a href="/services/denied-insurance-claims/">denied</a> or <a href="/services/underpaid-insurance-claims/">underpaid</a>, and an independent <a href="/services/insurance-estimate-review/">estimate review</a> can help you understand the numbers.</p>
+
+<h2>Delays After Floods and Freezes</h2>
+<p>Not every delay follows a hailstorm. After Winter Storm Uri in February 2021, which brought 7 inches of snow west of San Marcos and widespread burst pipes, plumbers, water mitigation companies, and adjusters were all stretched thin at the same time. Flood claims add another layer: they are usually handled under a separate NFIP or private flood policy with its own proof-of-loss deadlines, apart from your homeowners claim. If you have two claims open for the same event, track each separately. See <a href="/services/freeze-damage-claims/">freeze damage claims</a> and <a href="/services/flood-damage-claims/">flood damage claims</a>.</p>
 
 <h2>Serving San Marcos and Hays County</h2>
 <p>We work with homeowners, landlords, and businesses throughout San Marcos, Kyle, Buda, Wimberley, and surrounding Central Texas communities. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. We cannot guarantee how quickly an insurer will act or what it will pay. If your claim has been sitting too long, a licensed <a href="/">San Marcos public adjuster</a> can look at the file with you. Start with a <a href="/free-claim-review/">Free Claim Review</a>.</p>

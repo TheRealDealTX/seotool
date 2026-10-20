@@ -71,7 +71,20 @@ return [
 <h2>Codes and Permits for Commercial Repairs</h2>
 <p>The City of San Marcos enforces the 2021 International Codes, including the IBC, IECC, and IEBC, effective April 1, 2023. Commercial repairs often trigger permit review through the city <a href="https://www.sanmarcostx.gov/1000/Permit-Center" target="_blank" rel="noopener">Permit Center</a>, and energy code requirements can affect roof insulation on a replacement. In unincorporated Hays County, the county applies the 2018 International Fire Code to commercial and multifamily construction. Ordinance or law coverage determines whether code-driven costs are payable. See our <a href="/local-building-codes/">local building codes</a> page and our article on <a href="/building-codes-insurance-repairs-san-marcos/">building codes and insurance repairs</a>.</p>
 
-<h2>How We Support Commercial Policyholders</h2>
+<h2>Records to Gather After a Commercial Loss</h2>
+<p>Commercial insurers typically ask for more paperwork than homeowners carriers, and a missing record can hold up the whole claim. Start pulling these together early:</p>
+<ul>
+<li>The complete policy, including every endorsement and the most recent statement of values.</li>
+<li>Photos and video of the damage, plus any pre-loss photos, roof inspection reports, or maintenance records.</li>
+<li>Invoices for emergency services such as roof tarping, board-up, water extraction, or fencing.</li>
+<li>Leases, rent rolls, and tenant notices for affected spaces.</li>
+<li>Financial statements, tax returns, and sales records for the past two to three years to support business income.</li>
+<li>Lists of damaged equipment, inventory, and furniture, with purchase records where available.</li>
+<li>Payroll records and a log of extra expenses incurred to keep operating.</li>
+</ul>
+<p>Keep a written timeline of the shutdown and the reopening plan. It becomes the backbone of the period of restoration discussion.</p>
+
+<h2>How a San Marcos Public Adjuster Supports Commercial Policyholders</h2>
 <ol>
 <li><strong>Policy analysis:</strong> declarations, forms, endorsements, coinsurance, and deductibles.</li>
 <li><strong>Building documentation:</strong> roof sections, envelope, interiors, rooftop equipment, and contents, using photos, measurements, and Matterport 3D imaging where useful.</li>

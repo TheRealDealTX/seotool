@@ -87,6 +87,10 @@ return [
 </ol>
 <p>Local factors matter. Post-storm demand can push Central Texas repair prices up for months. Hill Country metal roofs, stone veneer, and older homes near downtown may need specialized trades. And the City of San Marcos has enforced the 2021 International Codes since April 1, 2023, which can affect what a compliant repair includes. See our <a href="/local-building-codes/">local building codes</a> page.</p>
 
+<h2>Repair vs. Replace and Matching</h2>
+<p>A frequent source of underpayment is the choice between repairing and replacing. An estimate may approve a handful of shingles, a few siding boards, or one room of flooring. That can be appropriate when matching material is available and the surrounding material is sound. It becomes harder to support when the product is discontinued, when older shingles crack as they are lifted, or when new material would plainly not match the color or profile next to it.</p>
+<p>Policies treat matching differently, and the answer depends on the wording and the facts. Helpful evidence includes photos of the surrounding material, supplier or manufacturer information on product availability, and a contractor's written explanation of why a spot repair is or is not practical. Specific evidence gives the insurer a concrete reason to reconsider, rather than a general request for more money. A San Marcos public adjuster can help assemble it.</p>
+
 <h2>Before You Accept or Sign Anything</h2>
 <p>Read every document carefully, especially anything labeled a release or final settlement. Keep copies of all estimates and letters. If you believe the insurer acted in bad faith or you are close to a deadline to sue, consult a Texas attorney; public adjusters do not give legal advice. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 <p>If you want a licensed <a href="/">San Marcos public adjuster</a> to compare your settlement with the damage on the ground, start with a <a href="/free-claim-review/">Free Claim Review</a>.</p>

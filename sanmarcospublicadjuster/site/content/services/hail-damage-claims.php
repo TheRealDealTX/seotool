@@ -86,6 +86,6 @@ return [
 <li>Your property has a metal roof, multiple structures, or commercial roofing that is harder to scope.</li>
 <li>Hail also damaged windows, siding, and equipment that the first estimate left out.</li>
 </ul>
-<p>If you are not sure where your claim stands, a <a href="/free-claim-review/">free claim review</a> is a low-pressure way to find out. Our San Marcos Public Adjuster team also handles <a href="/services/wind-damage-claims/">wind damage claims</a> when the same storm brings both.</p>
+<p>If you are not sure where your claim stands, a <a href="/free-claim-review/">free claim review</a> is a low-pressure way to find out. San Marcos Public Adjuster also handles <a href="/services/wind-damage-claims/">wind damage claims</a> when the same storm brings both.</p>
 HTML,
 ];

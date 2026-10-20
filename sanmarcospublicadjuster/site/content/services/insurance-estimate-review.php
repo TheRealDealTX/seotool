@@ -2,7 +2,7 @@
 return [
     'title'       => 'Insurance Estimate Review in San Marcos, TX',
     'seo_title'   => 'Insurance Estimate Review San Marcos | Public Adjuster',
-    'description' => 'Insurance estimate review in San Marcos: we compare your insurer\'s Xactimate estimate with the actual damage, line by line, to find missing scope and pricing.',
+    'description' => 'Insurance estimate review in San Marcos: we compare your insurer\'s estimate with the actual damage, line by line, to find missing scope and pricing gaps.',
     'lead'        => 'An insurance estimate can run dozens of pages of codes, quantities, and depreciation. A line-by-line review shows what the insurer included, what it left out, and whether the numbers match your property.',
     'kicker'      => 'Estimate Review',
     'image'       => '/assets/img/featured/service-insurance-estimate-review.webp',
@@ -19,7 +19,7 @@ return [
     'faqs' => [
         ['q' => 'What is Xactimate?', 'a' => '<p>Xactimate is estimating software widely used by insurers, adjusters, and contractors. It organizes repairs into line items with quantities and unit prices from regional price lists that are updated over time. Because many insurers use it, an estimate prepared in the same software is easier to compare.</p>'],
         ['q' => 'What should I check first on my estimate?', 'a' => '<p>Start with the summary page: replacement cost, depreciation, deductible, prior payments, and net claim. Then compare the rooms and areas listed with every area that was damaged. Missing rooms, elevations, or structures are among the easiest gaps to spot.</p>'],
-        ['q' => 'What does “O&P” mean on an estimate?', 'a' => '<p>O&amp;P stands for general contractor overhead and profit. When a repair reasonably requires a general contractor to coordinate several trades, many estimates include O&amp;P. Whether it applies to your claim depends on the scope and the insurer\'s position.</p>'],
+        ['q' => 'What does overhead and profit (O&P) mean on an estimate?', 'a' => '<p>O&amp;P stands for general contractor overhead and profit. When a repair reasonably requires a general contractor to coordinate several trades, many estimates include O&amp;P. Whether it applies to your claim depends on the scope and the insurer\'s position.</p>'],
         ['q' => 'Why is the price list date important?', 'a' => '<p>Xactimate price lists are tied to a region and a date. If an estimate uses an older price list, unit costs may not reflect current local labor and material costs, especially after a large storm increases demand.</p>'],
         ['q' => 'Can I review the estimate myself?', 'a' => '<p>Yes, and you should read it. Walk the property with the estimate in hand and check off each damaged item. A professional review helps most with quantities, code items, pricing, and the trade-specific line items that are easy to miss.</p>'],
         ['q' => 'What happens after the review finds problems?', 'a' => '<p>The differences can be documented and presented to the insurer as a supplement or reconsideration request. If the insurer and policyholder still disagree on the amount, appraisal may be an option under the policy. No outcome is guaranteed.</p>'],
@@ -61,7 +61,18 @@ return [
 
 [[cta]]
 
-<h2>How Our Estimate Review Works</h2>
+<h2>Reading the Line Items Yourself</h2>
+<p>You do not need to be an estimator to spot many problems. With your estimate in hand, walk the property and try this:</p>
+<ol>
+<li><strong>Match every area.</strong> List each damaged room, roof slope, wall, and structure, then find it in the estimate. Anything missing is worth flagging.</li>
+<li><strong>Check the descriptions.</strong> "Detach and reset" means an item is removed and put back, not replaced. "R&amp;R" means remove and replace.</li>
+<li><strong>Look at quantities.</strong> A bedroom with 12-foot walls priced as 8-foot walls, or a two-story elevation priced as one, will show up as a short quantity.</li>
+<li><strong>Read the notes.</strong> Adjusters often explain decisions in line notes, such as why an item was repaired instead of replaced.</li>
+<li><strong>Compare with bids.</strong> Ask contractors for itemized bids so you can compare like with like.</li>
+</ol>
+<p>Our <a href="/how-to-review-underpaid-roof-insurance-estimate/">guide to reviewing a roof estimate</a> walks through the roofing line items specifically.</p>
+
+<h2>How a San Marcos Public Adjuster Reviews Your Estimate</h2>
 <ol>
 <li><strong>Gather the file.</strong> We collect the insurer's full estimate, photo report, payment letters, and your policy and declarations page.</li>
 <li><strong>Inspect the property.</strong> We document damage with photos and measurements, using Matterport 3D imaging where it helps capture rooms or structures.</li>
@@ -69,7 +80,8 @@ return [
 <li><strong>Prepare our own estimate.</strong> We build a detailed Xactimate estimate so differences are visible in the same format the insurer uses.</li>
 <li><strong>Explain the results.</strong> We walk you through what we found and what the options are, whether that is a <a href="/services/insurance-claim-supplements/">supplement</a>, a request on an <a href="/services/underpaid-insurance-claims/">underpaid claim</a>, or, if the dispute is only about amount, <a href="/services/insurance-appraisal/">appraisal</a>.</li>
 </ol>
-<p>Sometimes the review shows the insurer's estimate is reasonable. That is useful to know too, and we will tell you plainly.</p>
+<p>Sometimes the review shows the insurer's estimate is reasonable. That is useful to know too, and we will tell you plainly. An honest answer early can save you time, and it lets you focus on what matters next, such as finishing repairs and requesting recoverable depreciation before any policy deadline.</p>
+<p>Timing matters as well. A review is most useful before repairs begin, while damage can still be photographed and measured. If repairs are already underway, keep removed materials when practical and photograph each stage, so anything found during the work can still be documented.</p>
 
 <h2>Local Codes Can Change the Scope</h2>
 <p>The City of San Marcos adopted the 2021 International Codes, in effect since April 1, 2023. A local amendment exempts roof covering replacement from permits unless the new roof is heavier than the existing one, and all foundations must be designed by a licensed engineer. Other repairs may require permits through the city <a href="https://www.sanmarcostx.gov/1000/Permit-Center" target="_blank" rel="noopener">Permit Center</a>. Code-driven costs are payable only to the extent your policy includes ordinance or law coverage. Our <a href="/local-building-codes/">local building codes</a> page has more.</p>

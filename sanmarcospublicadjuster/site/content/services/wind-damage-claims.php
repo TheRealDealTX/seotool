@@ -66,6 +66,18 @@ return [
 <h3>Deductibles and payment terms</h3>
 <p>Because Hays County is outside the TWIA area, wind coverage comes from your regular insurer, often with a percentage wind/hail deductible. Roof payment schedules or ACV-only roof coverage can also reduce the check. See our <a href="/replacement-cost-vs-actual-cash-value-texas/">replacement cost versus ACV guide</a>.</p>
 
+<h2>The First Few Days After a Windstorm</h2>
+<p>What you do right after the wind dies down can shape the claim for months. A few practical steps:</p>
+<ol>
+<li><strong>Stay safe.</strong> Keep away from downed power lines and leaning trees, and let professionals handle anything on the roof.</li>
+<li><strong>Photograph before cleanup.</strong> Capture loose shingles in the yard, panels hanging off a barn, a fence section on the ground, or a limb across the roof, with wide and close shots.</li>
+<li><strong>Prevent further damage.</strong> Arrange tarping, board-up, or temporary fence repair to keep water and animals out. Save every receipt.</li>
+<li><strong>Keep removed debris when practical.</strong> A torn panel or a handful of creased shingles can be useful evidence later.</li>
+<li><strong>Write down the timeline.</strong> Note when the storm hit, what you heard or saw, and when you discovered each item of damage.</li>
+<li><strong>Report the claim promptly</strong> and ask the insurer for the claim number and the adjuster&rsquo;s contact information.</li>
+</ol>
+<p>If neighbors on your street had similar damage, that is worth noting too. Wind damage that appears across several homes after the same storm is harder to explain away as age. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> has a printable list of what to collect.</p>
+
 <h2>How We Handle a Wind Damage Claim</h2>
 <ol>
 <li>Free conversation and policy review, including your wind/hail deductible and any roof endorsements.</li>

@@ -1,8 +1,8 @@
 <?php
 return [
     'title'       => 'How to Find a Public Adjuster Near San Marcos (and Vet One)',
-    'seo_title'   => 'How to Find a Public Adjuster Near San Marcos, TX',
-    'description' => 'How to find a public adjuster near San Marcos: verify the TDI license, questions to ask, red flags like storm chasers and pressure to sign, plus a vetting checklist.',
+    'seo_title'   => 'How to Find a Public Adjuster Near San Marcos, TX | Guide',
+    'description' => 'How to find a public adjuster near San Marcos: verify the TDI license, ask the right questions, spot red flags like storm chasers, and use our checklist.',
     'kicker'      => 'Hiring a Public Adjuster',
     'image'       => '/wp-content/uploads/2026/02/How-to-Find-a-Public-Adjuster.webp',
     'image_alt'   => 'Public adjuster inspecting a storm-damaged roof partly covered with a tarp',

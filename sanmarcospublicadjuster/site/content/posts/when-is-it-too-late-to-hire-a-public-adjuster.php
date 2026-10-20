@@ -2,7 +2,7 @@
 return [
     'title'       => 'When Is It Too Late to Hire a Public Adjuster?',
     'seo_title'   => 'When Is It Too Late to Hire a Public Adjuster in Texas?',
-    'description' => 'When is it too late to hire a public adjuster? See what help is possible at each claim stage in Texas, from before filing to denial, appraisal, and legal deadlines.',
+    'description' => 'When is it too late to hire a public adjuster? What help is possible at each claim stage, from before filing to denial, appraisal, and legal deadlines.',
     'kicker'      => 'Hiring a Public Adjuster',
     'image'       => '/wp-content/uploads/2026/02/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster.webp',
     'image_alt'   => 'Adjuster on a storm-damaged roof looking at a phone while documenting the damage',

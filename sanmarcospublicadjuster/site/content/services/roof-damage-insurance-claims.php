@@ -3,7 +3,7 @@ return [
     'title'       => 'Roof Damage Insurance Claims in San Marcos, TX',
     'seo_title'   => 'San Marcos Roof Damage Insurance Claims | Public Adjuster',
     'description' => 'Roof damage insurance claim help in San Marcos, TX: shingle, metal, and low-slope roofs, missing line items, code items, ACV roof schedules, and supplements.',
-    'lead'        => 'A roof claim is only as good as the estimate behind it. We help San Marcos and Hays County property owners document roof damage, check the insurer&rsquo;s scope for missing items, and understand how their policy pays for a roof.',
+    'lead'        => 'A roof claim is only as good as the estimate behind it. We help San Marcos and Hays County property owners document roof damage, check the insurer’s scope for missing items, and understand how their policy pays for a roof.',
     'kicker'      => 'Roof Damage Claims',
     'image'       => '/assets/img/featured/service-roof-damage-insurance-claims.webp',
     'image_alt'   => 'Damaged residential roof being inspected for an insurance claim in Central Texas',
@@ -70,6 +70,17 @@ return [
 <li><strong>Wind/hail deductibles:</strong> often a percentage of the dwelling limit rather than a flat amount.</li>
 </ul>
 <p>Read the declarations page and roof-related endorsements before the inspection. Our <a href="/replacement-cost-vs-actual-cash-value-texas/">RCV versus ACV guide</a> breaks the math down with examples.</p>
+
+<h2>Before the Insurance Adjuster Inspects Your Roof</h2>
+<p>The insurer&rsquo;s inspection often sets the tone for the rest of the claim, so a little preparation goes a long way:</p>
+<ul>
+<li><strong>Photograph from the ground first.</strong> Take wide shots of every side of the house, then closer shots of gutters, downspouts, vents, and anything on the ground such as shingle pieces or granules collected at downspout outlets.</li>
+<li><strong>Check the attic and ceilings.</strong> Look for daylight through the decking, damp insulation, or new stains, and photograph them with the date.</li>
+<li><strong>Protect the roof, carefully.</strong> If water is coming in, a contractor can tarp the damaged area. Keep the invoice; reasonable emergency repairs are usually part of the claim.</li>
+<li><strong>Collect the paperwork.</strong> Have the declarations page, roof endorsements, any prior roof invoices, and the roof&rsquo;s installation date ready.</li>
+<li><strong>Be present if you can.</strong> Walk the adjuster to the interior damage and ask which slopes and items they are including.</li>
+</ul>
+<p>Avoid getting on a steep or wet roof yourself. A fall is far more costly than any claim. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists what to gather, and the <a href="/storm-lookup/">storm lookup</a> helps confirm the date when weather caused the damage.</p>
 
 <h2>Our Roof Claim Process</h2>
 <ol>

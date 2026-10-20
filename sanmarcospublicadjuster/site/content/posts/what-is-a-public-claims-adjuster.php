@@ -2,7 +2,7 @@
 return [
     'title'       => 'What Is a Public Claims Adjuster? Staff vs. Independent vs. Public',
     'seo_title'   => 'What Is a Public Claims Adjuster? 3 Adjuster Types Compared',
-    'description' => 'What is a public claims adjuster? Compare staff, independent, and public adjusters, see what a public claims adjuster does day to day, and learn key claim terms.',
+    'description' => 'What is a public claims adjuster? Compare staff, independent, and public adjusters, see what a public adjuster does day to day, and learn key claim terms.',
     'kicker'      => 'Hiring a Public Adjuster',
     'image'       => '/wp-content/uploads/2026/02/What-Is-a-Public-Claims-Adjuster.webp',
     'image_alt'   => 'Adjuster holding a clipboard beneath a collapsed, water-damaged ceiling inside a home',
@@ -133,7 +133,7 @@ return [
 
 <p>Hays County sees a lot of claim activity. NOAA’s Storm Events Database records 180 hail reports and 109 thunderstorm wind reports in the county, along with repeated flash flooding along the Blanco and San Marcos Rivers. After a large event, insurers often bring in independent CAT adjusters from out of state to handle the surge. Those adjusters may not know local construction, such as standing-seam metal roofs in the Hill Country, slab foundations on expansive clay east of I-35, or multifamily properties near Texas State University.</p>
 
-<p>That is not a criticism; it is just the reality of high-volume claim seasons. It is also why many property owners want someone on their side who knows the area. A San Marcos public adjuster works for one party only, the policyholder, and can spend the time a busy CAT adjuster may not have.</p>
+<p>That is not a criticism; it is just the reality of high-volume claim seasons. It is also why many property owners look for a public adjuster in San Marcos who knows the area. A San Marcos public adjuster works for one party only, the policyholder, and can spend the time a busy CAT adjuster may not have.</p>
 
 <h2>Is a public claims adjuster right for your claim?</h2>
 

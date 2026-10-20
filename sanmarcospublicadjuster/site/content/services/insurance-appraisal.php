@@ -56,6 +56,18 @@ return [
 
 [[cta]]
 
+<h2>Appraisal vs. Other Ways to Resolve a Dispute</h2>
+<table>
+<thead><tr><th>Option</th><th>What it addresses</th><th>Typical cost and time</th></tr></thead>
+<tbody>
+<tr><td>Supplement or reconsideration request</td><td>Missing items, quantities, pricing, new evidence</td><td>Lowest cost; weeks</td></tr>
+<tr><td>Appraisal</td><td>The amount of loss when the parties disagree</td><td>Appraiser and shared umpire fees; weeks to months</td></tr>
+<tr><td>TDI complaint</td><td>Claim handling concerns; asks the insurer to respond to the regulator</td><td>No fee; does not decide the claim</td></tr>
+<tr><td>Litigation</td><td>Coverage disputes, bad faith, and contract claims</td><td>Highest cost; often many months or longer; requires an attorney</td></tr>
+</tbody>
+</table>
+<p>Weather-related lawsuits in Texas involve pre-suit notice requirements under Insurance Code Chapter 542A, and many policies limit the time to file suit. A Texas attorney can explain how those rules interact with an appraisal on your claim.</p>
+
 <h2>Pros and Cons of Appraisal</h2>
 <p><strong>Potential advantages:</strong></p>
 <ul>
@@ -83,7 +95,10 @@ return [
 </ul>
 <p>Appraisal is often a later step. Many disputes are resolved earlier through a well-documented <a href="/services/insurance-claim-supplements/">supplement</a> or reconsideration request on an <a href="/services/underpaid-insurance-claims/">underpaid claim</a>. We usually recommend exhausting those options first.</p>
 
-<h2>Our Role in the Appraisal Process</h2>
+<h2>What Happens After the Award</h2>
+<p>Once an award is signed, the insurer typically issues payment based on the award amount, minus the deductible, prior payments, and any depreciation that applies under the policy. If the award separates replacement cost from actual cash value, recoverable depreciation may still depend on completing repairs. The insurer may also continue to assert coverage positions it reserved during the process. Review the award and the payment letter together, and ask questions about anything that does not add up.</p>
+
+<h2>Our Role as Your San Marcos Public Adjuster</h2>
 <p>When we represent you as your public adjuster, we help you assess whether the dispute is really about amount, build the estimate and evidence the appraiser will rely on, and help you identify qualified, impartial appraisers in Central Texas. Because policies generally require an impartial appraiser, a public adjuster with a fee interest in your claim typically should not also be your appraiser on that same claim.</p>
 <p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. Appraisal does not guarantee a higher payment. If you are weighing appraisal on a claim in San Marcos, Hays County, or a nearby community, a licensed <a href="/">San Marcos public adjuster</a> can review the dispute with you. Request a <a href="/free-claim-review/">Free Claim Review</a>.</p>
 HTML,

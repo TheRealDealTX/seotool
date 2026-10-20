@@ -40,7 +40,7 @@ return [
 
 <h2>Flood Maps and NFIP Coverage in San Marcos</h2>
 <p>The City of San Marcos participates in the National Flood Insurance Program. New FEMA flood maps covering the Blanco River, the San Marcos River, and portions of Sink, Purgatory, Willow Springs, and Cottonwood Creeks took effect on January 17, 2025, according to the city&rsquo;s <a href="https://www.sanmarcostx.gov/402/FEMA-Flood-Map-Revision-Process" target="_blank" rel="noopener">flood map revision page</a>. If your property&rsquo;s zone changed, your lender requirements and premium may have changed too.</p>
-<p>Flood zones are about risk, not coverage. A home outside a mapped high-risk zone can still flood, and many flood claims in Texas come from properties that were not required to carry flood insurance.</p>
+<p>Flood zones are about risk, not coverage. A home outside a mapped high-risk zone can still flood, and owners outside those zones are often not required by a lender to carry flood insurance.</p>
 
 <h2>What We Review and Document on a Flood Claim</h2>
 <table>
@@ -67,6 +67,18 @@ return [
 <p>Slab-on-grade homes, common in San Marcos subdivisions, absorb water into drywall, baseboards, cabinets, and insulation. A scope that only replaces the lowest few inches may not match the actual waterline.</p>
 <h3>Depreciation on contents</h3>
 <p>Many flood policies pay contents at actual cash value, which reduces the payment for older items. Our <a href="/replacement-cost-vs-actual-cash-value-texas/">RCV versus ACV guide</a> explains the difference.</p>
+
+<h2>After the Water Recedes: First Steps</h2>
+<p>Flood cleanup is exhausting, and it is tempting to haul everything to the curb as fast as possible. A few steps help preserve the claim while you work:</p>
+<ol>
+<li><strong>Wait until it is safe.</strong> Have utilities checked before turning power or gas back on, and wear protective gear; floodwater can carry sewage and debris.</li>
+<li><strong>Measure and photograph the waterline</strong> in every room, inside and out, with a tape measure visible in the shot.</li>
+<li><strong>Report to your flood insurer</strong> right away and write down the claim number. If you also have wind or roof damage, report that separately to your property insurer.</li>
+<li><strong>Photograph contents before disposal.</strong> Capture model and serial numbers on appliances and electronics, and keep small samples of carpet and flooring if possible.</li>
+<li><strong>Start drying.</strong> Remove wet carpet, pad, and saturated drywall as needed to slow mold growth, and keep mitigation invoices and moisture logs.</li>
+<li><strong>Calendar the proof-of-loss deadline</strong> as soon as you learn it.</li>
+</ol>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> is a helpful place to keep track as you go.</p>
 
 <h2>Our Flood Claim Process</h2>
 <ol>

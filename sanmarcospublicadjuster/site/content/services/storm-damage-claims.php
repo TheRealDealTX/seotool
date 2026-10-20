@@ -31,7 +31,7 @@ return [
 <h2>Why San Marcos Storms Cause Multi-Peril Damage</h2>
 <p>San Marcos sits along the Balcones Escarpment, at the edge of the region often called Flash Flood Alley. Storms building over the Hill Country can produce large hail and strong wind and then dump heavy rain on steep, thin-soiled terrain that sheds water quickly toward the Blanco and San Marcos Rivers.</p>
 <p>The May 9, 2024 storm shows how much can happen at once. NOAA records describe 3-inch hail at San Marcos Academy west of the city, 2.5-inch hail near the outlet mall, and estimated 70 mph gusts that downed trees and damaged roofs in town. The Hays County Judge signed a local disaster declaration afterward. FEMA&rsquo;s later <a href="https://www.fema.gov/disaster/4781" target="_blank" rel="noopener">DR-4781</a> declaration for April&ndash;June 2024 storms included Hays County for public assistance.</p>
-<p>Tornadoes are less frequent but do occur. NOAA counts 31 tornado reports in Hays County, including an EF1 on October 30, 2015 that crossed into the county near Centerpoint Road on the south side of San Marcos and caused roof damage (<a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=605510" target="_blank" rel="noopener">NOAA record</a>). The same weekend brought more than 15 inches of rain north of San Marcos. See our <a href="/storm-history/">storm history</a> page for more events.</p>
+<p>Tornadoes are less frequent but do occur. NOAA counts 31 tornado reports in Hays County, including an EF1 on October 30, 2015 that crossed into the county near Centerpoint Road in San Marcos and caused minor roof damage to a few homes (<a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=605510" target="_blank" rel="noopener">NOAA record</a>). The same weekend brought more than 15 inches of rain north of San Marcos. See our <a href="/storm-history/">storm history</a> page for more events.</p>
 
 <h2>Which Coverage Handles Which Damage</h2>
 <p>Getting this right early avoids denials based on the wrong peril. The table below is a general guide; your policy wording controls.</p>
@@ -66,6 +66,17 @@ return [
 <p><strong>Quick, incomplete inspections.</strong> A busy field adjuster may document the roof and miss the fence, the AC unit, or the interior ceiling. Our <a href="/services/underpaid-insurance-claims/">underpaid claims</a> service focuses on those gaps.</p>
 <p><strong>Mixed causes.</strong> Water damage after a storm can be rain, wind-driven rain, or flood, and each is treated differently.</p>
 <p><strong>Multiple deductibles.</strong> Separate claims or separate storm dates can mean more than one deductible.</p>
+
+<h2>Protecting Your Property and Your Claim in the First Week</h2>
+<p>After a major storm, contractors knock on doors, phone lines are jammed, and it is easy to sign something in a hurry. A steady approach protects both the building and the claim:</p>
+<ul>
+<li><strong>Document first, then mitigate.</strong> Photograph and video every damaged area before tarping, extracting water, or cutting up trees, as long as it is safe.</li>
+<li><strong>Make reasonable temporary repairs.</strong> Policies generally expect you to prevent further damage. Tarps, board-up, and water extraction are typical; keep the receipts.</li>
+<li><strong>Read before you sign.</strong> Be cautious with documents from contractors that assign your insurance benefits or authorize full repairs before the claim is evaluated.</li>
+<li><strong>Keep one log.</strong> Record every call, email, and visit with each insurer, including names, dates, and what was said.</li>
+<li><strong>Check each policy separately.</strong> If you have flood coverage, report the flood portion to that insurer too, since flood policies have their own timelines.</li>
+</ul>
+<p>Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> and <a href="/claim-tools/">claim tools</a> can help you stay organized while repairs and inspections are scheduled.</p>
 
 <h2>How the Process Works</h2>
 <ol>

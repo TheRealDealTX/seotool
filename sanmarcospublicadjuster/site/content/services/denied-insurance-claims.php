@@ -71,6 +71,9 @@ return [
 </ol>
 <p>Not every denial should be challenged. Sometimes the policy clearly excludes the loss, and an honest review should say so. When there is a real basis to contest the decision, organized evidence gives the insurer something specific to reconsider. If the insurer accepted the claim but paid too little, see <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a> instead.</p>
 
+<h2>Full Denial vs. Partial Denial</h2>
+<p>Not every denial letter rejects the whole claim. A partial denial may accept the roof but exclude interior water damage, or accept the dwelling but deny a fence or detached workshop. Partial denials are easy to overlook because a check arrives with the letter, and the policyholder assumes the matter is settled. Read the letter alongside the estimate to see exactly which items were excluded and why. A partial denial may raise both a coverage question for the excluded items and a value question for the accepted ones, and those questions are handled differently. A San Marcos public adjuster can help separate the two so each gets the right response.</p>
+
 <h2>Steps to Take Right Now</h2>
 <ul>
 <li>Keep the denial letter and every email and letter about the claim.</li>
