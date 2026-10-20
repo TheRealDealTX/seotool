@@ -22,14 +22,27 @@ plane_fields = (
     + num("n", "Identical", 1, min=1, step=1, row=True)
 )
 
+ROW_CSS = (
+    "<style>"
+    "[data-rows=planes]>.row-item{grid-template-columns:repeat(6,minmax(0,1fr))}"
+    "[data-rows=planes]>.row-item>.field:nth-child(1),[data-rows=planes]>.row-item>.field:nth-child(2){grid-column:span 3}"
+    "[data-rows=planes]>.row-item>.field:nth-child(3),[data-rows=planes]>.row-item>.field:nth-child(4){grid-column:span 2}"
+    "[data-rows=planes]>.row-item>.row-del{justify-self:end}"
+    "@media (max-width:560px){[data-rows=planes]>.row-item{grid-template-columns:repeat(2,minmax(0,1fr))}"
+    "[data-rows=planes]>.row-item>.field:nth-child(n){grid-column:auto}"
+    "[data-rows=planes]>.row-item>.field:nth-child(1){grid-column:1/-1}"
+    "[data-rows=planes]>.row-item>.row-del{grid-column:2}}"
+    "</style>"
+)
+
 form = (
-    group("Panel",
+    ROW_CSS,    group("Panel",
           select("panel", "Panel profile",
                  [("ss16", "Standing seam, 16 in"), ("ss12", "Standing seam, 12 in"), ("ss18", "Standing seam, 18 in"),
                   ("rpanel", "R-panel / PBR, 36 in"), ("5v", "5V crimp, 24 in")], "ss16", cls="full"),
           num("cov_in", "Coverage width", 16, unit="in", min=6, max=48,
               tip="Net width each panel covers after side laps. Refills when you change the profile; edit for other products."),
-          seg("gauge", "Gauge", [(29, "29 ga"), (26, "26 ga"), (24, "24 ga")], 24, numeric=True, cls="",
+          seg("gauge", "Gauge", [(29, "29 ga"), (26, "26 ga"), (24, "24 ga")], 24, numeric=True,
               tip="Lower number = thicker steel. 24 ga is standard for residential standing seam; 26 or 29 ga for R-panel."),
           select("pitch", "Roof pitch", PITCH_OPTS, 6, numeric=True,
                  tip="Used for the minimum-slope check and the steep-roof labor adjustment."),

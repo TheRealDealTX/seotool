@@ -32,8 +32,17 @@ section_fields = (
     + num("a", "Or area", 0, unit="sq ft", min=0, row=True)
 )
 
+ROW_CSS = (
+    "<style>"
+    "[data-rows=sections]>.row-item{grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr)) 44px}"
+    "@media (max-width:560px){[data-rows=sections]>.row-item{grid-template-columns:repeat(2,minmax(0,1fr))}"
+    "[data-rows=sections]>.row-item>.field:first-child{grid-column:1/-1}"
+    "[data-rows=sections]>.row-item>.row-del{justify-self:end}}"
+    "</style>"
+)
+
 form = (
-    rows("sections", section_fields, start=1, add_label="Add a roof section",
+    ROW_CSS,    rows("sections", section_fields, start=1, add_label="Add a roof section",
          legend="Roof sections (length × width, or enter the area)"),
     group("Parapets & edges",
           num("par_lf", "Parapet walls", 280, unit="ln ft", min=0,

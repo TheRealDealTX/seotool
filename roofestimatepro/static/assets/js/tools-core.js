@@ -232,7 +232,13 @@
       });
     }
 
+    // Skip re-rendering when nothing changed (e.g. the "change" event that
+    // follows "input" on blur) so a click on a results button isn't swallowed.
+    var lastKey = null;
     function run() {
+      var key = JSON.stringify(snapshot());
+      if (key === lastKey) return;
+      lastKey = key;
       var v = values(), r;
       applyShow(v);
       try { r = cfg.compute(v) || {}; } catch (e) { r = { warnings: ["Check the inputs — " + e.message] }; if (window.console) console.error(e); }
