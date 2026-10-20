@@ -63,6 +63,10 @@ return [
 
 [[cta]]
 
+<h2>Contents and Living Expenses Are Part of the Claim</h2>
+<p>Homeowners often focus on the roof or the drywall and forget the rest of the policy. If a fire, a burst pipe, or a storm damages furniture, rugs, electronics, or clothing, those items may be covered under personal property coverage, subject to your policy’s limits and valuation terms. A room-by-room inventory with photos, approximate ages, and purchase information makes that part of the claim far easier to present.</p>
+<p>If the house cannot be lived in during repairs, loss of use coverage may help with hotel stays, rent, and some extra costs such as increased mileage or meals above your normal spending. Keep every receipt, and ask the insurer in writing how it handles advances and approvals for living expenses. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> covers what to save.</p>
+
 <h2>Our Residential Claim Process</h2>
 <ol>
 <li><strong>Free claim review.</strong> We talk through what happened, what the insurer has said so far, and whether representation makes sense.</li>

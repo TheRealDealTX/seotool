@@ -43,6 +43,21 @@ return [
 </table>
 <p>The price list code in the header matters. Estimating software like Xactimate uses regional pricing that is updated over time. If an estimate uses an outdated or mismatched price list, every line can be off.</p>
 
+<h2>Common Estimate Abbreviations</h2>
+<table>
+<thead><tr><th>Abbreviation</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td>R&amp;R</td><td>Remove and replace</td></tr>
+<tr><td>D&amp;R</td><td>Detach and reset, such as removing a satellite dish or gutter guard and putting it back</td></tr>
+<tr><td>SQ</td><td>Roofing square, equal to 100 square feet of roof surface</td></tr>
+<tr><td>SF / LF / EA</td><td>Square feet, linear feet, and each</td></tr>
+<tr><td>O&amp;P</td><td>General contractor overhead and profit</td></tr>
+<tr><td>RCV / ACV</td><td>Replacement cost value and actual cash value</td></tr>
+<tr><td>Dep.</td><td>Depreciation, sometimes marked recoverable or non-recoverable</td></tr>
+</tbody>
+</table>
+<p>If a line item is unclear, ask the adjuster in writing what it covers. Vague items such as “minor repair” or “allowance” deserve a closer look.</p>
+
 <h2>What We Look for in a Review</h2>
 <h3>Scope: is everything there?</h3>
 <p>We compare the estimate with the property itself. On Dallas roofs, that often means checking ridge caps, starter, drip edge, valleys, flashing, vents, pipe jacks, gutters, and downspouts, along with steep and high charges on taller homes. Inside, we look for missing drywall, insulation, texture, paint, flooring, baseboards, and cabinets. On commercial claims, we check membranes, insulation, edge metal, and rooftop units.</p>

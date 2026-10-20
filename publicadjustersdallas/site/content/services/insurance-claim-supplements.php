@@ -68,6 +68,16 @@ return [
 <li><strong>Track depreciation.</strong> Under replacement cost policies, submit proof of completed repairs so recoverable depreciation can be released within any deadline in your policy.</li>
 </ol>
 
+<h2>Supplement Mistakes to Avoid</h2>
+<ul>
+<li><strong>Covering up damage before it is documented.</strong> Once new decking is nailed down or a wall is closed, it is much harder to prove what was there.</li>
+<li><strong>Sending a total instead of line items.</strong> A single higher number gives the adjuster nothing specific to approve.</li>
+<li><strong>Waiting until the job is finished.</strong> Late supplements can run into policy time limits and invite questions about what was actually found.</li>
+<li><strong>Mixing covered and non-covered work.</strong> Upgrades you chose, such as a different roofing product, should be separated from covered repairs.</li>
+<li><strong>Losing track of depreciation.</strong> Recoverable depreciation usually requires proof of completed repairs within a stated period.</li>
+<li><strong>Relying on phone calls.</strong> Keep supplement requests and responses in writing so the record is clear.</li>
+</ul>
+
 <h2>Supplements vs. Disputes</h2>
 <p>Most supplements are resolved through documentation and a conversation with the adjuster. If the insurer agrees an item is covered but disagrees on how much it costs, <a href="/services/insurance-appraisal/">insurance appraisal</a> may be available. If the insurer says the item is not covered at all, that is a coverage question, and the steps on our <a href="/services/denied-insurance-claims/">denied insurance claims</a> page may help.</p>
 

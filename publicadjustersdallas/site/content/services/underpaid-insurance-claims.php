@@ -71,6 +71,9 @@ return [
 </ul>
 <p>When new damage is found during work, it is usually handled as a <a href="/services/insurance-claim-supplements/">supplemental claim</a>. Check your policy for time limits, and if you have signed any release, have it reviewed before assuming the claim cannot be revisited.</p>
 
+<h2>Contents and Living Expense Underpayments</h2>
+<p>Underpayments are not limited to the building. Personal property is often valued with heavy depreciation, and items may be left off entirely if they were never listed. Additional living expenses can also fall short if receipts were not submitted or the insurer approved only part of the displacement period. A detailed contents inventory with photos and approximate ages, along with organized living-expense receipts, gives the insurer a clear basis to reconsider. Our <a href="/claim-documentation-checklist/">claim documentation checklist</a> lists what to keep.</p>
+
 <h2>Steps to Take If You Think Your Claim Was Underpaid</h2>
 <ol>
 <li>Request the insurer’s full estimate, photos, and any reports in writing.</li>

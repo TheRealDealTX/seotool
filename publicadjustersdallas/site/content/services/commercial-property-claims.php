@@ -1,7 +1,7 @@
 <?php
 return [
     'title'       => 'Commercial Property Insurance Claims in Dallas, TX',
-    'seo_title'   => 'Dallas Commercial Property Claims | Public Adjuster for Business',
+    'seo_title'   => 'Dallas Commercial Property Claims | Business Claim Help',
     'description' => 'Commercial property insurance claim help in Dallas for apartments, retail, office, warehouses, industrial buildings, and HOA or multi-family communities.',
     'lead'        => 'A commercial loss affects more than a building. It can interrupt rent, operations, and tenants all at once. We help Dallas property owners and managers document and present complex commercial claims.',
     'kicker'      => 'Commercial Claims',
@@ -73,6 +73,17 @@ return [
 <li><strong>Business income documentation.</strong> We help organize the records the insurer will ask for to evaluate lost income or rent.</li>
 <li><strong>Presentation and negotiation.</strong> We present the claim, respond to the insurer’s questions, and track deadlines. If there is a disagreement on the amount of loss, <a href="/services/insurance-appraisal/">insurance appraisal</a> may be an option under your policy.</li>
 </ol>
+
+<h2>First Steps After a Commercial Loss</h2>
+<ul>
+<li><strong>Make the site safe.</strong> Secure damaged areas, restrict access to unsafe spaces, and notify tenants.</li>
+<li><strong>Prevent further damage.</strong> Arrange temporary roofing, board-up, or water extraction, and keep invoices for every emergency service.</li>
+<li><strong>Document before cleanup.</strong> Photograph and video each building, roof section, and affected tenant space, along with damaged equipment and inventory.</li>
+<li><strong>Report the claim in writing.</strong> Give notice to your carrier and broker, and record the claim number and the assigned adjuster.</li>
+<li><strong>Start tracking costs and income.</strong> Set up a separate account code for claim expenses, and save rent rolls, sales records, and payroll data that show the effect on income.</li>
+<li><strong>Review leases and contracts.</strong> Leases may shift responsibility for certain repairs or insurance to tenants, which affects how the claim is presented.</li>
+</ul>
+<p>Weather records help tie damage to a specific date, especially when a property is hit by more than one storm in a season. Our <a href="/storm-history/">Dallas storm history</a> page summarizes NOAA records for Dallas County.</p>
 
 <h2>Why Commercial Claims Are Often Underpaid</h2>
 <p>Large losses invite shortcuts. An insurer’s estimate may treat a full membrane replacement as a patch, miss damaged insulation under a wet roof, skip rooftop units, or apply pricing that does not reflect current Dallas-area costs. Multi-building claims can also leave whole structures out of the scope. A careful <a href="/services/insurance-estimate-review/">estimate review</a> can show where the numbers differ and why.</p>

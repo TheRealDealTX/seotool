@@ -66,6 +66,21 @@ return [
 <li><strong>Escalate when appropriate.</strong> Ask for a supervisor, and if you believe the claim is being handled improperly, consider a complaint with the <a href="https://www.tdi.texas.gov/" target="_blank" rel="noopener">Texas Department of Insurance</a>.</li>
 </ol>
 
+<h2>What to Keep in Your Claim Log</h2>
+<table>
+<thead><tr><th>Record</th><th>Why it helps</th></tr></thead>
+<tbody>
+<tr><td>Date you reported the claim and how</td><td>Starts the general 15-day acknowledgment window</td></tr>
+<tr><td>Every request from the insurer, with dates</td><td>Shows what was asked for and when</td></tr>
+<tr><td>Every item you delivered, with dates</td><td>Shows when the insurer had what it needed to decide</td></tr>
+<tr><td>Inspection dates and who attended</td><td>Documents how long the investigation took</td></tr>
+<tr><td>Names of every adjuster assigned</td><td>Tracks handoffs and turnover</td></tr>
+<tr><td>Notices that the insurer needs more time</td><td>Shows whether and when an extension was claimed</td></tr>
+<tr><td>Mitigation and temporary repair receipts</td><td>Supports reimbursement and shows you protected the property</td></tr>
+</tbody>
+</table>
+<p>A log like this is useful whether the claim involves <a href="/services/water-damage-claims/">water damage</a>, a hail-damaged roof, or a commercial loss, and it is exactly what a public adjuster or attorney will ask to see.</p>
+
 <h2>When Delay Turns Into Something Else</h2>
 <p>Sometimes a long delay ends with an offer far below repair costs or a denial. If that happens, see our pages on <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a> and <a href="/services/denied-insurance-claims/">denied insurance claims</a>. If you are worried about a deadline to file suit, or believe the insurer has violated the prompt payment rules, talk to a Texas attorney. Many policies contain contractual deadlines to sue, and weather-related claim lawsuits require written pre-suit notice.</p>
 

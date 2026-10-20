@@ -71,6 +71,17 @@ return [
 <li>Contractor bids, material availability information, and any code requirements.</li>
 </ul>
 
+<h2>Choosing Your Appraiser</h2>
+<p>Most policies require each appraiser to be competent and impartial, though the exact wording varies. The person you choose should understand construction costs, estimating software, and the type of property involved. Questions worth asking include:</p>
+<ul>
+<li>Do you have experience with this type of loss, such as hail on composition roofs, low-slope commercial membranes, or interior water damage?</li>
+<li>How do you charge, and how are your fees disclosed?</li>
+<li>Do you have any relationship with my contractor or the insurer that could raise impartiality questions?</li>
+<li>How will you document your position for the other appraiser and the umpire?</li>
+<li>How long do you expect the process to take?</li>
+</ul>
+<p>Read your policy’s appraisal clause before naming anyone, because some policies set specific requirements and deadlines for selecting appraisers.</p>
+
 <h2>Costs and Tradeoffs</h2>
 <p>Many policies say each side pays its own appraiser and shares the umpire’s costs. Appraisal can resolve disputes more quickly than litigation, but the award may come in higher or lower than you expected, and it is generally binding on the amount. The deductible, prior payments, depreciation terms, and policy limits still apply after the award. Weigh those factors before demanding appraisal.</p>
 
