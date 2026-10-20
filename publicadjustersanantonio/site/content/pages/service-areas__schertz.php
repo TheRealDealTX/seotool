@@ -29,13 +29,13 @@ return [
 <p>Nearby, the Randolph AFB weather station has measured several severe gusts, including 67 mph in April 2024, and hail is a risk across the region every spring. Our <a href="/storm-lookup/">storm lookup tool</a> searches Bexar County reports by distance from your city or ZIP code. For events filed under Guadalupe or Comal County, search the <a href="https://www.ncdc.noaa.gov/stormevents/" target="_blank" rel="noopener">NOAA Storm Events Database</a> directly.</p>
 
 <h2>Schertz homes and common claims</h2>
-<p>Much of Schertz is newer residential development, with slab-on-grade homes, composition shingle roofs, and brick, stone, or siding exteriors, plus commercial and light industrial properties along I-35 and FM 3009. Common claims include:</p>
+<p>Much of Schertz is newer residential development, with slab-on-grade homes, composition shingle roofs, and brick, stone, or siding exteriors, plus commercial properties along I-35 and FM 3009. Common claims include:</p>
 <ul>
 <li><a href="/services/hail-damage-claims/">Hail damage</a> to roofs, gutters, siding, windows, and HVAC units.</li>
 <li><a href="/services/wind-damage-claims/">Wind damage</a> from severe thunderstorms, including shingles, fences, and trees.</li>
 <li><a href="/services/flood-damage-claims/">Flood claims</a> for properties near Cibolo Creek and other drainages, which generally fall under a separate flood policy.</li>
 <li><a href="/services/freeze-damage-claims/">Freeze damage</a> and burst pipes after hard freezes and ice storms.</li>
-<li><a href="/services/commercial-property-claims/">Commercial property claims</a> for warehouses and businesses with large low-slope roofs.</li>
+<li><a href="/services/commercial-property-claims/">Commercial property claims</a> for businesses with large low-slope roofs.</li>
 </ul>
 <p>For newer homes, a frequent dispute is whether hail damage is "functional" or only "cosmetic," and whether a few damaged shingles justify full replacement. Policy language, manufacturer guidance, and matching all play a role. Our guide on <a href="/how-to-review-underpaid-roof-insurance-estimate/">reviewing an underpaid roof insurance estimate</a> walks through what to compare.</p>
 
