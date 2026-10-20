@@ -23,7 +23,7 @@ with a real 404 (the host ignores `.htaccess`). Preview locally with `python3 -m
 | --- | --- |
 | Home | `/` — "connected renter" appears 20× in visible main content |
 | Moving Resources (original URLs) | `/moving-resources/` + apartment-locator, maid-services, movers, moving-truck-rentals, credit-rent-boost, furniture, electricity, credit-repair, rental-insurance, esa-letters, utility-connections |
-| Original pages | `/landing/` (Renter Roadmap), `/courses/`, `/blog/`, `/shop/`, `/contact-us/` |
+| Original pages | `/landing/` (Renter Roadmap), `/courses/`, `/blog/`, `/shop/` (+ 28 product pages), `/contact-us/` |
 | Original posts (root URLs kept) | `/10-steps-for-a-successful-diy-move/`, `/5-easy-steps-to-find-your-perfect-apartment/`, `/exploring-the-pros-of-major-cities-in-texas/` |
 | New posts | 8 under `/blog/` |
 | Tools | `/tools/` + 9 interactive tools (affordability, moving cost, moving checklist, renters insurance, rent split, packing, truck size, inspection checklist, electricity bill) |
@@ -40,6 +40,16 @@ Texas map, and courses as tickets. All motion respects `prefers-reduced-motion`.
 Photos: 23 Unsplash-License images listed in `photos.json` (credited on /about-us/), stored as
 `assets/img/photos/<slot>-{800,1600}.webp`.
 
+## Renter Shop (Amazon affiliate)
+
+`/shop/` lists 28 Amazon products for renters in 7 categories; each has a page at `/shop/<slug>/` with a
+"Buy now on Amazon" button linking to `https://www.amazon.com/dp/<ASIN>?tag=connectedrenter-20`
+(`rel="sponsored nofollow"`). Product data is in `products.json` (from Amazon listings); the
+"why renters love it" copy is in `content/products.py`. Following Amazon Associates rules, pages show the
+required disclosure and do **not** show prices or star ratings (those may only come live from Amazon's
+Product Advertising API). Images hotlink Amazon's CDN. To add a product, append it to `products.json`
+(and a blurb to `WHY`), then rebuild.
+
 ## Source layout
 
 - `content/resources.py`, `content/blog.py` — page copy
@@ -49,6 +59,6 @@ Photos: 23 Unsplash-License images listed in `photos.json` (credited on /about-u
 
 ## Known gaps
 
-- Contact, newsletter, shop and course forms open the visitor's email app (`mailto:`); there's no server-side form handler or checkout.
+- Contact, newsletter and course forms open the visitor's email app (`mailto:`); there's no server-side form handler or checkout.
 - Cost figures in guides and tools are labelled planning estimates.
 - The original page copy couldn't be recovered (Wayback Machine unreachable from the build environment), so the copy is new; the 3 original blog images, logo and merch photo were reused.

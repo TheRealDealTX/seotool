@@ -26,6 +26,6 @@ while IFS= read -r f; do
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . \( -path './content' -o -path '*/__pycache__' \) -prune -o -type f \
-          ! -name '*.py' ! -name 'README.md' ! -name 'deploy.sh' ! -name 'photos.json' -print | sort)
+          ! -name '*.py' ! -name 'README.md' ! -name 'deploy.sh' ! -name 'photos.json' ! -name 'products.json' -print | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]
