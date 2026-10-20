@@ -6,7 +6,8 @@ $path = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
 $home = 'https://connectedrenter.com';
 $host = $_SERVER['HTTP_HOST'] ?? '';
 
-// Canonical scheme and host (only once the real domain is live; preview domains pass through).
+// Canonical scheme and host. (Don't redirect the *.hostingersite.com preview host: Hostinger rewrites
+// Location headers back to the preview host, which loops. Canonical tags cover it instead.)
 $insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http';
 if (($host === 'connectedrenter.com' && $insecure) || $host === 'www.connectedrenter.com') {
     header('Location: ' . $home . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);

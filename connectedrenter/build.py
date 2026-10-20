@@ -130,8 +130,38 @@ def footer():
 <div class="palette-list"></div></div></div>"""
 
 
+GTAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E1CR5DK1LV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E1CR5DK1LV');
+</script>"""
+
+# The Agency host has no force-HTTPS switch and serves static files directly, so plain-http requests
+# for anything but "/" (index.php handles that) would 200. Canonicals point at https; this catches visitors.
+HTTPS_FIX = "<script>if(location.protocol==='http:'&&/(^|\\.)connectedrenter\\.com$/.test(location.hostname))location.replace('https://connectedrenter.com'+location.pathname+location.search+location.hash)</script>"
+
+
+def fit_title(t):
+    """Keep titles within ~60 characters so Google shows them whole."""
+    if len(t) <= 60:
+        return t
+    for suf in (" | Connected Renter Shop", " | Connected Renter"):
+        if t.endswith(suf):
+            base = t[:-len(suf)]
+            for cand in (base + " | Connected Renter", base + " | Renter Shop" if "Shop" in suf else base, base.replace(" for Renters", "") + " | Renter Shop" if "Shop" in suf else base, base):
+                if len(cand) <= 60:
+                    return cand
+            return base
+    return t
+
+
 def page(path, title, desc, main, current=None, schema=None, og_type="website", og_image=None, tools=False, extra_head=""):
     canon = ORIGIN + path
+    title = fit_title(title)
     graph = [ORG, WEBSITE] + (schema or [])
     img = ORIGIN + (og_image or "/assets/img/og-default.png")
     tools_js = f'<script src="/assets/js/tools.js?v={VER}" defer></script>' if tools else ""
@@ -142,8 +172,10 @@ def page(path, title, desc, main, current=None, schema=None, og_type="website", 
     doc = f"""<!doctype html>
 <html lang="en-US">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{HTTPS_FIX}
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{canon}">
@@ -154,6 +186,9 @@ def page(path, title, desc, main, current=None, schema=None, og_type="website", 
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}">
 <meta property="og:image" content="{img}">
+<meta property="og:image:width" content="{1600 if "/photos/" in img else 1200}">
+<meta property="og:image:height" content="{1067 if "/photos/" in img else 630}">
+<meta property="og:image:alt" content="{esc(title)}">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
@@ -161,7 +196,9 @@ def page(path, title, desc, main, current=None, schema=None, og_type="website", 
 <meta name="twitter:image" content="{img}">
 <meta name="theme-color" content="#680404">
 <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -503,7 +540,7 @@ def build_home():
 
 {cta_band("Ready for your <em>easiest</em> move yet?", "Join the renters who use Connected Renter to find, move, connect and protect — for free.")}
 """
-    page("/", "Connected Renter | Moving Made Easy — Every Renter Resource in One Place",
+    page("/", "Connected Renter | Moving Made Easy for Every Renter",
          "Connected Renter is the free hub for renters: apartment locating, movers, truck rentals, utilities, renters insurance, ESA letters, credit help and 9 free tools.",
          main, current="/", tools=True, schema=[faq_ld(faqs)])
     PAGES.append(("/", TODAY, "1.0"))

@@ -257,7 +257,7 @@ TOOLS = [
   ("Should I send the report to my landlord?", "Yes. Email it with your photos so there's a dated record, and keep a copy until your deposit is returned.")]),
 ("electricity-bill-calculator", "electricity", "Electricity Bill Calculator", "zap",
  "Estimate your apartment's electric usage and compare rates before you choose a plan.",
- "Electricity Bill Calculator for Apartments (kWh & Rate Compare)",
+ "Electricity Bill Calculator for Apartments",
  "Free electricity bill calculator for renters. Estimate monthly kWh for your apartment size and season, then compare what different rates would cost.",
  "Estimate your monthly usage by home size, household and season, then see what different all-in rates would cost.",
  "<p>Use an all-in rate (energy plus delivery charges) for the most realistic estimate. In deregulated areas like most of Texas, compare plans using the Electricity Facts Label at your expected usage. See our <a href=\"/moving-resources/electricity/\">electricity guide</a>.</p>",

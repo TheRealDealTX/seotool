@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Post-build checks for connectedrenter.com. Exit code 1 on any failure."""
 import glob
+import html
 import json
 import os
 import re
@@ -107,6 +108,16 @@ for f in files:
         descs[p.desc] = rel
         if not p.desc or len(p.desc) > 165:
             errors.append(f"{rel}: description length {len(p.desc or '')}")
+    if "googletagmanager.com/gtag/js?id=G-E1CR5DK1LV" not in s or "gtag('config', 'G-E1CR5DK1LV')" not in s:
+        errors.append(f"{rel}: missing Google tag")
+    if rel != "404.html":
+        if p.title and len(html.unescape(p.title)) > 60:
+            errors.append(f"{rel}: title over 60 chars")
+        if not re.search(r'<link rel="canonical" href="https://connectedrenter\.com/[^"]*">', s):
+            errors.append(f"{rel}: missing https canonical")
+        for og in re.findall(r'<meta property="og:image" content="https://connectedrenter\.com(/[^"]+)">', s):
+            if not os.path.exists(os.path.join(ROOT, og.lstrip("/"))):
+                errors.append(f"{rel}: og:image file missing {og}")
     if re.search(r"lorem ipsum|TODO|__ICON_|__TOOL_", s, re.I):
         errors.append(f"{rel}: placeholder text")
     if rel == "home.html":
@@ -116,6 +127,20 @@ for f in files:
         if n < 14:
             errors.append(f"home.html: keyword appears only {n} times in main content")
 
+# sitemap: every page listed exactly once, nothing that 404s
+sm = open(os.path.join(ROOT, "sitemap.xml")).read()
+locs = re.findall(r"<loc>https://connectedrenter\.com(/[^<]*)</loc>", sm)
+if len(locs) != len(set(locs)):
+    errors.append("sitemap: duplicate URLs")
+for u in locs:
+    if not os.path.exists(target(u)):
+        errors.append(f"sitemap: {u} has no page")
+if len(locs) != len(files) - 1:
+    errors.append(f"sitemap lists {len(locs)} URLs for {len(files) - 1} pages")
+for f in ("robots.txt", "favicon.ico", "favicon-32.png", "apple-touch-icon.png", "site.webmanifest", "googlecccfbf2f7e9e5ae4.html"):
+    if not os.path.exists(os.path.join(ROOT, f)):
+        errors.append(f"missing root file {f}")
+print(f"sitemap: {len(locs)} URLs")
 print(f"checked {len(files)} pages")
 if errors:
     print("\n".join(errors))
