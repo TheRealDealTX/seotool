@@ -19,6 +19,7 @@ from icons import icon, sprite  # noqa: E402
 from tools import TOOLS, render as render_tool  # noqa: E402
 from content.resources import RESOURCES  # noqa: E402
 from content.blog import POSTS, CATS  # noqa: E402
+from content.products import PRODUCTS, SHOP_CATS  # noqa: E402
 
 ORIGIN = "https://connectedrenter.com"
 SITE = "Connected Renter"
@@ -356,6 +357,14 @@ STORY = [
 ]
 
 
+def shop_teaser():
+    picks, seen = [], set()
+    for p in PRODUCTS:
+        if p["cat"] not in seen:
+            picks.append(p); seen.add(p["cat"])
+    return picks[:4]
+
+
 def build_home():
     ticker = "".join(f'<a href="/moving-resources/{r["slug"]}/">{r["name"]}</a>' for r in RESOURCES)
     boxes = "".join(box_card(r, i) for i, r in enumerate(RESOURCES))
@@ -485,13 +494,10 @@ def build_home():
 <div class="tickets">{tickets}</div>
 </div></section>
 
-<section class="section alt"><div class="wrap split rev">
-<div class="reveal"><div class="hanger"><img src="/assets/img/connected-renter-tshirt.webp" alt="Connected Renter short sleeve t-shirt in black" width="300" height="300" loading="lazy" style="width:100%;background:#fff"></div></div>
-<div class="reveal d1"><span class="kicker">Check out our merch</span>
-<h2>Rep the Connected Renter <em>crew.</em></h2>
-<p class="lead">Our soft, fitted short sleeve tee — perfect for moving day (it hides the dust). From $18.00.</p>
-<a class="btn chunky" href="/shop/">{icon("bag")} Visit the shop</a></div>
-</div></section>
+<section class="section alt"><div class="wrap">
+<div class="sec-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;max-width:none"><div><span class="kicker">The renter shop</span><h2 style="margin:0">Renter-approved <em>finds.</em></h2><p class="lead" style="margin-top:12px">Damage-free hooks, door locks, moving gear and more — hand-picked Amazon products that actually work in a rental.</p></div><a class="btn chunky" href="/shop/">{icon("bag")} Visit the shop</a></div>
+<div class="pgrid">{"".join(product_card(p, i) for i, p in enumerate(shop_teaser()))}</div>
+<p class="note" style="margin-top:18px">{AMZ_DISCLOSURE}</p></div></section>
 
 <section class="section"><div class="wrap" style="max-width:900px">{faq_html(faqs, "Connected Renter FAQ")}</div></section>
 
@@ -691,35 +697,65 @@ def build_courses():
     PAGES.append(("/courses/", TODAY, "0.7"))
 
 
+AMZ_DISCLOSURE = "As an Amazon Associate, Connected Renter earns from qualifying purchases."
+
+
+def amz_btn(p, label="Buy now on Amazon", cls="btn gold chunky"):
+    return f'<a class="{cls}" href="{p["url"]}" target="_blank" rel="sponsored nofollow noopener">{icon("bag")} {label} {icon("arrow", "icon arrow")}</a>'
+
+
+def product_card(p, i=0):
+    cat = SHOP_CATS[p["cat"]][0]
+    return f"""<article class="pcard reveal d{i % 4}" data-cat="{p['cat']}"><div class="pimg"><img src="{p['image']}" alt="{esc(p['name'])}" loading="lazy" referrerpolicy="no-referrer"></div>
+<div class="pbody"><span class="pcat">{cat}</span><h3><a href="/shop/{p['slug']}/">{esc(p['name'])}</a></h3><span class="more">View details {icon('arrow')}</span></div></article>"""
+
+
 def build_shop():
-    sizes = ["S", "M", "L", "XL", "2XL", "3XL"]
-    opts = "".join(f'<option>{s}</option>' for s in sizes)
-    main = page_hero([("Home", "/"), ("Shop", "/shop/")], "The Connected Renter <em>Shop</em>", "Looking for a cool shirt to rock? Check out our merch.", "bag",
-                     photo=pick("hero-home"), alt="A cozy apartment living room", label=("Merch", "from $18"))
-    main += f"""<section class="section"><div class="wrap product">
-<div class="reveal"><div class="hanger"><img src="/assets/img/connected-renter-tshirt.webp" alt="Connected Renter men's fitted short sleeve t-shirt, black, front" width="300" height="300" style="width:100%;background:#fff"></div></div>
-<div class="reveal d1"><span class="eyebrow">Apparel</span><h2>Short Sleeve T-shirt</h2>
-<div class="price">$18.00 – $22.50</div>
-<p class="lead">A soft, fitted short sleeve tee with the Connected Renter logo. Lightweight, breathable and built for moving day.</p>
-<ul class="checklist"><li>{icon("check")}<span>Fitted cut, crew neck</span></li><li>{icon("check")}<span>Black · sizes S–3XL (2XL and 3XL priced higher)</span></li><li>{icon("check")}<span>Printed on demand and shipped to you</span></li></ul>
-<form class="form-grid" data-mailto="{EMAIL}" data-subject="Order: Connected Renter Short Sleeve T-shirt" style="margin-top:20px">
-<div class="field"><label for="sz">Size</label><select id="sz" name="size" required>{opts}</select></div>
-<div class="field"><label for="qty">Quantity</label><input id="qty" type="number" name="quantity" min="1" value="1" required></div>
-<div class="field full"><label for="sname">Your name</label><input id="sname" type="text" name="name" required></div>
-<div class="full"><button class="btn" type="submit">{icon("bag")} Order by email</button><div class="form-msg">Your email app should open with the order details. We'll reply with payment and shipping info.</div></div>
-</form></div></div></section>{cta_band()}"""
+    cats_used = [c for c in SHOP_CATS if any(p["cat"] == c for p in PRODUCTS)]
+    filters = '<div class="filters" role="group" aria-label="Filter by category"><button type="button" data-filter="all" aria-pressed="true">All picks</button>' + "".join(
+        f'<button type="button" data-filter="{c}" aria-pressed="false">{SHOP_CATS[c][0]}</button>' for c in cats_used) + "</div>"
+    shelves = "".join(product_card(p, i) for i, p in enumerate(PRODUCTS))
+    main = page_hero([("Home", "/"), ("Shop", "/shop/")], "The Renter <em>Shop</em>",
+                     "Hand-picked Amazon finds for renters — moving-day gear, damage-free decor, safety, storage and more. Everything here works in a rental.", "bag",
+                     photo=pick("hero-home"), alt="A cozy apartment living room", label=("Renter picks", f"{len(PRODUCTS)} finds"))
+    main += f"""<section class="section"><div class="wrap">
+<p class="disclosure">{icon("info")} {AMZ_DISCLOSURE} Prices and availability are shown on Amazon.</p>
+{filters}<div class="pgrid">{shelves}</div></div></section>{cta_band()}"""
     schema = [crumbs_ld([("Home", "/"), ("Shop", "/shop/")]),
-              {"@type": "Product", "name": "Connected Renter Short Sleeve T-shirt", "image": ORIGIN + "/assets/img/connected-renter-tshirt.webp",
-               "description": "Fitted short sleeve t-shirt with the Connected Renter logo.", "brand": {"@type": "Brand", "name": SITE},
-               "offers": {"@type": "AggregateOffer", "lowPrice": "18.00", "highPrice": "22.50", "priceCurrency": "USD", "offerCount": len(sizes)}}]
-    page("/shop/", "Shop Connected Renter Merch | Short Sleeve T-shirt", "Shop Connected Renter merch: our fitted short sleeve t-shirt in black, sizes S–3XL, from $18.00.", main, current="/shop/", schema=schema)
-    PAGES.append(("/shop/", TODAY, "0.5"))
+              {"@type": "ItemList", "name": "Connected Renter Shop", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{ORIGIN}/shop/{p['slug']}/", "name": p["name"]} for i, p in enumerate(PRODUCTS)]}]
+    page("/shop/", "Renter Shop: Amazon Picks for Apartments & Moving | Connected Renter",
+         "Hand-picked Amazon products for renters: moving supplies, damage-free decor, apartment safety, cleaning, small-space storage and energy savers.", main, current="/shop/", schema=schema)
+    PAGES.append(("/shop/", TODAY, "0.6"))
+
+    for p in PRODUCTS:
+        path = f"/shop/{p['slug']}/"
+        cname, cic, cblurb, guide = SHOP_CATS[p["cat"]]
+        feats = "".join(f"<li>{icon('check')}<span>{esc(f)}</span></li>" for f in p["features"])
+        rel = [x for x in PRODUCTS if x["cat"] == p["cat"] and x is not p][:3]
+        rel += [x for x in PRODUCTS if x["cat"] != p["cat"]][:4 - len(rel)]
+        why = p["why"] or f"{cblurb} A Connected Renter pick for the {cname.lower()} shelf."
+        main = f"""<section class="page-hero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/shop/">Shop</a> / <span>{esc(p['name'])}</span></nav></div></section>
+<section class="section tight"><div class="wrap pdp">
+<div class="pdp-img reveal"><span class="tape"></span><img src="{p['image']}" alt="{esc(p['name'])}" referrerpolicy="no-referrer"></div>
+<div class="pdp-info reveal d1"><span class="pcat">{icon(cic)} {cname}</span>
+<h1>{esc(p['name'])}</h1><p class="pdp-title">{esc(p['title'])}</p>
+<div class="pdp-why"><span class="hand">Why renters love it</span><p>{esc(why)}</p></div>
+<ul class="checklist">{feats}</ul>
+<div class="pdp-buy">{amz_btn(p)}<span class="note">Opens Amazon.com in a new tab · check today's price there</span></div>
+<p class="disclosure">{icon("info")} {AMZ_DISCLOSURE}</p>
+<p class="note">Related guide: <a href="{guide[1]}">{guide[0]}</a></p></div>
+</div></section>
+<section class="section alt tight"><div class="wrap"><h2 class="reveal">More renter <em>picks</em></h2><div class="pgrid">{"".join(product_card(x, i) for i, x in enumerate(rel))}</div></div></section>"""
+        desc = f"{p['name']}: a Connected Renter pick for {cname.lower()}. {cblurb}"[:158]
+        schema = [crumbs_ld([("Home", "/"), ("Shop", "/shop/"), (p["name"], path)])]
+        page(path, f"{p['name']} for Renters | Connected Renter Shop", desc, main, schema=schema)
+        PAGES.append((path, TODAY, "0.4"))
 
 
 # ------------------------------------------------------------------ contact / about / landing / legal
 
 def build_contact():
-    main = page_hero([("Home", "/"), ("Contact", "/contact-us/")], "Get in <em>touch</em> with us", "Questions about a resource, a course or a merch order? Suggestions for a new tool? We'd love to hear from you.", "mail",
+    main = page_hero([("Home", "/"), ("Contact", "/contact-us/")], "Get in <em>touch</em> with us", "Questions about a resource or a course? Suggestions for a new tool? We'd love to hear from you.", "mail",
                      photo=pick("keys"), alt="Holding the keys to a new home", label=("Say hello", "We reply fast"))
     main += f"""<section class="section"><div class="wrap contact-grid">
 <div class="reveal"><h2>Contact Connected Renter</h2><p class="lead">We usually reply within one to two business days.</p>
@@ -731,11 +767,11 @@ def build_contact():
 <form class="form-grid" data-mailto="{EMAIL}" data-subject="Connected Renter website enquiry">
 <div class="field"><label for="cn">Name</label><input id="cn" type="text" name="name" autocomplete="name" required></div>
 <div class="field"><label for="ce">Email</label><input id="ce" type="email" name="email" autocomplete="email" required></div>
-<div class="field full"><label for="ct">Topic</label><select id="ct" name="subject"><option value="">General question</option><option>Moving resources</option><option>Courses</option><option>Shop order</option><option>Partnership / listing</option><option>Report a problem</option></select></div>
+<div class="field full"><label for="ct">Topic</label><select id="ct" name="subject"><option value="">General question</option><option>Moving resources</option><option>Courses</option><option>Partnership / listing</option><option>Report a problem</option></select></div>
 <div class="field full"><label for="cm">Message</label><textarea id="cm" name="message" required></textarea></div>
 <div class="full"><button class="btn" type="submit">{icon("send")} Send message</button><div class="form-msg">Your email app should open with your message ready to send.</div></div>
 </form></div></div></section>"""
-    page("/contact-us/", "Contact Us | Connected Renter", "Contact Connected Renter by phone, email or our contact form with questions about renter resources, courses or merch orders.",
+    page("/contact-us/", "Contact Us | Connected Renter", "Contact Connected Renter by phone, email or our contact form with questions about renter resources, courses or partnerships.",
          main, current="/contact-us/", schema=[crumbs_ld([("Home", "/"), ("Contact", "/contact-us/")]), {"@type": "ContactPage", "url": ORIGIN + "/contact-us/", "about": {"@id": ORIGIN + "/#org"}}])
     PAGES.append(("/contact-us/", TODAY, "0.6"))
 
@@ -790,9 +826,9 @@ def build_legal():
     upd = date.fromisoformat(TODAY).strftime("%B %-d, %Y")
     privacy = f"""<p><em>Last updated {upd}</em></p>
 <h2 id="overview">Overview</h2><p>This policy explains how {SITE} ("we", "us") handles information when you use connectedrenter.com.</p>
-<h2 id="collect">Information we collect</h2><ul><li><strong>Information you send us.</strong> When you email us, use the contact form, order merch or reserve a course, your email app sends us your message and contact details.</li><li><strong>Tool data.</strong> Our calculators and checklists run in your browser. Checklist progress is stored in your browser's local storage on your device; we do not receive it.</li><li><strong>Technical data.</strong> Our hosting provider may log standard server information such as IP address, browser type and pages requested for security and performance.</li></ul>
+<h2 id="collect">Information we collect</h2><ul><li><strong>Information you send us.</strong> When you email us, use the contact form or reserve a course, your email app sends us your message and contact details.</li><li><strong>Tool data.</strong> Our calculators and checklists run in your browser. Checklist progress is stored in your browser's local storage on your device; we do not receive it.</li><li><strong>Technical data.</strong> Our hosting provider may log standard server information such as IP address, browser type and pages requested for security and performance.</li></ul>
 <h2 id="use">How we use information</h2><p>We use what you send us to reply to you, fulfil orders and course enrollments, and improve the site. We do not sell your personal information.</p>
-<h2 id="third">Third parties</h2><p>We load fonts from Google Fonts. Pages may link to third-party websites, which have their own privacy policies.</p>
+<h2 id="third">Third parties</h2><p>We load fonts from Google Fonts, and product images in our shop load from Amazon. Pages may link to third-party websites, which have their own privacy policies.</p><h2 id="affiliate">Amazon affiliate links</h2><p>Connected Renter is a participant in the Amazon Services LLC Associates Program. When you click a shop link and buy on Amazon, Amazon may use cookies to attribute the purchase to us, and we earn a commission at no extra cost to you. As an Amazon Associate, Connected Renter earns from qualifying purchases.</p>
 <h2 id="choices">Your choices</h2><p>You can clear saved checklist data by clearing your browser's site data. To ask about or delete information you've sent us, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2 id="children">Children</h2><p>This site is not directed to children under 13.</p>
 <h2 id="changes">Changes</h2><p>We may update this policy and will change the date above when we do.</p>"""
@@ -800,7 +836,7 @@ def build_legal():
 <h2 id="acceptance">Acceptance</h2><p>By using connectedrenter.com you agree to these terms.</p>
 <h2 id="info">Information only</h2><p>Content and tools on {SITE} are for general information and planning. They are not legal, financial, insurance or tax advice. Cost figures and estimates are approximations; confirm details with providers and a qualified professional.</p>
 <h2 id="third">Third-party services</h2><p>We may mention or link to third-party businesses. We don't control them and aren't responsible for their products, services or terms. We may receive compensation from some partners; this never changes what we tell renters about their options.</p>
-<h2 id="purchases">Courses and merch</h2><p>Course and merchandise orders are confirmed by email with payment and delivery details. Course refunds are available within 14 days of purchase on request.</p>
+<h2 id="purchases">Courses and shop</h2><p>Course enrollments are confirmed by email with payment and access details. Course refunds are available within 14 days of purchase on request.</p><p>Products in our shop are sold by Amazon and its sellers, not by Connected Renter; your purchase, pricing, shipping and returns are governed by Amazon. As an Amazon Associate, Connected Renter earns from qualifying purchases.</p>
 <h2 id="ip">Intellectual property</h2><p>The {SITE} name, logo and content are ours. You may share links and quote short excerpts with attribution.</p>
 <h2 id="liability">Limitation of liability</h2><p>To the extent permitted by law, {SITE} is not liable for losses arising from use of the site or reliance on its content.</p>
 <h2 id="law">Governing law</h2><p>These terms are governed by the laws of the State of Texas.</p>
@@ -832,7 +868,7 @@ def build_support():
     for p in POSTS:
         idx.append({"t": p["title"], "u": p["path"], "d": p["excerpt"][:110], "k": p["desc"], "kind": "Article", "i": p["icon"]})
     for t, u, d, i in [("Renter Roadmap", "/landing/", "Start here: step-by-step from search to settled.", "compass"), ("Moving Made Easy Courses", "/courses/", "Practical $20 courses for renters.", "cap"),
-                       ("Shop", "/shop/", "Connected Renter merch.", "bag"), ("Contact", "/contact-us/", "Phone, email and contact form.", "mail"), ("About", "/about-us/", "Our story.", "heart")]:
+                       ("Renter Shop", "/shop/", "Hand-picked Amazon products for renters.", "bag"), ("Contact", "/contact-us/", "Phone, email and contact form.", "mail"), ("About", "/about-us/", "Our story.", "heart")]:
         idx.append({"t": t, "u": u, "d": d, "k": "", "kind": "Page", "i": i})
     with open(os.path.join(ROOT, "assets/js/search-index.js"), "w", encoding="utf-8") as f:
         f.write("window.CR_INDEX=" + json.dumps(idx, ensure_ascii=False, separators=(",", ":")) + ";\n")
