@@ -3,7 +3,7 @@ return [
     'template'    => 'claim-checklist',
     'title'       => 'Property Insurance Claim Documentation Checklist',
     'seo_title'   => 'Insurance Claim Documentation Checklist | Free Printable Tool',
-    'description' => 'Free insurance claim documentation checklist for Dallas hail, wind, tornado, flood, freeze, fire, and water damage. Track your progress, print, or download.',
+    'description' => 'Free insurance claim documentation checklist for Dallas hail, wind, tornado, flood, freeze, fire, and water damage. Track progress, print, or download.',
     'lead'        => 'Choose your type of damage and work through an interactive checklist of the photos, records, and documents that help support a property insurance claim in Texas.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-claim-documentation-checklist.webp',

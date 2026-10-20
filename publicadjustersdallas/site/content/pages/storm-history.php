@@ -2,7 +2,7 @@
 return [
     'template'    => 'storm-history',
     'title'       => 'Dallas & Dallas County Storm History',
-    'seo_title'   => 'Dallas Storm History | Dallas County Hail, Wind & Tornado Records',
+    'seo_title'   => 'Dallas Storm History | Dallas County Hail & Wind Records',
     'description' => 'Search Dallas and Dallas County storm history from NOAA: hail, wind, tornado, flash flood, and winter storm records with notable North Texas events.',
     'lead'        => 'A searchable record of hail, wind, tornado, flood, and winter weather events in Dallas County from the NOAA Storm Events Database, with notable Dallas storms and tips for using the data in a claim.',
     'kicker'      => 'NOAA Storm Records',
