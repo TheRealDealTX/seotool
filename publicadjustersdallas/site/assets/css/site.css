@@ -988,7 +988,9 @@ h1, h2 { letter-spacing: -.02em; }
 .hero::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(600px 300px at 70% 0%, rgba(139, 230, 244, .35), transparent 70%); opacity: 0; animation: flash 9s infinite; }
 @keyframes flash { 0%, 91%, 100% { opacity: 0; } 92% { opacity: .9; } 93% { opacity: .1; } 94.5% { opacity: .7; } 96% { opacity: 0; } }
 .hero-skyline { position: absolute; left: 0; right: 0; bottom: -1px; height: 120px; z-index: 2; pointer-events: none; opacity: .9;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120' preserveAspectRatio='none'%3E%3Cpath fill='%23f6f9fc' d='M0 120V96h40V80h26v16h30V70h22v26h34V58h18v38h28V84h40V44h14l6-18 6 18h14v52h36V74h24v22h30V30h8V8h4v22h8v66h30V64h28V40h20v56h44V88h22V52h16V36h12v60h38V78h34V60h10a22 22 0 1 1 0-1h2v37h40V70h30v26h36V48h20v48h34V82h26V62h22v34h40V76h30V56h18v40h44V86h30V66h24v30h38V78h28v18h40v24z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; }
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1144 120' preserveAspectRatio='none'%3E%3Cpath fill='%23071d4c' d='M0 120V96h40V80h26v16h30V70h22v26h34V58h18v38h28V84h40V44h14l6-18 6 18h14v52h36V74h24v22h30V30h8V8h4v22h8v66h30V64h28V40h20v56h44V88h22V52h16V36h12v60h38V78h34V60h10a22 22 0 1 1 0-1h2v37h40V70h30v26h36V48h20v48h34V82h26V62h22v34h40V76h30V56h18v40h44V86h30V66h24v30h38V78h28v18h40v24z'/%3E%3C/svg%3E") bottom / 100% 100% no-repeat; }
+.hero-skyline { filter: drop-shadow(0 -2px 0 rgba(10, 196, 224, .55)) drop-shadow(0 -10px 24px rgba(10, 196, 224, .25)); }
+.hero:has(.hero-skyline) .hero-scroll { display: none; }
 .hero-skyline::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%; height: 40px; background: linear-gradient(180deg, transparent, rgba(10, 196, 224, .06)); }
 .hero .hero-inner { position: relative; z-index: 3; padding-bottom: 110px; }
 .service-card, .tool-card, .post-card, .area-card { transition: transform .35s var(--ease), box-shadow .35s var(--ease); }

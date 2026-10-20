@@ -88,7 +88,7 @@ return [
 <li>Do not enter flooded buildings until it is safe; watch for electrical hazards.</li>
 <li>Report the loss to your flood insurer and your property insurer if both may apply.</li>
 <li>Document before removing damaged materials, then begin drying to limit mold.</li>
-<li>Check with the City of Dallas Development Services Department or your city&rsquo;s permit office before major repairs.</li>
+<li>Check with the City of Dallas Planning &amp; Development Department or your city&rsquo;s permit office before major repairs.</li>
 </ol>
 <p>For legal questions about flood claim deadlines or disputes, consult an attorney.</p>
 HTML,

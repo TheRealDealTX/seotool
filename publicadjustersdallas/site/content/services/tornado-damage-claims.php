@@ -63,7 +63,7 @@ return [
 <li><strong>Incomplete scopes.</strong> Estimates written quickly during a catastrophe response may miss interior damage, framing repairs, or code items.</li>
 <li><strong>Contents underestimated.</strong> Personal property inventories take time, and depreciation can sharply reduce actual cash value payments.</li>
 <li><strong>ALE disputes.</strong> Questions about how long living expenses will be paid or what is reasonable.</li>
-<li><strong>Code and permit costs.</strong> Rebuilding in Dallas requires permits through the City of Dallas Development Services Department, and suburbs like Garland and Rowlett have their own offices. See <a href="/local-building-codes/">local building codes</a>.</li>
+<li><strong>Code and permit costs.</strong> Rebuilding in Dallas requires permits through the City of Dallas Planning &amp; Development Department, and suburbs like Garland and Rowlett have their own offices. See <a href="/local-building-codes/">local building codes</a>.</li>
 <li><strong>Depreciation holdback.</strong> Under replacement cost policies, part of the payment may be held until repairs are finished.</li>
 </ul>
 <p>When the insurer&rsquo;s numbers fall short, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> or <a href="/services/insurance-claim-supplements/">supplement</a> may help close the gap.</p>

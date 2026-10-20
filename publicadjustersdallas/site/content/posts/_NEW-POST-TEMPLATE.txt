@@ -2,7 +2,7 @@
 /*
  * HOW TO ADD A NEW BLOG ARTICLE
  * 1. Copy this file to content/posts/<your-url-slug>.php  (lowercase letters, numbers, hyphens only).
- *    The article will be live at https://publicadjustersanantonio.com/<your-url-slug>/
+ *    The article will be live at https://publicadjustersdallas.com/<your-url-slug>/
  * 2. Fill in the fields below. Keep 'date' as the real publish date (never backdate).
  * 3. Put a 1200x675 landscape image (no text on it) in /assets/img/featured/ and reference it in 'image'.
  * 4. Upload the file. The blog list, homepage, RSS feed, sitemap, and author page update automatically.
@@ -10,7 +10,7 @@
  */
 return [
     'title'       => 'Article Title (shown as the H1)',
-    'seo_title'   => 'Search Title Under 62 Characters | San Antonio Public Adjuster',
+    'seo_title'   => 'Search Title Under 62 Characters | Dallas Public Adjuster',
     'description' => 'Meta description, 120-150 characters.',
     'date'        => '2026-10-20',
     'updated'     => '2026-10-20',

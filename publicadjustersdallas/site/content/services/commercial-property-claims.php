@@ -61,7 +61,7 @@ return [
 <tr><td>Duties after loss</td><td>Notice, mitigation, proof of loss, and examination requirements</td></tr>
 </tbody>
 </table>
-<p>Code requirements can be significant on older commercial buildings. Repairs inside the City of Dallas are permitted through the City of Dallas Development Services Department under the city’s adopted International Building Code, while suburban cities have their own permit offices. Our <a href="/local-building-codes/">local building codes</a> page explains how code upgrades relate to insurance.</p>
+<p>Code requirements can be significant on older commercial buildings. Repairs inside the City of Dallas are permitted through the City of Dallas Planning &amp; Development Department under the city’s adopted International Building Code, while suburban cities have their own permit offices. Our <a href="/local-building-codes/">local building codes</a> page explains how code upgrades relate to insurance.</p>
 
 [[cta]]
 

@@ -82,7 +82,7 @@ return [
 <ul>
 <li><strong>Wind/hail deductibles.</strong> Often a percentage of the dwelling limit, not a flat amount. Check your declarations page before you compare estimates.</li>
 <li><strong>ACV vs. replacement cost.</strong> Under replacement cost coverage, insurers typically pay actual cash value first and release recoverable depreciation after repairs are finished, often within a deadline stated in the policy. Some Texas roof coverage is ACV-only or follows a roof payment schedule. See <a href="/replacement-cost-vs-actual-cash-value-texas/">replacement cost vs. actual cash value in Texas</a>.</li>
-<li><strong>Code upgrades.</strong> Re-roofing in the city generally requires a permit through the City of Dallas Development Services Department, and suburbs such as Garland, Richardson, and Irving have their own permit offices. Code-required work is paid only if your policy includes ordinance or law coverage, up to its limit. See <a href="/local-building-codes/">local building codes</a>.</li>
+<li><strong>Code upgrades.</strong> Re-roofing in the city generally requires a permit through the City of Dallas Planning &amp; Development Department, and suburbs such as Garland, Richardson, and Irving have their own permit offices. Code-required work is paid only if your policy includes ordinance or law coverage, up to its limit. See <a href="/local-building-codes/">local building codes</a>.</li>
 </ul>
 <p>Personal property, other structures, and additional living expenses each have their own limits, so look at every coverage section, not only the dwelling limit.</p>
 

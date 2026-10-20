@@ -65,7 +65,7 @@ return [
 <p>The personal property part of a fire claim often takes the most time. Many policies require an itemized inventory with the description, age, and replacement cost of each item. Photos and video taken before cleanup, purchase records, and room-by-room lists help. Under replacement cost contents coverage, insurers often pay depreciated value first and the rest after items are replaced. Watch for special limits on jewelry, firearms, collectibles, and business property kept at home. Items that can be cleaned are often sent to a contents restoration company; items that cannot be restored should be listed for replacement.</p>
 
 <h2>Rebuilding and Building Codes</h2>
-<p>Major fire repairs in Dallas generally require permits through the City of Dallas Development Services Department, and the work must meet the city&rsquo;s adopted International Residential Code and International Building Code. Cities such as Richardson, Garland, Irving, and Plano have their own permit offices. Upgrades required by code are paid only if your policy includes ordinance or law coverage, up to its limit. See <a href="/local-building-codes/">local building codes</a> for more.</p>
+<p>Major fire repairs in Dallas generally require permits through the City of Dallas Planning &amp; Development Department, and the work must meet the city&rsquo;s adopted International Residential Code and International Building Code. Cities such as Richardson, Garland, Irving, and Plano have their own permit offices. Upgrades required by code are paid only if your policy includes ordinance or law coverage, up to its limit. See <a href="/local-building-codes/">local building codes</a> for more.</p>
 
 <h2>Common Fire Claim Disputes</h2>
 <ul>
