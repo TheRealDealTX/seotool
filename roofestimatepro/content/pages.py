@@ -364,10 +364,11 @@ def tx_map_svg():
         else:
             tx, ty, anchor = x + 2, y + 24, "start"
         delay = f"{(i * 0.37) % 2.6:.2f}s"
+        weight = ' style="font-weight:800;font-size:15px"' if hub else ""
         dots.append(
             f'<g><circle class="ping" cx="{x:.1f}" cy="{y:.1f}" r="{r}" style="animation-delay:{delay}"/>'
             f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}"/>'
-            f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}"{" font-weight=\"700\"" if hub else ""}>{name}</text></g>')
+            f'<text x="{tx:.1f}" y="{ty:.1f}" text-anchor="{anchor}"{weight}>{name}</text></g>')
     return f"""<svg class="tx-map" viewBox="-14 -14 580 530" role="img" aria-labelledby="txmap-t">
   <title id="txmap-t">Map of Texas showing the cities we serve, from El Paso to Tyler and Amarillo to McAllen</title>
   <defs>
@@ -409,6 +410,13 @@ REGION_COPY = {
 }
 
 
+def _factor(f):
+    pct = round((f - 1) * 100)
+    if pct == 0:
+        return "Baseline (DFW)"
+    return f"{'+' if pct > 0 else '−'}{abs(pct)}% vs. DFW"
+
+
 def areas_html():
     regions = []
     for i, r in enumerate(TEXAS_REGIONS):
@@ -416,21 +424,25 @@ def areas_html():
         regions.append(
             f'<div class="region" data-reveal style="--d:{i % 3 * 0.06:.2f}s"><h3>{ico("pin")}{r["name"]}</h3>'
             f'<p>{REGION_COPY[r["key"]]}</p><ul class="city-list">{cities}</ul></div>')
-    us = []
-    for r in US_REGIONS:
-        pct = round((r["factor"] - 1) * 100)
-        us.append(f'<li><span>{r["name"]}</span><b>{"+" if pct >= 0 else ""}{pct}%</b></li>')
-    us_rows = "".join(
-        f'<tr><td>{r["name"]}</td><td>{"+" if r["factor"] >= 1 else ""}{round((r["factor"] - 1) * 100)}% vs. DFW</td></tr>'
-        for r in US_REGIONS)
-    tx_rows = "".join(
-        f'<tr><td>{r["name"]}</td><td>{"" if r["factor"] == 1 else ("+" if r["factor"] > 1 else "")}{"baseline" if r["factor"] == 1 else str(round((r["factor"] - 1) * 100)) + "% vs. DFW"}</td></tr>'
-        for r in TEXAS_REGIONS)
+    regions.append(
+        f'<div class="region" data-reveal style="--d:.06s"><h3>{ico("map")}Outside Texas</h3>'
+        f'<p>Properties in other states get the same remote process, priced for their own market. Neighboring Southern states '
+        f'see many of the same storm systems as Texas, and owners and managers with buildings in several states can keep one method across all of them.</p>'
+        f'<ul class="city-list"><li>Louisiana</li><li>Oklahoma</li><li>Arkansas</li><li>New Mexico</li><li>Colorado</li><li>And more</li></ul>'
+        f'<p style="margin-top:14px"><a href="#outside-texas">Regional pricing outside Texas</a></p></div>')
+    regions.append(
+        f'<div class="region" data-reveal style="--d:.12s;background:var(--ink);border-color:var(--ink);color:#cfe0de">'
+        f'<h3 style="color:#fff">{ico("calc")}Not sure where to start?</h3>'
+        f'<p style="color:#a9bbb8">Pick your region in any free calculator to get local pricing, or send us the address and files and we will tell you what the roof needs.</p>'
+        f'<div class="btn-row" style="margin-top:16px"><a class="btn btn--peach btn--sm" href="/get-estimate/">Request an estimate</a>'
+        f'<a class="btn btn--ghost-light btn--sm" href="/tools/">Free tools</a></div></div>')
+    us_rows = "".join(f'<tr><td>{r["name"]}</td><td>{_factor(r["factor"])}</td></tr>' for r in US_REGIONS)
+    tx_rows = "".join(f'<tr><td>{r["name"]}</td><td>{_factor(r["factor"])}</td></tr>' for r in TEXAS_REGIONS)
     stats = (f'<div class="stats" style="margin-top:28px">'
              f'<div class="stat"><b>254</b><span>Texas counties</span></div>'
              f'<div class="stat"><b>{len(TEXAS_REGIONS)}</b><span>Texas pricing regions</span></div>'
              f'<div class="stat"><b>{len(US_REGIONS)}</b><span>U.S. pricing regions</span></div>'
-             f'<div class="stat"><b><em>$0</em></b><span>Site visits needed</span></div></div>')
+             f'<div class="stat"><b><em>{len(TOOLS)}</em></b><span>Free calculators</span></div></div>')
     return f"""<section class="section section--dark"><div class="wrap">
   <div class="split">
     <div data-reveal>

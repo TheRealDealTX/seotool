@@ -13,7 +13,7 @@
   }
   function t(x, y, s, o) {
     o = o || {};
-    return '<text x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" fill="' + (o.fill || INK) + '" font-size="' + (o.size || 17) +
+    return '<text x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" fill="' + (o.fill || INK) + '" font-size="' + (o.size || 21) +
       '" font-family="Inter,system-ui,sans-serif" text-anchor="' + (o.anchor || "middle") + '" font-weight="' + (o.weight || 600) + '">' + REP.esc(s) + "</text>";
   }
 
@@ -36,7 +36,7 @@
     var r = Math.min(70, w * 0.45);
     if (x > 0) s += '<path d="M' + (x0 + r) + " " + base + " A" + r + " " + r + " 0 0 0 " + (x0 + r * Math.cos(ang)).toFixed(1) + " " + (base - r * Math.sin(ang)).toFixed(1) + '" fill="none" stroke="' + PEACH + '" stroke-width="2"/>';
     var la = ang / 2;
-    if (x > 0) s += t(x0 + (r + 34) * Math.cos(la), base - (r + 34) * Math.sin(la) + 6, N(ang * DEG, 1) + "°", { fill: PEACH, size: 18 });
+    if (x > 0) s += t(x0 + (r + 34) * Math.cos(la), base - (r + 34) * Math.sin(la) + 6, N(ang * DEG, 1) + "°", { fill: PEACH, size: 22 });
     s += t(x0 + w / 2, base + 30, "run 12", { fill: MUTED });
     if (x > 0) s += t(x1 + 12, base - h / 2 + 6, "rise " + N(x, 2), { anchor: "start", fill: PEACH });
     var mx = x0 + w / 2, my = base - h / 2;

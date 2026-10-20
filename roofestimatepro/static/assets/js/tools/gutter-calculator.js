@@ -77,11 +77,11 @@
       var totLf = 0, totDs = 0, totAdj = 0, split = [];
       runs.forEach(function (r) {
         r.ds = Math.max(1, Math.ceil(r.lf / spacing - 1e-9), Math.ceil(r.adj / dsCap - 1e-9));
-        if (r.adj > gCap) { r.ds = Math.max(r.ds, Math.ceil(r.adj / gCap - 1e-9)); split.push(r.name); }
+        if (r.adj > gCap) { var need = Math.ceil(r.adj / gCap - 1e-9); if (need > r.ds) { r.ds = need; split.push(r.name); } }
         totLf += r.lf; totDs += r.ds; totAdj += r.adj;
       });
-      if (v.size === "5" && needMax > 5) warnings.push('Some runs need more than a 5" gutter at ' + I + ' in/hr. Extra downspouts were added to split them, but 6" gutters are the better fix.');
-      if (needMax > 6) warnings.push("At least one run exceeds 6\" gutter capacity as a single section; downspouts were added to split it. On very large roofs, consider 7\" commercial gutters or box gutters.");
+      if (v.size === "5" && needMax > 5) warnings.push('Some runs need more than a 5" gutter at ' + I + ' in/hr. Runs are split with extra downspouts where needed (see Sizing by run), but 6" gutters are the better fix.');
+      if (needMax > 6) warnings.push("At least one run exceeds 6\" gutter capacity as a single section and is split with extra downspouts. On very large roofs, consider 7\" commercial gutters or box gutters.");
 
       var dsEach = v.stories * v.story_h + 2;
       var dsLf = totDs * dsEach;

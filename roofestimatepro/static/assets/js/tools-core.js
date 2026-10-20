@@ -269,13 +269,22 @@
         if (store) try { store.removeItem(key); } catch (err) {}
         rowContainers().forEach(function (c) { c.innerHTML = ""; });
         restore(defaults);
-        rowContainers().forEach(function (c) { if (!c.children.length) addRow(c); });
+        seedRows();
         form.querySelectorAll("input[type=range]").forEach(function (r) { var o = form.querySelector('output[for="' + r.id + '"]'); if (o) o.textContent = r.value + (r.getAttribute("data-suffix") || ""); });
         if (history.replaceState) history.replaceState(null, "", location.pathname);
         run(); toast("Reset to defaults");
       }
     });
 
+    // Empty row containers get data-start rows, filled from cfg.rowDefaults.
+    function seedRows() {
+      rowContainers().forEach(function (c) {
+        if (c.children.length) return;
+        var defs = (cfg.rowDefaults && cfg.rowDefaults[c.getAttribute("data-rows")]) || [];
+        var n = Math.max(+c.getAttribute("data-start") || 1, defs.length);
+        for (var i = 0; i < n; i++) addRow(c, defs[i]);
+      });
+    }
     function shareUrl() { return location.origin + location.pathname + "?s=" + b64e(snapshot()); }
     function stampPrint() {
       var ph = document.querySelector(".print-head time");
@@ -287,9 +296,7 @@
     var saved = qs ? b64d(qs) : null;
     if (!saved && store) try { saved = JSON.parse(store.getItem(key) || "null"); } catch (e) {}
     if (saved) restore(saved);
-    rowContainers().forEach(function (c) {
-      if (!c.children.length) { var n = +c.getAttribute("data-start") || 1; for (var i = 0; i < n; i++) addRow(c, (cfg.rowDefaults && cfg.rowDefaults[c.getAttribute("data-rows")] || [])[i]); }
-    });
+    seedRows();
     form.querySelectorAll("input[type=range]").forEach(function (r) { var o = form.querySelector('output[for="' + r.id + '"]'); if (o) o.textContent = r.value + (r.getAttribute("data-suffix") || ""); });
     if (cfg.init) cfg.init(form, run);
     run();

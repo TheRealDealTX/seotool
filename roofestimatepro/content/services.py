@@ -299,7 +299,7 @@ SERVICE_PAGES = {
         "cta": ("Have a roof that needs a real number?", "Send the measurements and photos. We will quote the estimate first, then build it line by line in the format carriers use."),
     },
     "commercial-roof-estimates": {
-        "title": "Commercial Roof Estimates: TPO, PVC, Mod-Bit & Metal | Roof Estimate Pro",
+        "title": "Commercial Roof Estimates: TPO, PVC & Metal | Roof Estimate Pro",
         "description": "Commercial roof estimates and takeoffs for TPO, PVC, EPDM, mod-bit, coatings and metal, including restoration vs. replacement options, in Texas and beyond.",
         "h1": "Commercial roof estimates and takeoffs",
         "kicker": "Commercial estimates",
@@ -402,7 +402,7 @@ SERVICE_PAGES = {
         "cta_href": "/claim/", "cta_label": "Submit a claim",
     },
     "scope-of-damages": {
-        "title": "Scope of Damages for Roof & Property Claims: $200 | Roof Estimate Pro",
+        "title": "Scope of Damages for Roof Claims: $200 | Roof Estimate Pro",
         "description": "Order a professional scope of damages for $200, built from your photos and measurements, or document the damage yourself with a DIY scope on PAscope.com.",
         "h1": "Scope of damages, professional or DIY",
         "kicker": "$200 per property",
