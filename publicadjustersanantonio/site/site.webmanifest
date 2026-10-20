@@ -1,12 +1,15 @@
 {
   "name": "San Antonio Public Adjuster",
   "short_name": "SA Public Adjuster",
+  "description": "Licensed Texas public adjusting for San Antonio and Bexar County property insurance claims.",
   "start_url": "/",
+  "scope": "/",
   "display": "browser",
   "background_color": "#F1F0E4",
   "theme_color": "#3E3F29",
   "icons": [
-    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
