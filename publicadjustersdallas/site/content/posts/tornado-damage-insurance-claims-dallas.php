@@ -145,6 +145,10 @@ return [
 
 <p>Heavy tornado damage often means rebuilding to current code. Inside the city, that runs through the City of Dallas Development Services Department under the city's adopted International Residential Code and International Building Code. Garland, Rowlett, Irving, Richardson, and other suburbs have their own permit offices. Code-required upgrades are not automatically paid by the base dwelling coverage; that depends on your ordinance or law coverage and its limit. Our guide to <a href="/building-codes-insurance-repairs-dallas/">building codes and insurance repairs in Dallas</a> explains how this works.</p>
 
+<h3>Partial losses on a damaged street</h3>
+
+<p>On many tornado claims, the home is not destroyed but is damaged on several sides at once: a roof with missing sections, broken windows, dented siding or gutters, a collapsed garage door, and water stains inside from the rain that followed. These partial losses are where scope disagreements are most common. Hidden damage to framing, decking, and insulation may not show up until repairs begin, so keep the claim open and document anything new that contractors find. A supplemental request with photos and an updated estimate is a normal part of the process.</p>
+
 <p>Large losses also bring replacement cost questions. Many policies pay actual cash value first and release recoverable depreciation after repairs are complete, often within a deadline. Mortgage companies are commonly named on claim checks and may hold funds and release them in stages as work progresses.</p>
 
 <h2>How a public adjuster can help with a tornado claim</h2>

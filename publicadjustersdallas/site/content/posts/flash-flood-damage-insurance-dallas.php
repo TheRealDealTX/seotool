@@ -134,6 +134,10 @@ return [
 <li><strong>Additional living expenses</strong> are generally not covered by NFIP policies, unlike many homeowners policies.</li>
 </ul>
 
+<h3>Rebuilding after a flood</h3>
+
+<p>If a building in a mapped floodplain is substantially damaged, the local floodplain administrator may require it to be elevated or otherwise brought up to current floodplain rules before it is rebuilt. NFIP policies include Increased Cost of Compliance coverage that may help with some of those costs when the community determines the building is substantially damaged. Inside the city, permits for flood repairs go through the City of Dallas Development Services Department; suburbs such as Mesquite, Garland, and Balch Springs have their own offices. Ask about permit and floodplain requirements before rebuilding.</p>
+
 <p>These are general descriptions. Your Standard Flood Insurance Policy or private flood policy controls, and it is worth reading before you need it.</p>
 
 <h2>Filing a flood claim: practical steps</h2>
