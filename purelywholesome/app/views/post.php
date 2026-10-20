@@ -13,8 +13,7 @@
         <h1><?= e($post['h1']) ?></h1>
         <p class="article__lede"><?= e($post['desc']) ?></p>
         <div class="byline">
-          <span class="byline__avatar" aria-hidden="true"><?= icon('sprout') ?></span>
-          <span><strong>Purely Wholesome Farm</strong> Kitchen &amp; Barn Team</span>
+          <span class="byline__who"><span class="byline__avatar" aria-hidden="true"><?= icon('sprout') ?></span><span><strong>Purely Wholesome Farm</strong> Kitchen &amp; Barn Team</span></span>
           <span class="byline__sep" aria-hidden="true"></span>
           <span><?= icon('calendar') ?> <?= $post['modified'] > $post['published'] ? 'Updated <time datetime="' . e($post['modified']) . '">' . fmt_date($post['modified']) . '</time>' : '<time datetime="' . e($post['published']) . '">' . fmt_date($post['published']) . '</time>' ?></span>
           <span><?= icon('clock') ?> <?= (int)$post['minutes'] ?> min read</span>

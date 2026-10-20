@@ -23,12 +23,28 @@
   onScroll();
 
   // ---------- Menus ----------
+  // The mobile drawer lives outside the header: the header's backdrop-filter would
+  // otherwise become the containing block for a position:fixed panel.
   const menuBtn = document.querySelector('[data-menu]');
-  menuBtn.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
+  const drawer = document.querySelector('[data-drawer]');
+  let drawerTimer = null;
+  function setDrawer(open) {
+    clearTimeout(drawerTimer);
     menuBtn.setAttribute('aria-expanded', open);
-    menuBtn.innerHTML = open ? '<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>' : '<svg class="icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
-  });
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('menu-open', open);
+    if (open) {
+      drawer.hidden = false;
+      requestAnimationFrame(() => requestAnimationFrame(() => drawer.classList.add('is-open')));
+    } else {
+      drawer.classList.remove('is-open');
+      drawerTimer = setTimeout(() => { drawer.hidden = true; }, 350);
+    }
+  }
+  menuBtn.addEventListener('click', () => setDrawer(menuBtn.getAttribute('aria-expanded') !== 'true'));
+  drawer.addEventListener('click', (e) => { if (e.target === drawer || e.target.closest('a, [data-search-open]')) setDrawer(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !drawer.hidden) setDrawer(false); });
+  window.matchMedia('(min-width: 961px)').addEventListener('change', (m) => { if (m.matches) setDrawer(false); });
   const megaBtn = document.querySelector('[data-mega-toggle]');
   if (megaBtn) {
     megaBtn.addEventListener('click', (e) => {

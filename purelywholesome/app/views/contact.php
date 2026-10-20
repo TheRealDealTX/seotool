@@ -7,7 +7,7 @@ include __DIR__ . '/partials/page-hero.php'; ?>
     <form class="contact__form" method="post" action="/contact-us/" novalidate>
       <?php if ($sent): ?><p class="alert alert--ok"><?= icon('check') ?> Thank you! Your message is on its way to the farm.</p><?php endif ?>
       <?php if ($errors): ?><p class="alert alert--err">Please fix the highlighted fields.</p><?php endif ?>
-      <div class="field <?= isset($errors['name']) ? 'has-error' : '' ?>"><label for="c-name">Name</label><input id="c-name" name="name" required maxlength="80" value="<?= e($old['name']) ?>" autocomplete="name"><?php if (isset($errors['name'])): ?><small><?= e($errors['name']) ?></small><?php endif ?></div>
+      <div class="field <?= isset($errors['name']) ? 'has-error' : '' ?>"><label for="c-name">Name</label><input id="c-name" name="name" type="text" required maxlength="80" value="<?= e($old['name']) ?>" autocomplete="name"><?php if (isset($errors['name'])): ?><small><?= e($errors['name']) ?></small><?php endif ?></div>
       <div class="field <?= isset($errors['email']) ? 'has-error' : '' ?>"><label for="c-email">Email</label><input id="c-email" name="email" type="email" required value="<?= e($old['email']) ?>" autocomplete="email"><?php if (isset($errors['email'])): ?><small><?= e($errors['email']) ?></small><?php endif ?></div>
       <div class="field"><label for="c-topic">What’s it about?</label>
         <select id="c-topic" name="topic">

@@ -19,7 +19,7 @@ $liveCount = count(live_posts());
       <p class="hero__lead reveal">Purely Wholesome Farm is a farm kitchen and homestead journal. Juicy brined chicken, lamb chops with all the right sides, silky pumpkin pie, healthy goats and happy hens: real know-how from the barn and the stove, plus free tools that do the math for you.</p>
       <form class="hero__search reveal" action="/" method="get" role="search">
         <?= icon('search') ?>
-        <input type="search" name="s" placeholder="What are you cooking or raising today?" aria-label="Search Purely Wholesome Farm" data-hero-search>
+        <input type="search" name="s" placeholder="Search recipes, goats, canning…" aria-label="Search Purely Wholesome Farm" data-hero-search>
         <button class="btn btn--primary" type="submit">Search</button>
       </form>
       <div class="hero__ctas reveal">

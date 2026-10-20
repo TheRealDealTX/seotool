@@ -69,10 +69,34 @@ $navTopics = ['lamb', 'brining', 'baking', 'canning', 'goats', 'chickens-eggs', 
     </nav>
     <div class="site-header__actions">
       <button class="icon-btn" data-search-open aria-label="Search (press /)"><?= icon('search') ?><kbd>/</kbd></button>
-      <button class="icon-btn icon-btn--menu" data-menu aria-label="Open menu" aria-expanded="false"><?= icon('menu') ?></button>
+      <button class="icon-btn icon-btn--menu" data-menu aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span class="burger" aria-hidden="true"><i></i><i></i><i></i></span></button>
     </div>
   </div>
 </header>
+
+<div class="drawer" id="drawer" data-drawer hidden>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <button type="button" class="drawer__search" data-search-open><?= icon('search') ?><span>Search recipes, guides &amp; tools</span></button>
+    <nav class="drawer__links" aria-label="Mobile">
+      <a href="/blog/"><span><?= icon('book') ?></span>The Farm Journal<?= icon('arrow') ?></a>
+      <a href="/tools/"><span><?= icon('tool') ?></span>Farm Tools <em>9 free</em><?= icon('arrow') ?></a>
+      <a href="/about-us/"><span><?= icon('sprout') ?></span>About Us<?= icon('arrow') ?></a>
+      <a href="/contact-us/"><span><?= icon('mail') ?></span>Contact<?= icon('arrow') ?></a>
+    </nav>
+    <p class="drawer__label">Browse by topic</p>
+    <div class="drawer__topics">
+      <?php foreach ($navTopics as $t): ?>
+        <a href="/topics/<?= $t ?>/"><span class="mega__dot mega__dot--<?= $t ?>"></span><?= e(TOPICS[$t][0]) ?></a>
+      <?php endforeach ?>
+    </div>
+    <a class="drawer__cta" href="/tools/brine-calculator/">
+      <span class="drawer__cta-icon"><?= icon('flask') ?></span>
+      <span><strong>Try the Brine Calculator</strong><small>Exact salt for any salt brand, in seconds</small></span>
+      <?= icon('arrow') ?>
+    </a>
+    <p class="drawer__foot hand">Grow better, live simpler.</p>
+  </div>
+</div>
 
 <main id="main"><?= $content ?></main>
 
