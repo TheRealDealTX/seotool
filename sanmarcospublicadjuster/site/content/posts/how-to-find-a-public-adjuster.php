@@ -42,7 +42,7 @@ return [
 
 <p>This guide covers where to look, how to verify a Texas license, which questions to ask, and which red flags should end the conversation. If you are still deciding whether to hire anyone, read <a href="/are-public-adjusters-worth-it/">Are Public Adjusters Worth It?</a> first. If you want the contract and fee rules in detail, see <a href="/what-is-a-public-adjuster-and-how-to-hire-one/">What Is a Public Adjuster and How to Hire One</a>.</p>
 
-<figure><img src="/wp-content/uploads/2026/02/How-to-Find-a-Public-Adjuster-1024x683.webp" alt="Adjuster walking a pitched roof that has a tarp over a damaged area" width="1024" height="683" loading="lazy" decoding="async"><figcaption>The right public adjuster should be comfortable explaining exactly how they will document your damage.</figcaption></figure>
+<figure><img src="/assets/img/stock/claim-file-review-kitchen-table.webp" alt="Couple reviewing claim paperwork and roof photos with an adjuster at a kitchen table" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>Where to find a public adjuster near San Marcos</h2>
 

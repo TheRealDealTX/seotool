@@ -91,6 +91,9 @@ return [
 </ol>
 <p>Our article <a href="/after-the-flames-insurance-adjuster/">After the Flames</a> walks through the first weeks after a fire in more detail.</p>
 
+<h2>Additional Living Expenses: Keeping the Paper Trail</h2>
+<p>Loss of use coverage generally pays the increase in your living costs, not your normal expenses. If your family now pays for a rental house, extra mileage to school and work, laundry, or meals out because the kitchen is gone, those increases may be claimable. Keep receipts in one place, write down your normal monthly costs for comparison, and ask the insurer in writing how long the coverage period is expected to last so you are not surprised by a cutoff while repairs are still underway.</p>
+
 <h2>When to Call a Public Adjuster After a Fire</h2>
 <p>The earlier the better, because early documentation shapes the whole claim. A public adjuster in San Marcos can be especially helpful when the loss is large, when you are displaced and overwhelmed, when contents are extensive, or when the insurer&rsquo;s estimate does not match contractor pricing. Business owners can also see our <a href="/services/commercial-property-claims/">commercial property claims</a> page. Request a <a href="/free-claim-review/">free claim review</a> when you are ready.</p>
 HTML,

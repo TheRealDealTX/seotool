@@ -282,13 +282,13 @@ function send_claim_email(array $d, array $files): bool
         'Submitted at'     => date('F j, Y g:i A T'),
         'Attachments'      => $files ? count($files) . ' file(s)' : 'None',
     ];
-    $html = '<h2 style="font-family:Arial,sans-serif;color:#10243A">New Free Claim Review request</h2><table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px;border-collapse:collapse">';
+    $html = '<h2 style="font-family:Arial,sans-serif;color:#2A3044">New Free Claim Review request</h2><table cellpadding="6" style="font-family:Arial,sans-serif;font-size:14px;border-collapse:collapse">';
     $text = "New Free Claim Review request\n\n";
     foreach ($rows as $k => $v) {
         $html .= '<tr><td style="border-bottom:1px solid #eee"><strong>' . e($k) . '</strong></td><td style="border-bottom:1px solid #eee">' . e($v) . '</td></tr>';
         $text .= $k . ': ' . $v . "\n";
     }
-    $html .= '</table><h3 style="font-family:Arial,sans-serif;color:#10243A">Message</h3><p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap">' . nl2br(e($d['message'])) . '</p>';
+    $html .= '</table><h3 style="font-family:Arial,sans-serif;color:#2A3044">Message</h3><p style="font-family:Arial,sans-serif;font-size:14px;white-space:pre-wrap">' . nl2br(e($d['message'])) . '</p>';
     $text .= "\nMessage:\n" . $d['message'] . "\n";
 
     $mail = new PHPMailer\PHPMailer\PHPMailer(true);

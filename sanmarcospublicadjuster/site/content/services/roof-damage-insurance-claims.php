@@ -2,7 +2,7 @@
 return [
     'title'       => 'Roof Damage Insurance Claims in San Marcos, TX',
     'seo_title'   => 'San Marcos Roof Damage Insurance Claims | Public Adjuster',
-    'description' => 'Roof damage insurance claim help in San Marcos, TX: shingle, metal, and low-slope roofs, missing line items, code items, ACV roof schedules, and supplements.',
+    'description' => 'Roof damage insurance claim help in San Marcos, TX: shingle, metal, and low-slope roofs, missing line items, code items, ACV schedules, and supplements.',
     'lead'        => 'A roof claim is only as good as the estimate behind it. We help San Marcos and Hays County property owners document roof damage, check the insurer’s scope for missing items, and understand how their policy pays for a roof.',
     'kicker'      => 'Roof Damage Claims',
     'image'       => '/assets/img/featured/service-roof-damage-insurance-claims.webp',

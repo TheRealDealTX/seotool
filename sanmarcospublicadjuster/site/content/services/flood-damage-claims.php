@@ -89,6 +89,9 @@ return [
 <li>Follow up with the flood adjuster and pursue additional payment requests when more damage is found.</li>
 </ol>
 
+<h2>If You Do Not Have Flood Insurance</h2>
+<p>Many owners discover after the fact that their homeowners policy does not cover rising water. Even then, it is worth reviewing the policy, because some damage from the same event, such as wind damage to the roof or a separately caused plumbing leak, may still fall under it. Federal assistance is only available when a disaster declaration includes individual assistance for Hays County, and it is not a substitute for insurance.</p>
+
 <h2>When to Call a Public Adjuster About Flooding</h2>
 <p>Consider calling a public adjuster in San Marcos if the proof-of-loss deadline is approaching and you do not yet have a complete estimate, if the flood adjuster&rsquo;s scope stops below your waterline, if your contents list is overwhelming, or if your homeowners insurer and flood insurer disagree on the cause. If the same storm also brought wind or hail, our <a href="/services/storm-damage-claims/">storm damage claims</a> page explains how to handle both. For a no-cost first look, request a <a href="/free-claim-review/">free claim review</a>.</p>
 HTML,

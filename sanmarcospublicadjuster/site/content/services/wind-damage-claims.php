@@ -88,6 +88,9 @@ return [
 </ol>
 <p>If you and the insurer agree the damage is covered but disagree on cost, appraisal may be available under the policy. Our <a href="/services/insurance-appraisal/">insurance appraisal</a> page explains how that works.</p>
 
+<h2>Wind Damage to Outbuildings, Fences, and Equipment</h2>
+<p>Properties west of I-35 toward Wimberley and Dripping Springs, and rural lots east toward Uhland and Maxwell, often include barns, shops, carports, and long runs of fencing. These structures are usually covered under the other structures portion of a homeowners policy, which has its own limit, or under separate coverage on a farm or commercial policy. They are also easy to leave out when the adjuster focuses on the house. We list each structure separately, with its own photos and line items, so nothing is folded into a single vague allowance. Exterior equipment such as AC condensers, satellite dishes, and solar panels can also be damaged by flying debris and should be checked after a strong storm.</p>
+
 <h2>When to Bring in a Public Adjuster</h2>
 <p>A public adjuster in San Marcos can be helpful when the insurer called the damage pre-existing, when interior water damage was excluded, when a metal roof or multiple buildings are involved, or when the approved amount does not come close to contractor bids. If hail fell in the same storm, see our <a href="/services/hail-damage-claims/">hail damage claims</a> page, and for multi-peril events see <a href="/services/storm-damage-claims/">storm damage claims</a>. Start with a <a href="/free-claim-review/">free claim review</a> and we will tell you honestly whether we think we can add value.</p>
 HTML,

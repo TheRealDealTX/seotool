@@ -13,7 +13,7 @@ header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');
 
 $wantsJson = stripos($_SERVER['HTTP_ACCEPT'] ?? '', 'application/json') !== false;
-$success = 'Thank you! Your Free Claim Review request has been received. Our team will contact you.';
+$success = 'Thank you! Your Free Claim Review request has been received. We will contact you shortly.';
 
 function respond(bool $ok, string $message, array $errors = [], int $status = 200): void
 {

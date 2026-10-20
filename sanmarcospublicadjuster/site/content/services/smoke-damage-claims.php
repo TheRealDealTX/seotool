@@ -2,7 +2,7 @@
 return [
     'title'       => 'Smoke Damage Insurance Claims in San Marcos, TX',
     'seo_title'   => 'San Marcos Smoke Damage Claims | Soot & Odor Claim Help',
-    'description' => 'Smoke damage insurance claim help in San Marcos, TX: soot residue, lingering odor, HVAC contamination, contents cleaning, and clean-versus-replace disputes.',
+    'description' => 'Smoke damage insurance claim help in San Marcos, TX: soot residue, lingering odor, HVAC contamination, contents cleaning, and clean-vs-replace disputes.',
     'lead'        => 'Smoke spreads far beyond the flames, into ductwork, attics, closets, and fabrics. We help San Marcos and Hays County property owners document smoke and soot damage and push for a scope that actually removes it.',
     'kicker'      => 'Smoke Damage Claims',
     'image'       => '/assets/img/featured/service-smoke-damage-claims.webp',
@@ -93,6 +93,9 @@ return [
 <li>Follow-up, including re-inspection requests if odor returns after cleaning.</li>
 </ol>
 <p>If an insurer&rsquo;s estimate already exists, our <a href="/services/insurance-estimate-review/">insurance estimate review</a> compares it with what we documented.</p>
+
+<h2>Why Smoke Claims Are Easy to Underpay</h2>
+<p>Smoke damage rarely looks dramatic in photos, and that is part of the problem. A room that appears clean in a quick walk-through may still have a film on every surface and odor trapped in drywall, insulation, and fabric. Estimates written from a short visit tend to price light cleaning and a coat of paint. A thorough scope, supported by wipe samples, filter photos, and notes about recurring odor, gives the insurer a clearer picture of the work required to restore the property, not just to make it look clean for a while.</p>
 
 <h2>When to Call a San Marcos Public Adjuster</h2>
 <p>It may be time to call when the smell keeps coming back, when only one room was scoped, when contents were dismissed as cleanable without testing, or when a smoke claim was denied. Landlords and owners of multifamily properties can also see our <a href="/services/commercial-property-claims/">commercial property claims</a> page, and denied claims are covered on <a href="/services/denied-insurance-claims/">denied insurance claims</a>. Request a <a href="/free-claim-review/">free claim review</a> to talk it through.</p>

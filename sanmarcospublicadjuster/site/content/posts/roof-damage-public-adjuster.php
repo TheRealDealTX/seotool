@@ -44,7 +44,7 @@ return [
 
 <p>It is general information from the perspective of a licensed Texas public adjuster, not legal advice. Every claim depends on your policy language and the facts of your loss.</p>
 
-<figure><img src="/wp-content/uploads/2026/02/Roof-Damage-Public-Adjuster-1024x683.webp" alt="Adjuster in a hard hat kneeling on a shingle roof and inspecting storm damage" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Roof claims are won or lost on documentation: every slope, every impact, and every damaged component.</figcaption></figure>
+<figure><img src="/assets/img/stock/adjuster-marking-hail-hits-roof.webp" alt="Adjuster on a shingle roof marking hail hits while taking notes" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>Why roof claims are so common in San Marcos and Hays County</h2>
 

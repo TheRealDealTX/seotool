@@ -87,6 +87,9 @@ return [
 <li>Ongoing communication with each insurer until the claims are resolved.</li>
 </ol>
 
+<h2>Storm Claims for Rental and Commercial Properties</h2>
+<p>Landlords and business owners face a few extra layers after a storm. A student rental near Texas State may involve the owner&rsquo;s dwelling policy for the building and each tenant&rsquo;s renters policy for their belongings. A retail building along the I-35 frontage may have a low-slope roof, rooftop HVAC units, signage, and lost business income to account for. Commercial policies can also carry different deductibles, coinsurance provisions, and reporting requirements. Our <a href="/services/commercial-property-claims/">commercial property claims</a> page covers those differences in more detail.</p>
+
 <h2>When to Call</h2>
 <p>Call when a storm damaged more than one part of your property, when you are unsure which policy applies, when the insurer is pointing at a different cause than the one you saw, or when the claim has stalled for weeks. Owners in Kyle, Buda, Wimberley, and the rest of Hays County can reach a public adjuster in San Marcos through our <a href="/free-claim-review/">free claim review</a>. You can also read more on <a href="/services/hail-damage-claims/">hail</a> and <a href="/services/wind-damage-claims/">wind</a> claims.</p>
 HTML,

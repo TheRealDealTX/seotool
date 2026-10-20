@@ -86,6 +86,9 @@ return [
 <li>We submit to the insurer, answer questions, and follow through until payment, including supplements for hidden damage found during repairs.</li>
 </ol>
 
+<h2>Water Leaks in Rentals and Multifamily Buildings</h2>
+<p>When water from one unit damages another, several policies may be involved: the building owner&rsquo;s policy, the tenant&rsquo;s renters policy for their belongings, and sometimes a condominium association policy. Each insurer may handle a different piece. Landlords should document the source unit, every affected unit, and the time the water was shut off, and keep tenant communications in writing. Clear records make it easier to show which policy should respond to which damage.</p>
+
 <h2>When to Call a Public Adjuster in San Marcos</h2>
 <p>Consider calling when the claim was denied as gradual seepage, when the estimate covers drying but not rebuilding, when multiple rooms or units are involved, or when you are unsure whether the loss is water damage or flood. You can request a <a href="/free-claim-review/">free claim review</a> at any stage, and we will tell you plainly whether we think we can help.</p>
 HTML,

@@ -42,7 +42,7 @@ return [
 
 <p>If you are just starting to learn what public adjusters do, read <a href="/what-is-a-public-adjuster-and-how-to-hire-one/">What Is a Public Adjuster and How to Hire One</a> first. This piece is about cost and value.</p>
 
-<figure><img src="/wp-content/uploads/2026/02/Are-Public-Adjusters-Worth-It-1024x683.webp" alt="Adjuster pointing a flashlight at a damaged ceiling while a couple looks on" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Value usually comes from finding and documenting damage that is easy to miss, not from a negotiating trick.</figcaption></figure>
+<figure><img src="/assets/img/stock/appraisal-dispute-review-table.webp" alt="Professionals reviewing roof damage photos at a table during a claim dispute" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>What a public adjuster costs in Texas</h2>
 

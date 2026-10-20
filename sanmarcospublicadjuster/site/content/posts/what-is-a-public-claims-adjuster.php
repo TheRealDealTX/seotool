@@ -40,7 +40,7 @@ return [
 
 <p>If you already know you want help and are mainly wondering about the hiring steps, start with <a href="/what-is-a-public-adjuster-and-how-to-hire-one/">What Is a Public Adjuster and How to Hire One</a>. This piece is about roles and terminology.</p>
 
-<figure><img src="/wp-content/uploads/2026/02/What-Is-a-Public-Claims-Adjuster-1024x683.webp" alt="Adjuster with a clipboard inspecting a room where the ceiling has collapsed from water damage" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Interior water losses often involve several adjusters, each with a different job and a different client.</figcaption></figure>
+<figure><img src="/assets/img/stock/claim-photos-tablet-review.webp" alt="Hands reviewing claim photos on a tablet and laptop" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>The three kinds of property claim adjusters</h2>
 

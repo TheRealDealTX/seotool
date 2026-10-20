@@ -43,7 +43,7 @@ return [
 
 <p>This guide is for homeowners in San Marcos, Hays County, and nearby Central Texas communities. It is general information from a licensed Texas public adjuster, not legal advice, and coverage always depends on your policy and the facts.</p>
 
-<figure><img src="/wp-content/uploads/2026/04/After-the-Flames-Insurance-Adjuster-1024x683.webp" alt="Adjuster with a clipboard documenting damage inside a fire-damaged room" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Fire claims require room-by-room documentation of burned materials, smoke, soot, and water damage.</figcaption></figure>
+<figure><img src="/assets/img/stock/fire-damage-adjuster-safety-vest.webp" alt="Adjuster in a hard hat and safety vest documenting a burned room on a tablet" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>Three kinds of fire insurance adjusters</h2>
 

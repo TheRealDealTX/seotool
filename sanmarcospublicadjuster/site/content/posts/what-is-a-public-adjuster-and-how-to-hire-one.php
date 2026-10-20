@@ -41,7 +41,7 @@ return [
 
 <p>It is written for homeowners and business owners in San Marcos, Hays County, and nearby communities such as Kyle, Buda, Wimberley, and New Braunfels. If you want the bigger-picture comparison of the different kinds of adjusters you may meet on a claim, see our companion article, <a href="/what-is-a-public-claims-adjuster/">What Is a Public Claims Adjuster?</a></p>
 
-<figure><img src="/wp-content/uploads/2026/02/What-Is-a-Public-Adjuster-and-How-to-Hire-One-1024x683.webp" alt="Adjuster standing on a pitched roof with a blue tarp covering a damaged section" width="1024" height="683" loading="lazy" decoding="async"><figcaption>A public adjuster’s job starts with understanding the damage and the policy, then building a claim that reflects both.</figcaption></figure>
+<figure><img src="/assets/img/stock/organized-claim-documentation-folder.webp" alt="Labeled claim folders for photos, receipts, estimates, and weather data next to a laptop" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>What is a public adjuster? A plain-English definition</h2>
 

@@ -43,7 +43,7 @@ return [
 
 <p>One important note up front: public adjusters are not attorneys. When a question involves a lawsuit, a deadline to sue, or a pre-suit notice, the right person to ask is a Texas attorney. We will point out where those lines are.</p>
 
-<figure><img src="/wp-content/uploads/2026/02/When-Is-It-Too-Late-to-Hire-a-Public-Adjuster-1024x683.webp" alt="Adjuster standing on a damaged roof checking a phone" width="1024" height="683" loading="lazy" decoding="async"><figcaption>Timing affects how much of a claim a public adjuster can still help shape.</figcaption></figure>
+<figure><img src="/assets/img/stock/claim-evidence-organized-desk.webp" alt="Adjuster organizing printed claim photos and notes on a desk" width="1536" height="1024" loading="lazy" decoding="async"></figure>
 
 <h2>The short answer: earlier is better, but later is often still possible</h2>
 

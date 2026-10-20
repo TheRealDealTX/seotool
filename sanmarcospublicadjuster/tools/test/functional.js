@@ -31,9 +31,9 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   const fits = await mp.evaluate(() => { const r = document.querySelector('#claim-popup').getBoundingClientRect(); return r.left >= 0 && r.right <= innerWidth + 1; });
   ok(fits, 'popup: fits the phone screen');
   await mp.fill('#claim-popup [name="full_name"]', 'Popup Test');
-  await mp.fill('#claim-popup [name="phone"]', '956-555-0199');
+  await mp.fill('#claim-popup [name="phone"]', '512-555-0199');
   await mp.fill('#claim-popup [name="email"]', 'popup@example.com');
-  await mp.fill('#claim-popup [name="location"]', 'Leon Valley');
+  await mp.fill('#claim-popup [name="location"]', 'Kyle');
   await mp.selectOption('#claim-popup [name="claim_type"]', 'Hail damage');
   await mp.selectOption('#claim-popup [name="claim_status"]', 'Not filed yet');
   await mp.fill('#claim-popup [name="message"]', 'Hail dented gutters and roof vents.');
@@ -99,19 +99,19 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await page.selectOption('#f-hail', '2.75');
   await page.waitForTimeout(400);
   const lbl = await page.textContent('[data-count-label]');
-  ok(/^38 matching/.test(lbl), 'storm history: baseball+ hail filter → ' + lbl);
-  await page.fill('#f-loc', 'Sayers');
+  ok(/^8 matching/.test(lbl), 'storm history: baseball+ hail filter → ' + lbl);
+  await page.fill('#f-loc', 'Niederwald');
   await page.waitForTimeout(400);
-  ok(/^1 matching/.test(await page.textContent('[data-count-label]')), 'storm history: location filter (Sayers 5.5" hail)');
+  ok(/^1 matching/.test(await page.textContent('[data-count-label]')), 'storm history: location filter (Niederwald baseball hail)');
 
   // Storm lookup.
   await page.goto(base + '/storm-lookup/', { waitUntil: 'domcontentloaded' });
-  await page.fill('#l-where', '78230');
-  await page.fill('#l-date', '2016-04-12');
+  await page.fill('#l-where', '78666');
+  await page.fill('#l-date', '2024-05-09');
   await page.click('[data-lookup] button[type="submit"]');
   await page.waitForFunction(() => /report/.test(document.querySelector('[data-lookup-results]').textContent), null, { timeout: 15000 });
   const res = await page.textContent('[data-lookup-results]');
-  ok(/\d+ reports? within 5 miles of ZIP 78230/.test(res) && /Hail/.test(res), 'storm lookup: ZIP 78230 around April 12, 2016 finds hail');
+  ok(/\d+ reports? within 5 miles of ZIP 78666/.test(res) && /Hail/.test(res), 'storm lookup: ZIP 78666 around May 9, 2024 finds hail');
   await page.fill('#l-where', 'Nowhereville');
   await page.click('[data-lookup] button[type="submit"]');
   ok(/Hays County-area city/.test(await page.textContent('[data-lookup-status]')), 'storm lookup: unknown place message');

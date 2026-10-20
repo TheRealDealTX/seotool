@@ -2,7 +2,7 @@
 return [
     'title'       => 'Freeze Damage Insurance Claims in San Marcos, TX',
     'seo_title'   => 'San Marcos Freeze & Burst Pipe Claims | Public Adjuster',
-    'description' => 'Freeze damage and burst pipe claim help in San Marcos, TX: Winter Storm Uri lessons, heat and vacancy conditions, hidden water damage, and ice storm losses.',
+    'description' => 'Freeze damage and burst pipe claim help in San Marcos, TX: Winter Storm Uri lessons, heat and vacancy rules, hidden water damage, and ice storm losses.',
     'lead'        => 'Central Texas homes are built for heat, not hard freezes. When pipes burst or ice brings down limbs, we help San Marcos and Hays County owners document freeze damage and work through the policy conditions that often decide these claims.',
     'kicker'      => 'Freeze Damage Claims',
     'image'       => '/assets/img/featured/service-freeze-damage-claims.webp',
@@ -86,6 +86,9 @@ return [
 <li><strong>Estimate and submission.</strong> We prepare a room-by-room estimate covering tear-out, rebuild, and matching.</li>
 <li><strong>Follow-through.</strong> We answer questions, track payments, and request additional amounts when hidden damage is found during repairs.</li>
 </ol>
+
+<h2>Commercial and Multifamily Freeze Losses</h2>
+<p>Apartment buildings, offices, and retail spaces add complexity to a freeze claim. A broken fire sprinkler line can release a large volume of water across several units at once, and tenants may have their own renters or business policies for contents. Business income losses while units or storefronts are closed may also be part of the claim. Keeping a single, organized record of which areas were affected and when repairs were completed helps every policy involved respond more smoothly.</p>
 
 <h2>When to Call</h2>
 <p>A San Marcos Public Adjuster review can make sense when a freeze claim was denied under a heat or vacancy condition, when the estimate covers drying but not rebuilding, when matching flooring or cabinets was refused, or when damage spread through several rooms or units. For leaks that are not freeze-related, see our <a href="/services/water-damage-claims/">water damage claims</a> page, and for denied claims see <a href="/services/denied-insurance-claims/">denied insurance claims</a>. Owners of multifamily buildings may also want our <a href="/services/commercial-property-claims/">commercial property claims</a> page. Start with a <a href="/free-claim-review/">free claim review</a>.</p>
