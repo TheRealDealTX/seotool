@@ -13,7 +13,7 @@ const TOOLS = [
     ],
     'under-desk-elliptical-calorie-calculator' => [
         'id' => 'calories', 'short' => 'Calorie Calculator',
-        'title' => 'Under Desk Elliptical Calorie Calculator: Calories Burned Per Hour',
+        'title' => 'Under Desk Elliptical Calorie Calculator (Calories Per Hour)',
         'h1' => 'Under Desk Elliptical Calories Burned Calculator',
         'description' => 'Estimate how many calories an under desk elliptical burns per session, week and month based on your weight, minutes and pedaling effort.',
         'intro' => 'Enter your weight, how long you pedal and how hard. The calculator uses MET values from the Compendium of Physical Activities to estimate calories burned, plus the extra calories compared with sitting still.',
@@ -27,14 +27,14 @@ const TOOLS = [
     ],
     'desk-clearance-checker' => [
         'id' => 'clearance', 'short' => 'Desk Clearance Checker',
-        'title' => 'Will an Under Desk Elliptical Fit Under My Desk? Clearance Checker',
+        'title' => 'Will an Under Desk Elliptical Fit My Desk? Clearance Checker',
         'h1' => 'Under Desk Elliptical Desk Clearance Checker',
         'description' => 'Check whether your knees will hit the desk before you buy. Enter your desk height and knee height to see which under desk elliptical fits.',
         'intro' => 'The number one return reason for under desk ellipticals is knees hitting the desk. Two measurements and ten seconds will tell you whether a machine will fit.',
     ],
     'desk-pedal-timer' => [
         'id' => 'timer', 'short' => 'Desk Pedal Timer',
-        'title' => 'Desk Pedal Timer: Interval Timer for Under Desk Elliptical Workouts',
+        'title' => 'Desk Pedal Timer: Under Desk Elliptical Interval Timer',
         'h1' => 'Under Desk Elliptical Interval Timer',
         'description' => 'A free interval timer for under desk elliptical sessions. Set pedal and rest blocks, get a gentle chime, and track minutes and calories as you work.',
         'intro' => 'Pedal in short blocks through your workday without watching the clock. Set your intervals, start the timer and get back to work. A soft chime tells you when to switch.',

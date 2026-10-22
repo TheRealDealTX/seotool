@@ -70,7 +70,7 @@ HTML,
 <p>This is a common comparison because both sit at the lower end of the Cubii range. The [[amazon:cubii-move|Cubii Move]] is designed around portability: it is lighter and meant to be picked up with one hand. The JR1 is the original compact design and stays more planted under a desk.</p>
 <p>If your machine will live under one desk, the JR1 is the more stable choice. If you want to use it at your desk during the day and in front of the TV at night, the Move is easier to live with. Either way, a mat helps both stay put on hard floors. Our full <a href="/cubii-move-review/">Cubii Move review</a> includes a Move vs GO vs JR2 breakdown.</p>
 
-<h2>Common Cubii JR1 Complaints (and Fixes)</h2>
+<h2>Common JR1 Complaints (and Fixes)</h2>
 <p>Owner reviews of the JR1 are broadly positive, but a few complaints come up often enough to plan for. Most are shared with every small seated elliptical rather than specific to this model.</p>
 <ul>
 <li><strong>It creeps forward.</strong> Each push nudges the base away from you on smooth floors. A grippy mat, or bracing the machine against a desk leg, solves it.</li>
@@ -80,7 +80,7 @@ HTML,
 </ul>
 <p>If these sound like deal-breakers, read the full list of <a href="/under-desk-elliptical-reviews/">under desk elliptical reviews</a> to see how other brands handle them.</p>
 
-<h2>Where the Cubii JR1 Works Best</h2>
+<h2>Where the JR1 Works Best</h2>
 <p>Because it is compact and cordless, the JR1 fits in more places than you might expect. At a home office desk it handles the main job. In front of a sofa, it turns TV time into light movement. Some people keep one under a dining table for evening reading or video calls with family.</p>
 <p>It is less suited to tall bar-height counters, where your feet may not reach comfortably, and to deep-pile rugs, where the base can rock. A firm, flat surface with a mat gives the smoothest ride.</p>
 
@@ -89,7 +89,7 @@ HTML,
 [[product:cubii-jr2|2]]
 [[product:cubii-move|3]]
 
-<h2>What to Expect From the Cubii JR1 Day to Day</h2>
+<h2>What to Expect Day to Day</h2>
 <p>The JR1 works best as background movement. Most owners pedal at a low setting while working and nudge the resistance up for calls or reading. Short, frequent blocks are easier to keep up than one long session, and they break up long stretches of sitting.</p>
 <p>In calorie terms, light seated pedaling is roughly 2.0 METs in the Compendium of Physical Activities, compared with about 1.3 for sitting. That means a modest extra burn per hour, which adds up if you pedal through a good part of your day. Here is a quick estimate for your own weight and minutes:</p>
 [[tool:calories]]
@@ -110,7 +110,7 @@ HTML,
 <p>Buying new gives you a return window and a warranty, which is worth a lot on a machine you will use daily. If the price gap between a used JR1 and a new one is small, buy new.</p>
 
 <h2>Verdict: Is the Cubii JR1 Still Worth It?</h2>
-<p>Yes, for the right buyer. The Cubii JR1 is a quiet, simple, proven seated elliptical that costs less than newer Cubii models. If you want light daily movement and do not care about the latest design or an app, it is an easy recommendation.</p>
+<p>Yes, for the right buyer. The JR1 is a quiet, simple, proven seated elliptical that costs less than newer Cubii models. If you want light daily movement and do not care about the latest design or an app, it is an easy recommendation.</p>
 <p>If the price difference is small, or you want the most refined ride, choose the [[amazon:cubii-jr2|Cubii JR2]]. To see whether a Cubii is worth using every day at all, read our <a href="/cubii-under-desk-elliptical-is-it-really-worth-using-every-day/">daily Cubii use guide</a>, or let the <a href="/tools/which-under-desk-elliptical-quiz/">60-second quiz</a> pick for you.</p>
 [[button:cubii-jr1|Check the Cubii JR1 on Amazon]]
 HTML,

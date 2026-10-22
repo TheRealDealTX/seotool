@@ -1,6 +1,6 @@
 <?php
 $crumbs = [['Home', '/'], ['Sitemap', '/sitemap/']];
-page_start(['title' => 'Sitemap | ' . SITE_NAME, 'description' => 'Every page on ' . SITE_NAME . ': reviews, guides, comparisons and free tools.', 'schema' => [schema_breadcrumbs($crumbs)]]);
+page_start(['title' => 'Sitemap | ' . SITE_NAME, 'description' => 'Every page on ' . SITE_NAME . ' in one place: under desk elliptical reviews, buying guides, comparisons, health questions and free interactive tools.', 'schema' => [schema_breadcrumbs($crumbs)]]);
 ?>
 <section class="page-hero"><div class="wrap"><?= breadcrumbs_html($crumbs) ?><h1>Sitemap</h1></div></section>
 <div class="wrap sitemap-cols">

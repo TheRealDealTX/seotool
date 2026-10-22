@@ -13,12 +13,12 @@ if ($archive['type'] === 'blog') {
     $isTag = $archive['type'] === 'tag';
     [$name, $intro] = $isTag ? TAGS[$slug] : CATEGORIES[$slug];
     $posts = array_filter($posts, fn($p) => $isTag ? in_array($slug, $p['tags']) : ($p['category'] === $slug || in_array($slug, $p['also'] ?? [])));
-    $h1 = $name . ($isTag ? '' : ': Under Desk Elliptical ' . ($slug === 'reviews' ? 'Reviews' : 'Guides'));
+    $h1 = $isTag ? $name . ': Under Desk Elliptical Picks' : $name . ': Under Desk Elliptical Guides';
     if ($slug === 'reviews') { $h1 = 'Under Desk Elliptical Reviews'; }
     if ($slug === 'top-picks') { $h1 = 'Top Under Desk Elliptical Picks'; }
     if ($slug === 'compare') { $h1 = 'Under Desk Elliptical Comparisons'; }
     $path = ($isTag ? '/tag/' : '/topic/') . $slug . '/';
-    $title = $h1 . ' | ' . SITE_NAME;
+    $title = strlen($h1 . ' | ' . SITE_NAME) <= 60 ? $h1 . ' | ' . SITE_NAME : $h1 . ' (' . date('Y', strtotime(SITE_UPDATED)) . ')';
     $crumbs = [['Home', '/'], ['Blog', '/blog/'], [$name, $path]];
 }
 $items = [];
@@ -27,7 +27,7 @@ foreach ($posts as $p) {
     $items[] = ['@type' => 'ListItem', 'position' => ++$i, 'url' => SITE_URL . $p['url'], 'name' => $p['h1']];
 }
 page_start([
-    'title' => $title, 'description' => $intro, 'path' => $path,
+    'title' => $title, 'description' => mb_strimwidth($intro . ' Browse ' . count($posts) . ' ' . strtolower($name) . ' articles, reviews and buying guides from ' . SITE_NAME . '.', 0, 158, '…'), 'path' => $path,
     'schema' => [schema_breadcrumbs($crumbs), ['@type' => 'CollectionPage', 'name' => $h1, 'url' => SITE_URL . $path,
         'mainEntity' => ['@type' => 'ItemList', 'itemListElement' => $items]]],
     // Thin tag archives stay out of the index; categories and the blog are indexable hubs.
