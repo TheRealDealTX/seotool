@@ -4,7 +4,7 @@
 // "best compact elliptical for seniors". Angle: small desks, apartments and tight footwells.
 return [
     'title' => 'Compact Under Desk Elliptical (2026): 6 Small-Desk Picks',
-    'description' => 'The best compact under desk elliptical for small desks, apartments and tight footwells: 6 space-saving picks, how to measure your space and a clearance checker.',
+    'description' => 'The best compact under desk elliptical for small desks, apartments and tight footwells: 6 space-saving picks, how to measure your footwell and a clearance checker.',
     'h1' => 'Compact Under Desk Elliptical: Space-Saving Picks for Small Desks',
     'keyword' => 'compact under desk elliptical',
     'category' => 'top-picks',
@@ -40,6 +40,15 @@ HTML,
 <li><strong>Best compact and lightweight:</strong> [[amazon:cubii-move]]</li>
 <li><strong>Best compact for standing:</strong> [[amazon:stamina-inmotion-e1000|Stamina InMotion E1000 compact strider]]</li>
 </ol>
+
+<h2>Compact, Mini and Portable: What the Labels Mean</h2>
+<p>Listings use these words loosely, so it helps to know what you are actually shopping for.</p>
+<ul>
+<li><strong>Compact</strong> usually means a full seated elliptical with a smaller footprint and lower profile than average. You keep a proper stride and resistance range.</li>
+<li><strong>Mini</strong> often means a smaller, simpler machine with a shorter stride and lighter resistance. Fine for gentle movement, less so for a workout. See our <a href="/mini-elliptical-under-desk/">mini elliptical under desk</a> guide.</li>
+<li><strong>Portable</strong> is about weight and handling: a carry handle and a body light enough to move daily.</li>
+</ul>
+<p>The best compact under desk elliptical for you balances all three. If it will stay under your desk, prioritize a low profile and a stable base. If it will move every day, weight matters more than size.</p>
 
 <h2>Will It Fit? Measure Before You Buy a Compact Under Desk Elliptical</h2>
 <p>Small spaces cause two different fit problems, and a "compact" label only solves one of them.</p>
@@ -88,6 +97,18 @@ HTML,
 </tbody></table></div>
 <p>A compact home elliptical with handles gives a bigger workout but takes a corner of the room and cannot be used while you type. If you want to combine work and movement, the seated machine wins on space every time. Compare the trade-offs in <a href="/under-desk-elliptical-vs-walking-pad/">under desk elliptical vs walking pad</a>.</p>
 
+<h2>Small Desk Setups and What Works in Each</h2>
+<h3>Writing desk or narrow console desk</h3>
+<p>These are often shallow, so footprint is the limit. Choose the Cubii GO or another short-base model, and sit slightly further back than usual to give the pedals room.</p>
+<h3>Desk with a drawer pedestal</h3>
+<p>A drawer unit on one side narrows the footwell. Measure the gap between the pedestal and the other leg, and center the machine in front of your chair rather than the desk.</p>
+<h3>Desk with a center drawer or keyboard tray</h3>
+<p>This is a clearance problem, not a footprint one. Pick a low-profile model such as the JR2, lower your chair, or remove the tray. Run the clearance checker above with the drawer height, not the desktop height.</p>
+<h3>Dining table as a desk</h3>
+<p>Tables are often higher than desks, which helps clearance, but the machine has to be put away at mealtimes. A lighter model like the Cubii Move or GO makes that a ten-second job.</p>
+<h3>Corner or L-shaped desk</h3>
+<p>Sit at the long side where your legs have the most room. In the corner itself, the angled footwell rarely gives a straight line for the pedals.</p>
+
 <h2>What to Look For in a Compact Elliptical for Small Spaces</h2>
 <h3>Low pedal height</h3>
 <p>Small desks are often lower or have drawers. A low pedal path keeps your knees down. This matters more than overall size.</p>
@@ -108,6 +129,16 @@ HTML,
 <li><strong>Remove the keyboard tray if knees hit it.</strong> A tray steals the clearance you need.</li>
 <li><strong>Use short sessions.</strong> Even in a cramped space, ten minutes every half hour adds up. The <a href="/tools/desk-pedal-timer/">desk pedal timer</a> can prompt you.</li>
 </ol>
+
+<h2>Storing a Compact Elliptical Between Sessions</h2>
+<p>If your machine cannot live under the desk, storage becomes part of the routine. Owners who store theirs well tend to keep using them.</p>
+<ul>
+<li><strong>Pick one spot</strong> close to the desk, such as beside a bookcase or under a bed, so getting it out takes seconds.</li>
+<li><strong>Lift with your legs</strong> and use the carry handle where there is one. Heavier models are easier to slide on their mat than to carry.</li>
+<li><strong>Keep the mat with it.</strong> Rolling the machine out onto its mat each time saves your floor.</li>
+<li><strong>Check the hardware occasionally,</strong> since moving a machine daily can loosen bolts faster.</li>
+</ul>
+<p>Honestly, though, a machine that stays under the desk gets used more. If you can spare the footwell, leave it there.</p>
 
 <h2>Who Should Buy a Compact Under Desk Elliptical</h2>
 <ul>
