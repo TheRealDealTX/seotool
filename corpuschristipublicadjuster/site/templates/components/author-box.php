@@ -1,4 +1,4 @@
-<aside class="author-box reveal" aria-label="About the author">
+<?php defined('CCPA_ROOT') || exit; ?><aside class="author-box reveal" aria-label="About the author">
   <img class="author-box-photo" src="/assets/img/joseph-dittman.webp" alt="Joseph Dittman, Texas public adjuster" width="112" height="112" loading="lazy">
   <div>
     <p class="author-box-label">About the author</p>

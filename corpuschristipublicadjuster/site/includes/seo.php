@@ -4,6 +4,7 @@
  */
 
 declare(strict_types=1);
+defined('CCPA_ROOT') || exit;
 
 function seo_title(array $page): string
 {

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'claim-calculator',
     'title'       => 'Insurance Claim Settlement Calculator',

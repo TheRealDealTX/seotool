@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Using NOAA Weather Records to Document Property Damage in Corpus Christi',
     'seo_title'   => 'NOAA Weather Records for Corpus Christi Damage Claims',

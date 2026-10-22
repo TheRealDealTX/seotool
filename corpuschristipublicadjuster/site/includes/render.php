@@ -4,6 +4,7 @@
  */
 
 declare(strict_types=1);
+defined('CCPA_ROOT') || exit;
 
 /** Render head + header, call $body, then footer. */
 function render_layout(array $page, callable $body): void

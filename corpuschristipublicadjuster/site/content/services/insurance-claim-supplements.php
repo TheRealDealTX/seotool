@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Insurance Claim Supplements in Corpus Christi, TX',
     'seo_title'   => 'Insurance Claim Supplements Corpus Christi | Public Adjuster',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'          => 'author',
     'person_schema'     => true,

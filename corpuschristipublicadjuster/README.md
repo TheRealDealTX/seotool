@@ -60,3 +60,28 @@ sh tools/package.sh                            # build dist/corpuschristipublica
 
 Content rules for writers are in `tools/CONTENT_SPEC.md`; verified facts in `tools/notes/local-facts.md`
 and `tools/notes/storm-facts.md`.
+
+## Deployment (live since 2026-10-22)
+
+* **Live site:** Hostinger **Agency** plan, plain php-fpm website UID **`j0WNY4Y29`** (PHP 8.3), document root
+  `/home/u914589053/websites/j0WNY4Y29/public_html`, domain `corpuschristipublicadjuster.com` (Let's Encrypt SSL).
+  Deployed with `bash tools/deploy.sh` (File Browser TUS API; credentials from
+  `agency-hosting_files_generate-upload-url`), then `agency-hosting_cache_clear-website`.
+* **The H5G platform ignores `.htaccess`** and the File Browser can only write inside `public_html`, so:
+  * `index.php` enforces `https://` + apex (301 from `http://` and `www.`) and all legacy redirects;
+  * every private PHP file (`includes/`, `templates/`, `content/`) starts with `defined('CCPA_ROOT') || exit;`
+    so a direct request returns an empty page; `cron/` scripts refuse non-CLI requests;
+  * logs (`data/logs/*.log.php`) and the form-signing secret (`data/secret.php`) are PHP files whose first line
+    returns 404 and exits, so they are never readable over HTTP.
+* **Email:** forms go to info@corpuschristipublicadjuster.com. `public_html/includes/config.local.php` on the
+  server (not in git) currently sets `allow_mail_fallback => true`, so mail is sent with the server's PHP
+  `mail()`. To send through the Hostinger mailbox instead (better deliverability), add
+  `'smtp_pass' => '<mailbox password>'` to that file. Verified with a live test submission on 2026-10-22.
+* **Cron (website cron jobs):** `*/15 * * * *` refresh-weather.php · `7 * * * *` update-weather-events.php ·
+  `23 8 * * *` maintenance.php · `41 9 * * 1` update-storm-history.php
+  (each `/usr/bin/php /home/u914589053/websites/j0WNY4Y29/public_html/cron/<script>`).
+* **Old WordPress site:** Agency website UID `cSSyXpzsS` was **not deleted** — the domain was only unlinked
+  from it, so its files and database are intact. Rollback: unlink the domain from `j0WNY4Y29` and link it back
+  to `cSSyXpzsS` (`agency-hosting_domains_unlink-from-website` / `agency-hosting_domains_link-to-website`).
+  Delete it in hPanel once you no longer need it.
+* **Testing a live host:** the CDN rate-limits fast crawls; use `CRAWL_DELAY=0.8 python3 tools/test/crawl.py https://corpuschristipublicadjuster.com`.

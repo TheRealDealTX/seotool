@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Denied Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Denied Insurance Claim Corpus Christi | Public Adjuster Help',

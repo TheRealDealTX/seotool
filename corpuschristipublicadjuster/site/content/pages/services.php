@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'services-hub',
     'title'       => 'Insurance Claim Services in Corpus Christi',

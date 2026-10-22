@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Wind vs. Storm Surge Damage Claims on the Texas Coast',
     'seo_title'   => 'Wind vs. Storm Surge Damage Claims on the Texas Coast',

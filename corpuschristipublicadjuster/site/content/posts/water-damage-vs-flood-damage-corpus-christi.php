@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Water Damage vs. Flood Damage in Corpus Christi: What’s Covered',
     'seo_title'   => 'Water Damage vs. Flood Damage in Corpus Christi Claims',

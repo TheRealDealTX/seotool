@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Flood Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Flood Damage Claims | NFIP & Private Flood',

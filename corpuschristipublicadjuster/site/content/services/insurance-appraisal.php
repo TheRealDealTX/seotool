@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Insurance Appraisal in Corpus Christi, TX',
     'seo_title'   => 'Insurance Appraisal Corpus Christi | Policy & TWIA Appraisal',

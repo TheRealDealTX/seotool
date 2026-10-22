@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** @var array $page */
 $title = seo_title($page);
 $desc = $page['description'] ?? '';

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'page',
     'title'       => 'Public Adjuster FAQ for Corpus Christi Property Owners',

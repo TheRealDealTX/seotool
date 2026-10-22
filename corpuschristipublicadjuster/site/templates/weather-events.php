@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Automatically updated weather events (NWS Local Storm Reports). */
 require_once CCPA_ROOT . '/includes/storms.php';
 $data = weather_events_data();

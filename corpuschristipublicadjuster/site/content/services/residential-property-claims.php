@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Residential Property Insurance Claims in Corpus Christi',
     'seo_title'   => 'Residential Property Claims Corpus Christi | Homeowner Help',

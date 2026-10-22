@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'      => 'weather',
     'title'         => 'Live Corpus Christi Weather, Radar & Tides',

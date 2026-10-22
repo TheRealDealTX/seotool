@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 $context = $context ?? '';
 $compact = !empty($compact);
 $fid = 'cf' . substr(md5(($context ?: 'form') . mt_rand()), 0, 6);

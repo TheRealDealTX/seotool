@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'What to Do If Your Hail Claim Was Denied in Texas',
     'seo_title'   => 'Hail Claim Denied in Texas? Next Steps for Corpus Christi',

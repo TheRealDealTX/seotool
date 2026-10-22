@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Named-Storm and Hurricane Deductibles in Texas, Explained',
     'seo_title'   => 'Named-Storm & Hurricane Deductibles in Texas, Explained',

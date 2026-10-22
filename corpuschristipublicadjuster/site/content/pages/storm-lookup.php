@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'storm-lookup',
     'title'       => 'Storm Event Lookup for Coastal Bend Properties',

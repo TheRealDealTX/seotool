@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Portland, TX',
     'seo_title'   => 'Portland, TX Public Adjuster | Hail, Wind & TWIA Claims',

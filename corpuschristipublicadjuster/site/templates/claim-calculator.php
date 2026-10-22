@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Insurance Claim Settlement Calculator. */
 $toc = [];
 $body = prepared_body($page, $toc);

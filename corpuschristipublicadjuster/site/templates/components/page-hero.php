@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 $isPost = ($page['_type'] ?? '') === 'post';
 $heroImg = $page['hero_image'] ?? $page['image'] ?? '/wp-content/uploads/2026/02/League-City-Public-Adjuster-BG.webp';
 ?>

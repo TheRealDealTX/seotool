@@ -1,4 +1,4 @@
-<?php /** @var array $page */ ?>
+<?php defined('CCPA_ROOT') || exit; /** @var array $page */ ?>
 </main>
 <footer class="site-footer">
   <div class="footer-cta">

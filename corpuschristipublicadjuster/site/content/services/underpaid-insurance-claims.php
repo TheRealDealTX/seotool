@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Underpaid Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Underpaid Insurance Claim Corpus Christi | Public Adjuster',

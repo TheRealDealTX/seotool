@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Hail Damage Claim Supplements: What Carriers Miss in Their Scope',
     'seo_title'   => 'Hail Damage Claim Supplements: What Carriers Miss in Scope',

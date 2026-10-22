@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /**
  * Permanent (301) redirects for legacy WordPress URLs.
  * Every original page and post keeps its exact URL, so these only cover

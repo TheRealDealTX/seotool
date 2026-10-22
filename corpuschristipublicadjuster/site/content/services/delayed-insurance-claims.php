@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Delayed Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Delayed Insurance Claim Corpus Christi | Texas Deadlines',

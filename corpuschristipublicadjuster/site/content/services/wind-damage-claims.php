@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Wind Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Wind Damage Claims | Public Adjuster Help',

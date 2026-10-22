@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Ingleside, TX',
     'seo_title'   => 'Ingleside, TX Public Adjuster | Wind, Hail & Hurricane Claims',

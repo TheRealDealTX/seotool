@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'How to Review an Underpaid Roof Insurance Estimate',
     'seo_title'   => 'How to Review an Underpaid Roof Insurance Estimate',

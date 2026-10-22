@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Insurance Estimate Review in Corpus Christi, TX',
     'seo_title'   => 'Insurance Estimate Review Corpus Christi | Line-by-Line Check',

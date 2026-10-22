@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'How to Document Hail Damage for an Insurance Claim in Corpus Christi',
     'seo_title'   => 'Document Hail Damage for an Insurance Claim | Corpus Christi',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** 7-day forecast cards. Vars: $fc (cached_fetch result or null), $mini (bool) */
 $days = !empty($fc['data']) ? forecast_days($fc['data']) : [];
 ?>

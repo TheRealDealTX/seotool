@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 component('page-hero', ['page' => $page]);
 $groups = ['Pages' => all_content('pages'), 'Claim Services' => all_content('services'), 'Articles' => all_content('posts')];
 ?>

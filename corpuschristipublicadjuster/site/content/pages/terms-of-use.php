@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Terms of Use',
     'seo_title'   => 'Terms of Use | Corpus Christi Public Adjuster Website',

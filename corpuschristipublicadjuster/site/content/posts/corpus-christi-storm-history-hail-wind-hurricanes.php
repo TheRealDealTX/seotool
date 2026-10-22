@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Storm History: Hail, Wind, Tornadoes, and Hurricanes',
     'seo_title'   => 'Corpus Christi Storm History: Hail, Wind & Hurricanes',

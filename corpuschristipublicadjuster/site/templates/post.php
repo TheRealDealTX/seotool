@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Blog article. */
 $toc = [];
 $body = prepared_body($page, $toc);

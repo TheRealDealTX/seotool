@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Commercial Property Insurance Claims in Corpus Christi',
     'seo_title'   => 'Commercial Property Claims Corpus Christi | Public Adjuster',

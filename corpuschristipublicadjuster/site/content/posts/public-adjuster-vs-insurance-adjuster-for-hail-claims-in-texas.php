@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster vs. Insurance Adjuster for Hail Claims in Texas',
     'seo_title'   => 'Public Adjuster vs. Insurance Adjuster for Texas Hail Claims',

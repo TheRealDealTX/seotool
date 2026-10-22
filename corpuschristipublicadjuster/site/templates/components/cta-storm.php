@@ -1,4 +1,4 @@
-<aside class="cta-band cta-band-storm reveal" aria-label="Storm damage claim review">
+<?php defined('CCPA_ROOT') || exit; ?><aside class="cta-band cta-band-storm reveal" aria-label="Storm damage claim review">
   <div class="cta-band-icon"><?= icon('storm', 'icon icon-lg') ?></div>
   <div class="cta-band-text">
     <p class="cta-band-title">Did a Recent Storm Damage Your Property?</p>

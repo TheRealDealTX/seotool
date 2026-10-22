@@ -1,4 +1,4 @@
-<?php /** @var array $post */ ?>
+<?php defined('CCPA_ROOT') || exit; /** @var array $post */ ?>
 <article class="post-card reveal">
   <a class="post-card-media" href="<?= e($post['path']) ?>" tabindex="-1" aria-hidden="true">
     <?= img($post['image'] ?? '/wp-content/uploads/2026/02/Corpus-Christi-Public-Adjuster-Site-Image.webp', '', ['sizes' => '(max-width: 700px) 100vw, 400px']) ?>

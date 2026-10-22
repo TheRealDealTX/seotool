@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Hurricane Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Hurricane Damage Claims | Public Adjuster',

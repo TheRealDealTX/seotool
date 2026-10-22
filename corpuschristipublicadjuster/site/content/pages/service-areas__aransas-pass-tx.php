@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Aransas Pass, TX',
     'seo_title'   => 'Aransas Pass, TX Public Adjuster | Storm & TWIA Claim Help',

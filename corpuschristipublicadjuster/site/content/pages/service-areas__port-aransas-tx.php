@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Port Aransas, TX',
     'seo_title'   => 'Port Aransas Public Adjuster | Hurricane, Wind & Flood Claims',

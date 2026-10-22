@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Fire Insurance Adjuster: What They Do and How They Help in Corpus Christi',
     'seo_title'   => 'Fire Insurance Adjuster in Corpus Christi: Roles & Claim Steps',

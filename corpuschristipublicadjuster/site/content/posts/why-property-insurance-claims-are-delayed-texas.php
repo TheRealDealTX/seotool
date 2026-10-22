@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Why Property Insurance Claims Are Delayed in Texas (and What to Do)',
     'seo_title'   => 'Why Property Insurance Claims Are Delayed in Texas',

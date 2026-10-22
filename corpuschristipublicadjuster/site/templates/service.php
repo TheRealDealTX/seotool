@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Insurance claim service page. */
 $toc = [];
 $body = prepared_body($page, $toc);

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Blog index with search, category filter, and pagination (?pg=2, ?q=, ?cat=). */
 $all = all_content('posts');
 $q = trim((string) ($_GET['q'] ?? ''));

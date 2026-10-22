@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'home',
     'title'       => 'Corpus Christi Public Adjuster',

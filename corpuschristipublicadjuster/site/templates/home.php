@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /**
  * Homepage. The main keyword "Corpus Christi Public Adjuster" appears naturally
  * throughout the visible copy (hero, section headings, body text, FAQs, final CTA).

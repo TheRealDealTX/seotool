@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'The TWIA Claim Process in Corpus Christi, Step by Step',
     'seo_title'   => 'TWIA Claim Process in Corpus Christi: Steps & Deadlines',

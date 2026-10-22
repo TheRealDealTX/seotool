@@ -1,4 +1,4 @@
-<?php $crumbs = breadcrumbs_for($page); if ($crumbs): ?>
+<?php defined('CCPA_ROOT') || exit; $crumbs = breadcrumbs_for($page); if ($crumbs): ?>
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
     <?php foreach ($crumbs as $i => [$name, $path]): $last = $i === count($crumbs) - 1; ?>

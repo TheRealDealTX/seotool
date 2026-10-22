@@ -4,6 +4,7 @@
  */
 
 declare(strict_types=1);
+defined('CCPA_ROOT') || exit;
 
 require_once __DIR__ . '/functions.php';
 
@@ -14,13 +15,15 @@ function app_secret(): string
     if ($secret !== null) {
         return $secret;
     }
-    $file = data_path('.secret');
+    // Stored as a .php file that exits immediately, so it stays private even on hosts
+    // that ignore .htaccess (Hostinger H5G serves the data/ folder directly).
+    $file = data_path('secret.php');
     if (is_file($file)) {
-        $secret = trim((string) file_get_contents($file));
+        $secret = trim(str_replace(PRIVATE_FILE_HEADER, '', (string) file_get_contents($file)));
     }
     if (!$secret) {
         $secret = bin2hex(random_bytes(32));
-        @file_put_contents($file, $secret, LOCK_EX);
+        @file_put_contents($file, PRIVATE_FILE_HEADER . $secret, LOCK_EX);
         @chmod($file, 0600);
     }
     return $secret;

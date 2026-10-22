@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'contact',
     'title'       => 'Request a Free Claim Review',

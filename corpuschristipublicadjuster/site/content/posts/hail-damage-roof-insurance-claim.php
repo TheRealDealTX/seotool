@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Hail Damage Roof Insurance Claim: A Corpus Christi Homeowner’s Guide',
     'seo_title'   => 'Hail Damage Roof Insurance Claim Guide | Corpus Christi, TX',

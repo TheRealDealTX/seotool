@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Smoke Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Smoke Damage Claims Corpus Christi | Public Adjuster Help',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'weather-events',
     'title'       => 'Recent Weather Events in Corpus Christi & the Coastal Bend',

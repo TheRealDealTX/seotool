@@ -4,6 +4,7 @@
  */
 
 declare(strict_types=1);
+defined('CCPA_ROOT') || exit;
 
 require_once __DIR__ . '/config.php';
 
@@ -83,16 +84,23 @@ function write_json_file(string $file, $data): bool
     return @rename($tmp, $file);
 }
 
+/** First line of private data files: makes them unreadable over HTTP if requested directly. */
+const PRIVATE_FILE_HEADER = "<?php http_response_code(404); exit; ?>\n";
+
+/** Logs are data/logs/<channel>.log.php (private even where .htaccess is ignored). */
 function log_line(string $channel, string $message): void
 {
-    $file = data_path('logs/' . preg_replace('/[^a-z0-9_-]/i', '', $channel) . '.log');
+    $file = data_path('logs/' . preg_replace('/[^a-z0-9_-]/i', '', $channel) . '.log.php');
     $dir = dirname($file);
     if (!is_dir($dir)) {
         @mkdir($dir, 0755, true);
     }
     // Keep logs small: rotate at ~512 KB.
     if (is_file($file) && filesize($file) > 512 * 1024) {
-        @rename($file, $file . '.1');
+        @rename($file, substr($file, 0, -4) . '.1.php');
+    }
+    if (!is_file($file)) {
+        @file_put_contents($file, PRIVATE_FILE_HEADER, LOCK_EX);
     }
     @file_put_contents($file, '[' . date('Y-m-d H:i:s T') . '] ' . $message . "\n", FILE_APPEND | LOCK_EX);
 }

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Areas We Serve on the Coastal Bend',
     'seo_title'   => 'Areas We Serve | Coastal Bend Public Adjuster Service Areas',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'claim-checklist',
     'title'       => 'Property Insurance Claim Documentation Checklist',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'deadline-calculator',
     'title'       => 'Texas Claim Deadline Calculator',

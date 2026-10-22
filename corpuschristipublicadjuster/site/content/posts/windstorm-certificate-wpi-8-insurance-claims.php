@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Windstorm Certificates (WPI-8) and Insurance Claim Repairs',
     'seo_title'   => 'Windstorm Certificate WPI-8 and Insurance Claim Repairs',

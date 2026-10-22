@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Contact + Free Claim Review pages: copy beside the form. */
 $toc = [];
 $body = prepared_body($page, $toc);

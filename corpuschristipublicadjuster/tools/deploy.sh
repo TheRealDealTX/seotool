@@ -1,9 +1,10 @@
 #!/bin/bash
 # Deploy site/ to the Hostinger Agency website (plain php-fpm, H5G platform).
 #
-# The H5G platform ignores .htaccess, so private code and data are uploaded to
-# <site root>/ccpa-app/ (outside the web root) and only public files go to
-# public_html/. The PHP entry points find ccpa-app/ automatically.
+# The H5G platform ignores .htaccess and the File Browser can only write inside
+# public_html/, so the whole site goes there. Private PHP files exit unless loaded
+# by the app (defined('CCPA_ROOT') guard), and logs/secret are .php files whose
+# first line exits, so nothing private is readable over HTTP.
 #
 # Credentials come from the Hostinger API call `agency-hosting_files_generate-upload-url`
 # (website_uid j0WNY4Y29; they expire after a few hours):
@@ -15,12 +16,7 @@ set -u
 : "${FB_URL:?set FB_URL}" "${FB_AUTH:?set FB_AUTH}" "${FB_REST:?set FB_REST}"
 cd "$(dirname "$0")/../site" || exit 1
 
-dest() {
-  case "$1" in
-    includes/*|templates/*|content/*|data/*|cron/*) echo "ccpa-app/$1" ;;
-    *) echo "public_html/$1" ;;
-  esac
-}
+dest() { echo "public_html/$1"; }
 up() {
   local f=$1 d size c p
   d=$(dest "$f"); size=$(stat -c%s "$f")
@@ -34,7 +30,7 @@ up() {
 
 if [ $# -gt 0 ]; then files=$(printf '%s\n' "$@"); else
   # Skip local-only files: secrets, caches, logs, rate-limit state.
-  files=$(find . -type f ! -name '*.tmp' ! -name '*.lock' ! -path './includes/config.local.php' \
+  files=$(find . -type f ! -name '*.tmp' ! -name '*.lock' ! -path './includes/config.local.php' ! -path './data/secret.php' ! -name '.secret' \
             ! \( -path './data/cache/*' ! -name .htaccess \) ! \( -path './data/logs/*' ! -name .htaccess \) \
             ! \( -path './data/ratelimit/*' ! -name .htaccess \) | sed 's#^\./##' | sort)
 fi

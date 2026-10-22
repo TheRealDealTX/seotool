@@ -1,4 +1,4 @@
-<?php /** Sidebar shared by pages, posts, and services. Uses $page and $toc. */ ?>
+<?php defined('CCPA_ROOT') || exit; /** Sidebar shared by pages, posts, and services. Uses $page and $toc. */ ?>
 <div class="sidebar-sticky">
   <?php if (!empty($toc) && count($toc) >= 3): ?>
   <nav class="toc" aria-label="On this page">

@@ -13,6 +13,15 @@ define('CCPA_ROOT', is_file(__DIR__ . '/includes/bootstrap.php') ? __DIR__ : dir
 require CCPA_ROOT . '/includes/bootstrap.php';
 
 $uri = $_SERVER['REQUEST_URI'] ?? '/';
+
+// Canonical scheme + host. Hostinger's H5G platform ignores .htaccess and ends TLS
+// upstream (REQUEST_SCHEME is always http), so enforce https://<apex> here.
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? ''));
+$apex = (string) parse_url(cfg('site_url'), PHP_URL_HOST);
+if ($host === 'www.' . $apex || ($host === $apex && ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http')) {
+    header('Location: ' . rtrim(cfg('site_url'), '/') . $uri, true, 301);
+    exit;
+}
 $path = rawurldecode((string) parse_url($uri, PHP_URL_PATH));
 $path = '/' . ltrim(preg_replace('#/+#', '/', $path), '/');
 $query = (string) parse_url($uri, PHP_URL_QUERY);

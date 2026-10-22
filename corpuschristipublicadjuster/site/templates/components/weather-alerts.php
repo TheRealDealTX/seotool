@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Active NWS alerts. Vars: $al (cached_fetch result or null) */
 $list = $al['data'] ?? null;
 ?>

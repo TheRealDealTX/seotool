@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Hurricane Damage Claims: A Homeowner’s Guide',
     'seo_title'   => 'Corpus Christi Hurricane Damage Claims: Homeowner Guide',

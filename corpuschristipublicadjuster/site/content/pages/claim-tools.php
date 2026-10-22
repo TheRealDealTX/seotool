@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Free Insurance Claim Tools',
     'seo_title'   => 'Free Insurance Claim Tools for Corpus Christi Property Owners',

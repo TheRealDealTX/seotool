@@ -126,8 +126,9 @@ daily at 3 AM, and updates NOAA storm history Mondays at 4 AM (Central time).
 | `40 4 * * 1` | `cron/update-storm-history.php` |
 
 Hostinger's panel may show the command field as just the script path after selecting "PHP" —
-use the full path in that case. Logs are written to `data/logs/` (cron.log, events.log,
-history.log, mail.log, http.log, php-errors.log) and can be viewed in File Manager.
+use the full path in that case. Logs are written to `data/logs/` (cron.log.php, events.log.php,
+history.log.php, mail.log.php, http.log.php, php-errors.log.php — the `.php` extension and first line keep
+them private on hosts that ignore `.htaccess`) and can be viewed in File Manager.
 
 Optional one-time commands (hPanel → Advanced → **SSH Access**, or a temporary cron entry):
 
@@ -159,7 +160,7 @@ None. All content lives in PHP files under `content/`; storm data and caches are
 2. You should see: *"Thank you! Your Free Claim Review request has been received. Our team will contact you."*
 3. Confirm the email arrives at info@corpuschristipublicadjuster.com (check spam the first time; mark as "not spam").
    Reply-To is set to the visitor's email so you can reply directly.
-4. If it fails, read `data/logs/mail.log` for the SMTP error (wrong password, port blocked, etc.).
+4. If it fails, read `data/logs/mail.log.php` for the SMTP error (wrong password, port blocked, etc.).
 5. Limits: 5 submissions per hour per visitor, 3 files × 8 MB (JPG, PNG, WEBP, HEIC, PDF).
 
 ## 10. Verify existing URLs (all must return 200)

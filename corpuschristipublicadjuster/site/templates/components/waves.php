@@ -1,4 +1,4 @@
-<?php /** Animated coastal waves at the bottom of a dark hero. $fill = color of the next section. */
+<?php defined('CCPA_ROOT') || exit; /** Animated coastal waves at the bottom of a dark hero. $fill = color of the next section. */
 $fill = $fill ?? '#ffffff'; ?>
 <div class="waves" aria-hidden="true">
   <svg class="w1" viewBox="0 0 2880 120" preserveAspectRatio="none"><path fill="<?= e($fill) ?>" d="M0 70c240 0 240-50 480-50s240 50 480 50 240-50 480-50 240 50 480 50 240-50 480-50 240 50 480 50v50H0Z"/></svg>

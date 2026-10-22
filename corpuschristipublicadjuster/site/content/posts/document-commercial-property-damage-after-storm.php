@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'How to Document Commercial Property Damage After a Storm',
     'seo_title'   => 'Document Commercial Storm Damage in Corpus Christi',

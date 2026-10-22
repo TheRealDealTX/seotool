@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster on North Padre Island, TX',
     'seo_title'   => 'Padre Island Public Adjuster | Hurricane, Wind & Flood Claims',

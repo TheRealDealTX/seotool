@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Hail Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Hail Damage Claims | Public Adjuster',

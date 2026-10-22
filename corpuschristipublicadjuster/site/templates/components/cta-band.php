@@ -1,4 +1,4 @@
-<?php $heading = $heading ?? null; ?>
+<?php defined('CCPA_ROOT') || exit; $heading = $heading ?? null; ?>
 <aside class="cta-band reveal" aria-label="Free Claim Review">
   <div class="cta-band-icon"><?= icon('clipboard', 'icon icon-lg') ?></div>
   <div class="cta-band-text">

@@ -5,6 +5,7 @@
  */
 
 declare(strict_types=1);
+defined('CCPA_ROOT') || exit;
 
 require_once __DIR__ . '/functions.php';
 require_once __DIR__ . '/weather.php';

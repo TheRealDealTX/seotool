@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Live Corpus Christi weather app: conditions, hourly, 7-day, radar, tides, tropics, alerts. */
 require_once CCPA_ROOT . '/includes/weather.php';
 $cur = weather_current();

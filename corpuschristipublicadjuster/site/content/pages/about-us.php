@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'About Corpus Christi Public Adjuster',
     'seo_title'   => 'About Corpus Christi Public Adjuster | Licensed in Texas',

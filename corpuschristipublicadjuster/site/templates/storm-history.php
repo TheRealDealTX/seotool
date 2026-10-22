@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Storm History — filterable NOAA NCEI record for the Coastal Bend (Nueces, San Patricio, Aransas, Kleberg). */
 require_once CCPA_ROOT . '/includes/storms.php';
 $h = storm_history();

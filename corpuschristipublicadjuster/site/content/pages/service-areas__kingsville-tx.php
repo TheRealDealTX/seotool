@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Kingsville, TX',
     'seo_title'   => 'Kingsville, TX Public Adjuster | Hail, Wind & Storm Claims',

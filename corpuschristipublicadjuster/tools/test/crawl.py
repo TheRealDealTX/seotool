@@ -16,6 +16,15 @@ import requests
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:8081'
 PROD = 'https://corpuschristipublicadjuster.com'
 s = requests.Session()
+# Live hosts behind a CDN may rate-limit a fast crawl: CRAWL_DELAY=0.6 python3 tools/test/crawl.py <url>
+import os, time
+_delay = float(os.environ.get('CRAWL_DELAY', '0'))
+_get = s.get
+def _polite_get(*a, **k):
+    if _delay:
+        time.sleep(_delay)
+    return _get(*a, **k)
+s.get = _polite_get
 problems = []
 def bad(url, msg): problems.append(f'{url}: {msg}')
 

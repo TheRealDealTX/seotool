@@ -1,4 +1,4 @@
-<?php $tools = [
+<?php defined('CCPA_ROOT') || exit; $tools = [
   ['/weather/', 'Live Weather, Radar & Tides', 'thermo', 'Current conditions, hourly and 7-day forecast, animated radar, Corpus Christi Bay tides, and the tropical outlook.'],
   ['/hurricane-deductible-calculator/', 'Hurricane Deductible Calculator', 'hurricane', 'See what a 1%, 2%, or 5% named-storm deductible means in dollars before the storm.'],
   ['/claim-calculator/', 'Claim Settlement Calculator', 'calc', 'Estimate RCV, ACV, recoverable depreciation, and out-of-pocket costs.'],

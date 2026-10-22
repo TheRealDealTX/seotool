@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Freeze Damage and Burst Pipe Insurance Claims in Corpus Christi',
     'seo_title'   => 'Freeze Damage & Burst Pipe Claims in Corpus Christi',

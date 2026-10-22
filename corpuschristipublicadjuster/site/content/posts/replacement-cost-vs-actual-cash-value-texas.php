@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Replacement Cost vs. Actual Cash Value in Texas Property Claims',
     'seo_title'   => 'Replacement Cost vs. Actual Cash Value in Texas Claims',

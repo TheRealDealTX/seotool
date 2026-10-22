@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'deductible-calculator',
     'title'       => 'Hurricane Deductible Calculator',

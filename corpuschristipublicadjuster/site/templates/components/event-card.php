@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** One storm report card. Vars: $ev */
 $fam = $ev['fam'];
 $sev = storm_severity($ev);

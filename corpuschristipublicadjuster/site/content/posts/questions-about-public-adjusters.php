@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Top Questions About Public Adjusters: What Corpus Christi Property Owners Need to Know',
     'seo_title'   => 'Questions About Public Adjusters | Corpus Christi, TX Guide',

@@ -8,7 +8,7 @@ STAGE=$(mktemp -d)
 mkdir -p "$OUT"
 cp -a "$ROOT/site/." "$STAGE/"
 # Never ship local secrets, logs, caches, or test files.
-rm -f "$STAGE/includes/config.local.php" "$STAGE/data/.secret"
+rm -f "$STAGE/includes/config.local.php" "$STAGE/data/.secret" "$STAGE/data/secret.php"
 find "$STAGE/data/cache" "$STAGE/data/logs" "$STAGE/data/ratelimit" -type f ! -name .htaccess -delete
 find "$STAGE" -name '*.tmp' -delete -o -name '*.lock' -delete
 rm -f "$OUT/corpuschristipublicadjuster-public_html.zip"

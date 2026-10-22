@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Building Codes & Insurance Repairs',
     'seo_title'   => 'Corpus Christi Building Codes & Insurance Repairs Guide',

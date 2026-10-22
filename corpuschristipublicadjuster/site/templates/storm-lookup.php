@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Storm Event Lookup — search reports near a city or ZIP code. */
 require_once CCPA_ROOT . '/includes/storms.php';
 $places = read_json_file(data_path('places.json'), ['places' => [], 'zips' => []]);

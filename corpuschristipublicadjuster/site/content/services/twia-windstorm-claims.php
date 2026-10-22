@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'TWIA Windstorm Claims in Corpus Christi, TX',
     'seo_title'   => 'TWIA Claim Help in Corpus Christi | Windstorm Claims',

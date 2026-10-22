@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Fire Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Fire Damage Claims | Public Adjuster Help',

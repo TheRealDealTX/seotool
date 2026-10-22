@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'template'    => 'storm-history',
     'title'       => 'Corpus Christi & Coastal Bend Storm History',

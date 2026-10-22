@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Property Insurance Claim Blog',
     'seo_title'   => 'Corpus Christi Insurance Claim Blog | Hurricane, TWIA & Hail',

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** @var array $page */
 $current = $page['path'] ?? '/';
 $bodyClass = 'type-' . ($page['_type'] ?? 'page') . ' tpl-' . ($page['template'] ?? 'default');

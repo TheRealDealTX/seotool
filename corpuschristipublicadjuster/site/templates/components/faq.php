@@ -1,4 +1,4 @@
-<?php $faqs = $faqs ?? []; $heading = $heading ?? 'Frequently Asked Questions'; if ($faqs): ?>
+<?php defined('CCPA_ROOT') || exit; $faqs = $faqs ?? []; $heading = $heading ?? 'Frequently Asked Questions'; if ($faqs): ?>
 <section class="faq-block" aria-labelledby="faq-heading-<?= e($id ?? 'main') ?>">
   <h2 id="faq-heading-<?= e($id ?? 'main') ?>"><?= e($heading) ?></h2>
   <div class="accordion">

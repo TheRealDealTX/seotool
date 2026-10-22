@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Roof Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Roof Damage Insurance Claims | Public Adjuster',

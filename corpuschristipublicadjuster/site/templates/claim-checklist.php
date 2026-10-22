@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Property Damage Documentation Checklist. */
 $toc = [];
 $body = prepared_body($page, $toc);

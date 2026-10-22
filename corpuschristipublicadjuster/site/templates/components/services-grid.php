@@ -1,4 +1,4 @@
-<?php $limit = $limit ?? 0; $cards = service_cards(); if ($limit) { $cards = array_slice($cards, 0, $limit); } ?>
+<?php defined('CCPA_ROOT') || exit; $limit = $limit ?? 0; $cards = service_cards(); if ($limit) { $cards = array_slice($cards, 0, $limit); } ?>
 <div class="card-grid card-grid-services">
   <?php foreach ($cards as $i => [$href, $label, $ic, $blurb]): ?>
   <a class="service-card reveal" style="--d:<?= ($i % 4) * 60 ?>ms" href="<?= e($href) ?>">

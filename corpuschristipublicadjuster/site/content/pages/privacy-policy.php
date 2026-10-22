@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Privacy Policy',
     'seo_title'   => 'Privacy Policy | Corpus Christi Public Adjuster Website',

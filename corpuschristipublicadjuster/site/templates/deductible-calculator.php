@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Hurricane / named-storm / wind-hail deductible calculator. */
 $toc = [];
 $body = prepared_body($page, $toc);

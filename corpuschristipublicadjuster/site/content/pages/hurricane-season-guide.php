@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Hurricane Season Guide for Property Owners',
     'seo_title'   => 'Corpus Christi Hurricane Season Guide | Insurance Checklist',

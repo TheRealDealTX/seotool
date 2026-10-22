@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Generic page: hero + article body + optional FAQs. */
 $toc = [];
 $body = prepared_body($page, $toc);

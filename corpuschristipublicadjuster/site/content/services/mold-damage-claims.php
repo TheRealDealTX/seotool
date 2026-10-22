@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Mold Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Mold Damage Claims | Public Adjuster Help',

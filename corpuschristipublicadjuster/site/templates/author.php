@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 $toc = [];
 $body = prepared_body($page, $toc);
 $posts = all_content('posts');

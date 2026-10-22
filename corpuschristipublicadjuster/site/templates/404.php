@@ -1,4 +1,4 @@
-<?php component('page-hero', ['page' => $page]); ?>
+<?php defined('CCPA_ROOT') || exit; component('page-hero', ['page' => $page]); ?>
 <section class="section">
   <div class="container narrow center">
     <p class="lead">Sorry&mdash;we couldn't find that page. It may have moved during our website update.</p>

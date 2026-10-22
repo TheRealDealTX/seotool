@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Rockport, TX',
     'seo_title'   => 'Rockport, TX Public Adjuster | Hurricane & TWIA Claim Help',

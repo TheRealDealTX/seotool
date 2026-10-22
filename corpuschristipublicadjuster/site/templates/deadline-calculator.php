@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Texas claim deadline calculator (Prompt Payment of Claims Act + TWIA timelines). */
 $toc = [];
 $body = prepared_body($page, $toc);

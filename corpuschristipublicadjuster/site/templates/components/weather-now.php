@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 /** Current conditions panel. Vars: $cur (cached_fetch result or null), $mini (bool) */
 $c = $cur['data'] ?? null;
 ?>

@@ -1,4 +1,5 @@
 <?php
+defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster in Robstown, TX',
     'seo_title'   => 'Robstown, TX Public Adjuster | Wind, Hail & Storm Claims',
