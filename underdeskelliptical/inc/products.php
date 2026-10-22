@@ -122,7 +122,7 @@ const PRODUCTS = [
     'putnen' => [
         'name' => 'Putnen Under Desk Elliptical', 'brand' => 'Putnen', 'asin' => 'B0DF2WS15J', 'type' => 'manual',
         'best_for' => 'Value pick with adjustable resistance',
-        'summary' => 'A compact manual seated elliptical with adjustable resistance and a small display, priced for first-time buyers.',
+        'summary' => 'A compact seated elliptical priced for first-time buyers. Putnen sells both manual and motorized versions, so confirm which one the listing is.',
         'pros' => ['Affordable', 'Adjustable resistance', 'Small footprint'], 'cons' => ['Less-known brand', 'Basic monitor'],
         'noise' => 'Quiet', 'seniors' => true, 'standing' => false,
         'image' => '/wp-content/uploads/2026/05/Putnen-Under-Desk-Elliptical-1.webp',
@@ -149,7 +149,7 @@ const PRODUCTS = [
     'lvpiman' => [
         'name' => 'LVPIMAN Under Desk Elliptical', 'brand' => 'LVPIMAN', 'asin' => 'B0G1YRFY1R', 'type' => 'manual',
         'best_for' => 'Everyday budget movement',
-        'summary' => 'A low-cost under desk elliptical for everyday movement at home or work.',
+        'summary' => 'A low-cost under desk elliptical for everyday movement at home or work. LVPIMAN listings include manual and motorized versions, so check the specs before you buy.',
         'pros' => ['Low price', 'Compact', 'Easy to use'], 'cons' => ['Newer brand with a short track record', 'Basic display'],
         'noise' => 'Quiet', 'seniors' => true, 'standing' => false,
         'image' => '/wp-content/uploads/2026/05/lvpiman-under-desk-elliptical-1.webp',
@@ -158,7 +158,7 @@ const PRODUCTS = [
     'geoneo' => [
         'name' => 'Geoneo Under Desk Elliptical', 'brand' => 'Geoneo', 'asin' => null, 'search' => 'Geoneo under desk elliptical', 'type' => 'manual',
         'best_for' => 'Popular manual pick for home offices',
-        'summary' => 'Geoneo sells compact manual under desk ellipticals with adjustable resistance and a small display, popular with home office workers.',
+        'summary' => 'Geoneo sells compact under desk ellipticals, mostly manual with adjustable resistance (some listings add an auto mode), popular with home office workers.',
         'pros' => ['Adjustable resistance', 'Compact', 'Good value'], 'cons' => ['Model lineup changes often', 'Basic display'],
         'noise' => 'Quiet', 'seniors' => true, 'standing' => false,
         'image' => '/wp-content/uploads/2026/05/Geoneo-Under-Desk-Elliptical-1.webp',
