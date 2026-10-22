@@ -75,6 +75,17 @@ HTML,
 <h2>Lightweight Picks Compared</h2>
 [[compare:cubii-move,cubii-go,sunny-sf-e3872,jisuo,fryline,cubii-jr2]]
 
+<h2>Lightweight vs Heavier Machines: Side by Side</h2>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>Lightweight</th><th>Heavier</th></tr></thead>
+<tbody>
+<tr><td>Carrying and storing</td><td>Easy, often one hand</td><td>A two-hand lift or a slide</td></tr>
+<tr><td>Sliding on hard floors</td><td>More likely, needs a mat</td><td>Less likely</td></tr>
+<tr><td>Stability at speed</td><td>Can rock if you pedal hard</td><td>Stays planted</td></tr>
+<tr><td>Resistance range</td><td>Usually lighter</td><td>Usually wider</td></tr>
+<tr><td>Best for</td><td>Daily storage, multiple rooms, seniors who lift it</td><td>A permanent spot under one desk</td></tr>
+</tbody></table></div>
+
 <h2>The Lightweight Under Desk Elliptical Tradeoff: Sliding</h2>
 <p>Physics is not on a light machine's side. Every forward stride pushes the pedals away from you, and a lighter base has less grip to resist that push. On carpet it barely matters. On hardwood, tile, laminate or vinyl, a light machine can creep forward a little with each stride until your legs are stretched out or it bumps the back of the desk.</p>
 <p>The good news is that the fix is cheap and reliable:</p>
@@ -97,6 +108,17 @@ HTML,
 <h3>Motorized models are rarely light</h3>
 <p>Motors and gearboxes add weight, so motorized under desk ellipticals are generally heavier than manual ones. If you need both powered motion and portability, check the listed weight carefully before you buy.</p>
 
+<h2>Using a Lightweight Elliptical Away From the Desk</h2>
+<p>Portability opens up more places to pedal, and owners who use their machine in several spots often say it is the reason they keep using it.</p>
+<h3>In front of the sofa or a recliner</h3>
+<p>Evening TV is one of the easiest times to add movement. Slide the machine in front of a firm sofa or recliner and check that your knees are only slightly bent at the far point of the stride. Soft, deep cushions let you sink back, so you may need to sit forward or add a firm cushion behind you.</p>
+<h3>At the office</h3>
+<p>A light machine can go back and forth between home and work. Check with your employer first, keep it on a mat to protect office floors, and choose a magnetic model so colleagues are not distracted.</p>
+<h3>Visiting family or travelling by car</h3>
+<p>The lightest models fit in a car trunk and set up in seconds, which helps you keep the habit going on longer stays.</p>
+<h3>Recovering at home</h3>
+<p>If you are on doctor-approved light activity, a portable machine can sit wherever you are resting. Always follow your care team's advice on what is safe.</p>
+
 <h2>What to Look For in a Lightweight Elliptical</h2>
 <ul>
 <li><strong>A carry handle</strong> that sits at the balance point, so the machine does not swing when you lift it.</li>
@@ -115,6 +137,10 @@ HTML,
 <li>Check the bolts every few weeks, since frequent moving can loosen hardware.</li>
 <li>Keep a spare mat in the second room you use, so you are never pedaling on a bare floor.</li>
 </ol>
+
+<h2>What Results to Expect From a Light Machine</h2>
+<p>A lighter machine does not change the basic math of seated pedaling. Using MET values from the Compendium of Physical Activities, light seated pedaling is around 2.0 METs compared with about 1.3 for sitting, which works out to roughly 100 to 200 calories an hour for most people at a light to moderate pace. Because lightweight models usually top out at lower resistance, you will tend toward the lower end of that range.</p>
+<p>The bigger benefit is consistency. A machine you can grab and set up in seconds is one you will use on busy days, and regular movement across the day matters more than any single session. Try the <a href="/tools/under-desk-elliptical-calorie-calculator/">calorie calculator</a> to see what your routine adds up to.</p>
 
 <h2>Find the Right Machine for You</h2>
 <p>Weight is one factor among several. The quiz weighs it alongside your desk height, noise needs, budget and mobility.</p>

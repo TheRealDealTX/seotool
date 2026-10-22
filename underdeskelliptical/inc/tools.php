@@ -124,17 +124,17 @@ function tool_clearance(): string
 <h3 class="tool-title">Desk Clearance Checker</h3>
 <form class="tool-form" onsubmit="return false">
   <div class="field"><label>Floor to underside of desk (inches)</label>
-    <input type="number" name="desk" value="27" min="15" max="50" step="0.5" inputmode="decimal">
+    <input type="number" name="desk" value="28.5" min="15" max="50" step="0.5" inputmode="decimal">
     <small>Measure to the lowest point: keyboard tray, drawer or frame bar.</small></div>
   <div class="field"><label>Floor to top of your knee, seated (inches)</label>
     <input type="number" name="knee" value="21" min="12" max="35" step="0.5" inputmode="decimal">
     <small>Sit in your normal chair with feet flat and measure to the top of your thigh at the knee.</small></div>
-  <div class="field"><label>Type of machine</label>
+  <div class="field"><label>Type of machine (how far it lifts your knees)</label>
     <select name="pedal">
-      <option value="8.5">Low-profile / mini (about 8–9 in pedal height)</option>
-      <option value="10" selected>Standard seated elliptical (about 10 in)</option>
-      <option value="12">Tall or motorized model (about 12 in)</option>
-      <option value="13">Under desk bike (about 13 in)</option>
+      <option value="5.5">Low-profile / mini (knees rise about 5–6 in)</option>
+      <option value="6.5" selected>Standard seated elliptical (about 6–7 in)</option>
+      <option value="8">Tall or motorized model (about 8 in)</option>
+      <option value="9">Under desk bike (about 9 in)</option>
     </select></div>
 </form>
 <div class="clear-out" aria-live="polite">
@@ -142,7 +142,7 @@ function tool_clearance(): string
   <p class="verdict" data-out="verdict"></p>
   <p data-out="advice"></p>
 </div>
-<p class="tool-note">Pedal heights are typical ranges. Check the "height" spec in the Amazon listing of the model you choose and re-run the check with that number.</p>
+<p class="tool-note">Knee rise is a typical range for each type. The surest test: lift one foot to the machine's listed height and check that your knee still clears the desk.</p>
 HTML;
 }
 
