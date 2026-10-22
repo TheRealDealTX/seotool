@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /dev/
+Disallow: /data/
+Disallow: /?s=
+Allow: /
+
+Sitemap: https://underdeskelliptical.com/sitemap_index.xml
