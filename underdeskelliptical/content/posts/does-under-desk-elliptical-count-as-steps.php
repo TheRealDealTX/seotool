@@ -14,7 +14,7 @@ return [
     'image_alt' => 'Fitness tracker counting steps while a person uses an under desk elliptical',
     'excerpt' => 'Why your watch barely counts seated pedaling, how to make it count (ankle, shoe pod, workout logging), and how many steps your minutes are worth.',
     'summary' => <<<'HTML'
-<p>Usually not, at least not accurately. Wrist trackers count steps from arm swing, and your arms stay still while you pedal, so most sessions register few or no steps. Wearing a tracker like the [[amazon:fitbit-inspire-3]] on your ankle helps, or log the session as a workout. Effort-matched, a minute of moderate pedaling is worth roughly 80 steps.</p>
+<p>Usually not, at least not accurately. Wrist trackers count steps from arm swing, and your arms stay still while you pedal, so most sessions register few or no steps. Wearing a tracker like the [[amazon:fitbit-inspire-3]] on your ankle helps, or log the session as a workout. Effort-matched, a minute of moderate pedaling is worth roughly 70 steps.</p>
 HTML,
     'related' => ['does-under-desk-elliptical-burn-calories', 'is-under-desk-elliptical-as-good-as-walking', 'under-desk-elliptical-vs-walking-pad', 'under-desk-elliptical-benefits'],
     'faq' => [
@@ -74,14 +74,14 @@ HTML,
 <p>That is why the ankle trick can flatter you. Pedal briskly for an hour at low resistance and your ankle tracker may report several thousand "steps," far more than the effort deserves. That is fine for motivation, but if you want an honest comparison with walking, use an effort-matched conversion instead.</p>
 
 <h2>How Many Steps Is an Under Desk Elliptical Worth?</h2>
-<p>The fairest approach compares energy cost. Brisk walking at about 3 mph is roughly 3.5 METs in the Compendium of Physical Activities and works out to about 100 steps a minute. Seated pedaling is about 2.0 METs at a light pace, 2.8 at moderate and 3.5 when you push hard. Scaling by effort gives these step equivalents:</p>
+<p>The fairest approach compares energy cost. Brisk walking at about 3 mph is roughly 3.5 METs in the Compendium of Physical Activities and works out to about 100 steps a minute. Seated pedaling is about 2.0 METs at a light pace, 2.8 at moderate and 3.5 when you push hard. Comparing only the energy you burn above sitting still (about 1.3 METs) gives these step equivalents:</p>
 <div class="table-wrap"><table>
-<thead><tr><th>Minutes pedaled</th><th>Light (about 57 steps/min)</th><th>Moderate (about 80 steps/min)</th><th>Hard (about 100 steps/min)</th></tr></thead>
+<thead><tr><th>Minutes pedaled</th><th>Light (about 32 steps/min)</th><th>Moderate (about 68 steps/min)</th><th>Hard (about 100 steps/min)</th></tr></thead>
 <tbody>
-<tr><td>15 minutes</td><td>about 850</td><td>about 1,200</td><td>about 1,500</td></tr>
-<tr><td>30 minutes</td><td>about 1,700</td><td>about 2,400</td><td>about 3,000</td></tr>
-<tr><td>60 minutes</td><td>about 3,400</td><td>about 4,800</td><td>about 6,000</td></tr>
-<tr><td>2 hours</td><td>about 6,900</td><td>about 9,600</td><td>about 12,000</td></tr>
+<tr><td>15 minutes</td><td>about 480</td><td>about 1,020</td><td>about 1,500</td></tr>
+<tr><td>30 minutes</td><td>about 950</td><td>about 2,050</td><td>about 3,000</td></tr>
+<tr><td>60 minutes</td><td>about 1,900</td><td>about 4,100</td><td>about 6,000</td></tr>
+<tr><td>2 hours</td><td>about 3,800</td><td>about 8,200</td><td>about 12,000</td></tr>
 </tbody></table></div>
 <p>Use the converter to plug in your own minutes and see how close you get to your daily step goal:</p>
 [[tool:steps]]
@@ -102,7 +102,7 @@ HTML,
 [[compare:cubii-jr2,cubii-jr2-plus,sunny-sf-e3872,walkingpad-c2]]
 
 <h2>Verdict: Does an Under Desk Elliptical Count as Steps?</h2>
-<p>On a wrist tracker, mostly not. Move the tracker to your ankle, use a shoe pod, or log the session as a workout to get credit. For an honest number, count each minute of moderate pedaling as about 80 steps. Either way, the movement is real and it adds up across a workday.</p>
+<p>On a wrist tracker, mostly not. Move the tracker to your ankle, use a shoe pod, or log the session as a workout to get credit. For an honest number, count each minute of moderate pedaling as about 70 steps. Either way, the movement is real and it adds up across a workday.</p>
 <p>If you want built-in tracking, the [[amazon:cubii-jr2-plus|Cubii JR2+]] syncs your strides to an app, while the standard [[amazon:cubii-jr2]] keeps it simple. For more reasons to pedal beyond your step count, see the full list of <a href="/under-desk-elliptical-benefits/">under desk elliptical benefits</a>.</p>
 [[button:cubii-jr2-plus|Check the Cubii JR2+ on Amazon]]
 HTML,

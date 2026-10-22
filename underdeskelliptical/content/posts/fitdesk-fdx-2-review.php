@@ -4,7 +4,7 @@
 // Angle: FitDesk FDX 2.0 desk bike review, compared against under desk ellipticals.
 return [
     'title' => 'FitDesk 2.0 Review (2026): Desk Bike vs Elliptical',
-    'description' => 'FitDesk 2.0 review: who the desk bike with a built-in work surface suits, the comfort and space trade-offs, and when an under desk elliptical is the better buy.',
+    'description' => 'FitDesk 2.0 review: who the desk bike with a built-in work surface suits, its comfort and space trade-offs, and when an under desk elliptical is a better buy.',
     'h1' => 'FitDesk 2.0 Review: Is the FitDesk FDX 2.0 Desk Bike Better Than an Under Desk Elliptical?',
     'keyword' => 'fitdesk 2.0 review',
     'category' => 'reviews',
@@ -53,7 +53,7 @@ HTML,
 <li><strong>Footprint.</strong> Even folded, it takes more space than an under desk machine.</li>
 <li><strong>Not for long workdays.</strong> Most owners use it for sessions, not as their main desk for eight hours.</li>
 </ul>
-<p>Check the current listing for the user height range and seat adjustment, since fit is the biggest factor in whether a bike feels comfortable.</p>
+<p>Check the current listing for the user height range and seat adjustment, since fit is the biggest factor in whether a bike feels comfortable. Very tall or very short riders should read owner comments from people of a similar height before ordering, because a bike that does not fit will be the first thing you stop using.</p>
 
 <h2>FitDesk 2.0 vs Under Desk Ellipticals</h2>
 <p>This is the choice most people researching FitDesk reviews are actually making. Both let you move while you work, but in very different ways.</p>
@@ -86,6 +86,15 @@ HTML,
 <p>That depends on effort. Light pedaling while typing is similar to an under desk elliptical, around 2.0 METs in the Compendium of Physical Activities. Push into moderate effort while reading or watching something and you burn noticeably more. A typical range for most people is roughly 100 to 200-plus calories an hour.</p>
 [[tool:calories]]
 <p>For context on whether seated pedaling counts as real exercise, read <a href="/is-an-under-desk-elliptical-good-exercise/">is an under desk elliptical good exercise</a>.</p>
+
+<h2>FitDesk Bike Assembly and Setup</h2>
+<p>The FitDesk arrives partly assembled. Owners typically report putting it together in under an hour with the included tools, mostly attaching the seat, pedals, desk surface and display. Having a second person to hold the frame steady makes it easier but is not essential.</p>
+<p>Once it is built, spend a few minutes on fit. Set the seat so your knee keeps a slight bend at the bottom of the pedal stroke, then check that the desk surface sits where your forearms rest comfortably while typing. If either feels off, typing while pedaling becomes tiring quickly. Put a mat under the frame on hard floors to protect them and reduce any rocking.</p>
+<p>One honest observation from this FitDesk 2.0 review: placement matters more than people expect. Facing a window or a TV makes long reading sessions pleasant, while tucking it into a dark corner makes it easy to ignore.</p>
+
+<h2>Is the FitDesk Good for Seniors and Beginners?</h2>
+<p>It can be, with caveats. Getting on and off a bike seat takes more balance and leg strength than sitting down in a regular chair, and the circular pedal stroke bends the knee more than an elliptical. For many older users, a seated under desk elliptical used from a stable armchair is the more comfortable option. Our <a href="/best-under-desk-elliptical-for-seniors/">best under desk elliptical for seniors</a> guide covers those, including motorized models. Anyone with a heart or joint condition should check with a doctor before starting a new exercise routine.</p>
+<p>If you have a standing desk and want real steps rather than pedaling, a walking pad is another route. See <a href="/under-desk-elliptical-vs-walking-pad/">under desk elliptical vs walking pad</a>.</p>
 
 <h2>Who Should Buy the FitDesk FDX 2.0</h2>
 <ul>

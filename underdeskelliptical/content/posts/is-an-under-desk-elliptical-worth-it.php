@@ -16,7 +16,7 @@ return [
     'image_alt' => 'Is an under desk elliptical worth it: seated elliptical in use under a work desk',
     'excerpt' => 'For people who sit for hours and will pedal most days, yes. For people who want a hard workout or have no knee room, probably not. Here is how to tell which you are.',
     'summary' => <<<'HTML'
-<p>An under desk elliptical is worth it if you sit for several hours a day and will pedal most workdays: it adds gentle movement and roughly 100 to 200 calories an hour without taking extra time. It is not worth it if you want an intense workout or lack knee room. A quiet, proven model like the [[amazon:cubii-jr2]] gives the best odds of daily use.</p>
+<p>An under desk elliptical is worth it if you sit for several hours a day and will pedal most workdays: it adds gentle movement and roughly 100 to 200 calories an hour. It is not worth it if you want an intense workout or lack knee room. A quiet, proven model like the [[amazon:cubii-jr2]] gives the best odds of daily use.</p>
 HTML,
     'related' => ['how-to-use-under-desk-elliptical', 'does-an-under-desk-elliptical-work', 'what-is-the-best-under-desk-elliptical', 'cubii-under-desk-elliptical-is-it-really-worth-using-every-day'],
     'faq' => [
@@ -31,7 +31,7 @@ HTML,
 <p>The value of an under desk elliptical depends almost entirely on use. A machine that runs for two hours a day is a bargain; one that sits in a closet is a waste. This guide helps you judge which camp you will be in, shows how to think about cost per use, and lists the alternatives if it is not the right fit.</p>
 
 <h2>What You Actually Get From an Under Desk Elliptical</h2>
-<p>Before deciding whether an under desk elliptical is worth it for you, be clear on what it does and does not do.</p>
+<p>Before deciding if an under desk elliptical is worth it for you, be clear on what it does and does not do.</p>
 <h3>Realistic benefits</h3>
 <ul>
 <li><strong>More daily movement with no extra time.</strong> You pedal while you work, so it does not compete with your schedule.</li>
@@ -50,7 +50,7 @@ HTML,
 <p>For a deeper look at results, read <a href="/does-an-under-desk-elliptical-work/">does an under desk elliptical work</a> and our guide to <a href="/under-desk-elliptical-benefits/">under desk elliptical benefits</a>.</p>
 
 <h2>Who an Under Desk Elliptical Is Worth It For</h2>
-<p>You are likely to get good value if several of these describe you:</p>
+<p>Is an under desk elliptical worth it in your situation? You are likely to get good value if several of these describe you:</p>
 <ul>
 <li><strong>You sit for four or more hours a day</strong>, especially at home where nobody sees you pedaling.</li>
 <li><strong>You spend a lot of time on calls, video or reading</strong>, which are the easiest tasks to pedal through.</li>
@@ -71,7 +71,7 @@ HTML,
 </ul>
 
 <h2>Cost Per Use: How to Judge the Value</h2>
-<p>The fairest way to decide if an under desk elliptical is worth it is to think in cost per session rather than sticker price. Check the current price of the model you like, then divide it by how often you expect to use it.</p>
+<p>The fairest way to decide whether an under desk elliptical is worth it is to think in cost per session rather than sticker price. Check the current price of the model you like, then divide it by how often you expect to use it.</p>
 <div class="table-wrap"><table>
 <thead><tr><th>How often you use it</th><th>Sessions in a year</th><th>Cost per session</th></tr></thead>
 <tbody>
@@ -83,6 +83,14 @@ HTML,
 <p>Used most workdays for a year, even a premium seated elliptical works out to a small amount per session, far less than most gym visits or fitness classes, and it keeps going in year two and three. Used for two weeks and abandoned, even a budget model is poor value.</p>
 <p>That is why we usually suggest paying a little more for a quiet, smooth model. A machine that is pleasant to use is a machine you keep using. Squeaks, sliding and rough motion are the main reasons owners give up.</p>
 <div class="callout"><p><strong>Tip:</strong> Buy from a seller with a clear return window, set it up properly on day one and use it daily for two weeks. If you are not using it by then, return it.</p></div>
+
+<h2>Manual or Motorized: Which Is More Worth It?</h2>
+<p>Most people asking whether an under desk elliptical is worth it are looking at manual models, where your legs do the work against magnetic resistance. These give the most exercise value and need no power. Motorized models, such as the [[amazon:ancheer|ANCHEER]], move the pedals for you. They burn far fewer calories in passive mode, but they can be worth it for people with limited mobility or circulation goals who cannot pedal under their own power for long. If that is you, ask your doctor which option suits your situation.</p>
+<p>For most office workers, a manual machine is the better value: it is simpler, quieter and gives you more movement for the money.</p>
+
+<h2>What Changes After a Few Months</h2>
+<p>Owner reviews of seated ellipticals tend to follow a pattern. In the first week, pedaling feels noticeable and slightly distracting. By the second or third week, it fades into the background and sessions get longer. After a few months, people who stuck with it describe it as part of how they work rather than a workout they have to remember.</p>
+<p>The people who report the most value are rarely those chasing a big calorie number. They are the ones who like feeling less stiff at the end of the day and having an outlet for restless energy during long calls. If that sounds appealing, the machine is likely to be worth it for you.</p>
 
 <h2>How to Make Sure It's Worth It</h2>
 <p>Most of the value comes from habits, not the machine. These steps raise your odds:</p>
@@ -115,7 +123,7 @@ HTML,
 <p>Short walks after each meeting, taking calls on your feet and a standing break every half hour cost nothing and work well for people with flexible days. If those habits work for you, you may not need a machine at all.</p>
 
 <h2>Verdict: Is an Under Desk Elliptical Worth It?</h2>
-<p>An under desk elliptical is worth it for people who sit for long stretches and will use it most days. It adds low-impact movement and a modest calorie burn without taking time from your schedule, and the cost per session drops quickly with regular use. It is not worth it if you want an intense workout, have no knee room or already move plenty.</p>
+<p>So, is an under desk elliptical worth it? Yes, for people who sit for long stretches and will use it most days. It adds low-impact movement and a modest calorie burn without taking time from your schedule, and the cost per session drops quickly with regular use. It is not worth it if you want an intense workout, have no knee room or already move plenty.</p>
 <p>If you fit the first group, start with a quiet, proven model like the [[amazon:cubii-jr2|Cubii JR2]], set it up properly and give it two weeks. That is the most reliable way to find out whether it earns its place under your desk.</p>
 [[button:cubii-jr2|Check the Cubii JR2 on Amazon]]
 HTML,
