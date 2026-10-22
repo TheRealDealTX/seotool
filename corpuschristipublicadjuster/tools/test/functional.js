@@ -100,18 +100,18 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await page.waitForTimeout(400);
   const lbl = await page.textContent('[data-count-label]');
   ok(/^12 matching/.test(lbl), 'storm history: baseball+ hail filter → ' + lbl);
-  await page.fill('#f-loc', 'Corpus Christi');
+  await page.fill('#f-loc', 'Port Aransas');
   await page.waitForTimeout(400);
-  ok(/^1 matching/.test(await page.textContent('[data-count-label]')), 'storm history: location filter (Corpus Christi 4.5" hail)');
+  ok(/^1 matching/.test(await page.textContent('[data-count-label]')), 'storm history: location filter (Port Aransas 3" hail, Nov 2025)');
 
   // Storm lookup.
   await page.goto(base + '/storm-lookup/', { waitUntil: 'domcontentloaded' });
-  await page.fill('#l-where', '78504');
+  await page.fill('#l-where', 'Driscoll');
   await page.fill('#l-date', '2025-05-08');
   await page.click('[data-lookup] button[type="submit"]');
   await page.waitForFunction(() => /report/.test(document.querySelector('[data-lookup-results]').textContent), null, { timeout: 15000 });
   const res = await page.textContent('[data-lookup-results]');
-  ok(/\d+ reports? within 5 miles of ZIP 78504/.test(res) && /Hail/.test(res), 'storm lookup: ZIP 78504 around May 8, 2025 finds hail');
+  ok(/[1-9]\d* reports? within 5 miles of Driscoll/.test(res) && /Wind/.test(res), 'storm lookup: Driscoll around May 8, 2025 finds the windstorm');
   await page.fill('#l-where', 'Nowhereville');
   await page.click('[data-lookup] button[type="submit"]');
   ok(/Nueces County city/.test(await page.textContent('[data-lookup-status]')), 'storm lookup: unknown place message');
@@ -141,7 +141,7 @@ const ok = (cond, msg) => { console.log((cond ? 'PASS ' : 'FAIL ') + msg); if (!
   await m.goto(base + '/');
   await m.click('.nav-toggle');
   ok(await m.isVisible('#main-nav a[href="/about-us/"]'), 'mobile nav opens');
-  await m.click('.nav-item.has-sub .sub-toggle');
+  await m.click('.nav-item.has-sub:has(> a[href="/services/"]) .sub-toggle');
   ok(await m.isVisible('a[href="/services/hail-damage-claims/"]'), 'mobile submenu opens');
   await m.keyboard.press('Escape');
   ok(!(await m.isVisible('#main-nav a[href="/about-us/"]')), 'mobile nav closes with Escape');

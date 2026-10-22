@@ -1,5 +1,5 @@
 <?php $tools = [
-  ['/weather/', 'Live Weather, Radar & Tides', 'thermo', 'Current conditions, hourly and 7-day forecast, animated radar, Bob Hall Pier tides, and tropical outlook.'],
+  ['/weather/', 'Live Weather, Radar & Tides', 'thermo', 'Current conditions, hourly and 7-day forecast, animated radar, Corpus Christi Bay tides, and the tropical outlook.'],
   ['/hurricane-deductible-calculator/', 'Hurricane Deductible Calculator', 'hurricane', 'See what a 1%, 2%, or 5% named-storm deductible means in dollars before the storm.'],
   ['/claim-calculator/', 'Claim Settlement Calculator', 'calc', 'Estimate RCV, ACV, recoverable depreciation, and out-of-pocket costs.'],
   ['/claim-deadline-calculator/', 'Claim Deadline Calculator', 'calendar', 'Map Texas prompt-payment and TWIA claim timelines from your own dates.'],

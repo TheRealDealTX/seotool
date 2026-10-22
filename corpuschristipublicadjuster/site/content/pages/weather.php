@@ -27,7 +27,7 @@ return [
 </ul>
 
 <h3>Radar loop</h3>
-<p>The radar loop shows NEXRAD base reflectivity from the <a href="https://mesonet.agron.iastate.edu/" target="_blank" rel="noopener">Iowa Environmental Mesonet</a> over a base map from OpenStreetMap and CARTO. Brighter colors mean heavier rain and, in strong storms, possible hail. Use the slider to step through recent frames and see which way storms are moving.</p>
+<p>The radar loop shows NEXRAD base reflectivity from the <a href="https://mesonet.agron.iastate.edu/" target="_blank" rel="noopener">Iowa Environmental Mesonet</a> over an Esri dark-gray base map (built with OpenStreetMap data). Brighter colors mean heavier rain and, in strong storms, possible hail. Use the slider to step through recent frames and see which way storms are moving.</p>
 
 <h3>Tides and water levels</h3>
 <p>The tide panel uses NOAA CO-OPS stations at <strong>USS Lexington in Corpus Christi Bay (8775296)</strong>, <strong>Packery Channel on Padre Island (8775792)</strong>, and <strong>Port Aransas (8775237)</strong>. Each chart compares the predicted astronomical tide with the observed water level. When the observed line runs well above the prediction, wind or a tropical system is piling water into the bays, which matters for North Beach, the Island, Port Aransas, and low-lying bayfront property. Levels are in feet above mean lower low water (MLLW), and recent observations are preliminary.</p>

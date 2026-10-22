@@ -76,7 +76,7 @@
     ]}
   };
 
-  var STORE = 'mpa-checklist-v1';
+  var STORE = 'ccpa-checklist-v1';
   var state = { cat: null, done: {}, notes: {}, general: '', save: false };
   var panel = root.querySelector('[data-cl-panel]');
   var itemsEl = root.querySelector('[data-cl-items]');

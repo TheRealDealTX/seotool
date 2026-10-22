@@ -98,7 +98,7 @@ None needed. The site uses free public data sources:
 | Historical storms | NOAA NCEI Storm Events Database (bulk CSV) | No |
 | City/ZIP coordinates | U.S. Census Bureau Gazetteer (bundled in `data/places.json`) | No |
 | Storm maps | OpenStreetMap tiles via Leaflet (bundled) | No |
-| Radar loop | Iowa Environmental Mesonet NEXRAD tiles on a CARTO dark basemap | No |
+| Radar loop | Iowa Environmental Mesonet NEXRAD tiles on a Esri dark-gray basemap | No |
 | Tides / water level | NOAA CO-OPS API (stations 8775296, 8775792, 8775237) | No |
 | Active tropical storms | National Hurricane Center CurrentStorms.json | No |
 

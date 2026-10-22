@@ -41,7 +41,7 @@ while queue:
     pages[path] = t
     if re.search(r'(Warning|Fatal error|Notice|Deprecated):', t):
         bad(path, 'PHP warning in output')
-    for em in set(re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', t)):
+    for em in set(m.rstrip('.') for m in re.findall(r'[\w.+-]+@[\w-]+\.[\w.]+', t)):
         if em not in ('info@corpuschristipublicadjuster.com', 'jditt@risepublicadjusting.com') and not em.endswith(('.webp', '.png')):
             bad(path, f'unexpected email address {em}')
     h1 = re.findall(r'<h1[\s>]', t)

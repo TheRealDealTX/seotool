@@ -807,7 +807,7 @@ body { background: #fff; }
 .aurora span:nth-child(3) { width: 32vw; height: 32vw; left: 30vw; bottom: -18vw; background: radial-gradient(circle, #ff9a6b, transparent 65%); animation-duration: 26s; animation-delay: -12s; opacity: .32; }
 @keyframes drift { 0% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(4vw, 3vw, 0) scale(1.12); } 100% { transform: translate3d(-3vw, 5vw, 0) scale(.95); } }
 .waves { position: absolute; left: 0; right: 0; bottom: -1px; height: clamp(50px, 7vw, 110px); z-index: 3; pointer-events: none; overflow: hidden; }
-.waves svg { position: absolute; bottom: 0; left: 0; width: 200%; height: 100%; }
+.waves svg { position: absolute; bottom: 0; left: 0; width: 200%; max-width: none; height: 100%; }
 .waves .w1 { animation: waveX 16s linear infinite; opacity: .35; }
 .waves .w2 { animation: waveX 11s linear infinite reverse; opacity: .55; }
 .waves .w3 { animation: waveX 22s linear infinite; }
@@ -1091,3 +1091,4 @@ thead th { background: #0a1120; }
 .section-head h3 { font-size: 1.2rem; }
 .hero h1 .accent .w { background: inherit; -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero h1 .accent { background-size: 100% 100%; }
+[hidden] { display: none !important; }

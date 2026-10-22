@@ -34,7 +34,7 @@ return [
 <p>The <a href="/claim-calculator/">claim settlement calculator</a>, <a href="/hurricane-deductible-calculator/">hurricane deductible calculator</a>, <a href="/claim-deadline-calculator/">claim deadline calculator</a>, <a href="/claim-documentation-checklist/">documentation checklist</a>, <a href="/storm-lookup/">storm event lookup</a>, and other tools are educational aids. Results are estimates based on the information you enter and general assumptions. They are not appraisals, repair estimates, coverage determinations, legal deadline calculations, or predictions of what an insurer will pay. Statutory deadlines have exceptions, and policy deadlines vary.</p>
 
 <h2>Weather, tide, and storm data</h2>
-<p>Weather, tide, radar, tropical, and storm information on this site comes from third parties, including the National Weather Service, NOAA (including the National Hurricane Center, CO-OPS Tides and Currents, and the National Centers for Environmental Information), and the Iowa Environmental Mesonet. Maps use OpenStreetMap and CARTO tiles. This data:</p>
+<p>Weather, tide, radar, tropical, and storm information on this site comes from third parties, including the National Weather Service, NOAA (including the National Hurricane Center, CO-OPS Tides and Currents, and the National Centers for Environmental Information), and the Iowa Environmental Mesonet. Maps use OpenStreetMap and Esri tiles. This data:</p>
 <ul>
 <li>May be preliminary, delayed, revised, or incomplete</li>
 <li>Reflects reports and measurements at particular locations and times, not conditions at every property</li>

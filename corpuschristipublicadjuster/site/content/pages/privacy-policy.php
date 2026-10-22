@@ -70,7 +70,7 @@ return [
 <p>Some content loads directly in your browser from third parties:</p>
 <ul>
 <li><strong>Radar loop.</strong> NEXRAD radar image tiles load from the Iowa Environmental Mesonet.</li>
-<li><strong>Base maps.</strong> Map tiles load from OpenStreetMap tile servers and from CARTO.</li>
+<li><strong>Base maps.</strong> Map tiles load from OpenStreetMap tile servers (storm maps) and from Esri ArcGIS Online (the radar base map).</li>
 </ul>
 <p>When those maps are displayed, your browser connects to those servers, and they receive your IP address and standard browser information under their own privacy and usage policies.</p>
 

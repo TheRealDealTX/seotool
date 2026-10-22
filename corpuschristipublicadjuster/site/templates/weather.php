@@ -78,7 +78,7 @@ $hours = $hr['data']['periods'] ?? [];
         <input type="range" min="0" max="10" value="10" step="1" data-radar-slider aria-label="Radar frame">
         <span class="wx-radar-time" data-radar-time>Loading radar&hellip;</span>
       </div>
-      <p class="small muted mb-0" style="margin-top:10px">NEXRAD base reflectivity composite via the <a href="https://mesonet.agron.iastate.edu/" target="_blank" rel="noopener">Iowa Environmental Mesonet</a>, updated every 5 minutes. Map &copy; OpenStreetMap contributors. Official radar: <a href="https://radar.weather.gov/station/KCRP/standard" target="_blank" rel="noopener">NWS Corpus Christi (KCRP)</a>.</p>
+      <p class="small muted mb-0" style="margin-top:10px">NEXRAD base reflectivity composite via the <a href="https://mesonet.agron.iastate.edu/" target="_blank" rel="noopener">Iowa Environmental Mesonet</a>, updated every 5 minutes. Basemap &copy; Esri and OpenStreetMap contributors. Official radar: <a href="https://radar.weather.gov/station/KCRP/standard" target="_blank" rel="noopener">NWS Corpus Christi (KCRP)</a>.</p>
     </div>
   </div>
 </section>
