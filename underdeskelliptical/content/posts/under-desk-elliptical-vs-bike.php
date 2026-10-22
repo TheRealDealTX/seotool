@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical vs bike" at position ~21, plus "under desk bike vs elliptical",
 // "under desk bike vs elliptical reddit", "which is better under desk bike or elliptical", "under desk bike or elliptical",
 // "elliptical bike", "are under the desk bikes effective", "are under-desk elliptical bikes effective for office workouts?".

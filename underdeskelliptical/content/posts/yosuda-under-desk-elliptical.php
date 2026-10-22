@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "yosuda under desk elliptical", "yosuda under desk elliptical machine". Page pos 9.4.
 // Angle: YOSUDA buyer's guide (manual vs electric, which to choose, setup). Owner reviews live on
 // /yosuda-under-desk-elliptical-reviews/, so this page links there instead of repeating them.

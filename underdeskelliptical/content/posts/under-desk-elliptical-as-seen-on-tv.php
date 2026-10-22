@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "under desk elliptical as seen on tv", "sitting stepper as seen on tv", "elliptical with tv",
 // "elliptical machine with tv", "elliptical with tv built in", "ellipticals with tv", "elliptical with tv screen",
 // "exercise equipment while watching tv", "elliptical tv". Page: 105 impressions, pos 35.

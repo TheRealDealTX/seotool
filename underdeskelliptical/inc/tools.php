@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Interactive tools. Each has a standalone page at /tools/<slug>/ and can be embedded
 // in any post with [[tool:<id>]]. The markup lives here; behavior is in assets/js/site.js
 // (keyed on data-tool), so every tool works the same wherever it is embedded.

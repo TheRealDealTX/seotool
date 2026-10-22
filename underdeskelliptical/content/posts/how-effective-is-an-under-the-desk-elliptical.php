@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Primary: "how effective is an under the desk elliptical", plus "how effective are under desk ellipticals",
 // "are under desk ellipticals effective", "are under the desk ellipticals effective", "are desk ellipticals effective",
 // "are seated ellipticals effective", "are under desk elliptical machines effective".

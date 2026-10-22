@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'body' => <<<'HTML'
 <h2>How the under desk elliptical calorie calculator works</h2>

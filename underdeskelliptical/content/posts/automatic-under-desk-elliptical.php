@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): page has 155 impressions at position ~13.6 with 2 clicks. Queries: "automatic under
 // desk elliptical", "automatic elliptical". Angle: how passive machines work, passive vs active
 // modes, who they suit, and honest calorie numbers. Electric buying details live on

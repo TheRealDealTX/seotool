@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 752 impressions at position ~7.7 for "can you stand on an under desk elliptical",
 // "can you stand on under desk elliptical", "can you use an under desk elliptical while standing",
 // "what if i stand", "standing", "seated elliptical vs standing elliptical". Answer first: usually no.

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): site's #2 page, 14 clicks / 2,018 impressions at avg position 14.
 // "what muscles do under desk ellipticals work" 274 impr at 7.3, "what muscles does an under desk
 // elliptical work" 31 impr at 7.7, plus many generic "what muscles does an elliptical work",

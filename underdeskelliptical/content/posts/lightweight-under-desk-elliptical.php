@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 184 impressions at pos 14 with 0 clicks; query "lightweight elliptical". Angle: easy to
 // carry and lift, who needs light weight (seniors, people who store it daily), and the sliding tradeoff.
 return [

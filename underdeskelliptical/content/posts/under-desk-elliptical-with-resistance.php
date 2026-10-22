@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 26 impressions at position ~20. Minor query: "low-friction elliptical guide rail
 // system"; related "yosuda elliptical machine hyper quiet resistance". Angle: resistance types
 // (magnetic vs friction vs strap), how many levels you need, and a resistance workout plan.

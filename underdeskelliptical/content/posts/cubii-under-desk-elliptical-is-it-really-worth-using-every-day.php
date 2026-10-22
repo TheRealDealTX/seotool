@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 121 impressions at position ~29. Queries: "cubii under desk elliptical" (pos 5.7), "is cubii worth it",
 // "does the cubii help with circulation" (14 impr, pos 9), "cubii benefits", "is cubii as good as walking?",
 // "is cubii a good workout", "cubii weight loss", "what is a cubii". Angle: weeks of daily JR2 use, is it worth it.

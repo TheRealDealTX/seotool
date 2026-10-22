@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 5,458 impressions at position 2.2 for "under desk elliptical fntkech" with 0 clicks,
 // plus "fntkech tech updates by fitness-talk", "under desk bike fntkech". Title/description are
 // written to win the click: people searching this want to know what Fntkech is and whether to buy.

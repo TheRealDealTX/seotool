@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 2 clicks / 185 impressions at position 7.8. Queries: "fryline elliptical machine" (2 clicks),
 // "fryline under desk elliptical", "fryline". Brand review: verdict, pros/cons, who should buy, alternatives.
 return [

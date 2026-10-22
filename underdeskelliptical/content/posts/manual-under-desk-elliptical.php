@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 18 impressions at position ~8.4, 1 click. Related query: "geoneo under desk
 // elliptical manual". Angle: manual (magnetic resistance) machines, why they beat motorized
 // for most people, and the best manual picks. Passive/motor content lives on

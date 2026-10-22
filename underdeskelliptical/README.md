@@ -81,21 +81,25 @@ php dev/render.php /some-slug/            # render one page in the CLI
 
 ## Hosting and deploying
 
-The domain is on the Hostinger **Agency** plan (website UID `wdHcdWujW`, PHP 8.5). That
-platform serves existing files directly, ignores `.htaccess`, and sends every other
-request to `index.php`, so the router in `index.php` handles routing, the https/www
-canonicalization and the 301s. Do **not** add `index.html` files: an `index.html`
-would be served for unknown paths instead of `index.php`.
+The site runs on a plain **php-fpm** website on the Hostinger Agency plan (UID
+`FQYNNuIDk`, Phoenix, PHP 8.5, created 2026-10-22). It replaced the WordPress website
+`wdHcdWujW`, whose `index.php` was locked by Hostinger's WordPress config lock and could
+not be overwritten. That platform serves existing files directly, ignores `.htaccess`, and
+sends unknown *directory-style* paths to `index.php`. Unknown `.php`/image paths get the
+platform's own 404 and never reach the router, which is why:
 
-Deploy steps:
-1. Back up the WordPress site (files and database) in hPanel.
-2. Delete WordPress core files from `public_html` (`wp-admin/`, `wp-includes/`,
-   `wp-*.php`, `xmlrpc.php`, `license.txt`, `readme.html`). Keep `wp-content/uploads/`.
-3. Run `./deploy.sh` (see its header for credentials), or upload this folder's contents
-   (except `dev/`, `README.md`, `deploy.sh`) to `public_html` with File Manager.
-4. Clear the site cache, then spot-check `/`, a post, `/topic/reviews/`, `/tag/best-for-seniors/`
-   and `/sitemap_index.xml`.
-5. In Search Console, resubmit `sitemap_index.xml`.
+- the old WordPress resized images (`…-300x200.webp`, `…-1024x683.webp`, 783 files) were
+  copied onto the server from the WordPress backup instead of redirected. They are not in
+  git; re-copy them from the backup zip if the website is ever rebuilt from scratch.
+- every file under `inc/`, `templates/` and `content/` starts with a guard that returns 404
+  when requested directly.
+
+Do **not** add `index.html` files: an `index.html` would be served for unknown paths
+instead of `index.php`.
+
+Deploy: `./deploy.sh` (see its header for the three File Browser credentials), then clear
+the site cache. The WordPress backup is described in
+`../backup/underdeskelliptical-wordpress-2026-10-22/README.md`.
 
 ## Contact form
 

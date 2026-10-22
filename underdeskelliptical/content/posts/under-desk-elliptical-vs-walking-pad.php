@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 552 impressions at position ~10 for "under desk elliptical vs walking pad",
 // plus "walking pad vs under desk elliptical", "walking pad vs elliptical", "elliptical vs walking pad",
 // "elliptical machine vs walking pad", "walking pad under desk elliptical", "walkingpad under desk elliptical machine".

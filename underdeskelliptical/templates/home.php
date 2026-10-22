@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Homepage. Brief: the site name "Under Desk Elliptical" must appear at least 14 times on
 // this page; dev/check.php counts the occurrences inside <main>.
 $posts = all_posts();

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "yosuda elliptical review", "yosuda elliptical reviews", "yosuda elliptical machine",
 // "yosuda elliptical machine hyper quiet resistance", "yosuda e5 under desk elliptical machine".
 // Angle: the YOSUDA electric under desk elliptical and what owners report.

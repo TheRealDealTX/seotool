@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 $q = trim(mb_substr((string) ($_GET['s'] ?? ''), 0, 80));
 $terms = array_filter(preg_split('/\s+/', mb_strtolower($q)));
 $hits = [];

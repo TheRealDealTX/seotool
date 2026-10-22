@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 /** @var array $page */
 $crumbs = [['Home', '/'], [$page['h1'], CURRENT_PATH]];
 page_start(['title' => $page['title'], 'description' => $page['description'], 'schema' => array_merge([schema_breadcrumbs($crumbs)], $page['schema'] ?? [])]);

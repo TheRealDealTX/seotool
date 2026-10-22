@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // /llms.txt: a plain-text map of the site for AI assistants (replaces Yoast's static file).
 header('Content-Type: text/plain; charset=utf-8');
 echo '# ' . SITE_NAME . "\n\n> " . SITE_TAGLINE . ". Independent, reader-supported reviews, comparisons and free tools for people who sit for work.\n\n";

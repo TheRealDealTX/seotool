@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "is an under desk elliptical worth it", "are under desk ellipticals worth it",
 // "is under desk elliptical worth it", "under desk elliptical worth it", "is under the desk elliptical worth it",
 // plus "is cubii worth it". Decision framework, cost per use and alternatives.

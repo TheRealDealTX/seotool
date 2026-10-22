@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "viamotion under desk elliptical" (39 impressions, pos 7.3). Page: 113 impressions, pos 7.7.
 // Brand review: limited availability, so the page sets expectations and offers proven alternatives.
 return [

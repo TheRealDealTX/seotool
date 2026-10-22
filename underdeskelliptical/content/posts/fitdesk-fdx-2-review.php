@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 141 impressions at position ~21. Queries: "fitdesk 2.0 review", "fitdesk reviews", "fitdesk 2.0",
 // "fitdesk review", "fitdesk bike" (pos 3), "fit desk elliptical", "fitdesk 2.0 reviews".
 // Angle: FitDesk FDX 2.0 desk bike review, compared against under desk ellipticals.

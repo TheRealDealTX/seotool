@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 21 impressions at position ~9.7. Queries: "cubii jr1", "cubii move vs jr1".
 // Angle: JR1 vs JR2, and who should still buy the older, cheaper JR1.
 return [

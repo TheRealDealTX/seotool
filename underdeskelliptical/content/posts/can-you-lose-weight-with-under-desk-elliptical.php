@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "can you lose weight with under desk elliptical" 9 impr at 28, "under desk elliptical for
 // weight loss" (56.8), "under desk elliptical weight loss" (72), "is an under desk elliptical good for
 // weight loss" (12), "do under desk ellipticals work for weight loss" (47.5), "to lose weight" (1),

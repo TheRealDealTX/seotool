@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical reviews" 53 impr at pos 30, "desk elliptical reviews", "under desk
 // elliptical review", "under desk elliptical machine reviews", "under the desk elliptical reviews",
 // "under-desk elliptical weight loss reviews", plus many brand "... reviews" queries. Hub page that

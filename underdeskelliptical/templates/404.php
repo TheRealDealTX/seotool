@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 page_start(['title' => 'Page Not Found | ' . SITE_NAME, 'description' => 'That page could not be found.', 'noindex' => true]);
 ?>
 <section class="page-hero"><div class="wrap narrow">

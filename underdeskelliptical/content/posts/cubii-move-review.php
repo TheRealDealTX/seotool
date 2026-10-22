@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 430 impressions at position ~29. Queries: "cubii move", "cubii move reviews", "cubii move price",
 // "cubii move vs cubii go", "cubii go vs cubii move", "cubii move vs jr1", "cubii move dimensions ... weight",
 // "cubii go reviews", "cubii go". Angle: honest Move review + Move vs GO vs JR2 section. No invented specs.

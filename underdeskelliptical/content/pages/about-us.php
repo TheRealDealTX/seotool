@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'title' => 'About Under Desk Elliptical: Who We Are & How We Research',
     'description' => 'Under Desk Elliptical is an independent guide to under desk ellipticals, desk bikes and walking pads. Learn who we are and how we research and rank products.',

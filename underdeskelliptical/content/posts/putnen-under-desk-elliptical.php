@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 1 click / 77 impressions at position 8.4. Queries: "putnen under desk elliptical reviews",
 // "putnen elliptical machine reviews". Searchers want a review verdict: lead with it.
 return [

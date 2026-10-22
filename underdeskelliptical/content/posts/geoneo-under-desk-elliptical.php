@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 736 impressions at position 7.8, 11 clicks. Queries: "geoneo under desk elliptical" (323 impr),
 // "geoneo under desk elliptical manual", "geoneo elliptical", "geoneo elliptical machine",
 // "geoneo under desk elliptical machine", "geoneo exercise bike". Covers the manual Geoneo vs the Cubii JR2.

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 611 impressions at position ~19. "is an under desk elliptical as good as walking" (position 9.4),
 // "is under desk elliptical as good as walking", "under desk elliptical vs walking", "how does it compare to walking",
 // "is cubii as good as walking?". Lead with a direct answer, then show the MET math.

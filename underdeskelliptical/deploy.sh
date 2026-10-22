@@ -1,5 +1,5 @@
 #!/bin/bash
-# Deploy to the Hostinger Agency website for underdeskelliptical.com (UID wdHcdWujW).
+# Deploy to the Hostinger Agency website for underdeskelliptical.com (plain php-fpm site, UID FQYNNuIDk).
 #
 # Pushes the site files one by one through the website's File Browser TUS endpoint.
 # Get the three credentials from the Hostinger API call that generates a File Browser
@@ -10,10 +10,6 @@
 #   export UDE_FB_REST='…'                     # "rest_auth_key"
 #   ./deploy.sh
 #
-# BEFORE THE FIRST DEPLOY: back up the WordPress site, then remove WordPress's own files
-# from public_html (wp-admin/, wp-includes/, wp-*.php, xmlrpc.php, license.txt,
-# readme.html). Keep wp-content/uploads/. Otherwise /wp-login.php and /wp-admin/ keep
-# running because the host serves files that exist before it falls back to index.php.
 # Afterwards clear the site cache.
 set -u
 : "${UDE_FB_URL:?set UDE_FB_URL}" "${UDE_FB_AUTH:?set UDE_FB_AUTH}" "${UDE_FB_REST:?set UDE_FB_REST}"

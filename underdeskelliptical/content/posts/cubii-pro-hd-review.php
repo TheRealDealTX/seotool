@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 580 impressions at position ~30, 0 clicks. Queries: "cubii pro" (147 impr), "cubii pro review",
 // "cubii pro under desk elliptical", "cubii elliptical review", "cubii reviews", "does cubii work",
 // "cubii negative reviews", "is cubii worth it". Angle: honest connected-Cubii review + JR2+ as the easier buy.

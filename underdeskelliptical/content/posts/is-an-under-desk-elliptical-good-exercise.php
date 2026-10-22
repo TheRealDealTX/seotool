@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Primary: "is an under desk elliptical good exercise", plus "is the seated elliptical a good workout",
 // "is a seated elliptical good exercise", "are seated elliptical a good workout", "does a seated elliptical work",
 // "are sitting ellipticals good for you", "are ellipticals good exercise", "is cubii good exercise".

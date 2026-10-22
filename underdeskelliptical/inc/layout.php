@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Page shell: <head>, header, footer. Every route calls page_start() then page_end().
 
 function page_start(array $m): void

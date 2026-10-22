@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 74 impressions at position ~25. Queries: "deskcycle ellipse under desk elliptical",
 // "deskcycle ellipse under desk elliptical reviews", "deskcycle under desk elliptical",
 // "deskcycle ellipse leg exerciser under desk elliptical machine". Angle: what owners say, long-term

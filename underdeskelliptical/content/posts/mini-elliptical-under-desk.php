@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): low impressions; queries "are mini ellipticals effective" (pos ~40),
 // "eliptical stepper", "under desk stepper benefits", "do leg exercisers work".
 // Angle: what a mini elliptical is, mini vs full-size, and honest effectiveness.

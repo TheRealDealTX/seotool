@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 22 impressions at position ~25.6. Related query seen: "cubii move - under desk
 // elliptical bike pedal exerciser portable seated". Angle: moving the machine between rooms,
 // home and office, and travel; handles; light weight. Keys: cubii-go, cubii-move.

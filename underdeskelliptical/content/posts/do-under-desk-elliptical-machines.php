@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Primary: "do under desk elliptical machines work", plus "do seated elliptical machines work", "do leg exercisers work",
 // "do foot ellipticals work", "do under desk exercise machines work".
 // Angle: effectiveness by machine type (manual elliptical, motorized/passive, desk bike, mini stepper).

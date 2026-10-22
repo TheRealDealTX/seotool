@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): how-to page. Angle: step-by-step setup (chair, caster cups, mat, distance, posture, resistance),
 // a first-week plan, typing while pedaling, and troubleshooting (sliding, knees hitting the desk, squeaks).
 return [

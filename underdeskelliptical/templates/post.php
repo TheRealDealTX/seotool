@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 /** @var array $post */
 $cat = $post['category'];
 $crumbs = [['Home', '/'], [CATEGORIES[$cat][0], "/topic/$cat/"], [$post['h1'], $post['url']]];

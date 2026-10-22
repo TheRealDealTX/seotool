@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 /** @var array $m */
 header('Content-Type: application/xml; charset=utf-8');
 header('X-Robots-Tag: noindex, follow');

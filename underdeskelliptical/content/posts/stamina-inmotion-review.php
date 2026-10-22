@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 1,220 impressions at position 22, CTR 0.08%. Queries: "stamina inmotion elliptical trainer review",
 // "inmotion elliptical", "stamina inmotion ii treadmill review" (different product: manual treadmill),
 // "inmotion compact elliptical", "inmotion e1000", "stamina inmotion e1000 reviews", "stamina in motion

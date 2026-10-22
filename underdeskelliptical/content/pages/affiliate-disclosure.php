@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'title' => 'Affiliate Disclosure | Under Desk Elliptical',
     'description' => 'How Under Desk Elliptical earns money: we are a participant in the Amazon Services LLC Associates Program and earn from qualifying purchases.',

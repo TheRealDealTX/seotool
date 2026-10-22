@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical benefits" 71 impr at 55, "seated elliptical benefits" 29 at 69,
 // "under desk elliptical machine benefits", "benefits of under desk elliptical", "under desk stepper
 // benefits", "sitting elliptical benefits", "benefits of seated elliptical", "desk elliptical benefits",

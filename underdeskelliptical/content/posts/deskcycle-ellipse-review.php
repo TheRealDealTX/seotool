@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 443 impressions at position ~13.8, 4 clicks. Queries: "deskcycle ellipse" (135 impr),
 // "deskcycle ellipse review", "desk cycle ellipse", "ellipse desk cycle", "desk cycle ellipse review",
 // "cubii vs ellipse". Main DeskCycle Ellipse review with an Ellipse vs Cubii JR2 section.

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "best under desk elliptical" 130 impr at pos 47, plus "best under desk ellipticals",
 // "best under desk elliptical exercise machine", "consumer reports best under desk elliptical",
 // "under desk elliptical reviews", "what are the best under desk ellipticals". Main money page:

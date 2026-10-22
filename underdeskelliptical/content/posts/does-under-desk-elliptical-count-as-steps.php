@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "does under desk elliptical count as steps" 36 impr at 19.3,
 // "does an under desk elliptical count as steps" 8 impr at 15.9.
 return [

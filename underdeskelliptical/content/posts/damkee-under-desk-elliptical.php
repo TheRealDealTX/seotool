@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 2 clicks / 137 impressions at position 9.5. Query: "damkee under desk elliptical" (62 impr, pos 8.7).
 // DamKee is an electric (motorized) model: review framed around powered vs manual use.
 return [

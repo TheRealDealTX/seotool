@@ -13,7 +13,8 @@ mentions "Under Desk Elliptical" at least 14 times.
 import json, re, sys, html, urllib.request, urllib.error
 from collections import Counter
 
-BASE = 'http://127.0.0.1:8090'
+import os
+BASE = os.environ.get('BASE', 'http://127.0.0.1:8090')
 TAG = 'underdeskellipticaljditt-20'
 errors, warns = [], []
 

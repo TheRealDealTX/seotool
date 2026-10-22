@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): page sits at pos 6.4 with few impressions; queries "compact elliptical for small spaces",
 // "compact home elliptical", "small space exercise equipment", "inmotion compact elliptical",
 // "best compact elliptical for seniors". Angle: small desks, apartments and tight footwells.

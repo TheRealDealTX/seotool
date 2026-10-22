@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 /** @var array $archive */
 $posts = all_posts();
 if ($archive['type'] === 'blog') {

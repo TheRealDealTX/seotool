@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Primary page for "does an under desk elliptical work" / "do under desk ellipticals work" and close variants
 // ("do under desk ellipticals do anything", "does under desk elliptical really work", "do desk ellipticals work").
 // Angle: the evidence-based answer (sitting research, NEAT), what it does and doesn't do, verdict by goal.

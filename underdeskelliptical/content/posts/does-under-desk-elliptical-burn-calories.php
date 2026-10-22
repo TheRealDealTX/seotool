@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical calories burned" 12 impr at 44, "calories burned under desk elliptical",
 // "does under desk elliptical burn calories" (37.9), "how many calories does under desk elliptical burn",
 // "under desk elliptical calories burned calculator" (16), "do under desk ellipticals burn calories",

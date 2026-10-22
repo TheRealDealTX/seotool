@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Product catalog. Every Amazon link on the site is built from this list by amz_url(),
 // so the Associates tag is applied in exactly one place.
 //

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 /** @var string $toolSlug */
 $t = TOOLS[$toolSlug];
 $path = "/tools/$toolSlug/";

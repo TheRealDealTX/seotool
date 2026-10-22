@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "best under desk elliptical for seniors" 102 impr at pos 39, plus "best seated elliptical
 // for seniors", "best ellipticals for seniors", "best elliptical for seniors", "which elliptical is best
 // for seniors", "under desk elliptical for elderly", "best motorized ... for seniors", "best compact

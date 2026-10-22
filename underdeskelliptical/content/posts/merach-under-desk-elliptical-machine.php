@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 2 clicks / 245 impressions at position 8.9. Queries: "merach under desk elliptical machine",
 // "merach under desk elliptical machine reviews", "merach under-desk elliptical machine – quiet electric
 // elliptical for daily workouts", "merach elliptical under desk". Electric model: review + verdict.

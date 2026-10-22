@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "jisuo under desk elliptical" (44 impr, pos 7.8), "jisuo" (15 impr, pos 8.7).
 // Brand review: verdict, pros/cons, who should buy, alternatives.
 return [

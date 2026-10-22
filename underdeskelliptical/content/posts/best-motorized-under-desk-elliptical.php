@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "best motorized under desk elliptical" 45 impr at pos 37, "best motorized under desk
 // elliptical for seniors", "motorized". Ranked list of the six powered models in the catalog.
 return [

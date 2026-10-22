@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical vs treadmill" at position ~15. Searchers are choosing between a seated
 // elliptical and an under desk treadmill (walking pad), sometimes a full machine. Answer fast, then compare.
 return [

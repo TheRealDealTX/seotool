@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // The form posts back to /contact/; handling is in contact_handle() (inc/contact.php).
 $status = contact_handle();
 $form = $status === 'sent'

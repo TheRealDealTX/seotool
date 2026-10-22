@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Site-wide constants for underdeskelliptical.com. Every other file reads from here.
 
 const SITE_NAME   = 'Under Desk Elliptical';

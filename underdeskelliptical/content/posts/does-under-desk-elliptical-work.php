@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Primary: "does under desk elliptical work" / "under desk elliptical does it work".
 // Angle: results by goal (weight loss, toning, circulation, focus, stiffness/back pain, seniors' mobility, steps),
 // each with a works / partly / no verdict and an expected timeframe. The general evidence-based answer lives on

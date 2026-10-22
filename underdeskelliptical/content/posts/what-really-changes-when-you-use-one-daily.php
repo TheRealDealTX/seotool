@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "under desk elliptical before and after" 8 impr at 43.9, "under desk elliptical results"
 // 3 impr at 30.7, "elliptical daily" (12), "cubii weight loss", "under-desk elliptical weight loss reviews".
 return [

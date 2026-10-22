@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Contact form handler. Messages are always appended to data/messages.php (which starts
 // with an exit() line, so it cannot be read over the web even though .htaccess is ignored
 // on this host) and also emailed when CONTACT_TO is set in inc/config.php.
@@ -22,6 +23,9 @@ function contact_handle(): ?string
     }
     $line = json_encode(['at' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? '', 'name' => $name, 'email' => $email, 'topic' => $topic, 'message' => $msg], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     $file = ROOT . '/data/messages.php';
+    if (!is_dir(dirname($file))) {
+        @mkdir(dirname($file), 0750);
+    }
     if (!is_file($file)) {
         @file_put_contents($file, "<?php exit; ?>\n");
     }

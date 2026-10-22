@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): tiny impressions but a cluster of head-term synonyms at good positions:
 // "under desk pedals" (pos 2), "elliptical machine under desk" (1), "under desk exercise equipment" (2),
 // "desk exercise equipment" (5), "office workout equipment" (3), "elliptical for under desk" (4),

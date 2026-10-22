@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 $crumbs = [['Home', '/'], ['Tools', '/tools/']];
 page_start(['title' => 'Free Under Desk Elliptical Tools: Calculators, Quiz & Comparison', 'description' => 'Free interactive tools from ' . SITE_NAME . ': calorie calculator, steps converter, desk clearance checker, pedal timer, product quiz and comparison table.', 'schema' => [schema_breadcrumbs($crumbs)]]);
 ?>

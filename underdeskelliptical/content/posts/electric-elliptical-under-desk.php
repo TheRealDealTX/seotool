@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 7 impressions at position ~12.7. Buyer-intent page for electric models.
 // Angle: practical buying guide (power and cord placement, remotes, speed presets, safety,
 // motor noise, electric vs manual). Passive vs active theory lives on

@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Queries: "mysuntown" (pos 9.5). Page: 34 impressions, pos 10.1.
 // Brand review for a simple beginner seated elliptical; verdict + alternatives.
 return [

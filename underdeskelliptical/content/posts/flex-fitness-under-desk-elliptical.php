@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): the site's #1 click page, 18 clicks / 260 impressions at position 10.
 // Queries: "flex fitness under desk elliptical" (10 clicks, pos 5.6), "flex under desk elliptical",
 // "flex fitness under desk elliptical seated leg energizer". Brand review with a clear verdict.

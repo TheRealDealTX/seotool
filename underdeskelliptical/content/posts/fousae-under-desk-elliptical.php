@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Page: /fousae-under-desk-elliptical/ (6 impressions, pos 6.8). Brand review with verdict and alternatives.
 return [
     'title' => 'Fousae Under Desk Elliptical Review: Pros & Cons (2026)',

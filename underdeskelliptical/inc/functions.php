@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // Shared helpers: escaping, Amazon links, content loading, shortcodes and schema.
 
 function e(?string $s): string

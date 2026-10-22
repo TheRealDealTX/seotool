@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): 11 clicks / 104 impressions at position 8.7 (10.6% CTR, strong).
 // Query: "lvpiman under desk elliptical machine". Keep the click-worthy angle and add a clear verdict.
 return [

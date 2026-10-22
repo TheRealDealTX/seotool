@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 // GSC (6 mo): "best quiet elliptical" 95 impr at pos 40, "quiet elliptical machine", "quietest under desk
 // elliptical", "ellipticals with quiet operation", "quiet elliptical", "quietest elliptical", "quiet under
 // desk elliptical", "noise free elliptical", "elliptical for light sleepers", "do they make any noise",

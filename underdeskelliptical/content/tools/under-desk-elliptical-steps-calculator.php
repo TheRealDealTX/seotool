@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'body' => <<<'HTML'
 <h2>Does an under desk elliptical count as steps?</h2>

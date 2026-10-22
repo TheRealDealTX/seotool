@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'title' => 'Terms of Use | Under Desk Elliptical',
     'description' => 'Terms of use for underdeskelliptical.com, including our health disclaimer, affiliate relationships and content usage.',

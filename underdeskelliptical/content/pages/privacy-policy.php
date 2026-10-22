@@ -1,4 +1,5 @@
 <?php
+if (!defined('ROOT')) { http_response_code(404); exit; }
 return [
     'title' => 'Privacy Policy | Under Desk Elliptical',
     'description' => 'The Under Desk Elliptical privacy policy: what information we collect, how cookies and affiliate links work, and your choices.',
