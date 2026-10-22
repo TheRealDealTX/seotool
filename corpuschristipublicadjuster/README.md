@@ -73,10 +73,10 @@ and `tools/notes/storm-facts.md`.
     so a direct request returns an empty page; `cron/` scripts refuse non-CLI requests;
   * logs (`data/logs/*.log.php`) and the form-signing secret (`data/secret.php`) are PHP files whose first line
     returns 404 and exits, so they are never readable over HTTP.
-* **Email:** forms go to info@corpuschristipublicadjuster.com. `public_html/includes/config.local.php` on the
-  server (not in git) currently sets `allow_mail_fallback => true`, so mail is sent with the server's PHP
-  `mail()`. To send through the Hostinger mailbox instead (better deliverability), add
-  `'smtp_pass' => '<mailbox password>'` to that file. Verified with a live test submission on 2026-10-22.
+* **Email:** forms go to info@corpuschristipublicadjuster.com over authenticated SMTP
+  (smtp.hostinger.com:465 SSL, user info@corpuschristipublicadjuster.com). The mailbox password lives only on
+  the server in `public_html/includes/config.local.php` (not in git; guarded so a direct request returns an
+  empty page), which also turns the PHP `mail()` fallback off. Verified with a live test submission on 2026-10-22.
 * **Cron (website cron jobs):** `*/15 * * * *` refresh-weather.php · `7 * * * *` update-weather-events.php ·
   `23 8 * * *` maintenance.php · `41 9 * * 1` update-storm-history.php
   (each `/usr/bin/php /home/u914589053/websites/j0WNY4Y29/public_html/cron/<script>`).
