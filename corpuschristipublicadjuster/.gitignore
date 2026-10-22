@@ -1,0 +1,7 @@
+site/data/cache/*
+!site/data/cache/.htaccess
+site/data/logs/*
+!site/data/logs/.htaccess
+site/data/ratelimit/*
+!site/data/ratelimit/.htaccess
+site/includes/config.local.php

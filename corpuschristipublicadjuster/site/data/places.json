@@ -1,0 +1,600 @@
+{
+ "source": "U.S. Census Bureau 2024 Gazetteer Files (internal points of places and ZCTAs); Calallen, Flour Bluff, North Padre Island, Mustang Island and Annaville are approximate neighborhood centers",
+ "places": [
+  {
+   "name": "Agua Dulce",
+   "lat": 27.7827,
+   "lon": -97.9099,
+   "kind": "city"
+  },
+  {
+   "name": "Alfred",
+   "lat": 27.8741,
+   "lon": -97.9799,
+   "kind": "community"
+  },
+  {
+   "name": "Annaville",
+   "lat": 27.8475,
+   "lon": -97.55,
+   "kind": "community"
+  },
+  {
+   "name": "Aransas Pass",
+   "lat": 27.915,
+   "lon": -97.1032,
+   "kind": "city"
+  },
+  {
+   "name": "Banquete",
+   "lat": 27.8,
+   "lon": -97.7961,
+   "kind": "community"
+  },
+  {
+   "name": "Bayside",
+   "lat": 28.096,
+   "lon": -97.2109,
+   "kind": "city"
+  },
+  {
+   "name": "Bishop",
+   "lat": 27.5853,
+   "lon": -97.7974,
+   "kind": "city"
+  },
+  {
+   "name": "Calallen",
+   "lat": 27.8697,
+   "lon": -97.6297,
+   "kind": "community"
+  },
+  {
+   "name": "Corpus Christi",
+   "lat": 27.7543,
+   "lon": -97.1734,
+   "kind": "city"
+  },
+  {
+   "name": "Del Sol",
+   "lat": 28.0132,
+   "lon": -97.5202,
+   "kind": "community"
+  },
+  {
+   "name": "Driscoll",
+   "lat": 27.673,
+   "lon": -97.751,
+   "kind": "city"
+  },
+  {
+   "name": "Edgewater Estates",
+   "lat": 28.0969,
+   "lon": -97.865,
+   "kind": "community"
+  },
+  {
+   "name": "Edroy",
+   "lat": 27.9609,
+   "lon": -97.6754,
+   "kind": "community"
+  },
+  {
+   "name": "Falman",
+   "lat": 27.928,
+   "lon": -97.1713,
+   "kind": "community"
+  },
+  {
+   "name": "Flour Bluff",
+   "lat": 27.6575,
+   "lon": -97.2981,
+   "kind": "community"
+  },
+  {
+   "name": "Fulton",
+   "lat": 28.0724,
+   "lon": -97.0389,
+   "kind": "city"
+  },
+  {
+   "name": "Gregory",
+   "lat": 27.9232,
+   "lon": -97.2909,
+   "kind": "city"
+  },
+  {
+   "name": "Holiday Beach",
+   "lat": 28.1671,
+   "lon": -97.008,
+   "kind": "community"
+  },
+  {
+   "name": "Ingleside",
+   "lat": 27.8706,
+   "lon": -97.2079,
+   "kind": "city"
+  },
+  {
+   "name": "Ingleside on the Bay",
+   "lat": 27.8298,
+   "lon": -97.2213,
+   "kind": "city"
+  },
+  {
+   "name": "K-Bar Ranch",
+   "lat": 27.9928,
+   "lon": -97.9267,
+   "kind": "community"
+  },
+  {
+   "name": "Kingsville",
+   "lat": 27.5092,
+   "lon": -97.861,
+   "kind": "city"
+  },
+  {
+   "name": "La Paloma Addition",
+   "lat": 28.017,
+   "lon": -97.5009,
+   "kind": "community"
+  },
+  {
+   "name": "La Paloma-Lost Creek",
+   "lat": 27.7195,
+   "lon": -97.7392,
+   "kind": "community"
+  },
+  {
+   "name": "Lake City",
+   "lat": 28.0831,
+   "lon": -97.8826,
+   "kind": "city"
+  },
+  {
+   "name": "Lakeshore Gardens-Hidden Acres",
+   "lat": 28.127,
+   "lon": -97.8698,
+   "kind": "community"
+  },
+  {
+   "name": "Lakeside",
+   "lat": 28.1031,
+   "lon": -97.8611,
+   "kind": "city"
+  },
+  {
+   "name": "Lamar",
+   "lat": 28.1403,
+   "lon": -96.9878,
+   "kind": "community"
+  },
+  {
+   "name": "Loma Linda",
+   "lat": 28.007,
+   "lon": -97.4994,
+   "kind": "community"
+  },
+  {
+   "name": "Mathis",
+   "lat": 28.0909,
+   "lon": -97.817,
+   "kind": "city"
+  },
+  {
+   "name": "Morgan Farm",
+   "lat": 28.0055,
+   "lon": -97.5536,
+   "kind": "community"
+  },
+  {
+   "name": "Mustang Island",
+   "lat": 27.72,
+   "lon": -97.16,
+   "kind": "community"
+  },
+  {
+   "name": "North Padre Island",
+   "lat": 27.6075,
+   "lon": -97.2186,
+   "kind": "community"
+  },
+  {
+   "name": "North San Pedro",
+   "lat": 27.8027,
+   "lon": -97.682,
+   "kind": "community"
+  },
+  {
+   "name": "Odem",
+   "lat": 27.9462,
+   "lon": -97.5875,
+   "kind": "city"
+  },
+  {
+   "name": "Orange Grove",
+   "lat": 27.9562,
+   "lon": -97.9386,
+   "kind": "city"
+  },
+  {
+   "name": "Paisano Park",
+   "lat": 28.0951,
+   "lon": -97.8592,
+   "kind": "community"
+  },
+  {
+   "name": "Petronila",
+   "lat": 27.6712,
+   "lon": -97.6322,
+   "kind": "city"
+  },
+  {
+   "name": "Port Aransas",
+   "lat": 27.8209,
+   "lon": -97.0892,
+   "kind": "city"
+  },
+  {
+   "name": "Portland",
+   "lat": 27.889,
+   "lon": -97.3316,
+   "kind": "city"
+  },
+  {
+   "name": "Rancho Banquete",
+   "lat": 27.8094,
+   "lon": -97.8455,
+   "kind": "community"
+  },
+  {
+   "name": "Rancho Chico",
+   "lat": 28.0242,
+   "lon": -97.4966,
+   "kind": "community"
+  },
+  {
+   "name": "Ricardo",
+   "lat": 27.4186,
+   "lon": -97.8476,
+   "kind": "community"
+  },
+  {
+   "name": "Riviera",
+   "lat": 27.2995,
+   "lon": -97.7981,
+   "kind": "community"
+  },
+  {
+   "name": "Robstown",
+   "lat": 27.794,
+   "lon": -97.6692,
+   "kind": "city"
+  },
+  {
+   "name": "Rockport",
+   "lat": 28.0476,
+   "lon": -97.05,
+   "kind": "city"
+  },
+  {
+   "name": "San Patricio",
+   "lat": 27.9843,
+   "lon": -97.7702,
+   "kind": "city"
+  },
+  {
+   "name": "Sandia",
+   "lat": 28.0212,
+   "lon": -97.8676,
+   "kind": "community"
+  },
+  {
+   "name": "Sandy Hollow-Escondidas",
+   "lat": 27.9282,
+   "lon": -97.8015,
+   "kind": "community"
+  },
+  {
+   "name": "Sarita",
+   "lat": 27.2229,
+   "lon": -97.7956,
+   "kind": "community"
+  },
+  {
+   "name": "Sinton",
+   "lat": 28.0372,
+   "lon": -97.5015,
+   "kind": "city"
+  },
+  {
+   "name": "Skidmore",
+   "lat": 28.2684,
+   "lon": -97.6853,
+   "kind": "community"
+  },
+  {
+   "name": "South La Paloma",
+   "lat": 27.8988,
+   "lon": -97.9678,
+   "kind": "community"
+  },
+  {
+   "name": "Spring Gardens",
+   "lat": 27.7615,
+   "lon": -97.7419,
+   "kind": "community"
+  },
+  {
+   "name": "St. Paul",
+   "lat": 28.091,
+   "lon": -97.5632,
+   "kind": "community"
+  },
+  {
+   "name": "Taft",
+   "lat": 27.98,
+   "lon": -97.3928,
+   "kind": "city"
+  },
+  {
+   "name": "Taft Southwest",
+   "lat": 27.9712,
+   "lon": -97.4054,
+   "kind": "community"
+  },
+  {
+   "name": "Tierra Grande",
+   "lat": 27.7037,
+   "lon": -97.5718,
+   "kind": "community"
+  },
+  {
+   "name": "Tierra Verde",
+   "lat": 27.7616,
+   "lon": -97.7174,
+   "kind": "community"
+  },
+  {
+   "name": "Tradewinds",
+   "lat": 27.995,
+   "lon": -97.2602,
+   "kind": "community"
+  },
+  {
+   "name": "Tynan",
+   "lat": 28.1708,
+   "lon": -97.7492,
+   "kind": "community"
+  },
+  {
+   "name": "Westdale",
+   "lat": 27.9657,
+   "lon": -97.9937,
+   "kind": "community"
+  },
+  {
+   "name": "Woodsboro",
+   "lat": 28.2378,
+   "lon": -97.3254,
+   "kind": "city"
+  }
+ ],
+ "zips": [
+  {
+   "zip": "78330",
+   "lat": 27.7558,
+   "lon": -97.926
+  },
+  {
+   "zip": "78336",
+   "lat": 27.9279,
+   "lon": -97.1713
+  },
+  {
+   "zip": "78339",
+   "lat": 27.8,
+   "lon": -97.7961
+  },
+  {
+   "zip": "78340",
+   "lat": 28.1207,
+   "lon": -97.1969
+  },
+  {
+   "zip": "78343",
+   "lat": 27.626,
+   "lon": -97.7662
+  },
+  {
+   "zip": "78347",
+   "lat": 27.5734,
+   "lon": -97.4864
+  },
+  {
+   "zip": "78351",
+   "lat": 27.6678,
+   "lon": -97.7526
+  },
+  {
+   "zip": "78352",
+   "lat": 27.9815,
+   "lon": -97.6898
+  },
+  {
+   "zip": "78358",
+   "lat": 28.0679,
+   "lon": -97.0422
+  },
+  {
+   "zip": "78359",
+   "lat": 27.9302,
+   "lon": -97.3005
+  },
+  {
+   "zip": "78362",
+   "lat": 27.854,
+   "lon": -97.1965
+  },
+  {
+   "zip": "78363",
+   "lat": 27.4368,
+   "lon": -97.8538
+  },
+  {
+   "zip": "78368",
+   "lat": 28.1137,
+   "lon": -97.8016
+  },
+  {
+   "zip": "78370",
+   "lat": 27.9355,
+   "lon": -97.6056
+  },
+  {
+   "zip": "78373",
+   "lat": 27.7763,
+   "lon": -97.1304
+  },
+  {
+   "zip": "78374",
+   "lat": 27.8854,
+   "lon": -97.3002
+  },
+  {
+   "zip": "78379",
+   "lat": 27.3066,
+   "lon": -97.7804
+  },
+  {
+   "zip": "78380",
+   "lat": 27.7761,
+   "lon": -97.7419
+  },
+  {
+   "zip": "78382",
+   "lat": 28.1132,
+   "lon": -97.0463
+  },
+  {
+   "zip": "78383",
+   "lat": 28.0728,
+   "lon": -97.9441
+  },
+  {
+   "zip": "78387",
+   "lat": 28.081,
+   "lon": -97.5489
+  },
+  {
+   "zip": "78389",
+   "lat": 28.2463,
+   "lon": -97.6508
+  },
+  {
+   "zip": "78390",
+   "lat": 28.0077,
+   "lon": -97.3499
+  },
+  {
+   "zip": "78391",
+   "lat": 28.1796,
+   "lon": -97.7084
+  },
+  {
+   "zip": "78393",
+   "lat": 28.1852,
+   "lon": -97.3545
+  },
+  {
+   "zip": "78401",
+   "lat": 27.7968,
+   "lon": -97.3991
+  },
+  {
+   "zip": "78402",
+   "lat": 27.8518,
+   "lon": -97.4392
+  },
+  {
+   "zip": "78404",
+   "lat": 27.7679,
+   "lon": -97.3994
+  },
+  {
+   "zip": "78405",
+   "lat": 27.774,
+   "lon": -97.4387
+  },
+  {
+   "zip": "78406",
+   "lat": 27.772,
+   "lon": -97.5155
+  },
+  {
+   "zip": "78407",
+   "lat": 27.8076,
+   "lon": -97.4477
+  },
+  {
+   "zip": "78408",
+   "lat": 27.7996,
+   "lon": -97.4437
+  },
+  {
+   "zip": "78409",
+   "lat": 27.8278,
+   "lon": -97.5096
+  },
+  {
+   "zip": "78410",
+   "lat": 27.8377,
+   "lon": -97.5931
+  },
+  {
+   "zip": "78411",
+   "lat": 27.7292,
+   "lon": -97.3851
+  },
+  {
+   "zip": "78412",
+   "lat": 27.7036,
+   "lon": -97.345
+  },
+  {
+   "zip": "78413",
+   "lat": 27.6858,
+   "lon": -97.406
+  },
+  {
+   "zip": "78414",
+   "lat": 27.6624,
+   "lon": -97.3715
+  },
+  {
+   "zip": "78415",
+   "lat": 27.659,
+   "lon": -97.4951
+  },
+  {
+   "zip": "78416",
+   "lat": 27.7493,
+   "lon": -97.4376
+  },
+  {
+   "zip": "78417",
+   "lat": 27.7375,
+   "lon": -97.4677
+  },
+  {
+   "zip": "78418",
+   "lat": 27.3891,
+   "lon": -97.3291
+  },
+  {
+   "zip": "78419",
+   "lat": 27.697,
+   "lon": -97.2692
+  }
+ ]
+}
