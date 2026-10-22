@@ -49,6 +49,11 @@ if (preg_match('#^/([a-z_-]+\.xml)$#', $norm, $m) && in_array($m[1], $sitemaps))
     exit;
 }
 
+if ($norm === '/llms.txt') {
+    require ROOT . '/templates/llms.php';
+    exit;
+}
+
 // ---- WordPress leftovers ----
 if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php|wp-signup\.php|wp-cron\.php)(/|$)#', $norm)) {
     redirect('/');
