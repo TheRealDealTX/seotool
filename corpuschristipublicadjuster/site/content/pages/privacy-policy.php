@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Privacy Policy',
     'seo_title'   => 'Privacy Policy | Corpus Christi Public Adjuster Website',
+    'title_short' => 'Privacy Policy | Corpus Christi PA',   // shown before the phone number in <title>
     'description' => 'How Corpus Christi Public Adjuster collects, uses, and protects information sent through our website, claim review form, uploads, tools, and weather pages.',
     'lead'        => 'What information this website collects, how we use it, and the choices you have. Last updated October 22, 2026.',
     'kicker'      => 'Legal',
@@ -12,7 +13,7 @@ return [
         ['q' => 'Where do my form submissions go?', 'a' => '<p>Every Free Claim Review and contact form submission is emailed to info@corpuschristipublicadjuster.com. Submissions are not stored in a website database.</p>'],
         ['q' => 'Are my uploaded photos stored on the website?', 'a' => '<p>No. Files you upload with a request are attached to the email sent to info@corpuschristipublicadjuster.com and are not kept on the web server after the message is sent.</p>'],
         ['q' => 'Do you sell my personal information?', 'a' => '<p>No. We do not sell or rent personal information, and we do not share it with third parties for their own marketing.</p>'],
-        ['q' => 'Does this website use tracking cookies?', 'a' => '<p>The website itself sets no cookies. It uses your browser\'s local storage only for a few convenience features, such as remembering that you closed the claim review pop-up. No analytics service is enabled by default; if that changes, this policy will be updated.</p>'],
+        ['q' => 'Does this website use tracking cookies?', 'a' => '<p>The website uses Google Analytics, which sets first-party cookies to count visits and see how pages are used. The site\'s own code sets no cookies; it uses your browser\'s local storage only for a few convenience features, such as remembering that you closed the claim review pop-up. We use no advertising cookies or ad retargeting.</p>'],
     ],
     'body' => <<<'HTML'
 <p><strong>Last updated: October 22, 2026</strong></p>
@@ -55,9 +56,9 @@ return [
 
 <h2>Cookies, local storage, and analytics</h2>
 <ul>
-<li><strong>No cookies.</strong> The website itself does not set cookies, and we use no advertising cookies or ad retargeting.</li>
+<li><strong>Cookies.</strong> The website\'s own code does not set cookies. Google Analytics (below) sets first-party analytics cookies. We use no advertising cookies or ad retargeting.</li>
 <li><strong>Pop-up preference.</strong> The Free Claim Review pop-up uses your browser's local storage and session storage to remember that it was shown, closed, or submitted, so it does not keep reappearing. This stays on your device and is not sent to us.</li>
-<li><strong>Analytics.</strong> No analytics service is enabled by default. If we turn on Google Analytics or a similar service, we will update this policy when it is enabled.</li>
+<li><strong>Analytics.</strong> We use Google Analytics 4 to understand how visitors use the site (pages viewed, approximate location, device and browser type, and how you arrived). Google processes this data under its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>. We do not send form contents to Google Analytics. You can block analytics cookies in your browser settings or with Google\'s <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">opt-out add-on</a>.</li>
 </ul>
 <p>You can clear local storage at any time through your browser settings.</p>
 

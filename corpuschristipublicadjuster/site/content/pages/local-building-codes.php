@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Building Codes & Insurance Repairs',
     'seo_title'   => 'Corpus Christi Building Codes & Insurance Repairs Guide',
+    'title_short' => 'Corpus Christi Building Codes & Repairs',   // shown before the phone number in <title>
     'description' => 'Corpus Christi building codes for insurance repairs: 2021 codes adopted Aug. 1, 2023, re-roof permits, WPI-1 and WPI-8 windstorm rules, and code upgrades.',
     'lead'        => 'How the City of Corpus Christi\'s adopted codes, re-roof permits, and the TDI windstorm program affect storm repairs, and how ordinance or law coverage fits into an insurance claim.',
     'kicker'      => 'Local Resource',

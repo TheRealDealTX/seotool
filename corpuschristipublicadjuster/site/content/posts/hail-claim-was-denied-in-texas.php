@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'What to Do If Your Hail Claim Was Denied in Texas',
     'seo_title'   => 'Hail Claim Denied in Texas? Next Steps for Corpus Christi',
+    'title_short' => 'Hail Claim Denied in Texas? Next Steps',   // shown before the phone number in <title>
     'description' => 'Hail claim denied in Texas? Why Corpus Christi hail claims get denied, how TWIA and private-insurer disputes differ, and the steps and deadlines to know.',
     'kicker'      => 'Hail Claims',
     'image'       => '/wp-content/uploads/2026/04/Hail-Claim-Was-Denied-in-Texas-1.webp',

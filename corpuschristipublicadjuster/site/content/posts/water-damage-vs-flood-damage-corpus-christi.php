@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Water Damage vs. Flood Damage in Corpus Christi: What’s Covered',
     'seo_title'   => 'Water Damage vs. Flood Damage in Corpus Christi Claims',
+    'title_short' => 'Water vs. Flood Damage in Corpus Christi',   // shown before the phone number in <title>
     'description' => 'Water damage vs. flood damage in Corpus Christi: sudden water losses, NFIP flood basics, flash flooding, and what the city’s CRS Class 8 status means.',
     'kicker'      => 'Water & Flood Claims',
     'image'       => '/assets/img/featured/water-damage-vs-flood-damage-corpus-christi.webp',

@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Windstorm Certificates (WPI-8) and Insurance Claim Repairs',
     'seo_title'   => 'Windstorm Certificate WPI-8 and Insurance Claim Repairs',
+    'title_short' => 'Windstorm Certificates (WPI-8) & Claims',   // shown before the phone number in <title>
     'description' => 'How the windstorm certificate WPI-8 and the WPI-1 application affect insurance claim repairs in Corpus Christi, plus city permits and 2024 IRC/IBC rules.',
     'kicker'      => 'TWIA & Windstorm',
     'image'       => '/assets/img/featured/windstorm-certificate-wpi-8-insurance-claims.webp',

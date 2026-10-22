@@ -4,6 +4,7 @@ return [
     'template'    => 'contact',
     'title'       => 'Request a Free Claim Review',
     'seo_title'   => 'Free Claim Review | Corpus Christi Public Adjuster',
+    'title_short' => 'Free Claim Review in Corpus Christi',   // shown before the phone number in <title>
     'description' => 'Request a free claim review from Corpus Christi Public Adjuster. We review your policy, damage, and insurer estimate and explain options. No obligation.',
     'lead'        => 'Tell us about your property damage and claim. A licensed Texas public adjuster will review it and give you an honest answer about your options.',
     'kicker'      => 'Free Claim Review',

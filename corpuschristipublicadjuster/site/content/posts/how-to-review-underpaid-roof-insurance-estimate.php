@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'How to Review an Underpaid Roof Insurance Estimate',
     'seo_title'   => 'How to Review an Underpaid Roof Insurance Estimate',
+    'title_short' => 'Reviewing an Underpaid Roof Estimate',   // shown before the phone number in <title>
     'description' => 'How to review an underpaid roof insurance estimate line by line: Xactimate items, waste, flashing, and Corpus Christi windstorm and permit requirements.',
     'kicker'      => 'Roof Claims',
     'image'       => '/assets/img/featured/how-to-review-underpaid-roof-insurance-estimate.webp',

@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Why Property Insurance Claims Are Delayed in Texas (and What to Do)',
     'seo_title'   => 'Why Property Insurance Claims Are Delayed in Texas',
+    'title_short' => 'Why Texas Insurance Claims Get Delayed',   // shown before the phone number in <title>
     'description' => 'Why property insurance claims are delayed in Texas, the Chapter 542 and TWIA deadlines insurers must follow, and practical steps for Corpus Christi owners.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/why-property-insurance-claims-are-delayed-texas.webp',

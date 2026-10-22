@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Using NOAA Weather Records to Document Property Damage in Corpus Christi',
     'seo_title'   => 'NOAA Weather Records for Corpus Christi Damage Claims',
+    'title_short' => 'NOAA Records for Corpus Christi Claims',   // shown before the phone number in <title>
     'description' => 'How to use NOAA weather records to document property damage in Corpus Christi: NCEI Storm Events, NWS storm reports, tide data, and their limits.',
     'kicker'      => 'Weather Records',
     'image'       => '/assets/img/featured/noaa-weather-records-document-property-damage-corpus-christi.webp',

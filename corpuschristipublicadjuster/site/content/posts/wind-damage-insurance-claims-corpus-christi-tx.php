@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Wind Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Wind Damage Insurance Claims in Corpus Christi, TX',
+    'title_short' => 'Wind Damage Claims in Corpus Christi, TX',   // shown before the phone number in <title>
     'description' => 'Wind damage insurance claims in Corpus Christi, TX beyond hurricanes: squall lines, the May 8, 2025 windstorm, peak wind months, and claim documentation.',
     'kicker'      => 'Wind & Storm Claims',
     'image'       => '/assets/img/featured/wind-damage-insurance-claims-corpus-christi-tx.webp',

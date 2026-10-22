@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Areas We Serve on the Coastal Bend',
     'seo_title'   => 'Areas We Serve | Coastal Bend Public Adjuster Service Areas',
+    'title_short' => 'Areas We Serve on the Coastal Bend',   // shown before the phone number in <title>
     'description' => 'Coastal Bend public adjuster serving Corpus Christi, Portland, Rockport, Port Aransas, Padre Island, Robstown, Kingsville, and nearby communities.',
     'lead'        => 'We help homeowners and business owners across Corpus Christi, Nueces County, and the surrounding Coastal Bend with hurricane, wind, hail, water, fire, and flood-related property claims.',
     'kicker'      => 'Service Areas',

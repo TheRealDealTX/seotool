@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Hurricane Damage Claims: A Homeowner’s Guide',
     'seo_title'   => 'Corpus Christi Hurricane Damage Claims: Homeowner Guide',
+    'title_short' => 'Hurricane Claim Guide for Corpus Christi',   // shown before the phone number in <title>
     'description' => 'Corpus Christi hurricane damage claims explained: steps before and after landfall, the three-policy setup (homeowners, TWIA, flood), and storm history.',
     'kicker'      => 'Hurricane Claims',
     'image'       => '/assets/img/featured/hurricane-damage-claims-corpus-christi-guide.webp',

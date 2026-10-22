@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Public Adjuster vs. Insurance Adjuster for Hail Claims in Texas',
     'seo_title'   => 'Public Adjuster vs. Insurance Adjuster for Texas Hail Claims',
+    'title_short' => 'Public vs. Insurance Adjuster: Hail Claims',   // shown before the phone number in <title>
     'description' => 'Public adjuster vs. insurance adjuster for hail claims in Texas: who each represents, how each is paid, TWIA deadlines, and when to get help.',
     'kicker'      => 'Hail Claims',
     'image'       => '/wp-content/uploads/2026/04/Public-Adjuster-vs.-Insurance-Adjuster-for-Hail-Claims-in-Texas-1.webp',

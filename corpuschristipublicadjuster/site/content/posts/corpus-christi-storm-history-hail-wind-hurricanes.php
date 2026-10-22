@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Corpus Christi Storm History: Hail, Wind, Tornadoes, and Hurricanes',
     'seo_title'   => 'Corpus Christi Storm History: Hail, Wind & Hurricanes',
+    'title_short' => 'Corpus Christi Storm Data: Hail, Wind & More',   // shown before the phone number in <title>
     'description' => 'Corpus Christi storm history from NOAA data: Nueces County hail and wind by month, the largest hail, the May 2025 windstorm, tornadoes, and hurricanes.',
     'kicker'      => 'Weather Records',
     'image'       => '/assets/img/featured/corpus-christi-storm-history-hail-wind-hurricanes.webp',

@@ -67,6 +67,8 @@ while queue:
         bad(path, 'missing meta description')
     elif len(desc) > 160:
         bad(path, f'description {len(desc)} chars')
+    if not noindex and '(832) 503-5866' not in title:
+        bad(path, f'phone number missing from title: {title}')
     if len(title) > 70:
         bad(path, f'title {len(title)} chars: {title}')
     can = re.search(r'<link rel="canonical" href="([^"]+)"', t)

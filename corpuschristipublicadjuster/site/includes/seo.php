@@ -6,13 +6,27 @@
 declare(strict_types=1);
 defined('CCPA_ROOT') || exit;
 
+/**
+ * <title>: "<topic> | (832) 503-5866" so the phone number shows in Google results.
+ * Google cuts titles off at roughly 60 characters, so the topic is the first one of
+ * these that keeps the whole title within 63: title_short, the part of seo_title
+ * before " | ", the part of title before " | ", or seo_title before a colon.
+ */
 function seo_title(array $page): string
 {
-    if (!empty($page['seo_title'])) {
-        return $page['seo_title'];
+    $phone = ' | ' . cfg('phone_short');
+    if (($page['path'] ?? '') === '/') {
+        return cfg('site_name') . $phone;
     }
-    $t = $page['title'] ?? cfg('site_name');
-    return $page['path'] === '/' ? $t : $t . ' | ' . cfg('site_name');
+    $base = $page['seo_title'] ?? (($page['title'] ?? cfg('site_name')) . ' | ' . cfg('site_name'));
+    $candidates = [$page['title_short'] ?? '', explode(' | ', $base)[0], explode(' | ', $page['title'] ?? '')[0], preg_replace('/:.*$/', '', $base)];
+    foreach ($candidates as $c) {
+        $c = trim((string) $c);
+        if ($c !== '' && mb_strlen($c . $phone) <= 63) {
+            return $c . $phone;
+        }
+    }
+    return trim($candidates[1]) . $phone;
 }
 
 function og_image(array $page): string

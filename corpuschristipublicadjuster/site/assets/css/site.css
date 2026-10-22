@@ -1092,3 +1092,24 @@ thead th { background: #0a1120; }
 .hero h1 .accent .w { background: inherit; -webkit-background-clip: text; background-clip: text; color: transparent; }
 .hero h1 .accent { background-size: 100% 100%; }
 [hidden] { display: none !important; }
+
+/* ---- Mobile navigation (≤1020px) ----
+   backdrop-filter on the header would make it the containing block for the fixed
+   drawer (clipping it to the header's height), so mobile uses a solid header. */
+@media (max-width: 1020px) {
+  .site-header, .site-header.is-scrolled { background: #fff; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .header-inner, .site-header.is-scrolled .header-inner { height: 68px; }
+  .main-nav { position: fixed; top: 0; right: 0; bottom: 0; left: auto; height: 100vh; height: 100dvh; width: min(380px, 88vw);
+    padding: 88px 22px calc(28px + env(safe-area-inset-bottom)); overflow-y: auto; overscroll-behavior: contain; z-index: 90; }
+  .sub-menu { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(255, 255, 255, .06); }
+  .nav-open .site-header, .nav-open .site-header.is-scrolled { z-index: 130; box-shadow: none; background: #0a1120; border-color: transparent; }
+  .nav-open .header-phone { visibility: hidden; }
+  .nav-open .nav-toggle { background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25); }
+  .nav-open .brand { visibility: hidden; }
+  body.nav-open { overflow: hidden; }
+  .nav-open::after { display: none; }
+  .nav-open .main-nav { box-shadow: 0 0 0 100vmax rgba(7, 12, 23, .6); }
+  .nav-open .mobile-bar, .nav-open .to-top { visibility: hidden; }
+  .nav-item > a { padding: 15px 4px; }
+  .nav-item:last-child { border-bottom: 0; }
+}

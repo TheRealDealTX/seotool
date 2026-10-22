@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Freeze Damage and Burst Pipe Insurance Claims in Corpus Christi',
     'seo_title'   => 'Freeze Damage & Burst Pipe Claims in Corpus Christi',
+    'title_short' => 'Freeze & Burst Pipe Claims, Corpus Christi',   // shown before the phone number in <title>
     'description' => 'Freeze damage and burst pipe claims in Corpus Christi: lessons from February 2021, what policies often cover, and how to document a freeze water loss.',
     'kicker'      => 'Water & Flood Claims',
     'image'       => '/assets/img/featured/freeze-damage-burst-pipe-claims-corpus-christi.webp',

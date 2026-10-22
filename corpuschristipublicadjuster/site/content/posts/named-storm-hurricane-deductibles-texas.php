@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Named-Storm and Hurricane Deductibles in Texas, Explained',
     'seo_title'   => 'Named-Storm & Hurricane Deductibles in Texas, Explained',
+    'title_short' => 'Named-Storm & Hurricane Deductibles, TX',   // shown before the phone number in <title>
     'description' => 'How named-storm and hurricane deductibles work in Texas: percentage of Coverage A, worked dollar examples, what triggers them, and how they affect payment.',
     'kicker'      => 'Hurricane Claims',
     'image'       => '/assets/img/featured/named-storm-hurricane-deductibles-texas.webp',

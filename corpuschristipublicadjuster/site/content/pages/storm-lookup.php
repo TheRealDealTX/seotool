@@ -4,6 +4,7 @@ return [
     'template'    => 'storm-lookup',
     'title'       => 'Storm Event Lookup for Coastal Bend Properties',
     'seo_title'   => 'Storm Event Lookup | Hail & Wind Reports Near Corpus Christi',
+    'title_short' => 'Storm Lookup Near Corpus Christi',   // shown before the phone number in <title>
     'description' => 'Storm event lookup for Corpus Christi and the Coastal Bend: search NOAA and NWS hail, wind, flood, and tropical reports near your city or ZIP code by date.',
     'lead'        => 'Search official NOAA and National Weather Service storm reports near a Coastal Bend city or ZIP code to see what was recorded around your date of loss.',
     'kicker'      => 'Interactive Tool',

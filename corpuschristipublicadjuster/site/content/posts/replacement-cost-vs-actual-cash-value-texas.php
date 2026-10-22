@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Replacement Cost vs. Actual Cash Value in Texas Property Claims',
     'seo_title'   => 'Replacement Cost vs. Actual Cash Value in Texas Claims',
+    'title_short' => 'Replacement Cost vs. ACV in Texas',   // shown before the phone number in <title>
     'description' => 'Replacement cost vs. actual cash value in Texas: how depreciation, holdback, and roof schedules shape what Corpus Christi owners are paid on a claim.',
     'kicker'      => 'Claim Process',
     'image'       => '/assets/img/featured/replacement-cost-vs-actual-cash-value-texas.webp',

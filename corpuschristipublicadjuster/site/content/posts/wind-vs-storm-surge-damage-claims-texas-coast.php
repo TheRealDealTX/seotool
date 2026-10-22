@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'Wind vs. Storm Surge Damage Claims on the Texas Coast',
     'seo_title'   => 'Wind vs. Storm Surge Damage Claims on the Texas Coast',
+    'title_short' => 'Wind vs. Storm Surge Claims, Texas Coast',   // shown before the phone number in <title>
     'description' => 'Wind vs. storm surge damage claims on the Texas coast: why TWIA and flood insurers split losses, and how water lines, debris, and NOAA tide data help.',
     'kicker'      => 'Hurricane Claims',
     'image'       => '/assets/img/featured/wind-vs-storm-surge-damage-claims-texas-coast.webp',

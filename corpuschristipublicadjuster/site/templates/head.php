@@ -10,6 +10,15 @@ $ogType = ($page['_type'] ?? '') === 'post' ? 'article' : 'website';
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPXXY45ZMJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPXXY45ZMJ');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <?php if ($desc): ?><meta name="description" content="<?= e($desc) ?>">

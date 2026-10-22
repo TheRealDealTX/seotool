@@ -3,6 +3,7 @@ defined('CCPA_ROOT') || exit;
 return [
     'title'       => 'How to Document Commercial Property Damage After a Storm',
     'seo_title'   => 'Document Commercial Storm Damage in Corpus Christi',
+    'title_short' => 'Documenting Commercial Storm Damage',   // shown before the phone number in <title>
     'description' => 'How to document commercial property damage after a storm in Corpus Christi: building, inventory, and business income records for hotels and marinas.',
     'kicker'      => 'Commercial Claims',
     'image'       => '/assets/img/featured/document-commercial-property-damage-after-storm.webp',

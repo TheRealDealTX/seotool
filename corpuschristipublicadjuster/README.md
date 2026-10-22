@@ -80,8 +80,11 @@ and `tools/notes/storm-facts.md`.
 * **Cron (website cron jobs):** `*/15 * * * *` refresh-weather.php · `7 * * * *` update-weather-events.php ·
   `23 8 * * *` maintenance.php · `41 9 * * 1` update-storm-history.php
   (each `/usr/bin/php /home/u914589053/websites/j0WNY4Y29/public_html/cron/<script>`).
-* **Old WordPress site:** Agency website UID `cSSyXpzsS` was **not deleted** — the domain was only unlinked
-  from it, so its files and database are intact. Rollback: unlink the domain from `j0WNY4Y29` and link it back
-  to `cSSyXpzsS` (`agency-hosting_domains_unlink-from-website` / `agency-hosting_domains_link-to-website`).
-  Delete it in hPanel once you no longer need it.
+* **Old WordPress site:** Agency website UID `cSSyXpzsS` was deleted on 2026-10-22 at the owner's request.
+  Its pages, posts, REST exports and every media file are archived in `tools/original-content/` and
+  `site/wp-content/uploads/`.
+* **Google Analytics:** GA4 tag `G-BPXXY45ZMJ` is hard-coded at the top of `templates/head.php` on every page
+  (the Privacy Policy discloses it). Leave `analytics_id` in `includes/config.php` empty to avoid a second tag.
+* **Titles:** every `<title>` is "<topic> | (832) 503-5866" and at most 63 characters so the phone number
+  shows in Google results (`seo_title()` in `includes/seo.php`; optional per-page `title_short`).
 * **Testing a live host:** the CDN rate-limits fast crawls; use `CRAWL_DELAY=0.8 python3 tools/test/crawl.py https://corpuschristipublicadjuster.com`.
