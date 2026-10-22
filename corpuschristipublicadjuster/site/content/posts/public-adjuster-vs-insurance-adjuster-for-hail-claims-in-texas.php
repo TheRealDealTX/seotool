@@ -103,6 +103,8 @@ return [
 
 <p><strong>The public adjuster</strong>, hired by the owner, starts with the policy to confirm whether hail is covered by TWIA or the homeowners carrier and what the deductible is. They inspect every slope and elevation, document soft metals and the attic, pull NOAA reports for the date, and measure the roof. They compare their scope with the insurer’s estimate line by line, then send a written presentation of the differences with supporting photos and pricing.</p>
 
+<p>On a coastal property, the two may also look at the same damage through different lenses. Salt-air corrosion on vents and flashing, an older roof, or prior repairs can all lead an insurer to attribute damage to wear. A careful file separates new hail impacts from older conditions instead of ignoring the older conditions, which tends to make the evidence more credible to everyone who reviews it.</p>
+
 <p>Neither approach guarantees a particular result. The difference is mostly in who is responsible for finding and presenting the evidence on the owner’s behalf.</p>
 
 <h2>Working with the insurer’s adjuster, with or without help</h2>

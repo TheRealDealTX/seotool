@@ -59,6 +59,8 @@ return [
 </tbody>
 </table>
 
+<p>Composition shingles are common on Corpus Christi homes, and metal roofs are a frequent choice on coastal construction, outbuildings, and island homes. Commercial buildings often have low-slope roofs with rooftop HVAC units, which can take hail damage of their own.</p>
+
 <p>"Cosmetic" does not always mean harmless. Granule loss on shingles exposes the asphalt to UV and heat, which can shorten the roof’s life. Whether that is covered depends on your policy wording.</p>
 
 <h2>Hail on the Coastal Bend: when and how big</h2>

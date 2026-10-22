@@ -84,7 +84,7 @@ return [
 <li><strong>Deductibles.</strong> Wind/hail deductibles are often a percentage of the dwelling limit; check your declarations page and see our <a href="/named-storm-hurricane-deductibles-texas/">deductible guide</a>.</li>
 </ul>
 
-<h2>How a Corpus Christi Public Adjuster May Help With a TWIA Claim</h2>
+<h2>TWIA Claim Help From a Corpus Christi Public Adjuster</h2>
 <p>A Corpus Christi Public Adjuster represents the policyholder only. On a TWIA claim, that may mean reviewing the policy and certificates, inspecting the property, preparing a detailed estimate, assembling weather evidence, responding to TWIA's information requests on time, and tracking each statutory deadline. If TWIA accepts the claim but you disagree with the amount, we can help you evaluate whether appraisal makes sense within the 60-day window. If TWIA denies coverage, we will tell you plainly that the next steps are legal ones and that you should consult a Texas attorney.</p>
 <p>No one can promise how TWIA will decide a claim. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 HTML,

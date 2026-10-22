@@ -41,7 +41,7 @@ return [
 
 <p>Corpus Christi is known for its hurricane exposure, but the area's <strong>storm history</strong> is much broader than tropical systems. Spring hail, violent thunderstorm winds, brief tornadoes, flash flooding, and the occasional hard freeze all appear in the public record. Understanding that history helps property owners know what to watch for, what to insure against, and how to document a claim when something does happen.</p>
 
-<p>This article summarizes what the NOAA NCEI Storm Events Database shows for Nueces County and its neighbors, along with the hurricane history documented by the National Hurricane Center and NOAA's HURDAT list. All counts here are individual reports, not storm days. One storm can generate many reports.</p>
+<p>In this article, Corpus Christi Public Adjuster summarizes what the NOAA NCEI Storm Events Database shows for Nueces County and its neighbors, along with the hurricane history documented by the National Hurricane Center and NOAA's HURDAT list. All counts here are individual reports, not storm days. One storm can generate many reports.</p>
 
 <h2>Nueces County storm reports at a glance</h2>
 
@@ -136,6 +136,10 @@ return [
 <h2>Flash flooding</h2>
 
 <p>With 256 flash flood reports, flooding is one of the most common events in the county record. Recent examples include reports on June 15 and 16, 2026, of water about 4 feet deep near Labonte Park and I-37 (<a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=1332583" target="_blank" rel="noopener">event 1332583</a>) and closed roads around Calallen, Robstown, and Chapman Ranch. Flood damage is generally excluded from homeowners and commercial policies and covered by NFIP or private flood policies. See our <a href="/services/flood-damage-claims/">flood damage claims</a> page.</p>
+
+<h2>Freezes</h2>
+
+<p>Hard freezes are rare in Corpus Christi, but they do happen. The NCEI database lists 12 Frost/Freeze reports for Nueces County. The most notable recent event was February 2021, when NOAA climate data for the Corpus Christi airport show daily record lows of 25°F on February 14, 17°F on February 15, and 19°F on February 16. More recently, the airport and Robstown reported temperatures at or below 32°F for at least two hours on January 25 and 26, 2026 (<a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=1314273" target="_blank" rel="noopener">event 1314273</a>). Freezes matter for property owners mostly because of burst pipes, which tend to show up after the thaw.</p>
 
 <h2>Hurricanes and tropical storms</h2>
 

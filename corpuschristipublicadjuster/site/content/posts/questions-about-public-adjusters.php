@@ -123,6 +123,9 @@ return [
 <h3>Do public adjusters handle flood claims?</h3>
 <p>Some do. NFIP flood policies follow federal rules and their own deadlines and proof-of-loss requirements. If your loss includes flood or storm surge, ask whether the adjuster handles NFIP claims. See our <a href="/services/flood-damage-claims/">flood damage claims</a> page for more.</p>
 
+<h3>How long does a claim take with a public adjuster?</h3>
+<p>It depends on the size of the loss, how quickly the insurer responds, and whether there is a dispute. Texas law sets response deadlines for insurers, such as acknowledging a claim within 15 days under Chapter 542, and TWIA has its own 60-day decision deadline under Chapter 2210. A public adjuster cannot change those timelines, but organized documentation can help avoid repeated requests for more information.</p>
+
 <h3>Can a public adjuster guarantee a bigger settlement?</h3>
 <p>No, and you should be wary of anyone who promises one. Outcomes depend on the policy, the damage, and the evidence.</p>
 

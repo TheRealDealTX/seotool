@@ -155,7 +155,7 @@ return [
 
 <h2>Commercial fire claims</h2>
 
-<p>For businesses, the claim may include the building, tenant improvements, inventory, equipment, and business income. Business income claims depend heavily on financial records, so gather profit and loss statements, tax returns, and payroll records early. See our <a href="/services/commercial-property-claims/">commercial property claims</a> page.</p>
+<p>For businesses, the claim may include the building, tenant improvements, inventory, equipment, and business income. Restaurants, warehouses, and retail spaces each bring their own issues, from commercial kitchen equipment to smoke-damaged stock that cannot be sold. Business income claims depend heavily on financial records, so gather profit and loss statements, tax returns, and payroll records early. See our <a href="/services/commercial-property-claims/">commercial property claims</a> page.</p>
 
 <h2>How a public adjuster can help on a fire claim</h2>
 

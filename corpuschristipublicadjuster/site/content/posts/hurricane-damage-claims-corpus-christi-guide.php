@@ -2,7 +2,7 @@
 return [
     'title'       => 'Corpus Christi Hurricane Damage Claims: A Homeowner’s Guide',
     'seo_title'   => 'Corpus Christi Hurricane Damage Claims: Homeowner Guide',
-    'description' => 'Corpus Christi hurricane damage claims explained: steps before and after landfall, the three-policy setup (homeowners, TWIA, flood), and local storm history.',
+    'description' => 'Corpus Christi hurricane damage claims explained: steps before and after landfall, the three-policy setup (homeowners, TWIA, flood), and storm history.',
     'kicker'      => 'Hurricane Claims',
     'image'       => '/assets/img/featured/hurricane-damage-claims-corpus-christi-guide.webp',
     'image_alt'   => 'Hurricane-damaged roof on a Corpus Christi home with tarps and debris after a Gulf storm',
@@ -71,7 +71,7 @@ return [
 
 <p>Harvey is the storm most local homeowners remember. The NOAA NCEI Storm Events Database entry for <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=720925" target="_blank" rel="noopener">Nueces County</a> notes that the most significant damage in the county was in Port Aransas, where widespread major damage occurred and most homes suffered major roof damage. The <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=718519" target="_blank" rel="noopener">Aransas County entry</a> describes catastrophic damage in Copano Village, Holiday Beach, and Lamar. Hanna was weaker, but the NCEI entry for <a href="https://www.ncdc.noaa.gov/stormevents/eventdetails.jsp?id=912741" target="_blank" rel="noopener">coastal Nueces County</a> reports surge 2 to 4 feet above ground level that damaged parts of the Corpus Christi Marina and numerous piers along Corpus Christi Bay and inundated North Beach.</p>
 
-<p>For a longer timeline, see our <a href="/storm-history/">Corpus Christi storm history page</a>, or look up events near your address with the <a href="/storm-lookup/">storm lookup tool</a>.</p>
+<p>For a longer timeline, including lookups of events near your address, see our <a href="/storm-history/">Corpus Christi storm history page</a>.</p>
 
 <h2>The three-policy reality for coastal homeowners</h2>
 
@@ -120,7 +120,7 @@ return [
 <p>If the storm brought both wind and water, report to your windstorm insurer and your flood insurer, and notify your homeowners carrier if any other covered peril is involved. Write down each claim number, the date you reported, and the name of every person you speak with.</p>
 
 <h3>5. Track your deadlines</h3>
-<p>For TWIA, the claim must be filed no later than one year after the date of damage. TWIA may request missing information within 30 days of filing and must accept or deny in writing within 60 days after it receives the claim or the requested information, whichever is later. Private carriers in Texas generally follow the Prompt Payment of Claims Act in Chapter 542 of the Insurance Code, and those deadlines are extended 15 days after a declared weather-related catastrophe. Our <a href="/claim-deadline-calculator/">claim deadline calculator</a> can help you keep the dates straight.</p>
+<p>For TWIA, the claim must be filed no later than one year after the date of damage. TWIA may request missing information within 30 days of filing and must accept or deny in writing within 60 days after it receives the claim or the requested information, whichever is later. Private carriers in Texas generally follow the Prompt Payment of Claims Act in Chapter 542 of the Insurance Code, and those deadlines are extended 15 days after a declared weather-related catastrophe. Write each date down as it happens so you can keep them straight.</p>
 
 <h3>6. Prepare for the adjuster inspection</h3>
 <p>Have your photos, receipts, and a written list of damage ready. Walk the adjuster through every area, including attic spaces, exterior siding, fencing, and outbuildings. Ask how the adjuster is separating wind damage from water damage, and ask for a copy of the estimate when it is issued.</p>
@@ -134,7 +134,7 @@ return [
 <p>Hurricane estimates sometimes count only the most obvious damage, leaving out items like underlayment, flashing, drip edge, ridge and hip components, gutters, or damage on less visible slopes. Composition shingle, metal, and low-slope roofs each have their own repair considerations.</p>
 
 <h3>Code upgrades and windstorm inspection</h3>
-<p>Corpus Christi enforces local design criteria for wind, and roof repairs in the catastrophe area generally require TDI windstorm inspection. Code-required items are paid only to the extent the policy includes ordinance or law coverage, so it is worth checking that limit before a storm. Our <a href="/local-building-codes/">local building codes page</a> summarizes the city’s adopted codes.</p>
+<p>Corpus Christi enforces local design criteria for wind, and roof repairs in the catastrophe area generally require TDI windstorm inspection. Code-required items are paid only to the extent the policy includes ordinance or law coverage, so it is worth checking that limit before a storm. Our article on <a href="/windstorm-certificate-wpi-8-insurance-claims/">windstorm certificates</a> explains how inspection fits into repairs.</p>
 
 <h3>Depreciation and payment timing</h3>
 <p>Many policies pay actual cash value first and release recoverable depreciation after repairs are completed, often within a deadline set in the policy. Keep your contractor invoices and proof of completion so you can request that holdback.</p>
@@ -143,7 +143,7 @@ return [
 
 <h2>How a public adjuster can help</h2>
 
-<p>A licensed public adjuster represents the policyholder only. On a hurricane loss, that work can include reading each policy, documenting wind, water, and contents damage, preparing a detailed estimate, and handling communication with the windstorm, flood, and homeowners carriers so the pieces fit together. Corpus Christi Public Adjuster is a service of Rise Public Adjusting LLC (TDI license #3356839), serving Corpus Christi, Nueces County, and surrounding Coastal Bend communities, including <a href="/service-areas/port-aransas-tx/">Port Aransas</a> and <a href="/service-areas/rockport-tx/">Rockport</a>.</p>
+<p>A licensed public adjuster represents the policyholder only. On a hurricane loss, that work can include reading each policy, documenting wind, water, and contents damage, preparing a detailed estimate, and handling communication with the windstorm, flood, and homeowners carriers so the pieces fit together. Corpus Christi Public Adjuster is a service of Rise Public Adjusting LLC (TDI license #3356839), serving Corpus Christi, Nueces County, and surrounding Coastal Bend communities, including <a href="/service-areas/port-aransas-tx/">Port Aransas</a> and Rockport.</p>
 
 <p>Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement. Texas law also gives you 72 hours after signing to rescind a public adjuster contract by written notice. A public adjuster is not an attorney; if your claim involves a lawsuit, bad faith allegations, or a deadline to sue, talk to a Texas attorney.</p>
 
