@@ -42,6 +42,7 @@ return [
 
 <h2>How we help Portland property owners</h2>
 <p>We inspect the full property, not only the roof: siding, windows, screens, fences, gutters, HVAC units, and interior water damage. We prepare an itemized estimate, organize photos and documents, and communicate with your insurer or TWIA. If you already have an offer that seems low, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> can show what may be missing, and our <a href="/services/underpaid-insurance-claims/">underpaid claims</a> page explains common reasons for gaps.</p>
+<p>Portland owners often ask whether hail that only "looks" cosmetic is worth reporting. Some policies limit or exclude cosmetic damage to metal roofing or siding, while functional damage such as fractured shingles or punctured panels is usually treated differently. Corpus Christi Public Adjuster reviews your actual policy language before advising on how to present a hail claim.</p>
 <p>To check what has been reported near your address, try our <a href="/storm-lookup/">storm lookup tool</a>. When you are ready, request a <a href="/free-claim-review/">Free Claim Review</a> or call or text [[phone]].</p>
 HTML,
 ];

@@ -65,6 +65,17 @@ return [
 <h2>Windstorm Certificates and Repairs</h2>
 <p>Structures built, altered, remodeled, enlarged, or repaired on or after January 1, 1988 generally need a certificate of compliance to be eligible for TWIA coverage. The TDI Windstorm Inspection Program covers re-roofs and roof repairs in the catastrophe area, and inspections are done by appointed Texas-licensed engineers or TDI inspectors (<a href="https://www.tdi.texas.gov/wind/generalquestio.html" target="_blank" rel="noopener">TDI windstorm program</a>). In Corpus Christi, a re-roofing permit application includes a completed TDI WPI-1 form. Building repairs into the claim with certification in mind can help avoid problems with future coverage. Our <a href="/windstorm-certificate-wpi-8-insurance-claims/">WPI-8 guide</a> covers the details.</p>
 
+<h2>What to Do in the First Days After Wind or Hail Damage</h2>
+<ol>
+<li><strong>Report the claim to TWIA</strong> as soon as you can, and write down the claim number and the date you filed.</li>
+<li><strong>Document before cleanup.</strong> Photograph the roof, every side of the building, and each damaged room.</li>
+<li><strong>Make temporary repairs</strong> such as tarping or boarding up to prevent more damage, and keep the receipts.</li>
+<li><strong>Report other policies too.</strong> If surge or rising water also reached the property, notify your flood insurer separately.</li>
+<li><strong>Read every letter from TWIA</strong> and note the date you received it, because several deadlines run from the date of a notice.</li>
+<li><strong>Keep a claim log</strong> of calls, emails, inspections, and payments.</li>
+</ol>
+<p>If TWIA has already paid and the amount looks low, an <a href="/services/insurance-estimate-review/">insurance estimate review</a> can compare TWIA's scope against the actual damage before the appraisal window closes. Our <a href="/services/insurance-appraisal/">insurance appraisal</a> page explains how appraisal generally works.</p>
+
 <h2>Common Disputes on TWIA Claims</h2>
 <ul>
 <li><strong>Wind vs. water.</strong> TWIA may attribute damage to flood or surge, which its policy does not cover.</li>

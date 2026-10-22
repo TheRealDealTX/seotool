@@ -74,6 +74,17 @@ return [
 <li><strong>Wind versus water.</strong> After hurricanes, wind policies and flood policies may each attribute damage to the other peril. Our article on <a href="/wind-vs-storm-surge-damage-claims-texas-coast/">wind vs. storm surge damage</a> explains how this works.</li>
 </ul>
 
+<h2>First Steps for Business Owners After a Loss</h2>
+<p>The first few days after a storm or fire shape the rest of the claim. Before cleanup crews and roofers start work, take these steps where it is safe to do so:</p>
+<ul>
+<li><strong>Protect the property.</strong> Most policies require reasonable steps to prevent further damage, such as tarping roof openings, boarding windows, and extracting water. Keep every invoice.</li>
+<li><strong>Capture conditions before they change.</strong> Photograph roofs, rooftop equipment, interiors, inventory, and exterior elevations. Damage to membranes and insulation can be harder to prove once temporary repairs cover it.</li>
+<li><strong>Notify every insurer that may be involved.</strong> On the coast, that may include a property carrier, a TWIA or private windstorm policy, and a flood insurer. Tenants should notify their own carriers too.</li>
+<li><strong>Track lost income and extra costs from day one.</strong> Keep daily sales records, note closures, and save receipts for temporary space, equipment rentals, and overtime.</li>
+<li><strong>Do not discard damaged stock or equipment</strong> until it has been documented and the insurer has had a chance to inspect it.</li>
+</ul>
+<p>If hail was involved, our <a href="/services/hail-damage-claims/">hail damage claims</a> page explains how hail evidence is typically gathered on metal and membrane roofs.</p>
+
 <h2>Documentation for Commercial Claims</h2>
 <ol>
 <li>Photos and video of every building, roof section, and interior space affected</li>

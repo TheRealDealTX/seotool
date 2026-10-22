@@ -2,7 +2,7 @@
 return [
     'title'       => 'Wind Damage Insurance Claims in Corpus Christi, TX',
     'seo_title'   => 'Corpus Christi Wind Damage Claims | Public Adjuster Help',
-    'description' => 'Help with Corpus Christi wind damage claims: roof and siding damage, wind-driven rain, TWIA vs. homeowners coverage, deductibles, and documenting the storm.',
+    'description' => 'Help with Corpus Christi wind damage claims: roof and siding damage, wind-driven rain, TWIA vs. homeowners coverage, deductibles, and storm documentation.',
     'lead'        => 'Straight-line winds, tropical storms, and squall lines regularly hit the Coastal Bend. We help property owners document wind damage, sort out which policy applies, and present a complete claim.',
     'kicker'      => 'Wind Damage Claims',
     'image'       => '/assets/img/featured/service-wind-damage-claims.webp',
@@ -73,6 +73,9 @@ return [
 <li><strong>Prior damage.</strong> The carrier may say the damage came from an earlier storm or a different policy period.</li>
 </ul>
 <p>If a wind claim has been denied or paid low, see our pages on <a href="/services/denied-insurance-claims/">denied insurance claims</a> and <a href="/services/underpaid-insurance-claims/">underpaid insurance claims</a>.</p>
+
+<h2>How Wind Damage Shows Up Across the Coastal Bend</h2>
+<p>Building types around Corpus Christi affect what wind damage looks like and how it is argued. On the mainland, many slab-on-grade homes have composition shingle roofs, where the key question is often whether shingle seals failed and tabs were creased. In rural parts of Nueces and San Patricio counties, metal roofs on homes, barns, and shops can lose fasteners or peel back at the edges, and salt air can complicate the wear-and-tear discussion closer to the water. Elevated homes on Padre Island, Mustang Island, and in Port Aransas face higher exposure, and their stairs, decks, and lower enclosures are often damaged too. Manufactured homes, carports, and light outbuildings are especially vulnerable to strong gusts, as the May 2025 storm showed. Wherever your property sits, from Robstown and Calallen to Portland and Rockport, the same documentation steps apply; see our <a href="/service-areas/">service areas</a>.</p>
 
 <h2>Codes, Permits, and Windstorm Certification</h2>
 <p>Wind repairs in Corpus Christi often involve permits. The city requires a permit for re-roofing, and the roofing submission includes a TDI WPI-1 form from the windstorm engineer or inspector (<a href="https://www.corpuschristitx.gov/department-directory/development-services/applications-permits-and-guidance/residential-remodels-and-repairs/" target="_blank" rel="noopener">City of Corpus Christi</a>). The city's local design criteria list a design wind speed of 140/150 mph and a windborne debris zone. Code-driven costs are usually paid only under ordinance or law coverage, up to its limit.</p>

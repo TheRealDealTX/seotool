@@ -128,6 +128,20 @@ return [
 <li><strong>Deductibles.</strong> Check your declarations page for the deductible that applies to your loss. Our article on <a href="/named-storm-hurricane-deductibles-texas/">named-storm and hurricane deductibles</a> explains how percentage deductibles work.</li>
 </ul>
 
+<h2>What to keep in your TWIA claim file</h2>
+<p>Because so much of the TWIA process runs on dates, a well-organized file is one of the best protections you have. Keep:</p>
+<ul>
+<li>The date and time the damage occurred, with any time-stamped photos or videos</li>
+<li>Your claim number and the date you filed</li>
+<li>Every written request from TWIA, with the date received and the date you responded</li>
+<li>The written acceptance, partial acceptance, or denial notice, and the date you received it</li>
+<li>Estimates, inspection reports, and any engineering reports</li>
+<li>Receipts for emergency repairs, tarps, drying, and temporary housing</li>
+<li>Your windstorm certificate (WPI-8) and any repair permits</li>
+<li>Notes from every phone call: date, person, and what was said</li>
+</ul>
+<p>Those dates drive the appraisal window, the notice-of-intent requirement, and the two-year deadline to sue, so record them as they happen.</p>
+
 <h2>How a public adjuster can help with a TWIA claim</h2>
 <p>A licensed public adjuster represents the policyholder, not TWIA. On a TWIA claim, that can mean documenting the damage, preparing a detailed estimate, tracking the statutory deadlines, responding to information requests, and handling communication with the TWIA adjuster. Corpus Christi Public Adjuster provides TWIA claim help to homeowners and business owners in Corpus Christi, Nueces County, and surrounding Coastal Bend communities. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 <p>If you have an open TWIA claim, or you think a decision letter is wrong, a Corpus Christi Public Adjuster <a href="/free-claim-review/">free claim review</a> is a simple place to start. You can also call or text [[phone]].</p>
