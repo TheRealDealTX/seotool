@@ -20,8 +20,8 @@ server right after use.
 underdeskelliptical.com was unlinked from the WordPress website `wdHcdWujW` and made the
 primary domain of the new php-fpm website `FQYNNuIDk` (the custom PHP build). The
 existing SSL certificate carried over. The WordPress website and its database were left
-in place, untouched, as a fallback; it is still reachable at
-https://mediumseagreen-chimpanzee-225778.hostingersite.com.
+in place, untouched, as a fallback. Unlinking also removed its temporary preview domain,
+so it currently has no address at all; its files and database are intact.
 
 To roll back: unlink underdeskelliptical.com from `FQYNNuIDk`, link it to `wdHcdWujW`,
 and clear both websites' caches. Once you are happy with the new site, the WordPress
