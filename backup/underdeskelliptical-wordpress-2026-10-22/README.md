@@ -14,3 +14,15 @@ by the custom PHP build in `underdeskelliptical/`.
 
 Both were produced by a one-off token-protected PHP script that was deleted from the
 server right after use.
+
+## Go-live (2026-10-22)
+
+underdeskelliptical.com was unlinked from the WordPress website `wdHcdWujW` and made the
+primary domain of the new php-fpm website `FQYNNuIDk` (the custom PHP build). The
+existing SSL certificate carried over. The WordPress website and its database were left
+in place, untouched, as a fallback; it is still reachable at
+https://mediumseagreen-chimpanzee-225778.hostingersite.com.
+
+To roll back: unlink underdeskelliptical.com from `FQYNNuIDk`, link it to `wdHcdWujW`,
+and clear both websites' caches. Once you are happy with the new site, the WordPress
+website can be deleted. This README and the backups above are then the only copies.
