@@ -195,7 +195,7 @@ function image_manifest(): array
 {
     static $m = null;
     if ($m === null) {
-        $m = read_json_file(CCPA_ROOT . '/assets/img/media/manifest.json', []);
+        $m = read_json_file(CCPA_PUBLIC . '/assets/img/media/manifest.json', []);
     }
     return $m;
 }
@@ -449,7 +449,7 @@ function area_pages(): array
 
 function asset_version(string $rel): string
 {
-    $f = CCPA_ROOT . '/assets/' . $rel;
+    $f = CCPA_PUBLIC . '/assets/' . $rel;
     return is_file($f) ? (string) filemtime($f) : '1';
 }
 

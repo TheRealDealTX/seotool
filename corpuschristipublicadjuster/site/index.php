@@ -1,11 +1,16 @@
 <?php
 /**
- * Front controller. .htaccess sends every request that is not a real file here.
+ * Front controller. Every request that is not a real file is routed here
+ * (.htaccess on Apache; Hostinger's H5G/nginx platform does it by default).
  */
 
 declare(strict_types=1);
 
-require __DIR__ . '/includes/bootstrap.php';
+// Private code and data live in ../ccpa-app/ on the live server (outside the web root);
+// in the repo and the ZIP package they sit next to this file.
+define('CCPA_PUBLIC', __DIR__);
+define('CCPA_ROOT', is_file(__DIR__ . '/includes/bootstrap.php') ? __DIR__ : dirname(__DIR__) . '/ccpa-app');
+require CCPA_ROOT . '/includes/bootstrap.php';
 
 $uri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode((string) parse_url($uri, PHP_URL_PATH));
@@ -25,7 +30,7 @@ if (preg_match('#^/(wp-admin|wp-login\.php|xmlrpc\.php|wp-json|wp-includes|wp-cr
     exit('Gone');
 }
 
-$redirects = require __DIR__ . '/includes/redirects.php';
+$redirects = require CCPA_ROOT . '/includes/redirects.php';
 
 // WordPress shortlinks: /?p=123, /?page_id=22
 if ($path === '/' && $query !== '') {
@@ -40,13 +45,13 @@ if ($path === '/' && $query !== '') {
 // Machine-readable routes.
 switch ($path) {
     case '/sitemap.xml':
-        require __DIR__ . '/includes/sitemap.php';
+        require CCPA_ROOT . '/includes/sitemap.php';
         output_sitemap();
         exit;
     case '/feed/':
     case '/feed':
     case '/rss/':
-        require __DIR__ . '/includes/sitemap.php';
+        require CCPA_ROOT . '/includes/sitemap.php';
         output_feed();
         exit;
 }

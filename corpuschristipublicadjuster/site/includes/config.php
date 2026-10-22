@@ -16,6 +16,11 @@ declare(strict_types=1);
 if (!defined('CCPA_ROOT')) {
     define('CCPA_ROOT', dirname(__DIR__));
 }
+// Web root (assets/, wp-content/). Same folder as CCPA_ROOT locally; on the live server the
+// private app lives in <site>/ccpa-app and the web root is <site>/public_html.
+if (!defined('CCPA_PUBLIC')) {
+    define('CCPA_PUBLIC', is_dir(CCPA_ROOT . '/assets') ? CCPA_ROOT : dirname(CCPA_ROOT) . '/public_html');
+}
 
 $CCPA_CONFIG = [
     // ---- Site identity -------------------------------------------------

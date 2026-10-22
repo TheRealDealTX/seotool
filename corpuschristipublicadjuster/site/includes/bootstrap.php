@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-define('CCPA_ROOT', dirname(__DIR__));
+if (!defined('CCPA_ROOT')) {
+    define('CCPA_ROOT', dirname(__DIR__));
+}
 
 // Never show PHP errors to visitors; log them privately instead.
 ini_set('display_errors', '0');

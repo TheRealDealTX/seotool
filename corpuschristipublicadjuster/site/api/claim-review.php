@@ -6,8 +6,11 @@
 
 declare(strict_types=1);
 
-require_once dirname(__DIR__) . '/includes/bootstrap.php';
-require_once dirname(__DIR__) . '/includes/form.php';
+// Private code and data: next to the web root locally, ../ccpa-app/ on the live server.
+define('CCPA_PUBLIC', dirname(__DIR__));
+define('CCPA_ROOT', is_file(CCPA_PUBLIC . '/includes/bootstrap.php') ? CCPA_PUBLIC : dirname(CCPA_PUBLIC) . '/ccpa-app');
+require_once CCPA_ROOT . '/includes/bootstrap.php';
+require_once CCPA_ROOT . '/includes/form.php';
 
 header('X-Robots-Tag: noindex, nofollow');
 header('Cache-Control: no-store');

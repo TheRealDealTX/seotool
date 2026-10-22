@@ -6,7 +6,9 @@
  *   /api/storms.php?set=all       both
  */
 declare(strict_types=1);
-define('CCPA_ROOT', dirname(__DIR__));
+// Private code and data: next to the web root locally, ../ccpa-app/ on the live server.
+define('CCPA_PUBLIC', dirname(__DIR__));
+define('CCPA_ROOT', is_file(CCPA_PUBLIC . '/includes/bootstrap.php') ? CCPA_PUBLIC : dirname(CCPA_PUBLIC) . '/ccpa-app');
 require_once CCPA_ROOT . '/includes/config.php';
 require_once CCPA_ROOT . '/includes/functions.php';
 require_once CCPA_ROOT . '/includes/storms.php';
