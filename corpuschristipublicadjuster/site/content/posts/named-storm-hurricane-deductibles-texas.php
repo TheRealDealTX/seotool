@@ -144,6 +144,9 @@ return [
 <h3>Not checking which deductible was used</h3>
 <p>If your policy has both a wind/hail deductible and a separate named-storm or hurricane deductible, confirm which one the insurer applied and why. The trigger language, not the name of the weather event in the news, decides which applies.</p>
 
+<h3>Paying the deductible to a contractor</h3>
+<p>The deductible is your share of the covered loss. When you hire a contractor, expect the repair contract to account for it as part of the total price. Be cautious with anyone who offers to “cover” or “absorb” your deductible, and read every contract carefully before you sign it. If an offer sounds unusual, ask your insurer or an attorney before agreeing to it.</p>
+
 <h2>A note for business owners</h2>
 <p>Commercial property policies often use percentage wind or named-storm deductibles too, and they may apply per building, per location, or to the total insured value on a schedule, depending on the wording. For a business with several buildings, that can produce a very different number than a homeowner would expect. Read the commercial declarations and deductible endorsement carefully, and see our <a href="/services/commercial-property-claims/">commercial property claims</a> page for how those claims are documented.</p>
 

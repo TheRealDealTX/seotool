@@ -18,7 +18,7 @@ return [
     'sources'     => [
         ['NOAA NCEI Storm Events Database', 'https://www.ncdc.noaa.gov/stormevents/'],
         ['NWS Corpus Christi — Storm history', 'https://www.weather.gov/crp/stormhistory'],
-        ['NOAA HURDAT — U.S. landfalling hurricanes', 'https://www.aoml.noaa.gov/hrd/hurdat/All_U.S._Hurricanes.html'],
+        ['National Hurricane Center — Tropical cyclone climatology', 'https://www.nhc.noaa.gov/climo/'],
         ['NHC Tropical Cyclone Report: Hurricane Harvey (2017)', 'https://www.nhc.noaa.gov/data/tcr/AL092017_Harvey.pdf'],
         ['NWS Corpus Christi — Hurricane Celia', 'https://www.weather.gov/crp/hurricanecelia'],
     ],

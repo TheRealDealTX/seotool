@@ -102,7 +102,7 @@ return [
 </tbody>
 </table>
 
-<p>May alone accounts for more than a third of all thunderstorm wind reports in the county. Spring is also peak hail season locally, so wind and hail claims often come from the same storms. See our <a href="/corpus-christi-storm-history-hail-wind-hurricanes/">Corpus Christi storm history article</a> and the <a href="/weather-events/">weather events page</a> for more.</p>
+<p>May alone accounts for more than a third of all thunderstorm wind reports in the county. Spring is also peak hail season locally, so wind and hail claims often come from the same storms. See our <a href="/corpus-christi-storm-history-hail-wind-hurricanes/">Corpus Christi storm history article</a> for more.</p>
 
 [[cta]]
 
@@ -168,7 +168,7 @@ return [
 
 <h2>How a public adjuster can help</h2>
 
-<p>A licensed public adjuster represents the policyholder, not the insurer. On a wind claim, that can include inspecting and documenting the damage, matching it to weather records, preparing a detailed estimate, and handling communication with the carrier. Corpus Christi Public Adjuster serves Corpus Christi, Nueces County, and surrounding Coastal Bend communities. Learn more on our <a href="/services/wind-damage-claims/">wind damage claims</a> page, or see our <a href="/services/denied-insurance-claims/">denied insurance claims</a> page if your claim has already been turned down. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
+<p>A licensed public adjuster represents the policyholder, not the insurer. On a wind claim, that can include inspecting and documenting the damage, matching it to weather records, preparing a detailed estimate, and handling communication with the carrier. Corpus Christi Public Adjuster serves Corpus Christi, Nueces County, and surrounding Coastal Bend communities. Learn more on our <a href="/services/wind-damage-claims/">wind damage claims</a> page. If your claim has already been turned down, ask for the denial reason in writing before deciding on a next step. Fees are disclosed in a written contract before any work begins; Texas law caps public adjuster compensation at 10% of the insurance settlement.</p>
 
 <p>If a recent windstorm damaged your home or business and you are not sure what your policy covers, a Corpus Christi Public Adjuster <a href="/free-claim-review/">free claim review</a> can help you sort out the next step.</p>
 
