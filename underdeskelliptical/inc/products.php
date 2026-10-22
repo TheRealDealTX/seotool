@@ -131,7 +131,7 @@ const PRODUCTS = [
     'jisuo' => [
         'name' => 'JISUO Under Desk Elliptical', 'brand' => 'JISUO', 'asin' => 'B09VPJQFVH', 'type' => 'manual',
         'best_for' => 'Compact pick for small desks',
-        'summary' => 'A compact under desk elliptical built for busy workdays and tight spaces.',
+        'summary' => 'A compact under desk elliptical built for busy workdays and tight spaces. JISUO listings have included both manual and motorized versions, so check which one you are buying.',
         'pros' => ['Compact', 'Easy setup', 'Budget friendly'], 'cons' => ['Limited resistance range', 'Basic display'],
         'noise' => 'Quiet', 'seniors' => true, 'standing' => false,
         'image' => '/wp-content/uploads/2026/05/jisuo-under-desk-elliptical-1.webp',

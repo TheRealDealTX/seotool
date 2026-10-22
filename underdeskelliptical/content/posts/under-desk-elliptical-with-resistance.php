@@ -33,8 +33,9 @@ HTML,
 <p>Resistance is the feature that separates a real seated trainer from a toy. But the type of resistance matters more than the number of levels on the box. Magnetic, friction and strap systems feel and sound very different, and they age differently too.</p>
 <p>This guide explains each resistance type, how many levels you actually need, how to use resistance without wrecking your focus, and a simple four-week plan with a built-in timer.</p>
 
-<h2>How Resistance Works on an Under Desk Elliptical</h2>
+<h2>How an Under Desk Elliptical With Resistance Works</h2>
 <p>Inside the housing, the pedals turn a flywheel. Resistance is anything that slows that flywheel down. The more it is slowed, the harder you have to push to keep the same pace. Turning the knob changes how strongly the system brakes the wheel.</p>
+<p>Why bother with resistance at all? Without it, the pedals spin with almost no effort and your muscles do very little. A bit of resistance turns idle leg movement into light exercise, and it is the main lever you have for raising calorie burn: in the Compendium of Physical Activities, light seated pedaling sits around 2.0 METs and moderate pedaling around 2.8, compared with about 1.3 for quiet sitting.</p>
 <p>A heavier flywheel also changes the feel. It carries more momentum, so the stride stays smooth even at higher settings instead of feeling jerky at the top and bottom of each loop. That is why premium machines tend to feel smoother at the same resistance level as budget ones.</p>
 
 <h2>Magnetic vs Friction vs Strap Resistance</h2>
@@ -96,6 +97,32 @@ HTML,
 </ul>
 <p>Curious which muscles each tweak targets? Read <a href="/what-muscles-does-an-under-desk-elliptical-work/">what muscles an under desk elliptical works</a>.</p>
 <div class="callout warn"><p><strong>Go easy on joints:</strong> if you feel knee or hip pain at higher resistance, drop back down. Ask a doctor or physical therapist before starting if you have a joint condition, are recovering from surgery or have a heart condition.</p></div>
+
+<h2>Signs You Need More or Less Resistance</h2>
+<p>Your body gives clear signals about whether a setting is right.</p>
+<h3>Turn it up if</h3>
+<ul>
+<li>You can pedal for an hour and feel nothing in your legs afterward.</li>
+<li>The pedals spin so freely that the stride feels floppy or bouncy.</li>
+<li>Your pace keeps creeping up without you meaning to.</li>
+</ul>
+<h3>Turn it down if</h3>
+<ul>
+<li>You stop pedaling every time you concentrate.</li>
+<li>Your knees or hips ache during or after a session.</li>
+<li>The machine slides or your chair rolls back with each push.</li>
+<li>You are breathing hard during calls.</li>
+</ul>
+<p>Very light machines, including many <a href="/mini-elliptical-under-desk/">mini ellipticals</a>, often top out at a modest level. If you consistently max out the knob, that is a sign to move up to a machine with a wider range rather than to pedal faster.</p>
+
+<h2>Keeping Resistance Smooth and Quiet</h2>
+<p>An under desk elliptical with resistance needs very little care, but a few habits keep it feeling like new.</p>
+<ul>
+<li><strong>Magnetic models:</strong> almost maintenance-free. Keep dust and pet hair away from vents and tighten pedal bolts if you hear a click.</li>
+<li><strong>Friction models:</strong> check the pad for glazing or uneven wear, and replace it if the resistance starts to feel grabby.</li>
+<li><strong>Strap models:</strong> inspect the strap for fraying and replace it before it snaps.</li>
+<li><strong>All models:</strong> use a [[amazon:cubii-mat|non-slip mat]] to cut vibration, and avoid cranking the knob past its stop.</li>
+</ul>
 
 <h2>Best Under Desk Elliptical With Resistance</h2>
 <p>All three use magnetic resistance and are ranked on resistance range, smoothness and noise, based on specs and owner reviews.</p>
