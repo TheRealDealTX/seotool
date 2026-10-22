@@ -117,6 +117,7 @@ HTML,
 
 <h2>Automatic vs Electric vs Manual: Clearing Up the Names</h2>
 <p>You will see "automatic," "electric" and "motorized" used for the same machines. They all mean the pedals can be driven by a motor. "Automatic" usually highlights the hands-off, passive experience, while "electric" listings tend to focus on power, cords and controls. If you are comparing cords, remotes, motor noise and safety features, read our <a href="/electric-elliptical-under-desk/">electric elliptical under desk buying guide</a>.</p>
+<p>If you are still getting to grips with the category as a whole, our <a href="/under-desk-elliptical-trainer/">under desk elliptical trainer</a> beginner's guide explains every type in plain English.</p>
 <p>A manual machine has no motor at all. You push against magnetic or friction resistance, so every stride is effort. If you are leaning that way, our <a href="/manual-under-desk-elliptical/">manual under desk elliptical</a> guide covers the trade-offs and the best manual picks.</p>
 
 <h2>Is an Automatic Under Desk Elliptical Worth It?</h2>

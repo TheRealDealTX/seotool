@@ -131,7 +131,7 @@ HTML,
 </ul>
 
 <h2>Fitting an Electric Elliptical Under Your Desk</h2>
-<p>Electric housings tend to be bulkier than manual ones because of the motor, and your knees rise at the top of each stride. Measure the gap between your seat and the underside of the desk with our <a href="/tools/desk-clearance-checker/">desk clearance checker</a>, and lower your chair or raise the desk if you are close. If space is the problem, a <a href="/compact-under-desk-elliptical/">compact under desk elliptical</a> may be a better fit.</p>
+<p>Electric housings tend to be bulkier than manual ones because of the motor, and your knees rise at the top of each stride. Measure the gap between your seat and the underside of the desk with our <a href="/tools/desk-clearance-checker/">desk clearance checker</a>, and lower your chair or raise the desk if you are close. If space is the problem, a cordless <a href="/mini-elliptical-under-desk/">mini elliptical under desk</a> may be a better fit.</p>
 
 <h2>Our Verdict</h2>
 <p>An electric elliptical under desk is the right choice when you want the machine to share the work: limited strength, stiff joints, low stamina, or simply a steady pace you do not have to think about. Plan the cord route first, insist on a slow lowest speed and a reachable stop button, and expect a little motor hum. Get those basics right and the machine fades into the background of your workday, which is exactly when it starts paying off.</p>

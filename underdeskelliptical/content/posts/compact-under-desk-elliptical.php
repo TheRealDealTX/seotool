@@ -4,7 +4,7 @@
 // "best compact elliptical for seniors". Angle: small desks, apartments and tight footwells.
 return [
     'title' => 'Compact Under Desk Elliptical (2026): 6 Small-Desk Picks',
-    'description' => 'The best compact under desk elliptical for small desks, apartments and tight footwells: 6 space-saving picks, how to measure your footwell and a clearance checker.',
+    'description' => 'The best compact under desk elliptical for small desks, apartments and tight footwells: 6 space-saving picks, how to measure and a clearance checker.',
     'h1' => 'Compact Under Desk Elliptical: Space-Saving Picks for Small Desks',
     'keyword' => 'compact under desk elliptical',
     'category' => 'top-picks',
@@ -129,6 +129,10 @@ HTML,
 <li><strong>Remove the keyboard tray if knees hit it.</strong> A tray steals the clearance you need.</li>
 <li><strong>Use short sessions.</strong> Even in a cramped space, ten minutes every half hour adds up. The <a href="/tools/desk-pedal-timer/">desk pedal timer</a> can prompt you.</li>
 </ol>
+
+<h2>Can a Compact Machine Still Give You a Workout?</h2>
+<p>Yes, within limits. A compact model with magnetic resistance, like the JR2 or Sunny, lets you turn the effort up enough to feel it in your legs, and the calorie math is the same as for larger seated machines: light seated pedaling sits around 2.0 METs versus about 1.3 for sitting, according to the Compendium of Physical Activities. For most people that means roughly 100 to 200 calories an hour at a light to moderate pace.</p>
+<p>Mini machines with a short stride and light resistance burn less, because there is simply less work to do. If calorie burn matters, choose compact over mini. The <a href="/tools/under-desk-elliptical-calorie-calculator/">calorie calculator</a> gives you a personal estimate.</p>
 
 <h2>Storing a Compact Elliptical Between Sessions</h2>
 <p>If your machine cannot live under the desk, storage becomes part of the routine. Owners who store theirs well tend to keep using them.</p>
