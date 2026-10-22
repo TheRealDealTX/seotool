@@ -58,7 +58,12 @@ function tool_widget(string $id): string
     $slug = array_search($id, array_column(TOOLS, 'id', null));
     $page = array_keys(TOOLS)[$slug];
     $link = CURRENT_PATH === "/tools/$page/" ? '' : '<p class="tool-link"><a href="/tools/' . $page . '/">Open the full ' . e(TOOLS[$page]['short']) . ' &rarr;</a></p>';
-    return '<div class="tool" data-tool="' . e($id) . '">' . $fn() . $link . '</div>';
+    $html = $fn();
+    if ($link === '') {
+        // Standalone tool page: the tool title sits directly under the page H1.
+        $html = preg_replace('#<h3 class="tool-title">(.*?)</h3>#', '<h2 class="tool-title">$1</h2>', $html, 1);
+    }
+    return '<div class="tool" data-tool="' . e($id) . '">' . $html . $link . '</div>';
 }
 
 function tool_calories(): string

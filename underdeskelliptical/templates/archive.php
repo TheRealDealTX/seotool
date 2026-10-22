@@ -54,7 +54,7 @@ page_start([
 <?php endif; ?>
   <div class="grid grid-3" id="post-grid">
 <?php foreach ($posts as $p): ?>
-    <?= post_card($p) ?>
+    <?= post_card($p, 2) ?>
 <?php endforeach; ?>
   </div>
 <?php if (!$posts): ?><p>No articles here yet. <a href="/blog/">Browse all guides</a>.</p><?php endif; ?>

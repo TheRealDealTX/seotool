@@ -6,11 +6,12 @@ const SITE_NAME   = 'Under Desk Elliptical';
 const SITE_URL    = 'https://underdeskelliptical.com';
 const SITE_HOST   = 'underdeskelliptical.com';
 const AMAZON_TAG  = 'underdeskellipticaljditt-20';
+const GA_ID       = 'G-XZNNQ99Z4G';   // Google Analytics 4, loaded on every HTML page by inc/layout.php
 const SITE_EMAIL  = 'hello@underdeskelliptical.com';
 const SITE_TAGLINE = 'Honest guides to the best under desk ellipticals, desk bikes and seated workouts';
 const SITE_LOGO   = '/wp-content/uploads/2026/04/Under-Desk-Elliptical-Logo.webp';
 const SITE_ICON   = '/wp-content/uploads/2026/04/cropped-Under-Desk-Elliptical-Site-Icon-192x192.webp';
-const DEFAULT_IMAGE = '/wp-content/uploads/2026/04/UnderDeskElliptical-Banner.webp';
+const DEFAULT_IMAGE = '/wp-content/uploads/2026/05/What-Is-the-Best-Under-Desk-Elliptical-1.webp';
 const AUTHOR_NAME = 'Under Desk Elliptical Editorial Team';
 
 // Last full content refresh; shown as "Updated" on posts that do not set their own date.

@@ -22,6 +22,6 @@ page_start(['title' => 'Search results for "' . $q . '" | ' . SITE_NAME, 'descri
 </div></section>
 <div class="wrap">
   <p><?= count($hits) ?> results.</p>
-  <div class="grid grid-3"><?php foreach (array_slice($hits, 0, 24) as [, $p]) echo post_card($p); ?></div>
+  <div class="grid grid-3"><?php foreach (array_slice($hits, 0, 24) as [, $p]) echo post_card($p, 2); ?></div>
 </div>
 <?php page_end();

@@ -58,8 +58,12 @@ if ($norm === '/llms.txt') {
 if (preg_match('#^/(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php|wp-signup\.php|wp-cron\.php)(/|$)#', $norm)) {
     redirect('/');
 }
-if (preg_match('#^/(comments/)?feed/?$#', $norm)) {
-    redirect('/blog/');
+if ($norm === '/feed/' || $norm === '/feed') {
+    require ROOT . '/templates/feed.php';
+    exit;
+}
+if (preg_match('#^/comments/feed/?$#', $norm)) {
+    redirect('/feed/');
 }
 if (preg_match('#^/(.+?)/feed/?$#', $norm, $m)) {
     redirect('/' . $m[1] . '/');
@@ -89,7 +93,7 @@ if (isset($_GET['p']) || isset($_GET['page_id'])) {
 }
 
 // ---- Trailing slash ----
-if ($norm !== '/' && !str_ends_with($norm, '/') && !preg_match('#\.\w{2,5}$#', $norm)) {
+if ($norm !== '/' && !str_ends_with($norm, '/') && !preg_match('#\.\w{2,12}$#', $norm)) {
     redirect($norm . '/' . (isset($_GET['s']) ? '?s=' . rawurlencode((string) $_GET['s']) : ''));
 }
 

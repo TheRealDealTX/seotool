@@ -7,7 +7,9 @@ function page_start(array $m): void
     $title = $m['title'];
     $desc = $m['description'] ?? SITE_TAGLINE;
     $canon = SITE_URL . ($m['path'] ?? CURRENT_PATH);
-    $img = abs_url($m['image'] ?? DEFAULT_IMAGE);
+    $imgPath = $m['image'] ?? DEFAULT_IMAGE;
+    $img = abs_url($imgPath);
+    [$imgW, $imgH] = img_dims($imgPath);
     $graph = array_merge([schema_org(), schema_website()], $m['schema'] ?? []);
     $ld = json_encode(['@context' => 'https://schema.org', '@graph' => $graph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG);
     $css = '/assets/css/site.css?v=' . @filemtime(ROOT . '/assets/css/site.css');
@@ -15,6 +17,15 @@ function page_start(array $m): void
 <!doctype html>
 <html lang="en-US">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
@@ -30,15 +41,29 @@ function page_start(array $m): void
 <meta property="og:description" content="<?= e($desc) ?>">
 <meta property="og:url" content="<?= e($canon) ?>">
 <meta property="og:image" content="<?= e($img) ?>">
+<?php if ($imgW): ?>
+<meta property="og:image:width" content="<?= $imgW ?>">
+<meta property="og:image:height" content="<?= $imgH ?>">
+<?php endif; ?>
+<meta property="og:image:alt" content="<?= e($m['image_alt'] ?? $title) ?>">
 <?php if (!empty($m['published'])): ?>
 <meta property="article:published_time" content="<?= e($m['published']) ?>T08:00:00+00:00">
 <meta property="article:modified_time" content="<?= e($m['updated'] ?? $m['published']) ?>T08:00:00+00:00">
+<?php if (!empty($m['section'])): ?><meta property="article:section" content="<?= e($m['section']) ?>">
+<?php endif; ?>
 <?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/wp-content/uploads/2026/04/cropped-Under-Desk-Elliptical-Site-Icon-32x32.webp" sizes="32x32">
-<link rel="icon" href="<?= e(SITE_ICON) ?>" sizes="192x192">
-<link rel="apple-touch-icon" href="/wp-content/uploads/2026/04/cropped-Under-Desk-Elliptical-Site-Icon-180x180.webp">
-<?php if (!empty($m['preload'])): ?><link rel="preload" as="image" href="<?= e($m['preload']) ?>" fetchpriority="high">
+<meta name="twitter:title" content="<?= e($m['og_title'] ?? $title) ?>">
+<meta name="twitter:description" content="<?= e($desc) ?>">
+<meta name="twitter:image" content="<?= e($img) ?>">
+<meta name="theme-color" content="#0f2747">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="<?= e(SITE_NAME) ?> RSS feed" href="<?= SITE_URL ?>/feed/">
+<?php if (!empty($m['preload'])): ?><link rel="preload" as="image" href="<?= e($m['preload']) ?>"<?php if (!empty($m['preload_srcset'])): ?> imagesrcset="<?= $m['preload_srcset'] ?>" imagesizes="<?= e($m['preload_sizes']) ?>"<?php endif; ?> fetchpriority="high">
 <?php endif; ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

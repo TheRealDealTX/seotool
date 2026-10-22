@@ -172,10 +172,10 @@
           return { k: k, s: s, p: p };
         }).sort(function (x, y) { return y.s - x.s; }).slice(0, 3);
         var top = scored[0].s;
-        out.innerHTML = '<h4>Your top matches</h4>' + scored.map(function (r, i) {
+        out.innerHTML = '<p class="qr-head">Your top matches</p>' + scored.map(function (r, i) {
           var pct = Math.max(62, Math.min(98, Math.round(96 - (top - r.s) * 4)));
           return '<div class="qr">' + (r.p.i ? '<img src="' + r.p.i + '" alt="' + r.p.n + '" loading="lazy">' : '<div></div>') +
-            '<div><span class="match">' + (i === 0 ? 'Best match · ' : '') + pct + '% match</span><h4>' + r.p.n + '</h4><p>' + r.p.b + '</p>' +
+            '<div><span class="match">' + (i === 0 ? 'Best match · ' : '') + pct + '% match</span><p class="qr-name">' + r.p.n + '</p><p>' + r.p.b + '</p>' +
             '<a class="btn btn-amz btn-sm" href="' + r.p.u + '" target="_blank" rel="sponsored nofollow noopener">Check Price on Amazon</a> ' +
             (r.p.r ? '<a class="btn btn-ghost btn-sm" href="' + r.p.r + '">Read guide</a>' : '') + '</div></div>';
         }).join('');

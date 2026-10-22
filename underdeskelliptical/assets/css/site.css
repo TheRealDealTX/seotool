@@ -101,9 +101,9 @@ a.amz:hover { color: var(--navy); }
 .card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
 .card-img img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
 .card-body { padding: 18px 20px 20px; }
-.card-body h3 { margin: 4px 0 8px; font-size: 1.12rem; }
-.card-body h3 a { color: var(--navy); text-decoration: none; }
-.card-body h3 a:hover { color: var(--steel); }
+.card-title { margin: 4px 0 8px; font-size: 1.12rem; }
+.card-title a { color: var(--navy); text-decoration: none; }
+.card-title a:hover { color: var(--steel); }
 .card-body p { color: var(--muted); font-size: .95rem; margin: 0; }
 .card-cat { font-size: .74rem !important; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; color: var(--steel) !important; }
 .card[hidden] { display: none; }
@@ -249,7 +249,8 @@ input[type=range] { width: 100%; accent-color: var(--steel); }
 .quiz-results { display: grid; gap: 14px; margin-top: 10px; }
 .qr { display: grid; grid-template-columns: 120px 1fr; gap: 16px; align-items: center; border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: #fff; }
 .qr img { border-radius: 8px; aspect-ratio: 3 / 2; object-fit: cover; }
-.qr h4 { margin: 0 0 2px; font-size: 1.05rem; }
+.qr .qr-name { margin: 0 0 2px; font-size: 1.05rem; font-weight: 800; color: var(--navy); }
+.qr-head { font-weight: 800; color: var(--navy); font-size: 1.1rem; margin: 6px 0 0; }
 .qr p { margin: 0 0 8px; font-size: .88rem; color: var(--muted); }
 .qr .match { color: var(--green); font-weight: 800; font-size: .8rem; }
 @media (max-width: 520px) { .qr { grid-template-columns: 1fr; } }

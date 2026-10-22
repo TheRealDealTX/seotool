@@ -17,11 +17,18 @@ if (str_contains($body, '[[toc]]')) {
 $words = str_word_count(strip_tags($body));
 $minutes = max(3, (int) round($words / 230));
 
+$heroImg = $post['image'] ?? DEFAULT_IMAGE;
+[$heroW, $heroH] = img_dims($heroImg);
+$heroThumb = thumb($heroImg);
+$heroSrcset = $heroThumb !== $heroImg ? e($heroThumb) . ' 768w, ' . e($heroImg) . ' ' . $heroW . 'w' : '';
+$heroSizes = '(max-width: 1000px) calc(100vw - 32px), 760px';
+
 $schema = [
     [
         '@type' => ($post['schema_type'] ?? 'Article'), '@id' => SITE_URL . $post['url'] . '#article',
         'headline' => $post['h1'], 'description' => $post['description'],
-        'image' => abs_url($post['image'] ?? DEFAULT_IMAGE),
+        'image' => ['@type' => 'ImageObject', 'url' => abs_url($heroImg), 'width' => $heroW, 'height' => $heroH],
+        'inLanguage' => 'en-US',
         'datePublished' => $post['published'] . 'T08:00:00+00:00', 'dateModified' => $post['updated'] . 'T08:00:00+00:00',
         'author' => ['@type' => 'Organization', 'name' => AUTHOR_NAME, 'url' => SITE_URL . '/about-us/'],
         'publisher' => ['@id' => SITE_URL . '/#org'], 'mainEntityOfPage' => SITE_URL . $post['url'],
@@ -43,7 +50,8 @@ if (!empty($post['itemlist'])) {
 page_start([
     'title' => $post['title'], 'description' => $post['description'], 'image' => $post['image'] ?? null,
     'og_type' => 'article', 'published' => $post['published'], 'updated' => $post['updated'],
-    'schema' => $schema, 'preload' => $post['image'] ?? null, 'body_class' => 'is-post',
+    'schema' => $schema, 'preload' => $post['image'] ?? null, 'preload_srcset' => $heroSrcset, 'preload_sizes' => $heroSizes,
+    'image_alt' => $post['image_alt'] ?? $post['h1'], 'section' => CATEGORIES[$cat][0], 'body_class' => 'is-post',
 ]);
 ?>
 <div class="wrap post-layout">
@@ -53,7 +61,7 @@ page_start([
     <p class="post-meta">By <a href="/about-us/"><?= e(AUTHOR_NAME) ?></a> &middot; Updated <time datetime="<?= e($post['updated']) ?>"><?= e(fmt_date($post['updated'])) ?></time> &middot; <?= $minutes ?> min read</p>
     <p class="disclosure">This guide contains affiliate links. As an Amazon Associate, <?= e(SITE_NAME) ?> earns from qualifying purchases at no extra cost to you. <a href="/affiliate-disclosure/">Learn more</a>.</p>
 <?php if (!empty($post['image'])): ?>
-    <figure class="post-hero"><img src="<?= e($post['image']) ?>" alt="<?= e($post['image_alt'] ?? $post['h1']) ?>" width="1536" height="1024" fetchpriority="high"></figure>
+    <figure class="post-hero"><img src="<?= e($post['image']) ?>"<?php if ($heroSrcset): ?> srcset="<?= $heroSrcset ?>" sizes="<?= e($heroSizes) ?>"<?php endif; ?> alt="<?= e($post['image_alt'] ?? $post['h1']) ?>" width="<?= $heroW ?: 1536 ?>" height="<?= $heroH ?: 1024 ?>" fetchpriority="high"></figure>
 <?php endif; ?>
 <?php if (!empty($post['summary'])): ?>
     <div class="key-takeaways"><p class="kt-title">Quick answer</p><?= render_shortcodes($post['summary']) ?></div>

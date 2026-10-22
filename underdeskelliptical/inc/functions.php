@@ -17,6 +17,16 @@ function fmt_date(string $ymd): string
     return date('F j, Y', strtotime($ymd));
 }
 
+/** [width, height] of a local image (path from the site root), or [0, 0] if unknown. */
+function img_dims(?string $path): array
+{
+    static $cache = [];
+    if (!$path || preg_match('#^https?://#', $path)) {
+        return [0, 0];
+    }
+    return $cache[$path] ??= (($s = @getimagesize(ROOT . $path)) ? [$s[0], $s[1]] : [0, 0]);
+}
+
 // ---------------------------------------------------------------- Amazon
 
 function product(string $key): array
@@ -202,11 +212,12 @@ function all_posts(): array
     return $posts;
 }
 
-function post_card(array $p): string
+/** Card for a post. $h is the heading level: 2 on archive pages (cards sit right under the H1), 3 in sub-sections. */
+function post_card(array $p, int $h = 3): string
 {
     $img = thumb($p['image'] ?? null) ?? DEFAULT_IMAGE;
     $cat = CATEGORIES[$p['category']][0] ?? '';
-    return '<article class="card" data-cat="' . e($p['category']) . '"><a href="' . e($p['url']) . '" class="card-img"><img src="' . e($img) . '" alt="' . e($p['image_alt'] ?? $p['h1']) . '" loading="lazy" width="768" height="512"></a><div class="card-body"><p class="card-cat">' . e($cat) . '</p><h3><a href="' . e($p['url']) . '">' . e($p['h1']) . '</a></h3><p>' . e($p['excerpt'] ?? $p['description']) . '</p></div></article>';
+    return '<article class="card" data-cat="' . e($p['category']) . '"><a href="' . e($p['url']) . '" class="card-img"><img src="' . e($img) . '" alt="' . e($p['image_alt'] ?? $p['h1']) . '" loading="lazy" width="768" height="512"></a><div class="card-body"><p class="card-cat">' . e($cat) . '</p><h' . $h . ' class="card-title"><a href="' . e($p['url']) . '">' . e($p['h1']) . '</a></h' . $h . '><p>' . e($p['excerpt'] ?? $p['description']) . '</p></div></article>';
 }
 
 function related_posts(array $post, int $n = 3): array
