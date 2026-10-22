@@ -2,7 +2,7 @@
 return [
     'title'       => 'Free Insurance Claim Tools',
     'seo_title'   => 'Free Insurance Claim Tools for Corpus Christi Property Owners',
-    'description' => 'Free claim tools for Corpus Christi property owners: hurricane deductible and deadline calculators, settlement calculator, checklist, storm lookup, and weather.',
+    'description' => 'Free claim tools for Corpus Christi property owners: hurricane deductible and deadline calculators, settlement calculator, storm lookup, and weather.',
     'lead'        => 'Practical, free tools for homeowners and business owners in Corpus Christi and the Coastal Bend, built on official NOAA, National Weather Service, and Texas Insurance Code sources.',
     'kicker'      => 'Resources',
     'image'       => '/assets/img/featured/page-claim-tools.webp',

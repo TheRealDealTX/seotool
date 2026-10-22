@@ -2,7 +2,7 @@
 return [
     'title'       => 'Terms of Use',
     'seo_title'   => 'Terms of Use | Corpus Christi Public Adjuster Website',
-    'description' => 'Terms of use for the Corpus Christi Public Adjuster website, covering educational content, claim tools, weather and storm data, uploads, and client relationships.',
+    'description' => 'Terms of use for the Corpus Christi Public Adjuster website, covering educational content, claim tools, weather data, uploads, and client relationships.',
     'lead'        => 'The rules for using this website, its articles, and its claim tools. Last updated October 22, 2026.',
     'kicker'      => 'Legal',
     'image'       => '/assets/img/featured/page-terms-of-use.webp',

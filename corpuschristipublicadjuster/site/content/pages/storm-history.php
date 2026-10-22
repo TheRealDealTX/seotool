@@ -3,7 +3,7 @@ return [
     'template'    => 'storm-history',
     'title'       => 'Corpus Christi & Coastal Bend Storm History',
     'seo_title'   => 'Corpus Christi Storm History | Hurricane, Hail & Wind Records',
-    'description' => 'Search Corpus Christi storm history from NOAA: hurricane, hail, wind, tornado, flood, surge, and freeze records for Nueces, San Patricio, Aransas, and Kleberg.',
+    'description' => 'Corpus Christi storm history from NOAA: hurricane, hail, wind, tornado, flood, surge, and freeze records for Nueces, San Patricio, Aransas, and Kleberg.',
     'lead'        => 'A searchable record of hurricanes, hail, wind, tornadoes, flooding, storm surge, and freezes in Nueces, San Patricio, Aransas, and Kleberg counties from the NOAA Storm Events Database, with notable local storms.',
     'kicker'      => 'NOAA Storm Records',
     'image'       => '/assets/img/featured/page-storm-history.webp',

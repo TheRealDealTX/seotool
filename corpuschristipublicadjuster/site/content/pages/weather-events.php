@@ -3,7 +3,7 @@ return [
     'template'    => 'weather-events',
     'title'       => 'Recent Weather Events in Corpus Christi & the Coastal Bend',
     'seo_title'   => 'Recent Corpus Christi Storm Reports | Coastal Bend Weather',
-    'description' => 'Recent weather events in Corpus Christi and the Coastal Bend: NWS hail, wind, tornado, flood, and surge reports for Nueces, San Patricio, Aransas, and Kleberg.',
+    'description' => 'Recent weather events in Corpus Christi and the Coastal Bend: NWS hail, wind, tornado, and flood reports for Nueces, San Patricio, Aransas, and Kleberg.',
     'lead'        => 'Preliminary hail, wind, tornado, flood, and coastal reports from the National Weather Service in Corpus Christi for Nueces, San Patricio, Aransas, and Kleberg counties, collected automatically.',
     'kicker'      => 'Automatically Updated',
     'image'       => '/assets/img/featured/page-weather-events.webp',

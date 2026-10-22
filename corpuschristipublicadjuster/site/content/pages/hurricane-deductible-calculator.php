@@ -3,7 +3,7 @@ return [
     'template'    => 'deductible-calculator',
     'title'       => 'Hurricane Deductible Calculator',
     'seo_title'   => 'Hurricane Deductible Calculator | Texas Coast Wind & Hail',
-    'description' => 'Hurricane deductible calculator for Corpus Christi homeowners: turn a 1%, 2%, 5%, or 10% named-storm or wind/hail deductible into dollars before a storm hits.',
+    'description' => 'Hurricane deductible calculator for Corpus Christi homeowners: turn a 1%, 2%, 5%, or 10% named-storm or wind/hail deductible into dollars before a storm.',
     'lead'        => 'See what a percentage named-storm or wind/hail deductible means in real dollars for your home, and how much of a storm loss you would pay before the policy responds.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-hurricane-deductible-calculator.webp',

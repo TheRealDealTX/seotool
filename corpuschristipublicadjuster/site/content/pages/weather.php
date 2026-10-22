@@ -3,7 +3,7 @@ return [
     'template'      => 'weather',
     'title'         => 'Live Corpus Christi Weather, Radar & Tides',
     'seo_title'     => 'Corpus Christi Weather Today: Radar, Tides, Forecast & Alerts',
-    'description'   => 'Live Corpus Christi weather from the NWS: KCRP conditions, hourly and 7-day forecast, radar loop, NOAA tide levels, hurricane tracking, and storm prep tips.',
+    'description'   => 'Live Corpus Christi weather from the NWS: KCRP conditions, hourly and 7-day forecast, radar loop, NOAA tides, hurricane tracking, and storm prep tips.',
     'lead'          => 'Official National Weather Service, NOAA, and National Hurricane Center data for Corpus Christi in one place: current conditions, alerts, forecasts, radar, tides, and the tropics, plus storm preparation guidance for property owners.',
     'kicker'        => 'Live Weather',
     'image'         => '/assets/img/featured/page-weather.webp',

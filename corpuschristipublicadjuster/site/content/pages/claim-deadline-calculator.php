@@ -3,7 +3,7 @@ return [
     'template'    => 'deadline-calculator',
     'title'       => 'Texas Claim Deadline Calculator',
     'seo_title'   => 'Texas Claim Deadline Calculator | TWIA & Prompt Payment Dates',
-    'description' => 'Texas claim deadline calculator for Corpus Christi property owners: map Prompt Payment Act and TWIA deadlines for filing, decisions, payment, and appraisal.',
+    'description' => 'Texas claim deadline calculator for Corpus Christi property owners: map Prompt Payment Act and TWIA deadlines for filing, decisions, and appraisal.',
     'lead'        => 'Enter your date of loss and claim dates to map the deadlines Texas law sets for your insurer, or for TWIA, on a property insurance claim.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-claim-deadline-calculator.webp',

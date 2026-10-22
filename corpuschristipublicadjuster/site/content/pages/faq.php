@@ -3,7 +3,7 @@ return [
     'template'    => 'page',
     'title'       => 'Public Adjuster FAQ for Corpus Christi Property Owners',
     'seo_title'   => 'Public Adjuster FAQ | Corpus Christi Insurance Claim Answers',
-    'description' => 'Answers to common public adjuster questions from Corpus Christi property owners: fees, TWIA, hurricane deductibles, flood, deadlines, appraisal, and denials.',
+    'description' => 'Answers to common public adjuster questions from Corpus Christi property owners: fees, TWIA, hurricane deductibles, flood, deadlines, and appraisal.',
     'lead'        => 'Plain-English answers to the questions Coastal Bend homeowners and business owners ask most about public adjusters, TWIA, hurricane claims, and Texas claim deadlines.',
     'kicker'      => 'FAQ',
     'image'       => '/assets/img/featured/page-faq.webp',

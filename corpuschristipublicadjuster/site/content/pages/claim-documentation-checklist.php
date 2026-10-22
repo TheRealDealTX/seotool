@@ -3,7 +3,7 @@ return [
     'template'    => 'claim-checklist',
     'title'       => 'Property Insurance Claim Documentation Checklist',
     'seo_title'   => 'Insurance Claim Documentation Checklist | Free Printable',
-    'description' => 'Free claim documentation checklist for Corpus Christi property owners: hail, wind, hurricane, fire, water, roof, and commercial damage. Track, print, or download.',
+    'description' => 'Free claim documentation checklist for hail, wind, hurricane, fire, water, roof, and commercial damage in Corpus Christi. Track, print, or download.',
     'lead'        => 'Choose your type of damage and work through an interactive checklist of the photos, records, and documents that help support a property insurance claim.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-claim-documentation-checklist.webp',

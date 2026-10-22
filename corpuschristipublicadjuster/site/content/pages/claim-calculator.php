@@ -3,7 +3,7 @@ return [
     'template'    => 'claim-calculator',
     'title'       => 'Insurance Claim Settlement Calculator',
     'seo_title'   => 'Insurance Claim Settlement Calculator | RCV, ACV & Deductible',
-    'description' => 'Free insurance claim settlement calculator for Corpus Christi property owners: estimate RCV, ACV, depreciation, deductible, and out-of-pocket cost on a claim.',
+    'description' => 'Free insurance claim settlement calculator for Corpus Christi owners: estimate RCV, ACV, depreciation, deductible, and out-of-pocket cost on a claim.',
     'lead'        => 'Estimate how replacement cost, depreciation, your deductible, and policy limits may affect a property insurance payment. Everything runs in your browser.',
     'kicker'      => 'Interactive Tool',
     'image'       => '/assets/img/featured/page-claim-calculator.webp',
