@@ -70,7 +70,9 @@ They run entirely in the browser.
 
 - **Live website:** Hostinger Agency website UID `2PvpG8RKu` (php-fpm, PHP 8.5),
   created 2026-10-23. dogearcleaner.com was moved onto it the same day.
-- **Old WordPress website:** UID `PZJDtrILR`, domain unlinked. The full
+- **Old WordPress website:** UID `PZJDtrILR` was deleted on 2026-10-23 at
+  the owner's request, along with its database (no SQL dump was taken; post and
+  page content is in the REST export under `backup/`). The full
   `public_html` of the WordPress install (11,278 files, 178,982,579 bytes,
   including `wp-config.php` and all uploads) is stored on the new website at
   `.h5g/dogearcleaner-wordpress-files-2026-10-23.zip`. Its SHA-256 is in
