@@ -123,6 +123,7 @@ const REDIRECTS = [
     '/blog/' => '/guides/',
     '/topic/reviews/' => '/best-saffron-supplements/',
     '/topic/guides/' => '/guides/',
+    '/topic/benefits/' => '/saffron-benefits/',
     '/mood-emotional-balance-benefits-of-saffron-supplement/' => '/saffron-for-depression-and-mood/',
     '/deeper-restful-sleep/' => '/saffron-for-sleep/',
     '/feed/' => '/guides/',
