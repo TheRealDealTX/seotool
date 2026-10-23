@@ -20,12 +20,18 @@ and no plugins: one front controller, one stylesheet, one shared script.
 
 Files under `app/` exit immediately if requested directly, and `robots.txt` disallows `/app/`.
 
-## Pages (27)
+## Pages (33)
 
 - **Home** `/`: "saffron supplement" (the brand name "Saffron Supplement" appears 19× in the main content, 27× counting header and footer)
 - **Review** `/best-saffron-supplements/`: 12 products, comparison table, method
 - **Benefits** `/saffron-benefits/` plus mood, sleep, eye health, weight/appetite, PMS
 - **Guides** `/guides/`, `/saffron-dosage/`, `/saffron-side-effects/`, `/how-to-choose-a-saffron-supplement/`, `/affron-vs-satiereal/`
+- **Blog** `/blog/` plus 5 dated posts:
+  - `/blog/how-long-does-saffron-take-to-work/` (2026-09-09)
+  - `/blog/saffron-vs-ashwagandha/` (2026-09-24)
+  - `/blog/saffron-supplement-for-women/` (2026-10-06)
+  - `/blog/saffron-supplement-for-men/` (2026-10-14)
+  - `/blog/saffron-tea-vs-saffron-supplement/` (2026-10-21)
 - **Tools** `/tools/` plus dosage calculator, supplement finder quiz, cost-per-dose calculator, safety checker, 12-week mood & sleep tracker (all client-side; the tracker uses localStorage)
 - **Other** FAQ, About, Contact, Affiliate Disclosure, Privacy, Medical Disclaimer, Terms, HTML Sitemap
 
@@ -34,6 +40,7 @@ Old WordPress URLs (`/contact-us/`, `/about-us/`, `/blog/`, `/topic/*`, the two 
 ## Editing
 
 - **Add or change a product:** edit `PRODUCTS` in `app/products.php`. Every Amazon link goes through `amz()` / `amz_url()`, so the tag is applied automatically.
+- **Add a blog post:** add a route under `/blog/` with `'parent' => '/blog/'` and a `'date' => 'YYYY-MM-DD'`, then create its page file (end it with `more_posts('<its path>')`). It appears on `/blog/`, the homepage's "Latest From the Blog", `/guides/`, the HTML and XML sitemaps and `/feed.xml`, and its date drives the byline, JSON-LD, `article:*` meta and sitemap `lastmod`.
 - **Add a page:** add an entry to `ROUTES` in `app/routes.php` and create `app/pages/<file>.php`. It is added to the sitemap automatically.
 - **Change the "last updated" date:** `UPDATED` / `UPDATED_HUMAN` in `app/config.php`.
 

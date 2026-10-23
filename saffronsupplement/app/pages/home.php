@@ -170,6 +170,20 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Latest From the Blog</h2>
+      <p>New research roundups and comparisons from the Saffron Supplement editorial team. <a href="/blog/">See all articles</a>.</p>
+    </div>
+    <div class="grid g3">
+      <?php foreach (array_slice(blog_posts(), 0, 3, true) as $bp => $br): ?>
+      <a class="card" href="<?= e($bp) ?>"><p class="small" style="margin:0 0 6px"><time datetime="<?= e($br['date']) ?>"><?= human_date($br['date']) ?></time></p><h3><?= e($br['h1']) ?></h3><p><?= e($br['desc']) ?></p><span class="card-more">Read article &rarr;</span></a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
 <section class="section section-alt">
   <div class="wrap">
     <div class="sec-head"><h2>Popular Saffron Guides</h2></div>

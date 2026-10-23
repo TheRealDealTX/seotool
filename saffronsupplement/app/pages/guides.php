@@ -18,6 +18,10 @@ echo page_hero($GLOBALS['ss_route'], 'Everything you need to use saffron well: h
     <?= card('/saffron-for-weight-loss/', 'Saffron for Appetite', 'An honest look at Satiereal® and snacking.', '🍽️') ?>
     <?= card('/saffron-for-pms/', 'Saffron for PMS', 'The 15 mg twice-daily protocol, explained.', '🌸') ?>
   </div>
+  <h2>From the Blog</h2>
+  <div class="grid g3">
+    <?php foreach (blog_posts() as $bp => $br) echo card($bp, $br['h1'], $br['desc'], '📝'); ?>
+  </div>
   <h2>Reviews</h2>
   <div class="grid g2">
     <?= card('/best-saffron-supplements/', 'Best Saffron Supplements of ' . SITE_YEAR, '12 products compared on dose, standardization, testing and value.', '⭐') ?>

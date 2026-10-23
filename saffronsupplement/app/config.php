@@ -11,6 +11,26 @@ const SITE_YEAR   = '2026';
 const UPDATED     = '2026-10-23';
 const UPDATED_HUMAN = 'October 23, 2026';
 
+/** A route's publish/modified date (blog posts carry their own). */
+function route_date(array $r) { return $r['date'] ?? UPDATED; }
+function human_date($ymd) { return date('F j, Y', strtotime($ymd)); }
+
+/** Blog posts (routes with a 'date' under /blog/), newest first. */
+function blog_posts() {
+    $posts = array_filter(ROUTES, fn($r) => ($r['parent'] ?? null) === '/blog/' && isset($r['date']));
+    uasort($posts, fn($a, $b) => strcmp($b['date'], $a['date']));
+    return $posts;
+}
+
+/** "More from the blog" links, excluding the current post. */
+function more_posts($current, $n = 3) {
+    $h = '<section class="more-posts"><h2>More from the Blog</h2><ul>';
+    foreach (array_slice(array_diff_key(blog_posts(), [$current => 1]), 0, $n, true) as $p => $r) {
+        $h .= '<li><a href="' . e($p) . '">' . e($r['h1']) . '</a> <span class="small">&middot; ' . human_date($r['date']) . '</span></li>';
+    }
+    return $h . '</ul></section>';
+}
+
 /** HTML-escape. */
 function e($s) { return htmlspecialchars((string)$s, ENT_QUOTES | ENT_HTML5, 'UTF-8'); }
 

@@ -24,6 +24,7 @@ const NAV = [
         ['Safety Checker', '/tools/saffron-safety-checker/'],
         ['Mood & Sleep Tracker', '/tools/saffron-mood-sleep-tracker/'],
     ]],
+    ['Blog', '/blog/'],
     ['FAQ', '/faq/'],
 ];
 
@@ -43,7 +44,7 @@ function page_hero($route, $lede = '', $kicker = '') {
     $h = '<header class="phero"><div class="wrap">' . breadcrumbs_html() . ($kicker ? '<p class="kicker">' . e($kicker) . '</p>' : '')
         . '<h1>' . e($route['h1']) . '</h1>' . ($lede ? '<p class="lede">' . $lede . '</p>' : '');
     if (in_array($route['type'], ['article', 'review'], true)) {
-        $h .= '<p class="byline"><span>By the ' . SITE_NAME . ' Editorial Team</span><span>Updated <time datetime="' . UPDATED . '">' . UPDATED_HUMAN . '</time></span><span>' . a('/about/#process', 'How we research') . '</span></p>';
+        $h .= '<p class="byline"><span>By the ' . SITE_NAME . ' Editorial Team</span><span>' . (isset($route['date']) ? 'Published' : 'Updated') . ' <time datetime="' . route_date($route) . '">' . human_date(route_date($route)) . '</time></span><span>' . a('/about/#process', 'How we research') . '</span></p>';
     }
     return $h . '</div></header>';
 }
@@ -114,8 +115,8 @@ function render_page($path, array $route) {
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="<?= SITE_NAME ?>: research-backed saffron benefits, dosage and reviews">
-<?php if ($route['type'] === 'article' || $route['type'] === 'review'): ?><meta property="article:published_time" content="2026-10-23T00:00:00+00:00">
-<meta property="article:modified_time" content="<?= UPDATED ?>T00:00:00+00:00">
+<?php if ($route['type'] === 'article' || $route['type'] === 'review'): ?><meta property="article:published_time" content="<?= route_date($route) ?>T00:00:00+00:00">
+<meta property="article:modified_time" content="<?= route_date($route) ?>T00:00:00+00:00">
 <?php endif; ?><meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= e($route['title']) ?>">
 <meta name="twitter:description" content="<?= e($route['desc']) ?>">
@@ -169,7 +170,7 @@ function render_page($path, array $route) {
     <div class="fcol"><h2>Benefits</h2><ul>
       <li><a href="/saffron-benefits/">All Benefits</a></li><li><a href="/saffron-for-depression-and-mood/">Mood &amp; Depression</a></li><li><a href="/saffron-for-sleep/">Sleep</a></li><li><a href="/saffron-for-eye-health/">Eye Health</a></li><li><a href="/saffron-for-weight-loss/">Weight &amp; Appetite</a></li><li><a href="/saffron-for-pms/">PMS</a></li></ul></div>
     <div class="fcol"><h2>Guides &amp; Reviews</h2><ul>
-      <li><a href="/best-saffron-supplements/">Best Saffron Supplements</a></li><li><a href="/saffron-dosage/">Dosage Guide</a></li><li><a href="/saffron-side-effects/">Side Effects</a></li><li><a href="/how-to-choose-a-saffron-supplement/">How to Choose</a></li><li><a href="/affron-vs-satiereal/">affron vs Satiereal</a></li><li><a href="/faq/">FAQ</a></li></ul></div>
+      <li><a href="/best-saffron-supplements/">Best Saffron Supplements</a></li><li><a href="/saffron-dosage/">Dosage Guide</a></li><li><a href="/saffron-side-effects/">Side Effects</a></li><li><a href="/how-to-choose-a-saffron-supplement/">How to Choose</a></li><li><a href="/affron-vs-satiereal/">affron vs Satiereal</a></li><li><a href="/blog/">Blog</a></li><li><a href="/faq/">FAQ</a></li></ul></div>
     <div class="fcol"><h2>Free Tools</h2><ul>
       <li><a href="/tools/saffron-dosage-calculator/">Dosage Calculator</a></li><li><a href="/tools/saffron-supplement-quiz/">Supplement Quiz</a></li><li><a href="/tools/cost-per-dose-calculator/">Cost-Per-Dose</a></li><li><a href="/tools/saffron-safety-checker/">Safety Checker</a></li><li><a href="/tools/saffron-mood-sleep-tracker/">Mood &amp; Sleep Tracker</a></li></ul></div>
     <div class="fcol"><h2>Company</h2><ul>
@@ -195,11 +196,11 @@ function json_ld($path, array $route) {
     if ($path === '/404') return json_encode(['@context' => 'https://schema.org', '@graph' => $graph], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG);
 
     $page = ['@type' => 'WebPage', '@id' => $url . '#webpage', 'url' => $url, 'name' => $route['title'], 'description' => $route['desc'],
-             'isPartOf' => ['@id' => SITE_ORIGIN . '/#website'], 'dateModified' => UPDATED, 'inLanguage' => 'en-US'];
+             'isPartOf' => ['@id' => SITE_ORIGIN . '/#website'], 'dateModified' => route_date($route), 'inLanguage' => 'en-US'];
     if ($route['type'] === 'article' || $route['type'] === 'review') {
         $page['@type'] = ['WebPage', 'MedicalWebPage'];
         $graph[] = ['@type' => 'Article', '@id' => $url . '#article', 'headline' => $route['h1'], 'description' => $route['desc'],
-                    'mainEntityOfPage' => ['@id' => $url . '#webpage'], 'datePublished' => '2026-10-23', 'dateModified' => UPDATED,
+                    'mainEntityOfPage' => ['@id' => $url . '#webpage'], 'datePublished' => route_date($route), 'dateModified' => route_date($route),
                     'author' => ['@type' => 'Organization', 'name' => SITE_NAME . ' Editorial Team', 'url' => SITE_ORIGIN . '/about/'],
                     'publisher' => ['@id' => SITE_ORIGIN . '/#org'], 'image' => SITE_ORIGIN . '/assets/img/og-image.png'];
     }
@@ -238,7 +239,7 @@ function render_sitemap() {
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
     foreach (ROUTES as $p => $r) {
         $prio = $p === '/' ? '1.0' : (in_array($r['type'], ['review', 'tool'], true) || $p === '/best-saffron-supplements/' ? '0.9' : (str_starts_with($r['file'], 'legal') ? '0.3' : '0.8'));
-        echo '  <url><loc>' . SITE_ORIGIN . $p . '</loc><lastmod>' . UPDATED . '</lastmod><priority>' . $prio . "</priority></url>\n";
+        echo '  <url><loc>' . SITE_ORIGIN . $p . '</loc><lastmod>' . route_date($r) . '</lastmod><priority>' . $prio . "</priority></url>\n";
     }
     echo "</urlset>\n";
 }
@@ -252,10 +253,11 @@ function render_feed() {
         . '<description>Research-backed saffron supplement benefits, dosage, safety and reviews.</description>'
         . '<language>en-us</language><lastBuildDate>' . $date . '</lastBuildDate>'
         . '<atom:link href="' . SITE_ORIGIN . '/feed.xml" rel="self" type="application/rss+xml"/>' . "\n";
-    foreach (ROUTES as $p => $r) {
-        if (!in_array($r['type'], ['article', 'review'], true)) continue;
+    $items = array_filter(ROUTES, fn($r) => in_array($r['type'], ['article', 'review'], true));
+    uasort($items, fn($a, $b) => strcmp(route_date($b), route_date($a)));
+    foreach ($items as $p => $r) {
         echo '<item><title>' . e($r['h1']) . '</title><link>' . SITE_ORIGIN . $p . '</link><guid>' . SITE_ORIGIN . $p . '</guid>'
-            . '<pubDate>' . $date . '</pubDate><description>' . e($r['desc']) . "</description></item>\n";
+            . '<pubDate>' . date(DATE_RSS, strtotime(route_date($r) . ' 12:00:00 UTC')) . '</pubDate><description>' . e($r['desc']) . "</description></item>\n";
     }
     echo "</channel></rss>\n";
 }
