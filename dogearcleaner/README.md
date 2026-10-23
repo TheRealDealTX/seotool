@@ -76,12 +76,16 @@ They run entirely in the browser.
 - The platform serves existing files directly, ignores `.htaccess`, and routes
   `/` and unknown paths to `index.php`. So there is deliberately **no root
   `index.html`**: the homepage is `home.html`, served by `index.php`.
-- **Contact form** (`contact-submit.php`) appends messages to
-  `<website root>/.h5g/dogearcleaner-private/messages.csv`. That folder is
-  outside `public_html`, isn't web-served, and can be read in hPanel's File
-  Manager. To also get email, create
-  `.h5g/dogearcleaner-private/config.php` containing
-  `<?php return ['to' => 'you@example.com'];`.
+- **Contact form** (`contact-submit.php`) emails every message to
+  info@dogearcleaner.com through authenticated SMTP (`smtp.hostinger.com:465`,
+  logged in as that mailbox, so mail isn't flagged as spam). The message's
+  Reply-To is the visitor's address, so you can answer straight from the inbox.
+  It also appends a copy to `<website root>/.h5g/dogearcleaner-private/messages.csv`
+  as a backup. SMTP settings, including the mailbox password, live only in
+  `.h5g/dogearcleaner-private/config.php` on the server, outside `public_html`
+  and never in this repo. If the mailbox password changes, edit that file in
+  hPanel's File Manager. Send failures are logged to `mail-errors.log` in the
+  same folder.
 - **Deploy:** get credentials with `agency-hosting_files_generate-upload-url`
   for `2PvpG8RKu`, export them as shown in `deploy.sh`, run it, then clear the
   cache (`agency-hosting_cache_clear-website`).
