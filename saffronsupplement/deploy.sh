@@ -25,6 +25,6 @@ while IFS= read -r f; do
         -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
-done < <(find . -type f ! -name '*.py' ! -name 'deploy.sh' ! -name 'README.md' ! -path '*/__pycache__/*' | sort)
+done < <(find . -type f ! -path './app/private/*' ! -name '*.py' ! -name 'deploy.sh' ! -name 'README.md' ! -path '*/__pycache__/*' | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]

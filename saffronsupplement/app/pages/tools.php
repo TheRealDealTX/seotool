@@ -18,6 +18,6 @@ echo page_hero($GLOBALS['ss_route'], 'Five free, private tools that answer the q
       <li><a href="/tools/saffron-dosage-calculator/">Use the dosage calculator</a> to plan how many capsules and when.</li>
       <li><a href="/tools/saffron-mood-sleep-tracker/">Track for 8–12 weeks</a> to see whether it's helping.</li>
     </ol>
-    <p class="note">All tools run in your browser. Saffron Supplement doesn't collect or store anything you enter.</p>
+    <p class="note">All tools run in your browser. Saffron Supplement doesn't collect or store anything you enter into them.</p>
   </div>
 </div>

@@ -4,7 +4,8 @@ defined('SS_APP') || exit;
 
 const SITE_NAME   = 'Saffron Supplement';
 const SITE_ORIGIN = 'https://saffronsupplement.com';
-const SITE_EMAIL  = 'hello@saffronsupplement.com';
+const SITE_EMAIL  = 'info@saffronsupplement.com';
+const GA_ID       = 'G-J76LEX8DPZ';
 const AMZ_TAG     = 'saffronsupplement-20';
 const SITE_YEAR   = '2026';
 const UPDATED     = '2026-10-23';

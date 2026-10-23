@@ -1,6 +1,6 @@
 <?php defined('SS_APP') || exit;
-// Messages are appended to a JSON-lines file outside the web root and, where
-// the host allows it, emailed to SITE_EMAIL. See README, "Contact form".
+// Messages are appended as JSON lines to app/private/messages.php and emailed
+// to SITE_EMAIL over SMTP (app/mailer.php). See README, "Contact form".
 $sent = false; $err = '';
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $name = trim(substr($_POST['name'] ?? '', 0, 100));
@@ -13,13 +13,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     } elseif ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || mb_strlen($msg) < 10) {
         $err = 'Please enter your name, a valid email address and a message of at least 10 characters.';
     } else {
+        require_once dirname(__DIR__) . '/mailer.php';
+        $mailed = send_mail(SITE_EMAIL, '[' . SITE_NAME . '] ' . ($topic ?: 'Contact form') . ' from ' . $name,
+                            "Name: $name\nEmail: $email\nTopic: $topic\n\n$msg\n", $email);
         $row = json_encode(['at' => date('c'), 'name' => $name, 'email' => $email, 'topic' => $topic, 'message' => $msg,
-                            'ip' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? ''], JSON_UNESCAPED_UNICODE) . "\n";
-        $dir = dirname(__DIR__, 3) . '/ss-data';
-        if (!is_dir($dir)) @mkdir($dir, 0700, true);
-        $stored = @file_put_contents($dir . '/messages.jsonl', $row, FILE_APPEND | LOCK_EX) !== false;
-        $mailed = @mail(SITE_EMAIL, '[' . SITE_NAME . '] ' . ($topic ?: 'Contact form'), "From: $name <$email>\nTopic: $topic\n\n$msg",
-                        'From: ' . SITE_EMAIL . "\r\nReply-To: " . str_replace(["\r", "\n"], '', $email));
+                            'ip' => $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '', 'emailed' => $mailed], JSON_UNESCAPED_UNICODE) . "\n";
+        // A .php file starting with exit, so a direct request returns nothing.
+        $log = dirname(__DIR__) . '/private/messages.php';
+        if (!is_dir(dirname($log))) @mkdir(dirname($log), 0700, true);
+        if (!is_file($log)) @file_put_contents($log, "<?php exit; ?>\n");
+        $stored = @file_put_contents($log, $row, FILE_APPEND | LOCK_EX) !== false;
         if ($stored || $mailed) $sent = true;
         else $err = 'Sorry, your message could not be sent. Please email us directly at ' . SITE_EMAIL . '.';
     }

@@ -24,6 +24,7 @@ if ($host === 'www.saffronsupplement.com' || ($host === 'saffronsupplement.com' 
 
 if ($path === '/index.php') redirect('/');
 if ($path === '/sitemap.xml' || $path === '/sitemap_index.xml') { render_sitemap(); exit; }
+if ($path === '/feed.xml') { render_feed(); exit; }
 
 if (isset(REDIRECTS[$path])) redirect(REDIRECTS[$path]);
 if (isset(REDIRECTS[$path . '/'])) redirect(REDIRECTS[$path . '/']);

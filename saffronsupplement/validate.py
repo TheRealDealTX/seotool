@@ -39,7 +39,7 @@ def get(path):
         def redirect_request(self,*a,**k): return None
     op=urllib.request.build_opener(NR)
     try:
-        r=op.open(req); return r.status, r.read().decode()
+        r=op.open(req); return r.status, r.read().decode(errors="replace")
     except urllib.error.HTTPError as e:
         return e.code, e.read().decode(errors="replace")
 
@@ -54,8 +54,13 @@ for p in paths:
     x=P(); x.feed(body)
     if x.bad: errors.append(f"{p}: tag nesting {x.bad[:3]}")
     if x.h1!=1: errors.append(f"{p}: {x.h1} h1")
-    if not x.desc or not (70<=len(x.desc)<=170): errors.append(f"{p}: meta description length {len(x.desc or '')}")
-    if len(x.title)>65: errors.append(f"{p}: title {len(x.title)} chars")
+    if not x.desc or not (110<=len(x.desc)<=160): errors.append(f"{p}: meta description length {len(x.desc or '')}")
+    if len(x.title)>60: errors.append(f"{p}: title {len(x.title)} chars")
+    for needle, what in [("googletagmanager.com/gtag/js?id=G-J76LEX8DPZ", "Google tag"), ("gtag('config', 'G-J76LEX8DPZ')", "gtag config"),
+                         (f'<link rel="canonical" href="https://saffronsupplement.com{p}">', "canonical"), ('rel="manifest"', "manifest"),
+                         ('href="/favicon.ico"', "favicon.ico"), ('apple-touch-icon', "touch icon"), ('og:image" content=', "og:image")]:
+        if needle not in body: errors.append(f"{p}: missing {what}")
+    if body.find("googletagmanager") > body.find("</head>"): errors.append(f"{p}: Google tag not in <head>")
     if x.title in seen_titles: errors.append(f"{p}: duplicate title with {seen_titles[x.title]}")
     seen_titles[x.title]=p
     if x.desc in seen_desc: errors.append(f"{p}: duplicate description")
@@ -74,7 +79,7 @@ for p in paths:
 for h in sorted(internal):
     st,_=get(h)
     if st!=200: errors.append(f"internal link {h}: HTTP {st}")
-for path, want in [("/nope/",404),("/contact-us/",301),("/best-saffron-supplements",301),("/robots.txt",200),("/assets/css/style.css",200),("/favicon.svg",200),("/app/config.php",None)]:
+for path, want in [("/nope/",404),("/contact-us/",301),("/best-saffron-supplements",301),("/robots.txt",200),("/assets/css/style.css",200),("/favicon.svg",200),("/favicon.ico",200),("/favicon-96x96.png",200),("/apple-touch-icon.png",200),("/site.webmanifest",200),("/web-app-manifest-512x512.png",200),("/feed.xml",200),("/sitemap/",200),("/assets/img/og-image.png",200),("/app/config.php",None)]:
     st, body = get(path)
     if want and st!=want: errors.append(f"{path}: expected {want}, got {st}")
     if path.startswith("/app/") and body.strip(): errors.append(f"{path}: app file leaks output")

@@ -89,6 +89,15 @@ function render_page($path, array $route) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <title><?= e($route['title']) ?></title>
 <meta name="description" content="<?= e($route['desc']) ?>">
 <?php if (!empty($route['noindex'])): ?><meta name="robots" content="noindex, follow">
@@ -100,11 +109,26 @@ function render_page($path, array $route) {
 <meta property="og:title" content="<?= e($route['title']) ?>">
 <meta property="og:description" content="<?= e($route['desc']) ?>">
 <meta property="og:url" content="<?= e($canonical) ?>">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="<?= SITE_ORIGIN ?>/assets/img/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?= SITE_NAME ?>: research-backed saffron benefits, dosage and reviews">
+<?php if ($route['type'] === 'article' || $route['type'] === 'review'): ?><meta property="article:published_time" content="2026-10-23T00:00:00+00:00">
+<meta property="article:modified_time" content="<?= UPDATED ?>T00:00:00+00:00">
+<?php endif; ?><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($route['title']) ?>">
+<meta name="twitter:description" content="<?= e($route['desc']) ?>">
+<meta name="twitter:image" content="<?= SITE_ORIGIN ?>/assets/img/og-image.png">
+<meta name="author" content="<?= SITE_NAME ?>">
+<meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#5b2a86">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="<?= SITE_NAME ?>" href="<?= SITE_ORIGIN ?>/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap">
@@ -149,7 +173,7 @@ function render_page($path, array $route) {
     <div class="fcol"><h2>Free Tools</h2><ul>
       <li><a href="/tools/saffron-dosage-calculator/">Dosage Calculator</a></li><li><a href="/tools/saffron-supplement-quiz/">Supplement Quiz</a></li><li><a href="/tools/cost-per-dose-calculator/">Cost-Per-Dose</a></li><li><a href="/tools/saffron-safety-checker/">Safety Checker</a></li><li><a href="/tools/saffron-mood-sleep-tracker/">Mood &amp; Sleep Tracker</a></li></ul></div>
     <div class="fcol"><h2>Company</h2><ul>
-      <li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li><li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li><li><a href="/medical-disclaimer/">Medical Disclaimer</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li></ul></div>
+      <li><a href="/about/">About Us</a></li><li><a href="/contact/">Contact</a></li><li><a href="/affiliate-disclosure/">Affiliate Disclosure</a></li><li><a href="/medical-disclaimer/">Medical Disclaimer</a></li><li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
   </div>
   <div class="wrap fbottom">
     <p>&copy; <?= SITE_YEAR ?> <?= SITE_NAME ?>. All rights reserved.</p>
@@ -217,4 +241,21 @@ function render_sitemap() {
         echo '  <url><loc>' . SITE_ORIGIN . $p . '</loc><lastmod>' . UPDATED . '</lastmod><priority>' . $prio . "</priority></url>\n";
     }
     echo "</urlset>\n";
+}
+
+function render_feed() {
+    header('Content-Type: application/rss+xml; charset=utf-8');
+    $date = date(DATE_RSS, strtotime(UPDATED . ' 12:00:00 UTC'));
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n"
+        . '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+        . '<title>' . SITE_NAME . '</title><link>' . SITE_ORIGIN . '/</link>'
+        . '<description>Research-backed saffron supplement benefits, dosage, safety and reviews.</description>'
+        . '<language>en-us</language><lastBuildDate>' . $date . '</lastBuildDate>'
+        . '<atom:link href="' . SITE_ORIGIN . '/feed.xml" rel="self" type="application/rss+xml"/>' . "\n";
+    foreach (ROUTES as $p => $r) {
+        if (!in_array($r['type'], ['article', 'review'], true)) continue;
+        echo '<item><title>' . e($r['h1']) . '</title><link>' . SITE_ORIGIN . $p . '</link><guid>' . SITE_ORIGIN . $p . '</guid>'
+            . '<pubDate>' . $date . '</pubDate><description>' . e($r['desc']) . "</description></item>\n";
+    }
+    echo "</channel></rss>\n";
 }
