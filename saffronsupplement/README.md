@@ -50,11 +50,10 @@ Hostinger Agency Growth plan, website UID **`JfEovlw7l`** (plain `php-fpm`, PHP 
 Boston datacenter), created 2026-10-23. The platform serves real files directly,
 ignores `.htaccess`, and routes everything else to `index.php`.
 
-The old WordPress site (UID `269tp1YJD`) has **not** been deleted. On
-2026-10-23 its domain was unlinked and moved to the new site; it is still
-reachable at `indigo-gnat-260277.hostingersite.com`. A content export of its
-pages, posts and media metadata (REST API JSON) is in `../saffronsupplement-backup/`.
-Delete the WordPress site in hPanel once you're happy with the new one.
+The old WordPress site (UID `269tp1YJD`) was deleted on 2026-10-23 after the
+domain moved here. The only remaining copy of its content is the REST API export
+(pages, posts, media metadata, categories, homepage HTML) in
+`../saffronsupplement-backup/wordpress-2026-10-23/`.
 
 Deploy: get credentials from the Hostinger API operation
 `agency-hosting_files_generate-upload-url` (website `JfEovlw7l`), export them as
