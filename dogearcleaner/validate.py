@@ -2,7 +2,7 @@
 """Post-build checks for dogearcleaner.com. Run after every build:  python3 validate.py
 
 Enforces the brief: every old WordPress URL still resolves, every Amazon link
-carries the dogearcleanerjditt-20 tag, and the homepage's visible copy says
+carries the dogearcleanerjditt-20 tag, every page has the GA4 tag (G-FCFG03CMQB), and the homepage's visible copy says
 "Dog Ear Cleaner" at least 14 times. Plus standard SEO/HTML hygiene.
 """
 
@@ -87,16 +87,17 @@ def resolve(path):
         return (SITE / "home.html").exists()
     f = SITE / path.lstrip("/")
     if path.endswith("/"):
-        return (f / "index.html").exists()
+        return (f / ".page.html").exists() and (f / "index.php").exists()
     return f.exists()
 
 
 def main():
-    pages = sorted(p for p in SITE.rglob("*.html") if "wp-content" not in p.parts)
+    pages = sorted(p for p in SITE.rglob("*.html")
+                   if "wp-content" not in p.parts and not p.name.startswith("google"))  # skip GSC verification file
     titles, descs = {}, {}
     amazon = 0
     for f in pages:
-        rel = "/" + str(f.relative_to(SITE)).replace("index.html", "")
+        rel = "/" + str(f.relative_to(SITE)).replace(".page.html", "")
         html = f.read_text(encoding="utf-8")
         pg = Page()
         pg.feed(html)
@@ -121,6 +122,8 @@ def main():
                 json.loads(ld)
             except ValueError as e:
                 errors.append(f"{rel}: bad JSON-LD ({e})")
+        if "googletagmanager.com/gtag/js?id=G-FCFG03CMQB" not in html or "gtag('config', 'G-FCFG03CMQB')" not in html:
+            errors.append(f"{rel}: missing Google Analytics tag")
         if "[[" in html:
             errors.append(f"{rel}: unexpanded shortcode")
         for href, rel_attr in pg.links:
@@ -163,6 +166,11 @@ def main():
     for name in OLD_IMAGES:
         if not (SITE / "wp-content/uploads/2026/05" / name).exists():
             errors.append(f"old image URL would 404: {name}")
+    stray = [str(p.relative_to(SITE)) for p in SITE.rglob("index.html") if "wp-content" not in p.parts]
+    if stray:
+        errors.append(f"index.html files would bypass the short-cache PHP stubs: {stray}")
+    if not (SITE / "google9d8d740410b54935.html").exists():
+        errors.append("Search Console verification file google9d8d740410b54935.html is missing")
     if (SITE / "index.html").exists():
         errors.append("site/index.html must not exist (host would serve it for unknown paths); use home.html")
     sm = (SITE / "sitemap.xml").read_text()

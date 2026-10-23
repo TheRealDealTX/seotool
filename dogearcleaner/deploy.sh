@@ -30,4 +30,13 @@ while IFS= read -r f; do
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . -type f | sort)
 echo "uploaded=$ok failed=$fail"
+
+# Pages are served by <dir>/index.php + <dir>/.page.html; remove any index.html
+# left over from earlier deploys so it can't shadow the short-cache PHP stub.
+REST="${DEC_FB_URL%/tus}/resources/public_html"
+while IFS= read -r d; do
+  d=${d#./}; d=${d%/index.php}
+  code=$(fb -X DELETE "$REST/$d/index.html" -o /dev/null -w "%{http_code}")
+  [ "$code" = 204 ] && echo "removed stale $d/index.html"
+done < <(find . -name index.php -mindepth 2 | sort)
 [ "$fail" -eq 0 ]

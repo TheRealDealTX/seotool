@@ -20,7 +20,7 @@ report (2026-07 to 2026-10), and every old URL still works.
 | `src/` | CSS, JS, images, and root files (`index.php`, `contact-submit.php`, manifest) |
 | `validate.py` | Post-build checks; run after every build |
 | `deploy.sh` | Uploads `site/` through Hostinger's File Browser API |
-| `backup/wordpress-2026-10-23/` | Content backup of the WordPress site (REST export, rendered pages, media) |
+| `backup/wordpress-2026-10-23/` | Content backup of the WordPress site (REST export, rendered pages, media); SHA-256 of the full files zip |
 
 ## Rebuild
 
@@ -70,12 +70,25 @@ They run entirely in the browser.
 
 - **Live website:** Hostinger Agency website UID `2PvpG8RKu` (php-fpm, PHP 8.5),
   created 2026-10-23. dogearcleaner.com was moved onto it the same day.
-- **Old WordPress website:** UID `PZJDtrILR` was left in place, with its domain
-  unlinked but its files and database intact. To roll back, link
-  dogearcleaner.com back to it. Delete it only once you're happy with the new site.
+- **Old WordPress website:** UID `PZJDtrILR`, domain unlinked. The full
+  `public_html` of the WordPress install (11,278 files, 178,982,579 bytes,
+  including `wp-config.php` and all uploads) is stored on the new website at
+  `.h5g/dogearcleaner-wordpress-files-2026-10-23.zip`. Its SHA-256 is in
+  `backup/wordpress-2026-10-23/`. Get it through hPanel's File Manager.
 - The platform serves existing files directly, ignores `.htaccess`, and routes
   `/` and unknown paths to `index.php`. So there is deliberately **no root
   `index.html`**: the homepage is `home.html`, served by `index.php`.
+- **Caching:** the host sends static `.html` with `Cache-Control: max-age=31536000`
+  (one year), which pins old pages in the CDN and in browsers. So every page is
+  written as a hidden `<dir>/.page.html` (dot-files return 403) and served by a
+  four-line `<dir>/index.php` that sends `Cache-Control: public, max-age=600`.
+  `deploy.sh` deletes any leftover `index.html` that would shadow a stub, and
+  `validate.py` fails the build if one exists.
+- **Google Analytics:** the GA4 tag `G-FCFG03CMQB` is in `GA_TAG` in `build.py`
+  and goes on every page. `validate.py` checks for it, and the privacy policy
+  discloses it.
+- **Search Console:** `google9d8d740410b54935.html` (in `src/root/`) is the
+  verification file carried over from the WordPress site. Keep it.
 - **Contact form** (`contact-submit.php`) emails every message to
   info@dogearcleaner.com through authenticated SMTP (`smtp.hostinger.com:465`,
   logged in as that mailbox, so mail isn't flagged as spam). The message's

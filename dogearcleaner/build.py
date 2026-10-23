@@ -29,6 +29,18 @@ ASSET_VER = TODAY.replace("-", "")
 
 esc = html.escape
 
+# Google Analytics 4 (property G-FCFG03CMQB), emitted on every page by layout().
+GA_TAG = """<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCFG03CMQB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FCFG03CMQB');
+</script>
+"""
+
 
 # --------------------------------------------------------------------------- content loading
 
@@ -246,7 +258,7 @@ def layout(*, path, title, description, body, schema=(), og_type="website", imag
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(title)}</title>
+{GA_TAG}<title>{esc(title)}</title>
 <meta name="description" content="{esc(description)}">
 {robots}
 <link rel="canonical" href="{canonical}">
@@ -570,10 +582,23 @@ def build_images():
             im.resize((s, s), Image.LANCZOS).save(OUT / name)
 
 
+# The host serves static .html with a one-year Cache-Control, which pins old
+# pages in the CDN and in browsers. So each page is written as a hidden
+# .page.html (the host 403s dot-files) and served by a stub index.php that
+# sets a short cache lifetime.
+PAGE_STUB = """<?php
+header('Content-Type: text/html; charset=utf-8');
+header('Cache-Control: public, max-age=600');
+readfile(__DIR__ . '/.page.html');
+"""
+
+
 def write(path, text):
     f = OUT / path.lstrip("/")
     if path.endswith("/"):
-        f = f / "index.html"
+        f.mkdir(parents=True, exist_ok=True)
+        (f / "index.php").write_text(PAGE_STUB, encoding="utf-8")
+        f = f / ".page.html"
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(text, encoding="utf-8")
 
@@ -586,7 +611,9 @@ def main():
              "vetericyn-plus-ear-rinse-review", "pet-md-ear-flush-review", "floppy-ear-breeds", "after-bath-care"]
     posts = {k: posts[k] for k in order if k in posts} | {k: v for k, v in posts.items() if k not in order}
 
-    OUT.mkdir(exist_ok=True)
+    if OUT.exists():  # start clean so no stale index.html survives the switch to .page.html
+        shutil.rmtree(OUT)
+    OUT.mkdir()
     for d in ("assets/css", "assets/js"):
         (OUT / d).mkdir(parents=True, exist_ok=True)
     shutil.copy2(SRC / "css/site.css", OUT / "assets/css/site.css")
