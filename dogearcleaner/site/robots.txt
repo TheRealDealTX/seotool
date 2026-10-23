@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /home.html
+Disallow: /contact-submit.php
+
+Sitemap: https://dogearcleaner.com/sitemap.xml
