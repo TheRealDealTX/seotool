@@ -66,7 +66,7 @@ function site_posts(): array
         ['/affiliate-marketing-for-influencers/', 'Affiliate Marketing for Influencers: The Complete Playbook', 'Income Streams', '2026-10-25',
             'How creators earn commission on every sale, the best places to put links, and how to disclose them the right way.'],
         ['/how-to-make-money-on-pinterest/', 'How to Make Money on Pinterest as an Influencer', 'Pinterest', '2026-10-25',
-            'Idea Pins, affiliate pins, brand collaborations and traffic-to-product funnels: every way Pinterest pays creators.'],
+            'Affiliate pins, brand collaborations, digital products and traffic-to-product funnels: every way Pinterest pays creators.'],
         ['/monetizing-your-brand-the-power-of-influencer-marketing/', 'Monetizing Your Brand: The Power of Influencer Marketing', 'Strategy', '2023-07-07',
             'Brand collaborations, sponsored content, merch, content services and more: the core ways influencers turn a following into a business.'],
     ];
