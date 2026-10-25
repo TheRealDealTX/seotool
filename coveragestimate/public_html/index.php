@@ -32,6 +32,13 @@ function ce_not_found(string $root): void
     ce_serve($root . '/404.html', 'text/html; charset=UTF-8', 404);
 }
 
+// HTTP -> HTTPS, as WordPress did (pages are served by this script, so it applies site-wide)
+$isHttps = ($_SERVER['HTTPS'] ?? '') === 'on' || ($_SERVER['REQUEST_SCHEME'] ?? '') === 'https'
+    || strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'https';
+if (!$isHttps && $host !== '' && !in_array($host, ['localhost', '127.0.0.1'], true)) {
+    ce_redirect('https://' . $host . $uri);
+}
+
 // www -> apex, as WordPress did
 if (strpos($host, 'www.') === 0) {
     ce_redirect('https://' . substr($host, 4) . $uri);
@@ -74,14 +81,12 @@ if (preg_match('#^/.+/feed/?$#', $path)) {
     ce_redirect('/feed/');
 }
 
-// Home page lives outside the web root's index.html so that servers which fall
-// back to /index.html for unknown URLs route those requests here instead.
+// Pages are stored under ce-pages/ (not as directory index files) so every page
+// request reaches this script: /about-us/ -> ce-pages/about-us/index.html
 if ($path === '/') {
     ce_serve($root . '/ce-pages/home.html');
 }
-
-// Pages: /about-us/ -> about-us/index.html (normally served directly by the web server)
-$dir = $root . rtrim($path, '/');
+$dir = $root . '/ce-pages' . rtrim($path, '/');
 if (is_file($dir . '/index.html')) {
     if (substr($path, -1) !== '/') {
         ce_redirect($path . '/' . ($query !== '' ? '?' . $query : ''));

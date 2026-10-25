@@ -75,11 +75,16 @@ def main():
         name = (p.strip('/').replace('/', '__') or 'home') + '.html'
         text = open(os.path.join(RAW, name), encoding='utf-8').read()
         write(os.path.join(WEB, p.lstrip('/'), 'index.html'), process_html(text))
-    # the home page is served by index.php (see server/index.php)
-    home = os.path.join(WEB, 'index.html')
-    if os.path.exists(home):
-        os.makedirs(os.path.join(WEB, 'ce-pages'), exist_ok=True)
-        os.replace(home, os.path.join(WEB, 'ce-pages', 'home.html'))
+    # pages are served by index.php from ce-pages/ (see server/index.php)
+    for p in pages:
+        src = os.path.join(WEB, p.lstrip('/'), 'index.html')
+        dst = os.path.join(WEB, 'ce-pages', 'home.html') if p == '/' else os.path.join(WEB, 'ce-pages', p.strip('/'), 'index.html')
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        os.replace(src, dst)
+        d = os.path.dirname(src)
+        while d != WEB and os.path.isdir(d) and not os.listdir(d):
+            os.rmdir(d)
+            d = os.path.dirname(d)
     write(os.path.join(WEB, '404.html'), process_html(open(os.path.join(RAW, '__404.html'), encoding='utf-8').read()))
         # feeds are served by index.php from ce-feeds/ (no /feed/ directory, so it works without .htaccess)
     for f in ('feed', 'comments__feed', 'category__tools__feed'):

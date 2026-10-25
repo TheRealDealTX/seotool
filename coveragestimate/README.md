@@ -1,5 +1,11 @@
 # coveragestimate.com — static rebuild (replaces WordPress)
 
+**Status: live since October 25, 2026.** coveragestimate.com is served by this static build
+from Hostinger Agency website `53isE4B6f`. The old WordPress install is website `UPrX5YOH4`,
+now on `peachpuff-toad-319923.hostingersite.com` with Elementor maintenance mode on (public
+visitors get a 503 "site has moved" page; logged-in admins can still use wp-admin).
+To roll back, move the domain back to the WordPress website and turn maintenance mode off.
+
 An exact static copy of the WordPress/Elementor site, served as plain files with a
 small PHP layer. Every URL, title, meta tag, canonical, schema block, image path and
 script is identical to the WordPress output, so nothing changes for visitors or Google.
@@ -14,7 +20,11 @@ script is identical to the WordPress output, so nothing changes for visitors or 
 | `tools/build_static.py` | Turns the download into `public_html/` (root-relative links, keeps SEO URLs absolute) |
 | `tests/` | Visual comparison (live vs new), form tests, local PHP router |
 
-## Rebuild from the live WordPress site
+## Rebuild
+
+Pages are now edited in this repo (`public_html/ce-pages/`). The mirror tools below were used
+for the initial copy; the WordPress source now lives on its preview domain, so point
+`ORIGIN` in `tools/mirror.py` there if you ever need to re-pull from it.
 
 ```sh
 cd tools
@@ -35,9 +45,10 @@ no longer part of the build (it deletes itself), and clear the website cache.
 
 Hostinger's Agency (H5G) servers ignore `.htaccess`, so `server/index.php` is a front
 controller for every URL that is not a real file. It reproduces WordPress's behavior;
-`.htaccess` mirrors the same rules for Apache/LiteSpeed hosts. The home page is stored at
-`ce-pages/home.html` (not `index.html`) so unknown URLs fall through to `index.php` and get
-a real 404. Feeds live in `ce-feeds/`. Private data is stored as `.php` files that output
+`.htaccess` mirrors the same rules for Apache/LiteSpeed hosts. Every page is stored under
+`ce-pages/` (`/about-us/` → `ce-pages/about-us/index.html`, home → `ce-pages/home.html`)
+rather than as directory index files, so all page requests reach `index.php`. That lets it
+redirect HTTP → HTTPS (the Agency API has no force-HTTPS toggle) and return real 404s. Feeds live in `ce-feeds/`. Private data is stored as `.php` files that output
 nothing if requested directly.
 
 - HTTPS and non-www, like WordPress.
