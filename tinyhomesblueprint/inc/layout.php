@@ -111,6 +111,15 @@ function page_start(array $o = []): void {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($desc) ?>">
 <meta name="robots" content="<?= e($robots) ?>">
@@ -165,7 +174,7 @@ function site_header(): void {
     <a class="brand" href="/" aria-label="<?= e(SITE_NAME) ?> home">
       <img src="/assets/img/logo.webp" width="150" height="60" alt="<?= e(SITE_NAME) ?> logo">
     </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><?= icon('menu') ?><span class="sr">Menu</span></button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><?= icon('menu', 'ico ico-open') ?><?= icon('close', 'ico ico-close') ?><span class="sr">Menu</span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>
       <?php foreach ($NAV as $label => $item):
@@ -217,7 +226,6 @@ function site_footer(): void {
   </div>
   <div class="wrap footer-base">
     <p>&copy; <?= date('Y') ?> <?= e(SITE_NAME) ?>. All rights reserved.</p>
-    <p>Designed &amp; Developed by <a href="https://jweb.cloud/" rel="noopener">JWeb</a></p>
   </div>
 </footer>
 <?php
@@ -247,8 +255,8 @@ function plan_card(string $slug): void {
     global $PLANS;
     $p = $PLANS[$slug];
     ?>
-<article class="plan-card" data-beds="<?= $p['beds'] ?>" data-floors="<?= $p['floors'] ?>" data-sqft="<?= $p['sqft'] ?>" data-styles="<?= e(implode(' ', $p['styles'])) ?>" data-price="<?= $p['price'] ?>">
-  <a class="plan-img" href="/plans/<?= e($slug) ?>/"><img src="<?= e($p['image']) ?>" width="800" height="430" alt="<?= e($p['name'] . ' exterior rendering - ' . $p['title']) ?>" loading="lazy"></a>
+<article class="plan-card" data-beds="<?= $p['beds'] ?>" data-sqft="<?= $p['sqft'] ?>" data-type="<?= $p['mobile'] ? 'wheels' : 'foundation' ?>" data-loft="<?= $p['has_loft'] ? 1 : 0 ?>" data-styles="<?= e(implode(' ', $p['styles'])) ?>" data-price="<?= $p['price'] ?>">
+  <a class="plan-img" href="/plans/<?= e($slug) ?>/"><img src="<?= e($p['image']) ?>" width="800" height="430" alt="<?= e($p['name'] . (isset($p['rooms']) ? ' front elevation drawing' : ' exterior rendering') . ' - ' . $p['title']) ?>" loading="lazy"></a>
   <div class="plan-body">
     <p class="plan-no"><?= e($p['name']) ?></p>
     <h3><a href="/plans/<?= e($slug) ?>/"><?= e($p['title']) ?></a></h3>
@@ -256,7 +264,7 @@ function plan_card(string $slug): void {
       <li><?= icon('ruler') ?> <?= number_format($p['sqft']) ?> sq ft</li>
       <li><?= icon('bed') ?> <?= $p['beds'] ?> bed</li>
       <li><?= icon('bath') ?> <?= $p['baths'] ?> bath</li>
-      <li><?= icon('stairs') ?> <?= $p['floors'] ?> floor<?= $p['floors'] > 1 ? 's' : '' ?></li>
+      <li><?= icon($p['mobile'] ? 'wheels' : 'stairs') ?> <?= $p['mobile'] ? 'On wheels' : ($p['has_loft'] ? 'Loft' : ($p['floors'] > 1 ? $p['floors'] . ' floors' : '1 level')) ?></li>
     </ul>
     <div class="plan-foot"><span class="price"><?= money($p['price']) ?></span><a class="btn btn-sm" href="/plans/<?= e($slug) ?>/">View plan</a></div>
   </div>

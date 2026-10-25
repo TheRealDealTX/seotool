@@ -9,7 +9,8 @@ const SITE_TAG    = 'Tiny House Plans & Blueprints';
 const SITE_PHONE  = '210-903-9471';
 const SITE_TEL    = '+12109039471';
 const SITE_EMAIL  = 'contact@tinyhomesblueprint.com';
-const ASSET_VER   = '20261025';
+const ASSET_VER   = '20261025b';
+const GA_ID       = 'G-7XXLLDTBJR';
 
 // Primary navigation. Each entry: label => path, or label => [path, children].
 $NAV = [
@@ -39,33 +40,8 @@ $NAV = [
     'Contact' => '/contact/',
 ];
 
-// Plans for sale. Specs are as published on the original store.
-$PLANS = [
-    'plan-12-2418' => [
-        'name'   => 'Plan 12-2418',
-        'title'  => 'Rustic 3-Bedroom Tiny House Plan with Covered Porch',
-        'price'  => 550,
-        'beds'   => 3, 'baths' => 2, 'floors' => 2,
-        'sqft'   => 700, 'width' => "20'", 'depth' => "38'", 'height' => "14' 4\"", 'ceiling' => "9'",
-        'roof'   => '4:12 pitch, truss framing, shingle roof',
-        'walls'  => '2x6 wood framing, siding and stone exterior',
-        'features' => ['Covered front porch', 'Open living, kitchen and dining', 'Flex room with retractable wall (dining, office or guest room)', 'Main-floor laundry', 'Private bedroom wing', 'Can be flipped to put the porch at the rear'],
-        'styles' => ['small-cabin-plans', 'tiny-cottage-plans', 'adu-plans', 'small-farmhouse-plans'],
-        'image'  => '/assets/img/plan-12-2418.webp',
-    ],
-    'plan-12-2417' => [
-        'name'   => 'Plan 12-2417',
-        'title'  => 'Single-Level 2-Bedroom Tiny Cabin Plan',
-        'price'  => 1050,
-        'beds'   => 2, 'baths' => 1, 'floors' => 1,
-        'sqft'   => 700, 'width' => "20'", 'depth' => "38'", 'height' => "14' 4\"", 'ceiling' => "9'",
-        'roof'   => '4:12 pitch, truss framing, shingle roof',
-        'walls'  => '2x6 wood framing, siding and stone exterior',
-        'features' => ['Everything on one floor, no stairs', 'Side entry into an open great room', 'Kitchen sized for a table or island', 'Flex room with retractable wall', 'Full shower bath', 'Main-floor laundry'],
-        'styles' => ['small-cabin-plans', 'tiny-cottage-plans', 'adu-plans'],
-        'image'  => '/assets/img/plan-12-2417.webp',
-    ],
-];
+// Plans for sale (geometry, specs and copy) live in their own file.
+require __DIR__ . '/plans.php';
 
 // Route registry. type: home|catalog|plan|style|tool|guide|company|legal|hub
 // file is relative to /pages. 'nav' is the short label used on hub cards.
@@ -183,7 +159,7 @@ $ROUTES = [
 // Plan detail routes are generated from $PLANS.
 foreach ($PLANS as $slug => $p) {
     $ROUTES["/plans/$slug/"] = ['file' => 'plan.php', 'type' => 'plan', 'plan' => $slug, 'priority' => '0.8',
-        'title' => $p['name'] . ': ' . $p['title'],
+        'title' => $p['title'],
         'description' => sprintf('%s is a %s sq ft, %d-bed, %d-bath tiny house plan (%s x %s). See specs, features and what is in the plan set from Tiny Homes Blueprint.',
             $p['name'], number_format($p['sqft']), $p['beds'], $p['baths'], $p['width'], $p['depth'])];
 }

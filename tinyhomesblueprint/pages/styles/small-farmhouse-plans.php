@@ -33,7 +33,7 @@ $plans = plans_for_style('small-farmhouse-plans');
       </ol></nav>
 
       <h2 id="plans">Small farmhouse plans to buy</h2>
-      <p>Plan 12-2418 is a 700 sq ft, two-floor design with three bedrooms and two baths on a 20 x 38 ft footprint. A covered front porch, main-floor laundry and a flex room with a retractable wall give it the practical bones of a farmhouse, and the layout can be flipped to put the porch at the rear. It is drawn with a stone-and-siding exterior; swapping to board-and-batten siding and a metal roof for a classic farmhouse look is a straightforward modification.</p>
+      <p>These small farmhouse plans pair steep roofs, porches and board-and-batten siding with practical layouts: mudrooms, main-floor laundry and kitchens big enough to cook from scratch. They range from a 760 sq ft modern farmhouse with a loft to a three-bedroom, two-bath plan.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

@@ -12,7 +12,7 @@
     { name: 'Tiny house on wheels', note: '8.5 x 24 ft trailer', lo: 0, hi: 204, label: '204 sq ft' },
     { name: 'IRC Appendix AQ tiny house', note: 'Code definition, lofts excluded', lo: 0, hi: 400, label: 'up to 400 sq ft' },
     { name: 'Typical ADU', note: 'Common local size caps', lo: 400, hi: 800, label: '400-800 sq ft', range: true },
-    { name: 'Tiny Homes Blueprint plans', note: '20 x 38 ft footprint', lo: 0, hi: 700, label: '700 sq ft' }
+    { name: 'Tiny Homes Blueprint plans', note: '24 plans in the catalog', lo: 160, hi: 864, label: '160-864 sq ft', range: true }
   ];
   var WHEEL_LENGTHS = [16, 18, 20, 22, 24, 26, 28, 30, 32];
   var FOOTPRINTS = [[10, 16], [12, 16], [12, 20], [12, 24], [14, 24], [16, 24], [16, 28], [16, 32], [20, 30], [20, 38], [24, 32], [24, 40]];
@@ -99,7 +99,7 @@
       fpLbl = 'footprint, ' + fp[0] * fp[1] + ' sq ft';
       mainTxt = tot[1] <= 400 ? 'Yes' : mid <= 400 ? 'Borderline' : 'No';
       mainLbl = 'under the 400 sq ft IRC tiny house limit';
-      if (adults + kids >= 3) flags.push(['', 'With ' + people + ' people, a separate bedroom for kids or a second loft makes daily life much easier. ' + (mid > 450 ? 'Our <a href="/plans/plan-12-2418/">3-bedroom 700 sq ft plan</a> is designed for this.' : 'See <a href="/tiny-house-plans-with-loft/">plans with a loft</a>.')]);
+      if (adults + kids >= 3) flags.push(['', 'With ' + people + ' people, a separate bedroom for kids or a second loft makes daily life much easier. ' + (mid > 450 ? 'Our <a href="/plans/plan-12-2418/">3-bedroom 700 sq ft</a> and <a href="/plans/plan-12-2440/">3-bedroom 864 sq ft</a> plans are designed for this.' : 'See <a href="/tiny-house-plans-with-loft/">plans with a loft</a>.')]);
     }
     if (wfh === 'full') flags.push(['', 'Full-time remote work: plan a dedicated desk spot with a door or partition if anyone else is home during the day.']);
     if (part && !flags.length) flags.push(['good', 'For weekend or seasonal use you can lean toward the low end of the range.']);
@@ -140,7 +140,7 @@
     } else {
       picks = [['adu-plans', 'Most ADU limits fall between 400 and 800 sq ft, right in your range.'],
         ['small-farmhouse-plans', 'Farmhouse layouts add a mudroom and porch for rural living.'],
-        ['small-cabin-plans', 'Our 700 sq ft cabin plans have 2 or 3 bedrooms on a 20 x 38 ft footprint.']];
+        ['small-cabin-plans', 'Our larger cabin plans run 700-832 sq ft with 2 or 3 bedrooms.']];
     }
     $('sz-styles').innerHTML = picks.map(function (p) {
       var s = STYLES[p[0]]; if (!s) return '';

@@ -15,6 +15,11 @@ $fetch = function ($url) {
     preg_match('#HTTP/\S+ (\d+)#', $http_response_header[0] ?? '', $m);
     return [(int)($m[1] ?? 0), (string)$body];
 };
+require __DIR__ . '/inc/plan-check.php';
+foreach (plan_geometry_problems($PLANS) as $msg) $fail('plans', $msg);
+foreach ($PLANS as $slug => $p) {
+    foreach (array_filter([$p['image'], $p['floorplan']]) as $img) if (!is_file(__DIR__ . $img)) $fail('plans', "$slug: missing $img (run php build-plans.php)");
+}
 $linkOk = [];
 foreach ($ROUTES as $path => $r) {
     [$code, $html] = $fetch($base . $path);

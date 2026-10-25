@@ -21,7 +21,7 @@ $plans = plans_for_style('tiny-house-on-wheels-plans');
   <div class="wrap article-layout">
     <div class="prose">
       <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-        <li><a href="#plans">Request a custom THOW plan</a></li>
+        <li><a href="#plans">Tiny house on wheels plans to buy</a></li>
         <li><a href="#limits">Road limits for a mobile tiny home</a></li>
         <li><a href="#sizes">Trailer sizes and weights</a></li>
         <li><a href="#layout">Layouts that work on wheels</a></li>
@@ -32,8 +32,8 @@ $plans = plans_for_style('tiny-house-on-wheels-plans');
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="plans">Request a custom tiny house on wheels plan</h2>
-      <p>Tiny Homes Blueprint does not currently list a stock tiny house on wheels plan. A THOW plan has to be drawn around a specific trailer (its length, deck style, axle position and rated capacity), so we design them to order. Tell us the trailer you have or plan to buy, who will live in the home and how often you will move it, and we will quote a custom plan.</p>
+      <h2 id="plans">Tiny house on wheels plans to buy</h2>
+      <p>Four tiny house on wheels plans are ready to order, from a 20 ft trailer with one sleeping loft to a 32 ft gooseneck with a step-up bedroom. All are drawn to 8.5 ft wide and 13.5 ft tall. Before you build, match your trailer's length, deck style and GVWR to the plan, and run your design through the <a href="/tools/tiny-house-trailer-weight-calculator/">trailer weight calculator</a>.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

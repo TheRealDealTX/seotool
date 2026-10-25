@@ -32,7 +32,7 @@ $plans = plans_for_style('tiny-cottage-plans');
       </ol></nav>
 
       <h2 id="plans">Tiny cottage plans to buy</h2>
-      <p>Both plans below share a 20 x 38 ft footprint, about 700 sq ft, with 2x6 walls, a stone-and-siding exterior and a flex room with a retractable wall that can be a dining room, office or guest room. Plan 12-2418 adds a second level for three bedrooms and two baths behind a covered front porch; Plan 12-2417 keeps two bedrooms and everything on one floor with no stairs.</p>
+      <p>These tiny cottage plans range from 480 to 864 sq ft, most with a covered porch and a classic gable roof. All are drawn for permanent foundations and 2x6 walls, and several also work as a backyard ADU where your city allows it.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>
@@ -47,7 +47,7 @@ $plans = plans_for_style('tiny-cottage-plans');
         <li><strong>Built-ins everywhere.</strong> Window seats with drawers, bookshelves around doorways and a bench at the entry make a small cottage work harder than freestanding furniture can.</li>
         <li><strong>Lots of windows, divided lites, and trim.</strong> Generous windows on the garden side and simple trim details carry the style for little extra cost.</li>
       </ul>
-      <p>Our two plans use a 4:12 truss roof to keep framing simple and costs down. If you want a steeper cottage roof or a front gable, that is a common modification we can quote.</p>
+      <p>Our cottage plans use 6:12 to 8:12 roofs, and the original 20 x 38 ft plans use a 4:12 truss roof to keep framing simple. A steeper roof or an added front gable is a common modification we can quote.</p>
 
       <h2 id="sizes">Small cottage plan sizes</h2>
       <p>Most small cottage plans fall into four size bands. The porch is extra and is usually not counted in the heated square footage.</p>

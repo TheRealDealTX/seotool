@@ -16,10 +16,8 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 # Source folders are not public.
 RewriteRule ^(inc|pages|backup-wordpress)(/|$) - [F,L]
+RewriteRule (^|/)(build-plans\.php)$ - [F,L]
 RewriteRule (^|/)(README\.md|deploy\.sh|validate\.php|dev-router\.php)$ - [F,L]
-
-# Old WordPress entry points that should no longer be reachable.
-RewriteRule ^(xmlrpc\.php|wp-trackback\.php|wp-comments-post\.php|wp-links-opml\.php|readme\.html|license\.txt)$ - [F,L]
 
 # Everything that is not a real file goes to the router.
 RewriteCond %{REQUEST_FILENAME} !-f

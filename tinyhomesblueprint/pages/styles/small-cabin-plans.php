@@ -31,7 +31,7 @@ $plans = plans_for_style('small-cabin-plans');
       </ol></nav>
 
       <h2 id="plans">Small cabin plans to buy</h2>
-      <p>Both plans below are 20 x 38 ft rustic cabins with a covered porch, stone-and-siding exterior and 2x6 walls. They work as a full-time home on a rural lot, a vacation cabin or a backyard guest house.</p>
+      <p>These small cabin plans run from a 256 sq ft micro A-frame to an 832 sq ft cabin with a loft, including our original 20 x 38 ft rustic cabins with a covered porch. They work as weekend retreats, hunting cabins, guest houses or full-time homes on a rural lot.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

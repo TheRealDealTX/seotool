@@ -21,7 +21,7 @@ $plans = plans_for_style('tiny-house-plans-with-loft');
   <div class="wrap article-layout">
     <div class="prose">
       <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-        <li><a href="#plans">Request a custom loft plan</a></li>
+        <li><a href="#plans">Loft plans to buy</a></li>
         <li><a href="#headroom">Loft headroom: the numbers that matter</a></li>
         <li><a href="#code">Loft code rules (IRC Appendix AQ)</a></li>
         <li><a href="#access">Stairs vs ladders</a></li>
@@ -31,8 +31,8 @@ $plans = plans_for_style('tiny-house-plans-with-loft');
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="plans">Request a custom tiny house plan with a loft</h2>
-      <p>Tiny Homes Blueprint does not have a stock plan tagged as a loft design right now. Loft plans are tightly tied to roof pitch, overall height limits and whether the home sits on a trailer or a foundation, so we draw them to suit the build. Tell us your footprint, height limit and how you want to use the loft, and we will quote a custom plan or suggest a stock plan that can take one. If you would rather have a full second level than a loft, <a href="/plans/plan-12-2418/">Plan 12-2418</a> is a two-floor, three-bedroom design.</p>
+      <h2 id="plans">Tiny house plans with a loft</h2>
+      <p>These plans all have a sleeping loft: tiny houses on wheels, A-frames, barn-shed conversions and cabins and farmhouses with a loft over the kitchen. Loft areas are shown on each floor plan. Code requirements for loft size, headroom, stairs and guards vary, so confirm them with your building department.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

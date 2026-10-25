@@ -198,7 +198,7 @@ page_start([
       </ul>
 
       <h3>Where plans fit in the budget</h3>
-      <p>Tiny Homes Blueprint plan sets are $550 and $1,050, which is around 1% of a typical build. Free plans can work for a simple shed or bunkie, but a full set with framing, sections and a materials list is what keeps your lumber order and your inspector happy. Our guide to <a href="/blog/free-tiny-house-plans/">free tiny house plans vs paid</a> explains the difference, and you can browse every design on the <a href="/tiny-house-plans/">tiny house plans</a> page.</p>
+      <p>Tiny Homes Blueprint plan sets run from $<?= number_format(min(array_column($PLANS, 'price'))) ?> to $<?= number_format(max(array_column($PLANS, 'price'))) ?>, which is around 1% of a typical build. Free plans can work for a simple shed or bunkie, but a full set with framing, sections and a materials list is what keeps your lumber order and your inspector happy. Our guide to <a href="/blog/free-tiny-house-plans/">free tiny house plans vs paid</a> explains the difference, and you can browse every design on the <a href="/tiny-house-plans/">tiny house plans</a> page.</p>
 
       <?php faq_block([
           ['How much does a tiny house cost on average?', '<p>A typical finished tiny house on wheels costs about $36,000&ndash;$78,000 if you build it yourself and $56,000&ndash;$112,000 from a builder, including the trailer. Tiny homes on a foundation usually cost $80,000&ndash;$200,000 or more. Land and utility service are extra.</p>'],

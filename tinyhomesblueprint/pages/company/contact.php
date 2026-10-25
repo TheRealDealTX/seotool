@@ -2,6 +2,7 @@
 // Contact / plan order form. Posts to itself, emails SITE_EMAIL and keeps a copy of each
 // lead in thb-leads.log one level above the web root (outside public_html), then redirects
 // back with ?sent=1 so a refresh never re-submits.
+require_once __DIR__ . '/../../inc/mailer.php';
 session_start();
 $errors = [];
 $old = ['name' => '', 'email' => '', 'phone' => '', 'plan' => (string)($_GET['plan'] ?? ''), 'timeline' => '', 'lot' => '', 'builder' => '', 'message' => ''];
@@ -30,12 +31,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             foreach (['name' => 'Name', 'email' => 'Email', 'phone' => 'Phone', 'plan' => 'Plan', 'timeline' => 'Start construction', 'lot' => 'Has a lot', 'builder' => 'Builder'] as $k => $label) {
                 $body .= str_pad($label . ':', 20) . ($old[$k] !== '' ? $old[$k] : '-') . "\n";
             }
-            $body .= "\nMessage:\n" . $old['message'] . "\n";
+            $body .= "\nMessage:\n" . $old['message'] . "\n\nReply to this email to answer " . $clean($old['name']) . " directly.\n";
             $subject = 'Website inquiry' . ($old['plan'] !== '' ? ' - ' . $clean($old['plan']) : '') . ' - ' . $clean($old['name']);
-            $headers = "From: " . SITE_NAME . " Website <noreply@tinyhomesblueprint.com>\r\n"
-                     . "Reply-To: " . $clean($old['name']) . " <" . $clean($old['email']) . ">\r\n"
-                     . "Content-Type: text/plain; charset=UTF-8\r\n";
-            @mail(SITE_EMAIL, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-fnoreply@tinyhomesblueprint.com');
+            $mailed = send_mail(SITE_EMAIL, $subject, $body, $old['email'], $old['name']);
+            // Confirmation to the sender, so they know the message arrived.
+            send_mail($old['email'], 'We received your message - ' . SITE_NAME,
+                "Hi " . $clean($old['name']) . ",\n\nThanks for contacting " . SITE_NAME . ". We received your message"
+                . ($old['plan'] !== '' ? ' about ' . $clean($old['plan']) : '') . " and will reply within one business day.\n\n"
+                . "Need us sooner? Call " . SITE_PHONE . ".\n\n" . SITE_NAME . "\n" . SITE_URL . "/\n",
+                SITE_EMAIL, SITE_NAME);
+            $old['mailed'] = $mailed ? 'yes' : 'no';
             $log = dirname(__DIR__, 3) . '/thb-leads.log';
             @file_put_contents($log, json_encode(['time' => date('c'), 'ip' => $_SERVER['REMOTE_ADDR'] ?? ''] + $old, JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX);
         }

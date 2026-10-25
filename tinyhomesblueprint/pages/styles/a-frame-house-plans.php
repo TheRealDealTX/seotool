@@ -21,7 +21,7 @@ $plans = plans_for_style('a-frame-house-plans');
   <div class="wrap article-layout">
     <div class="prose">
       <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-        <li><a href="#plans">Request a custom A-frame plan</a></li>
+        <li><a href="#plans">A-frame plans to buy</a></li>
         <li><a href="#what">What makes a good A-frame plan</a></li>
         <li><a href="#usable">Usable floor area and headroom</a></li>
         <li><a href="#sizes">A-frame sizes and layouts</a></li>
@@ -31,8 +31,8 @@ $plans = plans_for_style('a-frame-house-plans');
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="plans">Request a custom A-frame plan</h2>
-      <p>Tiny Homes Blueprint does not list a stock A-frame plan in the catalog right now. A-frames are very sensitive to site conditions (snow load, wind exposure, the view you are framing), so we design them to order. Send us your lot, the footprint you have in mind and how many people need to sleep in it, and we will quote a custom A-frame cabin plan or suggest a stock plan that can be adapted.</p>
+      <h2 id="plans">A-frame house plans to buy</h2>
+      <p>Three A-frame plans are ready to order, from a 12 x 16 micro cabin to a two-bedroom A-frame you can live in full-time. Each one has a steep, snow-shedding roof, a glass gable wall and a loft. A-frames are sensitive to snow load and wind exposure, so tell us where you are building and Tiny Homes Blueprint will flag anything a local engineer should check.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

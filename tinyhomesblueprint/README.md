@@ -13,7 +13,10 @@ Hosting: Hostinger, account `u401386392`, document root
 | --- | --- |
 | `index.php` | Front controller: canonical redirects, old-URL 301s, `/sitemap.xml`, 404, page dispatch |
 | `.htaccess` | https + non-www, blocks source folders and old WP entry points, routes everything else to `index.php` |
-| `inc/config.php` | Business details, navigation, **plans** (`$PLANS`), **route registry** (`$ROUTES`), old-URL redirects |
+| `inc/config.php` | Business details, navigation, **route registry** (`$ROUTES`), old-URL redirects |
+| `inc/plans.php` | **The plan catalog** (`$PLANS`): specs, copy and room-by-room geometry for every plan |
+| `inc/plan-svg.php`, `build-plans.php` | Draw each plan's floor plan and front elevation SVG into `assets/plans/` from that geometry |
+| `inc/mailer.php` | Contact-form email over SMTP through the contact@ mailbox |
 | `inc/layout.php` | `page_start()` / `page_end()` (head, meta, schema, header, footer) and components (`plan_grid`, `faq_block`, `route_cards`, `cta_band`, `icon`, ...) |
 | `pages/` | One template per page: `home.php`, `catalog.php`, `plan.php`, `styles/`, `tools/`, `guides/`, `company/` |
 | `assets/css/site.css`, `assets/css/tools.css` | Styles |
@@ -28,8 +31,18 @@ Hosting: Hostinger, account `u401386392`, document root
 2. Create the template in `pages/`, calling `page_start([...])` and `page_end()`.
 
 It then appears automatically in `sitemap.xml`, the HTML sitemap, the footer and the matching hub
-(style, tool and guide cards). To add a plan, add it to `$PLANS` and drop its image in
-`assets/img/`; its page at `/plans/<slug>/` is generated.
+(style, tool and guide cards).
+
+## Adding a plan
+
+1. Add an entry to `$PLANS` in `inc/plans.php`: specs, copy, the `styles` it belongs to, and its
+   `rooms` (and optional `loft` / `porch`) as `[label, x, y, w, d]` rectangles in feet. Rooms must
+   tile the `W` x `D` footprint exactly; `sqft` is computed as main floor + loft.
+2. Run `php build-plans.php` to draw its floor plan and elevation.
+3. Run `php validate.php`; it fails on gaps or overlaps between rooms, a missing drawing, or an
+   intro that doesn't state the right square footage.
+
+The plan page at `/plans/<slug>/`, its catalog card, filters and style-page listings are generated.
 
 ## Local preview and checks
 
@@ -49,18 +62,24 @@ export THB_FB_URL=... THB_FB_AUTH=... THB_FB_REST=...
 `index.php` and `.htaccess` upload last, so the live site switches over only once every page is
 in place.
 
-## Rollback
+## Old WordPress install
 
-The WordPress install (wp-admin, wp-content, database) was left untouched on the server. Only
-`index.php` and `.htaccess` were replaced. To roll back, upload
-`backup-wordpress/index.php.wordpress` as `index.php` and `backup-wordpress/htaccess.wordpress`
-as `.htaccess`.
+The WordPress files were removed from `public_html` on 2026-10-25. A full zip of them (wp-admin,
+wp-includes, wp-content including uploads, wp-config.php) is kept on the server outside the web
+root at `/home/u401386392/domains/tinyhomesblueprint.com/wordpress-backup-2026-10-25.zip`. The
+WordPress MySQL database was not touched. `backup-wordpress/` holds the original `index.php` and
+`.htaccess`.
 
 ## Contact form
 
-`/contact/` emails `contact@tinyhomesblueprint.com` with PHP `mail()`, and writes a copy of every
-lead to `thb-leads.log`, one level above `public_html` (outside the web root), in case mail
-delivery fails. Spam protection: honeypot field, session token and a minimum fill time.
+`/contact/` emails `contact@tinyhomesblueprint.com` through authenticated SMTP
+(smtp.hostinger.com:465) as the contact@ mailbox, sends the visitor a short confirmation, and
+writes a copy of every lead to `thb-leads.log`, one level above `public_html`, in case delivery
+fails. The SMTP password lives in `thb-secrets.php`, also one level above `public_html` and never
+in this repo (format in `inc/mailer.php`); without it the form falls back to PHP `mail()`.
+Spam protection: honeypot field, session token and a minimum fill time.
+
+Analytics: Google Analytics 4 (`GA_ID` in `inc/config.php`) is loaded on every page.
 
 ## SEO notes
 

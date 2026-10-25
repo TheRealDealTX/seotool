@@ -1,10 +1,11 @@
 <?php
+$featured = ['plan-12-2418', 'plan-12-2420', 'plan-12-2423', 'plan-12-2428', 'plan-12-2429', 'plan-12-2435', 'plan-12-2437', 'plan-12-2440'];
 page_start([
     'schema' => [[
         '@context' => 'https://schema.org', '@type' => 'ItemList', 'name' => 'Tiny house plans from ' . SITE_NAME,
         'itemListElement' => array_values(array_map(fn($slug, $i) => [
             '@type' => 'ListItem', 'position' => $i + 1, 'url' => abs_url("/plans/$slug/"),
-        ], array_keys($PLANS), array_keys(array_keys($PLANS)))),
+        ], $featured, array_keys($featured))),
     ]],
 ]);
 ?>
@@ -60,7 +61,7 @@ page_start([
 <section class="section">
   <div class="wrap">
     <div class="stats">
-      <div class="stat"><b>700 sq ft</b><span>Largest plan in our current Tiny Homes Blueprint catalog</span></div>
+      <div class="stat"><b><?= count($PLANS) ?> plans</b><span>From <?= min(array_column($PLANS, 'sqft')) ?> to <?= max(array_column($PLANS, 'sqft')) ?> sq ft in the Tiny Homes Blueprint catalog</span></div>
       <div class="stat"><b>3 file types</b><span>PDF, CAD and image files in every plan set</span></div>
       <div class="stat"><b>6 free tools</b><span>Cost, layout, size, weight, solar and style quiz</span></div>
       <div class="stat"><b>1 business day</b><span>Typical reply time on plan questions</span></div>
@@ -75,8 +76,8 @@ page_start([
       <h2>Tiny home blueprints you can build from</h2>
       <p class="lead">Every plan from Tiny Homes Blueprint is drawn to be permit-ready, with exterior elevations, a dimensioned floor plan, roof and wall framing notes, and the CAD file your builder or engineer needs to make local changes.</p>
     </div>
-    <?php plan_grid(); ?>
-    <p class="mt-2"><a class="btn btn-outline" href="/tiny-house-plans/">See all tiny house floor plans <?= icon('arrow') ?></a></p>
+    <?php plan_grid($featured); ?>
+    <p class="mt-2"><a class="btn btn-outline" href="/tiny-house-plans/">See all <?= count($PLANS) ?> tiny house floor plans <?= icon('arrow') ?></a></p>
   </div>
 </section>
 

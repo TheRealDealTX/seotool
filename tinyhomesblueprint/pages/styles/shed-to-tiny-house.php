@@ -21,7 +21,7 @@ $plans = plans_for_style('shed-to-tiny-house');
   <div class="wrap article-layout">
     <div class="prose">
       <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-        <li><a href="#plans">Request a shed conversion plan</a></li>
+        <li><a href="#plans">Shed conversion plans</a></li>
         <li><a href="#choose">Choosing a shed to convert</a></li>
         <li><a href="#steps">Shed to tiny house conversion steps</a></li>
         <li><a href="#insulation">Insulation and moisture</a></li>
@@ -32,8 +32,8 @@ $plans = plans_for_style('shed-to-tiny-house');
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="plans">Request a shed conversion plan</h2>
-      <p>Tiny Homes Blueprint does not sell a stock shed conversion plan, because every shed is different: wall framing, roof pitch, floor system and door locations all change what is possible. Send us the shed size, a few photos and what you want inside, and we can quote a conversion layout or a purpose-built tiny house plan that may cost less in the end.</p>
+      <h2 id="plans">Shed to tiny house conversion plans</h2>
+      <p>These conversion plans are drawn around standard shed sizes: a 12 x 16 barn shed, a 14 x 28 lofted barn and a 12 x 20 backyard studio. Every shed is a little different (wall framing, floor system, door locations), so send Tiny Homes Blueprint your shed's size and photos and we will tell you which plan fits or what needs to change.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

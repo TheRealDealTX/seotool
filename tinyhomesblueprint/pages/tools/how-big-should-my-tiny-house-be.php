@@ -140,7 +140,7 @@ if (!function_exists('tool_seg')) { function tool_seg(string $name, array $opts,
       <li><strong>8.5 x 24 ft tiny house on wheels: about 204 sq ft.</strong> A common trailer length; lofts add usable space above.</li>
       <li><strong>IRC Appendix AQ tiny house: 400 sq ft or less</strong>, not counting lofts. Where adopted, this appendix relaxes ceiling height, loft and stair rules for small homes.</li>
       <li><strong>Typical ADU: about 400&ndash;800 sq ft.</strong> Many cities cap backyard units somewhere in this range; check your local limit.</li>
-      <li><strong>Tiny Homes Blueprint plans: 700 sq ft.</strong> Our current plans, <a href="/plans/plan-12-2418/">Plan 12-2418</a> and <a href="/plans/plan-12-2417/">Plan 12-2417</a>, are both 700 sq ft on a 20 x 38 ft footprint.</li>
+      <li><strong>Tiny Homes Blueprint plans: <?= min(array_column($PLANS, 'sqft')) ?> to <?= max(array_column($PLANS, 'sqft')) ?> sq ft.</strong> From the 160 sq ft <a href="/plans/plan-12-2426/">Dockside container studio</a> to the 864 sq ft, three-bedroom <a href="/plans/plan-12-2440/">Willow</a>. <a href="/tiny-house-plans/">Filter all plans by size</a>.</li>
     </ul>
 
     <h3>Typical tiny house square footage by household</h3>

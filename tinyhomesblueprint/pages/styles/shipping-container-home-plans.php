@@ -21,7 +21,7 @@ $plans = plans_for_style('shipping-container-home-plans');
   <div class="wrap article-layout">
     <div class="prose">
       <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol>
-        <li><a href="#plans">Request a custom container home plan</a></li>
+        <li><a href="#plans">Container home plans to buy</a></li>
         <li><a href="#sizes">Container sizes and real interior space</a></li>
         <li><a href="#layouts">20ft vs 40ft container home layouts</a></li>
         <li><a href="#cost">Container home costs</a></li>
@@ -31,8 +31,8 @@ $plans = plans_for_style('shipping-container-home-plans');
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="plans">Request a custom container home plan</h2>
-      <p>There is no stock shipping container plan in the Tiny Homes Blueprint catalog at the moment. Container homes depend heavily on how many boxes you use, where you cut openings and what your building department will accept, so we prefer to draw them for a specific site. Tell us how many containers you are considering and how you want to live in them, and we will quote a custom plan.</p>
+      <h2 id="plans">Shipping container home plans to buy</h2>
+      <p>Three container plans are ready to order: a single 20 ft studio, a single 40 ft one-bedroom and a double 40 ft two-bedroom home. Any plan that cuts large openings in container walls needs steel reinforcement specified by an engineer for your site, and your building department may also want to see the containers' structural condition.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>

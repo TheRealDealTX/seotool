@@ -34,7 +34,7 @@ $key = substr($PATH, -1) === '/' || strpos(basename($PATH), '.') !== false ? $PA
 if (isset($REDIRECTS[$key])) redirect($REDIRECTS[$key]);
 if (preg_match('#^/(product|plans)/(plan-12-241[78])/?$#', $PATH, $m) && $PATH !== "/plans/{$m[2]}/") redirect("/plans/{$m[2]}/");
 if (preg_match('#^/plan-category/#', $PATH)) redirect('/tiny-house-plans/');
-if (preg_match('#^/(wp-json|feed|author|tag|category)(/|$)#', $PATH)) redirect('/');
+if (preg_match('#^/(wp-json|wp-admin|wp-content|wp-includes|feed|author|tag|category)(/|$)|^/(wp-login|xmlrpc|wp-cron|wp-signup)\.php$#', $PATH)) redirect('/');
 
 // Enforce trailing slash on known routes.
 if (substr($PATH, -1) !== '/' && isset($ROUTES[$PATH . '/'])) redirect($PATH . '/' . $qs);

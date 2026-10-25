@@ -16,7 +16,7 @@ page_start([
     <p class="eyebrow">Tiny house plans</p>
     <h1>Tiny House Floor Plans</h1>
     <p class="lead">Browse build-ready tiny house floor plans from Tiny Homes Blueprint. Every plan lists its square footage, footprint, roof and wall framing, and ships as PDF, CAD and image files so your builder can price it and your permit office can review it.</p>
-    <ul class="hero-facts"><li>PDF + CAD + image files</li><li>Modifications available</li><li>Order online or by phone: <?= SITE_PHONE ?></li></ul>
+    <ul class="hero-facts"><li><?= count($PLANS) ?> plans from <?= min(array_column($PLANS, 'sqft')) ?> to <?= max(array_column($PLANS, 'sqft')) ?> sq ft</li><li>PDF + CAD + image files</li><li>Modifications available</li><li>Order online or by phone: <?= SITE_PHONE ?></li></ul>
   </div>
 </section>
 
@@ -32,11 +32,14 @@ page_start([
       <label>Bedrooms
         <select name="beds"><option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option></select>
       </label>
-      <label>Floors
-        <select name="floors"><option value="">Any</option><option value="1">1 floor</option><option value="2">2 floors</option></select>
+      <label>Type
+        <select name="type"><option value="">Any</option><option value="foundation">On a foundation</option><option value="wheels">On wheels</option><option value="loft">With a loft</option></select>
+      </label>
+      <label>Size
+        <select name="size"><option value="">Any size</option><option value="0-299">Under 300 sq ft</option><option value="300-599">300&ndash;599 sq ft</option><option value="600-9999">600+ sq ft</option></select>
       </label>
       <label>Sort
-        <select name="sort"><option value="">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="sqft-asc">Size: small to large</option></select>
+        <select name="sort"><option value="">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="sqft-asc">Size: small to large</option><option value="sqft-desc">Size: large to small</option></select>
       </label>
       <span class="filter-count" aria-live="polite"></span>
     </form>
@@ -81,7 +84,7 @@ page_start([
       </table></div>
       <p>Your local building department may require a stamped structural or energy review for your site. The CAD file makes that review faster and cheaper for a local engineer.</p>
       <?php faq_block([
-          ['What size are your tiny house floor plans?', '<p>Our current plans are 700 sq ft on a 20 x 38 ft footprint, in single-level 2-bedroom and two-story 3-bedroom versions. Tiny Homes Blueprint can modify either plan to a smaller footprint on request.</p>'],
+          ['What size are your tiny house floor plans?', '<p>Our ' . count($PLANS) . ' plans range from ' . min(array_column($PLANS, 'sqft')) . ' to ' . max(array_column($PLANS, 'sqft')) . ' sq ft: tiny houses on wheels from 20 to 32 ft long, shipping container homes, A-frames, shed conversions, cottages, cabins, farmhouses and ADUs with up to three bedrooms. Tiny Homes Blueprint can also modify any plan to a different size.</p>'],
           ['Can you change a tiny house plan for me?', '<p>Yes. Common requests include flipping the layout, moving the porch, adding a loft, changing the foundation type or shrinking the footprint. <a href="/contact/">Send us the plan number and your changes</a> for a quote.</p>'],
           ['Are the plans permit-ready?', '<p>The plans include the drawings building departments usually ask for. Because codes, snow and wind loads, and energy rules vary by location, your jurisdiction may require a local engineer or designer to review or stamp them.</p>'],
           ['How are plans delivered?', '<p>After your order is confirmed, the PDF, CAD and image files are delivered digitally by email.</p>'],

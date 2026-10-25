@@ -33,7 +33,7 @@ $plans = plans_for_style('adu-plans');
       </ol></nav>
 
       <h2 id="plans">ADU plans to buy</h2>
-      <p>Both plans below are 700 sq ft on a 20 x 38 ft footprint with 2x6 walls, a 9 ft ceiling and a flex room with a retractable wall. Plan 12-2417 is a single-level two-bedroom with no stairs, a good fit for aging parents or a long-term rental. Plan 12-2418 is a two-floor three-bedroom with a covered porch for families or higher rent. Before buying, confirm your city allows a 700 sq ft detached unit and that a 20 x 38 ft footprint fits inside your lot&rsquo;s setbacks.</p>
+      <p>These ADU plans range from a 240 sq ft backyard studio to two-bedroom units and our original 700 sq ft designs. The smaller plans fit under the size caps many cities set for ADUs (often 600 to 800 sq ft, or a share of the main house), and every plan can be adjusted for your setbacks. Check your city's ADU rules before you choose a size.</p>
     </div>
   </div>
   <div class="wrap"><?php plan_grid($plans); ?></div>
