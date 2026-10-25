@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 (async () => {
-  const b = await chromium.launch(); const base = 'http://127.0.0.1:8765';
+  const b = await chromium.launch(); const base = 'http://127.0.0.1:8766';
   for (const path of ['/contact/', '/']) {
     const p = await b.newPage({viewport:{width:1280,height:900}}); const errs=[]; p.on('pageerror',e=>errs.push(e.message));
     await p.goto(base+path, {waitUntil:'networkidle'});

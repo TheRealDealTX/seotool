@@ -7,6 +7,15 @@ $private = dirname(__DIR__) . '/ce-private';
 header('Content-Type: application/json; charset=UTF-8');
 header('X-Robots-Tag: noindex');
 
+// Append a line to a private log stored as a .php file that outputs nothing if requested.
+function ce_log(string $file, string $line): void
+{
+    if (!is_file($file)) {
+        @file_put_contents($file, "<?php exit; ?>\n", LOCK_EX);
+    }
+    @file_put_contents($file, $line . "\n", FILE_APPEND | LOCK_EX);
+}
+
 function ce_respond(bool $ok, string $message, array $errors = [], array $extra = []): void
 {
     $data = ['message' => $message, 'data' => (object) $extra];
@@ -24,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || ($_POST['action'] ?? '') !== 'eleme
     exit;
 }
 
-$forms = json_decode(file_get_contents($private . '/forms.json'), true);
+$forms = require $private . '/forms.php';
 $formId = (string) ($_POST['form_id'] ?? '');
 if (!isset($forms[$formId])) {
     ce_respond(false, 'There’s something wrong. This form does not exist.');
@@ -94,7 +103,7 @@ foreach ($values as $v) {
 
 // Save a copy of every submission (replaces Elementor's Submissions screen).
 $record = ['time' => $now->format(DATE_ATOM), 'form' => $form['name'], 'page' => $pageUrl, 'ip' => $ip, 'fields' => array_column($values, 'value', 'title')];
-@file_put_contents($private . '/submissions.log', json_encode($record, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . "\n", FILE_APPEND | LOCK_EX);
+ce_log($private . '/submissions.log.php', json_encode($record, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
 
 if (in_array('email', $form['actions'], true)) {
     $cfgFile = $private . '/mail-config.php';
@@ -106,12 +115,12 @@ if (in_array('email', $form['actions'], true)) {
     $to = array_values(array_filter(array_map('trim', explode(',', $form['email_to']))));
     if (($cfg['host'] ?? '') === 'dryrun') {
         // Local testing only: record the message instead of sending it.
-        @file_put_contents($private . '/dryrun-mail.log', json_encode(['to' => $to, 'subject' => $form['email_subject'], 'reply_to' => $replyTo, 'html' => $html]) . "\n", FILE_APPEND);
+        ce_log($private . '/dryrun-mail.log.php', json_encode(['to' => $to, 'subject' => $form['email_subject'], 'reply_to' => $replyTo, 'html' => $html]));
         $sent = true;
         $detail = 'dryrun';
     } else [$sent, $detail] = ce_smtp_send($cfg, $cfg['from'] ?? $form['email_from'], $form['email_from_name'], $to, $form['email_subject'], $html, $replyTo);
     if (!$sent) {
-        @file_put_contents($private . '/mail-errors.log', $now->format(DATE_ATOM) . ' ' . str_replace("\n", ' | ', $detail) . "\n", FILE_APPEND | LOCK_EX);
+        ce_log($private . '/mail-errors.log.php', $now->format(DATE_ATOM) . ' ' . str_replace("\n", ' | ', $detail));
         ce_respond(false, $form['server_message']);
     }
 }

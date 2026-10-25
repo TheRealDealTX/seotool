@@ -1,6 +1,6 @@
 <?php
 // Redirects legacy WordPress query-string URLs to their permanent paths.
-$map = json_decode(file_get_contents(__DIR__ . '/ce-private/idmap.json'), true);
+$map = require __DIR__ . '/ce-private/idmap.php';
 $target = null;
 foreach (['p', 'page_id'] as $key) {
     if (isset($_GET[$key]) && ctype_digit((string) $_GET[$key]) && isset($map['ids'][$_GET[$key]])) {

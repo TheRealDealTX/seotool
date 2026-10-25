@@ -1,11 +1,9 @@
 # Coverage Estimate static site (replaces WordPress). Keep URLs identical.
 Options -Indexes -MultiViews
-DirectoryIndex index.html index.php index.xml
+DirectoryIndex index.html index.php
+FallbackResource /index.php
 ErrorDocument 404 /404.html
 
-<FilesMatch "^index\.xml$">
-  ForceType "application/rss+xml; charset=UTF-8"
-</FilesMatch>
 <FilesMatch "\.(log|json|md|py|sh)$">
   Require all denied
 </FilesMatch>
@@ -38,14 +36,10 @@ RewriteRule ^home/?$ / [R=301,L]
 RewriteRule ^author/[^/]+/?$ / [R=301,L]
 RewriteRule ^(sitemap|wp-sitemap)\.xml$ /sitemap_index.xml [R=301,L]
 
-# Post/page comment feeds that no longer exist -> main feed
-RewriteCond %{DOCUMENT_ROOT}/$1/feed/index.xml !-f
-RewriteRule ^(.+)/feed/?$ /feed/ [R=301,L]
-
+# Feeds and anything else that is not a real file are handled by index.php
 # Add the trailing slash WordPress uses
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f [OR]
-RewriteCond %{DOCUMENT_ROOT}/$1/index.xml -f
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
 </IfModule>
 

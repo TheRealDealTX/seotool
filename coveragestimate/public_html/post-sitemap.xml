@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://coveragestimate.com/blog/</loc>
-		<lastmod>2026-10-24T19:13:25+00:00</lastmod>
+		<lastmod>2026-10-25T01:50:26+00:00</lastmod>
 	</url>
 	<url>
 		<loc>https://coveragestimate.com/condo-replacement-cost-calculator/</loc>
@@ -19,6 +19,56 @@
 		</image:image>
 		<image:image>
 			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Condo-Insurance-Master-Policy-Types.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://coveragestimate.com/home-replacement-cost-calculator/</loc>
+		<lastmod>2026-10-25T01:50:21+00:00</lastmod>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Home-Replacement-Cost-Calculator.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Home-Replacement-Cost-Calculator-Diagram.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://coveragestimate.com/actual-cash-value-calculator/</loc>
+		<lastmod>2026-10-25T01:50:23+00:00</lastmod>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Actual-Cash-Value-Calculator.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Actual-Cash-Value-Calculator-Diagram.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://coveragestimate.com/coinsurance-calculator/</loc>
+		<lastmod>2026-10-25T01:50:24+00:00</lastmod>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Coinsurance-Calculator.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Coinsurance-Calculator-Diagram.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://coveragestimate.com/roof-depreciation-calculator/</loc>
+		<lastmod>2026-10-25T01:50:25+00:00</lastmod>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Roof-Depreciation-Calculator.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Roof-Depreciation-Calculator-Diagram.webp</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc>https://coveragestimate.com/home-insurance-deductible-calculator/</loc>
+		<lastmod>2026-10-25T01:50:26+00:00</lastmod>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Home-Insurance-Deductible-Calculator.webp</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>https://coveragestimate.com/wp-content/uploads/2026/10/Home-Insurance-Deductible-Calculator-Diagram.webp</image:loc>
 		</image:image>
 	</url>
 </urlset>

@@ -21,18 +21,30 @@ cd tools
 python3 mirror.py ../out extra.txt        # extra.txt = netcap.txt + chunks.txt
 python3 build_static.py ../out
 rsync -a --delete ../out/public_html/ ../public_html/   # keep ce-private/mail-config.php out of git
+python3 make_deploy.py ../out ../site.zip               # zip + one-time cleanup script (prints its name)
 ```
+
+Deploy (Agency plan): upload `site.zip` to the website's `.h5g/` folder, run "Import website
+from archive", then open `/ce-deploy-<token>.php?token=<token>` once to delete files that are
+no longer part of the build (it deletes itself), and clear the website cache.
 
 `netcap.txt` lists files the browser requests at runtime (recorded with `tests/netcap.js`);
 `chunks.txt` lists every Elementor webpack chunk so lazily loaded scripts are present.
 
-## Server behavior (`server/.htaccess`)
+## Server behavior
+
+Hostinger's Agency (H5G) servers ignore `.htaccess`, so `server/index.php` is a front
+controller for every URL that is not a real file. It reproduces WordPress's behavior;
+`.htaccess` mirrors the same rules for Apache/LiteSpeed hosts. The home page is stored at
+`ce-pages/home.html` (not `index.html`) so unknown URLs fall through to `index.php` and get
+a real 404. Feeds live in `ce-feeds/`. Private data is stored as `.php` files that output
+nothing if requested directly.
 
 - HTTPS and non-www, like WordPress.
 - Trailing-slash redirects (`/about-us` → `/about-us/`).
 - Legacy WordPress links: `/?p=117`, `/?page_id=14`, `/?cat=7` → 301 to the real URL; `/?s=` → `/blog/`.
 - `/home/`, `/author/*` → `/`; `/sitemap.xml`, `/wp-sitemap.xml` → `/sitemap_index.xml`.
-- `/feed/`, `/comments/feed/`, `/category/tools/feed/` served from static RSS files.
+- `/feed/`, `/comments/feed/`, `/category/tools/feed/` served from `ce-feeds/` as RSS.
 - `wp-login.php`, `xmlrpc.php`, `wp-json`, `wp-admin/*` (except `admin-ajax.php`) → 404.
 - Any host other than `coveragestimate.com` gets `X-Robots-Tag: noindex, nofollow` (staging safety).
 

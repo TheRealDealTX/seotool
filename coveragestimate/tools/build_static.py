@@ -75,12 +75,17 @@ def main():
         name = (p.strip('/').replace('/', '__') or 'home') + '.html'
         text = open(os.path.join(RAW, name), encoding='utf-8').read()
         write(os.path.join(WEB, p.lstrip('/'), 'index.html'), process_html(text))
+    # the home page is served by index.php (see server/index.php)
+    home = os.path.join(WEB, 'index.html')
+    if os.path.exists(home):
+        os.makedirs(os.path.join(WEB, 'ce-pages'), exist_ok=True)
+        os.replace(home, os.path.join(WEB, 'ce-pages', 'home.html'))
     write(os.path.join(WEB, '404.html'), process_html(open(os.path.join(RAW, '__404.html'), encoding='utf-8').read()))
-    # feeds: served from /feed/ etc. via DirectoryIndex index.xml
+        # feeds are served by index.php from ce-feeds/ (no /feed/ directory, so it works without .htaccess)
     for f in ('feed', 'comments__feed', 'category__tools__feed'):
         src = os.path.join(RAW, f + '.xml')
         if os.path.exists(src):
-            write(os.path.join(WEB, f.replace('__', '/'), 'index.xml'), open(src, 'rb').read())
+            write(os.path.join(WEB, 'ce-feeds', f.replace('__', '-') + '.xml'), open(src, 'rb').read())
     # root files (absolute URLs kept: sitemaps must list the real domain)
     for f in ('robots.txt', 'sitemap_index.xml', 'post-sitemap.xml', 'page-sitemap.xml', 'category-sitemap.xml', 'main-sitemap.xsl', 'favicon.ico'):
         src = os.path.join(RAW, f)
