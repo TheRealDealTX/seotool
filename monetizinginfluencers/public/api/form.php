@@ -3,11 +3,12 @@
  * Single handler for every form on the site (newsletter, contact, get-started,
  * write-for-us pitch, web-design quote).
  *
- * Emails the submission to SITE_EMAIL and appends a copy to a log file that
+ * Emails the submission to SITE_EMAIL (SMTP via inc/smtp.php, mail() fallback) and appends a copy to a log file that
  * sits OUTSIDE public_html (../../mi-form-submissions.log relative to this file).
  * Answers JSON for fetch() requests (ajax=1) and redirects for plain POSTs.
  */
 require __DIR__ . '/../inc/config.php';
+require __DIR__ . '/../inc/smtp.php';
 
 const FORMS = [
     'newsletter'   => ['Newsletter signup', ['email']],
@@ -91,14 +92,20 @@ $log = dirname(__DIR__, 2) . '/mi-form-submissions.log';
 $logged = @file_put_contents($log, str_repeat('-', 60) . "\n" . $body, FILE_APPEND | LOCK_EX) !== false;
 
 $safeName = preg_replace('/[\r\n<>"]+/', ' ', $data['name'] ?? '');
-$headers = [
-    'From: ' . SITE_NAME . ' <' . SITE_EMAIL . '>',
-    'Reply-To: ' . ($safeName !== '' ? '"' . $safeName . '" ' : '') . '<' . $email . '>',
-    'Content-Type: text/plain; charset=UTF-8',
-    'X-Mailer: PHP',
-];
+$replyTo = ($safeName !== '' ? '"' . $safeName . '" ' : '') . '<' . $email . '>';
 $subject = '[' . SITE_NAME . '] ' . $label . ($safeName !== '' ? ' - ' . $safeName : '');
-$sent = @mail(SITE_EMAIL, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+
+// Send through the info@ mailbox over authenticated SMTP; fall back to PHP mail() if that fails.
+$sent = smtp_send(SITE_EMAIL, $subject, $body, $replyTo, $smtpErr);
+if (!$sent) {
+    @file_put_contents($log, 'SMTP failed: ' . $smtpErr . "\n", FILE_APPEND | LOCK_EX);
+    $headers = [
+        'From: ' . SITE_NAME . ' <' . SITE_EMAIL . '>',
+        'Reply-To: ' . $replyTo,
+        'Content-Type: text/plain; charset=UTF-8',
+    ];
+    $sent = @mail(SITE_EMAIL, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+}
 
 $messages = [
     'newsletter'   => 'You are in! Watch your inbox for the next creator money memo.',

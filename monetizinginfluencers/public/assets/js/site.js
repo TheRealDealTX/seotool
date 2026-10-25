@@ -11,18 +11,29 @@
   /* ---- mobile nav ---- */
   var toggle = doc.querySelector('.nav-toggle'), nav = doc.getElementById('main-nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    var setNav = function (open) {
+      nav.classList.toggle('open', open);
+      doc.body.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       doc.body.style.overflow = open ? 'hidden' : '';
-    });
+      if (!open) nav.querySelectorAll('.has-sub.open').forEach(function (li) { li.classList.remove('open'); });
+    };
+    toggle.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
     nav.querySelectorAll('.has-sub > a').forEach(function (a) {
       a.addEventListener('click', function (ev) {
         if (window.innerWidth > 1020) return;
         var li = a.parentElement;
-        if (!li.classList.contains('open')) { ev.preventDefault(); li.classList.add('open'); }
+        // first tap (or a tap on the caret) expands the group; a second tap on the label follows the link
+        if (!li.classList.contains('open') || ev.target.closest('.caret')) { ev.preventDefault(); li.classList.toggle('open'); }
       });
     });
+    nav.addEventListener('click', function (ev) {
+      var a = ev.target.closest('a');
+      if (a && !ev.defaultPrevented && window.innerWidth <= 1020) setNav(false);
+    });
+    doc.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && nav.classList.contains('open')) { setNav(false); toggle.focus(); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1020 && nav.classList.contains('open')) setNav(false); });
   }
 
   /* ---- header state, progress bar, back-to-top ---- */

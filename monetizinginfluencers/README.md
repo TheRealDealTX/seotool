@@ -9,7 +9,7 @@ share one layout, one stylesheet and one script.
 - **Search Console:** verified by `google9d8d740410b54935.html` (kept in the web root)
 - **Contact email used by forms:** info@monetizinginfluencers.com
 - **Deployed:** 2026-10-25 (78 files, server cache cleared).
-- **Google Analytics:** not set up. Put the GA4 ID in `GA_ID` in `public/inc/layout.php`.
+- **Google Analytics:** GA4 `G-7T7BS80XBP` (`GA_ID` in `public/inc/layout.php`, on every page)
 
 ## Layout
 
@@ -23,7 +23,8 @@ share one layout, one stylesheet and one script.
 | `public/assets/css/{platforms,pages,blog,tools}.css` | Page-group styles |
 | `public/assets/js/site.js` | Nav, scroll progress, reveal-on-scroll, card tilt, cursor glow, hero network canvas, typewriter, counters, confetti, copy buttons, AJAX forms |
 | `public/assets/js/tools/*.js` | One script per interactive tool |
-| `public/api/form.php` | Handles every form; emails info@ and appends to `../mi-form-submissions.log` (outside the web root) |
+| `public/api/form.php` | Handles every form; emails info@ over SMTP (`inc/smtp.php`, falls back to `mail()`) and appends to `../mi-form-submissions.log` (outside the web root) |
+| `public/inc/mail-config.php` | SMTP login for info@ (smtp.hostinger.com:465). **Not in git**: recreate it from `mail-config.example.php` before deploying from a fresh clone |
 | `public/.htaccess` | https/non-www redirects, old WordPress URL redirects, blocks WordPress entry points |
 | `public/_wp-backup/` | Copies of the WordPress `.htaccess` and `index.php` (web access denied) |
 | `backup/wordpress-2026-10-25/` | Same copies plus rollback steps |

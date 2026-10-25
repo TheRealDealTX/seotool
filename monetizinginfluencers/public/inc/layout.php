@@ -21,7 +21,7 @@
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/icons.php';
 
-const GA_ID = ''; // Google Analytics 4 measurement ID, e.g. 'G-XXXXXXX'. Empty = no tag.
+const GA_ID = 'G-7T7BS80XBP'; // Google Analytics 4 measurement ID. Empty = no tag.
 
 $GLOBALS['__page'] = [];
 
@@ -166,7 +166,7 @@ function page_start(array $p): void
       </ul>
       <a class="btn btn-glow nav-cta" href="/get-started/"><?= icon('rocket') ?> Get Started</a>
     </nav>
-    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><?= icon('menu') ?></button>
+    <button class="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><?= icon('menu', 'ico ico-open') ?><?= icon('x', 'ico ico-close') ?></button>
   </div>
 </header>
 <main id="main">
@@ -356,7 +356,6 @@ function page_end(): void
   </div>
   <div class="wrap footer-bottom">
     <p>&copy; <?= date('Y') ?> <?= e(SITE_NAME) ?>. All rights reserved.</p>
-    <p>Designed &amp; developed by JWeb.</p>
   </div>
 </footer>
 <button class="to-top" aria-label="Back to top"><?= icon('arrow') ?></button>

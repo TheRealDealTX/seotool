@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 dist/
 monetizinginfluencers/*.log
+monetizinginfluencers/public/inc/mail-config.php
