@@ -1,0 +1,109 @@
+domain,tier,week,target_keyword,monthly_volume_us,keyword_difficulty,working_title,network_link_out
+hatetolovethesplit.com,1,1,home renovation budget,1300,3,How to build a whole-house renovation budget (with our split-level numbers),huttoroofs.com roof-replacement-cost blog post
+hatetolovethesplit.com,1,2,home renovation cost,1900,16,"What a home renovation really costs in 2026, room by room",templeroofs.com
+hatetolovethesplit.com,1,3,kitchen remodel before and after,1900,2,"Our split-level kitchen remodel: before and after, two years on",agadecor.com
+hatetolovethesplit.com,1,4,home renovation best return on investment,880,7,"Renovations with the best resale return (roof, kitchen, bath ranked)",kyleroofs.com
+hatetolovethesplit.com,1,5,how to fix a roof leak,2900,11,How to find and fix a roof leak before it ruins your ceiling,huttoroofs.com roof-repair service page
+hatetolovethesplit.com,1,6,home renovation apps,1900,21,The 9 home renovation apps we actually used,
+hatetolovethesplit.com,1,7,kitchen remodel do it yourself,1300,11,DIY kitchen remodel: what we did ourselves and what we hired out,ohmtoherminediy.com
+hatetolovethesplit.com,1,8,home renovation deductions,1900,11,Which home renovation costs are tax deductible (and which are not),copperascoveroofs.com
+hatetolovethesplit.com,1,9,attic insulation r value,2900,20,Attic insulation R-value by climate zone: what a split-level needs,huttoroofs.com roof-inspection page
+hatetolovethesplit.com,1,10,small kitchen remodel cost,1300,n/a (no KD in dataset),Small kitchen remodel cost: our line-item breakdown,
+hatetolovethesplit.com,1,11,home renovation on a budget,1300,3,Renovating on a budget: 14 places to spend and 14 to save,fraserandmorris.com
+hatetolovethesplit.com,1,12,roof leak repair cost,2400,n/a (no KD in dataset),Roof leak repair cost: what the ceiling stain is really telling you,templeroofs.com roof-repair page
+agadecor.com,1,1,farmhouse bedroom decor ideas,2900,1,31 farmhouse bedroom decor ideas that are not all shiplap,
+agadecor.com,1,2,kitchen wall decor ideas,2900,4,Kitchen wall decor ideas for every blank wall,comeicavoliamerenda.com
+agadecor.com,1,3,small apartment decor ideas,2900,7,Small apartment decor ideas that make 600 square feet feel bigger,
+agadecor.com,1,4,gutter colors,2400,n/a (no KD in dataset),Gutter colors: how to match gutters to your roof and trim,huttoroofs.com shingle-roofing page
+agadecor.com,1,5,patio decor ideas,2900,8,Patio decor ideas for a Texas-hot backyard,kyleroofs.com
+agadecor.com,1,6,office decor ideas for work,2900,4,Office decor ideas for work that your HR team will allow,
+agadecor.com,1,7,apartment living room decor ideas,2900,10,Apartment living room decor ideas on a renter's budget,fraserandmorris.com
+agadecor.com,1,8,home office decor ideas,2900,17,Home office decor ideas for a room that doubles as a guest room,
+agadecor.com,1,9,children's bedroom decor ideas,2900,18,Children's bedroom decor ideas that survive the toddler years,ohmtoherminediy.com
+agadecor.com,1,10,vintage wall art and decor,2400,9,Vintage wall art and decor: where to find it and how to hang it,
+agadecor.com,1,11,kitchen wallpaper decor ideas,2900,4,Kitchen wallpaper ideas that handle steam and grease,fraserandmorris.com
+agadecor.com,1,12,diy home decor,2900,13,"DIY home decor projects under 50 dollars, ranked by effort",copperascoveroofs.com (curb appeal angle)
+ohmtoherminediy.com,1,1,diy gutters,2900,6,DIY gutters: can you really install them yourself? (what we learned),huttoroofs.com gutter/roof-repair page
+ohmtoherminediy.com,1,2,termite treatment diy,2900,1,"DIY termite treatment: what works, what is a waste",
+ohmtoherminediy.com,1,3,grout cleaning diy,2900,6,DIY grout cleaner that actually works (three recipes tested),agadecor.com
+ohmtoherminediy.com,1,4,creative upcycle,2400,5,25 creative upcycle projects from stuff you already own,
+ohmtoherminediy.com,1,5,diy fall decorations,2900,4,DIY fall decorations from the yard and the thrift store,
+ohmtoherminediy.com,1,6,gutter sizes,2900,3,Gutter sizes explained: 5-inch vs 6-inch and how to choose,templeroofs.com
+ohmtoherminediy.com,1,7,diy bucket mouse trap,2900,2,DIY bucket mouse trap that works in a garage or attic,
+ohmtoherminediy.com,1,8,upcycle clothes ideas,1000,3,Upcycle clothes ideas: 18 no-sew and low-sew projects,
+ohmtoherminediy.com,1,9,diy fly trap indoors,2900,5,DIY indoor fly trap: four designs compared,
+ohmtoherminediy.com,1,10,attic door insulation,2900,n/a (no KD in dataset),How to insulate an attic door or hatch in an afternoon,kyleroofs.com attic/ventilation angle
+ohmtoherminediy.com,1,11,diy wedding decorations,2900,7,DIY wedding decorations that photograph well,michellewhitephoto.com
+ohmtoherminediy.com,1,12,how much does gutter cleaning cost,2400,9,Gutter cleaning cost vs doing it yourself: an honest math,huttoroofs.com roof-inspection page
+fraserandmorris.com,1,1,different interior design styles,2900,17,"The 14 interior design styles, explained with real rooms",
+fraserandmorris.com,1,2,interior design mood boards,2900,21,How to build an interior design mood board (free template),
+fraserandmorris.com,1,3,best way of removing wallpaper,2900,2,The best way to remove wallpaper without wrecking the plaster,ohmtoherminediy.com
+fraserandmorris.com,1,4,interior design style quiz,2900,13,What is your interior design style? A 12-question quiz,
+fraserandmorris.com,1,5,wallpaper pattern,2900,6,"Choosing a wallpaper pattern: scale, repeat and room size",
+fraserandmorris.com,1,6,contemporary interior design,2900,24,Contemporary interior design: what it is and what it is not,agadecor.com
+fraserandmorris.com,1,7,transitional interior design,2900,16,Transitional interior design: the style for people who cannot choose,
+fraserandmorris.com,1,8,room to room interior design,2900,7,Room-to-room flow: making an open plan feel like one house,hatetolovethesplit.com
+fraserandmorris.com,1,9,unfinished cabinet doors,2900,3,Unfinished cabinet doors: how to finish them like a pro,
+fraserandmorris.com,1,10,bedroom interior design,2900,29,Bedroom interior design: the layout rules nobody tells you,
+fraserandmorris.com,1,11,roof leak repair cost,2400,n/a (no KD in dataset),The ceiling stain: what a roof leak costs inside and out,templeroofs.com or huttoroofs.com roof-repair page
+fraserandmorris.com,1,12,online interior design degree,2900,4,Online interior design degrees and courses worth the money,
+rjbledlcdtvservicecentre.com,1b,1,how to clean a tv screen safely,2900,7,"How to clean a TV screen safely (OLED, QLED and LCD)",
+rjbledlcdtvservicecentre.com,1b,2,blue horizontal line on tv screen,2900,1,Blue horizontal line on a TV screen: causes and fixes,
+rjbledlcdtvservicecentre.com,1b,3,how to fix tv screen,2900,6,How to fix a TV screen: what is repairable and what is not,
+rjbledlcdtvservicecentre.com,1b,4,how to measure a tv screen,2900,26,How TV screens are measured (and why 65 inches is not 65 inches wide),
+rjbledlcdtvservicecentre.com,1b,5,onn roku tv repair,1600,2,Onn Roku TV repair: the six most common faults,
+rjbledlcdtvservicecentre.com,1b,6,samsung tv remote repair,1000,1,Samsung TV remote not working: repair steps before you buy a new one,
+rjbledlcdtvservicecentre.com,1b,7,how much to repair a tv screen,720,2,How much does TV screen repair cost in 2026?,
+rjbledlcdtvservicecentre.com,1b,8,led tv how to repair,1300,11,"LED TV repair basics: backlight, power board and T-con explained",
+rjbledlcdtvservicecentre.com,1b,9,how to use a computer monitor as a tv,2900,1,How to use a computer monitor as a TV,
+rjbledlcdtvservicecentre.com,1b,10,how long does an insurance claim take,1900,4,How long an insurance claim takes for storm-damaged electronics,huttoroofs.com storm-damage page (Rise Public Adjusting if in scope)
+rjbledlcdtvservicecentre.com,1b,11,amazon fire tv stick repair,880,7,Fire TV Stick repair and reset guide,
+rjbledlcdtvservicecentre.com,1b,12,lg oled tv repair,2900,27,"LG OLED TV repair: burn-in, lines and power faults",hatetolovethesplit.com
+asmith.photography,2,1,fashion editorial photography,590,9,Fashion editorial photography: how a shoot is actually produced,
+asmith.photography,2,2,white backdrop photoshoot,2900,1,White backdrop photoshoot: lighting ratios that avoid gray,
+asmith.photography,2,3,portrait photography lighting,1000,1,Portrait photography lighting: five setups with diagrams,
+asmith.photography,2,4,loft photoshoot,2900,19,Loft photoshoot locations and how to light big windows,fraserandmorris.com
+asmith.photography,2,5,fashion photography in studio,320,2,Studio fashion photography on a one-light budget,
+asmith.photography,2,6,portrait photography black and white,1600,2,Black and white portrait photography: shooting and editing,
+asmith.photography,2,7,couple photoshoot ideas,2900,7,Couple photoshoot ideas that do not look staged,michellewhitephoto.com
+asmith.photography,2,8,high fashion photography,320,4,High fashion photography: the references every assistant should know,
+asmith.photography,2,9,what is portrait photography,1000,13,"What is portrait photography? Genres, gear and getting started",
+asmith.photography,2,10,fashion street style photography,320,5,Street style photography: how to shoot fashion week,
+asmith.photography,2,11,portrait photography reference,1000,2,Portrait photography references: 40 images to study,agadecor.com
+asmith.photography,2,12,fashion photography courses,170,1,Fashion photography courses compared (free to tuition),
+michellewhitephoto.com,2,1,engagement photo poses,2900,3,"50 engagement photo poses, sorted by how comfortable the couple is",
+michellewhitephoto.com,2,2,wedding photo styles,1300,5,"Wedding photo styles explained: documentary, editorial, fine art",asmith.photography
+michellewhitephoto.com,2,3,wedding planning spreadsheet,2400,n/a (no KD in dataset),Wedding planning spreadsheet (free download) and how to use it,
+michellewhitephoto.com,2,4,engagement photo ideas,2400,3,Engagement photo ideas by season and location,
+michellewhitephoto.com,2,5,photo list for wedding photographer,1600,3,Wedding photography shot list: the complete checklist,
+michellewhitephoto.com,2,6,wedding photo backdrops,1300,4,Wedding photo backdrops you can build or rent,ohmtoherminediy.com
+michellewhitephoto.com,2,7,how long does wedding planning take,1600,n/a (no KD in dataset),How long wedding planning takes: a realistic timeline,
+michellewhitephoto.com,2,8,wedding planning templates,2400,16,"Wedding planning templates: budget, timeline, seating",
+michellewhitephoto.com,2,9,wedding photo album,2900,3,Wedding photo albums: lay-flat vs flush mount and what to ask for,
+michellewhitephoto.com,2,10,wedding planning tips,1300,4,Wedding planning tips from the photographer's side of the aisle,agadecor.com
+michellewhitephoto.com,2,11,best wedding planning books,1300,1,"Best wedding planning books, read and ranked",
+michellewhitephoto.com,2,12,engagement photo shoot,880,1,What to expect at an engagement photo shoot,
+comeicavoliamerenda.com,2,1,tuscan food,2900,9,Tuscan food: the 20 dishes that define the region,
+comeicavoliamerenda.com,2,2,italian tiramisu recipe without eggs,2900,2,Tiramisu without eggs: the Florentine way,
+comeicavoliamerenda.com,2,3,tuscan meals,2900,13,Tuscan meals for a week: a cook's rotation,
+comeicavoliamerenda.com,2,4,creamy italian dressing recipe,2900,3,Creamy Italian dressing recipe (what Italians actually put on salad),
+comeicavoliamerenda.com,2,5,olive garden tuscan soup recipe,2900,25,"Tuscan soup, the real version behind the Olive Garden one",agadecor.com
+comeicavoliamerenda.com,2,6,tuscan towns in italy,2400,4,Tuscan towns worth the drive from Florence,
+comeicavoliamerenda.com,2,7,italian spaghetti sauce recipe,2900,11,Italian spaghetti sauce: the three sauces every nonna makes,
+comeicavoliamerenda.com,2,8,garlic tuscan chicken recipe,2400,27,"Garlic Tuscan chicken, done in one pan",
+comeicavoliamerenda.com,2,9,italian recipe names,2900,9,Italian recipe names explained: what the menu is telling you,
+comeicavoliamerenda.com,2,10,tuscan winery tour from florence,2400,20,Tuscan winery tours from Florence without a car,
+comeicavoliamerenda.com,2,11,italian chicken cacciatore recipe,2900,23,Chicken cacciatore the hunter's way,hatetolovethesplit.com
+comeicavoliamerenda.com,2,12,italian pasta sauce recipe,2900,22,Italian pasta sauces by region: a map and 10 recipes,
+findsforfitness.com,2,1,flat feet vs normal feet,2900,12,Flat feet vs normal feet: how to tell and when it matters,
+findsforfitness.com,2,2,women's shoes for flat feet,2400,5,Women's shoes for flat feet: 12 tested pairs,
+findsforfitness.com,2,3,what causes flat feet,2400,9,What causes flat feet in adults and children,
+findsforfitness.com,2,4,home gym weight training,2400,7,Home gym weight training: a 3-day plan with minimal gear,
+findsforfitness.com,2,5,can you fix flat feet,1600,10,Can you fix flat feet? What the research says,
+findsforfitness.com,2,6,small home gym ideas,1900,29,"Small home gym ideas for a closet, corner or garage bay",hatetolovethesplit.com
+findsforfitness.com,2,7,what are good shoes for flat feet,1300,3,Good shoes for flat feet: features to look for before the brand,
+findsforfitness.com,2,8,home gym in garage,1300,8,"Garage home gym: flooring, heat and layout for Texas summers",ohmtoherminediy.com
+findsforfitness.com,2,9,physical therapy for flat feet,1600,9,Physical therapy for flat feet: a 6-week exercise plan,
+findsforfitness.com,2,10,leg press for home gym,1300,3,Leg press for a home gym: plate-loaded vs cable vs skip it,
+findsforfitness.com,2,11,decorate home gym,1000,5,How to decorate a home gym you will actually use,agadecor.com
+findsforfitness.com,2,12,home gym exercise routine,1000,20,Home gym exercise routine for busy weeks,
