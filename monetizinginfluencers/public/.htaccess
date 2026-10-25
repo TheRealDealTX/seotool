@@ -1,0 +1,59 @@
+# Monetizing Influencers - custom PHP site (replaced WordPress on 2026-10-25)
+# Hostinger web hosting runs LiteSpeed, which honours this file.
+
+Options -Indexes
+DirectoryIndex index.php index.html
+DirectorySlash On
+ErrorDocument 404 /404.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# One canonical origin: https://monetizinginfluencers.com
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://monetizinginfluencers.com%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://monetizinginfluencers.com%{REQUEST_URI} [R=301,L]
+
+# Private folders and files
+RewriteRule ^(inc|_wp-backup)(/|$) - [F,L]
+RewriteRule \.(log|bak|sql|zip|md)$ - [F,L]
+
+# Old WordPress URLs -> new equivalents
+RewriteRule ^(sitemap_index|page-sitemap|post-sitemap|elementor-hf-sitemap)\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^comments/feed/?$ /feed/ [R=301,L]
+RewriteRule ^(author|category|tag)(/.*)?$ /blogs/ [R=301,L]
+RewriteRule ^blog/?$ /blogs/ [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-json)(/.*)?$ / [R=301,L]
+
+# The WordPress install is kept on disk (for rollback) but is no longer reachable
+RewriteRule ^wp-content/(?!uploads/) - [F,L]
+RewriteRule ^wp-content/uploads/.*\.php$ - [F,L]
+RewriteRule ^(wp-[a-z\-]+|xmlrpc|default)\.php$ - [F,L]
+RewriteRule ^(license\.txt|readme\.html)$ - [F,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(css|js|webp|png|ico|svg|woff2)$">
+Header set Cache-Control "public, max-age=2592000"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/plain application/javascript application/json application/xml application/rss+xml image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
