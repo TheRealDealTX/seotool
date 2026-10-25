@@ -1,0 +1,22 @@
+{
+  "name": "Hate to Love the Split",
+  "short_name": "The Split",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf6",
+  "theme_color": "#211a2e",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
