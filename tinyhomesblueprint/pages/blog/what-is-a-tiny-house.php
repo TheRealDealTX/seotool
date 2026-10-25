@@ -19,7 +19,7 @@ page_start([
 
 <section class="section">
   <div class="wrap article-layout">
-    <div class="prose">
+    <div class="prose" style="min-width:0">
       <p><strong>What is a tiny house?</strong> A tiny house is a small, fully functional home, usually 400 square feet or less, with its own kitchen, bathroom and sleeping area. It can be built on a trailer as a tiny house on wheels or on a permanent foundation. Homes from roughly 400 to 1,000 square feet are usually called small houses instead.</p>
       <p>That is the short version. The longer answer matters if you are planning to build or buy one, because the label "tiny house" means different things to a zoning officer, a building inspector, an insurer and a lender. This guide sorts out the definitions so you know which rules will apply to the home you have in mind.</p>
 
@@ -75,7 +75,7 @@ page_start([
             <text x="170" y="158">200</text>
             <text x="300" y="158">400</text>
             <text x="430" y="158">1,000</text>
-            <text x="560" y="158" text-anchor="end">1,000+ sq ft</text>
+            <text x="560" y="158" text-anchor="end">sq ft</text>
             <text x="105" y="190">Containers, studios</text>
             <text x="235" y="190">Most THOWs, cabins</text>
             <text x="365" y="190">Cottages, ADUs</text>

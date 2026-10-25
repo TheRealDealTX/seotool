@@ -19,8 +19,8 @@ page_start([
 
 <section class="section">
   <div class="wrap article-layout">
-    <div class="prose">
-      <p><strong>How many tiny homes can fit on an acre?</strong> Physically, a planned layout with roads, parking, setbacks and shared space usually fits somewhere around 8 to 15 tiny homes on one acre, far below the 100+ you get by dividing 43,560 sq ft by a single footprint. Legally, the answer is whatever your zoning density limit allows, which can be as low as one home per acre.</p>
+    <div class="prose" style="min-width:0">
+      <p><strong>How many tiny homes can fit on an acre?</strong> Physically, a planned layout with roads, parking, setbacks and shared space usually fits about 8 to 15 tiny homes on one acre, far below the 100+ you get by dividing 43,560 sq ft by one footprint. Legally, your zoning density limit decides, and it can be as low as one home per acre.</p>
       <p>That gap between the raw math and the realistic number is the whole story. Below, we walk through gross density first, then subtract everything a real site needs, and finish with a site plan you can adapt to your own parcel.</p>
 
       <div class="key-takeaways">
@@ -164,7 +164,7 @@ page_start([
       <h2 id="plans">Tiny homes that pack well on a small site</h2>
       <p>Narrow, rectangular homes use pads most efficiently, because they leave room for parking and side yards. Tiny houses on wheels are 8.5 ft wide for road travel, which makes them easy to line up along a drive (the <a href="/blog/tiny-house-trailer-size-guide/">trailer size guide</a> covers the limits). For foundation sites, compact 12 to 16 ft wide cabins and studios work well. These Tiny Homes Blueprint plans all fit comfortably on a 30 ft wide pad:</p>
       <?php plan_grid(['plan-12-2419', 'plan-12-2421', 'plan-12-2439', 'plan-12-2431'], false); ?>
-      <p>Not sure how much house each resident really needs? The <a href="/tools/how-big-should-my-tiny-house-be/">size calculator</a> and our guide to <a href="/blog/how-big-is-a-tiny-home/">how big a tiny home is</a> can help you set a sensible pad size before you draw the site.</p>
+      <p>Not sure how much house each resident really needs? The <a href="/tools/how-big-should-my-tiny-house-be/">size calculator</a> and our guide to <a href="/blog/how-big-is-a-tiny-home/">how big a tiny home is</a> can help you set a sensible pad size before you draw the site. If your pads end up narrower than planned, ask Tiny Homes Blueprint about modifying a plan to fit, and see <a href="/blog/where-to-put-a-tiny-house/">where to put a tiny house</a> for placement options beyond a community site.</p>
 
       <?php faq_block([
           ['How many tiny homes can fit on one acre?', '<p>Geometrically, about 8 to 15 on a typical planned layout once you account for setbacks, a drive, parking, utilities and shared space. The legal number depends on your zoning density limit, which may allow far fewer, sometimes only one home per acre.</p>'],
