@@ -18,7 +18,7 @@ Hosting: Hostinger, account `u401386392`, document root
 | `inc/plan-svg.php`, `build-plans.php` | Draw each plan's floor plan and front elevation SVG into `assets/plans/` from that geometry |
 | `inc/mailer.php` | Contact-form email over SMTP through the contact@ mailbox |
 | `inc/layout.php` | `page_start()` / `page_end()` (head, meta, schema, header, footer) and components (`plan_grid`, `faq_block`, `route_cards`, `cta_band`, `icon`, ...) |
-| `pages/` | One template per page: `home.php`, `catalog.php`, `plan.php`, `styles/`, `tools/`, `guides/`, `company/` |
+| `pages/` | One template per page: `home.php`, `catalog.php`, `plan.php`, `styles/`, `tools/`, `guides/`, `blog/`, `company/` |
 | `assets/css/site.css`, `assets/css/tools.css` | Styles |
 | `assets/js/site.js`, `assets/js/tools/*.js` | Mobile nav, plan filters, the interactive tools |
 | `validate.php` | Crawls a running copy of the site and checks every route (see below) |
@@ -32,6 +32,11 @@ Hosting: Hostinger, account `u401386392`, document root
 
 It then appears automatically in `sitemap.xml`, the HTML sitemap, the footer and the matching hub
 (style, tool and guide cards).
+
+Blog posts are routes with `'type' => 'post'` and templates in `pages/blog/`. Each carries a
+`'cat'` (topic filter on `/blog/`), a `'date'` (shown in the byline and Article schema; give each
+post its own), and `'kw'` / `'kw2'` noting the primary keyword and the variants it targets. The
+long-form pillar pages are `'type' => 'guide'` in `pages/guides/`.
 
 ## Adding a plan
 
