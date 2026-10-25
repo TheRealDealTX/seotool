@@ -104,6 +104,8 @@ page_hero(
       <li><strong>Follow up once, after 4-7 days.</strong> A short, polite bump often doubles response rates. Stop after two follow-ups.</li>
     </ul>
 
+    <h2>Subject lines that get opened</h2>
+    <p>Your subject line decides whether the email is read at all. The best ones are short, specific and name both parties, for example "Glow Theory x Jess: paid collab idea". Avoid all caps, emojis in professional pitches and vague lines like "Opportunity". The generator gives you three options so you can test which style your audience responds to.</p>
     <h2>Tips for creators pitching brands</h2>
     <ul>
       <li><strong>Pitch an idea, not just yourself.</strong> "A 3-part series on X" is far easier to approve than "I would love to work together".</li>

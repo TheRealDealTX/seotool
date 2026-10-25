@@ -86,6 +86,7 @@ page_hero(
     </table></div>
     <p>The gauge runs from zero to three times your benchmark. Below half the benchmark reads as low, around the benchmark is healthy, and anything above 2x is exceptional and worth highlighting in every pitch.</p>
 
+    <p>Brands increasingly ask for screenshots of your analytics, so report the same method every time and say which one you used.</p>
     <h2>How to improve your engagement rate</h2>
     <ul>
       <li><strong>Ask a specific question.</strong> "Which one would you pick, A or B?" earns more comments than "Thoughts?"</li>

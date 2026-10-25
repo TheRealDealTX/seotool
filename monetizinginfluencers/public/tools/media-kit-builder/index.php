@@ -122,6 +122,8 @@ UGC video (no posting) = $350</textarea></div>
     <p>Start with the example and overwrite it with your own details. The preview updates on every keystroke, and your draft is saved in this browser, so you can close the tab and come back later. Pick an accent colour that matches your profile aesthetic. When you are happy, click <strong>Print / Save as PDF</strong>: only the kit is printed, at full width, ready to attach to an email.</p>
     <p>Not sure what to charge? Get a starting range from the <a href="/tools/influencer-earnings-calculator/">influencer earnings calculator</a>, and calculate your exact engagement with the <a href="/tools/engagement-rate-calculator/">engagement rate calculator</a>. For a deeper guide, including design tips and what to leave out, read <a href="/influencer-media-kit/">how to make an influencer media kit</a>.</p>
 
+    <h2>What to leave out</h2>
+    <p>Keep the kit to one page. Skip long life stories, every brand you have ever tagged, and vanity metrics like total lifetime likes. If a number does not help a brand decide, it is noise. And never inflate stats: brands can see your real numbers in seconds with third-party tools, and one mismatch can cost you the deal.</p>
     <h2>Media kit tips that win more deals</h2>
     <ul>
       <li><strong>Update it monthly.</strong> Stale numbers are the most common media kit mistake.</li>

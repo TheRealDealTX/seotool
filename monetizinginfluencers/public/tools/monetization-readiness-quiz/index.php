@@ -44,6 +44,13 @@ page_hero(
 
     <h2>Turn your result into action</h2>
     <p>Every recommendation links to the relevant section of the Monetizing Influencers <a href="/monetization/">influencer monetization guide</a> and the tool that helps you start. If brand deals are in your top two, get your rate from the <a href="/tools/influencer-earnings-calculator/">earnings calculator</a> and build a <a href="/tools/media-kit-builder/">media kit</a>. If you want to see how your streams add up, plug them into the <a href="/tools/income-stream-simulator/">income stream simulator</a>.</p>
+    <h2>Common blockers the quiz uncovers</h2>
+    <ul>
+      <li><strong>No media kit.</strong> Brands cannot say yes to what they cannot evaluate. A one-page kit takes five minutes with the builder.</li>
+      <li><strong>No owned audience.</strong> Without a website or email list, every sale depends on an algorithm showing your post. Even a small list of 500 subscribers can out-earn 20,000 passive followers.</li>
+      <li><strong>Inconsistent posting.</strong> Brands and algorithms both reward reliability. A sustainable schedule beats bursts of daily posting followed by silence.</li>
+      <li><strong>Unknown numbers.</strong> If you do not know your engagement rate, you cannot defend your price. Measure it before your next pitch.</li>
+    </ul>
     <p>Retake the quiz every few months. As your audience grows and you add owned channels, your score and your best-fit streams will change.</p>
   </div>
 </section>

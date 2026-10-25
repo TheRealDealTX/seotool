@@ -69,10 +69,18 @@
   try { var saved = JSON.parse(localStorage.getItem(KEY) || 'null'); if (saved) load(saved); } catch (e) { /* storage unavailable */ }
 
   form.addEventListener('input', function () { render(); save(); });
-  $('mk-print').addEventListener('click', function () {
+  function preparePrint() {
+    var root = $('kit-print-root');
+    if (!root) { root = document.createElement('div'); root.id = 'kit-print-root'; document.body.appendChild(root); }
+    root.innerHTML = '';
+    var clone = $('kit').cloneNode(true);
+    clone.removeAttribute('id');
+    Array.prototype.forEach.call(clone.querySelectorAll('[id]'), function (n) { n.removeAttribute('id'); });
+    root.appendChild(clone);
     document.body.classList.add('mk-printing');
-    window.print();
-  });
+  }
+  $('mk-print').addEventListener('click', function () { preparePrint(); window.print(); });
+  window.addEventListener('beforeprint', preparePrint);
   window.addEventListener('afterprint', function () { document.body.classList.remove('mk-printing'); });
   $('mk-reset').addEventListener('click', function () {
     load(defaults); render();

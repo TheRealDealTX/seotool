@@ -90,6 +90,8 @@ $groups = [
     <p>Platform payouts change, algorithms shift and brand budgets shrink in a bad quarter. Creators who earn only from sponsorships feel every dip. Creators who also earn from affiliate links, a digital product and a small membership keep getting paid between deals, and their owned income (products, memberships, email list) grows in value over time.</p>
     <p>A practical path for most creators: start with <strong>affiliate links and UGC</strong> (no minimum audience), add <strong>brand deals</strong> once you have an engaged niche audience, then launch a <strong>digital product</strong> that solves the question your followers ask most. Use the presets to see how each stage changes the picture.</p>
 
+    <h2>Example: from $850 to $7,400 a month</h2>
+    <p>The Starter preset models a newer creator with one brand deal, a few affiliate sales, some ad revenue and two UGC videos: roughly $850 a month, heavily weighted toward brand work. The Growing preset adds more deals at a higher rate, a $29 digital product and a small membership. Total income rises to around $7,400, and just as importantly, no single stream is more than about half of it. That is the shift from side hustle to resilient creator business.</p>
     <h2>Tips to grow each stream</h2>
     <ul>
       <li><strong>Brand deals:</strong> raise your rate with a strong engagement rate and a professional <a href="/tools/media-kit-builder/">media kit</a>.</li>

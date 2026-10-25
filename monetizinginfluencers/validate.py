@@ -42,7 +42,7 @@ class Page(HTMLParser):
         a = dict(attrs)
         if "id" in a:
             self.ids.add(a["id"])
-        if tag == "title":
+        if tag == "title" and not self.title:
             self._in_title = True
         elif tag == "meta" and a.get("name") == "description":
             self.desc = a.get("content", "")

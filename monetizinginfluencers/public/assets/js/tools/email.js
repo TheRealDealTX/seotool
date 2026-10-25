@@ -17,7 +17,7 @@
       platform: v('b-platform', 'Instagram'), comp: $('b-comp').value, tone: $('em-tone').value
     };
     var offer = {
-      paid: ['This would be a paid collaboration, and we would love to hear your rates for a ' + d.platform + ' post.',
+      paid: ['This would be a paid collaboration, and we would love to hear your rates for ' + aan(d.platform) + ' post.',
              'We have budget set aside for this and would pay your standard rate for ' + d.platform + ' content.',
              'It is a paid partnership: send over your rate card and we will build the brief around what works for you.'],
       gifted: ['To be upfront, this would start as a gifted collaboration: we would send you ' + d.product + ' to try, with no obligation to post.',
@@ -58,7 +58,7 @@
     var dm = 'Hi ' + d.name + '! ' + d.sender + ' from ' + d.brand + ' here. Loved ' + d.recent + '. ' +
       ({ paid: 'We would love to pay you to feature ' + d.product + '.', gifted: 'Could we send you ' + d.product + ' to try? No strings attached.', affiliate: 'We would love to offer you a commission partnership on ' + d.product + '.' }[d.comp]) +
       ' What is the best email for details?';
-    return { subjects: subjects, body: clean(body), dm: dm };
+    return { subjects: subjects, body: clean(body), dm: dm.replace(/…\./g, '…') };
   }
 
   function creator() {
@@ -93,9 +93,10 @@
       'Would ' + d.brand + ' be up for this?'
     ], 3);
     var dm = 'Hi! I am ' + d.name + (d.handle ? ' (' + d.handle + ')' : '') + ', a ' + d.niche + ' creator and big fan of ' + d.brand + '. I have an idea for ' + shorten(d.idea, 70) + '. Who is the best person to send a quick pitch to?';
-    return { subjects: subjects, body: clean(body), dm: dm };
+    return { subjects: subjects, body: clean(body), dm: dm.replace(/…\./g, '…') };
   }
 
+  function aan(w) { return (/^[aeiou]/i.test(w) ? 'an ' : 'a ') + w; }
   function cap(s) { return s.charAt(0).toUpperCase() + s.slice(1); }
   function shorten(s, n) { return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; }
 

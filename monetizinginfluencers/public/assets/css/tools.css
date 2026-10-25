@@ -165,10 +165,12 @@ input[type=color] { width: 100%; height: 46px; border-radius: 12px; border: 1px 
   .stream-bars div { grid-template-columns: 100px 1fr 36px; }
   .kit-body, .kit-top { padding-left: 20px; padding-right: 20px; }
 }
+#kit-print-root { display: none; }
 @media print {
-  body.mk-printing * { visibility: hidden !important; }
-  body.mk-printing .kit, body.mk-printing .kit * { visibility: visible !important; }
-  body.mk-printing .kit { position: absolute; left: 0; top: 0; width: 100%; box-shadow: none; border-radius: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  body.mk-printing main, body.mk-printing .tool-output { position: static !important; }
-  body.mk-printing .reveal { opacity: 1 !important; transform: none !important; }
+  @page { margin: 12mm; }
+  body.mk-printing > *:not(#kit-print-root) { display: none !important; }
+  body.mk-printing #kit-print-root { display: block !important; }
+  body.mk-printing::before { display: none !important; }
+  #kit-print-root .kit { box-shadow: none; border-radius: 16px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  #kit-print-root .kit * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
