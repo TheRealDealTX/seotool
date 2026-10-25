@@ -11,18 +11,18 @@ hatetolovethesplit.com,1,9,attic insulation r value,2900,20,Attic insulation R-v
 hatetolovethesplit.com,1,10,small kitchen remodel cost,1300,n/a (no KD in dataset),Small kitchen remodel cost: our line-item breakdown,
 hatetolovethesplit.com,1,11,home renovation on a budget,1300,3,Renovating on a budget: 14 places to spend and 14 to save,fraserandmorris.com
 hatetolovethesplit.com,1,12,roof leak repair cost,2400,n/a (no KD in dataset),Roof leak repair cost: what the ceiling stain is really telling you,templeroofs.com roof-repair page
-agadecor.com,1,1,farmhouse bedroom decor ideas,2900,1,31 farmhouse bedroom decor ideas that are not all shiplap,
-agadecor.com,1,2,kitchen wall decor ideas,2900,4,Kitchen wall decor ideas for every blank wall,comeicavoliamerenda.com
-agadecor.com,1,3,small apartment decor ideas,2900,7,Small apartment decor ideas that make 600 square feet feel bigger,
-agadecor.com,1,4,gutter colors,2400,n/a (no KD in dataset),Gutter colors: how to match gutters to your roof and trim,huttoroofs.com shingle-roofing page
-agadecor.com,1,5,patio decor ideas,2900,8,Patio decor ideas for a Texas-hot backyard,kyleroofs.com
-agadecor.com,1,6,office decor ideas for work,2900,4,Office decor ideas for work that your HR team will allow,
-agadecor.com,1,7,apartment living room decor ideas,2900,10,Apartment living room decor ideas on a renter's budget,fraserandmorris.com
-agadecor.com,1,8,home office decor ideas,2900,17,Home office decor ideas for a room that doubles as a guest room,
-agadecor.com,1,9,children's bedroom decor ideas,2900,18,Children's bedroom decor ideas that survive the toddler years,ohmtoherminediy.com
-agadecor.com,1,10,vintage wall art and decor,2400,9,Vintage wall art and decor: where to find it and how to hang it,
-agadecor.com,1,11,kitchen wallpaper decor ideas,2900,4,Kitchen wallpaper ideas that handle steam and grease,fraserandmorris.com
-agadecor.com,1,12,diy home decor,2900,13,"DIY home decor projects under 50 dollars, ranked by effort",copperascoveroofs.com (curb appeal angle)
+agadecor.com,1,1,farmhouse bedroom decor ideas,2900,1,[needs-retarget to live site angle] 31 farmhouse bedroom decor ideas that are not all shiplap,
+agadecor.com,1,2,kitchen wall decor ideas,2900,4,[needs-retarget to live site angle] Kitchen wall decor ideas for every blank wall,comeicavoliamerenda.com
+agadecor.com,1,3,small apartment decor ideas,2900,7,[needs-retarget to live site angle] Small apartment decor ideas that make 600 square feet feel bigger,
+agadecor.com,1,4,gutter colors,2400,n/a (no KD in dataset),[needs-retarget to live site angle] Gutter colors: how to match gutters to your roof and trim,huttoroofs.com shingle-roofing page
+agadecor.com,1,5,patio decor ideas,2900,8,[needs-retarget to live site angle] Patio decor ideas for a Texas-hot backyard,kyleroofs.com
+agadecor.com,1,6,office decor ideas for work,2900,4,[needs-retarget to live site angle] Office decor ideas for work that your HR team will allow,
+agadecor.com,1,7,apartment living room decor ideas,2900,10,[needs-retarget to live site angle] Apartment living room decor ideas on a renter's budget,fraserandmorris.com
+agadecor.com,1,8,home office decor ideas,2900,17,[needs-retarget to live site angle] Home office decor ideas for a room that doubles as a guest room,
+agadecor.com,1,9,children's bedroom decor ideas,2900,18,[needs-retarget to live site angle] Children's bedroom decor ideas that survive the toddler years,ohmtoherminediy.com
+agadecor.com,1,10,vintage wall art and decor,2400,9,[needs-retarget to live site angle] Vintage wall art and decor: where to find it and how to hang it,
+agadecor.com,1,11,kitchen wallpaper decor ideas,2900,4,[needs-retarget to live site angle] Kitchen wallpaper ideas that handle steam and grease,fraserandmorris.com
+agadecor.com,1,12,diy home decor,2900,13,"[needs-retarget to live site angle] DIY home decor projects under 50 dollars, ranked by effort",copperascoveroofs.com (curb appeal angle)
 ohmtoherminediy.com,1,1,diy gutters,2900,6,DIY gutters: can you really install them yourself? (what we learned),huttoroofs.com gutter/roof-repair page
 ohmtoherminediy.com,1,2,termite treatment diy,2900,1,"DIY termite treatment: what works, what is a waste",
 ohmtoherminediy.com,1,3,grout cleaning diy,2900,6,DIY grout cleaner that actually works (three recipes tested),agadecor.com
@@ -35,18 +35,18 @@ ohmtoherminediy.com,1,9,diy fly trap indoors,2900,5,DIY indoor fly trap: four de
 ohmtoherminediy.com,1,10,attic door insulation,2900,n/a (no KD in dataset),How to insulate an attic door or hatch in an afternoon,kyleroofs.com attic/ventilation angle
 ohmtoherminediy.com,1,11,diy wedding decorations,2900,7,DIY wedding decorations that photograph well,michellewhitephoto.com
 ohmtoherminediy.com,1,12,how much does gutter cleaning cost,2400,9,Gutter cleaning cost vs doing it yourself: an honest math,huttoroofs.com roof-inspection page
-fraserandmorris.com,1,1,different interior design styles,2900,17,"The 14 interior design styles, explained with real rooms",
-fraserandmorris.com,1,2,interior design mood boards,2900,21,How to build an interior design mood board (free template),
-fraserandmorris.com,1,3,best way of removing wallpaper,2900,2,The best way to remove wallpaper without wrecking the plaster,ohmtoherminediy.com
-fraserandmorris.com,1,4,interior design style quiz,2900,13,What is your interior design style? A 12-question quiz,
-fraserandmorris.com,1,5,wallpaper pattern,2900,6,"Choosing a wallpaper pattern: scale, repeat and room size",
-fraserandmorris.com,1,6,contemporary interior design,2900,24,Contemporary interior design: what it is and what it is not,agadecor.com
-fraserandmorris.com,1,7,transitional interior design,2900,16,Transitional interior design: the style for people who cannot choose,
-fraserandmorris.com,1,8,room to room interior design,2900,7,Room-to-room flow: making an open plan feel like one house,hatetolovethesplit.com
-fraserandmorris.com,1,9,unfinished cabinet doors,2900,3,Unfinished cabinet doors: how to finish them like a pro,
-fraserandmorris.com,1,10,bedroom interior design,2900,29,Bedroom interior design: the layout rules nobody tells you,
-fraserandmorris.com,1,11,roof leak repair cost,2400,n/a (no KD in dataset),The ceiling stain: what a roof leak costs inside and out,templeroofs.com or huttoroofs.com roof-repair page
-fraserandmorris.com,1,12,online interior design degree,2900,4,Online interior design degrees and courses worth the money,
+fraserandmorris.com,1,1,different interior design styles,2900,17,"[needs-retarget to live site angle] The 14 interior design styles, explained with real rooms",
+fraserandmorris.com,1,2,interior design mood boards,2900,21,[needs-retarget to live site angle] How to build an interior design mood board (free template),
+fraserandmorris.com,1,3,best way of removing wallpaper,2900,2,[needs-retarget to live site angle] The best way to remove wallpaper without wrecking the plaster,ohmtoherminediy.com
+fraserandmorris.com,1,4,interior design style quiz,2900,13,[needs-retarget to live site angle] What is your interior design style? A 12-question quiz,
+fraserandmorris.com,1,5,wallpaper pattern,2900,6,"[needs-retarget to live site angle] Choosing a wallpaper pattern: scale, repeat and room size",
+fraserandmorris.com,1,6,contemporary interior design,2900,24,[needs-retarget to live site angle] Contemporary interior design: what it is and what it is not,agadecor.com
+fraserandmorris.com,1,7,transitional interior design,2900,16,[needs-retarget to live site angle] Transitional interior design: the style for people who cannot choose,
+fraserandmorris.com,1,8,room to room interior design,2900,7,[needs-retarget to live site angle] Room-to-room flow: making an open plan feel like one house,hatetolovethesplit.com
+fraserandmorris.com,1,9,unfinished cabinet doors,2900,3,[needs-retarget to live site angle] Unfinished cabinet doors: how to finish them like a pro,
+fraserandmorris.com,1,10,bedroom interior design,2900,29,[needs-retarget to live site angle] Bedroom interior design: the layout rules nobody tells you,
+fraserandmorris.com,1,11,roof leak repair cost,2400,n/a (no KD in dataset),[needs-retarget to live site angle] The ceiling stain: what a roof leak costs inside and out,templeroofs.com or huttoroofs.com roof-repair page
+fraserandmorris.com,1,12,online interior design degree,2900,4,[needs-retarget to live site angle] Online interior design degrees and courses worth the money,
 rjbledlcdtvservicecentre.com,1b,1,how to clean a tv screen safely,2900,7,"How to clean a TV screen safely (OLED, QLED and LCD)",
 rjbledlcdtvservicecentre.com,1b,2,blue horizontal line on tv screen,2900,1,Blue horizontal line on a TV screen: causes and fixes,
 rjbledlcdtvservicecentre.com,1b,3,how to fix tv screen,2900,6,How to fix a TV screen: what is repairable and what is not,
@@ -83,18 +83,18 @@ michellewhitephoto.com,2,9,wedding photo album,2900,3,Wedding photo albums: lay-
 michellewhitephoto.com,2,10,wedding planning tips,1300,4,Wedding planning tips from the photographer's side of the aisle,agadecor.com
 michellewhitephoto.com,2,11,best wedding planning books,1300,1,"Best wedding planning books, read and ranked",
 michellewhitephoto.com,2,12,engagement photo shoot,880,1,What to expect at an engagement photo shoot,
-comeicavoliamerenda.com,2,1,tuscan food,2900,9,Tuscan food: the 20 dishes that define the region,
-comeicavoliamerenda.com,2,2,italian tiramisu recipe without eggs,2900,2,Tiramisu without eggs: the Florentine way,
-comeicavoliamerenda.com,2,3,tuscan meals,2900,13,Tuscan meals for a week: a cook's rotation,
-comeicavoliamerenda.com,2,4,creamy italian dressing recipe,2900,3,Creamy Italian dressing recipe (what Italians actually put on salad),
-comeicavoliamerenda.com,2,5,olive garden tuscan soup recipe,2900,25,"Tuscan soup, the real version behind the Olive Garden one",agadecor.com
-comeicavoliamerenda.com,2,6,tuscan towns in italy,2400,4,Tuscan towns worth the drive from Florence,
-comeicavoliamerenda.com,2,7,italian spaghetti sauce recipe,2900,11,Italian spaghetti sauce: the three sauces every nonna makes,
-comeicavoliamerenda.com,2,8,garlic tuscan chicken recipe,2400,27,"Garlic Tuscan chicken, done in one pan",
-comeicavoliamerenda.com,2,9,italian recipe names,2900,9,Italian recipe names explained: what the menu is telling you,
-comeicavoliamerenda.com,2,10,tuscan winery tour from florence,2400,20,Tuscan winery tours from Florence without a car,
-comeicavoliamerenda.com,2,11,italian chicken cacciatore recipe,2900,23,Chicken cacciatore the hunter's way,hatetolovethesplit.com
-comeicavoliamerenda.com,2,12,italian pasta sauce recipe,2900,22,Italian pasta sauces by region: a map and 10 recipes,
+comeicavoliamerenda.com,2,1,tuscan food,2900,9,[needs-retarget to live site angle] Tuscan food: the 20 dishes that define the region,
+comeicavoliamerenda.com,2,2,italian tiramisu recipe without eggs,2900,2,[needs-retarget to live site angle] Tiramisu without eggs: the Florentine way,
+comeicavoliamerenda.com,2,3,tuscan meals,2900,13,[needs-retarget to live site angle] Tuscan meals for a week: a cook's rotation,
+comeicavoliamerenda.com,2,4,creamy italian dressing recipe,2900,3,[needs-retarget to live site angle] Creamy Italian dressing recipe (what Italians actually put on salad),
+comeicavoliamerenda.com,2,5,olive garden tuscan soup recipe,2900,25,"[needs-retarget to live site angle] Tuscan soup, the real version behind the Olive Garden one",agadecor.com
+comeicavoliamerenda.com,2,6,tuscan towns in italy,2400,4,[needs-retarget to live site angle] Tuscan towns worth the drive from Florence,
+comeicavoliamerenda.com,2,7,italian spaghetti sauce recipe,2900,11,[needs-retarget to live site angle] Italian spaghetti sauce: the three sauces every nonna makes,
+comeicavoliamerenda.com,2,8,garlic tuscan chicken recipe,2400,27,"[needs-retarget to live site angle] Garlic Tuscan chicken, done in one pan",
+comeicavoliamerenda.com,2,9,italian recipe names,2900,9,[needs-retarget to live site angle] Italian recipe names explained: what the menu is telling you,
+comeicavoliamerenda.com,2,10,tuscan winery tour from florence,2400,20,[needs-retarget to live site angle] Tuscan winery tours from Florence without a car,
+comeicavoliamerenda.com,2,11,italian chicken cacciatore recipe,2900,23,[needs-retarget to live site angle] Chicken cacciatore the hunter's way,hatetolovethesplit.com
+comeicavoliamerenda.com,2,12,italian pasta sauce recipe,2900,22,[needs-retarget to live site angle] Italian pasta sauces by region: a map and 10 recipes,
 findsforfitness.com,2,1,flat feet vs normal feet,2900,12,Flat feet vs normal feet: how to tell and when it matters,
 findsforfitness.com,2,2,women's shoes for flat feet,2400,5,Women's shoes for flat feet: 12 tested pairs,
 findsforfitness.com,2,3,what causes flat feet,2400,9,What causes flat feet in adults and children,
