@@ -7,7 +7,7 @@ page_start([
   <div class="wrap">
     <p class="eyebrow">Building a tiny house</p>
     <h1>How to Build a Tiny House: A 12-Step Guide</h1>
-    <p class="lead">The full sequence a DIY tiny house follows, from choosing wheels or a foundation to the final inspection, with realistic timelines, the tools you need and the mistakes that cost owner-builders the most.</p>
+    <p class="lead">How to build a tiny home yourself: the full sequence a do-it-yourself tiny house follows, from choosing wheels or a foundation to the final inspection, with realistic timelines, the tools you need and the mistakes that cost owner-builders the most.</p>
     <?php guide_byline(); ?>
     <ul class="hero-facts">
       <li>DIY timeline: ~6&ndash;18 months part-time</li>
@@ -45,7 +45,7 @@ page_start([
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="overview">How to build a tiny house: the 12 steps at a glance</h2>
+      <h2 id="overview">How to build a tiny home: the 12 steps at a glance</h2>
       <ol class="steps">
         <li><h3>Choose wheels or a foundation</h3><p>Sets size, zoning and financing.</p></li>
         <li><h3>Check zoning and permits</h3><p>Know where it can legally go.</p></li>
@@ -194,7 +194,7 @@ page_start([
         <li><strong>Safety:</strong> eye and ear protection, respirator for foam and sanding, gloves, fall protection on the roof</li>
       </ul>
 
-      <h2 id="mistakes">Common DIY tiny house mistakes</h2>
+      <h2 id="mistakes">Common do-it-yourself tiny home mistakes</h2>
       <div class="pros-cons">
         <div class="cons"><h3>Mistakes that cost the most</h3><ul>
           <li>Buying land or a trailer before checking zoning</li>

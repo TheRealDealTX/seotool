@@ -1,112 +1,121 @@
 <?php
-page_start([
-    'breadcrumbs' => [['Home', '/'], ['Guides', null]],
-]);
-$featured = '/blog/how-much-does-a-tiny-house-cost/';
-$guides = array_filter($ROUTES, fn($r) => ($r['type'] ?? '') === 'guide');
-// Newest first; keep registry order for guides sharing a date.
-$order = array_flip(array_keys($guides));
-uksort($guides, function ($a, $b) use ($guides, $order) {
-    $d = strcmp($guides[$b]['date'] ?? '', $guides[$a]['date'] ?? '');
-    return $d !== 0 ? $d : $order[$a] <=> $order[$b];
-});
+// Blog hub: keyword-targeted posts (type 'post') newest first with category filters,
+// then the long-form pillar guides (type 'guide').
+page_start(['breadcrumbs' => [['Home', '/'], ['Blog', null]]]);
+$byDate = function (array $items) {
+    uasort($items, fn($a, $b) => strcmp($b['date'] ?? '', $a['date'] ?? ''));
+    return $items;
+};
+$posts  = $byDate(array_filter($ROUTES, fn($r) => ($r['type'] ?? '') === 'post'));
+$guides = $byDate(array_filter($ROUTES, fn($r) => ($r['type'] ?? '') === 'guide'));
+$cats = array_values(array_unique(array_column($posts, 'cat')));
+sort($cats);
+$latestPath = array_key_first($posts);
+$latest = $posts[$latestPath];
+$fmt = fn($d) => date('M j, Y', strtotime($d));
 ?>
 <section class="page-hero bp">
   <div class="wrap">
-    <p class="eyebrow">Tiny house guides</p>
-    <h1>Tiny House Guides</h1>
-    <p class="lead">Straight answers on what a tiny house costs, how to build one, where you can legally put it and how to make a small floor plan work. Written by the Tiny Homes Blueprint team for owner-builders, families and small-home investors.</p>
+    <p class="eyebrow">Tiny Homes Blueprint blog</p>
+    <h1>Tiny House Blog</h1>
+    <p class="lead">Straight answers to the questions people ask before they go tiny: what a tiny house is, where you can put one, how to buy or finance it, what it weighs and how long it takes to build. Plus long-form guides on cost, building, zoning and layouts.</p>
     <ul class="hero-facts">
+      <li><?= count($posts) ?> articles</li>
       <li><?= count($guides) ?> in-depth guides</li>
-      <li>Real cost ranges, not wishful thinking</li>
       <li>Free calculators to run your own numbers</li>
     </ul>
   </div>
 </section>
 
-<?php if (isset($ROUTES[$featured])): $f = $ROUTES[$featured]; ?>
 <section class="section">
   <div class="wrap two-col">
     <div>
-      <p class="eyebrow">Featured guide</p>
-      <h2><a href="<?= e($featured) ?>"><?= e($f['title']) ?></a></h2>
-      <p class="lead"><?= e($f['description']) ?></p>
-      <p>Most people start here. Before you pick a plan or a trailer, you need a realistic number for the whole project: the build itself, the land or parking spot, utilities, permits and the costs nobody puts on the brochure.</p>
-      <p><a class="btn" href="<?= e($featured) ?>">Read the cost guide <?= icon('arrow') ?></a>
-         <a class="btn btn-outline" href="/tools/tiny-house-cost-calculator/">Open the cost calculator</a></p>
+      <p class="eyebrow">Latest article &middot; <?= e($latest['cat']) ?></p>
+      <h2><a href="<?= e($latestPath) ?>"><?= e($latest['title']) ?></a></h2>
+      <p class="lead"><?= e($latest['description']) ?></p>
+      <p class="muted"><time datetime="<?= e($latest['date']) ?>"><?= $fmt($latest['date']) ?></time></p>
+      <p><a class="btn" href="<?= e($latestPath) ?>">Read the article <?= icon('arrow') ?></a></p>
     </div>
-    <figure class="diagram">
-      <svg viewBox="0 0 420 240" role="img" aria-label="Bar chart of typical tiny house cost per square foot: DIY basic 150 to 220 dollars, DIY high-end 240 to 330 dollars, builder basic 250 to 330 dollars, builder high-end 380 to 500 dollars">
-        <g fill="none" stroke="#e8f2f2" stroke-width="1.5"><path d="M130 30v170h270"/></g>
-        <g stroke="#e8f2f2" stroke-opacity=".25" stroke-width="1"><path d="M190 30v170M250 30v170M310 30v170M370 30v170"/></g>
-        <g fill="#f2c58d">
-          <rect x="160" y="44" width="42" height="18" rx="3"/>
-          <rect x="214" y="84" width="54" height="18" rx="3"/>
-          <rect x="220" y="124" width="48" height="18" rx="3"/>
-          <rect x="298" y="164" width="72" height="18" rx="3"/>
-        </g>
-        <g fill="#cfe3e3" font-family="Inter,sans-serif" font-size="12">
-          <text x="122" y="57" text-anchor="end">DIY basic</text>
-          <text x="122" y="97" text-anchor="end">DIY high-end</text>
-          <text x="122" y="137" text-anchor="end">Builder basic</text>
-          <text x="122" y="177" text-anchor="end">Builder high-end</text>
-          <g text-anchor="middle"><text x="130" y="220">$100</text><text x="190" y="220">$200</text><text x="250" y="220">$300</text><text x="310" y="220">$400</text><text x="370" y="220">$500</text></g>
-        </g>
-      </svg>
-      <figcaption>Typical cost per square foot by build path, before land and utilities.</figcaption>
-    </figure>
+    <div class="panel">
+      <h3>Start with the essentials</h3>
+      <ul class="check-list">
+        <li><a href="/blog/what-is-a-tiny-house/">What is a tiny house?</a></li>
+        <li><a href="/blog/how-much-does-a-tiny-house-cost/">How much does a tiny house cost?</a></li>
+        <li><a href="/blog/where-to-put-a-tiny-house/">Where to put a tiny house</a></li>
+        <li><a href="/blog/how-to-buy-a-tiny-house/">How to buy a tiny house</a></li>
+        <li><a href="/blog/how-to-build-a-tiny-house/">How to build a tiny house</a></li>
+      </ul>
+    </div>
   </div>
 </section>
-<?php endif; ?>
 
-<section class="section section-alt">
+<section class="section section-alt" id="articles">
   <div class="wrap">
     <div class="section-head">
-      <h2>All tiny house guides</h2>
-      <p class="lead">Cost, building, zoning, layouts, trailers and plans. Each guide links to the tools and plans that go with it.</p>
+      <h2>All articles</h2>
+      <p class="lead">Filter by topic. Every article links to the plans, guides and calculators that go with it.</p>
     </div>
-    <div class="card-grid">
-      <?php foreach ($guides as $p => $r):
-          $d = $r['modified'] ?? $r['date'] ?? null; ?>
-      <a class="link-card" href="<?= e($p) ?>">
-        <span class="link-ico"><?= icon('book') ?></span>
-        <strong><?= e($r['nav'] ?? $r['title']) ?></strong>
+    <div class="chip-row" role="group" aria-label="Filter articles by topic">
+      <button type="button" class="chip" aria-pressed="true" data-cat="">All <span><?= count($posts) ?></span></button>
+      <?php foreach ($cats as $c): $n = count(array_filter($posts, fn($r) => $r['cat'] === $c)); ?>
+      <button type="button" class="chip" aria-pressed="false" data-cat="<?= e($c) ?>"><?= e($c) ?> <span><?= $n ?></span></button>
+      <?php endforeach; ?>
+    </div>
+    <div class="post-grid" id="post-grid">
+      <?php foreach ($posts as $path => $r): ?>
+      <a class="post-card" href="<?= e($path) ?>" data-cat="<?= e($r['cat']) ?>">
+        <span class="post-meta"><span class="tag"><?= e($r['cat']) ?></span> <time datetime="<?= e($r['date']) ?>"><?= $fmt($r['date']) ?></time></span>
+        <strong><?= e($r['title']) ?></strong>
         <span><?= e($r['description']) ?></span>
-        <?php if ($d): ?><span><time datetime="<?= e($d) ?>"><?= isset($r['modified']) ? 'Updated ' : '' ?><?= date('M j, Y', strtotime($d)) ?></time></span><?php endif; ?>
+        <span class="post-more">Read article <?= icon('arrow') ?></span>
       </a>
       <?php endforeach; ?>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="guides">
   <div class="wrap">
     <div class="section-head">
-      <h2>Popular planning tools</h2>
-      <p class="lead">Free calculators from Tiny Homes Blueprint. No sign-up, and they run in your browser.</p>
+      <p class="eyebrow">In-depth guides</p>
+      <h2>Tiny house guides</h2>
+      <p class="lead">Our longest, most detailed pages: full cost breakdowns, a 12-step build guide, zoning and trailer rules, layouts and plan buying advice.</p>
+    </div>
+    <div class="card-grid">
+      <?php foreach ($guides as $path => $r): $d = $r['modified'] ?? $r['date']; ?>
+      <a class="link-card" href="<?= e($path) ?>">
+        <span class="link-ico"><?= icon('book') ?></span>
+        <strong><?= e($r['nav'] ?? $r['title']) ?></strong>
+        <span><?= e($r['description']) ?></span>
+        <span><time datetime="<?= e($d) ?>"><?= isset($r['modified']) ? 'Updated ' : '' ?><?= $fmt($d) ?></time></span>
+      </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Free planning tools</h2>
+      <p class="lead">Run your own numbers with Tiny Homes Blueprint calculators. No sign-up, and they run in your browser.</p>
     </div>
     <?php route_cards('tool', '', 3); ?>
     <p class="mt-2"><a href="/tools/">See all tiny house planning tools <?= icon('arrow') ?></a></p>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="wrap two-col top">
-    <div>
-      <h2>Where to start</h2>
-      <ol>
-        <li><strong>Pick wheels or a foundation.</strong> It decides your zoning path, size limits and financing. The <a href="/blog/tiny-house-zoning-laws/">zoning guide</a> explains both.</li>
-        <li><strong>Set a real budget.</strong> Use the <a href="/blog/how-much-does-a-tiny-house-cost/">cost guide</a> and <a href="/tools/tiny-house-cost-calculator/">calculator</a> before you shop.</li>
-        <li><strong>Size it.</strong> The <a href="/tools/how-big-should-my-tiny-house-be/">size calculator</a> turns your household into square footage.</li>
-        <li><strong>Choose a plan and build.</strong> Browse <a href="/tiny-house-plans/">tiny house plans</a>, then follow <a href="/blog/how-to-build-a-tiny-house/">how to build a tiny house</a>.</li>
-      </ol>
-    </div>
-    <div>
-      <h2>Browse by style</h2>
-      <?php route_cards('style', '', 4); ?>
-    </div>
-  </div>
-</section>
-
-<?php cta_band('Have a question about your build?', 'Tiny Homes Blueprint answers questions about plans, modifications and custom designs. Send us your lot size and wish list.', 'Contact us', '/contact/'); ?>
+<?php cta_band('Ready to plan your tiny home?', 'Browse ' . count($PLANS) . ' build-ready tiny house plans, or ask Tiny Homes Blueprint about a custom design.'); ?>
+<script>
+(function () {
+  var chips = document.querySelectorAll('.chip-row .chip'), cards = document.querySelectorAll('#post-grid .post-card');
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      var cat = chip.dataset.cat;
+      chips.forEach(function (c) { c.setAttribute('aria-pressed', c === chip ? 'true' : 'false'); });
+      cards.forEach(function (card) { card.hidden = cat !== '' && card.dataset.cat !== cat; });
+    });
+  });
+})();
+</script>
 <?php page_end(); ?>

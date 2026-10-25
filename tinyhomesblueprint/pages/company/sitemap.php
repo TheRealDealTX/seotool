@@ -1,6 +1,6 @@
 <?php
 page_start(['breadcrumbs' => [['Home', '/'], ['Sitemap', null]]]);
-$groups = ['Tiny house plans' => ['catalog', 'plan'], 'Styles' => ['style'], 'Free tools' => ['hub-tools', 'tool'], 'Guides' => ['hub-blog', 'guide'], 'Company' => ['home', 'company', 'legal']];
+$groups = ['Tiny house plans' => ['catalog', 'plan'], 'Styles' => ['style'], 'Free tools' => ['hub-tools', 'tool'], 'Blog & guides' => ['hub-blog', 'guide', 'post'], 'Company' => ['home', 'company', 'legal']];
 ?>
 <section class="page-hero"><div class="wrap"><h1>Sitemap</h1><p class="lead">Every page on Tiny Homes Blueprint.</p></div></section>
 <section class="section" style="padding-top:0"><div class="wrap card-grid">

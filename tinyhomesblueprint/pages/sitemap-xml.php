@@ -1,7 +1,7 @@
 <?php
 // XML sitemap built from the route registry.
 header('Content-Type: application/xml; charset=utf-8');
-$default = ['home' => '1.0', 'catalog' => '0.9', 'style' => '0.8', 'tool' => '0.8', 'guide' => '0.7', 'hub' => '0.8', 'plan' => '0.8', 'company' => '0.5', 'legal' => '0.2'];
+$default = ['home' => '1.0', 'catalog' => '0.9', 'style' => '0.8', 'tool' => '0.8', 'guide' => '0.7', 'post' => '0.6', 'hub' => '0.8', 'plan' => '0.8', 'company' => '0.5', 'legal' => '0.2'];
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 foreach ($ROUTES as $path => $r) {

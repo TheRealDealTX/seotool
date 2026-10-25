@@ -7,7 +7,7 @@ page_start([
   <div class="wrap">
     <p class="eyebrow">Tiny house costs</p>
     <h1>How Much Does a Tiny House Cost in 2026?</h1>
-    <p class="lead">A line-by-line breakdown of tiny house prices by build path, component and size, plus the land, utility, permit and financing costs that most price tags leave out.</p>
+    <p class="lead">How much is a tiny house, really? A line-by-line breakdown of tiny home prices by build path, component and size, plus the land, utility, permit and financing costs that most price tags leave out.</p>
     <?php guide_byline(); ?>
     <ul class="hero-facts">
       <li>DIY on wheels: ~$36k&ndash;$78k</li>
@@ -45,7 +45,7 @@ page_start([
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
-      <h2 id="price-by-path">Tiny house price by build path</h2>
+      <h2 id="price-by-path">How much is a tiny house? Price by build path</h2>
       <p>The same 200 sq ft floor plan can cost $40,000 or $110,000 depending on who builds it and how far they take it. These are the five common routes, with typical all-in ranges for the house itself (land and utility service not included).</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Build path</th><th>Typical size</th><th class="num">Typical cost</th><th>What you get</th></tr></thead>
@@ -99,7 +99,7 @@ page_start([
         <figcaption>Typical tiny house cost ranges by build path. The dashed end shows that large, high-end foundation builds can run past $200k.</figcaption>
       </figure>
 
-      <h2 id="per-sqft">Tiny house cost per square foot and by size</h2>
+      <h2 id="per-sqft">How much are tiny homes per square foot and by size?</h2>
       <p>Per-square-foot pricing is the fastest way to sanity-check a quote. These are the figures we use for the structure and interior finishes; the trailer or foundation and utility service are added separately.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Finish level</th><th class="num">DIY / owner-built</th><th class="num">Builder</th></tr></thead>
@@ -201,6 +201,7 @@ page_start([
       <p>Tiny Homes Blueprint plan sets run from $<?= number_format(min(array_column($PLANS, 'price'))) ?> to $<?= number_format(max(array_column($PLANS, 'price'))) ?>, which is around 1% of a typical build. Free plans can work for a simple shed or bunkie, but a full set with framing, sections and a materials list is what keeps your lumber order and your inspector happy. Our guide to <a href="/blog/free-tiny-house-plans/">free tiny house plans vs paid</a> explains the difference, and you can browse every design on the <a href="/tiny-house-plans/">tiny house plans</a> page.</p>
 
       <?php faq_block([
+          ['How much is a tiny home to buy ready-made?', '<p>A finished tiny home from a builder typically runs about $56,000&ndash;$112,000 on wheels including the trailer, and more for larger or high-end models. Tiny homes on a foundation usually cost $80,000&ndash;$200,000 or more, before land and utility hookups. See the <a href="/blog/how-to-buy-a-tiny-house/">tiny house buying guide</a> for what to check before you pay a deposit.</p>'],
           ['How much does a tiny house cost on average?', '<p>A typical finished tiny house on wheels costs about $36,000&ndash;$78,000 if you build it yourself and $56,000&ndash;$112,000 from a builder, including the trailer. Tiny homes on a foundation usually cost $80,000&ndash;$200,000 or more. Land and utility service are extra.</p>'],
           ['Can you build a tiny house for $20,000?', '<p>Only in limited cases: a very small, simple build with salvaged materials, a used trailer, no plumbing and your own labor. For a code-minded house with a kitchen, bathroom, insulation and new windows, $36,000 or more is a more realistic floor for a DIY build on wheels.</p>'],
           ['What is the cost to build a tiny house per square foot?', '<p>Owner-builders typically spend $150&ndash;$330 per square foot depending on finish level. Professional builders typically charge $250&ndash;$500 per square foot. Trailer or foundation and utility service are added on top.</p>'],

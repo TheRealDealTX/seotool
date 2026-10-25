@@ -57,7 +57,7 @@ function site_schema(): array {
         '@graph' => [
             [
                 '@type' => 'Organization', '@id' => SITE_URL . '/#org', 'name' => SITE_NAME, 'url' => SITE_URL . '/',
-                'logo' => abs_url('/assets/img/icon-512.webp'), 'email' => SITE_EMAIL, 'telephone' => SITE_TEL,
+                'logo' => abs_url('/assets/img/icon-512.png'), 'email' => SITE_EMAIL, 'telephone' => SITE_TEL,
                 'contactPoint' => ['@type' => 'ContactPoint', 'telephone' => SITE_TEL, 'email' => SITE_EMAIL, 'contactType' => 'sales', 'areaServed' => 'US'],
             ],
             [
@@ -83,13 +83,13 @@ function page_start(array $o = []): void {
     $desc  = $o['description'] ?? ($ROUTE['description'] ?? '');
     $canon = $o['canonical'] ?? abs_url($PATH);
     $img   = $o['og_image'] ?? abs_url('/assets/img/og-image.jpg');
-    $type  = $o['og_type'] ?? (($ROUTE['type'] ?? '') === 'guide' ? 'article' : 'website');
+    $type  = $o['og_type'] ?? (in_array($ROUTE['type'] ?? '', ['guide', 'post'], true) ? 'article' : 'website');
     $robots = $o['robots'] ?? 'index,follow,max-image-preview:large';
     $crumbs = $o['breadcrumbs'] ?? null;
     $schema = $o['schema'] ?? [];
 
-    // Guides get Article schema automatically.
-    if (($ROUTE['type'] ?? '') === 'guide') {
+    // Guides and blog posts get Article schema automatically.
+    if (in_array($ROUTE['type'] ?? '', ['guide', 'post'], true)) {
         $schema[] = [
             '@context' => 'https://schema.org', '@type' => 'Article',
             'headline' => $ROUTE['nav'] ?? $title, 'description' => $desc,
@@ -133,9 +133,10 @@ function page_start(array $o = []): void {
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f5f66">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/icon-32.png">
-<link rel="apple-touch-icon" href="/assets/img/icon-180.png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -218,9 +219,9 @@ function site_footer(): void {
     </div>
     <div><h2 class="footer-h">House Plans</h2><ul><li><a href="/tiny-house-plans/">All Tiny House Plans</a></li><?php $col('style'); ?></ul></div>
     <div><h2 class="footer-h">Free Tools</h2><ul><?php $col('tool'); ?></ul></div>
-    <div><h2 class="footer-h">Guides</h2><ul><?php $col('guide'); ?></ul></div>
+    <div><h2 class="footer-h">Guides</h2><ul><?php $col('guide'); ?><li><a href="/blog/"><strong>All blog posts</strong></a></li></ul></div>
     <div><h2 class="footer-h">Company</h2><ul>
-      <li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/write-for-us/">Write for Us</a></li>
+      <li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li>
       <li><a href="/privacy-policy/">Privacy Policy</a></li><li><a href="/terms-conditions/">Terms &amp; Conditions</a></li><li><a href="/sitemap/">Sitemap</a></li>
     </ul></div>
   </div>

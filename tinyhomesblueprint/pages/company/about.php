@@ -50,7 +50,7 @@
 </section>
 <section class="section"><div class="narrow center">
   <h2>Talk to Tiny Homes Blueprint</h2>
-  <p>Call <a href="tel:<?= SITE_TEL ?>"><?= SITE_PHONE ?></a> or email <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a>. Want to contribute an article? See <a href="/write-for-us/">Write for Us</a>.</p>
+  <p>Call <a href="tel:<?= SITE_TEL ?>"><?= SITE_PHONE ?></a> or email <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a>.</p>
 </div></section>
 <?php cta_band(); ?>
 <?php page_end(); ?>
