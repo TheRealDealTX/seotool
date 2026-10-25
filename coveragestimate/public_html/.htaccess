@@ -1,0 +1,76 @@
+# Coverage Estimate static site (replaces WordPress). Keep URLs identical.
+Options -Indexes -MultiViews
+DirectoryIndex index.html index.php index.xml
+ErrorDocument 404 /404.html
+
+<FilesMatch "^index\.xml$">
+  ForceType "application/rss+xml; charset=UTF-8"
+</FilesMatch>
+<FilesMatch "\.(log|json|md|py|sh)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Flag any host other than the production domain as staging
+RewriteCond %{HTTP_HOST} !^coveragestimate\.com$ [NC]
+RewriteRule ^ - [E=CE_STAGING:1]
+
+# HTTPS and non-www, matching the WordPress site
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Private files and retired WordPress endpoints
+RewriteRule ^ce-private(/|$) - [R=404,L]
+RewriteCond %{REQUEST_URI} !^/wp-admin/admin-ajax\.php$
+RewriteRule ^(wp-login\.php|xmlrpc\.php|wp-cron\.php|wp-json(/.*)?|wp-admin(/.*)?)$ - [R=404,L]
+
+# Legacy WordPress query URLs (?p=, ?page_id=, ?cat=, ?s=, ?author=)
+RewriteCond %{QUERY_STRING} (^|&)(p|page_id|cat|s|author)=
+RewriteRule ^$ /ce-router.php [L]
+
+# Fixed redirects WordPress/Yoast performed
+RewriteRule ^home/?$ / [R=301,L]
+RewriteRule ^author/[^/]+/?$ / [R=301,L]
+RewriteRule ^(sitemap|wp-sitemap)\.xml$ /sitemap_index.xml [R=301,L]
+
+# Post/page comment feeds that no longer exist -> main feed
+RewriteCond %{DOCUMENT_ROOT}/$1/feed/index.xml !-f
+RewriteRule ^(.+)/feed/?$ /feed/ [R=301,L]
+
+# Add the trailing slash WordPress uses
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.xml -f
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Keep the temporary/staging domain out of search results (CE_STAGING set above)
+  Header set X-Robots-Tag "noindex, nofollow" env=CE_STAGING
+  Header set X-Robots-Tag "noindex, nofollow" env=REDIRECT_CE_STAGING
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 6 months"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/rss+xml application/javascript text/javascript application/json image/svg+xml
+</IfModule>

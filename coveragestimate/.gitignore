@@ -1,0 +1,8 @@
+# Secrets and generated scratch
+public_html/ce-private/mail-config.php
+server/ce-private/mail-config.php
+public_html/ce-private/*.log
+out/
+cmp/
+*.zip
+upload*.sh
