@@ -83,7 +83,7 @@
       case 'table':
         return '<circle cx="-0.35" cy="1.2" r="0.3" ' + s + '/><circle cx="-0.35" cy="2.8" r="0.3" ' + s + '/><circle cx="' + (bw + 0.35) + '" cy="1.2" r="0.3" ' + s + '/><circle cx="' + (bw + 0.35) + '" cy="2.8" r="0.3" ' + s + '/>';
       case 'counter':
-        return '<rect x="2.6" y="0.35" width="1.6" height="1.2" rx="0.15" ' + s + '/><circle cx="5.9" cy="0.65" r="0.3" ' + s + '/><circle cx="6.9" cy="0.65" r="0.3" ' + s + '/><circle cx="5.9" cy="1.4" r="0.3" ' + s + '/><circle cx="6.9" cy="1.4" r="0.3" ' + s + '/>';
+        return '<rect x="0.35" y="0.35" width="1.6" height="1.2" rx="0.15" ' + s + '/><circle cx="5.9" cy="0.65" r="0.3" ' + s + '/><circle cx="6.9" cy="0.65" r="0.3" ' + s + '/><circle cx="5.9" cy="1.4" r="0.3" ' + s + '/><circle cx="6.9" cy="1.4" r="0.3" ' + s + '/>';
       case 'range':
         return '<circle cx="0.75" cy="0.6" r="0.3" ' + s + '/><circle cx="1.75" cy="0.6" r="0.3" ' + s + '/><circle cx="0.75" cy="1.4" r="0.3" ' + s + '/><circle cx="1.75" cy="1.4" r="0.3" ' + s + '/>';
       case 'sink':
@@ -133,7 +133,7 @@
     if (kind !== 'wall' && kind !== 'window' && kind !== 'door') {
       var fs = Math.max(0.32, Math.min(0.5, Math.min(d.w, d.h) * 0.24));
       var label = c[0].length * fs * 0.56 < d.w - 0.3 ? c[0] : c[1];
-      body += '<text x="' + d.w / 2 + '" y="' + d.h / 2 + '" font-size="' + fs + '" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" pointer-events="none">' + esc(label) + '</text>';
+      body += '<text x="' + d.w / 2 + '" y="' + d.h / 2 + '" font-size="' + fs + '" font-family="Inter, Arial, sans-serif" font-weight="600" fill="#ffffff" text-anchor="middle" dominant-baseline="central" stroke="#0f4654" stroke-width="' + (fs * 0.28).toFixed(3) + '" stroke-linejoin="round" paint-order="stroke" pointer-events="none">' + esc(label) + '</text>';
     }
     if (bad[it.id]) body += '<rect width="' + d.w + '" height="' + d.h + '" fill="#ff5a4f" fill-opacity="0.42" stroke="#ff6b5f" stroke-width="0.08" pointer-events="none"/>';
     if (isSel) body += '<rect x="-0.12" y="-0.12" width="' + (d.w + 0.24) + '" height="' + (d.h + 0.24) + '" fill="none" stroke="#f2c58d" stroke-width="0.09" stroke-dasharray="0.3 0.18" pointer-events="none"/>';

@@ -11,7 +11,7 @@ $plans = plans_for_style('small-cabin-plans');
     <p class="lead">Small cabin plans for weekend retreats, hunting camps and full-time living. Here is how to size a cabin, what it costs to build in 2026, which foundation to use and the cabin blueprints Tiny Homes Blueprint has ready to build.</p>
     <ul class="hero-facts">
       <li>Typical size: 200&ndash;800 sq ft</li>
-      <li>Build cost: ~$150&ndash;$350 / sq ft</li>
+      <li>Build cost: ~$150&ndash;$500 / sq ft</li>
       <li>Foundation: piers, slab or crawlspace</li>
     </ul>
   </div>
@@ -74,13 +74,13 @@ $plans = plans_for_style('small-cabin-plans');
       <p>Not sure which band fits? The <a href="/tools/how-big-should-my-tiny-house-be/">tiny house size calculator</a> works it out from the number of people, how often you are there and how much you need to store. If you want extra sleeping space without a bigger footprint, look at <a href="/tiny-house-plans-with-loft/">plans with a loft</a>, or an <a href="/a-frame-house-plans/">A-frame cabin</a> for a steep roof that sheds snow.</p>
 
       <h2 id="cost">How much does a small cabin cost to build?</h2>
-      <p>For a finished, insulated cabin with plumbing and electrical, budget roughly <strong>$150 to $250 per square foot</strong> if you act as your own general contractor and <strong>$250 to $350 per square foot</strong> with a builder. Remote sites add cost for material delivery, crew travel and utilities.</p>
+      <p>For a finished, insulated cabin with plumbing and electrical, budget roughly <strong>$150 to $330 per square foot</strong> if you act as your own general contractor and <strong>$250 to $500 per square foot</strong> with a builder, depending mostly on finish level. Remote sites add cost for material delivery, crew travel and utilities.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Cabin</th><th class="num">Owner-built</th><th class="num">Builder</th></tr></thead>
         <tbody>
-          <tr><td>16 x 24 (384 sq ft)</td><td class="num">$58k &ndash; $96k</td><td class="num">$96k &ndash; $134k</td></tr>
-          <tr><td>20 x 30 (600 sq ft)</td><td class="num">$90k &ndash; $150k</td><td class="num">$150k &ndash; $210k</td></tr>
-          <tr><td>20 x 38 (700 sq ft)</td><td class="num">$105k &ndash; $175k</td><td class="num">$175k &ndash; $245k</td></tr>
+          <tr><td>16 x 24 (384 sq ft)</td><td class="num">$58k &ndash; $127k</td><td class="num">$96k &ndash; $192k</td></tr>
+          <tr><td>20 x 30 (600 sq ft)</td><td class="num">$90k &ndash; $198k</td><td class="num">$150k &ndash; $300k</td></tr>
+          <tr><td>20 x 38 (700 sq ft)</td><td class="num">$105k &ndash; $231k</td><td class="num">$175k &ndash; $350k</td></tr>
         </tbody>
       </table></div>
       <p>Add the site work: a well typically runs $5,000&ndash;$15,000+, a septic system $8,000&ndash;$20,000+, and a power drop or off-grid solar anywhere from a few thousand to $30,000. Plug your own numbers into the <a href="/tools/tiny-house-cost-calculator/">tiny house cost calculator</a>, and if you are going off-grid, size the system with the <a href="/tools/off-grid-solar-calculator/">off-grid solar calculator</a>.</p>
@@ -101,7 +101,7 @@ $plans = plans_for_style('small-cabin-plans');
 
       <?php faq_block([
           ['What is the best size for a small cabin?', '<p>For one or two people who visit on weekends, 16 x 24 ft (384 sq ft) is a sweet spot: room for a great room, bedroom and bath without a big budget. For full-time living, most people are happier at 500 to 700 sq ft.</p>'],
-          ['How much does it cost to build a 16 x 24 cabin?', '<p>A finished 16 x 24 cabin with plumbing and electrical usually costs about $58,000 to $96,000 owner-built and $96,000 to $134,000 with a builder, before land, well and septic.</p>'],
+          ['How much does it cost to build a 16 x 24 cabin?', '<p>A finished 16 x 24 cabin with plumbing and electrical usually costs about $58,000 to $127,000 owner-built and $96,000 to $192,000 with a builder, depending on finishes, before land, well and septic.</p>'],
           ['Can I build a small cabin myself?', '<p>Yes. Small cabins are one of the most common owner-builder projects because the framing is simple. Most people hire licensed trades for electrical, plumbing and septic, which many jurisdictions require anyway. See <a href="/blog/how-to-build-a-tiny-house/">how to build a tiny house</a> for the step-by-step process.</p>'],
           ['Do I need a permit for a small cabin?', '<p>Almost always, if it has plumbing, electrical or will be lived in. Some areas exempt small unheated sheds under about 120 to 200 sq ft, but a habitable cabin needs a building permit in most of the US.</p>'],
       ]); ?>
