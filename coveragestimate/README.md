@@ -54,7 +54,8 @@ nothing if requested directly.
 - HTTPS and non-www, like WordPress.
 - Trailing-slash redirects (`/about-us` → `/about-us/`).
 - Legacy WordPress links: `/?p=117`, `/?page_id=14`, `/?cat=7` → 301 to the real URL; `/?s=` → `/blog/`.
-- `/home/`, `/author/*` → `/`; `/sitemap.xml`, `/wp-sitemap.xml` → `/sitemap_index.xml`.
+- `/home/`, `/author/*` → `/`.
+- `/sitemap.xml` is a plain XML sitemap (no XSL). The old Yoast sitemap URLs (`/sitemap_index.xml`, `/post-sitemap.xml`, `/page-sitemap.xml`, `/category-sitemap.xml`, `/wp-sitemap.xml`) 301 to it.
 - `/feed/`, `/comments/feed/`, `/category/tools/feed/` served from `ce-feeds/` as RSS.
 - `wp-login.php`, `xmlrpc.php`, `wp-json`, `wp-admin/*` (except `admin-ajax.php`) → 404.
 - Any host other than `coveragestimate.com` gets `X-Robots-Tag: noindex, nofollow` (staging safety).

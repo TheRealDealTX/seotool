@@ -34,7 +34,7 @@ RewriteRule ^$ /ce-router.php [L]
 # Fixed redirects WordPress/Yoast performed
 RewriteRule ^home/?$ / [R=301,L]
 RewriteRule ^author/[^/]+/?$ / [R=301,L]
-RewriteRule ^(sitemap|wp-sitemap)\.xml$ /sitemap_index.xml [R=301,L]
+RewriteRule ^(sitemap_index|wp-sitemap|post-sitemap|page-sitemap|category-sitemap)\.xml$ /sitemap.xml [R=301,L]
 
 # Feeds and anything else that is not a real file are handled by index.php
 # Add the trailing slash WordPress uses

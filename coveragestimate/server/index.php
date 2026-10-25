@@ -59,8 +59,8 @@ if (strpos($path, '..') !== false) {
 if (preg_match('#^/home/?$#', $path) || preg_match('#^/author/[^/]+/?$#', $path)) {
     ce_redirect('/');
 }
-if (preg_match('#^/(sitemap|wp-sitemap)\.xml$#', $path)) {
-    ce_redirect('/sitemap_index.xml');
+if (preg_match('#^/(sitemap_index|wp-sitemap|post-sitemap|page-sitemap|category-sitemap)\.xml$#', $path)) {
+    ce_redirect('/sitemap.xml');
 }
 
 // Retired WordPress endpoints and private files
