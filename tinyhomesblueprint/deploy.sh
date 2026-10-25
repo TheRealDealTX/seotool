@@ -29,7 +29,7 @@ while IFS= read -r f; do
         --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 done < <(find . \( -path './backup-wordpress' -o -name 'README.md' -o -name 'deploy.sh' -o -name 'validate.php' -o -name 'dev-router.php' -o -name '.gitignore' \
-            -o -path './index.php' -o -path './.htaccess' \) -prune -o -type f -print | sort; echo ./index.php; echo ./.htaccess)
-# index.php and .htaccess go last so the live site switches over only once every page is in place.
+            -o -path './index.php' -o -path './.htaccess' \) -prune -o -type f -print | sort; [ -z "${THB_NO_SWITCH:-}" ] && { echo ./index.php; echo ./.htaccess; })
+# index.php and .htaccess go last (THB_NO_SWITCH=1 skips them, to stage files without going live) so the live site switches over only once every page is in place.
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]
