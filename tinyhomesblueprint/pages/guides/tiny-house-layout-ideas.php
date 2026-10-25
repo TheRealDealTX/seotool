@@ -50,10 +50,9 @@ page_start([
 
       <figure class="diagram">
         <svg viewBox="0 0 540 240" role="img" aria-label="Floor plan of an 8.5 by 24 foot tiny house on wheels with living room at one end, a galley kitchen in the middle with counters on both walls, and a bathroom at the far end sharing a wet wall with the kitchen. A sleeping loft sits above the living room.">
-          <g fill="none" stroke="#e8f2f2" stroke-width="2.5"><rect x="30" y="30" width="480" height="170"/><path d="M370 30v70M370 130v70"/></g>
+          <g fill="none" stroke="#e8f2f2" stroke-width="2.5"><rect x="30" y="30" width="480" height="170"/></g>
           <g fill="none" stroke="#e8f2f2" stroke-width="1.5"><rect x="210" y="32" width="158" height="36"/><rect x="210" y="162" width="158" height="36"/><circle cx="348" cy="50" r="10"/><rect x="230" y="38" width="30" height="24"/></g>
-          <path d="M370 100v30" stroke="#f2c58d" stroke-width="2.5"/>
-          <path d="M370 32v168" stroke="#f2c58d" stroke-width="1.5" stroke-dasharray="6 4"/>
+          <path d="M370 31v69M370 130v69" stroke="#f2c58d" stroke-width="4"/>
           <rect x="34" y="34" width="172" height="162" fill="none" stroke="#f2c58d" stroke-width="1.2" stroke-dasharray="4 4"/>
           <g fill="#cfe3e3" font-family="Inter,sans-serif" font-size="12" text-anchor="middle">
             <text x="120" y="108">LIVING</text><text x="120" y="126" font-size="10" fill="#f2c58d">loft above</text>
