@@ -82,7 +82,7 @@ page_start([
             <rect x="278" y="114" width="78" height="20" rx="4"/>
             <rect x="326" y="152" width="119" height="20" rx="4"/>
             <rect x="312" y="190" width="168" height="20" rx="4"/>
-            <rect x="476" y="190" width="54" height="20" rx="4" fill-opacity=".4"/>
+            <rect x="476" y="191" width="54" height="18" rx="4" fill="none" stroke="#f2c58d" stroke-width="1.5" stroke-dasharray="4 3"/>
           </g>
           <g fill="#cfe3e3" font-family="Inter,sans-serif" font-size="12">
             <g text-anchor="end">
@@ -96,7 +96,7 @@ page_start([
             <text x="370" y="262" text-anchor="middle" font-size="11">Typical cost of the house, before land and utility service</text>
           </g>
         </svg>
-        <figcaption>Typical tiny house cost ranges by build path. The faded bar continues past $200k for large, high-end foundation builds.</figcaption>
+        <figcaption>Typical tiny house cost ranges by build path. The dashed end shows that large, high-end foundation builds can run past $200k.</figcaption>
       </figure>
 
       <h2 id="per-sqft">Tiny house cost per square foot and by size</h2>

@@ -68,8 +68,11 @@ page_start([
         <svg viewBox="0 0 600 340" role="img" aria-label="Flowchart: a tiny house on wheels is treated as an RV or park model, so zoning must allow living in an RV, typically in an RV park, tiny house community or approved lot. A tiny house on a foundation follows the residential building code, then zoning decides whether it can be a primary home or an ADU, subject to minimum size, setbacks, utilities and permits.">
           <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10z" fill="#e8f2f2"/></marker></defs>
           <g fill="none" stroke="#e8f2f2" stroke-width="1.5">
-            <path d="M300 56v14H160v16M300 70h140v16" marker-end="url(#ar)"/>
-            <path d="M160 124v24M440 124v24M160 194v20M440 194v20M160 260v20M440 260v20" marker-end="url(#ar)"/>
+            <path d="M300 56v14"/>
+            <path d="M300 70H160v16" marker-end="url(#ar)"/><path d="M300 70h140v16" marker-end="url(#ar)"/>
+            <path d="M160 124v24" marker-end="url(#ar)"/><path d="M440 124v24" marker-end="url(#ar)"/>
+            <path d="M160 194v20" marker-end="url(#ar)"/><path d="M440 194v20" marker-end="url(#ar)"/>
+            <path d="M160 260v20" marker-end="url(#ar)"/><path d="M440 260v20" marker-end="url(#ar)"/>
           </g>
           <g fill="none" stroke="#e8f2f2" stroke-width="2">
             <rect x="210" y="20" width="180" height="36" rx="6"/>

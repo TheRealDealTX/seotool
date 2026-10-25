@@ -42,7 +42,7 @@ $prices = array_map(fn($p) => $p['price'], $PLANS);
         <li><a href="#full-set">What a full blueprint set includes</a></li>
         <li><a href="#cost">Cost of plans vs total build</a></li>
         <li><a href="#evaluate">How to evaluate any plan set</a></li>
-        <li><a href="#our-plans">Tiny Homes Blueprint plans</a></li>
+        <li><a href="#our-plans">Our plan sets</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ol></nav>
 
@@ -164,10 +164,10 @@ $prices = array_map(fn($p) => $p['price'], $PLANS);
       <?php faq_block([
           ['Can I build a tiny house from free plans?', '<p>You can, especially if you have framing experience, but most free tiny house plans leave out framing details, structural information and systems layouts. Expect to fill those gaps yourself or hire a designer, and expect a building department to ask for more than a floor plan on a foundation home.</p>'],
           ['Will free tiny house plans pass a permit review?', '<p>Usually not as-is. Permit reviewers typically want dimensioned plans, building sections, framing and structural details, and sometimes engineering. Requirements vary, so ask your building department what they need to see.</p>'],
-          ['How much do tiny house plans cost?', '<p>Complete tiny house plan sets commonly cost from a few hundred to a couple of thousand dollars, depending on size and detail. Tiny Homes Blueprint plans are $' . number_format(min($prices)) . ' and $' . number_format(max($prices)) . ', around 1% of a typical build.</p>'],
+          ['How much do tiny house plans cost?', '<p>Complete tiny house plan sets commonly cost from a few hundred to a couple of thousand dollars, depending on size and detail. Our plans are $' . number_format(min($prices)) . ' and $' . number_format(max($prices)) . ', around 1% of a typical build.</p>'],
           ['What should a tiny house plan set include?', '<p>At minimum: a dimensioned floor plan, exterior elevations, building sections, wall, floor and roof framing information, and window and door sizes. An editable CAD file and a materials list or enough detail for a takeoff are big pluses.</p>'],
           ['Are free plans fine for a shed or bunkie?', '<p>Yes. For small, simple structures without plumbing, free plans are often all you need, and building one is a great way to learn before tackling a full tiny house. See <a href="/blog/how-to-build-a-tiny-house/">how to build a tiny house</a> for the bigger project.</p>'],
-          ['Can I modify a tiny house plan?', '<p>Yes, and an editable CAD file makes it much easier. Tiny Homes Blueprint can flip a layout, resize rooms or adapt a plan for your site. <a href="/contact/">Ask about modifications</a>.</p>'],
+          ['Can I modify a tiny house plan?', '<p>Yes, and an editable CAD file makes it much easier. We can flip a layout, resize rooms or adapt a plan for your site. <a href="/contact/">Ask about modifications</a>.</p>'],
       ]); ?>
     </div>
     <aside class="article-aside">
