@@ -8,6 +8,7 @@ share one layout, one stylesheet and one script.
   document root `/home/u401386392/domains/monetizinginfluencers.com/public_html`
 - **Search Console:** verified by `google9d8d740410b54935.html` (kept in the web root)
 - **Contact email used by forms:** info@monetizinginfluencers.com
+- **Deployed:** 2026-10-25 (78 files, server cache cleared).
 - **Google Analytics:** not set up. Put the GA4 ID in `GA_ID` in `public/inc/layout.php`.
 
 ## Layout
@@ -66,6 +67,8 @@ BreadcrumbList, FAQPage, BlogPosting, WebApplication where relevant).
 
 ## Hosting notes
 
+- **Needs PHP 8.0+** (uses `str_starts_with`, `fn` arrows). The site was on PHP 7.4 under WordPress and was
+  switched to **PHP 8.3** on 2026-10-25 (`hosting_php_update-version`). On 7.4, pages die mid-render with no visible error.
 - LiteSpeed honours `.htaccess`. Directory URLs (`/monetization/`) are real folders with an `index.php`.
 - The WordPress files and database are still on the server, unreachable. See
   `backup/wordpress-2026-10-25/README.md` to roll back, or delete them once the new site has settled.
