@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /inc/
+Disallow: /pages/
+
+Sitemap: https://tinyhomesblueprint.com/sitemap.xml
