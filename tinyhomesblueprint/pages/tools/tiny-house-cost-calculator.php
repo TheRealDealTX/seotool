@@ -147,7 +147,7 @@ page_start([
 <section class="section tool-prose">
   <div class="narrow prose">
     <h2>How much does a tiny house cost?</h2>
-    <p>Most finished tiny houses cost between about <strong>$40,000 and $150,000</strong>, and the spread comes down to three decisions: how big the house is, who does the labor and how nice the finishes are. A 200 sq ft tiny house on wheels built by its owner with basic finishes can come in around $45,000 to $60,000 all in, while a 400 sq ft builder-made home with high-end finishes on a foundation can pass $200,000 before land. This calculator from Tiny Homes Blueprint turns those decisions into a budget you can actually plan around.</p>
+    <p>Most finished tiny houses cost between about <strong>$40,000 and $150,000</strong>, and the spread comes down to three decisions: how big the house is, who does the labor and how nice the finishes are. A 200 sq ft tiny house on wheels built by its owner with basic finishes comes in around $50,000 to $78,000 all in, while a 400 sq ft builder-made home with high-end finishes on a foundation can pass $200,000 before land. This calculator from Tiny Homes Blueprint turns those decisions into a budget you can actually plan around.</p>
 
     <h2>How the calculator works</h2>
     <p>The core of the estimate is a cost per square foot for the structure and finishes, picked from your labor and finish choices. It is multiplied by your floor area and split into nine trade line items. Costs that do not scale neatly with size, like the trailer, foundation, utilities and permits, are added as separate items so you can see their effect on the total cost to build a tiny house.</p>
@@ -175,6 +175,20 @@ page_start([
         <tr><td>Sleeping loft</td><td class="num">+10%</td><td>Of structure cost, for framing, decking and access</td></tr>
       </tbody>
     </table></div>
+
+    <h3>Example budgets from the calculator</h3>
+    <p>Here is what the calculator returns for five common builds, so you can see how the choices stack up. Each includes the loft, appliances, permits and delivery settings that suit that build, but no land.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Build</th><th class="num">Estimated total</th><th class="num">Per sq ft</th></tr></thead>
+      <tbody>
+        <tr><td>200 sq ft on wheels, basic finishes, DIY, grid hookup</td><td class="num">$49,000 &ndash; $78,000</td><td class="num">$243 &ndash; $392</td></tr>
+        <tr><td>250 sq ft on wheels, mid-range, DIY + trades, off-grid solar</td><td class="num">$94,000 &ndash; $142,000</td><td class="num">$377 &ndash; $569</td></tr>
+        <tr><td>300 sq ft builder-made shell on a trailer, with loft</td><td class="num">$55,000 &ndash; $85,000</td><td class="num">$182 &ndash; $282</td></tr>
+        <tr><td>400 sq ft on piers, mid-range, builder, grid hookup</td><td class="num">$140,000 &ndash; $209,000</td><td class="num">$351 &ndash; $522</td></tr>
+        <tr><td>700 sq ft on a slab, mid-range, DIY + trades, grid hookup</td><td class="num">$200,000 &ndash; $292,000</td><td class="num">$285 &ndash; $417</td></tr>
+      </tbody>
+    </table></div>
+    <p>Notice that cost per square foot falls as the house gets bigger. The trailer or foundation, utility hookups and permits cost much the same for a small house as a larger one, so they weigh more heavily on a small build.</p>
 
     <h2>How to use your estimate</h2>
     <ol>

@@ -109,6 +109,15 @@ $presets = ['8.5x20' => '8.5 x 20 ft trailer', '8.5x24' => '8.5 x 24 ft trailer'
       </tbody>
     </table></div>
 
+    <h2>Common tiny house layouts to try</h2>
+    <p>Load the sample layout to see the most common arrangement, then try these variations to see which suits the way you live:</p>
+    <ul>
+      <li><strong>Bath at one end, living at the other.</strong> The classic layout for an 8.5 x 24 ft trailer: bathroom and laundry across one end, a galley kitchen along one long wall, and a sofa and storage stairs at the far end under the loft.</li>
+      <li><strong>Kitchen in the middle, two lofts.</strong> On 28 ft and longer trailers, a central kitchen with lofts over both ends gives a couple or a family two separate sleeping areas.</li>
+      <li><strong>Main-floor bedroom.</strong> For anyone who would rather not climb, a 12 x 24 ft or wider footprint fits a queen bed on the main floor with a walkway beside it. Try it with the 12 x 24 ft preset.</li>
+      <li><strong>Flex room.</strong> On a larger footprint like 20 x 38 ft, a room that switches between dining, office and guest room earns its space. Our 700 sq ft plans use a retractable wall for exactly this.</li>
+    </ul>
+
     <h2>Tiny house layout tips</h2>
     <ul class="check-list">
       <li><strong>Keep a clear path.</strong> Aim for at least 30&ndash;36 in of walkway through the house. On an 8.5 ft trailer that means furniture on one side is limited to about 5 ft deep.</li>
@@ -144,5 +153,5 @@ $presets = ['8.5x20' => '8.5 x 20 ft trailer', '8.5x24' => '8.5 x 24 ft trailer'
   </div>
 </section>
 
-<?php cta_band('Turn your sketch into a real plan', 'Send Tiny Homes Blueprint your layout and we can suggest a plan that fits, or quote a modification or custom design.', 'Send us your layout', '/contact/'); ?>
+<?php cta_band('Turn your sketch into a real plan', 'Send us your layout and we can suggest a plan that fits, or quote a modification or custom design.', 'Send us your layout', '/contact/'); ?>
 <?php page_end(['scripts' => ['/assets/js/tools/layout-planner.js']]); ?>
