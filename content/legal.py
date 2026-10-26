@@ -66,7 +66,7 @@ TERMS = {
 </ul>
 <h2>Payment, Cancellation and Refunds</h2>
 <ul>
-<li>Payment terms are confirmed with your quote. Custom work that has already been started is not refundable.</li>
+<li>Payment terms are confirmed with your quote. Custom work that has already been started is not refundable. See the <a href="/return-policy/">Return &amp; Refund Policy</a> for cancellations, damaged or incorrect orders and refunds.</li>
 <li>If you need to cancel before painting begins, let us know as soon as possible.</li>
 </ul>
 <h2>Artwork and Copyright</h2>
@@ -85,5 +85,62 @@ TERMS = {
 <p><strong>Christina Dittman Creations</strong><br>
 <a href="mailto:{BIZ['email']}">{BIZ['email']}</a><br>
 <a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a></p>
+""",
+}
+
+
+RETURNS = {
+    "path": "/return-policy/",
+    "title": "Return & Refund Policy | Christina Dittman Creations",
+    "description": "Return and refund policy for custom hand-painted banners from Christina Dittman Creations (Belton Banners), Belton, TX: cancellations, damaged or incorrect orders, refunds and how to contact us.",
+    "h1": "Return & Refund Policy",
+    "effective": "Effective Date: October 2026",
+    "body": f"""
+<p>Every banner from Christina Dittman Creations is custom-made to order: it is sketched for your approval and then painted by hand for your event, your wording and your colors. Because of that, our policy is built around getting the banner right before and during painting rather than returning it afterward. This page explains exactly what we do if something goes wrong.</p>
+
+<h2>Summary</h2>
+<ul>
+<li><strong>Custom banners are final sale</strong> once painting has started, because they cannot be resold.</li>
+<li><strong>Cancel before painting starts for a full refund</strong> of anything paid.</li>
+<li><strong>Damaged, defective or incorrect banners are made right</strong> - repaired, repainted or refunded - when you contact us within <strong>7 days</strong> of receiving the banner.</li>
+<li><strong>Refunds go back to the original payment method</strong> within 5-10 business days of approval.</li>
+<li>You never pay return shipping for a problem that is our fault.</li>
+</ul>
+
+<h2>Custom, made-to-order items</h2>
+<p>All banners sold on this site are personalized products, painted to your specifications. In line with standard practice for custom goods, they cannot be returned or exchanged for reasons such as a change of mind, a change of event plans, or wording and colors that were approved in the sketch. Minor variations in lettering, brushwork and color are part of hand-painted work and are not defects.</p>
+
+<h2>Cancellations</h2>
+<ul>
+<li><strong>Before painting starts:</strong> cancel at any time for a full refund of any payment made. Tell us by phone, text or email and the refund is issued to your original payment method.</li>
+<li><strong>After painting starts:</strong> the order is no longer refundable, because the materials and time have been committed to a banner only you can use. If your event is postponed, let us know - we will hold the finished banner for you or adjust a date that has not yet been painted where possible.</li>
+</ul>
+
+<h2>Damaged, defective or incorrect orders</h2>
+<p>If your banner arrives damaged, has a defect, or does not match the sketch you approved (for example a misspelled name or the wrong size), contact us within <strong>7 days of receiving it</strong> with a photo of the issue. We will offer one of the following at no cost to you, depending on what is practical before your event:</p>
+<ul>
+<li>a repair or touch-up,</li>
+<li>a repainted replacement banner, or</li>
+<li>a full refund to the original payment method.</li>
+</ul>
+<p>If a damaged or incorrect banner needs to come back to us, we arrange and pay for the return. Please keep the banner rolled (never folded) until we have talked it through.</p>
+
+<h2>Refunds</h2>
+<ul>
+<li>Approved refunds are issued to the original payment method within <strong>5-10 business days</strong>. Your bank or card issuer may take a few extra days to show the credit.</li>
+<li>Refunds cover the banner price and any delivery charge you paid for a banner that was damaged, defective or incorrect.</li>
+<li>We do not charge restocking fees.</li>
+</ul>
+
+<h2>Delivery, pickup and shipping</h2>
+<p>Banners are normally picked up in Belton, Texas or delivered locally by arrangement. When a banner is shipped, it is rolled in a tube and insured; if the carrier damages it, report it to us within 7 days of delivery and we will handle the claim and the replacement. Delivery charges are refunded only when the order itself is refunded under this policy.</p>
+
+<h2>How to start a return, refund or cancellation</h2>
+<p>Contact us with your name, the event date and, for a problem with a finished banner, a photo:</p>
+<p><strong>Christina Dittman Creations</strong><br>
+Email: <a href="mailto:{BIZ['email']}">{BIZ['email']}</a><br>
+Call or text: <a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a><br>
+Belton, Texas</p>
+<p>We reply within one business day. This policy applies to orders placed through beltonbanners.com or arranged directly with the studio, and it is part of our <a href="/terms-of-use/">Terms of Use</a>.</p>
 """,
 }

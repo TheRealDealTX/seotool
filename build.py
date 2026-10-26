@@ -18,7 +18,7 @@ from siteconfig import BIZ, NEARBY, FOOTER_SERVING, NAV, SIZES, TODAY
 from content.creations import CREATIONS, CATEGORIES, CATEGORY_LABEL, BY_SLUG as CREATION
 from content.occasions import OCCASIONS
 from content.blog import POSTS
-from content.legal import PRIVACY, TERMS
+from content.legal import PRIVACY, TERMS, RETURNS
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = ROOT
@@ -203,7 +203,7 @@ def footer():
 </div>
 <div class="footer-bottom">
 <span>&copy; Copyright {date.today().year} {BIZ['name']}. All Rights Reserved. {KW} &middot; {BIZ['city']}, {BIZ['state']}.</span>
-<span class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a href="/sitemap/">Sitemap</a></span>
+<span class="footer-legal"><a href="/privacy-policy/">Privacy Policy</a><a href="/terms-of-use/">Terms of Use</a><a href="/return-policy/">Return Policy</a><a href="/sitemap/">Sitemap</a></span>
 </div>
 </div></footer>
 <a class="mobile-call" href="tel:{TEL}">Get a Banner Quote: {P}</a>
@@ -1284,7 +1284,7 @@ def build_posts():
 
 
 def build_legal():
-    for item in (PRIVACY, TERMS):
+    for item in (PRIVACY, TERMS, RETURNS):
         page = {"path": item["path"], "title": item["title"], "description": item["description"], "h1": item["h1"]}
         trail = [("Home", "/"), (item["h1"], None)]
         page["schema"] = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail)]
@@ -1321,7 +1321,7 @@ def build_sitemap_page():
     }
     page["schema"] = [org_schema(), website_schema(), webpage_schema(page)]
     groups = [
-        ("Main pages", [("Home", "/"), (f"About {BIZ['name']}", "/about-christina-dittman-creations/"), ("Gallery", "/gallery/"), ("How It Works", "/how-it-works/"), ("Pricing & Sizes", "/pricing-and-sizes/"), ("Design Your Banner", "/design-your-banner/"), (f"{KW} in Belton, TX", "/belton-banners/"), ("FAQ", "/faq/"), ("Contact Us", "/contact-us/"), ("Privacy Policy", "/privacy-policy/"), ("Terms of Use", "/terms-of-use/")]),
+        ("Main pages", [("Home", "/"), (f"About {BIZ['name']}", "/about-christina-dittman-creations/"), ("Gallery", "/gallery/"), ("How It Works", "/how-it-works/"), ("Pricing & Sizes", "/pricing-and-sizes/"), ("Design Your Banner", "/design-your-banner/"), (f"{KW} in Belton, TX", "/belton-banners/"), ("FAQ", "/faq/"), ("Contact Us", "/contact-us/"), ("Privacy Policy", "/privacy-policy/"), ("Terms of Use", "/terms-of-use/"), ("Return & Refund Policy", "/return-policy/")]),
         ("Custom banners", [("All custom banners", "/custom-banners/")] + [(o["label"], f"/custom-banners/{o['slug']}/") for o in OCCASIONS]),
         ("Hand painted banners (gallery)", [(c["title"], f"/creation/{c['slug']}/") for c in CREATIONS]),
         ("Blog", [("All articles", "/blog/"), ("Category: General", "/category/general/")] + [(p["title"], f"/{p['slug']}/") for p in POSTS]),
