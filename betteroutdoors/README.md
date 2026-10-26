@@ -40,6 +40,9 @@ Internal PHP files exit immediately unless loaded through `index.php`.
 Non-production hosts (the `*.hostingersite.com` preview) send `X-Robots-Tag: noindex`;
 on betteroutdoors.net, `index.php` also forces https and strips `www`.
 
+Website UID `yBoxhCPNC` (order 1008744732, Boston DC, PHP 8.3), preview host
+olive-badger-748849.hostingersite.com. Deployed 2026-10-26.
+
 Deploy with `./deploy.sh` (see header comment), then clear the site cache.
 
 ## Adding a post
