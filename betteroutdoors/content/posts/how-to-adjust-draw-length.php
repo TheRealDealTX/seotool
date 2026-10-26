@@ -33,7 +33,7 @@
   <li>Your peep lines up with your eye at a natural head position</li>
   <li>You can hold steady on target for several seconds</li>
 </ul>
-<p>Too long, and you&rsquo;ll feel stretched, the string may slap your forearm and your shoulder creeps up. Too short, and your anchor floats, your posture collapses and you lose back tension.</p>
+<p>Too long feels stretched, with string slap and a raised shoulder. Too short feels cramped, with a floating anchor.</p>
 
 <h2 id="h-identify-your-cam-system">Identify Your Cam System First</h2>
 <p>This is the step most people skip, and it decides everything else. Look closely at your cams. You&rsquo;ll find a cam name or code stamped or printed on them, and usually small numbers or letters next to module holes. That cam name is what you&rsquo;ll look up on the manufacturer&rsquo;s chart.</p>
@@ -49,14 +49,14 @@
 ) ?>
 
 <h3 id="h-rotating-module-vs-module-swap">Rotating Module vs. Module Swap</h3>
-<p>The rotating module vs. module swap question comes up constantly. A <strong>rotating module</strong> is a single piece bolted to the cam with several holes. You remove a screw or two, rotate it to the position your chart lists, and reinstall. Beginner, youth and many hunting bows use this design because it gives a wide range and is often press-free.</p>
-<p>A <strong>module swap</strong> uses separate mods, each sized for a specific draw length (or a small range). You buy or borrow the correct mod, remove the old one and bolt in the new one. Swappable mods are common on flagship and target-oriented bows because a dedicated mod can be optimized for one draw length. The trade-off: you need the right part, and the swap often requires a press.</p>
+<p>The rotating module vs. module swap question comes up constantly. A <strong>rotating module</strong> is a single piece bolted to the cam with several holes. You remove a screw or two, rotate it to the position your chart lists, and reinstall. Beginner, youth and many hunting bows use this wide-range, often press-free design.</p>
+<p>A <strong>module swap</strong> uses separate mods, each sized for a specific draw length (or a small range). You buy or borrow the correct mod, remove the old one and bolt in the new one. Swappable mods are common on flagship bows because a dedicated mod can be optimized for one length. The trade-off: you need the right part, and often a press.</p>
 
 <h3 id="h-cam-specific-draw-lengths">Cam-Specific Draw Lengths</h3>
 <p>Some bows, especially older single-cam designs and certain performance cams, have a draw length that is built into the cam itself. If there is no module, or the module only fine-tunes within a narrow window, a bigger change means ordering a new cam from a dealer. Give the dealer the bow model and serial number, because cams are model-specific.</p>
 
 <h3 id="h-brand-notes-mathews-bear-pse">Brand Notes: Mathews, Bear and PSE</h3>
-<p>Every brand does it a little differently, and systems change from model to model, so treat these as orientation rather than instructions:</p>
+<p>Systems change from model to model, so treat these as orientation, not instructions:</p>
 <ul>
   <li><strong>Mathews draw length mods:</strong> Mathews uses mods to set draw length, and depending on the model that can mean a rotating mod or a separate mod for each draw length. Because Mathews sells through dealers, your pro shop can confirm which mod your bow needs. Our guide to <?= post_link('understanding-mathews-compound-bow-packages', 'Mathews compound bow packages') ?> explains how that dealer setup works.</li>
   <li><strong>Bear draw length adjustment:</strong> Bear bows use module systems that vary by cam. Many hunting and RTH models are designed for owner adjustment, but check the owner&rsquo;s manual or Bear&rsquo;s support pages for the chart that matches the cam on your bow.</li>
@@ -67,15 +67,7 @@
 <h2 id="h-how-to-change-draw-length-on-a-compound-bow">How to Change Draw Length on a Compound Bow: Step by Step</h2>
 <p>Here is the general process for how to change draw length on a compound bow with a module system. Work slowly, and photograph everything before you touch it.</p>
 
-<h3 id="h-what-you-ll-need">What You&rsquo;ll Need</h3>
-<ul>
-  <li>Correct-size hex keys; a <?= amz('archery allen wrench set bow tool', 'dedicated archery hex key set') ?> helps prevent stripped screws</li>
-  <li>The manufacturer chart for your cam</li>
-  <li>A towel or padded work surface</li>
-  <li>A phone to photograph current settings</li>
-  <li>A bow press, if your system needs one</li>
-  <li>A draw weight scale to check the result</li>
-</ul>
+<p>You&rsquo;ll need the chart for your cam, a <?= amz('archery allen wrench set bow tool', 'dedicated archery hex key set') ?> (to avoid stripped screws), a phone for photos, a draw weight scale and, if your system needs one, a bow press.</p>
 
 <h3 id="h-step-1-record-your-current-settings">Step 1: Record Your Current Settings</h3>
 <p>Write down the current module position (and draw stop and string post position, if your cam has them) on every cam. Take close-up photos of both cams. If anything goes wrong, you can return to a known starting point.</p>
@@ -94,14 +86,14 @@
 <p>On dual-cam, hybrid and binary systems, set both cams to the same position. A mismatch throws off cam timing, which shows up as a lumpy draw cycle, a soft or uneven back wall and inconsistent arrow flight. Single-cam bows only have one module to move, but check the idler for any matching setting the manual lists.</p>
 
 <h3 id="h-step-6-tighten-and-test-draw">Step 6: Tighten and Test-Draw</h3>
-<p>Tighten screws snug, not cranked; aluminum threads strip easily. Use thread locker only if the manufacturer allows it. Draw the bow slowly several times, listening for clicks or creaks and watching that the string and cables track cleanly.</p>
+<p>Tighten screws snug, not cranked; aluminum threads strip easily. Draw the bow slowly several times, listening for clicks and watching that the string and cables track cleanly.</p>
 
 <h2 id="h-draw-stops-and-let-off">Draw Stops, Let-Off and Draw Length</h2>
 <p>Draw stops are small pegs or adjustable posts that set where the cam stops rotating. On many cams they are tied to draw length, and on some they also set let-off. That means a draw length change can quietly change how your back wall feels.</p>
 <ul>
   <li><strong>Draw stops tied to modules:</strong> Some modules carry the draw stop, so moving the module moves the stop. Others have a separate stop that must be moved to a matching position.</li>
   <li><strong>Adjustable let-off:</strong> Cams with let-off settings often use the draw stop position to control it. Moving the stop can change both let-off and the effective draw length slightly.</li>
-  <li><strong>Timing the stops:</strong> On dual-stop systems, both stops should hit the cables or limbs at the same moment at full draw. A pro shop can check this with a draw board.</li>
+  <li><strong>Timing the stops:</strong> On dual-stop systems, both stops should make contact at the same moment.</li>
 </ul>
 <p>Change one variable at a time: set draw length first, shoot it, then adjust let-off if you need to.</p>
 
@@ -140,7 +132,6 @@
   <li>The draw cycle feels rough, noisy or inconsistent</li>
   <li>You want your draw length verified on a draw board with a coach watching your form</li>
 </ul>
-<p>A good shop can measure your draw length, set the bow, re-time the cams, move the peep and paper tune in one visit.</p>
 
 <h2 id="h-common-mistakes">Common Mistakes When You Adjust Draw Length</h2>
 <ul>
@@ -150,7 +141,7 @@
   <li><strong>Leaving the peep where it was</strong> and craning your neck to find it</li>
   <li><strong>Guessing module positions</strong> instead of using the chart</li>
 </ul>
-<p>Shoot at least 30 arrows at a new setting before you decide. Compare groups at 20 yards and pay attention to how fast you can settle the pin.</p>
+<p>Shoot at least 30 arrows at a new setting and compare 20-yard groups before you decide.</p>
 
 <h2 id="h-final-thoughts">Final Thoughts on How to Adjust Draw Length</h2>
 <p>Learning how to adjust draw length comes down to three habits: measure honestly, follow the chart for your exact cam, and re-tune everything the change touches. Do that, and a quick module move turns into better posture, a steadier hold and tighter groups.</p>
@@ -164,5 +155,4 @@
     'Does adjusting draw length change draw weight?' => 'It can. Some cams change peak or holding weight when draw length changes. Check with a draw weight scale and adjust both limb bolts equally if needed.',
     'Where do I find a PSE draw length chart?' => 'PSE publishes a chart for each cam system on its website and in the owner&rsquo;s manual. Our PSE draw length adjustment guide explains how to read one.',
     'How much does draw length affect arrow speed?' => 'A common rule of thumb is about 10 fps per inch of draw length. Re-sight your pins after any change.',
-    'Can every compound bow change draw length?' => 'No. Some bows have cam-specific draw lengths, so a large change requires a new cam. Most modern hunting and beginner bows use modules that allow a range of adjustment.',
 ]) ?>

@@ -12,7 +12,7 @@
 
 <p class="lead">How heavy should my arrow be? It is one of the most common questions at any archery counter, and the honest answer is &ldquo;it depends on your bow and your game.&rdquo; Still, there are clear rules. A minimum keeps your bow safe, a usual range covers most hunting, and two numbers, kinetic energy and momentum, show what you gain or give up when you add weight.</p>
 
-<p>This Better Outdoors guide walks through grains per pound, arrow spine, FOC and the heavy-versus-light debate. By the end you will be able to pick an arrow weight for deer or elk and explain why you picked it.</p>
+<p>This Better Outdoors guide covers grains per pound, arrow spine, FOC and the heavy-versus-light debate, so you can pick an arrow weight for deer or elk with confidence.</p>
 
 <h2 id="h-how-heavy-should-my-arrow-be-the-short-answer">How Heavy Should My Arrow Be? The Short Answer</h2>
 <p>Total arrow weight is measured in grains (7,000 grains = 1 pound). It covers everything: shaft, insert, nock, fletching, wrap and point or broadhead. Most hunting arrows weigh somewhere between about 350 and 550 grains, but the number that matters is weight compared with your draw weight. That ratio is called <strong>grains per pound (GPP)</strong>.</p>
@@ -25,7 +25,7 @@
 
 <h2 id="h-grains-per-pound-explained">Grains Per Pound: The 5 GPP Minimum and Beyond</h2>
 <p>To find GPP, divide total arrow weight by peak draw weight. A 420-grain arrow from a 60-pound bow is 7 GPP. A 350-grain arrow from a 70-pound bow is exactly 5 GPP, right on the line.</p>
-<p>Why does a minimum exist? A bow stores energy in its limbs when you draw. When you shoot, most of that energy goes into the arrow. A very light arrow can&rsquo;t absorb it all, so the leftover energy goes back into the limbs, cams and string. That is the same idea as a dry fire, just less severe. Over time it can crack limbs or damage cams.</p>
+<p>Why a minimum? When you shoot, most of the energy stored in the limbs goes into the arrow. A very light arrow can&rsquo;t absorb it all, so the leftover energy goes back into the limbs, cams and string, like a milder dry fire. Over time it can crack limbs or damage cams.</p>
 <?= callout('warn', 'Don&rsquo;t chase speed below 5 GPP', 'The IBO speed rating uses a 5 grains-per-pound arrow, so it is a useful benchmark, but it is not a hunting recommendation. Many bow warranties exclude damage from arrows under the minimum weight. Check your owner&rsquo;s manual; some makers set their own minimum.') ?>
 <p>Use this table to see what each ratio means in real arrow weights. Find your draw weight on the left and read across.</p>
 <?= data_table(
@@ -42,7 +42,7 @@
 ) ?>
 
 <h2 id="h-arrow-weight-for-deer-elk-and-bigger-game">Arrow Weight for Deer, Elk and Bigger Game</h2>
-<p>Your game sets how much margin you want. A whitetail at 20 yards is a very different shot from a bull elk quartering away at 45 yards. Bigger animals have thicker hide, heavier bone and more muscle, so many hunters add weight for them.</p>
+<p>Your game sets how much margin you want. Bigger animals have thicker hide, heavier bone and more muscle, so many hunters add weight for them.</p>
 <?= data_table(
     ['Game', 'Common GPP range', 'Example at 60 lb', 'Example at 70 lb'],
     [
@@ -98,7 +98,7 @@
     'Illustrative comparison: same bow, different arrow weights'
 ) ?>
 <p>Notice the pattern. Kinetic energy barely changes, but momentum climbs about 24% from the lightest to the heaviest arrow. A heavier arrow also tends to absorb more of the bow&rsquo;s energy, so the shot is usually quieter with less hand shock.</p>
-<p>So why shoot light arrows at all? Speed flattens trajectory. If you misjudge range by 5 yards, a fast arrow drops less, which can mean the difference between a hit and a miss. Fast arrows also reach the animal sooner, giving it less time to react to the shot.</p>
+<p>So why shoot light arrows at all? Speed flattens trajectory. If you misjudge range by 5 yards, a fast arrow drops less. It also reaches the animal sooner, giving it less time to react.</p>
 <?= tool_cta('kinetic-energy-calculator') ?>
 <h3 id="h-the-practical-middle-ground">The Practical Middle Ground</h3>
 <p>At Better Outdoors we recommend most whitetail hunters start around the middle of the range, roughly 6.5 GPP, and then build FOC with the point and insert. You keep a fairly flat trajectory, plenty of momentum for deer, and good broadhead flight. Go heavier if you hunt elk or bear, take steep angles, or shoot lower draw weights.</p>
