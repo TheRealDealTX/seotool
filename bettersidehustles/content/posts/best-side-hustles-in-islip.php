@@ -1,172 +1,202 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Islip (2026): Ways to Earn Extra',
-    'description' => 'The best side hustles in Islip for 2026 — gig work, local services and online income ideas, with real pay ranges and tips to start this week.',
-    'h1' => 'Best Side Hustles in Islip',
-    'kicker' => 'City Guide · NY',
-    'dek' => 'Gig apps, local services and online work that pay in Islip — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-25',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Islip.webp',
-    'image_alt' => 'Best Side Hustles in Islip',
-    'category' => 'City Guides',
-    'city' => 'Islip',
-    'state' => 'NY',
-    'keywords' => ['best side hustles in islip'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'snow-shovel', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-new-york', 'best-side-hustles-in-philadelphia', 'best-side-hustles-in-washington'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Islip for beginners?', 'a' => 'House cleaning, dog walking, and delivery driving are great entry-level options with low startup costs.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Islip?', 'a' => 'Most part-time side hustles in Islip can generate $1,000 to $3,000 per month depending on time commitment and demand.'],
-        ['q' => 'Do I need a business license to start a side hustle in Islip?', 'a' => 'It depends on the service; some home-based or freelance work may not require permits, but always check local regulations.'],
-        ['q' => 'Which side hustles work best during summer in Islip?', 'a' => 'Boat cleaning, lawn care, event staffing, and Airbnb turnover services see strong seasonal demand.'],
-        ['q' => 'Are online side hustles viable while living in Islip?', 'a' => 'Yes, remote work like freelance writing, virtual assistance, and e-commerce can be done from anywhere.'],
-        ['q' => 'What is the lowest-cost side hustle to start?', 'a' => 'Virtual assistant services, freelance writing, and dog walking require minimal upfront investment.'],
-        ['q' => 'How do I find my first client locally?', 'a' => 'Start with neighborhood Facebook groups, referrals, Nextdoor, or by reaching out to small businesses directly.'],
-        ['q' => 'Are side hustles in Islip taxed?', 'a' => 'Yes, all income must be reported, and setting aside 20–30% for taxes is a smart practice.'],
-        ['q' => 'Can a side hustle turn into a full-time business?', 'a' => 'Absolutely—many of the best side hustles in Islip can scale into full-time income with consistent effort.'],
-        ['q' => 'What side hustle offers the highest long-term income potential?', 'a' => 'Skilled services like digital marketing, real estate photography, and property management often scale the fastest.'],
+    'title'       => 'Best Side Hustles in Islip (2026): 18 Long Island Side Gigs',
+    'description' => 'The best side hustles in Islip, NY for 2026: 18 Long Island side gigs from Fire Island turnovers to snow removal, with real pay ranges and NY tax rules.',
+    'h1'          => 'Best Side Hustles in Islip (2026): 18 Side Gigs That Pay on Long Island',
+    'kicker'      => 'City Guide · NY',
+    'dek'         => 'Summer on the Great South Bay, nor\'easters in winter and some of the highest household incomes in the state: here are the side jobs in Islip that match the Long Island calendar, with pay, startup costs and the town rules to know.',
+    'published'   => '2026-02-25',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Islip.webp',
+    'image_alt'   => 'Boats on the Great South Bay near Islip, Long Island, illustrating the best side hustles in Islip',
+    'category'    => 'City Guides',
+    'city'        => 'Islip',
+    'state'       => 'NY',
+    'keywords'    => ['best side hustles in islip', 'side jobs in islip', 'side gigs in islip', 'how to make money in islip', 'islip side hustles 2026', 'side hustles long island'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['reef-sunscreen', 'cleaning-kit', 'tool-kit', 'mileage-log'],
+    'related'     => ['best-side-hustles-in-new-york', 'best-side-hustles-in-newark', 'best-side-hustles-in-jersey-city'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Islip, NY?', 'a' => 'The best options follow the seasons: lawn care, pressure washing, boat cleaning and Fire Island rental turnovers in summer; leaf cleanup and holiday light installs in fall; and snow removal in winter. Year-round, rideshare from MacArthur Airport and LIRR stations, delivery, pet sitting, tutoring, handyman work and remote freelancing all pay well in the Town of Islip.'],
+        ['q' => 'How can I make money in Islip fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart can have you earning within a week. Rover pet sitting and TaskRabbit assembly and moving jobs can also pay quickly. If you own a mower, pressure washer or shovel, knocking on doors in Bay Shore, West Islip or Sayville after a storm or on a spring weekend can get you paid the same day.'],
+        ['q' => 'Can I rent my house on Airbnb in Islip?', 'a' => 'Generally not for short stays. The Town of Islip prohibits transient rentals of under 14 nights in most of the town and won\'t issue rental permits for them, while longer rentals need a town rental permit. Fire Island communities and some villages have different rules. Check with the Town of Islip before listing anything.'],
+        ['q' => 'Do I need a business license for a side hustle in Islip?', 'a' => 'Most service side hustles such as tutoring, pet care, cleaning or freelancing don\'t need a general town license. You may need a DBA certificate from the Suffolk County Clerk if you use a business name, a sales tax Certificate of Authority if you sell goods, and a Suffolk County home improvement license for many paid home repair jobs. Check county and town rules first.'],
+        ['q' => 'How are side hustle earnings taxed in Islip?', 'a' => 'You pay federal income tax, 15.3% self-employment tax and New York State income tax, but no separate town or county income tax. Self-employed Suffolk residents only owe the MCTMT transit tax when net earnings exceed $150,000. If you sell goods, Suffolk County\'s combined sales tax is 8.625%. Setting aside 25–30% of profit is a safe rule.'],
+        ['q' => 'What summer side jobs in Islip pay the most?', 'a' => 'Pressure washing, boat detailing and Fire Island rental turnovers typically pay the most per hour because demand is concentrated into a short season. Lawn care routes and pool-related helper work are steady. Event staffing, wedding work and bartending at waterfront venues pay well with tips on summer weekends.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Islip</strong>, you’re not alone. Long Island isn’t cheap. Property taxes are real. Groceries add up fast. And while Islip offers a beautiful suburban lifestyle with coastal charm, it also comes with a price tag that pushes many professionals to look for smart, flexible ways to earn more.</p>
-<p>The good news? Islip is full of opportunity.</p>
-<p>From waterfront services to remote digital work, this town offers more income potential than most people realize. The key is choosing something aligned with local demand — not just chasing trends you see on social media.</p>
-<p>Let’s break down the <strong>best side hustles in Islip</strong> that are realistic, profitable, and scalable.</p>
-<h2 id="h-why-side-hustles-are-growing-in-islip">Why Side Hustles Are Growing in Islip</h2>
-<p><a href="https://en.wikipedia.org/wiki/Islip,_New_York">Islip sits in Suffolk County</a>, within commuting distance of NYC. That matters. You’ve got suburban density, professional households, seasonal tourism, and high property values all in one place.</p>
-<p>That combination creates demand.</p>
-<p>Busy dual-income families need services. Seasonal residents need property support. Small businesses need marketing help. And professionals commuting to Manhattan are often looking for flexible income streams they can manage on nights and weekends.</p>
-<p><a href="/best-side-hustles-in-new-york/">Side hustles</a> here aren’t just “extra cash.” They’re financial leverage.</p>
-<h2 id="h-understanding-the-islip-opportunity-landscape">Understanding the Islip Opportunity Landscape</h2>
-<p>Before jumping in, understand where the money flows locally.</p>
-<p><strong>Key demand drivers in Islip:</strong></p>
-<ul><li>Suburban homes with lawns and maintenance needs</li><li>Seasonal waterfront and boating communities</li><li>High concentration of working professionals</li><li>Short-term rentals and summer tourism</li><li>Strong real estate market</li></ul>
-<p>When you match your skill set with those realities, your odds of success improve dramatically.</p>
-<h2 id="h-service-based-side-hustles-that-thrive-in-islip">Service-Based Side Hustles That Thrive in Islip</h2>
-<p>These are practical. Tangible. In demand.</p>
-<h3 id="h-1-house-cleaning-amp-airbnb-turnover-services">1. House Cleaning &amp; Airbnb Turnover Services</h3>
-<p>Short-term rentals and busy households create constant demand for reliable cleaners.</p>
-<p>Airbnb hosts in coastal areas need quick turnarounds. Families commuting to NYC don’t want to deep-clean bathrooms at 9 p.m.</p>
-<p><strong>Startup needs:</strong></p>
-<ul><li>Basic cleaning supplies ($300–$500)</li><li>Reliable vehicle</li><li>Insurance (recommended)</li></ul>
-<p><strong>Earning potential:</strong></p>
-<ul><li>$120–$200 per home</li><li>4 homes per week = $2,000–$3,000/month part-time</li></ul>
-<p>If you’re looking for one of the most stable <strong>best side hustles in Islip</strong>, this is near the top.</p>
-<h3 id="h-2-lawn-care-amp-snow-removal">2. Lawn Care &amp; Snow Removal</h3>
-<p>Suburban Long Island means lawns. Lots of them.</p>
-<p>Summer mowing. Fall cleanups. Spring aeration. And yes, winter snow removal.</p>
-<p>You don’t need a massive landscaping company to start. One mower. One trimmer. A few local clients.</p>
-<p><strong>Pro tip:</strong> Bundle seasonal contracts. Offer discounted annual service plans for consistent cash flow.</p>
-<h3 id="h-3-handyman-amp-home-repair-services">3. Handyman &amp; Home Repair Services</h3>
-<p>Islip has older housing stock in many neighborhoods. That means repairs.</p>
-<p>Leaky faucets. Loose railings. Drywall patches. Small electrical updates.</p>
-<p>Homeowners prefer someone local and trustworthy.</p>
-<p>If you’re skilled with tools, this is one of the <strong>best side hustles in Islip</strong> because referrals multiply quickly. One satisfied homeowner can turn into five more.</p>
-<p><em>Important:</em> Check New York licensing requirements depending on job scope.</p>
-<h3 id="h-4-pet-sitting-amp-dog-walking">4. Pet Sitting &amp; Dog Walking</h3>
-<p>Professional households + long commutes = pets home alone.</p>
-<p>Apps like Rover help, but building a direct local client base increases margins.</p>
-<p><strong>Earnings example:</strong></p>
-<ul><li>5 daily dog walks at $25 each</li><li>5 days per week</li><li>Roughly $2,500/month before expenses</li></ul>
-<p>Low startup cost. High flexibility.</p>
-<h2 id="h-online-amp-remote-side-hustles-for-islip-professionals">Online &amp; Remote Side Hustles for Islip Professionals</h2>
-<p>Not everyone wants to mow lawns. Good news — location doesn’t limit digital income.</p>
-<h3 id="h-5-freelance-writing-amp-digital-marketing">5. Freelance Writing &amp; Digital Marketing</h3>
-<p>Islip residents have access to NYC-level clients while living in Suffolk County.</p>
-<p>Businesses need:</p>
-<ul><li>SEO content</li><li>Social media management</li><li>Email campaigns</li><li>Website updates</li></ul>
-<p>If you can write clearly or manage ads, you can build a six-figure freelance career from your kitchen table.</p>
-<p>Start small:</p>
-<ul><li>Offer services to local Islip businesses</li><li>Build 2–3 case studies</li><li>Raise your rates steadily</li></ul>
-<h3 id="h-6-virtual-assistant-services">6. Virtual Assistant Services</h3>
-<p>Entrepreneurs everywhere need administrative help.</p>
-<p>Calendar management. Inbox organization. Research. Customer support.</p>
-<p>Startup cost? Basically zero.</p>
-<p>This makes it one of the lowest-risk entries on the list of <strong>best side hustles in Islip</strong>.</p>
-<h3 id="h-7-selling-on-etsy-or-shopify">7. Selling on Etsy or Shopify</h3>
-<p>Coastal Long Island inspires creativity.</p>
-<p>Ideas that work locally:</p>
-<ul><li>Nautical-themed home decor</li><li>Custom beach photography prints</li><li>Personalized wedding items</li><li>Handmade candles or soaps</li></ul>
-<p>You can operate this entirely online, but branding it around <a href="https://lovelocallongisland.com/34-things-someone-from-long-island-might-have-to-explain-to-an-out-of-towner/">Long Island culture</a> adds authenticity.</p>
-<h2 id="h-real-estate-amp-property-based-side-hustles">Real Estate &amp; Property-Based Side Hustles</h2>
-<p>Real estate is strong in Suffolk County. Leverage it.</p>
-<h3 id="h-8-house-hacking-amp-room-rentals">8. House Hacking &amp; Room Rentals</h3>
-<p>If zoning allows it, renting a room can offset mortgage costs significantly.</p>
-<p>Even $1,200/month in rental income changes your financial picture.</p>
-<p>Research local regulations carefully before listing anything. Compliance matters.</p>
-<h3 id="h-9-property-management-for-seasonal-rentals">9. Property Management for Seasonal Rentals</h3>
-<p>Not everyone who owns a summer property lives nearby.</p>
-<p>Services you can offer:</p>
-<ul><li>Guest coordination</li><li>Cleaning scheduling</li><li>Maintenance oversight</li><li>Key handoff</li></ul>
-<p>You become the local point of contact.</p>
-<p>This can evolve into a scalable business — especially in waterfront areas.</p>
-<h3 id="h-10-real-estate-photography">10. Real Estate Photography</h3>
-<p>High property values mean high marketing expectations.</p>
-<p>Agents want sharp listing photos. Twilight shots. Drone footage.</p>
-<p><strong>Equipment investment:</strong></p>
-<ul><li>DSLR camera ($1,000+)</li><li>Wide-angle lens</li><li>Basic editing software</li></ul>
-<p>Typical job: $250–$500 per shoot.</p>
-<p>In a competitive housing market, this consistently ranks among the <strong>best side hustles in Islip</strong>.</p>
-<h2 id="h-seasonal-amp-tourism-based-opportunities">Seasonal &amp; Tourism-Based Opportunities</h2>
-<p>Islip’s waterfront presence opens unique options.</p>
-<h3 id="h-11-boat-cleaning-amp-dock-services">11. Boat Cleaning &amp; Dock Services</h3>
-<p>Boat owners value maintenance.</p>
-<p>Services include:</p>
-<ul><li>Exterior washing</li><li>Interior detailing</li><li>Canvas cleaning</li></ul>
-<p>Summer demand spikes. Charge premium seasonal rates.</p>
-<h3 id="h-12-event-staffing-amp-catering-support">12. Event Staffing &amp; Catering Support</h3>
-<p>Long Island hosts weddings constantly.</p>
-<p>Weekend availability can bring:</p>
-<ul><li>$20–$35/hour</li><li>Flexible scheduling</li><li>Networking opportunities</li></ul>
-<p>Short shifts. Quick cash.</p>
-<h3 id="h-13-farmers-market-or-pop-up-vendor">13. Farmers Market or Pop-Up Vendor</h3>
-<p>Local markets support:</p>
-<ul><li>Baked goods</li><li>Specialty foods</li><li>Handmade crafts</li></ul>
-<p>Check permit requirements. Start small. Test demand before scaling.</p>
-<h2 id="h-low-investment-side-hustles-you-can-start-this-week">Low-Investment Side Hustles You Can Start This Week</h2>
-<p>Sometimes speed matters.</p>
-<p>Options include:</p>
-<ul><li>Rideshare driving</li><li>Food delivery</li><li>Task-based apps (assembly, errands)</li><li>Babysitting or tutoring</li></ul>
-<p>These aren’t always the highest margin, but they require minimal planning.</p>
-<p>They’re a launchpad.</p>
-<h2 id="h-income-comparison-table">Income Comparison Table</h2>
-<p>Here’s a quick snapshot of how these stack up:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Monthly Potential</strong></td><td><strong>Flexibility</strong></td><td><strong>Skill Level</strong></td></tr><tr><td>House Cleaning</td><td>$300–$500</td><td>$2,000–$3,000</td><td>High</td><td>Low–Medium</td></tr><tr><td>Lawn Care</td><td>$1,000+</td><td>$1,500–$4,000</td><td>Medium</td><td>Medium</td></tr><tr><td>Freelance Writing</td><td>&lt;$200</td><td>$2,000–$6,000</td><td>Very High</td><td>Medium–High</td></tr><tr><td>Real Estate Photography</td><td>$1,500+</td><td>$2,000–$5,000</td><td>Medium</td><td>High</td></tr><tr><td>Dog Walking</td><td>&lt;$200</td><td>$1,500–$3,000</td><td>High</td><td>Low</td></tr></tbody></table>
-<p>Notice something? Service-based work often scales faster locally. Digital work scales bigger long term.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle-in-islip">How to Choose the Right Side Hustle in Islip</h2>
-<p>Not every idea fits every person.</p>
-<p>Ask yourself:</p>
-<ul><li>Do I want outdoor or remote work?</li><li>How many hours can I realistically commit?</li><li>Do I need fast cash or long-term scalability?</li><li>Am I willing to invest upfront capital?</li></ul>
-<p>If your goal is an extra $500/month, gig apps may be enough.</p>
-<p>If your goal is $3,000+ per month, focus on skilled services or digital work.</p>
-<p>The <strong>best side hustles in Islip</strong> are the ones that match your lifestyle and energy — not just the ones with flashy income claims.</p>
-<h2 id="h-legal-amp-tax-considerations-in-new-york">Legal &amp; Tax Considerations in New York</h2>
-<p>Side income is still income.</p>
-<p>Keep these in mind:</p>
-<ul><li>Track all revenue and expenses</li><li>Set aside 20–30% for taxes</li><li>Consider forming an LLC for liability protection</li><li>Check local permit requirements</li></ul>
-<p>A short conversation with a CPA can save thousands later.</p>
-<h2 id="h-step-by-step-plan-to-launch">Step-by-Step Plan to Launch</h2>
-<p>Here’s a simple action framework:</p>
-<h3 id="h-step-1-identify-skill-amp-market-overlap">Step 1: Identify Skill &amp; Market Overlap</h3>
-<p>List what you’re good at. Then look at what Islip residents need.</p>
-<h3 id="h-step-2-validate-demand">Step 2: Validate Demand</h3>
-<p>Post in local Facebook groups. Ask neighbors. Test with one client.</p>
-<h3 id="h-step-3-price-competitively">Step 3: Price Competitively</h3>
-<p>Research competitors. Don’t undercut too aggressively. Charge fairly.</p>
-<h3 id="h-step-4-start-small">Step 4: Start Small</h3>
-<p>One client. One project. Build proof.</p>
-<h3 id="h-step-5-scale-intentionally">Step 5: Scale Intentionally</h3>
-<p>Increase rates. Add clients. Systematize.</p>
-<p>Momentum beats perfection.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>The reality is simple. The <strong>best side hustles in Islip</strong> aren’t mysterious. They’re practical. They’re grounded in local demand. And they reward consistency.</p>
-<p>Start where you are.</p>
-<p>Maybe it’s cleaning homes twice a week. Maybe it’s launching a freelance service at night and maybe it’s photographing listings on weekends.</p>
-<p>Small steps compound.</p>
-<p>And in a place like Islip — where income potential meets suburban demand — those steps can turn into serious financial leverage faster than you expect.</p>
-<p>The opportunity is there.</p>
-<p>The question is: which one will you start?</p>
+    'body'        => <<<'HTML'
+<p>Islip runs on a seasonal rhythm that most side hustle lists ignore. From Memorial Day to Labor Day, the Great South Bay fills with boats, the Bay Shore and Sayville ferries carry crowds to Fire Island and every lawn in East Islip needs cutting. Then fall leaves pile up, nor'easters roll in, and the work shifts to cleanups and snow. The best side hustles in Islip follow that calendar, and they're aimed at one of the wealthiest suburban markets in New York, where homeowners would much rather pay someone than spend their weekend on chores.</p>
+<p>This guide covers 18 side gigs that pay across the Town of Islip in 2026, from Bay Shore and Brentwood to Sayville, Bohemia and Central Islip, with typical pay, startup costs and the town and state rules that apply.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>$0</b><span>town or county income tax (state tax still applies)</span></div>
+  <div class="stat"><b>$20–$75</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>May–Sept</b><span>peak season for waterfront and yard work</span></div>
+</div>
+
+<h2 id="islip-calendar">How the Long Island calendar shapes side jobs in Islip</h2>
+<p>Islip is a big town, not a single city. It includes busy downtowns like Bay Shore and Sayville, large residential hamlets like Brentwood, West Islip and Holbrook, the business corridor around Hauppauge and Islandia, and the Fire Island communities across the bay. A few local anchors drive demand:</p>
+<ul>
+  <li><strong>Long Island MacArthur Airport</strong> in Ronkonkoma, plus LIRR stations at Bay Shore, Islip, Central Islip and Ronkonkoma, create steady rideshare trips.</li>
+  <li><strong>Fire Island ferries</strong> from Bay Shore and Sayville feed summer traffic to Ocean Beach, Saltaire, Cherry Grove and the Pines, and the rental houses there turn over constantly.</li>
+  <li><strong>Employers and institutions</strong> such as South Shore University Hospital in Bay Shore, the federal courthouse and Touro Law Center in Central Islip, and the Hauppauge Industrial Park employ thousands of busy professionals.</li>
+  <li><strong>Parks and venues</strong> like Heckscher State Park, Bayard Cutting Arboretum and the Long Island Ducks ballpark in Central Islip bring summer events.</li>
+  <li><strong>Weather.</strong> Humid summers mean lawns, pools and boats; winter brings real snowstorms.</li>
+</ul>
+
+<h2 id="best-side-hustles-in-islip">Best side hustles in Islip by pay and startup cost</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Lawn care</td><td>$40–$70 per lawn</td><td>$300–$800</td><td>Days</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$450 per job</td><td>$200–$500</td><td>Days</td></tr>
+    <tr><td>Fire Island turnover cleaning</td><td>$30–$50/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Boat cleaning &amp; detailing</td><td>$150–$500 per boat</td><td>$150–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Snow removal</td><td>$40–$90 per driveway</td><td>$40–$100 (shovel); more for a blower</td><td>First storm</td></tr>
+    <tr><td>Rideshare</td><td>$20–$35/hr before gas</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Food &amp; grocery delivery</td><td>$15–$25/hr before gas</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>Tutoring</td><td>$40–$90/hr</td><td>$0</td><td>2–3 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="summer-season">Summer on the South Shore: waterfront and yard work</h2>
+<p>Summer is when Islip side hustlers make the most money. Plan your spring around booking clients before Memorial Day.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-care">1. Lawn care and landscaping help</h3>
+    <p>Big lots in East Islip, West Islip, Islip Terrace and Sayville mean weekly mowing from April into November. Many homeowners prefer an independent mower over a large crew. Build a route on one or two streets to cut drive time, then add spring and fall cleanups.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70 per lawn</li><li><b>Startup:</b> Mower, trimmer, blower</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">2. Pressure washing</h3>
+    <p>Salt air, humidity and shade leave green film on siding, decks, fences and patios. Spring pre-season cleanups and pre-sale cleans for realtors are the big jobs. An [[amazon:pressure-washer|electric pressure washer]] handles most residential work; before-and-after photos do your marketing.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$450 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="fire-island-turnovers">3. Fire Island rental turnovers</h3>
+    <p>Fire Island summer rentals turn over weekly or even more often, and owners need fast, reliable cleaners who can handle the ferry schedule. Teams that can clean, restock and report damage between Saturday check-out and check-in earn well and book the whole season.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$50/hr</li><li><b>Startup:</b> $75–$150 supplies plus ferry fare</li><li><b>Best for:</b> Organized teams</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="boat-cleaning">4. Boat cleaning and detailing</h3>
+    <p>Marinas along the Great South Bay in Bay Shore, Islip, West Sayville and Sayville are full of boats whose owners would rather fish than scrub. Washing, waxing and interior detailing pay well. Check each marina's rules on outside contractors before you start.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$500 per boat</li><li><b>Startup:</b> $150–$400 in supplies</li><li><b>Best for:</b> Water lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">5. Wedding and summer event staffing</h3>
+    <p>Waterfront venues, catering halls and backyard parties need servers, bartenders and setup crews every summer weekend. Long Island Ducks games and summer concerts add more shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$35/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, teachers on summer break</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Hiring yourself out for paid home improvement work in Suffolk County, such as deck repair, painting or fence installation, often requires a county home improvement license. Mowing, cleaning and washing generally don't, but check before you take on repair jobs.</div>
+
+<h2 id="year-round-driving">Year-round gigs: driving and delivery</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">6. Rideshare driving</h3>
+    <p>Outside New York City, you don't need a TLC license to drive for Uber or Lyft, so Long Island drivers can start once the app approves them. MacArthur Airport runs, LIRR station pickups at Ronkonkoma and Bay Shore, Bay Shore's Main Street on weekend nights and summer ferry crowds are your best windows. Trips are longer than in the city, so watch your gas costs. See our <a href="/lyft-uber/">Lyft and Uber guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$35/hr before gas</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Early mornings, weekend nights</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">7. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats and Instacart cover most of the town. Restaurant clusters in Bay Shore, Sayville and along Sunrise Highway and Veterans Memorial Highway keep orders flowing. Bad weather and summer weekends are busiest.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before gas</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">8. Pet sitting and dog walking</h3>
+    <p>Long Island families travel a lot in summer and during school breaks, and commuters to the city need midday walks. Overnight sitting pays the most per booking. Rover is the easiest start, and neighbors quickly become repeat clients.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$30/walk, $55–$90/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+</div>
+<p>Suburban driving means more miles per dollar. Check what you actually earn after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="fall-winter">Fall and winter: cleanups, lights and snow</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="leaf-cleanup">9. Fall leaf cleanup</h3>
+    <p>Mature trees in Islip's older neighborhoods drop a lot of leaves. Fall cleanups are short, intense and well-paid, especially for clients who don't want a big landscaping contract.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$300 per yard</li><li><b>Startup:</b> Leaf blower, rakes, bags</li><li><b>Best for:</b> Lawn-care clients in October and November</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="holiday-lights">10. Holiday light installation</h3>
+    <p>Many homeowners would rather pay than climb a ladder in December. Installation and January takedown can be sold as a package. Insure yourself and take ladder safety seriously.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$500 per home</li><li><b>Startup:</b> Ladder, clips</li><li><b>Best for:</b> Comfortable on ladders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="snow-removal">11. Snow removal</h3>
+    <p>When a nor'easter hits, driveways and walks need clearing before the morning commute. Sign up neighbors for a seasonal plan in the fall so you have a route ready for the first storm. A snow blower lets you handle more homes.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$90 per driveway</li><li><b>Startup:</b> $40–$100, more for a blower</li><li><b>Best for:</b> Pairing with lawn care</li></ul>
+  </div>
+</div>
+
+[[gear:snow-shovel,leaf-blower,phone-mount|Gear for Islip's four-season side hustles]]
+
+<h2 id="home-and-family">Home and family services</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="handyman">12. Handyman work and furniture assembly</h3>
+    <p>Small fixes, fixture swaps, TV mounting and assembly are steady work. Stick to small jobs that don't need a licensed trade, and get the county home improvement license if you move into bigger repairs.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $100–$400 tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">13. Recurring house cleaning</h3>
+    <p>Dual-income families with larger homes want reliable biweekly cleaning. A handful of recurring clients in Sayville, Bohemia or West Islip can provide steady income.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$45/hr</li><li><b>Startup:</b> $75–$150 supplies</li><li><b>Best for:</b> Daytime schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">14. Tutoring and test prep</h3>
+    <p>Long Island families take school seriously. Regents exam prep, SAT and ACT help, and math and science tutoring are in demand in districts across the town. Teachers can earn well after school and in summer.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$90/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Teachers, strong students</li></ul>
+  </div>
+</div>
+
+<h2 id="online-long-island">Online side gigs for Long Island commuters</h2>
+<p>If you'd rather work from home than in the yard, online gigs let you skip the LIRR and earn from anywhere.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="freelancing">15. Freelance writing, design and marketing</h3>
+    <p>Local contractors, marinas, restaurants and medical practices need websites, ads and social media. Start on <a href="/fiverr/">Fiverr</a> for a portfolio, then sign local retainers. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> explains packaging.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$90/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Creatives</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">16. Virtual assistant and bookkeeping</h3>
+    <p>Small businesses in the Hauppauge and Islandia business areas, plus local contractors, need help with invoicing, scheduling and QuickBooks.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="real-estate-photography">17. Real estate photography</h3>
+    <p>Spring and summer listing seasons keep agents busy across Suffolk County. Bright photos, short video tours and drone shots (with an FAA Part 107 certificate) earn repeat work.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$300 per listing</li><li><b>Startup:</b> Camera, wide lens</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Estate sale reselling</h3>
+    <p>Long Island estate sales and garage sales are full of furniture, tools, fishing gear and collectibles. Clean them up and sell on eBay, Facebook Marketplace or your own <a href="/shopify/">Shopify</a> store.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+</div>
+
+<h2 id="start-this-month">How to start a side hustle in Islip this month</h2>
+<ol class="steps">
+  <li><strong>Pick a hustle for the season you're in.</strong> In late fall, sell leaf cleanup and snow plans now; in early spring, book lawns and pressure washing.</li>
+  <li><strong>Set a goal.</strong> Decide what you want to earn each month and work back to hours with our <a href="/tools/income-calculator/">income calculator</a>.</li>
+  <li><strong>Market hyper-locally.</strong> Nextdoor, hamlet Facebook groups and flyers on your own street beat broad advertising.</li>
+  <li><strong>Get three reviews.</strong> Ask early clients for reviews and referrals.</li>
+  <li><strong>Check licensing.</strong> Get a DBA if you use a business name, and look into the county home improvement license before taking repair work.</li>
+  <li><strong>Open a separate account.</strong> Keep business money separate and save for quarterly taxes.</li>
+</ol>
+
+<h2 id="ny-taxes">New York taxes and Islip rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> New York uses graduated rates from just under 4% up to 10.9% for the highest earners, after a small middle-class cut for 2026.</li>
+  <li><strong>No local income tax:</strong> unlike New York City, neither the Town of Islip nor Suffolk County taxes your income.</li>
+  <li><strong>MCTMT:</strong> self-employed Suffolk residents owe the transit mobility tax only when net earnings exceed $150,000 (from 2026), at 0.34%.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit. Estimate yours with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Sales tax:</strong> Suffolk County's combined rate is 8.625%. Register for a Certificate of Authority if you sell goods.</li>
+  <li><strong>Short-term rentals:</strong> the town generally bans rentals under 14 nights and requires a rental permit for longer rentals; Fire Island communities are treated differently. Confirm with the town before listing.</li>
+</ul>
+
+<h2 id="nearby">Nearby city guides</h2>
+<p>Across the Hudson, see the <a href="/best-side-hustles-in-newark/">best side hustles in Newark</a>. Heading into the city? Our <a href="/best-side-hustles-in-new-york/">New York City guide</a> covers TLC rules and delivery pay. Better Side Hustles readers on Long Island earn the most when they stack seasons, mowing in summer, cleanups in fall and snow in winter, so their clients never need to call anyone else.</p>
 HTML,
 ];
