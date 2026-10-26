@@ -89,7 +89,7 @@
   <li><strong>Maneuverability vs steadiness:</strong> the Species XT&rsquo;s 30" frame is easier to swing in a blind; the Alaskan XT&rsquo;s 33" frame tends to hold steadier at distance.</li>
   <li><strong>Fit:</strong> the Species XT goes down to 23.5" and up to 30.5", so it fits a wider range of archers.</li>
 </ul>
-<p>Our take: if you hunt whitetails from stands and blinds, or you have a short draw, the Species XT is the more sensible buy. If you hunt elk or open country and want extra speed and a steadier hold, the Alaskan XT earns its higher price. If you want something compact but faster, the <?= post_link('bear-archery-whitetail-maxx-rth-compound-bow', 'Bear Whitetail Maxx RTH') ?> sits between the two.</p>
+<p>The Better Outdoors take: if you hunt whitetails from stands and blinds, or you have a short draw, the Species XT is the more sensible buy. If you hunt elk or open country and want extra speed and a steadier hold, the Alaskan XT earns its higher price. If you want something compact but faster, the <?= post_link('bear-archery-whitetail-maxx-rth-compound-bow', 'Bear Whitetail Maxx RTH') ?> sits between the two.</p>
 
 <h2 id="h-choosing-draw-weight-and-length">Setting Up Your Species XT: Draw Weight and Draw Length</h2>
 <p>Pick your draw weight range based on what you can pull smoothly while sitting, cold and stiff. A quick test: if you have to point the bow at the sky or lift your front shoulder to get it back, the weight is too high.</p>
