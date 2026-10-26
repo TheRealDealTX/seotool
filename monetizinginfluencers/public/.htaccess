@@ -2,6 +2,12 @@
 # Hostinger web hosting runs LiteSpeed, which honours this file.
 
 Options -Indexes
+
+# Never serve pages from LiteSpeed's page cache. The old WordPress LiteSpeed Cache plugin left
+# cached copies of the old pages there, and the server kept serving them over the new site.
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
 DirectoryIndex index.php index.html
 DirectorySlash On
 ErrorDocument 404 /404.php
