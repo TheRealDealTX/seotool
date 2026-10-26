@@ -10,12 +10,20 @@
   var header = document.querySelector('.site-header');
   var toggle = document.querySelector('.nav-toggle');
   var nav = document.getElementById('main-nav');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var open = document.body.classList.toggle('nav-open');
+  function setNav(open) {
+    document.body.classList.toggle('nav-open', open);
+    if (toggle) {
       toggle.setAttribute('aria-expanded', open);
-    });
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
   }
+  if (toggle) {
+    toggle.addEventListener('click', function () { setNav(!document.body.classList.contains('nav-open')); });
+  }
+  if (nav) {
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+  }
+  window.matchMedia('(min-width: 921px)').addEventListener('change', function (m) { if (m.matches) setNav(false); });
   document.querySelectorAll('.menu-btn').forEach(function (b) {
     b.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -30,7 +38,7 @@
   });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
-      document.body.classList.remove('nav-open');
+      setNav(false);
       document.querySelectorAll('.has-menu.open').forEach(function (x) { x.classList.remove('open'); });
     }
   });

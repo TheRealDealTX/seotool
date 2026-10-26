@@ -22,7 +22,7 @@ const GA_ID = 'G-G882PM8VZ1';
 const AMAZON_TAG = 'bettersidehustles-20';
 
 // Bumped whenever CSS/JS change so browsers fetch the new files.
-const ASSET_VERSION = '2026.10.26b';
+const ASSET_VERSION = '2026.10.26c';
 
 // Platform guides: slug => [label, logo, one-liner, icon category]
 const PLATFORMS = [

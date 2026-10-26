@@ -89,9 +89,10 @@ $graph = array_merge([schema_org(), schema_website()], $meta['schema'] ?? []);
 <?php endif; ?>
 <?php endforeach; ?>
       </ul>
+      <a class="btn btn-green mobile-cta" href="/tools/side-hustle-quiz/"><?= icon('target') ?>Take the 60-second quiz</a>
     </nav>
     <a class="btn btn-sm btn-green header-cta" href="/tools/side-hustle-quiz/"><?= icon('target') ?>Take the Quiz</a>
-    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><?= icon('menu') ?></button>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Open menu"><?= icon('menu', 'ic ic-menu') ?><?= icon('close', 'ic ic-close') ?></button>
   </div>
 </header>
 <main id="main">
