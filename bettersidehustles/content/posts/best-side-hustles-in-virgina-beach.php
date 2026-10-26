@@ -1,156 +1,198 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Virginia Beach (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Virginia Beach and start earning extra income with smart, local opportunities that actually work.',
-    'h1' => 'Best Side Hustles in Virginia Beach',
-    'kicker' => 'City Guide · VA',
-    'dek' => 'Gig apps, local services and online work that pay in Virginia Beach — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-11',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/best-side-hustles-in-virginia-beach.webp',
-    'image_alt' => 'Best Side Hustles in Virginia Beach',
-    'category' => 'City Guides',
-    'city' => 'Virginia Beach',
-    'state' => 'VA',
-    'keywords' => ['best side hustles in virginia beach'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-jacksonville', 'best-side-hustles-in-charlotte', 'best-side-hustles-in-nashville'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Virginia Beach right now?', 'a' => 'Vacation rental cleaning, beach photography, lawn care, co-hosting short-term rentals, and freelance digital services are among the most profitable options.'],
-        ['q' => 'Do I need a business license to start a side hustle in Virginia Beach?', 'a' => 'Many side hustles require basic business registration in Virginia, so check local and state requirements before launching.'],
-        ['q' => 'Which side hustles work best during the summer season?', 'a' => 'Beach photography, paddleboard rentals, event staffing, and vacation rental services typically see peak demand in summer.'],
-        ['q' => 'Are there good side hustles for military spouses in Virginia Beach?', 'a' => 'Yes, flexible options like pet sitting, virtual assistant work, and short-term rental management work well with changing schedules.'],
-        ['q' => 'How much can I realistically earn from a side hustle here?', 'a' => 'Earnings vary, but many local service-based hustles can generate a few hundred to several thousand dollars per month depending on effort and demand.'],
-        ['q' => 'What is the lowest-cost side hustle to start in Virginia Beach?', 'a' => 'Freelance writing, virtual assistant services, and digital product sales require minimal upfront investment.'],
-        ['q' => 'Is the short-term rental market saturated in Virginia Beach?', 'a' => 'While competitive, there is steady demand, and co-hosting or cleaning services remain strong opportunities.'],
-        ['q' => 'How quickly can I find clients for a local side hustle?', 'a' => 'With local Facebook groups, referrals, and a Google Business Profile, many people land their first clients within weeks.'],
-        ['q' => 'Are seasonal side hustles reliable long term?', 'a' => 'They can be profitable during peak months, but pairing them with year-round services creates more stable income.'],
-        ['q' => 'What makes Virginia Beach ideal for side hustles?', 'a' => 'Its mix of tourism, military presence, suburban growth, and events creates diverse income opportunities year-round.'],
+    'title'       => 'Best Side Hustles in Virginia Beach (2026 Guide): 18 Picks',
+    'description' => 'The best side hustles in Virginia Beach for 2026: 18 side gigs with real pay, startup costs, Oceanfront and military demand, plus Virginia tax and BPOL tips.',
+    'h1'          => 'Best Side Hustles in Virginia Beach (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'City Guide · VA',
+    'dek'         => 'Summer crowds on the Oceanfront, Sandbridge rental turnovers, Navy families moving every year and a year-round suburban market — these are the side jobs in Virginia Beach that pay, with startup costs and a simple launch plan.',
+    'published'   => '2026-02-11',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/best-side-hustles-in-virginia-beach.webp',
+    'image_alt'   => 'Virginia Beach Oceanfront boardwalk at sunrise, illustrating the best side hustles in Virginia Beach',
+    'category'    => 'City Guides',
+    'city'        => 'Virginia Beach',
+    'state'       => 'VA',
+    'keywords'    => ['best side hustles in virginia beach', 'side jobs in virginia beach', 'side gigs in virginia beach', 'how to make money in virginia beach', 'virginia beach side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['pressure-washer', 'leaf-blower', 'dog-leash', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-raleigh', 'best-side-hustles-in-washington', 'best-side-hustles-in-baltimore'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Virginia Beach?', 'a' => 'The best options are vacation rental cleaning at the Oceanfront and Sandbridge, summer rideshare and delivery, moving help and services for military families, pressure washing, lawn care, pet sitting, boat cleaning and remote freelancing. Virginia Beach combines a busy summer tourist season with a large, year-round military and suburban population.'],
+        ['q' => 'How can I make money in Virginia Beach fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart, event staffing for summer concerts and festivals, Rover pet sitting and rental turnover cleaning can pay within one to two weeks. In summer, property managers in Sandbridge and the Oceanfront often need extra Saturday cleaners on short notice, which is one of the quickest ways to start earning.'],
+        ['q' => 'Do I need a business license for a side hustle in Virginia Beach?', 'a' => 'Generally yes. Virginia Beach requires a business license through the Commissioner of the Revenue, including for home-based businesses, which also need zoning approval for home use. The city levies a BPOL tax based on gross receipts and business category. Contact the Commissioner of the Revenue to confirm what applies at your income level.'],
+        ['q' => 'How is side hustle income taxed in Virginia?', 'a' => 'Virginia has a graduated state income tax from 2% to 5.75%, with the top rate applying to taxable income over $17,000, so most side income is taxed at 5.75%. You also owe federal income tax and 15.3% self-employment tax on net profit, and you may need to make Virginia estimated payments during the year.'],
+        ['q' => 'How much can I earn from side jobs in Virginia Beach?', 'a' => 'Working 8–15 hours a week, most people typically earn $400–$1,500 a month, with summer months higher. App-based driving and delivery usually net $14–$22 an hour after gas, while cleaning, pressure washing, moving help and freelancing often pay $30–$75 an hour once you have repeat clients.'],
+        ['q' => 'Are short-term rentals allowed in Virginia Beach?', 'a' => 'Only in certain areas and with the right approvals. Virginia Beach limits short-term rentals to specific zones, such as parts of Sandbridge and the Oceanfront, and requires registration and permits. Rules have changed several times, so check the city\'s current short-term rental requirements before you host, co-host or clean for a property.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Virginia Beach</strong>, you’re in the right place. This city isn’t just sand and surf. It’s tourism, military movement, weddings, small businesses, and neighborhoods that are constantly evolving. That combination creates opportunity. Real opportunity.</p>
-<p>I’ve looked at dozens of local markets over the years, and Virginia Beach stands out for one reason: built-in demand. Visitors arrive with money to spend. Military families relocate frequently. Homeowners maintain high standards. Businesses compete for visibility. When you understand these patterns, earning extra income becomes less about guessing and more about strategy.</p>
-<p>Let’s break down the best side hustles in Virginia Beach — and more importantly, how to make them work.</p>
-<h2 id="h-why-virginia-beach-is-built-for-side-income">Why Virginia Beach Is Built for Side Income</h2>
-<p><a href="https://en.wikipedia.org/wiki/Virginia_Beach,_Virginia">Virginia Beach</a> isn’t a one-industry town. It runs on multiple economic engines.</p>
-<ul><li>Tourism along the Oceanfront and boardwalk</li><li>Strong military presence anchored by Naval Air Station Oceana</li><li>Growing suburban neighborhoods</li><li>A healthy short-term rental market</li><li>Seasonal festivals and weddings</li></ul>
-<p>This diversity reduces risk. If one segment slows down, another usually picks up. That’s what makes the best side hustles in Virginia Beach more stable than in many single-industry cities.</p>
-<p>Now let’s talk specifics.</p>
-<h2 id="h-service-based-side-hustles-low-startup-cost-fast-start">Service-Based Side Hustles (Low Startup Cost, Fast Start)</h2>
-<p>These are practical. Simple. Profitable.</p>
-<h3 id="h-1-vacation-rental-cleaning-amp-turnover-services">1. Vacation Rental Cleaning &amp; Turnover Services</h3>
-<p>Short-term rentals are everywhere near the Oceanfront and Sandbridge. Every guest departure creates a deadline. Property owners need reliability.</p>
-<p>Why it works:</p>
-<ul><li>Recurring contracts</li><li>Predictable scheduling</li><li>High demand during peak season</li></ul>
-<p>What you need:</p>
-<ul><li>Cleaning supplies</li><li>Reliable transportation</li><li>A checklist system</li><li>Insurance (strongly recommended)</li></ul>
-<p>Start by contacting local Airbnb hosts directly or partnering with property managers. Offer flat-rate pricing per property size. Build a reputation for speed and consistency.</p>
-<p>This is easily one of the best side hustles in Virginia Beach if you want steady cash flow.</p>
-<h3 id="h-2-mobile-car-detailing">2. Mobile Car Detailing</h3>
-<p>Salt air is brutal on vehicles. Add beach sand and pollen, and you’ve got constant demand.</p>
-<p>Action plan:</p>
-<ul><li>Invest in a portable pressure washer</li><li>Offer driveway service</li><li>Create 3 tiered packages (basic, premium, full restoration)</li></ul>
-<p>Target:</p>
-<ul><li>Military personnel</li><li>Luxury vehicle owners</li><li>Condo communities</li></ul>
-<p>Charge per vehicle, not hourly. Efficiency increases profit.</p>
-<h3 id="h-3-lawn-care-amp-landscaping">3. Lawn Care &amp; Landscaping</h3>
-<p>Suburban neighborhoods and HOAs expect clean yards. Not optional.</p>
-<p>Spring through fall is prime time. Focus on:</p>
-<ul><li>Mowing</li><li>Mulching</li><li>Seasonal cleanup</li><li>Pressure washing</li></ul>
-<p>Start with one neighborhood. Leave door hangers. Offer referral discounts. Repeat.</p>
-<h3 id="h-4-pet-sitting-amp-dog-walking">4. Pet Sitting &amp; Dog Walking</h3>
-<p>Military deployments create long-term pet care needs. Families traveling during summer do too.</p>
-<p>You can:</p>
-<ul><li>Use platforms like Rover</li><li>Or build independent clients through local Facebook groups</li></ul>
-<p>Keep it simple. Offer recurring packages instead of one-off visits.</p>
-<h2 id="h-tourism-amp-seasonal-side-hustles">Tourism &amp; Seasonal Side Hustles</h2>
-<p>Tourism fuels some of the best side hustles in Virginia Beach — especially if you lean into summer demand.</p>
-<h3 id="h-5-beach-photography">5. Beach Photography</h3>
-<p>Families want sunset photos. Engagements happen on the sand. Seniors book graduation shoots.</p>
-<p>To stand out:</p>
-<ul><li>Offer 20-minute “mini sessions”</li><li>Deliver edited galleries within 48 hours</li><li>Scout less crowded beach access points</li></ul>
-<p>Check permit requirements before advertising heavily.</p>
-<h3 id="h-6-kayak-or-paddleboard-rentals">6. Kayak or Paddleboard Rentals</h3>
-<p>This requires more capital, but margins can be strong.</p>
-<p>Consider:</p>
-<ul><li>Partnering with vacation rental owners</li><li>Daily rental pricing</li><li>Liability waivers</li></ul>
-<p>You don’t need a storefront. Storage and smart delivery logistics are enough.</p>
-<h3 id="h-7-event-staffing-amp-wedding-services">7. Event Staffing &amp; Wedding Services</h3>
-<p>Virginia Beach hosts hundreds of weddings annually. Venues stay busy from spring through fall.</p>
-<p>Offer:</p>
-<ul><li>Bartending</li><li>Day-of coordination</li><li>Setup/tear-down crews</li><li>Photo booth rentals</li></ul>
-<p>Start by networking with local planners and venues. Reliability spreads quickly in the wedding industry.</p>
-<h2 id="h-online-amp-remote-side-hustles">Online &amp; Remote Side Hustles</h2>
-<p>Not every <a href="/side-hustles-you-can-start-with-just-your-smartphone/">side hustle </a>needs sunblock.</p>
-<h3 id="h-8-freelance-writing-amp-digital-marketing">8. Freelance Writing &amp; Digital Marketing</h3>
-<p>Local businesses want visibility. Many don’t know how to rank online.</p>
-<p>Offer:</p>
-<ul><li>Website copy</li><li>Blog posts</li><li>Google Business Profile optimization</li><li>Social media management</li></ul>
-<p>You can work remotely while enjoying coastal living. That flexibility makes this one of the best side hustles in Virginia Beach for professionals.</p>
-<h3 id="h-9-virtual-assistant-services">9. Virtual Assistant Services</h3>
-<p>Real estate agents, contractors, and small business owners often need admin help.</p>
-<p>Services might include:</p>
-<ul><li>Email management</li><li>Appointment scheduling</li><li>CRM updates</li><li>Invoice tracking</li></ul>
-<p>Position yourself as local and responsive. That matters.</p>
-<h3 id="h-10-selling-digital-products">10. Selling Digital Products</h3>
-<p>You don’t need inventory. Just skill.</p>
-<p>Ideas:</p>
-<ul><li>Virginia Beach travel guides</li><li>Wedding planning templates</li><li>Military relocation checklists</li><li>Printable planners</li></ul>
-<p>Sell on Etsy or your own site. Once built, digital products scale without additional labor.</p>
-<h2 id="h-creative-amp-craft-based-hustles">Creative &amp; Craft-Based Hustles</h2>
-<p>Virginia Beach supports makers. Markets and pop-ups are active year-round.</p>
-<h3 id="h-11-handmade-coastal-crafts">11. Handmade Coastal Crafts</h3>
-<p>Nautical decor. <a href="https://casolia.com/driftwood-wall-art-ideas/">Driftwood art</a>. Custom beach signs.</p>
-<p>Sell at:</p>
-<ul><li>Local farmers markets</li><li>Craft fairs</li><li>Seasonal festivals</li></ul>
-<p>Keep inventory light. Test products before scaling.</p>
-<h3 id="h-12-custom-t-shirts-amp-print-on-demand">12. Custom T-Shirts &amp; Print-on-Demand</h3>
-<p>Beach humor sells. Military pride sells. Local pride sells.</p>
-<p>Instead of printing in bulk:</p>
-<ul><li>Use print-on-demand services</li><li>Focus on niche slogans</li><li>Test designs via social media</li></ul>
-<p>Low risk. High flexibility.</p>
-<h2 id="h-high-income-scalable-side-hustles">High-Income, Scalable Side Hustles</h2>
-<p>Now let’s talk bigger plays.</p>
-<h3 id="h-13-real-estate-showing-assistant">13. Real Estate Showing Assistant</h3>
-<p>Virginia Beach has an active housing market. Agents are busy.</p>
-<p>If you’re licensed:</p>
-<ul><li>Assist with showings</li><li>Host open houses</li><li>Earn per appointment</li></ul>
-<p>If you’re not licensed:</p>
-<ul><li>Consider getting licensed if long-term income growth appeals to you.</li></ul>
-<h3 id="h-14-short-term-rental-co-hosting">14. Short-Term Rental Co-Hosting</h3>
-<p>Many property owners don’t live locally. They need management.</p>
-<p>Services include:</p>
-<ul><li>Guest communication</li><li>Cleaning coordination</li><li>Pricing optimization</li><li>Review management</li></ul>
-<p>Charge a percentage of booking revenue. Scale by adding properties.</p>
-<p>This consistently ranks among the best side hustles in Virginia Beach for those who understand hospitality.</p>
-<h3 id="h-15-local-tour-guide-or-experience-host">15. Local Tour Guide or Experience Host</h3>
-<p>Create:</p>
-<ul><li>Food tours</li><li>History walks</li><li>Surf lessons</li><li>Fishing excursions</li></ul>
-<p>List experiences on Airbnb Experiences or market independently.</p>
-<p>Authenticity wins here. Tell real stories. Share local knowledge.</p>
-<h2 id="h-quick-comparison-table">Quick Comparison Table</h2>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Flexibility</strong></td><td><strong>Income Potential</strong></td><td><strong>Seasonal?</strong></td></tr><tr><td>Rental Cleaning</td><td>Low</td><td>Medium</td><td>High</td><td>Year-round</td></tr><tr><td>Beach Photography</td><td>Medium</td><td>High</td><td>High</td><td>Summer peak</td></tr><tr><td>Lawn Care</td><td>Medium</td><td>Medium</td><td>Medium</td><td>Spring–Fall</td></tr><tr><td>Freelance Writing</td><td>Very Low</td><td>Very High</td><td>Scalable</td><td>Year-round</td></tr><tr><td>Co-Hosting Rentals</td><td>Low</td><td>Medium</td><td>High</td><td>Year-round</td></tr></tbody></table>
-<p>Choose based on your schedule, risk tolerance, and growth goals.</p>
-<h2 id="h-how-to-choose-the-right-hustle">How to Choose the Right Hustle</h2>
-<p>Ask yourself:</p>
-<ul><li>How many hours can I realistically commit?</li><li>Do I want physical work or laptop work?</li><li>Do I prefer seasonal bursts or steady income?</li><li>How much startup capital can I invest?</li></ul>
-<p>Clarity matters. Without it, you’ll jump between ideas.</p>
-<h2 id="h-getting-clients-fast-in-virginia-beach">Getting Clients Fast in Virginia Beach</h2>
-<p>You don’t need complex marketing. You need visibility.</p>
-<p>Here’s what works:</p>
-<ul><li>Join local Facebook groups</li><li>Network at community events</li><li>Partner with property managers</li><li>Optimize your Google Business Profile</li><li>Ask for reviews immediately after completing work</li></ul>
-<p>Momentum builds quickly in a city this connected.</p>
-<h2 id="h-legal-amp-tax-considerations">Legal &amp; Tax Considerations</h2>
-<p>Virginia requires basic business registration for many activities. Keep it clean.</p>
-<ul><li>Register your business name</li><li>Track expenses carefully</li><li>Set aside money for self-employment taxes</li><li>Consider liability insurance if you’re working on property or with clients directly</li></ul>
-<p>Simple systems prevent headaches later.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>The <strong>best side hustles in Virginia Beach</strong> aren’t random. They’re tied to local demand. Tourism. Military movement. Real estate. Coastal lifestyle. When you align your effort with those forces, income becomes predictable.</p>
-<p>Start small. Test fast. Refine quickly.</p>
-<p>Whether you choose rental cleaning, digital marketing, co-hosting, or beach photography, the opportunity is here. You just have to step into it.</p>
-<p>Virginia Beach isn’t just a place to live.</p>
-<p>It’s a place to build.</p>
+    'body'        => <<<'HTML'
+<p>Virginia Beach is two cities in one. From Memorial Day to Labor Day it's a resort town, with crowds on the Atlantic Avenue boardwalk, full rentals in Sandbridge and traffic backed up on the Expressway. The rest of the year it's a big suburban city built around the Navy, with families in Kempsville, Red Mill and Great Neck who need the same services as anyone else. The best side hustles in Virginia Beach let you ride the summer wave without going broke in January.</p>
+<p>Here are 18 side gigs that work here, what each one typically pays, startup costs and how to balance seasonal tourist work with steady local income.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>5.75%</b><span>Virginia top income tax rate</span></div>
+  <div class="stat"><b>$14–$75</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup for most gigs</span></div>
+</div>
+
+<h2 id="why-virginia-beach">Why Virginia Beach is a strong side-hustle market</h2>
+<ul>
+  <li><strong>A summer tourist economy.</strong> The Oceanfront, Sandbridge and the Chesapeake Bay beaches fill with visitors in summer, and events like the Neptune Festival in late September and the Shamrock Marathon in March stretch the season.</li>
+  <li><strong>One of the largest military communities in the country.</strong> Naval Air Station Oceana, Joint Expeditionary Base Little Creek–Fort Story and Dam Neck sit inside the city, with Naval Station Norfolk next door. Military families move often and need help every time.</li>
+  <li><strong>Year-round suburbs.</strong> Neighborhoods from Kempsville to Princess Anne and Pungo have lawns, leaves, gutters and pets regardless of tourist season.</li>
+  <li><strong>Steady civilian employers.</strong> Sentara Healthcare, the city and schools, GEICO and Stihl, plus Regent University and Virginia Wesleyan University, keep demand for local services consistent.</li>
+</ul>
+
+<h2 id="best-side-hustles-in-virginia-beach">The best side hustles in Virginia Beach: top 8</h2>
+<p>Start with these. They have the strongest local demand and the fastest path to a first paycheck.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">1. Vacation rental turnover cleaning</h3>
+    <p>Sandbridge homes and Oceanfront condos turn over on tight Saturday and Sunday schedules all summer. Property management companies hire independent cleaners, and reliable ones get booked every weekend. Pricing per property rather than per hour rewards speed.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr or $90–$200 per turnover</li><li><b>Startup:</b> $100–$200 in supplies</li><li><b>Best for:</b> Fast, dependable workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Summer rideshare driving</h3>
+    <p>Summer evenings along Atlantic Avenue, concerts at the amphitheater, Town Center nightlife and runs to Norfolk International Airport are the high-demand windows. Off-season demand drops, so plan to switch to delivery in winter. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers requirements.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before gas</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Summer weekends</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats and Instacart work year-round. Summer brings orders from rentals and hotels at the Oceanfront; winter shifts demand to the suburbs around Hilltop, Kempsville and Red Mill. Rainy days and nor'easters push pay up.</p>
+    <ul class="meta"><li><b>Pay:</b> $14–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Year-round evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="military-moves">4. Moving help and move-out cleaning for military families</h3>
+    <p>Navy families arrive and leave all year, with a summer peak. They need loading help, packing, furniture assembly and move-out cleaning to pass inspections or get deposits back. Spouse groups and moving-labor apps are the best lead sources.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50/hr per helper</li><li><b>Startup:</b> $50–$200</li><li><b>Best for:</b> Strong, reliable workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">5. Pressure washing</h3>
+    <p>Salt air, humidity and pollen coat homes, decks and driveways. Spring cleanups before summer guests arrive and fall cleanups after the season are both busy. An [[amazon:pressure-washer|electric pressure washer]] handles most residential work, and photos sell your service on Nextdoor.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lawn-care">6. Lawn care and leaf cleanup</h3>
+    <p>Unlike Florida, Virginia Beach has real seasons: mowing from spring through fall, then leaves in November. Build a route in Great Neck, Kings Grant or Salem and add gutter cleaning for extra fall income.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> $0–$500</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">7. Pet sitting and dog walking</h3>
+    <p>Deployments, travel and long shifts at Sentara hospitals mean steady demand. Rover and Wag are active, and overnight stays during the holidays and summer vacations book weeks ahead.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28/walk, $40–$70/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="remote-work">8. Remote freelancing and virtual assistance</h3>
+    <p>Portable work fits a military town perfectly. Writing, design, bookkeeping and admin support move with you at the next transfer. Start on <a href="/fiverr/">Fiverr</a> to build reviews, then pitch local realtors and contractors.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Military spouses, remote workers</li></ul>
+  </div>
+</div>
+<p>Driving pays well in July and much less in February. Check what you actually keep after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Treat summer as your harvest. Many Virginia Beach side hustlers work extra hours from June through August, save a chunk of the earnings, and then switch to lower-intensity local gigs for the winter.</div>
+
+<h2 id="pay-comparison">Side jobs in Virginia Beach: pay and startup costs</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rental turnover cleaning</td><td>$90–$200 per turnover</td><td>$100–$200</td><td>1–2 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$15–$25/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Delivery</td><td>$14–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Military moving help</td><td>$25–$50/hr</td><td>$50–$200</td><td>Days</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Lawn care</td><td>$35–$60 per lawn</td><td>$0–$500</td><td>Days</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$70 per booking</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$20–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="summer-season">Summer-season side gigs at the Oceanfront</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">9. Event and festival staffing</h3>
+    <p>Concerts at the amphitheater, events at the Virginia Beach Convention Center, Oceanfront festivals and the Neptune Festival all need concessions, security support, setup and cleanup crews. Staffing agencies post shifts throughout the season.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="beach-gear">10. Beach gear rental and delivery</h3>
+    <p>Deliver chairs, umbrellas, bikes and coolers to rental homes in Sandbridge and the North End. Partner with property managers for referrals. Stock [[amazon:reef-sunscreen|mineral sunscreen]] as an easy add-on.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$75 per delivery</li><li><b>Startup:</b> $300–$1,000 in gear</li><li><b>Best for:</b> SUV or truck owners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">11. Beach and family photography</h3>
+    <p>Sunrise family sessions on the beach, engagement shoots at First Landing State Park and military homecoming photos are popular. Check park rules for commercial photography before booking.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$300 per session</li><li><b>Startup:</b> Camera or flagship phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lessons">12. Surf, paddleboard and fishing lessons</h3>
+    <p>Experienced surfers and anglers can teach visitors and newcomers. Get liability insurance and check city rules for commercial activity on the beach and in the water.</p>
+    <ul class="meta"><li><b>Pay:</b> $50–$100 per lesson</li><li><b>Startup:</b> Gear, insurance</li><li><b>Best for:</b> Skilled water lovers</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,cleaning-kit,hand-cart|Gear for Virginia Beach side hustlers]]
+
+<h2 id="year-round">Year-round local services</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="boat-cleaning">13. Boat cleaning and detailing</h3>
+    <p>Marinas on Rudee Inlet and Lynnhaven and backyard docks in Bay Colony and Lake Smith need regular wash-downs, waxing and winterizing help. Learn marine-safe products first.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Water lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">14. Handyman and furniture assembly</h3>
+    <p>Rental properties and military moves keep TaskRabbit busy with furniture assembly, TV mounting and small repairs. Stay away from electrical, plumbing and structural work that needs a license.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">15. Mobile car detailing</h3>
+    <p>Salt air, beach sand and spring pollen are hard on cars. Offer on-site detailing at office parks near Town Center and to service members who don't have time on weekends.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">16. Tutoring and childcare</h3>
+    <p>Military families who move mid-year often need tutoring to catch up, and parents with deployed spouses need reliable sitters. Students at Regent, Virginia Wesleyan, ODU and TCC can fill both roles.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$55/hr</li><li><b>Startup:</b> $0–$50 (CPR class helps)</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="storm-prep">17. Storm prep and cleanup</h3>
+    <p>Hurricanes and nor'easters both hit the coast. Offer gutter cleaning, securing outdoor furniture, and debris cleanup afterward. A [[amazon:leaf-blower|cordless leaf blower]] doubles for fall leaves and post-storm cleanup.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$65/hr</li><li><b>Startup:</b> $100–$500</li><li><b>Best for:</b> Truck owners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling and furniture flipping</h3>
+    <p>Military families sell furniture quickly before moves, and estate sales in established neighborhoods are good sourcing. Refresh and resell on Facebook Marketplace or list online through <a href="/shopify/">Shopify</a> once you have a niche.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> DIYers with a truck</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Virginia Beach only allows short-term rentals in certain areas and with registration and permits. If you clean, co-host or deliver for rentals, make sure the properties you work with are legal. Also check with base housing before running a business from on-base quarters.</div>
+
+<h2 id="seasonal-calendar">A year of side gigs in Virginia Beach</h2>
+<ul>
+  <li><strong>March–May:</strong> pressure washing, spring yard cleanups and detailing after pollen season. The Shamrock Marathon and the Pungo Strawberry Festival bring early-season visitors.</li>
+  <li><strong>June–August:</strong> peak season. Max out rental cleaning, rideshare, beach gear delivery and event shifts, and catch the summer wave of military moves.</li>
+  <li><strong>September–November:</strong> the Neptune Festival, fall cleanups, leaf removal and storm prep. Hurricane season runs through November.</li>
+  <li><strong>December–February:</strong> slower for tourism. Lean on delivery, pet sitting during holiday travel, tutoring and remote work.</li>
+</ul>
+
+<h2 id="launch-plan">How to start a side hustle in Virginia Beach this month</h2>
+<ol class="steps">
+  <li><strong>Pick one summer gig and one year-round gig.</strong> For example, rental cleaning plus pet sitting, or rideshare plus lawn care.</li>
+  <li><strong>Register with the city.</strong> Contact the Commissioner of the Revenue about a business license and complete the home-use zoning form if you work from home.</li>
+  <li><strong>Find clients where locals look.</strong> Nextdoor, Facebook neighborhood and military spouse groups, and calls to Sandbridge and Oceanfront property managers in early spring.</li>
+  <li><strong>Collect five reviews quickly.</strong> Offer an introductory rate to early clients in exchange for honest reviews.</li>
+  <li><strong>Set aside 30% of profit.</strong> Virginia income tax plus federal and self-employment tax add up. Our <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> helps you plan.</li>
+</ol>
+
+<h2 id="virginia-taxes">Virginia taxes and Virginia Beach rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> Virginia's graduated rates run from 2% to 5.75%, and the top rate applies to taxable income over $17,000. Most side income is taxed at 5.75%.</li>
+  <li><strong>Estimated payments:</strong> if no tax is withheld from your side income, you may need to make quarterly Virginia estimated payments in addition to federal ones.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, plus federal income tax.</li>
+  <li><strong>Business license and BPOL:</strong> Virginia Beach requires a business license, including for home-based businesses, and charges a Business, Professional and Occupational License (BPOL) tax based on gross receipts and business category. Ask the Commissioner of the Revenue what you owe at your income level.</li>
+  <li><strong>Sales tax:</strong> if you sell physical goods, register with Virginia Tax and collect sales tax.</li>
+</ul>
+
+<h2 id="nearby-cities">Compare other cities</h2>
+<p>See our guides to the <a href="/best-side-hustles-in-raleigh/">best side hustles in Raleigh</a>, <a href="/best-side-hustles-in-washington/">Washington, DC</a> and <a href="/best-side-hustles-in-baltimore/">Baltimore</a>. Virginia Beach has a shorter peak season than those cities but a large, steady military population that needs help year-round. Our advice at Better Side Hustles: build summer savings, keep one local service going all year and track every dollar.</p>
 HTML,
 ];

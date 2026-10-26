@@ -1,146 +1,196 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Orlando (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Orlando to earn extra income with flexible, realistic opportunities that fit your schedule.',
-    'h1' => 'Best Side Hustles in Orlando',
-    'kicker' => 'City Guide · FL',
-    'dek' => 'Gig apps, local services and online work that pay in Orlando — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-22',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Orlando.webp',
-    'image_alt' => 'Best Side Hustles in Orlando',
-    'category' => 'City Guides',
-    'city' => 'Orlando',
-    'state' => 'FL',
-    'keywords' => ['best side hustles in orlando'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-jacksonville', 'best-side-hustles-in-miami', 'best-side-hustles-in-tampa'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Orlando for beginners?', 'a' => 'Driving for rideshare apps, food delivery, and event work are easy to start and don’t cost much upfront.'],
-        ['q' => 'Can I realistically make $1,000 per month with a side hustle in Orlando?', 'a' => 'Yes, many people reach that goal by working part-time or combining two simple side gigs.'],
-        ['q' => 'Do I need a business license to start a side hustle in Orlando?', 'a' => 'Some hustles require a business tax receipt or permits, especially short-term rentals and tour services.'],
-        ['q' => 'Is Airbnb hosting profitable in Orlando?', 'a' => 'It can pay well near tourist areas, but you must follow local rules before listing your property.'],
-        ['q' => 'Are side hustles in Orlando seasonal?', 'a' => 'Many are influenced by tourism peaks, but diversifying your income streams can create year-round stability.'],
-        ['q' => 'What side hustle works best around a full-time job?', 'a' => 'Freelancing, delivery driving, and digital services offer the most scheduling flexibility.'],
-        ['q' => 'How competitive are Orlando side hustles?', 'a' => 'Competition exists, but strong reviews, niche positioning, and smart pricing can quickly differentiate you.'],
-        ['q' => 'What’s the lowest-cost side hustle to start?', 'a' => 'Freelance digital services or rideshare driving typically require minimal upfront investment.'],
-        ['q' => 'Can I run multiple side hustles at once?', 'a' => 'Yes, many successful earners layer seasonal, digital, and event-based work for maximum income.'],
-        ['q' => 'What’s the fastest way to start earning?', 'a' => 'Rideshare, food delivery, and event staffing platforms often allow you to begin within days of approval.'],
+    'title'       => 'Best Side Hustles in Orlando (2026): 18 Ways to Earn Extra',
+    'description' => 'The best side hustles in Orlando for 2026: 18 side gigs with real pay, startup costs, theme-park and convention surges, vacation-home work and Florida tax tips.',
+    'h1'          => 'Best Side Hustles in Orlando (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'City Guide · FL',
+    'dek'         => 'Orlando runs on visitors, conventions and fast-growing suburbs. Here are the side jobs in Orlando that tap all three — vacation-home turnovers, airport runs, pool routes, event shifts and remote work — with pay ranges and a plan to start.',
+    'published'   => '2026-02-22',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Orlando.webp',
+    'image_alt'   => 'Lake Eola and downtown Orlando skyline, illustrating the best side hustles in Orlando',
+    'category'    => 'City Guides',
+    'city'        => 'Orlando',
+    'state'       => 'FL',
+    'keywords'    => ['best side hustles in orlando', 'side jobs in orlando', 'side gigs in orlando', 'how to make money in orlando', 'orlando side hustles 2026'],
+    'tool'        => 'gig-calculator',
+    'gear'        => ['pressure-washer', 'hand-cart', 'camera', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-tampa', 'best-side-hustles-in-jacksonville', 'best-side-hustles-in-miami'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Orlando?', 'a' => 'The best picks are vacation-home turnover cleaning, rideshare focused on Orlando International Airport and the resort corridor, grocery delivery to rental homes, convention and event staffing, pool cleaning, pressure washing, pet sitting and remote freelancing. Orlando\'s steady tourist traffic and fast-growing suburbs keep these gigs busy most of the year.'],
+        ['q' => 'How can I make money in Orlando quickly?', 'a' => 'Delivery apps like Instacart, DoorDash and Uber Eats, event staffing apps, Rover pet sitting and vacation rental cleaning can all pay within one to two weeks. Cleaning is especially fast: property managers near Kissimmee and Davenport constantly need reliable turnover help, and many will train you on their checklist.'],
+        ['q' => 'Do I need a business license for a side hustle in Orlando?', 'a' => 'Florida has no general statewide business license, but Orange County requires a local business tax receipt, and businesses inside Orlando city limits also need a City of Orlando business tax receipt. Home-based businesses must follow home occupation rules. If you work in Osceola or Seminole County, check those counties and cities instead.'],
+        ['q' => 'Do Orlando side hustlers pay state income tax?', 'a' => 'No. Florida has no personal income tax, so you owe only federal income tax and 15.3% self-employment tax on net profit. Product sellers must register for Florida sales tax, and anyone renting a home or room short-term owes state and county tourist taxes unless the booking platform remits them.'],
+        ['q' => 'How much can I earn from side jobs in Orlando?', 'a' => 'With 8–15 hours a week, most people typically earn $400–$1,500 a month. App-based driving and delivery usually net $14–$22 an hour after gas, while turnover cleaning, pool service, pressure washing and freelance work often pay $30–$75 an hour once you have regular clients. Seasons and hours make a big difference.'],
+        ['q' => 'Can theme park employees have a side hustle in Orlando?', 'a' => 'Many do. Park and hotel schedules often leave weekday mornings or late evenings open, which fits delivery, pet sitting, cleaning or online work. Check your employer\'s outside-employment and social media policies first, and avoid anything that uses your employer\'s name, characters or trademarks without permission.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Orlando</strong>, you’re in the right city at the right time. Few places in the U.S. combine tourism, entertainment, conventions, hospitality, and remote work growth quite like this one. The energy here isn’t seasonal hype. It’s steady. It’s global. And it creates opportunity.</p>
-<p>Orlando isn’t just theme parks. It’s conferences at the Orange County Convention Center, destination weddings, family vacations. It’s tech startups quietly expanding and Its hospitality workers with flexible schedules. All of that creates demand. And demand creates income.</p>
-<p>Let’s break down the <strong>best side hustles in Orlando</strong>—realistic ones. Practical ones. The kind you can actually start.</p>
-<h2 id="h-why-orlando-is-built-for-side-hustles">Why Orlando Is Built for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Orlando,_Florida">Orlando</a> runs on visitors. That means:</p>
-<ul><li>High foot traffic year-round</li><li>Seasonal spikes (spring break, summer, holidays)</li><li>Convention-driven surges</li><li>Families willing to spend for convenience</li></ul>
-<p>If you position yourself around those patterns, you win.</p>
-<p>Before jumping in, consider what makes a <a href="/best-side-hustles-in-tampa/">side hustle</a> successful here.</p>
-<h3 id="h-what-makes-a-side-hustle-work-in-orlando">What Makes a Side Hustle Work in Orlando?</h3>
-<table class="data"><tbody><tr><td><strong>Factor</strong></td><td><strong>Why It Matters</strong></td><td><strong>Example</strong></td></tr><tr><td>Seasonality</td><td>Income can spike during peak travel</td><td>Airport rideshare driving</td></tr><tr><td>Location</td><td>Proximity to attractions increases demand</td><td>Airbnb near Disney</td></tr><tr><td>Licensing</td><td>Some gigs require city compliance</td><td>Tour guiding</td></tr><tr><td>Flexibility</td><td>Hospitality workers need adaptable hours</td><td>Food delivery</td></tr></tbody></table>
-<p>Not every hustle fits every lifestyle. Some are weekend-heavy. Others scale into full businesses. Choose intentionally.</p>
-<h3 id="h-1-rideshare-amp-airport-driving">1. Rideshare &amp; Airport Driving</h3>
-<p>Let’s start simple.</p>
-<p>Orlando International Airport never sleeps for long. Flights land early. Families leave late. Tourists need rides constantly.</p>
-<p>Driving for <a href="https://insideoursuitcase.com/uber-vs-lyft-in-orlando/">Uber or Lyft</a> is one of the <strong>best side hustles in Orlando</strong> because demand is consistent. Focus on:</p>
-<ul><li>Airport pickups</li><li>Resort drop-offs</li><li>Convention center routes</li><li>Peak hours (early morning, late evening)</li></ul>
-<p><strong>Action tip:</strong> Track your hourly earnings by time block. You’ll quickly see which hours produce the highest return. Optimize around that. Treat it like a business, not a casual gig.</p>
-<p>Startup cost? Low.<br/>Flexibility? High.<br/>Income potential? Moderate to strong with smart scheduling.</p>
-<h3 id="h-2-vacation-rental-hosting-or-co-hosting">2. Vacation Rental Hosting (Or Co-Hosting)</h3>
-<p>Orlando is short-term rental territory. Families want space. Groups want kitchens. Travelers want flexibility.</p>
-<p>If you own property near major attractions, short-term rental hosting can be powerful. But even if you don’t, there’s another path: <strong>co-hosting.</strong></p>
-<p>You can:</p>
-<ul><li>Manage listings for owners</li><li>Coordinate cleaning</li><li>Handle guest communication</li><li>Optimize pricing</li></ul>
-<p>That means earning without owning the property.</p>
-<p><strong>Important:</strong> Check local regulations carefully. Some areas have strict zoning and registration requirements. Do this right from the beginning.</p>
-<p>For many entrepreneurs, this ranks among the <strong>best side hustles in Orlando</strong> because it can scale. One property turns into three. Three turns into ten.</p>
-<h3 id="h-3-event-amp-convention-staffing">3. Event &amp; Convention Staffing</h3>
-<p>The Orange County Convention Center hosts major events year-round. Tech expos. Medical conferences. Trade shows. Brand launches.</p>
-<p>These events need:</p>
-<ul><li>Registration staff</li><li>Brand ambassadors</li><li>Product demonstrators</li><li>Setup crews</li></ul>
-<p>Pay ranges from moderate to strong depending on the role.</p>
-<p><strong>Action step:</strong> Create a simple one-page resume tailored to event work. Highlight reliability, presentation, and customer service. Then register with staffing agencies that specialize in conventions.</p>
-<p>This is one of the <strong>best side hustles in Orlando</strong> for people who want short bursts of high-energy work without long-term commitment.</p>
-<h3 id="h-4-theme-park-photography-amp-vacation-shoots">4. Theme Park Photography &amp; Vacation Shoots</h3>
-<p>Families travel here to create memories. And they want them captured well.</p>
-<p>You don’t need to be a studio-level photographer to start. You need:</p>
-<ul><li>A decent camera</li><li>Editing skills</li><li>A strong Instagram portfolio</li><li>Clear package pricing</li></ul>
-<p>Offer:</p>
-<ul><li>30-minute vacation sessions</li><li>Surprise proposal photography</li><li>Graduation mini-shoots near resorts</li></ul>
-<p>Market through local Facebook groups and tourism forums.</p>
-<p>This hustle works because visitors are already in spending mode. They’re emotionally invested in the trip. That makes photography one of the <strong>best side hustles in Orlando</strong> for creatives.</p>
-<h3 id="h-5-merchandise-reselling-theme-park-flipping">5. Merchandise Reselling (Theme Park Flipping)</h3>
-<p>Limited-edition merchandise moves fast. Disney and Universal release items collectors chase aggressively.</p>
-<p>If you have park access, you can:</p>
-<ul><li>Monitor release calendars</li><li>Purchase limited runs</li><li>Resell through eBay or niche groups</li></ul>
-<p>But be smart. Avoid overbuying. Track demand. Stay ethical.</p>
-<p>Profit margins vary, but limited releases can generate strong returns when timed correctly. It’s niche. It requires research. But for some, it becomes surprisingly profitable.</p>
-<h3 id="h-6-water-based-gigs-amp-lake-rentals">6. Water-Based Gigs &amp; Lake Rentals</h3>
-<p>Orlando has lakes everywhere. Tourists don’t always think about them—but locals do.</p>
-<p>Side hustle ideas include:</p>
-<ul><li>Paddleboard rentals</li><li>Kayak experiences</li><li>Guided fishing tours</li><li>Small boat rentals</li></ul>
-<p>You’ll need insurance. Possibly permits. Definitely safety compliance.</p>
-<p>But water-based activities can separate you from crowded tourist competition. That’s strategic positioning. And it’s why this makes the list of <strong>best side hustles in Orlando</strong> for those who enjoy the outdoors.</p>
-<h3 id="h-7-freelance-digital-services">7. Freelance Digital Services</h3>
-<p>Not all income needs sun exposure.</p>
-<p>Orlando has thousands of small businesses in hospitality, tourism, dining, and retail. Many need digital help.</p>
-<p>You can offer:</p>
-<ul><li>Social media management</li><li>Short-form video editing</li><li>Website updates</li><li>Email marketing</li><li>Graphic design</li></ul>
-<p>Startup cost? Minimal.<br/>Upside? Significant.</p>
-<p><strong>Action tip:</strong> Pick one niche—restaurants, vacation rentals, tour companies—and specialize. Specialization increases rates.</p>
-<p>Remote flexibility makes freelancing one of the most scalable options among the <strong>best side hustles in Orlando</strong>.</p>
-<h3 id="h-8-short-term-childcare-for-traveling-families">8. Short-Term Childcare for Traveling Families</h3>
-<p>Parents want date nights on vacation. They want flexibility. They want safety.</p>
-<p>If you have childcare experience:</p>
-<ul><li>Get background checks</li><li>Register with reputable platforms</li><li>Collect references</li><li>Offer in-hotel babysitting</li></ul>
-<p>Trust is everything here.</p>
-<p>This side hustle thrives because it solves a real pain point. That’s always a strong foundation for income.</p>
-<h3 id="h-9-food-based-side-hustles">9. Food-Based Side Hustles</h3>
-<p>Orlando runs on hospitality workers. And hospitality workers often work odd hours.</p>
-<p>That opens doors for:</p>
-<ul><li>Meal prep services</li><li>Cottage baking (if permitted under Florida law)</li><li>Food delivery driving</li><li>Late-night snack pop-ups</li></ul>
-<p>Delivery apps like DoorDash and Uber Eats remain consistent income options, especially near tourist corridors.</p>
-<p>Food services remain among the <strong>best side hustles in Orlando</strong> because convenience sells. Every time.</p>
-<h3 id="h-10-content-creation-around-orlando-travel">10. Content Creation Around Orlando Travel</h3>
-<p>Visitors research heavily before booking.</p>
-<p>You can build:</p>
-<ul><li>A YouTube channel reviewing attractions</li><li>A travel blog monetized through affiliate links</li><li>TikTok content highlighting hidden spots</li><li>Instagram reels featuring local restaurants</li></ul>
-<p>Monetization streams include:</p>
-<ul><li>Affiliate commissions</li><li>Sponsored content</li><li>Ad revenue</li><li>Digital travel guides</li></ul>
-<p>This takes time. It’s not instant cash. But it can become location-leveraged income.</p>
-<h2 id="h-seasonal-vs-year-round-income">Seasonal vs Year-Round Income</h2>
-<p>Orlando has patterns.</p>
-<p><strong>Peak periods:</strong></p>
-<ul><li>Spring break</li><li>Summer</li><li>Holidays</li><li>Major conventions</li></ul>
-<p><strong>Slower periods:</strong></p>
-<ul><li>Early fall</li><li>Post-holiday January</li></ul>
-<p>Smart side hustlers diversify. For example:</p>
-<ul><li>Drive rideshare during peak tourist months</li><li>Shift to freelancing during slower periods</li><li>Offer promotions during off-peak seasons</li></ul>
-<p>Income stability comes from layering opportunities.</p>
-<h2 id="h-realistic-income-expectations">Realistic Income Expectations</h2>
-<p>Here’s a simplified comparison:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Flexibility</strong></td><td><strong>Income Potential</strong></td></tr><tr><td>Rideshare</td><td>Low</td><td>High</td><td>$500–$1,500/month part-time</td></tr><tr><td>Airbnb Co-Hosting</td><td>Low–Medium</td><td>Medium</td><td>$1,000–$3,000/month</td></tr><tr><td>Freelancing</td><td>Low</td><td>Very High</td><td>$1,000–$5,000+/month</td></tr><tr><td>Event Staffing</td><td>Low</td><td>Medium</td><td>$200–$800 per event week</td></tr><tr><td>Photography</td><td>Medium</td><td>Medium</td><td>$150–$500 per session</td></tr></tbody></table>
-<p>Results vary. Effort matters. Strategy matters more.</p>
-<h2 id="h-legal-amp-licensing-considerations">Legal &amp; Licensing Considerations</h2>
-<p>Before launching any of the <strong>best side hustles in Orlando</strong>, check:</p>
-<ul><li>Business tax receipts</li><li>Zoning restrictions</li><li>Insurance requirements</li><li>Short-term rental regulations</li><li>Commercial vehicle insurance if driving</li></ul>
-<p>Ignoring compliance can erase profits quickly. Build correctly from day one.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle-for-you">How to Choose the Right Side Hustle for You</h2>
-<p>Ask yourself:</p>
-<ul><li>Do I enjoy working with tourists?</li><li>Do I want face-to-face interaction?</li><li>How much time can I realistically commit?</li><li>Am I comfortable with variable income?</li><li>How much capital can I invest upfront?</li></ul>
-<p>If you prefer structure, event staffing or freelancing may work best.<br/>If you prefer flexibility, rideshare or delivery driving might fit.<br/>and if you want scale, digital services or short-term rentals offer upside.</p>
-<p>Be honest about your bandwidth. That’s where most people miscalculate.</p>
-<h2 id="h-smart-strategies-to-maximize-income">Smart Strategies to Maximize Income</h2>
-<ol><li><strong>Leverage Peak Hours</strong><strong><br/></strong> Track tourist flows and schedule around them.</li><li><strong>Collect Reviews Aggressively</strong><strong><br/></strong> Social proof increases conversion.</li><li><strong>Bundle Services</strong><strong><br/></strong> Photography + travel guide PDF.Airbnb hosting + cleaning.</li><li><strong>Raise Prices Gradually</strong><strong><br/></strong> Don’t underprice long-term.</li><li><strong>Track Metrics</strong><strong><br/></strong> Revenue per hour.Cost per acquisition.Return on time invested.</li></ol>
-<p>Treat your side hustle like a small business. Because it is.</p>
-<h2 id="h-final-thoughts-turn-orlando-s-energy-into-income">Final Thoughts: Turn Orlando’s Energy Into Income</h2>
-<p>The <strong>best side hustles in Orlando</strong> all share one theme: they align with the city’s energy. Tourism. Events. Hospitality. Flexibility. Creativity.</p>
-<p>You don’t need to quit your job.<br/>You don’t need massive capital.<br/>but you need clarity. Strategy. Consistency.</p>
-<p>Start small. Test one idea. Track results for 30 days. Adjust. Improve. Expand.</p>
-<p>Orlando isn’t slowing down. The visitors will keep coming. The conventions will keep booking. The families will keep planning trips.</p>
-<p>The opportunity is already here.</p>
-<p>The only question is—are you going to tap into it?</p>
+    'body'        => <<<'HTML'
+<p>Tens of millions of visitors come to the Orlando area every year, and almost every one of them needs a ride, a meal, a clean vacation home or a photo to remember the trip. Add one of the country's busiest convention centers, a major university and suburbs that keep spreading toward Lake Nona, Horizon West and Kissimmee, and you get a city where the best side hustles in Orlando are less about finding demand and more about choosing the right slice of it.</p>
+<p>This guide covers 18 side gigs that pay here, what each one typically earns, how much it costs to start and how to time your effort around park seasons, conventions and summer storms.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Florida state income tax</span></div>
+  <div class="stat"><b>$14–$75</b><span>typical hourly range</span></div>
+  <div class="stat"><b>1–2 weeks</b><span>to first payout on most gigs</span></div>
+</div>
+
+<h2 id="three-economies">Orlando's three side-hustle economies</h2>
+<p>Think of Orlando as three overlapping markets, each with different customers:</p>
+<ul>
+  <li><strong>The resort corridor.</strong> Walt Disney World, Universal Orlando (now with Epic Universe), SeaWorld and International Drive, plus thousands of vacation homes in Kissimmee, Davenport and ChampionsGate. Customers are visitors who want convenience.</li>
+  <li><strong>The convention and event circuit.</strong> The Orange County Convention Center, Camping World Stadium, the Kia Center (Magic) and Inter&amp;Co Stadium (Orlando City and the Pride) generate waves of staffing, catering and transportation work.</li>
+  <li><strong>The local suburbs.</strong> Winter Park, Dr. Phillips, Windermere, Lake Nona, Oviedo and Clermont are full of families and professionals — many working for AdventHealth, Orlando Health, Lockheed Martin or the simulation and defense firms near UCF — who pay for lawns, pools, pets and tutoring.</li>
+</ul>
+<p>The most successful side hustlers here usually pick one market and learn it well.</p>
+
+<h2 id="best-side-hustles-in-orlando">The 8 best side hustles in Orlando</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="turnover-cleaning">1. Vacation-home turnover cleaning</h3>
+    <p>The vacation home districts southwest of the parks have an enormous number of rental houses with private pools, and each checkout needs a fast, thorough clean before the next family arrives. Saturday and Sunday turnovers are the busiest. Property management companies hire independent cleaners and often pay per home.</p>
+    <ul class="meta"><li><b>Pay:</b> $90–$200 per turnover</li><li><b>Startup:</b> $100–$250 in supplies</li><li><b>Best for:</b> Fast, reliable workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Airport and resort rideshare</h3>
+    <p>Orlando International Airport sends a steady stream of long rides to Disney, Universal and Kissimmee — trips that pay well per ride. Convention move-in and move-out days, park closing times and late flights are the peak windows. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers the basics.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$26/hr before gas</li><li><b>Startup:</b> Eligible car, SunPass for toll roads</li><li><b>Best for:</b> Early mornings and nights</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="grocery-delivery">3. Grocery delivery to vacation rentals</h3>
+    <p>Families arriving at rental homes want the fridge stocked before they get there. Instacart and Walmart orders around the resort corridor are often large, and big orders usually mean bigger tips. A folding [[amazon:hand-cart|hand cart]] makes hauling cases of water and groceries much easier.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$24/hr before gas</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Weekend arrival days</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">4. Convention and event staffing</h3>
+    <p>Large trade shows at the convention center need registration staff, booth help, setup and teardown crews and brand ambassadors. Concerts, college bowl games at Camping World Stadium and Magic games add more shifts. Sign up with several staffing agencies to stay booked.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr, more for brand ambassadors</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Outgoing people with flexible days</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-service">5. Pool cleaning routes</h3>
+    <p>Vacation homes and suburban backyards both need weekly pool care, and rental owners won't risk a green pool on arrival day. Build a route in one community to cut drive time. Stick to cleaning and chemistry; refer pump and heater repairs to licensed pros.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45 per visit</li><li><b>Startup:</b> $300–$600</li><li><b>Best for:</b> Recurring income</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="co-hosting">6. Vacation rental co-hosting</h3>
+    <p>Many vacation homes are owned by out-of-state or international investors who need someone local to handle guests, maintenance calls and restocking. You earn a percentage of revenue without owning property. City of Orlando rules are stricter than the resort zones in Osceola County, so only manage legally permitted homes.</p>
+    <ul class="meta"><li><b>Pay:</b> 10–25% of booking revenue</li><li><b>Startup:</b> Phone, time</li><li><b>Best for:</b> Organized problem solvers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">7. Pressure washing</h3>
+    <p>Pool decks, screened enclosures, driveways and roofs grow algae fast in Central Florida humidity, and HOAs in Lake Nona, Windermere and Winter Garden send letters about it. An [[amazon:pressure-washer|electric pressure washer]] gets you started on residential jobs.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">8. Pet sitting and dog walking</h3>
+    <p>Hospitality and healthcare workers on long shifts and locals who travel all need pet care. Rover is busy in Baldwin Park, College Park, Winter Park and Lake Nona. Holidays book out weeks ahead.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/walk, $45–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+</div>
+<div class="callout"><strong>Quick tip:</strong> Toll roads like SR 417, SR 528 and SR 429 save time between the airport and the resort corridor but eat into profit. Log tolls and mileage from day one; both are deductible business expenses.</div>
+
+<h2 id="side-jobs-compared">Side jobs in Orlando compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Turnover cleaning</td><td>$90–$200 per home</td><td>$100–$250</td><td>1–2 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$15–$26/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Grocery delivery</td><td>$15–$24/hr before gas</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>Event staffing</td><td>$15–$25/hr</td><td>$0</td><td>Next big show</td></tr>
+    <tr><td>Pool cleaning</td><td>$25–$45 per visit</td><td>$300–$600</td><td>1–3 weeks</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Photography</td><td>$150–$350 per session</td><td>Camera</td><td>2–4 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="visitor-gigs">More ways to earn from Orlando visitors</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="photography">9. Family vacation and proposal photography</h3>
+    <p>Families want professional photos without the park price tag. Shoot sessions at Lake Eola, Winter Park's Park Avenue, resort hotels where permitted and rental homes. Engagement and proposal packages sell well. Always confirm property photography rules before booking a location.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$350 per session</li><li><b>Startup:</b> Camera or flagship phone</li><li><b>Best for:</b> Photographers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="baby-gear">10. Baby gear and stroller rentals</h3>
+    <p>Families flying in don't want to haul cribs, strollers and high chairs. Rent and deliver them to hotels and rental homes through your own site or rental marketplaces. Clean and inspect everything between rentals.</p>
+    <ul class="meta"><li><b>Pay:</b> $10–$25 per item per day</li><li><b>Startup:</b> $300–$1,000 in gear</li><li><b>Best for:</b> Parents with storage space</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="welcome-services">11. Vacation-home restocking and concierge</h3>
+    <p>Restock toiletries, check pools and appliances between guests, or handle mid-stay guest requests for property owners. It pairs naturally with cleaning or co-hosting.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$40/hr or per-visit fees</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Reliable locals</li></ul>
+  </div>
+</div>
+
+[[gear:cleaning-kit,phone-mount,power-bank|Gear that pays off in Orlando]]
+
+<h2 id="suburban-services">Services for Orlando homeowners</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-care">12. Lawn care</h3>
+    <p>Central Florida lawns grow almost all year. New subdivisions in Horizon West, Lake Nona and St. Cloud are packed with homeowners who'd rather pay than mow in August. Keep routes tight to one area.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> $0–$500</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">13. Furniture assembly and handyman jobs</h3>
+    <p>New homes and constant move-ins mean furniture to build, TVs to mount and shelves to hang. TaskRabbit is active here. Avoid electrical, plumbing and structural work that requires a license.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400 tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">14. Tutoring</h3>
+    <p>UCF is one of the largest universities in the country, and its students and grads tutor everything from calculus to engineering. Families in Windermere, Winter Park and Oviedo pay for test prep and homework help.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">15. Mobile car detailing</h3>
+    <p>Lovebug season and constant sun damage keep cars dirty. Office parks near Lake Nona Medical City, Maitland and the Research Park by UCF are great places to offer on-site detailing.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+</div>
+
+<h2 id="remote-work">Remote and creative side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="freelancing">16. Freelance design, video and animation</h3>
+    <p>Full Sail University and UCF turn out a deep pool of video, game and animation talent. Use those skills for local businesses, wedding videos or global clients on <a href="/fiverr/">Fiverr</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$80/hr</li><li><b>Startup:</b> Laptop, software</li><li><b>Best for:</b> Creatives</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="social-media">17. Social media for hospitality businesses</h3>
+    <p>Restaurants, rental owners and attractions need steady content. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> shows how to package monthly retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> $400–$1,500 per client per month</li><li><b>Startup:</b> Phone</li><li><b>Best for:</b> Content creators</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling park merchandise and collectibles</h3>
+    <p>Limited-edition merchandise, pins and collectibles have a large resale market online. Know the rules: parks often limit purchase quantities, and reselling can get annual passes revoked if you break terms of use. Thrift and estate-sale flipping is a safer alternative.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,000/month part-time</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Collectors</li></ul>
+  </div>
+</div>
+
+<h2 id="earnings-goal">Set your Orlando earnings goal</h2>
+<p>Decide what you need each month, then work backward to hours and clients. Plug in your numbers:</p>
+<p>[[tool:income-calculator]]</p>
+<div class="callout callout-warn"><strong>Watch out:</strong> Orlando's tourism runs in waves. Spring break, summer and the winter holidays are peak; parts of late summer and fall can be noticeably slower in the resort areas. Build a cash cushion in peak months, and pair a tourist gig with a local one like lawns or pools.</div>
+
+<h2 id="first-month">How to start a side hustle in Orlando in 30 days</h2>
+<ol class="steps">
+  <li><strong>Choose your market.</strong> Visitors, conventions or locals — pick one so your marketing is clear.</li>
+  <li><strong>Check licensing.</strong> Look up Orange County's local business tax receipt, plus City of Orlando requirements if you're inside city limits. Osceola and Seminole have their own.</li>
+  <li><strong>Reach decision-makers directly.</strong> Call vacation rental management companies, join staffing agency rosters and post in Lake Nona, Winter Garden or Oviedo community groups.</li>
+  <li><strong>Deliver five great jobs and collect reviews.</strong> Reviews unlock repeat bookings faster than any ad.</li>
+  <li><strong>Track every expense and mile.</strong> Our <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> helps you know what to set aside.</li>
+</ol>
+
+<h2 id="florida-taxes">Florida taxes and Orlando-area rules</h2>
+<ul>
+  <li><strong>No state income tax</strong> on wages or self-employment income in Florida.</li>
+  <li><strong>Federal tax and self-employment tax</strong> (15.3% of net profit) still apply. Pay quarterly estimates once you expect to owe $1,000 or more.</li>
+  <li><strong>Local business tax receipts:</strong> Orange County requires one, and the City of Orlando and other cities issue their own for businesses within their limits.</li>
+  <li><strong>Sales tax:</strong> selling goods or renting equipment like baby gear may require registering with the Florida Department of Revenue. Check whether your rental items are taxable.</li>
+  <li><strong>Short-term rentals:</strong> hosts owe state transient rental tax and county tourist development tax, and whole-home rentals may need a state vacation rental license.</li>
+</ul>
+
+<h2 id="nearby-cities">Nearby Florida city guides</h2>
+<p>Compare Orlando with our guides to the <a href="/best-side-hustles-in-tampa/">best side hustles in Tampa</a> and <a href="/best-side-hustles-in-jacksonville/">Jacksonville</a>, both an easy drive away. Orlando's edge is sheer visitor volume; its challenge is seasonality. Better Side Hustles' advice: start with one tourist-driven gig and one local service, and you'll have income in both the busy and slow months.</p>
 HTML,
 ];

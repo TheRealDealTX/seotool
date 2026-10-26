@@ -1,136 +1,211 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Miami (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Miami for 2026, from tourism and real estate to online gigs that generate flexible, scalable income.',
-    'h1' => 'Best Side Hustles in Miami',
-    'kicker' => 'City Guide · FL',
-    'dek' => 'Gig apps, local services and online work that pay in Miami — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-29',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Miami.webp',
-    'image_alt' => 'Best Side Hustles in Miami',
-    'category' => 'City Guides',
-    'city' => 'Miami',
-    'state' => 'FL',
-    'keywords' => ['best side hustles in miami'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-jacksonville', 'best-side-hustles-in-tampa', 'best-side-hustles-in-orlando'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Miami right now?', 'a' => 'Airbnb co-hosting, social media management, mobile car detailing, freelancing, and vacation photography are among the most profitable options.'],
-        ['q' => 'Can I start a side hustle in Miami with little money?', 'a' => 'Yes, many of the best side hustles in Miami—like freelancing, virtual assistance, and social media management—require minimal upfront costs.'],
-        ['q' => 'Are side hustles in Miami seasonal?', 'a' => 'Some tourism-based hustles are seasonal, but many service and online side hustles generate income year-round.'],
-        ['q' => 'Do I need a license to start a side hustle in Miami?', 'a' => 'It depends on the hustle; services like cleaning, fitness training, or rental management may require permits or insurance.'],
-        ['q' => 'How much can a side hustle earn in Miami per month?', 'a' => 'Earnings vary, but many people make anywhere from a few hundred dollars to several thousand per month with the right side hustle.'],
-        ['q' => 'What side hustles work best for full-time employees?', 'a' => 'Flexible options like social media management, virtual assistance, and Airbnb co-hosting fit well around full-time schedules.'],
-        ['q' => 'Are online side hustles competitive in Miami?', 'a' => 'Yes, but local knowledge gives you an edge when working with Miami-based businesses and clients.'],
-        ['q' => 'Which side hustles scale the fastest in Miami?', 'a' => 'Airbnb co-hosting, cleaning services, and digital marketing services scale quickly with systems and referrals.'],
-        ['q' => 'Is Miami a good city for creative side hustles?', 'a' => 'Absolutely—photography, videography, content creation, and event work thrive in Miami’s lifestyle-driven economy.'],
-        ['q' => 'How do I choose the right side hustle in Miami?', 'a' => 'Start with your skills, time availability, and risk tolerance, then test demand locally before scaling.'],
+    'title'       => 'Best Side Hustles in Miami (2026): 19 Ways to Earn Extra',
+    'description' => 'The best side hustles in Miami for 2026: 19 side gigs with real pay ranges, startup costs, bilingual and boat work, event surges and Florida tax tips.',
+    'h1'          => 'Best Side Hustles in Miami (2026): 19 Side Gigs That Pay',
+    'kicker'      => 'City Guide · FL',
+    'dek'         => 'From cruise-day airport runs and Brickell co-hosting to boat detailing and bilingual freelancing, these are the side jobs in Miami that actually cover the rent gap — with pay, startup costs and how to land your first client.',
+    'published'   => '2026-01-29',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Miami.webp',
+    'image_alt'   => 'Miami skyline over Biscayne Bay, illustrating the best side hustles in Miami',
+    'category'    => 'City Guides',
+    'city'        => 'Miami',
+    'state'       => 'FL',
+    'keywords'    => ['best side hustles in miami', 'side jobs in miami', 'side gigs in miami', 'how to make money in miami', 'miami side hustles 2026'],
+    'tool'        => 'freelance-rate',
+    'gear'        => ['reef-sunscreen', 'pressure-washer', 'camera', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-tampa', 'best-side-hustles-in-orlando', 'best-side-hustles-in-jacksonville'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Miami?', 'a' => 'The strongest picks are airport and cruise-day rideshare, food delivery, short-term rental co-hosting and turnover cleaning, boat and car detailing, pressure washing, bilingual freelancing and translation, and event staffing around Art Basel, Ultra and the Miami Open. Miami rewards hustles tied to tourism, the water and the city\'s Spanish-English business culture.'],
+        ['q' => 'How can I make money in Miami fast?', 'a' => 'Delivery apps like DoorDash and Uber Eats, Instacart shopping, Rover pet sitting and event staffing agencies are the fastest routes and can pay within a week or two after background checks. If you own a pressure washer or cleaning supplies, posting before-and-after photos in neighborhood Facebook groups can land paying jobs within days.'],
+        ['q' => 'Do I need a business license for a side hustle in Miami?', 'a' => 'Usually, yes. Florida itself has no general state business license, but Miami-Dade County requires a local business tax receipt, and most cities, including the City of Miami, issue their own as well. Home-based businesses often need zoning approval first. Contact the county Tax Collector and your city\'s business tax office for your address.'],
+        ['q' => 'Does Florida tax side hustle income?', 'a' => 'Florida has no state personal income tax, so your side income is only taxed federally: income tax plus 15.3% self-employment tax on net profit. You may still owe Florida sales tax if you sell taxable goods, and short-term rental hosts owe state and county tourist taxes unless the platform remits them for you.'],
+        ['q' => 'How much can you make with side jobs in Miami?', 'a' => 'Most people putting in 8–15 hours a week typically earn $500–$1,800 a month. App gigs tend to net $15–$22 an hour after gas and tolls, while skilled services such as boat detailing, photography or bilingual freelancing often reach $40–$90 an hour with repeat clients. Results depend on season, hours and pricing.'],
+        ['q' => 'Which Miami neighborhoods are best for side hustles?', 'a' => 'Brickell, Downtown, Wynwood and Miami Beach are best for rideshare, delivery and nightlife-driven work. Coral Gables, Pinecrest, Coconut Grove and Key Biscayne suit pet sitting, tutoring, house cleaning and detailing for higher-income households. Doral and Kendall are strong for family services, while marinas around Coconut Grove and Miami Beach feed boat work.'],
     ],
-    'body' => <<<'HTML'
-<p>Miami has always moved differently. Faster. Louder. More opportunity-packed than people expect. And if you live here—or plan to—one thing becomes clear quickly: having <em>one</em> income stream often isn’t enough. That’s why interest in the <strong>best side hustles in Miami</strong> has exploded. Not as a trend. As a strategy.</p>
-<p>I’ve seen people turn weekend gigs into six-figure businesses here. I’ve also seen others burn out chasing the wrong hustle. Miami rewards speed, service, and smart positioning. Not noise.</p>
-<p>Let’s talk about what actually works.</p>
-<h2 id="h-why-miami-is-a-perfect-city-for-side-hustles">Why Miami Is a Perfect City for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Miami">Miami</a> sits at the intersection of tourism, real estate, nightlife, tech, and luxury services. That mix creates constant demand. Year-round.</p>
-<p>Short-term visitors need help. Property owners need support. Local businesses need visibility. And people with money value convenience.</p>
-<p>That’s the formula.</p>
-<p>Add a high cost of living, flexible gig platforms, and a population that embraces entrepreneurship, and you get one of the best cities in the U.S. for building extra income streams quickly.</p>
-<p>The key is choosing the <em>right</em> <a href="/best-side-hustles-in-jacksonville/">side hustle</a> for this market.</p>
-<h2 id="h-what-makes-a-side-hustle-work-in-miami">What Makes a Side Hustle Work in Miami</h2>
-<p>Before jumping into a list, it’s worth understanding what separates profitable hustles from time-wasters here.</p>
-<p><strong>Miami-friendly side hustles usually have:</strong></p>
-<ul><li>A clear local demand</li><li>Fast turnaround on payments</li><li>Low to moderate startup costs</li><li>High perceived value</li><li>Flexibility around tourism seasons</li></ul>
-<p>Some hustles are cash-heavy. Others scale beautifully online. The best ones combine both.</p>
-<h2 id="h-tourism-amp-hospitality-side-hustles-that-pay-well">Tourism &amp; Hospitality Side Hustles That Pay Well</h2>
-<p>Tourism is Miami’s economic engine. If visitors are involved, money flows faster.</p>
-<h3 id="h-airbnb-co-hosting-amp-short-term-rental-management">Airbnb Co-Hosting &amp; Short-Term Rental Management</h3>
-<p>This is one of the <strong>best side hustles in Miami</strong> if you’re organized and responsive.</p>
-<p>You don’t need to own property. Many hosts want help managing bookings, guest messages, cleaning schedules, and turnovers.</p>
-<p><strong>Why it works:</strong></p>
-<ul><li>Recurring income</li><li>High demand year-round</li><li>Easy to scale with systems</li></ul>
-<p>Many co-hosts charge 10–25% of monthly rental revenue. One well-managed unit can easily bring in $500–$1,500 per month.</p>
-<h3 id="h-vacation-photography">Vacation Photography</h3>
-<p>Miami sells experiences. Engagements on the beach. Influencer shoots. Family vacations.</p>
-<p>If you have photography skills, this is a goldmine.</p>
-<p><strong>Actionable tip:</strong> Partner with Airbnb hosts and hotels. Offer fixed-price sunset packages. Tourists love simplicity.</p>
-<h3 id="h-tour-guide-or-experience-host">Tour Guide or Experience Host</h3>
-<p>Food tours, nightlife walks, cultural experiences, boating add-ons. Platforms like Airbnb Experiences make it easy to launch.</p>
-<p>Personality matters more than polish here.</p>
-<h3 id="h-boat-charter-assistant-or-crew">Boat Charter Assistant or Crew</h3>
-<p>Miami’s boating scene isn’t slowing down. Helping with charters, setup, cleaning, or crew support can pay surprisingly well, especially during peak seasons.</p>
-<h2 id="h-real-estate-amp-property-based-side-hustles">Real Estate &amp; Property-Based Side Hustles</h2>
-<p>Real estate never sleeps in Miami. And it creates dozens of side hustle opportunities beyond being an agent.</p>
-<h3 id="h-real-estate-showing-assistant">Real Estate Showing Assistant</h3>
-<p>Licensed agents often outsource showings and open houses. Flexible hours. Good hourly rates. Great networking.</p>
-<h3 id="h-short-term-rental-cleaning-amp-turnover-services">Short-Term Rental Cleaning &amp; Turnover Services</h3>
-<p>This isn’t basic house cleaning. It’s fast, detailed, and recurring.</p>
-<p>Many cleaners charge premium rates for same-day turnovers.</p>
-<h3 id="h-home-staging-amp-rental-styling">Home Staging &amp; Rental Styling</h3>
-<p>Miami is visual. If you understand layout, lighting, and aesthetics, staging short-term rentals can become a lucrative niche service.</p>
-<h2 id="h-online-amp-remote-side-hustles-that-thrive-in-miami">Online &amp; Remote Side Hustles That Thrive in Miami</h2>
-<p>Not every side hustle needs sunscreen.</p>
-<h3 id="h-freelancing-writing-design-video-marketing">Freelancing (Writing, Design, Video, Marketing)</h3>
-<p>Miami businesses love hiring local freelancers who “get” the vibe.</p>
-<p>Writers, designers, editors, and video creators are in constant demand—especially in real estate, hospitality, and lifestyle brands.</p>
-<h3 id="h-social-media-management-for-local-businesses">Social Media Management for Local Businesses</h3>
-<p><a href="https://www.tripadvisor.com/Restaurants-g34438-Miami_Florida.html">Restaurants</a>, salons, gyms, and real estate agents all need content. Most don’t want to do it themselves.</p>
-<p>This is one of the <strong>best side hustles in Miami</strong> for professionals with marketing skills.</p>
-<p><strong>Start smart:</strong></p>
-<ul><li>Offer one platform</li><li>Post 3–4 times per week</li><li>Include basic analytics</li></ul>
-<h3 id="h-virtual-assistant-for-local-firms">Virtual Assistant for Local Firms</h3>
-<p>Real estate offices, law firms, and property managers often need admin support without hiring full-time staff.</p>
-<h2 id="h-creative-amp-lifestyle-side-hustles">Creative &amp; Lifestyle Side Hustles</h2>
-<p>Miami rewards creativity—when it’s paired with consistency.</p>
-<h3 id="h-content-creator-local-niche">Content Creator (Local Niche)</h3>
-<p>Food, fitness, fashion, nightlife, real estate. Hyper-local content performs well.</p>
-<p>You don’t need millions of followers. You need the <em>right</em> ones.</p>
-<h3 id="h-event-staffing-amp-brand-ambassador-work">Event Staffing &amp; Brand Ambassador Work</h3>
-<p>Miami hosts events nonstop. Product launches. Festivals. Corporate activations.</p>
-<p>Pay is often hourly plus perks.</p>
-<h3 id="h-dj-photographer-or-videographer">DJ, Photographer, or Videographer</h3>
-<p>Events, weddings, nightlife, corporate gigs. Strong referrals lead to repeat work.</p>
-<h2 id="h-service-based-side-hustles-with-high-demand">Service-Based Side Hustles with High Demand</h2>
-<p>Some of the most profitable side hustles aren’t glamorous. They’re dependable.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Luxury cars + condo living = opportunity.</p>
-<p>Mobile services remove friction. Clients pay more for convenience.</p>
-<h3 id="h-personal-training-amp-beach-bootcamps">Personal Training &amp; Beach Bootcamps</h3>
-<p>Miami is fitness-forward. Outdoor training reduces overhead and attracts tourists and locals alike.</p>
-<h3 id="h-pet-sitting-amp-dog-walking">Pet Sitting &amp; Dog Walking</h3>
-<p>High-income residents and travelers pay premium rates for trusted care.</p>
-<h3 id="h-airbnb-amp-condo-cleaning">Airbnb &amp; Condo Cleaning</h3>
-<p>Recurring bookings. Predictable schedules. Scalable teams.</p>
-<h2 id="h-quick-comparison-high-potential-side-hustles-in-miami">Quick Comparison: High-Potential Side Hustles in Miami</h2>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Time Flexibility</strong></td><td><strong>Earning Potential</strong></td></tr><tr><td>Airbnb Co-Hosting</td><td>Low</td><td>Medium</td><td>High</td></tr><tr><td>Social Media Management</td><td>Low</td><td>High</td><td>High</td></tr><tr><td>Mobile Car Detailing</td><td>Medium</td><td>Medium</td><td>High</td></tr><tr><td>Freelancing</td><td>Low</td><td>High</td><td>Medium–High</td></tr><tr><td>Vacation Photography</td><td>Medium</td><td>Medium</td><td>High</td></tr></tbody></table>
-<h2 id="h-best-side-hustles-in-miami-for-different-lifestyles">Best Side Hustles in Miami for Different Lifestyles</h2>
-<p><strong>Students</strong></p>
-<ul><li>Event staffing</li><li>Content creation</li><li>Freelancing</li></ul>
-<p><strong>Full-Time Professionals</strong></p>
-<ul><li>Social media management</li><li>Virtual assistant work</li><li>Airbnb co-hosting</li></ul>
-<p><strong>Creatives</strong></p>
-<ul><li>Photography</li><li>Videography</li><li>Branding services</li></ul>
-<p><strong>Newcomers</strong></p>
-<ul><li>Cleaning services</li><li>Pet sitting</li><li>Showing assistant roles</li></ul>
-<p>Matching the hustle to your schedule matters more than chasing trends.</p>
-<h2 id="h-how-to-get-started-fast">How to Get Started Fast</h2>
-<p>Start small. Move quickly. Test demand.</p>
-<p><strong>Practical steps:</strong></p>
-<ol><li>Choose one side hustle</li><li>Research local pricing</li><li>Create a simple offer</li><li>Promote locally (Google, Instagram, referrals)</li><li>Reinvest early profits</li></ol>
-<p>Licensing and insurance matter, especially for service-based work. Don’t skip the basics.</p>
-<h2 id="h-mistakes-that-kill-side-hustles-in-miami">Mistakes That Kill Side Hustles in Miami</h2>
-<ul><li>Underpricing in a premium market</li><li>Ignoring regulations and HOA rules</li><li>Relying only on seasonal income</li><li>Failing to build repeat clients</li></ul>
-<p>Miami rewards professionalism. Casual effort gets casual results.</p>
-<h2 id="h-side-hustle-trends-shaping-miami-in-2026">Side Hustle Trends Shaping Miami in 2026</h2>
-<p>The future favors:</p>
-<ul><li>Short-term rental support services</li><li>Creator-led local brands</li><li>Luxury convenience services</li><li>Tech-enabled lifestyle businesses</li></ul>
-<p>The <strong>best side hustles in Miami</strong> going forward will blend service, speed, and branding.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Miami doesn’t wait. Neither should you.</p>
-<p>Side hustles here aren’t just about extra cash. They’re about leverage. Flexibility. Optionality.</p>
-<p>Pick something aligned with your skills. Test it fast. Improve relentlessly. Miami has room for people who execute.</p>
-<p>And if you’re willing to show up consistently?<br/>This city will pay you back.</p>
+    'body'        => <<<'HTML'
+<p>Miami is expensive, and it knows it. Rents in Brickell and Miami Beach rival New York, insurance costs keep climbing, and a single paycheck rarely stretches as far as it used to. The upside is that Miami also has more paying customers per square mile than almost any city in the South: tourists, cruise passengers, boat owners, second-home buyers and busy professionals who will happily pay for convenience. The best side hustles in Miami plug straight into that spending.</p>
+<p>This guide breaks down 19 side gigs that work here right now, what each typically pays, what it costs to start, and the local timing — cruise days, festival weeks, hurricane season — that separates a profitable month from a slow one.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Florida state income tax</span></div>
+  <div class="stat"><b>$15–$90</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="miami-advantage">What makes side hustles in Miami different</h2>
+<p>Most city guides tell you to "drive for Uber and freelance." That works anywhere. Miami has four advantages you should actually build around:</p>
+<ul>
+  <li><strong>Tourism that barely takes a season off.</strong> Winter is peak, spring break and the March festival run (Ultra, the Miami Open, Calle Ocho) keep it going, and summer brings Latin American travelers. PortMiami sends thousands of cruise passengers through the city on turnaround days.</li>
+  <li><strong>A bilingual economy.</strong> Spanish is a business language here. If you speak it — or Portuguese or Haitian Creole — you can charge more for translation, tutoring, customer support and social media work.</li>
+  <li><strong>Life on the water.</strong> Marinas from Coconut Grove to Miami Beach and the Miami River mean steady demand for boat cleaning, detailing and crew help.</li>
+  <li><strong>No state income tax.</strong> Every side-hustle dollar is taxed only federally, which partly offsets the high cost of living.</li>
+</ul>
+<p>Major employers like Jackson Health System, Baptist Health South Florida, the University of Miami, Carnival and Royal Caribbean, and the finance and tech firms that moved into Brickell bring in well-paid workers who outsource chores, pets and errands.</p>
+
+<h2 id="comparison">Side jobs in Miami at a glance</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare (Uber/Lyft)</td><td>$16–$28/hr before expenses</td><td>Eligible car, SunPass</td><td>1–2 weeks</td></tr>
+    <tr><td>Food &amp; grocery delivery</td><td>$15–$24/hr before gas</td><td>Car, e-bike or scooter</td><td>Under 1 week</td></tr>
+    <tr><td>Short-term rental co-hosting</td><td>10–25% of booking revenue</td><td>Phone, time</td><td>2–4 weeks</td></tr>
+    <tr><td>Turnover cleaning</td><td>$25–$45/hr</td><td>$100–$200 supplies</td><td>1–2 weeks</td></tr>
+    <tr><td>Boat cleaning &amp; detailing</td><td>$40–$80/hr</td><td>$150–$400</td><td>1–3 weeks</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$450 per job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Bilingual freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+    <tr><td>Event staffing</td><td>$16–$25/hr plus tips</td><td>$0</td><td>Next big event</td></tr>
+    <tr><td>Vacation photography</td><td>$150–$400 per session</td><td>Camera or flagship phone</td><td>2–4 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="best-side-hustles-in-miami">The best side hustles in Miami right now</h2>
+<p>These eight picks have the strongest mix of local demand, fast startup and pay. Start here.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">1. Rideshare with an airport and cruise strategy</h3>
+    <p>Miami International Airport and PortMiami are the anchors. Cruise turnaround mornings (often weekends) create waves of rides between the port, MIA and hotels, and Friday and Saturday nights in Brickell, Wynwood and South Beach stay busy past 2 a.m. Big weekends — the Miami Grand Prix, Dolphins games at Hard Rock Stadium, Heat games at Kaseya Center — bring surge pricing. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers sign-up.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$28/hr before gas and tolls</li><li><b>Startup:</b> Eligible car, SunPass</li><li><b>Best for:</b> Weekend mornings and late nights</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Grubhub all run hot. Dense areas like Brickell, Edgewater and Miami Beach work well on an e-bike, which skips parking headaches. In the suburbs, Doral, Kendall and Aventura offer bigger grocery orders. Afternoon thunderstorms in summer push orders and pay up.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$24/hr before gas</li><li><b>Startup:</b> Car, e-bike or scooter</li><li><b>Best for:</b> Lunch and dinner rush</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="co-hosting">3. Short-term rental co-hosting</h3>
+    <p>Plenty of condo owners in Brickell, Edgewater and Miami Beach live abroad or up north part of the year. As a co-host you handle guest messages, pricing, restocking and cleaner scheduling for a cut of revenue — no property needed. Many buildings and city zones restrict short-term rentals, so only work with legally listed units.</p>
+    <ul class="meta"><li><b>Pay:</b> 10–25% of booking revenue</li><li><b>Startup:</b> Phone, reliability</li><li><b>Best for:</b> Organized communicators</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="turnover-cleaning">4. Turnover and house cleaning</h3>
+    <p>Every checkout is a deadline, and Miami hosts pay well for cleaners who show up on time and photograph their work. Recurring house cleaning in Coral Gables, Pinecrest and Coconut Grove is steadier. One property manager with several units can fill your week.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $100–$200 supplies</li><li><b>Best for:</b> Fast, detail-oriented workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="boat-detailing">5. Boat cleaning and detailing</h3>
+    <p>Salt, sun and bird droppings mean boats need washing constantly. Walk the docks at Dinner Key, Miami Beach Marina or along the Miami River and offer a weekly wash-down. Owners who keep boats at home in Coral Gables and Key Biscayne want the same. Learn marine-safe products before you touch gelcoat or teak.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$80/hr, or per-foot pricing</li><li><b>Startup:</b> $150–$400 in brushes and marine soap</li><li><b>Best for:</b> People who love the water</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">6. Pressure washing</h3>
+    <p>Humidity grows mold and mildew on driveways, pool decks, barrel-tile roofs and walls all year. Homeowners in Kendall, Palmetto Bay and Miami Lakes notice it constantly. An [[amazon:pressure-washer|electric pressure washer]] handles most residential jobs; leave roofs to insured pros until you have experience.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$450 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="bilingual-freelancing">7. Bilingual freelancing and translation</h3>
+    <p>Law firms, clinics, real estate brokerages and e-commerce brands that sell into Latin America all need Spanish-English copy, subtitles, document translation and customer support. List services on <a href="/fiverr/">Fiverr</a> to get early reviews, then pitch Miami businesses directly. Certified legal or medical translation pays the most.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Fluent bilingual speakers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">8. Event and hospitality staffing</h3>
+    <p>Art Basel Miami Beach in December, Ultra and the Miami Open in March, Miami Music Week, the Grand Prix in spring and nonstop conventions at the Miami Beach Convention Center all need ushers, bartenders, brand ambassadors, setup crews and valet. Staffing agencies and apps like Instawork fill these shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$25/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, night owls</li></ul>
+  </div>
+</div>
+<p>Driving in Miami means tolls, traffic and high insurance. Before you commit, run your real per-hour profit:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Expressway tolls on the 836, 112 and 874 add up quickly. Track them along with every business mile — both are deductible, and they can make the difference between a decent and a bad driving month.</div>
+
+<h2 id="tourist-hustles">Hustles that sell to visitors</h2>
+<p>Tourists arrive with money and no time to figure things out. Sell them convenience and memories.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="vacation-photography">9. Vacation and couples photography</h3>
+    <p>Sunrise shoots on South Beach, engagement sessions in Vizcaya-style gardens, quinceañeras and Wynwood mural portraits all book steadily. Fixed-price packages sell best. Note that some venues and parks require photography permits, so check before booking.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per session</li><li><b>Startup:</b> Camera or flagship phone</li><li><b>Best for:</b> Visual storytellers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tours">10. Food, art and walking tours</h3>
+    <p>Little Havana cafecito crawls, Wynwood street-art walks and Coconut Grove history tours work well on Airbnb Experiences or your own booking page. Small groups and great storytelling earn tips and reviews.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60 per guest</li><li><b>Startup:</b> Low</li><li><b>Best for:</b> Outgoing locals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="beach-rentals">11. Beach gear and concierge errands</h3>
+    <p>Deliver chairs, umbrellas and coolers to rental condos, stock fridges before guests arrive, or run errands for second-home owners. Partner with co-hosts so you get referrals. Keep a supply of [[amazon:reef-sunscreen|reef-safe sunscreen]] for add-on sales.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$75 per drop-off</li><li><b>Startup:</b> $200–$500 in gear</li><li><b>Best for:</b> SUV or van owners</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,insulated-bag,cleaning-kit|Gear for Miami gig workers]]
+
+<h2 id="neighborhood-services">Services for Miami households</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pet-care">12. Dog walking and pet sitting</h3>
+    <p>High-rise living in Brickell and Edgewater means plenty of dogs with no yard and owners with long hours. Rover and Wag are busy year-round, and holiday weeks book out early. Midday walks in summer heat need to be short and shaded.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$30/walk, $50–$85/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">13. Mobile car detailing</h3>
+    <p>Sun fades paint and salt air pits chrome, and Miami drivers care how their cars look. Offer detailing in office garages in Brickell or Doral and at condo buildings. Waterless products help where hoses aren't available.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$275 per full detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="hurricane-prep">14. Hurricane prep and handyman help</h3>
+    <p>From June through November, homeowners want shutters installed, patio furniture secured and generators tested, then debris cleared afterward. Year-round, TaskRabbit-style jobs like TV mounting and furniture assembly fill gaps. Stay away from licensed trade work like electrical or roofing.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">15. Tutoring and test prep</h3>
+    <p>Families in Coral Gables, Pinecrest and Weston invest in math, SAT/ACT and English-language tutoring. Students at the University of Miami, FIU and Miami Dade College can tutor peers or high schoolers; bilingual tutors are in particular demand.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$70/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+</div>
+
+<h2 id="online-income">Online income on Miami time</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="social-media">16. Social media management for local businesses</h3>
+    <p>Restaurants, salons, med spas and real estate agents live on Instagram and TikTok here. Package content shoots plus posting for a monthly fee. Start with two or three clients on the same street so shoots are efficient.</p>
+    <ul class="meta"><li><b>Pay:</b> $400–$1,500 per client per month</li><li><b>Startup:</b> Phone, editing apps</li><li><b>Best for:</b> Creators</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">17. Virtual assistant for real estate and brokers</h3>
+    <p>Miami's huge real estate and yacht-brokerage scene runs on follow-ups, listing uploads and CRM cleanup. Agents will pay for a reliable assistant a few hours a week.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$40/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">18. Courses and digital products</h3>
+    <p>Teach what Miami knows: Spanish for business, real estate exam prep, salsa basics or hospitality skills. Platforms like <a href="/udemy/">Udemy</a> and Thinkific let you sell once and earn repeatedly.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts with patience</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">19. Reselling designer and vintage goods</h3>
+    <p>Consignment shops, estate sales in older Coral Gables and Miami Shores homes, and moving-season giveaways feed eBay, Poshmark and Facebook Marketplace. Designer fashion and mid-century furniture move fast.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+</div>
+
+<h2 id="miami-calendar">Plan around Miami's calendar</h2>
+<ul>
+  <li><strong>December–April:</strong> peak tourist season. Art Basel, holidays, spring break and the March festival run. Load up on rideshare, cleaning, events and photography.</li>
+  <li><strong>May–August:</strong> slower for tourism but hot and stormy, which boosts delivery, pool-deck pressure washing and detailing.</li>
+  <li><strong>June–November:</strong> hurricane season. Offer prep and cleanup services, and keep cash reserves for days when storms shut everything down.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Unpermitted short-term rentals are a real enforcement issue in Miami and Miami Beach, and many residential zones and condo associations ban them. Confirm a unit is legal before you clean or co-host it — fines can land on everyone involved.</div>
+
+<h2 id="start-this-month">How to make money in Miami starting this month</h2>
+<ol class="steps">
+  <li><strong>Choose one hustle that fits your hours.</strong> Weekend mornings point to cruise-day driving or cleaning; weeknights point to delivery or freelancing.</li>
+  <li><strong>Price it in writing.</strong> Use our <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> so your rate covers tolls, gas, supplies and taxes.</li>
+  <li><strong>Get your paperwork started.</strong> Look up your city and Miami-Dade County local business tax receipt requirements before you advertise services.</li>
+  <li><strong>Market where Miami looks.</strong> Instagram, neighborhood Facebook groups, Nextdoor, marina bulletin boards and WhatsApp groups. Post in English and Spanish.</li>
+  <li><strong>Collect five reviews fast.</strong> Offer an introductory price to your first few clients in exchange for honest reviews and photos.</li>
+  <li><strong>Set aside 25–30% of profit.</strong> Even without state income tax, federal and self-employment tax add up quickly.</li>
+</ol>
+
+<h2 id="florida-taxes">Florida taxes and Miami rules for side income</h2>
+<ul>
+  <li><strong>No state income tax:</strong> Florida doesn't tax personal income, so you only owe federal income tax.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% on net profit for Social Security and Medicare. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> and pay quarterly once you expect to owe $1,000 or more.</li>
+  <li><strong>Local business tax receipts:</strong> Miami-Dade County issues a local business tax receipt, and most municipalities — including the City of Miami, Miami Beach and Coral Gables — require their own. Home-based businesses typically need zoning approval first.</li>
+  <li><strong>Sales tax:</strong> selling physical products means registering with the Florida Department of Revenue and collecting the 6% state rate plus Miami-Dade's county surtax.</li>
+  <li><strong>Short-term rentals:</strong> hosts owe Florida's transient rental tax and county tourist taxes unless the platform remits them, and may need a state vacation rental license.</li>
+</ul>
+
+<h2 id="nearby-cities">Compare nearby Florida cities</h2>
+<p>Thinking about other markets? Read our guides to the <a href="/best-side-hustles-in-tampa/">best side hustles in Tampa</a>, <a href="/best-side-hustles-in-orlando/">Orlando</a> and <a href="/best-side-hustles-in-jacksonville/">Jacksonville</a>. Each has lower rent than Miami but fewer big-spending visitors. At Better Side Hustles, our advice for Miami is simple: pick one hustle tied to tourism, the water or your second language, commit for 90 days, and track every dollar. Miami pays people who show up consistently.</p>
 HTML,
 ];
