@@ -91,6 +91,6 @@ for src, dst in REDIRECTS.items():
 code, _, _ = get('/no-such-page/')
 if code != 404: err(f'404 page returns {code}')
 code, b, _ = get('/inc/config.php')
-if b.strip(): err('/inc/config.php leaks output')
+if code != 403 and b.strip(): err('/inc/config.php leaks output')
 print(f'checked {len(OLD + NEW)} pages, {len(links)} internal links; {len(errors)} failures')
 sys.exit(1 if errors else 0)

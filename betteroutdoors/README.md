@@ -34,16 +34,31 @@ python3 validate.py http://127.0.0.1:8099
 ```
 
 ## Hosting
-Hostinger Agency Growth plan, plain `php-fpm` website. The platform serves real
-files directly, ignores `.htaccess`, and sends unknown paths to `index.php`.
-Internal PHP files exit immediately unless loaded through `index.php`.
-Non-production hosts (the `*.hostingersite.com` preview) send `X-Robots-Tag: noindex`;
-on betteroutdoors.net, `index.php` also forces https and strips `www`.
+**Live:** betteroutdoors.net on the existing Hostinger web hosting account
+(user `u401386392`, order 64270646, LiteSpeed, `.htaccess` honored), document root
+`domains/betteroutdoors.net/public_html`. Went live 2026-10-26.
 
-Website UID `yBoxhCPNC` (order 1008744732, Boston DC, PHP 8.3), preview host
-olive-badger-748849.hostingersite.com. Deployed 2026-10-26.
+The old WordPress install was moved, untouched, into
+`public_html/wp-backup-2026-10-26/` (database left in place; `wp-config.php` is in that
+folder). The folder has its own `Require all denied` `.htaccess`, so it is not
+reachable from the web. Kept in the web root: the two Google Search Console
+verification files and Hostinger's `.private` folder. Only the WordPress root
+`.htaccess` was not preserved (WordPress regenerates it from Settings → Permalinks).
 
-Deploy with `./deploy.sh` (see header comment), then clear the site cache.
+To restore WordPress: move the contents of `wp-backup-2026-10-26/` (except its
+`.htaccess`) back into `public_html/`, remove the new site's files, re-save permalinks,
+and clear the cache.
+
+Deploy: get credentials with `hosting_files_generate-upload-url`
+(username `u401386392`, domain `betteroutdoors.net`); its `url` already ends in
+`/public_html`, so upload paths are relative to the web root. Then clear the cache
+with `hosting_cache_clear-website` (LiteSpeed caches pages).
+
+`index.php` forces https (via `X-Forwarded-Proto` or `HTTPS`) and strips `www` on the
+real domain; other hosts get `X-Robots-Tag: noindex`.
+
+An unused copy also exists on the Agency Growth plan: website UID `yBoxhCPNC`,
+preview host olive-badger-748849.hostingersite.com (`deploy.sh` targets that layout).
 
 ## Adding a post
 1. Add an entry to `$POSTS` in `inc/config.php` (title, h1, desc, kw, image, dates, cat).

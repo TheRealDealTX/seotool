@@ -1,0 +1,27 @@
+# Better Outdoors
+
+> Free archery and bowhunting guides: compound bow reviews (Mathews, Bear Archery, PSE), bow tuning and draw length help, and interactive archery calculators.
+
+Sitemap: https://betteroutdoors.net/sitemap_index.xml
+
+## Guides
+- [2016 PSE Draw Length Adjustment: The Complete Step-by-Step Guide](https://betteroutdoors.net/2016-pse-draw-length-adjustment/): Find your true draw length, decode the PSE draw length chart for your cam, and adjust modules safely, with or without a bow press.
+- [Mathews Compound Bow Packages: What You Get and Who They Fit](https://betteroutdoors.net/understanding-mathews-compound-bow-packages/): Sight, rest, quiver, stabilizer: what a Mathews package really includes, what it costs versus a bare bow, and who should buy one.
+- [Bear Archery Bear Paw Grip: Design, Feel, and Performance](https://betteroutdoors.net/bear-archery-bear-paw-grip/): How grip shape and wrist angle drive torque and accuracy, and how to tell whether a Bear bow grip suits your hand.
+- [Mathews Prima Level 1 Package: Specs, Review, and Who It Fits](https://betteroutdoors.net/mathews-prima-level-1-package/): Full Mathews Prima specs, what the Level 1 package adds, and why this short-draw bow is a favorite for women and smaller-framed hunters.
+- [Bear Archery Alaskan XT RTH Compound Bow Review](https://betteroutdoors.net/bear-archery-alaskan-xt-rth-compound-bow/): A 33-inch, 335 fps ready-to-hunt bow with a forgiving 6.25-inch brace height. Full Bear Alaskan XT specs and field notes.
+- [Bear Archery Persist Compound Bow: Specs and Review](https://betteroutdoors.net/bear-archery-persist-compound-bow/): 340 fps in a 31-inch frame with four let-off options. Full Bear Persist specs, setup tips, and Persist vs. Persist 33.
+- [Bear Archery Whitetail Maxx RTH Compound Bow Review](https://betteroutdoors.net/bear-archery-whitetail-maxx-rth-compound-bow/): A 31-inch, 339 fps whitetail bow that ships ready to hunt. Full Whitetail Maxx specs and what to know before you buy.
+- [2018 PSE Evolve 28: Specs, Review, and Used-Buyer Guide](https://betteroutdoors.net/2018-pse-evolve-28/): A 28-inch blind and treestand bow with a 7-inch brace height. Full PSE Evolve 28 specs and a used-buyer checklist.
+- [Mathews Lift 29.5: Specs and Review of a Quiet, Stable Hunting Bow](https://betteroutdoors.net/mathews-lift-29-5/): Full Mathews Lift 29.5 specs, what the 29.5-inch platform does well, and how it compares with the Lift 33 and Lift X.
+
+## Tools
+- [Draw Length Calculator](https://betteroutdoors.net/tools/draw-length-calculator/): Estimate your draw length from wingspan or height.
+- [Arrow Speed Calculator](https://betteroutdoors.net/tools/arrow-speed-calculator/): Turn an IBO rating into your real-world FPS.
+- [Kinetic Energy & Momentum Calculator](https://betteroutdoors.net/tools/kinetic-energy-calculator/): See if your setup has the energy for your game.
+- [Bow Finder Quiz](https://betteroutdoors.net/tools/bow-finder/): Six questions to match you with the right bow.
+- [Bowhunting Gear Checklist](https://betteroutdoors.net/tools/bowhunting-checklist/): Tick-off pack list for treestand, blind and backcountry.
+
+## About
+- [About Better Outdoors](https://betteroutdoors.net/about-us/)
+- [Contact](https://betteroutdoors.net/contact-us/)

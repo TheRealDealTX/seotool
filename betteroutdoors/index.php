@@ -27,7 +27,10 @@ function redirect($to, $code = 301) {
 
 // Canonical scheme and host (only on the real domain, never on preview hosts).
 if ($live) {
-    $insecure = ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? 'https') === 'http';
+    // Agency platform: TLS ends upstream and X-Forwarded-Proto says so.
+    // Classic hosting (LiteSpeed): no such header, so fall back to HTTPS.
+    $xfp = strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '');
+    $insecure = $xfp !== '' ? $xfp === 'http' : (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === 'off');
     if ($insecure || $host === 'www.betteroutdoors.net') redirect(SITE_URL . $uri);
 } else {
     header('X-Robots-Tag: noindex, nofollow');
