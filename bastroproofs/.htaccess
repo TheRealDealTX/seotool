@@ -1,0 +1,33 @@
+# bastroproofs.com — custom PHP site
+DirectoryIndex index.php index.html
+ErrorDocument 404 /404.php
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Canonical host: https://bastroproofs.com
+RewriteCond %{HTTP_HOST} ^www\.bastroproofs\.com$ [NC]
+RewriteRule ^(.*)$ https://bastroproofs.com/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://bastroproofs.com/$1 [R=301,L]
+# Old WordPress URLs
+RewriteRule ^(sitemap_index|page-sitemap)\.xml$ /sitemap.xml [R=301,L]
+RewriteRule ^feed/?$ /blog/ [R=301,L]
+RewriteRule ^(wp-admin|wp-includes|wp-json|wp-login\.php|xmlrpc\.php)(/.*)?$ / [R=301,L]
+# Block direct access to PHP internals
+RewriteRule ^(includes|bin)(/|$) - [F,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
