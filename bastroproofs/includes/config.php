@@ -24,6 +24,9 @@ const SITE = [
     'hours'         => 'Mon–Sat 7:00 AM – 7:00 PM · Storm calls 24/7',
 ];
 
+/** Google Analytics 4 measurement ID (gtag.js is loaded on every page by page_start()). */
+const GA_ID = 'G-79KFXCNSM4';
+
 /** Where estimate-form submissions are emailed (see contact/send.php). */
 const FORM_RECIPIENT = 'info@bastroproofs.com';
 
