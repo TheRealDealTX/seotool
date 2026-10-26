@@ -1,0 +1,5 @@
+public/app/config.local.php
+public/app/data/
+public/media/
+public/wp-content/uploads/
+*.sqlite

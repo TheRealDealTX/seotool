@@ -1,0 +1,346 @@
+<?php
+// Read side of the listings database: search, cards, property pages.
+defined('HA_ROOT') || exit;
+
+final class Listings
+{
+    /** Amenity filter keys → substrings matched against the normalized amenity list. */
+    public const AMENITIES = [
+        'pool'      => ['Pool', ['pool']],
+        'fitness'   => ['Fitness Center', ['fitness', 'gym']],
+        'washer'    => ['Washer/Dryer', ['washer']],
+        'elevator'  => ['Elevator', ['elevator']],
+        'gated'     => ['Gated / Controlled Access', ['controlled access', 'gated']],
+        'balcony'   => ['Balcony / Patio', ['patio', 'balcony']],
+        'walkin'    => ['Walk-in Closets', ['walk-in closet']],
+        'stainless' => ['Stainless Appliances', ['stainless']],
+        'hardwood'  => ['Hardwood / Plank Floors', ['hardwood', 'vinyl floor', 'plank']],
+        'dogpark'   => ['Dog Park / Pet Spa', ['pet grooming', 'dog park', 'pet wash', 'dog run']],
+        'business'  => ['Business Center', ['business center', 'co-working', 'coworking']],
+        'concierge' => ['Concierge', ['concierge']],
+        'clubhouse' => ['Clubhouse', ['clubhouse']],
+        'package'   => ['Package Service', ['package']],
+        'fireplace' => ['Fireplace', ['fireplace']],
+        'wifi'      => ['Wi-Fi', ['wifi', 'wi-fi']],
+    ];
+
+    private const CARD_COLS = 'id, slug, name, street, city, zip, lat, lng, neighborhood, rise_location, price_min, price_max, beds_min, beds_max, beds_mask, baths_max, sqft_min, sqft_max, pets, parking, furnished, essential, special, year_built, units, stories, rating, photo, photo_count, data';
+
+    public static function search(array $q): array
+    {
+        $where = ["status = 'publish'", 'lat IS NOT NULL'];
+        $args = [];
+
+        if (!empty($q['area']) && isset(AREAS[$q['area']])) {
+            $ids = AREAS[$q['area']]['rise'];
+            $where[] = 'rise_location IN (' . implode(',', array_map('intval', $ids)) . ')';
+        }
+        if (!empty($q['bounds'])) {
+            $b = array_map('floatval', explode(',', $q['bounds']));
+            if (count($b) === 4) {
+                $where[] = 'lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?';
+                array_push($args, $b[0], $b[2], $b[1], $b[3]);
+            }
+        }
+        $poly = self::polygon($q['poly'] ?? '');
+        if ($poly) {
+            $lats = array_column($poly, 0);
+            $lngs = array_column($poly, 1);
+            $where[] = 'lat BETWEEN ? AND ? AND lng BETWEEN ? AND ?';
+            array_push($args, min($lats), max($lats), min($lngs), max($lngs));
+        }
+        $pmin = (int) ($q['price_min'] ?? 0);
+        $pmax = (int) ($q['price_max'] ?? 0);
+        if ($pmin || $pmax) {
+            $where[] = 'price_min IS NOT NULL';
+            if ($pmax) {
+                $where[] = 'price_min <= ?';
+                $args[] = $pmax;
+            }
+            if ($pmin) {
+                $where[] = 'COALESCE(price_max, price_min) >= ?';
+                $args[] = $pmin;
+            }
+        }
+        if (isset($q['beds']) && $q['beds'] !== '') {
+            $mask = 0;
+            foreach (explode(',', (string) $q['beds']) as $b) {
+                if (is_numeric($b)) {
+                    $mask |= 1 << min(4, max(0, (int) $b));
+                }
+            }
+            if ($mask) {
+                $where[] = '(beds_mask & ' . $mask . ') > 0';
+            }
+        }
+        if (!empty($q['baths'])) {
+            $where[] = 'baths_max >= ?';
+            $args[] = (float) $q['baths'];
+        }
+        foreach (['pets', 'parking', 'furnished', 'special', 'essential'] as $flag) {
+            if (!empty($q[$flag])) {
+                $where[] = "$flag = 1";
+            }
+        }
+        if (!empty($q['sqft'])) {
+            $where[] = 'COALESCE(sqft_max, 0) >= ?';
+            $args[] = (int) $q['sqft'];
+        }
+        if (!empty($q['year'])) {
+            $where[] = 'year_built >= ?';
+            $args[] = (int) $q['year'];
+        }
+        if (!empty($q['amen'])) {
+            foreach (explode(',', (string) $q['amen']) as $key) {
+                if (!isset(self::AMENITIES[$key])) {
+                    continue;
+                }
+                $or = [];
+                foreach (self::AMENITIES[$key][1] as $needle) {
+                    $or[] = 'amenities LIKE ?';
+                    $args[] = '%' . $needle . '%';
+                }
+                $where[] = '(' . implode(' OR ', $or) . ')';
+            }
+        }
+        if (!empty($q['q'])) {
+            $kw = '%' . mb_substr(trim((string) $q['q']), 0, 60) . '%';
+            $where[] = '(name LIKE ? OR street LIKE ? OR neighborhood LIKE ? OR zip LIKE ? OR city LIKE ?)';
+            array_push($args, $kw, $kw, $kw, $kw, $kw);
+        }
+
+        $order = match ($q['sort'] ?? '') {
+            'price_asc'  => 'CASE WHEN price_min IS NULL THEN 1 ELSE 0 END, price_min ASC',
+            'price_desc' => 'price_min IS NULL, COALESCE(price_max, price_min) DESC',
+            'newest'     => 'year_built IS NULL, year_built DESC',
+            'rating'     => 'rating IS NULL, rating DESC',
+            'sqft'       => 'sqft_max IS NULL, sqft_max DESC',
+            default      => 'photo_count DESC, rating DESC, id DESC',
+        };
+        $st = db()->prepare('SELECT ' . self::CARD_COLS . ' FROM properties WHERE ' . implode(' AND ', $where) . " ORDER BY $order");
+        $st->execute($args);
+        $rows = $st->fetchAll();
+        if ($poly) {
+            $rows = array_values(array_filter($rows, fn ($r) => self::inPolygon((float) $r['lat'], (float) $r['lng'], $poly)));
+        }
+
+        $per = min(60, max(6, (int) ($q['per'] ?? 24)));
+        $page = max(1, (int) ($q['page'] ?? 1));
+        $total = count($rows);
+        $prices = array_filter(array_column($rows, 'price_min'));
+        return [
+            'total'   => $total,
+            'page'    => $page,
+            'pages'   => max(1, (int) ceil($total / $per)),
+            'avg'     => $prices ? (int) round(array_sum($prices) / count($prices)) : null,
+            'items'   => array_map([self::class, 'card'], array_slice($rows, ($page - 1) * $per, $per)),
+            'markers' => array_map(fn ($r) => [(int) $r['id'], round((float) $r['lat'], 6), round((float) $r['lng'], 6), $r['price_min'] ? (int) $r['price_min'] : null, $r['slug']], $rows),
+        ];
+    }
+
+    /** "lat,lng;lat,lng;..." → [[lat, lng], ...] (at least a triangle). */
+    private static function polygon(string $s): array
+    {
+        $pts = [];
+        foreach (explode(';', $s) as $pair) {
+            $xy = explode(',', $pair);
+            if (count($xy) === 2 && is_numeric($xy[0]) && is_numeric($xy[1])) {
+                $pts[] = [(float) $xy[0], (float) $xy[1]];
+            }
+        }
+        return count($pts) >= 3 ? array_slice($pts, 0, 500) : [];
+    }
+
+    /** Ray casting point-in-polygon. */
+    public static function inPolygon(float $lat, float $lng, array $poly): bool
+    {
+        $in = false;
+        for ($i = 0, $j = count($poly) - 1; $i < count($poly); $j = $i++) {
+            [$yi, $xi] = $poly[$i];
+            [$yj, $xj] = $poly[$j];
+            if ((($yi > $lat) !== ($yj > $lat)) && ($lng < ($xj - $xi) * ($lat - $yi) / (($yj - $yi) ?: 1e-12) + $xi)) {
+                $in = !$in;
+            }
+        }
+        return $in;
+    }
+
+    public static function card(array $r): array
+    {
+        $d = json_decode($r['data'] ?? '{}', true) ?: [];
+        return [
+            'id'      => (int) $r['id'],
+            'slug'    => $r['slug'],
+            'url'     => '/apartment/' . $r['slug'] . '/',
+            'name'    => $r['name'],
+            'address' => trim($r['street'] . ', ' . $r['city'] . ', TX ' . $r['zip'], ', '),
+            'hood'    => $r['neighborhood'],
+            'lat'     => (float) $r['lat'],
+            'lng'     => (float) $r['lng'],
+            'price'   => self::priceLabel($r),
+            'pmin'    => $r['price_min'] ? (int) $r['price_min'] : null,
+            'beds'    => beds_range($r),
+            'sqft'    => $r['sqft_min'] ? number_format((int) $r['sqft_min']) . ($r['sqft_max'] != $r['sqft_min'] ? '–' . number_format((int) $r['sqft_max']) : '') . ' sqft' : '',
+            'photos'  => array_slice($d['photos'] ?? [], 0, 5),
+            'rating'  => $r['rating'] ? (float) $r['rating'] : null,
+            'pets'    => (bool) $r['pets'],
+            'special' => (bool) $r['special'],
+            'year'    => $r['year_built'] ? (int) $r['year_built'] : null,
+            'new'     => $r['year_built'] && (int) $r['year_built'] >= (int) date('Y') - 3,
+        ];
+    }
+
+    public static function priceLabel(array $r): string
+    {
+        if (!$r['price_min']) {
+            return 'Call for pricing';
+        }
+        if ($r['price_max'] && $r['price_max'] != $r['price_min']) {
+            return money($r['price_min']) . ' – ' . money($r['price_max']);
+        }
+        return 'From ' . money($r['price_min']);
+    }
+
+    public static function bySlug(string $slug): ?array
+    {
+        $st = db()->prepare("SELECT * FROM properties WHERE slug = ? AND status = 'publish'");
+        $st->execute([$slug]);
+        $p = $st->fetch();
+        if (!$p) {
+            return null;
+        }
+        $p['d'] = json_decode($p['data'] ?? '{}', true) ?: [];
+        return $p;
+    }
+
+    public static function nearby(array $p, int $n): array
+    {
+        if ($p['lat'] === null) {
+            return [];
+        }
+        $st = db()->prepare("SELECT " . self::CARD_COLS . " FROM properties WHERE status = 'publish' AND id <> ? AND lat IS NOT NULL
+            ORDER BY ((lat - ?) * (lat - ?) + (lng - ?) * (lng - ?)) LIMIT $n");
+        $st->execute([$p['id'], $p['lat'], $p['lat'], $p['lng'], $p['lng']]);
+        return array_map([self::class, 'card'], $st->fetchAll());
+    }
+
+    public static function featured(int $n): array
+    {
+        try {
+            $rows = db()->query("SELECT " . self::CARD_COLS . " FROM properties WHERE status = 'publish' AND lat IS NOT NULL ORDER BY photo_count DESC, rating DESC LIMIT $n")->fetchAll();
+        } catch (PDOException) {
+            return [];
+        }
+        return array_map([self::class, 'card'], $rows);
+    }
+
+    public static function inArea(array $area, int $n): array
+    {
+        $res = self::search(['area' => $area['slug'], 'per' => $n]);
+        return $res['items'];
+    }
+
+    public static function areaKeyFor(array $p): string
+    {
+        foreach (AREAS as $key => $a) {
+            if (in_array((int) $p['rise_location'], $a['rise'], true)) {
+                return $key;
+            }
+        }
+        return '';
+    }
+
+    /** @return array<string, array{count:int, min:?int}> */
+    public static function areaCounts(): array
+    {
+        $out = [];
+        try {
+            $rows = db()->query("SELECT rise_location, COUNT(*) c, MIN(price_min) m FROM properties WHERE status = 'publish' GROUP BY rise_location")->fetchAll();
+        } catch (PDOException) {
+            $rows = [];
+        }
+        foreach (AREAS as $key => $a) {
+            $out[$key] = ['count' => 0, 'min' => null];
+            foreach ($rows as $r) {
+                if (in_array((int) $r['rise_location'], $a['rise'], true)) {
+                    $out[$key]['count'] += (int) $r['c'];
+                    if ($r['m'] && (!$out[$key]['min'] || $r['m'] < $out[$key]['min'])) {
+                        $out[$key]['min'] = (int) $r['m'];
+                    }
+                }
+            }
+        }
+        return $out;
+    }
+
+    public static function stats(): array
+    {
+        try {
+            $r = db()->query("SELECT COUNT(*) n, AVG(price_min) avg, MIN(price_min) lo, SUM(COALESCE(units, 0)) units FROM properties WHERE status = 'publish'")->fetch();
+        } catch (PDOException) {
+            $r = ['n' => 0, 'avg' => 0, 'lo' => 0, 'units' => 0];
+        }
+        return ['count' => (int) $r['n'], 'avg' => (int) $r['avg'], 'low' => (int) $r['lo'], 'units' => (int) $r['units']];
+    }
+
+    public static function allSlugs(): array
+    {
+        try {
+            return db()->query("SELECT slug, synced_at FROM properties WHERE status = 'publish' ORDER BY slug")->fetchAll();
+        } catch (PDOException) {
+            return [];
+        }
+    }
+
+    public static function metaDescription(array $p): string
+    {
+        $bits = [beds_range($p)];
+        if ($p['price_min']) {
+            $bits[] = 'from ' . money($p['price_min']) . '/mo';
+        }
+        if ($p['pets']) {
+            $bits[] = 'pet friendly';
+        }
+        $where = $p['neighborhood'] ? $p['neighborhood'] . ', ' . ($p['city'] ?: 'Houston') : ($p['city'] ?: 'Houston');
+        return mb_substr(sprintf('%s apartments in %s, TX: %s. See floor plans, photos, amenities and schools – and get up to $%d back when you lease through Houston Apartments.',
+            $p['name'], $where, implode(', ', $bits), SITE['cashback']), 0, 300);
+    }
+
+    public static function schema(array $p): array
+    {
+        $d = $p['d'];
+        $s = [
+            '@context' => 'https://schema.org',
+            '@type' => 'ApartmentComplex',
+            'name' => $p['name'],
+            'url' => site_url('/apartment/' . $p['slug'] . '/'),
+            'image' => array_map('site_url', array_slice($d['photos'] ?? [], 0, 6)),
+            'address' => ['@type' => 'PostalAddress', 'streetAddress' => $p['street'], 'addressLocality' => $p['city'],
+                          'addressRegion' => 'TX', 'postalCode' => $p['zip'], 'addressCountry' => 'US'],
+            'petsAllowed' => (bool) $p['pets'],
+        ];
+        if ($p['lat'] !== null) {
+            $s['geo'] = ['@type' => 'GeoCoordinates', 'latitude' => (float) $p['lat'], 'longitude' => (float) $p['lng']];
+        }
+        if ($p['units']) {
+            $s['numberOfAccommodationUnits'] = (int) $p['units'];
+        }
+        if (!empty($d['amenities'])) {
+            $s['amenityFeature'] = array_map(fn ($a) => ['@type' => 'LocationFeatureSpecification', 'name' => $a, 'value' => true],
+                array_slice(array_values(array_unique(array_merge(...array_values($d['amenities'])))), 0, 30));
+        }
+        $graph = [$s];
+        if (!empty($d['faqs'])) {
+            $graph[] = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => array_map(fn ($f) => [
+                '@type' => 'Question', 'name' => $f['q'],
+                'acceptedAnswer' => ['@type' => 'Answer', 'text' => implode(' ', $f['a'])],
+            ], $d['faqs'])];
+        }
+        $graph[] = ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
+            ['@type' => 'ListItem', 'position' => 1, 'name' => 'Houston Apartments', 'item' => site_url('/')],
+            ['@type' => 'ListItem', 'position' => 2, 'name' => 'Apartments for Rent', 'item' => site_url('/apartments/')],
+            ['@type' => 'ListItem', 'position' => 3, 'name' => $p['name'], 'item' => site_url('/apartment/' . $p['slug'] . '/')],
+        ]];
+        return $graph;
+    }
+}

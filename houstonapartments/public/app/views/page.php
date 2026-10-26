@@ -1,0 +1,19 @@
+<?php defined('HA_ROOT') || exit; ?>
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/Houston-Skyline.webp" alt="" width="1600" height="700"></div>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Houston Apartments</a><span>/</span><span aria-current="page"><?= e($page['title']) ?></span></nav>
+    <h1 class="fade-up"><?= e($page['title']) ?></h1>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap prose-grid">
+    <article class="prose wp-content reveal"><?= $page['content'] ?></article>
+    <aside class="side-card sticky reveal d1">
+      <h3>Start your search</h3>
+      <p>Search every community on our live map, or let a locator build your short list for free.</p>
+      <a class="btn btn-grad btn-block" href="/apartments/">Open map search</a>
+      <button class="btn btn-outline btn-block" type="button" data-lead>Talk to a locator</button>
+    </aside>
+  </div>
+</section>
