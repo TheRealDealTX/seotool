@@ -26,10 +26,10 @@ share one layout, one stylesheet and one script.
 | `public/api/form.php` | Handles every form; emails info@ over SMTP (`inc/smtp.php`, falls back to `mail()`) and appends to `../mi-form-submissions.log` (outside the web root) |
 | `public/inc/mail-config.php` | SMTP login for info@ (smtp.hostinger.com:465). **Not in git**: recreate it from `mail-config.example.php` before deploying from a fresh clone |
 | `public/.htaccess` | https/non-www redirects, old WordPress URL redirects, blocks WordPress entry points |
-| `public/_wp-backup/` | Copies of the WordPress `.htaccess` and `index.php` (web access denied) |
 | `backup/wordpress-2026-10-25/` | Same copies plus rollback steps |
 | `validate.py` | Crawls a local preview, checks every page, writes `public/sitemap.xml` |
 | `deploy.sh` | Uploads `public/` through Hostinger's File Browser API |
+| `remove-wordpress.sh` | One-off: deletes the old WordPress files from `public_html` (the owner asked for a full removal on 2026-10-26) |
 | `dev-router.php` | Router for local preview with `php -S` |
 
 ## Work on it
@@ -71,7 +71,8 @@ BreadcrumbList, FAQPage, BlogPosting, WebApplication where relevant).
 - **Needs PHP 8.0+** (uses `str_starts_with`, `fn` arrows). The site was on PHP 7.4 under WordPress and was
   switched to **PHP 8.3** on 2026-10-25 (`hosting_php_update-version`). On 7.4, pages die mid-render with no visible error.
 - LiteSpeed honours `.htaccess`. Directory URLs (`/monetization/`) are real folders with an `index.php`.
-- The WordPress files and database are still on the server, unreachable. See
-  `backup/wordpress-2026-10-25/README.md` to roll back, or delete them once the new site has settled.
-- Old image URLs under `/wp-content/uploads/` still resolve.
+- The owner asked (2026-10-26) for WordPress to be deleted completely: files via `remove-wordpress.sh`,
+  plus the WordPress database. Old `/wp-content/uploads/` image URLs stop resolving after that.
+- `.htaccess` sets `CacheLookup off`: the WordPress LiteSpeed Cache plugin left cached copies of the old
+  pages in the server page cache, and they kept being served over the new site even after a cache clear.
 - Money figures on the site (rates, RPMs, calculator outputs) are labelled estimates.

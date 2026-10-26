@@ -1,4 +1,4 @@
-# Monetizing Influencers - custom PHP site (replaced WordPress on 2026-10-25)
+# Monetizing Influencers - custom PHP site (replaced WordPress on 2026-10-25; WordPress deleted 2026-10-26)
 # Hostinger web hosting runs LiteSpeed, which honours this file.
 
 Options -Indexes
@@ -24,7 +24,7 @@ RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://monetizinginfluencers.com%{REQUEST_URI} [R=301,L]
 
 # Private folders and files
-RewriteRule ^(inc|_wp-backup)(/|$) - [F,L]
+RewriteRule ^inc(/|$) - [F,L]
 RewriteRule \.(log|bak|sql|zip|md)$ - [F,L]
 
 # Old WordPress URLs -> new equivalents
@@ -34,11 +34,6 @@ RewriteRule ^(author|category|tag)(/.*)?$ /blogs/ [R=301,L]
 RewriteRule ^blog/?$ /blogs/ [R=301,L]
 RewriteRule ^(wp-admin|wp-includes|wp-json)(/.*)?$ / [R=301,L]
 
-# The WordPress install is kept on disk (for rollback) but is no longer reachable
-RewriteRule ^wp-content/(?!uploads/) - [F,L]
-RewriteRule ^wp-content/uploads/.*\.php$ - [F,L]
-RewriteRule ^(wp-[a-z\-]+|xmlrpc|default)\.php$ - [F,L]
-RewriteRule ^(license\.txt|readme\.html)$ - [F,L]
 </IfModule>
 
 <IfModule mod_headers.c>
