@@ -1,162 +1,208 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Riverside (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Riverside with practical, high-income ideas you can start fast and scale long-term.',
-    'h1' => 'Best Side Hustles in Riverside',
-    'kicker' => 'City Guide · CA',
-    'dek' => 'Gig apps, local services and online work that pay in Riverside — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-27',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Riverside.webp',
-    'image_alt' => 'Best Side Hustles in Riverside',
-    'category' => 'City Guides',
-    'city' => 'Riverside',
-    'state' => 'CA',
-    'keywords' => ['best side hustles in riverside'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-san-diego', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-san-francisco'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Riverside right now?', 'a' => 'Mobile car detailing, freelancing, tutoring, landscaping, and notary services are among the most profitable and practical options locally.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Riverside?', 'a' => 'Most part-time side hustles generate $800–$4,000 per month depending on hours, skill level, and demand.'],
-        ['q' => 'Do I need a business license to start a side hustle in Riverside?', 'a' => 'Many service-based hustles require a local business license, so check Riverside city and county regulations before launching.'],
-        ['q' => 'What side hustles work best for UC Riverside students?', 'a' => 'Tutoring, rideshare driving, campus photography, and freelancing are flexible and fit around class schedules.'],
-        ['q' => 'Are online side hustles viable in Riverside?', 'a' => 'Yes, freelancing, virtual assistant work, and content creation can be run entirely from home and scale beyond the local market.'],
-        ['q' => 'What is the lowest-cost side hustle to start?', 'a' => 'Freelancing, tutoring, and virtual assistant services typically require minimal startup costs beyond a laptop and internet.'],
-        ['q' => 'Which side hustle has the highest long-term income potential?', 'a' => 'Content creation and scalable service businesses like landscaping or detailing offer the strongest long-term growth.'],
-        ['q' => 'Is Riverside a good market for service-based side hustles?', 'a' => 'Yes, the growing population and commuter lifestyle create strong demand for convenience-based services.'],
-        ['q' => 'How do I find my first clients locally?', 'a' => 'Start with Facebook Marketplace, Nextdoor, referrals, and direct outreach to local businesses.'],
-        ['q' => 'Should I combine multiple side hustles?', 'a' => 'Combining a fast-paying local service with a scalable online hustle is often the smartest strategy for steady growth.'],
+    'title'       => 'Best Side Hustles in Riverside (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Riverside, CA for 2026: 18 side gigs with typical pay, startup costs, Inland Empire hot spots and city business tax rules explained.',
+    'h1'          => 'Best Side Hustles in Riverside (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'City Guide · CA',
+    'dek'         => 'Warehouse-fueled delivery demand, a big university crowd and sunny suburbs full of pools and solar roofs make Riverside a strong Inland Empire base for extra income. Here is what pays and how to start.',
+    'published'   => '2026-02-27',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Riverside.webp',
+    'image_alt'   => 'Downtown Riverside, California with the Mission Inn, illustrating the best side hustles in Riverside',
+    'category'    => 'City Guides',
+    'city'        => 'Riverside',
+    'state'       => 'CA',
+    'keywords'    => ['best side hustles in riverside', 'side jobs in riverside', 'side gigs in riverside', 'how to make money in riverside', 'riverside side hustles 2026'],
+    'tool'        => 'quiz',
+    'gear'        => ['cleaning-kit', 'dash-cam', 'whiteboard', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-santa-ana', 'best-side-hustles-in-anaheim', 'best-side-hustles-in-irvine'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Riverside, CA?', 'a' => 'Delivery and Amazon Flex, rideshare, mobile detailing, pool service, rental turnover cleaning, tutoring near UC Riverside, mobile notary work and freelance marketing are the strongest picks. The Inland Empire\'s warehouse economy, long commutes and hot, sunny summers create steady demand for each of them.'],
+        ['q' => 'How can I make money in Riverside fast?', 'a' => 'App-based delivery through DoorDash, Uber Eats, Instacart or Amazon Flex is the quickest route, often paying within a week of approval. For same-week cash, offer move-out cleaning, furniture assembly or pressure washing on Nextdoor and in Facebook groups for Orangecrest, Canyon Crest and La Sierra.'],
+        ['q' => 'Do I need a business license for a side hustle in Riverside?', 'a' => 'Riverside requires businesses, including home businesses and independent contractors, to register for a city Business Tax Certificate before they start operating. Short-term rental hosts also need one before advertising. Check with the city Finance Department about current fees and any small-business exemption, and with Planning about home-occupation rules.'],
+        ['q' => 'How much can I make from side jobs in Riverside?', 'a' => 'Most people working 8 to 15 hours a week typically earn $500 to $1,800 a month. Delivery and rideshare usually land around $16 to $24 an hour before gas, while notary signings, detailing and freelance work can reach $40 to $100 an hour once you have repeat clients.'],
+        ['q' => 'What side hustles work for UC Riverside students?', 'a' => 'Tutoring, delivery by car or e-bike, event staffing, campus-area photography and freelance design or coding fit around class schedules. Students with a spare room or car can also earn from renting them out, and graduation season in June brings a rush of photo and event work.'],
+        ['q' => 'How is side income taxed in California?', 'a' => 'California treats self-employment profit as ordinary income taxed from 1% to 12.3%, plus a 1% surcharge above $1 million. Federal income tax and 15.3% self-employment tax apply on top. A safe habit is setting aside 25 to 30% of profit and paying quarterly estimates to the IRS and the Franchise Tax Board.'],
     ],
-    'body' => <<<'HTML'
-<p>Riverside isn’t just growing — it’s expanding fast. New housing developments. More small businesses. A steady stream of students near UC Riverside. And with that growth comes opportunity. If you’re looking for the <strong>best side hustles in Riverside</strong>, you’re in the right place.</p>
-<p>The cost of living in Southern California keeps climbing. Rent isn’t cheap. Gas certainly isn’t. And relying on a single income stream? Risky. The good news is Riverside offers a strong mix of local service demand, commuter traffic, student energy, and online work flexibility. That combination makes it one of the most underrated places in California to build a profitable side hustle.</p>
-<p>Let’s break down the real opportunities. Not vague ideas. Actual, practical ways to earn.</p>
-<h2 id="h-why-riverside-is-ideal-for-side-hustles">Why Riverside Is Ideal for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Riverside,_California">Riverside</a> sits in a powerful position geographically. It’s close enough to Los Angeles and Orange County to benefit from spillover demand, but far enough to keep operating costs lower than coastal cities.</p>
-<p>Here’s what makes the area attractive:</p>
-<ul><li>A population of over 300,000 residents</li><li>A strong student presence from UC Riverside</li><li>Expanding suburban neighborhoods</li><li>Growing short-term rental activity</li><li>High commuter volume</li></ul>
-<p>Translation? People need services. Homes need maintenance. Students need support. Businesses need marketing. And many residents are willing to pay for convenience.</p>
-<p>That’s why the <strong>best side hustles in Riverside</strong> often revolve around service-based work and flexible online income.</p>
-<h2 id="h-what-makes-a-side-hustle-best">What Makes a Side Hustle “Best”?</h2>
-<p>Not every gig is worth your time. The best side hustles in Riverside typically meet four criteria:</p>
-<ol><li><strong>Low startup cost</strong><strong><br/></strong></li><li><strong>Flexible hours</strong><strong><br/></strong></li><li><strong>Strong local demand</strong><strong><br/></strong></li><li><strong>Scalability potential</strong><strong><br/></strong></li></ol>
-<p>If it costs $10,000 to start and takes six months to see profit, it’s not a <a href="/best-hustles-in-los-angeles/">side hustle</a>. It’s a startup.</p>
-<p>Now let’s look at the real opportunities.</p>
-<h2 id="h-best-local-service-based-side-hustles-in-riverside">Best Local Service-Based Side Hustles in Riverside</h2>
-<p>These are practical. They work. And they can start quickly.</p>
-<h3 id="h-1-rideshare-amp-delivery-driving">1. Rideshare &amp; Delivery Driving</h3>
-<p>Uber. Lyft. DoorDash. Instacart.</p>
-<p>Riverside’s commuter culture makes rideshare consistent, especially near:</p>
-<ul><li>Downtown Riverside</li><li>UC Riverside campus</li><li>Riverside Plaza</li><li>Metrolink stations</li></ul>
-<p>Peak hours are early mornings, evenings, and weekends. Event nights and graduation season? Even better.</p>
-<p><strong>Action Tip:</strong> Track your earnings by location and time. Double down on profitable time blocks instead of driving randomly.</p>
-<p>Startup cost: Vehicle + insurance<br/>Scalability: Limited unless you manage multiple drivers<br/>Monthly potential: $800–$2,000 part-time</p>
-<h3 id="h-2-mobile-car-detailing">2. Mobile Car Detailing</h3>
-<p>Cars dominate life in Riverside. Long commutes mean dirty interiors and faded exteriors.</p>
-<p>Mobile detailing is one of the most profitable service-based side hustles here.</p>
-<p>Basic startup equipment:</p>
-<ul><li>Portable water tank</li><li>Pressure washer</li><li>Interior cleaning tools</li><li>Quality wax and detailing chemicals</li></ul>
-<p>You can charge $120–$250 per vehicle depending on package depth.</p>
-<p>Just four jobs per weekend could generate $2,000+ monthly.</p>
-<p><strong>Pro Move:</strong> Target gated communities and newer housing developments where residents value convenience.</p>
-<h3 id="h-3-house-cleaning-amp-airbnb-turnovers">3. House Cleaning &amp; Airbnb Turnovers</h3>
-<p>Short-term rentals are active throughout Riverside County. Many owners don’t want to clean between guests.</p>
-<p>Recurring cleaning contracts are steady income.</p>
-<p>You can:</p>
-<ul><li>Charge $120–$180 per cleaning</li><li>Offer deep cleans at premium rates</li><li>Expand by subcontracting helpers</li></ul>
-<p>Consistency matters more than marketing.</p>
-<p>One client becomes five. Five becomes fifteen.</p>
-<p>This is quietly one of the best side hustles in Riverside for reliable monthly income.</p>
-<h3 id="h-4-landscaping-amp-yard-maintenance">4. Landscaping &amp; Yard Maintenance</h3>
-<p>Riverside’s dry climate creates steady landscaping demand.</p>
-<p>Services that perform well:</p>
-<ul><li>Drought-tolerant yard conversions</li><li>Lawn maintenance</li><li>Tree trimming</li><li>Irrigation checks</li></ul>
-<p>You don’t need a massive crew to start. Just reliable equipment and consistent service.</p>
-<p>Recurring weekly clients create predictable cash flow.</p>
-<p>Startup cost: Moderate<br/>Monthly potential: $1,500–$5,000 part-time</p>
-<h2 id="h-online-side-hustles-you-can-run-from-riverside">Online Side Hustles You Can Run From Riverside</h2>
-<p>Local income is powerful. But online income adds flexibility.</p>
-<h3 id="h-5-freelancing-writing-design-social-media">5. Freelancing (Writing, Design, Social Media)</h3>
-<p>Small businesses in Riverside need help.</p>
-<p>Restaurants. Contractors. Real estate agents. Local gyms.</p>
-<p>They need:</p>
-<ul><li>Website content</li><li>Social media management</li><li>Graphic design</li><li>Email marketing</li></ul>
-<p>You can find clients on Upwork or pitch directly to local businesses.</p>
-<p><strong>Action Tip:</strong> Build a simple portfolio site and offer a free strategy call to local companies.</p>
-<p>Monthly potential varies widely, but skilled freelancers often earn $1,500–$4,000 part-time.</p>
-<h3 id="h-6-content-creation-youtube-blogging-tiktok">6. Content Creation (YouTube, Blogging, TikTok)</h3>
-<p>Riverside has untapped niche potential.</p>
-<p>Content ideas:</p>
-<ul><li>Local restaurant reviews</li><li>Apartment tours</li><li>Student life at UC Riverside</li><li>Inland Empire real estate insights</li><li>Local hiking trails</li></ul>
-<p>Monetization options:</p>
-<ul><li><a href="https://www.youtube.com/intl/en_en/ads/">YouTube ads</a></li><li>Affiliate links</li><li>Brand partnerships</li><li>Sponsored local promotions</li></ul>
-<p>It won’t pay immediately. But long term? It scales far beyond local service work.</p>
-<p>Among the best side hustles in Riverside, content creation offers the highest upside.</p>
-<h3 id="h-7-virtual-assistant-services">7. Virtual Assistant Services</h3>
-<p>Remote businesses are hiring constantly.</p>
-<p>If you’re organized, you can offer:</p>
-<ul><li>Email management</li><li>Calendar scheduling</li><li>Customer support</li><li>CRM management</li></ul>
-<p>All from home.</p>
-<p>California-based VAs often command $20–$40 per hour.</p>
-<p>Low startup cost. Strong flexibility. High demand.</p>
-<h2 id="h-student-friendly-side-hustles-near-uc-riverside">Student-Friendly Side Hustles Near UC Riverside</h2>
-<p>Students create opportunity.</p>
-<h3 id="h-8-tutoring">8. Tutoring</h3>
-<p>High demand subjects:</p>
-<ul><li>Math</li><li>Chemistry</li><li>SAT prep</li><li>Essay writing</li></ul>
-<p>You can charge $30–$60 per hour depending on specialization.</p>
-<p>Target high school students and first-year college students.</p>
-<p>Consistent referrals drive growth.</p>
-<h3 id="h-9-graduation-amp-event-photography">9. Graduation &amp; Event Photography</h3>
-<p>Graduation season is huge in Riverside.</p>
-<p>Students want photos. Families want memories.</p>
-<p>A decent camera and editing software can launch this quickly.</p>
-<p>Charge $150–$400 per session.</p>
-<p>Book just ten clients during graduation month and you’ve built a strong seasonal income stream.</p>
-<h3 id="h-10-notary-public-services">10. Notary Public Services</h3>
-<p>California notaries can earn $15 per signature plus travel fees.</p>
-<p>Mobile notary services are in demand for:</p>
-<ul><li>Real estate closings</li><li>Legal documents</li><li>Loan signings</li></ul>
-<p>Certification requires training and an exam, but startup costs remain reasonable.</p>
-<p>This is one of the more structured and professional side hustles available locally.</p>
-<h2 id="h-real-estate-based-side-hustles-in-riverside">Real Estate-Based Side Hustles in Riverside</h2>
-<p>Property demand creates opportunity.</p>
-<h3 id="h-11-renting-out-a-room">11. Renting Out a Room</h3>
-<p>Riverside rental prices are strong due to proximity to LA and student housing demand.</p>
-<p>If you own a home:</p>
-<ul><li>Rent a room to a student</li><li>Offer furnished month-to-month leases</li><li>Include utilities for simplicity</li></ul>
-<p>It’s passive compared to service work.</p>
-<h3 id="h-12-furniture-flipping">12. Furniture Flipping</h3>
-<p>Garage sales. Facebook Marketplace. Estate sales.</p>
-<p>Buy underpriced pieces. Sand, repaint, upgrade hardware. Resell.</p>
-<p>Profit margins can range from $100–$400 per piece.</p>
-<p>Low barrier to entry. High creativity potential.</p>
-<h2 id="h-highest-paying-side-hustles-comparison">Highest-Paying Side Hustles Comparison</h2>
-<p>Here’s a quick overview of the best side hustles in Riverside:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Monthly Potential</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Mobile Detailing</td><td>Medium</td><td>$2,000–$4,000</td><td>Moderate</td></tr><tr><td>Freelancing</td><td>Low</td><td>$1,500–$4,000</td><td>High</td></tr><tr><td>Landscaping</td><td>Medium</td><td>$1,500–$5,000</td><td>High</td></tr><tr><td>Tutoring</td><td>Low</td><td>$800–$2,500</td><td>Moderate</td></tr><tr><td>Content Creation</td><td>Low</td><td>Variable (High Long-Term)</td><td>Very High</td></tr><tr><td>Notary Services</td><td>Medium</td><td>$1,000–$3,000</td><td>Moderate</td></tr></tbody></table>
-<p>Notice something? Service-based hustles pay fast. Digital hustles scale long term.</p>
-<p>The smartest strategy? Combine both.</p>
-<h2 id="h-how-to-choose-the-right-hustle">How to Choose the Right Hustle</h2>
-<p>Before jumping in, ask yourself:</p>
-<ul><li>How many hours per week can I realistically commit?</li><li>Do I want fast cash or long-term growth?</li><li>Am I comfortable selling services?</li><li>Do I prefer online or in-person work?</li></ul>
-<p>Be honest.</p>
-<p>If you need immediate income, start with detailing, cleaning, or tutoring.</p>
-<p>If you want scalability, layer in freelancing or content creation.</p>
-<p>Don’t chase every opportunity. Focus on one. Master it. Expand later.</p>
-<h2 id="h-legal-amp-tax-considerations-in-riverside">Legal &amp; Tax Considerations in Riverside</h2>
-<p>California is strict. Plan accordingly.</p>
-<p>Important steps:</p>
-<ul><li>Track all income and expenses</li><li>Consider forming an LLC for liability protection</li><li>Set aside 25–30% for taxes</li><li>Check city business license requirements</li></ul>
-<p>Don’t ignore compliance. It’s easier to do things correctly from day one.</p>
-<h2 id="h-final-thoughts-building-real-income-in-riverside">Final Thoughts: Building Real Income in Riverside</h2>
-<p>The best side hustles in Riverside aren’t flashy. They’re practical. They solve real problems. They serve growing neighborhoods and busy professionals.</p>
-<p>Start small.</p>
-<p>Book your first client.<br/>Deliver exceptional service.<br/>Raise your rates.<br/>Systemize.<br/>Expand.</p>
-<p>Momentum builds faster than you expect.</p>
-<p>Riverside isn’t just a commuter city. It’s an opportunity hub hiding in plain sight. And the people who move early — who take action instead of waiting — are the ones who build real financial flexibility.</p>
-<p>Pick one hustle. Start this week.</p>
-<p>The opportunity is already here.</p>
+    'body'        => <<<'HTML'
+<p>Riverside sits in the middle of one of the biggest logistics hubs in the country, with a major university, a historic downtown and miles of sunny suburbs around it. That mix is why the best side hustles in Riverside lean toward delivery, home services and skills you can sell to busy commuters. Rent is still lower than in Orange County or Los Angeles, so every extra dollar goes further.</p>
+<p>Below are 18 side gigs that work in Riverside right now, with typical pay, startup costs and the local knowledge that helps you get ahead. Whether you want a few hundred extra dollars a month or a real second income, this is how to make money in Riverside on your own schedule. Consider it your shortlist of the Riverside side hustles 2026 has to offer.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>1%–12.3%</b><span>California income tax brackets</span></div>
+  <div class="stat"><b>$16–$100</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0–$500</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="riverside-advantage">The Inland Empire advantage</h2>
+<p>Riverside side hustles benefit from a few local quirks:</p>
+<ul>
+  <li><strong>Warehouses everywhere.</strong> Massive distribution centers in Moreno Valley, Perris, Jurupa Valley and Fontana keep package volume high, which means steady Amazon Flex blocks and courier work.</li>
+  <li><strong>A big student and faculty base.</strong> UC Riverside, California Baptist University, La Sierra University and Riverside City College bring tens of thousands of students who need rides, food, tutoring and roommates.</li>
+  <li><strong>Commuters with no free time.</strong> Many residents drive or take Metrolink to jobs in Orange County and LA. Long commutes mean they pay others for chores, pet care and errands.</li>
+  <li><strong>Sun and heat.</strong> Hot summers and lots of backyard pools and rooftop solar panels create seasonal demand most coastal cities don't have.</li>
+</ul>
+
+<h2 id="top-picks">Top picks: the best side hustles in Riverside</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="delivery">1. Delivery and Amazon Flex</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark stay busy along the University Avenue, Magnolia Avenue and Riverside Plaza corridors. Amazon Flex blocks from nearby stations are a staple of Inland Empire side income, especially around Prime Day and the holidays. Block pay is shown up front, which makes planning easier.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$24/hr before gas</li><li><b>Startup:</b> Car, phone</li><li><b>Best for:</b> Flexible mornings or evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Rideshare driving</h3>
+    <p>Demand peaks around UCR on weekend nights, downtown near the Mission Inn and Fox Performing Arts Center, Metrolink stations, and airport runs to Ontario International (ONT). Longer trips toward Orange County pay more but can leave you far from home, so plan your return. See our <a href="/lyft-uber/">Lyft and Uber guide</a> for sign-up details.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $17–$26/hr before gas</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Night and weekend drivers</li></ul>
+  </div>
+</div>
+<p>Inland Empire freeways mean long miles. Check your true hourly rate after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">3. Mobile car detailing</h3>
+    <p>Commuters spend hours a day in their cars and rarely have time to clean them. Offer driveway details in Orangecrest, Mission Grove and Canyon Crest, or set up at office parks with permission. Monthly plans turn one-time customers into steady income.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $80–$200 per detail</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-service">4. Pool cleaning</h3>
+    <p>Weekly pool service is recurring money in a city where summers regularly hit the high 90s and above. Cluster clients in one or two neighborhoods so a route takes a morning, not a day.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45 per weekly visit</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Route-minded early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="turnover-cleaning">5. House and rental turnover cleaning</h3>
+    <p>Student rentals near UCR turn over every summer, and landlords need fast move-out cleans. Recurring house cleaning for two-commuter households in the Wood Streets or Victoria area is steadier.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">6. Tutoring and test prep</h3>
+    <p>UCR and CBU students can tutor in person, while parents across Riverside Unified and Alvord pay for math, reading and SAT help. STEM and bilingual tutors book up fastest.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-notary">7. Mobile notary and loan signing</h3>
+    <p>Riverside County sees a lot of home sales and refinances, and title companies pay loan signing agents per appointment. California requires a state notary course, exam, background check and bond, so budget a few weeks to get commissioned.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $75–$150 per loan signing</li><li><b>Startup:</b> $200–$500 (training, bond, supplies)</li><li><b>Best for:</b> Detail-focused professionals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">8. Freelance marketing and design</h3>
+    <p>Inland Empire contractors, restaurants and logistics firms need websites, ads and social content. Start on <a href="/fiverr/">Fiverr</a> for portfolio pieces, then pitch local businesses directly. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> explains how to price retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Creatives, marketers</li></ul>
+  </div>
+</div>
+
+<h2 id="at-a-glance">Side jobs in Riverside at a glance</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Delivery / Amazon Flex</td><td>$16–$24/hr</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>Rideshare</td><td>$17–$26/hr</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Mobile detailing</td><td>$80–$200 per car</td><td>$200–$500</td><td>Days</td></tr>
+    <tr><td>Pool cleaning</td><td>$25–$45 per visit</td><td>$150–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Turnover cleaning</td><td>$25–$45/hr</td><td>$75–$150</td><td>1 week</td></tr>
+    <tr><td>Tutoring</td><td>$25–$60/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
+    <tr><td>Loan signing</td><td>$75–$150 per signing</td><td>$200–$500</td><td>4–8 weeks</td></tr>
+    <tr><td>Solar panel cleaning</td><td>$100–$250 per home</td><td>$150–$400</td><td>1–2 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="seasonal">Seasonal and weekend side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">9. Event staffing</h3>
+    <p>The Festival of Lights at the Mission Inn draws big crowds from late November into early January, and the Riverside Convention Center, UCR events and graduation season add more shifts. Caterers and staffing agencies hire servers, setup crews and parking attendants.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $17–$25/hr, plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="solar-cleaning">10. Solar panel and pressure washing</h3>
+    <p>Dust and ash settle on the rooftop solar panels common across the Inland Empire, cutting output. Pair panel cleaning with driveway and patio pressure washing for bigger tickets. Use a safe roof setup and skip steep roofs until you're trained.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per home</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> People comfortable on ladders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="landscaping">11. Drought-tolerant yard care</h3>
+    <p>Homeowners replacing thirsty lawns need help with mulch, gravel, drip irrigation and seasonal trimming. Weekly maintenance in Orangecrest and Woodcrest makes a reliable base.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$65 per visit</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Outdoor workers</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,car-charger,pressure-washer|Gear for Riverside drivers and home-service pros]]
+
+<div class="callout callout-warn"><strong>Watch out:</strong> Santa Ana wind events and wildfire smoke can shut down outdoor work with little notice, and summer heat is dangerous by midafternoon. Keep a backup indoor or online gig so a bad-air week doesn't zero out your month.</div>
+
+<h2 id="online">Online income on Inland Empire rent</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">12. Virtual assistant work</h3>
+    <p>Realtors, contractors and small medical practices need help with scheduling, inboxes and CRM updates. Commuters who can't take calls during the day value a reliable assistant.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="content-creation">13. Local content creation</h3>
+    <p>Food, hiking (Mount Rubidoux, Box Springs) and Inland Empire lifestyle content has a real audience. Monetize through brand deals with local restaurants and affiliate links.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Phone, mic</li><li><b>Best for:</b> Patient creators</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">14. Online courses</h3>
+    <p>Turn a professional skill such as logistics software, Excel or nursing exam prep into a course on Udemy or your own Thinkific site. It's slow to start but scales.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Time, mic</li><li><b>Best for:</b> Experts</li></ul>
+  </div>
+</div>
+
+<h2 id="assets">Use what you already own</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rent-a-room">15. Renting a room</h3>
+    <p>Visiting faculty, traveling nurses and students look for furnished rooms near UCR and the hospitals. Longer stays avoid most short-term rental rules, but check your lease or HOA first.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $700–$1,100/month per room</li><li><b>Startup:</b> Furnishings</li><li><b>Best for:</b> Homeowners with space</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="furniture-flipping">16. Furniture flipping and reselling</h3>
+    <p>Move-out season near campus floods Facebook Marketplace with free and cheap furniture. Clean, repaint and resell to the next wave of students and new homeowners.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $300–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Hands-on fixers with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">17. Pet sitting and dog walking</h3>
+    <p>Long commutes mean dogs left home alone for 10+ hours. Midday walks and overnight sitting through Rover fill fast in family neighborhoods.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$28/walk, $45–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">18. Handyman and assembly</h3>
+    <p>Older bungalows in the Wood Streets and Eastside need small repairs; newer tracts need TV mounts and furniture assembly. A basic [[amazon:tool-kit|home tool kit]] covers most TaskRabbit jobs. Keep projects small to stay under California's contractor licensing threshold.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$70/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+
+<h2 id="by-schedule">Match the gig to your schedule</h2>
+<p>The right side gig in Riverside depends less on pay and more on which hours you can protect every week. Here's a quick way to narrow it down:</p>
+<ul>
+  <li><strong>You commute to OC or LA on weekdays:</strong> weekend detailing, pressure washing, solar panel cleaning and event staffing fit around a long drive. Loan signings often happen in the evening, too.</li>
+  <li><strong>You work nights or have free mornings:</strong> pool routes, Amazon Flex morning blocks and midday dog walks line up with when most clients are at work.</li>
+  <li><strong>You're a UCR or CBU student:</strong> tutoring, delivery between classes, campus-area photography and furniture flipping during move-out week.</li>
+  <li><strong>You're home with kids:</strong> virtual assistant work, online tutoring and reselling can happen during nap time and school hours.</li>
+</ul>
+<p>Whatever you pick, give it a fair test. Most local service businesses take six to eight weeks of steady marketing before referrals start doing the work for you.</p>
+
+<h2 id="start-now">How to start this month</h2>
+<ol class="steps">
+  <li><strong>Pick one gig from the top eight.</strong> They have the clearest demand and fastest path to income.</li>
+  <li><strong>Register your Business Tax Certificate.</strong> Riverside wants it before you start, and it's straightforward.</li>
+  <li><strong>Set a weekly hour budget.</strong> Use the <a href="/tools/income-calculator/">income calculator</a> to turn a monthly goal into hours.</li>
+  <li><strong>Choose a home base.</strong> Limit driving to one part of town at first, such as Canyon Crest or La Sierra.</li>
+  <li><strong>Collect three reviews.</strong> Ask early clients for Google or Nextdoor recommendations.</li>
+  <li><strong>Track everything.</strong> Separate account, saved receipts and a mileage log from day one.</li>
+</ol>
+
+<h2 id="taxes-rules">Riverside and California tax rules</h2>
+<ul>
+  <li><strong>California income tax:</strong> progressive rates from 1% to 12.3%, plus a 1% surcharge on income above $1 million.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit. The <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> shows what to set aside.</li>
+  <li><strong>City Business Tax Certificate:</strong> Riverside's business tax covers home businesses and independent contractors, and you register before you begin. Ask the Finance Department whether a small-business exemption applies to you.</li>
+  <li><strong>Short-term rentals:</strong> hosts need a Business Tax Certificate before advertising and must follow the city's short-term rental ordinance.</li>
+  <li><strong>Seller's permit:</strong> selling physical goods requires CDTFA registration and sales tax collection.</li>
+  <li><strong>AB5:</strong> if you hire help, California's ABC test decides whether they're employees. Gig drivers on apps are generally contractors under Proposition 22.</li>
+</ul>
+
+<h2 id="nearby">Nearby city guides</h2>
+<p>Many Riverside residents earn across county lines. Compare our guides to the <a href="/best-side-hustles-in-santa-ana/">best side hustles in Santa Ana</a>, <a href="/best-side-hustles-in-anaheim/">Anaheim</a> and <a href="/best-side-hustles-in-san-diego/">San Diego</a>. Orange County gigs often pay more per job, but Riverside's lower costs help Better Side Hustles readers here keep more of what they earn.</p>
 HTML,
 ];

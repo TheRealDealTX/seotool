@@ -1,145 +1,210 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Austin (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Austin with real income potential, flexible schedules, and ideas that fit the city’s fast-growing economy.',
-    'h1' => 'Best Side Hustles in Austin',
+    'title' => 'Best Side Hustles in Austin (2026): 18 Ways to Earn More',
+    'description' => 'The best side hustles in Austin for 2026: 18 side gigs with pay ranges, startup costs, SXSW, ACL and F1 surge tips, STR license rules and Texas tax basics.',
+    'h1' => 'Best Side Hustles in Austin (2026): 18 Side Gigs That Pay',
     'kicker' => 'City Guide · TX',
-    'dek' => 'Gig apps, local services and online work that pay in Austin — with realistic earnings and how to land your first dollar.',
+    'dek' => 'Festival-season driving, freelance tech work, Lake Travis boat detailing and dog walking in the most dog-friendly city in Texas: here are the side jobs in Austin worth your time, with real pay and startup costs.',
     'published' => '2026-01-07',
     'modified' => '2026-10-26',
     'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Austin.webp',
-    'image_alt' => 'Best Side Hustles in Austin',
+    'image_alt' => 'Austin skyline over Lady Bird Lake, illustrating the best side hustles in Austin',
     'category' => 'City Guides',
     'city' => 'Austin',
     'state' => 'TX',
-    'keywords' => ['best side hustles in austin'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
+    'keywords' => ['best side hustles in austin', 'side hustles austin', 'side jobs in austin', 'side gigs in austin', 'how to make money in austin', 'austin side hustles 2026'],
+    'tool' => 'freelance-rate',
+    'gear' => ['phone-mount', 'cleaning-kit', 'dog-leash', 'book-company-of-one'],
     'related' => ['best-side-hustles-in-houston', 'best-side-hustles-in-dallas', 'best-side-hustles-in-fort-worth'],
     'faq' => [
-        ['q' => 'What are the best side hustles in Austin right now?', 'a' => 'The best side hustles in Austin include freelance tech services, social media management, Airbnb co-hosting, mobile detailing, and tutoring.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Austin?', 'a' => 'Most people earn between $800 and $4,000 per month, depending on time commitment, demand, and pricing.'],
-        ['q' => 'Do I need a license to start a side hustle in Austin?', 'a' => 'Many side hustles don’t require a license, but services like food sales or real estate referrals may require permits or registration.'],
-        ['q' => 'Are tech side hustles better than local service side hustles in Austin?', 'a' => 'Tech hustles often scale faster, while local services provide more consistent and repeat income.'],
-        ['q' => 'Can I start a side hustle in Austin while working full time?', 'a' => 'Yes, many of the best side hustles in Austin are designed for evenings or weekends and offer flexible schedules.'],
-        ['q' => 'What side hustles work best for students in Austin?', 'a' => 'Tutoring, pet sitting, rideshare driving, and content creation work well for student schedules.'],
-        ['q' => 'How fast can a side hustle become profitable in Austin?', 'a' => 'Some side hustles generate income within the first month, especially service-based or referral-driven ones.'],
-        ['q' => 'Do online side hustles work as well in Austin as in other cities?', 'a' => 'Yes, Austin’s strong tech and creative networks often make online side hustles easier to launch and grow.'],
-        ['q' => 'Is Austin a good city to scale a side hustle into a full-time business?', 'a' => 'Absolutely—Austin’s startup culture and networking opportunities support long-term growth.'],
-        ['q' => 'What’s the biggest mistake people make when starting a side hustle in Austin?', 'a' => 'Trying to do too many things at once instead of focusing on one profitable service.'],
+        ['q' => 'What are the best side hustles in Austin?', 'a' => 'The best side hustles in Austin are festival-season rideshare and delivery, event staffing for SXSW, ACL and Formula 1 weekend, freelance tech and web work, short-term rental cleaning, dog walking, tutoring and content creation. Austin\'s mix of well-paid tech workers, nonstop tourism and a creative culture means services that save people time, and skills that help startups move faster, sell quickly.'],
+        ['q' => 'How can I make money in Austin fast?', 'a' => 'Sign up for DoorDash, Uber Eats, Instacart or Amazon Flex, which usually pay within a week or two once your background check clears. Event staffing agencies hire in bulk before SXSW in March and ACL and Formula 1 in October. Pet sitting on Rover and furniture assembly on TaskRabbit can also produce paying jobs within days in central Austin.'],
+        ['q' => 'How much do side jobs in Austin pay?', 'a' => 'Most part-time side hustlers working 8 to 15 hours a week typically earn $400 to $1,500 a month. App-based gigs usually net $15 to $23 an hour after gas, while freelance tech, design and marketing work often runs $40 to $100 an hour with experience. Festival weeks can briefly push driving and staffing earnings well above normal.'],
+        ['q' => 'Do I need a license to run a side hustle in Austin?', 'a' => 'Texas has no general business license and Austin does not require one for most service side hustles. Sole proprietors using a brand name should file an assumed name certificate with the Travis County Clerk. Short-term rental operators need a City of Austin operating license before advertising, and anyone selling taxable goods or services needs a free Texas sales tax permit.'],
+        ['q' => 'Is Austin a good city for freelancers?', 'a' => 'Yes. Austin has a dense startup and tech scene, major employers like Tesla, Apple, Dell and Oracle in the metro, and a culture that treats freelancing as normal. Texas has no state income tax, so you keep more of every invoice than you would in California or New York. The catch is cost of living, which is higher than elsewhere in Texas.'],
+        ['q' => 'What side hustles work best for UT Austin students?', 'a' => 'Students do well with tutoring, dog walking in West Campus and Hyde Park, event staffing on game days at Darrell K Royal Stadium, delivery by bike or e-bike near campus, and freelance social media or design work for local businesses. Campus job boards and research studies can add flexible hours that fit around class schedules.'],
     ],
     'body' => <<<'HTML'
-<p>Austin moves fast. Rents rise. Opportunities pop up. And if you live here long enough, you realize one thing quickly—having just one income stream can feel limiting. That’s why <strong>best side hustles in Austin</strong> isn’t just a trendy phrase. It’s a practical question many professionals, creatives, and students are actively asking.</p>
-<p>I’ve watched friends turn weekend projects into steady income. I’ve seen part-time ideas quietly replace full-time paychecks. Austin makes this possible because demand is everywhere—tech, tourism, real estate, and experiences collide here daily. If you’re willing to show up and execute, there’s money on the table.</p>
-<p>Let’s break down the <strong>best side hustles in Austin</strong> that actually work, what they pay, and how to get started without burning out.</p>
-<h2 id="h-why-austin-is-a-prime-city-for-side-hustles">Why Austin Is a Prime City for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Austin,_Texas">Austin</a> isn’t just growing. It’s accelerating.</p>
-<p>You’ve got tech workers with disposable income, students juggling schedules, tourists pouring in year-round, and small businesses constantly hiring help without wanting full-time overhead. That combination creates fertile ground for side hustles that reward flexibility.</p>
-<p>Another advantage? Austin’s culture favors creators and independents. People expect freelancers. They trust small operators. They’re willing to pay for convenience.</p>
-<p>That’s exactly why the <strong>best side hustles in Austin</strong> tend to scale faster here than in more traditional job markets.</p>
-<h2 id="h-what-makes-a-side-hustle-work-well-in-austin">What Makes a Side Hustle Work Well in Austin</h2>
-<p>Before jumping into ideas, let’s get practical.</p>
-<p>Side hustles succeed in Austin when they hit at least one of these criteria:</p>
-<ul><li>Solves a time problem for busy professionals</li><li>Serves tourists, renters, or transplants</li><li>Leverages tech, creativity, or local knowledge</li><li>Can grow through referrals instead of ads</li></ul>
-<p>Austin rewards speed and specialization. The more specific your service, the faster you’ll stand out.</p>
-<h2 id="h-tech-driven-side-hustles-that-thrive-in-austin">Tech-Driven Side Hustles That Thrive in Austin</h2>
-<p>Austin’s tech ecosystem creates nonstop demand for flexible help.</p>
-<h3 id="h-freelance-tech-support-and-it-setup">Freelance Tech Support and IT Setup</h3>
-<p>Startups don’t want full-time IT staff. They want someone “on call.”</p>
-<ul><li>Laptop setup and security</li><li>Network troubleshooting</li><li>Cloud storage organization</li></ul>
-<p><strong>Earnings:</strong> $50–$100 per hour<br/><strong>How to start:</strong> List services on LinkedIn, local Slack groups, and startup communities.</p>
-<h3 id="h-website-setup-for-small-businesses">Website Setup for Small Businesses</h3>
-<p>Many local brands need websites but don’t want agencies.</p>
-<ul><li>Squarespace or Webflow builds</li><li>Landing pages for events or product launches</li><li>Basic SEO setup</li></ul>
-<p><strong>Earnings:</strong> $1,000–$3,000 per project<br/>This is one of the <strong>best side hustles in Austin</strong> for people who like structured creative work.</p>
-<h3 id="h-app-testing-and-qa">App Testing and QA</h3>
-<p>Austin startups need real humans testing real workflows.</p>
-<ul><li>User testing</li><li>Bug reporting</li><li>Feature feedback</li></ul>
-<p><strong>Earnings:</strong> $25–$60 per hour<br/>Bonus: Many gigs are remote-friendly.</p>
-<h2 id="h-creative-and-media-side-hustles">Creative and Media Side Hustles</h2>
-<p>Austin runs on content. And content always needs creators.</p>
-<h3 id="h-photography-and-videography">Photography and Videography</h3>
-<p>From concerts to brand shoots, visuals are currency.</p>
-<ul><li>Event coverage</li><li>Product photos</li><li>Social media reels</li></ul>
-<p><strong>Pro tip:</strong> Focus on one niche. Musicians, real estate, or fitness brands work especially well.</p>
-<h3 id="h-social-media-management">Social Media Management</h3>
-<p>Local businesses know they need social media. They just don’t want to do it.</p>
-<ul><li>Posting schedules</li><li>Comment engagement</li><li>Basic analytics reporting</li></ul>
-<p><strong>Earnings:</strong> $800–$2,500 per client per month</p>
-<h3 id="h-podcast-editing-and-content-repurposing">Podcast Editing and Content Repurposing</h3>
-<p>Austin loves podcasts. Editing them is quieter. And profitable.</p>
-<ul><li>Audio cleanup</li><li>Show notes</li><li>Short clips for social platforms</li></ul>
-<p>This is one of the most overlooked <strong>best side hustles in Austin</strong> right now.</p>
-<h2 id="h-local-services-that-pay-surprisingly-well">Local Services That Pay Surprisingly Well</h2>
-<p>Not everything needs a laptop.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Busy professionals don’t want to drive to car washes.</p>
-<ul><li>At-home detailing</li><li>Corporate parking lot services</li><li>Subscription packages</li></ul>
-<p><strong>Startup cost:</strong> Low<br/><strong>Repeat income:</strong> High</p>
-<h3 id="h-handyman-and-home-organization">Handyman and Home Organization</h3>
-<p>Austin homes range from brand-new builds to aging properties.</p>
-<ul><li>Furniture assembly</li><li>Storage optimization</li><li>Small repairs</li></ul>
-<p>If you’re reliable, referrals will do the marketing for you.</p>
-<h3 id="h-short-term-rental-cleaning">Short-Term Rental Cleaning</h3>
-<p>Airbnb turnover never stops.</p>
-<ul><li>Fast-paced</li><li>Predictable schedules</li><li>Strong referral networks</li></ul>
-<p>This is one of the <strong>best side hustles in Austin</strong> for people who want steady, repeat work.</p>
-<h2 id="h-real-estate-adjacent-side-hustles">Real Estate-Adjacent Side Hustles</h2>
-<p>Austin’s real estate market creates endless side income opportunities.</p>
-<h3 id="h-airbnb-co-hosting">Airbnb Co-Hosting</h3>
-<p>Property owners want help without hiring full managers.</p>
-<ul><li>Guest communication</li><li>Cleaning coordination</li><li>Check-in logistics</li></ul>
-<p><strong>Earnings:</strong> 10–25% of monthly rental revenue</p>
-<h3 id="h-apartment-locating-and-referrals">Apartment Locating and Referrals</h3>
-<p>Renters always need guidance.</p>
-<ul><li>Matching budgets to neighborhoods</li><li>Scheduling tours</li><li>Referral commissions</li></ul>
-<p>This <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">side hustle</a> rewards people who enjoy helping others make decisions.</p>
-<h2 id="h-food-events-and-experience-based-side-hustles">Food, Events, and Experience-Based Side Hustles</h2>
-<p>Austin is a festival city. And festivals mean money.</p>
-<h3 id="h-catering-pop-ups-and-specialty-food">Catering Pop-Ups and Specialty Food</h3>
-<p>If you cook well, people will pay.</p>
-<ul><li>Farmers markets</li><li>Event catering</li><li>Weekly meal prep</li></ul>
-<p>Food margins are tight, but loyal customers change everything.</p>
-<h3 id="h-event-staffing-and-brand-ambassadors">Event Staffing and Brand Ambassadors</h3>
-<p>Conferences, music events, and launches need people.</p>
-<ul><li>Registration</li><li>Crowd engagement</li><li>Product demos</li></ul>
-<p><strong>Pay:</strong> $20–$35 per hour<br/>Seasonal spikes make this one of the <strong>best side hustles in Austin</strong> for flexible earners.</p>
-<h2 id="h-student-and-flexible-schedule-side-hustles">Student- and Flexible-Schedule Side Hustles</h2>
-<p>Austin’s student population fuels constant demand.</p>
-<h3 id="h-tutoring-and-test-prep">Tutoring and Test Prep</h3>
-<p>Parents pay for results.</p>
-<ul><li>Math, science, and writing</li><li>SAT and ACT prep</li><li>College application coaching</li></ul>
-<h3 id="h-pet-sitting-and-house-sitting">Pet Sitting and House Sitting</h3>
-<p>Travel-heavy professionals need trusted help.</p>
-<ul><li>Overnight stays</li><li>Long weekends</li><li>Holiday premiums</li></ul>
-<p>These hustles stack well with full-time jobs.</p>
-<h2 id="h-online-side-hustles-you-can-run-from-austin">Online Side Hustles You Can Run From Austin</h2>
-<p>Location helps. But the internet scales faster.</p>
-<h3 id="h-freelance-writing-and-niche-blogging">Freelance Writing and Niche Blogging</h3>
-<p>Austin businesses love local voices.</p>
-<ul><li><a href="https://www.examples.com/english/blog-writing.html">Blog writing</a></li><li>Email campaigns</li><li>Website copy</li></ul>
-<h3 id="h-digital-products">Digital Products</h3>
-<p>Turn expertise into assets.</p>
-<ul><li>Templates</li><li>Mini-courses</li><li>Guides</li></ul>
-<p>This is one of the <strong>best side hustles in Austin</strong> for long-term leverage.</p>
-<h2 id="h-how-much-you-can-realistically-make">How Much You Can Realistically Make</h2>
-<p>Here’s a grounded look at income potential:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle Type</strong></td><td><strong>Monthly Income</strong></td><td><strong>Time Commitment</strong></td></tr><tr><td>Freelance Tech Support</td><td>$2,000–$6,000</td><td>10–20 hrs/week</td></tr><tr><td>Social Media Management</td><td>$1,500–$5,000</td><td>8–15 hrs/week</td></tr><tr><td>Mobile Detailing</td><td>$1,200–$4,000</td><td>Weekends</td></tr><tr><td>Airbnb Co-Hosting</td><td>$1,000–$3,500</td><td>Flexible</td></tr><tr><td>Tutoring</td><td>$800–$2,500</td><td>Evenings</td></tr></tbody></table>
-<p>The <strong>best side hustles in Austin</strong> aren’t always the flashiest. They’re the ones you can repeat, refine, and scale.</p>
-<h2 id="h-legal-tax-and-business-basics-in-austin">Legal, Tax, and Business Basics in Austin</h2>
-<p>Texas keeps things simple. Still, don’t skip the basics.</p>
-<ul><li>Track income from day one</li><li>Separate personal and business expenses</li><li>Consider forming an LLC as income grows</li><li>Set aside money for quarterly taxes</li></ul>
-<p>Clean operations reduce stress. Always.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle-for-you">How to Choose the Right Side Hustle for You</h2>
-<p>Ask yourself three questions:</p>
-<ol><li>Do I want quick cash or long-term growth?</li><li>How much time can I realistically commit?</li><li>Do I enjoy this enough to repeat it weekly?</li></ol>
-<p>The <strong>best side hustles in Austin</strong> align with your lifestyle, not just your bank account.</p>
-<p>Start small. Test demand. Raise prices as confidence grows.</p>
-<h2 id="h-final-thoughts-austin-rewards-action">Final Thoughts: Austin Rewards Action</h2>
-<p>Austin doesn’t wait. Neither should you.</p>
-<p>The city favors people who try, adjust, and keep moving. Whether you want extra income, flexibility, or a future business, there’s room here. Real room.</p>
-<p>Pick one idea. Commit for 60 days. Learn fast. Improve faster.</p>
-<p>That’s how side hustles turn into something bigger. And in Austin, that transformation happens every day.</p>
+<p>Austin is expensive by Texas standards, and that's exactly why so many people here want a second income. The good news: the same forces pushing rent up (a booming tech sector, nonstop tourism and a festival calendar the rest of the country envies) also create demand for side gigs. The best side hustles in Austin plug into those flows of money instead of fighting them.</p>
+<p>Below are 18 side gigs that work in Austin in 2026, with typical pay, startup costs and the local details that make the difference: which weekends to work, which neighborhoods to target and which rules to know before you start.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Texas state income tax</span></div>
+  <div class="stat"><b>$15–$100</b><span>typical hourly range, gig to freelance</span></div>
+  <div class="stat"><b>3</b><span>mega-events a year: SXSW, ACL, F1</span></div>
+</div>
+
+<h2 id="austin-economy">What makes Austin different for side income</h2>
+<p>Austin rewards a different playbook than Houston or Dallas. Keep these in mind:</p>
+<ul>
+  <li><strong>Tech money is everywhere.</strong> Tesla's Giga Texas, Apple's north Austin campus, Dell in Round Rock, Oracle on Lady Bird Lake and Samsung's chip plant in nearby Taylor bring in high earners who pay for convenience and startups that need flexible help.</li>
+  <li><strong>The calendar has three giant peaks.</strong> SXSW takes over downtown in March. Austin City Limits Music Festival fills Zilker Park for two October weekends, and the Formula 1 United States Grand Prix brings huge crowds to Circuit of the Americas the same month. Add Longhorns football, Austin FC at Q2 Stadium and Rodeo Austin, and there's a surge almost every month.</li>
+  <li><strong>Transplants keep arriving.</strong> New residents need movers, handymen, cleaners, pet sitters and someone to assemble a house full of furniture.</li>
+  <li><strong>It's a creator town.</strong> Local brands, restaurants and bands hire freelancers for photos, video, social media and websites rather than agencies.</li>
+  <li><strong>Competition is real.</strong> Driverless robotaxis now operate in parts of Austin, and plenty of people chase the same gigs. Specialists and people who show up reliably win.</li>
+</ul>
+
+<h2 id="top-picks">Best side hustles in Austin: the top 8</h2>
+<p>If you want to know how to make money in Austin quickly, start here. These eight side gigs in Austin offer the best mix of demand, pay and fast start right now.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare-austin">1. Rideshare driving on surge weekends</h3>
+    <p>Austin rideshare is about timing. Friday and Saturday nights on Sixth Street, Rainey Street and South Congress, early flights at Austin-Bergstrom (AUS), Longhorns home games and festival weeks pay the most. During SXSW, ACL and F1, road closures change hourly, so learn the pickup zones before you go. Start with our <a href="/lyft-uber/">Lyft and Uber guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$28/hr before expenses</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Night owls, festival weeks</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery-austin">2. Food, grocery and package delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Amazon Flex all run busy. The Domain, Mueller and the dense apartments around East Riverside keep orders coming, and suburbs like Cedar Park, Pflugerville and Leander tip well with easy parking. Near campus, an e-bike beats a car.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$23/hr before gas</li><li><b>Startup:</b> Car, bike or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+</div>
+<p>Before committing to driving, see what you actually keep after gas, wear and mileage:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="festival-staffing">3. Festival and event staffing</h3>
+    <p>SXSW, ACL and F1 weekend need thousands of temporary workers: badge checks, bartending, stage crew, merch, VIP hospitality and cleanup. Staffing agencies and production companies start hiring weeks ahead, so get on their lists in January and August. Q2 Stadium, the Moody Center and Darrell K Royal Stadium need staff all season.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$30/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, high-energy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelance-tech">4. Freelance IT, web and no-code work</h3>
+    <p>Startups and small firms want an on-call person for laptop setup, Google Workspace, Wi-Fi, website fixes and automation. Webflow, Shopify and Squarespace builds for local restaurants and boutiques are steady work. Find early clients on <a href="/fiverr/">Fiverr</a>, local Slack groups and coworking spaces, then move to monthly retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> $45–$100/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Tech workers, career changers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="str-turnovers">5. Short-term rental turnovers and co-hosting</h3>
+    <p>Austin hosts charge top rates during festival weeks and Longhorns weekends, and they need cleaners who never miss a check-in. If you're organized, co-host for an owner by handling messages, pricing and restocking for a share of revenue. Every Austin STR needs a city operating license, so work with licensed hosts only.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr cleaning; 15–25% of revenue co-hosting</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Reliable, detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="dog-walking">6. Dog walking and pet sitting</h3>
+    <p>Austin is famously dog-obsessed, and tech workers with long office days keep Rover and Wag busy, especially in East Austin, Zilker, Mueller and the Domain-area apartments. Summer heat means early morning and evening walks only. Festival weekends and holidays book out fast. A sturdy [[amazon:dog-leash|hands-free leash]] helps with multiple dogs.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$32/walk, $50–$85/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="ugc-content">7. Content creation and UGC</h3>
+    <p>Local restaurants, fitness studios, real estate agents and consumer brands need short videos and photos for Instagram and TikTok. User-generated content (UGC) creators film product videos for brands without needing a large following. Austin's murals, food trucks and Hill Country scenery make easy backdrops.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$500 per video package</li><li><b>Startup:</b> Phone, light, mic</li><li><b>Best for:</b> Creative people comfortable on camera</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring-austin">8. Tutoring and test prep</h3>
+    <p>Families in Westlake (Eanes ISD), Lake Travis, Round Rock and Leander pay well for math, science, SAT/ACT and college essay help. UT Austin grad students have a credibility edge. Online tutoring lets you serve families anywhere in the metro without fighting MoPac traffic.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$70/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+</div>
+
+[[gear:ring-light,usb-mic,tripod|Creator gear for Austin side hustlers]]
+
+<h2 id="austin-comparison">Austin side gigs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare</td><td>$16–$28/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Delivery</td><td>$15–$23/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Festival staffing</td><td>$16–$30/hr</td><td>$0</td><td>Next festival</td></tr>
+    <tr><td>Freelance IT &amp; web</td><td>$45–$100/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+    <tr><td>STR turnovers</td><td>$25–$45/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Dog walking</td><td>$20–$32/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Boat detailing</td><td>$150–$400 per boat</td><td>$200–$500</td><td>Days (spring–fall)</td></tr>
+    <tr><td>Live music gigs</td><td>$100–$400 per gig</td><td>Gear you own</td><td>Weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="lake-hill-country">Lake, heat and home services</h2>
+<p>Central Texas heat and hilly, oversized lots create service work that pays well per hour.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="boat-detailing">9. Boat and car detailing</h3>
+    <p>Lake Travis and Lake Austin are full of boats that need washing, waxing and interior cleaning from spring through fall. Marinas and lakeside homeowners in Lakeway and Point Venture are good starting points. Mobile car detailing fills the off-season.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per boat</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Outdoorsy hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-care-austin">10. Pool cleaning</h3>
+    <p>Suburbs like Steiner Ranch, Circle C and Avery Ranch have pools in many backyards. A weekly route in one subdivision keeps drive time low. Texas generally taxes pool service, so price accordingly.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45 per visit</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Route builders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-assembly">11. Moving help and furniture assembly</h3>
+    <p>New arrivals and lease turnover in August keep TaskRabbit, Dolly and Lugg busy. Furniture assembly and TV mounting are easy entry points that need only basic tools.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$60/hr</li><li><b>Startup:</b> $50–$200 in tools</li><li><b>Best for:</b> Handy, punctual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning-austin">12. Recurring house cleaning</h3>
+    <p>Two-income tech households in Mueller, Crestview and Round Rock want biweekly cleanings. One weekday route of four to six homes can bring in steady money.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Daytime availability</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Austin summers regularly top 100°F. Schedule outdoor work before 11 a.m. or after 6 p.m., hydrate, and build heat days into your pricing so a heat wave doesn't wreck your week.</div>
+
+<h2 id="creative-austin">Creative and online side hustles</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="live-music">13. Live music, DJ and sound tech gigs</h3>
+    <p>The "Live Music Capital of the World" has bars, breweries, weddings and corporate events that need performers, DJs and sound engineers. Sound and lighting techs are often in shorter supply than musicians.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$400 per gig</li><li><b>Startup:</b> Gear you own</li><li><b>Best for:</b> Musicians, audio nerds</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography-austin">14. Wedding and portrait photography</h3>
+    <p>Hill Country venues in Dripping Springs and Wimberley host weddings most weekends, and spring bluebonnet season creates a rush of family portraits. Second-shooting for an established photographer is a fast way in.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$500 per session</li><li><b>Startup:</b> Camera and lens</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="vintage-reselling">15. Vintage and resale</h3>
+    <p>Austin loves vintage. Estate sales in Tarrytown and Travis Heights feed Poshmark, Depop and booths at local markets. Longhorns gear and Western wear sell well locally and online.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Thrifters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="social-media">16. Social media management</h3>
+    <p>Food trucks, salons and local shops want someone to post consistently and answer DMs. Three clients on monthly packages can add up fast.</p>
+    <ul class="meta"><li><b>Pay:</b> $300–$1,000 per client/month</li><li><b>Startup:</b> Phone, laptop</li><li><b>Best for:</b> Marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses-austin">17. Online courses and templates</h3>
+    <p>Austin's product managers, engineers and designers can package their expertise into courses, Notion templates or coaching. It builds slowly but compounds.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts with patience</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="food-trailer">18. Food trailer and catering shifts</h3>
+    <p>Austin's food trailer scene and wedding caterers need extra hands for weekend rushes and events. It's a low-risk way to learn the business before starting your own.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr plus tips</li><li><b>Startup:</b> $0 (food handler card)</li><li><b>Best for:</b> Food lovers</li></ul>
+  </div>
+</div>
+
+<h2 id="austin-calendar">An Austin side hustle calendar</h2>
+<p>Austin's demand swings with the seasons more than most Texas cities. Plan your year like this:</p>
+<ul>
+  <li><strong>January–February:</strong> Quieter month for events, so focus on online work, tax-season bookkeeping and signing up with staffing agencies before SXSW.</li>
+  <li><strong>March:</strong> SXSW and Rodeo Austin. Rideshare, delivery, STR turnovers and event staffing all peak. Spring also starts bluebonnet portrait season.</li>
+  <li><strong>April–May:</strong> Pool openings, boat season on Lake Travis, graduation photos and UT move-out hauling.</li>
+  <li><strong>June–August:</strong> Extreme heat. Shift outdoor work to early mornings, lean on pool care and indoor services, and catch the August lease-turnover moving rush around campus.</li>
+  <li><strong>September–November:</strong> Longhorns football Saturdays, ACL's two October weekends and F1 race weekend make this the strongest stretch of the year for drivers, hosts and event workers.</li>
+  <li><strong>December:</strong> Holiday parties, gift markets and pet sitting for travelers.</li>
+</ul>
+<p>Working those peaks hard and using slow months to build skills or clients is how many Austin side hustlers smooth out their income.</p>
+
+<h2 id="start-austin">How to start a side hustle in Austin this month</h2>
+<ol class="steps">
+  <li><strong>Pick one hustle and one zone.</strong> Austin traffic on I-35 and MoPac punishes people who serve the whole metro. Start near home.</li>
+  <li><strong>Price for Austin, not Texas.</strong> Austin rates run higher than most of the state. Use the <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> to set a rate that covers taxes and fees.</li>
+  <li><strong>Get on the festival lists early.</strong> Apply to staffing agencies in January for SXSW and in August for ACL and F1.</li>
+  <li><strong>Build proof fast.</strong> Before-and-after photos, a simple portfolio or three five-star reviews matter more than a logo.</li>
+  <li><strong>Join the local channels.</strong> Neighborhood Facebook groups, Nextdoor, coworking spaces and Austin startup Slack groups are where clients find people.</li>
+  <li><strong>Separate your money.</strong> Open a separate account and track every expense from day one.</li>
+</ol>
+
+<h2 id="austin-taxes">Texas taxes and Austin rules for side hustlers</h2>
+<ul>
+  <li><strong>No state income tax.</strong> You owe federal income tax plus 15.3% self-employment tax on net profit. Set aside 20 to 25% and pay quarterly once you expect to owe $1,000 or more.</li>
+  <li><strong>Sales tax.</strong> Austin's combined rate is typically 8.25%. Texas taxes physical goods and some services, including many pool, landscaping and cleaning jobs. Register for a free sales tax permit with the Comptroller if your work is taxable. Most freelance writing and consulting is not.</li>
+  <li><strong>Short-term rental license.</strong> The City of Austin requires an operating license for any STR before you advertise or host, and platforms must display it. Owners also owe state and city hotel occupancy taxes.</li>
+  <li><strong>Assumed name.</strong> File a DBA with the Travis County Clerk (or Williamson or Hays County) if you operate under a business name.</li>
+  <li><strong>LLCs and franchise tax.</strong> If you form an LLC, you won't owe Texas franchise tax at side-hustle revenue levels, but you still file an annual information report.</li>
+</ul>
+<p>For statewide trends, see our <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">Texas side hustle guide</a>.</p>
+<div class="callout"><strong>Quick tip:</strong> Freelancers should track software subscriptions, a share of phone and internet costs, and coworking fees. Those deductions reduce both income tax and self-employment tax.</div>
+
+<h2 id="nearby">Compare Austin with nearby cities</h2>
+<p>See how Austin stacks up against the best side hustles in <a href="/best-side-hustles-in-houston/">Houston</a>, <a href="/best-side-hustles-in-dallas/">Dallas</a> and <a href="/best-side-hustles-in-fort-worth/">Fort Worth</a>. Austin pays the highest freelance rates of the group, but its rents are higher too, which is why Better Side Hustles readers here lean harder on skills-based gigs than on driving.</p>
+<p>Choose one idea, give it 90 days, and track every hour and dollar. Austin side hustles in 2026 reward specialists who show up every week.</p>
 HTML,
 ];

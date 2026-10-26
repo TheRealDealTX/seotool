@@ -1,182 +1,210 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Cleveland (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Cleveland to earn extra income with low startup costs and strong local demand.',
-    'h1' => 'Best Side Hustles in Cleveland',
-    'kicker' => 'City Guide · OH',
-    'dek' => 'Gig apps, local services and online work that pay in Cleveland — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-20',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/best-side-hustles-in-cleveland.webp',
-    'image_alt' => 'Best Side Hustles in Cleveland',
-    'category' => 'City Guides',
-    'city' => 'Cleveland',
-    'state' => 'OH',
-    'keywords' => ['best side hustles in cleveland'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'snow-shovel', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-columbus', 'best-side-hustles-in-cincinnati', 'best-side-hustles-in-chicago'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Cleveland for beginners?', 'a' => 'Food delivery, rideshare driving, and task-based gig work are among the best side hustles in Cleveland for beginners because they require little upfront investment.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Cleveland?', 'a' => 'Most side hustles generate $500–$2,000 per month part-time, depending on hours worked and the type of service offered.'],
-        ['q' => 'Are seasonal side hustles like snow removal worth it in Cleveland?', 'a' => 'Yes, snow removal can be highly profitable during winter storms, especially if you secure repeat neighborhood clients.'],
-        ['q' => 'Do I need an LLC to start a side hustle in Ohio?', 'a' => 'Not immediately, but forming an LLC and getting insurance is smart once your income becomes consistent or you scale.'],
-        ['q' => 'What side hustles work best in Cleveland suburbs?', 'a' => 'Lawn care, cleaning services, tutoring, and mobile car detailing perform especially well in suburban neighborhoods.'],
-        ['q' => 'Can I run a profitable online side hustle while living in Cleveland?', 'a' => 'Absolutely — freelancing, virtual assistant services, and digital product sales can generate national income while benefiting from Cleveland’s lower living costs.'],
-        ['q' => 'Which side hustles scale into full-time businesses?', 'a' => 'Cleaning services, landscaping, detailing, and freelancing are some of the best side hustles in Cleveland that can grow into full-time operations.'],
-        ['q' => 'How do I find my first clients locally?', 'a' => 'Start with neighborhood Facebook groups, referrals, and simple online listings to generate early momentum.'],
-        ['q' => 'Are sports-related hustles profitable in Cleveland?', 'a' => 'Yes, merchandise reselling and event-based services can spike during Browns, Cavaliers, and Guardians seasons.'],
-        ['q' => 'What is the safest way to test a new side hustle?', 'a' => 'Begin part-time, track expenses carefully, and validate demand before investing heavily in equipment or branding.'],
+    'title'       => 'Best Side Hustles in Cleveland (2026): 20 Ways to Earn',
+    'description' => 'The best side hustles in Cleveland for 2026: 20 side gigs with pay ranges, startup costs, snowbelt and game-day tips, plus Ohio and city income tax rules.',
+    'h1'          => 'Best Side Hustles in Cleveland (2026): 20 Side Gigs That Pay',
+    'kicker'      => 'City Guide · OH',
+    'dek'         => 'World-class hospitals, die-hard sports fans and lake-effect snow give Cleveland a side hustle economy all its own. Here are the side jobs in Cleveland worth your time, what they pay and what the city will tax.',
+    'published'   => '2026-02-20',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/best-side-hustles-in-cleveland.webp',
+    'image_alt'   => 'Cleveland skyline on Lake Erie, illustrating the best side hustles in Cleveland',
+    'category'    => 'City Guides',
+    'city'        => 'Cleveland',
+    'state'       => 'OH',
+    'keywords'    => ['best side hustles in cleveland', 'side jobs in cleveland', 'side gigs in cleveland', 'how to make money in cleveland', 'cleveland side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['phone-mount', 'cordless-drill', 'planner', 'book-taxes'],
+    'related'     => ['best-side-hustles-in-columbus', 'best-side-hustles-in-detroit', 'best-side-hustles-in-cincinnati'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Cleveland?', 'a' => 'Snow removal, airport and medical-appointment rideshare, food delivery, handyman work in older homes, pet sitting in Lakewood and Ohio City, furnished rentals for traveling nurses, event staffing for Browns, Guardians and Cavs games, and remote freelancing all pay well here. Combining a winter hustle like snow removal with a summer one like lawn care smooths out the year.'],
+        ['q' => 'How can I make money in Cleveland fast?', 'a' => 'Delivery apps such as DoorDash, Uber Eats and Instacart can pay within a week of approval. Event staffing agencies hire for downtown stadiums and concert venues, and TaskRabbit and Rover can book within days. After the first big lake-effect storm, knocking on doors with a shovel can earn money the same morning.'],
+        ['q' => 'Do I have to pay Cleveland city income tax on side hustle income?', 'a' => 'Yes. Cleveland levies a 2.5% municipal income tax, collected by the Central Collection Agency, and it applies to net profit from self-employment as well as wages. Many suburbs use a different collector, such as RITA, and set their own rates. Make estimated payments or set money aside so you are not hit with a bill in April.'],
+        ['q' => 'Do I need a business license for a side hustle in Cleveland?', 'a' => 'Ohio does not have a general statewide business license, and most simple service side hustles do not require one. You need an Ohio vendor\'s license to sell taxable goods, and food sales, short-term rentals and some trades need specific permits or registrations. Check with the city of Cleveland or your suburb before scaling up.'],
+        ['q' => 'How much can you make from side gigs in Cleveland?', 'a' => 'App-based gigs typically gross $15 to $25 an hour before gas, with higher pay during storms and game nights. Skilled work such as handyman jobs, snow plowing routes and freelancing often pays $35 to $70 an hour once you have regular clients. Working 8 to 15 hours a week, most people earn roughly $400 to $1,500 a month.'],
+        ['q' => 'Is snow removal a good side hustle in Cleveland?', 'a' => 'It is one of the best. Lake-effect snow hits the east side and the snowbelt suburbs especially hard, and many homeowners and small businesses want reliable clearing before work. Selling seasonal contracts in the fall gives you predictable income, while per-storm pricing pays more in heavy winters. Pair it with lawn care for year-round clients.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Cleveland</strong>, you’re not alone. Rent isn’t what it used to be. Groceries aren’t either. And while Cleveland remains more affordable than many U.S. cities, smart professionals here know one paycheck often isn’t enough.</p>
-<p>The good news? Cleveland is built for side income.</p>
-<p>This city has healthcare giants, a steady logistics backbone, strong suburbs, passionate sports fans, and four distinct seasons that create rotating demand. That’s not random. That’s opportunity.</p>
-<p>Let’s break down the <strong>best side hustles in Cleveland</strong> — practical, profitable, and realistic options you can actually start.</p>
-<h2 id="h-why-cleveland-is-quietly-ideal-for-side-hustles">Why Cleveland Is Quietly Ideal for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Cleveland">Cleveland</a> isn’t flashy. It’s steady. And steady creates demand.</p>
-<p>Major economic drivers include:</p>
-<ul><li>Healthcare systems like Cleveland Clinic and University Hospitals</li><li>The Port of Cleveland and regional manufacturing</li><li>A growing tech and startup scene</li><li>Dense suburban neighborhoods with dual-income households</li><li>Year-round sports and entertainment events</li></ul>
-<p>Translation? There are people with money who need services.</p>
-<p>And because Cleveland’s cost of living is lower than coastal cities, your startup costs stay manageable. That makes risk lower. Which makes starting easier.</p>
-<h2 id="h-low-investment-side-hustles-you-can-start-this-week">Low-Investment Side Hustles You Can Start This Week</h2>
-<p>Let’s start simple. If you want quick cash, these are among the <strong>best side hustles in Cleveland</strong> with minimal setup.</p>
-<h3 id="h-1-food-delivery-amp-grocery-shopping">1. Food Delivery &amp; Grocery Shopping</h3>
-<p>Apps like <a href="https://www.ubereats.com/city/cleveland-oh?msockid=229dd862fdc56f83212ccee7fc656e1d">Uber Eats</a>, DoorDash, and Instacart are active across downtown, Ohio City, Lakewood, and the suburbs.</p>
-<p>Where to focus:</p>
-<ul><li>Downtown apartments near Playhouse Square</li><li>Lakewood and Tremont (higher tip averages)</li><li>Suburban grocery-heavy zones like Strongsville and Westlake</li></ul>
-<p>You can realistically earn:</p>
-<ul><li>$18–$28/hour during peak times</li><li>Higher during Browns or Cavs games</li></ul>
-<p>Pro tip: Work Friday evenings and Sunday afternoons. That’s surge territory.</p>
-<p>It’s not glamorous. But it works.</p>
-<h3 id="h-2-rideshare-driving">2. Rideshare Driving</h3>
-<p>Cleveland Hopkins Airport is an underrated goldmine.</p>
-<p>Airport runs, medical appointments, event nights — all consistent traffic. Focus on:</p>
-<ul><li>Airport early mornings (business travelers)</li><li>Downtown after sporting events</li><li>Concert nights at Rocket Mortgage FieldHouse</li></ul>
-<p>If you’re strategic with timing, you’re not just driving. You’re optimizing.</p>
-<h3 id="h-3-task-based-gig-work">3. Task-Based Gig Work</h3>
-<p>If you can assemble IKEA furniture without losing your mind, there’s money here.</p>
-<p>Platforms like TaskRabbit or local Facebook groups generate consistent demand for:</p>
-<ul><li>Furniture assembly</li><li>TV mounting</li><li>Small repairs</li><li>Moving help</li></ul>
-<p>People in Cleveland’s older homes often need help with minor projects. If you’re handy, this is one of the <strong>best <a href="/best-side-hustles-in-columbus/">side hustles</a> in Cleveland</strong> with high hourly upside — often $40–$60/hour.</p>
-<h3 id="h-4-pet-sitting-amp-dog-walking">4. Pet Sitting &amp; Dog Walking</h3>
-<p>Lakewood, Ohio City, and Tremont have dense pet-owning populations.</p>
-<p>Professionals work long hours. They travel. They need help.</p>
-<p>You can:</p>
-<ul><li>Start on Rover</li><li>Transition to private clients</li><li>Build recurring weekly routes</li></ul>
-<p>Recurring clients mean predictable income. Predictable income is powerful.</p>
-<h2 id="h-high-demand-service-hustles-where-real-money-lives">High-Demand Service Hustles (Where Real Money Lives)</h2>
-<p>Now we step up. These require a bit more effort — but the earning ceiling is much higher.</p>
-<h3 id="h-5-snow-removal-winter-s-built-in-business">5. Snow Removal: Winter’s Built-In Business</h3>
-<p>Cleveland winters are not subtle.</p>
-<p>One snowstorm can create hundreds of dollars in a single weekend if you’re prepared.</p>
-<p>Startup basics:</p>
-<ul><li>Snow blower or plow attachment</li><li>Reliable vehicle</li><li>Flyers or neighborhood Facebook ads</li></ul>
-<p>Average pricing:</p>
-<ul><li>$30–$60 per driveway</li><li>$75–$150 for corner lots</li></ul>
-<p>Ten driveways per storm? Do the math.</p>
-<p>Seasonal, yes. But highly profitable. That’s why it’s consistently one of the <strong>best side hustles in Cleveland</strong>.</p>
-<h3 id="h-6-lawn-care-amp-landscaping">6. Lawn Care &amp; Landscaping</h3>
-<p>Winter fades. Grass grows.</p>
-<p>Suburbs like Avon, Strongsville, and Solon are filled with homeowners who don’t want to mow after work.</p>
-<p>You can:</p>
-<ul><li>Charge $40–$60 per cut</li><li>Offer bi-weekly contracts</li><li>Upsell edging, mulching, fall cleanup</li></ul>
-<p>Recurring revenue matters more than one-off jobs.</p>
-<p>Start with 5 clients. Then 10. Then 20.</p>
-<h3 id="h-7-cleaning-services-airbnb-amp-residential">7. Cleaning Services (Airbnb &amp; Residential)</h3>
-<p>Cleveland’s short-term rental market isn’t massive — but it’s steady near downtown and near hospitals.</p>
-<p>You can:</p>
-<ul><li>Clean Airbnb units between guests</li><li>Offer deep cleaning services</li><li>Target busy suburban families</li></ul>
-<p>Typical rates:</p>
-<ul><li>$150–$300 per deep clean</li><li>$100–$150 per standard residential clean</li></ul>
-<p>Cleaning isn’t glamorous either. But margins can be strong if you systemize.</p>
-<h3 id="h-8-mobile-car-detailing">8. Mobile Car Detailing</h3>
-<p>This one surprises people.</p>
-<p>Cleveland’s salt-heavy winters destroy vehicles. Spring creates demand for detailing.</p>
-<p>Equipment needed:</p>
-<ul><li>Pressure washer</li><li>Vacuum</li><li>Cleaning chemicals</li><li>Mobile water tank (optional at first)</li></ul>
-<p>You can charge:</p>
-<ul><li>$150–$300 per vehicle</li></ul>
-<p>Target:</p>
-<ul><li>Suburban families</li><li>Healthcare professionals</li><li>Realtors prepping listings</li></ul>
-<p>It’s one of the most underrated — and scalable — <strong>best side hustles in Cleveland</strong>.</p>
-<h2 id="h-online-amp-remote-side-hustles-location-independent">Online &amp; Remote Side Hustles (Location-Independent)</h2>
-<p>You don’t have to work outside.</p>
-<p>Cleveland’s cost advantage makes remote income powerful. A national client paying coastal rates? That’s leverage.</p>
-<h3 id="h-9-freelance-writing-amp-content-creation">9. Freelance Writing &amp; Content Creation</h3>
-<p>Local businesses need SEO content. Realtors need listing descriptions. Contractors need blog posts.</p>
-<p>If you can write clearly and persuasively, this scales.</p>
-<p>Start with:</p>
-<ul><li>Upwork or direct outreach</li><li>Niches like real estate, home services, healthcare</li></ul>
-<p>Charge:</p>
-<ul><li>$0.10–$0.25 per word to start</li><li>Increase as you specialize</li></ul>
-<p>I’ve seen Cleveland-based freelancers out-earn local salaries by serving national clients.</p>
-<h3 id="h-10-selling-digital-products">10. Selling Digital Products</h3>
-<p>Low overhead. High margin.</p>
-<p>Ideas:</p>
-<ul><li>Printable planners</li><li>Budget templates</li><li>Local-themed designs</li><li>Canva social media kits</li></ul>
-<p>Platforms:</p>
-<ul><li>Etsy</li><li>Gumroad</li><li>Shopify</li></ul>
-<p>You build once. You sell repeatedly.</p>
-<h3 id="h-11-virtual-assistant-services">11. Virtual Assistant Services</h3>
-<p>Small business owners are overwhelmed.</p>
-<p>You can help with:</p>
-<ul><li>Email management</li><li>Calendar coordination</li><li>Social media scheduling</li><li>CRM updates</li></ul>
-<p>Target Cleveland-based professionals first. Then expand nationally.</p>
-<h2 id="h-creative-amp-niche-side-hustles-unique-to-cleveland">Creative &amp; Niche Side Hustles Unique to Cleveland</h2>
-<p>Cleveland has personality. Use it.</p>
-<h3 id="h-12-sports-merchandise-reselling">12. Sports Merchandise Reselling</h3>
-<p>Browns season alone drives massive fan spending.</p>
-<p>Flip:</p>
-<ul><li>Limited jerseys</li><li>Game-day gear</li><li>Vintage Cavaliers apparel</li></ul>
-<p>Buy low in offseason. Sell high during playoff hype.</p>
-<p>Timing is everything.</p>
-<h3 id="h-13-event-photography">13. Event Photography</h3>
-<p>Cleveland has:</p>
-<ul><li>Weddings</li><li>Corporate events</li><li>Festivals</li><li>Graduation parties</li></ul>
-<p>Entry-level packages can start at $500–$1,000 per event. Build a portfolio fast. Upgrade equipment later.</p>
-<h3 id="h-14-furniture-flipping">14. Furniture Flipping</h3>
-<p>Estate sales in older neighborhoods can be goldmines.</p>
-<p>Look for:</p>
-<ul><li>Solid wood pieces</li><li>Mid-century styles</li><li>Dressers needing refinishing</li></ul>
-<p>Buy for $50. Sell for $300+.</p>
-<p>Facebook Marketplace is active in Cleveland. That’s your storefront.</p>
-<h2 id="h-side-hustles-for-skilled-professionals">Side Hustles for Skilled Professionals</h2>
-<p>If you have a license or certification, your hourly rate can skyrocket.</p>
-<ul><li>Tutoring (especially STEM and ACT prep)</li><li>Weekend electrical work</li><li>Plumbing repairs</li><li>HVAC emergency calls</li></ul>
-<p>Suburban parents pay well for academic help. Homeowners pay even more for urgent repairs.</p>
-<p>This tier represents some of the absolute <strong>best side hustles in Cleveland</strong> because skill scarcity drives pricing power.</p>
-<h2 id="h-quick-comparison-table">Quick Comparison Table</h2>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Earning Potential</strong></td><td><strong>Seasonal?</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Food Delivery</td><td>Low</td><td>Moderate</td><td>No</td><td>Low</td></tr><tr><td>Snow Removal</td><td>Moderate</td><td>High</td><td>Yes</td><td>Medium</td></tr><tr><td>Lawn Care</td><td>Moderate</td><td>High</td><td>Yes</td><td>High</td></tr><tr><td>Cleaning</td><td>Low–Moderate</td><td>High</td><td>No</td><td>High</td></tr><tr><td>Freelancing</td><td>Low</td><td>High</td><td>No</td><td>Very High</td></tr><tr><td>Car Detailing</td><td>Moderate</td><td>High</td><td>Spring/Summer Peak</td><td>High</td></tr></tbody></table>
-<h2 id="h-how-to-choose-the-right-hustle">How to Choose the Right Hustle</h2>
-<p>Ask yourself three questions:</p>
-<ol><li>Do I want fast cash or long-term scale?</li><li>Do I prefer physical work or digital work?</li><li>Do I want flexibility or recurring contracts?</li></ol>
-<p>If you want quick income, start with delivery or gig work.</p>
-<p>If you want to build something that grows, choose services like cleaning, detailing, or lawn care.</p>
-<p>and if you want maximum upside with low overhead, go digital.</p>
-<h2 id="h-legal-amp-practical-basics">Legal &amp; Practical Basics</h2>
-<p>In Ohio, you may need:</p>
-<ul><li>LLC registration (if scaling)</li><li>General liability insurance (for service businesses)</li><li>Proper tax tracking</li></ul>
-<p>Open a separate bank account early. Track mileage. Track expenses.</p>
-<p>Small systems prevent big headaches later.</p>
-<h2 id="h-a-90-day-launch-plan">A 90-Day Launch Plan</h2>
-<p><strong>Weeks 1–2</strong></p>
-<ul><li>Choose one hustle</li><li>Research competitors</li><li>Set pricing slightly competitive but sustainable</li><li>Create simple branding</li></ul>
-<p><strong>Weeks 3–4</strong></p>
-<ul><li>Land first 3–5 clients</li><li>Collect testimonials</li><li>Refine workflow</li></ul>
-<p><strong>Month 2</strong></p>
-<ul><li>Raise rates modestly</li><li>Focus on repeat customers</li></ul>
-<p><strong>Month 3</strong></p>
-<ul><li>Systemize</li><li>Decide: stay solo or expand</li></ul>
-<p>Momentum builds quickly if you commit.</p>
-<h2 id="h-final-thoughts-cleveland-is-a-side-hustle-city">Final Thoughts: Cleveland Is a Side Hustle City</h2>
-<p>The <strong>best side hustles in Cleveland</strong> aren’t theoretical. They’re practical. They’re local and they’re aligned with the city’s structure.</p>
-<p>Healthcare creates busy professionals. Suburbs create service demand. Winters create snow income. Sports create seasonal spikes. Lower living costs create startup freedom.</p>
-<p>You don’t need to reinvent the wheel. You need to pick a lane and execute.</p>
-<p>Start small. Stay consistent. Adjust quickly.</p>
-<p>The <strong>best side hustles in Cleveland</strong> reward action — not overthinking.</p>
-<p>And Cleveland? It quietly rewards people who work.</p>
-<p>Now it’s your move.</p>
+    'body'        => <<<'HTML'
+<p>Cleveland is a city of steady demand. The Cleveland Clinic and University Hospitals draw patients and staff from around the world, sports fans pack downtown three seasons a year, and Lake Erie dumps snow on the east side every winter. Each of those creates paid work for people willing to show up. This guide ranks the best side hustles in Cleveland for 2026, with typical pay, startup costs and the local timing that makes them worth it.</p>
+<p>Because Cleveland is still more affordable than most big metros, the side gigs in Cleveland below can make a real dent in your budget, especially if you plan for the city income tax up front.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>2.5%</b><span>Cleveland city income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$0–$400</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="three-engines">Cleveland's three side hustle engines</h2>
+<p><strong>Healthcare.</strong> Cleveland Clinic, University Hospitals and MetroHealth are among the region's biggest employers. They bring in patients and families who need rides, short stays and errands, plus traveling nurses and residents who need furnished housing and pet care.</p>
+<p><strong>Sports and culture.</strong> The Browns, Guardians and Cavs all play downtown, Playhouse Square runs Broadway tours most of the year, and the Rock &amp; Roll Hall of Fame keeps tourists coming. Game and show nights mean surges for drivers, parking and event staff.</p>
+<p><strong>Winter.</strong> Lake-effect snow is not a rumor here. The east side and snowbelt suburbs like Mentor, Chardon and Painesville can get hammered while the west side sees a dusting. Snow removal, salt-damaged cars and winter delivery tips all add up.</p>
+<p>Add corporate employers like Sherwin-Williams, Progressive and KeyBank, plus students at Case Western Reserve and Cleveland State, and you have a broad base of customers.</p>
+
+<h2 id="best-picks">Our picks for the best side hustles in Cleveland</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="snow-removal">1. Snow removal</h3>
+    <p>Sell seasonal packages to neighbors in Cleveland Heights, Shaker Heights, Euclid and Mentor before Thanksgiving. Small businesses and churches with lots also hire independent plowers. A sturdy shovel and ice melt start you off; a snow blower lets you scale.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$75 per driveway, more for lots</li><li><b>Startup:</b> $30–$800</li><li><b>Best for:</b> Early risers who like winter</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Airport and medical rideshare</h3>
+    <p>Cleveland Hopkins early mornings, trips between hotels and the Clinic's main campus, and the rush after games and Playhouse Square shows are the steadiest money. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers sign-up basics.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$26/hr before costs</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Early birds, event nights</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats and Instacart run busy in Lakewood, Ohio City, Tremont and downtown, while Westlake, Strongsville and Solon offer big grocery orders. Snowy nights and Browns Sundays bring the best tips.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$24/hr before gas</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">4. Handyman and repair work</h3>
+    <p>Cleveland's housing stock is old, from Slavic Village doubles to Cleveland Heights colonials. Owners need doors rehung, drywall patched, gutters cleaned and storm windows swapped. A well-stocked [[amazon:tool-kit|home tool kit]] covers most small calls. Skip licensed electrical and plumbing work.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$65/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="nurse-rentals">5. Furnished rentals for traveling nurses</h3>
+    <p>Medical staff on 13-week contracts look for furnished rooms and apartments near University Circle, Little Italy and the west side hospitals. Monthly stays tend to mean fewer turnovers than nightly rentals. Check local rules, your lease and insurance first.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by unit</li><li><b>Startup:</b> Furnishing a room</li><li><b>Best for:</b> Homeowners near hospitals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">6. Pet sitting and dog walking</h3>
+    <p>Lakewood is one of the densest cities in Ohio, and it is full of dogs. Ohio City, Tremont and Detroit Shoreway are similar. Hospital shift workers especially value reliable midday walks.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28 per walk, $40–$75 per night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">7. Game-day and event staffing</h3>
+    <p>Staffing agencies and concession companies hire for the Browns stadium on the lakefront, Progressive Field, the Cavs arena and Huntington Convention Center. Summer brings festivals and the Labor Day air show.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$23/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelance">8. Remote freelancing</h3>
+    <p>Healthcare, insurance and manufacturing companies across Northeast Ohio hire contract writers, designers, analysts and marketers. Build reviews on <a href="/fiverr/">Fiverr</a> first, then move toward direct retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Skilled professionals</li></ul>
+  </div>
+</div>
+
+<p>If driving is part of your plan, use our calculator to see what you really earn per hour once gas, salt-season wear and mileage are counted:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Winter driving on salted roads is rough on cars. Rinse your undercarriage regularly, keep a mileage log, and remember the IRS standard mileage rate is designed to cover wear like this.</div>
+
+<h2 id="pay-table">Side jobs in Cleveland compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Snow removal</td><td>$30–$75/driveway</td><td>$30–$800</td><td>First storm</td></tr>
+    <tr><td>Rideshare</td><td>$16–$26/hr gross</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Delivery</td><td>$15–$24/hr gross</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>Handyman</td><td>$40–$65/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Furnished rentals</td><td>Varies</td><td>Furnishing</td><td>1–2 months</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$28/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Event staffing</td><td>$15–$23/hr</td><td>$0</td><td>Next home game</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+[[gear:dash-cam,snow-shovel,cleaning-kit|Gear for Cleveland gig workers]]
+
+<h2 id="neighborhood-guide">Where side gigs in Cleveland pay best</h2>
+<p>Cleveland is a patchwork of distinct neighborhoods and inner-ring suburbs, and each favors different work:</p>
+<ul>
+  <li><strong>Downtown, the Flats and the Warehouse District:</strong> game nights, theater crowds and hotel guests make this the core zone for rideshare and event staffing.</li>
+  <li><strong>University Circle and Little Italy:</strong> hospitals, museums and Case Western bring medical travelers, students and visiting staff who need rides, rooms, moving help and tutoring.</li>
+  <li><strong>Lakewood, Ohio City, Tremont and Gordon Square:</strong> dense, walkable and full of renters with pets. Ideal for dog walking, delivery and apartment cleaning.</li>
+  <li><strong>Shaker Heights, Cleveland Heights and Beachwood:</strong> large older homes with long driveways, mature trees and steady demand for handyman work, gutter cleaning and snow removal.</li>
+  <li><strong>Westlake, Strongsville, Solon and Mentor:</strong> newer suburbs with big lawns and busy families. Good for lawn care, tutoring and recurring house cleaning.</li>
+</ul>
+<p>Focus on one area until your calendar fills. Clustering clients cuts drive time, and in a Cleveland winter, less driving is worth real money.</p>
+
+<h2 id="year-round">Build a year-round Cleveland calendar</h2>
+<p>Cleveland's seasons are sharp, so the smartest side hustlers rotate services instead of fighting the weather.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-care">9. Lawn care and leaf cleanup</h3>
+    <p>The same clients who pay for snow removal in winter want mowing from spring through fall and leaf cleanup in November. Westlake, Parma, North Olmsted and Strongsville have plenty of suburban lawns.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per mow</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Snow-removal crews in summer</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="detailing">10. Mobile car detailing</h3>
+    <p>Road salt destroys finishes and floor mats. Spring salt-removal detailing and winter interior packages sell well, especially at office parks in Independence and Beachwood.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Car people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="gutter-cleaning">11. Gutter cleaning and storm prep</h3>
+    <p>Mature trees in Lakewood, Shaker Heights and Rocky River clog gutters every fall, and ice dams follow. A ladder and a careful approach go a long way.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per home</li><li><b>Startup:</b> $100–$250</li><li><b>Best for:</b> Comfortable on ladders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving">12. Moving and hauling</h3>
+    <p>Students around Case Western and Cleveland State, plus hospital residents starting each summer, need help moving. A truck or trailer multiplies what you can charge.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$50/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong backs, truck owners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="parking">13. Event parking</h3>
+    <p>Lots and driveways near downtown venues fill fast on game days. If you control a space, list it on a parking app for Browns Sundays and big concerts.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$50 per event</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> People with spaces downtown</li></ul>
+  </div>
+</div>
+
+<h2 id="skills-online">Skill-based and online side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="medical-writing">14. Medical writing and transcription editing</h3>
+    <p>Healthcare professionals can freelance in medical writing, patient education content and documentation review for agencies and publishers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$80/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Nurses, clinicians</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">15. Tutoring</h3>
+    <p>Families in Solon, Hudson, Shaker Heights and Westlake pay for math, science and test prep. Online tutoring adds evening flexibility.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="bookkeeping">16. Bookkeeping and virtual assistance</h3>
+    <p>Contractors, restaurants and small practices need invoicing and scheduling help. Ohio's city income tax filings make good bookkeepers especially valuable.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">17. Real estate photography</h3>
+    <p>Cleveland's home market moves year-round, and agents across Cuyahoga County need listing photos every week.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$250 per listing</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling</h3>
+    <p>Estate sales in the inner-ring suburbs are full of mid-century furniture and vintage finds, and Browns and Cavs memorabilia sells to fans nationwide.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="makers">19. Handmade goods and markets</h3>
+    <p>The West Side Market area, holiday markets and summer pop-ups give makers a place to test products before moving online with <a href="/shopify/">Shopify</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$500</li><li><b>Best for:</b> Makers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="courses">20. Online courses</h3>
+    <p>Teach what you know, from nursing exam prep to manufacturing software, on <a href="/udemy/">Udemy</a> or your own platform.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Patient experts</li></ul>
+  </div>
+</div>
+
+<h2 id="ohio-taxes">Ohio and Cleveland taxes for side hustlers</h2>
+<ul>
+  <li><strong>Cleveland income tax:</strong> 2.5% on wages and on net profit from self-employment. The Central Collection Agency (CCA) administers it. Many suburbs use RITA or their own tax office with different rates, so check where you live and work.</li>
+  <li><strong>Ohio income tax:</strong> a flat 2.75% on nonbusiness income above $26,050 starting in 2026. Side hustle profit usually counts as business income, and Ohio's business income deduction exempts the first $250,000 of it. That deduction does not apply to city tax.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit plus federal income tax. Estimate yours with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Sales tax:</strong> selling taxable products requires an Ohio vendor's license. Most services are not taxed.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Your W-2 employer's city withholding does not cover Schedule C profit. If your side income grows, make estimated payments to the CCA so you are not hit with penalties.</div>
+
+<h2 id="start-now">How to start a side hustle in Cleveland this month</h2>
+<ol class="steps">
+  <li><strong>Pick a season-proof pair.</strong> Combine a winter gig and a summer gig, such as snow removal and lawn care, so clients stay with you all year.</li>
+  <li><strong>Choose your territory.</strong> East side for snow and big homes, Lakewood and Ohio City for pets and delivery, suburbs for yard work.</li>
+  <li><strong>Get listed.</strong> Apps for driving and delivery; Nextdoor and community Facebook groups for local services.</li>
+  <li><strong>Sell contracts early.</strong> Snow contracts in October, lawn contracts in March.</li>
+  <li><strong>Set aside for taxes.</strong> Put 25–30% of profit aside, including the 2.5% city tax.</li>
+  <li><strong>Track and adjust.</strong> Review hourly profit monthly and drop what does not pay.</li>
+</ol>
+
+<h2 id="nearby">Compare nearby cities</h2>
+<p>See how Cleveland stacks up against the <a href="/best-side-hustles-in-columbus/">best side hustles in Columbus</a>, <a href="/best-side-hustles-in-detroit/">Detroit</a> and <a href="/best-side-hustles-in-cincinnati/">Cincinnati</a>. Cleveland's combination of healthcare demand and serious winters is unique, and Better Side Hustles readers here who plan around both tend to earn the most. Pick one idea, work it for 90 days and keep what pays.</p>
 HTML,
 ];

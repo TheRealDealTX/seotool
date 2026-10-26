@@ -1,126 +1,192 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Memphis (2026): Ways to Earn Extra',
-    'description' => 'Best side hustles in Memphis explained with real earning ideas, local opportunities, and flexible ways to build extra income without burnout.',
-    'h1' => 'Best Side Hustles in Memphis',
+    'title' => 'Best Side Hustles in Memphis (2026): 18 Ways to Make Money',
+    'description' => 'The best side hustles in Memphis for 2026: 18 side gigs with pay ranges, startup costs, FedEx-hub and Beale Street tips, and Tennessee\'s no-income-tax rules.',
+    'h1' => 'Best Side Hustles in Memphis (2026): 18 Side Gigs That Pay in the Bluff City',
     'kicker' => 'City Guide · TN',
-    'dek' => 'Gig apps, local services and online work that pay in Memphis — with realistic earnings and how to land your first dollar.',
+    'dek' => 'Overnight hub shifts, Beale Street rideshare, nine-month lawn seasons and Elvis Week rentals: the side jobs in Memphis that pay, what they cost to start and what Tennessee does (and doesn\'t) tax.',
     'published' => '2026-01-15',
     'modified' => '2026-10-26',
     'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Memphis.webp',
-    'image_alt' => 'Best Side Hustles in Memphis',
+    'image_alt' => 'Memphis skyline and the Mississippi River, illustrating the best side hustles in Memphis',
     'category' => 'City Guides',
     'city' => 'Memphis',
     'state' => 'TN',
-    'keywords' => ['best side hustles in memphis'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-nashville', 'best-side-hustles-in-jacksonville', 'best-side-hustles-in-charlotte'],
+    'keywords' => ['best side hustles in memphis', 'side jobs in memphis', 'side gigs in memphis', 'how to make money in memphis', 'memphis side hustles 2026'],
+    'tool' => 'quiz',
+    'gear' => ['phone-mount', 'insulated-bag', 'mileage-log', 'book-taxes'],
+    'related' => ['best-side-hustles-in-nashville', 'best-side-hustles-in-new-orleans', 'best-side-hustles-in-louisville'],
     'faq' => [
-        ['q' => 'What are the best side hustles in Memphis right now?', 'a' => 'The best side hustles in Memphis include delivery driving, freelancing, local services, reselling, and creative work tied to the city’s culture and businesses.'],
-        ['q' => 'How much can you realistically earn from a side hustle in Memphis?', 'a' => 'Most people earn between $300 and $1,200 per month, with higher income possible through specialized or repeat-client side hustles.'],
-        ['q' => 'Are side hustles in Memphis good for full-time workers?', 'a' => 'Yes, many of the best side hustles in Memphis offer flexible hours that work well around full-time jobs.'],
-        ['q' => 'Do I need special licenses to start a side hustle in Memphis?', 'a' => 'Some side hustles may require permits or tax registration, especially service-based or home-based businesses, so it’s best to check local requirements.'],
-        ['q' => 'Which side hustles work best with low startup costs?', 'a' => 'Delivery driving, freelancing, reselling, and virtual work are among the best side hustles in Memphis with minimal upfront investment.'],
-        ['q' => 'Is freelancing a good option in Memphis?', 'a' => 'Freelancing works well in Memphis because remote income stretches further due to the city’s lower cost of living.'],
-        ['q' => 'What side hustles are best for students in Memphis?', 'a' => 'Flexible gigs like delivery driving, reselling, tutoring, and remote freelance work are ideal for students.'],
-        ['q' => 'Are creative side hustles profitable in Memphis?', 'a' => 'Yes, music, photography, content creation, and Memphis-themed products perform well when marketed locally and online.'],
-        ['q' => 'How long does it take to see results from a side hustle?', 'a' => 'Most side hustles show results within the first 30–60 days if approached consistently and strategically.'],
-        ['q' => 'Can a side hustle in Memphis turn into a full-time business?', 'a' => 'Absolutely—many of the best side hustles in Memphis can scale into full-time income with focus and repeat clients.'],
+        ['q' => 'What are the best side hustles in Memphis?', 'a' => 'Top picks include rideshare and delivery around downtown, Beale Street and the airport, part-time package handling and courier work, lawn care and pressure washing during the long warm season, pet sitting, short-term rental cleaning, and remote freelancing. Because Tennessee has no personal income tax, you keep more of what you earn than in most states.'],
+        ['q' => 'How can I make money in Memphis fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart usually pay within a week of approval. Seasonal package handling jobs ramp up in the fall, and event staffing agencies hire before Grizzlies games, Memphis in May events and Elvis Week. If you own a mower, door-knocking in your neighborhood can bring in lawn clients the same day.'],
+        ['q' => 'Do I need a business license for a side hustle in Memphis?', 'a' => 'It depends on how much you gross. Under Tennessee business tax rules, businesses with less than $3,000 in annual gross receipts need no business license, those between $3,000 and $100,000 need a minimal activity license from the county clerk, and those at $100,000 or more need a standard license and must file a return. Short-term rentals and food sales need separate permits.'],
+        ['q' => 'Does Tennessee tax side hustle income?', 'a' => 'Tennessee has no personal income tax on wages or self-employment income. You still owe federal income tax and 15.3% federal self-employment tax on net profit. LLCs and corporations may owe Tennessee franchise and excise taxes, and sales tax applies to many goods. Setting aside about 20 to 25% of profit covers most federal obligations.'],
+        ['q' => 'How much can I make from side jobs in Memphis?', 'a' => 'Most people working 8 to 15 hours a week typically earn $400 to $1,400 a month. App-based gigs usually net $14 to $22 an hour after gas, while lawn care, pressure washing, pool cleaning and freelancing often run $35 to $70 an hour once you have repeat clients. Big event weekends can push earnings much higher.'],
+        ['q' => 'Which Memphis areas are best for side hustles?', 'a' => 'Germantown, Collierville, East Memphis and Cordova are strong for lawn care, pool cleaning, pressure washing, pet sitting and tutoring. Downtown, South Main, Midtown, Overton Square and Cooper-Young are better for rideshare, delivery, rental cleaning and event work. Neighborhoods near the airport suit early-morning driving.'],
     ],
     'body' => <<<'HTML'
-<p>Memphis has always been a city of makers, movers, and quiet grinders. From music to logistics to healthcare, this is a place where people know how to work—and how to stack opportunities when the timing is right. That’s exactly why the <strong>best side hustles in Memphis</strong> aren’t about chasing hype. They’re about plugging into real demand, real neighborhoods, and real spending habits.</p>
-<p>I’ve spent time looking at what actually works here. Not theory. Not coastal trends that don’t translate. Just practical <a href="/best-side-hustles-in-chicago/">side hustles</a> that make sense for Memphis residents who want extra income without wrecking their schedule.</p>
-<p>Let’s get into it.</p>
-<h2 id="h-why-side-hustles-make-sense-in-memphis">Why Side Hustles Make Sense in Memphis</h2>
-<p><a href="https://en.wikipedia.org/wiki/Memphis,_Tennessee">Memphis</a> sits in a sweet spot most cities don’t.</p>
-<p>The cost of living is still manageable. Traffic, compared to larger metros, is forgiving. And the local economy is diverse enough that you’re not boxed into one type of work. Logistics, healthcare, tourism, education, and entertainment all overlap here. That creates opportunity.</p>
-<p>Side hustles thrive when three things line up: demand, affordability, and flexibility. Memphis checks all three boxes.</p>
-<p>You don’t need a flashy setup or a massive budget to get started. You need awareness. And a plan.</p>
-<h2 id="h-best-side-hustles-in-memphis-that-pay-well">Best Side Hustles in Memphis That Pay Well</h2>
-<p>Some side hustles are reliable because people need them week after week. These aren’t glamorous. They are effective.</p>
-<h3 id="h-rideshare-and-delivery-gigs">Rideshare and Delivery Gigs</h3>
-<p>Driving still works in Memphis when you’re strategic.</p>
-<p>Downtown, Midtown, East Memphis, and airport runs tend to be consistent. Events, conventions, and weekend nightlife create predictable spikes. Food delivery performs best during evenings and rainy days.</p>
-<p><strong>Tips that actually matter:</strong></p>
-<ul><li>Drive during peak windows only, not all day</li><li>Focus on neighborhoods with short trip density</li><li>Track miles and fuel weekly to protect margins</li></ul>
-<p>This is one of the <strong>best side hustles in Memphis</strong> for fast cash, especially if you already have a reliable car.</p>
-<h3 id="h-warehouse-and-logistics-gigs">Warehouse and Logistics Gigs</h3>
-<p>Memphis runs on logistics. Literally.</p>
-<p>Short-term warehouse shifts, loading assistance, and overnight logistics roles are widely available and often pay better than typical gig work. These shifts work especially well for people with nontraditional schedules.</p>
-<p><strong>Who this works for:</strong></p>
-<ul><li><a href="https://www.healthline.com/health/sleep/night-owl-vs-early-bird">Night owls</a></li><li>Weekend-only workers</li><li>People who prefer physical work over screen time</li></ul>
-<p>If you want structure without full-time commitment, this category punches above its weight.</p>
-<h3 id="h-freelance-and-remote-side-hustles">Freelance and Remote Side Hustles</h3>
-<p>Remote work quietly thrives in Memphis because expenses are lower.</p>
-<p>Writing, customer support, data entry, virtual assistance, design, and social media management all scale better when your living costs aren’t crushing you.</p>
-<p><strong>Actionable steps:</strong></p>
-<ul><li>Pick one skill and specialize fast</li><li>Build a simple portfolio, not a perfect one</li><li>Price for sustainability, not desperation</li></ul>
-<p>Remote work is one of the <strong>best side hustles in Memphis</strong> if you value flexibility and long-term growth.</p>
-<h3 id="h-service-based-side-hustles-in-local-neighborhoods">Service-Based Side Hustles in Local Neighborhoods</h3>
-<p>Memphis neighborhoods run on trust. That’s your advantage.</p>
-<p>Cleaning, yard work, junk removal, moving help, and small repairs are always in demand. Most clients don’t want a corporation. They want someone reliable who shows up.</p>
-<p><strong>How to stand out locally:</strong></p>
-<ul><li>Be responsive, even before you’re busy</li><li>Price clearly and fairly</li><li>Ask for referrals early, not later</li></ul>
-<p>Local service hustles often turn into repeat income faster than anything else.</p>
-<h2 id="h-creative-side-hustles-that-thrive-in-memphis">Creative Side Hustles That Thrive in Memphis</h2>
-<p>Creativity isn’t a bonus here. It’s infrastructure.</p>
-<h3 id="h-music-audio-and-creative-production">Music, Audio, and Creative Production</h3>
-<p>Memphis has deep musical roots, but the opportunity today goes beyond performing.</p>
-<p>Lessons, session work, home recording, editing, podcast production, and audio cleanup all generate steady demand. You don’t need a studio downtown. You need competence and consistency.</p>
-<p><strong>Smart entry points:</strong></p>
-<ul><li>Teach beginners</li><li>Offer editing, not just performance</li><li>Package services simply</li></ul>
-<p>This is one of the <strong>best side hustles in Memphis</strong> for creatives who want income without chasing gigs every night.</p>
-<h3 id="h-photography-and-content-creation">Photography and Content Creation</h3>
-<p>Small businesses in Memphis need content. Constantly.</p>
-<p>Restaurants, Airbnb hosts, realtors, fitness studios, and local brands all need photos and short-form video. Most don’t need cinematic quality. They need usable visuals.</p>
-<p><strong>High-demand categories:</strong></p>
-<ul><li>Property photos</li><li>Event coverage</li><li>Social media content packages</li></ul>
-<p>Start local. Build relationships. Scale selectively.</p>
-<h3 id="h-crafts-art-and-handmade-products">Crafts, Art, and Handmade Products</h3>
-<p>Memphis-themed products sell. Period.</p>
-<p>Local pride runs deep. Whether it’s prints, apparel, decor, or handmade goods, niche branding performs better than generic designs.</p>
-<p><strong>What works:</strong></p>
-<ul><li>Limited collections</li><li>Clear storytelling</li><li>Strong visuals</li></ul>
-<p>This category rewards patience, not speed.</p>
-<h2 id="h-online-and-digital-side-hustles-with-memphis-flexibility">Online and Digital Side Hustles With Memphis Flexibility</h2>
-<p>Some of the <strong>best side hustles in Memphis</strong> don’t require leaving your house at all.</p>
-<h3 id="h-reselling-and-flipping">Reselling and Flipping</h3>
-<p>Memphis has a strong secondhand ecosystem.</p>
-<p>Thrift stores, estate sales, clearance outlets, and marketplace deals create real arbitrage opportunities. The key is focus.</p>
-<p><strong>Categories that move:</strong></p>
-<ul><li>Electronics</li><li>Home goods</li><li>Apparel with brand recognition</li></ul>
-<p>Track what sells. Ignore what doesn’t. Rinse and repeat.</p>
-<h3 id="h-print-on-demand-and-e-commerce">Print-on-Demand and E-Commerce</h3>
-<p>You don’t need inventory to sell products anymore.</p>
-<p>Print-on-demand allows you to test ideas without upfront risk. Memphis-inspired designs, local humor, and niche messaging outperform generic graphics.</p>
-<p><strong>Start lean:</strong></p>
-<ul><li>Launch with 3–5 designs</li><li>Validate before scaling</li><li>Market organically before paying for ads</li></ul>
-<p>This is slow at first. Then it compounds.</p>
-<h2 id="h-side-hustles-for-students-parents-and-full-time-workers">Side Hustles for Students, Parents, and Full-Time Workers</h2>
-<p>Not everyone has the same availability. That’s okay.</p>
-<p>Here’s a quick comparison of flexibility vs earning potential:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle Type</strong></td><td><strong>Flexibility</strong></td><td><strong>Startup Cost</strong></td><td><strong>Income Potential</strong></td></tr><tr><td>Delivery Driving</td><td>High</td><td>Low</td><td>Medium</td></tr><tr><td>Freelancing</td><td>High</td><td>Low</td><td>High</td></tr><tr><td>Local Services</td><td>Medium</td><td>Low</td><td>High</td></tr><tr><td>Reselling</td><td>High</td><td>Low</td><td>Medium</td></tr><tr><td>Creative Work</td><td>Medium</td><td>Medium</td><td>Medium–High</td></tr></tbody></table>
-<p>Choose based on your life, not someone else’s schedule.</p>
-<h2 id="h-how-much-can-you-earn-with-side-hustles-in-memphis">How Much Can You Earn With Side Hustles in Memphis?</h2>
-<p>Let’s be realistic.</p>
-<p>Most people earning consistently fall into these ranges:</p>
-<ul><li>$300–$600/month with light effort</li><li>$800–$1,200/month with structure</li><li>$2,000+/month with specialization and repeat clients</li></ul>
-<p>The <strong>best side hustles in Memphis</strong> aren’t about working nonstop. They’re about choosing leverage early.</p>
-<h2 id="h-tips-for-choosing-the-right-side-hustle-in-memphis">Tips for Choosing the Right Side Hustle in Memphis</h2>
-<p>Before you start, ask yourself:</p>
-<ul><li>Do I want flexibility or predictability?</li><li>Am I trading time or building assets?</li><li>Can I sustain this for six months?</li></ul>
-<p>Then commit to one thing. Not five.</p>
-<p>Progress comes from focus.</p>
-<h2 id="h-common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-<p>I see the same mistakes over and over.</p>
-<ul><li>Underpricing to “get started”</li><li>Switching hustles too quickly</li><li>Ignoring basic bookkeeping</li><li>Treating side work casually while expecting serious results</li></ul>
-<p>Treat it like a business. Even if it’s small.</p>
-<h2 id="h-final-thoughts-building-sustainable-side-income-in-memphis">Final Thoughts: Building Sustainable Side Income in Memphis</h2>
-<p>Memphis rewards people who pay attention.</p>
-<p>The <strong>best side hustles in Memphis</strong> aren’t hidden. They’re right in front of you—in neighborhoods, businesses, warehouses, studios, and screens across the city. What matters is alignment. With your skills, with your schedule and with your energy.</p>
-<p>Start small. Execute cleanly. Improve fast.</p>
-<p>Extra income doesn’t come from doing everything. It comes from doing the right thing consistently.</p>
+<p>Memphis moves the world's packages overnight and its tourists all day. FedEx's World Hub at Memphis International Airport keeps the city humming after midnight, while Graceland, Beale Street, the National Civil Rights Museum and a nonstop barbecue and music scene draw visitors year-round. Add long, hot summers and some of the lowest living costs of any big U.S. city, and the best side hustles in Memphis come down to three things: driving, outdoor services and hospitality.</p>
+<p>This guide covers 18 side gigs that work in Memphis right now, with typical pay, startup costs and local detail. It also explains Tennessee's tax setup, which is friendlier to side income than almost anywhere in the country.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Tennessee personal income tax</span></div>
+  <div class="stat"><b>$14–$70</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>9–10</b><span>months of lawn and outdoor work per year</span></div>
+</div>
+
+<h2 id="why-memphis">Why the best side hustles in Memphis pay off</h2>
+<p>Memphis is a logistics capital. Beyond FedEx, the metro is packed with distribution centers along the I-40 and I-55 corridors and in DeSoto County, which means steady package volume for couriers and seasonal sorting work. Major employers like St. Jude Children's Research Hospital, Methodist Le Bonheur Healthcare, AutoZone and International Paper bring in professionals who outsource yard work, cleaning and childcare.</p>
+<p>The event calendar helps too: Memphis in May each spring, Elvis Week in August, the FedEx St. Jude Championship golf tournament in summer, the AutoZone Liberty Bowl and St. Jude Memphis Marathon in December, plus Grizzlies games at FedExForum and Tigers football. And because the warm season runs from March into November, outdoor services pay for most of the year instead of just a few months.</p>
+
+<h2 id="driving-logistics">Driving and logistics side gigs in Memphis</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">1. Rideshare driving</h3>
+    <p>Beale Street on weekend nights, Grizzlies games, concerts at the Orpheum and FedExForum, Graceland tour groups and early airport runs are the money windows. Tourists who don't know the city are reliable fares. Start with our <a href="/lyft-uber/">Lyft and Uber guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before gas and wear</li><li><b>Startup:</b> Eligible car with good A/C</li><li><b>Best for:</b> Nights and event weekends</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats and Instacart are busy in East Memphis, Germantown and Midtown. Barbecue joints keep dinner orders flowing, and stormy summer evenings bring surge pay. Suburban grocery orders tend to tip better.</p>
+    <ul class="meta"><li><b>Pay:</b> $14–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike, insulated bag</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="package-handling">3. Package handling and courier blocks</h3>
+    <p>Memphis has an unusual number of part-time, overnight and seasonal package-handling jobs because of the FedEx hub and the warehouses around it. Hiring ramps up ahead of the holiday peak. Amazon Flex, Roadie and GoShare blocks add flexible daytime delivery work.</p>
+    <ul class="meta"><li><b>Pay:</b> Hourly wage or block pay, varies</li><li><b>Startup:</b> $0; a [[amazon:hand-cart|folding hand cart]] helps for courier work</li><li><b>Best for:</b> Night owls who want structure</li></ul>
+  </div>
+</div>
+<p>Heat, idling and A/C eat into driving profits here. Run your real numbers before you commit:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="outdoor-services">Outdoor and home services: the long-season money-makers</h2>
+<p>Memphis heat is brutal, but it creates demand: nobody in Germantown wants to mow in July.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-care">4. Lawn care</h3>
+    <p>Bermuda and zoysia lawns grow from March into November here, which means a weekly route can pay for nine months or more. Build a tight route in one area, such as Cordova, Bartlett or Collierville, and add hedge trimming and fall leaf cleanup.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> $0–$400</li><li><b>Best for:</b> Early risers who can handle heat</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">5. Pressure washing</h3>
+    <p>Humid summers leave mildew and algae on siding, driveways, fences and patios. One job often pays $150 to $400, and neighbors who see your results tend to book next. Spring and early fall are peak season.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">6. Pet sitting and dog walking</h3>
+    <p>Long hospital shifts at St. Jude, Methodist and Baptist Memorial mean plenty of dogs need midday walks. Overnight sitting around holidays pays the most. Rover and Wag are the easiest way to start.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28/walk, $40–$70/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">7. Short-term rental cleaning and co-hosting</h3>
+    <p>Rentals near downtown, South Main and the Graceland area need quick turnovers, especially during Elvis Week, Memphis in May and the December bowl and marathon weekend. Co-hosting for out-of-town owners pays a share of bookings. The owner needs a short-term rental permit, so confirm they have one.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr; 15–25% as co-host</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-oriented organizers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">8. Remote freelancing</h3>
+    <p>With rent this low, national freelance rates go a long way. Logistics, healthcare and retail companies need writers, designers, data help and marketing support. Start on <a href="/fiverr/">Fiverr</a> or Upwork, then move good clients to retainers. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> shows how to package services.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-cleaning">9. Pool cleaning</h3>
+    <p>Backyard pools are common in Germantown, Collierville and East Memphis, and the season runs from May well into September. Weekly service routes are recurring income; openings and closings are bonus jobs.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50 per weekly visit</li><li><b>Startup:</b> $150–$300 in equipment</li><li><b>Best for:</b> Reliable route builders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">10. Handyman work</h3>
+    <p>Midtown, Cooper-Young and Central Gardens are full of older homes needing small repairs, and new builds in the suburbs need furniture assembly and TV mounting. Skip anything requiring a licensed electrician or plumber.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people with a car</li></ul>
+  </div>
+</div>
+
+[[gear:pressure-washer,leaf-blower,tool-kit|Gear for Memphis outdoor and home-service gigs]]
+
+<h2 id="comparison">Side jobs in Memphis compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare</td><td>$15–$25/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$14–$22/hr before gas</td><td>Car or bike</td><td>Under 1 week</td></tr>
+    <tr><td>Lawn care</td><td>$35–$60 per lawn</td><td>$0–$400</td><td>Days</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$200–$500</td><td>Days</td></tr>
+    <tr><td>Pool cleaning</td><td>$25–$50 per visit</td><td>$150–$300</td><td>1–2 weeks</td></tr>
+    <tr><td>Rental cleaning</td><td>$25–$45/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Event staffing</td><td>$15–$22/hr</td><td>$0</td><td>Next big event</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="culture-events">Music, food and event side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">11. Event staffing and concessions</h3>
+    <p>Staffing agencies hire for FedExForum, Simmons Bank Liberty Stadium, the Renasant Convention Center, Memphis in May events and the summer golf tournament at TPC Southwind. Shifts include ushering, concessions, parking and setup.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr, plus tips at some posts</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students and weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="music-lessons">12. Music lessons and gigging</h3>
+    <p>This is the home of Sun, Stax and the blues. If you play, teach guitar, piano or drums to kids and adults, and pick up gigs at bars, weddings and corporate events. Students and parents in the suburbs pay well for consistent teachers.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$60 per lesson; gigs vary</li><li><b>Startup:</b> Your instrument</li><li><b>Best for:</b> Musicians</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="food-vending">13. Baked goods and food at markets</h3>
+    <p>The Memphis Farmers Market downtown and the Cooper-Young market are good places to test baked goods, sauces and snacks. Tennessee allows some homemade foods to be sold directly to consumers, but rules vary by product, so check with the Tennessee Department of Agriculture and Shelby County Health Department first.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Home cooks and bakers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">14. Photography</h3>
+    <p>Weddings, quinceañeras, graduation shoots at the University of Memphis and Rhodes College, and portrait sessions in front of downtown murals and the Big River Crossing keep photographers booked. Real estate photography for agents in the suburbs adds weekday work.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$500 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+</div>
+
+<h2 id="more-gigs">More side gigs in Memphis</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="tutoring">15. Tutoring</h3>
+    <p>Families in Germantown and Collierville pay for math and ACT prep, and college students need subject help. Online tutoring fills evenings year-round.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$55/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers and grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">16. Moving help and junk hauling</h3>
+    <p>Apartment turnover around the University of Memphis and new construction in the suburbs mean steady moving and cleanout jobs. A pickup lets you take haul-away work too.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr per helper</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong people with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="car-detailing">17. Mobile car detailing</h3>
+    <p>Pollen in spring and dust all summer keep cars dirty. Office parks in East Memphis and near the medical district are good targets for while-you-work details.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per full detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling vinyl, vintage and collectibles</h3>
+    <p>Memphis is a great city for record hunting, and vintage soul, blues and rock vinyl sells to collectors worldwide. Estate sales, thrift stores and flea markets also turn up Grizzlies and Tigers gear and Elvis memorabilia that move well on eBay and Discogs.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Crate diggers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Memphis summers regularly bring dangerous heat indexes. For outdoor gigs, schedule work early in the morning, carry plenty of water and build heat breaks into your pricing.</div>
+
+<h2 id="get-started">How to start a side hustle in Memphis this month</h2>
+<ol class="steps">
+  <li><strong>Pick one hustle that fits your hours.</strong> Driving and delivery for evenings, outdoor services for early mornings and weekends.</li>
+  <li><strong>Set a goal.</strong> Work backward from your monthly target to weekly hours with the <a href="/tools/income-calculator/">income calculator</a>.</li>
+  <li><strong>Get listed locally.</strong> Nextdoor, neighborhood Facebook groups and a free Google Business Profile bring local clients fast.</li>
+  <li><strong>Check your license tier.</strong> Once you expect more than $3,000 a year in gross receipts, get a minimal activity license from the Shelby County Clerk.</li>
+  <li><strong>Mark the big weeks.</strong> Memphis in May, Elvis Week, Grizzlies home games and December bowl week are surge periods.</li>
+  <li><strong>Save for federal taxes.</strong> No state income tax doesn't mean no tax. Open a separate account and set money aside every week.</li>
+</ol>
+
+<h2 id="tennessee-taxes">Tennessee taxes and Memphis rules for side income</h2>
+<ul>
+  <li><strong>No state income tax:</strong> Tennessee does not tax wages or self-employment income, and the old Hall tax on investment income is gone.</li>
+  <li><strong>Federal taxes still apply:</strong> you owe federal income tax and 15.3% self-employment tax on net profit. Use the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to plan quarterly payments.</li>
+  <li><strong>Business tax and licenses:</strong> businesses grossing under $3,000 a year need no business license; from $3,000 up to $100,000 you need a minimal activity license from the county clerk; at $100,000 or more you need a standard business license and must file an annual Tennessee business tax return.</li>
+  <li><strong>Franchise and excise tax:</strong> if you form an LLC or corporation, Tennessee franchise and excise taxes generally apply, including a minimum franchise tax. Many side hustlers start as sole proprietors for that reason.</li>
+  <li><strong>Sales tax:</strong> Tennessee's state sales tax is 7%, and the combined rate in Memphis is 9.75%. Register with the Tennessee Department of Revenue if you sell taxable goods.</li>
+  <li><strong>Short-term rentals:</strong> require a permit and are subject to occupancy taxes, so check current rules with the city and county before you host.</li>
+</ul>
+
+<h2 id="nearby">Compare with nearby cities</h2>
+<p>See how Memphis compares with the <a href="/best-side-hustles-in-nashville/">best side hustles in Nashville</a>, <a href="/best-side-hustles-in-new-orleans/">New Orleans</a> and <a href="/best-side-hustles-in-louisville/">Louisville</a>. Memphis has lower costs than all three and the same no-income-tax advantage as Nashville. Better Side Hustles readers here who combine one driving gig with one outdoor service usually see the fastest results.</p>
+<p>Pick one idea, give it 90 days and track every dollar. That's how side gigs in Memphis turn into income you can count on.</p>
 HTML,
 ];

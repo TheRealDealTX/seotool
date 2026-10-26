@@ -1,152 +1,202 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Colorado Springs (2026 Guide)',
-    'description' => 'Discover the best side hustles in Colorado Springs with real income potential, flexible options, and practical ideas that work locally.',
-    'h1' => 'Best Side Hustles in Colorado Springs',
-    'kicker' => 'City Guide · CO',
-    'dek' => 'Gig apps, local services and online work that pay in Colorado Springs — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-29',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Colorado-Springs.webp',
-    'image_alt' => 'Best Side Hustles in Colorado Springs',
-    'category' => 'City Guides',
-    'city' => 'Colorado Springs',
-    'state' => 'CO',
-    'keywords' => ['best side hustles in colorado springs'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'snow-shovel', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-denver', 'best-side-hustles-in-aurora'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Colorado Springs right now?', 'a' => 'Service-based work like pet sitting, handyman services, freelancing, and Airbnb turnover cleaning perform especially well locally.'],
-        ['q' => 'Can you start a side hustle in Colorado Springs with little money?', 'a' => 'Yes, many of the best side hustles in Colorado Springs require minimal startup costs, especially service and remote-based work.'],
-        ['q' => 'Are side hustles in Colorado Springs seasonal?', 'a' => 'Some are—tourism, outdoor services, and rideshare spike seasonally, while freelancing and virtual work stay consistent year-round.'],
-        ['q' => 'Is Colorado Springs a good city for remote side hustles?', 'a' => 'Absolutely, the city has a strong remote-work culture and reliable infrastructure for online and freelance income.'],
-        ['q' => 'What side hustles work best for military members or spouses?', 'a' => 'Portable and flexible options like virtual assistance, tutoring, freelancing, and pet sitting are ideal.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Colorado Springs?', 'a' => 'Most people earn between $500 and $3,000 per month depending on time commitment and skill level.'],
-        ['q' => 'Do I need a business license for a side hustle in Colorado Springs?', 'a' => 'Some side hustles may require basic registration or insurance, especially those involving services or clients’ homes.'],
-        ['q' => 'What side hustles have the fastest startup time?', 'a' => 'Pet care, cleaning services, task-based gigs, and freelancing can often start within days.'],
-        ['q' => 'Are online side hustles better than local ones in Colorado Springs?', 'a' => 'It depends—online hustles scale faster, while local services often bring quicker cash flow.'],
-        ['q' => 'Can a side hustle in Colorado Springs turn into a full-time business?', 'a' => 'Yes, many of the best side hustles in Colorado Springs can scale into full-time income with systems and consistency.'],
+    'title'       => 'Best Side Hustles in Colorado Springs (2026): 17 Gigs',
+    'description' => 'The best side hustles in Colorado Springs for 2026: 17 side gigs built around PCS season, Pikes Peak tourism and Front Range weather, with pay and tax tips.',
+    'h1'          => 'Best Side Hustles in Colorado Springs (2026): 17 Side Gigs That Pay',
+    'kicker'      => 'City Guide · CO',
+    'dek'         => 'Military moves, Pikes Peak visitors, wildfire-season yard work and portable online gigs: here are the side jobs in Colorado Springs that actually pay, with startup costs and the fastest path to your first client.',
+    'published'   => '2026-01-29',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Colorado-Springs.webp',
+    'image_alt'   => 'Pikes Peak rising above Colorado Springs, illustrating the best side hustles in Colorado Springs',
+    'category'    => 'City Guides',
+    'city'        => 'Colorado Springs',
+    'state'       => 'CO',
+    'keywords'    => ['best side hustles in colorado springs', 'side jobs in colorado springs', 'side gigs in colorado springs', 'how to make money in colorado springs', 'colorado springs side hustles 2026'],
+    'tool'        => 'income-calculator',
+    'gear'        => ['snow-shovel', 'leaf-blower', 'camera', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-denver', 'best-side-hustles-in-aurora', 'best-side-hustles-in-albuquerque'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Colorado Springs?', 'a' => 'The best fits are PCS move-out cleaning and moving help, pet sitting for military families, rideshare and delivery, tourism work around Pikes Peak and Manitou Springs, wildfire mitigation and yard work, handyman jobs, short-term rental cleaning and portable online work like freelancing and virtual assistance.'],
+        ['q' => 'How can I make money in Colorado Springs fast?', 'a' => 'Delivery apps, Amazon Flex, Rover and moving-labor apps can pay within a week or two of approval. In summer PCS season, posting in base spouse groups and Nextdoor offering move-out cleaning or loading help often books jobs within days. After a snowstorm, shoveling driveways in your own neighborhood pays the same morning.'],
+        ['q' => 'Do I need a business license for a side hustle in Colorado Springs?', 'a' => 'Colorado Springs does not require a general business license for most home-based service work, but some activities need specific licenses or permits. If you sell taxable products you need a Colorado sales tax license and a city sales tax license, since the city collects its own sales tax. Short-term rentals require a city STR permit. Check with the city before you start.'],
+        ['q' => 'What side hustles work for military spouses in Colorado Springs?', 'a' => 'Portable work travels with you on the next PCS: virtual assistance, freelance writing or design, online tutoring, bookkeeping and selling digital products. Locally, pet sitting, cleaning and photography fit around unpredictable schedules. If you live in on-post housing, check with your housing office before running a business from home.'],
+        ['q' => 'How much can side jobs in Colorado Springs pay?', 'a' => 'App gigs typically gross $16–$26 an hour before gas. Move-out cleaning, handyman work and wildfire mitigation often run $35–$75 an hour, and skilled freelancing can pay more. Most people putting in 8–12 hours a week typically earn $500–$1,500 a month, with summer usually the strongest season.'],
+        ['q' => 'How are side hustles taxed in Colorado?', 'a' => 'Colorado has a flat state income tax, 4.4% for 2025 returns, plus federal income tax and 15.3% self-employment tax on your net profit. Service members who are Colorado residents for tax purposes owe state tax; those stationed here with another home state usually don\'t on military pay, but side income earned here can be different. Ask a tax pro if that applies to you.'],
     ],
-    'body' => <<<'HTML'
-<p>Colorado Springs has quietly become one of the most opportunity-rich cities in the Mountain West. Not flashy. Not oversold. Just steady, growing, and full of people who value flexibility and quality of life. That’s exactly why the <strong>best side hustles in Colorado Springs</strong> look a little different from what works in bigger cities. Less hype. More practicality. More room to actually make money.</p>
-<p>I’ve spent time studying what truly works here—not theory, not trends that only apply to Denver or Austin, but real income paths that fit the Springs’ economy, lifestyle, and seasonal rhythm. Whether you’re a military spouse, a remote worker, a student, or a professional looking to pad your savings, there are <a href="/digital-marketing-side-hustle/">side hustles</a> here that <em>actually make sense</em>.</p>
-<p>Let’s break them down.</p>
-<h2 id="h-why-colorado-springs-is-a-smart-city-for-side-hustles">Why Colorado Springs Is a Smart City for Side Hustles</h2>
-<p><a href="https://www.visitcos.com/">Colorado Springs</a> isn’t just growing—it’s diversifying.</p>
-<p>You’ve got:</p>
-<ul><li>A large military population</li><li>Strong tourism tied to outdoor recreation</li><li>Rapid housing development</li><li>An influx of remote professionals</li><li>Lower business saturation than major metros</li></ul>
-<p>That combination creates opportunity pockets. And that’s where the <strong>best side hustles in Colorado Springs</strong> live—inside unmet needs, seasonal spikes, and services people gladly pay for because time is more valuable than money.</p>
-<p>This isn’t about grinding 80 hours a week.<br/>It’s about stacking smart income streams.</p>
-<h2 id="h-what-actually-makes-a-side-hustle-work-here">What Actually Makes a Side Hustle Work Here</h2>
-<p>Before jumping into ideas, it helps to understand what <em>doesn’t</em> work well locally.</p>
-<p>Colorado Springs rewards:</p>
-<ul><li>Flexibility</li><li>Service-based skills</li><li>Outdoor and lifestyle alignment</li><li>Recurring or repeat business</li></ul>
-<p>It punishes:</p>
-<ul><li>High overhead</li><li>Overly complex models</li><li>Hustles dependent on nightlife or dense foot traffic</li></ul>
-<p>If you want something sustainable, keep these filters in mind.</p>
-<h2 id="h-service-based-side-hustles-that-perform-exceptionally-well">Service-Based Side Hustles That Perform Exceptionally Well</h2>
-<h3 id="h-outdoor-adventure-guide-or-assistant">Outdoor Adventure Guide or Assistant</h3>
-<p>This city breathes outdoors. Hiking. Climbing. Mountain biking. Snow sports.</p>
-<p>You don’t need to start as a full guide. Many people begin as:</p>
-<ul><li>Assistant guides</li><li>Trip coordinators</li><li>Gear prep or logistics support</li></ul>
-<p><strong>Why it works:</strong> Tourists want experiences, not just views.</p>
-<p><strong>Action step:</strong><strong><br/></strong> Partner with existing outfitters first. Learn the flow. Get insured later if you go solo.</p>
-<h3 id="h-handyman-amp-light-home-services">Handyman &amp; Light Home Services</h3>
-<p>New builds. Rentals. Busy professionals.</p>
-<p>That’s demand.</p>
-<p>Common services that book fast:</p>
-<ul><li>Furniture assembly</li><li>Minor drywall repair</li><li>Fence fixes</li><li>Yard cleanup</li></ul>
-<table class="data"><tbody><tr><td><strong>Service Type</strong></td><td><strong>Avg Hourly Rate</strong></td></tr><tr><td><a href="https://www.yelp.com/search?cflt=furnitureassembly&amp;find_loc=Colorado+Springs%2C+CO+80923&amp;msockid=229dd862fdc56f83212ccee7fc656e1d">Furniture Assembly</a></td><td>$50–$80</td></tr><tr><td>Minor Repairs</td><td>$60–$100</td></tr><tr><td>Yard Work</td><td>$45–$75</td></tr></tbody></table>
-<p><strong>Why it works:</strong> Homeowners want speed and reliability more than perfection.</p>
-<h3 id="h-pet-sitting-amp-dog-walking">Pet Sitting &amp; Dog Walking</h3>
-<p>Military families. Travel. Deployments. Long workdays.</p>
-<p>This side hustle prints consistency.</p>
-<p><strong>Smart niches:</strong></p>
-<ul><li>Long-term pet sitting</li><li>In-home boarding</li><li>Drop-in care during deployments</li></ul>
-<p><strong>Action step:</strong><strong><br/></strong> Build trust locally. Facebook groups outperform national apps here.</p>
-<h3 id="h-airbnb-turnover-cleaning">Airbnb Turnover Cleaning</h3>
-<p>Short-term rentals are everywhere in the Springs.</p>
-<p>And they all need fast, reliable cleaning.</p>
-<p>This hustle shines because:</p>
-<ul><li>Jobs are repeatable</li><li>Schedules are predictable</li><li>Tips are common</li></ul>
-<p><strong>Pro move:</strong> Add linen washing and restocking as upsells.</p>
-<h2 id="h-remote-amp-online-side-hustles-that-fit-the-springs-lifestyle">Remote &amp; Online Side Hustles That Fit the Springs Lifestyle</h2>
-<h3 id="h-freelancing-writing-design-marketing-tech">Freelancing (Writing, Design, Marketing, Tech)</h3>
-<p>Remote work culture is strong here.</p>
-<p>Top-paying freelance skills:</p>
-<ul><li>Content writing</li><li>Web design</li><li>Paid ads management</li><li>SEO consulting</li></ul>
-<p><strong>Why it works:</strong> Low overhead. Scalable. Location independent.</p>
-<p>You can live in the Springs and charge coastal rates.</p>
-<h3 id="h-virtual-assistant-for-local-businesses">Virtual Assistant for Local Businesses</h3>
-<p>Local service providers need admin help but don’t want full-time staff.</p>
-<p>Tasks often include:</p>
-<ul><li>Email management</li><li>Scheduling</li><li>Invoicing</li><li>CRM updates</li></ul>
-<p><strong>Pricing tip:</strong> Monthly retainers beat hourly work.</p>
-<p>This is one of the <strong>best side hustles in Colorado Springs</strong> if you want predictable income.</p>
-<h3 id="h-online-tutoring-amp-coaching">Online Tutoring &amp; Coaching</h3>
-<p>The Springs attracts families and students.</p>
-<p>Popular tutoring areas:</p>
-<ul><li>Math and science</li><li>Test prep</li><li>College admissions</li><li>Fitness or wellness coaching</li></ul>
-<p><strong>Bonus:</strong> You can serve clients nationwide while living locally.</p>
-<h2 id="h-flexible-gig-side-hustles-when-you-want-control">Flexible Gig Side Hustles (When You Want Control)</h2>
-<h3 id="h-rideshare-amp-delivery-selective-use">Rideshare &amp; Delivery (Selective Use)</h3>
-<p>This is not a full-time goldmine here.</p>
-<p>But it <em>does</em> work:</p>
-<ul><li>During tourist season</li><li>On event weekends</li><li>Around base-adjacent neighborhoods</li></ul>
-<p><strong>Tip:</strong> Stack only during high-demand windows.</p>
-<h3 id="h-task-based-local-gigs">Task-Based Local Gigs</h3>
-<p>Apps and local boards offer:</p>
-<ul><li>Moving help</li><li>Assembly</li><li>One-off errands</li></ul>
-<p><strong>Strategy:</strong> Use these to fill income gaps, not as your core hustle.</p>
-<h2 id="h-creative-amp-passion-based-side-hustles">Creative &amp; Passion-Based Side Hustles</h2>
-<h3 id="h-photography-amp-videography">Photography &amp; Videography</h3>
-<p>Elopements. Engagements. Family shoots. Outdoor branding.</p>
-<p>Colorado Springs is a visual market.</p>
-<p><strong>High-demand niches:</strong></p>
-<ul><li>Outdoor couples</li><li>Airbnb listings</li><li>Personal branding photos</li></ul>
-<p><strong>Start small:</strong> Mini sessions convert well.</p>
-<h3 id="h-content-creation-amp-blogging">Content Creation &amp; Blogging</h3>
-<p>If you enjoy writing or video, this city offers endless angles:</p>
-<ul><li>Outdoor lifestyle</li><li>Military life</li><li>Local guides</li><li>Wellness</li></ul>
-<p>This is slower to monetize—but powerful long term.</p>
-<p>Affiliate income + ads + digital products compound nicely.</p>
-<h3 id="h-handmade-amp-craft-businesses">Handmade &amp; Craft Businesses</h3>
-<p>Local markets love:</p>
-<ul><li>Nature-inspired art</li><li>Home décor</li><li>Wellness products</li></ul>
-<p><strong>Rule:</strong> Price for profit, not compliments.</p>
-<h2 id="h-property-based-side-hustles-without-buying-property">Property-Based Side Hustles (Without Buying Property)</h2>
-<h3 id="h-short-term-rental-co-hosting">Short-Term Rental Co-Hosting</h3>
-<p>You don’t need to own property to earn from Airbnb.</p>
-<p>Co-hosts handle:</p>
-<ul><li>Guest communication</li><li>Scheduling cleaners</li><li>Restocking</li><li>Issue resolution</li></ul>
-<p><strong>Income:</strong> 10–25% per property.</p>
-<p>This quietly ranks among the <strong>best side hustles in Colorado Springs</strong> for systems thinkers.</p>
-<h3 id="h-property-turnover-services">Property Turnover Services</h3>
-<p>Think beyond cleaning:</p>
-<ul><li>Inspections</li><li>Inventory checks</li><li>Maintenance coordination</li></ul>
-<p>Property managers love bundled services.</p>
-<h2 id="h-side-hustles-that-work-especially-well-for-military-members-amp-spouses">Side Hustles That Work Especially Well for Military Members &amp; Spouses</h2>
-<p>Portability matters.</p>
-<p>Top options:</p>
-<ul><li>Virtual assistant work</li><li>Freelancing</li><li>Tutoring</li><li>Pet care</li><li>Online businesses</li></ul>
-<p>These move with you. Income doesn’t reset every PCS.</p>
-<h2 id="h-how-much-can-you-actually-earn">How Much Can You Actually Earn?</h2>
-<p>Here’s the honest range:</p>
-<table class="data"><tbody><tr><td><strong>Hustle Type</strong></td><td><strong>Monthly Potential</strong></td></tr><tr><td>Pet Sitting</td><td>$500–$2,000</td></tr><tr><td>Handyman Services</td><td>$1,000–$4,000</td></tr><tr><td>Freelancing</td><td>$1,500–$6,000</td></tr><tr><td>Co-Hosting</td><td>$500–$3,000</td></tr><tr><td>Tutoring</td><td>$800–$2,500</td></tr></tbody></table>
-<p>Consistency beats scale at first.</p>
-<h2 id="h-how-to-start-fast-in-colorado-springs">How to Start Fast in Colorado Springs</h2>
-<p>Don’t overthink it.</p>
-<ol><li>Pick one hustle</li><li>Validate demand locally</li><li>Set clear pricing</li><li>Deliver fast and professionally</li><li>Ask for referrals immediately</li></ol>
-<p>Local Facebook groups, neighborhood apps, and word-of-mouth outperform ads early on.</p>
-<h2 id="h-mistakes-i-see-people-make-here">Mistakes I See People Make Here</h2>
-<ul><li>Underpricing to “get experience”</li><li>Chasing too many hustles at once</li><li>Ignoring seasonality</li><li>Skipping basic contracts or insurance</li><li>Treating side income casually</li></ul>
-<p>Professionalism is your unfair advantage.</p>
-<h2 id="h-final-thoughts-building-income-that-fits-your-life">Final Thoughts: Building Income That Fits Your Life</h2>
-<p>The <strong>best side hustles in Colorado Springs</strong> aren’t about hustle culture.<br/>They’re about alignment.</p>
-<p>Alignment with the local economy.<br/>Alignment with how people live here and alignment with your time, energy, and long-term goals.</p>
-<p>Start small. Build smart. Let consistency do the heavy lifting.</p>
-<p>And remember—side hustles don’t have to stay on the side forever.</p>
+    'body'        => <<<'HTML'
+<p>Colorado Springs runs on a rhythm most cities don't have. Thousands of military families arrive and leave every summer, millions of visitors head up Pikes Peak and through Garden of the Gods, and the weather swings from hail to wildfire smoke to snow in a single season. If you build around those rhythms, the best side hustles in Colorado Springs can pay surprisingly well for a city with lower rents than Denver.</p>
+<p>Below are 17 side gigs in Colorado Springs that work in 2026, with typical pay, startup cost and the local details that help you get clients first. Many of them travel, which matters if your household moves every few years.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>4.4%</b><span>Colorado flat income tax (2025 returns)</span></div>
+  <div class="stat"><b>5 installations</b><span>Fort Carson, Peterson, Schriever, Cheyenne Mountain and USAFA</span></div>
+  <div class="stat"><b>$0–$400</b><span>startup cost for most gigs here</span></div>
+</div>
+
+<h2 id="springs-economy">What drives side hustles in Colorado Springs</h2>
+<p>Three forces shape demand here:</p>
+<ul>
+  <li><strong>The military calendar.</strong> Fort Carson, Peterson and Schriever Space Force Bases, Cheyenne Mountain and the U.S. Air Force Academy make the Springs one of the most military-heavy metros in the country. Permanent change of station (PCS) moves cluster in summer, and deployments leave families needing help with pets, yards and kids.</li>
+  <li><strong>Tourism.</strong> Pikes Peak, Garden of the Gods, Manitou Springs, the Cheyenne Mountain Zoo, The Broadmoor and the U.S. Olympic &amp; Paralympic Museum draw visitors all year, with a summer peak.</li>
+  <li><strong>Mountain-edge weather.</strong> Hail in summer, snow in winter and a long fire season mean steady seasonal work in neighborhoods along the foothills, from Broadmoor and Cheyenne Cañon to Mountain Shadows and Rockrimmon.</li>
+</ul>
+
+<h2 id="pcs-season">Military-move hustles: cash in on PCS season</h2>
+<p>From roughly May through August, the Springs turns into one big moving week. Families need help fast, and they talk to each other in spouse groups, so one good job leads to five.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="move-out-cleaning">1. Move-out and inspection cleaning</h3>
+    <p>Rental and on-post housing inspections are strict, and families juggling packers and kids will pay to have it done right. Offer a flat-rate "inspection-ready" clean with a checklist of ovens, baseboards and blinds. Post in Fort Carson and Peterson community groups and Nextdoor in Security-Widefield, Fountain and Briargate.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$450 per home</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Thorough, fast cleaners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">2. Moving labor and junk hauling</h3>
+    <p>Families doing a do-it-yourself move need loaders for trucks and PODS, and everyone has a pile of furniture that won't fit in the next house. Moving-labor apps and word of mouth both work. A truck or trailer lets you add haul-away fees.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr per person</li><li><b>Startup:</b> Dolly, straps, gloves</li><li><b>Best for:</b> Strong backs, weekend crews</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">3. Pet sitting during deployments and TDY</h3>
+    <p>Deployments, training trips and leave travel mean pets need care for days or weeks. Military families value reliability above price. Start on Rover, offer drop-in visits and overnights, and keep repeat clients on direct booking.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$30/visit, $45–$80/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers with flexible hours</li></ul>
+  </div>
+</div>
+<div class="callout"><strong>Quick tip:</strong> Bundle services. A family that hires you for move-out cleaning may also need a carpet shampoo, a yard tidy-up for the final walkthrough and a pet sitter for moving day. Quote the package and you'll double the ticket.</div>
+
+<h2 id="driving">Rideshare and delivery in a spread-out city</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">4. Rideshare driving</h3>
+    <p>Colorado Springs is wide, so trips are longer than in a dense city. Best windows: Colorado Springs Airport runs, gate-area pickups near Fort Carson and Peterson on weekends, downtown and Old Colorado City on Friday and Saturday nights, and guests heading to The Broadmoor. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers setup.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$26/hr before expenses</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Weekend nights</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">5. Food and grocery delivery</h3>
+    <p>Briargate, Northgate and the Powers corridor pack restaurants and grocery stores close to dense subdivisions, which keeps trips short. Bad-weather evenings and Sunday football afternoons pay best.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$23/hr before gas</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+</div>
+<p>Long trips on Powers Boulevard and I-25 burn gas, so check what you really keep per hour:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="home-and-yard">Home and yard work along the foothills</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="wildfire-mitigation">6. Wildfire mitigation and yard cleanup</h3>
+    <p>Homes in the wildland-urban interface, from Mountain Shadows to Cedar Heights, need dry brush cleared, branches limbed up, needles raked off roofs and gutters emptied. Homeowners take this seriously after recent fires. Stick to cleanup and hauling, and leave tree felling to insured arborists.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60/hr</li><li><b>Startup:</b> $100–$400 (rakes, loppers, blower)</li><li><b>Best for:</b> Outdoor workers with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">7. Handyman and home-sale prep</h3>
+    <p>Families selling before a PCS need touch-up paint, patched drywall, new fixtures and fixed doors on a deadline. Agents in Briargate and Monument will refer you if you show up on time. Avoid jobs that need a licensed electrician or plumber.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="str-cleaning">8. Short-term rental turnovers</h3>
+    <p>Rentals near Manitou Springs, Old Colorado City and downtown host tourists in summer and visiting families for Air Force Academy events like graduation. Hosts need fast, reliable turnovers between same-day check-outs and check-ins.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="snow-removal">9. Snow removal</h3>
+    <p>Snow in the Springs often melts fast, but north-side streets and hillside driveways stay icy. Sell a per-storm price to deployed families, seniors and busy professionals in Northgate and Flying Horse.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$70 per driveway</li><li><b>Startup:</b> $30–$100</li><li><b>Best for:</b> Pairing with yard work</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,cleaning-kit,hand-cart|Gear for Springs movers, cleaners and drivers]]
+
+<h2 id="tourism">Tourism and event side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="photography">10. Portrait and ceremony photography</h3>
+    <p>Garden of the Gods is one of the most popular engagement-photo spots in the state, and military promotions, retirements, homecomings and Academy graduations all need a photographer. Build a portfolio, then raise rates in peak season.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$450 per session</li><li><b>Startup:</b> Camera and lens</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">11. Event staffing</h3>
+    <p>The Broadmoor World Arena, Weidner Field (Switchbacks FC), Ford Amphitheater, the Pikes Peak International Hill Climb in June and the Labor Day Lift Off balloon festival all need temporary staff for parking, concessions and setup.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$24/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="fitness-coaching">12. Fitness and outdoor coaching</h3>
+    <p>This is Olympic City USA, and the Manitou Incline gets a steady stream of people training for it. Personal trainers, running coaches and hiking guides with the right certifications can build a client list fast. Guiding on public land may require a permit, so check before you charge.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$80/session</li><li><b>Startup:</b> Certification</li><li><b>Best for:</b> Athletes and coaches</li></ul>
+  </div>
+</div>
+
+<h2 id="portable-online">Portable online side hustles (they move when you do)</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">13. Virtual assistant and bookkeeping</h3>
+    <p>Local realtors, contractors and small defense-industry suppliers need help with scheduling, email and QuickBooks. Because it's remote, clients stay with you after your next move.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Military spouses</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">14. Freelance writing, design and marketing</h3>
+    <p>Pick a niche, like aerospace, real estate or outdoor brands, and start on <a href="/fiverr/">Fiverr</a>. Grow into retainers with tips from our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$80/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers and designers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">15. Tutoring</h3>
+    <p>Military kids changing schools often need to catch up in math or reading. College students at UCCS, Colorado College and Pikes Peak State College can tutor in person; anyone can tutor online.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">16. Furniture and gear reselling</h3>
+    <p>PCS season floods Facebook Marketplace with furniture, bikes and outdoor gear families can't take with them. Buy cheap in July, clean it up and resell in the fall when new arrivals furnish their homes.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,200/month part-time</li><li><b>Startup:</b> $100–$300 and a truck</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">17. Online courses and digital products</h3>
+    <p>Turn specialist knowledge, from resume-writing for transitioning service members to Excel or project management, into a course on Udemy or templates you sell online.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experienced professionals</li></ul>
+  </div>
+</div>
+
+<h2 id="compare">Compare the best side hustles in Colorado Springs</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Move-out cleaning</td><td>$200–$450 per home</td><td>$75–$150</td><td>Days in summer</td></tr>
+    <tr><td>Moving labor</td><td>$25–$45/hr</td><td>Under $100</td><td>Days</td></tr>
+    <tr><td>Pet sitting</td><td>$45–$80/night</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$16–$26/hr before costs</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Wildfire mitigation / yard</td><td>$35–$60/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Handyman</td><td>$40–$75/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Virtual assistant</td><td>$20–$45/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="by-schedule">Which side job fits your schedule?</h2>
+<ul>
+  <li><strong>Active duty with weekends free:</strong> moving labor, event staffing, photography and yard work. Check your command's outside-employment rules first.</li>
+  <li><strong>Military spouse with kids in school:</strong> cleaning, pet sitting, virtual assistance and online tutoring.</li>
+  <li><strong>Evenings only:</strong> delivery, rideshare and freelance projects.</li>
+  <li><strong>Student at UCCS or Colorado College:</strong> tutoring, event shifts, dog walking and summer tourism jobs in Manitou Springs.</li>
+</ul>
+<p>The hours you can protect every week matter more than the hourly rate in your first month.</p>
+
+<h2 id="get-started">Start a side gig in Colorado Springs in 30 days</h2>
+<ol class="steps">
+  <li><strong>Match the hustle to the season.</strong> Summer is PCS and tourism season, fall is yard and mitigation work, winter is snow and delivery.</li>
+  <li><strong>Pick a monthly goal.</strong> Work back to weekly hours with our <a href="/tools/income-calculator/">income calculator</a>.</li>
+  <li><strong>Go where your customers talk.</strong> Base spouse groups, Nextdoor, neighborhood Facebook pages and a Google Business Profile.</li>
+  <li><strong>Finish three jobs and collect reviews.</strong> Word of mouth travels fast in military circles, in both directions.</li>
+  <li><strong>Handle licenses and a separate bank account.</strong> It makes tax time easy and keeps your numbers honest.</li>
+</ol>
+
+<h2 id="colorado-tax-rules">Colorado taxes and city rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> a flat 4.4% for 2025 returns. Colorado can lower the rate in years with surplus revenue, so check the Department of Revenue for the current year.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit. Estimate your set-aside with our <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Sales tax:</strong> Colorado Springs is a home-rule city that collects its own sales tax. If you sell taxable products, register with both the state and the city.</li>
+  <li><strong>Short-term rentals:</strong> the city requires an STR permit. Hosting also brings lodging tax obligations.</li>
+  <li><strong>Military residency:</strong> service members stationed here with a different legal home state may treat military pay differently from side income. Base legal offices and VITA sites can help.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> If you live in on-post housing at Fort Carson or the Academy, home businesses usually need approval from the installation or housing office. Ask before you advertise.</div>
+
+<h2 id="nearby">Nearby city guides</h2>
+<p>Compare your options with the <a href="/best-side-hustles-in-denver/">best side hustles in Denver</a>, an hour north, or <a href="/best-side-hustles-in-aurora/">Aurora</a>, home to Buckley Space Force Base. Heading south on your next move? Our <a href="/best-side-hustles-in-albuquerque/">Albuquerque guide</a> covers another military-friendly city.</p>
+<p>Better Side Hustles' advice is the same everywhere: pick one idea, commit for 90 days and track the numbers. In Colorado Springs, timing that commitment to start before PCS season is the smartest move you can make.</p>
 HTML,
 ];

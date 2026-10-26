@@ -1,130 +1,212 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Raleigh (2026): Ways to Earn Extra',
-    'description' => 'Best side hustles in Raleigh that actually work in 2026. Explore flexible, profitable ways to earn extra income locally.',
-    'h1' => 'Best Side Hustles in Raleigh',
-    'kicker' => 'City Guide · NC',
-    'dek' => 'Gig apps, local services and online work that pay in Raleigh — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-29',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-side-hustles-in-Raleigh.webp',
-    'image_alt' => 'Best Side Hustles in Raleigh',
-    'category' => 'City Guides',
-    'city' => 'Raleigh',
-    'state' => 'NC',
-    'keywords' => ['best side hustles in raleigh'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-charlotte', 'best-side-hustles-in-greensboro', 'best-side-hustles-in-durham'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Raleigh right now?', 'a' => 'The best side hustles in Raleigh include freelancing, local service work, real estate support roles, and tech-based digital services.'],
-        ['q' => 'Can I start a side hustle in Raleigh with little money?', 'a' => 'Yes, many of the best side hustles in Raleigh require minimal startup costs, especially service-based and freelance work.'],
-        ['q' => 'Are side hustles in Raleigh good for full-time employees?', 'a' => 'Absolutely—many side hustles in Raleigh are flexible and can be done evenings or weekends.'],
-        ['q' => 'Which side hustles earn the most in Raleigh?', 'a' => 'Tech-focused, freelancing, and real estate-related side hustles tend to earn the highest income in Raleigh.'],
-        ['q' => 'Do I need a business license to start a side hustle in Raleigh?', 'a' => 'Some side hustles require registration or permits, but many can start informally and scale legally as income grows.'],
-        ['q' => 'Are side hustles in Raleigh good for students?', 'a' => 'Yes, students often succeed with tutoring, campus services, and short-term event work.'],
-        ['q' => 'How long does it take to make money from a side hustle in Raleigh?', 'a' => 'Some side hustles generate income within weeks, while others take months to build momentum.'],
-        ['q' => 'Is Raleigh a good city for freelance work?', 'a' => 'Raleigh’s startup culture and small business scene make it a strong market for freelance side hustles.'],
-        ['q' => 'Can a side hustle in Raleigh turn into full-time income?', 'a' => 'Many people grow side hustles into full-time businesses by building steady clients and referrals.'],
-        ['q' => 'What’s the biggest mistake people make with side hustles in Raleigh?', 'a' => 'Choosing trends over real local demand is the most common reason side hustles fail.'],
+    'title'       => 'Best Side Hustles in Raleigh (2026): 19 Ways to Earn Extra',
+    'description' => 'The best side hustles in Raleigh for 2026: 19 side gigs for a booming capital, from new-home setup in Apex to State Fair shifts, with pay and NC tax rules.',
+    'h1'          => 'Best Side Hustles in Raleigh (2026): 19 Side Gigs for a Fast-Growing Capital',
+    'kicker'      => 'City Guide · NC',
+    'dek'         => 'Raleigh is adding new neighborhoods faster than residents can unpack. These side jobs in Raleigh cash in on that growth, plus State Fair crowds, Canes games and a big state and tech workforce.',
+    'published'   => '2026-01-29',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-side-hustles-in-Raleigh.webp',
+    'image_alt'   => 'Downtown Raleigh skyline, illustrating the best side hustles in Raleigh',
+    'category'    => 'City Guides',
+    'city'        => 'Raleigh',
+    'state'       => 'NC',
+    'keywords'    => ['best side hustles in raleigh', 'side jobs in raleigh', 'side gigs in raleigh nc', 'how to make money in raleigh', 'raleigh side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['tool-kit', 'leaf-blower', 'laptop-stand', 'book-100-startup'],
+    'related'     => ['best-side-hustles-in-durham', 'best-side-hustles-in-greensboro', 'best-side-hustles-in-charlotte'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Raleigh?', 'a' => 'Raleigh\'s growth makes home services the standout: new-home setup and handyman work, lawn care and pine straw, house cleaning and pet sitting in fast-growing suburbs like Apex, Holly Springs and Wake Forest. Add delivery and rideshare, NC State Fair and event staffing, tutoring for Wake County families and remote freelancing for the area\'s tech companies, and you have plenty of options.'],
+        ['q' => 'How can I make money in Raleigh fast?', 'a' => 'Delivery apps such as DoorDash, Uber Eats, Instacart and Spark usually get you earning within a week. TaskRabbit furniture assembly is in steady demand in new subdivisions, and event staffing agencies hire for the NC State Fair in October, Carolina Hurricanes games and concerts. Posting a simple yard-cleanup offer on Nextdoor can also bring jobs within days.'],
+        ['q' => 'Do I need a business license for a side hustle in Raleigh?', 'a' => 'No general city business license is required. North Carolina repealed local privilege license taxes in 2015. You may still need to register with the NC Department of Revenue for sales tax, file an assumed business name with Wake County if you use a brand name, follow home occupation zoning rules and check Raleigh\'s short-term rental permit rules before hosting.'],
+        ['q' => 'How much can side jobs in Raleigh pay?', 'a' => 'Most people working 8 to 15 hours a week typically earn about $400 to $1,500 a month. App-based gigs usually net $15 to $22 an hour after gas. Handyman, landscaping and new-home setup work often runs $40 to $75 an hour, and remote tech or marketing freelancing can pay more once you have a portfolio.'],
+        ['q' => 'What is the North Carolina tax rate on side hustle income in 2026?', 'a' => 'North Carolina has a flat individual income tax rate of 3.99% for 2026, and lawmakers have scheduled further cuts for later years. You also pay federal income tax plus 15.3% self-employment tax on net profit. Plan to set aside roughly 25 to 30% of profit and make quarterly estimated payments.'],
+        ['q' => 'Which Raleigh suburbs are best for side hustles?', 'a' => 'Apex, Holly Springs, Fuquay-Varina, Wake Forest, Rolesville and Knightdale have many new homes and young families, which means demand for assembly, landscaping, cleaning and pet care. Cary and North Hills have higher incomes and tutoring demand. Downtown, Glenwood South and the area around NC State are best for rideshare, delivery and event gigs.'],
     ],
-    'body' => <<<'HTML'
-<p>Raleigh has quietly become one of the most side-hustle-friendly cities in the U.S. And if you’re searching for the <strong>best side hustles in Raleigh</strong>, you’re already asking the right question.</p>
-<p>This isn’t a city where you need a massive startup budget or Silicon Valley connections to make extra money. Raleigh rewards people who show up, solve problems, and understand the local rhythm. Tech workers. Students. Parents. Creatives. Career switchers. There’s room for all of them here.</p>
-<p>I’ve seen it firsthand. The right side hustle in Raleigh doesn’t just pad your bank account. It can turn into real leverage. More flexibility. More confidence. Sometimes, a full-time exit plan.</p>
-<p>Let’s break down what actually works.</p>
-<h2 id="h-why-raleigh-is-a-side-hustle-goldmine">Why Raleigh Is a Side-Hustle Goldmine</h2>
-<p><a href="https://en.wikipedia.org/wiki/Raleigh,_North_Carolina">Raleigh</a> sits in a sweet spot most cities miss.</p>
-<p>It has steady population growth without the chaos of mega-cities. A strong tech and research presence. Multiple universities feeding constant demand. And a cost of living that still allows <a href="/side-hustles-you-can-start-with-just-your-smartphone/">side hustles</a> to feel worthwhile instead of exhausting.</p>
-<p>Here’s what makes Raleigh especially attractive:</p>
-<ul><li>A large remote-worker population</li><li>NC State and nearby colleges driving year-round demand</li><li>Growing startup and small business scene</li><li>Consistent relocation and housing activity</li><li>Events, weddings, and conferences every single weekend</li></ul>
-<p>In other words, people are busy. And busy people pay for help.</p>
-<p>That’s why the <strong>best side hustles in Raleigh</strong> tend to fall into a few predictable categories.</p>
-<h2 id="h-what-makes-a-side-hustle-profitable-in-raleigh">What Makes a Side Hustle Profitable in Raleigh</h2>
-<p>Not all side hustles work equally well here. The ones that succeed usually check at least two of these boxes:</p>
-<ul><li>Solve a local, recurring problem</li><li>Are easy to explain in one sentence</li><li>Fit around a full-time schedule</li><li>Don’t require expensive equipment</li><li>Benefit from word-of-mouth referrals</li></ul>
-<p>Raleigh favors practical over flashy. Services over speculation. Reliability over hype.</p>
-<p>Keep that in mind as we go through the options.</p>
-<h2 id="h-freelancing-amp-remote-friendly-side-hustles">Freelancing &amp; Remote-Friendly Side Hustles</h2>
-<p>This is where Raleigh really shines.</p>
-<p>With so many startups, agencies, and small businesses, freelancers are in constant demand. And the barrier to entry is often skill-based, not credential-based.</p>
-<p><strong>High-performing options include:</strong></p>
-<ul><li>Web design or basic website updates</li><li>SEO and content writing</li><li>Virtual assistant services</li><li>Social media management for local brands</li><li>Online tutoring or coaching</li></ul>
-<p>One Raleigh-specific tip: target businesses that <em>know</em> they need help but don’t want a full-time hire. Local restaurants. Fitness studios. Real estate teams. Medical practices.</p>
-<p>These clients pay well and stay loyal.</p>
-<p>This category alone produces some of the <strong>best side hustles in Raleigh</strong> for professionals who want scalable income.</p>
-<h2 id="h-rideshare-amp-delivery-side-hustles">Rideshare &amp; Delivery Side Hustles</h2>
-<p>Not glamorous. Still effective.</p>
-<p>Rideshare and delivery work well in Raleigh because demand clusters tightly. Downtown. North Hills. University zones. Event venues.</p>
-<p>Timing matters more than volume.</p>
-<p><strong>Best earning windows:</strong></p>
-<ul><li>Thursday–Saturday evenings</li><li>Game days and campus events</li><li>Large conferences and weddings</li><li>Rainy weekdays when people stay in</li></ul>
-<p>The upside? Immediate cash flow.<br/>The downside? Limited scalability.</p>
-<p>It’s a solid short-term play or fallback option, not a long-term strategy.</p>
-<h2 id="h-real-estate-amp-property-based-side-hustles">Real Estate &amp; Property-Based Side Hustles</h2>
-<p>Raleigh’s growth keeps this category strong.</p>
-<p>You don’t need to own property to profit from real estate-adjacent work. Many of the <strong>best side hustles in Raleigh</strong> exist around property, not inside it.</p>
-<p><strong>Examples:</strong></p>
-<ul><li>Airbnb cleaning and turnover services</li><li>Short-term rental management</li><li>Property photography</li><li>Real estate transaction coordination</li><li>Mobile notary services</li></ul>
-<p>These roles benefit from trust and consistency. Once you’re in, referrals compound quickly.</p>
-<p>If you like repeat clients and predictable income, this lane is worth serious attention.</p>
-<h2 id="h-home-amp-local-service-side-hustles">Home &amp; Local Service Side Hustles</h2>
-<p>This is where demand never disappears.</p>
-<p>People in Raleigh hire help because they’re busy, not because they’re lazy. That’s an important distinction. Quality service gets remembered.</p>
-<p><strong>Top local service hustles:</strong></p>
-<ul><li>Residential or Airbnb cleaning</li><li>Lawn care and seasonal yard work</li><li>Pressure washing</li><li>Minor handyman repairs</li><li><a href="https://www.yelp.com/search?cflt=junkremovalandhauling&amp;find_loc=Raleigh%2C+NC&amp;msockid=229dd862fdc56f83212ccee7fc656e1d">Junk hauling</a></li></ul>
-<p>Startup costs are low. Skill requirements are reasonable. And competition thins out fast when you show up on time and communicate clearly.</p>
-<p>Unsexy? Maybe. Profitable? Absolutely.</p>
-<h2 id="h-side-hustles-for-students-amp-university-communities">Side Hustles for Students &amp; University Communities</h2>
-<p>College towns create constant micro-opportunities.</p>
-<p>Raleigh’s student population fuels demand for short-term, flexible help that fits academic schedules.</p>
-<p><strong>Strong student-friendly hustles include:</strong></p>
-<ul><li>Tutoring and test prep</li><li>Move-in and move-out assistance</li><li>Event staffing</li><li>Academic editing</li><li>Tech help for faculty and students</li></ul>
-<p>Students who treat these like real businesses—not casual gigs—often outperform expectations.</p>
-<p>It’s one of the most overlooked groups benefiting from the <strong>best side hustles in Raleigh</strong>.</p>
-<h2 id="h-creative-amp-passion-based-side-hustles">Creative &amp; Passion-Based Side Hustles</h2>
-<p>Raleigh supports creative work, but strategy matters.</p>
-<p>The key mistake creatives make is staying invisible. Local visibility changes everything.</p>
-<p><strong>Examples that work when done right:</strong></p>
-<ul><li>Photography for events and families</li><li>Selling art or handmade goods at markets</li><li>Blogging or YouTube channels focused on Raleigh life</li><li>Print-on-demand products tied to local culture</li></ul>
-<p>Creativity becomes profitable when it’s paired with consistency and clear positioning.</p>
-<p>This category rewards patience. And branding.</p>
-<h2 id="h-tech-focused-amp-digital-side-hustles">Tech-Focused &amp; Digital Side Hustles</h2>
-<p>If you have technical skills, Raleigh offers leverage.</p>
-<p>Not everyone wants enterprise software. Many businesses want simple automation, better workflows, or tools that save time.</p>
-<p><strong>High-value options include:</strong></p>
-<ul><li>No-code website builds</li><li>AI workflow setup for small teams</li><li>App or website flipping</li><li>Micro-SaaS tools</li><li>Automation consulting</li></ul>
-<p>These take longer to ramp up but scale better than most service-based work.</p>
-<p>They also dominate the higher end of the <strong>best side hustles in Raleigh</strong> income spectrum.</p>
-<h2 id="h-weekend-only-side-hustles">Weekend-Only Side Hustles</h2>
-<p>Not everyone wants another weekday commitment.</p>
-<p>Weekend hustles thrive here because Raleigh hosts nonstop events.</p>
-<p><strong>Popular options:</strong></p>
-<ul><li>Wedding setup and teardown</li><li>Catering assistance</li><li>Bartending</li><li>Brand ambassador roles</li><li>Event logistics support</li></ul>
-<p>Pay is often flat-rate and predictable. Perfect for people protecting their weekdays.</p>
-<h2 id="h-how-much-can-you-actually-make">How Much Can You Actually Make?</h2>
-<p>Here’s a realistic snapshot.</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle Type</strong></td><td><strong>Monthly Potential</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Freelancing</td><td>$1,000–$5,000+</td><td>High</td></tr><tr><td>Local Services</td><td>$800–$4,000</td><td>Medium</td></tr><tr><td>Delivery/Rideshare</td><td>$500–$2,000</td><td>Low</td></tr><tr><td>Real Estate Support</td><td>$1,500–$6,000</td><td>Medium</td></tr><tr><td>Tech Side Hustles</td><td>$2,000–$10,000+</td><td>High</td></tr></tbody></table>
-<p>Income depends on execution, not just idea selection.</p>
-<p>That’s the difference between dabbling and building.</p>
-<h2 id="h-legal-and-tax-basics-in-north-carolina">Legal and Tax Basics in North Carolina</h2>
-<p>Keep this simple. Don’t skip it.</p>
-<ul><li>Track income from day one</li><li>Separate business and personal finances</li><li>Understand self-employment taxes</li><li>Register a business if income becomes consistent</li><li>Carry basic insurance for service work</li></ul>
-<p>Doing this early prevents stress later.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Ask yourself three honest questions:</p>
-<ol><li>How many hours can I commit weekly?</li><li>Do I want fast cash or long-term upside?</li><li>Am I solving a real problem—or chasing a trend?</li></ol>
-<p>The <strong>best side hustles in Raleigh</strong> align with your lifestyle, not just your ambition.</p>
-<h2 id="h-turning-a-side-hustle-into-something-bigger">Turning a Side Hustle Into Something Bigger</h2>
-<p>Growth in Raleigh often comes from:</p>
-<ul><li>Referrals</li><li>Repeat clients</li><li>Local reputation</li><li>Clear pricing</li><li>Saying no to bad fits</li></ul>
-<p>You don’t need to scale fast. You need to scale clean.</p>
-<p>That’s how side hustles become freedom engines.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Raleigh doesn’t reward noise.<br/>It rewards usefulness.</p>
-<p>If you’re willing to show up consistently, communicate clearly, and treat your side hustle like a real business, this city will meet you halfway.</p>
-<p>The <strong>best side hustles in Raleigh</strong> aren’t secrets. They’re hiding in plain sight.</p>
-<p>Pick one. Start small. Stay sharp. And let momentum do the rest.</p>
+    'body'        => <<<'HTML'
+<p>Drive through southern Wake County and you'll see the story of Raleigh in 2026: rooftops going up, moving trucks in driveways and families who just arrived from somewhere else. North Carolina's capital is one of the fastest-growing metros in the country, and newcomers need almost everything done. That's why the best side hustles in Raleigh lean toward helping people settle in, keep up their homes and enjoy a packed calendar of games, concerts and the State Fair.</p>
+<p>Here are 19 side gigs that work in Raleigh right now, with typical pay, startup costs and local tips, from Apex cul-de-sacs to Glenwood South nightlife.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>3.99%</b><span>NC flat income tax (2026)</span></div>
+  <div class="stat"><b>$15–$75</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>October</b><span>NC State Fair, the city's biggest surge</span></div>
+</div>
+
+<h2 id="growth">How Raleigh's growth creates side income</h2>
+<p>Raleigh isn't one economy. It's several overlapping ones, and each creates its own demand:</p>
+<ul>
+  <li><strong>New construction.</strong> Subdivisions in Apex, Holly Springs, Fuquay-Varina, Wake Forest, Rolesville and Knightdale hand buyers bare walls, empty garages and builder-grade yards.</li>
+  <li><strong>State government.</strong> As the capital, Raleigh has thousands of state employees on predictable schedules who hire out chores and tutoring.</li>
+  <li><strong>Tech and healthcare.</strong> Red Hat's downtown headquarters, SAS and Epic Games in Cary, Research Triangle Park employers, WakeMed and UNC Rex bring in well-paid professionals and lots of contract work.</li>
+  <li><strong>NC State University.</strong> Over 30,000 students create a constant cycle of move-ins, tutoring, delivery and game-day crowds at Carter-Finley Stadium.</li>
+  <li><strong>Events.</strong> The NC State Fair fills eleven days each October, the Carolina Hurricanes play at Lenovo Center, and summer concerts run at Coastal Credit Union Music Park at Walnut Creek and Red Hat Amphitheater.</li>
+</ul>
+
+<h2 id="top-picks">The best side hustles in Raleigh to start now</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="new-home-setup">1. New-home setup and handyman work</h3>
+    <p>New homeowners need curtain rods, shelves, TV mounts, closet systems, smart locks and furniture assembly in the first month. Market directly to new subdivisions through community Facebook groups. A good [[amazon:cordless-drill|cordless drill]] and level are your core tools.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people with weekends free</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="landscaping">2. Lawn care, pine straw and yard installs</h3>
+    <p>Builder yards come with thin sod and bare beds. Mowing routes, mulch and pine straw spreading, shrub planting and fall leaf cleanup keep yard workers busy from March through December. Keep your route tight inside one or two subdivisions.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70 per lawn; $150–$500 per install</li><li><b>Startup:</b> $0–$500</li><li><b>Best for:</b> Outdoor early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark all run busy across Wake County. North Hills and Cary are dense with restaurants, while fast-growing towns in the south and east often have fewer drivers and steadier orders.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">4. Rideshare for RDU, game days and nightlife</h3>
+    <p>RDU airport runs from Cary, North Raleigh and Wake Forest are solid fares. Weekend nights in Glenwood South and the Warehouse District, Hurricanes playoff runs and NC State football Saturdays bring surges. See our <a href="/lyft-uber/">Lyft and Uber guide</a> to get started.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before gas and wear</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Night owls and early birds</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">5. State Fair and event staffing</h3>
+    <p>The NC State Fair hires seasonal workers for gates, parking, concessions and vendor booths, and staffing agencies cover Lenovo Center, Carter-Finley and the amphitheaters. A single October can be worth several normal months of weekend shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr, plus tips at some stands</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students and weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">6. Tutoring for Wake County families</h3>
+    <p>Families across Cary, Apex and North Raleigh invest in math, reading, SAT and AP help. NC State grad students and retired teachers do well, and online tutoring fills weeknight gaps.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$65/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers and grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">7. Move-in and recurring house cleaning</h3>
+    <p>Construction dust, move-in cleans and move-out deep cleans are a constant in a city where people arrive and upgrade often. Turn one-time cleans into biweekly contracts.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$200 in supplies</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tech-freelancing">8. Remote tech and marketing freelancing</h3>
+    <p>Startups and agencies around downtown and RTP hire contractors for web development, UX, QA testing, technical writing and paid ads. Build reviews on <a href="/fiverr/">Fiverr</a>, then use local meetups to land direct clients. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> covers packaging.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$90/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Developers, writers, marketers</li></ul>
+  </div>
+</div>
+<p>If you're choosing between driving and delivery, see what's left after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> During the State Fair, Blue Ridge Road and Hillsborough Street back up for hours. Drivers who learn the fair's shuttle and drop-off points tend to earn more and sit in traffic less.</div>
+
+<h2 id="raleigh-table">Side jobs in Raleigh: quick comparison</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>New-home setup / handyman</td><td>$40–$75/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Lawn care &amp; pine straw</td><td>$40–$70 per lawn</td><td>$0–$500</td><td>Days</td></tr>
+    <tr><td>Food &amp; grocery delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Rideshare</td><td>$15–$25/hr before expenses</td><td>Qualifying car</td><td>1–2 weeks</td></tr>
+    <tr><td>State Fair &amp; event staffing</td><td>$15–$25/hr</td><td>$0</td><td>Next event</td></tr>
+    <tr><td>Tutoring</td><td>$25–$65/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
+    <tr><td>House cleaning</td><td>$25–$45/hr</td><td>$75–$200</td><td>1–2 weeks</td></tr>
+    <tr><td>Tech freelancing</td><td>$30–$90/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="suburban-services">More services for Raleigh's suburbs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pet-care">9. Pet sitting and dog walking</h3>
+    <p>New neighborhoods are full of young dogs and families who travel to see relatives back home. Rover bookings spike around Thanksgiving, winter break and summer vacations.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/walk, $40–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">10. Pressure washing</h3>
+    <p>Spring pollen and humid summers leave vinyl siding, driveways and fences green and yellow. HOA reminders about house washing help sell the service.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="garage-organizing">11. Garage and closet organizing</h3>
+    <p>Families who just moved often live out of boxes for months. Professional organizing, shelving installation and donation runs are an easy upsell from handyman work.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Organized people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">12. Moving help</h3>
+    <p>Apartment move-ins near NC State peak in August, and relocations happen year-round. Apps like Dolly or simple Facebook posts keep strong helpers booked.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr per helper</li><li><b>Startup:</b> $0 (truck optional)</li><li><b>Best for:</b> Strong, punctual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="car-detailing">13. Mobile car detailing</h3>
+    <p>Pollen season makes every car in Wake County yellow. Offer driveway details in subdivisions or office-park service near RTP and North Hills.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+</div>
+
+[[gear:pressure-washer,phone-mount,cleaning-kit|Gear that helps Raleigh side hustlers earn more]]
+
+<h2 id="remote-skills">Desk-based side hustles for the capital's workforce</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="grant-writing">14. Grant writing and proposal support</h3>
+    <p>Raleigh's nonprofits, research groups and small businesses competing for state and federal contracts need writers who understand proposals. Government experience is a real advantage.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Strong writers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">15. Virtual assistant and bookkeeping</h3>
+    <p>Realtors riding the housing boom, contractors and solo founders need inbox, scheduling and QuickBooks help. Most of it can be done remotely after work.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">16. Online courses and coding lessons</h3>
+    <p>Teach a programming language, data skill or software tool on Udemy, or coach beginners one-on-one. It's slow to build but scales.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Patient experts</li></ul>
+  </div>
+</div>
+
+<h2 id="creative">Creative and weekend side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="real-estate-photos">17. Real estate photography</h3>
+    <p>With so many homes listed and built, agents and builders need listing photos, drone shots and video tours every week.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$275 per listing</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling and flipping</h3>
+    <p>Downsizers, estate sales and move-out leftovers near NC State feed eBay and Facebook Marketplace. Wolfpack and Hurricanes gear sells steadily.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,200/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="market-vending">19. Farmers market and pop-up vending</h3>
+    <p>The State Farmers Market, downtown pop-ups and brewery markets are good places to test baked goods, candles and crafts before moving online.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$500</li><li><b>Best for:</b> Makers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Many new Raleigh-area subdivisions have HOAs with rules about signs, work hours and trailers. Read the rules before you put a yard sign out or park equipment overnight.</div>
+
+<h2 id="raleigh-calendar">A year of side gigs in Raleigh</h2>
+<p>Raleigh's seasons shift demand in predictable ways. Plan for them and you'll rarely have a slow month:</p>
+<ul>
+  <li><strong>March to May:</strong> pine pollen coats everything, so pressure washing and car detailing boom. Spring is also peak season for mulch, pine straw and new plantings, and the home-buying rush brings listing photography work.</li>
+  <li><strong>June to August:</strong> heat and humidity slow outdoor work to early mornings. Moving help peaks as families relocate before school starts and NC State students return in August. Summer concerts at Walnut Creek and Red Hat Amphitheater add evening rideshare demand.</li>
+  <li><strong>September to November:</strong> NC State football Saturdays, the start of Hurricanes season and the State Fair in October make this the best stretch for event staffing and driving. Fall leaf cleanup follows right behind.</li>
+  <li><strong>December to February:</strong> holiday delivery volume, pet sitting while families travel, indoor organizing projects and tax-season bookkeeping. Occasional winter storms can shut the city down, which means sudden grocery delivery surges.</li>
+</ul>
+<p>Stacking a seasonal hustle on top of a year-round one, such as spring pressure washing plus steady remote freelancing, smooths out your income across the year.</p>
+
+<h2 id="launch-plan">Launch your Raleigh side hustle in four weeks</h2>
+<ol class="steps">
+  <li><strong>Week one: choose one hustle.</strong> Pick based on the hours you have. The <a href="/tools/side-hustle-quiz/">side hustle quiz</a> helps if you're undecided.</li>
+  <li><strong>Week one: set your numbers.</strong> Decide your monthly goal and the rate you need to hit it.</li>
+  <li><strong>Week two: get listed.</strong> Join new-neighborhood Facebook groups and Nextdoor, sign up for apps and create a Google Business Profile.</li>
+  <li><strong>Week three: land three clients.</strong> Offer a small first-job discount in exchange for an honest review.</li>
+  <li><strong>Week four: plan your season.</strong> Mark the State Fair, NC State home games and Hurricanes schedule, plus spring pollen and fall leaf season.</li>
+  <li><strong>Every week: track it all.</strong> Keep side income in its own account and log mileage.</li>
+</ol>
+
+<h2 id="nc-rules">North Carolina taxes and Raleigh rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> a flat 3.99% for 2026, with further cuts scheduled in later years.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, plus federal income tax. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Sales tax:</strong> the state rate is 4.75%, plus local tax. North Carolina taxes many repair, maintenance and installation services, so handymen and installers should check whether their jobs are taxable.</li>
+  <li><strong>Business license:</strong> Raleigh has no general business license requirement. Home occupation zoning rules still apply, and an assumed business name certificate is required if you operate under a brand.</li>
+  <li><strong>Short-term rentals:</strong> Raleigh regulates short-term rentals through its zoning code and permits. Check the city's current rules and Wake County's occupancy tax before hosting.</li>
+</ul>
+
+<h2 id="nearby">Other Triangle and Carolina guides</h2>
+<p>Work across the Triangle? Our guide to the <a href="/best-side-hustles-in-durham/">best side hustles in Durham</a> focuses on Duke, medical and research gigs, while <a href="/best-side-hustles-in-greensboro/">Greensboro</a> covers the Triad's furniture market and logistics work. For the state's biggest city, see <a href="/best-side-hustles-in-charlotte/">Charlotte</a>.</p>
+<p>Raleigh rewards people who show up for newcomers. Pick one idea from this Better Side Hustles guide, stick with it for 90 days, and let the growth around you do the marketing.</p>
 HTML,
 ];

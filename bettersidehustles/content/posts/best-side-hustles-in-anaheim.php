@@ -1,180 +1,193 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Anaheim (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Anaheim and learn how to earn extra income with flexible, high-demand local opportunities.',
-    'h1' => 'Best Side Hustles in Anaheim',
-    'kicker' => 'City Guide · CA',
-    'dek' => 'Gig apps, local services and online work that pay in Anaheim — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-22',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Anaheim.webp',
-    'image_alt' => 'Best Side Hustles in Anaheim',
-    'category' => 'City Guides',
-    'city' => 'Anaheim',
-    'state' => 'CA',
-    'keywords' => ['best side hustles in anaheim'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-san-diego', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-san-francisco'],
-    'faq' => [
-        ['q' => 'What are some easy side hustles to start in Anaheim?', 'a' => 'Cleaning, rideshare driving, and food delivery are easy to start because they don’t require much money upfront.'],
-        ['q' => 'How much money can I make with a side hustle in Anaheim?', 'a' => 'Many people earn between $800 and $2,500 per month, depending on the type of work and hours.'],
-        ['q' => 'Do I need a license to run a side hustle in Anaheim?', 'a' => 'Some side hustles may require a local business license, so it’s best to check city rules first.'],
-        ['q' => 'Which side hustles work well with tourism in Anaheim?', 'a' => 'Vacation rental help, rideshare driving, photography, and trip planning work well because tourists visit year-round.'],
-        ['q' => 'Can I run an online side hustle while living in Anaheim?', 'a' => 'Yes, you can do freelance work, manage social media, or sell products online from home.'],
-        ['q' => 'What side hustle costs the least to start?', 'a' => 'Dog walking, rideshare driving, and basic cleaning services usually have low startup costs.'],
-        ['q' => 'How can I get my first customers?', 'a' => 'You can use apps like TaskRabbit or Rover, post in local groups, and tell friends and neighbors about your services.'],
-        ['q' => 'Can a side hustle become a full-time job?', 'a' => 'Yes, many people turn cleaning, freelancing, or detailing into full-time businesses over time.'],
-        ['q' => 'Which side hustles offer flexible hours?', 'a' => 'Freelancing, mobile notary work, and weekend detailing allow you to choose your own schedule.'],
-        ['q' => 'How do I pick the right side hustle?', 'a' => 'Think about how much time you have, how much money you want to earn, and what type of work you enjoy.'],
+    'title'       => 'Best Side Hustles in Anaheim (2026): 16 Ways to Earn',
+    'description' => 'The best side hustles in Anaheim for 2026: 16 side gigs tied to Disneyland, the Convention Center and game nights, with pay, startup costs and city rules.',
+    'h1'          => 'Best Side Hustles in Anaheim (2026): 16 Side Gigs That Pay',
+    'kicker'      => 'City Guide · CA',
+    'dek'         => 'Millions of theme-park visitors, one of the biggest convention centers on the West Coast and two pro sports arenas give Anaheim a built-in customer base. Here is how to turn that traffic into side income.',
+    'published'   => '2026-02-22',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Anaheim.webp',
+    'image_alt'   => 'Anaheim, California resort district illustrating the best side hustles in Anaheim',
+    'category'    => 'City Guides',
+    'city'        => 'Anaheim',
+    'state'       => 'CA',
+    'keywords'    => ['best side hustles in anaheim', 'side jobs in anaheim', 'side gigs in anaheim', 'how to make money in anaheim', 'anaheim side hustles 2026'],
+    'tool'        => 'quiz',
+    'gear'        => ['pressure-washer', 'camera', 'tripod', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-santa-ana', 'best-side-hustles-in-irvine', 'best-side-hustles-in-riverside'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Anaheim?', 'a' => 'Rideshare and food delivery around the Anaheim Resort, convention and event staffing, family photography, theme-park trip planning, house cleaning, pressure washing and pet sitting are the strongest options. Tourism and big events keep demand high year-round, while Anaheim\'s neighborhoods and Anaheim Hills supply steady home-service clients.'],
+        ['q' => 'How can I make money in Anaheim fast?', 'a' => 'Sign up for Uber, Lyft, DoorDash or Uber Eats and work the evenings when Disneyland lets out, the Ducks or Angels play, or a big trade show is in town. Event staffing agencies also hire for Convention Center shows, and many can schedule you within a couple of weeks.'],
+        ['q' => 'Do I need a business license for a side hustle in Anaheim?', 'a' => 'Most businesses operating in Anaheim, including home-based ones, need a city business license, and some activities need extra permits. App-based drivers are generally covered by the platform, but cleaning, detailing, photography and similar services run under your own name usually need one. Confirm with the city\'s business license office before you start.'],
+        ['q' => 'Can I run an Airbnb in Anaheim?', 'a' => 'Anaheim has tightly restricted short-term rentals in residential neighborhoods for years and generally does not issue new permits there, so starting a new Airbnb is usually not an option. Look at mid-term rentals of 30 days or more, or offer cleaning and guest services to permitted operators and nearby hotels instead.'],
+        ['q' => 'How much can I make from side jobs in Anaheim?', 'a' => 'Most people working 8 to 15 hours a week typically earn $500 to $1,800 a month. Rideshare and delivery generally run $17 to $27 an hour before gas, with better nights during events, while photography, trip planning and pressure washing can pay $40 to $100 an hour once you build a client base.'],
+        ['q' => 'Can I sell Disney-themed products as a side hustle?', 'a' => 'Be careful. Selling items with Disney characters, logos or park names, or Angels and Ducks logos, without a license can lead to takedowns and legal trouble. Original designs inspired by Southern California, theme-park travel tips or general fan culture are a safer route for print-on-demand and handmade goods.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re looking for the <strong>best side hustles in Anaheim</strong>, you’re in the right city. Seriously. Anaheim isn’t just palm trees and theme parks. It’s tourism, conventions, apartment communities, busy professionals, and a steady stream of visitors flowing through places like Disneyland Resort and the Anaheim Convention Center every single week.</p>
-<p>That movement creates opportunity.</p>
-<p>I’ve always believed the best <a href="/bossier-city-la-side-hustles-extra-income-with-local-opportunities/">side hustles</a> aren’t random. They fit the local economy. And Anaheim’s economy is built on tourism, hospitality, housing, and small businesses that need help staying competitive.</p>
-<p>Let’s break down the <strong>best side hustles in Anaheim</strong> — the ones that actually make sense here — and how to choose the right one for your schedule, skillset, and income goals.</p>
-<h2 id="h-why-anaheim-is-built-for-side-hustlers">Why Anaheim Is Built for Side Hustlers</h2>
-<p><a href="https://en.wikipedia.org/wiki/Anaheim,_California">Anaheim</a> has three powerful advantages:</p>
-<ul><li>Year-round tourism</li><li>High rental density</li><li>Strong car culture and suburban sprawl</li></ul>
-<p>Translation? Constant demand for services.</p>
-<p>Visitors need help. Residents are busy. Property owners need support. And small businesses want visibility.</p>
-<p>That combination is exactly why some of the <strong>best side hustles in Anaheim</strong> are service-based and hyper-local.</p>
-<h2 id="h-tourism-based-hustles-anaheim-s-built-in-advantage">Tourism-Based Hustles: Anaheim’s Built-In Advantage</h2>
-<p>Tourism is the engine. If you tap into it strategically, you’re not chasing clients — they’re already here.</p>
-<h3 id="h-1-airbnb-co-hosting-amp-vacation-rental-turnover">1. Airbnb Co-Hosting &amp; Vacation Rental Turnover</h3>
-<p>Short-term rentals near Disneyland are everywhere. Many owners don’t live locally. That’s your opening.</p>
-<p>As a co-host, you can:</p>
-<ul><li>Manage guest communication</li><li>Coordinate cleaners</li><li>Handle check-ins</li><li>Oversee maintenance</li></ul>
-<p><strong>Income Potential:</strong><strong><br/></strong> $500–$2,000+ per month per property, depending on workload.</p>
-<p><strong>Startup Cost:</strong><strong><br/></strong> Low. Mostly time, reliability, and organization.</p>
-<p>Vacation rental cleaning is even more direct. Turnover days are tight. Owners pay well for punctuality and quality.</p>
-<h3 id="h-2-disney-itinerary-planning-or-family-photography">2. Disney Itinerary Planning or Family Photography</h3>
-<p>Families fly in overwhelmed. They want structure.</p>
-<p>If you know the parks well, offer:</p>
-<ul><li>Custom itinerary planning</li><li>Genie+ optimization guidance</li><li>Dining reservation strategies</li><li>Ride prioritization plans</li></ul>
-<p>Or go visual. Family photographers near Disneyland can charge $250–$600 per session. The demand is real.</p>
-<p>Tourism keeps this market alive year-round. That’s why it ranks among the <strong>best side hustles in Anaheim</strong>.</p>
-<h3 id="h-3-convention-amp-event-gig-work">3. Convention &amp; Event Gig Work</h3>
-<p>The Anaheim Convention Center hosts major expos and trade shows.</p>
-<p>Temporary opportunities include:</p>
-<ul><li>Brand ambassador roles</li><li>Product demo staffing</li><li>Event setup/teardown</li><li>Registration desk support</li></ul>
-<p>These gigs often pay $20–$35/hour.</p>
-<p>Seasonal spikes? Huge.</p>
-<h2 id="h-flexible-gig-economy-options">Flexible Gig Economy Options</h2>
-<p>You already know these. But strategy matters.</p>
-<h3 id="h-4-rideshare-amp-food-delivery-done-smart">4. Rideshare &amp; Food Delivery — Done Smart</h3>
-<p>Driving for Uber, Lyft, or <a href="https://www.yelp.com/search?find_desc=door+dash&amp;find_loc=Anaheim%2C+CA&amp;msockid=229dd862fdc56f83212ccee7fc656e1d">DoorDash</a> isn’t new. But in Anaheim, location timing is everything.</p>
-<p>Focus on:</p>
-<ul><li>Convention center exit times</li><li>Hotel clusters</li><li>Post-fireworks rush near Disneyland</li></ul>
-<p><strong>Average Earnings (Strategic Driving):</strong></p>
-<table class="data"><tbody><tr><td><strong>Platform</strong></td><td><strong>Part-Time Monthly</strong></td><td><strong>Peak Strategy</strong></td></tr><tr><td>Uber/Lyft</td><td>$800–$1,500</td><td>Event nights</td></tr><tr><td>DoorDash</td><td>$600–$1,200</td><td>Late evenings</td></tr></tbody></table>
-<p>It’s not glamorous. But it’s flexible. And flexibility is powerful.</p>
-<h3 id="h-5-task-based-services-assembly-moving-help-repairs">5. Task-Based Services (Assembly, Moving Help, Repairs)</h3>
-<p>Apartment complexes dominate parts of Anaheim. That means constant move-ins.</p>
-<p>Offer:</p>
-<ul><li>IKEA assembly</li><li>TV mounting</li><li>Moving help</li><li>Minor handyman services</li></ul>
-<p>Apps like TaskRabbit and Thumbtack can generate your first clients. After that? Referrals take over.</p>
-<p>Low barrier. High demand.</p>
-<h2 id="h-local-service-hustles-that-quietly-print-money">Local Service Hustles That Quietly Print Money</h2>
-<p>Some of the <strong>best side hustles in Anaheim</strong> aren’t flashy. They’re consistent.</p>
-<h3 id="h-6-mobile-car-detailing">6. Mobile Car Detailing</h3>
-<p>Southern California loves clean cars. Period.</p>
-<p>Apartment dwellers can’t always wash vehicles on-site. HOA restrictions create friction. You solve that.</p>
-<p><strong>Startup Basics:</strong></p>
-<ul><li>Portable water tank</li><li>Pressure washer</li><li>Cleaning supplies</li><li>Insurance</li></ul>
-<p>You can charge:</p>
-<ul><li>$120–$200 per detail</li><li>$300+ for full interior + exterior packages</li></ul>
-<p>Two cars on a Saturday? That’s $300–$400 in a day.</p>
-<p>Simple math.</p>
-<h3 id="h-7-house-cleaning-amp-rental-turnovers">7. House Cleaning &amp; Rental Turnovers</h3>
-<p>Anaheim’s mix of busy professionals and short-term rentals creates constant cleaning demand.</p>
-<p>Charge:</p>
-<ul><li>$120–$180 for standard cleaning</li><li>$200–$350 for deep cleaning</li><li>$150+ for vacation rental turnover</li></ul>
-<p>Build recurring clients. Recurring revenue stabilizes everything.</p>
-<p>This one consistently ranks among the <strong>best side hustles in Anaheim</strong> because of repeat work.</p>
-<h3 id="h-8-pet-sitting-amp-dog-walking">8. Pet Sitting &amp; Dog Walking</h3>
-<p>Travel-heavy residents need pet care.</p>
-<p>Sign up on Rover. Market in HOA communities. Offer:</p>
-<ul><li>Daily dog walks</li><li>Weekend boarding</li><li>Pet drop-ins</li><li>Airport-day sitting</li></ul>
-<p>Once you build trust, this becomes referral-driven.</p>
-<p>Low startup cost. High loyalty.</p>
-<h2 id="h-online-amp-creative-side-hustles-anaheim-based-remote-friendly">Online &amp; Creative Side Hustles (Anaheim-Based, Remote-Friendly)</h2>
-<p>You don’t have to leave your home.</p>
-<h3 id="h-9-freelancing-for-local-businesses">9. Freelancing for Local Businesses</h3>
-<p>Restaurants. Salons. Fitness studios. Realtors.</p>
-<p>They need:</p>
-<ul><li>Social media management</li><li>Website updates</li><li>Content creation</li><li>Paid ad setup</li></ul>
-<p>Pitch directly. Walk into businesses. Email local directories.</p>
-<p>Starter pricing example:</p>
-<ul><li>$400/month for basic social posting</li><li>$750–$1,500 for full management</li></ul>
-<p>Scalable. Professional. Clean.</p>
-<h3 id="h-10-selling-handmade-goods-or-print-on-demand">10. Selling Handmade Goods or Print-on-Demand</h3>
-<p>Anaheim hosts markets and pop-ups throughout the year. Tourism-themed items perform well.</p>
-<p>Think:</p>
-<ul><li>Custom Disney-inspired (but legally compliant) apparel</li><li>Orange County lifestyle merch</li><li>Personalized family trip keepsakes</li></ul>
-<p>Etsy + local events = hybrid revenue.</p>
-<p>Not overnight success. But steady.</p>
-<h2 id="h-real-estate-adjacent-hustles">Real Estate-Adjacent Hustles</h2>
-<p>Housing is strong in Orange County. That creates opportunity.</p>
-<h3 id="h-11-mobile-notary-public">11. Mobile Notary Public</h3>
-<p>California requires certification, but it’s manageable.</p>
-<p>You can charge:</p>
-<ul><li>$15 per signature (regulated)</li><li>$75–$150 travel fee</li></ul>
-<p>Focus on:</p>
-<ul><li>Real estate closings</li><li>Loan signings</li><li>Estate documents</li></ul>
-<p>Professionals love reliable notaries.</p>
-<h3 id="h-12-leasing-support-or-showing-agent-assistant">12. Leasing Support or Showing Agent Assistant</h3>
-<p>Property managers need weekend help.</p>
-<p>You could:</p>
-<ul><li>Show units</li><li>Conduct walkthroughs</li><li>Assist with tenant onboarding</li></ul>
-<p>This one is underrated. And quietly profitable.</p>
-<h2 id="h-climate-friendly-hustles">Climate-Friendly Hustles</h2>
-<p>Anaheim weather helps.</p>
-<h3 id="h-13-pressure-washing">13. Pressure Washing</h3>
-<p>Driveways. Sidewalks. Apartment corridors.</p>
-<p>Charge:</p>
-<ul><li>$150–$400 per job</li></ul>
-<p>Low overhead. Visible results.</p>
-<h3 id="h-14-pool-amp-yard-maintenance-assistance">14. Pool &amp; Yard Maintenance Assistance</h3>
-<p>Many homes and rental properties have pools.</p>
-<p>You don’t need to own the full business. Assist established companies part-time.</p>
-<p>Steady. Predictable. Outdoor-friendly.</p>
-<h2 id="h-how-to-choose-the-right-hustle">How to Choose the Right Hustle</h2>
-<p>Not every opportunity fits everyone.</p>
-<p>Ask yourself:</p>
-<ul><li>How many hours can I realistically commit?</li><li>Do I want active work or remote work?</li><li>Am I aiming for $500 extra or $2,500 extra?</li></ul>
-<p>Here’s a quick comparison:</p>
-<table class="data"><tbody><tr><td><strong>Hustle Type</strong></td><td><strong>Startup Cost</strong></td><td><strong>Income Potential</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Rideshare</td><td>Low</td><td>Medium</td><td>Limited</td></tr><tr><td>Cleaning</td><td>Low</td><td>High</td><td>Strong</td></tr><tr><td>Freelancing</td><td>Low</td><td>High</td><td>Very Strong</td></tr><tr><td>Car Detailing</td><td>Medium</td><td>High</td><td>Moderate</td></tr><tr><td>Notary</td><td>Medium</td><td>High</td><td>Strong</td></tr></tbody></table>
-<p>Choose based on:</p>
-<ul><li>Time</li><li>Energy</li><li>Risk tolerance</li><li>Long-term vision</li></ul>
-<p>The <strong>best side hustles in Anaheim</strong> aren’t just profitable. They’re sustainable for <em>you</em>.</p>
-<h2 id="h-legal-amp-practical-considerations">Legal &amp; Practical Considerations</h2>
-<p>Don’t skip this part.</p>
-<p>You may need:</p>
-<ul><li>A local business license</li><li>Liability insurance</li><li>Separate bank account</li><li>Proper tax tracking</li></ul>
-<p>California expects income reporting. Track mileage. Track expenses.</p>
-<p>Professionalism builds trust.</p>
-<h2 id="h-how-much-can-you-realistically-earn">How Much Can You Realistically Earn?</h2>
-<p>Let’s be honest. Results depend on effort.</p>
-<p><strong>Conservative monthly estimates (part-time 10–15 hrs/week):</strong></p>
-<ul><li>Cleaning: $1,000–$2,000</li><li>Car Detailing: $800–$1,500</li><li>Freelancing: $1,500–$3,000</li><li>Rideshare: $800–$1,200</li><li>Notary: $1,000–$2,500</li></ul>
-<p>Some side hustles cap out. Others scale into full businesses.</p>
-<p>That’s why freelancing, cleaning crews, and detailing companies often grow beyond “side” status.</p>
-<p>And that’s why they remain some of the <strong>best side hustles in Anaheim</strong> year after year.</p>
-<h2 id="h-turning-a-side-hustle-into-a-real-business">Turning a Side Hustle Into a Real Business</h2>
-<p>Here’s where most people stall.</p>
-<p>They stay casual. Casual limits growth.</p>
-<p>Instead:</p>
-<ul><li>Collect reviews early</li><li>Build a simple website</li><li>Open a business checking account</li><li>Raise prices gradually</li><li>Reinvent your offer every 6–12 months</li></ul>
-<p>Anaheim has built-in demand. If you operate professionally, clients notice.</p>
-<p>And referrals spread fast.</p>
-<h2 id="h-final-thoughts-opportunity-is-already-here">Final Thoughts: Opportunity Is Already Here</h2>
-<p>The <strong>best side hustles in Anaheim</strong> aren’t hidden. They’re right in front of you.</p>
-<p>Tourists arrive daily. Apartments turn over weekly. Cars get dirty constantly. Businesses need marketing every month.</p>
-<p>This city moves. If you move with it, you win.</p>
-<p>Start small. Execute consistently. Improve relentlessly.</p>
-<p>That’s how side income turns into leverage.</p>
-<p>And leverage changes everything.</p>
+    'body'        => <<<'HTML'
+<p>Few cities have a customer base delivered to their doorstep like Anaheim does. The Disneyland Resort, the Anaheim Convention Center, Angel Stadium and the Honda Center draw crowds almost every day of the year, and every one of those visitors needs rides, food, photos and help. That's why the best side hustles in Anaheim lean into tourism and events, backed by home services for the city's own residents.</p>
+<p>This guide from Better Side Hustles covers 16 side gigs in Anaheim with typical pay, startup costs and local timing tips, from Resort-district rideshare to pressure washing in Anaheim Hills. If you want to know how to make money in Anaheim around a day job, these are the Anaheim side hustles 2026 rewards most.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>1%–12.3%</b><span>California income tax brackets</span></div>
+  <div class="stat"><b>$17–$100</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0–$500</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="resort-economy">How Anaheim's resort economy creates side gigs</h2>
+<ul>
+  <li><strong>Year-round tourism.</strong> Disneyland and Disney California Adventure keep the Anaheim Resort district busy in every season, with spikes around summer, spring break, Halloween and the holidays.</li>
+  <li><strong>Major conventions.</strong> The Anaheim Convention Center hosts large trade shows such as the NAMM Show in January and Natural Products Expo West in March, plus fan conventions and conferences that fill hotels for days.</li>
+  <li><strong>Game and concert nights.</strong> Angels baseball at Angel Stadium and Ducks hockey and concerts at the Honda Center bring crowds to the Platinum Triangle, and the ARTIC transit center links it all to Metrolink.</li>
+  <li><strong>Real neighborhoods, too.</strong> Beyond the resort, areas like Anaheim Hills, West Anaheim, Colony and Center City have homeowners who pay for cleaning, yard work and pet care.</li>
+</ul>
+
+<h2 id="tourism-picks">Tourism and event hustles: the best side hustles in Anaheim</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">1. Rideshare driving</h3>
+    <p>Park closing time, convention breakouts and post-game rushes create surge windows. Airport runs from Resort hotels to John Wayne (SNA) and LAX pay well. Learn the pickup zones around the Resort and Honda Center so you don't waste time circling. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers getting approved, and a [[amazon:dash-cam|dash cam]] is worth it with this much traffic.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $17–$27/hr before gas</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Night and weekend drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food delivery to hotels and homes</h3>
+    <p>Families worn out after a park day order dinner to their hotel rooms, which keeps DoorDash and Uber Eats busy along Harbor Boulevard and Katella Avenue late into the evening. Learn which hotels let drivers to the lobby versus the curb.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$24/hr before gas</li><li><b>Startup:</b> Car, scooter or e-bike</li><li><b>Best for:</b> Evening shifts</li></ul>
+  </div>
+</div>
+<p>Event traffic can wreck an hourly rate. Run your real numbers, including gas and wear, before you plan a schedule:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">3. Convention and event staffing</h3>
+    <p>Trade shows need booth staff, registration desk workers, brand ambassadors, setup and teardown crews. Stadium and arena concessions hire for game nights. Sign up with two or three staffing agencies so you get first pick of shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$30/hr, more for brand ambassadors</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Outgoing people with open weekdays</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">4. Family and vacation photography</h3>
+    <p>Visiting families want professional photos without spending park time on it. Offer sessions in photogenic spots outside the parks, such as the Center City and Packing District area or parks in Anaheim Hills, and market to visitors through travel Facebook groups. Follow each property's rules on commercial photography.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$400 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual creatives</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="trip-planning">5. Theme-park trip planning</h3>
+    <p>If you know the parks inside and out, partner with a host travel agency as an independent agent and earn commissions planning trips, or sell flat-fee itinerary planning to families who want a stress-free visit.</p>
+    <ul class="meta"><li><b>Pay:</b> Commissions or flat fees, often $50–$200 per trip</li><li><b>Startup:</b> $0–$300</li><li><b>Best for:</b> Park experts</li></ul>
+  </div>
+</div>
+
+<h2 id="home-services">Home services for Anaheim residents</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="house-cleaning">6. House cleaning</h3>
+    <p>Many residents work long shifts at the Resort, hospitals and hotels, so recurring cleaning sells well. Anaheim Hills homes are larger and pay more per visit.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Reliable, detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">7. Pressure washing</h3>
+    <p>Driveways, patios, block walls and stucco collect dust and grime in a dry climate. Small businesses along Lincoln and Beach Boulevard also need storefront and sidewalk cleaning.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $125–$350 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">8. Pet sitting and dog walking</h3>
+    <p>Odd-hour shift workers and frequent travelers need midday walks and overnight care. Rover makes it easy to start, and holiday weekends book out weeks ahead.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$28/walk, $45–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">9. Mobile car detailing</h3>
+    <p>Commuters on the 5, 57 and 91 freeways spend hours in their cars. Offer driveway details and office-park service with permission. Waterless options help where runoff is a concern.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $80–$200 per detail</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-yard">10. Pool and yard maintenance</h3>
+    <p>Hot inland summers mean backyard pools and drought-tolerant landscaping that need regular care. Build a weekly route in one neighborhood to save drive time.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60 per visit</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="task-services">11. Assembly, moving help and small repairs</h3>
+    <p>TaskRabbit is busy with furniture assembly, TV mounting and moving help. Keep repairs small to stay under California's contractor licensing threshold.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$70/hr</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,car-charger,power-bank|Gear for Anaheim drivers and event workers]]
+
+<h2 id="compare">Side jobs in Anaheim compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare</td><td>$17–$27/hr</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$16–$24/hr</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Event staffing</td><td>$18–$30/hr</td><td>$0</td><td>Next big show</td></tr>
+    <tr><td>Vacation photography</td><td>$150–$400 per session</td><td>Camera</td><td>2–4 weeks</td></tr>
+    <tr><td>Trip planning</td><td>$50–$200 per trip</td><td>$0–$300</td><td>3–6 weeks</td></tr>
+    <tr><td>House cleaning</td><td>$25–$45/hr</td><td>$75–$150</td><td>1 week</td></tr>
+    <tr><td>Pressure washing</td><td>$125–$350 per job</td><td>$200–$500</td><td>1 week</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$28/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="online-creative">Online and creative side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="freelancing">12. Freelancing for local businesses</h3>
+    <p>Restaurants in the Packing District, hotels, tour operators and shops along Harbor Boulevard need websites, menus, photos and social posts. Start on <a href="/fiverr/">Fiverr</a> to build reviews, then pitch locally. See our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> for packages.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Creatives and marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="content-creator">13. Theme-park and travel content</h3>
+    <p>Wait-time tips, food reviews and budget guides for Anaheim visitors attract a big audience. Monetize with ads, affiliate links and hotel partnerships. Much of it can be done from your phone; see our list of <a href="/side-hustles-you-can-start-with-just-your-smartphone/">smartphone side hustles</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Phone, mic</li><li><b>Best for:</b> Patient creators</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handmade">14. Handmade goods and print-on-demand</h3>
+    <p>Original Southern California designs, ear-style headbands without trademarked characters, and custom shirts for family trips sell online and at local markets. Avoid licensed logos and characters.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $50–$400</li><li><b>Best for:</b> Makers and designers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-notary">15. Mobile notary</h3>
+    <p>Real estate deals, estate documents and hospital or care-home signings all need notaries who come to the client. California requires a state course, exam, background check and bond before commissioning.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $75–$150 per loan signing</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Detail-focused professionals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="leasing-assistant">16. Leasing and showing assistant</h3>
+    <p>Busy agents and property managers pay helpers to open doors for showings, take listing photos and handle paperwork. Anything that requires a real estate license, like negotiating, must stay with the agent.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$50 per showing or hourly</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Organized people with a car</li></ul>
+  </div>
+</div>
+
+<div class="callout callout-warn"><strong>Watch out:</strong> Two rules trip up Anaheim side hustlers. First, the city has long restricted new short-term rentals in residential areas, so don't buy furniture for an Airbnb before you confirm it's legal. Second, selling unlicensed Disney, Angels or Ducks merchandise invites takedowns and lawsuits.</div>
+
+<h2 id="calendar">Plan around Anaheim's busiest weeks</h2>
+<p>Side gigs in Anaheim pay best when you line them up with the crowds. A rough year looks like this:</p>
+<ul>
+  <li><strong>January to March:</strong> the NAMM Show and Natural Products Expo West bring some of the biggest convention weeks of the year, with heavy demand for booth staff, rideshare and hotel food delivery. Spring break starts filling the Resort in March.</li>
+  <li><strong>April to June:</strong> Angels season opens, graduation photo sessions pick up, and early summer crowds lift rideshare and delivery. Spring is also peak pressure-washing season.</li>
+  <li><strong>July to September:</strong> summer vacation keeps the Resort packed, pools need weekly service, and long, hot days push outdoor work into early mornings.</li>
+  <li><strong>October to December:</strong> Halloween and holiday seasons at the parks, Ducks games and concerts at the Honda Center, and holiday travel create a strong finish for drivers, photographers and pet sitters.</li>
+</ul>
+<p>Pair one event-driven gig with one steady home-service gig, and slow weeks at the Convention Center won't empty your bank account. Check the Convention Center's public event calendar every month so you can block those weeks off early.</p>
+
+<h2 id="get-started">How to start a side hustle in Anaheim this month</h2>
+<ol class="steps">
+  <li><strong>Pick one gig that fits your hours.</strong> Event and driving gigs fit nights and weekends; home services fit weekday gaps. Not sure? Take the quiz in the sidebar.</li>
+  <li><strong>Get your city business license.</strong> Apply with the City of Anaheim before you start a service business under your own name.</li>
+  <li><strong>Bookmark the calendars.</strong> Convention Center shows, Angels and Ducks home schedules and park holiday seasons tell you when to work.</li>
+  <li><strong>List yourself where people look.</strong> Apps for gig work; Nextdoor, Yelp and a Google Business Profile for services.</li>
+  <li><strong>Collect your first reviews.</strong> Three five-star reviews can carry a new local business.</li>
+  <li><strong>Track mileage and expenses.</strong> Keep a separate account and save 25–30% for taxes.</li>
+</ol>
+
+<h2 id="taxes-rules">Anaheim and California tax rules</h2>
+<ul>
+  <li><strong>California income tax:</strong> progressive rates from 1% to 12.3%, plus a 1% surcharge on income over $1 million.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>City business license:</strong> Anaheim requires most businesses operating in the city to be licensed, and home-based businesses must follow zoning rules. Check with the city before you start.</li>
+  <li><strong>Short-term rentals:</strong> new residential short-term rentals are generally not permitted; only previously permitted operators may run them under the city's rules.</li>
+  <li><strong>Seller's permit:</strong> selling physical goods requires CDTFA registration and sales tax collection.</li>
+  <li><strong>AB5:</strong> California's ABC test usually makes hired helpers employees. App drivers are generally contractors under Proposition 22.</li>
+</ul>
+
+<h2 id="nearby">Nearby cities to compare</h2>
+<p>Anaheim is surrounded by other busy markets. See our guides to the <a href="/best-side-hustles-in-santa-ana/">best side hustles in Santa Ana</a>, <a href="/best-side-hustles-in-irvine/">Irvine</a> and <a href="/best-side-hustles-in-riverside/">Riverside</a>. Pick one idea, work it consistently for 90 days and let Anaheim's crowds do the rest.</p>
 HTML,
 ];

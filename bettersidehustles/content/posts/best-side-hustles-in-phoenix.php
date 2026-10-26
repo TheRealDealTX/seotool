@@ -1,155 +1,203 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Phoenix (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Phoenix that actually work, from local services to online income ideas built for real demand.',
-    'h1' => 'Best Side Hustles in Phoenix',
-    'kicker' => 'City Guide · AZ',
-    'dek' => 'Gig apps, local services and online work that pay in Phoenix — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-04',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Phoenix.webp',
-    'image_alt' => 'Best Side Hustles in Phoenix',
-    'category' => 'City Guides',
-    'city' => 'Phoenix',
-    'state' => 'AZ',
-    'keywords' => ['best side hustles in phoenix'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-tucson', 'best-side-hustles-in-mesa', 'best-side-hustles-in-las-vegas'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Phoenix right now?', 'a' => 'Service-based gigs like pool cleaning, mobile detailing, and pressure washing perform especially well due to Phoenix’s climate and housing market.'],
-        ['q' => 'How much can you realistically earn from a Phoenix side hustle?', 'a' => 'Many of the best side hustles in Phoenix generate $1,000–$3,000 per month with consistent weekend or evening work.'],
-        ['q' => 'Do I need a license to start a side hustle in Phoenix?', 'a' => 'Some services require city registration or insurance, but many side hustles can start legally with minimal paperwork.'],
-        ['q' => 'Which side hustles work best during Phoenix summers?', 'a' => 'Early-morning service jobs and online side hustles help avoid heat while maintaining steady income.'],
-        ['q' => 'Are online side hustles popular in Phoenix?', 'a' => 'Yes, freelance writing, virtual assistant work, and social media management are growing among Phoenix professionals.'],
-        ['q' => 'What side hustles are best for Phoenix renters?', 'a' => 'Mobile services, digital work, and client-based gigs are ideal since they don’t require storage or home modifications.'],
-        ['q' => 'Can side hustles in Phoenix turn into full-time businesses?', 'a' => 'Many of the best side hustles in Phoenix scale into full-time operations once demand and pricing stabilize.'],
-        ['q' => 'How quickly can a side hustle become profitable in Phoenix?', 'a' => 'Some service-based side hustles land paying clients within the first two weeks if priced competitively.'],
-        ['q' => 'What is the biggest mistake Phoenix side hustlers make?', 'a' => 'Underpricing services and ignoring seasonal demand patterns often limit long-term growth.'],
-        ['q' => 'Is Phoenix a good city for multiple side hustles at once?', 'a' => 'Yes, but focusing on one strong side hustle first leads to better results than juggling too many.'],
+    'title'       => 'Best Side Hustles in Phoenix (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Phoenix for 2026: 18 side gigs built around the heat, with real pay ranges, startup costs, event dates and Arizona TPT tips.',
+    'h1'          => 'Best Side Hustles in Phoenix (2026): 18 Side Gigs That Beat the Heat',
+    'kicker'      => 'City Guide · AZ',
+    'dek'         => 'Pool routes, dawn detailing, spring-training rideshare and remote work on Valley rent: these are the side jobs in Phoenix worth your time, with pay, startup costs and how to land your first client.',
+    'published'   => '2026-01-04',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Phoenix.webp',
+    'image_alt'   => 'Phoenix skyline at sunset with Camelback Mountain, illustrating the best side hustles in Phoenix',
+    'category'    => 'City Guides',
+    'city'        => 'Phoenix',
+    'state'       => 'AZ',
+    'keywords'    => ['best side hustles in phoenix', 'side hustles in phoenix', 'side jobs in phoenix', 'side gigs in phoenix', 'how to make money in phoenix', 'phoenix side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['cleaning-kit', 'dash-cam', 'power-bank', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-mesa', 'best-side-hustles-in-tucson', 'best-side-hustles-in-las-vegas'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Phoenix?', 'a' => 'The strongest Phoenix side hustles are pool cleaning, rideshare and delivery timed to airport and event surges, mobile car detailing, pressure washing and solar panel cleaning, short-term rental turnovers, pet sitting and remote freelancing. Heat-driven home services pay the best per hour, while app work is the fastest way to get paid this month.'],
+        ['q' => 'How can I make money in Phoenix fast?', 'a' => 'Sign up for DoorDash, Uber Eats, Instacart or Amazon Flex, which can pay within a week once your background check clears. For local services, post before-and-after photos in Nextdoor and neighborhood Facebook groups for pressure washing or detailing; a single weekend job can pay $150 or more. Event staffing agencies also hire fast before big games and spring training.'],
+        ['q' => 'Do I need a business license for a side hustle in Phoenix?', 'a' => 'Most service side hustles in Phoenix do not need a general city business license. If you sell taxable goods or host a short-term rental, you need an Arizona TPT license from the Department of Revenue, and short-term rentals also need a Phoenix STR permit. Handyman work over $1,000 or any job needing a permit requires a contractor license from the Arizona ROC.'],
+        ['q' => 'What side jobs in Phoenix work during the summer?', 'a' => 'Pool cleaning and repair peaks in summer, and dawn shifts for detailing, lawn work and dog walking still book well. Delivery demand rises when nobody wants to leave the house at 112 degrees. Remote work like freelancing, tutoring and virtual assistance is unaffected by heat, which is why many Phoenix side hustlers shift online from June through September.'],
+        ['q' => 'How much can I earn from side gigs in Phoenix?', 'a' => 'Most people putting in 8 to 15 hours a week earn roughly $500 to $1,800 a month. App work typically nets $15 to $22 an hour after gas, while pool routes, pressure washing and freelancing often reach $35 to $75 an hour once you have repeat clients. Results depend on season, hours and how you price.'],
+        ['q' => 'How are side hustle earnings taxed in Arizona?', 'a' => 'Arizona has a flat 2.5% individual income tax. You also owe federal income tax and 15.3% self-employment tax on net profit. Setting aside 20 to 25% of profit covers most people. Selling products or renting short-term also triggers transaction privilege tax, which is collected through a TPT license.'],
     ],
-    'body' => <<<'HTML'
-<p>Phoenix is built for opportunity. The sprawl, the sunshine, the constant inflow of new residents—it all creates demand. That’s why the <strong>best side hustles in Phoenix</strong> aren’t just trendy ideas pulled from the internet. They’re practical, local, and surprisingly profitable if you approach them the right way.</p>
-<p>I’ve seen people in <strong>Phoenix</strong> turn simple weekend gigs into steady second incomes. Some keep it part-time forever. Others scale fast. The difference isn’t hustle culture. It’s choosing side hustles that actually fit Phoenix’s climate, layout, and economy.</p>
-<p>Let’s get specific. No fluff. Just options that work here.</p>
-<h2 id="h-why-phoenix-is-a-side-hustle-goldmine">Why Phoenix Is a Side Hustle Goldmine</h2>
-<p><a href="https://en.wikipedia.org/wiki/Phoenix,_Arizona">Phoenix </a>isn’t a dense, walkable city. It’s wide. Spread out. Car-dependent. And that shapes which <a href="/best-side-hustles-in-new-york/">side hustles</a> thrive.</p>
-<p>Here’s what works in your favor:</p>
-<ul><li><strong>Year-round growth</strong>: New construction, new residents, new businesses</li><li><strong>High service demand</strong>: Homes, pools, yards, vehicles</li><li><strong>Flexible schedules</strong>: Many gigs work early mornings or evenings to beat the heat</li><li><strong>Low barriers to entry</strong>: Plenty of side hustles need skills, not degrees</li></ul>
-<p>That’s why the best side hustles in Phoenix often look very different from side hustles in New York or Chicago.</p>
-<h2 id="h-what-makes-a-side-hustle-work-here">What Makes a Side Hustle Work <em>Here</em></h2>
-<p>Before diving into ideas, it helps to understand what actually survives the desert.</p>
-<p>A good Phoenix side hustle usually checks at least three of these boxes:</p>
-<ul><li>Works around extreme heat</li><li>Serves homeowners or property managers</li><li>Is mobile or location-flexible</li><li>Can be priced per job, not per hour</li><li>Scales through referrals, not ads</li></ul>
-<p>Keep that filter in mind as we go.</p>
-<h2 id="h-high-paying-service-side-hustles-in-phoenix">High-Paying Service Side Hustles in Phoenix</h2>
-<p>These are the bread-and-butter earners. Not glamorous. Very effective.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Cars bake here. Interiors fade. Dust builds up fast.</p>
-<p>Mobile detailers who focus on <strong>interior restoration, ceramic coatings, or fleet vehicles</strong> can charge premium rates.</p>
-<ul><li>Startup: basic equipment + water access plan</li><li>Typical rate: $150–$300 per vehicle</li><li>Best times: early mornings, shaded locations</li></ul>
-<p>Repeat customers make this one of the best side hustles in Phoenix for consistency.</p>
-<h3 id="h-pool-cleaning-amp-pool-maintenance">Pool Cleaning &amp; Pool Maintenance</h3>
-<p>If you own a pool in Phoenix, you already know this.</p>
-<p>Weekly service. Monthly billing. Predictable income.</p>
-<ul><li>Startup: chemicals, basic training, insurance</li><li>Average pay: $80–$120 per pool per month</li><li>Sweet spot: 10–20 pools = strong side income</li></ul>
-<p>It’s boring work. That’s why it pays.</p>
-<h3 id="h-junk-removal-amp-hauling">Junk Removal &amp; Hauling</h3>
-<p>Phoenix generates <em>stuff</em>. Remodel debris. Garage cleanouts. Move-outs.</p>
-<p>If you have a truck or trailer, this scales quickly.</p>
-<ul><li>Charge per load, not per hour</li><li>Partner with real estate agents and landlords</li><li>Weekends are gold</li></ul>
-<h3 id="h-pressure-washing">Pressure Washing</h3>
-<p>Driveways, patios, block walls, and roofs collect grime fast.</p>
-<p>Target:</p>
-<ul><li>HOAs</li><li>Rental turnovers</li><li>Commercial storefronts</li></ul>
-<p>Low overhead. High perceived value.</p>
-<h3 id="h-handyman-amp-light-repairs">Handyman &amp; Light Repairs</h3>
-<p>You don’t need to be a contractor.</p>
-<p>Simple jobs pay well:</p>
-<ul><li>Ceiling fans</li><li>Faucet swaps</li><li>Door repairs</li><li>Mounting TVs</li></ul>
-<p>The best side hustles in Phoenix often come from being “the reliable one.”</p>
-<h3 id="h-startup-cost-vs-earning-potential">Startup Cost vs. Earning Potential</h3>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Typical Hourly Earnings</strong></td></tr><tr><td>Mobile Detailing</td><td>$500–$1,500</td><td>$60–$100</td></tr><tr><td>Pool Maintenance</td><td>$800–$2,000</td><td>$50–$80</td></tr><tr><td>Junk Removal</td><td>$0–$1,000</td><td>$70–$120</td></tr><tr><td>Pressure Washing</td><td>$400–$1,200</td><td>$60–$100</td></tr><tr><td>Handyman Services</td><td>$300–$800</td><td>$50–$90</td></tr></tbody></table>
-<h2 id="h-real-estate-amp-property-side-hustles-big-in-phoenix">Real Estate &amp; Property Side Hustles (Big in Phoenix)</h2>
-<p>Phoenix is a rental city. That creates opportunity beyond buying property.</p>
-<h3 id="h-short-term-rental-co-hosting">Short-Term Rental Co-Hosting</h3>
-<p>You manage:</p>
-<ul><li>Guest messages</li><li>Cleanings</li><li>Restocking</li><li>Minor issues</li></ul>
-<p>Owners pay 10–20% for peace of mind. No ownership required.</p>
-<h3 id="h-turnover-cleaning-amp-prep">Turnover Cleaning &amp; Prep</h3>
-<p>Fast, detail-oriented, and in demand.</p>
-<p>Target:</p>
-<ul><li>Property managers</li><li>Investors</li><li>Airbnb hosts</li></ul>
-<p>Add-ons like restocking or photo prep increase margins.</p>
-<h3 id="h-listing-photography-amp-video">Listing Photography &amp; Video</h3>
-<p>If you can shoot clean, well-lit photos, you’re valuable.</p>
-<p>Drone footage. Twilight shots. Quick turnarounds.</p>
-<p>This is one of the best side hustles in Phoenix for creatives who want higher-ticket clients.</p>
-<h3 id="h-showing-assistance-amp-leasing-support">Showing Assistance &amp; Leasing Support</h3>
-<p>Busy agents outsource:</p>
-<ul><li>Showing appointments</li><li>Lockbox coordination</li><li>Basic tenant screening</li></ul>
-<p>Not glamorous. Very steady.</p>
-<h2 id="h-online-side-hustles-that-beat-the-heat">Online Side Hustles That Beat the Heat</h2>
-<p>Not everything needs sunscreen.</p>
-<h3 id="h-freelance-writing-amp-seo">Freelance Writing &amp; SEO</h3>
-<p>Local businesses need:</p>
-<ul><li>Website copy</li><li>Blog posts</li><li>Service pages</li></ul>
-<p>If you can write clearly and meet deadlines, Phoenix companies will pay.</p>
-<h3 id="h-virtual-assistant-work">Virtual Assistant Work</h3>
-<p>Inbox management. Scheduling. CRM updates.</p>
-<p>Start with:</p>
-<ul><li>Realtors</li><li>Contractors</li><li>Coaches</li></ul>
-<p>Hourly retainers add up fast.</p>
-<h3 id="h-social-media-management-local-focus">Social Media Management (Local Focus)</h3>
-<p>You don’t need viral content.</p>
-<p>You need:</p>
-<ul><li>Consistency</li><li>Clean visuals</li><li>Local awareness</li></ul>
-<p>This is one of the best side hustles in Phoenix for people who understand small businesses.</p>
-<h3 id="h-website-setup-for-service-pros">Website Setup for Service Pros</h3>
-<p>Simple sites. Clear calls to action.</p>
-<p>Think:</p>
-<ul><li>Plumbers</li><li>Pool companies</li><li>Mobile services</li></ul>
-<p>One site = $800–$2,500.</p>
-<h2 id="h-gig-economy-hustles-that-still-work-if-you-re-smart">Gig Economy Hustles That Still Work (If You’re Smart)</h2>
-<p>Gig work isn’t dead. It just requires strategy.</p>
-<p>Best use cases in Phoenix:</p>
-<ul><li>Airport runs during peak hours</li><li>Event weekends</li><li>Lunch + dinner delivery windows</li></ul>
-<p>Avoid:</p>
-<ul><li>Midday summer driving</li><li>Long deadhead distances</li></ul>
-<p>Use gig apps as <strong>supplemental income</strong>, not your entire plan.</p>
-<h2 id="h-creative-amp-niche-hustles-thriving-here">Creative &amp; Niche Hustles Thriving Here</h2>
-<p>Phoenix rewards specialization.</p>
-<p>Ideas that work:</p>
-<ul><li>Desert-style branding photography</li><li><a href="https://roofonline.com/best-drones-for-roof-inspections/">Drone roof inspections</a></li><li>Outdoor fitness coaching</li><li>Event setup and teardown</li><li>Custom signage and wraps</li></ul>
-<p>The more niche you go, the less competition you face.</p>
-<h2 id="h-homeowners-vs-renters-what-changes">Homeowners vs. Renters: What Changes?</h2>
-<p><strong>Homeowners</strong> can:</p>
-<ul><li>Run storage-based side hustles</li><li>Offer driveway services</li><li>Host equipment</li></ul>
-<p><strong>Renters</strong> should focus on:</p>
-<ul><li>Mobile services</li><li>Online work</li><li>Client-based gigs</li></ul>
-<p>Always check HOA and lease terms. It matters here.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle-in-phoenix">How to Choose the Right Side Hustle in Phoenix</h2>
-<p>Ask yourself:</p>
-<ul><li>Can I work around heat safely?</li><li>Do I want recurring income or one-off jobs?</li><li>How fast do I need cash flow?</li><li>Can this scale without burning me out?</li></ul>
-<p>The best side hustles in Phoenix are sustainable, not exhausting.</p>
-<h2 id="h-a-simple-30-day-action-plan">A Simple 30-Day Action Plan</h2>
-<ol><li><strong>Week 1</strong></li></ol>
-<ul><li>Pick one hustle</li><li>Price competitors</li><li>Validate demand</li></ul>
-<ol><li><strong>Week 2</strong></li></ol>
-<ul><li>Set up tools and profiles</li><li>Get insurance if needed</li></ul>
-<ol><li><strong>Week 3</strong></li></ol>
-<ul><li>Book first clients</li><li>Refine workflow</li></ul>
-<ol><li><strong>Week 4</strong></li></ol>
-<ul><li>Raise prices slightly</li><li>Ask for referrals</li></ul>
-<p>Momentum builds fast if you stay focused.</p>
-<h2 id="h-mistakes-i-see-phoenix-side-hustlers-make">Mistakes I See Phoenix Side Hustlers Make</h2>
-<ul><li>Underpricing because of fear</li><li>Ignoring summer schedules</li><li>Taking every job instead of the right jobs</li><li>Skipping basic contracts</li><li>Waiting too long to raise rates</li></ul>
-<p>Avoid these, and you’re already ahead.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Phoenix rewards people who pay attention.</p>
-<p>The <strong>best side hustles in Phoenix</strong> aren’t secrets. They’re responses to real needs—homes, heat, growth, and convenience. Start small. Be consistent. Price confidently.</p>
-<p>Extra income here isn’t luck.</p>
-<p>It’s strategy.</p>
+    'body'        => <<<'HTML'
+<p>Phoenix rewards people who plan around the sun. The Valley keeps adding residents, homes and backyard pools, and most of those households would rather pay someone than scrub, mow or haul in 110-degree heat. That is why the best side hustles in Phoenix look different from the lists you see for Chicago or New York: they lean on early mornings, air-conditioned cars and services the desert makes necessary.</p>
+<p>Below are 18 side gigs that work in Phoenix right now, what each typically pays, what it costs to start, and the local details (neighborhoods, employers, event weeks and seasons) that turn a few spare hours into steady money.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>2.5%</b><span>Arizona flat income tax</span></div>
+  <div class="stat"><b>$15–$75</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup cost for most gigs</span></div>
+</div>
+
+<h2 id="phoenix-economy">What makes Phoenix a strong side-hustle market</h2>
+<p>Before picking a gig, it helps to know what drives demand here:</p>
+<ul>
+  <li><strong>Heat creates chores.</strong> Pools need weekly service, dust coats cars and solar panels, and monsoon storms from July through September leave yards and patios a mess. These are recurring jobs, not one-offs.</li>
+  <li><strong>A busy winter season.</strong> Snowbirds arrive in October, Cactus League spring training fills the Valley in February and March, and the WM Phoenix Open and Barrett-Jackson auction bring crowds to nearby Scottsdale. Rideshare, rentals and event work all spike.</li>
+  <li><strong>Growth and newcomers.</strong> New subdivisions in Laveen, North Phoenix and the West Valley mean people who need furniture assembled, TVs mounted and blinds installed. The TSMC semiconductor fab in north Phoenix and employers like Banner Health, Honeywell, American Express and Arizona State University keep bringing in workers who outsource errands.</li>
+  <li><strong>Sprawl.</strong> Phoenix covers more than 500 square miles, so mobile services and anything that saves people a drive sell well.</li>
+</ul>
+
+<h2 id="best-picks">The best side hustles in Phoenix right now</h2>
+<p>These eight are the strongest bets for most people: high demand, reasonable startup costs and pay that holds up after expenses.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pool-cleaning">1. Pool cleaning routes</h3>
+    <p>Phoenix is one of the most pool-dense metros in the country, and owners in Arcadia, Ahwatukee, Desert Ridge and the Biltmore area pay for weekly service. Start with chemical testing, skimming and brushing; add filter cleans later. Ten to fifteen weekly accounts can fill a Saturday and a couple of evenings. Summer algae season is your best time to pick up clients.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$175 per pool per month</li><li><b>Startup:</b> $200–$500 (pole, brush, test kit, chemicals)</li><li><b>Best for:</b> Early risers who like routine</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Rideshare driving</h3>
+    <p>Sky Harbor is minutes from downtown, so airport runs are steady. The money weekends are spring training, Suns and Mercury games at the Footprint Center, Diamondbacks games at Chase Field, Cardinals games and concerts in Glendale, and NASCAR at Phoenix Raceway. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers sign-up and vehicle requirements.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$25/hr before gas</li><li><b>Startup:</b> Eligible car with strong A/C</li><li><b>Best for:</b> Evenings and event weekends</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>When it is 112 degrees, people order in. DoorDash, Uber Eats, Instacart and Walmart Spark stay busy all summer, and dinner rushes around Uptown, Roosevelt Row and the 7th Street corridor keep orders close together. Keep frozen orders cold with an insulated bag and plan for parking under shade.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Flexible hours</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">4. Mobile car detailing</h3>
+    <p>Dust storms and sun bake every car in the Valley. Offer interior details and waterless washes at office parks along Camelback and Central, or at homes before 10 a.m. Ceramic coatings and headlight restoration are easy upsells for cars that live outdoors.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per full detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">5. Pressure washing and solar panel cleaning</h3>
+    <p>Driveways, pavers, block walls and pool decks collect grime and hard-water stains. Solar panels across the Valley lose output when dust builds up, and many owners never clean them. A single job typically pays $150–$350, and before-and-after photos sell the next one.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$350 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Fall, winter and spring weekends</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">6. Short-term rental turnovers</h3>
+    <p>Hosts near Old Town Scottsdale, downtown Phoenix and the stadium districts need fast, reliable cleaners, especially during spring training and the Phoenix Open when nightly rates jump. One property manager with several units can give you a full weekend of work.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">7. Pet sitting and dog walking</h3>
+    <p>Pavement in a Phoenix summer can burn paws, so owners want someone who walks dogs at dawn or after dark and checks on pets during long workdays. Rover and Wag stay busy, and holiday travel books out early. Overnight stays pay the most.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$30/walk, $45–$80/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers with flexible hours</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">8. Remote freelancing</h3>
+    <p>Writing, design, bookkeeping and ad management are summer-proof. Phoenix has plenty of contractors, real estate teams and medical practices that need help with marketing, and you can serve national clients from an air-conditioned room. Start on <a href="/fiverr/">Fiverr</a> and move repeat clients to monthly retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, marketers</li></ul>
+  </div>
+</div>
+<p>If you drive for the apps, run the numbers first. Gas, A/C use and wear add up fast in a spread-out city:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> A dead phone ends your shift. Heat drains batteries quickly, so keep a vent mount out of direct sun and a [[amazon:car-charger|fast car charger]] plugged in.</div>
+
+<h2 id="comparison">Phoenix side gigs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Pool cleaning</td><td>$100–$175/pool/month</td><td>$200–$500</td><td>1–3 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$15–$25/hr before gas</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Mobile detailing</td><td>$100–$250/detail</td><td>$200–$600</td><td>Days</td></tr>
+    <tr><td>Pressure washing / solar</td><td>$150–$350/job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Rental turnovers</td><td>$25–$45/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$30/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+    <tr><td>Snowbird home watch</td><td>$50–$150/home/month</td><td>$0</td><td>October</td></tr>
+  </tbody>
+</table>
+
+[[gear:pressure-washer,insulated-bag,phone-mount|Gear that earns its keep in the Valley]]
+
+<h2 id="home-and-moving">More home services and moving help</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="courier">9. Amazon Flex and package courier</h3>
+    <p>The Valley's warehouse corridor along I-10 and Loop 303 feeds constant parcel volume. Flex blocks show pay up front, and early-morning blocks beat the heat. Roadie and GoShare cover bigger and same-day deliveries.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$25/hr block pay</li><li><b>Startup:</b> Mid-size car</li><li><b>Best for:</b> Early mornings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">10. Handyman and assembly</h3>
+    <p>New homeowners in Laveen and North Phoenix need shelves, ceiling fans, smart locks and furniture installed. Arizona lets unlicensed handymen take small jobs under $1,000 total that need no permit; anything bigger requires a contractor license.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$75/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people with a truck or SUV</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">11. Moving help</h3>
+    <p>People move to Phoenix all year, and nobody wants to carry a couch in July. Lugg, Dolly and TaskRabbit post loading and unloading jobs; summer pays well because demand spikes while workers thin out.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> Dolly, straps</li><li><b>Best for:</b> Strong backs</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="home-watch">12. Snowbird home watch</h3>
+    <p>Part-time residents leave homes empty from April to October. They pay someone to check for leaks, run faucets, confirm the A/C works and collect packages. A route of 10 homes in Sun City, Moon Valley or the Paradise Valley area is real recurring income.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $50–$150 per home per month</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Trustworthy retirees and locals</li></ul>
+  </div>
+</div>
+
+<h2 id="events-and-campus">Events, campus and creative work</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">13. Event staffing</h3>
+    <p>Staffing agencies and concession operators hire for Chase Field, the Footprint Center, State Farm Stadium, the Phoenix Convention Center and the spring-training ballparks scattered around the Valley. Shifts are short and frequent from February through April.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr plus tips at some stands</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">14. Tutoring and test prep</h3>
+    <p>With ASU's downtown campus, Grand Canyon University and a big K–12 population, math, science and SAT/ACT tutors stay booked. Families in North Central Phoenix and Ahwatukee pay premium rates for in-person sessions.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">15. Virtual assistant for contractors</h3>
+    <p>Pool companies, HVAC shops and landscapers are slammed in summer and drowning in calls. Offer scheduling, invoicing and review management for a few hours a week.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$40/hr</li><li><b>Startup:</b> Laptop, headset</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="real-estate-photos">16. Real estate photography</h3>
+    <p>Phoenix listings rely on bright photos and twilight shots. Agents pay per listing, and a good wide lens plus editing skills is enough to start. Drone shots add value but require an FAA Part 107 certificate.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $125–$250 per listing</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">17. Reselling estate-sale finds</h3>
+    <p>Estate sales in Sun City and older central neighborhoods turn up mid-century furniture, vintage Western wear and turquoise jewelry that sells on eBay, Facebook Marketplace and Mercari. Saturday mornings beat the heat and the crowds.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">18. Online courses and digital products</h3>
+    <p>If you know solar sales, desert landscaping, Arizona real estate or a software tool, package it as a course on <a href="/udemy/">Udemy</a> or your own site. It is slow to start but scales without more hours.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts with patience</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Heat illness is a real risk for outdoor gigs. Schedule physical work before 10 a.m. from May through September, carry far more water than you think you need, and never leave pets or groceries in a parked car.</div>
+
+<h2 id="seasonal-calendar">Plan your year around the Phoenix calendar</h2>
+<ul>
+  <li><strong>January–April:</strong> peak season. Barrett-Jackson, the Phoenix Open, spring training and snowbird demand push rideshare, rental cleaning, event work and pressure washing to their highs.</li>
+  <li><strong>May–September:</strong> pool service, A/C-friendly delivery, moving help and online work. Book outdoor jobs at dawn.</li>
+  <li><strong>October–December:</strong> snowbirds return, home-watch clients hand back keys, Suns season starts and holiday courier volume climbs.</li>
+</ul>
+
+<h2 id="start-this-month">How to start a side hustle in Phoenix this month</h2>
+<ol class="steps">
+  <li><strong>Pick one gig that matches your hours.</strong> If you only have evenings, choose delivery or freelancing; weekends free, choose detailing or pressure washing.</li>
+  <li><strong>Set a monthly target.</strong> Work backward from the dollar amount to hours per week with our <a href="/tools/income-calculator/">income calculator</a>.</li>
+  <li><strong>Get listed where Phoenicians look.</strong> Nextdoor, neighborhood Facebook groups, a free Google Business Profile, and the apps for gig work.</li>
+  <li><strong>Land three clients and ask for reviews.</strong> Offer a first-visit discount to neighbors if you need momentum.</li>
+  <li><strong>Handle the paperwork.</strong> Get a TPT license if you sell goods or host rentals, and track mileage from day one.</li>
+  <li><strong>Mark peak weeks on your calendar.</strong> Spring training, the Open and the summer pool rush are where the year's best money is.</li>
+</ol>
+<p>Not sure which gig suits you? The <a href="/tools/side-hustle-quiz/">side hustle quiz</a> matches you to options based on your time and skills.</p>
+
+<h2 id="arizona-taxes">Arizona taxes and licenses for Phoenix side hustles</h2>
+<ul>
+  <li><strong>State income tax:</strong> Arizona uses a flat 2.5% rate on taxable income.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, plus federal income tax. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Transaction privilege tax (TPT):</strong> Arizona's version of sales tax is a tax on the business. Retail sales, restaurant and short-term lodging income are taxable; most personal services like cleaning, pet care or freelancing are not. If you sell taxable goods, get a TPT license from the Arizona Department of Revenue, which also handles the city portion for Phoenix.</li>
+  <li><strong>Short-term rentals:</strong> Phoenix requires a city STR permit (currently $250 a year) in addition to a TPT license and county registration.</li>
+  <li><strong>Contractor rules:</strong> handyman jobs must stay under $1,000 including labor and materials, and need no permit, to fall under the state's handyman exemption. Bigger jobs need an Arizona Registrar of Contractors license.</li>
+</ul>
+<div class="callout"><strong>Quick tip:</strong> Apps send a 1099 once you cross reporting thresholds, but you owe tax on every dollar either way. Keep receipts for chemicals, supplies, phone costs and mileage to lower both income and self-employment tax.</div>
+
+<h2 id="nearby-cities">Side hustles in nearby cities</h2>
+<p>If you work across the Valley or travel the I-10 corridor, compare our guides to the <a href="/best-side-hustles-in-mesa/">best side hustles in Mesa</a>, <a href="/best-side-hustles-in-tucson/">Tucson</a> and <a href="/best-side-hustles-in-las-vegas/">Las Vegas</a>. Mesa leans harder on winter visitors, Tucson on the university and tourism, and Vegas on conventions.</p>
+<p>Wherever you land, the formula at Better Side Hustles is the same: choose one gig that fits Phoenix's seasons, show up reliably for 90 days, and track every hour and dollar. That is how a side gig in the Valley becomes real income.</p>
 HTML,
 ];

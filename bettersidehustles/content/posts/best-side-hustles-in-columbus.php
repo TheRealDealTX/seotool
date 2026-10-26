@@ -1,143 +1,208 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Columbus (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Columbus and learn realistic ways to earn extra income with flexible, local, and remote opportunities.',
-    'h1' => 'Best Side Hustles in Columbus',
-    'kicker' => 'City Guide · OH',
-    'dek' => 'Gig apps, local services and online work that pay in Columbus — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-08',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Columbus.webp',
-    'image_alt' => 'Best Side Hustles in Columbus',
-    'category' => 'City Guides',
-    'city' => 'Columbus',
-    'state' => 'OH',
-    'keywords' => ['best side hustles in columbus'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'snow-shovel', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-cleveland', 'best-side-hustles-in-cincinnati', 'best-side-hustles-in-chicago'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Columbus right now?', 'a' => 'Some of the best side hustles in Columbus include delivery driving, cleaning services, freelancing, tutoring, and home maintenance work.'],
-        ['q' => 'Can I start a side hustle in Columbus with little money?', 'a' => 'Yes, many side hustles in Columbus—such as tutoring, freelancing, and pet sitting—require minimal upfront costs.'],
-        ['q' => 'How much can I realistically earn from a Columbus side hustle?', 'a' => 'Earnings vary, but most people make between a few hundred to several thousand dollars per month depending on time and demand.'],
-        ['q' => 'Are side hustles in Columbus good for full-time workers?', 'a' => 'Absolutely—many of the best side hustles in Columbus offer flexible hours that fit around a full-time job.'],
-        ['q' => 'Do I need a license for side hustles in Columbus?', 'a' => 'Some services may require permits or insurance, but many side hustles in Columbus can be started without formal licensing.'],
-        ['q' => 'Which side hustles work best in Columbus suburbs?', 'a' => 'Home services, mobile car detailing, and pet care perform especially well in Columbus suburbs.'],
-        ['q' => 'Are work-from-home side hustles viable in Columbus?', 'a' => 'Yes, freelancing, virtual assistant work, and online tutoring are popular remote side hustles in Columbus.'],
-        ['q' => 'What side hustles benefit most from OSU events?', 'a' => 'Rideshare driving, event staffing, and short-term rental cleaning see spikes during OSU events.'],
-        ['q' => 'Can a side hustle turn into a full-time income in Columbus?', 'a' => 'Yes, many people scale side hustles like cleaning, home services, or freelancing into full-time businesses.'],
-        ['q' => 'How do I choose the right side hustle in Columbus?', 'a' => 'Choose a side hustle that matches your skills, schedule, and whether you want quick cash or long-term growth.'],
+    'title'       => 'Best Side Hustles in Columbus (2026): 19 Side Gigs That Pay',
+    'description' => 'The best side hustles in Columbus for 2026: 19 side gigs with pay ranges, startup costs, OSU game-day tips and Ohio plus Columbus city income tax rules.',
+    'h1'          => 'Best Side Hustles in Columbus (2026): 19 Ways to Earn Extra Money',
+    'kicker'      => 'City Guide · OH',
+    'dek'         => 'Buckeye game days, booming suburbs and a fast-growing job market make Columbus one of the easiest Midwest cities to earn on the side. Here is what pays, what it costs to start and what the city will tax.',
+    'published'   => '2026-01-08',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Columbus.webp',
+    'image_alt'   => 'Columbus, Ohio skyline along the Scioto River, illustrating the best side hustles in Columbus',
+    'category'    => 'City Guides',
+    'city'        => 'Columbus',
+    'state'       => 'OH',
+    'keywords'    => ['best side hustles in columbus', 'side jobs in columbus', 'side gigs in columbus', 'how to make money in columbus', 'columbus side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['phone-mount', 'insulated-bag', 'whiteboard', 'receipt-scanner'],
+    'related'     => ['best-side-hustles-in-cincinnati', 'best-side-hustles-in-cleveland', 'best-side-hustles-in-indianapolis'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Columbus, Ohio?', 'a' => 'Game-day rideshare and delivery, student move-in and move-out help near Ohio State, lawn care and snow removal in suburbs like Dublin and Westerville, pet sitting, short-term rental cleaning and tutoring are the strongest local options. Remote freelancing also works well because Columbus rent is lower than most large metros while clients pay national rates.'],
+        ['q' => 'How can I make money in Columbus fast?', 'a' => 'Sign up for DoorDash, Uber Eats, Instacart or Walmart Spark, which can pay within a week of approval. Event staffing agencies hire for Ohio Stadium, Nationwide Arena and the Ohio Expo Center, and Rover pet sitting can book quickly. In August, student move-in help around campus pays well for a few hard days of work.'],
+        ['q' => 'Do I have to pay Columbus city income tax on side hustle income?', 'a' => 'Yes. Columbus levies a 2.5% municipal income tax, and residents who report self-employment income on a federal Schedule C generally must file a Columbus return, even if the business shows a loss. Nonresidents may owe tax on profit earned inside the city. Many suburbs have their own rates, so check where you live and work.'],
+        ['q' => 'Do I need a business license for a side hustle in Columbus?', 'a' => 'Ohio has no general statewide business license, and most simple service side hustles in Columbus do not need one. You may need a vendor license if you sell taxable goods, a trade name registration if you use a brand, and specific permits for food, short-term rentals and regulated trades. Check with the city before you scale.'],
+        ['q' => 'How much can you make with side gigs in Columbus?', 'a' => 'App-based gigs typically gross $15 to $25 an hour before gas. Skilled services such as handyman work, pressure washing, tutoring and freelancing often run $35 to $70 an hour once you have repeat clients. Working 8 to 15 hours a week, most people earn roughly $400 to $1,500 a month, depending on season and pricing.'],
+        ['q' => 'What side hustles work for Ohio State students?', 'a' => 'Bike delivery around campus and the Short North, tutoring underclassmen, event staffing on football Saturdays, dog walking for grad students and young professionals, and freelance design or social media work fit around class schedules. Move-in and move-out weeks are especially lucrative for students who stay in town.'],
     ],
-    'body' => <<<'HTML'
-<p>Columbus is one of those cities that quietly works in your favor. The cost of living is still reasonable. Jobs are steady. Neighborhoods are spread out, but connected. And if you’re looking for <strong>the best side hustles in Columbus</strong>, you’re in the right place—because this city offers more opportunity than most people realize.</p>
-<p>I’ve seen it firsthand. Some people want quick cash. Others want something they can scale. A few want an exit ramp from their nine-to-five. Columbus supports all three. You just need to pick the right lane.</p>
-<p>Let’s break down the <strong>best side hustles in Columbus</strong>—the ones that actually work here, not just in theory.</p>
-<h2 id="h-why-columbus-is-a-strong-city-for-side-hustles">Why Columbus Is a Strong City for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Columbus,_Ohio">Columbus</a> has a rare mix that makes side income easier.</p>
-<p>You’ve got a large university population. Major hospitals. Corporate offices. Logistics hubs. Suburbs filled with busy families. Add in festivals, sports weekends, and constant residential turnover, and suddenly demand is everywhere.</p>
-<p>But here’s the real advantage.<br/>Columbus is big enough to create opportunity, yet not so expensive or competitive that side hustles become exhausting.</p>
-<p>That’s why so many of the <strong>best side hustles in Columbus</strong> rely on consistency rather than hype.</p>
-<h2 id="h-what-makes-a-side-hustle-work-well-in-columbus">What Makes a Side Hustle Work Well in Columbus</h2>
-<p>Before picking anything, it helps to understand what actually performs well locally.</p>
-<p><strong>Side hustles tend to succeed here when they:</strong></p>
-<ul><li>Serve busy professionals or families</li><li>Work across suburban neighborhoods</li><li>Scale with repeat customers</li><li>Fit around a full-time schedule</li></ul>
-<p>Seasonality also matters. OSU football weekends, moving season, and summer events can make or break certain hustles. Smart people plan around that.</p>
-<h2 id="h-best-in-person-side-hustles-in-columbus">Best In-Person Side Hustles in Columbus</h2>
-<p>These are hands-on, location-based options that produce fast, dependable income.</p>
-<h3 id="h-1-rideshare-and-delivery-services">1. Rideshare and Delivery Services</h3>
-<p>This is one of the most accessible options on the list—and still one of the <strong>best side hustles in Columbus</strong> if you work it strategically.</p>
-<p><strong>What works best locally:</strong></p>
-<ul><li>Short downtown trips</li><li>OSU events and game days</li><li>Suburban food delivery during evenings</li></ul>
-<p>Peak hours matter more than total hours. Two focused nights can outperform a whole scattered weekend.</p>
-<p><strong>Best use case:</strong> Supplemental cash with flexible hours<br/><strong>Downside:</strong> Vehicle wear and unpredictable demand</p>
-<h3 id="h-2-event-staffing-and-game-day-work">2. Event Staffing and Game-Day Work</h3>
-<p>Columbus hosts a constant rotation of events. Football games. Concerts. Trade shows. Festivals.</p>
-<p>You can earn solid money doing:</p>
-<ul><li>Event setup and teardown</li><li>Brand ambassador work</li><li>Parking coordination</li><li>Ticket scanning or guest services</li></ul>
-<p>Most gigs are short. Some pay surprisingly well.</p>
-<p>This is one of the <strong>best side hustles in Columbus</strong> for people who like burst income instead of weekly schedules.</p>
-<h3 id="h-3-short-term-rental-cleaning">3. Short-Term Rental Cleaning</h3>
-<p>This one flies under the radar.</p>
-<p>Columbus has a growing number of short-term rentals, especially near hospitals, downtown, and OSU. Owners care about two things: speed and reliability.</p>
-<p>If you can clean fast and show up every time, you win.</p>
-<p><strong>Why it works:</strong></p>
-<ul><li>Predictable schedules</li><li>Repeat clients</li><li>No customer acquisition after setup</li></ul>
-<p>Many cleaners quietly earn more per hour than gig drivers.</p>
-<h3 id="h-4-mobile-car-detailing">4. Mobile Car Detailing</h3>
-<p>Suburbs are your friend here. People want clean cars. They don’t want to leave home.</p>
-<p>A basic setup can handle:</p>
-<ul><li>Exterior washes</li><li>Interior detailing</li><li>Fleet or repeat customers</li></ul>
-<p>This is one of the <strong>best side hustles in Columbus</strong> for people willing to work weekends and market locally.</p>
-<p><strong>Scaling potential:</strong> High<br/><strong>Startup cost:</strong> Moderate</p>
-<h3 id="h-5-pet-sitting-and-dog-walking">5. Pet Sitting and Dog Walking</h3>
-<p>Columbus has no shortage of pets. And many owners travel or work long hours.</p>
-<p>Platforms help you start, but the real money comes from repeat clients.</p>
-<p><strong>Strong neighborhoods include:</strong></p>
-<ul><li>Family-heavy suburbs</li><li>Apartment communities with limited pet amenities</li></ul>
-<p>Reliable pet sitters often turn this into consistent monthly income.</p>
-<h2 id="h-best-work-from-home-side-hustles-for-columbus-residents">Best Work-From-Home Side Hustles for Columbus Residents</h2>
-<p>Not every great<a href="/side-hustles-you-can-start-with-just-your-smartphone/"> side hustle</a> requires leaving your house.</p>
-<h3 id="h-6-freelancing-and-consulting">6. Freelancing and Consulting</h3>
-<p>Local businesses constantly need help. Writing. Design. Social media. Bookkeeping.</p>
-<p>You can position yourself as:</p>
-<ul><li>A local expert</li><li>A remote specialist</li><li>A hybrid of both</li></ul>
-<p>This is one of the <strong>best side hustles in Columbus</strong> for professionals who already have marketable skills.</p>
-<p><strong>Tip:</strong> Columbus-based clients often prefer working with people who understand the local market—even remotely.</p>
-<h3 id="h-7-virtual-assistant-services">7. Virtual Assistant Services</h3>
-<p>Many small business owners don’t need full-time staff. They need help.</p>
-<p>Common VA tasks include:</p>
-<ul><li>Email management</li><li>Scheduling</li><li><a href="https://www.crmsoftwareblog.com/2025/06/whats-new-in-microsoft-dynamics-365-crm-in-2025-release-wave-1/">CRM updates</a></li><li>Invoicing</li></ul>
-<p>Retainers beat hourly work here. Predictable income. Predictable workload.</p>
-<h3 id="h-8-online-tutoring-and-test-prep">8. Online Tutoring and Test Prep</h3>
-<p>Between universities, high schools, and adult learners, demand stays steady.</p>
-<p>High-paying areas include:</p>
-<ul><li>Math and science</li><li>College admissions prep</li><li>Professional certifications</li></ul>
-<p>This remains one of the <strong>best side hustles in Columbus</strong> for educators or subject-matter experts.</p>
-<h2 id="h-side-hustles-connected-to-columbus-housing-and-growth">Side Hustles Connected to Columbus Housing and Growth</h2>
-<p>Columbus keeps growing. Housing-related hustles benefit directly.</p>
-<h3 id="h-9-apartment-locator-or-referral-work">9. Apartment Locator or Referral Work</h3>
-<p>People move constantly—for jobs, school, or lifestyle changes.</p>
-<p>If you understand neighborhoods and pricing, you can earn referral fees by helping renters find the right fit.</p>
-<p><strong>Works best if you:</strong></p>
-<ul><li>Enjoy talking to people</li><li>Know local communities</li><li>Stay organized</li></ul>
-<p>This hustle rewards local knowledge more than raw effort.</p>
-<h3 id="h-10-home-services-and-maintenance-gigs">10. Home Services and Maintenance Gigs</h3>
-<p>Simple services can be surprisingly profitable.</p>
-<p>Examples include:</p>
-<ul><li>Pressure washing</li><li>Yard cleanup</li><li>Junk removal</li><li>Move-in or move-out prep</li></ul>
-<p>Here’s a quick comparison:</p>
-<table class="data"><tbody><tr><td><strong>Service Type</strong></td><td><strong>Startup Cost</strong></td><td><strong>Demand Level</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Pressure washing</td><td>Medium</td><td>High</td><td>High</td></tr><tr><td>Yard cleanup</td><td>Low</td><td>Seasonal</td><td>Medium</td></tr><tr><td>Junk removal</td><td>Medium</td><td>High</td><td>High</td></tr></tbody></table>
-<p>For many people, this becomes one of the <strong>best side hustles in Columbus</strong> because demand rarely disappears.</p>
-<h2 id="h-creative-and-digital-side-hustles">Creative and Digital Side Hustles</h2>
-<p>These take longer to grow—but scale better.</p>
-<h3 id="h-11-local-content-creation-and-blogging">11. Local Content Creation and Blogging</h3>
-<p>Local content still converts. Neighborhood guides. Lifestyle blogs. Niche reviews.</p>
-<p>Monetization can include:</p>
-<ul><li>Ads</li><li>Affiliate links</li><li>Local sponsorships</li></ul>
-<p>It’s not fast money. But it compounds.</p>
-<h3 id="h-12-social-media-management-for-local-businesses">12. Social Media Management for Local Businesses</h3>
-<p>Many Columbus businesses are active—but inconsistent—online.</p>
-<p>If you can post regularly, engage professionally, and show results, monthly retainers add up quickly.</p>
-<p>This is one of the <strong>best side hustles in Columbus</strong> for people who like structure and recurring revenue.</p>
-<h2 id="h-side-hustles-for-students-and-young-professionals">Side Hustles for Students and Young Professionals</h2>
-<p>Flexibility matters here.</p>
-<p>Good fits include:</p>
-<ul><li>Event staffing</li><li>Tutoring</li><li>Freelancing</li><li>Delivery during peak hours</li></ul>
-<p>The key is choosing something that builds skills, not just cash.</p>
-<h2 id="h-how-much-can-you-actually-earn">How Much Can You Actually Earn?</h2>
-<p>Let’s be realistic.</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle Type</strong></td><td><strong>Monthly Range (Part-Time)</strong></td></tr><tr><td>Delivery/Rideshare</td><td>$400–$1,200</td></tr><tr><td>Cleaning services</td><td>$800–$2,000</td></tr><tr><td>Freelancing</td><td>$1,000–$3,000+</td></tr><tr><td>Home services</td><td>$1,000–$4,000+</td></tr></tbody></table>
-<p>The <strong>best side hustles in Columbus</strong> aren’t about maximum hours. They’re about smart positioning.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Ask yourself:</p>
-<ul><li>Do I want fast cash or long-term growth?</li><li>How many hours can I realistically commit?</li><li>Do I want customers once—or repeatedly?</li></ul>
-<p>Start small. Test quickly. Drop what doesn’t work.</p>
-<p>That’s how most successful side hustles are built.</p>
-<h2 id="h-final-thoughts-making-a-side-hustle-work-in-columbus">Final Thoughts: Making a Side Hustle Work in Columbus</h2>
-<p>Columbus rewards consistency. It rewards reliability. And it rewards people who understand their market.</p>
-<p>The <strong>best side hustles in Columbus</strong> aren’t always flashy. They’re practical. Repeatable. And scalable if you stick with them.</p>
-<p>Pick one. Commit for 60 days. Adjust as you go.</p>
-<p>That’s how side income turns into real money.</p>
+    'body'        => <<<'HTML'
+<p>Columbus has quietly become one of the fastest-growing big cities in the Midwest, and growth means demand: new residents who need movers and cleaners, new homes with lawns to mow, and new offices that hire freelancers. Add one of the largest university campuses in the country and a football program that fills a 100,000-seat stadium, and you have a city where the best side hustles in Columbus can pay well without a big upfront investment.</p>
+<p>Below are 19 side gigs in Columbus with typical pay, startup costs and local tips, plus the one tax detail many new side hustlers miss: the Columbus city income tax.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>2.75%</b><span>Ohio flat income tax above $26,050 (2026)</span></div>
+  <div class="stat"><b>2.5%</b><span>Columbus city income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+</div>
+
+<h2 id="why-columbus">Why side hustles work in Columbus</h2>
+<p>Columbus is the state capital, home to Ohio State University and headquarters or major offices for Nationwide, Cardinal Health in Dublin, Bath &amp; Body Works, JPMorgan Chase's Polaris campus and the OhioHealth and OSU Wexner Medical Center systems. Honda's operations in Marysville, the Rickenbacker logistics hub and a wave of data center and semiconductor investment east of the city in Licking County keep bringing in new workers.</p>
+<p>That growth fans out into the suburbs: Dublin, Westerville, Hilliard, Powell, Upper Arlington, New Albany, Gahanna and Grove City are full of busy dual-income households who outsource yard work, cleaning, pet care and tutoring. Meanwhile the Short North, German Village, Victorian Village and Clintonville supply dense restaurant and nightlife demand for drivers.</p>
+
+<h2 id="best-picks">The best side hustles in Columbus right now</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="game-day-rideshare">1. Game-day and nightlife rideshare</h3>
+    <p>Ohio State home football Saturdays are the biggest paydays of the fall, with surges from campus, the Short North and hotels downtown. Blue Jackets games at Nationwide Arena, Crew matches, concerts and early-morning runs to John Glenn International fill the rest of the year. Read our <a href="/lyft-uber/">Lyft and Uber guide</a> before you sign up.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$26/hr before costs</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Weekend and night drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark are all busy. Suburbs like Dublin, Powell and New Albany often tip better and park easier, while Polaris and Easton concentrate restaurants. Rainy Friday nights and OSU game days are prime.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car, bike or scooter</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="student-moving">3. Student moving and storage help</h3>
+    <p>With tens of thousands of students around campus, August move-in and May move-out are chaos. Parents pay well for muscle, truck time and furniture assembly. Post on campus Facebook groups, Dolly and TaskRabbit weeks ahead.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$50/hr</li><li><b>Startup:</b> $0–$80</li><li><b>Best for:</b> Strong backs, truck owners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lawn-snow">4. Lawn care and snow removal</h3>
+    <p>Suburban lots in Westerville, Hilliard and Grove City need mowing from April through October, leaf cleanup in November and driveway clearing after winter storms. Sell a year-round package and you have income in every season.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per mow, $30–$70 per driveway</li><li><b>Startup:</b> $50–$400</li><li><b>Best for:</b> Outdoorsy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="str-cleaning">5. Short-term rental turnover cleaning</h3>
+    <p>Rentals near campus, the Short North, downtown and the hospital districts book solid on football weekends, during the Arnold Sports Festival in March and around big concerts. Hosts need reliable cleaners who can turn a unit in two hours.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Fast, reliable cleaners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">6. Pet sitting and dog walking</h3>
+    <p>Young professionals in apartments across the Short North, Italian Village and Franklinton need midday walks, and suburban families need overnight sitters when they travel. Rover is the easiest place to start.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28 per walk, $40–$75 per night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">7. Tutoring and test prep</h3>
+    <p>Dublin, Upper Arlington, Olentangy and New Albany families invest heavily in math, science and ACT/SAT prep. OSU grad students can tutor in person; anyone can tutor online.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$65/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelance">8. Remote freelancing</h3>
+    <p>Columbus has a deep bench of insurance, retail, banking and healthcare companies that hire contractors for writing, design, data and marketing. Start on <a href="/fiverr/">Fiverr</a> to land first reviews, then pitch local businesses directly.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Skilled professionals</li></ul>
+  </div>
+</div>
+
+<p>Before you treat driving as your main hustle, run your real numbers through our calculator. Gas, wear and the mileage deduction change the math more than most people expect:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="where-to-work">Where side jobs in Columbus pay best</h2>
+<p>Columbus is spread out, so where you work matters as much as what you do. A rough map:</p>
+<ul>
+  <li><strong>Campus, the Short North and Italian Village:</strong> the densest demand for rideshare, bike delivery, dog walking and student services. Expect lots of short trips and smaller tips.</li>
+  <li><strong>Dublin, Powell, New Albany and Upper Arlington:</strong> higher household incomes and larger homes. Best for lawn care, cleaning, tutoring, pet sitting and pressure washing.</li>
+  <li><strong>Westerville, Hilliard, Gahanna and Grove City:</strong> similar suburban demand with somewhat less competition, and easy highway access for building a route.</li>
+  <li><strong>Downtown, Franklinton and the Arena District:</strong> event nights, conventions and hotel guests. Work the hours around games and concerts, not the dead middle of the afternoon.</li>
+</ul>
+<p>Pick one zone, get known there, and let referrals do the work. Driving across the metro for a single $40 job rarely pays once you count gas and time.</p>
+
+<h2 id="compare">Columbus side gigs at a glance</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare</td><td>$16–$26/hr gross</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Delivery</td><td>$15–$22/hr gross</td><td>Car or bike</td><td>Under 1 week</td></tr>
+    <tr><td>Student moving help</td><td>$30–$50/hr</td><td>$0–$80</td><td>Next move-in week</td></tr>
+    <tr><td>Lawn care / snow removal</td><td>$30–$70 per job</td><td>$50–$400</td><td>Days</td></tr>
+    <tr><td>Rental cleaning</td><td>$25–$45/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$28/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Tutoring</td><td>$25–$65/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="festival-season">Cash in on Columbus festival season</h2>
+<p>Columbus packs a lot into the warm months: the Arnold Sports Festival in March, the Columbus Arts Festival in June, Red, White &amp; Boom fireworks around the Fourth of July, the Ohio State Fair at the Expo Center in late summer, and a long list of neighborhood festivals. Each one brings crowds that need rides, food, parking and staff.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">9. Event staffing</h3>
+    <p>Staffing agencies and concession vendors hire for Ohio Stadium, Nationwide Arena, the Greater Columbus Convention Center and the Expo Center. Non-profit groups also run concession stands and split proceeds with volunteers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$24/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="parking">10. Game-day parking</h3>
+    <p>Homes and businesses within walking distance of Ohio Stadium have sold parking on football Saturdays for decades. List on a parking app or just put out a sign, after checking any neighborhood rules.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$60+ per car on game days</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Campus-area residents</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="food-vending">11. Food trucks and market stands</h3>
+    <p>Columbus has a strong food truck and farmers market scene, from the North Market downtown to suburban Saturday markets. Start small with baked goods where cottage food rules allow, and check Columbus Public Health requirements for anything else.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100 and up</li><li><b>Best for:</b> Cooks and bakers</li></ul>
+  </div>
+</div>
+
+[[gear:leaf-blower,snow-shovel,tool-kit|Gear for Columbus home-service hustles]]
+
+<h2 id="home-services">Home services for growing suburbs</h2>
+<p>New subdivisions in Delaware County and older ranch homes in Clintonville and Upper Arlington both need regular upkeep. Homeowners here would rather pay than give up their weekends.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="handyman">12. Handyman and assembly</h3>
+    <p>Mount TVs, hang shelves, assemble furniture and fix small issues for new homeowners. Skip anything that needs a licensed electrician or plumber.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$70/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">13. Pressure washing</h3>
+    <p>Decks, driveways and vinyl siding get grimy after Ohio winters. An [[amazon:pressure-washer|electric pressure washer]] handles most residential work, and before-and-after photos sell the next job.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">14. Recurring house cleaning</h3>
+    <p>Biweekly cleaning clients in Dublin, Powell and Westerville create predictable income that does not depend on app algorithms.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$40/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Steady workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="detailing">15. Mobile car detailing</h3>
+    <p>Road salt makes spring detailing an easy sell. Office parks around Polaris, Easton and Dublin are full of commuters who will pay for a clean car while they work.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Car enthusiasts</li></ul>
+  </div>
+</div>
+
+<h2 id="online">Online side hustles for Columbus residents</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">16. Virtual assistant and bookkeeping</h3>
+    <p>Real estate agents, contractors and small practices need inbox, scheduling and invoicing help. QuickBooks skills are in high demand around tax season.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="courses">17. Online courses</h3>
+    <p>Package insurance, healthcare or retail expertise into a course on <a href="/udemy/">Udemy</a> or <a href="/thinkific/">Thinkific</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling Buckeyes gear and thrift finds</h3>
+    <p>Vintage Ohio State apparel and memorabilia sells to fans nationwide. Thrift stores, estate sales and garage sales in older neighborhoods are good sources.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">19. Real estate photography</h3>
+    <p>Constant home sales across the metro keep agents booking listing photos and short videos every week.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$250 per listing</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+</div>
+
+<h2 id="ohio-taxes">Ohio and Columbus taxes on side hustle income</h2>
+<p>Ohio is unusual because you can owe tax at three levels: federal, state and city.</p>
+<ul>
+  <li><strong>State income tax:</strong> starting in 2026, Ohio has a flat 2.75% rate on nonbusiness income above $26,050. Self-employment profit is generally treated as business income, and Ohio's business income deduction exempts the first $250,000 of it, which can shelter much of your side income at the state level. Confirm how it applies to your return.</li>
+  <li><strong>Columbus city income tax:</strong> 2.5%. Residents who file a federal Schedule C generally must file a Columbus return, even when the business shows a loss. The state business income deduction does not reduce city tax.</li>
+  <li><strong>Suburbs:</strong> Dublin, Westerville, Hilliard and other suburbs set their own municipal rates and filing rules, so check where you live and where you work.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit. Use our <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to plan your set-aside.</li>
+  <li><strong>Sales tax:</strong> if you sell taxable goods, you need an Ohio vendor's license. Most personal services are not taxed.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Side hustlers with a W-2 job often assume their employer's city withholding covers everything. It does not cover your Schedule C profit. Make estimated city payments or set money aside so April is not a surprise.</div>
+
+<h2 id="how-to-start">How to start a side hustle in Columbus this month</h2>
+<ol class="steps">
+  <li><strong>Choose one hustle that fits your free hours.</strong> If you are torn, the <a href="/tools/side-hustle-quiz/">side hustle quiz</a> can narrow it down.</li>
+  <li><strong>Work your calendar.</strong> Add OSU home games, the Arnold, the State Fair and move-in weeks so you can plan surge days.</li>
+  <li><strong>Get visible locally.</strong> Nextdoor, suburban Facebook groups and a Google Business Profile work well for home services.</li>
+  <li><strong>Price with taxes in mind.</strong> Remember the 2.5% city tax and 15.3% self-employment tax when you set rates.</li>
+  <li><strong>Collect reviews and referrals.</strong> Ask every happy client for a review and a neighbor's name.</li>
+  <li><strong>Track everything.</strong> Separate bank account, mileage log and receipts from day one.</li>
+</ol>
+
+<h2 id="nearby">More Ohio and Midwest city guides</h2>
+<p>See how Columbus compares with the <a href="/best-side-hustles-in-cincinnati/">best side hustles in Cincinnati</a>, <a href="/best-side-hustles-in-cleveland/">Cleveland</a> and <a href="/best-side-hustles-in-indianapolis/">Indianapolis</a>. Columbus stands out for its student population and suburban growth, two things Better Side Hustles readers here use to stack seasonal gigs on top of year-round ones. Pick one, commit for 90 days, and track every dollar.</p>
 HTML,
 ];

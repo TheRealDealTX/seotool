@@ -1,152 +1,185 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Lexington (2026): Ways to Earn Extra',
-    'description' => 'Explore the best side hustles in Lexington to earn extra income with flexible, realistic opportunities in 2026.',
-    'h1' => 'Best Side Hustles in Lexington',
+    'title' => 'Best Side Hustles in Lexington (2026): 17 Ways to Earn',
+    'description' => 'The best side hustles in Lexington, KY for 2026: 17 side gigs with pay ranges, startup costs, Keeneland and UK game-day tips, and local tax rules.',
+    'h1' => 'Best Side Hustles in Lexington (2026): 17 Side Gigs for Horse Country',
     'kicker' => 'City Guide · KY',
-    'dek' => 'Gig apps, local services and online work that pay in Lexington — with realistic earnings and how to land your first dollar.',
+    'dek' => 'Tutoring near UK, Keeneland-week rentals, barn help on Bluegrass horse farms and game-day rideshare: the side jobs in Lexington that pay, with startup costs and the local license fees to plan for.',
     'published' => '2026-02-26',
     'modified' => '2026-10-26',
     'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Lexington.webp',
-    'image_alt' => 'Best Side Hustles in Lexington',
+    'image_alt' => 'Horse farm fences in the Kentucky Bluegrass near Lexington, illustrating the best side hustles in Lexington',
     'category' => 'City Guides',
     'city' => 'Lexington',
     'state' => 'KY',
-    'keywords' => ['best side hustles in lexington'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'snow-shovel', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-louisville', 'best-side-hustles-in-chicago', 'best-side-hustles-in-columbus'],
+    'keywords' => ['best side hustles in lexington', 'side jobs in lexington', 'side gigs in lexington', 'how to make money in lexington', 'lexington side hustles 2026'],
+    'tool' => 'freelance-rate',
+    'gear' => ['cleaning-kit', 'leaf-blower', 'phone-mount', 'book-side-hustle'],
+    'related' => ['best-side-hustles-in-louisville', 'best-side-hustles-in-cincinnati', 'best-side-hustles-in-columbus'],
     'faq' => [
-        ['q' => 'What are the best side hustles in Lexington for beginners?', 'a' => 'Pet sitting, tutoring, and event staffing are beginner-friendly because they require low startup costs and offer quick income.'],
-        ['q' => 'How much can I realistically earn from side hustles in Lexington?', 'a' => 'Most part-time hustles generate $500–$2,500 per month depending on hours worked and skill level.'],
-        ['q' => 'Are side hustles in Lexington seasonal?', 'a' => 'Yes, some spike during Keeneland season, UK events, and summer tourism, but others like freelancing and pet care stay steady year-round.'],
-        ['q' => 'Do I need a business license to start a side hustle in Lexington?', 'a' => 'It depends on the activity; some service-based gigs require local permits or tax registration.'],
-        ['q' => 'What side hustles work best for University of Kentucky students?', 'a' => 'Tutoring, resume editing, social media management, and moving assistance are highly in demand around campus.'],
-        ['q' => 'Can I run an Airbnb as a side hustle in Lexington?', 'a' => 'Yes, but you should check local short-term rental regulations and HOA rules before listing your property.'],
-        ['q' => 'What is the most scalable side hustle in Lexington?', 'a' => 'Freelancing and digital services offer the most scalability because you can increase rates and add clients without major overhead.'],
-        ['q' => 'Are there online side hustles that work well in Lexington?', 'a' => 'Absolutely—remote freelancing, virtual assistance, and content creation pair well with the local small business ecosystem.'],
-        ['q' => 'How do I market my side hustle locally?', 'a' => 'Use Facebook groups, community boards, word-of-mouth referrals, and local networking events to build visibility.'],
-        ['q' => 'How do I choose the right side hustle for my schedule?', 'a' => 'Start with your available hours and existing skills, then test one option for 60–90 days before expanding.'],
+        ['q' => 'What are the best side hustles in Lexington?', 'a' => 'The strongest options are tutoring, rideshare and delivery timed around UK games and the Keeneland meets, short-term rental hosting and cleaning, moving help during UK move-in and move-out, pet and farm sitting, lawn care, and remote freelancing. Lexington\'s mix of students, healthcare workers and horse-country visitors keeps demand steady.'],
+        ['q' => 'How can I make money in Lexington fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart usually pay within a week. Event staffing for Keeneland, Rupp Arena and Kroger Field hires quickly before big weekends. In August and May, moving help for University of Kentucky students on TaskRabbit or Facebook groups can pay the same week you start.'],
+        ['q' => 'Do I need a business license for a side hustle in Lexington?', 'a' => 'Yes. Lexington-Fayette Urban County Government requires businesses, including sole proprietors, to register and file a net profits license fee return. The urban county fee is 2.25% of net profit from work done in Fayette County, and new businesses pay a $100 registration amount that can be credited later. A separate school board occupational tax also applies.'],
+        ['q' => 'How are side hustle earnings taxed in Kentucky?', 'a' => 'Kentucky has a flat 3.5% income tax for 2026. In Lexington you also owe the 2.25% urban county license fee and the Fayette County school board occupational tax on net profit, plus federal income tax and 15.3% self-employment tax. Setting aside around 30% of profit is a safe starting point.'],
+        ['q' => 'How much can I make from side jobs in Lexington?', 'a' => 'Most people working 8 to 15 hours a week typically earn $400 to $1,400 a month. App gigs usually net $14 to $22 an hour after gas. Tutoring, photography and freelancing often reach $30 to $75 an hour once you have reviews. Keeneland and UK football weekends can double a normal week.'],
+        ['q' => 'Are there side jobs on Lexington horse farms?', 'a' => 'Yes. Thoroughbred farms around Lexington and Versailles hire part-time and seasonal help for barn work, fence and grounds maintenance, and farm tours, and the Keeneland meets bring short-term backstretch jobs like hot walking. Experience with horses helps, but some entry-level grounds work is open to reliable beginners.'],
     ],
     'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Lexington</strong>, you’re in the right place. Lexington isn’t just rolling horse farms and bluegrass charm. It’s a university town. A healthcare hub. A bourbon tourism magnet. And that combination creates real opportunity for people who want to earn more without quitting their day job.</p>
-<p>I’ve studied mid-sized markets like this for years, and Lexington stands out. It’s large enough to generate demand. Small enough that competition isn’t overwhelming. And stable enough that side income doesn’t disappear overnight.</p>
-<p>Let’s break down the smartest ways to make extra money here in 2026 — with specifics, realistic income expectations, and clear action steps.</p>
-<h2 id="h-why-lexington-is-perfect-for-side-income">Why Lexington Is Perfect for Side Income</h2>
-<p>Lexington’s economy revolves around a few powerful engines:</p>
-<ul><li><strong><a href="https://www.uky.edu/">University of Kentucky</a><br/></strong></li><li><strong>The horse industry</strong><strong><br/></strong></li><li><strong>Bourbon tourism</strong><strong><br/></strong></li><li><strong>Healthcare systems</strong><strong><br/></strong></li><li><strong>Small local businesses</strong><strong><br/></strong></li></ul>
-<p>That mix matters. Students move in and out. Visitors come for Keeneland and distillery tours. Professionals relocate for hospital and corporate jobs. And every one of those transitions creates demand.</p>
-<p>The result? A market where practical, service-based <a href="/digital-marketing-side-hustle/">side hustles</a> thrive.</p>
-<h2 id="h-what-makes-a-side-hustle-best-in-lexington">What Makes a Side Hustle “Best” in Lexington?</h2>
-<p>Before jumping in, let’s define “best.” Not flashy. Not viral and not risky.</p>
-<p>The best side hustles in Lexington typically have:</p>
-<ul><li>Low startup costs</li><li>Clear local demand</li><li>Flexible hours</li><li>Strong seasonal boosts</li><li>Room to grow</li></ul>
-<p>Here’s a quick comparison snapshot:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Income Potential</strong></td><td><strong>Flexibility</strong></td><td><strong>Best For</strong></td></tr><tr><td>Airbnb Hosting</td><td>Medium</td><td>High (Seasonal spikes)</td><td>Moderate</td><td>Homeowners</td></tr><tr><td>Tutoring</td><td>Low</td><td>$25–$60/hr</td><td>High</td><td>Students &amp; grads</td></tr><tr><td>Pet Sitting</td><td>Low</td><td>$20–$75/day</td><td>High</td><td>Flexible schedules</td></tr><tr><td>Event Work</td><td>Low–Medium</td><td>$200–$1,000/event</td><td>Moderate</td><td>Weekend earners</td></tr><tr><td>Freelancing</td><td>Low</td><td>Unlimited</td><td>High</td><td>Skilled professionals</td></tr></tbody></table>
-<p>Now let’s dig deeper.</p>
-<h3 id="h-1-airbnb-hosting-especially-during-keeneland-amp-uk-events">1. Airbnb Hosting (Especially During Keeneland &amp; UK Events)</h3>
-<p>Short-term rentals surge during:</p>
-<ul><li><a href="https://www.keeneland.com/calendar">Keeneland racing season</a></li><li>University of Kentucky graduation</li><li>Football weekends</li><li>Bourbon trail tourism peaks</li></ul>
-<p>If you own property near downtown, Hamburg, or UK’s campus, this is one of the best side hustles in Lexington hands down.</p>
-<p><strong>Action Plan:</strong></p>
-<ol><li>Analyze comparable listings during event weeks.</li><li>Invest in professional photos.</li><li>Add small luxury touches (local bourbon gift basket, horse-themed decor).</li><li>Raise rates during high-demand weekends.</li></ol>
-<p><strong>Potential Earnings:</strong><strong><br/></strong> $1,500–$4,000+ per month during peak seasons.</p>
-<p>Be strategic. Event pricing is where the real money is.</p>
-<h3 id="h-2-horse-farm-amp-equestrian-support-services">2. Horse Farm &amp; Equestrian Support Services</h3>
-<p>Lexington is known worldwide for horses. That’s not branding fluff. It’s economic reality.</p>
-<p>Side hustle ideas within this niche:</p>
-<ul><li>Farm sitting</li><li>Equine photography</li><li>Grooming assistance</li><li>Social media management for horse farms</li><li>Private tours for out-of-town visitors</li></ul>
-<p>You don’t need to own horses. You need reliability and connections.</p>
-<p><strong>How to Start:</strong></p>
-<ul><li>Attend local equine networking events.</li><li>Reach out to smaller farms via email.</li><li>Offer a trial service at a competitive rate.</li></ul>
-<p>Even $20–$40 per hour adds up fast when farms need regular help.</p>
-<h3 id="h-3-university-of-kentucky-student-services">3. University of Kentucky Student Services</h3>
-<p>The student economy alone creates some of the best side hustles in Lexington.</p>
-<p>High-demand services include:</p>
-<ul><li>Tutoring (math, biology, ACT prep)</li><li>Resume editing</li><li>Moving assistance during semester transitions</li><li>Event staffing</li><li>Social media consulting for student organizations</li></ul>
-<p>Students value convenience. Market yourself where they are:</p>
-<ul><li>Campus bulletin boards</li><li>UK Facebook groups</li><li>Flyers near apartment complexes</li></ul>
-<p><strong>Tutoring Earnings:</strong> $25–$60 per hour<br/><strong>Moving Help:</strong> $40–$75 per hour during peak move-in weekends</p>
-<p>Simple services. Real demand.</p>
-<h3 id="h-4-bourbon-amp-distillery-tourism-services">4. Bourbon &amp; Distillery Tourism Services</h3>
-<p>Lexington sits in bourbon country. Visitors don’t just come for tastings. They want experiences.</p>
-<p>Side hustles here include:</p>
-<ul><li>Private driving services</li><li>Photography sessions at distilleries</li><li>Custom itinerary planning</li><li>Content creation around bourbon tourism</li></ul>
-<p>If you have a clean driving record and professional presence, private tour transportation can command premium rates.</p>
-<p><strong>Estimated Income:</strong></p>
-<ul><li>$300–$800 per day for private driving packages.</li></ul>
-<p>Be sure to check licensing requirements before operating commercially. This is a professional play, not a casual gig.</p>
-<h3 id="h-5-freelancing-amp-remote-digital-work">5. Freelancing &amp; Remote Digital Work</h3>
-<p>Remote work is location-independent. But Lexington gives you local client advantages.</p>
-<p>Small businesses constantly need:</p>
-<ul><li>Website updates</li><li>Social media management</li><li>Graphic design</li><li>Email marketing</li><li>Virtual assistance</li></ul>
-<p>Many local owners prefer hiring someone nearby over an anonymous freelancer overseas.</p>
-<p><strong>How to Position Yourself:</strong></p>
-<ul><li>Build a simple portfolio site.</li><li>Network through Lexington Chamber events.</li><li>Offer monthly retainer packages.</li></ul>
-<p>Start at $500 per month per client. Scale to five clients. That’s $2,500 monthly part-time.</p>
-<p>One of the most scalable options among the best side hustles in Lexington.</p>
-<h3 id="h-6-cottage-food-amp-farmers-market-sales">6. Cottage Food &amp; Farmers Market Sales</h3>
-<p>Kentucky allows certain homemade food products under cottage food laws.</p>
-<p>Popular Lexington sellers offer:</p>
-<ul><li>Baked goods</li><li>Specialty jams</li><li>Bourbon-infused treats</li><li>Seasonal pies</li><li>Handmade candies</li></ul>
-<p>Farmers markets and seasonal festivals provide built-in traffic.</p>
-<p><strong>Startup Checklist:</strong></p>
-<ul><li>Review Kentucky cottage food guidelines.</li><li>Design clean packaging.</li><li>Offer samples when allowed.</li><li>Focus on high-margin products.</li></ul>
-<p>Profit margins often range between 40%–70%.</p>
-<p>Consistency beats novelty here.</p>
-<h3 id="h-7-pet-sitting-amp-dog-walking">7. Pet Sitting &amp; Dog Walking</h3>
-<p>Affluent neighborhoods in Lexington are packed with pet owners who travel frequently.</p>
-<p>This side hustle is simple. And reliable.</p>
-<p>Services to offer:</p>
-<ul><li>Daily dog walks</li><li>Overnight stays</li><li>Pet boarding</li><li>Drop-in visits</li></ul>
-<p>Use apps like Rover initially. Then build direct repeat clients to avoid platform fees.</p>
-<p><strong>Income Breakdown Example:</strong></p>
-<ul><li>3 dogs per day at $25 per walk = $75 daily</li><li>Weekend overnight stays = $75–$150 per night</li></ul>
-<p>Over a month? That’s real money.</p>
-<p>Low startup. High trust requirement.</p>
-<h3 id="h-8-event-based-side-hustles-weddings-amp-keeneland">8. Event-Based Side Hustles (Weddings &amp; Keeneland)</h3>
-<p>Lexington hosts weddings almost year-round. Add Keeneland and corporate events, and you’ve got opportunity.</p>
-<p>Event-based roles include:</p>
-<ul><li>Photography</li><li>Bartending</li><li>Floral assistance</li><li>Event coordination support</li><li>Setup/tear-down crews</li></ul>
-<p>Weekend work. High pay per event.</p>
-<p><strong>Potential Earnings:</strong></p>
-<ul><li>Bartending: $200–$400 per event</li><li>Photography: $1,000+ per wedding</li></ul>
-<p>The key? Network with planners. One connection can lead to 10 bookings.</p>
-<h3 id="h-9-real-estate-amp-property-related-hustles">9. Real Estate &amp; Property-Related Hustles</h3>
-<p>Lexington’s housing market stays active thanks to student turnover and job relocation.</p>
-<p>Side hustle ideas:</p>
-<ul><li>Apartment locating referrals</li><li>Leasing assistance</li><li>Lawn care services</li><li>Move-out cleaning</li><li>Property management help</li></ul>
-<p>Lawn care, for example:</p>
-<ul><li>10 clients at $40 per lawn = $400 per week.</li></ul>
-<p>Simple math. Consistent revenue.</p>
-<p>Service businesses tied to housing are often overlooked among the best side hustles in Lexington, but they’re extremely dependable.</p>
-<h3 id="h-10-reselling-amp-flipping">10. Reselling &amp; Flipping</h3>
-<p>Lexington has:</p>
-<ul><li>Estate sales</li><li>Antique malls</li><li>Facebook Marketplace activity</li><li>College student resale cycles</li></ul>
-<p>Flipping furniture, vintage decor, or electronics can generate steady margins.</p>
-<p><strong>Reselling Strategy:</strong></p>
-<ul><li>Buy undervalued items locally.</li><li>Clean and photograph professionally.</li><li>Relist with better descriptions.</li><li>Focus on fast-turnover categories.</li></ul>
-<p>Even $200–$500 profit per month adds cushion to your finances.</p>
-<p>Scale gradually.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Ask yourself:</p>
-<ul><li>How many hours can I commit weekly?</li><li>Do I want active income or semi-passive income?</li><li>What skills do I already have?</li><li>Am I comfortable working weekends?</li><li>Do I prefer online or in-person work?</li></ul>
-<p>Then test one hustle for 60–90 days.</p>
-<p>Don’t chase trends. Build systems.</p>
-<p>The best side hustles in Lexington are the ones you’ll actually stick with.</p>
-<h2 id="h-legal-amp-tax-considerations-in-kentucky">Legal &amp; Tax Considerations in Kentucky</h2>
-<p>Keep this simple.</p>
-<ul><li>Track all income and expenses.</li><li>Separate business and personal accounts.</li><li>Understand local licensing requirements.</li><li>Set aside 20–30% for taxes if self-employed.</li><li>Consider forming an LLC if scaling significantly.</li></ul>
-<p>Organization from day one prevents stress later.</p>
-<h2 id="h-final-thoughts-turning-extra-income-into-real-leverage">Final Thoughts: Turning Extra Income into Real Leverage</h2>
-<p>Here’s the truth.</p>
-<p>You don’t need ten side hustles. You need one good one.</p>
-<p>Lexington’s economy is stable. Event-driven. Relationship-based. That’s a powerful combination for anyone willing to show up consistently.</p>
-<p>The <strong>best side hustles in Lexington</strong> aren’t about hype. They’re about identifying demand, delivering quality service, and building repeat clients.</p>
-<p>Start small. Raise your rates as you gain confidence. Improve your systems. Build referrals.</p>
-<p>Six months from now, that “extra” income could be covering your mortgage. Paying off debt. Funding investments.</p>
-<p>That’s not fantasy. It’s strategy.</p>
-<p>And Lexington is a surprisingly strong place to execute it.</p>
+<p>Lexington runs on three engines: the University of Kentucky, one of the biggest hospital systems in the state, and the Thoroughbred industry that gives the Bluegrass its name. Each one creates a different kind of demand, from tutoring and moving help to game-day rides and barn work. That's why the best side hustles in Lexington look a little different from those in bigger cities: they follow the academic year, the racing calendar and the basketball schedule.</p>
+<p>Here are 17 side gigs that work in Lexington right now, with typical pay, startup costs and the local details that make them pay. The city is small enough that you can build a reputation fast and big enough that you won't run out of customers.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>3.5%</b><span>Kentucky flat income tax (2026)</span></div>
+  <div class="stat"><b>2.25%</b><span>urban county license fee on net profit</span></div>
+  <div class="stat"><b>$0–$400</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="lexington-economy">How Lexington's economy shapes side jobs</h2>
+<p>Understanding a few local rhythms will help you pick the right side gigs in Lexington:</p>
+<ul>
+  <li><strong>The UK calendar.</strong> Tens of thousands of students arrive in August and leave in May. Move-in, move-out, finals and football Saturdays at Kroger Field each create short bursts of demand. Wildcats basketball at Rupp Arena fills downtown all winter.</li>
+  <li><strong>Racing season.</strong> Keeneland's spring meet in April and fall meet in October draw big crowds, and the Kentucky Horse Park hosts major equestrian events, including a five-star eventing competition each spring.</li>
+  <li><strong>Healthcare and corporate jobs.</strong> UK HealthCare, Baptist Health Lexington, Lexmark and Valvoline employ thousands of professionals, and Toyota's huge plant in nearby Georgetown adds more shift workers who need services.</li>
+  <li><strong>Bourbon country.</strong> Lexington is the base for many visitors touring distilleries in Versailles, Frankfort and Bardstown, which keeps rideshare and short-term rentals busy.</li>
+</ul>
+
+<h2 id="top-picks">The best side hustles in Lexington: top 8</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="tutoring">1. Tutoring and test prep</h3>
+    <p>UK students pay for help in chemistry, calculus, statistics and accounting, and Fayette County families invest in ACT prep for scholarship money. Post flyers near campus, list on tutoring platforms and ask the UK study groups you know. Online tutoring extends your reach.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Grad students and teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Rideshare driving</h3>
+    <p>Football Saturdays, basketball nights at Rupp, Keeneland race days and weekend nights downtown and in the Distillery District are the money windows. Early flights from Blue Grass Airport add steady morning fares. See our <a href="/lyft-uber/">Lyft and Uber guide</a> to get started.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before expenses</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Game days and race days</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>Campus, Chevy Chase and the Hamburg shopping area keep DoorDash and Uber Eats busy, and suburban Beaumont and Masterson Station tip well on Instacart orders. Exam weeks and cold, rainy evenings pay best.</p>
+    <ul class="meta"><li><b>Pay:</b> $14–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="short-term-rental">4. Short-term rental hosting and cleaning</h3>
+    <p>Rooms and homes near downtown, campus and the Keeneland corridor command premium rates during race meets, UK graduation and big game weekends. If you don't own a place, clean turnovers or co-host for an owner. Check Lexington's short-term rental rules before you list.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr cleaning; 15–25% as co-host</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Organized, reliable people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">5. Student moving help</h3>
+    <p>Move-in week in August and move-out in May are chaos on campus. Students and parents will pay for muscle, a truck and storage runs. TaskRabbit, Dolly and campus Facebook groups are where the jobs show up.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50/hr per helper</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong people with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-farm-sitting">6. Pet and farm sitting</h3>
+    <p>Hospital shift workers need dog walkers, and rural homeowners outside New Circle Road need someone to feed chickens, goats and the occasional horse while they travel. Farm sitting pays more than standard pet sitting and has less competition. Pack a sturdy [[amazon:dog-leash|dog leash]] and start on Rover.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28/walk, $50–$100/day for farm sits</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lawn-care">7. Lawn care and leaf cleanup</h3>
+    <p>Bluegrass lawns grow fast in spring and fall. Hartland, Andover and Beaumont have large lots and owners who'd rather pay than mow. Fall leaf cleanup and spring aeration are high-value add-ons.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> $0–$400</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">8. Remote freelancing</h3>
+    <p>Lexington's cost of living is low, so national freelance rates stretch far. Healthcare, manufacturing and equine businesses need copywriting, design and marketing help. Start on <a href="/fiverr/">Fiverr</a> or Upwork, then pitch local clients directly.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, marketers</li></ul>
+  </div>
+</div>
+<p>Not sure which of these fits your goals? Map out hours and rates to see what each one could earn per month:</p>
+<p>[[tool:income-calculator]]</p>
+
+<h2 id="horse-country">Horse country and bourbon trail side gigs</h2>
+<p>These are the side jobs you can only really find around Lexington.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="horse-farm-work">9. Part-time horse farm work</h3>
+    <p>Thoroughbred farms along Paris Pike, Versailles Road and Old Frankfort Pike hire part-time help for mucking stalls, grounds maintenance and fence painting. Keeneland meets bring short-term backstretch jobs like hot walking. Horse experience helps but isn't always required for grounds work.</p>
+    <ul class="meta"><li><b>Pay:</b> Hourly, varies by farm</li><li><b>Startup:</b> Boots and work gloves</li><li><b>Best for:</b> Early risers who love horses</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">10. Event staffing at Keeneland, Rupp and Kroger Field</h3>
+    <p>Concession operators and staffing agencies hire for race meets, UK games, concerts at Rupp Arena and events at the Kentucky Horse Park and the Central Bank Center. Some nonprofit groups staff concession stands and share the proceeds.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr, plus tips at some posts</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students and weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">11. Equine and event photography</h3>
+    <p>Horse owners, farms and sales consignors pay for professional photos and video. Spring graduation photos at UK and weddings at Bluegrass farm venues fill the rest of the calendar. Clean, well-lit shots sell, so invest in good glass before a new body.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$500 per session</li><li><b>Startup:</b> Camera and lens</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="parking">12. Game-day and race-day parking</h3>
+    <p>Homes and businesses near Kroger Field sell parking on football Saturdays, and lots near Keeneland fill on big race days. If you have the space, it's money for almost no work.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$50 per car</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Owners near venues</li></ul>
+  </div>
+</div>
+<div class="callout"><strong>Quick tip:</strong> Lexington's busiest weeks overlap: the Keeneland spring meet and UK's spring calendar both hit April, and the fall meet lands in the middle of football season. Block those weeks off early and stack two gigs (say, rental cleaning in the morning and rideshare at night).</div>
+
+[[gear:camera,tripod,whiteboard|Gear for tutoring and photography gigs in Lexington]]
+
+<h2 id="more-gigs">More side gigs in Lexington</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="handyman">13. Handyman and furniture assembly</h3>
+    <p>Older homes in Chevy Chase, Ashland Park and the neighborhoods around Transylvania University always need small repairs. New construction on the edges of town means constant furniture assembly and TV mounting jobs on TaskRabbit.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">14. Pressure washing and gutter cleaning</h3>
+    <p>Kentucky humidity grows mildew on siding and decks, and tree-lined streets clog gutters every fall. Spring and fall are the busy seasons, and each job is a one-off ticket with repeat potential.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">15. House cleaning</h3>
+    <p>Busy medical professionals and dual-income households in Hamburg and Palomar want recurring cleaners. Biweekly clients build a stable base faster than one-off deep cleans.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">16. Reselling Wildcats gear and vintage</h3>
+    <p>Kentucky basketball memorabilia, vintage UK apparel and Keeneland collectibles have devoted buyers. Source at estate sales, thrift stores and yard sales, then sell on eBay, Mercari and Facebook Marketplace.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,200/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Collectors and bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">17. Virtual assistant and bookkeeping</h3>
+    <p>Farm managers, real estate agents and small practices need help with scheduling, invoicing and email. Bookkeepers see extra demand from January through April. Build skills cheaply through <a href="/coursera/">Coursera</a> or similar courses.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$45/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+</div>
+
+<h2 id="calendar">A Lexington side hustle calendar</h2>
+<table class="data">
+  <thead><tr><th>Season</th><th>Local driver</th><th>Hustles to push</th></tr></thead>
+  <tbody>
+    <tr><td>January–March</td><td>UK basketball, tax season</td><td>Rideshare, bookkeeping, tutoring</td></tr>
+    <tr><td>April–May</td><td>Keeneland spring meet, Horse Park events, graduation, move-out</td><td>Rentals, staffing, moving help, photography</td></tr>
+    <tr><td>June–July</td><td>Peak growing season</td><td>Lawn care, pressure washing, farm sitting</td></tr>
+    <tr><td>August–September</td><td>UK move-in, football starts</td><td>Moving help, tutoring, parking</td></tr>
+    <tr><td>October–December</td><td>Keeneland fall meet, leaves, holidays</td><td>Rentals, leaf cleanup, delivery</td></tr>
+  </tbody>
+</table>
+
+<h2 id="get-started">How to make money in Lexington starting this month</h2>
+<ol class="steps">
+  <li><strong>Pick one hustle that fits your week.</strong> Be honest about the hours you can protect.</li>
+  <li><strong>Register with the city.</strong> Lexington expects sole proprietors to register and file a net profits return, so sign up before you start earning.</li>
+  <li><strong>Price it right.</strong> If you freelance or tutor, use the <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> to set an hourly rate that covers taxes.</li>
+  <li><strong>Get visible.</strong> Nextdoor, UK Facebook groups and a free Google Business Profile bring local clients; the apps cover gig work.</li>
+  <li><strong>Mark the big weeks.</strong> Add Keeneland meets, UK move-in and move-out, and home game schedules to your calendar.</li>
+  <li><strong>Separate your money.</strong> A dedicated account and a mileage log make tax time easy.</li>
+</ol>
+
+<h2 id="kentucky-taxes">Kentucky and Lexington taxes and rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> Kentucky's flat individual income tax rate is 3.5% for 2026.</li>
+  <li><strong>Urban county license fee:</strong> Lexington-Fayette Urban County Government charges 2.25% of net profit earned in Fayette County. Every business, including sole proprietors, files a Net Profits License Fee Return (Form 228), and new businesses pay a $100 amount at registration that can be credited against the annual fee.</li>
+  <li><strong>School board occupational tax:</strong> the Fayette County school board also levies an occupational license tax on net profits. It has long been 0.5%, and the board voted in 2025 to seek an increase, so confirm the current rate when you file.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit plus federal income tax. The <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> helps you plan.</li>
+  <li><strong>Sales tax:</strong> Kentucky's 6% sales tax covers goods and an expanding list of services. Register with the Kentucky Department of Revenue if you sell taxable items.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Local license fees in Kentucky are based on where the work happens. If you also work in Georgetown, Nicholasville or Louisville, those places may have their own occupational taxes, so track your income by location.</div>
+
+<h2 id="nearby">Compare with nearby cities</h2>
+<p>See how Lexington compares with the <a href="/best-side-hustles-in-louisville/">best side hustles in Louisville</a>, <a href="/best-side-hustles-in-cincinnati/">Cincinnati</a> and <a href="/best-side-hustles-in-columbus/">Columbus</a>. Lexington is smaller than all three, but the university and horse industry give it niches you won't find anywhere else. Better Side Hustles readers here often do best by owning one of those niches.</p>
+<p>Pick one idea, commit to it for a full semester and track every dollar. That's how Lexington side hustles turn into real income.</p>
 HTML,
 ];

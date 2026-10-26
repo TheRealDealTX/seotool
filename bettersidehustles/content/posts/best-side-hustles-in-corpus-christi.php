@@ -1,169 +1,208 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Corpus Christi (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Corpus Christi and learn simple ways to earn extra income using local opportunities and flexible work.',
-    'h1' => 'Best Side Hustles in Corpus Christi',
-    'kicker' => 'City Guide · TX',
-    'dek' => 'Gig apps, local services and online work that pay in Corpus Christi — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-03-06',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/03/best-side-hustles-in-Corpus-Christi.webp',
-    'image_alt' => 'Best Side Hustles in Corpus Christi',
-    'category' => 'City Guides',
-    'city' => 'Corpus Christi',
-    'state' => 'TX',
-    'keywords' => ['best side hustles in corpus christi'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-houston', 'best-side-hustles-in-dallas', 'best-side-hustles-in-fort-worth'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Corpus Christi?', 'a' => 'Some of the best side hustles in Corpus Christi include beach gear rentals, food delivery, boat cleaning, freelance photography, and online freelancing.'],
-        ['q' => 'Can I start a side hustle in Corpus Christi with little money?', 'a' => 'Yes. Many side hustles like food delivery, freelancing, and Airbnb cleaning require very low startup costs.'],
-        ['q' => 'How much money can a side hustle make in Corpus Christi?', 'a' => 'Most side hustles can earn between $300 and $2,000 per month depending on time, demand, and effort.'],
-        ['q' => 'Is tourism a good opportunity for side hustles in Corpus Christi?', 'a' => 'Yes. Tourism creates demand for beach rentals, photography, fishing charters, and vacation rental services.'],
-        ['q' => 'What side hustles work best near the beach?', 'a' => 'Beach chair rentals, paddleboard rentals, photography, and food vending work very well near Corpus Christi beaches.'],
-        ['q' => 'Are online side hustles possible while living in Corpus Christi?', 'a' => 'Yes. Many people earn money online through writing, design, virtual assistance, and other freelance work.'],
-        ['q' => 'Do I need special skills to start a side hustle?', 'a' => 'Not always. Many side hustles only require basic skills, reliability, and good customer service.'],
-        ['q' => 'How do I find customers for a side hustle?', 'a' => 'You can use social media, local Facebook groups, word of mouth, and online marketplaces to reach customers.'],
-        ['q' => 'Can a side hustle turn into a full-time business?', 'a' => 'Yes. Many small businesses start as side hustles and grow over time with consistent effort.'],
-        ['q' => 'When is the best time to start a side hustle in Corpus Christi?', 'a' => 'The best time is now. Tourism seasons and weekends usually bring the most opportunities.'],
+    'title'       => 'Best Side Hustles in Corpus Christi (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Corpus Christi for 2026: 18 side gigs from beach and boat work to refinery-shift delivery, with pay ranges and Texas tax tips.',
+    'h1'          => 'Best Side Hustles in Corpus Christi (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'City Guide · TX',
+    'dek'         => 'Spring breakers, winter Texans, a booming energy port and a marina full of boats that never clean themselves. Here are the side jobs in Corpus Christi worth your time, with real pay ranges and startup costs.',
+    'published'   => '2026-03-06',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/03/best-side-hustles-in-Corpus-Christi.webp',
+    'image_alt'   => 'Corpus Christi bayfront and marina, illustrating the best side hustles in Corpus Christi',
+    'category'    => 'City Guides',
+    'city'        => 'Corpus Christi',
+    'state'       => 'TX',
+    'keywords'    => ['best side hustles in corpus christi', 'side jobs in corpus christi', 'side gigs in corpus christi', 'how to make money in corpus christi', 'corpus christi side hustles 2026'],
+    'tool'        => 'income-calculator',
+    'gear'        => ['pressure-washer', 'phone-mount', 'cleaning-kit', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-houston', 'best-side-hustles-in-austin', 'best-side-hustles-in-dallas'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Corpus Christi?', 'a' => 'The strongest options are vacation rental cleaning on North Padre and Mustang Island, boat detailing at the marinas, delivery and rideshare timed to tourist seasons, pressure washing and hurricane prep, fishing and kayak guiding if you are licensed, and remote freelancing. The mix of beach tourism, a large energy port and Naval Air Station Corpus Christi keeps demand steady.'],
+        ['q' => 'How can I make money in Corpus Christi fast?', 'a' => 'Sign up for DoorDash, Uber Eats, Instacart or Uber and work spring break, summer weekends and paydays near the refineries and base. Short-term rental hosts on the Island and in Port Aransas also hire turnover cleaners quickly, especially before Memorial Day. Event staffing at the American Bank Center pays within a week or two.'],
+        ['q' => 'Do I need a business license for a side hustle in Corpus Christi?', 'a' => 'Texas has no general state business license, and most service side hustles in Corpus Christi do not need a city license. You may need an assumed name certificate from Nueces County if you use a brand name, a Texas sales tax permit if you sell taxable goods or services, and specific permits for food, guiding or short-term rentals. Check with the city before you scale.'],
+        ['q' => 'Do I pay state income tax on side hustle income in Texas?', 'a' => 'No. Texas has no personal state income tax, so your side income in Corpus Christi is only subject to federal income tax and 15.3% self-employment tax on net profit. Set aside roughly 20 to 25% of profit and make quarterly estimated payments once you expect to owe $1,000 or more at tax time.'],
+        ['q' => 'What side jobs in Corpus Christi pay the most per hour?', 'a' => 'Licensed fishing guiding, boat detailing, pressure washing and skilled freelancing usually pay the most, often $40 to $100 an hour once you have repeat clients. Vacation rental cleaning pays well per job on the Island during peak season. Delivery and rideshare typically net less, but you can start within days.'],
+        ['q' => 'Is Corpus Christi a good place for a seasonal side hustle?', 'a' => 'Yes. Spring break and summer bring beach crowds, winter Texans fill RV parks from roughly November through March, and hurricane season from June through November creates prep and cleanup work. Stacking a summer tourism gig with a winter one, such as RV detailing or handyman work for winter visitors, smooths out your income.'],
     ],
-    'body' => <<<'HTML'
-<p>Corpus Christi is more than a coastal Texas city with beautiful beaches and a thriving port. It’s also a place where creative people find smart ways to earn extra income. Many locals are exploring the <strong>best side hustles in Corpus Christi</strong> to supplement their salaries, build financial stability, or even test ideas for future businesses. The opportunities are surprisingly diverse. From beach rentals and boat cleaning to remote freelancing and tourism-based services, the local economy makes it possible to turn spare time into real money.</p>
-<p>I’ve always believed that side hustles work best when they align with the character of the city you live in. Corpus Christi offers unique advantages: a strong tourism industry, year-round outdoor recreation, a busy marina culture, and a growing service sector. These factors create steady demand for flexible, small-scale services that individuals can offer without massive startup costs.</p>
-<p>If you’re looking to earn extra cash, grow your skills, or build something that could eventually replace your full-time job, the <strong>best side hustles in Corpus Christi</strong> might be closer than you think.</p>
-<h2 id="h-why-side-hustles-are-popular-in-corpus-christi">Why Side Hustles Are Popular in Corpus Christi</h2>
-<p>Side hustles aren’t just trendy. For many people, they’re practical.</p>
-<p>The cost of living in coastal cities continues to climb. Rent, groceries, transportation, and utilities add up quickly. A few hundred dollars of additional monthly income can make a big difference.</p>
-<p><a href="https://en.wikipedia.org/wiki/Corpus_Christi,_Texas">Corpus Christi</a> has several advantages that make side hustles easier to launch.</p>
-<h3 id="h-local-economic-advantages">Local Economic Advantages</h3>
-<ul><li>Tourism around <strong>Padre Island and North Beach</strong><strong><br/></strong></li><li>A large <strong>boating and fishing community</strong><strong><br/></strong></li><li>The <strong>Port of Corpus Christi</strong>, one of the busiest in the U.S.</li><li>A growing population of <strong>remote workers and vacation rentals</strong><strong><br/></strong></li></ul>
-<p>These factors create demand for services that individuals can provide on flexible schedules.</p>
-<p>Side hustles also come with several benefits:</p>
-<ul><li>Extra income without quitting your main job</li><li>A chance to test a business idea</li><li>Flexible hours that fit around work or school</li><li>Potential to scale into a full-time business</li></ul>
-<p>For many residents, exploring the <strong>best side hustles in Corpus Christi</strong> is not just about making money. It’s about gaining freedom.</p>
-<h2 id="h-quick-overview-of-the-best-side-hustles-in-corpus-christi">Quick Overview of the Best Side Hustles in Corpus Christi</h2>
-<p>Before diving deeper, here’s a quick snapshot of some profitable options.</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Skill Level</strong></td><td><strong>Potential Monthly Income</strong></td></tr><tr><td>Beach Equipment Rentals</td><td>Low</td><td>Beginner</td><td>$500 – $2,000</td></tr><tr><td>Food Delivery Driver</td><td>Low</td><td>Beginner</td><td>$400 – $1,200</td></tr><tr><td>Boat Cleaning Services</td><td>Medium</td><td>Beginner</td><td>$800 – $2,500</td></tr><tr><td>Photography for Tourists</td><td>Medium</td><td>Intermediate</td><td>$500 – $2,000</td></tr><tr><td>Online Freelancing</td><td>Low</td><td>Intermediate</td><td>$300 – $3,000</td></tr></tbody></table>
-<p>Each of these options works well because they tap into local demand.</p>
-<p>Now let’s explore them in detail.</p>
-<h2 id="h-beach-equipment-rental-business">Beach Equipment Rental Business</h2>
-<p>If you want one of the <strong>best side hustles in Corpus Christi</strong>, start with the obvious advantage: the beach.</p>
-<p>Tourists and visitors frequently arrive without gear. They need umbrellas, chairs, coolers, and sometimes even paddleboards. Renting these items can generate steady weekend income.</p>
-<h3 id="h-items-you-can-rent">Items You Can Rent</h3>
-<ul><li>Beach chairs</li><li>Umbrellas</li><li>Coolers</li><li>Paddleboards</li><li>Boogie boards</li></ul>
-<p>The startup cost is relatively small. Many people begin with just a few chairs and umbrellas.</p>
-<h3 id="h-example-pricing">Example Pricing</h3>
-<table class="data"><tbody><tr><td><strong>Item</strong></td><td><strong>Daily Rental Price</strong></td></tr><tr><td>Beach Chair</td><td>$10 – $15</td></tr><tr><td>Umbrella</td><td>$15 – $25</td></tr><tr><td>Paddleboard</td><td>$40 – $60</td></tr></tbody></table>
-<p>A busy summer weekend could easily generate $200 to $500 in revenue.</p>
-<p>Location matters. Focus on areas near <strong>Padre Island National Seashore or popular beach access points</strong> where foot traffic is high.</p>
-<h2 id="h-food-delivery-and-gig-driving">Food Delivery and Gig Driving</h2>
-<p>Delivery apps have changed the way people earn extra money. For many residents, driving for food delivery platforms remains one of the <strong>best side hustles in Corpus Christi</strong>.</p>
-<p>Platforms like:</p>
-<ul><li>DoorDash</li><li>Uber Eats</li><li><a href="https://www.grubhub.com/?msockid=229dd862fdc56f83212ccee7fc656e1d">Grubhub</a></li></ul>
-<p>allow drivers to work whenever they want.</p>
-<p>This flexibility is the biggest advantage. You can drive for two hours after work or spend an entire weekend maximizing orders.</p>
-<h3 id="h-tips-to-increase-earnings">Tips to Increase Earnings</h3>
-<ul><li>Work during <strong>dinner hours (5–9 PM)</strong><strong><br/></strong></li><li>Target busy restaurant areas</li><li>Accept orders with higher tips</li></ul>
-<p>Experienced drivers often combine multiple apps to keep orders flowing.</p>
-<p>Many gig drivers report earning <strong>$15–$25 per hour</strong> during peak times.</p>
-<p>Not bad for a <a href="/best-side-hustles-in-arlington/">side hustle</a> you can start within a week.</p>
-<h2 id="h-boat-cleaning-and-detailing">Boat Cleaning and Detailing</h2>
-<p>Boating is part of life in Corpus Christi. Walk along the marina and you’ll see hundreds of vessels docked along the coast.</p>
-<p>Saltwater is tough on boats. Owners need regular cleaning, detailing, and polishing.</p>
-<p>That’s exactly why boat detailing ranks among the <strong>best side hustles in Corpus Christi</strong>.</p>
-<h3 id="h-services-you-can-offer">Services You Can Offer</h3>
-<ul><li>Hull washing</li><li>Interior cleaning</li><li>Waxing and polishing</li><li>Seat conditioning</li><li>Window cleaning</li></ul>
-<p>Boat owners value reliability. Show up on time and deliver quality work, and repeat customers are common.</p>
-<h3 id="h-typical-pricing">Typical Pricing</h3>
-<table class="data"><tbody><tr><td><strong>Service</strong></td><td><strong>Average Price</strong></td></tr><tr><td>Basic Wash</td><td>$75 – $120</td></tr><tr><td>Full Detail</td><td>$200 – $400</td></tr></tbody></table>
-<p>Cleaning just <strong>four boats per weekend</strong> could generate over $1,000 per month.</p>
-<p>The demand is consistent, especially during fishing and boating season.</p>
-<h2 id="h-freelance-photography-for-tourists">Freelance Photography for Tourists</h2>
-<p>Corpus Christi is packed with beautiful scenery.</p>
-<p>Sunsets. Beaches. Sand dunes. Waterfront parks.</p>
-<p>Tourists love capturing memories, but many prefer hiring someone who knows the best photo locations.</p>
-<p>That’s why photography has become one of the <strong>best side hustles in Corpus Christi</strong>.</p>
-<h3 id="h-popular-photo-services">Popular Photo Services</h3>
-<ul><li>Beach family portraits</li><li>Engagement photos</li><li>Vacation photography sessions</li><li>Sunset couples shoots</li></ul>
-<p>Even beginner photographers can start with modest equipment.</p>
-<h3 id="h-basic-equipment-needed">Basic Equipment Needed</h3>
-<ul><li>DSLR or mirrorless camera</li><li>Editing software</li><li>A simple website or social media page</li></ul>
-<p>Marketing is simple too.</p>
-<p>Post example photos on Instagram. Join local travel groups. Partner with vacation rental hosts who recommend photographers to guests.</p>
-<p>A single session can earn <strong>$150 to $400</strong>.</p>
-<p>Two sessions per weekend adds up quickly.</p>
-<h2 id="h-airbnb-cleaning-services">Airbnb Cleaning Services</h2>
-<p>Short-term rentals are expanding throughout Corpus Christi. Many property owners manage multiple listings and need reliable cleaners.</p>
-<p>This creates a great opportunity.</p>
-<p>Airbnb cleaning is easily one of the <strong>best side hustles in Corpus Christi</strong> because demand continues to grow.</p>
-<h3 id="h-typical-tasks">Typical Tasks</h3>
-<ul><li>Full property cleaning</li><li>Linen replacement</li><li>Restocking toiletries</li><li>Trash removal</li></ul>
-<p>Hosts care about two things: speed and reliability.</p>
-<p>Turnover windows can be short, sometimes just a few hours between guests.</p>
-<h3 id="h-average-cleaning-rates">Average Cleaning Rates</h3>
-<table class="data"><tbody><tr><td><strong>Property Size</strong></td><td><strong>Cleaning Fee</strong></td></tr><tr><td>Studio</td><td>$60 – $90</td></tr><tr><td>2 Bedroom</td><td>$100 – $150</td></tr><tr><td>Large House</td><td>$180 – $250</td></tr></tbody></table>
-<p>Many cleaners eventually work with multiple hosts and turn this side hustle into a full business.</p>
-<h2 id="h-fishing-charter-assistant">Fishing Charter Assistant</h2>
-<p>Corpus Christi is famous for its fishing.</p>
-<p>Local charter captains run trips almost daily, especially during peak seasons. Many captains hire assistants to help manage equipment and guests.</p>
-<p>This makes charter assisting one of the <strong>best side hustles in Corpus Christi</strong> for people who love the water.</p>
-<h3 id="h-responsibilities">Responsibilities</h3>
-<ul><li>Preparing bait and fishing gear</li><li>Helping guests with rods and lines</li><li>Cleaning fish after the trip</li><li>Keeping the boat organized</li></ul>
-<p>The work is hands-on and sometimes early in the morning. But the payoff can be worth it.</p>
-<h3 id="h-typical-earnings">Typical Earnings</h3>
-<ul><li>$80 – $150 per trip</li><li>Plus tips from guests</li></ul>
-<p>For someone who enjoys the ocean, this side hustle hardly feels like work.</p>
-<h2 id="h-online-freelancing-from-home">Online Freelancing from Home</h2>
-<p>Not every side hustle needs to happen outdoors.</p>
-<p>Remote work has exploded in recent years. Many residents now earn money online while living in coastal cities like Corpus Christi.</p>
-<p>Online freelancing is easily one of the <strong>best side hustles in Corpus Christi</strong> because it offers flexibility and unlimited earning potential.</p>
-<h3 id="h-popular-freelance-services">Popular Freelance Services</h3>
-<ul><li>Writing</li><li>Graphic design</li><li>Website development</li><li>Social media management</li><li>Virtual assistance</li></ul>
-<h3 id="h-platforms-to-start">Platforms to Start</h3>
-<ul><li>Fiverr</li><li>Upwork</li><li>Freelancer</li></ul>
-<p>Freelancing requires patience at the beginning. Building reviews and client relationships takes time.</p>
-<p>But once established, some freelancers earn <strong>thousands of dollars per month</strong>.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Not every opportunity fits every person.</p>
-<p>Before jumping into one of the <strong>best side hustles in Corpus Christi</strong>, ask yourself a few practical questions.</p>
-<h3 id="h-key-factors-to-consider">Key Factors to Consider</h3>
-<ul><li>Startup cost</li><li>Available free time</li><li>Required skills</li><li>Local demand</li></ul>
-<h3 id="h-ask-yourself">Ask Yourself</h3>
-<ul><li>Do I prefer outdoor work or remote work?</li><li>How quickly do I want to earn income?</li><li>Am I comfortable interacting with customers?</li></ul>
-<p>The best side hustle is the one you can sustain consistently.</p>
-<h2 id="h-tips-for-growing-your-side-hustle">Tips for Growing Your Side Hustle</h2>
-<p>Starting is one thing. Growing is another.</p>
-<p>Here are several strategies that help side hustles turn into serious income streams.</p>
-<h3 id="h-start-small">Start Small</h3>
-<p>Test your idea before investing heavily. Many successful businesses begin with minimal equipment.</p>
-<h3 id="h-focus-on-customer-experience">Focus on Customer Experience</h3>
-<p>Satisfied customers bring repeat business and referrals.</p>
-<h3 id="h-use-social-media">Use Social Media</h3>
-<p>Platforms like Instagram and Facebook are powerful marketing tools.</p>
-<h3 id="h-track-your-finances">Track Your Finances</h3>
-<p>Always track income and expenses. This helps you understand profitability.</p>
-<h3 id="h-reinvest-profits">Reinvest Profits</h3>
-<p>Upgrade tools, improve marketing, and expand services gradually.</p>
-<p>Small improvements create long-term growth.</p>
-<h2 id="h-challenges-to-expect">Challenges to Expect</h2>
-<p>Side hustles aren’t perfect.</p>
-<p>They come with challenges.</p>
-<h3 id="h-seasonal-demand">Seasonal Demand</h3>
-<p>Tourism slows during certain months.</p>
-<h3 id="h-competition">Competition</h3>
-<p>Popular side hustles attract competitors.</p>
-<h3 id="h-time-management">Time Management</h3>
-<p>Balancing a job, family, and extra work requires discipline.</p>
-<p>The key is persistence. Many people try a side hustle for two weeks and quit too early.</p>
-<p>Consistency wins.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>The <strong>best side hustles in Corpus Christi</strong> take advantage of what the city naturally offers: beaches, tourism, boating culture, and remote work opportunities.</p>
-<p>Whether you choose beach equipment rentals, boat cleaning, delivery driving, photography, or online freelancing, the potential to earn extra income is very real.</p>
-<p>Start simple. Take action. Improve over time.</p>
-<p>Some of the most successful entrepreneurs started with a small side hustle and a few spare hours each week.</p>
-<p>Corpus Christi offers the environment.</p>
-<p>Now it’s up to you to turn that opportunity into income!</p>
+    'body'        => <<<'HTML'
+<p>Corpus Christi runs on two engines: the beach and the port. Tourists pack North Padre Island, Mustang Island and Port Aransas from spring break through Labor Day, while refineries, LNG terminals and Naval Air Station Corpus Christi keep thousands of shift workers on the clock year-round. That split is exactly why the best side hustles in Corpus Christi are so varied. You can clean boats on Saturday, deliver lunch to the industrial corridor on Monday, and freelance from your Southside apartment in between.</p>
+<p>This guide walks through 18 side hustles in Corpus Christi that work right now, what they typically pay, what they cost to start, and the local timing that separates a good month from a dead one.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Texas state income tax</span></div>
+  <div class="stat"><b>$15–$100</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="why-corpus-christi">Why side gigs in Corpus Christi make sense</h2>
+<p>The Coastal Bend has a few advantages that bigger Texas metros don't:</p>
+<ul>
+  <li><strong>Year-round visitors.</strong> Spring breakers in March, families all summer, Buc Days in spring, the Texas Jazz Festival in fall, and winter Texans from the Midwest who fill RV parks from roughly November through March. There's almost always someone in town who needs a ride, a clean rental or a fishing trip.</li>
+  <li><strong>A big industrial payroll.</strong> The Port of Corpus Christi is one of the country's busiest energy-export ports, and the refineries along the ship channel plus the LNG plant near Portland bring waves of contract workers during plant turnarounds. Those workers eat, need laundry done and rent short-term housing.</li>
+  <li><strong>Military and medical anchors.</strong> NAS Corpus Christi, the Corpus Christi Army Depot, Christus Spohn and Driscoll Children's Hospital create steady demand for pet sitting, childcare and home help from people working long or irregular shifts.</li>
+  <li><strong>Moderate living costs.</strong> Housing is cheaper than Austin, Houston or San Antonio's popular suburbs, so remote income stretches further here.</li>
+</ul>
+
+<h2 id="at-a-glance">Best side hustles in Corpus Christi at a glance</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Vacation rental cleaning</td><td>$80–$200 per turnover</td><td>$75–$150 in supplies</td><td>1–2 weeks</td></tr>
+    <tr><td>Boat detailing</td><td>$10–$20 per foot</td><td>$150–$400</td><td>1–3 weeks</td></tr>
+    <tr><td>Food &amp; grocery delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Rideshare</td><td>$15–$25/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$200–$500</td><td>Days</td></tr>
+    <tr><td>Fishing or kayak guiding</td><td>$300–$600 per half-day trip</td><td>Licenses, boat or kayaks</td><td>Weeks to months</td></tr>
+    <tr><td>Handyman for winter Texans</td><td>$40–$70/hr</td><td>$100–$400 in tools</td><td>1–2 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="coastal-hustles">Beach and bay side hustles</h2>
+<p>These are the gigs you can't run in Lubbock. If you live near the water, start here.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">1. Vacation rental turnover cleaning</h3>
+    <p>North Padre Island, Mustang Island, Port Aransas and the condos along Ocean Drive turn over constantly from March through August. Owners who live in Houston or San Antonio need someone local who shows up between 10 a.m. checkout and 4 p.m. check-in, every time. Sand, beach towels and fish smell make this harder than a normal clean, which is why it pays more. Join local host groups and pitch property managers before Memorial Day.</p>
+    <ul class="meta"><li><b>Pay:</b> $80–$200 per turnover</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Reliable people with weekday flexibility</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="boat-detailing">2. Boat washing and detailing</h3>
+    <p>Saltwater is brutal on hulls, canvas and stainless. Owners at the Corpus Christi Marina, Packery Channel and Port Aransas marinas pay for monthly washdowns, waxing and interior cleaning. Pricing by the foot keeps quotes simple. Many marinas restrict outside vendors, so ask the harbor office about rules and insurance first.</p>
+    <ul class="meta"><li><b>Pay:</b> $10–$20 per foot for a full detail</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> People who like being on the docks</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="fishing-guide">3. Fishing, kayak and paddle guiding</h3>
+    <p>The Laguna Madre and the flats around Mustang Island draw anglers from across Texas for redfish and speckled trout. Licensed guides charge premium rates for half-day trips, and kayak tours of the bay or Mustang Island State Park are a lower-cost entry point. You'll need the proper Texas Parks and Wildlife guide license, and a U.S. Coast Guard captain's license if you carry paying passengers on a motorized boat.</p>
+    <ul class="meta"><li><b>Pay:</b> $300–$600 per half-day trip</li><li><b>Startup:</b> Licensing, boat or kayak fleet</li><li><b>Best for:</b> Experienced anglers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="beach-rentals">4. Beach gear rental and setup</h3>
+    <p>Families flying into Corpus Christi International don't pack umbrellas, chairs or coolers. Deliver and set up a beach kit on the Island or at North Beach near the Texas State Aquarium and the USS Lexington. Bundle a canopy, chairs and a cooler for a daily rate and partner with rental hosts who can recommend you.</p>
+    <ul class="meta"><li><b>Pay:</b> $50–$150 per setup</li><li><b>Startup:</b> $300–$800 in gear</li><li><b>Best for:</b> Summer weekends</li></ul>
+  </div>
+</div>
+
+[[gear:reef-sunscreen,snorkel-set,insulated-bag|Gear for coastal side gigs]]
+
+<h2 id="driving-delivery">Driving and delivery around the Coastal Bend</h2>
+<p>Corpus Christi is spread out, so app work rewards people who know where the clusters are.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="delivery">5. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark are steady along the SPID corridor, Saratoga and Moore Plaza, and on the Southside. Lunch orders near the industrial areas and the hospitals can be strong on weekdays, and Flour Bluff stays busy because of the base. Summer heat keeps people ordering in instead of going out.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">6. Rideshare driving</h3>
+    <p>Spring break, summer weekends downtown, concerts at the American Bank Center, Hooks games at Whataburger Field and airport runs are your best windows. Trips out to Port Aransas and Padre Island are longer and often pay better. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers the sign-up basics.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before expenses</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Weekends and tourist season</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="courier">7. Courier and parts runs</h3>
+    <p>Plant turnarounds and marine repair shops need parts moved fast. Roadie, Amazon Flex and direct gigs with local suppliers cover deliveries to Robstown, Portland, Calallen and the ship channel. A pickup truck opens up larger, better-paying jobs.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/hr</li><li><b>Startup:</b> Car or truck</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+</div>
+<p>Driving pay looks good until you subtract gas and wear. Run your own numbers before you commit:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Long runs to Port Aransas or Padre Island often leave you deadheading back. Accept them when you can stack a return trip, or end your shift on the Island where tourist demand is strongest.</div>
+
+<h2 id="home-services">Home services built for coastal weather</h2>
+<p>Salt air, heat and storms keep Coastal Bend homeowners busy, and plenty of them would rather pay you than spend a Saturday on a ladder.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pressure-washing">8. Pressure washing</h3>
+    <p>Humidity grows mildew on driveways, fences and stucco fast. Before-and-after photos sell this job on Facebook and Nextdoor, and repeat clients often book twice a year. An [[amazon:pressure-washer|electric pressure washer]] handles most homes in Kings Crossing, Lamar Park or Calallen.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="hurricane-prep">9. Hurricane prep and storm cleanup</h3>
+    <p>From June through November, homeowners need shutters installed, patio furniture secured, gutters cleared and debris hauled after storms. Sell a prep package early in the season to older residents and out-of-town owners. Leave roofing and electrical work to licensed contractors.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> Truck access, basic tools</li><li><b>Best for:</b> Handy people with flexible schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="winter-texan-handyman">10. Handyman work for winter Texans</h3>
+    <p>RV parks and retirement communities in Flour Bluff, Portland and Rockport fill with seasonal residents who need small repairs, TV mounting, RV washing and furniture assembly. One happy client in a park often leads to five more.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> November–March income</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lawn-care">11. Lawn and yard care</h3>
+    <p>St. Augustine grass grows nearly year-round here. Weekly mowing routes on the Southside and in Calallen add up quickly. Texas generally treats lawn care as a taxable service, so read the tax section below before you price.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per yard</li><li><b>Startup:</b> $0–$400</li><li><b>Best for:</b> Early mornings before the heat</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">12. Pet sitting and dog walking</h3>
+    <p>Shift workers at the refineries, nurses at Spohn and Driscoll, and military families at NAS Corpus Christi travel or work long hours. Rover and word of mouth keep good sitters booked, especially around holidays and deployments.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/walk, $40–$70/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+</div>
+
+<h2 id="remote-and-skills">Remote and skill-based side jobs in Corpus Christi</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="freelancing">13. Freelance writing, design and marketing</h3>
+    <p>Local charter captains, rental hosts, restaurants and contractors often have weak websites and no social media plan. Start with them, then expand to national clients on <a href="/fiverr/">Fiverr</a>. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> shows how to package services.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">14. Tutoring and test prep</h3>
+    <p>Students at Texas A&amp;M University–Corpus Christi and Del Mar College can tutor high schoolers in math, science and STAAR prep. Families on the Southside pay well for SAT and college-application help.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="bilingual-services">15. Bilingual services</h3>
+    <p>Corpus Christi is majority Hispanic, and businesses need Spanish-English translation, bilingual customer support and social content. Medical and legal interpreting pays most but usually requires certification.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Fluent bilingual speakers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">16. Beach, event and real estate photography</h3>
+    <p>Family beach portraits at sunset, quinceañeras, weddings at the bayfront and listing photos for agents keep photographers busy. Beach sessions book heavily in summer and around the holidays.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$350 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">17. Event staffing</h3>
+    <p>The American Bank Center, Whataburger Field, Buc Days and the Texas Jazz Festival need ushers, bartenders, ticket scanners and setup crews. Staffing agencies post shifts ahead of major events.</p>
+    <ul class="meta"><li><b>Pay:</b> $14–$22/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">18. Reselling fishing and beach gear</h3>
+    <p>Rods, reels, kayaks and coolers move fast on Facebook Marketplace, especially before summer. Garage sales in older neighborhoods and estate sales are good sourcing spots. Clean, test and photograph well.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,000/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+</div>
+
+<h2 id="seasonal-plan">Plan your year around the Corpus Christi calendar</h2>
+<ul>
+  <li><strong>January–March:</strong> winter Texans need handyman help and RV washing; spring break kicks off delivery and rideshare demand.</li>
+  <li><strong>April–May:</strong> Buc Days, pressure washing season, and pitching rental hosts before summer.</li>
+  <li><strong>June–August:</strong> peak beach tourism, rental turnovers, beach setups, boat detailing and fishing trips. Hurricane season starts.</li>
+  <li><strong>September–November:</strong> storm prep and cleanup, the Texas Jazz Festival, fall fishing, and the return of winter Texans.</li>
+  <li><strong>December:</strong> holiday delivery, gift reselling and family photo sessions.</li>
+</ul>
+
+<h2 id="start-this-month">How to start a side hustle in Corpus Christi this month</h2>
+<ol class="steps">
+  <li><strong>Choose by season.</strong> Pick one gig that works right now, not the one that peaks six months from today.</li>
+  <li><strong>Set an income target.</strong> Decide what you need monthly and work backward to hours. The <a href="/tools/income-calculator/">income calculator</a> helps.</li>
+  <li><strong>Get in front of local buyers.</strong> Nextdoor, Coastal Bend Facebook groups, marina bulletin boards and a free Google Business Profile.</li>
+  <li><strong>Price for taxes from day one.</strong> If your service is taxable in Texas, build sales tax into your quotes.</li>
+  <li><strong>Collect three reviews.</strong> Ask early clients for reviews and photos you can share.</li>
+  <li><strong>Track every mile and receipt.</strong> A separate account and a mileage log make tax season easy.</li>
+</ol>
+
+<h2 id="texas-taxes">Texas taxes and rules for Corpus Christi side income</h2>
+<ul>
+  <li><strong>No state income tax.</strong> Texas doesn't tax personal income, so your profit only faces federal income tax.</li>
+  <li><strong>Self-employment tax.</strong> You owe 15.3% federal self-employment tax on net profit. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Sales tax on some services.</strong> Texas taxes more services than you might expect. The state Comptroller treats lawn care and landscaping as taxable, with an exemption for very small self-employed providers, and some cleaning and repair services can be taxable too. Check the Comptroller's guidance and get a sales tax permit if you need one.</li>
+  <li><strong>Licensing.</strong> There's no general state business license. File an assumed name certificate with Nueces County if you use a brand name, and check city rules for short-term rentals, food sales and anything on the beach.</li>
+  <li><strong>Guiding licenses.</strong> Paid fishing guides need the right Texas Parks and Wildlife license, and captains carrying passengers need Coast Guard credentials.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Short-term rental rules differ between the City of Corpus Christi, Port Aransas and unincorporated areas. If you co-host or manage rentals, confirm registration and hotel occupancy tax requirements for each property.</div>
+
+<h2 id="nearby">Compare with other Texas cities</h2>
+<p>For a statewide view, read our guide to <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">side job hustles in Texas</a>. You can also compare the <a href="/best-side-hustles-in-houston/">best side hustles in Houston</a> and <a href="/best-side-hustles-in-austin/">Austin</a>. Corpus Christi has smaller crowds than either, but the beach and the port give it niches those cities can't match.</p>
+<p>Pick one idea, give it a full season, and track your hours and profit. At Better Side Hustles, that's the habit we see behind every side gig that lasts.</p>
 HTML,
 ];

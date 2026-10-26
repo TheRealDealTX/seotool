@@ -1,162 +1,201 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Mesa (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Mesa, from local services to remote income ideas, with realistic earning potential and practical tips.',
-    'h1' => 'Best Side Hustles in Mesa',
-    'kicker' => 'City Guide · AZ',
-    'dek' => 'Gig apps, local services and online work that pay in Mesa — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-18',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Mesa.webp',
-    'image_alt' => 'Best Side Hustles in Mesa',
-    'category' => 'City Guides',
-    'city' => 'Mesa',
-    'state' => 'AZ',
-    'keywords' => ['best side hustles in mesa'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-phoenix', 'best-side-hustles-in-tucson', 'best-side-hustles-in-las-vegas'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Mesa right now?', 'a' => 'Service-based gigs like house cleaning, mobile car detailing, food delivery, and freelancing perform especially well in Mesa.'],
-        ['q' => 'How much can I realistically earn from side hustles in Mesa?', 'a' => 'Most people earn between $300 and $1,000 per month part-time, with higher potential for skilled or service-based work.'],
-        ['q' => 'Do I need a license to start a side hustle in Mesa?', 'a' => 'Some side hustles may require a city license or insurance, especially home services, so it’s best to check local requirements first.'],
-        ['q' => 'Are online side hustles viable in Mesa?', 'a' => 'Yes, remote freelancing, virtual assistant work, and digital products are among the best side hustles in Mesa for flexibility.'],
-        ['q' => 'Which side hustles work best with a full-time job?', 'a' => 'Freelancing, delivery driving during peak hours, and pet sitting are ideal for evenings and weekends.'],
-        ['q' => 'What side hustles make the most money in Mesa?', 'a' => 'Mobile car detailing, handyman services, and house cleaning typically generate the highest hourly rates.'],
-        ['q' => 'Is Mesa competitive for gig work?', 'a' => 'Some platforms are competitive, but local service-based side hustles still offer strong demand and less saturation.'],
-        ['q' => 'How quickly can I start earning from a side hustle?', 'a' => 'Many of the best side hustles in Mesa can generate income within the first week once you’re set up.'],
-        ['q' => 'What is the lowest-cost side hustle to start?', 'a' => 'Freelancing, virtual assistant services, and tutoring usually require little to no upfront investment.'],
-        ['q' => 'Can a side hustle in Mesa turn into a full-time business?', 'a' => 'Yes, many local side hustles can scale into full-time income with consistent clients and smart pricing.'],
+    'title'       => 'Best Side Hustles in Mesa (2026): 18 Ways to Earn Extra',
+    'description' => 'The best side hustles in Mesa for 2026: 18 side gigs for winter-visitor season, spring training and East Valley homes, with real pay and Arizona TPT tips.',
+    'h1'          => 'Best Side Hustles in Mesa (2026): 18 Side Gigs for the East Valley',
+    'kicker'      => 'City Guide · AZ',
+    'dek'         => 'Pressure washing tile roofs, Cubs spring-training crowds, RV detailing and help for winter visitors: here are the side jobs in Mesa that pay, plus startup costs and how to get your first customer.',
+    'published'   => '2026-01-18',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Mesa.webp',
+    'image_alt'   => 'Downtown Mesa with the Superstition Mountains in the distance, illustrating the best side hustles in Mesa',
+    'category'    => 'City Guides',
+    'city'        => 'Mesa',
+    'state'       => 'AZ',
+    'keywords'    => ['best side hustles in mesa', 'side hustles in mesa', 'side jobs in mesa', 'side gigs in mesa', 'how to make money in mesa', 'mesa side hustles 2026'],
+    'tool'        => 'income-calculator',
+    'gear'        => ['phone-mount', 'insulated-bag', 'cordless-drill', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-phoenix', 'best-side-hustles-in-tucson', 'best-side-hustles-in-henderson'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Mesa?', 'a' => 'Pressure washing, pool service, rideshare during spring training, grocery delivery, RV and boat detailing, errand help for winter visitors, yard work and handyman jobs in newer East Mesa neighborhoods are the strongest choices. Mesa is suburban and home-owner heavy, so services that save people time in the heat consistently outperform pure app work.'],
+        ['q' => 'How can I make money in Mesa fast?', 'a' => 'Start with DoorDash, Instacart or Amazon Flex for pay within about a week. For faster local cash, post pressure-washing or yard-cleanup offers in Nextdoor and Mesa neighborhood Facebook groups. From February through March, spring-training staffing at Sloan Park and Hohokam Stadium hires quickly, and nearby homeowners rent out parking.'],
+        ['q' => 'Do I need a business license for a side hustle in Mesa?', 'a' => 'Most personal-service side hustles in Mesa do not need a special license. You need an Arizona TPT license, which also covers the Mesa city portion, if you sell taxable goods or run a short-term rental. Handyman jobs at or above $1,000, or any job needing a permit, require an Arizona Registrar of Contractors license.'],
+        ['q' => 'What side jobs in Mesa are good for retirees?', 'a' => 'Many Mesa retirees earn extra by watching homes for other winter visitors, driving neighbors to appointments, pet sitting, tutoring, umpiring youth games, or working seasonal shifts at spring training. These gigs reward reliability and local trust more than physical stamina.'],
+        ['q' => 'How much can I make from side gigs in Mesa?', 'a' => 'Most people working 8 to 15 hours a week earn roughly $500 to $1,600 a month. Delivery typically nets $15 to $22 an hour after gas, while pressure washing, pool routes and handyman work often reach $40 to $70 an hour with repeat customers. Winter and spring are usually the strongest months.'],
+        ['q' => 'What taxes do I pay on side income in Arizona?', 'a' => 'Arizona has a flat 2.5% income tax, and you also owe federal income tax plus 15.3% self-employment tax on net profit. Many people save 20 to 25% of profit and make quarterly estimated payments. Product sales and short-term rentals also carry transaction privilege tax.'],
     ],
-    'body' => <<<'HTML'
-<p>The <strong>best side hustles in Mesa</strong> aren’t about hype. They’re about fit. Fit with your schedule, fit with the local economy and fit with how people here actually live and spend money. And that’s the good news—Mesa is a surprisingly strong city for side income if you choose wisely.</p>
-<p>Mesa has space, sprawl, families, retirees, students, and commuters. That mix creates opportunity. Not theoretical opportunity. Practical, repeatable income streams that work whether you want an extra few hundred dollars a month or something you can eventually scale.</p>
-<p>Let’s get into it.</p>
-<h2 id="h-why-mesa-is-a-strong-city-for-side-hustles">Why Mesa Is a Strong City for Side Hustles</h2>
-<p><a href="https://www.mesaaz.gov/Home">Mesa</a> doesn’t always get the spotlight, but it should. The population is large and spread out. Housing is mostly suburban. Cars are essential. Services are always in demand. That combination matters.</p>
-<p>Mesa also benefits from:</p>
-<ul><li>Proximity to Phoenix jobs and events</li><li>A steady flow of seasonal residents</li><li>A high percentage of homeowners</li><li>Year-round demand for services, not just tourism</li></ul>
-<p>Translation? People here pay for convenience. And convenience fuels <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">side hustles</a>.</p>
-<h2 id="h-local-amp-in-person-side-hustles-that-actually-work-in-mesa">Local &amp; In-Person Side Hustles That Actually Work in Mesa</h2>
-<h3 id="h-food-delivery-amp-grocery-shopping">Food Delivery &amp; Grocery Shopping</h3>
-<p>This is one of the easiest entry points and still one of the <strong>best side hustles in Mesa</strong> if you live near dense neighborhoods.</p>
-<p><strong>Why it works locally</strong></p>
-<ul><li>Suburban layouts mean longer trips and higher order values</li><li>Families order groceries in bulk</li><li>Peak hours are predictable</li></ul>
-<p><strong>Action tips</strong></p>
-<ul><li>Work dinner hours (5–8 PM) and weekend mornings</li><li>Stick to 2–3 zones instead of roaming</li><li>Track mileage aggressively for tax deductions</li></ul>
-<p><strong>Weekly earning range:</strong> $300–$700 (part-time)</p>
-<h3 id="h-ideshare-driving-selective-not-full-time">ideshare Driving (Selective, Not Full-Time)</h3>
-<p>Mesa rideshare works best when you’re strategic.</p>
-<p>Focus on:</p>
-<ul><li>Airport runs</li><li>Event nights</li><li>Early-morning commuter hours</li></ul>
-<p>Avoid:</p>
-<ul><li>Midday heat without surge pricing</li><li>Long deadhead trips</li></ul>
-<p>If you cherry-pick, rideshare becomes one of the more reliable <strong>best side hustles in Mesa</strong> for cash flow.</p>
-<h3 id="h-house-cleaning-amp-turnover-cleaning">House Cleaning &amp; Turnover Cleaning</h3>
-<p>This one scales faster than people expect.</p>
-<p>Mesa has:</p>
-<ul><li>Short-term rentals</li><li>Large family homes</li><li>Retirees who prefer recurring service</li></ul>
-<p>Start solo. Move to teams later.</p>
-<p><strong>Starter pricing</strong></p>
-<ul><li>$120–$180 per standard home</li><li>Weekly or bi-weekly contracts reduce marketing time</li></ul>
-<p>One cleaner. Two homes per day. Do the math.</p>
-<h3 id="h-handyman-amp-light-home-repair">Handyman &amp; Light Home Repair</h3>
-<p>If you can fix doors, install fans, or replace fixtures, you’re sitting on high-margin work.</p>
-<p><strong>High-demand tasks</strong></p>
-<ul><li>Ceiling fan installs</li><li>Fence repairs</li><li>Garbage disposal replacements</li><li><a href="https://www.rsbelectricalinc.com/doorbell-installation-wiring-mesa">Smart doorbell installs</a></li></ul>
-<p>Homeowners in Mesa want fast, not cheap.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Cars matter here. A lot.</p>
-<p><strong>Why this works</strong></p>
-<ul><li>Heat destroys interiors</li><li>Long commutes mean dusty vehicles</li><li>People don’t want to wait at shops</li></ul>
-<p>Mobile detailing consistently ranks among the <strong>best side hustles in Mesa</strong> for hourly earnings.</p>
-<p><strong>Typical pricing</strong></p>
-<ul><li>Interior only: $100–$140</li><li>Full detail: $180–$250</li></ul>
-<h3 id="h-pet-sitting-amp-dog-walking">Pet Sitting &amp; Dog Walking</h3>
-<p>Not flashy. Very consistent.</p>
-<p>Mesa’s retirees and frequent travelers fuel this market.</p>
-<p><strong>Best niches</strong></p>
-<ul><li>Midday dog walks</li><li>In-home pet sitting</li><li>Medication administration</li></ul>
-<p>Once clients trust you, churn drops to almost zero.</p>
-<h3 id="h-yard-work-amp-desert-landscaping-support">Yard Work &amp; Desert Landscaping Support</h3>
-<p>You don’t need to be a landscaper.</p>
-<p>Offer:</p>
-<ul><li>Monthly cleanups</li><li>Trimming and debris removal</li><li>Seasonal prep services</li></ul>
-<p>Heat limits competition. Early mornings win.</p>
-<h2 id="h-online-amp-remote-side-hustles-you-can-run-from-mesa">Online &amp; Remote Side Hustles You Can Run From Mesa</h2>
-<p>Not everything needs to happen outside.</p>
-<h3 id="h-freelancing-writing-design-admin">Freelancing (Writing, Design, Admin)</h3>
-<p>Remote freelancing is one of the <strong>best side hustles in Mesa</strong> for people who want flexibility.</p>
-<p><strong>High-demand skills</strong></p>
-<ul><li>Blog writing</li><li>Canva design</li><li>CRM cleanup</li><li>Email inbox management</li></ul>
-<p>Start with hourly work. Move to monthly retainers.</p>
-<h3 id="h-virtual-assistant-services">Virtual Assistant Services</h3>
-<p>Local businesses need help but don’t want full-time staff.</p>
-<p>Offer:</p>
-<ul><li>Appointment scheduling</li><li>Customer follow-ups</li><li>Social media posting</li></ul>
-<p>Three clients at $600/month each adds up quickly.</p>
-<h3 id="h-social-media-management-for-local-businesses">Social Media Management for Local Businesses</h3>
-<p>Mesa has thousands of small businesses that are invisible online.</p>
-<p>Your edge?</p>
-<ul><li>Local photos</li><li>Local hashtags</li><li>Real responses to real customers</li></ul>
-<p>Charge monthly. Deliver weekly.</p>
-<h3 id="h-remote-customer-support">Remote Customer Support</h3>
-<p>Not glamorous. Very stable.</p>
-<p>This works well if you want:</p>
-<ul><li>Predictable hours</li><li>No client hunting</li><li>Reliable pay</li></ul>
-<p>Great option if your main job is inconsistent.</p>
-<h3 id="h-selling-digital-products">Selling Digital Products</h3>
-<p>Once created, they sell while you sleep.</p>
-<p>Examples:</p>
-<ul><li>Budget planners</li><li>Home maintenance checklists</li><li>Social media templates for local businesses</li></ul>
-<p>This side hustle rewards patience.</p>
-<h2 id="h-skilled-amp-trade-based-side-hustles-with-higher-pay">Skilled &amp; Trade-Based Side Hustles With Higher Pay</h2>
-<h3 id="h-photography">Photography</h3>
-<p>Mesa demand includes:</p>
-<ul><li>Real estate listings</li><li>Graduation photos</li><li>Family portraits</li></ul>
-<p>One weekend can cover your monthly bills.</p>
-<h3 id="h-notary-services">Notary Services</h3>
-<p>Low startup. High trust.</p>
-<p>Mobile notaries do well in Mesa because people prefer convenience.</p>
-<h3 id="h-tutoring-amp-test-prep">Tutoring &amp; Test Prep</h3>
-<p>Both online and local students need support.</p>
-<p>Focus areas:</p>
-<ul><li>Math</li><li>Test prep</li><li>Adult skill refreshers</li></ul>
-<p>Recurring sessions beat one-offs.</p>
-<h3 id="h-tech-repair">Tech Repair</h3>
-<p>Cracked screens never stop happening.</p>
-<p>Offer:</p>
-<ul><li>Mobile phone repair</li><li>Tablet troubleshooting</li><li>Laptop diagnostics</li></ul>
-<p>Speed matters more than price.</p>
-<h3 id="h-short-term-consulting-or-coaching">Short-Term Consulting or Coaching</h3>
-<p>If you’ve built expertise, monetize it.</p>
-<p>Charge for:</p>
-<ul><li>Strategy calls</li><li>Audits</li><li>Setup help</li></ul>
-<p>You don’t need hundreds of clients. You need a few good ones.</p>
-<h2 id="h-side-hustles-that-fit-mesa-s-climate-amp-lifestyle">Side Hustles That Fit Mesa’s Climate &amp; Lifestyle</h2>
-<p>Heat changes everything.</p>
-<p>The <strong>best side hustles in Mesa</strong> respect the climate.</p>
-<p><strong>Smart adjustments</strong></p>
-<ul><li>Outdoor work before 10 AM</li><li>Evening service windows</li><li>Summer shifts toward online income</li></ul>
-<p>Seasonality is real. Plan for it.</p>
-<h2 id="h-how-much-can-you-make-with-side-hustles-in-mesa">How Much Can You Make With Side Hustles in Mesa?</h2>
-<p>Here’s a realistic snapshot.</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>5–10 hrs/week</strong></td><td><strong>15–25 hrs/week</strong></td></tr><tr><td>Food Delivery</td><td>$200–$400</td><td>$600–$1,000</td></tr><tr><td>House Cleaning</td><td>$300–$600</td><td>$1,200+</td></tr><tr><td>Mobile Detailing</td><td>$400–$800</td><td>$1,500+</td></tr><tr><td>Freelancing</td><td>$250–$500</td><td>$1,000+</td></tr><tr><td>Handyman Work</td><td>$350–$700</td><td>$1,400+</td></tr></tbody></table>
-<p>Results depend on consistency, not luck.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle-in-mesa">How to Choose the Right Side Hustle in Mesa</h2>
-<p>Ask yourself three questions:</p>
-<ol><li>How many hours can I actually commit?</li><li>Do I want fast cash or long-term growth?</li><li>Am I solving a real local problem?</li></ol>
-<p>Good side hustles feel boring at first. That’s a feature, not a bug.</p>
-<h2 id="h-tips-for-succeeding-faster-in-mesa">Tips for Succeeding Faster in Mesa</h2>
-<ul><li>Market in neighborhood groups</li><li>Use before/after photos</li><li>Price confidently</li><li>Track every expense</li><li>Treat it like a business, not a favor</li></ul>
-<p>Small upgrades compound quickly.</p>
-<h2 id="h-common-mistakes-to-avoid">Common Mistakes to Avoid</h2>
-<ul><li>Underpricing to “get experience”</li><li>Ignoring insurance or liability</li><li>Saying yes to everything</li><li>Not separating personal and business finances</li></ul>
-<p>Mistakes cost more than tools.</p>
-<h2 id="h-final-thoughts-turning-a-mesa-side-hustle-into-real-income">Final Thoughts: Turning a Mesa Side Hustle Into Real Income</h2>
-<p>The <strong>best side hustles in Mesa</strong> aren’t mysterious. They’re practical. They reward consistency. They scale when you respect your time and price your work properly.</p>
-<p>Start small. Pick one lane. Commit for 90 days. Then adjust.</p>
-<p>Mesa has the demand. The question is whether you’re ready to meet it.</p>
+    'body'        => <<<'HTML'
+<p>Mesa is the Valley's big suburban engine: a city of more than half a million people, mostly single-family homes, with a huge winter-visitor population and two spring-training ballparks. That mix makes the best side hustles in Mesa less about chasing app surges and more about serving homeowners, retirees and the visitors who flood in each winter.</p>
+<p>Below you will find 18 side gigs that work in Mesa, from tile-roof pressure washing in Dobson Ranch to RV detailing near the east-side resorts, with typical pay, startup costs and the local angles that help you stand out.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>2.5%</b><span>Arizona flat income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+  <div class="stat"><b>Feb–Mar</b><span>spring-training surge</span></div>
+</div>
+
+<h2 id="why-mesa">Why Mesa is good ground for side gigs</h2>
+<ul>
+  <li><strong>Homeowners everywhere.</strong> From Dobson Ranch and Red Mountain to Las Sendas and newer Eastmark, most residents own a house with a yard, a roof and often a pool. That means steady demand for outdoor services.</li>
+  <li><strong>Winter visitors.</strong> East Mesa's RV resorts and manufactured-home communities fill from roughly October through April. Seasonal residents need errands run, rigs cleaned and homes watched after they leave.</li>
+  <li><strong>Spring training.</strong> The Chicago Cubs play at Sloan Park and the Athletics at Hohokam Stadium, bringing crowds every February and March.</li>
+  <li><strong>Jobs and growth.</strong> Boeing's Mesa site, Banner Health hospitals, data centers in southeast Mesa, ASU's Polytechnic campus and the area around Mesa Gateway Airport keep adding workers and new homes.</li>
+  <li><strong>Outdoor recreation.</strong> Saguaro Lake, Canyon Lake, the lower Salt River and Usery Mountain draw boaters, tubers and hikers, which creates its own seasonal work.</li>
+</ul>
+
+<h2 id="mesa-top-picks">Top side hustles in Mesa for 2026</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pressure-washing">1. Pressure washing driveways, pavers and tile roofs</h3>
+    <p>Mesa's concrete driveways, block walls and pool decks pick up dust, hard-water stains and monsoon grime. Soft-washing tile roofs and sealing pavers are higher-ticket add-ons. Fall through spring is peak season, and an [[amazon:pressure-washer|electric pressure washer]] handles most homes.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$350 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-service">2. Pool service</h3>
+    <p>Weekly chemical checks, skimming and brushing for busy families. Build a dense route in one area, such as Dobson Ranch or Superstition Springs, to cut drive time. Summer is when people switch providers, so that is your best time to advertise.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$170 per pool per month</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Routine-lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">3. Rideshare driving</h3>
+    <p>Mesa Gateway Airport's low-cost flights, spring-training games, Mesa Arts Center shows and Bell Bank Park tournaments all generate rides. Many Mesa drivers also head to Sky Harbor or Old Town Scottsdale on weekend nights. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers the sign-up steps.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$24/hr before gas</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Weekends and event days</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">4. Grocery and food delivery</h3>
+    <p>Large East Valley households order big grocery baskets, which can mean better tips on Instacart and Walmart Spark. DoorDash and Uber Eats stay busy around Fiesta District, downtown Mesa and the Superstition Springs area.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car</li><li><b>Best for:</b> Flexible schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rv-boat-detailing">5. RV and boat detailing</h3>
+    <p>Winter visitors arrive with dusty motorhomes, and boat owners heading to Saguaro and Canyon lakes want hulls and interiors cleaned. Washing, waxing and UV protection on big rigs pays far better per job than standard car detailing.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$400 per rig</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Hard workers who like big jobs</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="senior-errands">6. Errands and rides for winter visitors</h3>
+    <p>Seasonal residents and retirees pay for grocery runs, pharmacy pickups, rides to medical appointments and help settling in each fall. Offer bundles through RV resort and community bulletin boards.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$35/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Patient, friendly people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="yard-work">7. Yard work and desert landscaping</h3>
+    <p>Mesa has more grass than central Phoenix, especially in older subdivisions, plus gravel yards that need weeding and trees that need trimming. Overseeding in fall and cleanup after monsoon storms add seasonal work.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$60 per visit</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">8. Handyman and assembly for new homes</h3>
+    <p>Buyers moving into Eastmark and other new East Mesa communities need TV mounts, shelving, curtain rods and furniture assembled. Arizona's handyman exemption covers small jobs under $1,000 total that need no permit.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+<p>Driving for the apps across a spread-out suburb costs more than people expect. Check your true hourly earnings after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="mesa-comparison">Mesa side gigs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Pressure washing</td><td>$150–$350/job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Pool service</td><td>$100–$170/pool/month</td><td>$200–$500</td><td>1–3 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$15–$24/hr before gas</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Grocery delivery</td><td>$15–$22/hr before gas</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>RV and boat detailing</td><td>$150–$400/rig</td><td>$200–$500</td><td>Days (in season)</td></tr>
+    <tr><td>Senior errands</td><td>$20–$35/hr</td><td>$0</td><td>1–2 weeks</td></tr>
+    <tr><td>Handyman</td><td>$40–$70/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Youth sports officiating</td><td>$25–$60/game</td><td>$50–$150</td><td>2–4 weeks</td></tr>
+  </tbody>
+</table>
+
+[[gear:leaf-blower,tool-kit,cleaning-kit|Starter gear for Mesa home-service gigs]]
+
+<h2 id="ballparks-and-tournaments">Ballparks, tournaments and the lakes</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="spring-training">9. Spring-training staffing and parking</h3>
+    <p>Concession operators and staffing agencies hire for Sloan Park and Hohokam Stadium every season. If you live close to either ballpark, renting your driveway on game days is one of the easiest gigs on this list.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr, or $10–$30 per parked car</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, retirees, nearby homeowners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="officiating">10. Youth sports officiating and coaching</h3>
+    <p>Bell Bank Park and Mesa's many fields host baseball, soccer, volleyball and basketball tournaments most weekends. Referee and umpire associations train new officials, and private coaching lessons pay even more.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60 per game</li><li><b>Startup:</b> $50–$150 for gear and certification</li><li><b>Best for:</b> Former athletes</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lake-season">11. Lake and river season work</h3>
+    <p>Marinas, tubing outfitters and boat rental operators on the Salt River chain hire seasonal help from spring into fall. Boat-launch help and cooler restocking for private owners are smaller gigs you can arrange yourself.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Outdoorsy weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">12. Short-term rental cleaning</h3>
+    <p>Spring-training fans and winter visitors book Mesa rentals for weeks at a time. Turnovers are less frequent than in Scottsdale but longer, and property managers value cleaners who also restock and report maintenance issues.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$40/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-focused people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">13. Pet sitting and dog walking</h3>
+    <p>Mesa's families and retirees travel often, and summer pavement makes midday walks dangerous for dogs. Offer dawn walks, drop-in visits and overnight stays through Rover or directly to neighbors.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$28/walk, $40–$70/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+</div>
+
+<h2 id="remote-and-selling">Remote, teaching and selling gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="tutoring">14. Tutoring</h3>
+    <p>ASU Polytechnic and Mesa Community College students need help with math, engineering and science courses, and East Valley families pay for K–12 tutoring and test prep. Libraries make convenient meeting spots.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$55/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Teachers, STEM students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">15. Freelance writing, design and marketing</h3>
+    <p>Local pool companies, landscapers and HVAC shops need websites, ads and social posts. Package services on <a href="/fiverr/">Fiverr</a>, then pitch Mesa businesses directly. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> explains how.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$70/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Creatives and marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">16. Virtual assistant for home-service companies</h3>
+    <p>Summer is chaos for HVAC and pool companies. Answering calls, booking appointments and chasing invoices a few hours a day is valuable help you can offer from home.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$40/hr</li><li><b>Startup:</b> Laptop, headset</li><li><b>Best for:</b> Organized people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">17. Reselling and swap-meet flipping</h3>
+    <p>The Mesa Market Place swap meet, estate sales in retirement communities and Goodwill outlets feed eBay and Facebook Marketplace listings. Spring-training memorabilia and golf gear sell especially well.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$1,200/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">18. Sports and real estate photography</h3>
+    <p>Tournament parents buy action shots, and agents need listing photos every week. Start with a mid-range camera and a fast lens, then sell galleries online.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per session</li><li><b>Startup:</b> Camera and lens</li><li><b>Best for:</b> Photographers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Many Mesa neighborhoods have HOAs with rules on signs, trailers and home-based businesses. Read yours before you park a work trailer in the driveway or plant yard signs.</div>
+
+<h2 id="match-your-schedule">Which side gig in Mesa fits your week?</h2>
+<ul>
+  <li><strong>Full-time job, weekends free:</strong> pressure washing, RV detailing, officiating and real estate photography all cluster on Saturdays and Sundays.</li>
+  <li><strong>Evenings only:</strong> delivery, online tutoring, freelancing and virtual assistant work.</li>
+  <li><strong>Retired or semi-retired:</strong> home watch, errands for winter visitors, spring-training shifts and pet sitting.</li>
+  <li><strong>Student at ASU Polytechnic or MCC:</strong> tutoring, event staffing, dog walking and lake-season jobs in summer.</li>
+</ul>
+<p>Whatever you choose, protect the same block of hours every week. In Mesa, repeat customers matter more than any single big day, and they only stick with providers who show up on schedule.</p>
+
+<h2 id="start-in-mesa">How to start a side hustle in Mesa this month</h2>
+<ol class="steps">
+  <li><strong>Choose one hustle for your season.</strong> Fall is ideal for winter-visitor services and pressure washing; late winter for spring-training work.</li>
+  <li><strong>Work backward from your goal.</strong> Our <a href="/tools/income-calculator/">income calculator</a> turns a monthly target into weekly hours.</li>
+  <li><strong>Advertise hyper-locally.</strong> Nextdoor, HOA newsletters, RV resort bulletin boards and a Google Business Profile.</li>
+  <li><strong>Price jobs, not hours, for home services.</strong> Flat prices for driveways and roofs reward you for getting faster.</li>
+  <li><strong>Get your paperwork in order.</strong> TPT license if you sell goods or rent short-term; contractor license if jobs top $1,000.</li>
+  <li><strong>Ask every happy customer for a referral.</strong> Mesa's tight communities run on word of mouth.</li>
+</ol>
+<div class="callout"><strong>Quick tip:</strong> Bundle services for seasonal residents: a fall move-in clean, weekly errands during the winter and home watch after they leave. One client can become year-round income.</div>
+
+<h2 id="arizona-rules">Arizona taxes and licenses for Mesa side income</h2>
+<ul>
+  <li><strong>State income tax:</strong> a flat 2.5%.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, on top of federal income tax. Use the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to plan quarterly payments.</li>
+  <li><strong>Transaction privilege tax:</strong> Arizona taxes certain business activities, including retail sales and short-term lodging, through a TPT license from the Department of Revenue. The state collects Mesa's city tax on the same return. Most personal services are not subject to TPT.</li>
+  <li><strong>Contractor rules:</strong> jobs of $1,000 or more in labor and materials, or any job that needs a permit, require an Arizona Registrar of Contractors license.</li>
+  <li><strong>Short-term rentals:</strong> check Mesa's current registration rules before listing, in addition to the TPT license.</li>
+</ul>
+
+<h2 id="nearby-guides">More guides for the Valley and beyond</h2>
+<p>Working across the metro? Read our guides to the <a href="/best-side-hustles-in-phoenix/">best side hustles in Phoenix</a> and <a href="/best-side-hustles-in-tucson/">Tucson</a>, or see how another fast-growing desert suburb compares in our <a href="/best-side-hustles-in-henderson/">Henderson guide</a>.</p>
+<p>At Better Side Hustles we see the same pattern in Mesa again and again: the people who earn the most pick one service, build a tight route close to home, and ride the winter season hard.</p>
 HTML,
 ];

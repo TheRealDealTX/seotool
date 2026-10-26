@@ -1,146 +1,212 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Fort Worth (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Fort Worth, from local services to online income ideas that fit busy schedules and grow real earnings.',
-    'h1' => 'Best Side Hustles in Fort Worth',
+    'title' => 'Best Side Hustles in Fort Worth (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Fort Worth for 2026: 18 side gigs with pay, startup costs, Stock Show and Speedway surge tips, booming suburbs and Texas tax rules.',
+    'h1' => 'Best Side Hustles in Fort Worth (2026): 18 Side Gigs That Pay',
     'kicker' => 'City Guide · TX',
-    'dek' => 'Gig apps, local services and online work that pay in Fort Worth — with realistic earnings and how to land your first dollar.',
+    'dek' => 'Lawn routes in brand-new subdivisions, Amazon Flex blocks out of Alliance, Stock Show shifts and farm sitting on acreage west of town: here are the side jobs in Fort Worth worth your time, with pay and startup costs.',
     'published' => '2026-01-07',
     'modified' => '2026-10-26',
     'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Fort-Worth.webp',
-    'image_alt' => 'Best Side Hustles in Fort Worth',
+    'image_alt' => 'Fort Worth Stockyards and downtown skyline, illustrating the best side hustles in Fort Worth',
     'category' => 'City Guides',
     'city' => 'Fort Worth',
     'state' => 'TX',
-    'keywords' => ['best side hustles in fort worth'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-houston', 'best-side-hustles-in-dallas', 'best-side-hustles-in-austin'],
+    'keywords' => ['best side hustles in fort worth', 'side jobs in fort worth', 'side gigs in fort worth', 'side hustles fort worth', 'how to make money in fort worth', 'fort worth side hustles 2026'],
+    'tool' => 'income-calculator',
+    'gear' => ['phone-mount', 'hand-cart', 'tool-kit', 'book-side-hustle'],
+    'related' => ['best-side-hustles-in-dallas', 'best-side-hustles-in-arlington', 'best-side-hustles-in-oklahoma-city'],
     'faq' => [
-        ['q' => 'What are the best side hustles in Fort Worth right now?', 'a' => 'Service-based options like car detailing, cleaning, lawn care, and real estate referrals perform especially well due to local demand.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Fort Worth?', 'a' => 'Many people earn between $1,000 and $4,000 per month depending on time commitment and the type of hustle.'],
-        ['q' => 'Are side hustles in Fort Worth legal without a business license?', 'a' => 'Some are, but once income becomes consistent, registering a business and checking local requirements is recommended.'],
-        ['q' => 'Which side hustles have the lowest startup costs?', 'a' => 'Freelance writing, apartment referrals, social media management, and virtual assistant work require little to no upfront investment.'],
-        ['q' => 'Can I run a side hustle while working a full-time job?', 'a' => 'Yes, many of the best side hustles in Fort Worth are designed for evenings and weekends.'],
-        ['q' => 'What side hustles work best in Fort Worth’s housing market?', 'a' => 'Apartment locating, real estate photography, cleaning services, and handyman work benefit from constant residential turnover.'],
-        ['q' => 'Do online side hustles still make sense if I live in Fort Worth?', 'a' => 'Absolutely—online work pairs well with Fort Worth’s lower cost of living and flexible lifestyle.'],
-        ['q' => 'How long does it take to see income from a side hustle?', 'a' => 'Service-based side hustles often generate income within the first few weeks, especially with local marketing.'],
-        ['q' => 'Do I need insurance for a Fort Worth side hustle?', 'a' => 'Hands-on services like cleaning, detailing, and handyman work should carry basic liability insurance.'],
-        ['q' => 'Which side hustles can grow into full-time businesses?', 'a' => 'Cleaning services, lawn care, real estate-related hustles, and digital services have strong long-term scalability.'],
+        ['q' => 'What are the best side hustles in Fort Worth?', 'a' => 'The best side hustles in Fort Worth include lawn care and pressure washing in fast-growing suburbs, Amazon Flex and courier work out of the Alliance corridor, rideshare and delivery, mobile truck detailing, event staffing for the Stock Show and Texas Motor Speedway, pet and farm sitting, handyman work for new homeowners, and tutoring. Low costs and steady population growth keep local demand strong.'],
+        ['q' => 'How can I make money in Fort Worth quickly?', 'a' => 'Delivery apps and Amazon Flex are usually the fastest, often paying within a week or two of signing up. Event staffing agencies hire for Dickies Arena, the Will Rogers Memorial Center and the Speedway. If you own a mower or a pressure washer, posting in Nextdoor or a new-subdivision Facebook group can land paying jobs within days.'],
+        ['q' => 'How much can I earn from side jobs in Fort Worth?', 'a' => 'Most people working 8 to 15 hours a week typically earn $400 to $1,500 a month. App-based driving usually nets $15 to $22 an hour after gas. Lawn routes, pressure washing, detailing and handyman work often reach $35 to $75 an hour once you have repeat clients, and event weekends can add a quick boost.'],
+        ['q' => 'Do I need a business license for a side hustle in Fort Worth?', 'a' => 'Texas has no general state business license and Fort Worth does not require one for most service side hustles. File an assumed name certificate with the Tarrant County Clerk if you use a business name as a sole proprietor. You need a free Texas sales tax permit for taxable goods or services, which can include lawn care and some cleaning work.'],
+        ['q' => 'Can I run an Airbnb in Fort Worth?', 'a' => 'Fort Worth\'s zoning does not allow short-term rentals in single-family residential districts, and a court upheld that rule in 2025. STRs are permitted in certain multifamily, commercial and mixed-use zones with city registration. Check the city\'s current rules before you buy or list a property, and remember that hosts owe state and local hotel occupancy taxes.'],
+        ['q' => 'Which Fort Worth suburbs are best for side hustles?', 'a' => 'North Fort Worth, Keller, Saginaw, Haslet and Northlake have new subdivisions full of lawns, fences and new homeowners who need help. Southlake and Colleyville have high incomes ideal for detailing, cleaning and tutoring. Aledo, Benbrook and Burleson offer acreage for farm and pet sitting, while Near Southside and West 7th suit rideshare and delivery.'],
     ],
     'body' => <<<'HTML'
-<p>Fort Worth is one of those cities where opportunity hides in plain sight. You feel it when new apartments go up overnight. When neighborhoods expand west and north. When small businesses pop up faster than you can keep track of them. That’s exactly why the <strong>best side hustles in Fort Worth</strong> aren’t just online trends—they’re practical, local, and surprisingly accessible.</p>
-<p>I’ve spent years watching people build serious extra income here. Some wanted quick cash. Others wanted a safety net. A few turned their side hustle into a full-time business. What they all had in common? They chose work that fit Fort Worth’s rhythm instead of fighting it.</p>
-<p>Let’s break down the <strong>best side hustles in Fort Worth</strong> that actually work—and how to start each one without guesswork.</p>
-<h2 id="h-why-fort-worth-is-a-side-hustle-goldmine">Why Fort Worth Is a Side Hustle Goldmine</h2>
-<p><a href="https://en.wikipedia.org/wiki/Fort_Worth,_Texas">Fort Worth</a> has a rare mix. It’s big enough to support demand. Affordable enough to keep startup costs low. And busy enough that people gladly pay for convenience.</p>
-<p>You’ve got:</p>
-<ul><li>A fast-growing population</li><li>Constant residential turnover</li><li>A strong events, tourism, and real estate market</li><li>No state income tax in Texas</li></ul>
-<p>That last point matters. Every dollar you earn keeps more of its punch.</p>
-<p>The <strong>best side hustles in Fort Worth</strong> usually check three boxes: flexible hours, low startup costs, and strong local demand.</p>
-<h2 id="h-what-makes-a-side-hustle-worth-your-time">What Makes a Side Hustle Worth Your Time</h2>
-<p>Not every “extra income idea” deserves your energy. Before jumping in, I always ask three questions:</p>
-<ul><li>Can I start this without quitting my job?</li><li>Will Fort Worth locals actually pay for this?</li><li>Can it scale if I want more income later?</li></ul>
-<p>If the answer is yes to all three, you’re on the right track.</p>
-<h2 id="h-service-based-side-hustles-that-work-fast">Service-Based Side Hustles That Work Fast</h2>
-<p>These are the quickest paths to real money. They’re hands-on. Local. And always needed.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Fort Worth drivers love their trucks and SUVs. They just don’t love cleaning them.</p>
-<p>Mobile car detailing works because you go to the customer. No shop. No rent.</p>
-<p><strong>Why it works here</strong></p>
-<ul><li>High vehicle ownership</li><li>Busy professionals</li><li>Suburban neighborhoods with driveways</li></ul>
-<p><strong>Actionable tips</strong></p>
-<ul><li>Start with basic interior/exterior packages</li><li>Focus on neighborhoods with newer vehicles</li><li>Upsell ceramic coatings and interior protection</li></ul>
-<p><strong>Earning range:</strong> $50–$200 per vehicle<br/><strong>Startup cost:</strong> $300–$800</p>
-<h3 id="h-lawn-care-and-light-landscaping">Lawn Care and Light Landscaping</h3>
-<p>This is one of the <strong>best side hustles in Fort Worth</strong> for consistent, repeat income.</p>
-<p>Grass keeps growing. Homeowners keep paying.</p>
-<p><strong>Smart way to start</strong></p>
-<ul><li>Offer mowing, edging, and leaf cleanup</li><li>Lock in bi-weekly clients</li><li>Focus on HOA-heavy neighborhoods</li></ul>
-<p>You don’t need to be a landscaping pro. Reliability matters more.</p>
-<h3 id="h-handyman-services">Handyman Services</h3>
-<p>Fort Worth homes are constantly being updated, flipped, or rented out. That creates endless small repair jobs.</p>
-<p>Think:</p>
-<ul><li>Fence repairs</li><li>Drywall patches</li><li>Ceiling fan installs</li></ul>
-<p><strong>Pro tip:</strong> Pick 5–7 services and get great at those. Don’t try to do everything.</p>
-<h3 id="h-residential-and-airbnb-cleaning">Residential and Airbnb Cleaning</h3>
-<p>Short-term rentals changed the game.</p>
-<p>Cleaners who understand fast turnovers make serious money.</p>
-<p><strong>Why it works</strong></p>
-<ul><li>Airbnb and short-term rental growth</li><li>Busy families outsourcing chores</li><li>Recurring schedules</li></ul>
-<p><strong>Pricing tip</strong></p>
-<ul><li>Flat-rate pricing beats hourly</li><li>Offer linen service for rentals</li><li>Bundle deep cleans quarterly</li></ul>
-<h2 id="h-real-estate-driven-side-hustles-fort-worth-loves-these">Real Estate–Driven Side Hustles (Fort Worth Loves These)</h2>
-<p>Few cities move property like Fort Worth. That creates opportunity.</p>
-<h3 id="h-real-estate-photography">Real Estate Photography</h3>
-<p>You don’t need a studio. Just a decent camera, editing skills, and consistency.</p>
-<p><strong>Start here</strong></p>
-<ul><li>Practice on apartments and model units</li><li>Reach out to agents directly</li><li>Offer fast turnaround</li></ul>
-<p>This <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">side hustle</a> scales beautifully.</p>
-<h3 id="h-apartment-locating-and-referral-work">Apartment Locating and Referral Work</h3>
-<p>Renters move constantly. Agents pay for leads.</p>
-<p>You don’t need a license to refer. You need relationships.</p>
-<p><strong>Why it’s powerful</strong></p>
-<ul><li>One referral can equal a full month’s rent</li><li>Repeat clients</li><li>No inventory or overhead</li></ul>
-<p>This is quietly one of the <strong>best side hustles in Fort Worth</strong> if you know people who are moving.</p>
-<h3 id="h-short-term-rental-co-hosting">Short-Term Rental Co-Hosting</h3>
-<p>You don’t own the property. You manage it.</p>
-<p><strong>Services include</strong></p>
-<ul><li>Guest communication</li><li>Cleaning coordination</li><li>Pricing adjustments</li></ul>
-<p>Owners love this because it removes friction. You earn a percentage.</p>
-<h2 id="h-creative-and-digital-side-hustles-with-local-demand">Creative and Digital Side Hustles With Local Demand</h2>
-<p>These aren’t just online gigs. Fort Worth businesses need them badly.</p>
-<h3 id="h-freelance-writing">Freelance Writing</h3>
-<p>Local businesses need blogs, listings, and web copy.</p>
-<p><strong>High-demand niches</strong></p>
-<ul><li>Real estate</li><li>Construction and trades</li><li>Local lifestyle brands</li></ul>
-<p>Start with one niche. Build authority. Raise rates.</p>
-<h3 id="h-graphic-design-and-branding">Graphic Design and Branding</h3>
-<p>Every new business needs visuals.</p>
-<p>Logos. Menus. Social posts.</p>
-<p><strong>Tip:</strong> Package branding services instead of selling one-off designs.</p>
-<h3 id="h-social-media-management">Social Media Management</h3>
-<p>Restaurants, gyms, and service businesses hate managing social accounts. They’ll gladly outsource it.</p>
-<p><strong>Monthly retainers work best</strong></p>
-<ul><li>8–12 posts per month</li><li>Basic engagement</li><li>Simple analytics</li></ul>
-<h2 id="h-gig-economy-side-hustles-immediate-cash">Gig Economy Side Hustles (Immediate Cash)</h2>
-<p>Sometimes you just need money now.</p>
-<h3 id="h-rideshare-and-delivery">Rideshare and Delivery</h3>
-<p>Fort Worth has clear peak times:</p>
-<ul><li>Morning airport runs</li><li>Weekend nights</li><li>Event weekends</li></ul>
-<p>Track your hours. Don’t chase every ping.</p>
-<h3 id="h-event-staffing">Event Staffing</h3>
-<p>Stockyards events. Festivals. Corporate functions.</p>
-<p>Weekend work. Solid pay.</p>
-<h3 id="h-task-based-work">Task-Based Work</h3>
-<p>Assembly. Moving help. Yard cleanup.</p>
-<p>Good for filling income gaps fast.</p>
-<h2 id="h-best-side-hustles-for-nights-and-weekends">Best Side Hustles for Nights and Weekends</h2>
-<p>Not everyone has daytime flexibility. That’s okay.</p>
-<p>Strong options include:</p>
-<ul><li><a href="https://deluxebartendingservice.com/texas/fort-worth/">Bartending events</a></li><li>Catering support</li><li>Weekend photography</li><li>Market vending</li></ul>
-<p>The <strong>best side hustles in Fort Worth</strong> often happen when others want to relax.</p>
-<h2 id="h-online-side-hustles-you-can-run-from-fort-worth">Online Side Hustles You Can Run From Fort Worth</h2>
-<p>Location still matters. But these scale beyond city limits.</p>
-<ul><li>Virtual assistant work</li><li>Online tutoring</li><li>Selling digital templates</li><li>Consulting in your professional field</li></ul>
-<p>Local credibility helps even online.</p>
-<h2 id="h-how-much-can-you-actually-earn">How Much Can You Actually Earn?</h2>
-<p>Here’s a realistic comparison:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Monthly Potential</strong></td><td><strong>Time Flexibility</strong></td></tr><tr><td>Car Detailing</td><td>Low</td><td>$1,500–$4,000</td><td>High</td></tr><tr><td>Lawn Care</td><td>Low</td><td>$1,000–$3,500</td><td>Medium</td></tr><tr><td>Cleaning Services</td><td>Low</td><td>$2,000–$5,000</td><td>Medium</td></tr><tr><td>Real Estate Photography</td><td>Medium</td><td>$2,500–$6,000</td><td>High</td></tr><tr><td>Apartment Referrals</td><td>Very Low</td><td>$1,000–$7,000</td><td>High</td></tr><tr><td>Freelance Writing</td><td>Very Low</td><td>$1,500–$6,000</td><td>Very High</td></tr></tbody></table>
-<p>Consistency beats intensity. Every time.</p>
-<h2 id="h-legal-and-tax-considerations-in-texas">Legal and Tax Considerations in Texas</h2>
-<p>Texas keeps it simple, but don’t skip the basics.</p>
-<ul><li>No state income tax</li><li>Sales tax may apply to services</li><li>LLCs protect you as you grow</li><li>Insurance matters for hands-on work</li></ul>
-<p>When income becomes predictable, formalize it.</p>
-<h2 id="h-choosing-the-right-side-hustle-for-you">Choosing the Right Side Hustle for You</h2>
-<p>Ask yourself:</p>
-<ul><li>Do I want fast cash or long-term growth?</li><li>Do I enjoy people-facing work?</li><li>How much time can I commit weekly?</li></ul>
-<p>The <strong>best side hustles in Fort Worth</strong> are the ones you can sustain without resentment.</p>
-<h2 id="h-final-thoughts-turning-a-side-hustle-into-something-bigger">Final Thoughts: Turning a Side Hustle Into Something Bigger</h2>
-<p>Side hustles don’t have to stay small.</p>
-<p>Many of the <strong>best side hustles in Fort Worth</strong> quietly turn into full businesses because the city supports growth. Start lean. Test demand. Reinvest early profits. Say no to burnout.</p>
-<p>Extra income isn’t just about money. It’s about control.</p>
-<p>And Fort Worth? It’s one of the best places in Texas to take that control back.</p>
+<p>Fort Worth is one of the fastest-growing big cities in the country, and growth is great news for side income. New subdivisions keep popping up north and west of town, warehouses keep opening along the Alliance corridor, and the city still has the cowboy-town event calendar that brings crowds to the Stockyards and Will Rogers every winter. The best side hustles in Fort Worth tap into all three.</p>
+<p>This guide covers 18 side gigs that work in Fort Worth right now, with typical pay, startup costs and the local details that help you get clients quickly, from which suburbs need lawn routes to which weekends to block off for event work.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Texas state income tax</span></div>
+  <div class="stat"><b>$15–$75</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$0–$500</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="cowtown-economy">Stockyards to Alliance: where Fort Worth's money is</h2>
+<p>Fort Worth feels smaller than Dallas, but if you are working out how to make money in Fort Worth, there is plenty of demand:</p>
+<ul>
+  <li><strong>Logistics and aerospace.</strong> AllianceTexas in far north Fort Worth hosts major distribution and air cargo operations, BNSF Railway is headquartered in the city, Lockheed Martin builds the F-35 on the west side, and American Airlines is headquartered near DFW Airport. That's a lot of steady paychecks and constant parcel volume.</li>
+  <li><strong>New-home boom.</strong> Subdivisions in north Fort Worth, Walsh Ranch, Haslet, Saginaw and Crowley are full of new homeowners who need lawns mowed, blinds hung and garages organized.</li>
+  <li><strong>A cowboy-and-culture event calendar.</strong> The Fort Worth Stock Show and Rodeo runs for weeks every January and February at Dickies Arena and the Will Rogers Memorial Center, the Stockyards draw tourists all year, NASCAR races fill Texas Motor Speedway, and TCU football packs Amon G. Carter Stadium in the fall.</li>
+  <li><strong>Lower costs than Dallas or Austin.</strong> Your startup costs and living expenses stay modest, so side income stretches further.</li>
+</ul>
+
+<h2 id="home-growth">Side jobs in Fort Worth's booming suburbs</h2>
+<p>Home services are the backbone of Fort Worth side income. New homeowners have big lawns, busy schedules and HOAs that expect tidy yards.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-care-fw">1. Lawn care routes</h3>
+    <p>Weekly mowing contracts in Keller, Saginaw, Haslet and north Fort Worth turn into predictable income from spring through fall. Build a tight route in one subdivision so you spend time mowing, not driving. Texas generally treats lawn service as taxable, so price with that in mind.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> Mower, trimmer, blower</li><li><b>Best for:</b> Outdoorsy early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing-fw">2. Pressure washing</h3>
+    <p>Driveways, fences and brick facades collect grime and red dirt fast in North Texas. One job often pays $150 to $400, and before-and-after photos sell themselves in neighborhood Facebook groups across Southlake, Colleyville and Benbrook.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="truck-detailing">3. Mobile truck and SUV detailing</h3>
+    <p>Fort Worth is truck country. Mobile detailing in driveways and office parking lots near Alliance, downtown and Clearfork pays well, and full-size pickups justify premium pricing. Interior shampoo after a dusty summer is an easy upsell.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Detail-obsessed hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="new-home-handyman">4. New-home handyman services</h3>
+    <p>Freshly built homes need blinds, curtain rods, shelves, TV mounts, smart locks and ceiling fans. Package a "move-in day" bundle and market it in new-subdivision Facebook groups. Older homes in Fairmount and Arlington Heights need small repairs too.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$75/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+
+[[gear:leaf-blower,pressure-washer,cordless-drill|Equipment for Fort Worth home-service hustles]]
+
+<h2 id="driving-fw">Driving, delivery and the Alliance corridor</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="amazon-flex-fw">5. Amazon Flex and courier work</h3>
+    <p>With large distribution operations in the Alliance area and parcel volume across Tarrant County, Flex blocks are common, especially around Prime Day and the holiday season. Roadie and GoShare cover larger items. You see the block pay before you accept.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$25/hr (advertised block pay)</li><li><b>Startup:</b> Mid-size car or larger</li><li><b>Best for:</b> Early mornings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery-fw">6. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark are busiest around dinner. Clearfork, West 7th and Near Southside have dense restaurants, while Keller and Southlake tip well with easy parking.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr before gas</li><li><b>Startup:</b> Car, bike or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare-fw">7. Rideshare driving</h3>
+    <p>Friday and Saturday nights in the Stockyards, Sundance Square and Magnolia Avenue, DFW Airport runs, TCU game days and big Dickies Arena concerts are the best windows. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers sign-up.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr before expenses</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Night owls</li></ul>
+  </div>
+</div>
+<p>Check what driving really pays after gas and wear before you commit:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> I-35W and Loop 820 construction can eat your hourly rate. Use Chisholm Trail Parkway and the tollways when a surge justifies the toll, and track it as a business expense.</div>
+
+<h2 id="animal-acreage">Animal care and acreage side gigs</h2>
+<p>West and south of the city, Aledo, Weatherford, Benbrook and Burleson have properties with horses, chickens and big dogs. That's a niche most city guides skip.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="farm-sitting">8. Farm and pet sitting</h3>
+    <p>Owners with horses, goats and chickens need reliable sitters when they travel, and they pay more than standard pet sitting. In town, Rover and Wag stay busy with dog walks in Fairmount, TCU-area neighborhoods and downtown apartments. A [[amazon:dog-leash|hands-free dog leash]] makes multiple-dog walks easier.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/walk; $50–$100/day for farm sitting</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="fence-yard">9. Fence staining and acreage cleanup</h3>
+    <p>Wood fences and big properties need staining, brush clearing and seasonal cleanup. Spring and fall are prime. Stick to manual work and leave tree removal near power lines to licensed crews.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$600 per job</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Hard workers</li></ul>
+  </div>
+</div>
+
+<h2 id="events-fw">Stock Show, Speedway and game-day gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing-fw">10. Event staffing</h3>
+    <p>The Stock Show and Rodeo needs gate workers, concessions, parking and cleanup crews for weeks each winter. Texas Motor Speedway race weekends, Dickies Arena concerts and the Charles Schwab Challenge at Colonial in spring add more shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-parking-fw">11. Renting your parking space</h3>
+    <p>Homes near TCU, the Cultural District and the Speedway can rent driveway spots on game and race days. Check HOA rules first.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$50 per car on peak days</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Homeowners near venues</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography-fw">12. Photography</h3>
+    <p>The Stockyards, Magnolia Avenue murals and the Botanic Garden are favorite backdrops for engagement, family and senior photos. Realtors need listing shots for all those new builds.</p>
+    <ul class="meta"><li><b>Pay:</b> $125–$350 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+</div>
+
+<h2 id="fw-comparison">Best side hustles in Fort Worth: comparison table</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Lawn care</td><td>$35–$60 per lawn</td><td>$0–$500</td><td>Days</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Truck detailing</td><td>$100–$250 per detail</td><td>$200–$600</td><td>Days</td></tr>
+    <tr><td>Handyman</td><td>$40–$75/hr</td><td>$100–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Amazon Flex</td><td>$18–$25/hr</td><td>Mid-size car</td><td>1–2 weeks</td></tr>
+    <tr><td>Delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Farm &amp; pet sitting</td><td>$50–$100/day</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Event staffing</td><td>$15–$25/hr</td><td>$0</td><td>Next event</td></tr>
+  </tbody>
+</table>
+
+<h2 id="remote-fw">Online and flexible side hustles</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="tutoring-fw">13. Tutoring</h3>
+    <p>Families in Southlake (Carroll ISD), Keller and Aledo pay well for math, SAT/ACT and reading help. TCU students can tutor in person; anyone can tutor online.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelance-fw">14. Freelance writing, design and admin</h3>
+    <p>Local builders, ranch suppliers, churches and restaurants need websites, social posts and bookkeeping. Practice and build reviews on <a href="/fiverr/">Fiverr</a>, then pitch Fort Worth businesses directly.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$70/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, organizers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="western-reselling">15. Western wear and vintage reselling</h3>
+    <p>Boots, hats, pearl-snap shirts and vintage rodeo gear sell well locally and online. Estate sales in Westover Hills and Tanglewood, plus thrift stores, are good sources.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="cleaning-fw">16. House and move-out cleaning</h3>
+    <p>New construction needs post-build cleans, and apartment move-outs keep demand steady. Recurring clients in Southlake and Colleyville are the most stable.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Daytime availability</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-fw">17. Moving help</h3>
+    <p>Relocations into new subdivisions keep Dolly, Lugg and TaskRabbit busy. A truck and a hand cart are your main tools.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong, punctual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="baking-fw">18. Home-baked goods</h3>
+    <p>The Texas cottage food law allows sales of many home-made foods such as baked goods, candy and jams, directly to customers with proper labeling. Farmers markets and holiday pop-ups are good places to start.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Bakers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> North Texas storms move fast. Spring hail and severe weather can cancel outdoor jobs at short notice, so keep a weather buffer in your schedule and don't promise same-day service during storm warnings.</div>
+
+<h2 id="fw-schedule">Which Fort Worth side gig fits your schedule?</h2>
+<ul>
+  <li><strong>Weekday 9-to-5, weekends free:</strong> lawn routes, pressure washing, fence staining, event staffing and photography.</li>
+  <li><strong>Evenings only:</strong> delivery, rideshare, tutoring and freelance work.</li>
+  <li><strong>Early mornings:</strong> Amazon Flex blocks, dog walks before the heat and lawn mowing.</li>
+  <li><strong>School-hour gaps:</strong> house cleaning, handyman jobs and farm sitting check-ins.</li>
+</ul>
+<p>Consistency beats hourly rate in your first month, so pick the gig that fits hours you can actually protect.</p>
+
+<h2 id="start-fw">How to start a side hustle in Fort Worth this month</h2>
+<ol class="steps">
+  <li><strong>Pick one hustle.</strong> Choose the one that fits the hours you can protect every week.</li>
+  <li><strong>Choose your territory.</strong> North, west or southwest Fort Worth. Short drives mean more paid time.</li>
+  <li><strong>Set a monthly target.</strong> Work backward from the number you need to the hours and clients it takes, using the <a href="/tools/income-calculator/">income calculator</a>.</li>
+  <li><strong>Get listed.</strong> App sign-ups, Nextdoor, subdivision Facebook groups and a Google Business Profile.</li>
+  <li><strong>Land three clients and ask for reviews.</strong> Word of mouth spreads fast in Fort Worth neighborhoods.</li>
+  <li><strong>Block off event weekends.</strong> Stock Show weeks, race weekends and TCU home games.</li>
+</ol>
+
+<h2 id="fw-taxes">Texas taxes and Fort Worth rules</h2>
+<ul>
+  <li><strong>No state income tax.</strong> You owe federal income tax and 15.3% self-employment tax on net profit. Set aside about 20 to 25% and pay quarterly if you expect to owe $1,000 or more.</li>
+  <li><strong>Sales tax.</strong> Fort Worth's combined rate is typically 8.25%. Texas taxes many lawn, landscaping and cleaning services, plus physical goods. Get a free sales tax permit from the Comptroller if your work is taxable.</li>
+  <li><strong>Assumed name.</strong> File a DBA with the Tarrant County Clerk if you operate under a brand name.</li>
+  <li><strong>Short-term rentals.</strong> Fort Worth bans STRs in single-family zoning and requires registration where they're allowed. Hosts also owe hotel occupancy taxes.</li>
+  <li><strong>Rideshare.</strong> Texas regulates Uber and Lyft statewide, so no separate city chauffeur permit is needed.</li>
+</ul>
+<p>See our <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">Texas side hustle guide</a> for statewide trends.</p>
+
+<h2 id="nearby">Compare Fort Worth with nearby cities</h2>
+<p>See how Fort Worth compares with the best side hustles in <a href="/best-side-hustles-in-dallas/">Dallas</a>, <a href="/best-side-hustles-in-arlington/">Arlington</a> and <a href="/best-side-hustles-in-oklahoma-city/">Oklahoma City</a>. Fort Worth wins on home-service demand thanks to its new-home boom, which is why Better Side Hustles puts lawn and handyman work at the top of this list.</p>
+<p>Choose one idea, give it 90 days and track every dollar. Fort Worth side hustles in 2026 reward people who show up reliably.</p>
 HTML,
 ];
