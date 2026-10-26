@@ -103,7 +103,7 @@ require __DIR__ . '/header.php';
       <h2 id="faq-heading">Frequently asked questions</h2>
       <div class="faq">
         <?php foreach ($page['faq'] as $i => $f): if (empty($f['q'])) continue; ?>
-        <details<?= $i === 0 ? ' open' : '' ?>><summary><?= e(strip_tags($f['q'])) ?></summary><div><p><?= $f['a'] ?></p></div></details>
+        <details<?= $i === 0 ? ' open' : '' ?>><summary><?= e(html_entity_decode(strip_tags($f['q']), ENT_QUOTES | ENT_HTML5, 'UTF-8')) ?></summary><div><p><?= $f['a'] ?></p></div></details>
         <?php endforeach; ?>
       </div>
     </section>

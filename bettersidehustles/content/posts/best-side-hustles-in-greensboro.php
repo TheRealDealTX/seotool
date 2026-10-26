@@ -1,7 +1,7 @@
 <?php
 return [
     'title'       => 'Best Side Hustles in Greensboro (2026): 18 Ways to Earn',
-    'description' => 'The best side hustles in Greensboro for 2026: 18 side gigs from High Point Market rentals to furniture flipping and A&T homecoming work, with pay and NC tax tips.',
+    'description' => 'The best side hustles in Greensboro for 2026: 18 side gigs from High Point Market rentals to furniture flipping and A&T homecoming, with pay and NC tax tips.',
     'h1'          => 'Best Side Hustles in Greensboro (2026): 18 Side Gigs in the Gate City',
     'kicker'      => 'City Guide · NC',
     'dek'         => 'Greensboro pairs low living costs with a furniture-market economy, three busy campuses and a growing logistics and manufacturing base. These side jobs in Greensboro make the most of all of it.',

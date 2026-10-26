@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2024/09/Side-Job-Hustles-in-Texas-Emerging-Trends-and-Opportunities-for-All.webp',
     'image_alt'   => 'Texas city skyline representing side hustle opportunities across the state',
     'category'    => 'City Guides',
+    'city' => 'Texas',
+    'state' => 'TX',
     'keywords'    => ['side hustles in texas', 'how to make extra money in texas', 'side hustles houston', 'side hustles austin', 'side jobs in texas', 'texas side hustle'],
     'tool'        => 'gig-calculator',
     'gear'        => ['mileage-log', 'insulated-bag', 'cleaning-kit', 'car-charger'],

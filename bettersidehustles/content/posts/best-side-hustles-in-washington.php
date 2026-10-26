@@ -1,199 +1,200 @@
 <?php
 return [
-    'title'       => 'Best Side Hustles in Washington, DC (2026): 18 Ways to Earn',
-    'description' => 'The best side hustles in Washington, DC for 2026: 18 side gigs with real pay, startup costs, neighborhood tips, DC tax rates and Basic Business License basics.',
-    'h1'          => 'Best Side Hustles in Washington, DC (2026): 18 Side Gigs That Pay',
-    'kicker'      => 'City Guide · DC',
-    'dek'         => 'Airport runs from DCA, dog walks on Capitol Hill, federal resume help and conference-week staffing — here are the side jobs in DC that fit a busy policy-town schedule.',
+    'title'       => 'Best Side Hustles in Washington State (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Washington state for 2026: 18 side gigs by region, from Puget Sound to Spokane and Yakima, with pay, startup costs and B&O tax basics.',
+    'h1'          => 'Best Side Hustles in Washington State (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'State Guide · WA',
+    'dek'         => 'Cherry harvest in Wenatchee, snow routes in Spokane, rental turnovers on the coast and freelance work for Eastside tech teams — here are the side jobs in Washington state worth your time, region by region.',
     'published'   => '2026-01-12',
     'modified'    => '2026-10-26',
     'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Washington.webp',
-    'image_alt'   => 'Washington, DC skyline with the Capitol and Washington Monument, illustrating the best side hustles in Washington, DC',
+    'image_alt'   => 'Seattle skyline with Mt. Rainier and Pike Place Market, illustrating the best side hustles in Washington state',
     'category'    => 'City Guides',
-    'city'        => 'Washington, DC',
-    'state'       => 'DC',
-    'keywords'    => ['best side hustles in washington dc', 'side jobs in dc', 'side gigs in washington dc', 'how to make money in dc', 'dc side hustles 2026'],
-    'tool'        => 'freelance-rate',
-    'gear'        => ['camera', 'tripod', 'headset', 'book-side-hustle'],
-    'related'     => ['best-side-hustles-in-baltimore', 'best-side-hustles-in-philadelphia', 'best-side-hustles-in-virgina-beach'],
+    'city'        => 'Washington State',
+    'state'       => 'WA',
+    'keywords'    => ['best side hustles in washington', 'side hustles in washington state', 'side jobs in washington state', 'how to make money in washington state', 'washington side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['dash-cam', 'cleaning-kit', 'camera', 'mileage-log'],
+    'related'     => ['best-side-hustles-in-seattle', 'best-side-hustles-in-portland', 'best-side-hustles-in-denver'],
     'faq'         => [
-        ['q' => 'What are the best side hustles in Washington, DC?', 'a' => 'Rideshare and delivery, dog walking, babysitting, tutoring, freelance writing and editing, federal resume writing, event staffing during conferences, and tour guiding around the National Mall are the strongest picks. DC has a large, well-paid, time-strapped workforce, so people pay for convenience and for expertise in writing, policy and communications.'],
-        ['q' => 'How can I make money in DC fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart, Amazon Flex, Rover dog walking, TaskRabbit furniture assembly and staffing agencies that work Nationals Park, Capital One Arena and the convention center can all pay within a week or two. Bike delivery is often the fastest start downtown because you skip parking entirely.'],
-        ['q' => 'Do I need a business license for a side hustle in DC?', 'a' => 'Often, yes. Most for-profit activities in the District need a Basic Business License from the Department of Licensing and Consumer Protection, applied for through the My DC Business Center. You typically need a Clean Hands certification showing you owe the District no more than $100, and a Home Occupation Permit if you run the business from your home. Check which license category fits your work before you start.'],
-        ['q' => 'Can federal employees have a side hustle?', 'a' => 'Many can, but the rules are stricter than in the private sector. Federal ethics rules restrict outside work that conflicts with your official duties, uses government time or information, or involves certain paid speaking and writing about your agency\'s work, and many agencies require prior written approval. Talk to your agency ethics official before you take on clients.'],
-        ['q' => 'How are side hustles taxed in DC?', 'a' => 'DC has a graduated income tax from 4% to 10.75%, with 6% on income between $10,000 and $40,000 and 8.5% between $60,000 and $250,000. You also owe federal income tax and 15.3% self-employment tax. DC\'s unincorporated business franchise tax can apply above $12,000 in gross receipts, though businesses earning mostly from the owner\'s personal services are generally exempt.'],
-        ['q' => 'Which DC neighborhoods are best for side hustles?', 'a' => 'Capitol Hill, Navy Yard, Logan Circle, Dupont Circle and Shaw are ideal for dog walking, delivery and pet sitting. Georgetown, Foggy Bottom and Tenleytown suit tutoring near the universities. Chevy Chase, Cleveland Park and Spring Valley have larger homes that need babysitting, cleaning and handyman help, while downtown and the convention center drive event work.'],
+        ['q' => 'What are the best side hustles in Washington state?', 'a' => 'Rideshare and delivery around Puget Sound, seasonal orchard and packing-house work in Central Washington, short-term rental cleaning on the coast and in mountain towns, outdoor guiding near the national parks, snow removal in Spokane, winery event staffing, and remote freelancing for the tech industry are the strongest picks. The best choice depends heavily on which region you live in.'],
+        ['q' => 'How can I make money in Washington state fast?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart, Amazon Flex, Rover pet sitting and TaskRabbit can pay within a week or two once you clear the background check. In Central Washington, harvest crews and fruit warehouses hire quickly in summer and fall. In Spokane, knocking on doors with a snow shovel after the first big storm can earn cash the same day.'],
+        ['q' => 'Do I need a business license for a side hustle in Washington?', 'a' => 'Often, yes. Washington generally requires you to register through the Department of Revenue\'s Business Licensing Service once your business grosses $12,000 or more a year, or sooner if you collect sales tax, hire employees, use a trade name or need a city endorsement. Many cities, including Seattle, Tacoma and Spokane, also require their own license, sometimes at lower income levels.'],
+        ['q' => 'Does Washington have a state income tax on side hustle income?', 'a' => 'No. Washington has no personal income tax on wages or self-employment earnings. Instead, the state taxes businesses through the business and occupation (B&O) tax on gross receipts, and you still owe federal income tax plus 15.3% self-employment tax on net profit. Washington\'s capital gains excise tax applies only to large long-term investment gains, not ordinary side hustle income.'],
+        ['q' => 'Do small side hustles pay B&O tax in Washington?', 'a' => 'Usually very little or none. The service B&O rate is 1.5% of gross income for businesses under $1 million, but a small business credit reduces or eliminates the tax for low earners, and the smallest businesses may not need to file a return at all. The legislature has been adjusting these thresholds, so check the current numbers at dor.wa.gov before you file.'],
+        ['q' => 'Which part of Washington is best for side hustles?', 'a' => 'Puget Sound, from Everett through Bellevue to Tacoma, has the most demand for app gigs, pet care and professional freelancing. Central Washington is best for seasonal harvest and winery work. Spokane offers lower living costs and strong winter demand, while the coast, Leavenworth and the San Juan Islands suit rental cleaning and tourism work.'],
     ],
     'body'        => <<<'HTML'
-<p>Washington runs on long hours and short attention spans. Staffers, lawyers, consultants, contractors and diplomats earn good salaries but rarely have time to walk the dog, assemble the bookshelf or polish their own resume. That gap is exactly where the best side hustles in Washington, DC live — plus a steady flow of tourists, conferences and game nights that keep drivers and staff busy.</p>
-<p>This guide covers 18 side jobs in DC, what each typically pays, what it costs to start, the neighborhoods to target, and the District-specific rules — the Basic Business License, DC income tax, and federal ethics limits — that you should know before you take your first client.</p>
+<p>Washington is really several economies sharing one state line. The wet, crowded Puget Sound corridor runs on tech, aerospace, the ports and military bases. East of the Cascades, Central Washington grows a huge share of the nation's apples, cherries and hops, while Spokane gets real winters and a lower cost of living. Add the coast and three national parks, and the best side hustles in Washington depend on where you are standing. This guide sorts them out region by region.</p>
+<p>You'll find 18 side jobs in Washington state, what each typically pays, what it costs to start, the season it peaks, and the state rules that matter: no income tax, but a B&O tax and a business license system that most other states don't have.</p>
 
 <div class="stat-row">
-  <div class="stat"><b>4%–10.75%</b><span>DC income tax brackets</span></div>
-  <div class="stat"><b>$18–$85</b><span>typical hourly range across these gigs</span></div>
-  <div class="stat"><b>$0–$400</b><span>startup cost for most options</span></div>
+  <div class="stat"><b>0%</b><span>state personal income tax</span></div>
+  <div class="stat"><b>$17–$80</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$12,000</b><span>gross income that generally triggers a state business license</span></div>
 </div>
 
-<div class="callout callout-warn"><strong>Federal employee?</strong> Read this first. Federal ethics rules limit outside work that overlaps with your official duties, and many agencies require written approval before you take paid outside employment. Check with your agency ethics official before you start — it's a short conversation that protects your day job.</div>
-
-<h2 id="dc-economy">How DC's economy shapes side work</h2>
-<p>The District is small — you can bike across most of it in under an hour — but its demand is concentrated and well funded:</p>
+<h2 id="washington-regions">Where the money is: Washington by region</h2>
 <ul>
-  <li><strong>Government, contractors and lobbying</strong> fill downtown, K Street and Capitol Hill with professionals who outsource everything from errands to editing.</li>
-  <li><strong>Universities</strong> — Georgetown, George Washington, American, Howard, Catholic and Gallaudet — create tutoring, moving and event demand on a semester cycle.</li>
-  <li><strong>Tourism</strong> centered on the National Mall, the Smithsonian museums and the monuments peaks during the National Cherry Blossom Festival in spring and around July 4.</li>
-  <li><strong>Sports and conventions:</strong> Nationals Park and Audi Field by the Navy Yard, Capital One Arena in Penn Quarter, and the Walter E. Washington Convention Center bring surges for rideshare, staffing and short-term services.</li>
-  <li><strong>Three airports</strong> — Reagan National, Dulles and BWI — mean airport runs are a constant.</li>
+  <li><strong>Puget Sound (Everett, Bellevue, Tacoma):</strong> the densest demand in the state. Amazon and Microsoft anchor the Eastside, Boeing builds planes in Everett, and Joint Base Lewis-McChord and the Port of Tacoma drive the South Sound. Seattle itself has its own rules and quirks, covered in our <a href="/best-side-hustles-in-seattle/">Seattle side hustle guide</a>.</li>
+  <li><strong>Spokane and the Inland Northwest:</strong> Gonzaga, Fairchild Air Force Base, a growing medical district and much cheaper housing. Snow and nearby ski hills like Mt. Spokane and 49 Degrees North create winter work.</li>
+  <li><strong>Central Washington (Yakima, Wenatchee, Tri-Cities):</strong> orchards, hop yards, packing houses and wineries, plus the Hanford site and steady growth in Kennewick, Pasco and Richland.</li>
+  <li><strong>Vancouver and SW Washington:</strong> Portland-metro demand with Washington's tax setup — no income tax at home, and shoppers who head across the river to skip sales tax.</li>
+  <li><strong>Olympia and Bellingham:</strong> the state capitol and Evergreen State College in Olympia; Western Washington University, Mt. Baker and Canadian visitors in Bellingham.</li>
+  <li><strong>The coast and national parks:</strong> Long Beach, Ocean Shores, the San Juan Islands, Leavenworth, Lake Chelan, and the gateways to Olympic, Mount Rainier and North Cascades.</li>
 </ul>
-<p>DC also has an unusually transient population. People rotate in and out with administrations, fellowships and postings, which means a steady stream of moves, furniture sales and new residents looking for a sitter, a cleaner or a dog walker.</p>
 
-<h2 id="best-side-hustles-in-washington-dc">Best side hustles in Washington, DC: the top 8</h2>
+<h2 id="best-side-hustles-in-washington">Best side hustles in Washington: the top 8</h2>
 <div class="hustle-grid">
   <div class="hustle-card">
-    <h3 id="rideshare">1. Rideshare driving</h3>
-    <p>Airport trips to and from Reagan National, Union Station departures, late nights on U Street, 14th Street and H Street, and exits from Nationals Park and Capital One Arena are DC's best rideshare windows. Weekday rush hour is lucrative per trip but slow per hour. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers signing up.</p>
-    <ul class="meta"><li><b>Pay:</b> $18–$32/hr before expenses</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Airport runs, nightlife</li></ul>
+    <h3 id="rideshare-delivery">1. Rideshare and delivery around Puget Sound</h3>
+    <p>Sea-Tac airport runs, Bellevue and Redmond office commutes, Tacoma Dome concerts and Everett's Paine Field flights keep drivers busy, and rainy evenings push delivery orders up. Washington also sets statewide minimum per-mile and per-minute pay for rideshare drivers. Spokane, Vancouver and the Tri-Cities are slower but less crowded. Start with our <a href="/lyft-uber/">Lyft and Uber guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$35/hr before expenses</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Flexible schedules</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="delivery">2. Bike and e-bike delivery</h3>
-    <p>Parking downtown is expensive and scarce, so couriers on bikes and e-bikes often out-earn drivers in Dupont, Logan Circle, Shaw, Navy Yard and Capitol Hill. Lunch rushes near office clusters and rainy weeknights are the sweet spots.</p>
-    <ul class="meta"><li><b>Pay:</b> $16–$24/hr before costs</li><li><b>Startup:</b> Bike or e-bike</li><li><b>Best for:</b> Fit, flexible earners</li></ul>
+    <h3 id="harvest-work">2. Orchard, harvest and packing-house work</h3>
+    <p>Cherry season typically runs June into July around Wenatchee and Yakima, hops come in during late summer, and apple picking and packing stretch from late summer into fall. Fruit warehouses add evening and weekend shifts, and growers pay pickers by the bin or the hour. It's physical work, but cash arrives fast.</p>
+    <ul class="meta"><li><b>Pay:</b> Hourly or piece rate, often $18–$30/hr for fast pickers</li><li><b>Startup:</b> Boots, gloves</li><li><b>Best for:</b> Central WA, summer earners</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="dog-walking">3. Dog walking and pet sitting</h3>
-    <p>Condo and rowhouse dogs on Capitol Hill, in Navy Yard and around Logan Circle need midday walks while their owners sit through hearings and meetings. Owners who travel often for work book overnight sitters regularly. Start on Rover, then grow through building referrals.</p>
-    <ul class="meta"><li><b>Pay:</b> $20–$35/walk, $60–$100/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+    <h3 id="rental-cleaning">3. Vacation rental cleaning and co-hosting</h3>
+    <p>Cabins near Mt. Rainier, Bavarian-themed Leavenworth, Lake Chelan condos, San Juan Islands cottages and Long Beach Peninsula beach houses all need fast same-day turnovers. Once hosts trust you, offer restocking, laundry and guest messaging as a co-host.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60/hr or $80–$200/turnover</li><li><b>Startup:</b> $100–$200 in supplies</li><li><b>Best for:</b> Reliable, detail-oriented people</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="babysitting">4. Babysitting and nanny shares</h3>
-    <p>Dual-career families in Chevy Chase, Cleveland Park, Capitol Hill and Brookland need date-night sitters, after-school pickups and backup care when Congress runs late. CPR certification and references let you charge top rates.</p>
-    <ul class="meta"><li><b>Pay:</b> $20–$35/hr</li><li><b>Startup:</b> $0–$100 (CPR class)</li><li><b>Best for:</b> Experienced caregivers</li></ul>
+    <h3 id="outdoor-guiding">4. Outdoor guiding and tour work</h3>
+    <p>Kayak tours in the San Juans, whitewater on the Wenatchee River, day hikes at Paradise and Hurricane Ridge, and snowshoe walks in winter all need part-time guides. Outfitters usually want first aid or Wilderness First Aid training and a good attitude more than years of experience.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/hr plus tips</li><li><b>Startup:</b> $0–$250 (first aid course)</li><li><b>Best for:</b> Outdoorsy weekenders</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="tutoring">5. Tutoring and test prep</h3>
-    <p>Families across the District and close-in suburbs invest heavily in math, SAT, ACT and admissions help. Grad students at Georgetown, GW and American can tutor in person; native speakers of in-demand languages can tutor diplomats' families and professionals.</p>
-    <ul class="meta"><li><b>Pay:</b> $35–$90/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+    <h3 id="snow-removal">5. Snow removal in Spokane and the mountains</h3>
+    <p>Spokane, Cheney and Spokane Valley get real snow, and older homeowners and small businesses pay for reliable sidewalk and driveway clearing. Sell seasonal contracts in the fall so you are not chasing customers mid-storm. Cle Elum and Leavenworth cabin owners pay for roof and walkway clearing too.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$75/driveway, more on contract</li><li><b>Startup:</b> $40–$600 (shovel to snowblower)</li><li><b>Best for:</b> Early risers, Eastern WA</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="writing-editing">6. Freelance writing and editing</h3>
-    <p>Think tanks, trade associations, nonprofits and consultancies all need op-ed editing, reports, newsletters and grant writing. If you can write clearly about policy, you can charge specialist rates. Build samples on <a href="/fiverr/">Fiverr</a> or Upwork, then pitch associations directly.</p>
-    <ul class="meta"><li><b>Pay:</b> $40–$100/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Strong writers</li></ul>
+    <h3 id="tech-freelancing">6. Freelancing for the tech economy</h3>
+    <p>The Eastside is full of startups and small vendors that need contract developers, UX writers, QA testers, data analysts and technical editors. If you already work in tech, check your employment agreement first, then build a few samples and list them on <a href="/fiverr/">Fiverr</a> or pitch local founders directly.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$120/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Developers, writers, designers</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="resume-writing">7. Federal resume and career coaching</h3>
-    <p>Federal resumes and USAJOBS applications follow their own conventions, and plenty of job seekers — including people leaving or entering government service — will pay for help translating experience into the right format. Former HR specialists and hiring managers have a real edge.</p>
-    <ul class="meta"><li><b>Pay:</b> $150–$500 per resume package</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> HR pros, ex-feds</li></ul>
+    <h3 id="pet-care">7. Dog walking and pet sitting</h3>
+    <p>Long commutes across the 520 and I-90 bridges leave dogs home alone in Bellevue, Kirkland, Tacoma's North End and Vancouver's newer neighborhoods. Weekend hikers and frequent flyers book overnight sitters. Start on Rover, then move regulars to direct bookings.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$35/walk, $50–$90/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="event-staffing">8. Conference and event staffing</h3>
-    <p>Big conventions, association meetings and hotel events need registration staff, brand ambassadors, AV help and ushers. Staffing agencies also hire for Nationals Park, Audi Field and Capital One Arena. Spring and fall conference seasons are busiest.</p>
-    <ul class="meta"><li><b>Pay:</b> $18–$30/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Outgoing weekend earners</li></ul>
+    <h3 id="winery-staff">8. Winery tasting rooms and event staffing</h3>
+    <p>Woodinville, Walla Walla, the Yakima Valley and Red Mountain near the Tri-Cities host weekend crowds, release parties and weddings. Tasting rooms hire part-time pourers, and caterers need servers for summer and harvest events. You'll need a state alcohol server permit (MAST) to pour.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$25/hr plus tips</li><li><b>Startup:</b> MAST class fee</li><li><b>Best for:</b> Social weekend workers</li></ul>
   </div>
 </div>
-<div class="callout"><strong>Quick tip:</strong> Expertise is DC's best-paying currency. If you have policy, legal, communications or HR experience, an hour of editing or coaching usually beats an hour of app work by a wide margin.</div>
+<p>Driving or delivering? Before you commit, check what you really earn per hour after gas, mileage and wear:</p>
+<p>[[tool:gig-calculator]]</p>
 
-<h2 id="dc-pay-comparison">Side jobs in DC compared</h2>
+<div class="callout"><strong>Quick tip:</strong> Stack seasons. A Wenatchee resident can pick cherries in July, staff a winery in September, guide snowshoe tours in January and clean rental cabins year-round. Washington rewards people who plan their side income around the calendar.</div>
+
+<h2 id="washington-side-jobs-compared">Side jobs in Washington state compared</h2>
 <table class="data">
   <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
   <tbody>
-    <tr><td>Rideshare</td><td>$18–$32/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
-    <tr><td>Bike delivery</td><td>$16–$24/hr before costs</td><td>Bike or e-bike</td><td>Under 1 week</td></tr>
-    <tr><td>Dog walking</td><td>$20–$35/walk</td><td>$0</td><td>1–3 weeks</td></tr>
-    <tr><td>Babysitting</td><td>$20–$35/hr</td><td>$0–$100</td><td>1–2 weeks</td></tr>
-    <tr><td>Tutoring</td><td>$35–$90/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
-    <tr><td>Writing and editing</td><td>$40–$100/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
-    <tr><td>Federal resume writing</td><td>$150–$500/package</td><td>Laptop</td><td>2–4 weeks</td></tr>
-    <tr><td>Event staffing</td><td>$18–$30/hr</td><td>$0</td><td>Next big event</td></tr>
+    <tr><td>Rideshare and delivery</td><td>$20–$35/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Harvest and packing work</td><td>$18–$30/hr or piece rate</td><td>Boots, gloves</td><td>Days (in season)</td></tr>
+    <tr><td>Rental cleaning</td><td>$80–$200/turnover</td><td>$100–$200</td><td>1–3 weeks</td></tr>
+    <tr><td>Outdoor guiding</td><td>$18–$30/hr plus tips</td><td>$0–$250</td><td>2–6 weeks</td></tr>
+    <tr><td>Snow removal</td><td>$35–$75/driveway</td><td>$40–$600</td><td>First storm</td></tr>
+    <tr><td>Tech freelancing</td><td>$40–$120/hr</td><td>Laptop</td><td>2–8 weeks</td></tr>
+    <tr><td>Pet care</td><td>$20–$35/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Winery and event staff</td><td>$18–$25/hr plus tips</td><td>Permit fee</td><td>1–3 weeks</td></tr>
   </tbody>
 </table>
-<p>Want to see what these rates add up to? Plug in your hours and pay to see your monthly and yearly side income:</p>
-<p>[[tool:income-calculator]]</p>
 
-[[gear:phone-mount,insulated-bag,dog-leash|Starter gear for DC gig work]]
+[[gear:snow-shovel,pressure-washer,phone-mount|Gear that pays for itself in Washington]]
 
-<h2 id="tourism-and-seasonal">Tourism and seasonal gigs</h2>
+<h2 id="west-side-services">West-side home services: moss, rain and moves</h2>
 <div class="hustle-grid">
   <div class="hustle-card">
-    <h3 id="tour-guide">9. Monument and museum tour guiding</h3>
-    <p>Walking, bike and night-monument tours run nearly year-round and peak during cherry blossom season and summer break. Tour companies hire part-time guides, and Airbnb Experiences lets you design your own. Good storytelling beats a history degree.</p>
-    <ul class="meta"><li><b>Pay:</b> $20–$35/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> History lovers, talkers</li></ul>
+    <h3 id="moss-pressure-washing">9. Moss removal, gutter cleaning and pressure washing</h3>
+    <p>Western Washington's damp winters grow moss on roofs, decks, driveways and fences. Homeowners from Olympia to Bellingham book cleanups in spring and gutter clearing every fall. Ladder safety matters — start with ground-level decks and patios.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$500/job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Hands-on workers</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="headshots">10. Headshot and event photography</h3>
-    <p>In a city of LinkedIn profiles and speaker bios, professional headshots are in constant demand. Conferences, receptions and graduations add event work. A solid camera and a [[amazon:ring-light|ring light]] get you started.</p>
-    <ul class="meta"><li><b>Pay:</b> $100–$300 per session</li><li><b>Startup:</b> $300–$1,000</li><li><b>Best for:</b> Visual people</li></ul>
+    <h3 id="military-moves">10. Moving help and move-out cleaning near JBLM</h3>
+    <p>Military families rotate in and out of Joint Base Lewis-McChord constantly, so Lakewood, DuPont, Lacey and Tacoma see steady demand for packing help, hauling and move-out cleaning, especially in summer. Fairchild AFB creates similar demand near Spokane.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $0–$150</li><li><b>Best for:</b> Strong, punctual workers</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="moving-help">11. Moving help</h3>
-    <p>Fellowships, internships and job changes keep DC moving all year, with spikes in late spring and late summer. Walk-up rowhouses and condo elevators with strict move windows mean people pay for fast help.</p>
-    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong, punctual workers</li></ul>
-  </div>
-  <div class="hustle-card">
-    <h3 id="parking">12. Renting your parking space</h3>
-    <p>A private spot near Navy Yard, Capitol Hill or downtown is valuable on game days and to monthly renters. List it on SpotHero or Neighbor.</p>
-    <ul class="meta"><li><b>Pay:</b> $150–$350/month per spot</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Owners with parking</li></ul>
-  </div>
-</div>
-
-<h2 id="home-services">Home services in the District</h2>
-<div class="hustle-grid">
-  <div class="hustle-card">
-    <h3 id="cleaning">13. House and move-out cleaning</h3>
-    <p>Recurring cleaning for busy professionals is steady work, and the constant turnover of renters keeps property managers looking for reliable move-out cleaners.</p>
-    <ul class="meta"><li><b>Pay:</b> $28–$50/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-oriented people</li></ul>
-  </div>
-  <div class="hustle-card">
-    <h3 id="handyman">14. Furniture assembly and small repairs</h3>
-    <p>New arrivals need furniture assembled and TVs mounted fast. TaskRabbit is busy across the District. Skip electrical and plumbing work, which requires licensed trades.</p>
+    <h3 id="handyman">11. Furniture assembly and small repairs</h3>
+    <p>New hires relocating to the Eastside and Vancouver need furniture built and TVs mounted fast. TaskRabbit is busy across Puget Sound. Leave electrical and plumbing to licensed trades — Washington also has contractor registration rules for larger repair jobs.</p>
     <ul class="meta"><li><b>Pay:</b> $45–$85/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
   </div>
+  <div class="hustle-card">
+    <h3 id="amazon-flex">12. Amazon Flex and peak-season warehouse shifts</h3>
+    <p>Amazon's delivery stations and fulfillment centers around Kent, DuPont and the Spokane area add flexible blocks and seasonal shifts before the holidays. Flex blocks are short, so they fit around a day job.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$28/hr</li><li><b>Startup:</b> Car, smartphone</li><li><b>Best for:</b> Holiday cash</li></ul>
+  </div>
 </div>
 
-<h2 id="online">Online side hustles for DC professionals</h2>
+<h2 id="campus-and-capitol">College towns and the capitol</h2>
 <div class="hustle-grid">
   <div class="hustle-card">
-    <h3 id="virtual-assistant">15. Virtual assistant and proposal support</h3>
-    <p>Small government contractors and independent consultants need help formatting proposals, managing calendars and tracking opportunities. Detail-oriented assistants can land steady retainers.</p>
-    <ul class="meta"><li><b>Pay:</b> $25–$50/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+    <h3 id="tutoring">13. Tutoring and test prep</h3>
+    <p>Families on the Eastside invest heavily in math, coding and admissions help, while UW Tacoma, Gonzaga, WWU, WSU in Pullman and Central Washington University in Ellensburg give students and grads plenty of tutoring work. Online tutoring lets rural tutors reach Puget Sound rates.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$90/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
   </div>
   <div class="hustle-card">
-    <h3 id="translation">16. Translation and language tutoring</h3>
-    <p>Embassies, international organizations and NGOs make DC unusually multilingual. Translators and language tutors find clients locally and on national platforms.</p>
-    <ul class="meta"><li><b>Pay:</b> $30–$80/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Fluent bilinguals</li></ul>
-  </div>
-  <div class="hustle-card">
-    <h3 id="online-courses">17. Online courses and workshops</h3>
-    <p>Grant writing, public speaking, data analysis and federal hiring all make strong course topics. Package what you know on <a href="/udemy/">Udemy</a> or Thinkific.</p>
-    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts and teachers</li></ul>
-  </div>
-  <div class="hustle-card">
-    <h3 id="reselling">18. Furniture reselling</h3>
-    <p>People leaving DC on short notice often sell or give away good furniture. Pick it up, clean it and resell on Facebook Marketplace — an SUV or small van helps.</p>
-    <ul class="meta"><li><b>Pay:</b> $200–$1,200/month part-time</li><li><b>Startup:</b> $0–$300</li><li><b>Best for:</b> People with a vehicle</li></ul>
+    <h3 id="session-work">14. Legislative-session and capitol-area gigs</h3>
+    <p>Olympia fills with legislators, staff, advocates and lobbyists during the session that starts each January. That brings short-term demand for room rentals, pet care, catering staff, rideshare and writing or research help for advocacy groups.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$60/hr depending on the gig</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Olympia and Lacey residents</li></ul>
   </div>
 </div>
 
-<h2 id="get-started">How to start a side hustle in DC this month</h2>
+<h2 id="tourism-and-makers">Tourism, makers and online income</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="photography">15. Elopement and adventure photography</h3>
+    <p>Couples travel from around the country to elope at Rainier, on Olympic beaches, in the Palouse hills or above Diablo Lake. Portfolio-building shoots for hikers and families add volume. A sturdy [[amazon:tripod|tripod]] and rain covers are non-negotiable in this climate.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/session</li><li><b>Startup:</b> $500–$2,000</li><li><b>Best for:</b> Visual storytellers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="farmers-markets">16. Farmers markets and cottage food</h3>
+    <p>The Olympia, Bellingham, Spokane and Tacoma farmers markets are strong places to sell baked goods, jams and crafts. Washington's Cottage Food permit from the state Department of Agriculture covers many home-made, shelf-stable foods; check the rules before selling.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$800/market day</li><li><b>Startup:</b> $100–$500 plus fees</li><li><b>Best for:</b> Bakers and makers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="gear-reselling">17. Reselling outdoor gear</h3>
+    <p>Washingtonians buy a lot of tents, skis, bikes and rain shells, and plenty of it ends up barely used. Buy at garage sales and Marketplace in the off-season, clean it, and resell when hiking or ski season starts.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,000/month part-time</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="online-courses">18. Online courses and remote work</h3>
+    <p>If you live somewhere quiet like the Okanogan or the Palouse, remote income is your best lever. Package a skill into a course on <a href="/udemy/">Udemy</a> or take remote clients — you earn national rates without Puget Sound housing costs.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Rural experts</li></ul>
+  </div>
+</div>
+<p>Not sure which of these fits your skills? Take the <a href="/tools/side-hustle-quiz/">side hustle quiz</a> for a short list.</p>
+
+<h2 id="start-this-month">How to make money in Washington state this month</h2>
 <ol class="steps">
-  <li><strong>Clear any employer conflicts.</strong> Federal employees and many contractor and law firm staff need approval for outside work. Ask first.</li>
-  <li><strong>Pick one gig and price it right.</strong> Use the <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> so your rate covers DC taxes and unpaid admin time.</li>
-  <li><strong>Check your licensing.</strong> Look up your activity in the My DC Business Center, get Clean Hands certification and apply for a Basic Business License (and Home Occupation Permit) if it applies.</li>
-  <li><strong>List where Washingtonians look.</strong> Gig apps for driving and delivery; Nextdoor, neighborhood listservs, parent groups and LinkedIn for professional services.</li>
-  <li><strong>Land three clients and collect reviews.</strong> In a referral-driven city, early testimonials matter more than ads.</li>
-  <li><strong>Save 30% of profit for taxes.</strong> DC's brackets climb quickly, so set aside more than you think.</li>
+  <li><strong>Pick a gig that matches your region and season.</strong> Harvest and guiding are summer plays; snow and holiday delivery are winter ones. App gigs and freelancing work year-round.</li>
+  <li><strong>Check your employer agreement.</strong> Many tech and aerospace employers have outside-work and IP clauses. Read yours before you take clients.</li>
+  <li><strong>Register if you need to.</strong> Use the state's Business Licensing Service once you expect $12,000 or more in gross income, or right away if you'll collect sales tax or use a trade name. Add any city endorsement at the same time.</li>
+  <li><strong>List where your neighbors look.</strong> Gig apps for driving and delivery; Nextdoor, local Facebook groups and Craigslist for cleaning, snow and moss jobs; LinkedIn for freelance work.</li>
+  <li><strong>Collect three reviews fast.</strong> Early five-star reviews matter more than ads, especially in small towns.</li>
+  <li><strong>Set aside 20–25% of profit.</strong> There is no state income tax, but federal and self-employment taxes still apply.</li>
 </ol>
 
-<h2 id="dc-taxes-licenses">DC taxes and business license basics</h2>
+<h2 id="washington-taxes-licenses">Washington taxes and business license basics</h2>
 <ul>
-  <li><strong>Income tax:</strong> DC's graduated rates run from 4% to 10.75%: 4% on the first $10,000, 6% from $10,000 to $40,000, 6.5% from $40,000 to $60,000 and 8.5% from $60,000 to $250,000, with higher rates above that.</li>
-  <li><strong>Unincorporated business franchise tax:</strong> DC can tax the net income of unincorporated businesses with more than $12,000 in gross receipts (8.25% through tax year 2025), but businesses that earn more than 80% of their income from the owner's personal services, without significant capital, are generally exempt. Many solo service hustles fall in that category — confirm with the Office of Tax and Revenue.</li>
-  <li><strong>Basic Business License (BBL):</strong> most for-profit activity in the District needs one, issued by the Department of Licensing and Consumer Protection. Expect to need a Clean Hands certification (owing the District no more than $100), and a Home Occupation Permit if you work from home. Fees depend on license category and term.</li>
-  <li><strong>Sales tax:</strong> the general DC sales tax rose to 7% on October 1, 2026. Register with the Office of Tax and Revenue if you sell taxable goods or services.</li>
-  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, plus federal income tax. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>No personal income tax:</strong> Washington does not tax wages or self-employment income at the state level. Vancouver residents who work in Oregon still owe Oregon income tax on that work.</li>
+  <li><strong>B&O tax:</strong> the state's business and occupation tax applies to gross receipts, not profit. Most service income falls under the service classification at 1.5% for businesses under $1 million. A small business credit reduces or wipes out B&O for low earners, and the smallest businesses may not need to file. Because the legislature has been changing these thresholds, confirm current numbers at dor.wa.gov.</li>
+  <li><strong>State business license:</strong> registration through the Department of Revenue's Business Licensing Service is generally required at $12,000 or more in annual gross income, or earlier if you hire, use a trade name or collect sales tax.</li>
+  <li><strong>City licenses and local B&O:</strong> many cities require their own license, and some, including Seattle, Tacoma, Bellevue and Everett, levy a local B&O tax as well. Check your city's rules.</li>
+  <li><strong>Sales tax:</strong> if you sell goods, or services the state treats as retail sales, you collect the state 6.5% rate plus local sales tax. Recent law changes added some services to that list, so check before you sell.</li>
+  <li><strong>Capital gains excise tax:</strong> this applies only to large long-term gains on investments, not to ordinary side hustle income.</li>
+  <li><strong>Federal taxes:</strong> 15.3% self-employment tax on net profit plus federal income tax. Estimate your set-aside with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
 </ul>
-<div class="callout callout-warn"><strong>Watch out:</strong> Short-term rental hosting in DC requires its own license and is generally limited to your primary residence. Don't list a spare unit or co-host for someone until you've checked the rules.</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Short-term rental rules vary widely by county and city, and some mountain and island communities cap or restrict new rentals. If you plan to host rather than clean, check local permits before listing.</div>
 
 <h2 id="nearby">Nearby city guides</h2>
-<p>Commuting up the Northeast Corridor or looking south? Compare the <a href="/best-side-hustles-in-baltimore/">best side hustles in Baltimore</a>, <a href="/best-side-hustles-in-philadelphia/">Philadelphia</a> and <a href="/best-side-hustles-in-virgina-beach/">Virginia Beach</a>. DC's advantage is a deep pool of clients who pay for convenience and expertise. At Better Side Hustles, the pattern we see is simple: start with the skill your day job already gave you, keep it clean with your employer and the District, and stay consistent for 90 days.</p>
+<p>Live in the city itself? The <a href="/best-side-hustles-in-seattle/">best side hustles in Seattle</a> covers Seattle's own licensing and neighborhoods. Vancouver residents should also read the <a href="/best-side-hustles-in-portland/">Portland guide</a>, and if you split time between mountain towns, compare the <a href="/best-side-hustles-in-denver/">best side hustles in Denver</a>. At Better Side Hustles, we see the same pattern across Washington: pick one gig that fits your region, stack a second that fits the season, and stay consistent through a full year.</p>
 HTML,
 ];

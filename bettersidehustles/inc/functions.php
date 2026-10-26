@@ -290,8 +290,8 @@ function schema_faq(array $faq): ?array
         '@type' => 'FAQPage',
         'mainEntity' => array_values(array_map(fn($f) => [
             '@type' => 'Question',
-            'name' => strip_tags($f['q']),
-            'acceptedAnswer' => ['@type' => 'Answer', 'text' => strip_tags($f['a'])],
+            'name' => html_entity_decode(strip_tags($f['q']), ENT_QUOTES | ENT_HTML5, 'UTF-8'),
+            'acceptedAnswer' => ['@type' => 'Answer', 'text' => html_entity_decode(strip_tags($f['a']), ENT_QUOTES | ENT_HTML5, 'UTF-8')],
         ], $faq)),
     ];
 }
