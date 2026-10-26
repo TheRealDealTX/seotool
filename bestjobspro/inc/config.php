@@ -13,8 +13,8 @@ const SITE_ZIP    = '76092';
 const SITE_MAP    = 'https://goo.gl/maps/PM6Wc4HnNQnEnRx86';
 const SITE_FOUNDED = '2023';
 
-// Form delivery. Hostinger's PHP mail() sends from the hosting account; the From
-// address must be a mailbox on this domain or messages get rejected as spoofed.
+// Form delivery. With SMTP_* set in inc/secret.php, mail goes out through that mailbox;
+// FORM_FROM is only used by the PHP mail() fallback.
 const FORM_TO   = 'careers@bestjobspro.com';
 const FORM_FROM = 'no-reply@bestjobspro.com';
 const RESUME_MAX_BYTES = 10 * 1024 * 1024;

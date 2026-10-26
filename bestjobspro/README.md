@@ -47,10 +47,19 @@ New pages: `/career-tools/` plus six tool pages, and `/terms-of-use/`.
 1. In hPanel → Websites → bestjobspro.com, back up the current WordPress site (Files + Database) first.
 2. Remove the WordPress files from `public_html` (keep any `google*.html` Search Console verification file).
 3. Upload everything in this folder (including the hidden `.htaccess`) to `public_html`.
-4. hPanel → **Emails**: make sure the mailbox `careers@bestjobspro.com` exists, and create `no-reply@bestjobspro.com`
-   (forms send from it; mail from a non-existent address is often rejected).
+4. Forms send through authenticated SMTP as `careers@bestjobspro.com` (to itself, with Reply-To set to the visitor).
+   The login lives in `inc/secret.php` on the server only (see step 6). Without that file the site falls back to PHP `mail()`.
 5. hPanel → Security → SSL: turn on **Force HTTPS**.
-6. Optional: create `inc/secret.php` containing `<?php const FORM_SECRET = 'some-long-random-string';` (not committed).
+6. Create `inc/secret.php` on the server (never commit it):
+   ```php
+   <?php
+   const FORM_SECRET = 'long-random-string';
+   const SMTP_HOST = 'smtp.hostinger.com';
+   const SMTP_PORT = 465;
+   const SMTP_USER = 'careers@bestjobspro.com';
+   const SMTP_PASS = 'mailbox password';
+   ```
+   If you change the mailbox password in hPanel, update `SMTP_PASS` here too.
 7. Test: submit the contact form and an application with a résumé, then check the inbox.
 8. Search Console: submit `https://bestjobspro.com/sitemap.xml` and request indexing for the homepage.
 

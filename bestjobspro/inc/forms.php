@@ -10,12 +10,17 @@ const RESUME_TYPES = [
     'txt'  => ['text/plain'],
 ];
 
-function form_secret(): string
+/** Server-only settings in inc/secret.php (not in git): FORM_SECRET and the SMTP_* mailbox login. */
+function load_secrets(): void
 {
-    // Optional inc/secret.php (not in git) can define FORM_SECRET; otherwise derive one per install.
     if (is_file(__DIR__ . '/secret.php')) {
         require_once __DIR__ . '/secret.php';
     }
+}
+
+function form_secret(): string
+{
+    load_secrets();
     return defined('FORM_SECRET') ? FORM_SECRET : hash('sha256', __DIR__ . php_uname('n'));
 }
 
@@ -60,17 +65,22 @@ function old(array $vals, string $key): string
 }
 
 /**
- * Send a plain-text email, optionally with one attachment.
+ * Send a plain-text email to FORM_TO, optionally with one attachment.
  * $attach = ['name' => …, 'type' => …, 'data' => raw bytes]
+ * Uses authenticated SMTP when inc/secret.php defines SMTP_USER/SMTP_PASS, otherwise PHP mail().
  */
 function send_mail(string $subject, string $text, string $replyTo, ?array $attach = null): bool
 {
+    load_secrets();
+    $smtp = defined('SMTP_USER') && defined('SMTP_PASS');
+    $from = $smtp ? SMTP_USER : FORM_FROM;
     $headers = [
-        'From: ' . SITE_NAME . ' Website <' . FORM_FROM . '>',
+        'From: ' . SITE_NAME . ' Website <' . $from . '>',
         'Reply-To: ' . $replyTo,
         'MIME-Version: 1.0',
         'X-Mailer: BestJobsPro-Site',
     ];
+    $text = str_replace(["\r\n", "\n"], ["\n", "\r\n"], $text);
     if ($attach) {
         $b = 'bjp_' . bin2hex(random_bytes(12));
         $headers[] = 'Content-Type: multipart/mixed; boundary="' . $b . '"';
@@ -80,10 +90,65 @@ function send_mail(string $subject, string $text, string $replyTo, ?array $attac
             . chunk_split(base64_encode($attach['data'])) . "--$b--\r\n";
     } else {
         $headers[] = 'Content-Type: text/plain; charset=UTF-8';
+        $headers[] = 'Content-Transfer-Encoding: 8bit';
         $body = $text;
     }
     $subject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
-    return @mail(FORM_TO, $subject, $body, implode("\r\n", $headers), '-f' . FORM_FROM);
+    if ($smtp) {
+        return smtp_send($from, FORM_TO, $subject, $headers, $body);
+    }
+    return @mail(FORM_TO, $subject, $body, implode("\r\n", $headers), '-f' . $from);
+}
+
+/** Minimal SMTP client (implicit TLS + AUTH LOGIN), enough for Hostinger mailboxes. */
+function smtp_send(string $from, string $to, string $subject, array $headers, string $body): bool
+{
+    $host = defined('SMTP_HOST') ? SMTP_HOST : 'smtp.hostinger.com';
+    $port = defined('SMTP_PORT') ? SMTP_PORT : 465;
+    $fp = @stream_socket_client("ssl://$host:$port", $errno, $errstr, 15);
+    if (!$fp) {
+        error_log("smtp connect failed: $errstr");
+        return false;
+    }
+    stream_set_timeout($fp, 20);
+    $read = function () use ($fp): string {
+        $out = '';
+        while (($line = fgets($fp, 1024)) !== false) {
+            $out .= $line;
+            if (strlen($line) < 4 || $line[3] === ' ') {
+                break;
+            }
+        }
+        return $out;
+    };
+    $cmd = function (string $c, string $expect) use ($fp, $read): bool {
+        fwrite($fp, $c . "\r\n");
+        $r = $read();
+        if (!str_starts_with($r, $expect)) {
+            error_log('smtp: unexpected reply to ' . strtok($c, ' ') . ': ' . trim($r));
+            return false;
+        }
+        return true;
+    };
+    $domain = substr(strrchr($from, '@'), 1);
+    $headers[] = 'To: <' . $to . '>';
+    $headers[] = 'Subject: ' . $subject;
+    $headers[] = 'Date: ' . date('r');
+    $headers[] = 'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . $domain . '>';
+    // Dot-stuff lines that start with "." so they are not read as end-of-data.
+    $data = implode("\r\n", $headers) . "\r\n\r\n" . preg_replace('/^\./m', '..', $body);
+    $ok = str_starts_with($read(), '220')
+        && $cmd('EHLO ' . $domain, '250')
+        && $cmd('AUTH LOGIN', '334')
+        && $cmd(base64_encode(SMTP_USER), '334')
+        && $cmd(base64_encode(SMTP_PASS), '235')
+        && $cmd("MAIL FROM:<$from>", '250')
+        && $cmd("RCPT TO:<$to>", '250')
+        && $cmd('DATA', '354')
+        && $cmd($data . "\r\n.", '250');
+    @fwrite($fp, "QUIT\r\n");
+    fclose($fp);
+    return $ok;
 }
 
 /** Returns [errors, values]. Redirects on success. */
