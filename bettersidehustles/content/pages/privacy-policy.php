@@ -10,10 +10,12 @@ return [
 <ul>
 <li><strong>Information you give us.</strong> When you use our contact form, we receive your name, email address, the topic you choose and your message. We use it only to reply to you.</li>
 <li><strong>Calculator and quiz inputs.</strong> Our tools run entirely in your browser. The numbers and answers you enter are not sent to or stored on our servers.</li>
+<li><strong>Analytics data.</strong> Google Analytics collects usage data as described under Cookies below.</li>
 <li><strong>Technical data.</strong> Like most websites, our hosting provider automatically logs basic request data (IP address, browser type, pages requested, date and time) for security and to keep the site running.</li>
 </ul>
 <h2 id="cookies">Cookies</h2>
-<p>Better Side Hustles itself does not set advertising or tracking cookies. When you click an affiliate link (for example, to Amazon), the destination site may set cookies to attribute your purchase to us. Those cookies are governed by that site's privacy policy. If we add analytics in the future, this page will be updated to describe it.</p>
+<p>We use <strong>Google Analytics</strong> to understand how visitors use the site (pages viewed, time on page, device and approximate location). Google Analytics sets cookies and processes this data on our behalf under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser.</p>
+<p>When you click an affiliate link (for example, to Amazon), the destination site may set cookies to attribute your purchase to us. Those cookies are governed by that site's privacy policy.</p>
 <h2 id="affiliate-links">Affiliate links</h2>
 <p>We participate in affiliate programs, including the Amazon Services LLC Associates Program. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for details.</p>
 <h2 id="how-we-use">How we use information</h2>

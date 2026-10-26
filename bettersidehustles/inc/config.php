@@ -15,11 +15,14 @@ const SITE_ORG_LOGO = '/wp-content/uploads/2023/07/Better-Side-Hustles-Org-Logo.
 const CONTACT_TO   = 'info@bettersidehustles.com';
 const CONTACT_FROM = 'info@bettersidehustles.com';
 
+// Google Analytics 4 measurement ID, loaded on every page by header.php.
+const GA_ID = 'G-G882PM8VZ1';
+
 // Amazon Associates tracking ID used on every Amazon link.
 const AMAZON_TAG = 'bettersidehustles-20';
 
 // Bumped whenever CSS/JS change so browsers fetch the new files.
-const ASSET_VERSION = '2026.10.26';
+const ASSET_VERSION = '2026.10.26b';
 
 // Platform guides: slug => [label, logo, one-liner, icon category]
 const PLATFORMS = [
