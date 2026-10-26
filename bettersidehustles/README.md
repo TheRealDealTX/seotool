@@ -56,9 +56,18 @@ python3 validate.py            # in another shell
 
 ## Deploy to Hostinger
 
+**Live since 2026-10-26.** Hosting account `u401386392`, PHP switched from 7.4 to
+8.3 (the code needs PHP 8.1+). The WordPress files were moved, untouched, to
+`domains/bettersidehustles.com/wordpress-backup-2026-10-26/` (outside
+`public_html`, so not web-accessible); the WordPress database was not changed.
+To roll back: move those files back into `public_html` and set PHP to 7.4.
+
+To redeploy after changes, upload the changed files to `public_html` and clear
+the website cache. Steps used for the first deploy:
+
 1. Back up the current WordPress site (hPanel → Backups, or download
    `public_html` and export the database).
-2. Edit `CONTACT_TO` in `inc/config.php` to a real mailbox on the domain.
+2. `CONTACT_TO` in `inc/config.php` is info@bettersidehustles.com (sent with PHP mail(); no password is stored).
 3. In hPanel → File Manager, empty `public_html` (or move the WordPress files
    into a backup folder) and upload this folder's contents, including
    `.htaccess`. `README.md`, `validate.py` and `docs/` are optional; they're

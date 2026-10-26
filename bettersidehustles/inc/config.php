@@ -12,8 +12,8 @@ const SITE_ORG_LOGO = '/wp-content/uploads/2023/07/Better-Side-Hustles-Org-Logo.
 
 // Where the contact form is delivered. Must be a mailbox on this domain (or one
 // Hostinger is allowed to send for) so mail() is not rejected as spoofed.
-const CONTACT_TO   = 'hello@bettersidehustles.com';
-const CONTACT_FROM = 'no-reply@bettersidehustles.com';
+const CONTACT_TO   = 'info@bettersidehustles.com';
+const CONTACT_FROM = 'info@bettersidehustles.com';
 
 // Amazon Associates tracking ID used on every Amazon link.
 const AMAZON_TAG = 'bettersidehustles-20';
