@@ -134,6 +134,7 @@ return [
     <ul class="meta"><li><b>Pay:</b> $200–$600 per home</li><li><b>Startup:</b> Ladder, clips</li><li><b>Best for:</b> Comfortable on ladders</li></ul>
   </div>
 </div>
+<p>Seasonal gigs are where Tulsa side hustlers often make their best money per hour, because demand arrives all at once. The trick is to line up clients before the season starts: pitch holiday lights in October, lake cleaning in April and State Fair staffing in August. Past clients are your easiest sales, so keep a simple list of everyone you've worked for and reach out a few weeks before each season.</p>
 <div class="callout"><strong>Quick tip:</strong> Tulsa's spring storm season can wreck a weekly schedule. Build a rain-day plan into your client agreements, and keep an online gig ready for days when outdoor work is off.</div>
 
 <h2 id="skills-online">Skill-based and online side jobs in Tulsa</h2>

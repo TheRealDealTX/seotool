@@ -1,143 +1,195 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Urban Honolulu (2026): Ways to Earn Extra',
-    'description' => 'Explore the best side hustles in Urban Honolulu and discover smart, flexible ways to earn extra income in paradise.',
-    'h1' => 'Best Side Hustles in Urban Honolulu',
-    'kicker' => 'City Guide · HI',
-    'dek' => 'Gig apps, local services and online work that pay in Urban Honolulu — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-24',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Urban-Honolulu.webp',
-    'image_alt' => 'Best Side Hustles in Urban Honolulu',
-    'category' => 'City Guides',
-    'city' => 'Urban Honolulu',
-    'state' => 'HI',
-    'keywords' => ['best side hustles in urban honolulu'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-san-diego', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-san-francisco'],
-    'faq' => [
-        ['q' => 'What are some of the best side hustles in Urban Honolulu?', 'a' => 'Popular options include helping with vacation rentals, giving tours, freelancing online, and managing social media for small businesses.'],
-        ['q' => 'How much money can I make from a side hustle in Honolulu?', 'a' => 'Many people earn between $1,000 and $3,000 a month, depending on how much time they put in.'],
-        ['q' => 'Do I need to register my side hustle in Honolulu?', 'a' => 'Yes, most side hustles need to be registered with the State of Hawaii, and you must report your income.'],
-        ['q' => 'Are tourism side hustles busy all year?', 'a' => 'Yes, Honolulu has visitors year-round, but some months are busier than others.'],
-        ['q' => 'What side hustle is the easiest to start?', 'a' => 'Freelancing, pet sitting, and social media work are easy to begin because they need little money upfront.'],
-        ['q' => 'Are side hustles good for military families in Honolulu?', 'a' => 'Yes, many military families need help with moving, cleaning, and pet care.'],
-        ['q' => 'Is online freelancing a good choice in Hawaii?', 'a' => 'Yes, you can work with clients on the mainland and earn higher rates while living in Honolulu.'],
-        ['q' => 'Do I need training to start fitness or tour services?', 'a' => 'Fitness jobs usually need a certificate, and some tours may need permits.'],
-        ['q' => 'How can I find my first client?', 'a' => 'You can start by posting in local Facebook groups, asking friends, or reaching out to small businesses.'],
-        ['q' => 'How do I pick the right side hustle for me?', 'a' => 'Choose something that matches your skills, test it with a few clients, and grow from there.'],
+    'title'       => 'Best Side Hustles in Honolulu (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Honolulu for 2026: 18 side gigs with typical pay, startup costs, tourism and military angles, plus Hawaii GET license and tax rules.',
+    'h1'          => 'Best Side Hustles in Honolulu (2026): 18 Side Gigs That Pay',
+    'kicker'      => 'City Guide · HI',
+    'dek'         => 'Honolulu is expensive, but it also has year-round visitors, a huge military community and mainland clients who pay mainland rates. Here are the side jobs that work on Oahu, what they pay and the Hawaii tax rules you need to know first.',
+    'published'   => '2026-02-24',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Urban-Honolulu.webp',
+    'image_alt'   => 'Honolulu skyline and Waikiki Beach with Diamond Head, illustrating the best side hustles in Honolulu',
+    'category'    => 'City Guides',
+    'city'        => 'Honolulu',
+    'state'       => 'HI',
+    'keywords'    => ['best side hustles in honolulu', 'best side hustles in urban honolulu', 'side jobs in honolulu', 'side gigs in honolulu', 'how to make money in honolulu', 'honolulu side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['snorkel-set', 'phone-mount', 'tripod', 'book-psych-money'],
+    'related'     => ['best-side-hustles-in-san-francisco', 'best-side-hustles-in-san-diego', 'best-side-hustles-in-las-vegas'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Honolulu?', 'a' => 'Rideshare and food delivery, vacation rental cleaning, portrait and proposal photography, remote freelancing for mainland clients, military move support, pet sitting and tutoring are the strongest options. Tourism keeps visitor-facing gigs busy all year, while the military and university communities create steady local demand.'],
+        ['q' => 'How can I make money in Honolulu fast?', 'a' => 'Uber, Lyft, DoorDash and Uber Eats can have you earning within a week or two of approval, especially around Waikiki, Ala Moana and the airport. For quick local cash, offer move-out cleaning to military families during PCS season or pet sitting through Rover, and remember to get your GET license.'],
+        ['q' => 'Do I need a GET license for a side hustle in Hawaii?', 'a' => 'Almost certainly. Hawaii\'s general excise tax applies to nearly all business income, including rideshare, delivery, freelancing and cleaning. You register with the Department of Taxation for a one-time $20 fee, then file periodic GET returns on your gross receipts. On Oahu the rate is 4.5%, including the county surcharge.'],
+        ['q' => 'How much can I make from side jobs in Honolulu?', 'a' => 'Most people working 8 to 15 hours a week typically earn $600 to $2,000 a month. App driving often runs $18 to $28 an hour before gas, while photography, freelancing and skilled services can pay $40 to $100 an hour once you have a few regular clients. Honolulu\'s high costs make tracking expenses essential.'],
+        ['q' => 'Can I rent out my place on Airbnb in Honolulu?', 'a' => 'Usually not for short stays. Honolulu generally requires rentals of at least 90 days in most residential areas, with shorter stays limited to resort-zoned areas and certain grandfathered units. Mid-term rentals to traveling nurses and military families, or cleaning for legal vacation rentals, are safer ways to earn from the rental market.'],
+        ['q' => 'How are side hustle earnings taxed in Hawaii?', 'a' => 'You pay Hawaii income tax at progressive rates from 1.4% to 11%, federal income tax, 15.3% self-employment tax on net profit and GET on your gross receipts. Set aside roughly 30% of profit plus your GET, and make quarterly estimated payments to the IRS and the state.'],
     ],
-    'body' => <<<'HTML'
-<p>Living in Hawaii sounds dreamy. And it is. But let’s be honest — paradise isn’t cheap. That’s exactly why so many residents search for the <strong>best side hustles in Urban Honolulu</strong>. Rent is high. Groceries cost more than the mainland. Gas adds up. If you want flexibility without sacrificing island life, you need income streams that work here.</p>
-<p><a href="https://en.wikipedia.org/wiki/Honolulu">Urban Honolulu</a> is unique. It’s not just a tourist hub. It’s a blend of local culture, military presence, university students, remote professionals, and small business owners. That mix creates opportunity — real opportunity — if you approach it strategically.</p>
-<p>Let’s break it down properly.</p>
-<h2 id="h-why-urban-honolulu-is-perfect-for-a-side-hustle">Why Urban Honolulu Is Perfect for a Side Hustle</h2>
-<p>Some cities make side hustles difficult. Honolulu doesn’t.</p>
-<p>Here’s why:</p>
-<ul><li>Tourism runs year-round.</li><li>Condo living creates service demand.</li><li>Military relocations are constant.</li><li>Small businesses need digital help.</li><li>Outdoor lifestyle supports creative income.</li></ul>
-<p>The key is choosing something aligned with the island’s structure. The <strong>best side hustles in Urban Honolulu</strong> are service-based, community-driven, and flexible.</p>
-<p>And they don’t require massive startup capital.</p>
-<h2 id="h-quick-snapshot-comparing-top-opportunities">Quick Snapshot: Comparing Top Opportunities</h2>
-<p>Here’s a realistic look at how different <a href="/side-hustles-you-can-do-in-hawaii-aloha-spirit-while-earning/">side hustles</a> stack up:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Monthly Income Potential</strong></td><td><strong>Flexibility</strong></td><td><strong>Scalability</strong></td></tr><tr><td>Vacation Rental Support</td><td>Low</td><td>$800–$3,000</td><td>High</td><td>Moderate</td></tr><tr><td>Tour Guide</td><td>Low–Moderate</td><td>$1,000–$4,000</td><td>Medium</td><td>High</td></tr><tr><td>Beach Photography</td><td>Moderate</td><td>$1,500–$5,000</td><td>Medium</td><td>High</td></tr><tr><td>Freelancing (Remote)</td><td>Low</td><td>$1,000–$6,000</td><td>Very High</td><td>Very High</td></tr><tr><td>Pet Sitting</td><td>Low</td><td>$500–$2,000</td><td>High</td><td>Moderate</td></tr><tr><td>Food Pop-Ups</td><td>Moderate</td><td>$1,000–$3,500</td><td>Medium</td><td>Moderate</td></tr><tr><td>Social Media Management</td><td>Low</td><td>$1,500–$4,000</td><td>High</td><td>High</td></tr></tbody></table>
-<p>Notice a pattern? Service &gt; inventory. Skills &gt; storage.</p>
-<p>Let’s go deeper.</p>
-<h3 id="h-1-airbnb-amp-vacation-rental-support">1. Airbnb &amp; Vacation Rental Support</h3>
-<p>Urban Honolulu has dense condo communities in Waikiki, Ala Moana, and Kaka‘ako. Many owners don’t live on island full-time. They need help.</p>
-<p>This is one of the <strong>best side hustles in Urban Honolulu</strong> because:</p>
-<ul><li>Turnovers are frequent.</li><li>Cleaning fees are high.</li><li>Hosts value reliability.</li></ul>
-<p>You can offer:</p>
-<ul><li>Cleaning coordination</li><li>Guest communication</li><li>Restocking essentials</li><li>Inspection services</li></ul>
-<p><strong>Action Plan:</strong></p>
-<ol><li>Contact 10 local Airbnb listings directly.</li><li>Offer a trial turnover at competitive rates.</li><li>Build recurring contracts.</li></ol>
-<p>With just 5 steady properties, earning $2,000/month part-time is realistic.</p>
-<h3 id="h-2-local-tour-guide-or-experience-host">2. Local Tour Guide or Experience Host</h3>
-<p>People fly thousands of miles to be here. They want stories. Culture. Meaning.</p>
-<p>You don’t need a tour bus. Walking tours work beautifully.</p>
-<p>Ideas:</p>
-<ul><li>Historic Honolulu tours</li><li>Food tasting walks</li><li>Hidden beach tours</li><li>Hawaiian cultural storytelling</li></ul>
-<p>Platforms like Airbnb Experiences help. But building your own website eventually increases margins.</p>
-<p><a href="https://www.hawaiitourismauthority.org/media/15149/tourism-econ-impact-fact-sheet-september-2025-final.pdf">Tourism is a pillar of Hawaii’s economy</a> (source: U.S. Bureau of Economic Analysis). That stability makes this one of the <strong>best side hustles in Urban Honolulu</strong> for outgoing personalities.</p>
-<p>If you can host 3 tours per week at $75 per person with 8 guests? That’s $1,800+ monthly.</p>
-<h3 id="h-3-beach-amp-sunset-photography">3. Beach &amp; Sunset Photography</h3>
-<p>Sunsets here sell themselves.</p>
-<p>Visitors want engagement shoots, family photos, maternity sessions, graduation pictures from nearby campuses. If you know how to frame natural light, you’re already ahead.</p>
-<p>Startup costs:</p>
-<ul><li>Entry-level DSLR or mirrorless camera</li><li>Editing software</li><li>Instagram portfolio</li></ul>
-<p><strong>Pro Tip:</strong> Offer “30-minute sunset mini sessions” at Ala Moana Beach Park. Simplicity converts.</p>
-<p>Photographers in Honolulu often charge $250–$600 per session. Just 6 sessions per month can create serious side income.</p>
-<h3 id="h-4-freelancing-for-mainland-clients">4. Freelancing for Mainland Clients</h3>
-<p>This is underrated.</p>
-<p>Urban Honolulu’s time zone works in your favor. When mainland businesses start their day, you’re finishing projects. Deadlines feel smoother.</p>
-<p>Freelance options:</p>
-<ul><li>Copywriting</li><li>Virtual assistant services</li><li>Web design</li><li>Bookkeeping</li><li>Social media management</li></ul>
-<p>This is quietly one of the <strong>best side hustles in Urban Honolulu</strong> because you earn mainland rates while living here.</p>
-<p>A single $1,500/month retainer client changes everything.</p>
-<h3 id="h-5-food-pop-ups-amp-plate-lunch-sales">5. Food Pop-Ups &amp; Plate Lunch Sales</h3>
-<p>Hawaii loves food. Community events thrive on it.</p>
-<p>Small-scale plate lunches, baked goods, or specialty desserts can perform extremely well — especially if culturally authentic and well-branded.</p>
-<p>Before starting, review Hawaii cottage food regulations via the Hawaii Department of Health.</p>
-<p>Start small:</p>
-<ul><li>Farmers markets</li><li>Weekend pop-ups</li><li>Pre-order Instagram sales</li></ul>
-<p>Margins are strong if sourcing is smart. And community loyalty builds quickly.</p>
-<h3 id="h-6-pet-sitting-in-condo-communities">6. Pet Sitting in Condo Communities</h3>
-<p>Urban Honolulu has high-rise living everywhere. That creates dense client clusters.</p>
-<p>Pet sitting is simple but profitable:</p>
-<ul><li>$25–$40 per walk</li><li>$50–$90 per overnight stay</li></ul>
-<p>Military families relocating frequently create steady demand. Reliability matters more than flashy branding.</p>
-<p>Start by:</p>
-<ul><li>Posting in local Facebook condo groups</li><li>Registering on Rover</li><li>Building word-of-mouth referrals</li></ul>
-<p>It’s low stress. Flexible. Consistent.</p>
-<h3 id="h-7-social-media-management-for-local-businesses">7. Social Media Management for Local Businesses</h3>
-<p>Walk through Waikiki. How many restaurants have weak Instagram presence? A lot.</p>
-<p>Small businesses are busy running operations. They don’t have time for content strategy.</p>
-<p>Offer:</p>
-<ul><li>12 posts per month</li><li>Caption writing</li><li>Basic photography</li><li>DM management</li></ul>
-<p>Charge $800–$1,500 monthly per client.</p>
-<p>Just three clients = stable $3,000/month.</p>
-<p>This is one of the <strong>best side hustles in Urban Honolulu</strong> if you understand branding and consistency.</p>
-<h3 id="h-8-military-pcs-support-services">8. Military PCS Support Services</h3>
-<p>Honolulu has major military installations, including Joint Base Pearl Harbor-Hickam.</p>
-<p>Relocations are frequent. Stress is high.</p>
-<p>Services you can offer:</p>
-<ul><li>Move-out cleaning</li><li>Organization help</li><li>Car sale coordination</li><li>Temporary storage management</li><li>House-sitting during transitions</li></ul>
-<p>PCS seasons are predictable. That predictability equals planning power.</p>
-<h3 id="h-9-fitness-amp-beach-bootcamps">9. Fitness &amp; Beach Bootcamps</h3>
-<p>Outdoor workouts are part of the lifestyle here.</p>
-<p>If you’re certified, you can host:</p>
-<ul><li>Sunrise yoga sessions</li><li>Small-group HIIT workouts</li><li>Beach strength training</li></ul>
-<p>Keep groups small. Charge $20–$35 per person.</p>
-<p>Eight participants, twice per week, adds up quickly.</p>
-<h3 id="h-10-handmade-crafts-amp-lei-making">10. Handmade Crafts &amp; Lei Making</h3>
-<p>Cultural respect is critical. But if you genuinely understand the craft and its meaning, there’s strong demand for:</p>
-<ul><li>Graduation leis</li><li>Wedding pieces</li><li>Handmade souvenirs</li></ul>
-<p>Urban Honolulu blends local community and visitor demand. That combination supports craft-based income well.</p>
-<h2 id="h-realistic-income-scenarios">Realistic Income Scenarios</h2>
-<p>Let’s keep this practical.</p>
-<h3 id="h-if-you-have-10-hours-per-week">If You Have 10 Hours Per Week:</h3>
-<ul><li>2 photography sessions = $800</li><li>1 social media client = $1,000</li><li>3 pet-sitting visits weekly = $600</li></ul>
-<p>Potential monthly total: $2,400</p>
-<h3 id="h-if-you-have-20-hours-per-week">If You Have 20 Hours Per Week:</h3>
-<ul><li>2 tour days per week = $2,000+</li><li>1 rental property contract = $1,000</li><li>1 freelance client = $1,500</li></ul>
-<p>Potential monthly total: $4,500+</p>
-<p>The <strong>best side hustles in Urban Honolulu</strong> scale when you combine services.</p>
-<h2 id="h-legal-considerations">Legal Considerations</h2>
-<p>Keep this clean. Always.</p>
-<ul><li>Register your business with the State of Hawaii.</li><li>Track income for tax reporting.</li><li>Verify if permits are required (especially food or tours).</li><li>Consider liability insurance.</li></ul>
-<p>It’s not complicated. But ignoring it causes problems.</p>
-<h2 id="h-how-to-start-step-by-step">How to Start (Step-by-Step)</h2>
-<ol><li>Identify one skill aligned with Honolulu demand.</li><li>Validate by contacting 5–10 potential clients.</li><li>Land your first paying customer.</li><li>Collect testimonials immediately.</li><li>Raise rates gradually.</li></ol>
-<p>Don’t overthink it. Execute.</p>
-<h2 id="h-mistakes-to-avoid">Mistakes to Avoid</h2>
-<ul><li>Underpricing because you’re “just starting.”</li><li>Trying 4 hustles at once.</li><li>Ignoring burnout.</li><li>Forgetting island lifestyle balance.</li></ul>
-<p>Yes, you can hustle hard. But protect your mornings at the beach too.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>The goal isn’t to work nonstop. The goal is freedom.</p>
-<p>The <strong>best side hustles in Urban Honolulu</strong> allow you to earn more while still enjoying sunsets, community, and flexibility. Service-based models dominate here. Remote income multiplies stability. And consistency wins.</p>
-<p>Choose one. Start small. Move fast. Adjust as you grow.</p>
-<p>Paradise doesn’t mean passive income. But it absolutely supports smart, intentional side income.</p>
-<p>And now you know exactly where to begin.</p>
+    'body'        => <<<'HTML'
+<p>Living on Oahu is expensive, which is exactly why so many residents look for extra income. The good news is that Honolulu has advantages few cities can match: millions of visitors a year, one of the largest military communities in the country, a major university and a time zone that lets you serve clients across the Pacific and the mainland. The best side hustles in Honolulu combine those advantages with an honest look at Hawaii's tax rules, starting with the general excise tax.</p>
+<p>This guide covers 18 side gigs in Honolulu with typical pay, startup costs and local tips, from Waikiki rideshare to PCS move-out cleaning. If you're working out how to make money in Honolulu without burning out, start with the first eight picks; they're the Honolulu side hustles 2026 is rewarding most.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>4.5%</b><span>Oahu GET on gross receipts</span></div>
+  <div class="stat"><b>1.4%–11%</b><span>Hawaii income tax brackets</span></div>
+  <div class="stat"><b>$20</b><span>one-time GET license fee</span></div>
+</div>
+
+<h2 id="why-honolulu">What drives side income on Oahu</h2>
+<ul>
+  <li><strong>Tourism, every month of the year.</strong> Waikiki hotels, cruise ships at Aloha Tower and visitors at Ala Moana Center keep drivers, photographers and service workers busy even outside the summer and winter peaks.</li>
+  <li><strong>The military community.</strong> Joint Base Pearl Harbor-Hickam, Schofield Barracks, Camp H.M. Smith and Marine Corps Base Hawaii in Kaneohe bring constant relocations, deployments and spouses looking for flexible work.</li>
+  <li><strong>Students and young professionals.</strong> The University of Hawaii at Manoa, Hawaii Pacific University and Chaminade add demand for tutoring, rides and food delivery, and a pool of part-time workers.</li>
+  <li><strong>High prices.</strong> Groceries, rent and services cost more than on the mainland, so locals value anyone who saves them time, and remote mainland income goes a long way toward closing the gap.</li>
+</ul>
+
+<h2 id="top-picks">Top picks: the best side hustles in Honolulu</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">1. Rideshare driving</h3>
+    <p>Airport runs from Daniel K. Inouye International (HNL) to Waikiki are the backbone, with steady demand from Kakaako nightlife, Ala Moana shoppers and cruise ship days downtown. Traffic on the H-1 is notorious, so work the shoulders of rush hour. Our <a href="/lyft-uber/">Lyft and Uber guide</a> explains sign-up.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$28/hr before gas</li><li><b>Startup:</b> Eligible car, insurance, GET license</li><li><b>Best for:</b> Flexible drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats and Instacart stay busy in dense neighborhoods like Kakaako, Moiliili, Kaimuki and Waikiki, where parking is hard and residents happily pay to skip it. Condo deliveries can be slow, so learn building access quirks.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $17–$25/hr before gas</li><li><b>Startup:</b> Car, scooter or e-bike</li><li><b>Best for:</b> Evening and weekend shifts</li></ul>
+  </div>
+</div>
+<p>Gas costs more in Hawaii than almost anywhere on the mainland. Check your true hourly rate before you commit:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> GET applies to your gross rideshare and delivery receipts, not just profit. Set aside 4.5% of what you earn for GET on top of your income tax savings, or tax time on Oahu will sting.</div>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rental-cleaning">3. Vacation and mid-term rental cleaning</h3>
+    <p>Legal vacation rentals in resort-zoned areas and the many 90-day-plus furnished rentals for traveling nurses and military families need reliable turnover cleaning. One good property manager can fill several days a week.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $28–$50/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Fast, detail-oriented cleaners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">4. Proposal, family and portrait photography</h3>
+    <p>Visitors want vacation portraits, engagement shoots and proposal photos at sunset. Locals book graduation, baby and family sessions. Some beaches, parks and state lands require permits for commercial shoots, so check before you book a location.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$450 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual creatives</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="remote-freelancing">5. Remote freelancing for mainland clients</h3>
+    <p>Writing, design, bookkeeping, video editing and development pay mainland rates. Hawaii doesn't observe daylight saving time, so you're two or three hours behind the West Coast; early mornings overlap with mainland business hours and evenings with Asia-Pacific clients. Build a portfolio on <a href="/fiverr/">Fiverr</a> and move clients to retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$90/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Skilled creatives and professionals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pcs-support">6. Military PCS move support</h3>
+    <p>Military families arrive and leave constantly, especially in summer. Offer move-out cleaning for base and off-base housing, car shipping drop-offs at the port, temporary pet care, furniture assembly and house sitting during gaps between orders.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$60/hr or $200–$500 per move-out clean</li><li><b>Startup:</b> $75–$200</li><li><b>Best for:</b> Military spouses, organized helpers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">7. Pet sitting and dog walking</h3>
+    <p>Condo dwellers in Kakaako and Waikiki and frequent interisland travelers need walks and overnight care. A sturdy [[amazon:dog-leash|dog leash]] and early-morning walks before the heat keep clients happy. Holiday weeks book out early.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$30/walk, $50–$85/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">8. Tutoring and test prep</h3>
+    <p>Families with kids in competitive private and public schools pay well for math, science, SAT and college-application help. UH Manoa students can tutor in person; anyone can tutor online.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$70/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+</div>
+
+<h2 id="compare">Side jobs in Honolulu compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Rideshare</td><td>$18–$28/hr</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$17–$25/hr</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Rental cleaning</td><td>$28–$50/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Photography</td><td>$150–$450 per session</td><td>Camera</td><td>2–4 weeks</td></tr>
+    <tr><td>Remote freelancing</td><td>$30–$90/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+    <tr><td>PCS move support</td><td>$30–$60/hr</td><td>$75–$200</td><td>1–2 weeks</td></tr>
+    <tr><td>Pet sitting</td><td>$20–$30/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Tutoring</td><td>$30–$70/hr</td><td>$0–$50</td><td>1–2 weeks</td></tr>
+  </tbody>
+</table>
+
+[[gear:reef-sunscreen,camera,insulated-bag|Gear for Honolulu side hustles]]
+
+<h2 id="island-style">Island-style side gigs</h2>
+<p>These lean on what makes Honolulu unique. Many involve beaches or parks, so check commercial-use permits with the City and County of Honolulu or the state before charging customers.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="experience-host">9. Tour and experience host</h3>
+    <p>Food tours in Chinatown and Kaimuki, hiking guidance, history walks and cultural workshops appeal to visitors who want something beyond Waikiki. Partner with a permitted operator or list experiences where rules allow.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$80 per guest</li><li><b>Startup:</b> $0–$300</li><li><b>Best for:</b> Storytellers who know the island</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="surf-instruction">10. Surf and ocean lessons</h3>
+    <p>Beginner surf and stand-up paddle lessons are popular, but commercial ocean activities are regulated. Working part-time for an established, permitted surf school is the easiest legal path.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$40/hr with a school, more on your own</li><li><b>Startup:</b> Certifications such as CPR and lifeguard training</li><li><b>Best for:</b> Experienced watermen and waterwomen</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="lei-crafts">11. Lei making and local crafts</h3>
+    <p>Graduation season in May drives huge demand for lei, and craft fairs and farmers markets like the KCC market near Diamond Head sell jewelry, prints and local-themed goods year-round.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $50–$300</li><li><b>Best for:</b> Makers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="food-popups">12. Food pop-ups and plate lunches</h3>
+    <p>Pop-ups, baked goods and plate lunches sell fast when they're good. Food for the public needs Hawaii Department of Health permits or cottage food compliance, so check rules first.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by menu and volume</li><li><b>Startup:</b> $200–$800</li><li><b>Best for:</b> Home cooks</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="fitness-bootcamps">13. Fitness bootcamps and personal training</h3>
+    <p>Sunrise workouts at Kapiolani Park or Ala Moana Beach Park are easy to sell, but group fitness in city parks may need a permit. Private in-home or condo-gym sessions avoid that issue.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$25 per person per group class</li><li><b>Startup:</b> $0–$300</li><li><b>Best for:</b> Certified trainers</li></ul>
+  </div>
+</div>
+
+<h2 id="more-ideas">More side gigs in Honolulu</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="social-media">14. Social media for local businesses</h3>
+    <p>Restaurants, boutiques and tour operators know they need Instagram and Google reviews but don't have time. Monthly packages are common.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $300–$1,200/month per client</li><li><b>Startup:</b> Phone, laptop</li><li><b>Best for:</b> Social-savvy marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">15. Event staffing</h3>
+    <p>The Honolulu Marathon in December, Aloha Festivals in September, Pan-Pacific Festival in June, UH football games in Manoa and Hawaii Convention Center events all need temporary staff.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$26/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">16. Handyman and furniture assembly</h3>
+    <p>New condo towers in Kakaako and constant military moves keep assembly and mounting work steady. Keep jobs small; bigger projects require a Hawaii contractor's license.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $45–$80/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">17. Local reselling</h3>
+    <p>Shipping to and from the islands is expensive, so locally available furniture, appliances and surf gear sell quickly on Facebook Marketplace. PCS move-outs are a goldmine for inventory.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$1,200/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Bargain hunters with a truck</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="detailing">18. Mobile car detailing</h3>
+    <p>Salt air, sand and red dirt are hard on cars. Interior details and protective wax packages sell well, especially to military families preparing cars for shipping.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per detail</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+</div>
+
+<div class="callout callout-warn"><strong>Watch out:</strong> Don't plan a vacation rental business before you check the rules. Honolulu generally requires minimum stays of 90 days in most residential areas, and short-term stays are largely limited to resort-zoned areas and certain grandfathered units. Fines for illegal rentals are steep.</div>
+
+<h2 id="get-started">How to start a side hustle in Honolulu this month</h2>
+<ol class="steps">
+  <li><strong>Pick one gig that fits your schedule.</strong> Driving and delivery for nights; cleaning, pet care and PCS support for weekdays.</li>
+  <li><strong>Get your GET license.</strong> Register online with the Hawaii Department of Taxation for the one-time $20 fee.</li>
+  <li><strong>Check permits for your activity.</strong> Beaches, parks, food and ocean activities often need extra approvals.</li>
+  <li><strong>Price for Honolulu costs.</strong> Factor in gas, parking, GET and supplies, which all cost more here.</li>
+  <li><strong>Market locally.</strong> Nextdoor, military spouse Facebook groups and a Google Business Profile bring in early clients.</li>
+  <li><strong>Separate your money.</strong> Open a dedicated account and move GET and income tax savings out of every payment.</li>
+</ol>
+
+<h2 id="hawaii-taxes">Hawaii taxes and rules for side income</h2>
+<ul>
+  <li><strong>General excise tax (GET):</strong> Hawaii taxes the business itself on gross receipts. The rate on Oahu is 4.5% (4% state plus a 0.5% county surcharge). You need a GET license, which costs a one-time $20, and you file periodic returns plus an annual reconciliation. Many businesses visibly pass GET on to customers.</li>
+  <li><strong>State income tax:</strong> progressive rates from 1.4% to 11%. There's no separate state self-employment tax.</li>
+  <li><strong>Federal self-employment tax:</strong> 15.3% on net profit, plus federal income tax. Use our <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to plan your set-aside.</li>
+  <li><strong>Rentals:</strong> short-term stays owe transient accommodations tax at the state and county level in addition to GET, and Honolulu's 90-day minimum applies in most residential areas.</li>
+  <li><strong>Permits:</strong> commercial activity in city parks and on state beaches and waters often requires permits. Ask before you charge.</li>
+</ul>
+<p>For more ideas across all the islands, read our guide to <a href="/side-hustles-you-can-do-in-hawaii-aloha-spirit-while-earning/">side hustles you can do in Hawaii</a>.</p>
+
+<h2 id="nearby">Compare with other city guides</h2>
+<p>Honolulu has no nearby neighbors, but many residents compare it with West Coast cities. See our guides to the <a href="/best-side-hustles-in-san-francisco/">best side hustles in San Francisco</a>, <a href="/best-side-hustles-in-san-diego/">San Diego</a> and <a href="/best-side-hustles-in-las-vegas/">Las Vegas</a>, a favorite destination for island residents. Better Side Hustles readers in Honolulu who succeed usually pick one gig, master the GET paperwork early and let local referrals build from there.</p>
 HTML,
 ];
