@@ -1,9 +1,9 @@
 # michellewhitephoto.com persona and site facts (mirrored 2026-10-25)
 
-- Live title: Michelle White Photography | Salt Lake City Photographer
-- Meta description: Michelle White Photography: natural, editorial wedding, elopement and interior photography in Salt Lake City, Park City and across Utah.
-- Angle and voice: Natural, editorial wedding, elopement and interior photography in Salt Lake City. Soft, confident, client-facing. NOTE: the live site trades on the real name Michelle White; the plan says to move to a new editorial name.
-- Byline: site author (to be renamed)
+- Live title: MW Photo Journal | Utah Wedding and Interior Photography Journal (rebranded 2026-10-26; the domain name stays, the real photographer's name is no longer used anywhere on the site)
+- Meta description: MW Photo Journal: an independent journal about natural, editorial wedding, elopement and interior photography in Salt Lake City, Park City and across Utah.
+- Angle and voice: Natural, editorial wedding, elopement and interior photography in Salt Lake City. Soft, confident, client-facing. Editorial journal voice: it explains how wedding, elopement and interior photography is planned and made; it is not a studio and does not take bookings or claim clients.
+- Byline: MW Photo Journal (the editors, first person plural)
 - Publishing weekday: Sunday
 - Fonts (Google Fonts on the live site): Cormorant Garamond, Manrope
 - CSS color variables: none declared as variables; see template.html

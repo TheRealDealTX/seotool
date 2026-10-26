@@ -3,7 +3,7 @@ week: 1
 keyword: engagement photo poses
 title: 50 Engagement Photo Poses, Sorted by How Comfortable the Couple Is
 description: Engagement photo poses that work for couples who hate being photographed, couples who are fine with it, and couples who want editorial. Fifty prompts, grouped by comfort level, with what to say to get them.
-author: Michelle White Photography
+author: MW Photo Journal
 date: 2026-10-26
 path: /blog/engagement-photo-poses/
 category: Guides
