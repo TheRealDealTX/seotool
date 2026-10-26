@@ -23,7 +23,7 @@ Hosting: Hostinger, account `u401386392`, document root
 | `assets/js/site.js`, `assets/js/tools/*.js` | Mobile nav, plan filters, the interactive tools |
 | `validate.php` | Crawls a running copy of the site and checks every route (see below) |
 | `deploy.sh` | Uploads the site to Hostinger through the File Browser API |
-| `backup-wordpress/` | The original WordPress `index.php` and `.htaccess` (not deployed) |
+| `backup-wordpress/` | The original WordPress `index.php` and `.htaccess`, for reference (not deployed) |
 
 ## Adding a page
 
@@ -69,11 +69,9 @@ in place.
 
 ## Old WordPress install
 
-The WordPress files were removed from `public_html` on 2026-10-25. A full zip of them (wp-admin,
-wp-includes, wp-content including uploads, wp-config.php) is kept on the server outside the web
-root at `/home/u401386392/domains/tinyhomesblueprint.com/wordpress-backup-2026-10-25.zip`. The
-WordPress MySQL database was not touched. `backup-wordpress/` holds the original `index.php` and
-`.htaccess`.
+Fully removed on 2026-10-26: the WordPress files, the server-side backup zip and the WordPress
+database (`u401386392_UASoO`). `backup-wordpress/` here keeps only the original `index.php` and
+`.htaccess` for reference.
 
 ## Contact form
 
