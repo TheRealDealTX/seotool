@@ -79,7 +79,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="cleaning">6. House cleaning</h3>
-    <p>Two-income households and shift workers book recurring biweekly cleans, which give you predictable income. Move-in and move-out cleans in new-build neighborhoods pay more per job.</p>
+    <p>Two-income households and shift workers book recurring biweekly cleans, which give you predictable income. Move-in and move-out cleans in new-build neighborhoods pay more per job. A good [[amazon:cleaning-kit|starter cleaning kit]] covers your first few homes.</p>
     <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-oriented people</li></ul>
   </div>
   <div class="hustle-card">

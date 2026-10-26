@@ -14,7 +14,7 @@ return [
     'state' => 'TX',
     'keywords' => ['best side hustles in austin', 'side hustles austin', 'side jobs in austin', 'side gigs in austin', 'how to make money in austin', 'austin side hustles 2026'],
     'tool' => 'freelance-rate',
-    'gear' => ['phone-mount', 'cleaning-kit', 'dog-leash', 'book-company-of-one'],
+    'gear' => ['phone-mount', 'cleaning-kit', 'camera', 'book-company-of-one'],
     'related' => ['best-side-hustles-in-houston', 'best-side-hustles-in-dallas', 'best-side-hustles-in-fort-worth'],
     'faq' => [
         ['q' => 'What are the best side hustles in Austin?', 'a' => 'The best side hustles in Austin are festival-season rideshare and delivery, event staffing for SXSW, ACL and Formula 1 weekend, freelance tech and web work, short-term rental cleaning, dog walking, tutoring and content creation. Austin\'s mix of well-paid tech workers, nonstop tourism and a creative culture means services that save people time, and skills that help startups move faster, sell quickly.'],

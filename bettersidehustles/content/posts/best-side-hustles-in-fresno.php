@@ -1,137 +1,194 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Fresno (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Fresno to boost income with flexible, realistic options that fit your schedule and skills.',
-    'h1' => 'Best Side Hustles in Fresno',
-    'kicker' => 'City Guide · CA',
-    'dek' => 'Gig apps, local services and online work that pay in Fresno — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-17',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Fresno.webp',
-    'image_alt' => 'Best Side Hustles in Fresno',
-    'category' => 'City Guides',
-    'city' => 'Fresno',
-    'state' => 'CA',
-    'keywords' => ['best side hustles in fresno'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-san-diego', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-san-francisco'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Fresno right now?', 'a' => 'Food delivery, freelancing, cleaning services, notary work, and mobile car detailing are among the most reliable options.'],
-        ['q' => 'Can I start a side hustle in Fresno with little money?', 'a' => 'Yes, many of the best side hustles in Fresno require minimal startup costs, especially service-based or remote work.'],
-        ['q' => 'How much can I realistically earn from a Fresno side hustle?', 'a' => 'Most people earn between $800 and $2,500 per month, depending on time, effort, and the type of hustle.'],
-        ['q' => 'Are side hustles in Fresno flexible with a full-time job?', 'a' => 'Yes, many options like freelancing, delivery driving, and reselling work well during evenings and weekends.'],
-        ['q' => 'Do I need a license to start a side hustle in Fresno?', 'a' => 'Some hustles require permits or certifications, such as notary work or certain home services, so always check local rules.'],
-        ['q' => 'Which side hustles grow into full businesses fastest?', 'a' => 'Cleaning services, landscaping, and mobile car detailing scale quickly with repeat clients and referrals.'],
-        ['q' => 'Are remote side hustles better than local ones in Fresno?', 'a' => 'Remote hustles offer flexibility, while local ones often provide faster cash flow; the best choice depends on your goals.'],
-        ['q' => 'Is Fresno a good city for gig economy work?', 'a' => 'Yes, Fresno’s population size and layout support steady demand for delivery, rideshare, and service gigs.'],
-        ['q' => 'What side hustles are best for beginners?', 'a' => 'Food delivery, pet sitting, and online reselling are beginner-friendly and easy to start.'],
-        ['q' => 'How do I choose the right side hustle in Fresno?', 'a' => 'Pick something that fits your schedule, skills, and income needs rather than chasing what sounds trendy.'],
+    'title'       => 'Best Side Hustles in Fresno (2026): 16 Ways to Earn Extra',
+    'description' => 'The best side hustles in Fresno for 2026: 16 side gigs from pool cleaning and solar washing to delivery and notary work, with pay and Fresno license rules.',
+    'h1'          => 'Best Side Hustles in Fresno (2026): 16 Side Gigs That Pay in the Valley',
+    'kicker'      => 'City Guide · CA',
+    'dek'         => 'Triple-digit summers, a farm economy and some of the lowest rents in California shape the side jobs in Fresno. Here is where the money is, from Clovis pools to Fresno State game days.',
+    'published'   => '2026-01-17',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Fresno.webp',
+    'image_alt'   => 'Downtown Fresno, illustrating the best side hustles in Fresno',
+    'category'    => 'City Guides',
+    'city'        => 'Fresno',
+    'state'       => 'CA',
+    'keywords'    => ['best side hustles in fresno', 'side jobs in fresno', 'side gigs in fresno', 'how to make money in fresno', 'fresno side hustles 2026'],
+    'tool'        => 'tax-estimator',
+    'gear'        => ['insulated-bag', 'phone-mount', 'car-charger', 'book-profit-first'],
+    'related'     => ['best-side-hustles-in-sacramento', 'best-side-hustles-in-bakersfield', 'best-side-hustles-in-stockton'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Fresno?', 'a' => 'Heat-driven services like pool cleaning, early-morning yard work and solar panel cleaning are standouts, along with food delivery, rideshare around Fresno Yosemite International Airport and Fresno State events, house cleaning, mobile detailing and notary or loan signing work. Remote freelancing also stretches far here because Fresno rent is low compared with the Bay Area and Los Angeles.'],
+        ['q' => 'How can I make money in Fresno fast?', 'a' => 'Delivery apps such as DoorDash, Uber Eats and Instacart, Amazon Flex blocks, Rover pet sitting and TaskRabbit jobs usually pay within one to two weeks. Seasonal packing house and harvest work hires quickly during peak season. If you own a mower or pressure washer, knocking on doors in your neighborhood can produce paying jobs within days.'],
+        ['q' => 'Do I need a business license for a side hustle in Fresno?', 'a' => 'Generally yes. The City of Fresno requires a business tax certificate to operate legally in the city, and you first need a zone clearance from the Planning Department. Home-based businesses get a Home Occupation zone clearance and must follow home occupation rules. Clovis and unincorporated Fresno County have their own requirements.'],
+        ['q' => 'How much can I make from side jobs in Fresno?', 'a' => 'Most people working 8 to 15 hours a week earn roughly $400 to $1,500 a month. Delivery and rideshare typically net $15 to $22 an hour after gas, while pool service, detailing and loan signings often pay $40 to $75 an hour or per appointment once you have steady clients. Summer is the busiest season for outdoor services.'],
+        ['q' => 'Is pool cleaning a good side hustle in Fresno?', 'a' => 'Yes. Long, hot summers mean thousands of backyard pools in Fresno and Clovis need weekly cleaning and chemical balancing from spring through fall. A route of 15 to 25 nearby pools can produce steady monthly income. Learn water chemistry properly, carry liability insurance and cluster your clients to keep drive time low.'],
+        ['q' => 'How are side hustles taxed in California?', 'a' => 'California taxes self-employment profit as ordinary income, with rates from 1% to 12.3% plus 1% more above $1 million. You also owe federal income tax and 15.3% federal self-employment tax on net profit. Setting aside 25 to 30% of profit and paying quarterly estimates to the IRS and the Franchise Tax Board keeps you out of trouble.'],
     ],
-    'body' => <<<'HTML'
-<p>If you live in Fresno, you already know the city sits in a unique sweet spot. It’s big enough to offer real opportunity, but not so expensive that every extra dollar disappears the moment it hits your account. That’s exactly why the <strong>best side hustles in Fresno</strong> are more than just a trend—they’re a practical way to build breathing room into your finances.</p>
-<p>I’ve spent a lot of time studying what actually works here. Not theory. Not hype. Real side hustles people in Fresno can start without quitting their day jobs or draining their savings. Some are local. Some are remote. A few surprise people with how profitable they can be.</p>
-<p>Let’s break them down, clearly and honestly, so you can decide which path fits your time, skills, and income goals.</p>
-<h2 id="h-why-fresno-is-a-great-city-for-side-hustles">Why Fresno Is a Great City for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Fresno,_California">Fresno</a> doesn’t always get credit for what it does well. But when it comes to side income, the city quietly delivers.</p>
-<p>Housing costs are still lower than most of California. Commutes are manageable. And the Central Valley economy creates demand in places other cities don’t.</p>
-<p>Here’s what makes Fresno especially side-hustle friendly:</p>
-<ul><li>A large suburban population that needs services</li><li>Strong demand for delivery, home services, and personal help</li><li>A growing number of remote workers who outsource tasks</li><li>Seasonal swings that create short-term earning spikes</li></ul>
-<p>You’re not fighting Silicon Valley prices here. That matters. It means your <a href="/best-hustles-in-los-angeles/">side hustle</a> dollars actually <em>count</em>.</p>
-<h2 id="h-best-side-hustles-in-fresno-0">Best Side Hustles in Fresno</h2>
-<p>This is where we get practical. These are not “maybe someday” ideas. These are proven options that work right now.</p>
-<h3 id="h-food-delivery-driver">Food Delivery Driver</h3>
-<p>Driving for <strong>DoorDash</strong>, <strong>Uber Eats</strong>, or <strong>Grubhub</strong> remains one of the easiest ways to start earning fast in Fresno.</p>
-<p>Lunch and dinner rushes around shopping centers, hospitals, and Fresno State are especially strong.</p>
-<p><strong>What works best</strong></p>
-<ul><li>11:00 am–1:30 pm and 5:00 pm–8:00 pm</li><li>Staying close to clusters of restaurants</li><li>Declining low-pay, long-distance orders</li></ul>
-<p><strong>Realistic earnings</strong></p>
-<ul><li>$18–$25 per hour during peak times</li><li>Less during off-hours, but flexible</li></ul>
-<p>It’s not glamorous. But it’s consistent. And consistency pays bills.</p>
-<h3 id="h-rideshare-driver">Rideshare Driver</h3>
-<p>Driving for <strong>Uber</strong> or <strong>Lyft</strong> works best if you’re strategic.</p>
-<p>Airport runs, weekend nights, and event traffic create the best opportunities. Fresno’s layout helps too—less gridlock than bigger cities.</p>
-<p><strong>Tips that actually help</strong></p>
-<ul><li>Focus on early mornings and weekends</li><li>Keep your car spotless (ratings matter)</li><li>Track mileage for tax deductions</li></ul>
-<p>This side hustle rewards patience and timing.</p>
-<h3 id="h-freelance-remote-work">Freelance Remote Work</h3>
-<p>Some of the <strong>best side hustles in Fresno</strong> never require you to leave home.</p>
-<p>Writing, graphic design, virtual assistance, bookkeeping, customer support, and basic tech work all perform well remotely. Fresno’s lower living costs give remote freelancers an edge when pricing services.</p>
-<p><strong>High-demand freelance skills</strong></p>
-<ul><li>Content writing and editing</li><li>Social media management</li><li>Website updates and maintenance</li><li>Administrative support</li></ul>
-<p>Platforms help you start, but long-term success comes from repeat clients.</p>
-<h3 id="h-cleaning-services">Cleaning Services</h3>
-<p>Residential cleaning and short-term rental turnovers are quietly booming in Fresno.</p>
-<p>Homeowners value reliability. Property owners value speed.</p>
-<p><strong>Why this works</strong></p>
-<ul><li>Low startup costs</li><li>Immediate local demand</li><li>Repeat weekly or biweekly clients</li></ul>
-<p>Many cleaners start solo, then scale into small teams. It’s one of the few side hustles that can turn into a full business quickly.</p>
-<h3 id="h-mobile-car-detailing">Mobile Car Detailing</h3>
-<p>Fresno’s car culture is real. And people will pay for convenience.</p>
-<p>Mobile detailing works especially well in suburban neighborhoods where homeowners prefer service at their driveway.</p>
-<p><strong>Startup basics</strong></p>
-<ul><li>Pressure washer</li><li>Vacuum</li><li>Cleaning supplies</li></ul>
-<p><strong>Typical pricing</strong></p>
-<ul><li>$100–$150 for basic detail</li><li>$200+ for full interior/exterior</li></ul>
-<p>This hustle rewards attention to detail and good reviews.</p>
-<h3 id="h-pet-sitting-and-dog-walking">Pet Sitting and Dog Walking</h3>
-<p>Busy schedules create opportunity.</p>
-<p>Pet owners want someone they trust. Once they find that person, they rarely switch.</p>
-<p><strong>Best earning times</strong></p>
-<ul><li>Weekends</li><li>Holidays</li><li>Summer travel months</li></ul>
-<p>You can start through platforms, then transition to private clients for higher margins.</p>
-<h3 id="h-notary-public-or-loan-signing-agent">Notary Public or Loan Signing Agent</h3>
-<p>This one surprises people.</p>
-<p>California notaries can earn solid money per appointment, especially when working with real estate professionals.</p>
-<p><strong>Why Fresno supports this</strong></p>
-<ul><li>Steady real estate activity</li><li>Legal and financial document needs</li><li>Flexible scheduling</li></ul>
-<p>Many signing agents earn $75–$200 per appointment once established.</p>
-<h3 id="h-yard-work-and-landscaping-services">Yard Work and Landscaping Services</h3>
-<p>Fresno’s climate guarantees steady demand.</p>
-<p>Lawn care, trimming, cleanup, and seasonal maintenance are always needed.</p>
-<p><strong>Smart approach</strong></p>
-<ul><li>Offer monthly service packages</li><li>Focus on one neighborhood at a time</li><li>Upsell seasonal services</li></ul>
-<p>This hustle builds quickly through word of mouth.</p>
-<h3 id="h-online-reselling">Online Reselling</h3>
-<p>Local resale works well in Fresno due to space and sourcing opportunities.</p>
-<p>Garage sales, thrift stores, and clearance racks are goldmines if you know what to look for.</p>
-<p><strong>Best items to flip</strong></p>
-<ul><li><a href="https://www.yelp.com/search?find_desc=second+hand+furniture&amp;find_loc=Fresno%2C+CA&amp;msockid=229dd862fdc56f83212ccee7fc656e1d">Small furniture</a></li><li>Tools</li><li>Electronics</li><li>Brand-name clothing</li></ul>
-<p>Storage space helps. So does patience.</p>
-<h3 id="h-tutoring-and-online-teaching">Tutoring and Online Teaching</h3>
-<p>Parents invest heavily in education.</p>
-<p>Math, science, test prep, and language tutoring perform well both locally and online.</p>
-<p><strong>Advantages</strong></p>
-<ul><li>Predictable schedules</li><li>High hourly rates</li><li>Minimal overhead</li></ul>
-<p>This is one of the most stable side hustles available.</p>
-<h2 id="h-side-hustles-in-fresno-that-work-with-a-full-time-job">Side Hustles in Fresno That Work With a Full-Time Job</h2>
-<p>Not every hustle fits every schedule. Some are better for evenings and weekends.</p>
-<p><strong>Flexible options</strong></p>
-<ul><li>Food delivery</li><li>Freelance remote work</li><li>Online reselling</li><li>Pet sitting</li></ul>
-<p>The key is choosing something that doesn’t drain your energy during your main job.</p>
-<p>Burnout kills side hustles faster than competition.</p>
-<h2 id="h-how-much-can-you-realistically-earn">How Much Can You Realistically Earn?</h2>
-<p>Let’s be honest. Income varies.</p>
-<p>Here’s a realistic snapshot:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Monthly Potential</strong></td></tr><tr><td>Food delivery</td><td>$800–$1,500</td></tr><tr><td>Freelancing</td><td>$1,000–$3,000</td></tr><tr><td>Cleaning services</td><td>$1,200–$2,500</td></tr><tr><td>Notary/signing</td><td>$1,000–$4,000</td></tr><tr><td>Landscaping</td><td>$800–$2,000</td></tr></tbody></table>
-<p>Combining two moderate hustles often beats pushing one too hard.</p>
-<h2 id="h-tips-for-choosing-the-right-side-hustle-in-fresno">Tips for Choosing the Right Side Hustle in Fresno</h2>
-<p>This part matters more than people think.</p>
-<p>Ask yourself:</p>
-<ul><li>How many hours can I realistically commit?</li><li>Do I want people-facing or remote work?</li><li>How fast do I need income?</li></ul>
-<p>Also consider licensing, insurance, and taxes. California compliance isn’t optional.</p>
-<p>Planning upfront saves stress later.</p>
-<h2 id="h-how-to-get-started-quickly">How to Get Started Quickly</h2>
-<p>Momentum beats perfection.</p>
-<p><strong>Simple starter checklist</strong></p>
-<ul><li>Choose one hustle</li><li>Set a weekly income goal</li><li>Track time and earnings</li><li>Adjust after 30 days</li></ul>
-<p>Start small. Improve fast.</p>
-<p>That’s how most successful side hustles grow.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>The <strong>best side hustles in Fresno</strong> aren’t about chasing trends. They’re about matching opportunity with real life.</p>
-<p>This city offers flexibility. It offers demand. And it rewards consistency.</p>
-<p>Whether your goal is extra savings, debt payoff, or long-term independence, Fresno gives you room to build without drowning in costs. Start with one idea. Commit to it. Let results guide the next move.</p>
-<p>Side income doesn’t have to feel risky. In Fresno, it can feel smart.</p>
+    'body'        => <<<'HTML'
+<p>Fresno is California at a different price point. Rent is a fraction of what it costs on the coast, summer afternoons routinely top 100 degrees, and the city sits in the middle of one of the most productive farming regions in the world. Those three facts shape the best side hustles in Fresno: services people need because of the heat, seasonal work tied to agriculture, and remote work that pays big-city rates while you pay Valley rent.</p>
+<p>This guide covers 16 side gigs in Fresno with typical pay, startup costs and where to find customers, plus a start-this-month plan and the city license rules you need to follow.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>1%–12.3%</b><span>California income tax brackets</span></div>
+  <div class="stat"><b>$15–$75</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup cost for most options</span></div>
+</div>
+
+<h2 id="fresno-economy">Why Fresno side hustles look different</h2>
+<ul>
+  <li><strong>The heat is a business.</strong> Pools, sprinklers, dusty cars and solar panels all need more care in the Central Valley, and nobody wants to do it themselves in July.</li>
+  <li><strong>Agriculture sets the calendar.</strong> Harvest and packing seasons bring extra work, and companies like Sun-Maid and the region's packing houses support a network of logistics jobs.</li>
+  <li><strong>Healthcare and logistics anchor jobs.</strong> Community Regional Medical Center, Saint Agnes, Kaiser and nearby Valley Children's employ shift workers who need pet care and delivery, while Amazon's Fresno fulfillment center keeps package volume high.</li>
+  <li><strong>Low costs, coastal clients.</strong> If you can work remotely, Bay Area and LA clients pay rates that go much further in Fresno.</li>
+</ul>
+
+<h2 id="heat-gigs">Best side hustles in Fresno for hot-weather demand</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pool-cleaning">1. Pool cleaning and maintenance</h3>
+    <p>Fresno and Clovis are full of backyard pools that need weekly skimming, brushing and chemical balancing. Build a route in one area, such as Woodward Park, Fig Garden or northeast Clovis, so you spend your time cleaning instead of driving.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$200 per pool per month</li><li><b>Startup:</b> $300–$600 in poles, nets, test kits</li><li><b>Best for:</b> Reliable early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">2. Food and grocery delivery</h3>
+    <p>When it is 105 degrees outside, people order in. DoorDash, Uber Eats and Instacart stay busy around River Park, Shaw Avenue and Fresno State. Hot evenings and smoky or rainy days are the strongest shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car with good A/C</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="solar-cleaning">3. Solar panel and pressure washing</h3>
+    <p>Valley dust and ag haze settle on rooftop panels and reduce output, so homeowners pay for cleaning, especially in late spring and fall. Bundle it with driveway, patio and siding pressure washing for bigger tickets. Always follow safe ladder and roof practices.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$300 per job</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="yard-work">4. Early-morning yard work and landscaping</h3>
+    <p>Lawns, hedges and drip systems need regular care, and homeowners appreciate someone who works at 6 a.m. before the heat. Fall leaf cleanup in tree-lined neighborhoods like Fig Garden and the Tower District adds a short busy season.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$60 per standard yard</li><li><b>Startup:</b> $0–$400</li><li><b>Best for:</b> Outdoorsy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">5. Mobile car detailing</h3>
+    <p>Dust, bugs from rural highways and sun-baked interiors keep detailers busy. Office parks along Shaw and Herndon, hospital lots and car dealers are good targets for repeat work.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $80–$200 per detail</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Detail-oriented hustlers</li></ul>
+  </div>
+</div>
+
+[[gear:pressure-washer,leaf-blower,cleaning-kit|Valley-tough gear for outdoor gigs]]
+
+<h2 id="app-work">App-based side jobs in Fresno</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">6. Rideshare driving</h3>
+    <p>Fresno Yosemite International Airport, Fresno State football at Valley Children's Stadium, Grizzlies games at Chukchansi Park, the Big Fresno Fair in October and weekend nights in the Tower District and Old Town Clovis are your peak windows. A [[amazon:dash-cam|dash cam]] is a smart investment. See our <a href="/lyft-uber/">Lyft and Uber guide</a>.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$25/hr before costs</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Event and airport drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="amazon-flex">7. Amazon Flex and courier work</h3>
+    <p>With a major Amazon facility in town and constant parcel volume, Flex blocks are common, especially around Prime Day and the holiday season. You see the pay before you accept, which makes planning easier.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$25/hr advertised block pay</li><li><b>Startup:</b> Mid-size car or larger</li><li><b>Best for:</b> Early mornings</li></ul>
+  </div>
+</div>
+<p>Fresno distances add up fast. Check your real hourly earnings after gas and wear before you plan your week around driving:</p>
+<p>[[tool:gig-calculator]]</p>
+
+<h2 id="services">Home and personal services</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="notary">8. Notary and loan signing agent</h3>
+    <p>Real estate closings, refinances and legal documents keep mobile notaries busy across Fresno and Clovis. California notaries must complete approved training and pass a state exam through the Secretary of State; loan signing agents add a certification and earn per appointment.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $75–$150 per loan signing</li><li><b>Startup:</b> $300–$600 for training, exam, bond</li><li><b>Best for:</b> Detail-oriented professionals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">9. House cleaning</h3>
+    <p>Busy families in north Fresno and Clovis book recurring cleanings, and move-out cleans pick up around Fresno State's semester changes. Start with friends and neighbors, then expand through Nextdoor and Facebook groups.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$40/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Thorough, reliable workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">10. Pet sitting and dog walking</h3>
+    <p>Hospital shift workers and travelers need help, and in summer that means walks at dawn or after dark. Rover gets you started; repeat clients book holidays months ahead.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$25/walk, $35–$60/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">11. Tutoring and online teaching</h3>
+    <p>Fresno State students and graduates can tutor K–12 students in math, reading and test prep, and bilingual tutors are in demand. Online platforms let you serve students anywhere in the evenings.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$50/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, teachers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="bilingual">12. Bilingual and translation services</h3>
+    <p>Fresno has large Spanish-speaking, Hmong and Punjabi communities. Interpreting for appointments, translating documents and helping small businesses with bilingual marketing are steady niches.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$50/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Fluent bilingual speakers</li></ul>
+  </div>
+</div>
+
+<h2 id="seasonal-online">Seasonal, selling and remote side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="seasonal-ag">13. Seasonal packing and harvest work</h3>
+    <p>Packing houses, processors and farm labor contractors around Fresno County add workers during peak harvest. Weekend and evening shifts can fit around a day job, and forklift experience pays more.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically hourly, at or above state minimum wage</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Seasonal earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="cabin-turnovers">14. Foothill cabin and vacation rental turnovers</h3>
+    <p>Fresno is a gateway to Yosemite, Sequoia and Kings Canyon, and cabin rentals in the foothills and around Shaver Lake need cleaners and caretakers. Summer and holiday weekends are busiest.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> Supplies, reliable car</li><li><b>Best for:</b> People who enjoy a drive</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">15. Online reselling</h3>
+    <p>Garage sales, thrift stores and estate sales in older neighborhoods feed eBay, Facebook Marketplace and Mercari. Tools, farm and ranch items and Fresno State Bulldogs gear sell well.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$1,000/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="remote-freelancing">16. Remote freelancing</h3>
+    <p>Writing, design, bookkeeping and virtual assistance pay the same whether you live in Fresno or San Francisco. Start on <a href="/fiverr/">Fiverr</a>, sharpen skills with <a href="/skillshare/">Skillshare</a>, and move clients to direct retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$60/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Writers, designers, organizers</li></ul>
+  </div>
+</div>
+
+<h2 id="by-schedule">Fresno side gigs that fit a full-time job</h2>
+<ul>
+  <li><strong>Before work:</strong> pool routes and yard work at sunrise beat the heat and leave your afternoons free.</li>
+  <li><strong>Evenings:</strong> delivery, rideshare, online tutoring and freelancing fit after a regular shift.</li>
+  <li><strong>Weekends:</strong> pressure washing, solar cleaning, detailing, loan signings and cabin turnovers pay well in concentrated blocks.</li>
+  <li><strong>Seasonal bursts:</strong> harvest packing shifts, the Big Fresno Fair and holiday delivery let you earn extra for a few weeks without a year-round commitment.</li>
+</ul>
+<p>Choose the slot you can protect every week. A few reliable hours beat an ambitious schedule you abandon by the second month.</p>
+
+<h2 id="fresno-table">Side jobs in Fresno at a glance</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Pool cleaning</td><td>$100–$200/pool/month</td><td>$300–$600</td><td>1–3 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$15–$22/hr before gas</td><td>Car</td><td>Under 1 week</td></tr>
+    <tr><td>Solar and pressure washing</td><td>$100–$300/job</td><td>$200–$500</td><td>Days</td></tr>
+    <tr><td>Yard work</td><td>$35–$60/yard</td><td>$0–$400</td><td>Days</td></tr>
+    <tr><td>Mobile detailing</td><td>$80–$200/detail</td><td>$200–$500</td><td>1–2 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$15–$25/hr before costs</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Loan signing</td><td>$75–$150/signing</td><td>$300–$600</td><td>4–8 weeks</td></tr>
+    <tr><td>Remote freelancing</td><td>$20–$60/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+<div class="callout"><strong>Quick tip:</strong> Fresno's slow season for outdoor work is winter, when fog settles over the Valley. Use those months to line up spring pool and yard clients, build online income or pick up holiday delivery shifts.</div>
+
+<h2 id="get-started">How to make money in Fresno this month</h2>
+<ol class="steps">
+  <li><strong>Pick one gig that fits the season.</strong> Outdoor services from spring to fall, delivery and online work in winter. Our <a href="/tools/side-hustle-quiz/">side hustle quiz</a> can help you choose.</li>
+  <li><strong>Get your zone clearance.</strong> Apply with the Fresno Planning Department; home-based businesses need a Home Occupation zone clearance.</li>
+  <li><strong>Apply for your business tax certificate.</strong> Once zoning is cleared, register with the city's Business Tax Division.</li>
+  <li><strong>Work one area.</strong> Clustering clients in north Fresno, Clovis or central Fresno keeps gas costs and drive time down.</li>
+  <li><strong>Land three reviews.</strong> Ask early clients for Google or Nextdoor reviews and offer a small referral discount.</li>
+  <li><strong>Set aside taxes.</strong> Open a separate account and use the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to pick your percentage.</li>
+</ol>
+
+<h2 id="california-tax">California taxes and Fresno license rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> California rates run from 1% to 12.3%, plus 1% more on income above $1 million. Self-employment profit is taxed as ordinary income, so pay quarterly estimates to the Franchise Tax Board once income is steady.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, on top of federal income tax.</li>
+  <li><strong>AB5:</strong> California's ABC test decides whether a worker is an employee. If you freelance for businesses, keep your own tools, schedule and multiple clients. App-based drivers fall under Proposition 22.</li>
+  <li><strong>Fresno business tax certificate:</strong> Required to operate legally in the city. You need a zone clearance from the Planning Department first, and home-based businesses must follow the city's home occupation rules. Some activities also need specific permits, and Clovis and unincorporated Fresno County have their own processes.</li>
+  <li><strong>Sales tax:</strong> If you sell physical goods, get a seller's permit from the California Department of Tax and Fee Administration.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Pool chemicals, ladders on roofs and power equipment carry real liability. Get general liability insurance before you take on pool, solar or pressure washing clients.</div>
+
+<h2 id="nearby">Nearby Valley cities</h2>
+<p>Better Side Hustles also covers the <a href="/best-side-hustles-in-sacramento/">best side hustles in Sacramento</a>, <a href="/best-side-hustles-in-bakersfield/">Bakersfield</a> and <a href="/best-side-hustles-in-stockton/">Stockton</a>. Bakersfield shares Fresno's heat and farm economy, Stockton benefits from Bay Area commuters, and Sacramento adds state government jobs to the mix.</p>
+<p>In Fresno, low costs give your side income more room to grow. Pick one service, master the seasons and keep your clients close together, and a side gig here can become serious money.</p>
 HTML,
 ];

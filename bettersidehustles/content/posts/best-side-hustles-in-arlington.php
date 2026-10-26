@@ -1,151 +1,207 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Arlington (2026): Ways to Earn Extra',
-    'description' => 'Explore the best side hustles in Arlington to earn extra income with flexible, high-demand local opportunities.',
-    'h1' => 'Best Side Hustles in Arlington',
+    'title' => 'Best Side Hustles in Arlington, TX (2026): 17 Ways to Earn',
+    'description' => 'The best side hustles in Arlington, Texas for 2026: 17 side gigs with pay, startup costs, game-day tips, UTA student ideas and Texas tax rules.',
+    'h1' => 'Best Side Hustles in Arlington, Texas (2026): 17 Side Gigs That Pay',
     'kicker' => 'City Guide · TX',
-    'dek' => 'Gig apps, local services and online work that pay in Arlington — with realistic earnings and how to land your first dollar.',
+    'dek' => 'Game-day driving around AT&T Stadium, Six Flags summer shifts, UTA tutoring and home services in south Arlington: here are the side jobs in Arlington worth your time, with pay ranges and how to start.',
     'published' => '2026-02-18',
     'modified' => '2026-10-26',
     'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Arlington.webp',
-    'image_alt' => 'Best Side Hustles in Arlington',
+    'image_alt' => 'AT&T Stadium and Globe Life Field in Arlington, Texas, illustrating the best side hustles in Arlington',
     'category' => 'City Guides',
     'city' => 'Arlington',
     'state' => 'TX',
-    'keywords' => ['best side hustles in arlington'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-houston', 'best-side-hustles-in-dallas', 'best-side-hustles-in-fort-worth'],
+    'keywords' => ['best side hustles in arlington', 'side jobs in arlington', 'side gigs in arlington', 'side hustles arlington tx', 'how to make money in arlington', 'arlington side hustles 2026'],
+    'tool' => 'tax-estimator',
+    'gear' => ['insulated-bag', 'dash-cam', 'planner', 'book-side-hustle'],
+    'related' => ['best-side-hustles-in-dallas', 'best-side-hustles-in-fort-worth', 'best-side-hustles-in-houston'],
     'faq' => [
-        ['q' => 'What are the best side hustles in Arlington right now?', 'a' => 'Rideshare driving, event-based gig work, home services, mobile car detailing, and freelancing are among the best side hustles in Arlington due to steady local demand.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Arlington?', 'a' => 'Most people earn $500–$2,500 per month part-time, depending on hours worked and the type of hustle.'],
-        ['q' => 'Do I need a business license to start a side hustle in Arlington?', 'a' => 'Some service-based hustles may require permits or registration, so check local city guidelines before launching.'],
-        ['q' => 'Which side hustle has the lowest startup cost?', 'a' => 'Freelancing and rideshare driving typically require minimal upfront investment compared to equipment-based services.'],
-        ['q' => 'Are event-based jobs reliable year-round in Arlington?', 'a' => 'Yes, thanks to sports seasons, concerts, and conventions, event work remains fairly consistent throughout the year.'],
-        ['q' => 'What side hustles work best for UTA students?', 'a' => 'Tutoring, delivery driving, and freelance digital services offer flexible scheduling around classes.'],
-        ['q' => 'Is mobile car detailing profitable in Arlington?', 'a' => 'Yes, especially in apartment complexes and HOA neighborhoods where convenience drives higher pricing.'],
-        ['q' => 'How do I market my side hustle locally?', 'a' => 'Use neighborhood Facebook groups, local networking, referrals, and direct outreach to small businesses.'],
-        ['q' => 'Should I pay taxes on side hustle income?', 'a' => 'Yes, all side hustle income is taxable, so set aside 25–30% and track earnings carefully.'],
-        ['q' => 'How long does it take to see consistent income?', 'a' => 'Most hustles can generate steady income within 60–90 days if marketed properly and managed consistently.'],
+        ['q' => 'What are the best side hustles in Arlington, Texas?', 'a' => 'The best side hustles in Arlington are game-day rideshare and delivery, event staffing at AT&T Stadium, Globe Life Field and Six Flags, event parking, tutoring for UTA and K-12 students, lawn care and pressure washing, mobile detailing, pet sitting and remote freelancing. Arlington\'s Entertainment District creates demand spikes that few cities its size can match.'],
+        ['q' => 'How can I make money in Arlington fast?', 'a' => 'Sign up for DoorDash, Uber Eats, Instacart or Amazon Flex, which usually pay within a week or two after background checks. Staffing agencies and concession operators hire for Cowboys and Rangers games, concerts and Six Flags seasons. If you live near the stadiums and your property rules allow it, renting parking on event days can pay immediately.'],
+        ['q' => 'How much do side jobs in Arlington pay?', 'a' => 'Most people working 8 to 15 hours a week typically earn $400 to $1,400 a month. App-based gigs usually net $15 to $22 an hour after gas, and event days can push that higher. Skilled services like pressure washing, detailing, tutoring and freelancing commonly reach $30 to $70 an hour once you have repeat clients.'],
+        ['q' => 'Do I need a business license for a side hustle in Arlington?', 'a' => 'Texas has no general state business license, and Arlington does not require one for most service side hustles. File an assumed name certificate with the Tarrant County Clerk if you use a brand name as a sole proprietor. You need a free Texas sales tax permit for taxable goods or services, and short-term rentals need a city permit.'],
+        ['q' => 'Can I run an Airbnb in Arlington, Texas?', 'a' => 'Only in certain areas. Arlington allows short-term rentals in a designated STR zone around the Entertainment District, plus some non-residential and mixed-use properties. Operators need an annual city permit, which costs $500 a year, and must collect state and local hotel occupancy taxes. Check the city\'s Planning and Development Services page before listing.'],
+        ['q' => 'What are good side hustles for UTA students?', 'a' => 'UTA students do well with tutoring, event staffing on game days, delivery by car or e-bike, pet sitting, campus research studies and freelance design, coding or social media work for local businesses. Event shifts at AT&T Stadium and Globe Life Field fit around class schedules, and remote freelancing can grow into real experience for your resume.'],
     ],
     'body' => <<<'HTML'
-<p>If you’re looking for the <strong>best side hustles in Arlington</strong>, you’re in the right city at the right time. Arlington isn’t just a midpoint between Dallas and Fort Worth. It’s an economic engine powered by sports, tourism, universities, and suburban growth. That combination creates opportunity. Real opportunity.</p>
-<p>Extra income here doesn’t require luck. It requires positioning.</p>
-<p>Whether you’re a working professional trying to offset rising costs, a student at UTA looking for flexibility, or someone testing the waters before starting a business, Arlington offers options that are practical and scalable. Let’s break them down.</p>
-<h2 id="h-why-arlington-is-built-for-side-hustles">Why Arlington Is Built for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Arlington,_Texas">Arlington</a> sits in the middle of the DFW metroplex, which means access. Highways. Airports. Stadiums. Business districts. You’re never far from demand.</p>
-<p>Then there’s the entertainment factor.</p>
-<p>Major sporting events, concerts, conventions, and theme park traffic fuel seasonal spikes in spending. That matters. Because <a href="/best-side-hustles-in-el-paso/">side hustles</a> thrive where money flows in waves.</p>
-<p>Add to that:</p>
-<ul><li>Large suburban neighborhoods</li><li>High apartment density</li><li>Students from the University of Texas at Arlington</li><li>A strong small business presence</li></ul>
-<p>In short, the best side hustles in Arlington are those that plug directly into these ecosystems.</p>
-<h2 id="h-quick-comparison-where-should-you-start">Quick Comparison: Where Should You Start?</h2>
-<p>Here’s a simple breakdown of high-performing options:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Flexibility</strong></td><td><strong>Earning Potential</strong></td><td><strong>Best For</strong></td></tr><tr><td>Rideshare &amp; Delivery</td><td>Low</td><td>High</td><td>$$</td><td>Flexible earners</td></tr><tr><td>Event-Based Gig Work</td><td>Low–Medium</td><td>Medium</td><td>$$$</td><td>Weekend workers</td></tr><tr><td>Home Services</td><td>Medium</td><td>Medium</td><td>$$$</td><td>Skilled hands</td></tr><tr><td>Freelancing</td><td>Low</td><td>High</td><td>$$$$</td><td>Remote pros</td></tr><tr><td>Mobile Car Detailing</td><td>Medium</td><td>Medium</td><td>$$$</td><td>Service-minded</td></tr></tbody></table>
-<p>Use this table as a filter. If you need something you can start tomorrow, pick low startup. If you want higher upside, lean toward services with pricing control.</p>
-<p>Now let’s dig deeper.</p>
-<h2 id="h-1-rideshare-amp-delivery-driving">1. Rideshare &amp; Delivery Driving</h2>
-<p>This is the most obvious option. But obvious doesn’t mean ineffective.</p>
-<p>Arlington’s event traffic creates surge pricing opportunities that drivers in smaller cities simply don’t get. Game days. Concert nights. Holiday weekends. The earnings spike fast.</p>
-<p>Smart strategy:</p>
-<ul><li>Drive during major events only.</li><li>Position near stadium exits before events end.</li><li>Track peak airport traffic hours.</li><li>Avoid weekday slow windows unless needed.</li></ul>
-<p>Realistically, part-time drivers working strategically can earn $600–$1,200 monthly without burning out. The key isn’t volume. It’s timing.</p>
-<h2 id="h-2-event-based-gig-work">2. Event-Based Gig Work</h2>
-<p>This is where Arlington shines.</p>
-<p>Temporary staffing for sports venues, brand promotions, merchandise sales, and concessions creates short bursts of high-demand work. It’s ideal if you prefer structured shifts instead of freelancing uncertainty.</p>
-<p>Why it works here:</p>
-<ul><li>Year-round sports schedule</li><li>National tours and concerts</li><li>Corporate events</li></ul>
-<p>Pro tip: Register with multiple event staffing agencies so you control your availability. Treat it like picking shifts, not begging for hours.</p>
-<p>This consistently ranks among the best side hustles in Arlington because the city’s entertainment economy doesn’t slow down.</p>
-<h2 id="h-3-airbnb-amp-short-term-rentals">3. Airbnb &amp; Short-Term Rentals</h2>
-<p>If you have a spare room or flexible living arrangement, this one deserves attention.</p>
-<p>Event-driven tourism increases short-term rental demand. Pricing during major games or festivals can double typical nightly rates.</p>
-<p>Action plan:</p>
-<ul><li>Study event calendars six months ahead.</li><li>Adjust pricing during peak weekends.</li><li>Offer simple but clean accommodations.</li><li>Provide parking information clearly (this matters!).</li></ul>
-<p>Before listing, check local short-term rental regulations and HOA rules. Compliance protects your income stream.</p>
-<p>When executed properly, this can produce $1,000+ monthly during high seasons.</p>
-<h2 id="h-4-home-services-amp-handyman-work">4. Home Services &amp; Handyman Work</h2>
-<p>Arlington’s suburban neighborhoods create steady demand for home maintenance. Lawns grow fast in Texas. Fences need repair. Driveways collect grime.</p>
-<p>High-demand services include:</p>
-<ul><li>Lawn mowing and edging</li><li>Pressure washing</li><li>Junk removal</li><li>Minor drywall repair</li><li>Fence staining</li></ul>
-<p>Here’s the edge: speed and reliability. Most homeowners value responsiveness more than rock-bottom pricing.</p>
-<p>Starter strategy:</p>
-<ol><li>Pick one service.</li><li>Offer it to one neighborhood.</li><li>Collect reviews.</li><li>Expand radius gradually.</li></ol>
-<p>Home services remain one of the best side hustles in Arlington because suburban density equals repeat clients.</p>
-<h2 id="h-5-mobile-car-detailing">5. Mobile Car Detailing</h2>
-<p>This one deserves special attention.</p>
-<p>Apartment complexes and HOA communities are perfect markets for mobile detailing. Residents want convenience. They’ll pay for it.</p>
-<p>Startup essentials:</p>
-<ul><li>Portable water tank</li><li>Pressure washer</li><li>Basic detailing supplies</li><li>Scheduling app</li></ul>
-<p>Revenue potential:</p>
-<ul><li>$120–$250 per vehicle</li><li>3–4 cars per weekend</li><li>$1,500–$3,000 monthly part-time</li></ul>
-<p>Market yourself by posting in local Facebook groups and offering “complex discount days.” Book multiple cars in one location to maximize efficiency.</p>
-<p>This is not theoretical. It’s repeatable.</p>
-<h2 id="h-6-freelancing-for-local-businesses">6. Freelancing for Local Businesses</h2>
-<p>Arlington businesses need digital help. Many don’t want full-time hires.</p>
-<p>Services in demand:</p>
-<ul><li>Social media management</li><li>Content writing</li><li>Website updates</li><li>Email marketing</li><li>Graphic design</li></ul>
-<p>Instead of competing globally on freelance platforms, pitch locally.</p>
-<p>Visit small businesses. Send personalized emails. Offer a clear, fixed monthly package.</p>
-<p>Example pitch:</p>
-<p>“I help local businesses increase customer engagement through consistent social media posting. I manage everything. Flat monthly rate.”</p>
-<p>Freelancing ranks among the best side hustles in Arlington because it scales beyond hourly pay. You can replace your salary if you commit.</p>
-<h2 id="h-7-tutoring-amp-test-prep">7. Tutoring &amp; Test Prep</h2>
-<p><a href="https://www.uta.edu/students">UTA students</a>. High school students. STEM demand.</p>
-<p>If you’re strong in math, science, or standardized test prep, you can build a consistent tutoring base quickly.</p>
-<p>Pricing:</p>
-<ul><li>$40–$75 per hour locally</li><li>Higher for test prep</li></ul>
-<p>Execution plan:</p>
-<ul><li>Advertise in parent groups.</li><li>Offer free 20-minute consultation.</li><li>Bundle 5-session packages for commitment.</li></ul>
-<p>Education-focused side work offers predictability. And referrals grow fast if results show.</p>
-<h2 id="h-8-sports-amp-fitness-coaching">8. Sports &amp; Fitness Coaching</h2>
-<p>Youth sports leagues operate constantly. Parents pay for skill development.</p>
-<p>Opportunities include:</p>
-<ul><li>Private basketball lessons</li><li>Speed and agility training</li><li>Soccer coaching</li><li>Personal training sessions</li></ul>
-<p>Local parks make this easy. Overhead stays low.</p>
-<p>The key? Specialize. Don’t market as “fitness coach.” Market as “middle school basketball shooting specialist.”</p>
-<p>Narrow positioning increases perceived value.</p>
-<h2 id="h-9-real-estate-support-services">9. Real Estate Support Services</h2>
-<p>The housing market may fluctuate, but transactions continue.</p>
-<p>High-demand services:</p>
-<ul><li>Listing photography</li><li>Showing assistance</li><li>Property cleaning</li><li>Staging</li><li>Move-in/move-out cleaning</li></ul>
-<p>Real estate professionals value speed. If you can offer 48-hour turnaround, you’ll stand out.</p>
-<p>This is one of the quieter but highly profitable best side hustles in Arlington because agents rely heavily on trusted vendors.</p>
-<h2 id="h-10-reselling-amp-flipping">10. Reselling &amp; Flipping</h2>
-<p>Arlington’s garage sales and Facebook Marketplace listings are full of opportunity.</p>
-<p>What sells well:</p>
-<ul><li>Furniture</li><li>Sports memorabilia</li><li>Appliances</li><li>Tools</li></ul>
-<p>Strategy:</p>
-<ul><li>Focus on one category.</li><li>Understand resale pricing deeply.</li><li>Buy below 50% of resale value.</li></ul>
-<p>Flipping isn’t glamorous. It’s margin math. But margins compound.</p>
-<h2 id="h-how-to-choose-the-right-hustle">How to Choose the Right Hustle</h2>
-<p>Ask yourself:</p>
-<ul><li>Do I prefer structure or flexibility?</li><li>Am I trading time for money, or building leverage?</li><li>What skill do I already have?</li><li>How much startup cash can I risk?</li></ul>
-<p>Simple rule: Start with the lowest risk option that matches your current skillset.</p>
-<p>The best side hustles in Arlington aren’t universal. They’re personal.</p>
-<h2 id="h-realistic-income-expectations">Realistic Income Expectations</h2>
-<p>Let’s stay grounded.</p>
-<table class="data"><tbody><tr><td><strong>Effort Level</strong></td><td><strong>Monthly Income Range</strong></td></tr><tr><td>Casual (5–8 hrs/week)</td><td>$500–$1,000</td></tr><tr><td>Moderate (10–15 hrs/week)</td><td>$1,000–$2,500</td></tr><tr><td>Aggressive (20+ hrs/week)</td><td>$3,000–$5,000+</td></tr></tbody></table>
-<p>Seasonality matters. Event-based income spikes. Home services fluctuate with weather.</p>
-<p>Consistency wins long-term.</p>
-<h2 id="h-legal-amp-practical-considerations">Legal &amp; Practical Considerations</h2>
-<p>Before you scale:</p>
-<ul><li>Track all income.</li><li>Set aside 25–30% for taxes.</li><li>Consider liability insurance for service work.</li><li>Keep simple bookkeeping records.</li></ul>
-<p>Treat it like a business from day one. Even if it’s small.</p>
-<p>Professionalism compounds.</p>
-<h2 id="h-90-day-action-plan">90-Day Action Plan</h2>
-<p><strong>Weeks 1–2:</strong><strong><br/></strong> Research demand. Validate idea. Talk to potential customers.</p>
-<p><strong>Weeks 3–4:</strong><strong><br/></strong> Set up essentials. Business name. Scheduling system. Basic marketing.</p>
-<p><strong>Month 2:</strong><strong><br/></strong> Acquire first 5 paying clients. Focus on service quality.</p>
-<p><strong>Month 3:</strong><strong><br/></strong> Collect reviews. Refine pricing. Increase marketing reach.</p>
-<p>Momentum builds faster than motivation.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Arlington isn’t just a city. It’s an opportunity cluster.</p>
-<p>Entertainment fuels spikes. Suburbs create steady demand. Students add flexibility. Businesses need support.</p>
-<p>The <strong>best side hustles in Arlington</strong> are those that align with where money already flows. Position yourself there. Start small. Stay consistent. Raise prices when value increases.</p>
-<p>Income doesn’t grow because you wish for it.</p>
-<p>It grows because you decide to step into the market and serve it well.</p>
-<p>And Arlington? It’s ready.</p>
+<p>Arlington has something no other mid-size city in Texas can claim: the Dallas Cowboys, the Texas Rangers and Six Flags Over Texas within a couple of miles of each other. Add the University of Texas at Arlington, a General Motors assembly plant and a location halfway between Dallas and Fort Worth, and you get a city where the best side hustles in Arlington follow the crowds while everyday home services keep the rest of the calendar busy.</p>
+<p>Here are 17 side gigs that work in Arlington in 2026, with typical pay, startup costs and the local timing that matters, from game-day traffic patterns to summer theme park hiring.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Texas state income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+  <div class="stat"><b>~20 min</b><span>to DFW Airport without traffic</span></div>
+</div>
+
+<h2 id="arlington-edge">Why side gigs in Arlington work so well</h2>
+<ul>
+  <li><strong>The Entertainment District.</strong> AT&amp;T Stadium hosts the Cowboys, the Cotton Bowl Classic, the Big 12 Championship, major concerts and, in summer 2026, FIFA World Cup matches. Globe Life Field hosts the Rangers, and Texas Live!, Choctaw Stadium, Six Flags Over Texas and Hurricane Harbor fill the rest of the calendar.</li>
+  <li><strong>A big university.</strong> UTA brings tens of thousands of students who need tutoring, rides and food, and who are looking for flexible work themselves.</li>
+  <li><strong>Steady employers.</strong> The GM Arlington Assembly plant, the school districts, hospitals and the Six Flags and stadium operations provide stable paychecks around town.</li>
+  <li><strong>Central location.</strong> Interstates 20 and 30 put Dallas, Fort Worth and DFW Airport within easy reach, so you can take gigs across the metroplex.</li>
+  <li><strong>Suburban neighborhoods.</strong> South Arlington, Viridian and neighboring Mansfield have family homes with lawns, pools and busy parents.</li>
+</ul>
+
+<h2 id="game-day">Game-day and event side hustles</h2>
+<p>Learning how to make money in Arlington starts with the event calendar. Plan your month around home games, concerts and big tournaments.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare-arlington">1. Event rideshare driving</h3>
+    <p>Arlington has no traditional fixed-route city bus system, so many visitors rely on rideshare. Post-game exits at AT&amp;T Stadium and Globe Life Field, concert nights and Texas Live! weekends create surges. Position near designated pickup zones before games end and know which roads close. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers sign-up.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$28/hr before expenses on event days</li><li><b>Startup:</b> Eligible car</li><li><b>Best for:</b> Weekend and night drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing-arlington">2. Stadium and event staffing</h3>
+    <p>Concession operators, security firms and staffing agencies hire for every Cowboys and Rangers home game, concerts and college bowl games. Shifts include ushering, ticket scanning, concessions, parking and cleanup. Many nonprofit groups staff stands and split the proceeds.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$25/hr plus tips at some stands</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="theme-park">3. Six Flags and Hurricane Harbor seasonal work</h3>
+    <p>Six Flags Over Texas and Hurricane Harbor hire heavily for spring, summer and the Halloween and holiday events. Part-time shifts fit students and teachers on summer break.</p>
+    <ul class="meta"><li><b>Pay:</b> $13–$18/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, teachers in summer</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-parking">4. Event parking</h3>
+    <p>Homeowners, churches and businesses near the Entertainment District have sold game-day parking for years. Check city rules, HOA restrictions and your lease before you put out a sign, and price by event size.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$60+ per car on big event days</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Property owners near the stadiums</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery-arlington">5. Food and grocery delivery</h3>
+    <p>DoorDash, Uber Eats, Instacart and Walmart Spark stay busy around UTA, the Highlands at Arlington and along Cooper Street. Game days pack restaurants, and hungry fans at nearby hotels order in. South Arlington tips well with easy parking.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr before gas</li><li><b>Startup:</b> Car, bike or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+</div>
+<p>Event surges look great on paper. Check what you really keep after gas and wear:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout callout-warn"><strong>Watch out:</strong> Game-day traffic on I-30, Collins Street and Randol Mill Road can trap you for an hour. Accept rides heading away from the stadiums after games and avoid getting stuck in the pre-game crawl.</div>
+
+<h2 id="home-arlington">Home and neighborhood services</h2>
+<p>Between events, Arlington is a family suburb with steady demand for help around the house.</p>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="lawn-arlington">6. Lawn care and yard cleanup</h3>
+    <p>Neighborhoods in south and southwest Arlington, Viridian and around Lake Arlington have lawns that grow fast from spring through fall. Build a route of 10 to 20 homes close together. Texas generally treats lawn service as taxable, so build that into your pricing.</p>
+    <ul class="meta"><li><b>Pay:</b> $35–$60 per lawn</li><li><b>Startup:</b> Mower, trimmer, blower</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing-arlington">7. Pressure washing</h3>
+    <p>Driveways, fences and patios need cleaning after North Texas storms and pollen season. Single jobs often pay $150 to $400. Post before-and-after photos in Arlington Facebook groups and Nextdoor.</p>
+    <ul class="meta"><li><b>Pay:</b> $150–$400 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend warriors</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring-arlington">8. Tutoring</h3>
+    <p>Families in Arlington ISD and Mansfield ISD hire tutors for math, reading, STAAR and SAT prep, and UTA students need help with engineering, nursing and calculus courses. A small [[amazon:whiteboard|whiteboard]] makes in-person sessions easier.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$60/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="detailing-arlington">9. Mobile car detailing</h3>
+    <p>Busy families and commuters will pay to have SUVs and trucks cleaned in their driveways or at work. Pre-game detailing for tailgaters and hail-season cleanups add demand.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-arlington">10. Pet sitting and dog walking</h3>
+    <p>Families who travel for youth sports and apartment dwellers near UTA keep Rover and Wag busy. Holidays book up early.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$30/walk, $40–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman-arlington">11. Handyman and assembly</h3>
+    <p>Furniture assembly, TV mounting and small repairs in older central Arlington homes are steady TaskRabbit work. Leave licensed electrical and plumbing jobs to pros.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,car-charger,power-bank|Gear for game-day drivers in Arlington]]
+
+<h2 id="arlington-table">Best side hustles in Arlington compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Event rideshare</td><td>$15–$28/hr before expenses</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Stadium staffing</td><td>$15–$25/hr</td><td>$0</td><td>Next home game</td></tr>
+    <tr><td>Theme park work</td><td>$13–$18/hr</td><td>$0</td><td>2–3 weeks</td></tr>
+    <tr><td>Event parking</td><td>$20–$60+ per car</td><td>$0</td><td>Next big event</td></tr>
+    <tr><td>Delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Lawn care</td><td>$35–$60 per lawn</td><td>$0–$500</td><td>Days</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$400 per job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>Tutoring</td><td>$25–$60/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="online-arlington">Online and creative side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="freelance-arlington">12. Freelance design, coding and marketing</h3>
+    <p>UTA's engineering and business programs produce plenty of skilled students and grads. Local restaurants, contractors and shops near the Entertainment District need websites, social posts and ads. Build reviews on <a href="/fiverr/">Fiverr</a>, then pitch local businesses directly.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Designers, developers, marketers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="va-arlington">13. Virtual assistant work</h3>
+    <p>Realtors, insurance agents and small businesses across Tarrant County need help with scheduling, email and CRM updates.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$40/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="sports-reselling">14. Sports memorabilia reselling</h3>
+    <p>Cowboys and Rangers gear, signed items and vintage jerseys sell well online, especially after the Rangers' 2023 World Series title. Estate sales and garage sales are good sources. Verify autographs before you resell.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300</li><li><b>Best for:</b> Sports fans</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography-arlington">15. Event and portrait photography</h3>
+    <p>Graduations at UTA, tailgate parties, youth sports and family portraits keep photographers busy. Realtors need listing photos too.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$300 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="str-arlington">16. STR cleaning and co-hosting</h3>
+    <p>Short-term rentals in Arlington's STR zone around the Entertainment District see huge demand on game and concert weekends. Hosts need fast turnovers and co-hosts to handle guests.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr cleaning; 15–25% co-hosting</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Reliable, organized people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-arlington">17. Moving help</h3>
+    <p>Student move-ins and move-outs around UTA each August and May, plus regular apartment turnover, keep moving apps busy.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$50/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong, punctual people</li></ul>
+  </div>
+</div>
+<div class="callout"><strong>Quick tip:</strong> Stack your gigs. Many Arlington side hustlers work a stadium shift or drive event rideshare on weekends and run a lawn, tutoring or freelance business during the week, which smooths out income between home stands.</div>
+
+<h2 id="arlington-seasons">An Arlington side hustle calendar</h2>
+<p>Arlington's demand moves with the sports seasons, so plan your year around them:</p>
+<ul>
+  <li><strong>March–September:</strong> Rangers baseball brings dozens of home games to Globe Life Field, and Six Flags and Hurricane Harbor hire for their busy seasons. Lawn care and pressure washing peak too.</li>
+  <li><strong>August–January:</strong> Cowboys football, college games and the Big 12 Championship fill AT&amp;T Stadium. UTA move-in week in August is prime time for moving help.</li>
+  <li><strong>October–December:</strong> Six Flags' Halloween and holiday events, holiday shopping deliveries and Amazon Flex peak season.</li>
+  <li><strong>Late December–early January:</strong> The Cotton Bowl Classic and bowl-season crowds create a final surge for drivers, staff and hosts.</li>
+</ul>
+<p>Concerts and special events land throughout the year, so check venue calendars monthly.</p>
+
+<h2 id="arlington-areas">Where each side gig works best in Arlington</h2>
+<ul>
+  <li><strong>Entertainment District and north Arlington:</strong> event driving, parking, stadium staffing and STR turnovers.</li>
+  <li><strong>Downtown and around UTA:</strong> tutoring, delivery by bike, moving help and freelance work for local businesses.</li>
+  <li><strong>South and southwest Arlington, Viridian and Lake Arlington:</strong> lawn care, pressure washing, detailing, pet sitting and house cleaning.</li>
+</ul>
+
+<h2 id="start-arlington">How to start a side hustle in Arlington this month</h2>
+<ol class="steps">
+  <li><strong>Download the schedules.</strong> Cowboys, Rangers, AT&amp;T Stadium concerts and Six Flags events. Circle the big days.</li>
+  <li><strong>Pick a weekday hustle and a weekend hustle.</strong> For example, tutoring on weeknights and event driving on weekends.</li>
+  <li><strong>Sign up early.</strong> App background checks and staffing agency onboarding can take a couple of weeks, so start before the season.</li>
+  <li><strong>Get listed locally.</strong> Nextdoor, Arlington Facebook groups and a Google Business Profile for services.</li>
+  <li><strong>Land three clients and ask for reviews.</strong> Reviews matter more than ads in a city this size.</li>
+  <li><strong>Track every dollar.</strong> Separate account, receipts and mileage. Use the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to set aside the right amount.</li>
+</ol>
+
+<h2 id="arlington-taxes">Texas taxes and Arlington rules</h2>
+<ul>
+  <li><strong>No state income tax.</strong> You owe federal income tax plus 15.3% self-employment tax on net profit. Pay quarterly once you expect to owe $1,000 or more.</li>
+  <li><strong>Sales tax.</strong> Arlington's combined rate is typically 8.25%. Texas taxes physical goods and some services, including many lawn, landscaping and cleaning jobs. Get a free sales tax permit from the Comptroller if your work is taxable.</li>
+  <li><strong>Short-term rentals.</strong> Arlington allows STRs only in its designated STR zone around the Entertainment District and certain non-residential or mixed-use properties, with a $500 annual city permit. Hosts also owe state and local hotel occupancy taxes.</li>
+  <li><strong>Assumed name.</strong> File a DBA with the Tarrant County Clerk if you operate under a brand name.</li>
+  <li><strong>Rideshare.</strong> Texas regulates Uber and Lyft statewide, so you don't need a separate city permit to drive.</li>
+</ul>
+<p>Our <a href="/side-job-hustles-in-texas-emerging-trends-and-opportunities-for-all/">Texas side hustle guide</a> covers statewide trends.</p>
+
+<h2 id="nearby">Compare Arlington with nearby cities</h2>
+<p>Arlington sits between two bigger markets. See the best side hustles in <a href="/best-side-hustles-in-dallas/">Dallas</a> and <a href="/best-side-hustles-in-fort-worth/">Fort Worth</a> for gigs you can take across the metroplex, or our <a href="/best-side-hustles-in-houston/">Houston guide</a> for comparison. Better Side Hustles readers in Arlington often find the best results by combining event-day income with a steady weekday service.</p>
+<p>Pick one idea, give it 90 days and track every hour. Arlington side hustles in 2026 pay best for people who plan around the calendar.</p>
 HTML,
 ];

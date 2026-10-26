@@ -1,174 +1,191 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Oakland (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Oakland and learn how to earn extra income with practical, high-demand local opportunities.',
-    'h1' => 'Best Side Hustles in Oakland',
-    'kicker' => 'City Guide · CA',
-    'dek' => 'Gig apps, local services and online work that pay in Oakland — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-12',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Oakland.webp',
-    'image_alt' => 'Best Side Hustles in Oakland',
-    'category' => 'City Guides',
-    'city' => 'Oakland',
-    'state' => 'CA',
-    'keywords' => ['best side hustles in oakland'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-san-diego', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-san-francisco'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Oakland right now?', 'a' => 'Service-based work like cleaning, handyman services, mobile detailing, and freelance digital marketing are among the best side hustles in Oakland due to consistent local demand.'],
-        ['q' => 'How much can I realistically earn from a side hustle in Oakland?', 'a' => 'Most part-time hustlers earn between $800 and $3,000 per month depending on hours worked and the type of service offered.'],
-        ['q' => 'Do I need a business license to start a side hustle in Oakland?', 'a' => 'Many side hustles require a City of Oakland business license, so check local regulations before launching.'],
-        ['q' => 'Which side hustles require the lowest startup cost?', 'a' => 'Rideshare driving, virtual assistant work, and freelance marketing typically require minimal upfront investment.'],
-        ['q' => 'Are creative side hustles profitable in Oakland?', 'a' => 'Yes, photography, music lessons, and handmade goods sell well due to Oakland’s strong arts and cultural scene.'],
-        ['q' => 'Is mobile car detailing a good side hustle in Oakland?', 'a' => 'Yes, tight parking and busy professionals create strong demand for convenient, on-site detailing services.'],
-        ['q' => 'Can I run a food-based side hustle from home?', 'a' => 'Yes, under California’s cottage food laws, you can legally sell certain homemade food items with proper permits.'],
-        ['q' => 'How do I find clients for my side hustle?', 'a' => 'Use platforms like Nextdoor, Facebook groups, Yelp, Google Business, and local community boards to attract customers.'],
-        ['q' => 'Are side hustles in Oakland scalable into full-time businesses?', 'a' => 'Many service-based and freelance side hustles can grow into full-time income with consistent marketing and client retention.'],
-        ['q' => 'What’s the safest way to test a new side hustle idea?', 'a' => 'Start small, validate demand locally, track expenses carefully, and reinvest profits gradually as you grow.'],
+    'title'       => 'Best Side Hustles in Oakland (2026): 16 Ways to Make Money',
+    'description' => 'The best side hustles in Oakland for 2026: 16 side gigs from cottage food and market vending to handyman work and rideshare, with pay and Oakland tax rules.',
+    'h1'          => 'Best Side Hustles in Oakland (2026): 16 Side Gigs That Pay',
+    'kicker'      => 'City Guide · CA',
+    'dek'         => 'Oakland has its own economy, not just San Francisco\'s overflow. From Craftsman repairs in Rockridge to pop-ups in Temescal and airport runs from OAK, these are the side jobs in Oakland worth your time.',
+    'published'   => '2026-02-12',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Oakland.webp',
+    'image_alt'   => 'Lake Merritt and the Oakland skyline, illustrating the best side hustles in Oakland',
+    'category'    => 'City Guides',
+    'city'        => 'Oakland',
+    'state'       => 'CA',
+    'keywords'    => ['best side hustles in oakland', 'side jobs in oakland', 'side gigs in oakland', 'how to make money in oakland', 'oakland side hustles 2026'],
+    'tool'        => 'shopify-profit',
+    'gear'        => ['insulated-bag', 'camera', 'phone-mount', 'book-side-hustle'],
+    'related'     => ['best-side-hustles-in-san-francisco', 'best-side-hustles-in-san-jose', 'best-side-hustles-in-sacramento'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Oakland?', 'a' => 'Strong options include handyman work on Oakland\'s older homes, short-term rental turnover cleaning, cottage food and pop-up food, selling at local markets, event photography, dog walking around Lake Merritt, hillside yard and vegetation clearing, and rideshare or delivery timed around Oakland International Airport and Uptown nightlife. Freelance marketing for local small businesses is a good remote option.'],
+        ['q' => 'How can I make money in Oakland fast?', 'a' => 'Delivery apps, Instacart, TaskRabbit, Rover and event staffing agencies are the quickest ways to start, typically paying within one to two weeks. Short-term rental hosts often need cleaners on short notice, and selling furniture or clothing on Facebook Marketplace or at a flea market can bring in cash within days.'],
+        ['q' => 'Do I need a business license for a side hustle in Oakland?', 'a' => 'Yes. Oakland says every business operating in the city, including home-based businesses and people who rent out rooms, needs a Business Tax Certificate and must pay an annual business tax. File within 30 days of starting to avoid penalties. Home-based businesses also typically need a zoning clearance before applying, and certificates renew each calendar year.'],
+        ['q' => 'How much can I earn from side jobs in Oakland?', 'a' => 'Most part-timers working 8 to 15 hours a week earn roughly $500 to $2,000 a month. App-based driving typically nets less after gas and insurance, while handyman work, photography, music lessons and freelance marketing commonly bring $40 to $90 an hour once you have repeat clients. Food and handmade products vary with how well you price.'],
+        ['q' => 'Can I sell homemade food in Oakland?', 'a' => 'Yes, with the right permit. California\'s cottage food law lets you sell approved low-risk foods like baked goods, jams and dried goods made at home, registered through Alameda County Environmental Health. Selling full home-cooked meals falls under separate microenterprise home kitchen rules. You also need your Oakland Business Tax Certificate.'],
+        ['q' => 'How are side hustle earnings taxed in California?', 'a' => 'California taxes self-employment profit as ordinary income, at rates from 1% to 12.3% plus 1% more on income above $1 million. You also pay federal income tax and 15.3% federal self-employment tax on net profit, and Oakland charges its own business tax based on gross receipts. Set aside 25 to 35% of profit for taxes.'],
     ],
-    'body' => <<<'HTML'
-<p>The best side hustles in Oakland aren’t just random ideas from a general list. They’re influenced by the Port of Oakland, nearby San Francisco’s tech scene, the city’s strong arts culture, and the simple fact that living here costs a lot. If you’re going to work extra hours, it should pay off.</p>
-<p><a href="https://en.wikipedia.org/wiki/Oakland,_California">Oakland</a> supports people who take action. It favors those who know the neighborhoods well and can fix real problems for busy workers, renters, artists, and small business owners. That’s where the real chances to earn are.</p>
-<p>Let’s break down what actually works here.</p>
-<h2 id="h-what-makes-a-side-hustle-profitable-in-oakland">What Makes a Side Hustle Profitable in Oakland?</h2>
-<p>Before jumping into a list, pause. Not every idea scales locally.</p>
-<p>Here’s what makes <a href="/best-side-hustles-in-sacramento/">side hustles</a> succeed in Oakland:</p>
-<ul><li><strong>High density neighborhoods</strong> like Downtown, Rockridge, Temescal, and Lake Merritt create walkable customer bases.</li><li><strong>Commuter culture</strong> between Oakland and San Francisco increases demand for convenience services.</li><li><strong>Older housing stock</strong> means repairs, cleaning, and maintenance are ongoing needs.</li><li><strong>Creative economy</strong> fuels demand for photography, design, music lessons, and event services.</li><li><strong>High income disparity</strong> creates both premium service markets and price-sensitive demand.</li></ul>
-<p>If your hustle saves time, adds convenience, or improves quality of life, you’re in business.</p>
-<h2 id="h-high-demand-gig-economy-opportunities">High-Demand Gig Economy Opportunities</h2>
-<h3 id="h-1-rideshare-amp-delivery-driving">1. Rideshare &amp; Delivery Driving</h3>
-<p>Let’s start with the obvious.</p>
-<p>Driving for Uber, Lyft, DoorDash, or Instacart works in Oakland because:</p>
-<ul><li>Airport runs to OAK and SFO are steady.</li><li>SF commuters generate early morning and late evening demand.</li><li>Weekend nightlife creates surge pricing.</li></ul>
-<p><strong>Realistic earnings:</strong><strong><br/></strong> $20–$35 per hour during peak windows (before expenses).</p>
-<p><strong>Strategy tip:</strong><strong><br/></strong> Focus on:</p>
-<ul><li>5:30–9:00 AM commute runs</li><li>4:00–7:00 PM return commute</li><li>Friday and Saturday nights around Uptown</li></ul>
-<p>Track gas carefully. Use apps that map surge zones before repositioning. The difference between average and excellent income is timing.</p>
-<h3 id="h-2-grocery-amp-specialty-delivery">2. Grocery &amp; Specialty Delivery</h3>
-<p>Rockridge and Montclair residents value convenience. A lot.</p>
-<p>You can:</p>
-<ul><li>Deliver for Instacart</li><li>Offer personal grocery pickup for seniors</li><li>Partner with specialty markets</li></ul>
-<p><strong>Why it works:</strong> Many professionals commute to San Francisco. They’ll gladly outsource errands.</p>
-<p>If you niche down — organic markets, specialty wine, bulk shopping — you increase tips and loyalty.</p>
-<h2 id="h-service-based-side-hustles-that-thrive-in-oakland">Service-Based Side Hustles That Thrive in Oakland</h2>
-<h3 id="h-3-home-cleaning-amp-airbnb-turnovers">3. Home Cleaning &amp; Airbnb Turnovers</h3>
-<p>Oakland has thousands of short-term rentals and busy dual-income households.</p>
-<p>A small two-person cleaning team can earn:</p>
-<ul><li>$120–$180 per standard home</li><li>$150–$250 per Airbnb turnover</li></ul>
-<p>With 4 jobs per week, you’re easily at $2,000–$3,000 monthly part-time.</p>
-<p>Start simple:</p>
-<ul><li>Liability insurance</li><li>Basic equipment</li><li>Yelp and Nextdoor listings</li><li>Before-and-after photos</li></ul>
-<p>Repeat clients build stability fast.</p>
-<h3 id="h-4-handyman-services">4. Handyman Services</h3>
-<p>Older homes equal steady work.</p>
-<p>Oakland properties frequently need:</p>
-<ul><li>Drywall patching</li><li>Fence repair</li><li>Door adjustments</li><li>Fixture replacements</li></ul>
-<p>Many homeowners don’t want full contractors. They want someone reliable.</p>
-<p><strong>Typical rates:</strong> $75–$125 per hour.</p>
-<p>Check Alameda County licensing requirements if you cross into larger projects. For small repair work, a basic business registration may suffice.</p>
-<p>Consistency matters more than fancy branding here.</p>
-<h3 id="h-5-mobile-car-detailing">5. Mobile Car Detailing</h3>
-<p>Parking is tight. Car owners don’t want to wait at shops.</p>
-<p>Offer mobile detailing and go to them.</p>
-<p><strong>Startup basics:</strong></p>
-<ul><li>Portable water tank</li><li>Pressure washer</li><li>Cleaning chemicals</li><li>Generator (optional)</li></ul>
-<p>Startup cost: $1,500–$3,000.</p>
-<p>Charge:</p>
-<ul><li>$150–$250 per vehicle</li><li>Upsell interior deep cleans</li></ul>
-<p>Focus on:</p>
-<ul><li>Lake Merritt high-rises</li><li>Condo complexes</li><li>Professional parking garages</li></ul>
-<p>The margins are strong. The demand is real.</p>
-<h2 id="h-creative-side-hustles-that-fit-oakland-s-culture">Creative Side Hustles That Fit Oakland’s Culture</h2>
-<p>Oakland isn’t corporate beige. It’s expressive. That opens doors.</p>
-<h3 id="h-6-event-photography-amp-videography">6. Event Photography &amp; Videography</h3>
-<p>From weddings to community festivals to First Fridays, events are constant.</p>
-<p>Build:</p>
-<ul><li>A simple portfolio website</li><li>Instagram presence</li><li>Vendor relationships with planners</li></ul>
-<p><strong>Entry pricing:</strong> $500–$1,200 per event.<br/>Once experienced? $2,000+ for weddings.</p>
-<p>This is one of the best side hustles in Oakland for creatives willing to network consistently.</p>
-<h3 id="h-7-selling-handmade-goods-at-markets">7. Selling Handmade Goods at Markets</h3>
-<p>Lake Merritt Farmers Market. Oakland First Fridays. Pop-ups in Temescal.</p>
-<p>If you create:</p>
-<ul><li>Jewelry</li><li>Art prints</li><li>Handmade candles</li><li>Custom apparel</li></ul>
-<p>You can combine in-person sales with Etsy or Shopify.</p>
-<p>Table fees vary, but foot traffic can be substantial. Oakland buyers love supporting local makers.</p>
-<h3 id="h-8-music-lessons-or-creative-coaching">8. Music Lessons or Creative Coaching</h3>
-<p>With strong arts programs and a culture that values creativity, music lessons work.</p>
-<p>Offer:</p>
-<ul><li>Guitar</li><li>Piano</li><li>Voice</li><li>Digital production</li></ul>
-<p>Charge $60–$100 per hour.<br/>Teach at home or travel to clients.</p>
-<p>Consistency builds referrals quickly.</p>
-<h2 id="h-real-estate-and-rental-based-opportunities">Real Estate and Rental-Based Opportunities</h2>
-<p>Oakland’s housing market moves fast.</p>
-<p>That creates side income opportunities.</p>
-<h3 id="h-9-airbnb-co-hosting">9. Airbnb Co-Hosting</h3>
-<p>Many property owners don’t want to manage bookings, cleaning, guest messaging, and compliance.</p>
-<p>As a co-host, you can earn:</p>
-<ul><li>15%–25% of booking revenue</li></ul>
-<p>Responsibilities include:</p>
-<ul><li>Guest communication</li><li>Scheduling cleaners</li><li>Listing optimization</li></ul>
-<p>Understand local short-term rental rules before starting.</p>
-<h3 id="h-10-apartment-locator-rental-consultant">10. Apartment Locator / Rental Consultant</h3>
-<p>Oakland renters move frequently.</p>
-<p>If you:</p>
-<ul><li>Understand neighborhoods</li><li>Track listings daily</li><li>Build landlord relationships</li></ul>
-<p>You can earn commissions when connecting tenants to units.</p>
-<p>Even informal referral agreements can produce steady income if you build trust.</p>
-<h2 id="h-tech-amp-remote-side-hustles">Tech &amp; Remote Side Hustles</h2>
-<p>You don’t need to leave home to earn.</p>
-<h3 id="h-11-freelance-digital-marketing">11. Freelance Digital Marketing</h3>
-<p>Bay Area startups need:</p>
-<ul><li>Social media management</li><li>Paid ad support</li><li>SEO content</li><li>Email marketing</li></ul>
-<p>Charge:</p>
-<ul><li>$500–$2,000 monthly per client</li></ul>
-<p>Start with:</p>
-<ul><li>LinkedIn outreach</li><li>Upwork</li><li>Cold email to local businesses</li></ul>
-<p>This is scalable and flexible.</p>
-<h3 id="h-12-virtual-assistant-services">12. Virtual Assistant Services</h3>
-<p>Entrepreneurs everywhere need administrative support.</p>
-<p>Services include:</p>
-<ul><li>Inbox management</li><li>Scheduling</li><li>CRM updates</li><li>Research</li></ul>
-<p>Rates: $25–$50 per hour.</p>
-<p>Oakland professionals commuting to SF often outsource small tasks. You can position yourself locally or nationally.</p>
-<h2 id="h-food-based-side-hustles">Food-Based Side Hustles</h2>
-<p>Food always works. Always.</p>
-<h3 id="h-13-cottage-food-business">13. Cottage Food Business</h3>
-<p>California allows certain homemade food sales under cottage food laws.</p>
-<p>You can sell:</p>
-<ul><li>Baked goods</li><li>Jams</li><li>Specialty snacks</li></ul>
-<p>Start with:</p>
-<ul><li><a href="https://www.oaklandca.gov/Planning-Building/Permit-Process-Overview/One-Stop-Permit-Center-In-Person-Online-Services">Local health permits</a></li><li>Farmers markets</li><li>Instagram marketing</li></ul>
-<p>Margins are strong if you control costs.</p>
-<h3 id="h-14-food-pop-ups-or-catering">14. Food Pop-Ups or Catering</h3>
-<p>Oakland loves pop-ups.</p>
-<p>Collaborate with:</p>
-<ul><li>Breweries</li><li>Community events</li><li>Art spaces</li></ul>
-<p>Startup costs are higher, but revenue potential is significant.</p>
-<h2 id="h-comparison-table-which-side-hustle-fits-you">Comparison Table: Which Side Hustle Fits You?</h2>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Skill Level</strong></td><td><strong>Income Potential</strong></td><td><strong>Flexibility</strong></td></tr><tr><td>Rideshare Driving</td><td>Low</td><td>Low</td><td>Moderate</td><td>High</td></tr><tr><td>Cleaning Services</td><td>Low</td><td>Moderate</td><td>High</td><td>Moderate</td></tr><tr><td>Handyman Work</td><td>Moderate</td><td>Skilled</td><td>High</td><td>Moderate</td></tr><tr><td>Mobile Detailing</td><td>Moderate</td><td>Moderate</td><td>High</td><td>High</td></tr><tr><td>Freelance Marketing</td><td>Low</td><td>Skilled</td><td>Very High</td><td>Very High</td></tr><tr><td>Music Lessons</td><td>Low</td><td>Skilled</td><td>Moderate</td><td>High</td></tr><tr><td>Cottage Food Business</td><td>Low-Moderate</td><td>Moderate</td><td>High</td><td>Moderate</td></tr></tbody></table>
-<p>Choose based on:</p>
-<ul><li>Your available hours</li><li>Your skills</li><li>Your risk tolerance</li><li>Your income target</li></ul>
-<p>The best side hustles in Oakland align with your strengths and the city’s demand.</p>
-<h2 id="h-how-much-can-you-realistically-earn">How Much Can You Realistically Earn?</h2>
-<p>Let’s get real.</p>
-<p>Part-time effort (10–15 hours weekly) can produce:</p>
-<ul><li>$800–$2,500 monthly depending on hustle.</li></ul>
-<p>Serious focus (20+ hours):</p>
-<ul><li>$3,000–$6,000 monthly is possible in high-demand services.</li></ul>
-<p>Track expenses. Set aside taxes. Open a separate bank account. Treat it like a business from day one.</p>
-<h2 id="h-step-by-step-launching-your-side-hustle-in-oakland">Step-by-Step: Launching Your Side Hustle in Oakland</h2>
-<ol><li><strong>Validate demand.</strong><strong><br/></strong> Search Yelp, Craigslist, Facebook groups. See who’s active.</li><li><strong>Check registration requirements.</strong><strong><br/></strong> Oakland business license may be required depending on activity.</li><li><strong>Set pricing strategically.</strong><strong><br/></strong> Don’t race to the bottom. Position for reliability.</li><li><strong>Market locally.</strong><strong><br/></strong><ul><li>Nextdoor</li><li>Facebook community groups</li><li>Flyers in coffee shops</li><li>Google Business profile</li></ul>
-</li><li><strong>Reinvest early profits.</strong><strong><br/></strong> Upgrade equipment. Improve branding. Expand services.</li></ol>
-<p>Momentum builds faster than you expect when you stay consistent.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Oakland rewards initiative. It rewards service. It rewards creativity.</p>
-<p>The <strong>best side hustles in Oakland</strong> aren’t just about extra money. They’re about positioning yourself inside a dynamic, fast-moving city and capturing opportunities others overlook.</p>
-<p>Start small. Test quickly. Stay disciplined.</p>
-<p>One client becomes three. Three become ten.</p>
-<p>That’s how part-time income becomes serious leverage.</p>
-<p>And if you approach it strategically, one of these best side hustles in Oakland might not stay “side” for long.</p>
+    'body'        => <<<'HTML'
+<p>Oakland gets lumped in with San Francisco, but anyone who lives here knows it runs on its own rhythm: a working port, a serious food scene, thousands of century-old homes, a deep arts community and neighborhoods that support local makers. That makes the best side hustles in Oakland less about chasing tech money and more about serving your neighbors well — fixing, cooking, cleaning, photographing and selling to people who would rather buy local.</p>
+<p>Below are 16 side gigs in Oakland with typical pay and startup costs, where to find clients, and the city business tax rules that catch many new side hustlers off guard.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>30 days</b><span>to file an Oakland Business Tax Certificate after starting</span></div>
+  <div class="stat"><b>1%–12.3%</b><span>California income tax brackets</span></div>
+  <div class="stat"><b>$20–$90</b><span>typical hourly range across these gigs</span></div>
+</div>
+
+<h2 id="why-oakland">What makes Oakland a good side hustle city</h2>
+<ul>
+  <li><strong>Lower costs than San Francisco, same regional demand.</strong> BART puts San Francisco clients within reach, while Oakland rent and commercial space cost less, which helps food and product businesses.</li>
+  <li><strong>Old homes everywhere.</strong> Craftsman bungalows and Victorians in Rockridge, Temescal, Adams Point and the Dimond need constant small repairs.</li>
+  <li><strong>A buy-local culture.</strong> First Fridays on Telegraph, the Grand Lake and Temescal farmers markets and frequent pop-ups give makers and food vendors places to test products.</li>
+  <li><strong>Big local employers.</strong> Kaiser Permanente and Clorox are headquartered here, the Port of Oakland and Oakland International Airport anchor logistics, and hospital shift workers need pet care and delivery around the clock.</li>
+</ul>
+
+<h2 id="top-oakland-gigs">The best side hustles in Oakland right now</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="handyman">1. Handyman services for older homes</h3>
+    <p>Sticky windows, worn fixtures, loose railings and drywall patches never run out in North Oakland and the hills. Build a list of reliable small-job clients through Nextdoor and neighborhood groups. Keep to minor repairs and leave licensed trades to licensed contractors.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $50–$90/hr</li><li><b>Startup:</b> $150–$400 in tools</li><li><b>Best for:</b> Handy people with a car</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="turnover-cleaning">2. Rental turnover cleaning and co-hosting</h3>
+    <p>Hosts near Lake Merritt, Jack London Square and Rockridge need fast cleanings between guests, and many want co-hosts to manage messaging and restocking. Cleaning for property managers can fill your week quickly.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$45/hr, or 15–25% as co-host</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-oriented workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="cottage-food">3. Cottage food and pop-up food</h3>
+    <p>Oakland's food scene is hungry for new bakers, hot sauce makers and pop-up chefs. California's cottage food law lets you sell approved low-risk foods made at home with a registration from Alameda County Environmental Health. Clear [[amazon:label-printer|printed labels]] with ingredients are required.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product and volume</li><li><b>Startup:</b> Permit fees, ingredients, packaging</li><li><b>Best for:</b> Bakers and cooks</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="market-vending">4. Selling handmade goods at markets</h3>
+    <p>Candles, ceramics, prints, jewelry and Oakland-themed apparel sell well at First Fridays, holiday markets and maker fairs. Start in person, learn what sells, then expand online with an Etsy or <a href="/shopify/">Shopify</a> store.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$500 plus booth fees</li><li><b>Best for:</b> Makers and artists</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-photography">5. Event photography and videography</h3>
+    <p>Weddings in the hills, quinceañeras, community festivals, nonprofit galas and small-business promo videos keep local photographers busy. Short vertical videos for restaurants and shops are an easy upsell.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$500 per event</li><li><b>Startup:</b> Camera, lens</li><li><b>Best for:</b> Visual storytellers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="dog-walking">6. Dog walking and pet sitting</h3>
+    <p>Lake Merritt, Joaquin Miller Park and the trails around Montclair are dog magnets. Hospital and port shift workers need flexible walkers, and overnight sitting pays best around holidays.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$35/walk, $55–$95/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="vegetation-clearing">7. Hillside yard work and vegetation clearing</h3>
+    <p>Homes in the Oakland hills fall within high fire-hazard areas where the fire department inspects for vegetation clearance. Brush clearing, weed whacking and hauling green waste spike in spring before fire season.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$60/hr</li><li><b>Startup:</b> $150–$500 in tools</li><li><b>Best for:</b> Outdoor workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelance-marketing">8. Freelance marketing for local businesses</h3>
+    <p>Restaurants, salons, breweries and shops need Google Business Profiles, Instagram content, simple websites and email newsletters. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> shows how to package services into monthly retainers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Marketers, writers</li></ul>
+  </div>
+</div>
+
+[[gear:cordless-drill,tool-kit,cleaning-kit|Starter tools for Oakland home services]]
+
+<h2 id="driving-delivery">Driving and delivery side jobs in Oakland</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare">9. Rideshare driving</h3>
+    <p>Oakland International Airport, weekend nights in Uptown and Old Oakland, concerts at the Oakland Arena and trips across the Bay Bridge are the main earners. Morning commute rides to BART and San Francisco add volume. Read our <a href="/lyft-uber/">Lyft and Uber guide</a> before signing up.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$30/hr before costs</li><li><b>Startup:</b> Eligible car, insurance</li><li><b>Best for:</b> Airport and night drivers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">10. Food and grocery delivery</h3>
+    <p>Temescal, Piedmont Avenue, Grand Lake and Rockridge have dense restaurant clusters and good tippers. Grocery runs through Instacart are steady in the hills, where residents avoid the drive down.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$25/hr before gas</li><li><b>Startup:</b> Car or e-bike</li><li><b>Best for:</b> Flexible schedules</li></ul>
+  </div>
+</div>
+<p>Bridge tolls, parking and gas can quietly cut your pay. Run the numbers before you commit to driving:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Rideshare and delivery drivers in California are covered by Proposition 22, which guarantees an earnings floor for engaged time plus a per-mile payment. Time waiting between orders is not covered, so focus on peak hours.</div>
+
+<h2 id="skills-community">Skill and community side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="music-lessons">11. Music and creative lessons</h3>
+    <p>Oakland's musical heritage runs deep, and parents and adults alike want guitar, piano, voice, DJ and production lessons. Teach from home, at students' homes or online.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$80/hr</li><li><b>Startup:</b> $0 if you own instruments</li><li><b>Best for:</b> Musicians</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">12. Mobile car detailing</h3>
+    <p>Street parking and tight driveways make on-site detailing appealing. Target office parks near Jack London Square, the hospital campuses and homeowners in Montclair and Piedmont.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">13. Moving help and furniture assembly</h3>
+    <p>Lots of East Bay renters move in summer and at the start of each month. TaskRabbit and Dolly jobs, plus word of mouth, can keep you busy hauling and assembling.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$65/hr</li><li><b>Startup:</b> Basic tools</li><li><b>Best for:</b> Strong, reliable workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="translation">14. Translation and bilingual services</h3>
+    <p>Fruitvale's large Spanish-speaking community and Chinatown's Cantonese and Mandarin speakers create steady demand for translation, interpreting for appointments and bilingual help with forms and small-business marketing.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$60/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Fluent bilingual speakers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">15. Virtual assistant work</h3>
+    <p>Local nonprofits, therapists, contractors and realtors need help with scheduling, invoicing, email and social posts. Bay Area clients pay well for reliable, organized help.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$50/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">16. Tutoring and homework help</h3>
+    <p>Families across Oakland want math, reading and college-prep support. Cal students from nearby Berkeley and graduates of local colleges can tutor in person; experienced teachers can charge more.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $35–$80/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Teachers, students</li></ul>
+  </div>
+</div>
+
+<h2 id="oakland-calendar">Plan around Oakland's year</h2>
+<p>Oakland's mild climate keeps most gigs going year-round, but demand still moves with the calendar:</p>
+<ul>
+  <li><strong>Spring:</strong> vegetation clearing in the hills, pressure washing, garden cleanups and wedding season bookings for photographers.</li>
+  <li><strong>Summer:</strong> moving season, visitor traffic around Jack London Square and Lake Merritt, and peak short-term rental turnovers.</li>
+  <li><strong>Fall:</strong> back-to-school tutoring, college move-ins across the East Bay and the start of holiday market applications.</li>
+  <li><strong>Winter:</strong> holiday pop-ups and maker markets, rainy-night delivery surges and year-end small-business marketing work.</li>
+</ul>
+<p>Stacking a seasonal gig on top of a year-round one, such as vegetation clearing plus handyman work or holiday markets plus freelance marketing, smooths out the slow months.</p>
+
+<h2 id="oakland-comparison">Oakland side gigs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Handyman services</td><td>$50–$90/hr</td><td>$150–$400</td><td>1–2 weeks</td></tr>
+    <tr><td>Turnover cleaning</td><td>$30–$45/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Cottage food</td><td>Varies</td><td>Permit, ingredients</td><td>3–6 weeks</td></tr>
+    <tr><td>Market vending</td><td>Varies</td><td>$100–$500</td><td>Next market</td></tr>
+    <tr><td>Event photography</td><td>$150–$500/event</td><td>Camera</td><td>2–4 weeks</td></tr>
+    <tr><td>Dog walking</td><td>$20–$35/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Rideshare</td><td>$18–$30/hr before costs</td><td>Eligible car</td><td>1–2 weeks</td></tr>
+    <tr><td>Freelance marketing</td><td>$30–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="launch-steps">How to start a side hustle in Oakland this month</h2>
+<ol class="steps">
+  <li><strong>Choose one gig that fits your week.</strong> If you are stuck, the <a href="/tools/side-hustle-quiz/">side hustle quiz</a> narrows it down in a few minutes.</li>
+  <li><strong>Get zoning clearance if you work from home.</strong> Oakland asks home-based businesses to get a zoning clearance before applying for a business tax certificate.</li>
+  <li><strong>File your Business Tax Certificate within 30 days.</strong> Late filings add penalties and interest, so do it in your first month.</li>
+  <li><strong>Add permits for food.</strong> Register with Alameda County Environmental Health before you sell food, and get a seller's permit if you sell taxable goods.</li>
+  <li><strong>Get visible locally.</strong> Set up a Google Business Profile, post in Nextdoor and neighborhood groups, and book a table at a market.</li>
+  <li><strong>Track money from day one.</strong> Separate your accounts and use the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> to set aside the right amount.</li>
+</ol>
+
+<h2 id="oakland-taxes">California and Oakland tax rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> California rates run from 1% to 12.3%, plus 1% more on income above $1 million. Make quarterly estimated payments to the Franchise Tax Board once side income is steady.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit, on top of federal income tax.</li>
+  <li><strong>AB5:</strong> California's ABC test decides who counts as an employee. If you freelance for businesses, keep your own tools, schedule and multiple clients. App drivers are covered by Proposition 22 instead.</li>
+  <li><strong>Oakland Business Tax Certificate:</strong> Required for every business in the city, including home-based businesses and people who rent out rooms. The annual tax is based mainly on gross receipts, with rates that vary by business category, plus small state and city fees. Certificates expire December 31 with a renewal grace period into early the following year.</li>
+  <li><strong>Sales tax:</strong> Selling taxable goods, including many handmade items, requires a seller's permit from the California Department of Tax and Fee Administration.</li>
+</ul>
+<div class="callout callout-warn"><strong>Watch out:</strong> Oakland's business tax applies even to small, part-time operations, and city rates and exemptions have been the subject of recent ballot proposals. Check the city's Business Tax Office for the current rate for your category before you file.</div>
+
+<h2 id="nearby">Nearby cities to compare</h2>
+<p>Commuting across the Bay or thinking about a move? Better Side Hustles also covers the <a href="/best-side-hustles-in-san-francisco/">best side hustles in San Francisco</a>, <a href="/best-side-hustles-in-san-jose/">San Jose</a> and <a href="/best-side-hustles-in-sacramento/">Sacramento</a>. San Francisco pays more for convenience services, San Jose for tech skills, and Sacramento offers a lower cost of living.</p>
+<p>Oakland rewards people who show up for their community. Pick one service, get properly registered, and let happy neighbors spread the word. Give it a full season, track every hour and dollar, and you will know within three months whether it deserves more of your time or should make way for the next idea on this list.</p>
 HTML,
 ];

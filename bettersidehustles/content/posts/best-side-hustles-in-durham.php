@@ -1,182 +1,207 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Durham (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Durham to earn extra income with flexible opportunities for students, professionals, and entrepreneurs.',
-    'h1' => 'Best Side Hustles in Durham',
-    'kicker' => 'City Guide · NC',
-    'dek' => 'Gig apps, local services and online work that pay in Durham — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-03-08',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/03/Best-Side-Hustles-in-Durham.webp',
-    'image_alt' => 'Best Side Hustles in Durham',
-    'category' => 'City Guides',
-    'city' => 'Durham',
-    'state' => 'NC',
-    'keywords' => ['best side hustles in durham'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-charlotte', 'best-side-hustles-in-raleigh', 'best-side-hustles-in-greensboro'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Durham for beginners?', 'a' => 'Food delivery, pet sitting, and yard work are some of the easiest options because they require little experience to start.'],
-        ['q' => 'How much can I earn from side hustles in Durham?', 'a' => 'Many people earn between $200 and $2,000 per month depending on the hustle and how many hours they work.'],
-        ['q' => 'Do I need special skills to start a side hustle in Durham?', 'a' => 'Not always. Many side hustles like delivery driving or dog walking require very little training.'],
-        ['q' => 'Are online side hustles possible while living in Durham?', 'a' => 'Yes. You can run online side hustles like blogging, affiliate marketing, or selling digital products from anywhere.'],
-        ['q' => 'Is tutoring a good side hustle in Durham?', 'a' => 'Yes. With universities like Duke nearby, tutoring students can be one of the best side hustles in Durham.'],
-        ['q' => 'What side hustles work well on weekends in Durham?', 'a' => 'Event photography, food delivery, and pet sitting are great weekend side hustles.'],
-        ['q' => 'Do I need a business license for a side hustle in Durham?', 'a' => 'Some services may require permits, but many small side hustles can start informally at first.'],
-        ['q' => 'How can I find my first clients for a side hustle?', 'a' => 'You can use social media, local Facebook groups, freelance platforms, and word-of-mouth referrals.'],
-        ['q' => 'Which side hustles in Durham have the lowest startup cost?', 'a' => 'Freelancing, tutoring, delivery driving, and pet sitting usually require very little upfront money.'],
-        ['q' => 'Can a side hustle turn into a full-time business?', 'a' => 'Yes. Many people start with part-time work and later grow their side hustle into a full business.'],
+    'title'       => 'Best Side Hustles in Durham (2026): 18 Side Gigs That Pay',
+    'description' => 'The best side hustles in Durham for 2026: 18 side gigs shaped by Duke, hospitals and RTP, from paid research studies to nurse housing, with pay and NC tax tips.',
+    'h1'          => 'Best Side Hustles in Durham (2026): 18 Side Gigs in the Bull City',
+    'kicker'      => 'City Guide · NC',
+    'dek'         => 'Durham runs on Duke, hospitals, labs and a serious food scene. These side jobs in Durham fit that rhythm, from academic editing and pet care for shift workers to furnished rentals for traveling nurses.',
+    'published'   => '2026-03-08',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/03/Best-Side-Hustles-in-Durham.webp',
+    'image_alt'   => 'Downtown Durham with historic tobacco warehouses, illustrating the best side hustles in Durham',
+    'category'    => 'City Guides',
+    'city'        => 'Durham',
+    'state'       => 'NC',
+    'keywords'    => ['best side hustles in durham', 'side jobs in durham', 'side gigs in durham nc', 'how to make money in durham', 'durham side hustles 2026'],
+    'tool'        => 'course-calculator',
+    'gear'        => ['planner', 'laptop-stand', 'receipt-scanner', 'book-show-your-work'],
+    'related'     => ['best-side-hustles-in-raleigh', 'best-side-hustles-in-greensboro', 'best-side-hustles-in-charlotte'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Durham, NC?', 'a' => 'Durham\'s best side hustles follow Duke, the hospitals and Research Triangle Park: academic editing and transcription, tutoring, pet sitting and errands for medical shift workers, furnished mid-term rentals for traveling nurses and visiting researchers, delivery in the downtown food scene, freelance work for startups and biotech, and event staffing at the Durham Bulls and DPAC.'],
+        ['q' => 'How can I make money in Durham quickly?', 'a' => 'Delivery apps like DoorDash, Uber Eats and Instacart can pay within a week, and downtown, Ninth Street and Southpoint keep orders flowing. Rover dog walking, TaskRabbit gigs and moving help around Duke and NC Central move-in weeks also pay fast. Some university research studies compensate eligible participants, though amounts and availability vary.'],
+        ['q' => 'Do I need a business license for a side hustle in Durham?', 'a' => 'Durham does not require a general business license, since North Carolina eliminated local privilege license taxes in 2015. You may still need to register with the NC Department of Revenue for sales tax, file an assumed business name with Durham County if you use a brand, follow home occupation zoning rules and check the city\'s short-term rental rules before hosting.'],
+        ['q' => 'How much do side gigs in Durham pay?', 'a' => 'Most part-timers working 8 to 15 hours a week typically earn about $400 to $1,500 a month. Delivery usually nets $15 to $22 an hour after gas. Academic editing, tutoring and freelance research or data work often pay $30 to $75 an hour, and furnished mid-term rentals can add meaningful monthly income if you have the space.'],
+        ['q' => 'What are the taxes on side hustle income in North Carolina?', 'a' => 'North Carolina\'s flat individual income tax rate is 3.99% for 2026. On top of that you owe federal income tax and 15.3% self-employment tax on net profit. Set aside roughly 25 to 30% of profit and make quarterly estimated payments once you expect to owe. Rental income is not subject to self-employment tax in most cases.'],
+        ['q' => 'Are there good side jobs for Duke students in Durham?', 'a' => 'Yes. Students commonly tutor high schoolers, work campus and event jobs, walk dogs for faculty and hospital staff, deliver by bike or e-bike around Ninth Street and downtown, and freelance in writing, coding or design. Check any work limits tied to your financial aid or visa status before you start a side gig.'],
     ],
-    'body' => <<<'HTML'
-<p>Durham has changed dramatically over the past decade. What used to be a quiet Southern city has evolved into a fast-growing hub for startups, universities, healthcare companies, and creative businesses. With that growth comes opportunity—and for many residents, the search for extra income.</p>
-<p>That’s exactly why so many people are exploring the <strong>best side hustles in Durham</strong>. Whether you’re a student, a full-time professional, or someone looking to build an extra stream of income, the city offers countless ways to earn money on the side.</p>
-<p>And the best part? Many of these side hustles are flexible. You can start small. Nights, weekends, or even a few hours between commitments. Some people make a few hundred dollars a month. Others eventually turn their hustle into a full business.</p>
-<p>Let’s break down where the real opportunities are.</p>
-<h2 id="h-why-durham-is-a-great-city-for-side-hustles">Why Durham Is a Great City for Side Hustles</h2>
-<p>Not every city is ideal for starting a side hustle. Durham happens to be one of the better places in the country to do it.</p>
-<p>Why? Because the local economy creates constant demand for services.</p>
-<h3 id="h-strong-local-economy">Strong Local Economy</h3>
-<p><a href="https://en.wikipedia.org/wiki/Durham,_North_Carolina">Durham</a> sits in the heart of the Research Triangle region, which includes Raleigh and Chapel Hill. The presence of Research Triangle Park brings thousands of professionals in technology, healthcare, and biotech.</p>
-<p>That means a steady flow of people who need services.</p>
-<p>Freelancers, tutors, delivery drivers, and creative professionals all benefit from this ecosystem.</p>
-<h3 id="h-large-student-population">Large Student Population</h3>
-<p>Durham is home to major universities including:</p>
-<ul><li><a href="https://www.duke.edu/">Duke University</a></li><li>North Carolina Central University</li></ul>
-<p>Students create demand for tutoring, rides, food delivery, and freelance help. At the same time, students themselves often look for flexible side income.</p>
-<p>It’s a perfect cycle.</p>
-<h3 id="h-a-growing-food-and-culture-scene">A Growing Food and Culture Scene</h3>
-<p>Downtown Durham has exploded with restaurants, breweries, and entertainment venues.</p>
-<p>That growth means opportunities for:</p>
-<ul><li>Photographers</li><li>Tour guides</li><li>Delivery drivers</li><li>Event workers</li><li>Creative entrepreneurs</li></ul>
-<p>This environment makes it easier to find some of the <strong>best side hustles in Durham</strong>.</p>
-<h2 id="h-best-side-hustles-in-durham-0">Best Side Hustles in Durham</h2>
-<p>Let’s explore some of the most practical and profitable opportunities available locally.</p>
-<h3 id="h-1-freelance-services-for-local-businesses">1. Freelance Services for Local Businesses</h3>
-<p>Small businesses are everywhere in Durham. Coffee shops. Tech startups. Boutique retail stores. Marketing agencies.</p>
-<p>Many of them don’t want full-time employees for every role. They prefer freelancers.</p>
-<p>If you have professional skills, this can become one of the <strong>best side hustles in Durham</strong>.</p>
-<p>High-demand freelance services include:</p>
-<ul><li>Website design</li><li>SEO consulting</li><li>Graphic design</li><li>Social media management</li><li>Content writing</li></ul>
-<p>You can find clients through:</p>
-<ul><li>LinkedIn</li><li>Local networking events</li><li>Coworking spaces</li><li>Freelance platforms like Upwork or Fiverr</li></ul>
-<p>Even one client can turn into recurring monthly income.</p>
-<h3 id="h-2-tutoring-and-academic-coaching">2. Tutoring and Academic Coaching</h3>
-<p>Durham’s universities and strong school systems create a constant need for tutors.</p>
-<p>Parents want help for their kids. College students want help with tough classes. Graduate students look for test preparation.</p>
-<p>Subjects with strong demand include:</p>
-<ul><li>Math tutoring</li><li>Science tutoring</li><li>SAT and ACT prep</li><li>College essay coaching</li><li>STEM mentoring</li></ul>
-<p>A tutor charging $40–$80 per hour can easily earn solid side income.</p>
-<p>Here’s a simple example:</p>
-<table class="data"><tbody><tr><td><strong>Hours Per Week</strong></td><td><strong>Hourly Rate</strong></td><td><strong>Monthly Income</strong></td></tr><tr><td>5</td><td>$50</td><td>$1,000</td></tr><tr><td>8</td><td>$60</td><td>$1,920</td></tr><tr><td>10</td><td>$70</td><td>$2,800</td></tr></tbody></table>
-<p>That’s why tutoring consistently ranks among the <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-3-food-delivery-and-grocery-delivery">3. Food Delivery and Grocery Delivery</h3>
-<p>Not glamorous. But extremely practical.</p>
-<p>Food delivery remains one of the easiest <a href="/best-side-hustles-in-raleigh/">side hustles</a> to start. You can sign up within days and begin earning quickly.</p>
-<p>Popular platforms include:</p>
-<ul><li>DoorDash</li><li>Uber Eats</li><li>Instacart</li></ul>
-<p>Durham works well for this because of:</p>
-<ul><li>Busy professionals</li><li>Large student population</li><li>A strong restaurant scene</li></ul>
-<p>Peak hours are typically:</p>
-<ul><li>Lunch rush</li><li>Dinner rush</li><li>Weekend evenings</li></ul>
-<p>Drivers often earn $15–$25 per hour depending on demand and tips.</p>
-<p>For many residents, this becomes one of the fastest <strong>best side hustles in Durham</strong> to start.</p>
-<h3 id="h-4-pet-sitting-and-dog-walking">4. Pet Sitting and Dog Walking</h3>
-<p>Durham residents love their pets.</p>
-<p>Walk through any neighborhood or apartment complex and you’ll see it immediately. Dogs everywhere.</p>
-<p>That creates demand for services like:</p>
-<ul><li>Dog walking</li><li>Overnight pet sitting</li><li>Pet daycare</li><li>Cat check-ins</li></ul>
-<p>Apps like Rover and Wag help new sitters find clients quickly.</p>
-<p>Typical rates look like this:</p>
-<table class="data"><tbody><tr><td><strong>Service</strong></td><td><strong>Average Rate</strong></td></tr><tr><td>Dog walk</td><td>$18 – $30</td></tr><tr><td>Overnight pet sitting</td><td>$60 – $100</td></tr><tr><td>Drop-in visits</td><td>$20 – $35</td></tr></tbody></table>
-<p>If you love animals, this is easily one of the <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-5-airbnb-hosting">5. Airbnb Hosting</h3>
-<p>Durham attracts visitors all year long.</p>
-<p>Events bring people in. Conferences. Duke basketball games. University graduations. Business travel.</p>
-<p>If you have extra space, short-term rentals can generate meaningful income.</p>
-<p>Common options include:</p>
-<ul><li>Renting a spare bedroom</li><li>Hosting a guest suite</li><li>Listing an entire apartment when traveling</li></ul>
-<p>However, pay attention to:</p>
-<ul><li>Local regulations</li><li>HOA rules</li><li>Property management needs</li></ul>
-<p>Done correctly, hosting can become one of the most profitable <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-6-event-and-business-photography">6. Event and Business Photography</h3>
-<p>Durham’s cultural and professional scene creates demand for photographers.</p>
-<p>People constantly need:</p>
-<ul><li>Wedding photography</li><li>Graduation photos</li><li>Engagement shoots</li><li>Business branding photos</li><li>Real estate listings</li></ul>
-<p>A single event can pay anywhere from $200 to $2,000 depending on experience.</p>
-<p>To grow quickly:</p>
-<ul><li>Build a simple portfolio</li><li>Use Instagram for marketing</li><li>Partner with local event planners</li></ul>
-<p>Photography requires skill. But once established, it’s easily one of the <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-7-local-tour-experiences">7. Local Tour Experiences</h3>
-<p>Durham has history. Food. Breweries. Art districts.</p>
-<p>Visitors want to explore it.</p>
-<p>That’s where local experiences come in.</p>
-<p>Possible tour ideas:</p>
-<ul><li>Downtown food tours</li><li>Craft brewery tours</li><li>Historic walking tours</li><li>Street art tours</li></ul>
-<p>Platforms like Airbnb Experiences allow locals to host tours.</p>
-<p>And tourists love authentic guides.</p>
-<p>Creative experiences often rank among the more unique <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-8-selling-handmade-products">8. Selling Handmade Products</h3>
-<p>Durham has a strong creative community.</p>
-<p>Local craft markets are popular. Etsy shops are growing. Handmade goods sell well online and offline.</p>
-<p>Products people commonly sell include:</p>
-<ul><li>Jewelry</li><li>Art prints</li><li>Candles</li><li>Handmade soaps</li><li>Custom clothing</li></ul>
-<p>Places to sell your products:</p>
-<ul><li>Etsy</li><li>Durham craft markets</li><li>Farmers markets</li><li>Instagram shops</li></ul>
-<p>For creative entrepreneurs, this can become one of the most fulfilling <strong>best side hustles in Durham</strong>.</p>
-<h3 id="h-9-yard-work-and-home-services">9. Yard Work and Home Services</h3>
-<p>Sometimes the simplest side hustles are the most reliable.</p>
-<p>Many homeowners simply don’t have time to handle outdoor tasks.</p>
-<p>Services you can offer include:</p>
-<ul><li>Lawn mowing</li><li>Leaf removal</li><li>Pressure washing</li><li>Gutter cleaning</li><li>Basic landscaping</li></ul>
-<p>Startup costs are low. A mower, a blower, and basic tools can get you started.</p>
-<p>With just a few regular clients, this can become a steady income stream.</p>
-<p>And yes, it’s absolutely one of the <strong>best side hustles in Durham</strong> for beginners.</p>
-<h3 id="h-10-digital-side-hustles">10. Digital Side Hustles</h3>
-<p>Some hustles don’t depend on location at all.</p>
-<p>You can run them entirely online.</p>
-<p>Popular digital side hustles include:</p>
-<ul><li>Blogging</li><li>Affiliate marketing</li><li>Selling digital templates</li><li>YouTube content creation</li><li>Online courses</li></ul>
-<p>These require patience. But they scale.</p>
-<p>For example:</p>
-<table class="data"><tbody><tr><td><strong>Digital Hustle</strong></td><td><strong>Potential Income Timeline</strong></td></tr><tr><td>Blogging</td><td>6–12 months</td></tr><tr><td>Affiliate marketing</td><td>6–18 months</td></tr><tr><td>YouTube</td><td>12+ months</td></tr><tr><td>Digital products</td><td>3–6 months</td></tr></tbody></table>
-<p>People who stick with these often build long-term passive income.</p>
-<p>And many online entrepreneurs consider them the most scalable <strong>best side hustles in Durham</strong>.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Not every hustle fits every person.</p>
-<p>Before jumping in, consider a few key factors.</p>
-<h3 id="h-evaluate-your-skills">Evaluate Your Skills</h3>
-<p>Ask yourself:</p>
-<ul><li>What am I already good at?</li><li>What do people often ask me for help with?</li><li>What skills could generate income?</li></ul>
-<p>The easiest hustles usually build on existing abilities.</p>
-<h3 id="h-consider-your-schedule">Consider Your Schedule</h3>
-<p>Some hustles require specific hours.</p>
-<p>For example:</p>
-<ul><li>Delivery work fits evenings</li><li>Tutoring fits after school</li><li>Freelancing fits remote schedules</li></ul>
-<p>Choose something that fits your lifestyle.</p>
-<h3 id="h-think-about-startup-costs">Think About Startup Costs</h3>
-<p>Some hustles require almost nothing to begin.</p>
-<p>Others require equipment or training.</p>
-<p>Compare options before committing.</p>
-<h2 id="h-tips-to-grow-your-side-hustle-faster">Tips to Grow Your Side Hustle Faster</h2>
-<p>Starting is one thing. Growing is another.</p>
-<p>Here are a few proven strategies:</p>
-<p><strong>Network locally</strong></p>
-<p>Durham has a strong entrepreneurial community. Meet people. Attend events. Build relationships.</p>
-<p><strong>Use neighborhood groups</strong></p>
-<p>Local Facebook groups and community forums are powerful for finding clients.</p>
-<p><strong>Partner with businesses</strong></p>
-<p>A local coffee shop might need marketing help. A real estate agent might need photography.</p>
-<p><strong>Deliver excellent service</strong></p>
-<p>Happy customers bring referrals.</p>
-<p>Referrals bring growth.</p>
-<h2 id="h-final-thoughts">Final Thoughts</h2>
-<p>Durham is a city full of opportunity.</p>
-<p>The economy is growing. New residents arrive every year. Businesses continue expanding.</p>
-<p>That environment creates endless possibilities for extra income.</p>
-<p>The truth is, the <strong>best side hustles in Durham</strong> aren’t just about money. They’re about flexibility, independence, and the chance to build something of your own.</p>
-<p>Start small. Test ideas. Adjust along the way.</p>
-<p>Your next opportunity might be closer than you think.</p>
+    'body'        => <<<'HTML'
+<p>Durham has its own rhythm. Duke University and Duke Health set the calendar, research labs and Research Triangle Park fill the workweek, and a food scene in converted tobacco warehouses fills the evenings. That mix makes the best side hustles in Durham a little different from those in Raleigh or Charlotte. Here, academic skills, health care schedules and a steady stream of visitors to the hospitals create demand you won't find in most cities.</p>
+<p>This guide covers 18 side gigs that fit the Bull City in 2026, with typical pay, startup costs and the local details that help you earn more and drive less.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>3.99%</b><span>NC flat income tax (2026)</span></div>
+  <div class="stat"><b>$15–$75</b><span>typical hourly range across these gigs</span></div>
+  <div class="stat"><b>$0</b><span>to start most academic and pet-care gigs</span></div>
+</div>
+
+<h2 id="bull-city">What drives side income in Durham</h2>
+<ul>
+  <li><strong>Duke University and Duke Health.</strong> The city's largest employer brings students, faculty, researchers, nurses and physicians on schedules that leave little time for chores.</li>
+  <li><strong>A medical destination.</strong> Patients and families travel to Durham for treatment, and traveling nurses rotate through on multi-week contracts. Both need places to stay, rides and errands.</li>
+  <li><strong>Research Triangle Park.</strong> Employers such as IBM, Cisco, Biogen and Fidelity sit minutes from south Durham, supporting a large professional workforce.</li>
+  <li><strong>Startups and small businesses.</strong> American Underground and the downtown startup scene hire freelancers for design, writing, development and marketing.</li>
+  <li><strong>NC Central University.</strong> A historically Black university with its own student demand, homecoming crowds and alumni events.</li>
+  <li><strong>Food, baseball and shows.</strong> Durham Bulls games at the DBAP, Broadway tours at DPAC, Full Frame Documentary Film Festival and the Saturday farmers market at Durham Central Park.</li>
+</ul>
+
+<h2 id="top-picks">The best side hustles in Durham right now</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="academic-editing">1. Academic editing and proofreading</h3>
+    <p>Grad students, postdocs and international researchers need help polishing dissertations, grant applications and journal manuscripts. If you have strong writing skills or a science background, this pays well and works entirely from home.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$70/hr or per-word rates</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Strong writers, PhDs</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mid-term-rentals">2. Furnished rentals for traveling nurses</h3>
+    <p>Traveling nurses, medical residents on rotation and visiting researchers often need furnished housing for one to three months near Duke Hospital or the VA Medical Center. A spare room, basement apartment or ADU can earn steady monthly income with fewer turnovers than nightly rentals.</p>
+    <ul class="meta"><li><b>Pay:</b> Monthly rent, varies by space</li><li><b>Startup:</b> Furnishing a room</li><li><b>Best for:</b> Homeowners near the hospitals</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-care">3. Pet care for hospital shift workers</h3>
+    <p>Twelve-hour shifts make dog ownership tough. Nurses, residents and researchers in Trinity Park, Old West Durham and south Durham apartments pay for midday walks, overnight stays and drop-in visits. Rover gets you started, and repeat clients often book directly.</p>
+    <ul class="meta"><li><b>Pay:</b> $18–$28/walk, $40–$70/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers with daytime gaps</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">4. Food delivery in a food-first city</h3>
+    <p>Durham's restaurant scene keeps DoorDash and Uber Eats busy, especially downtown, along Ninth Street and around Southpoint. The compact core means short trips, and an e-bike can beat a car near campus. Pack a quality [[amazon:insulated-bag|insulated delivery bag]] to keep orders hot.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr before gas</li><li><b>Startup:</b> Car, scooter or e-bike</li><li><b>Best for:</b> Flexible evenings</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">5. Tutoring and test prep</h3>
+    <p>Durham and Chapel Hill families pay for math, science, SAT and AP tutoring, and Duke and NC Central students make natural tutors. Grad students can also tutor MCAT, GRE or statistics online for national clients.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$70/hr</li><li><b>Startup:</b> $0–$50</li><li><b>Best for:</b> Students, teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="startup-freelancing">6. Freelance work for startups and biotech</h3>
+    <p>Small companies around downtown and RTP hire contractors for web design, pitch decks, technical writing, data analysis and social media. Start on <a href="/fiverr/">Fiverr</a> for reviews, then meet founders at local events. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> covers how to package services.</p>
+    <ul class="meta"><li><b>Pay:</b> $30–$85/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Designers, writers, analysts</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="research-studies">7. Paid research study participation</h3>
+    <p>Duke and other Triangle institutions recruit volunteers for clinical and behavioral research, and many studies offer compensation for your time. It's not a job, and eligibility, time commitment and pay vary widely, but it can be a useful occasional extra.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by study</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Flexible schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="errands">8. Errands and rides for patient families</h3>
+    <p>Families staying in Durham during medical treatment need grocery runs, pharmacy pickups and help getting around. Rideshare apps cover some of this, but a trusted, flexible helper hired directly is valuable. Listings near hospital housing and church networks are good places to start.</p>
+    <ul class="meta"><li><b>Pay:</b> $22–$40/hr</li><li><b>Startup:</b> A car</li><li><b>Best for:</b> Patient, caring people</li></ul>
+  </div>
+</div>
+<p>See how many hours of editing, tutoring or deliveries it takes to reach your monthly goal:</p>
+<p>[[tool:income-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Durham's academic calendar is your best friend. Late August move-in, final exams in December and April, and May commencement all bring short bursts of demand for moving, cleaning, tutoring and rides. Put them on your calendar now.</div>
+
+<h2 id="durham-table">Side jobs in Durham compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Academic editing</td><td>$30–$70/hr</td><td>Laptop</td><td>1–4 weeks</td></tr>
+    <tr><td>Furnished mid-term rental</td><td>Monthly rent</td><td>Furnishing</td><td>2–6 weeks</td></tr>
+    <tr><td>Pet care</td><td>$18–$28/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$15–$22/hr before gas</td><td>Car or e-bike</td><td>Under 1 week</td></tr>
+    <tr><td>Tutoring</td><td>$25–$70/hr</td><td>$0–$50</td><td>1–3 weeks</td></tr>
+    <tr><td>Startup freelancing</td><td>$30–$85/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+    <tr><td>Research studies</td><td>Varies by study</td><td>$0</td><td>Varies</td></tr>
+    <tr><td>Errands for patient families</td><td>$22–$40/hr</td><td>A car</td><td>1–2 weeks</td></tr>
+  </tbody>
+</table>
+
+<h2 id="campus-gigs">Campus-calendar side gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="moving-storage">9. Student moving and storage help</h3>
+    <p>At the end of each spring semester, Duke and NC Central students need boxes moved, stored and brought back in August. A truck or van and a few strong friends can fill several weekends.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr per helper</li><li><b>Startup:</b> $0 (truck helps)</li><li><b>Best for:</b> Strong, organized people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="transcription">10. Transcription and research assistance</h3>
+    <p>Qualitative researchers need interviews transcribed, coded and summarized. Freelance research assistants who can clean data in Excel, R or Python are especially valued.</p>
+    <ul class="meta"><li><b>Pay:</b> $20–$50/hr</li><li><b>Startup:</b> Laptop and a good [[amazon:headset|headset]]</li><li><b>Best for:</b> Detail-oriented typists</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">11. Move-out reselling</h3>
+    <p>Students leave behind mini-fridges, desks, lamps and bikes every May. Collect, clean and resell them on Facebook Marketplace in August when the next class arrives.</p>
+    <ul class="meta"><li><b>Pay:</b> $200–$1,000 per season</li><li><b>Startup:</b> Storage space</li><li><b>Best for:</b> Bargain hunters</li></ul>
+  </div>
+</div>
+
+[[gear:phone-mount,cleaning-kit,webcam|Gear for Durham side hustlers]]
+
+<h2 id="neighborhood-services">Neighborhood services across Durham</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="cleaning">12. House and rental cleaning</h3>
+    <p>Recurring cleaning in Hope Valley, Woodcroft and Trinity Park is steady, while short-term and mid-term rentals near Duke need turnovers around graduations and big games.</p>
+    <ul class="meta"><li><b>Pay:</b> $25–$45/hr</li><li><b>Startup:</b> $75–$150</li><li><b>Best for:</b> Detail-oriented people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">13. Handyman work in older homes</h3>
+    <p>Bungalows in Old North Durham, Duke Park and Walltown need small repairs, and new townhomes need assembly and mounting. Leave licensed electrical and plumbing work to the pros.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="yard-work">14. Yard work and leaf cleanup</h3>
+    <p>Durham's tree-heavy neighborhoods mean big fall leaf jobs and spring cleanups. Busy medical households are happy to hand this off.</p>
+    <ul class="meta"><li><b>Pay:</b> $40–$70/lawn, $150–$350 per cleanup</li><li><b>Startup:</b> $0–$400</li><li><b>Best for:</b> Outdoor workers</li></ul>
+  </div>
+</div>
+
+<h2 id="food-events">Food, events and creative work</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="event-staffing">15. Bulls games, DPAC and event staffing</h3>
+    <p>The Durham Bulls play dozens of home games each season, DPAC hosts touring shows year-round and Duke athletics draw big crowds. Concession and event staffing companies hire part-timers for all of them.</p>
+    <ul class="meta"><li><b>Pay:</b> $15–$22/hr plus tips at some stands</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Students, weekend earners</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="catering-help">16. Catering and food truck help</h3>
+    <p>Durham's caterers, food trucks and restaurants need extra hands for weddings, campus events and festivals. It's a good way to learn the food business before launching your own.</p>
+    <ul class="meta"><li><b>Pay:</b> $16–$25/hr plus tips</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Food lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="market-vending">17. Farmers market and maker vending</h3>
+    <p>The Durham Farmers' Market and seasonal craft fairs reward bakers, growers and artisans. Check county health rules before selling food.</p>
+    <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$500</li><li><b>Best for:</b> Makers and growers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">18. Graduation and headshot photography</h3>
+    <p>Graduation photos fill April and May, and researchers and job seekers need professional headshots year-round. Some campus gardens and venues require photography permits, so check before you book.</p>
+    <ul class="meta"><li><b>Pay:</b> $100–$300 per session</li><li><b>Startup:</b> Camera or recent phone</li><li><b>Best for:</b> Visual people</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> If you're a student on a visa or receiving work-study aid, outside income can affect your status or aid. Check with your school's international or financial aid office before starting a side gig.</div>
+
+<h2 id="durham-advantage">Why side gigs in Durham pay off differently</h2>
+<p>Durham is smaller than Raleigh and far smaller than Charlotte, and that works in your favor. A few things to keep in mind as you choose:</p>
+<ul>
+  <li><strong>Skills beat hours.</strong> With so many researchers, clinicians and grad students nearby, knowledge work like editing, statistics help and tutoring often pays more per hour than driving. Price it properly with the <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> rather than guessing.</li>
+  <li><strong>Schedules are unusual.</strong> Hospital shifts run nights and weekends, so demand for pet care, errands and meal help doesn't follow a 9-to-5 pattern. If you're free on weekday mornings, that's an advantage here.</li>
+  <li><strong>Short distances.</strong> Downtown, Duke's campuses, Ninth Street and the hospitals sit within a few miles of each other. Clustering clients is easy, and an e-bike can replace a car for many gigs.</li>
+  <li><strong>Word of mouth travels fast.</strong> Departments, labs and neighborhood listservs are tightly connected. One satisfied grad student or nurse can send you several referrals.</li>
+  <li><strong>Visitors keep arriving.</strong> Patient families, prospective students, conference guests and visiting faculty create steady demand for rides, rooms and local help well beyond the academic year.</li>
+</ul>
+
+<h2 id="first-steps">How to start a side hustle in Durham this month</h2>
+<ol class="steps">
+  <li><strong>Start from your strengths.</strong> Academic skills, a spare room or a flexible daytime schedule each point to a different hustle. The <a href="/tools/side-hustle-quiz/">side hustle quiz</a> can help you choose.</li>
+  <li><strong>Pick one and set a target.</strong> Decide your monthly income goal and the rate you need.</li>
+  <li><strong>Find the right channel.</strong> Departmental listservs and grad student groups for editing, Rover for pet care, travel-nurse housing sites for rentals, Nextdoor for home services.</li>
+  <li><strong>Land three clients and collect reviews.</strong> Durham is a small, connected city, and reputation spreads quickly.</li>
+  <li><strong>Mark the academic calendar.</strong> Move-in, finals and commencement are your surge weeks.</li>
+  <li><strong>Separate your money.</strong> Use one account for side income and track every expense.</li>
+</ol>
+
+<h2 id="nc-taxes">North Carolina taxes and Durham rules</h2>
+<ul>
+  <li><strong>State income tax:</strong> North Carolina's flat rate is 3.99% for 2026, with more cuts scheduled in later years.</li>
+  <li><strong>Self-employment tax:</strong> 15.3% federal on net profit from services, plus federal income tax. Estimate it with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>Rental income:</strong> mid-term rental income is generally reported on Schedule E and usually isn't subject to self-employment tax, but you may owe occupancy taxes on stays under 90 days. Durham's zoning code also regulates short-term rentals.</li>
+  <li><strong>Sales tax:</strong> the state rate is 4.75%, plus local tax. Selling goods, and many repair and installation services, means registering with the NC Department of Revenue.</li>
+  <li><strong>Business license:</strong> no general city business license is required, but home occupation rules and an assumed business name filing may apply.</li>
+</ul>
+
+<h2 id="nearby">Explore other Triangle and Triad guides</h2>
+<p>Durham's neighbors have very different side-hustle economies. Our guide to the <a href="/best-side-hustles-in-raleigh/">best side hustles in Raleigh</a> focuses on fast-growing suburbs and the State Fair, while <a href="/best-side-hustles-in-greensboro/">Greensboro</a> covers High Point Market and Triad logistics jobs.</p>
+<p>The Bull City rewards people who match their skills to its schedule. Pick one idea from this Better Side Hustles guide, give it a full semester, and track your hours and income so you know what's working.</p>
 HTML,
 ];

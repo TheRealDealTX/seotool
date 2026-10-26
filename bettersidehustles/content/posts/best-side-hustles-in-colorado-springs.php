@@ -52,7 +52,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="moving-help">2. Moving labor and junk hauling</h3>
-    <p>Families doing a do-it-yourself move need loaders for trucks and PODS, and everyone has a pile of furniture that won't fit in the next house. Moving-labor apps and word of mouth both work. A truck or trailer lets you add haul-away fees.</p>
+    <p>Families doing a do-it-yourself move need loaders for trucks and PODS, and everyone has a pile of furniture that won't fit in the next house. Moving-labor apps and word of mouth both work. A [[amazon:hand-cart|folding hand truck]] saves your back on stairs, and a truck or trailer lets you add haul-away fees.</p>
     <ul class="meta"><li><b>Pay:</b> $25–$45/hr per person</li><li><b>Startup:</b> Dolly, straps, gloves</li><li><b>Best for:</b> Strong backs, weekend crews</li></ul>
   </div>
   <div class="hustle-card">

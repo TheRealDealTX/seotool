@@ -131,7 +131,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="moving-help">11. Moving help</h3>
-    <p>Houston has constant relocation traffic from energy and medical transfers, plus apartment moves every month. Apps like Dolly, Lugg and TaskRabbit connect you with jobs; a truck or a strong back and a [[amazon:hand-cart|folding hand truck]] are all you need.</p>
+    <p>Houston has constant relocation traffic from energy and medical transfers, plus apartment moves every month. Apps like Dolly, Lugg and TaskRabbit connect you with jobs; a truck or a strong back and a folding hand truck are all you need.</p>
     <ul class="meta"><li><b>Pay:</b> $25–$50/hr</li><li><b>Startup:</b> $0–$100</li><li><b>Best for:</b> Strong, punctual people</li></ul>
   </div>
   <div class="hustle-card">
