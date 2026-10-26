@@ -2,7 +2,7 @@
 require dirname(__DIR__) . '/includes/bootstrap.php';
 $crumbs = [['Home', '/'], ['About', '/about/']];
 page_start([
-    'title'       => 'About Bastrop Roofing | Local Roofer in Bastrop, TX',
+    'title'       => 'About Bastrop Roofing | (512) 297-7580 | Bastrop, TX Roofer',
     'description' => 'Meet Bastrop Roofing, a local Bastrop, TX roofer focused on honest inspections, clear written estimates and roofs built for Lost Pines weather.',
     'path'        => '/about/',
     'image'       => 'ABOUT-BASTROP-ROOFING.webp',

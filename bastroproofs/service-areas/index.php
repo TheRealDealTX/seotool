@@ -2,7 +2,7 @@
 require dirname(__DIR__) . '/includes/bootstrap.php';
 $crumbs = [['Home', '/'], ['Service Areas', '/service-areas/']];
 page_start([
-    'title'       => 'Roofing Service Areas | Bastrop County Roofers | Bastrop Roofing',
+    'title'       => 'Roofing Service Areas | (512) 297-7580 | Bastrop Roofing',
     'description' => 'Bastrop Roofing serves Bastrop, Elgin, Smithville, Cedar Creek, Paige, McDade and Red Rock, TX with roof repair, replacement, metal roofing and storm repair.',
     'path'        => '/service-areas/',
     'schema'      => [breadcrumb_schema($crumbs)],

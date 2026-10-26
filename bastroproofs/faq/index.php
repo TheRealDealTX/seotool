@@ -26,7 +26,7 @@ $groups = [
 ];
 $all = array_merge(...array_values($groups));
 page_start([
-    'title'       => 'Roofing FAQ | Bastrop Roofing Questions Answered',
+    'title'       => 'Roofing FAQ | (512) 297-7580 | Bastrop Roofing',
     'description' => 'Answers to common roofing questions from Bastrop, TX homeowners: repair vs. replacement, metal roofing, hail damage, insurance claims and estimates.',
     'path'        => '/faq/',
     'schema'      => [breadcrumb_schema($crumbs), faq_schema($all)],

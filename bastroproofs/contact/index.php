@@ -2,7 +2,7 @@
 require dirname(__DIR__) . '/includes/bootstrap.php';
 $crumbs = [['Home', '/'], ['Contact', '/contact/']];
 page_start([
-    'title'       => 'Contact Bastrop Roofing | Free Roof Estimate | (512) 297-7580',
+    'title'       => 'Contact Bastrop Roofing | (512) 297-7580 | Free Estimate',
     'description' => 'Contact Bastrop Roofing for a free roof inspection and estimate in Bastrop, TX. Call (512) 297-7580, email info@bastroproofs.com or send the online form.',
     'path'        => '/contact/',
     'schema'      => [breadcrumb_schema($crumbs), ['@type' => 'ContactPage', 'url' => abs_url('/contact/'), 'about' => ['@id' => abs_url('/#business')]]],

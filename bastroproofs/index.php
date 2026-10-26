@@ -41,7 +41,7 @@ $homeFaqs = [
 ];
 
 page_start([
-    'title'       => 'Bastrop Roofing | Roofer in Bastrop, TX | Metal Roofing & Repair',
+    'title'       => 'Bastrop Roofing | (512) 297-7580 | Roofer in Bastrop, TX',
     'description' => 'Bastrop Roofing is your local Bastrop roofer for roof repair, replacement, metal roofing and storm damage in Bastrop, TX. Free inspections: (512) 297-7580.',
     'path'        => '/',
     'preload'     => 'A-Stronger-Roof-Starts-With-a-Clear-Plan.webp',

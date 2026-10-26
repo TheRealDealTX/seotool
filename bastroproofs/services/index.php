@@ -6,7 +6,7 @@ foreach ($SERVICES as $slug => $s) {
     $items[] = ['@type' => 'ListItem', 'position' => count($items) + 1, 'name' => $s['name'], 'url' => abs_url("/services/$slug/")];
 }
 page_start([
-    'title'       => 'Roofing Services Bastrop TX | Repair, Metal & More | Bastrop Roofing',
+    'title'       => 'Roofing Services Bastrop TX | (512) 297-7580 | Bastrop Roofing',
     'description' => 'All roofing services from Bastrop Roofing: roof repair, replacement, metal and shingle roofing, inspections, storm, hail and commercial roofing in Bastrop, TX.',
     'path'        => '/services/',
     'schema'      => [breadcrumb_schema($crumbs), ['@type' => 'ItemList', 'name' => 'Bastrop Roofing services', 'itemListElement' => $items]],
