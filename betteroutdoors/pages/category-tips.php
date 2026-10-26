@@ -19,8 +19,9 @@ page_head([
 </section>
 <section class="section-mist" style="padding:10px 0 90px">
   <div class="wrap">
-<?php foreach (['Bow Tuning', 'Bow Guides', 'Bow Reviews'] as $g): if (empty($groups[$g])) continue; ?>
-    <h2 class="reveal" style="margin:30px 0 24px"><?= e($g === 'Bow Tuning' ? 'Bow Tuning Tips' : ($g === 'Bow Guides' ? 'Buying Guides' : 'Compound Bow Reviews')) ?></h2>
+<?php $heads = ['Bow Tuning' => 'Bow Tuning Tips', 'Hunting Tips' => 'Bowhunting Tips', 'Outdoor Tips' => 'Outdoor & Camping Tips', 'Bow Guides' => 'Buying Guides', 'Bow Reviews' => 'Compound Bow Reviews'];
+foreach ($heads as $g => $head): if (empty($groups[$g])) continue; ?>
+    <h2 class="reveal" style="margin:30px 0 24px"><?= e($head) ?></h2>
     <div class="post-grid" style="margin-bottom:30px">
 <?php foreach ($groups[$g] as $s => $p) echo post_card($s, $p); ?>
     </div>

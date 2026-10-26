@@ -101,6 +101,8 @@ if (!isset($routes[$path])) {
 }
 
 header('Content-Type: text/html; charset=utf-8');
+// Keep LiteSpeed's page cache short so scheduled posts appear on their date.
+header('X-LiteSpeed-Cache-Control: public, max-age=10800');
 $page = $routes[$path];
 if ($page === 'post') {
     $slug = trim($path, '/');

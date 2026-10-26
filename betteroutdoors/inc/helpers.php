@@ -3,7 +3,7 @@
 
 function e($s) { return htmlspecialchars((string)$s, ENT_QUOTES, 'UTF-8', false); }
 
-function img_url($file) { return UPLOADS . $file; }
+function img_url($file) { return $file[0] === '/' ? $file : UPLOADS . $file; }
 
 function fmt_date($ymd) { return date('F j, Y', strtotime($ymd)); }
 

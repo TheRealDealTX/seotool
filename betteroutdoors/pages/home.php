@@ -41,7 +41,7 @@ $featured = '2016-pse-draw-length-adjustment';
         <a class="btn btn-ghost" href="/tools/draw-length-calculator/"><i class="fa-solid fa-ruler-horizontal" aria-hidden="true"></i> Find My Draw Length</a>
       </div>
       <div class="hero-stats">
-        <div><b data-count="9">9</b><span>In-depth bow guides</span></div>
+        <div><b data-count="<?= count($POSTS) ?>"><?= count($POSTS) ?></b><span>In-depth archery guides</span></div>
         <div><b data-count="5">5</b><span>Free archery tools</span></div>
         <div><b data-count="100" data-suffix="%">100%</b><span>Free, no paywalls</span></div>
       </div>
@@ -118,7 +118,8 @@ $featured = '2016-pse-draw-length-adjustment';
     <div class="post-grid">
 <?php
 echo post_card($featured, $POSTS[$featured], false);
-foreach ($POSTS as $s => $p) if ($s !== $featured) echo post_card($s, $p);
+$n = 0;
+foreach ($POSTS as $s => $p) { if ($s === $featured) continue; echo post_card($s, $p); if (++$n === 8) break; }
 ?>
     </div>
     <p style="text-align:center;margin-top:36px"><a class="btn btn-outline" href="/blog/">See All Articles <i class="fa-regular fa-circle-right" aria-hidden="true"></i></a></p>
