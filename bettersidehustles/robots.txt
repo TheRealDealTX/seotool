@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /inc/
+Disallow: /content/
+Disallow: /data/
+Disallow: /docs/
+
+Sitemap: https://bettersidehustles.com/sitemap_index.xml

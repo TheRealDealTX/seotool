@@ -1,0 +1,44 @@
+# bettersidehustles.com — custom PHP site (no WordPress).
+Options -Indexes
+DirectoryIndex index.php
+ErrorDocument 404 /index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force https + bare domain
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteRule ^ https://bettersidehustles.com%{REQUEST_URI} [L,R=301]
+
+# Source, data and docs are never served directly
+RewriteRule ^(inc|content|data|docs)(/|$) - [F,L]
+RewriteRule (^|/)\.(?!well-known) - [F,L]
+RewriteRule \.(md|py|sh|lock)$ - [F,L]
+
+# Real files (images, CSS, JS, robots.txt) are served as-is; everything else
+# goes to the front controller.
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml application/xml text/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
