@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2024/09/Bossier-City-LA.webp',
     'image_alt'   => 'Bossier City, Louisiana riverfront along the Red River, illustrating Bossier City side hustles',
     'category'    => 'City Guides',
+    'city' => 'Bossier City',
+    'state' => 'LA',
     'keywords'    => ['bossier city side hustles', 'how to make money 71112', 'side hustles bossier city la', 'shreveport bossier side hustles'],
     'tool'        => 'quiz',
     'gear'        => ['cutting-machine', 'laptop-stand', 'insulated-bag', 'book-side-hustle'],

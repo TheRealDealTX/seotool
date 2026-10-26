@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Sacramento.webp',
     'image_alt'   => 'Sacramento Tower Bridge and downtown skyline, representing the best side hustles in Sacramento',
     'category'    => 'City Guides',
+    'city' => 'Sacramento',
+    'state' => 'CA',
     'keywords'    => ['best side hustles in sacramento', 'side hustle sacramento', 'side jobs sacramento', 'side jobs in sacramento ca'],
     'tool'        => 'tax-estimator',
     'gear'        => ['pressure-washer', 'insulated-bag', 'mileage-log', 'book-profit-first'],

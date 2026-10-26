@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Indianapolis.webp',
     'image_alt'   => 'Indianapolis skyline with Monument Circle, illustrating the best side hustles in Indianapolis',
     'category'    => 'City Guides',
+    'city' => 'Indianapolis',
+    'state' => 'IN',
     'keywords'    => ['best side hustles in indianapolis', 'side hustle indianapolis', 'best side hustles indianapolis 2026', 'side gigs indianapolis', 'side jobs indianapolis'],
     'tool'        => 'income-calculator',
     'gear'        => ['leaf-blower', 'mileage-log', 'cordless-drill', 'book-side-hustle'],

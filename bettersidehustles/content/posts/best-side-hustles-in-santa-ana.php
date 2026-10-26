@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2026/03/Best-Side-Hustles-in-Santa-Ana.webp',
     'image_alt'   => 'Downtown Santa Ana street scene, illustrating the best side hustles in Santa Ana and Orange County',
     'category'    => 'City Guides',
+    'city' => 'Santa Ana',
+    'state' => 'CA',
     'keywords'    => ['best side hustles in santa ana', 'how to make money 92706', 'best side hustles orange county ca 2026', 'side hustle santa ana'],
     'tool'        => 'freelance-rate',
     'gear'        => ['cutting-machine', 'heat-press', 'tripod', 'book-100-startup'],

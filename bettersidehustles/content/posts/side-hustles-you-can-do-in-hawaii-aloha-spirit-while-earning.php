@@ -10,6 +10,8 @@ return [
     'image'       => '/wp-content/uploads/2023/07/Hawaii-USA.webp',
     'image_alt'   => 'Hawaii coastline with palm trees and ocean, illustrating side hustles in Hawaii',
     'category'    => 'City Guides',
+    'city' => 'Hawaii',
+    'state' => 'HI',
     'keywords'    => ['side hustles in hawaii', 'how to make money in hawaii', 'hawaii side hustle', 'side jobs hawaii'],
     'tool'        => 'income-calculator',
     'gear'        => ['ring-light', 'laptop-stand', 'cleaning-kit', 'book-psych-money'],
