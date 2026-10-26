@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /content/
+Disallow: /pages/
+
+Sitemap: https://betteroutdoors.net/sitemap_index.xml
