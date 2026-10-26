@@ -77,6 +77,13 @@ Nov 24 treestand tips, Nov 28 camping bow.
 2. Create `content/posts/<slug>.php` — copy an existing post; use the helpers.
 3. Upload images to `wp-content/uploads/2026/01/` (or any path) and reference by filename.
 
+## Favicons and analytics
+`python3 scripts/favicons.py` rebuilds `favicon.ico` (16/32/48), the PNG favicons,
+`apple-touch-icon.png`, the web-app manifest icons and `site.webmanifest` from the
+original mountain icon (white on navy). Google Analytics (`GA_ID` in `inc/config.php`,
+G-XXMML8G00W) is printed in every page's `<head>` by `inc/layout.php`, only when the
+host is betteroutdoors.net, so local/preview traffic is not counted.
+
 ## Contact form
 `/contact-us/` sends mail with PHP `mail()` to info@betteroutdoors.net (honeypot +
 timing check). Make sure that mailbox exists / forwards somewhere.

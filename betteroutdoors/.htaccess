@@ -2,6 +2,7 @@
 # file and already sends unknown paths to index.php, which does all routing.
 Options -Indexes
 DirectoryIndex index.php
+AddType application/manifest+json .webmanifest
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule ^(inc|content|pages)/.+\.php$ - [F,L]

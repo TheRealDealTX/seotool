@@ -6,6 +6,7 @@ const SITE_NAME   = 'Better Outdoors';
 const SITE_URL    = 'https://betteroutdoors.net';
 const SITE_EMAIL  = 'info@betteroutdoors.net';
 const AMAZON_TAG  = 'betteroutdoors-20';
+const GA_ID       = 'G-XXMML8G00W';
 const SITE_TAGLINE = 'Archery, Bowhunting & Outdoor Gear Guides';
 const UPLOADS     = '/wp-content/uploads/2026/01/';
 const ASSET_VER   = '20261026';

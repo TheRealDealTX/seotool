@@ -25,6 +25,17 @@ function page_head(array $m) {
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<?php if (in_array(strtolower($_SERVER['HTTP_HOST'] ?? ''), ['betteroutdoors.net', 'www.betteroutdoors.net'], true)): // analytics on the real domain only ?>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
+<?php endif; ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($m['desc']) ?>">
@@ -43,9 +54,13 @@ function page_head(array $m) {
 <?php endif; ?>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#061E29">
-<link rel="icon" href="<?= img_url('cropped-Better-Outdoors-Site-Icon-32x32.webp') ?>" sizes="32x32">
-<link rel="icon" href="<?= img_url('cropped-Better-Outdoors-Site-Icon-192x192.webp') ?>" sizes="192x192">
-<link rel="apple-touch-icon" href="<?= img_url('cropped-Better-Outdoors-Site-Icon-180x180.webp') ?>">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="apple-mobile-web-app-title" content="Better Outdoors">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700;800&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
