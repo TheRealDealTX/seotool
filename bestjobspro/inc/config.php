@@ -19,6 +19,9 @@ const FORM_TO   = 'careers@bestjobspro.com';
 const FORM_FROM = 'no-reply@bestjobspro.com';
 const RESUME_MAX_BYTES = 10 * 1024 * 1024;
 
+// Google Analytics 4 measurement ID (the gtag snippet is in inc/layout.php).
+const GA_ID = 'G-N38WZ735GF';
+
 // Bump when assets/css or assets/js change so browsers fetch the new files.
 const ASSET_VER = '1.0.0';
 

@@ -160,6 +160,15 @@ function page_start(array $m): void
 <!doctype html>
 <html lang="en-US">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($m['title']) ?></title>
@@ -179,9 +188,12 @@ function page_start(array $m): void
 <meta property="article:modified_time" content="<?= e($m['updated'] ?? $m['published']) ?>T08:00:00-05:00">
 <?php endif; ?>
 <meta name="theme-color" content="#FF5757">
-<link rel="icon" href="/assets/img/site/cropped-Best-Jobs-Pro-Site-Icon-32x32.webp" sizes="32x32">
-<link rel="icon" href="/assets/img/site/cropped-Best-Jobs-Pro-Site-Icon-192x192.webp" sizes="192x192">
-<link rel="apple-touch-icon" href="/assets/img/site/cropped-Best-Jobs-Pro-Site-Icon-180x180.webp">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/web-app-manifest-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Montserrat:wght@400;500;600;700;800&display=swap">
