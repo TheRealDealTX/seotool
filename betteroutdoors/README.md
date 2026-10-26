@@ -57,11 +57,23 @@ with `hosting_cache_clear-website` (LiteSpeed caches pages).
 `index.php` forces https (via `X-Forwarded-Proto` or `HTTPS`) and strips `www` on the
 real domain; other hosts get `X-Robots-Tag: noindex`.
 
-An unused copy also exists on the Agency Growth plan: website UID `yBoxhCPNC`,
-preview host olive-badger-748849.hostingersite.com (`deploy.sh` targets that layout).
+The Agency Growth preview copy (`yBoxhCPNC`) was deleted on 2026-10-26; `deploy.sh` still
+works for an Agency-plan layout if one is ever needed.
+
+## Scheduled publishing
+A post goes live automatically when its `date` (US Central) arrives: until then its URL
+404s and it is left out of listings, search, related posts and the sitemaps. Pages are
+cached by LiteSpeed for at most 3 hours (`X-LiteSpeed-Cache-Control`), so a new post can
+take up to 3 hours after midnight to appear in the homepage/blog lists. Preview everything
+locally with `BO_SHOW_SCHEDULED=1 php -S 127.0.0.1:8098 index.php`.
+
+Current schedule: Oct 26 draw length, Oct 29 RTH packages, Nov 2 Species XT, Nov 5 sight-in,
+Nov 9 Legit Maxx, Nov 13 Mathews sights, Nov 17 arrow weight, Nov 20 bow press,
+Nov 24 treestand tips, Nov 28 camping bow.
 
 ## Adding a post
 1. Add an entry to `$POSTS` in `inc/config.php` (title, h1, desc, kw, image, dates, cat).
+   Featured images for `/assets/img/posts/` entries come from `python3 scripts/post_images.py`.
 2. Create `content/posts/<slug>.php` — copy an existing post; use the helpers.
 3. Upload images to `wp-content/uploads/2026/01/` (or any path) and reference by filename.
 

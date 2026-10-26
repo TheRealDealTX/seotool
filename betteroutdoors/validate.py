@@ -40,7 +40,11 @@ for x in ['sitemap.xml', 'sitemap_index.xml', 'post-sitemap.xml', 'page-sitemap.
     STATIC.append('/' + x)
 
 titles, descs, links = {}, {}, set()
-for p in OLD + NEW:
+# Every post in the sitemap (includes scheduled posts when the server runs with BO_SHOW_SCHEDULED=1).
+_, sm, _ = get('/post-sitemap.xml')
+EXTRA = [u.replace('https://betteroutdoors.net', '') for u in re.findall(r'<loc>(https://betteroutdoors\.net/[^<]*)</loc>', sm)]
+EXTRA = [u for u in EXTRA if u not in OLD]
+for p in OLD + NEW + EXTRA:
     code, body, _ = get(p)
     if code != 200: err(f'{p} -> {code}'); continue
     if re.search(r'(Fatal error|Warning:|Parse error|Notice:|Deprecated:)', body): err(f'{p} PHP error output')
@@ -92,5 +96,5 @@ code, _, _ = get('/no-such-page/')
 if code != 404: err(f'404 page returns {code}')
 code, b, _ = get('/inc/config.php')
 if code != 403 and b.strip(): err('/inc/config.php leaks output')
-print(f'checked {len(OLD + NEW)} pages, {len(links)} internal links; {len(errors)} failures')
+print(f'checked {len(OLD + NEW + EXTRA)} pages, {len(links)} internal links; {len(errors)} failures')
 sys.exit(1 if errors else 0)

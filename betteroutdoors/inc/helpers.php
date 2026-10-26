@@ -125,6 +125,7 @@ function figure($file, $alt, $caption = null) {
 /** Internal link to another post by slug. */
 function post_link($slug, $label = null) {
     global $POSTS;
+    if (!isset($POSTS[$slug])) return e($label ?? '');  // not published yet
     $label = $label ?? $POSTS[$slug]['h1'];
     return '<a href="/' . e($slug) . '/">' . e($label) . '</a>';
 }
