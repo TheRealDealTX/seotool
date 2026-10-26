@@ -15,10 +15,10 @@ function config(string $key, $default = null)
     return $cfg[$key] ?? $default;
 }
 
-function db(): PDO
+function db(bool $fresh = false): PDO
 {
     static $pdo;
-    if (!$pdo) {
+    if (!$pdo || $fresh) {
         $pdo = new PDO(config('db_dsn'), config('db_user'), config('db_pass'), [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
@@ -28,6 +28,17 @@ function db(): PDO
         }
     }
     return $pdo;
+}
+
+/** Reconnect if the server dropped an idle connection (long imports outlast wait_timeout). */
+function db_alive(): PDO
+{
+    try {
+        @db()->query('SELECT 1');
+        return db();
+    } catch (PDOException) {
+        return db(true);
+    }
 }
 
 function db_driver(?PDO $pdo = null): string

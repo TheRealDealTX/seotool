@@ -348,7 +348,7 @@ final class Geocoder
     public static function locate(string $address): array
     {
         $key = substr(strtolower(trim($address)), 0, 190);
-        $st = db()->prepare('SELECT lat, lng FROM geocache WHERE address = ?');
+        $st = db_alive()->prepare('SELECT lat, lng FROM geocache WHERE address = ?');
         $st->execute([$key]);
         if ($row = $st->fetch()) {
             return [$row['lat'] !== null ? (float) $row['lat'] : null, $row['lng'] !== null ? (float) $row['lng'] : null];
@@ -438,7 +438,7 @@ final class RiseImporter
                     if (($limit && $done >= $limit) || ($deadline && time() > $deadline)) {
                         return ['imported' => $done, 'unchanged' => $skipped, 'complete' => false];
                     }
-                    $st = db()->prepare('SELECT rise_modified FROM properties WHERE id = ?');
+                    $st = db_alive()->prepare('SELECT rise_modified FROM properties WHERE id = ?');
                     $st->execute([$row['id']]);
                     if ($st->fetchColumn() === $row['modified']) {
                         $skipped++;
@@ -570,7 +570,7 @@ final class RiseImporter
             $upd = implode(',', array_map(fn ($c) => "$c = VALUES($c)", array_diff($cols, ['id'])));
             $sql = 'INSERT INTO properties (' . implode(',', $cols) . ") VALUES ($ph) ON DUPLICATE KEY UPDATE $upd";
         }
-        db()->prepare($sql)->execute(array_values($rec));
+        db_alive()->prepare($sql)->execute(array_values($rec));
     }
 
     /** Download a Rise upload into /media/p/{id}/; returns the public path or null. */
