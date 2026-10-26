@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /content/
+
+Sitemap: https://bestjobspro.com/sitemap.xml
