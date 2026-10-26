@@ -1,5 +1,6 @@
 <?php
 /** Service page template. Expects $slug; included from /services/<slug>/index.php. */
+if (!isset($slug)) { http_response_code(404); exit; }
 require_once dirname(__DIR__) . '/bootstrap.php';
 $s = $SERVICES[$slug];
 $path = "/services/$slug/";

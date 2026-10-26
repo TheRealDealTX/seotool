@@ -55,9 +55,40 @@ php -S 127.0.0.1:8099 &
 python3 bin/validate.py          # all 38 pages should pass
 ```
 
-## Before going live
+## Deployment
 
-- **Email delivery:** confirm the form email arrives. `mail()` sends from `no-reply@bastroproofs.com`. If messages land in spam, switch to SMTP.
-- **Cost figures:** these are planning ranges, and the site labels them that way. Review them.
-- **Service-area facts:** double-check the drive distances and a few local names (Saratoga Farms in Elgin, FM 2104 near Paige, Red Rock on FM 20 / FM 812).
-- **Swapping out WordPress:** back up the WordPress site first. Then replace it with these files, or create a plain PHP website on the same plan and move the domain to it. After launch, resubmit `sitemap.xml` in Search Console.
+The site is live on Hostinger Agency website UID **`wIZQiliPf`**, a plain
+php-fpm website on PHP 8.5. It was created on 2026-10-26, and bastroproofs.com
+was moved to it the same day.
+
+The old WordPress site (UID `uXznqPatC`) was **not deleted**. The domain was
+unlinked from it, but its files and database are untouched. To roll back,
+change `wIZQiliPf`'s domain back to a temporary one and link bastroproofs.com
+to `uXznqPatC` again.
+
+To redeploy, run `./deploy.sh`. Its header explains the three upload
+credentials it needs. Clear the site cache afterwards.
+
+### Hosting notes
+
+- This platform ignores `.htaccess`. It serves existing files directly and
+  sends unknown paths to `index.php`. That is why `index.php` handles the www
+  redirect, the old WordPress URLs and the 404s. The `.htaccess` file is still
+  kept for portability.
+- Because `.htaccess` is ignored, `http://` requests for directory pages are
+  served as-is instead of being redirected. Every page carries an `https://`
+  canonical tag.
+- Template files return a 404 when requested directly. The config and data
+  files output nothing.
+
+## Still to do
+
+- **Search Console:** submit `https://bastroproofs.com/sitemap.xml`. The
+  verification file `googlecccfbf2f7e9e5ae4.html` was carried over.
+- **Email delivery:** send a real test through the estimate form and check that
+  it reaches info@bastroproofs.com. `mail()` sends from
+  `no-reply@bastroproofs.com`. If messages land in spam, switch to SMTP.
+- **Cost figures:** these are planning ranges, and the site labels them that
+  way. Review them.
+- **Service-area facts:** double-check the drive distances and a few local names
+  (Saratoga Farms in Elgin, FM 2104 near Paige, Red Rock on FM 20 / FM 812).

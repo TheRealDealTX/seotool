@@ -1,5 +1,6 @@
 <?php
 /** Service-area page template. Expects $slug; included from /service-areas/<slug>/index.php. */
+if (!isset($slug)) { http_response_code(404); exit; }
 require_once dirname(__DIR__) . '/bootstrap.php';
 $a = $AREAS[$slug];
 $path = "/service-areas/$slug/";

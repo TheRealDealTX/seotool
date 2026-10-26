@@ -1,5 +1,6 @@
 <?php
 /** Roofing tool page template. Expects $slug and optional $toolBody (extra prose HTML). */
+if (!isset($slug)) { http_response_code(404); exit; }
 require_once dirname(__DIR__) . '/bootstrap.php';
 $t = $TOOLS[$slug];
 $path = "/roofing-tools/$slug/";

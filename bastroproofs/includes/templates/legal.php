@@ -1,5 +1,6 @@
 <?php
 /** Legal/utility page template. Expects $legal = [title, description, path, h1, lead, html]. */
+if (!isset($legal)) { http_response_code(404); exit; }
 require_once dirname(__DIR__) . '/bootstrap.php';
 $crumbs = [['Home', '/'], [$legal['h1'], $legal['path']]];
 page_start([

@@ -1,5 +1,6 @@
 <?php
 /** Blog post template. Expects $slug; included from /blog/<slug>/index.php. */
+if (!isset($slug)) { http_response_code(404); exit; }
 require_once dirname(__DIR__) . '/bootstrap.php';
 $b = $POSTS[$slug];
 $path = "/blog/$slug/";
