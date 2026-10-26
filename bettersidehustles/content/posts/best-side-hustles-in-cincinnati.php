@@ -154,7 +154,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="online-courses">17. Online courses and tutorials</h3>
-    <p>Turn expertise in brand management, supply chain or healthcare into a course on <a href="/udemy/">Udemy</a> or <a href="/skillshare/">Skillshare</a>.</p>
+    <p>Turn expertise in brand management, supply chain or healthcare into a course on <a href="/udemy/">Udemy</a> or Skillshare.</p>
     <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experienced professionals</li></ul>
   </div>
   <div class="hustle-card">

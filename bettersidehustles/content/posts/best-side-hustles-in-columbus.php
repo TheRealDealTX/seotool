@@ -166,7 +166,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="courses">17. Online courses</h3>
-    <p>Package insurance, healthcare or retail expertise into a course on <a href="/udemy/">Udemy</a> or <a href="/thinkific/">Thinkific</a>.</p>
+    <p>Package insurance, healthcare or retail expertise into a course on <a href="/udemy/">Udemy</a> or Thinkific.</p>
     <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts</li></ul>
   </div>
   <div class="hustle-card">

@@ -156,7 +156,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="online-courses">16. Online courses</h3>
-    <p>Turn professional knowledge (Excel modeling, CPA exam tips, logistics software) into a course on <a href="/udemy/">Udemy</a> or your own site. Slow to start, but it scales.</p>
+    <p>Turn professional knowledge (Excel modeling, CPA exam tips, logistics software) into a course on Udemy or your own site. Slow to start, but it scales.</p>
     <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Patient experts</li></ul>
   </div>
 </div>
@@ -170,7 +170,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="markets">18. Handmade goods and pop-up markets</h3>
-    <p>Neighborhood street fests run nearly every summer weekend, and holiday markets fill December. They are perfect for testing candles, prints and Chicago-themed apparel before selling online through <a href="/shopify/">Shopify</a> or Etsy.</p>
+    <p>Neighborhood street fests run nearly every summer weekend, and holiday markets fill December. They are perfect for testing candles, prints and Chicago-themed apparel before selling online through Shopify or Etsy.</p>
     <ul class="meta"><li><b>Pay:</b> Varies by product</li><li><b>Startup:</b> $100–$500</li><li><b>Best for:</b> Makers</li></ul>
   </div>
   <div class="hustle-card">
