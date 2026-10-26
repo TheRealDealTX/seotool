@@ -162,7 +162,7 @@ return [
   </div>
   <div class="hustle-card">
     <h3 id="online-courses">18. Online courses and digital products</h3>
-    <p>If you know solar sales, desert landscaping, Arizona real estate or a software tool, package it as a course on <a href="/udemy/">Udemy</a> or your own site. It is slow to start but scales without more hours.</p>
+    <p>If you know solar sales, desert landscaping, Arizona real estate or a software tool, package it as a course on Udemy or your own site. It is slow to start but scales without more hours.</p>
     <ul class="meta"><li><b>Pay:</b> Varies widely</li><li><b>Startup:</b> Mic and time</li><li><b>Best for:</b> Experts with patience</li></ul>
   </div>
 </div>

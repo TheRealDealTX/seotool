@@ -43,7 +43,7 @@ return [
   <li><strong>Outdoor recreation.</strong> Saguaro Lake, Canyon Lake, the lower Salt River and Usery Mountain draw boaters, tubers and hikers, which creates its own seasonal work.</li>
 </ul>
 
-<h2 id="mesa-top-picks">Top side hustles in Mesa for 2026</h2>
+<h2 id="mesa-top-picks">The best side hustles in Mesa for 2026</h2>
 <div class="hustle-grid">
   <div class="hustle-card">
     <h3 id="pressure-washing">1. Pressure washing driveways, pavers and tile roofs</h3>

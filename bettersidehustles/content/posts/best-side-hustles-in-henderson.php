@@ -1,171 +1,200 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Henderson (2026): Ways to Earn Extra',
-    'description' => 'The best side hustles in Henderson for 2026 — gig work, local services and online income ideas, with real pay ranges and tips to start this week.',
-    'h1' => 'Best Side Hustles in Henderson',
-    'kicker' => 'City Guide · NV',
-    'dek' => 'Gig apps, local services and online work that pay in Henderson — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-02-19',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Henderson.webp',
-    'image_alt' => 'Best Side Hustles in Henderson',
-    'category' => 'City Guides',
-    'city' => 'Henderson',
-    'state' => 'NV',
-    'keywords' => ['best side hustles in henderson'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-las-vegas', 'best-side-hustles-in-phoenix', 'best-side-hustles-in-tucson'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Henderson right now?', 'a' => 'Pool cleaning, car detailing, freelance online work, and helping seniors are some of the best side hustles in Henderson because people always need these services.'],
-        ['q' => 'Do I need a business license to start a side hustle in Henderson?', 'a' => 'Yes, most small businesses need a city or county license, so check local rules before you begin.'],
-        ['q' => 'How much money can I realistically make from a side hustle here?', 'a' => 'Many side hustlers earn between $800 and $3,000 per month depending on hours worked and service pricing.'],
-        ['q' => 'Are online side hustles viable if I live in Henderson?', 'a' => 'Yes, remote services like freelancing and virtual assistance allow you to earn nationally while living locally.'],
-        ['q' => 'What side hustles offer recurring income?', 'a' => 'Pool maintenance, car detailing memberships, senior services, and freelance retainers often generate consistent monthly revenue.'],
-        ['q' => 'How much should I budget to start?', 'a' => 'Some side hustles can start under $500, while others like real estate photography may require $2,000–$3,000 in equipment.'],
-        ['q' => 'Are HOA rules a problem for home-based side businesses?', 'a' => 'They can be, so review your HOA guidelines to avoid issues with signage, parking, or client visits.'],
-        ['q' => 'What side hustle works best part-time?', 'a' => 'Mobile detailing, event staffing, and freelance digital services are flexible and fit well into evenings or weekends.'],
-        ['q' => 'Is Nevada’s tax structure beneficial for side hustlers?', 'a' => 'Yes, Nevada has no state income tax, which allows you to keep more of your earnings.'],
-        ['q' => 'How quickly can I launch one of the best side hustles in Henderson?', 'a' => 'With focused planning, many people can launch within 30 days using a simple marketing and licensing strategy.'],
+    'title'       => 'Best Side Hustles in Henderson (2026): 17 Ways to Earn',
+    'description' => 'The best side hustles in Henderson, NV for 2026: 17 side gigs for HOA neighborhoods, pools, retirees and Lake Mead, with real pay and Nevada license tips.',
+    'h1'          => 'Best Side Hustles in Henderson (2026): 17 Side Gigs for Nevada\'s Suburban Powerhouse',
+    'kicker'      => 'City Guide · NV',
+    'dek'         => 'Pool routes in Green Valley, pressure washing for HOA notices, help for Sun City Anthem retirees and pickleball coaching: these are the side jobs in Henderson that pay, with startup costs and the licenses you need.',
+    'published'   => '2026-02-19',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/02/Best-Side-Hustles-in-Henderson.webp',
+    'image_alt'   => 'Henderson, Nevada neighborhood with desert mountains in the background, illustrating the best side hustles in Henderson',
+    'category'    => 'City Guides',
+    'city'        => 'Henderson',
+    'state'       => 'NV',
+    'keywords'    => ['best side hustles in henderson', 'side hustles in henderson', 'side jobs in henderson', 'side gigs in henderson', 'how to make money in henderson', 'henderson side hustles 2026'],
+    'tool'        => 'gig-calculator',
+    'gear'        => ['leaf-blower', 'cordless-drill', 'reef-sunscreen', 'book-profit-first'],
+    'related'     => ['best-side-hustles-in-las-vegas', 'best-side-hustles-in-phoenix', 'best-side-hustles-in-mesa'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Henderson?', 'a' => 'Pool service, HOA-friendly yard care, pet sitting, pressure washing, recurring house cleaning, help for retirees, tutoring and handyman work lead the list. Henderson is affluent, residential and HOA-heavy, so dependable home services usually pay better than app work, though rideshare and delivery into Las Vegas remain easy fallback options.'],
+        ['q' => 'How can I make money in Henderson fast?', 'a' => 'Delivery apps can pay within a week or two once you are approved and licensed. For quicker local cash, offer pressure washing or yard cleanup in Nextdoor and HOA Facebook groups; homeowners who receive HOA violation notices often need help within days. Pet sitting around holidays also books quickly.'],
+        ['q' => 'Do I need a business license for a side hustle in Henderson?', 'a' => 'In most cases, yes. Nevada requires a state business license from the Secretary of State for most businesses, including sole proprietors, unless an exemption applies. The City of Henderson also licenses businesses operating within city limits, including many home-based businesses. Check with the city\'s business license office before you start.'],
+        ['q' => 'What side jobs in Henderson suit retirees?', 'a' => 'Retirees in Sun City Anthem, Anthem and Green Valley often earn extra through pet sitting, home watch for neighbors who travel, tutoring, pickleball coaching, tech help for other seniors and part-time event work. These gigs reward trust and reliability, and they often come through neighborhood word of mouth.'],
+        ['q' => 'How much can I make from side gigs in Henderson?', 'a' => 'Most people working 8 to 15 hours a week earn roughly $500 to $1,800 a month. Pool routes, pressure washing and handyman work typically pay $40 to $70 an hour with repeat clients, while app-based driving usually nets $15 to $22 an hour after gas.'],
+        ['q' => 'Does Nevada tax side hustle income?', 'a' => 'Nevada has no personal income tax, which makes side income in Henderson go further. You still owe federal income tax and 15.3% self-employment tax on net profit, and most sole proprietors pay a $200 annual state business license fee. Selling physical goods also requires a seller\'s permit and sales tax collection.'],
     ],
-    'body' => <<<'HTML'
-<p>If you’re searching for the <strong>best side hustles in Henderson</strong>, you’re already thinking strategically. Henderson isn’t just a suburb of Las Vegas. It’s one of Nevada’s fastest-growing cities, packed with stable neighborhoods, strong household incomes, and consistent service demand. That combination creates real opportunity.</p>
-<p>I’ve seen people overcomplicate side hustles. They chase trends. They download apps and they bounce between ideas. But in Henderson, the smart move is simpler: look at what people already need, then position yourself as the reliable solution.</p>
-<p>Let’s break down what actually works here — and how to start.</p>
-<h2 id="h-why-henderson-is-built-for-side-hustles">Why Henderson Is Built for Side Hustles</h2>
-<p><a href="https://en.wikipedia.org/wiki/Henderson,_Nevada">Henderson</a> has a few advantages that make side income easier to generate than in many cities:</p>
-<ul><li>Close to Las Vegas tourism without direct Strip-level competition</li><li>Strong residential communities with HOAs</li><li>High pool ownership</li><li>A large retiree population</li><li>No Nevada state income tax</li></ul>
-<p>That last one matters. When you keep more of what you earn, even a modest <a href="/best-side-hustles-in-las-vegas/">side hustle</a> can meaningfully boost your income.</p>
-<p>But not every opportunity fits every person. So before choosing from the best side hustles in Henderson, it helps to understand the local demand drivers.</p>
-<h2 id="h-what-makes-a-side-hustle-work-in-henderson">What Makes a Side Hustle Work in Henderson?</h2>
-<h3 id="h-1-service-based-demand">1. Service-Based Demand</h3>
-<p>Henderson is heavily residential. Families. Professionals. Retirees. These groups outsource tasks. That’s your opening.</p>
-<h3 id="h-2-climate-based-needs">2. Climate-Based Needs</h3>
-<p>Desert heat creates predictable service demand:</p>
-<ul><li>Pool cleaning</li><li>Landscaping</li><li>Car detailing</li><li>HVAC maintenance coordination</li></ul>
-<p>Recurring needs mean recurring income. That’s the goal.</p>
-<h3 id="h-3-hoa-considerations">3. HOA Considerations</h3>
-<p>Many neighborhoods operate under HOA guidelines. That affects:</p>
-<ul><li>Home-based businesses</li><li>Trailer parking</li><li>Signage</li><li>Noise restrictions</li></ul>
-<p>You don’t need to fear this. You just need to check rules before launching.</p>
-<h2 id="h-high-demand-side-hustles-in-henderson">High-Demand Side Hustles in Henderson</h2>
-<p>Let’s get specific.</p>
-<p>These are some of the <strong>best side hustles in Henderson</strong> based on local demand, startup cost, and scalability.</p>
-<h3 id="h-1-pool-cleaning-amp-maintenance">1. Pool Cleaning &amp; Maintenance</h3>
-<p>Drive through Green Valley or Anthem and count the pools. There are thousands.</p>
-<p>Desert dust, evaporation, and heavy summer usage mean pools require constant maintenance. Most homeowners don’t want to handle chemicals themselves.</p>
-<p><strong>Why this works:</strong></p>
-<ul><li>Recurring monthly contracts</li><li>Predictable routes</li><li>High retention if service is reliable</li></ul>
-<p><strong>Startup basics:</strong></p>
-<ul><li>Certification (CPO recommended)</li><li>Basic equipment and testing kits</li><li>Truck or SUV</li></ul>
-<p>A small route of 20 pools at $120 per month equals $2,400 monthly. That’s not theoretical. That’s math.</p>
-<p>If you’re serious about the best side hustles in Henderson, this one offers consistency.</p>
-<h3 id="h-2-mobile-car-detailing">2. Mobile Car Detailing</h3>
-<p>The desert is not kind to vehicles. Dust builds fast. Interiors bake in the heat.</p>
-<p>Mobile detailing is ideal because:</p>
-<ul><li>You go to the client.</li><li>HOAs prefer low-disruption services.</li><li>Customers love convenience.</li></ul>
-<p><strong>What you need:</strong></p>
-<ul><li>Water tank or waterless products</li><li>Pressure washer</li><li>Basic polishing tools</li><li>Liability insurance</li></ul>
-<p>Pricing often ranges from $150–$300 per vehicle depending on package.</p>
-<p>Here’s a quick income model:</p>
-<table class="data"><tbody><tr><td><strong>Cars Per Weekend</strong></td><td><strong>Avg. Price</strong></td><td><strong>Weekly Revenue</strong></td></tr><tr><td>4</td><td>$200</td><td>$800</td></tr><tr><td>6</td><td>$225</td><td>$1,350</td></tr><tr><td>8</td><td>$250</td><td>$2,000</td></tr></tbody></table>
-<p>Two solid Saturdays can out-earn many part-time jobs.</p>
-<p>Among the best side hustles in Henderson, this one combines flexibility with strong margins.</p>
-<h3 id="h-3-short-term-rental-co-hosting">3. Short-Term Rental Co-Hosting</h3>
-<p>Henderson attracts visitors who want proximity to Las Vegas without staying on the Strip. Many homeowners list properties on Airbnb but don’t want to manage turnovers.</p>
-<p>You can:</p>
-<ul><li>Coordinate cleaners</li><li>Handle guest messaging</li><li>Manage check-ins</li><li>Monitor listings</li></ul>
-<p>Co-hosts typically earn 10%–25% of booking revenue.</p>
-<p>Start by networking in local Facebook groups or <a href="https://nextdoor.com/">Nextdoor</a> communities. Offer reliability. That alone differentiates you.</p>
-<h3 id="h-4-real-estate-photography">4. Real Estate Photography</h3>
-<p>Henderson’s housing market stays active. New builds. Resales. Relocations.</p>
-<p>Listings need:</p>
-<ul><li>Interior photos</li><li>Twilight shots</li><li>Drone images</li></ul>
-<p>Initial investment is higher. Camera. Wide lens. Drone. Editing software.</p>
-<p>But agents reuse photographers they trust.</p>
-<p>Charge per listing. Build relationships. Deliver fast turnaround.</p>
-<p>This is one of the best side hustles in Henderson if you prefer creative work and project-based income.</p>
-<h3 id="h-5-senior-errand-amp-companion-services">5. Senior Errand &amp; Companion Services</h3>
-<p>Henderson has a significant retiree population. Many seniors live independently but need occasional help.</p>
-<p>Services can include:</p>
-<ul><li>Grocery runs</li><li>Prescription pickups</li><li>Appointment transportation</li><li>Light tech assistance</li></ul>
-<p>This isn’t medical care. It’s practical support.</p>
-<p>Start small. Background check yourself. Carry insurance. Build trust slowly.</p>
-<p>Recurring weekly clients create stability.</p>
-<h2 id="h-online-side-hustles-you-can-run-from-henderson">Online Side Hustles You Can Run From Henderson</h2>
-<p>You don’t have to leave home.</p>
-<p>Some of the best side hustles in Henderson don’t depend on geography at all.</p>
-<h3 id="h-freelance-digital-services">Freelance Digital Services</h3>
-<p>Local businesses constantly need:</p>
-<ul><li>Social media management</li><li>Website updates</li><li>Google Business profile optimization</li><li>Simple marketing help</li></ul>
-<p>You don’t need an agency. You need results.</p>
-<p>Approach 10 small businesses per week. Offer a specific solution. For example:</p>
-<p>“I’ll manage your Instagram and post 12 times per month for $500.”</p>
-<p>Clear. Simple. Direct.</p>
-<h3 id="h-virtual-assistant-services">Virtual Assistant Services</h3>
-<p>Entrepreneurs across the country hire remote support for:</p>
-<ul><li>Email management</li><li>Calendar coordination</li><li>Research</li><li>Client onboarding</li></ul>
-<p>Set up a clean LinkedIn profile. Build a one-page service offer. Pitch intentionally.</p>
-<p>Even 10 hours per week at $30/hour equals $1,200 per month.</p>
-<h3 id="h-print-on-demand-or-etsy-store">Print-on-Demand or Etsy Store</h3>
-<p>Nevada-themed designs. Wedding merchandise. Event apparel.</p>
-<p>Las Vegas tourism spills into Henderson. You can design products that cater to bachelor parties, golf trips, and conferences.</p>
-<p>Low overhead. Creative upside.</p>
-<h2 id="h-seasonal-amp-event-based-opportunities">Seasonal &amp; Event-Based Opportunities</h2>
-<p>Some side hustles aren’t year-round. That’s okay.</p>
-<p>Short bursts of high-margin work can outperform steady but low-paying gigs.</p>
-<h3 id="h-event-staffing">Event Staffing</h3>
-<p>Las Vegas conventions overflow into surrounding areas. Event companies frequently hire temporary workers.</p>
-<p>Work weekends. Choose events selectively.</p>
-<p>It’s not glamorous. But it’s flexible.</p>
-<h3 id="h-holiday-light-installation">Holiday Light Installation</h3>
-<p>Henderson neighborhoods decorate heavily during the holidays.</p>
-<p>Homeowners often:</p>
-<ul><li>Lack ladders</li><li>Don’t want roof liability</li><li>Prefer professional-looking installs</li></ul>
-<p>Charge per linear foot. Offer removal in January for an additional fee.</p>
-<p>Four installs per weekend during November can generate serious seasonal revenue.</p>
-<h3 id="h-desert-landscaping-amp-xeriscaping">Desert Landscaping &amp; Xeriscaping</h3>
-<p>Water conservation is constant in Southern Nevada.</p>
-<p>Offer:</p>
-<ul><li>Gravel yard installations</li><li>Drip irrigation setup</li><li>Low-water plant planning</li></ul>
-<p>Partner with a licensed landscaper if needed. Start as a project coordinator before scaling.</p>
-<h2 id="h-comparing-the-top-opportunities">Comparing the Top Opportunities</h2>
-<p>Here’s a quick comparison to help you evaluate:</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Startup Cost</strong></td><td><strong>Skill Level</strong></td><td><strong>Income Potential</strong></td><td><strong>Recurring Revenue</strong></td></tr><tr><td>Pool Service</td><td>$$</td><td>Medium</td><td>High</td><td>Yes</td></tr><tr><td>Car Detailing</td><td>$</td><td>Low-Medium</td><td>Medium-High</td><td>Yes</td></tr><tr><td>Real Estate Photography</td><td>$$$</td><td>Medium</td><td>High</td><td>No</td></tr><tr><td>Senior Services</td><td>$</td><td>Low</td><td>Medium</td><td>Yes</td></tr><tr><td>Freelancing</td><td>$</td><td>Skill-Based</td><td>Unlimited</td><td>Yes</td></tr></tbody></table>
-<p>Notice a pattern?</p>
-<p>The best side hustles in Henderson often revolve around recurring service relationships.</p>
-<p>That’s where income becomes predictable.</p>
-<h2 id="h-how-to-choose-the-right-side-hustle">How to Choose the Right Side Hustle</h2>
-<p>Don’t pick based on hype. Pick based on alignment.</p>
-<p>Ask yourself:</p>
-<ul><li>How many hours per week can I commit?</li><li>Do I prefer physical or digital work?</li><li>How much startup capital do I have?</li><li>Do I want recurring income or project bursts?</li><li>Am I comfortable selling face-to-face?</li></ul>
-<p>Write the answers down. Then match them against the options above.</p>
-<p>Side hustles fail when they don’t match lifestyle.</p>
-<h2 id="h-licensing-amp-legal-basics-in-henderson">Licensing &amp; Legal Basics in Henderson</h2>
-<p>Before launching, check:</p>
-<ul><li>Clark County business license requirements</li><li>City of Henderson regulations</li><li>HOA rules if operating from home</li><li>Insurance needs</li></ul>
-<p>Nevada allows relatively simple sole proprietorship setups. But don’t skip liability coverage if you’re entering homes or handling property.</p>
-<p>Professionalism builds longevity.</p>
-<h2 id="h-a-30-day-launch-plan">A 30-Day Launch Plan</h2>
-<p>You don’t need six months of planning. You need focused execution.</p>
-<ul><li><strong>Week 1</strong></li></ul>
-<ul><li>Choose one hustle</li><li>Research licensing</li><li>Price your service</li><li>Create a simple logo and business name</li></ul>
-<ul><li><strong>Week 2</strong></li></ul>
-<ul><li>Build a one-page website or landing page</li><li>Set up Google Business profile</li><li>Order basic supplies</li></ul>
-<ul><li><strong>Week 3</strong></li></ul>
-<ul><li>Soft launch to friends and neighbors</li><li>Offer discounted beta services in exchange for reviews</li></ul>
-<ul><li><strong>Week 4</strong></li></ul>
-<ul><li>Push marketing hard</li><li>Post in local groups</li><li>Ask for referrals</li><li>Track revenue and adjust pricing</li></ul>
-<p>Momentum beats perfection.</p>
-<h2 id="h-why-now-is-the-right-time">Why Now Is the Right Time</h2>
-<p>Henderson continues to grow. New developments. Relocations. Retirees moving in. Families upgrading homes.</p>
-<p>Demand isn’t slowing down.</p>
-<p>The best side hustles in Henderson are not flashy internet schemes. They’re practical services rooted in real community needs. Pools need cleaning. Cars get dusty. Seniors need help. Homes get listed. Events need staffing.</p>
-<p>Opportunity is already here.</p>
-<p>The only question is whether you’ll act on it.</p>
-<p>Start small. Stay consistent. Deliver value.</p>
-<p>That’s how side income turns into financial leverage.</p>
-<p>And sometimes, into something much bigger.</p>
+    'body'        => <<<'HTML'
+<p>Henderson is not the Strip, and that is exactly why it works for side income. Nevada's second-largest city is a sprawl of master-planned communities, backyard pools, golf courses and retirement neighborhoods, with residents who earn well and would rather pay someone than spend their weekends doing chores in the heat. The best side hustles in Henderson lean into that: reliable home services, care for pets and people, and skills that busy families value.</p>
+<p>This guide covers 17 side gigs that work in Henderson right now, with typical pay, startup costs and the local details, from Green Valley to Inspirada, that help you build a client list fast.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Nevada state income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$0–$600</b><span>startup cost for most gigs</span></div>
+</div>
+
+<h2 id="henderson-demand">Where the demand comes from in Henderson</h2>
+<ul>
+  <li><strong>Master-planned neighborhoods.</strong> Green Valley, Anthem, Seven Hills, MacDonald Highlands, Inspirada and Cadence are full of single-family homes with pools, desert landscaping and strict HOA standards.</li>
+  <li><strong>A large retiree population.</strong> Sun City Anthem and other 55-plus communities need help with errands, technology, pets and home maintenance.</li>
+  <li><strong>Families with money for extras.</strong> Strong household incomes mean demand for tutoring, youth coaching and recurring cleaning.</li>
+  <li><strong>Recreation.</strong> Lake Mead and Lake Las Vegas bring boaters and visitors, and Henderson's parks and courts are packed with pickleball and tennis players.</li>
+  <li><strong>Sports and growth.</strong> The Las Vegas Raiders headquarters and practice facility sit in Henderson, the Henderson Silver Knights play at Lee's Family Forum, and new homes keep going up in the south and west of the city.</li>
+</ul>
+<p>Henderson is also close to everything: the Strip and Harry Reid International Airport are a short drive, so you can combine suburban services with Las Vegas event work when the big weeks hit.</p>
+
+<h2 id="best-picks-henderson">Best side hustles in Henderson for 2026</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="pool-service">1. Pool service routes</h3>
+    <p>Pools are standard in much of Henderson, and summer heat turns neglected water green in days. Weekly testing, skimming, brushing and filter cleaning builds recurring income. Focus on one neighborhood to keep drive time short.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$175 per pool per month</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Routine-lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="yard-care">2. HOA-friendly yard care</h3>
+    <p>HOAs send notices for weeds in gravel, overgrown shrubs and dead plants. Offer monthly maintenance packages that keep homeowners compliant, plus fall cleanups. Older Green Valley yards with mature trees need regular trimming.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$75 per visit</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">3. Pet sitting and dog walking</h3>
+    <p>Henderson is a dog town with plenty of parks and trails, and owners travel often. Overnight stays pay the most, and holiday weekends book up weeks ahead. Offer early-morning walks in summer when pavement is cool enough for paws.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$30/walk, $45–$80/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pressure-washing">4. Pressure washing</h3>
+    <p>Driveways, pavers, block walls and pool decks get stained by dust and hard water, and HOA reminders create urgent demand. Before-and-after photos posted in neighborhood groups sell the next job for you.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$350 per job</li><li><b>Startup:</b> $250–$600</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="house-cleaning">5. Recurring house cleaning</h3>
+    <p>Dual-income households in Seven Hills, Anthem and Inspirada pay for biweekly cleaning. Recurring clients mean predictable income, and many will add move-out, post-construction or holiday deep cleans.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$50/hr</li><li><b>Startup:</b> $75–$150 in supplies</li><li><b>Best for:</b> Detail-focused people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="senior-help">6. Help for retirees</h3>
+    <p>Errand runs, rides to appointments, phone and TV setup, and light organizing are in steady demand around Sun City Anthem and other 55-plus communities. Trust is everything here, and referrals spread quickly once you have a few clients.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Patient, reliable people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">7. Tutoring and test prep</h3>
+    <p>Henderson parents invest in math, reading and SAT/ACT prep. Nevada State University students can tutor in person, and certified teachers can charge premium rates for evening and summer sessions.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $30–$60/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Teachers, college students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="handyman">8. Handyman and assembly</h3>
+    <p>New homes in Cadence and Inspirada need TV mounts, shelving, blinds and furniture assembly, while older homes need small repairs. Nevada's handyman exemption covers jobs under $1,000 including labor and materials that need no permit and involve no electrical, plumbing or HVAC work. Start with a solid [[amazon:tool-kit|home tool kit]].</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$70/hr</li><li><b>Startup:</b> $100–$400</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+</div>
+<div class="callout"><strong>Quick tip:</strong> Bundle services. A homeowner who hires you for pool service may also want monthly yard care and a quarterly pressure wash. Three services from one client beat three separate one-off jobs.</div>
+
+<h2 id="income-goal">Set your Henderson income goal</h2>
+<p>Recurring services add up quietly. See how many weekly clients you need to hit your target:</p>
+<p>[[tool:income-calculator]]</p>
+
+<h2 id="henderson-comparison">Henderson side jobs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Pool service</td><td>$100–$175/pool/month</td><td>$200–$500</td><td>1–3 weeks</td></tr>
+    <tr><td>Yard care</td><td>$40–$75/visit</td><td>$150–$400</td><td>Days</td></tr>
+    <tr><td>Pet sitting</td><td>$18–$30/walk</td><td>$0</td><td>1–3 weeks</td></tr>
+    <tr><td>Pressure washing</td><td>$150–$350/job</td><td>$250–$600</td><td>Days</td></tr>
+    <tr><td>House cleaning</td><td>$30–$50/hr</td><td>$75–$150</td><td>1–2 weeks</td></tr>
+    <tr><td>Retiree help</td><td>$25–$45/hr</td><td>$0</td><td>1–2 weeks</td></tr>
+    <tr><td>Rideshare and delivery</td><td>$15–$22/hr before gas</td><td>Car plus licenses</td><td>2–4 weeks</td></tr>
+    <tr><td>Holiday light installs</td><td>$150–$500/home</td><td>$100–$300</td><td>November</td></tr>
+  </tbody>
+</table>
+
+[[gear:pressure-washer,cleaning-kit,dog-leash|Gear for Henderson home-service gigs]]
+
+<h2 id="seasonal-and-lake">Seasonal, lake and home-improvement gigs</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="solar-window-cleaning">9. Solar panel and window cleaning</h3>
+    <p>Desert dust builds up on rooftop solar and windows, cutting output and curb appeal. Spring and fall are prime seasons. Use proper fall protection, or stick to single-story homes.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$300 per home</li><li><b>Startup:</b> $150–$400</li><li><b>Best for:</b> People comfortable on ladders</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="holiday-lights">10. Holiday light installation</h3>
+    <p>Henderson neighborhoods go big on holiday decorating. Installing lights in November, then taking them down in January, is a short, lucrative season. Offer storage and reinstall packages to lock in repeat clients.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$500 per home</li><li><b>Startup:</b> $100–$300 plus a ladder</li><li><b>Best for:</b> Fall and winter hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="boat-detailing">11. Boat detailing and lake services</h3>
+    <p>Boat owners heading to Lake Mead from the Boulder Beach and Las Vegas Boat Harbor areas, and residents around Lake Las Vegas, pay for washing, waxing and interior cleaning. Spring and summer are peak months.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$400 per boat</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Hard workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="garage-organizing">12. Garage and closet organizing</h3>
+    <p>Three-car garages fill up fast. Organizing, installing shelving and hauling donations makes a satisfying weekend job with great before-and-after photos.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$75/hr</li><li><b>Startup:</b> $50–$200</li><li><b>Best for:</b> Organizers</li></ul>
+  </div>
+</div>
+
+<h2 id="driving-coaching-remote">Driving, coaching and remote work</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="rideshare-delivery">13. Rideshare and delivery</h3>
+    <p>Henderson orders tend to tip well, and the airport and Strip are close enough for profitable rides on event nights. In Clark County, app drivers need a state business license and a county driver business license, with an extra license for delivery work. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers app sign-up.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car, licenses</li><li><b>Best for:</b> Flexible hours</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pickleball-coaching">14. Pickleball, tennis and fitness coaching</h3>
+    <p>Henderson's parks and community centers are packed with pickleball players, many of them beginners willing to pay for lessons. Personal training and youth sports coaching work too, as long as you follow any rules for paid instruction at public facilities.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$80 per lesson</li><li><b>Startup:</b> $50–$200</li><li><b>Best for:</b> Strong players, trainers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">15. Event staffing in Henderson and on the Strip</h3>
+    <p>Silver Knights games and community events in Henderson, plus conventions and concerts in Las Vegas, create steady staffing shifts. Staffing agencies hire for registration, concessions and setup.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$30/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="freelancing">16. Remote freelancing</h3>
+    <p>With no state income tax, remote work at national rates goes especially far in Henderson. Writing, design, bookkeeping and marketing all work. Start on <a href="/fiverr/">Fiverr</a>, or learn a new skill through <a href="/udemy/">Udemy</a> first.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Skilled self-starters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">17. Virtual assistant for local businesses</h3>
+    <p>Real estate agents, pool companies and contractors around Henderson need help with scheduling, invoicing and client follow-up. A few hours a week per client adds up quickly.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$40/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> HOAs in Henderson often restrict signs, parked work trailers and home-based business traffic. Read your HOA rules and your clients' before you advertise or park equipment in the street.</div>
+
+<h2 id="by-schedule">Which Henderson side gig fits your schedule?</h2>
+<ul>
+  <li><strong>Full-time job, weekends free:</strong> pressure washing, boat detailing, garage organizing and holiday light installs.</li>
+  <li><strong>Evenings only:</strong> tutoring, delivery, freelancing and virtual assistant work.</li>
+  <li><strong>Retired or semi-retired:</strong> pet sitting, retiree help, pickleball coaching and event shifts.</li>
+  <li><strong>Parent with school-hour gaps:</strong> house cleaning, pool routes and yard care, which mostly happen while kids are in class.</li>
+</ul>
+<p>Summer changes the math. From June through September, schedule outdoor work before 9 or 10 a.m. and shift more hours to indoor and online gigs.</p>
+
+<h2 id="start-in-henderson">How to start a side hustle in Henderson this month</h2>
+<ol class="steps">
+  <li><strong>Choose one service that fits your schedule.</strong> If you work days, look at evening tutoring or weekend pressure washing.</li>
+  <li><strong>Get licensed.</strong> File your Nevada state business license through SilverFlume, then check the City of Henderson's business license requirements.</li>
+  <li><strong>Pick one neighborhood to dominate.</strong> Dense routes in Green Valley or Anthem save drive time and build word of mouth.</li>
+  <li><strong>Advertise where neighbors talk.</strong> Nextdoor, HOA Facebook groups and a free Google Business Profile.</li>
+  <li><strong>Price for profit.</strong> Our <a href="/tools/freelance-rate-calculator/">freelance rate calculator</a> helps you set rates that cover taxes and expenses.</li>
+  <li><strong>Collect reviews and referrals.</strong> Ask every satisfied client, and offer a small discount for referrals.</li>
+</ol>
+
+<h2 id="nevada-rules">Nevada taxes and licenses for Henderson side income</h2>
+<ul>
+  <li><strong>No state income tax:</strong> Nevada does not tax personal income.</li>
+  <li><strong>Self-employment tax:</strong> you still owe 15.3% federal self-employment tax and federal income tax on net profit. Estimate quarterly payments with the <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a>.</li>
+  <li><strong>State business license:</strong> most businesses, including sole proprietors, need one from the Secretary of State. The fee is $200 a year for sole proprietors, with limited exemptions for some very small or occasional businesses.</li>
+  <li><strong>City license:</strong> the City of Henderson licenses businesses operating inside city limits. Some addresses that feel like Henderson are actually in unincorporated Clark County, which has its own license, so confirm your jurisdiction.</li>
+  <li><strong>Sales tax:</strong> selling physical goods requires a seller's permit from the Nevada Department of Taxation and collecting Clark County's 8.375% sales tax.</li>
+  <li><strong>Contractor rules:</strong> jobs of $1,000 or more, permitted work, or electrical, plumbing and HVAC work require a Nevada State Contractors Board license.</li>
+</ul>
+
+<h2 id="nearby-guides">Compare nearby cities</h2>
+<p>Henderson pairs naturally with our guide to the <a href="/best-side-hustles-in-las-vegas/">best side hustles in Las Vegas</a>, where conventions and events drive demand. For other desert suburbs with pools and winter visitors, see <a href="/best-side-hustles-in-mesa/">Mesa</a> and <a href="/best-side-hustles-in-phoenix/">Phoenix</a>.</p>
+<p>At Better Side Hustles, the Henderson pattern we see most is simple: pick one home service, own a neighborhood, and add services for the clients who already trust you.</p>
 HTML,
 ];

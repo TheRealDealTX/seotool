@@ -1,154 +1,196 @@
 <?php
-// Ported from the WordPress site; body copy is the original article, cleaned up.
 return [
-    'title' => 'Best Side Hustles in Las Vegas (2026): Ways to Earn Extra',
-    'description' => 'Discover the best side hustles in Las Vegas, from event gigs to online income ideas that fit the city’s fast-paced lifestyle.',
-    'h1' => 'Best Side Hustles in Las Vegas',
-    'kicker' => 'City Guide · NV',
-    'dek' => 'Gig apps, local services and online work that pay in Las Vegas — with realistic earnings and how to land your first dollar.',
-    'published' => '2026-01-13',
-    'modified' => '2026-10-26',
-    'image' => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Las-Vegas.webp',
-    'image_alt' => 'Best Side Hustles in Las Vegas',
-    'category' => 'City Guides',
-    'city' => 'Las Vegas',
-    'state' => 'NV',
-    'keywords' => ['best side hustles in las vegas'],
-    'tool' => 'gig-calculator',
-    'gear' => ['phone-mount', 'insulated-bag', 'pressure-washer', 'book-side-hustle'],
-    'related' => ['best-side-hustles-in-henderson', 'best-side-hustles-in-phoenix', 'best-side-hustles-in-tucson'],
-    'faq' => [
-        ['q' => 'What are the best side hustles in Las Vegas right now?', 'a' => 'Event staffing, rideshare driving, bartending, freelancing, and tourism-based services consistently perform well.'],
-        ['q' => 'Can you make good money with a side hustle in Las Vegas?', 'a' => 'Yes—Vegas’ tourism and event economy allows many side hustles to earn $1,000+ per month with part-time effort.'],
-        ['q' => 'Are side hustles in Las Vegas mostly night-based?', 'a' => 'Many are, but online freelancing, reselling, and rental support services can be done during the day.'],
-        ['q' => 'Do I need a business license for a side hustle in Las Vegas?', 'a' => 'Some ongoing services require a basic license, while one-off gig work often does not.'],
-        ['q' => 'What side hustles work best for hospitality workers?', 'a' => 'Event bartending, brand ambassador roles, rideshare driving, and nightlife-related gigs fit flexible schedules well.'],
-        ['q' => 'Is freelancing a good option in Las Vegas?', 'a' => 'Absolutely—freelancing provides steady income that balances Vegas’ seasonal and event-driven work.'],
-        ['q' => 'Which side hustles benefit most from tourism?', 'a' => 'Tour guiding, photography, party hosting, and short-term rental services thrive on tourist demand.'],
-        ['q' => 'How fast can I start earning with a Vegas side hustle?', 'a' => 'Gig and event-based side hustles often allow you to earn within days of signing up.'],
-        ['q' => 'Are online side hustles better than local ones in Las Vegas?', 'a' => 'Online hustles offer stability, while local hustles often pay faster and benefit from tips.'],
-        ['q' => 'Can a side hustle in Las Vegas become full-time income?', 'a' => 'Yes—many people scale event services, freelancing, or tourism-based hustles into full-time businesses.'],
+    'title'       => 'Best Side Hustles in Las Vegas (2026): 18 Ways to Earn',
+    'description' => 'The best side hustles in Las Vegas for 2026: 18 side gigs built on conventions, events and tourism, with real pay ranges, startup costs and Nevada license tips.',
+    'h1'          => 'Best Side Hustles in Las Vegas (2026): 18 Side Gigs Off (and On) the Strip',
+    'kicker'      => 'City Guide · NV',
+    'dek'         => 'Convention staffing, fight-night rideshare, pool routes and casino-night dealing: these are the side jobs in Las Vegas that pay, plus the state and county licenses most drivers do not know they need.',
+    'published'   => '2026-01-13',
+    'modified'    => '2026-10-26',
+    'image'       => '/wp-content/uploads/2026/01/Best-Side-Hustles-in-Las-Vegas.webp',
+    'image_alt'   => 'The Las Vegas Strip lit up at night, illustrating the best side hustles in Las Vegas',
+    'category'    => 'City Guides',
+    'city'        => 'Las Vegas',
+    'state'       => 'NV',
+    'keywords'    => ['best side hustles in las vegas', 'side hustles in las vegas', 'side jobs in las vegas', 'side gigs in las vegas', 'how to make money in las vegas', 'las vegas side hustles 2026'],
+    'tool'        => 'income-calculator',
+    'gear'        => ['insulated-bag', 'power-bank', 'seat-covers', 'book-psych-money'],
+    'related'     => ['best-side-hustles-in-henderson', 'best-side-hustles-in-phoenix', 'best-side-hustles-in-san-diego'],
+    'faq'         => [
+        ['q' => 'What are the best side hustles in Las Vegas?', 'a' => 'Convention and trade show staffing, rideshare, food delivery, pool cleaning, event and banquet work, mobile detailing, pet sitting and freelancing for the events industry are the strongest options. Las Vegas runs on a convention and event calendar, so the best earners plan their weeks around big shows, fights, concerts and race weekends.'],
+        ['q' => 'How can I make money in Las Vegas fast?', 'a' => 'Event staffing agencies hire brand ambassadors, registration staff and setup crews for conventions almost every week, often paying within days. Delivery apps can pay within about a week once approved, though in Clark County you also need a state business license and a county driver business license to drive for the apps.'],
+        ['q' => 'Do I need a business license for a side hustle in Las Vegas?', 'a' => 'Usually, yes. Nevada requires a state business license from the Secretary of State for most businesses, including sole proprietors, unless you qualify for an exemption. You also need a local license from either the City of Las Vegas or Clark County, depending on where you operate. Much of the valley, including the Strip, is unincorporated Clark County.'],
+        ['q' => 'Do Uber and Lyft drivers need a business license in Las Vegas?', 'a' => 'Yes. Clark County requires rideshare drivers working as independent contractors to hold a Nevada state business license and a Clark County driver business license. If you also deliver for apps like DoorDash or Amazon Flex, the county requires an additional delivery driver business license. Check current fees on the Clark County business license site.'],
+        ['q' => 'How much can I earn from side gigs in Las Vegas?', 'a' => 'Most people working 8 to 15 hours a week earn roughly $500 to $1,800 a month. App work typically nets $15 to $24 an hour after gas, while convention staffing, pool service and skilled freelancing often pay more. Big weeks like CES or a major fight weekend can produce a month\'s side income in a few days.'],
+        ['q' => 'Does Nevada tax side hustle income?', 'a' => 'Nevada has no personal income tax, so you keep more of your profit. You still owe federal income tax and 15.3% self-employment tax, plus the annual state business license fee. If you sell physical goods, you need a seller\'s permit and must collect sales tax, which is 8.375% in Clark County.'],
     ],
-    'body' => <<<'HTML'
-<p>Las Vegas is loud, fast, and unapologetically opportunistic. And that’s exactly why the <strong>best side hustles in Las Vegas</strong> look very different from what works in a typical 9-to-5 city. This isn’t just about rideshare driving or picking up random gigs. Vegas runs on tourism, events, nightlife, and service. If you know how to plug into that ecosystem, the earning potential can be very real.</p>
-<p>I’ve seen people turn “temporary” hustles here into reliable second incomes—and sometimes full-time businesses. The key is choosing something that fits the rhythm of <strong>Las Vegas</strong> rather than fighting it.</p>
-<p>Let’s break down what actually works, what pays, and how to get started without wasting time.</p>
-<h2 id="h-why-las-vegas-is-a-side-hustle-goldmine">Why Las Vegas Is a Side-Hustle Goldmine</h2>
-<p><a href="https://www.visitlasvegas.com/">Las Vegas</a> doesn’t sleep. That matters.</p>
-<p>Tourists arrive every hour. Conventions rotate weekly. Big events stack on top of each other. And the service economy runs in waves—weekends, nights, and seasonal spikes. That creates short bursts of demand where side hustlers can step in and get paid.</p>
-<p>A few reasons Vegas favors side hustles:</p>
-<ul><li>Constant tourist flow</li><li>Tip-heavy industries</li><li>Flexible, nontraditional hours</li><li>Event-based work with premium pay</li><li>Low barrier to entry for many gigs</li></ul>
-<p>This is why the <strong>best side hustles in Las Vegas</strong> often outperform the same hustle in other cities.</p>
-<h2 id="h-what-makes-a-good-side-hustle-in-las-vegas">What Makes a Good Side Hustle in Las Vegas?</h2>
-<p>Not every side hustle fits Vegas life. The good ones share a few traits.</p>
-<p><strong>They’re flexible.</strong><strong><br/></strong> You can work nights, weekends, or event days.</p>
-<p><strong>They’re demand-driven.</strong><strong><br/></strong> Tourists, conventions, or local service gaps create urgency.</p>
-<p><strong>They’re cash- or tip-friendly.</strong><strong><br/></strong> Tips matter here. A lot.</p>
-<p>Here’s a quick comparison.</p>
-<table class="data"><tbody><tr><td><strong>Factor</strong></td><td><strong>Las Vegas</strong></td><td><strong>Typical City</strong></td></tr><tr><td>Tourist demand</td><td>Extremely high</td><td>Moderate</td></tr><tr><td>Night work opportunities</td><td>Abundant</td><td>Limited</td></tr><tr><td>Tip-based income</td><td>Common</td><td>Less common</td></tr><tr><td>Event-based gigs</td><td>Constant</td><td>Occasional</td></tr></tbody></table>
-<h2 id="h-gig-amp-on-demand-side-hustles-that-work-fast">Gig &amp; On-Demand Side Hustles That Work Fast</h2>
-<p>These are the quickest ways to start earning.</p>
-<h3 id="h-rideshare-driving-uber-amp-lyft">Rideshare Driving (Uber &amp; Lyft)</h3>
-<p>Rideshare is competitive in Vegas, but timing is everything.</p>
-<p>Skip slow afternoons. Focus on:</p>
-<ul><li>Airport runs</li><li>Strip-to-hotel rides</li><li>Weekend nights</li><li>Convention start and end times</li></ul>
-<p>The real money shows up when events overlap. CES week, fight nights, major concerts. Plan around those.</p>
-<p><strong>Action tip:</strong> Drive off-Strip during peak Strip congestion. Shorter rides, faster turnover.</p>
-<h3 id="h-food-and-alcohol-delivery">Food and Alcohol Delivery</h3>
-<p>Late-night demand in Vegas is no joke.</p>
-<p>Locals and tourists order food well past midnight. Alcohol delivery spikes on weekends. But the Strip itself can be tricky due to parking and security delays.</p>
-<p><strong>Best zones:</strong></p>
-<ul><li>Residential neighborhoods</li><li>Off-Strip hotels</li><li>Apartment-heavy areas</li></ul>
-<p>If you want efficiency, avoid valet-only properties.</p>
-<h3 id="h-event-staffing-and-brand-ambassador-gigs">Event Staffing and Brand Ambassador Gigs</h3>
-<p>This is one of the most underrated Vegas side hustles.</p>
-<p>Conventions need:</p>
-<ul><li>Check-in staff</li><li>Brand reps</li><li>Product demonstrators</li><li>Crowd coordinators</li></ul>
-<p>Pay often ranges from $20–$35/hour, sometimes more.</p>
-<p><strong>Action tip:</strong> Register with multiple event staffing agencies. Availability matters more than experience.</p>
-<h2 id="h-tourism-and-entertainment-side-hustles-vegas-only-advantage">Tourism and Entertainment Side Hustles (Vegas-Only Advantage)</h2>
-<p>These hustles exist almost nowhere else at this scale.</p>
-<h3 id="h-tour-guide-or-experience-host">Tour Guide or Experience Host</h3>
-<p>Vegas tourists want stories, not just photos.</p>
-<p>Popular options:</p>
-<ul><li>Food tours</li><li>Downtown history walks</li><li>Nightlife crawls</li><li>Specialty tours (architecture, hidden bars, old Vegas)</li></ul>
-<p>If you know the city well, this can become one of the <strong>best side hustles in Las Vegas</strong> long term.</p>
-<h3 id="h-party-bus-host-or-promoter">Party Bus Host or Promoter</h3>
-<p>Bachelor and bachelorette parties fuel this hustle.</p>
-<p>You’re not driving. You’re managing energy, logistics, and upsells. Pay often includes commission plus tips.</p>
-<p><strong>Action tip:</strong> Social skills matter more than formal experience.</p>
-<h3 id="h-photography-for-tourists-and-events">Photography for Tourists and Events</h3>
-<p>Vegas visitors love documenting moments.</p>
-<p>Common gigs include:</p>
-<ul><li>Proposal shoots</li><li>Engagement photos</li><li>Convention headshots</li><li>Nightlife photography</li></ul>
-<p>You don’t need a massive studio. You need speed, confidence, and good lighting skills.</p>
-<h2 id="h-hospitality-and-service-industry-side-hustles">Hospitality and Service Industry Side Hustles</h2>
-<p>Vegas rewards people who can deliver service under pressure.</p>
-<h3 id="h-bartending-and-event-barbacking">Bartending and Event Barbacking</h3>
-<p>Event bartending pays well and happens on-demand.</p>
-<p>You’ll need:</p>
-<ul><li>Alcohol certification</li><li>Availability during weekends</li><li>Willingness to work fast</li></ul>
-<p>Tips can double your base pay on busy nights.</p>
-<h3 id="h-catering-and-private-events">Catering and Private Events</h3>
-<p>Weddings. Corporate parties. Luxury rentals.</p>
-<p>Catering companies constantly need extra hands. The hours are irregular, but the pay is solid.</p>
-<h3 id="h-freelance-hotel-and-resort-services">Freelance Hotel and Resort Services</h3>
-<p>Some hustlers offer concierge-style services:</p>
-<ul><li>Personal shopping</li><li>VIP coordination</li><li>Guest assistance</li></ul>
-<p>This works best if you already understand hotel operations.</p>
-<h2 id="h-online-and-remote-side-hustles-you-can-run-from-vegas">Online and Remote Side Hustles You Can Run From Vegas</h2>
-<p>Vegas doesn’t limit you to local income.</p>
-<h3 id="h-freelancing-writing-design-marketing">Freelancing (Writing, Design, Marketing)</h3>
-<p>Remote work balances Vegas’s irregular hours.</p>
-<p>Popular freelance roles:</p>
-<ul><li>Content writing</li><li>SEO support</li><li>Graphic design</li><li>Paid ad management</li></ul>
-<p>This is one of the <strong>best side hustles in Las Vegas</strong> for people who want predictable income.</p>
-<h3 id="h-virtual-assistant-or-remote-support-roles">Virtual Assistant or Remote Support Roles</h3>
-<p>These roles offer consistency.</p>
-<p>You manage:</p>
-<ul><li>Emails</li><li>Scheduling</li><li>Customer inquiries</li></ul>
-<p>Many companies don’t care where you live. They care that you show up.</p>
-<h3 id="h-content-creation-and-influencer-work">Content Creation and Influencer Work</h3>
-<p>Vegas is visually rich.</p>
-<p>Creators focus on:</p>
-<ul><li>Nightlife content</li><li>Food reviews</li><li>Hotel experiences</li><li>Event coverage</li></ul>
-<p>It’s slower to monetize, but the upside is big if you stay consistent.</p>
-<h2 id="h-creative-and-entrepreneurial-side-hustles">Creative and Entrepreneurial Side Hustles</h2>
-<p>These take more effort. They scale better.</p>
-<h3 id="h-short-term-rental-support-services">Short-Term Rental Support Services</h3>
-<p>Even if you don’t own property, you can:</p>
-<ul><li>Co-host listings</li><li>Manage guest communication</li><li>Coordinate cleanings</li></ul>
-<p>Airbnb owners value reliability more than perfection.</p>
-<h3 id="h-reselling-and-flipping">Reselling and Flipping</h3>
-<p>Vegas has:</p>
-<ul><li>Estate sales</li><li>Casino liquidations</li><li>High tourist turnover</li></ul>
-<p>You can flip furniture, electronics, or collectibles online.</p>
-<h3 id="h-mobile-services">Mobile Services</h3>
-<p>Mobile hustles do well here.</p>
-<p>Examples:</p>
-<ul><li>Mobile car detailing</li><li>Phone repair</li><li>Beauty services (where licensed)</li></ul>
-<p>You go to the client. That convenience sells.</p>
-<h2 id="h-side-hustles-that-fit-nights-and-weekends">Side Hustles That Fit Nights and Weekends</h2>
-<p>Vegas favors nontraditional schedules.</p>
-<p>Some strong options:</p>
-<ul><li>Event staffing</li><li>Bartending</li><li>Photography</li><li>Rideshare</li><li>Party hosting</li></ul>
-<p>This is why many service workers stack side hustles on top of their main job.</p>
-<h2 id="h-how-much-can-you-actually-make">How Much Can You Actually Make?</h2>
-<p>Here’s a realistic snapshot.</p>
-<table class="data"><tbody><tr><td><strong>Side Hustle</strong></td><td><strong>Monthly Potential</strong></td></tr><tr><td>Rideshare driving</td><td>$800–$2,500</td></tr><tr><td>Event staffing</td><td>$600–$2,000</td></tr><tr><td>Bartending/events</td><td>$1,000–$3,000</td></tr><tr><td>Freelancing</td><td>$500–$4,000</td></tr><tr><td>Photography</td><td>$700–$3,500</td></tr></tbody></table>
-<p>Your availability matters more than talent at the start.</p>
-<h2 id="h-legal-and-tax-basics-you-shouldn-t-ignore">Legal and Tax Basics You Shouldn’t Ignore</h2>
-<p>Most side hustles require:</p>
-<ul><li>A basic business license (for ongoing services)</li><li>Tracking income for taxes</li><li>Understanding independent contractor rules</li></ul>
-<p>Vegas is business-friendly, but compliance still matters.</p>
-<h2 id="h-choosing-the-right-side-hustle-for-you">Choosing the Right Side Hustle for You</h2>
-<p>Ask yourself:</p>
-<ul><li>How many hours can I realistically work?</li><li>Do I prefer people-facing or behind-the-scenes work?</li><li>Do I want fast cash or scalable income?</li></ul>
-<p>The <strong>best side hustles in Las Vegas</strong> match your energy level, not just your income goals.</p>
-<h2 id="h-final-thoughts-turning-a-vegas-side-hustle-into-real-money">Final Thoughts: Turning a Vegas Side Hustle Into Real Money</h2>
-<p>Las Vegas rewards people who show up prepared.</p>
-<p>The opportunities are there. Constantly. But the city doesn’t wait for you to figure things out. Pick one hustle. Test it for 30 days. Learn the flow. Then decide whether to double down or pivot.</p>
-<p>I’ve watched side hustles here turn into serious income streams. Not overnight. But faster than in most cities.</p>
-<p>If you lean into the rhythm of the city, the <strong>best side hustles in Las Vegas</strong> can become more than just extra money. They can become leverage.</p>
+    'body'        => <<<'HTML'
+<p>Las Vegas does not keep normal hours, and neither does its money. Tens of millions of visitors pass through each year, conventions turn over almost every week, and fights, concerts and race weekends can triple demand overnight. That is why the best side hustles in Las Vegas are built around timing: show up when the city surges, and you can earn more in a weekend than many cities pay in a month.</p>
+<p>Below are 18 side gigs that work in Las Vegas in 2026, what each typically pays, what it costs to start, and the Nevada and Clark County rules you need to know before you take your first job.</p>
+
+<div class="stat-row">
+  <div class="stat"><b>0%</b><span>Nevada state income tax</span></div>
+  <div class="stat"><b>$15–$70</b><span>typical hourly range</span></div>
+  <div class="stat"><b>$200/yr</b><span>state business license (most sole props)</span></div>
+</div>
+
+<h2 id="vegas-convention-clock">Learn the Vegas convention clock first</h2>
+<p>Las Vegas demand follows a calendar you can plan around:</p>
+<ul>
+  <li><strong>Conventions:</strong> CES in January, the NAB Show in spring, and dozens of trade shows at the Las Vegas Convention Center, Mandalay Bay, the Venetian Expo and other venues fill hotels most weeks of the year.</li>
+  <li><strong>Sports:</strong> Raiders games at Allegiant Stadium, Golden Knights games at T-Mobile Arena, the Las Vegas Aces, and big fight nights.</li>
+  <li><strong>Mega-events:</strong> Electric Daisy Carnival each May at Las Vegas Motor Speedway, the Las Vegas Grand Prix on the Strip in November, and the National Finals Rodeo in December.</li>
+  <li><strong>Shows and residencies:</strong> the Sphere, arena concerts and long-running residencies keep nights busy year-round.</li>
+  <li><strong>Heat:</strong> summer highs well past 100 degrees make pools, cars and A/C a constant source of service work for the people who live here.</li>
+</ul>
+<p>Locals live in Summerlin, Spring Valley, Enterprise, Centennial Hills and North Las Vegas, and those neighborhoods create a second, steadier market for home services, pet care and tutoring.</p>
+
+<h2 id="top-side-hustles">The best side hustles in Las Vegas right now</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="convention-staffing">1. Convention and trade show staffing</h3>
+    <p>Staffing agencies supply brand ambassadors, registration and badge-scanning staff, booth hosts and setup crews for shows nearly every week. Multilingual workers and people comfortable talking tech are in particular demand. Sign up with several agencies so you see more shifts.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$35/hr</li><li><b>Startup:</b> $0, business-casual clothes</li><li><b>Best for:</b> Outgoing people with weekday flexibility</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="rideshare">2. Rideshare driving</h3>
+    <p>Harry Reid International Airport sits right next to the Strip, so airport rides are short and frequent. Show let-outs, fight nights, Raiders games and convention closing times create huge surges. You need a Nevada state business license and a Clark County driver license. Our <a href="/lyft-uber/">Lyft and Uber guide</a> covers the app side.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $16–$28/hr before gas</li><li><b>Startup:</b> Eligible car, licenses</li><li><b>Best for:</b> Night owls</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="delivery">3. Food and grocery delivery</h3>
+    <p>Locals order in to escape the heat, and hotel guests order from off-Strip restaurants. Summerlin and Henderson orders tend to tip well. Remember that Clark County requires an additional delivery driver business license if you deliver.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$22/hr before gas</li><li><b>Startup:</b> Car, insulated bag</li><li><b>Best for:</b> Flexible schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pool-cleaning">4. Pool cleaning routes</h3>
+    <p>Backyard pools are everywhere in Summerlin, Spring Valley and the southwest valley, and the desert sun turns neglected pools green fast. Weekly service is steady recurring income, and summer is when owners switch providers.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$175 per pool per month</li><li><b>Startup:</b> $200–$500</li><li><b>Best for:</b> Routine-lovers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-staffing">5. Arena, banquet and event staffing</h3>
+    <p>Allegiant Stadium, T-Mobile Arena, the Sphere and the resort ballrooms all run on part-time and on-call staff. Banquet servers, bartenders, ushers and concession workers can pick up shifts around a day job. Many roles require a food handler card or alcohol awareness card, so get those early.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$25/hr plus tips</li><li><b>Startup:</b> Required cards, black-and-whites</li><li><b>Best for:</b> Evening and weekend workers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="mobile-detailing">6. Mobile car detailing</h3>
+    <p>Dust, sun and hard water punish every car in the valley. Offer interior details and waterless washes at office parks and casinos' employee lots (with permission), or at homes in the early morning. Ceramic coatings are a popular upsell.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $100–$250 per detail</li><li><b>Startup:</b> $200–$600</li><li><b>Best for:</b> Weekend hustlers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="pet-sitting">7. Pet sitting and dog walking</h3>
+    <p>Casino and hospitality workers pull long, odd shifts, and their dogs still need walking. Overnight pet sitting books up during holidays. Midday summer walks are dangerous for dogs, so offer early-morning and late-night slots.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $15–$28/walk, $40–$75/night</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Animal lovers on unusual schedules</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="event-freelancing">8. Freelancing for the events industry</h3>
+    <p>Exhibitors, event planners and nightlife brands need graphic design, social media content, video editing and copywriting, often on tight deadlines. Start on <a href="/fiverr/">Fiverr</a>, then pitch local agencies. Our <a href="/digital-marketing-side-hustle/">digital marketing side hustle guide</a> shows how to package services.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$75/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Creatives</li></ul>
+  </div>
+</div>
+<p>Driving for apps in Vegas means short trips, lots of idling with the A/C on and big surge swings. Calculate what you really keep:</p>
+<p>[[tool:gig-calculator]]</p>
+<div class="callout"><strong>Quick tip:</strong> Long nights drain your phone fast with navigation running. Keep a [[amazon:car-charger|fast car charger]] plugged in and know which resorts have rideshare pickup on which level before you accept the ride.</div>
+
+<h2 id="pay-comparison">Las Vegas side gigs compared</h2>
+<table class="data">
+  <thead><tr><th>Side hustle</th><th>Typical pay</th><th>Startup cost</th><th>Time to first dollar</th></tr></thead>
+  <tbody>
+    <tr><td>Convention staffing</td><td>$18–$35/hr</td><td>$0</td><td>Days</td></tr>
+    <tr><td>Rideshare</td><td>$16–$28/hr before gas</td><td>Car plus licenses</td><td>2–4 weeks</td></tr>
+    <tr><td>Food delivery</td><td>$15–$22/hr before gas</td><td>Car plus licenses</td><td>1–3 weeks</td></tr>
+    <tr><td>Pool cleaning</td><td>$100–$175/pool/month</td><td>$200–$500</td><td>1–3 weeks</td></tr>
+    <tr><td>Event and banquet staffing</td><td>$15–$25/hr plus tips</td><td>Required cards</td><td>1–2 weeks</td></tr>
+    <tr><td>Mobile detailing</td><td>$100–$250/detail</td><td>$200–$600</td><td>Days</td></tr>
+    <tr><td>Casino-night dealing</td><td>$20–$35/hr</td><td>$0–$100</td><td>1–3 weeks</td></tr>
+    <tr><td>Freelancing</td><td>$25–$75/hr</td><td>Laptop</td><td>2–6 weeks</td></tr>
+  </tbody>
+</table>
+
+[[gear:poker-set,phone-mount,dash-cam|Gear for Vegas drivers and dealers]]
+
+<h2 id="tourism-gigs">Gigs that tap the tourist economy</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="casino-night-dealer">9. Casino-night and private party dealing</h3>
+    <p>Party rental companies run casino nights for corporate events, fundraisers and bachelor parties using play money, and they need dealers who know blackjack, poker and craps. Casino floor dealing is a licensed job with a gaming work card; private play-money events are a simpler side gig.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$35/hr</li><li><b>Startup:</b> Practice set, dealing class optional</li><li><b>Best for:</b> Card sharks</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="photography">10. Wedding and visitor photography</h3>
+    <p>Las Vegas is famous for weddings, from chapel ceremonies to Valley of Fire elopements. Couples, bachelorette groups and birthday crews also book photographers for Strip and desert shoots. Commercial photography on public land like Red Rock Canyon may need a permit.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$400 per session</li><li><b>Startup:</b> Camera and lens</li><li><b>Best for:</b> Photographers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="dj-entertainment">11. DJ and event entertainment</h3>
+    <p>Pool parties at rental homes, corporate mixers and private celebrations hire DJs, emcees and performers. Build a portfolio with smaller gigs and referrals from event planners.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $150–$500 per gig</li><li><b>Startup:</b> $300–$1,500 for equipment</li><li><b>Best for:</b> Performers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tour-guide">12. Tour guiding and visitor experiences</h3>
+    <p>Small-group food walks downtown, Fremont Street history tours and guided hikes are popular on tour booking platforms. Guided trips on Bureau of Land Management or National Park Service land, such as Red Rock Canyon, require a commercial permit.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$50 per guest</li><li><b>Startup:</b> $0–$200</li><li><b>Best for:</b> Storytellers</li></ul>
+  </div>
+</div>
+
+<h2 id="local-services">Gigs that serve Las Vegas locals</h2>
+<div class="hustle-grid">
+  <div class="hustle-card">
+    <h3 id="handyman">13. Handyman and assembly</h3>
+    <p>New homes in the southwest valley and Skye Canyon need TV mounts, shelving and furniture assembly. Nevada's handyman exemption covers repair jobs under $1,000 including labor and materials that need no permit and involve no electrical, plumbing or HVAC work.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $40–$70/hr</li><li><b>Startup:</b> $100–$400 in tools</li><li><b>Best for:</b> Handy people</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="moving-help">14. Moving help</h3>
+    <p>Las Vegas draws a steady flow of new residents, many from California. Loading and unloading trucks through TaskRabbit, Dolly or Facebook groups pays well, especially in summer when few people want the job.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$45/hr</li><li><b>Startup:</b> Dolly, straps</li><li><b>Best for:</b> Strong backs</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="tutoring">15. Tutoring</h3>
+    <p>UNLV and College of Southern Nevada students need help with math, science and nursing prerequisites, and families across the Clark County School District pay for K–12 tutoring and test prep.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $25–$55/hr</li><li><b>Startup:</b> $0</li><li><b>Best for:</b> Teachers, grad students</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="courier">16. Amazon Flex and courier work</h3>
+    <p>North Las Vegas warehouses and constant parcel demand keep Flex blocks available, and early-morning blocks avoid the worst heat. Courier work counts as delivery for county licensing purposes.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $18–$25/hr block pay</li><li><b>Startup:</b> Mid-size car, licenses</li><li><b>Best for:</b> Early risers</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="reselling">17. Reselling</h3>
+    <p>Liquidation stores, estate sales in older neighborhoods and casino memorabilia from closed resorts feed eBay and Facebook Marketplace. Vintage casino chips, signage and Vegas souvenirs attract collectors nationwide.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $200–$1,500/month part-time</li><li><b>Startup:</b> $100–$300 inventory</li><li><b>Best for:</b> Treasure hunters</li></ul>
+  </div>
+  <div class="hustle-card">
+    <h3 id="virtual-assistant">18. Virtual assistant</h3>
+    <p>Real estate teams, pool companies and event planners need help with scheduling, inboxes and follow-ups. It fits around shift work, which makes it popular with hospitality employees.</p>
+    <ul class="meta"><li><b>Pay:</b> Typically $20–$40/hr</li><li><b>Startup:</b> Laptop</li><li><b>Best for:</b> Organized multitaskers</li></ul>
+  </div>
+</div>
+<div class="callout callout-warn"><strong>Watch out:</strong> Short-term rental hosting is heavily restricted in Clark County and the City of Las Vegas, with licensing, distance and occupancy rules. Do not buy or lease a property to rent nightly until you have confirmed it can be licensed.</div>
+
+<h2 id="get-started-vegas">How to start a side hustle in Las Vegas this month</h2>
+<ol class="steps">
+  <li><strong>Pick a hustle that matches your hours.</strong> Shift workers often do best with daytime pool routes, detailing or freelancing.</li>
+  <li><strong>Get your licenses in order.</strong> File your Nevada state business license through the Secretary of State's SilverFlume portal, then apply for the right local license from Clark County or your city.</li>
+  <li><strong>Bookmark the convention calendar.</strong> The Las Vegas Convention and Visitors Authority publishes upcoming shows; plan your driving and staffing around the big ones.</li>
+  <li><strong>Sign up with two or three staffing agencies.</strong> More agencies mean more shifts to choose from.</li>
+  <li><strong>Set a weekly income target.</strong> Use our <a href="/tools/income-calculator/">income calculator</a> to turn it into hours.</li>
+  <li><strong>Save for federal taxes.</strong> No state income tax does not mean no tax. Put aside money every week.</li>
+</ol>
+
+<h2 id="nevada-tax-rules">Nevada taxes and licenses for Las Vegas side hustles</h2>
+<ul>
+  <li><strong>No state income tax:</strong> Nevada does not tax personal income, so your side profit faces only federal taxes.</li>
+  <li><strong>Self-employment tax:</strong> you still owe 15.3% federal self-employment tax and federal income tax on net profit. The <a href="/tools/self-employment-tax-calculator/">self-employment tax calculator</a> estimates your set-aside.</li>
+  <li><strong>State business license:</strong> most businesses, including sole proprietors, need one from the Secretary of State. The fee is $200 a year for sole proprietors; some very small or occasional businesses qualify for exemptions, so check the current list before you file.</li>
+  <li><strong>Local license:</strong> the City of Las Vegas, North Las Vegas and Henderson each license businesses in their limits, while Clark County handles unincorporated areas, which include the Strip and much of the valley with a "Las Vegas" mailing address.</li>
+  <li><strong>Rideshare and delivery:</strong> Clark County requires app drivers to hold a state business license and a county driver business license, plus a separate delivery license for delivery apps.</li>
+  <li><strong>Sales tax:</strong> if you sell physical goods, register for a seller's permit with the Nevada Department of Taxation and collect sales tax, which is 8.375% in Clark County.</li>
+</ul>
+<div class="callout"><strong>Quick tip:</strong> Tips are taxable income. Log cash tips from event work and rides the same day so your federal return is accurate.</div>
+
+<h2 id="nearby-cities">Compare nearby cities</h2>
+<p>Many Las Vegas side hustlers work across the valley. Read our <a href="/best-side-hustles-in-henderson/">best side hustles in Henderson</a> guide for suburban home-service ideas, and compare with <a href="/best-side-hustles-in-phoenix/">Phoenix</a> and <a href="/best-side-hustles-in-san-diego/">San Diego</a>, two other cities where heat and tourism shape the gig economy.</p>
+<p>The Better Side Hustles take on Las Vegas: get licensed first, learn the event calendar, and treat big weeks like CES and race weekend as your paydays.</p>
 HTML,
 ];
