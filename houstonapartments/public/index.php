@@ -88,7 +88,7 @@ function page_home(): void
 {
     $stats = Listings::stats();
     $featured = Listings::featured(8);
-    $posts = array_slice(content('posts'), 0, 3);
+    $posts = array_slice(content('posts'), 0, 12);
     render('home', compact('stats', 'featured', 'posts'), [
         'title'       => 'Houston Apartments for Rent | Free Apartment Locator – Houston Apartments',
         'description' => 'Search Houston apartments for rent on an interactive map. Draw your area, filter by price, beds and amenities, and get up to $500 back when you lease with Houston Apartments.',
@@ -214,7 +214,7 @@ function page_post(string $slug): void
     if (!$post) {
         not_found();
     }
-    $related = array_slice(array_values(array_filter(content('posts'), fn ($x) => $x['slug'] !== $slug)), 0, 3);
+    $related = array_slice(array_values(array_filter(content('posts'), fn ($x) => $x['slug'] !== $slug)), 0, 12);
     $featured = Listings::featured(3);
     render('post', compact('post', 'related', 'featured'), [
         'title'       => $post['seo_title'] ?: $post['title'],
@@ -364,9 +364,18 @@ function api_lead(): void
         'page'        => $clean('page', 255),
         'ip'          => mb_substr($_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '', 0, 64),
     ];
-    if ($lead['name'] === '' || ($lead['phone'] === '' && !filter_var($lead['email'], FILTER_VALIDATE_EMAIL))) {
-        json_out(['ok' => false, 'error' => 'Please add your name and a phone number or email.'], 422);
+    if ($lead['name'] === '') {
+        json_out(['ok' => false, 'error' => 'Please add your name.'], 422);
         return;
+    }
+    $phone = us_phone($lead['phone']);
+    if ($phone === null) {
+        json_out(['ok' => false, 'error' => 'Please enter a valid US phone number.'], 422);
+        return;
+    }
+    $lead['phone'] = $phone;
+    if ($lead['email'] !== '' && !filter_var($lead['email'], FILTER_VALIDATE_EMAIL)) {
+        $lead['email'] = '';
     }
     try {
         db_migrate();

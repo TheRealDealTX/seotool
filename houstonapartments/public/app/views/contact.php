@@ -25,7 +25,7 @@
         <label class="hp">Website <input name="website" tabindex="-1" autocomplete="off"></label>
         <div class="grid2">
           <label>Name<input name="name" required autocomplete="name"></label>
-          <label>Phone<input name="phone" type="tel" autocomplete="tel"></label>
+          <label><span>Phone <small>(US numbers only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
         </div>
         <label>Email<input name="email" type="email" autocomplete="email"></label>
         <div class="grid3">

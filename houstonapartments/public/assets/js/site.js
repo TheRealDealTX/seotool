@@ -248,6 +248,7 @@
     var form = $('form', modal), forLine = $('.lead-for', modal);
     form.reset();
     $('.form-msg', form).textContent = '';
+    $$('[data-us-phone]', form).forEach(function (i) { i.classList.remove('valid', 'invalid'); var er = i.parentNode.querySelector('.field-err'); if (er) er.hidden = true; });
     form.property_id.value = trigger.getAttribute('data-lead-prop') || '';
     form.page.value = location.pathname;
     var name = trigger.getAttribute('data-lead-name');
@@ -261,7 +262,7 @@
     if (!modal || modal.hidden) return;
     modal.hidden = true;
     document.body.style.overflow = '';
-    if (lastFocus) lastFocus.focus();
+    if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus();
   }
   document.addEventListener('click', function (e) {
     var t = e.target.closest('[data-lead]');
@@ -270,12 +271,95 @@
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLead(); });
 
+  /* Free-search popup: once per browser session, 5 s after the first page view. Skipped
+     for people who already sent a request, and never shown over another open dialog. */
+  (function () {
+    var seen;
+    try { seen = sessionStorage.getItem('ha-popup') || localStorage.getItem('ha-lead-sent'); } catch (e) { seen = '1'; }
+    if (seen || !modal || $('.form-card .lead-form')) return;   // not on the contact page, which already has the form
+    try { sessionStorage.setItem('ha-popup', 'scheduled'); } catch (e) { return; }
+    setTimeout(function () {
+      var busy = !modal.hidden || $('.lightbox:not([hidden])') || document.body.classList.contains('nav-open') ||
+        (document.activeElement && /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName));
+      if (busy) return;
+      var t = document.createElement('button');
+      t.setAttribute('data-lead-name', '');
+      openLead(t);
+      lastFocus = null;
+      try { sessionStorage.setItem('ha-popup', 'shown'); } catch (e) { /* ignore */ }
+    }, 5000);
+  })();
+
+  /* Back to top (the header is sticky, so an #top anchor never scrolls) */
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('[data-to-top]')) return;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+
+  /*
+   * US phone field: "+1 " is fixed, digits format as "+1 (832) 297-3982" while typing,
+   * and the form only submits with a US area code. Mirrors us_phone() in bootstrap.php.
+   */
+  var NON_US = [204, 226, 236, 249, 250, 257, 263, 289, 306, 343, 354, 365, 367, 368, 382, 403, 416, 418, 428, 431, 437, 438, 450, 460,
+    468, 474, 506, 514, 519, 548, 579, 581, 584, 587, 600, 604, 613, 622, 639, 647, 672, 683, 705, 709, 742, 753, 778, 780,
+    782, 807, 819, 825, 867, 873, 879, 902, 905, 242, 246, 264, 268, 284, 345, 441, 473, 649, 658, 664, 721, 758, 767, 784,
+    809, 829, 849, 868, 869, 876, 500, 521, 522, 523, 524, 525, 526, 527, 528, 529, 533, 544, 566, 577, 588, 700, 710, 800,
+    822, 833, 844, 855, 866, 877, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 900, 976];
+  function phoneDigits(v) { var d = String(v).replace(/\D/g, ''); if (d.indexOf('1') === 0 && d.length > 10) d = d.slice(1); else if (/^\+?1/.test(String(v).trim())) d = d.slice(1); return d.slice(0, 10); }
+  function formatPhone(d) {
+    var s = '+1 ';
+    if (!d.length) return s;
+    s += '(' + d.slice(0, 3);
+    if (d.length >= 3) s += ') ';
+    if (d.length > 3) s += d.slice(3, 6);
+    if (d.length > 6) s += '-' + d.slice(6, 10);
+    return s;
+  }
+  function phoneProblem(d) {
+    if (d.length < 10) return d.length ? 'Enter all 10 digits of your phone number.' : 'Please enter your phone number.';
+    var area = +d.slice(0, 3), ex = d.slice(3, 6);
+    if (d[0] < '2' || d[1] === '9' || d.slice(1, 3) === '11' || NON_US.indexOf(area) > -1 || /^(37|96)/.test(d)) return 'Please use a US phone number – ' + d.slice(0, 3) + ' isn’t a US area code.';
+    if (ex[0] < '2' || ex.slice(1) === '11' || ex === '555' || /^(\d)\1{9}$/.test(d) || /^\d{3}(1234567|0000000)$/.test(d)) return 'That phone number doesn’t look valid.';
+    return '';
+  }
+  function setupPhone(input) {
+    var err = input.parentNode.querySelector('.field-err');
+    var show = function (force) {
+      var d = phoneDigits(input.value), p = phoneProblem(d);
+      var visible = p && (force || d.length >= 10 || (d.length >= 3 && /area code/.test(p)));
+      input.setCustomValidity(p);
+      input.classList.toggle('invalid', !!visible);
+      input.classList.toggle('valid', !p);
+      if (err) { err.hidden = !visible; err.textContent = visible ? p : ''; }
+      var msg = input.form && input.form.querySelector('.form-msg.err');
+      if (!p && msg) { msg.textContent = ''; msg.className = 'form-msg'; }
+      return !p;
+    };
+    input.addEventListener('focus', function () { if (!input.value) input.value = '+1 '; requestAnimationFrame(function () { input.setSelectionRange(input.value.length, input.value.length); }); });
+    input.addEventListener('blur', function () { if (phoneDigits(input.value) === '') input.value = ''; else show(true); });
+    input.addEventListener('keydown', function (e) {
+      // never delete the fixed "+1 " prefix
+      if ((e.key === 'Backspace' && input.selectionStart <= 3 && input.selectionEnd <= 3) || (e.key === 'Delete' && input.selectionStart < 3)) e.preventDefault();
+    });
+    input.addEventListener('input', function () {
+      var d = phoneDigits(input.value);
+      input.value = formatPhone(d);
+      input.setSelectionRange(input.value.length, input.value.length);
+      show(false);
+    });
+    input._validate = function () { return show(true); };
+  }
+  $$('[data-us-phone]').forEach(setupPhone);
+
   $$('.lead-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var msg = $('.form-msg', form), btn = $('button[type=submit]', form);
-      if (!form.name.value.trim() || (!form.phone.value.trim() && !form.email.value.trim())) {
-        msg.className = 'form-msg err'; msg.textContent = 'Please add your name and a phone number or email.'; return;
+      if (!form.name.value.trim()) {
+        msg.className = 'form-msg err'; msg.textContent = 'Please add your name.'; form.name.focus(); return;
+      }
+      if (form.phone._validate && !form.phone._validate()) {
+        msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid US phone number.'; form.phone.focus(); return;
       }
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch('/api/lead', { method: 'POST', body: new FormData(form) })
@@ -285,6 +369,8 @@
           msg.className = 'form-msg ok';
           msg.textContent = 'Thanks! A Houston Apartments locator will reach out shortly.';
           form.reset();
+          $$('[data-us-phone]', form).forEach(function (i) { i.classList.remove('valid', 'invalid'); });
+          try { sessionStorage.setItem('ha-popup', 'done'); localStorage.setItem('ha-lead-sent', '1'); } catch (er) { /* storage blocked */ }
           confetti(btn);
         })
         .catch(function (err) { msg.className = 'form-msg err'; msg.textContent = err.message + ' You can also call ' + '(832) 720-7978.'; })

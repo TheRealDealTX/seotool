@@ -129,7 +129,7 @@ if (isset($schemas['@context'])) {
   </div>
   <div class="wrap footer-base">
     <p>© <?= date('Y') ?> Houston Apartments. All rights reserved. Prices and availability are subject to change; confirm details with the property.</p>
-    <a href="#top" class="to-top" aria-label="Back to top">↑</a>
+    <button type="button" class="to-top" data-to-top aria-label="Back to top">↑</button>
   </div>
 </footer>
 <?php endif ?>
@@ -150,9 +150,9 @@ if (isset($schemas['@context'])) {
       <label class="hp">Website <input name="website" tabindex="-1" autocomplete="off"></label>
       <div class="grid2">
         <label>Name<input name="name" required autocomplete="name"></label>
-        <label>Phone<input name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+        <label><span>Phone <small>(US numbers only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
       </div>
-      <label>Email<input name="email" type="email" autocomplete="email"></label>
+      <label><span>Email <small>(optional)</small></span><input name="email" type="email" autocomplete="email"></label>
       <div class="grid3">
         <label>Move-in<select name="move_in"><option value="">Any time</option><option>ASAP</option><option>Within 30 days</option><option>1–2 months</option><option>2+ months</option></select></label>
         <label>Bedrooms<select name="beds"><option value="">Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></label>

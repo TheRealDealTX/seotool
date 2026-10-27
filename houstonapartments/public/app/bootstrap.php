@@ -92,6 +92,43 @@ function table_columns(string $table): array
     return $out;
 }
 
+/*
+ * US phone validation (lead spam filter). Keep in sync with usPhone() in
+ * assets/js/site.js. Accepts NANP numbers whose area code is a US one:
+ * not Canada or the Caribbean, not toll-free/premium, not N11/N9X/37X/96X,
+ * with a valid exchange and no obvious fake patterns.
+ */
+const NON_US_AREA_CODES = [
+    // Canada
+    204, 226, 236, 249, 250, 257, 263, 289, 306, 343, 354, 365, 367, 368, 382, 403, 416, 418, 428, 431, 437, 438, 450, 460,
+    468, 474, 506, 514, 519, 548, 579, 581, 584, 587, 600, 604, 613, 622, 639, 647, 672, 683, 705, 709, 742, 753, 778, 780,
+    782, 807, 819, 825, 867, 873, 879, 902, 905,
+    // Caribbean / Atlantic NANP countries
+    242, 246, 264, 268, 284, 345, 441, 473, 649, 658, 664, 721, 758, 767, 784, 809, 829, 849, 868, 869, 876,
+    // toll-free, premium and special use
+    500, 521, 522, 523, 524, 525, 526, 527, 528, 529, 533, 544, 566, 577, 588, 700, 710, 800, 822, 833, 844, 855, 866, 877,
+    880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 900, 976,
+];
+
+/** Normalize to "+1 (832) 297-3982", or null when it isn't a plausible US number. */
+function us_phone(string $raw): ?string
+{
+    $d = preg_replace('/\D/', '', $raw);
+    if (strlen($d) === 11 && $d[0] === '1') {
+        $d = substr($d, 1);
+    }
+    if (strlen($d) !== 10) {
+        return null;
+    }
+    $area = (int) substr($d, 0, 3);
+    $exch = substr($d, 3, 3);
+    $valid = $d[0] >= '2' && $d[1] !== '9' && substr($d, 1, 2) !== '11'
+        && !in_array($area, NON_US_AREA_CODES, true) && !preg_match('/^(37|96)/', (string) $area)
+        && $exch[0] >= '2' && substr($exch, 1) !== '11' && $exch !== '555'
+        && !preg_match('/^(\d)\1{9}$/', $d) && !in_array(substr($d, 3), ['1234567', '0000000'], true);
+    return $valid ? sprintf('+1 (%s) %s-%s', substr($d, 0, 3), $exch, substr($d, 6)) : null;
+}
+
 function e($s): string
 {
     return htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');

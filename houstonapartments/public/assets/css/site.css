@@ -762,3 +762,10 @@ body.nav-open .site-header { background: #fff; }
   .site-header, .site-footer, .cta-band, .page-hero, .tool-info, .cl-actions, .progress, .drawer, .modal { display: none !important; }
   .tool-section { margin: 0; padding: 0; } .tool-app { box-shadow: none; border: 0; }
 }
+
+.to-top { border: 0; color: #fff; cursor: pointer; transition: background .2s, transform .2s; }
+.to-top:hover { background: var(--m); transform: translateY(-3px); }
+.lead-form input.invalid { border-color: #d93025; box-shadow: 0 0 0 4px rgba(217,48,37,.1); }
+.lead-form input.valid { border-color: var(--navy-2); }
+.field-err { color: #c5221f; font-size: .8rem; font-weight: 600; }
+.lead-form label small { font-weight: 500; color: var(--muted); }
