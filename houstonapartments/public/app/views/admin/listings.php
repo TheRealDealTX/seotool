@@ -26,7 +26,7 @@ $qs = fn ($extra) => '?' . http_build_query(array_filter(array_merge($f, $extra)
         <td><?= e(beds_range($r)) ?></td>
         <td><span class="pill <?= $r['status'] === 'publish' ? 's-leased' : 's-closed' ?>"><?= $r['status'] === 'publish' ? 'Live' : 'Hidden' ?></span></td>
         <td><small><?= $r['source'] === 'manual' ? 'Added by hand' : ($r['locked'] ? 'Rise · edited' : 'Rise · auto') ?></small></td>
-        <td class="nowrap"><a class="btn small" href="/admin/listings/<?= $r['id'] ?>/">Edit</a> <a class="btn small ghost" href="/apartment/<?= e($r['slug']) ?>/" target="_blank" rel="noopener">View ↗</a></td>
+        <td class="nowrap"><a class="btn small" href="/admin/listings/<?= $r['id'] ?>/">Edit</a> <a class="btn small ghost" href="<?= e(listing_url($r['slug'])) ?>" target="_blank" rel="noopener">View ↗</a></td>
       </tr>
     <?php endforeach ?>
     <?php if (!$rows): ?><tr><td colspan="8" class="empty">No listings match. <a href="/admin/listings/new/">Add one</a>.</td></tr><?php endif ?>

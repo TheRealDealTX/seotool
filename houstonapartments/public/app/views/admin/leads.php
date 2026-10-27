@@ -17,7 +17,7 @@ $actions = '<a class="btn" href="/admin/leads.csv">⬇ Download spreadsheet (CSV
           <span><?php if ($l['phone']): ?><a href="tel:<?= e($l['phone']) ?>">📞 <?= e($l['phone']) ?></a><?php endif ?> <?php if ($l['email']): ?><a href="mailto:<?= e($l['email']) ?>">✉ <?= e($l['email']) ?></a><?php endif ?></span>
         </div>
         <div class="lead-meta">
-          <?php if ($l['property']): ?><span>🏢 <a href="/apartment/<?= e($l['slug']) ?>/" target="_blank" rel="noopener"><?= e($l['property']) ?></a></span><?php endif ?>
+          <?php if ($l['property']): ?><span>🏢 <a href="<?= e(listing_url($l['slug'])) ?>" target="_blank" rel="noopener"><?= e($l['property']) ?></a></span><?php endif ?>
           <?php foreach (['move_in' => 'Move-in', 'beds' => 'Beds', 'budget' => 'Budget'] as $k => $lab): if ($l[$k]): ?><span><?= $lab ?>: <?= e($l[$k]) ?></span><?php endif; endforeach ?>
           <span class="muted"><?= e(date('M j, Y g:ia', strtotime($l['created_at']))) ?></span>
         </div>

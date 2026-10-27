@@ -45,6 +45,9 @@ if (preg_match('#^/wp-content/uploads/.*Houston-Apartments-(Site-)?Logo#', $path
 if (preg_match('#^/(author|tag)/#', $path)) {
     redirect('/houston-apartments-blog/');
 }
+if ($path === '/apartment') {
+    redirect('/apartments/');
+}
 if ($path === '/home/' || $path === '/index.php') {
     redirect('/');
 }
@@ -58,6 +61,7 @@ $routes = [
     '#^/$#'                                      => fn () => page_home(),
     '#^/apartments/$#'                           => fn () => page_search([]),
     '#^/apartments/([a-z0-9-]+)/(?:([a-z0-9-]+)/)?$#' => fn ($m) => page_search(array_values(array_filter([$m[1], $m[2] ?? '']))),
+    '#^/apartment/$#'                            => fn () => redirect('/apartments/'),
     '#^/apartment/([a-z0-9-]+)/$#'               => fn ($m) => page_property($m[1]),
     '#^/houston-apartments-neighborhoods/$#'     => fn () => page_neighborhoods(),
     '#^/houston-apartments-blog/(?:page/(\d+)/)?$#' => fn ($m) => page_blog((int) ($m[1] ?? 1)),
@@ -179,7 +183,7 @@ function page_property(string $slug): void
     render('property', compact('p', 'nearby', 'areaKey'), [
         'title'       => $p['name'] . ' Apartments – ' . ($p['city'] ?: 'Houston') . ', TX ' . $p['zip'] . ' | Houston Apartments',
         'description' => Listings::metaDescription($p),
-        'canonical'   => '/apartment/' . $p['slug'] . '/',
+        'canonical'   => listing_url($p['slug']),
         'image'       => $p['photo'],
         'body_class'  => 'property-page',
         'schema'      => Listings::schema($p),
@@ -396,7 +400,7 @@ function api_lead(): void
         if ($lead['property_id']) {
             $st = db()->prepare('SELECT name, slug FROM properties WHERE id = ?');
             $st->execute([$lead['property_id']]);
-            $property = ($r = $st->fetch()) ? $r['name'] . ' – ' . site_url('/apartment/' . $r['slug'] . '/') : '';
+            $property = ($r = $st->fetch()) ? $r['name'] . ' – ' . site_url(listing_url($r['slug'])) : '';
         }
         lead_email($to, $lead, $property);
     }
@@ -489,7 +493,7 @@ function sitemap(string $which): void
         }
     } else {
         foreach (Listings::allSlugs() as $r) {
-            $urls[] = ['/apartment/' . $r['slug'] . '/', $r['synced_at']];
+            $urls[] = [listing_url($r['slug']), $r['synced_at']];
         }
     }
     $x .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';

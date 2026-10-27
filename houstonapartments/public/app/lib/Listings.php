@@ -174,7 +174,7 @@ final class Listings
         return [
             'id'      => (int) $r['id'],
             'slug'    => $r['slug'],
-            'url'     => '/apartment/' . $r['slug'] . '/',
+            'url'     => listing_url($r['slug']),
             'name'    => $r['name'],
             'address' => trim($r['street'] . ', ' . $r['city'] . ', TX ' . $r['zip'], ', '),
             'hood'    => $r['neighborhood'],
@@ -374,7 +374,7 @@ final class Listings
             '@context' => 'https://schema.org',
             '@type' => 'ApartmentComplex',
             'name' => $p['name'],
-            'url' => site_url('/apartment/' . $p['slug'] . '/'),
+            'url' => site_url(listing_url($p['slug'])),
             'image' => array_map('site_url', array_slice($d['photos'] ?? [], 0, 6)),
             'address' => ['@type' => 'PostalAddress', 'streetAddress' => $p['street'], 'addressLocality' => $p['city'],
                           'addressRegion' => 'TX', 'postalCode' => $p['zip'], 'addressCountry' => 'US'],
@@ -400,7 +400,8 @@ final class Listings
         $graph[] = ['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Houston Apartments', 'item' => site_url('/')],
             ['@type' => 'ListItem', 'position' => 2, 'name' => 'Apartments for Rent', 'item' => site_url('/apartments/')],
-            ['@type' => 'ListItem', 'position' => 3, 'name' => $p['name'], 'item' => site_url('/apartment/' . $p['slug'] . '/')],
+            ...(($ak = self::areaKeyFor($p)) ? [['@type' => 'ListItem', 'position' => 3, 'name' => AREAS[$ak]['name'], 'item' => site_url('/apartments/' . Filters::areaShort($ak) . '/')]] : []),
+            ['@type' => 'ListItem', 'position' => self::areaKeyFor($p) ? 4 : 3, 'name' => $p['name'], 'item' => site_url(listing_url($p['slug']))],
         ]];
         return $graph;
     }

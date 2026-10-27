@@ -3,7 +3,7 @@ defined('HA_ROOT') || exit;
 $d = $p['d'];
 $isNew = !$p['id'];
 $title = $isNew ? 'Add a listing' : 'Edit: ' . $p['name'];
-$actions = $isNew ? '' : '<a class="btn ghost" href="/apartment/' . e($p['slug']) . '/" target="_blank" rel="noopener">View on website ↗</a>';
+$actions = $isNew ? '' : '<a class="btn ghost" href="' . e(listing_url($p['slug'])) . '" target="_blank" rel="noopener">View on website ↗</a>';
 $plans = $d['floorplans'] ?? [];
 $prices = $d['prices'] ?? [];
 $faqs = $d['faqs'] ?? [];

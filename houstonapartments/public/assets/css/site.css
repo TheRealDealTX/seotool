@@ -771,3 +771,12 @@ body.nav-open .site-header { background: #fff; }
 .lead-form label small { font-weight: 500; color: var(--muted); }
 .cc-email { text-align: center; font-weight: 700; font-size: .9rem; text-decoration: none; }
 .drawer .btn-outline { margin-top: 8px; }
+/* 404 */
+.error-hero .error-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.error-hero h1 { max-width: none; margin: 8px 0 10px; }
+.error-hero .hero-sub { margin-inline: auto; }
+.error-hero .hero-actions { justify-content: center; }
+.error-hero .big-404 { background: linear-gradient(100deg, #fff, #ffd1c2 55%, #ff8a5b); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(0 8px 24px rgba(0,0,0,.18)); }
+.error-links { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 20px; padding: 0; margin: 28px 0 0; }
+.error-links a { color: rgba(255,255,255,.88); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.error-links a:hover { color: #fff; }

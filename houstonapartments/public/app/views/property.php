@@ -26,7 +26,8 @@ $facts = array_filter([
 ?>
 <nav class="crumbs wrap" aria-label="Breadcrumb">
   <a href="/">Houston Apartments</a><span>/</span>
-  <?php if ($area): ?><a href="/<?= $areaKey ?>/"><?= e($area['name']) ?></a><span>/</span><?php else: ?><a href="/apartments/">Apartments</a><span>/</span><?php endif ?>
+  <a href="/apartments/">Apartments</a><span>/</span>
+  <?php if ($area): ?><a href="/apartments/<?= e(Filters::areaShort($areaKey)) ?>/"><?= e($area['name']) ?></a><span>/</span><?php endif ?>
   <span aria-current="page"><?= e($p['name']) ?></span>
 </nav>
 

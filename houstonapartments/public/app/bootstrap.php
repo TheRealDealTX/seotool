@@ -129,6 +129,12 @@ function us_phone(string $raw): ?string
     return $valid ? sprintf('+1 (%s) %s-%s', substr($d, 0, 3), $exch, substr($d, 6)) : null;
 }
 
+/** Public URL of a listing. Kept under /apartment/ so slugs never collide with /apartments/ filter pages. */
+function listing_url(string $slug): string
+{
+    return '/apartment/' . $slug . '/';
+}
+
 function e($s): string
 {
     return htmlspecialchars((string) $s, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
