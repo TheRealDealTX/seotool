@@ -658,3 +658,24 @@ body.nav-open { overflow: hidden; }
 body.nav-open .site-header { background: #fff; }
 .drawer nav a:not(.btn):hover { color: var(--m); }
 .modal { z-index: 1400; } .lightbox { z-index: 1400; }
+/* founder */
+.founder { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.founder-photo { margin: 0; position: relative; }
+.founder-photo img { width: 100%; border-radius: 28px; box-shadow: var(--sh-3); object-fit: cover; aspect-ratio: 4 / 5; }
+.founder-photo::before { content: ""; position: absolute; inset: 22px -18px -18px 22px; border-radius: 28px; background: var(--grad-soft); z-index: -1; }
+.founder-photo figcaption { position: absolute; left: 18px; bottom: 18px; background: #fff; padding: 8px 14px; border-radius: 999px; font-weight: 700; font-size: .85rem; box-shadow: var(--sh-2); color: var(--navy-2); }
+.founder h2 { margin-bottom: .1em; }
+.founder-title { color: var(--m); font-weight: 800; letter-spacing: .02em; margin-bottom: 1em; }
+.founder .ticks li { font-weight: 500; color: var(--text); }
+.founder .ticks strong { color: var(--ink); }
+.founder-compact .founder-photo img { aspect-ratio: 1 / 1; max-width: 420px; }
+.about-founder { padding-top: clamp(40px, 6vw, 72px); }
+.locator-mini { display: flex; gap: 12px; align-items: center; padding: 12px; border-radius: 14px; background: var(--bg); font-size: .88rem; }
+.locator-mini img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex: none; }
+.locator-mini strong { display: block; color: var(--ink); }
+.author-box { display: flex; gap: 18px; align-items: center; margin-top: 36px; padding: 22px; border-radius: 20px; background: var(--bg); }
+.author-box img { width: 84px; height: 84px; border-radius: 50%; object-fit: cover; flex: none; }
+.author-box h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.author-box p { margin: 0; font-size: .93rem; }
+.byline-avatar { width: 30px; height: 30px; border-radius: 50%; vertical-align: middle; margin-right: 6px; object-fit: cover; }
+@media (max-width: 900px) { .founder { grid-template-columns: 1fr; } .founder-photo { max-width: 420px; } }

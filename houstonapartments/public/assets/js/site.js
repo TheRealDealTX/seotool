@@ -42,7 +42,7 @@
     entries.forEach(function (e) {
       if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); }
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }) : null;
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0 }) : null;   // threshold 0: very tall blocks (long posts) must still reveal
   window.HA_reveal = function (root) {
     $$('.reveal:not(.in)', root).forEach(function (el) {
       if (revealIO && !reduce) revealIO.observe(el); else el.classList.add('in');

@@ -6,9 +6,12 @@
     <h1 class="fade-up"><?= e($page['title']) ?></h1>
   </div>
 </section>
+<?php if ($page['slug'] === 'about-houston-apartments'): ?>
+<div class="wrap about-founder"><?php $founderVariant = 'full'; require HA_APP . '/views/partials/founder.php'; ?></div>
+<?php endif ?>
 <section class="section">
   <div class="wrap prose-grid">
-    <article class="prose wp-content reveal"><?= $page['content'] ?></article>
+    <article class="prose wp-content"><?= $page['content'] ?></article>
     <aside class="side-card sticky reveal d1">
       <h3>Start your search</h3>
       <p>Search every community on our live map, or let a locator build your short list for free.</p>

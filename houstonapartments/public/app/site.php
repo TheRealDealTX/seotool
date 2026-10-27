@@ -13,6 +13,14 @@ const SITE = [
     'center'    => [29.7604, -95.3698],
 ];
 
+const FOUNDER = [
+    'name'   => 'Joseph Dittman',
+    'title'  => 'Owner, Founder & Lead Apartment Locator',
+    'photo'  => '/assets/img/joseph-dittman-houston-apartment-locator.webp',
+    'avatar' => '/assets/img/joseph-dittman-avatar.webp',
+    'short'  => 'Joseph Dittman founded Houston Apartments in 2018 and still works with renters himself – touring properties, filming them, and tracking which communities have the best deals each week.',
+];
+
 const NAV = [
     ['/apartments/', 'Find Apartments'],
     ['/houston-apartments-neighborhoods/', 'Neighborhoods'],

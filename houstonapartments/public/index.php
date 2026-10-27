@@ -222,7 +222,7 @@ function page_post(string $slug): void
             '@context' => 'https://schema.org', '@type' => 'BlogPosting',
             'headline' => $post['title'], 'datePublished' => $post['date'], 'dateModified' => $post['modified'],
             'image' => $post['image'] ? site_url($post['image']) : null,
-            'author' => ['@type' => 'Organization', 'name' => SITE['name']],
+            'author' => founder_schema(),
             'publisher' => ['@type' => 'Organization', 'name' => SITE['name'], 'logo' => ['@type' => 'ImageObject', 'url' => site_url('/assets/img/logo.png')]],
             'mainEntityOfPage' => site_url($post['path']),
         ],
@@ -257,6 +257,7 @@ function page_generic(string $slug): void
         not_found();
     }
     render('page', compact('page'), [
+        'schema'      => $slug === 'about-houston-apartments' ? ['@context' => 'https://schema.org'] + founder_schema() : [],
         'title'       => $page['seo_title'] ?: $page['title'],
         'description' => $page['description'],
         'canonical'   => $page['path'],
@@ -393,6 +394,13 @@ function sitemap(string $which): void
     echo $x . '</urlset>';
 }
 
+function founder_schema(): array
+{
+    return ['@type' => 'Person', 'name' => FOUNDER['name'], 'jobTitle' => FOUNDER['title'],
+            'image' => site_url(FOUNDER['photo']), 'url' => site_url('/about-houston-apartments/#joseph-dittman'),
+            'worksFor' => ['@type' => 'RealEstateAgent', 'name' => SITE['name'], 'url' => site_url('/')]];
+}
+
 function schema_org_business(): array
 {
     return [
@@ -405,6 +413,7 @@ function schema_org_business(): array
         'telephone' => SITE['phone_raw'],
         'foundingDate' => (string) SITE['founded'],
         'areaServed' => ['@type' => 'City', 'name' => 'Houston, TX'],
+        'founder' => founder_schema(),
         'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Houston', 'addressRegion' => 'TX', 'addressCountry' => 'US'],
     ];
 }

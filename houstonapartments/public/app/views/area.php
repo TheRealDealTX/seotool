@@ -37,7 +37,7 @@ $count = count($listings);
 <?php if ($page): ?>
 <section class="section">
   <div class="wrap prose-grid">
-    <article class="prose wp-content reveal"><?= $page['content'] ?></article>
+    <article class="prose wp-content"><?= $page['content'] ?></article>
     <aside class="side-card sticky reveal d1">
       <h3>Moving to <?= e($area['name']) ?>?</h3>
       <p>Tell us your budget and move date – we’ll send a short list of <?= e($area['name']) ?> apartments with current specials.</p>

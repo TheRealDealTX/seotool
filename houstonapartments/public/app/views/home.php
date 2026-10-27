@@ -166,6 +166,10 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap"><?php $founderVariant = 'compact'; require HA_APP . '/views/partials/founder.php'; ?></div>
+</section>
+
 <section class="section budget">
   <div class="wrap split">
     <div class="split-copy reveal">
