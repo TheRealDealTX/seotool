@@ -4,6 +4,7 @@
 // ignores .htaccess, so all redirects live in this file).
 require __DIR__ . '/app/bootstrap.php';
 require HA_APP . '/lib/Listings.php';
+require HA_APP . '/lib/Filters.php';
 
 $uri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode(strtok($uri, '?'));
@@ -47,7 +48,8 @@ if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('#\.\w{2,5}$#', $
 
 $routes = [
     '#^/$#'                                      => fn () => page_home(),
-    '#^/apartments/$#'                           => fn () => page_search(),
+    '#^/apartments/$#'                           => fn () => page_search([]),
+    '#^/apartments/([a-z0-9-]+)/(?:([a-z0-9-]+)/)?$#' => fn ($m) => page_search(array_values(array_filter([$m[1], $m[2] ?? '']))),
     '#^/apartment/([a-z0-9-]+)/$#'               => fn ($m) => page_property($m[1]),
     '#^/houston-apartments-neighborhoods/$#'     => fn () => page_neighborhoods(),
     '#^/houston-apartments-blog/(?:page/(\d+)/)?$#' => fn ($m) => page_blog((int) ($m[1] ?? 1)),
@@ -57,8 +59,8 @@ $routes = [
     '#^/api/search$#'                            => fn () => api_search(),
     '#^/api/lead$#'                              => fn () => api_lead(),
     '#^/robots\.txt$#'                           => fn () => robots(),
-    '#^/(sitemap|sitemap_index|post-sitemap|page-sitemap|category-sitemap|apartment-sitemap)\.xml$#' => fn ($m) => sitemap($m[1]),
-    '#^/admin/(sync|leads)/$#'                   => fn ($m) => admin($m[1]),
+    '#^/(sitemap|sitemap_index|post-sitemap|page-sitemap|category-sitemap|apartment-sitemap|search-sitemap)\.xml$#' => fn ($m) => sitemap($m[1]),
+    '#^/admin(/.*)?$#'                           => function () use ($path) { require HA_APP . '/admin.php'; admin_route($path); },
     '#^/([a-z0-9-]+)/$#'                         => fn ($m) => page_generic($m[1]),
 ];
 foreach ($routes as $re => $handler) {
@@ -85,17 +87,69 @@ function page_home(): void
     ]);
 }
 
-function page_search(): void
+function page_search(array $segments): void
 {
-    $areaKey = $_GET['area'] ?? '';
-    $area = AREAS[$areaKey] ?? null;
-    render('search', ['area' => $area, 'areaKey' => $area ? $areaKey : ''], [
-        'title'       => ($area ? $area['name'] . ' ' : '') . 'Houston Apartments for Rent – Map Search | Houston Apartments',
-        'description' => 'Search Houston apartments on a live map. Draw your own search area, filter by rent, bedrooms, pets and amenities, and compare floor plans side by side.',
-        'canonical'   => '/apartments/',
+    $state = [];
+    if ($segments) {
+        $state = Filters::parse($segments);
+        if ($state === null) {
+            not_found();
+        }
+    }
+    $state = Filters::normalize(array_merge($state, $_GET));
+    $canonical = Filters::url($state);
+    $requested = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
+    $q = array_intersect_key($_GET, array_flip(Filters::knownKeys()));   // utm_* etc. are ignored
+    ksort($q);
+    if (!same_query($canonical, $requested, $q)) {
+        redirect($canonical);
+    }
+    $res = Listings::search($state + ['per' => 24]);
+    $desc = Filters::describe($state);
+    $area = isset($state['area']) ? AREAS[$state['area']] : null;
+    $index = Filters::indexable($state, $res['total']);
+    $onlyArea = $area && count($state) === 1;
+    $page = (int) ($state['page'] ?? 1);
+    render('search', compact('state', 'res', 'desc', 'area'), [
+        'title'       => $desc['h1'] . ($page > 1 ? " – Page $page" : '') . ' | Houston Apartments',
+        'description' => search_description($desc, $res['total']),
+        'canonical'   => $onlyArea ? '/' . $state['area'] . '/' : Filters::url($state, false) . ($page > 1 ? "?page=$page" : ''),
+        'noindex'     => !$index,
         'body_class'  => 'search-page',
         'full'        => true,
+        'schema'      => search_schema($desc, $res),
     ]);
+}
+
+/** Same URL apart from query-string ordering. */
+function same_query(string $canonical, string $path, array $q): bool
+{
+    [$cp, $cq] = array_pad(explode('?', $canonical, 2), 2, '');
+    parse_str($cq, $cqa);
+    ksort($cqa);
+    return $cp === $path && $cqa == $q;
+}
+
+function search_description(array $d, int $total): string
+{
+    $what = $d['noun'] . ' for rent in ' . $d['place'] . $d['tail'] . ($d['price'] ? ' (' . $d['price'] . ')' : '');
+    $n = $total ? 'Compare ' . number_format($total) . ' communit' . ($total === 1 ? 'y' : 'ies') . ' with' : 'See';
+    return mb_substr("$what: $n photos, floor plans and amenities on a live map, draw your own search area, and get up to \$" . SITE['cashback'] . ' back when you lease with Houston Apartments.', 0, 300);
+}
+
+function lcfirst_safe(string $s): string
+{
+    return strtolower($s);
+}
+
+function search_schema(array $d, array $res): array
+{
+    return [
+        '@context' => 'https://schema.org', '@type' => 'ItemList', 'name' => $d['h1'],
+        'numberOfItems' => $res['total'],
+        'itemListElement' => array_map(fn ($c, $i) => ['@type' => 'ListItem', 'position' => $i + 1, 'url' => site_url($c['url']), 'name' => $c['name']],
+            $res['items'], array_keys($res['items'])),
+    ];
 }
 
 function page_property(string $slug): void
@@ -208,6 +262,13 @@ function page_generic(string $slug): void
 function api_search(): void
 {
     $res = Listings::search($_GET);
+    $state = Filters::normalize($_GET);
+    unset($state['page']);
+    $d = Filters::describe($state);
+    $page = max(1, (int) ($_GET['page'] ?? 1));
+    $res['url'] = Filters::url($state + ($page > 1 ? ['page' => $page] : []));
+    $res['h1'] = $d['h1'];
+    $res['title'] = $d['h1'] . ' | Houston Apartments';
     header('Cache-Control: public, max-age=60');
     json_out($res);
 }
@@ -277,7 +338,7 @@ function sitemap(string $which): void
     $x = '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     if ($which === 'sitemap' || $which === 'sitemap_index') {
         $x .= '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
-        foreach (['page', 'post', 'category', 'apartment'] as $s) {
+        foreach (['page', 'post', 'category', 'apartment', 'search'] as $s) {
             $x .= '<sitemap><loc>' . e(site_url("/$s-sitemap.xml")) . '</loc></sitemap>';
         }
         echo $x . '</sitemapindex>';
@@ -299,6 +360,20 @@ function sitemap(string $which): void
         }
     } elseif ($which === 'category-sitemap') {
         $urls[] = ['/post/category/blog/', content('posts')[0]['modified'] ?? date('c')];
+    } elseif ($which === 'search-sitemap') {
+        $seen = [];
+        foreach (array_merge([null], array_keys(AREAS)) as $area) {
+            foreach (Filters::popular($area) as $state) {
+                $u = Filters::url($state, false);
+                if (isset($seen[$u])) {
+                    continue;
+                }
+                $seen[$u] = true;
+                if (Listings::search($state + ['per' => 6])['total'] > 0) {
+                    $urls[] = [$u, date('c')];
+                }
+            }
+        }
     } else {
         foreach (Listings::allSlugs() as $r) {
             $urls[] = ['/apartment/' . $r['slug'] . '/', $r['synced_at']];
@@ -309,31 +384,6 @@ function sitemap(string $which): void
         $x .= '<url><loc>' . e(site_url($u)) . '</loc><lastmod>' . e(date('c', strtotime($mod))) . '</lastmod></url>';
     }
     echo $x . '</urlset>';
-}
-
-function admin(string $what): void
-{
-    $key = config('admin_key');
-    if (!$key || !hash_equals($key, (string) ($_GET['key'] ?? ''))) {
-        not_found();
-    }
-    header('X-Robots-Tag: noindex');
-    db_migrate();
-    if ($what === 'sync') {
-        require HA_APP . '/lib/Rise.php';
-        set_time_limit(0);
-        $imp = new RiseImporter();
-        if (!empty($_GET['slugs'])) {
-            $n = $imp->importSlugs(array_filter(explode(',', $_GET['slugs'])));
-            $res = ['imported' => $n];
-        } else {
-            $res = $imp->sync((int) ($_GET['limit'] ?? 25), time() + 240);
-        }
-        json_out($res + ['log' => $imp->log]);
-        return;
-    }
-    $rows = db()->query('SELECT l.*, p.name AS property FROM leads l LEFT JOIN properties p ON p.id = l.property_id ORDER BY l.id DESC LIMIT 500')->fetchAll();
-    json_out($rows);
 }
 
 function schema_org_business(): array

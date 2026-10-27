@@ -29,6 +29,38 @@ Only `public_html/` is writable through the file API, so the app sits inside
 it; library files exit when requested directly and `config.local.php` only
 returns an array.
 
+## Admin panel
+
+`/admin/` (`public/app/admin.php`, views in `public/app/views/admin/`). Sign-in with
+email + password (bcrypt, CSRF tokens, 8 failed attempts per IP per 15 min).
+Roles: *admin* (also manages users) and *editor* (listings + leads).
+
+- Listings: search/filter, add, edit (photos with drag-to-reorder, floor
+  plans, starting prices per bedroom, amenities, description, schools, FAQs,
+  map pin), hide or delete. Manual listings get IDs from 900000001.
+- Saving a Rise listing locks it (`locked = 1`) so the sync no longer
+  overwrites it, unless "keep updating from Rise" is ticked.
+- Leads: status + notes (autosave), CSV export; new leads are emailed to
+  `lead_email` (info@houstonapartments.com).
+- Import from Rise: by URL/slug, or "sync new & updated" in small batches.
+- First account: `POST /admin/setup/` with `key=ADMIN_KEY`, only while no users exist.
+
+## Prices and filter URLs
+
+Visitors see "Starts at $X" or "Check for availability" (`price_display`:
+`starts_at` | `hidden`); full ranges and per-plan prices are never shown and
+sentences quoting rents are dropped from imported descriptions. The real
+numbers stay in the database for the price filter.
+
+Filters live in the path (`public/app/lib/Filters.php`):
+`/apartments/3-beds/`, `/apartments/3-beds-1200-to-1600/`,
+`/apartments/houston-heights/pet-friendly-with-pool/`. Token order is fixed
+(beds, baths, price, flags, amenities, year) and any other URL for the same
+filters 301s to the canonical one, including old `?beds=3` links. Keyword,
+drawn-area, sort and multi-bedroom searches stay in the query string and are
+`noindex`; path pages with 1–3 filters and results are indexable, server-rendered,
+and listed in `/search-sitemap.xml`.
+
 ## Listings data
 
 Rise's REST API (application password for user `riseapartments`) lists the

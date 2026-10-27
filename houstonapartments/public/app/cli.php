@@ -6,6 +6,8 @@
 //   php app/cli.php parse page.html "Property Name"   (debug the parser)
 PHP_SAPI === 'cli' || exit;
 require __DIR__ . '/bootstrap.php';
+require __DIR__ . '/lib/Listings.php';
+require __DIR__ . '/lib/Filters.php';
 require __DIR__ . '/lib/Rise.php';
 
 $cmd = $argv[1] ?? '';

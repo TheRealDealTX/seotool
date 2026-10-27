@@ -621,3 +621,13 @@ body.full .site-header { position: sticky; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+.search-seo { margin-top: 28px; padding: 22px; border-radius: 18px; background: #fff; box-shadow: var(--sh-1); font-size: .93rem; }
+.search-seo h2 { font-size: 1.15rem; }
+.search-seo h3 { font-size: 1rem; margin-top: 18px; }
+.popular-links { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.popular-links a { display: inline-block; padding: .35em .8em; border-radius: 999px; background: var(--bg); font-size: .82rem; font-weight: 600; text-decoration: none; }
+.popular-links a:hover { background: var(--grad-soft); }
+.pin.nop span { padding: 0; width: 18px; height: 18px; border-radius: 50%; background: var(--m); border: 3px solid #fff; }
+.pin.nop span::after { display: none; }
+.popular-home { margin-top: 36px; }
+.popular-home h3 { font-size: 1.05rem; }

@@ -71,7 +71,7 @@ $facts = array_filter([
           <div class="plan-group" data-beds="<?= $b ?>">
             <div class="plan-group-head">
               <h3><?= beds_label($b) ?></h3>
-              <p><?= isset($prices[$b]) ? 'Starting at <strong>' . money($prices[$b]) . '</strong>/mo' : 'Call for current pricing' ?></p>
+              <p><?= isset($prices[$b]) && config('price_display') !== 'hidden' ? 'Starts at <strong>' . money($prices[$b]) . '</strong>' : '<strong>Check for availability</strong>' ?></p>
             </div>
             <div class="plans">
               <?php foreach ($list as $pl): ?>
@@ -97,13 +97,13 @@ $facts = array_filter([
       <?php else: ?>
         <p class="muted">Floor plans and pricing are available on request.</p>
       <?php endif ?>
-      <p class="fine">Prices and availability change frequently and are not guaranteed. Square footage is approximate.</p>
+      <p class="fine">Pricing and availability change daily – tap “Check availability” and a locator will confirm today’s rates and specials. Square footage is approximate.</p>
     </section>
 
     <?php if ($d['about'] ?? []): ?>
     <section class="prop-sec reveal" id="about">
       <h2>About <?= e($p['name']) ?></h2>
-      <div class="prose"><?php foreach ($d['about'] as $para): ?><p><?= e($para) ?></p><?php endforeach ?></div>
+      <div class="prose"><?php foreach ($d['about'] as $para): if (($para = Listings::stripPrices($para)) === '') continue; ?><p><?= e($para) ?></p><?php endforeach ?></div>
     </section>
     <?php endif ?>
 

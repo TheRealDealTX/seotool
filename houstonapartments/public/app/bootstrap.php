@@ -59,6 +59,30 @@ function db_migrate(): void
     foreach (array_filter(array_map('trim', explode(';', $sql))) as $stmt) {
         db()->exec($stmt);
     }
+    // Columns added after the first deploy (CREATE TABLE IF NOT EXISTS won't add them)
+    $add = [
+        'properties' => ['source' => "VARCHAR(10) NOT NULL DEFAULT 'rise'", 'locked' => 'INT NOT NULL DEFAULT 0',
+                         'updated_at' => "VARCHAR(30) NOT NULL DEFAULT ''", 'updated_by' => "VARCHAR(150) NOT NULL DEFAULT ''"],
+        'leads'      => ['status' => "VARCHAR(20) NOT NULL DEFAULT 'new'", 'notes' => 'TEXT'],
+    ];
+    foreach ($add as $table => $cols) {
+        $have = table_columns($table);
+        foreach ($cols as $col => $def) {
+            if (!in_array($col, $have, true)) {
+                db()->exec("ALTER TABLE $table ADD COLUMN $col $def");
+            }
+        }
+    }
+}
+
+function table_columns(string $table): array
+{
+    $st = db()->query("SELECT * FROM $table LIMIT 0");
+    $out = [];
+    for ($i = 0; $i < $st->columnCount(); $i++) {
+        $out[] = $st->getColumnMeta($i)['name'];
+    }
+    return $out;
 }
 
 function e($s): string

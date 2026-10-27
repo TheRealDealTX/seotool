@@ -1,8 +1,12 @@
 <?php
 defined('HA_ROOT') || exit;
 $center = $area ? [$area['lat'], $area['lng'], $area['zoom']] : [SITE['center'][0], SITE['center'][1], 10];
+$areaKey = $state['area'] ?? '';
+$hoods = array_keys($res['hoods']);
+$page = (int) ($state['page'] ?? 1);
+$popular = array_filter(Filters::popular($area ? $areaKey : null), fn ($p) => Filters::url($p, false) !== Filters::url($state, false));
 ?>
-<div class="search-app" id="search-app" data-center='<?= json_encode($center) ?>' data-area="<?= e($areaKey) ?>">
+<div class="search-app" id="search-app" data-center='<?= json_encode($center) ?>' data-state='<?= e(json_encode($state)) ?>'>
   <form class="filterbar" id="filters" role="search" onsubmit="return false">
     <div class="fb-search">
       <span class="ico ico-search" aria-hidden="true"></span>
@@ -103,20 +107,35 @@ $center = $area ? [$area['lat'], $area['lng'], $area['zoom']] : [SITE['center'][
     <section class="list-pane" aria-live="polite">
       <div class="list-head">
         <div>
-          <h1 class="list-title"><?= $area ? e($area['name']) . ' Apartments for Rent' : 'Houston Apartments for Rent' ?></h1>
-          <p class="list-count"><span data-total>…</span> <span class="avg" data-avg></span></p>
+          <h1 class="list-title" data-h1><?= e($desc['h1']) ?></h1>
+          <p class="list-count"><span data-total><?= number_format($res['total']) ?> <?= $res['total'] === 1 ? 'apartment' : 'apartments' ?></span></p>
         </div>
         <div class="active-chips" data-chips></div>
       </div>
       <div class="cards-grid" data-results>
-        <?php for ($i = 0; $i < 6; $i++): ?><div class="card skeleton"><div class="sk-media"></div><div class="sk-line"></div><div class="sk-line short"></div></div><?php endfor ?>
+        <?php foreach ($res['items'] as $i => $c): require HA_APP . '/views/partials/card.php'; endforeach ?>
+        <?php if (!$res['items']): ?><div class="no-results"><h3>No matches here yet</h3><p>Try widening your price range, removing a filter, or drawing a bigger area.</p><a class="btn btn-outline" href="/apartments/">See all Houston apartments</a></div><?php endif ?>
       </div>
-      <nav class="pager" data-pager aria-label="Results pages"></nav>
+      <nav class="pager" data-pager aria-label="Results pages">
+        <?php if ($res['pages'] > 1): for ($n = 1; $n <= $res['pages']; $n++): ?>
+          <a href="<?= e(Filters::url($state + ['page' => $n])) ?>"<?= $n === $page ? ' aria-current="page"' : '' ?>><?= $n ?></a>
+        <?php endfor; endif ?>
+      </nav>
       <div class="list-cta">
         <p><strong>Not seeing the right fit?</strong> A Houston Apartments locator can check off-market availability and current specials for you.</p>
         <button class="btn btn-grad" type="button" data-lead>Ask a locator</button>
+      </div>
+      <div class="search-seo">
+        <h2>About <?= e(lcfirst_safe($desc['noun'])) ?> in <?= e($desc['place']) ?></h2>
+        <p><?php if ($res['total']): ?>Houston Apartments lists <?= number_format($res['total']) ?> <?= e(lcfirst_safe($desc['noun'])) ?> for rent in <?= e($desc['place']) ?><?= e(strtolower($desc['tail'])) ?><?= $desc['price'] ? ' with starting rents ' . e(strtolower($desc['price'])) : '' ?><?= $hoods ? ', including communities in ' . e(implode(', ', array_slice($hoods, 0, 4))) : '' ?>.<?php else: ?>We don’t have <?= e(lcfirst_safe($desc['noun'])) ?> matching every filter on the map right now, but our locators track new availability daily.<?php endif ?>
+        Use the map to draw the exact area you want, compare floor plans and amenities, and tap “Check availability” – a Houston Apartments locator will confirm current pricing and specials for free. Lease through us and get up to $<?= SITE['cashback'] ?> back.</p>
+        <h3>Popular searches</h3>
+        <ul class="popular-links">
+          <?php foreach ($popular as $p): ?><li><a href="<?= e(Filters::url($p, false)) ?>"><?= e(preg_replace('/ for Rent in .*$/', '', Filters::describe($p)['h1']) . ($area ? ' in ' . $area['name'] : '')) ?><?= Filters::describe($p)['price'] ? ' (' . e(Filters::describe($p)['price']) . ')' : '' ?></a></li><?php endforeach ?>
+        </ul>
       </div>
     </section>
   </div>
   <button type="button" class="view-toggle" data-view-toggle><span class="ico ico-map" aria-hidden="true"></span> <span>Map</span></button>
 </div>
+<script type="application/json" id="initial-results"><?= json_encode(['url' => Filters::url($state), 'h1' => $desc['h1']] + $res, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) ?></script>

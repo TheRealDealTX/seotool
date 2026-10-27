@@ -13,7 +13,7 @@
       <a class="hood-tile reveal d<?= $i++ % 4 ?>" href="/<?= $k ?>/" style="--h: <?= (crc32($k) % 360) ?>">
         <span class="hood-name"><?= e($a['name']) ?></span>
         <span class="hood-tag"><?= e($a['tag']) ?></span>
-        <span class="hood-meta"><?= $c['count'] ? $c['count'] . ' communit' . ($c['count'] === 1 ? 'y' : 'ies') : 'Coming soon' ?><?= $c['min'] ? ' · from ' . money($c['min']) : '' ?></span>
+        <span class="hood-meta"><?= $c['count'] ? $c['count'] . ' communit' . ($c['count'] === 1 ? 'y' : 'ies') : 'Coming soon' ?><?= $c['min'] ? ' · starts at ' . money($c['min']) : '' ?></span>
         <span class="hood-arrow" aria-hidden="true">→</span>
       </a>
     <?php endforeach ?>

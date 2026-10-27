@@ -47,9 +47,9 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
     </form>
     <div class="hero-chips fade-up d4">
       <a class="chip" href="/apartments/?draw=1"><span class="ico ico-lasso" aria-hidden="true"></span> Draw on map</a>
-      <a class="chip" href="/apartments/?pets=1">Pet friendly</a>
-      <a class="chip" href="/apartments/?price_max=1300">Under $1,300</a>
-      <a class="chip" href="/apartments/?year=<?= date('Y') - 5 ?>">Newer builds</a>
+      <a class="chip" href="/apartments/pet-friendly/">Pet friendly</a>
+      <a class="chip" href="/apartments/under-1300/">Under $1,300</a>
+      <a class="chip" href="/apartments/built-2020-or-later/">Newer builds</a>
       <a class="chip" href="/apartments/?beds=2,3">2–3 bedrooms</a>
     </div>
   </div>
@@ -129,12 +129,18 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
           <a class="hood-tile reveal d<?= $i % 4 ?>" href="/<?= $k ?>/" style="--h: <?= (crc32($k) % 360) ?>">
             <span class="hood-name"><?= e($a['name']) ?></span>
             <span class="hood-tag"><?= e($a['tag']) ?></span>
-            <span class="hood-meta"><?= $c['count'] ? $c['count'] . ' communit' . ($c['count'] === 1 ? 'y' : 'ies') : 'Coming soon' ?><?= $c['min'] ? ' · from ' . money($c['min']) : '' ?></span>
+            <span class="hood-meta"><?= $c['count'] ? $c['count'] . ' communit' . ($c['count'] === 1 ? 'y' : 'ies') : 'Coming soon' ?><?= $c['min'] ? ' · starts at ' . money($c['min']) : '' ?></span>
             <span class="hood-arrow" aria-hidden="true">→</span>
           </a>
         <?php endforeach ?>
       </div>
     <?php $first = false; endforeach ?>
+    <div class="popular-home reveal">
+      <h3>Popular Houston apartment searches</h3>
+      <ul class="popular-links">
+        <?php foreach (Filters::popular() as $p): $dd = Filters::describe($p); ?><li><a href="<?= e(Filters::url($p, false)) ?>"><?= e(preg_replace('/ for Rent in .*$/', '', $dd['h1'])) ?><?= $dd['price'] ? ' (' . e($dd['price']) . ')' : '' ?></a></li><?php endforeach ?>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -168,7 +174,7 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
         <div><span>Target rent</span><strong class="calc-rent">$1,667</strong><small>/month</small></div>
         <div><span>Comfortable range</span><strong class="calc-range">$1,250 – $1,667</strong></div>
       </div>
-      <a class="btn btn-grad btn-block calc-go" href="/apartments/?price_max=1667">See apartments in my budget</a>
+      <a class="btn btn-grad btn-block calc-go" href="/apartments/under-1650/">See apartments in my budget</a>
     </div>
   </div>
 </section>

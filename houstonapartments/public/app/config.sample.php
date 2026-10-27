@@ -19,7 +19,10 @@ return [
     // Secret for /admin/* (sync trigger, leads list): ?key=...
     'admin_key'   => '',
     // Lead notifications; empty = store in the database only
-    'lead_email'  => '',
+    'lead_email'  => 'info@houstonapartments.com',
+    // How rents appear to visitors: 'starts_at' ("Starts at $1,480") or
+    // 'hidden' (always "Check for availability"). Filters use the real numbers either way.
+    'price_display' => 'starts_at',
     // Search-engine indexing; keep false on the temporary domain
     'indexable'   => false,
     // Vector map style (OpenFreeMap: free, no key, commercial use allowed)

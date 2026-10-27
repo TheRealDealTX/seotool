@@ -28,6 +28,7 @@ final class Listings
 
     public static function search(array $q): array
     {
+        $q = Filters::normalize($q) + array_intersect_key($q, array_flip(['bounds', 'per']));
         $where = ["status = 'publish'", 'lat IS NOT NULL'];
         $args = [];
 
@@ -127,14 +128,16 @@ final class Listings
         $per = min(60, max(6, (int) ($q['per'] ?? 24)));
         $page = max(1, (int) ($q['page'] ?? 1));
         $total = count($rows);
-        $prices = array_filter(array_column($rows, 'price_min'));
+        $showPrice = config('price_display') !== 'hidden';
+        $hoods = array_count_values(array_filter(array_column($rows, 'neighborhood')));
+        arsort($hoods);
         return [
             'total'   => $total,
             'page'    => $page,
             'pages'   => max(1, (int) ceil($total / $per)),
-            'avg'     => $prices ? (int) round(array_sum($prices) / count($prices)) : null,
+            'hoods'   => array_slice($hoods, 0, 6, true),
             'items'   => array_map([self::class, 'card'], array_slice($rows, ($page - 1) * $per, $per)),
-            'markers' => array_map(fn ($r) => [(int) $r['id'], round((float) $r['lat'], 6), round((float) $r['lng'], 6), $r['price_min'] ? (int) $r['price_min'] : null, $r['slug']], $rows),
+            'markers' => array_map(fn ($r) => [(int) $r['id'], round((float) $r['lat'], 6), round((float) $r['lng'], 6), $showPrice && $r['price_min'] ? (int) $r['price_min'] : null, $r['slug']], $rows),
         ];
     }
 
@@ -178,7 +181,6 @@ final class Listings
             'lat'     => (float) $r['lat'],
             'lng'     => (float) $r['lng'],
             'price'   => self::priceLabel($r),
-            'pmin'    => $r['price_min'] ? (int) $r['price_min'] : null,
             'beds'    => beds_range($r),
             'sqft'    => $r['sqft_min'] ? number_format((int) $r['sqft_min']) . ($r['sqft_max'] != $r['sqft_min'] ? '–' . number_format((int) $r['sqft_max']) : '') . ' sqft' : '',
             'photos'  => array_slice($d['photos'] ?? [], 0, 5),
@@ -190,15 +192,74 @@ final class Listings
         ];
     }
 
+    /**
+     * Public price text. Exact rents stay in the database for the filters;
+     * visitors only see "Starts at $X" (price_display = starts_at) or
+     * "Check for availability" (price_display = hidden, or no price known).
+     */
     public static function priceLabel(array $r): string
     {
-        if (!$r['price_min']) {
-            return 'Call for pricing';
+        return self::startsAt($r['price_min'] ?? null);
+    }
+
+    public static function startsAt($price): string
+    {
+        if (!$price || config('price_display') === 'hidden') {
+            return 'Check for availability';
         }
-        if ($r['price_max'] && $r['price_max'] != $r['price_min']) {
-            return money($r['price_min']) . ' – ' . money($r['price_max']);
+        return 'Starts at ' . money($price);
+    }
+
+    /** Drop sentences that quote rent figures (imported descriptions often do). */
+    public static function stripPrices(string $text): string
+    {
+        $parts = preg_split('/(?<=[.!?])\s+/', $text);
+        return implode(' ', array_filter($parts, fn ($p) => !preg_match('/\$\s?\d[\d,]{2,}/', $p)));
+    }
+
+    /**
+     * Derived search columns for a listing from its detail data
+     * (shared by the Rise importer and the admin editor).
+     */
+    public static function derive(array $data): array
+    {
+        $plans = $data['floorplans'] ?? [];
+        $prices = array_filter(array_map('intval', $data['prices'] ?? []));
+        $beds = array_unique(array_merge(array_map('intval', array_column($plans, 'beds')), array_map('intval', array_keys($prices))));
+        sort($beds);
+        $mask = 0;
+        foreach ($beds as $b) {
+            $mask |= 1 << min($b, 4);
         }
-        return 'From ' . money($r['price_min']);
+        $sqft = array_filter(array_map('intval', array_column($plans, 'sqft')));
+        $amen = !empty($data['amenities']) ? array_merge(...array_values($data['amenities'])) : [];
+        $photos = $data['photos'] ?? [];
+        return [
+            'price_min'   => $prices ? min($prices) : null,
+            'price_max'   => $prices ? max($prices) : null,
+            'beds_min'    => $beds ? min($beds) : 0,
+            'beds_max'    => $beds ? max($beds) : 0,
+            'beds_mask'   => $mask,
+            'baths_max'   => $plans ? max(array_map('floatval', array_column($plans, 'baths'))) : 0,
+            'sqft_min'    => $sqft ? min($sqft) : null,
+            'sqft_max'    => $sqft ? max($sqft) : null,
+            'amenities'   => '|' . implode('|', array_unique(array_map('strtolower', $amen))) . '|',
+            'photo'       => $photos[0] ?? '',
+            'photo_count' => count($photos),
+        ];
+    }
+
+    public static function upsert(array $rec): void
+    {
+        $cols = array_keys($rec);
+        $ph = implode(',', array_fill(0, count($cols), '?'));
+        if (db_driver() === 'sqlite') {
+            $sql = 'INSERT OR REPLACE INTO properties (' . implode(',', $cols) . ") VALUES ($ph)";
+        } else {
+            $upd = implode(',', array_map(fn ($c) => "$c = VALUES($c)", array_diff($cols, ['id'])));
+            $sql = 'INSERT INTO properties (' . implode(',', $cols) . ") VALUES ($ph) ON DUPLICATE KEY UPDATE $upd";
+        }
+        db_alive()->prepare($sql)->execute(array_values($rec));
     }
 
     public static function bySlug(string $slug): ?array
@@ -264,7 +325,7 @@ final class Listings
             foreach ($rows as $r) {
                 if (in_array((int) $r['rise_location'], $a['rise'], true)) {
                     $out[$key]['count'] += (int) $r['c'];
-                    if ($r['m'] && (!$out[$key]['min'] || $r['m'] < $out[$key]['min'])) {
+                    if ($r['m'] && config('price_display') !== 'hidden' && (!$out[$key]['min'] || $r['m'] < $out[$key]['min'])) {
                         $out[$key]['min'] = (int) $r['m'];
                     }
                 }
@@ -295,8 +356,8 @@ final class Listings
     public static function metaDescription(array $p): string
     {
         $bits = [beds_range($p)];
-        if ($p['price_min']) {
-            $bits[] = 'from ' . money($p['price_min']) . '/mo';
+        if ($p['price_min'] && config('price_display') !== 'hidden') {
+            $bits[] = 'starting at ' . money($p['price_min']) . '/mo';
         }
         if ($p['pets']) {
             $bits[] = 'pet friendly';

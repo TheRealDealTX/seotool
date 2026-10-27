@@ -21,7 +21,8 @@
     return p >= 1000 ? '$' + (p / 1000).toFixed(p % 1000 >= 50 ? 1 : 0).replace('.0', '') + 'k' : '$' + p;
   }
   function pinIcon(price, cls) {
-    return L.divIcon({ className: 'pin' + (cls ? ' ' + cls : ''), html: '<span>' + shortPrice(price) + '</span>', iconSize: [0, 0] });
+    /* Without a public price the pin is a plain dot */
+    return L.divIcon({ className: 'pin' + (price ? '' : ' nop') + (cls ? ' ' + cls : ''), html: '<span>' + (price ? shortPrice(price) : '') + '</span>', iconSize: [0, 0] });
   }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
@@ -47,7 +48,7 @@
 
   function initSearch(app) {
     var form = $('#filters', app), mapEl = $('#search-map', app), pane = $('.map-pane', app);
-    var listEl = $('[data-results]', app), totalEl = $('[data-total]', app), avgEl = $('[data-avg]', app), pager = $('[data-pager]', app), chipsEl = $('[data-chips]', app);
+    var listEl = $('[data-results]', app), totalEl = $('[data-total]', app), h1El = $('[data-h1]', app), pager = $('[data-pager]', app), chipsEl = $('[data-chips]', app);
     var drawBtn = $('[data-draw]', app), clearBtn = $('[data-clear-draw]', app), moveChk = $('[data-move-search]', app), hint = $('.draw-hint', app);
     var center = JSON.parse(app.getAttribute('data-center'));
     var map = baseMap(mapEl, { center: [center[0], center[1]], zoom: center[2], zoomControl: false });
@@ -58,7 +59,10 @@
     var markers = {}, cards = {}, polyLayer = null, poly = null, useBounds = false, firstFit = true, reqId = 0, page = 1, mapMovedByCode = false;
 
     /* --- state <-> form <-> URL --- */
-    var params = new URLSearchParams(location.search);
+    /* Initial filters come from the server (they may be encoded in the path, e.g. /apartments/3-beds/) */
+    var initial = JSON.parse(app.getAttribute('data-state') || '{}');
+    var params = { get: function (k) { return initial[k] != null ? String(initial[k]) : null; } };
+    var drawParam = new URLSearchParams(location.search).get('draw');
     function setForm() {
       Array.prototype.forEach.call(form.elements, function (el) {
         if (!el.name) return;
@@ -102,7 +106,6 @@
     }
     function run() {
       var s = state(), q = new URLSearchParams(s);
-      history.replaceState(null, '', '/apartments/' + (q.toString() ? '?' + q : ''));
       if (useBounds && !poly && moveChk.checked) {
         var b = map.getBounds();
         q.set('bounds', [b.getSouth(), b.getWest(), b.getNorth(), b.getEast()].map(function (n) { return n.toFixed(5); }).join(','));
@@ -113,6 +116,8 @@
       fetch('/api/search?' + q).then(function (r) { return r.json(); }).then(function (res) {
         if (id !== reqId) return;
         app.classList.remove('loading');
+        if (res.url) history.replaceState(null, '', res.url);
+        if (res.h1 && h1El) { h1El.textContent = res.h1; document.title = res.title; }
         render(res);
       }).catch(function () { app.classList.remove('loading'); listEl.innerHTML = '<div class="no-results">Couldn’t load listings. Please refresh.</div>'; });
       ui();
@@ -120,7 +125,6 @@
 
     function render(res) {
       totalEl.textContent = res.total.toLocaleString() + (res.total === 1 ? ' apartment' : ' apartments');
-      avgEl.textContent = res.avg ? '· avg. starting rent $' + res.avg.toLocaleString() : '';
       cards = {};
       if (!res.items.length) {
         listEl.innerHTML = '<div class="no-results"><h3>No matches here yet</h3><p>Try widening your price range, removing a filter, or drawing a bigger area.</p><button class="btn btn-outline" type="button" data-reset>Reset filters</button></div>';
@@ -368,8 +372,10 @@
     });
 
     setForm();
-    if (params.get('draw')) setTimeout(startDraw, 600);
-    run();
+    if (drawParam) setTimeout(startDraw, 600);
+    /* First paint uses the server-rendered results; later changes fetch /api/search */
+    var first = document.getElementById('initial-results');
+    if (first) { render(JSON.parse(first.textContent)); ui(); } else run();
   }
 
   /* ------------------------------------------------------------ home mini map */

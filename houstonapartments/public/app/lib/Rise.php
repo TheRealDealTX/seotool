@@ -403,15 +403,23 @@ final class RiseImporter
         }
     }
 
-    /** Import specific properties by Rise slug. */
-    public function importSlugs(array $slugs): int
+    /**
+     * Import specific properties by Rise slug (or full riseapartments.com URL).
+     * Listings edited in the admin are locked and skipped unless $force.
+     */
+    public function importSlugs(array $slugs, bool $force = false): int
     {
         $ok = 0;
         foreach ($slugs as $slug) {
+            $slug = trim(preg_replace('#^.*/apartment/([^/]+)/?.*$#', '$1', trim($slug)), '/ ');
             try {
                 $row = $this->rise->bySlug($slug);
                 if (!$row) {
                     $this->say("not found: $slug");
+                    continue;
+                }
+                if (!$force && self::isLocked((int) $row['id'])) {
+                    $this->say("skipped $slug (edited in admin – locked)");
                     continue;
                 }
                 $this->importOne($row);
@@ -438,9 +446,10 @@ final class RiseImporter
                     if (($limit && $done >= $limit) || ($deadline && time() > $deadline)) {
                         return ['imported' => $done, 'unchanged' => $skipped, 'complete' => false];
                     }
-                    $st = db_alive()->prepare('SELECT rise_modified FROM properties WHERE id = ?');
+                    $st = db_alive()->prepare('SELECT rise_modified, locked FROM properties WHERE id = ?');
                     $st->execute([$row['id']]);
-                    if ($st->fetchColumn() === $row['modified']) {
+                    $have = $st->fetch() ?: [];
+                    if (($have['rise_modified'] ?? '') === $row['modified'] || !empty($have['locked'])) {
                         $skipped++;
                         continue;
                     }
@@ -457,6 +466,13 @@ final class RiseImporter
             }
         }
         return ['imported' => $done, 'unchanged' => $skipped, 'complete' => true];
+    }
+
+    private static function isLocked(int $id): bool
+    {
+        $st = db_alive()->prepare('SELECT locked FROM properties WHERE id = ?');
+        $st->execute([$id]);
+        return (bool) $st->fetchColumn();
     }
 
     public function importOne(array $row): void
@@ -554,24 +570,16 @@ final class RiseImporter
             'rise_modified' => $row['modified'],
             'synced_at' => gmdate('c'),
             'status' => 'publish',
+            'source' => 'rise',
+            'locked' => 0,
+            'updated_at' => gmdate('c'),
+            'updated_by' => 'Rise sync',
         ];
-        $this->upsert($rec);
+        Listings::upsert($rec);
         $this->say(sprintf('imported %s (%s, %d plans, %d photos, %s)', $row['slug'], $rec['neighborhood'], count($plans),
             count($localPhotos), $lat ? 'geocoded' : 'NO COORDS'));
     }
 
-    private function upsert(array $rec): void
-    {
-        $cols = array_keys($rec);
-        $ph = implode(',', array_fill(0, count($cols), '?'));
-        if (db_driver() === 'sqlite') {
-            $sql = 'INSERT OR REPLACE INTO properties (' . implode(',', $cols) . ") VALUES ($ph)";
-        } else {
-            $upd = implode(',', array_map(fn ($c) => "$c = VALUES($c)", array_diff($cols, ['id'])));
-            $sql = 'INSERT INTO properties (' . implode(',', $cols) . ") VALUES ($ph) ON DUPLICATE KEY UPDATE $upd";
-        }
-        db_alive()->prepare($sql)->execute(array_values($rec));
-    }
 
     /** Download a Rise upload into /media/p/{id}/; returns the public path or null. */
     private function copyImage(int $id, string $url): ?string

@@ -35,6 +35,10 @@ CREATE TABLE IF NOT EXISTS properties (
     rise_modified VARCHAR(30) NOT NULL DEFAULT '',
     synced_at VARCHAR(30) NOT NULL DEFAULT '',
     status VARCHAR(20) NOT NULL DEFAULT 'publish',
+    source VARCHAR(10) NOT NULL DEFAULT 'rise',
+    locked INT NOT NULL DEFAULT 0,
+    updated_at VARCHAR(30) NOT NULL DEFAULT '',
+    updated_by VARCHAR(150) NOT NULL DEFAULT '',
     UNIQUE KEY uq_slug (slug),
     KEY ix_geo (lat, lng),
     KEY ix_price (price_min),
@@ -53,7 +57,27 @@ CREATE TABLE IF NOT EXISTS leads (
     budget VARCHAR(40) NOT NULL DEFAULT '',
     message TEXT,
     page VARCHAR(255) NOT NULL DEFAULT '',
-    ip VARCHAR(64) NOT NULL DEFAULT ''
+    ip VARCHAR(64) NOT NULL DEFAULT '',
+    status VARCHAR(20) NOT NULL DEFAULT 'new',
+    notes TEXT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(190) NOT NULL,
+    name VARCHAR(150) NOT NULL DEFAULT '',
+    pass_hash VARCHAR(255) NOT NULL,
+    role VARCHAR(20) NOT NULL DEFAULT 'editor',
+    created_at VARCHAR(30) NOT NULL DEFAULT '',
+    last_login VARCHAR(30) NOT NULL DEFAULT '',
+    UNIQUE KEY uq_email (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS login_attempts (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ip VARCHAR(64) NOT NULL,
+    at INT NOT NULL,
+    KEY ix_ip (ip)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS geocache (

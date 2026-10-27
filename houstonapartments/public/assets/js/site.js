@@ -229,7 +229,7 @@
       $('.calc-rent', calc).textContent = fmt(rent);
       $('.calc-range', calc).textContent = fmt(low) + ' – ' + fmt(rent);
       $('.gauge-fill', calc).style.width = Math.min(100, (rent - 600) / (6000 - 600) * 100) + '%';
-      $('.calc-go', calc).href = '/apartments/?price_max=' + Math.round(rent / 50) * 50;
+      $('.calc-go', calc).href = '/apartments/under-' + Math.round(rent / 50) * 50 + '/';
     };
     range.addEventListener('input', update);
     update();
