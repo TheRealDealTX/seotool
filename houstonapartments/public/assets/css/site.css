@@ -622,7 +622,7 @@ body.full .site-header { position: sticky; }
   .stat { padding: 20px 12px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .footer-base { flex-direction: column; align-items: flex-start; }
-  .calc-result { grid-template-columns: 1fr; }
+  .grid2, .grid3, .calc-result { grid-template-columns: 1fr; }
   .modal-card, .form-card, .calc { padding: 22px; }
   .filterbar { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding: 10px 12px; }
   .filterbar::-webkit-scrollbar { display: none; }
@@ -680,7 +680,7 @@ body.nav-open .site-header { background: #fff; }
 .author-box h3 { margin: 0 0 4px; font-size: 1.05rem; }
 .author-box p { margin: 0; font-size: .93rem; }
 .byline-avatar { width: 30px; height: 30px; border-radius: 50%; vertical-align: middle; margin-right: 6px; object-fit: cover; }
-@media (max-width: 900px) { .founder { grid-template-columns: 1fr; } .founder-photo { max-width: 420px; } }
+@media (max-width: 900px) { .founder { grid-template-columns: 1fr; } .founder-photo { max-width: 420px; } .founder-photo::before { inset: 14px -10px -12px 14px; } }
 /* renter tools */
 .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .tool-card { position: relative; display: flex; flex-direction: column; gap: 8px; padding: 26px; border-radius: 22px; background: #fff; border: 1px solid var(--line); box-shadow: var(--sh-1); text-decoration: none; color: var(--text); transition: transform .35s var(--ease), box-shadow .35s; }
@@ -787,9 +787,8 @@ body.nav-open .site-header { background: #fff; }
   .lead-form input, .lead-form select, .lead-form textarea { font-size: 16px; padding: .6em .7em; min-width: 0; }
   .lead-form label { font-size: .78rem; min-width: 0; }
   .lead-form { gap: 10px; }
-  .lead-form .grid2 { grid-template-columns: 1fr; gap: 10px; }
-  .lead-form .grid3 { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .lead-form .grid3 > label:last-child { grid-column: 1 / -1; }
+  .lead-form .grid2 { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .lead-form input, .lead-form select { padding-left: .6em; padding-right: .6em; }
   .lead-form .btn-lg { padding: .85em 1.2em; font-size: 1rem; }
   .form-note { font-size: .72rem; }
   .modal { padding: 10px; align-items: start; }
@@ -799,3 +798,19 @@ body.nav-open .site-header { background: #fff; }
   .modal-head h2 { font-size: 1.35rem; }
   .modal-head p { font-size: .86rem; margin-bottom: .7em; line-height: 1.5; }
 }
+
+/* Native date picker: same height/alignment as the other fields (iOS renders it centered and short) */
+.lead-form input[type="date"] { -webkit-appearance: none; appearance: none; min-height: 2.9em; display: block; width: 100%; text-align: left; color: var(--ink); background: var(--white); }
+.lead-form input[type="date"]::-webkit-date-and-time-value { text-align: left; }
+
+/* Grid children may shrink below their longest word (long emails/URLs were widening the page on small phones) */
+.split > *, .prose-grid > *, .prop-layout > * { min-width: 0; }
+.side-card dd, .prose a { overflow-wrap: anywhere; }
+.tool-app, .tool-app * { min-width: 0; }
+.tool-app input, .tool-app select { max-width: 100%; }
+@media (max-width: 640px) {
+  .tool-app { padding: 18px 14px; }
+  .field input, .field select, .field textarea { font-size: 16px; }
+}
+/* Very narrow phones (320px): a full +1 (832) 297-3982 doesn't fit in half a row, so Name/Phone stack */
+@media (max-width: 359px) { .lead-form .grid2:has([data-us-phone]) { grid-template-columns: 1fr; } }

@@ -305,7 +305,11 @@
     782, 807, 819, 825, 867, 873, 879, 902, 905, 242, 246, 264, 268, 284, 345, 441, 473, 649, 658, 664, 721, 758, 767, 784,
     809, 829, 849, 868, 869, 876, 500, 521, 522, 523, 524, 525, 526, 527, 528, 529, 533, 544, 566, 577, 588, 700, 710, 800,
     822, 833, 844, 855, 866, 877, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 900, 976];
-  function phoneDigits(v) { var d = String(v).replace(/\D/g, ''); if (d.indexOf('1') === 0 && d.length > 10) d = d.slice(1); else if (/^\+?1/.test(String(v).trim())) d = d.slice(1); return d.slice(0, 10); }
+  function phoneDigits(v) {
+    v = String(v);
+    // a fast first keystroke can land before the fixed "+1 " prefix ("8+1 "): drop that prefix wherever it sits
+    var at = v.indexOf('+1'); if (at > 0) v = v.slice(0, at) + v.slice(at + 2);
+    var d = v.replace(/\D/g, ''); if (d.indexOf('1') === 0 && d.length > 10) d = d.slice(1); else if (/^\+?1/.test(String(v).trim())) d = d.slice(1); return d.slice(0, 10); }
   function formatPhone(d) {
     var s = '+1 ';
     if (!d.length) return s;
@@ -335,7 +339,7 @@
       if (!p && msg) { msg.textContent = ''; msg.className = 'form-msg'; }
       return !p;
     };
-    input.addEventListener('focus', function () { if (!input.value) input.value = '+1 '; requestAnimationFrame(function () { input.setSelectionRange(input.value.length, input.value.length); }); });
+    input.addEventListener('focus', function () { if (!input.value) { input.value = '+1 '; input.setSelectionRange(3, 3); } requestAnimationFrame(function () { input.setSelectionRange(input.value.length, input.value.length); }); });
     input.addEventListener('blur', function () { if (phoneDigits(input.value) === '') input.value = ''; else show(true); });
     input.addEventListener('keydown', function (e) {
       // never delete the fixed "+1 " prefix
@@ -350,6 +354,14 @@
     input._validate = function () { return show(true); };
   }
   $$('[data-us-phone]').forEach(setupPhone);
+
+  // Budget: digits only, shown as $1,500
+  $$('[data-money]').forEach(function (input) {
+    input.addEventListener('input', function () {
+      var d = input.value.replace(/\D/g, '').replace(/^0+/, '').slice(0, 6);
+      input.value = d ? '$' + Number(d).toLocaleString('en-US') : '';
+    });
+  });
 
   $$('.lead-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {

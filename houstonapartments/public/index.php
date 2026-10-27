@@ -373,6 +373,12 @@ function api_lead(): void
         'page'        => $clean('page', 255),
         'ip'          => mb_substr($_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['REMOTE_ADDR'] ?? '', 0, 64),
     ];
+    if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $lead['move_in']) && ($t = strtotime($lead['move_in']))) {
+        $lead['move_in'] = date('M j, Y', $t);
+    }
+    if ($lead['budget'] !== '' && ($b = (int) preg_replace('/\D/', '', $lead['budget']))) {
+        $lead['budget'] = '$' . number_format($b);
+    }
     if ($lead['name'] === '') {
         json_out(['ok' => false, 'error' => 'Please add your name.'], 422);
         return;

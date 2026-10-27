@@ -164,13 +164,15 @@ if (isset($schemas['@context'])) {
       <label class="hp">Website <input name="website" tabindex="-1" autocomplete="off"></label>
       <div class="grid2">
         <label>Name<input name="name" required autocomplete="name"></label>
-        <label><span>Phone <small>(US numbers only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
+        <label><span>Phone <small>(US only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
       </div>
-      <label>Email<input name="email" type="email" autocomplete="email" required></label>
-      <div class="grid3">
-        <label>Move-in<select name="move_in"><option value="">Any time</option><option>ASAP</option><option>Within 30 days</option><option>1–2 months</option><option>2+ months</option></select></label>
+      <div class="grid2">
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+        <label>Move-in date<input name="move_in" type="date" min="<?= date('Y-m-d') ?>"></label>
+      </div>
+      <div class="grid2">
         <label>Bedrooms<select name="beds"><option value="">Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></label>
-        <label>Budget<select name="budget"><option value="">Any</option><option>Under $1,200</option><option>$1,200–$1,600</option><option>$1,600–$2,200</option><option>$2,200+</option></select></label>
+        <label>Max budget<input name="budget" type="text" inputmode="numeric" autocomplete="off" placeholder="$1,500" data-money></label>
       </div>
       <label>Anything else?<textarea name="message" rows="2" placeholder="Pets, neighborhoods, commute, must-have amenities…"></textarea></label>
       <button class="btn btn-grad btn-block btn-lg" type="submit">Send my request</button>
