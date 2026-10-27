@@ -65,6 +65,7 @@ if (isset($schemas['@context'])) {
 <div class="drawer" id="drawer" hidden>
   <nav aria-label="Mobile">
     <?php foreach (NAV as [$href, $label]): ?><a href="<?= e($href) ?>"><?= e($label) ?></a><?php endforeach ?>
+    <a href="/houston-apartments-frequently-asked-questions/">FAQs</a>
     <a href="/contact-houston-apartments/">Contact Us</a>
     <a class="btn btn-grad" href="tel:<?= SITE['phone_raw'] ?>">Call <?= SITE['phone'] ?></a>
   </nav>
@@ -115,6 +116,7 @@ if (isset($schemas['@context'])) {
       <h3>Resources</h3>
       <ul>
         <li><a href="/apartments/">Map search</a></li>
+        <li><a href="/houston-apartment-tools/">Free renter tools</a></li>
         <li><a href="/about-houston-apartments/">About Houston Apartments</a></li>
         <li><a href="/houston-apartments-process/">Our process</a></li>
         <li><a href="/houston-apartments-blog/">Houston Apartments blog</a></li>
@@ -173,5 +175,6 @@ if (isset($schemas['@context'])) {
 <?php endif ?>
 <script src="<?= asset('js/site.js') ?>" defer></script>
 <?php if ($needsMap): ?><script src="<?= asset('js/map.js') ?>" defer></script><?php endif ?>
+<?php foreach ($meta['scripts'] ?? [] as $js): ?><script src="<?= asset($js) ?>" defer></script><?php endforeach ?>
 </body>
 </html>

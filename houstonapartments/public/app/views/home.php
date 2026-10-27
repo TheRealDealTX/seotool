@@ -191,6 +191,20 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
   </div>
 </section>
 
+<section class="section tools-home">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div><span class="pill">Free renter tools</span><h2>Plan your move with Houston Apartments tools</h2></div>
+      <a class="link-arrow" href="<?= TOOLS_BASE ?>">All tools</a>
+    </div>
+    <div class="tool-grid">
+      <?php $i = 0; foreach (TOOLS as $slug => $t): if ($slug === 'rent-affordability-calculator') continue; if ($i >= 6) break; ?>
+        <a class="tool-card reveal d<?= $i++ % 3 ?>" href="<?= TOOLS_BASE . $slug ?>/"><span class="tool-ico" aria-hidden="true"><?= $t['icon'] ?></span><h3><?= e($t['name']) ?></h3><p><?= e($t['short']) ?></p><span class="link-arrow">Open tool</span></a>
+      <?php endforeach ?>
+    </div>
+  </div>
+</section>
+
 <section class="section prose-section">
   <div class="wrap prose-grid">
     <article class="prose reveal">

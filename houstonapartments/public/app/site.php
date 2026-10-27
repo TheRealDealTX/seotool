@@ -24,10 +24,10 @@ const FOUNDER = [
 const NAV = [
     ['/apartments/', 'Find Apartments'],
     ['/houston-apartments-neighborhoods/', 'Neighborhoods'],
+    ['/houston-apartment-tools/', 'Renter Tools'],
     ['/houston-apartments-process/', 'How It Works'],
     ['/houston-apartments-blog/', 'Blog'],
     ['/about-houston-apartments/', 'About'],
-    ['/houston-apartments-frequently-asked-questions/', 'FAQs'],
 ];
 
 /*

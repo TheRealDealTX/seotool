@@ -5,6 +5,7 @@
 require __DIR__ . '/app/bootstrap.php';
 require HA_APP . '/lib/Listings.php';
 require HA_APP . '/lib/Filters.php';
+require HA_APP . '/tools.php';
 
 $uri = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode(strtok($uri, '?'));
@@ -63,6 +64,9 @@ $routes = [
     '#^/post/category/blog/(?:page/(\d+)/)?$#'   => fn ($m) => page_blog((int) ($m[1] ?? 1), '/post/category/blog/'),
     '#^/post/([a-z0-9-]+)/$#'                    => fn ($m) => page_post($m[1]),
     '#^/contact-houston-apartments/$#'           => fn () => page_contact(),
+    '#^/houston-apartment-tools/$#'              => fn () => page_tools(),
+    '#^/houston-apartment-tools/([a-z0-9-]+)/$#' => fn ($m) => page_tool($m[1]),
+    '#^/api/geocode$#'                           => fn () => api_geocode(),
     '#^/api/search$#'                            => fn () => api_search(),
     '#^/api/lead$#'                              => fn () => api_lead(),
     '#^/robots\.txt$#'                           => fn () => robots(),
@@ -238,6 +242,60 @@ function page_contact(): void
     ]);
 }
 
+function page_tools(): void
+{
+    render('tools-hub', [], [
+        'title'       => 'Free Renter Tools & Calculators for Houston Apartments | Houston Apartments',
+        'description' => 'Free tools for Houston renters: rent affordability and move-in cost calculators, roommate rent split, true-cost apartment comparison, commute finder and checklists.',
+        'canonical'   => TOOLS_BASE,
+        'schema'      => ['@context' => 'https://schema.org', '@type' => 'ItemList', 'name' => 'Houston renter tools',
+            'itemListElement' => array_map(fn ($k, $i) => ['@type' => 'ListItem', 'position' => $i + 1, 'url' => site_url(TOOLS_BASE . $k . '/'), 'name' => TOOLS[$k]['name']],
+                array_keys(TOOLS), array_keys(array_keys(TOOLS)))],
+    ]);
+}
+
+function page_tool(string $slug): void
+{
+    $tool = TOOLS[$slug] ?? null;
+    if (!$tool) {
+        not_found();
+    }
+    render('tool', compact('tool', 'slug'), [
+        'title'       => $tool['h1'] . ' | Houston Apartments',
+        'description' => $tool['meta'],
+        'canonical'   => TOOLS_BASE . $slug . '/',
+        'map'         => $slug === 'commute-apartment-finder',
+        'scripts'     => ['js/tools.js'],
+        'schema'      => [
+            ['@context' => 'https://schema.org', '@type' => 'WebApplication', 'name' => $tool['name'], 'applicationCategory' => 'FinanceApplication',
+             'operatingSystem' => 'Any', 'offers' => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'USD'], 'url' => site_url(TOOLS_BASE . $slug . '/'),
+             'publisher' => ['@type' => 'Organization', 'name' => SITE['name']]],
+            ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEntity' => array_map(fn ($f) => ['@type' => 'Question', 'name' => $f[0],
+             'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f[1]]], $tool['faqs'])],
+        ],
+    ]);
+}
+
+/** Public geocoder for the commute tool (US Census, cached; Houston-area results only). */
+function api_geocode(): void
+{
+    require_once HA_APP . '/lib/Rise.php';
+    $q = mb_substr(trim((string) ($_GET['q'] ?? '')), 0, 160);
+    if (strlen($q) < 4) {
+        json_out(['lat' => null, 'lng' => null], 422);
+        return;
+    }
+    db_migrate();
+    [$lat, $lng] = Geocoder::locate($q);
+    // Keep to greater Houston so the endpoint isn't a general-purpose geocoder
+    if ($lat === null || abs($lat - 29.76) > 1.2 || abs($lng + 95.37) > 1.4) {
+        json_out(['lat' => null, 'lng' => null]);
+        return;
+    }
+    header('Cache-Control: public, max-age=86400');
+    json_out(['lat' => $lat, 'lng' => $lng]);
+}
+
 function page_generic(string $slug): void
 {
     if (isset(AREAS[$slug])) {
@@ -357,6 +415,10 @@ function sitemap(string $which): void
         $urls[] = ['/', date('c')];
         $urls[] = ['/apartments/', date('c')];
         $urls[] = ['/houston-apartments-neighborhoods/', date('c')];
+        $urls[] = [TOOLS_BASE, date('c')];
+        foreach (array_keys(TOOLS) as $k) {
+            $urls[] = [TOOLS_BASE . $k . '/', date('c')];
+        }
         foreach (content('pages') as $p) {
             if ($p['slug'] !== 'home') {
                 $urls[] = [$p['path'], $p['modified']];
