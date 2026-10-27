@@ -34,9 +34,9 @@
     return '<article class="card tilt reveal" data-id="' + c.id + '">' +
       '<a class="card-media" href="' + esc(c.url) + '" tabindex="-1" aria-hidden="true"><div class="card-slides">' + imgs + '</div>' + dots + '<span class="card-badges">' + badges + '</span></a>' +
       '<button class="fav" type="button" aria-label="Save ' + esc(c.name) + '" aria-pressed="false" data-fav="' + c.id + '">♥</button>' +
-      '<div class="card-body"><p class="card-price">' + esc(c.price) + '</p><h3 class="card-title"><a href="' + esc(c.url) + '">' + esc(c.name) + '</a></h3>' +
+      '<div class="card-body"><h3 class="card-title"><a href="' + esc(c.url) + '">' + esc(c.name) + '</a></h3>' +
       '<p class="card-addr">' + esc(c.address) + '</p><p class="card-meta"><span>' + esc(c.beds) + '</span>' + (c.sqft ? '<span>' + esc(c.sqft) + '</span>' : '') +
-      (c.rating ? '<span class="stars">★ ' + c.rating + '</span>' : '') + '</p></div></article>';
+      (c.rating ? '<span class="stars">★ ' + c.rating + '</span>' : '') + '</p><p class="card-price">' + esc(c.price) + '</p></div></article>';
   }
   function popupHTML(c) {
     return '<a class="pop" href="' + esc(c.url) + '"><img src="' + esc(c.photos[0] || '/assets/img/Houston-High-Rise.webp') + '" alt=""><div><strong>' + esc(c.name) + '</strong><span class="pp">' + esc(c.price) + '</span> · ' + esc(c.beds) + '</div></a>';

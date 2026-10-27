@@ -19,9 +19,9 @@ $photos = $c['photos'] ?: ['/assets/img/Houston-High-Rise.webp'];
   </a>
   <button class="fav" type="button" aria-label="Save <?= e($c['name']) ?>" aria-pressed="false" data-fav="<?= $c['id'] ?>">♥</button>
   <div class="card-body">
-    <p class="card-price"><?= e($c['price']) ?></p>
     <h3 class="card-title"><a href="<?= e($c['url']) ?>"><?= e($c['name']) ?></a></h3>
     <p class="card-addr"><?= e($c['address']) ?></p>
     <p class="card-meta"><span><?= e($c['beds']) ?></span><?php if ($c['sqft']): ?><span><?= e($c['sqft']) ?></span><?php endif ?><?php if ($c['rating']): ?><span class="stars">★ <?= e($c['rating']) ?></span><?php endif ?></p>
+    <p class="card-price"><?= e($c['price']) ?></p>
   </div>
 </article>
