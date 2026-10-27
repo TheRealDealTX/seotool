@@ -61,7 +61,8 @@
     /* --- state <-> form <-> URL --- */
     /* Initial filters come from the server (they may be encoded in the path, e.g. /apartments/3-beds/) */
     var initial = JSON.parse(app.getAttribute('data-state') || '{}');
-    var params = { get: function (k) { return initial[k] != null ? String(initial[k]) : null; } };
+    // own keys only: an empty PHP state arrives as [] and initial.sort would be Array.prototype.sort
+    var params = { get: function (k) { return Object.prototype.hasOwnProperty.call(initial, k) && initial[k] != null ? String(initial[k]) : null; } };
     var drawParam = new URLSearchParams(location.search).get('draw');
     function setForm() {
       Array.prototype.forEach.call(form.elements, function (el) {
@@ -269,6 +270,7 @@
         var box = $('[data-multi="amen"] input[value="' + a + '"]', form);
         if (box) chip(box.parentNode.textContent.trim(), function () { box.checked = false; });
       });
+      sheetUI();
     }
 
     /* --- search as I move --- */
@@ -361,6 +363,29 @@
       }
       var out = [points[0]]; dp(0, points.length - 1, out); out.push(points[points.length - 1]);
       return out.length >= 3 ? out.slice(0, 200) : points.slice(0, 200);
+    }
+
+    /* --- mobile filter sheet (<=640px): every filter in one full-screen panel --- */
+    var sheetBtn = $('[data-sheet-open]', form), sheetCount = $('[data-sheet-count]', form), sheetShow = $('[data-sheet-show]', form);
+    function setSheet(open) {
+      form.classList.toggle('sheet-open', open);
+      document.body.classList.toggle('sheet-lock', open);
+      sheetBtn.setAttribute('aria-expanded', String(open));
+      if (open) { $('#fb-sheet').scrollTop = 0; } else { closeAll(); }
+    }
+    sheetBtn.addEventListener('click', function (e) { e.stopPropagation(); setSheet(true); });
+    $$('[data-sheet-close]', form).forEach(function (b) { b.addEventListener('click', function (e) { e.stopPropagation(); setSheet(false); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && form.classList.contains('sheet-open')) setSheet(false); });
+    function sheetUI() {
+      var n = 0, s = state();
+      Object.keys(s).forEach(function (k) {
+        if (k === 'q' || k === 'sort' || k === 'page' || k === 'poly' || k === 'website') return;
+        if (k === 'price_max' && s.price_min) return; // price range counts once
+        n += k === 'amen' ? String(s[k]).split(',').length : 1;
+      });
+      sheetCount.textContent = n; sheetCount.hidden = !n;
+      var t = (totalEl.textContent.match(/[\d,]+/) || [''])[0];
+      sheetShow.textContent = t ? 'Show ' + t + (t === '1' ? ' apartment' : ' apartments') : 'Show results';
     }
 
     /* --- mobile map/list toggle --- */

@@ -12,10 +12,16 @@ $popular = array_filter(Filters::popular($area ? $areaKey : null), fn ($p) => Fi
       <span class="ico ico-search" aria-hidden="true"></span>
       <input name="q" type="search" placeholder="Neighborhood, ZIP or community" aria-label="Search by neighborhood, ZIP or community" autocomplete="off">
     </div>
+    <button type="button" class="fb-open" data-sheet-open aria-controls="fb-sheet" aria-expanded="false"><span class="ico ico-sliders" aria-hidden="true"></span> Filters <span class="count-badge" data-sheet-count hidden>0</span></button>
+
+    <div class="fb-sheet" id="fb-sheet" role="dialog" aria-label="Filters">
+    <div class="sheet-head"><strong>Filters</strong><button type="button" class="sheet-x" data-sheet-close aria-label="Close filters">×</button></div>
+    <label class="fb-lab"><span class="sheet-only">Area</span>
     <select name="area" aria-label="Area" class="fb-area">
       <option value="">All of Houston</option>
       <?php foreach (AREAS as $k => $a): ?><option value="<?= $k ?>"<?= $k === $areaKey ? ' selected' : '' ?>><?= e($a['name']) ?></option><?php endforeach ?>
     </select>
+    </label>
 
     <div class="dd" data-dd>
       <button type="button" class="dd-btn" aria-expanded="false"><span data-label="price">Price</span> <i class="caret"></i></button>
@@ -57,6 +63,7 @@ $popular = array_filter(Filters::popular($area ? $areaKey : null), fn ($p) => Fi
 
     <button type="button" class="dd-btn more-btn" data-more aria-expanded="false" aria-controls="more-panel">More filters <span class="count-badge" hidden>0</span></button>
 
+    <label class="fb-lab fb-lab-sort"><span class="sheet-only">Sort by</span>
     <select name="sort" aria-label="Sort" class="fb-sort">
       <option value="">Best match</option>
       <option value="price_asc">Price: low to high</option>
@@ -65,6 +72,7 @@ $popular = array_filter(Filters::popular($area ? $areaKey : null), fn ($p) => Fi
       <option value="rating">Top rated</option>
       <option value="sqft">Largest</option>
     </select>
+    </label>
     <button type="button" class="fb-reset" data-reset>Reset</button>
 
     <div class="more-panel" id="more-panel" hidden>
@@ -91,6 +99,8 @@ $popular = array_filter(Filters::popular($area ? $areaKey : null), fn ($p) => Fi
         </fieldset>
       </div>
       <div class="more-actions"><button type="button" class="btn btn-grad" data-more-done>Show results</button></div>
+    </div>
+    <div class="sheet-foot"><button type="button" class="sheet-reset" data-reset>Reset all</button><button type="button" class="btn btn-grad" data-sheet-close data-sheet-show>Show results</button></div>
     </div>
   </form>
 
