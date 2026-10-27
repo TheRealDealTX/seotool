@@ -769,3 +769,5 @@ body.nav-open .site-header { background: #fff; }
 .lead-form input.valid { border-color: var(--navy-2); }
 .field-err { color: #c5221f; font-size: .8rem; font-weight: 600; }
 .lead-form label small { font-weight: 500; color: var(--muted); }
+.cc-email { text-align: center; font-weight: 700; font-size: .9rem; text-decoration: none; }
+.drawer .btn-outline { margin-top: 8px; }

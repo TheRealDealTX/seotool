@@ -11,7 +11,7 @@
   <div class="wrap split contact-split">
     <div class="split-copy reveal">
       <h2>Talk to a Houston apartment locator</h2>
-      <p>Call or text <a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a>, or send the form. We usually reply within one business day with a short list that matches your budget, move-in date and must-haves.</p>
+      <p>Call or text <a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a>, email <a href="mailto:<?= SITE['email'] ?>"><?= SITE['email'] ?></a>, or send the form. We usually reply within one business day with a short list that matches your budget, move-in date and must-haves.</p>
       <ul class="ticks">
         <li>100% free for renters</li>
         <li>Current specials and real availability</li>
@@ -27,7 +27,7 @@
           <label>Name<input name="name" required autocomplete="name"></label>
           <label><span>Phone <small>(US numbers only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
         </div>
-        <label>Email<input name="email" type="email" autocomplete="email"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
         <div class="grid3">
           <label>Move-in<select name="move_in"><option value="">Any time</option><option>ASAP</option><option>Within 30 days</option><option>1–2 months</option><option>2+ months</option></select></label>
           <label>Bedrooms<select name="beds"><option value="">Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></label>

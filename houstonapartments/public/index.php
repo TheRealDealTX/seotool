@@ -374,8 +374,9 @@ function api_lead(): void
         return;
     }
     $lead['phone'] = $phone;
-    if ($lead['email'] !== '' && !filter_var($lead['email'], FILTER_VALIDATE_EMAIL)) {
-        $lead['email'] = '';
+    if (!filter_var($lead['email'], FILTER_VALIDATE_EMAIL)) {
+        json_out(['ok' => false, 'error' => 'Please enter a valid email address.'], 422);
+        return;
     }
     try {
         db_migrate();
@@ -482,6 +483,7 @@ function schema_org_business(): array
         'url' => site_url('/'),
         'logo' => site_url('/assets/img/logo.png'),
         'telephone' => SITE['phone_raw'],
+        'email' => SITE['email'],
         'foundingDate' => (string) SITE['founded'],
         'areaServed' => ['@type' => 'City', 'name' => 'Houston, TX'],
         'founder' => founder_schema(),

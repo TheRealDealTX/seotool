@@ -155,6 +155,7 @@ $facts = array_filter([
       <button class="btn btn-grad btn-block btn-lg" type="button" data-lead data-lead-prop="<?= $p['id'] ?>" data-lead-name="<?= e($p['name']) ?>">Check availability</button>
       <button class="btn btn-outline btn-block" type="button" data-lead data-lead-prop="<?= $p['id'] ?>" data-lead-name="Tour: <?= e($p['name']) ?>">Schedule a tour</button>
       <a class="btn btn-ghost btn-block" href="tel:<?= SITE['phone_raw'] ?>">Call <?= SITE['phone'] ?></a>
+      <a class="cc-email" href="mailto:<?= SITE['email'] ?>?subject=<?= rawurlencode($p['name']) ?>"><?= SITE['email'] ?></a>
       <div class="locator-mini"><img src="<?= e(FOUNDER['avatar']) ?>" alt="" width="52" height="52" loading="lazy"><span><strong><?= e(FOUNDER['name']) ?></strong>Your Houston locator – tours, specials &amp; paperwork handled for you.</span></div>
       <div class="cashback"><span class="cb-amt">$<?= SITE['cashback'] ?></span><span>back when you lease <?= e($p['name']) ?> through Houston Apartments</span></div>
     </div>

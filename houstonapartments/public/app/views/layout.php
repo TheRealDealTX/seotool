@@ -15,6 +15,15 @@ if (isset($schemas['@context'])) {
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MLTL4JE4N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5MLTL4JE4N');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title><?= e($title) ?></title>
 <?php if ($desc): ?><meta name="description" content="<?= e($desc) ?>"><?php endif ?>
@@ -68,6 +77,7 @@ if (isset($schemas['@context'])) {
     <a href="/houston-apartments-frequently-asked-questions/">FAQs</a>
     <a href="/contact-houston-apartments/">Contact Us</a>
     <a class="btn btn-grad" href="tel:<?= SITE['phone_raw'] ?>">Call <?= SITE['phone'] ?></a>
+    <a class="btn btn-outline" href="mailto:<?= SITE['email'] ?>">Email <?= SITE['email'] ?></a>
   </nav>
 </div>
 
@@ -94,7 +104,7 @@ if (isset($schemas['@context'])) {
     <div class="footer-brand">
       <?php $logoClass = 'logo-light'; require HA_APP . '/views/partials/logo.php'; ?>
       <p>Houston Apartments is a free apartment locating service run by <?= e(SITE['legal']) ?>. Licensed Texas real estate professionals helping renters across Greater Houston since <?= SITE['founded'] ?>.</p>
-      <p class="footer-contact"><a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a></p>
+      <p class="footer-contact"><a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a><br><a href="mailto:<?= SITE['email'] ?>"><?= SITE['email'] ?></a></p>
     </div>
     <div>
       <h3>Popular areas</h3>
@@ -152,7 +162,7 @@ if (isset($schemas['@context'])) {
         <label>Name<input name="name" required autocomplete="name"></label>
         <label><span>Phone <small>(US numbers only)</small></span><input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required placeholder="+1 (___) ___-____" data-us-phone><span class="field-err" hidden></span></label>
       </div>
-      <label><span>Email <small>(optional)</small></span><input name="email" type="email" autocomplete="email"></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
       <div class="grid3">
         <label>Move-in<select name="move_in"><option value="">Any time</option><option>ASAP</option><option>Within 30 days</option><option>1–2 months</option><option>2+ months</option></select></label>
         <label>Bedrooms<select name="beds"><option value="">Any</option><option>Studio</option><option>1</option><option>2</option><option>3+</option></select></label>

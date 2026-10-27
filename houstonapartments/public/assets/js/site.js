@@ -361,6 +361,9 @@
       if (form.phone._validate && !form.phone._validate()) {
         msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid US phone number.'; form.phone.focus(); return;
       }
+      if (!/^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i.test(form.email.value.trim())) {
+        msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid email address.'; form.email.focus(); return;
+      }
       btn.disabled = true; btn.textContent = 'Sending…';
       fetch('/api/lead', { method: 'POST', body: new FormData(form) })
         .then(function (r) { return r.json(); })
@@ -371,6 +374,7 @@
           form.reset();
           $$('[data-us-phone]', form).forEach(function (i) { i.classList.remove('valid', 'invalid'); });
           try { sessionStorage.setItem('ha-popup', 'done'); localStorage.setItem('ha-lead-sent', '1'); } catch (er) { /* storage blocked */ }
+          if (window.gtag) gtag('event', 'generate_lead', { form_location: location.pathname });
           confetti(btn);
         })
         .catch(function (err) { msg.className = 'form-msg err'; msg.textContent = err.message + ' You can also call ' + '(832) 720-7978.'; })

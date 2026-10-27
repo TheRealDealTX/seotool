@@ -230,6 +230,7 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
         <dt>Cash back</dt><dd>Up to $<?= SITE['cashback'] ?> when you lease</dd>
         <dt>Since</dt><dd><?= SITE['founded'] ?></dd>
         <dt>Call or text</dt><dd><a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a></dd>
+        <dt>Email</dt><dd><a href="mailto:<?= SITE['email'] ?>"><?= SITE['email'] ?></a></dd>
       </dl>
       <button class="btn btn-grad btn-block" type="button" data-lead>Get my short list</button>
     </aside>

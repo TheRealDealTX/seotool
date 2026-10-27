@@ -8,6 +8,7 @@ const SITE = [
     'tagline'   => 'Free Houston apartment locating since 2018',
     'phone'     => '(832) 720-7978',
     'phone_raw' => '+18327207978',
+    'email'     => 'info@houstonapartments.com',
     'founded'   => 2018,
     'cashback'  => 500,
     'center'    => [29.7604, -95.3698],
