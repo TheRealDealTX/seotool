@@ -27,6 +27,17 @@ function admin_route(string $path): void
         admin_key_sync();
         return;
     }
+    if ($sub === '/test-mail/') {
+        $key = config('admin_key');
+        if (!$key || !hash_equals($key, (string) ($_GET['key'] ?? ''))) {
+            http_response_code(404);
+            exit('Not found');
+        }
+        $ok = lead_email(config('lead_email'), ['name' => 'Delivery test – please ignore', 'phone' => '+1 (713) 867-5309', 'email' => SITE['email'],
+            'move_in' => '', 'beds' => '', 'budget' => '', 'message' => 'Test message sent ' . date('c') . ' to confirm lead emails arrive.', 'page' => '/']);
+        json_out(['sent' => $ok, 'to' => config('lead_email'), 'via' => config('smtp_pass') ? 'smtp' : 'mail()']);
+        return;
+    }
     if ($sub === '/setup/') {
         admin_setup();
         return;

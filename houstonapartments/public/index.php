@@ -50,7 +50,7 @@ if ($path === '/home/' || $path === '/index.php') {
 }
 
 // Trailing slash for page URLs (WordPress style)
-if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('#\.\w{2,5}$#', $path) && !str_starts_with($path, '/api/')) {
+if ($path !== '/' && !str_ends_with($path, '/') && !preg_match('#\.\w{2,12}$#', $path) && !str_starts_with($path, '/api/')) {
     redirect($path . '/' . (($q = parse_url($uri, PHP_URL_QUERY)) ? "?$q" : ''));
 }
 
@@ -70,6 +70,11 @@ $routes = [
     '#^/api/search$#'                            => fn () => api_search(),
     '#^/api/lead$#'                              => fn () => api_lead(),
     '#^/robots\.txt$#'                           => fn () => robots(),
+    '#^/site\.webmanifest$#'                     => function () {
+        header('Content-Type: application/manifest+json; charset=utf-8');
+        header('Cache-Control: public, max-age=86400');
+        readfile(HA_APP . '/site.webmanifest.json');
+    },
     '#^/(sitemap|sitemap_index|post-sitemap|page-sitemap|category-sitemap|apartment-sitemap|search-sitemap)\.xml$#' => fn ($m) => sitemap($m[1]),
     '#^/admin(/.*)?$#'                           => function () use ($path) { require HA_APP . '/admin.php'; admin_route($path); },
     '#^/([a-z0-9-]+)/$#'                         => fn ($m) => page_generic($m[1]),
@@ -387,13 +392,41 @@ function api_lead(): void
         error_log('lead save failed: ' . $e->getMessage());
     }
     if ($to = config('lead_email')) {
-        $body = '';
-        foreach ($lead as $k => $v) {
-            $body .= str_pad($k, 12) . ": $v\n";
+        $property = '';
+        if ($lead['property_id']) {
+            $st = db()->prepare('SELECT name, slug FROM properties WHERE id = ?');
+            $st->execute([$lead['property_id']]);
+            $property = ($r = $st->fetch()) ? $r['name'] . ' – ' . site_url('/apartment/' . $r['slug'] . '/') : '';
         }
-        @mail($to, 'New Houston Apartments lead: ' . $lead['name'], $body, 'From: no-reply@' . preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'houstonapartments.com'));
+        lead_email($to, $lead, $property);
     }
     json_out(['ok' => true]);
+}
+
+/** Notification for a new lead. Reply-To is the renter, so "Reply" answers them directly. */
+function lead_email(string $to, array $lead, string $property = ''): bool
+{
+    require_once HA_APP . '/lib/Mailer.php';
+    $rows = array_filter([
+        'Name' => $lead['name'], 'Phone' => $lead['phone'], 'Email' => $lead['email'], 'Property' => $property,
+        'Move-in' => $lead['move_in'], 'Bedrooms' => $lead['beds'], 'Budget' => $lead['budget'],
+        'Message' => $lead['message'], 'Page' => $lead['page'] ? site_url($lead['page']) : '', 'Received' => date('M j, Y g:i a T'),
+    ]);
+    $text = "New request from houstonapartments.com\n\n";
+    $html = '<div style="font-family:Arial,sans-serif;font-size:15px;color:#10272b"><h2 style="margin:0 0 12px;color:#0f766e">New apartment request</h2><table cellpadding="6" style="border-collapse:collapse">';
+    foreach ($rows as $k => $v) {
+        $text .= str_pad($k . ':', 11) . $v . "\n";
+        $val = e($v);
+        if ($k === 'Phone') {
+            $val = '<a href="tel:' . e(preg_replace('/[^\d+]/', '', $v)) . '">' . $val . '</a>';
+        } elseif ($k === 'Email') {
+            $val = '<a href="mailto:' . $val . '">' . $val . '</a>';
+        }
+        $html .= '<tr><td style="color:#66797d;vertical-align:top"><b>' . e($k) . '</b></td><td>' . nl2br($val) . '</td></tr>';
+    }
+    $text .= "\nManage leads: " . site_url('/admin/leads/') . "\n";
+    $html .= '</table><p><a href="' . e(site_url('/admin/leads/')) . '" style="background:#0f766e;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none">Open leads in admin</a></p></div>';
+    return Mailer::send($to, 'New lead: ' . $lead['name'] . ($property ? ' – ' . strtok($property, '–') : ''), $text, $lead['email'], $html);
 }
 
 /* ------------------------------------------------------- seo / admin */

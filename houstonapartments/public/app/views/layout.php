@@ -37,9 +37,13 @@ if (isset($schemas['@context'])) {
 <meta property="og:image" content="<?= e($image) ?>">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f766e">
-<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/assets/img/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-title" content="Houston Apartments">
+<meta name="application-name" content="Houston Apartments">
+<link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -145,7 +149,7 @@ if (isset($schemas['@context'])) {
 <?php endif ?>
 
 <div class="modal" id="lead-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lead-title">
-  <div class="modal-backdrop" data-close></div>
+  <div class="modal-backdrop"></div>
   <div class="modal-card">
     <button class="modal-x" type="button" data-close aria-label="Close">×</button>
     <div class="modal-head">

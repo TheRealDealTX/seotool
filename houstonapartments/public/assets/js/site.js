@@ -269,7 +269,7 @@
     if (t) { e.preventDefault(); openLead(t); return; }
     if (e.target.closest('[data-close]')) closeLead();
   });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLead(); });
+  // The form only closes with its × button, so it can't be dismissed by a stray click or key press.
 
   /* Free-search popup: once per browser session, 5 s after the first page view. Skipped
      for people who already sent a request, and never shown over another open dialog. */

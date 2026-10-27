@@ -23,6 +23,11 @@ return [
     'admin_key'   => '',
     // Lead notifications; empty = store in the database only
     'lead_email'  => 'info@houstonapartments.com',
+    // Outgoing mail for lead notifications (the domain's own mailbox; password only in config.local.php)
+    'smtp_host'   => 'smtp.hostinger.com',
+    'smtp_port'   => 465,
+    'smtp_user'   => 'info@houstonapartments.com',
+    'smtp_pass'   => '',
     // How rents appear to visitors: 'starts_at' ("Starts at $1,480") or
     // 'hidden' (always "Check for availability"). Filters use the real numbers either way.
     'price_display' => 'hidden',
