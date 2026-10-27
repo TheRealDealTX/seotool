@@ -3,7 +3,7 @@ defined('HA_ROOT') || exit;
 $count = count($listings);
 ?>
 <section class="page-hero area-hero">
-  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/Houston-Skyline.webp" alt="" width="1600" height="700"></div>
+  <div class="page-hero-bg" aria-hidden="true"></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Houston Apartments</a><span>/</span><a href="/houston-apartments-neighborhoods/">Neighborhoods</a><span>/</span><span aria-current="page"><?= e($area['name']) ?></span></nav>
     <h1 class="fade-up"><?= e($page['title'] ?? $area['name'] . ' Apartments') ?></h1>

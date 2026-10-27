@@ -47,14 +47,13 @@ Roles: *admin* (also manages users) and *editor* (listings + leads).
 
 ## Prices and filter URLs
 
-Visitors see "Starts at $X" or "Check for availability" (`price_display`:
-`starts_at` | `hidden`); full ranges and per-plan prices are never shown and
-sentences quoting rents are dropped from imported descriptions. The real
-numbers stay in the database for the price filter.
+Prices are hidden from visitors (`price_display` = `hidden`: every listing
+says "Check for availability", map pins are plain dots). `starts_at` would show
+"Starts at $X" instead. The real numbers stay in the database for the price filter.
 
 Filters live in the path (`public/app/lib/Filters.php`):
 `/apartments/3-beds/`, `/apartments/3-beds-1200-to-1600/`,
-`/apartments/houston-heights/pet-friendly-with-pool/`. Token order is fixed
+`/apartments/houston-heights/pet-friendly-with-pool-gym-closets/` (one `with-` prefix, short amenity words). Token order is fixed
 (beds, baths, price, flags, amenities, year) and any other URL for the same
 filters 301s to the canonical one, including old `?beds=3` links. Keyword,
 drawn-area, sort and multi-bedroom searches stay in the query string and are
@@ -110,8 +109,9 @@ point-in-polygon test.
 
 ## Launch checklist
 
-1. Point houstonapartments.com at website `SwlS15suw` in Hostinger.
-2. In `config.local.php`: `site_url` → `https://houstonapartments.com`,
-   `indexable` → `true`, `lead_email` → the inbox for leads.
-3. Run the full Houston sync, then add the cron job.
-4. Resubmit `/sitemap_index.xml` in Search Console.
+1. Add houstonapartments.com (and www) to website `SwlS15suw` in Hostinger and point DNS at it; wait for SSL.
+   Requests on that host automatically use `https://houstonapartments.com` as the canonical URL and allow
+   indexing (`live_host`); www redirects to the bare domain. The preview domain stays noindex.
+2. Check https://houstonapartments.com/robots.txt shows the sitemap line, then resubmit
+   `/sitemap_index.xml` in Search Console.
+3. Keep the domain's existing MX/email DNS records when moving DNS.

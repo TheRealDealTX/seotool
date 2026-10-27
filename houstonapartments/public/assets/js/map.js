@@ -309,7 +309,7 @@
       e.preventDefault();
       down = true; pts = [ll(e)];
       c.setPointerCapture && c.setPointerCapture(e.pointerId);
-      line = L.polyline(pts, { color: '#e2445c', weight: 3, dashArray: '6 6' }).addTo(map);
+      line = L.polyline(pts, { color: '#ff6b4a', weight: 3, dashArray: '6 6' }).addTo(map);
     });
     c.addEventListener('pointermove', function (e) {
       if (!drawing || !down) return;
@@ -334,7 +334,7 @@
 
     function drawPoly() {
       if (polyLayer) map.removeLayer(polyLayer);
-      polyLayer = L.polygon(poly, { color: '#e2445c', weight: 3, fillColor: '#e2445c', fillOpacity: 0.08, className: 'drawn-area' }).addTo(map);
+      polyLayer = L.polygon(poly, { color: '#ff6b4a', weight: 3, fillColor: '#ff6b4a', fillOpacity: 0.08, className: 'drawn-area' }).addTo(map);
       mapMovedByCode = true;
       map.fitBounds(polyLayer.getBounds(), { padding: [40, 40] });
       clearBtn.hidden = false;
@@ -410,6 +410,6 @@
     var m2 = baseMap(pm, { center: [lat, lng], zoom: 14, scrollWheelZoom: false });
     L.marker([lat, lng], { icon: L.divIcon({ className: '', html: '<div class="home-pin"></div>', iconSize: [18, 18] }) }).addTo(m2)
       .bindTooltip(pm.getAttribute('data-name'), { direction: 'top', offset: [0, -10], permanent: true });
-    L.circle([lat, lng], { radius: 1609, color: '#5b3fd6', weight: 1, fillOpacity: 0.05, dashArray: '4 6' }).addTo(m2);
+    L.circle([lat, lng], { radius: 1609, color: '#0f766e', weight: 1, fillOpacity: 0.05, dashArray: '4 6' }).addTo(m2);
   }
 })();

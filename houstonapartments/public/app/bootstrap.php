@@ -11,6 +11,13 @@ function config(string $key, $default = null)
     if ($cfg === null) {
         $local = HA_APP . '/config.local.php';
         $cfg = array_merge(require HA_APP . '/config.sample.php', is_file($local) ? require $local : []);
+        // Served on the real domain: canonical URLs point there and search engines may index.
+        // Any other host (the temporary hostingersite.com preview) keeps its own settings (noindex).
+        $host = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+        if ($cfg['live_host'] && in_array($host, [$cfg['live_host'], 'www.' . $cfg['live_host']], true)) {
+            $cfg['site_url'] = 'https://' . $cfg['live_host'];
+            $cfg['indexable'] = empty($cfg['force_noindex']);
+        }
     }
     return $cfg[$key] ?? $default;
 }

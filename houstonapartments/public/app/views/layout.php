@@ -3,7 +3,7 @@ defined('HA_ROOT') || exit;
 $title = $meta['title'] ?? SITE['name'];
 $desc = $meta['description'] ?? '';
 $canonical = isset($meta['canonical']) ? site_url($meta['canonical']) : null;
-$image = !empty($meta['image']) ? site_url($meta['image']) : site_url('/assets/img/Houston-Skyline.webp');
+$image = !empty($meta['image']) ? site_url($meta['image']) : site_url('/assets/img/og-default.png');
 $noindex = !config('indexable') || !empty($meta['noindex']);
 $needsMap = in_array($meta['body_class'] ?? '', ['home', 'search-page', 'property-page'], true) || !empty($meta['map']);
 $current = strtok($_SERVER['REQUEST_URI'] ?? '/', '?');
@@ -27,12 +27,13 @@ if (isset($schemas['@context'])) {
 <?php if ($canonical): ?><meta property="og:url" content="<?= e($canonical) ?>"><?php endif ?>
 <meta property="og:image" content="<?= e($image) ?>">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f2a47">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/assets/img/favicon.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <?php if ($needsMap): ?>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="">
@@ -48,10 +49,7 @@ if (isset($schemas['@context'])) {
 <div class="progress" aria-hidden="true"><span></span></div>
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="/" aria-label="Houston Apartments home">
-      <img src="/assets/img/Houston-Apartments-Logo.webp" alt="" width="40" height="40" class="brand-icon">
-      <img src="/assets/img/Houston-Apartments-Site-Logo.webp" alt="Houston Apartments" width="176" height="40" class="brand-word">
-    </a>
+    <a class="brand" href="/" aria-label="Houston Apartments home"><?php require HA_APP . '/views/partials/logo.php'; ?></a>
     <nav class="main-nav" aria-label="Main">
       <?php foreach (NAV as [$href, $label]): ?>
         <a href="<?= e($href) ?>"<?= str_starts_with($current, $href) ? ' aria-current="page"' : '' ?>><?= e($label) ?></a>
@@ -59,7 +57,7 @@ if (isset($schemas['@context'])) {
     </nav>
     <div class="header-cta">
       <a class="phone-link" href="tel:<?= SITE['phone_raw'] ?>"><span class="ico ico-phone" aria-hidden="true"></span><span><?= SITE['phone'] ?></span></a>
-      <button class="btn btn-grad btn-sm" type="button" data-lead>Get $<?= SITE['cashback'] ?> Back</button>
+      <button class="btn btn-grad btn-sm" type="button" data-lead>Free apartment search</button>
       <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -93,9 +91,9 @@ if (isset($schemas['@context'])) {
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-brand">
-      <img src="/assets/img/Houston-Apartments-Site-Logo.webp" alt="Houston Apartments" width="176" height="40" loading="lazy" class="footer-logo">
+      <?php $logoClass = 'logo-light'; require HA_APP . '/views/partials/logo.php'; ?>
       <p>Houston Apartments is a free apartment locating service run by <?= e(SITE['legal']) ?>. Licensed Texas real estate professionals helping renters across Greater Houston since <?= SITE['founded'] ?>.</p>
-      <p class="footer-contact"><a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a> · <a href="https://www.instagram.com/riseapartmentshtx/" rel="noopener" target="_blank">@riseapartmentshtx</a></p>
+      <p class="footer-contact"><a href="tel:<?= SITE['phone_raw'] ?>"><?= SITE['phone'] ?></a></p>
     </div>
     <div>
       <h3>Popular areas</h3>

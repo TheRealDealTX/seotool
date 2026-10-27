@@ -22,9 +22,13 @@ function not_found(): void
     exit;
 }
 
-// Canonical scheme (TLS terminates upstream)
+// Canonical scheme (TLS terminates upstream) and bare domain (www → houstonapartments.com)
+$host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+if (config('live_host') && $host === 'www.' . config('live_host')) {
+    redirect('https://' . config('live_host') . $uri);
+}
 if (($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '') === 'http') {
-    redirect('https://' . ($_SERVER['HTTP_HOST'] ?? '') . $uri);
+    redirect('https://' . $host . $uri);
 }
 
 // Old WordPress plumbing → nearest equivalent
@@ -33,6 +37,9 @@ if (preg_match('#^/(wp-admin|wp-login\.php|xmlrpc\.php|wp-json|wp-includes)(/|$)
 }
 if (preg_match('#^/(feed|comments/feed|post/feed)/?$#', $path) || preg_match('#^/post/[^/]+/feed/?$#', $path)) {
     redirect('/houston-apartments-blog/');
+}
+if (preg_match('#^/wp-content/uploads/.*Houston-Apartments-(Site-)?Logo#', $path)) {
+    redirect('/assets/img/logo.png');
 }
 if (preg_match('#^/(author|tag)/#', $path)) {
     redirect('/houston-apartments-blog/');
@@ -216,7 +223,7 @@ function page_post(string $slug): void
             'headline' => $post['title'], 'datePublished' => $post['date'], 'dateModified' => $post['modified'],
             'image' => $post['image'] ? site_url($post['image']) : null,
             'author' => ['@type' => 'Organization', 'name' => SITE['name']],
-            'publisher' => ['@type' => 'Organization', 'name' => SITE['name'], 'logo' => ['@type' => 'ImageObject', 'url' => site_url('/assets/img/Houston-Apartments-Site-Logo.webp')]],
+            'publisher' => ['@type' => 'Organization', 'name' => SITE['name'], 'logo' => ['@type' => 'ImageObject', 'url' => site_url('/assets/img/logo.png')]],
             'mainEntityOfPage' => site_url($post['path']),
         ],
     ]);
@@ -394,11 +401,10 @@ function schema_org_business(): array
         'name' => SITE['name'],
         'legalName' => SITE['legal'],
         'url' => site_url('/'),
-        'logo' => site_url('/assets/img/Houston-Apartments-Site-Logo.webp'),
+        'logo' => site_url('/assets/img/logo.png'),
         'telephone' => SITE['phone_raw'],
         'foundingDate' => (string) SITE['founded'],
         'areaServed' => ['@type' => 'City', 'name' => 'Houston, TX'],
         'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Houston', 'addressRegion' => 'TX', 'addressCountry' => 'US'],
-        'sameAs' => ['https://www.instagram.com/riseapartmentshtx/'],
     ];
 }

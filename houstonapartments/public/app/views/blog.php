@@ -1,6 +1,6 @@
 <?php defined('HA_ROOT') || exit; ?>
 <section class="page-hero">
-  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/Houston-Skyline.webp" alt="" width="1600" height="700"></div>
+  <div class="page-hero-bg" aria-hidden="true"></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Houston Apartments</a><span>/</span><span aria-current="page">Blog</span></nav>
     <h1 class="fade-up">Houston Apartments Blog</h1>

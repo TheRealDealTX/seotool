@@ -25,12 +25,16 @@
   /* Mobile drawer */
   var burger = $('.burger'), drawer = $('#drawer');
   if (burger && drawer) {
-    burger.addEventListener('click', function () {
-      var open = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!open));
-      drawer.hidden = open;
-      document.body.style.overflow = open ? '' : 'hidden';
-    });
+    var setNav = function (open) {
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      drawer.hidden = !open;
+      document.body.classList.toggle('nav-open', open);
+    };
+    burger.addEventListener('click', function () { setNav(burger.getAttribute('aria-expanded') !== 'true'); });
+    drawer.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) { setNav(false); burger.focus(); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1240 && !drawer.hidden) setNav(false); });
   }
 
   /* Scroll reveal */

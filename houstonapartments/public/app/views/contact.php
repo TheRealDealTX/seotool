@@ -1,6 +1,6 @@
 <?php defined('HA_ROOT') || exit; ?>
 <section class="page-hero">
-  <div class="page-hero-bg" aria-hidden="true"><img src="/assets/img/Houston-Skyline.webp" alt="" width="1600" height="700"></div>
+  <div class="page-hero-bg" aria-hidden="true"></div>
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Houston Apartments</a><span>/</span><span aria-current="page">Contact</span></nav>
     <h1 class="fade-up">Contact Houston Apartments</h1>
@@ -18,7 +18,6 @@
         <li>Tours scheduled around your calendar</li>
         <li>Up to $<?= SITE['cashback'] ?> back when you lease</li>
       </ul>
-      <p><a href="https://www.instagram.com/riseapartmentshtx/" target="_blank" rel="noopener">Follow us on Instagram @riseapartmentshtx</a></p>
     </div>
     <div class="form-card reveal d1">
       <form class="lead-form" novalidate>

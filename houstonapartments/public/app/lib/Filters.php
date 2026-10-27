@@ -16,18 +16,22 @@ final class Filters
 {
     public const FLAGS = [
         'pets'      => ['pet-friendly', 'Pet-Friendly'],
-        'parking'   => ['with-parking', 'with Parking'],
+        'parking'   => ['parking', 'with Parking'],
         'special'   => ['move-in-specials', 'with Move-In Specials'],
         'furnished' => ['furnished', 'Furnished'],
         'essential' => ['income-restricted', 'Income-Restricted'],
     ];
 
+    /**
+     * Short amenity words. All "with" amenities (plus parking) share one
+     * prefix: /apartments/with-pool-gym-closets/. "gated" stands alone.
+     */
     public const AMEN_SLUGS = [
-        'pool' => 'with-pool', 'fitness' => 'with-gym', 'washer' => 'with-washer-dryer', 'elevator' => 'with-elevator',
-        'gated' => 'gated', 'balcony' => 'with-balcony', 'walkin' => 'with-walk-in-closets', 'stainless' => 'with-stainless-appliances',
-        'hardwood' => 'with-hardwood-floors', 'dogpark' => 'with-dog-park', 'business' => 'with-business-center',
-        'concierge' => 'with-concierge', 'clubhouse' => 'with-clubhouse', 'package' => 'with-package-lockers',
-        'fireplace' => 'with-fireplace', 'wifi' => 'with-wifi',
+        'pool' => 'pool', 'fitness' => 'gym', 'washer' => 'washer-dryer', 'elevator' => 'elevator',
+        'gated' => 'gated', 'balcony' => 'balcony', 'walkin' => 'closets', 'stainless' => 'stainless',
+        'hardwood' => 'hardwood', 'dogpark' => 'dog-park', 'business' => 'business-center',
+        'concierge' => 'concierge', 'clubhouse' => 'clubhouse', 'package' => 'package-lockers',
+        'fireplace' => 'fireplace', 'wifi' => 'wifi',
     ];
 
     /** Query keys that are carried in the path. */
@@ -122,14 +126,22 @@ final class Filters
             $t[] = 'over-' . $s['price_min'];
         }
         foreach (self::FLAGS as $k => [$slug]) {
-            if (isset($s[$k])) {
+            if (isset($s[$k]) && $k !== 'parking') {
                 $t[] = $slug;
             }
         }
-        foreach (explode(',', $s['amen'] ?? '') as $a) {
-            if (isset(self::AMEN_SLUGS[$a])) {
-                $t[] = self::AMEN_SLUGS[$a];
+        $amen = explode(',', $s['amen'] ?? '');
+        if (in_array('gated', $amen, true)) {
+            $t[] = 'gated';
+        }
+        $with = isset($s['parking']) ? ['parking'] : [];
+        foreach ($amen as $a) {
+            if (isset(self::AMEN_SLUGS[$a]) && $a !== 'gated') {
+                $with[] = self::AMEN_SLUGS[$a];
             }
+        }
+        if ($with) {
+            $t[] = 'with-' . implode('-', $with);
         }
         if (isset($s['year'])) {
             $t[] = 'built-' . $s['year'] . '-or-later';
@@ -181,11 +193,26 @@ final class Filters
             'built-(\d{4})-or-later' => function ($m) use (&$s) { $s['year'] = $m[1]; },
         ];
         foreach (self::FLAGS as $k => [$slug]) {
-            $patterns[preg_quote($slug, '#')] = function () use (&$s, $k) { $s[$k] = '1'; };
+            if ($k !== 'parking') {
+                $patterns[preg_quote($slug, '#')] = function () use (&$s, $k) { $s[$k] = '1'; };
+            }
         }
-        foreach (self::AMEN_SLUGS as $k => $slug) {
-            $patterns[preg_quote($slug, '#')] = function () use (&$s, $k) { $s['amen'] = trim(($s['amen'] ?? '') . ',' . $k, ','); };
-        }
+        $patterns['gated'] = function () use (&$s) { $s['amen'] = trim(($s['amen'] ?? '') . ',gated', ','); };
+        // "with-" followed by one or more amenity words (longest first so washer-dryer beats washer)
+        $words = array_filter(self::AMEN_SLUGS, fn ($w) => $w !== 'gated') + ['parking' => 'parking'];
+        uasort($words, fn ($a, $b) => strlen($b) <=> strlen($a));
+        $alt = implode('|', array_map(fn ($w) => preg_quote($w, '#'), $words));
+        $patterns["with-((?:(?:with-)?(?:$alt)(?:-(?=(?:with-)?(?:$alt)(?:-|$))|))+)"] = function ($m) use (&$s, $words, $alt) {
+            preg_match_all("#(?:with-)?($alt)(?=-|$)#", $m[1], $mm);
+            foreach ($mm[1] as $w) {
+                $key = array_search($w, $words, true);
+                if ($key === 'parking') {
+                    $s['parking'] = '1';
+                } else {
+                    $s['amen'] = trim(($s['amen'] ?? '') . ',' . $key, ',');
+                }
+            }
+        };
         while ($rest !== '') {
             $hit = false;
             foreach ($patterns as $re => $apply) {

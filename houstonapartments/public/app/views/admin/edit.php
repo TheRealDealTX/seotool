@@ -62,7 +62,7 @@ $bedOpts = [0 => 'Studio', 1 => '1 bed', 2 => '2 beds', 3 => '3 beds', 4 => '4+ 
 
   <section class="card">
     <h2><span class="step">3</span> Starting prices &amp; specials</h2>
-    <p class="muted">Visitors see “Starts at $X” using the lowest price below (or “Check for availability” when blank). These numbers also power the price filters. Leave a box empty if you don’t know it.</p>
+    <p class="muted">🔒 These prices are <strong>never shown to visitors</strong> – the website says “Check for availability”. They’re only used so the price filters on the search page work. Leave a box empty if you don’t know it.</p>
     <div class="fields prices">
       <?php foreach ($bedOpts as $b => $label): ?>
         <label><?= $label ?><span class="money-in"><i>$</i><input name="price[<?= $b ?>]" value="<?= e($prices[$b] ?? '') ?>" inputmode="numeric" placeholder="—"></span></label>

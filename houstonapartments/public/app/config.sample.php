@@ -4,6 +4,9 @@
 // so a direct request to it prints nothing.
 return [
     'site_url'    => 'https://houstonapartments.com',
+    // When requests arrive on this host (or www.), site_url switches to it and
+    // indexing turns on automatically; set force_noindex => true to keep it hidden.
+    'live_host'   => 'houstonapartments.com',
     // MySQL on the same server: host "localhost" (socket), not the hstgr.io host.
     'db_dsn'      => 'mysql:host=localhost;dbname=DBNAME;charset=utf8mb4',
     'db_user'     => 'DBUSER',
@@ -22,7 +25,7 @@ return [
     'lead_email'  => 'info@houstonapartments.com',
     // How rents appear to visitors: 'starts_at' ("Starts at $1,480") or
     // 'hidden' (always "Check for availability"). Filters use the real numbers either way.
-    'price_display' => 'starts_at',
+    'price_display' => 'hidden',
     // Search-engine indexing; keep false on the temporary domain
     'indexable'   => false,
     // Vector map style (OpenFreeMap: free, no key, commercial use allowed)

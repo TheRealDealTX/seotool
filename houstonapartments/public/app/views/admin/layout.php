@@ -24,14 +24,14 @@ $active = function ($href) use ($cur) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title><?= e($title ?? 'Admin') ?> · Houston Apartments Admin</title>
-<link rel="icon" href="/assets/img/favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/img/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 <link rel="stylesheet" href="<?= asset('css/admin.css') ?>">
 </head>
 <body data-csrf="<?= e($csrf) ?>">
 <aside class="side" id="side">
-  <a class="side-brand" href="/admin/"><img src="/assets/img/Houston-Apartments-Logo.webp" alt="" width="34" height="34"><span>Houston Apartments<small>Admin</small></span></a>
+  <a class="side-brand" href="/admin/"><?php $logoClass = 'logo-light'; require HA_APP . '/views/partials/logo.php'; ?><small>Admin</small></a>
   <nav>
     <?php foreach ($nav as [$href, $label, $ico]): ?>
       <a href="<?= $href ?>"<?= $active($href) ? ' class="on"' : '' ?>><span class="ni"><?= $ico ?></span><?= e($label) ?><?php if ($href === '/admin/leads/' && $newLeads): ?><b class="nb"><?= $newLeads ?></b><?php endif ?></a>

@@ -20,14 +20,15 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
 
 <section class="hero">
   <div class="hero-bg" aria-hidden="true">
-    <img src="/assets/img/Houston-Skyline.webp" alt="" width="1920" height="839" fetchpriority="high">
-    <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
-    <canvas class="hero-stars"></canvas>
+    <span class="sun"></span>
+    <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+    <div class="hero-skyline"></div>
   </div>
-  <div class="wrap hero-inner">
+  <div class="wrap hero-grid">
+  <div class="hero-inner">
     <p class="eyebrow fade-up"><span class="dot-live"></span> Free Houston apartment locator · Since <?= SITE['founded'] ?></p>
     <h1 class="hero-title fade-up d1">Houston Apartments for Rent<br><span class="grad-text">find your <span class="typer" data-words='["luxury high-rise","pet-friendly 1-bedroom","Heights hideaway","move-in special","Katy family home base"]'>luxury high-rise</span></span></h1>
-    <p class="hero-sub fade-up d2">Search Houston apartments on a live map, draw the exact area you want to live in, and filter by rent, bedrooms, pets and amenities. When you’re ready, a Houston Apartments locator books the tours – and you get up to $<?= SITE['cashback'] ?> back.</p>
+    <p class="hero-sub fade-up d2">Search Houston apartments on a live map, draw the exact area you want to live in, and filter by rent, bedrooms, pets and amenities. When you’re ready, a Houston Apartments locator books the tours – and you can earn a move-in reward of up to $<?= SITE['cashback'] ?>.</p>
 
     <form class="hero-search fade-up d3" action="/apartments/" method="get" role="search">
       <label class="hs-field hs-where">
@@ -53,14 +54,21 @@ $schemaFaq = ['@context' => 'https://schema.org', '@type' => 'FAQPage', 'mainEnt
       <a class="chip" href="/apartments/?beds=2,3">2–3 bedrooms</a>
     </div>
   </div>
-  <a class="scroll-cue" href="#stats" aria-label="Scroll down"><span></span></a>
+  <div class="hero-collage fade-up d2" aria-hidden="true">
+    <?php foreach (array_slice($featured, 0, 3) as $k => $c): ?>
+      <a class="hc hc<?= $k ?>" href="<?= e($c['url']) ?>" tabindex="-1"><img src="<?= e($c['photos'][0] ?? '/assets/img/og-default.png') ?>" alt="" width="420" height="300"><span><strong><?= e($c['name']) ?></strong><small><?= e($c['hood']) ?></small></span></a>
+    <?php endforeach ?>
+    <span class="hc-badge b-draw"><span class="ico ico-lasso"></span> Draw your area</span>
+    <span class="hc-badge b-pet">🐾 Pet friendly</span>
+  </div>
+  </div>
 </section>
 
 <section class="stats" id="stats">
   <div class="wrap stats-grid">
     <div class="stat reveal"><strong data-count="<?= max(1, $stats['count']) ?>">0</strong><span>Houston apartment communities on the map</span></div>
     <div class="stat reveal d1"><strong data-count="<?= count(AREAS) ?>">0</strong><span>neighborhoods &amp; suburbs covered</span></div>
-    <div class="stat reveal d2"><strong>$<span data-count="<?= SITE['cashback'] ?>">0</span></strong><span>back when you lease with us</span></div>
+    <div class="stat reveal d2"><strong>$<span data-count="<?= SITE['cashback'] ?>">0</span></strong><span>move-in reward when you lease with us</span></div>
     <div class="stat reveal d3"><strong>$<span data-count="0">0</span></strong><span>cost to renters – ever</span></div>
   </div>
 </section>
