@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /includes/
+Disallow: /thank-you/
+Disallow: /submit.php
+
+Sitemap: https://austinsroofing.com/sitemap_index.xml
