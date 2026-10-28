@@ -8,8 +8,8 @@ const PHONE       = '210-903-9471';
 const PHONE_HREF  = 'tel:+12109039471';
 const EMAIL       = 'contact@cowboytinyhomes.com';
 const LEAD_TO     = 'contact@cowboytinyhomes.com';   // where contact-form leads are emailed
-const MAIL_FROM   = 'no-reply@cowboytinyhomes.com';  // must be on this domain for Hostinger mail() delivery
-const ASSET_VER   = '20261028';                      // bump to bust browser caches for CSS/JS
+const MAIL_FROM   = 'contact@cowboytinyhomes.com';   // sender; SMTP login comes from inc/secrets.php (server only, not in git)
+const ASSET_VER   = '20261028b';                     // bump to bust browser caches for CSS/JS
 
 // Cities the old site's forms offered, and the area pages built for them.
 const SERVICE_CITIES = [
@@ -53,4 +53,5 @@ const NAV = [
         ['Tiny Home Financing in Texas', '/guides/tiny-home-financing-texas/'],
         ['FAQs', '/faqs/'],
     ]],
+    ['Blog', '/blog/', null],
 ];

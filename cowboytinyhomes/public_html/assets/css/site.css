@@ -403,3 +403,13 @@ input[type=range] { width: 100%; accent-color: var(--gold-dark); height: 28px; }
 
 /* plan details list (Gonzales page sidebar) */
 .side-box li.kv { padding: 8px 0; font-size: .95rem; }
+
+/* blog */
+.post-feature { margin-top: -40px; position: relative; z-index: 2; }
+.post-feature img { width: 100%; max-width: 980px; border-radius: 18px; box-shadow: var(--shadow-lg); }
+.type-post .hero--page .wrap { padding-bottom: 80px; }
+.post-card h3 a { color: var(--ink); text-decoration: none; }
+.post-card h3 a:hover { color: var(--gold-dark); }
+.post-card h3 { font-size: 1.15rem; }
+.post-card .card-kicker { margin-bottom: 6px; display: block; }
+@media (max-width: 860px) { .type-hub article.grid-2.card { grid-template-columns: 1fr !important; } }

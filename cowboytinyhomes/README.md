@@ -14,9 +14,12 @@ Hostinger Cloud Enterprise (account `u401386392`, document root
 | `public_html/inc/pages.php` | Route table with each page's title, meta description, type and sitemap priority, plus the old→new redirect map |
 | `public_html/inc/layout.php` | Page shell (head, header, footer), helpers (`hero`, `faq_section`, `cta_band`, `related`) and the JSON-LD builder |
 | `public_html/inc/contact.php` | Contact-form handler: validates input, applies honeypot and timing spam checks, emails `contact@`, and saves a copy to `inc/data/leads.csv` |
+| `public_html/inc/smtp.php` | Sends leads through the contact@ mailbox over authenticated SMTP (smtp.hostinger.com:465), falling back to `mail()`. Failures are logged to `inc/data/mail.log` |
+| `public_html/inc/secrets.php` | **Server only, git-ignored.** The SMTP login: `<?php return ['host'=>'smtp.hostinger.com','port'=>465,'user'=>'contact@cowboytinyhomes.com','pass'=>'…'];` Recreate it on the server if the mailbox password changes |
 | `public_html/pages/` | One template per page: services, areas, guides, tools, and core pages |
 | `public_html/assets/` | `css/site.css`, `js/site.js` (nav, FAQ search, filters), `js/tools.js` (all calculators), and images |
 | `validate.py` | Crawls a running copy and checks status codes, single H1, unique titles and descriptions, canonicals, JSON-LD, links, alt text, and the homepage brand count |
+| `featured_images.py` | Generates the 1200×675 blog featured images from the site photos (needs Montserrat TTFs) |
 | `deploy.py` | Uploads to Hostinger through the File Browser API; `launch` also moved WordPress into the backup folder |
 
 ## Local preview
@@ -32,13 +35,14 @@ python3 validate.py            # in another shell
 2. Create `pages/<file>.php`. It only needs to echo the content of `<main>`.
 3. Run `validate.py`, then deploy. `sitemap.xml` updates automatically.
 
-## Pages (32)
+## Pages (38)
 
 - **Home** — "tiny home builders texas" (also targets tiny house / small house builders texas, texas built tiny homes, custom tiny homes texas)
 - **Services** — custom tiny homes, ADU builders, tiny homes on wheels, park model homes, design services, remodel design
 - **Service areas** — San Antonio, Austin, Dallas, Fort Worth, Houston, plus a hub page
 - **Guides** — Texas tiny house laws (with an interactive permit checklist), cost to build, ADU vs park model vs THOW, choosing a builder, financing
 - **Tools** — cost calculator, "which tiny home" quiz, size planner, ADU rental income calculator, loan calculator
+- **Blog** (`/blog/`, RSS at `/blog/feed.xml`) — five dated posts, each with a featured image: western tiny homes (2026-05-14), backyard casita ideas (2026-06-25), gooseneck vs bumper pull (2026-08-06), tiny home design for Texas heat (2026-09-17), tiny house communities in Texas (2026-10-22). To add a post, add a `'type' => 'post'` route with `published`, `category`, `read` and `image` set, then create a template using `post_hero()` and `post_sidebar()`. The blog index, homepage cards, RSS and sitemap all pick it up automatically.
 - **Core** — house designs (filterable), Gonzales Modern Living, our process, FAQs (searchable), contact (Design/Build and Remodel forms), write for us, privacy
 
 Old WordPress URLs (`/category/*`, Yoast sitemaps, `/feed/`, `/wp-admin` and others) 301 to their new equivalents. Old `/wp-content/uploads/...` image URLs 301 to the same image in `/assets/img/`.

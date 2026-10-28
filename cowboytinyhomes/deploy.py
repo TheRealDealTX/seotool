@@ -29,7 +29,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent / 'public_html'
 BACKUP = 'wordpress-backup-2026-10-28'
 KEEP_IN_ROOT = {'.private', BACKUP}           # Hostinger's own folder + the backup itself
-SKIP = {'router-dev.php'}                     # local preview helper
+SKIP = {'router-dev.php', 'inc/secrets.php'}  # local preview helper; secrets are managed on the server only
 SKIP_DIRS = {'inc/data'}                      # leads written by the live site
 LAST = ['index.php', '.htaccess']             # swapped in at the very end
 

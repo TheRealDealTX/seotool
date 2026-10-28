@@ -186,6 +186,44 @@ const PAGES = [
         'image' => '4.webp', 'published' => '2026-10-28',
     ],
 
+    // ---- Blog (type 'post'; 'published' sets the date shown, the schema and the sitemap) --
+    '/blog/' => [
+        'file' => 'blog/index', 'type' => 'hub', 'crumb' => 'Blog', 'priority' => '0.7', 'updated' => '2026-10-22',
+        'title' => 'Tiny Home Blog | Texas Tiny Living Tips | Cowboy Tiny Homes',
+        'desc'  => 'Tiny home ideas, design tips and practical advice for Texans: western-style tiny homes, backyard casitas, trailers, staying cool and tiny house communities.',
+        'image' => 'blog-western-tiny-homes.webp',
+    ],
+    '/blog/tiny-house-communities-texas/' => [
+        'file' => 'blog/tiny-house-communities-texas', 'type' => 'post', 'crumb' => 'Tiny House Communities in Texas', 'parent' => '/blog/', 'priority' => '0.6',
+        'title' => 'Tiny House Communities in Texas: How They Work & What to Ask',
+        'desc'  => 'How tiny house communities in Texas work: lot leases vs ownership, rules, utilities, costs and the questions to ask before you move your tiny home in.',
+        'image' => 'blog-tiny-house-communities-texas.webp', 'published' => '2026-10-22', 'category' => 'Tiny Living', 'read' => 8,
+    ],
+    '/blog/tiny-home-design-texas-heat/' => [
+        'file' => 'blog/tiny-home-design-texas-heat', 'type' => 'post', 'crumb' => 'Designing a Tiny Home for Texas Heat', 'parent' => '/blog/', 'priority' => '0.6',
+        'title' => 'Designing a Tiny Home for Texas Heat: 12 Ways to Stay Cool',
+        'desc'  => 'Twelve proven ways to keep a tiny home cool in a Texas summer: orientation, shade, insulation, windows, roofing, mini-splits, ventilation and humidity control.',
+        'image' => 'blog-tiny-home-texas-heat.webp', 'published' => '2026-09-17', 'category' => 'Building Smart', 'read' => 9,
+    ],
+    '/blog/gooseneck-vs-bumper-pull-tiny-house/' => [
+        'file' => 'blog/gooseneck-vs-bumper-pull', 'type' => 'post', 'crumb' => 'Gooseneck vs Bumper Pull Tiny House', 'parent' => '/blog/', 'priority' => '0.6',
+        'title' => 'Gooseneck vs Bumper Pull Tiny House: Which Trailer Is Best?',
+        'desc'  => 'Gooseneck or bumper pull? Compare tiny house trailer types on space, towing, stability, cost and Texas road rules to choose the right base for your THOW.',
+        'image' => 'blog-gooseneck-vs-bumper-pull.webp', 'published' => '2026-08-06', 'category' => 'Tiny Homes on Wheels', 'read' => 8,
+    ],
+    '/blog/backyard-casita-ideas-texas/' => [
+        'file' => 'blog/backyard-casita-ideas', 'type' => 'post', 'crumb' => 'Backyard Casita Ideas', 'parent' => '/blog/', 'priority' => '0.6',
+        'title' => '9 Backyard Casita Ideas Texans Love (With Planning Tips)',
+        'desc'  => 'Nine backyard casita ideas for Texas homes — guest suites, rentals, home offices, pool houses and more — with size, layout and permit tips for each.',
+        'image' => 'blog-backyard-casita-ideas.webp', 'published' => '2026-06-25', 'category' => 'ADUs & Casitas', 'read' => 9,
+    ],
+    '/blog/western-tiny-homes-texas-ranch-style/' => [
+        'file' => 'blog/western-tiny-homes', 'type' => 'post', 'crumb' => 'Western Tiny Homes', 'parent' => '/blog/', 'priority' => '0.6',
+        'title' => 'Western Tiny Homes: How to Get Texas Ranch Style in a Small House',
+        'desc'  => 'Western tiny homes bring ranch style to small living: board-and-batten, metal roofs, deep porches, stone and rustic interiors. Ideas from Cowboy Tiny Homes.',
+        'image' => 'blog-western-tiny-homes.webp', 'published' => '2026-05-14', 'category' => 'Design & Style', 'read' => 8,
+    ],
+
     // ---- Company & support pages -----------------------------------------
     '/our-process/' => [
         'file' => 'our-process', 'type' => 'page', 'crumb' => 'Our Process', 'priority' => '0.6',
@@ -234,9 +272,8 @@ const REDIRECTS = [
     '/contact/'                            => '/contact-us/',
     '/about/'                              => '/our-process/',
     '/about-us/'                           => '/our-process/',
-    '/blog/'                               => '/guides/',
-    '/feed/'                               => '/guides/',
-    '/comments/feed/'                      => '/guides/',
+    '/feed/'                               => '/blog/',
+    '/comments/feed/'                      => '/blog/',
     '/sitemap_index.xml'                   => '/sitemap.xml',
     '/page-sitemap.xml'                    => '/sitemap.xml',
     '/post-sitemap.xml'                    => '/sitemap.xml',

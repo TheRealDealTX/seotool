@@ -34,17 +34,29 @@ if (preg_match('#^/wp-content/uploads/\d{4}/\d{2}/(?:cropped-)?([\w-]+?)(?:-\d+x
 // Old WordPress single-design URLs, admin and feeds.
 if (preg_match('#^/category/#', $path)) redirect('/home-designs/');
 if (preg_match('#^/(wp-admin|wp-login\.php|wp-json|xmlrpc\.php|wp-includes)(/|$)#', $path)) redirect('/');
-if (preg_match('#/feed/?$#', $path)) redirect('/guides/');
+if (preg_match('#/feed/?$#', $path)) redirect('/blog/');
 
 if ($path === '/sitemap.xml') {
     header('Content-Type: application/xml; charset=utf-8');
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
     foreach (PAGES as $p => $m) {
-        echo '  <url><loc>' . e(abs_url($p)) . '</loc><lastmod>' . ($m['updated'] ?? '2026-10-28')
+        echo '  <url><loc>' . e(abs_url($p)) . '</loc><lastmod>' . ($m['updated'] ?? $m['published'] ?? '2026-10-28')
            . '</lastmod><priority>' . $m['priority'] . "</priority></url>\n";
     }
     echo "</urlset>\n";
+    exit;
+}
+
+if ($path === '/blog/feed.xml') {
+    header('Content-Type: application/rss+xml; charset=utf-8');
+    echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n" . '<rss version="2.0"><channel>';
+    echo '<title>' . SITE_NAME . ' Blog</title><link>' . SITE_URL . '/blog/</link><description>' . e(PAGES['/blog/']['desc']) . '</description><language>en-us</language>';
+    foreach (blog_posts() as $p => $m) {
+        echo '<item><title>' . e($m['title']) . '</title><link>' . e(abs_url($p)) . '</link><guid>' . e(abs_url($p)) . '</guid>'
+           . '<pubDate>' . date('r', strtotime($m['published'] . ' 09:00:00 America/Chicago')) . '</pubDate><description>' . e($m['desc']) . '</description></item>';
+    }
+    echo '</channel></rss>';
     exit;
 }
 

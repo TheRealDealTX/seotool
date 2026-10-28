@@ -247,6 +247,18 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--gold-dark)">From the Blog</p>
+      <h2>Latest Tiny Home Ideas &amp; Advice</h2>
+      <p class="section-intro">Fresh design ideas and practical tips from the Cowboy Tiny Homes blog.</p>
+    </div>
+    <?php post_cards(3); ?>
+    <p style="text-align:center;margin-top:30px"><a class="btn btn--outline" href="/blog/">Visit the Blog</a></p>
+  </div>
+</section>
+
 <section class="section section--alt">
   <div class="wrap">
     <div class="section-head">

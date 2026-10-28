@@ -110,7 +110,7 @@ function related(array $paths, string $heading = 'Keep Exploring'): void
 
 function kicker(string $type): string
 {
-    return ['service' => 'Home Build', 'area' => 'Service Area', 'guide' => 'Guide', 'tool' => 'Free Tool',
+    return ['service' => 'Home Build', 'area' => 'Service Area', 'guide' => 'Guide', 'post' => 'Blog', 'tool' => 'Free Tool',
             'hub' => 'Explore', 'page' => 'Cowboy Tiny Homes', 'home' => 'Home', 'legal' => 'Info'][$type] ?? 'Explore';
 }
 
@@ -189,8 +189,9 @@ function build_schema(string $path, array $m): array
             ];
             break;
         case 'guide':
+        case 'post':
             $graph[] = [
-                '@type' => 'Article', '@id' => $url . '#article', 'headline' => $m['title'], 'description' => $m['desc'],
+                '@type' => $m['type'] === 'post' ? 'BlogPosting' : 'Article', '@id' => $url . '#article', 'headline' => $m['title'], 'description' => $m['desc'],
                 'image' => abs_url(img_url($m['image'])), 'datePublished' => $m['published'] ?? '2026-10-28',
                 'dateModified' => $m['updated'] ?? ($m['published'] ?? '2026-10-28'),
                 'author' => ['@type' => 'Organization', 'name' => SITE_NAME, 'url' => SITE_URL . '/'],
@@ -232,7 +233,10 @@ function render_page(string $path, array $m, string $content, int $status = 200)
 <meta name="robots" content="<?= $robots ?>">
 <?php if ($status === 200): ?><link rel="canonical" href="<?= e($canonical) ?>">
 <?php endif; ?>
-<meta property="og:type" content="<?= $m['type'] === 'guide' ? 'article' : 'website' ?>">
+<meta property="og:type" content="<?= in_array($m['type'], ['guide', 'post'], true) ? 'article' : 'website' ?>">
+<?php if ($m['type'] === 'post'): ?><meta property="article:published_time" content="<?= e($m['published']) ?>">
+<link rel="alternate" type="application/rss+xml" title="<?= SITE_NAME ?> Blog" href="/blog/feed.xml">
+<?php endif; ?>
 <meta property="og:site_name" content="<?= SITE_NAME ?>">
 <meta property="og:title" content="<?= e($m['title']) ?>">
 <meta property="og:description" content="<?= e($m['desc']) ?>">
@@ -327,6 +331,7 @@ function render_page(string $path, array $m, string $content, int $status = 200)
         <li><a href="/tools/which-tiny-home-is-right-for-me/">Tiny Home Quiz</a></li>
         <li><a href="/guides/tiny-house-laws-texas/">Texas Tiny House Laws</a></li>
         <li><a href="/guides/cost-to-build-a-tiny-house-in-texas/">Tiny House Costs</a></li>
+        <li><a href="/blog/">Blog</a></li>
         <li><a href="/our-process/">Our Process</a></li>
         <li><a href="/faqs/">FAQs</a></li>
         <li><a href="/write-for-us/">Write for Us</a></li>
@@ -336,7 +341,6 @@ function render_page(string $path, array $m, string $content, int $status = 200)
   <div class="wrap footer-bottom">
     <span>© <?= date('Y') ?> <?= SITE_NAME ?>. All rights reserved.</span>
     <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/contact-us/">Contact Us</a> · <a href="/sitemap.xml">Sitemap</a></span>
-    <span>Designed &amp; Developed by JWeb</span>
   </div>
 </footer>
 <a class="mobile-call" href="<?= PHONE_HREF ?>">Call <?= PHONE ?></a>
@@ -347,4 +351,66 @@ function render_page(string $path, array $m, string $content, int $status = 200)
 </body>
 </html>
 <?php
+}
+
+// ---------------------------------------------------------------------------
+// Blog helpers
+
+/** Posts from the route table, newest first: [path => meta]. */
+function blog_posts(): array
+{
+    $posts = array_filter(PAGES, function ($m) { return $m['type'] === 'post'; });
+    uasort($posts, function ($a, $b) { return strcmp($b['published'], $a['published']); });
+    return $posts;
+}
+
+function nice_date(string $ymd): string
+{
+    return date('F j, Y', strtotime($ymd));
+}
+
+// Hero for a blog post: title, dek, byline + date + read time, then the featured image.
+function post_hero(string $h1, string $lead): void
+{
+    $m = $GLOBALS['page'];
+    hero([
+        'eyebrow' => $m['category'],
+        'h1' => $h1,
+        'lead' => $lead,
+        'meta' => 'By the ' . SITE_NAME . ' team · <time datetime="' . e($m['published']) . '">' . nice_date($m['published']) . '</time> · ' . (int)$m['read'] . ' min read',
+        'cta' => false,
+    ]);
+    echo '<div class="wrap post-feature"><img src="' . e(img_url($m['image'])) . '" alt="' . e($m['crumb']) . ' — featured image" width="1200" height="675" fetchpriority="high"></div>';
+}
+
+// Sidebar for posts: CTA + recent posts.
+function post_sidebar(): void
+{
+    $self = $GLOBALS['path'];
+    echo '<aside class="sidebar"><div class="side-box side-box--cta"><h3>Planning a Tiny Home?</h3>'
+       . '<p>Get a free design consultation with ' . SITE_NAME . '.</p>'
+       . '<a class="btn btn--gold" href="/contact-us/">Free Consult</a><a class="btn btn--ghost" href="' . PHONE_HREF . '">' . PHONE . '</a></div>'
+       . '<div class="side-box"><h3>More From the Blog</h3><ul>';
+    foreach (blog_posts() as $p => $m) {
+        if ($p !== $self) echo '<li><a href="' . e($p) . '">' . e($m['crumb']) . '</a></li>';
+    }
+    echo '</ul></div><div class="side-box"><h3>Free Tools</h3><ul>'
+       . '<li><a href="/tools/tiny-home-cost-calculator/">Tiny home cost calculator</a></li>'
+       . '<li><a href="/tools/which-tiny-home-is-right-for-me/">Which tiny home fits me?</a></li>'
+       . '<li><a href="/tools/tiny-house-size-planner/">Tiny house size planner</a></li></ul></div></aside>';
+}
+
+// Card grid of posts (blog index, homepage).
+function post_cards(int $limit = 0): void
+{
+    $i = 0;
+    echo '<div class="grid-3 post-grid">';
+    foreach (blog_posts() as $p => $m) {
+        if ($limit && $i++ >= $limit) break;
+        echo '<article class="card service-card post-card"><a href="' . e($p) . '" tabindex="-1" aria-hidden="true"><img src="' . e(img_url($m['image'])) . '" alt="' . e($m['crumb']) . ' — Cowboy Tiny Homes blog" width="1200" height="675" loading="lazy" style="aspect-ratio:16/9"></a>'
+           . '<div class="card-body"><span class="card-kicker">' . e($m['category']) . ' · <time datetime="' . e($m['published']) . '">' . nice_date($m['published']) . '</time></span>'
+           . '<h3><a href="' . e($p) . '">' . e($m['title']) . '</a></h3><p>' . e($m['desc']) . '</p>'
+           . '<a class="card-more" href="' . e($p) . '">Read article →</a></div></article>';
+    }
+    echo '</div>';
 }

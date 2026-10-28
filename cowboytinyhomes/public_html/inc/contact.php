@@ -1,5 +1,6 @@
 <?php
-// Contact-form handling: validate, spam-check, email the lead and keep a copy.
+require_once __DIR__ . '/smtp.php';
+// Contact-form handling: validate, spam-check, email the lead (inc/smtp.php) and keep a copy.
 //
 // Every lead is appended to inc/data/leads.csv (inc/ is denied to the web by
 // .htaccess) before the email is attempted, so nothing is lost if mail fails.
@@ -69,13 +70,7 @@ function handle_contact(array $post): array
     $what = $v['project_type'] ?: ($v['form'] === 'remodel' ? 'Remodel' : 'Design & Build');
     $subject = 'New lead: ' . $what . ' — ' . $name . ($v['city'] ? ' (' . $v['city'] . ')' : '');
     $safeName = preg_replace('/[^\p{L}\p{N} .\'-]/u', '', $name);
-    $headers = implode("\r\n", [
-        'From: ' . SITE_NAME . ' Website <' . MAIL_FROM . '>',
-        'Reply-To: ' . ($safeName ? '"' . $safeName . '" ' : '') . '<' . $v['email'] . '>',
-        'Content-Type: text/plain; charset=UTF-8',
-        'X-Mailer: PHP',
-    ]);
-    @mail(LEAD_TO, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-f' . MAIL_FROM);
+    send_mail(LEAD_TO, $subject, $body, $v['email'], $safeName);
 
     return ['ok' => true, 'errors' => [], 'values' => $v];
 }
