@@ -31,6 +31,21 @@ function not_found(): never
     render('404');
 }
 
+// Old WordPress media URLs: serve the files from the backup folder
+if (preg_match('#^/wp-content/uploads/(.+\.(webp|jpe?g|png|gif|svg|avif|pdf))$#i', $path, $m)) {
+    $base = realpath(__DIR__ . '/wp-backup-2026-10-28/wp-content/uploads');
+    $file = $base ? realpath($base . '/' . $m[1]) : false;
+    if ($file && str_starts_with($file, $base . '/') && is_file($file)) {
+        $types = ['webp' => 'image/webp', 'jpg' => 'image/jpeg', 'jpeg' => 'image/jpeg', 'png' => 'image/png', 'gif' => 'image/gif', 'svg' => 'image/svg+xml', 'avif' => 'image/avif', 'pdf' => 'application/pdf'];
+        header('Content-Type: ' . $types[strtolower($m[2])]);
+        header('Cache-Control: public, max-age=31536000');
+        header('Content-Length: ' . filesize($file));
+        readfile($file);
+        exit;
+    }
+    not_found();
+}
+
 // Legacy WordPress URLs
 $redirects = require __DIR__ . '/inc/redirects.php';
 $key = rtrim($path, '/') . (str_ends_with($path, '.xml') ? '' : '/');

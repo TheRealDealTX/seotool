@@ -14,10 +14,6 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteRule ^ https://luxuryapartmentdesign.com%{REQUEST_URI} [L,R=301]
 
-# Keep old WordPress media URLs working (files live in the backup folder)
-RewriteCond %{DOCUMENT_ROOT}/wp-backup-2026-10-28/wp-content/uploads/$1 -f
-RewriteRule ^wp-content/uploads/(.+\.(?:webp|jpe?g|png|gif|svg|avif|pdf))$ wp-backup-2026-10-28/wp-content/uploads/$1 [L,NC]
-
 # Private folders
 RewriteRule ^(inc|content|pages|templates|data)(/|$) - [F,L]
 RewriteRule (^|/)\.(?!well-known) - [F,L]
