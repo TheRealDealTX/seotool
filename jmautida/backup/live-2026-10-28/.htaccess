@@ -1,0 +1,62 @@
+DirectoryIndex index.html index.php
+Options -Indexes -MultiViews
+ErrorDocument 404 /404.html
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml application/xml text/xml
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType text/javascript "access plus 7 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+ExpiresByType font/woff "access plus 30 days"
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Host-specific normalization does not affect localhost or temporary domains.
+RewriteCond %{HTTP_HOST} ^www\.jmautida\.com$ [NC]
+RewriteRule ^ https://jmautida.com%{REQUEST_URI} [R=301,L,NE]
+RewriteCond %{HTTP_HOST} ^jmautida\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+RewriteRule ^ https://jmautida.com%{REQUEST_URI} [R=301,L,NE]
+# Legacy query-based tools: permanent redirects drop the obsolete query string.
+RewriteCond %{QUERY_STRING} (^|&)tool=html(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/html-playground [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=markdown(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/markdown-to-word [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=favicon(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/favicon-checker [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=meta(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/meta-tags-checker [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=json(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/json-formatter [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=contrast(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/contrast-checker [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=encode(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/url-encoder-decoder [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=words(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/word-counter [R=301,L,QSD]
+RewriteCond %{QUERY_STRING} (^|&)tool=time(&|$) [NC]
+RewriteRule ^tool(?:\.html)?/?$ /tools/time-calculator [R=301,L,QSD]
+RewriteRule ^tool(?:\.html)?/?$ /tools [R=301,L,QSD]
+RewriteCond %{THE_REQUEST} \s/+index\.(?:html|php)(?:[?\s]) [NC]
+RewriteRule ^index\.(?:html|php)$ / [R=301,L]
+RewriteRule ^(?:portfolio|work)(?:\.html)?/?$ / [R=301,L,QSD]
+RewriteRule ^resume(?:\.html)?/?$ /about [R=301,L,QSD]
+RewriteCond %{THE_REQUEST} \s/+(tools|about|contact|privacy)\.html(?:[?\s]) [NC]
+RewriteRule ^(tools|about|contact|privacy)\.html$ /$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+pages/(html-playground|markdown-to-word|favicon-checker|meta-tags-checker|json-formatter|contrast-checker|url-encoder-decoder|word-counter|time-calculator)\.html(?:[?\s]) [NC]
+RewriteRule ^pages/(html-playground|markdown-to-word|favicon-checker|meta-tags-checker|json-formatter|contrast-checker|url-encoder-decoder|word-counter|time-calculator)\.html$ /tools/$1 [R=301,L]
+RewriteRule ^(tools/(?:html-playground|markdown-to-word|favicon-checker|meta-tags-checker|json-formatter|contrast-checker|url-encoder-decoder|word-counter|time-calculator)|tools|about|contact|privacy)/+$ /$1 [R=301,L]
+RewriteRule ^tools/(html-playground|markdown-to-word|favicon-checker|meta-tags-checker|json-formatter|contrast-checker|url-encoder-decoder|word-counter|time-calculator)$ pages/$1.html [L]
+RewriteRule ^(tools|about|contact|privacy)$ $1.html [L]
+</IfModule>

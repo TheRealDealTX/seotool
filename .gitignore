@@ -1,3 +1,6 @@
 __pycache__/
 *.pyc
 dist/
+
+# jmautida.com server secrets
+jmautida/public/api/config.php

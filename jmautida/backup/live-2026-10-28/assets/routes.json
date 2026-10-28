@@ -1,0 +1,11 @@
+{
+  "html": "html-playground",
+  "markdown": "markdown-to-word",
+  "favicon": "favicon-checker",
+  "meta": "meta-tags-checker",
+  "json": "json-formatter",
+  "contrast": "contrast-checker",
+  "encode": "url-encoder-decoder",
+  "words": "word-counter",
+  "time": "time-calculator"
+}
