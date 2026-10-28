@@ -556,10 +556,14 @@ function admin_integrations(): void
                 $sample = ['id' => 0, 'name' => 'Test Lead', 'email' => 'test.lead@example.com', 'phone' => '+1 (832) 720-7978',
                            'move_in' => date('M j, Y', strtotime('+30 days')), 'beds' => '2', 'budget' => '$1,800',
                            'message' => 'This is a test lead sent from the Houston Apartments admin.', 'page' => '/apartments/', 'created_at' => gmdate('c')];
-                $res = lead_webhook($url, lead_payload($sample, 'Elan Memorial Park', site_url(listing_url('elan-memorial-park'))));
+                $sample['ip'] = $_SERVER['REMOTE_ADDR'] ?? '';
+                $res = lead_webhook_send($url, $sample, 'Elan Memorial Park', site_url(listing_url('elan-memorial-park')));
                 setting_set('lead_webhook_last', json_encode($res + ['at' => gmdate('c'), 'lead' => 'Test Lead']));
                 Auth::flash($res['ok'] ? 'Test lead sent. Integrately should now show the sample fields to map.' : 'Integrately didn’t accept the test (' . $res['error'] . '). Check the URL and try again.', $res['ok'] ? 'ok' : 'err');
             }
+        } elseif (($_POST['do'] ?? '') === 'format') {
+            setting_set('lead_webhook_format', ($_POST['format'] ?? '') === 'json' ? 'json' : 'elementor');
+            Auth::flash('Format saved. Send a test lead so Integrately picks up the new fields.');
         } elseif ($url === '') {
             setting_set('lead_webhook_url', null);
             Auth::flash('Webhook removed. Leads are still saved here and emailed.');
@@ -573,7 +577,8 @@ function admin_integrations(): void
     }
     $url = setting('lead_webhook_url') ?? '';
     $last = json_decode(setting('lead_webhook_last') ?? 'null', true);
-    admin_render('integrations', compact('url', 'last'));
+    $format = setting('lead_webhook_format') === 'json' ? 'json' : 'elementor';
+    admin_render('integrations', compact('url', 'last', 'format'));
 }
 
 function admin_users(): void

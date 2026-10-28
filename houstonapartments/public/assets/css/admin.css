@@ -167,3 +167,6 @@ form.inline { display: inline; }
 
 .s-review { background: #fff4dd; color: #8a5a00; }
 .note-review { background: #fdf0ec; border-color: #f4c3b3; }
+.format-pick { margin-top: 18px; padding-top: 16px; border-top: 1px solid #e6e2da; }
+.format-pick label { display: flex; gap: 10px; align-items: flex-start; margin: 0 0 10px; font-weight: 500; }
+.format-pick input[type=radio] { width: auto; flex: none; margin-top: 4px; }

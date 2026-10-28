@@ -420,8 +420,8 @@ function api_lead(): void
         lead_email($to, $lead, $property ? $property . ' – ' . $propertyUrl : '');
     }
     if ($hook = setting('lead_webhook_url')) {
-        $res = lead_webhook($hook, $lead_payload = lead_payload($lead, $property, $propertyUrl));
-        setting_set('lead_webhook_last', json_encode($res + ['at' => gmdate('c'), 'lead' => $lead_payload['name']]));
+        $res = lead_webhook_send($hook, $lead, $property, $propertyUrl);
+        setting_set('lead_webhook_last', json_encode($res + ['at' => gmdate('c'), 'lead' => $lead['name']]));
     }
 }
 
@@ -456,14 +456,63 @@ function lead_payload(array $lead, string $property = '', string $propertyUrl = 
     ];
 }
 
-/** POST the lead as JSON to a webhook (Integrately, Zapier, Make…). Returns ['ok', 'code', 'error']. */
-function lead_webhook(string $url, array $payload): array
+/** Send a lead in the format chosen on Admin → Integrations ('elementor' unless switched to 'json'). */
+function lead_webhook_send(string $url, array $lead, string $property = '', string $propertyUrl = ''): array
+{
+    return setting('lead_webhook_format') === 'json'
+        ? lead_webhook($url, lead_payload($lead, $property, $propertyUrl))
+        : lead_webhook($url, lead_payload_elementor($lead, $property, $propertyUrl), 'form');
+}
+
+/**
+ * The same body riseapartments.com's Elementor "Contact Form" (146c8df) webhook sends with Advanced Data off:
+ * form-encoded, keyed by field label, then Elementor's metadata, form_id and form_name. An Integrately
+ * automation copied from the Rise one keeps working without re-mapping.
+ */
+function lead_payload_elementor(array $lead, string $property = '', string $propertyUrl = ''): array
+{
+    $parts = preg_split('/\s+/', trim($lead['name']), 2);
+    $d = substr(preg_replace('/\D/', '', $lead['phone']), -10);
+    $beds = (string) $lead['beds'];
+    $beds = $beds === '' ? '' : (stripos($beds, 'studio') !== false ? '0' : (string) (int) $beds);
+    $budget = (int) preg_replace('/\D/', '', (string) $lead['budget']);
+    $moveIn = ($t = strtotime((string) $lead['move_in'])) ? date('Y-m-d', $t) : '';
+    $comments = trim((string) $lead['message']);
+    if ($property !== '') {
+        $comments = trim($comments . "\n\nInterested in: " . $property . ' – ' . $propertyUrl);
+    }
+    $now = new DateTime($lead['created_at'] ?? 'now');
+    $now->setTimezone(new DateTimeZone('America/Chicago'));
+    return [
+        'First Name'         => $parts[0] ?? '',
+        'Last Name'          => $parts[1] ?? '',
+        'Phone'              => strlen($d) === 10 ? sprintf('(%s) %s-%s', substr($d, 0, 3), substr($d, 3, 3), substr($d, 6)) : $lead['phone'],
+        'Email'              => $lead['email'],
+        'Max Budget'         => $budget ?: '',
+        'How Many Bedrooms?' => $beds,
+        'Move-in Date'       => $moveIn,
+        'City'               => 'Houston',
+        'Comments'           => $comments,
+        'Phone JS'           => '',
+        'Date'               => $now->format('F j, Y'),
+        'Time'               => $now->format('g:i A'),
+        'Page URL'           => $lead['page'] ? site_url($lead['page']) : site_url('/'),
+        'User Agent'         => mb_substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 500),
+        'Remote IP'          => $lead['ip'] ?? '',
+        'Powered by'         => 'Elementor',
+        'form_id'            => '146c8df',
+        'form_name'          => 'Contact Form',
+    ];
+}
+
+/** POST a lead to a webhook (Integrately, Zapier, Make…) as JSON or form fields. Returns ['ok', 'code', 'error']. */
+function lead_webhook(string $url, array $payload, string $as = 'json'): array
 {
     $ch = curl_init($url);
     curl_setopt_array($ch, [
         CURLOPT_POST => true,
-        CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
-        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'User-Agent: HoustonApartments-Leads/1.0'],
+        CURLOPT_POSTFIELDS => $as === 'form' ? http_build_query($payload) : json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+        CURLOPT_HTTPHEADER => [$as === 'form' ? 'Content-Type: application/x-www-form-urlencoded' : 'Content-Type: application/json', 'User-Agent: HoustonApartments-Leads/1.0'],
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_CONNECTTIMEOUT => 5,
         CURLOPT_TIMEOUT => 10,
