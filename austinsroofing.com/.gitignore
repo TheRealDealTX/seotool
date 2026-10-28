@@ -1,2 +1,3 @@
 includes/leads.log
 includes/.form-secret
+includes/.smtp.php

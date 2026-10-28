@@ -18,7 +18,7 @@ This rebuilds the WordPress/Elementor site at https://austinsroofing.com as a pl
 | `includes/layout.php` | Header, footer, schema, and the hero, FAQ, CTA, card and form components. Also the `render_service/area/post/tool()` page templates. |
 | `assets/css/site.css`, `assets/js/site.js`, `assets/js/tools.js` | One stylesheet and two scripts, with no dependencies |
 | `wp-content/uploads/` | Original WordPress logo, icon, background and blog images at their original paths. Old image URLs keep working. |
-| `submit.php` → `thank-you/` | Form handler. It emails `info@austinsroofing.com` and keeps a backup line in `includes/leads.log`. |
+| `submit.php` → `thank-you/` | Form handler. It sends to `info@austinsroofing.com` over SMTP (`includes/mailer.php`) and keeps a backup line in `includes/leads.log`. |
 | `sitemap-xml.php` | Serves the Yoast URLs `/sitemap_index.xml`, `/page-sitemap.xml`, `/post-sitemap.xml` and `/category-sitemap.xml` |
 | `.htaccess` | HTTPS and non-www, clean URLs, sitemap rewrites, 301s for old WordPress paths (`?p=ID`, feeds, date archives, `/wp-admin`, …), caching |
 | `.dev/` | Local preview router and validator. Web access is denied and it does not need to be uploaded. |
@@ -92,19 +92,38 @@ The validator crawls every sitemap URL and every legacy WordPress URL. It checks
 
 Current result: **57 pages and 89 link targets, 0 errors.**
 
-## Deploying (replaces the live WordPress site)
+## Deployment status
 
-1. **Back up WordPress first.** In hPanel, download the full backup or zip `public_html` and export the database.
-2. Delete the WordPress core files from `public_html`: `wp-admin/`, `wp-includes/`, `wp-*.php`, `xmlrpc.php`, `index.php`, `license.txt`, `readme.html` and `.htaccess`. Delete `wp-content/` **except `wp-content/uploads/`**, so every old image URL keeps working.
-3. Upload this folder's contents into `public_html`, skipping `.dev/` and `README.md`.
-4. Optional: create `includes/.form-secret` containing a random string. A fallback is used if the file is missing.
-5. Send a test through the contact form to confirm Hostinger's `mail()` delivers to `info@austinsroofing.com`. If it doesn't, create that mailbox or an SMTP sender in hPanel.
-6. In Search Console:
-   - resubmit `https://austinsroofing.com/sitemap_index.xml`
-   - inspect the homepage and the top blog post
-   - watch Pages → Not found for a couple of weeks
+**Live since 2026-10-28.** What the deploy did:
 
-## Things to review before launch
+- **Backed up WordPress** to `/home/u401386392/domains/austinsroofing.com/wp-backup-2026-10-28/`, outside `public_html`. The backup has two files:
+  - `public_html.zip`: all 9,885 files, 59 MB
+  - `database.sql`: 31 tables, 3.7 MB, from database `u401386392_cYETO`
+
+  The WordPress database itself was left in place.
+- **Uploaded this folder** through the hPanel File Browser upload API, then removed the WordPress core files, themes, plugins and cache. `wp-content/uploads/` is kept, so every old image URL still works.
+- **Kept** both Google Search Console verification files and `.private/`. Replaced `llms.txt`.
+- **Cleared the Hostinger server and CDN cache.** The old WordPress homepage and `/blog/` were being served from cache.
+- **Ran `.dev/validate.py https://austinsroofing.com`** against the live site: 57 pages, 0 errors.
+
+Server-only files that are not in git:
+
+- `includes/.smtp.php`: SMTP login for info@austinsroofing.com via smtp.hostinger.com:465. The form handler uses it; if it is missing, the handler falls back to `mail()`. **Update this file if the mailbox password changes.**
+- `includes/.form-secret`: signs the form timestamp used for spam protection.
+- `includes/leads.log`: a backup copy of every form submission.
+
+**To redeploy:**
+
+1. In the Hostinger API, call `hosting_files_generate-upload-url` (username `u401386392`, domain `austinsroofing.com`).
+2. Upload the changed files with the TUS `POST`/`PATCH` pair described in that endpoint.
+3. Clear the cache with `hosting_cache_clear-website`.
+
+**To roll back:**
+
+1. Unzip `public_html.zip` into `public_html`.
+2. Import `database.sql` only if the database was changed.
+
+## Things to review
 
 - Cost figures in the tools and posts are labelled typical 2026 planning ranges, not quotes. Adjust them to your real pricing if needed.
 - A few smaller subdivision names on area pages are worth a quick local check: Behrens Ranch, Anderson Mill West, Brooklands, Benbrook Ranch and Colovista.
