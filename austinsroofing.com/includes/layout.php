@@ -162,6 +162,15 @@ function page_start(array $p): void
 <!doctype html>
 <html lang="en-US">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G6C3B8SGY7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G6C3B8SGY7');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
@@ -195,8 +204,6 @@ function page_start(array $p): void
 <?php if (!empty($p['preload'])): ?>
 <link rel="preload" as="image" href="<?= e($p['preload']) ?>">
 <?php endif; ?>
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= BIZ['ga4'] ?>"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?= BIZ['ga4'] ?>');</script>
 </head>
 <body class="<?= e($bodyClass) ?>">
 <a class="skip-link" href="#main">Skip to content</a>
