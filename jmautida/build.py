@@ -733,7 +733,6 @@ def about():
         ("NOW", "Rise Marketing LLC · TX Rising LLC", "Web development, landing pages and technical SEO for marketing teams and their clients in Texas."),
         ("NOW", "Co-founder, J & J Web Marketing LLC", "Building a web marketing company with Joseph Dittman — websites, SEO and growth for small businesses."),
         ("2021–2022", "Website projects", "RiseLocate, TX Real Buyer, OnWards World and Realty.IO — real estate and lead-generation sites, redesigns and blogs."),
-        ("2015–2018", "NKP Medical Marketing", "Front-end content updates, landing pages and photo editing for medical marketing campaigns."),
         ("EDUCATION", "Technical foundations", "Associate’s degree in Computer Science and a BS in Electrical Engineering."),
     ]
     tl_html = "".join(f'<div class="reveal"><span>{e(a)}</span><h3>{e(b)}</h3><p>{e(c)}</p></div>' for a, b, c in timeline)
@@ -744,7 +743,6 @@ def about():
 <p class="lead">I’m a web developer based in Bohol, Philippines, working with marketing teams in Texas. Since 2015 I’ve lived where design, code and marketing meet — building websites that load fast, rank well and turn visitors into customers.</p>
 <p>Today I develop websites for <strong>Rise Marketing LLC</strong> and <strong>TX Rising LLC</strong>, and I’m the co-founder of <strong>J &amp; J Web Marketing LLC</strong> with Joseph Dittman. Whether it’s a landing page that needs to convert, a WordPress site that needs to be faster, or an SEO fix that needs to ship today, I like solving problems end to end.</p>
 <div class="btn-row" style="margin-top:28px"><a class="btn btn-primary" href="/contact" data-magnetic>Work with me {icon("arrow", "arrow-anim")}</a><a class="btn btn-ghost" href="/tools">Try the tools</a></div></div>
-<figure class="portrait-card reveal" data-tilt><img src="/assets/img/portrait.webp" alt="Portrait of John Raymond Autida" width="841" height="841"><figcaption><span>John Raymond B. Autida</span><span>Bohol, PH ↗</span></figcaption></figure>
 </div></section>
 <section class="section"><div class="container">
 <div class="section-head reveal"><div><span class="eyebrow accent"><span class="line"></span>Where I work now</span><h2>Three teams, one goal: websites that grow businesses.</h2></div></div>

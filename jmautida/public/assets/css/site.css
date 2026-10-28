@@ -277,13 +277,9 @@ a:hover .arrow-anim, button:hover .arrow-anim { transform: translate(3px, -3px);
 .feature p { color: var(--text-2); font-size: 15px; margin: 0; }
 
 /* About */
-.about-hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(30px, 6vw, 80px); align-items: center; }
+.about-hero { max-width: 880px; }
 .about-hero h1 { font-size: clamp(42px, 6vw, 78px); margin: 18px 0 24px; }
 .about-hero p { color: var(--text-2); font-size: 17px; }
-.portrait-card { position: relative; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-2); background: var(--surface); box-shadow: var(--shadow); }
-.portrait-card img { width: 100%; aspect-ratio: 1; object-fit: cover; filter: saturate(.95) contrast(1.02); }
-.portrait-card figcaption { display: flex; justify-content: space-between; align-items: center; padding: 16px 18px; font: 500 13px/1.3 var(--mono); color: var(--text-2); border-top: 1px solid var(--border); }
-.portrait-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, color-mix(in srgb, var(--accent) 12%, transparent)); pointer-events: none; }
 .roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .role { position: relative; padding: 26px; border-radius: var(--radius); border: 1px solid var(--border); background: linear-gradient(180deg, var(--surface-2), var(--surface)); overflow: hidden; }
 .role .eyebrow { margin-bottom: 18px; }
@@ -511,7 +507,7 @@ input[type="color"] { width: 46px; height: 44px; padding: 3px; border-radius: 11
   .side-layout { grid-template-columns: 1fr; }
 }
 @media (max-width: 900px) {
-  .hero .container, .about-hero, .contact-grid, .guide, .two-col { grid-template-columns: 1fr; }
+  .hero .container, .contact-grid, .guide, .two-col { grid-template-columns: 1fr; }
   .hero-art { max-width: 560px; }
   .panes, .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
