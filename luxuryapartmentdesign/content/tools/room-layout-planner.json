@@ -1,0 +1,38 @@
+{
+  "slug": "room-layout-planner",
+  "title": "Room Layout Planner: Free Drag-and-Drop Room Planner",
+  "h1": "Room Layout Planner: Free Furniture Layout Planner for Your Apartment",
+  "description": "Use our free room layout planner to drag furniture onto a scaled floor plan of your room, test layouts, and get instant walkway and clearance warnings.",
+  "keyword": "room layout planner",
+  "intro": "Enter your room's width and length, then drag sofas, beds, tables, and rugs onto a scaled grid to test layouts before you lift a single piece. This free room layout planner warns you when walkways or clearances get too tight.",
+  "faq": [
+    {
+      "q": "How do I plan a furniture layout for my room?",
+      "a": "Measure the room, noting doors, windows, radiators, and outlets. Choose a focal point such as a window, fireplace, or TV wall, and place the largest piece first, usually the sofa or bed. Arrange other pieces around it, keeping walkways 30 to 36 inches wide. Test the plan in a layout planner, then mark key pieces on the floor with painter's tape."
+    },
+    {
+      "q": "How much space do you need between a sofa and coffee table?",
+      "a": "Leave 14 to 18 inches between the front edge of the sofa and the coffee table. That is close enough to reach a drink or book comfortably, and far enough to walk past and stretch your legs. In a tight room, stay at the lower end; a coffee table set much farther away becomes hard to use."
+    },
+    {
+      "q": "How wide should walkways be in a room?",
+      "a": "Main walkways through a room should be 30 to 36 inches wide so people can pass easily, and 36 inches is ideal for primary routes, such as from the front door to the kitchen. Secondary paths, such as between a chair and side table, can be narrower. This planner flags any main walkway that drops below 30 inches."
+    },
+    {
+      "q": "How much clearance do you need around a dining table?",
+      "a": "Allow 36 inches between the table edge and the nearest wall or furniture so someone can walk behind a seated person. The absolute minimum is 24 inches, which is just enough to pull out a chair and sit down. For a table 36 inches wide, you need a room at least 7 to 9 feet wide to meet these clearances."
+    },
+    {
+      "q": "Is this room planner free to use?",
+      "a": "Yes. The room layout planner is free and works in your browser with no account or download. Enter your room dimensions in feet, add furniture from the library, then drag, rotate, and delete pieces as you experiment. Clearance warnings update as you move things, so you can compare layouts quickly before buying or moving furniture."
+    }
+  ],
+  "related": ["small-apartment-ideas", "studio-apartment-design-ideas-layouts-decor-tips", "apartment-living-room-ideas"],
+  "how_to": [
+    "Enter your room width and length in feet to create a scaled grid.",
+    "Drag furniture pieces such as a sofa, bed, rug, or dining table onto the grid.",
+    "Rotate pieces to test different orientations and delete any you do not need.",
+    "Check the clearance warnings for walkways, coffee table spacing, and dining and bed clearances.",
+    "Adjust until warnings clear, then mark the final layout on your floor with painter's tape."
+  ]
+}

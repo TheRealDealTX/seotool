@@ -1,0 +1,38 @@
+{
+  "slug": "curtain-size-calculator",
+  "title": "Curtain Size Calculator: Width, Length & Rod Height",
+  "h1": "Curtain Size Calculator: What Size Curtains Do I Need?",
+  "description": "Use our free curtain size calculator to get the right panel width, length, rod size, and mounting height for any window, hung high and wide like a pro.",
+  "keyword": "curtain size calculator",
+  "intro": "Enter your window width, frame-to-ceiling height, fullness, and length style, and this curtain size calculator tells you the rod length, mounting height, number of panels, and curtain length to buy. It follows the high-and-wide approach designers use to make windows look bigger.",
+  "faq": [
+    {
+      "q": "What size curtains do I need?",
+      "a": "Start with the rod: extend it 8 to 12 inches past the window frame on each side. Multiply the rod width by your fullness, 1.5 for tailored, 2 for standard, or 2.5 for luxurious, to get total curtain width, then divide by your panel width. For length, measure from the rod to the floor and choose a float, kiss, break, or puddle style."
+    },
+    {
+      "q": "How high should curtain rods be hung?",
+      "a": "Mount the rod 4 to 6 inches below the ceiling or crown molding, or at the very least 4 to 6 inches above the window frame. Hanging the rod high draws the eye upward and makes ceilings look taller. If the gap between frame and ceiling is small, go as close to the ceiling as your bracket allows."
+    },
+    {
+      "q": "How wide should curtains be compared to the window?",
+      "a": "Curtains should be wider than the window itself, usually 1.5 to 2.5 times the rod width once you add up all panels. Standard fullness is 2 times. With the rod extending 8 to 12 inches beyond each side of the frame, panels can stack open against the wall instead of blocking glass, which lets in more light and makes the window look wider."
+    },
+    {
+      "q": "Should curtains touch the floor?",
+      "a": "For a polished look, curtains should reach the floor. A float style hangs about half an inch above the floor and is the most practical, a kiss just touches, a break adds 1 to 3 inches for a soft fold, and a puddle adds 6 to 8 inches for drama. Curtains that stop above the floor tend to look short."
+    },
+    {
+      "q": "What are standard curtain lengths?",
+      "a": "Ready-made curtain panels typically come in 63, 84, 95 or 96, 108, and 120 inch lengths. For apartments with 8 foot ceilings, 95 or 96 inch panels usually work when the rod is mounted near the ceiling. Choose the closest length that is not too short, then hem or adjust the rod height for a precise finish."
+    }
+  ],
+  "related": ["how-to-make-your-apartment-look-expensive", "apartment-living-room-ideas", "renter-friendly-upgrades"],
+  "how_to": [
+    "Measure and enter the window frame width in inches.",
+    "Enter the distance from the top of the frame to the ceiling and from the frame to the floor.",
+    "Pick a fullness: 1.5x tailored, 2x standard, or 2.5x luxurious.",
+    "Choose a panel width and a length style: float, kiss, break, or puddle.",
+    "Read the rod length, mounting height, number of panels, and standard curtain length to buy."
+  ]
+}

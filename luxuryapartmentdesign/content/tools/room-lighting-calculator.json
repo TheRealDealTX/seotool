@@ -1,0 +1,38 @@
+{
+  "slug": "room-lighting-calculator",
+  "title": "Room Lighting Calculator: How Many Lumens Do I Need?",
+  "h1": "Room Lighting Calculator: How Many Lumens Do I Need?",
+  "description": "Use our free room lighting calculator to find how many lumens and bulbs your room needs, plus a layered ambient, task, and accent plan with color temps.",
+  "keyword": "room lighting calculator",
+  "intro": "Choose your room type and enter its size, and this room lighting calculator works out how many lumens you need, how many standard LED bulbs that equals, and how to split the light into ambient, task, and accent layers. It also suggests the right color temperature for the room.",
+  "faq": [
+    {
+      "q": "How many lumens do I need for a room?",
+      "a": "Multiply the room's square footage by its recommended foot-candle level. Living rooms and bedrooms need about 10 to 20 foot-candles, kitchens and dining rooms 30 to 40, home offices 30 to 50, and bathrooms 70 to 80. A 150 square foot bedroom therefore needs roughly 1,500 to 3,000 lumens in total, spread across several light sources rather than a single ceiling fixture."
+    },
+    {
+      "q": "What is a foot-candle?",
+      "a": "A foot-candle is a unit of illuminance: the amount of light landing on a surface, equal to one lumen spread over one square foot. Lighting designers use foot-candle targets to set how bright a room should be for its activities. Because one foot-candle equals one lumen per square foot, multiplying square footage by the target gives total lumens."
+    },
+    {
+      "q": "How many lumens is a 60 watt bulb?",
+      "a": "A 60-watt incandescent equivalent LED produces about 800 lumens while drawing only around 8 to 10 watts. That is why this calculator counts bulbs in 800-lumen units. A 40-watt equivalent gives about 450 lumens, a 75-watt equivalent about 1,100, and a 100-watt equivalent about 1,600. Always shop by lumens on the package rather than watts."
+    },
+    {
+      "q": "What color temperature is best for a living room?",
+      "a": "Warm white around 2700K is best for living rooms and bedrooms because it mimics the cozy glow of incandescent light and flatters skin and wood tones. Use about 3000K in kitchens and bathrooms for a clean but still warm light, and 3500 to 4000K in a home office where you want crisp, alert lighting for focused work."
+    },
+    {
+      "q": "What is layered lighting?",
+      "a": "Layered lighting combines three types of light: ambient for overall illumination, task for activities like reading and cooking, and accent for highlighting art, plants, or architecture. A good starting split is about 50 percent ambient, 30 percent task, and 20 percent accent. Layers let you change the mood of a room, especially when each layer is on a dimmer."
+    }
+  ],
+  "related": ["living-room-fairy-lights", "apartment-living-room-ideas", "how-to-make-your-apartment-look-expensive"],
+  "how_to": [
+    "Select the room type, such as living room, kitchen, or home office.",
+    "Enter the room length and width in feet.",
+    "Review the total lumens recommended for the room's foot-candle target.",
+    "See how many 800-lumen LED bulbs you need and how they split into ambient, task, and accent light.",
+    "Choose bulbs in the suggested color temperature and add dimmers where possible."
+  ]
+}

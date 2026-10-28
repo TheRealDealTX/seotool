@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Disallow: /subscribe/
+Disallow: /wp-backup-2026-10-28/
+
+Sitemap: https://luxuryapartmentdesign.com/sitemap.xml

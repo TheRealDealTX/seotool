@@ -1,0 +1,38 @@
+{
+  "slug": "decorating-budget-planner",
+  "title": "Decorating Budget Planner: Plan Every Room's Spend",
+  "h1": "Decorating Budget Planner: How Much Does It Cost to Decorate a Room?",
+  "description": "Use our free decorating budget planner to split your room budget across furniture, lighting, rugs, art, and decor, with advice on where to splurge or save.",
+  "keyword": "decorating budget planner",
+  "intro": "Enter your total budget, room type, top priority, and whether you prefer DIY or buying, and this decorating budget planner splits the money across every category a finished room needs. It also flags where to splurge and where to save so your budget goes further.",
+  "faq": [
+    {
+      "q": "How much does it cost to decorate a room?",
+      "a": "Costs vary widely with the room, its size, and the quality of pieces you choose. A refresh with textiles, lighting, and art can cost a few hundred dollars, while furnishing a living room from scratch with quality pieces often runs into the thousands. Set a total you are comfortable with first, then use the planner to divide it by category."
+    },
+    {
+      "q": "What percentage of my budget should go to furniture?",
+      "a": "In a living room, about 45 percent of the decorating budget typically goes to furniture, because the sofa, chairs, and tables are the largest and most-used pieces. The rest is split among rugs and textiles (15 percent), lighting (10 percent), art (10 percent), window treatments (8 percent), accessories and plants (5 percent), and a 7 percent contingency."
+    },
+    {
+      "q": "Where should I splurge and where should I save when decorating?",
+      "a": "Splurge on what you touch and use every day, such as the sofa, mattress, desk chair, and the lighting you see most. Quality there pays off in comfort and longevity. Save on trend-driven items and accessories like throw pillows, vases, and decorative objects, which are easy and inexpensive to swap when your taste changes."
+    },
+    {
+      "q": "Why should a decorating budget include a contingency?",
+      "a": "A contingency, around 7 percent of the total, covers costs that almost always appear: delivery and assembly fees, hardware, a rug pad, extra paint, or a piece that turns out to be the wrong size. Setting this money aside from the start keeps you from overspending or leaving a room unfinished when surprises come up."
+    },
+    {
+      "q": "How can I decorate a room on a small budget?",
+      "a": "Prioritize the pieces that define the room, then phase the rest. Buy secondhand solid wood furniture, DIY art and simple decor, and use paint or textiles for big visual impact. Focus spending on one standout piece rather than many cheap ones. Choosing the DIY option in the planner moves money from art and accessories toward furniture and lighting."
+    }
+  ],
+  "related": ["how-to-make-your-apartment-look-expensive", "diy-home-decor-ideas", "apartment-decorating-ideas"],
+  "how_to": [
+    "Enter your total decorating budget in dollars.",
+    "Select the room you are decorating.",
+    "Choose your top priority: comfort, statement, or storage.",
+    "Pick whether you plan to DIY some pieces or buy everything.",
+    "Review the category allocations and splurge-or-save notes, then track spending against each line."
+  ]
+}

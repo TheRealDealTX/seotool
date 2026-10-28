@@ -1,0 +1,38 @@
+{
+  "slug": "room-color-palette-generator",
+  "title": "Room Color Palette Generator: 60-30-10 Schemes",
+  "h1": "Room Color Palette Generator: Build a 60-30-10 Palette for Any Room",
+  "description": "Use our free room color palette generator to pick a base color and harmony, then get a balanced 60-30-10 palette with hex codes and a live room preview.",
+  "keyword": "room color palette generator",
+  "intro": "Choose a base color and a color harmony, and this room color palette generator builds a balanced 60-30-10 scheme with hex codes, plus a trim white, previewed on a room illustration. Start from scratch or tap a designer preset such as Greige & Brass or Navy & Cognac.",
+  "faq": [
+    {
+      "q": "What is the 60-30-10 color rule?",
+      "a": "The 60-30-10 rule divides a room's color into three proportions. About 60 percent goes to the dominant color on walls and large surfaces, 30 percent to a secondary color on furniture, rugs, and textiles, and 10 percent to an accent on pillows, art, and accessories. The split creates balance, so the room feels cohesive without looking flat or chaotic."
+    },
+    {
+      "q": "How do I choose a color palette for my apartment?",
+      "a": "Start with something you cannot or will not change, such as your floors, a large sofa, or a favorite rug, and pull your base color from it. Pick a harmony that matches the mood you want: monochromatic or analogous for calm, complementary for energy. Then test the wall color with large samples in your actual light before committing."
+    },
+    {
+      "q": "What does LRV mean in paint colors?",
+      "a": "LRV stands for Light Reflectance Value, a scale from 0 (absolute black) to 100 (pure white) that measures how much light a color reflects. Most manufacturers list it on the swatch or website. Higher-LRV colors bounce more light and help small or dim rooms feel brighter, while low-LRV colors absorb light and feel moody and enclosing."
+    },
+    {
+      "q": "What is a color undertone?",
+      "a": "An undertone is the subtle hue sitting beneath a color's main shade. A beige might lean pink, yellow, or green; a gray might lean blue or warm toward taupe. Undertones show up most when colors sit side by side, so compare samples against your floors, cabinets, and fabrics. Matching undertones keeps a palette harmonious even when the main colors differ."
+    },
+    {
+      "q": "Which color harmony is best for a small apartment?",
+      "a": "Monochromatic, analogous, and warm neutral harmonies usually work best in small apartments because related colors blur the edges of the room and make it feel larger and calmer. Using the same light color on walls and trim also helps. Save complementary or triadic schemes for small doses, such as accent pillows or a single painted piece of furniture."
+    }
+  ],
+  "related": ["what-color-goes-with-lavender", "pastel-colors-for-home", "warm-pastel-bedroom-paint-colors"],
+  "how_to": [
+    "Pick a base color with the color picker or enter a hex code.",
+    "Choose a harmony: monochromatic, analogous, complementary, split-complementary, triadic, or warm neutral.",
+    "Review the 60 percent, 30 percent, and 10 percent colors and the suggested trim white.",
+    "Check the palette on the room preview, or try a designer preset for comparison.",
+    "Copy the hex codes and match them to paint and fabric samples to test at home."
+  ]
+}

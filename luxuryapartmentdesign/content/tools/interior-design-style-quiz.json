@@ -1,0 +1,38 @@
+{
+  "slug": "interior-design-style-quiz",
+  "title": "Interior Design Style Quiz: Find Your Decor Style",
+  "h1": "Interior Design Style Quiz: What Is My Interior Design Style?",
+  "description": "Take our free interior design style quiz: answer 8 quick questions and discover your decor style, from Quiet Luxury to Japandi, with tips for renters.",
+  "keyword": "interior design style quiz",
+  "intro": "Answer eight quick questions about the colors, materials, shapes, and moods you love, and this interior design style quiz will match you with one of eight luxury-leaning styles. Each result comes with the palette, materials, and key pieces to recreate it in a rental.",
+  "faq": [
+    {
+      "q": "What is my interior design style?",
+      "a": "Your interior design style is the consistent pattern behind the rooms you are drawn to: the colors, materials, furniture shapes, and overall mood. The quickest way to name it is to notice what you repeatedly save or admire, then compare it with established styles such as Japandi, Quiet Luxury, or Mid-Century Modern. This quiz does that comparison for you in eight questions."
+    },
+    {
+      "q": "How accurate is an interior design style quiz?",
+      "a": "A style quiz is a starting point, not a verdict. It scores your answers against the defining traits of each style, so the result reflects the preferences you chose that day. If two styles come out close, you probably like a blend, which is common. Use the result to guide your next purchases, then trust what feels right in your own space."
+    },
+    {
+      "q": "Can I mix two interior design styles?",
+      "a": "Yes, and most well-designed homes do. The trick is to let one style lead, roughly 70 to 80 percent of the room, and borrow accents from the second. Keep a shared color palette and repeat materials, such as warm wood or brass, so the two styles feel intentional. Japandi with Organic Modern, or Quiet Luxury with Classic Parisian, pair especially well."
+    },
+    {
+      "q": "What interior design style looks the most expensive?",
+      "a": "Quiet Luxury, Classic Parisian, and Art Deco Glam tend to read as the most expensive because they rely on rich materials, careful tailoring, and restraint. That said, any style looks high-end when it is edited well: fewer, better pieces, consistent finishes, layered lighting, and correctly sized rugs and curtains matter more than the style label itself."
+    },
+    {
+      "q": "Which design styles work best in a rental apartment?",
+      "a": "Japandi, Modern Minimalist, Quiet Luxury, and Warm Contemporary are especially rental-friendly because they depend on furniture, textiles, and lighting rather than permanent architecture. Classic Parisian and Art Deco Glam also work if you use removable details such as peel-and-stick molding, plug-in sconces, and statement mirrors. Every style in this quiz can be achieved without renovating."
+    }
+  ],
+  "related": ["luxury-apartment-interior-design", "quiet-luxury-interior-design", "types-of-minimalism"],
+  "how_to": [
+    "Answer each of the eight questions with the option that feels most like you.",
+    "Choose based on what you love, not what you currently own.",
+    "Submit your answers to see your primary design style.",
+    "Review the signature colors, materials, and key pieces for your result.",
+    "Use the renter tips to plan your first one or two purchases."
+  ]
+}

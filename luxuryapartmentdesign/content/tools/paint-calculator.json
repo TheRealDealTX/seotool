@@ -1,0 +1,38 @@
+{
+  "slug": "paint-calculator",
+  "title": "Paint Calculator: How Much Paint Do I Need?",
+  "h1": "Paint Calculator: How Much Paint Do I Need for My Room?",
+  "description": "Use our free paint calculator to work out how much paint you need for walls and ceilings, including doors, windows, coats, primer, and total cost.",
+  "keyword": "paint calculator",
+  "intro": "Enter your room dimensions, doors, windows, and number of coats, and this paint calculator estimates how many gallons and quarts of paint and primer you need, plus the total cost. It uses a conservative 350 square feet per gallon so you are not caught short mid-wall.",
+  "faq": [
+    {
+      "q": "How much paint do I need for a 12x12 room?",
+      "a": "A 12x12 room with 8 foot ceilings has about 384 square feet of wall. Subtract 20 square feet for one door and 30 for two windows to get 334 square feet. At two coats and 350 square feet per gallon, you need roughly 1.9 gallons, so buy 2 gallons. Add about 1 gallon if you also paint the ceiling."
+    },
+    {
+      "q": "How many square feet does a gallon of paint cover?",
+      "a": "One gallon of interior paint typically covers 350 to 400 square feet with one coat on a smooth, primed wall. Textured, porous, or freshly patched surfaces absorb more, so coverage drops. This calculator uses 350 square feet per gallon to give a conservative estimate, which leaves a little extra for touch-ups rather than an emergency trip back to the store."
+    },
+    {
+      "q": "Do I need two coats of paint?",
+      "a": "In most cases, yes. Two coats give even color, consistent sheen, and better durability, even with paint-and-primer products. One coat can be enough when you are refreshing the same color over a clean, sound wall. Plan on two coats by default and a third when making a big color change without primer, especially with deep reds and yellows."
+    },
+    {
+      "q": "When do I need primer before painting?",
+      "a": "Use one coat of primer when going from a dark color to a light one, when painting new drywall or patched areas, and when painting over glossy surfaces that paint will not grip well. Primer seals porous spots, blocks stains, and helps the topcoat look even. A tinted primer can also reduce the number of topcoats needed for deep colors."
+    },
+    {
+      "q": "Should I buy gallons or quarts of paint?",
+      "a": "Buy gallons for walls and ceilings, since a quart is only a quarter gallon and costs more per ounce. Quarts make sense for small top-ups, accent walls, doors, or trim. If your estimate lands just over a whole number, such as 2.2 gallons, buying 2 gallons plus a quart is usually cheaper than a third gallon."
+    }
+  ],
+  "related": ["repair-drywall-after-removing-wallpaper", "warm-pastel-bedroom-paint-colors", "pastel-colors-for-home"],
+  "how_to": [
+    "Enter the room length, width, and ceiling height in feet.",
+    "Enter the number of doors and windows to subtract.",
+    "Choose the number of coats and whether to include the ceiling.",
+    "Tick primer if you are going dark to light, covering new drywall or patches, or painting a glossy surface.",
+    "Enter the price per gallon to see total gallons, quarts, and estimated cost."
+  ]
+}

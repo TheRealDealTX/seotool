@@ -1,0 +1,38 @@
+{
+  "slug": "art-hanging-calculator",
+  "title": "Art Hanging Calculator: Exact Nail Height & Spacing",
+  "h1": "Art Hanging Calculator: How High to Hang Art, Down to the Nail",
+  "description": "Use our free art hanging calculator to find the exact nail height for any frame, how high to hang art above a sofa or bed, and gallery wall spacing.",
+  "keyword": "art hanging calculator",
+  "intro": "Enter your art size, hanger drop, and ceiling or furniture height, and this art hanging calculator tells you exactly where to put the nail. It uses the gallery-standard 57-inch center line and adjusts for art above sofas, beds, and gallery walls.",
+  "faq": [
+    {
+      "q": "How high should you hang art?",
+      "a": "Hang art so its center sits 57 to 60 inches above the floor, roughly average eye level. Museums and galleries use 57 inches as a standard. On a wall with no furniture, this rule works for almost any size piece. If your ceilings are higher than 9 feet, you can nudge the center a little higher so the art relates to the taller wall."
+    },
+    {
+      "q": "How high should art be above a couch?",
+      "a": "Leave 8 to 10 inches between the top of the sofa back and the bottom of the frame. That gap keeps the art visually connected to the sofa so they read as one composition. Aim for art that spans about two-thirds of the sofa width, between 60 and 75 percent. A single small piece above a long sofa will look lost."
+    },
+    {
+      "q": "How do I calculate where to put the nail?",
+      "a": "Add half the art's height to your center height, then subtract the hanger drop, which is the distance from the top of the frame to the taut wire or hook. For a 24 inch tall frame with a 3 inch drop centered at 57 inches, the nail goes at 57 plus 12 minus 3, or 66 inches from the floor."
+    },
+    {
+      "q": "How far apart should frames be on a gallery wall?",
+      "a": "Space frames 2 to 3 inches apart on a gallery wall, keeping the gaps consistent throughout. Tighter spacing makes the arrangement read as one large piece, which is the goal. Treat the whole group as a single artwork, center it at 57 to 60 inches, or 8 to 10 inches above furniture, and lay it out on the floor or with paper templates first."
+    },
+    {
+      "q": "What is the 57 inch rule for hanging art?",
+      "a": "The 57 inch rule says the center of a piece of art should sit 57 inches above the floor, the average human eye level and a standard used by many galleries. Hanging every piece in your home on the same center line also creates a consistent horizon from room to room, which makes the whole apartment feel more considered."
+    }
+  ],
+  "related": ["how-to-hang-wall-art", "apartment-living-room-ideas", "renter-friendly-upgrades"],
+  "how_to": [
+    "Choose your center height: 57 inches (gallery standard) or 60 inches.",
+    "Enter the art height and width in inches.",
+    "Measure and enter the hanger drop from the top of the frame to the taut wire or hook.",
+    "If hanging above furniture, enter the furniture height and width.",
+    "Read the nail height and spacing, then mark the wall with painter's tape before drilling."
+  ]
+}

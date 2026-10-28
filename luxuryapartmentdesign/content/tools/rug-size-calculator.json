@@ -1,0 +1,38 @@
+{
+  "slug": "rug-size-calculator",
+  "title": "Rug Size Calculator: Find the Right Rug for Any Room",
+  "h1": "Rug Size Calculator: What Size Rug Do I Need?",
+  "description": "Use our free rug size calculator to find the right rug for your living room, dining room, bedroom, or hallway, with placement rules designers rely on.",
+  "keyword": "rug size calculator",
+  "intro": "Enter your room type, dimensions, and furniture layout, and this rug size calculator recommends the best standard rug size and shows how it should sit in the room. It follows the same wall-clearance and furniture rules interior designers use.",
+  "faq": [
+    {
+      "q": "What size rug do I need for my living room?",
+      "a": "Most apartment living rooms need an 8x10 rug, while smaller rooms often suit a 6x9 and large or open-plan spaces a 9x12. Choose a size that leaves 12 to 18 inches of bare floor around the edges (8 to 12 inches in small rooms) and lets at least the front legs of your sofa and chairs rest on the rug by 6 to 8 inches."
+    },
+    {
+      "q": "How far should a rug be from the wall?",
+      "a": "Leave about 12 to 18 inches of floor between the rug and the walls in a typical room. In a small room, 8 to 12 inches is fine. That border of exposed floor frames the rug and makes the room feel larger. Going right to the wall looks like carpet, while a large gap makes the rug look undersized."
+    },
+    {
+      "q": "What size rug goes under a queen bed?",
+      "a": "An 8x10 rug is the standard choice for a queen bed. Placed horizontally and tucked under the lower two-thirds of the bed, it extends roughly 18 to 24 inches on each side so your feet land on the rug when you get up. A 5x8 is too small for a queen and tends to look like a bath mat."
+    },
+    {
+      "q": "How big should a dining room rug be?",
+      "a": "A dining rug should extend at least 24 inches beyond the edges of the table on every side, so chairs stay on the rug when pulled out. For a 36 by 60 inch table, that means at least an 84 by 108 inch area, so an 8x10 is the minimum and a 9x12 is safer. Round tables pair well with round rugs."
+    },
+    {
+      "q": "Is it better for a rug to be too big or too small?",
+      "a": "Slightly too big is almost always better than too small. An undersized rug floating in the middle of the room makes furniture look disconnected and the space look cheaper. If you are between two sizes and the larger one still leaves at least 8 inches of floor around the edges, choose the larger rug."
+    }
+  ],
+  "related": ["japandi-rug-the-perfect-blend-of-minimalism-and-warmth", "apartment-living-room-ideas", "how-to-make-your-apartment-look-expensive"],
+  "how_to": [
+    "Select the room type, and for a bedroom choose your bed size.",
+    "Measure and enter the room length and width in feet.",
+    "Choose a layout: all legs on the rug, front legs on, or floating.",
+    "Review the recommended standard rug size and the floor border it leaves.",
+    "Check the placement diagram, then tape the rug outline on your floor before buying."
+  ]
+}
