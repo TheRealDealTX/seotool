@@ -4,6 +4,7 @@
 const SITE_NAME   = 'Luxury Apartment Design';
 const SITE_ORIGIN = 'https://luxuryapartmentdesign.com';
 const SITE_TAGLINE = 'Luxury apartment interior design ideas, guides and free design tools';
+const GA4_ID      = 'G-RJQMR804E7';          // Google Analytics 4 property
 const GA_TAG      = 'GT-KVJZ795B';           // Google tag carried over from the WordPress Site Kit install
 const ASSET_VER   = '20261028';              // bump to bust browser caches for css/js
 

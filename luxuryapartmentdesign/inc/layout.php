@@ -52,8 +52,16 @@ function page_head(array $page): void
 <link rel="alternate" type="application/rss+xml" title="<?= e(SITE_NAME) ?>" href="<?= url('/rss.xml') ?>">
 <?= schema_graph($page['schema'] ?? []) ?>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_TAG ?>"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?= GA_TAG ?>');</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA4_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA4_ID ?>');
+  gtag('config', '<?= GA_TAG ?>');
+</script>
 </head>
 <body class="<?= e($page['body_class'] ?? '') ?>">
 <a class="skip-link" href="#main">Skip to content</a>
