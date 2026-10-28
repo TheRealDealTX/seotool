@@ -188,6 +188,28 @@ function render(string $view, array $vars = [], array $meta = []): void
     require HA_APP . '/views/layout.php';
 }
 
+/** Admin-editable settings (key/value table); null when unset or the table doesn't exist yet. */
+function setting(string $k): ?string
+{
+    try {
+        $st = db()->prepare('SELECT v FROM settings WHERE k = ?');
+        $st->execute([$k]);
+        $v = $st->fetchColumn();
+        return $v === false ? null : (string) $v;
+    } catch (Throwable) {
+        return null;
+    }
+}
+
+function setting_set(string $k, ?string $v): void
+{
+    db_migrate();
+    db()->prepare('DELETE FROM settings WHERE k = ?')->execute([$k]);
+    if ($v !== null) {
+        db()->prepare('INSERT INTO settings (k, v) VALUES (?, ?)')->execute([$k, $v]);
+    }
+}
+
 function json_out($data, int $code = 200): void
 {
     http_response_code($code);

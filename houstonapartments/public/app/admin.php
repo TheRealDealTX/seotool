@@ -72,6 +72,7 @@ function admin_route(string $path): void
         '#^/import/$#'                  => fn () => admin_import(),
         '#^/import/run/$#'              => fn () => $method === 'POST' ? admin_import_run() : redirect('/admin/import/'),
         '#^/users/$#'                   => fn () => admin_users(),
+        '#^/integrations/$#'            => fn () => admin_integrations(),
         '#^/users/(\d+)/(delete|password)/$#' => fn ($m) => $method === 'POST' ? admin_user_action((int) $m[1], $m[2]) : redirect('/admin/users/'),
         '#^/account/$#'                 => fn () => admin_account(),
     ];
@@ -537,6 +538,43 @@ function admin_import_run(): void
 }
 
 /* ------------------------------------------------------------ users */
+
+/** Integrately (or any webhook tool): every website lead is POSTed as JSON to the saved URL. */
+function admin_integrations(): void
+{
+    if (!admin_is_admin()) {
+        Auth::flash('Only admins can change integrations.', 'err');
+        redirect('/admin/', 302);
+    }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $url = trim((string) ($_POST['webhook_url'] ?? ''));
+        if (($_POST['do'] ?? '') === 'test') {
+            $url = setting('lead_webhook_url') ?? '';
+            if ($url === '') {
+                Auth::flash('Save a webhook URL first.', 'err');
+            } else {
+                $sample = ['id' => 0, 'name' => 'Test Lead', 'email' => 'test.lead@example.com', 'phone' => '+1 (832) 720-7978',
+                           'move_in' => date('M j, Y', strtotime('+30 days')), 'beds' => '2', 'budget' => '$1,800',
+                           'message' => 'This is a test lead sent from the Houston Apartments admin.', 'page' => '/apartments/', 'created_at' => gmdate('c')];
+                $res = lead_webhook($url, lead_payload($sample, 'Elan Memorial Park', site_url(listing_url('elan-memorial-park'))));
+                setting_set('lead_webhook_last', json_encode($res + ['at' => gmdate('c'), 'lead' => 'Test Lead']));
+                Auth::flash($res['ok'] ? 'Test lead sent. Integrately should now show the sample fields to map.' : 'Integrately didn’t accept the test (' . $res['error'] . '). Check the URL and try again.', $res['ok'] ? 'ok' : 'err');
+            }
+        } elseif ($url === '') {
+            setting_set('lead_webhook_url', null);
+            Auth::flash('Webhook removed. Leads are still saved here and emailed.');
+        } elseif (!preg_match('#^https://[^\s/$.?\#][^\s]*$#i', $url) || !filter_var($url, FILTER_VALIDATE_URL)) {
+            Auth::flash('That doesn’t look like a webhook URL – it should start with https://', 'err');
+        } else {
+            setting_set('lead_webhook_url', $url);
+            Auth::flash('Webhook saved. Click “Send a test lead” so Integrately can see the fields.');
+        }
+        redirect('/admin/integrations/', 302);
+    }
+    $url = setting('lead_webhook_url') ?? '';
+    $last = json_decode(setting('lead_webhook_last') ?? 'null', true);
+    admin_render('integrations', compact('url', 'last'));
+}
 
 function admin_users(): void
 {

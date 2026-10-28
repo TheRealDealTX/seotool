@@ -10,6 +10,7 @@ $nav = [
 ];
 if (($user['role'] ?? '') === 'admin') {
     $nav[] = ['/admin/users/', 'Users', '👥'];
+    $nav[] = ['/admin/integrations/', 'Integrations', '🔗'];
 }
 $nav[] = ['/admin/account/', 'My account', '⚙'];
 $active = function ($href) use ($cur) {

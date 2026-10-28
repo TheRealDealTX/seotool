@@ -398,19 +398,83 @@ function api_lead(): void
         $cols = array_keys($lead);
         db()->prepare('INSERT INTO leads (' . implode(',', $cols) . ') VALUES (' . implode(',', array_fill(0, count($cols), '?')) . ')')
             ->execute(array_values($lead));
+        $lead['id'] = (int) db()->lastInsertId();
     } catch (Throwable $e) {
         error_log('lead save failed: ' . $e->getMessage());
     }
-    if ($to = config('lead_email')) {
-        $property = '';
-        if ($lead['property_id']) {
-            $st = db()->prepare('SELECT name, slug FROM properties WHERE id = ?');
-            $st->execute([$lead['property_id']]);
-            $property = ($r = $st->fetch()) ? $r['name'] . ' – ' . site_url(listing_url($r['slug'])) : '';
-        }
-        lead_email($to, $lead, $property);
-    }
+    // The visitor doesn't wait on the email server or Integrately
     json_out(['ok' => true]);
+    if (function_exists('fastcgi_finish_request')) {
+        fastcgi_finish_request();
+    }
+    $property = $propertyUrl = '';
+    if ($lead['property_id']) {
+        $st = db()->prepare('SELECT name, slug FROM properties WHERE id = ?');
+        $st->execute([$lead['property_id']]);
+        if ($r = $st->fetch()) {
+            $property = $r['name'];
+            $propertyUrl = site_url(listing_url($r['slug']));
+        }
+    }
+    if ($to = config('lead_email')) {
+        lead_email($to, $lead, $property ? $property . ' – ' . $propertyUrl : '');
+    }
+    if ($hook = setting('lead_webhook_url')) {
+        $res = lead_webhook($hook, $lead_payload = lead_payload($lead, $property, $propertyUrl));
+        setting_set('lead_webhook_last', json_encode($res + ['at' => gmdate('c'), 'lead' => $lead_payload['name']]));
+    }
+}
+
+/** Flat, automation-friendly view of a lead (field names stay stable for Integrately mappings). */
+function lead_payload(array $lead, string $property = '', string $propertyUrl = ''): array
+{
+    $parts = preg_split('/\s+/', trim($lead['name']), 2);
+    $digits = preg_replace('/\D/', '', $lead['phone']);
+    $houston = new DateTime($lead['created_at'] ?? 'now');
+    $houston->setTimezone(new DateTimeZone('America/Chicago'));
+    return [
+        'lead_id'        => $lead['id'] ?? null,
+        'name'           => $lead['name'],
+        'first_name'     => $parts[0] ?? '',
+        'last_name'      => $parts[1] ?? '',
+        'email'          => $lead['email'],
+        'phone'          => $lead['phone'],
+        'phone_e164'     => strlen($digits) >= 10 ? '+1' . substr($digits, -10) : '',
+        'move_in'        => $lead['move_in'],
+        'bedrooms'       => $lead['beds'],
+        'budget'         => $lead['budget'],
+        'message'        => $lead['message'],
+        'property'       => $property,
+        'property_url'   => $propertyUrl,
+        'page_url'       => $lead['page'] ? site_url($lead['page']) : '',
+        'submitted_at'   => $houston->format(DATE_ATOM),
+        'submitted_local'=> $houston->format('M j, Y g:i A') . ' CT',
+        'source'         => 'houstonapartments.com',
+    ];
+}
+
+/** POST the lead as JSON to a webhook (Integrately, Zapier, Make…). Returns ['ok', 'code', 'error']. */
+function lead_webhook(string $url, array $payload): array
+{
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
+        CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'User-Agent: HoustonApartments-Leads/1.0'],
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_CONNECTTIMEOUT => 5,
+        CURLOPT_TIMEOUT => 10,
+        CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+    ]);
+    curl_exec($ch);
+    $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+    $err = curl_error($ch);
+    curl_close($ch);
+    $ok = $code >= 200 && $code < 300;
+    if (!$ok) {
+        error_log("lead webhook failed: HTTP $code $err");
+    }
+    return ['ok' => $ok, 'code' => $code, 'error' => $ok ? '' : ($err ?: "HTTP $code")];
 }
 
 /** Notification for a new lead. Reply-To is the renter, so "Reply" answers them directly. */
