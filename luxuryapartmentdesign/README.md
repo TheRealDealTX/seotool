@@ -50,9 +50,20 @@ database was left in place. Old `/wp-content/uploads/…` image URLs are still
 served from the backup by a rewrite rule. Restore steps are in the backup's
 `README.txt`.
 
-## Forms
+## Forms and email
 
 Contact messages and newsletter sign-ups are appended to CSV files in
 `/home/u401386392/domains/luxuryapartmentdesign.com/lad-data/` (outside the web
-root). Set `CONTACT_EMAIL` in `inc/config.php` to also receive contact
-messages by email.
+root) and emailed to `CONTACT_EMAIL` (info@luxuryapartmentdesign.com) through
+Hostinger SMTP (`inc/mailer.php`, ssl://smtp.hostinger.com:465). Contact emails
+carry the visitor's address as Reply-To.
+
+The SMTP login lives only on the server, in `lad-data/mail.php` (chmod 600):
+
+```php
+<?php return ['host' => 'smtp.hostinger.com', 'port' => 465,
+              'user' => 'info@luxuryapartmentdesign.com', 'pass' => '…'];
+```
+
+If the mailbox password changes, edit that file in hPanel's File Manager
+(one level above public_html). Without it the form falls back to PHP `mail()`.

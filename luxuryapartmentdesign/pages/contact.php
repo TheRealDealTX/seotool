@@ -18,9 +18,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
             fclose($fh);
         }
         if (CONTACT_EMAIL !== '') {
+            require_once dirname(__DIR__) . '/inc/mailer.php';
             $subject = '[' . SITE_NAME . '] ' . $vals['topic'] . ' from ' . $vals['name'];
-            $headers = 'From: no-reply@luxuryapartmentdesign.com' . "\r\n" . 'Reply-To: ' . $vals['email'];
-            @mail(CONTACT_EMAIL, $subject, $vals['message'] . "\n\n" . $vals['name'] . ' <' . $vals['email'] . '>', $headers);
+            $text = $vals['message'] . "\n\n---\nName: " . $vals['name'] . "\nEmail: " . $vals['email'] . "\nTopic: " . $vals['topic'] . "\nSent: " . date('r') . "\n\nReply to this email to answer " . $vals['name'] . '.';
+            if (!smtp_send(CONTACT_EMAIL, $subject, $text, $vals['email'])) {
+                @mail(CONTACT_EMAIL, $subject, $text, 'From: ' . CONTACT_EMAIL . "\r\nReply-To: " . $vals['email']);
+            }
         }
         $sent = true;
     } elseif ($bot && !$errors) {

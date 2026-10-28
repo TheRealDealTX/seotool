@@ -7,9 +7,9 @@ const SITE_TAGLINE = 'Luxury apartment interior design ideas, guides and free de
 const GA_TAG      = 'GT-KVJZ795B';           // Google tag carried over from the WordPress Site Kit install
 const ASSET_VER   = '20261028';              // bump to bust browser caches for css/js
 
-// Contact form: where messages are emailed. Leave empty to only store them
-// in the private data folder (see data_dir() in functions.php).
-const CONTACT_EMAIL = '';
+// Contact form messages and newsletter sign-ups are emailed here (sent
+// through SMTP, see inc/mailer.php) and also stored in the private data folder.
+const CONTACT_EMAIL = 'info@luxuryapartmentdesign.com';
 
 const CATEGORIES = [
     'apartment-design-inspiration' => [

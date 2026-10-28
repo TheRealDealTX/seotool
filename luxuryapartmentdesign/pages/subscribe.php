@@ -13,6 +13,10 @@ if ($ok) {
         fputcsv($fh, $line);
         fclose($fh);
     }
+    if (CONTACT_EMAIL !== '') {
+        require_once dirname(__DIR__) . '/inc/mailer.php';
+        smtp_send(CONTACT_EMAIL, '[' . SITE_NAME . '] New newsletter subscriber', "New subscriber: $email\nSigned up from: " . ($line[2] ?: '(unknown page)') . "\nTime: " . date('r'));
+    }
 }
 $msg = $ok ? 'Thank you! You are on the list.' : 'Please enter a valid email address.';
 if ($ajax) {
