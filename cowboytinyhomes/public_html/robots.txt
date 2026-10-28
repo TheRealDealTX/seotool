@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /pages/
+Disallow: /wordpress-backup-2026-10-28/
+Disallow: /contact-us/?*
+
+Sitemap: https://cowboytinyhomes.com/sitemap.xml
