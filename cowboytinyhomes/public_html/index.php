@@ -23,7 +23,7 @@ $clean = preg_replace('#/index\.php$#', '/', $clean);
 if ($clean !== $path) redirect($clean . $qs);
 
 if (isset(REDIRECTS[$path])) redirect(REDIRECTS[$path]);
-if (!str_ends_with($path, '/') && isset(REDIRECTS[$path . '/'])) redirect(REDIRECTS[$path . '/']);
+if (!(substr($path, -1) === '/') && isset(REDIRECTS[$path . '/'])) redirect(REDIRECTS[$path . '/']);
 
 // Old WordPress media URLs (incl. resized copies like name-300x200.webp) => the same image in /assets/img/.
 if (preg_match('#^/wp-content/uploads/\d{4}/\d{2}/(?:cropped-)?([\w-]+?)(?:-\d+x\d+)?\.(webp|jpe?g|png)$#i', $path, $mm)
@@ -49,7 +49,7 @@ if ($path === '/sitemap.xml') {
 }
 
 // Missing trailing slash on a real page.
-if (!str_ends_with($path, '/') && isset(PAGES[$path . '/'])) redirect($path . '/' . $qs);
+if (!(substr($path, -1) === '/') && isset(PAGES[$path . '/'])) redirect($path . '/' . $qs);
 
 $GLOBALS['path'] = $path;
 $meta = PAGES[$path] ?? null;

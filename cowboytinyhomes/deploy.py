@@ -95,26 +95,24 @@ def backup_wp():
     if BACKUP not in names:
         s, _ = req('POST', f'{api}/resources/public_html/{BACKUP}/')
         print(f'mkdir {BACKUP}: HTTP {s}')
-    # Lock the backup folder before anything moves into it.
-    tmp = ROOT.parent / '.backup-htaccess'
-    tmp.write_text('Require all denied\n')
-    data = tmp.read_bytes()
-    target = f'{url}/{BACKUP}/.htaccess?override=true'
-    req('POST', target, headers={'Tus-Resumable': '1.0.0', 'Upload-Length': str(len(data)), 'Upload-Offset': '0'})
-    req('PATCH', target, data=data, headers={'Tus-Resumable': '1.0.0', 'Upload-Offset': '0', 'Content-Type': 'application/offset+octet-stream'})
-    tmp.unlink()
-
     new_site = {p.split('/')[0] for p in site_files()} - set(LAST)
     moved = 0
     for item in listing('public_html'):
         n = item['name']
         if n in KEEP_IN_ROOT or n in new_site:
             continue
-        dest = q(f'/public_html/{BACKUP}/{n}')
+        # The root .htaccess is kept as .htaccess.wordpress; the backup's own .htaccess is the lock file.
+        dest = q(f'/public_html/{BACKUP}/' + ('.htaccess.wordpress' if n == '.htaccess' else n))
         s, body = req('PATCH', f'{api}/resources/public_html/{q(n)}?action=rename&destination={dest}&override=false&rename=false')
         print(('moved ' if s == 200 else f'FAIL {s} {body[:120]!r} ') + n)
         moved += s == 200
     print(f'moved {moved} WordPress items into {BACKUP}/')
+    # Lock the backup folder (the main .htaccess also blocks it, once uploaded).
+    data = b'Require all denied\n'
+    target = f'{url}/{BACKUP}/.htaccess?override=true'
+    req('POST', target, headers={'Tus-Resumable': '1.0.0', 'Upload-Length': str(len(data)), 'Upload-Offset': '0'})
+    s, _ = req('PATCH', target, data=data, headers={'Tus-Resumable': '1.0.0', 'Upload-Offset': '0', 'Content-Type': 'application/offset+octet-stream'})
+    print(f'locked {BACKUP}/: HTTP {s}')
 
 
 cmd = sys.argv[1] if len(sys.argv) > 1 else ''

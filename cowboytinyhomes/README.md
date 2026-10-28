@@ -1,6 +1,6 @@
 # cowboytinyhomes.com — custom PHP rebuild
 
-Replaces the WordPress/Elementor site with a hand-built PHP site, which runs on
+Replaces the WordPress/Elementor site with a hand-built PHP site (code kept PHP 7.4-compatible — the server's PHP is older than 8), which runs on
 Hostinger Cloud Enterprise (account `u401386392`, document root
 `domains/cowboytinyhomes.com/public_html`). It needs no database and no plugins.
 
@@ -45,10 +45,10 @@ Old WordPress URLs (`/category/*`, Yoast sitemaps, `/feed/`, `/wp-admin` and oth
 
 ## WordPress backup
 
-The original WordPress files (core, Elementor and the other plugins, theme, uploads, `wp-config.php` and the old `.htaccess`) were moved, not deleted, into
+The original WordPress files (core, Elementor and the other plugins, theme, uploads and `wp-config.php`; the old root `.htaccess` is saved there as `.htaccess.wordpress`) were moved, not deleted, into
 `public_html/wordpress-backup-2026-10-28/` on 2026-10-28. That folder holds its own `Require all denied` `.htaccess`, and the main `.htaccess` also blocks it, so none of it is web-accessible. The WordPress database was left untouched; its credentials are in the backed-up `wp-config.php`.
 
-To roll back, move the contents of that folder back into `public_html/`, replacing `index.php` and `.htaccess`. You can do this in hPanel File Manager. Then delete the new site's files.
+To roll back, move the contents of that folder back into `public_html/`, replacing `index.php`, and rename `.htaccess.wordpress` to `.htaccess`. You can do this in hPanel File Manager. Then delete the new site's files.
 
 ## Deploying updates
 
