@@ -262,6 +262,30 @@ final class Listings
         db_alive()->prepare($sql)->execute(array_values($rec));
     }
 
+    /** Listing statuses as the admin shows them. 'review' = imported, hidden until the About text is rewritten. */
+    public const STATUS_LABELS = ['publish' => 'Live', 'review' => 'Awaiting rewrite', 'hidden' => 'Hidden'];
+
+    /**
+     * Share (0–1) of the rewritten About text's 3-word phrases that also appear in the
+     * original imported text. A genuine rewrite lands well under 0.5; light edits stay high.
+     */
+    public static function aboutOverlap(array $new, array $orig): float
+    {
+        $grams = function (array $paras): array {
+            $w = preg_split('/[^\p{L}\p{N}$]+/u', mb_strtolower(implode(' ', $paras)), -1, PREG_SPLIT_NO_EMPTY);
+            $g = [];
+            for ($i = 0, $n = count($w) - 2; $i < $n; $i++) {
+                $g[$w[$i] . ' ' . $w[$i + 1] . ' ' . $w[$i + 2]] = true;
+            }
+            return $g;
+        };
+        $a = $grams($new);
+        if (!$a) {
+            return 1.0;
+        }
+        return count(array_intersect_key($a, $grams($orig))) / count($a);
+    }
+
     public static function bySlug(string $slug): ?array
     {
         $st = db()->prepare("SELECT * FROM properties WHERE slug = ? AND status = 'publish'");

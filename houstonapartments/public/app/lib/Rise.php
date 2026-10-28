@@ -533,6 +533,10 @@ final class RiseImporter
             'special'    => $d['special'],
             'address'    => $d['address'],
         ];
+        $data['rise_about'] = $d['about']; // original copy, to measure how much a rewrite changed it
+        $st = db_alive()->prepare('SELECT status FROM properties WHERE id = ?');
+        $st->execute([$id]);
+        $prevStatus = (string) $st->fetchColumn();
         $prices = array_values($d['prices']);
         if (!$prices) {
             // No "Price Starts At" headings: fall back to the range quoted in the description
@@ -569,14 +573,15 @@ final class RiseImporter
             'data' => json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
             'rise_modified' => $row['modified'],
             'synced_at' => gmdate('c'),
-            'status' => 'publish',
+            // Rise's text is duplicate content here: hold the listing until someone rewrites the About section
+            'status' => $prevStatus === 'hidden' ? 'hidden' : 'review',
             'source' => 'rise',
             'locked' => 0,
             'updated_at' => gmdate('c'),
             'updated_by' => 'Rise sync',
         ];
         Listings::upsert($rec);
-        $this->say(sprintf('imported %s (%s, %d plans, %d photos, %s)', $row['slug'], $rec['neighborhood'], count($plans),
+        $this->say(sprintf('imported %s – awaiting rewrite (%s, %d plans, %d photos, %s)', $row['slug'], $rec['neighborhood'], count($plans),
             count($localPhotos), $lat ? 'geocoded' : 'NO COORDS'));
     }
 

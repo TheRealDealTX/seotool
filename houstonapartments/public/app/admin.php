@@ -1,6 +1,9 @@
 <?php
 // Admin panel: /admin/… (listings, leads, users, Rise import).
 defined('HA_ROOT') || exit;
+
+// An imported listing auto-publishes once less than this share of its About text matches the Rise original
+const ADMIN_REWRITE_MAX_OVERLAP = 0.4;
 require_once HA_APP . '/lib/Auth.php';
 require_once HA_APP . '/lib/Images.php';
 require_once HA_APP . '/lib/Rise.php';
@@ -60,6 +63,7 @@ function admin_route(string $path): void
         '#^/listings/$#'                => fn () => admin_listings(),
         '#^/listings/new/$#'            => fn () => $method === 'POST' ? admin_listing_save(null) : admin_listing_form(null),
         '#^/listings/(\d+)/$#'          => fn ($m) => $method === 'POST' ? admin_listing_save((int) $m[1]) : admin_listing_form((int) $m[1]),
+        '#^/listings/(\d+)/preview/$#'  => fn ($m) => admin_listing_preview((int) $m[1]),
         '#^/listings/(\d+)/delete/$#'   => fn ($m) => $method === 'POST' ? admin_listing_delete((int) $m[1]) : redirect('/admin/listings/'),
         '#^/geocode/$#'                 => fn () => admin_geocode(),
         '#^/leads/$#'                   => fn () => admin_leads(),
@@ -174,6 +178,7 @@ function admin_dashboard(): void
     $stats = [
         'published' => $q("SELECT COUNT(*) FROM properties WHERE status = 'publish'"),
         'hidden'    => $q("SELECT COUNT(*) FROM properties WHERE status = 'hidden'"),
+        'review'    => $q("SELECT COUNT(*) FROM properties WHERE status = 'review'"),
         'manual'    => $q("SELECT COUNT(*) FROM properties WHERE source = 'manual' AND status <> 'deleted'"),
         'leads_new' => $q("SELECT COUNT(*) FROM leads WHERE status = 'new'"),
         'leads_7d'  => (int) (function () {
@@ -202,7 +207,7 @@ function admin_listings(): void
     if (isset(AREAS[$f['area']])) {
         $where[] = 'rise_location IN (' . implode(',', array_map('intval', AREAS[$f['area']]['rise'])) . ')';
     }
-    if (in_array($f['status'], ['publish', 'hidden'], true)) {
+    if (in_array($f['status'], ['publish', 'hidden', 'review'], true)) {
         $where[] = 'status = ?';
         $args[] = $f['status'];
     }
@@ -359,6 +364,19 @@ function admin_listing_save(?int $id): void
     }
     $source = $old['source'] ?? 'manual';
     $user = Auth::user();
+
+    // Imported listings wait in 'review' until the About text is rewritten, then go live by themselves
+    $status = in_array($in['status'] ?? '', ['publish', 'hidden', 'review'], true) ? $in['status'] : 'publish';
+    $publishedNow = false;
+    $overlap = null;
+    if ($status === 'review') {
+        $orig = $data['rise_about'] ?? (($old['status'] ?? '') === 'review' ? (json_decode($old['data'] ?? '{}', true)['about'] ?? []) : []);
+        $overlap = Listings::aboutOverlap($data['about'], $orig);
+        if ($data['about'] && $overlap < ADMIN_REWRITE_MAX_OVERLAP) {
+            $status = 'publish';
+            $publishedNow = true;
+        }
+    }
     $rec = [
         'id' => $id,
         'slug' => $old['slug'] ?? admin_unique_slug($name),
@@ -377,15 +395,46 @@ function admin_listing_save(?int $id): void
         'data' => json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE),
         'rise_modified' => $old['rise_modified'] ?? '',
         'synced_at' => $old['synced_at'] ?? gmdate('c'),
-        'status' => ($in['status'] ?? '') === 'hidden' ? 'hidden' : 'publish',
+        'status' => $status,
         'source' => $source,
         'locked' => $source === 'rise' && !empty($in['keep_sync']) ? 0 : 1,
         'updated_at' => gmdate('c'),
         'updated_by' => $user['name'] ?: $user['email'],
     ] + Listings::derive($data);
     Listings::upsert($rec);
-    Auth::flash($lat === null ? 'Saved – but we couldn’t place this address on the map. Drag the pin to set the location.' : 'Listing saved.', $lat === null ? 'err' : 'ok');
+    if ($lat === null) {
+        Auth::flash('Saved – but we couldn’t place this address on the map. Drag the pin to set the location.', 'err');
+    } elseif ($publishedNow) {
+        Auth::flash('Saved and published – the rewritten About section is now live on the website.', 'ok');
+    } elseif ($status === 'review') {
+        Auth::flash($data['about']
+            ? sprintf('Saved, still hidden: about %d%% of the About section still matches the riseapartments.com text. Rewrite it in your own words (under %d%%) and save again to publish.', round($overlap * 100), ADMIN_REWRITE_MAX_OVERLAP * 100)
+            : 'Saved, still hidden: write an About section in your own words and save again to publish.', 'err');
+    } else {
+        Auth::flash('Listing saved.', 'ok');
+    }
     redirect("/admin/listings/$id/", 302);
+}
+
+/** Show a listing exactly as visitors would see it, whatever its status (never indexed). */
+function admin_listing_preview(int $id): void
+{
+    $st = db()->prepare("SELECT * FROM properties WHERE id = ? AND status <> 'deleted'");
+    $st->execute([$id]);
+    $p = $st->fetch();
+    if (!$p) {
+        redirect('/admin/listings/', 302);
+    }
+    $p['d'] = json_decode($p['data'] ?? '{}', true) ?: [];
+    $nearby = Listings::nearby($p, 6);
+    $areaKey = Listings::areaKeyFor($p);
+    header('X-Robots-Tag: noindex, nofollow');
+    render('property', compact('p', 'nearby', 'areaKey'), [
+        'title'      => 'Preview: ' . $p['name'] . ' | Houston Apartments',
+        'canonical'  => listing_url($p['slug']),
+        'body_class' => 'property-page',
+        'noindex'    => true,
+    ]);
 }
 
 function admin_new_id(): int

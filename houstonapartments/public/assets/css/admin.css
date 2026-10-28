@@ -164,3 +164,6 @@ form.inline { display: inline; }
 .side-brand { flex-direction: column; align-items: flex-start; gap: 4px; }
 .side-brand > small { opacity: .6; font-weight: 600; padding-left: 50px; margin-top: -6px; }
 .login-logo { display: flex; justify-content: center; }
+
+.s-review { background: #fff4dd; color: #8a5a00; }
+.note-review { background: #fdf0ec; border-color: #f4c3b3; }

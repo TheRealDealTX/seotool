@@ -3,7 +3,9 @@ defined('HA_ROOT') || exit;
 $d = $p['d'];
 $isNew = !$p['id'];
 $title = $isNew ? 'Add a listing' : 'Edit: ' . $p['name'];
-$actions = $isNew ? '' : '<a class="btn ghost" href="' . e(listing_url($p['slug'])) . '" target="_blank" rel="noopener">View on website ↗</a>';
+$actions = $isNew ? '' : ($p['status'] === 'publish'
+    ? '<a class="btn ghost" href="' . e(listing_url($p['slug'])) . '" target="_blank" rel="noopener">View on website ↗</a>'
+    : '<a class="btn ghost" href="/admin/listings/' . $p['id'] . '/preview/" target="_blank" rel="noopener">Preview (not public) ↗</a>');
 $plans = $d['floorplans'] ?? [];
 $prices = $d['prices'] ?? [];
 $faqs = $d['faqs'] ?? [];
@@ -13,6 +15,14 @@ $bedOpts = [0 => 'Studio', 1 => '1 bed', 2 => '2 beds', 3 => '3 beds', 4 => '4+ 
 <form class="edit-form" method="post" enctype="multipart/form-data" data-dirty-check>
   <input type="hidden" name="_csrf" value="<?= e($csrf) ?>">
 
+  <?php if ($p['status'] === 'review'): ?>
+    <div class="note note-review"><div>
+      <strong>Hidden until rewritten.</strong> This listing was imported with riseapartments.com’s description, which Google would treat as duplicate content.
+      Rewrite the <a href="#about-text">About this property</a> section in your own words and save – it goes live automatically once the text is clearly different
+      (less than <?= ADMIN_REWRITE_MAX_OVERLAP * 100 ?>% matching phrases).
+      <?php if (($d['rise_about'] ?? []) && $d['about'] ?? []): ?><br>Right now about <strong><?= round(Listings::aboutOverlap($d['about'], $d['rise_about']) * 100) ?>%</strong> still matches the original.<?php endif ?>
+    </div></div>
+  <?php endif ?>
   <?php if ($p['source'] === 'rise'): ?>
     <div class="note">
       This listing was imported from riseapartments.com.
@@ -26,7 +36,7 @@ $bedOpts = [0 => 'Studio', 1 => '1 bed', 2 => '2 beds', 3 => '3 beds', 4 => '4+ 
     <div class="fields">
       <label class="span2"><span>Property name <b class="req">*</b></span><input name="name" value="<?= e($p['name']) ?>" required placeholder="e.g. Camden Heights"></label>
       <label>Show on website
-        <select name="status"><option value="publish"<?= $p['status'] === 'publish' ? ' selected' : '' ?>>Yes – live</option><option value="hidden"<?= $p['status'] === 'hidden' ? ' selected' : '' ?>>Hidden (draft / full)</option></select>
+        <select name="status"><option value="publish"<?= $p['status'] === 'publish' ? ' selected' : '' ?>>Yes – live</option><?php if ($p['status'] === 'review'): ?><option value="review" selected>Awaiting rewrite – goes live when About is rewritten</option><?php endif ?><option value="hidden"<?= $p['status'] === 'hidden' ? ' selected' : '' ?>>Hidden (draft / full)</option></select>
       </label>
       <label class="span2"><span>Street address <b class="req">*</b></span><input name="street" value="<?= e($p['street']) ?>" required placeholder="404 Oxford St" data-addr></label>
       <label>City<input name="city" value="<?= e($p['city'] ?: 'Houston') ?>" data-addr></label>
@@ -118,7 +128,7 @@ $bedOpts = [0 => 'Studio', 1 => '1 bed', 2 => '2 beds', 3 => '3 beds', 4 => '4+ 
 
   <section class="card">
     <h2><span class="step">6</span> Description &amp; details</h2>
-    <label class="block">About this property <small>(leave a blank line between paragraphs)</small><textarea name="about" rows="8"><?= e(implode("\n\n", $d['about'] ?? [])) ?></textarea></label>
+    <label class="block" id="about-text">About this property <small>(leave a blank line between paragraphs)</small><textarea name="about" rows="8"><?= e(implode("\n\n", $d['about'] ?? [])) ?></textarea></label>
     <div class="fields">
       <label>Year built<input name="year_built" value="<?= e($p['year_built']) ?>" inputmode="numeric"></label>
       <label>Number of units<input name="units" value="<?= e($p['units']) ?>" inputmode="numeric"></label>

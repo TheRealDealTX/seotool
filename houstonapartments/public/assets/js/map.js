@@ -103,6 +103,7 @@
     function search(resetPage) {
       if (resetPage) page = 1;
       clearTimeout(timer);
+      if (sheetShow) sheetShow.textContent = 'Updating…';
       timer = setTimeout(run, 120);
     }
     function run() {
@@ -126,6 +127,7 @@
 
     function render(res) {
       totalEl.textContent = res.total.toLocaleString() + (res.total === 1 ? ' apartment' : ' apartments');
+      sheetTotal(res.total); // the sheet's button count must come from this response, not the previous one
       cards = {};
       if (!res.items.length) {
         listEl.innerHTML = '<div class="no-results"><h3>No matches here yet</h3><p>Try widening your price range, removing a filter, or drawing a bigger area.</p><button class="btn btn-outline" type="button" data-reset>Reset filters</button></div>';
@@ -384,8 +386,9 @@
         n += k === 'amen' ? String(s[k]).split(',').length : 1;
       });
       sheetCount.textContent = n; sheetCount.hidden = !n;
-      var t = (totalEl.textContent.match(/[\d,]+/) || [''])[0];
-      sheetShow.textContent = t ? 'Show ' + t + (t === '1' ? ' apartment' : ' apartments') : 'Show results';
+    }
+    function sheetTotal(total) {
+      sheetShow.textContent = 'Show ' + total.toLocaleString() + (total === 1 ? ' apartment' : ' apartments');
     }
 
     /* --- mobile map/list toggle --- */

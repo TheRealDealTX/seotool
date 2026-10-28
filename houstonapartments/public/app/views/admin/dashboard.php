@@ -5,6 +5,7 @@ $actions = '<a class="btn primary" href="/admin/listings/new/">＋ Add a listing
 ?>
 <div class="stat-row">
   <a class="stat" href="/admin/listings/?status=publish"><strong><?= number_format($stats['published']) ?></strong><span>Listings on the site</span></a>
+  <a class="stat<?= $stats['review'] ? ' hot' : '' ?>" href="/admin/listings/?status=review"><strong><?= number_format($stats['review']) ?></strong><span>Awaiting rewrite</span></a>
   <a class="stat" href="/admin/listings/?status=hidden"><strong><?= number_format($stats['hidden']) ?></strong><span>Hidden listings</span></a>
   <a class="stat" href="/admin/listings/?source=manual"><strong><?= number_format($stats['manual']) ?></strong><span>Added by hand</span></a>
   <a class="stat hot" href="/admin/leads/?status=new"><strong><?= number_format($stats['leads_new']) ?></strong><span>New leads to call</span></a>
@@ -27,7 +28,7 @@ $actions = '<a class="btn primary" href="/admin/listings/new/">＋ Add a listing
     <ul class="simple-list">
       <?php foreach ($recent as $r): ?>
         <li><a class="row-link" href="/admin/listings/<?= $r['id'] ?>/"><img class="thumb" src="<?= e($r['photo'] ?: '/assets/img/Houston-High-Rise.webp') ?>" alt=""><span><strong><?= e($r['name']) ?></strong><br><small class="muted">by <?= e($r['updated_by'] ?: 'Rise sync') ?></small></span></a>
-          <span class="pill <?= $r['status'] === 'publish' ? 's-leased' : 's-closed' ?>"><?= $r['status'] === 'publish' ? 'Live' : 'Hidden' ?></span></li>
+          <span class="pill <?= ['publish' => 's-leased', 'review' => 's-review'][$r['status']] ?? 's-closed' ?>"><?= e(Listings::STATUS_LABELS[$r['status']] ?? $r['status']) ?></span></li>
       <?php endforeach ?>
     </ul>
   </section>
