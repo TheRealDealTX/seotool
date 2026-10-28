@@ -15,7 +15,7 @@ SITE = "https://jmautida.com"
 NAME = "John Raymond Autida"
 BRAND = "JM Autida"
 EMAIL = "autida@jmautida.com"
-VERSION = "4"
+VERSION = "5"
 SOCIAL = ["https://www.instagram.com/jhnrymndatd/", "https://www.facebook.com/johnraymond.autida/"]
 COMPANIES = [
     ("Rise Marketing LLC", "Web developer"),
