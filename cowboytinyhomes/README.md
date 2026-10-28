@@ -10,7 +10,7 @@ Hostinger Cloud Enterprise (account `u401386392`, document root
 | --- | --- |
 | `public_html/index.php` | Front controller: clean URLs, 301s for old WordPress URLs, `sitemap.xml`, real 404s |
 | `public_html/.htaccess` | Sends non-file requests to `index.php`, blocks `inc/`, `pages/` and the WP backup, and sets caching and security headers |
-| `public_html/inc/config.php` | Business details (name, phone, email, cities) and navigation |
+| `public_html/inc/config.php` | Business details (name, phone, email, cities), Google Analytics ID (`GA_ID`) and navigation |
 | `public_html/inc/pages.php` | Route table with each page's title, meta description, type and sitemap priority, plus the old→new redirect map |
 | `public_html/inc/layout.php` | Page shell (head, header, footer), helpers (`hero`, `faq_section`, `cta_band`, `related`) and the JSON-LD builder |
 | `public_html/inc/contact.php` | Contact-form handler: validates input, applies honeypot and timing spam checks, emails `contact@`, and saves a copy to `inc/data/leads.csv` |
@@ -18,6 +18,7 @@ Hostinger Cloud Enterprise (account `u401386392`, document root
 | `public_html/inc/secrets.php` | **Server only, git-ignored.** The SMTP login: `<?php return ['host'=>'smtp.hostinger.com','port'=>465,'user'=>'contact@cowboytinyhomes.com','pass'=>'…'];` Recreate it on the server if the mailbox password changes |
 | `public_html/pages/` | One template per page: services, areas, guides, tools, and core pages |
 | `public_html/assets/` | `css/site.css`, `js/site.js` (nav, FAQ search, filters), `js/tools.js` (all calculators), and images |
+| `public_html/googlecccfbf2f7e9e5ae4.html` | Google Search Console verification file — keep it in the site root |
 | `validate.py` | Crawls a running copy and checks status codes, single H1, unique titles and descriptions, canonicals, JSON-LD, links, alt text, and the homepage brand count |
 | `featured_images.py` | Generates the 1200×675 blog featured images from the site photos (needs Montserrat TTFs) |
 | `deploy.py` | Uploads to Hostinger through the File Browser API; `launch` also moved WordPress into the backup folder |

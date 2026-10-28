@@ -9,6 +9,7 @@ const PHONE_HREF  = 'tel:+12109039471';
 const EMAIL       = 'contact@cowboytinyhomes.com';
 const LEAD_TO     = 'contact@cowboytinyhomes.com';   // where contact-form leads are emailed
 const MAIL_FROM   = 'contact@cowboytinyhomes.com';   // sender; SMTP login comes from inc/secrets.php (server only, not in git)
+const GA_ID       = 'G-JJPQXF3CVT';                  // Google Analytics 4 measurement ID (tag is in inc/layout.php <head>)
 const ASSET_VER   = '20261028b';                     // bump to bust browser caches for CSS/JS
 
 // Cities the old site's forms offered, and the area pages built for them.

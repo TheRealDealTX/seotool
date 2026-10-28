@@ -228,6 +228,15 @@ function render_page(string $path, array $m, string $content, int $status = 200)
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['desc']) ?>">
 <meta name="robots" content="<?= $robots ?>">

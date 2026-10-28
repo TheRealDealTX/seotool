@@ -14,7 +14,7 @@ hero([
     <h2>Information We Collect</h2>
     <p><strong>Information you give us.</strong> When you use our contact or quote forms, we collect what you enter — typically your name, phone number, email address, the city and address of your project, whether you own the property, your preferred contact method and a description of your project. If you email or call us, we receive the information you choose to share.</p>
     <p><strong>Information collected automatically.</strong> Like most websites, our hosting provider records standard server logs (IP address, browser type, pages requested, date and time) for security and troubleshooting. Our planning tools and calculators run entirely in your browser; the numbers you enter are not sent to us unless you choose to include them in a contact form.</p>
-    <p><strong>Cookies.</strong> This site does not use advertising cookies. If we add analytics in the future, we will update this policy to describe it.</p>
+    <p><strong>Analytics and cookies.</strong> We use Google Analytics to understand how visitors find and use this website — for example which pages are viewed, how long visits last, and the general location and device type of visitors. Google Analytics uses cookies and similar technologies and processes this information on our behalf under <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. We do not use it to identify you personally. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a> or by blocking cookies in your browser. This site does not use advertising cookies.</p>
 
     <h2>How We Use Your Information</h2>
     <ul>
