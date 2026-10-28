@@ -432,6 +432,9 @@ function lead_payload(array $lead, string $property = '', string $propertyUrl = 
     $digits = preg_replace('/\D/', '', $lead['phone']);
     $houston = new DateTime($lead['created_at'] ?? 'now');
     $houston->setTimezone(new DateTimeZone('America/Chicago'));
+    // Leads store friendly text ("Dec 1, 2026", "$1,850"); automations need a plain date and a number
+    $moveIn = ($t = strtotime((string) $lead['move_in'])) ? date('Y-m-d', $t) : null;
+    $budget = ($b = (int) preg_replace('/\D/', '', (string) $lead['budget'])) ? $b : null;
     return [
         'lead_id'        => $lead['id'] ?? null,
         'name'           => $lead['name'],
@@ -440,9 +443,9 @@ function lead_payload(array $lead, string $property = '', string $propertyUrl = 
         'email'          => $lead['email'],
         'phone'          => $lead['phone'],
         'phone_e164'     => strlen($digits) >= 10 ? '+1' . substr($digits, -10) : '',
-        'move_in'        => $lead['move_in'],
+        'move_in'        => $moveIn,
         'bedrooms'       => $lead['beds'],
-        'budget'         => $lead['budget'],
+        'budget'         => $budget,
         'message'        => $lead['message'],
         'property'       => $property,
         'property_url'   => $propertyUrl,
