@@ -1,4 +1,8 @@
-**Meta Description:** Is your Texas apartment AC a quick filter fix or a job for a pro? Learn which cooling problems renters can check, which need an HVAC technician, and how to report them.
+**SEO Title:** Apartment AC Problems in Texas: Maintenance or Pro Repair?
+
+**Meta Description:** Is your Texas apartment AC a quick filter fix or a job for a pro? See what renters can check, what needs an HVAC tech, and how to report it.
+
+**Slug:** apartment-ac-maintenance-or-professional-repair
 
 # How to Tell Whether an Apartment Cooling Problem Needs Maintenance or Professional Repair
 
