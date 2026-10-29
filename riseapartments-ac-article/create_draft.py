@@ -22,11 +22,11 @@ def call(path, data, headers):
         return json.load(r)
 
 
+# Alt text lives in the post's <img> tags; this site's REST API refuses media edits.
 def upload(filename, slug, alt):
     with open(os.path.join(HERE, "images", filename), "rb") as f:
         media = call("media", f.read(), {"Content-Type": "image/png",
                                          "Content-Disposition": f'attachment; filename="{slug}.png"'})
-    call(f"media/{media['id']}", json.dumps({"alt_text": alt}).encode(), {"Content-Type": "application/json"})
     return media
 
 
@@ -36,8 +36,13 @@ images = {
     "images/image2.png": ("image2.png", "hvac-technician-apartment-ac-repair", "Technician drilling into an air conditioner casing"),
 }
 featured = None
+# EXISTING_MEDIA="image1.png=123,..." reuses images already uploaded.
+existing = dict(kv.split("=") for kv in os.environ.get("EXISTING_MEDIA", "").split(",") if kv)
 for src, (fn, slug, alt) in images.items():
-    m = upload(fn, slug, alt)
+    if fn in existing:
+        m = json.load(urllib.request.urlopen(f"{SITE}/media/{existing[fn]}"))
+    else:
+        m = upload(fn, slug, alt)
     featured = featured or m["id"]
     html = html.replace(f'src="{src}"', f'class="wp-image-{m["id"]}" src="{m["source_url"]}"')
 
