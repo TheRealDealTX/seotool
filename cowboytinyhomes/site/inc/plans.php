@@ -386,12 +386,12 @@ foreach ($PLANS as $slug => &$p) {
     if (!isset($p['height'])) {
         // grade to ridge: slab or chassis + walls (+ second floor) + roof rise over half the depth
         preg_match('/(\d+(?:\.\d+)?):12/', $p['roof'], $mm);
-        $base = str_contains($p['foundation'], 'chassis') ? 2.5 : 0.67;
+        $base = strpos($p['foundation'], 'chassis') !== false ? 2.5 : 0.67;
         $h = $base + ($p['plate'] ?? 9) + (isset($p['upper']) ? 9 : 0) + $p['D'] / 2 * (float)($mm[1] ?? 6) / 12;
         $p['height'] = $ft(round($h * 2) / 2);
     }
     $p['url'] = plan_url($slug);
-    $p['ref'] = str_starts_with($p['name'], 'The ') ? $p['name'] : 'the ' . $p['name'];   // mid-sentence: "build the Gonzales...", "build The Bandera"
+    $p['ref'] = strncmp($p['name'], 'The ', 4) === 0 ? $p['name'] : 'the ' . $p['name'];   // mid-sentence: "build the Gonzales...", "build The Bandera"
     $p['bed_label'] = $p['bed_label'] ?? ($p['beds'] ? $p['beds'] . ' bed' : 'No bedroom');
     $p['bath_label'] = ['0' => 'No bath', '0.5' => 'Half bath', '0.75' => '3/4 bath'][(string)$p['baths']] ?? ($p['baths'] . ' bath');
     $p['image'] = "/assets/plans/$slug/3d.webp";

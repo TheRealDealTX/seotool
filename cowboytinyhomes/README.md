@@ -122,6 +122,11 @@ Runs the whole flow against the fake Stripe API: fallback without keys, checkout
 webhook, duplicate webhooks, success page, download, wrong token, success page before the
 webhook, lookup with CSRF, refund, bad signature, a 100%-off order and the Stripe Tax switch.
 
+## Server
+
+Hostinger runs **PHP 7.4.33** for this site, so the code avoids PHP 8-only functions
+(`str_contains`, `str_starts_with`, `match`, `?->`); `validate.php` checks for them. Run it before every deploy.
+
 ## Local preview
 
 ```

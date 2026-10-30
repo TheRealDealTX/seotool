@@ -37,6 +37,16 @@ foreach ($PLANS as $slug => $p) {
 $profile = json_decode((string)file_get_contents(__DIR__ . '/generator/profile.json'), true);
 if ($profile['cost_regions'] != TX_REGIONS) $problems[] = 'TX_REGIONS in config.php does not match generator/profile.json cost_regions';
 foreach (PAGES as $path => $m) if (!is_file(__DIR__ . '/site/pages/' . $m['file'] . '.php')) $problems[] = "$path: missing template pages/{$m['file']}.php";
+// Hostinger runs PHP 7.4 for this site: no PHP 8-only functions or syntax.
+$it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator(__DIR__ . '/site', FilesystemIterator::SKIP_DOTS));
+foreach ($it as $f) {
+    if ($f->getExtension() !== 'php') continue;
+    foreach (file($f->getPathname()) as $n => $line) {
+        if (preg_match('/\b(str_contains|str_starts_with|str_ends_with|get_debug_type|array_is_list)\s*\(|\?->|\bmatch\s*\(/', $line)) {
+            $problems[] = substr($f->getPathname(), strlen(__DIR__) + 1) . ':' . ($n + 1) . ': PHP 8-only code (server runs PHP 7.4)';
+        }
+    }
+}
 $sets = plan_sets();
 foreach ($PLANS as $slug => $p) if (!isset($sets[$slug])) $problems[] = "$slug: not built yet (run generator/build.py)";
 
