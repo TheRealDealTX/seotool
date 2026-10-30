@@ -1,5 +1,6 @@
 // Interactive 3D model on plan pages. Loads three.js and the plan's model.json only when
-// the 3D tab is opened. Drag to orbit, scroll or pinch to zoom, "Roof off" for a cutaway.
+// the 3D tab is opened. Drag to orbit, scroll or pinch to zoom, "Roof off" for a cutaway
+// (on two-story plans it also lifts off the second floor to show the main floor).
 const VIEWERS = new WeakMap();
 
 export async function mount(el) {
@@ -33,10 +34,11 @@ function build(THREE, el, data) {
   scene.add(sun);
 
   // Model axes: x = width, y = depth (front at 0), z = up. three.js: y up, so map (x, z, -y)
-  // and center the footprint on the origin.
+  // and center the whole model (porches included) on the origin.
+  const [bx0, by0, bx1, by1] = data.bbox || [0, 0, data.W, data.D];
   const root = new THREE.Group();
   root.rotation.x = -Math.PI / 2;
-  root.position.set(-data.W / 2, 0, data.D / 2);
+  root.position.set(-(bx0 + bx1) / 2, 0, (by0 + by1) / 2);
   scene.add(root);
   const groups = {};
   for (const [gname, mats] of Object.entries(data.groups)) {
@@ -53,14 +55,14 @@ function build(THREE, el, data) {
     groups[gname] = g;
     root.add(g);
   }
-  const ground = new THREE.Mesh(new THREE.CircleGeometry(Math.max(data.W, data.D) * 1.6, 48),
+  const ground = new THREE.Mesh(new THREE.CircleGeometry(Math.max(bx1 - bx0, by1 - by0) * 1.6, 48),
     new THREE.MeshLambertMaterial({ color: 0xd7e2d2 }));
   ground.rotation.x = -Math.PI / 2;
   ground.position.y = -0.02;
   scene.add(ground);
 
   // Orbit state
-  const size = Math.max(data.W, data.D, data.H);
+  const size = Math.max(bx1 - bx0, by1 - by0, data.H);
   const st = { theta: -0.75, phi: 1.12, r: Math.max(size * 1.6, data.H * 3.2), target: new THREE.Vector3(0, data.H * 0.35, 0) };
   const home = { ...st, target: st.target.clone() };
   function place() {
@@ -111,7 +113,7 @@ function build(THREE, el, data) {
     const a = btn.dataset['3d'];
     if (a === 'roof') {
       const on = !groups.roof.visible;
-      groups.roof.visible = on;
+      setRoof(on);
       btn.setAttribute('aria-pressed', String(!on));
       btn.textContent = on ? 'Roof off (see inside)' : 'Roof on';
     } else if (a === 'reset') {
@@ -124,6 +126,10 @@ function build(THREE, el, data) {
     }
     place();
   }));
+  function setRoof(on) {
+    groups.roof.visible = on;
+    if (groups.upper) groups.upper.visible = on;
+  }
   new ResizeObserver(resize).observe(el);
   resize();
   place();
@@ -131,6 +137,6 @@ function build(THREE, el, data) {
     render, renderer,
     // Used by the build to render stills: view({ theta, phi, zoom }), roof(false) for a cutaway.
     view(o) { Object.assign(st, { theta: o.theta ?? st.theta, phi: o.phi ?? st.phi, r: Math.max(size, data.H * 2) * (o.zoom ?? 1.6) }); place(); },
-    roof(on) { groups.roof.visible = on; render(); },
+    roof(on) { setRoof(on); render(); },
   };
 }

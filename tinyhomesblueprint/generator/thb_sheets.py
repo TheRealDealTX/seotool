@@ -16,7 +16,8 @@ SHEET_W, SHEET_H = 36.0, 24.0
 TB_X = 32.4              # title block left edge
 AREA = (0.75, 0.75, TB_X - 0.35, SHEET_H - 0.75)   # drawing area x0, y0, x1, y1
 SCALE = 0.25             # 1/4" = 1'-0"
-SITE = "tinyhomesblueprint.com"
+SITE = M.PROFILE["site"]
+BRAND = M.PROFILE["brand_lines"]
 DISCLAIMER = [
     "PLANNING & PERMIT-DEVELOPMENT SET. THESE DRAWINGS ARE",
     "GENERATED FROM THE PLAN DESIGN AND ARE INTENDED FOR",
@@ -41,16 +42,23 @@ class SetBuilder:
         self.date = dt.date.today().strftime("%b %d, %Y").upper()
 
     def _sheet_list(self):
+        up = self.m.upper
         s = [("A0.0", "COVER SHEET & PROJECT DATA", self.cover),
-             ("A1.0", "FLOOR PLAN & SCHEDULES", self.floor)]
+             ("A1.0", "FLOOR PLAN & SCHEDULES" if not up else "FIRST FLOOR PLAN & SCHEDULES", self.floor)]
+        if up:
+            s.append(("A1.1", "SECOND FLOOR PLAN & SCHEDULES", lambda cv: self.floor(cv, up)))
         if self.m.lofts:
             s.append(("A1.1", "LOFT PLAN", self.loft))
         s += [("A2.0", "EXTERIOR ELEVATIONS", self.elevations),
               ("A3.0", "BUILDING SECTION & ASSEMBLIES", self.section),
               ("S1.0", "FOUNDATION PLAN" if not self.m.mobile else "TRAILER & FLOOR FRAMING PLAN", self.foundation),
               ("S2.0", "ROOF FRAMING PLAN & HEADERS", self.framing),
-              ("E1.0", "ELECTRICAL PLAN & PANEL SCHEDULE", self.electrical),
-              ("P1.0", "PLUMBING PLAN & FIXTURE SCHEDULE", self.plumbing)]
+              ("E1.0", "ELECTRICAL PLAN & PANEL SCHEDULE", self.electrical)]
+        if up:
+            s.append(("E1.1", "SECOND FLOOR ELECTRICAL PLAN", lambda cv: self.electrical(cv, up)))
+        s.append(("P1.0", "PLUMBING PLAN & FIXTURE SCHEDULE", self.plumbing))
+        if up:
+            s.append(("P1.1", "SECOND FLOOR PLUMBING PLAN", lambda cv: self.plumbing(cv, up)))
         n_mat = max(1, math.ceil(len(self.items) / 220))
         for i in range(n_mat):
             s.append((f"G1.{i}", "MATERIALS LIST" + (f" ({i + 1} OF {n_mat})" if n_mat > 1 else ""), lambda cv, i=i, n=n_mat: self.materials(cv, i, n)))
@@ -73,13 +81,14 @@ class SetBuilder:
         x = TB_X
         cv.line(x, 0.4, x, SHEET_H - 0.4, "border")
         y = SHEET_H - 0.9
-        cv.text(x + 0.2, y, "TINY HOMES", 0.26, "title", anchor="start", bold=True)
-        cv.text(x + 0.2, y - 0.42, "BLUEPRINT", 0.26, "title", anchor="start", bold=True)
+        cv.text(x + 0.2, y, BRAND[0], 0.26, "title", anchor="start", bold=True)
+        cv.text(x + 0.2, y - 0.42, BRAND[1], 0.26, "title", anchor="start", bold=True)
         cv.text(x + 0.2, y - 0.75, SITE, 0.09, "text", anchor="start")
-        cv.text(x + 0.2, y - 0.95, "210-903-9471  ·  contact@tinyhomesblueprint.com", 0.075, "text_lt", anchor="start")
+        cv.text(x + 0.2, y - 0.95, f"{M.PROFILE['phone']}  ·  {M.PROFILE['email']}", 0.075, "text_lt", anchor="start")
         cv.line(x, y - 1.2, SHEET_W - 0.4, y - 1.2, "thin")
         cv.text(x + 0.2, y - 1.55, "PLAN", 0.07, "text_lt", anchor="start")
-        cv.text(x + 0.2, y - 1.9, self.p["name"].upper(), 0.2, "text", anchor="start", bold=True)
+        name = self.p["name"].upper()
+        cv.text(x + 0.2, y - 1.9, name, min(0.2, 2.9 / (0.72 * len(name))), "text", anchor="start", bold=True)   # shrink long names to fit the block
         words, line, yy = self.p["title"].upper().split(), "", y - 2.25
         for wd in words:
             if len(line + " " + wd) > 30:
@@ -98,7 +107,7 @@ class SetBuilder:
             yy -= 0.15
         cv.line(x, yy - 0.15, SHEET_W - 0.4, yy - 0.15, "thin")
         yy -= 0.5
-        for k, v in (("DATE", self.date), ("SCALE", "AS NOTED (24 x 36)"), ("DRAWN", "THB PLAN GENERATOR"), ("CODES", "2021 IRC / 2023 NEC / 2021 IPC")):
+        for k, v in (("DATE", self.date), ("SCALE", "AS NOTED (24 x 36)"), ("DRAWN", "PLAN GENERATOR"), ("CODES", "2021 IRC / 2023 NEC / 2021 IPC")):
             cv.text(x + 0.2, yy, k, 0.065, "text_lt", anchor="start")
             cv.text(x + 1.1, yy, v, 0.07, "text", anchor="start")
             yy -= 0.24
@@ -112,7 +121,7 @@ class SetBuilder:
         cv.text(x + 0.2, 1.8, "SHEET", 0.065, "text_lt", anchor="start")
         cv.text(x + 1.55, 0.85, no, 0.55, "title", bold=True)
         cv.text(SHEET_W - 0.6, 0.6, f"{idx} OF {len(self.sheets)}", 0.07, "text_lt", anchor="end")
-        cv.text(x + 0.2, 0.6, f"© {dt.date.today().year} TINY HOMES BLUEPRINT", 0.055, "text_lt", anchor="start")
+        cv.text(x + 0.2, 0.6, f"© {dt.date.today().year} {M.PROFILE['brand_name'].upper()}", 0.055, "text_lt", anchor="start")
 
     def title(self, cv, x, y, label, scale="1/4\" = 1'-0\""):
         cv.paper()
@@ -227,33 +236,33 @@ class SetBuilder:
         cv.text(10.25, 9.2, "3D VIEW - FRONT LEFT", 0.09, "text_lt")
         # project data
         info = profile(m)
-        rows = [("Plan", p["name"]), ("Heated area", f"{p['sqft']:,} sq ft" + (f" ({p['main_sqft']:,} main + {p['loft_sqft']} loft)" if p.get("loft_sqft") else "")),
+        area = f"{p['sqft']:,} sq ft"
+        if p.get("upper_sqft"):
+            area += f" ({p['main_sqft']:,} first + {p['upper_sqft']:,} second floor)"
+        elif p.get("loft_sqft"):
+            area += f" ({p['main_sqft']:,} main + {p['loft_sqft']} loft)"
+        hv = m.notes.get("hvac", {})
+        hvac = "Ductless mini-split heat pump"
+        if hv.get("heads"):
+            hvac = f"Ductless heat pump, {hv['outdoor_btu']:,} BTU" + (f", {len(hv['heads'])} heads" if len(hv["heads"]) > 1 else "")
+        rows = [("Plan", p["name"]), ("Heated area", area),
                 ("Footprint", f"{p['width']} x {p['depth']}"), ("Bedrooms / baths", f"{p['beds']} / {p['baths']}"),
                 ("Covered porch / deck", f"{g['porch']:.0f} sq ft" if g["porch"] else "None"),
                 ("Overall height", p["height"]), ("Ceiling height", p["ceiling"]), ("Roof", p["roof"]), ("Exterior walls", p["walls"]),
                 ("Foundation", p["foundation"]), ("Wall framing", f"{m.stud} @ {24 if m.container else 16}\" o.c."),
-                ("Electrical service", m.notes["load"]["service"]), ("Heating & cooling", "Ductless mini-split heat pump"),
+                ("Electrical service", m.notes["load"]["service"]), ("Heating & cooling", hvac),
                 ("Water heating", "Electric tank / heat-pump" if any(f.kind == "wh" for f in m.fixtures) else "Point-of-use tankless (electric)"),
                 ("Est. build cost (DIY)", money(self.est["diy_total"])), ("Est. build cost (contractor)", money(self.est["gc_total"]))]
         self.table(cv, 20.3, 20.6, "PROJECT DATA", [("ITEM", 3.6, "l"), ("VALUE", 7.6, "l")], rows, size=0.085, rh=0.27)
         # sheet index
         y = self.table(cv, 20.3, 13.6, "SHEET INDEX", [("SHEET", 1.3, "l"), ("TITLE", 6.5, "l")], [(n, t) for n, t, _ in self.sheets], size=0.085, rh=0.25)
-        gen = [
-            "All work shall comply with the 2021 International Residential Code (IRC) including Appendix AQ (Tiny Houses) where adopted, the 2023 National Electrical Code (NEC) and the 2021 International Plumbing Code (IPC), as amended by the local jurisdiction.",
-            "Design loads assumed: 40 psf floor live, 30 psf sleeping-loft live, 20 psf roof live / 30 psf ground snow, 115 mph ultimate wind (Exposure B), Seismic Design Category A-C. Verify for your site; higher loads require engineering.",
-            "Contractor / owner-builder shall verify all dimensions, site conditions and utility locations before construction. Written dimensions govern; do not scale drawings.",
-            "Smoke alarms in every sleeping room and outside sleeping areas, interconnected and hardwired with battery backup. CO alarm required where fuel-burning appliances or attached garages exist.",
-            "Every sleeping room and loft requires an emergency escape opening: 5.7 sq ft net clear (5.0 at grade floor), 20 in. min. width, 24 in. min. height, sill 44 in. max. above floor.",
-            "Provide whole-house mechanical ventilation per IRC M1505 and spot exhaust in bath (50 cfm) and kitchen (100 cfm). Continuous air barrier; blower-door test where required by energy code.",
-            "Insulation and fenestration to meet the IECC prescriptive table for your climate zone; values shown are typical (Zones 3-5).",
-            "Mobile units (on wheels): may be regulated as RVs (NFPA 1192 / ANSI A119.5) or as dwellings depending on jurisdiction. Confirm the applicable standard before starting.",
-        ]
-        if not m.mobile:
-            gen = [x for x in gen if not x.startswith("Mobile")]
-        self.notes(cv, 1.0, 8.4, "GENERAL NOTES", gen, size=0.08, width_chars=150, lh=0.17)
+        kind = M.plan_type(m)
+        gen = [n if isinstance(n, str) else n[1] for n in M.PROFILE["general_notes"] if isinstance(n, str) or kind in n[0]]
+        gen += self.p.get("code_notes", [])
+        self.notes(cv, 1.0, 8.4, "GENERAL NOTES", gen, size=0.08, width_chars=270, lh=0.17)
 
-    def floor(self, cv):
-        m = self.m
+    def floor(self, cv, m=None):
+        m = m or self.m
         x0, y0, x1, y1 = self.extents()
         w, h = x1 - x0, y1 - y0
         box = (AREA[0], 6.6, 21.0, AREA[3] - 0.6)
@@ -263,7 +272,7 @@ class SetBuilder:
         V.draw_plan(cv, m, "floor")
         V.plan_dims(cv, m)
         cv.text(m.W / 2, (min(0, y0)) - 6.0, "FRONT", 0.1, "text_lt", bold=True)
-        self.title(cv, AREA[0] + 0.2, 6.0, "FLOOR PLAN", self.scale_label(s))
+        self.title(cv, AREA[0] + 0.2, 6.0, "SECOND FLOOR PLAN" if m.level else "FIRST FLOOR PLAN" if m.upper else "FLOOR PLAN", self.scale_label(s))
         # schedules
         doors = [o for o in m.openings if o.kind != "window"]
         wins = [o for o in m.openings if o.kind == "window"]
@@ -284,6 +293,10 @@ class SetBuilder:
         for r in m.heated + m.lofts:
             fl = "Porcelain tile" if r.kind in ("bath",) else "LVP (waterproof)"
             ceil = self.p["ceiling"] if not r.loft else "Sloped / 4'-0\" min."
+            if m.level:
+                ceil = V.ft_in(M.UPPER_PLATE) + " flat"
+            elif m.upper:
+                ceil = V.ft_in(m.plate) + " flat"
             rrows.append((r.title, f"{r.area:.0f}", fl, "1/2\" gyp. bd., paint" if not m.mobile else "T&G / ply panel", ceil[:24]))
         y = self.table(cv, 21.6, y, "ROOM FINISH SCHEDULE", [("ROOM", 2.6, "l"), ("SQ FT", 0.8, "r"), ("FLOOR", 1.9, "l"), ("WALLS", 2.0, "l"), ("CEILING", 2.2, "l")], rrows, size=0.072)
         self.notes(cv, 21.6, max(y, 6.2), "FLOOR PLAN NOTES", [
@@ -323,7 +336,9 @@ class SetBuilder:
             self.title(cv, x + 0.2, y + 0.4, f"{fac.upper()} ELEVATION", self.scale_label(s))
         cv.paper()
         roofing = "STANDING-SEAM METAL" if "metal" in self.p["roof"].lower() or m.mobile else "ARCHITECTURAL ASPHALT SHINGLES"
-        lines = [f"ROOF: {roofing} OVER SYNTHETIC UNDERLAYMENT", f"WALLS: {self.p['walls'].upper()}", "TRIM: 1x4 / 1x6 PRIMED, CORNER BOARDS", "WINDOWS: VINYL, LOW-E, U-0.30 MAX."]
+        lines = [f"ROOF: {roofing} OVER SYNTHETIC UNDERLAYMENT", f"WALLS: {self.p['walls'].upper()}", "TRIM: 1x4 / 1x6 PRIMED, CORNER BOARDS", f"WINDOWS: VINYL, {M.PROFILE.get('window_spec', 'LOW-E, U-0.30 MAX.').upper()}"]
+        if M.PROFILE.get("radiant_barrier") and not m.container:
+            lines.append(f"OVERHANGS: {V.ft_in(m.overhang)} AT EAVES AND RAKES; RADIANT-BARRIER ROOF DECK")
         for i, ln in enumerate(lines):
             cv.text(AREA[0] + 0.3, 11.75 - i * 0.17, ln, 0.07, "text_lt", anchor="start")
 
@@ -342,7 +357,8 @@ class SetBuilder:
         self.title(cv, AREA[0] + 0.2, 6.6, "BUILDING SECTION A-A", self.scale_label(s))
         roofing = "metal roofing on 1x4 purlins or underlayment" if ("metal" in self.p["roof"].lower() or m.mobile) else "architectural shingles"
         rt = m.roof_type
-        roof = [f"ROOF: {roofing}; synthetic underlayment; ice & water shield at eaves; 1/2\" CDX sheathing.",
+        deck = "7/16\" radiant-barrier OSB sheathing (foil down)" if (M.PROFILE.get("radiant_barrier") and not m.container) else "1/2\" CDX sheathing"
+        roof = [f"ROOF: {roofing}; synthetic underlayment; ice & water shield at eaves; {deck}.",
                 ("Pre-engineered trusses @ 24\" o.c.; R-38 blown insulation; vented attic with soffit + ridge vents; 1/2\" gypsum ceiling."
                  if rt in ("gable", "gable-steep") else
                  "Rafters @ 24\" o.c. (see S2.0); unvented cathedral assembly: 2\" closed-cell spray foam + batt to R-30 min.; interior finish.")]
@@ -354,16 +370,22 @@ class SetBuilder:
                 if not m.container else
                 ["WALL: container steel; 2\" closed-cell spray foam (R-13) between 2x3 furring @ 24\" o.c.;", "1/2\" plywood or gypsum interior finish; thermal break at furring."])
         fnd = m.foundation
-        floor = {"slab": ["FLOOR: LVP on 4\" concrete slab, 10 mil vapor retarder, 4\" crushed stone; 2\" XPS at slab edge.",
-                          "Thickened edge 12\" x 12\" with (2) #4 cont.; 1/2\" anchor bolts @ 6'-0\" o.c., 12\" from corners."],
+        floor = {"slab": M.PROFILE["slab"]["section"],
                  "crawl": ["FLOOR: LVP on 3/4\" T&G subfloor on 2x10 joists @ 16\" o.c.; R-19 insulation; 10 mil ground vapor barrier.",
                            "8\" CMU stem wall on 16\" x 8\" continuous footing below frost depth; PT 2x6 sill with anchor bolts @ 6'-0\"."],
+                 "chassis": ["FLOOR: LVP on 3/4\" T&G subfloor on 2x6 joists @ 16\" o.c. with R-19 and a sealed bottom board, on the steel chassis.",
+                             "Chassis I-beams on steel piers and ABS pads @ 6'-0\" o.c.; ground anchors and frame straps per the manufacturer; vented skirting."],
                  "piers": ["FLOOR: container floor with 1\" XPS and 3/4\" plywood underlayment; LVP finish.", "Concrete piers 24\" x 24\" x 36\" with weld plates at corner castings."],
                  "trailer": ["FLOOR: LVP on 3/4\" T&G subfloor; 2x6 joists @ 16\" o.c. with rigid foam / R-19 between; metal flashing below.",
                              "Bottom plate bolted to trailer frame with 1/2\" bolts @ 4'-0\" o.c. and at each tie-down plate."]}[fnd]
         y = self.notes(cv, 21.0, AREA[3] - 0.3, "ROOF ASSEMBLY", roof, size=0.075, width_chars=100)
         y = self.notes(cv, 21.0, y, "WALL ASSEMBLY", wall, size=0.075, width_chars=100)
         y = self.notes(cv, 21.0, y, "FLOOR / FOUNDATION ASSEMBLY", floor, size=0.075, width_chars=100)
+        if m.upper:
+            y = self.notes(cv, 21.0, y, "SECOND FLOOR ASSEMBLY", [
+                "LVP on 3/4\" T&G OSB, glued and screwed, on 11-7/8\" I-joists @ 16\" o.c. (L/480); acoustic batts between joists; 1/2\" gypsum ceiling below.",
+                "Rim board with 2\" closed-cell foam at the rim; fire-blocking at the floor line; stair opening framed with doubled LVL headers per the joist manufacturer.",
+            ], size=0.075, width_chars=100)
         y = self.notes(cv, 21.0, y, "CONNECTIONS", [
             "Rafter / truss to wall: Simpson H2.5A (or equal) at every rafter or truss.",
             "Wall sheathing nailing 8d @ 6\" edges / 12\" field; continuous sheathing as wall bracing per IRC R602.10.",
@@ -384,16 +406,17 @@ class SetBuilder:
         cv.text(AREA[0] + 0.85, 4.85, "CIRCLES = DRAIN / PLUMBING ROUGH-IN LOCATIONS (SEE P1.0)", 0.07, "text_lt", anchor="start")
         fnd = m.foundation
         notes = {
-            "slab": ["Remove topsoil and organics; compact subgrade to 95% standard Proctor. Bottom of thickened edge below local frost depth or per local frost-protected shallow foundation (FPSF) rules.",
-                     "Concrete 3,000 psi at 28 days, 4 in. slump +/- 1 in.; control joints at 10 ft max. each way within 24 hours.",
-                     "Place under-slab plumbing and conduit before the pour; pressure-test DWV and water lines and get rough-in inspection.",
-                     "Anchor bolts 1/2 in. x 10 in. at 6 ft o.c. max. and within 12 in. of each plate end, 7 in. embedment; 2 bolts min. per plate piece.",
-                     "Termite protection per local requirements; radon-resistant construction (sub-slab vent stub) in Zone 1 radon areas."],
+            "slab": M.PROFILE["slab"]["notes"],
             "crawl": ["Footings 16 in. wide x 8 in. deep with (2) #4 continuous; bottom below frost depth on undisturbed soil (1,500 psf assumed bearing).",
                       "8 in. CMU stem wall, cells with anchor bolts grouted solid; 18 in. min. clearance from grade to bottom of joists.",
                       "Center girder 3-2x10 on CMU piers @ 6 ft o.c. max. with 24 x 24 x 10 in. footings.",
                       "Crawlspace: 10 mil vapor barrier lapped 6 in. and sealed; vents 1 sq ft per 150 sq ft or conditioned crawlspace per R408.3.",
                       "Access opening 18 x 24 in. min."],
+            "chassis": ["The chassis, running gear and A119.5 certification come from the park model manufacturer; these sheets show the house built on it.",
+                        "Set on steel piers and ABS (or concrete) pads at 6 ft o.c. max. under each I-beam, within 2 ft of each end; level to 1/8 in.",
+                        "Ground anchors and frame straps per the manufacturer's installation instructions and the RV park or local rules (Texas winds: 115 mph inland; coastal parks need engineered anchoring).",
+                        "Vented skirting with an access panel; keep the crawl area drained and graded away from the unit.",
+                        "Utilities: 50 A park pedestal, water with backflow preventer and pressure regulator, 3 in. sewer to the park connection."],
             "piers": ["Piers 24 x 24 x 36 in. min. (below frost depth) with 3/8 x 8 x 8 in. weld plates; 3,000 psi concrete.",
                       "Container corner castings bear on piers; weld or bolt with twist-lock brackets. Intermediate piers at 20 ft where shown.",
                       "Level piers to 1/8 in. across the set; shim with steel plates only.",
@@ -415,7 +438,7 @@ class SetBuilder:
         self.title(cv, AREA[0] + 0.2, 5.4, "ROOF FRAMING PLAN", self.scale_label(s))
         rows = []
         seen = {}
-        for o in m.openings:
+        for o in m.all("openings"):
             if o.exterior or o.width >= 4:
                 key = Q.header_for(o.width)
                 seen.setdefault(key, []).append(o.tag)
@@ -430,17 +453,28 @@ class SetBuilder:
             f"Ceiling / roof insulation and ventilation per A3.0. Overhang {V.ft_in(info['ov'])} at eaves and rakes.",
             "Non-bearing interior headers: flat 2x4. Provide fire blocking at soffits, chases and floor-ceiling lines.",
             "Gable-end walls: balloon-frame or brace at top plate per IRC R602.10 with continuous sheathing.",
-        ], size=0.075, width_chars=100)
+        ] + (["Two-story: second-floor exterior walls bear on the rim board; continuous sheathing lapped across the floor line, with hold-downs at corners as the wall-bracing design requires."] if m.upper else [])
+          + M.PROFILE.get("framing_notes", []),
+            size=0.075, width_chars=100)
 
-    def electrical(self, cv):
-        m = self.m
+    def electrical(self, cv, m=None):
+        m = m or self.m
         box = (AREA[0], 6.4, 19.5, AREA[3] - 0.6)
         s = self.fit_scale(m.W + 8, m.D + 8, box[2] - box[0], box[3] - box[1])
         self.place(cv, m.W, m.D, *box, scale=s, pad=(4, 4, 4, 4))
         V.draw_plan(cv, m, "electrical")
         V.draw_electrical(cv, m)
-        self.title(cv, AREA[0] + 0.2, 5.8, "ELECTRICAL PLAN", self.scale_label(s))
+        self.title(cv, AREA[0] + 0.2, 5.8, "SECOND FLOOR ELECTRICAL PLAN" if m.level else "ELECTRICAL PLAN", self.scale_label(s))
         self.legend_elec(cv, AREA[0] + 0.3, 5.0)
+        if m.level:
+            y = self.hvac_table(cv, 20.0, AREA[3] - 0.3)
+            self.notes(cv, 20.0, y, "SECOND FLOOR ELECTRICAL NOTES", [
+                "Circuit numbers refer to the panel schedule on E1.0; all second-floor circuits are AFCI-protected home runs from the main panel.",
+                "Smoke alarm in every bedroom and in the hall outside the bedrooms, interconnected with the first-floor alarms.",
+                "Line sets and condensate for the second-floor heads run in a chase or exterior line-hide down to the outdoor unit.",
+            ], size=0.072, width_chars=110, lh=0.155)
+            return
+        m = self.m
         rows = [(c.no, c.name, c.breaker, c.wire, f"{c.va:,}") for c in m.circuits]
         y = self.table(cv, 20.0, AREA[3] - 0.3, "PANEL SCHEDULE", [("CCT", 0.5, "c"), ("DESCRIPTION", 4.6, "l"), ("BREAKER", 1.1, "c"), ("WIRE", 2.6, "l"), ("VA", 0.9, "r")], rows, size=0.072)
         ld = m.notes["load"]
@@ -449,6 +483,7 @@ class SetBuilder:
             ("First 10,000 VA @ 100% + remainder @ 40%", f"{min(ld['other_va'], 10000) + int(max(0, ld['other_va'] - 10000) * 0.4):,}"),
             ("Heating / cooling (heat pump) @ 100%", f"{ld['hp_va']:,}"), ("__bold__", "Calculated demand", f"{ld['demand_va']:,} VA = {ld['amps']} A @ 240 V"),
             ("__bold__", "Recommended service", ld["service"])], size=0.072)
+        y = self.hvac_table(cv, 20.0, y)
         self.notes(cv, 20.0, y, "ELECTRICAL NOTES", [
             "All work per NEC 2023 and local amendments; licensed electrician required where mandated. Obtain permits and inspections.",
             "AFCI protection for all 120 V 15/20 A branch circuits in dwelling units (210.12); GFCI for kitchen, bath, laundry, outdoor and within 6 ft of sinks (210.8).",
@@ -459,10 +494,22 @@ class SetBuilder:
         ] + (["Shore power: 50 A RV inlet feeding a 100 A main-lug panel; provide a bonded ground per NFPA 1192 / NEC 551 where the unit is an RV."] if m.mobile else []),
             size=0.072, width_chars=110, lh=0.155)
 
+    def hvac_table(self, cv, x, y):
+        hv = self.m.notes.get("hvac", {})
+        if not hv.get("heads"):
+            return y
+        rows = [(t, f"{a:,}", f"{b:,}") for t, a, b in hv["heads"]]
+        rows.append(("__bold__", f"Outdoor unit (heat pump, inverter)", "", f"{hv['outdoor_btu']:,}"))
+        y = self.table(cv, x, y, f"DUCTLESS HEAT PUMP SCHEDULE ({hv['btu_per_sqft']} BTU/SQ FT COOLING)", [("ZONE / HEAD", 4.6, "l"), ("AREA SERVED (SQ FT)", 2.6, "r"), ("NOMINAL BTU", 2.5, "r")], rows, size=0.072)
+        cv.text(x, y + 0.12, "Sizes are a planning estimate; confirm with a Manual J load calculation for the orientation, glazing and shading of your site.", 0.065, "text_lt", anchor="start")
+        return y - 0.15
+
     def legend_elec(self, cv, x, y):
         items = [("rec", "Duplex receptacle"), ("gfci", "GFCI receptacle"), ("rec20", "Dedicated 20 A"), ("rec240", "240 V receptacle"), ("wp", "Weatherproof GFCI"),
                  ("sw", "Switch / 3-way"), ("light", "Ceiling light"), ("can", "Recessed LED"), ("fan", "Exhaust fan / light"), ("sconce", "Wall / vanity light"),
                  ("smoke", "Smoke alarm"), ("smokeco", "Smoke / CO alarm"), ("panel", "Panel"), ("minisplit", "Mini-split head"), ("jbox", "Junction box")]
+        if any(d.kind == "cfan" for d in self.m.devices):
+            items.insert(7, ("cfan", "Ceiling fan / light"))
         cv.paper()
         cv.text(x, y, "LEGEND", 0.1, "text", anchor="start", bold=True)
         cols = 3
@@ -473,23 +520,23 @@ class SetBuilder:
             V.draw_device(cv, M.Device(k, 0, 0), num=False)
             cv.paper()
             cv.text(cx + 0.65, cy - 0.04, lbl, 0.075, "text", anchor="start")
-        cv.text(x, y - 0.4 - 5 * 0.42 - 0.05, "DASHED ARCS = SWITCH LEGS. SMALL NUMBERS = PANEL CIRCUIT.", 0.07, "text_lt", anchor="start")
+        cv.text(x, y - 0.4 - math.ceil(len(items) / cols) * 0.42 - 0.05, "DASHED ARCS = SWITCH LEGS. SMALL NUMBERS = PANEL CIRCUIT.", 0.07, "text_lt", anchor="start")
 
-    def plumbing(self, cv):
-        m = self.m
+    def plumbing(self, cv, m=None):
+        m = m or self.m
         box = (AREA[0], 6.0, 19.5, AREA[3] - 0.6)
         s = self.fit_scale(m.W + 9, m.D + 9, box[2] - box[0], box[3] - box[1])
         self.place(cv, m.W, m.D, *box, scale=s, pad=(4.5, 4.5, 4.5, 4.5))
         V.draw_plan(cv, m, "plumbing")
         V.draw_plumbing(cv, m)
-        self.title(cv, AREA[0] + 0.2, 5.4, "PLUMBING PLAN (SUPPLY & DWV)", self.scale_label(s))
+        self.title(cv, AREA[0] + 0.2, 5.4, "SECOND FLOOR PLUMBING PLAN" if m.level else "PLUMBING PLAN (SUPPLY & DWV)", self.scale_label(s))
         cv.paper()
         lx, ly = AREA[0] + 0.3, 4.7
         for i, (st, lbl) in enumerate((("cold", "Cold water (PEX)"), ("hot", "Hot water (PEX)"), ("waste", "Drain / waste (PVC DWV)"), ("vent", "Vent"))):
             cv.line(lx + i * 4.4, ly, lx + i * 4.4 + 0.9, ly, st)
             cv.text(lx + i * 4.4 + 1.05, ly - 0.04, lbl, 0.075, "text", anchor="start")
         counts = {}
-        for f in m.fixtures:
+        for f in (m.fixtures if m.level else m.all("fixtures")):
             if f.kind in M.DFU or f.kind in ("wh", "tankless"):
                 counts[f.kind] = counts.get(f.kind, 0) + 1
         names = {"toilet": "Water closet, 1.28 gpf", "lav": "Lavatory", "shower": "Shower", "tub": "Bathtub / shower", "sink": "Kitchen sink", "dw": "Dishwasher",
@@ -498,7 +545,7 @@ class SetBuilder:
                "washer": ('1/2"', '1/2"'), "stack_wd": ('1/2"', '1/2"'), "wh": ('3/4"', '3/4"'), "tankless": ('1/2"', '1/2"')}
         rows = [(names[k], n, M.DFU.get(k, "-"), M.TRAP.get(k, "-"), sup[k][0], sup[k][1]) for k, n in sorted(counts.items())]
         rows.append(("__bold__", "Total drainage fixture units", "", m.notes.get("dfu", 0), f"Bldg drain {m.notes.get('main_drain', '3\"')}", "", ""))
-        y = self.table(cv, 20.0, AREA[3] - 0.3, "PLUMBING FIXTURE SCHEDULE", [("FIXTURE", 3.3, "l"), ("QTY", 0.6, "c"), ("DFU", 0.6, "c"), ("TRAP / DRAIN", 1.6, "c"), ("CW", 0.8, "c"), ("HW", 0.8, "c")], rows, size=0.072)
+        y = self.table(cv, 20.0, AREA[3] - 0.3, "SECOND FLOOR FIXTURES" if m.level else "PLUMBING FIXTURE SCHEDULE (WHOLE HOUSE)" if m.upper else "PLUMBING FIXTURE SCHEDULE", [("FIXTURE", 3.3, "l"), ("QTY", 0.6, "c"), ("DFU", 0.6, "c"), ("TRAP / DRAIN", 1.6, "c"), ("CW", 0.8, "c"), ("HW", 0.8, "c")], rows, size=0.072)
         self.notes(cv, 20.0, y, "PLUMBING NOTES", [
             "All work per IPC 2021 / local plumbing code; licensed plumber where required. Pressure-test supply (100 psi / 15 min) and DWV (water or air test) before cover.",
             "Supply: PEX-A with expansion fittings; 3/4\" service and trunk, 1/2\" branches (or home-run manifold). Quarter-turn stop at every fixture.",
@@ -522,7 +569,7 @@ class SetBuilder:
             self.table(cv, AREA[0] + ci * 15.8, AREA[3] - 0.3, "MATERIALS LIST" if ci == 0 else "", cols, rows, size=0.068, rh=0.17)
         if page == pages - 1:
             cv.paper()
-            cv.text(AREA[0], 0.95, f"MATERIALS SUBTOTAL: {money(self.est['materials'])}   ·   Quantities include typical waste. Prices are 2026 US national averages for builder-grade materials; check local suppliers.", 0.085, "text", anchor="start", bold=True)
+            cv.text(AREA[0], 0.95, f"MATERIALS SUBTOTAL: {money(self.est['materials'])}   ·   Quantities include typical waste. Prices are {M.PROFILE.get('cost_basis', '2026 US national averages')} for builder-grade materials; check local suppliers.", 0.085, "text", anchor="start", bold=True)
 
     def cost(self, cv):
         e = self.est
@@ -536,7 +583,10 @@ class SetBuilder:
         rows2 = [("Materials (all categories)", money(e["materials"])), ("Licensed trade help: electrical, plumbing & HVAC rough-in (55% of trade labor)", money(e["diy_trade_help"])),
                  ("Permits & plan review (allowance)", money(e["permits"])), ("Contingency (12% of materials)", money(e["contingency_diy"])),
                  ("__bold__", "TOTAL OWNER-BUILT (DIY)", money(e["diy_total"]))]
-        self.table(cv, 13.6, AREA[3] - 0.3, "COST ESTIMATE - OWNER-BUILDER (DIY)", [("ITEM", 6.6, "l"), ("AMOUNT", 2.0, "r")], rows2, size=0.09, rh=0.3)
+        y2 = self.table(cv, 13.6, AREA[3] - 0.3, "COST ESTIMATE - OWNER-BUILDER (DIY)", [("ITEM", 6.6, "l"), ("AMOUNT", 2.0, "r")], rows2, size=0.09, rh=0.3)
+        if e.get("regions"):
+            rr = [(n, f"x {f:.2f}", money(gc), money(diy)) for n, f, gc, diy in e["regions"]]
+            self.table(cv, 23.4, AREA[3] - 0.3, "REGIONAL TOTALS", [("MARKET", 3.0, "l"), ("FACTOR", 1.1, "c"), ("CONTRACTOR", 1.9, "r"), ("OWNER-BUILT", 1.9, "r")], rr, size=0.09, rh=0.3)
         cv.paper()
         sq = e["sqft"]
         yy = 15.0
@@ -561,9 +611,10 @@ class SetBuilder:
         cv.rect(18.6, yl - 0.1, 0.3, 0.2, "thin", fill="#f2c58d")
         cv.text(19.0, yl - 0.05, "Labor", 0.075, "text", anchor="start")
         self.notes(cv, AREA[0], 6.2, "WHAT THE ESTIMATE INCLUDES AND EXCLUDES", [
-            "Includes every material in the materials list (G1.x) at 2026 US national-average prices, plus contractor labor by trade, overhead and profit, permits and contingency.",
+            f"Includes every material in the materials list (G1.x) at {M.PROFILE.get('cost_basis', '2026 US national averages')}, plus contractor labor by trade, overhead and profit, permits and contingency.",
             "Excludes: " + "; ".join(e["excludes"]) + ".",
-            "Regional costs vary from about 15% below to 45% above these figures; finish choices (cabinets, flooring, windows, appliances) move the total most.",
+            ("Regional costs vary; the table above adjusts materials, labor and permits for each Texas market. " if e.get("regions") else "Regional costs vary from about 15% below to 45% above these figures; ")
+            + "Finish choices (cabinets, flooring, windows, appliances) move the total most.",
             f"Use the cost tool at {SITE} to adjust for your region and finish level, then get at least three local bids before you build.",
         ], size=0.085, width_chars=170, lh=0.18)
 
@@ -571,7 +622,10 @@ class SetBuilder:
     # Web previews (SVG, blueprint colors, watermarked)
     # ---------------------------------------------------------------------------------
     def preview(self, mode, watermark=True):
-        m = self.m
+        """mode: floor | electrical | plumbing, with a "2" suffix for the second floor."""
+        upper = mode.endswith("2")
+        mode = mode.rstrip("2")
+        m = self.m.upper if upper else self.m
         x0, y0, x1, y1 = self.extents() if mode == "floor" else (0, 0, m.W, m.D)
         if mode == "floor" and m.mobile and m.roof_type != "gooseneck":
             x0 = 0
@@ -579,7 +633,7 @@ class SetBuilder:
         s = min(0.36, 10.0 / (x1 - x0 + 2 * pad))
         Wp = (x1 - x0 + 2 * pad) * s
         Hp = (y1 - y0 + 2 * pad) * s + 0.35
-        title = {"floor": "floor plan", "electrical": "electrical plan", "plumbing": "plumbing plan"}[mode]
+        title = ("second floor " if upper else "") + {"floor": "floor plan", "electrical": "electrical plan", "plumbing": "plumbing plan"}[mode]
         cv = SvgCanvas(Wp, Hp, f"{self.p['name']} {title} (preview)")
         cv.view((pad - x0) * s, (pad - y0) * s + 0.35, s)
         if mode == "floor":
@@ -628,6 +682,11 @@ class SetBuilder:
                  ("ROOF FRAMING PLAN", lambda: V.draw_framing(cv, m))]
         if m.lofts:
             views.append(("LOFT PLAN", lambda: V.draw_loft(cv, m)))
+        if m.upper:
+            u = m.upper
+            views += [("SECOND FLOOR PLAN", lambda: (V.draw_plan(cv, u, "floor"), V.plan_dims(cv, u))),
+                      ("SECOND FLOOR ELECTRICAL", lambda: (V.draw_plan(cv, u, "electrical"), V.draw_electrical(cv, u))),
+                      ("SECOND FLOOR PLUMBING", lambda: (V.draw_plan(cv, u, "plumbing"), V.draw_plumbing(cv, u)))]
         for i, (name, fn) in enumerate(views):
             cv.view((i % 3) * gap, -(i // 3) * (m.D + 22) * 12)
             fn()

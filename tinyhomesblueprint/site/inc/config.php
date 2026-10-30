@@ -13,6 +13,10 @@ const ASSET_VER   = '20261030b';
 const GA_ID       = 'G-7XXLLDTBJR';
 // Secrets, paid plan files and order records live one level above public_html.
 define('PRIVATE_DIR', getenv('THB_PRIVATE_DIR') ?: dirname(__DIR__, 2));
+const STORE_PREFIX = 'thb';    // thb-secrets.php, thb-plan-files/, thb-data/ in PRIVATE_DIR
+const ORDER_PREFIX = 'THB';    // order numbers THB-XXXXXXXX
+
+function plan_url(string $slug): string { return "/plans/$slug/"; }
 
 // Primary navigation. Each entry: label => path, or label => [path, children].
 $NAV = [

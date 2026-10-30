@@ -7,7 +7,7 @@ from __future__ import annotations
 import math
 
 import thb_model as M
-from thb_mesh import profile, roof_z
+from thb_mesh import porch_posts as _porch_posts, porch_roof, profile, roof_z
 from thb_qty import header_for
 
 TXT = {"room": 0.115, "dims": 0.08, "tag": 0.072, "note": 0.08, "small": 0.065, "label": 0.09}
@@ -60,7 +60,9 @@ def wall_rects(m: M.Model):
                     x0 = s.c if nx > 0 else s.c - t_e
                     out.append((x0, a, t_e, b - a))
         else:
-            for a, b in M.subtract(a0 - t_i / 2, b0 + t_i / 2, cuts):
+            # Run into the walls at each end, but never past the outside face of the house.
+            lim = m.W if s.o == "h" else m.D
+            for a, b in M.subtract(max(a0 - t_i / 2, 0), min(b0 + t_i / 2, lim), cuts):
                 if s.o == "h":
                     out.append((a, s.c - t_i / 2, b - a, t_i))
                 else:
@@ -238,11 +240,12 @@ def dim_line(cv, p1, p2, off, label, o="h", st="dim", size=None):
 
 
 def porch_rect(m):
+    """The outside porch if there is one, else an inset porch room: ((x, y, w, d), inset)."""
+    if m.porch:
+        return tuple(m.porch), False
     pr = next((r for r in m.rooms if r.kind == "porch"), None)
     if pr:
         return (pr.x, pr.y, pr.w, pr.d), True
-    if m.porch:
-        return tuple(m.porch), False
     return None, False
 
 
@@ -266,8 +269,18 @@ def draw_plan(cv, m: M.Model, mode="floor", labels=True):
         elif inset:
             for qx, qy in _porch_posts(m, pr):
                 cv.rect(qx, qy, 0.45, 0.45, "door" if not light else "fixture_lt")
+    if mode not in ("foundation", "framing"):
+        for r in m.rooms:
+            if r.kind == "porch" and not (inset and pr == (r.x, r.y, r.w, r.d)):
+                cv.rect(r.x, r.y, r.w, r.d, "hidden")
+                if labels:
+                    cv.text(r.cx, r.cy - 0.05, "BREEZEWAY" if r.label.upper() != "PORCH" else "COVERED PORCH", TXT["label"], "text_lt" if light else "text", bold=True)
+                    cv.text(r.cx, r.cy - 0.55, f"{ft_in(r.w)} x {ft_in(r.d)}", TXT["small"], "text_lt")
     if mode in ("foundation", "framing"):
         return
+    for r in m.heated:
+        if r.kind == "stair":
+            draw_stair(cv, m, r, light)
     # Walls
     fill = "wallfill" if not light else "wallfill_lt"
     for x, y, w, h in wall_rects(m):
@@ -300,6 +313,8 @@ def draw_plan(cv, m: M.Model, mode="floor", labels=True):
                 if f.x - 0.3 <= lx <= f.x + f.w + 0.3 and f.y - 0.6 <= ly <= f.y + f.d + 0.6:
                     ly = f.y + f.d + 0.9 if f.cy < r.cy else f.y - 0.9
             ly = min(max(ly, r.y + 0.9), r.y2 - 0.5)
+            if r.kind in ("stair", "closet") and min(r.w, r.d) < 4.5:
+                continue                      # labelled by the stair arrow / too small to name
             size = TXT["room"] if not light else TXT["room"] * 0.8
             words = [name]
             fit = cv.text_width(name, size, True) / max(cv.s, 1e-6) if hasattr(cv, "text_width") else len(name) * 0.3
@@ -317,21 +332,36 @@ def draw_plan(cv, m: M.Model, mode="floor", labels=True):
         tag_openings(cv, m)
 
 
-def _porch_posts(m, pr):
-    px, py, pw, pd = pr
-    posts = []
-    if py < 0:                       # front porch outside the footprint
-        posts = [(px, py), (px + pw - 0.45, py)]
-        if pw > 16:
-            posts.append((px + pw / 2 - 0.22, py))
-    elif px >= m.W - 0.01:           # side porch
-        posts = [(px + pw - 0.45, py), (px + pw - 0.45, py + pd - 0.45)]
-    else:                            # inset porch: posts at the open corner
-        cx = px + pw - 0.45 if px == 0 else px
-        cy = py if py == 0 else py + pd - 0.45
-        posts = [(px if px > 0 else px, cy), (cx, cy)] if px == 0 else [(px, cy), (px + pw - 0.45, cy)]
-        posts = [(px + 0.02, py + 0.02)] if px == 0 and py == 0 else posts
-    return posts
+def draw_stair(cv, m, r, light=False):
+    """Treads across a STAIR room with a direction arrow: UP on the main floor, DN above."""
+    st = "fixture" if not light else "fixture_lt"
+    along_x = r.w >= r.d
+    L = r.w if along_x else r.d
+    n = max(2, round(m.notes.get("stair_rise", m.plate + M.FLOOR_DEPTH) / 0.59))
+    run = L / n
+    for i in range(1, n):
+        if along_x:
+            cv.line(r.x + i * run, r.y + 0.1, r.x + i * run, r.y2 - 0.1, st)
+        else:
+            cv.line(r.x + 0.1, r.y + i * run, r.x2 - 0.1, r.y + i * run, st)
+    up = not m.level
+    toward_end = up != bool(m.p.get("stair_reverse"))     # arrow points up the stair on the main floor
+    if along_x:
+        a, b, c = (r.x + 0.5, r.x2 - 0.5, r.cy)
+        cv.line(a, c, b, c, st)
+        tip = b if toward_end else a
+        d = -0.35 if toward_end else 0.35
+        cv.line(tip, c, tip + d, c + 0.25, st)
+        cv.line(tip, c, tip + d, c - 0.25, st)
+        cv.text((a + b) / 2, c + 0.2, ("UP" if up else "DN") + f" {n}R", TXT["small"], "text_lt" if light else "text", bold=True)
+    else:
+        a, b, c = (r.y + 0.5, r.y2 - 0.5, r.cx)
+        cv.line(c, a, c, b, st)
+        tip = b if toward_end else a
+        d = -0.35 if toward_end else 0.35
+        cv.line(c, tip, c + 0.25, tip + d, st)
+        cv.line(c, tip, c - 0.25, tip + d, st)
+        cv.text(c + 0.25, (a + b) / 2, ("UP" if up else "DN") + f" {n}R", TXT["small"], "text_lt" if light else "text", bold=True, rot=90)
 
 
 def tag_openings(cv, m):
@@ -412,6 +442,11 @@ def draw_device(cv, d, num=True):
             cv.text(x, y + r + 0.12, tag, TXT["small"] * 0.85, "elec_text", bold=True)
     elif k in ("sw", "sw3"):
         cv.text(x, y - 0.1, "S" + ("3" if k == "sw3" else ""), TXT["tag"], "elec_text", bold=True)
+    elif k == "cfan":
+        cv.circle(x, y, 0.22, st)
+        for ang in (45, 135, 225, 315):
+            a = math.radians(ang)
+            cv.line(x + 0.22 * math.cos(a), y + 0.22 * math.sin(a), x + 0.75 * math.cos(a), y + 0.75 * math.sin(a), st)
     elif k == "light":
         cv.circle(x, y, 0.36, st)
         cv.line(x - 0.25, y - 0.25, x + 0.25, y + 0.25, st)
@@ -449,11 +484,11 @@ def draw_device(cv, d, num=True):
 
 
 def draw_electrical(cv, m: M.Model, loft=False):
-    devs = [d for d in m.devices if d.loft == loft]
+    devs = [d for d in m.devices if d.loft == loft and d.level == m.level]
     for d in devs:
         draw_device(cv, d)
     # Switch legs: dashed arcs from each switch to the lights it controls.
-    lights = [d for d in devs if d.kind in ("light", "can", "fan", "sconce", "pendant")]
+    lights = [d for d in devs if d.kind in ("light", "can", "fan", "cfan", "sconce", "pendant")]
     for sw in [d for d in devs if d.kind in ("sw", "sw3")]:
         if sw.note == "fan":
             targets = [l for l in lights if l.room is sw.room and l.kind == "fan"]
@@ -494,6 +529,11 @@ def draw_plumbing(cv, m: M.Model):
     if st:
         cv.circle(*st, 0.32, "waste")
         cv.text(st[0] + 0.55, st[1] + 0.25, '3" VTR', TXT["small"], "plumb_text", anchor="start", bold=True)
+    for key, lbl in (("riser", "HW + CW RISER FROM WATER HEATER BELOW"), ("stack_down", '3" STACK DOWN TO BUILDING DRAIN'), ("stack_from_above", '3" STACK FROM 2ND FLOOR')):
+        pt = m.notes.get(key)
+        if pt:
+            cv.circle(pt[0], pt[1], 0.3, "cold" if key == "riser" else "waste")
+            cv.text(pt[0] + 0.5, pt[1] - 0.55, lbl, TXT["small"], "plumb_text" if key != "riser" else "text", anchor="start", bold=True)
     ex = m.notes.get("sewer_exit")
     if ex:
         cv.rect(ex[0] - 0.25, ex[1] - 0.25, 0.5, 0.5, "waste")
@@ -510,7 +550,7 @@ def draw_plumbing(cv, m: M.Model):
         dx = -0.6 if we[0] <= 0.01 else 0.6 if we[0] >= m.W - 0.01 else 0
         cv.text(we[0] + dx, we[1] + dy, lbl, TXT["small"], "text", anchor="end" if dx < 0 else "start" if dx > 0 else "middle", bold=True)
     # Hose bibbs on the front and rear walls
-    for fac, yy in (("front", -0.35), ("rear", m.D + 0.35)):
+    for fac, yy in (("front", -0.35), ("rear", m.D + 0.35)) if not m.level else ():
         ws = [w for w in m.walls if w.exterior and w.facade == fac and abs(w.seg.c - (0 if fac == "front" else m.D)) < 1e-6]
         if ws:
             w = max(ws, key=lambda w: w.length)
@@ -540,9 +580,23 @@ def draw_foundation(cv, m: M.Model):
             pass
         cv.rect(0, 0, W, D, "concrete") if not inset else _outline_heated(cv, m, "concrete")
         _outline_heated(cv, m, "hidden", inset_by=1.0)
-        cv.text(W / 2, D / 2 + 0.6, "4\" CONCRETE SLAB ON 10 MIL VAPOR RETARDER", TXT["note"], "text", bold=True)
-        cv.text(W / 2, D / 2 + 0.05, "OVER 4\" COMPACTED CRUSHED STONE; #4 BARS @ 18\" O.C. E.W.", TXT["small"], "text")
-        cv.text(W / 2, D / 2 - 0.5, "12\" x 12\" THICKENED EDGE W/ (2) #4 CONT. (DASHED)", TXT["small"], "text")
+        sp = M.PROFILE["slab"]
+        bsp = sp["interior_beam_spacing"]
+        if bsp:
+            # Interior grade beams (dashed, both edges) at the profile spacing each way.
+            hw = sp["beam_w"] / 2
+            for i in range(1, math.ceil(W / bsp)):
+                x = W * i / math.ceil(W / bsp)
+                for xx in (x - hw, x + hw):
+                    cv.line(xx, 0.3, xx, D - 0.3, "hidden")
+            for j in range(1, math.ceil(D / bsp)):
+                y = D * j / math.ceil(D / bsp)
+                for yy in (y - hw, y + hw):
+                    cv.line(0.3, yy, W - 0.3, yy, "hidden")
+        t1, t2, t3 = sp["plan_text"]
+        cv.text(W / 2, D / 2 + 0.6, t1, TXT["note"], "text", bold=True)
+        cv.text(W / 2, D / 2 + 0.05, t2, TXT["small"], "text")
+        cv.text(W / 2, D / 2 - 0.5, t3, TXT["small"], "text")
         _anchor_bolts(cv, m)
     elif fnd == "crawl":
         _outline_heated(cv, m, "concrete")
@@ -575,6 +629,17 @@ def draw_foundation(cv, m: M.Model):
                 cv.rect(qx + 0.5, qy + 0.5, 1, 1, "concrete")
         cv.text(W / 2, D / 2 + 0.25, "24\" x 24\" x 36\" CONCRETE PIERS W/ 3/8\" x 8\" x 8\" EMBEDDED WELD PLATES", TXT["small"], "text", bold=True)
         cv.text(W / 2, D / 2 - 0.35, "WELD CONTAINER CORNER CASTINGS TO PLATES (OR TWIST-LOCK BRACKETS)", TXT["small"], "text")
+    elif fnd == "chassis":
+        cv.rect(0, 0, W, D, "hidden")
+        for yy in (D * 0.27, D * 0.73):
+            cv.line(0.5, yy - 0.2, W - 0.5, yy - 0.2, "struct")
+            cv.line(0.5, yy + 0.2, W - 0.5, yy + 0.2, "struct")
+            n = math.ceil(W / 6)
+            for i in range(n + 1):
+                px = 0.5 + (W - 1) * i / n
+                cv.rect(px - 0.6, yy - 0.6, 1.2, 1.2, "concrete")
+        cv.text(W / 2, D / 2 + 0.3, "PARK MODEL CHASSIS: (2) STEEL I-BEAMS W/ OUTRIGGERS - BY THE MANUFACTURER", TXT["small"], "text", bold=True)
+        cv.text(W / 2, D / 2 - 0.3, "STEEL PIERS ON ABS PADS @ 6'-0\" O.C. MAX. UNDER EACH BEAM; GROUND ANCHORS PER MFR. AND LOCAL RULES", TXT["small"], "text")
     else:  # trailer
         cv.rect(-0.2, 0.15, W + 0.4, D - 0.3, "concrete")
         for yy in (0.6, D - 0.6):
@@ -601,6 +666,9 @@ def draw_foundation(cv, m: M.Model):
     ex = m.notes.get("sewer_exit")
     if ex:
         cv.rect(ex[0] - 0.25, ex[1] - 0.25, 0.5, 0.5, "waste")
+    st = m.notes.get("stack_from_above")
+    if st:
+        cv.circle(st[0], st[1], 0.3, "waste")
 
 
 def _outline_heated(cv, m, st, inset_by=0.0):
@@ -851,46 +919,71 @@ def draw_elevation(cv, m: M.Model, fac: str):
         else:
             cv.poly([(0, B)] + [(u, z) for u, z in Ln] + [(L, B)], "wall", closed=True)
             cv.poly([(Ln[0][0] - 0.6, Ln[0][1] - 0.4)] + [(u, z + 0.45) for u, z in Ln[1:-1]] + [(Ln[-1][0] + 0.6, Ln[-1][1] - 0.4)], "wall")
+    # Second-floor band, stone wainscot and open breezeways
+    if m.upper and k == "gable":
+        for z in (B + m.plate, m.upper_base):
+            cv.line(0, z, L, z, "thin")
+    if "stone" in m.p.get("walls", "").lower() and not m.container and not mobile:
+        cv.line(0, B + 3.0, L, B + 3.0, "thin")
+        for i in range(1, int(L / 1.4)):
+            cv.line(i * 1.4, B + 0.15, i * 1.4 - 0.5, B + 2.85, "grid")
+        cv.text(0.3, B + 3.25, "STONE WAINSCOT", TXT["small"], "text_lt", anchor="start")
+    if eave_side:
+        for r in m.rooms:
+            if r.kind == "porch" and r.y <= 0.01 and r.y2 >= m.D - 0.01:
+                u0, u1 = sorted((to_u(m, fac, r.x), to_u(m, fac, r.x2)))
+                cv.rect(u0, B, u1 - u0, m.plate, "thin", fill="grid")
+                cv.text((u0 + u1) / 2, B + m.plate / 2, "OPEN", TXT["small"], "text", bold=True)
+                cv.text((u0 + u1) / 2, B + m.plate / 2 - 0.45, "BREEZEWAY", TXT["small"], "text", bold=True)
     # Outside porch
     pr, inset = porch_rect(m)
     if pr and not inset and k != "aframe":
         px, py, pw, pd = pr
-        ph = B + 8.2
-        if py < 0:   # front porch
-            if eave_side:
-                u0, u1 = (px, px + pw) if fac == "front" else (m.W - px - pw, m.W - px)
-                if fac == "front":
-                    cv.poly([(u0 - 0.6, ph), (u1 + 0.6, ph), (u1 + 0.6, ph + 1.1), (u0 - 0.6, ph + 1.1)], "accent", closed=True)
-                    for qx, _ in _porch_posts(m, pr):
-                        cv.rect(qx, B, 0.45, ph - B, "accent")
-                    cv.rect(u0, B - 0.45, pw, 0.4, "accent")
-            else:
-                u0, u1 = (-pd, 0) if fac == "right" else (L, L + pd)
+        ph, pa = porch_roof(m, pw if px >= m.W - 0.01 else pd)
+        if py < 0 or py >= m.D - 0.01:   # front or rear porch
+            front_p = py < 0
+            if fac == ("front" if front_p else "rear"):
+                u0, u1 = (px, px + pw) if front_p else (m.W - px - pw, m.W - px)
+                cv.poly([(u0 - 0.6, ph), (u1 + 0.6, ph), (u1 + 0.6, pa), (u0 - 0.6, pa)], "accent", closed=True)
+                for qx, _ in _porch_posts(m, pr):
+                    cv.rect(qx if front_p else m.W - qx - 0.45, B, 0.45, ph - B, "accent")
+                cv.rect(u0, B - 0.45, pw, 0.4, "accent")
+            elif not eave_side:
+                out_neg = (fac == "right") == front_p
+                u0, u1 = (-pd, 0) if out_neg else (L, L + pd)
                 cv.rect(u0, B - 0.45, pd, 0.4, "accent")
-                post = u0 + 0.05 if fac == "right" else u1 - 0.5
+                post = u0 + 0.05 if out_neg else u1 - 0.5
                 cv.rect(post, B, 0.45, ph - B, "accent")
-                hi_u = 0 if fac == "right" else L
-                lo_u = u0 - 0.6 if fac == "right" else u1 + 0.6
-                cv.poly([(lo_u, ph), (hi_u, ph + 1.1)], "accent")
+                hi_u = 0 if out_neg else L
+                lo_u = u0 - 0.6 if out_neg else u1 + 0.6
+                cv.poly([(lo_u, ph), (hi_u, pa)], "accent")
         elif px >= m.W - 0.01:   # side porch
             if fac == "front":
                 cv.rect(L, B - 0.45, pw, 0.4, "accent")
                 cv.rect(L + pw - 0.5, B, 0.45, ph - B, "accent")
-                cv.poly([(L, ph + 1.1), (L + pw + 0.6, ph)], "accent")
+                cv.poly([(L, pa), (L + pw + 0.6, ph)], "accent")
             elif fac == "rear":
                 cv.rect(-pw, B - 0.45, pw, 0.4, "accent")
                 cv.rect(-pw + 0.05, B, 0.45, ph - B, "accent")
-                cv.poly([(0, ph + 1.1), (-pw - 0.6, ph)], "accent")
+                cv.poly([(0, pa), (-pw - 0.6, ph)], "accent")
+            elif fac == "right":
+                u0, u1 = py, py + pd
+                cv.poly([(u0 - 0.6, ph), (u1 + 0.6, ph), (u1 + 0.6, ph + 0.35), (u0 - 0.6, ph + 0.35)], "accent", closed=True)
+                for uu in (u0, u1 - 0.45):
+                    cv.rect(uu, B, 0.45, ph - B, "accent")
+                cv.rect(u0, B - 0.45, pd, 0.4, "accent")
     if pr and inset and fac == "front":
         for qx, _ in _porch_posts(m, pr):
-            cv.rect(qx, B, 0.45, front - B, "accent")
+            cv.rect(qx, B, 0.45, m.plate, "accent")
     # Openings on this facade
-    for o in m.openings:
+    for o in m.all("openings"):
         if not o.exterior or o.wall.facade != fac:
             continue
         u0, u1 = sorted((to_u(m, fac, o.a), to_u(m, fac, o.b)))
         xm = o.wall.seg.at(o.s)[0]
         zb = B + (3.2 if gn and xm >= m.W - 8 - 1e-6 else 0)
+        if m.upper and any(o is q for q in m.upper.openings):
+            zb = m.upper_base
         z0, z1 = zb + o.sill, zb + o.sill + o.height
         setback = o.wall.seg.c not in (0.0, m.W, m.D)
         if o.kind == "window":
@@ -919,7 +1012,7 @@ def draw_elevation(cv, m: M.Model, fac: str):
             cv.text((u0 + u1) / 2, z1 + 0.45, o.tag, TXT["tag"], "accent", bold=True)
     # Height dimensions on the right
     xr = L + (ov + 1.6 if k != "aframe" else 2.4) + (pr[3] if pr and not inset and pr[1] < 0 and fac == "left" else 0)
-    levels = [(0, "GRADE"), (B, "FIN. FLOOR")]
+    levels = [(0, "GRADE"), (B, "FIN. FLOOR")] + ([(m.upper_base, "2ND FLOOR")] if m.upper else [])
     if k == "aframe":
         levels.append((info["ridge"], "RIDGE"))
     elif k == "gambrel":
@@ -958,6 +1051,11 @@ def draw_section(cv, m: M.Model):
             cv.rect(u - 0.33, -1.67, 1.33, 0.67, "concrete")
         cv.rect(0, B - 0.9, D, 0.9, "struct")
         cv.rect(D / 2 - 0.4, -1.0, 0.8, B - 0.9 + 1.0, "concrete")
+    elif fnd == "chassis":
+        for u in (D * 0.27, D * 0.73):
+            cv.rect(u - 0.25, B - 1.4, 0.5, 0.9, "struct")
+            cv.rect(u - 0.6, 0, 1.2, B - 1.4, "concrete")
+        cv.rect(0, B - 0.5, D, 0.5, "struct")
     elif fnd == "trailer":
         cv.rect(0, B - 0.55, D, 0.5, "struct")
         cv.circle(D / 2, 1.15, 1.15, "struct_lt")
@@ -1021,15 +1119,25 @@ def draw_section(cv, m: M.Model):
             cv.line(D + ov + 0.8, z, D + ov + 1.3, z, "dim")
             cv.text(D + ov + 1.5, z - 0.1, f"LOFT FLOOR {ft_in(z)}", TXT["small"], "dim", anchor="start")
     # interior partitions crossed by the cut, and room names
-    for w in m.walls:
-        if not w.exterior and not w.open and w.seg.o == "h" and w.seg.a <= xc <= w.seg.b:
-            top = min(B + 8, roof_z(info, w.seg.c) - 0.3)
-            cv.rect(w.seg.c - m.int_t / 2, B, m.int_t, top - B, "wall", fill="wallfill")
-    for r in m.heated:
-        if r.x <= xc <= r.x2:
-            cv.text(r.cy, B + 3.2, r.label, TXT["label"], "text", bold=True)
-            ceil = min(roof_z(info, r.cy), info["front"] if m.roof_type in ("gable", "gable-steep", "container", "container-double") else 99) - B
-            cv.text(r.cy, B + 2.5, f"CLG {ft_in(ceil)}", TXT["small"], "text_lt")
+    for st in m.storeys:
+        zf = st.base
+        if st.level:
+            # second-floor system: I-joists and subfloor between the floors
+            cv.rect(t, B + m.plate, D - 2 * t, M.FLOOR_DEPTH, "struct", fill="wallfill_lt")
+            cv.line(D + ov + 0.8, zf, D + ov + 1.3, zf, "dim")
+            cv.text(D + ov + 1.5, zf - 0.1, f"2ND FLOOR {ft_in(zf)}", TXT["small"], "dim", anchor="start")
+        for w in st.walls:
+            if not w.exterior and not w.open and w.seg.o == "h" and w.seg.a <= xc <= w.seg.b:
+                top = (B + m.plate) if (m.upper and not st.level) else min(zf + 8, roof_z(info, w.seg.c) - 0.3)
+                cv.rect(w.seg.c - m.int_t / 2, zf, m.int_t, top - zf, "wall", fill="wallfill")
+        for r in st.heated:
+            if r.x <= xc <= r.x2:
+                cv.text(r.cy, zf + 3.2, r.label, TXT["label"], "text", bold=True)
+                if m.upper and not st.level:
+                    ceil = m.plate
+                else:
+                    ceil = min(roof_z(info, r.cy), info["front"] if m.roof_type in ("gable", "gable-steep", "container", "container-double") else 99) - zf
+                cv.text(r.cy, zf + 2.5, f"CLG {ft_in(ceil)}", TXT["small"], "text_lt")
 
 
 # ---------------------------------------------------------------------------------------

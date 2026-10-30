@@ -1,15 +1,21 @@
 <?php
 // Outgoing mail through the contact@ mailbox over authenticated SMTP (Hostinger).
-// Credentials live in thb-secrets.php in PRIVATE_DIR (one level above the web root), never in the repo:
+// Credentials live in <STORE_PREFIX>-secrets.php in PRIVATE_DIR (one level above the web root), never in the repo:
 //   <?php return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
-//                 'smtp_user' => 'contact@tinyhomesblueprint.com', 'smtp_pass' => '...'];
-// Without that file, or if SMTP fails, it falls back to PHP mail().
+//                 'smtp_user' => 'contact@example.com', 'smtp_pass' => '...'];
+// A site may define SMTP_FALLBACK_FILE: an older secrets file returning host/port/user/pass,
+// used when the secrets file has no SMTP keys. Without either, or if SMTP fails, it falls
+// back to PHP mail().
 
 function thb_secrets(): array {
     static $s = null;
     if ($s === null) {
-        $f = PRIVATE_DIR . '/thb-secrets.php';
+        $f = PRIVATE_DIR . '/' . STORE_PREFIX . '-secrets.php';
         $s = is_file($f) ? (array)(include $f) : [];
+        if (empty($s['smtp_pass']) && defined('SMTP_FALLBACK_FILE') && is_file(SMTP_FALLBACK_FILE)) {
+            $l = (array)(include SMTP_FALLBACK_FILE);
+            $s += ['smtp_host' => $l['host'] ?? null, 'smtp_port' => $l['port'] ?? null, 'smtp_user' => $l['user'] ?? null, 'smtp_pass' => $l['pass'] ?? null];
+        }
     }
     return $s;
 }
@@ -25,7 +31,7 @@ function send_mail(string $to, string $subject, string $body, string $replyTo = 
         'From: =?UTF-8?B?' . base64_encode(SITE_NAME . ' Website') . "?= <$from>",
         "To: <$to>",
         "Subject: $subj",
-        'Message-ID: <' . bin2hex(random_bytes(12)) . '@tinyhomesblueprint.com>',
+        'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . parse_url(SITE_URL, PHP_URL_HOST) . '>',
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'Content-Transfer-Encoding: base64',
@@ -61,11 +67,12 @@ function smtp_send(array $s, string $from, string $to, string $data): bool {
     };
     try {
         $cmd('', [220]);
-        $cmd('EHLO tinyhomesblueprint.com', [250]);
+        $ehlo = 'EHLO ' . parse_url(SITE_URL, PHP_URL_HOST);
+        $cmd($ehlo, [250]);
         if ($port !== 465) {
             $cmd('STARTTLS', [220]);
             stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
-            $cmd('EHLO tinyhomesblueprint.com', [250]);
+            $cmd($ehlo, [250]);
         }
         $cmd('AUTH LOGIN', [334]);
         $cmd(base64_encode($s['smtp_user']), [334]);

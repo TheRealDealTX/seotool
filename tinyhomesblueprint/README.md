@@ -18,6 +18,20 @@ sells it.
 | `deploy.sh` | Uploads `site/` to `public_html/` and the zips to `thb-plan-files/`. |
 | `dev-router.php` | Local preview router. |
 
+## Shared code
+
+The generator, 3D viewer, `plan-page.js`, `store.php`, `mailer.php`, `plan-svg.php` and the
+webhook are shared with `../cowboytinyhomes/`. Site-specific settings live in
+`generator/profile.json` (brand, overhangs, climate features, slab, cover notes, README text) and
+`site/inc/config.php` (`STORE_PREFIX`, `ORDER_PREFIX`, `plan_url()`). After editing a shared file in
+either site run `../sync-shared.sh <from> <to>`; `../sync-shared.sh --check` reports drift.
+
+Shared features this site picked up: full second floors (`'upper'` rooms with a `STAIR`),
+breezeway / dogtrot plans, front, rear and side porches, half baths, walk-in closets, park-model
+chassis, room-by-room heat pump sizing, and fixes for interior walls drawn past the exterior
+face, gable walls showing through roofs, gooseneck windows above the eave and 3D stills
+cropping porches.
+
 ## What a buyer gets
 
 One zip per plan:

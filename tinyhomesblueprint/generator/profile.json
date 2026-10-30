@@ -1,0 +1,57 @@
+{
+ "brand_name": "Tiny Homes Blueprint",
+ "brand_lines": [
+  "TINY HOMES",
+  "BLUEPRINT"
+ ],
+ "site": "tinyhomesblueprint.com",
+ "url": "https://tinyhomesblueprint.com",
+ "phone": "210-903-9471",
+ "email": "contact@tinyhomesblueprint.com",
+ "overhang": 1.0,
+ "radiant_barrier": false,
+ "ceiling_fans": false,
+ "cooling_btu_per_sqft": 20,
+ "window_spec": "low-E, U-0.30 max.",
+ "cost_basis": "2026 US national averages",
+ "slab": {
+  "beam_w": 1.0,
+  "beam_d": 1.0,
+  "interior_beam_spacing": 0,
+  "base": "Crushed stone base, 4 in.",
+  "base_depth": 0.3333333333333333,
+  "base_price": 55,
+  "plan_text": [
+   "4\" CONCRETE SLAB ON 10 MIL VAPOR RETARDER",
+   "OVER 4\" COMPACTED CRUSHED STONE; #4 BARS @ 18\" O.C. E.W.",
+   "12\" x 12\" THICKENED EDGE W/ (2) #4 CONT. (DASHED)"
+  ],
+  "section": [
+   "FLOOR: LVP on 4\" concrete slab, 10 mil vapor retarder, 4\" crushed stone; 2\" XPS at slab edge.",
+   "Thickened edge 12\" x 12\" with (2) #4 cont.; 1/2\" anchor bolts @ 6'-0\" o.c., 12\" from corners."
+  ],
+  "notes": [
+   "Remove topsoil and organics; compact subgrade to 95% standard Proctor. Bottom of thickened edge below local frost depth or per local frost-protected shallow foundation (FPSF) rules.",
+   "Concrete 3,000 psi at 28 days, 4 in. slump +/- 1 in.; control joints at 10 ft max. each way within 24 hours.",
+   "Place under-slab plumbing and conduit before the pour; pressure-test DWV and water lines and get rough-in inspection.",
+   "Anchor bolts 1/2 in. x 10 in. at 6 ft o.c. max. and within 12 in. of each plate end, 7 in. embedment; 2 bolts min. per plate piece.",
+   "Termite protection per local requirements; radon-resistant construction (sub-slab vent stub) in Zone 1 radon areas."
+  ]
+ },
+ "general_notes": [
+  "All work shall comply with the 2021 International Residential Code (IRC) including Appendix AQ (Tiny Houses) where adopted, the 2023 National Electrical Code (NEC) and the 2021 International Plumbing Code (IPC), as amended by the local jurisdiction.",
+  "Design loads assumed: 40 psf floor live, 30 psf sleeping-loft live, 20 psf roof live / 30 psf ground snow, 115 mph ultimate wind (Exposure B), Seismic Design Category A-C. Verify for your site; higher loads require engineering.",
+  "Contractor / owner-builder shall verify all dimensions, site conditions and utility locations before construction. Written dimensions govern; do not scale drawings.",
+  "Smoke alarms in every sleeping room and outside sleeping areas, interconnected and hardwired with battery backup. CO alarm required where fuel-burning appliances or attached garages exist.",
+  "Every sleeping room and loft requires an emergency escape opening: 5.7 sq ft net clear (5.0 at grade floor), 20 in. min. width, 24 in. min. height, sill 44 in. max. above floor.",
+  "Provide whole-house mechanical ventilation per IRC M1505 and spot exhaust in bath (50 cfm) and kitchen (100 cfm). Continuous air barrier; blower-door test where required by energy code.",
+  "Insulation and fenestration to meet the IECC prescriptive table for your climate zone; values shown are typical (Zones 3-5).",
+  [
+   [
+    "thow"
+   ],
+   "Mobile units (on wheels): may be regulated as RVs (NFPA 1192 / ANSI A119.5) or as dwellings depending on jurisdiction. Confirm the applicable standard before starting."
+  ]
+ ],
+ "readme_important": "These drawings are a planning and permit-development set generated from the plan\n  design. Building codes, snow and wind loads, soils and energy rules vary by location.\n  Have the structure, electrical and plumbing reviewed - and stamped where your\n  jurisdiction requires it - by a licensed engineer or architect, and use licensed\n  trades where required. Verify all dimensions before building."
+}

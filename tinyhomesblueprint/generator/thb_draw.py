@@ -11,6 +11,8 @@ from __future__ import annotations
 import math
 from xml.sax.saxutils import escape
 
+from thb_model import PROFILE
+
 # name: (print color, blueprint color, weight in pt, dash, layer)
 STYLES = {
     "wall":      ("#1f2a30", "#e8f2f2", 0.6, None, "A-WALL"),
@@ -125,8 +127,8 @@ class PdfCanvas(Canvas):
         self.W, self.H = width_in, height_in
         self.c = rl.Canvas(path, pagesize=(width_in * 72, height_in * 72))
         self.c.setTitle(title)
-        self.c.setAuthor("Tiny Homes Blueprint")
-        self.c.setCreator("Tiny Homes Blueprint plan generator")
+        self.c.setAuthor(PROFILE["brand_name"])
+        self.c.setCreator(PROFILE["brand_name"] + " plan generator")
 
     def _pt(self, x, y):
         px, py = self.P(x, y)

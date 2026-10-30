@@ -52,9 +52,12 @@ def geometry(m: M.Model):
     int_lf = sum(w.length for w in inner)
     floor = sum(r.area for r in m.heated)
     loft = sum(r.area for r in m.lofts)
-    P = m.plate if m.roof_type != "aframe" else 0
+    up = m.upper
+    up_int_lf = sum(w.length for w in up.walls if not w.exterior and not w.open) if up else 0
+    up_floor = sum(r.area for r in up.heated) if up else 0
+    P = m.wall_h if m.roof_type != "aframe" else 0
     pitch = m.pitch / 12
-    ov = 1.0 if not m.mobile else 0.5
+    ov = m.overhang
     rt = m.roof_type
     if rt in ("gable", "gable-steep", "thow", "gooseneck"):
         rise = m.D / 2 * pitch
@@ -86,16 +89,13 @@ def geometry(m: M.Model):
     else:   # container
         rise, slope, roof, gable, ridge = 0, 0, 0, 0, 0
     wall_gross = perim * P + gable
-    openings = sum(o.width * o.height for o in m.openings if o.exterior)
-    porch = 0.0
-    porch_room = next((r for r in m.rooms if r.kind == "porch"), None)
-    if porch_room:
-        porch = porch_room.area
-    elif m.porch:
-        porch = m.porch[2] * m.porch[3]
+    openings = sum(o.width * o.height for o in m.all("openings") if o.exterior)
+    inset_porch = sum(r.area for r in m.rooms if r.kind == "porch")
+    porch_out = m.porch[2] * m.porch[3] if m.porch else 0.0
     return {"perim": perim, "int_lf": int_lf, "floor": floor, "loft": loft, "plate": P, "rise": rise, "roof": roof,
             "roof_slope_len": slope, "gable": gable, "ridge": ridge, "wall_gross": wall_gross, "wall_net": wall_gross - openings,
-            "openings": openings, "porch": porch, "overhang": ov, "corners": len(ext)}
+            "openings": openings, "porch": inset_porch + porch_out, "porch_out": porch_out, "overhang": ov, "corners": len(ext),
+            "up_int_lf": up_int_lf, "up_floor": up_floor, "plate1": m.plate if m.roof_type != "aframe" else 0}
 
 
 def header_for(width):
@@ -132,6 +132,8 @@ def wire_runs(m: M.Model):
         pts = [(d.x, d.y) for d in devs]
         cur = min(pts, key=lambda q: abs(q[0] - px) + abs(q[1] - py))
         L = abs(cur[0] - px) + abs(cur[1] - py) + 2 * m.plate * 0.5
+        if any(d.level for d in devs):
+            L += m.plate + 1.0                     # up through the floor to the second floor
         rest = [q for q in pts if q is not cur]
         while rest:
             nxt = min(rest, key=lambda q: abs(q[0] - cur[0]) + abs(q[1] - cur[1]))
@@ -144,10 +146,14 @@ def wire_runs(m: M.Model):
 
 def pipe_lengths(m: M.Model):
     out = {}
-    for p in m.pipes:
+    for p in m.all("pipes"):
         L = sum(abs(a[0] - b[0]) + abs(a[1] - b[1]) for a, b in zip(p.pts, p.pts[1:]))
         key = (p.kind, p.size)
         out[key] = out.get(key, 0) + L
+    if m.upper and m.upper.pipes:
+        rise = m.plate + 1.5
+        for key in (("cold", '3/4"'), ("hot", '1/2"'), ("waste", '3"')):
+            out[key] = out.get(key, 0) + rise    # riser and stack between floors
     return out
 
 
@@ -159,20 +165,34 @@ def takeoff(m: M.Model):
     fnd = m.foundation
     wood = not m.container
     ext_stud = m.stud
-    stud_len = 10 if g["plate"] >= 9.9 else 9 if g["plate"] >= 8.9 else 8
+    stud_len = 10 if g["plate1"] >= 9.9 else 9 if g["plate1"] >= 8.9 else 8
     spacing = 24 if m.container else 16
+    up = m.upper
+    openings = m.all("openings")
+    fixtures = m.all("fixtures")
+    heated = m.all("heated")
+    walls = m.all("walls")
 
     # ---- Site & foundation -------------------------------------------------------------
     A = m.W * m.D
     if fnd == "slab":
+        sp = M.PROFILE["slab"]
+        bw, bd, bsp = sp["beam_w"], sp["beam_d"], sp["interior_beam_spacing"]
         slab = A * (4 / 12) / 27
-        edge = g["perim"] * 1.0 * 1.0 / 27
-        add("Site & foundation", "Ready-mix concrete, 3,000 psi (4 in. slab + 12 x 12 in. thickened edge)", round((slab + edge) * 1.08, 1), "cu yd", 175)
-        add("Site & foundation", "Crushed stone base, 4 in.", round(A * (4 / 12) / 27 * 1.1, 1), "cu yd", 55)
+        interior_lf = ((math.ceil(m.W / bsp) - 1) * m.D + (math.ceil(m.D / bsp) - 1) * m.W) if bsp else 0
+        beams = (g["perim"] + interior_lf) * bw * (bd - (4 / 12 if bsp else 0)) / 27
+        edge_lbl = f"{int(bw * 12)} x {int(bd * 12)} in. {'grade beams' if bsp else 'thickened edge'}"
+        add("Site & foundation", f"Ready-mix concrete, 3,000 psi (4 in. slab + {edge_lbl})", round((slab + beams) * 1.08, 1), "cu yd", 175)
+        add("Site & foundation", sp["base"], round(A * sp["base_depth"] / 27 * 1.1, 1), "cu yd", sp["base_price"])
         add("Site & foundation", "Vapor retarder, 10 mil poly", ceil(A * 1.15), "sq ft", 0.12)
-        add("Site & foundation", "#4 rebar, 20 ft (18 in. grid + 2 bars in edge)", ceil((A / 1.5 * 2 + g["perim"] * 2) * 1.1 / 20), "ea", 13.50)
+        if bsp:
+            add("Site & foundation", "#4 rebar, 20 ft (18 in. grid)", ceil(A / 1.5 * 2 * 1.1 / 20), "ea", 13.50)
+            add("Site & foundation", "#5 rebar, 20 ft ((2) top + (2) bottom in grade beams) + #3 stirrups", ceil((g["perim"] + interior_lf) * 4 * 1.12 / 20), "ea", 21)
+            add("Site & foundation", "Termite pre-treatment of the soil before the pour (licensed applicator)", ceil(A), "sq ft", 0.45)
+        else:
+            add("Site & foundation", "#4 rebar, 20 ft (18 in. grid + 2 bars in edge)", ceil((A / 1.5 * 2 + g["perim"] * 2) * 1.1 / 20), "ea", 13.50)
+            add("Site & foundation", "Rigid foam slab-edge insulation, 2 in. XPS, 2 x 8 ft", ceil(g["perim"] / 8), "sheet", 38)
         add("Site & foundation", "Anchor bolts, 1/2 x 10 in. with washers", ceil(g["perim"] / 6) + 2 * 4, "ea", 2.25)
-        add("Site & foundation", "Rigid foam slab-edge insulation, 2 in. XPS, 2 x 8 ft", ceil(g["perim"] / 8), "sheet", 38)
         add("Site & foundation", "Forms, stakes and pump/finishing supplies (allowance)", 1, "lot", 350 + A * 0.9)
     elif fnd == "crawl":
         add("Site & foundation", "Ready-mix concrete, footings 16 x 8 in. + interior piers", round((g["perim"] * (16 / 12) * (8 / 12) / 27 + (ceil(m.W / 6) + 1) * 0.15) * 1.1, 1), "cu yd", 175)
@@ -185,10 +205,15 @@ def takeoff(m: M.Model):
         n = 6 if m.W <= 20 else 8 if m.D <= 8.5 else 12
         add("Site & foundation", "Concrete piers 24 x 24 x 36 in. with weld plates", n, "ea", 210)
         add("Site & foundation", "Gravel pad under unit, 4 in.", round(A * 1.3 * (4 / 12) / 27, 1), "cu yd", 55)
+    elif fnd == "chassis":
+        add("Site & foundation", "Park model steel chassis: (2) I-beams, outriggers and running gear (by the manufacturer)", 1, "ea", 6800 + m.W * 60)
+        add("Site & foundation", "Steel piers on ABS pads under each I-beam @ 6 ft o.c.", 2 * (ceil(m.W / 6) + 1), "ea", 85)
+        add("Site & foundation", "Ground anchors with frame straps", 2 * (ceil(m.W / 12) + 1), "ea", 45)
+        add("Site & foundation", "Vented skirting with access panel (lin ft)", ceil(2 * (m.W + m.D)), "lin ft", 12)
     else:  # trailer
         add("Site & foundation", "Leveling jacks / stabilizers and cribbing", 4 if m.W <= 24 else 6, "ea", 85)
         add("Site & foundation", "Hurricane / ground anchors with straps", 4 if m.W <= 24 else 6, "ea", 45)
-    add("Site & foundation", "Excavation, grading and haul-off (allowance)", 1, "lot", 600 if fnd == "trailer" else 1800 + A * 2)
+    add("Site & foundation", "Excavation, grading and haul-off (allowance)", 1, "lot", 600 if fnd in ("trailer", "chassis") else 1800 + A * 2)
 
     # ---- Trailer or container shell ------------------------------------------------------
     if m.mobile:
@@ -207,12 +232,16 @@ def takeoff(m: M.Model):
         add("Trailer / shell", "Container delivery and crane set", n, "ea", 1100)
 
     # ---- Framing & sheathing --------------------------------------------------------------
-    ext_open = [o for o in m.openings if o.exterior]
+    ext_open = [o for o in openings if o.exterior]
     int_open = [o for o in m.openings if not o.exterior]
     if wood:
-        ext_studs = ceil(g["perim"] * 12 / spacing) + len([w for w in m.walls if w.exterior]) + 3 * g["corners"] // 2 + 4 * len(ext_open)
+        ext_studs = ceil(g["perim"] * 12 / spacing) + len([w for w in m.walls if w.exterior]) + 3 * g["corners"] // 2 + 4 * len([o for o in m.openings if o.exterior])
         add("Framing & sheathing", f"{ext_stud} studs, {stud_len} ft (precut), exterior walls @ {spacing} in. o.c.", ceil(ext_studs * 1.1), "ea", 9.80 if ext_stud == "2x6" else 5.40)
         add("Framing & sheathing", f"{ext_stud} plates, 16 ft (1 bottom PT + 2 top), exterior", ceil(g["perim"] * 3 / 16 * 1.08), "ea", 17.50 if ext_stud == "2x6" else 10.50)
+        if up:
+            up_studs = ceil(g["perim"] * 12 / spacing) + len([w for w in up.walls if w.exterior]) + 3 * g["corners"] // 2 + 4 * len([o for o in up.openings if o.exterior])
+            add("Framing & sheathing", f"{ext_stud} studs, 8 ft (precut), second-floor exterior walls @ {spacing} in. o.c.", ceil(up_studs * 1.1), "ea", 8.90 if ext_stud == "2x6" else 4.90)
+            add("Framing & sheathing", f"{ext_stud} plates, 16 ft (1 bottom + 2 top), second-floor exterior", ceil(g["perim"] * 3 / 16 * 1.08), "ea", 17.50 if ext_stud == "2x6" else 10.50)
         if g["gable"]:
             add("Framing & sheathing", f"{ext_stud} gable / rake wall studs, 10 ft", ceil(g["gable"] / 2 / (spacing / 12) / 4 * 1.15) + 2, "ea", 12.50 if ext_stud == "2x6" else 7.20)
     else:
@@ -221,8 +250,18 @@ def takeoff(m: M.Model):
         int_studs = ceil(g["int_lf"] * 12 / 16) + 2 * len([w for w in m.walls if not w.exterior and not w.open]) + 2 * len(int_open)
         add("Framing & sheathing", f"2x4 studs, {min(stud_len, 9)} ft (precut), interior walls @ 16 in. o.c.", ceil(int_studs * 1.1), "ea", 5.40)
         add("Framing & sheathing", "2x4 plates, 16 ft, interior walls", ceil(g["int_lf"] * 3 / 16 * 1.08), "ea", 10.50)
+    if g["up_int_lf"]:
+        int_studs = ceil(g["up_int_lf"] * 12 / 16) + 2 * len([w for w in up.walls if not w.exterior and not w.open]) + 2 * len([o for o in up.openings if not o.exterior])
+        add("Framing & sheathing", "2x4 studs, 8 ft (precut), second-floor interior walls @ 16 in. o.c.", ceil(int_studs * 1.1), "ea", 4.90)
+        add("Framing & sheathing", "2x4 plates, 16 ft, second-floor interior walls", ceil(g["up_int_lf"] * 3 / 16 * 1.08), "ea", 10.50)
+    if up:
+        span = min(m.W, m.D)
+        add("Framing & sheathing", f"11-7/8 in. I-joists @ 16 in. o.c., {ceil(span)} ft (second-floor system)", ceil(max(m.W, m.D) * 12 / 16) + 2, "ea", 5.20 * ceil(span))
+        add("Framing & sheathing", "Rim board 1-1/8 x 11-7/8 in., 16 ft, with joist hangers at stair opening", ceil(2 * (m.W + m.D) / 16 * 1.1) + 2, "ea", 46)
+        add("Framing & sheathing", "Floor sheathing 3/4 in. T&G OSB, glued and screwed, 4 x 8", ceil(m.W * m.D / 32 * 1.1), "sheet", 44)
+        add("Framing & sheathing", "Interior stair: LVL stringers, treads, risers, handrail and guard (allowance)", 1, "ea", 1450)
     hdr = {}
-    for o in m.openings:
+    for o in openings:
         if o.exterior or o.width >= 4:
             k = header_for(o.width)
             hdr[k] = hdr.get(k, 0) + o.width + 0.5
@@ -255,9 +294,11 @@ def takeoff(m: M.Model):
         add("Framing & sheathing", "Built-up beam 3-2x10, 16 ft (center girder)", ceil(m.W / 16) * 3, "ea", 30)
         add("Framing & sheathing", "PT sill plate 2x6, 16 ft + sill seal", ceil(g["perim"] / 16 * 1.1), "ea", 19)
         add("Framing & sheathing", "Joist hangers", ceil(m.W * 12 / 16 + 1) * 2, "ea", 1.40)
-    if fnd in ("crawl", "trailer"):
+    if fnd in ("crawl", "trailer", "chassis"):
         if fnd == "trailer":
             add("Framing & sheathing", "2x6 floor joists, 8 ft @ 16 in. o.c. (trailer deck)", ceil(m.W * 12 / 16) + 1, "ea", 8.80)
+        if fnd == "chassis":
+            add("Framing & sheathing", f"2x6 floor joists, {ceil(m.D)} ft @ 16 in. o.c. on the chassis", ceil(m.W * 12 / 16) + 1, "ea", 1.1 * ceil(m.D))
         add("Framing & sheathing", "Subfloor 3/4 in. T&G OSB/ply, 4 x 8", ceil(m.W * m.D / 32 * 1.08), "sheet", 44)
     if g["loft"]:
         add("Framing & sheathing", "2x8 loft joists @ 16 in. o.c. + rim", ceil(sum(r.w for r in m.lofts) * 12 / 16 + 2), "ea", 14)
@@ -267,13 +308,16 @@ def takeoff(m: M.Model):
         add("Framing & sheathing", "Wall sheathing 7/16 in. OSB, 4 x 8 (9 ft: 4 x 9)", ceil(g["wall_gross"] / 32 * 1.1), "sheet", 21)
         add("Framing & sheathing", "House wrap 9 x 150 ft + seam tape", ceil(g["wall_gross"] * 1.15 / 1350) or 1, "roll", 185)
     if g["roof"]:
-        add("Framing & sheathing", "Roof sheathing 1/2 in. CDX plywood, 4 x 8", ceil(g["roof"] / 32 * 1.1), "sheet", 38)
+        if M.PROFILE.get("radiant_barrier") and not m.container:
+            add("Framing & sheathing", "Radiant-barrier roof sheathing, 7/16 in. foil-faced OSB, 4 x 8 (foil down)", ceil(g["roof"] / 32 * 1.1), "sheet", 34)
+        else:
+            add("Framing & sheathing", "Roof sheathing 1/2 in. CDX plywood, 4 x 8", ceil(g["roof"] / 32 * 1.1), "sheet", 38)
     if g["porch"]:
         add("Framing & sheathing", "Porch: 6x6 PT posts, beams, joists and roof framing (allowance per sq ft)", ceil(g["porch"]), "sq ft", 9.5)
         add("Framing & sheathing", "Porch decking, 5/4 x 6 composite or PT", ceil(g["porch"] * 1.1), "sq ft", 6.5)
 
     # ---- Roofing ------------------------------------------------------------------------
-    roof_all = g["roof"] + (g["porch"] * 1.15 if g["porch"] and next((r for r in m.rooms if r.kind == "porch"), None) is None else 0)
+    roof_all = g["roof"] + g["porch_out"] * 1.15
     if roof_all:
         squares = roof_all * 1.12 / 100
         metal = "metal" in m.p.get("roof", "").lower() or m.mobile or rt in ("shed", "container-double")
@@ -296,18 +340,18 @@ def takeoff(m: M.Model):
 
     # ---- Windows & doors ------------------------------------------------------------------
     sizes = {}
-    for o in m.openings:
+    for o in openings:
         if o.kind == "window":
             key = (window_size(o), o.egress)
             sizes[key] = sizes.get(key, 0) + 1
     for (sz, egr), n in sorted(sizes.items()):
         w, h = [float(v.split("'")[0]) + float(v.split("'")[1].rstrip('"') or 0) / 12 for v in sz.split(" x ")]
         area = w * h
-        add("Windows & doors", f"Vinyl {'casement (egress)' if egr else 'single-hung / slider'} window, low-E, {sz}", n, "ea", 180 + area * 22 + (60 if egr else 0))
+        add("Windows & doors", f"Vinyl {'casement (egress)' if egr else 'single-hung / slider'} window, {M.PROFILE.get('window_spec', 'low-E')}, {sz}", n, "ea", 180 + area * 22 + (60 if egr else 0))
     clere = m.notes.get("clerestory", [])
     if clere:
         add("Windows & doors", "Fixed clerestory window, low-E, 2'6\" x 1'2\"", len(clere), "ea", 175)
-    for o in m.openings:
+    for o in openings:
         if o.kind == "window":
             continue
         if o.exterior:
@@ -323,24 +367,27 @@ def takeoff(m: M.Model):
             else:
                 add("Windows & doors", f"Interior prehung door {int(round(o.width * 12))} x 80 in., hollow-core, with {'privacy' if o.room and o.room.kind in ('bath', 'bed') else 'passage'} set", 1, "ea", 165)
     add("Windows & doors", "Window & door flashing tape, sill pans and low-expansion foam", 1, "lot", 25 * len(ext_open) + 40)
-    if any(r.kind == "bed" for r in m.heated) or m.lofts:
-        add("Windows & doors", "Closet doors / shelving kits", len([r for r in m.heated if r.kind == "bed"]), "ea", 210)
+    if any(r.kind == "bed" for r in heated) or m.lofts:
+        add("Windows & doors", "Closet doors / shelving kits", len([r for r in heated if r.kind == "bed"]), "ea", 210)
 
     # ---- Exterior finish --------------------------------------------------------------------
     if wood:
-        siding = "fiber-cement lap" if "fiber" in m.p.get("walls", "").lower() else "engineered wood / lap" if "lap" in m.p.get("walls", "").lower() else "vertical board-and-batten" if "vertical" in m.p.get("walls", "").lower() else "siding"
+        wl = m.p.get("walls", "").lower()
+        siding = "metal wall panel (R-panel / board-and-batten profile)" if "metal" in wl else "fiber-cement board-and-batten" if "batten" in wl and "fiber" in wl else "fiber-cement lap" if "fiber" in m.p.get("walls", "").lower() else "engineered wood / lap" if "lap" in m.p.get("walls", "").lower() else "vertical board-and-batten" if "vertical" in m.p.get("walls", "").lower() else "siding"
         add("Exterior finish", f"Exterior {siding} siding (installed area)", ceil(g["wall_net"] * 1.12), "sq ft", 3.40)
         add("Exterior finish", "Corner boards, window/door trim 1x4 / 1x6 (lin ft)", ceil(g["corners"] * 2 * g["plate"] + sum(2 * (o.width + o.height) for o in ext_open)), "lin ft", 2.10)
+        if up:
+            add("Exterior finish", "Floor-line band board and flashing between floors (lin ft)", ceil(g["perim"] * 1.05), "lin ft", 4.20)
         add("Exterior finish", "Soffit & fascia, vented (lin ft)", ceil((m.W + 2) * 2 + (g["roof_slope_len"] * 4 if rt not in ("aframe",) else 0)), "lin ft", 6.2)
         if "stone" in m.p.get("walls", "").lower():
-            add("Exterior finish", "Manufactured stone veneer wainscot, 3 ft high, front", ceil(m.W * 3), "sq ft", 11)
+            add("Exterior finish", "Stone veneer wainscot, 3 ft high, all sides, with lath, scratch coat and weep screed", ceil((g["perim"] - sum(o.width for o in m.openings if o.exterior and o.kind != "window")) * 3 * 1.05), "sq ft", 11)
         add("Exterior finish", "Exterior paint / stain, primer + 2 coats", ceil(g["wall_net"] * 2 / 350) + 1, "gal", 52)
     else:
         add("Exterior finish", "Direct-to-metal primer + exterior paint for container", ceil(g["perim"] * 9.5 * 2 / 350) + 2, "gal", 68)
     add("Exterior finish", "Caulk, sealants and exterior trim fasteners", 1, "lot", 120 + sq * 0.15)
 
     # ---- Insulation --------------------------------------------------------------------------
-    ceiling = g["floor"] * (1.0 if rt not in ("aframe", "gambrel", "shed", "shed-thow") else 1.25)
+    ceiling = (g["up_floor"] or g["floor"]) * (1.0 if rt not in ("aframe", "gambrel", "shed", "shed-thow") else 1.25)
     if m.container:
         bf = (g["perim"] * 8.8 + g["floor"]) * 2.0
         add("Insulation", "Closed-cell spray foam, 2 in. walls & ceiling (board feet)", ceil(bf * 1.05), "board ft", 1.25)
@@ -353,15 +400,19 @@ def takeoff(m: M.Model):
         else:
             add("Insulation", "Attic insulation R-38 blown cellulose / fiberglass", ceil(ceiling * 1.05), "sq ft", 1.05)
             add("Insulation", "Attic baffles and air sealing kit", ceil(m.W / 2) * 2 + 1, "ea", 3)
-        if fnd in ("crawl", "trailer"):
+        if up:
+            add("Insulation", "Rim-joist insulation (2 in. closed-cell foam) and fire-blocking at the floor line", ceil(g["perim"]), "lin ft", 3.10)
+        if fnd in ("crawl", "trailer", "chassis"):
             add("Insulation", "Floor insulation R-19 / R-21 (or rigid foam under trailer deck)", ceil(m.W * m.D * 1.05), "sq ft", 1.10)
-    add("Insulation", "Acoustic batts at bedroom and bath walls", ceil(sum(w.length for w in m.walls if not w.exterior and not w.open and any(r.kind in ('bed', 'bath') for r in w.rooms)) * g["plate"] * 1.05) or 0, "sq ft", 0.95)
+    add("Insulation", "Acoustic batts at bedroom and bath walls", ceil(sum(w.length for w in walls if not w.exterior and not w.open and any(r.kind in ('bed', 'bath') for r in w.rooms)) * g["plate1"] * 1.05) or 0, "sq ft", 0.95)
+    if up:
+        add("Insulation", "Acoustic batts in the second-floor system (sound between floors)", ceil(g["floor"] * 1.05), "sq ft", 0.95)
 
     # ---- Drywall & paint ------------------------------------------------------------------------
-    walls_in = g["perim"] * (g["plate"] or 8) + g["int_lf"] * 2 * (g["plate"] or 8) + g["gable"] * (1 if rt in ("aframe", "gambrel", "shed", "shed-thow") else 0)
+    walls_in = g["perim"] * (g["plate"] or 8) + g["int_lf"] * 2 * (g["plate1"] or 8) + g["up_int_lf"] * 2 * M.UPPER_PLATE + g["gable"] * (1 if rt in ("aframe", "gambrel", "shed", "shed-thow") else 0)
     if rt == "aframe":
         walls_in = g["roof"] * 0.9 + g["gable"]
-    ceil_area = ceiling if rt != "aframe" else 0
+    ceil_area = (ceiling + (g["floor"] if up else 0)) if rt != "aframe" else 0
     dry = walls_in + ceil_area + g["loft"]
     finish_board = "1/4 in. plywood / T&G pine" if m.mobile else "1/2 in. drywall"
     if m.mobile:
@@ -373,15 +424,15 @@ def takeoff(m: M.Model):
     add("Drywall & paint", "Paint sundries (rollers, brushes, tape, caulk)", 1, "lot", 90 + sq * 0.1)
 
     # ---- Flooring & trim -----------------------------------------------------------------------------
-    bath_area = sum(r.area for r in m.heated if r.kind == "bath")
-    add("Flooring & trim", "Luxury vinyl plank flooring, waterproof, 20 mil", ceil((g["floor"] - bath_area + g["loft"]) * 1.1), "sq ft", 3.20)
+    bath_area = sum(r.area for r in heated if r.kind == "bath")
+    add("Flooring & trim", "Luxury vinyl plank flooring, waterproof, 20 mil", ceil((g["floor"] + g["up_floor"] - bath_area + g["loft"]) * 1.1), "sq ft", 3.20)
     if bath_area:
-        add("Flooring & trim", "Porcelain tile floor + shower walls, thinset, grout, backer board", ceil(bath_area * 1.1 + 70 * len([f for f in m.fixtures if f.kind in ('shower', 'tub')])), "sq ft", 6.8)
-        add("Flooring & trim", "Shower pan / tub surround kit & waterproofing membrane", len([f for f in m.fixtures if f.kind in ("shower", "tub")]), "ea", 340)
-    base = sum(2 * (r.w + r.d) for r in m.heated) - sum(o.width for o in m.openings if o.kind != "window")
+        add("Flooring & trim", "Porcelain tile floor + shower walls, thinset, grout, backer board", ceil(bath_area * 1.1 + 70 * len([f for f in fixtures if f.kind in ('shower', 'tub')])), "sq ft", 6.8)
+        add("Flooring & trim", "Shower pan / tub surround kit & waterproofing membrane", len([f for f in fixtures if f.kind in ("shower", "tub")]), "ea", 340)
+    base = sum(2 * (r.w + r.d) for r in heated if r.kind != "stair") - sum(o.width for o in openings if o.kind != "window")
     add("Flooring & trim", "Baseboard, primed MDF 3-1/4 in. (lin ft)", ceil(base * 1.1), "lin ft", 1.35)
-    add("Flooring & trim", "Door & window casing / stool (lin ft)", ceil(sum(2 * (o.width + o.height) + (o.width if o.kind == "window" else 0) for o in m.openings) * 1.1), "lin ft", 1.45)
-    add("Flooring & trim", "Bath accessories (mirror, towel bars, TP holder, shower rod/door)", len([r for r in m.heated if r.kind == "bath"]), "set", 260)
+    add("Flooring & trim", "Door & window casing / stool (lin ft)", ceil(sum(2 * (o.width + o.height) + (o.width if o.kind == "window" else 0) for o in openings) * 1.1), "lin ft", 1.45)
+    add("Flooring & trim", "Bath accessories (mirror, towel bars, TP holder, shower rod/door)", len([r for r in heated if r.kind == "bath"]), "set", 260)
 
     # ---- Cabinets & counters ------------------------------------------------------------------------
     counter_lf = sum((f.w if f.rot in "SN" else f.d) for f in m.fixtures if f.kind == "counter")
@@ -392,7 +443,7 @@ def takeoff(m: M.Model):
     win_k = sum(o.width for o in m.openings if o.kind == "window" and o.room and o.room.has_kitchen and o.wall.seg.o in "hv")
     add("Cabinets & counters", "Wall cabinets 30-36 in. (lin ft)", round(max(2, base_lf - win_k - 2.5), 1), "lin ft", 120)
     add("Cabinets & counters", "Countertop, quartz or butcher block (sq ft)", ceil((base_lf * 2.1 + sum(f.w * f.d for f in island)) * 1.1), "sq ft", 48)
-    lavs = [f for f in m.fixtures if f.kind == "lav"]
+    lavs = [f for f in fixtures if f.kind == "lav"]
     if lavs:
         add("Cabinets & counters", "Bathroom vanity with top", len(lavs), "ea", 340)
     add("Cabinets & counters", "Cabinet hardware, fillers and toe kick", 1, "lot", 60 + base_lf * 9)
@@ -417,12 +468,13 @@ def takeoff(m: M.Model):
                  "can": ("LED wafer recessed light, 4 in.", 16), "fan": ("Bath exhaust fan / light, 80 CFM, Energy Star", 120),
                  "sconce": ("Wall sconce / vanity light, LED (allowance)", 65), "smoke": ("Smoke alarm, hardwired, interconnected", 32),
                  "smokeco": ("Smoke / CO combination alarm, hardwired", 52), "jbox": ("Appliance junction box / whip", 14),
-                 "inlet": ("50A RV power inlet + cord", 260), "disconnect": ("A/C disconnect, 60A non-fused", 28)}
+                 "inlet": ("50A RV power inlet + cord", 260), "disconnect": ("A/C disconnect, 60A non-fused", 28),
+                 "cfan": ("Ceiling fan with LED light kit, 52 in., Energy Star, on fan-rated box (damp-rated on porches)", 195)}
     for k, n in sorted(kinds.items()):
         if k in dev_price:
             nm, pr = dev_price[k]
             add("Electrical", nm, n, "ea", pr)
-    boxes = sum(n for k, n in kinds.items() if k in ("rec", "gfci", "rec20", "rec240", "wp", "sw", "sw3", "light", "sconce", "smoke", "smokeco", "jbox"))
+    boxes = sum(n for k, n in kinds.items() if k in ("rec", "gfci", "rec20", "rec240", "wp", "sw", "sw3", "light", "cfan", "sconce", "smoke", "smokeco", "jbox"))
     add("Electrical", "Device / ceiling boxes (new-work)", ceil(boxes * 1.05), "ea", 1.80)
     nbreak = sum(2 if c.volts == 240 else 1 for c in m.circuits)
     spaces = 20 if nbreak <= 18 else 30 if nbreak <= 28 else 40
@@ -430,7 +482,9 @@ def takeoff(m: M.Model):
     afci = sum(1 for c in m.circuits if c.volts == 120)
     add("Electrical", "Breakers: combination AFCI / dual-function (120V)", afci, "ea", 48)
     add("Electrical", "Breakers: 2-pole (240V)", sum(1 for c in m.circuits if c.volts == 240), "ea", 22)
-    if not m.mobile:
+    if fnd == "chassis":
+        add("Electrical", "50A park-pedestal feeder cord / cable and connector", 1, "lot", 280)
+    elif not m.mobile:
         add("Electrical", "Meter base, service entrance cable, ground rods & bonding", 1, "lot", 650)
     add("Electrical", "Staples, wire nuts, connectors, nail plates", 1, "lot", 80 + sq * 0.12)
 
@@ -439,14 +493,14 @@ def takeoff(m: M.Model):
     pex34 = sum(L for (k, s), L in pl.items() if k == "cold" and s == '3/4"')
     pex12 = sum(L for (k, s), L in pl.items() if k in ("cold", "hot") and s == '1/2"')
     add("Plumbing", "PEX-A 3/4 in. (service + trunk), with fittings allowance", ceil((pex34 + m.plate) * 1.25 / 10) * 10 + 10, "lin ft", 1.35)
-    add("Plumbing", "PEX-A 1/2 in. red/blue (branches), with fittings allowance", ceil((pex12 + 3 * len([p for p in m.pipes if p.kind in ('cold', 'hot')])) * 1.25 / 10) * 10, "lin ft", 0.78)
-    users = [f for f in m.fixtures if f.kind in M.COLD and f.kind != "fridge"]
+    add("Plumbing", "PEX-A 1/2 in. red/blue (branches), with fittings allowance", ceil((pex12 + 3 * len([p for p in m.all("pipes") if p.kind in ('cold', 'hot')])) * 1.25 / 10) * 10, "lin ft", 0.78)
+    users = [f for f in fixtures if f.kind in M.COLD and f.kind != "fridge"]
     supplies = sum(2 if f.kind in M.HOT else 1 for f in users)
     add("Plumbing", "Quarter-turn angle stops, supply lines, stub-outs", supplies, "ea", 14)
     for size in ('3"', '2"', '1-1/2"', '1-1/4"'):
         L = sum(Lp for (k, s), Lp in pl.items() if k == "waste" and s == size)
         if size == '3"':
-            L += (m.plate + geometry(m)["rise"] + 2) if any(f.kind == "toilet" for f in m.fixtures) else 0
+            L += (g["plate"] + g["rise"] + 2) if any(f.kind == "toilet" for f in fixtures) else 0
         if L:
             add("Plumbing", f"PVC DWV pipe {size} schedule 40, with fittings allowance", ceil(L * 1.3 / 10) * 10, "lin ft", {'3"': 3.4, '2"': 2.1, '1-1/2"': 1.6, '1-1/4"': 1.4}[size])
     add("Plumbing", "DWV fittings, cleanouts, primer & cement (allowance)", 1, "lot", 120 + 35 * len(users))
@@ -458,7 +512,7 @@ def takeoff(m: M.Model):
                      "wh": ("Water heater, 40-50 gal electric or heat-pump", 1250), "tankless": ("Tankless electric water heater, point-of-use", 620),
                      "washer": ("Washer box with valves & hammer arrestors", 85), "stack_wd": ("Washer box with valves & hammer arrestors", 85)}
     fk = {}
-    for f in m.fixtures:
+    for f in fixtures:
         if f.kind in fixture_price:
             fk[f.kind] = fk.get(f.kind, 0) + 1
     for k, n in sorted(fk.items()):
@@ -468,15 +522,20 @@ def takeoff(m: M.Model):
     add("Plumbing", "Main shutoff, expansion tank, pressure-reducing valve", 1, "lot", 185)
 
     # ---- HVAC & ventilation ----------------------------------------------------------------------------
-    heads = len([d for d in m.devices if d.kind == "minisplit"])
+    hv = m.notes.get("hvac", {})
+    heads = len(hv.get("heads", []))
     if heads:
+        cap = hv["outdoor_btu"]
         if heads == 1:
-            add("HVAC & ventilation", f"Ductless mini-split heat pump, {'9,000' if sq < 350 else '12,000' if sq < 650 else '18,000'} BTU, single zone, with line set", 1, "ea", 1650 if sq < 350 else 2100)
+            add("HVAC & ventilation", f"Ductless mini-split heat pump, {cap:,} BTU, single zone, inverter, with line set", 1, "ea", 1450 + cap * 0.055)
         else:
-            add("HVAC & ventilation", f"Multi-zone ductless heat pump, {heads} heads, {'18,000' if sq < 700 else '24,000'} BTU, with line sets", 1, "ea", 2400 + 750 * heads)
+            sizes = ", ".join(f"{h[2] // 1000}k" for h in hv["heads"])
+            add("HVAC & ventilation", f"Multi-zone ductless heat pump, {cap:,} BTU outdoor unit + {heads} heads ({sizes}), with line sets", 1, "ea", 1500 + cap * 0.05 + 650 * heads)
         add("HVAC & ventilation", "Condenser pad / wall bracket, condensate pump and disconnect whip", 1, "lot", 210)
-    add("HVAC & ventilation", "Range hood, ducted to exterior, with wall cap", 1, "ea", 240)
-    add("HVAC & ventilation", "Exhaust duct, caps and dryer vent kit", 1, "lot", 95 + 45 * len([r for r in m.heated if r.kind == "bath"]))
+    has_k = any(r.has_kitchen for r in m.heated)
+    if has_k:
+        add("HVAC & ventilation", "Range hood, ducted to exterior, with wall cap", 1, "ea", 240)
+    add("HVAC & ventilation", "Exhaust duct, caps and dryer vent kit", 1, "lot", 95 + 45 * len([r for r in heated if r.kind == "bath"]))
     if sq >= 400 and not m.mobile:
         add("HVAC & ventilation", "Spot ERV / balanced ventilation (tight-house fresh air)", 1, "ea", 780)
 
@@ -484,11 +543,12 @@ def takeoff(m: M.Model):
     appl = {"fridge": ("Refrigerator", 1100 if sq >= 400 else 650), "range": ("Range / induction cooktop", 900 if sq >= 400 else 420),
             "dw": ("Dishwasher, 18-24 in.", 650), "washer": ("Washer", 800), "dryer": ("Dryer (heat-pump or electric)", 850),
             "stack_wd": ("Compact stackable / combo washer-dryer", 1350)}
-    for f in m.fixtures:
+    for f in fixtures:
         if f.kind in appl:
             nm, pr = appl[f.kind]
             add("Appliances", nm, 1, "ea", pr)
-    add("Appliances", "Microwave (over-range or countertop)", 1, "ea", 260)
+    if has_k:
+        add("Appliances", "Microwave (over-range or countertop)", 1, "ea", 260)
 
     # ---- Fasteners & misc. ------------------------------------------------------------------------------
     add("Fasteners & misc.", "Framing nails, structural screws, connectors, construction adhesive", 1, "lot", 280 + sq * 0.55)
@@ -537,5 +597,8 @@ def estimate(m: M.Model, items):
         "diy_total": diy, "gc_total": gc, "diy_psf": round(diy / sq), "gc_psf": round(gc / sq), "sqft": sq,
         "excludes": ["Land", "Utility connections (well/septic or water/sewer taps, power service drop)",
                      "Driveway and landscaping", "Engineering or stamped drawings required by your jurisdiction",
-                     "Furniture and window coverings"] + (["Tow vehicle and transport"] if m.mobile else []),
+                     "Furniture and window coverings"] + (["Tow vehicle and transport"] if m.mobile else [])
+                    + [x for x in M.PROFILE.get("excludes_extra", []) if not (m.mobile and "foundation" in x.lower())],
+        # Contractor and owner-built totals for each region in the site profile (multiplier on materials, labor and permits).
+        "regions": [[name, f, round(gc * f), round(diy * f)] for name, f in M.PROFILE.get("cost_regions", [])],
     }

@@ -3,6 +3,7 @@
   "electrical": {
    "alarms": 3,
    "circuits": 14,
+   "fans": 0,
    "hvac_heads": 3,
    "lights": 17,
    "receptacles": 40,
@@ -36,8 +37,8 @@
     },
     {
      "finish": true,
-     "labor": 6671,
-     "materials": 7022,
+     "labor": 9105,
+     "materials": 9585,
      "name": "Exterior finish"
     },
     {
@@ -78,8 +79,8 @@
     },
     {
      "finish": false,
-     "labor": 3311,
-     "materials": 6020,
+     "labor": 3146,
+     "materials": 5720,
      "name": "HVAC & ventilation"
     },
     {
@@ -95,11 +96,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 9116,
-   "contingency_gc": 15940,
-   "diy_psf": 138,
-   "diy_total": 96371.0,
-   "diy_trade_help": 8249,
+   "contingency_diy": 9387,
+   "contingency_gc": 16475,
+   "diy_psf": 141,
+   "diy_total": 98815.0,
+   "diy_trade_help": 8159,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -107,12 +108,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 255,
-   "gc_total": 178378.0,
-   "labor": 59117,
-   "materials": 75966,
-   "overhead": 24315,
+   "gc_psf": 263,
+   "gc_total": 184261.0,
+   "labor": 61386,
+   "materials": 78229,
+   "overhead": 25131,
    "permits": 3040.0,
+   "regions": [],
    "sqft": 700
   },
   "files": [
@@ -122,15 +124,15 @@
    ],
    [
     "Plan-12-2417-Construction-Drawings-24x36.pdf",
-    158257
+    149161
    ],
    [
     "Plan-12-2417-CAD-Drawings.dxf",
-    187816
+    194970
    ],
    [
     "Plan-12-2417-Materials-List.csv",
-    9943
+    10054
    ],
    [
     "Plan-12-2417-Cost-Estimate.csv",
@@ -138,60 +140,82 @@
    ],
    [
     "3D-Model/Plan-12-2417.obj",
-    162388
+    186449
    ],
    [
     "3D-Model/Plan-12-2417.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    114251
+    107274
    ],
    [
     "Images/3d-front.png",
-    73393
+    62012
    ],
    [
     "Images/3d-rear.png",
-    70477
+    60717
    ],
    [
     "Images/3d-top.png",
-    40748
+    40210
    ],
    [
     "Images/electrical-plan.png",
-    280807
+    279690
    ],
    [
     "Images/elevation-front.png",
-    36193
+    53564
    ],
    [
     "Images/elevation-left.png",
-    72379
+    88651
    ],
    [
     "Images/elevation-rear.png",
-    34233
+    51591
    ],
    [
     "Images/elevation-right.png",
-    74897
+    91500
    ],
    [
     "Images/floor-plan.png",
-    210992
+    210380
    ],
    [
     "Images/plumbing-plan.png",
-    152166
+    151509
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 21000,
+   "heads": [
+    [
+     "Great Room",
+     460,
+     9000
+    ],
+    [
+     "Bedroom 1",
+     128,
+     6000
+    ],
+    [
+     "Bedroom 2",
+     112,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 122,
   "materials": [
@@ -230,10 +254,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 11,
     "name": "Windows & doors",
@@ -241,14 +265,14 @@
    },
    {
     "examples": [
+     "Stone veneer wainscot, 3 ft high, all sides, with lath, scratch coat and weep screed",
      "Exterior siding siding (installed area)",
-     "Manufactured stone veneer wainscot, 3 ft high, front",
      "Corner boards, window/door trim 1x4 / 1x6 (lin ft)",
      "Soffit & fascia, vented (lin ft)"
     ],
     "lines": 6,
     "name": "Exterior finish",
-    "total": 7022
+    "total": 9585
    },
    {
     "examples": [
@@ -318,14 +342,14 @@
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 3 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 3 heads (9k, 6k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 6020
+    "total": 5720
    },
    {
     "examples": [
@@ -401,12 +425,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1255707
+  "upper": false,
+  "zip_bytes": 1288679
  },
  "plan-12-2418": {
   "electrical": {
    "alarms": 4,
    "circuits": 14,
+   "fans": 0,
    "hvac_heads": 2,
    "lights": 18,
    "receptacles": 40,
@@ -440,8 +466,8 @@
     },
     {
      "finish": true,
-     "labor": 6684,
-     "materials": 7036,
+     "labor": 9213,
+     "materials": 9698,
      "name": "Exterior finish"
     },
     {
@@ -482,8 +508,8 @@
     },
     {
      "finish": false,
-     "labor": 2923,
-     "materials": 5315,
+     "labor": 2813,
+     "materials": 5115,
      "name": "HVAC & ventilation"
     },
     {
@@ -499,11 +525,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 9513,
-   "contingency_gc": 16772,
-   "diy_psf": 143,
-   "diy_total": 100427.0,
-   "diy_trade_help": 8599,
+   "contingency_diy": 9808,
+   "contingency_gc": 17348,
+   "diy_psf": 147,
+   "diy_total": 103123.0,
+   "diy_trade_help": 8538,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -511,12 +537,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 268,
-   "gc_total": 187530.0,
-   "labor": 62859,
-   "materials": 79275,
-   "overhead": 25584,
+   "gc_psf": 277,
+   "gc_total": 193866.0,
+   "labor": 65278,
+   "materials": 81737,
+   "overhead": 26463,
    "permits": 3040.0,
+   "regions": [],
    "sqft": 700
   },
   "files": [
@@ -526,15 +553,15 @@
    ],
    [
     "Plan-12-2418-Construction-Drawings-24x36.pdf",
-    151577
+    148716
    ],
    [
     "Plan-12-2418-CAD-Drawings.dxf",
-    220826
+    227992
    ],
    [
     "Plan-12-2418-Materials-List.csv",
-    10123
+    10244
    ],
    [
     "Plan-12-2418-Cost-Estimate.csv",
@@ -542,60 +569,77 @@
    ],
    [
     "3D-Model/Plan-12-2418.obj",
-    172252
+    199553
    ],
    [
     "3D-Model/Plan-12-2418.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    122210
+    113574
    ],
    [
     "Images/3d-front.png",
-    59477
+    56633
    ],
    [
     "Images/3d-rear.png",
-    73391
+    63829
    ],
    [
     "Images/3d-top.png",
-    44629
+    41902
    ],
    [
     "Images/electrical-plan.png",
-    247777
+    247292
    ],
    [
     "Images/elevation-front.png",
-    38400
+    56240
    ],
    [
     "Images/elevation-left.png",
-    69813
+    85979
    ],
    [
     "Images/elevation-rear.png",
-    36808
+    54346
    ],
    [
     "Images/elevation-right.png",
-    73524
+    90069
    ],
    [
     "Images/floor-plan.png",
-    215262
+    214248
    ],
    [
     "Images/plumbing-plan.png",
-    162097
+    162642
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 18000,
+   "heads": [
+    [
+     "Living",
+     508,
+     12000
+    ],
+    [
+     "Bedroom 1",
+     112,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 123,
   "materials": [
@@ -634,9 +678,9 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt"
     ],
     "lines": 11,
@@ -645,14 +689,14 @@
    },
    {
     "examples": [
+     "Stone veneer wainscot, 3 ft high, all sides, with lath, scratch coat and weep screed",
      "Exterior siding siding (installed area)",
-     "Manufactured stone veneer wainscot, 3 ft high, front",
      "Corner boards, window/door trim 1x4 / 1x6 (lin ft)",
      "Soffit & fascia, vented (lin ft)"
     ],
     "lines": 6,
     "name": "Exterior finish",
-    "total": 7036
+    "total": 9698
    },
    {
     "examples": [
@@ -722,14 +766,14 @@
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 2 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 2 heads (12k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 5315
+    "total": 5115
    },
    {
     "examples": [
@@ -809,12 +853,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1237202
+  "upper": false,
+  "zip_bytes": 1281981
  },
  "plan-12-2419": {
   "electrical": {
    "alarms": 2,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 6,
    "receptacles": 16,
@@ -890,14 +936,14 @@
     },
     {
      "finish": true,
-     "labor": 5974,
-     "materials": 4425,
+     "labor": 5984,
+     "materials": 4433,
      "name": "Plumbing"
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -913,11 +959,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 4970,
-   "contingency_gc": 8341,
-   "diy_psf": 222,
-   "diy_total": 52918.0,
-   "diy_trade_help": 5791,
+   "contingency_diy": 4987,
+   "contingency_gc": 8367,
+   "diy_psf": 223,
+   "diy_total": 53118.0,
+   "diy_trade_help": 5836,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -926,12 +972,13 @@
     "Furniture and window coverings",
     "Tow vehicle and transport"
    ],
-   "gc_psf": 389,
-   "gc_total": 92494.0,
-   "labor": 29272,
-   "materials": 41417,
-   "overhead": 12724,
+   "gc_psf": 390,
+   "gc_total": 92780.0,
+   "labor": 29354,
+   "materials": 41555,
+   "overhead": 12764,
    "permits": 740.0,
+   "regions": [],
    "sqft": 238
   },
   "files": [
@@ -941,15 +988,15 @@
    ],
    [
     "Plan-12-2419-Construction-Drawings-24x36.pdf",
-    127143
+    119020
    ],
    [
     "Plan-12-2419-CAD-Drawings.dxf",
-    105685
+    105590
    ],
    [
     "Plan-12-2419-Materials-List.csv",
-    8759
+    8808
    ],
    [
     "Plan-12-2419-Cost-Estimate.csv",
@@ -961,27 +1008,27 @@
    ],
    [
     "3D-Model/Plan-12-2419.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    82936
+    79402
    ],
    [
     "Images/3d-front.png",
-    50108
+    44420
    ],
    [
     "Images/3d-rear.png",
-    54690
+    50202
    ],
    [
     "Images/3d-top.png",
-    24397
+    24434
    ],
    [
     "Images/electrical-plan.png",
-    168389
+    169316
    ],
    [
     "Images/elevation-front.png",
@@ -1001,16 +1048,28 @@
    ],
    [
     "Images/floor-plan.png",
-    141275
+    141158
    ],
    [
     "Images/plumbing-plan.png",
-    127180
+    126348
    ]
   ],
   "framing": {
    "foundation": "trailer",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Living",
+     170,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 107,
   "materials": [
@@ -1057,10 +1116,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'6\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\"",
-     "Vinyl single-hung / slider window, low-E, 2'0\" x 2'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 2'0\" x 2'0\""
     ],
     "lines": 6,
     "name": "Windows & doors",
@@ -1140,18 +1199,18 @@
     ],
     "lines": 16,
     "name": "Plumbing",
-    "total": 4425
+    "total": 4433
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -1230,12 +1289,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 956186
+  "upper": false,
+  "zip_bytes": 937462
  },
  "plan-12-2420": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 8,
    "receptacles": 25,
@@ -1317,8 +1378,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -1334,11 +1395,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 5892,
-   "contingency_gc": 9874,
-   "diy_psf": 183,
-   "diy_total": 62323.0,
-   "diy_trade_help": 6470,
+   "contingency_diy": 5908,
+   "contingency_gc": 9898,
+   "diy_psf": 184,
+   "diy_total": 62508.0,
+   "diy_trade_help": 6509,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -1347,12 +1408,13 @@
     "Furniture and window coverings",
     "Tow vehicle and transport"
    ],
-   "gc_psf": 322,
-   "gc_total": 109479.0,
-   "labor": 34581,
-   "materials": 49101,
-   "overhead": 15063,
+   "gc_psf": 323,
+   "gc_total": 109741.0,
+   "labor": 34653,
+   "materials": 49231,
+   "overhead": 15099,
    "permits": 860.0,
+   "regions": [],
    "sqft": 340
   },
   "files": [
@@ -1362,15 +1424,15 @@
    ],
    [
     "Plan-12-2420-Construction-Drawings-24x36.pdf",
-    149108
+    130078
    ],
    [
     "Plan-12-2420-CAD-Drawings.dxf",
-    128776
+    128752
    ],
    [
     "Plan-12-2420-Materials-List.csv",
-    9047
+    9096
    ],
    [
     "Plan-12-2420-Cost-Estimate.csv",
@@ -1382,27 +1444,27 @@
    ],
    [
     "3D-Model/Plan-12-2420.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    77584
+    79763
    ],
    [
     "Images/3d-front.png",
-    68166
+    49778
    ],
    [
     "Images/3d-rear.png",
-    46307
+    41306
    ],
    [
     "Images/3d-top.png",
-    23081
+    20620
    ],
    [
     "Images/electrical-plan.png",
-    177518
+    177104
    ],
    [
     "Images/elevation-front.png",
@@ -1422,16 +1484,28 @@
    ],
    [
     "Images/floor-plan.png",
-    160491
+    159993
    ],
    [
     "Images/plumbing-plan.png",
-    124629
+    124099
    ]
   ],
   "framing": {
    "foundation": "trailer",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Living",
+     204,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 111,
   "materials": [
@@ -1478,10 +1552,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'6\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl single-hung / slider window, low-E, 2'0\" x 2'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 2'0\" x 2'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 7,
     "name": "Windows & doors",
@@ -1565,14 +1639,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -1652,12 +1726,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1009655
+  "upper": false,
+  "zip_bytes": 967834
  },
  "plan-12-2421": {
   "electrical": {
    "alarms": 2,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 6,
    "receptacles": 19,
@@ -1739,8 +1815,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -1756,11 +1832,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 5974,
-   "contingency_gc": 9941,
-   "diy_psf": 262,
-   "diy_total": 62384.0,
-   "diy_trade_help": 5883,
+   "contingency_diy": 5990,
+   "contingency_gc": 9965,
+   "diy_psf": 263,
+   "diy_total": 62570.0,
+   "diy_trade_help": 5923,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -1769,12 +1845,13 @@
     "Furniture and window coverings",
     "Tow vehicle and transport"
    ],
-   "gc_psf": 463,
-   "gc_total": 110095.0,
-   "labor": 34462,
-   "materials": 49787,
-   "overhead": 15165,
+   "gc_psf": 464,
+   "gc_total": 110357.0,
+   "labor": 34534,
+   "materials": 49917,
+   "overhead": 15201,
    "permits": 740.0,
+   "regions": [],
    "sqft": 238
   },
   "files": [
@@ -1784,15 +1861,15 @@
    ],
    [
     "Plan-12-2421-Construction-Drawings-24x36.pdf",
-    138379
+    119827
    ],
    [
     "Plan-12-2421-CAD-Drawings.dxf",
-    114827
+    114803
    ],
    [
     "Plan-12-2421-Materials-List.csv",
-    8894
+    9016
    ],
    [
     "Plan-12-2421-Cost-Estimate.csv",
@@ -1804,27 +1881,27 @@
    ],
    [
     "3D-Model/Plan-12-2421.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    81109
+    78567
    ],
    [
     "Images/3d-front.png",
-    61458
+    45292
    ],
    [
     "Images/3d-rear.png",
-    52001
+    36908
    ],
    [
     "Images/3d-top.png",
-    32040
+    26815
    ],
    [
     "Images/electrical-plan.png",
-    148466
+    148124
    ],
    [
     "Images/elevation-front.png",
@@ -1844,16 +1921,28 @@
    ],
    [
     "Images/floor-plan.png",
-    133285
+    132784
    ],
    [
     "Images/plumbing-plan.png",
-    105622
+    105191
    ]
   ],
   "framing": {
    "foundation": "trailer",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Living",
+     238,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 108,
   "materials": [
@@ -1901,9 +1990,9 @@
    {
     "examples": [
      "Fixed clerestory window, low-E, 2'6\" x 1'2\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'6\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 11,
     "name": "Windows & doors",
@@ -1911,7 +2000,7 @@
    },
    {
     "examples": [
-     "Exterior siding siding (installed area)",
+     "Exterior metal wall panel (R-panel / board-and-batten profile) siding (installed area)",
      "Corner boards, window/door trim 1x4 / 1x6 (lin ft)",
      "Soffit & fascia, vented (lin ft)",
      "Exterior paint / stain, primer + 2 coats"
@@ -1987,14 +2076,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -2069,12 +2158,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 884362
+  "upper": false,
+  "zip_bytes": 827622
  },
  "plan-12-2422": {
   "electrical": {
    "alarms": 2,
    "circuits": 11,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 8,
    "receptacles": 27,
@@ -2108,20 +2199,20 @@
     },
     {
      "finish": true,
-     "labor": 1431,
-     "materials": 4088,
+     "labor": 1408,
+     "materials": 4022,
      "name": "Windows & doors"
     },
     {
      "finish": true,
-     "labor": 3928,
-     "materials": 4134,
+     "labor": 3937,
+     "materials": 4144,
      "name": "Exterior finish"
     },
     {
      "finish": false,
-     "labor": 1036,
-     "materials": 1884,
+     "labor": 1038,
+     "materials": 1887,
      "name": "Insulation"
     },
     {
@@ -2132,8 +2223,8 @@
     },
     {
      "finish": true,
-     "labor": 2280,
-     "materials": 2683,
+     "labor": 2278,
+     "materials": 2680,
      "name": "Flooring & trim"
     },
     {
@@ -2156,8 +2247,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -2173,11 +2264,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 7085,
-   "contingency_gc": 11460,
+   "contingency_diy": 7094,
+   "contingency_gc": 11476,
    "diy_psf": 270,
-   "diy_total": 73367.0,
-   "diy_trade_help": 6459,
+   "diy_total": 73489.0,
+   "diy_trade_help": 6498,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -2186,12 +2277,13 @@
     "Furniture and window coverings",
     "Tow vehicle and transport"
    ],
-   "gc_psf": 466,
-   "gc_total": 126840.0,
-   "labor": 38076,
-   "materials": 59043,
-   "overhead": 17481,
+   "gc_psf": 467,
+   "gc_total": 127012.0,
+   "labor": 38134,
+   "materials": 59117,
+   "overhead": 17505,
    "permits": 780.0,
+   "regions": [],
    "sqft": 272
   },
   "files": [
@@ -2201,15 +2293,15 @@
    ],
    [
     "Plan-12-2422-Construction-Drawings-24x36.pdf",
-    141381
+    132175
    ],
    [
     "Plan-12-2422-CAD-Drawings.dxf",
-    129623
+    129587
    ],
    [
     "Plan-12-2422-Materials-List.csv",
-    9129
+    9204
    ],
    [
     "Plan-12-2422-Cost-Estimate.csv",
@@ -2217,35 +2309,35 @@
    ],
    [
     "3D-Model/Plan-12-2422.obj",
-    114616
+    115648
    ],
    [
     "3D-Model/Plan-12-2422.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    89827
+    84050
    ],
    [
     "Images/3d-front.png",
-    65071
+    55113
    ],
    [
     "Images/3d-rear.png",
-    44172
+    39908
    ],
    [
     "Images/3d-top.png",
-    34028
+    29560
    ],
    [
     "Images/electrical-plan.png",
-    176113
+    175564
    ],
    [
     "Images/elevation-front.png",
-    53560
+    53136
    ],
    [
     "Images/elevation-left.png",
@@ -2257,20 +2349,32 @@
    ],
    [
     "Images/elevation-right.png",
-    74092
+    74138
    ],
    [
     "Images/floor-plan.png",
-    145916
+    145250
    ],
    [
     "Images/plumbing-plan.png",
-    117976
+    117329
    ]
   ],
   "framing": {
    "foundation": "trailer",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Living",
+     272,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 111,
   "materials": [
@@ -2317,14 +2421,14 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'6\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 3'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'6\""
     ],
     "lines": 11,
     "name": "Windows & doors",
-    "total": 4088
+    "total": 4022
    },
    {
     "examples": [
@@ -2335,7 +2439,7 @@
     ],
     "lines": 5,
     "name": "Exterior finish",
-    "total": 4134
+    "total": 4144
    },
    {
     "examples": [
@@ -2346,7 +2450,7 @@
     ],
     "lines": 4,
     "name": "Insulation",
-    "total": 1884
+    "total": 1887
    },
    {
     "examples": [
@@ -2367,7 +2471,7 @@
     ],
     "lines": 6,
     "name": "Flooring & trim",
-    "total": 2683
+    "total": 2680
    },
    {
     "examples": [
@@ -2404,14 +2508,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -2487,12 +2591,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 996377
+  "upper": false,
+  "zip_bytes": 962978
  },
  "plan-12-2423": {
   "electrical": {
    "alarms": 2,
    "circuits": 11,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 14,
    "receptacles": 21,
@@ -2568,8 +2674,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 1823,
+     "materials": 3315,
      "name": "HVAC & ventilation"
     },
     {
@@ -2585,11 +2691,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 6716,
-   "contingency_gc": 11676,
+   "contingency_diy": 6697,
+   "contingency_gc": 11647,
    "diy_psf": 141,
-   "diy_total": 71242.0,
-   "diy_trade_help": 6152,
+   "diy_total": 71020.0,
+   "diy_trade_help": 6104,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -2597,12 +2703,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 260,
-   "gc_total": 130845.0,
-   "labor": 42984,
-   "materials": 55964,
-   "overhead": 17811,
+   "gc_psf": 259,
+   "gc_total": 130531.0,
+   "labor": 42898,
+   "materials": 55809,
+   "overhead": 17767,
    "permits": 2410.0,
+   "regions": [],
    "sqft": 504
   },
   "files": [
@@ -2612,7 +2719,7 @@
    ],
    [
     "Plan-12-2423-Construction-Drawings-24x36.pdf",
-    108746
+    104870
    ],
    [
     "Plan-12-2423-CAD-Drawings.dxf",
@@ -2620,7 +2727,7 @@
    ],
    [
     "Plan-12-2423-Materials-List.csv",
-    9037
+    9059
    ],
    [
     "Plan-12-2423-Cost-Estimate.csv",
@@ -2632,27 +2739,27 @@
    ],
    [
     "3D-Model/Plan-12-2423.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    56994
+    54020
    ],
    [
     "Images/3d-front.png",
-    33202
+    32467
    ],
    [
     "Images/3d-rear.png",
-    29221
+    28732
    ],
    [
     "Images/3d-top.png",
-    19387
+    19906
    ],
    [
     "Images/electrical-plan.png",
-    227657
+    227489
    ],
    [
     "Images/elevation-front.png",
@@ -2672,16 +2779,28 @@
    ],
    [
     "Images/floor-plan.png",
-    159515
+    159322
    ],
    [
     "Images/plumbing-plan.png",
-    138287
+    138069
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 9000,
+   "heads": [
+    [
+     "Great Room",
+     384,
+     9000
+    ]
+   ],
+   "outdoor_btu": 9000
   },
   "material_lines": 110,
   "materials": [
@@ -2721,7 +2840,7 @@
    {
     "examples": [
      "Exterior sliding glass door, 6'0\" wide, low-E",
-     "Vinyl single-hung / slider window, low-E, 2'0\" x 4'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 2'0\" x 4'6\"",
      "Interior prehung door 30 x 80 in., hollow-core, with privacy set",
      "Window & door flashing tape, sill pans and low-expansion foam"
     ],
@@ -2806,14 +2925,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 9,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3315
    },
    {
     "examples": [
@@ -2893,12 +3012,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1072502
+  "upper": false,
+  "zip_bytes": 1065227
  },
  "plan-12-2424": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 16,
    "receptacles": 24,
@@ -2962,8 +3083,8 @@
     },
     {
      "finish": false,
-     "labor": 4950,
-     "materials": 3300,
+     "labor": 4973,
+     "materials": 3315,
      "name": "Electrical"
     },
     {
@@ -2974,8 +3095,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 1914,
+     "materials": 3480,
      "name": "HVAC & ventilation"
     },
     {
@@ -2991,11 +3112,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 8557,
-   "contingency_gc": 14938,
+   "contingency_diy": 8560,
+   "contingency_gc": 14945,
    "diy_psf": 123,
-   "diy_total": 89484.0,
-   "diy_trade_help": 6487,
+   "diy_total": 89528.0,
+   "diy_trade_help": 6503,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -3004,11 +3125,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 230,
-   "gc_total": 167452.0,
-   "labor": 55287,
-   "materials": 71310,
-   "overhead": 22787,
+   "gc_total": 167522.0,
+   "labor": 55315,
+   "materials": 71335,
+   "overhead": 22797,
    "permits": 3130.0,
+   "regions": [],
    "sqft": 728
   },
   "files": [
@@ -3018,7 +3140,7 @@
    ],
    [
     "Plan-12-2424-Construction-Drawings-24x36.pdf",
-    114484
+    111945
    ],
    [
     "Plan-12-2424-CAD-Drawings.dxf",
@@ -3026,7 +3148,7 @@
    ],
    [
     "Plan-12-2424-Materials-List.csv",
-    9398
+    9460
    ],
    [
     "Plan-12-2424-Cost-Estimate.csv",
@@ -3038,27 +3160,27 @@
    ],
    [
     "3D-Model/Plan-12-2424.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    60931
+    58634
    ],
    [
     "Images/3d-front.png",
-    37183
+    35287
    ],
    [
     "Images/3d-rear.png",
-    32422
+    32568
    ],
    [
     "Images/3d-top.png",
-    23279
+    21196
    ],
    [
     "Images/electrical-plan.png",
-    236793
+    236261
    ],
    [
     "Images/elevation-front.png",
@@ -3078,16 +3200,28 @@
    ],
    [
     "Images/floor-plan.png",
-    177002
+    176231
    ],
    [
     "Images/plumbing-plan.png",
-    137738
+    136795
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 12000,
+   "heads": [
+    [
+     "Living",
+     560,
+     12000
+    ]
+   ],
+   "outdoor_btu": 12000
   },
   "material_lines": 114,
   "materials": [
@@ -3127,9 +3261,9 @@
    {
     "examples": [
      "Exterior sliding glass door, 6'0\" wide, low-E",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 2'6\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 2'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 2'6\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 2'0\""
     ],
     "lines": 9,
     "name": "Windows & doors",
@@ -3197,7 +3331,7 @@
     ],
     "lines": 25,
     "name": "Electrical",
-    "total": 3300
+    "total": 3315
    },
    {
     "examples": [
@@ -3212,14 +3346,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 18,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 12,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3480
    },
    {
     "examples": [
@@ -3299,12 +3433,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1163908
+  "upper": false,
+  "zip_bytes": 1152367
  },
  "plan-12-2425": {
   "electrical": {
    "alarms": 2,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 10,
    "receptacles": 16,
@@ -3380,8 +3516,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -3397,11 +3533,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 4270,
-   "contingency_gc": 7540,
-   "diy_psf": 183,
-   "diy_total": 46872.0,
-   "diy_trade_help": 5398,
+   "contingency_diy": 4286,
+   "contingency_gc": 7564,
+   "diy_psf": 184,
+   "diy_total": 47058.0,
+   "diy_trade_help": 5438,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -3409,12 +3545,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 330,
-   "gc_total": 84562.0,
-   "labor": 28316,
-   "materials": 35584,
-   "overhead": 11502,
+   "gc_psf": 331,
+   "gc_total": 84824.0,
+   "labor": 28388,
+   "materials": 35714,
+   "overhead": 11538,
    "permits": 1620.0,
+   "regions": [],
    "sqft": 256
   },
   "files": [
@@ -3424,7 +3561,7 @@
    ],
    [
     "Plan-12-2425-Construction-Drawings-24x36.pdf",
-    102485
+    98757
    ],
    [
     "Plan-12-2425-CAD-Drawings.dxf",
@@ -3432,7 +3569,7 @@
    ],
    [
     "Plan-12-2425-Materials-List.csv",
-    8153
+    8163
    ],
    [
     "Plan-12-2425-Cost-Estimate.csv",
@@ -3444,27 +3581,27 @@
    ],
    [
     "3D-Model/Plan-12-2425.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    56886
+    55674
    ],
    [
     "Images/3d-front.png",
-    36475
+    33498
    ],
    [
     "Images/3d-rear.png",
-    29102
+    27310
    ],
    [
     "Images/3d-top.png",
-    20440
+    20184
    ],
    [
     "Images/electrical-plan.png",
-    253500
+    253282
    ],
    [
     "Images/elevation-front.png",
@@ -3484,16 +3621,28 @@
    ],
    [
     "Images/floor-plan.png",
-    199019
+    198782
    ],
    [
     "Images/plumbing-plan.png",
-    183179
+    182955
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Living",
+     192,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 100,
   "materials": [
@@ -3616,14 +3765,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -3702,12 +3851,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1145842
+  "upper": false,
+  "zip_bytes": 1134244
  },
  "plan-12-2426": {
   "electrical": {
    "alarms": 2,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 6,
    "receptacles": 12,
@@ -3789,8 +3940,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -3806,11 +3957,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 4242,
-   "contingency_gc": 6740,
-   "diy_psf": 289,
-   "diy_total": 46161.0,
-   "diy_trade_help": 5257,
+   "contingency_diy": 4258,
+   "contingency_gc": 6763,
+   "diy_psf": 290,
+   "diy_total": 46346.0,
+   "diy_trade_help": 5296,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -3818,12 +3969,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 472,
-   "gc_total": 75445.0,
-   "labor": 21762,
-   "materials": 35352,
-   "overhead": 10281,
+   "gc_psf": 473,
+   "gc_total": 75706.0,
+   "labor": 21834,
+   "materials": 35482,
+   "overhead": 10317,
    "permits": 1310.0,
+   "regions": [],
    "sqft": 160
   },
   "files": [
@@ -3833,15 +3985,15 @@
    ],
    [
     "Plan-12-2426-Construction-Drawings-24x36.pdf",
-    136809
+    130916
    ],
    [
     "Plan-12-2426-CAD-Drawings.dxf",
-    104891
+    104879
    ],
    [
     "Plan-12-2426-Materials-List.csv",
-    7311
+    7373
    ],
    [
     "Plan-12-2426-Cost-Estimate.csv",
@@ -3853,27 +4005,27 @@
    ],
    [
     "3D-Model/Plan-12-2426.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    78079
+    78064
    ],
    [
     "Images/3d-front.png",
-    67547
+    64244
    ],
    [
     "Images/3d-rear.png",
-    40181
+    28157
    ],
    [
     "Images/3d-top.png",
-    29413
+    29247
    ],
    [
     "Images/electrical-plan.png",
-    163113
+    162241
    ],
    [
     "Images/elevation-front.png",
@@ -3893,16 +4045,28 @@
    ],
    [
     "Images/floor-plan.png",
-    125901
+    124627
    ],
    [
     "Images/plumbing-plan.png",
-    124402
+    123505
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x3 @ 24 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Studio",
+     160,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 89,
   "materials": [
@@ -3949,9 +4113,9 @@
    {
     "examples": [
      "Exterior sliding glass door, 6'0\" wide, low-E",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 7,
     "name": "Windows & doors",
@@ -4033,14 +4197,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -4115,12 +4279,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 873955
+  "upper": false,
+  "zip_bytes": 850151
  },
  "plan-12-2427": {
   "electrical": {
    "alarms": 2,
    "circuits": 11,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 8,
    "receptacles": 19,
@@ -4202,8 +4368,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1394,
+     "materials": 2535,
      "name": "HVAC & ventilation"
     },
     {
@@ -4219,11 +4385,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 5874,
-   "contingency_gc": 9146,
-   "diy_psf": 195,
-   "diy_total": 62335.0,
-   "diy_trade_help": 5691,
+   "contingency_diy": 5909,
+   "contingency_gc": 9200,
+   "diy_psf": 196,
+   "diy_total": 62755.0,
+   "diy_trade_help": 5781,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -4231,12 +4397,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 320,
-   "gc_total": 102430.0,
-   "labor": 28562,
-   "materials": 48950,
-   "overhead": 13952,
+   "gc_psf": 322,
+   "gc_total": 103023.0,
+   "labor": 28724,
+   "materials": 49245,
+   "overhead": 14034,
    "permits": 1820.0,
+   "regions": [],
    "sqft": 320
   },
   "files": [
@@ -4246,15 +4413,15 @@
    ],
    [
     "Plan-12-2427-Construction-Drawings-24x36.pdf",
-    117021
+    113683
    ],
    [
     "Plan-12-2427-CAD-Drawings.dxf",
-    141471
+    141447
    ],
    [
     "Plan-12-2427-Materials-List.csv",
-    7551
+    7613
    ],
    [
     "Plan-12-2427-Cost-Estimate.csv",
@@ -4266,27 +4433,27 @@
    ],
    [
     "3D-Model/Plan-12-2427.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    73015
+    73427
    ],
    [
     "Images/3d-front.png",
-    44010
+    40279
    ],
    [
     "Images/3d-rear.png",
-    39560
+    40067
    ],
    [
     "Images/3d-top.png",
-    24496
+    24209
    ],
    [
     "Images/electrical-plan.png",
-    131853
+    131474
    ],
    [
     "Images/elevation-front.png",
@@ -4306,16 +4473,28 @@
    ],
    [
     "Images/floor-plan.png",
-    120946
+    120695
    ],
    [
     "Images/plumbing-plan.png",
-    94832
+    94334
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x3 @ 24 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 9000,
+   "heads": [
+    [
+     "Living",
+     320,
+     9000
+    ]
+   ],
+   "outdoor_btu": 9000
   },
   "material_lines": 92,
   "materials": [
@@ -4361,10 +4540,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
      "Exterior sliding glass door, 6'0\" wide, low-E",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 9,
     "name": "Windows & doors",
@@ -4446,14 +4625,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 9,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2535
    },
    {
     "examples": [
@@ -4529,12 +4708,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 770819
+  "upper": false,
+  "zip_bytes": 763800
  },
  "plan-12-2428": {
   "electrical": {
    "alarms": 3,
    "circuits": 14,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 18,
    "receptacles": 28,
@@ -4604,8 +4785,8 @@
     },
     {
      "finish": false,
-     "labor": 5738,
-     "materials": 3825,
+     "labor": 5820,
+     "materials": 3880,
      "name": "Electrical"
     },
     {
@@ -4616,8 +4797,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 2005,
+     "materials": 3645,
      "name": "HVAC & ventilation"
     },
     {
@@ -4633,11 +4814,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 9548,
-   "contingency_gc": 14671,
+   "contingency_diy": 9576,
+   "contingency_gc": 14719,
    "diy_psf": 155,
-   "diy_total": 99019.0,
-   "diy_trade_help": 7055,
+   "diy_total": 99375.0,
+   "diy_trade_help": 7153,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -4646,11 +4827,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 257,
-   "gc_total": 164232.0,
-   "labor": 44765,
-   "materials": 79566,
-   "overhead": 22380,
+   "gc_total": 164761.0,
+   "labor": 44943,
+   "materials": 79796,
+   "overhead": 22453,
    "permits": 2850.0,
+   "regions": [],
    "sqft": 640
   },
   "files": [
@@ -4660,15 +4842,15 @@
    ],
    [
     "Plan-12-2428-Construction-Drawings-24x36.pdf",
-    142440
+    134168
    ],
    [
     "Plan-12-2428-CAD-Drawings.dxf",
-    200791
+    200763
    ],
    [
     "Plan-12-2428-Materials-List.csv",
-    8708
+    8719
    ],
    [
     "Plan-12-2428-Cost-Estimate.csv",
@@ -4680,27 +4862,27 @@
    ],
    [
     "3D-Model/Plan-12-2428.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    92904
+    92566
    ],
    [
     "Images/3d-front.png",
-    59507
+    50804
    ],
    [
     "Images/3d-rear.png",
-    58560
+    55445
    ],
    [
     "Images/3d-top.png",
-    35710
+    33552
    ],
    [
     "Images/electrical-plan.png",
-    203374
+    202972
    ],
    [
     "Images/elevation-front.png",
@@ -4720,18 +4902,30 @@
    ],
    [
     "Images/floor-plan.png",
-    178265
+    177792
    ],
    [
     "Images/plumbing-plan.png",
-    129940
+    129525
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x3 @ 24 in. o.c."
   },
-  "material_lines": 107,
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 15000,
+   "heads": [
+    [
+     "Living",
+     640,
+     15000
+    ]
+   ],
+   "outdoor_btu": 15000
+  },
+  "material_lines": 106,
   "materials": [
    {
     "examples": [
@@ -4778,10 +4972,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
      "Exterior sliding glass door, 6'0\" wide, low-E",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 11,
     "name": "Windows & doors",
@@ -4846,9 +5040,9 @@
      "Cable 14/2 NM-B",
      "Cable 12/2 NM-B"
     ],
-    "lines": 25,
+    "lines": 24,
     "name": "Electrical",
-    "total": 3825
+    "total": 3880
    },
    {
     "examples": [
@@ -4863,14 +5057,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 15,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3645
    },
    {
     "examples": [
@@ -4946,12 +5140,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1069640
+  "upper": false,
+  "zip_bytes": 1046710
  },
  "plan-12-2429": {
   "electrical": {
    "alarms": 2,
    "circuits": 13,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 15,
    "receptacles": 23,
@@ -5027,8 +5223,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 1914,
+     "materials": 3480,
      "name": "HVAC & ventilation"
     },
     {
@@ -5044,11 +5240,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 7316,
-   "contingency_gc": 12707,
+   "contingency_diy": 7317,
+   "contingency_gc": 12709,
    "diy_psf": 161,
-   "diy_total": 77474.0,
-   "diy_trade_help": 6855,
+   "diy_total": 77487.0,
+   "diy_trade_help": 6857,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -5057,11 +5253,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 296,
-   "gc_total": 142121.0,
-   "labor": 46727,
-   "materials": 60963,
-   "overhead": 19384,
+   "gc_total": 142141.0,
+   "labor": 46732,
+   "materials": 60973,
+   "overhead": 19387,
    "permits": 2340.0,
+   "regions": [],
    "sqft": 480
   },
   "files": [
@@ -5071,15 +5268,15 @@
    ],
    [
     "Plan-12-2429-Construction-Drawings-24x36.pdf",
-    140832
+    133412
    ],
    [
     "Plan-12-2429-CAD-Drawings.dxf",
-    159569
+    159565
    ],
    [
     "Plan-12-2429-Materials-List.csv",
-    9917
+    10005
    ],
    [
     "Plan-12-2429-Cost-Estimate.csv",
@@ -5087,39 +5284,39 @@
    ],
    [
     "3D-Model/Plan-12-2429.obj",
-    121304
+    122264
    ],
    [
     "3D-Model/Plan-12-2429.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    103426
+    102634
    ],
    [
     "Images/3d-front.png",
-    66731
+    54161
    ],
    [
     "Images/3d-rear.png",
-    61513
+    54778
    ],
    [
     "Images/3d-top.png",
-    35166
+    37015
    ],
    [
     "Images/electrical-plan.png",
-    291664
+    291166
    ],
    [
     "Images/elevation-front.png",
-    45611
+    45343
    ],
    [
     "Images/elevation-left.png",
-    82370
+    82571
    ],
    [
     "Images/elevation-rear.png",
@@ -5127,20 +5324,32 @@
    ],
    [
     "Images/elevation-right.png",
-    90352
+    90482
    ],
    [
     "Images/floor-plan.png",
-    214040
+    213160
    ],
    [
     "Images/plumbing-plan.png",
-    170838
+    170713
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 12000,
+   "heads": [
+    [
+     "Living",
+     480,
+     12000
+    ]
+   ],
+   "outdoor_btu": 12000
   },
   "material_lines": 122,
   "materials": [
@@ -5179,10 +5388,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 12,
     "name": "Windows & doors",
@@ -5267,14 +5476,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 12,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3480
    },
    {
     "examples": [
@@ -5350,12 +5559,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1246962
+  "upper": false,
+  "zip_bytes": 1219706
  },
  "plan-12-2430": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 3,
    "lights": 16,
    "receptacles": 23,
@@ -5425,14 +5636,14 @@
     },
     {
      "finish": true,
-     "labor": 5022,
-     "materials": 3720,
+     "labor": 5079,
+     "materials": 3762,
      "name": "Plumbing"
     },
     {
      "finish": false,
-     "labor": 3311,
-     "materials": 6020,
+     "labor": 3146,
+     "materials": 5720,
      "name": "HVAC & ventilation"
     },
     {
@@ -5448,11 +5659,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 8502,
-   "contingency_gc": 14877,
+   "contingency_diy": 8471,
+   "contingency_gc": 14834,
    "diy_psf": 125,
-   "diy_total": 89992.0,
-   "diy_trade_help": 7541,
+   "diy_total": 89643.0,
+   "diy_trade_help": 7481,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -5460,12 +5671,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 232,
-   "gc_total": 166749.0,
-   "labor": 55229,
-   "materials": 70849,
-   "overhead": 22694,
+   "gc_psf": 231,
+   "gc_total": 166274.0,
+   "labor": 55121,
+   "materials": 70591,
+   "overhead": 22628,
    "permits": 3100.0,
+   "regions": [],
    "sqft": 720
   },
   "files": [
@@ -5475,15 +5687,15 @@
    ],
    [
     "Plan-12-2430-Construction-Drawings-24x36.pdf",
-    157519
+    142899
    ],
    [
     "Plan-12-2430-CAD-Drawings.dxf",
-    172000
+    171782
    ],
    [
     "Plan-12-2430-Materials-List.csv",
-    9353
+    9445
    ],
    [
     "Plan-12-2430-Cost-Estimate.csv",
@@ -5495,35 +5707,35 @@
    ],
    [
     "3D-Model/Plan-12-2430.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    114113
+    118294
    ],
    [
     "Images/3d-front.png",
-    84080
+    63598
    ],
    [
     "Images/3d-rear.png",
-    76304
+    65059
    ],
    [
     "Images/3d-top.png",
-    39006
+    41687
    ],
    [
     "Images/electrical-plan.png",
-    243968
+    242271
    ],
    [
     "Images/elevation-front.png",
-    54415
+    54208
    ],
    [
     "Images/elevation-left.png",
-    90637
+    90951
    ],
    [
     "Images/elevation-rear.png",
@@ -5531,20 +5743,42 @@
    ],
    [
     "Images/elevation-right.png",
-    99526
+    99192
    ],
    [
     "Images/floor-plan.png",
-    193242
+    192371
    ],
    [
     "Images/plumbing-plan.png",
-    158441
+    155145
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 21000,
+   "heads": [
+    [
+     "Living",
+     456,
+     9000
+    ],
+    [
+     "Bedroom 1",
+     121,
+     6000
+    ],
+    [
+     "Bedroom 2",
+     143,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 114,
   "materials": [
@@ -5583,10 +5817,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\"",
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 10,
     "name": "Windows & doors",
@@ -5667,18 +5901,18 @@
     ],
     "lines": 14,
     "name": "Plumbing",
-    "total": 3720
+    "total": 3762
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 3 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 3 heads (9k, 6k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 6020
+    "total": 5720
    },
    {
     "examples": [
@@ -5754,12 +5988,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1269931
+  "upper": false,
+  "zip_bytes": 1227945
  },
  "plan-12-2431": {
   "electrical": {
    "alarms": 2,
    "circuits": 10,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 11,
    "receptacles": 17,
@@ -5829,14 +6065,14 @@
     },
     {
      "finish": true,
-     "labor": 4845,
-     "materials": 3589,
+     "labor": 4835,
+     "materials": 3581,
      "name": "Plumbing"
     },
     {
      "finish": false,
-     "labor": 1480,
-     "materials": 2690,
+     "labor": 1394,
+     "materials": 2535,
      "name": "HVAC & ventilation"
     },
     {
@@ -5852,11 +6088,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 6139,
-   "contingency_gc": 10952,
-   "diy_psf": 170,
-   "diy_total": 65242.0,
-   "diy_trade_help": 5917,
+   "contingency_diy": 6119,
+   "contingency_gc": 10922,
+   "diy_psf": 169,
+   "diy_total": 65006.0,
+   "diy_trade_help": 5864,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -5864,12 +6100,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 319,
-   "gc_total": 122506.0,
-   "labor": 41661,
-   "materials": 51156,
-   "overhead": 16707,
+   "gc_psf": 318,
+   "gc_total": 122170.0,
+   "labor": 41565,
+   "materials": 50993,
+   "overhead": 16660,
    "permits": 2030.0,
+   "regions": [],
    "sqft": 384
   },
   "files": [
@@ -5879,15 +6116,15 @@
    ],
    [
     "Plan-12-2431-Construction-Drawings-24x36.pdf",
-    147648
+    138560
    ],
    [
     "Plan-12-2431-CAD-Drawings.dxf",
-    134028
+    135293
    ],
    [
     "Plan-12-2431-Materials-List.csv",
-    8601
+    8662
    ],
    [
     "Plan-12-2431-Cost-Estimate.csv",
@@ -5895,35 +6132,35 @@
    ],
    [
     "3D-Model/Plan-12-2431.obj",
-    108362
+    108344
    ],
    [
     "3D-Model/Plan-12-2431.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    101764
+    87061
    ],
    [
     "Images/3d-front.png",
-    79305
+    68770
    ],
    [
     "Images/3d-rear.png",
-    59802
+    45051
    ],
    [
     "Images/3d-top.png",
-    34212
+    31088
    ],
    [
     "Images/electrical-plan.png",
-    212027
+    210884
    ],
    [
     "Images/elevation-front.png",
-    54988
+    55690
    ],
    [
     "Images/elevation-left.png",
@@ -5931,24 +6168,36 @@
    ],
    [
     "Images/elevation-rear.png",
-    49778
+    49892
    ],
    [
     "Images/elevation-right.png",
-    86364
+    88532
    ],
    [
     "Images/floor-plan.png",
-    161713
+    160541
    ],
    [
     "Images/plumbing-plan.png",
-    140277
+    137436
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 9000,
+   "heads": [
+    [
+     "Great Room + Kitchen",
+     384,
+     9000
+    ]
+   ],
+   "outdoor_btu": 9000
   },
   "material_lines": 105,
   "materials": [
@@ -5986,10 +6235,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 9,
     "name": "Windows & doors",
@@ -6070,18 +6319,18 @@
     ],
     "lines": 14,
     "name": "Plumbing",
-    "total": 3589
+    "total": 3581
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 9,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2690
+    "total": 2535
    },
    {
     "examples": [
@@ -6156,12 +6405,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1121204
+  "upper": false,
+  "zip_bytes": 1070305
  },
  "plan-12-2432": {
   "electrical": {
    "alarms": 3,
    "circuits": 14,
+   "fans": 0,
    "hvac_heads": 2,
    "lights": 21,
    "receptacles": 27,
@@ -6237,8 +6488,8 @@
     },
     {
      "finish": false,
-     "labor": 2899,
-     "materials": 5270,
+     "labor": 2788,
+     "materials": 5070,
      "name": "HVAC & ventilation"
     },
     {
@@ -6254,11 +6505,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 9425,
-   "contingency_gc": 16496,
+   "contingency_diy": 9401,
+   "contingency_gc": 16459,
    "diy_psf": 119,
-   "diy_total": 99257.0,
-   "diy_trade_help": 7834,
+   "diy_total": 98972.0,
+   "diy_trade_help": 7773,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -6267,11 +6518,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 222,
-   "gc_total": 184914.0,
-   "labor": 61257,
-   "materials": 78538,
-   "overhead": 25163,
+   "gc_total": 184510.0,
+   "labor": 61146,
+   "materials": 78338,
+   "overhead": 25107,
    "permits": 3460.0,
+   "regions": [],
    "sqft": 832
   },
   "files": [
@@ -6281,15 +6533,15 @@
    ],
    [
     "Plan-12-2432-Construction-Drawings-24x36.pdf",
-    160945
+    147980
    ],
    [
     "Plan-12-2432-CAD-Drawings.dxf",
-    196909
+    196834
    ],
    [
     "Plan-12-2432-Materials-List.csv",
-    10239
+    10328
    ],
    [
     "Plan-12-2432-Cost-Estimate.csv",
@@ -6297,39 +6549,39 @@
    ],
    [
     "3D-Model/Plan-12-2432.obj",
-    148732
+    148714
    ],
    [
     "3D-Model/Plan-12-2432.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    105372
+    97705
    ],
    [
     "Images/3d-front.png",
-    77619
+    60810
    ],
    [
     "Images/3d-rear.png",
-    59516
+    55230
    ],
    [
     "Images/3d-top.png",
-    35479
+    36309
    ],
    [
     "Images/electrical-plan.png",
-    267150
+    265220
    ],
    [
     "Images/elevation-front.png",
-    50012
+    50213
    ],
    [
     "Images/elevation-left.png",
-    94329
+    95021
    ],
    [
     "Images/elevation-rear.png",
@@ -6337,20 +6589,37 @@
    ],
    [
     "Images/elevation-right.png",
-    96210
+    96305
    ],
    [
     "Images/floor-plan.png",
-    210322
+    209089
    ],
    [
     "Images/plumbing-plan.png",
-    149027
+    147778
    ]
   ],
   "framing": {
    "foundation": "crawl",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 18000,
+   "heads": [
+    [
+     "Great Room",
+     540,
+     12000
+    ],
+    [
+     "Bedroom",
+     100,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 126,
   "materials": [
@@ -6389,10 +6658,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 11,
     "name": "Windows & doors",
@@ -6477,14 +6746,14 @@
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 2 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 2 heads (12k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 5270
+    "total": 5070
    },
    {
     "examples": [
@@ -6564,12 +6833,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1271084
+  "upper": false,
+  "zip_bytes": 1230005
  },
  "plan-12-2433": {
   "electrical": {
    "alarms": 3,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 9,
    "receptacles": 16,
@@ -6645,8 +6916,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -6662,11 +6933,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 4400,
-   "contingency_gc": 7716,
-   "diy_psf": 167,
-   "diy_total": 48220.0,
-   "diy_trade_help": 5430,
+   "contingency_diy": 4416,
+   "contingency_gc": 7740,
+   "diy_psf": 168,
+   "diy_total": 48406.0,
+   "diy_trade_help": 5470,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -6674,12 +6945,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 301,
-   "gc_total": 86596.0,
-   "labor": 28720,
-   "materials": 36670,
-   "overhead": 11770,
+   "gc_psf": 302,
+   "gc_total": 86859.0,
+   "labor": 28792,
+   "materials": 36800,
+   "overhead": 11807,
    "permits": 1720.0,
+   "regions": [],
    "sqft": 288
   },
   "files": [
@@ -6689,7 +6961,7 @@
    ],
    [
     "Plan-12-2433-Construction-Drawings-24x36.pdf",
-    117873
+    113271
    ],
    [
     "Plan-12-2433-CAD-Drawings.dxf",
@@ -6697,7 +6969,7 @@
    ],
    [
     "Plan-12-2433-Materials-List.csv",
-    8469
+    8531
    ],
    [
     "Plan-12-2433-Cost-Estimate.csv",
@@ -6709,27 +6981,27 @@
    ],
    [
     "3D-Model/Plan-12-2433.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    73594
+    73373
    ],
    [
     "Images/3d-front.png",
-    46758
+    41480
    ],
    [
     "Images/3d-rear.png",
-    39194
+    32646
    ],
    [
     "Images/3d-top.png",
-    25385
+    23044
    ],
    [
     "Images/electrical-plan.png",
-    239577
+    239357
    ],
    [
     "Images/elevation-front.png",
@@ -6749,16 +7021,28 @@
    ],
    [
     "Images/floor-plan.png",
-    197812
+    197583
    ],
    [
     "Images/plumbing-plan.png",
-    179343
+    179109
    ]
   ],
   "framing": {
    "foundation": "piers",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Sleep / Living",
+     192,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 104,
   "materials": [
@@ -6797,9 +7081,9 @@
    {
     "examples": [
      "Exterior double / barn-style door pair, 5'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 7,
     "name": "Windows & doors",
@@ -6883,14 +7167,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -6969,12 +7253,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1133059
+  "upper": false,
+  "zip_bytes": 1113801
  },
  "plan-12-2434": {
   "electrical": {
    "alarms": 2,
    "circuits": 10,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 11,
    "receptacles": 20,
@@ -7038,8 +7324,8 @@
     },
     {
      "finish": false,
-     "labor": 4535,
-     "materials": 3023,
+     "labor": 4500,
+     "materials": 3000,
      "name": "Electrical"
     },
     {
@@ -7050,8 +7336,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 1823,
+     "materials": 3315,
      "name": "HVAC & ventilation"
     },
     {
@@ -7067,11 +7353,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 6374,
-   "contingency_gc": 11007,
+   "contingency_diy": 6353,
+   "contingency_gc": 10971,
    "diy_psf": 128,
-   "diy_total": 68137.0,
-   "diy_trade_help": 6145,
+   "diy_total": 67871.0,
+   "diy_trade_help": 6078,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -7080,11 +7366,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 232,
-   "gc_total": 123574.0,
-   "labor": 40159,
-   "materials": 53118,
-   "overhead": 16790,
+   "gc_total": 123185.0,
+   "labor": 40038,
+   "materials": 52940,
+   "overhead": 16736,
    "permits": 2500.0,
+   "regions": [],
    "sqft": 532
   },
   "files": [
@@ -7094,15 +7381,15 @@
    ],
    [
     "Plan-12-2434-Construction-Drawings-24x36.pdf",
-    146703
+    141361
    ],
    [
     "Plan-12-2434-CAD-Drawings.dxf",
-    132600
+    132588
    ],
    [
     "Plan-12-2434-Materials-List.csv",
-    9104
+    9165
    ],
    [
     "Plan-12-2434-Cost-Estimate.csv",
@@ -7114,27 +7401,27 @@
    ],
    [
     "3D-Model/Plan-12-2434.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    80970
+    80505
    ],
    [
     "Images/3d-front.png",
-    71551
+    67095
    ],
    [
     "Images/3d-rear.png",
-    38876
+    39645
    ],
    [
     "Images/3d-top.png",
-    28123
+    28090
    ],
    [
     "Images/electrical-plan.png",
-    165895
+    165794
    ],
    [
     "Images/elevation-front.png",
@@ -7154,16 +7441,28 @@
    ],
    [
     "Images/floor-plan.png",
-    148060
+    147379
    ],
    [
     "Images/plumbing-plan.png",
-    110140
+    109503
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x4 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 9000,
+   "heads": [
+    [
+     "Living",
+     392,
+     9000
+    ]
+   ],
+   "outdoor_btu": 9000
   },
   "material_lines": 111,
   "materials": [
@@ -7202,10 +7501,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior double / barn-style door pair, 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 8,
     "name": "Windows & doors",
@@ -7274,7 +7573,7 @@
     ],
     "lines": 25,
     "name": "Electrical",
-    "total": 3023
+    "total": 3000
    },
    {
     "examples": [
@@ -7289,14 +7588,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 9,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3315
    },
    {
     "examples": [
@@ -7375,12 +7674,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1017041
+  "upper": false,
+  "zip_bytes": 1004850
  },
  "plan-12-2435": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 3,
    "lights": 16,
    "receptacles": 27,
@@ -7456,8 +7757,8 @@
     },
     {
      "finish": false,
-     "labor": 3311,
-     "materials": 6020,
+     "labor": 3146,
+     "materials": 5720,
      "name": "HVAC & ventilation"
     },
     {
@@ -7473,11 +7774,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 9879,
-   "contingency_gc": 17568,
+   "contingency_diy": 9843,
+   "contingency_gc": 17513,
    "diy_psf": 134,
-   "diy_total": 103213.0,
-   "diy_trade_help": 7746,
+   "diy_total": 102786.0,
+   "diy_trade_help": 7655,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -7485,12 +7786,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 256,
-   "gc_total": 196509.0,
-   "labor": 66554,
-   "materials": 82328,
-   "overhead": 26799,
+   "gc_psf": 255,
+   "gc_total": 195905.0,
+   "labor": 66389,
+   "materials": 82028,
+   "overhead": 26715,
    "permits": 3260.0,
+   "regions": [],
    "sqft": 768
   },
   "files": [
@@ -7500,15 +7802,15 @@
    ],
    [
     "Plan-12-2435-Construction-Drawings-24x36.pdf",
-    141273
+    131128
    ],
    [
     "Plan-12-2435-CAD-Drawings.dxf",
-    172260
+    172130
    ],
    [
     "Plan-12-2435-Materials-List.csv",
-    9512
+    9618
    ],
    [
     "Plan-12-2435-Cost-Estimate.csv",
@@ -7516,39 +7818,39 @@
    ],
    [
     "3D-Model/Plan-12-2435.obj",
-    132880
+    133840
    ],
    [
     "3D-Model/Plan-12-2435.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    104322
+    105720
    ],
    [
     "Images/3d-front.png",
-    70240
+    50988
    ],
    [
     "Images/3d-rear.png",
-    63694
+    59988
    ],
    [
     "Images/3d-top.png",
-    33311
+    37775
    ],
    [
     "Images/electrical-plan.png",
-    264677
+    263073
    ],
    [
     "Images/elevation-front.png",
-    43829
+    43877
    ],
    [
     "Images/elevation-left.png",
-    92277
+    92521
    ],
    [
     "Images/elevation-rear.png",
@@ -7556,20 +7858,42 @@
    ],
    [
     "Images/elevation-right.png",
-    98138
+    98124
    ],
    [
     "Images/floor-plan.png",
-    204243
+    202662
    ],
    [
     "Images/plumbing-plan.png",
-    152833
+    150254
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 24000,
+   "heads": [
+    [
+     "Kitchen / Dining",
+     144,
+     6000
+    ],
+    [
+     "Bedroom 1",
+     144,
+     6000
+    ],
+    [
+     "Bedroom 2",
+     480,
+     12000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 115,
   "materials": [
@@ -7609,9 +7933,9 @@
    {
     "examples": [
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 12,
     "name": "Windows & doors",
@@ -7696,14 +8020,14 @@
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 3 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 3 heads (6k, 6k, 12k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 6020
+    "total": 5720
    },
    {
     "examples": [
@@ -7779,12 +8103,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1220608
+  "upper": false,
+  "zip_bytes": 1190912
  },
  "plan-12-2436": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 2,
    "lights": 18,
    "receptacles": 23,
@@ -7854,14 +8180,14 @@
     },
     {
      "finish": true,
-     "labor": 4930,
-     "materials": 3652,
+     "labor": 4986,
+     "materials": 3694,
      "name": "Plumbing"
     },
     {
      "finish": false,
-     "labor": 2899,
-     "materials": 5270,
+     "labor": 2788,
+     "materials": 5070,
      "name": "HVAC & ventilation"
     },
     {
@@ -7877,11 +8203,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 8545,
-   "contingency_gc": 15043,
-   "diy_psf": 119,
-   "diy_total": 90179.0,
-   "diy_trade_help": 7197,
+   "contingency_diy": 8526,
+   "contingency_gc": 15018,
+   "diy_psf": 118,
+   "diy_total": 89972.0,
+   "diy_trade_help": 7167,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -7890,11 +8216,12 @@
     "Furniture and window coverings"
    ],
    "gc_psf": 222,
-   "gc_total": 168704.0,
-   "labor": 56277,
-   "materials": 71207,
-   "overhead": 22947,
+   "gc_total": 168428.0,
+   "labor": 56222,
+   "materials": 71049,
+   "overhead": 22909,
    "permits": 3230.0,
+   "regions": [],
    "sqft": 760
   },
   "files": [
@@ -7904,15 +8231,15 @@
    ],
    [
     "Plan-12-2436-Construction-Drawings-24x36.pdf",
-    150729
+    138463
    ],
    [
     "Plan-12-2436-CAD-Drawings.dxf",
-    165073
+    164969
    ],
    [
     "Plan-12-2436-Materials-List.csv",
-    9399
+    9475
    ],
    [
     "Plan-12-2436-Cost-Estimate.csv",
@@ -7920,39 +8247,39 @@
    ],
    [
     "3D-Model/Plan-12-2436.obj",
-    129288
+    129306
    ],
    [
     "3D-Model/Plan-12-2436.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    98446
+    95457
    ],
    [
     "Images/3d-front.png",
-    72261
+    56947
    ],
    [
     "Images/3d-rear.png",
-    52443
+    47248
    ],
    [
     "Images/3d-top.png",
-    30175
+    32270
    ],
    [
     "Images/electrical-plan.png",
-    223988
+    222328
    ],
    [
     "Images/elevation-front.png",
-    47146
+    46743
    ],
    [
     "Images/elevation-left.png",
-    63569
+    64194
    ],
    [
     "Images/elevation-rear.png",
@@ -7960,20 +8287,37 @@
    ],
    [
     "Images/elevation-right.png",
-    68454
+    68737
    ],
    [
     "Images/floor-plan.png",
-    182021
+    180680
    ],
    [
     "Images/plumbing-plan.png",
-    137447
+    135807
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 18000,
+   "heads": [
+    [
+     "Living",
+     479,
+     12000
+    ],
+    [
+     "Bedroom",
+     121,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 114,
   "materials": [
@@ -8012,10 +8356,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\""
     ],
     "lines": 9,
     "name": "Windows & doors",
@@ -8096,18 +8440,18 @@
     ],
     "lines": 14,
     "name": "Plumbing",
-    "total": 3652
+    "total": 3694
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 2 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 2 heads (12k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 5270
+    "total": 5070
    },
    {
     "examples": [
@@ -8187,12 +8531,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1081326
+  "upper": false,
+  "zip_bytes": 1047507
  },
  "plan-12-2437": {
   "electrical": {
    "alarms": 2,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 15,
    "receptacles": 26,
@@ -8268,8 +8614,8 @@
     },
     {
      "finish": false,
-     "labor": 1909,
-     "materials": 3470,
+     "labor": 1914,
+     "materials": 3480,
      "name": "HVAC & ventilation"
     },
     {
@@ -8285,11 +8631,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 6656,
-   "contingency_gc": 11717,
+   "contingency_diy": 6657,
+   "contingency_gc": 11719,
    "diy_psf": 139,
-   "diy_total": 71256.0,
-   "diy_trade_help": 6696,
+   "diy_total": 71269.0,
+   "diy_trade_help": 6698,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -8297,12 +8643,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 256,
-   "gc_total": 131325.0,
-   "labor": 43831,
-   "materials": 55464,
-   "overhead": 17873,
+   "gc_psf": 257,
+   "gc_total": 131345.0,
+   "labor": 43836,
+   "materials": 55474,
+   "overhead": 17876,
    "permits": 2440.0,
+   "regions": [],
    "sqft": 512
   },
   "files": [
@@ -8312,15 +8659,15 @@
    ],
    [
     "Plan-12-2437-Construction-Drawings-24x36.pdf",
-    147199
+    139294
    ],
    [
     "Plan-12-2437-CAD-Drawings.dxf",
-    144834
+    144797
    ],
    [
     "Plan-12-2437-Materials-List.csv",
-    9527
+    9602
    ],
    [
     "Plan-12-2437-Cost-Estimate.csv",
@@ -8332,27 +8679,27 @@
    ],
    [
     "3D-Model/Plan-12-2437.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    95984
+    87583
    ],
    [
     "Images/3d-front.png",
-    67984
+    60121
    ],
    [
     "Images/3d-rear.png",
-    51563
+    39428
    ],
    [
     "Images/3d-top.png",
-    31897
+    30511
    ],
    [
     "Images/electrical-plan.png",
-    212296
+    211576
    ],
    [
     "Images/elevation-front.png",
@@ -8372,16 +8719,28 @@
    ],
    [
     "Images/floor-plan.png",
-    169684
+    168829
    ],
    [
     "Images/plumbing-plan.png",
-    139331
+    138675
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 12000,
+   "heads": [
+    [
+     "Living",
+     512,
+     12000
+    ]
+   ],
+   "outdoor_btu": 12000
   },
   "material_lines": 117,
   "materials": [
@@ -8420,10 +8779,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 11,
     "name": "Windows & doors",
@@ -8508,14 +8867,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 12,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 12,000 BTU, single zone, inverter, with line set",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 3470
+    "total": 3480
    },
    {
     "examples": [
@@ -8591,12 +8950,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1083523
+  "upper": false,
+  "zip_bytes": 1044695
  },
  "plan-12-2438": {
   "electrical": {
    "alarms": 3,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 3,
    "lights": 13,
    "receptacles": 21,
@@ -8672,8 +9033,8 @@
     },
     {
      "finish": false,
-     "labor": 3311,
-     "materials": 6020,
+     "labor": 3146,
+     "materials": 5720,
      "name": "HVAC & ventilation"
     },
     {
@@ -8689,11 +9050,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 7664,
-   "contingency_gc": 13343,
-   "diy_psf": 133,
-   "diy_total": 81690.0,
-   "diy_trade_help": 7392,
+   "contingency_diy": 7628,
+   "contingency_gc": 13288,
+   "diy_psf": 132,
+   "diy_total": 81263.0,
+   "diy_trade_help": 7301,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -8701,12 +9062,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 243,
-   "gc_total": 149546.0,
-   "labor": 49215,
-   "materials": 63864,
-   "overhead": 20354,
+   "gc_psf": 242,
+   "gc_total": 148943.0,
+   "labor": 49050,
+   "materials": 63564,
+   "overhead": 20271,
    "permits": 2770.0,
+   "regions": [],
    "sqft": 616
   },
   "files": [
@@ -8716,15 +9078,15 @@
    ],
    [
     "Plan-12-2438-Construction-Drawings-24x36.pdf",
-    162506
+    147510
    ],
    [
     "Plan-12-2438-CAD-Drawings.dxf",
-    154320
+    154202
    ],
    [
     "Plan-12-2438-Materials-List.csv",
-    9142
+    9234
    ],
    [
     "Plan-12-2438-Cost-Estimate.csv",
@@ -8736,27 +9098,27 @@
    ],
    [
     "3D-Model/Plan-12-2438.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    106292
+    106033
    ],
    [
     "Images/3d-front.png",
-    90050
+    68123
    ],
    [
     "Images/3d-rear.png",
-    66824
+    59578
    ],
    [
     "Images/3d-top.png",
-    42246
+    41429
    ],
    [
     "Images/electrical-plan.png",
-    218880
+    216975
    ],
    [
     "Images/elevation-front.png",
@@ -8776,16 +9138,38 @@
    ],
    [
     "Images/floor-plan.png",
-    178849
+    177540
    ],
    [
     "Images/plumbing-plan.png",
-    149356
+    145369
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 21000,
+   "heads": [
+    [
+     "Living",
+     396,
+     9000
+    ],
+    [
+     "Bedroom 1",
+     110,
+     6000
+    ],
+    [
+     "Bedroom 2",
+     110,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 112,
   "materials": [
@@ -8824,10 +9208,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 3'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\""
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 3'0\"",
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\""
     ],
     "lines": 10,
     "name": "Windows & doors",
@@ -8912,14 +9296,14 @@
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 3 heads, 18,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 3 heads (9k, 6k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 6020
+    "total": 5720
    },
    {
     "examples": [
@@ -8995,12 +9379,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1164509
+  "upper": false,
+  "zip_bytes": 1115023
  },
  "plan-12-2439": {
   "electrical": {
    "alarms": 2,
    "circuits": 9,
+   "fans": 0,
    "hvac_heads": 1,
    "lights": 8,
    "receptacles": 15,
@@ -9076,8 +9462,8 @@
     },
     {
      "finish": false,
-     "labor": 1232,
-     "materials": 2240,
+     "labor": 1304,
+     "materials": 2370,
      "name": "HVAC & ventilation"
     },
     {
@@ -9093,11 +9479,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 4852,
-   "contingency_gc": 8450,
-   "diy_psf": 218,
-   "diy_total": 52307.0,
-   "diy_trade_help": 5453,
+   "contingency_diy": 4867,
+   "contingency_gc": 8474,
+   "diy_psf": 219,
+   "diy_total": 52491.0,
+   "diy_trade_help": 5492,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -9105,12 +9491,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 394,
-   "gc_total": 94519.0,
-   "labor": 31177,
-   "materials": 40432,
-   "overhead": 12890,
+   "gc_psf": 395,
+   "gc_total": 94781.0,
+   "labor": 31249,
+   "materials": 40562,
+   "overhead": 12926,
    "permits": 1570.0,
+   "regions": [],
    "sqft": 240
   },
   "files": [
@@ -9120,15 +9507,15 @@
    ],
    [
     "Plan-12-2439-Construction-Drawings-24x36.pdf",
-    155329
+    137140
    ],
    [
     "Plan-12-2439-CAD-Drawings.dxf",
-    109680
+    109686
    ],
    [
     "Plan-12-2439-Materials-List.csv",
-    8662
+    8724
    ],
    [
     "Plan-12-2439-Cost-Estimate.csv",
@@ -9140,27 +9527,27 @@
    ],
    [
     "3D-Model/Plan-12-2439.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    98421
+    98190
    ],
    [
     "Images/3d-front.png",
-    77471
+    58775
    ],
    [
     "Images/3d-rear.png",
-    61194
+    42004
    ],
    [
     "Images/3d-top.png",
-    33414
+    33595
    ],
    [
     "Images/electrical-plan.png",
-    194020
+    192696
    ],
    [
     "Images/elevation-front.png",
@@ -9180,16 +9567,28 @@
    ],
    [
     "Images/floor-plan.png",
-    151935
+    150688
    ],
    [
     "Images/plumbing-plan.png",
-    143704
+    142601
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 6000,
+   "heads": [
+    [
+     "Studio",
+     240,
+     6000
+    ]
+   ],
+   "outdoor_btu": 6000
   },
   "material_lines": 105,
   "materials": [
@@ -9228,10 +9627,10 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
      "Fixed clerestory window, low-E, 2'6\" x 1'2\"",
      "Exterior prehung door 36 x 80 in., fiberglass, half-lite, with lockset & deadbolt",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 5'0\""
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 5'0\""
     ],
     "lines": 8,
     "name": "Windows & doors",
@@ -9315,14 +9714,14 @@
    },
    {
     "examples": [
-     "Ductless mini-split heat pump, 9,000 BTU, single zone, with line set",
+     "Ductless mini-split heat pump, 6,000 BTU, single zone, inverter, with line set",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip",
      "Exhaust duct, caps and dryer vent kit"
     ],
     "lines": 4,
     "name": "HVAC & ventilation",
-    "total": 2240
+    "total": 2370
    },
    {
     "examples": [
@@ -9397,12 +9796,14 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1026816
+  "upper": false,
+  "zip_bytes": 972691
  },
  "plan-12-2440": {
   "electrical": {
    "alarms": 4,
    "circuits": 12,
+   "fans": 0,
    "hvac_heads": 3,
    "lights": 17,
    "receptacles": 30,
@@ -9472,14 +9873,14 @@
     },
     {
      "finish": true,
-     "labor": 6708,
-     "materials": 4969,
+     "labor": 6698,
+     "materials": 4961,
      "name": "Plumbing"
     },
     {
      "finish": false,
-     "labor": 3336,
-     "materials": 6065,
+     "labor": 3171,
+     "materials": 5765,
      "name": "HVAC & ventilation"
     },
     {
@@ -9495,11 +9896,11 @@
      "name": "Fasteners & misc."
     }
    ],
-   "contingency_diy": 10487,
-   "contingency_gc": 18667,
-   "diy_psf": 128,
-   "diy_total": 110252.0,
-   "diy_trade_help": 8813,
+   "contingency_diy": 10450,
+   "contingency_gc": 18610,
+   "diy_psf": 127,
+   "diy_total": 109810.0,
+   "diy_trade_help": 8716,
    "excludes": [
     "Land",
     "Utility connections (well/septic or water/sewer taps, power service drop)",
@@ -9507,12 +9908,13 @@
     "Engineering or stamped drawings required by your jurisdiction",
     "Furniture and window coverings"
    ],
-   "gc_psf": 242,
-   "gc_total": 208901.0,
-   "labor": 70806,
-   "materials": 87392,
-   "overhead": 28476,
+   "gc_psf": 241,
+   "gc_total": 208274.0,
+   "labor": 70631,
+   "materials": 87084,
+   "overhead": 28389,
    "permits": 3560.0,
+   "regions": [],
    "sqft": 864
   },
   "files": [
@@ -9522,15 +9924,15 @@
    ],
    [
     "Plan-12-2440-Construction-Drawings-24x36.pdf",
-    154174
+    147928
    ],
    [
     "Plan-12-2440-CAD-Drawings.dxf",
-    208760
+    208630
    ],
    [
     "Plan-12-2440-Materials-List.csv",
-    9267
+    9360
    ],
    [
     "Plan-12-2440-Cost-Estimate.csv",
@@ -9538,39 +9940,39 @@
    ],
    [
     "3D-Model/Plan-12-2440.obj",
-    160520
+    161480
    ],
    [
     "3D-Model/Plan-12-2440.mtl",
-    1032
+    1160
    ],
    [
     "Images/3d-cutaway.png",
-    108504
+    105596
    ],
    [
     "Images/3d-front.png",
-    86582
+    65834
    ],
    [
     "Images/3d-rear.png",
-    64212
+    51784
    ],
    [
     "Images/3d-top.png",
-    42488
+    42912
    ],
    [
     "Images/electrical-plan.png",
-    263623
+    261435
    ],
    [
     "Images/elevation-front.png",
-    50067
+    49659
    ],
    [
     "Images/elevation-left.png",
-    81130
+    82041
    ],
    [
     "Images/elevation-rear.png",
@@ -9578,20 +9980,42 @@
    ],
    [
     "Images/elevation-right.png",
-    82978
+    83076
    ],
    [
     "Images/floor-plan.png",
-    230164
+    228112
    ],
    [
     "Images/plumbing-plan.png",
-    170060
+    167095
    ]
   ],
   "framing": {
    "foundation": "slab",
    "walls": "2x6 @ 16 in. o.c."
+  },
+  "hvac": {
+   "btu_per_sqft": 20,
+   "connected_btu": 27000,
+   "heads": [
+    [
+     "Living",
+     634,
+     15000
+    ],
+    [
+     "Primary",
+     120,
+     6000
+    ],
+    [
+     "Bedroom 2",
+     110,
+     6000
+    ]
+   ],
+   "outdoor_btu": 18000
   },
   "material_lines": 112,
   "materials": [
@@ -9630,9 +10054,9 @@
    },
    {
     "examples": [
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 5'0\"",
-     "Vinyl casement (egress) window, low-E, 3'0\" x 4'0\"",
-     "Vinyl single-hung / slider window, low-E, 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 5'0\"",
+     "Vinyl casement (egress) window, low-E, U-0.30 max., 3'0\" x 4'0\"",
+     "Vinyl single-hung / slider window, low-E, U-0.30 max., 3'0\" x 4'0\"",
      "Closet doors / shelving kits"
     ],
     "lines": 10,
@@ -9714,18 +10138,18 @@
     ],
     "lines": 14,
     "name": "Plumbing",
-    "total": 4969
+    "total": 4961
    },
    {
     "examples": [
-     "Multi-zone ductless heat pump, 3 heads, 24,000 BTU, with line sets",
+     "Multi-zone ductless heat pump, 18,000 BTU outdoor unit + 3 heads (15k, 6k, 6k), with line sets",
      "Spot ERV / balanced ventilation (tight-house fresh air)",
      "Range hood, ducted to exterior, with wall cap",
      "Condenser pad / wall bracket, condensate pump and disconnect whip"
     ],
     "lines": 5,
     "name": "HVAC & ventilation",
-    "total": 6065
+    "total": 5765
    },
    {
     "examples": [
@@ -9801,6 +10225,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1301485
+  "upper": false,
+  "zip_bytes": 1254639
  }
 }

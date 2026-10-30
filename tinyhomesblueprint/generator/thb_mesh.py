@@ -14,8 +14,11 @@ MATERIALS = {
     "siding": "#d9cbb4", "trim": "#f4f1ea", "roof": "#3d4a52", "glass": "#8fc9d9", "door": "#8a5a3b",
     "foundation": "#9a9a94", "floor": "#c8a97e", "porch": "#a07a52", "steel": "#5f7f86", "interior": "#efe9df",
     "fixture": "#ffffff", "counter": "#7a8f8a", "bed": "#b9c7d6", "tile": "#dfe7ea", "trailer": "#2c2c2c", "loft": "#b98f61",
+    "stone": "#b9a688", "stair": "#a8835a",
+    **M.PROFILE.get("materials", {}),
 }
 ROOM_FLOOR = {"bath": "tile", "laundry": "tile", "utility": "tile", "mud": "tile"}
+WAINSCOT = 3.0          # stone wainscot height on "stone" exteriors
 
 
 class Mesh:
@@ -72,8 +75,8 @@ def profile(m: M.Model):
     elif rt == "aframe":
         P = 0.0
     else:
-        P = m.plate
-    info = {"B": B, "P": P, "pitch": p, "ov": 1.0 if not m.mobile else 0.5}
+        P = m.wall_h
+    info = {"B": B, "P": P, "pitch": p, "ov": m.overhang}
     if rt in ("gable", "gable-steep", "thow", "gooseneck"):
         R = m.D / 2 * p
         info.update(kind="gable", ridge=B + P + R, front=B + P, rear=B + P)
@@ -101,6 +104,33 @@ def profile(m: M.Model):
     return info
 
 
+def porch_posts(m, pr):
+    """Post positions (lower-left corners, 0.45 ft square) for a porch rectangle."""
+    px, py, pw, pd = pr
+    posts = []
+    if py < 0 or py >= m.D - 0.01:   # front or rear porch outside the footprint
+        yy = py if py < 0 else py + pd - 0.45
+        posts = [(px, yy), (px + pw - 0.45, yy)]
+        n = int(pw // 12)
+        for i in range(1, n + (1 if pw > 16 and n < 2 else 0)):
+            posts.append((px + pw * i / max(n, 2) - 0.22, yy))
+    elif px >= m.W - 0.01:           # side porch
+        posts = [(px + pw - 0.45, py), (px + pw - 0.45, py + pd - 0.45)]
+    else:                            # inset porch: posts at the open corner
+        cx = px + pw - 0.45 if px == 0 else px
+        cy = py if py == 0 else py + pd - 0.45
+        posts = [(px if px > 0 else px, cy), (cx, cy)] if px == 0 else [(px, cy), (px + pw - 0.45, cy)]
+        posts = [(px + 0.02, py + 0.02)] if px == 0 and py == 0 else posts
+    return posts
+
+
+def porch_roof(m: M.Model, depth):
+    """Porch roof heights (beam at the outer edge, attachment at the wall) for a shed porch
+    roof at 2:12 tied in at the main-floor top plate, with the beam no lower than 7'-4"."""
+    attach = m.base + m.plate + 0.05
+    return attach - min(depth * 2 / 12, attach - (m.base + 7.33)), attach
+
+
 def roof_z(info, y):
     """Height of the wall top / roof underside at depth y (wall tops on the gable ends)."""
     pts = info["line"]
@@ -110,16 +140,21 @@ def roof_z(info, y):
     return pts[-1][1]
 
 
+ROOF_TUCK = 0.4         # walls that follow the roof stop this far below its top surface (inside the 0.5 ft roof slab)
+
+
 def wall_top(m, info, wall, s):
-    """Top of an exterior wall at axis coordinate s. Long walls (h) stop at the plate; gable walls follow the roof."""
+    """Top of an exterior wall at axis coordinate s. Long walls (h) stop at the plate; gable walls follow the roof,
+    tucked just under the roof surface so they never show through it."""
+    tuck = ROOF_TUCK if info["kind"] in ("gable", "shed") else 0.0
     if wall.seg.o == "h":
         y = wall.seg.c
         if info["kind"] in ("shed",):
-            return roof_z(info, y)
+            return roof_z(info, y) - tuck
         if info["kind"] == "aframe":
             return info["B"]
         return info["front"] if info["kind"] != "gambrel" else info["B"] + info["P"]
-    return roof_z(info, s)
+    return max(info["front"] if info["kind"] == "gable" else 0, roof_z(info, s) - tuck)
 
 
 def build_mesh(m: M.Model) -> Mesh:
@@ -156,86 +191,112 @@ def build_mesh(m: M.Model) -> Mesh:
     for r in m.heated:
         mat = ROOM_FLOOR.get(r.kind, "floor")
         me.box("interior", mat, r.x, r.y, zbase(r.x) - 0.05, r.w, r.d, 0.06)
+    up = m.upper
+    if up:
+        UB = m.upper_base
+        me.box("upper", "trim", 0.05, 0.05, B + m.plate, W - 0.1, D - 0.1, M.FLOOR_DEPTH - 0.08)
+        for r in up.heated:
+            if r.kind != "stair":
+                me.box("upper", ROOM_FLOOR.get(r.kind, "floor"), r.x, r.y, UB - 0.05, r.w, r.d, 0.06)
+        for r in m.heated:
+            if r.kind == "stair":
+                _stair(me, r, B, UB, m.p.get("stair_reverse", False))
 
-    # Exterior walls with openings
+    # Exterior walls with openings: the main floor, then the second floor in its own group
+    # (hidden with the roof for the cutaway, so the cutaway shows the main floor).
     T = m.ext_t
     wall_mat = "steel" if m.container else "siding"
-    for w in m.walls:
-        if not w.exterior:
-            continue
-        r = w.rooms[0]
-        nx, ny = m.inward(w, r)
-        ops = sorted(m.openings_on(w), key=lambda o: o.s)
-        s0, s1 = w.seg.a, w.seg.b
-        cuts = [s0, s1]
-        for o in ops:
-            cuts += [o.a, o.b]
-        if w.seg.o == "v":
-            for y0, _ in info["line"][1:-1]:
-                if s0 < y0 < s1:
-                    cuts.append(y0)
-        if gn and w.seg.o == "h" and s0 < raise_at < s1:
-            cuts.append(raise_at)
-        cuts = sorted(set(round(c, 4) for c in cuts))
-
-        def corner(s, z, inner):
-            x, y = w.seg.at(s)
-            off = T if inner else 0
-            return (x + nx * off, y + ny * off, z)
-
-        def piece(sa, sb, za, zb_a, zb_b, mat=wall_mat):
-            if sb - sa < 1e-4:
-                return
-            zat = za if not callable(za) else None
-            base = [corner(sa, za, False), corner(sb, za, False), corner(sb, za, True), corner(sa, za, True)]
-            top = [zb_a, zb_b, zb_b, zb_a]
-            # keep CCW from above
-            ax, ay = base[1][0] - base[0][0], base[1][1] - base[0][1]
-            bx, by = base[2][0] - base[0][0], base[2][1] - base[0][1]
-            if ax * by - ay * bx < 0:
-                base = [base[0], base[3], base[2], base[1]]
-                top = [top[0], top[3], top[2], top[1]]
-            me.hexa("structure", mat, base, top)
-
-        for sa, sb in zip(cuts, cuts[1:]):
-            mid = (sa + sb) / 2
-            x_mid = w.seg.at(mid)[0]
-            zb = zbase(x_mid)
-            ta, tb = wall_top(m, info, w, sa), wall_top(m, info, w, sb)
-            if info["kind"] == "aframe" and w.seg.o == "h":
+    stone = "stone" in m.p.get("walls", "").lower() and not m.container
+    for s in m.storeys:
+        grp = "structure" if not s.level else "upper"
+        for w in s.walls:
+            if not w.exterior:
                 continue
-            o = next((o for o in ops if o.a - 1e-4 <= mid <= o.b + 1e-4), None)
-            if not o:
-                piece(sa, sb, zb, ta, tb)
-                continue
-            z_lo = zb + o.sill
-            z_hi = zb + o.sill + o.height
-            if o.sill > 0:
-                piece(sa, sb, zb, z_lo, z_lo)
-            if min(ta, tb) > z_hi + 0.01:
-                # lintel: bottom at z_hi, top follows the wall top
-                base = [corner(sa, z_hi, False), corner(sb, z_hi, False), corner(sb, z_hi, True), corner(sa, z_hi, True)]
-                piece(sa, sb, z_hi, ta, tb)
-            # glass or door panel in the middle of the wall
-            g0 = corner(sa, z_lo, False)
-            g1 = corner(sb, z_lo, False)
-            off = T / 2
-            gp = [(g0[0] + nx * off, g0[1] + ny * off), (g1[0] + nx * off, g1[1] + ny * off)]
-            mat = "glass" if o.kind in ("window", "slider") else "door"
-            me.quad("structure", mat, (gp[0][0], gp[0][1], z_lo), (gp[1][0], gp[1][1], z_lo), (gp[1][0], gp[1][1], z_hi), (gp[0][0], gp[0][1], z_hi))
-            me.quad("structure", mat, (gp[0][0], gp[0][1], z_hi), (gp[1][0], gp[1][1], z_hi), (gp[1][0], gp[1][1], z_lo), (gp[0][0], gp[0][1], z_lo))
-            # trim frame around the opening on the outside face
-            t = 0.25
-            for (a, b, z0, z1) in ((sa - t, sa, z_lo - (t if o.sill else 0), z_hi + t), (sb, sb + t, z_lo - (t if o.sill else 0), z_hi + t),
-                                   (sa - t, sb + t, z_hi, z_hi + t)) + (((sa - t, sb + t, z_lo - t, z_lo),) if o.sill else ()):
-                p0, p1 = w.seg.at(a), w.seg.at(b)
-                bx_ = [(p0[0] - nx * 0.06, p0[1] - ny * 0.06, z0), (p1[0] - nx * 0.06, p1[1] - ny * 0.06, z0),
-                       (p1[0] + nx * 0.02, p1[1] + ny * 0.02, z0), (p0[0] + nx * 0.02, p0[1] + ny * 0.02, z0)]
-                ax, ay = bx_[1][0] - bx_[0][0], bx_[1][1] - bx_[0][1]
-                cx, cy = bx_[2][0] - bx_[0][0], bx_[2][1] - bx_[0][1]
-                if ax * cy - ay * cx < 0:
-                    bx_ = [bx_[0], bx_[3], bx_[2], bx_[1]]
-                me.hexa("structure", "trim", bx_, [z1] * 4)
+            r = w.rooms[0]
+            nx, ny = s.inward(w, r)
+            ops = sorted(s.openings_on(w), key=lambda o: o.s)
+            s0, s1 = w.seg.a, w.seg.b
+            cuts = [s0, s1]
+            for o in ops:
+                cuts += [o.a, o.b]
+            if w.seg.o == "v":
+                for y0, _ in info["line"][1:-1]:
+                    if s0 < y0 < s1:
+                        cuts.append(y0)
+            if gn and w.seg.o == "h" and s0 < raise_at < s1:
+                cuts.append(raise_at)
+            cuts = sorted(set(round(c, 4) for c in cuts))
+
+            def corner(s, z, inner):
+                x, y = w.seg.at(s)
+                off = T if inner else 0
+                return (x + nx * off, y + ny * off, z)
+
+            def piece(sa, sb, za, zb_a, zb_b, mat=wall_mat):
+                if sb - sa < 1e-4:
+                    return
+                zs = za + WAINSCOT
+                if stone and mat == wall_mat and not s.level and abs(za - fl) < 1e-6 and min(zb_a, zb_b) > za + 0.05:
+                    if min(zb_a, zb_b) <= zs + 0.01:
+                        mat = "stone"
+                    else:
+                        piece(sa, sb, za, zs, zs, "stone")
+                        za = zs
+                base = [corner(sa, za, False), corner(sb, za, False), corner(sb, za, True), corner(sa, za, True)]
+                top = [zb_a, zb_b, zb_b, zb_a]
+                # keep CCW from above
+                ax, ay = base[1][0] - base[0][0], base[1][1] - base[0][1]
+                bx, by = base[2][0] - base[0][0], base[2][1] - base[0][1]
+                if ax * by - ay * bx < 0:
+                    base = [base[0], base[3], base[2], base[1]]
+                    top = [top[0], top[3], top[2], top[1]]
+                me.hexa(grp, mat, base, top)
+
+            for sa, sb in zip(cuts, cuts[1:]):
+                mid = (sa + sb) / 2
+                x_mid = w.seg.at(mid)[0]
+                if s.level:
+                    zb, fl = B + m.plate, m.upper_base          # wall from the top of the main floor; openings from the 2nd floor
+                else:
+                    zb = fl = zbase(x_mid)
+                if up and not s.level:
+                    ta = tb = B + m.plate                       # main-floor walls stop under the second floor
+                else:
+                    ta, tb = wall_top(m, info, w, sa), wall_top(m, info, w, sb)
+                if info["kind"] == "aframe" and w.seg.o == "h":
+                    continue
+                o = next((o for o in ops if o.a - 1e-4 <= mid <= o.b + 1e-4), None)
+                if not o:
+                    piece(sa, sb, zb, ta, tb)
+                    continue
+                z_lo = fl + o.sill
+                z_hi = fl + o.sill + o.height
+                if o.sill > 0:
+                    piece(sa, sb, zb, z_lo, z_lo)
+                if min(ta, tb) > z_hi + 0.01:
+                    # lintel: bottom at z_hi, top follows the wall top
+                    base = [corner(sa, z_hi, False), corner(sb, z_hi, False), corner(sb, z_hi, True), corner(sa, z_hi, True)]
+                    piece(sa, sb, z_hi, ta, tb)
+                # glass or door panel in the middle of the wall
+                g0 = corner(sa, z_lo, False)
+                g1 = corner(sb, z_lo, False)
+                off = T / 2
+                gp = [(g0[0] + nx * off, g0[1] + ny * off), (g1[0] + nx * off, g1[1] + ny * off)]
+                mat = "glass" if o.kind in ("window", "slider") else "door"
+                me.quad(grp, mat, (gp[0][0], gp[0][1], z_lo), (gp[1][0], gp[1][1], z_lo), (gp[1][0], gp[1][1], z_hi), (gp[0][0], gp[0][1], z_hi))
+                me.quad(grp, mat, (gp[0][0], gp[0][1], z_hi), (gp[1][0], gp[1][1], z_hi), (gp[1][0], gp[1][1], z_lo), (gp[0][0], gp[0][1], z_lo))
+                # trim frame around the opening on the outside face
+                t = 0.25
+                for (a, b, z0, z1) in ((sa - t, sa, z_lo - (t if o.sill else 0), z_hi + t), (sb, sb + t, z_lo - (t if o.sill else 0), z_hi + t),
+                                       (sa - t, sb + t, z_hi, z_hi + t)) + (((sa - t, sb + t, z_lo - t, z_lo),) if o.sill else ()):
+                    p0, p1 = w.seg.at(a), w.seg.at(b)
+                    bx_ = [(p0[0] - nx * 0.06, p0[1] - ny * 0.06, z0), (p1[0] - nx * 0.06, p1[1] - ny * 0.06, z0),
+                           (p1[0] + nx * 0.02, p1[1] + ny * 0.02, z0), (p0[0] + nx * 0.02, p0[1] + ny * 0.02, z0)]
+                    ax, ay = bx_[1][0] - bx_[0][0], bx_[1][1] - bx_[0][1]
+                    cx, cy = bx_[2][0] - bx_[0][0], bx_[2][1] - bx_[0][1]
+                    if ax * cy - ay * cx < 0:
+                        bx_ = [bx_[0], bx_[3], bx_[2], bx_[1]]
+                    me.hexa(grp, "trim", bx_, [z1] * 4)
 
     # Container double: shed roof over boxes; plain container: roof deck
     ov = info["ov"]
@@ -280,49 +341,55 @@ def build_mesh(m: M.Model) -> Mesh:
         if k == "aframe":
             pass
         else:
-            ph = B + 8.2
-            for qx, qy in ((px + 0.2, py + 0.2 if py < 0 else py + pd - 0.6), (px + pw - 0.6, py + 0.2 if py < 0 else py + pd - 0.6)):
-                if py >= 0 and px >= W:
-                    qx, qy = (px + pw - 0.6, py + 0.2) if qx < px + pw / 2 else (px + pw - 0.6, py + pd - 0.6)
-                me.box("structure", "trim", qx, qy, B, 0.4, 0.4, ph - B)
+            ph, pa = porch_roof(m, pw if px >= W - 1e-6 else pd)
+            for qx, qy in porch_posts(m, m.porch):
+                me.box("structure", "trim", qx, qy, B, 0.45, 0.45, ph - B)
             if py < 0:
-                me.slab("roof", "roof", [(px - 0.6, py - 0.6, ph), (px + pw + 0.6, py - 0.6, ph), (px + pw + 0.6, 0, ph + 1.1), (px - 0.6, 0, ph + 1.1)], 0.35)
+                me.slab("roof", "roof", [(px - 0.6, py - 0.6, ph), (px + pw + 0.6, py - 0.6, ph), (px + pw + 0.6, 0, pa), (px - 0.6, 0, pa)], 0.35)
+            elif py >= D - 1e-6:
+                me.slab("roof", "roof", [(px + pw + 0.6, py + pd + 0.6, ph), (px - 0.6, py + pd + 0.6, ph), (px - 0.6, D, pa), (px + pw + 0.6, D, pa)], 0.35)
             elif px >= W - 1e-6:
-                me.slab("roof", "roof", [(px + pw + 0.6, py - 0.6, ph), (px + pw + 0.6, py + pd + 0.6, ph), (W, py + pd + 0.6, ph + 1.1), (W, py - 0.6, ph + 1.1)], 0.35)
+                me.slab("roof", "roof", [(px + pw + 0.6, py - 0.6, ph), (px + pw + 0.6, py + pd + 0.6, ph), (W, py + pd + 0.6, pa), (W, py - 0.6, pa)], 0.35)
     for r in m.rooms:
         if r.kind == "porch":
             me.box("structure", "foundation", r.x, r.y, 0, r.w, r.d, B - 0.6)
             me.box("structure", "porch", r.x, r.y, B - 0.6, r.w, r.d, 0.25)
             for qx, qy in ((r.x, r.y), (r.x2 - 0.45, r.y) if r.y == 0 else (r.x, r.y2 - 0.45)):
-                me.box("structure", "trim", qx + 0.02, qy + 0.02, B, 0.42, 0.42, info["front"] - B)
+                me.box("structure", "trim", qx + 0.02, qy + 0.02, B, 0.42, 0.42, m.plate)
 
-    # Interior walls (cutaway)
+    # Interior walls (cutaway), per floor
     ti = m.int_t
-    for w in m.walls:
-        if w.exterior or w.open:
-            continue
-        ops = sorted(m.openings_on(w), key=lambda o: o.s)
-        cuts = sorted({w.seg.a, w.seg.b, *[o.a for o in ops], *[o.b for o in ops]})
-        if w.seg.o == "v":
-            cuts = sorted(set(cuts) | {y for y, _ in info["line"][1:-1] if w.seg.a < y < w.seg.b})
-
-        def top(x, y):
-            # 8 ft partition, never above the roof underside
-            return min(zbase(x) + 8.0, roof_z(info, y) - 0.3 if k not in ("flat", "shedover") else info["front"])
-        for sa, sb in zip(cuts, cuts[1:]):
-            mid = (sa + sb) / 2
-            x0, y0 = w.seg.at(sa)
-            x1, y1 = w.seg.at(sb)
-            zb = zbase((x0 + x1) / 2)
-            o = next((o for o in ops if o.a - 1e-4 <= mid <= o.b + 1e-4), None)
-            z0 = zb if not o else zb + 6.83
-            t0, t1 = top(x0, y0), top(x1, y1)
-            if min(t0, t1) - z0 <= 0.05:
+    for st in m.storeys:
+        grp = "interior" if not st.level else "upper"
+        for w in st.walls:
+            if w.exterior or w.open:
                 continue
-            if w.seg.o == "h":
-                me.hexa("interior", "interior", [(x0, y0 - ti / 2, z0), (x1, y0 - ti / 2, z0), (x1, y0 + ti / 2, z0), (x0, y0 + ti / 2, z0)], [t0, t1, t1, t0])
-            else:
-                me.hexa("interior", "interior", [(x0 - ti / 2, y0, z0), (x0 + ti / 2, y0, z0), (x0 + ti / 2, y1, z0), (x0 - ti / 2, y1, z0)], [t0, t0, t1, t1])
+            ops = sorted(st.openings_on(w), key=lambda o: o.s)
+            cuts = sorted({w.seg.a, w.seg.b, *[o.a for o in ops], *[o.b for o in ops]})
+            if w.seg.o == "v":
+                cuts = sorted(set(cuts) | {y for y, _ in info["line"][1:-1] if w.seg.a < y < w.seg.b})
+
+            def top(x, y):
+                # 8 ft partition (full height under a second floor), never above the roof underside
+                if st.level:
+                    return min(m.upper_base + M.UPPER_PLATE, roof_z(info, y) - 0.3)
+                if up:
+                    return B + m.plate
+                return min(zbase(x) + 8.0, roof_z(info, y) - 0.3 if k not in ("flat", "shedover") else info["front"])
+            for sa, sb in zip(cuts, cuts[1:]):
+                mid = (sa + sb) / 2
+                x0, y0 = w.seg.at(sa)
+                x1, y1 = w.seg.at(sb)
+                zb = zbase((x0 + x1) / 2) if not st.level else m.upper_base
+                o = next((o for o in ops if o.a - 1e-4 <= mid <= o.b + 1e-4), None)
+                z0 = zb if not o else zb + 6.83
+                t0, t1 = top(x0, y0), top(x1, y1)
+                if min(t0, t1) - z0 <= 0.05:
+                    continue
+                if w.seg.o == "h":
+                    me.hexa(grp, "interior", [(x0, y0 - ti / 2, z0), (x1, y0 - ti / 2, z0), (x1, y0 + ti / 2, z0), (x0, y0 + ti / 2, z0)], [t0, t1, t1, t0])
+                else:
+                    me.hexa(grp, "interior", [(x0 - ti / 2, y0, z0), (x0 + ti / 2, y0, z0), (x0 + ti / 2, y1, z0), (x0 - ti / 2, y1, z0)], [t0, t0, t1, t1])
 
     # Lofts
     for lr in m.lofts:
@@ -341,18 +408,37 @@ def build_mesh(m: M.Model) -> Mesh:
          "dw": (2.9, "trim"), "lav": (2.8, "fixture"), "toilet": (1.4, "fixture"), "tub": (1.7, "fixture"), "shower": (0.3, "fixture"),
          "washer": (3.0, "fixture"), "dryer": (3.0, "fixture"), "stack_wd": (6.0, "fixture"), "wh": (4.6, "fixture"), "tankless": (2.0, "fixture"),
          "bed": (1.8, "bed")}
-    for f in m.fixtures:
+    for f in m.all("fixtures"):
         if f.kind not in H:
             continue
         h, mat = H[f.kind]
-        z = (B + 7.6) if (f.room and f.room.loft) else zbase(f.cx)
+        lvl = up is not None and any(f is g for g in up.fixtures)
+        z = (B + 7.6) if (f.room and f.room.loft) else m.upper_base if lvl else zbase(f.cx)
         if f.kind == "tankless":
             z += 4
         # never taller than the roof above it (A-frame knee walls, gooseneck)
         if k in ("aframe", "gambrel", "shed", "gable"):
             h = max(0.1, min(h, roof_z(info, f.y) - z - 0.15, roof_z(info, f.y + f.d) - z - 0.15))
-        me.box("interior", mat, f.x + 0.03, f.y + 0.03, z, f.w - 0.06, f.d - 0.06, h if f.kind not in ("sink",) else 0.08)
+        me.box("interior" if not lvl else "upper", mat, f.x + 0.03, f.y + 0.03, z, f.w - 0.06, f.d - 0.06, h if f.kind not in ("sink",) else 0.08)
     return me
+
+
+def _stair(me: Mesh, r: M.Room, z0: float, z1: float, reverse=False):
+    """Straight stair filling a STAIR room, climbing along its long side toward +x or +y
+    (toward -x or -y when the plan sets stair_reverse)."""
+    n = max(2, round((z1 - z0) / 0.6))
+    rise = (z1 - z0) / n
+    along_x = r.w >= r.d
+    L = r.w if along_x else r.d
+    run = L / n
+    for i in range(n):
+        h = rise * (i + 1)
+        if reverse:
+            i = n - 1 - i
+        if along_x:
+            me.box("interior", "stair", r.x + i * run, r.y + 0.05, z0, run + 0.02, r.d - 0.1, h)
+        else:
+            me.box("interior", "stair", r.x + 0.05, r.y + i * run, z0, r.w - 0.1, run + 0.02, h)
 
 
 def to_json(m: M.Model, me: Mesh):
@@ -360,13 +446,16 @@ def to_json(m: M.Model, me: Mesh):
     groups = {}
     for gname, mats in me.g.items():
         groups[gname] = {mat: [round(v, 2) for t in tris for p in t for v in p] for mat, tris in mats.items()}
-    return {"W": m.W, "D": m.D, "H": round(info["ridge"], 2), "materials": {k: v for k, v in MATERIALS.items()}, "groups": groups,
-            "rooms": [[r.title, round(r.cx, 2), round(r.cy, 2), round(info["B"], 2)] for r in m.heated]}
+    xs = [p[0] for mats in me.g.values() for tris in mats.values() for t in tris for p in t]
+    ys = [p[1] for mats in me.g.values() for tris in mats.values() for t in tris for p in t]
+    return {"W": m.W, "D": m.D, "H": round(info["ridge"], 2), "bbox": [round(min(xs), 2), round(min(ys), 2), round(max(xs), 2), round(max(ys), 2)],
+            "materials": {k: v for k, v in MATERIALS.items()}, "groups": groups,
+            "rooms": [[r.title, round(r.cx, 2), round(r.cy, 2), round(st.base, 2)] for st in m.storeys for r in st.heated]}
 
 
 def to_obj(m: M.Model, me: Mesh, name: str):
     """Wavefront OBJ (y up, units feet) with an MTL library."""
-    lines = [f"# {name} - Tiny Homes Blueprint 3D model (units: feet, Y up)", f"mtllib {name}.mtl"]
+    lines = [f"# {name} - {M.PROFILE['brand_name']} 3D model (units: feet, Y up)", f"mtllib {name}.mtl"]
     vi = 1
     for gname, mats in me.g.items():
         lines.append(f"g {gname}")

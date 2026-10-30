@@ -3,3 +3,11 @@ __pycache__/
 dist/
 tinyhomesblueprint/build/
 tinyhomesblueprint/dist/
+cowboytinyhomes/build/
+cowboytinyhomes/dist/
+# Server-only secrets and the old WordPress backup (wp-config.php) never go in git.
+cowboytinyhomes/site/inc/secrets.php
+cowboytinyhomes/site/inc/data/
+cowboytinyhomes/site/.private/
+cowboytinyhomes/site/wordpress-backup-*/
+*-secrets.php

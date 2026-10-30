@@ -10,31 +10,45 @@ the bottom of the sheet, so y increases up the page.
 """
 from __future__ import annotations
 
+import json
 import math
+import os
 import re
 from dataclasses import dataclass, field
 
 EPS = 1e-6
 
+# Site-specific settings (brand, climate, structure, notes). Each site keeps its own
+# generator/profile.json; every .py file is shared verbatim between the sites.
+PROFILE = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "profile.json"), encoding="utf-8"))
+
 # ---------------------------------------------------------------------------------------
 # Rooms
 # ---------------------------------------------------------------------------------------
 
-PUBLIC = {"living", "kitchen", "entry", "studio", "dining"}
+PUBLIC = {"living", "kitchen", "entry", "studio", "dining", "hall", "stair"}
 WET = {"bath", "kitchen", "laundry", "utility"}
+UPPER_PLATE = 8.0       # second-floor wall height
+FLOOR_DEPTH = 1.0       # second-floor framing + subfloor (11-7/8" I-joists, 3/4" deck)
 
 
 def room_kind(label: str) -> str:
     L = label.upper()
-    if L == "PORCH":
+    if L in ("PORCH", "BREEZEWAY", "DOGTROT", "DOGTROT BREEZEWAY"):
         return "porch"
-    if "BATH" in L:
+    if "STAIR" in L:
+        return "stair"
+    if "BATH" in L or "POWDER" in L:
         return "bath"
+    if ("CLOSET" in L or L.startswith("WIC") or "PANTRY" in L) and "W/D" not in L and "LAUNDRY" not in L:
+        return "closet"
+    if "HALL" in L or "LANDING" in L:
+        return "hall"
     if "GREAT ROOM + KITCHEN" in L or "KITCHEN / DINING" in L or "KITCHEN" in L:
         return "kitchen" if "GREAT ROOM" not in L else "living"
     if "STUDIO" in L or "SLEEP / LIVING" in L:
         return "studio"
-    if "BED" in L or "PRIMARY" in L:
+    if "BED" in L or "PRIMARY" in L or "BUNK" in L:
         return "bed"
     if "UTILITY" in L:
         return "utility"
@@ -42,7 +56,7 @@ def room_kind(label: str) -> str:
         return "mud" if "MUD" in L else "laundry"
     if "MUD" in L:
         return "mud"
-    if "OFFICE" in L or "FLEX" in L:
+    if "OFFICE" in L or "FLEX" in L or "STUDY" in L:
         return "office"
     if "ENTRY" in L:
         return "entry"
@@ -208,13 +222,14 @@ class Fixture:
 
 @dataclass
 class Device:
-    kind: str               # rec, gfci, rec20, rec240, wp, sw, sw3, light, can, fan, sconce, pendant, smoke, co, panel, minisplit, condenser, data, inlet
+    kind: str               # rec, gfci, rec20, rec240, wp, sw, sw3, light, can, fan, cfan, sconce, pendant, smoke, co, panel, minisplit, condenser, data, inlet
     x: float
     y: float
     room: Room | None = None
     circuit: int = 0
     note: str = ""
     loft: bool = False
+    level: int = 0          # 0 = main floor, 1 = second floor
 
 
 @dataclass
@@ -260,11 +275,42 @@ class Model:
     circuits: list = field(default_factory=list)
     pipes: list = field(default_factory=list)
     notes: dict = field(default_factory=dict)
+    level: int = 0              # 0 = main floor model, 1 = second-floor model
+    upper: "Model | None" = None
+    z0: float | None = None     # finished-floor height of a second-floor model
 
     # --- basic properties -------------------------------------------------------------
     @property
     def heated(self):
         return [r for r in self.rooms if r.kind != "porch"]
+
+    @property
+    def storeys(self):
+        """The main-floor model plus the second-floor model, if any."""
+        return [self] + ([self.upper] if self.upper else [])
+
+    def all(self, attr):
+        """A list attribute (openings, fixtures, pipes, walls, heated) across every storey."""
+        out = []
+        for s in self.storeys:
+            out += getattr(s, attr)
+        return out
+
+    @property
+    def upper_base(self):
+        """Finished-floor height of the second floor above grade."""
+        return self.base + self.plate + FLOOR_DEPTH
+
+    @property
+    def wall_h(self):
+        """Exterior wall height from the main floor to the top plate under the roof."""
+        return self.plate + (FLOOR_DEPTH + UPPER_PLATE if self.upper else 0)
+
+    @property
+    def overhang(self):
+        if self.mobile:
+            return 0.5
+        return float(self.p.get("overhang", PROFILE.get("overhang", 1.0)))
 
     @property
     def mobile(self):
@@ -293,15 +339,23 @@ class Model:
     @property
     def base(self):
         """Finished floor height above grade."""
+        if self.z0 is not None:
+            return self.z0
         if self.mobile:
             return 2.2
         if self.container:
             return 1.0
+        if self.foundation == "chassis":
+            return 2.5
         return 0.67 if "slab" in self.p.get("foundation", "").lower() and "crawl" not in self.p.get("foundation", "").lower() else 1.5
 
     @property
     def plate(self):
         """Wall plate height (floor to top of wall framing)."""
+        if self.level:
+            return UPPER_PLATE
+        if "plate" in self.p:
+            return float(self.p["plate"])
         return {"thow": 9.0, "gooseneck": 9.0, "shed-thow": 10.0, "container": 9.0, "container-double": 9.0,
                 "shed": 10.0, "aframe": 0.0, "gambrel": 6.5}.get(self.roof_type, 9.0 if "9'" in self.p.get("ceiling", "") or True else 8.0)
 
@@ -317,6 +371,8 @@ class Model:
         f = self.p.get("foundation", "").lower()
         if self.mobile:
             return "trailer"
+        if "chassis" in f:
+            return "chassis"             # park model: steel chassis set on piers
         if "pier" in f and "slab" not in f:
             return "piers"
         if "pier" in f or "footing" in f:
@@ -379,13 +435,36 @@ def build_model(slug: str, p: dict) -> Model:
     _doors(m)
     _windows(m)
     _fixtures(m)
-    _electrical(m)
+    living, panel_room = _electrical(m)
+    if p.get("upper"):
+        # Second floor: same footprint, its own walls, doors, windows, fixtures and devices.
+        # Tags continue the main-floor numbering; devices join the main panel.
+        up = Model(slug, p, m.W, m.D, [Room(r[0], *map(float, r[1:5])) for r in p["upper"]], [], None, m.roof_type,
+                   level=1, z0=m.upper_base)
+        m.upper = up
+        m.notes["stair_rise"] = up.notes["stair_rise"] = m.plate + FLOOR_DEPTH
+        _walls(up)
+        _doors(up)
+        _windows(up, start=(sum(o.kind != "window" for o in m.openings), sum(o.kind == "window" for o in m.openings)))
+        _fixtures(up)
+        _electrical(up)
+        for d in up.devices:
+            d.level = 1
+        m.devices += up.devices
+    _circuits(m, living, panel_room)
     _plumbing(m)
+    if m.upper:
+        _plumbing(m.upper, below=m)
     if m.roof_type in ("shed", "shed-thow"):
         # Clerestory band high on the tall front wall: (x center, width) pairs.
         n = max(1, int((m.W - 2) // 4))
         m.notes["clerestory"] = [(1 + (m.W - 2) * (i + 0.5) / n, 2.5) for i in range(n)]
     return m
+
+
+def plan_type(m: Model) -> str:
+    """house | adu | studio | park-model | thow (selects the code notes on the cover)."""
+    return m.p.get("type") or ("thow" if m.mobile else "house")
 
 
 def aframe_height(m: Model) -> float:
@@ -418,7 +497,24 @@ def _walls(m: Model):
                         cuts.append((eo.a, eo.b))
             for lo, hi in subtract(e.a, e.b, cuts):
                 seg = Seg(e.o, e.c, lo, hi, e.side)
-                m.walls.append(Wall(seg, True, (r,), facade={"S": "front", "N": "rear", "W": "left", "E": "right"}[e.side]))
+                fac = {"S": "front", "N": "rear", "W": "left", "E": "right"}[e.side]
+                if _faces_court(m, seg, r):
+                    fac = "court"      # faces a breezeway between two wings: hidden on the elevations
+                m.walls.append(Wall(seg, True, (r,), facade=fac))
+
+
+def _faces_court(m: Model, seg: Seg, r: Room) -> bool:
+    """True when the wall looks across an open breezeway at another heated room."""
+    mid = (seg.a + seg.b) / 2
+    if seg.o == "v":
+        if abs(seg.c) < EPS or abs(seg.c - m.W) < EPS:
+            return False
+        d = 1 if seg.c >= r.x2 - EPS else -1
+        return any(o is not r and o.y < mid < o.y2 and (o.x >= seg.c - EPS if d > 0 else o.x2 <= seg.c + EPS) for o in m.heated)
+    if abs(seg.c) < EPS or abs(seg.c - m.D) < EPS:
+        return False
+    d = 1 if seg.c >= r.y2 - EPS else -1
+    return any(o is not r and o.x < mid < o.x2 and (o.y >= seg.c - EPS if d > 0 else o.y2 <= seg.c + EPS) for o in m.heated)
 
 
 def _place_on(m: Model, wall: Wall, width: float, prefer: str = "center", pad: float = 0.4, near=None):
@@ -441,6 +537,12 @@ def _place_on(m: Model, wall: Wall, width: float, prefer: str = "center", pad: f
     return b - pad - width / 2
 
 
+def _on_rect_edge(seg: Seg, r: Room) -> bool:
+    if seg.o == "h":
+        return (abs(seg.c - r.y) < EPS or abs(seg.c - r.y2) < EPS) and min(seg.b, r.x2) - max(seg.a, r.x) > 1
+    return (abs(seg.c - r.x) < EPS or abs(seg.c - r.x2) < EPS) and min(seg.b, r.y2) - max(seg.a, r.y) > 1
+
+
 def _touches_exterior_at(m, wall: Wall, end: str) -> bool:
     s = wall.seg
     px, py = s.p1 if end == "a" else s.p2
@@ -453,7 +555,17 @@ def _doors(m: Model):
     # ---- main entry ------------------------------------------------------------------
     entry_wall = None
     entry_s = None
-    if m.roof_type in ("aframe", "gambrel"):
+    entry_fac = m.p.get("entry")
+    if m.level:
+        pass                                 # second floor: reached by the stair, no exterior door
+    elif entry_fac:
+        # Forced entry facade (e.g. a front door with the porch at the rear).
+        cands = [w for w in m.walls if w.exterior and w.facade == entry_fac]
+        cands.sort(key=lambda w: ({"entry": -1, "living": 0, "hall": 0.2, "studio": 0, "dining": 1, "kitchen": 1.5, "mud": 0.5}.get(w.rooms[0].kind, 5), -w.length))
+        if cands:
+            entry_wall = cands[0]
+            entry_s = (entry_wall.seg.a + entry_wall.seg.b) / 2
+    elif m.roof_type in ("aframe", "gambrel"):
         cands = [w for w in m.walls if w.exterior and w.facade == "left"]
         cands.sort(key=lambda w: (w.rooms[0].kind not in PUBLIC, -w.length))
         entry_wall = cands[0] if cands else None
@@ -516,8 +628,21 @@ def _doors(m: Model):
     if not reach and heated:
         reach = {id(max(heated, key=lambda r: r.area))}
     pending = [r for r in heated if id(r) not in reach]
-    rank_via = {"living": 0, "kitchen": 0.3, "entry": 0, "studio": 0, "dining": 0, "mud": 0.5, "laundry": 1.2,
-                "utility": 1.4, "office": 1.6, "bed": 2.0, "bath": 2.5}
+    rank_via = {"living": 0, "kitchen": 0.3, "entry": 0, "studio": 0, "dining": 0, "hall": 0.1, "mud": 0.5, "laundry": 1.2,
+                "utility": 1.4, "office": 1.6, "bed": 2.0, "closet": 2.2, "bath": 2.5, "stair": 3.5}
+    if not m.level and len(heated) > 1 and any(w.facade == "court" for w in m.walls):
+        # Public rooms count as reached only when the entry connects to them through open
+        # walls; a wing across a breezeway starts unreached and gets its own door.
+        start = entry_wall.rooms[0] if entry_wall else max(heated, key=lambda r: r.area)
+        reach = {id(start)}
+        grow = True
+        while grow:
+            grow = False
+            for w in m.walls:
+                if w.open and any(id(r) in reach for r in w.rooms) and not all(id(r) in reach for r in w.rooms):
+                    reach.update(id(r) for r in w.rooms)
+                    grow = True
+        pending = [r for r in heated if id(r) not in reach]
     guard = 0
     while pending and guard < 50:
         guard += 1
@@ -535,8 +660,41 @@ def _doors(m: Model):
                 if w.length < width + 0.6:
                     continue
                 score = rank_via.get(other.kind, 3) - min(w.length, 10) * 0.01
+                if r.kind == "closet" and other.kind == "bed":
+                    score -= 3                     # walk-in closets open off the bedroom
                 if best is None or score < best[0]:
                     best = (score, r, w, width)
+        if not best and not m.level:
+            # Nothing reachable from inside: a separate wing. Give its most public room an
+            # exterior door on the breezeway (or porch) side, then keep connecting from there.
+            porch_rooms = [q for q in m.rooms if q.kind == "porch"]
+            opts = []
+            for r in pending:
+                for w in m.walls_of(r, exterior=True):
+                    if w.length < 3.8:
+                        continue
+                    on_porch = w.facade == "court" or any(_on_rect_edge(w.seg, q) for q in porch_rooms)
+                    opts.append((rank_via.get(r.kind, 3) - (2 if on_porch else 0) + (0.5 if r.kind == "bath" else 0), -w.length, r, w))
+            if not opts:
+                break
+            opts.sort(key=lambda t: (t[0], t[1]))
+            _, _, r, w = opts[0]
+            s = _place_on(m, w, 3.0, prefer="center")
+            if s is not None:
+                m.openings.append(Opening("door", w, s, 3.0, 6.67, room=r, label="Breezeway entry", tag="ENTRY2"))
+            reach.add(id(r))
+            pending.remove(r)
+            grow = True
+            while grow:
+                grow = False
+                for w2 in m.walls:
+                    if w2.open and any(id(q) in reach for q in w2.rooms) and not all(id(q) in reach for q in w2.rooms):
+                        for q in w2.rooms:
+                            if id(q) not in reach:
+                                reach.add(id(q))
+                                pending.remove(q)
+                        grow = True
+            continue
         if not best:
             break
         _, r, w, width = best
@@ -553,6 +711,8 @@ def _doors(m: Model):
 
     # ---- secondary exterior door from a mudroom, laundry or utility room ------------------
     for r in heated:
+        if m.level:
+            break
         if r.kind not in ("mud",) and not (r.kind in ("laundry", "utility") and r.area >= 30 and not m.mobile and not m.container):
             continue
         if any(o.exterior and o.kind in ("door", "slider") and o.room is r for o in m.openings):
@@ -575,7 +735,7 @@ WIN = {  # kind: (width, height, sill)
 }
 
 
-def _windows(m: Model):
+def _windows(m: Model, start=(0, 0)):
     for r in m.heated:
         if r.kind not in WIN:
             continue
@@ -584,6 +744,10 @@ def _windows(m: Model):
             wh = min(wh, 4.0)
         if m.mobile and r.kind in ("living", "studio"):
             wh = 4.5
+        if m.roof_type == "gooseneck" and r.x >= m.W - 8 - EPS:
+            # Raised gooseneck floor (3'-2" up): lower sill and shorter sash so the window stays under the eave.
+            sill = min(sill, 1.5)
+            wh = min(wh, math.floor((m.plate - 3.2 - sill - 0.5) * 2) / 2)
         walls = [w for w in m.walls_of(r, exterior=True) if m.exterior_kind(w)]
         walls.sort(key=lambda w: -w.length)
         if not walls:
@@ -597,7 +761,7 @@ def _windows(m: Model):
                 if s is not None:
                     m.openings.append(Opening("window", w, s, ww, wh, sill, room=r, egress=placed == 0))
                     placed += 1
-        elif r.kind in ("living", "studio", "dining", "entry") or (r.kind == "kitchen" and r.has_kitchen and r.area > 150):
+        elif r.kind in ("living", "studio", "dining", "entry") or (r.kind == "kitchen" and r.has_kitchen and r.area > 150) or (r.kind == "office" and r.area >= 120):
             for w in walls:
                 n = int(w.length // 6.5)
                 if n == 0 and w.length >= ww + 1.6:
@@ -636,7 +800,7 @@ def _windows(m: Model):
     # Tags: doors D1.., windows W1.. in a stable order (front, right, rear, left, interior).
     order = {"front": 0, "right": 1, "rear": 2, "left": 3, "porch": 4, "": 5}
     m.openings.sort(key=lambda o: (o.kind == "window", order.get(o.wall.facade, 5), o.wall.seg.o, o.wall.seg.c, o.s))
-    di = wi = 0
+    di, wi = start
     for o in m.openings:
         if o.kind == "window":
             wi += 1
@@ -699,7 +863,9 @@ def _add(m, kind, rect, r, side):
 def _fixtures(m: Model):
     wh_room = None
     for kinds in (("utility",), ("laundry",), ("mud",), ("bath",), ("kitchen",)):
-        rs = [r for r in m.heated if r.kind in kinds and (kinds != ("mud",) or r.has_laundry)]
+        if m.level:
+            break                            # the water heater stays on the main floor
+        rs = [r for r in m.heated if r.kind in kinds and (kinds != ("mud",) or r.has_laundry) and not _half_bath(r)]
         if rs:
             wh_room = max(rs, key=lambda r: r.area)
             break
@@ -719,9 +885,9 @@ def _fixtures(m: Model):
             f.room = r
         if r.kind == "kitchen" and r is wh_room and not any(f.kind == "wh" for f in m.fixtures):
             pass
-    if not any(f.kind in ("wh", "tankless") for f in m.fixtures):
+    if not m.level and not any(f.kind in ("wh", "tankless") for f in m.fixtures):
         # No room took the heater: mount a tankless unit on the kitchen wall.
-        k = next((f for f in m.fixtures if f.kind == "sink"), None)
+        k = next((f for f in m.fixtures if f.kind == "sink"), None) or next((f for f in m.fixtures if f.kind == "lav"), None)
         if k:
             _add(m, "tankless", (k.x, k.y, 1.2, 0.6) if k.rot in ("S", "N") else (k.x, k.y, 0.6, 1.2), k.room, k.rot)
     for lr in m.lofts:
@@ -853,12 +1019,18 @@ def _bath(m: Model, r: Room, wh=False):
     side, a, b = runs[0]
     L = b - a
     long_dim, short_dim = max(r.w, r.d), min(r.w, r.d)
-    tub = short_dim >= 5 and long_dim >= 8 and L >= 5 and not m.mobile and not m.container
+    accessible = "ROLL-IN" in r.label.upper() or "ACCESSIBLE" in r.label.upper()
+    tub = short_dim >= 5 and long_dim >= 8 and L >= 5 and not m.mobile and not m.container and "SHOWER" not in r.label.upper() and not accessible
     items = []
-    if tub:
+    if _half_bath(r):
+        pass                                 # powder room: toilet and lavatory only
+    elif tub:
         items.append(("tub", 5.0, 2.5))
     else:
-        items.append(("shower", 3.0 if L >= 6.5 else 2.67, 3.0 if L >= 6.5 else 2.67))
+        sw_ = 3.0 if L >= 6.5 else 2.67
+        if accessible:
+            sw_ = 5.0                        # curbless 60 x 36 in. roll-in shower
+        items.append(("shower", sw_, 3.0 if L >= 6.5 else 2.67))
     items.append(("toilet", 2.5, 2.4))
     lav_w = 3.0 if L >= 9 else 2.0 if L >= 7 else 1.6
     items.append(("lav", lav_w, 1.75))
@@ -867,6 +1039,10 @@ def _bath(m: Model, r: Room, wh=False):
     if wh and not r.has_laundry:
         items.append(("wh", 2.0, 2.0))
     total = sum(w for _, w, _ in items)
+    if total > L + EPS:
+        # Tight wall: drop to a 32 in. shower and an 18 in. lavatory before spilling over.
+        items = [(k, 2.67 if k == "shower" and w == 3.0 else 1.6 if k == "lav" else w, 2.67 if k == "shower" and d == 3.0 else d) for k, w, d in items]
+        total = sum(w for _, w, _ in items)
     # Shower or tub goes at the end farthest from the door.
     far_end_b = True
     if door:
@@ -893,6 +1069,11 @@ def _bath(m: Model, r: Room, wh=False):
             continue
         _add(m, kind, _rect_on_side(r, side, pos, w, d), r, side)
         pos += w
+
+
+def _half_bath(r: Room) -> bool:
+    L = r.label.upper()
+    return r.kind == "bath" and ("POWDER" in L or "HALF" in L)
 
 
 def _laundry(m: Model, r: Room, wh=False):
@@ -958,8 +1139,9 @@ def _electrical(m: Model):
     counters = [f for f in m.fixtures if f.kind in ("counter",)]
 
     # Receptacles along walls: no point on a usable wall more than 6 ft from an outlet (12 ft spacing).
+    sub = bool(m.level)
     for r in heated:
-        if r.kind in ("bath",):
+        if r.kind in ("bath", "stair", "closet"):
             continue
         for side, a, b in _wall_runs(m, r):
             if r.has_kitchen and any(f.room is r and f.rot == side and f.kind == "counter" for f in counters):
@@ -1027,6 +1209,17 @@ def _electrical(m: Model):
             dev.append(Device("fan", r.cx, r.cy, r, note="exhaust fan / light, 80 CFM"))
         else:
             dev.append(Device("light", r.cx, r.cy, r))
+    if PROFILE.get("ceiling_fans"):
+        # Hot-climate spec: a ceiling fan with light in the living area and every bedroom.
+        for r in heated:
+            if r.kind in ("bed", "studio") or (r.kind == "office" and r.area >= 80):
+                for d in [d for d in dev if d.room is r and d.kind == "light"]:
+                    d.kind, d.note = "cfan", "ceiling fan / light"
+            elif r.kind in ("living", "dining") and r.area >= 100:
+                cans = [d for d in dev if d.room is r and d.kind == "can"]
+                if cans:
+                    c = min(cans, key=lambda d: math.dist((d.x, d.y), (r.cx, r.cy)))
+                    c.kind, c.note, c.x, c.y = "cfan", "ceiling fan / light", r.cx, r.cy
     for lr in m.lofts:
         dev.append(Device("light", lr.cx, lr.cy, lr, loft=True))
         dev.append(Device("smoke", lr.cx + min(1.5, lr.w / 4), lr.cy, lr, loft=True))
@@ -1043,13 +1236,16 @@ def _electrical(m: Model):
                 dev.append(Device("sconce", x + ax + ox, y + oy, None, note="exterior"))
             else:
                 dev.append(Device("sconce", x + ox, y + ax + oy, None, note="exterior"))
-    porch_room = next((r for r in m.rooms if r.kind == "porch"), None)
-    if porch_room:
+    for porch_room in [r for r in m.rooms if r.kind == "porch"]:
         dev.append(Device("light", porch_room.cx, porch_room.cy, porch_room, note="porch"))
-    elif m.porch:
+    if m.porch:
         px, py, pw, pd = m.porch
         dev.append(Device("light", px + pw / 2, py + pd / 2, None, note="porch"))
+        if PROFILE.get("ceiling_fans") and pw * pd >= 80:
+            dev.append(Device("cfan", px + pw / 2 + (3 if pw >= pd else 0), py + pd / 2 + (0 if pw >= pd else 3), None, note="porch fan, damp-rated"))
     for fac in ("front", "rear"):
+        if sub:
+            break
         ws = [w for w in m.walls if w.exterior and w.facade == fac and m.exterior_kind(w)]
         if not ws:
             ws = [w for w in m.walls if w.exterior and w.facade == fac]
@@ -1100,12 +1296,19 @@ def _electrical(m: Model):
     beds = [r for r in heated if r.kind in ("bed", "studio")]
     for r in beds:
         dev.append(Device("smoke", r.cx + min(1.2, r.w / 4), r.cy + min(1.2, r.d / 4), r))
+    if sub:
+        # Second floor: smoke alarm in the hall outside the bedrooms; heads in the bedrooms and study.
+        hall = max([r for r in heated if r.kind in ("hall", "stair", "living")] or heated, key=lambda r: (r.kind != "stair", r.area))
+        dev.append(Device("smoke", hall.cx, hall.cy + min(0.8, hall.d / 4), hall))
+        for r in [r for r in heated if r.kind in ("bed", "studio", "office", "living") and r.area >= 70]:
+            _minisplit_head(m, r)
+        return None, None
     living = max([r for r in heated if r.kind in ("living", "studio", "kitchen", "dining", "entry")] or heated, key=lambda r: r.area)
     dev.append(Device("smokeco", living.cx - min(1.5, living.w / 4), living.cy + min(1.2, living.d / 4), living, note="smoke / CO"))
 
     # Panel, mini-split, data.
     panel_room = None
-    for kinds in (("utility",), ("laundry",), ("mud",), ("kitchen",), ("living",), ("studio",)):
+    for kinds in (("utility",), ("laundry",), ("mud",), ("kitchen",), ("living",), ("studio",), ("office",), ("hall",)):
         rs = [r for r in heated if r.kind in kinds]
         if rs:
             panel_room = max(rs, key=lambda r: r.area)
@@ -1133,18 +1336,12 @@ def _electrical(m: Model):
     m.notes["panel_room"] = panel_room
     # Mini-split heads: living area plus each bedroom over 100 sq ft (multi-zone above 600 sq ft).
     zones = [living] + ([r for r in beds if r.area >= 100 and r is not living] if m.p["sqft"] >= 600 else [])
+    # Every wing across a breezeway gets its own head, in its largest habitable room.
+    for r in sorted(heated, key=lambda q: -q.area):
+        if r.kind in ("bed", "office", "living", "studio") and not any(_same_wing(m, z, r) for z in zones):
+            zones.append(r)
     for r in zones:
-        ws = [w for w in m.walls_of(r, exterior=True)]
-        if not ws:
-            continue
-        w = max(ws, key=lambda w: w.length)
-        spans = m.free_spans(w, 0.3, kinds=("door", "slider", "pocket"))
-        if not spans:
-            continue
-        a, b = max(spans, key=lambda t: t[1] - t[0])
-        px, py = w.seg.at((a + b) / 2)
-        nx, ny = m.inward(w, r)
-        dev.append(Device("minisplit", px + nx * 0.4, py + ny * 0.4, r, note="ductless head"))
+        _minisplit_head(m, r)
     ext_rear = [w for w in m.walls if w.exterior and w.facade in ("rear", "right")]
     if ext_rear:
         w = max(ext_rear, key=lambda w: w.length)
@@ -1157,7 +1354,74 @@ def _electrical(m: Model):
         if ws:
             px, py = ws[0].seg.at(ws[0].seg.a + 0.8)
             dev.append(Device("inlet", px, py + 0.4, None, note="50A RV inlet"))
-    _circuits(m, living, panel_room)
+    return living, panel_room
+
+
+def _same_wing(m: Model, a: Room, b: Room) -> bool:
+    """Rooms joined by interior walls (not split by a breezeway)."""
+    seen, todo = {id(a)}, [a]
+    while todo:
+        r = todo.pop()
+        if r is b:
+            return True
+        for w in m.walls:
+            if not w.exterior and r in w.rooms:
+                o = w.rooms[0] if w.rooms[1] is r else w.rooms[1]
+                if id(o) not in seen:
+                    seen.add(id(o))
+                    todo.append(o)
+    return False
+
+
+def _minisplit_head(m: Model, r: Room):
+    ws = [w for w in m.walls_of(r, exterior=True)]
+    if not ws:
+        return
+    w = max(ws, key=lambda w: w.length)
+    spans = m.free_spans(w, 0.3, kinds=("door", "slider", "pocket"))
+    if not spans:
+        return
+    a, b = max(spans, key=lambda t: t[1] - t[0])
+    px, py = w.seg.at((a + b) / 2)
+    nx, ny = m.inward(w, r)
+    m.devices.append(Device("minisplit", px + nx * 0.4, py + ny * 0.4, r, note="ductless head"))
+
+
+HEAD_SIZES = (6000, 9000, 12000, 15000, 18000, 24000)
+OUTDOOR_SIZES = (9000, 12000, 18000, 24000, 30000, 36000, 42000, 48000)
+
+
+def _size_hvac(m: Model, heads):
+    """Right-size each ductless head from the floor area it serves (profile BTU per sq ft),
+    and the outdoor unit from the sum. Rooms without a head count toward the largest head in
+    the same wing on the same floor."""
+    f = PROFILE.get("cooling_btu_per_sqft", 20)
+    served = {id(d): d.room.area for d in heads}
+    for s in m.storeys:
+        hs = [d for d in heads if d.level == s.level]
+        own = {id(d.room) for d in hs}
+        for r in s.heated:
+            if id(r) in own:
+                continue
+            cands = [d for d in hs if _same_wing(s, d.room, r)]
+            if cands:
+                d = max(cands, key=lambda d: d.room.area)
+                served[id(d)] += r.area
+    rows = []
+    for d in heads:
+        need = served[id(d)] * f
+        size = next((h for h in HEAD_SIZES if h >= need * 0.95), HEAD_SIZES[-1])
+        rows.append((d.room.title, round(served[id(d)]), size))
+        d.note = f"ductless head, {size // 1000}k BTU"
+    total = sum(r[2] for r in rows)
+    need = sum(r[1] for r in rows) * f
+    cap = next((o for o in OUTDOOR_SIZES if o >= need * 0.95), OUTDOOR_SIZES[-1]) if rows else 0
+    if len(rows) == 1:
+        cap = rows[0][2]                     # single-zone system: matched head and condenser
+    elif rows:
+        cap = max(cap, 18000)                # smallest common multi-zone outdoor unit
+    m.notes["hvac"] = {"heads": rows, "outdoor_btu": cap, "connected_btu": total, "btu_per_sqft": f}
+    return m.notes["hvac"]
 
 
 def _circuits(m: Model, living, panel_room):
@@ -1171,7 +1435,7 @@ def _circuits(m: Model, living, panel_room):
         circuits.append(c)
         return c.no
 
-    fx = {f.kind for f in m.fixtures}
+    fx = {f.kind for f in m.all("fixtures")}
     has_k = any(r.has_kitchen for r in m.heated)
     sabc = []
     if has_k:
@@ -1184,7 +1448,7 @@ def _circuits(m: Model, living, panel_room):
         small = sq < 350
         range_c = add("Range" if not small else "Cooktop / range (2-burner induction)", 40 if not small else 30, 240, 8000 if not small else 3600)
     dw_c = add("Dishwasher", 20, 120, 1200) if "dw" in fx else 0
-    bath_c = add("Bathroom receptacles (GFCI)", 20, 120, 1500) if any(r.kind == "bath" for r in m.heated) else 0
+    bath_c = add("Bathroom receptacles (GFCI)", 20, 120, 1500) if any(r.kind == "bath" for r in m.all("heated")) else 0
     laundry_c = add("Laundry receptacle", 20, 120, 1500) if fx & {"washer", "stack_wd"} else 0
     dryer_c = add("Dryer", 30, 240, 5000) if fx & {"dryer", "stack_wd"} else 0
     wh_c = 0
@@ -1193,7 +1457,10 @@ def _circuits(m: Model, living, panel_room):
     elif "tankless" in fx:
         wh_c = add("Tankless water heater (point-of-use)", 40, 240, 7200, "8/2 NM-B (w/ gnd, 240V)")
     hp = [d for d in m.devices if d.kind == "minisplit"]
-    hp_c = add("Heat pump (mini-split)", 20 if len(hp) <= 1 else 30, 240, 2400 if len(hp) <= 1 else 4800) if hp else 0
+    hvac = _size_hvac(m, hp)
+    cap = hvac["outdoor_btu"]
+    hp_c = (add(f"Heat pump (mini-split, {cap:,} BTU outdoor unit)", 20 if cap <= 12000 else 30 if cap <= 30000 else 40, 240,
+                2400 if cap <= 12000 else 4800 if cap <= 30000 else 6800) if hp else 0)
     # General lighting and receptacles: 3 VA per sq ft, 1,800 VA per 15A circuit (NEC 220.12).
     gen_va = sq * 3
     n_gen = max(2, math.ceil(gen_va / 1800) + 1)
@@ -1202,7 +1469,7 @@ def _circuits(m: Model, living, panel_room):
     smoke_c = gen[0]
 
     # Assign devices.
-    rooms_sorted = sorted(m.heated + m.lofts, key=lambda r: (r.x, r.y))
+    rooms_sorted = sorted(m.all("heated") + m.lofts, key=lambda r: (r.x, r.y))
     room_c = {id(r): gen[i % len(gen)] for i, r in enumerate(rooms_sorted)}
     for d in m.devices:
         if d.note == "counter":
@@ -1239,6 +1506,8 @@ def _circuits(m: Model, living, panel_room):
     amps = demand / 240
     if m.mobile:
         service = "50A, 120/240V via RV inlet to a 100A main-lug panel"
+    elif m.foundation == "chassis":
+        service = "50A, 120/240V feeder from the RV-park pedestal (NEC 552) to a 100A panel"
     else:
         service = "100A, 120/240V single phase" if amps <= 80 else "125A" if amps <= 100 else "200A, 120/240V single phase"
     m.circuits = circuits
@@ -1263,9 +1532,11 @@ def _route(a, b, first="x"):
     return [a, (x2, y1), b] if first == "x" else [a, (x1, y2), b]
 
 
-def _plumbing(m: Model):
+def _plumbing(m: Model, below: Model | None = None):
+    """Supply and DWV for one floor. A second floor (below = the main-floor model) is fed by
+    a riser at the water heater and drains through a stack to the main building drain."""
     fixtures = [f for f in m.fixtures if f.kind in COLD | {"wh", "tankless"}]
-    wh = next((f for f in m.fixtures if f.kind in ("wh", "tankless")), None)
+    wh = next((f for f in (below or m).fixtures if f.kind in ("wh", "tankless")), None)
     users = [f for f in fixtures if f.kind in COLD]
     if not users:
         return
@@ -1274,10 +1545,13 @@ def _plumbing(m: Model):
         whp = (wh.cx, wh.cy)
     else:
         whp = (users[0].cx, users[0].cy)
-    entry = min([(whp[0], 0.0), (whp[0], m.D), (0.0, whp[1]), (m.W, whp[1])], key=lambda q: math.dist(q, whp))
-    m.notes["water_entry"] = entry
-    # Supply: trunk from the service to the water heater, then a branch to each fixture.
-    m.pipes.append(Pipe("cold", _route(entry, whp, "y" if entry[1] in (0.0, m.D) else "x"), '3/4"'))
+    if below:
+        m.notes["riser"] = whp
+    else:
+        entry = min([(whp[0], 0.0), (whp[0], m.D), (0.0, whp[1]), (m.W, whp[1])], key=lambda q: math.dist(q, whp))
+        m.notes["water_entry"] = entry
+        # Supply: trunk from the service to the water heater, then a branch to each fixture.
+        m.pipes.append(Pipe("cold", _route(entry, whp, "y" if entry[1] in (0.0, m.D) else "x"), '3/4"'))
     off = 0.22
     for f in users:
         bx, by = f.back_point()
@@ -1298,12 +1572,16 @@ def _plumbing(m: Model):
     if horizontal:
         yd = toilet.cy if toilet else sum(ys) / len(ys)
         out_x = 0.0 if (min(xs) + max(xs)) / 2 < m.W / 2 else m.W
+        if below:
+            out_x = toilet.back_point()[0] if toilet else min(xs)
         x_lo, x_hi = min(min(xs), out_x), max(max(xs), out_x)
         main = [(x_lo, yd), (x_hi, yd)]
         exit_pt = (out_x, yd)
     else:
         xd = toilet.cx if toilet else sum(xs) / len(xs)
         out_y = m.D if (min(ys) + max(ys)) / 2 > m.D / 2 else 0.0
+        if below:
+            out_y = toilet.back_point()[1] if toilet else min(ys)
         y_lo, y_hi = min(min(ys), out_y), max(max(ys), out_y)
         main = [(xd, y_lo), (xd, y_hi)]
         exit_pt = (xd, out_y)
@@ -1321,6 +1599,23 @@ def _plumbing(m: Model):
         bx, by = toilet.back_point()
         stack = (bx, by)
     m.notes["stack"] = stack
-    m.notes["sewer_exit"] = exit_pt
     m.notes["dfu"] = total_dfu
     m.notes["main_drain"] = main_size
+    if not below:
+        m.notes["sewer_exit"] = exit_pt
+        return
+    # Second floor: the stack drops to the main floor and ties into the building drain under the slab.
+    m.notes["stack_down"] = exit_pt
+    below.notes["stack_from_above"] = exit_pt
+    bmain = next((p for p in below.pipes if p.kind == "waste" and p.size == '3"' and len(p.pts) == 2), None) \
+        or next((p for p in below.pipes if p.kind == "waste"), None)
+    if bmain:
+        (x1, y1), (x2, y2) = bmain.pts[0], bmain.pts[-1]
+        if abs(y1 - y2) < EPS:
+            tie = (min(max(exit_pt[0], min(x1, x2)), max(x1, x2)), y1)
+        else:
+            tie = (x1, min(max(exit_pt[1], min(y1, y2)), max(y1, y2)))
+        below.pipes.append(Pipe("waste", _route(exit_pt, tie), '3"'))
+        bmain.size = '3"'
+        below.notes["main_drain"] = '3"'
+    below.notes["dfu"] = below.notes.get("dfu", 0) + total_dfu

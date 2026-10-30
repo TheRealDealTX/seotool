@@ -1,12 +1,16 @@
 <?php
-// Tiny Homes Blueprint - store: Stripe Checkout, order records, download links and delivery email.
+// Plan store: Stripe Checkout, order records, download links and delivery email.
+// Shared by the plan-store sites (see sync-shared.sh); the site's config.php supplies
+// SITE_NAME, SITE_URL, SITE_EMAIL, SITE_PHONE, PRIVATE_DIR, STORE_PREFIX, ORDER_PREFIX,
+// plan_url() and, optionally, PLAN_CREDIT (a line added to the order email).
 //
-// Private data lives in PRIVATE_DIR (one level above public_html, never web-readable):
-//   thb-secrets.php        stripe_secret (sk_live_... / sk_test_...), stripe_webhook_secret (whsec_...),
-//                          download_secret (any long random string), plus the SMTP keys used by mailer.php
-//   thb-plan-files/        <plan-slug>.zip - the paid downloads built by generator/build.py
-//   thb-data/orders/       one JSON file per order, keyed by the Stripe Checkout Session id
-//   thb-data/orders.csv    append-only sales log
+// Private data lives in PRIVATE_DIR (one level above public_html, never web-readable),
+// named with the site's STORE_PREFIX (thb, cth...):
+//   <prefix>-secrets.php   stripe_secret (sk_live_... / sk_test_...), stripe_webhook_secret (whsec_...),
+//                          stripe_tax (true to let Stripe Tax calculate sales tax), plus the SMTP keys used by mailer.php
+//   <prefix>-plan-files/   <plan-slug>.zip - the paid downloads built by generator/build.py
+//   <prefix>-data/orders/  one JSON file per order, keyed by the Stripe Checkout Session id
+//   <prefix>-data/orders.csv  append-only sales log
 //
 // The flow: the plan page posts to /order/checkout/, which creates a Checkout Session and
 // redirects to Stripe. Stripe sends the buyer back to /order/complete/ and also calls
@@ -21,13 +25,13 @@ const DOWNLOAD_MAX  = 25;      // downloads per order
 const STRIPE_API    = 'https://api.stripe.com/v1';
 
 function store_dir(string $sub = ''): string {
-    $d = PRIVATE_DIR . '/thb-data' . ($sub !== '' ? "/$sub" : '');
+    $d = PRIVATE_DIR . '/' . STORE_PREFIX . '-data' . ($sub !== '' ? "/$sub" : '');
     if (!is_dir($d)) @mkdir($d, 0750, true);
     return $d;
 }
 
 function plan_file(string $slug): string {
-    return PRIVATE_DIR . '/thb-plan-files/' . basename($slug) . '.zip';
+    return PRIVATE_DIR . '/' . STORE_PREFIX . '-plan-files/' . basename($slug) . '.zip';
 }
 
 /** Online checkout is live once a Stripe key is configured and the plan's files are uploaded. */
@@ -87,8 +91,14 @@ function create_checkout(string $slug, array $p, string $email = ''): string {
         'allow_promotion_codes' => 'true',
         'billing_address_collection' => 'auto',
         'success_url' => SITE_URL . '/order/complete/?session_id={CHECKOUT_SESSION_ID}',
-        'cancel_url' => SITE_URL . "/plans/$slug/?checkout=canceled#order",
+        'cancel_url' => SITE_URL . plan_url($slug) . '?checkout=canceled#order',
     ];
+    if (!empty(thb_secrets()['stripe_tax'])) {
+        // Stripe Tax: needs the buyer's address and the tax settings in the Stripe dashboard.
+        $params['automatic_tax'] = ['enabled' => 'true'];
+        $params['billing_address_collection'] = 'required';
+        if (!empty(thb_secrets()['stripe_tax_code'])) $params['line_items'][0]['price_data']['product_data']['tax_code'] = thb_secrets()['stripe_tax_code'];
+    }
     if ($email !== '' && filter_var($email, FILTER_VALIDATE_EMAIL)) $params['customer_email'] = $email;
     $session = stripe_api('POST', '/checkout/sessions', $params);
     if (empty($session['url'])) throw new RuntimeException('Stripe did not return a checkout URL');
@@ -110,9 +120,9 @@ function save_order(array $o): void {
     rename($f . '.tmp', $f);
 }
 
-/** Find an order by its public id (THB-XXXXXX). */
+/** Find an order by its public id (<ORDER_PREFIX>-XXXXXXXX). */
 function find_order(string $orderId): ?array {
-    if (!preg_match('/^THB-[A-Z0-9]{8}$/', $orderId)) return null;
+    if (!preg_match('/^' . ORDER_PREFIX . '-[A-Z0-9]{8}$/', $orderId)) return null;
     $idx = store_dir() . '/index.json';
     $map = is_file($idx) ? (json_decode((string)file_get_contents($idx), true) ?: []) : [];
     return isset($map[$orderId]) ? load_order($map[$orderId]) : null;
@@ -150,12 +160,13 @@ function fulfill_session(array $session): ?array {
         if ($existing = load_order($session['id'])) return $existing;
         $p = $PLANS[$slug];
         $o = [
-            'id' => 'THB-' . strtoupper(substr(bin2hex(random_bytes(6)), 0, 8)),
+            'id' => ORDER_PREFIX . '-' . strtoupper(substr(bin2hex(random_bytes(6)), 0, 8)),
             'session' => $session['id'],
             'payment_intent' => is_array($session['payment_intent'] ?? null) ? $session['payment_intent']['id'] : ($session['payment_intent'] ?? ''),
             'plan' => $slug,
             'plan_name' => $p['name'] . ' - ' . $p['title'],
             'amount' => ($session['amount_total'] ?? 0) / 100,
+            'tax' => ($session['total_details']['amount_tax'] ?? 0) / 100,
             'currency' => strtoupper($session['currency'] ?? 'usd'),
             'email' => strtolower(trim($session['customer_details']['email'] ?? $session['customer_email'] ?? '')),
             'name' => $session['customer_details']['name'] ?? '',
@@ -200,6 +211,7 @@ function order_email(array $o): string {
         . "Order number: {$o['id']}\nAmount paid: \$" . number_format($o['amount'], 2) . "\n\n"
         . "Your purchase includes a license to build one home from this plan. Want changes, such as a flipped layout or a different "
         . "foundation? Just reply to this email or call " . SITE_PHONE . " for a modification quote.\n\n"
+        . (defined('PLAN_CREDIT') ? PLAN_CREDIT . "\n\n" : '')
         . "Happy building,\n" . SITE_NAME . "\n" . SITE_URL . "\n";
 }
 

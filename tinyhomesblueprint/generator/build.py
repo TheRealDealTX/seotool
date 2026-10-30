@@ -32,6 +32,8 @@ import thb_qty as Q  # noqa: E402
 import thb_sheets as SH  # noqa: E402
 import thb_views as V  # noqa: E402
 
+PR = M.PROFILE
+
 SITE = os.path.join(ROOT, "site")
 BUILD = os.path.join(ROOT, "build")
 DIST = os.path.join(ROOT, "dist", "plan-files")
@@ -68,7 +70,8 @@ def main(only):
         pub = os.path.join(PUBLIC, slug)
         priv = os.path.join(BUILD, slug)
         write(os.path.join(pub, "model.json"), json.dumps(ME.to_json(m, me), separators=(",", ":")))
-        for mode in ("floor", "electrical", "plumbing"):
+        modes = ("floor", "electrical", "plumbing") + (("floor2", "electrical2", "plumbing2") if m.upper else ())
+        for mode in modes:
             write(os.path.join(pub, f"{mode}.svg"), b.preview(mode))
             write(os.path.join(priv, f"{mode}.svg"), b.preview(mode, watermark=False))
         for fac in FACADES:
@@ -76,12 +79,13 @@ def main(only):
             write(os.path.join(pub, f"elevation-{fac}.svg"), svg)
             write(os.path.join(priv, f"elevation-{fac}.svg"), svg)
         model_url = f"/assets/plans/{slug}/model.json"
-        views = {"3d-front": ({"theta": -0.62, "phi": 1.18, "zoom": 1.45}, True), "3d-rear": ({"theta": 2.45, "phi": 1.15, "zoom": 1.45}, True),
+        views = {"3d-front": ({"theta": -0.62, "phi": 1.18, "zoom": 1.6}, True), "3d-rear": ({"theta": 2.45, "phi": 1.15, "zoom": 1.6}, True),
                  "3d-cutaway": ({"theta": -0.5, "phi": 0.78, "zoom": 1.35}, False), "3d-top": ({"theta": 0.0, "phi": 0.17, "zoom": 1.4}, False)}
         for name, (view, roof) in views.items():
             jobs.append({"type": "3d", "model": model_url, "out": os.path.join(priv, "img", f"{name}.png"), "width": 1600, "height": 1000, "view": view, "roof": roof})
-        for mode in ("floor", "electrical", "plumbing"):
-            jobs.append({"type": "svg", "svg": os.path.join(priv, f"{mode}.svg"), "out": os.path.join(priv, "img", f"{mode}-plan.png"), "width": 2400})
+        for mode in modes:
+            name = mode.replace("2", "-second-floor")
+            jobs.append({"type": "svg", "svg": os.path.join(priv, f"{mode}.svg"), "out": os.path.join(priv, "img", f"{name}-plan.png"), "width": 2400})
         for fac in FACADES:
             jobs.append({"type": "svg", "svg": os.path.join(priv, f"elevation-{fac}.svg"), "out": os.path.join(priv, "img", f"elevation-{fac}.png"), "width": 2000})
         ctx[slug] = (p, m, items, est, me, b)
@@ -125,8 +129,11 @@ def main(only):
         for k, lbl in (("materials", "Materials"), ("diy_trade_help", "Licensed trade help (electrical, plumbing, HVAC)"), ("permits", "Permits & plan review"),
                        ("contingency_diy", "Contingency (12% of materials)"), ("diy_total", "TOTAL - owner-built")):
             w.writerow([lbl, "", "", est[k]])
+        regions = "".join(f"\n    {n + ':':20s} contractor ${gc:,}   owner-built ${diy:,}" for n, f, gc, diy in est.get("regions", []))
         readme = README.format(name=p["name"], title=p["title"], base=base, sheets="\n".join(f"  {n:6s} {t}" for n, t, _ in b.sheets),
-                               sqft=p["sqft"], diy=f"{est['diy_total']:,}", gc=f"{est['gc_total']:,}")
+                               sqft=p["sqft"], diy=f"{est['diy_total']:,}", gc=f"{est['gc_total']:,}", brand=PR["brand_name"], site=PR["url"],
+                               phone=PR["phone"], basis=PR.get("cost_basis", "2026 US national averages"),
+                               regions=("\n  By region:" + regions) if regions else "", important=PR["readme_important"])
         zpath = os.path.join(DIST, f"{slug}.zip")
         files = []
         with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
@@ -159,7 +166,7 @@ def main(only):
         for d in m.devices:
             kinds[d.kind] = kinds.get(d.kind, 0) + 1
         fx = {}
-        for f in m.fixtures:
+        for f in m.all("fixtures"):
             fx[f.kind] = fx.get(f.kind, 0) + 1
         sets[slug] = {
             "estimate": est,
@@ -170,11 +177,13 @@ def main(only):
             "zip_bytes": os.path.getsize(zpath),
             "electrical": {"circuits": len(m.circuits), "service": m.notes["load"]["service"],
                            "receptacles": sum(v for k, v in kinds.items() if k in ("rec", "gfci", "rec20", "rec240", "wp")),
-                           "lights": sum(v for k, v in kinds.items() if k in ("light", "can", "sconce", "fan")),
+                           "lights": sum(v for k, v in kinds.items() if k in ("light", "can", "sconce", "fan", "cfan")), "fans": kinds.get("cfan", 0),
                            "alarms": kinds.get("smoke", 0) + kinds.get("smokeco", 0), "hvac_heads": kinds.get("minisplit", 0)},
             "plumbing": {"fixtures": sum(v for k, v in fx.items() if k in M.DFU), "dfu": m.notes.get("dfu", 0), "drain": m.notes.get("main_drain", ""),
                          "water_heater": "tank" if "wh" in fx else "tankless"},
-            "openings": {"windows": len([o for o in m.openings if o.kind == "window"]), "doors": len([o for o in m.openings if o.kind != "window"])},
+            "openings": {"windows": len([o for o in m.all("openings") if o.kind == "window"]), "doors": len([o for o in m.all("openings") if o.kind != "window"])},
+            "hvac": m.notes.get("hvac", {}),
+            "upper": bool(m.upper),
             "framing": {"walls": f"{m.stud} @ {24 if m.container else 16} in. o.c.", "foundation": m.foundation},
         }
         print(f"{slug}: {len(b.sheets)} sheets, zip {os.path.getsize(zpath) / 1e6:.1f} MB")
@@ -182,7 +191,7 @@ def main(only):
 
 
 README = """{name} - {title}
-Tiny Homes Blueprint  |  https://tinyhomesblueprint.com  |  210-903-9471
+{brand}  |  {site}  |  {phone}
 
 WHAT'S IN THIS FOLDER
   {base}-Construction-Drawings-24x36.pdf
@@ -203,7 +212,7 @@ WHAT'S IN THIS FOLDER
 QUICK NUMBERS
   Heated area: {sqft} sq ft
   Estimated cost, owner-built: ${diy}   With a general contractor: ${gc}
-  (2026 US national averages; see sheet G2.0 for what is included and excluded.)
+  ({basis}; see sheet G2.0 for what is included and excluded.){regions}
 
 LICENSE
   Your purchase includes a license to build ONE home from this plan. You may print and
@@ -212,14 +221,10 @@ LICENSE
   further license.
 
 IMPORTANT
-  These drawings are a planning and permit-development set generated from the plan
-  design. Building codes, snow and wind loads, soils and energy rules vary by location.
-  Have the structure, electrical and plumbing reviewed - and stamped where your
-  jurisdiction requires it - by a licensed engineer or architect, and use licensed
-  trades where required. Verify all dimensions before building.
+  {important}
 
 Need changes (flip the layout, add a bedroom, change the foundation)? Reply to your
-order email or call 210-903-9471 for a modification quote.
+order email or call {phone} for a modification quote.
 """
 
 if __name__ == "__main__":
