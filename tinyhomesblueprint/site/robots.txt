@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /inc/
+Disallow: /pages/
+
+Sitemap: https://tinyhomesblueprint.com/sitemap.xml
