@@ -12,7 +12,7 @@
 //   priority  sitemap priority
 //   updated   last meaningful content change (Y-m-d)
 
-const PAGES = [
+define('PAGES', [
     '/' => [
         'file' => 'home', 'type' => 'home', 'crumb' => 'Home', 'priority' => '1.0',
         'title' => 'Tiny Home Builders Texas | Cowboy Tiny Homes',
@@ -100,11 +100,11 @@ const PAGES = [
     '/home-designs/' => [
         'file' => 'home-designs', 'type' => 'page', 'crumb' => 'House Designs', 'priority' => '0.8',
         'title' => 'Tiny House Plans & Designs Texas | Cowboy Tiny Homes',
-        'desc'  => 'Browse tiny house plans and designs: ADUs, park models, tiny homes on wheels and small single-family homes. Filter by size and bedrooms.',
-        'image' => '3.webp',
+        'desc'  => 'Buy Texas tiny house plans: small homes, ADUs, casitas, park models and tiny homes on wheels. Full plan sets, 3D models and cost estimates. Or have us build it.',
+        'image' => '3.webp', 'updated' => '2026-10-30',
     ],
     '/gonzales-modern-living/' => [
-        'file' => 'gonzales-modern-living', 'type' => 'page', 'crumb' => 'Gonzales Modern Living', 'parent' => '/home-designs/', 'priority' => '0.7',
+        'file' => 'gonzales-modern-living', 'type' => 'plan', 'plan' => 'gonzales-modern-living', 'crumb' => 'Gonzales Modern Living', 'parent' => '/home-designs/', 'priority' => '0.8', 'updated' => '2026-10-30',
         'title' => 'Gonzales Modern Living | 2 Bed Small House Plan',
         'desc'  => 'The Gonzales Modern Living is a two-story, 2-bedroom, 1.5-bath small house plan with a home office, mini bar kitchen and patio. See the layout.',
         'image' => '3.webp',
@@ -249,13 +249,20 @@ const PAGES = [
         'desc'  => 'Share your tiny home, ADU or small-space design expertise. Guest post guidelines, topic ideas and how to pitch an article to Cowboy Tiny Homes.',
         'image' => 'og-cowboy-tiny-homes.jpg',
     ],
+    '/terms-of-sale/' => [
+        'file' => 'terms-of-sale', 'type' => 'legal', 'crumb' => 'Terms of Sale', 'priority' => '0.2',
+        'title' => 'Terms of Sale for House Plans | Cowboy Tiny Homes',
+        'desc'  => 'License, delivery, refunds and build-credit terms for Cowboy Tiny Homes house plans, and the professional review Texas buyers need.',
+        'image' => 'og-cowboy-tiny-homes.jpg', 'updated' => '2026-10-30',
+    ],
     '/privacy-policy/' => [
         'file' => 'privacy-policy', 'type' => 'legal', 'crumb' => 'Privacy Policy', 'priority' => '0.2',
         'title' => 'Privacy Policy | Cowboy Tiny Homes',
         'desc'  => 'How Cowboy Tiny Homes collects, uses and protects the information you share through cowboytinyhomes.com and our contact forms.',
         'image' => 'og-cowboy-tiny-homes.jpg',
     ],
-];
+] + plan_routes() + order_routes());
+
 
 // Old WordPress URLs => new homes (301). Anything under /wp-* that is not
 // listed here falls through to the router's generic rules.
@@ -280,3 +287,39 @@ const REDIRECTS = [
     '/category-sitemap.xml'                => '/sitemap.xml',
     '/wp-sitemap.xml'                      => '/sitemap.xml',
 ];
+
+/** One route per catalog plan (Gonzales Modern Living keeps its own entry above). */
+function plan_routes(): array
+{
+    global $PLANS;
+    $kind = ['single' => 'House Plan', 'adu' => 'ADU Plan', 'park' => 'Park Model Plan', 'thow' => 'Tiny House on Wheels Plan', 'studio' => 'Backyard Studio Plan'];
+    $out = [];
+    foreach ($PLANS as $slug => $p) {
+        if ($p['url'] !== "/home-designs/$slug/") continue;
+        $k = $kind[$p['category']];
+        $title = $p['name'] . ': ' . number_format($p['sqft']) . ' Sq Ft ' . $k;
+        if (strlen($title) <= 44) $title .= ' | Cowboy Tiny Homes';
+        $out[$p['url']] = [
+            'file' => 'plan', 'type' => 'plan', 'plan' => $slug, 'crumb' => $p['name'], 'parent' => '/home-designs/', 'priority' => '0.8',
+            'title' => $title,
+            'desc'  => $p['name'] . ': ' . strtolower($p['bed_label']) . ', ' . strtolower($p['bath_label']) . ', ' . number_format($p['sqft']) . ' sq ft ' . strtolower($k)
+                     . ' for Texas. Plan set with CAD, 3D model and cost estimate, $' . number_format($p['price']) . '. Or have us build it.',
+            'image' => "/assets/plans/$slug/3d.webp", 'updated' => '2026-10-30',
+        ];
+    }
+    return $out;
+}
+
+/** Store pages: never indexed or listed in the sitemap. */
+function order_routes(): array
+{
+    $r = fn($file, $crumb, $title) => ['file' => "order/$file", 'type' => 'page', 'crumb' => $crumb, 'parent' => '/home-designs/', 'priority' => '0',
+        'noindex' => true, 'title' => $title . ' | ' . SITE_NAME, 'desc' => 'Cowboy Tiny Homes plan store.', 'image' => 'og-cowboy-tiny-homes.jpg'];
+    return [
+        '/order/checkout/' => $r('checkout', 'Checkout', 'Checkout'),
+        '/order/complete/' => $r('complete', 'Your Plan Files', 'Your Plan Files'),
+        '/order/download/' => $r('download', 'Download', 'Download'),
+        '/order/lookup/'   => $r('lookup', 'Find My Plan Download', 'Find My Plan Download'),
+        '/order/webhook/'  => $r('webhook', 'Webhook', 'Webhook'),
+    ];
+}

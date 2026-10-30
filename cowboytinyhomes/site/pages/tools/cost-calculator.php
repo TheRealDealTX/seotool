@@ -39,6 +39,16 @@ $addons = [
           <input id="cc-size" type="range" name="size" min="120" max="400" step="10" value="260" data-fmt="sqft">
         </div>
         <div class="field">
+          <label for="cc-region">Where in Texas?</label>
+          <select id="cc-region" name="region">
+            <option value="1">Texas average</option>
+<?php $avg = array_sum(array_column(TX_REGIONS, 1)) / count(TX_REGIONS);
+      foreach (TX_REGIONS as [$name, $f]): ?>
+            <option value="<?= round($f / $avg, 3) ?>"><?= e($name) ?></option>
+<?php endforeach; ?>
+          </select>
+        </div>
+        <div class="field">
           <label>Finish level</label>
           <div class="chips">
             <label class="chip"><input type="radio" name="finish" value="basic"><span>Basic</span></label>
@@ -90,6 +100,7 @@ $addons = [
     <h2>How to Use the Tiny Home Cost Calculator</h2>
     <p>This tiny home cost calculator gives you a working budget before you talk to a builder or a lender. Start with the type of home you want. A <a href="/tiny-homes-on-wheels-texas/">tiny home on wheels</a> is built on a trailer and usually falls between 120 and 400 square feet. A <a href="/park-model-homes-texas/">park model home</a> is a cabin-style unit just under 400 square feet. An <a href="/adu-builders-texas/">ADU or backyard casita</a> sits on a permanent foundation next to a main house, and a <a href="/custom-tiny-homes-texas/">custom tiny or small home</a> is a stand-alone house on its own lot. The size slider automatically adjusts to the typical range for each type.</p>
     <p>Next, choose a finish level. <strong>Basic</strong> means durable, budget-friendly materials — vinyl plank floors, laminate counters, standard fixtures. <strong>Standard</strong> is what most Cowboy Tiny Homes clients choose: quality cabinets, quartz or butcher-block counters, good windows and a ductless mini-split. <strong>Premium</strong> covers custom millwork, stone or tile showers, metal roofing, high-end appliances and architectural details that take more labor.</p>
+    <p>Then pick where in Texas you are building. Labor and material prices run highest in the Austin metro and lowest in rural Texas; the regional factors are the same ones our <a href="/home-designs/">house plans</a> use for their cost estimates. Houston-area and coastal builds also need wind upgrades that the calculator does not include.</p>
     <p>Finally, add the site costs that apply to your property. These are the line items that surprise most first-time buyers. A home in a city lot may only need permits, a slab and utility connections, while rural Texas land might need a driveway, a septic system, a water well and a long electrical run.</p>
 
     <h2>What the Estimate Includes</h2>

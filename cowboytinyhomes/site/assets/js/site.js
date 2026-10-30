@@ -64,6 +64,13 @@
       });
     });
   });
+  // /home-designs/#adu (etc.) opens that filter; the nav links use these.
+  function hashFilter() {
+    var h = location.hash.slice(1), btn = h && document.querySelector('[data-design-filter="' + h + '"]');
+    if (btn) { btn.click(); var plans = document.getElementById('plans'); if (plans) plans.scrollIntoView(); }
+  }
+  hashFilter();
+  window.addEventListener('hashchange', hashFilter);
 
   // Contact page: Design/Build vs Remodel tabs.
   var tabs = document.querySelectorAll('[role=tab][data-panel]');

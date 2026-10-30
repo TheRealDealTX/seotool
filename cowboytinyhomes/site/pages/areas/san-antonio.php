@@ -57,6 +57,7 @@
   </div>
 </section>
 
+<?php plan_strip(['adu', 'single'], 'Plans We Build Around San Antonio'); ?>
 <?php faq_section([
     ['Can I build a casita in my backyard in San Antonio?',
      '<p>In many residential districts, yes. San Antonio allows accessory dwelling units subject to standards for size, height, setbacks and parking that can vary by zoning, historic district or conservation district. Verify the current rules with Development Services, or let Cowboy Tiny Homes check your address during the feasibility study.</p>'],

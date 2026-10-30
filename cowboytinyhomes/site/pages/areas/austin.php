@@ -53,6 +53,7 @@
   </div>
 </section>
 
+<?php plan_strip(['adu', 'single'], 'ADU and Small Home Plans for Austin Lots'); ?>
 <?php faq_section([
     ['Can I build a tiny house in my backyard in Austin?',
      '<p>In many cases, yes. Under the HOME code changes, most lots zoned for single-family use can have up to three units, which makes a backyard ADU or second home possible on far more lots than before. Impervious cover, setbacks, trees, deed restrictions and utilities still apply, so verify your specific lot with the city or have Cowboy Tiny Homes check it.</p>'],

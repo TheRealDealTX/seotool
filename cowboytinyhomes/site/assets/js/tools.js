@@ -127,6 +127,8 @@
     }
     function calc() {
       var type = val(root, 'type'), c = COST[type], fin = val(root, 'finish') || 'standard', fm = FINISH[fin], s = +size.value;
+      var regionEl = $(root, '[name=region]'), rf = regionEl ? (+regionEl.value || 1) : 1;
+      var regionName = regionEl ? regionEl.options[regionEl.selectedIndex].text : 'Texas average';
       var beds = num(root, 'beds'), lofts = num(root, 'lofts');
       var rows = [];
       rows.push({ label: 'Home build (' + s + ' sq ft, ' + fin + ')', low: c.low * fm * s, high: c.high * fm * s });
@@ -138,6 +140,8 @@
         var a = ADDONS[cb.getAttribute('data-addon')];
         rows.push({ label: a.label, low: a.low, high: a.high });
       });
+      // Regional labor and material prices scale every line.
+      rows.forEach(function (r) { r.low *= rf; r.high *= rf; });
       var low = 0, high = 0;
       rows.forEach(function (r) { low += r.low; high += r.high; });
       setText(root, '[data-out=total]', money(low) + ' – ' + money(high));
@@ -154,7 +158,7 @@
       var pay = payment(mid * 0.9, rate, 15);
       setText(root, '[data-out=monthly]', money0(pay) + '/mo');
       setText(root, '[data-out=monthly-note]', 'Midpoint ' + money(mid) + ', 10% down, ' + rate.toFixed(2) + '% for 15 years (illustrative).');
-      setHref(root, '[data-out=link]', '/contact-us/?' + qs({ project: type, size: s, budget: money(low) + '-' + money(high), note: c.label + ', ' + fin + ' finishes, ' + beds + ' bed, ' + lofts + ' loft' }));
+      setHref(root, '[data-out=link]', '/contact-us/?' + qs({ project: type, size: s, budget: money(low) + '-' + money(high), note: c.label + ', ' + fin + ' finishes, ' + beds + ' bed, ' + lofts + ' loft, ' + regionName }));
     }
     bindRangeOutputs(root);
     $$(root, '[name=type]').forEach(function (el) { el.addEventListener('change', function () { setLimits(false); calc(); }); });

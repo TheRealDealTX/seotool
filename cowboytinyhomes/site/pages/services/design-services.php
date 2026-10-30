@@ -91,6 +91,7 @@
 </aside>
 </div></section>
 
+<?php plan_strip(['single', 'adu'], 'Start From One of Our Plans', 'A catalog plan is the fastest way into a custom design: pick one close to what you want and we tailor it.'); ?>
 <?php faq_section([
     ['Can I buy tiny house plans and use my own builder?',
      '<p>Yes. Cowboy Tiny Homes offers design services on their own. You receive a complete drawing set you can take to any licensed builder for pricing and construction.</p>'],

@@ -204,10 +204,12 @@
       <h2>Gonzales Modern Living</h2>
       <div class="spec-row"><span class="spec">2 bedrooms</span><span class="spec">1.5 baths</span><span class="spec">2 floors</span><span class="spec">Home office</span></div>
       <p>A cozy contemporary small house with wood-textured floors, warm earth tones, a two-seat mini bar in the kitchen, a ground-floor powder room and both bedrooms plus a study upstairs. It is a favorite Cowboy Tiny Homes plan for couples and small families who want quality over square footage.</p>
-      <div class="btn-row"><a class="btn btn--ink" href="/gonzales-modern-living/">View the Plan</a><a class="btn btn--outline" href="/home-designs/">All House Designs</a></div>
+      <div class="btn-row"><a class="btn btn--ink" href="/gonzales-modern-living/">View the Plan</a><a class="btn btn--outline" href="/home-designs/">All 25 Texas House Plans</a></div>
     </div>
   </div>
 </section>
+<?php plan_strip(['single', 'adu', 'park', 'thow', 'studio'], 'Texas House Plans: Buy the Plan or Have Us Build It',
+    'Complete plan sets with a 3D model and a Texas cost estimate, from small homes and casitas to park models and tiny homes on wheels. ' . e(PLAN_CREDIT)); ?>
 
 <section class="section section--sand">
   <div class="wrap">

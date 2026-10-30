@@ -81,6 +81,7 @@
 </aside>
 </div></section>
 
+<?php plan_strip(['park'], 'Park Model Plans', 'Park model plans under the ANSI A119.5 400 sq ft limit, with porch and loft options.'); ?>
 <?php faq_section([
     ['Why are park model homes 399 square feet?',
      '<p>Park model RVs are commonly built to the ANSI A119.5 standard, which covers units with no more than 400 square feet of floor area in set-up mode. Designing at about 399 square feet keeps a home within that category. Lofts typically do not count toward the floor area.</p>'],

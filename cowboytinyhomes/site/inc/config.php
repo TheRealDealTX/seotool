@@ -10,7 +10,34 @@ const EMAIL       = 'contact@cowboytinyhomes.com';
 const LEAD_TO     = 'contact@cowboytinyhomes.com';   // where contact-form leads are emailed
 const MAIL_FROM   = 'contact@cowboytinyhomes.com';   // sender; SMTP login comes from inc/secrets.php (server only, not in git)
 const GA_ID       = 'G-JJPQXF3CVT';                  // Google Analytics 4 measurement ID (tag is in inc/layout.php <head>)
-const ASSET_VER   = '20261028b';                     // bump to bust browser caches for CSS/JS
+const ASSET_VER   = '20261030b';                     // bump to bust browser caches for CSS/JS
+
+// Plan store (inc/store.php, shared with tinyhomesblueprint.com). Stripe keys, paid plan
+// files and order records live one level above public_html in PRIVATE_DIR:
+//   cth-secrets.php  cth-plan-files/  cth-data/
+// Until cth-secrets.php has a Stripe key (and a plan's zip is uploaded) plan pages show
+// the quote / contact form instead of checkout.
+define('PRIVATE_DIR', getenv('CTH_PRIVATE_DIR') ?: dirname(__DIR__, 2));
+const STORE_PREFIX = 'cth';
+const ORDER_PREFIX = 'CTH';
+const SITE_EMAIL   = EMAIL;          // names the shared store code uses
+const SITE_PHONE   = PHONE;
+const SITE_TEL     = '+12109039471';
+const SMTP_FALLBACK_FILE = __DIR__ . '/secrets.php';   // existing contact-form SMTP login (host/port/user/pass)
+// Credit offered on every plan page and in the order email.
+const PLAN_CREDIT  = 'Build it with us: if Cowboy Tiny Homes builds this home for you under a contract signed within 12 months of your purchase, we credit the full plan price toward the build.';
+
+// Texas cost factors against 2026 US national-average prices. The plan-set generator uses the
+// same table (generator/profile.json "cost_regions"); validate.php checks they match.
+const TX_REGIONS = [
+    ['Austin metro', 1.00], ['Dallas metro', 0.95], ['Houston metro', 0.94], ['Fort Worth metro', 0.93],
+    ['San Antonio metro', 0.92], ['Rural Texas', 0.87],
+];
+
+/** URL of a plan page. Gonzales Modern Living keeps the URL it has ranked at since the WordPress site. */
+function plan_url(string $slug): string {
+    return $slug === 'gonzales-modern-living' ? '/gonzales-modern-living/' : "/home-designs/$slug/";
+}
 
 // Cities the old site's forms offered, and the area pages built for them.
 const SERVICE_CITIES = [
@@ -31,7 +58,15 @@ const NAV = [
         ['Tiny House Design Services', '/tiny-house-design-services/'],
         ['Home Remodel Design', '/home-remodel-design-texas/'],
     ]],
-    ['House Designs', '/home-designs/', null],
+    ['House Plans', '/home-designs/', [
+        ['All Texas House Plans', '/home-designs/'],
+        ['Small Homes', '/home-designs/#single'],
+        ['ADUs & Casitas', '/home-designs/#adu'],
+        ['Park Models', '/home-designs/#park'],
+        ['Tiny Homes on Wheels', '/home-designs/#thow'],
+        ['Studios & Offices', '/home-designs/#studio'],
+        ['Gonzales Modern Living', '/gonzales-modern-living/'],
+    ]],
     ['Service Areas', '/service-areas/', [
         ['San Antonio', '/tiny-home-builders-san-antonio/'],
         ['Austin', '/tiny-home-builders-austin/'],
@@ -56,3 +91,5 @@ const NAV = [
     ]],
     ['Blog', '/blog/', null],
 ];
+
+require __DIR__ . '/plans.php';

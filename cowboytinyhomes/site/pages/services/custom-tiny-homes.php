@@ -84,6 +84,7 @@
 </aside>
 </div></section>
 
+<?php plan_strip(['single'], 'Small Texas House Plans You Can Buy Today', 'Start from a finished design: every plan comes with a full drawing set, a 3D model and a Texas cost estimate, and we can build it for you.'); ?>
 <?php faq_section([
     ['How small can a custom tiny home on a foundation be in Texas?',
      '<p>It depends on the city. Some Texas cities and many HOAs set minimum house sizes, while others — and most unincorporated county land — have no minimum. Where IRC Appendix Q has been adopted, homes of 400 square feet or less get specific allowances for lofts and stairs. We confirm the rules for your lot during the feasibility study.</p>'],

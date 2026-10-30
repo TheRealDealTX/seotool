@@ -85,6 +85,7 @@
 </aside>
 </div></section>
 
+<?php plan_strip(['thow'], 'Tiny House on Wheels Plans', 'Bumper-pull and gooseneck plans drawn to Texas road limits, with full drawing sets and 3D models.'); ?>
 <?php faq_section([
     ['Can I live full-time in a tiny home on wheels in Texas?',
      '<p>Many people do, most often in RV parks that allow long-term stays or on rural land outside city limits. Inside most cities, tiny homes on wheels are treated as RVs and are not allowed as permanent residences on residential lots. Check local rules before you choose a site.</p>'],

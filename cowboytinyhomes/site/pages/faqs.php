@@ -57,6 +57,18 @@ $groups = [
         ['Do you also do home remodels?',
          '<p>Yes. We turn your remodel ideas into detailed blueprints for living areas, kitchens, bedrooms and bathrooms. See <a href="/home-remodel-design-texas/">home remodel design</a>.</p>'],
     ]],
+    'plans' => ['House Plans & Plan Purchases', [
+        ['Can I buy a house plan from Cowboy Tiny Homes?',
+         '<p>Yes. Our <a href="/home-designs/">Texas house plan catalog</a> has 25 plans: small homes, ADUs and casitas, park models, tiny homes on wheels and backyard studios. Each one is a complete set — a 24 x 36 construction drawing set, CAD file, electrical and plumbing plans, a materials list, a Texas cost estimate and a 3D model — delivered as an instant download.</p>'],
+        ['If I buy a plan, can you still build it for me?',
+         '<p>Yes. ' . e(PLAN_CREDIT) . ' We adapt the plan to your lot, get it engineered where your city requires and build it.</p>'],
+        ['Are your plans stamped or permit-ready in Texas?',
+         '<p>They are planning and permit-development drawings, not sealed documents. Texas cities review homes under the IRC with local amendments, and many require a Texas-licensed engineer\'s or architect\'s seal — almost always on the slab, which must follow a geotechnical report on expansive clay. Park models are certified to ANSI A119.5 by a manufacturer, and tiny homes on wheels follow TxDMV trailer rules. See the <a href="/guides/tiny-house-laws-texas/">Texas tiny house laws guide</a>.</p>'],
+        ['Do the plans work in Houston and on the Gulf Coast?',
+         '<p>With an upgrade. The plans assume 115 mph inland design wind. Houston-area and coastal sites need engineered wind design and protected or impact-rated windows, and homes in the Texas Department of Insurance catastrophe area (the 14 first-tier coastal counties and parts of Harris County) need TDI windstorm certification. We handle that on homes we build.</p>'],
+        ['How do I get my plan files, and what if I lose the link?',
+         '<p>After checkout you get a download link on screen and by email. It works for a year and up to 25 downloads, and you can get fresh links any time at <a href="/order/lookup/">Find my plan download</a>. See the <a href="/terms-of-sale/">terms of sale</a> for the license and refund policy.</p>'],
+    ]],
 ];
 ?>
 <section class="section">

@@ -53,6 +53,7 @@
   </div>
 </section>
 
+<?php plan_strip(['single', 'park'], 'Plans We Build Around Fort Worth'); ?>
 <?php faq_section([
     ['Does Fort Worth allow backyard ADUs?',
      '<p>Fort Worth allows ADUs in some zoning districts with conditions on size, setbacks, parking and sometimes owner occupancy. Whether your lot qualifies depends on its zoning and any overlays, so verify with the city or let Cowboy Tiny Homes check during the feasibility study.</p>'],

@@ -50,6 +50,7 @@
   </div>
 </section>
 
+<?php plan_strip(['single', 'adu'], 'Plans We Build in North Texas'); ?>
 <?php faq_section([
     ['Are ADUs allowed in Dallas?',
      '<p>Dallas has historically required a Board of Adjustment special exception for rental ADUs in many single-family districts, and the city has been reviewing its rules. Requirements depend on your zoning district and may have changed, so check with Dallas Development Services or let Cowboy Tiny Homes research your address.</p>'],

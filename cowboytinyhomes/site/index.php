@@ -6,6 +6,7 @@ declare(strict_types=1);
 require __DIR__ . '/inc/config.php';
 require __DIR__ . '/inc/pages.php';
 require __DIR__ . '/inc/layout.php';
+require __DIR__ . '/inc/plan-ui.php';
 
 $uri  = $_SERVER['REQUEST_URI'] ?? '/';
 $path = rawurldecode(strtok($uri, '?') ?: '/');
@@ -41,6 +42,7 @@ if ($path === '/sitemap.xml') {
     echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
     foreach (PAGES as $p => $m) {
+        if (!empty($m['noindex'])) continue;
         echo '  <url><loc>' . e(abs_url($p)) . '</loc><lastmod>' . ($m['updated'] ?? $m['published'] ?? '2026-10-28')
            . '</lastmod><priority>' . $m['priority'] . "</priority></url>\n";
     }
@@ -77,5 +79,6 @@ $GLOBALS['page'] = $meta;
 ob_start();
 require __DIR__ . '/pages/' . $meta['file'] . '.php';
 $content = ob_get_clean();
+$status = $GLOBALS['status'] ?? $status;   // order pages set their own status (404, 410, 503)
 
 render_page($path, $meta, $content, $status);

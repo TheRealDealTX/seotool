@@ -27,7 +27,7 @@ function abs_url(string $path): string
 
 function img_url(string $file): string
 {
-    return '/assets/img/' . $file;
+    return $file[0] === '/' ? $file : '/assets/img/' . $file;   // plan pages pass /assets/plans/... paths
 }
 
 function page_meta(string $path): ?array
@@ -110,7 +110,7 @@ function related(array $paths, string $heading = 'Keep Exploring'): void
 
 function kicker(string $type): string
 {
-    return ['service' => 'Home Build', 'area' => 'Service Area', 'guide' => 'Guide', 'post' => 'Blog', 'tool' => 'Free Tool',
+    return ['plan' => 'House Plan', 'service' => 'Home Build', 'area' => 'Service Area', 'guide' => 'Guide', 'post' => 'Blog', 'tool' => 'Free Tool',
             'hub' => 'Explore', 'page' => 'Cowboy Tiny Homes', 'home' => 'Home', 'legal' => 'Info'][$type] ?? 'Explore';
 }
 
@@ -221,8 +221,8 @@ function render_page(string $path, array $m, string $content, int $status = 200)
     header('Content-Type: text/html; charset=utf-8');
     $canonical = abs_url($path);
     $og = abs_url(img_url($m['image'] ?? 'og-cowboy-tiny-homes.jpg'));
-    $robots = $status === 200 ? 'index, follow, max-image-preview:large' : 'noindex, follow';
-    $schema = $status === 200 ? build_schema($path, $m) : null;
+    $robots = $status === 200 && empty($m['noindex']) ? 'index, follow, max-image-preview:large' : 'noindex, follow';
+    $schema = $status === 200 && empty($m['noindex']) ? build_schema($path, $m) : null;
     ?><!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -240,7 +240,7 @@ function render_page(string $path, array $m, string $content, int $status = 200)
 <title><?= e($m['title']) ?></title>
 <meta name="description" content="<?= e($m['desc']) ?>">
 <meta name="robots" content="<?= $robots ?>">
-<?php if ($status === 200): ?><link rel="canonical" href="<?= e($canonical) ?>">
+<?php if ($status === 200 && empty($m['noindex'])): ?><link rel="canonical" href="<?= e($canonical) ?>">
 <?php endif; ?>
 <meta property="og:type" content="<?= in_array($m['type'], ['guide', 'post'], true) ? 'article' : 'website' ?>">
 <?php if ($m['type'] === 'post'): ?><meta property="article:published_time" content="<?= e($m['published']) ?>">
@@ -321,7 +321,7 @@ function render_page(string $path, array $m, string $content, int $status = 200)
         <li><a href="/park-model-homes-texas/">Park Model Homes</a></li>
         <li><a href="/tiny-house-design-services/">Design Services</a></li>
         <li><a href="/home-remodel-design-texas/">Home Remodel Design</a></li>
-        <li><a href="/home-designs/">House Designs</a></li>
+        <li><a href="/home-designs/">Texas House Plans</a></li>
       </ul>
     </div>
     <div>
@@ -349,7 +349,7 @@ function render_page(string $path, array $m, string $content, int $status = 200)
   </div>
   <div class="wrap footer-bottom">
     <span>© <?= date('Y') ?> <?= SITE_NAME ?>. All rights reserved.</span>
-    <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/contact-us/">Contact Us</a> · <a href="/sitemap.xml">Sitemap</a></span>
+    <span><a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-sale/">Terms of Sale</a> · <a href="/order/lookup/">Find My Plan Download</a> · <a href="/contact-us/">Contact Us</a> · <a href="/sitemap.xml">Sitemap</a></span>
   </div>
 </footer>
 <a class="mobile-call" href="<?= PHONE_HREF ?>">Call <?= PHONE ?></a>

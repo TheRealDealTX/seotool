@@ -24,6 +24,8 @@ if (!$v && (isset($_GET['project']) || isset($_GET['budget']) || isset($_GET['no
     $prefill = "From the website planning tools —\n" . implode("\n", $bits) . "\n\nMy goals: ";
 }
 $activeRemodel = ($v['form'] ?? '') === 'remodel' || (($_GET['project'] ?? '') === 'remodel');
+// Plan pages pass ?ptype= to preselect the project type.
+$preType = $v ? '' : contact_clean((string)($_GET['ptype'] ?? ''), 80);
 
 $cityOptions = function (string $sel) {
     $out = '<option value="">- Select City -</option>';
@@ -72,7 +74,7 @@ hero([
         <div><label for="b-type">What do you want to build?</label>
           <select id="b-type" name="project_type">
 <?php foreach (['', 'Custom tiny home', 'ADU / casita / guest house', 'Tiny home on wheels', 'Park model home', 'Small single-family home', 'Design / plans only', 'Not sure yet'] as $o): ?>
-            <option value="<?= e($o) ?>"<?= ($v['project_type'] ?? '') === $o && $o !== '' ? ' selected' : '' ?>><?= $o === '' ? '- Select -' : e($o) ?></option>
+            <option value="<?= e($o) ?>"<?= ($v['project_type'] ?? $preType) === $o && $o !== '' ? ' selected' : '' ?>><?= $o === '' ? '- Select -' : e($o) ?></option>
 <?php endforeach; ?>
           </select></div>
         <div><label for="b-city">City you are building in or near</label><select id="b-city" name="city"><?= $cityOptions($v['city'] ?? '') ?></select></div>

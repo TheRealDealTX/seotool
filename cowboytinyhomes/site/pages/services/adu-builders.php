@@ -94,6 +94,7 @@
 </aside>
 </div></section>
 
+<?php plan_strip(['adu', 'studio'], 'ADU and Casita Plans', 'Casita, granny flat, guest house and backyard studio plans drawn for Texas lots. Buy the plan set, or have us build it.'); ?>
 <?php faq_section([
     ['Are ADUs legal in Texas?',
      '<p>There is no blanket statewide answer — it depends on your city’s zoning, and on deed restrictions and county rules outside city limits. Many Texas cities allow ADUs in at least some residential districts, often with size, setback and parking standards. We confirm the rules for your property before design begins.</p>'],

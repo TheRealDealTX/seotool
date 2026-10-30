@@ -48,6 +48,7 @@
   </div>
 </section>
 
+<?php plan_strip(['single', 'adu'], 'Plans We Build in the Houston Area', 'Houston-area builds get an engineered wind upgrade and, near the coast, TDI windstorm certification.'); ?>
 <?php faq_section([
     ['Is it legal to build a tiny house in Houston?',
      '<p>Houston has no traditional zoning, but deed restrictions, HOA rules, the city’s development ordinance, building codes and floodplain rules still apply. A permitted, code-compliant tiny home is legal on many lots — check your restrictions first or have Cowboy Tiny Homes review them.</p>'],

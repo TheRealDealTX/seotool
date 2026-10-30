@@ -1,0 +1,128 @@
+{
+ "brand_name": "Cowboy Tiny Homes",
+ "brand_lines": [
+  "COWBOY",
+  "TINY HOMES"
+ ],
+ "site": "cowboytinyhomes.com",
+ "url": "https://cowboytinyhomes.com",
+ "phone": "210-903-9471",
+ "email": "contact@cowboytinyhomes.com",
+ "overhang": 1.5,
+ "radiant_barrier": true,
+ "ceiling_fans": true,
+ "cooling_btu_per_sqft": 22,
+ "window_spec": "low-E, U-0.30 / SHGC 0.25 max.",
+ "materials": {
+  "roof": "#8b969c",
+  "siding": "#ece6da",
+  "trim": "#fbfaf6",
+  "door": "#6b4a33",
+  "porch": "#9a7652",
+  "stone": "#c2ae8c"
+ },
+ "cost_basis": "2026 US national averages (see the Texas regional table)",
+ "cost_regions": [
+  [
+   "Austin metro",
+   1.0
+  ],
+  [
+   "Dallas metro",
+   0.95
+  ],
+  [
+   "Houston metro",
+   0.94
+  ],
+  [
+   "Fort Worth metro",
+   0.93
+  ],
+  [
+   "San Antonio metro",
+   0.92
+  ],
+  [
+   "Rural Texas",
+   0.87
+  ]
+ ],
+ "slab": {
+  "beam_w": 1.0,
+  "beam_d": 2.0,
+  "interior_beam_spacing": 15,
+  "base": "Select fill, PI 7-20, compacted (12 in.)",
+  "base_depth": 1.0,
+  "base_price": 38,
+  "plan_text": [
+   "4\" STIFFENED SLAB ON 10 MIL VAPOR RETARDER OVER SELECT FILL",
+   "#4 BARS @ 18\" O.C. E.W.; 12\" x 24\" GRADE BEAMS W/ (2) #5 T&B (DASHED)",
+   "INTERIOR BEAMS @ 15'-0\" MAX. E.W. - FINAL DESIGN PER GEOTECHNICAL REPORT"
+  ],
+  "section": [
+   "FLOOR: LVP on 4\" stiffened slab-on-grade, 10 mil vapor retarder, select fill per the geotechnical report.",
+   "Grade beams 12\" x 24\" with (2) #5 top & bottom, interior beams @ 15'-0\" max.; 1/2\" anchor bolts @ 6'-0\" o.c."
+  ],
+  "notes": [
+   "EXPANSIVE CLAY: get a site-specific geotechnical report before you build. Slab type, beam depth and fill depend on the soil's plasticity index and potential vertical rise (PVR). These drawings show a stiffened slab for PVR of 2 in. or less; use a post-tensioned slab (PTI DC10.5) where the engineer specifies.",
+   "Strip topsoil, roots and organics; place select fill (PI 7-20) compacted to 95% standard Proctor, 12 in. min. under the slab or as the geotechnical report requires.",
+   "Perimeter grade beams 12 in. wide x 24 in. deep with (2) #5 top and bottom; interior beams at 15 ft max. each way; 4 in. slab with #4 bars at 18 in. o.c. each way on chairs.",
+   "Concrete 3,000 psi min. at 28 days; control joints at 12 ft max.; wet-cure 7 days (hot-weather concreting per ACI 305 in Texas summers).",
+   "Pressure-test under-slab plumbing before the pour and sleeve pipes through grade beams; plumbing inspection before the pour.",
+   "Termite protection (Texas is a very heavy termite area): pre-treat the soil or install a physical barrier before the pour; treated sill plates; 1/2 in. anchor bolts at 6 ft o.c. and within 12 in. of plate ends.",
+   "Keep clay moisture steady: grade 6 in. of fall in the first 10 ft away from the slab, discharge downspouts 5 ft from the foundation, and do not plant trees within 15 ft."
+  ]
+ },
+ "general_notes": [
+  [
+   [
+    "house",
+    "adu",
+    "studio"
+   ],
+   "Texas cities adopt the International Residential Code (IRC) with local amendments; many unincorporated county areas have no residential building code. Build to the 2021 IRC (Appendix AQ for tiny houses where adopted), the 2023 NEC and the 2021 IPC as the jurisdiction amends them, and the energy code it has adopted. See cowboytinyhomes.com/guides/tiny-house-laws-texas/."
+  ],
+  [
+   [
+    "adu"
+   ],
+   "Accessory dwelling unit rules (size, height, setbacks, utilities, parking, owner occupancy) vary city by city in Texas. Confirm with the city's zoning office before you buy materials."
+  ],
+  [
+   [
+    "park-model"
+   ],
+   "Park model RVs are recreational vehicles built to ANSI A119.5 (400 sq ft max. in setup mode, measured outside walls; lofts per the standard) and NFPA 70 Article 551, and are titled through the Texas DMV, not regulated by the IRC. A park model manufacturer must certify the unit; local placement and RV park rules apply."
+  ],
+  [
+   [
+    "thow"
+   ],
+   "Tiny house on wheels: titled and registered in Texas as a trailer (TxDMV). Legal on public roads without a permit at 8'-6\" wide and 14'-0\" high (this plan is 13'-6\"); truck + trailer combinations up to 65 ft long. Trailers over 4,500 lb need brakes; combinations over 26,000 lb with a trailer over 10,000 lb need a Class A license. Local zoning decides where it may be lived in."
+  ],
+  "Climate: designed for IECC climate zones 2-3 (cooling-dominated Texas). Radiant-barrier roof sheathing, R-38 attic (R-30 min. cathedral), R-21 walls, windows U-0.30 / SHGC 0.25 max., 18 in. overhangs and shaded porches, ceiling fans, and ductless heat pumps sized room by room (E1.0).",
+  "Design loads assumed: 40 psf floor live, 30 psf sleeping-area live, 20 psf roof live, no snow load (ground snow 5 psf or less), 115 mph ultimate wind speed, Exposure B (inland Texas), Seismic Design Category A. Verify for your site.",
+  "COASTAL WIND: Gulf Coast sites (the Houston-Galveston area and the TDI catastrophe area - the 14 first-tier coastal counties and parts of Harris County east of SH 146) have 130-160+ mph design winds and are in the windborne-debris region. Those builds need engineered wind design, impact-rated or protected openings and Texas Department of Insurance windstorm certification (WPI-8). Have a Texas-licensed engineer upgrade these drawings.",
+  [
+   [
+    "house",
+    "adu",
+    "studio",
+    "park-model"
+   ],
+   "Expansive clay soils: the slab shown is a stiffened slab-on-grade for moderate soils. Final foundation design must follow a site-specific geotechnical report and a Texas-licensed engineer (see S1.0)."
+  ],
+  "Termites: Texas is a very heavy termite hazard area. Provide soil treatment or a physical barrier, treated lumber within 8 in. of grade and on concrete, and keep siding 6 in. above finished grade.",
+  "Smoke alarms in every sleeping room and outside sleeping areas, interconnected and hardwired with battery backup. Every sleeping room and loft needs an emergency escape opening (5.7 sq ft net clear, 20 in. min. wide, 24 in. min. high, sill 44 in. max.).",
+  "Verify all dimensions, site conditions and utility locations before construction. Written dimensions govern; do not scale drawings."
+ ],
+ "readme_important": "These drawings are a planning and permit-development set generated from the plan\n  design. They are not stamped. Codes, wind loads, soils and energy rules vary across\n  Texas: have the structure (including the slab, designed from a geotechnical report),\n  electrical and plumbing reviewed - and stamped where your city, county or lender\n  requires it - by a Texas-licensed engineer or architect, and use licensed trades where\n  required. Coastal (TDI windstorm) sites need an engineer's wind upgrade. Verify all\n  dimensions before building.",
+ "excludes_extra": [
+  "Geotechnical report and engineered foundation design",
+  "Coastal wind upgrades and TDI windstorm certification (Gulf Coast sites)"
+ ],
+ "framing_notes": [
+  "Wind: uplift connectors at every truss and rafter (H2.5A min.) and a continuous load path to the foundation; Gulf Coast sites need an engineered wind upgrade (see A0.0)."
+ ]
+}
