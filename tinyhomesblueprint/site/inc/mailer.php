@@ -1,6 +1,6 @@
 <?php
 // Outgoing mail through the contact@ mailbox over authenticated SMTP (Hostinger).
-// Credentials live in thb-secrets.php one level above the web root, never in the repo:
+// Credentials live in thb-secrets.php in PRIVATE_DIR (one level above the web root), never in the repo:
 //   <?php return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 //                 'smtp_user' => 'contact@tinyhomesblueprint.com', 'smtp_pass' => '...'];
 // Without that file, or if SMTP fails, it falls back to PHP mail().
@@ -8,7 +8,7 @@
 function thb_secrets(): array {
     static $s = null;
     if ($s === null) {
-        $f = dirname(__DIR__, 2) . '/thb-secrets.php';
+        $f = PRIVATE_DIR . '/thb-secrets.php';
         $s = is_file($f) ? (array)(include $f) : [];
     }
     return $s;

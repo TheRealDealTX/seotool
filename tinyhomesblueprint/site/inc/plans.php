@@ -3,7 +3,8 @@
 //
 // Each plan's geometry is in feet. W runs left to right on the drawings (the long side),
 // D runs front to back. 'rooms' tile the main-floor footprint exactly; 'loft' areas sit
-// above it; 'porch' sits outside it. build-plans.php draws the floor plan and front
+// above it; 'porch' sits outside it. A room labeled PORCH is a covered porch inset into
+// the footprint: it is drawn with the rooms but left out of the heated square footage. build-plans.php draws the floor plan and front
 // elevation SVGs (assets/plans/) from this data, and validate.php checks the tiling and
 // that sqft = main floor + loft.
 //
@@ -18,7 +19,10 @@ $PLANS = [
         'walls' => '2x6 wood framing, siding and stone exterior', 'foundation' => 'Slab or crawlspace',
         'features' => ['Covered front porch', 'Open living, kitchen and dining', 'Flex room with retractable wall (dining, office or guest room)', 'Main-floor laundry', 'Private bedroom wing', 'Can be flipped to put the porch at the rear'],
         'styles' => ['small-cabin-plans', 'tiny-cottage-plans', 'adu-plans', 'small-farmhouse-plans'],
-        'image' => '/assets/img/plan-12-2418.webp',
+        'image' => '/assets/img/plan-12-2418.webp', 'roof_type' => 'gable',
+        'rooms' => [['PORCH', 0, 0, 14, 10], ['LIVING', 0, 10, 14, 10], ['KITCHEN', 14, 0, 10, 10], ['FLEX ROOM', 14, 10, 10, 10],
+                    ['BEDROOM 1', 24, 0, 14, 8], ['BATH 1', 24, 8, 7, 5], ['BATH 2 + W/D', 31, 8, 7, 5], ['BEDROOM 2', 24, 13, 14, 7]],
+        'loft' => [['BEDROOM 3 LOFT', 24, 0, 8, 10]],
         'intro' => 'Plan 12-2418 is a rustic 700 sq ft tiny house plan with three bedrooms, two baths and a covered front porch, drawn on a compact 20 x 38 ft footprint. It works as an affordable primary residence, a family vacation cabin or a roomy backyard ADU where zoning allows.',
         'layout' => [
             'The side main entrance opens into an open living area with direct access to the covered front porch, so the porch works as an extra outdoor room in good weather.',
@@ -35,7 +39,9 @@ $PLANS = [
         'walls' => '2x6 wood framing, siding and stone exterior', 'foundation' => 'Slab or crawlspace',
         'features' => ['Everything on one floor, no stairs', 'Side entry into an open great room', 'Kitchen sized for a table or island', 'Flex room with retractable wall', 'Full shower bath', 'Main-floor laundry'],
         'styles' => ['small-cabin-plans', 'tiny-cottage-plans', 'adu-plans'],
-        'image' => '/assets/img/plan-12-2417.webp',
+        'image' => '/assets/img/plan-12-2417.webp', 'roof_type' => 'gable',
+        'rooms' => [['PORCH', 0, 0, 12, 5], ['GREAT ROOM', 0, 5, 12, 15], ['KITCHEN', 12, 0, 10, 10], ['FLEX ROOM', 12, 10, 10, 10],
+                    ['BEDROOM 1', 22, 0, 16, 8], ['BATH', 22, 8, 8, 5], ['LAUNDRY', 30, 8, 8, 5], ['BEDROOM 2', 22, 13, 16, 7]],
         'intro' => 'Plan 12-2417 is a single-level 700 sq ft tiny cabin plan with two bedrooms and one full bath on a 20 x 38 ft footprint. With everything on one floor and no stairs, it suits full-time living, downsizing and aging in place as well as weekend getaways.',
         'layout' => [
             'A side entry leads into one open great room that combines living, kitchen and dining, with access to the covered front porch.',
@@ -329,7 +335,8 @@ foreach ($PLANS as $slug => &$p) {
     $ft = function (float $v): string { $f = (int)floor($v); $in = (int)round(($v - $f) * 12); return $in ? "$f' $in\"" : "$f'"; };
     $p['width'] = $ft($p['W']);   // long side
     $p['depth'] = $ft($p['D']);
-    $p['main_sqft'] = isset($p['rooms']) ? (int)round($p['W'] * $p['D']) : ($p['sqft'] ?? 0);
+    $porchArea = array_sum(array_map(function ($r) { return $r[0] === 'PORCH' ? $r[3] * $r[4] : 0; }, $p['rooms'] ?? []));
+    $p['main_sqft'] = isset($p['rooms']) ? (int)round($p['W'] * $p['D'] - $porchArea) : ($p['sqft'] ?? 0);
     $p['loft_sqft'] = (int)round(array_sum(array_map(function ($r) { return $r[3] * $r[4]; }, $p['loft'] ?? [])));
     if (!isset($p['sqft'])) $p['sqft'] = $p['main_sqft'] + $p['loft_sqft'];
     $p['mobile'] = $p['mobile'] ?? false;
@@ -339,3 +346,13 @@ foreach ($PLANS as $slug => &$p) {
 }
 unset($p);
 uasort($PLANS, function ($a, $b) { return $a['sqft'] <=> $b['sqft'] ?: strcmp($a['name'], $b['name']); });
+
+/** Generated plan-set details (estimate, materials summary, sheets, files) from generator/build.py. */
+function plan_sets(): array {
+    static $sets = null;
+    if ($sets === null) {
+        $f = __DIR__ . '/plan-sets.json';
+        $sets = is_file($f) ? (json_decode((string)file_get_contents($f), true) ?: []) : [];
+    }
+    return $sets;
+}

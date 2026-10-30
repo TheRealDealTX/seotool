@@ -9,8 +9,10 @@ const SITE_TAG    = 'Tiny House Plans & Blueprints';
 const SITE_PHONE  = '210-903-9471';
 const SITE_TEL    = '+12109039471';
 const SITE_EMAIL  = 'contact@tinyhomesblueprint.com';
-const ASSET_VER   = '20261025c';
+const ASSET_VER   = '20261030a';
 const GA_ID       = 'G-7XXLLDTBJR';
+// Secrets, paid plan files and order records live one level above public_html.
+define('PRIVATE_DIR', getenv('THB_PRIVATE_DIR') ?: dirname(__DIR__, 2));
 
 // Primary navigation. Each entry: label => path, or label => [path, children].
 $NAV = [
@@ -225,6 +227,13 @@ $ROUTES = [
     '/terms-conditions/' => ['file' => 'company/terms-conditions.php', 'type' => 'legal', 'priority' => '0.2',
         'title' => 'Terms & Conditions | Tiny Homes Blueprint',
         'description' => 'Terms and conditions for using Tiny Homes Blueprint and purchasing tiny house plans, including plan licensing and refunds.'],
+    // Store: checkout, order confirmation, downloads. Not indexed, not in the sitemaps.
+    '/order/checkout/' => ['file' => 'order/checkout.php', 'type' => 'order', 'title' => 'Checkout | Tiny Homes Blueprint', 'description' => ''],
+    '/order/complete/' => ['file' => 'order/complete.php', 'type' => 'order', 'title' => 'Your Plan Files | Tiny Homes Blueprint', 'description' => ''],
+    '/order/download/' => ['file' => 'order/download.php', 'type' => 'order', 'title' => 'Download | Tiny Homes Blueprint', 'description' => ''],
+    '/order/lookup/' => ['file' => 'order/lookup.php', 'type' => 'order', 'title' => 'Find My Plan Download | Tiny Homes Blueprint',
+        'description' => 'Get a new download link for a plan you bought from Tiny Homes Blueprint.'],
+    '/order/webhook/' => ['file' => 'order/webhook.php', 'type' => 'order', 'title' => '', 'description' => ''],
     '/sitemap/' => ['file' => 'company/sitemap.php', 'type' => 'legal', 'priority' => '0.3',
         'title' => 'Sitemap | Tiny Homes Blueprint',
         'description' => 'Every page on Tiny Homes Blueprint: tiny house plans, style guides, free calculators and articles.'],

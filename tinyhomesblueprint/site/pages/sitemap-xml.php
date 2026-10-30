@@ -5,6 +5,7 @@ $default = ['home' => '1.0', 'catalog' => '0.9', 'style' => '0.8', 'tool' => '0.
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 foreach ($ROUTES as $path => $r) {
+    if ($r['type'] === 'order') continue;
     $mod = $r['modified'] ?? $r['date'] ?? '2026-10-25';
     printf("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>\n",
         e(SITE_URL . $path), e($mod), $r['priority'] ?? $default[$r['type']] ?? '0.5');

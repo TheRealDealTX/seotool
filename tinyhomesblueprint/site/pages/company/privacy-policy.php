@@ -1,5 +1,5 @@
 <?php page_start(['breadcrumbs' => [['Home', '/'], ['Privacy Policy', null]]]); ?>
-<section class="page-hero"><div class="narrow"><h1>Privacy Policy</h1><p class="muted">Last updated October 25, 2026</p></div></section>
+<section class="page-hero"><div class="narrow"><h1>Privacy Policy</h1><p class="muted">Last updated October 30, 2026</p></div></section>
 <section class="section" style="padding-top:0"><div class="narrow prose">
   <p>This policy explains how Tiny Homes Blueprint ("we", "us") collects and uses information when you visit tinyhomesblueprint.com or contact us.</p>
   <h2>Information we collect</h2>
@@ -19,7 +19,7 @@
   <h2>Cookies</h2>
   <p>The contact form uses a short-lived session cookie to protect against automated spam. We do not use advertising cookies. If we add analytics in the future, we will update this policy.</p>
   <h2>Payments</h2>
-  <p>Plan payments are handled through a secure third-party payment link. We do not store card numbers on our servers.</p>
+  <p>Plan payments are processed by Stripe, Inc. on its secure checkout page; card details go directly to Stripe and never touch our servers. For each order we keep your name, email address, the plan purchased, the amount paid and how many times the download link was used, so we can deliver your files, resend links and answer questions. Stripe's handling of payment data is described in its <a href="https://stripe.com/privacy" rel="noopener">privacy policy</a>.</p>
   <h2>Data retention</h2>
   <p>We keep inquiry and order records for as long as needed to serve you and meet tax and legal requirements, then delete them.</p>
   <h2>Your choices</h2>

@@ -1,5 +1,5 @@
 <?php page_start(['breadcrumbs' => [['Home', '/'], ['Terms & Conditions', null]]]); ?>
-<section class="page-hero"><div class="narrow"><h1>Terms &amp; Conditions</h1><p class="muted">Last updated October 25, 2026</p></div></section>
+<section class="page-hero"><div class="narrow"><h1>Terms &amp; Conditions</h1><p class="muted">Last updated October 30, 2026</p></div></section>
 <section class="section" style="padding-top:0"><div class="narrow prose">
   <p>By using tinyhomesblueprint.com or purchasing a plan from Tiny Homes Blueprint, you agree to these terms.</p>
   <h2>Plan license</h2>
@@ -9,9 +9,11 @@
   <h2>Local codes and professional review</h2>
   <p>Building codes, zoning rules, snow, wind and seismic loads and energy requirements vary by location. Our plans are designed to common residential standards, but it is your responsibility to have them reviewed by your local building department and, where required, a licensed engineer or architect, and to obtain all required permits before construction.</p>
   <h2>Orders and delivery</h2>
-  <p>Plans are delivered digitally after your order and payment are confirmed. Prices are in US dollars and may change without notice; the price confirmed in your order applies.</p>
+  <p>Plans are sold as instant digital downloads. Payment is processed by Stripe; after a successful payment you receive a download link on screen and by email. The link works for 365 days and up to 25 downloads, and you can request a new link at any time from the <a href="/order/lookup/">Find my plan download</a> page. Prices are in US dollars and may change without notice; the price shown at checkout applies.</p>
+  <h2>About the drawings</h2>
+  <p>Plan sets are generated from each design and include construction drawings, electrical and plumbing layouts, a materials list and a cost estimate. Electrical and plumbing layouts, framing sizes, quantities and costs are planning information based on common residential codes and national-average prices; they must be verified, and where your jurisdiction requires it designed or stamped, by licensed professionals before construction.</p>
   <h2>Refunds</h2>
-  <p>Because plans are digital products that cannot be returned once delivered, all sales are final after the files have been sent. If a file is damaged or incomplete, contact us and we will replace it. If you have not yet received files, you may cancel your order for a full refund.</p>
+  <p>Because plans are digital products that cannot be returned, all sales are final once the files have been downloaded. If you have not downloaded your plan set, contact us within 14 days of purchase for a full refund. If a file is damaged or incomplete, contact us and we will replace it. A refunded order's download link is turned off.</p>
   <h2>Tools and guides</h2>
   <p>Our calculators, guides and estimates are for general planning only. Costs, weights, solar sizing and legal information are estimates and may not reflect your project, location or current regulations. They are not engineering, legal or financial advice. Verify important decisions with qualified professionals and your local authorities.</p>
   <h2>Limitation of liability</h2>

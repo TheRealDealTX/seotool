@@ -382,3 +382,52 @@ input[type=range] { width: 100%; accent-color: var(--teal); }
 .post-card > span:not(.post-meta):not(.post-more) { color: var(--muted); font-size: .93rem; line-height: 1.5; }
 .post-meta { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--muted); }
 .post-more { margin-top: auto; color: var(--teal); font-weight: 600; font-size: .92rem; }
+
+/* ---- Plan set previews, cost tool and store ----------------------------------------- */
+.tabs { margin-bottom: 36px; }
+.tab-list { display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 2px solid var(--line); margin-bottom: 18px; }
+.tab-list [role="tab"] { font: 600 .98rem/1 var(--sans); padding: .85em 1.15em; border: 0; border-bottom: 3px solid transparent; margin-bottom: -2px; background: none; color: var(--muted); cursor: pointer; border-radius: 8px 8px 0 0; }
+.tab-list [role="tab"]:hover { color: var(--ink); background: var(--teal-l); }
+.tab-list [role="tab"][aria-selected="true"] { color: var(--teal-d); border-bottom-color: var(--wood); }
+.tab-panel .plan-drawing img { max-height: 720px; }
+.plan-drawing figcaption { color: #cfe3e3; font-size: .85rem; padding: 0 14px 10px; }
+.elev-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.elev-grid .plan-drawing { margin: 0; }
+@media (max-width: 760px) { .elev-grid { grid-template-columns: 1fr; } .tab-list [role="tab"] { padding: .75em .8em; font-size: .92rem; } }
+.stat-row { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat-row li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 2px; }
+.stat-row strong { font-family: var(--serif); font-size: 1.2rem; color: var(--teal-d); }
+.stat-row span { color: var(--muted); font-size: .88rem; line-height: 1.35; }
+.viewer { position: relative; background: #eef4f3; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.viewer canvas { display: block; width: 100%; height: 420px; touch-action: none; cursor: grab; }
+.viewer canvas:active { cursor: grabbing; }
+.viewer-status { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; color: var(--muted); }
+.viewer-tools { position: absolute; left: 12px; bottom: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.viewer-tools .chip { padding: .5em .85em; font-size: .85rem; box-shadow: var(--shadow); }
+.set-contents h3 { font-family: var(--sans); font-size: 1.05rem; }
+.sheet-list, .file-list { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.sheet-list li, .file-list li { padding: 9px 14px; border-bottom: 1px solid var(--line); font-size: .94rem; display: flex; gap: 10px; justify-content: space-between; }
+.sheet-list li { justify-content: flex-start; }
+.sheet-list li:last-child, .file-list li:last-child { border-bottom: 0; }
+.file-list li span:first-child { overflow-wrap: anywhere; }
+.sheet-no { font-weight: 700; color: var(--teal-d); min-width: 3.2em; }
+.secure-note { display: flex; gap: 8px; align-items: flex-start; margin: 2px 0 14px; }
+.secure-note .ico { flex: none; width: 18px; height: 18px; color: var(--ok); margin-top: 2px; }
+.buy-box form { margin: 0; }
+.cost-tool { display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 28px; align-items: start; }
+@media (max-width: 900px) { .cost-tool { grid-template-columns: 1fr; } }
+.cost-total { display: grid; gap: 2px; padding: 16px 0 6px; border-top: 1px solid var(--line); margin-top: 6px; }
+.cost-total strong { font-family: var(--serif); font-size: 2.3rem; color: var(--teal-d); line-height: 1.1; }
+.cost-bars { display: grid; gap: 9px; }
+.bar-row { display: grid; grid-template-columns: 170px 1fr 90px; gap: 12px; align-items: center; font-size: .92rem; }
+.bar { display: flex; height: 14px; background: var(--teal-l); border-radius: 7px; overflow: hidden; }
+.bar-m { background: var(--teal); transition: width .25s; }
+.bar-l { background: var(--wood); opacity: .75; transition: width .25s; }
+.bar-val { text-align: right; font-variant-numeric: tabular-nums; }
+.bar-key { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: 6px; margin-top: 6px; }
+.bar-key span { display: inline-block; width: 12px; height: 12px; border-radius: 3px; }
+.key-m { background: var(--teal); }
+.key-l { background: var(--wood); opacity: .75; margin-left: 10px; }
+@media (max-width: 520px) { .bar-row { grid-template-columns: 1fr 80px; } .bar-row .bar { grid-column: 1 / -1; order: 3; } }
+.materials-table td { vertical-align: top; }
+.order-done .btn { margin: 6px 0; }
