@@ -122,7 +122,7 @@
    ],
    [
     "Plan-12-2417-Construction-Drawings-24x36.pdf",
-    125594
+    158257
    ],
    [
     "Plan-12-2417-CAD-Drawings.dxf",
@@ -146,19 +146,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    61588
+    114251
    ],
    [
     "Images/3d-front.png",
-    39892
+    73393
    ],
    [
     "Images/3d-rear.png",
-    39676
+    70477
    ],
    [
     "Images/3d-top.png",
-    24012
+    40748
    ],
    [
     "Images/electrical-plan.png",
@@ -401,7 +401,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1105814
+  "zip_bytes": 1255707
  },
  "plan-12-2418": {
   "electrical": {
@@ -526,7 +526,7 @@
    ],
    [
     "Plan-12-2418-Construction-Drawings-24x36.pdf",
-    126901
+    151577
    ],
    [
     "Plan-12-2418-CAD-Drawings.dxf",
@@ -550,19 +550,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    66180
+    122210
    ],
    [
     "Images/3d-front.png",
-    36341
+    59477
    ],
    [
     "Images/3d-rear.png",
-    42270
+    73391
    ],
    [
     "Images/3d-top.png",
-    25241
+    44629
    ],
    [
     "Images/electrical-plan.png",
@@ -809,7 +809,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1097955
+  "zip_bytes": 1237202
  },
  "plan-12-2419": {
   "electrical": {
@@ -941,7 +941,7 @@
    ],
    [
     "Plan-12-2419-Construction-Drawings-24x36.pdf",
-    113290
+    127143
    ],
    [
     "Plan-12-2419-CAD-Drawings.dxf",
@@ -965,19 +965,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    46638
+    82936
    ],
    [
     "Images/3d-front.png",
-    40187
+    50108
    ],
    [
     "Images/3d-rear.png",
-    35725
+    54690
    ],
    [
     "Images/3d-top.png",
-    17567
+    24397
    ],
    [
     "Images/electrical-plan.png",
@@ -1230,7 +1230,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 883445
+  "zip_bytes": 956186
  },
  "plan-12-2420": {
   "electrical": {
@@ -1362,7 +1362,7 @@
    ],
    [
     "Plan-12-2420-Construction-Drawings-24x36.pdf",
-    119379
+    149108
    ],
    [
     "Plan-12-2420-CAD-Drawings.dxf",
@@ -1386,19 +1386,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    44700
+    77584
    ],
    [
     "Images/3d-front.png",
-    40774
+    68166
    ],
    [
     "Images/3d-rear.png",
-    27171
+    46307
    ],
    [
     "Images/3d-top.png",
-    14708
+    23081
    ],
    [
     "Images/electrical-plan.png",
@@ -1652,7 +1652,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 908248
+  "zip_bytes": 1009655
  },
  "plan-12-2421": {
   "electrical": {
@@ -1784,7 +1784,7 @@
    ],
    [
     "Plan-12-2421-Construction-Drawings-24x36.pdf",
-    109489
+    138379
    ],
    [
     "Plan-12-2421-CAD-Drawings.dxf",
@@ -1808,19 +1808,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    44042
+    81109
    ],
    [
     "Images/3d-front.png",
-    37369
+    61458
    ],
    [
     "Images/3d-rear.png",
-    29599
+    52001
    ],
    [
     "Images/3d-top.png",
-    19688
+    32040
    ],
    [
     "Images/electrical-plan.png",
@@ -2069,7 +2069,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 774665
+  "zip_bytes": 884362
  },
  "plan-12-2422": {
   "electrical": {
@@ -2201,7 +2201,7 @@
    ],
    [
     "Plan-12-2422-Construction-Drawings-24x36.pdf",
-    110459
+    141381
    ],
    [
     "Plan-12-2422-CAD-Drawings.dxf",
@@ -2225,19 +2225,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    47670
+    89827
    ],
    [
     "Images/3d-front.png",
-    34854
+    65071
    ],
    [
     "Images/3d-rear.png",
-    25633
+    44172
    ],
    [
     "Images/3d-top.png",
-    19096
+    34028
    ],
    [
     "Images/electrical-plan.png",
@@ -2487,7 +2487,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 875926
+  "zip_bytes": 996377
  },
  "plan-12-2423": {
   "electrical": {
@@ -2612,7 +2612,7 @@
    ],
    [
     "Plan-12-2423-Construction-Drawings-24x36.pdf",
-    96275
+    108746
    ],
    [
     "Plan-12-2423-CAD-Drawings.dxf",
@@ -2636,19 +2636,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    37866
+    56994
    ],
    [
     "Images/3d-front.png",
-    22756
+    33202
    ],
    [
     "Images/3d-rear.png",
-    17428
+    29221
    ],
    [
     "Images/3d-top.png",
-    18439
+    19387
    ],
    [
     "Images/electrical-plan.png",
@@ -2893,7 +2893,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1030603
+  "zip_bytes": 1072502
  },
  "plan-12-2424": {
   "electrical": {
@@ -3018,7 +3018,7 @@
    ],
    [
     "Plan-12-2424-Construction-Drawings-24x36.pdf",
-    104012
+    114484
    ],
    [
     "Plan-12-2424-CAD-Drawings.dxf",
@@ -3042,19 +3042,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    40259
+    60931
    ],
    [
     "Images/3d-front.png",
-    25573
+    37183
    ],
    [
     "Images/3d-rear.png",
-    21311
+    32422
    ],
    [
     "Images/3d-top.png",
-    20497
+    23279
    ],
    [
     "Images/electrical-plan.png",
@@ -3299,7 +3299,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1119142
+  "zip_bytes": 1163908
  },
  "plan-12-2425": {
   "electrical": {
@@ -3424,7 +3424,7 @@
    ],
    [
     "Plan-12-2425-Construction-Drawings-24x36.pdf",
-    90732
+    102485
    ],
    [
     "Plan-12-2425-CAD-Drawings.dxf",
@@ -3440,7 +3440,7 @@
    ],
    [
     "3D-Model/Plan-12-2425.obj",
-    34486
+    34468
    ],
    [
     "3D-Model/Plan-12-2425.mtl",
@@ -3448,19 +3448,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    36690
+    56886
    ],
    [
     "Images/3d-front.png",
-    23835
+    36475
    ],
    [
     "Images/3d-rear.png",
-    21526
+    29102
    ],
    [
     "Images/3d-top.png",
-    20159
+    20440
    ],
    [
     "Images/electrical-plan.png",
@@ -3702,7 +3702,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1104527
+  "zip_bytes": 1145842
  },
  "plan-12-2426": {
   "electrical": {
@@ -3833,7 +3833,7 @@
    ],
    [
     "Plan-12-2426-Construction-Drawings-24x36.pdf",
-    100220
+    136809
    ],
    [
     "Plan-12-2426-CAD-Drawings.dxf",
@@ -3857,19 +3857,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    43662
+    78079
    ],
    [
     "Images/3d-front.png",
-    33783
+    67547
    ],
    [
     "Images/3d-rear.png",
-    22300
+    40181
    ],
    [
     "Images/3d-top.png",
-    18627
+    29413
    ],
    [
     "Images/electrical-plan.png",
@@ -4115,7 +4115,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 756102
+  "zip_bytes": 873955
  },
  "plan-12-2427": {
   "electrical": {
@@ -4246,7 +4246,7 @@
    ],
    [
     "Plan-12-2427-Construction-Drawings-24x36.pdf",
-    95819
+    117021
    ],
    [
     "Plan-12-2427-CAD-Drawings.dxf",
@@ -4270,19 +4270,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    39797
+    73015
    ],
    [
     "Images/3d-front.png",
-    24947
+    44010
    ],
    [
     "Images/3d-rear.png",
-    23561
+    39560
    ],
    [
     "Images/3d-top.png",
-    14513
+    24496
    ],
    [
     "Images/electrical-plan.png",
@@ -4529,7 +4529,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 685106
+  "zip_bytes": 770819
  },
  "plan-12-2428": {
   "electrical": {
@@ -4660,7 +4660,7 @@
    ],
    [
     "Plan-12-2428-Construction-Drawings-24x36.pdf",
-    114898
+    142440
    ],
    [
     "Plan-12-2428-CAD-Drawings.dxf",
@@ -4684,19 +4684,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    54197
+    92904
    ],
    [
     "Images/3d-front.png",
-    32841
+    59507
    ],
    [
     "Images/3d-rear.png",
-    28966
+    58560
    ],
    [
     "Images/3d-top.png",
-    20414
+    35710
    ],
    [
     "Images/electrical-plan.png",
@@ -4946,7 +4946,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 946275
+  "zip_bytes": 1069640
  },
  "plan-12-2429": {
   "electrical": {
@@ -5071,7 +5071,7 @@
    ],
    [
     "Plan-12-2429-Construction-Drawings-24x36.pdf",
-    118284
+    140832
    ],
    [
     "Plan-12-2429-CAD-Drawings.dxf",
@@ -5095,19 +5095,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    59748
+    103426
    ],
    [
     "Images/3d-front.png",
-    45029
+    66731
    ],
    [
     "Images/3d-rear.png",
-    45986
+    61513
    ],
    [
     "Images/3d-top.png",
-    31761
+    35166
    ],
    [
     "Images/electrical-plan.png",
@@ -5350,7 +5350,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1153720
+  "zip_bytes": 1246962
  },
  "plan-12-2430": {
   "electrical": {
@@ -5475,7 +5475,7 @@
    ],
    [
     "Plan-12-2430-Construction-Drawings-24x36.pdf",
-    130905
+    157519
    ],
    [
     "Plan-12-2430-CAD-Drawings.dxf",
@@ -5499,19 +5499,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    63762
+    114113
    ],
    [
     "Images/3d-front.png",
-    59054
+    84080
    ],
    [
     "Images/3d-rear.png",
-    50871
+    76304
    ],
    [
     "Images/3d-top.png",
-    29706
+    39006
    ],
    [
     "Images/electrical-plan.png",
@@ -5754,7 +5754,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1147831
+  "zip_bytes": 1269931
  },
  "plan-12-2431": {
   "electrical": {
@@ -5879,7 +5879,7 @@
    ],
    [
     "Plan-12-2431-Construction-Drawings-24x36.pdf",
-    124350
+    147648
    ],
    [
     "Plan-12-2431-CAD-Drawings.dxf",
@@ -5903,19 +5903,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    60200
+    101764
    ],
    [
     "Images/3d-front.png",
-    54680
+    79305
    ],
    [
     "Images/3d-rear.png",
-    38903
+    59802
    ],
    [
     "Images/3d-top.png",
-    27866
+    34212
    ],
    [
     "Images/electrical-plan.png",
@@ -6156,7 +6156,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1020936
+  "zip_bytes": 1121204
  },
  "plan-12-2432": {
   "electrical": {
@@ -6281,7 +6281,7 @@
    ],
    [
     "Plan-12-2432-Construction-Drawings-24x36.pdf",
-    129394
+    160945
    ],
    [
     "Plan-12-2432-CAD-Drawings.dxf",
@@ -6305,19 +6305,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    60122
+    105372
    ],
    [
     "Images/3d-front.png",
-    45665
+    77619
    ],
    [
     "Images/3d-rear.png",
-    39422
+    59516
    ],
    [
     "Images/3d-top.png",
-    24600
+    35479
    ],
    [
     "Images/electrical-plan.png",
@@ -6564,7 +6564,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1148667
+  "zip_bytes": 1271084
  },
  "plan-12-2433": {
   "electrical": {
@@ -6689,7 +6689,7 @@
    ],
    [
     "Plan-12-2433-Construction-Drawings-24x36.pdf",
-    112189
+    117873
    ],
    [
     "Plan-12-2433-CAD-Drawings.dxf",
@@ -6713,19 +6713,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    49423
+    73594
    ],
    [
     "Images/3d-front.png",
-    39934
+    46758
    ],
    [
     "Images/3d-rear.png",
-    26919
+    39194
    ],
    [
     "Images/3d-top.png",
-    23952
+    25385
    ],
    [
     "Images/electrical-plan.png",
@@ -6969,7 +6969,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1093664
+  "zip_bytes": 1133059
  },
  "plan-12-2434": {
   "electrical": {
@@ -7094,7 +7094,7 @@
    ],
    [
     "Plan-12-2434-Construction-Drawings-24x36.pdf",
-    117435
+    146703
    ],
    [
     "Plan-12-2434-CAD-Drawings.dxf",
@@ -7118,19 +7118,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    49580
+    80970
    ],
    [
     "Images/3d-front.png",
-    42043
+    71551
    ],
    [
     "Images/3d-rear.png",
-    28296
+    38876
    ],
    [
     "Images/3d-top.png",
-    18217
+    28123
    ],
    [
     "Images/electrical-plan.png",
@@ -7375,7 +7375,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 921194
+  "zip_bytes": 1017041
  },
  "plan-12-2435": {
   "electrical": {
@@ -7500,7 +7500,7 @@
    ],
    [
     "Plan-12-2435-Construction-Drawings-24x36.pdf",
-    116675
+    141273
    ],
    [
     "Plan-12-2435-CAD-Drawings.dxf",
@@ -7524,19 +7524,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    67118
+    104322
    ],
    [
     "Images/3d-front.png",
-    37790
+    70240
    ],
    [
     "Images/3d-rear.png",
-    41775
+    63694
    ],
    [
     "Images/3d-top.png",
-    27719
+    33311
    ],
    [
     "Images/electrical-plan.png",
@@ -7779,7 +7779,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1112981
+  "zip_bytes": 1220608
  },
  "plan-12-2436": {
   "electrical": {
@@ -7904,7 +7904,7 @@
    ],
    [
     "Plan-12-2436-Construction-Drawings-24x36.pdf",
-    129523
+    150729
    ],
    [
     "Plan-12-2436-CAD-Drawings.dxf",
@@ -7928,19 +7928,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    58378
+    98446
    ],
    [
     "Images/3d-front.png",
-    49597
+    72261
    ],
    [
     "Images/3d-rear.png",
-    41451
+    52443
    ],
    [
     "Images/3d-top.png",
-    25232
+    30175
    ],
    [
     "Images/electrical-plan.png",
@@ -8187,7 +8187,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 996750
+  "zip_bytes": 1081326
  },
  "plan-12-2437": {
   "electrical": {
@@ -8312,7 +8312,7 @@
    ],
    [
     "Plan-12-2437-Construction-Drawings-24x36.pdf",
-    116952
+    147199
    ],
    [
     "Plan-12-2437-CAD-Drawings.dxf",
@@ -8336,19 +8336,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    55777
+    95984
    ],
    [
     "Images/3d-front.png",
-    39140
+    67984
    ],
    [
     "Images/3d-rear.png",
-    29763
+    51563
    ],
    [
     "Images/3d-top.png",
-    18866
+    31897
    ],
    [
     "Images/electrical-plan.png",
@@ -8591,7 +8591,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 965365
+  "zip_bytes": 1083523
  },
  "plan-12-2438": {
   "electrical": {
@@ -8716,7 +8716,7 @@
    ],
    [
     "Plan-12-2438-Construction-Drawings-24x36.pdf",
-    127655
+    162506
    ],
    [
     "Plan-12-2438-CAD-Drawings.dxf",
@@ -8740,19 +8740,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    61365
+    106292
    ],
    [
     "Images/3d-front.png",
-    55122
+    90050
    ],
    [
     "Images/3d-rear.png",
-    48326
+    66824
    ],
    [
     "Images/3d-top.png",
-    30759
+    42246
    ],
    [
     "Images/electrical-plan.png",
@@ -8995,7 +8995,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1035374
+  "zip_bytes": 1164509
  },
  "plan-12-2439": {
   "electrical": {
@@ -9120,7 +9120,7 @@
    ],
    [
     "Plan-12-2439-Construction-Drawings-24x36.pdf",
-    116870
+    155329
    ],
    [
     "Plan-12-2439-CAD-Drawings.dxf",
@@ -9144,19 +9144,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    64328
+    98421
    ],
    [
     "Images/3d-front.png",
-    44909
+    77471
    ],
    [
     "Images/3d-rear.png",
-    36732
+    61194
    ],
    [
     "Images/3d-top.png",
-    22395
+    33414
    ],
    [
     "Images/electrical-plan.png",
@@ -9397,7 +9397,7 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 903164
+  "zip_bytes": 1026816
  },
  "plan-12-2440": {
   "electrical": {
@@ -9522,7 +9522,7 @@
    ],
    [
     "Plan-12-2440-Construction-Drawings-24x36.pdf",
-    124232
+    154174
    ],
    [
     "Plan-12-2440-CAD-Drawings.dxf",
@@ -9546,19 +9546,19 @@
    ],
    [
     "Images/3d-cutaway.png",
-    64770
+    108504
    ],
    [
     "Images/3d-front.png",
-    47029
+    86582
    ],
    [
     "Images/3d-rear.png",
-    38425
+    64212
    ],
    [
     "Images/3d-top.png",
-    25746
+    42488
    ],
    [
     "Images/electrical-plan.png",
@@ -9801,6 +9801,6 @@
     "COST ESTIMATE"
    ]
   ],
-  "zip_bytes": 1160551
+  "zip_bytes": 1301485
  }
 }

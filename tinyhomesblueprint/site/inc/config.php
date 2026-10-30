@@ -9,7 +9,7 @@ const SITE_TAG    = 'Tiny House Plans & Blueprints';
 const SITE_PHONE  = '210-903-9471';
 const SITE_TEL    = '+12109039471';
 const SITE_EMAIL  = 'contact@tinyhomesblueprint.com';
-const ASSET_VER   = '20261030a';
+const ASSET_VER   = '20261030b';
 const GA_ID       = 'G-7XXLLDTBJR';
 // Secrets, paid plan files and order records live one level above public_html.
 define('PRIVATE_DIR', getenv('THB_PRIVATE_DIR') ?: dirname(__DIR__, 2));

@@ -348,6 +348,9 @@ def build_mesh(m: M.Model) -> Mesh:
         z = (B + 7.6) if (f.room and f.room.loft) else zbase(f.cx)
         if f.kind == "tankless":
             z += 4
+        # never taller than the roof above it (A-frame knee walls, gooseneck)
+        if k in ("aframe", "gambrel", "shed", "gable"):
+            h = max(0.1, min(h, roof_z(info, f.y) - z - 0.15, roof_z(info, f.y + f.d) - z - 0.15))
         me.box("interior", mat, f.x + 0.03, f.y + 0.03, z, f.w - 0.06, f.d - 0.06, h if f.kind not in ("sink",) else 0.08)
     return me
 

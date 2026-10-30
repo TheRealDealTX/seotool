@@ -38,10 +38,9 @@ const TYPES = { '.js': 'text/javascript', '.json': 'application/json', '.svg': '
         const el = document.getElementById('v');
         el.style.width = job.width + 'px';
         el.dataset.model = job.model;
+        el.dataset.height = job.height;
         const { mount } = await import('/assets/js/plan-3d.js');
         const v = await mount(el);
-        v.renderer.setSize(job.width, job.height, false);
-        el.querySelector('canvas').style.height = job.height + 'px';
         v.view(job.view || {});
         v.roof(job.roof !== false);
       }, { job });

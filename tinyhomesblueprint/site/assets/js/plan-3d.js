@@ -61,7 +61,7 @@ function build(THREE, el, data) {
 
   // Orbit state
   const size = Math.max(data.W, data.D, data.H);
-  const st = { theta: -0.75, phi: 1.12, r: size * 1.6, target: new THREE.Vector3(0, data.H * 0.35, 0) };
+  const st = { theta: -0.75, phi: 1.12, r: Math.max(size * 1.6, data.H * 3.2), target: new THREE.Vector3(0, data.H * 0.35, 0) };
   const home = { ...st, target: st.target.clone() };
   function place() {
     st.phi = Math.max(0.15, Math.min(1.52, st.phi));
@@ -74,7 +74,7 @@ function build(THREE, el, data) {
     render();
   }
   function resize() {
-    const w = el.clientWidth, h = Math.round(Math.min(560, Math.max(300, w * 0.6)));
+    const w = el.clientWidth, h = +el.dataset.height || Math.round(Math.min(560, Math.max(300, w * 0.6)));
     renderer.setSize(w, h, false);
     canvas.style.height = h + 'px';
     camera.aspect = w / h;
@@ -130,7 +130,7 @@ function build(THREE, el, data) {
   return {
     render, renderer,
     // Used by the build to render stills: view({ theta, phi, zoom }), roof(false) for a cutaway.
-    view(o) { Object.assign(st, { theta: o.theta ?? st.theta, phi: o.phi ?? st.phi, r: size * (o.zoom ?? 2.1) }); place(); },
+    view(o) { Object.assign(st, { theta: o.theta ?? st.theta, phi: o.phi ?? st.phi, r: Math.max(size, data.H * 2) * (o.zoom ?? 1.6) }); place(); },
     roof(on) { groups.roof.visible = on; render(); },
   };
 }
