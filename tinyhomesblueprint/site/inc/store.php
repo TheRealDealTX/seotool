@@ -137,7 +137,8 @@ function index_order(array $o): void {
  */
 function fulfill_session(array $session): ?array {
     global $PLANS;
-    if (($session['payment_status'] ?? '') !== 'paid') return null;
+    // 'no_payment_required' is a checkout fully covered by a 100%-off promotion code.
+    if (!in_array($session['payment_status'] ?? '', ['paid', 'no_payment_required'], true)) return null;
     $slug = $session['metadata']['plan'] ?? $session['client_reference_id'] ?? '';
     if (!isset($PLANS[$slug])) {
         error_log('fulfill: unknown plan for session ' . ($session['id'] ?? '?'));
