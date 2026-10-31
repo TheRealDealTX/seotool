@@ -2,10 +2,10 @@
 /**
  * Add one article from a JSON file (same format as an entry in app/data/articles.json).
  *
- *   php app/bin/add-article.php app/data/article-<slug>.json
+ *   php app/bin/add-article.php app/data/article-<slug>.json            add (skips if the slug exists)
+ *   php app/bin/add-article.php app/data/article-<slug>.json --update   replace that article's text fields
  *
- * Command line only. Skips the article if its slug already exists, so it never
- * duplicates or overwrites anything edited in the admin.
+ * Command line only. Without --update it never duplicates or overwrites anything edited in the admin.
  */
 declare(strict_types=1);
 
@@ -24,11 +24,22 @@ if (!is_array($a) || empty($a['slug']) || empty($a['title']) || empty($a['conten
     fwrite(STDERR, "Usage: php app/bin/add-article.php <article.json>\n");
     exit(1);
 }
-if (Db::val('SELECT id FROM articles WHERE slug = ?', [$a['slug']])) {
+$now = now_utc();
+$existing = Db::val('SELECT id FROM articles WHERE slug = ?', [$a['slug']]);
+if ($existing && in_array('--update', $argv, true)) {
+    Db::update('articles', [
+        'title' => $a['title'], 'seo_title' => $a['seo_title'] ?? $a['title'],
+        'meta_description' => $a['meta_description'] ?? null, 'excerpt' => $a['excerpt'] ?? null, 'content_html' => $a['content_html'],
+        'featured_image' => $a['featured_image'] ?? null, 'featured_alt' => $a['featured_alt'] ?? null,
+        'featured_width' => $a['featured_width'] ?? null, 'featured_height' => $a['featured_height'] ?? null, 'updated_at' => $now,
+    ], 'id = :id', ['id' => $existing]);
+    echo "Updated: /{$a['slug']}/ (id {$existing})\n";
+    exit(0);
+}
+if ($existing) {
     echo "Skipped: /{$a['slug']}/ already exists\n";
     exit(0);
 }
-$now = now_utc();
 $id = Db::insert('articles', [
     'slug' => $a['slug'], 'title' => $a['title'], 'seo_title' => $a['seo_title'] ?? $a['title'],
     'meta_description' => $a['meta_description'] ?? null, 'excerpt' => $a['excerpt'] ?? null, 'content_html' => $a['content_html'],
