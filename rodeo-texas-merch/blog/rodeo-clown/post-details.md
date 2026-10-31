@@ -8,6 +8,7 @@
 - Meta description (155 chars): What does a rodeo clown do? How bullfighters, barrelmen and entertainers protect bull riders, where the role began, famous names and how to see them in Texas.
 - Excerpt: Rodeo clowns keep bull riders safe and the crowd laughing. Here's how bullfighters, barrelmen and entertainers split the job, plus history and famous names.
 - Category: General
-- Featured image: /wp-content/uploads/2026/10/rodeo-clown-barrel-arena.webp (1536x1024)
-- Featured image alt: A red and white rodeo clown barrel in a dirt arena at sunset
+- Featured image: /wp-content/uploads/2026/10/rodeo-clown-barrelman-bullfighters.webp (1280x853)
+- Featured image alt: Rodeo clown in a red and white barrel as bullfighters work a bull in the arena
+- Featured image source: Pixabay photo 7101899 (https://pixabay.com/photos/rodeo-clown-bull-7101899/), Pixabay Content License (free for commercial use, no attribution required)
 - Body HTML: content.html (about 2,000 words, 3 images, 13 internal links, 6 external authority links)
