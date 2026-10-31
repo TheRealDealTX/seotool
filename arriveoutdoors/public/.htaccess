@@ -32,6 +32,20 @@ RewriteRule ^(.*)$ https://arriveoutdoors.com/$1 [R=301,L]
 # Scheduled-release packs are applied by cron, never served directly
 RewriteRule ^_releases(/|$) - [F,L]
 
+# Scheduled articles not yet published (removed from this list on their release date)
+RewriteRule ^acadia-national-park-hiking-trails/?$ - [R=404,L]
+RewriteRule ^beach-camping/?$ - [R=404,L]
+RewriteRule ^best-hikes-smoky-mountains/?$ - [R=404,L]
+RewriteRule ^cabin-camping/?$ - [R=404,L]
+RewriteRule ^car-camping-essentials/?$ - [R=404,L]
+RewriteRule ^cold-weather-camping/?$ - [R=404,L]
+RewriteRule ^hiking-colorado-rockies/?$ - [R=404,L]
+RewriteRule ^how-to-start-a-fire-with-wet-wood/?$ - [R=404,L]
+RewriteRule ^new-hampshire-hiking/?$ - [R=404,L]
+RewriteRule ^olympic-national-park-camping/?$ - [R=404,L]
+RewriteRule ^truck-camping/?$ - [R=404,L]
+RewriteRule ^zion-hiking-trails/?$ - [R=404,L]
+
 # Removed content (410 Gone)
 RewriteRule ^book-your-luxury-villa-getaway/?$ - [G,L]
 RewriteRule ^adventure-travel-planning-made-easy/?$ - [G,L]

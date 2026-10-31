@@ -1027,6 +1027,9 @@ def render_server_files():
              "# Scheduled-release packs are applied by cron, never served directly",
              "RewriteRule ^_releases(/|$) - [F,L]",
              "",
+             "# Scheduled articles not yet published (removed from this list on their release date)"] + [
+             f"RewriteRule {rx('/' + k + '/')} - [R=404,L]" for k in sorted(ARTS_ALL) if k not in ARTS] + [
+             "",
              "# Removed content (410 Gone)"]
     for p in GONE:
         lines.append(f"RewriteRule {rx(p)} - [G,L]")
