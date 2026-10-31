@@ -3,6 +3,7 @@
 > Free camping and hiking tools, month-by-month weather guides for national parks, and honest gear advice for getting outside.
 
 ## Tools
+- [Trip Finder: Best Parks Near You This Month](https://arriveoutdoors.com/tools/trip-finder/): Uses your location (or any address) to rank nearby parks by drive time and this month's hiking and camping weather.
 - [Camping & Backpacking Packing List Generator](https://arriveoutdoors.com/tools/packing-list/): A checklist built for your trip type, nights, season and group size. Tick it off, print it, or save it.
 - [Trail Weather Forecast & Hike Score](https://arriveoutdoors.com/tools/trail-weather/): 7-day forecast for any trailhead with a go/no-go hike score, heat, wind, storm and freezing-level warnings.
 - [Hiking Time Calculator](https://arriveoutdoors.com/tools/hiking-time-calculator/): How long a hike will take from distance, elevation gain and pace, plus a turnaround time before dark.
@@ -35,6 +36,20 @@
 - [Shenandoah National Park](https://arriveoutdoors.com/destinations/shenandoah/)
 - [Cloud Peak Wilderness](https://arriveoutdoors.com/destinations/cloud-peak-wilderness/)
 - [Grand Mesa](https://arriveoutdoors.com/destinations/grand-mesa/)
+- [White Mountain National Forest](https://arriveoutdoors.com/destinations/white-mountains/)
+- [Indiana Dunes National Park](https://arriveoutdoors.com/destinations/indiana-dunes/)
+- [Sleeping Bear Dunes National Lakeshore](https://arriveoutdoors.com/destinations/sleeping-bear-dunes/)
+- [New River Gorge National Park](https://arriveoutdoors.com/destinations/new-river-gorge/)
+- [Mammoth Cave National Park](https://arriveoutdoors.com/destinations/mammoth-cave/)
+- [Everglades National Park](https://arriveoutdoors.com/destinations/everglades/)
+- [Badlands National Park](https://arriveoutdoors.com/destinations/badlands/)
+- [Great Sand Dunes National Park](https://arriveoutdoors.com/destinations/great-sand-dunes/)
+- [White Sands National Park](https://arriveoutdoors.com/destinations/white-sands/)
+- [Crater Lake National Park](https://arriveoutdoors.com/destinations/crater-lake/)
+- [Redwood National and State Parks](https://arriveoutdoors.com/destinations/redwood/)
+- [North Cascades National Park](https://arriveoutdoors.com/destinations/north-cascades/)
+- [Buffalo National River](https://arriveoutdoors.com/destinations/buffalo-national-river/)
+- [Cuyahoga Valley National Park](https://arriveoutdoors.com/destinations/cuyahoga-valley/)
 
 ## Guides
 - [Camping 101: A Guide for the First-Time Camper](https://arriveoutdoors.com/blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper/): A practical plan for your first night outdoors: a drive-in campground close to home, the four pieces of gear that matter most, and the mistakes that ruin most first trips.

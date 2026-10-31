@@ -53,6 +53,8 @@ CATEGORIES = {
 # Tool pages: /tools/<slug>/
 TOOLS = [
     # slug, name, one-line description, icon
+    ("trip-finder", "Trip Finder: Best Parks Near You This Month",
+     "Uses your location (or any address) to rank nearby parks by drive time and this month's hiking and camping weather.", "map"),
     ("packing-list", "Camping & Backpacking Packing List Generator",
      "A checklist built for your trip type, nights, season and group size. Tick it off, print it, or save it.", "backpack"),
     ("trail-weather", "Trail Weather Forecast & Hike Score",
@@ -99,6 +101,20 @@ DESTINATIONS = [
     ("shenandoah", "Shenandoah National Park", "Virginia", 38.5260, -78.4360, 1070, "Big Meadows"),
     ("cloud-peak-wilderness", "Cloud Peak Wilderness", "Wyoming", 44.3820, -107.1740, 2900, "Bighorn high country"),
     ("grand-mesa", "Grand Mesa", "Colorado", 39.0420, -108.0100, 3050, "Grand Mesa lakes"),
+    ("white-mountains", "White Mountain National Forest", "New Hampshire", 44.1420, -71.6810, 600, "Franconia Notch"),
+    ("indiana-dunes", "Indiana Dunes National Park", "Indiana", 41.6533, -87.0524, 190, "Dunewood / Porter"),
+    ("sleeping-bear-dunes", "Sleeping Bear Dunes National Lakeshore", "Michigan", 44.8800, -86.0400, 200, "Glen Arbor / Empire"),
+    ("new-river-gorge", "New River Gorge National Park", "West Virginia", 38.0700, -81.0800, 550, "Canyon Rim / Fayetteville"),
+    ("mammoth-cave", "Mammoth Cave National Park", "Kentucky", 37.1870, -86.1000, 200, "Mammoth Cave Visitor Center"),
+    ("everglades", "Everglades National Park", "Florida", 25.3820, -80.6100, 2, "Royal Palm / Homestead entrance"),
+    ("badlands", "Badlands National Park", "South Dakota", 43.7500, -101.9400, 750, "Cedar Pass"),
+    ("great-sand-dunes", "Great Sand Dunes National Park", "Colorado", 37.7300, -105.5100, 2470, "Dunes visitor center"),
+    ("white-sands", "White Sands National Park", "New Mexico", 32.7800, -106.1700, 1200, "Dunes Drive"),
+    ("crater-lake", "Crater Lake National Park", "Oregon", 42.9120, -122.1460, 2150, "Rim Village"),
+    ("redwood", "Redwood National and State Parks", "California", 41.3600, -124.0200, 50, "Prairie Creek"),
+    ("north-cascades", "North Cascades National Park", "Washington", 48.7100, -121.1400, 370, "Diablo Lake / Colonial Creek"),
+    ("buffalo-national-river", "Buffalo National River", "Arkansas", 36.0200, -93.3600, 330, "Ponca / upper river"),
+    ("cuyahoga-valley", "Cuyahoga Valley National Park", "Ohio", 41.2600, -81.5600, 250, "Boston Mill / Peninsula"),
 ]
 
 MONTHS = ["january", "february", "march", "april", "may", "june", "july",
@@ -132,6 +148,16 @@ ARTICLES = [
     "best-camping-gear-to-rent-vs-buy",
     "renting-camp-gear-for-national-park-trips",
     "rent-camping-gear",
+    "joshua-tree-camping",
+    "olympic-national-park-camping",
+    "zion-hiking-trails",
+    "acadia-national-park-hiking-trails",
+    "hiking-colorado-rockies",
+    "best-hikes-smoky-mountains",
+    "new-hampshire-hiking",
+    "beach-camping",
+    "truck-camping",
+    "cabin-camping",
 ]
 
 # ---------------------------------------------------------------------------

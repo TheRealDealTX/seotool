@@ -455,7 +455,7 @@ def render_article(a):
 
 
 # --------------------------------------------------------------------------- tools
-TOOL_PHOTOS = {"packing-list": "hero-day", "trail-weather": "summit", "hiking-time-calculator": "trail", "water-calculator": "desert-camp",
+TOOL_PHOTOS = {"trip-finder": "art-car-camping-essentials", "packing-list": "hero-day", "trail-weather": "summit", "hiking-time-calculator": "trail", "water-calculator": "desert-camp",
                "sleeping-bag-temperature": "snow-camp", "backpack-size": "art-how-to-measure-torso-length-for-backpack",
                "sunrise-sunset": "summit", "camp-meal-planner": "campfire", "rent-vs-buy": "art-rent-camping-gear", "feels-like": "desert-camp"}
 TOOL_FX = {"sleeping-bag-temperature": "snow", "camp-meal-planner": "embers", "sunrise-sunset": "stars"}
@@ -475,8 +475,15 @@ def render_tool(slug, name, desc, ic):
     others = [t[0] for t in TOOL_LIST if t[0] != slug][:3]
     crumbs = [("Home", "/"), ("Tools", "/tools/"), (c["h1"], path)]
     res_cls = ' class="forecast"' if slug == "trail-weather" else ""
+    data_js = ""
+    if slug == "trip-finder":
+        trips = [{"slug": k, "name": d["name"], "short": short_name(k), "lat": d["lat"], "lon": d["lon"], "sc": place_scores(k),
+                  "hi": [round(m["high"]) for m in CLIMATE[k]["months"]], "lo": [round(m["low"]) for m in CLIMATE[k]["months"]],
+                  "wet": [round(m["wet_days"]) for m in CLIMATE[k]["months"]], "p": photo_src("dest-" + k, 640) or ""}
+                 for k, d in DEST.items() if k in CLIMATE]
+        data_js = "<script>window.AO_TRIPS=" + json.dumps(trips, separators=(",", ":")) + ";</script>"
     body = (hero(E(c["h1"]), E(c["intro"]), eyebrow="Free tool", photo=TOOL_PHOTOS.get(slug), fx_modes=TOOL_FX.get(slug), crumbs=crumbs) +
-            f'<div class="wrap"><div class="tool-shell">{form}<div class="panel" aria-live="polite">{result_title}<div id="result"{res_cls}></div></div></div>'
+            f'<div class="wrap"><div class="tool-shell">{form}<div class="panel" aria-live="polite">{result_title}<div id="result"{res_cls}></div></div></div>{data_js}'
             f'<div class="read prose reveal">{c["explain"]}{faq_html}</div></div>'
             f'<section class="block dark no-print"><div class="wrap"><div class="section-head"><div><span class="kicker">Keep planning</span><h2>More free tools</h2></div><a class="link" style="color:var(--amber)" href="/tools/">All tools →</a></div><div class="grid g3 reveal-stagger">{"".join(tool_card(o) for o in others)}</div></div></section>')
     schema = [{"@context": "https://schema.org", "@type": "WebApplication", "name": c["h1"], "url": URL + path,
@@ -646,10 +653,10 @@ def render_destinations_hub():
                  "Month-by-month weather from 10 years of data, the best time to visit for hiking and camping, seasonal notes and a live forecast for each park.",
                  eyebrow="Destinations", photo="summit") +
             f"""<section class="block topo"><div class="wrap">
-<div class="section-head"><div><span class="kicker">20 parks & wild places</span><h2>Pick your next trip</h2><p>The colored strip on each card runs January → December: <span class="chip good">Excellent</span> <span class="chip ok">Good</span> <span class="chip fair">Fair</span> <span class="chip poor">Poor</span> hiking weather.</p></div><a class="btn outline sm" href="/weather/">Where to go this month →</a></div>
+<div class="section-head"><div><span class="kicker">{len(DEST)} parks & wild places</span><h2>Pick your next trip</h2><p>The colored strip on each card runs January → December: <span class="chip good">Excellent</span> <span class="chip ok">Good</span> <span class="chip fair">Fair</span> <span class="chip poor">Poor</span> hiking weather.</p></div><a class="btn outline sm" href="/weather/">Where to go this month →</a></div>
 <div class="grid g4 reveal-stagger">{cards}</div></div></section>""")
     write("/destinations/", layout(path="/destinations/", title="National Park Weather Guides: Best Time to Visit",
-                                   description="When to visit 20 popular national parks and wild places: monthly weather from 10 years of data, best months for hiking and camping, and live forecasts.",
+                                   description=f"When to visit {len(DEST)} popular national parks and wild places: monthly weather from 10 years of data, best months for hiking and camping, and live forecasts.",
                                    body=body, active="/destinations/"))
 
 
@@ -707,14 +714,15 @@ def render_weather_hub():
                 "lo": [round(m["low"]) for m in CLIMATE[s]["months"]]} for s in DEST}
     tabs = "".join(f'<button type="button" data-m="{i}">{MON3[i]}</button>' for i in range(12))
     month_links = "".join(f'<a class="chip" href="/weather/{MONTHS[i]}/">Best parks in {MONTH_NAMES[i]}</a>' for i in range(12))
-    body = (hero("Where to go hiking this month", "Pick a month to rank 20 national parks and wild places by hiking and camping weather — or check a live forecast for any trailhead.", eyebrow="Weather",
+    body = (hero("Where to go hiking this month", f"Pick a month to rank {len(DEST)} national parks and wild places by hiking and camping weather — or check a live forecast for any trailhead.", eyebrow="Weather",
                  photo="stars", fx_modes="stars") +
             f"""<section class="block"><div class="wrap">
 <div class="grid g2" style="align-items:start">
 <div class="panel"><h2>Rank parks by month</h2><div class="month-tabs" id="mtabs">{tabs}</div>
 <div class="seg" style="margin-bottom:12px"><label><input type="radio" name="pref" value="all" checked> Any weather</label><label><input type="radio" name="pref" value="warm"> I want warm</label><label><input type="radio" name="pref" value="cool"> Escape the heat</label></div>
 <ol class="rank" id="mrank"></ol></div>
-<div><div class="panel"><h2>Live forecast for any trailhead</h2><p>Get a 7-day forecast with a daily hike score and warnings for storms, heat, wind and freezing nights.</p><a class="btn primary" href="/tools/trail-weather/">Open the trail forecast</a></div>
+<div><div class="panel" style="background:var(--night);color:#e7efe9;border-color:transparent"><h2 style="color:#fff">📍 Parks near you</h2><p>Trip Finder uses your location (or any address) to rank parks by drive time and this month's weather.</p><a class="btn primary" href="/tools/trip-finder/">Open Trip Finder</a></div>
+<div class="panel" style="margin-top:20px"><h2>Live forecast for any trailhead</h2><p>Get a 7-day forecast with a daily hike score and warnings for storms, heat, wind and freezing nights.</p><a class="btn primary" href="/tools/trail-weather/">Open the trail forecast</a></div>
 <div class="panel" style="margin-top:20px"><h2>Monthly guides</h2><div class="chips">{month_links}</div></div>
 <div class="panel" style="margin-top:20px"><h2>Weather tools</h2><ul><li><a href="/tools/sunrise-sunset/">Sunrise, sunset & golden hour</a></li><li><a href="/tools/feels-like/">Wind chill & heat index</a></li><li><a href="/tools/water-calculator/">Hiking water calculator</a></li><li><a href="/tools/sleeping-bag-temperature/">Sleeping bag temperature guide</a></li></ul></div></div>
 </div></div></section>
@@ -726,7 +734,7 @@ function word(s){{return s>=75?"Excellent":s>=60?"Good":s>=45?"Fair":"Poor"}}
 function draw(){{var pref=document.querySelector("input[name=pref]:checked").value;
 var rows=Object.keys(D).map(function(k){{var d=D[k],s=d.sc[cur];if(pref==="warm")s+= (d.hi[cur]-70)*0.8;if(pref==="cool")s-=Math.max(0,d.hi[cur]-75)*1.5;return [Math.round(Math.max(0,Math.min(100,s))),k,d];}});
 rows.sort(function(a,b){{return b[0]-a[0]}});
-document.getElementById("mrank").innerHTML=rows.slice(0,10).map(function(r){{return "<li>"+(r[2].p?"<img class='thumb' src='"+r[2].p+"' alt='' loading='lazy'>":"")+"<div><a href='/destinations/"+r[1]+"/'>"+r[2].n+"</a><div class='why'>Avg high "+r[2].hi[cur]+"°F · low "+r[2].lo[cur]+"°F</div></div><span class='score-pill' style='background:"+col(r[0])+"'>"+r[0]+" · "+word(r[0])+"</span></li>"}}).join("")+"<li class='nothumb' style='grid-template-columns:1fr'><a href='/weather/"+F[cur]+"/'>See all 20 for "+M[cur]+" →</a></li>";
+document.getElementById("mrank").innerHTML=rows.slice(0,10).map(function(r){{return "<li>"+(r[2].p?"<img class='thumb' src='"+r[2].p+"' alt='' loading='lazy'>":"")+"<div><a href='/destinations/"+r[1]+"/'>"+r[2].n+"</a><div class='why'>Avg high "+r[2].hi[cur]+"°F · low "+r[2].lo[cur]+"°F</div></div><span class='score-pill' style='background:"+col(r[0])+"'>"+r[0]+" · "+word(r[0])+"</span></li>"}}).join("")+"<li class='nothumb' style='grid-template-columns:1fr'><a href='/weather/"+F[cur]+"/'>See all {len(DEST)} for "+M[cur]+" →</a></li>";
 Array.prototype.forEach.call(document.querySelectorAll("#mtabs button"),function(b){{b.classList.toggle("on",+b.dataset.m===cur)}});}}
 document.getElementById("mtabs").addEventListener("click",function(e){{var b=e.target.closest("button");if(b){{cur=+b.dataset.m;draw();}}}});
 Array.prototype.forEach.call(document.querySelectorAll("input[name=pref]"),function(r){{r.addEventListener("change",draw)}});
@@ -777,15 +785,15 @@ def render_gear():
 
 # --------------------------------------------------------------------------- home
 def render_home():
-    feat_tools = ["packing-list", "trail-weather", "hiking-time-calculator", "water-calculator", "sleeping-bag-temperature", "backpack-size"]
+    feat_tools = ["trip-finder", "packing-list", "trail-weather", "hiking-time-calculator", "water-calculator", "sleeping-bag-temperature"]
     month = 10  # November
     rank = month_ranking(month)[:5]
     feat_dest = ["yosemite", "zion", "grand-teton", "glacier", "great-smoky-mountains", "arches", "acadia", "joshua-tree"]
     feat_arts = [ARTS[s] for s in ["honda-crv-camper", "blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper",
                                     "class-3-scramble", "cold-weather-camping", "how-to-put-out-a-fire", "rent-camping-gear"] if s in ARTS]
     hero_extra = ('<div class="btns"><a class="btn primary" href="/tools/packing-list/">Build your packing list</a>'
-                  '<a class="btn ghost" href="/weather/">Where to go this month</a></div>'
-                  '<div class="hero-meta"><a class="glass-chip" href="/tools/">🧭 10 free tools</a><a class="glass-chip" href="/destinations/">⛰️ 20 park weather guides</a>'
+                  '<a class="btn ghost" href="/tools/trip-finder/">📍 Find parks near me</a></div>'
+                  f'<div class="hero-meta"><a class="glass-chip" href="/tools/">🧭 {len(TOOL_LIST)} free tools</a><a class="glass-chip" href="/destinations/">⛰️ {len(DEST)} park weather guides</a>'
                   '<a class="glass-chip" href="/tools/trail-weather/">🌤️ Live trail forecasts</a></div>')
     body = (hero("Plan it right. Pack it light. Arrive ready.",
                  "Free trip-planning tools, month-by-month weather for national parks, and camping advice that actually helps — everything you need before you hit the trail.",
@@ -794,12 +802,12 @@ def render_home():
             f"""<section class="block dark" id="start" style="padding-top:40px">
 <div class="wrap">
 <div class="stats-strip reveal" style="margin-bottom:80px">
-<div><b data-count="10">10</b><span>free planning tools</span></div>
-<div><b data-count="20">20</b><span>park weather guides</span></div>
+<div><b data-count="{len(TOOL_LIST)}">{len(TOOL_LIST)}</b><span>free planning tools</span></div>
+<div><b data-count="{len(DEST)}">{len(DEST)}</b><span>park weather guides</span></div>
 <div><b data-count="10">10</b><span>years of daily weather data</span></div>
-<div><b data-count="24">24</b><span>practical guides</span></div>
+<div><b data-count="{len(ARTS)}">{len(ARTS)}</b><span>practical guides</span></div>
 </div>
-<div class="section-head"><div><span class="kicker">Free tools</span><h2>Answers before you leave the driveway</h2><p style="color:rgba(255,255,255,.65)">What to pack, how long it'll take, how much water, how warm a bag — and whether the weather will cooperate.</p></div><a class="link" style="color:var(--amber)" href="/tools/">All 10 tools →</a></div>
+<div class="section-head"><div><span class="kicker">Free tools</span><h2>Answers before you leave the driveway</h2><p style="color:rgba(255,255,255,.65)">What to pack, how long it'll take, how much water, how warm a bag — and whether the weather will cooperate.</p></div><a class="link" style="color:var(--amber)" href="/tools/">All {len(TOOL_LIST)} tools →</a></div>
 <div class="grid g3 reveal-stagger">{"".join(tool_card(t) for t in feat_tools)}</div>
 </div></section>
 <section class="block topo"><div class="wrap">
@@ -810,10 +818,10 @@ def render_home():
 <h2 style="margin-top:0">Best parks for hiking weather in November</h2>
 <p class="muted">Ranked from 10 years of daily weather at each park's main visitor area.</p>
 <ol class="rank">{"".join(rank_item(sc, s, m) for sc, s, m in rank)}</ol>
-<div class="btns"><a class="btn primary" href="/weather/november/">See all 20 for November</a><a class="btn outline" href="/weather/">Pick another month</a></div>
+<div class="btns"><a class="btn primary" href="/weather/november/">See all {len(DEST)} for November</a><a class="btn outline" href="/weather/">Pick another month</a></div>
 </div></div></div></section>
 <section class="block alt"><div class="wrap">
-<div class="section-head"><div><span class="kicker">Destination guides</span><h2>Know exactly when to go</h2><p>Month-by-month weather, seasonal road openings, camping and a live forecast for each park.</p></div><a class="link" href="/destinations/">All 20 destinations →</a></div>
+<div class="section-head"><div><span class="kicker">Destination guides</span><h2>Know exactly when to go</h2><p>Month-by-month weather, seasonal road openings, camping and a live forecast for each park.</p></div><a class="link" href="/destinations/">All {len(DEST)} destinations →</a></div>
 <div class="grid g4 reveal-stagger">{"".join(dest_card(s) for s in feat_dest)}</div>
 </div></section>
 <section class="block"><div class="wrap">
@@ -901,7 +909,7 @@ def render_static():
 <li><strong>Contact form:</strong> if you message us, we receive your name, email and message, and use them only to reply.</li>
 <li><strong>Tools:</strong> our tools run in your browser. Packing-list ticks and your last searched place are stored in your browser's local storage on your device, not on our servers. If you use "Use my location", your coordinates are used in your browser to request a forecast from Open-Meteo and are not stored by us.</li></ul>
 <h2 id="third-parties">Third parties</h2>
-<p>Weather searches send the place name or coordinates to <a href="https://open-meteo.com/">Open-Meteo</a> to return results. Affiliate links (for example to Amazon) may set cookies on the retailer's site to attribute purchases.</p>
+<p>Weather searches send the place name or coordinates to <a href="https://open-meteo.com/">Open-Meteo</a> to return results. Addresses typed into Trip Finder are sent to <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap's Nominatim geocoder</a> to find their coordinates; "Use my location" coordinates stay in your browser (saved in local storage so the tool remembers your starting point). Affiliate links (for example to Amazon) may set cookies on the retailer's site to attribute purchases.</p>
 <h2 id="choices">Your choices</h2>
 <p>You can block or delete cookies in your browser settings, use the <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out add-on</a>, and clear local storage to remove saved tool data. To ask about or delete data you've sent us, email <a href="mailto:{SITE['email']}">{SITE['email']}</a>.</p>
 <h2 id="changes">Changes</h2><p>We'll update this page if our practices change.</p>""")

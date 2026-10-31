@@ -270,3 +270,41 @@ TOOLS["feels-like"] = dict(
          ("At what wind chill does frostbite occur?", "At a wind chill around -18°F, frostbite can develop on exposed skin in about 30 minutes. At about -32°F it can take 10 minutes, and at -48°F five minutes or less."),
          ("Does wind chill affect water bottles or tents?", "No. Wind chill describes heat loss from skin. Objects only cool to the actual air temperature, though wind makes them get there faster.")],
 )
+
+MONTH_OPTS = "".join(f'<option value="{i}">{m}</option>' for i, m in enumerate(
+    ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]))
+
+TOOLS["trip-finder"] = dict(
+    title="Trip Finder: Best National Parks Near Me This Month",
+    description="Find the best parks near you for any month: share your location or enter an address, and we rank parks by drive time and 10 years of hiking and camping weather.",
+    h1="Trip Finder: Best Parks Near You This Month",
+    intro="Share your location — or type any address, town or ZIP code — and we'll rank parks within driving distance by how good their hiking and camping weather is in the month you want to go.",
+    form=f"""<div class="panel no-print">
+<h2>1. Where are you starting from?</h2>
+<button type="button" class="btn primary" id="use-loc" style="width:100%;justify-content:center">📍 Use my location</button>
+<p class="small muted" style="margin:8px 0 14px">Your location stays in your browser. We don't store it.</p>
+<form id="addr-form" class="field"><label for="addr">Or enter an address, town or ZIP code</label>
+<div style="display:flex;gap:8px"><input type="search" id="addr" placeholder="e.g. 80302, Asheville NC, or a street address" autocomplete="off"><button class="btn outline sm" type="submit">Find</button></div>
+<div class="hint">Address lookup by <a href="https://www.openstreetmap.org/copyright" rel="nofollow noopener">© OpenStreetMap</a> contributors.</div></form>
+<p class="status" id="loc-status" aria-live="polite"></p>
+<div id="origin-box" class="callout tip" hidden><strong>Starting from:</strong> <span id="origin-label"></span> <button type="button" class="chip" id="change-loc" style="cursor:pointer;margin-left:6px">Change</button></div>
+<form id="tf-opts" onsubmit="return false">
+<h2 style="margin-top:22px">2. When and how far?</h2>
+<div class="field"><label for="month">Month</label><select id="month">{MONTH_OPTS}</select></div>
+<div class="field"><span class="label">Max drive</span>{seg("drive", [("3", "3 hrs"), ("6", "6 hrs"), ("8", "8 hrs"), ("12", "12 hrs"), ("99", "Any (I'll fly)")], "8")}</div>
+<div class="field"><span class="label">Prioritize</span>{seg("pref", [("weather", "Best weather"), ("balanced", "Balanced"), ("close", "Closest")], "balanced")}</div>
+</form>
+</div>""",
+    explain="""<h2 id="how-it-works">How Trip Finder ranks parks</h2>
+<p>Every park on Arrive Outdoors has a <strong>monthly weather score</strong> built from 10 years of daily weather (2015–2024) at its main visitor area: comfortable highs, mild nights, few rain or snow days and little extreme heat score best. Trip Finder combines that score with an estimated drive time from your starting point, then drops anything beyond your maximum drive.</p>
+<ul><li><strong>Best weather</strong> leans hard toward the score — worth it for a long-weekend road trip.</li>
+<li><strong>Balanced</strong> trades a little weather for a shorter drive.</li>
+<li><strong>Closest</strong> favors whatever's near you, as long as the weather isn't poor that month.</li></ul>
+<p>Drive times are estimates from straight-line distance (roads typically add about a quarter) at highway speeds, so use the Directions link for a real route. Weather scores don't account for crowds, road closures or permits — each <a href="/destinations/">destination guide</a> covers those, and the <a href="/tools/trail-weather/">trail forecast</a> shows the next 7 days.</p>
+<h2 id="privacy">Your location and privacy</h2>
+<p>"Use my location" asks your browser for permission; the coordinates are used on this page to calculate distances and are saved only in your browser so the tool remembers you next time. If you type an address, it's sent to OpenStreetMap's geocoding service to find its coordinates. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+<p>Want a month-wide view instead? See <a href="/weather/">where to go hiking this month</a>.</p>""",
+    faq=[("How do I find national parks near me?", "Use Trip Finder: allow location access or type your town or ZIP code, choose how far you're willing to drive, and it lists the parks in range ranked by that month's weather."),
+         ("What is the best national park to visit this month?", "It depends on where you are. Trip Finder ranks parks by weather for the month you pick and by distance from you; the where-to-go-by-month guide ranks all parks on weather alone."),
+         ("Does Trip Finder store my location?", "No. Your coordinates are used in your browser and saved only on your device. Typed addresses are looked up through OpenStreetMap's geocoder to get coordinates.")],
+)
