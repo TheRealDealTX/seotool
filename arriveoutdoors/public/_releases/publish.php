@@ -13,7 +13,10 @@ foreach (glob($rel . '/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]', GLOB_ONLYDIR) as $di
     $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS));
     $n = 0;
     foreach ($it as $f) {
-        $target = $root . substr($f->getPathname(), strlen($dir));
+        if ($f->getFilename() === '.htaccess') continue;               // pack-folder guard file, not content
+        $rel_path = substr($f->getPathname(), strlen($dir));
+        if ($f->getFilename() === '_htaccess') $rel_path = substr($rel_path, 0, -9) . '.htaccess';
+        $target = $root . $rel_path;
         if (!is_dir(dirname($target))) mkdir(dirname($target), 0755, true);
         if (copy($f->getPathname(), $target)) $n++;
     }

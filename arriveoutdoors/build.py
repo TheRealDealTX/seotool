@@ -283,7 +283,7 @@ def score_word(s):
     return {"good": "Excellent", "ok": "Good", "fair": "Fair", "poor": "Poor"}[score_class(s)]
 
 
-SCORE_COLORS = {"good": "#2f9a5f", "ok": "#9fb03a", "fair": "#e0a13a", "poor": "#d4553b"}
+SCORE_COLORS = {"good": "#23784a", "ok": "#677516", "fair": "#a3640b", "poor": "#b8412a"}
 
 
 def place_scores(slug):
@@ -739,7 +739,7 @@ def render_weather_hub():
 <script>
 (function(){{var D={json.dumps(data, separators=(",", ":"))};
 var M={json.dumps(MON3)},F={json.dumps(MONTHS)},cur=new Date().getMonth();
-function col(s){{return s>=75?"#2f9a5f":s>=60?"#9fb03a":s>=45?"#e0a13a":"#d4553b"}}
+function col(s){{return s>=75?"#23784a":s>=60?"#677516":s>=45?"#a3640b":"#b8412a"}}
 function word(s){{return s>=75?"Excellent":s>=60?"Good":s>=45?"Fair":"Poor"}}
 function draw(){{var pref=document.querySelector("input[name=pref]:checked").value;
 var rows=Object.keys(D).map(function(k){{var d=D[k],s=d.sc[cur];if(pref==="warm")s+= (d.hi[cur]-70)*0.8;if(pref==="cool")s-=Math.max(0,d.hi[cur]-75)*1.5;return [Math.round(Math.max(0,Math.min(100,s))),k,d];}});
@@ -1145,7 +1145,10 @@ foreach (glob($rel . '/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]', GLOB_ONLYDIR) as $di
     $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS));
     $n = 0;
     foreach ($it as $f) {
-        $target = $root . substr($f->getPathname(), strlen($dir));
+        if ($f->getFilename() === '.htaccess') continue;               // pack-folder guard file, not content
+        $rel_path = substr($f->getPathname(), strlen($dir));
+        if ($f->getFilename() === '_htaccess') $rel_path = substr($rel_path, 0, -9) . '.htaccess';
+        $target = $root . $rel_path;
         if (!is_dir(dirname($target))) mkdir(dirname($target), 0755, true);
         if (copy($f->getPathname(), $target)) $n++;
     }
@@ -1181,7 +1184,8 @@ def main():
         cur = snapshot(tmp)
         changed = {k: v for k, v in cur.items() if prev.get(k) != v}
         for k, v in changed.items():
-            fp = os.path.join(rel_root, d) + k
+            # never place a live .htaccess inside a pack (the server would apply it to the pack folder)
+            fp = os.path.join(rel_root, d) + (k[:-len(".htaccess")] + "_htaccess" if k.endswith("/.htaccess") else k)
             os.makedirs(os.path.dirname(fp), exist_ok=True)
             open(fp, "wb").write(v)
         prev.update(cur)
@@ -1190,6 +1194,10 @@ def main():
         shutil.rmtree(tmp)
     if future:
         open(os.path.join(rel_root, "publish.php"), "w").write(PUBLISH_PHP)
+        deny = "Require all denied\n"
+        open(os.path.join(rel_root, ".htaccess"), "w").write(deny)
+        for d in future:  # guard each pack folder too
+            open(os.path.join(rel_root, d, ".htaccess"), "w").write(deny)
     n = sum(len(f) for _, _, f in os.walk(main_out))
     print(f"built {pages} indexable pages, {live} live articles ({len(ARTS_ALL) - live} scheduled), {n} files → public/")
 

@@ -25,7 +25,7 @@ upload() {
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
 }
 # Content first; .htaccess and index.php last so the switch-over happens only once everything is there.
-while IFS= read -r f; do upload "${f#./}"; done < <(find . -type f ! -name .htaccess ! -path ./index.php ! -path ./index.html | sort)
+while IFS= read -r f; do upload "${f#./}"; done < <(find . -type f ! -path ./.htaccess ! -path ./index.php ! -path ./index.html | sort)
 upload index.html; upload index.php; upload .htaccess
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]

@@ -31,7 +31,7 @@
     if (!d || isNaN(d)) return "—";
     return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZone: tz || undefined });
   };
-  AO.scoreColor = function (s) { return s >= 80 ? "#2f8a57" : s >= 65 ? "#9aa83a" : s >= 50 ? "#d99a2b" : "#c74f3a"; };
+  AO.scoreColor = function (s) { return s >= 80 ? "#23784a" : s >= 65 ? "#677516" : s >= 50 ? "#a3640b" : "#b8412a"; };
   AO.scoreLabel = function (s) { return s >= 80 ? "Great" : s >= 65 ? "Good" : s >= 50 ? "Fair" : "Poor"; };
 
   // ---- place search (Open-Meteo geocoding, no key) ----

@@ -15,7 +15,7 @@
   // Straight-line miles → rough driving time: roads run ~25% longer than the crow flies, ~58 mph average.
   function driveHours(mi) { return (mi * 1.25) / 58; }
   function hrs(h) { if (h < 1) return Math.max(10, Math.round(h * 60 / 10) * 10) + " min"; return (Math.round(h * 2) / 2).toString().replace(".5", "½") + " hr"; }
-  function col(s) { return s >= 75 ? "#2f9a5f" : s >= 60 ? "#9fb03a" : s >= 45 ? "#e0a13a" : "#d4553b"; }
+  function col(s) { return s >= 75 ? "#23784a" : s >= 60 ? "#677516" : s >= 45 ? "#a3640b" : "#b8412a"; }
   function word(s) { return s >= 75 ? "Excellent" : s >= 60 ? "Good" : s >= 45 ? "Fair" : "Poor"; }
 
   function setOrigin(o) {
