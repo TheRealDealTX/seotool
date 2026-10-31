@@ -105,24 +105,61 @@ def icon(name, size=22):
             f'stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
 
 
-LOGO = ('<svg width="38" height="30" viewBox="0 0 38 30" aria-hidden="true"><path d="M2 28 14 6l6 10 4-6 12 18z" fill="#2d5a45"/>'
+LOGO = ('<svg width="40" height="32" viewBox="0 0 38 30" aria-hidden="true"><path d="M2 28 14 6l6 10 4-6 12 18z" fill="#86a86b"/>'
         '<path d="M14 6l3.4 6.2-2.2-1.4-2.4 2.6-1.6-1.6z M24 10l2.6 3.9-1.6-.8-1.6 1.6-1.2-1.2z" fill="#fff"/>'
-        '<path d="M10 28l8-9 5 5 4-3 9 7z" fill="#e2614b"/></svg>')
+        '<path d="M10 28l8-9 5 5 4-3 9 7z" fill="#ff6a2b"/></svg>')
 
-RIDGE = ('<svg class="ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">'
-         '<path d="M0 120V70l90-28 70 22 110-48 90 38 70-20 120 46 90-30 100 24 80-40 120 52 90-26 110 30 90-44 120 40 90-16v80z" fill="#3f6f55" opacity=".55"/>'
-         '<path d="M0 120V92l120-30 90 26 130-40 110 44 100-22 140 34 120-30 110 22 130-36 110 30 120-18 160 26v54z" fill="#fbfaf6"/></svg>')
+# Layered mountain silhouettes at the bottom of every hero (parallax at different speeds)
+RIDGE_BACK = ('<svg class="r1" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path d="M0 220V120l70-36 60 22 90-70 80 54 60-30 110 66 70-44 90 26 70-52 60 30 80-60 110 80 70-30 90 40 80-56 100 66 70-22 60 18 70-30v168z"/></svg>')
+RIDGE_MID = ('<svg class="r2" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true"><path d="M0 180V110l110-40 70 30 120-62 100 58 80-24 130 50 100-46 90 30 120-58 90 42 110-30 100 36 120-44 100 40v118z"/>'
+             '<g><path d="M218 112l10-28 10 28z"/><path d="M232 112l8-22 8 22z"/><path d="M1010 104l11-30 11 30z"/><path d="M1026 104l8-22 8 22z"/><path d="M640 120l9-24 9 24z"/></g></svg>')
+
+
+def ridges(fill):
+    return (f'<div class="ridges" aria-hidden="true"><div data-parallax="-0.06">{RIDGE_BACK}</div><div data-parallax="-0.02">{RIDGE_MID}</div>'
+            f'<svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="{fill}" d="M0 70V40c120-20 240 18 380 4s250-36 400-10 260 24 380 6 200-20 280-8v38z"/></svg></div>')
+
+
+FOOT_RIDGE = ('<div class="ridge-top" aria-hidden="true"><svg viewBox="0 0 1440 120" preserveAspectRatio="none">'
+              '<path fill="#0d1f19" d="M0 120V70l90-30 80 24 120-52 90 40 70-22 130 50 90-32 100 26 90-44 120 56 90-28 110 32 100-48 120 44 70-18v82z"/>'
+              '<path fill="#07130f" d="M0 120V96l130-30 90 26 140-42 110 44 100-22 150 34 120-30 110 22 140-36 110 30 120-18 120 26v20z"/></svg></div>')
 
 CSS_V = asset_v("assets/css/site.css")
 JS_V = asset_v("assets/js/site.js")
+FX_V = asset_v("assets/js/fx.js")
+
+# --------------------------------------------------------------------------- photos
+_pj = os.path.join(ROOT, "data", "photos.json")
+PHOTOS = json.load(open(_pj)) if os.path.exists(_pj) else {}
+
+
+def photo_src(key, w=1280):
+    p = PHOTOS.get(key)
+    if not p:
+        return None
+    best = min(p["widths"], key=lambda x: abs(x - w))
+    return f"/assets/img/photos/{key}-{best}.webp"
+
+
+def picture(key, sizes="100vw", cls="", eager=False, alt=None):
+    p = PHOTOS.get(key)
+    if not p:
+        return f'<div class="ph {cls}">{icon("mountain", 44)}</div>'
+    srcset = ", ".join(f"/assets/img/photos/{key}-{w}.webp {w}w" for w in p["widths"])
+    w0 = p["widths"][min(1, len(p["widths"]) - 1)]
+    h0 = round(w0 / p["ratio"])
+    a = p.get("alt", "") if alt is None else alt
+    load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    return (f'<img class="{cls}" src="/assets/img/photos/{key}-{w0}.webp" srcset="{srcset}" sizes="{sizes}" '
+            f'width="{w0}" height="{h0}" alt="{E(a)}" {load}>')
 
 
 # --------------------------------------------------------------------------- layout
 def layout(*, path, title, description, body, schema=(), og_image=None, og_type="website",
-           scripts=(), noindex=False, sitemap=True, lastmod=TODAY, active=None):
+           scripts=(), noindex=False, sitemap=True, lastmod=TODAY, active=None, progress=False):
     full_title = title if (SITE["name"] in title or len(title) + len(SITE["name"]) + 3 > 65) else f"{title} | {SITE['name']}"
     canonical = URL + path
-    og_img = URL + (og_image or "/assets/img/og-default.png")
+    og_img = URL + (og_image or photo_src("hero-night", 1280) or "/assets/img/icon-192.webp")
     gtag = ""
     if SITE.get("gtag"):
         g = SITE["gtag"]
@@ -132,8 +169,8 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
     if SITE.get("adsense_on"):
         ads = f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense_client"]}" crossorigin="anonymous"></script>'
     nav = "".join(f'<a href="{h}"{" aria-current=page" if active == h else ""}>{E(n)}</a>' for n, h in NAV)
-    js = f'<script src="/assets/js/site.js?v={JS_V}" defer></script>' + "".join(
-        f'<script src="{s}?v={asset_v(s.lstrip("/"))}" defer></script>' for s in scripts)
+    js = (f'<script src="/assets/js/site.js?v={JS_V}" defer></script><script src="/assets/js/fx.js?v={FX_V}" defer></script>' +
+          "".join(f'<script src="{s}?v={asset_v(s.lstrip("/"))}" defer></script>' for s in scripts))
     schema_html = "".join(ld(s) for s in schema if s)
     if sitemap and not noindex:
         SITEMAP.append((path, lastmod))
@@ -159,13 +196,17 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 <link rel="icon" href="/assets/img/icon-192.webp" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/img/icon-192.webp">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#2d5a45">
+<meta name="theme-color" content="#07130f">
+<link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
 <link rel="stylesheet" href="/assets/css/site.css?v={CSS_V}">
 {gtag}{ads}{schema_html}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+{'<div class="progress-trail" aria-hidden="true"></div>' if progress else ''}
+<div class="grain" aria-hidden="true"></div>
 <header class="site-header"><div class="wrap">
 <a class="brand" href="/">{LOGO}<span>Arrive<small>Outdoors</small></span></a>
 <button class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Menu">{icon("menu")}</button>
@@ -174,17 +215,17 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 <main id="main">
 {body}
 </main>
-<footer class="site-footer"><div class="wrap">
+<footer class="site-footer">{FOOT_RIDGE}<canvas data-fx="stars" data-star-top="1" aria-hidden="true"></canvas><div class="wrap">
 <div class="foot-grid">
-<div><a class="brand" href="/" style="color:#fff">{LOGO}<span style="color:#fff">Arrive<small style="color:#9fb3a7">Outdoors</small></span></a>
-<p style="margin-top:12px">{E(SITE['description'])}</p>
+<div><a class="brand" href="/">{LOGO}<span>Arrive<small>Outdoors</small></span></a>
+<p style="margin-top:14px">{E(SITE['description'])}</p>
 <p class="small">Some links are affiliate links: if you buy through them we may earn a commission, at no cost to you. <a href="/affiliate-disclosure/">How that works</a>.</p></div>
 <div><h4>Tools</h4><ul>{foot_tools}<li><a href="/tools/">All tools</a></li></ul></div>
 <div><h4>Destinations</h4><ul>{foot_dest}<li><a href="/destinations/">All destinations</a></li></ul></div>
 <div><h4>Plan</h4><ul><li><a href="/weather/">Where to go by month</a></li><li><a href="/guides/">Guides</a></li><li><a href="/gear/">Gear picks</a></li><li><a href="/rent-camping-gear/">Rent camping gear</a></li><li><a href="/tools/packing-list/">Packing list</a></li></ul></div>
-<div><h4>Arrive Outdoors</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li></ul></div>
+<div><h4>Arrive Outdoors</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li><li><a href="/photo-credits/">Photo credits</a></li></ul></div>
 </div>
-<div class="foot-bottom"><span>© 2026 Arrive Outdoors. Weather data: Open-Meteo (CC BY 4.0). Conditions change — always check official park and weather sources.</span><span>As an Amazon Associate, Arrive Outdoors earns from qualifying purchases.</span></div>
+<div class="foot-bottom"><span>© 2026 Arrive Outdoors. Weather data: Open-Meteo (CC BY 4.0). Photos: Pexels. Conditions change — always check official park and weather sources.</span><span>As an Amazon Associate, Arrive Outdoors earns from qualifying purchases.</span></div>
 </div></footer>
 {js}
 </body>
@@ -192,11 +233,20 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 """
 
 
-def hero(title, lead, eyebrow=None, small=True, extra=""):
-    return (f'<section class="hero{" small" if small else ""}"><div class="wrap">'
+def hero(title, lead, eyebrow=None, small=True, extra="", photo=None, fx_modes=None, full=False, split=False, below="var(--bg)", crumbs=None):
+    has = photo and photo in PHOTOS
+    bg = f'<div class="bg" data-parallax="0.3">{picture(photo, eager=True, alt="")}</div>' if has else '<div class="bg"></div>'
+    canvas = f'<canvas class="fx" data-fx="{fx_modes}" aria-hidden="true"></canvas>' if fx_modes else ""
+    cls = "hero" + (" full" if full else " small" if small else "") + ("" if has else " no-photo")
+    credit = ""
+    if has and PHOTOS[photo].get("page"):
+        who = PHOTOS[photo].get("photographer") or "Pexels"
+        credit = f'<span class="hero-photo-credit">Photo: <a href="{E(PHOTOS[photo]["page"])}" rel="nofollow noopener">{E(who)}</a></span>'
+    return (f'<section class="{cls}">{bg}{canvas}<div class="wrap">'
+            + (crumbs_html(crumbs) if crumbs else "")
             + (f'<span class="eyebrow">{E(eyebrow)}</span>' if eyebrow else "")
-            + f"<h1>{title}</h1>" + (f'<p class="lead">{lead}</p>' if lead else "") + extra
-            + f"</div>{RIDGE}</section>")
+            + f'<h1{" data-split" if split else ""}>{title}</h1>' + (f'<p class="lead">{lead}</p>' if lead else "") + extra
+            + f"</div>{ridges(below)}{credit}</section>")
 
 
 # --------------------------------------------------------------------------- climate
@@ -227,7 +277,7 @@ def score_word(s):
     return {"good": "Excellent", "ok": "Good", "fair": "Fair", "poor": "Poor"}[score_class(s)]
 
 
-SCORE_COLORS = {"good": "#2f8a57", "ok": "#9aa83a", "fair": "#d99a2b", "poor": "#c74f3a"}
+SCORE_COLORS = {"good": "#2f9a5f", "ok": "#9fb03a", "fair": "#e0a13a", "poor": "#d4553b"}
 
 
 def place_scores(slug):
@@ -307,17 +357,29 @@ def load_articles():
 ARTS = load_articles()
 
 
+def art_photo(a):
+    k = "art-" + a["slug"].split("/")[-1]
+    if k == "art-camping-101-a-guide-for-the-first-time-camper":
+        k = "art-camping-101"
+    return k if k in PHOTOS else None
+
+
 def article_card(a):
-    thumb = (f'<img class="thumb" src="{a["image"]}" alt="" loading="lazy" width="900" height="600">' if a.get("image") else
-             f'<div class="thumb" style="display:grid;place-items:center;background:linear-gradient(135deg,#2d5a45,#7c9a5e);color:#fff">{icon("mountain", 44)}</div>')
-    return (f'<a class="card" href="{a["path"]}">{thumb}<div class="body"><span class="meta">{E(CATEGORIES.get(a["category"], ""))}</span>'
-            f'<h3>{E(a["h1"])}</h3><p>{E(a.get("summary", ""))}</p></div></a>')
+    k = art_photo(a)
+    if k:
+        media = picture(k, sizes="(max-width:700px) 100vw, 400px")
+    elif a.get("image"):
+        media = f'<img src="{a["image"]}" alt="" loading="lazy" width="900" height="600">'
+    else:
+        media = f'<div class="ph">{icon("mountain", 44)}</div>'
+    return (f'<a class="card" href="{a["path"]}"><div class="media">{media}</div><div class="body"><span class="meta">{E(CATEGORIES.get(a["category"], ""))}</span>'
+            f'<h3>{E(a["h1"])}</h3><p>{E(a.get("summary", ""))}</p><span class="more">Read the guide</span></div></a>')
 
 
-def tool_card(slug):
+def tool_card(slug, light=False):
     t = next(x for x in TOOL_LIST if x[0] == slug)
-    return (f'<a class="card tool-card" href="/tools/{slug}/"><div class="body"><div class="icon-badge">{icon(t[3])}</div>'
-            f'<h3>{E(t[1])}</h3><p>{E(t[2])}</p><span class="more">Open tool →</span></div></a>')
+    return (f'<a class="card tool-card{" light" if light else ""}" href="/tools/{slug}/"><div class="body"><div class="icon-badge">{icon(t[3], 24)}</div>'
+            f'<h3>{E(t[1])}</h3><p>{E(t[2])}</p><span class="more">Open tool</span></div></a>')
 
 
 def dest_card(slug, month=None):
@@ -326,10 +388,16 @@ def dest_card(slug, month=None):
     band = "".join(f'<i style="background:{SCORE_COLORS[score_class(s)]}" title="{MON3[i]}: {score_word(s)}"></i>' for i, s in enumerate(sc))
     bm = best_months(slug)
     extra = f'<span class="chip {score_class(sc[month])}">{MONTH_NAMES[month]}: {score_word(sc[month])}</span>' if month is not None else ""
-    return (f'<a class="card dest-card" href="/destinations/{slug}/"><div class="band">{band}</div><div class="body">'
-            f'<span class="meta">{E(d["state"])}</span><h3>{E(d["name"])}</h3>'
-            f'<p>Best months for hiking weather: <strong>{", ".join(MON3[i] for i in bm)}</strong></p>{extra}'
-            f'<span class="more">Month-by-month guide →</span></div></a>')
+    return (f'<a class="card dest-card" href="/destinations/{slug}/"><div class="media">{picture("dest-" + slug, sizes="(max-width:700px) 100vw, 320px")}</div>'
+            f'<div class="body"><span class="meta">{E(d["state"])}</span><h3>{E(short_name(slug))}</h3>'
+            f'<p>Best weather: <strong>{" · ".join(MON3[i] for i in bm)}</strong></p>{extra}'
+            f'<div class="band" aria-label="Weather score by month">{band}</div><div class="band-labels"><span>Jan</span><span>Jun</span><span>Dec</span></div></div></a>')
+
+
+def rank_item(sc, s, m, thumb=True):
+    t = picture("dest-" + s, sizes="64px", cls="thumb", alt="") if thumb and ("dest-" + s) in PHOTOS else ""
+    return (f'<li class="{"" if t else "nothumb"}">{t}<div><a href="/destinations/{s}/">{E(DEST[s]["name"])}</a><div class="why">{E(month_reason(m))}</div></div>'
+            f'<span class="score-pill" style="background:{SCORE_COLORS[score_class(sc)]}">{sc} · {score_word(sc)}</span></li>')
 
 
 def render_article(a):
@@ -353,23 +421,18 @@ def render_article(a):
                   'commission at no extra cost to you. <a href="/affiliate-disclosure/">Learn more</a>.</p>') if a["has_amazon"] else ""
     faq_html, faq_schema = faq_block([(f["q"], f["a"]) for f in a.get("faq", [])])
     related = [ARTS[s] for s in a.get("related", []) if s in ARTS][:3]
-    rel_html = ('<section class="block"><div class="wrap"><h2>Keep reading</h2><div class="grid g3">' +
+    rel_html = ('<section class="block topo"><div class="wrap"><div class="section-head"><div><span class="kicker">Keep exploring</span><h2>Read next</h2></div></div><div class="grid g3 reveal-stagger">' +
                 "".join(article_card(r) for r in related) + "</div></div></section>") if related else ""
     minutes = max(3, round(a["words"] / 230))
     updated = a.get("updated", TODAY)
-    hero_img = (f'<img class="article-hero" src="{a["image"]}" alt="{E(a["h1"])}" width="900" height="600" fetchpriority="high">'
-                if a.get("image") else "")
-    body = f"""<div class="wrap">
-{crumbs_html(crumbs)}
-<header class="article-head read">
-<span class="eyebrow" style="color:var(--coral-2)">{E(CATEGORIES.get(cat, ""))}</span>
-<h1>{E(a["h1"])}</h1>
-<p class="dek">{E(a.get("summary", ""))}</p>
-<div class="byline"><span>By <a href="{AUTHOR['url']}"><strong>{E(AUTHOR['name'])}</strong></a></span><span>Updated <time datetime="{updated}">{fmt_date(updated)}</time></span><span>{minutes} min read</span></div>
-</header>
+    k = art_photo(a)
+    byline = (f'<p class="lead">{E(a.get("summary", ""))}</p><div class="byline"><span>By <a href="{AUTHOR["url"]}"><strong>{E(AUTHOR["name"])}</strong></a></span><i class="dot"></i>'
+              f'<span>Updated <time datetime="{updated}">{fmt_date(updated)}</time></span><i class="dot"></i><span>{minutes} min read</span></div>')
+    body = (hero(E(a["h1"]), "", eyebrow=CATEGORIES.get(cat, ""), photo=k, extra=byline, crumbs=crumbs,
+                 fx_modes="embers" if "fire" in a["slug"] else ("snow" if "cold" in a["slug"] else ("stars" if not k else None))) +
+            f"""<div class="wrap">
 <div class="layout">
 <article class="prose">
-{hero_img}
 {disclosure}
 {a["body"]}
 {faq_html}
@@ -378,25 +441,32 @@ def render_article(a):
 </article>
 <aside class="no-print">{aside}</aside>
 </div></div>
-{rel_html}"""
+{rel_html}""")
+    img = photo_src(k, 1280) if k else a.get("image")
     schema = [{
         "@context": "https://schema.org", "@type": "Article", "headline": a["h1"], "description": a["description"],
         "datePublished": a["published"], "dateModified": updated, "mainEntityOfPage": URL + path,
         "author": {"@type": "Organization", "name": AUTHOR["name"], "url": URL + AUTHOR["url"]},
         "publisher": {"@type": "Organization", "name": SITE["name"], "logo": {"@type": "ImageObject", "url": URL + "/assets/img/icon-192.webp"}},
-        **({"image": URL + a["image"]} if a.get("image") else {}),
+        **({"image": URL + img} if img else {}),
     }, breadcrumbs_ld(crumbs), faq_schema]
     write(path, layout(path=path, title=a["title"], description=a["description"], body=body, schema=schema,
-                       og_image=a.get("image"), og_type="article", lastmod=updated, active="/guides/"))
+                       og_image=img, og_type="article", lastmod=updated, active="/guides/", progress=True))
 
 
 # --------------------------------------------------------------------------- tools
+TOOL_PHOTOS = {"packing-list": "hero-day", "trail-weather": "summit", "hiking-time-calculator": "trail", "water-calculator": "desert-camp",
+               "sleeping-bag-temperature": "snow-camp", "backpack-size": "art-how-to-measure-torso-length-for-backpack",
+               "sunrise-sunset": "summit", "camp-meal-planner": "campfire", "rent-vs-buy": "art-rent-camping-gear", "feels-like": "desert-camp"}
+TOOL_FX = {"sleeping-bag-temperature": "snow", "camp-meal-planner": "embers", "sunrise-sunset": "stars"}
+
+
 def render_tool(slug, name, desc, ic):
     c = TOOL_COPY[slug]
     path = f"/tools/{slug}/"
     form = c["form"]
     if "{QUICK_PLACES}" in form:
-        quick = "".join(f'<button type="button" class="chip" style="border:0;cursor:pointer" data-name="{E(d["hub"] + ", " + short_name(s))}" '
+        quick = "".join(f'<button type="button" class="chip" style="cursor:pointer" data-name="{E(d["hub"] + ", " + short_name(s))}" '
                         f'data-lat="{d["lat"]}" data-lon="{d["lon"]}" data-elev="{d["elev"]}">{E(short_name(s))}</button>'
                         for s, d in list(DEST.items())[:12])
         form = form.replace("{QUICK_PLACES}", quick)
@@ -404,10 +474,11 @@ def render_tool(slug, name, desc, ic):
     faq_html, faq_schema = faq_block(c["faq"])
     others = [t[0] for t in TOOL_LIST if t[0] != slug][:3]
     crumbs = [("Home", "/"), ("Tools", "/tools/"), (c["h1"], path)]
-    body = (hero(E(c["h1"]), E(c["intro"]), eyebrow="Free tool") +
-            f'<div class="wrap">{crumbs_html(crumbs)}<div class="tool-shell">{form}<div class="panel" aria-live="polite">{result_title}<div id="result"></div></div></div>'
-            f'<div class="read prose">{c["explain"]}{faq_html}</div></div>'
-            f'<section class="block alt no-print"><div class="wrap"><h2>More free tools</h2><div class="grid g3">{"".join(tool_card(o) for o in others)}</div></div></section>')
+    res_cls = ' class="forecast"' if slug == "trail-weather" else ""
+    body = (hero(E(c["h1"]), E(c["intro"]), eyebrow="Free tool", photo=TOOL_PHOTOS.get(slug), fx_modes=TOOL_FX.get(slug), crumbs=crumbs) +
+            f'<div class="wrap"><div class="tool-shell">{form}<div class="panel" aria-live="polite">{result_title}<div id="result"{res_cls}></div></div></div>'
+            f'<div class="read prose reveal">{c["explain"]}{faq_html}</div></div>'
+            f'<section class="block dark no-print"><div class="wrap"><div class="section-head"><div><span class="kicker">Keep planning</span><h2>More free tools</h2></div><a class="link" style="color:var(--amber)" href="/tools/">All tools →</a></div><div class="grid g3 reveal-stagger">{"".join(tool_card(o) for o in others)}</div></div></section>')
     schema = [{"@context": "https://schema.org", "@type": "WebApplication", "name": c["h1"], "url": URL + path,
                "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "description": c["description"],
                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, breadcrumbs_ld(crumbs), faq_schema]
@@ -416,9 +487,10 @@ def render_tool(slug, name, desc, ic):
 
 
 def render_tools_hub():
-    body = (hero("Free camping & hiking tools", "Planning calculators that answer the questions every trip starts with: what to pack, how long it'll take, how much water, how warm a bag, and what the weather will do.", eyebrow="Tools") +
-            f'<section class="block"><div class="wrap"><div class="grid g3">{"".join(tool_card(t[0]) for t in TOOL_LIST)}</div>'
-            '<p class="muted small" style="margin-top:24px">Every tool runs in your browser and is free to use. Forecasts come from Open-Meteo; formulas are explained on each page.</p></div></section>')
+    body = (hero("Free camping & hiking tools", "Planning calculators that answer the questions every trip starts with: what to pack, how long it'll take, how much water, how warm a bag, and what the weather will do.",
+                 eyebrow="Tools", photo="map", below="var(--night)") +
+            f'<section class="block dark" style="padding-top:40px"><div class="wrap"><div class="grid g3 reveal-stagger">{"".join(tool_card(t[0]) for t in TOOL_LIST)}</div>'
+            '<p class="small" style="margin-top:28px;color:rgba(255,255,255,.6)">Every tool runs in your browser and is free to use. Forecasts come from Open-Meteo; formulas are explained on each page.</p></div></section>')
     write("/tools/", layout(path="/tools/", title="Free Camping & Hiking Tools and Calculators",
                             description="Free camping and hiking tools: packing list generator, trail forecast with hike score, hiking time, water, sleeping bag, backpack size and more.",
                             body=body, active="/tools/"))
@@ -451,9 +523,9 @@ def climate_section(slug):
 <p>Ten-year averages (2015–2024) at {E(c["hub"])}, about {elev_ft:,} ft. Higher trails are colder, windier and snowier — temperatures typically drop 3–5°F for every 1,000 ft you climb.</p>
 <h3>Hiking & camping weather score by month</h3>
 <div class="months" role="img" aria-label="Monthly weather score">{strip}</div>
-<div class="legend"><span><i style="background:#2f8a57"></i>Excellent 75+</span><span><i style="background:#9aa83a"></i>Good 60–74</span><span><i style="background:#d99a2b"></i>Fair 45–59</span><span><i style="background:#c74f3a"></i>Poor &lt;45</span></div>
+<div class="legend"><span><i style="background:var(--good)"></i>Excellent 75+</span><span><i style="background:var(--ok)"></i>Good 60–74</span><span><i style="background:var(--fair)"></i>Fair 45–59</span><span><i style="background:var(--poor)"></i>Poor &lt;45</span></div>
 <h3>Average high and low temperature (°F)</h3>
-<div class="chart" role="img" aria-label="Average monthly high and low temperatures">{cols}</div>
+<div class="chart pre" role="img" aria-label="Average monthly high and low temperatures">{cols}</div>
 <div class="chart-labels">{"".join(f"<span>{m}</span>" for m in MON3)}</div>
 <h3>Average precipitation (inches per month)</h3>
 <div class="precip" role="img" aria-label="Average monthly precipitation">{precip}</div>
@@ -488,7 +560,7 @@ def render_destination(slug):
     seasons = ""
     if cp.get("seasons"):
         seasons = '<h2 id="seasons">Season by season</h2><div class="season-grid">' + "".join(
-            f'<div class="season"><h3>{k.capitalize()}</h3>{v}</div>' for k, v in cp["seasons"].items()) + "</div>"
+            f'<div class="season reveal" data-icon="{ {"spring": "🌱", "summer": "☀️", "fall": "🍂", "winter": "❄️"}.get(k, "")}"><h3>{k.capitalize()}</h3>{v}</div>' for k, v in cp["seasons"].items()) + "</div>"
     hikes = ""
     if cp.get("hikes"):
         hikes = ('<h2 id="hikes">Hikes worth timing right</h2><div class="table-wrap"><table><thead><tr><th>Hike</th><th>Level</th><th>Notes</th></tr></thead><tbody>' +
@@ -528,11 +600,12 @@ def render_destination(slug):
     toc = '<nav class="toc"><h2>On this page</h2><ol>' + "".join(f'<li><a href="#{i}">{t}</a></li>' for i, t in toc_items) + '<li><a href="#faq">FAQ</a></li></ol></nav>'
     side_near = "".join(f'<li><a href="/destinations/{n}/">{E(DEST[n]["name"])}</a></li>' for n in nearby)
     side_arts = "".join(f'<li><a href="{a["path"]}">{E(a["h1"])}</a></li>' for a in rel_arts[:4])
-    highlights = ('<div class="chips" style="margin:6px 0 18px">' + "".join(f'<span class="chip">{E(h)}</span>' for h in cp.get("highlights", [])) + "</div>") if cp.get("highlights") else ""
-    body = (hero(E(f"Best time to visit {sname}"), E(f"{d['state']} · month-by-month weather, seasons, camping and a live forecast"), eyebrow="Destination guide") +
-            f"""<div class="wrap">{crumbs_html(crumbs)}
+    chips = "".join(f'<span class="glass-chip">{E(h)}</span>' for h in cp.get("highlights", [])[:5])
+    hero_extra = f'<div class="hero-meta"><span class="glass-chip">☀️ Best: {" · ".join(MON3[i] for i in bm)}</span><span class="glass-chip">⛰️ {round(d["elev"] * 3.281):,} ft</span>{chips}</div>'
+    body = (hero(E(f"Best time to visit {sname}"), E(f"{d['state']} · month-by-month weather, seasons, camping and a live forecast"), eyebrow="Destination guide",
+                 photo="dest-" + slug, extra=hero_extra, crumbs=crumbs) +
+            f"""<div class="wrap">
 <div class="layout"><article class="prose">
-{highlights}
 <h2 id="best-time">Best time to visit</h2>
 <p class="lead"><strong>{E(best_time)}</strong></p>
 {stats}
@@ -562,7 +635,7 @@ def render_destination(slug):
                "about": {"@type": "TouristDestination", "name": name,
                          "geo": {"@type": "GeoCoordinates", "latitude": d["lat"], "longitude": d["lon"]}}},
               breadcrumbs_ld(crumbs), faq_schema]
-    write(path, layout(path=path, title=title, description=desc, body=body, schema=schema, active="/destinations/"))
+    write(path, layout(path=path, title=title, description=desc, body=body, schema=schema, active="/destinations/", og_image=photo_src("dest-" + slug, 1280)))
 
 
 def render_destinations_hub():
@@ -571,11 +644,10 @@ def render_destinations_hub():
     now = 10  # November is the next month when this launches; the JS picker defaults to the visitor's month
     body = (hero("When to go: national park weather guides",
                  "Month-by-month weather from 10 years of data, the best time to visit for hiking and camping, seasonal notes and a live forecast for each park.",
-                 eyebrow="Destinations") +
-            f"""<section class="block"><div class="wrap">
-<div class="section-head"><h2>All destinations</h2><a class="btn outline sm" href="/weather/">Where to go this month →</a></div>
-<p class="muted">Each colored strip shows January → December: <span class="chip good">Excellent</span> <span class="chip ok">Good</span> <span class="chip fair">Fair</span> <span class="chip poor">Poor</span> hiking weather.</p>
-<div class="grid g3">{cards}</div></div></section>""")
+                 eyebrow="Destinations", photo="summit") +
+            f"""<section class="block topo"><div class="wrap">
+<div class="section-head"><div><span class="kicker">20 parks & wild places</span><h2>Pick your next trip</h2><p>The colored strip on each card runs January → December: <span class="chip good">Excellent</span> <span class="chip ok">Good</span> <span class="chip fair">Fair</span> <span class="chip poor">Poor</span> hiking weather.</p></div><a class="btn outline sm" href="/weather/">Where to go this month →</a></div>
+<div class="grid g4 reveal-stagger">{cards}</div></div></section>""")
     write("/destinations/", layout(path="/destinations/", title="National Park Weather Guides: Best Time to Visit",
                                    description="When to visit 20 popular national parks and wild places: monthly weather from 10 years of data, best months for hiking and camping, and live forecasts.",
                                    body=body, active="/destinations/"))
@@ -596,10 +668,7 @@ def render_weather_month(mi):
     path = f"/weather/{MONTHS[mi]}/"
     rows = month_ranking(mi)
     good = [r for r in rows if r[0] >= 60]
-    li = "".join(
-        f'<li><div><a href="/destinations/{s}/">{E(DEST[s]["name"])}</a><div class="why">{E(month_reason(m))}</div></div>'
-        f'<span class="score-pill" style="background:{SCORE_COLORS[score_class(sc)]}">{sc} · {score_word(sc)}</span></li>'
-        for sc, s, m in rows)
+    li = "".join(rank_item(sc, s, m) for sc, s, m in rows)
     top3 = ", ".join(short_name(s) for _, s, _ in rows[:3])
     avoid = [short_name(s) for sc, s, _ in rows[-3:]]
     tabs = "".join(f'<a href="/weather/{MONTHS[i]}/"{" aria-current=page" if i == mi else ""}>{MON3[i]}</a>' for i in range(12))
@@ -616,11 +685,13 @@ def render_weather_month(mi):
             ", ".join(f"{short_name(s)} averages {round(m['low'])}°F" for _, s, m in sorted(rows, key=lambda r: r[2]['low'])[:2]) + " at night.")]
     faq_html, faq_schema = faq_block(faq)
     crumbs = [("Home", "/"), ("Weather", "/weather/"), (mname, path)]
-    body = (hero(E(f"Best national parks to visit in {mname}"), "Ranked by hiking and camping weather from 10 years of data.", eyebrow="Where to go by month") +
-            f"""<div class="wrap">{crumbs_html(crumbs)}
+    mphoto = {"cold": "snow-camp", "warm": "hero-day", "shoulder": "forest" if mi in (2, 3, 4) else "summit"}[season]
+    body = (hero(E(f"Best national parks to visit in {mname}"), f"Ranked by hiking and camping weather from 10 years of data. Top pick: <strong>{E(short_name(rows[0][1]))}</strong>.",
+                 eyebrow="Where to go by month", photo=mphoto, fx_modes="snow" if season == "cold" else None, crumbs=crumbs) +
+            f"""<div class="wrap" style="margin-top:30px">
 <div class="month-tabs">{tabs}</div>
 <div class="read prose"><p class="lead">{intro}</p></div>
-<ol class="rank">{li}</ol>
+<ol class="rank reveal-stagger">{li}</ol>
 <div class="read prose">
 <p class="small muted">Scores rate average weather only — temperature, rain, snow and heat at each park's main visitor area. Seasonal roads, crowds and reservations matter too; each destination guide covers them.</p>
 <div class="callout tool">Going in {mname}? Build a <a href="/tools/packing-list/?season={season}">{season.replace("shoulder", "spring/fall").replace("warm", "summer").replace("cold", "winter")} packing list</a>, and check the <a href="/tools/trail-weather/">7-day trail forecast</a> before you leave.</div>
@@ -631,12 +702,13 @@ def render_weather_month(mi):
 
 
 def render_weather_hub():
-    data = {s: {"n": DEST[s]["name"], "sc": place_scores(s),
+    data = {s: {"n": DEST[s]["name"], "sc": place_scores(s), "p": photo_src("dest-" + s, 640) or "",
                 "hi": [round(m["high"]) for m in CLIMATE[s]["months"]],
                 "lo": [round(m["low"]) for m in CLIMATE[s]["months"]]} for s in DEST}
     tabs = "".join(f'<button type="button" data-m="{i}">{MON3[i]}</button>' for i in range(12))
     month_links = "".join(f'<a class="chip" href="/weather/{MONTHS[i]}/">Best parks in {MONTH_NAMES[i]}</a>' for i in range(12))
-    body = (hero("Where to go hiking this month", "Pick a month to rank 20 national parks and wild places by hiking and camping weather — or check a live forecast for any trailhead.", eyebrow="Weather") +
+    body = (hero("Where to go hiking this month", "Pick a month to rank 20 national parks and wild places by hiking and camping weather — or check a live forecast for any trailhead.", eyebrow="Weather",
+                 photo="stars", fx_modes="stars") +
             f"""<section class="block"><div class="wrap">
 <div class="grid g2" style="align-items:start">
 <div class="panel"><h2>Rank parks by month</h2><div class="month-tabs" id="mtabs">{tabs}</div>
@@ -649,12 +721,12 @@ def render_weather_hub():
 <script>
 (function(){{var D={json.dumps(data, separators=(",", ":"))};
 var M={json.dumps(MON3)},F={json.dumps(MONTHS)},cur=new Date().getMonth();
-function col(s){{return s>=75?"#2f8a57":s>=60?"#9aa83a":s>=45?"#d99a2b":"#c74f3a"}}
+function col(s){{return s>=75?"#2f9a5f":s>=60?"#9fb03a":s>=45?"#e0a13a":"#d4553b"}}
 function word(s){{return s>=75?"Excellent":s>=60?"Good":s>=45?"Fair":"Poor"}}
 function draw(){{var pref=document.querySelector("input[name=pref]:checked").value;
 var rows=Object.keys(D).map(function(k){{var d=D[k],s=d.sc[cur];if(pref==="warm")s+= (d.hi[cur]-70)*0.8;if(pref==="cool")s-=Math.max(0,d.hi[cur]-75)*1.5;return [Math.round(Math.max(0,Math.min(100,s))),k,d];}});
 rows.sort(function(a,b){{return b[0]-a[0]}});
-document.getElementById("mrank").innerHTML=rows.slice(0,10).map(function(r){{return "<li><div><a href='/destinations/"+r[1]+"/'>"+r[2].n+"</a><div class='why'>Avg high "+r[2].hi[cur]+"°F · low "+r[2].lo[cur]+"°F</div></div><span class='score-pill' style='background:"+col(r[0])+"'>"+r[0]+" · "+word(r[0])+"</span></li>"}}).join("")+"<li style='grid-template-columns:1fr'><a href='/weather/"+F[cur]+"/'>See all 20 for "+M[cur]+" →</a></li>";
+document.getElementById("mrank").innerHTML=rows.slice(0,10).map(function(r){{return "<li>"+(r[2].p?"<img class='thumb' src='"+r[2].p+"' alt='' loading='lazy'>":"")+"<div><a href='/destinations/"+r[1]+"/'>"+r[2].n+"</a><div class='why'>Avg high "+r[2].hi[cur]+"°F · low "+r[2].lo[cur]+"°F</div></div><span class='score-pill' style='background:"+col(r[0])+"'>"+r[0]+" · "+word(r[0])+"</span></li>"}}).join("")+"<li class='nothumb' style='grid-template-columns:1fr'><a href='/weather/"+F[cur]+"/'>See all 20 for "+M[cur]+" →</a></li>";
 Array.prototype.forEach.call(document.querySelectorAll("#mtabs button"),function(b){{b.classList.toggle("on",+b.dataset.m===cur)}});}}
 document.getElementById("mtabs").addEventListener("click",function(e){{var b=e.target.closest("button");if(b){{cur=+b.dataset.m;draw();}}}});
 Array.prototype.forEach.call(document.querySelectorAll("input[name=pref]"),function(r){{r.addEventListener("change",draw)}});
@@ -672,10 +744,10 @@ def render_guides():
         items = [a for a in ARTS.values() if a["category"] == key]
         if not items:
             continue
-        sections += f'<h2 id="{key}">{E(label)}</h2><div class="grid g3">{"".join(article_card(a) for a in items)}</div>'
+        sections += f'<h2 id="{key}" class="reveal">{E(label)}</h2><div class="grid g3 reveal-stagger">{"".join(article_card(a) for a in items)}</div>'
     chips = "".join(f'<a class="chip" href="#{k}">{E(v)}</a>' for k, v in CATEGORIES.items() if any(a["category"] == k for a in ARTS.values()))
-    body = (hero("Camping & hiking guides", "Practical, specific how-tos for planning, packing and staying safe outside.", eyebrow="Guides") +
-            f'<section class="block"><div class="wrap"><div class="chips" style="margin-bottom:10px">{chips}</div>{sections}</div></section>')
+    body = (hero("Camping & hiking guides", "Practical, specific how-tos for planning, packing and staying safe outside.", eyebrow="Guides", photo="forest") +
+            f'<section class="block topo" style="padding-top:50px"><div class="wrap"><div class="chips" style="margin-bottom:10px">{chips}</div>{sections}</div></section>')
     write("/guides/", layout(path="/guides/", title="Camping & Hiking Guides",
                              description="Practical camping and hiking guides: beginner camping, campfire safety, scrambling, backpacking hygiene, car camping, gear and renting gear.",
                              body=body, active="/guides/"))
@@ -690,8 +762,8 @@ def render_gear():
             f'<div class="gear-item"><h3>{E(n)}</h3><p>{E(t)}</p><a class="btn outline sm" href="{('https://www.amazon.com/dp/' + asin + '/?tag=' + SITE['amazon_tag']) if asin else amazon_search(n)}" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>'
             for n, asin, t in items)
         guide_link = f' <a href="{guide}">Read the guide →</a>' if guide else ""
-        sections += f'<h2 id="{anchor}">{E(label)}</h2><p class="muted">{E(note)}{guide_link}</p><div class="gear-list">{cards}</div>'
-    body = (hero("Gear picks", "The gear our guides point to, grouped by what it's for — plus the tools to size it right.", eyebrow="Gear") +
+        sections += f'<h2 id="{anchor}" class="reveal">{E(label)}</h2><p class="muted">{E(note)}{guide_link}</p><div class="gear-list reveal-stagger">{cards}</div>'
+    body = (hero("Gear picks", "The gear our guides point to, grouped by what it's for — plus the tools to size it right.", eyebrow="Gear", photo="art-best-hiking-black-friday-deals") +
             f"""<section class="block"><div class="wrap">
 <p class="disclosure">Links on this page are Amazon affiliate links: if you buy through them, Arrive Outdoors may earn a commission at no extra cost to you. We don't accept payment for placement. <a href="/affiliate-disclosure/">Details</a>.</p>
 <div class="chips" style="margin:10px 0 6px">{nav}</div>
@@ -707,25 +779,60 @@ def render_gear():
 def render_home():
     feat_tools = ["packing-list", "trail-weather", "hiking-time-calculator", "water-calculator", "sleeping-bag-temperature", "backpack-size"]
     month = 10  # November
-    rank = month_ranking(month)[:6]
+    rank = month_ranking(month)[:5]
+    feat_dest = ["yosemite", "zion", "grand-teton", "glacier", "great-smoky-mountains", "arches", "acadia", "joshua-tree"]
     feat_arts = [ARTS[s] for s in ["honda-crv-camper", "blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper",
-                                    "class-3-scramble", "cool-a-tent-without-electricity", "how-to-put-out-a-fire", "rent-camping-gear"] if s in ARTS]
+                                    "class-3-scramble", "cold-weather-camping", "how-to-put-out-a-fire", "rent-camping-gear"] if s in ARTS]
+    hero_extra = ('<div class="btns"><a class="btn primary" href="/tools/packing-list/">Build your packing list</a>'
+                  '<a class="btn ghost" href="/weather/">Where to go this month</a></div>'
+                  '<div class="hero-meta"><a class="glass-chip" href="/tools/">🧭 10 free tools</a><a class="glass-chip" href="/destinations/">⛰️ 20 park weather guides</a>'
+                  '<a class="glass-chip" href="/tools/trail-weather/">🌤️ Live trail forecasts</a></div>')
     body = (hero("Plan it right. Pack it light. Arrive ready.",
-                 "Free trip-planning tools, month-by-month weather guides for national parks, and practical camping and hiking advice — everything you need before you hit the trail.",
-                 small=False,
-                 extra='<div class="btns"><a class="btn primary" href="/tools/packing-list/">Build a packing list</a><a class="btn ghost" href="/weather/">Where to go this month</a></div>') +
-            f"""<section class="block"><div class="wrap">
-<div class="section-head"><h2>Free planning tools</h2><a href="/tools/">All 10 tools →</a></div>
-<div class="grid g3">{"".join(tool_card(t) for t in feat_tools)}</div></div></section>
+                 "Free trip-planning tools, month-by-month weather for national parks, and camping advice that actually helps — everything you need before you hit the trail.",
+                 eyebrow="Camping & hiking, planned properly", full=True, split=True, photo="hero-night", fx_modes="stars fireflies",
+                 extra=hero_extra, below="var(--night)").replace("</div><div class=\"ridges\"", '</div><a class="scroll-cue" href="#start"><i></i>Explore</a><div class="ridges"', 1) +
+            f"""<section class="block dark" id="start" style="padding-top:40px">
+<div class="wrap">
+<div class="stats-strip reveal" style="margin-bottom:80px">
+<div><b data-count="10">10</b><span>free planning tools</span></div>
+<div><b data-count="20">20</b><span>park weather guides</span></div>
+<div><b data-count="10">10</b><span>years of daily weather data</span></div>
+<div><b data-count="24">24</b><span>practical guides</span></div>
+</div>
+<div class="section-head"><div><span class="kicker">Free tools</span><h2>Answers before you leave the driveway</h2><p style="color:rgba(255,255,255,.65)">What to pack, how long it'll take, how much water, how warm a bag — and whether the weather will cooperate.</p></div><a class="link" style="color:var(--amber)" href="/tools/">All 10 tools →</a></div>
+<div class="grid g3 reveal-stagger">{"".join(tool_card(t) for t in feat_tools)}</div>
+</div></section>
+<section class="block topo"><div class="wrap">
+<div class="feature">
+<div class="photo reveal">{picture("summit", sizes="(max-width:900px) 100vw, 600px")}<div class="float"><span class="glass-chip">📅 Updated for November</span></div></div>
+<div class="reveal">
+<span class="kicker">Where to go this month</span>
+<h2 style="margin-top:0">Best parks for hiking weather in November</h2>
+<p class="muted">Ranked from 10 years of daily weather at each park's main visitor area.</p>
+<ol class="rank">{"".join(rank_item(sc, s, m) for sc, s, m in rank)}</ol>
+<div class="btns"><a class="btn primary" href="/weather/november/">See all 20 for November</a><a class="btn outline" href="/weather/">Pick another month</a></div>
+</div></div></div></section>
 <section class="block alt"><div class="wrap">
-<div class="section-head"><div><h2>Best parks for weather in November</h2><p class="muted" style="margin:6px 0 0">Ranked from 10 years of daily weather data.</p></div><a href="/weather/">Pick another month →</a></div>
-<ol class="rank">{"".join(f'<li><div><a href="/destinations/{s}/">{E(DEST[s]["name"])}</a><div class="why">{E(month_reason(m))}</div></div><span class="score-pill" style="background:{SCORE_COLORS[score_class(sc)]}">{sc} · {score_word(sc)}</span></li>' for sc, s, m in rank)}</ol>
-<p><a class="btn outline" href="/destinations/">Browse all 20 destination guides</a></p></div></section>
+<div class="section-head"><div><span class="kicker">Destination guides</span><h2>Know exactly when to go</h2><p>Month-by-month weather, seasonal road openings, camping and a live forecast for each park.</p></div><a class="link" href="/destinations/">All 20 destinations →</a></div>
+<div class="grid g4 reveal-stagger">{"".join(dest_card(s) for s in feat_dest)}</div>
+</div></section>
 <section class="block"><div class="wrap">
-<div class="section-head"><h2>Popular guides</h2><a href="/guides/">All guides →</a></div>
-<div class="grid g3">{"".join(article_card(a) for a in feat_arts)}</div></div></section>
-<section class="block"><div class="wrap"><div class="band-cta">
-<div><h2>Renting gear for a park trip?</h2><p>Arrive Outdoors started in 2019 as a camping gear rental service for national and state park trips. The rental service has ended, but our guide covers where to rent today, what to check, and when buying makes more sense.</p></div>
+<div class="feature" style="grid-template-columns:1fr 1.1fr">
+<div class="reveal">
+<span class="kicker">Live trail forecast</span>
+<h2 style="margin-top:0">Is tomorrow a good day to hike?</h2>
+<p>Search any trailhead for a 7-day forecast scored for hiking — with the warnings that matter on the trail.</p>
+<ul class="check-list"><li>Daily 0–100 hike score you can compare at a glance</li><li>Thunderstorm, heat, wind and snow warnings</li><li>Freezing level for high-country routes</li><li>Sunrise and sunset so you can plan your turnaround</li></ul>
+<div class="btns"><a class="btn primary" href="/tools/trail-weather/">Check a trailhead</a></div>
+</div>
+<div class="photo reveal">{picture("trail", sizes="(max-width:900px) 100vw, 640px")}<div class="float"><span class="glass-chip">⛅ Hike score: 86 · Great</span></div></div>
+</div></div></section>
+<section class="block topo"><div class="wrap">
+<div class="section-head"><div><span class="kicker">Guides</span><h2>Popular guides</h2></div><a class="link" href="/guides/">All guides →</a></div>
+<div class="grid g3 reveal-stagger">{"".join(article_card(a) for a in feat_arts)}</div></div></section>
+<section class="block tight"><div class="wrap"><div class="band-cta reveal">
+<canvas data-fx="embers" aria-hidden="true"></canvas><div class="glow"></div>
+<div><span class="kicker" style="color:var(--amber)">Since 2019</span><h2>Renting gear for a park trip?</h2><p>Arrive Outdoors started in 2019 as a camping gear rental service for national and state park trips. The rental service has ended, but our guide covers where to rent today, what to check, and when buying makes more sense.</p></div>
 <div class="btns" style="justify-content:flex-end"><a class="btn primary" href="/rent-camping-gear/">Where to rent camping gear</a><a class="btn ghost" href="/tools/rent-vs-buy/">Rent vs buy calculator</a></div>
 </div></div></section>""")
     schema = [{"@context": "https://schema.org", "@type": "Organization", "name": SITE["name"], "url": URL,
@@ -735,17 +842,29 @@ def render_home():
                       description=SITE["description"], body=body, schema=schema))
 
 
+def render_credits():
+    rows = ""
+    for k, p in sorted(PHOTOS.items()):
+        who = p.get("photographer") or "Pexels contributor"
+        rows += (f'<tr><td>{E(p.get("alt", k))}</td><td>{E(who)}</td>'
+                 f'<td>{f"""<a href="{E(p["page"])}" rel="nofollow noopener">Pexels</a>""" if p.get("page") else "Pexels"}</td></tr>')
+    simple_page("/photo-credits/", "Photo Credits", "Credits for the photographs used on Arrive Outdoors, sourced from Pexels under the Pexels license.",
+                "Photo credits", photo="stars", content=f"""
+<p class="lead">The photographs on this site come from <a href="https://www.pexels.com/">Pexels</a> and are used under the <a href="https://www.pexels.com/license/">Pexels license</a>. Thank you to the photographers who share their work.</p>
+<div class="table-wrap"><table><thead><tr><th>Photo</th><th>Photographer</th><th>Source</th></tr></thead><tbody>{rows}</tbody></table></div>""")
+
+
 # --------------------------------------------------------------------------- static pages
-def simple_page(path, title, description, h1, content, lead="", noindex=False, active=None):
+def simple_page(path, title, description, h1, content, lead="", noindex=False, active=None, photo="forest", fx_modes=None):
     crumbs = [("Home", "/"), (h1, path)]
-    body = hero(E(h1), lead, small=True) + f'<div class="wrap">{crumbs_html(crumbs)}<div class="read prose">{content}</div></div>'
+    body = hero(E(h1), lead, small=True, photo=photo, fx_modes=fx_modes, crumbs=crumbs) + f'<div class="wrap" style="margin-top:40px"><div class="read prose">{content}</div></div>'
     write(path, layout(path=path, title=title, description=description, body=body, noindex=noindex,
                        schema=[breadcrumbs_ld(crumbs)], active=active))
 
 
 def render_static():
     simple_page("/about/", "About Arrive Outdoors", "Arrive Outdoors is an independent camping and hiking resource with free trip-planning tools and park weather guides. Here's our story and how we work.",
-                "About Arrive Outdoors", f"""
+                "About Arrive Outdoors", photo="campfire", fx_modes="embers", content=f"""
 <p class="lead">Arrive Outdoors helps you plan camping and hiking trips: when to go, what to pack, and how to stay comfortable and safe once you're out there.</p>
 <h2 id="story">Our story</h2>
 <p>Arrive Outdoors launched in 2019 as a camping gear rental service. The idea was simple — rent quality tents, sleeping bags and packs for a national or state park trip instead of buying gear you'd use once a year — and it worked with park partners along the way.</p>
@@ -800,7 +919,7 @@ def render_static():
 
     # 404
     page404 = layout(path="/404.html", title="Page not found", description="This page doesn't exist. Find camping tools, park weather guides and hiking guides on Arrive Outdoors.", noindex=True, sitemap=False,
-                     body=hero("Off trail", "That page doesn't exist — it may have moved when we rebuilt the site.", small=True) +
+                     body=hero("Off trail", "That page doesn't exist — it may have moved when we rebuilt the site.", small=True, photo="stars", fx_modes="stars fireflies") +
                      '<div class="wrap"><div class="read prose" style="padding:30px 0"><p>Try one of these:</p><ul>'
                      '<li><a href="/">Home</a></li><li><a href="/tools/">Free camping & hiking tools</a></li><li><a href="/destinations/">Park weather guides</a></li>'
                      '<li><a href="/guides/">All guides</a></li><li><a href="/tools/trail-weather/">Trail forecast</a></li></ul></div></div>')
@@ -841,7 +960,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {{
 </form>
 <?php endif; ?>
 <p>Or email <a href="mailto:{SITE['email']}">{SITE['email']}</a>. Note: Arrive Outdoors no longer rents gear — see <a href="/rent-camping-gear/">where to rent camping gear</a>.</p>"""
-    body = hero("Contact us", "", small=True) + f'<div class="wrap">{crumbs_html(crumbs)}<div class="read prose">{content}</div></div>'
+    body = hero("Contact us", "", small=True, photo="trail", crumbs=crumbs) + f'<div class="wrap" style="margin-top:40px"><div class="read prose">{content}</div></div>'
     page = layout(path=path, title="Contact Arrive Outdoors", description="Contact Arrive Outdoors with questions, corrections or partnership inquiries.",
                   body=body, schema=[breadcrumbs_ld(crumbs)])
     fp = OUT + "/contact/index.php"
@@ -940,7 +1059,7 @@ def render_server_files():
 
 def copy_assets():
     shutil.copytree(os.path.join(ROOT, "assets"), os.path.join(OUT, "assets"), dirs_exist_ok=True,
-                    ignore=shutil.ignore_patterns("logo-old.webp"))
+                    ignore=shutil.ignore_patterns("logo-old.webp", "photos-src"))
     src_icon = os.path.join(ROOT, "assets", "img", "icon-old.webp")
     shutil.copy(src_icon, os.path.join(OUT, "assets", "img", "icon-192.webp"))
 
@@ -966,6 +1085,7 @@ def main():
         render_weather_month(i)
     render_gear()
     render_static()
+    render_credits()
     render_contact()
     SITEMAP.append(("/contact/", TODAY))
     render_server_files()

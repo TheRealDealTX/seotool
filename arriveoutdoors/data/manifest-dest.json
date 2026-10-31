@@ -1,0 +1,142 @@
+{
+  "dest-yosemite": {
+    "file": "dest-yosemite.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/drone-shot-of-half-dome-in-california-during-sunset-9579431/",
+    "photographer": "Madhu Shesharam",
+    "alt": "Half Dome glowing orange in sunset alpenglow above the granite cliffs of Yosemite Valley, Yosemite National Park"
+  },
+  "dest-joshua-tree": {
+    "file": "dest-joshua-tree.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/hidden-valley-area-joshua-tree-national-park-27808630/",
+    "photographer": "Robert Hacker",
+    "alt": "A Joshua tree in front of golden granite boulder piles at sunset in the Hidden Valley area of Joshua Tree National Park"
+  },
+  "dest-grand-canyon": {
+    "file": "dest-grand-canyon.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/landscape-of-the-grand-canyon-national-park-arizona-united-states-17087015/",
+    "photographer": null,
+    "alt": "Layered red and tan rock walls of the Grand Canyon seen from the rim under a pastel evening sky"
+  },
+  "dest-zion": {
+    "file": "dest-zion.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/canyon-in-zion-national-park-13132442/",
+    "photographer": null,
+    "alt": "View down Zion Canyon from the Canyon Overlook, with red sandstone cliffs and switchbacks winding through the green valley"
+  },
+  "dest-yellowstone": {
+    "file": "dest-yellowstone.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/norris-geyser-basin-in-yellowstone-national-park-24859790/",
+    "photographer": null,
+    "alt": "A geyser venting a tall column of steam beside turquoise thermal pools at Norris Geyser Basin, Yellowstone National Park"
+  },
+  "dest-great-smoky-mountains": {
+    "file": "dest-great-smoky-mountains.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/dense-forest-on-hills-26743156/",
+    "photographer": null,
+    "alt": "Layered forested ridges of the Great Smoky Mountains with morning mist drifting through the valleys near Gatlinburg, Tennessee"
+  },
+  "dest-rocky-mountain": {
+    "file": "dest-rocky-mountain.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/scenic-mountain-view-in-rocky-mountain-national-park-29149253/",
+    "photographer": "Mariya Eskina",
+    "alt": "Ypsilon Mountain's granite face rising above pine-covered slopes and autumn aspens in Rocky Mountain National Park"
+  },
+  "dest-glacier": {
+    "file": "dest-glacier.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/majestic-mountains-lake-and-forest-landscape-montana-usa-9017829/",
+    "photographer": null,
+    "alt": "Pointed peaks of the Many Glacier area rising above a lake and dense evergreen forest at dusk in Glacier National Park, Montana"
+  },
+  "dest-acadia": {
+    "file": "dest-acadia.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/bass-harbor-head-lighthouse-at-sunset-8947305/",
+    "photographer": null,
+    "alt": "Bass Harbor Head Lighthouse perched on pink granite cliffs above the sea at dusk in Acadia National Park, Maine"
+  },
+  "dest-olympic": {
+    "file": "dest-olympic.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/tranquil-hiker-in-hoh-rainforest-washington-28985759/",
+    "photographer": "Alex Moliski",
+    "alt": "A hiker on a trail through moss-draped trees and ferns in the Hoh Rainforest, Olympic National Park"
+  },
+  "dest-arches": {
+    "file": "dest-arches.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/grand-canyon-371572/",
+    "photographer": null,
+    "alt": "Delicate Arch standing on red slickrock under a colorful sunset sky in Arches National Park, Utah"
+  },
+  "dest-grand-teton": {
+    "file": "dest-grand-teton.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/teton-range-and-lake-jackson-in-wyoming-7005517/",
+    "photographer": null,
+    "alt": "Snow-capped Teton Range and Mount Moran reflected in Jackson Lake, with driftwood on the rocky shore, Grand Teton National Park"
+  },
+  "dest-sequoia": {
+    "file": "dest-sequoia.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/sequoia-national-park-california-united-states-14946335/",
+    "photographer": null,
+    "alt": "A hiker walking a dirt trail between the massive cinnamon-red trunks of giant sequoias in Sequoia National Park"
+  },
+  "dest-death-valley": {
+    "file": "dest-death-valley.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/landscape-of-the-death-valley-national-park-on-the-border-of-nevada-and-california-united-states-7895473/",
+    "photographer": null,
+    "alt": "Rippled, eroded badlands at Zabriskie Point with rugged mountains behind, Death Valley National Park"
+  },
+  "dest-big-bend": {
+    "file": "dest-big-bend.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/brown-field-near-mountains-11002259/",
+    "photographer": null,
+    "alt": "Desert scrubland and juniper-dotted hills below hazy mountain ridges at sunrise in the Big Bend region of West Texas"
+  },
+  "dest-mount-rainier": {
+    "file": "dest-mount-rainier.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/volcano-cone-of-mount-rainier-18816012/",
+    "photographer": null,
+    "alt": "The glaciated summit of Mount Rainier towering above jagged forested ridges, Mount Rainier National Park"
+  },
+  "dest-bryce-canyon": {
+    "file": "dest-bryce-canyon.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/aerial-view-of-the-bryce-canyon-national-park-in-utah-usa-12683806/",
+    "photographer": null,
+    "alt": "Orange and white hoodoos filling the Bryce Amphitheater, with Boat Mesa on the horizon, Bryce Canyon National Park"
+  },
+  "dest-shenandoah": {
+    "file": "dest-shenandoah.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/scenic-blue-ridge-mountains-landscape-in-spring-36613605/",
+    "photographer": null,
+    "alt": "Rolling Blue Ridge Mountains fading into the distance beyond evergreen trees and a grassy overlook in early spring"
+  },
+  "dest-cloud-peak-wilderness": {
+    "file": "dest-cloud-peak-wilderness.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/dramatic-peaks-in-the-wind-river-range-wyoming-33775518/",
+    "photographer": null,
+    "alt": "Jagged granite peaks and rocky alpine terrain under billowing clouds in the Wyoming high country"
+  },
+  "dest-grand-mesa": {
+    "file": "dest-grand-mesa.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/green-trees-beside-lake-under-blue-sky-3968052/",
+    "photographer": null,
+    "alt": "A calm subalpine lake framed by spruce and fir trees with a forested hill beyond under a blue sky"
+  }
+}

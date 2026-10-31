@@ -1,0 +1,240 @@
+{
+  "hero-night": {
+    "file": "hero-night.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/a-tent-under-the-milky-way-galaxy-14065005/",
+    "photographer": null,
+    "alt": "Green dome tent glowing from within beneath the Milky Way and a star-filled night sky, with dark mountain silhouettes on the horizon"
+  },
+  "hero-day": {
+    "file": "hero-day.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/person-sitting-on-grass-field-facing-on-body-of-water-2516423/",
+    "photographer": null,
+    "alt": "View from inside an open yellow tent of a camper in an orange jacket sitting on the grassy shore of a mountain lake surrounded by steep green peaks"
+  },
+  "campfire": {
+    "file": "campfire.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/bonfire-photo-776113/",
+    "photographer": "Jens Mahnke",
+    "alt": "Roaring campfire at night with flames leaping and glowing sparks drifting into the dark sky"
+  },
+  "trail": {
+    "file": "trail.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/traveler-with-backpack-hiking-in-mountains-in-cloudy-day-6354239/",
+    "photographer": null,
+    "alt": "Backpacker seen from behind carrying a loaded pack with a foam sleeping pad, walking a rocky alpine trail toward snow-patched mountains"
+  },
+  "forest": {
+    "file": "forest.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/foggy-forest-1909572/",
+    "photographer": "Chris G",
+    "alt": "Misty forest of towering conifers with soft light filtering through fog over a quiet road"
+  },
+  "summit": {
+    "file": "summit.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/11588968/",
+    "photographer": null,
+    "alt": "Lone hiker standing on a rocky mountain ledge silhouetted against a golden sunset over a deep alpine valley"
+  },
+  "desert-camp": {
+    "file": "desert-camp.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/tent-in-camping-area-in-countryside-5589287/",
+    "photographer": null,
+    "alt": "Canvas bell tents pitched on a dry, sandy desert plain with scrubby hills and rocky cliffs in the distance"
+  },
+  "snow-camp": {
+    "file": "snow-camp.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/green-and-red-tent-on-snow-covered-ground-10555794/",
+    "photographer": "Syed Qaarif Andrabi",
+    "alt": "Red and green tents glowing on a snow-covered campsite beneath snowy forested mountains at night"
+  },
+  "map": {
+    "file": "map.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/man-hand-holding-compass-in-mountains-3143816/",
+    "photographer": null,
+    "alt": "Hand holding an open lensatic compass in front of rugged, snow-dusted mountain peaks"
+  },
+  "stars": {
+    "file": "stars.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/night-sky-with-milky-way-above-mountains-14769057/",
+    "photographer": null,
+    "alt": "Milky Way arching across a starry night sky above rocky mountain peaks and a grassy alpine meadow"
+  },
+  "art-camping-101": {
+    "file": "art-camping-101.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/two-people-camping-in-the-forest-7405462/",
+    "photographer": null,
+    "alt": "Two friends tending a small campfire between a gray tipi tent and an orange dome tent at a wooded campsite"
+  },
+  "art-how-to-put-out-a-fire": {
+    "file": "art-how-to-put-out-a-fire.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/ash-left-from-a-small-campfire-18631412/",
+    "photographer": null,
+    "alt": "Cold gray ash and charred log remains of an extinguished campfire on the grass"
+  },
+  "art-how-to-start-a-fire-with-wet-wood": {
+    "file": "art-how-to-start-a-fire-with-wet-wood.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/burning-log-and-twigs-on-the-ground-13363510/",
+    "photographer": null,
+    "alt": "Small campfire catching on a log in a stone ring, with a pile of gathered twigs and kindling beside it"
+  },
+  "art-what-to-do-if-you-get-lost-in-the-woods": {
+    "file": "art-what-to-do-if-you-get-lost-in-the-woods.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/back-view-of-person-walking-alone-in-the-forest-12421348/",
+    "photographer": null,
+    "alt": "Lone hiker with a backpack walking away down a trail through dense, dark green forest"
+  },
+  "art-backpacking-hygiene": {
+    "file": "art-backpacking-hygiene.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/person-washing-hands-in-the-river-8729090/",
+    "photographer": null,
+    "alt": "Close-up of a person crouched by a clear stream rinsing their hands, water dripping from their fingers"
+  },
+  "art-sawyer-squeeze-gravity-setup": {
+    "file": "art-sawyer-squeeze-gravity-setup.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/person-scooping-water-using-green-cup-66090/",
+    "photographer": null,
+    "alt": "Hand dipping a green camp cup into a clear, rippling stream to collect water"
+  },
+  "art-cool-a-tent-without-electricity": {
+    "file": "art-cool-a-tent-without-electricity.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/photo-of-tent-in-forest-2609954/",
+    "photographer": "Todd Trapani",
+    "alt": "Orange dome tent pitched in the shade of tall pine trees with bright summer sunlight streaming through the forest"
+  },
+  "art-cold-weather-camping": {
+    "file": "art-cold-weather-camping.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/tent-on-rocky-mountain-4014888/",
+    "photographer": null,
+    "alt": "Orange tent pitched among boulders in a snowy alpine valley beneath snow-covered mountains under a pale winter sky"
+  },
+  "art-bikepacking-food": {
+    "file": "art-bikepacking-food.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/man-on-bike-trip-in-mountains-28005837/",
+    "photographer": null,
+    "alt": "Cyclist with an orange backpack and helmet standing beside a mountain bike on a gravel road overlooking jagged snow-capped peaks"
+  },
+  "art-class-3-scramble": {
+    "file": "art-class-3-scramble.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/man-climbing-on-rock-mountain-449609/",
+    "photographer": null,
+    "alt": "Person using hands and feet to scramble up a steep granite slab on a forested mountainside"
+  },
+  "art-class-4-scramble": {
+    "file": "art-class-4-scramble.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/a-man-running-on-a-rocky-mountain-peak-25078526/",
+    "photographer": null,
+    "alt": "Hiker moving across an exposed rocky summit outcrop high above a sea of clouds"
+  },
+  "art-can-you-hike-el-capitan": {
+    "file": "art-can-you-hike-el-capitan.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/el-capitan-at-sunset-in-yosemite-national-park-28610380/",
+    "photographer": null,
+    "alt": "Sheer granite face of El Capitan in Yosemite National Park rising above the pine forest at sunset"
+  },
+  "art-cloud-peak-wyoming": {
+    "file": "art-cloud-peak-wyoming.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/teton-range-and-lake-jackson-in-wyoming-7005517/",
+    "photographer": null,
+    "alt": "Snow-capped Teton Range reflected in Jackson Lake, Wyoming, with a weathered driftwood log on the rocky shore"
+  },
+  "art-grand-mesa-fishing": {
+    "file": "art-grand-mesa-fishing.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/woman-doing-fishing-1165125/",
+    "photographer": null,
+    "alt": "Angler in a plaid shirt casting a fishing line from the grassy shore of a calm lake under a cloudy sky, a small dog beside him"
+  },
+  "art-how-to-measure-torso-length-for-backpack": {
+    "file": "art-how-to-measure-torso-length-for-backpack.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/man-in-hat-and-backpack-walking-up-the-pathway-8728414/",
+    "photographer": null,
+    "alt": "Hiker seen from behind wearing a black backpack and sun hat on a rocky forest trail"
+  },
+  "art-honda-crv-camper": {
+    "file": "art-honda-crv-camper.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/woman-sitting-on-a-4x4-truck-8027916/",
+    "photographer": null,
+    "alt": "Woman sitting in the open rear cargo area of an SUV with a blanket, parked on a grassy hillside below snowy mountains"
+  },
+  "art-car-camping-essentials": {
+    "file": "art-car-camping-essentials.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/a-man-sitting-on-the-hood-of-the-car-with-a-rooftop-tent-4310365/",
+    "photographer": null,
+    "alt": "SUV with a rooftop tent set up at a desert campsite beneath granite mountains, a camper sitting on the hood and a motorcycle parked nearby"
+  },
+  "art-best-sun-hoodies-for-hiking": {
+    "file": "art-best-sun-hoodies-for-hiking.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/solitary-hiker-in-vast-desert-landscape-28639081/",
+    "photographer": null,
+    "alt": "Solitary hiker crossing sunlit sand dunes in front of a vast range of desert mountains"
+  },
+  "art-best-camera-for-backpacking": {
+    "file": "art-best-camera-for-backpacking.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/a-woman-standing-on-a-rock-in-mountains-and-taking-pictures-27081698/",
+    "photographer": "Stephen Leonardi",
+    "alt": "Backpacker standing on a granite boulder photographing the view with a camera, mountains in the background"
+  },
+  "art-how-to-pose-for-hiking-pictures": {
+    "file": "art-how-to-pose-for-hiking-pictures.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/photo-of-person-standing-on-top-of-mountain-2161903/",
+    "photographer": null,
+    "alt": "Hiker raising both arms on a ridgetop viewpoint overlooking a wide green mountain valley"
+  },
+  "art-best-hiking-black-friday-deals": {
+    "file": "art-best-hiking-black-friday-deals.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/photography-items-821750/",
+    "photographer": "Alex Andrews",
+    "alt": "Overhead flat lay of outdoor gear including hiking boots, sleeping bag, camp stove and fuel, mug, tripod and cameras"
+  },
+  "art-best-camping-gear-to-rent-vs-buy": {
+    "file": "art-best-camping-gear-to-rent-vs-buy.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/thermos-books-and-photo-camera-on-camp-tent-6271651/",
+    "photographer": null,
+    "alt": "Camping gear laid out on a sleeping bag: stainless steel bottle, enamel mug, field guide books and a film camera"
+  },
+  "art-renting-camp-gear-for-national-park-trips": {
+    "file": "art-renting-camp-gear-for-national-park-trips.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/tents-on-the-laugavegur-trail-iceland-27694025/",
+    "photographer": null,
+    "alt": "Two tents pitched on a grassy campsite in a rugged valley beneath glacier-capped mountains on the Laugavegur trail, Iceland"
+  },
+  "art-rent-camping-gear": {
+    "file": "art-rent-camping-gear.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/six-camping-tents-in-forest-699558/",
+    "photographer": null,
+    "alt": "Row of colorful dome tents lit up at night at a campground beneath tall dark trees"
+  }
+}

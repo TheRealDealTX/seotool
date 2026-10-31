@@ -157,6 +157,7 @@
         "Forecast data: <a href='https://open-meteo.com/' rel='nofollow noopener'>Open-Meteo</a>. Always check the <a href='https://www.weather.gov/' rel='nofollow noopener'>National Weather Service</a> before you go.</p>" + flText;
       if (warns.length) html += "<div class='fc-warn'><strong>Heads-up this week</strong>" + warns.slice(0, 8).map(function (x) { return "<div>" + x + "</div>"; }).join("") + "</div>";
       el.innerHTML = html;
+      if (AO.fx) AO.fx.weatherFor(el.classList.contains("forecast") ? el : (el.closest(".forecast") || el), d.weather_code[0]);
       return j;
     }).catch(function () {
       el.innerHTML = "<p class='err'>The forecast couldn't be loaded right now. Try again in a minute, or check <a href='https://www.weather.gov/'>weather.gov</a>.</p>";
