@@ -39,6 +39,15 @@
     var u = "https://geocoding-api.open-meteo.com/v1/search?count=6&language=en&format=json&name=" + encodeURIComponent(q);
     return fetch(u).then(function (r) { return r.json(); }).then(function (j) { return j.results || []; });
   };
+  // Parks we cover (window.AO_PLACES, injected by the build) — matched locally so "Yellowstone"
+  // finds the national park first instead of a small town with the same name.
+  AO.parkMatches = function (q) {
+    var L = window.AO_PLACES || [], s = q.toLowerCase().trim();
+    if (s.length < 3) return [];
+    return L.filter(function (p) { return (p.n + " " + p.h).toLowerCase().indexOf(s) >= 0; }).slice(0, 3).map(function (p) {
+      return { park: true, name: p.n, admin1: p.h, country_code: "US", latitude: p.lat, longitude: p.lon, elevation: p.e };
+    });
+  };
   AO.placeLabel = function (p) { return [p.name, p.admin1, p.country_code === "US" ? "" : p.country].filter(Boolean).join(", "); };
   AO.placePicker = function (input, onPick) {
     var box = document.createElement("div"); box.className = "ac-list";
@@ -49,7 +58,7 @@
     function render() {
       if (!items.length) { box.innerHTML = ""; return; }
       box.innerHTML = "<ul role='listbox'>" + items.map(function (p, i) {
-        return "<li role='option' data-i='" + i + "'" + (i === idx ? " class='active'" : "") + ">" + AO.esc(AO.placeLabel(p)) +
+        return "<li role='option' data-i='" + i + "'" + (i === idx ? " class='active'" : "") + ">" + (p.park ? "⛰️ " : "") + AO.esc(AO.placeLabel(p)) +
           (p.elevation != null ? " <span class='muted small'>· " + Math.round(p.elevation * 3.281).toLocaleString() + " ft</span>" : "") + "</li>";
       }).join("") + "</ul>";
     }
@@ -58,7 +67,9 @@
       clearTimeout(t);
       var q = input.value.trim();
       if (q.length < 2) { close(); return; }
-      t = setTimeout(function () { AO.geocode(q).then(function (r) { items = r; idx = -1; render(); }).catch(close); }, 250);
+      var parks = AO.parkMatches(q);
+      if (parks.length) { items = parks; idx = -1; render(); }
+      t = setTimeout(function () { AO.geocode(q).then(function (r) { items = parks.concat(r).slice(0, 8); idx = -1; render(); }).catch(function () { if (!parks.length) close(); }); }, 250);
     });
     input.addEventListener("keydown", function (e) {
       if (!items.length) return;

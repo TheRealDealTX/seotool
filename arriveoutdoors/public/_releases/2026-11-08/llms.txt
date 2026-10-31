@@ -1,0 +1,80 @@
+# Arrive Outdoors
+
+> Free camping and hiking tools, month-by-month weather guides for national parks, and honest gear advice for getting outside.
+
+## Tools
+- [Trip Finder: Best Parks Near You This Month](https://arriveoutdoors.com/tools/trip-finder/): Uses your location (or any address) to rank nearby parks by drive time and this month's hiking and camping weather.
+- [Camping & Backpacking Packing List Generator](https://arriveoutdoors.com/tools/packing-list/): A checklist built for your trip type, nights, season and group size. Tick it off, print it, or save it.
+- [Trail Weather Forecast & Hike Score](https://arriveoutdoors.com/tools/trail-weather/): 7-day forecast for any trailhead with a go/no-go hike score, heat, wind, storm and freezing-level warnings.
+- [Hiking Time Calculator](https://arriveoutdoors.com/tools/hiking-time-calculator/): How long a hike will take from distance, elevation gain and pace, plus a turnaround time before dark.
+- [Hiking Water Calculator](https://arriveoutdoors.com/tools/water-calculator/): How much water to carry for a hike based on duration, temperature, effort and body weight.
+- [Sleeping Bag & Pad Temperature Guide](https://arriveoutdoors.com/tools/sleeping-bag-temperature/): Pick the bag rating and pad R-value you need for the lowest temperature you expect.
+- [Backpack Size & Torso Fit Calculator](https://arriveoutdoors.com/tools/backpack-size/): Find your pack size from torso length and hip size, and the right capacity for your trip.
+- [Sunrise, Sunset & Daylight Calculator](https://arriveoutdoors.com/tools/sunrise-sunset/): Sunrise, sunset, golden hour and usable daylight for any place and date.
+- [Camp Meal & Food Weight Planner](https://arriveoutdoors.com/tools/camp-meal-planner/): Calories and food weight per day for your group, with a meal plan you can adjust.
+- [Rent vs Buy Camping Gear Calculator](https://arriveoutdoors.com/tools/rent-vs-buy/): Find the break-even point between renting and buying a tent, bag, pad and pack.
+- [Wind Chill & Heat Index Calculator](https://arriveoutdoors.com/tools/feels-like/): What the air really feels like on the trail, and when it becomes dangerous.
+
+## Destination weather guides
+- [Yosemite National Park](https://arriveoutdoors.com/destinations/yosemite/)
+- [Joshua Tree National Park](https://arriveoutdoors.com/destinations/joshua-tree/)
+- [Grand Canyon National Park](https://arriveoutdoors.com/destinations/grand-canyon/)
+- [Zion National Park](https://arriveoutdoors.com/destinations/zion/)
+- [Yellowstone National Park](https://arriveoutdoors.com/destinations/yellowstone/)
+- [Great Smoky Mountains National Park](https://arriveoutdoors.com/destinations/great-smoky-mountains/)
+- [Rocky Mountain National Park](https://arriveoutdoors.com/destinations/rocky-mountain/)
+- [Glacier National Park](https://arriveoutdoors.com/destinations/glacier/)
+- [Acadia National Park](https://arriveoutdoors.com/destinations/acadia/)
+- [Olympic National Park](https://arriveoutdoors.com/destinations/olympic/)
+- [Arches National Park](https://arriveoutdoors.com/destinations/arches/)
+- [Grand Teton National Park](https://arriveoutdoors.com/destinations/grand-teton/)
+- [Sequoia National Park](https://arriveoutdoors.com/destinations/sequoia/)
+- [Death Valley National Park](https://arriveoutdoors.com/destinations/death-valley/)
+- [Big Bend National Park](https://arriveoutdoors.com/destinations/big-bend/)
+- [Mount Rainier National Park](https://arriveoutdoors.com/destinations/mount-rainier/)
+- [Bryce Canyon National Park](https://arriveoutdoors.com/destinations/bryce-canyon/)
+- [Shenandoah National Park](https://arriveoutdoors.com/destinations/shenandoah/)
+- [Cloud Peak Wilderness](https://arriveoutdoors.com/destinations/cloud-peak-wilderness/)
+- [Grand Mesa](https://arriveoutdoors.com/destinations/grand-mesa/)
+- [White Mountain National Forest](https://arriveoutdoors.com/destinations/white-mountains/)
+- [Indiana Dunes National Park](https://arriveoutdoors.com/destinations/indiana-dunes/)
+- [Sleeping Bear Dunes National Lakeshore](https://arriveoutdoors.com/destinations/sleeping-bear-dunes/)
+- [New River Gorge National Park](https://arriveoutdoors.com/destinations/new-river-gorge/)
+- [Mammoth Cave National Park](https://arriveoutdoors.com/destinations/mammoth-cave/)
+- [Everglades National Park](https://arriveoutdoors.com/destinations/everglades/)
+- [Badlands National Park](https://arriveoutdoors.com/destinations/badlands/)
+- [Great Sand Dunes National Park](https://arriveoutdoors.com/destinations/great-sand-dunes/)
+- [White Sands National Park](https://arriveoutdoors.com/destinations/white-sands/)
+- [Crater Lake National Park](https://arriveoutdoors.com/destinations/crater-lake/)
+- [Redwood National and State Parks](https://arriveoutdoors.com/destinations/redwood/)
+- [North Cascades National Park](https://arriveoutdoors.com/destinations/north-cascades/)
+- [Buffalo National River](https://arriveoutdoors.com/destinations/buffalo-national-river/)
+- [Cuyahoga Valley National Park](https://arriveoutdoors.com/destinations/cuyahoga-valley/)
+
+## Guides
+- [Camping 101: A Guide for the First-Time Camper](https://arriveoutdoors.com/blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper/): A practical plan for your first night outdoors: a drive-in campground close to home, the four pieces of gear that matter most, and the mistakes that ruin most first trips.
+- [How to Put Out a Campfire (and What to Do When a Fire Gets Away)](https://arriveoutdoors.com/how-to-put-out-a-fire/): Drown, stir, feel, repeat until the ashes are cold to the touch. Plus how to handle a grease or stove fire at camp, and when to stop fighting a fire and leave.
+- [What to Do If You Get Lost in the Woods](https://arriveoutdoors.com/what-to-do-if-you-get-lost-in-the-woods/): Stop, think, observe, plan. In most cases the right move is to stay where you are, call for help, make yourself easy to find, and stay warm and dry.
+- [Backpacking Hygiene: How to Stay Clean on the Trail and at Camp](https://arriveoutdoors.com/backpacking-hygiene/): Clean hands prevent most backcountry stomach bugs. Here is a light hygiene kit, how to wash without a shower, and how to handle bathroom needs the Leave No Trace way.
+- [Sawyer Squeeze Gravity Setup: How to Build One and Keep It Working](https://arriveoutdoors.com/sawyer-squeeze-gravity-setup/): Hang a dirty bag, screw on the Squeeze, and let gravity fill your bottles while you set up camp. Plus how hollow-fiber filters compare with other backpacking water treatment.
+- [How to Cool a Tent Without Electricity](https://arriveoutdoors.com/cool-a-tent-without-electricity/): A tent can't be made cooler than the shade around it, but it can stop being hotter. Shade, airflow, timing and cooling your body matter far more than gadgets.
+- [Cold Weather Camping: How to Sleep Warm and Stay Safe](https://arriveoutdoors.com/cold-weather-camping/): Staying warm in the cold is mostly about the ground, moisture and fuel: enough pad insulation under you, a bag rated by its comfort number, dry layers, and plenty of food and water.
+- [Bikepacking Food: How to Fuel a Multi-Day Ride](https://arriveoutdoors.com/bikepacking-food/): Eat early and often, choose food with at least 100 calories per ounce, plan around resupply points, and carry it where you can reach it without stopping.
+- [Class 3 Scramble: What It Means, How It Compares, and How to Do It Safely](https://arriveoutdoors.com/class-3-scramble/): Class 3 is where you start using your hands to climb, not just to balance. Here is how it fits on the YDS scale, how it differs from class 2 hiking, and how to move through it safely.
+- [Class 4 Scramble: Where Scrambling Becomes Climbing](https://arriveoutdoors.com/class-4-scramble/): Class 4 scrambling is simple climbing with serious exposure, where a fall is likely to be fatal. Here is how to know if you're ready, what skills you need, and how classic routes compare.
+- [Can You Hike El Capitan? Yes, Here's How to Reach the Top](https://arriveoutdoors.com/can-you-hike-el-capitan/): The famous granite face is a multi-day technical climb, but you can walk to El Capitan's summit on trails from the back side. Here are the two main routes and how to plan them.
+- [Cloud Peak, Wyoming: Climbing the Highest Point in the Bighorn Mountains](https://arriveoutdoors.com/cloud-peak-wyoming/): Cloud Peak is a long, remote, non-technical climb at the heart of the Cloud Peak Wilderness. Here is how the standard route works, how to plan a two- or three-day trip, and what catches people out.
+- [Grand Mesa Fishing: A Practical Guide to Colorado's Lake-Covered Mesa](https://arriveoutdoors.com/grand-mesa-fishing/): The Grand Mesa holds more than 300 lakes and reservoirs at around 10,000 feet, most of them full of trout. Here's how to pick a lake, time your trip and fish it well.
+- [How to Measure Torso Length for a Backpack](https://arriveoutdoors.com/how-to-measure-torso-length-for-backpack/): Backpack size is based on torso length, not height. Here is how to measure it accurately with a helper and a soft tape, what size range your number falls in, and how to fine-tune the fit.
+- [Honda CR-V Camper: The Complete Guide to Camping in a CR-V](https://arriveoutdoors.com/honda-crv-camper/): A CR-V makes a capable small camper with the right bed, airflow and privacy setup. Here's how to choose between a no-build setup and a platform, measure your own cargo space, and camp legally and comfortably.
+- [Car Camping Essentials: A Checklist That Covers Everything](https://arriveoutdoors.com/car-camping-essentials/): Everything you need for a comfortable car camping trip, organized by sleep, kitchen, camp, safety and vehicle, plus the items most people forget.
+- [Best Sun Hoodies for Hiking: How to Choose One That Actually Protects You](https://arriveoutdoors.com/best-sun-hoodies-for-hiking/): A sun hoodie replaces most of the sunscreen you would sweat off on an exposed trail. Here is how UPF ratings work, which fabrics and hood designs hold up, and which hoodies to shortlist.
+- [Best Camera for Backpacking: Choosing One and Carrying It on the Trail](https://arriveoutdoors.com/best-camera-for-backpacking/): Whether a phone, a pocket compact, a rugged waterproof camera or a mirrorless body is right depends on what you shoot and how much weight you will tolerate. This guide covers the trade-offs, the models worth shortlisting, and how to carry a camera so you actually use it.
+- [How to Pose for Hiking Pictures: Natural Poses, Better Light, Safer Shots](https://arriveoutdoors.com/how-to-pose-for-hiking-pictures/): The best hiking photos look like moments, not poses. Give your body something to do, shoot in low-angle light, place yourself small in a big scene, and never trade footing for a frame.
+- [Hiking Black Friday Deals: How to Actually Save on Outdoor Gear](https://arriveoutdoors.com/best-hiking-black-friday-deals/): Black Friday 2026 falls on November 27, with Cyber Monday on November 30. A plan, a short list and a price-history check save more than chasing the biggest percentage off, especially on packs and boots that have to fit.
+- [Best Camping Gear to Rent vs Buy: An Item-by-Item Decision Guide](https://arriveoutdoors.com/best-camping-gear-to-rent-vs-buy/): Buy the personal, cheap and frequently used items; rent the bulky, expensive, specialized or trip-specific ones. Here is the reasoning for each piece of gear and a simple break-even calculation.
+- [Renting Camp Gear for National Park Trips: Where, When and What to Check](https://arriveoutdoors.com/renting-camp-gear-for-national-park-trips/): Renting is often the easiest way to camp in a national park you fly to. Here is where rentals typically exist, how far ahead to book, what to inspect before you drive into the park, and the park rules that affect what you need.
+- [How to Rent Camping Gear: Options, Costs and What to Check](https://arriveoutdoors.com/rent-camping-gear/): You can rent camping and backpacking gear from outdoor retailers, local outfitters, online services that ship, and university gear rooms. Here is how the options compare, what to rent first, what to inspect, and how to tell when buying is cheaper.
+- [Joshua Tree Camping: How to Choose a Campground (and What to Do When They're Full)](https://arriveoutdoors.com/joshua-tree-camping/): Joshua Tree has eight family campgrounds plus group and horse camps. Only Black Rock and Cottonwood have water, most sites are reserved on cool-season weekends, and BLM land north and south of the park is the backup plan.
+- [Olympic National Park Camping: A Region-by-Region Guide](https://arriveoutdoors.com/olympic-national-park-camping/): Olympic has no road across its middle, so choosing a campground means choosing a region first: wild coast, rain forest, lakes and hot springs, or the mountains. Here's how each area camps, plus permits, bear canisters, tides and rain.
+- [Zion Hiking Trails: The Best Hikes in Zion, Easy to Strenuous](https://arriveoutdoors.com/zion-hiking-trails/): Zion's best hikes range from paved riverside strolls to Angels Landing's chained ridge. Here's every major trail by difficulty, plus how the shuttle, permits, flash floods and heat shape when and where you hike.

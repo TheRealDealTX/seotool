@@ -26,6 +26,8 @@ from content.gear import GEAR  # noqa: E402
 
 OUT = os.path.join(ROOT, "public")
 TODAY = "2026-10-31"
+BUILD_DATE = os.environ.get("BUILD_DATE") or datetime.date.today().isoformat()
+UNPUBLISHED_RX = None
 E = html.escape
 URL = SITE["url"]
 MONTH_NAMES = [m.capitalize() for m in MONTHS]
@@ -36,6 +38,8 @@ SITEMAP = []  # (path, lastmod)
 # --------------------------------------------------------------------------- helpers
 def write(path, text):
     """path is a URL path like /tools/ or a file like /robots.txt"""
+    if UNPUBLISHED_RX is not None:
+        text = UNPUBLISHED_RX.sub(r"\1", text)
     fp = OUT + (path + "index.html" if path.endswith("/") else path)
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     with open(fp, "w", encoding="utf-8") as f:
@@ -356,7 +360,8 @@ def load_articles():
     return arts
 
 
-ARTS = load_articles()
+ARTS_ALL = load_articles()
+ARTS = {}
 
 
 def art_photo(a):
@@ -429,7 +434,7 @@ def render_article(a):
     updated = a.get("updated", TODAY)
     k = art_photo(a)
     byline = (f'<p class="lead">{E(a.get("summary", ""))}</p><div class="byline"><span>By <a href="{AUTHOR["url"]}"><strong>{E(AUTHOR["name"])}</strong></a></span><i class="dot"></i>'
-              f'<span>Updated <time datetime="{updated}">{fmt_date(updated)}</time></span><i class="dot"></i><span>{minutes} min read</span></div>')
+              f'<span>{"Published" if updated == a["published"] else "Updated"} <time datetime="{updated}">{fmt_date(updated)}</time></span><i class="dot"></i><span>{minutes} min read</span></div>')
     body = (hero(E(a["h1"]), "", eyebrow=CATEGORIES.get(cat, ""), photo=k, extra=byline, crumbs=crumbs,
                  fx_modes="embers" if "fire" in a["slug"] else ("snow" if "cold" in a["slug"] else ("stars" if not k else None))) +
             f"""<div class="wrap">
@@ -439,7 +444,7 @@ def render_article(a):
 {a["body"]}
 {faq_html}
 <div class="author-box"><div class="avatar">{icon("mountain", 26)}</div><div><strong>{E(AUTHOR['name'])}</strong><p>{E(AUTHOR['bio'])}</p>
-<p class="small muted">First published {fmt_date(a["published"])}. Spot something out of date? <a href="/contact/">Tell us</a>.</p></div></div>
+<p class="small muted">{"First published " + fmt_date(a["published"]) + "." if updated != a["published"] else ""} Spot something out of date? <a href="/contact/">Tell us</a>.</p></div></div>
 </article>
 <aside class="no-print">{aside}</aside>
 </div></div>
@@ -478,12 +483,15 @@ def render_tool(slug, name, desc, ic):
     crumbs = [("Home", "/"), ("Tools", "/tools/"), (c["h1"], path)]
     res_cls = ' class="forecast"' if slug == "trail-weather" else ""
     data_js = ""
+    if "PLACE_FIELD" in c.get("form_marker", "") or 'id="place"' in form:
+        places = [{"n": d["name"], "h": d["hub"], "lat": d["lat"], "lon": d["lon"], "e": d["elev"]} for d in DEST.values()]
+        data_js += "<script>window.AO_PLACES=" + json.dumps(places, separators=(",", ":")) + ";</script>"
     if slug == "trip-finder":
         trips = [{"slug": k, "name": d["name"], "short": short_name(k), "lat": d["lat"], "lon": d["lon"], "sc": place_scores(k),
                   "hi": [round(m["high"]) for m in CLIMATE[k]["months"]], "lo": [round(m["low"]) for m in CLIMATE[k]["months"]],
                   "wet": [round(m["wet_days"]) for m in CLIMATE[k]["months"]], "p": photo_src("dest-" + k, 640) or ""}
                  for k, d in DEST.items() if k in CLIMATE]
-        data_js = "<script>window.AO_TRIPS=" + json.dumps(trips, separators=(",", ":")) + ";</script>"
+        data_js += "<script>window.AO_TRIPS=" + json.dumps(trips, separators=(",", ":")) + ";</script>"
     body = (hero(E(c["h1"]), E(c["intro"]), eyebrow="Free tool", photo=TOOL_PHOTOS.get(slug), fx_modes=TOOL_FX.get(slug), crumbs=crumbs) +
             f'<div class="wrap"><div class="tool-shell">{form}<div class="panel" aria-live="polite">{result_title}<div id="result"{res_cls}></div></div></div>{data_js}'
             f'<div class="read prose reveal">{c["explain"]}{faq_html}</div></div>'
@@ -1016,6 +1024,9 @@ def render_server_files():
              "RewriteCond %{HTTP:X-Forwarded-Proto} !=https",
              "RewriteRule ^(.*)$ https://arriveoutdoors.com/$1 [R=301,L]",
              "",
+             "# Scheduled-release packs are applied by cron, never served directly",
+             "RewriteRule ^_releases(/|$) - [F,L]",
+             "",
              "# Removed content (410 Gone)"]
     for p in GONE:
         lines.append(f"RewriteRule {rx(p)} - [G,L]")
@@ -1075,11 +1086,26 @@ def copy_assets():
 
 
 # --------------------------------------------------------------------------- main
-def main():
+def set_build_date(d):
+    """Make only articles published on or before d live; strip links to the rest."""
+    global ARTS, UNPUBLISHED_RX, BUILD_DATE
+    BUILD_DATE = d
+    ARTS = {k: v for k, v in ARTS_ALL.items() if v["published"] <= d}
+    hidden = [k for k in ARTS_ALL if k not in ARTS]
+    UNPUBLISHED_RX = (re.compile(r'<a [^>]*href="/(?:' + "|".join(re.escape(h) for h in hidden) + r')/(?:#[^"]*)?"[^>]*>(.*?)</a>', re.S)
+                      if hidden else None)
+
+
+def build_site(out, d, assets=True):
+    global OUT, SITEMAP
+    OUT = out
+    SITEMAP = []
+    set_build_date(d)
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     os.makedirs(OUT)
-    copy_assets()
+    if assets:
+        copy_assets()
     render_home()
     for a in ARTS.values():
         render_article(a)
@@ -1099,8 +1125,70 @@ def main():
     render_contact()
     SITEMAP.append(("/contact/", TODAY))
     render_server_files()
-    n = sum(len(f) for _, _, f in os.walk(OUT))
-    print(f"built {len(set(SITEMAP))} indexable pages, {len(ARTS)} articles, {n} files → public/")
+
+
+PUBLISH_PHP = """<?php
+// Scheduled publishing for the static site. Run daily by a Hostinger cron job:
+//   php /home/u401386392/domains/arriveoutdoors.com/public_html/_releases/publish.php
+// Each _releases/YYYY-MM-DD/ folder holds only the files that change on that date
+// (the new article page plus the hub pages, sitemap and related links that list it).
+// Folders whose date has arrived are copied into the site root once, in date order.
+$rel = __DIR__; $root = dirname($rel); $log = $rel . '/applied.txt';
+$applied = file_exists($log) ? file($log, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) : [];
+$today = (new DateTime('now', new DateTimeZone('America/Los_Angeles')))->format('Y-m-d');
+foreach (glob($rel . '/20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]', GLOB_ONLYDIR) as $dir) {
+    $d = basename($dir);
+    if ($d > $today || in_array($d, $applied, true)) continue;
+    $it = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS));
+    $n = 0;
+    foreach ($it as $f) {
+        $target = $root . substr($f->getPathname(), strlen($dir));
+        if (!is_dir(dirname($target))) mkdir(dirname($target), 0755, true);
+        if (copy($f->getPathname(), $target)) $n++;
+    }
+    file_put_contents($log, $d . PHP_EOL, FILE_APPEND);
+    echo "applied $d ($n files)\n";
+}
+"""
+
+
+def snapshot(out):
+    files = {}
+    for dp, _, fs in os.walk(out):
+        if os.sep + "assets" in dp or os.sep + "_releases" in dp:
+            continue
+        for f in fs:
+            fp = os.path.join(dp, f)
+            files[fp[len(out):]] = open(fp, "rb").read()
+    return files
+
+
+def main():
+    main_out = os.path.join(ROOT, "public")
+    build_site(main_out, BUILD_DATE)
+    live = len(ARTS)
+    pages = len(set(SITEMAP))
+    # Release packs for scheduled articles: only files that differ from the previous state
+    future = sorted({a["published"] for a in ARTS_ALL.values() if a["published"] > BUILD_DATE})
+    prev = snapshot(main_out)
+    rel_root = os.path.join(main_out, "_releases")
+    tmp = os.path.join(ROOT, ".release-tmp")
+    for d in future:
+        build_site(tmp, d, assets=False)
+        cur = snapshot(tmp)
+        changed = {k: v for k, v in cur.items() if prev.get(k) != v}
+        for k, v in changed.items():
+            fp = os.path.join(rel_root, d) + k
+            os.makedirs(os.path.dirname(fp), exist_ok=True)
+            open(fp, "wb").write(v)
+        prev.update(cur)
+        print(f"  release {d}: {len(changed)} files")
+    if os.path.exists(tmp):
+        shutil.rmtree(tmp)
+    if future:
+        open(os.path.join(rel_root, "publish.php"), "w").write(PUBLISH_PHP)
+    n = sum(len(f) for _, _, f in os.walk(main_out))
+    print(f"built {pages} indexable pages, {live} live articles ({len(ARTS_ALL) - live} scheduled), {n} files → public/")
 
 
 if __name__ == "__main__":

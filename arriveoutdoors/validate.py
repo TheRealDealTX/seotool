@@ -25,6 +25,7 @@ def exists(path):
 
 
 pages = glob.glob(OUT + "/**/index.html", recursive=True) + glob.glob(OUT + "/**/index.php", recursive=True) + [OUT + "/404.html"]
+pages = [p for p in pages if "/_releases/" not in p]
 titles = {}
 for fp in pages:
     rel = fp[len(OUT):]

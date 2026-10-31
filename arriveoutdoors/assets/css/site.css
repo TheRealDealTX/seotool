@@ -313,16 +313,20 @@ tbody tr:hover{background:#faf7ef}
 .forecast canvas.wx{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
 .forecast a{color:var(--amber)}
 .forecast .status{color:rgba(255,255,255,.7)}
-.fc-days{display:grid;grid-template-columns:repeat(7,minmax(96px,1fr));gap:8px;overflow-x:auto;padding-bottom:4px}
+.fc-days{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));gap:8px}
 .fc-day{border-radius:16px;padding:12px 8px;text-align:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);font-size:.84rem;backdrop-filter:blur(4px);transition:transform .3s var(--ease),background .3s}
 .fc-day:hover{transform:translateY(-3px);background:rgba(255,255,255,.09)}
 .fc-day b{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.6)}
 .fc-day .t{font-size:1.1rem;font-weight:800;margin:4px 0;color:#fff}
 .fc-day .score{display:inline-block;margin-top:8px;border-radius:999px;padding:3px 9px;color:#fff;font-weight:800;font-size:.74rem}
 .fc-day .small.muted,.forecast .small.muted{color:rgba(255,255,255,.6)}
-.fc-warn{margin-top:14px;font-size:.9rem}
-.fc-warn div{padding:9px 13px;border-radius:12px;background:rgba(255,106,43,.12);border:1px solid rgba(255,106,43,.25);margin:6px 0}
-.panel .forecast,.panel #result .fc-days{color:inherit}
+.fc-warn{margin-top:16px;font-size:.92rem;color:#f3e6dd}
+.fc-warn>strong{display:block;color:#fff;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.fc-warn b{color:var(--amber)}
+.fc-warn div{padding:10px 14px;border-radius:12px;background:rgba(255,106,43,.16);border:1px solid rgba(255,140,80,.35);margin:6px 0;color:#f6ebe3;line-height:1.5}
+.forecast,.forecast p{color:#e7efe9}
+.fc-day .small{color:rgba(255,255,255,.82)}
+.fc-day .small.muted{color:rgba(255,255,255,.7)}
 
 /* ---------- Tools ---------- */
 .tool-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;align-items:start;margin:-70px 0 40px;position:relative;z-index:5}

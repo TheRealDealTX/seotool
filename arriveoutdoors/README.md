@@ -31,6 +31,15 @@ python3 scripts/redirect_report.py   # after changing redirects
 
 Then purge the LiteSpeed cache in hPanel.
 
+## Scheduled publishing
+
+Articles whose `published` date is in the future are left out of the live build (links to them
+render as plain text). For each future date, `build.py` writes a release pack to
+`public/_releases/YYYY-MM-DD/` containing only the files that change that day. A daily Hostinger
+cron job runs `_releases/publish.php`, which copies due packs into the site once and logs them in
+`_releases/applied.txt`. To schedule a new article, just give it a future `published` date, build
+and deploy. Rebuilding later automatically includes everything that's due.
+
 ## Adding content
 
 - New guide: add `content/articles/<slug>.html` following `CONTENT_GUIDE.md`, add the slug to `ARTICLES` in `siteconfig.py`, optionally a hero image at `assets/img/posts/<slug>.webp`.
