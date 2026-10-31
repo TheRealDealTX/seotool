@@ -1028,7 +1028,7 @@ def render_server_files():
              "RewriteRule ^_releases(/|$) - [F,L]",
              "",
              "# Scheduled articles not yet published (removed from this list on their release date)"] + [
-             f"RewriteRule {rx('/' + k + '/')} - [R=404,L]" for k in sorted(ARTS_ALL) if k not in ARTS] + [
+             f"RewriteRule ^{k}(/.*)?$ - [R=404,L]" for k in sorted(ARTS_ALL) if k not in ARTS] + [
              "",
              "# Removed content (410 Gone)"]
     for p in GONE:

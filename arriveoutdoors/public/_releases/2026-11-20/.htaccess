@@ -33,8 +33,8 @@ RewriteRule ^(.*)$ https://arriveoutdoors.com/$1 [R=301,L]
 RewriteRule ^_releases(/|$) - [F,L]
 
 # Scheduled articles not yet published (removed from this list on their release date)
-RewriteRule ^new-hampshire-hiking/?$ - [R=404,L]
-RewriteRule ^truck-camping/?$ - [R=404,L]
+RewriteRule ^new-hampshire-hiking(/.*)?$ - [R=404,L]
+RewriteRule ^truck-camping(/.*)?$ - [R=404,L]
 
 # Removed content (410 Gone)
 RewriteRule ^book-your-luxury-villa-getaway/?$ - [G,L]
