@@ -166,9 +166,10 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
     og_img = URL + (og_image or photo_src("hero-night", 1280) or "/assets/img/icon-192.webp")
     gtag = ""
     if SITE.get("gtag"):
-        g = SITE["gtag"]
-        gtag = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={g}"></script>'
-                f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','{g}');</script>")
+        ids = SITE["gtag"] if isinstance(SITE["gtag"], list) else [SITE["gtag"]]
+        gtag = (f'<!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id={ids[0]}"></script>'
+                "<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());"
+                + "".join(f"gtag('config','{i}');" for i in ids) + "</script>")
     ads = ""
     if SITE.get("adsense_on"):
         ads = f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense_client"]}" crossorigin="anonymous"></script>'
@@ -196,9 +197,10 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{og_img}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/assets/img/icon-192.webp" sizes="192x192">
-<link rel="apple-touch-icon" href="/assets/img/icon-192.webp">
+<link rel="icon" href="/assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#07130f">
 <link rel="preload" href="/assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -454,7 +456,7 @@ def render_article(a):
         "@context": "https://schema.org", "@type": "Article", "headline": a["h1"], "description": a["description"],
         "datePublished": a["published"], "dateModified": updated, "mainEntityOfPage": URL + path,
         "author": {"@type": "Organization", "name": AUTHOR["name"], "url": URL + AUTHOR["url"]},
-        "publisher": {"@type": "Organization", "name": SITE["name"], "logo": {"@type": "ImageObject", "url": URL + "/assets/img/icon-192.webp"}},
+        "publisher": {"@type": "Organization", "name": SITE["name"], "logo": {"@type": "ImageObject", "url": URL + "/assets/icons/icon-512.png"}},
         **({"image": URL + img} if img else {}),
     }, breadcrumbs_ld(crumbs), faq_schema]
     write(path, layout(path=path, title=a["title"], description=a["description"], body=body, schema=schema,
@@ -854,7 +856,7 @@ def render_home():
 <div class="btns" style="justify-content:flex-end"><a class="btn primary" href="/rent-camping-gear/">Where to rent camping gear</a><a class="btn ghost" href="/tools/rent-vs-buy/">Rent vs buy calculator</a></div>
 </div></div></section>""")
     schema = [{"@context": "https://schema.org", "@type": "Organization", "name": SITE["name"], "url": URL,
-               "logo": URL + "/assets/img/icon-192.webp", "email": SITE["email"]},
+               "logo": URL + "/assets/icons/icon-512.png", "email": SITE["email"]},
               {"@context": "https://schema.org", "@type": "WebSite", "name": SITE["name"], "url": URL}]
     write("/", layout(path="/", title="Arrive Outdoors — Camping & Hiking Tools, Park Weather Guides",
                       description=SITE["description"], body=body, schema=schema))
@@ -998,6 +1000,8 @@ def render_server_files():
              "Options -Indexes",
              "ErrorDocument 404 /404.html",
              "ErrorDocument 410 /404.html",
+             "AddType image/x-icon .ico",
+             "AddType application/manifest+json .webmanifest",
              "",
              "<IfModule mod_headers.c>",
              '  Header always set X-Content-Type-Options "nosniff"',
@@ -1012,6 +1016,7 @@ def render_server_files():
              "  ExpiresByType image/webp A31536000",
              "  ExpiresByType image/png A31536000",
              "  ExpiresByType image/svg+xml A31536000",
+             "  ExpiresByType image/x-icon A2592000",
              "  ExpiresByType text/html A600",
              "</IfModule>",
              "",
@@ -1075,10 +1080,15 @@ def render_server_files():
     llms += ["", "## Guides"] + [f"- [{a['h1']}]({URL}{a['path']}): {a.get('summary', '')}" for a in ARTS.values()]
     write("/llms.txt", "\n".join(llms) + "\n")
     write("/site.webmanifest", json.dumps({"name": SITE["name"], "short_name": "Arrive", "start_url": "/", "display": "standalone",
-                                           "background_color": "#fbfaf6", "theme_color": "#2d5a45",
-                                           "icons": [{"src": "/assets/img/icon-192.webp", "sizes": "192x192", "type": "image/webp"}]}))
-    write("/favicon.svg", '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 30"><rect width="38" height="30" rx="6" fill="#fbfaf6"/>'
-                          '<path d="M2 28 14 6l6 10 4-6 12 18z" fill="#2d5a45"/><path d="M10 28l8-9 5 5 4-3 9 7z" fill="#e2614b"/></svg>')
+                                           "background_color": "#fbfaf6", "theme_color": "#07130f",
+                                           "icons": [{"src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+                                                     {"src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+                                                     {"src": "/assets/icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}))
+    write("/favicon.svg", '<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -8 46 46"><rect x="-4" y="-8" width="46" height="46" rx="9" fill="#07130f"/>'
+                          '<path d="M2 28 14 6l6 10 4-6 12 18z" fill="#86a86b"/><path d="M14 6l3.4 6.2-2.2-1.4-2.4 2.6-1.6-1.6zM24 10l2.6 3.9-1.6-.8-1.6 1.6-1.2-1.2z" fill="#fff"/>'
+                          '<path d="M10 28l8-9 5 5 4-3 9 7z" fill="#ff6a2b"/></svg>')
+    for f in ("favicon.ico", "apple-touch-icon.png"):
+        shutil.copy(os.path.join(ROOT, "assets", "icons", f), os.path.join(OUT, f))
 
 
 def copy_assets():

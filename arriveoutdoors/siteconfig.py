@@ -13,8 +13,9 @@ SITE = {
                     "national parks, and honest gear advice for getting outside."),
     "email": "info@arriveoutdoors.com",
     "amazon_tag": "arriveoutdoors-20",
-    # Google tag carried over from the WordPress install (Site Kit).
-    "gtag": "GT-PL9QXXQN",
+    # Google tags: the Site Kit tag carried over from WordPress plus the GA4 property.
+    # One gtag.js loader configures every ID in this list.
+    "gtag": ["G-W3H7H5S90W", "GT-PL9QXXQN"],
     # AdSense publisher from ads.txt. Auto ads are off: with this little traffic
     # they cost page speed and earn nothing. Flip to True to load them.
     "adsense_client": "ca-pub-3886800648957674",

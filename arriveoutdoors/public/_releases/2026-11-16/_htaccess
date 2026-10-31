@@ -3,6 +3,8 @@ DirectoryIndex index.html index.php
 Options -Indexes
 ErrorDocument 404 /404.html
 ErrorDocument 410 /404.html
+AddType image/x-icon .ico
+AddType application/manifest+json .webmanifest
 
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
@@ -17,6 +19,7 @@ ErrorDocument 410 /404.html
   ExpiresByType image/webp A31536000
   ExpiresByType image/png A31536000
   ExpiresByType image/svg+xml A31536000
+  ExpiresByType image/x-icon A2592000
   ExpiresByType text/html A600
 </IfModule>
 
