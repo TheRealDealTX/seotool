@@ -1,0 +1,90 @@
+{
+  "title": "Best Time to Visit Great Sand Dunes: Medano Creek & Camping",
+  "description": "When to visit Great Sand Dunes: Medano Creek's spring flow, hot summer sand, fall aspens and elk, quiet winters, campgrounds and the best dune and forest hikes.",
+  "intro": "<p>Great Sand Dunes National Park and Preserve in southern Colorado holds the tallest sand dunes in North America, piled against the base of the Sangre de Cristo Mountains in the high San Luis Valley. The park runs from dunes and grasslands up through forests and alpine tundra to high peaks.</p><p>The dunes sit at high elevation, so the sun is intense and weather changes quickly. The biggest seasonal draw is Medano Creek, a snowmelt stream that flows along the base of the dunes in late spring and early summer in most years.</p>",
+  "best_time": "Late May through mid-June is the best time to visit in most years, when Medano Creek is usually flowing; September and early October are best for comfortable dune hiking, fall aspens and elk.",
+  "best_for": {
+    "hiking": "May to June and September to October",
+    "camping": "May to June and September",
+    "fewer crowds": "Weekdays in September and October, and winter",
+    "photography": "Early morning and late evening for shadows on the dunes; late September for golden aspens"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings strong winds, changeable weather and the start of Medano Creek's flow as mountain snow melts. The creek usually peaks in late May or early June, but timing and volume depend entirely on the winter snowpack, and in dry years it can be short or barely flow.</p><p>Sandhill cranes migrate through the San Luis Valley in early spring.</p>",
+    "summer": "<p>Summer is the busiest season. The sand surface can get hot enough to burn bare feet on sunny afternoons, so hike the dunes early or late and wear shoes. Medano Creek fades as the season goes on.</p><p>Afternoon thunderstorms are common. Lightning is a serious danger on the open dunes; get off the dunes when storms approach.</p>",
+    "fall": "<p>Fall is excellent: comfortable sand, golden aspens in the mountains, elk in the valley and far fewer people. Medano Creek is usually dry by now.</p><p>Nights get cold quickly at this elevation, and early snow is possible on the peaks and the Medano Pass road.</p>",
+    "winter": "<p>Winter is cold and quiet. Snow sometimes dusts the dunes, making for striking photos, and the night skies are excellent. Some facilities and campground loops close.</p><p>Bring warm layers for cold nights and wind, and check road and campground status before you go.</p>"
+  },
+  "highlights": [
+    "High Dune and Star Dune",
+    "Medano Creek",
+    "Sandboarding and sand sledding",
+    "Sangre de Cristo Mountains backdrop",
+    "Medano Pass Primitive Road",
+    "Dark night skies"
+  ],
+  "hikes": [
+    {
+      "name": "High Dune",
+      "level": "Strenuous",
+      "note": "No trail: pick your route up soft sand ridges for a view over the dunefield; go early in summer."
+    },
+    {
+      "name": "Star Dune",
+      "level": "Strenuous",
+      "note": "Long, trailless hike across Medano Creek to the tallest dune in the park; carry plenty of water."
+    },
+    {
+      "name": "Mosca Pass Trail",
+      "level": "Moderate",
+      "note": "Shaded climb through aspen and conifer forest to a pass in the Sangre de Cristo Mountains."
+    },
+    {
+      "name": "Montville Nature Trail",
+      "level": "Easy",
+      "note": "Short loop along a creek with views over the dunes."
+    },
+    {
+      "name": "Zapata Falls",
+      "level": "Easy",
+      "note": "Short trail on public land just south of the park to a waterfall in a rock cleft; expect to wade in cold water."
+    }
+  ],
+  "camping": "<p>Piñon Flats Campground, near the dunes and visitor center, is the main campground. It is seasonal and very popular, and sites are reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. Primitive sites along the Medano Pass Primitive Road require a high-clearance four-wheel-drive vehicle.</p><p>Backcountry camping in the dunefield and in the preserve requires a free permit. Private campgrounds and the nearby Oasis store, which rents sandboards and sleds, are just outside the entrance.</p>",
+  "know_before": [
+    "Medano Creek's flow varies each year with snowpack; check the park's website for current conditions.",
+    "The sand surface gets very hot on summer afternoons; wear shoes and hike early or late.",
+    "Lightning is a serious danger on the open dunes; leave the dunes if a storm approaches.",
+    "The park is at high elevation; drink water and pace yourself.",
+    "The Medano Pass Primitive Road has deep sand and requires a high-clearance four-wheel-drive vehicle.",
+    "Sandboards and sleds must be rented or brought from outside the park."
+  ],
+  "official_url": "https://www.nps.gov/grsa/",
+  "faq": [
+    {
+      "q": "When does Medano Creek flow at Great Sand Dunes?",
+      "a": "In most years it flows from spring into early summer and peaks around late May or early June. Timing and volume depend on snowpack, so check the park's current conditions."
+    },
+    {
+      "q": "Can you hike the dunes in summer?",
+      "a": "Yes, but go early in the morning or in the evening. On sunny afternoons the sand surface can get hot enough to burn bare feet, and thunderstorms with lightning are common."
+    },
+    {
+      "q": "Can you sandboard at Great Sand Dunes?",
+      "a": "Yes. Sandboarding and sand sledding are allowed on the dunes. Rent specially designed boards and sleds outside the park, since snow sleds do not slide well on sand."
+    },
+    {
+      "q": "How long does it take to hike to High Dune?",
+      "a": "Most people need a few hours round trip, since there is no trail and climbing soft sand is slow. Start early, carry water and turn back if storms build."
+    }
+  ],
+  "nearby": [
+    "rocky-mountain",
+    "white-sands",
+    "grand-mesa"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "hiking-colorado-rockies"
+  ]
+}

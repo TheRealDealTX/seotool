@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Buffalo National River: Floating & Hikes",
+  "description": "When to visit Buffalo National River: spring floating season, water levels and flash floods, Boxley Valley elk, fall color, campgrounds and top hikes.",
+  "intro": "<p>Buffalo National River in the Ozark Mountains of northern Arkansas was the first national river in the United States. It flows free of dams for its entire length, past tall limestone and sandstone bluffs, gravel bars, caves and side canyons with waterfalls.</p><p>Water levels decide almost everything here. The upper river is usually floatable mainly in spring and after heavy rain, while the lower river can be floated for much more of the year. The river can also rise dangerously fast after storms.</p>",
+  "best_time": "March through May is the best time to visit Buffalo National River, when the upper river is usually high enough to float and waterfalls are running. Late October to early November is best for fall color and hiking.",
+  "best_for": {
+    "hiking": "October to May",
+    "camping": "April to June and September to October",
+    "fewer crowds": "Weekdays from November through February",
+    "photography": "Late October to early November for color on the bluffs; waterfalls after spring rain"
+  },
+  "seasons": {
+    "spring": "<p>Spring is floating season on the upper river, from Ponca downstream, and the busiest time of year. Waterfalls like Hemmed-In Hollow and Eden Falls run strongest after rain, and dogwoods and redbuds bloom along the bluffs.</p><p>Water levels can change quickly. Check the river gauge and the park's river-level guidance before floating, and never put in when the river is high and muddy.</p>",
+    "summer": "<p>Summer is hot and humid. The upper river often gets too low to float, while the middle and lower river usually remain floatable, with clear water and gravel bars perfect for swimming.</p><p>Afternoon thunderstorms can cause flash flooding. Ticks and chiggers are abundant, so use repellent and check yourself daily.</p>",
+    "fall": "<p>Fall brings comfortable hiking weather and color that usually peaks in late October to early November. The river is often low, so floating is mostly limited to the lower river unless rain brings it up.</p><p>Elk in Boxley Valley are most active at dawn and dusk, especially during the fall rut.</p>",
+    "winter": "<p>Winter is quiet and good for hiking, with bare trees opening up views of the bluffs and fewer bugs and snakes. Waterfalls often flow after winter rain.</p><p>Occasional ice and snow can make steep roads and trails hazardous, and some campgrounds and services close or reduce operations.</p>"
+  },
+  "highlights": [
+    "Floating the upper Buffalo from Ponca",
+    "Big Bluff and the Goat Trail",
+    "Hemmed-In Hollow",
+    "Lost Valley",
+    "Boxley Valley elk",
+    "Gravel bar camping"
+  ],
+  "hikes": [
+    {
+      "name": "Lost Valley Trail",
+      "level": "Easy",
+      "note": "Popular trail along a creek to a natural bridge, Eden Falls and a small cave; best after rain."
+    },
+    {
+      "name": "Hemmed-In Hollow",
+      "level": "Strenuous",
+      "note": "Steep trail from the Compton trailhead to a very tall, free-falling waterfall; the climb out is tough."
+    },
+    {
+      "name": "Goat Trail to Big Bluff",
+      "level": "Moderate",
+      "note": "Follows a narrow, unfenced ledge across one of the tallest bluffs in the Ozarks; not for anyone uneasy with heights."
+    },
+    {
+      "name": "Indian Rockhouse Trail",
+      "level": "Moderate",
+      "note": "Loop near Buffalo Point past sinkholes and a large rock shelter."
+    },
+    {
+      "name": "Whitaker Point (Hawksbill Crag)",
+      "level": "Moderate",
+      "note": "Iconic rock overhang in the Ozark National Forest near the upper river; the cliff edge is unprotected."
+    }
+  ],
+  "camping": "<p>The park has many campgrounds along the river, including Steel Creek, Kyles Landing, Ozark, Tyler Bend and Buffalo Point. Some can be reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> in season, while others are first-come, first-served; check nps.gov/buff for current details.</p><p>Gravel bar camping along the river is a classic part of a float trip and is allowed under park rules. Camp well above the water line and move to high ground if rain threatens.</p>",
+  "know_before": [
+    "Floating depends on water levels; check current gauges and the park's guidance before you go.",
+    "The river can rise rapidly after heavy rain; never camp low on gravel bars when storms threaten.",
+    "Outfitters rent canoes and kayaks and run shuttles, mostly in the spring and summer season.",
+    "Bluff edges like Big Bluff and Whitaker Point are unprotected and dangerous.",
+    "Ticks and chiggers are abundant in warm months.",
+    "Roads to some trailheads and river accesses are steep and gravel; check conditions after rain."
+  ],
+  "official_url": "https://www.nps.gov/buff/",
+  "faq": [
+    {
+      "q": "When is the best time to float the Buffalo River?",
+      "a": "Spring is the classic season for the upper river, when water is usually high enough. The middle and lower river can be floated for more of the year; always check current water levels."
+    },
+    {
+      "q": "Where can you see elk on the Buffalo River?",
+      "a": "Boxley Valley, along the upper river, is the best place to see elk, especially in early morning and evening. Stay in your car or keep a large distance."
+    },
+    {
+      "q": "Can you camp on gravel bars along the Buffalo River?",
+      "a": "Yes, gravel bar camping is allowed under park rules. Camp well above the water and be ready to move to higher ground if heavy rain is forecast."
+    },
+    {
+      "q": "What is the best hike on the Buffalo National River?",
+      "a": "Lost Valley is the best easy hike. For a challenge, Hemmed-In Hollow leads to a towering waterfall, and the Goat Trail crosses the face of Big Bluff."
+    }
+  ],
+  "nearby": [
+    "mammoth-cave"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "beach-camping",
+    "sawyer-squeeze-gravity-setup"
+  ]
+}

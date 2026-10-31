@@ -1,0 +1,95 @@
+{
+  "title": "Best Time to Visit Redwood National Park: Seasons & Camping",
+  "description": "When to visit Redwood National and State Parks: summer fog, winter rain, Fern Canyon and Tall Trees permits, state park campgrounds, elk and top hikes.",
+  "intro": "<p>Redwood National and State Parks protect the tallest trees on Earth along California's far north coast. The national park and three state parks, Jedediah Smith, Del Norte Coast and Prairie Creek, are managed together and include old-growth coast redwood groves, wild beaches, rivers, prairies and herds of Roosevelt elk.</p><p>The climate here is cool and damp year-round. Summer brings fog along the coast, winter brings most of the rain, and the forest looks its best when wet. There is no single entrance; visitor centers and groves are spread along US 101 from Orick to Crescent City.</p>",
+  "best_time": "May through October is the best time to visit Redwood National and State Parks, with drier weather and seasonal footbridges in place. September and October often bring the clearest skies, and spring is lush with fewer crowds.",
+  "best_for": {
+    "hiking": "May to October",
+    "camping": "June to September",
+    "fewer crowds": "Weekdays from October through April",
+    "photography": "Foggy mornings in the groves; misty light in spring and fall"
+  },
+  "seasons": {
+    "spring": "<p>Spring is green and quiet. Rhododendrons bloom in the forest, waterfalls and creeks run well, and rain tapers off as the season goes on. Trails can be muddy.</p><p>Seasonal footbridges, such as those in Fern Canyon, are typically installed in late spring after the rainy season; check before you go.</p>",
+    "summer": "<p>Summer is the busiest season. Coastal fog is common, especially in the mornings, while inland areas like Jedediah Smith are often sunnier. The Smith River is popular for swimming on warm days.</p><p>A free permit is required to visit the Tall Trees Grove, and parking for Fern Canyon and Gold Bluffs Beach has required a reservation in the busy season; check current rules.</p>",
+    "fall": "<p>Early fall is often the best weather of the year, with clearer skies and fewer people. Roosevelt elk are in their rut, and bulls can be aggressive; keep a large distance.</p><p>Rains usually return by late fall. Seasonal bridges are removed, and some campgrounds close.</p>",
+    "winter": "<p>Winter is the rainy season, with frequent storms and high rivers. The groves are lush and nearly empty, but some trails flood or wash out and some roads close.</p><p>Watch for sneaker waves and logs rolled by surf on beaches, especially during winter storms.</p>"
+  },
+  "highlights": [
+    "Old-growth coast redwood groves",
+    "Fern Canyon",
+    "Tall Trees Grove",
+    "Lady Bird Johnson Grove",
+    "Roosevelt elk at Elk Prairie",
+    "Howland Hill Road and Stout Grove"
+  ],
+  "hikes": [
+    {
+      "name": "Lady Bird Johnson Grove",
+      "level": "Easy",
+      "note": "Short loop through an upland old-growth grove off Bald Hills Road."
+    },
+    {
+      "name": "Stout Memorial Grove",
+      "level": "Easy",
+      "note": "Short, flat loop among huge redwoods beside the Smith River in Jedediah Smith Redwoods State Park."
+    },
+    {
+      "name": "Fern Canyon",
+      "level": "Easy",
+      "note": "Walk up a creek between canyon walls draped in ferns; expect wet feet and check parking reservation rules."
+    },
+    {
+      "name": "Tall Trees Grove",
+      "level": "Moderate",
+      "note": "Steep trail down to a grove of giant redwoods; requires a free permit, and the access road is gravel."
+    },
+    {
+      "name": "Boy Scout Tree Trail",
+      "level": "Moderate",
+      "note": "Quiet out-and-back through deep old-growth forest off Howland Hill Road."
+    },
+    {
+      "name": "James Irvine Trail",
+      "level": "Moderate",
+      "note": "Longer trail from Prairie Creek through old growth to Fern Canyon and the coast."
+    }
+  ],
+  "camping": "<p>The developed campgrounds are in the state parks: Jedediah Smith, Mill Creek in Del Norte Coast Redwoods, and Elk Prairie and Gold Bluffs Beach in Prairie Creek Redwoods. Reservations are made through ReserveCalifornia, not Recreation.gov, and some campgrounds are seasonal.</p><p>The national park has a few backcountry campsites that require a free permit. Private campgrounds and lodging are available in Crescent City, Klamath, Orick and Trinidad.</p>",
+  "know_before": [
+    "A free permit is required to hike to the Tall Trees Grove, with a limited number issued each day.",
+    "Fern Canyon and Gold Bluffs Beach parking has required a seasonal reservation; check the parks' website.",
+    "Davison Road and Howland Hill Road are unpaved, and trailers and RVs are not allowed or not recommended.",
+    "Keep a large distance from Roosevelt elk, especially during the fall rut and spring calving.",
+    "Watch for sneaker waves and stay off logs on beaches.",
+    "Cell service is limited in many areas; download maps ahead."
+  ],
+  "official_url": "https://www.nps.gov/redw/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Redwood National Park?",
+      "a": "September is often the best month, with drier, clearer weather and fewer visitors. May through October is the main season, and spring is lush and quiet."
+    },
+    {
+      "q": "Where do you camp in Redwood National Park?",
+      "a": "The developed campgrounds are in the three state parks: Jedediah Smith, Mill Creek and Prairie Creek's Elk Prairie and Gold Bluffs Beach. Book through ReserveCalifornia."
+    },
+    {
+      "q": "Do you need a permit for Fern Canyon?",
+      "a": "Parking at Fern Canyon and Gold Bluffs Beach has required a reservation in the busy season. Check the parks' website for current rules before you go."
+    },
+    {
+      "q": "Where are the tallest redwood trees?",
+      "a": "The tallest known trees grow in remote, undisclosed parts of the park. Accessible groves like Tall Trees Grove, Stout Grove and Lady Bird Johnson Grove still have huge old-growth redwoods."
+    }
+  ],
+  "nearby": [
+    "crater-lake",
+    "yosemite"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "beach-camping",
+    "renting-camp-gear-for-national-park-trips"
+  ]
+}

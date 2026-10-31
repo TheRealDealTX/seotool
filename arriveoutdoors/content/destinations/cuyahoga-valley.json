@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Cuyahoga Valley: Seasons, Hikes & Trails",
+  "description": "When to visit Cuyahoga Valley National Park: fall color, Brandywine Falls, the Towpath Trail, the scenic railroad, winter sledding, camping and hikes.",
+  "intro": "<p>Cuyahoga Valley National Park follows the Cuyahoga River between Cleveland and Akron in northeast Ohio. It mixes forests, waterfalls, sandstone ledges and wetlands with farms, historic villages and the route of the old Ohio and Erie Canal, now the Towpath Trail.</p><p>Because it sits between two cities, the park is easy to visit in a day and open to activity in every season. Fall color is the high point, spring brings waterfalls and wildflowers, and winter offers sledding and cross-country skiing when snow allows.</p>",
+  "best_time": "Late September through October is the best time to visit Cuyahoga Valley, with fall color usually peaking in mid-October. Late April through May is also excellent for wildflowers, birds and full waterfalls.",
+  "best_for": {
+    "hiking": "April to June and September to November",
+    "camping": "May to October",
+    "fewer crowds": "Weekdays outside summer and peak foliage",
+    "photography": "Mid-October for foliage; Brandywine Falls after heavy rain"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings strong waterfalls, wildflowers on the ravine slopes and migrating birds along the river and at Beaver Marsh. Trails can be muddy and slick after rain.</p><p>Spring is a good time to see Brandywine Falls at full flow before summer crowds arrive.</p>",
+    "summer": "<p>Summer is green and busy, especially on weekends at Brandywine Falls and the Ledges. The Towpath Trail is popular for biking, and the Cuyahoga Valley Scenic Railroad runs a regular schedule; check its website for times and how to bring a bike aboard.</p><p>Humid afternoons often bring thunderstorms. Waterfalls can shrink to a trickle in dry spells.</p>",
+    "fall": "<p>Fall is peak season. Color usually peaks in mid-October, and the Ledges Overlook, Towpath Trail and scenic railroad are especially popular. Weekend parking fills early at Brandywine Falls and the Ledges.</p><p>Go early in the day or on weekdays for a quieter visit.</p>",
+    "winter": "<p>Winter is quiet. When there is enough snow, the park is popular for sledding, snowshoeing and cross-country skiing, and frozen waterfalls can be beautiful.</p><p>Boardwalks, stairs and ledges get icy, so wear traction devices. Some facilities reduce hours in winter.</p>"
+  },
+  "highlights": [
+    "Brandywine Falls",
+    "Ohio and Erie Canal Towpath Trail",
+    "Cuyahoga Valley Scenic Railroad",
+    "The Ledges",
+    "Beaver Marsh boardwalk",
+    "Boston Mill and Peninsula"
+  ],
+  "hikes": [
+    {
+      "name": "Brandywine Falls",
+      "level": "Easy",
+      "note": "Short boardwalk and stairs to views of the park's best-known waterfall; parking fills on weekends."
+    },
+    {
+      "name": "Ledges Trail",
+      "level": "Moderate",
+      "note": "Loop around mossy sandstone cliffs and crevices to the Ledges Overlook, a classic sunset spot."
+    },
+    {
+      "name": "Towpath Trail at Beaver Marsh",
+      "level": "Easy",
+      "note": "Flat walk or ride along the old canal towpath to a boardwalk over a wetland full of wildlife."
+    },
+    {
+      "name": "Blue Hen Falls",
+      "level": "Easy",
+      "note": "Short trail to a small, pretty waterfall in a wooded ravine."
+    },
+    {
+      "name": "Brandywine Gorge Trail",
+      "level": "Moderate",
+      "note": "Loop through the gorge below Brandywine Falls, with creek crossings and hemlock forest."
+    }
+  ],
+  "camping": "<p>The park has no large campground. A small number of primitive walk-in campsites near the Stanford House are available by reservation in season; check nps.gov/cuva for how to book.</p><p>For more camping options, look to nearby Ohio state parks such as West Branch, and to private campgrounds around the valley. Hotels and inns are plentiful in the surrounding cities and towns.</p>",
+  "know_before": [
+    "Parking at Brandywine Falls and the Ledges fills early on weekends and in peak foliage.",
+    "The Towpath Trail is shared by walkers and cyclists; keep right and pass with care.",
+    "Cliff edges at the Ledges are unfenced; supervise children closely.",
+    "Boardwalks and stairs can be icy in winter.",
+    "Ticks and poison ivy are common in warm months.",
+    "Check the scenic railroad's schedule ahead, as it varies by season."
+  ],
+  "official_url": "https://www.nps.gov/cuva/",
+  "faq": [
+    {
+      "q": "When is fall color at Cuyahoga Valley National Park?",
+      "a": "Fall color usually peaks in mid-October. The Ledges Overlook, Towpath Trail and scenic railroad are popular ways to see it."
+    },
+    {
+      "q": "How long is the walk to Brandywine Falls?",
+      "a": "The walk from the main parking area to the falls viewing boardwalk is short, with some stairs. The longer Brandywine Gorge Trail loops through the gorge below."
+    },
+    {
+      "q": "Can you take a bike on the Cuyahoga Valley Scenic Railroad?",
+      "a": "The railroad has offered a program that lets you ride the Towpath Trail one way and take the train back with your bike. Check the railroad's website for current details."
+    },
+    {
+      "q": "Is Cuyahoga Valley worth visiting?",
+      "a": "Yes, especially for waterfalls, easy hikes, biking the Towpath Trail and fall color. It is an easy day trip from Cleveland or Akron."
+    }
+  ],
+  "nearby": [
+    "new-river-gorge",
+    "indiana-dunes"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "cold-weather-camping"
+  ]
+}

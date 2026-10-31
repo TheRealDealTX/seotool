@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Badlands: Seasons, Wildlife & Camping",
+  "description": "When to visit Badlands National Park: spring and fall sweet spots, summer heat and storms, bison and prairie dogs, the Loop Road, campgrounds and top hikes.",
+  "intro": "<p>Badlands National Park in southwestern South Dakota protects sharply eroded buttes, pinnacles and spires banded in shades of tan, red and gray, surrounded by one of the largest protected mixed-grass prairies in the country. It is also one of the richest fossil beds in the world.</p><p>The Badlands Loop Road and the gravel Sage Creek Rim Road are the main routes, with bison, bighorn sheep and prairie dogs common sights. Weather is the big variable: summers are hot and exposed, winters can be harsh, and storms move fast across open country.</p>",
+  "best_time": "May through early June and September through early October are the best times to visit Badlands, with milder weather for hiking, green or golden prairie and fewer crowds than midsummer.",
+  "best_for": {
+    "hiking": "May to June and September to October",
+    "camping": "May to June and September",
+    "fewer crowds": "September and October weekdays",
+    "photography": "Sunrise and sunset along Badlands Loop Road; clear moonless nights for stars"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings green prairie, wildflowers and newborn bison calves. Weather is unpredictable, with warm days, cold snaps, wind and occasional late snow.</p><p>Badlands clay becomes extremely slick and sticky when wet. Avoid hiking on formations or driving unpaved roads after rain.</p>",
+    "summer": "<p>Summer is the busiest season and can be dangerously hot, with almost no shade on trails. Hike early in the morning, carry plenty of water and rest in the shade during the afternoon.</p><p>Fast-moving thunderstorms can bring lightning, hail and strong winds. Rattlesnakes are active, so watch where you step and put your hands.</p>",
+    "fall": "<p>Fall is excellent: comfortable days, golden grasses and smaller crowds after Labor Day. Wildlife is active, and the clear, dry air is good for photography and stargazing.</p><p>Nights cool quickly, and early winter storms are possible later in the season.</p>",
+    "winter": "<p>Winter is cold, windy and quiet. The Loop Road usually stays open, but snow and ice can close roads temporarily, and services are limited. Bison and bighorn sheep against snowy formations make striking photos.</p><p>Carry winter supplies in your car, and check road conditions before driving.</p>"
+  },
+  "highlights": [
+    "Badlands Loop Road",
+    "Sage Creek Rim Road and bison",
+    "Roberts Prairie Dog Town",
+    "Fossil Exhibit Trail",
+    "Door, Window and Notch trails",
+    "Dark night skies"
+  ],
+  "hikes": [
+    {
+      "name": "Door Trail",
+      "level": "Easy",
+      "note": "Short boardwalk and marked route through a break in the Badlands Wall into a rugged moonscape."
+    },
+    {
+      "name": "Window Trail",
+      "level": "Easy",
+      "note": "Very short boardwalk to a natural window in the wall."
+    },
+    {
+      "name": "Notch Trail",
+      "level": "Moderate",
+      "note": "Climbs a log ladder and follows a narrow ledge to a view of the White River Valley; avoid in wet weather or high wind."
+    },
+    {
+      "name": "Fossil Exhibit Trail",
+      "level": "Easy",
+      "note": "Accessible boardwalk with fossil replicas and exhibits."
+    },
+    {
+      "name": "Castle Trail",
+      "level": "Moderate",
+      "note": "Longer, mostly level trail between the Door and Window area and the Fossil Exhibit Trail; fully exposed, so go early."
+    },
+    {
+      "name": "Saddle Pass Trail",
+      "level": "Strenuous",
+      "note": "Short, very steep climb up the wall; slippery and unsafe when wet."
+    }
+  ],
+  "camping": "<p>Cedar Pass Campground, near the Ben Reifel Visitor Center, has developed sites and is run by the park concessioner, which handles reservations. Sage Creek Campground in the park's northwest is a free, first-come, first-served primitive campground where bison often wander through. Check nps.gov/badl for details.</p><p>Backcountry camping is allowed in much of the park away from roads and trails under park rules; check in at a visitor center first. There is no water in the backcountry, so carry all you need.</p>",
+  "know_before": [
+    "Summer heat is a real danger; carry far more water than you think you need and avoid midday hikes.",
+    "Bison are large and fast; stay well back and never approach them.",
+    "Watch for prairie rattlesnakes, especially in tall grass and around rocks.",
+    "Badlands clay is very slick when wet, and unpaved roads can become impassable.",
+    "Thunderstorms build fast; avoid ridges and open high points during lightning.",
+    "Do not collect fossils; report finds to a ranger."
+  ],
+  "official_url": "https://www.nps.gov/badl/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Badlands National Park?",
+      "a": "Late May, June and September are the best months, with milder weather than midsummer and good wildlife viewing. September has the fewest crowds."
+    },
+    {
+      "q": "Where can you see bison in Badlands?",
+      "a": "Bison are most often seen along the Sage Creek Rim Road and around Sage Creek Campground in the park's northwest. Stay in your vehicle or keep a large distance."
+    },
+    {
+      "q": "Is Badlands too hot in summer?",
+      "a": "Summer afternoons can be dangerously hot with no shade. You can still visit; hike at sunrise, drive the Loop Road midday and carry plenty of water."
+    },
+    {
+      "q": "How long do you need in Badlands National Park?",
+      "a": "One day covers the Loop Road, several short trails and the Sage Creek Rim Road. Stay overnight to see sunrise, sunset and the night sky."
+    }
+  ],
+  "nearby": [
+    "yellowstone",
+    "cloud-peak-wilderness"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "cool-a-tent-without-electricity"
+  ]
+}

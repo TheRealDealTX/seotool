@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Indiana Dunes: Seasons, Beaches & Camping",
+  "description": "When to visit Indiana Dunes National Park: summer beaches, Lake Michigan rip currents, spring birding, fall color, winter shelf ice, camping and the best hikes.",
+  "intro": "<p>Indiana Dunes National Park stretches along the southern shore of Lake Michigan between Gary and Michigan City, about an hour from Chicago. Behind its sand beaches are tall dunes, wetlands, bogs, prairies and oak savannas, which together make it one of the most biologically diverse parks in the country.</p><p>The park is woven around towns, industry and the separate Indiana Dunes State Park, so expect a patchwork of beaches and trailheads rather than one entrance. Summer is beach season; spring and fall are better for hiking and birding.</p>",
+  "best_time": "June through September is the best time for the beaches, while May and September through October are best for hiking, spring and fall bird migration and smaller crowds.",
+  "best_for": {
+    "hiking": "April to June and September to November",
+    "camping": "May to October",
+    "fewer crowds": "Weekdays in May, September and October",
+    "photography": "Sunsets over Lake Michigan year-round; mid-October for fall color"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings wildflowers to the woods and wetlands and one of the best bird migrations in the Midwest, as birds funnel along the lakeshore. Trails can be muddy and the lake stays cold well into summer.</p><p>Weather swings quickly in spring, from warm days to raw, windy ones off the lake. Bring layers.</p>",
+    "summer": "<p>Summer is beach season, and weekends are very busy at West Beach, Indiana Dunes State Park and other popular beaches; parking lots can fill by late morning. Climbing dunes in soft sand on a hot day is harder than it looks, so carry water.</p><p>Lake Michigan can produce dangerous rip currents and waves, especially on windy days. Check beach conditions, heed warning flags and swim near a lifeguard where one is on duty.</p>",
+    "fall": "<p>Fall is a great time to hike. Crowds drop after Labor Day, bugs fade and the oak woodlands usually color up in October. Fall bird and raptor migration is another draw.</p><p>Storms on the lake get stronger as the season goes on, bringing big waves that are dangerous for anyone in the water or on piers.</p>",
+    "winter": "<p>Winter is cold, windy and quiet. Lake-effect snow can arrive suddenly, and the beaches turn stark and beautiful. Cross-country skiing and snowshoeing are possible on some trails when snow allows.</p><p>Shelf ice often builds along the shore. Never walk on it: it can hide holes and break without warning.</p>"
+  },
+  "highlights": [
+    "Lake Michigan beaches",
+    "West Beach and the Dune Succession Trail",
+    "3 Dune Challenge at Indiana Dunes State Park",
+    "Cowles Bog",
+    "Mount Baldy",
+    "Spring and fall bird migration"
+  ],
+  "hikes": [
+    {
+      "name": "Dune Succession Trail",
+      "level": "Moderate",
+      "note": "Loop at West Beach with long stairways over the dunes and views of Lake Michigan and, on clear days, Chicago."
+    },
+    {
+      "name": "3 Dune Challenge",
+      "level": "Strenuous",
+      "note": "Short but steep climb over the three tallest dunes in Indiana Dunes State Park, mostly in soft sand."
+    },
+    {
+      "name": "Cowles Bog Trail",
+      "level": "Moderate",
+      "note": "Loop through wetlands, woods and dunes to a quiet beach; one of the park's most varied hikes."
+    },
+    {
+      "name": "Paul H. Douglas Trail",
+      "level": "Easy",
+      "note": "Walk through oak savanna and dunes in Miller Woods to the lakeshore."
+    },
+    {
+      "name": "Mount Baldy Beach Trail",
+      "level": "Easy",
+      "note": "Short route to the beach beside a moving dune; access to the summit itself has been limited to ranger-led hikes, so check current rules."
+    }
+  ],
+  "camping": "<p>Dunewood Campground is the national park's campground, located near Beverly Shores. It is seasonal, and sites can be reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. Indiana Dunes State Park, inside the national park boundary, runs its own campground with reservations through Indiana DNR.</p><p>There is no backcountry camping in the national park. Private campgrounds and plenty of hotels are nearby in the surrounding towns.</p>",
+  "know_before": [
+    "Lake Michigan rip currents and big waves are dangerous; check beach conditions and swim near a lifeguard where one is on duty.",
+    "Indiana Dunes State Park is run by the state and has its own entrance fee and rules.",
+    "Beach parking fills early on summer weekends; the South Shore Line train from Chicago stops near several park areas.",
+    "Stay on marked trails and stairways to protect fragile dune plants.",
+    "Ticks and poison ivy are common in woods and dunes.",
+    "Never walk on winter shelf ice."
+  ],
+  "official_url": "https://www.nps.gov/indu/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Indiana Dunes?",
+      "a": "July and August are best for swimming and beach days. September is the best all-around month, with warm water, fewer crowds and good hiking weather."
+    },
+    {
+      "q": "Is it safe to swim at Indiana Dunes?",
+      "a": "It can be on calm days, but Lake Michigan produces dangerous rip currents and waves. Check daily beach conditions, heed warning flags and swim near a lifeguard where one is on duty."
+    },
+    {
+      "q": "What is the difference between Indiana Dunes National Park and the state park?",
+      "a": "The state park is a separate, state-run park inside the national park's boundary, with its own fee, campground and the 3 Dune Challenge. The national park covers the rest of the shoreline and inland areas."
+    },
+    {
+      "q": "Can you visit Indiana Dunes from Chicago without a car?",
+      "a": "Yes. The South Shore Line commuter train runs from Chicago to stops near several park areas, though you may need to walk or bike from the station to the beach."
+    }
+  ],
+  "nearby": [
+    "sleeping-bear-dunes",
+    "cuyahoga-valley"
+  ],
+  "related_articles": [
+    "beach-camping",
+    "car-camping-essentials"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit the White Mountains: Seasons, Hikes & Camping",
+  "description": "When to visit New Hampshire's White Mountains: fall foliage timing, mud and black fly season, Mount Washington weather, AMC huts, campgrounds and top hikes.",
+  "intro": "<p>The White Mountain National Forest covers much of northern New Hampshire and a corner of western Maine. It holds the highest peaks in the Northeast, including Mount Washington, along with Franconia Notch, Crawford Notch, the Kancamagus Highway and an extensive trail network that includes a long stretch of the Appalachian Trail.</p><p>These are small mountains with big-mountain weather. Above treeline, conditions can turn severe in any month, and Mount Washington is known for some of the worst weather in North America. Trails are steep, rocky and rooty, so most hikes take longer than the mileage suggests.</p>",
+  "best_time": "Mid-September through mid-October is the best time to visit the White Mountains: trails are dry, bugs are gone and fall foliage usually peaks from late September into mid-October. July and August are also good for high ridges, with the longest days and the AMC huts in full service.",
+  "best_for": {
+    "hiking": "July to mid-October",
+    "camping": "June to mid-October",
+    "fewer crowds": "Weekdays in June and early September, and late October after peak foliage",
+    "photography": "Late September to mid-October for foliage along the Kancamagus Highway and in the notches"
+  },
+  "seasons": {
+    "spring": "<p>Spring is mud season. Snow lingers at higher elevations well into spring, and lower trails are wet and easily damaged, so the forest asks hikers to stick to lower, drier routes until trails firm up. Waterfalls run at their strongest with snowmelt.</p><p>Black flies emerge in late spring and are at their worst into early summer. Tuckerman Ravine draws spring backcountry skiers, but avalanche, icefall and crevasse hazards there are serious; check the Mount Washington Avalanche Center before going.</p>",
+    "summer": "<p>Summer is the main hiking season. The AMC huts offer full service, campgrounds open, and the high ridges are snow-free. Weekends are busy, and trailhead parking at Franconia Notch and other popular spots fills early.</p><p>Afternoon thunderstorms are common; plan to be off exposed ridges like Franconia Ridge and the Presidentials before storms build. Even in summer, conditions above treeline can be cold, wet and windy, so carry warm layers and rain gear.</p>",
+    "fall": "<p>Fall is peak season. Foliage usually starts at higher elevations and in the north in late September and spreads into the valleys by mid-October. The Kancamagus Highway and the notches are very crowded on peak-foliage weekends, so go early or on weekdays.</p><p>Days shorten quickly, so carry a headlamp. The first snow and ice often arrive on the summits in October, well before it reaches the valleys.</p>",
+    "winter": "<p>Winter in the Whites is serious mountain terrain. Above treeline, wind, cold and whiteouts can be life-threatening, and many trailheads, seasonal roads and campgrounds close. Below treeline, snowshoeing and cross-country skiing are excellent.</p><p>Winter hiking requires traction or snowshoes, full winter gear and a willingness to turn back. Several AMC huts stay open on a self-service basis; check with AMC for what is available.</p>"
+  },
+  "highlights": [
+    "Franconia Ridge",
+    "Mount Washington and the Presidential Range",
+    "Kancamagus Highway",
+    "Franconia Notch and Crawford Notch",
+    "AMC high huts",
+    "Waterfalls like Arethusa Falls"
+  ],
+  "hikes": [
+    {
+      "name": "Franconia Ridge Loop",
+      "level": "Strenuous",
+      "note": "Falling Waters and Old Bridle Path loop over Little Haystack, Lincoln and Lafayette; long exposed ridge walk, so watch the forecast."
+    },
+    {
+      "name": "Lonesome Lake",
+      "level": "Moderate",
+      "note": "Steady climb from Lafayette Place to a mountain pond with views of Franconia Ridge and an AMC hut."
+    },
+    {
+      "name": "Arethusa Falls",
+      "level": "Moderate",
+      "note": "Forest walk to one of New Hampshire's tallest waterfalls in Crawford Notch; best in spring and after rain."
+    },
+    {
+      "name": "Welch-Dickey Loop",
+      "level": "Moderate",
+      "note": "Shorter loop with open ledges and big views; ledges are slick when wet or icy."
+    },
+    {
+      "name": "Mount Washington via Tuckerman Ravine",
+      "level": "Strenuous",
+      "note": "Classic but very demanding climb to the summit; turn back if weather deteriorates above treeline."
+    },
+    {
+      "name": "Diana's Baths",
+      "level": "Easy",
+      "note": "Short, mostly flat walk to cascades and pools near North Conway; very busy on summer weekends."
+    }
+  ],
+  "camping": "<p>The White Mountain National Forest has many developed campgrounds, especially along the Kancamagus Highway and in the Saco and Pemigewasset valleys. Many can be reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> and are seasonal, with some first-come sites. Lafayette Place Campground in Franconia Notch is a state park campground booked through New Hampshire State Parks.</p><p>Dispersed backcountry camping is allowed in much of the forest, but not in designated Forest Protection Areas near popular trails, huts, roads and above treeline; check current rules with the forest. The Appalachian Mountain Club runs a chain of high huts and shelters that require reservations with AMC.</p>",
+  "know_before": [
+    "A recreation pass is required to park at many trailheads and day-use sites; check the forest's website for where it applies and how to buy one.",
+    "Mount Washington's summit weather can be severe in any season; check the Higher Summits Forecast before hiking above treeline.",
+    "Turn back early if weather turns: most rescues happen to hikers caught above treeline unprepared.",
+    "Black flies and mosquitoes peak in late spring and early summer.",
+    "Popular trailheads fill early on summer and foliage weekends.",
+    "Cell coverage is unreliable in the notches and backcountry."
+  ],
+  "official_url": "https://www.fs.usda.gov/whitemountain",
+  "faq": [
+    {
+      "q": "When is peak fall foliage in the White Mountains?",
+      "a": "Foliage usually peaks from late September into mid-October, starting on higher, northern slopes and moving into the valleys. Timing shifts by a week or more from year to year."
+    },
+    {
+      "q": "Do you need a pass to hike in the White Mountains?",
+      "a": "A recreation pass is required to park at many White Mountain National Forest trailheads and day-use sites. Check the forest's website for current rules and where to buy one."
+    },
+    {
+      "q": "Is it safe to hike Mount Washington?",
+      "a": "It can be, with preparation. The summit has some of the most severe weather in North America, so check the Higher Summits Forecast, carry warm layers and be ready to turn back."
+    },
+    {
+      "q": "What is the best hike in the White Mountains?",
+      "a": "Franconia Ridge Loop is the most popular big hike for its long open ridge. For something shorter, Lonesome Lake and the Welch-Dickey Loop offer big views for less effort."
+    }
+  ],
+  "nearby": [
+    "acadia"
+  ],
+  "related_articles": [
+    "new-hampshire-hiking",
+    "cold-weather-camping",
+    "what-to-do-if-you-get-lost-in-the-woods"
+  ]
+}

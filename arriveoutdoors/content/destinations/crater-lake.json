@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Crater Lake: Rim Drive, Snow & Camping",
+  "description": "When to visit Crater Lake: the short summer season, Rim Drive and North Entrance snow closures, boat tours, winter snowshoeing, campgrounds and hikes.",
+  "intro": "<p>Crater Lake National Park in southern Oregon surrounds the deepest lake in the United States, filling the caldera left when Mount Mazama collapsed thousands of years ago. The lake's intense blue color, sheer caldera walls and Wizard Island make it one of the most striking sights in the West.</p><p>Crater Lake is one of the snowiest inhabited places in the country, and snow shapes every visit. Rim Drive and the North Entrance are usually fully open only for a few months in summer and early fall, while the south side stays open year-round for winter views and snowshoeing.</p>",
+  "best_time": "Mid-July through September is the best time to visit Crater Lake, when Rim Drive is usually fully open, trails are mostly snow-free and boat tours operate if running that season.",
+  "best_for": {
+    "hiking": "Mid-July to September",
+    "camping": "July to September",
+    "fewer crowds": "September weekdays, or winter on the south rim",
+    "photography": "Calm mornings for reflections; sunset from Watchman Peak"
+  },
+  "seasons": {
+    "spring": "<p>Spring still looks like winter at Crater Lake. Deep snow covers the rim, Rim Drive and the North Entrance stay closed, and only the road to Rim Village from the south and west is typically open. Snowshoeing and skiing continue.</p><p>Plowing of Rim Drive usually begins in spring, but the road often does not fully open until summer. Check nps.gov/crla for current road status.</p>",
+    "summer": "<p>Summer is the main season. Rim Drive typically opens fully in July, though opening dates vary with snowpack, and snow can linger on trails into July. Crater Lake Lodge, Mazama Village and boat tours from Cleetwood Cove usually operate in summer when available.</p><p>Wildfire smoke can haze the lake in late summer. Afternoon thunderstorms are possible on high points like Mount Scott and Garfield Peak.</p>",
+    "fall": "<p>September is often excellent, with clear skies and fewer visitors. Services begin to close for the season, and the first snows can arrive by October.</p><p>Rim Drive and the North Entrance usually close once heavy snow arrives, often by late October or November. The south and west roads to Rim Village remain open.</p>",
+    "winter": "<p>Winter buries the park in snow. The road to Rim Village from the south and west is typically plowed, and the lake is often visible on clear days, though storms can hide it for days. Ranger-led snowshoe walks have been offered on winter weekends.</p><p>Carry chains or traction tires, and expect temporary road closures during storms. Stay well back from snow-covered rim edges, which can be corniced.</p>"
+  },
+  "highlights": [
+    "Rim Drive",
+    "Wizard Island",
+    "Cleetwood Cove and lake boat tours",
+    "Watchman Peak at sunset",
+    "Garfield Peak",
+    "Winter snowshoeing at Rim Village"
+  ],
+  "hikes": [
+    {
+      "name": "Watchman Peak",
+      "level": "Easy",
+      "note": "Short climb to a fire lookout with a classic view of Wizard Island; popular at sunset."
+    },
+    {
+      "name": "Garfield Peak",
+      "level": "Moderate",
+      "note": "Steady climb from Rim Village to one of the best viewpoints over the lake; snow lingers into summer."
+    },
+    {
+      "name": "Cleetwood Cove Trail",
+      "level": "Strenuous",
+      "note": "The only legal trail to the lake shore; steep, and the climb back up is hard. Has closed some seasons for construction."
+    },
+    {
+      "name": "Mount Scott",
+      "level": "Moderate",
+      "note": "Climb to the park's highest point and a fire lookout with views of the lake and Cascade peaks."
+    },
+    {
+      "name": "Plaikni Falls",
+      "level": "Easy",
+      "note": "Gentle trail through old-growth forest to a waterfall fed by snowmelt."
+    },
+    {
+      "name": "Pinnacles Overlook",
+      "level": "Easy",
+      "note": "Short walk to views of volcanic spires in a canyon on the park's east side."
+    }
+  ],
+  "camping": "<p>Mazama Campground, near the south entrance, is the main campground and is run by the park concessioner, which handles reservations; it is typically open from early summer into fall. Lost Creek Campground is small and tent-only, with a short season. Check nps.gov/crla for current dates.</p><p>Nearby national forest campgrounds offer more options, some reservable through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. Winter snow camping is possible with a backcountry permit.</p>",
+  "know_before": [
+    "Rim Drive and the North Entrance close for months in winter; check road status before planning a route.",
+    "The road to Rim Village from the south and west is usually open year-round but can close temporarily during storms.",
+    "Boat tours and the Cleetwood Cove Trail depend on the season and have closed for construction; check before you go.",
+    "Swimming is allowed only at Cleetwood Cove and Wizard Island, and the water is very cold.",
+    "Wildfire smoke can affect views and air quality in late summer.",
+    "Stay back from the caldera rim, especially when it is snow-covered."
+  ],
+  "official_url": "https://www.nps.gov/crla/",
+  "faq": [
+    {
+      "q": "When is Rim Drive open at Crater Lake?",
+      "a": "Rim Drive is usually fully open only from about July into October, depending on snow. Check nps.gov/crla for current road status, since dates vary each year."
+    },
+    {
+      "q": "Can you visit Crater Lake in winter?",
+      "a": "Yes. The road to Rim Village from the south and west is typically plowed, and you can snowshoe or ski along the rim. Storms can hide the lake, so check the webcams first."
+    },
+    {
+      "q": "Can you swim in Crater Lake?",
+      "a": "Yes, but only at Cleetwood Cove and Wizard Island, both reached by a steep trail and, for Wizard Island, a boat. The water is very cold."
+    },
+    {
+      "q": "How much time do you need at Crater Lake?",
+      "a": "One full day covers Rim Drive, a couple of viewpoints and a short hike. Add a second day for a boat tour, Wizard Island or longer hikes."
+    }
+  ],
+  "nearby": [
+    "redwood",
+    "mount-rainier"
+  ],
+  "related_articles": [
+    "cold-weather-camping",
+    "car-camping-essentials"
+  ]
+}

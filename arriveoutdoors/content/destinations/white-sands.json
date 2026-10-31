@@ -1,0 +1,84 @@
+{
+  "title": "Best Time to Visit White Sands: Seasons, Hikes & Camping",
+  "description": "When to visit White Sands National Park: mild fall and spring days, summer heat, spring wind, missile-range road closures, sunset sledding and camping.",
+  "intro": "<p>White Sands National Park in southern New Mexico protects a large part of the world's largest gypsum dunefield, a sea of brilliant white dunes in the Tularosa Basin between Alamogordo and Las Cruces. The bright sand reflects sunlight and stays cooler to the touch than ordinary sand, but the open dunes offer no shade at all.</p><p>The park is surrounded by White Sands Missile Range, and missile testing can temporarily close Dunes Drive and the highway between Las Cruces and Alamogordo. Most visitors drive Dunes Drive, walk a short trail, sled the dunes and stay for sunset.</p>",
+  "best_time": "October through November and February through April are the best times to visit White Sands, with mild days for hiking. Avoid midday hikes from late spring through summer, when heat is dangerous.",
+  "best_for": {
+    "hiking": "October to April",
+    "camping": "October to November and March to April",
+    "fewer crowds": "Weekdays from December through February, outside holidays",
+    "photography": "Sunrise and sunset any time of year; full-moon nights"
+  },
+  "seasons": {
+    "spring": "<p>Spring days are pleasant, but strong winds are common, especially in March and April. Blowing sand can cut visibility and erase footprints and trail markers.</p><p>Spring break weekends are busy. Check the park's website for missile-test closures before you drive.</p>",
+    "summer": "<p>Summer is dangerously hot on the dunes. Rangers advise against hiking in the heat of the day; plan dune walks for early morning or evening and carry plenty of water. Heat-related rescues and deaths have occurred here.</p><p>Monsoon thunderstorms in mid to late summer bring lightning and sudden downpours. Leave the dunes when storms approach.</p>",
+    "fall": "<p>Fall is one of the best seasons, with comfortable days, calm weather and fewer crowds than spring. Sunset strolls and sledding are especially pleasant.</p><p>Nights cool down quickly, so bring a layer for sunset.</p>",
+    "winter": "<p>Winter days are often clear and mild enough for hiking, while nights are cold. Occasional storms can briefly dust the dunes with snow.</p><p>Days are short, so check park hours, which change through the year, and plan to leave Dunes Drive by closing time.</p>"
+  },
+  "highlights": [
+    "Dunes Drive",
+    "Sunset over the white dunes",
+    "Sledding on gypsum sand",
+    "Interdune Boardwalk",
+    "Alkali Flat Trail",
+    "Lake Lucero ranger tours"
+  ],
+  "hikes": [
+    {
+      "name": "Interdune Boardwalk",
+      "level": "Easy",
+      "note": "Accessible boardwalk through the fragile area between dunes, with exhibits on desert plants and animals."
+    },
+    {
+      "name": "Playa Trail",
+      "level": "Easy",
+      "note": "Short, flat walk to a seasonal playa near the start of Dunes Drive."
+    },
+    {
+      "name": "Dune Life Nature Trail",
+      "level": "Moderate",
+      "note": "Loop with a couple of steep dune climbs and exhibits on dune wildlife."
+    },
+    {
+      "name": "Alkali Flat Trail",
+      "level": "Strenuous",
+      "note": "Loop over steep dunes marked by posts to the edge of a dry lakebed; do not start in heat, wind or low visibility."
+    }
+  ],
+  "camping": "<p>White Sands has no developed campground. Camping is limited to a small number of primitive backcountry sites reached by a hike over the dunes, with permits issued first-come, first-served at the visitor center; sites can close for missile testing.</p><p>Nearby developed options include Oliver Lee Memorial State Park near Alamogordo and Aguirre Spring Campground on BLM land in the Organ Mountains. Hotels are in Alamogordo and Las Cruces.</p>",
+  "know_before": [
+    "Missile testing can temporarily close Dunes Drive and US 70; check the park's closure schedule before you go.",
+    "Carry plenty of water and avoid hiking in summer heat; there is no shade or water on the dunes.",
+    "Trail markers can disappear in blowing sand; do not hike in high wind or low visibility.",
+    "Sleds are sold at the visitor center gift shop; sled only on slopes away from roads and parking.",
+    "Park hours change through the year; Dunes Drive closes in the evening.",
+    "The bright sand reflects sunlight; wear sunglasses and sunscreen."
+  ],
+  "official_url": "https://www.nps.gov/whsa/",
+  "faq": [
+    {
+      "q": "What is the best month to visit White Sands?",
+      "a": "October, November, March and April are ideal, with mild days for hiking. March and April can be very windy, so check the forecast."
+    },
+    {
+      "q": "Can White Sands be closed for missile testing?",
+      "a": "Yes. Dunes Drive and the highway between Las Cruces and Alamogordo can close temporarily for testing on the surrounding missile range, usually for a few hours. Check the park's closure schedule."
+    },
+    {
+      "q": "Can you sled at White Sands?",
+      "a": "Yes. Sledding on the gypsum dunes is a park favorite. Plastic saucer sleds are sold at the visitor center, and waxing the bottom helps."
+    },
+    {
+      "q": "Can you camp at White Sands National Park?",
+      "a": "Only at a small number of primitive backcountry sites reached on foot, with a permit from the visitor center. There is no developed campground in the park."
+    }
+  ],
+  "nearby": [
+    "big-bend",
+    "great-sand-dunes"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "cool-a-tent-without-electricity"
+  ]
+}

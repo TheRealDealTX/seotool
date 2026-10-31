@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit New River Gorge: Seasons, Hikes & Rafting",
+  "description": "When to visit New River Gorge: spring and fall rafting, Bridge Day in October, fall foliage, climbing season, free primitive camping and the best rim hikes.",
+  "intro": "<p>New River Gorge National Park and Preserve protects a deep, forested canyon carved by the New River in southern West Virginia. It is best known for the New River Gorge Bridge, whitewater rafting, world-class sandstone climbing and rim trails with sweeping views, along with the remains of the coal towns that once lined the river.</p><p>The gorge is a three-season playground. Spring brings high water and wildflowers, summer is rafting and swimming season, and fall combines color, climbing weather and the famous one-day Bridge Day festival.</p>",
+  "best_time": "Late September through October is the best time to visit New River Gorge, with fall color, ideal climbing weather and the Gauley River's fall rafting season nearby. Late spring is also excellent for wildflowers and big water.",
+  "best_for": {
+    "hiking": "April to June and September to November",
+    "camping": "May to October",
+    "fewer crowds": "Weekdays in April, early May and November",
+    "photography": "Mid to late October for color around the bridge; Long Point and Grandview at sunrise or sunset"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings high, powerful water on the river, blooming redbud and dogwood and a flush of wildflowers on the slopes. Rhododendron blooms along the rim in early summer. Weather swings between warm days and cold rain.</p><p>High water makes the Lower New more challenging for rafting; go with a licensed outfitter and follow their judgment on conditions.</p>",
+    "summer": "<p>Summer is humid and green. Rafting trips run daily, the river is popular for swimming and fishing, and shaded rim trails stay pleasant in the morning. Afternoon thunderstorms are common.</p><p>Lower summer flows usually make the Lower New a bit friendlier for first-time rafters, though it still has serious rapids. Never swim near rapids or after heavy rain.</p>",
+    "fall": "<p>Fall is peak season. Forest color usually peaks in mid to late October, crisp air brings prime climbing conditions, and dam releases on the nearby Gauley River create a famous fall whitewater season for experienced paddlers.</p><p>Bridge Day is held on one day in October, when the bridge closes to traffic and is opened to pedestrians, BASE jumpers and rappellers. It draws huge crowds, so plan around it if you want quiet trails.</p>",
+    "winter": "<p>Winter is quiet and often gray, with occasional snow and ice. Bare trees open up views of the gorge, and the rim trails are nearly empty.</p><p>Steep roads like Fayette Station Road can be slick in icy weather, and some facilities keep reduced hours. Check the park's website before you go.</p>"
+  },
+  "highlights": [
+    "New River Gorge Bridge",
+    "Whitewater rafting on the Lower New",
+    "Endless Wall and rock climbing",
+    "Grandview overlooks",
+    "Fayette Station Road",
+    "Thurmond and historic coal towns"
+  ],
+  "hikes": [
+    {
+      "name": "Endless Wall Trail",
+      "level": "Easy",
+      "note": "Rim trail through rhododendron to Diamond Point and cliff-edge views over the gorge; stay back from unfenced edges."
+    },
+    {
+      "name": "Long Point Trail",
+      "level": "Easy",
+      "note": "Out-and-back to a rock point with the classic view of the New River Gorge Bridge."
+    },
+    {
+      "name": "Grandview Rim Trail",
+      "level": "Moderate",
+      "note": "Follows the rim from the Grandview area with big views down to a horseshoe bend in the river."
+    },
+    {
+      "name": "Kaymoor Miners Trail",
+      "level": "Strenuous",
+      "note": "Steep descent with hundreds of steps to the ruins of a coal mine; the climb back up is the hard part."
+    },
+    {
+      "name": "Sandstone Falls Boardwalk",
+      "level": "Easy",
+      "note": "Short boardwalk to the widest waterfall on the river, in the southern part of the park."
+    }
+  ],
+  "camping": "<p>The park has several small primitive campgrounds, mostly along the river, such as Grandview Sandbar, Army Camp and Stone Cliff. They are free, first-come, first-served and have few or no services, so check nps.gov/neri for current status and rules.</p><p>For more facilities, look to nearby state parks such as Babcock and to private campgrounds and outfitter campgrounds around Fayetteville. Most rafting companies offer camping or cabins.</p>",
+  "know_before": [
+    "Bridge Day is one day in October; expect road closures and very large crowds near the bridge.",
+    "Rafting the New and Gauley involves serious rapids; go with a licensed outfitter unless you are an experienced paddler.",
+    "Cliff edges along rim trails are often unfenced; supervise children closely.",
+    "Fayette Station Road is narrow, steep and winding, with one-way sections.",
+    "River levels rise quickly after heavy rain; never swim near rapids.",
+    "Ticks and copperheads are present in warm months."
+  ],
+  "official_url": "https://www.nps.gov/neri/",
+  "faq": [
+    {
+      "q": "When is the best time to visit New River Gorge?",
+      "a": "October is the most popular month, with fall color, great climbing weather and Bridge Day. Late spring is also excellent for wildflowers, waterfalls and big water."
+    },
+    {
+      "q": "What is Bridge Day?",
+      "a": "Bridge Day is a one-day festival held each October when the New River Gorge Bridge closes to vehicles and opens to pedestrians, BASE jumpers and rappellers. Check the official event site for the date."
+    },
+    {
+      "q": "Can beginners go rafting at New River Gorge?",
+      "a": "Yes. Outfitters run guided trips for beginners, and the Upper New offers gentler water for families. The Lower New has bigger rapids, and the fall Gauley season is for experienced rafters."
+    },
+    {
+      "q": "Is camping free at New River Gorge?",
+      "a": "The park's primitive campgrounds are free and first-come, first-served, with few services. Nearby state parks and private campgrounds offer more amenities."
+    }
+  ],
+  "nearby": [
+    "shenandoah",
+    "great-smoky-mountains"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "what-to-do-if-you-get-lost-in-the-woods"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit North Cascades: SR 20, Hikes & Camping",
+  "description": "When to visit North Cascades National Park: the short hiking season, the SR 20 winter closure, fall larches, Diablo Lake, campgrounds and the best hikes.",
+  "intro": "<p>North Cascades National Park in northern Washington protects some of the most rugged mountains in the lower 48, with jagged peaks, hundreds of glaciers, deep valleys and turquoise lakes like Diablo and Ross. Together with Ross Lake and Lake Chelan national recreation areas, it forms a large, wild complex that sees far fewer visitors than most national parks.</p><p>The North Cascades Highway (State Route 20) is the main way in and the only road across the range in this area. Snow closes part of it every winter, and high trails stay snow-covered into summer, so the main season is short.</p>",
+  "best_time": "Mid-July through September is the best time to visit North Cascades, when the North Cascades Highway is open, high trails are mostly snow-free and campgrounds are running. Late September and early October are prime for golden larches.",
+  "best_for": {
+    "hiking": "Mid-July to September",
+    "camping": "June to September",
+    "fewer crowds": "Weekdays in June and September",
+    "photography": "Diablo Lake Overlook in morning light; late September to early October for larches"
+  },
+  "seasons": {
+    "spring": "<p>Spring is a time of transition. The North Cascades Highway usually reopens across the pass in spring after crews clear avalanche debris and snow, but timing varies each year. Low-elevation trails near Newhalem open first, while high country stays deep in snow.</p><p>Avalanche danger is high on many slopes in spring. Stick to valley trails unless you have avalanche training and gear.</p>",
+    "summer": "<p>Summer is the main season. High trails melt out from early to mid-July, depending on the year, wildflowers bloom in alpine meadows, and campgrounds are open. Diablo Lake is at its most vivid turquoise in summer as glacial meltwater carries fine rock flour into the lake.</p><p>Wildfire smoke can affect views and air quality in late summer. Mosquitoes can be thick in early summer.</p>",
+    "fall": "<p>Fall is spectacular. Larches near Washington Pass and Rainy Pass turn gold from late September into early October, drawing crowds to trails like Maple Pass and Blue Lake. Weather becomes unsettled, with the first snows on the passes.</p><p>Campgrounds begin to close after September. The North Cascades Highway closes across the pass once heavy snow arrives, often in November.</p>",
+    "winter": "<p>Winter closes the North Cascades Highway between the Ross Lake area and the Mazama side, cutting off the high country by car. The western side near Newhalem and Marblemount remains reachable, and bald eagles gather along the Skagit River in winter.</p><p>Winter travel in the high country is for experienced, avalanche-trained skiers and climbers only.</p>"
+  },
+  "highlights": [
+    "Diablo Lake Overlook",
+    "North Cascades Highway (SR 20)",
+    "Cascade Pass",
+    "Ross Lake",
+    "Larches at Washington and Rainy passes",
+    "Stehekin and Lake Chelan"
+  ],
+  "hikes": [
+    {
+      "name": "Thunder Knob",
+      "level": "Easy",
+      "note": "Gentle climb from Colonial Creek to views over Diablo Lake and surrounding peaks."
+    },
+    {
+      "name": "Trail of the Cedars",
+      "level": "Easy",
+      "note": "Short loop across a suspension bridge through old-growth cedars in Newhalem."
+    },
+    {
+      "name": "Diablo Lake Trail",
+      "level": "Moderate",
+      "note": "Forest trail along the lake's north side to views of the dam and Diablo Lake."
+    },
+    {
+      "name": "Cascade Pass",
+      "level": "Moderate",
+      "note": "Switchbacks to a high pass surrounded by glaciers; reached via the gravel Cascade River Road, usually snow-free from mid-July."
+    },
+    {
+      "name": "Maple Pass Loop",
+      "level": "Strenuous",
+      "note": "Ridge loop near Rainy Pass on adjacent national forest land; famous for larches in fall."
+    },
+    {
+      "name": "Blue Lake",
+      "level": "Moderate",
+      "note": "Popular trail near Washington Pass to an alpine lake below Liberty Bell; very busy in larch season."
+    }
+  ],
+  "camping": "<p>Colonial Creek and Newhalem Creek are the main developed campgrounds along the North Cascades Highway, with smaller ones such as Goodell Creek and Gorge Lake nearby. Most are seasonal, and sites at the larger campgrounds can be reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. National forest campgrounds lie east of the pass.</p><p>Backcountry camping requires a wilderness permit for designated camps, including boat-in sites on Ross Lake. Check nps.gov/noca for how permits are issued. Stehekin, at the head of Lake Chelan, is reached by boat, floatplane or trail.</p>",
+  "know_before": [
+    "The North Cascades Highway closes across the pass every winter and reopens in spring; check WSDOT for current status.",
+    "High trails often hold snow into July; check trail conditions before you go.",
+    "Backcountry camping requires a wilderness permit.",
+    "Services are sparse along SR 20; fill your gas tank before entering.",
+    "Wildfire smoke can affect late-summer trips.",
+    "Store food properly; black bears are common."
+  ],
+  "official_url": "https://www.nps.gov/noca/",
+  "faq": [
+    {
+      "q": "When is the North Cascades Highway open?",
+      "a": "It usually opens across the pass in spring and closes once heavy snow arrives in fall, often in November. Check WSDOT for current status, since dates vary each year."
+    },
+    {
+      "q": "Why is Diablo Lake so turquoise?",
+      "a": "Glaciers grind rock into fine powder called glacial flour, which meltwater carries into the lake. The suspended particles reflect light and create the vivid color, strongest in summer."
+    },
+    {
+      "q": "When do the larches turn in the North Cascades?",
+      "a": "Larches near Washington and Rainy passes usually turn gold from late September into early October. Expect crowded trailheads on weekends during peak color."
+    },
+    {
+      "q": "Is North Cascades worth visiting?",
+      "a": "Yes, especially in summer and early fall. It is one of the least visited national parks, with dramatic peaks, turquoise lakes and excellent hiking along the North Cascades Highway."
+    }
+  ],
+  "nearby": [
+    "mount-rainier",
+    "olympic"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "what-to-do-if-you-get-lost-in-the-woods"
+  ]
+}

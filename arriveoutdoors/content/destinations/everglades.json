@@ -1,0 +1,93 @@
+{
+  "title": "Best Time to Visit the Everglades: Dry Season, Wildlife & Camping",
+  "description": "When to visit Everglades National Park: the winter dry season, wet-season heat and mosquitoes, hurricane season, wildlife viewing, camping and easy trails.",
+  "intro": "<p>Everglades National Park protects the southern end of a vast, slow-moving river of grass at the tip of Florida. Sawgrass prairies, pinelands, hardwood hammocks, cypress and mangrove forests and the shallow waters of Florida Bay support alligators, crocodiles, manatees and huge numbers of wading birds.</p><p>The park has two seasons that change everything. The dry season, roughly winter and spring, brings comfortable weather, fewer mosquitoes and wildlife gathered at the remaining water. The wet season brings heat, humidity, daily storms, intense mosquitoes and the risk of hurricanes.</p>",
+  "best_time": "December through April, the dry season, is the best time to visit the Everglades: weather is milder, mosquitoes are fewer and wildlife concentrates around water, making it easy to see alligators and birds.",
+  "best_for": {
+    "hiking": "December to April",
+    "camping": "December to March",
+    "fewer crowds": "Late April and May, or weekdays in early December",
+    "photography": "January to March for wading birds on the Anhinga Trail; sunrise and sunset over the sawgrass"
+  },
+  "seasons": {
+    "spring": "<p>Early spring is still prime dry season, with good wildlife viewing as water levels drop. By late April and May, heat and humidity build, and mosquitoes increase as the rains approach.</p><p>Spring is also when many wading birds nest. Keep your distance and follow posted closures.</p>",
+    "summer": "<p>Summer is the wet season. Expect heat, high humidity and frequent afternoon thunderstorms with lightning. Mosquitoes can be extreme, especially at Flamingo and in mangrove areas, and some trails are nearly unbearable without protection.</p><p>Hurricane season runs from June through November. Monitor forecasts and follow park closures and evacuation orders. Some services and campgrounds reduce operations in summer.</p>",
+    "fall": "<p>Early fall remains hot, wet and buggy, and it is the peak of hurricane season. Conditions usually improve in November as the dry season begins, with lower humidity and fewer mosquitoes.</p><p>Fall is quiet, but check which facilities and tours are operating before you go.</p>",
+    "winter": "<p>Winter is peak season and the most comfortable time to visit. Wildlife gathers at water holes, so the Anhinga Trail and Shark Valley can be excellent for alligators and birds. Paddling and backcountry trips are at their best.</p><p>Campgrounds and boat tours are busiest, and occasional cold fronts bring cool, windy days. Book campsites ahead.</p>"
+  },
+  "highlights": [
+    "Anhinga Trail wildlife",
+    "Shark Valley tram road and observation tower",
+    "Flamingo and Florida Bay",
+    "Pa-hay-okee Overlook",
+    "Ten Thousand Islands from Everglades City",
+    "Paddling and backcountry chickees"
+  ],
+  "hikes": [
+    {
+      "name": "Anhinga Trail",
+      "level": "Easy",
+      "note": "Short paved path and boardwalk at Royal Palm; one of the best places in the park to see alligators and birds in the dry season."
+    },
+    {
+      "name": "Gumbo Limbo Trail",
+      "level": "Easy",
+      "note": "Shaded loop through a tropical hardwood hammock next to the Anhinga Trail."
+    },
+    {
+      "name": "Pa-hay-okee Overlook",
+      "level": "Easy",
+      "note": "Short boardwalk to a raised platform with a sweeping view over the sawgrass river of grass."
+    },
+    {
+      "name": "Mahogany Hammock",
+      "level": "Easy",
+      "note": "Boardwalk loop through a dense hammock with large mahogany trees."
+    },
+    {
+      "name": "Shark Valley Tram Road",
+      "level": "Moderate",
+      "note": "Long paved loop to an observation tower; walk part of it, bike it or take the tram tour."
+    },
+    {
+      "name": "Coastal Prairie Trail",
+      "level": "Moderate",
+      "note": "Flat but exposed trail from Flamingo through coastal prairie; only reasonable in the cool, dry season."
+    }
+  ],
+  "camping": "<p>The park's two drive-in campgrounds are Long Pine Key, near the main entrance, and Flamingo, at the southern end of the main park road. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>, and operations can be seasonal; Long Pine Key has typically closed in the wet season.</p><p>Backcountry camping at beach sites, ground sites and raised chickee platforms is accessed by canoe, kayak or boat and requires a permit. Plan around tides, wind and weather, and carry all your water.</p>",
+  "know_before": [
+    "Mosquitoes can be extreme in the wet season; bring repellent, long sleeves and a head net if visiting from late spring through fall.",
+    "Hurricane season runs from June through November; check forecasts and park alerts before you travel.",
+    "Keep a safe distance from alligators and crocodiles, and never feed wildlife.",
+    "Vultures at some parking areas can damage vehicle rubber; the park has provided tarps at affected lots.",
+    "Main park areas have separate entrances that are far apart; plan your route ahead.",
+    "Carry water and sun protection; shade is limited on many trails."
+  ],
+  "official_url": "https://www.nps.gov/ever/",
+  "faq": [
+    {
+      "q": "What is the best month to visit the Everglades?",
+      "a": "January through March is ideal, with comfortable weather, fewer mosquitoes and excellent wildlife viewing. December and April are also good."
+    },
+    {
+      "q": "Is it worth visiting the Everglades in summer?",
+      "a": "It can be, but expect heat, daily thunderstorms and intense mosquitoes. Visit early in the morning, stay on boardwalks and watch for hurricane alerts."
+    },
+    {
+      "q": "Where is the best place to see alligators in the Everglades?",
+      "a": "The Anhinga Trail at Royal Palm and the Shark Valley Tram Road are the most reliable spots, especially in the dry season."
+    },
+    {
+      "q": "How many days do you need in the Everglades?",
+      "a": "One full day covers the Anhinga Trail and the drive toward Flamingo. Add a day for Shark Valley and another for a boat or paddle trip from Everglades City or Flamingo."
+    }
+  ],
+  "nearby": [
+    "great-smoky-mountains"
+  ],
+  "related_articles": [
+    "cool-a-tent-without-electricity",
+    "car-camping-essentials"
+  ]
+}

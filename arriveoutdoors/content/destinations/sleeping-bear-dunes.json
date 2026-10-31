@@ -1,0 +1,88 @@
+{
+  "title": "Best Time to Visit Sleeping Bear Dunes: Seasons, Hikes & Camping",
+  "description": "When to visit Sleeping Bear Dunes: summer beach season, the Dune Climb, Pierce Stocking Scenic Drive, fall color, winter skiing, campgrounds and the best hikes.",
+  "intro": "<p>Sleeping Bear Dunes National Lakeshore protects a long stretch of Lake Michigan's northeastern shore near Traverse City, plus North and South Manitou islands. Its signature features are perched dunes rising high above the lake, clear turquoise water, inland lakes and beech-maple forests.</p><p>Summer is the busy season, with beaches, paddling and the famous Dune Climb. Fall brings strong color and fewer people, and winter turns the park into a quiet place for skiing and snowshoeing.</p>",
+  "best_time": "Late June through early September is the best time for beaches and swimming, while September and early October are best for hiking, fall color and smaller crowds.",
+  "best_for": {
+    "hiking": "May to October",
+    "camping": "June to September",
+    "fewer crowds": "Weekdays in June and from mid-September through October",
+    "photography": "Sunset from Empire Bluff or Pierce Stocking Scenic Drive; early to mid-October for fall color"
+  },
+  "seasons": {
+    "spring": "<p>Spring comes late on the northern Lake Michigan shore. Woods fill with wildflowers, and the park is quiet before Memorial Day. The lake stays very cold well into summer.</p><p>Pierce Stocking Scenic Drive is typically closed to cars in winter and reopens in spring; check the park website for the current status. Ferries to the Manitou Islands are seasonal.</p>",
+    "summer": "<p>Summer is peak season. Beaches, the Dune Climb, Glen Haven and the Sleeping Bear Heritage Trail are busy, and parking at popular spots fills on weekends. Climbing dunes in hot sun is tiring, so bring water and sun protection.</p><p>Lake Michigan can produce dangerous rip currents on windy days, and there are generally no lifeguards on lakeshore beaches. Check conditions before swimming.</p>",
+    "fall": "<p>Fall is an excellent time to visit. Crowds thin after Labor Day, and forest color usually peaks in early to mid-October, especially around Glen Lake and along the scenic drive.</p><p>Storms on the lake become more frequent later in the fall, and some services and campgrounds close for the season.</p>",
+    "winter": "<p>Winter is snowy and quiet. Several trails are popular for cross-country skiing and snowshoeing, and closed Pierce Stocking Scenic Drive becomes a ski and snowshoe route when snow allows. Ranger-led snowshoe hikes have been offered on winter weekends.</p><p>Bluff edges can be corniced and unstable, and shelf ice along the shore should never be walked on.</p>"
+  },
+  "highlights": [
+    "Dune Climb",
+    "Pierce Stocking Scenic Drive",
+    "Empire Bluff",
+    "Glen Haven historic village",
+    "Sleeping Bear Heritage Trail",
+    "North and South Manitou islands"
+  ],
+  "hikes": [
+    {
+      "name": "Dune Climb",
+      "level": "Moderate",
+      "note": "Steep climb up a big sand slope; reaching Lake Michigan beyond it is a much longer, strenuous round trip through open dunes."
+    },
+    {
+      "name": "Empire Bluff Trail",
+      "level": "Easy",
+      "note": "Short trail through forest to a boardwalk overlook high above the lake; superb at sunset."
+    },
+    {
+      "name": "Pyramid Point",
+      "level": "Moderate",
+      "note": "Hilly loop to a lookout over Lake Michigan and the Manitou Passage."
+    },
+    {
+      "name": "Sleeping Bear Point Trail",
+      "level": "Moderate",
+      "note": "Loop through open dunes and ghost forest near Glen Haven; sandy and exposed."
+    },
+    {
+      "name": "Sleeping Bear Heritage Trail",
+      "level": "Easy",
+      "note": "Paved and crushed-stone multi-use trail linking Empire, Glen Arbor and the Dune Climb; good for biking."
+    }
+  ],
+  "camping": "<p>The lakeshore's main campgrounds are D.H. Day near Glen Arbor and Platte River in the southern part of the park. Both are popular in summer, and sites are reserved through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; check nps.gov/slbe for seasons.</p><p>Backcountry camping is available at a few mainland sites and on North and South Manitou islands, reached by seasonal ferry from Leland, with a permit. Private campgrounds and lodging are plentiful in nearby towns.</p>",
+  "know_before": [
+    "Going down the bluff at the Lake Michigan Overlook is strongly discouraged; the climb back up is extremely hard and rescues are common.",
+    "Lake Michigan rip currents can be dangerous, and lakeshore beaches generally have no lifeguards.",
+    "Pierce Stocking Scenic Drive and the Manitou Islands ferry are seasonal.",
+    "Sand gets hot in summer sun; wear shoes on the dunes.",
+    "Ticks and poison ivy are found in grassy and wooded areas.",
+    "A park entrance pass is required; check nps.gov/slbe for how to buy one."
+  ],
+  "official_url": "https://www.nps.gov/slbe/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Sleeping Bear Dunes?",
+      "a": "July and August are best for swimming. September is the best all-around month, with warm lake water, settled weather and far fewer people."
+    },
+    {
+      "q": "How hard is the Dune Climb?",
+      "a": "The first big slope is short but steep in soft sand. Continuing over the dunes to Lake Michigan and back is a long, strenuous, exposed hike; carry water and allow several hours."
+    },
+    {
+      "q": "When is Pierce Stocking Scenic Drive open?",
+      "a": "It is typically open to cars from spring through fall and closed in winter, when it is used for skiing and snowshoeing. Check nps.gov/slbe for current dates."
+    },
+    {
+      "q": "Can you camp on the Manitou Islands?",
+      "a": "Yes. Both islands have backcountry camping, reached by seasonal passenger ferry from Leland. You need a permit, and you must bring everything you need."
+    }
+  ],
+  "nearby": [
+    "indiana-dunes"
+  ],
+  "related_articles": [
+    "beach-camping",
+    "car-camping-essentials"
+  ]
+}
