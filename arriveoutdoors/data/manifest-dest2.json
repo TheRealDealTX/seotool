@@ -1,0 +1,79 @@
+{
+ "dest-white-mountains": {
+  "file": "dest-white-mountains.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/foggy-forest-in-mountainous-area-5876801/",
+  "photographer": null,
+  "alt": "Low fog drifting over a hillside of orange and gold fall foliage above a green meadow in the New England mountains"
+ },
+ "dest-new-river-gorge": {
+  "file": "dest-new-river-gorge.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/mountainous-valley-with-lush-green-vegetation-and-river-4595648/",
+  "photographer": null,
+  "alt": "Aerial view of a river winding through a deep, densely forested gorge in the Appalachian hills"
+ },
+ "dest-mammoth-cave": {
+  "file": "dest-mammoth-cave.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/mysterious-cave-interior-with-stalactites-31651850/",
+  "photographer": null,
+  "alt": "A large limestone cave chamber with a ceiling of hanging formations, lit by two small lights"
+ },
+ "dest-everglades": {
+  "file": "dest-everglades.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/tranquil-sunset-over-florida-everglades-marsh-28641715/",
+  "photographer": "Dudubangbang Travel",
+  "alt": "Golden marsh grasses and still water stretching to a flat horizon under a pastel sunset sky in the Florida Everglades"
+ },
+ "dest-badlands": {
+  "file": "dest-badlands.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/birds-eye-view-of-badlands-national-park-in-usa-17240589/",
+  "photographer": "Aaron J Hill",
+  "alt": "Eroded, striped buttes and ridges of the Badlands Wall stretching toward the prairie horizon in Badlands National Park"
+ },
+ "dest-white-sands": {
+  "file": "dest-white-sands.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/serene-twilight-at-white-sands-national-park-34472580/",
+  "photographer": null,
+  "alt": "Rolling white gypsum dunes with scattered plants in soft evening light at White Sands National Park"
+ },
+ "dest-crater-lake": {
+  "file": "dest-crater-lake.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/serene-view-of-wizard-island-in-crater-lake-national-park-28557675/",
+  "photographer": "Nicole Seidl",
+  "alt": "Wizard Island rising from the deep blue water of Crater Lake beneath the caldera walls and low clouds"
+ },
+ "dest-redwood": {
+  "file": "dest-redwood.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/misty-redwood-forest-in-serene-morning-light-31027253/",
+  "photographer": null,
+  "alt": "Towering coast redwood trunks disappearing into morning fog in an old-growth forest"
+ },
+ "dest-north-cascades": {
+  "file": "dest-north-cascades.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/view-of-diablo-lake-reservoir-in-the-north-cascade-mountains-washington-usa-16743302/",
+  "photographer": "Andrew DeGarde",
+  "alt": "Turquoise Diablo Lake below steep forested slopes and a snow-streaked peak in the North Cascades"
+ },
+ "dest-buffalo-national-river": {
+  "file": "dest-buffalo-national-river.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/autumn-forest-around-river-19226807/",
+  "photographer": null,
+  "alt": "A river bending through hills of autumn forest, seen from a rocky bluff top"
+ },
+ "dest-cuyahoga-valley": {
+  "file": "dest-cuyahoga-valley.jpg",
+  "source": "Pexels",
+  "page": "https://www.pexels.com/photo/waterfall-in-the-middle-of-a-forest-5828126/",
+  "photographer": null,
+  "alt": "A rocky woodland stream cascading through an autumn forest"
+ }
+}

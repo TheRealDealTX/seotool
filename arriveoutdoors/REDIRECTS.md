@@ -42,6 +42,16 @@ Generated from `siteconfig.py` by `scripts/redirect_report.py`. The `.htaccess` 
 - `/cold-weather-camping/` — restores a previously deleted URL
 - `/car-camping-essentials/` — restores a previously deleted URL
 - `/rent-camping-gear/`
+- `/joshua-tree-camping/`
+- `/olympic-national-park-camping/`
+- `/zion-hiking-trails/`
+- `/acadia-national-park-hiking-trails/`
+- `/hiking-colorado-rockies/`
+- `/best-hikes-smoky-mountains/`
+- `/new-hampshire-hiking/`
+- `/beach-camping/`
+- `/truck-camping/`
+- `/cabin-camping/`
 
 ## All other redirects (301)
 

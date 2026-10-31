@@ -1,4 +1,16 @@
 {
+ "art-acadia-national-park-hiking-trails": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Waves breaking on pink granite ledges below spruce forest on the rocky coast of Acadia National Park in autumn",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/waves-crashing-on-rocky-shore-near-green-trees-10053124/",
+  "source": "Pexels"
+ },
  "art-backpacking-hygiene": {
   "widths": [
    640,
@@ -9,6 +21,18 @@
   "alt": "Close-up of a person crouched by a clear stream rinsing their hands, water dripping from their fingers",
   "photographer": null,
   "page": "https://www.pexels.com/photo/person-washing-hands-in-the-river-8729090/",
+  "source": "Pexels"
+ },
+ "art-beach-camping": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "An orange backpacking tent pitched on a sandy beach with waves washing up the shore beyond it",
+  "photographer": "Sevra Karaku\u015f",
+  "page": "https://www.pexels.com/photo/a-tent-on-the-shore-13216744/",
   "source": "Pexels"
  },
  "art-best-camera-for-backpacking": {
@@ -33,6 +57,18 @@
   "alt": "Camping gear laid out on a sleeping bag: stainless steel bottle, enamel mug, field guide books and a film camera",
   "photographer": null,
   "page": "https://www.pexels.com/photo/thermos-books-and-photo-camera-on-camp-tent-6271651/",
+  "source": "Pexels"
+ },
+ "art-best-hikes-smoky-mountains": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.778,
+  "alt": "Layered forested ridges of the Smoky Mountains lit by low golden sunlight under a cloudy evening sky",
+  "photographer": "Mark Stebnicki",
+  "page": "https://www.pexels.com/photo/beautiful-smoky-mountains-scenic-view-at-sunset-28969547/",
   "source": "Pexels"
  },
  "art-best-hiking-black-friday-deals": {
@@ -69,6 +105,18 @@
   "alt": "Cyclist with an orange backpack and helmet standing beside a mountain bike on a gravel road overlooking jagged snow-capped peaks",
   "photographer": null,
   "page": "https://www.pexels.com/photo/man-on-bike-trip-in-mountains-28005837/",
+  "source": "Pexels"
+ },
+ "art-cabin-camping": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "A small log camping cabin with a screened porch among tall trees in a sunlit forest",
+  "photographer": "Dan Hadley",
+  "page": "https://www.pexels.com/photo/brown-wooden-house-in-the-woods-5644485/",
   "source": "Pexels"
  },
  "art-camping-101": {
@@ -179,6 +227,18 @@
   "page": "https://www.pexels.com/photo/woman-doing-fishing-1165125/",
   "source": "Pexels"
  },
+ "art-hiking-colorado-rockies": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "The Maroon Bells and neighboring red peaks above a calm alpine lake with golden aspens on the slopes in autumn, Colorado",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/stunning-autumn-view-of-maroon-bells-colorado-28891273/",
+  "source": "Pexels"
+ },
  "art-honda-crv-camper": {
   "widths": [
    640,
@@ -239,6 +299,42 @@
   "page": "https://www.pexels.com/photo/burning-log-and-twigs-on-the-ground-13363510/",
   "source": "Pexels"
  },
+ "art-joshua-tree-camping": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.333,
+  "alt": "Joshua trees in front of a tall granite boulder pile under a clear blue sky in Joshua Tree National Park",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/trees-on-a-desert-and-rock-formation-9171033/",
+  "source": "Pexels"
+ },
+ "art-new-hampshire-hiking": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Low clouds drifting over a hillside of orange and yellow autumn foliage above a green farm field",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/foggy-forest-in-mountainous-area-5876801/",
+  "source": "Pexels"
+ },
+ "art-olympic-national-park-camping": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "A mountain road winding through dense evergreen forest toward the snow-flecked Olympic Mountains under broken clouds",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/a-countryside-road-surrounded-by-pine-trees-7042875/",
+  "source": "Pexels"
+ },
  "art-rent-camping-gear": {
   "widths": [
    640,
@@ -274,6 +370,18 @@
   "page": "https://www.pexels.com/photo/person-scooping-water-using-green-cup-66090/",
   "source": "Pexels"
  },
+ "art-truck-camping": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.498,
+  "alt": "A pickup truck and a dome tent at a sandy campsite at dusk, with campers around a small campfire and a dark wooded hillside behind",
+  "photographer": "Dziana Hasanbekava",
+  "page": "https://www.pexels.com/photo/unrecognizable-people-on-beach-with-camping-tent-5480736/",
+  "source": "Pexels"
+ },
  "art-what-to-do-if-you-get-lost-in-the-woods": {
   "widths": [
    640,
@@ -284,6 +392,18 @@
   "alt": "Lone hiker with a backpack walking away down a trail through dense, dark green forest",
   "photographer": null,
   "page": "https://www.pexels.com/photo/back-view-of-person-walking-alone-in-the-forest-12421348/",
+  "source": "Pexels"
+ },
+ "art-zion-hiking-trails": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.541,
+  "alt": "View from high above Zion Canyon looking down on the Virgin River and scenic drive between red and white sandstone cliffs",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/view-of-the-cliffs-and-gorge-in-the-zion-national-park-in-utah-usa-14213392/",
   "source": "Pexels"
  },
  "campfire": {
@@ -334,6 +454,18 @@
   "page": "https://www.pexels.com/photo/grand-canyon-371572/",
   "source": "Pexels"
  },
+ "dest-badlands": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Eroded, striped buttes and ridges of the Badlands Wall stretching toward the prairie horizon in Badlands National Park",
+  "photographer": "Aaron J Hill",
+  "page": "https://www.pexels.com/photo/birds-eye-view-of-badlands-national-park-in-usa-17240589/",
+  "source": "Pexels"
+ },
  "dest-big-bend": {
   "widths": [
    640,
@@ -358,6 +490,18 @@
   "page": "https://www.pexels.com/photo/aerial-view-of-the-bryce-canyon-national-park-in-utah-usa-12683806/",
   "source": "Pexels"
  },
+ "dest-buffalo-national-river": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "A river bending through hills of autumn forest, seen from a rocky bluff top",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/autumn-forest-around-river-19226807/",
+  "source": "Pexels"
+ },
  "dest-cloud-peak-wilderness": {
   "widths": [
    640,
@@ -370,6 +514,30 @@
   "page": "https://www.pexels.com/photo/dramatic-peaks-in-the-wind-river-range-wyoming-33775518/",
   "source": "Pexels"
  },
+ "dest-crater-lake": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Wizard Island rising from the deep blue water of Crater Lake beneath the caldera walls and low clouds",
+  "photographer": "Nicole Seidl",
+  "page": "https://www.pexels.com/photo/serene-view-of-wizard-island-in-crater-lake-national-park-28557675/",
+  "source": "Pexels"
+ },
+ "dest-cuyahoga-valley": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "A rocky woodland stream cascading through an autumn forest",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/waterfall-in-the-middle-of-a-forest-5828126/",
+  "source": "Pexels"
+ },
  "dest-death-valley": {
   "widths": [
    640,
@@ -380,6 +548,18 @@
   "alt": "Rippled, eroded badlands at Zabriskie Point with rugged mountains behind, Death Valley National Park",
   "photographer": null,
   "page": "https://www.pexels.com/photo/landscape-of-the-death-valley-national-park-on-the-border-of-nevada-and-california-united-states-7895473/",
+  "source": "Pexels"
+ },
+ "dest-everglades": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Golden marsh grasses and still water stretching to a flat horizon under a pastel sunset sky in the Florida Everglades",
+  "photographer": "Dudubangbang Travel",
+  "page": "https://www.pexels.com/photo/tranquil-sunset-over-florida-everglades-marsh-28641715/",
   "source": "Pexels"
  },
  "dest-glacier": {
@@ -454,6 +634,18 @@
   "page": "https://www.pexels.com/photo/hidden-valley-area-joshua-tree-national-park-27808630/",
   "source": "Pexels"
  },
+ "dest-mammoth-cave": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "A large limestone cave chamber with a ceiling of hanging formations, lit by two small lights",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/mysterious-cave-interior-with-stalactites-31651850/",
+  "source": "Pexels"
+ },
  "dest-mount-rainier": {
   "widths": [
    640,
@@ -466,6 +658,30 @@
   "page": "https://www.pexels.com/photo/volcano-cone-of-mount-rainier-18816012/",
   "source": "Pexels"
  },
+ "dest-new-river-gorge": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.779,
+  "alt": "Aerial view of a river winding through a deep, densely forested gorge in the Appalachian hills",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/mountainous-valley-with-lush-green-vegetation-and-river-4595648/",
+  "source": "Pexels"
+ },
+ "dest-north-cascades": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Turquoise Diablo Lake below steep forested slopes and a snow-streaked peak in the North Cascades",
+  "photographer": "Andrew DeGarde",
+  "page": "https://www.pexels.com/photo/view-of-diablo-lake-reservoir-in-the-north-cascade-mountains-washington-usa-16743302/",
+  "source": "Pexels"
+ },
  "dest-olympic": {
   "widths": [
    640,
@@ -476,6 +692,18 @@
   "alt": "A hiker on a trail through moss-draped trees and ferns in the Hoh Rainforest, Olympic National Park",
   "photographer": "Alex Moliski",
   "page": "https://www.pexels.com/photo/tranquil-hiker-in-hoh-rainforest-washington-28985759/",
+  "source": "Pexels"
+ },
+ "dest-redwood": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Towering coast redwood trunks disappearing into morning fog in an old-growth forest",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/misty-redwood-forest-in-serene-morning-light-31027253/",
   "source": "Pexels"
  },
  "dest-rocky-mountain": {
@@ -512,6 +740,30 @@
   "alt": "Rolling Blue Ridge Mountains fading into the distance beyond evergreen trees and a grassy overlook in early spring",
   "photographer": null,
   "page": "https://www.pexels.com/photo/scenic-blue-ridge-mountains-landscape-in-spring-36613605/",
+  "source": "Pexels"
+ },
+ "dest-white-mountains": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.5,
+  "alt": "Low fog drifting over a hillside of orange and gold fall foliage above a green meadow in the New England mountains",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/foggy-forest-in-mountainous-area-5876801/",
+  "source": "Pexels"
+ },
+ "dest-white-sands": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "ratio": 1.494,
+  "alt": "Rolling white gypsum dunes with scattered plants in soft evening light at White Sands National Park",
+  "photographer": null,
+  "page": "https://www.pexels.com/photo/serene-twilight-at-white-sands-national-park-34472580/",
   "source": "Pexels"
  },
  "dest-yellowstone": {

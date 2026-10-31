@@ -235,6 +235,8 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 
 def hero(title, lead, eyebrow=None, small=True, extra="", photo=None, fx_modes=None, full=False, split=False, below="var(--bg)", crumbs=None):
     has = photo and photo in PHOTOS
+    if not has and not fx_modes:
+        fx_modes = "stars"
     bg = f'<div class="bg" data-parallax="0.3">{picture(photo, eager=True, alt="")}</div>' if has else '<div class="bg"></div>'
     canvas = f'<canvas class="fx" data-fx="{fx_modes}" aria-hidden="true"></canvas>' if fx_modes else ""
     cls = "hero" + (" full" if full else " small" if small else "") + ("" if has else " no-photo")

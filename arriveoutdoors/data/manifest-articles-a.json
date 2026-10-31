@@ -1,0 +1,37 @@
+{
+  "art-joshua-tree-camping": {
+    "file": "art-joshua-tree-camping.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/trees-on-a-desert-and-rock-formation-9171033/",
+    "photographer": null,
+    "alt": "Joshua trees in front of a tall granite boulder pile under a clear blue sky in Joshua Tree National Park"
+  },
+  "art-olympic-national-park-camping": {
+    "file": "art-olympic-national-park-camping.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/a-countryside-road-surrounded-by-pine-trees-7042875/",
+    "photographer": null,
+    "alt": "A mountain road winding through dense evergreen forest toward the snow-flecked Olympic Mountains under broken clouds"
+  },
+  "art-zion-hiking-trails": {
+    "file": "art-zion-hiking-trails.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/view-of-the-cliffs-and-gorge-in-the-zion-national-park-in-utah-usa-14213392/",
+    "photographer": null,
+    "alt": "View from high above Zion Canyon looking down on the Virgin River and scenic drive between red and white sandstone cliffs"
+  },
+  "art-acadia-national-park-hiking-trails": {
+    "file": "art-acadia-national-park-hiking-trails.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/waves-crashing-on-rocky-shore-near-green-trees-10053124/",
+    "photographer": null,
+    "alt": "Waves breaking on pink granite ledges below spruce forest on the rocky coast of Acadia National Park in autumn"
+  },
+  "art-hiking-colorado-rockies": {
+    "file": "art-hiking-colorado-rockies.jpg",
+    "source": "Pexels",
+    "page": "https://www.pexels.com/photo/stunning-autumn-view-of-maroon-bells-colorado-28891273/",
+    "photographer": null,
+    "alt": "The Maroon Bells and neighboring red peaks above a calm alpine lake with golden aspens on the slopes in autumn, Colorado"
+  }
+}
