@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Yellowstone: Month-by-Month Weather & Camping",
+  "description": "When to visit Yellowstone: road opening and closing seasons, wildlife timing, summer crowds, winter oversnow travel, campgrounds, bear safety and best hikes.",
+  "intro": "<p>Yellowstone National Park, mostly in northwest Wyoming, sits on a high volcanic plateau with more geysers and hot springs than anywhere else on Earth, plus wide valleys where bison, elk, wolves and bears are easy to see.</p><p>The park is high and cold, so timing determines access. Most park roads are closed to regular vehicles from early November into spring, snow can fall in any month, and summer brings very heavy crowds at geyser basins. Picking the right month decides whether you drive the Grand Loop, ride a snowcoach, or wait for roads to open.</p>",
+  "best_time": "Late May through June and September are the best times to visit: most roads are open, wildlife is active and visible, and crowds are lighter than July and August. September adds the elk rut and crisp, often clear weather.",
+  "best_for": {
+    "hiking": "July to September",
+    "camping": "June to September",
+    "fewer crowds": "Late April to May and late September to October",
+    "photography": "May to June for baby animals; September for the elk rut; winter for steaming geyser basins"
+  },
+  "seasons": {
+    "spring": "<p>Roads open to cars in stages, typically from mid-April through late May, as plows clear snow; some higher roads open last. Spring is the best season for wildlife watching: bison calves, bears emerging from dens and wolves in the Lamar Valley.</p><p>Expect snow, cold nights and muddy or snow-covered trails, especially at higher elevations, well into June. Many facilities open gradually through the season.</p>",
+    "summer": "<p>Summer is Yellowstone's peak season, with all roads and facilities open, the most hiking access and the heaviest crowds. Parking at Old Faithful, Grand Prismatic Spring and the Grand Canyon of the Yellowstone fills by midday, and wildlife jams slow traffic.</p><p>Afternoon thunderstorms are common, nights are cool even in July, and snowmelt keeps some high trails and backcountry fords difficult into early summer.</p>",
+    "fall": "<p>Fall is excellent: crowds drop after Labor Day, elk bugle during the rut in September and October, and the air is crisp and often clear. Snowstorms can briefly close roads at any point, and weather turns quickly.</p><p>Many facilities close in late September and October, and most park roads close to regular vehicles in early November to prepare for oversnow travel.</p>",
+    "winter": "<p>In winter, most park roads are closed to cars. The exception is the northern road from the North Entrance at Gardiner through Mammoth Hot Springs and the Lamar Valley to the Northeast Entrance and Cooke City, which stays open to wheeled vehicles weather permitting. The rest of the park is reached by commercially guided snowcoach or snowmobile tours.</p><p>Winter is stunning and quiet, with steaming geyser basins and wolves visible against snow in the Lamar Valley, but it is seriously cold. Mammoth Hot Springs Campground is the only campground that typically stays open.</p>"
+  },
+  "highlights": [
+    "Old Faithful and Upper Geyser Basin",
+    "Grand Prismatic Spring",
+    "Grand Canyon of the Yellowstone",
+    "Lamar Valley wildlife",
+    "Mammoth Hot Springs",
+    "Yellowstone Lake"
+  ],
+  "hikes": [
+    {
+      "name": "Fairy Falls and Grand Prismatic Overlook",
+      "level": "Easy",
+      "note": "Mostly flat trail to an overlook of Grand Prismatic Spring and a tall waterfall; best June through September."
+    },
+    {
+      "name": "Observation Point at Old Faithful",
+      "level": "Easy",
+      "note": "Short climb above Upper Geyser Basin for a view of Old Faithful erupting away from the boardwalk crowds."
+    },
+    {
+      "name": "South Rim Trail, Grand Canyon of the Yellowstone",
+      "level": "Easy",
+      "note": "Rim trail past Artist Point views of the Lower Falls; open once the canyon roads clear in spring."
+    },
+    {
+      "name": "Mount Washburn",
+      "level": "Moderate",
+      "note": "Steady climb to a fire lookout with views across the park; often snowy until July, and storms build in the afternoon."
+    },
+    {
+      "name": "Lone Star Geyser",
+      "level": "Easy",
+      "note": "Quiet walk along an old service road to a backcountry geyser near Old Faithful."
+    },
+    {
+      "name": "Avalanche Peak",
+      "level": "Strenuous",
+      "note": "Steep climb from the East Entrance road to alpine views; best mid-summer to early fall, and grizzly country."
+    }
+  ],
+  "camping": "<p>Yellowstone has roughly a dozen campgrounds. The largest, including Madison, Canyon, Grant Village, Bridge Bay and Fishing Bridge RV Park, are run by the park's lodging concessioner and booked through its own reservation system; most smaller campgrounds book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. Check nps.gov/yell for which system each campground uses. All fill quickly in summer, and most are open only late spring through early fall.</p><p>The surrounding Custer Gallatin, Shoshone and Caribou-Targhee national forests offer additional campgrounds and dispersed camping outside the park. Yellowstone is grizzly and black bear country: store all food and scented items in a hard-sided vehicle or bear box, never in a tent, and carry bear spray on hikes.</p>",
+  "know_before": [
+    "Stay on boardwalks in thermal areas; the ground is thin and water can cause severe or fatal burns.",
+    "Keep at least 100 yards from bears and wolves and 25 yards from bison, elk and other wildlife; bison injure visitors every year.",
+    "Carry bear spray and know how to use it; hike in groups and make noise in blind spots.",
+    "Most park roads close to cars from early November until spring; check nps.gov/yell for current road status.",
+    "The park sits at about 7,000 to 8,000 feet and higher; nights are cold in every month and snow is possible in summer.",
+    "Cell service is limited to developed areas; gas and food are available in the park in summer but spread far apart."
+  ],
+  "official_url": "https://www.nps.gov/yell/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Yellowstone?",
+      "a": "September is the best single month for many visitors: roads are open, summer crowds have faded and the elk rut is underway. June is the best choice for baby animals and active wildlife."
+    },
+    {
+      "q": "When is Yellowstone most crowded?",
+      "a": "July and August are the busiest months, with full parking lots at major geyser basins and traffic jams at wildlife sightings. Arrive at popular sites early in the morning or in the evening."
+    },
+    {
+      "q": "Can you camp in Yellowstone in winter?",
+      "a": "Only very limited camping is possible. Mammoth Hot Springs Campground typically stays open year-round and is reachable by car on the northern road. Expect subzero nights and bring serious cold-weather gear."
+    },
+    {
+      "q": "How many days do you need in Yellowstone?",
+      "a": "Plan at least three days to drive the Grand Loop and see the main geyser basins, canyon and Lamar Valley. Four or five days allows hiking, wildlife watching at dawn and dusk, and a slower pace."
+    }
+  ],
+  "nearby": [
+    "grand-teton",
+    "cloud-peak-wilderness"
+  ],
+  "related_articles": [
+    "cold-weather-camping",
+    "renting-camp-gear-for-national-park-trips"
+  ]
+}

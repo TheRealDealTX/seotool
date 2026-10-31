@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Yosemite: Month-by-Month Weather & Camping",
+  "description": "When to visit Yosemite: waterfall season, Tioga Road and Glacier Point Road openings, crowds by month, winter camping, and the hikes worth timing a trip around.",
+  "intro": "<p>Yosemite National Park covers granite high country in California's Sierra Nevada, but most visitors spend their time in Yosemite Valley, a glacier-carved canyon about 4,000 feet above sea level lined by El Capitan, Half Dome and some of the tallest waterfalls in North America.</p><p>Timing changes almost everything here. Waterfalls depend on snowmelt and can shrink to a trickle by late summer, the high-country roads close for months under snow, and summer crowds in the valley are heavy enough that the park has used peak-season reservation systems in recent years.</p>",
+  "best_time": "Late May through June is the best overall window: waterfalls are still running hard and Tioga Road usually opens in this period. September is the best balance of open roads, settled weather and thinner crowds, though the falls are low by then.",
+  "best_for": {
+    "hiking": "June to early October (high country from July)",
+    "camping": "May to September",
+    "fewer crowds": "November to March, plus weekdays in September",
+    "photography": "April to June for waterfalls; February for Horsetail Fall; October for fall color in the valley"
+  },
+  "seasons": {
+    "spring": "<p>Spring is waterfall season. Snowmelt drives Yosemite Falls, Vernal Fall and Bridalveil Fall toward their peak, usually in May and early June, and the Mist Trail lives up to its name. Valley meadows green up while the high country stays buried in snow.</p><p>Tioga Road and Glacier Point Road are normally still closed in early spring; Tioga typically opens sometime between late May and June depending on the snowpack and plowing. Expect variable weather, from warm afternoons to late storms, and wet, slick granite on spray-soaked trails.</p>",
+    "summer": "<p>Summer brings full access: Tioga Road crosses the park to Tuolumne Meadows and Tioga Pass, Glacier Point Road is open, and the Half Dome cables are typically up. Valley afternoons are hot, the high country is mild, and afternoon thunderstorms are common over the peaks.</p><p>This is the most crowded season by far. Parking fills early in the valley, campgrounds are booked well in advance, and wildfire smoke can affect air quality and views in some years. By August many smaller waterfalls have dried up.</p>",
+    "fall": "<p>Fall is settled and quieter once school is back in session. September and early October usually bring dry, stable weather, good conditions for high-country hiking off Tioga Road, and easier campsites than midsummer. Waterfalls are at their lowest, and Yosemite Falls may stop flowing entirely.</p><p>Black oaks and bigleaf maples color the valley in October. Tioga Road and Glacier Point Road usually close with the first significant snowstorm, often in November, so check road status before planning a crossing.</p>",
+    "winter": "<p>Winter is quiet and often beautiful, with snow on the valley rim and clear days between storms. Tioga Road is closed, Glacier Point Road is plowed only to the Badger Pass ski area, and the high country is reachable only on skis or snowshoes. Chains may be required on park roads during storms, so carry them.</p><p>Mid-to-late February draws large crowds to the valley for the Horsetail Fall \"firefall,\" when the low sun can light the fall orange at sunset if it is flowing and the sky is clear; the park has used special traffic and parking rules for it in recent years. Valley trails can be icy, and upper sections of trails like Upper Yosemite Fall become dangerous.</p>"
+  },
+  "highlights": [
+    "Yosemite Valley and El Capitan",
+    "Half Dome",
+    "Yosemite Falls",
+    "Glacier Point",
+    "Tuolumne Meadows and Tioga Road",
+    "Mariposa Grove of Giant Sequoias"
+  ],
+  "hikes": [
+    {
+      "name": "Mist Trail to Vernal Fall",
+      "level": "Moderate",
+      "note": "Best in May and June when the fall is roaring; expect to get soaked on the granite steps."
+    },
+    {
+      "name": "Upper Yosemite Fall Trail",
+      "level": "Strenuous",
+      "note": "Steep, relentless climb to the top of the falls; best in spring, and hazardous with ice in winter."
+    },
+    {
+      "name": "Half Dome via the cables",
+      "level": "Strenuous",
+      "note": "A very long day ending on steel cables; a permit is required when the cables are up, awarded by lottery."
+    },
+    {
+      "name": "Mirror Lake",
+      "level": "Easy",
+      "note": "Flat valley walk to a seasonal lake that is fullest in spring and early summer."
+    },
+    {
+      "name": "Sentinel Dome",
+      "level": "Easy",
+      "note": "Short climb off Glacier Point Road for a 360-degree view; only accessible when the road is open."
+    },
+    {
+      "name": "Cathedral Lakes",
+      "level": "Moderate",
+      "note": "Classic high-country hike off Tioga Road, usually snow-free from July into October."
+    }
+  ],
+  "camping": "<p>Yosemite's main campgrounds are in the valley (Upper Pines, Lower Pines and North Pines) and along the high-country corridor, including Tuolumne Meadows, Crane Flat, White Wolf and Wawona. Most book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> and sell out quickly for summer; Camp 4, the walk-in climbers' campground, has its own reservation process. A few campgrounds, including Upper Pines, stay open through winter.</p><p>Outside the park, the Stanislaus, Sierra and Inyo national forests have campgrounds and areas where dispersed camping is allowed, subject to fire restrictions. Yosemite has an active black bear population: all food, trash and scented items must go in the metal food lockers at campsites and trailheads, never in your car, and backpackers must use approved bear canisters.</p>",
+  "know_before": [
+    "Yosemite has used peak-season entry reservation systems in recent years; check nps.gov/yose for current rules before you go.",
+    "Tioga Road and Glacier Point Road close for winter; opening dates vary year to year with snowpack.",
+    "Black bears break into cars for food: use food lockers every time, including for coolers and toiletries.",
+    "Tioga Pass and the high country sit near or above 9,000 feet, so expect thinner air and cold nights even in summer.",
+    "Cell coverage is limited to parts of the valley and a few developed areas; download maps before arriving.",
+    "Swift rivers and wet granite near waterfalls cause serious accidents every year; stay behind railings and out of the water in spring."
+  ],
+  "official_url": "https://www.nps.gov/yose/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Yosemite?",
+      "a": "June is the best single month for most visitors: waterfalls are still strong and Tioga Road usually opens. September is the best choice if you prefer fewer crowds and stable weather and do not mind low waterfalls."
+    },
+    {
+      "q": "When is Yosemite most crowded?",
+      "a": "July and August, plus summer holiday weekends, are the busiest. Valley parking fills early in the day and campgrounds sell out. Mid-February also gets busy around the Horsetail Fall firefall."
+    },
+    {
+      "q": "Can you camp in Yosemite in winter?",
+      "a": "Yes. A few campgrounds, including Upper Pines in the valley, stay open year-round. Expect freezing nights, possible snow and chain requirements on park roads, and keep using bear lockers since bears are active in winter too."
+    },
+    {
+      "q": "How many days do you need in Yosemite?",
+      "a": "Two to three days covers the valley, a waterfall hike and Glacier Point. Add one or two days in summer and fall to explore Tuolumne Meadows and the high country along Tioga Road."
+    }
+  ],
+  "nearby": [
+    "sequoia",
+    "death-valley"
+  ],
+  "related_articles": [
+    "can-you-hike-el-capitan",
+    "renting-camp-gear-for-national-park-trips"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Grand Canyon: Month-by-Month Weather & Camping",
+  "description": "When to visit the Grand Canyon: South Rim vs North Rim seasons, inner-canyon heat, summer monsoon storms, winter snow on the rim, camping and the best hikes.",
+  "intro": "<p>Grand Canyon National Park protects a mile-deep gorge cut by the Colorado River in northern Arizona. Most visitors see it from the South Rim, open year-round around Grand Canyon Village; the higher, more remote North Rim is open only part of the year.</p><p>The canyon spans huge elevation differences, so conditions vary sharply by location as well as season. The rim can be snowy while the inner canyon is mild, and in summer the canyon floor is dangerously hot while the rim stays pleasant. When and where you go determines which trails are realistic.</p>",
+  "best_time": "Late April through May and mid-September through October are the best times to visit: rim weather is comfortable, inner-canyon hiking is less dangerous than in summer, and the North Rim is usually open for at least part of both windows.",
+  "best_for": {
+    "hiking": "April to May and late September to October",
+    "camping": "May to October on the rim",
+    "fewer crowds": "November to February on the South Rim",
+    "photography": "July to August for monsoon storm light; winter for snow on the rim"
+  },
+  "seasons": {
+    "spring": "<p>Spring is one of the best seasons for hiking below the rim, before the inner canyon turns hot. The South Rim can still see snow and freezing nights into April, and wind is common. Crowds pick up around spring break.</p><p>The North Rim typically opens in mid-May. Its facilities have changed: a 2025 wildfire destroyed the historic Grand Canyon Lodge and other North Rim buildings, so check nps.gov/grca for current North Rim services and access before planning a visit there.</p>",
+    "summer": "<p>Summer is the busiest season. Rim days are warm and comfortable, but the inner canyon is extremely hot, and heat illness and rescues peak. The park strongly advises against hiking from the rim to the river and back in a single day. If you hike below the rim, start before dawn and be out of the canyon before midday heat.</p><p>Monsoon thunderstorms usually arrive in July and August, bringing lightning on exposed overlooks, flash floods in side canyons and dramatic sunset light.</p>",
+    "fall": "<p>Fall brings settled weather and smaller crowds after Labor Day. Inner-canyon temperatures drop to manageable levels by October, making it a prime month for backpacking with a permit. Aspens turn gold on the North Rim in late September and early October.</p><p>The North Rim typically closes to vehicles for the season in mid-October to November, depending on the year and conditions; check before you go.</p>",
+    "winter": "<p>Winter on the South Rim is cold and quiet, with snow storms that dust the canyon walls and occasionally close roads briefly. Upper sections of the Bright Angel and South Kaibab trails are often icy, and traction devices are strongly recommended.</p><p>The North Rim road closes for winter. The inner canyon is mild and lightly visited, but short days and icy upper trails make planning important.</p>"
+  },
+  "highlights": [
+    "Mather Point and the South Rim overlooks",
+    "Desert View Watchtower",
+    "Hermit Road",
+    "Bright Angel Trail",
+    "Colorado River and Phantom Ranch",
+    "North Rim's Bright Angel Point"
+  ],
+  "hikes": [
+    {
+      "name": "Rim Trail",
+      "level": "Easy",
+      "note": "Paved and dirt path along the South Rim between viewpoints; good in any season, icy in places in winter."
+    },
+    {
+      "name": "South Kaibab Trail to Ooh Aah Point or Cedar Ridge",
+      "level": "Moderate",
+      "note": "Steep ridge-top descent with huge views and no water or shade; the climb back out is the hard part."
+    },
+    {
+      "name": "Bright Angel Trail",
+      "level": "Strenuous",
+      "note": "The park's main corridor trail, with seasonal water; turn around early in summer and save the river for an overnight with a permit."
+    },
+    {
+      "name": "North Kaibab Trail",
+      "level": "Strenuous",
+      "note": "The only maintained trail from the North Rim, usable when the North Rim is open; check current trail and water status."
+    },
+    {
+      "name": "Rim-to-river backpacking",
+      "level": "Strenuous",
+      "note": "Camping below the rim requires a backcountry permit from the park; spring and fall are the safest seasons."
+    }
+  ],
+  "camping": "<p>On the South Rim, Mather Campground in Grand Canyon Village is open year-round and books through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>, as does the seasonal Desert View Campground near the east entrance. The North Rim Campground is open only in the North Rim season; check current status after the 2025 fire. Camping below the rim, including at Bright Angel Campground near Phantom Ranch, requires a backcountry permit.</p><p>The Kaibab National Forest surrounds both rims and allows dispersed camping in many areas, including near Tusayan outside the South Entrance; follow forest rules and fire restrictions. Squirrels, ravens and deer raid unattended food, so store food securely and never feed wildlife.</p>",
+  "know_before": [
+    "The inner canyon is far hotter than the rim; going down is easy, coming up takes about twice as long.",
+    "Don't attempt rim-to-river-and-back in one day, especially in summer; the park advises against it.",
+    "The South Rim sits around 7,000 feet and the North Rim higher still, so expect cold nights and altitude effects.",
+    "Overnight hiking below the rim requires a backcountry permit; check nps.gov/grca for the current application process.",
+    "Monsoon storms bring lightning to exposed rim overlooks; move away from the edge when storms build.",
+    "North Rim services changed after the 2025 fire; confirm what is open before driving there."
+  ],
+  "official_url": "https://www.nps.gov/grca/",
+  "faq": [
+    {
+      "q": "What is the best month to visit the Grand Canyon?",
+      "a": "May and October are the best months overall. Rim weather is comfortable, inner-canyon heat is less extreme than in summer, and the North Rim is typically open."
+    },
+    {
+      "q": "When is the Grand Canyon most crowded?",
+      "a": "Summer, especially June through August, and spring break weeks are the busiest on the South Rim. Parking and lodging fill early, and shuttle lines grow long midday."
+    },
+    {
+      "q": "Can you camp at the Grand Canyon in winter?",
+      "a": "Yes. Mather Campground on the South Rim is open year-round, but nights are below freezing and snow is possible. The North Rim is closed in winter."
+    },
+    {
+      "q": "How many days do you need at the Grand Canyon?",
+      "a": "One full day covers the main South Rim viewpoints. Two or three days lets you add a below-the-rim day hike, sunrise and sunset, and Desert View. A rim-to-river trip needs at least two days with a permit."
+    }
+  ],
+  "nearby": [
+    "zion",
+    "bryce-canyon"
+  ],
+  "related_articles": [
+    "renting-camp-gear-for-national-park-trips",
+    "cool-a-tent-without-electricity"
+  ]
+}

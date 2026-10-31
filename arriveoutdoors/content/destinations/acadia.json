@@ -1,0 +1,93 @@
+{
+  "title": "Best Time to Visit Acadia: Month-by-Month Weather & Camping",
+  "description": "When to visit Acadia National Park: summer and fall foliage seasons, Park Loop Road and Cadillac access, winter closures, campgrounds and the best hikes.",
+  "intro": "<p>Acadia National Park protects much of Mount Desert Island on the coast of Maine, along with the Schoodic Peninsula and part of Isle au Haut. Granite mountains rise straight from the sea, and the park is laced with historic carriage roads, rocky shoreline and lakes, with Bar Harbor as the main gateway.</p><p>The park has a distinct season. Summer and early fall bring pleasant weather and heavy crowds, while late fall through spring sees road closures, cold and much quieter trails. Popular spots like the summit of Cadillac Mountain also require planning in peak season.</p>",
+  "best_time": "Late August through mid-October is the best time to visit Acadia: summer crowds ease after Labor Day, weather is typically settled, and fall foliage usually peaks in early to mid-October.",
+  "best_for": {
+    "hiking": "June to October",
+    "camping": "June to September",
+    "fewer crowds": "May, early June and November",
+    "photography": "Early to mid-October for foliage; sunrise from Cadillac Mountain in any open season"
+  },
+  "seasons": {
+    "spring": "<p>Spring arrives late on the Maine coast. Most of the Park Loop Road and the Cadillac Summit Road usually reopen in mid-April, and carriage roads may be closed during the spring thaw to prevent damage. Days are often cool and foggy.</p><p>Black flies emerge in late spring, and some cliff trails, including the Precipice, often close in spring and summer to protect nesting peregrine falcons.</p>",
+    "summer": "<p>Summer is peak season. Weather is generally mild, though fog is common, and the coast stays cool compared with inland areas. Crowds are heavy at Jordan Pond, Sand Beach and Thunder Hole, and parking fills early.</p><p>A vehicle reservation has been required to drive the Cadillac Summit Road during the busy season in recent years, especially for sunrise; check nps.gov/acad. The free Island Explorer shuttle typically runs during summer and fall and is a good way to avoid parking problems.</p>",
+    "fall": "<p>Fall is one of Acadia's best seasons. Foliage typically peaks in early to mid-October, the air is crisp, and trails are less crowded than midsummer, though peak-foliage weekends are very busy and cruise ships can crowd Bar Harbor.</p><p>Most of the Park Loop Road and the Cadillac Summit Road typically close to vehicles for the winter in early December, or earlier with heavy snow; services thin out after mid-October.</p>",
+    "winter": "<p>Winter is cold, windy and quiet. Most of the Park Loop Road and the Cadillac Summit Road are closed to vehicles, but carriage roads and closed park roads become routes for cross-country skiing, snowshoeing and, on designated roads, snowmobiling, depending on snow.</p><p>Trails can be icy, especially rung and ladder routes, which should be avoided in winter. Facilities are limited.</p>"
+  },
+  "highlights": [
+    "Cadillac Mountain",
+    "Park Loop Road",
+    "Jordan Pond and the Bubbles",
+    "Carriage roads",
+    "Ocean Path and Thunder Hole",
+    "Schoodic Peninsula"
+  ],
+  "hikes": [
+    {
+      "name": "Ocean Path",
+      "level": "Easy",
+      "note": "Coastal walk from Sand Beach past Thunder Hole to Otter Cliff; good in any open season."
+    },
+    {
+      "name": "Jordan Pond Path",
+      "level": "Easy",
+      "note": "Loop around a clear pond with views of the Bubbles; parts are rocky or on boardwalk."
+    },
+    {
+      "name": "Beehive Trail",
+      "level": "Strenuous",
+      "note": "Short climb on iron rungs and exposed ledges above Sand Beach; not for anyone uncomfortable with heights, and avoid when wet."
+    },
+    {
+      "name": "Gorham Mountain",
+      "level": "Moderate",
+      "note": "Open ridge hike with ocean views; a good alternative to the Beehive."
+    },
+    {
+      "name": "Cadillac North or South Ridge Trail",
+      "level": "Moderate",
+      "note": "Hike to the summit of Cadillac Mountain without a vehicle reservation."
+    },
+    {
+      "name": "Precipice Trail",
+      "level": "Strenuous",
+      "note": "Iron-rung cliff climb that often closes in spring and summer for nesting peregrine falcons; check status first."
+    }
+  ],
+  "camping": "<p>Acadia's campgrounds are Blackwoods and Seawall on Mount Desert Island, Schoodic Woods on the Schoodic Peninsula and the small Duck Harbor Campground on Isle au Haut. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> and fill quickly in summer and fall; all are seasonal, so check nps.gov/acad for dates.</p><p>There is no dispersed camping in the park, but private campgrounds are plentiful on and near Mount Desert Island. Store food properly to avoid attracting wildlife, and use only local or certified firewood to avoid spreading forest pests.</p>",
+  "know_before": [
+    "A vehicle reservation has been required for Cadillac Summit Road in peak season; check nps.gov/acad for current rules.",
+    "Rung and ladder trails like the Beehive and Precipice are exposed and dangerous when wet or icy.",
+    "Fog can roll in quickly on the coast; carry a map and layers.",
+    "Black flies and mosquitoes are common in late spring and early summer.",
+    "Most of Park Loop Road closes to cars in winter.",
+    "Parking is limited at popular areas in summer; the Island Explorer shuttle helps."
+  ],
+  "official_url": "https://www.nps.gov/acad/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Acadia National Park?",
+      "a": "September is the best month for most visitors: summer crowds ease, weather is usually settled and all roads are open. Early to mid-October is best for fall color."
+    },
+    {
+      "q": "When is Acadia most crowded?",
+      "a": "July, August and peak-foliage weekends in October are the busiest. Parking fills early at Jordan Pond, Sand Beach and Cadillac Mountain."
+    },
+    {
+      "q": "Can you camp in Acadia in winter?",
+      "a": "Camping options are very limited in winter, and most campgrounds are closed. Check nps.gov/acad for any winter camping availability before planning a trip."
+    },
+    {
+      "q": "How many days do you need in Acadia?",
+      "a": "Two to three days covers Park Loop Road, Cadillac Mountain, Jordan Pond and a few hikes. Add a day for the Schoodic Peninsula or a carriage road bike ride."
+    }
+  ],
+  "nearby": [
+    "shenandoah"
+  ],
+  "related_articles": [
+    "car-camping-essentials",
+    "class-3-scramble"
+  ]
+}

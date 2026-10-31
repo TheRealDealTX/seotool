@@ -1,0 +1,84 @@
+{
+  "title": "Best Time to Visit Grand Mesa: Month-by-Month Weather & Camping",
+  "description": "When to visit Grand Mesa, Colorado: summer lake season, fall aspens, winter skiing and ice fishing, camping in the national forest, storms, and the best trails.",
+  "intro": "<p>Grand Mesa, east of Grand Junction in western Colorado, is often described as one of the largest flat-topped mountains in the world. Its top sits around 10,000 feet and is dotted with more than 300 lakes and reservoirs, surrounded by spruce-fir forest and aspen.</p><p>Elevation sets the calendar. Summer is short and pleasant, fall brings golden aspens, and winter brings deep snow and a different set of activities: skiing, snowshoeing and ice fishing.</p>",
+  "best_time": "July through September is the best time to visit Grand Mesa for hiking, camping and fishing. Late September brings aspen color, while winter is best for skiing and ice fishing.",
+  "best_for": {
+    "hiking": "July to September",
+    "camping": "June to September",
+    "fewer crowds": "Weekdays in September",
+    "photography": "Late September for aspens; July for wildflowers"
+  },
+  "seasons": {
+    "spring": "<p>Spring is slow to arrive. Snow covers the mesa top into late spring, and ice-out on the lakes usually comes in late spring to early summer.</p><p>Many forest roads and campgrounds remain closed until snow melts.</p>",
+    "summer": "<p>Summer is the main season, with mild days, cool nights and lakes open for fishing and paddling. Afternoon thunderstorms are common; lightning is dangerous on exposed ridges like Crag Crest.</p><p>Mosquitoes can be thick in early summer near lakes.</p>",
+    "fall": "<p>Aspens across the mesa's flanks and along Highway 65 usually turn gold in mid to late September, the most photographed time of year here. Days are often clear and crisp, but nights drop below freezing and snow is possible by October.</p><p>Hunting seasons run in fall; wear bright colors on trails and be aware of hunters in the forest.</p>",
+    "winter": "<p>Winter brings deep snow. The Grand Mesa Scenic Byway (Highway 65) is maintained, and the mesa offers groomed Nordic ski trails, snowshoeing, snowmobiling, ice fishing and downhill skiing at Powderhorn.</p><p>Avalanche terrain exists on some slopes, and winter conditions can be severe.</p>"
+  },
+  "highlights": [
+    "Grand Mesa Scenic Byway",
+    "Crag Crest Trail",
+    "Mesa Lakes",
+    "Land's End Overlook",
+    "Island Lake",
+    "Winter Nordic trails"
+  ],
+  "hikes": [
+    {
+      "name": "Crag Crest National Recreation Trail",
+      "level": "Moderate",
+      "note": "Exposed ridge trail with views across lakes and mountains; avoid it during thunderstorms."
+    },
+    {
+      "name": "Mesa Lakes area trails",
+      "level": "Easy",
+      "note": "Short walks around a cluster of lakes near Highway 65; good for families and anglers."
+    },
+    {
+      "name": "Land's End Overlook",
+      "level": "Easy",
+      "note": "Short walk at the mesa's western edge with views over the valley; reached by a seasonal gravel road."
+    },
+    {
+      "name": "Grand Mesa Nordic trails",
+      "level": "Easy",
+      "note": "Groomed trails for skiing and snowshoeing in winter; check conditions before heading out."
+    }
+  ],
+  "camping": "<p>Grand Mesa National Forest has numerous campgrounds near the main lakes along Highway 65, including Island Lake and Ward Lake areas. Many can be reserved on <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; others are first-come, first-served. Dispersed camping is allowed in many parts of the national forest; follow posted rules and fire restrictions.</p><p>Black bears live on the mesa: store food securely and keep a clean camp.</p>",
+  "know_before": [
+    "The mesa top sits around 10,000 feet; altitude can affect visitors from low elevation.",
+    "Afternoon thunderstorms are common in summer; avoid exposed ridges.",
+    "Mosquitoes can be thick in early summer.",
+    "Winter conditions can be severe; check road and avalanche conditions.",
+    "Colorado fishing licenses are required; check Colorado Parks and Wildlife regulations.",
+    "Cell service is limited in parts of the mesa."
+  ],
+  "official_url": "https://www.fs.usda.gov/gmug",
+  "faq": [
+    {
+      "q": "What is the best month to visit Grand Mesa?",
+      "a": "August is the best month for hiking and fishing, while late September is best for aspen color."
+    },
+    {
+      "q": "When is Grand Mesa most crowded?",
+      "a": "Summer weekends and fall color weekends are the busiest, especially near popular lakes and campgrounds."
+    },
+    {
+      "q": "Can you camp on Grand Mesa in winter?",
+      "a": "Winter camping is possible in some areas, but most campgrounds are closed. Expect deep snow and cold."
+    },
+    {
+      "q": "How many days do you need on Grand Mesa?",
+      "a": "One day covers the scenic byway and a short hike. Two to three days allows fishing, camping and longer hikes."
+    }
+  ],
+  "nearby": [
+    "arches",
+    "rocky-mountain"
+  ],
+  "related_articles": [
+    "grand-mesa-fishing",
+    "cold-weather-camping"
+  ]
+}

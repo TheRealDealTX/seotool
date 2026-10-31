@@ -1,0 +1,93 @@
+{
+  "title": "Best Time to Visit Olympic: Month-by-Month Weather & Camping",
+  "description": "When to visit Olympic National Park: the dry summer season, rainy winters in the Hoh, Hurricane Ridge access, coastal tides, camping, permits and best hikes.",
+  "intro": "<p>Olympic National Park covers most of the Olympic Peninsula in western Washington and spans three very different landscapes: glacier-capped mountains, temperate rain forests like the Hoh, and a wild Pacific coastline.</p><p>Weather here is driven by the Pacific. Most of the year's rain falls from fall through spring, while summer is usually drier and milder. Snow closes the high country for much of the year, and coastal hikes depend on the tides, so timing shapes nearly every plan.</p>",
+  "best_time": "July through September is the best time to visit Olympic: it is the driest stretch of the year, Hurricane Ridge and high trails are accessible, and coastal hiking is most comfortable. Late spring and early fall are good for quieter visits if you bring rain gear.",
+  "best_for": {
+    "hiking": "July to September",
+    "camping": "June to September",
+    "fewer crowds": "October to May",
+    "photography": "July to August for wildflowers at Hurricane Ridge; winter for moody rain forest and stormy coast"
+  },
+  "seasons": {
+    "spring": "<p>Spring is wet and green. The rain forests are lush, waterfalls run high and rivers swell with rain and snowmelt. Snow remains at higher elevations, limiting access to Hurricane Ridge and high trails.</p><p>Crowds are light, and coastal beaches are good for tidepooling at low tide. Expect rain and mud, and bring waterproof layers.</p>",
+    "summer": "<p>Summer is usually the driest, mildest season and the park's busiest. Hurricane Ridge and other high-elevation areas are open, wildflowers bloom in subalpine meadows, and coastal trails are at their best. Fog is common on the coast even when inland skies are clear.</p><p>Popular areas like the Hoh Rain Forest and Sol Duc see long lines and full parking at midday. Wilderness camping on the coast and in popular areas requires permits and planning.</p>",
+    "fall": "<p>Fall brings returning rain and fewer people. Early fall can still be pleasant, and elk are active in the rain forest valleys. Salmon run in some rivers in autumn.</p><p>By October and November, storms grow frequent and rivers rise. Some campgrounds and facilities close for the season.</p>",
+    "winter": "<p>Winter is the rainy season at low elevations, with heavy snow in the mountains. Hurricane Ridge Road has been open on a limited schedule in winter, weather permitting; the day lodge there burned in 2023, so check nps.gov/olym for current access and services.</p><p>Coastal storms make for dramatic wave watching but dangerous beaches, where large logs can be tossed by surf. Rain forest trails are open but very wet.</p>"
+  },
+  "highlights": [
+    "Hoh Rain Forest",
+    "Hurricane Ridge",
+    "Rialto Beach and the wilderness coast",
+    "Lake Crescent",
+    "Sol Duc Valley",
+    "Ruby Beach"
+  ],
+  "hikes": [
+    {
+      "name": "Hall of Mosses",
+      "level": "Easy",
+      "note": "Short loop through moss-draped maples in the Hoh Rain Forest; good year-round."
+    },
+    {
+      "name": "Hoh River Trail",
+      "level": "Easy",
+      "note": "Gentle valley trail through old-growth forest; walk as far as you like, or continue into the wilderness with a permit."
+    },
+    {
+      "name": "Sol Duc Falls",
+      "level": "Easy",
+      "note": "Forest walk to a multi-channel waterfall; road access depends on season and conditions."
+    },
+    {
+      "name": "Rialto Beach to Hole-in-the-Wall",
+      "level": "Easy",
+      "note": "Beach walk to a sea-carved arch; time it with low tide and check a tide table."
+    },
+    {
+      "name": "Hurricane Hill",
+      "level": "Moderate",
+      "note": "Paved and gravel climb with mountain and strait views; best July to September."
+    },
+    {
+      "name": "Mount Storm King",
+      "level": "Strenuous",
+      "note": "Steep climb above Lake Crescent with ropes near the top; turn back at the end of the maintained trail."
+    }
+  ],
+  "camping": "<p>Olympic has more than a dozen campgrounds spread around the peninsula, including Kalaloch on the coast, Mora near Rialto Beach, Hoh in the rain forest, Sol Duc, Fairholme on Lake Crescent and Heart O' the Hills near Hurricane Ridge. Some book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> while others are first-come, first-served; check nps.gov/olym for details. Wilderness camping requires a permit, and bear canisters are required on the coast and in some other areas.</p><p>Olympic National Forest and Washington state land around the park offer additional campgrounds and dispersed camping. Black bears, raccoons and other animals are common; store food properly. Bring a tide table for any coastal camping.</p>",
+  "know_before": [
+    "Coastal hikes require a tide table; some headlands are impassable at high tide.",
+    "Rain is likely most of the year; bring real rain gear and quick-drying layers.",
+    "Wilderness camping requires a permit, and bear canisters are required in some areas; check nps.gov/olym for current rules.",
+    "Hurricane Ridge access is limited in winter and services changed after the 2023 day lodge fire.",
+    "Driving between park areas takes hours; the park has no road crossing the interior.",
+    "Cell service is unreliable in most of the park."
+  ],
+  "official_url": "https://www.nps.gov/olym/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Olympic National Park?",
+      "a": "August is the best single month: it is usually the driest, Hurricane Ridge and high trails are open, and coastal hiking is pleasant. July and early September are also very good."
+    },
+    {
+      "q": "What is the rainiest time in Olympic National Park?",
+      "a": "Late fall through winter is the rainiest season, especially in the Hoh Rain Forest and on the coast. Trails stay open, but expect steady rain and high rivers."
+    },
+    {
+      "q": "Can you camp in Olympic National Park in winter?",
+      "a": "Yes. Several lower-elevation campgrounds stay open, often with reduced services. Expect rain, mud and cold nights, and check nps.gov/olym for what is open."
+    },
+    {
+      "q": "How many days do you need in Olympic National Park?",
+      "a": "Plan at least three days to see the rain forest, coast and mountains, since they are far apart by road. Four to five days lets you explore each area without rushing."
+    }
+  ],
+  "nearby": [
+    "mount-rainier"
+  ],
+  "related_articles": [
+    "how-to-start-a-fire-with-wet-wood",
+    "backpacking-hygiene"
+  ]
+}

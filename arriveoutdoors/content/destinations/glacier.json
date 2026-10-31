@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Glacier: Month-by-Month Weather & Camping",
+  "description": "When to visit Glacier National Park: Going-to-the-Sun Road season, snow at Logan Pass, vehicle reservations, wildfire smoke, grizzly safety, camping and hikes.",
+  "intro": "<p>Glacier National Park in northwest Montana protects rugged peaks along the Continental Divide, with large glacier-carved lakes, alpine meadows and some of the best grizzly bear habitat in the lower 48. Going-to-the-Sun Road crosses the park over Logan Pass, connecting Lake McDonald on the west side with St. Mary on the east.</p><p>Glacier has a short summer season. Deep snow keeps Going-to-the-Sun Road and many trails closed well into summer, while late summer can bring wildfire smoke. Visiting in the right window determines whether you see the high country at all.</p>",
+  "best_time": "Mid-July through mid-September is the best time to visit Glacier: Going-to-the-Sun Road is usually fully open, most high trails have melted out and wildflowers bloom in July and August. Early September is the best balance of access and smaller crowds.",
+  "best_for": {
+    "hiking": "Mid-July to mid-September",
+    "camping": "July to early September",
+    "fewer crowds": "Early June and late September to October",
+    "photography": "July to August for wildflowers; late September to early October for larch color"
+  },
+  "seasons": {
+    "spring": "<p>Spring is snowy at higher elevations. Low-elevation trails near Lake McDonald and the North Fork may be open, but Going-to-the-Sun Road is closed across the Divide while crews plow it, typically opening fully between late June and mid-July. Before that, sections may be open to biking and hiking only.</p><p>Bears are emerging and active, waterfalls run high, and weather changes fast. Visitor services ramp up toward June.</p>",
+    "summer": "<p>Summer is short and busy. Going-to-the-Sun Road, Many Glacier and the high trails open up, and wildflowers bloom near Logan Pass in July and August. Expect very heavy traffic; the park has used a vehicle reservation system for Going-to-the-Sun Road and other areas in recent summers.</p><p>Snow patches linger on high trails into July. Late summer frequently brings wildfire smoke, and fire-related closures are possible. Afternoon thunderstorms are common.</p>",
+    "fall": "<p>September is often excellent: crowds drop after Labor Day, the weather can be clear and crisp, and larches and aspens turn gold later in the month. Snow returns to the high country unpredictably.</p><p>Going-to-the-Sun Road usually stays open across the pass until mid to late October, weather permitting, then closes for the season. Many facilities shut down after September.</p>",
+    "winter": "<p>Winter brings deep snow and quiet. Going-to-the-Sun Road is open only on the lower sections near Lake McDonald and St. Mary, and the rest becomes a cross-country skiing and snowshoeing route. Avalanche hazard is significant in much of the park.</p><p>Apgar and parts of the west side remain accessible, but services are minimal and the east side is windy and cold.</p>"
+  },
+  "highlights": [
+    "Going-to-the-Sun Road",
+    "Logan Pass",
+    "Many Glacier",
+    "Lake McDonald",
+    "Two Medicine",
+    "Grinnell Glacier"
+  ],
+  "hikes": [
+    {
+      "name": "Trail of the Cedars to Avalanche Lake",
+      "level": "Easy",
+      "note": "Forest walk to a lake ringed by waterfalls; open earlier in the season than high-country trails."
+    },
+    {
+      "name": "Hidden Lake Overlook",
+      "level": "Moderate",
+      "note": "Boardwalk and trail from Logan Pass through meadows; often snow-covered until July and in prime grizzly habitat."
+    },
+    {
+      "name": "Highline Trail",
+      "level": "Moderate",
+      "note": "Exposed ledge trail along the Garden Wall from Logan Pass; best mid-July to September."
+    },
+    {
+      "name": "Grinnell Glacier",
+      "level": "Strenuous",
+      "note": "Climbs from Many Glacier past turquoise lakes to a glacier viewpoint; upper section opens once snow clears in summer."
+    },
+    {
+      "name": "Iceberg Lake",
+      "level": "Moderate",
+      "note": "Many Glacier hike to a lake that can hold floating ice into summer; frequent bear activity."
+    }
+  ],
+  "camping": "<p>Glacier's main campgrounds include Apgar, Fish Creek, Sprague Creek and Avalanche on the west side, and Many Glacier, St. Mary, Rising Sun and Two Medicine on the east side, plus primitive campgrounds in the North Fork area. Many sites book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; check nps.gov/glac for which campgrounds are reservable or first-come and for seasonal opening dates. Backcountry camping requires a wilderness permit.</p><p>The Flathead National Forest to the west and south offers more campgrounds and dispersed camping. Glacier is grizzly country: all food, coolers and scented items must be stored in a hard-sided vehicle or food locker, and backcountry campers use food hanging poles or lockers at designated sites.</p>",
+  "know_before": [
+    "The park has used vehicle reservations for Going-to-the-Sun Road and other areas in peak season; check nps.gov/glac for current rules.",
+    "Carry bear spray, make noise on the trail and hike in groups; grizzlies and black bears are common.",
+    "Going-to-the-Sun Road has vehicle length and width restrictions on its alpine section.",
+    "Snow and ice linger on high trails well into July; steep snowfields are dangerous without the right skills.",
+    "Wildfire smoke and closures are common in late summer; have a backup plan.",
+    "Cell service is limited or absent across most of the park."
+  ],
+  "official_url": "https://www.nps.gov/glac/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Glacier National Park?",
+      "a": "Late July through August is the most reliable time for full access to Going-to-the-Sun Road and high trails. Early September is often the best balance of access, weather and smaller crowds."
+    },
+    {
+      "q": "When is Glacier National Park most crowded?",
+      "a": "July and August are the busiest months, with heavy traffic on Going-to-the-Sun Road and full trailhead parking at Logan Pass and Many Glacier early in the morning."
+    },
+    {
+      "q": "Can you camp in Glacier National Park in winter?",
+      "a": "Yes, but options are limited. Primitive winter camping is typically allowed at Apgar and St. Mary, and backcountry camping requires a permit. Expect deep snow and avalanche hazard."
+    },
+    {
+      "q": "How many days do you need in Glacier National Park?",
+      "a": "Plan at least three days to drive Going-to-the-Sun Road, hike near Logan Pass and visit Many Glacier. Five days allows time for Two Medicine and longer hikes."
+    }
+  ],
+  "nearby": [
+    "yellowstone",
+    "grand-teton"
+  ],
+  "related_articles": [
+    "what-to-do-if-you-get-lost-in-the-woods",
+    "renting-camp-gear-for-national-park-trips"
+  ]
+}

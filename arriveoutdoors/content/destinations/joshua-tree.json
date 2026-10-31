@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Joshua Tree: Month-by-Month Weather & Camping",
+  "description": "When to visit Joshua Tree: the cool-season sweet spot, spring wildflowers, dangerous summer heat, cold winter nights, campground tips and the best desert hikes.",
+  "intro": "<p>Joshua Tree National Park sits where two California deserts meet: the higher, cooler Mojave, home to the Joshua trees and the jumbled granite boulders around Hidden Valley, and the lower, hotter Colorado Desert in the park's southern half.</p><p>Season matters more here than almost anywhere. Summer heat makes midday hiking dangerous, while the cool months bring ideal hiking and climbing weather, cold nights and full campgrounds. Most of the park has no water, shade or cell service, so planning around temperature is the whole game.</p>",
+  "best_time": "October through April is the best time to visit, with March and April the standout months for mild days and, after a wet winter, wildflowers. Avoid June through September unless you plan to be out only at dawn and after dark.",
+  "best_for": {
+    "hiking": "October to April",
+    "camping": "October to November and March to April",
+    "fewer crowds": "Weekdays in December and January, and early summer mornings",
+    "photography": "March to April for blooms; any clear winter night for stars"
+  },
+  "seasons": {
+    "spring": "<p>Spring is peak season. Days are pleasant for hiking and climbing, and in years with good winter rain, wildflowers and blooming cactus appear first in the lower Colorado Desert and later at higher elevations. Weekends, spring break and holiday periods bring heavy traffic at the west entrance and full campgrounds.</p><p>Wind is common in spring, and by May the heat builds quickly. Start hikes early and carry more water than you think you need.</p>",
+    "summer": "<p>Summer is dangerously hot, especially in the lower Colorado Desert and on exposed rock. Hiking in the middle of the day is a real risk for heat exhaustion and heat stroke; rangers recommend finishing activity by late morning. Nights stay warm.</p><p>Crowds thin out, and the night skies are excellent. Occasional monsoon thunderstorms in mid to late summer can cause flash flooding in washes and on dirt roads.</p>",
+    "fall": "<p>Fall is the second prime season. Heat fades through October, climbing season picks back up, and campgrounds fill again on weekends. November usually brings comfortable days and noticeably colder nights.</p><p>Days are shorter, so plan longer hikes to finish well before dark.</p>",
+    "winter": "<p>Winter days are often clear and mild enough for hiking, but nights regularly drop below freezing, especially at Jumbo Rocks, Ryan and other higher campgrounds. Occasional storms can bring rain or a light dusting of snow to the Joshua trees.</p><p>Holiday weeks are busy, but January and early February weekdays are among the quietest times of the year. Bring a sleeping bag rated well below the overnight low.</p>"
+  },
+  "highlights": [
+    "Joshua tree forests of the Mojave Desert",
+    "Hidden Valley boulder piles",
+    "Keys View",
+    "Cholla Cactus Garden",
+    "Skull Rock and Jumbo Rocks",
+    "Dark night skies"
+  ],
+  "hikes": [
+    {
+      "name": "Hidden Valley Nature Trail",
+      "level": "Easy",
+      "note": "Short loop through a boulder-ringed valley; a good first walk any time from fall through spring."
+    },
+    {
+      "name": "Barker Dam",
+      "level": "Easy",
+      "note": "Loop past a historic dam and petroglyphs; the reservoir holds water mainly after wet winters."
+    },
+    {
+      "name": "Ryan Mountain",
+      "level": "Moderate",
+      "note": "Steady climb with no shade to one of the park's best summit views; skip it on hot afternoons."
+    },
+    {
+      "name": "Forty-Nine Palms Oasis",
+      "level": "Moderate",
+      "note": "Out-and-back over a ridge to a fan palm oasis, reached from the north side near Twentynine Palms."
+    },
+    {
+      "name": "Lost Palms Oasis",
+      "level": "Strenuous",
+      "note": "Long desert hike from Cottonwood to the park's largest palm grove; a cool-season-only outing."
+    }
+  ],
+  "camping": "<p>The park's campgrounds include Jumbo Rocks, Hidden Valley, Ryan, White Tank, Belle, Indian Cove, Black Rock and Cottonwood. Most sites book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> during the busy season, and they sell out on cool-season weekends; check nps.gov/jotr for which campgrounds or sites are first-come, first-served. Only Black Rock and Cottonwood have drinking water, so bring all you need for other campgrounds.</p><p>When park campgrounds are full, Bureau of Land Management land north and south of the park offers dispersed camping; stay on existing sites and check current BLM rules. Campfires are allowed only in existing fire rings in campgrounds, and gathering wood in the park is prohibited, so bring firewood.</p>",
+  "know_before": [
+    "Carry at least a gallon of water per person per day and more for hiking in warm weather; there is almost no water in the park.",
+    "Summer heat is the park's top hazard: hike at dawn, rest in shade at midday, and know the signs of heat illness.",
+    "Cell service is unreliable inside the park; download maps before you leave town.",
+    "Flash floods can fill washes and close dirt roads during storms, even if it is not raining where you are.",
+    "Night temperatures drop sharply in the cool season; pack warm layers even if the afternoon feels warm.",
+    "Joshua trees, cholla and other plants are protected; stay on trails and don't climb on Joshua trees."
+  ],
+  "official_url": "https://www.nps.gov/jotr/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Joshua Tree?",
+      "a": "March and April are the best months for most people: comfortable days, cool nights and, after a wet winter, wildflowers. October and November are a close second."
+    },
+    {
+      "q": "What is the worst time to visit Joshua Tree?",
+      "a": "July and August are the hardest months because of extreme heat, especially in the southern part of the park. If you go in summer, plan activities for early morning and evening."
+    },
+    {
+      "q": "Can you camp in Joshua Tree in winter?",
+      "a": "Yes, and many campers prefer it. Days are often pleasant, but nights frequently drop below freezing, so bring a warm sleeping bag, an insulated pad and extra layers."
+    },
+    {
+      "q": "How many days do you need in Joshua Tree?",
+      "a": "One full day covers the main sights along Park Boulevard and Keys View. Two or three days lets you camp, add a longer hike like Lost Palms Oasis and see the night sky."
+    }
+  ],
+  "nearby": [
+    "death-valley"
+  ],
+  "related_articles": [
+    "cool-a-tent-without-electricity",
+    "class-3-scramble",
+    "car-camping-essentials"
+  ]
+}

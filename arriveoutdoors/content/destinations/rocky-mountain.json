@@ -1,0 +1,88 @@
+{
+  "title": "Best Time to Visit Rocky Mountain: Weather & Camping by Month",
+  "description": "When to visit Rocky Mountain National Park: Trail Ridge Road season, timed entry, summer storms, the elk rut, winter snowshoeing, camping and top hikes.",
+  "intro": "<p>Rocky Mountain National Park sits on the Continental Divide northwest of Denver, between Estes Park on the east side and Grand Lake on the west. Much of the park lies above 9,000 feet, and Trail Ridge Road climbs well above treeline.</p><p>Elevation drives the calendar. High trails can hold snow into July, Trail Ridge Road is closed most of the year, summer afternoons bring lightning above treeline, and the park has used a timed-entry reservation system during its busiest months.</p>",
+  "best_time": "Mid-June through September is the best time for hiking and full road access, with July and August best for alpine trails and wildflowers. Mid-September to early October brings the elk rut, golden aspens and smaller crowds.",
+  "best_for": {
+    "hiking": "July to September",
+    "camping": "June to September",
+    "fewer crowds": "November to April, and weekdays after mid-September",
+    "photography": "July for alpine wildflowers; late September for aspens and elk"
+  },
+  "seasons": {
+    "spring": "<p>Spring in the Rockies is snowy and changeable. Lower valleys like Moraine Park thaw first, but high trails remain snow-covered, and spring storms can drop heavy snow into May. Trail Ridge Road typically opens around late May, depending on plowing and conditions.</p><p>Wildlife is easy to spot in the meadows, and crowds remain light until Memorial Day. Avalanche danger persists on steep slopes.</p>",
+    "summer": "<p>Summer opens the high country. Trail Ridge Road and, usually by early July, the one-way Old Fall River Road are open, alpine wildflowers peak in July, and most trails melt out by mid-July. This is the park's busiest season, and timed entry has applied during it in recent years.</p><p>Thunderstorms build most afternoons from July through August. Start alpine hikes very early and be below treeline by early afternoon; lightning is a serious hazard on exposed ridges and summits.</p>",
+    "fall": "<p>The elk rut runs from mid-September into October, with bugling elk in Moraine Park, Horseshoe Park and the Kawuneeche Valley. Aspens turn gold in the second half of September, and fall weekends can be as busy as summer.</p><p>Snowstorms are possible from September on, and Trail Ridge Road usually closes for the season in mid to late October.</p>",
+    "winter": "<p>Winter is cold and windy, with deep snow in the high country and calmer conditions in some lower valleys. Trail Ridge Road is closed beyond Many Parks Curve on the east and the Colorado River Trailhead on the west, but Bear Lake Road is typically plowed, giving access to snowshoe and ski routes.</p><p>Crowds are at their lowest. Avalanche terrain is common along popular winter routes; check avalanche forecasts and carry proper gear.</p>"
+  },
+  "highlights": [
+    "Trail Ridge Road",
+    "Bear Lake corridor",
+    "Longs Peak",
+    "Moraine Park elk herds",
+    "Alpine Visitor Center",
+    "Kawuneeche Valley"
+  ],
+  "hikes": [
+    {
+      "name": "Emerald Lake via Nymph and Dream Lakes",
+      "level": "Easy",
+      "note": "Popular lake chain from Bear Lake; snow-free by early summer and a snowshoe route in winter."
+    },
+    {
+      "name": "Alberta Falls",
+      "level": "Easy",
+      "note": "Short walk to a waterfall near Glacier Gorge Trailhead; good in any season."
+    },
+    {
+      "name": "Sky Pond via Glacier Gorge",
+      "level": "Strenuous",
+      "note": "Passes Alberta Falls, The Loch and Timberline Falls, with a short scramble; best July to September."
+    },
+    {
+      "name": "Chasm Lake",
+      "level": "Strenuous",
+      "note": "Alpine lake beneath Longs Peak's East Face; start early to avoid afternoon lightning."
+    },
+    {
+      "name": "Longs Peak via the Keyhole Route",
+      "level": "Strenuous",
+      "note": "A very long, exposed class 3 scramble to 14,259 feet; typically in condition only from mid-summer to early fall. Overnight camping requires a wilderness permit."
+    }
+  ],
+  "camping": "<p>The park's main campgrounds are Moraine Park, Glacier Basin and Aspenglen on the east side and Timber Creek on the west side. Most book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; Moraine Park is typically open year-round, with fewer services in winter. Backcountry camping requires a wilderness permit, and some sites require bear canisters.</p><p>The Arapaho and Roosevelt National Forests around the park have additional campgrounds and dispersed camping areas, subject to seasonal closures and fire restrictions. Black bears are present: use food storage lockers where provided and never leave food in a tent or open vehicle.</p>",
+  "know_before": [
+    "The park has used a timed-entry reservation system in peak season; check nps.gov/romo for current rules.",
+    "Trail Ridge Road climbs above 12,000 feet; altitude sickness, sunburn and cold wind are common even in summer.",
+    "Afternoon thunderstorms make exposed summits dangerous; plan to be below treeline by early afternoon.",
+    "Elk are large and aggressive during the rut; give them plenty of space.",
+    "Trail Ridge Road and Old Fall River Road are seasonal and can close temporarily in any month due to snow.",
+    "Cell coverage is limited in much of the park; download maps before driving up."
+  ],
+  "official_url": "https://www.nps.gov/romo/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Rocky Mountain National Park?",
+      "a": "July is the best month for alpine hiking and wildflowers, while September is the best month for elk, fall color and smaller crowds. Both have Trail Ridge Road open."
+    },
+    {
+      "q": "When is Rocky Mountain National Park most crowded?",
+      "a": "Late June through August and fall weekends are the busiest. Parking at Bear Lake fills early, and timed entry has applied during the peak season in recent years."
+    },
+    {
+      "q": "Can you camp in Rocky Mountain National Park in winter?",
+      "a": "Yes. Moraine Park Campground typically stays open in winter, and winter backcountry camping is allowed with a permit. Expect cold nights, deep snow at elevation and strong winds."
+    },
+    {
+      "q": "How many days do you need in Rocky Mountain National Park?",
+      "a": "Two days covers Trail Ridge Road and a hike in the Bear Lake area. Three to four days allows a long alpine hike, the west side and wildlife watching at dawn."
+    }
+  ],
+  "nearby": [
+    "grand-mesa"
+  ],
+  "related_articles": [
+    "class-3-scramble",
+    "cold-weather-camping"
+  ]
+}

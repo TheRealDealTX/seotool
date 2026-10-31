@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit the Smokies: Month-by-Month Weather & Camping",
+  "description": "When to visit Great Smoky Mountains National Park: spring wildflowers, fireflies, fall color timing, winter road closures, parking tags, camping and hikes.",
+  "intro": "<p>Great Smoky Mountains National Park straddles the Tennessee-North Carolina border, with forested ridges rising from low valleys near Gatlinburg and Cherokee to peaks above 6,000 feet. It is the most visited national park in the country and is open year-round.</p><p>Timing here is about what you want to see and how many people you want to share it with. Spring wildflowers, early-summer fireflies and October color each draw crowds at different times, while the large elevation range means the mountaintops can be cold and wet when the valleys are mild.</p>",
+  "best_time": "Mid-April through May and late September through early November are the best times to visit: spring brings wildflowers and waterfalls, and fall brings color that moves down the mountains through October. Weekdays help with crowds in both seasons.",
+  "best_for": {
+    "hiking": "April to May and September to November",
+    "camping": "May to October",
+    "fewer crowds": "January to February and weekdays in early spring",
+    "photography": "Mid-October to early November for fall color; April for wildflowers"
+  },
+  "seasons": {
+    "spring": "<p>Spring is wildflower season. Blooms begin in the low valleys and climb the mountains through April and May, and streams and waterfalls run high. Weather swings widely: a warm afternoon in the valley can coincide with snow or freezing rain on the high peaks.</p><p>Kuwohi Road (formerly Clingmans Dome Road) is typically closed through winter and reopens in spring. Trails can be muddy, and creek crossings swell after rain.</p>",
+    "summer": "<p>Summer is warm and humid in the valleys, with frequent afternoon thunderstorms and haze; higher elevations are noticeably cooler. Crowds are heavy, especially in Cades Cove, along Newfound Gap Road and at popular waterfalls.</p><p>Synchronous fireflies put on a display in late May or June near Elkmont; viewing there has been managed through a lottery in recent years, so check nps.gov/grsm.</p>",
+    "fall": "<p>Fall color starts at the highest elevations in late September and early October and typically peaks at mid and low elevations from mid-October into early November. This is one of the busiest periods of the year, particularly on October weekends, and traffic can back up badly in Cades Cove and near Gatlinburg.</p><p>Days are usually drier and clearer than summer, making it a good season for long hikes and views.</p>",
+    "winter": "<p>Winter is quiet and often mild in the valleys, with occasional snow and ice at higher elevations. Newfound Gap Road (US 441) stays open but closes temporarily during snow and ice, and Kuwohi Road is closed to vehicles for the season.</p><p>Leafless trees open up views of ridges and old homesites, and the crowds are lowest of the year. Trails at elevation may need traction devices.</p>"
+  },
+  "highlights": [
+    "Cades Cove",
+    "Kuwohi (formerly Clingmans Dome)",
+    "Newfound Gap Road",
+    "Mount LeConte",
+    "Roaring Fork Motor Nature Trail",
+    "Cataloochee Valley elk"
+  ],
+  "hikes": [
+    {
+      "name": "Alum Cave Trail to Mount LeConte",
+      "level": "Strenuous",
+      "note": "Steep climb past Arch Rock and Alum Cave Bluffs to a summit with a lodge; best spring through fall."
+    },
+    {
+      "name": "Abrams Falls",
+      "level": "Moderate",
+      "note": "Forest walk from Cades Cove to a wide waterfall; swimming here is dangerous because of strong currents."
+    },
+    {
+      "name": "Charlies Bunion via the Appalachian Trail",
+      "level": "Moderate",
+      "note": "Ridge hike from Newfound Gap to a rocky outcrop with big views; avoid it in icy conditions."
+    },
+    {
+      "name": "Andrews Bald",
+      "level": "Moderate",
+      "note": "Hike from the Kuwohi parking area to a grassy bald; reachable only when Kuwohi Road is open."
+    },
+    {
+      "name": "Chimney Tops",
+      "level": "Moderate",
+      "note": "Short but steep climb to an observation point; the trail no longer continues to the pinnacles after the 2016 fire."
+    }
+  ],
+  "camping": "<p>The park's developed campgrounds include Elkmont, Cades Cove, Smokemont, Cosby, Deep Creek, Cataloochee and Big Creek, among others. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; most campgrounds are seasonal, and a few stay open year-round. Backcountry camping, including at Appalachian Trail shelters, requires a permit and a reservation for a specific site or shelter.</p><p>Private campgrounds are common near Gatlinburg, Townsend and Cherokee, and the surrounding Pisgah, Nantahala and Cherokee national forests offer more developed and dispersed camping. The Smokies have a dense black bear population: store food in your vehicle or provided storage, and use the bear cables at backcountry sites. Bring only heat-treated or certified firewood.</p>",
+  "know_before": [
+    "A parking tag is required to park in the park for longer than a short stop; check nps.gov/grsm for current rules.",
+    "Black bears are common; never feed them, keep a safe distance and store food properly.",
+    "Weather on the high peaks can be much colder, wetter and windier than in Gatlinburg or Cherokee.",
+    "Fall color weekends bring severe traffic; arrive early or visit midweek.",
+    "Cell service is poor in much of the park; download maps before you go.",
+    "Streams rise quickly after heavy rain; don't attempt fords in high water."
+  ],
+  "official_url": "https://www.nps.gov/grsm/",
+  "faq": [
+    {
+      "q": "What is the best month to visit the Great Smoky Mountains?",
+      "a": "October is the most popular month for fall color, and late April to May is best for wildflowers and waterfalls. Both are excellent; visit on weekdays to avoid the worst crowds."
+    },
+    {
+      "q": "When is the Smokies most crowded?",
+      "a": "Summer and October are the busiest periods, especially weekends and holidays. Cades Cove and Newfound Gap Road see long traffic delays at those times."
+    },
+    {
+      "q": "Can you camp in the Smokies in winter?",
+      "a": "Yes. A few park campgrounds stay open year-round, and backcountry camping is allowed with a permit. Expect cold, wet nights, and snow or ice at higher elevations."
+    },
+    {
+      "q": "How many days do you need in the Great Smoky Mountains?",
+      "a": "Two to three days covers Cades Cove, Newfound Gap Road, Kuwohi and a waterfall or summit hike. Add days to explore quieter areas like Cataloochee or Cosby."
+    }
+  ],
+  "nearby": [
+    "shenandoah"
+  ],
+  "related_articles": [
+    "blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper",
+    "how-to-start-a-fire-with-wet-wood",
+    "what-to-do-if-you-get-lost-in-the-woods"
+  ]
+}

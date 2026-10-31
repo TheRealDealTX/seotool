@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Shenandoah: Month-by-Month Weather & Camping",
+  "description": "When to visit Shenandoah National Park: spring wildflowers, fall color on Skyline Drive, summer storms, winter closures, Old Rag tickets, camping and hikes.",
+  "intro": "<p>Shenandoah National Park protects a long, narrow stretch of Virginia's Blue Ridge Mountains, with Skyline Drive running the length of the park along the crest. Big Meadows, near the middle of the park, is the main hub, and the Appalachian Trail parallels the drive.</p><p>Shenandoah is open year-round, but the experience changes with the seasons: spring wildflowers, summer haze and storms, fall color crowds and winter closures on parts of Skyline Drive.</p>",
+  "best_time": "Mid-April through May and October are the best times to visit Shenandoah: spring brings wildflowers and waterfalls, and October brings peak fall color along Skyline Drive. Weekdays help avoid crowds.",
+  "best_for": {
+    "hiking": "April to June and September to November",
+    "camping": "May to October",
+    "fewer crowds": "Winter and weekdays in spring",
+    "photography": "Mid to late October for fall color; spring for wildflowers"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings wildflowers, flowing waterfalls such as those in Whiteoak Canyon and Dark Hollow, and new leaves that start in the lower hollows and climb toward the crest. Weather is variable, with cool mornings on Skyline Drive and occasional storms.</p><p>Campgrounds and lodges reopen through spring. Crowds are lighter than in fall, especially midweek.</p>",
+    "summer": "<p>Summer is warm and humid, though the crest along Skyline Drive is cooler than the Shenandoah Valley below. Haze often softens long-distance views, and thunderstorms build on many afternoons, so plan summit and ridge hikes for the morning.</p><p>Ticks are common in grassy areas; check yourself after hikes.</p>",
+    "fall": "<p>Fall color usually peaks in October, and it is the park's busiest season. Skyline Drive can see heavy traffic and long entrance lines on weekends.</p><p>Days are typically clear and crisp, making for excellent hiking.</p>",
+    "winter": "<p>Winter is quiet. Skyline Drive stays open when possible but closes in sections during snow and ice, sometimes for days. Most facilities and campgrounds are closed.</p><p>Leafless trees open up views, and crowds are minimal. Trails may be icy.</p>"
+  },
+  "highlights": [
+    "Skyline Drive",
+    "Big Meadows",
+    "Old Rag Mountain",
+    "Dark Hollow Falls",
+    "Stony Man",
+    "Appalachian Trail"
+  ],
+  "hikes": [
+    {
+      "name": "Stony Man",
+      "level": "Easy",
+      "note": "Short climb to one of the park's best viewpoints near Skyland."
+    },
+    {
+      "name": "Dark Hollow Falls",
+      "level": "Moderate",
+      "note": "Steep, short trail to a waterfall near Big Meadows; the climb back up is the hard part."
+    },
+    {
+      "name": "Hawksbill Summit",
+      "level": "Moderate",
+      "note": "Hike to the highest point in the park with sweeping views."
+    },
+    {
+      "name": "Whiteoak Canyon",
+      "level": "Strenuous",
+      "note": "Series of waterfalls down a steep canyon; best in spring when flow is high."
+    },
+    {
+      "name": "Old Rag Mountain",
+      "level": "Strenuous",
+      "note": "Long hike with a challenging rock scramble; a day-use ticket has been required in peak season, so check nps.gov/shen."
+    }
+  ],
+  "camping": "<p>Shenandoah's campgrounds are Mathews Arm, Big Meadows, Lewis Mountain, Loft Mountain and Dundo Group Campground. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>, and all are seasonal; check nps.gov/shen for dates and any first-come sites. Backcountry camping requires a permit.</p><p>George Washington National Forest nearby offers additional campgrounds and dispersed camping. Black bears are common: store food properly in campgrounds and use bear-resistant storage in the backcountry.</p>",
+  "know_before": [
+    "Old Rag has required a day-use ticket during peak season; check nps.gov/shen for current rules.",
+    "Black bears are common; store food properly.",
+    "Skyline Drive can close in sections during winter weather.",
+    "Fall color weekends bring heavy traffic and long entrance lines.",
+    "Backcountry camping requires a permit.",
+    "Cell service is limited in many parts of the park."
+  ],
+  "official_url": "https://www.nps.gov/shen/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Shenandoah?",
+      "a": "October is the most popular month for fall color, while May is excellent for wildflowers and waterfalls. Both are good choices."
+    },
+    {
+      "q": "When is Shenandoah most crowded?",
+      "a": "October weekends are the busiest, with long lines at entrances and heavy traffic on Skyline Drive."
+    },
+    {
+      "q": "Can you camp in Shenandoah in winter?",
+      "a": "Developed campgrounds are closed in winter, but backcountry camping is allowed with a permit. Expect cold nights and possible snow or ice."
+    },
+    {
+      "q": "How many days do you need in Shenandoah?",
+      "a": "Two days covers Skyline Drive and a few hikes. Add a day for Old Rag or longer hikes."
+    }
+  ],
+  "nearby": [
+    "great-smoky-mountains",
+    "acadia"
+  ],
+  "related_articles": [
+    "class-3-scramble",
+    "blogs/the-outdoor-traveler/camping-101-a-guide-for-the-first-time-camper"
+  ]
+}

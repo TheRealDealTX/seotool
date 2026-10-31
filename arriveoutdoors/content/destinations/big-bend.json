@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Big Bend: Month-by-Month Weather & Camping",
+  "description": "When to visit Big Bend National Park: the cool-season sweet spot, summer heat, monsoon storms, Chisos Basin status, camping options and the best desert hikes.",
+  "intro": "<p>Big Bend National Park in west Texas follows a great bend of the Rio Grande along the border with Mexico. It combines Chihuahuan Desert lowlands, river canyons and the Chisos Mountains, which rise high enough to stay noticeably cooler than the desert floor.</p><p>Season shapes everything here. Summer is hot in the desert and along the river, while late fall through spring is pleasant but busy. The park is remote, so planning around heat, holidays and park services matters.</p>",
+  "best_time": "November through April is the best time to visit Big Bend, with comfortable desert days and cool nights. Avoid spring break and holiday weeks if you want fewer crowds.",
+  "best_for": {
+    "hiking": "November to April",
+    "camping": "November to March",
+    "fewer crowds": "Early December, January and early February outside holidays",
+    "photography": "Clear winter nights for stars; spring for blooming cactus"
+  },
+  "seasons": {
+    "spring": "<p>Spring is popular, especially around spring break, when campgrounds and lodging fill. Desert plants and cactus bloom, and temperatures rise quickly by late spring.</p><p>Wind and dust are common, and heat makes low-elevation hiking difficult by May.</p>",
+    "summer": "<p>Summer is hot in the desert and along the Rio Grande, with the Chisos Mountains offering relief. Monsoon storms usually arrive in summer, bringing lightning, flash floods and a brief burst of green.</p><p>Crowds are light. Hike early, carry plenty of water and avoid the desert midday.</p>",
+    "fall": "<p>Fall brings comfortable weather by late October and November, and the desert often stays green for a while after the summer rains. Visitor numbers climb around Thanksgiving, when campgrounds can fill.</p><p>The Rio Grande's flow varies with upstream releases and storms; check river conditions before planning a float trip or the creek crossing at Santa Elena Canyon.</p>",
+    "winter": "<p>Winter is prime desert season, with mild days and cold nights; freezing temperatures are common in the Chisos Mountains, and rare storms can bring ice or snow to the higher roads and trails. The weeks around Christmas and New Year's are busy, while January and early February are often quiet.</p><p>Short days limit long hikes like the South Rim, so start early and carry a headlamp.</p>"
+  },
+  "highlights": [
+    "Chisos Mountains",
+    "Santa Elena Canyon",
+    "Rio Grande",
+    "Ross Maxwell Scenic Drive",
+    "Boquillas Canyon",
+    "Dark night skies"
+  ],
+  "hikes": [
+    {
+      "name": "Santa Elena Canyon Trail",
+      "level": "Easy",
+      "note": "Short trail into a towering limestone canyon along the Rio Grande; access depends on river and creek crossing conditions."
+    },
+    {
+      "name": "Lost Mine Trail",
+      "level": "Moderate",
+      "note": "Classic Chisos Mountains hike with sweeping views; check access and parking status in the Chisos Basin area."
+    },
+    {
+      "name": "Window Trail",
+      "level": "Moderate",
+      "note": "Descends to a pour-off framing the desert; the climb back out is the hard part."
+    },
+    {
+      "name": "Boquillas Canyon Trail",
+      "level": "Easy",
+      "note": "Short trail to the mouth of a river canyon near Rio Grande Village."
+    },
+    {
+      "name": "Emory Peak",
+      "level": "Strenuous",
+      "note": "Climb to the park's highest summit; final section involves a short scramble."
+    },
+    {
+      "name": "South Rim Loop",
+      "level": "Strenuous",
+      "note": "Long hike to a cliff edge high above the desert; can be done as a backpacking trip with a permit."
+    }
+  ],
+  "camping": "<p>The park's developed campgrounds are Rio Grande Village, Cottonwood and Chisos Basin. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>. The Chisos Basin campground and lodge area has undergone major reconstruction work in recent years, so check nps.gov/bibe for current status before planning a stay there.</p><p>Backcountry roadside campsites, many reached by unpaved roads, require a permit. Bears and mountain lions live in the Chisos Mountains: store food in the provided food lockers or your vehicle, and never leave food unattended.</p>",
+  "know_before": [
+    "The park is remote; fill your gas tank and bring supplies before arriving.",
+    "Cell service is limited or nonexistent in most of the park.",
+    "Desert heat is dangerous from late spring through early fall; carry plenty of water.",
+    "Flash floods can close roads and wash out river access during storms.",
+    "Bears and mountain lions live in the Chisos Mountains; store food properly.",
+    "Check nps.gov/bibe for current Chisos Basin status and border crossing rules."
+  ],
+  "official_url": "https://www.nps.gov/bibe/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Big Bend?",
+      "a": "February and November are among the best months, with comfortable desert days and fewer crowds than spring break or holiday weeks."
+    },
+    {
+      "q": "When is Big Bend most crowded?",
+      "a": "Spring break in March and holiday weeks around Thanksgiving and late December are the busiest. Campgrounds fill well ahead."
+    },
+    {
+      "q": "Can you camp in Big Bend in winter?",
+      "a": "Yes, winter is prime camping season. Nights can be cold, especially in the Chisos Mountains, but days are generally pleasant."
+    },
+    {
+      "q": "How many days do you need in Big Bend?",
+      "a": "Plan at least three days to see the Chisos Mountains, Santa Elena Canyon and the Rio Grande, since distances in the park are long."
+    }
+  ],
+  "nearby": [
+    "death-valley",
+    "joshua-tree"
+  ],
+  "related_articles": [
+    "cool-a-tent-without-electricity",
+    "car-camping-essentials"
+  ]
+}

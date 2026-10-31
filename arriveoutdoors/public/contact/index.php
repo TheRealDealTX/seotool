@@ -1,0 +1,80 @@
+<?php
+$sent = false; $error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = trim(str_replace(["\r", "\n"], ' ', $_POST['name'] ?? ''));
+    $email = trim($_POST['email'] ?? '');
+    $msg = trim($_POST['message'] ?? '');
+    $trap = $_POST['website'] ?? '';
+    if ($trap !== '') { $sent = true; }
+    elseif ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || strlen($msg) < 10) { $error = 'Please add your name, a valid email and a message.'; }
+    elseif (strlen($msg) > 5000) { $error = 'Please keep your message under 5,000 characters.'; }
+    else {
+        $body = "Name: $name\nEmail: $email\n\n$msg\n";
+        $headers = "From: Arrive Outdoors <info@arriveoutdoors.com>\r\nReply-To: $email\r\nContent-Type: text/plain; charset=UTF-8";
+        $sent = @mail('info@arriveoutdoors.com', 'Contact form: ' . mb_substr($name, 0, 60), $body, $headers);
+        if (!$sent) { $error = 'Sorry, the message could not be sent. Please email us directly.'; }
+    }
+}
+?>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Arrive Outdoors</title>
+<meta name="description" content="Contact Arrive Outdoors with questions, corrections or partnership inquiries.">
+<link rel="canonical" href="https://arriveoutdoors.com/contact/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:site_name" content="Arrive Outdoors">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact Arrive Outdoors">
+<meta property="og:description" content="Contact Arrive Outdoors with questions, corrections or partnership inquiries.">
+<meta property="og:url" content="https://arriveoutdoors.com/contact/">
+<meta property="og:image" content="https://arriveoutdoors.com/assets/img/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/icon-192.webp" sizes="192x192">
+<link rel="apple-touch-icon" href="/assets/img/icon-192.webp">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#2d5a45">
+<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css?v=f5d46226">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-PL9QXXQN"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','GT-PL9QXXQN');</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://arriveoutdoors.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://arriveoutdoors.com/contact/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="/"><svg width="38" height="30" viewBox="0 0 38 30" aria-hidden="true"><path d="M2 28 14 6l6 10 4-6 12 18z" fill="#2d5a45"/><path d="M14 6l3.4 6.2-2.2-1.4-2.4 2.6-1.6-1.6z M24 10l2.6 3.9-1.6-.8-1.6 1.6-1.2-1.2z" fill="#fff"/><path d="M10 28l8-9 5 5 4-3 9 7z" fill="#e2614b"/></svg><span>Arrive<small>Outdoors</small></span></a>
+<button class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg></button>
+<nav class="nav" id="nav"><a href="/destinations/">Destinations</a><a href="/weather/">Weather</a><a href="/tools/">Tools</a><a href="/guides/">Guides</a><a href="/gear/">Gear</a><a class="cta" href="/tools/trail-weather/">Trail forecast</a></nav>
+</div></header>
+<main id="main">
+<section class="hero small"><div class="wrap"><h1>Contact us</h1></div><svg class="ridge" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 120V70l90-28 70 22 110-48 90 38 70-20 120 46 90-30 100 24 80-40 120 52 90-26 110 30 90-44 120 40 90-16v80z" fill="#3f6f55" opacity=".55"/><path d="M0 120V92l120-30 90 26 130-40 110 44 100-22 140 34 120-30 110 22 130-36 110 30 120-18 160 26v54z" fill="#fbfaf6"/></svg></section><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> › Contact</nav><div class="read prose"><p class="lead">Questions about a guide, a correction, or a partnership idea? We read everything.</p>
+<?php if ($sent): ?><div class="callout tip"><strong>Thanks!</strong> Your message is on its way. We usually reply within a few days.</div>
+<?php else: ?>
+<?php if ($error): ?><div class="callout warn"><?php echo htmlspecialchars($error); ?></div><?php endif; ?>
+<form method="post" class="panel" action="/contact/">
+<div class="field"><label for="name">Name</label><input type="text" id="name" name="name" required maxlength="100" value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"></div>
+<div class="field"><label for="email">Email</label><input type="text" id="email" name="email" required maxlength="200" inputmode="email" value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"></div>
+<div class="field" style="position:absolute;left:-9999px" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="7" required maxlength="5000"><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea></div>
+<button class="btn primary" type="submit">Send message</button>
+</form>
+<?php endif; ?>
+<p>Or email <a href="mailto:info@arriveoutdoors.com">info@arriveoutdoors.com</a>. Note: Arrive Outdoors no longer rents gear — see <a href="/rent-camping-gear/">where to rent camping gear</a>.</p></div></div>
+</main>
+<footer class="site-footer"><div class="wrap">
+<div class="foot-grid">
+<div><a class="brand" href="/" style="color:#fff"><svg width="38" height="30" viewBox="0 0 38 30" aria-hidden="true"><path d="M2 28 14 6l6 10 4-6 12 18z" fill="#2d5a45"/><path d="M14 6l3.4 6.2-2.2-1.4-2.4 2.6-1.6-1.6z M24 10l2.6 3.9-1.6-.8-1.6 1.6-1.2-1.2z" fill="#fff"/><path d="M10 28l8-9 5 5 4-3 9 7z" fill="#e2614b"/></svg><span style="color:#fff">Arrive<small style="color:#9fb3a7">Outdoors</small></span></a>
+<p style="margin-top:12px">Free camping and hiking tools, month-by-month weather guides for national parks, and honest gear advice for getting outside.</p>
+<p class="small">Some links are affiliate links: if you buy through them we may earn a commission, at no cost to you. <a href="/affiliate-disclosure/">How that works</a>.</p></div>
+<div><h4>Tools</h4><ul><li><a href="/tools/packing-list/">Camping &amp; Backpacking Packing List</a></li><li><a href="/tools/trail-weather/">Trail Weather Forecast &amp; Hike Score</a></li><li><a href="/tools/hiking-time-calculator/">Hiking Time</a></li><li><a href="/tools/water-calculator/">Hiking Water</a></li><li><a href="/tools/sleeping-bag-temperature/">Sleeping Bag &amp; Pad Temperature Guide</a></li><li><a href="/tools/backpack-size/">Backpack Size &amp; Torso Fit</a></li><li><a href="/tools/">All tools</a></li></ul></div>
+<div><h4>Destinations</h4><ul><li><a href="/destinations/yosemite/">Yosemite</a></li><li><a href="/destinations/joshua-tree/">Joshua Tree</a></li><li><a href="/destinations/grand-canyon/">Grand Canyon</a></li><li><a href="/destinations/zion/">Zion</a></li><li><a href="/destinations/yellowstone/">Yellowstone</a></li><li><a href="/destinations/great-smoky-mountains/">Great Smoky Mountains</a></li><li><a href="/destinations/">All destinations</a></li></ul></div>
+<div><h4>Plan</h4><ul><li><a href="/weather/">Where to go by month</a></li><li><a href="/guides/">Guides</a></li><li><a href="/gear/">Gear picks</a></li><li><a href="/rent-camping-gear/">Rent camping gear</a></li><li><a href="/tools/packing-list/">Packing list</a></li></ul></div>
+<div><h4>Arrive Outdoors</h4><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/affiliate-disclosure/">Affiliate disclosure</a></li><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li></ul></div>
+</div>
+<div class="foot-bottom"><span>© 2026 Arrive Outdoors. Weather data: Open-Meteo (CC BY 4.0). Conditions change — always check official park and weather sources.</span><span>As an Amazon Associate, Arrive Outdoors earns from qualifying purchases.</span></div>
+</div></footer>
+<script src="/assets/js/site.js?v=4ceb9545" defer></script>
+</body>
+</html>

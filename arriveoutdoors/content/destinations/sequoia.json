@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Sequoia: Month-by-Month Weather & Camping",
+  "description": "When to visit Sequoia National Park: giant sequoia seasons, Mineral King access, winter snow and chains, summer crowds, campgrounds, bear storage and hikes.",
+  "intro": "<p>Sequoia National Park in California's southern Sierra Nevada protects groves of giant sequoias, including the General Sherman Tree, along with granite domes and high peaks. It is managed together with neighboring Kings Canyon National Park.</p><p>The park spans a huge elevation range, from hot foothills to snowy high country. The Giant Forest sits high enough to get significant winter snow, while some roads and areas close seasonally, so the month you visit determines which parts are accessible.</p>",
+  "best_time": "Late May through October is the best time to visit Sequoia, when roads to Giant Forest, Crescent Meadow and Mineral King are typically open and trails are free of snow. September and early October offer pleasant weather and fewer crowds.",
+  "best_for": {
+    "hiking": "June to October",
+    "camping": "May to October",
+    "fewer crowds": "November to April",
+    "photography": "Winter for snow on the sequoias; summer for high-country light"
+  },
+  "seasons": {
+    "spring": "<p>Spring arrives early in the foothills, where wildflowers bloom and the Kaweah River runs high, while the Giant Forest can still be snowy. Higher roads and trails open gradually through late spring.</p><p>Rivers are dangerously swift during snowmelt; stay out of the water.</p>",
+    "summer": "<p>Summer is the busiest season. The Giant Forest and high country are pleasant, while the foothills are hot. The Mineral King area, reached by a long, winding road, is typically open in summer and early fall.</p><p>Afternoon thunderstorms can occur over the high country. Wildfire smoke affects air quality in some years. A park shuttle has typically run in the Giant Forest area during busy months; check nps.gov/seki.</p>",
+    "fall": "<p>Fall brings cooler temperatures and thinner crowds. Trails remain accessible until the first significant snowfall, and some hardwood trees add color along the roads.</p><p>Mineral King Road usually closes for the season in fall. Check road status before heading up.</p>",
+    "winter": "<p>Winter brings snow to the Giant Forest, making the sequoias especially striking. Some roads, including the roads to Moro Rock and Crescent Meadow, close to vehicles and become routes for snowshoeing and skiing.</p><p>Tire chains may be required on park roads during and after storms, and it is common for the park to require carrying them in winter. Check road conditions before driving up.</p>"
+  },
+  "highlights": [
+    "General Sherman Tree",
+    "Giant Forest",
+    "Moro Rock",
+    "Crescent Meadow",
+    "Tunnel Log",
+    "Mineral King"
+  ],
+  "hikes": [
+    {
+      "name": "Congress Trail",
+      "level": "Easy",
+      "note": "Paved loop through the Giant Forest past the General Sherman Tree and other famous sequoias."
+    },
+    {
+      "name": "Big Trees Trail",
+      "level": "Easy",
+      "note": "Short, accessible loop around a meadow ringed by sequoias."
+    },
+    {
+      "name": "Moro Rock",
+      "level": "Moderate",
+      "note": "Steep stone staircase to a granite dome summit with sweeping views; avoid during storms."
+    },
+    {
+      "name": "Crescent Meadow and Tharp's Log",
+      "level": "Easy",
+      "note": "Meadow loop to a fallen sequoia that served as a cabin; best late spring through fall."
+    },
+    {
+      "name": "Tokopah Falls",
+      "level": "Moderate",
+      "note": "Hike from Lodgepole along the Marble Fork to a tall cascade, fullest in late spring and early summer."
+    }
+  ],
+  "camping": "<p>Sequoia's campgrounds include Lodgepole and Dorst Creek near the Giant Forest, Potwisha and Buckeye Flat in the lower foothills, and smaller campgrounds in Mineral King. Many book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; some lower-elevation campgrounds stay open longer or year-round. Wilderness camping requires a permit.</p><p>Sequoia National Forest and Giant Sequoia National Monument surround the park and offer additional campgrounds and dispersed camping. Black bears are common: all food and scented items must be stored in the metal food lockers provided, never in cars or tents.</p>",
+  "know_before": [
+    "Store food in bear lockers at campgrounds and trailheads; bears break into cars.",
+    "The Generals Highway is steep and winding; vehicle length limits apply on some sections.",
+    "Chains may be required in winter; check road conditions before driving up.",
+    "Elevations range widely; the Giant Forest sits high enough for altitude effects and cold nights.",
+    "Wilderness camping requires a permit; check nps.gov/seki for current rules.",
+    "Cell service is limited or absent in most of the park."
+  ],
+  "official_url": "https://www.nps.gov/seki/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Sequoia National Park?",
+      "a": "June and September are the best months for most visitors: roads and trails are open, weather is pleasant and crowds are smaller than in July and August."
+    },
+    {
+      "q": "When is Sequoia most crowded?",
+      "a": "Summer, especially July and August, and holiday weekends are the busiest. Parking at the General Sherman Tree and Moro Rock fills quickly."
+    },
+    {
+      "q": "Can you camp in Sequoia in winter?",
+      "a": "Yes. Some lower-elevation campgrounds typically stay open, and snow camping is possible with a wilderness permit. Expect cold nights, snow at elevation and chain requirements."
+    },
+    {
+      "q": "How many days do you need in Sequoia?",
+      "a": "One to two days covers the Giant Forest, Moro Rock and Crescent Meadow. Add days to explore Kings Canyon or Mineral King."
+    }
+  ],
+  "nearby": [
+    "yosemite",
+    "death-valley"
+  ],
+  "related_articles": [
+    "cold-weather-camping",
+    "renting-camp-gear-for-national-park-trips"
+  ]
+}

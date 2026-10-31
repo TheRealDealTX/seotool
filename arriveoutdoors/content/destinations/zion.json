@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Zion: Month-by-Month Weather & Camping",
+  "description": "When to visit Zion: spring and fall sweet spots, summer heat and flash floods, when The Narrows is open, Angels Landing permits, shuttle season, camping, hikes.",
+  "intro": "<p>Zion National Park in southwest Utah is built around Zion Canyon, a narrow, sheer-walled canyon cut by the North Fork of the Virgin River, with the town of Springdale at its mouth. The park also includes the quieter Kolob Canyons section and the high Kolob Terrace.</p><p>Timing affects which of Zion's famous hikes are possible. The Narrows depends on river flow and the weather forecast, summer is hot with flash-flood risk, and access to Zion Canyon Scenic Drive switches between shuttle-only and private vehicles depending on the season.</p>",
+  "best_time": "April to May and mid-September to November are the best times to visit Zion, with comfortable hiking temperatures. For The Narrows, late spring through fall is the usual window, once snowmelt flows drop and outside flash-flood watches.",
+  "best_for": {
+    "hiking": "April to May and September to November",
+    "camping": "March to May and September to November",
+    "fewer crowds": "December to February",
+    "photography": "Late October to November for cottonwood color in the canyon"
+  },
+  "seasons": {
+    "spring": "<p>Spring brings mild days and the return of the park shuttle on Zion Canyon Scenic Drive, which is closed to private vehicles while the shuttle runs. Waterfalls and seeps flow after wet winters, and cottonwoods leaf out in the canyon.</p><p>The Narrows often closes or becomes impassable in spring when snowmelt pushes the river above the park's safe-flow limit; check current flow and status. Spring break and holiday weekends are very busy, and Angels Landing requires a permit year-round.</p>",
+    "summer": "<p>Summer is hot on canyon floors and exposed trails, and it is peak season for crowds. Hike early in the day, carry plenty of water, and use the river and shaded trails for relief.</p><p>Monsoon thunderstorms usually arrive by July and continue into September. Flash floods are the canyon's deadliest hazard: storms miles away can send a surge through The Narrows and slot canyons. Check the forecast and flash-flood rating at the visitor center before any canyon hike, and turn back if water rises or turns muddy.</p>",
+    "fall": "<p>Fall is many visitors' favorite season. Temperatures cool, monsoon storms fade, river flows are usually low and The Narrows is at its most reliable. Cottonwoods along the river and maples in side canyons turn color late in the season, often around late October into November.</p><p>Crowds stay heavy through October weekends. The shuttle typically runs into fall; check the park schedule.</p>",
+    "winter": "<p>Winter is the quietest season. The canyon floor is often cool and clear, but upper trails and switchbacks can be icy, and snow sometimes dusts the canyon walls. Traction devices help on trails like Angels Landing and the West Rim.</p><p>When the shuttle is not running, private vehicles can usually drive Zion Canyon Scenic Drive. Hiking The Narrows in winter is possible only with drysuit-level cold-water gear and stable flows, and the high Kolob Terrace Road area can be snowbound.</p>"
+  },
+  "highlights": [
+    "The Narrows",
+    "Angels Landing",
+    "Zion Canyon Scenic Drive",
+    "Zion-Mount Carmel Highway and tunnel",
+    "Kolob Canyons",
+    "Emerald Pools"
+  ],
+  "hikes": [
+    {
+      "name": "Angels Landing",
+      "level": "Strenuous",
+      "note": "Steep switchbacks then an exposed, chain-assisted ridge; a permit is required to hike past Scout Lookout."
+    },
+    {
+      "name": "The Narrows (bottom-up from the Temple of Sinawava)",
+      "level": "Moderate",
+      "note": "Wading upstream in the river between towering walls; check flow and flash-flood status first. Top-down trips require a permit."
+    },
+    {
+      "name": "Emerald Pools",
+      "level": "Easy",
+      "note": "Short trails to seasonal waterfalls and pools; flowing best in spring."
+    },
+    {
+      "name": "Canyon Overlook Trail",
+      "level": "Easy",
+      "note": "Short, ledge-side trail on the east side of the Zion-Mount Carmel Tunnel with a big view down the canyon; parking is limited."
+    },
+    {
+      "name": "Observation Point via East Mesa Trail",
+      "level": "Moderate",
+      "note": "Reaches one of Zion's best viewpoints from the mesa above; the original route from the canyon floor has been closed by rockfall."
+    },
+    {
+      "name": "Watchman Trail",
+      "level": "Moderate",
+      "note": "Climbs from the visitor center to views over Springdale; good for winter when upper trails are icy."
+    }
+  ],
+  "camping": "<p>Watchman Campground and South Campground sit near the main entrance by Springdale, and Lava Point Campground is a small, primitive, high-elevation option open in the warmer months. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> and sell out quickly in spring and fall; check nps.gov/zion for current seasons and any first-come sites.</p><p>Bureau of Land Management land and private campgrounds outside the park offer more options, and dispersed camping is possible on some BLM land in the region; follow posted rules. Wildfire restrictions often limit campfires in summer and fall. Ravens and squirrels will take unattended food, so store it securely.</p>",
+  "know_before": [
+    "Angels Landing requires a permit, issued through a lottery; check nps.gov/zion for how it currently works.",
+    "Flash floods are the top hazard in The Narrows and slot canyons: check the forecast and flash-flood potential before entering.",
+    "Zion Canyon Scenic Drive is shuttle-only for much of the year; parking at the visitor center and in Springdale fills early.",
+    "Summer heat is intense on exposed trails; start early and carry plenty of water.",
+    "The Zion-Mount Carmel Tunnel has size restrictions, and large vehicles need a traffic-control escort; check the park website.",
+    "Cell service is spotty in the canyon; download maps and permit details before you go."
+  ],
+  "official_url": "https://www.nps.gov/zion/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Zion?",
+      "a": "May and October are the best months for most visitors. Hiking temperatures are comfortable, and October usually has low river flows that make The Narrows reliable."
+    },
+    {
+      "q": "When is Zion most crowded?",
+      "a": "Spring break, Memorial Day through Labor Day, and fall weekends are the busiest. Expect long shuttle lines and full parking by mid-morning. December through February is the quietest period."
+    },
+    {
+      "q": "Can you camp in Zion in winter?",
+      "a": "Yes. Watchman Campground is open year-round. Nights get cold and occasionally freezing, but winter days in the canyon are often clear and quiet."
+    },
+    {
+      "q": "How many days do you need in Zion?",
+      "a": "Two days lets you hike The Narrows and either Angels Landing or another major trail. Three or four days adds the east side, Kolob Canyons and a slower pace."
+    }
+  ],
+  "nearby": [
+    "bryce-canyon",
+    "grand-canyon"
+  ],
+  "related_articles": [
+    "class-3-scramble",
+    "cool-a-tent-without-electricity"
+  ]
+}

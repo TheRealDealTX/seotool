@@ -1,0 +1,94 @@
+{
+  "title": "Best Time to Visit Bryce Canyon: Month-by-Month Weather & Camping",
+  "description": "When to visit Bryce Canyon: high-elevation seasons, summer storms, winter snow on the hoodoos, shuttle season, campgrounds, dark skies and the best hikes.",
+  "intro": "<p>Bryce Canyon National Park in southern Utah is a series of natural amphitheaters carved into the edge of a high plateau, filled with thousands of orange and white hoodoos. Most viewpoints sit along an 18-mile scenic drive that follows the rim.</p><p>At around 8,000 to 9,000 feet, Bryce is far cooler than nearby Zion. Snow covers the rim in winter, cold nights are common year-round, and summer brings frequent afternoon thunderstorms. These conditions affect which trails are safe and comfortable.</p>",
+  "best_time": "May through June and September through October are the best times to visit Bryce Canyon, with mild days and good trail conditions. Winter is excellent for snowy hoodoo views if you are prepared for cold.",
+  "best_for": {
+    "hiking": "May to October",
+    "camping": "June to September",
+    "fewer crowds": "November to March",
+    "photography": "Sunrise year-round; winter for snow on the hoodoos"
+  },
+  "seasons": {
+    "spring": "<p>Spring at Bryce's elevation is cool and changeable, with snow possible into May. Trails below the rim can stay muddy or icy in shaded sections well after the rim has melted, and freeze-thaw cycles loosen rock on steep trails.</p><p>Crowds build through May. Nights stay cold, so bring warm layers for camping.</p>",
+    "summer": "<p>Summer brings warm days, cool nights and peak crowds. The free park shuttle typically runs in summer. Afternoon thunderstorms are common in July and August; lightning is a serious danger on the exposed rim.</p><p>Hike into the canyon in the morning, and carry plenty of water, especially at this elevation.</p>",
+    "fall": "<p>Fall brings clear, crisp weather and smaller crowds. Aspens turn color on the plateau, and snow can begin by late October.</p><p>Nights grow cold, so bring warm layers.</p>",
+    "winter": "<p>Winter brings snow and cold to the rim. The main scenic drive is plowed, but some side roads and trails may close. Snowshoeing and cross-country skiing are popular along the rim.</p><p>Trails into the canyon can be icy; traction devices are recommended.</p>"
+  },
+  "highlights": [
+    "Bryce Amphitheater",
+    "Sunrise and Sunset Points",
+    "Inspiration Point",
+    "Thor's Hammer",
+    "Rainbow Point",
+    "Dark night skies"
+  ],
+  "hikes": [
+    {
+      "name": "Navajo Loop and Queen's Garden",
+      "level": "Moderate",
+      "note": "Classic combination descending among the hoodoos; part of the Navajo Loop may close for rockfall or winter ice."
+    },
+    {
+      "name": "Rim Trail",
+      "level": "Easy",
+      "note": "Follows the amphitheater rim between viewpoints; good year-round."
+    },
+    {
+      "name": "Fairyland Loop",
+      "level": "Strenuous",
+      "note": "Long loop with steady ups and downs through quieter hoodoo country."
+    },
+    {
+      "name": "Peekaboo Loop",
+      "level": "Strenuous",
+      "note": "Steep loop through the heart of the amphitheater; shared with horses in season."
+    },
+    {
+      "name": "Mossy Cave",
+      "level": "Easy",
+      "note": "Short trail to a waterfall and overhang, off Highway 12 outside the main park entrance."
+    },
+    {
+      "name": "Bristlecone Loop",
+      "level": "Easy",
+      "note": "Short forest loop at Rainbow Point, the highest part of the park."
+    }
+  ],
+  "camping": "<p>Bryce Canyon has two campgrounds, North and Sunset, near the visitor center. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>; North Campground typically keeps a loop open year-round, while Sunset is seasonal. Check nps.gov/brca for current details.</p><p>Dixie National Forest surrounds the park and offers campgrounds and dispersed camping. Store food properly to avoid attracting wildlife, and keep in mind the park's dark skies: bring a red light and minimize light use at night.</p>",
+  "know_before": [
+    "The park sits at high elevation; altitude can make hiking harder, and nights are cold year-round.",
+    "Afternoon thunderstorms bring lightning to the rim; move away from exposed areas.",
+    "Trails into the canyon can be icy in winter and early spring; traction devices help.",
+    "Stay on trails; hoodoos are fragile and erosion is constant.",
+    "The park shuttle typically runs in summer; check nps.gov/brca for schedules.",
+    "Cell service is fair near the visitor center but limited elsewhere."
+  ],
+  "official_url": "https://www.nps.gov/brca/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Bryce Canyon?",
+      "a": "June and September are the best months for most visitors, with mild weather and good trail conditions. Winter is best for snowy hoodoo views."
+    },
+    {
+      "q": "When is Bryce Canyon most crowded?",
+      "a": "Summer, especially July and August, and holiday weekends are the busiest. Parking at viewpoints fills by mid-morning."
+    },
+    {
+      "q": "Can you camp in Bryce Canyon in winter?",
+      "a": "Yes. Part of North Campground typically stays open year-round. Expect snow and nights well below freezing."
+    },
+    {
+      "q": "How many days do you need in Bryce Canyon?",
+      "a": "One day covers the main viewpoints and a hike like the Navajo Loop and Queen's Garden. Two days lets you add longer hikes and sunrise."
+    }
+  ],
+  "nearby": [
+    "zion",
+    "grand-canyon"
+  ],
+  "related_articles": [
+    "cold-weather-camping",
+    "how-to-pose-for-hiking-pictures"
+  ]
+}

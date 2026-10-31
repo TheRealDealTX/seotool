@@ -1,0 +1,88 @@
+{
+  "title": "Best Time to Visit Death Valley: Month-by-Month Weather & Camping",
+  "description": "When to visit Death Valley: the cool-season window, wildflower years, extreme summer heat, high-elevation camping, backcountry roads, safety and the best hikes.",
+  "intro": "<p>Death Valley National Park, along the California-Nevada border, is the largest national park in the lower 48 and includes Badwater Basin, the lowest point in North America. Furnace Creek, the main hub, sits below sea level, while Telescope Peak rises above 11,000 feet.</p><p>Season is everything here. Summer heat is extreme and dangerous, especially on the valley floor, while the cool months bring pleasant days, cold nights and the park's busiest crowds. Timing determines whether hiking is enjoyable or simply unsafe.</p>",
+  "best_time": "November through March is the best time to visit Death Valley, with comfortable days for hiking and exploring. In years with good winter rain, February and March bring wildflowers to the lower elevations.",
+  "best_for": {
+    "hiking": "November to March",
+    "camping": "November to April",
+    "fewer crowds": "Early December and weekdays outside holidays",
+    "photography": "Winter sunrises at Zabriskie Point and the dunes; February to March for wildflowers in good years"
+  },
+  "seasons": {
+    "spring": "<p>Spring is a popular season. Days warm quickly, wildflowers can bloom in good rain years, and campgrounds are busy. By late spring, heat makes low-elevation hiking difficult.</p><p>Wind can kick up sand at the dunes. Plan longer hikes for morning.</p>",
+    "summer": "<p>Summer is extremely hot and can be deadly. The park advises against hiking at low elevations after mid-morning in summer, and vehicles can overheat. If you visit, stay near your car, carry plenty of water and limit activity to early morning or higher elevations.</p><p>Telescope Peak and higher campgrounds like Mahogany Flat are more comfortable but require high-clearance vehicles for some roads. Flash floods from summer storms can damage roads.</p>",
+    "fall": "<p>Fall brings relief from the heat by late October. Days grow comfortable, campgrounds reopen and visitor numbers rise.</p><p>November is often ideal, with pleasant days and cool nights.</p>",
+    "winter": "<p>Winter is peak season. Days are mild on the valley floor, nights are cold and higher elevations may get snow. Holiday weeks and weekends are busy.</p><p>Telescope Peak can be snowy and dangerous without winter gear. Daylight is short, so start hikes early.</p>"
+  },
+  "highlights": [
+    "Badwater Basin",
+    "Zabriskie Point",
+    "Mesquite Flat Sand Dunes",
+    "Dante's View",
+    "Artists Drive",
+    "Ubehebe Crater"
+  ],
+  "hikes": [
+    {
+      "name": "Badwater Basin salt flat",
+      "level": "Easy",
+      "note": "Walk onto the salt flat at the lowest point in North America; avoid midday in warm months."
+    },
+    {
+      "name": "Golden Canyon to Red Cathedral",
+      "level": "Moderate",
+      "note": "Canyon hike through colorful badlands; connect to Zabriskie Point for a longer loop."
+    },
+    {
+      "name": "Mesquite Flat Sand Dunes",
+      "level": "Easy",
+      "note": "Wander the dunes near Stovepipe Wells; best at sunrise or sunset when light and temperatures are best."
+    },
+    {
+      "name": "Mosaic Canyon",
+      "level": "Moderate",
+      "note": "Polished marble narrows with some scrambling; best in the cool season."
+    },
+    {
+      "name": "Telescope Peak",
+      "level": "Strenuous",
+      "note": "Long climb to the park's highest point; snow-free mainly from late spring to fall, and the access road can require high clearance."
+    }
+  ],
+  "camping": "<p>Death Valley's campgrounds include Furnace Creek, Sunset and Texas Spring near Furnace Creek, Stovepipe Wells, Mesquite Spring, and higher, more primitive campgrounds like Wildrose, Thorndike and Mahogany Flat. Furnace Creek books through <a href=\"https://www.recreation.gov/\">Recreation.gov</a> in the busy season; many others are first-come, first-served, and some are seasonal.</p><p>Backcountry roadside camping is allowed in many areas away from paved roads and day-use areas, following park rules; check nps.gov/deva for current guidelines. Ravens and coyotes take unattended food, so store it securely.</p>",
+  "know_before": [
+    "Summer heat is extreme and can be fatal; avoid hiking at low elevations after mid-morning in hot months.",
+    "Carry plenty of water, and keep extra in your vehicle.",
+    "Distances are long and services are limited; fill your gas tank before entering.",
+    "Cell service is unreliable across most of the park.",
+    "Flash floods can close roads after storms, even far from rain.",
+    "Many backcountry roads require high clearance or four-wheel drive."
+  ],
+  "official_url": "https://www.nps.gov/deva/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Death Valley?",
+      "a": "February and March are the best months for most visitors, with mild days and, in good years, wildflowers. November and December are also excellent."
+    },
+    {
+      "q": "When is Death Valley worst to visit?",
+      "a": "June through August is the hardest time because of extreme heat. If you go, stay near your car and limit activity to early mornings."
+    },
+    {
+      "q": "Can you camp in Death Valley in winter?",
+      "a": "Yes, winter is prime camping season. Nights can get cold, especially at higher elevations, but days are generally pleasant."
+    },
+    {
+      "q": "How many days do you need in Death Valley?",
+      "a": "Two days covers the main sights around Furnace Creek, Badwater and the dunes. Three or more days allows you to explore remote areas and longer hikes."
+    }
+  ],
+  "nearby": [
+    "joshua-tree",
+    "sequoia"
+  ],
+  "related_articles": [
+    "cool-a-tent-without-electricity"
+  ]
+}

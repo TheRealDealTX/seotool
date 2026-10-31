@@ -1,0 +1,89 @@
+{
+  "title": "Best Time to Visit Grand Teton: Month-by-Month Weather & Camping",
+  "description": "When to visit Grand Teton National Park: summer hiking season, fall color and wildlife, winter road closures, campgrounds, dispersed camping and top hikes.",
+  "intro": "<p>Grand Teton National Park in northwest Wyoming protects the abrupt Teton Range and the valley of Jackson Hole below it, including Jenny Lake, the Snake River and sagebrush flats busy with bison, elk, moose and pronghorn. It sits just south of Yellowstone.</p><p>The park is high and cold, so the hiking and camping season is short. Snow lingers on canyon trails into early summer, a main park road closes to vehicles in winter, and fall brings both wildlife activity and fast-changing weather.</p>",
+  "best_time": "Late June through September is the best time to visit Grand Teton: trails melt out, campgrounds are open and the weather is generally mild. Mid to late September adds fall color, active wildlife and fewer crowds.",
+  "best_for": {
+    "hiking": "July to September",
+    "camping": "June to September",
+    "fewer crowds": "May, October and winter",
+    "photography": "Late September for aspens; dawn year-round at Oxbow Bend and Schwabacher Landing"
+  },
+  "seasons": {
+    "spring": "<p>Spring comes late. Roads open gradually in late April and May, but higher trails stay snow-covered and many facilities open in late May or June. Wildlife watching is excellent as animals return to the valley.</p><p>Weather is unpredictable, with snow possible into June. Trails near lakes may be open while canyons remain snowbound.</p>",
+    "summer": "<p>Summer is the main season. Canyon trails melt out by July, wildflowers bloom and boats run across Jenny Lake. Afternoon thunderstorms are common, and nights stay cool.</p><p>This is the busiest time, with full parking at Jenny Lake and other trailheads by mid-morning. Campgrounds fill well ahead.</p>",
+    "fall": "<p>September is often the park's best month: aspens and cottonwoods turn gold, elk bugle during the rut and crowds drop. Weather turns quickly, and snow is possible by late September.</p><p>Campgrounds and visitor services begin closing in late September and October.</p>",
+    "winter": "<p>Winter is cold and snowy. The Teton Park Road closes to vehicles between the Taggart Lake area and Signal Mountain Lodge and becomes a groomed route for skiing, snowshoeing and walking. US 89/191 through the valley typically stays open.</p><p>Wildlife viewing continues along the valley floor, and avalanche hazard is serious in the mountains.</p>"
+  },
+  "highlights": [
+    "Jenny Lake and Cascade Canyon",
+    "Oxbow Bend",
+    "Mormon Row",
+    "Schwabacher Landing",
+    "Signal Mountain",
+    "Snake River Overlook"
+  ],
+  "hikes": [
+    {
+      "name": "Taggart Lake",
+      "level": "Easy",
+      "note": "Short hike through meadows and forest to a lake under the Grand Teton."
+    },
+    {
+      "name": "String Lake Loop",
+      "level": "Easy",
+      "note": "Gentle shoreline trail with peaks overhead; good early and late in the season."
+    },
+    {
+      "name": "Cascade Canyon via Jenny Lake",
+      "level": "Moderate",
+      "note": "Hike around the lake or take the seasonal boat, then climb past Hidden Falls and Inspiration Point into the canyon."
+    },
+    {
+      "name": "Phelps Lake via Death Canyon Trailhead",
+      "level": "Moderate",
+      "note": "Hike to a lake overlook and down to the shore; the trailhead road is rough."
+    },
+    {
+      "name": "Surprise and Amphitheater Lakes",
+      "level": "Strenuous",
+      "note": "Steep climb to alpine lakes below the Grand Teton; best mid-July to September."
+    }
+  ],
+  "camping": "<p>The park's campgrounds include Jenny Lake (tents only), Signal Mountain, Colter Bay, Gros Ventre, Lizard Creek and Headwaters Campground at Flagg Ranch. Reservations are made through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>, and they fill quickly in summer; all are seasonal. Backcountry camping requires a permit.</p><p>The Bridger-Teton and Caribou-Targhee national forests nearby offer campgrounds and dispersed camping. This is grizzly and black bear country: store all food in bear boxes or a hard-sided vehicle, and carry bear spray when hiking.</p>",
+  "know_before": [
+    "Carry bear spray and know how to use it; grizzlies and black bears are present throughout the park.",
+    "Keep at least 100 yards from bears and wolves and 25 yards from other wildlife.",
+    "Snow can linger on high trails into July; steep snowfields are hazardous.",
+    "Teton Park Road closes to vehicles in winter between Taggart Lake and Signal Mountain.",
+    "Weather changes quickly; carry layers and rain gear even on sunny days.",
+    "Backcountry camping requires a permit; check nps.gov/grte for current rules."
+  ],
+  "official_url": "https://www.nps.gov/grte/",
+  "faq": [
+    {
+      "q": "What is the best month to visit Grand Teton?",
+      "a": "September is the best single month for many visitors: trails are open, aspens turn gold, wildlife is active and crowds are lighter. July and August are best for high hikes."
+    },
+    {
+      "q": "When is Grand Teton most crowded?",
+      "a": "July and August are the busiest months, with full parking at Jenny Lake and popular trailheads by mid-morning."
+    },
+    {
+      "q": "Can you camp in Grand Teton in winter?",
+      "a": "Park campgrounds are closed in winter, but backcountry winter camping may be allowed with a permit. Expect deep snow, extreme cold and avalanche hazard."
+    },
+    {
+      "q": "How many days do you need in Grand Teton?",
+      "a": "Two to three days covers Jenny Lake, a canyon hike and sunrise at Oxbow Bend or Mormon Row. Add days to combine your trip with Yellowstone."
+    }
+  ],
+  "nearby": [
+    "yellowstone",
+    "cloud-peak-wilderness"
+  ],
+  "related_articles": [
+    "renting-camp-gear-for-national-park-trips",
+    "cold-weather-camping"
+  ]
+}

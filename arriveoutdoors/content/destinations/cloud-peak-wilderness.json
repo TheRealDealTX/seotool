@@ -1,0 +1,84 @@
+{
+  "title": "Best Time to Visit Cloud Peak Wilderness: Weather & Camping",
+  "description": "When to visit Wyoming's Cloud Peak Wilderness: the short snow-free season, afternoon storms, trailhead access, Bighorn National Forest camping, classic hikes.",
+  "intro": "<p>The Cloud Peak Wilderness protects the high, granite core of Wyoming's Bighorn Mountains in Bighorn National Forest, including 13,167-foot Cloud Peak, the range's highest summit. It is a land of alpine lakes, cirques and boulder fields with no roads and far fewer visitors than the national parks to the west.</p><p>The hiking season is short. Snow can block high trails and passes well into July, summer afternoons bring thunderstorms, and winter turns the wilderness into a remote snowbound area reachable only by serious winter travelers.</p>",
+  "best_time": "Mid-July through mid-September is the best time to visit the Cloud Peak Wilderness, when high trails and passes are mostly snow-free and lakes are thawed. Early September is the quietest part of that window.",
+  "best_for": {
+    "hiking": "Mid-July to mid-September",
+    "camping": "July to September",
+    "fewer crowds": "After Labor Day",
+    "photography": "Late July for wildflowers; September for clear skies"
+  },
+  "seasons": {
+    "spring": "<p>Spring is still winter in the high country. Deep snow covers the wilderness, and many access roads to trailheads remain closed or impassable. Lower-elevation forest areas begin to thaw by late spring.</p><p>The highways across the Bighorns are maintained, but forest roads to trailheads are not plowed.</p>",
+    "summer": "<p>Summer opens the high country, usually by mid-July. Lakes thaw, wildflowers bloom and backpackers head to Mistymoon Lake, Lake Solitude and other basins. Afternoon thunderstorms are common; plan to be off summits and exposed ridges early.</p><p>Mosquitoes can be thick in early summer near lakes and meadows.</p>",
+    "fall": "<p>September brings clear, crisp days, cold nights and few people. Snow can return any time, and hunting season brings more activity in the surrounding forest.</p><p>By October, high trails are often snow-covered.</p>",
+    "winter": "<p>Winter is cold and snowbound. The highways crossing the Bighorns are generally maintained, but trailheads and the wilderness are reachable only on skis or snowshoes. Avalanche terrain is common.</p><p>Winter travel here is for experienced backcountry users only.</p>"
+  },
+  "highlights": [
+    "Cloud Peak",
+    "Mistymoon Lake",
+    "Lake Solitude",
+    "Lost Twin Lakes",
+    "Black Tooth Mountain",
+    "West Tensleep Lake"
+  ],
+  "hikes": [
+    {
+      "name": "Cloud Peak via West Tensleep and Mistymoon Lake",
+      "level": "Strenuous",
+      "note": "Long route to the range's high point, finishing on a class 2 boulder field; usually done as a two- or three-day trip."
+    },
+    {
+      "name": "Mistymoon Lake",
+      "level": "Strenuous",
+      "note": "Hike from West Tensleep to a lake near treeline, the usual base camp for Cloud Peak."
+    },
+    {
+      "name": "Lake Solitude",
+      "level": "Strenuous",
+      "note": "Large alpine lake below rugged cliffs; reachable from several trailheads as a long day or overnight."
+    },
+    {
+      "name": "Lost Twin Lakes",
+      "level": "Moderate",
+      "note": "Hike from the Tensleep area to two lakes beneath a dramatic cirque."
+    }
+  ],
+  "camping": "<p>Bighorn National Forest has numerous campgrounds along US 16 and US 14, including near West Tensleep Lake. Many book through <a href=\"https://www.recreation.gov/\">Recreation.gov</a>, while others are first-come, first-served. Dispersed camping is allowed in much of the national forest outside the wilderness.</p><p>Inside the wilderness, visitors are asked to fill out a free registration at the trailhead. Follow wilderness rules, including camping setbacks from water and trails and any campfire restrictions. The Bighorns are black bear country: store food in a bear-resistant canister or hang it properly.</p>",
+  "know_before": [
+    "Visitors are asked to fill out a free registration at the trailhead; check the Bighorn National Forest website for current rules.",
+    "Snow can block high trails into July; plan accordingly.",
+    "Afternoon thunderstorms are common; be off summits and exposed ridges early.",
+    "The area is remote, and cell service is limited or absent.",
+    "Black bears are present; store food properly.",
+    "Elevations above 9,000 feet can cause altitude sickness."
+  ],
+  "official_url": "https://www.fs.usda.gov/bighorn",
+  "faq": [
+    {
+      "q": "What is the best month to visit the Cloud Peak Wilderness?",
+      "a": "August is the best single month, with most high trails snow-free and lakes thawed. Late July and early September are also good."
+    },
+    {
+      "q": "When is the Cloud Peak Wilderness most crowded?",
+      "a": "Midsummer weekends see the most visitors, especially at popular areas like Mistymoon Lake. Even then, it is far less crowded than the national parks."
+    },
+    {
+      "q": "Can you camp in the Cloud Peak Wilderness in winter?",
+      "a": "Yes, but only experienced winter travelers should attempt it. Expect deep snow, extreme cold and avalanche terrain."
+    },
+    {
+      "q": "How many days do you need in the Cloud Peak Wilderness?",
+      "a": "Plan at least two to three days for a backpacking trip to Mistymoon Lake or Cloud Peak. Longer trips allow exploration of more remote basins."
+    }
+  ],
+  "nearby": [
+    "yellowstone",
+    "grand-teton"
+  ],
+  "related_articles": [
+    "cloud-peak-wyoming",
+    "class-3-scramble"
+  ]
+}
