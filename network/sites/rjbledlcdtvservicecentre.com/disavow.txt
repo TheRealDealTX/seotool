@@ -3621,3 +3621,10 @@ domain:youseotools.com
 domain:youseotools.link
 domain:zlutag.com
 domain:zomatt.com
+# Added 2026-11-01 (monthly review): new spam-network referring domains first seen after 2026-10-25, spam score 45-83.
+domain:websquemolan.com
+domain:webrankingsolutionbacklinks.com
+domain:worldtopbacklinks.com
+domain:wowqualitybacklinks.com
+domain:webbacklinkskbuy.com
+domain:aimscognitive.com
