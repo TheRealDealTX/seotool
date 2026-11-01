@@ -240,7 +240,7 @@ a.chip:hover,button.chip:hover{border-color:var(--forest);color:var(--ink)}
 .byline .dot{width:4px;height:4px;border-radius:50%;background:var(--amber)}
 .layout{display:grid;grid-template-columns:minmax(0,var(--read)) 300px;gap:64px;align-items:start;margin-top:40px}
 .layout aside{position:sticky;top:96px;display:flex;flex-direction:column;gap:18px}
-@media (max-width:1080px){.layout{grid-template-columns:1fr}.layout aside{position:static}}
+@media (max-width:1080px){.layout{grid-template-columns:minmax(0,1fr);gap:40px}.layout aside{position:static}}
 .prose{font-size:1.08rem}
 .prose .lead{font-size:1.24rem;line-height:1.65;color:var(--ink-2)}
 .prose .lead::first-letter{font-family:var(--serif);float:left;font-size:3.6em;line-height:.85;padding:.08em .1em 0 0;color:var(--ember);font-weight:800}
@@ -330,7 +330,7 @@ tbody tr:hover{background:#faf7ef}
 
 /* ---------- Tools ---------- */
 .tool-shell{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:28px;align-items:start;margin:-70px 0 40px;position:relative;z-index:5}
-@media (max-width:920px){.tool-shell{grid-template-columns:1fr}}
+@media (max-width:920px){.tool-shell{grid-template-columns:minmax(0,1fr)}}
 .panel{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow-lg);padding:26px}
 .panel h2{margin-top:0;font-size:1.35rem}
 .field{margin:0 0 18px}
@@ -421,3 +421,33 @@ input[type=range]{width:100%;accent-color:var(--ember)}
 
 .dark .kicker,.band-cta .kicker{color:var(--amber)}
 .tool-card .meta{color:var(--amber)}
+
+/* Mobile: grid/flex children may shrink below their content width; wide tables scroll inside .table-wrap */
+.layout>*,.tool-shell>*,.grid>*,.feature>*,.row>*,.season-grid>*,.stats>*,.foot-grid>*,.band-cta>*{min-width:0}
+input,select,textarea{min-width:0;max-width:100%}
+.prose,.panel,.card,.callout,.side-card,.toc{overflow-wrap:break-word}
+td,th{overflow-wrap:normal;word-break:normal;hyphens:manual}
+@media (max-width:560px){
+  table{font-size:.88rem}
+  th,td{padding:10px 11px}
+  td:first-child{min-width:7.5em}
+  .chart{gap:3px;height:200px}
+  .chart .bar{left:22%;right:22%}
+  .chart .bar b,.chart .bar i{font-size:.6rem}
+  .chart-labels,.precip{gap:3px}
+  .chart-labels{font-size:.66rem}
+  .precip div span{font-size:.58rem}
+}
+.table-wrap{max-width:100%;-webkit-overflow-scrolling:touch}
+/* Rent vs buy table: keep price inputs usable on phones */
+#items input[type=number]{width:5.2em;min-width:5.2em;padding:8px 8px;font-size:.95rem}
+#items td,#items th{padding:8px 6px;vertical-align:middle}
+#items td:first-child{min-width:0;width:28px}
+@media (max-width:560px){#items{font-size:.84rem}#items th{white-space:normal}}
+@media (max-width:560px){
+  .panel{padding:20px 16px}
+  #items input[type=number]{width:3.7em;min-width:3.7em;padding:7px 5px;font-size:.9rem}
+  #items td,#items th{padding:7px 4px}
+  #items th{font-size:.74rem}
+  #items td.be{font-size:.8rem}
+}
