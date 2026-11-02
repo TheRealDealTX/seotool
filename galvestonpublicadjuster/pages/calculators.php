@@ -1,6 +1,6 @@
 <?php
 $meta['title'] = 'Shingle Wind Damage Calculator & Claim Payout Calculator';
-$meta['description'] = 'See what 40–180 mph winds do to shingles by wind rating, compare 10 top manufacturers\' wind warranties, and estimate your claim payout. Free Galveston tools.';
+$meta['description'] = 'See what 40–180 mph winds do to shingles by wind rating, compare 10 manufacturers\' wind warranties and estimate your claim payout. Free Galveston tools.';
 $meta['crumb'] = 'Wind & Claim Calculators';
 $meta['schema'][] = ['@type' => 'WebApplication', 'name' => 'Shingle Wind Damage Calculator', 'applicationCategory' => 'UtilitiesApplication', 'operatingSystem' => 'Any', 'offers' => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'USD'], 'url' => SITE_URL . '/calculators/'];
 $meta['schema'][] = ['@type' => 'WebApplication', 'name' => 'Claim Payout & Deductible Calculator', 'applicationCategory' => 'FinanceApplication', 'operatingSystem' => 'Any', 'offers' => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'USD'], 'url' => SITE_URL . '/calculators/#claim-calc'];

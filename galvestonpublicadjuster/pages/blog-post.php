@@ -6,6 +6,8 @@ $meta['description'] = $post['description'];
 $meta['crumb'] = $post['title'];
 $meta['crumbs'] = [['Blog', '/blog/']];
 $meta['og_type'] = 'article';
+$meta['og_extra'] = ['article:published_time' => $post['date'], 'article:modified_time' => $post['date'],
+    'article:author' => SITE_URL . '/about/', 'article:section' => $post['category']];
 $meta['schema'][] = ['@type' => 'BlogPosting', 'headline' => $post['title'], 'description' => $post['description'], 'url' => $url,
     'mainEntityOfPage' => $url, 'datePublished' => $post['date'], 'dateModified' => $post['date'], 'keywords' => $post['keyword'],
     'articleSection' => $post['category'], 'image' => SITE_URL . '/assets/img/og.png',

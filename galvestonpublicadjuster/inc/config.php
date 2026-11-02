@@ -19,6 +19,7 @@ const HOURS       = 'Mon–Fri 9 AM–6 PM';
 const SISTER_SITE = 'https://txpublicadjusting.com/';
 const CITY        = 'Galveston';
 const REGION      = 'TX';
+ini_set('serialize_precision', '-1'); // shortest round-trip floats in json_encode (JSON-LD geo)
 const GEO_LAT     = 29.3013;
 const GEO_LNG     = -94.7977;
 
@@ -52,16 +53,16 @@ const AREAS = ['Galveston Island', 'Jamaica Beach', 'Bolivar Peninsula', 'Tiki I
 // also take the newest item they show.
 const LAUNCH_DATE  = '2026-09-28';
 const PAGE_UPDATED = [
-    'home'            => '2026-10-16',
-    'about'           => '2026-10-16',
-    'twia'            => '2026-10-16',
-    'fire'            => '2026-10-16',
-    'calculators'     => '2026-10-16',
-    'windstorm-rules' => '2026-10-16',
-    'local-code'      => '2026-10-16',
-    'storm-history'   => '2026-10-16',
-    'weather-events'  => '2026-10-16',
-    'blog'            => '2026-10-16',
-    'contact'         => '2026-10-16',
+    'home'            => '2026-11-02',
+    'about'           => '2026-11-02',
+    'twia'            => '2026-11-02',
+    'fire'            => '2026-11-02',
+    'calculators'     => '2026-11-02',
+    'windstorm-rules' => '2026-11-02',
+    'local-code'      => '2026-11-02',
+    'storm-history'   => '2026-11-02',
+    'weather-events'  => '2026-11-02',
+    'blog'            => '2026-11-02',
+    'contact'         => '2026-11-02',
     'privacy'         => '2026-09-28',
 ];

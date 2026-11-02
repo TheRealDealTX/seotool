@@ -32,6 +32,8 @@ for p in PAGES + posts:
     flag = []
     if errs: flag.append('PHP-ERR')
     if h1 != 1: flag.append(f'H1={h1}')
+    desc = html.unescape(re.search(r'<meta name="description" content="([^"]*)"', doc).group(1))
+    if not 70 <= len(desc) <= 155 and p != '/privacy-policy/': flag.append(f'desc={len(desc)}')  # >155 gets truncated in results
     for k, want in TARGETS.get(p, {}).items():
         if counts[k] != want: flag.append(f'{k}={counts[k]}≠{want}')
     bad += bool(flag)

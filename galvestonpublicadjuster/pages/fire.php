@@ -1,6 +1,6 @@
 <?php
 $meta['title'] = 'Galveston Fire Claims | Fire & Smoke Damage Public Adjuster';
-$meta['description'] = 'Galveston fire claims help from a licensed public adjuster: structure, smoke, soot, contents and living expenses. Free fire damage claim review — (832) 503-5866.';
+$meta['description'] = 'Galveston fire claims help from a licensed public adjuster: structure, smoke, soot, contents and living expenses. Free claim review: (832) 503-5866.';
 $meta['crumb'] = 'Galveston Fire Claims';
 $meta['schema'][] = ['@type' => 'Service', 'name' => 'Fire damage claim public adjuster', 'serviceType' => 'Fire and smoke damage insurance claims',
     'provider' => ['@id' => SITE_URL . '/#business'], 'areaServed' => 'Galveston County, TX'];

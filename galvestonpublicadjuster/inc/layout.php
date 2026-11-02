@@ -98,14 +98,25 @@ function render_page(array $m, string $body) {
 <link rel="canonical" href="<?= e($canon) ?>">
 <link rel="alternate" type="application/rss+xml" title="<?= SITE_NAME ?> Blog" href="<?= SITE_URL ?>/feed.xml">
 <?php if (!empty($m['noindex'])): ?><meta name="robots" content="noindex, follow">
+<?php else: ?><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <?php endif ?>
 <meta property="og:type" content="<?= e($m['og_type'] ?? 'website') ?>">
 <meta property="og:site_name" content="<?= SITE_NAME ?>">
 <meta property="og:title" content="<?= e($m['title']) ?>">
 <meta property="og:description" content="<?= e($m['description']) ?>">
 <meta property="og:url" content="<?= e($canon) ?>">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="<?= SITE_URL ?>/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="<?= SITE_NAME ?> — TWIA, hurricane, fire and flood claim help in Galveston, TX">
+<?php foreach ($m['og_extra'] ?? [] as $k => $v): ?><meta property="<?= e($k) ?>" content="<?= e($v) ?>">
+<?php endforeach ?>
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="<?= e($m['title']) ?>">
+<meta name="twitter:description" content="<?= e($m['description']) ?>">
+<meta name="twitter:image" content="<?= SITE_URL ?>/assets/img/og.png">
+<meta name="author" content="<?= e(AUTHOR) ?>">
 <meta name="theme-color" content="#0b2540">
 <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -1,6 +1,6 @@
 <?php
 $meta['title'] = 'Galveston Public Adjuster | TWIA Claims Expert | (832) 503-5866';
-$meta['description'] = 'Galveston public adjuster for TWIA windstorm, hurricane, fire and flood claims. Denied or underpaid? Free expert claim review — no recovery, no fee. Call (832) 503-5866.';
+$meta['description'] = 'Galveston public adjuster for TWIA, hurricane, fire and flood claims. Denied or underpaid? Free claim review, no recovery, no fee. Call (832) 503-5866.';
 $meta['schema'][] = ['@type' => 'Service', 'name' => 'Public adjusting services in Galveston, TX', 'serviceType' => 'Public insurance adjuster',
     'provider' => ['@id' => SITE_URL . '/#business'], 'areaServed' => 'Galveston County, TX'];
 $faqs = [

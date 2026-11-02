@@ -1,9 +1,10 @@
 <?php
 $meta['title'] = 'Galveston Local Code: Building, Roofing & Flood Rules';
-$meta['description'] = 'Galveston local code for property owners: adopted building codes, TDI windstorm design wind speeds, shingle and underlayment rules, and floodplain elevation requirements.';
+$meta['description'] = 'Galveston local code for owners: adopted building codes, TDI design wind speeds, shingle and underlayment rules, and floodplain elevation requirements.';
 $meta['crumb'] = 'Galveston Local Code';
-$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Galveston Local Code for Property Owners', 'author' => ['@type' => 'Person', 'name' => AUTHOR],
-    'publisher' => ['@id' => SITE_URL . '/#business'], 'dateModified' => PAGE_UPDATED['local-code']];
+$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Galveston Local Code for Property Owners', 'author' => ['@type' => 'Person', 'name' => AUTHOR, 'jobTitle' => AUTHOR_ROLE, 'url' => SITE_URL . '/about/'],
+    'publisher' => ['@id' => SITE_URL . '/#business'], 'image' => SITE_URL . '/assets/img/og.png', 'mainEntityOfPage' => SITE_URL . $meta['path'],
+    'datePublished' => LAUNCH_DATE, 'dateModified' => PAGE_UPDATED['local-code']];
 echo page_hero(icon('building', 18) . ' Galveston County', 'Galveston Local Code: What It Means for Your Claim',
     'Building codes decide what a proper repair looks like — and code-required work is part of what your insurance claim should pay for. Here is the code that applies in Galveston and Galveston County.');
 ?>

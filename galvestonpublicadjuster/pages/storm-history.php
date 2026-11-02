@@ -1,9 +1,10 @@
 <?php
 $meta['title'] = 'Galveston Storm History: Hurricanes from 1900 to Today';
-$meta['description'] = 'Galveston hurricane and storm history: the 1900 Storm, 1915, Carla, Alicia, Ike, Harvey, Beryl and more — winds, surge, damage and what each taught us about insurance.';
+$meta['description'] = 'Galveston hurricane history: the 1900 Storm, Carla, Alicia, Ike, Harvey, Beryl and more — winds, surge, damage and what each taught us about insurance.';
 $meta['crumb'] = 'Galveston Storm History';
-$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Galveston Storm History', 'author' => ['@type' => 'Person', 'name' => AUTHOR],
-    'publisher' => ['@id' => SITE_URL . '/#business'], 'dateModified' => PAGE_UPDATED['storm-history']];
+$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Galveston Storm History', 'author' => ['@type' => 'Person', 'name' => AUTHOR, 'jobTitle' => AUTHOR_ROLE, 'url' => SITE_URL . '/about/'],
+    'publisher' => ['@id' => SITE_URL . '/#business'], 'image' => SITE_URL . '/assets/img/og.png', 'mainEntityOfPage' => SITE_URL . $meta['path'],
+    'datePublished' => LAUNCH_DATE, 'dateModified' => PAGE_UPDATED['storm-history']];
 // [year, name, css class, category label, wind note, chart mph, body, optional "read more" HTML]
 $storms = [
     ['1900', 'The Great Galveston Storm', 'c4', 'Category 4', '~120 mph (anemometer failed at 100 mph)', 120, 'Struck September 8, 1900, with a storm surge of about 15.7 feet over an island whose highest point was under 9 feet. Between 6,000 and 8,000 people died in the city — the deadliest natural disaster in U.S. history. Galveston responded by building the Seawall and raising the grade of the entire city.'],

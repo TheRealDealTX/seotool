@@ -1,9 +1,10 @@
 <?php
 $meta['title'] = 'Texas Windstorm Rules: TWIA, WPI-8 & Claim Deadlines';
-$meta['description'] = 'Texas windstorm insurance rules for Galveston owners: TWIA eligibility, WPI-8 certificates, TWIA claim deadlines, appraisal, public adjuster rules and 2025–2026 changes.';
+$meta['description'] = 'Texas windstorm rules for Galveston owners: TWIA eligibility, WPI-8 certificates, claim deadlines, appraisal, public adjuster rules and 2025–2026 changes.';
 $meta['crumb'] = 'Texas Windstorm Rules';
-$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Texas Windstorm Rules for Galveston Property Owners', 'author' => ['@type' => 'Person', 'name' => AUTHOR],
-    'publisher' => ['@id' => SITE_URL . '/#business'], 'dateModified' => PAGE_UPDATED['windstorm-rules']];
+$meta['schema'][] = ['@type' => 'Article', 'headline' => 'Texas Windstorm Rules for Galveston Property Owners', 'author' => ['@type' => 'Person', 'name' => AUTHOR, 'jobTitle' => AUTHOR_ROLE, 'url' => SITE_URL . '/about/'],
+    'publisher' => ['@id' => SITE_URL . '/#business'], 'image' => SITE_URL . '/assets/img/og.png', 'mainEntityOfPage' => SITE_URL . $meta['path'],
+    'datePublished' => LAUNCH_DATE, 'dateModified' => PAGE_UPDATED['windstorm-rules']];
 echo page_hero(icon('scale', 18) . ' Texas windstorm rules', 'Texas Windstorm Rules Every Galveston Owner Should Know',
     'TWIA eligibility, windstorm certificates, claim deadlines and your rights when a claim goes wrong — in plain English, with the statute behind each rule.');
 ?>
