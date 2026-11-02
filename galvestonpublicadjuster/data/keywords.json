@@ -1,0 +1,2333 @@
+[
+ {
+  "keyword": "smoke damage",
+  "topic": "galveston fire damage claims",
+  "volume": 5400,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "hurricane damage",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 2400,
+  "kd": 55,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to successfully appeal an insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 880,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage inspection services",
+  "topic": "galveston fire damage claims",
+  "volume": 590,
+  "kd": 20,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance claim denied",
+  "topic": "denied and underpaid property claims",
+  "volume": 590,
+  "kd": 38,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage assessment services",
+  "topic": "galveston fire damage claims",
+  "volume": 480,
+  "kd": 10,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "fire damage services",
+  "topic": "galveston fire damage claims",
+  "volume": 480,
+  "kd": 31,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "claim denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 480,
+  "kd": 35,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what does a public adjuster do",
+  "topic": "galveston public adjuster services",
+  "volume": 480,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fixing smoke damage",
+  "topic": "galveston fire damage claims",
+  "volume": 480,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage claim",
+  "topic": "galveston fire damage claims",
+  "volume": 390,
+  "kd": 5,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 390,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "hurricane damage claim",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 390,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss",
+  "topic": "property insurance claim documentation",
+  "volume": 390,
+  "kd": 23,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster for insurance claim",
+  "topic": "galveston public adjuster services",
+  "volume": 390,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke fire damage",
+  "topic": "galveston fire damage claims",
+  "volume": 390,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what to throw away after smoke damage",
+  "topic": "galveston fire damage claims",
+  "volume": 390,
+  "kd": 10,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage insurance claim help",
+  "topic": "galveston fire damage claims",
+  "volume": 320,
+  "kd": 5,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "fire damage insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 320,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage reconstruction",
+  "topic": "galveston fire damage claims",
+  "volume": 320,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage public adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 320,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to appeal insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 320,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 320,
+  "kd": 48,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denied claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 320,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke damage removal",
+  "topic": "galveston fire damage claims",
+  "volume": 320,
+  "kd": 31,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "wpi 8 certificate",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 320,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "wpi 8 search",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 320,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial rates",
+  "topic": "denied and underpaid property claims",
+  "volume": 260,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "commercial public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 10,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "fire damage insurance claim tips",
+  "topic": "galveston fire damage claims",
+  "volume": 260,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance appeal",
+  "topic": "denied and underpaid property claims",
+  "volume": 260,
+  "kd": 42,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss form",
+  "topic": "property insurance claim documentation",
+  "volume": 260,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster services",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 51,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "roof adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 10,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke damage claims",
+  "topic": "galveston fire damage claims",
+  "volume": 260,
+  "kd": 7,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke damage in house",
+  "topic": "galveston fire damage claims",
+  "volume": 260,
+  "kd": 31,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "wpi 8 lookup",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 260,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "average insurance payout for house fire",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire claims",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke damage experts",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire and smoke damage insurance adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire insurance adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 14,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "hurricane claims",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 210,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance appeal letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 210,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster for roof claim",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 7,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "public adjuster houston",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 22,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "public adjuster vs insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 18,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "public adjuster definition",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster pros and cons",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "roof claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 9,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke damage insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 210,
+  "kd": 7,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "windstorm certificate",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 210,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "windstorm certificate search",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 210,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denied homeowners insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 20,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "does flood insurance cover hurricanes",
+  "topic": "galveston flood insurance claims",
+  "volume": 170,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire public adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 170,
+  "kd": 3,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to appeal insurance claim denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to deal with insurance adjuster after a house fire",
+  "topic": "galveston fire damage claims",
+  "volume": 170,
+  "kd": 8,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial claims",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance appeal letter format",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to write an insurance appeal letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "nursing home public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "roof insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 9,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "sworn proof of loss",
+  "topic": "property insurance claim documentation",
+  "volume": 170,
+  "kd": 1,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "sworn statement in proof of loss",
+  "topic": "property insurance claim documentation",
+  "volume": 170,
+  "kd": 2,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "analysis of public adjusters reputation for business property claims",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "analysis of what public adjusters do for insurance disputes",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 1,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance claim denial rates",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 52,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "compare fire damage public adjuster pricing plans",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 3,
+  "intent": "Transactional"
+ },
+ {
+  "keyword": "how much does a public adjuster charge",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster fees",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best fire damage insurance claim dispute assistance services",
+  "topic": "galveston fire damage claims",
+  "volume": 140,
+  "kd": 2,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "house fire insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 140,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage insurance",
+  "topic": "galveston fire damage claims",
+  "volume": 140,
+  "kd": 25,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "how to appeal an insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denied insurance",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 35,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "hurricane insurance claim",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 140,
+  "kd": 10,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial appeal letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "appeal letter sample for insurance",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss of coverage",
+  "topic": "property insurance claim documentation",
+  "volume": 140,
+  "kd": 38,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster roofing",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 12,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "public adjuster meaning",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to file an insurance claim with a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster home insurance claim",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "define public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 33,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "wpi 8 certificate search",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 140,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "compare public adjuster pricing plans for business claims",
+  "topic": "galveston public adjuster services",
+  "volume": 110,
+  "kd": 0,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "appeal claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 38,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "certified public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 110,
+  "kd": 32,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "denied coverage",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to fight an insurance claim denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denial of coverage",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "hurricane damage insurance claim",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 110,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance claim denial letter sample",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance coverage denial letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance letter of appeal template",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 23,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "appeal letter for denied claims",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "kitchen fire damage",
+  "topic": "galveston fire damage claims",
+  "volume": 110,
+  "kd": 12,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss insurance",
+  "topic": "property insurance claim documentation",
+  "volume": 110,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home insurance public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 110,
+  "kd": 44,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "underpaid insurance claims",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 7,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "windstorm certificate lookup",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 110,
+  "kd": 18,
+  "intent": "Informational, Transactional"
+ },
+ {
+  "keyword": "fire insurance claim calculation",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "water claims public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 90,
+  "kd": 2,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "commercial claims public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 90,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "house fire insurance claim tips",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage insurance coverage",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage insurance claim dispute professional",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 1,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "how to appeal a denied insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "claim denial letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "sample appeal letter for insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "appeal letter for denial of insurance coverage",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denied claim letter",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster for storm damage",
+  "topic": "galveston public adjuster services",
+  "volume": 90,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke claim",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "light smoke damage",
+  "topic": "galveston fire damage claims",
+  "volume": 90,
+  "kd": 4,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "reasons why insurance claims are denied",
+  "topic": "denied and underpaid property claims",
+  "volume": 90,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "claim denial rates",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage public adjuster pricing plans",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 4,
+  "intent": "Transactional"
+ },
+ {
+  "keyword": "how much do public adjusters charge",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to fight a denied homeowners insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 12,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "denied property insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "does flood insurance cover hurricane damage",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "professional fire damage assessment and inspection",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 4,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "expert fire damage inspection",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 8,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "fire insurance claim process",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what are good alternatives for handling fire damage claim myself",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 1,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best fire damage inspection services",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 4,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "fire damage home insurance claim specialist",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire damage upholstery experts",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 18,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "insurance appeal process",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 39,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "add insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 30,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to fight an insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 35,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "reasons an insurance claim can be denied",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "property insurance claim denial letter sample",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance denial appeal letter examples",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "medicare appeal letter examples",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "key factors homeowners look for in fire damage claim specialists",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 1,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best practices for fire damage adjusters limitations",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 2,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "proof of loss provision",
+  "topic": "property insurance claim documentation",
+  "volume": 70,
+  "kd": 10,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 30,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "when to hire a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what is a public adjuster on a check",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what are the specialists helpful in smoke damage insurance claims",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "smoke and fire damage claim",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 5,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "specialists for smoke damage insurance claims",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 8,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "fire smoke damage insurance claims",
+  "topic": "galveston fire damage claims",
+  "volume": 70,
+  "kd": 18,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "windstorm inspection",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 70,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "wpi 8 windstorm certificate search",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 70,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "windstorm certificate wpi 8",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 70,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "house fire insurance payout",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 14,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "knee pain treatment insurance denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 8,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "bcbs denied claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "blue cross denied claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational, Transactional"
+ },
+ {
+  "keyword": "denied home insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "house fire claim",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire loss insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 18,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "property fire damage claim",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home fire insurance claim",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire insurance claims tips",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best specialists for fire damage insurance settlement",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 6,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "fire insurance public adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 8,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home insurance adjuster estimate too low",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 2,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to appeal insurance decision",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 31,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "odor removal after fire damage",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 16,
+  "intent": "Informational, Transactional"
+ },
+ {
+  "keyword": "denied insurance coverage",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to file an insurance claim after a hurricane",
+  "topic": "galveston hurricane and windstorm claims",
+  "volume": 50,
+  "kd": 8,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "sample letter for appealing claim denial",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss form insurance",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "proof of loss statement",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster in houston texas",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 19,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "best public adjusters for property damage claims",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 44,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "public adjusters in property damage claims",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 25,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "why use a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 30,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "hiring a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "should i use a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "rebuilding fire damaged home",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "fire and smoke property damage claim",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 0,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "smoke damage claims adjuster",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 0,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to get smoke damage off walls",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 9,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "remove smoke damage from walls",
+  "topic": "galveston fire damage claims",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "wpi 8 certificate lookup",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 50,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster commission",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 11,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "how to appeal a homeowners insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 40,
+  "kd": 33,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public adjuster houston tx",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 19,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "should i hire a public adjuster for a roof claim",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 10,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "private public adjusters",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 29,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "do i need a public adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "underpaid insurance claim legal help",
+  "topic": "denied and underpaid property claims",
+  "volume": 40,
+  "kd": 0,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "underpaid claims",
+  "topic": "denied and underpaid property claims",
+  "volume": 40,
+  "kd": 5,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "local public adjusters",
+  "topic": "galveston public adjuster services",
+  "volume": 30,
+  "kd": 44,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "windstorm inspectors",
+  "topic": "texas windstorm certification and eligibility",
+  "volume": 30,
+  "kd": 37,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "fire claims galveston",
+  "topic": "galveston weather and storm updates",
+  "volume": 0,
+  "kd": 0,
+  "intent": ""
+ },
+ {
+  "keyword": "flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 12100,
+  "kd": 67,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "national flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 2900,
+  "kd": 73,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "does homeowners insurance cover water damage",
+  "topic": "galveston flood insurance claims",
+  "volume": 1900,
+  "kd": 38,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what does flood insurance cover",
+  "topic": "galveston flood insurance claims",
+  "volume": 1900,
+  "kd": 30,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 1900,
+  "kd": 49,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "public claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 1600,
+  "kd": 47,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "private flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 1300,
+  "kd": 49,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home insurance water damage",
+  "topic": "galveston flood insurance claims",
+  "volume": 1300,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "federal flood insurance program",
+  "topic": "galveston flood insurance claims",
+  "volume": 1300,
+  "kd": 55,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "what does an insurance adjuster do",
+  "topic": "galveston public adjuster services",
+  "volume": 1000,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to make an insurance claim",
+  "topic": "galveston property insurance claims",
+  "volume": 880,
+  "kd": 69,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 880,
+  "kd": 51,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "do i need flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 880,
+  "kd": 44,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "property adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 880,
+  "kd": 53,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 880,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 880,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "water damage insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 720,
+  "kd": 51,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance coverage",
+  "topic": "galveston flood insurance claims",
+  "volume": 720,
+  "kd": 48,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 720,
+  "kd": 37,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "what do insurance adjusters do",
+  "topic": "galveston public adjuster services",
+  "volume": 720,
+  "kd": 48,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what is an adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 720,
+  "kd": 20,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to get insurance to pay for water damage",
+  "topic": "galveston flood insurance claims",
+  "volume": 590,
+  "kd": 48,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "private insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 590,
+  "kd": 35,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "claim process",
+  "topic": "galveston property insurance claims",
+  "volume": 480,
+  "kd": 67,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "commercial flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 480,
+  "kd": 33,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for flood zone ae",
+  "topic": "galveston flood insurance claims",
+  "volume": 480,
+  "kd": 13,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "homeowners insurance and flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 480,
+  "kd": 42,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent insurance claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 480,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 480,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "private adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 480,
+  "kd": 35,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "claim center",
+  "topic": "galveston property insurance claims",
+  "volume": 390,
+  "kd": 71,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "claim claim",
+  "topic": "galveston property insurance claims",
+  "volume": 390,
+  "kd": 76,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance nj",
+  "topic": "galveston flood insurance claims",
+  "volume": 390,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for 100 year floodplain",
+  "topic": "galveston flood insurance claims",
+  "volume": 390,
+  "kd": 35,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how much flood insurance do i need",
+  "topic": "galveston flood insurance claims",
+  "volume": 390,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 390,
+  "kd": 41,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "flood insurance requirements",
+  "topic": "galveston flood insurance claims",
+  "volume": 320,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how does flood insurance work",
+  "topic": "galveston flood insurance claims",
+  "volume": 320,
+  "kd": 30,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "do i have flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 320,
+  "kd": 45,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance claim assistance",
+  "topic": "galveston property insurance claims",
+  "volume": 320,
+  "kd": 50,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "rental claims services",
+  "topic": "galveston property insurance claims",
+  "volume": 320,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what does a property adjuster do",
+  "topic": "galveston public adjuster services",
+  "volume": 320,
+  "kd": 47,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "water damage claim",
+  "topic": "galveston flood insurance claims",
+  "volume": 260,
+  "kd": 46,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "do i have to have flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 260,
+  "kd": 51,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance in high risk areas",
+  "topic": "galveston flood insurance claims",
+  "volume": 260,
+  "kd": 28,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "private claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 24,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "personal adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "homeowners insurance claims adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what does an adjuster do",
+  "topic": "galveston public adjuster services",
+  "volume": 260,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood damage claims",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 46,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance estimate",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 36,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "how do i know if i need flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance houston",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 36,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "100 year flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance adjuster requirements",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance checks",
+  "topic": "property insurance claim documentation",
+  "volume": 210,
+  "kd": 26,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "reconsideration letter for insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 210,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "private flood insurance vs fema",
+  "topic": "galveston flood insurance claims",
+  "volume": 210,
+  "kd": 23,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "home insurance claim adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 210,
+  "kd": 37,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "report a claim",
+  "topic": "galveston property insurance claims",
+  "volume": 170,
+  "kd": 79,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "best insurance adjuster for water damage",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 6,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "when is flood insurance mandatory",
+  "topic": "galveston flood insurance claims",
+  "volume": 170,
+  "kd": 31,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "should i get flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 170,
+  "kd": 44,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "define flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 170,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "can insurance deny a claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 170,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "independent field adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 22,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "homeowners insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 39,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "home adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 170,
+  "kd": 45,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "claims application",
+  "topic": "galveston property insurance claims",
+  "volume": 140,
+  "kd": 56,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "business flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 140,
+  "kd": 30,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "flood insurance claim",
+  "topic": "galveston flood insurance claims",
+  "volume": 140,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood damage insurance claim assistance",
+  "topic": "galveston flood insurance claims",
+  "volume": 140,
+  "kd": 43,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for mobile homes",
+  "topic": "galveston flood insurance claims",
+  "volume": 140,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to contest an insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 140,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance adjuster qualifications",
+  "topic": "galveston public adjuster services",
+  "volume": 140,
+  "kd": 50,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "claims services",
+  "topic": "galveston property insurance claims",
+  "volume": 140,
+  "kd": 47,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "nfip vs private flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 140,
+  "kd": 26,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "help with insurance claim",
+  "topic": "galveston property insurance claims",
+  "volume": 140,
+  "kd": 62,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "commercial flood insurance coverage",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 23,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "flood insurance for a condo",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 5,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "condominium flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 9,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for zone ae",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 16,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "ae flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 17,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for manufactured homes",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 13,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "how do i know if flood insurance is required",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 29,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "am i required to have flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 40,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what is flood insurance cover",
+  "topic": "galveston flood insurance claims",
+  "volume": 110,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance claims services",
+  "topic": "galveston property insurance claims",
+  "volume": 110,
+  "kd": 54,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "why would insurance deny a claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 110,
+  "kd": 6,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "claim support",
+  "topic": "galveston property insurance claims",
+  "volume": 90,
+  "kd": 61,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "making a claim",
+  "topic": "galveston property insurance claims",
+  "volume": 90,
+  "kd": 73,
+  "intent": "Informational, Transactional"
+ },
+ {
+  "keyword": "does flood insurance cover storm surge",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flooded basement insurance claim",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 27,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance estimate nj",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 30,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "condo flood insurance coverage",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 8,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "is flood insurance included in homeowners insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 35,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "national flood insurance program telephone number",
+  "topic": "galveston flood insurance claims",
+  "volume": 90,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "online claims",
+  "topic": "galveston property insurance claims",
+  "volume": 70,
+  "kd": 71,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "blue cross blue shield denying claims",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance claims process",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 12,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for condo owners",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 9,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance ky",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 15,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "does flood insurance cover rain damage",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 28,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how to fight an insurance claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 39,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what happens if insurance denies claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 70,
+  "kd": 21,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "manage claims",
+  "topic": "galveston property insurance claims",
+  "volume": 70,
+  "kd": 42,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "claim information",
+  "topic": "galveston property insurance claims",
+  "volume": 70,
+  "kd": 66,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance adjuster services",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 53,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "public loss adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 70,
+  "kd": 43,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "renter flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 70,
+  "kd": 29,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "commercial building flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 26,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "compare flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 28,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "flood insurance for commercial property",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 18,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "flood insurance asi",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 34,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "commercial public insurance adjuster",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 9,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "how much is flood insurance in va",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "can you get flood insurance on a mobile home",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 11,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "pet flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 12,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "what is covered under a flood insurance policy",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 31,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "is flood insurance included in home insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 35,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "is flood insurance separate from homeowners insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 32,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance policy declarations page",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 3,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "nfip claims",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 33,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "how much flood insurance is required by lender",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 18,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "insurance checks cashed",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 15,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "insurance not paying claim",
+  "topic": "denied and underpaid property claims",
+  "volume": 50,
+  "kd": 19,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "endorse insurance check",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 13,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "home insurance check",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 20,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "is insurance claim check legitimate",
+  "topic": "property insurance claim documentation",
+  "volume": 50,
+  "kd": 25,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "non fema flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 25,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "should i get flood insurance if not in flood zone",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 20,
+  "intent": "Transactional"
+ },
+ {
+  "keyword": "private flood insurance policy",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 28,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "houston public insurance adjusters",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 11,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "flood insurance for rental property",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 14,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "flood insurance for landlords",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 12,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "rental flood insurance",
+  "topic": "galveston flood insurance claims",
+  "volume": 50,
+  "kd": 25,
+  "intent": "Informational, Commercial"
+ },
+ {
+  "keyword": "how do adjusters evaluate home insurance claims",
+  "topic": "galveston public adjuster services",
+  "volume": 50,
+  "kd": 23,
+  "intent": "Informational"
+ },
+ {
+  "keyword": "property insurance adjusters",
+  "topic": "galveston public adjuster services",
+  "volume": 40,
+  "kd": 43,
+  "intent": "Commercial"
+ },
+ {
+  "keyword": "what to do if you disagree with home insurance adjuster",
+  "topic": "denied and underpaid property claims",
+  "volume": 30,
+  "kd": 10,
+  "intent": "Informational"
+ }
+]

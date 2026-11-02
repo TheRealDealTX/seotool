@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /cron/
+Disallow: /data/
+Disallow: /inc/
+Disallow: /thank-you/
+
+Sitemap: https://galvestonpublicadjuster.com/sitemap.xml
