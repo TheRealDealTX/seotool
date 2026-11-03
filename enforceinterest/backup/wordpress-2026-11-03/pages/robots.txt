@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://enforceinterest.com/sitemap_index.xml

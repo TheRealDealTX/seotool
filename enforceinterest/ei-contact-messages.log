@@ -1,0 +1,26 @@
+[2026-11-03T07:08:12+00:00] New claim review request from enforceinterest.com
+
+Name:                 Test Person
+Email:                test@example.com
+Type of claim:        Hail / wind
+
+What happened:
+Test message about a hail claim paid late.
+
+IP: 127.0.0.1
+Sent: 2026-11-03 07:08 UTC
+
+----
+[2026-11-03T07:08:43+00:00] New claim review request from enforceinterest.com
+
+Name:                 Test Person
+Email:                test@example.com
+Type of claim:        Hail / wind
+
+What happened:
+Test message about a hail claim paid late.
+
+IP: 127.0.0.1
+Sent: 2026-11-03 07:08 UTC
+
+----

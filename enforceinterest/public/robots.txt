@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_pages/
+Disallow: /_private/
+Disallow: /contact.php
+
+Sitemap: https://enforceinterest.com/sitemap.xml
