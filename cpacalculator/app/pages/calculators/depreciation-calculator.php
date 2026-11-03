@@ -56,15 +56,15 @@ echo tool_hero('depreciation-calculator', "Depreciation Calculator",
           </div>
           <div data-when="macrs">
             <div class="field"><label for="f-cls">MACRS property class (GDS)</label><select id="f-cls" name="cls">
-              <option value="3">3-year — tractor units, racehorses over 2, special tools</option>
-              <option value="5" selected>5-year — computers, cars, light trucks, office equipment</option>
-              <option value="7">7-year — office furniture, fixtures, most machinery</option>
-              <option value="10">10-year — vessels, barges, fruit trees</option>
-              <option value="15">15-year — land improvements (fences, paving), 150% DB</option>
-              <option value="15sl">15-year SL — qualified improvement property</option>
-              <option value="20">20-year — farm buildings, municipal sewers</option>
-              <option value="27.5">27.5-year — residential rental property</option>
-              <option value="39">39-year — nonresidential real property</option>
+              <option value="3">3-year — tractor units, special tools</option>
+              <option value="5" selected>5-year — computers, vehicles</option>
+              <option value="7">7-year — furniture, machinery</option>
+              <option value="10">10-year — vessels, fruit trees</option>
+              <option value="15">15-year — land improvements</option>
+              <option value="15sl">15-year SL — qualified improvements</option>
+              <option value="20">20-year — farm buildings</option>
+              <option value="27.5">27.5-year — residential rental</option>
+              <option value="39">39-year — nonresidential real</option>
             </select></div>
             <div class="field" data-when-personal><label for="f-conv">Convention</label><select id="f-conv" name="conv">
               <option value="hy">Half-year (most common)</option>
