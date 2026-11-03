@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 $zones = [
     // value, label, hint, type, priority
     ['front', 'Front door', 'Faces, packages, visitors', 'out', 3],

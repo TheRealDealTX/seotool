@@ -1,10 +1,10 @@
 <?php
 /**
  * Shared constants and helpers. Every include file starts with
- * `defined('SCC') || exit;` so nothing under inc/, content/ or pages/
+ * `defined('SCC') || (http_response_code(404) && exit);` so nothing under inc/, content/ or pages/
  * can be executed by requesting it directly.
  */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 const SITE_NAME   = 'Solar CCTV Camera';
 const SITE_ORIGIN = 'https://solarcctvcamera.com';

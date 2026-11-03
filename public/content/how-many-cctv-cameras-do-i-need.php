@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'How Many CCTV Cameras Do I Need? Counts by Home Size',
     'description' => 'How many CCTV cameras do I need? Most homes need 4–6. See typical counts by property, a zone-by-zone placement plan, lens choices and budget ranges.',

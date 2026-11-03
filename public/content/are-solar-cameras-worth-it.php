@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Are Solar Powered Security Cameras Worth It? Honest Verdict',
     'description' => 'Are solar powered security cameras worth it? See when they are, when they aren’t, real limits, 5-year cost vs wired, and a quick checklist for your home.',

@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit; ?>
+<?php defined('SCC') || (http_response_code(404) && exit); ?>
 <div class="tool" data-tool="panel-angle">
   <div class="tool-head"><?= icon('angle', 22) ?><strong>Solar Panel Angle Calculator</strong><span>Tilt + direction for your location</span></div>
   <form class="tool-body" autocomplete="off">

@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 $qs = [
     ['sun', 'How many hours of direct sun hit the panel spot on a clear day?', [['0', 'Under 1 h'], ['1', '1–2 h'], ['2', '2–4 h'], ['3', '4–6 h'], ['4', '6+ h']], '2'],
     ['shade', 'What shades that spot?', [['3', 'Nothing'], ['2', 'Leafy trees (summer only)'], ['1', 'A building/hill blocks low winter sun'], ['0', 'Shaded most of the day']], '3'],

@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Remote Cabin Solar Camera: Security With No Power or Wi-Fi',
     'description' => 'Remote cabin solar camera guide: cellular vs satellite, winter power sizing, indoor cameras on a small battery, and protecting a cabin from break-ins.',

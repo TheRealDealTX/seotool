@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 page_head(['title' => 'Sitemap | Solar CCTV Camera', 'description' => 'Every page on SolarCCTVCamera.com: solar security camera guides, buying guides, use cases and free calculators.', 'path' => '/sitemap/',
     'schema' => [breadcrumb_schema([['Home', '/'], ['Sitemap', '/sitemap/']])]]);
 ?>

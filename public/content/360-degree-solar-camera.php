@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => '360 Degree Solar Camera: What Pan-Tilt Really Covers',
     'description' => 'A 360 degree solar camera pans about 355° but sees one view at a time. Learn how PTZ, auto-tracking, dual-lens and fisheye compare, and where each fits.',

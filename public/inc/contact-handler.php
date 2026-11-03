@@ -1,6 +1,6 @@
 <?php
 /** POST /contact/send — validates, filters spam, emails info@ and redirects back. */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 require ROOT . '/inc/mailer.php';
 
 function back(bool $ok): void

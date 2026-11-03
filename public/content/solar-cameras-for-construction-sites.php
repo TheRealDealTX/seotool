@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Security Camera for Construction Site: 2026 Guide',
     'description' => 'Solar security camera for construction site use: DIY 4G cameras vs mobile surveillance trailers, typical rental costs, what to watch and data plans.',

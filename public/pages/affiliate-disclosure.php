@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 require __DIR__ . '/_legal.php';
 legal_page('/affiliate-disclosure/', 'Affiliate Disclosure | Solar CCTV Camera', 'Affiliate disclosure',
 'How Solar CCTV Camera earns money through affiliate links, and the rules we follow so commissions never influence our solar camera recommendations.', <<<'HTML'

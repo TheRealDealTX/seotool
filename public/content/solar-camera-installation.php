@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar CCTV Camera Installation: Step-by-Step Guide',
     'description' => 'Solar CCTV camera installation step by step: check sun and signal, set mount height, angle the panel, route cables and secure the camera, with a checklist.',

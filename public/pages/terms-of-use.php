@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 require __DIR__ . '/_legal.php';
 legal_page('/terms-of-use/', 'Terms of Use | Solar CCTV Camera', 'Terms of use',
 'The terms that apply when you use SolarCCTVCamera.com, including its solar security camera guides, buying advice and free calculators.', <<<'HTML'

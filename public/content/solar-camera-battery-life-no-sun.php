@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'How Long Do Solar Cameras Last Without Sun? Battery Math',
     'description' => 'How long do solar cameras last without sun? Typically 2 days to 4+ weeks, depending on battery size and activity. Worked examples, plus battery lifespan tips.',

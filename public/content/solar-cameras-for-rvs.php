@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Cameras for RVs: Campsite & Storage Lot Security',
     'description' => 'Solar cameras for RVs and campers: no-drill mounts, Wi-Fi vs 4G, 12 V house-battery options and how to watch your rig at the campsite or in storage.',

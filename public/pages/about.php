@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 page_head([
     'title' => 'About Solar CCTV Camera: Who We Are & How We Work',
     'description' => 'Solar CCTV Camera is an independent, research-based resource for solar security cameras. Learn how we research, how we choose picks and how we make money.',

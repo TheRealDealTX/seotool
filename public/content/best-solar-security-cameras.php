@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Best Solar Security Cameras 2026: 5 Picks by Use Case',
     'description' => 'Best solar security cameras 2026, picked by use case: Wi-Fi kits, built-in solar, 4G LTE and budget multi-cam systems, plus the solar math to size yours.',

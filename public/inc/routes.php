@@ -9,7 +9,7 @@
  *            'tool'    (pages/tools/<source>.php)
  *   section: used for hubs, breadcrumbs and schema
  */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 const SECTIONS = [
     'pillar'          => ['Essentials',      '/solar-camera-guides/#essentials'],

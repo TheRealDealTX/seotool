@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 require __DIR__ . '/_legal.php';
 legal_page('/privacy-policy/', 'Privacy Policy | Solar CCTV Camera', 'Privacy policy',
 'How Solar CCTV Camera collects, uses and protects information when you visit SolarCCTVCamera.com, use our calculators or contact us.', <<<'HTML'

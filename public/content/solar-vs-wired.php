@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar vs Wired Security Cameras: Cost, Pros & Cons',
     'description' => 'Solar vs wired security cameras compared on install, 5-year cost, 24/7 recording, reliability and theft, with a decision matrix for homes, farms and business.',

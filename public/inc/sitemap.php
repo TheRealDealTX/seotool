@@ -1,6 +1,6 @@
 <?php
 /** /sitemap.xml generated from the route registry. */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 header('Content-Type: application/xml; charset=utf-8');
 echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
 echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">' . "\n";

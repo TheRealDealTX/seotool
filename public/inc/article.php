@@ -6,7 +6,7 @@
  *   tool (tool id shown above the body), schema_extra[] (extra graph nodes)
  * Inside body, <!--tool:ID--> embeds an interactive tool widget.
  */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 function tool_widget(string $id, array &$scripts): string
 {

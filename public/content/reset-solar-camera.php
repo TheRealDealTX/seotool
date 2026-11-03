@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'How to Reset a Solar Security Camera (Step by Step)',
     'description' => 'How to reset a solar security camera: find the reset button, choose reboot vs factory reset, re-pair to Wi-Fi, and fix offline or pairing problems.',

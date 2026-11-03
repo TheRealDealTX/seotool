@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 $faq = [
     ['What is a solar CCTV camera?', 'A solar CCTV camera is a security camera powered by a small photovoltaic panel and a rechargeable battery instead of mains power. The panel charges the battery in daylight, the battery runs the camera at night, and footage goes to a microSD card, a hub or the cloud over Wi‑Fi or 4G. Most consumer models record motion events rather than 24/7.'],

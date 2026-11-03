@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Rental Property Outdoor Camera, No Subscription: 2026 Guide',
     'description' => 'Rental property outdoor camera with no subscription: what landlords can legally record, no-drill options for tenants, and which features need a paid plan.',

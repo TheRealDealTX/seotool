@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => 'How Many CCTV Cameras Do I Need? Free Camera Planner',
     'description' => 'Free CCTV camera planner: choose your property and zones to see how many security cameras you need, which types, where solar fits and a typical budget.',

@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 $tools = tools_meta();
 page_head([
     'title' => 'Free Solar Camera Calculators & Planning Tools',

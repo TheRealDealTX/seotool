@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Security Camera Not Charging? 11 Fixes That Work',
     'description' => 'Solar security camera not charging? Work through 11 checks, from cold cutoff and loose connectors to shade, firmware and a multimeter panel test.',

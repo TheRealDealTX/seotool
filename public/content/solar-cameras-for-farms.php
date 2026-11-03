@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Cameras for Farms: Barn, Yard & Pasture Setup Guide',
     'description' => 'Solar cameras for farms: a zone-by-zone plan for barns, fuel tanks, gates and calving pens, plus connectivity across acreage, lighting and budget tiers.',

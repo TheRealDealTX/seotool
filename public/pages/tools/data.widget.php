@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit; ?>
+<?php defined('SCC') || (http_response_code(404) && exit); ?>
 <div class="tool" data-tool="data">
   <div class="tool-head"><?= icon('sd', 22) ?><strong>4G Data &amp; microSD Storage Calculator</strong><span>Plan your SIM and card</span></div>
   <form class="tool-body" autocomplete="off">

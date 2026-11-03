@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Crawl the local preview (php -S 127.0.0.1:8080 -t public tools/dev-router.php) and check every page."""
-import json, re, sys, urllib.request, urllib.error, html
+import json, re, sys, urllib.request, urllib.error, urllib.parse, html
 from urllib.parse import urljoin, urlparse
 BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:8080'
 class NoRedir(urllib.request.HTTPRedirectHandler):
@@ -8,7 +8,7 @@ class NoRedir(urllib.request.HTTPRedirectHandler):
 op = urllib.request.build_opener(NoRedir)
 def get(path):
     try:
-        r = op.open(BASE + path, timeout=20); return r.status, r.read().decode('utf-8', 'replace'), r.headers
+        r = op.open(BASE + urllib.parse.quote(path, safe="/?=&%:#"), timeout=20); return r.status, r.read().decode('utf-8', 'replace'), r.headers
     except urllib.error.HTTPError as e: return e.code, e.read().decode('utf-8', 'replace'), e.headers
 code, sm, _ = get('/sitemap.xml')
 pages = [urlparse(u).path for u in re.findall(r'<loc>([^<]+)</loc>', sm) if '/assets/' not in u]

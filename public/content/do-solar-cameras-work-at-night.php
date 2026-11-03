@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Do Solar Security Cameras Work at Night? Night Vision Guide',
     'description' => 'Do solar security cameras work at night? Yes, the battery powers them after dark. Compare IR and color night vision, typical ranges and night settings.',

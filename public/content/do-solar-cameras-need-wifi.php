@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Do Solar Cameras Need WiFi? 5 Ways to Connect (or Not)',
     'description' => 'Do solar cameras need WiFi? No. Compare Wi-Fi, 4G LTE, base stations and offline microSD recording, plus how to test signal at your mounting spot.',

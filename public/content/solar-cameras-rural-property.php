@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Cameras for Rural Property: Off-Grid Setup Guide',
     'description' => 'Solar cameras for rural property: how to size off-grid power, check cell coverage, stop wildlife false alerts and protect vacant land or an empty home.',

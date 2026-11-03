@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Street Light With CCTV Camera Price: 2026 Guide',
     'description' => 'Solar street light with CCTV camera price ranges, how to spot inflated lumen and wattage claims, pole height and spacing, and when separate units are better.',

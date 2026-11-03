@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 return [
     'panel-angle' => ['name' => 'Solar Panel Angle Calculator', 'short' => 'Panel Angle Calculator', 'path' => '/tools/solar-panel-angle-calculator/', 'icon' => 'angle',
         'blurb' => 'Best tilt and direction for your solar camera panel, by latitude and season.'],

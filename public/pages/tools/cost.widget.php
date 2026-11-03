@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit; ?>
+<?php defined('SCC') || (http_response_code(404) && exit); ?>
 <div class="tool" data-tool="cost">
   <div class="tool-head"><?= icon('dollar', 22) ?><strong>Solar vs Wired Camera Cost Calculator</strong><span>Total cost of ownership</span></div>
   <form class="tool-body" autocomplete="off">

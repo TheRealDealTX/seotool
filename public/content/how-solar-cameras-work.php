@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'How Do Solar Powered Security Cameras Work? Explained',
     'description' => 'How do solar powered security cameras work? Follow the energy from panel to battery to camera, with real watt-hour numbers, night operation and 24/7 limits.',

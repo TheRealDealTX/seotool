@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => 'Security Camera Coverage Calculator: FOV & Pixel Density',
     'description' => 'Calculate how wide a security camera sees at any distance and whether it can detect, recognize or identify faces and plates, using DORI pixel density.',

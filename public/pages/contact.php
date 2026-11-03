@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 $status = $_GET['sent'] ?? '';
 $t = time();
 $sig = hash_hmac('sha256', (string) $t, config('form_secret', 'scc-form-' . SITE_ORIGIN));

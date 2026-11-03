@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => 'Solar Camera Battery Calculator: Panel Size & Runtime',
     'description' => 'Free solar camera battery calculator: estimate daily power use, solar harvest, panel size needed and how many days your camera lasts without sun.',

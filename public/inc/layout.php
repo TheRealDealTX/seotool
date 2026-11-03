@@ -1,6 +1,6 @@
 <?php
 /** Shared document shell: <head>, header/nav, footer. */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 function org_schema(): array
 {

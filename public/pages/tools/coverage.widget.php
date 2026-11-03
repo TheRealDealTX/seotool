@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit; ?>
+<?php defined('SCC') || (http_response_code(404) && exit); ?>
 <div class="tool" data-tool="coverage">
   <div class="tool-head"><?= icon('eye', 22) ?><strong>Camera Coverage &amp; Detail Calculator</strong><span>Field of view + pixel density</span></div>
   <form class="tool-body" autocomplete="off">

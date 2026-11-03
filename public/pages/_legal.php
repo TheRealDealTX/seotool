@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 function legal_page(string $path, string $title, string $h1, string $desc, string $html): void
 {
     page_head(['title' => $title, 'description' => $desc, 'path' => $path,

@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 $groups = [
     ['essentials', 'Start here', 'book', ['pillar', 'compare'], 'The core guides every solar camera buyer should read first.'],
     ['guides', 'Power, sun & performance', 'sun', ['guides'], 'Sunlight, batteries, winter, night vision, Wi‑Fi and the questions owners ask most.'],

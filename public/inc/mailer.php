@@ -4,7 +4,7 @@
  * Credentials come from config(): smtp_host, smtp_port, smtp_user, smtp_pass.
  * Falls back to PHP mail() when no password is configured.
  */
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 
 function smtp_send(string $to, string $subject, string $body, string $replyTo = ''): bool
 {

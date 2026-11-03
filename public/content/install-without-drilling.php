@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'How to Install a Solar Camera Without Drilling (8 Ways)',
     'description' => 'How to install a solar camera without drilling: gutter mounts, fence straps, siding hooks, poles and clamps, with weight limits, theft tips and steps.',

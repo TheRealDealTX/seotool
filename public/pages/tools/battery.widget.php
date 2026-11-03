@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit; ?>
+<?php defined('SCC') || (http_response_code(404) && exit); ?>
 <div class="tool" data-tool="battery">
   <div class="tool-head"><?= icon('battery', 22) ?><strong>Solar Camera Battery &amp; Power Calculator</strong><span>Energy in vs energy out</span></div>
   <form class="tool-body" autocomplete="off">

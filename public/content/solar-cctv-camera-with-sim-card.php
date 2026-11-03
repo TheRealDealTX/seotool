@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar CCTV Camera with SIM Card: 4G Solar Buying Guide',
     'description' => 'Choosing a solar CCTV camera with SIM card? Check LTE bands, SIM plans, APN setup, signal and data use, and size the panel for a 4G camera without Wi-Fi.',

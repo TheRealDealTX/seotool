@@ -1,5 +1,5 @@
 <?php
-defined('SCC') || exit;
+defined('SCC') || (http_response_code(404) && exit);
 if (!function_exists('page_head')) require ROOT . '/inc/layout.php';
 page_head(['title' => 'Page not found | Solar CCTV Camera', 'description' => 'This page could not be found.', 'path' => $_SERVER['REQUEST_URI'] ?? '/', 'noindex' => true]);
 ?>

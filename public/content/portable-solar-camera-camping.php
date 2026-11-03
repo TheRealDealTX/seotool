@@ -1,4 +1,4 @@
-<?php defined('SCC') || exit;
+<?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Portable Solar Camera for Camping: Power & Setup Guide',
     'description' => 'Portable solar camera for camping: mounting options, Wh math for a weekend of power, campsite connectivity without Wi-Fi, and campground etiquette.',
