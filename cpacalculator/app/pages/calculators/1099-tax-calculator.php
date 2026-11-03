@@ -2,8 +2,8 @@
 defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
-$P['title'] = "1099 Tax Calculator $Y — Self-Employed Tax Estimator with Deductions | CPA Calculator";
-$P['description'] = "Free $Y 1099 tax calculator with deductions. Estimate self-employment tax, federal income tax, the QBI deduction, write-offs and quarterly estimated payments for freelancers and contractors.";
+$P['title'] = "1099 Tax Calculator $Y with Deductions | CPA Calculator";
+$P['description'] = "Free $Y 1099 tax calculator with deductions. Estimate self-employment tax, income tax, write-offs and quarterly payments for freelancers and contractors.";
 $P['scripts'] = ['/assets/js/tools/1099-tax-calculator.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

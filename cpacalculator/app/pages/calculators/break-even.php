@@ -1,7 +1,7 @@
 <?php
 defined('CPA') or exit;
 $P['title'] = "Break Even Calculator — Break-Even Point in Units & Sales | CPA Calculator";
-$P['description'] = "Free break even calculator. Find the break-even point in units and sales dollars, contribution margin, units needed for a target profit and margin of safety, with a chart.";
+$P['description'] = "Free break even calculator. Find your break-even point in units and sales dollars, contribution margin, units for a target profit and margin of safety, with a chart.";
 $P['scripts'] = ['/assets/js/tools/break-even.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

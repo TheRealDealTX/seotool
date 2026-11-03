@@ -2,8 +2,8 @@
 defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
-$P['title'] = "Federal Income Tax Calculator $Y — Free IRS Tax Estimator | CPA Calculator";
-$P['description'] = "Free $Y federal income tax calculator. Estimate your federal tax, effective rate, marginal bracket, refund and take-home pay with the new IRS brackets and standard deduction.";
+$P['title'] = "Federal Income Tax Calculator $Y — Free IRS Tax Estimator";
+$P['description'] = "Free $Y federal income tax calculator. Estimate your federal tax, effective rate, bracket, refund and take-home pay with the new IRS brackets and deductions.";
 $P['scripts'] = ['/assets/js/tools/federal-income-tax.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

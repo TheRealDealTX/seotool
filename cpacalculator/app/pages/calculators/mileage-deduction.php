@@ -3,7 +3,7 @@ defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $P['title'] = "Mileage Deduction Calculator $Y — IRS Rate " . ($y['mileage'] * 100) . "¢ per Mile | CPA Calculator";
-$P['description'] = "Free $Y mileage deduction and reimbursement calculator. Apply the IRS " . ($y['mileage'] * 100) . "¢ business rate, log trips, compare actual car expenses and estimate your tax savings.";
+$P['description'] = "Free $Y mileage deduction and reimbursement calculator. Use the IRS " . ($y['mileage'] * 100) . "¢ business rate, log trips, compare actual car costs and estimate tax savings.";
 $P['scripts'] = ['/assets/js/tools/mileage-deduction.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

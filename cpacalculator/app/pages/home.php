@@ -3,7 +3,7 @@ defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $P['title'] = "CPA Calculator — Free $Y Tax & Accounting Calculators";
-$P['description'] = "CPA Calculator offers free $Y tax calculators built on IRS tables: federal income tax, 1099 and self-employment tax, quarterly estimates, paycheck, refund and business tools.";
+$P['description'] = "CPA Calculator offers free $Y tax calculators built on IRS tables: federal income tax, 1099 and self-employment tax, quarterly estimates, paycheck and refunds.";
 $P['scripts'] = ['/assets/js/tools/home.js'];
 $P['bodyClass'] = 'home';
 $P['schema'][] = ['@type' => 'ItemList', 'name' => 'CPA Calculator tools', 'itemListElement' => array_map(fn($s, $i) => [

@@ -3,7 +3,7 @@ defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $P['title'] = "Capital Gains Tax Calculator $Y — Short & Long-Term Gains | CPA Calculator";
-$P['description'] = "Free $Y capital gains tax calculator. Estimate tax on stocks, crypto, real estate or a home sale with the 0%, 15% and 20% rates, NIIT, losses and the home exclusion.";
+$P['description'] = "Free $Y capital gains tax calculator. Estimate tax on stocks, crypto, real estate or a home sale using the 0%, 15% and 20% rates, NIIT and loss rules.";
 $P['scripts'] = ['/assets/js/tools/capital-gains-tax.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

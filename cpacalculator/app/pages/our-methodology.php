@@ -2,7 +2,7 @@
 defined('CPA') or exit;
 $Y = TAX_YEAR; $y = $TAX['years'][(string) $Y];
 $P['title'] = 'Our Methodology — How CPA Calculator Builds Accurate Tax Calculators';
-$P['description'] = "How CPA Calculator builds, tests and updates its tax calculators: IRS sources, the $Y figures we use, order of operations, assumptions, limitations and our review process.";
+$P['description'] = "How CPA Calculator builds, tests and updates its tax calculators: IRS sources, the $Y figures we use, order of operations, assumptions and limitations.";
 $P['pageType'] = 'AboutPage';
 echo simple_hero('Our methodology', 'Exactly how CPA Calculator turns IRS rules into calculators you can trust — the sources, the math, the assumptions and the limits.', 'Our Methodology', '2026-11-03');
 ?>

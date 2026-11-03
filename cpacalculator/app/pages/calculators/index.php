@@ -2,7 +2,7 @@
 defined('CPA') or exit;
 $Y = TAX_YEAR;
 $P['title'] = "All Tax & Accounting Calculators ($Y) | CPA Calculator";
-$P['description'] = "Browse every free CPA Calculator tool: federal income tax, 1099 and self-employment tax, quarterly estimates, paycheck, refund, capital gains, S corp, depreciation and more.";
+$P['description'] = "Browse every free CPA Calculator tool: federal income tax, 1099 and self-employment tax, quarterly estimates, paycheck, capital gains, S corp and more.";
 $P['pageType'] = 'CollectionPage';
 $P['schema'][] = ['@type' => 'ItemList', 'itemListElement' => array_map(fn($s, $i) => ['@type' => 'ListItem', 'position' => $i + 1, 'name' => TOOLS[$s][0], 'url' => SITE_ORIGIN . tool_url($s)], array_keys(TOOLS), array_keys(array_keys(TOOLS)))];
 $cats = [];

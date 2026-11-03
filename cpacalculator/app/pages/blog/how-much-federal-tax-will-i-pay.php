@@ -9,9 +9,9 @@ $ex = $rows['single'][75000];
 $top_slice = 0;
 foreach ($ex['layers'] as $l) if ($l['amount'] > 0) $top_slice = $l['amount'];
 $table = function (string $st) use ($rows, $sal_link, $pct): string {
-  $h = '<div class="table-wrap"><table><caption class="sr-only">' . TAX_YEAR . ' federal income tax by salary — ' . e(status_label($st)) . '</caption><thead><tr><th>Salary</th><th class="n">Taxable income</th><th class="n">Federal income tax</th><th class="n">Effective rate</th><th class="n">Marginal rate</th><th class="n">FICA</th><th class="n">Take-home</th></tr></thead><tbody>';
+  $h = '<div class="table-wrap"><table><caption class="sr-only">' . TAX_YEAR . ' federal income tax by salary — ' . e(status_label($st)) . '</caption><thead><tr><th>Salary</th><th class="n">Taxable</th><th class="n">Income tax</th><th class="n">Effective</th><th class="n">Marginal</th><th class="n">FICA</th><th class="n">Take-home</th></tr></thead><tbody>';
   foreach ($rows[$st] as $amt => $r) {
-    $h .= '<tr><td><b>' . $sal_link($amt) . '</b></td><td class="n">' . money($r['taxable']) . '</td><td class="n">' . money($r['tax']) . '</td><td class="n">' . $pct($r['effective']) . '</td><td class="n">' . $pct($r['marginal'], 0) . '</td><td class="n">' . money($r['fica']) . '</td><td class="n">' . money($r['net']) . '</td></tr>';
+    $h .= '<tr><td><b>' . $sal_link($amt) . '</b></td><td class="n">' . money($r['taxable']) . '</td><td class="n">' . money($r['tax']) . '</td><td class="n">' . $pct($r['effective']) . '</td><td class="n">' . ($r['taxable'] > 0 ? $pct($r['marginal'], 0) : '0%') . '</td><td class="n">' . money($r['fica']) . '</td><td class="n">' . money($r['net']) . '</td></tr>';
   }
   return $h . '</tbody></table></div>';
 };

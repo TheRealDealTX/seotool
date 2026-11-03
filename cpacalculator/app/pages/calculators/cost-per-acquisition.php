@@ -1,7 +1,7 @@
 <?php
 defined('CPA') or exit;
 $P['title'] = "CPA Formula & Cost Per Acquisition Calculator (Marketing) | CPA Calculator";
-$P['description'] = "The CPA formula explained: cost per acquisition = total cost ÷ conversions. Free CPA calculator with CPC, CTR, conversion rate, ROAS, ROI, target CPA and max CPC.";
+$P['description'] = "The CPA formula explained: cost per acquisition = total cost ÷ conversions. Free CPA calculator with CPC, CTR, conversion rate, ROAS, ROI and target CPA.";
 $P['scripts'] = ['/assets/js/tools/cost-per-acquisition.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

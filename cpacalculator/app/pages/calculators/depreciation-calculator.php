@@ -3,7 +3,7 @@ defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $P['title'] = "Depreciation Calculator $Y — MACRS, Straight-Line & Section 179 | CPA Calculator";
-$P['description'] = "Free depreciation calculator with MACRS tables, straight-line, double-declining balance and sum-of-years-digits, plus Section 179 and 100% bonus depreciation for $Y.";
+$P['description'] = "Free depreciation calculator with MACRS tables, straight-line, double-declining balance and sum-of-years-digits, plus Section 179 and $Y bonus depreciation.";
 $P['scripts'] = ['/assets/js/tools/depreciation-calculator.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

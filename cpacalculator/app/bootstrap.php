@@ -390,7 +390,7 @@ function post_open(string $slug, string $updated = ''): string {
   global $P;
   [$t, $d, $date, $img, , $min] = POSTS[$slug];
   $mod = $updated ?: $date;
-  $P['title'] = $t . ' | CPA Calculator';
+  $P['title'] = mb_strlen($t) > 58 ? $t : $t . ' | CPA Calculator';
   $P['ogTitle'] = $t;
   $P['description'] = $d;
   $P['ogType'] = 'article';

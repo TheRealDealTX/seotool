@@ -4,7 +4,7 @@ $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $rate = $y['homeOfficeSimplifiedRate'];
 $P['title'] = "Home Office Deduction Calculator $Y — Simplified vs Regular Method | CPA Calculator";
-$P['description'] = "Free $Y home office deduction calculator. Compare the simplified \${$rate}/sq ft method with the regular method (Form 8829), including depreciation, and see your tax savings.";
+$P['description'] = "Free $Y home office deduction calculator. Compare the simplified \${$rate}/sq ft method with the regular method and depreciation, and see your federal tax savings.";
 $P['scripts'] = ['/assets/js/tools/home-office-deduction.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

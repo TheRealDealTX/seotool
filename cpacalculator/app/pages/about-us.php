@@ -1,7 +1,7 @@
 <?php
 defined('CPA') or exit;
 $P['title'] = 'About CPA Calculator — Making CPA-Level Tax Tools Simple';
-$P['description'] = 'CPA Calculator builds free, accurate tax and accounting calculators that explain the math in plain English — for employees, freelancers, side hustlers and small businesses.';
+$P['description'] = 'CPA Calculator builds free, accurate tax and accounting calculators that explain the math in plain English for employees, freelancers and small businesses.';
 $P['pageType'] = 'AboutPage';
 echo simple_hero('Making CPA-level tools simple for everyone', 'You shouldn’t need an accounting degree to understand your own numbers. That’s why we built CPA Calculator.', 'About Us');
 ?>

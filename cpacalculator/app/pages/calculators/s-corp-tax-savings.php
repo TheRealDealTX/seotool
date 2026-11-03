@@ -3,7 +3,7 @@ defined('CPA') or exit;
 $Y = TAX_YEAR;
 $y = $TAX['years'][(string) $Y];
 $P['title'] = "S Corp Tax Calculator $Y — LLC vs S Corp Tax Savings | CPA Calculator";
-$P['description'] = "Free $Y S corp tax calculator. Compare LLC or sole proprietor taxes with an S corporation paying a reasonable salary and see your real savings after payroll costs.";
+$P['description'] = "Free $Y S corp tax calculator. Compare LLC or sole prop taxes with an S corporation paying a reasonable salary and see your savings after payroll costs.";
 $P['scripts'] = ['/assets/js/tools/s-corp-tax-savings.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 

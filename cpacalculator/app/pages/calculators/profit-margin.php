@@ -1,7 +1,7 @@
 <?php
 defined('CPA') or exit;
 $P['title'] = "Profit Margin Calculator — Margin, Markup & Selling Price | CPA Calculator";
-$P['description'] = "Free profit margin calculator: find gross margin, markup and profit from cost and price, the price for a target margin or markup, and gross, operating and net margin.";
+$P['description'] = "Free profit margin calculator: get margin, markup and profit from cost and price, the price for a target margin or markup, plus gross, operating and net margin.";
 $P['scripts'] = ['/assets/js/tools/profit-margin.js'];
 $P['modified'] = date('Y-m-d', filemtime(__FILE__));
 
