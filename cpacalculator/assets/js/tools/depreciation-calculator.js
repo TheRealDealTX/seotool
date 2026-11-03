@@ -116,15 +116,15 @@
 
     var segs = macrs ? [
       { label: 'Section 179', value: s179, color: '#f59e0b' },
-      { label: 'Bonus depreciation (' + bonusRate + '%)', value: bonus, color: '#6366f1' },
-      { label: 'Regular MACRS, year 1', value: y1 - s179 - bonus, color: '#0e7490' },
-      { label: 'Depreciated in later years', value: later, color: '#10b981' },
-      { label: 'Personal use (not deductible)', value: Math.max(0, v('cost') - basis), color: '#cbd5e1' }
-    ] : [
-      { label: 'Year-1 depreciation', value: y1, color: '#0e7490' },
+      { label: 'Bonus (' + bonusRate + '%)', value: bonus, color: '#6366f1' },
+      { label: 'MACRS year 1', value: y1 - s179 - bonus, color: '#0e7490' },
       { label: 'Later years', value: later, color: '#10b981' },
-      { label: 'Salvage value', value: salvage, color: '#cbd5e1' },
-      { label: 'Personal use (not deductible)', value: Math.max(0, v('cost') - basis), color: '#e2e8f0' }
+      { label: 'Personal use', value: Math.max(0, v('cost') - basis), color: '#cbd5e1' }
+    ] : [
+      { label: 'Year 1', value: y1, color: '#0e7490' },
+      { label: 'Later years', value: later, color: '#10b981' },
+      { label: 'Salvage', value: salvage, color: '#cbd5e1' },
+      { label: 'Personal use', value: Math.max(0, v('cost') - basis), color: '#e2e8f0' }
     ];
     segs = segs.filter(function (x) { return x.value > 0.5; });
     C.donut(C.$('[data-donut]', tool), segs);

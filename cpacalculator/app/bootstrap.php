@@ -206,6 +206,7 @@ function tax_data_script(): string {
 
 function render_page(array $P, string $body): void {
   $title = $P['title'];
+  if (mb_strlen($title) > 66 && str_ends_with($title, ' | CPA Calculator')) $title = substr($title, 0, -17);
   $desc = $P['description'];
   $canon = SITE_ORIGIN . ($P['canonical'] ?? $P['path']);
   $img = SITE_ORIGIN . ($P['image'] ?? '/assets/img/og-cpa-calculator.png');
@@ -363,7 +364,7 @@ function tool_hero(string $slug, string $h1, string $lede, array $badges): strin
 function money_field(string $name, string $label, $value = '', string $tip = '', string $hint = '', string $pre = '$'): string {
   $id = 'f-' . $name;
   return '<div class="field"><label for="' . $id . '">' . e($label) . ($tip ? ' <span class="tip" tabindex="0" data-tip="' . e($tip) . '">?</span>' : '') . '</label>' .
-    '<div class="inp ' . ($pre === '%' ? 'suf" data-suf="%' : ($pre === '' ? '' : 'pre" data-pre="' . e($pre))) . '"><input id="' . $id . '" name="' . e($name) . '" inputmode="decimal" autocomplete="off" data-money value="' . e($value === '' ? '' : (is_numeric($value) && $pre !== '%' ? number_format((float) $value) : $value)) . '" placeholder="0"></div>' .
+    '<div class="inp ' . ($pre === '%' ? 'suf" data-suf="%' : ($pre === '' ? '' : 'pre" data-pre="' . e($pre))) . '"><input id="' . $id . '" name="' . e($name) . '" inputmode="decimal" autocomplete="off" data-money value="' . e($value === '' ? '' : (is_numeric($value) && $pre !== '%' ? number_format((float) $value, floor((float) $value) == (float) $value ? 0 : 2) : $value)) . '" placeholder="0"></div>' .
     ($hint ? '<span class="hint">' . $hint . '</span>' : '') . '</div>';
 }
 

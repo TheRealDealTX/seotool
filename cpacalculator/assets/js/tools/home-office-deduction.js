@@ -75,6 +75,6 @@
       '<li class="total"><span>Best deduction (' + (regWins ? 'regular' : 'simplified') + ')</span><b>' + C.money(best) + '</b></li>';
 
     C.set(tool, 'limitnote', (carry > 0.5 || simple < simpleRaw ? 'Your deduction is capped by business profit (gross-income limitation). ' : '') +
-      'Estimate only — tax savings include federal income tax and self-employment tax at your ' + Math.round(withDed.marginal * 100) + '% bracket; state tax not included. Under the regular method, the business share of mortgage interest and property tax moves off Schedule A.');
+      'Estimate only — tax savings include federal income tax and self-employment tax at your ' + Math.round(withDed.marginal * 100) + '% bracket; state tax not included.' + (own ? ' Under the regular method, the business share of mortgage interest and property tax moves off Schedule A.' : ''));
   });
 })();

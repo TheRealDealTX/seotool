@@ -398,3 +398,6 @@ details[open] .faq-x::after{transform:rotate(0)}
 }
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 .tool-grid.mini{grid-template-columns:1fr}
+[hidden]{display:none!important}
+.tool-form,.tool-out,.tool-out-inner,.legend,.donut-wrap{min-width:0}
+.legend span{overflow-wrap:anywhere}
