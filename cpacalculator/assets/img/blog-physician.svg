@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t"><title id="t">1099 physician tax guide: stethoscope and receipt illustration</title><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern><radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#10b981" stop-opacity=".22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect width="1200" height="675" fill="#0b1220"/><rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#glow)"/>
+<g font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<text x="72" y="118" fill="#34d399" font-size="22" font-weight="700" letter-spacing="4">LOCUMS · MOONLIGHTING · CONTRACT</text>
+<text x="72" y="200" fill="#fff" font-size="62" font-weight="800">1099 taxes for</text>
+<text x="72" y="276" fill="#10b981" font-size="62" font-weight="800">physicians</text>
+<text x="72" y="340" fill="#94a3b8" font-size="26" font-weight="500">SE tax, QBI limits, Solo 401(k), estimates</text>
+<g transform="translate(72 400) scale(.92)" font-size="20" font-weight="700">
+<rect width="200" height="52" rx="26" fill="#10b981" fill-opacity=".14" stroke="#10b981" stroke-opacity=".5"/><text x="100" y="33" fill="#6ee7b7" text-anchor="middle">Schedule C</text>
+<rect x="216" width="200" height="52" rx="26" fill="#0e7490" fill-opacity=".18" stroke="#22d3ee" stroke-opacity=".45"/><text x="316" y="33" fill="#67e8f9" text-anchor="middle">Schedule SE</text>
+<rect x="432" width="200" height="52" rx="26" fill="#f59e0b" fill-opacity=".14" stroke="#f59e0b" stroke-opacity=".55"/><text x="532" y="33" fill="#fcd34d" text-anchor="middle">Form 1040-ES</text>
+</g>
+</g>
+<g transform="translate(928 110)">
+<path d="M0 0h250v430l-31-20-31 20-32-20-31 20-31-20-31 20-32-20-31 20z" fill="#f8fafc"/>
+<rect x="30" y="34" width="120" height="16" rx="8" fill="#0e7490"/>
+<rect x="30" y="74" width="190" height="10" rx="5" fill="#cbd5e1"/><rect x="30" y="100" width="150" height="10" rx="5" fill="#cbd5e1"/>
+<rect x="30" y="140" width="110" height="10" rx="5" fill="#94a3b8"/><rect x="170" y="140" width="50" height="10" rx="5" fill="#94a3b8"/>
+<rect x="30" y="170" width="90" height="10" rx="5" fill="#94a3b8"/><rect x="170" y="170" width="50" height="10" rx="5" fill="#94a3b8"/>
+<rect x="30" y="200" width="125" height="10" rx="5" fill="#94a3b8"/><rect x="170" y="200" width="50" height="10" rx="5" fill="#94a3b8"/>
+<rect x="30" y="230" width="100" height="10" rx="5" fill="#94a3b8"/><rect x="170" y="230" width="50" height="10" rx="5" fill="#94a3b8"/>
+<path d="M30 270h190" stroke="#0b1220" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="30" y="292" width="80" height="16" rx="8" fill="#0b1220"/><rect x="150" y="290" width="70" height="20" rx="6" fill="#10b981"/>
+<rect x="30" y="336" width="190" height="40" rx="10" fill="#fef3c7"/><text x="125" y="363" fill="#b45309" font-size="20" font-weight="800" text-anchor="middle" font-family="'Plus Jakarta Sans', Arial, sans-serif">1099-NEC</text>
+</g>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M720 170v120a60 60 0 0 0 120 0V170" stroke="#10b981" stroke-width="12"/>
+<path d="M708 160h24M828 160h24" stroke="#e2e8f0" stroke-width="10"/>
+<path d="M780 350v90a45 45 0 0 0 90 0v-10" stroke="#0e7490" stroke-width="12"/>
+</g>
+<circle cx="870" cy="410" r="36" fill="#0b1220" stroke="#f59e0b" stroke-width="10"/><circle cx="870" cy="410" r="13" fill="#f59e0b"/>
+<path d="M40 640h1120" stroke="#1e293b" stroke-width="2"/>
+</svg>
