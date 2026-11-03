@@ -1,35 +1,36 @@
 #!/bin/bash
-# Deploy the static build to the Hostinger Agency website (UID Y2Ln5wYMP).
+# Deploy public/ to the Hostinger Agency website for solarcctvcamera.com.
 #
-# The platform's archive importer only accepts WordPress archives, so this
-# pushes the built files one by one through the website's File Browser TUS
-# endpoint. Get the three credentials from the Hostinger API call
-# `agency-hosting_generateUploadURLV1` (they expire after a few hours):
+# The platform has no git/SSH deploy for Agency php-fpm sites, so this pushes
+# every file through the website's File Browser TUS endpoint. Get the three
+# credentials from the Hostinger API operation
+# `agency-hosting_files_generate-upload-url` (they expire after a few hours):
 #
-#   export HR_FB_URL='https://…/api/tus'      # "url" from the response
-#   export HR_FB_AUTH='…'                     # "auth_key"
-#   export HR_FB_REST='…'                     # "rest_auth_key"
-#   python3 build.py && python3 validate.py && ./deploy.sh
+#   export FB_URL='https://…/api/tus'   # "url"
+#   export FB_AUTH='…'                  # "auth_key"
+#   export FB_REST='…'                  # "rest_auth_key"
+#   python3 tools/validate.py && ./deploy.sh            # everything
+#   ./deploy.sh public/assets/css/site.css              # or just some files
 #
-# Then clear the site cache (`agency-hosting_clearWebsiteCacheV1`, or hPanel).
+# Then clear the cache (`agency-hosting_cache_clear-website`).
 set -u
-: "${HR_FB_URL:?set HR_FB_URL}" "${HR_FB_AUTH:?set HR_FB_AUTH}" "${HR_FB_REST:?set HR_FB_REST}"
+: "${FB_URL:?set FB_URL}" "${FB_AUTH:?set FB_AUTH}" "${FB_REST:?set FB_REST}"
 cd "$(dirname "$0")" || exit 1
 
-fb() { curl -sS --max-time 300 -H "X-Auth: $HR_FB_AUTH" -H "X-Auth-Rest: $HR_FB_REST" "$@"; }
-
-ok=0; fail=0
-while IFS= read -r f; do
-  rel=${f#./}
+up() {
+  local f=$1 rel=${1#public/} size c p
   size=$(stat -c%s "$f")
-  c=$(fb -X POST "$HR_FB_URL/public_html/$rel?override=true" -H "Tus-Resumable: 1.0.0" \
-        -H "Upload-Length: $size" -H "Upload-Offset: 0" -o /dev/null -w "%{http_code}")
-  p=$(fb -X PATCH "$HR_FB_URL/public_html/$rel?override=true" -H "Tus-Resumable: 1.0.0" \
-        -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
-        --data-binary "@$f" -o /dev/null -w "%{http_code}")
-  if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
-done < <(find . -type f \( -path './.git/*' -o -path './dist/*' -o -path './templates/*' \
-          -o -path './content/*' -o -path './backup/*' -o -name '*.py' -o -path '*/__pycache__/*' \
-          -o -name 'README.md' -o -name '.gitignore' -o -name 'deploy.sh' \) -prune -o -type f -print | sort)
+  c=$(curl -sS --max-time 120 -X POST "$FB_URL/public_html/$rel?override=true" -H "X-Auth: $FB_AUTH" -H "X-Auth-Rest: $FB_REST" \
+      -H "Tus-Resumable: 1.0.0" -H "Upload-Length: $size" -H "Upload-Offset: 0" -o /dev/null -w "%{http_code}")
+  p=$(curl -sS --max-time 300 -X PATCH "$FB_URL/public_html/$rel?override=true" -H "X-Auth: $FB_AUTH" -H "X-Auth-Rest: $FB_REST" \
+      -H "Tus-Resumable: 1.0.0" -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" \
+      --data-binary "@$f" -o /dev/null -w "%{http_code}")
+  [ "$c" = 201 ] && [ "$p" = 204 ] && return 0
+  echo "FAIL $c/$p $rel"; return 1
+}
+
+if [ $# -gt 0 ]; then files=("$@"); else mapfile -t files < <(find public -type f ! -name 'config.local.php' | sort); fi
+ok=0; fail=0
+for f in "${files[@]}"; do if up "$f"; then ok=$((ok+1)); else fail=$((fail+1)); fi; done
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]

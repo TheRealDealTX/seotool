@@ -1,0 +1,9 @@
+# The Hostinger php-fpm platform ignores .htaccess; routing lives in index.php.
+# Kept for portability to Apache hosts.
+Options -Indexes
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L]
+RewriteRule ^(inc|content|pages)/ index.php [L]
+</IfModule>

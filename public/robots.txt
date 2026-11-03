@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /inc/
+Disallow: /content/
+Disallow: /pages/
+Disallow: /contact/send
+
+Sitemap: https://solarcctvcamera.com/sitemap.xml

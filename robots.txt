@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /templates/
-Disallow: /home.html
-
-Sitemap: https://huttoroofs.com/sitemap.xml
