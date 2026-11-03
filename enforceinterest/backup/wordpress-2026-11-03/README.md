@@ -24,6 +24,9 @@ its `.h5g/` folder (website UID `1WCLLtRIk`):
 - `enforceinterest-form-submissions-2026-11-03.csv` — the 50 Elementor form submissions
   (`wp_e_submissions*` tables) exported to CSV, May 1 – Nov 2, 2026.
 
+The WordPress website `UXdKlalnO` and its database were deleted on 2026-11-03 after the domain moved,
+so this folder plus the three files above are now the only copies.
+
 The dump and zip were produced by a one-off, token-protected PHP script that was deleted from the server
 immediately afterwards (verified 404).
 

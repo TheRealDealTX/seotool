@@ -89,6 +89,19 @@ The host serves existing files directly, ignores `.htaccess`, and sends `/` and 
 ETag/Last-Modified, and returns real 404s. Never put an `index.html` or page folders at the root of
 `public_html`; `validate.py` checks this.
 
+## Deployment log (2026-11-03)
+
+1. WordPress backed up (see `backup/wordpress-2026-11-03/README.md`); DB dump, files zip and the
+   50 form submissions (CSV) are in the new website's `.h5g/` folder (not web-accessible).
+2. New php-fpm website `1WCLLtRIk` created and deployed with `./deploy.sh --prune`; verified on its
+   temporary domain (all 36 pages 200, redirects, feed, sitemap, 404s, SMTP login and a test form email).
+3. enforceinterest.com unlinked from WordPress `UXdKlalnO` and made primary on `1WCLLtRIk`; caches cleared.
+4. WordPress website `UXdKlalnO` (and its database) deleted.
+
+The website's storage root is not writable through the File Browser or by PHP, so the SMTP config lives at
+`public_html/_private/mail-config.php` and the form log at `public_html/_private/messages.log.php`; both are
+PHP files that output nothing (the log returns 404) when requested. `deploy.sh --prune` never touches `_private/`.
+
 `contact.php` validates the form (honeypot, time trap, per-IP rate limit, link/spam filter, PDF/JPG/PNG
 attachments up to 5 files / 10 MB), sends it to info@enforceinterest.com over SMTP (smtp.hostinger.com:465)
 with a confirmation to the sender, and logs a copy outside the web root. SMTP credentials are read from
