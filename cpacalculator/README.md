@@ -67,3 +67,8 @@ export FB_URL=… FB_AUTH=… FB_REST=…   # from agency-hosting_files_generate
 ```
 
 Then clear the site cache in hPanel if pages look stale.
+
+## Status
+
+Live since 2026-11-03 on Agency website `17XGw98Uo` (cpacalculator.com). The WordPress website it replaced
+(`6EmAVU1aW`) was deleted after a full backup — see `../backup/cpacalculator-wordpress-2026-11-03/`.

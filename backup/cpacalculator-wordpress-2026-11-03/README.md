@@ -27,3 +27,9 @@ and never the contents. To restore: download it via hPanel's file manager and st
 1. Create a WordPress website on the Agency plan.
 2. Extract the zip over its `public_html/`, set `wp-config.php` to the new database credentials.
 3. Import the SQL dump, then move cpacalculator.com to it and clear the cache.
+
+## Status
+
+On 2026-11-03 cpacalculator.com was moved to the new website (UID `17XGw98Uo`) and the WordPress
+website (UID `6EmAVU1aW`) and its database were deleted. This directory plus the zip above are now the
+only copies of the WordPress install.
