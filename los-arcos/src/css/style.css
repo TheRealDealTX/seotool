@@ -483,3 +483,4 @@ form.is-done{display:none}
   .js .reveal{opacity:1;transform:none}
   .hero__slide img{transform:none!important}
 }
+@media (max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(20,18,14,.35) 0%,rgba(20,18,14,.45) 40%,rgba(20,18,14,.8) 100%)}}

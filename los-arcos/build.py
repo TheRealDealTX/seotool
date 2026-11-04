@@ -698,6 +698,7 @@ def build_tours():
   </div>
 </section>
 <section class="section section--sand">
+  <h2 class="sr-only">Ways to tour</h2>
   <div class="wrap grid-3">
     <div class="card reveal"><div class="icon-chip">{icon("cube")}</div><h3>3D walkthroughs</h3><p>Move room to room and see how each layout flows before you visit.</p></div>
     <div class="card reveal" data-delay="1"><div class="icon-chip">{icon("play")}</div><h3>Video tours</h3><p>Prefer a guided look? Ask us for a live video tour with a leasing professional.</p></div>
