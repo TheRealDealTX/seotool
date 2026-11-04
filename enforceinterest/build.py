@@ -43,6 +43,7 @@ NAV = [
         ("/post-appraisal-interest-recovery/", "Post-appraisal interest", "Hinojos: the award doesn&rsquo;t end it"),
         ("/long-term-claim-supplements/", "Claim supplements", "Late supplement payments and interest"),
         ("/does-my-claim-qualify/", "Does my claim qualify?", "Two-minute eligibility check"),
+        ("/claim-documentation-toolkit/", "Documentation toolkit", "Gear that makes a claim easier to prove"),
     ]),
     ("Tools", "wide", [(t["path"], t["short"], t["blurb"]) for t in tools.TOOL_LIST]),
     ("Blog", "/blog/", None),
@@ -71,11 +72,11 @@ def header(path):
     <nav class="nav-desktop" aria-label="Main">{"".join(desk)}<a class="btn btn-primary btn-sm nav-cta" href="/contact/">Free claim review</a></nav>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
-  <nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
-    <a href="/">Home</a>{"".join(mob)}<a href="/contact/">Contact</a>
-    <a class="btn btn-primary" href="/contact/">Free claim review</a>
-  </nav>
-</header>'''
+</header>
+<nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
+  <a href="/">Home</a>{"".join(mob)}<a href="/contact/">Contact</a>
+  <a class="btn btn-primary" href="/contact/">Free claim review</a>
+</nav>'''
 
 
 def footer():
@@ -111,6 +112,7 @@ def footer():
         <li><a href="/contact/">Free claim review</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/claim-documentation-toolkit/">Documentation toolkit</a></li>
         <li><a href="/privacy-policy/">Privacy policy</a></li>
         <li><a href="/terms-of-use/">Terms of use</a></li>
         <li><a href="/disclaimer/">Disclaimer</a></li>
@@ -128,7 +130,8 @@ def footer():
     claim, the policy language and the carrier&rsquo;s conduct, and past results do not guarantee future recoveries.
     Under Tex. Ins. Code §4102.158, a public adjuster may not solicit employment for an attorney; we do not refer claims
     to attorneys for a fee. Public adjuster compensation in Texas is capped at 10% of the insurance settlement on the
-    claim (§4102.104). Service area: Texas only.</div>
+    claim (§4102.104). Service area: Texas only. As an Amazon Associate, Enforce Interest earns from qualifying
+    purchases.</div>
     <div class="foot-bottom"><span>&copy; {lib.YEAR} {FIRM} &middot; All rights reserved</span><span>enforceinterest.com &middot; {lib.CITY} &middot; Texas</span></div>
   </div>
 </footer>
@@ -257,6 +260,18 @@ def pic(name, alt, w=None, h=None, eager=False, cls=""):
 
 
 # ------------------------------------------------------------------ page shell
+GA_ID = "G-E3SD91ESFX"
+GTAG = f"""<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{GA_ID}');
+</script>"""
+
+
 def render(p):
     url = SITE + p["path"]
     og = p.get("og") or "og-default"
@@ -274,6 +289,7 @@ def render(p):
     return f'''<!doctype html>
 <html lang="en-US">
 <head>
+{GTAG}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(p["title"])}</title>

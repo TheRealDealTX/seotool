@@ -2,7 +2,7 @@
 import lib
 from lib import (FLOAT_RATE_S, JUDG_RATE_S, RATE_MONTH, FLOAT_RATE, EMAIL, FIRM, LICENSE, NAME, btn, page_hero,
                  facts, faq_block, cta_band, breadcrumbs, sec_head, esc, icon, money, interest, with_toc, side_cta)
-from content import guides
+from content import guides, products
 
 
 def simple(path, title, desc, crumb, h1, lede, body_html, eyebrow="", schema=None, og=None, noindex=False,
@@ -25,9 +25,61 @@ def simple(path, title, desc, crumb, h1, lede, body_html, eyebrow="", schema=Non
 def build(ctx, post_pages):
     mc = ctx["make_card"]
     out = guides.build(ctx)
-    out += [qualify(mc), faq(mc), about(mc), contact(mc), blog_index(mc, post_pages, ctx), privacy(), terms(),
+    out += [toolkit(mc), qualify(mc), faq(mc), about(mc), contact(mc), blog_index(mc, post_pages, ctx), privacy(), terms(),
             disclaimer(), sitemap_page()]
     return out
+
+
+# ------------------------------------------------------------------ claim documentation toolkit
+def toolkit(mc):
+    path = "/claim-documentation-toolkit/"
+    trail = [("Home", "/"), ("Claim documentation toolkit", path)]
+    _, bc = breadcrumbs(trail)
+    groups = {}
+    for k, v in products.P.items():
+        groups.setdefault(v[1], []).append(k)
+    order = ["Documentation", "Inspection", "Water damage", "Freeze", "Storm", "Fire & smoke", "Prevention"]
+    secs = "".join(
+        f'<div style="margin-bottom:48px" data-reveal><h2 style="font-size:1.6rem">{g}</h2>'
+        f'<div class="grid g3" style="margin-top:18px">{"".join(products.card(k) for k in groups[g])}</div></div>'
+        for g in order if g in groups)
+    faqs = [
+        ("Do I need special equipment to file an insurance claim?",
+         "<p>No. A phone camera and a written record of dates are the essentials. The tools here make documentation faster "
+         "and more convincing, especially for water damage, where moisture readings show how far water spread.</p>"),
+        ("Will my insurer reimburse these purchases?",
+         "<p>Sometimes. Reasonable costs to protect property from further damage (a tarp, water extraction, drying "
+         "equipment) are often covered as part of the claim. Keep receipts and submit them. Documentation gear "
+         "you keep, like a scanner, usually isn&rsquo;t reimbursed.</p>"),
+        ("Why do the links go to Amazon search results?",
+         "<p>Listings change often. Linking to a search for the product type means the link always works and you can "
+         "compare current models, ratings and prices yourself.</p>"),
+    ]
+    fh, fl = faq_block(faqs)
+
+    def body():
+        return (page_hero(trail, "Recommended gear &middot; Amazon", "Claim documentation <em>toolkit</em>",
+                          "The tools that make a Texas property claim easier to prove: moisture meters, thermal cameras, "
+                          "scanners, storm and freeze protection. Picked by a public adjusting team for what they add to the "
+                          "claim file.") +
+                f'''<section class="section tight"><div class="wrap">
+<div class="callout" style="margin-top:0"><strong>Why gear matters to statutory interest</strong><p>The Chapter 542 clock
+starts when the insurer has the items it reasonably requested. Clear photos, moisture readings and organized, dated documents
+get those items to the carrier faster and leave less room for repeat requests, so the deadline is easier to prove.</p></div>
+<p class="aff-note" style="margin:0 0 36px">{products.DISCLOSURE}</p>
+{secs}</div></section>
+<section class="section alt"><div class="wrap-narrow">{sec_head("FAQ", "Toolkit questions", center=True)}<div data-reveal>{fh}</div></div></section>''' +
+                cta_band())
+
+    p = {"path": path, "title": "Insurance Claim Documentation Toolkit | Enforce Interest",
+         "desc": "Recommended tools for documenting a Texas property insurance claim: moisture meters, thermal cameras, "
+                 "scanners, tarps and freeze protection.",
+         "body": body, "schema": [bc, fl, {"@context": "https://schema.org", "@type": "ItemList", "name": "Claim documentation toolkit",
+                                           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": v[0]}
+                                                               for i, v in enumerate(products.P.values())]}],
+         "h1_plain": "Claim documentation toolkit", "priority": "0.6", "guide": True}
+    p["og"] = mc("claim-documentation-toolkit", "Recommended gear", "Insurance claim documentation toolkit")
+    return p
 
 
 # ------------------------------------------------------------------ qualify quiz
@@ -468,6 +520,9 @@ behalf of policyholders, including the statutory interest that may be owed on th
 or contract with an insured primarily to refer them to one. We don&rsquo;t receive anything for recommending a lawyer.</p>
 <h2>Fees</h2><p>Public adjuster compensation in Texas may not exceed 10% of the insurance settlement on the claim (§4102.104).
 Any engagement with us is in writing and states the fee.</p>
+<h2>Affiliate links</h2><p>Some pages recommend products through Amazon links. As an Amazon Associate, Enforce Interest
+earns from qualifying purchases, at no extra cost to you. Affiliate links are marked as sponsored, and we don&rsquo;t accept payment
+from manufacturers for recommendations.</p>
 <h2>Educational content</h2><p>Articles, examples and calculators explain general principles of Texas law as of the date
 published. Examples are illustrations, not predictions; outcomes depend on the facts of each claim, the policy and the
 carrier&rsquo;s conduct. Past results don&rsquo;t guarantee future results.</p>

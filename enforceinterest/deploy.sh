@@ -13,7 +13,7 @@
 #   python3 build.py && python3 validate.py && ./deploy.sh [--prune]
 #
 # --prune deletes top-level entries in public_html/ and public_html/_pages/ that the build no longer
-# produces (never _private/). Then clear the site cache (`agency-hosting_cache_clear-website`).
+# produces (never _private/ or Search Console google*.html verification files). Then clear the site cache (`agency-hosting_cache_clear-website`).
 set -u
 : "${EI_FB_URL:?set EI_FB_URL}" "${EI_FB_AUTH:?set EI_FB_AUTH}" "${EI_FB_REST:?set EI_FB_REST}"
 cd "$(dirname "$0")" || exit 1
@@ -38,7 +38,7 @@ upload_dir() {  # $1 local dir, $2 remote dir
 prune_dir() {  # $1 local dir, $2 remote dir: delete remote top-level entries absent locally
   fb "$API/resources/$2/" | python3 -c 'import json,sys; [print(i["name"]) for i in json.load(sys.stdin).get("items", [])]' |
   while IFS= read -r name; do
-    case "$name" in _private|.h5g|.htaccess) continue;; esac
+    case "$name" in _private|.h5g|.htaccess|google*.html) continue;; esac  # never prune verification files
     if [ ! -e "$1/$name" ]; then
       echo "prune $2/$name: $(fb -X DELETE "$API/resources/$2/$name" -o /dev/null -w '%{http_code}')"
     fi

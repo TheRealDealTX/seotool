@@ -1,11 +1,12 @@
 """Long-form guide pages: the Prompt Payment Act pillar, claim types, appraisal and supplements."""
 import lib
+from content import products
 from lib import (FLOAT_RATE_S, JUDG_RATE_S, RATE_MONTH, FLOAT_RATE, btn, cite, page_hero, facts, faq_block,
                  cta_band, breadcrumbs, article_body, money, interest, esc, sec_head)
 
 
 def guide(path, title, desc, crumb, eyebrow, h1, lede, prose, faqs, og, aside=None, tool=None, ctas="",
-          priority="0.8", modified=None):
+          priority="0.8", modified=None, shop=None):
     trail = [("Home", "/"), (crumb, path)]
     _, bc = breadcrumbs(trail)
     fh, fl = faq_block(faqs) if faqs else ("", None)
@@ -16,7 +17,7 @@ def guide(path, title, desc, crumb, eyebrow, h1, lede, prose, faqs, og, aside=No
         f = (f'<section class="section alt"><div class="wrap-narrow">{sec_head("FAQ", "Frequently asked questions", center=True)}'
              f'<div data-reveal>{fh}</div></div></section>') if faqs else ""
         return (page_hero(trail, eyebrow, h1, lede, ctas=ctas, aside=aside or "") +
-                article_body(prose, tool=tool) + f + cta_band())
+                article_body(prose + (products.box(shop) if shop else ""), tool=tool) + f + cta_band())
 
     art = {"@context": "https://schema.org", "@type": "Article", "headline": h1_plain, "description": desc,
            "mainEntityOfPage": lib.SITE + path, "datePublished": "2026-04-30", "dateModified": modified or lib.BUILD_DATE,
@@ -179,7 +180,7 @@ with a Texas attorney.</li></ol>'''
                      prose, faqs, mc("texas-prompt-payment-act", "Tex. Ins. Code ch. 542", "The Texas Prompt Payment Act, explained"),
                      aside=facts([("Enacted", "1991 (Art. 21.55)"), ("Codified", "Ch. 542, Subch. B (2005)"),
                                   ("Interest", f"18% / {FLOAT_RATE_S}"), ("Plus", "attorney&rsquo;s fees")]),
-                     ctas=ctas_std(), priority="0.9"))
+                     ctas=ctas_std(), priority="0.9", shop="docs"))
 
     # ================================================================ HAIL & WIND
     prose = f'''
@@ -256,7 +257,7 @@ calculator</a>.</p>'''
                      aside=facts([("Interest rate", f"{FLOAT_RATE_S} floating"), ("Pre-suit notice", "61 days"),
                                   ("Inspection request", "30 days"), ("Catastrophe", "+15 days")]),
                      ctas=ctas_std(), tool=("/tools/542a-notice-calculator/", "542A notice calculator",
-                                            "Pre-suit notice dates and the attorney-fee ratio.")))
+                                            "Pre-suit notice dates and the attorney-fee ratio."), shop="hail"))
 
     # ================================================================ HURRICANE
     prose = f'''
@@ -333,7 +334,7 @@ Keep receipts, and send them in batches with a cover letter so each batch has a 
                      aside=facts([("Private carrier rate", FLOAT_RATE_S), ("TWIA filing", "1 year"),
                                   ("TWIA decision", "60 days"), ("TWIA payment", "10 days")]),
                      ctas=ctas_std(), tool=("/tools/claim-deadline-calculator/", "Claim deadline calculator",
-                                            "Includes TWIA and catastrophe extensions.")))
+                                            "Includes TWIA and catastrophe extensions."), shop="hurricane"))
 
     # ================================================================ FIRE & SMOKE
     prose = f'''
@@ -401,7 +402,7 @@ the timeline matters.</p>
                      prose, faqs, mc("fire-smoke-damage", "18% standard rate", "Texas fire and smoke damage claims paid late"),
                      aside=facts([("Interest rate", "18% fixed"), ("Arson decision", "30 days"),
                                   ("Payment backstop", "60 days"), ("Wildfire", f"{FLOAT_RATE_S} (542A)")]),
-                     ctas=ctas_std()))
+                     ctas=ctas_std(), shop="fire"))
 
     # ================================================================ WATER
     prose = f'''
@@ -462,7 +463,7 @@ from reporting a legitimate loss &mdash; and don&rsquo;t delay reporting; late n
                      prose, faqs, mc("water-plumbing-damage", "18% standard rate", "Texas water and plumbing damage claims paid late"),
                      aside=facts([("Interest rate", "18% fixed"), ("Storm water", f"{FLOAT_RATE_S}"),
                                   ("Key issue", "sudden vs. seepage"), ("Freeze catastrophe", "+15 days")]),
-                     ctas=ctas_std()))
+                     ctas=ctas_std(), shop="water"))
 
     # ================================================================ POST-APPRAISAL
     ex = interest(176000, FLOAT_RATE, 423)
@@ -562,7 +563,7 @@ document requests and your responses.</li><li>Any 542A pre-suit notice, for weat
                      ctas=btn("/tools/appraisal-interest-calculator/", "Appraisal interest calculator", "gold") + btn("/contact/", "Free post-appraisal review", "ghost", arrow=False),
                      tool=("/tools/appraisal-interest-calculator/", "Appraisal interest calculator",
                            "Interest on the gap between pre-appraisal payments and the award, with a shortfall check."),
-                     priority="0.9"))
+                     priority="0.9", shop="docs"))
 
     # ================================================================ SUPPLEMENTS
     s1 = interest(19000, 18, 75)
@@ -638,5 +639,5 @@ recoverable depreciation. Track those dates.</li></ul>
                      prose, faqs, mc("claim-supplements", "Supplements · hidden damage", "Insurance claim supplements paid late in Texas"),
                      aside=facts([("Each supplement", "own timeline"), ("Interest", f"18% / {FLOAT_RATE_S}"),
                                   ("Partial payment", "doesn&rsquo;t stop it"), ("Appraisal", "doesn&rsquo;t erase it")]),
-                     ctas=ctas_std()))
+                     ctas=ctas_std(), shop="docs"))
     return out

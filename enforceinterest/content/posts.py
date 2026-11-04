@@ -2,6 +2,7 @@
 import re
 from datetime import date
 import lib
+from content import products
 from lib import (FLOAT_RATE_S, JUDG_RATE_S, RATE_MONTH, FLOAT_RATE, OCCC_RATES, MONTHS, btn, page_hero, faq_block,
                  cta_band, breadcrumbs, article_body, money, interest, esc, sec_head, FIRM)
 
@@ -36,9 +37,9 @@ def daily_table(rate):
 POSTS = []
 
 
-def post(slug, title, h1, desc, published, section, prose, faqs, image=None, card=None, tool=None, modified=None):
+def post(slug, title, h1, desc, published, section, prose, faqs, image=None, card=None, tool=None, modified=None, shop=None):
     POSTS.append(dict(slug=slug, title=title, h1=h1, desc=desc, published=published, section=section, prose=prose,
-                      faqs=faqs, image=image, card=card, tool=tool, modified=modified))
+                      faqs=faqs, image=image, card=card, tool=tool, modified=modified, shop=shop))
 
 
 # ===================================================================== 1. 18% standard rate
@@ -366,7 +367,7 @@ days to two years) to collect the holdback.</li>
        "(§16.070). Chapter 541 claims have a two-year limit.</p>"),
       ("How long do I have to file a TWIA claim?", "<p>One year from the date of damage (§2210.573(a)).</p>")],
      card=("Deadlines · Ch. 542 · 542A · TWIA", "Texas insurance claim deadlines: every clock in one place"),
-     tool=("/tools/claim-deadline-calculator/", "Claim deadline calculator", "Your dates, every statutory deadline."))
+     tool=("/tools/claim-deadline-calculator/", "Claim deadline calculator", "Your dates, every statutory deadline."), shop="docs")
 
 # ===================================================================== 5. Freeze claim
 post("how-long-to-file-a-freeze-claim-in-texas",
@@ -436,7 +437,7 @@ pleadings. When we calculate freeze-claim interest, we show both.</p>
        "a Texas attorney about your specific situation.</p>"),
       ("Does TWIA cover freeze damage?", "<p>No. TWIA policies cover wind and hail. Freeze damage is a homeowners-policy claim.</p>")],
      card=("Deadlines · freeze & burst pipes", "How long do I have to file a freeze claim in Texas?"),
-     tool=("/tools/claim-deadline-calculator/", "Claim deadline calculator", "Includes catastrophe extensions."))
+     tool=("/tools/claim-deadline-calculator/", "Claim deadline calculator", "Includes catastrophe extensions."), shop="freeze")
 
 # ===================================================================== 6. Smoke damage
 post("smoke-damage-claim-texas",
@@ -508,7 +509,7 @@ for claims made on or after September 1, 2017.</li></ol>
       ("How long does an insurer have to pay a smoke claim?",
        "<p>The standard Chapter 542 deadlines apply: 5 business days after acceptance, and no more than 60 days after it receives "
        "the items it reasonably requested.</p>")],
-     card=("Claim types · smoke & soot", "Smoke damage claims in Texas: investigations and payment"))
+     card=("Claim types · smoke & soot", "Smoke damage claims in Texas: investigations and payment"), shop="smoke")
 
 # ===================================================================== 7. 542A notice
 post("542a-pre-suit-notice-explained",
@@ -634,7 +635,7 @@ whether your claim qualifies</a>.</p>''',
        "<p>Not mid-term for a legitimate claim once the policy has been in force 60 days. Claims history can affect renewal "
        "under §551.107, but natural-cause claims don&rsquo;t count.</p>"),
       ("How much notice must a Texas insurer give before nonrenewal?", "<p>At least 60 days before expiration (§551.105).</p>")],
-     card=("Policyholder rights · §551.104", "Texas homeowners policy cancellation: the other 60-day rule"))
+     card=("Policyholder rights · §551.104", "Texas homeowners policy cancellation: the other 60-day rule"), shop="water")
 
 
 def read_minutes(html):
@@ -674,7 +675,7 @@ def build(ctx):
             faq_html = (f'<h2 id="faq">Frequently asked questions</h2>{fh}') if fh else ""
             return (page_hero(trail, p["section"], p["h1"], esc(p["desc"]), meta=meta) +
                     f'<div class="wrap"><div class="article-hero-img" data-reveal>{pic(og, h1_plain, eager=True)}</div></div>' +
-                    article_body(p["prose"] + faq_html + author, tool=p["tool"]) + cta_band())
+                    article_body(p["prose"] + (products.box(p["shop"]) if p["shop"] else "") + faq_html + author, tool=p["tool"]) + cta_band())
 
         schema = [bc, {"@context": "https://schema.org", "@type": "BlogPosting", "headline": h1_plain,
                        "description": p["desc"], "datePublished": p["published"], "dateModified": modified,

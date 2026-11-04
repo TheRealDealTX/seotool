@@ -32,8 +32,12 @@
       tog.setAttribute("aria-expanded", open);
       tog.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       mob.classList.toggle("open", open);
-      d.body.classList.toggle("nav-open", open);
+      d.documentElement.classList.toggle("nav-open", open);
     });
+    // close after choosing a link (same-page anchors otherwise leave the menu covering the page)
+    mob.addEventListener("click", function (e) { if (e.target.closest("a") && tog.getAttribute("aria-expanded") === "true") tog.click(); });
+    // close if the viewport grows to desktop width while open
+    w.addEventListener("resize", function () { if (w.innerWidth > 1060 && tog.getAttribute("aria-expanded") === "true") tog.click(); });
   }
   $$(".nav-item").forEach(function (it) {
     var b = $("button", it), t;

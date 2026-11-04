@@ -7,6 +7,8 @@ contact handler. Hosted on the Hostinger **Agency Growth** plan.
 
 - **Hostinger website UID:** `1WCLLtRIk` (php-fpm 8.3, Phoenix datacenter, order `1008744732`); replaced WordPress website `UXdKlalnO`
 - **Search Console:** verified by `static/google9d8d740410b54935.html` (carried over from WordPress)
+- **Google Analytics:** G-E3SD91ESFX (in every page's `<head>`, checked by `validate.py`)
+- **Amazon Associates tag:** `enforceinterest-20` (products in `content/products.py`; toolkit page `/claim-documentation-toolkit/`)
 - **Contact email:** info@enforceinterest.com (Hostinger mailbox; the form sends through it over SMTP)
 
 ## Build, check, deploy
@@ -28,6 +30,7 @@ Local preview: `php -S 127.0.0.1:8000 -t public tools/dev-router.php` (mimics th
 | `content/tools.py` | All tool pages (markup + explanatory copy), judgment-rate and prejudgment pages, tools hub |
 | `content/posts.py` | Blog posts |
 | `content/pages.py` | Qualify quiz, FAQ, about, contact, blog index, legal pages, sitemap, 404 |
+| `content/products.py` | Amazon affiliate products (search links with the Associates tag, rel=sponsored) and the per-topic product boxes |
 | `content/seo.py` | `<title>` / meta description overrides (kept in one place to hold lengths in range) |
 | `assets/js/site.js` | Nav, scroll progress, reveal animations, hero accrual meter, scroll-driven 60-day clock, contact form |
 | `assets/js/tools.js` | Every calculator (interest engine, Texas business days/holidays, deadlines, quiz, timeline builder) |

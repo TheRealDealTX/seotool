@@ -168,6 +168,19 @@ def main():
         for b in bad:
             if re.search(b, txt):
                 errors.append(f"{path}: stale fact matches /{b}/")
+    # every page carries the Google tag; every Amazon link carries the Associates tag and rel=sponsored
+    for path, f in pages.items():
+        txt = open(f, encoding="utf-8").read()
+        if "googletagmanager.com/gtag/js?id=G-E3SD91ESFX" not in txt or "gtag('config', 'G-E3SD91ESFX')" not in txt:
+            errors.append(f"{path}: Google tag missing")
+        for a in re.findall(r'<a [^>]*href="https://www\.amazon\.com[^"]*"[^>]*>', txt):
+            if "tag=enforceinterest-20" not in a or "sponsored" not in a:
+                errors.append(f"{path}: Amazon link without tag/sponsored: {a[:90]}")
+        if "amazon.com" in txt and "Amazon Associate" not in txt:
+            errors.append(f"{path}: Amazon links without the Associates disclosure")
+    nf = open(os.path.join(PAGES, "404.html"), encoding="utf-8").read()
+    if "G-E3SD91ESFX" not in nf:
+        errors.append("404.html: Google tag missing")
     # homepage brand / main keyword count (body copy inside <main>)
     home = " ".join(parsed["/"].main_text)
     n = len(re.findall(r"Enforce\s+Interest", home))

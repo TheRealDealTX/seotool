@@ -2,7 +2,7 @@
 import lib
 from lib import (FLOAT_RATE_S, JUDG_RATE_S, RATE_MONTH, FLOAT_RATE, btn, cite, icon, sec_head, faq_block,
                  cta_band, disclaim, money, interest, FIRM, LICENSE, esc)
-from content import art
+from content import art, products
 
 TITLE = "Enforce Interest | Texas 60-Day Rule & 18% Late Claim Interest"
 DESC = ("Enforce Interest helps Texas policyholders recover statutory interest when an insurer pays a property claim "
@@ -366,6 +366,16 @@ def build(ctx, post_pages):
           <li>Charge more than the 10% Texas cap, or take any fee if nothing is recovered.</li></ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section alt" id="toolkit">
+  <div class="wrap">
+    {sec_head("Documentation toolkit", "Gear that makes a claim easier to prove.",
+              "Moisture readings, thermal images and organized records get the carrier what it needs, and make the Enforce Interest timeline easier to prove.")}
+    <div class="grid g3" data-stagger>{"".join(products.card(k) for k in ["moisture-pin", "thermal", "scanner"])}</div>
+    <p class="aff-note">{products.DISCLOSURE}</p>
+    <div class="btn-row" style="margin-top:18px">{btn("/claim-documentation-toolkit/", "See the full toolkit", "ghost")}</div>
   </div>
 </section>
 
