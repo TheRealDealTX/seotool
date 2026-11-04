@@ -18,6 +18,6 @@ while IFS= read -r f; do
   c=$(fb -X POST "$FB_URL/public_html/$rel?override=true" -H "Tus-Resumable: 1.0.0" -H "Upload-Length: $size" -H "Upload-Offset: 0" -o /dev/null -w "%{http_code}")
   p=$(fb -X PATCH "$FB_URL/public_html/$rel?override=true" -H "Tus-Resumable: 1.0.0" -H "Content-Type: application/offset+octet-stream" -H "Upload-Offset: 0" --data-binary "@$f" -o /dev/null -w "%{http_code}")
   if [ "$c" = 201 ] && [ "$p" = 204 ]; then ok=$((ok+1)); else fail=$((fail+1)); echo "FAIL $c/$p $rel"; fi
-done < <(find . -type f ! -name 'deploy.sh' ! -name 'dev-router.php' ! -name 'README.md' ! -name 'config.local.php' ! -name '*.md' | sort)
+done < <(find . -type f ! -name 'deploy.sh' ! -name 'dev-router.php' ! -name 'README.md' ! -name 'config.local.php' ! -name '*.md' ! -name '*.py' | sort)
 echo "uploaded=$ok failed=$fail"
 [ "$fail" -eq 0 ]
