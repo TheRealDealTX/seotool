@@ -115,7 +115,7 @@
                   (o.overtime ? Math.min(o.overtime, CPA.year(y).overtimeMax[s]) : 0) +
                   CPA.seniorDeduction(s, y, o.seniors || 0, agi);
       var beforeQbi = Math.max(0, agi - ded - below);
-      var qbiDed = o.noQbi ? 0 : CPA.qbi(se, beforeQbi, pref, s, y);
+      var qbiDed = o.noQbi ? 0 : CPA.qbi(Math.max(0, se - seT.half), beforeQbi, pref, s, y); // QBI = profit less ½ SE tax
       var taxable = Math.max(0, beforeQbi - qbiDed);
       var ordTaxable = Math.max(0, taxable - pref);
       var it = CPA.incomeTax(ordTaxable, Math.min(pref, taxable), s, y);

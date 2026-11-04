@@ -101,7 +101,7 @@ echo post_open($SLUG, '2026-11-04'); ?>
 </ol>
 <div class="callout warn"><?= icon('shield') ?><p><strong>For businesses:</strong> misclassifying employees can mean back payroll taxes, penalties and interest, plus state liabilities. If you are unsure, the IRS Voluntary Classification Settlement Program (VCSP) lets eligible businesses reclassify workers going forward with reduced federal liability for past years.</p></div>
 
-<h2 id="which-pays-more">Which pays more, 1099 or W-2?</h2>
+<h2 id="which-pays-more">1099 vs W-2: which pays more?</h2>
 <p>At the same headline number, W-2 nearly always pays more once you count the employer's FICA and benefits. A 1099 role pays more only when the rate is high enough to cover the extra tax, the lost benefits and unbillable time, and when you can use the contractor advantages:</p>
 <ul>
 <li><strong>Deductions.</strong> Ordinary and necessary business expenses come off the top. <?= TAX_YEAR ?> rules include 100% bonus depreciation for qualifying property and a mileage rate of <?= number_format($Y['mileage'] * 100, 1) ?>¢ per mile.</li>

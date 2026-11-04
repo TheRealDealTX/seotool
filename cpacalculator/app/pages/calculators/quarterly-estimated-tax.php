@@ -16,7 +16,7 @@ function qet_example(float $net, string $status = 'single'): array {
   $se = min($base, $y['ssWageBase']) * 0.124 + $base * 0.029;
   $agi = $net - $se / 2;
   $before = max(0, $agi - $y['std'][$status]);
-  $qbi = min($net * 0.2, $before * 0.2);
+  $qbi = min(($net - $se / 2) * 0.2, $before * 0.2);
   $inc = fed_tax(max(0, $before - $qbi), $status)['tax'];
   return ['se' => $se, 'inc' => $inc, 'total' => $se + $inc, 'agi' => $agi];
 }
