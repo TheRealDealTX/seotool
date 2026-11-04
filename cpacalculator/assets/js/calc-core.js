@@ -234,7 +234,7 @@
               if (!el.name || el.type === 'range') return;
               if (el.type === 'radio') { if (el.checked) p.set(el.name, el.value); }
               else if (el.type === 'checkbox') { if (el.checked) p.set(el.name, '1'); }
-              else if (el.value !== '') p.set(el.name, CPA.num(el.value) || el.value);
+              else if (el.value !== '') p.set(el.name, (el.type === 'date' || el.tagName === 'SELECT' || el.dataset.money === undefined && el.inputMode !== 'decimal') ? el.value : (CPA.num(el.value) || el.value));
             });
             var url = location.origin + location.pathname + '?' + p.toString();
             var done = function () { b.dataset.label = b.dataset.label || b.textContent; b.textContent = 'Link copied ✓'; setTimeout(function () { b.textContent = b.dataset.label; }, 1800); };
