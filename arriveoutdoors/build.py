@@ -26,7 +26,9 @@ from content.gear import GEAR  # noqa: E402
 
 OUT = os.path.join(ROOT, "public")
 TODAY = "2026-10-31"
-BUILD_DATE = os.environ.get("BUILD_DATE") or datetime.date.today().isoformat()
+# Same clock as _releases/publish.php (Pacific time), so builds and the cron agree on what's live
+from zoneinfo import ZoneInfo  # noqa: E402
+BUILD_DATE = os.environ.get("BUILD_DATE") or datetime.datetime.now(ZoneInfo("America/Los_Angeles")).date().isoformat()
 UNPUBLISHED_RX = None
 E = html.escape
 URL = SITE["url"]

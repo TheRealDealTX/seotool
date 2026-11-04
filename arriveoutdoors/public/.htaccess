@@ -46,6 +46,7 @@ RewriteRule ^how-to-start-a-fire-with-wet-wood(/.*)?$ - [R=404,L]
 RewriteRule ^new-hampshire-hiking(/.*)?$ - [R=404,L]
 RewriteRule ^olympic-national-park-camping(/.*)?$ - [R=404,L]
 RewriteRule ^truck-camping(/.*)?$ - [R=404,L]
+RewriteRule ^zion-hiking-trails(/.*)?$ - [R=404,L]
 
 # Removed content (410 Gone)
 RewriteRule ^book-your-luxury-villa-getaway/?$ - [G,L]
