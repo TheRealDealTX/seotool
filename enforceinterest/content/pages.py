@@ -38,7 +38,9 @@ def toolkit(mc):
     groups = {}
     for k, v in products.P.items():
         groups.setdefault(v[1], []).append(k)
-    order = ["Documentation", "Inspection", "Water damage", "Freeze", "Storm", "Fire & smoke", "Prevention"]
+    order = ["Documentation", "Inspection", "Water damage", "Freeze", "Storm", "Fire &amp; smoke", "Prevention"]
+    missing = set(groups) - set(order)
+    assert not missing, f"toolkit sections missing categories: {missing}"
     secs = "".join(
         f'<div style="margin-bottom:48px" data-reveal><h2 style="font-size:1.6rem">{g}</h2>'
         f'<div class="grid g3" style="margin-top:18px">{"".join(products.card(k) for k in groups[g])}</div></div>'
