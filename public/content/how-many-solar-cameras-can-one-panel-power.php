@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title'       => 'How Many Solar Cameras Can One Panel Power? Sizing Guide',
-    'description' => 'How many solar cameras can one panel power? Consumer kits: usually one. DIY 12 V and PoE systems: several. Worked sizing for panel, battery and controller.',
+    'title'       => 'How Many Solar Cameras Can One Panel Power?',
+    'description' => 'How many solar cameras can one panel power? Consumer kits: one. DIY 12 V and PoE systems: several. Worked sizing for panel, battery and controller.',
     'h1'          => 'How Many Solar Cameras Can One Panel Power?',
     'crumb'       => 'One Panel, Many Cameras',
     'card_title'  => 'How Many Cameras per Solar Panel?',

@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Gate Camera: Setup for Driveway and Farm Gates',
-    'description' => 'Plan a solar gate camera: Wi-Fi bridge vs 4G at remote gates, post vs pole mounting, angles for faces and plates, gate opener links and theft protection.',
+    'description' => 'Plan a solar gate camera: Wi-Fi bridge vs 4G at remote gates, post vs pole mounting, angles for faces and plates, and theft protection.',
     'h1'          => 'Solar Gate Camera Guide: Security Cameras for Gate Entrances',
     'crumb'       => 'Solar Gate Cameras',
     'card_title'  => 'Solar Gate Cameras',

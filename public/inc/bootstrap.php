@@ -10,7 +10,8 @@ const SITE_NAME   = 'Solar CCTV Camera';
 const SITE_ORIGIN = 'https://solarcctvcamera.com';
 const SITE_EMAIL  = 'info@solarcctvcamera.com';
 const SITE_TAGLINE = 'Independent solar security camera guides, tools and buying advice';
-const GA_ID = 'GT-K54JDCWX';
+const GA_ID = 'G-78QQY7PG7J';          // Google Analytics 4 property
+const GA_LEGACY_ID = 'GT-K54JDCWX';    // tag carried over from the WordPress site
 const AMAZON_TAG = 'josephrayditt-20';
 const BUILD_DATE = '2026-11-03';
 

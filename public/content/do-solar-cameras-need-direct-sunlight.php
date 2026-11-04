@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title'       => 'Do Solar Cameras Need Direct Sunlight? Shade & Cloud Facts',
-    'description' => 'Do solar cameras need direct sunlight? Mostly yes: shade and overcast skies cut output to 10–50%. See how many sun hours you need and fixes for shady yards.',
+    'title'       => 'Do Solar Cameras Need Direct Sunlight?',
+    'description' => 'Do solar cameras need direct sunlight? Mostly yes: shade and cloud cut output to 10–50%. See the sun hours you need and fixes for shady yards.',
     'h1'          => 'Do Solar Cameras Need Direct Sunlight?',
     'crumb'       => 'Direct Sunlight',
     'card_title'  => 'Do Solar Cameras Need Direct Sun?',

@@ -1,6 +1,6 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title' => 'Solar Panel Angle Calculator for Security Cameras (Free)',
+    'title' => 'Solar Panel Angle Calculator for Security Cameras',
     'description' => 'Find the best tilt angle and direction for your solar camera panel by latitude and season. Free calculator with winter, summer and year-round angles.',
     'h1' => 'Solar Panel Angle Calculator for Security Cameras',
     'crumb' => 'Panel Angle Calculator',

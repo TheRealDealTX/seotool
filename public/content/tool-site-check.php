@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => 'Solar Camera Site Check: Will Solar Work at My Spot?',
-    'description' => 'Answer 7 quick questions about sun, shade, climate, activity and signal to see if a solar security camera will stay charged where you want to mount it.',
+    'description' => 'Answer 7 quick questions on sun, shade, climate, activity and signal to see if a solar security camera will stay charged where you mount it.',
     'h1' => 'Solar Camera Site Check',
     'crumb' => 'Solar Site Check',
     'kicker' => 'Free tool',

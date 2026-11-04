@@ -79,7 +79,11 @@ Based on the Search Console export in `backup/gsc-performance-2026-11-03.xlsx` (
 - Every page: unique title/description, one H1 with its keyword, quick-answer box, self-canonical,
   Open Graph/Twitter, JSON-LD (Organization, WebSite, BreadcrumbList, Article/WebPage, FAQPage,
   WebApplication for tools, ItemList on hubs). The homepage mentions “Solar CCTV Camera” 20+ times.
-- Kept: Google Search Console verification file, Google tag `GT-K54JDCWX`, Amazon affiliate links
+- Analytics: GA4 `G-78QQY7PG7J` (added 2026-11-04) plus the original Google tag `GT-K54JDCWX`, both on one
+  gtag.js loader in `page_head()` (`public/inc/layout.php`), so every page, post, tool and the 404 carry them.
+- Snippet lengths: titles ≤ 55 characters / 540 px, descriptions ≤ 150 characters, checked by
+  `python3 tools/meta_report.py [base-url]`.
+- Kept: Google Search Console verification file, Amazon affiliate links
   (tag `josephrayditt-20`, now `rel="sponsored nofollow"`).
 
 ## Known gaps

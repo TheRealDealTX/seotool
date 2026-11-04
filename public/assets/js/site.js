@@ -7,11 +7,16 @@
   /* Mobile nav */
   var toggle = d.querySelector('.nav-toggle'), nav = d.getElementById('site-nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('is-open');
+    var setNav = function (open) {
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       d.body.classList.toggle('nav-open', open);
-    });
+    };
+    toggle.addEventListener('click', function () { setNav(!nav.classList.contains('is-open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setNav(false); });
+    d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('is-open')) { setNav(false); toggle.focus(); } });
+    w.addEventListener('resize', function () { if (w.innerWidth > 1020 && nav.classList.contains('is-open')) setNav(false); });
     nav.querySelectorAll('.sub-toggle').forEach(function (b) {
       b.addEventListener('click', function () {
         var sub = b.nextElementSibling, open = sub.classList.toggle('is-open');

@@ -123,8 +123,16 @@ function page_head(array $m): void
 <?php if (!empty($m['preload_image'])): ?><link rel="preload" as="image" href="<?= e($m['preload_image']) ?>">
 <?php endif; ?>
 <?= json_ld(['@context' => 'https://schema.org', '@graph' => $graph]) ?>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','<?= GA_ID ?>');</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+  gtag('config', '<?= GA_LEGACY_ID ?>');
+</script>
 </head>
 <body class="<?= e($bodyClass) ?>">
 <a class="skip" href="#main">Skip to content</a>

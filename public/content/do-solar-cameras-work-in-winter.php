@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title'       => 'Do Solar Cameras Work in Winter? Cold, Snow & Battery Tips',
-    'description' => 'Do solar cameras work in winter? Yes, with prep. Learn how cold, snow and short days affect charging, plus a winter checklist that keeps your camera online.',
+    'title'       => 'Do Solar Cameras Work in Winter? Cold & Snow Tips',
+    'description' => 'Do solar cameras work in winter? Yes, with prep. How cold, snow and short days affect charging, plus a checklist that keeps your camera online.',
     'h1'          => 'Do Solar Cameras Work in Winter?',
     'crumb'       => 'Winter',
     'card_title'  => 'Do Solar Cameras Work in Winter?',

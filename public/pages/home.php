@@ -15,7 +15,7 @@ $recent = articles();
 uasort($recent, fn($a, $b) => strcmp($b['updated'] . $b['published'], $a['updated'] . $a['published']));
 
 page_head([
-    'title' => 'Solar CCTV Camera: Guides, Tools & Best Solar Security Cameras',
+    'title' => 'Solar CCTV Camera: Solar Security Camera Guides & Tools',
     'description' => 'Solar CCTV Camera helps you choose, size and install solar security cameras: 2026 buying guide, panel angle and battery calculators, and setup guides.',
     'path' => '/',
     'body_class' => 'is-home',

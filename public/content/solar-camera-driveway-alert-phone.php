@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Camera Driveway Alert to Phone: Setup Options',
-    'description' => 'Get a solar camera driveway alert to your phone: compare AI vehicle detection, buried driveway sensors and combined setups, with tips to cut false alerts.',
+    'description' => 'Get a solar camera driveway alert on your phone: AI vehicle detection vs buried driveway sensors vs combined setups, plus tips to cut false alerts.',
     'h1'          => 'Solar Camera Driveway Alert to Phone: Cameras, Sensors and Combined Setups',
     'crumb'       => 'Driveway Alerts',
     'card_title'  => 'Solar Driveway Alerts to Your Phone',

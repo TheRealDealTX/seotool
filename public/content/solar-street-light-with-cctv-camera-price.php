@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title'       => 'Solar Street Light With CCTV Camera Price: 2026 Guide',
-    'description' => 'Solar street light with CCTV camera price ranges, how to spot inflated lumen and wattage claims, pole height and spacing, and when separate units are better.',
+    'description' => 'Solar street light with CCTV camera price ranges, how to spot inflated lumen and watt claims, pole height and spacing, and when to buy separately.',
     'h1'          => 'Solar Street Light With CCTV Camera: Prices, Specs and Real Performance',
     'crumb'       => 'Street Light + CCTV',
     'card_title'  => 'Solar Street Light With CCTV Camera Price',

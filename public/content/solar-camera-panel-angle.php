@@ -1,6 +1,6 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title'       => 'Best Angle for Solar Security Camera Panel (By Latitude)',
+    'title'       => 'Best Angle for a Solar Security Camera Panel',
     'description' => 'Best angle for a solar security camera panel: tilt ≈ your latitude, +15° in winter, facing true south. City tilt table, compass tips and shade checks.',
     'h1'          => 'Best Angle for a Solar Security Camera Panel: Tilt, Direction and Season',
     'crumb'       => 'Panel Angle',

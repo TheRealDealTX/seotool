@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => '4G Camera Data Usage Calculator & microSD Storage',
-    'description' => 'Estimate how much 4G data a SIM card security camera uses per month and how many days of clips fit on a microSD card. Free calculator with plan advice.',
+    'description' => 'Estimate how much 4G data a SIM card security camera uses per month and how many days of clips fit on a microSD card. Free calculator.',
     'h1' => '4G Camera Data Usage & microSD Storage Calculator',
     'crumb' => '4G Data & Storage',
     'kicker' => 'Free tool',

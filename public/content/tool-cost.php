@@ -1,7 +1,7 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
     'title' => 'Solar vs Wired Security Camera Cost Calculator (5-Year)',
-    'description' => 'Compare the true cost of solar vs wired PoE security cameras over 3–10 years: hardware, cable, trenching, installer labour, electricity and subscriptions.',
+    'description' => 'Compare the true cost of solar vs wired PoE security cameras over 3–10 years: hardware, cable, trenching, labor, electricity and subscriptions.',
     'h1' => 'Solar vs Wired Security Camera Cost Calculator',
     'crumb' => 'Solar vs Wired Cost',
     'kicker' => 'Free tool',
