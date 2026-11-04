@@ -209,10 +209,11 @@ def layout(*, path, title, description, body, schema=(), og_image=None, og_type=
 <link rel="stylesheet" href="/assets/css/site.css?v={CSS_V}">
 {gtag}{ads}{schema_html}
 </head>
-<body>
+<body{' class="has-sale-bar"' if SITE.get("for_sale_url") else ""}>
 <a class="skip" href="#main">Skip to content</a>
 {'<div class="progress-trail" aria-hidden="true"></div>' if progress else ''}
 <div class="grain" aria-hidden="true"></div>
+{f'<div class="sale-bar"><a href="{E(SITE["for_sale_url"])}" target="_blank" rel="nofollow noopener">🏷️ <strong>Buy this blog</strong> — click this link<span class="sale-more"> to make it yours on GoDaddy</span> →</a></div>' if SITE.get("for_sale_url") else ''}
 <header class="site-header"><div class="wrap">
 <a class="brand" href="/">{LOGO}<span>Arrive<small>Outdoors</small></span></a>
 <button class="menu-btn" aria-controls="nav" aria-expanded="false" aria-label="Menu">{icon("menu")}</button>

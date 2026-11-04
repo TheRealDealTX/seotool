@@ -451,3 +451,12 @@ td,th{overflow-wrap:normal;word-break:normal;hyphens:manual}
   #items th{font-size:.74rem}
   #items td.be{font-size:.8rem}
 }
+
+/* "Buy this blog" bar (siteconfig SITE["for_sale_url"]) */
+.sale-bar{position:fixed;top:0;left:0;right:0;height:34px;z-index:130;display:flex;align-items:center;padding:0 24px;background:var(--flame);box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.sale-bar a{color:#1b0d05;text-decoration:none;font-size:.86rem;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sale-bar a:hover{text-decoration:underline;color:#1b0d05}
+.has-sale-bar .site-header{top:34px}
+.has-sale-bar .progress-trail{top:34px}
+.has-sale-bar .site-header.hide{transform:translateY(calc(-100% - 34px))}
+@media (max-width:560px){.sale-bar{padding:0 16px}.sale-more{display:none}}

@@ -20,6 +20,8 @@ SITE = {
     # they cost page speed and earn nothing. Flip to True to load them.
     "adsense_client": "ca-pub-3886800648957674",
     "adsense_on": False,
+    # "Buy this blog" bar at the top of every page. Set to "" to remove it.
+    "for_sale_url": "https://www.godaddy.com/domainsearch/find?isc=123&domainToCheck=arriveoutdoors.com",
 }
 
 # Byline used on every article. Replace with a real person (name, photo, bio,
