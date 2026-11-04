@@ -153,15 +153,15 @@ def build(ctx, post_pages):
 
 <section class="section clock-sec" id="clock">
   <div class="wrap clock-grid">
-    <div class="clock-sticky">
+    <div class="clock-head">
       {sec_head('<span class="numeral">II.</span>The clock', "Texas built a payment clock into every property policy.",
                 "Scroll the statute. Each step is a separate deadline in Chapter 542 &mdash; and a missed one is what Enforce Interest documents.")}
-      <div class="clock-face" aria-hidden="true">
-        <div class="clock-day"><small>Statutory clock</small><span data-clock-day>Day 0</span></div>
-        <div class="clock-bar"><i data-clock-bar></i></div>
-        <div class="clock-legend"><span>Notice</span><span>Day 60</span><span>Paid</span></div>
-        <p class="clock-status" data-clock-status>The claim is reported. Nothing is late yet.</p>
-      </div>
+    </div>
+    <div class="clock-face" aria-hidden="true">
+      <div class="clock-day"><small>Statutory clock</small><span class="clock-num"><span data-clock-day>Day 0</span><em class="clock-late">Late</em></span></div>
+      <div class="clock-bar"><i data-clock-bar></i></div>
+      <div class="clock-legend"><span>Notice</span><span>Day 60</span><span>Paid</span></div>
+      <p class="clock-status" data-clock-status>The claim is reported. Nothing is late yet.</p>
     </div>
     <div class="steps-v">
       <div class="prog" data-steps-prog></div>

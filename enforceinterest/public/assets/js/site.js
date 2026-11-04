@@ -136,11 +136,11 @@
 
   /* ---------- scroll-driven 60-day clock ---------- */
   var steps = $$("[data-step]").filter(function (s) { return s.dataset.day !== undefined; });
-  var clockDay = $("[data-clock-day]"), clockBar = $("[data-clock-bar]"), clockStatus = $("[data-clock-status]"), prog = $("[data-steps-prog]");
+  var clockFace = $(".clock-face"), clockDay = $("[data-clock-day]"), clockBar = $("[data-clock-bar]"), clockStatus = $("[data-clock-status]"), prog = $("[data-steps-prog]");
   var lastActive = -1;
   function clockUpdate() {
     if (!steps.length || !clockDay) return;
-    var mid = w.innerHeight * 0.55, active = 0;
+    var mid = w.innerWidth <= 900 ? Math.min(w.innerHeight * 0.6, (clockFace ? clockFace.getBoundingClientRect().bottom : 0) + 120) : w.innerHeight * 0.55, active = 0;
     steps.forEach(function (s, i) { if (s.getBoundingClientRect().top < mid) active = i; });
     var box = steps[0].parentNode.getBoundingClientRect();
     var p = Math.max(0, Math.min(1, (mid - box.top) / box.height));
@@ -149,8 +149,8 @@
     var ra = a.getBoundingClientRect().top, rb = b.getBoundingClientRect().top;
     var f = b === a ? 0 : Math.max(0, Math.min(1, (mid - ra) / (rb - ra || 1)));
     var day = Math.round(+a.dataset.day + (+b.dataset.day - +a.dataset.day) * f);
-    clockDay.textContent = day > 60 ? "Day " + day + " · late" : "Day " + day;
-    clockDay.style.color = day > 60 ? "#ff8a70" : "";
+    clockDay.textContent = "Day " + day;
+    if (clockFace) clockFace.classList.toggle("is-late", day > 60);
     clockBar.style.transform = "scaleX(" + Math.min(1, day / 80) + ")";
     if (active !== lastActive) {
       steps.forEach(function (s, i) { s.classList.toggle("active", i <= active); });
