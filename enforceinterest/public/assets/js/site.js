@@ -27,17 +27,41 @@
   /* ---------- nav ---------- */
   var tog = $(".nav-toggle"), mob = $("#mobile-nav");
   if (tog && mob) {
-    tog.addEventListener("click", function () {
-      var open = tog.getAttribute("aria-expanded") !== "true";
+    var isOpen = function () { return tog.getAttribute("aria-expanded") === "true"; };
+    var lockY = 0;
+    var setMenu = function (open) {
+      if (open === isOpen()) return;
+      if (open) {  // freeze the page where it is (overflow:hidden alone lets iOS and some browsers jump)
+        lockY = w.scrollY || d.documentElement.scrollTop;
+        d.body.style.top = -lockY + "px";
+      }
       tog.setAttribute("aria-expanded", open);
       tog.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       mob.classList.toggle("open", open);
+      if (open) mob.removeAttribute("inert"); else mob.setAttribute("inert", "");
       d.documentElement.classList.toggle("nav-open", open);
+      if (open) mob.scrollTop = 0;
+      else { d.body.style.top = ""; w.scrollTo({ top: lockY, left: 0, behavior: "instant" }); }
+    };
+    tog.addEventListener("click", function () { setMenu(!isOpen()); });
+    mob.addEventListener("click", function (e) {
+      var h = e.target.closest(".mn-head");
+      if (h) {  // accordion section
+        var g = h.parentNode, o = !g.classList.contains("open");
+        g.classList.toggle("open", o);
+        h.setAttribute("aria-expanded", o);
+        return;
+      }
+      var a = e.target.closest("a");
+      if (a) {  // close after choosing a link; same-page anchors scroll after the page is unlocked
+        var hash = a.getAttribute("href").indexOf("#") > -1 && a.pathname === location.pathname ? a.hash : "";
+        setMenu(false);
+        if (hash) { e.preventDefault(); var t = d.querySelector(hash); if (t) t.scrollIntoView(); history.pushState(null, "", hash); }
+      }
     });
-    // close after choosing a link (same-page anchors otherwise leave the menu covering the page)
-    mob.addEventListener("click", function (e) { if (e.target.closest("a") && tog.getAttribute("aria-expanded") === "true") tog.click(); });
-    // close if the viewport grows to desktop width while open
-    w.addEventListener("resize", function () { if (w.innerWidth > 1060 && tog.getAttribute("aria-expanded") === "true") tog.click(); });
+    d.addEventListener("keydown", function (e) { if (e.key === "Escape" && isOpen()) { setMenu(false); tog.focus({ preventScroll: true }); } });
+    w.addEventListener("resize", function () { if (w.innerWidth > 1060 && isOpen()) setMenu(false); });
+    w.addEventListener("pageshow", function () { if (isOpen()) setMenu(false); });  // back/forward cache
   }
   $$(".nav-item").forEach(function (it) {
     var b = $("button", it), t;
@@ -47,7 +71,7 @@
     it.addEventListener("mouseleave", function () { t = setTimeout(function () { set(false); }, 160); });
   });
   d.addEventListener("click", function () { $$(".nav-item.open").forEach(function (x) { x.classList.remove("open"); $("button", x).setAttribute("aria-expanded", "false"); }); });
-  d.addEventListener("keydown", function (e) { if (e.key === "Escape") { d.dispatchEvent(new Event("click")); if (tog && tog.getAttribute("aria-expanded") === "true") tog.click(); } });
+  d.addEventListener("keydown", function (e) { if (e.key === "Escape") d.dispatchEvent(new Event("click")); });
 
   /* ---------- reveal + counters ---------- */
   function countUp(el) {

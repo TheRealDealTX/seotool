@@ -21,7 +21,19 @@ PAGES = os.path.join(OUT, "_pages")     # HTML pages, served only through index.
 sys.path.insert(0, ROOT)
 
 import lib  # noqa: E402
-from lib import SITE, NAME, EMAIL, FIRM, LICENSE, ASSET_V, BUILD_DATE, esc, icon, MARK_SVG  # noqa: E402
+from lib import SITE, NAME, EMAIL, FIRM, LICENSE, BUILD_DATE, esc, icon, MARK_SVG  # noqa: E402
+
+
+def _asset_version():
+    """Cache-busting token: changes whenever the CSS or JS changes (a date alone repeats within a day)."""
+    h = hashlib.md5()
+    for rel in ("assets/css/site.css", "assets/js/site.js", "assets/js/tools.js", "lib.py"):
+        with open(os.path.join(ROOT, rel), "rb") as f:
+            h.update(f.read())
+    return h.hexdigest()[:10]
+
+
+ASSET_V = _asset_version()
 from content import home, pages, tools, posts, seo  # noqa: E402
 
 # ------------------------------------------------------------------ navigation
@@ -52,19 +64,26 @@ NAV = [
 
 
 def header(path):
-    desk, mob = [], []
-    for label, kind, items in NAV:
+    desk, mob_groups, mob_links = [], [], []
+    for gi, (label, kind, items) in enumerate(NAV):
         if items is None:
             cur = ' aria-current="page"' if path == kind or (kind != "/" and path.startswith(kind)) else ""
             desk.append(f'<a href="{kind}"{cur}>{label}</a>')
-            mob.append(f'<a href="{kind}">{label}</a>')
+            mob_links.append(f'<a class="mn-link" href="{kind}"{cur}>{label}</a>')
             continue
         links = "".join(f'<a href="{h}"><b>{t}</b><span>{d}</span></a>' for h, t, d in items)
         cls = "dropdown wide" if kind == "wide" else "dropdown"
         desk.append(f'<div class="nav-item"><button type="button" aria-expanded="false">{label}{icon("chev")}</button>'
                     f'<div class="{cls}">{links}</div></div>')
-        mob.append(f'<h4>{label}</h4>' + "".join(f'<a href="{h}">{t}</a>' for h, t, d in items))
-    return f'''<a class="skip" href="#main">Skip to content</a>
+        here = any(h == path for h, _, _ in items)
+        sub = "".join(f'<a href="{h}"{" aria-current=page" if h == path else ""}>{t}</a>' for h, t, d in items)
+        mob_groups.append(
+            f'<div class="mn-group{" open" if here else ""}"><button type="button" class="mn-head" '
+            f'aria-expanded="{"true" if here else "false"}" aria-controls="mn-g{gi}">{label}{icon("chev")}</button>'
+            f'<div class="mn-panel" id="mn-g{gi}"><div class="mn-panel-in">{sub}</div></div></div>')
+    home_cur = " aria-current=page" if path == "/" else ""
+    contact_cur = " aria-current=page" if path == "/contact/" else ""
+    return f"""<a class="skip" href="#main">Skip to content</a>
 <div class="scroll-progress" aria-hidden="true"><span></span></div>
 <header class="site-header">
   <div class="wrap hdr-in">
@@ -73,10 +92,16 @@ def header(path):
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </header>
-<nav class="nav-mobile" id="mobile-nav" aria-label="Mobile">
-  <a href="/">Home</a>{"".join(mob)}<a href="/contact/">Contact</a>
-  <a class="btn btn-primary" href="/contact/">Free claim review</a>
-</nav>'''
+<nav class="nav-mobile" id="mobile-nav" aria-label="Mobile" inert>
+  <div class="mn-inner">
+    <a class="mn-link" href="/"{home_cur}>Home</a>
+    {"".join(mob_groups)}
+    {"".join(mob_links)}
+    <a class="mn-link" href="/contact/"{contact_cur}>Contact</a>
+    <a class="btn btn-primary mn-cta" href="/contact/">Free claim review{lib.ARROW}</a>
+    <p class="mn-note">Texas claims only &middot; <a href="mailto:{EMAIL}">{EMAIL}</a></p>
+  </div>
+</nav>"""
 
 
 def footer():
