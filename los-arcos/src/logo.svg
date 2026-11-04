@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" role="img" aria-label="Los Arcos Apartments &amp; Townhomes">
+  <g transform="translate(4 8)">
+    <path d="M3 47V22a19 19 0 0 1 38 0v25" fill="none" stroke="#A24A2E" stroke-width="3.2"/>
+    <path d="M12 47V24a10 10 0 0 1 20 0v23" fill="none" stroke="#4A5636" stroke-width="3.2"/>
+    <path d="M0 47h44" stroke="#A24A2E" stroke-width="2"/>
+    <circle cx="22" cy="10.5" r="2" fill="#C4673F"/>
+  </g>
+  <text x="62" y="38" font-family="Fraunces, Georgia, serif" font-size="32" fill="#1F1C18" letter-spacing="-0.3">Los Arcos</text>
+  <text x="63" y="55" font-family="Manrope, Arial, sans-serif" font-size="9.5" font-weight="700" fill="#6B6358" letter-spacing="2.6">APARTMENTS &amp; TOWNHOMES</text>
+</svg>
