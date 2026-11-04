@@ -18,7 +18,7 @@ echo simple_hero('Disclaimer', 'Please read this before relying on any calculato
 <h2 id="links">External links</h2>
 <p>We may link to third-party websites, including the IRS. We don’t control and aren’t responsible for their content, accuracy or availability.</p>
 <h2 id="affiliate">Advertising and affiliate disclosure</h2>
-<p>CPA Calculator may display advertising or participate in affiliate programs, which means we may earn a commission at no extra cost to you. This never affects calculator results, and we only mention products we believe may be useful.</p>
+<p>CPA Calculator is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. <strong>As an Amazon Associate, CPA Calculator earns from qualifying purchases.</strong> Affiliate links are labeled “Check price on Amazon”, cost you nothing extra and never affect calculator results. We only mention products we believe may be useful.</p>
 <h2 id="liability">Limitation of liability</h2>
 <p>To the fullest extent permitted by law, CPA Calculator and its operators are not liable for any loss or damage — including penalties, interest or lost profits — arising from the use of, or inability to use, this website or its content.</p>
 <h2 id="contact">Questions</h2>

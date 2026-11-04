@@ -6,6 +6,8 @@ const SITE_NAME   = 'CPA Calculator';
 const SITE_ORIGIN = 'https://cpacalculator.com';
 const SITE_EMAIL  = 'info@cpacalculator.com';
 const SITE_ROOT   = __DIR__ . '/..';
+const GA_ID       = 'G-BSYM5XXJTT';
+const AMAZON_TAG  = 'cpacalculator-20';
 
 $TAX = json_decode(file_get_contents(__DIR__ . '/data/tax.json'), true);
 define('TAX_YEAR', (int) $TAX['default']);
@@ -33,6 +35,18 @@ const TOOLS = [
 
 /* Blog posts: slug => [title, description, ISO date, image (relative to site root), primary keyword, read minutes]. Newest first. */
 const POSTS = [
+  '1099-vs-w2' => ['1099 vs W-2: Differences, Taxes and Which Pays More (2026)', '1099 vs W-2 explained: how contractors and employees are taxed, who pays FICA, benefits, deductions, and how to compare a 1099 rate with a W-2 salary.', '2026-11-04', '/assets/img/blog-1099-vs-w2.png', '1099 vs w2', 9],
+  'bonus-tax-rate' => ['Bonus Tax Rate 2026: How Bonuses Are Taxed (With Calculator Math)', 'The 2026 bonus tax rate is 22% federal withholding (37% over $1 million). Learn the percentage vs aggregate methods, FICA, and how to calculate tax on a bonus.', '2026-11-04', '/assets/img/blog-bonus.png', 'calculating tax on bonus', 8],
+  'capital-gains-tax-on-home-sale' => ['Capital Gains Tax on Home Sale: Rules, Exclusion and Examples', 'How capital gains tax on a home sale works in 2026: the $250,000/$500,000 exclusion, the 2-out-of-5-year test, cost basis, partial exclusions and worked examples.', '2026-11-04', '/assets/img/blog-home-sale.png', 'capital gains tax on home sale', 9],
+  '1099-k' => ['Form 1099-K Explained: 2026 Threshold, Who Gets One and How to Report It', 'What Form 1099-K is, the restored $20,000 / 200-transaction threshold, PayPal, Venmo and Etsy sales, personal vs business payments, and how to report it.', '2026-11-04', '/assets/img/blog-1099-k.png', '1099-k', 8],
+  'schedule-c-tax-form' => ['Schedule C Tax Form: How to Fill It Out Line by Line (2026)', 'A line-by-line guide to Schedule C (Form 1040): business income, every expense line, cost of goods sold, home office, vehicle expenses and net profit.', '2026-11-04', '/assets/img/blog-schedule-c.png', 'schedule c tax form', 11],
+  'k1-tax-form' => ['K-1 Tax Form Explained: Partnerships, S Corps and Trusts', 'What a Schedule K-1 tax form is, the three types (1065, 1120-S, 1041), key boxes, basis, self-employment tax and how K-1 income lands on your return.', '2026-11-04', '/assets/img/blog-k1.png', 'k1 tax form', 9],
+  'married-filing-separately' => ['Married Filing Separately vs Jointly: When Filing Separately Wins', 'Married filing separately vs jointly in 2026: brackets, standard deduction, lost credits, student loans, community property states and when MFS saves money.', '2026-11-04', '/assets/img/blog-mfs.png', 'married filing separately', 9],
+  'fica-tax-rate' => ['FICA Tax Rate 2026: Social Security and Medicare Explained', 'The 2026 FICA tax rate is 7.65% for employees: 6.2% Social Security up to $184,500 and 1.45% Medicare, plus 0.9% Additional Medicare. Examples and refunds.', '2026-11-04', '/assets/img/blog-fica.png', 'fica tax rate', 8],
+  'amended-tax-return' => ['How to File an Amended Tax Return (Form 1040-X) in 2026', 'When and how to file an amended tax return with Form 1040-X: deadlines, e-filing, what to include, tracking your amended return status and refund timing.', '2026-11-04', '/assets/img/blog-amended.png', 'amended tax return', 8],
+  '1099-c-cancellation-of-debt' => ['Form 1099-C: Is Cancelled Debt Taxable? Exclusions and Form 982', 'Got a 1099-C for cancelled debt? Learn when forgiven debt is taxable income, the insolvency and bankruptcy exclusions, Form 982 and how to report it.', '2026-11-04', '/assets/img/blog-1099-c.png', '1099-c', 8],
+  'irs-form-2553' => ['IRS Form 2553: How to Elect S Corp Status (Deadlines and Steps)', 'How to file IRS Form 2553 to elect S corporation status: eligibility, the 2-months-15-days deadline, late election relief, signatures and where to send it.', '2026-11-04', '/assets/img/blog-2553.png', 'irs form 2553', 8],
+  '1099-g' => ['Form 1099-G Explained: Unemployment and State Tax Refunds', 'What Form 1099-G reports, whether unemployment benefits and state tax refunds are taxable, the tax benefit rule, and how to report each box on your return.', '2026-11-04', '/assets/img/blog-1099-g.png', '1099-g', 7],
   'do-i-have-to-pay-quarterly-taxes-my-first-year' => ['Do I Have to Pay Quarterly Taxes My First Year Self-Employed?', 'First year freelancing? Here is exactly when the IRS expects quarterly estimated payments, how the safe harbor works with no prior-year tax, and what to pay.', '2026-11-02', '/assets/img/blog-first-year.png', 'do i have to pay quarterly taxes my first year', 8],
   '1099-taxes-for-physicians' => ['1099 Physician Tax Guide: Locums, Moonlighting and Contract Doctors', 'How 1099 physicians are taxed: self-employment tax above the wage base, QBI limits for medical practices, retirement plans and quarterly payments.', '2026-10-30', '/assets/img/blog-physician.png', '1099 physician tax calculator', 9],
   'how-much-federal-tax-will-i-pay' => ['How Much Federal Income Tax Will I Pay? 2026 Examples by Salary', 'Worked 2026 examples of federal income tax at $30k, $50k, $75k, $100k and $150k, with the brackets, standard deduction and effective rates explained.', '2026-10-28', '/assets/img/blog-federal.png', 'how much federal income tax will i pay', 8],
@@ -166,6 +180,73 @@ function tool_schema(string $slug): void {
   ];
 }
 
+/* ------------------------------------------------------------------ Amazon affiliate picks */
+
+/* Product sets: [name, why it helps, Amazon search query, icon]. Search links (not hard-coded ASINs)
+   so listings never go stale; every link carries the Associates tag. */
+const AMAZON = [
+  'freelancer' => ['Tools that make 1099 taxes easier', [
+    ['Vehicle mileage log book', 'A pocket log for the date, miles and purpose of each trip — the records the IRS expects for a mileage deduction.', 'vehicle mileage log book for taxes', 'car'],
+    ['Portable receipt scanner', 'Scan receipts as you go so every write-off has a record at tax time.', 'portable receipt scanner', 'receipt'],
+    ['Small Business Taxes Made Easy', 'A plain-English guide to Schedule C, deductions and quarterly taxes for the self-employed.', 'Small Business Taxes Made Easy Eva Rosenberg', 'book'],
+    ['Expanding receipt organizer', 'An accordion file with monthly tabs for receipts, 1099s and estimated-tax confirmations.', 'expanding accordion file organizer receipts', 'layers'],
+  ]],
+  'tax' => ['Helpful for tax season', [
+    ['J.K. Lasser’s Your Income Tax', 'The classic annual tax guide — line-by-line help for Form 1040 and its schedules.', 'J.K. Lasser Your Income Tax', 'book'],
+    ['Printing desktop calculator', 'A 12-digit printing calculator with a paper tape for checking your return by hand.', '12 digit printing calculator', 'calc'],
+    ['Fireproof document box', 'Keep W-2s, 1099s, returns and records safe for the three-plus years the IRS can ask for them.', 'fireproof document box', 'shield'],
+    ['Tax preparation software', 'Compare this year’s tax software editions before you file.', 'tax preparation software', 'flag'],
+  ]],
+  'business' => ['Recommended for small-business owners', [
+    ['Texas Instruments BA II Plus', 'The standard financial calculator for NPV, IRR, amortization and depreciation.', 'Texas Instruments BA II Plus financial calculator', 'calc'],
+    ['HP 10bII+ financial calculator', 'A popular alternative for business math, margins, cash flow and loan schedules.', 'HP 10bII+ financial calculator', 'calc'],
+    ['Profit First', 'Mike Michalowicz’s cash-management system for keeping a small business profitable.', 'Profit First Mike Michalowicz', 'book'],
+    ['Accounting Made Simple', 'A short, clear introduction to the balance sheet, income statement and accrual accounting.', 'Accounting Made Simple Mike Piper', 'book'],
+  ]],
+  'investing' => ['Further reading for investors', [
+    ['Taxes Made Simple', 'Mike Piper’s short guide to how income, capital gains and retirement accounts are taxed.', 'Taxes Made Simple Mike Piper', 'book'],
+    ['The Bogleheads’ Guide to Investing', 'Low-cost, tax-efficient investing explained step by step.', 'Bogleheads Guide to Investing', 'book'],
+    ['The Little Book of Common Sense Investing', 'John Bogle on index funds, costs and long-term returns.', 'Little Book of Common Sense Investing', 'book'],
+    ['Fireproof document box', 'Store brokerage statements, closing documents and cost-basis records safely.', 'fireproof document box', 'shield'],
+  ]],
+  'marketing' => ['Books for marketers who track CPA', [
+    ['$100M Leads', 'Alex Hormozi on generating leads profitably and lowering acquisition cost.', '100M Leads Alex Hormozi', 'book'],
+    ['Building a StoryBrand', 'Donald Miller’s framework for clearer messaging that converts.', 'Building a StoryBrand Donald Miller', 'book'],
+    ['Traction', 'Gabriel Weinberg and Justin Mares on choosing and testing customer-acquisition channels.', 'Traction Gabriel Weinberg', 'book'],
+    ['Texas Instruments BA II Plus', 'Handy for LTV, payback period and ROI math away from a spreadsheet.', 'Texas Instruments BA II Plus financial calculator', 'calc'],
+  ]],
+];
+
+/* Which set each calculator / post shows. */
+const AMAZON_MAP = [
+  '1099-tax-calculator' => 'freelancer', 'self-employment-tax' => 'freelancer', 'quarterly-estimated-tax' => 'freelancer',
+  'mileage-deduction' => 'freelancer', 'home-office-deduction' => 'freelancer',
+  'federal-income-tax' => 'tax', 'paycheck-calculator' => 'tax', 'tax-refund-calculator' => 'tax', 'salary-to-hourly' => 'tax',
+  'capital-gains-tax' => 'investing',
+  's-corp-tax-savings' => 'business', 'depreciation-calculator' => 'business', 'profit-margin' => 'business', 'break-even' => 'business',
+  'cost-per-acquisition' => 'marketing',
+  'got-a-1099-exactly-what-to-do-next' => 'freelancer', 'quarterly-taxes-101-guide' => 'freelancer', 'do-i-have-to-pay-quarterly-taxes-my-first-year' => 'freelancer',
+  '1099-taxes-for-physicians' => 'freelancer', '1099-vs-w2' => 'freelancer', '1099-k' => 'freelancer', 'schedule-c-tax-form' => 'freelancer',
+  'understanding-your-w-2' => 'tax', 'how-much-federal-tax-will-i-pay' => 'tax', 'bonus-tax-rate' => 'tax', 'married-filing-separately' => 'tax',
+  'fica-tax-rate' => 'tax', 'amended-tax-return' => 'tax', '1099-c-cancellation-of-debt' => 'tax', '1099-g' => 'tax',
+  'capital-gains-tax-on-home-sale' => 'investing', 'k1-tax-form' => 'business', 'irs-form-2553' => 'business',
+];
+
+function amazon_url(string $query): string {
+  return 'https://www.amazon.com/s?k=' . rawurlencode($query) . '&tag=' . AMAZON_TAG;
+}
+
+function amazon_picks(string $key): string {
+  $set = AMAZON[AMAZON_MAP[$key] ?? ''] ?? null;
+  if (!$set) return '';
+  [$heading, $items] = $set;
+  $h = '<section class="amz reveal" aria-label="Recommended products"><div class="amz-h"><h2>' . e($heading) . '</h2><span class="amz-tag">Affiliate picks</span></div><div class="amz-grid">';
+  foreach ($items as [$name, $why, $q, $ic]) {
+    $h .= '<a class="amz-card" href="' . e(amazon_url($q)) . '" target="_blank" rel="sponsored nofollow noopener"><span class="tc-ic">' . icon($ic) . '</span><strong>' . e($name) . '</strong><span class="amz-why">' . e($why) . '</span><span class="amz-go">Check price on Amazon ' . icon('arrow') . '</span></a>';
+  }
+  return $h . '</div><p class="amz-disc">As an Amazon Associate, CPA Calculator earns from qualifying purchases, at no extra cost to you. We don’t accept payment for recommendations, and they never affect calculator results.</p></section>';
+}
+
 /* Grid of tool cards. */
 function tool_cards(array $slugs, string $cls = ''): string {
   $h = '<div class="tool-grid ' . e($cls) . '">';
@@ -178,7 +259,7 @@ function tool_cards(array $slugs, string $cls = ''): string {
 }
 
 function related_tools(string $current, array $slugs): string {
-  return '<section class="related reveal"><h2>Related calculators</h2>' . tool_cards(array_values(array_diff($slugs, [$current]))) . '</section>';
+  return amazon_picks($current) . '<section class="related reveal"><h2>Related calculators</h2>' . tool_cards(array_values(array_diff($slugs, [$current]))) . '</section>';
 }
 
 function post_cards(array $slugs): string {
@@ -223,6 +304,15 @@ function render_page(array $P, string $body): void {
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=<?= GA_ID ?>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '<?= GA_ID ?>');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e($title) ?></title>
 <meta name="description" content="<?= e($desc) ?>">
@@ -305,6 +395,7 @@ function render_page(array $P, string $body): void {
     </div>
     <div class="ft-bottom">
       <p>© <?= date('Y') ?> CPA Calculator · cpacalculator.com. Estimates are for education and planning, not tax, legal or accounting advice. Always confirm with a licensed CPA before filing.</p>
+      <p>As an Amazon Associate, CPA Calculator earns from qualifying purchases. Product links are marked “Check price on Amazon” and open in a new tab.</p>
     </div>
   </div>
 </footer>
@@ -411,7 +502,7 @@ function post_open(string $slug, string $updated = ''): string {
 /* $tool = slug of the calculator promoted in the sidebar CTA. */
 function post_close(string $slug, string $tool, array $related = []): string {
   [$name, , $pitch] = TOOLS[$tool];
-  $h = '</article><aside class="aside"><div class="card"><div class="res-label" style="margin-bottom:10px">On this page</div><ul class="toc" data-toc></ul>' .
+  $h = amazon_picks($slug) . '</article><aside class="aside"><div class="card"><div class="res-label" style="margin-bottom:10px">On this page</div><ul class="toc" data-toc></ul>' .
     '<div class="aside-cta"><strong>' . e($name) . '</strong>' . e($pitch) . '<a class="btn btn-sm" href="' . tool_url($tool) . '">Open calculator</a></div></div></aside></div>';
   $related = $related ?: array_slice(array_values(array_diff(array_keys(POSTS), [$slug])), 0, 3);
   return $h . '<section class="section-tight section-alt"><div class="wrap"><h2>Keep reading</h2>' . post_cards($related) . '</div></section>';

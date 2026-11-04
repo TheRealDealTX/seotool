@@ -401,3 +401,18 @@ details[open] .faq-x::after{transform:rotate(0)}
 [hidden]{display:none!important}
 .tool-form,.tool-out,.tool-out-inner,.legend,.donut-wrap{min-width:0}
 .legend span{overflow-wrap:anywhere}
+/* Amazon affiliate picks */
+.amz{margin:48px 0 8px;padding:26px;border-radius:20px;background:linear-gradient(135deg,#fffbeb,#fff);border:1px solid #fde68a}
+.amz-h{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.amz-h h2{font-size:1.3rem;margin:0;padding:0}
+.prose .amz-h h2{margin:0}
+.amz-tag{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#92400e;background:var(--amber-l);padding:4px 10px;border-radius:999px}
+.amz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.amz-card{display:flex;flex-direction:column;gap:6px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--text);transition:transform .2s,box-shadow .2s}
+.amz-card:hover{transform:translateY(-3px);box-shadow:var(--sh);color:var(--text)}
+.amz-card .tc-ic{background:linear-gradient(135deg,var(--amber-l),#ffedd5);color:#b45309;margin-bottom:4px}
+.amz-card strong{color:var(--ink);font-size:1rem;line-height:1.3}
+.amz-why{font-size:.87rem;color:var(--muted);flex:1}
+.amz-go{display:flex;align-items:center;gap:6px;font-size:.85rem;font-weight:700;color:#b45309}
+.amz-go .ic{width:15px;height:15px}
+.amz-disc{font-size:.78rem;color:var(--muted);margin:14px 0 0}

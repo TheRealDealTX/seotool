@@ -12,11 +12,11 @@ echo simple_hero('Privacy policy', 'Your financial numbers are private. Here is 
 <h2 id="provide">Information you provide</h2>
 <p>When you contact us we receive your name, email address and message. We use it to respond and, if you report an error, to improve the site. Contact messages are delivered to our mailbox and kept only as long as needed.</p>
 <h2 id="automatic">Information collected automatically</h2>
-<p>Like most websites, our hosting provider records standard server logs (IP address, browser type, pages requested, referring URL and time) for security and performance. We may use privacy-respecting analytics to understand which pages are useful. This data is aggregated and not used to identify you.</p>
+<p>Like most websites, our hosting provider records standard server logs (IP address, browser type, pages requested, referring URL and time) for security and performance. We use Google Analytics 4 to understand which pages are useful. Google Analytics sets cookies and collects data such as pages viewed, approximate location, device and browser; see <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">how Google uses data from sites that use its services</a>. You can opt out with the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Google Analytics opt-out browser add-on</a>. Calculator inputs are never sent to Google Analytics.</p>
 <h2 id="cookies">Cookies</h2>
-<p>The site itself does not need cookies to work. If we add analytics or advertising, those services may set cookies in line with their own policies; you can block or delete cookies in your browser settings.</p>
+<p>The calculators themselves do not need cookies. Google Analytics sets first-party cookies (such as <code>_ga</code>) to measure visits. If you follow an Amazon affiliate link, Amazon may set cookies to attribute a purchase to us. You can block or delete cookies in your browser settings.</p>
 <h2 id="third">Third-party services</h2>
-<p>We use a web host, an email provider and Google Fonts. These providers process limited technical data needed to deliver their service. Links to external sites (such as irs.gov) are governed by those sites’ privacy policies.</p>
+<p>We use a web host, an email provider, Google Fonts, Google Analytics and the Amazon Associates program. These providers process limited technical data needed to deliver their service. Links to external sites (such as irs.gov) are governed by those sites’ privacy policies.</p>
 <h2 id="security">Data security</h2>
 <p>The site is served over HTTPS and we limit the personal data we hold. No method of transmission or storage is completely secure, but we take reasonable steps to protect what we have.</p>
 <h2 id="rights">Your choices and rights</h2>

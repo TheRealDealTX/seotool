@@ -65,7 +65,7 @@ echo simple_hero('Our methodology', 'Exactly how CPA Calculator turns IRS rules 
 <p>Our guides are written in plain English first: short sentences, defined terms and worked examples with real numbers. Claims are tied to IRS sources, examples are computed rather than typed by hand, and articles are dated and updated when rules change. We don’t publish invented statistics or testimonials.</p>
 
 <h2 id="privacy">8. Privacy by design</h2>
-<p>All calculations run in your browser. The numbers you type into a CPA Calculator tool are not sent to our servers or stored. Share links put your inputs in the URL only when you choose to copy one. Details are in our <a href="/privacy-policy/">privacy policy</a>.</p>
+<p>All calculations run in your browser. The numbers you type into a CPA Calculator tool are not sent to our servers, to Google Analytics or anywhere else, and are not stored. Share links put your inputs in the URL only when you choose to copy one. Details are in our <a href="/privacy-policy/">privacy policy</a>.</p>
 
 <h2 id="feedback">9. Found an error?</h2>
 <p>Accuracy is the whole point of this site. If a result looks wrong, email <a href="mailto:<?= SITE_EMAIL ?>"><?= SITE_EMAIL ?></a> or use the <a href="/contact/">contact form</a> with the calculator, your inputs and the result you expected. We investigate every report.</p>
