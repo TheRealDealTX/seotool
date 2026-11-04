@@ -19,7 +19,7 @@ return [
         'A 4G solar camera needs <strong>LTE coverage at the spot</strong>, a compatible <strong>SIM and data plan</strong>, and a camera that supports your carrier’s bands.',
         'Typical use is about <strong>1–10+ GB per month</strong>, driven mostly by event count and live viewing.',
         '4G modems draw more power than Wi-Fi, so plan on a <strong>5–10 W panel</strong> with 3–5 hours of direct sun.',
-        'Examples: the <a href="https://amzn.to/4eol53X" rel="sponsored nofollow noopener" target="_blank">Reolink 4G LTE solar camera</a> (cellular only) and <a href="https://amzn.to/4vQ1U9I" rel="sponsored nofollow noopener" target="_blank">Arlo Go 2</a> (LTE + Wi-Fi).',
+        'Examples: the <a href="https://www.amazon.com/dp/B0FHKXRLBW/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Reolink 4G LTE solar camera</a> (cellular only) and <a href="https://www.amazon.com/dp/B0BLZVB2NQ/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Arlo Go 2</a> (LTE + Wi-Fi).',
     ],
     'body' => <<<'HTML'
 <h2>What is a solar CCTV camera with a SIM card?</h2>
@@ -38,13 +38,13 @@ return [
 <ul class="spec-chips"><li>4G LTE cellular</li><li>Works without Wi-Fi</li><li>Solar powered</li><li>Needs SIM / data plan</li><li>microSD local storage</li></ul>
 <p>A purpose-built cellular camera for sites with no Wi-Fi at all. It runs from a rechargeable battery topped up by solar, connects over LTE with your SIM, and records locally to microSD as a backup when signal drops. It's a good fit for gates, fields, barns and construction sites. Check the listing for the exact model's LTE bands and which carriers it supports in your country.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Designed around cellular use</li><li>No Wi-Fi, internet or power needed on site</li><li>Local microSD backup</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Needs an ongoing data plan</li><li>Band and carrier compatibility must be checked</li><li>Higher power draw than Wi-Fi models</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/4eol53X" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0FHKXRLBW/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <div class="product"><span class="badge">Best for LTE + Wi-Fi flexibility</span><h3>Arlo Go 2</h3>
 <ul class="spec-chips"><li>LTE + Wi-Fi</li><li>Battery powered</li><li>Solar panel sold separately</li><li>microSD local storage</li><li>Needs data plan for LTE</li></ul>
 <p>A battery camera that can connect over LTE or Wi-Fi, useful where Wi-Fi is patchy or for a camera you move between a home and a remote site. It records to microSD locally. The solar panel is a separate purchase, so add it to your budget, and check which features need a subscription on the current listing.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Two connection options</li><li>Local microSD recording</li><li>Portable between properties</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Solar panel costs extra</li><li>Data plan needed for cellular use</li><li>Some features may require a subscription</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/4vQ1U9I" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0BLZVB2NQ/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 <p>For Wi-Fi models and other categories, see our full list of the <a href="/best-solar-security-cameras/">best solar security cameras</a>.</p>
 
 <h2>Carrier and band compatibility: will an LTE solar security camera work on my network?</h2>

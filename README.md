@@ -87,10 +87,11 @@ Based on the Search Console export in `backup/gsc-performance-2026-11-03.xlsx` (
   network and mounting products on tracking ID `solarcctvcamera-20`. Put `<!--products:id1,id2-->` in any
   article body to show a gear grid (this also switches on the page’s affiliate disclosure). Products link
   to a verified ASIN where one was confirmed, otherwise to an Amazon search for the exact product name
-  (search links earn commission and never break when a listing changes). The original five picks on the
-  buying guides still use the older `amzn.to` short links (tag `josephrayditt-20`).
+  (search links earn commission and never break when a listing changes). Every Amazon link on the site uses
+  this one tag (`AMAZON_TAG` in `public/inc/bootstrap.php`); the original five picks were moved off the
+  old `amzn.to` short links (tag `josephrayditt-20`) on 2026-11-04, keeping the same products.
 - Kept: Google Search Console verification file, Amazon affiliate links
-  (tag `josephrayditt-20`, now `rel="sponsored nofollow"`).
+  (now `rel="sponsored nofollow"`).
 
 ## Known gaps
 

@@ -54,7 +54,7 @@ return [
 <p>For a typical home with decent Wi-Fi at the mounting spot, a battery camera paired with a separate solar panel is the most flexible setup, and the Reolink Argus-series kit is the one we would start with. The detachable panel matters more than most buyers realize: you can mount the camera under an eave where it sees the driveway, and run the panel cable up to a sunny section of roof edge or fascia where it actually gets sun.</p>
 <p>Recording goes to a microSD card in the camera, so you can review clips without paying for cloud storage. Owner reports commonly mention that a properly aimed panel keeps the battery near full through most of the year in sunny and mid-latitude regions, with the usual caveat that short, overcast winter days are harder. Argus models vary in resolution and features, so check which exact model is in the bundle.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Panel and camera can be placed separately for the best sun and the best view</li><li>Local microSD recording, no subscription required for basic use</li><li>Established app with wide model range</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Needs usable 2.4 GHz Wi-Fi signal at the camera</li><li>Event-based recording, not continuous</li><li>Exact specs depend on the specific Argus model bundled</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/48Qj50L" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0DQV4L955/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <h2>Best built-in solar, no subscription: eufy SoloCam S340</h2>
 <div class="product"><span class="badge">Best built-in solar / no subscription</span><h3>eufy SoloCam S340</h3>
@@ -62,7 +62,7 @@ return [
 <p>If you want the cleanest possible install, with no panel bracket and no cable to route, a camera with the solar panel built into the housing is the answer. The eufy SoloCam S340 stands out in this group because it pairs that integrated panel with a dual-lens design: a wide 3K view plus a telephoto lens for closer detail, on a pan-and-tilt base that can follow a scene.</p>
 <p>The trade-off of any built-in panel is placement. The camera has to sit where it gets both a good view and several hours of direct sun, which rules out deep eaves and north-facing walls. Before you commit, run your spot through the <a href="/tools/solar-camera-site-check/">solar camera site check</a>. Storage is local, and eufy markets the camera as working without a required subscription, which is a real saving over five years.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>No separate panel or cable, very tidy install</li><li>Wide plus telephoto lenses for overview and detail</li><li>Pan and tilt widens practical coverage</li><li>Local storage without a required subscription</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Camera position must also be a sunny position</li><li>Pan/tilt motors and dual sensors use more energy per event</li><li>Wi-Fi only, no cellular option</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/48QjQH9" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0CCYP6KFM/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <h2>Best no-Wi-Fi option: Reolink 4G LTE solar camera</h2>
 <div class="product"><span class="badge">Best for no Wi-Fi (4G)</span><h3>Reolink 4G LTE solar camera</h3>
@@ -70,7 +70,7 @@ return [
 <p>Farms, vacant lots, construction sites, gates at the end of long driveways and vacation properties often have no Wi-Fi at all. A 4G LTE solar camera solves that by sending alerts and video over the cellular network using a SIM card. The Reolink 4G LTE solar camera is our pick for a dedicated cellular unit because it is designed around that use case rather than adding LTE as an afterthought.</p>
 <p>Two things decide whether it will work for you. First, cellular signal at the exact mounting spot: check with a phone on the same carrier before you buy. Second, data: every alert clip and minute of live view uses mobile data, typically 1–10+ GB a month depending on activity. Estimate yours with the <a href="/tools/4g-data-and-storage-calculator/">4G data and storage calculator</a>, and read our full guide to the <a href="/reviews/solar-cctv-camera-with-sim-card/">solar CCTV camera with SIM card</a> for carrier and band compatibility.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>No Wi-Fi or internet needed at the property</li><li>Solar plus battery means no power cable either</li><li>Local microSD backup if signal drops</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Ongoing data plan cost</li><li>Requires adequate LTE signal and a compatible carrier/band</li><li>4G modem uses more power than Wi-Fi, so panel placement matters more</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/4eol53X" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0FHKXRLBW/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <h2>Best LTE + Wi-Fi flexibility: Arlo Go 2</h2>
 <div class="product"><span class="badge">Best for LTE + Wi-Fi flexibility</span><h3>Arlo Go 2</h3>
@@ -78,7 +78,7 @@ return [
 <p>The Arlo Go 2 is a battery camera that can connect over either LTE or Wi-Fi. That makes it a good fit for places where Wi-Fi exists but is unreliable, or for a camera you might move between a home and a remote property. It also records to microSD, so you keep footage locally if the connection drops.</p>
 <p>Note that the solar panel is sold separately, so budget for it and make sure you buy the compatible model. Like any cellular camera, it needs an active data plan for LTE use and decent signal at the mounting location. If you mostly have strong Wi-Fi, a Wi-Fi-only kit is simpler; if you never have Wi-Fi, a dedicated 4G solar camera is usually better value.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Two connection paths: LTE and Wi-Fi</li><li>Local microSD recording</li><li>Portable between sites</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Solar panel is an extra purchase</li><li>Data plan needed for cellular use</li><li>Some features may depend on a subscription; check the current listing</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/4vQ1U9I" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0BLZVB2NQ/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <h2>Best multi-camera budget system: TP-Link Tapo C420</h2>
 <div class="product"><span class="badge">Best multi-camera budget system</span><h3>TP-Link Tapo C420 battery camera system</h3>
@@ -86,7 +86,7 @@ return [
 <p>If you need to cover several sides of a house without spending premium money per camera, a hub-based system like the Tapo C420 kit makes sense. The cameras talk to a hub, which connects to your router; the hub can extend effective range compared with each camera connecting to Wi-Fi directly, and centralizes storage options.</p>
 <p>The C420 records at 2K, which is a sensible balance between detail and battery use. Solar panels are an accessory, so add one per camera that sits in a sunny spot. Use the <a href="/tools/cctv-camera-planner/">CCTV camera planner</a> to work out how many cameras you actually need before buying a large kit.</p>
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Lower cost per camera in multi-packs</li><li>Hub helps with range and centralizes the system</li><li>2K is a good balance of detail and battery life</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Solar panels are extra</li><li>Hub needs a power outlet and router connection</li><li>Wi-Fi only, no cellular</li></ul></div></div>
-<a class="btn btn-sun" href="https://amzn.to/4mALgqk" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0BKZK4JGK/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
 <h2>Best 4K wide-angle solar camera: Reolink Argus 4 Pro</h2>
 <div class="product"><span class="badge">Best 4K wide-angle</span><h3>Reolink Argus 4 Pro + Solar Panel 2</h3>

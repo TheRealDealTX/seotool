@@ -1,6 +1,6 @@
 <?php
 /**
- * Amazon affiliate product catalog (tracking ID AMAZON_TAG2 = solarcctvcamera-20).
+ * Amazon affiliate product catalog (tracking ID AMAZON_TAG = solarcctvcamera-20, set in bootstrap.php).
  *
  * Each product links either to a verified product page (asin) or to an Amazon
  * search for the exact product name (q). Search links earn the same commission
@@ -13,8 +13,6 @@
  */
 defined('SCC') || (http_response_code(404) && exit);
 
-const AMAZON_TAG2 = 'solarcctvcamera-20';
-
 function products(): array
 {
     return [
@@ -25,7 +23,7 @@ function products(): array
         'eufy-s220' => ['eufy SoloCam S220', 'camera', ['asin' => 'B0BZ55JZ4S'],
             ['2K', 'Built-in solar panel', '2.4 GHz Wi‑Fi', 'Local storage', 'No monthly fee'],
             'Budget one-piece camera with the panel built in. Best in open, sunny spots where a small panel can keep up.'],
-        'eufy-s340' => ['eufy SoloCam S340', 'camera', ['q' => 'eufy SoloCam S340'],
+        'eufy-s340' => ['eufy SoloCam S340', 'camera', ['asin' => 'B0CCYP6KFM'],
             ['3K wide + telephoto', 'Pan & tilt', 'Built-in solar panel', 'Local storage', 'No subscription required'],
             'Dual-lens pan-tilt camera with an integrated panel. One camera can watch a wide area and zoom in on detail.'],
         'ring-solar' => ['Ring Spotlight Cam Plus Solar', 'camera', ['q' => 'Ring Spotlight Cam Plus Solar'],
@@ -34,7 +32,7 @@ function products(): array
         'go-pt-ultra' => ['Reolink Go PT Ultra + Solar Panel 2', 'camera', ['q' => 'Reolink Go PT Ultra 4G LTE solar'],
             ['4K', '4G LTE (nano SIM)', 'Pan & tilt', '6 W panel', 'microSD'],
             'Cellular pan-tilt camera for farms, gates and job sites with no Wi‑Fi. Needs a data plan on a supported carrier.'],
-        'arlo-go2' => ['Arlo Go 2', 'camera', ['q' => 'Arlo Go 2 LTE'],
+        'arlo-go2' => ['Arlo Go 2', 'camera', ['asin' => 'B0BLZVB2NQ'],
             ['1080p', 'LTE or Wi‑Fi', 'Spotlight', 'microSD backup', 'Solar panel sold separately'],
             'Switches between LTE and Wi‑Fi, so it suits sites where Wi‑Fi comes and goes. Pair with an Arlo solar panel.'],
         'cell-trail' => ['Cellular trail camera with solar panel', 'camera', ['q' => 'cellular trail camera solar panel'],
@@ -106,8 +104,8 @@ function products(): array
 function amazon_link(array $p): string
 {
     $src = $p[2];
-    if (!empty($src['asin'])) return 'https://www.amazon.com/dp/' . rawurlencode($src['asin']) . '/?tag=' . AMAZON_TAG2;
-    return 'https://www.amazon.com/s?k=' . rawurlencode($src['q']) . '&tag=' . AMAZON_TAG2;
+    if (!empty($src['asin'])) return 'https://www.amazon.com/dp/' . rawurlencode($src['asin']) . '/?tag=' . AMAZON_TAG;
+    return 'https://www.amazon.com/s?k=' . rawurlencode($src['q']) . '&tag=' . AMAZON_TAG;
 }
 
 function products_grid(array $ids): string
