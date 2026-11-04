@@ -188,7 +188,24 @@ $single = $y['brackets']['single'];
   </div>
 </section>
 
+<?php if (states()): ?>
 <section class="section section-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">All 50 states + DC</span>
+      <h2>State income tax calculator</h2>
+      <p>Add state tax to your federal estimate. Pick your state for its <?= $Y ?> brackets, deductions and take-home pay, or compare every state in the <a href="/calculators/state-income-tax/">state income tax calculator</a>.</p>
+    </div>
+    <ul class="pill-links reveal">
+<?php foreach (states() as $st): ?>
+      <li><a href="/calculators/state-income-tax/<?= e($st['slug']) ?>/"><?= e($st['name']) ?></a></li>
+<?php endforeach; ?>
+    </ul>
+  </div>
+</section>
+<?php endif; ?>
+
+<section class="section">
   <div class="wrap split">
     <div class="reveal">
       <span class="kicker">Two kinds of CPA</span>

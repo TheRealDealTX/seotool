@@ -5,6 +5,7 @@ $pg = SITE_ROOT . '/app/pages';
 $m = fn($f) => is_file($f) ? date('Y-m-d', filemtime($f)) : date('Y-m-d');
 $urls = [['/', $m("$pg/home.php"), '1.0'], ['/calculators/', $m("$pg/calculators/index.php"), '0.9']];
 foreach (TOOLS as $s => $_) $urls[] = [tool_url($s), $m("$pg/calculators/$s.php"), in_array($s, ['federal-income-tax', '1099-tax-calculator']) ? '0.9' : '0.8'];
+foreach (states() as $st) $urls[] = ['/calculators/state-income-tax/' . $st['slug'] . '/', $m("$pg/calculators/state.php"), '0.7'];
 foreach (SALARY_PAGES as $a) $urls[] = ["/calculators/federal-income-tax/$a/", $m("$pg/calculators/salary.php"), '0.6'];
 $urls[] = ['/blog/', POSTS[live_posts()[0]][2], '0.7'];
 $urls[] = ['/topic/guides/', $m("$pg/blog/index.php"), '0.4'];

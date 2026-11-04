@@ -30,6 +30,14 @@ const TOOLS = [
   'profit-margin'           => ['Profit Margin Calculator', 'Profit Margin & Markup', 'Gross margin, markup, and the price you need to hit a target margin.', 'percent', 'Business'],
   'break-even'              => ['Break-Even Calculator', 'Break-Even Point', 'Units and revenue needed to cover fixed costs, with a contribution-margin chart.', 'scale', 'Business'],
   'cost-per-acquisition'    => ['Cost Per Acquisition (CPA) Calculator', 'CPA Formula (Marketing)', 'The CPA formula for marketing: cost per acquisition, target CPA and ROAS.', 'target', 'Business'],
+  'state-income-tax'        => ['State Income Tax Calculator', 'State Income Tax (All 50 States)', 'State income tax for every state and DC, plus federal tax and take-home pay.', 'flag', 'Income tax'],
+  'bonus-tax-calculator'    => ['Bonus Tax Calculator', 'Bonus Tax', 'How much of your bonus you keep: 22% supplemental withholding vs your actual tax.', 'spark', 'Income tax'],
+  'overtime-calculator'     => ['Overtime Calculator (No Tax on Overtime)', 'Overtime & No Tax on Overtime', 'Overtime pay at 1.5x or 2x, plus the new 2026 deduction for qualified overtime.', 'clock', 'Income tax'],
+  'tips-tax-calculator'     => ['No Tax on Tips Calculator', 'No Tax on Tips', 'How much the new deduction for qualified tips saves you, with the phase-out.', 'wallet', 'Income tax'],
+  'gross-up-calculator'     => ['Gross-Up Calculator', 'Gross-Up (Net to Gross)', 'The gross payment needed so a bonus or check nets an exact after-tax amount.', 'percent', 'Income tax'],
+  'underpayment-penalty'    => ['Estimated Tax Penalty Calculator', 'Underpayment Penalty', 'Estimate the IRS underpayment penalty (Form 2210) and how to avoid it.', 'calendar', 'Self-employed'],
+  'gift-tax-calculator'     => ['Gift Tax Calculator', 'Gift Tax', 'Annual exclusion, lifetime exemption used and whether a gift owes tax or needs Form 709.', 'refund', 'Estate & gift'],
+  'estate-tax-calculator'   => ['Estate Tax Calculator', 'Estate Tax', 'Federal estate tax under the $15 million exemption, portability and the 40% rate.', 'building', 'Estate & gift'],
   'salary-to-hourly'        => ['Salary to Hourly Calculator', 'Salary ↔ Hourly', 'Convert annual salary to hourly, weekly and monthly pay — before and after tax.', 'clock', 'Income tax'],
 ];
 
@@ -62,6 +70,7 @@ const NAV = [
   ['Calculators', '/calculators/'],
   ['Federal Tax', '/calculators/federal-income-tax/'],
   ['1099 Tax', '/calculators/1099-tax-calculator/'],
+  ['State Tax', '/calculators/state-income-tax/'],
   ['Guides', '/blog/'],
   ['Methodology', '/our-methodology/'],
 ];
@@ -72,6 +81,8 @@ function e($s): string { return htmlspecialchars((string) $s, ENT_QUOTES | ENT_H
 function money($n, int $dp = 0): string { return ($n < 0 ? '−$' : '$') . number_format(abs($n), $dp); }
 function asset(string $p): string { $f = SITE_ROOT . $p; return $p . (is_file($f) ? '?v=' . substr(md5_file($f), 0, 8) : ''); }
 function tool_url(string $slug): string { return '/calculators/' . $slug . '/'; }
+function states(): array { static $s; return $s ??= (json_decode(@file_get_contents(__DIR__ . '/data/states.json') ?: '{}', true)['states'] ?? []); }
+function state_by_slug(string $slug): ?array { foreach (states() as $code => $st) if (($st['slug'] ?? '') === $slug) return $st + ['code' => $code]; return null; }
 function post_url(string $slug): string { return '/blog/' . $slug . '/'; }
 function fmt_date(string $iso): string { return date('F j, Y', strtotime($iso)); }
 
@@ -225,6 +236,8 @@ const AMAZON_MAP = [
   'capital-gains-tax' => 'investing',
   's-corp-tax-savings' => 'business', 'depreciation-calculator' => 'business', 'profit-margin' => 'business', 'break-even' => 'business',
   'cost-per-acquisition' => 'marketing',
+  'state-income-tax' => 'tax', 'bonus-tax-calculator' => 'tax', 'overtime-calculator' => 'tax', 'tips-tax-calculator' => 'tax', 'gross-up-calculator' => 'tax',
+  'underpayment-penalty' => 'freelancer', 'gift-tax-calculator' => 'investing', 'estate-tax-calculator' => 'investing',
   'got-a-1099-exactly-what-to-do-next' => 'freelancer', 'quarterly-taxes-101-guide' => 'freelancer', 'do-i-have-to-pay-quarterly-taxes-my-first-year' => 'freelancer',
   '1099-taxes-for-physicians' => 'freelancer', '1099-vs-w2' => 'freelancer', '1099-k' => 'freelancer', 'schedule-c-tax-form' => 'freelancer',
   'understanding-your-w-2' => 'tax', 'how-much-federal-tax-will-i-pay' => 'tax', 'bonus-tax-rate' => 'tax', 'married-filing-separately' => 'tax',
@@ -388,12 +401,12 @@ function render_page(array $P, string $body): void {
         <a class="ft-mail" href="mailto:<?= SITE_EMAIL ?>"><?= icon('mail') ?><?= SITE_EMAIL ?></a>
       </div>
       <div class="ft-col"><h3>Tax calculators</h3><ul>
-<?php foreach (['federal-income-tax', '1099-tax-calculator', 'self-employment-tax', 'quarterly-estimated-tax', 'paycheck-calculator', 'tax-refund-calculator', 'capital-gains-tax', 'salary-to-hourly'] as $s): ?>
+<?php foreach (['federal-income-tax', 'state-income-tax', '1099-tax-calculator', 'self-employment-tax', 'quarterly-estimated-tax', 'paycheck-calculator', 'tax-refund-calculator', 'bonus-tax-calculator', 'overtime-calculator', 'tips-tax-calculator', 'capital-gains-tax', 'salary-to-hourly'] as $s): ?>
         <li><a href="<?= tool_url($s) ?>"><?= e(TOOLS[$s][1]) ?></a></li>
 <?php endforeach; ?>
       </ul></div>
       <div class="ft-col"><h3>Business tools</h3><ul>
-<?php foreach (['s-corp-tax-savings', 'mileage-deduction', 'home-office-deduction', 'depreciation-calculator', 'profit-margin', 'break-even', 'cost-per-acquisition'] as $s): ?>
+<?php foreach (['s-corp-tax-savings', 'mileage-deduction', 'home-office-deduction', 'depreciation-calculator', 'underpayment-penalty', 'gross-up-calculator', 'gift-tax-calculator', 'estate-tax-calculator', 'profit-margin', 'break-even', 'cost-per-acquisition'] as $s): ?>
         <li><a href="<?= tool_url($s) ?>"><?= e(TOOLS[$s][1]) ?></a></li>
 <?php endforeach; ?>
       </ul></div>

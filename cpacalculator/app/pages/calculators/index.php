@@ -12,6 +12,7 @@ $intro = [
   'Self-employed' => 'For freelancers, contractors, gig workers and side hustlers paid on a 1099.',
   'Investing' => 'For selling stocks, crypto, funds or property.',
   'Deductions' => 'Write-offs that lower taxable income for self-employed people and business owners.',
+  'Estate & gift' => 'Federal gift and estate tax under the current lifetime exemption.',
   'Business' => 'Entity choice, pricing, profitability and asset math for small businesses and marketers.',
 ];
 ?>

@@ -54,6 +54,8 @@ if (isset($static[$path])) {
 } elseif (preg_match('#^/calculators/federal-income-tax/(\d{4,7})/$#', $path, $m)) {
   $AMOUNT = (int) $m[1];
   if (in_array($AMOUNT, SALARY_PAGES, true)) $file = $pages . '/calculators/salary.php';
+} elseif (preg_match('#^/calculators/state-income-tax/([a-z-]+)/$#', $path, $m) && ($STATE = state_by_slug($m[1]))) {
+  $file = $pages . '/calculators/state.php';
 } elseif (preg_match('#^/calculators/([a-z0-9-]+)/$#', $path, $m) && isset(TOOLS[$m[1]])) {
   $file = $pages . '/calculators/' . $m[1] . '.php';
 } elseif (preg_match('#^/blog/([a-z0-9-]+)/$#', $path, $m) && post_is_live($m[1])) {
