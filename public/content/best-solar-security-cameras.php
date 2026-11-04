@@ -1,6 +1,6 @@
 <?php defined('SCC') || (http_response_code(404) && exit);
 return [
-    'title'       => 'Best Solar Security Cameras 2026: 5 Picks by Use Case',
+    'title'       => 'Best Solar Security Cameras 2026: 9 Picks by Use Case',
     'description' => 'Best solar security cameras 2026 by use case: Wi-Fi kits, built-in solar, 4G LTE and budget multi-cam systems, plus the solar math to size yours.',
     'h1'          => 'Best Solar Security Cameras 2026: Picks for Every Property',
     'crumb'       => 'Best Solar Cameras',
@@ -24,13 +24,17 @@ return [
     ],
     'body' => <<<'HTML'
 <h2>Quick picks: the best solar security cameras of 2026 by category</h2>
-<p>There is no single best solar security camera for everyone. A suburban porch, a cabin with no internet and a barn 300 feet from the house need different hardware. So instead of ranking cameras with scores, we picked the strongest option in each of five categories that cover most real-world sites. Together they make up our shortlist of the best outdoor solar security cameras for 2026.</p>
+<p>There is no single best solar security camera for everyone. A suburban porch, a cabin with no internet and a barn 300 feet from the house need different hardware. So instead of ranking cameras with scores, we picked the strongest option in each of nine categories that cover most real-world sites. Together they make up our shortlist of the best outdoor solar security cameras for 2026.</p>
 <div class="table-wrap"><table><thead><tr><th>Category</th><th>Pick</th><th>Connectivity</th><th>Solar setup</th><th>Storage</th></tr></thead><tbody>
 <tr><td>Best overall Wi-Fi solar kit</td><td>Reolink Argus-series kit</td><td>Wi-Fi</td><td>Detachable panel with cable</td><td>microSD, optional cloud</td></tr>
 <tr><td>Best built-in solar / no subscription</td><td>eufy SoloCam S340</td><td>Wi-Fi</td><td>Panel built into the camera</td><td>Local, no subscription required</td></tr>
 <tr><td>Best no-Wi-Fi (4G)</td><td>Reolink 4G LTE solar camera</td><td>4G LTE (SIM)</td><td>Solar panel included or bundled</td><td>microSD, optional cloud</td></tr>
 <tr><td>Best LTE + Wi-Fi flexibility</td><td>Arlo Go 2</td><td>LTE or Wi-Fi</td><td>Panel sold separately</td><td>microSD, optional cloud</td></tr>
 <tr><td>Best multi-camera budget system</td><td>TP-Link Tapo C420 system</td><td>Wi-Fi via hub</td><td>Solar accessory available</td><td>Hub / local options</td></tr>
+<tr><td>Best 4K wide-angle</td><td>Reolink Argus 4 Pro + Solar Panel 2</td><td>Dual-band Wi-Fi 6</td><td>Detachable 6 W panel</td><td>microSD, optional cloud</td></tr>
+<tr><td>Best budget built-in solar</td><td>eufy SoloCam S220</td><td>2.4 GHz Wi-Fi</td><td>Panel built into the camera</td><td>Local, no monthly fee</td></tr>
+<tr><td>Best 4G pan-tilt</td><td>Reolink Go PT Ultra + Solar Panel 2</td><td>4G LTE (nano SIM)</td><td>6 W panel included</td><td>microSD, optional cloud</td></tr>
+<tr><td>Best for Ring homes</td><td>Ring Spotlight Cam Plus Solar</td><td>Wi-Fi</td><td>Solar panel included</td><td>Cloud (Ring Protect plan)</td></tr>
 </tbody></table></div>
 <p>Specs, bundles and prices change often, so confirm the current details on each listing before you buy. If you are still deciding whether solar fits your property at all, read <a href="/guides/are-solar-cameras-worth-it/">are solar cameras worth it</a> first.</p>
 
@@ -84,8 +88,44 @@ return [
 <div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Lower cost per camera in multi-packs</li><li>Hub helps with range and centralizes the system</li><li>2K is a good balance of detail and battery life</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Solar panels are extra</li><li>Hub needs a power outlet and router connection</li><li>Wi-Fi only, no cellular</li></ul></div></div>
 <a class="btn btn-sun" href="https://amzn.to/4mALgqk" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
 
+<h2>Best 4K wide-angle solar camera: Reolink Argus 4 Pro</h2>
+<div class="product"><span class="badge">Best 4K wide-angle</span><h3>Reolink Argus 4 Pro + Solar Panel 2</h3>
+<ul class="spec-chips"><li>4K</li><li>180° dual-lens stitched view</li><li>Color night vision</li><li>Dual-band Wi-Fi 6</li><li>6 W detachable panel</li><li>No monthly fee required</li></ul>
+<p>The Argus 4 Pro uses two lenses stitched into a single 180° image, so one camera on a corner of the house can cover a yard or driveway that would normally take two. It records in 4K, supports dual-band Wi-Fi 6, and is sold in kits with Reolink’s 6 W Solar Panel 2.</p>
+<p>4K and a wide field of view are a trade-off: the image is spread across 180°, so detail at distance is roughly what you would expect from a narrower 2K camera. Check what you need with the <a href="/tools/camera-coverage-calculator/">coverage calculator</a>. 4K also uses more energy per clip, so give the panel full sun and run the <a href="/tools/solar-camera-battery-calculator/">battery calculator</a> if the spot is busy.</p>
+<div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>One camera covers a very wide area</li><li>6 W panel kit is generous for a battery camera</li><li>Local storage, no subscription required</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Wide view spreads pixels thin at distance</li><li>4K clips use more battery and storage</li><li>Wi-Fi only</li></ul></div></div>
+<a class="btn btn-sun" href="https://www.amazon.com/s?k=Reolink%20Argus%204%20Pro%20Solar%20Panel%202&amp;tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+
+<h2>Best budget built-in solar camera: eufy SoloCam S220</h2>
+<div class="product"><span class="badge">Best budget built-in solar</span><h3>eufy SoloCam S220</h3>
+<ul class="spec-chips"><li>2K</li><li>Built-in solar panel</li><li>AI person detection</li><li>2.4 GHz Wi-Fi</li><li>Local storage</li><li>No monthly fee</li></ul>
+<p>The S220 is one of the least expensive ways into solar security: a one-piece 2K camera with a small panel built into the top, AI person detection and local storage with no monthly fee. eufy rates the built-in panel at under 1 W, which is enough for a quiet spot with several hours of direct sun but not for a busy driveway or a shaded wall.</p>
+<p>Put it where the panel faces the sun, keep activity zones tight, and it will rarely need a cable. It connects over 2.4 GHz Wi-Fi only, which actually helps range outdoors.</p>
+<div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Low price for a solar camera</li><li>One-piece install, nothing to route</li><li>No subscription for core features</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Small built-in panel needs open sun</li><li>Not for high-traffic spots</li><li>2.4 GHz Wi-Fi only</li></ul></div></div>
+<a class="btn btn-sun" href="https://www.amazon.com/dp/B0BZ55JZ4S/?tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+
+<h2>Best 4G pan-tilt solar camera: Reolink Go PT Ultra</h2>
+<div class="product"><span class="badge">Best 4G pan-tilt</span><h3>Reolink Go PT Ultra + Solar Panel 2</h3>
+<ul class="spec-chips"><li>4K</li><li>4G LTE (nano SIM)</li><li>Pan &amp; tilt</li><li>6 W solar panel</li><li>microSD storage</li></ul>
+<p>For a farm yard, construction site or remote gate with no Wi-Fi, a cellular pan-tilt camera can sweep a whole area and still send alerts. The Go PT Ultra pairs 4K video and pan-tilt with a 4G LTE modem and a 6 W panel. It needs a nano SIM with a data plan on a supported carrier, so check band compatibility first (see our <a href="/reviews/solar-cctv-camera-with-sim-card/">SIM card camera guide</a>).</p>
+<p>Pan-tilt motors and the LTE radio both draw extra power, so give the panel full sun, avoid long patrol schedules, and estimate data with the <a href="/tools/4g-data-and-storage-calculator/">4G data calculator</a>.</p>
+<div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Works anywhere with cell coverage</li><li>Pan-tilt covers far more than a fixed lens</li><li>6 W panel included</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Needs a SIM and monthly data</li><li>Motors and LTE raise power use</li><li>Carrier and band compatibility matter</li></ul></div></div>
+<a class="btn btn-sun" href="https://www.amazon.com/s?k=Reolink%20Go%20PT%20Ultra%204G%20LTE%20solar&amp;tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+
+<h2>Best for Ring households: Ring Spotlight Cam Plus Solar</h2>
+<div class="product"><span class="badge">Best for Ring homes</span><h3>Ring Spotlight Cam Plus Solar</h3>
+<ul class="spec-chips"><li>1080p HDR</li><li>LED spotlights + siren</li><li>Color night vision</li><li>Two-way talk</li><li>Solar panel included</li></ul>
+<p>If your doorbell and other cameras are already Ring, keeping everything in one app is worth a lot. The Spotlight Cam Plus Solar adds bright LED spotlights, a siren and two-way talk, and ships with a USB-C solar panel. The spotlights make it a strong deterrent and give color footage at night.</p>
+<p>The catch is storage: saving and reviewing recordings requires a Ring Protect subscription, so count that in the running cost (the <a href="/tools/solar-vs-wired-cost-calculator/">cost calculator</a> has a subscription field). Spotlight use also drains the battery faster, so give the panel good sun.</p>
+<div class="proscons"><div class="pros"><h4>Pros</h4><ul><li>Bright spotlights and siren deter intruders</li><li>Polished app and Ring ecosystem</li><li>Solar panel in the box</li></ul></div><div class="cons"><h4>Cons</h4><ul><li>Recording history needs Ring Protect</li><li>1080p rather than 2K/4K</li><li>Spotlights cost battery</li></ul></div></div>
+<a class="btn btn-sun" href="https://www.amazon.com/s?k=Ring%20Spotlight%20Cam%20Plus%20Solar&amp;tag=solarcctvcamera-20" rel="sponsored nofollow noopener" target="_blank">Check price on Amazon</a></div>
+
+<h2>Accessories that make any solar camera work better</h2>
+<p>The camera is only half the system. These add-ons fix the most common problems: a card that wears out, a panel stuck in the shade, weak Wi-Fi at the edge of the yard, and cameras that walk away.</p>
+<!--products:sd-sandisk,panel-usbc,ext-cable,outdoor-ap,antitheft,pole-mount-->
+
 <h2>How to choose the best solar security camera</h2>
-<p>The five picks above cover most situations, but your site decides the right camera, not a list. Work through the factors below in order. The first question is always whether your mounting spot gets enough sun, so start with the site check before you look at resolution or features.</p>
+<p>The nine picks above cover most situations, but your site decides the right camera, not a list. Work through the factors below in order. The first question is always whether your mounting spot gets enough sun, so start with the site check before you look at resolution or features.</p>
 <!--tool:site-check-->
 
 <h3>Resolution: 2K vs 4K (is the best 4K solar security camera worth it?)</h3>

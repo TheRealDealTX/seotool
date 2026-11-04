@@ -37,6 +37,8 @@ return [
 <tr><td>Sydney, AU (face north)</td><td>−33.9°</td><td>34°</td><td>44°</td></tr>
 </tbody></table></div>
 
+<!--products:panel-reolink,pole-mount,ext-cable-->
+
 <h2>Does the exact angle matter?</h2>
 <p>Less than most people think. Being 10–15° off the ideal tilt typically costs only a few percent of output, because energy capture falls with the cosine of the error. Shade is a far bigger problem: a shadow across one corner of a small panel can cut its output in half. Get the direction roughly right, avoid shade, then fine-tune the tilt.</p>
 <p>Once the panel is aimed, check whether it collects enough energy for your camera with the <a href="/tools/solar-camera-battery-calculator/">battery and power calculator</a>, or run the quick <a href="/tools/solar-camera-site-check/">solar site check</a>.</p>

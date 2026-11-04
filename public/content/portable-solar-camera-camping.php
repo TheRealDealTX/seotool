@@ -121,6 +121,8 @@ return [
 <li><strong>Forgetting the microSD card.</strong> Without it, a camera with no connection records nothing at all.</li>
 </ul>
 
+<!--products:power-station,eufy-s220,panel-usbc-->
+
 <h2>Setting up a portable solar camera for camping: step by step</h2>
 <ol class="steps">
 <li><strong>Prepare at home</strong><p>Charge the camera fully, insert and format a microSD card, update firmware, and set it up on the network you will use at camp (your hotspot or travel router).</p></li>

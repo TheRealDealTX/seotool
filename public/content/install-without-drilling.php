@@ -125,6 +125,8 @@ return [
 <p>The mount is only half the job. A solar camera clamped in a convenient but shaded spot will slowly drain. Aim for at least a few hours of direct sun on the panel daily, more in winter. Run the <a href="/tools/solar-camera-site-check/">solar camera site check</a> for your spot, read <a href="/guides/do-solar-cameras-need-direct-sunlight/">do solar cameras need direct sunlight</a>, and size your panel with the <a href="/tools/solar-camera-battery-calculator/">battery calculator</a>. If the camera mount is shaded but sun is close by, a separate panel on a cable lets you clamp each where it works best.</p>
 <p>Also confirm Wi-Fi reaches the spot before mounting; see <a href="/guides/do-solar-cameras-need-wifi/">do solar cameras need Wi-Fi</a>. If the camera later stops charging, the <a href="/troubleshooting/not-charging/">not charging troubleshooting guide</a> walks through common causes.</p>
 
+<!--products:gutter-mount,siding-hook,pole-mount-->
+
 <h2>Gutter mount camera, strap or adhesive: which should you choose?</h2>
 <p>Choose by the structure you have and how permanent you want the result to be:</p>
 <ul>

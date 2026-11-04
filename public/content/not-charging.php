@@ -109,6 +109,8 @@ return [
 <li><strong>Watch the trend.</strong> Glance at the battery graph weekly; a slow decline is easier to fix early than a dead camera.</li>
 </ul>
 
+<!--products:panel-reolink,panel-usbc,ext-cable-->
+
 <h2>Faulty panel or faulty battery: how to tell</h2>
 <div class="proscons">
 <div class="pros"><h4>Points to the panel or cable</h4><ul><li>Multimeter reads near 0 V or well below normal in direct sun.</li><li>Visible cracks, burn marks, delamination or water inside the panel.</li><li>Camera charges normally from a USB wall charger.</li><li>A known-good panel charges the camera.</li></ul></div>

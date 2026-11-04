@@ -132,6 +132,8 @@ return [
 </table></div>
 <p>Before you buy, it is worth reading our <a href="/best-solar-security-cameras/">best solar security cameras</a> roundup and the cost comparison in <a href="/compare/solar-vs-wired/">solar vs wired cameras</a>. On a farm, the cost of trenching usually makes solar the cheaper choice for anything more than about 50 m from power.</p>
 
+<!--products:go-pt-ultra,wifi-bridge,solar-flood,cell-trail,pole-mount-->
+
 <h2>Common mistakes on farm camera setups</h2>
 <ul>
 <li><strong>Mounting too high and too far.</strong> A camera on top of a silo sees the whole farm and identifies nothing.</li>

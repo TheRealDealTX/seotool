@@ -122,6 +122,8 @@ return [
 <h2>Legal and privacy notes</h2>
 <p>A gate camera often sees the public road. Recording what’s visible from public spaces is generally allowed in the US, but rules vary by state and locality, and audio recording is more strictly regulated because of wiretap and consent laws. Avoid aiming at neighbors’ homes, and check any HOA or easement rules. For general information on camera use and privacy, the <a href="https://www.ftc.gov/" target="_blank" rel="noopener">FTC</a> publishes consumer guidance.</p>
 
+<!--products:go-pt-ultra,wifi-bridge,antitheft,driveway-alarm-->
+
 <h2>Is a solar gate camera worth it?</h2>
 <p>For any gate more than a short walk from power, a solar gate camera is usually the most practical way to see who’s coming and going. The panel and battery remove the cable cost, and 4G or a bridge removes the Wi-Fi problem. For the broader value question, read <a href="/guides/are-solar-cameras-worth-it/">are solar cameras worth it</a>, and for hardware picks see the <a href="/best-solar-security-cameras/">best solar security cameras</a>.</p>
 HTML,

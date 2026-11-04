@@ -131,6 +131,8 @@ return [
 </tbody></table></div>
 <p>Our guide to whether <a href="/guides/do-solar-cameras-need-wifi/">solar cameras need Wi-Fi</a> covers each of these in more depth.</p>
 
+<!--products:go-pt-ultra,sd-sandisk,antitheft,pole-mount-->
+
 <h2>4G solar camera buying checklist</h2>
 <div class="table-wrap"><table><thead><tr><th>Check</th><th>Why it matters</th></tr></thead><tbody>
 <tr><td>Supports your carrier's LTE bands (exact model/region)</td><td>Wrong bands mean no connection</td></tr>

@@ -83,6 +83,12 @@ Based on the Search Console export in `backup/gsc-performance-2026-11-03.xlsx` (
   gtag.js loader in `page_head()` (`public/inc/layout.php`), so every page, post, tool and the 404 carry them.
 - Snippet lengths: titles ≤ 55 characters / 540 px, descriptions ≤ 150 characters, checked by
   `python3 tools/meta_report.py [base-url]`.
+- Amazon affiliate products: `public/inc/products.php` is a catalog of ~26 cameras, panels, storage,
+  network and mounting products on tracking ID `solarcctvcamera-20`. Put `<!--products:id1,id2-->` in any
+  article body to show a gear grid (this also switches on the page’s affiliate disclosure). Products link
+  to a verified ASIN where one was confirmed, otherwise to an Amazon search for the exact product name
+  (search links earn commission and never break when a listing changes). The original five picks on the
+  buying guides still use the older `amzn.to` short links (tag `josephrayditt-20`).
 - Kept: Google Search Console verification file, Amazon affiliate links
   (tag `josephrayditt-20`, now `rel="sponsored nofollow"`).
 

@@ -127,6 +127,8 @@ return [
 </ol>
 <p>For long-term storage cameras, leave the camera on its mount in the lot, but take it off before pulling the rig out.</p>
 
+<!--products:arlo-go2,power-station,pole-mount-->
+
 <h2>Campsite security camera etiquette</h2>
 <p>A <strong>campsite security camera</strong> pointed at your own gear is generally fine. Pointed at the neighboring site, the restroom path or a group campfire, it is a quick way to upset people and possibly break campground rules. Keep the view on your site, turn off audio recording (audio is subject to stricter consent laws in many states), and check the campground’s policies. Public land agencies and private parks set their own rules; a quick question at check-in avoids trouble.</p>
 <p>For more on how cameras behave away from home, see <a href="/how-solar-cameras-work/">how solar cameras work</a> and our <a href="/best-solar-security-cameras/">best solar security cameras</a> guide.</p>

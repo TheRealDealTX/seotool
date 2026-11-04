@@ -31,6 +31,8 @@ return [
 <p>Battery cameras record events only, so even a modest card lasts a long time: a 128 GB card holds thousands of 20-second 2K clips. Cameras overwrite the oldest footage when the card fills (loop recording), so the “days” figure is how far back your history goes. Continuous 24/7 recording, possible only on wired or large-battery solar systems, fills a card in days rather than months.</p>
 <div class="callout info"><strong>Card tips</strong><p>Use “high endurance” cards rated for surveillance, check the camera’s maximum supported size (often 128–256 GB), and format the card in the camera, not on a computer.</p></div>
 
+<!--products:sd-sandisk,sd-samsung,go-pt-ultra-->
+
 <h2>Bitrate assumptions</h2>
 <p>The calculator assumes H.264 bitrates of about 2 Mbps for 1080p, 3 Mbps for 2K/4MP and 6 Mbps for 4K/8MP, with H.265 at roughly 60% of those figures, plus 10% overhead and about 60 MB a month of keep-alive traffic. Cameras with variable bitrate often use less in static scenes and at night.</p>
 HTML,

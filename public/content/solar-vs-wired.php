@@ -124,6 +124,8 @@ return [
 </ul>
 <div class="callout tip"><strong>Rule of thumb</strong><p>If you can get a cable to the spot for less than the price of a solar camera, go wired. If the cable costs more than the camera, go solar.</p></div>
 
+<!--products:argus4pro,eufy-s220,outdoor-ap-->
+
 <h2>Which is right for you?</h2>
 <p>Choose solar if your cameras need to go where power and cables don't reach, if you rent, or if you want a quick DIY install with no electrician. Choose wired PoE if you need continuous recording, run a business, cover a busy area or plan six or more cameras around one building. For most homeowners, the smart answer to solar vs wired security cameras is both: wired where it is easy, solar where it isn't.</p>
 <p>Ready to pick hardware? See our <a href="/best-solar-security-cameras/">best solar security cameras</a> picks and the <a href="/solar-camera-installation/">solar camera installation guide</a>, or read <a href="/guides/are-solar-cameras-worth-it/">are solar cameras worth it</a> for an honest look at the limitations.</p>

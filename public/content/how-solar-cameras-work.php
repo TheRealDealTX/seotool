@@ -140,6 +140,8 @@ return [
 </tbody></table></div>
 <p>The same scaling logic applies to <a href="/guides/solar-street-light-with-cctv-camera-price/">solar street lights with CCTV cameras</a> and to <a href="/use-cases/solar-cameras-for-construction-sites/">construction site solar camera towers</a>. If you are weighing continuous recording against a mains-powered setup, our <a href="/compare/solar-vs-wired/">solar vs wired comparison</a> lays out the trade-offs.</p>
 
+<!--products:argus4pro,eufy-s220,panel-reolink-->
+
 <h2>Putting it together</h2>
 <p>So how do solar powered security cameras work? A panel turns sunlight into a few watts of electricity, a charge controller feeds it safely into a lithium battery, and a camera designed to sleep most of the day draws from that battery only when motion wakes it. The balance between energy in (panel watts × sun hours) and energy out (events, night vision, live view, signal quality) decides whether the battery stays full. Get the panel into real sun, keep the signal strong and the event count sensible, and a solar camera can run for years without a cable. When you are ready to choose one, see our <a href="/best-solar-security-cameras/">best solar security cameras</a> guide and the <a href="/solar-camera-installation/">solar camera installation guide</a>.</p>
 HTML,

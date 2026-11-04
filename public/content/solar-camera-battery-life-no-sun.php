@@ -143,6 +143,8 @@ return [
 </ul>
 <p>Before blaming the battery, rule out the panel and connector. A loose plug, a damaged cable or a dirty panel can look very similar. Our <a href="/troubleshooting/not-charging/">solar camera not charging</a> guide has a step-by-step diagnostic, and a firmware update or reset can clear glitches that misreport battery level.</p>
 
+<!--products:panel-usbc,panel-reolink,sd-sandisk-->
+
 <h2>Solar camera battery replacement</h2>
 <p>How you replace the battery depends on the design.</p>
 <div class="table-wrap"><table>

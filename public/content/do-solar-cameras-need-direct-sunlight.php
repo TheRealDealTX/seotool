@@ -113,6 +113,8 @@ return [
 <li><strong>Trim the obstruction</strong><p>Sometimes the best fix is a pruning saw. Removing one branch can turn a shaded panel into a sunny one.</p></li>
 </ol>
 
+<!--products:ext-cable,panel-usbc,panel-reolink-->
+
 <h2>Do solar cameras need direct sunlight all year? Common mistakes</h2>
 <ul>
 <li><strong>Judging the spot in summer.</strong> The winter sun is much lower, so buildings and trees cast longer shadows. A spot with all-day summer sun can be shaded from November to February.</li>

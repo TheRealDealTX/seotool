@@ -592,3 +592,16 @@ input[type=range]::-moz-range-thumb { width: 18px; height: 18px; border-radius: 
 .prose .tool ul, .prose .tool ol { margin-bottom: 10px; }
 .prose .tool li { margin-bottom: .25em; }
 .prose .tool h4 { margin-top: 16px; }
+
+/* Affiliate gear grid (<!--products:...--> in article bodies) */
+.gear { margin: 1.8em 0; padding: 22px; border-radius: var(--r); background: linear-gradient(135deg, #fff, var(--sun-soft)); border: 1px solid #fde3b5; }
+.gear-title { display: flex; align-items: center; gap: 8px; font: 700 .8rem var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--sun-2); margin-bottom: 14px; }
+.gear-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.gear-item { background: #fff; border: 1px solid var(--line); border-radius: var(--r-sm); padding: 16px; display: flex; flex-direction: column; }
+.gear-item h4 { font-size: 1rem; margin: 8px 0 4px; }
+.gear-item .spec-chips { margin: 6px 0 10px; }
+.gear-item .spec-chips li { font-size: .74rem; padding: 2px 8px; }
+.gear-item p { font-size: .88rem; color: var(--muted); margin: 0 0 12px; }
+.gear-item .btn { margin-top: auto; align-self: flex-start; }
+.gear-note { font-size: .78rem; color: var(--muted); margin: 12px 0 0; }
+.gear-item .tag { align-self: flex-start; }

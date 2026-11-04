@@ -138,6 +138,8 @@ return [
 <li><strong>Secure the accounts</strong><p>Use strong passwords and two-factor authentication. When tenants move out, landlords should confirm former tenants no longer have access, and tenants should remove the camera from their account before handing it over.</p></li>
 </ol>
 
+<!--products:eufy-s220,gutter-mount,siding-hook,sd-samsung-->
+
 <h2>Common disputes and how to avoid them</h2>
 <p>Most camera disputes at rentals come from surprises: a tenant finds a camera they were never told about, a neighbor notices a lens pointed at their patio, or a landlord uses footage in a way that feels like surveillance of one tenant. Disclosure, careful aiming, privacy masking and a written policy on who views footage and when prevent most of these.</p>
 <p>For tenants, the most common problem is damage. A camera screwed into vinyl siding or brick without permission can cost part of a deposit. No-drill mounts, written permission and a photo of the mount area before installation protect you.</p>

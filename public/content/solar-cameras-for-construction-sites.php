@@ -136,6 +136,8 @@ return [
 <p>Daytime activity on a construction site is heavy, so a motion-triggered camera can wake hundreds of times a day if it watches the work area. That drains the battery faster than the panel can refill it, especially in winter with 2–3 peak sun hours in northern states. Set schedules or activity zones so the camera focuses on nights and weekends. If you need daytime coverage too, pick a camera with a larger external panel and check the numbers in the <a href="/tools/solar-camera-battery-calculator/">solar camera battery calculator</a>.</p>
 <div class="keyfacts"><div><b>3–4 m</b><span>mounting height out of reach</span></div><div><b>1–10+ GB</b><span>monthly data per 4G camera</span></div><div><b>$400–2,500+</b><span>typical monthly trailer rental range</span></div></div>
 
+<!--products:go-pt-ultra,antitheft,warning-sign,solar-flood-->
+
 <h2>Insurance considerations</h2>
 <p>Builder’s risk and contractor’s equipment policies sometimes ask about site security, and some insurers ask for or reward measures such as fencing, lighting and cameras. Whether a camera system lowers your premium depends on the insurer and the policy, so ask your agent directly. A few practical points:</p>
 <ul>

@@ -170,6 +170,8 @@ return [
 </tbody></table></div>
 <p>These are typical ranges; local labor rates vary widely. Compared with wired cameras, the big saving is no trenching or electrician. For a side-by-side look, see <a href="/compare/solar-vs-wired/">solar vs wired security cameras</a>.</p>
 
+<!--products:pole-mount,gutter-mount,ext-cable,antitheft,sd-sandisk,warning-sign-->
+
 <h2>Common solar CCTV installation mistakes</h2>
 <ul>
 <li><strong>Mounting before checking the signal.</strong> Moving a camera means new holes. Test first.</li>

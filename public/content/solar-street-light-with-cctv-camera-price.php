@@ -121,6 +121,8 @@ return [
 <div class="proscons"><div class="pros"><h4>Integrated (all-in-one)</h4><ul><li>One product, one install</li><li>Clean look, one app</li><li>Often cheaper at the low end</li><li>Commercial versions engineered as a system</li></ul></div><div class="cons"><h4>Separate light + camera</h4><ul><li>Light and camera do not share a battery, so a dim night does not kill recording</li><li>Replace or upgrade one without the other</li><li>Choose a better camera than integrated units offer</li><li>Each part can be aimed and positioned independently</li></ul></div></div>
 <p>For a single driveway or yard, a separate solar floodlight and a good solar camera on the same post is often the more reliable option at a similar price. For a parking lot or private road with several poles, a properly engineered integrated system simplifies management. Read our <a href="/best-solar-security-cameras/">best solar security cameras</a> guide if you go the separate route, and <a href="/guides/do-solar-cameras-work-at-night/">do solar cameras work at night</a> for how lighting improves camera footage.</p>
 
+<!--products:streetlight-cam,solar-flood,panel-100w-->
+
 <h2>Buying checklist</h2>
 <ol class="steps">
 <li><strong>Find the real panel wattage</strong><p>Check the panel dimensions. Roughly 180–220 W per square meter is the ceiling for typical panels.</p></li>

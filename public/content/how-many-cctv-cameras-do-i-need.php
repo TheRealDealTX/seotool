@@ -165,6 +165,8 @@ return [
 <h2>Privacy and legal considerations</h2>
 <p>Generally, recording your own property and areas visible from a public street is lawful in the US, but rules vary by state and locality, and HOAs or leases may add restrictions. Avoid aiming cameras into neighbors’ windows or private yards, and be cautious with audio: many states require consent from all parties for audio recording, which is stricter than video. Renters should read <a href="/guides/rental-property-outdoor-camera-no-subscription/">outdoor cameras for rental properties</a>. For general security tips, the <a href="https://www.ready.gov/" target="_blank" rel="noopener">Ready.gov</a> home safety resources are a useful government starting point.</p>
 
+<!--products:argus4pro,eufy-s340,eufy-s220,warning-sign-->
+
 <h2>How many CCTV cameras do I need? A sample plan</h2>
 <p>For a typical detached suburban house with a two-car driveway, a fenced backyard and one side gate, a balanced plan looks like this:</p>
 <ul>

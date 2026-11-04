@@ -135,6 +135,8 @@ return [
 </ul>
 <p>If you’re still weighing whether solar is right for your situation in the first place, the <a href="/compare/solar-vs-wired/">solar vs wired comparison</a> and <a href="/best-solar-security-cameras/">best solar security cameras</a> roundup are good next stops.</p>
 
+<!--products:outdoor-ap,wifi-bridge,go-pt-ultra,sd-sandisk-->
+
 <h2>Privacy and security with or without internet</h2>
 <p>An offline camera can’t be reached from the internet, which removes a whole category of risk. Connected cameras are safe enough when you change default passwords, enable two-factor authentication on the app account, and keep firmware updated. Treat the camera like any other connected device on your network. Whatever the connection, check local rules on recording neighbors’ property and note that audio recording is often more tightly regulated than video.</p>
 HTML,

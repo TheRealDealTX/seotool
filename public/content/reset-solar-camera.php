@@ -128,6 +128,8 @@ return [
 <h2>Before you sell or give away a camera</h2>
 <p>Always remove the camera from your app account, then factory reset it. Removing it from the account first lets the next owner add it without contacting support, and the reset clears your Wi-Fi password from the device. Take out or format the microSD card so your footage doesn’t go with it.</p>
 
+<!--products:sd-sandisk,outdoor-ap-->
+
 <h2>Security after a reset</h2>
 <p>A reset is a good moment to tighten security. Use a strong, unique password for your camera app account, turn on two-factor authentication if offered, and install firmware updates once the camera is back online. If you suspect someone else accessed your camera, change your Wi-Fi password too. The <a href="https://consumer.ftc.gov/articles/how-secure-your-home-wi-fi-network" target="_blank" rel="noopener">FTC’s guide to securing your home Wi-Fi</a> covers the router side.</p>
 HTML,

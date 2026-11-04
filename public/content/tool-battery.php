@@ -38,6 +38,8 @@ return [
 <h2>Peak sun hours: what to enter</h2>
 <p>Peak sun hours (PSH) are the number of hours per day at full 1,000 W/m² sunlight that would deliver the same energy as the real day. They are lower than daylight hours. As a guide: northern US, Canada and the UK see about 1–2.5 PSH in December, the central US 2.5–3.5 and the Southwest 4–5, while summer values run 4–7 almost everywhere. For your exact location, NREL’s <a href="https://pvwatts.nrel.gov/" target="_blank" rel="noopener">PVWatts</a> gives monthly figures.</p>
 
+<!--products:panel-usbc,panel-reolink,lifepo4-->
+
 <h2>Ways to fix an energy deficit</h2>
 <ol class="steps">
 <li><strong>Cut wasted triggers</strong><p>Activity zones, person/vehicle detection and lower PIR sensitivity often halve the number of clips.</p></li>

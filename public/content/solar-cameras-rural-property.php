@@ -129,6 +129,8 @@ return [
 <li><strong>Share access</strong><p>If a neighbor or caretaker is closer, share the camera with them so someone can respond quickly.</p></li>
 </ol>
 
+<!--products:cell-trail,go-pt-ultra,antitheft,warning-sign-->
+
 <h2>Recommended setups by scenario</h2>
 <p>Hardware prices are typical US retail at time of writing (late 2026).</p>
 <div class="table-wrap"><table>

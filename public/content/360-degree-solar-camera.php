@@ -111,6 +111,8 @@ return [
 </tbody>
 </table></div>
 
+<!--products:eufy-s340,go-pt-ultra,argus4pro-->
+
 <h2>Is a 360 degree solar camera worth it?</h2>
 <p>A pan-tilt solar camera is worth it when you have one good mounting point with open views in many directions and activity that moves around: yards, farms, job sites. It’s less worth it as your only camera at a front door or gate, where constant coverage matters more than flexibility. Many owners end up with a mix: fixed cameras on entry points and one PTZ watching the open ground in between. For the bigger cost-benefit question, read <a href="/guides/are-solar-cameras-worth-it/">are solar cameras worth it</a>, and compare models in our <a href="/best-solar-security-cameras/">best solar security cameras</a> guide.</p>
 HTML,

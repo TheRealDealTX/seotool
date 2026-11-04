@@ -127,6 +127,8 @@ return [
 </table></div>
 <p>To understand how many days your battery can carry the camera through a gray spell with these settings, read <a href="/guides/solar-camera-battery-life-no-sun/">how long solar cameras last without sun</a>. For night settings specifically, see <a href="/guides/do-solar-cameras-work-at-night/">do solar cameras work at night</a>.</p>
 
+<!--products:panel-reolink,ext-cable,pole-mount-->
+
 <h2>When to add a second solar panel</h2>
 <p>If you have asked yourself “do solar cameras work in winter where I live?” and the battery trend says no, more panel is the answer. Watch the battery percentage in the app over a couple of weeks of typical winter weather. A healthy setup dips overnight and recovers on sunny days. If the level trends steadily downward even after you have fixed shade, tilt and settings, the panel is undersized for your winter.</p>
 <p>Signs you need more panel:</p>

@@ -124,6 +124,8 @@ return [
 <p>Wildlife is the other threat. Bears in particular can break into cabins that smell of food. A camera will not stop a bear, but footage helps you understand what happened and fix the weak point. Expect wildlife to trigger outdoor cameras often; activity zones and lower PIR sensitivity reduce the noise. Raccoons, squirrels and woodpeckers sometimes damage cameras and cables, so keep cables short and tucked behind brackets.</p>
 <div class="callout info"><strong>Protect the camera, too</strong><p>Use security screws or a lock box, mount high, and make sure clips upload immediately. A camera removed by an intruder takes its microSD card with it.</p></div>
 
+<!--products:go-pt-ultra,power-station,lifepo4-->
+
 <h2>Maintenance visits: a simple checklist</h2>
 <p>A remote cabin solar camera needs little attention between trips, but ten minutes on each visit keeps it reliable through the seasons and catches small problems before they leave you blind for months.</p>
 <ol class="steps">

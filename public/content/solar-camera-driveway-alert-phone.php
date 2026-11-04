@@ -125,6 +125,8 @@ return [
 <h2>What does a driveway alert setup cost?</h2>
 <p>Typical US retail ranges at time of writing (late 2026): a Wi-Fi solar camera with AI vehicle detection commonly runs about $60–$250; a basic PIR driveway alarm kit with a chime receiver about $25–$80; a magnetic probe kit or Wi-Fi app-connected sensor system roughly $80–$250; and a 4G solar camera about $150–$400 plus a data plan. Cloud recording plans, if you want them, are often a few dollars a month per camera. For a wider look at whether solar pays off versus running cable to the end of the drive, try the <a href="/tools/solar-vs-wired-cost-calculator/">solar vs wired cost calculator</a>.</p>
 
+<!--products:driveway-alarm,argus4pro,solar-flood-->
+
 <h2>Which driveway alert setup should you choose?</h2>
 <ul>
 <li><strong>Driveway under 30 m, good Wi-Fi:</strong> one solar camera with vehicle detection.</li>

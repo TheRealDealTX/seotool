@@ -53,6 +53,11 @@ function render_article(string $path, string $source, string $section, array $op
     $scripts = [];
     $body = $a['body'] ?? '';
     // Embeds
+    if (strpos($body, '<!--products:') !== false) {
+        require_once ROOT . '/inc/products.php';
+        $body = preg_replace_callback('/<!--products:([a-z0-9,\s-]+)-->/', fn($m) => products_grid(explode(',', $m[1])), $body);
+        $a['affiliate'] = true;
+    }
     $body = preg_replace_callback('/<!--tool:([a-z0-9-]+)-->/', function ($m) use (&$scripts) {
         return tool_widget($m[1], $scripts);
     }, $body);

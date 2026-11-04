@@ -123,6 +123,8 @@ return [
 </ul>
 <div class="callout tip"><strong>Quick test</strong><p>After installing, check a night clip from the first evening. If the image is foggy or bright white around the edges, IR is reflecting off something near the lens. Moving the camera a few inches often fixes it.</p></div>
 
+<!--products:ring-solar,solar-flood,argus4pro-->
+
 <h2>Choosing a solar camera for night use</h2>
 <p>All solar security cameras work at night to some degree, but they differ a lot in range and battery use. If night coverage is your priority, look for these features on the spec sheet:</p>
 <ul>

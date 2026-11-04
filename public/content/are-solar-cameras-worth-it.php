@@ -127,6 +127,8 @@ return [
 <h2>Which type of solar camera gives the best value?</h2>
 <p>Not all solar cameras are equally good value. A camera with a detachable panel on a cable is usually the most practical choice because you can put the camera where it sees best and the panel where it charges best. Built-in panel models are tidier but only make sense where the camera spot is also sunny. 2K resolution is the value sweet spot for most homes; 4K is worth paying for, in both price and battery drain, only when one camera covers a wide area. And local storage, whether microSD or a hub, saves more money over five years than almost any other feature.</p>
 
+<!--products:eufy-s220,argus4pro,sd-sandisk-->
+
 <h2>How to get the most value from a solar camera</h2>
 <div class="callout tip"><strong>Five ways to make a solar camera worth it</strong><p>Choose a model with a detachable panel so sun and view don't compete. Use local storage to avoid mandatory fees. Turn on person or vehicle detection to cut false wake-ups. Steepen the panel tilt in winter. Mount the camera 7–10 ft high with security screws.</p></div>
 <p>So, are solar powered security cameras worth it? For the right spot, they are one of the simplest and most cost-effective security upgrades available. Check the sun, check the signal and be clear about event-based recording, and you're unlikely to regret it. When you're ready to choose, see our <a href="/best-solar-security-cameras/">best solar security cameras</a> picks.</p>

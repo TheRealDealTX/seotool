@@ -179,6 +179,8 @@ return [
 </table></div>
 <p>South of the equator, shift the dates by six months: steepen in mid-April, flatten in mid-September. Where snow is common, a winter tilt of 50–60° or steeper also helps snow slide off within a day or two of a storm.</p>
 
+<!--products:panel-reolink,panel-usbc,ext-cable,pole-mount-->
+
 <h2>Troubleshooting low charge after install</h2>
 <p>If the battery level still drops after you have set the best angle for solar security camera panel performance, work through these causes in order. Most are not angle problems at all.</p>
 <ol class="steps">

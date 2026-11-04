@@ -138,6 +138,8 @@ return [
 </table></div>
 <p>Practical rules: keep the battery box close to the cameras, run heavier cable between the panel and controller (where current is highest), fuse every positive lead near the battery, and use UV-rated outdoor cable. For long runs to distant cameras, PoE or a higher system voltage is usually easier than very thick 12 V cable.</p>
 
+<!--products:panel-100w,mppt,lifepo4-->
+
 <h2>One panel vs one per camera: pros and cons</h2>
 <div class="proscons">
 <div class="pros"><h4>Shared system pros</h4><ul><li>One large, well-angled panel in the best sunny spot.</li><li>Large battery rides out long cloudy spells.</li><li>Continuous recording and wired cameras become possible.</li><li>Easy to add a router, recorder or lights.</li></ul></div>
