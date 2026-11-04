@@ -25,7 +25,7 @@ Not a law firm; information is educational.
 - [Claim timeline builder](https://enforceinterest.com/tools/claim-timeline-builder/): Log Texas insurance claim events, see the Chapter 542 deadlines they trigger, flag late payments and print a status-request letter.
 - [Texas public adjuster fee calculator](https://enforceinterest.com/tools/public-adjuster-fee-calculator/): Texas public adjuster fee calculator: the 10% cap in Insurance Code §4102.104, what you net and your break-even settlement.
 - [ACV and depreciation calculator](https://enforceinterest.com/tools/depreciation-calculator/): Calculate depreciation, actual cash value and recoverable depreciation on an insurance claim, with typical lifespans for roofs and more.
-- [Wind and hail deductible calculator](https://enforceinterest.com/tools/wind-hail-deductible-calculator/): Convert a percentage wind/hail or named-storm deductible into dollars and see what a Texas storm claim pays after the deductible and depreciation. Free calculator.
+- [Wind and hail deductible calculator](https://enforceinterest.com/tools/wind-hail-deductible-calculator/): Convert a percentage wind/hail or named-storm deductible into dollars and see what a Texas storm claim pays after it.
 - [Texas judgment interest rate: 7.00%](https://enforceinterest.com/texas-judgment-interest-rate/): The Texas postjudgment interest rate for November 2026 is 7.00% (Fin. Code §304.003). Full OCCC history plus the 12.00% weather-claim rate.
 - [Texas prejudgment interest: rules & calculator](https://enforceinterest.com/texas-prejudgment-interest/): Texas prejudgment interest explained: the 180-day accrual rule, the 7.00% rate, settlement offers and §542.060 claims. Free calculator.
 
@@ -42,12 +42,12 @@ Not a law firm; information is educational.
 
 ## Pages
 
-- [Paid late? Enforce Interest on every day of delay.](https://enforceinterest.com/): Enforce Interest helps Texans recover statutory interest when insurers pay property claims late: 18% a year under §542.060, or the weather rate. Free review.
+- [Paid late? Enforce Interest on every day of delay.](https://enforceinterest.com/): Enforce Interest helps Texans recover statutory interest when insurers pay property claims late: 18% a year under §542.060. Free claim review.
 - [Frequently asked questions](https://enforceinterest.com/faq/): Answers on the Texas 60-day rule, 18% and floating-rate interest, appraisal, supplements, deadlines to sue and how our free review works.
 - [About Enforce Interest](https://enforceinterest.com/about-us/): Enforce Interest is a Rise Public Adjusting service (TDI license #3356839) focused on Texas prompt-payment interest on late-paid property claims.
 - [Let's find out what you're owed](https://enforceinterest.com/contact/): Send your Texas insurance claim to Enforce Interest for a free review. We rebuild the timeline and calculate statutory interest. No upfront cost.
 - [The Enforce Interest blog](https://enforceinterest.com/blog/): Guides to Texas prompt-payment interest: the 18% and floating rates, Hinojos, 542A notice, freeze and smoke claims, deadlines and cancellation rules.
 - [Privacy policy](https://enforceinterest.com/privacy-policy/): How Enforce Interest collects, uses and protects information you submit through enforceinterest.com, including claim review requests and documents.
 - [Terms of use](https://enforceinterest.com/terms-of-use/): Terms governing use of enforceinterest.com, its calculators and educational content, provided by Rise Public Adjusting.
-- [Disclaimer](https://enforceinterest.com/disclaimer/): Enforce Interest is a public adjusting service, not a law firm. Important information about the educational content, calculators and licensing on this site.
+- [Disclaimer](https://enforceinterest.com/disclaimer/): Enforce Interest is a public adjusting service, not a law firm. What to know about our content, calculators, fees and licensing.
 - [Free Texas insurance claim tools](https://enforceinterest.com/tools/): Free Texas insurance claim tools: statutory interest, Chapter 542 deadlines, appraisal interest, judgment rates, prejudgment interest and more.

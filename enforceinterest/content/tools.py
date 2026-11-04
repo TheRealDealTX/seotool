@@ -1004,7 +1004,7 @@ def hub(mc):
         return (page_hero(trail, "Free &middot; no sign-up &middot; runs in your browser", "Free Texas insurance claim <em>tools</em>",
                           "Calculators and checklists built on the Texas Insurance Code, the Finance Code and current OCCC rates. "
                           "Every tool cites its authority and nothing you type leaves your device.") +
-                f'<section class="section"><div class="wrap"><div class="grid g3" data-stagger>{cards}</div></div></section>' +
+                f'<section class="section"><div class="wrap"><h2 class="sr-only">All tools</h2><div class="grid g3" data-stagger>{cards}</div></div></section>' +
                 '''<section class="section alt"><div class="wrap"><div class="prose" style="margin:0 auto">
 <h2>Which tool should I start with?</h2>
 <ul><li><strong>Not sure anything is owed?</strong> Start with <a href="/does-my-claim-qualify/">Does my claim qualify?</a></li>

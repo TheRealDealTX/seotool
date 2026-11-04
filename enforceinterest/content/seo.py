@@ -11,8 +11,8 @@ TITLES = {
 }
 
 DESC = {
-    "/": "Enforce Interest helps Texans recover statutory interest when insurers pay property claims late: 18% a year "
-         "under §542.060, or the weather rate. Free review.",
+    "/": "Enforce Interest helps Texans recover statutory interest when insurers pay property claims late: 18% "
+         "a year under §542.060. Free claim review.",
     "/fire-smoke-damage/": "Texas fire and smoke damage claims paid late: the 18% interest rate, arson timing, smoke "
                            "damage investigations, ACV holdbacks and contents.",
     "/texas-judgment-interest-rate/": f"The Texas postjudgment interest rate for {lib.RATE_MONTH} is {lib.JUDG_RATE_S} (Fin. "
@@ -65,6 +65,10 @@ DESC = {
                                          "15 business days, 5 business days, 60 days and more.",
     "/hail-wind-claims/": f"Texas hail and wind claims paid late: deadlines, the 61-day 542A notice, the {F} floating "
                           "interest rate, roof supplements and evidence.",
+    "/tools/wind-hail-deductible-calculator/": "Convert a percentage wind/hail or named-storm deductible into dollars "
+                                               "and see what a Texas storm claim pays after it.",
+    "/disclaimer/": "Enforce Interest is a public adjusting service, not a law firm. What to know about our content, "
+                    "calculators, fees and licensing.",
     "/faq/": "Answers on the Texas 60-day rule, 18% and floating-rate interest, appraisal, supplements, deadlines to sue and "
              "how our free review works.",
     "/long-term-claim-supplements/": "How Texas prompt-payment deadlines and interest apply to claim supplements: hidden "

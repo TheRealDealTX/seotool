@@ -2,8 +2,8 @@
 """Post-build checks for ./public. Exit code 1 on any error.
 
 Checks: internal links and #anchors, assets, one <h1>, unique titles (<= 65 chars) and descriptions
-(70-160 chars), canonical URLs, JSON-LD validity, image alt text, sitemap coverage, the root-layout rule
-(no page HTML outside _pages/), stale facts, and the homepage brand/keyword count (>= 14).
+(70-150 chars), canonical URLs, JSON-LD validity, image alt text, sitemap coverage, the root-layout rule
+(no page HTML outside _pages/), stale facts, heading-level jumps, and the homepage brand/keyword count (>= 14).
 """
 import json
 import os
@@ -103,8 +103,8 @@ def main():
         if not noindex:
             if len(t) > 65:
                 warns.append(f"{path}: title {len(t)} chars: {t}")
-            if not 70 <= len(dsc) <= 165:
-                errors.append(f"{path}: description {len(dsc)} chars")
+            if not 70 <= len(dsc) <= 150:
+                errors.append(f"{path}: description {len(dsc)} chars (keep 70-150)")
             titles.setdefault(t, []).append(path)
             descs.setdefault(dsc, []).append(path)
             if p.meta.get("canonical") != SITE + path:
@@ -181,6 +181,16 @@ def main():
     nf = open(os.path.join(PAGES, "404.html"), encoding="utf-8").read()
     if "G-E3SD91ESFX" not in nf:
         errors.append("404.html: Google tag missing")
+    # heading outline: never skip a level going down (h2 -> h4)
+    for path, f in list(pages.items()) + [("/404.html", os.path.join(PAGES, "404.html"))]:
+        txt = open(f, encoding="utf-8").read()
+        body = txt[txt.index("<body"):]
+        prev = 0
+        for lv, _, inner in re.findall(r"<h([1-6])([^>]*)>(.*?)</h\1>", body, re.S):
+            lv = int(lv)
+            if prev and lv > prev + 1:
+                errors.append(f"{path}: heading jumps h{prev} -> h{lv} ({re.sub(r'<[^>]+>', '', inner)[:40]!r})")
+            prev = lv
     # homepage brand / main keyword count (body copy inside <main>)
     home = " ".join(parsed["/"].main_text)
     n = len(re.findall(r"Enforce\s+Interest", home))

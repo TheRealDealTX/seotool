@@ -115,7 +115,7 @@ def footer():
         statutory interest under Texas Insurance Code Chapter 542, for homeowners and commercial policyholders statewide.</p>
         <p><a href="mailto:{EMAIL}">{EMAIL}</a><br>{lib.CITY}, Texas &middot; Serving all of Texas</p>
       </div>
-      <div><h4>The rule</h4><ul>
+      <div><h2 class="foot-h">The rule</h2><ul>
         <li><a href="/texas-prompt-payment-act/">Texas Prompt Payment Act</a></li>
         <li><a href="/blog/18-standard-rate-explained/">18% standard rate</a></li>
         <li><a href="/blog/act-of-god-floating-rate/">Act of God floating rate</a></li>
@@ -123,7 +123,7 @@ def footer():
         <li><a href="/texas-prejudgment-interest/">Prejudgment interest</a></li>
         <li><a href="/does-my-claim-qualify/">Does my claim qualify?</a></li>
       </ul></div>
-      <div><h4>Claim types</h4><ul>
+      <div><h2 class="foot-h">Claim types</h2><ul>
         <li><a href="/hail-wind-claims/">Hail &amp; wind claims</a></li>
         <li><a href="/hurricane-claims/">Hurricane claims</a></li>
         <li><a href="/fire-smoke-damage/">Fire &amp; smoke damage</a></li>
@@ -131,8 +131,8 @@ def footer():
         <li><a href="/post-appraisal-interest-recovery/">Post-appraisal interest</a></li>
         <li><a href="/long-term-claim-supplements/">Claim supplements</a></li>
       </ul></div>
-      <div><h4>Free tools</h4><ul>{tl}<li><a href="/tools/">All tools &rarr;</a></li></ul></div>
-      <div><h4>Company</h4><ul>
+      <div><h2 class="foot-h">Free tools</h2><ul>{tl}<li><a href="/tools/">All tools &rarr;</a></li></ul></div>
+      <div><h2 class="foot-h">Company</h2><ul>
         <li><a href="/about-us/">About us</a></li>
         <li><a href="/contact/">Free claim review</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -143,7 +143,7 @@ def footer():
         <li><a href="/disclaimer/">Disclaimer</a></li>
         <li><a href="/sitemap/">Sitemap</a></li>
       </ul>
-      <h4 style="margin-top:22px">Authorities</h4><ul>
+      <h2 class="foot-h" style="margin-top:22px">Authorities</h2><ul>
         <li><a href="https://statutes.capitol.texas.gov/Docs/IN/htm/IN.542.htm" rel="noopener" target="_blank">Tex. Ins. Code ch. 542</a></li>
         <li><a href="https://www.tdi.texas.gov/" rel="noopener" target="_blank">Texas Dept. of Insurance</a></li>
         <li><a href="https://occc.texas.gov/publications/interest-rates/" rel="noopener" target="_blank">OCCC judgment rates</a></li>
@@ -421,7 +421,7 @@ def html_sitemap(all_pages):
             continue
         g = "Free tools" if p.get("is_tool") else "Blog" if p.get("type") == "article" else "Guides &amp; claim types" if p.get("guide") else "Site"
         groups.setdefault(g, []).append(p)
-    cols = "".join(f'<div class="card"><h3>{g}</h3><ul>' + "".join(
+    cols = "".join(f'<div class="card"><h2 style="font-size:1.35rem">{g}</h2><ul>' + "".join(
         f'<li><a href="{p["path"]}">{esc(p.get("h1_plain") or p["title"])}</a></li>' for p in ps) + '</ul></div>'
         for g, ps in groups.items())
     return cols

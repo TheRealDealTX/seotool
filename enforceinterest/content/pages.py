@@ -440,7 +440,7 @@ def blog_index(mc, post_pages, ctx):
         return (page_hero(trail, "Guides &middot; case law &middot; deadlines", "The Enforce Interest <em>blog</em>",
                           "Plain-English guides to Texas prompt-payment law, claim deadlines, appraisal and the interest insurers "
                           "owe when they pay late.") +
-                f'<section class="section"><div class="wrap"><div class="filters" data-filters>{filt}</div>'
+                f'<section class="section"><div class="wrap"><h2 class="sr-only">All articles</h2><div class="filters" data-filters>{filt}</div>'
                 f'<div class="grid g3" data-posts>{cards}</div></div></section>' + cta_band())
     p = {"path": path, "title": "Texas Insurance Claim Interest Blog | Enforce Interest",
          "desc": "Guides to Texas prompt-payment interest: the 18% rate, the floating weather rate, Hinojos, 542A notice, "
