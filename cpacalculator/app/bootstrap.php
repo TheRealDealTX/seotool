@@ -35,21 +35,21 @@ const TOOLS = [
 
 /* Blog posts: slug => [title, description, ISO date, image (relative to site root), primary keyword, read minutes]. Newest first. */
 const POSTS = [
-  '1099-vs-w2' => ['1099 vs W-2: Differences, Taxes and Which Pays More (2026)', '1099 vs W-2 explained: how contractors and employees are taxed, who pays FICA, benefits, deductions, and how to compare a 1099 rate with a W-2 salary.', '2026-11-04', '/assets/img/blog-1099-vs-w2.png', '1099 vs w2', 9],
+  '1099-vs-w2' => ['1099 vs W-2: Differences, Taxes and Which Pays More (2026)', '1099 vs W-2 explained: how contractors and employees are taxed, who pays FICA, benefits, deductions, and how to compare a 1099 rate with a W-2 salary.', '2026-11-07', '/assets/img/blog-1099-vs-w2.png', '1099 vs w2', 9],
   'bonus-tax-rate' => ['Bonus Tax Rate 2026: How Bonuses Are Taxed (With Calculator Math)', 'The 2026 bonus tax rate is 22% federal withholding (37% over $1 million). Learn the percentage vs aggregate methods, FICA, and how to calculate tax on a bonus.', '2026-11-04', '/assets/img/blog-bonus.png', 'calculating tax on bonus', 8],
-  'capital-gains-tax-on-home-sale' => ['Capital Gains Tax on Home Sale: Rules, Exclusion and Examples', 'How capital gains tax on a home sale works in 2026: the $250,000/$500,000 exclusion, the 2-out-of-5-year test, cost basis, partial exclusions and worked examples.', '2026-11-04', '/assets/img/blog-home-sale.png', 'capital gains tax on home sale', 9],
-  '1099-k' => ['Form 1099-K Explained: 2026 Threshold, Who Gets One and How to Report It', 'What Form 1099-K is, the restored $20,000 / 200-transaction threshold, PayPal, Venmo and Etsy sales, personal vs business payments, and how to report it.', '2026-11-04', '/assets/img/blog-1099-k.png', '1099-k', 8],
-  'schedule-c-tax-form' => ['Schedule C Tax Form: How to Fill It Out Line by Line (2026)', 'A line-by-line guide to Schedule C (Form 1040): business income, every expense line, cost of goods sold, home office, vehicle expenses and net profit.', '2026-11-04', '/assets/img/blog-schedule-c.png', 'schedule c tax form', 11],
-  'k1-tax-form' => ['K-1 Tax Form Explained: Partnerships, S Corps and Trusts', 'What a Schedule K-1 tax form is, the three types (1065, 1120-S, 1041), key boxes, basis, self-employment tax and how K-1 income lands on your return.', '2026-11-04', '/assets/img/blog-k1.png', 'k1 tax form', 9],
-  'married-filing-separately' => ['Married Filing Separately vs Jointly: When Filing Separately Wins', 'Married filing separately vs jointly in 2026: brackets, standard deduction, lost credits, student loans, community property states and when MFS saves money.', '2026-11-04', '/assets/img/blog-mfs.png', 'married filing separately', 9],
-  'fica-tax-rate' => ['FICA Tax Rate 2026: Social Security and Medicare Explained', 'The 2026 FICA tax rate is 7.65% for employees: 6.2% Social Security up to $184,500 and 1.45% Medicare, plus 0.9% Additional Medicare. Examples and refunds.', '2026-11-04', '/assets/img/blog-fica.png', 'fica tax rate', 8],
-  'amended-tax-return' => ['How to File an Amended Tax Return (Form 1040-X) in 2026', 'When and how to file an amended tax return with Form 1040-X: deadlines, e-filing, what to include, tracking your amended return status and refund timing.', '2026-11-04', '/assets/img/blog-amended.png', 'amended tax return', 8],
-  '1099-c-cancellation-of-debt' => ['Form 1099-C: Is Cancelled Debt Taxable? Exclusions and Form 982', 'Got a 1099-C for cancelled debt? Learn when forgiven debt is taxable income, the insolvency and bankruptcy exclusions, Form 982 and how to report it.', '2026-11-04', '/assets/img/blog-1099-c.png', '1099-c', 8],
-  'irs-form-2553' => ['IRS Form 2553: How to Elect S Corp Status (Deadlines and Steps)', 'How to file IRS Form 2553 to elect S corporation status: eligibility, the 2-months-15-days deadline, late election relief, signatures and where to send it.', '2026-11-04', '/assets/img/blog-2553.png', 'irs form 2553', 8],
-  '1099-g' => ['Form 1099-G Explained: Unemployment and State Tax Refunds', 'What Form 1099-G reports, whether unemployment benefits and state tax refunds are taxable, the tax benefit rule, and how to report each box on your return.', '2026-11-04', '/assets/img/blog-1099-g.png', '1099-g', 7],
-  'do-i-have-to-pay-quarterly-taxes-my-first-year' => ['Do I Have to Pay Quarterly Taxes My First Year Self-Employed?', 'First year freelancing? Here is exactly when the IRS expects quarterly estimated payments, how the safe harbor works with no prior-year tax, and what to pay.', '2026-11-02', '/assets/img/blog-first-year.png', 'do i have to pay quarterly taxes my first year', 8],
-  '1099-taxes-for-physicians' => ['1099 Physician Tax Guide: Locums, Moonlighting and Contract Doctors', 'How 1099 physicians are taxed: self-employment tax above the wage base, QBI limits for medical practices, retirement plans and quarterly payments.', '2026-10-30', '/assets/img/blog-physician.png', '1099 physician tax calculator', 9],
-  'how-much-federal-tax-will-i-pay' => ['How Much Federal Income Tax Will I Pay? 2026 Examples by Salary', 'Worked 2026 examples of federal income tax at $30k, $50k, $75k, $100k and $150k, with the brackets, standard deduction and effective rates explained.', '2026-10-28', '/assets/img/blog-federal.png', 'how much federal income tax will i pay', 8],
+  'capital-gains-tax-on-home-sale' => ['Capital Gains Tax on Home Sale: Rules, Exclusion and Examples', 'How capital gains tax on a home sale works in 2026: the $250,000/$500,000 exclusion, the 2-out-of-5-year test, cost basis, partial exclusions and worked examples.', '2026-11-28', '/assets/img/blog-home-sale.png', 'capital gains tax on home sale', 9],
+  '1099-k' => ['Form 1099-K Explained: 2026 Threshold, Who Gets One and How to Report It', 'What Form 1099-K is, the restored $20,000 / 200-transaction threshold, PayPal, Venmo and Etsy sales, personal vs business payments, and how to report it.', '2026-11-10', '/assets/img/blog-1099-k.png', '1099-k', 8],
+  'schedule-c-tax-form' => ['Schedule C Tax Form: How to Fill It Out Line by Line (2026)', 'A line-by-line guide to Schedule C (Form 1040): business income, every expense line, cost of goods sold, home office, vehicle expenses and net profit.', '2026-11-13', '/assets/img/blog-schedule-c.png', 'schedule c tax form', 11],
+  'k1-tax-form' => ['K-1 Tax Form Explained: Partnerships, S Corps and Trusts', 'What a Schedule K-1 tax form is, the three types (1065, 1120-S, 1041), key boxes, basis, self-employment tax and how K-1 income lands on your return.', '2026-11-17', '/assets/img/blog-k1.png', 'k1 tax form', 9],
+  'married-filing-separately' => ['Married Filing Separately vs Jointly: When Filing Separately Wins', 'Married filing separately vs jointly in 2026: brackets, standard deduction, lost credits, student loans, community property states and when MFS saves money.', '2026-11-24', '/assets/img/blog-mfs.png', 'married filing separately', 9],
+  'fica-tax-rate' => ['FICA Tax Rate 2026: Social Security and Medicare Explained', 'The 2026 FICA tax rate is 7.65% for employees: 6.2% Social Security up to $184,500 and 1.45% Medicare, plus 0.9% Additional Medicare. Examples and refunds.', '2026-11-20', '/assets/img/blog-fica.png', 'fica tax rate', 8],
+  'amended-tax-return' => ['How to File an Amended Tax Return (Form 1040-X) in 2026', 'When and how to file an amended tax return with Form 1040-X: deadlines, e-filing, what to include, tracking your amended return status and refund timing.', '2026-12-02', '/assets/img/blog-amended.png', 'amended tax return', 8],
+  '1099-c-cancellation-of-debt' => ['Form 1099-C: Is Cancelled Debt Taxable? Exclusions and Form 982', 'Got a 1099-C for cancelled debt? Learn when forgiven debt is taxable income, the insolvency and bankruptcy exclusions, Form 982 and how to report it.', '2026-12-09', '/assets/img/blog-1099-c.png', '1099-c', 8],
+  'irs-form-2553' => ['IRS Form 2553: How to Elect S Corp Status (Deadlines and Steps)', 'How to file IRS Form 2553 to elect S corporation status: eligibility, the 2-months-15-days deadline, late election relief, signatures and where to send it.', '2026-12-12', '/assets/img/blog-2553.png', 'irs form 2553', 8],
+  '1099-g' => ['Form 1099-G Explained: Unemployment and State Tax Refunds', 'What Form 1099-G reports, whether unemployment benefits and state tax refunds are taxable, the tax benefit rule, and how to report each box on your return.', '2026-12-05', '/assets/img/blog-1099-g.png', '1099-g', 7],
+  'do-i-have-to-pay-quarterly-taxes-my-first-year' => ['Do I Have to Pay Quarterly Taxes My First Year Self-Employed?', 'First year freelancing? Here is exactly when the IRS expects quarterly estimated payments, how the safe harbor works with no prior-year tax, and what to pay.', '2026-11-03', '/assets/img/blog-first-year.png', 'do i have to pay quarterly taxes my first year', 8],
+  '1099-taxes-for-physicians' => ['1099 Physician Tax Guide: Locums, Moonlighting and Contract Doctors', 'How 1099 physicians are taxed: self-employment tax above the wage base, QBI limits for medical practices, retirement plans and quarterly payments.', '2026-11-03', '/assets/img/blog-physician.png', '1099 physician tax calculator', 9],
+  'how-much-federal-tax-will-i-pay' => ['How Much Federal Income Tax Will I Pay? 2026 Examples by Salary', 'Worked 2026 examples of federal income tax at $30k, $50k, $75k, $100k and $150k, with the brackets, standard deduction and effective rates explained.', '2026-11-03', '/assets/img/blog-federal.png', 'how much federal income tax will i pay', 8],
   'quarterly-taxes-101-guide' => ['Quarterly Taxes 101: Who Pays, How Much, and When (2026)', 'Quarterly estimated taxes explained: who must pay, the 2026 due dates, safe-harbor rules, how to calculate each payment and how to avoid IRS penalties.', '2026-04-28', '/wp-content/uploads/2026/04/Quarterly-Taxes-101-Guide.webp', 'quarterly taxes', 10],
   'understanding-your-w-2' => ['Understanding Your W-2: Every Box Explained (2026)', 'A box-by-box guide to Form W-2: wages, withholding, Social Security and Medicare, Box 12 codes, state boxes, and what to do if your W-2 is wrong.', '2026-04-27', '/wp-content/uploads/2026/04/Understanding-Your-W-2.webp', 'understanding your w-2', 9],
   'got-a-1099-exactly-what-to-do-next' => ['Got a 1099? Here’s Exactly What to Do Next (Step by Step)', 'Received a 1099-NEC, 1099-K or 1099-MISC? Check it, estimate the tax, track write-offs, pay quarterly and file Schedule C — a step-by-step 1099 guide.', '2026-04-26', '/wp-content/uploads/2026/04/Got-a-1099_-Heres-Exactly-What-to-Do-Next-Step-by-Step.webp', 'got a 1099 what to do', 10],
@@ -262,10 +262,23 @@ function related_tools(string $current, array $slugs): string {
   return amazon_picks($current) . '<section class="related reveal"><h2>Related calculators</h2>' . tool_cards(array_values(array_diff($slugs, [$current]))) . '</section>';
 }
 
+/* Posts whose publish date has arrived, newest first. Future-dated posts are scheduled:
+   they 404, stay out of listings and the sitemap, and links to them render as plain text. */
+function post_is_live(string $slug): bool { return isset(POSTS[$slug]) && POSTS[$slug][2] <= date('Y-m-d'); }
+function live_posts(): array {
+  $s = array_values(array_filter(array_keys(POSTS), 'post_is_live'));
+  usort($s, fn($a, $b) => strcmp(POSTS[$b][2], POSTS[$a][2]) ?: array_search($a, array_keys(POSTS)) <=> array_search($b, array_keys(POSTS)));
+  return $s;
+}
+function unlink_scheduled_posts(string $html): string {
+  return preg_replace_callback('#<a\b[^>]*href="(?:https://cpacalculator\.com)?/blog/([a-z0-9-]+)/"[^>]*>(.*?)</a>#s',
+    fn($m) => isset(POSTS[$m[1]]) && !post_is_live($m[1]) ? $m[2] : $m[0], $html);
+}
+
 function post_cards(array $slugs): string {
   $h = '<div class="post-grid">';
   foreach ($slugs as $i => $s) {
-    if (!isset(POSTS[$s])) continue;
+    if (!post_is_live($s)) continue;
     [$t, $d, $date, $img, , $min] = POSTS[$s];
     $h .= '<a class="post-card reveal" style="--d:' . ($i % 3) * 80 . 'ms" href="' . post_url($s) . '"><span class="pc-img"><img src="' . e($img) . '" alt="" loading="lazy" width="640" height="360"></span><span class="pc-body"><span class="pc-meta">' . fmt_date($date) . ' · ' . $min . ' min read</span><strong>' . e($t) . '</strong><span class="pc-d">' . e($d) . '</span></span></a>';
   }
@@ -286,6 +299,7 @@ function tax_data_script(): string {
 /* ------------------------------------------------------------------ layout */
 
 function render_page(array $P, string $body): void {
+  $body = unlink_scheduled_posts($body);
   $title = $P['title'];
   if (mb_strlen($title) > 66 && str_ends_with($title, ' | CPA Calculator')) $title = substr($title, 0, -17);
   $desc = $P['description'];
@@ -481,7 +495,7 @@ function year_field(string $name = 'year'): string {
 function post_open(string $slug, string $updated = ''): string {
   global $P;
   [$t, $d, $date, $img, , $min] = POSTS[$slug];
-  $mod = $updated ?: $date;
+  $mod = max($date, $updated ?: $date);
   $P['title'] = mb_strlen($t) > 58 ? $t : $t . ' | CPA Calculator';
   $P['ogTitle'] = $t;
   $P['description'] = $d;
@@ -504,7 +518,7 @@ function post_close(string $slug, string $tool, array $related = []): string {
   [$name, , $pitch] = TOOLS[$tool];
   $h = amazon_picks($slug) . '</article><aside class="aside"><div class="card"><div class="res-label" style="margin-bottom:10px">On this page</div><ul class="toc" data-toc></ul>' .
     '<div class="aside-cta"><strong>' . e($name) . '</strong>' . e($pitch) . '<a class="btn btn-sm" href="' . tool_url($tool) . '">Open calculator</a></div></div></aside></div>';
-  $related = $related ?: array_slice(array_values(array_diff(array_keys(POSTS), [$slug])), 0, 3);
+  $related = array_values(array_filter($related, 'post_is_live')) ?: array_slice(array_values(array_diff(live_posts(), [$slug])), 0, 3);
   return $h . '<section class="section-tight section-alt"><div class="wrap"><h2>Keep reading</h2>' . post_cards($related) . '</div></section>';
 }
 

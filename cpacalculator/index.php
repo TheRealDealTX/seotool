@@ -56,7 +56,7 @@ if (isset($static[$path])) {
   if (in_array($AMOUNT, SALARY_PAGES, true)) $file = $pages . '/calculators/salary.php';
 } elseif (preg_match('#^/calculators/([a-z0-9-]+)/$#', $path, $m) && isset(TOOLS[$m[1]])) {
   $file = $pages . '/calculators/' . $m[1] . '.php';
-} elseif (preg_match('#^/blog/([a-z0-9-]+)/$#', $path, $m) && isset(POSTS[$m[1]])) {
+} elseif (preg_match('#^/blog/([a-z0-9-]+)/$#', $path, $m) && post_is_live($m[1])) {
   $SLUG = $m[1];
   $file = $pages . '/blog/' . $m[1] . '.php';
 }

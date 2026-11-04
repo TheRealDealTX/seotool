@@ -12,7 +12,7 @@ if ($isTopic) {
   $crumb = [['Guides', '/blog/']];
 }
 $P['pageType'] = 'CollectionPage';
-$slugs = array_keys(POSTS);
+$slugs = live_posts();
 $P['modified'] = max(array_map(fn($s) => POSTS[$s][2], $slugs));
 $P['schema'][] = [
   '@type' => 'ItemList',

@@ -208,7 +208,7 @@ $single = $y['brackets']['single'];
       <h2>Tax guides from the CPA Calculator team</h2>
       <p>Step-by-step explanations that pair with each calculator.</p>
     </div>
-    <?= post_cards(array_slice(array_keys(POSTS), 0, 6)) ?>
+    <?= post_cards(array_slice(live_posts(), 0, 6)) ?>
   </div>
 </section>
 
