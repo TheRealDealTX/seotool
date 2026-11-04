@@ -51,9 +51,10 @@ def toolkit(mc):
          "<p>Sometimes. Reasonable costs to protect property from further damage (a tarp, water extraction, drying "
          "equipment) are often covered as part of the claim. Keep receipts and submit them. Documentation gear "
          "you keep, like a scanner, usually isn&rsquo;t reimbursed.</p>"),
-        ("Why do the links go to Amazon search results?",
-         "<p>Listings change often. Linking to a search for the product type means the link always works and you can "
-         "compare current models, ratings and prices yourself.</p>"),
+        ("How were these products chosen?",
+         "<p>For what they add to a claim file: dated readings, clear images, organized records, or protection that "
+         "satisfies your policy&rsquo;s duty to prevent further damage. We favor established brands with long review "
+         "histories. Check the current price and availability on Amazon before you buy.</p>"),
     ]
     fh, fl = faq_block(faqs)
 

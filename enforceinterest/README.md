@@ -30,7 +30,7 @@ Local preview: `php -S 127.0.0.1:8000 -t public tools/dev-router.php` (mimics th
 | `content/tools.py` | All tool pages (markup + explanatory copy), judgment-rate and prejudgment pages, tools hub |
 | `content/posts.py` | Blog posts |
 | `content/pages.py` | Qualify quiz, FAQ, about, contact, blog index, legal pages, sitemap, 404 |
-| `content/products.py` | Amazon affiliate products (search links with the Associates tag, rel=sponsored) and the per-topic product boxes |
+| `content/products.py` | Amazon affiliate products: one specific listing per item (`/dp/<ASIN>?tag=enforceinterest-20`, rel=sponsored) and the per-topic product boxes. Recheck ASINs periodically for discontinued listings |
 | `content/seo.py` | `<title>` / meta description overrides (kept in one place to hold lengths in range) |
 | `assets/js/site.js` | Nav, scroll progress, reveal animations, hero accrual meter, scroll-driven 60-day clock, contact form |
 | `assets/js/tools.js` | Every calculator (interest engine, Texas business days/holidays, deadlines, quiz, timeline builder) |

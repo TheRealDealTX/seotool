@@ -174,8 +174,8 @@ def main():
         if "googletagmanager.com/gtag/js?id=G-E3SD91ESFX" not in txt or "gtag('config', 'G-E3SD91ESFX')" not in txt:
             errors.append(f"{path}: Google tag missing")
         for a in re.findall(r'<a [^>]*href="https://www\.amazon\.com[^"]*"[^>]*>', txt):
-            if "tag=enforceinterest-20" not in a or "sponsored" not in a:
-                errors.append(f"{path}: Amazon link without tag/sponsored: {a[:90]}")
+            if "tag=enforceinterest-20" not in a or "sponsored" not in a or not re.search(r"amazon\.com/dp/[A-Z0-9]{10}\?", a):
+                errors.append(f"{path}: Amazon link not a tagged /dp/ product link: {a[:90]}")
         if "amazon.com" in txt and "Amazon Associate" not in txt:
             errors.append(f"{path}: Amazon links without the Associates disclosure")
     nf = open(os.path.join(PAGES, "404.html"), encoding="utf-8").read()
