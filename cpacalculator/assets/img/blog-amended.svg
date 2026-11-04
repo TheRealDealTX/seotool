@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t"><title id="t">Amended tax return Form 1040-X: correcting a return and tracking status</title><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern><radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#10b981" stop-opacity=".22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect width="1200" height="675" fill="#0b1220"/><rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#glow)"/>
+<g font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<text x="72" y="118" fill="#34d399" font-size="22" font-weight="700" letter-spacing="4">FORM 1040-X</text>
+<text x="72" y="200" fill="#fff" font-size="62" font-weight="800">How to file an</text>
+<text x="72" y="276" fill="#fff" font-size="62" font-weight="800"><tspan fill="#10b981">amended return</tspan></text>
+<text x="72" y="340" fill="#94a3b8" font-size="26" font-weight="500">Deadlines, e-filing, status tracking and refund timing</text>
+</g>
+<g transform="translate(72 410)" font-family="'Plus Jakarta Sans', Arial, sans-serif"><rect width="520" height="150" rx="20" fill="#111a2e" stroke="#334155" stroke-width="2"/><text x="28" y="44" fill="#94a3b8" font-size="20" font-weight="600">Where's My Amended Return?</text><circle cx="60" cy="96" r="18" fill="#10b981"/><circle cx="260" cy="96" r="18" fill="#0e7490"/><circle cx="460" cy="96" r="18" fill="#334155" stroke="#f59e0b" stroke-width="3"/><path d="M78 96h164M278 96h164" stroke="#334155" stroke-width="4"/><text x="60" y="138" fill="#6ee7b7" font-size="17" font-weight="700" text-anchor="middle">Received</text><text x="260" y="138" fill="#67e8f9" font-size="17" font-weight="700" text-anchor="middle">Adjusted</text><text x="460" y="138" fill="#fcd34d" font-size="17" font-weight="700" text-anchor="middle">Completed</text></g>
+<g transform="translate(760 110)" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<rect x="0" y="0" width="320" height="420" rx="18" fill="#111a2e" stroke="#334155" stroke-width="2"/>
+<text x="30" y="56" fill="#fff" font-size="30" font-weight="800">1040-X</text>
+<text x="40" y="112" fill="#64748b" font-size="16" font-weight="700">A</text><text x="150" y="112" fill="#64748b" font-size="16" font-weight="700">B</text><text x="255" y="112" fill="#64748b" font-size="16" font-weight="700">C</text>
+<rect x="30" y="130" width="70" height="12" rx="6" fill="#334155"/><rect x="130" y="130" width="70" height="12" rx="6" fill="#334155"/><rect x="230" y="130" width="62" height="12" rx="6" fill="#10b981"/>
+<rect x="30" y="170" width="70" height="12" rx="6" fill="#334155"/><rect x="130" y="170" width="70" height="12" rx="6" fill="#f59e0b"/><rect x="230" y="170" width="62" height="12" rx="6" fill="#10b981"/>
+<rect x="30" y="210" width="70" height="12" rx="6" fill="#334155"/><path d="M28 216h76" stroke="#f59e0b" stroke-width="4"/><rect x="130" y="210" width="70" height="12" rx="6" fill="#334155"/><rect x="230" y="210" width="62" height="12" rx="6" fill="#10b981"/>
+<rect x="30" y="250" width="70" height="12" rx="6" fill="#334155"/><rect x="130" y="250" width="70" height="12" rx="6" fill="#334155"/><rect x="230" y="250" width="62" height="12" rx="6" fill="#10b981"/>
+<rect x="30" y="320" width="262" height="64" rx="14" fill="url(#em)"/><text x="161" y="361" fill="#fff" font-size="22" font-weight="800" text-anchor="middle">Corrected</text>
+</g>
+<path d="M700 300 C730 250 740 230 770 220" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/><path d="M758 210l14 10-16 8" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+<path d="M40 640h1120" stroke="#1e293b" stroke-width="2"/>
+</svg>

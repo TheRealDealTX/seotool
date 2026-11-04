@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t"><title id="t">Capital gains tax on home sale: $250,000 and $500,000 exclusion illustration</title><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern><radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#10b981" stop-opacity=".22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect width="1200" height="675" fill="#0b1220"/><rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#glow)"/>
+<g font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<text x="72" y="118" fill="#34d399" font-size="22" font-weight="700" letter-spacing="4">SECTION 121 EXCLUSION</text>
+<text x="72" y="200" fill="#fff" font-size="62" font-weight="800">Capital gains tax</text>
+<text x="72" y="276" fill="#fff" font-size="62" font-weight="800">on a <tspan fill="#10b981">home sale</tspan></text>
+<text x="72" y="340" fill="#94a3b8" font-size="26" font-weight="500">$250,000 / $500,000 exclusion · 2-out-of-5-year test</text>
+</g>
+<path d="M700 610 C860 610 1040 560 1080 420 S1120 260 1150 200" fill="none" stroke="#10b981" stroke-width="6" stroke-linecap="round"/><path d="M1150 200 l-34 14 m34 -14 l6 36" stroke="#10b981" stroke-width="6" stroke-linecap="round" fill="none"/>
+<g stroke-linejoin="round">
+<path d="M760 360 L900 240 L1040 360 Z" fill="#0e7490"/><rect x="785" y="360" width="230" height="200" rx="8" fill="#111a2e" stroke="#334155" stroke-width="3"/>
+<rect x="875" y="460" width="50" height="100" rx="6" fill="#10b981"/><rect x="805" y="390" width="50" height="45" rx="6" fill="#f59e0b" fill-opacity=".8"/><rect x="945" y="390" width="50" height="45" rx="6" fill="#f59e0b" fill-opacity=".8"/>
+</g>
+
+<g transform="translate(72 420)" font-family="'Plus Jakarta Sans', Arial, sans-serif"><rect x="0" y="0" width="520" height="150" rx="20" fill="#111a2e" stroke="#334155" stroke-width="2"/>
+<text x="28" y="46" fill="#94a3b8" font-size="20" font-weight="600">Gain excluded from tax</text>
+<rect x="28" y="70" width="464" height="20" rx="10" fill="#1e293b"/><rect x="28" y="70" width="300" height="20" rx="10" fill="#10b981"/><rect x="328" y="70" width="90" height="20" fill="#f59e0b"/>
+<text x="28" y="126" fill="#6ee7b7" font-size="18" font-weight="700">Excluded up to $250k / $500k</text><text x="360" y="126" fill="#fcd34d" font-size="18" font-weight="700">Taxable</text></g>
+<path d="M40 640h1120" stroke="#1e293b" stroke-width="2"/>
+</svg>

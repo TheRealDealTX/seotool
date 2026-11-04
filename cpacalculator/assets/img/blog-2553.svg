@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t"><title id="t">IRS Form 2553: electing S corporation status, deadline and steps</title><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern><radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#10b981" stop-opacity=".22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect width="1200" height="675" fill="#0b1220"/><rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#glow)"/>
+<g font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<text x="72" y="118" fill="#34d399" font-size="22" font-weight="700" letter-spacing="4">S CORP ELECTION</text>
+<text x="72" y="200" fill="#fff" font-size="62" font-weight="800">IRS Form 2553:</text>
+<text x="72" y="276" fill="#fff" font-size="62" font-weight="800"><tspan fill="#10b981">elect S corp</tspan></text>
+<text x="72" y="340" fill="#94a3b8" font-size="26" font-weight="500">Eligibility, deadline, late relief</text>
+</g>
+<g transform="translate(72 410)" font-family="'Plus Jakarta Sans', Arial, sans-serif"><rect width="460" height="150" rx="20" fill="#111a2e" stroke="#334155" stroke-width="2"/><text x="28" y="44" fill="#94a3b8" font-size="20" font-weight="600">Deadline</text><text x="28" y="96" fill="#fff" font-size="40" font-weight="800">2 mo + 15 days</text><text x="28" y="130" fill="#fcd34d" font-size="18" font-weight="700">Calendar year: March 15</text></g>
+<g transform="translate(700 120)" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<rect x="40" y="80" width="260" height="360" rx="14" fill="#111a2e" stroke="#334155" stroke-width="2"/>
+<g fill="#0e7490"><rect x="80" y="120" width="50" height="40" rx="6"/><rect x="150" y="120" width="50" height="40" rx="6"/><rect x="220" y="120" width="50" height="40" rx="6"/><rect x="80" y="185" width="50" height="40" rx="6"/><rect x="150" y="185" width="50" height="40" rx="6"/><rect x="220" y="185" width="50" height="40" rx="6"/><rect x="80" y="250" width="50" height="40" rx="6"/><rect x="150" y="250" width="50" height="40" rx="6"/><rect x="220" y="250" width="50" height="40" rx="6"/></g>
+<rect x="135" y="350" width="70" height="90" rx="6" fill="#10b981" fill-opacity=".6"/>
+<circle cx="300" cy="80" r="70" fill="url(#em)"/><text x="300" y="104" fill="#fff" font-size="72" font-weight="800" text-anchor="middle">S</text>
+<rect x="300" y="250" width="160" height="150" rx="16" fill="#111a2e" stroke="#f59e0b" stroke-width="3"/><rect x="300" y="250" width="160" height="40" rx="16" fill="#f59e0b"/><text x="380" y="278" fill="#0b1220" font-size="20" font-weight="800" text-anchor="middle">MARCH</text><text x="380" y="370" fill="#fff" font-size="64" font-weight="800" text-anchor="middle">15</text>
+</g>
+<path d="M40 640h1120" stroke="#1e293b" stroke-width="2"/>
+</svg>

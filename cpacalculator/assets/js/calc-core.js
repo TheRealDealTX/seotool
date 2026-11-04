@@ -110,7 +110,8 @@
       var agi = Math.max(0, gross - adjustments);
       var std = CPA.stdDeduction(s, y, o.seniors || 0);
       var ded = o.itemized && o.itemized > std ? o.itemized : std;
-      var below = (o.tips ? Math.min(o.tips, CPA.year(y).tipsMax) : 0) +
+      // OBBBA tips, overtime and senior deductions require a joint return if married (not allowed for MFS).
+      var below = s === 'mfs' ? 0 : (o.tips ? Math.min(o.tips, CPA.year(y).tipsMax) : 0) +
                   (o.overtime ? Math.min(o.overtime, CPA.year(y).overtimeMax[s]) : 0) +
                   CPA.seniorDeduction(s, y, o.seniors || 0, agi);
       var beforeQbi = Math.max(0, agi - ded - below);

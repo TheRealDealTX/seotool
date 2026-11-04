@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-labelledby="t"><title id="t">Form 1099-G explained: unemployment compensation and state tax refunds</title><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="1"/></pattern><radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#10b981" stop-opacity=".22"/><stop offset="1" stop-color="#0b1220" stop-opacity="0"/></radialGradient><linearGradient id="em" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#10b981"/><stop offset="1" stop-color="#0e7490"/></linearGradient></defs><rect width="1200" height="675" fill="#0b1220"/><rect width="1200" height="675" fill="url(#g)"/><rect width="1200" height="675" fill="url(#glow)"/>
+<g font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<text x="72" y="118" fill="#34d399" font-size="22" font-weight="700" letter-spacing="4">GOVERNMENT PAYMENTS</text>
+<text x="72" y="200" fill="#fff" font-size="62" font-weight="800">Form 1099-G</text>
+<text x="72" y="276" fill="#fff" font-size="62" font-weight="800"><tspan fill="#10b981">explained</tspan></text>
+<text x="72" y="340" fill="#94a3b8" font-size="26" font-weight="500">Unemployment and state tax refunds</text>
+</g>
+<g transform="translate(72 410)" font-family="'Plus Jakarta Sans', Arial, sans-serif"><rect width="480" height="150" rx="20" fill="#111a2e" stroke="#334155" stroke-width="2"/><text x="28" y="44" fill="#94a3b8" font-size="20" font-weight="600">Is it taxable?</text><circle cx="44" cy="88" r="12" fill="#10b981"/><text x="68" y="95" fill="#e2e8f0" font-size="20" font-weight="700">Box 1 unemployment: yes</text><circle cx="44" cy="126" r="12" fill="#f59e0b"/><text x="68" y="133" fill="#e2e8f0" font-size="20" font-weight="700">Box 2 state refund: maybe</text></g>
+<g transform="translate(700 110)" font-family="'Plus Jakarta Sans', Arial, sans-serif">
+<rect x="0" y="0" width="380" height="440" rx="18" fill="#111a2e" stroke="#334155" stroke-width="2"/>
+<text x="30" y="58" fill="#fff" font-size="34" font-weight="800">1099-G</text>
+<rect x="30" y="90" width="150" height="90" rx="12" fill="#10b981" fill-opacity=".18" stroke="#10b981" stroke-width="2"/><text x="46" y="120" fill="#6ee7b7" font-size="18" font-weight="800">Box 1</text><rect x="46" y="140" width="110" height="14" rx="7" fill="#10b981"/>
+<rect x="200" y="90" width="150" height="90" rx="12" fill="#f59e0b" fill-opacity=".15" stroke="#f59e0b" stroke-width="2"/><text x="216" y="120" fill="#fcd34d" font-size="18" font-weight="800">Box 2</text><rect x="216" y="140" width="90" height="14" rx="7" fill="#f59e0b"/>
+<rect x="30" y="200" width="150" height="90" rx="12" fill="#0e7490" fill-opacity=".2" stroke="#0e7490" stroke-width="2"/><text x="46" y="230" fill="#67e8f9" font-size="18" font-weight="800">Box 4</text><rect x="46" y="250" width="70" height="14" rx="7" fill="#0e7490"/>
+<rect x="200" y="200" width="150" height="90" rx="12" fill="#1e293b"/><rect x="216" y="226" width="110" height="12" rx="6" fill="#334155"/><rect x="216" y="252" width="80" height="12" rx="6" fill="#334155"/>
+<path d="M60 380 L140 340 L210 360 L320 310" fill="none" stroke="url(#em)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="320" cy="310" r="10" fill="#10b981"/>
+</g>
+<path d="M40 640h1120" stroke="#1e293b" stroke-width="2"/>
+</svg>
