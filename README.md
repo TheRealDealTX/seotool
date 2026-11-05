@@ -4,6 +4,10 @@ A static HTML rebuild of [huttoroofs.com](https://huttoroofs.com), replacing the
 WordPress/Elementor site. No PHP, no database, no plugins — just HTML, one CSS
 file, one JS file and local images. Upload the repo root to any web host.
 
+> This repository also holds the **alabamainsuranceappraiser.com** rebuild in
+> [`alabamainsuranceappraiser.com/`](alabamainsuranceappraiser.com/README.md), with its own
+> generator, build output and deploy script. The root `deploy.sh` skips that folder.
+
 ## What's here
 
 | Path | What it is |

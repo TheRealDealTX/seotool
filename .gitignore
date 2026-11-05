@@ -1,3 +1,7 @@
 __pycache__/
 *.pyc
 dist/
+alabamainsuranceappraiser.com/aia-leads/
+alabamainsuranceappraiser.com/static/api/config.local.php
+alabamainsuranceappraiser.com/public_html/api/config.local.php
+alabamainsuranceappraiser.com/public_html/api/leads.log.php
