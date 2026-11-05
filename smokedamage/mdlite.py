@@ -59,6 +59,9 @@ class Renderer:
         def link(m):
             label, href = m.group(1), m.group(2).strip()
             href_attr = href.replace('"', "%22")
+            if re.match(r"https?://(www\.)?amazon\.", href):
+                # Amazon affiliate links (tag=josephrayditt-20) must be marked sponsored
+                return f'<a href="{href_attr}" rel="sponsored nofollow noopener" target="_blank">{label}</a>'
             if href.startswith("http") and "smokedamage.com" not in href:
                 return f'<a href="{href_attr}" rel="noopener" target="_blank">{label}</a>'
             if href.startswith("tel:"):

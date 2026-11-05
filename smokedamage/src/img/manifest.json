@@ -230,5 +230,13 @@
     "license": "Public domain",
     "width": 1920,
     "height": 1281
+  },
+  "smoke-smell-house": {
+    "alt": "Title card reading How to Get Rid of Smoke Smell in Your House over a soot-stained room",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FireResearch_020.jpg",
+    "photographer": "National Institute of Standards and Technology (background photo, via the site's soot-ceiling image); title card made for SmokeDamage.com",
+    "license": "Public domain",
+    "width": 1600,
+    "height": 1067
   }
 }

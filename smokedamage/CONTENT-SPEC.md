@@ -41,6 +41,8 @@ Events add: `event_date`, `county`, `area`, `event_type`, `status`,
 - `- item` bullets, `1. item` numbered lists.
 - Pipe tables (`| a | b |` + `|---|---|` separator row).
 - `**bold**`, `*italic*`, `[link text](/internal-path/)`, external links `[TDI](https://www.tdi.texas.gov/...)`.
+- Amazon affiliate links `[Product](https://www.amazon.com/dp/ASIN/?tag=josephrayditt-20)` render with
+  `rel="sponsored nofollow noopener"` automatically. Any page with them needs a `:::note Affiliate disclosure` block.
 - `{{phone}}` renders the clickable phone number; `{{email}}` the email link;
   `{{review}}` renders a "Request a Free Claim Review" link to /contact/.
 
@@ -65,6 +67,11 @@ commercial-fire, adjuster-documenting, inspection, contents-inventory,
 paperwork-review, texas-home, texas-business, wildfire, attic-insulation,
 burned-furniture, office-interior, restaurant, warehouse, multifamily,
 houston, dallas, austin, san-antonio, texas-landscape
+
+Post-specific hero images (title cards) are also allowed once registered in
+`src/img/manifest.json` + `assets/img/variants.json` with their 480/800/1200/1600
+AVIF + WebP files in `assets/img/` (source master in `src/img/<key>.webp`):
+smoke-smell-house
 
 ## Business facts (use exactly)
 
