@@ -1,0 +1,873 @@
+[
+ {
+  "folder": "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+  "short": "Metal Fabrication Shops",
+  "naics": "332999",
+  "program": "7(a) or 504",
+  "title": "Metal Fabrication Loans: SBA Rates & Terms",
+  "description": "Metal fabrication shop loans: SBA 7(a) and 504 for CNC and laser equipment, buildings and shop purchases, with rate caps from 10.00% at 7.00% prime.",
+  "h1": "Metal fabrication business loans",
+  "note": "Most SBA loans to metal fabricators pay for machines or the building that houses them. A shop might finance a fiber laser, a press brake and a CNC plasma table, buy out a retiring owner, or move into its own building. Because the equipment holds value and the work is tied to specific customers, lenders spend most of their time on two things: how concentrated the customer list is, and whether the shop's backlog and margins can carry new debt payments.",
+  "who": "Job shops, custom fabricators and makers of small metal products such as brackets, fittings, racks and enclosures. Lenders want an owner or key employee with real shop-floor and estimating experience, and certifications such as AWS welding or ISO 9001 help when the shop serves industrial or aerospace buyers. Buyers of an existing shop should plan on at least 10% equity, and a seller note is common. Companies doing defense work must still meet SBA size standards with affiliates counted.",
+  "programs": [
+   {
+    "h": "504 for the building and big machines",
+    "p": "A 504 loan pairs a bank first lien with a CDC debenture at a fixed rate near 6.97% for 25 years. Manufacturers can get a debenture of up to $5.5 million, which suits a building purchase or a major laser line."
+   },
+   {
+    "h": "7(a) for shop purchases",
+    "p": "A standard 7(a) loan covers buying an existing fabrication business, including goodwill, inventory and working capital, on a 10-year term. It can also refinance expensive equipment debt."
+   },
+   {
+    "h": "Express for single machines",
+    "p": "SBA Express loans up to $500,000 fit a single press brake, welder fleet or saw upgrade when speed matters more than the lowest rate. Expect a slightly higher rate than standard 7(a)."
+   }
+  ],
+  "uses": [
+   "CNC machining centers, fiber lasers, press brakes and plasma tables",
+   "Buying an established job shop from a retiring owner",
+   "Purchasing or expanding a shop building with crane bays and heavy power",
+   "Raw steel and aluminum inventory to take on a large order",
+   "Refinancing high-rate equipment leases into one longer-term loan"
+  ],
+  "amounts": "Fabrication loans run larger than most small-business loans. Single machines often cost $150,000 to $600,000, and shop acquisitions commonly fall between $750,000 and $3 million. Equipment loans run up to 10 years, or the useful life of the machine, and real estate up to 25 years. Expect 10% down on most deals, and 15% to 20% when the building is special purpose or the shop is new.",
+  "example_amount": 750000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a metal fabrication shop",
+   "p": "Customer concentration comes first. If one OEM or contractor is more than a quarter of sales, the lender will ask about contracts and what happens if that buyer leaves. They also review the backlog, quoting win rate and gross margin by job, and how steel price swings are passed through. Equipment is appraised at orderly liquidation value, which is often well below cost. Lenders also check skilled labor depth, because a shop that depends on one programmer or welder is a key-person risk."
+  },
+  "related": [
+   "All Other Miscellaneous Manufacturing",
+   "Aircraft Manufacturing",
+   "All Other Specialty Trade Contractors",
+   "Asphalt Paving Mixture and Block Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan for a CNC machine or laser cutter?",
+    "a": "Yes. Production equipment is one of the most common uses of 7(a) and 504 loans in fabrication. Express works for machines under $500,000. For larger purchases, a 504 loan offers a long fixed rate, and manufacturers qualify for a debenture of up to $5.5 million."
+   },
+   {
+    "q": "How much down payment does a metal fabrication loan need?",
+    "a": "Usually 10% for an established shop buying equipment or a building through 504 or 7(a). Start-ups and special-purpose buildings often need 15% to 20%. On a business purchase, the SBA generally requires at least 10% equity, and part of it can come from a seller note under certain conditions."
+   },
+   {
+    "q": "What are SBA rates for manufacturing equipment loans?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable, and $250,001 to $350,000 at 11.50%. The 504 debenture portion carries a fixed rate around 6.97% for 25 years, with the bank's first lien priced separately."
+   },
+   {
+    "q": "Can I buy an existing fabrication shop with an SBA loan?",
+    "a": "Yes. A 7(a) loan can fund the purchase price, goodwill, equipment, inventory and working capital in one loan. Lenders will want the seller's tax returns, an equipment appraisal, a customer list showing concentration, and a transition plan for key accounts and skilled staff."
+   },
+   {
+    "q": "Is a metal shop building a special-purpose property?",
+    "a": "Usually not. A standard industrial building with crane bays and heavy power is general-purpose for most lenders. Specialized plating or coating facilities with environmental issues may be treated differently, can need more equity, and nearly always require an environmental review before closing."
+   }
+  ]
+ },
+ {
+  "folder": "Retail Bakeries",
+  "short": "Bakeries",
+  "naics": "311811",
+  "program": "7(a)",
+  "title": "Bakery Loans: SBA Rates & Eligibility",
+  "description": "Bakery loans explained: SBA 7(a), Express and microloans for ovens, build-outs and buying a bakery, plus down payment and rate caps at 7.00% prime.",
+  "h1": "Bakery business loans",
+  "note": "SBA loans for bakeries are usually small to mid-size 7(a) or Express loans. The money goes to deck and convection ovens, mixers, display cases, a retail build-out, or buying an established bakery from its owner. Margins are thin and the work is labor-heavy, so lenders look closely at food and labor cost as a share of sales, wholesale accounts that add steady volume, and whether the lease and location support enough foot traffic to cover the payment.",
+  "who": "Retail bakeries that bake and sell on site, including cake shops, bread bakeries, donut shops and cupcake stores. Lenders want baking or food-service management experience, a clean health inspection history and a lease that runs at least as long as the loan. Home bakers moving to a storefront can qualify, but cottage-food revenue alone rarely proves cash flow. Franchise bakeries are eligible when the brand meets SBA franchise rules.",
+  "programs": [
+   {
+    "h": "7(a) for buying or building a bakery",
+    "p": "Covers the purchase of an existing bakery, a full build-out with hood and grease trap, equipment and opening working capital on a 10-year term. Real estate can be added on a longer term."
+   },
+   {
+    "h": "Express for an oven or case",
+    "p": "Loans under $500,000 close faster through SBA Express. Good for a new deck oven, a walk-in cooler or a second display case. Rates run slightly higher than standard 7(a), and the paperwork is lighter."
+   },
+   {
+    "h": "Microloans for small start-ups",
+    "p": "Nonprofit SBA intermediaries lend up to $50,000, often with coaching, to new bakers who need a first commercial oven and a modest storefront. Some also fund farmers market and cottage bakers moving up."
+   }
+  ],
+  "uses": [
+   "Deck, rack and convection ovens, proofers and spiral mixers",
+   "Retail build-out with hood, plumbing and display cases",
+   "Buying an established bakery and its recipes and accounts",
+   "Walk-in coolers and freezers for wholesale production",
+   "Working capital for flour, butter and packaging inventory"
+  ],
+  "amounts": "Most bakery loans fall between $75,000 and $500,000. An equipment upgrade might be $50,000 to $150,000, while a full build-out or the purchase of a busy shop often runs $250,000 to $750,000. Terms run up to 10 years for equipment and acquisitions, and up to 25 years if you buy the building. Plan on at least 10% equity, and more for a start-up.",
+  "example_amount": 250000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a bakery",
+   "p": "Lenders compare food cost and labor to sales, and a bakery with combined prime costs well above 60% of revenue is a harder sell. They want to know how much comes from wholesale accounts like cafes and grocers versus walk-in retail, and how concentrated those accounts are. Build-out costs get scrutiny because hoods and grease traps are expensive and stay with the landlord. Expect questions on owner hours and staffing, since many bakeries depend on one head baker starting at 3 a.m."
+  },
+  "related": [
+   "Snack and Nonalcoholic Beverage Bars",
+   "Full-Service Restaurants",
+   "Cafeterias, Grill Buffets, and Buffets",
+   "Mobile Food Services"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a bakery?",
+    "a": "Yes. Start-up bakeries qualify for 7(a) loans and microloans, but lenders want a detailed business plan, real baking or food-service experience, and usually 15% to 20% equity. A signed lease, contractor bids for the build-out and equipment quotes make the application much stronger."
+   },
+   {
+    "q": "How much does it cost to open a bakery, and how much can I borrow?",
+    "a": "A small storefront bakery commonly needs $150,000 to $500,000 for build-out, ovens, cases and opening cash. Lenders size the loan to projected cash flow and your equity. Many first-time bakery owners borrow $100,000 to $350,000 through 7(a)."
+   },
+   {
+    "q": "What credit score do I need for a bakery loan?",
+    "a": "The SBA does not set a minimum score, but most lenders want personal credit around 650 to 680 or higher for a 7(a) loan. Microlenders are more flexible. Recent late payments, collections or tax liens matter more than the score itself."
+   },
+   {
+    "q": "Can I use an SBA loan to buy an existing bakery?",
+    "a": "Yes. A 7(a) loan can cover the price, equipment, recipes and goodwill, plus working capital. Lenders review three years of the seller's tax returns, the lease assignment terms and whether wholesale accounts will stay after the sale."
+   },
+   {
+    "q": "Can I finance bakery equipment without real estate collateral?",
+    "a": "Often. The equipment itself secures the loan, and loans of $50,000 or less require no collateral under SBA rules. For larger loans the lender takes available business assets and may ask for a lien on personal real estate if there is a shortfall."
+   }
+  ]
+ },
+ {
+  "folder": "Bus and Other Motor Vehicle Transit Systems",
+  "short": "Bus & Transit Companies",
+  "naics": "485113",
+  "program": "7(a)",
+  "title": "Bus Company Loans: SBA Rates & Eligibility",
+  "description": "Bus and transit company loans: SBA 7(a) for buses, paratransit vans, maintenance yards and acquisitions, with eligibility, terms and today's rate caps.",
+  "h1": "Bus and transit company loans",
+  "note": "Private bus and transit operators use SBA loans mainly to buy vehicles, a maintenance yard, or another operator. Many of these companies run routes or paratransit service under contract with a city, county or transit authority, so lenders read the contract as closely as the financial statements. The key questions are how long the contract runs, whether it can be cancelled, how quickly the agency pays, and whether the fleet can be kept running and replaced on schedule.",
+  "who": "Privately owned companies that run fixed-route bus, shuttle, commuter, paratransit or demand-response service, often as contractors to public agencies. Lenders look for FMCSA operating authority where required, DOT safety records, drug and alcohol testing programs and insurance in force. Experience running a fleet matters more than general business experience. A company that relies on a single agency contract should show its renewal history.",
+  "programs": [
+   {
+    "h": "7(a) for vehicles and acquisitions",
+    "p": "A 7(a) loan finances buses, cutaways and paratransit vans, or the purchase of another operator and its contracts, usually on a 10-year term or the vehicles' useful life."
+   },
+   {
+    "h": "504 for a bus yard or garage",
+    "p": "A 504 loan funds a maintenance garage, fueling area or parking yard with a long fixed rate, usually with 10% down. The yard must be at least 51% occupied by your own operation, and the debenture portion is fixed near 6.97%."
+   },
+   {
+    "h": "Working capital lines",
+    "p": "SBA CAPLines and Express lines help bridge slow agency payments, startup costs on a new contract and payroll during ramp-up. Lenders often size them to eligible agency receivables and renew them each year."
+   }
+  ],
+  "uses": [
+   "Transit buses, cutaways and wheelchair-accessible vans",
+   "Buying a garage, maintenance shop or bus yard",
+   "Acquiring another operator and its service contracts",
+   "Working capital to mobilize a new agency contract",
+   "Fleet tracking, fare and dispatch systems"
+  ],
+  "amounts": "Loan size follows the fleet. A paratransit operator adding vans may borrow $150,000 to $500,000, while a contractor buying full-size buses or another operator can reach $1 million to $5 million. Vehicle loans usually run 7 to 10 years, and a garage or yard up to 25 years. Expect 10% to 20% equity depending on contract strength.",
+  "example_amount": 600000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a bus or transit operator",
+   "p": "The contract is the collateral that matters most. Lenders check the term, renewal options, termination for convenience clauses, and how many days the agency takes to pay. They review the fleet list with mileage and age, the maintenance program and the cost of replacing buses before the loan is repaid. Safety ratings, accident history and insurance costs all affect cash flow. Driver recruiting and wage pressure are a frequent concern, since a missed run can trigger contract penalties."
+  },
+  "related": [
+   "School and Employee Bus Transportation",
+   "Scenic and Sightseeing Transportation, Land",
+   "Trucking Companies",
+   "Ambulance Services"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy buses?",
+    "a": "Yes. Buses, cutaways and accessible vans are eligible 7(a) uses. Lenders usually match the term to the vehicle's useful life, often 7 to 10 years for new units and less for used ones. They will want quotes, the fleet plan and evidence of the work the vehicles will serve."
+   },
+   {
+    "q": "Will a lender count a transit contract as collateral?",
+    "a": "Not as collateral in the strict sense, but the contract drives the decision. A multi-year agency contract with steady payment history supports a larger loan. Lenders discount contracts that can be terminated on short notice or that expire well before the loan is repaid."
+   },
+   {
+    "q": "How do I finance slow payments from a transit agency?",
+    "a": "An SBA CAPLine or a 7(a) working capital line can carry payroll and fuel while you wait on agency invoices. Lenders size the line to receivables and may require payments to flow into an account they control."
+   },
+   {
+    "q": "What are SBA loan rates for a transit company?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable, and loans from $250,001 to $350,000 at 11.50%. Many lenders price fleet loans below the cap when the contract is strong. 504 loans for a garage carry a fixed debenture rate near 6.97%."
+   },
+   {
+    "q": "Can I buy an existing bus company with an SBA loan?",
+    "a": "Yes. A 7(a) loan can fund the price, the fleet and working capital. Lenders check that contracts can be assigned to the new owner, review safety and maintenance records, and usually want at least 10% equity plus a transition period with the seller."
+   }
+  ]
+ },
+ {
+  "folder": "Mobile Food Services",
+  "short": "Food Trucks",
+  "naics": "722330",
+  "program": "7(a) or Microloan",
+  "title": "Food Truck Loans: SBA Rates & Eligibility",
+  "description": "Food truck loans: how SBA microloans, Express and 7(a) loans fund a truck, kitchen build-out and permits, with down payment, terms and rate caps.",
+  "h1": "Food truck loans",
+  "note": "Food truck loans are small. Most owners need $50,000 to $175,000 for a truck or trailer, the kitchen build-out, permits and opening inventory. Lenders treat the truck like any vehicle collateral that loses value fast, so they lean on the owner's experience, credit and cash flow plan. They also want to see where you will park and prep, because most cities require a licensed commissary, and how you will earn on slow weekdays and in winter.",
+  "who": "Owner-operators of food trucks, trailers, carts and mobile catering units. Lenders expect food-service experience, a health department permit or a clear path to one, a commissary agreement and a fire inspection plan for the cooking line. First-time owners can qualify, often through microlenders. Operators with a year or two of sales records, catering contracts or event bookings get better terms and larger loans.",
+  "programs": [
+   {
+    "h": "Microloans for first trucks",
+    "p": "SBA microlenders lend up to $50,000, often with training, and are the most common route for a first-time owner buying a used truck or trailer."
+   },
+   {
+    "h": "Express for an established truck",
+    "p": "Operators with sales history can use SBA Express for a second truck, a new kitchen line or working capital, with a faster lender decision. Rates run a little higher than standard 7(a)."
+   },
+   {
+    "h": "7(a) for fleets and commissaries",
+    "p": "A 7(a) loan funds several trucks, a shared commissary kitchen or the purchase of an existing food truck business on a 10-year term. Real estate for a commissary can carry a longer term."
+   }
+  ],
+  "uses": [
+   "Buying a new or used food truck, trailer or cart",
+   "Kitchen build-out: grills, fryers, refrigeration and hood",
+   "Permits, licenses, commissary deposits and fire inspection costs",
+   "Vehicle wrap, point-of-sale system and generator",
+   "Opening food inventory and working capital for slow months"
+  ],
+  "amounts": "A used truck with a working kitchen typically costs $50,000 to $100,000, and a new custom build often runs $100,000 to $175,000 or more. Microloans cap at $50,000, so larger builds use Express or 7(a). Terms usually run 5 to 10 years, shorter for older trucks. Expect to put in at least 10%, and often 15% to 20% as a start-up.",
+  "example_amount": 100000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a food truck",
+   "p": "Lenders worry about the truck's value, since a custom kitchen truck can be hard to resell, so they want a quote or appraisal and full insurance. They study your sales plan by day: lunch stops, events, festivals and catering. Commissary costs, permit fees in each city you serve, and fuel and generator expenses all reduce margin. Weather and seasonality matter in colder climates. Your personal credit and savings carry more weight here than in larger loans, because the business itself has little hard collateral."
+  },
+  "related": [
+   "Full-Service Restaurants",
+   "Snack and Nonalcoholic Beverage Bars",
+   "Retail Bakeries",
+   "Cafeterias, Grill Buffets, and Buffets"
+  ],
+  "faqs": [
+   {
+    "q": "Can you get an SBA loan for a food truck?",
+    "a": "Yes. Food trucks are eligible for SBA microloans, Express and 7(a) loans. First-time owners most often use a microloan of up to $50,000. Operators with a year or more of sales can borrow more through Express or 7(a) for a new truck or a second unit."
+   },
+   {
+    "q": "How much does it cost to start a food truck?",
+    "a": "Many owners spend $75,000 to $200,000 in total, counting the truck, kitchen equipment, wrap, permits, commissary deposits, insurance and opening inventory. A used truck lowers the cost but may need repairs. Lenders want itemized quotes before they approve."
+   },
+   {
+    "q": "What credit score do I need for a food truck loan?",
+    "a": "There is no SBA minimum, but banks generally look for scores around 650 or higher. Microlenders often work with lower scores if you have a solid plan and food-service experience. Recent collections, tax liens or bankruptcies can stop an application regardless of score."
+   },
+   {
+    "q": "Do I need a down payment for a food truck loan?",
+    "a": "Usually yes. Start-ups typically need 10% to 20% of the total project in cash. Some microlenders accept less with a strong plan. Using your own savings shows the lender you share the risk, which matters more on small loans with limited collateral."
+   },
+   {
+    "q": "Is it better to lease or finance a food truck?",
+    "a": "Leasing lowers upfront cost and suits testing a concept, but you build no equity. Financing through an SBA loan costs more upfront and lets you own a resellable asset. Many owners finance once they have a proven menu and steady bookings."
+   }
+  ]
+ },
+ {
+  "folder": "Apparel Accessories and Other Apparel Manufacturing",
+  "short": "Apparel & Accessories Makers",
+  "naics": "315990",
+  "program": "7(a)",
+  "title": "Apparel Manufacturing Loans: SBA Guide",
+  "description": "Apparel and accessories manufacturing loans: SBA 7(a), 504 and Express for sewing and embroidery equipment, inventory and production space, plus rate caps.",
+  "h1": "Apparel manufacturing business loans",
+  "note": "SBA loans for small apparel and accessory makers usually fund production equipment, inventory and working capital rather than real estate. Think hat and cap makers, glove and belt makers, embroidery and cut-and-sew shops, and private-label producers. Cash moves slowly in this business: fabric is bought months before goods ship, and wholesale buyers often pay on 30- to 60-day terms. Lenders focus on that gap, on gross margin per unit, and on how much of the business depends on one retailer or brand.",
+  "who": "Manufacturers of hats, caps, gloves, scarves, belts, neckwear, uniforms and similar items, including contract sewers and brands that run their own production. Lenders want production or merchandising experience, a clear sales channel and current purchase orders or wholesale accounts. Direct-to-consumer brands that outsource all production may be classed as retailers or wholesalers instead, which does not affect eligibility but changes how the lender views collateral.",
+  "programs": [
+   {
+    "h": "7(a) for equipment and growth",
+    "p": "Covers industrial sewing machines, embroidery heads, cutting tables, inventory and working capital, or the purchase of an existing apparel company, on terms up to 10 years."
+   },
+   {
+    "h": "CAPLines for purchase orders",
+    "p": "SBA working capital lines can be tied to purchase orders or receivables, which suits seasonal production for large wholesale buyers. Advances are repaid as each buyer pays, so the line revolves with the season."
+   },
+   {
+    "h": "504 for a production building",
+    "p": "Manufacturers can use a 504 loan to buy a plant, with a debenture of up to $5.5 million at a long fixed rate. The bank holds the first lien and the borrower usually puts in 10%."
+   }
+  ],
+  "uses": [
+   "Industrial sewing, embroidery and heat-press equipment",
+   "Fabric, trims and finished-goods inventory for a season",
+   "Working capital to fill large wholesale purchase orders",
+   "Buying an existing apparel or accessories manufacturer",
+   "Leasehold improvements or a production building"
+  ],
+  "amounts": "Most apparel manufacturing loans fall between $100,000 and $750,000. Equipment purchases often run $50,000 to $250,000, while lines tied to seasonal orders scale with the order book. Equipment and working capital terms run up to 10 years, and buildings up to 25 years. Expect at least 10% equity, more for a newer brand without wholesale history.",
+  "example_amount": 300000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an apparel or accessories maker",
+   "p": "Customer concentration is the first question, since many small makers sell most of their output to a handful of retailers or brands. Lenders check chargebacks, returns and markdown allowances in wholesale agreements. Inventory is weak collateral because fashion items lose value, so they want aging reports and sell-through data. They also review the cash conversion cycle, from fabric purchase to customer payment, and how tariffs or import costs on materials affect margins."
+  },
+  "related": [
+   "All Other Miscellaneous Manufacturing",
+   "Carpet and Rug Mills",
+   "Cosmetics, Beauty Supplies, and Perfume Stores",
+   "All Other Miscellaneous Fabricated Metal Product Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can a clothing or accessories manufacturer get an SBA loan?",
+    "a": "Yes. Apparel and accessory manufacturers are eligible for 7(a), 504 and Express loans. Common uses include sewing and embroidery equipment, inventory, working capital for wholesale orders and buying an existing company. Lenders want sales history or firm purchase orders."
+   },
+   {
+    "q": "Can I finance a large purchase order with an SBA loan?",
+    "a": "Often. An SBA CAPLine, especially a contract or seasonal line, can fund materials and labor for specific orders, with repayment when the buyer pays. The lender will check the buyer's credit, the order terms and your track record delivering on time."
+   },
+   {
+    "q": "Can I start a clothing line with an SBA loan?",
+    "a": "Possibly, but it is hard for brand-new lines. Lenders want industry experience, a sales channel and usually 15% to 20% equity. Many new brands start with a microloan of up to $50,000 and move to 7(a) once they have wholesale accounts or steady online sales."
+   },
+   {
+    "q": "What are SBA rates for an apparel manufacturing loan?",
+    "a": "With prime at 7.00%, a 7(a) loan from $50,001 to $250,000 is capped at 13.00%, from $250,001 to $350,000 at 11.50%, and above $350,000 at 10.00%. 504 debentures for a building carry a fixed rate near 6.97%."
+   },
+   {
+    "q": "Is inventory accepted as collateral for an apparel loan?",
+    "a": "Yes, but at a deep discount. Lenders value fabric and finished goods at liquidation levels because fashion items lose value quickly. Equipment, receivables from creditworthy buyers and personal real estate usually carry more weight in the collateral picture."
+   }
+  ]
+ },
+ {
+  "folder": "Passenger Car Rental",
+  "short": "Car Rental Companies",
+  "naics": "532111",
+  "program": "7(a)",
+  "title": "Car Rental Business Loans: SBA Rates",
+  "description": "Car rental business loans: how SBA 7(a) and Express loans fund fleet vehicles, locations and franchise purchases, with eligibility, terms and rate caps.",
+  "h1": "Car rental business loans",
+  "note": "SBA loans in car rental usually pay for one of three things: buying an existing rental agency or franchise, adding a location at an airport or neighborhood site, or funding the down payments and working capital behind a fleet. Most fleet vehicles are financed through manufacturer or bank fleet lines, so SBA money tends to fill the gaps those lines leave. Lenders focus on utilization, revenue per vehicle, depreciation and resale value, and the terms of any franchise or concession agreement.",
+  "who": "Independent rental agencies, licensees and franchisees of national brands, and peer-to-peer hosts operating as a real business with a fleet. Lenders want rental operations or dealership experience, commercial auto insurance in force, and for airport locations, a concession agreement that runs long enough. Franchise brands must meet SBA franchise eligibility rules. Owners who mostly rent to their own other businesses may need to show the rental operation stands on its own.",
+  "programs": [
+   {
+    "h": "7(a) for agency or franchise purchases",
+    "p": "Funds the purchase of an existing rental business or franchise territory, including goodwill, vehicles, equipment and working capital, on a 10-year term. Lenders review the franchisor's transfer approval."
+   },
+   {
+    "h": "Express for added vehicles",
+    "p": "SBA Express loans up to $500,000 can fund down payments on new units, a shuttle van or a location build-out with a quicker decision. Rates run slightly higher than standard 7(a)."
+   },
+   {
+    "h": "504 for a lot or service facility",
+    "p": "A 504 loan finances a rental lot, wash bay or maintenance building with a long fixed rate and 10% to 15% down. Your business must occupy most of the property."
+   }
+  ],
+  "uses": [
+   "Buying an existing rental agency or franchise location",
+   "Fleet vehicle purchases and down payments on fleet lines",
+   "Counter build-out, signage and a customer shuttle",
+   "Wash bays, a service shop or a rental lot",
+   "Working capital for insurance, registration and seasonal ramp-up"
+  ],
+  "amounts": "Loans commonly range from $150,000 for an added location to $2 million or more for the purchase of a multi-site franchise. Vehicle financing usually runs 3 to 5 years to match depreciation, while business acquisitions run up to 10 years and real estate up to 25. Expect 10% to 20% equity, with more required for a start-up fleet.",
+  "example_amount": 400000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a car rental company",
+   "p": "Fleet utilization and revenue per unit per day tell the lender whether the fleet is sized right. They compare the loan term to how fast vehicles lose value and how you plan to dispose of them, through auctions, buyback programs or retail sale. Insurance cost and claims history matter, as do damage recovery rates. For franchises they read the franchise agreement and any airport concession for length, fees and transfer rights. Seasonality in tourist markets shapes how much debt the cash flow can carry."
+  },
+  "related": [
+   "RV Dealers",
+   "Boat Dealers",
+   "Car Washes",
+   "Franchises"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to start a car rental business?",
+    "a": "Yes, but start-ups need rental or auto industry experience, a fleet plan, insurance quotes and usually 15% to 20% equity. Lenders often prefer financing a franchise or the purchase of an existing agency, because those come with booking systems and a revenue history."
+   },
+   {
+    "q": "Can SBA loans be used to buy rental cars?",
+    "a": "Yes. Vehicles are an eligible use of 7(a) and Express loans. Because rental units lose value quickly, lenders usually limit the term to a few years per vehicle. Many operators use an SBA loan for down payments and working capital alongside a dedicated fleet line."
+   },
+   {
+    "q": "Can I finance a car rental franchise with an SBA loan?",
+    "a": "Yes, as long as the brand meets SBA franchise eligibility rules. A 7(a) loan can cover the franchise fee, location build-out, initial fleet costs and working capital. The lender will review the franchise agreement and the franchisor's disclosure document."
+   },
+   {
+    "q": "What interest rate will I pay on a car rental business loan?",
+    "a": "With prime at 7.00%, SBA 7(a) caps range from 13.50% for loans of $50,000 or less down to 10.00% for loans over $350,000. Your actual rate depends on loan size, credit, collateral and the lender."
+   },
+   {
+    "q": "How much do I need to put down on a rental fleet?",
+    "a": "Commonly 10% to 20% on the overall project. On individual vehicles, fleet lenders may ask for more down if the units are used or the business is new. Strong utilization history and buyback agreements can lower the equity a lender wants."
+   }
+  ]
+ },
+ {
+  "folder": "School and Employee Bus Transportation",
+  "short": "School Bus Companies",
+  "naics": "485410",
+  "program": "7(a)",
+  "title": "School Bus Company Loans: SBA Rates",
+  "description": "School bus company loans: SBA 7(a) and 504 for buses, bus yards and buying a contractor, with district contract underwriting, terms and rate caps.",
+  "h1": "School bus company loans",
+  "note": "School bus contractors borrow mostly to buy buses, buy a bus yard, or buy out another contractor. Revenue comes from district and employer contracts, so the loan decision rests on those contracts: how many years remain, whether pricing adjusts for fuel and wages, and whether the district can walk away. Lenders like the steady, predictable payments that district work brings, but they watch fleet age closely, because a contractor that must replace many buses at once can run short of cash fast.",
+  "who": "Private contractors that transport students for school districts, charter and private schools, and companies running employee shuttles. Drivers must hold commercial licenses with passenger and school bus endorsements, and buses must pass state inspections, so lenders look for clean inspection and safety records. Lenders want fleet management experience and insurance with adequate limits. A family business passing to the next generation or a manager can also use SBA financing for the buyout.",
+  "programs": [
+   {
+    "h": "7(a) for buses and buyouts",
+    "p": "Covers new and used buses, the purchase of another contractor and its contracts, and working capital before the school year starts, usually on a 10-year term. Lenders often time disbursement so new buses arrive before the first day of school."
+   },
+   {
+    "h": "504 for a bus yard and shop",
+    "p": "Funds a parking yard, maintenance garage or fuel island with a long fixed rate and typically 10% equity. The debenture portion is fixed near 6.97% for 25 years, which keeps yard payments steady."
+   },
+   {
+    "h": "Lines for summer and start-up gaps",
+    "p": "CAPLines or Express lines carry payroll and repairs over summer and through the slow first payments of a new contract. Lenders usually size them to district receivables."
+   }
+  ],
+  "uses": [
+   "New and used school buses, activity buses and vans",
+   "Buying out another contractor and its district routes",
+   "Purchasing a bus yard, maintenance garage or fuel island",
+   "Camera, GPS and routing technology for the fleet",
+   "Working capital for summer maintenance and fall start-up"
+  ],
+  "amounts": "A small contractor adding buses may borrow $200,000 to $600,000, while acquisitions of route portfolios commonly run $1 million to $5 million. Bus loans usually run 7 to 10 years depending on age, and a yard or garage up to 25 years. Expect at least 10% equity, and lenders may want more if contracts expire early in the loan.",
+  "example_amount": 750000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a school bus contractor",
+   "p": "Contract terms come first: length, renewal options, termination clauses, and whether rates adjust for fuel and driver wages. Lenders review the fleet list for age, mileage and state retirement rules, then model the cost of replacing buses during the loan. Driver shortages are a major concern, so they ask about recruiting, wages and how many routes went unfilled. Safety records, insurance premiums and the summer gap, when revenue drops but payments continue, all affect how much they will lend."
+  },
+  "related": [
+   "Bus and Other Motor Vehicle Transit Systems",
+   "Scenic and Sightseeing Transportation, Land",
+   "Child Day Care Services",
+   "Trucking Companies"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy school buses?",
+    "a": "Yes. School buses are an eligible 7(a) use. Lenders usually match the term to the bus's remaining useful life and any state age limits, often 7 to 10 years for new units. A signed district contract that covers the buses makes approval much easier."
+   },
+   {
+    "q": "Can I buy an existing school bus company with an SBA loan?",
+    "a": "Yes. A 7(a) loan can fund the purchase of the business, its fleet, yard equipment and working capital. Lenders confirm that district contracts can transfer to the new owner and review three years of financials, safety records and the fleet replacement schedule."
+   },
+   {
+    "q": "How do lenders handle the summer when schools are closed?",
+    "a": "They plan for it. Many lenders set up payment schedules that reflect seasonal cash flow, or pair the term loan with a working capital line. Some contractors fill summer with camps, charters and employee shuttles, which strengthens the application."
+   },
+   {
+    "q": "What are SBA rates for a school bus company loan?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable, and $250,001 to $350,000 at 11.50%. A 504 loan for a bus yard has a fixed debenture rate near 6.97%, with the bank first lien priced separately."
+   },
+   {
+    "q": "Do I need a school district contract to qualify?",
+    "a": "Not strictly, but it helps a great deal. Lenders size the loan to reliable cash flow, and multi-year district or employer contracts provide it. A start-up without contracts will need strong experience, letters of intent from districts and more equity."
+   }
+  ]
+ },
+ {
+  "folder": "Asphalt Paving Mixture and Block Manufacturing",
+  "short": "Asphalt Plants",
+  "naics": "324121",
+  "program": "504 or 7(a)",
+  "title": "Asphalt Plant Loans: SBA 7(a) and 504 Rates",
+  "description": "Asphalt plant loans: how SBA 504 and 7(a) fund hot-mix plants, land, silos and loaders, with manufacturer limits, permits and today's rate caps.",
+  "h1": "Asphalt plant financing",
+  "note": "Asphalt plant loans are among the larger SBA deals. A hot-mix plant, silos, a loader fleet and the land under them can easily cost several million dollars, which is why many owners use a 504 loan, where manufacturers qualify for a debenture of up to $5.5 million. Lenders look hard at air and land-use permits, the plant's sales into state, county and private paving work, and how the business survives a short paving season with most revenue earned in a few months.",
+  "who": "Companies that produce hot-mix or warm-mix asphalt, recycled asphalt and asphalt block or pavers, including paving contractors that run their own plant. Lenders want operating experience, current air quality permits, zoning approval and a clean environmental history. A Phase I environmental site assessment is standard and further testing is common. Businesses must meet SBA size standards with affiliates, which matters for companies tied to larger contracting groups.",
+  "programs": [
+   {
+    "h": "504 for plant, land and silos",
+    "p": "A 504 loan finances the land, a new or relocated plant and storage silos with a bank first lien and a CDC debenture fixed near 6.97%. Manufacturers can borrow up to $5.5 million in debenture."
+   },
+   {
+    "h": "7(a) for acquisitions and equipment",
+    "p": "A 7(a) loan up to $5 million funds buying an existing plant business, loaders and trucks, or refinancing equipment debt. It can also bundle goodwill and working capital into one loan."
+   },
+   {
+    "h": "Working capital for the season",
+    "p": "A CAPLine or 7(a) line covers liquid asphalt binder, aggregate and payroll at the start of each paving season. Advances are repaid as paving invoices are collected in summer and fall."
+   }
+  ],
+  "uses": [
+   "Hot-mix asphalt plants, drum mixers and baghouses",
+   "Storage silos, binder tanks and scales",
+   "Land for a plant site and aggregate stockpiles",
+   "Wheel loaders, haul trucks and recycled asphalt crushers",
+   "Seasonal working capital for binder and aggregate"
+  ],
+  "amounts": "Loans often range from $1 million to $5 million or more when 504 and bank financing are combined. Projects with heavy equipment usually run 10-year terms for machinery, and 25 years for land and buildings. Plan on 10% equity for an established operator, and 15% to 20% for a new plant or a special-purpose site.",
+  "example_amount": 2000000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an asphalt plant",
+   "p": "Permits and environmental risk come first. Lenders want air permits that transfer with the business, proper zoning, and a Phase I or further environmental review of the site. They study tonnage by customer, especially public work tied to state DOT and county budgets, and how liquid asphalt price swings are handled in contracts. Plant equipment is specialized, so appraised liquidation value may be modest. Seasonality is a central issue, since cash flow must cover payments through the winter shutdown."
+  },
+  "related": [
+   "Cement Manufacturing",
+   "All Other Specialty Trade Contractors",
+   "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+   "Trucking Companies"
+  ],
+  "faqs": [
+   {
+    "q": "Can an SBA loan finance an asphalt plant?",
+    "a": "Yes. Asphalt plants are manufacturing projects, eligible for both 7(a) and 504 loans. The 504 program is popular because manufacturers can get a debenture of up to $5.5 million at a long fixed rate, combined with a bank first lien for the rest."
+   },
+   {
+    "q": "How much does an asphalt plant cost to finance?",
+    "a": "A new hot-mix plant with silos and controls commonly costs several million dollars before land and loaders. Used and portable plants cost less. Lenders size the loan to tonnage history or contracts and want detailed vendor quotes and installation budgets."
+   },
+   {
+    "q": "What down payment does a 504 asphalt plant loan need?",
+    "a": "Typically 10% for an established operator. Because asphalt plants can be special-purpose property, many lenders ask for 15% to 20%, especially for a new plant or a start-up company. The bank funds about 50% and the CDC up to 40%."
+   },
+   {
+    "q": "Do environmental issues affect an asphalt plant loan?",
+    "a": "Yes, heavily. Lenders require a Phase I environmental site assessment and often more testing on existing plant sites because of fuel, binder and solvent use. Air quality permits must be current and transferable. Unresolved contamination can stop a deal."
+   },
+   {
+    "q": "How do lenders handle the winter shutdown?",
+    "a": "They underwrite to annual cash flow and plan for months with little revenue. Some lenders set seasonal payment schedules or pair the term loan with a working capital line. Strong public and private contracts booked before spring improve the terms."
+   }
+  ]
+ },
+ {
+  "folder": "Offices of Physical, Occupational and Speech Therapists, and Audiologists",
+  "short": "Physical Therapy & Therapy Practices",
+  "naics": "621340",
+  "program": "7(a)",
+  "title": "Physical Therapy Practice Loans: SBA Rates",
+  "description": "Loans for physical, occupational and speech therapy and audiology practices: SBA 7(a) for start-ups, buyouts and equipment, with terms and rate caps.",
+  "h1": "Physical therapy practice loans",
+  "note": "Therapy practice loans are usually 7(a) loans for opening a clinic, buying an existing practice, or adding a location. Physical, occupational and speech therapists and audiologists all borrow for similar reasons: build-out, treatment equipment, practice software and working capital while insurance claims are paid. Lenders like licensed health care borrowers with steady demand, but they study the payer mix closely, because Medicare, Medicaid and commercial insurers each pay at different rates and speeds.",
+  "who": "Licensed physical therapists, occupational therapists, speech-language pathologists and audiologists in private practice, including group practices and multi-site owners. Lenders check state licenses, Medicare and insurer credentialing, and clinical plus management experience. Partner buy-ins and buyouts from a retiring owner are common. Some states limit who can own a therapy practice, so lenders may confirm the ownership structure meets state rules before closing.",
+  "programs": [
+   {
+    "h": "7(a) for start-ups and buyouts",
+    "p": "Funds a new clinic's build-out, equipment and working capital, or the purchase of an established practice including goodwill, on a 10-year term. Partner buy-ins also fit here."
+   },
+   {
+    "h": "Express for equipment and expansion",
+    "p": "SBA Express loans under $500,000 suit treatment tables, aquatic or audiology equipment, or a second clinic with a faster decision. Rates run slightly higher than standard 7(a)."
+   },
+   {
+    "h": "504 for buying a clinic building",
+    "p": "Owners buying their office can use a 504 loan with a long fixed rate and about 10% down. The practice must occupy at least 51% of the building, and the debenture rate is fixed near 6.97%."
+   }
+  ],
+  "uses": [
+   "Buying an existing therapy or audiology practice",
+   "Clinic build-out with gym space and private treatment rooms",
+   "Treatment tables, rehab gym equipment and audiology booths",
+   "EMR, billing software and patient scheduling systems",
+   "Working capital while insurance and Medicare claims are paid"
+  ],
+  "amounts": "Start-up clinics commonly borrow $150,000 to $400,000. Practice acquisitions range widely, often $300,000 to $1.5 million depending on collections and number of clinicians. Build-out, equipment and acquisitions run up to 10 years, and a building purchase up to 25. Expect at least 10% equity on start-ups and buyouts, sometimes more.",
+  "example_amount": 350000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a therapy practice",
+   "p": "Payer mix and collections drive the decision. Lenders review the share of revenue from Medicare, Medicaid, commercial insurance and cash-pay patients, plus days in receivables and denial rates. Referral sources matter, since many clinics depend on a few physician groups or hospitals. For buyouts, they check whether the seller is the main producer and whether patients and referrals will stay. Clinician turnover and wage costs are watched closely, because empty schedules hit revenue fast."
+  },
+  "related": [
+   "Medical Practices",
+   "Offices of Podiatrists",
+   "All Other Outpatient Care Centers",
+   "Offices of Dentists"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a physical therapy clinic?",
+    "a": "Yes. Licensed therapists opening their own clinic are strong 7(a) candidates. Lenders want a business plan, a signed lease or letter of intent, equipment and build-out quotes, and evidence of referral sources. Clinical experience counts, and management experience helps."
+   },
+   {
+    "q": "How much does it cost to start a physical therapy practice?",
+    "a": "A small outpatient clinic often needs $100,000 to $350,000 for build-out, equipment, software, marketing and working capital to carry the clinic until insurance payments arrive. Costs rise with aquatic therapy or larger gyms. Lenders want itemized quotes and a monthly cash flow forecast."
+   },
+   {
+    "q": "Can I buy an existing therapy practice with an SBA loan?",
+    "a": "Yes. A 7(a) loan can cover goodwill, equipment and working capital. Lenders want three years of financials, collections reports and payer mix, and often ask the seller to stay on for a transition or carry part of the price as a note."
+   },
+   {
+    "q": "What interest rate will a therapy practice pay on an SBA loan?",
+    "a": "With prime at 7.00%, a 7(a) loan from $250,001 to $350,000 is capped at 11.50%, and loans above $350,000 at 10.00%. Many lenders price licensed health care practices below the cap when credit and collections are strong."
+   },
+   {
+    "q": "Do audiology and speech therapy practices qualify too?",
+    "a": "Yes. Audiologists and speech-language pathologists fall under the same industry code and are eligible on the same terms. Audiology loans often include sound booths and diagnostic equipment, plus hearing aid inventory and working capital. Lenders review payer mix the same way."
+   }
+  ]
+ },
+ {
+  "folder": "Cosmetics, Beauty Supplies, and Perfume Stores",
+  "short": "Beauty Supply Stores",
+  "naics": "456120",
+  "program": "7(a)",
+  "title": "Beauty Supply Store Loans: SBA Rates",
+  "description": "Beauty supply store loans: SBA 7(a), Express and microloans for inventory, build-out and buying a store, with down payment, terms and rate caps.",
+  "h1": "Beauty supply store loans",
+  "note": "Beauty supply and cosmetics store loans are mostly about inventory. A typical store carries thousands of items, from hair care and wigs to skin care, fragrance and salon tools, and the opening order alone can be a large share of the startup budget. Lenders look at inventory turnover and gross margin, the store's location and lease, and how it competes with big-box and online sellers. Strong vendor relationships and a loyal local customer base help a great deal.",
+  "who": "Independent beauty supply stores, cosmetics and fragrance shops, and stores selling to both consumers and licensed salon professionals. Lenders want retail experience, ideally in beauty, a lease that covers the loan term, and supplier accounts or distributor terms in place. Start-ups need a detailed opening inventory list and pricing plan. Franchises of beauty retail brands are eligible when the brand meets SBA franchise rules.",
+  "programs": [
+   {
+    "h": "7(a) for opening or buying a store",
+    "p": "Covers opening inventory, build-out, fixtures, a point-of-sale system and working capital, or the purchase of an existing store, on a 10-year term. Real estate can be included on a longer term."
+   },
+   {
+    "h": "Express for restocking and remodels",
+    "p": "SBA Express loans under $500,000 fund inventory expansion, a remodel or a second location with a faster decision. Rates run slightly higher than standard 7(a), with less paperwork."
+   },
+   {
+    "h": "Microloans for small shops",
+    "p": "SBA microlenders provide up to $50,000 for small cosmetics or fragrance shops and kiosks that need a modest first order. Many microlenders also offer retail coaching."
+   }
+  ],
+  "uses": [
+   "Opening inventory of hair care, wigs, cosmetics and fragrance",
+   "Store build-out, shelving, display cases and lighting",
+   "Buying an existing beauty supply store",
+   "Point-of-sale and inventory management systems",
+   "Working capital to take advantage of vendor bulk pricing"
+  ],
+  "amounts": "Most beauty supply store loans range from $100,000 to $500,000. A smaller store may need $150,000 to $300,000 to open, much of it inventory, while larger stores with wig departments can cost more. Terms run up to 10 years, or 25 years if you buy the building. Expect at least 10% equity, and 15% to 20% for a new store.",
+  "example_amount": 250000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a beauty supply store",
+   "p": "Inventory management is the core question. Lenders review turnover, shrinkage, and how much stock is slow-moving or expired, since cosmetics and hair care lose value. They look at gross margin by category and how the store competes on price with online sellers. Location matters: traffic, nearby salons and barbershops, and competing stores. The lease term and rent as a share of sales are checked, and so is the owner's buying experience and vendor credit."
+  },
+  "related": [
+   "Beauty Salons",
+   "Barber Shops",
+   "Pharmacies",
+   "Convenience Stores"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a beauty supply store?",
+    "a": "Yes. Beauty supply start-ups qualify for 7(a) loans and microloans. Lenders want retail experience, a signed lease or letter of intent, a detailed opening inventory list with supplier quotes, and usually 15% to 20% equity."
+   },
+   {
+    "q": "How much does it cost to open a beauty supply store?",
+    "a": "Many independent stores need $150,000 to $400,000 including inventory, build-out, fixtures and working capital. Inventory is often the largest single cost. Stores with large wig and hair departments or bigger footprints cost more. Lenders want a detailed inventory budget."
+   },
+   {
+    "q": "Can an SBA loan be used for inventory?",
+    "a": "Yes. Inventory is an eligible use of 7(a), Express and microloan funds. Lenders usually finance the opening order within the overall project and may set up a working capital line for restocking. They value inventory at a discount when counting collateral."
+   },
+   {
+    "q": "What are SBA rates for a beauty supply store loan?",
+    "a": "With prime at 7.00%, a 7(a) loan of $50,000 or less is capped at 13.50%, $50,001 to $250,000 at 13.00%, and $250,001 to $350,000 at 11.50%. Express loans can price slightly higher than standard 7(a)."
+   },
+   {
+    "q": "Can I buy an existing beauty supply store with an SBA loan?",
+    "a": "Yes. A 7(a) loan can fund the price, inventory at a counted value, fixtures and working capital. Lenders review the seller's tax returns, point-of-sale reports and lease terms, and want an inventory count at closing."
+   }
+  ]
+ },
+ {
+  "folder": "Septic Tank and Related Services",
+  "short": "Septic Service Companies",
+  "naics": "562991",
+  "program": "7(a)",
+  "title": "Septic Business Loans: SBA Rates & Terms",
+  "description": "Septic service business loans: SBA 7(a) for pump trucks, installation equipment and buying a septic company, with eligibility, terms and rate caps.",
+  "h1": "Septic service business loans",
+  "note": "SBA loans to septic companies usually fund vacuum pump trucks, excavators for installation and repair work, or the purchase of an established route. Septic is a steady business: tanks need pumping on a schedule, failed systems must be fixed, and new homes in rural areas need new systems. Lenders like that recurring demand. They focus on route density, the mix of pumping versus installation work, disposal costs and permits, and the age and condition of the trucks.",
+  "who": "Companies that pump, inspect, install and repair septic systems, plus portable toilet and grease trap services. Most states license septic pumpers and installers, and many require septage hauler permits, so lenders check those are current and will transfer in a sale. Drivers usually need commercial licenses. Experience in the trade matters more than formal education. Buyers of a retiring owner's route should show they can keep the customer base.",
+  "programs": [
+   {
+    "h": "7(a) for trucks and acquisitions",
+    "p": "Funds new or used vacuum trucks, excavators and inspection cameras, or buying an existing septic company with its customer list, on a 10-year term. A seller note is common."
+   },
+   {
+    "h": "Express for a single truck",
+    "p": "SBA Express loans under $500,000 suit adding one pump truck or a mini excavator with a quicker approval. Rates run a little higher than standard 7(a), and lenders often approve within days."
+   },
+   {
+    "h": "504 for a yard and shop",
+    "p": "A 504 loan finances a truck yard, maintenance shop or dewatering facility with a long fixed rate and about 10% down. The debenture portion is fixed near 6.97% for 25 years."
+   }
+  ],
+  "uses": [
+   "Vacuum pump trucks and tank upgrades",
+   "Excavators, skid steers and trailers for installations",
+   "Buying an established septic route from a retiring owner",
+   "Inspection cameras, locators and jetting equipment",
+   "A truck yard, shop or septage treatment site"
+  ],
+  "amounts": "A single pump truck commonly costs $150,000 to $250,000 or more, so equipment loans often run $150,000 to $500,000. Route acquisitions frequently range from $400,000 to $2 million depending on revenue and fleet. Trucks are usually financed over 7 to 10 years, and real estate up to 25. Expect at least 10% equity on acquisitions.",
+  "example_amount": 450000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a septic company",
+   "p": "Lenders look at recurring pumping revenue versus one-time installation jobs, since recurring work is more reliable. They review route density and drive times, because fuel and labor eat margin. Disposal is a key issue: access to a treatment plant or land application site, its cost and the permits behind it. Trucks are appraised for age and condition. For acquisitions, they check whether licenses and permits transfer, and how many customers are on scheduled service versus calling only when there is a problem."
+  },
+  "related": [
+   "All Other Specialty Trade Contractors",
+   "Trucking Companies",
+   "All Other Support Services",
+   "Car Washes"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy a septic pump truck?",
+    "a": "Yes. Vacuum trucks are an eligible 7(a) and Express use. Lenders typically finance new trucks over 7 to 10 years, and used trucks over a shorter term based on condition. Quotes, an appraisal for used units and proof of licensing are usually required."
+   },
+   {
+    "q": "Can I buy an existing septic business with an SBA loan?",
+    "a": "Yes, and it is one of the most common uses. A 7(a) loan can cover trucks, equipment, the customer list and working capital. Lenders review three years of tax returns, the customer base, disposal arrangements and whether licenses and permits transfer to you."
+   },
+   {
+    "q": "How much does a septic company sell for, and how much can I borrow?",
+    "a": "Price depends on cash flow, route size and fleet condition, and many small companies sell for $300,000 to $2 million. SBA lenders lend up to the amount that cash flow supports after your payment, usually with at least 10% down."
+   },
+   {
+    "q": "Do I need a license to get a septic business loan?",
+    "a": "Lenders expect the business to hold whatever state and local licenses and permits apply to pumping, hauling and installing systems. If you are buying, the lender may make the loan contingent on licenses being issued or transferred before closing."
+   },
+   {
+    "q": "What are SBA rates for a septic company loan?",
+    "a": "With prime at 7.00%, a 7(a) loan from $250,001 to $350,000 is capped at 11.50%, and loans over $350,000 at 10.00%. Smaller loans for a single truck can price higher, up to 13.00% for $50,001 to $250,000."
+   }
+  ]
+ },
+ {
+  "folder": "Pet Care (except Veterinary) Services",
+  "short": "Pet Groomers & Boarding",
+  "naics": "812910",
+  "program": "7(a)",
+  "title": "Pet Grooming & Boarding Loans: SBA Rates",
+  "description": "Pet grooming, dog boarding and daycare loans: SBA 7(a), 504 and microloans for start-ups, facilities and buyouts, with down payment and rate caps.",
+  "h1": "Pet grooming and boarding business loans",
+  "note": "Pet care loans cover a wide range. A mobile groomer might need $80,000 for a van, while a dog boarding and daycare facility on its own land can need more than $1 million. Groomers and trainers usually borrow through Express or small 7(a) loans. Boarding and daycare owners often buy property through 7(a) or 504. Lenders focus on occupancy and repeat clients, staff, zoning for animals, and whether the owner has hands-on experience running a pet business.",
+  "who": "Dog groomers, mobile grooming vans, boarding kennels, doggy daycare, pet sitters and dog trainers. Lenders want industry experience, and many states and cities require a kennel or boarding license, so those must be in place or obtainable. Zoning for noise and animals is a common obstacle for boarding facilities. Franchises in pet grooming and daycare are eligible when the brand meets SBA franchise rules. Veterinary clinics fall under a different category.",
+  "programs": [
+   {
+    "h": "7(a) for facilities and buyouts",
+    "p": "Funds a daycare or boarding build-out, buying an existing kennel or grooming salon, and working capital, on terms up to 10 years, or 25 with real estate. Franchise fees fit here too."
+   },
+   {
+    "h": "504 for buying a kennel property",
+    "p": "A 504 loan finances land and buildings at a long fixed rate. Kennels are often special-purpose, so expect 15% to 20% down and a careful appraisal."
+   },
+   {
+    "h": "Microloans and Express for groomers",
+    "p": "Microloans up to $50,000 and Express loans fit grooming tables, tubs, dryers or a mobile grooming van. They also fund a salon build-out or a groomer's move from renting a chair to owning a shop."
+   }
+  ],
+  "uses": [
+   "Mobile grooming vans and salon equipment",
+   "Boarding kennel runs, daycare play yards and fencing",
+   "Buying an existing grooming salon or boarding business",
+   "Purchasing land and a building for a pet resort",
+   "Working capital for staffing and marketing at opening"
+  ],
+  "amounts": "Grooming salons and mobile vans typically borrow $50,000 to $200,000. Boarding and daycare facilities that lease space often borrow $250,000 to $750,000, and those buying property can exceed $1 million. Equipment and buyouts run up to 10 years, and real estate up to 25. Expect 10% equity, rising to 15% to 20% for start-ups or special-purpose kennels.",
+  "example_amount": 250000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a pet grooming or boarding business",
+   "p": "For boarding and daycare, lenders study occupancy by season, average nightly rate and how much revenue comes from repeat clients and memberships. Zoning, noise rules and kennel licensing can make or break a site, and a kennel building may be hard to sell for another use. For groomers, they look at appointment volume, rebooking rates and whether the owner is the main groomer. Staffing is a common concern across pet care, as is liability insurance for animal injuries."
+  },
+  "related": [
+   "Veterinary Clinics",
+   "Child Day Care Services",
+   "Horse and Other Equine Production",
+   "Franchises"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to start a dog grooming business?",
+    "a": "Yes. Grooming start-ups often use a microloan of up to $50,000 or a small 7(a) or Express loan. Lenders want grooming experience, a lease or a van quote, an equipment list and a plan for building a client base. Expect to put in 10% to 20%."
+   },
+   {
+    "q": "How much does it cost to open a dog boarding or daycare facility?",
+    "a": "A leased daycare and boarding facility can cost $250,000 to $750,000 for build-out, runs, flooring, drainage, HVAC and opening costs. Buying land and building a pet resort can cost well over $1 million. Zoning and permit work adds time and expense."
+   },
+   {
+    "q": "Can I finance a mobile grooming van with an SBA loan?",
+    "a": "Yes. A mobile grooming van with tub, table and generator is an eligible 7(a), Express or microloan use. Lenders usually finance it over 5 to 10 years depending on whether it is new or used, and want a quote and full insurance."
+   },
+   {
+    "q": "Is a dog kennel considered special-purpose property?",
+    "a": "Often yes. Lenders and the SBA may treat a kennel building with runs and drainage as special-purpose, because it is hard to convert to another use. That can raise the required equity to 15% to 20% and lead to a more conservative appraisal."
+   },
+   {
+    "q": "What are SBA rates for a pet care business loan?",
+    "a": "With prime at 7.00%, 7(a) caps are 13.50% for $50,000 or less, 13.00% for $50,001 to $250,000, 11.50% for $250,001 to $350,000, and 10.00% above $350,000. A 504 loan for property has a fixed debenture rate near 6.97%."
+   }
+  ]
+ },
+ {
+  "folder": "Scenic and Sightseeing Transportation, Land",
+  "short": "Tour Bus & Sightseeing Companies",
+  "naics": "487110",
+  "program": "7(a)",
+  "title": "Tour Bus Business Loans: SBA Rates & Terms",
+  "description": "Tour bus and sightseeing company loans: SBA 7(a) for buses, trolleys, vans and buying a tour operator, with seasonality, terms and rate caps.",
+  "h1": "Tour bus and sightseeing business loans",
+  "note": "Sightseeing companies borrow to buy vehicles and to buy other operators. That might mean a double-decker bus, replica trolleys, open-air vans, or a whole city tour business with its booking site and permits. Revenue depends on tourism, so lenders study seasonality and visitor trends in the market as closely as the company's own numbers. They also look at online booking channels, cruise and hotel partnerships, and whether the city permits that let you operate will carry over to a new owner.",
+  "who": "Operators of land-based sightseeing tours by bus, trolley, van, jeep and similar vehicles, including hop-on hop-off services, wine and food tours, and ghost or history tours using vehicles. Lenders check passenger carrier operating authority where required, local tour permits, driver licensing and insurance. Experience in tourism or passenger transport is important. Charter-only bus companies are classed differently, but are financed in much the same way.",
+  "programs": [
+   {
+    "h": "7(a) for vehicles and acquisitions",
+    "p": "Covers buses, trolleys and vans, or the purchase of an existing tour company including its brand, website, permits and vehicles, on a 10-year term. A seller note is common."
+   },
+   {
+    "h": "Express for a single vehicle",
+    "p": "SBA Express loans under $500,000 fit adding one trolley or van, or refreshing vehicle wraps and audio systems, with a faster approval. Rates run slightly higher than standard 7(a)."
+   },
+   {
+    "h": "Lines for the off-season",
+    "p": "A working capital line carries payroll, insurance and maintenance through slow months until the peak season brings cash back in. Lenders usually require the line to be paid down each year."
+   }
+  ],
+  "uses": [
+   "Tour buses, replica trolleys and open-air vehicles",
+   "Buying an established sightseeing company and its permits",
+   "Vehicle refurbishment, wraps and onboard audio systems",
+   "Online booking software and ticket kiosks",
+   "Working capital for insurance and the slow season"
+  ],
+  "amounts": "Single-vehicle purchases often range from $100,000 to $500,000, and buying an established tour operator can run $500,000 to $3 million. Vehicle loans usually run 7 to 10 years, and a garage or yard up to 25. Expect at least 10% equity, more if the market is highly seasonal or the business is new.",
+  "example_amount": 500000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a tour bus or sightseeing company",
+   "p": "Seasonality comes first. Lenders map monthly revenue to see how many months must cover the full year's payments, and how the business handled past downturns in tourism. They look at booking channels: direct sales, online travel agencies, cruise lines and hotel desks, and the commission each takes. City permits, curb loading rights and route approvals can be valuable and must transfer in a sale. Vehicle age and specialty builds like trolleys, which can be hard to resell, also affect terms."
+  },
+  "related": [
+   "Bus and Other Motor Vehicle Transit Systems",
+   "School and Employee Bus Transportation",
+   "Amusement and Theme Parks",
+   "Hotels (except Casino Hotels) and Motels"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to start a tour company?",
+    "a": "Yes, though start-ups need tourism or passenger transport experience, a market study, permit approvals and usually 15% to 20% equity. Many first-time owners begin with one or two vans and expand. Buying an existing operator with booking history is often easier to finance."
+   },
+   {
+    "q": "Can SBA loans finance trolleys or double-decker buses?",
+    "a": "Yes. Specialty tour vehicles are eligible 7(a) uses. Because trolleys and double-deckers have a narrow resale market, lenders may want more equity, a professional appraisal for used units and a strong record of seasonal ridership."
+   },
+   {
+    "q": "How do lenders handle a seasonal tour business?",
+    "a": "They underwrite to annual cash flow and look at the off-season closely. Some lenders offer seasonal payment schedules or pair the loan with a working capital line. Off-season revenue from private charters, events or holiday tours strengthens the application."
+   },
+   {
+    "q": "Can I buy an existing sightseeing company with an SBA loan?",
+    "a": "Yes. A 7(a) loan can fund the vehicles, brand, website, booking contracts and goodwill. Lenders verify that city permits and operating authority can transfer, review three years of financials and check the fleet's condition. A seller transition period is common."
+   },
+   {
+    "q": "What are SBA rates for a tour bus company loan?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable, and $250,001 to $350,000 at 11.50%. Smaller loans for one vehicle can be priced up to 13.00% for $50,001 to $250,000. Your rate depends on credit and collateral."
+   }
+  ]
+ }
+]

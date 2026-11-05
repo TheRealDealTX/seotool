@@ -1,0 +1,1007 @@
+[
+ {
+  "folder": "Amusement and Theme Parks",
+  "short": "Amusement Parks",
+  "naics": "713110",
+  "program": "504 and 7(a)",
+  "title": "Amusement Park Loans: SBA Rates & Eligibility",
+  "description": "Amusement and theme park loan guide: SBA 504 and 7(a) eligibility, down payment, terms, ride and land financing, and today's rate caps with prime at 7.00%.",
+  "h1": "Amusement park loans: SBA rates and eligibility",
+  "note": "Amusement park loans tend to be large and real-estate heavy. A family entertainment park, water park or small regional theme park sits on acres of land with rides, pools and buildings that only work for that use. Most deals pair an SBA 504 loan for land and fixed assets with a 7(a) loan for rides, working capital or the purchase of the business. Lenders focus on attendance history, how dependent revenue is on one short season, and the cost of keeping rides safe and insured.",
+  "who": "For-profit operators of amusement parks, water parks, family fun centers with rides, and seasonal parks. Lenders want operating experience in attractions or hospitality, proof of ride inspections where the state requires them, and adequate liability insurance. Parks owned by nonprofits or municipalities can't use 7(a). If the park runs gaming machines, revenue from legal gambling must stay under one third of gross receipts or the business is ineligible. The business must also meet SBA size standards for its industry.",
+  "programs": [
+   {
+    "h": "504 for land and buildings",
+    "p": "A 504 loan finances park land, buildings, pools and permanent attractions at a long fixed rate. Because a park is special-purpose property, expect 15% equity, or 20% if the business is also a start-up."
+   },
+   {
+    "h": "7(a) for buying a park",
+    "p": "A 7(a) loan can cover the purchase of an operating park, including real estate, rides, goodwill and working capital, in one loan with a blended term."
+   },
+   {
+    "h": "7(a) or Express for rides",
+    "p": "New rides, slides, go-kart fleets and point-of-sale systems are often financed separately on a 7(a) or SBA Express loan with a term matched to the equipment's life."
+   }
+  ],
+  "uses": [
+   "Buying an existing amusement or water park",
+   "Land, buildings and permanent attractions",
+   "New rides, slides and ride refurbishment",
+   "Pre-season working capital for staff and supplies",
+   "Concessions, arcade and ticketing upgrades"
+  ],
+  "amounts": "Amusement park loans range from about $500,000 for a small family park to the $5 million 7(a) limit, and 504 projects can go higher when the bank's first lien is added. Equity runs 10% to 20%, and lenders lean to the high end for special-purpose parks. Real estate can be financed over 25 years, while rides and working capital usually get 10 years.",
+  "example_amount": 2500000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for an amusement park",
+   "p": "Lenders study three to five years of attendance and per-capita spending, because a bad weather summer can wipe out a year's profit in a park with a 100-day season. They check ride inspection records, insurance claims history and the age of major rides, since replacement is expensive. An appraiser values the land and buildings, but special-purpose parks often appraise below cost, so the business's cash flow has to carry the loan. Lenders also look at group sales, season pass revenue and off-season expenses."
+  },
+  "related": [
+   "Golf Courses and Country Clubs",
+   "Bowling Centers",
+   "All Other Amusement and Recreation Industries",
+   "Hotels (except Casino Hotels) and Motels"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy an amusement park?",
+    "a": "Yes. A for-profit amusement or water park is eligible for 7(a) and 504 financing. Buyers usually combine real estate, rides and goodwill in one 7(a) loan up to $5 million, or use a 504 for the land and a separate loan for the business. Expect at least 10% equity, and often more."
+   },
+   {
+    "q": "How much down payment do I need for an amusement park?",
+    "a": "Under SBA rules a change of ownership needs at least 10% equity. For a 504 loan on special-purpose property like a park, the borrower usually puts in 15%, or 20% if the business is new. Many lenders ask for 15% to 25% on any park deal because of seasonal risk."
+   },
+   {
+    "q": "Can SBA loans finance new rides?",
+    "a": "Yes. Rides, slides, bumper cars and go-karts are equipment and can be financed with a 7(a) or SBA Express loan, usually over up to 10 years. Large permanent attractions attached to the land, like a roller coaster or wave pool, can sometimes be included in a 504 project."
+   },
+   {
+    "q": "Are water parks eligible for SBA loans?",
+    "a": "Yes. Water parks fall under the same NAICS code as amusement parks, 713110, and are eligible if they are for-profit and meet the size standard. Lenders pay close attention to season length, water and chemical costs, lifeguard staffing and insurance."
+   },
+   {
+    "q": "What is the interest rate on an amusement park loan?",
+    "a": "With prime at 7.00%, a 7(a) loan over $350,000 is capped at 10.00% variable. The 504 debenture portion was about 6.97% fixed for 25 years in October 2026, and the bank's first lien is priced separately. Your actual rate depends on the lender and the deal."
+   }
+  ]
+ },
+ {
+  "folder": "Medical Laboratories",
+  "short": "Medical Labs",
+  "naics": "621511",
+  "program": "7(a) and 504",
+  "title": "Medical Lab Loans: SBA Rates & Eligibility",
+  "description": "Medical lab loan guide: SBA 7(a) and 504 eligibility, equity, terms, lab equipment and acquisition financing, and today's rate caps at prime 7.00%.",
+  "h1": "Medical lab loans: SBA rates and eligibility",
+  "note": "Medical laboratory loans usually fund expensive analyzers, a lab build-out or the purchase of an existing clinical lab. Most are 7(a) loans, with 504 used when the lab buys its building. Lenders focus on where the specimens come from, how the lab gets paid, and how exposed it is to cuts in Medicare and insurer reimbursement. A lab with steady physician and nursing-home clients and clean billing gets much better terms than one built on a single test or referral source.",
+  "who": "Independent clinical, reference, toxicology, pathology and specialty testing labs that are for-profit and meet SBA size standards. The lab needs CLIA certification, any state lab licenses, and a qualified laboratory director. Lenders want owners with lab operations or healthcare business experience. Nonprofit and hospital-owned labs can't use 7(a). Lenders also screen for compliance problems, since past billing investigations or exclusion from Medicare can stop a loan.",
+  "programs": [
+   {
+    "h": "7(a) for equipment and acquisitions",
+    "p": "A 7(a) loan funds analyzers, molecular platforms, laboratory information systems and working capital, or the purchase of an established lab with its client base, typically over 10 years."
+   },
+   {
+    "h": "504 for a lab building",
+    "p": "If the lab buys or builds its own space and occupies at least 51% of it, a 504 loan offers a long fixed rate on the CDC portion with about 10% down. It suits labs that have outgrown leased space."
+   },
+   {
+    "h": "Working capital lines",
+    "p": "Labs often wait weeks or months for insurer and Medicare payments. A 7(a) working capital loan or an SBA CAPLine can bridge receivables while test volume grows, so payroll and reagent bills stay current."
+   }
+  ],
+  "uses": [
+   "Chemistry, hematology and molecular analyzers",
+   "Buying an existing clinical or reference lab",
+   "Lab build-out, ventilation and biosafety upgrades",
+   "Laboratory information and billing systems",
+   "Working capital to carry insurance receivables"
+  ],
+  "amounts": "Medical laboratory loans typically run from $250,000 for equipment to $2 million or more for an acquisition or new facility. Equity injection is at least 10% for start-ups and changes of ownership, and lenders often want more for new labs. Equipment and acquisitions get up to 10 years, and owner-occupied real estate up to 25 years.",
+  "example_amount": 750000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a medical lab",
+   "p": "Lenders want a breakdown of revenue by payer, test type and referral source, because a lab that depends on one large client or one high-margin test can lose half its income overnight. They review collections, denial rates and days in receivables, and they look for exposure to Medicare fee schedule changes. Compliance matters: lenders ask about billing audits, marketing arrangements with physicians and CLIA survey results. Equipment leases and reagent rental contracts are also checked, since they affect cash flow."
+  },
+  "related": [
+   "Medical Practices",
+   "All Other Miscellaneous Ambulatory Health Care Services",
+   "All Other Outpatient Care Centers",
+   "Pharmacies"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy a medical laboratory?",
+    "a": "Yes. A for-profit clinical or reference lab is eligible for a 7(a) loan to buy the business, including equipment, goodwill and working capital. The buyer needs at least 10% equity, a CLIA-certified operation and a qualified lab director, and lenders review the seller's payer mix and billing history closely."
+   },
+   {
+    "q": "Can an SBA loan finance lab equipment?",
+    "a": "Yes. Analyzers, PCR and sequencing systems, centrifuges and lab software can be financed with a 7(a) or SBA Express loan, generally over up to 10 years. Some labs compare this with vendor reagent-rental deals, which bundle equipment into the cost of supplies."
+   },
+   {
+    "q": "Do I need CLIA certification before applying?",
+    "a": "Lenders will want to see that the lab holds or is getting the right CLIA certificate and any state license before funds are released. For a start-up, the lender may approve the loan with certification as a condition, but it has to be in place before testing revenue starts."
+   },
+   {
+    "q": "How much can a medical lab borrow with an SBA loan?",
+    "a": "A 7(a) loan can go up to $5 million, and a 504 project can be larger when real estate is involved. Most lab loans are sized to cash flow, so the real limit is how much debt the lab's collections can comfortably support."
+   },
+   {
+    "q": "What rate will a lab pay on an SBA loan?",
+    "a": "With prime at 7.00%, the maximum variable 7(a) rate is 10.00% for loans over $350,000 and 11.50% for loans from $250,001 to $350,000. Strong labs with good collateral often get a lower spread than the cap."
+   }
+  ]
+ },
+ {
+  "folder": "Funeral Homes and Funeral Services",
+  "short": "Funeral Homes",
+  "naics": "812210",
+  "program": "7(a) and 504",
+  "title": "Funeral Home Loans: SBA Rates & Eligibility",
+  "description": "Funeral home loan guide: SBA 7(a) and 504 eligibility, down payment, terms, buying a funeral home with its building, and rate caps at prime 7.00%.",
+  "h1": "Funeral home loans: SBA rates and eligibility",
+  "note": "Most funeral home loans finance a change of ownership. A retiring owner sells the business, the building and often the preneed book to a licensed director or a small group. These deals usually run through SBA 7(a) because the purchase mixes real estate, vehicles and goodwill. Lenders focus on annual call volume, the community's loyalty to the family name, and whether preneed funds are properly trusted. Funeral homes have steady demand, so well-run ones are popular with SBA lenders.",
+  "who": "Licensed funeral directors and embalmers buying or expanding a funeral home, crematory or combined operation. Most states require a licensed funeral director in charge, so lenders want at least one owner or key employee who holds the license. Buyers without industry experience usually need a manager with a long track record. Cemeteries selling plots as real estate can face extra review, and nonprofit cemetery associations can't use 7(a).",
+  "programs": [
+   {
+    "h": "7(a) for buying a funeral home",
+    "p": "One 7(a) loan can cover the building, hearse and other vehicles, goodwill and working capital. When real estate makes up most of the deal, the blended term can stretch toward 25 years, which lowers the monthly payment."
+   },
+   {
+    "h": "504 for building or expansion",
+    "p": "A 504 loan suits building a new chapel, adding a crematory or buying the property. Funeral homes are special-purpose property, so expect about 15% down, and 20% if the business is a start-up."
+   },
+   {
+    "h": "Express for vehicles and upgrades",
+    "p": "SBA Express works for a new hearse, a removal van, livestreaming equipment or a renovation under $500,000. Approval is faster than a standard 7(a), though the maximum rate is the same."
+   }
+  ],
+  "uses": [
+   "Buying an established funeral home and its building",
+   "Adding a crematory or cremation equipment",
+   "Hearses, limousines and removal vehicles",
+   "Chapel renovation and reception space",
+   "Partner buyouts and succession plans"
+  ],
+  "amounts": "Funeral home loans usually fall between $500,000 and $3 million, depending on call volume and whether real estate is included. Equity injection is at least 10%, and a seller note on full standby can sometimes count toward it. With the building included, terms often reach 25 years. Without real estate, expect 10 years.",
+  "example_amount": 1500000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for a funeral home",
+   "p": "Lenders start with call volume over the last three to five years and the split between traditional burials and cremations, since cremation lowers revenue per call. They review the preneed portfolio to confirm the funds are held in trust or insurance as state law requires. They also want a transition plan, often with the selling owner staying on, because families choose funeral homes by name and relationships. The appraiser looks at both the business and the building, which has limited alternative use."
+  },
+  "related": [
+   "Florists",
+   "Offices of Dentists",
+   "Veterinary Clinics",
+   "Child Day Care Services"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy a funeral home?",
+    "a": "Yes. Funeral home acquisitions are a common SBA 7(a) use. The loan can include the building, vehicles, goodwill and working capital up to $5 million. Lenders want a licensed funeral director involved, a smooth transition plan and at least 10% equity from the buyer."
+   },
+   {
+    "q": "How much does it cost to buy a funeral home?",
+    "a": "Prices vary widely with call volume, location and real estate. Small rural funeral homes may sell for under $1 million, while busy suburban operations with their own buildings sell for several million. Lenders value them based on cash flow and an independent business appraisal."
+   },
+   {
+    "q": "Do I need to be a licensed funeral director to get a loan?",
+    "a": "Not always personally, but the business needs one. Lenders want a licensed director in charge, either an owner or an experienced employee, and most prefer that at least one buyer holds the license. A buyer with no industry background will face more questions."
+   },
+   {
+    "q": "Can an SBA loan pay for a crematory?",
+    "a": "Yes. Cremation equipment and the building work to house it can be financed with a 7(a) loan or as part of a 504 project. Lenders will check zoning, air permits and projected cremation volume before approving."
+   },
+   {
+    "q": "What is the down payment on a funeral home loan?",
+    "a": "Under current SBA rules a change of ownership needs at least 10% equity. On a 504 loan for special-purpose property like a funeral home, plan on about 15%. Some lenders let part of the equity come from a seller note on full standby."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Automotive Repair and Maintenance",
+  "short": "Specialty Auto Repair",
+  "naics": "811198",
+  "program": "7(a)",
+  "title": "Specialty Auto Repair Loans: SBA Rates",
+  "description": "SBA loans for specialty auto service shops like rustproofing, undercoating and tire repair: eligibility, equity, terms and rate caps with prime at 7.00%.",
+  "h1": "Specialty auto repair loans: SBA rates and eligibility",
+  "note": "This category covers auto service shops that don't fit the main repair codes. Think rustproofing and undercoating, tire repair shops that don't retread, emissions testing stations and similar specialty services. Loans are usually small 7(a) or SBA Express loans for lifts, equipment and working capital, or to buy an existing shop. Lenders look at how steady the customer base is, whether the shop has fleet or dealer contracts, and environmental issues at the property.",
+  "who": "Owners of specialty automotive service shops that are for-profit and meet SBA size standards. Lenders want hands-on automotive experience, any state or local permits the work requires, such as emissions inspection station certification, and a lease that runs at least as long as the loan. Start-ups can qualify with a solid plan and at least 10% equity. General repair, body, glass, oil change and car wash shops have their own NAICS codes but get similar treatment.",
+  "programs": [
+   {
+    "h": "SBA Express for equipment",
+    "p": "Express loans under $500,000 cover lifts, tire machines, diagnostic tools and spray equipment with a faster approval. They are a good fit for an established shop adding a service line or replacing worn equipment."
+   },
+   {
+    "h": "7(a) for buying a shop",
+    "p": "A 7(a) loan finances the purchase of an established shop, including equipment, goodwill, parts inventory and working capital, usually over 10 years. Lenders often want the seller to stay on briefly to introduce key customers."
+   },
+   {
+    "h": "504 for the property",
+    "p": "If you buy the building, a 504 loan gives a long fixed rate with about 10% down. Lenders will order an environmental review because of oils, solvents and chemicals used in the work."
+   }
+  ],
+  "uses": [
+   "Buying an existing specialty service shop",
+   "Lifts, tire and alignment equipment",
+   "Emissions testing and diagnostic equipment",
+   "Shop build-out and ventilation",
+   "Working capital and parts inventory"
+  ],
+  "amounts": "Most loans in this category run from $75,000 to $500,000, and a shop purchase with real estate can reach $1 million or more. Equity injection is at least 10% for start-ups and changes of ownership. Equipment and acquisition loans run up to 10 years. Small loans of $50,000 or less carry the highest rate cap.",
+  "example_amount": 200000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a specialty auto shop",
+   "p": "Lenders review tax returns and sales by service line to see whether revenue is concentrated in one contract or one seasonal service, like winter undercoating. They want to know how changes in vehicle technology or state inspection rules could affect demand. For any property with lifts, chemicals or underground tanks, lenders order an environmental screen and may require a Phase I report. Equipment is valued at resale, not cost, so it rarely covers the full loan as collateral."
+  },
+  "related": [
+   "Automotive Glass Replacement Shops",
+   "Car Washes",
+   "Gas Stations",
+   "Appliance Repair and Maintenance"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses fall under All Other Automotive Repair and Maintenance?",
+    "a": "NAICS 811198 covers auto services not classified elsewhere, such as rustproofing and undercoating shops, tire repair shops that don't retread, and emissions testing. General mechanical repair, body shops, glass shops, oil change shops and car washes each have their own codes."
+   },
+   {
+    "q": "Can I get an SBA loan for an auto service shop?",
+    "a": "Yes. Auto repair and service shops are eligible for 7(a), Express and 504 loans. Common uses are buying an existing shop, financing lifts and diagnostic equipment, and working capital. Lenders want automotive experience and a reasonable plan for repaying the loan from shop cash flow."
+   },
+   {
+    "q": "Will an SBA loan cover shop equipment?",
+    "a": "Yes. Lifts, tire changers, balancers, alignment racks, emissions analyzers and compressors are all eligible. An SBA Express loan is often the quickest route for equipment under $500,000, with terms up to 10 years. Used equipment can be financed too if it has a reasonable remaining life."
+   },
+   {
+    "q": "Do auto shops need an environmental review for an SBA loan?",
+    "a": "If real estate is part of the loan, the lender must review environmental risk, and auto service properties are higher risk because of oils, solvents and possible underground tanks. Expect at least an environmental questionnaire and often a Phase I environmental site assessment."
+   },
+   {
+    "q": "What rate will I pay on a small auto shop loan?",
+    "a": "With prime at 7.00%, a 7(a) loan of $50,000 or less is capped at 13.50% and a loan from $50,001 to $250,000 at 13.00%. Larger loans have lower caps, falling to 10.00% above $350,000. Lenders can charge less than these caps for strong borrowers."
+   }
+  ]
+ },
+ {
+  "folder": "Cafeterias, Grill Buffets, and Buffets",
+  "short": "Buffets",
+  "naics": "722514",
+  "program": "7(a)",
+  "title": "Buffet Restaurant Loans: SBA Rates",
+  "description": "SBA loans for buffets, cafeterias and grill buffets: eligibility, equity, franchise financing, equipment, terms and today's rate caps with prime at 7.00%.",
+  "h1": "Buffet and cafeteria loans: SBA rates and eligibility",
+  "note": "Buffet and cafeteria loans usually finance a restaurant purchase, a remodel, or kitchen and serving-line equipment. Many of these businesses are franchises, and buffets need large dining rooms and steam tables, so start-up costs run higher than a typical restaurant. Most deals use 7(a). Lenders focus on food cost and waste control, labor, and traffic, because a buffet's margin depends on volume. They are cautious with the segment and want proof that the location draws steady crowds.",
+  "who": "Owners and buyers of buffet restaurants, cafeterias and grill buffets that are for-profit and meet SBA size standards. Lenders want restaurant management experience, ideally in high-volume food service, plus health permits and a lease that covers the loan term. Franchisees need an approved franchise agreement the lender has reviewed. Start-ups can qualify but lenders usually want more than the 10% minimum equity, and a well-supported sales projection.",
+  "programs": [
+   {
+    "h": "7(a) for purchase or build-out",
+    "p": "A 7(a) loan covers buying an existing buffet, leasehold improvements, kitchen equipment, franchise fees and working capital, typically on a 10-year term. It is the main program for restaurant deals of almost any size."
+   },
+   {
+    "h": "504 for owning the building",
+    "p": "Buffets in freestanding buildings can use a 504 loan to buy the property with a long fixed rate. Restaurant buildings may be treated as special-purpose property, which raises the equity requirement to about 15%."
+   },
+   {
+    "h": "Express for remodels and equipment",
+    "p": "SBA Express suits steam tables, sneeze guards, hood systems or a dining room refresh under $500,000. It helps an operating buffet update without the longer process of a standard 7(a)."
+   }
+  ],
+  "uses": [
+   "Buying an existing buffet or cafeteria",
+   "Franchise fees and build-out for a new location",
+   "Steam tables, hot wells and kitchen equipment",
+   "Hood, fire suppression and walk-in coolers",
+   "Dining room remodel and working capital"
+  ],
+  "amounts": "Buffet and cafeteria loans typically run from $250,000 to $2 million. A franchise build-out sits at the high end, and buying an independent buffet sits lower. Equity injection is at least 10%, and lenders commonly ask 20% or more for new restaurants. Terms run 10 years for equipment and acquisitions and up to 25 years when real estate is included.",
+  "example_amount": 600000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a buffet",
+   "p": "Lenders look hard at food cost as a percentage of sales, since waste on a buffet line eats margin quickly. They review covers per day, average check, and labor cost trends. For an existing restaurant, they want three years of tax returns and monthly sales to see whether traffic is growing or slipping. For franchises, they check the brand's unit performance and closure history. Restaurant equipment has low resale value, so many lenders also take a lien on the owner's home when equity allows."
+  },
+  "related": [
+   "Full-Service Restaurants",
+   "Snack and Nonalcoholic Beverage Bars",
+   "Franchises",
+   "Packaged Frozen Food Merchant Wholesalers"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a buffet?",
+    "a": "Yes. Buffets and cafeterias are eligible for 7(a) loans. A new buffet needs a detailed business plan, restaurant experience and equity of at least 10%, though lenders often want 20% to 30% for a restaurant start-up. Franchise buffets are easier to finance when the brand has strong unit results."
+   },
+   {
+    "q": "Are buffets considered risky by SBA lenders?",
+    "a": "Restaurants in general are viewed as higher risk, and buffets carry extra exposure to food cost and labor. Lenders still finance them, but they want strong operating history, conservative projections and enough collateral or equity to offset the risk."
+   },
+   {
+    "q": "Can an SBA loan pay for a buffet franchise?",
+    "a": "Yes. A 7(a) loan can cover the franchise fee, build-out, equipment, opening inventory and working capital. The lender reviews the franchise agreement to confirm the franchisee keeps enough control to meet SBA eligibility rules. Expect the lender to look at the brand's record too."
+   },
+   {
+    "q": "How much does it cost to open a buffet restaurant?",
+    "a": "Costs depend on size, location and whether you lease or build. A buffet needs a large dining room, serving lines and a full commercial kitchen, so total project costs often run well into six or seven figures. Lenders size the loan to projected cash flow."
+   },
+   {
+    "q": "What is the interest rate on a buffet loan?",
+    "a": "With prime at 7.00%, a 7(a) loan over $350,000 is capped at 10.00% variable, and a loan from $250,001 to $350,000 at 11.50%. Restaurant loans are often priced at or near the cap. A strong borrower with good collateral may negotiate a lower spread."
+   }
+  ]
+ },
+ {
+  "folder": "Independent Artists, Writers, and Performers",
+  "short": "Artists and Performers",
+  "naics": "711510",
+  "program": "Microloan and 7(a)",
+  "title": "Loans for Artists & Writers: SBA Options",
+  "description": "SBA loans for independent artists, writers and performers: microloans, Express and 7(a) eligibility, what lenders need from freelancers, rate caps.",
+  "h1": "Loans for artists, writers and performers: SBA options",
+  "note": "Independent artists, writers, actors and musicians usually borrow small amounts. A typical loan pays for a studio, equipment, a recording or production project, or working capital between commissions. Most are SBA microloans or small Express loans, since bank 7(a) loans need cash flow that's easy to document. Lenders focus on whether your income is steady enough to repay, how much of it shows on your tax returns, and whether you have contracts, clients or a back catalog that earns.",
+  "who": "Self-employed artists, illustrators, writers, journalists, photographers, actors and musicians, including sole proprietors. SBA loans need a for-profit business, so lenders want to see Schedule C income or a business entity and a track record of paid work. Businesses that present live performances or materials of a prurient sexual nature are ineligible. Nonprofit arts groups can't use 7(a), and loans can't fund speculative investments like buying art to hold for appreciation.",
+  "programs": [
+   {
+    "h": "Microloans up to $50,000",
+    "p": "Nonprofit SBA intermediaries lend up to $50,000 to artists who don't fit bank criteria. Many also offer free help with business planning, bookkeeping and pricing, which can make a later bank loan easier to get."
+   },
+   {
+    "h": "SBA Express for equipment and studios",
+    "p": "Established creatives with steady income can use SBA Express for cameras, instruments, studio gear or a studio build-out. The decision is quick, but lenders still want two years of tax returns showing profit."
+   },
+   {
+    "h": "7(a) for larger projects",
+    "p": "A standard 7(a) loan suits larger moves, like buying an existing photography studio, a recording studio or a small production company with real, documented revenue and clients who will stay after the sale."
+   }
+  ],
+  "uses": [
+   "Studio rent deposits and build-out",
+   "Cameras, instruments, kilns and recording gear",
+   "Computers, software and editing equipment",
+   "Working capital between commissions or gigs",
+   "Tour, exhibition or production costs with contracted income"
+  ],
+  "amounts": "Most loans to independent creatives are $10,000 to $100,000. Microloans top out at $50,000 and usually run up to six years. Express and 7(a) loans for equipment run up to 10 years. Loans of $50,000 or less carry the highest SBA rate cap, prime plus 6.5. Lenders expect personal credit to be solid since the business and owner are often the same.",
+  "example_amount": 50000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an independent artist",
+   "p": "Lenders want two or more years of tax returns showing net income, not just gross receipts, because irregular income is the biggest concern with freelancers. They look for repeat clients, signed contracts, licensing or royalty income and representation agreements. Personal credit score and debt matter a lot, since the owner is the business. Equipment is useful collateral only if it holds resale value. A clear plan for how the money creates income, not just costs, makes the application stronger."
+  },
+  "related": [
+   "Musical Groups and Artists",
+   "Motion Picture and Video Production",
+   "Public Relations Agencies",
+   "Administrative Management and General Management Consulting Services"
+  ],
+  "faqs": [
+   {
+    "q": "Can a freelance artist or writer get an SBA loan?",
+    "a": "Yes. Self-employed creatives operating for profit are eligible, including sole proprietors. Small amounts usually come from SBA microloans or Express loans. Lenders want documented income on your tax returns and a clear use of funds that supports the business."
+   },
+   {
+    "q": "What is the best SBA loan for musicians and performers?",
+    "a": "For under $50,000, a microloan from a nonprofit SBA intermediary is often the best fit, especially for newer careers. Established performers with steady income can use SBA Express for instruments, sound gear or a vehicle used for touring."
+   },
+   {
+    "q": "Do I need an LLC to get an SBA loan as an artist?",
+    "a": "No. Sole proprietors can borrow. Some lenders prefer an LLC or corporation for record-keeping, but what matters most is separate business records, tax returns that show income from your work, and good personal credit. An EIN and a business bank account also help."
+   },
+   {
+    "q": "Can an SBA loan fund an album, film or book project?",
+    "a": "Sometimes. Lenders will fund production costs when there's a realistic way to repay, such as signed distribution, licensing, preorders or existing income. Purely speculative projects with no revenue plan are hard to finance with any loan."
+   },
+   {
+    "q": "What credit score do artists need for an SBA loan?",
+    "a": "The SBA doesn't set a minimum, but most bank lenders want personal scores around 680 or higher. Microlenders are more flexible and look at your full story, including income history and plans. Higher scores usually mean better pricing."
+   }
+  ]
+ },
+ {
+  "folder": "Automotive Glass Replacement Shops",
+  "short": "Auto Glass Shops",
+  "naics": "811122",
+  "program": "7(a)",
+  "title": "Auto Glass Shop Loans: SBA Rates",
+  "description": "Auto glass shop loan guide: SBA 7(a) and Express eligibility, mobile van and ADAS calibration financing, terms and rate caps with prime at 7.00%.",
+  "h1": "Auto glass shop loans: SBA rates and eligibility",
+  "note": "Auto glass shop loans are usually small and practical. They pay for mobile service vans, ADAS camera calibration equipment, glass inventory, or buying an existing shop with its insurance referral relationships. Most are 7(a) or SBA Express loans. Lenders focus on how much revenue comes through insurance networks and third-party administrators, how fast those claims pay, and whether the shop can keep up with calibration requirements on newer vehicles.",
+  "who": "Owners of windshield and auto glass replacement and repair shops, including mobile-only operations. Lenders want technicians or owners with glass installation experience, and many favor shops with recognized installer certifications. A lease that runs at least as long as the loan is expected for a fixed location. Start-ups can qualify with a plan, at least 10% equity and evidence of insurance network access or commercial fleet accounts.",
+  "programs": [
+   {
+    "h": "SBA Express for vans and tools",
+    "p": "Express loans finance mobile service vans, glass racks, urethane tools and calibration targets with fast decisions. For an established shop adding a van or calibration bay, Express is usually the simplest route."
+   },
+   {
+    "h": "7(a) for buying a shop",
+    "p": "A 7(a) loan covers the purchase price, glass inventory, vehicles and working capital when buying an established auto glass business. Lenders will ask whether the seller's insurance network approvals carry over to the new owner."
+   },
+   {
+    "h": "Microloans for start-ups",
+    "p": "A single-technician mobile start-up may fit an SBA microloan under $50,000 for a van and tools. Microlenders are nonprofits and often accept newer businesses with limited credit history."
+   }
+  ],
+  "uses": [
+   "Mobile service vans and glass racks",
+   "ADAS camera and sensor calibration equipment",
+   "Glass inventory and supplies",
+   "Buying an existing auto glass shop",
+   "Working capital while insurance claims pay"
+  ],
+  "amounts": "Auto glass loans usually range from $50,000 for a van and tools to $750,000 for a multi-van shop purchase. Equity injection is at least 10% for start-ups and changes of ownership. Equipment and vehicles are financed up to 10 years, but lenders may match shorter terms to vehicle life. Smaller loans fall into the higher rate-cap tiers.",
+  "example_amount": 150000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an auto glass shop",
+   "p": "Lenders want a revenue breakdown between insurance work, cash customers, dealers and fleets, since insurance network pricing sets much of the margin. They check receivables aging to see how long claims take to pay. Calibration capability is a growing focus because many newer vehicles need cameras reset after a windshield change, and shops that can't do it lose work. Lenders also look at technician retention, warranty claims and how many vans are needed to hit projected volume."
+  },
+  "related": [
+   "All Other Automotive Repair and Maintenance",
+   "Car Washes",
+   "Automotive Body, Paint, and Interior Repair and Maintenance",
+   "Gas Stations"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan for an auto glass business?",
+    "a": "Yes. Auto glass replacement shops, including mobile-only businesses, are eligible for 7(a), Express and microloans. Common uses are vans, calibration equipment, inventory and buying an existing shop. Lenders want installation experience and a clear source of jobs."
+   },
+   {
+    "q": "Can an SBA loan finance ADAS calibration equipment?",
+    "a": "Yes. Calibration targets, scan tools and the space needed to perform static calibrations are eligible equipment and improvements. Lenders like to see that the investment will bring in calibration revenue or keep insurance network work."
+   },
+   {
+    "q": "Can I finance a mobile glass van with an SBA loan?",
+    "a": "Yes. Service vans and glass racks can be financed with an SBA Express or 7(a) loan. Some owners compare the SBA rate with dealer or captive auto financing, which can be cheaper for vehicles alone."
+   },
+   {
+    "q": "How much does it cost to buy an auto glass shop?",
+    "a": "It depends on revenue, the number of vans and technicians, and insurance relationships. Small mobile operations may sell for under $200,000, while established multi-van shops cost more. Lenders base the loan on cash flow and an independent valuation."
+   },
+   {
+    "q": "What is the rate on a $150,000 SBA loan?",
+    "a": "With prime at 7.00%, a 7(a) loan between $50,001 and $250,000 has a maximum variable rate of 13.00%. Lenders can charge less, and borrowers with strong credit and collateral often do better than the cap."
+   }
+  ]
+ },
+ {
+  "folder": "Packaged Frozen Food Merchant Wholesalers",
+  "short": "Frozen Food Wholesalers",
+  "naics": "424420",
+  "program": "7(a) and 504",
+  "title": "Frozen Food Distributor Loans: SBA Rates",
+  "description": "SBA loans for frozen food distributors: freezer warehouses, reefer trucks, working capital lines, eligibility, terms and rate caps at prime 7.00%.",
+  "h1": "Frozen food distributor loans: SBA rates and eligibility",
+  "note": "Frozen food wholesalers borrow for three things: cold storage, refrigerated trucks and working capital. A distributor buying frozen meals, seafood, desserts or vegetables from manufacturers and selling to restaurants, schools and grocers ties up a lot of cash in inventory and receivables. Most deals combine a 504 or 7(a) loan for a freezer warehouse with a working capital line. Lenders focus on customer concentration, gross margin, inventory turnover and the cost of running freezers and trucks.",
+  "who": "Merchant wholesalers and distributors of packaged frozen food that are for-profit and meet the SBA size standard for wholesalers, which is based on employees rather than revenue. Lenders want distribution or food-industry experience, any required food safety registrations, and supplier agreements in place. Brokers that never take title to goods are a different business and are viewed differently. Start-ups need at least 10% equity and are usually asked for more given the working capital needs.",
+  "programs": [
+   {
+    "h": "504 for a freezer warehouse",
+    "p": "A 504 loan funds a cold storage building, blast freezers and racking at a long fixed rate, usually with about 10% down. The business must occupy at least 51% of an existing building it buys."
+   },
+   {
+    "h": "7(a) for trucks and acquisitions",
+    "p": "A 7(a) loan finances refrigerated trucks, forklifts and warehouse equipment, or buying an existing distribution business with its routes and customer list, typically over up to 10 years for non-real estate assets."
+   },
+   {
+    "h": "CAPLines for working capital",
+    "p": "SBA CAPLines and 7(a) working capital loans help carry inventory and receivables from restaurants, schools and grocers. Borrowing limits are usually tied to eligible receivables and inventory on hand."
+   }
+  ],
+  "uses": [
+   "Freezer and cold storage warehouse space",
+   "Refrigerated trucks and trailers",
+   "Racking, forklifts and blast freezers",
+   "Inventory and receivables financing",
+   "Buying an existing frozen food distributor"
+  ],
+  "amounts": "Frozen food wholesaler loans typically run from $500,000 to $3 million, and owner-occupied warehouse projects using 504 can be larger. Equity is at least 10% for start-ups and changes of ownership, and 504 projects usually need 10%. Warehouses get up to 25 years. Trucks and equipment get up to 10 years. Working capital lines are reviewed yearly or set on shorter terms.",
+  "example_amount": 1200000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a frozen food wholesaler",
+   "p": "Lenders look at customer concentration first, since losing one school district or grocery chain can hurt a distributor badly. They review gross margins, inventory turns and spoilage, plus how energy and fuel costs have moved. Receivables aging matters because food service customers often pay slowly. Lenders check the cold chain: backup generators, temperature monitoring and food safety audit results. Supplier terms and any exclusive distribution rights also affect how much they will lend."
+  },
+  "related": [
+   "All Other Miscellaneous Food Manufacturing",
+   "Trucking Companies",
+   "Breakfast Cereal Manufacturing",
+   "Lessors of Miniwarehouses and Self-Storage Units"
+  ],
+  "faqs": [
+   {
+    "q": "Can a food distributor get an SBA loan?",
+    "a": "Yes. Merchant wholesalers that buy and resell frozen food are eligible for 7(a), 504 and CAPLines working capital loans. Common uses are cold storage, refrigerated trucks, inventory and acquisitions. Lenders want distribution experience and steady customer relationships."
+   },
+   {
+    "q": "Can an SBA loan pay for a cold storage warehouse?",
+    "a": "Yes. A 504 loan is often the best fit for buying or building a freezer warehouse the business will occupy, with a long fixed rate on the CDC portion. A 7(a) loan can also finance real estate for up to 25 years."
+   },
+   {
+    "q": "What is the SBA size standard for a food wholesaler?",
+    "a": "Wholesalers are measured by number of employees, not revenue. Most frozen food distributors that qualify as small businesses are well under the limit, but larger regional distributors should check the current SBA table for NAICS 424420."
+   },
+   {
+    "q": "Can SBA loans finance refrigerated trucks?",
+    "a": "Yes. Reefer trucks and trailers can be financed with a 7(a) loan, usually over a term matched to the vehicle's useful life. Some borrowers bundle trucks with warehouse equipment in one loan. Lenders check the truck's age and mileage when setting terms."
+   },
+   {
+    "q": "Is there an SBA line of credit for wholesalers?",
+    "a": "Yes. SBA CAPLines include working capital lines that advance against inventory and receivables. SBA Express can also be structured as a revolving line up to $500,000. Lenders set borrowing limits based on eligible receivables and inventory."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Animal Production",
+  "short": "Livestock Farms",
+  "naics": "112990",
+  "program": "7(a)",
+  "title": "Livestock Farm Loans: SBA Rates & Eligibility",
+  "description": "SBA loans for bison, alpaca, deer, rabbit, dog breeding and mixed livestock farms: eligibility, land and equipment financing, terms and rate caps.",
+  "h1": "Livestock and specialty animal farm loans: SBA options",
+  "note": "This category covers animal farms that don't fit the main livestock codes. That includes bison, alpacas and llamas, deer and elk, rabbits, worm farms, dog breeding and mixed livestock operations where no single species dominates. Loans usually fund land, barns and fencing, breeding stock and working capital. SBA 7(a) can do it, but many farmers also look at USDA Farm Service Agency loans. Lenders focus on proven markets for the animals or products and the farm's track record of profit.",
+  "who": "For-profit farms and ranches raising animals not classified elsewhere, which SBA treats like other agricultural businesses for size purposes. Lenders want farming experience, records of animal sales and any state licenses that apply, such as kennel or captive cervid permits. Hobby farms without real business income won't qualify. Operations that mainly raise animals for speculative resale, or that rely on land appreciation rather than production, are hard to finance. Animal welfare compliance is reviewed for breeders.",
+  "programs": [
+   {
+    "h": "7(a) for land and buildings",
+    "p": "A 7(a) loan can finance farmland, barns and fencing for up to 25 years when real estate is the main use. Equipment can be bundled into the same loan, with a blended term."
+   },
+   {
+    "h": "7(a) or Express for stock and equipment",
+    "p": "Breeding stock, handling equipment and working capital are financed on shorter terms, typically up to 10 years. Smaller needs under $500,000 can go through SBA Express for a quicker decision."
+   },
+   {
+    "h": "Compare with USDA FSA",
+    "p": "USDA Farm Service Agency direct and guaranteed loans are built for agriculture and can be a better fit for beginning farmers. Ask lenders whether they offer FSA loans so you can compare the two."
+   }
+  ],
+  "uses": [
+   "Farmland, pasture and fencing",
+   "Barns, kennels and handling facilities",
+   "Breeding stock and herd expansion",
+   "Feed, veterinary costs and working capital",
+   "Processing or on-farm retail equipment"
+  ],
+  "amounts": "Loans to specialty animal farms usually range from $100,000 for stock and equipment to $1 million or more when land is included. Equity is at least 10% for start-ups and purchases, and lenders often ask more for agricultural start-ups. Land and buildings can be financed up to 25 years, while livestock and equipment run 10 years or less.",
+  "example_amount": 350000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a specialty livestock farm",
+   "p": "Lenders want to see established buyers for the animals, meat, fiber or other products, since niche markets can be thin and prices swing. They review several years of farm tax returns, herd records and feed costs. Livestock is weak collateral because values change and animals can die, so lenders lean on land and the owner's personal assets. Disease risk, insurance and state rules, like chronic wasting disease controls for deer and elk, are part of the review."
+  },
+  "related": [
+   "Horse and Other Equine Production",
+   "All Other Grain Farming",
+   "Floriculture Production",
+   "Veterinary Clinics"
+  ],
+  "faqs": [
+   {
+    "q": "What farms fall under All Other Animal Production?",
+    "a": "NAICS 112990 covers animal farms not classified elsewhere, such as bison, alpaca and llama, deer and elk, rabbit, worm and dog breeding operations, plus mixed livestock farms where no single animal accounts for most of the revenue. Cattle, hogs, poultry, sheep, goats, horses and aquaculture have their own codes."
+   },
+   {
+    "q": "Can a farm get an SBA loan?",
+    "a": "Yes. Agricultural businesses are eligible for SBA 7(a) loans if they are for-profit and meet the size standard. Many farmers also apply to USDA's Farm Service Agency, which runs loan programs designed for agriculture. Some lenders offer both."
+   },
+   {
+    "q": "Can I get an SBA loan for a dog breeding business?",
+    "a": "Yes, a licensed commercial breeding operation can be eligible. Lenders want to see business income, state or federal kennel licenses where required, and clean inspection history. They will also look at how you sell puppies and whether local rules limit your operation."
+   },
+   {
+    "q": "Can an SBA loan buy livestock?",
+    "a": "Yes. Breeding stock can be financed with a 7(a) loan, usually on a shorter term than land. Lenders know livestock values change, so they often want additional collateral such as real estate or equipment. Herd records and insurance help the case."
+   },
+   {
+    "q": "Is an SBA or FSA loan better for a small farm?",
+    "a": "It depends. FSA loans often have lower rates and are designed for beginning farmers, but have their own limits and paperwork. SBA 7(a) loans through banks can be faster and larger. Many farmers ask their lender to compare both."
+   }
+  ]
+ },
+ {
+  "folder": "Bowling Centers",
+  "short": "Bowling Alleys",
+  "naics": "713950",
+  "program": "7(a) and 504",
+  "title": "Bowling Alley Loans: SBA Rates & Eligibility",
+  "description": "Bowling alley loan guide: SBA 7(a) and 504 eligibility, down payment, buying a center with its building, equipment upgrades and today's rate caps.",
+  "h1": "Bowling alley loans: SBA rates and eligibility",
+  "note": "Bowling center loans usually finance the purchase of an existing center with its building, or a major upgrade like new pinsetters, lanes and scoring. Many centers have added food, bars, arcades and event space to grow revenue beyond leagues. Because the building is a big part of the value, these deals often use 7(a) with a long blended term or a 504 loan. Lenders focus on league participation, food and beverage sales, and the age and condition of the equipment.",
+  "who": "Owners and buyers of for-profit bowling centers, including family entertainment centers built around bowling. Lenders want hospitality or entertainment experience and, when alcohol is served, a liquor license that transfers or can be obtained. If the center earns money from legal gambling, such as gaming machines, that income must stay under one third of gross revenue. Bowling centers are special-purpose property, so 504 deals usually need 15% equity, or 20% for a start-up.",
+  "programs": [
+   {
+    "h": "7(a) for buying a center",
+    "p": "A 7(a) loan up to $5 million can include the building, lanes, pinsetters, goodwill and working capital. When the building is a big share of the price, real estate stretches the blended term."
+   },
+   {
+    "h": "504 for real estate and renovation",
+    "p": "A 504 loan finances a building purchase, an expansion or a full remodel at a long fixed rate. Because bowling centers are special-purpose property, plan on about 15% equity."
+   },
+   {
+    "h": "Express for equipment",
+    "p": "SBA Express covers scoring systems, string pinsetter conversions, arcade games and kitchen equipment under $500,000. It suits an operating center that wants to upgrade without a full refinance."
+   }
+  ],
+  "uses": [
+   "Buying a bowling center and its building",
+   "Pinsetters, lanes and scoring systems",
+   "Bar, kitchen and party-room build-outs",
+   "Arcade, laser tag or other attractions",
+   "Roof, HVAC and parking lot repairs"
+  ],
+  "amounts": "Bowling center loans usually run from $750,000 to $4 million, depending on lane count and whether real estate is included. Equity injection is at least 10%, and 15% to 20% is common for special-purpose property. Real estate-heavy deals get up to 25 years, while equipment upgrades get 10 years or less.",
+  "example_amount": 2000000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for a bowling center",
+   "p": "Lenders look at revenue by source: league bowling, open play, parties, food and beverage, and amusements. Strong league numbers give predictable income, while food and bar sales often drive profit. They check the age of pinsetters and lanes, since replacing them is a major cost. An appraisal values the building, but bowling centers often appraise below replacement cost because few buyers want them, so cash flow must cover the loan. Deferred maintenance on roofs and HVAC is a common issue."
+  },
+  "related": [
+   "Amusement and Theme Parks",
+   "All Other Amusement and Recreation Industries",
+   "Golf Courses and Country Clubs",
+   "Full-Service Restaurants"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to buy a bowling alley?",
+    "a": "Yes. Bowling centers are eligible for SBA 7(a) and 504 loans. Buyers often finance the building, equipment, goodwill and working capital together. Lenders want entertainment or hospitality experience and at least 10% equity, often more for special-purpose property."
+   },
+   {
+    "q": "How much does it cost to buy a bowling alley?",
+    "a": "Prices vary with lane count, location, food and beverage sales and whether the building is included. Smaller centers in rural areas can sell for under $1 million, while modern entertainment centers cost much more. Lenders base the loan on cash flow and appraisals."
+   },
+   {
+    "q": "Can an SBA loan pay for new pinsetters?",
+    "a": "Yes. Pinsetters, including string pinsetter conversions, scoring systems and lane resurfacing, are eligible equipment. Smaller projects fit SBA Express, while larger renovations can be part of a 7(a) or 504 loan. Lenders like to see how the upgrade cuts maintenance costs."
+   },
+   {
+    "q": "Do bowling alleys with a bar qualify for SBA loans?",
+    "a": "Yes. Serving alcohol doesn't disqualify a bowling center. The lender will confirm the liquor license and check that food and beverage operations are profitable and properly insured. Gambling income above one third of revenue would make the business ineligible."
+   },
+   {
+    "q": "What is the interest rate on a bowling alley loan?",
+    "a": "With prime at 7.00%, a 7(a) loan over $350,000 is capped at 10.00% variable. A 504 loan's debenture portion was about 6.97% fixed for 25 years in October 2026. Actual rates depend on the lender and your deal."
+   }
+  ]
+ },
+ {
+  "folder": "Beauty Salons",
+  "short": "Beauty Salons",
+  "naics": "812112",
+  "program": "7(a) and Express",
+  "title": "Beauty Salon Loans: SBA Rates & Eligibility",
+  "description": "Beauty salon loan guide: SBA 7(a), Express and microloan eligibility, buying or opening a salon, build-out costs, terms and rate caps at prime 7.00%.",
+  "h1": "Beauty salon loans: SBA rates and eligibility",
+  "note": "Beauty salon loans are usually modest. Owners borrow to open a salon, buy an existing one, remodel, or add stations, shampoo bowls and color bars. Most are SBA Express or small 7(a) loans, and new stylists opening a first suite sometimes use microloans. Lenders focus on whether clients will follow the stylists, how the salon pays its staff, and whether revenue depends on one or two people. A salon with a steady book of repeat clients is an easier loan.",
+  "who": "Licensed cosmetologists and salon owners opening, buying or expanding a hair, nail or full-service salon. Lenders want proof of state cosmetology or salon licenses and hands-on salon experience. Salons where most income comes from renting booths to independent stylists can draw extra scrutiny, since the business looks more like a landlord. Salon suite operators that only lease space are treated as real estate businesses. Start-ups can qualify with at least 10% equity and a client base.",
+  "programs": [
+   {
+    "h": "SBA Express for build-out and equipment",
+    "p": "Express loans under $500,000 finance styling stations, chairs, plumbing for shampoo bowls and a remodel with a quick decision. Most salon owners with two years of profitable history start here."
+   },
+   {
+    "h": "7(a) for buying a salon",
+    "p": "A 7(a) loan covers the purchase price of an existing salon, plus equipment, product inventory and working capital, typically on a 10-year term. Lenders often want the seller to stay on through the transition."
+   },
+   {
+    "h": "Microloans for first salons",
+    "p": "SBA microlenders fund small salon openings under $50,000 when a stylist lacks the history a bank wants. They often pair the loan with business coaching on pricing, payroll and taxes."
+   }
+  ],
+  "uses": [
+   "Opening a new salon or salon suite",
+   "Buying an existing salon",
+   "Styling stations, chairs and shampoo bowls",
+   "Plumbing, electrical and interior build-out",
+   "Retail product inventory and booking software"
+  ],
+  "amounts": "Most beauty salon loans fall between $50,000 and $300,000. A large full-service salon or salon purchase can go higher. Equity injection is at least 10% for start-ups and purchases. Terms run up to 10 years. Because many salon loans are under $250,000, borrowers often face the 13.00% or 13.50% rate caps unless their credit and collateral are strong.",
+  "example_amount": 125000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a beauty salon",
+   "p": "Lenders want to know whether revenue belongs to the salon or to individual stylists who could leave and take clients. They look at service versus retail sales, stylist pay structure, rebooking rates and how many active clients the salon has. For an acquisition, they want the seller to stay through a transition. Build-out costs are mostly leasehold improvements with little resale value, so lenders often ask for personal collateral. A long lease in a good location helps."
+  },
+  "related": [
+   "Barber Shops",
+   "Cosmetics, Beauty Supplies, and Perfume Stores",
+   "Gyms and Fitness Centers",
+   "Laundromats"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a beauty salon?",
+    "a": "Yes. New salons are eligible for SBA 7(a), Express and microloans. Lenders want a cosmetology license, real salon experience, a business plan with startup costs and at least 10% equity. Having clients who will follow you makes approval more likely."
+   },
+   {
+    "q": "How much does it cost to open a hair salon?",
+    "a": "It depends on size, location and the condition of the space. A small salon in a former salon space costs far less than a new full build-out with plumbing and electrical work. Many first salons need $50,000 to $250,000 in total."
+   },
+   {
+    "q": "Can I get an SBA loan to buy an existing salon?",
+    "a": "Yes. A 7(a) loan can finance the purchase, including equipment, inventory and goodwill. Lenders look at whether stylists will stay after the sale and usually want the seller to help with the transition. A strong client list helps."
+   },
+   {
+    "q": "Do booth rental salons qualify for SBA loans?",
+    "a": "Often yes, but lenders look closer. If most income is rent from independent stylists, the business may look passive, like a landlord. Salons that employ stylists, sell services directly or mix models are easier to finance."
+   },
+   {
+    "q": "What credit score do I need for a salon loan?",
+    "a": "The SBA has no official minimum, but many lenders want personal scores of at least 650 to 680 for Express and 7(a) loans. Microlenders can work with lower scores if the rest of the application is strong."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Amusement and Recreation Industries",
+  "short": "Recreation Businesses",
+  "naics": "713990",
+  "program": "7(a) and 504",
+  "title": "Recreation Business Loans: SBA Rates",
+  "description": "SBA loans for trampoline parks, mini golf, go-karts, escape rooms, shooting ranges and other recreation businesses: eligibility, terms, rate caps.",
+  "h1": "Recreation business loans: SBA rates and eligibility",
+  "note": "This is a broad category for recreation businesses without their own code. It covers trampoline parks, mini golf, batting cages, go-kart tracks, escape rooms, shooting ranges, paintball and laser tag, riding stables, and hunting or fishing guide services. Loans fund build-outs, attractions and equipment, or buying an existing venue. Most use 7(a), with 504 for land. Lenders focus on repeat visits, party bookings, insurance and how quickly the concept could fade.",
+  "who": "For-profit recreation businesses that meet SBA size standards. Lenders want operating experience, local permits and solid liability insurance, plus any special licenses, such as federal firearms licensing for a range that sells guns or guide licenses for outfitters. Businesses earning more than one third of revenue from legal gambling are ineligible. Nonprofit clubs and recreation associations can't use 7(a), and membership clubs that are passive landholders face extra review.",
+  "programs": [
+   {
+    "h": "7(a) for build-out and acquisitions",
+    "p": "A 7(a) loan finances leasehold improvements, attractions, equipment and working capital, or the purchase of an operating venue with its goodwill. Terms run up to 10 years for build-outs and equipment."
+   },
+   {
+    "h": "504 for land and buildings",
+    "p": "Outdoor venues and owner-occupied buildings can use a 504 loan with a long fixed rate. Expect about 15% equity for special-purpose sites like shooting ranges, go-kart tracks or mini golf courses."
+   },
+   {
+    "h": "Express for equipment",
+    "p": "SBA Express covers go-karts, trampolines, games, laser tag gear, point-of-sale and online booking systems under $500,000. Decisions are faster than a standard 7(a), which helps before a busy season."
+   }
+  ],
+  "uses": [
+   "Building out a trampoline park or escape room",
+   "Go-karts, batting cages and mini golf courses",
+   "Range construction, baffles and ventilation",
+   "Buying an existing recreation venue",
+   "Party rooms, concessions and working capital"
+  ],
+  "amounts": "Loans in this category range widely, from under $100,000 for an escape room to several million for an outdoor park with land. Equity is at least 10% for start-ups and purchases, and lenders often ask 20% or more for new concepts. Equipment and build-outs get up to 10 years, and real estate up to 25 years.",
+  "example_amount": 500000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a recreation business",
+   "p": "Lenders worry most about whether a concept will hold up. A new trampoline park or escape room can draw crowds at first and then fade, so they want local market data, competitor locations and a plan for repeat visits like memberships, leagues and parties. Insurance cost and claims history matter for high-injury activities. Special-purpose build-outs have little resale value. For outdoor venues, weather and season length shape the cash flow projection."
+  },
+  "related": [
+   "Amusement and Theme Parks",
+   "Bowling Centers",
+   "Golf Courses and Country Clubs",
+   "Gyms and Fitness Centers"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses fall under All Other Amusement and Recreation Industries?",
+    "a": "NAICS 713990 includes recreation businesses without their own code, such as trampoline parks, mini golf, batting cages, go-kart tracks, escape rooms, shooting ranges, paintball and laser tag, riding stables, day camps and hunting or fishing guides. Golf courses, gyms, bowling centers, marinas and casinos have separate codes."
+   },
+   {
+    "q": "Can I get an SBA loan for a trampoline park?",
+    "a": "Yes. Trampoline parks are eligible for 7(a) loans for build-out, equipment and working capital. Lenders want a strong location, a safety and insurance plan and projections based on comparable parks. Expect them to ask for more than the 10% minimum equity."
+   },
+   {
+    "q": "Can an SBA loan finance a shooting range?",
+    "a": "Yes. Indoor and outdoor ranges are eligible. Lenders look at construction costs, ventilation and lead management, environmental risk, insurance and any federal firearms license for retail sales. Range real estate is special-purpose, so a 504 project usually needs about 15% equity."
+   },
+   {
+    "q": "Are escape rooms eligible for SBA loans?",
+    "a": "Yes. Escape rooms usually need small loans for build-out and props, often under $250,000, which fits SBA Express or a small 7(a). Lenders want to see a plan for refreshing rooms and drawing corporate and party bookings."
+   },
+   {
+    "q": "What is the interest rate on a recreation business loan?",
+    "a": "With prime at 7.00%, SBA 7(a) maximum variable rates are 13.50% for loans of $50,000 or less, 13.00% up to $250,000, 11.50% up to $350,000 and 10.00% above that. Lenders can charge less. Small loans are often priced near the cap."
+   }
+  ]
+ },
+ {
+  "folder": "Distilleries",
+  "short": "Distilleries",
+  "naics": "312140",
+  "program": "7(a) and 504",
+  "title": "Distillery Loans: SBA Rates & Eligibility",
+  "description": "Distillery loan guide: SBA 7(a) and 504 eligibility, stills and building financing, aging inventory, TTB permits, terms and rate caps at prime 7.00%.",
+  "h1": "Distillery loans: SBA rates and eligibility",
+  "note": "Distillery loans fund stills, fermenters, bottling lines, a production building and often a tasting room. The hard part is cash flow. Whiskey and other aged spirits can sit in barrels for years before they sell, so a new distillery spends heavily long before revenue catches up. Many deals pair a 504 loan for the building and equipment with a 7(a) loan for working capital. Lenders focus on the owner's plan to bridge the aging period and on distribution.",
+  "who": "Craft and independent distilleries that are for-profit and meet SBA size standards for manufacturers. Alcohol production is eligible. The distillery needs a federal TTB distilled spirits plant permit, state licenses and local zoning approval before it can produce. Lenders want distilling or beverage-industry experience, or a hired head distiller with a track record. Start-ups need at least 10% equity, and lenders often want much more because of the aging period.",
+  "programs": [
+   {
+    "h": "504 for building and equipment",
+    "p": "As manufacturers, distilleries can get up to $5.5 million in 504 debenture financing for a production building, stills and bottling lines at a long fixed rate. The business must occupy most of the building."
+   },
+   {
+    "h": "7(a) for working capital and acquisitions",
+    "p": "A 7(a) loan funds barrels, grain, packaging and the cash needed through the aging period, or buying an existing distillery with its brands, equipment and inventory. Terms run up to 10 years for these uses."
+   },
+   {
+    "h": "Express for tasting rooms",
+    "p": "SBA Express covers tasting room build-outs, smaller equipment and point-of-sale systems under $500,000. Many distilleries use the tasting room to bring in cash while aged spirits mature."
+   }
+  ],
+  "uses": [
+   "Stills, fermenters and mash tuns",
+   "Production building and warehouse space",
+   "Barrels and aging inventory",
+   "Bottling and labeling lines",
+   "Tasting room and gift shop build-out"
+  ],
+  "amounts": "Distillery loans usually run from $500,000 to $3 million, and larger 504 projects go beyond that. Equity injection is at least 10%, but new distilleries are often asked for 20% to 30%. Owner-occupied buildings get up to 25 years, and equipment and working capital up to 10 years. Lenders may add an interest-only period during construction.",
+  "example_amount": 1500000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a distillery",
+   "p": "Lenders want a cash flow plan that shows how the distillery survives while aged spirits mature. Many distilleries sell unaged products like vodka, gin or white whiskey first, or rely on tasting room sales. Lenders discount aging inventory as collateral because its value depends on quality and market demand. They also review distributor agreements, state shipping rules, excise tax planning and production capacity. Specialized equipment has a limited resale market, so personal collateral is common."
+  },
+  "related": [
+   "Breweries",
+   "Beer, Wine, and Liquor Stores",
+   "All Other Miscellaneous Food Manufacturing",
+   "Breakfast Cereal Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to start a distillery?",
+    "a": "Yes. Distilleries are eligible for SBA 7(a) and 504 loans. A start-up needs a detailed plan, distilling experience or a qualified head distiller, and permits in process. Lenders usually ask for more than the 10% minimum equity because aged spirits delay revenue."
+   },
+   {
+    "q": "Does the SBA lend to alcohol businesses?",
+    "a": "Yes. Producing and selling alcohol legally is not a bar to SBA financing. Breweries, wineries, distilleries and liquor stores all use SBA loans. The business must hold the required federal and state licenses. Lenders do review compliance history closely."
+   },
+   {
+    "q": "Can an SBA loan finance whiskey aging inventory?",
+    "a": "It can fund barrels, grain and the working capital needed during aging, usually through a 7(a) loan. Lenders don't count barrel inventory at full value as collateral, so they rely on other assets and the business plan to approve the loan."
+   },
+   {
+    "q": "Do I need a TTB permit before applying for a distillery loan?",
+    "a": "You can apply before the permit is issued, but lenders typically make it a condition before funding or before production starts. The TTB process can take months, so many borrowers start it early alongside the loan."
+   },
+   {
+    "q": "What is the SBA 504 limit for a distillery?",
+    "a": "Distilleries are manufacturers, so the 504 debenture can go up to $5.5 million. With the bank's first lien and the borrower's equity, the total project can be much larger. The building must be at least 51% owner-occupied."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Outpatient Care Centers",
+  "short": "Outpatient Clinics",
+  "naics": "621498",
+  "program": "7(a) and 504",
+  "title": "Outpatient Clinic Loans: SBA Rates",
+  "description": "SBA loans for outpatient care centers like pain clinics, infusion centers and wound care clinics: eligibility, equity, terms and rate caps at 7.00% prime.",
+  "h1": "Outpatient clinic loans: SBA rates and eligibility",
+  "note": "This category covers outpatient centers that don't have their own code, such as pain management clinics, infusion centers, wound care centers, sleep or biofeedback centers and multi-specialty outpatient clinics. Loans fund clinic build-outs, medical equipment, buying a practice or a building, and working capital while insurance claims pay. Most use 7(a), with 504 for owned real estate. Lenders focus on payer mix, provider retention and regulatory compliance.",
+  "who": "For-profit outpatient care centers that meet SBA size standards. The clinic needs the right state facility licenses, licensed providers and payer enrollments. Lenders want an owner or medical director with clinical or healthcare management experience. Nonprofit community health centers can't use 7(a). Kidney dialysis, freestanding surgery and emergency centers, and mental health and substance abuse centers have their own NAICS codes but similar lending rules. Past billing problems or exclusions can block a loan.",
+  "programs": [
+   {
+    "h": "7(a) for build-out and equipment",
+    "p": "A 7(a) loan funds clinic improvements, infusion chairs, imaging, EHR systems and working capital on terms up to 10 years. It works for both new clinics and established ones adding services."
+   },
+   {
+    "h": "504 for a medical building",
+    "p": "Clinics buying or building space they occupy can use a 504 loan with about 10% down and a long fixed rate on the CDC portion. It suits medical office condos and freestanding clinic buildings."
+   },
+   {
+    "h": "7(a) for practice purchases",
+    "p": "A 7(a) loan finances buying an existing clinic, including equipment, goodwill and working capital. Lenders usually want the selling provider to stay through a transition so patients and referral sources stay."
+   }
+  ],
+  "uses": [
+   "Clinic build-out and exam rooms",
+   "Infusion chairs, imaging and treatment equipment",
+   "Buying an existing outpatient clinic",
+   "Medical office building purchase",
+   "Working capital for insurance receivables"
+  ],
+  "amounts": "Outpatient clinic loans usually run from $250,000 to $2 million. Equity injection is at least 10% for start-ups and changes of ownership, and lenders may want more for new clinics without a provider base. Building purchases run up to 25 years, and equipment and acquisitions up to 10 years. Interest-only periods are sometimes allowed during build-out.",
+  "example_amount": 800000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an outpatient clinic",
+   "p": "Lenders review revenue by payer and service, collections and days in receivables. A clinic that depends on one referral source or one reimbursement code is riskier. They want to know who generates revenue: if one physician produces most of it, they may require life insurance and a non-compete. Compliance gets attention, including licenses, payer audits and how the clinic relates to referring doctors. For start-ups, lenders want signed provider contracts and realistic patient ramp-up."
+  },
+  "related": [
+   "Medical Practices",
+   "All Other Miscellaneous Ambulatory Health Care Services",
+   "Medical Laboratories",
+   "Offices of Physical, Occupational and Speech Therapists, and Audiologists"
+  ],
+  "faqs": [
+   {
+    "q": "What clinics fall under All Other Outpatient Care Centers?",
+    "a": "NAICS 621498 covers outpatient centers not classified elsewhere, such as pain therapy clinics, infusion centers, wound care centers, biofeedback centers and multi-specialty outpatient clinics. Physician offices, dialysis centers, surgery centers, emergency centers and mental health centers have separate codes."
+   },
+   {
+    "q": "Can I get an SBA loan to open a medical clinic?",
+    "a": "Yes. For-profit outpatient clinics are eligible for 7(a) and 504 loans. Lenders want licensed providers, a medical director, payer contracts and a realistic ramp-up plan. Expect at least 10% equity, and more for a start-up without existing patients."
+   },
+   {
+    "q": "Can a nonprofit health center get an SBA loan?",
+    "a": "Not a 7(a) or 504 loan. SBA business loans are for for-profit businesses. Nonprofit community health centers usually look at USDA community facility loans, HRSA programs, CDFIs or conventional bank financing instead. A for-profit clinic owned by the same providers can still apply on its own."
+   },
+   {
+    "q": "Can an SBA loan pay for infusion center equipment?",
+    "a": "Yes. Infusion chairs, pumps, pharmacy hoods and the build-out to meet clinical standards are eligible. Lenders also look at drug costs and reimbursement timing, since infusion centers carry expensive inventory and wait on insurer payments."
+   },
+   {
+    "q": "What rate will a clinic pay on an SBA loan?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable and $250,001 to $350,000 at 11.50%. The 504 debenture rate was about 6.97% fixed for 25 years in October 2026. Lenders can and often do charge less than the cap."
+   }
+  ]
+ },
+ {
+  "folder": "Breakfast Cereal Manufacturing",
+  "short": "Cereal Manufacturers",
+  "naics": "311230",
+  "program": "504 and 7(a)",
+  "title": "Food Manufacturing Loans: Cereal & Granola",
+  "description": "SBA loans for breakfast cereal, granola and oatmeal manufacturers: 504 and 7(a) eligibility, production equipment, plant financing, terms and rate caps.",
+  "h1": "Cereal and granola manufacturing loans: SBA rates and eligibility",
+  "note": "Breakfast cereal manufacturing covers makers of ready-to-eat cereal, granola, muesli and hot cereals like oatmeal. Small producers use SBA loans for ovens, mixers and packaging lines, a production facility, or working capital to fill retail orders. Equipment and buildings fit the 504 program, which gives manufacturers a higher debenture limit. Lenders focus on retail and distributor contracts, ingredient costs and food safety certifications.",
+  "who": "For-profit cereal, granola and hot cereal manufacturers that meet the SBA size standard for manufacturers, which is based on employees. The plant needs FDA food facility registration and usually third-party food safety certification to sell to major retailers. Lenders want food manufacturing experience and proof of demand, such as purchase orders. Brand owners that use a co-packer and don't manufacture are wholesalers, and lenders treat them differently because they have fewer hard assets.",
+  "programs": [
+   {
+    "h": "504 for plant and equipment",
+    "p": "Manufacturers can get up to $5.5 million in 504 debenture financing for a production building, ovens and packaging lines at a long fixed rate. This is often the cheapest long-term money for a growing plant."
+   },
+   {
+    "h": "7(a) for equipment and growth",
+    "p": "A 7(a) loan up to $5 million funds equipment, working capital and acquisitions in one loan. It is more flexible than 504 when the project mixes hard assets with inventory or buying a competitor."
+   },
+   {
+    "h": "Working capital lines",
+    "p": "SBA CAPLines and SBA Express lines help carry ingredients, packaging and receivables from grocery and distributor customers, who often pay on 30 to 60 day terms or take deductions."
+   }
+  ],
+  "uses": [
+   "Mixers, ovens, extruders and toasters",
+   "Packaging and bagging lines",
+   "Production facility purchase or build-out",
+   "Ingredient and packaging inventory",
+   "Food safety certification and plant upgrades"
+  ],
+  "amounts": "Loans to small cereal and granola makers usually range from $250,000 for equipment to $3 million for a plant. Equity injection is at least 10% for start-ups and changes of ownership, and 504 projects typically need 10% or more. Equipment gets up to 10 years, and owner-occupied buildings up to 25 years. Larger 504 projects can reach well beyond $5 million in total.",
+  "example_amount": 1000000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a cereal manufacturer",
+   "p": "Lenders review customer concentration, since many small food makers depend on one grocery chain or distributor. They look at gross margins after slotting fees, promotions and chargebacks, which can be steep in retail grocery. Ingredient price swings for oats, nuts and sweeteners matter, as do packaging costs. Food safety audit results and recall history are checked. Lenders also want to see that equipment capacity matches projected volume and that the business isn't overbuilding ahead of orders."
+  },
+  "related": [
+   "All Other Miscellaneous Food Manufacturing",
+   "Packaged Frozen Food Merchant Wholesalers",
+   "Distilleries",
+   "All Other Miscellaneous Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can a granola company get an SBA loan?",
+    "a": "Yes. Granola and cereal makers that manufacture their own products are eligible for SBA 7(a) and 504 loans. Common uses are ovens, packaging lines, a production space and working capital. Lenders want food manufacturing experience and evidence of orders."
+   },
+   {
+    "q": "What is the SBA 504 limit for food manufacturers?",
+    "a": "Manufacturers can get up to $5.5 million in 504 debenture financing for buildings and long-lived equipment. Combined with the bank's first lien and the borrower's equity, total projects can be considerably larger. The building must be mostly owner-occupied."
+   },
+   {
+    "q": "Can I get an SBA loan if I use a co-packer?",
+    "a": "Yes, but it's a different loan. Without your own plant, the business looks more like a brand and distribution company, so loans focus on working capital and inventory. With fewer hard assets, lenders lean on cash flow, contracts and personal collateral."
+   },
+   {
+    "q": "Do food manufacturers need certifications for an SBA loan?",
+    "a": "The SBA doesn't require them, but lenders expect FDA registration and often a third-party food safety certification if you sell to major retailers. Missing certifications can limit sales, which affects how much the lender will approve."
+   },
+   {
+    "q": "What rate will a food manufacturer pay on an SBA loan?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable. The 504 debenture portion was about 6.97% fixed for 25 years in October 2026, with the bank's first lien priced separately. Strong borrowers often get a lower 7(a) spread."
+   }
+  ]
+ }
+]

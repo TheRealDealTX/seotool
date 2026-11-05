@@ -71,3 +71,5 @@
     });
   }
 })();
+/* track lender-match CTA clicks */
+document.addEventListener("click",function(ev){var a=ev.target.closest&&ev.target.closest("a.btn-match");if(a&&window.gtag){try{gtag("event","lender_match_cta",{cta:a.getAttribute("data-cta")||"aside",page:location.pathname});}catch(e){}}});

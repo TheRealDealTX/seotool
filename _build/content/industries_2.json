@@ -1,0 +1,989 @@
+[
+ {
+  "folder": "Ambulance Services",
+  "short": "Ambulance Services",
+  "naics": "621910",
+  "program": "7(a)",
+  "title": "Ambulance Service Loans: SBA Rates & Terms",
+  "description": "Ambulance company loans: SBA 7(a) eligibility, financing ambulances and equipment, buying an EMS business, down payment, terms and today's rate caps.",
+  "h1": "Ambulance service loans: SBA rates and eligibility",
+  "note": "Most ambulance company loans are 7(a) loans to buy vehicles, stock them with equipment, or purchase an existing EMS operator. A modern ambulance with a stretcher system, monitor and radio is expensive, and the fleet wears out fast. Lenders focus less on the vehicles and more on who pays the bills: the mix of Medicare, Medicaid, private insurance and contract revenue, how quickly claims get paid, and whether the company holds service contracts with counties, hospitals or nursing homes.",
+  "who": "Private emergency and non-emergency ambulance operators that hold a state EMS license and the required vehicle permits. Lenders want owners or managers with real EMS operations and billing experience, plus Medicare and Medicaid enrollment in good standing. Volunteer and municipal squads organized as nonprofits or government units are not eligible for 7(a). Wheelchair van and non-emergency medical transport companies usually fall under a different code, but they finance the same way.",
+  "programs": [
+   {
+    "h": "7(a) for fleet and acquisitions",
+    "p": "The standard choice for buying an ambulance company, adding units, or refinancing expensive vehicle debt. Vehicles and equipment usually go on a 10-year term, which keeps payments manageable while receivables catch up."
+   },
+   {
+    "h": "SBA Express for one or two units",
+    "p": "Loans under $500,000 can fund a replacement ambulance, a power stretcher or cardiac monitors with a faster lender decision. Express loans carry a slightly higher rate than standard 7(a)."
+   },
+   {
+    "h": "504 for a station or garage",
+    "p": "If you're buying or building a base with vehicle bays, crew quarters and a supply room, a 504 loan offers a long fixed rate with about 10% down."
+   }
+  ],
+  "uses": [
+   "Buying new or remounted ambulances",
+   "Cardiac monitors, power stretchers and loading systems",
+   "Buying an existing ambulance company and its contracts",
+   "Working capital to carry slow insurance receivables",
+   "Purchasing or building a station with vehicle bays"
+  ],
+  "amounts": "Ambulance company loans commonly run $150,000 to $1.5 million, depending on fleet size. Start-ups and buyers of an existing operator need at least 10% equity, and lenders often want more for a new service with no billing history. Vehicle and equipment loans run up to 10 years, and real estate up to 25 years.",
+  "example_amount": 400000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for an ambulance service",
+   "p": "Expect the lender to dig into your payer mix and days sales outstanding, since a company that waits months for Medicare or Medicaid payments can run short on cash even when busy. They will ask for your state license, Medicare enrollment, billing compliance history and any audits or repayment demands. Contracts with counties or hospitals help a lot, but lenders check how long they run and whether they can be cancelled. Fleet age, maintenance records and crew turnover also come up."
+  },
+  "related": [
+   "Medical Practices",
+   "All Other Outpatient Care Centers",
+   "All Other Miscellaneous Ambulatory Health Care Services",
+   "Trucking Companies"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan for an ambulance?",
+    "a": "Yes. A licensed private ambulance company can use a 7(a) or SBA Express loan to buy new or remounted ambulances and the equipment inside them. The vehicle usually serves as collateral, and the lender will judge the loan mostly on whether your billing revenue covers the payment."
+   },
+   {
+    "q": "How do I finance buying an existing ambulance company?",
+    "a": "A 7(a) loan can cover the purchase price, the fleet, equipment and working capital in one loan on a 10-year term. You need at least 10% equity. The lender will review the seller's payer mix, contracts, licenses and Medicare billing history, and may want the contracts to transfer cleanly to you."
+   },
+   {
+    "q": "Can a non-emergency medical transport company get an SBA loan?",
+    "a": "Yes. Wheelchair van and stretcher transport companies are eligible for 7(a), Express and microloans. Lenders focus on contracts with brokers, nursing homes or Medicaid managed care plans, because those agreements drive most of the revenue and can change on short notice."
+   },
+   {
+    "q": "What interest rate will an ambulance company pay?",
+    "a": "With prime at 7.00%, the SBA caps variable 7(a) rates at 13.00% for loans from $50,001 to $250,000, 11.50% from $250,001 to $350,000, and 10.00% above $350,000. A multi-vehicle loan often lands in the lowest tier."
+   },
+   {
+    "q": "Can a volunteer ambulance squad get an SBA loan?",
+    "a": "No. Volunteer squads organized as nonprofits and municipal EMS departments are not eligible for SBA 7(a) or 504 loans. They usually look to USDA community facilities programs, municipal bonds, grants or local bank loans instead."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Specialty Trade Contractors",
+  "short": "Specialty Trade Contractors",
+  "naics": "238990",
+  "program": "7(a)",
+  "title": "Specialty Contractor Loans: SBA Rates Guide",
+  "description": "SBA loans for specialty trade contractors such as fence, paving and pool builders: eligibility, equipment financing, bonding, terms and rate caps.",
+  "h1": "Specialty trade contractor loans: SBA rates and eligibility",
+  "note": "This NAICS catch-all covers trade contractors that don't fit plumbing, electrical, roofing or the other named trades. Think fence installers, residential paving and parking lot striping crews, in-ground pool builders, building exterior power washing and sandblasting, crane rental with an operator, house movers and outdoor sign installers. Loans are mostly for trucks, equipment and working capital. Lenders focus on backlog, job margins, how receivables age, and whether the owner has run crews profitably.",
+  "who": "Contractors in these trades with the state or local license their work requires, plus insurance and, for public or commercial jobs, bonding capacity. Lenders want several years of trade experience, ideally including time as a foreman or owner. Start-ups can qualify if the owner leaves an established company with a track record. Firms that only flip houses or hold rental property are speculative or passive and do not qualify for 7(a).",
+  "programs": [
+   {
+    "h": "7(a) for equipment and growth",
+    "p": "Funds trucks, skid steers, trenchers, pavers and other equipment along with working capital, usually on a 10-year term. It also works for buying an established contracting company."
+   },
+   {
+    "h": "SBA Express and CAPLines",
+    "p": "Express covers smaller equipment needs under $500,000 quickly. The SBA's CAPLines program offers lines of credit tied to specific contracts, which helps contractors cover labor and materials before the customer pays."
+   },
+   {
+    "h": "504 for a yard or shop",
+    "p": "Buying a building with a fenced yard for materials and equipment storage fits a 504 loan, with a long fixed rate and about 10% down."
+   }
+  ],
+  "uses": [
+   "Trucks, trailers and heavy equipment",
+   "Working capital for payroll and materials on large jobs",
+   "Buying an established contracting business",
+   "A shop, office and equipment yard",
+   "Refinancing high-rate equipment loans"
+  ],
+  "amounts": "Specialty contractor loans usually range from $75,000 to $750,000. A company buyout or a yard purchase can push higher. Start-ups and acquisitions need at least 10% equity, and lenders often want more for new firms. Equipment and working capital loans run up to 10 years. Real estate runs up to 25 years under 7(a) or through a 504 loan.",
+  "example_amount": 250000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a specialty trade contractor",
+   "p": "Lenders ask for a work-in-progress schedule and accounts receivable aging, because contractors often look profitable on paper while cash is tied up in retainage and slow-paying general contractors. They compare bid margins to actual job results and check whether a few customers make up most of the revenue. Seasonality matters for paving, fencing and pool work in colder states. Expect questions about licenses, insurance claims, bonding history and the condition of the equipment."
+  },
+  "related": [
+   "Septic Tank and Related Services",
+   "Building Inspection Services",
+   "Appliance Repair and Maintenance"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses fall under All Other Specialty Trade Contractors?",
+    "a": "NAICS 238990 covers trade contractors not classified elsewhere, such as fence installation, residential driveway paving and parking lot striping, in-ground swimming pool construction, building exterior cleaning and sandblasting, crane rental with an operator, house moving and outdoor sign installation."
+   },
+   {
+    "q": "Can a fence or paving contractor get an SBA loan?",
+    "a": "Yes. Fence, paving and similar contractors are eligible for 7(a), Express and microloans. The most common uses are trucks and equipment, working capital to carry payroll between jobs, and buying an existing company with a customer base."
+   },
+   {
+    "q": "Can I use an SBA loan for contractor working capital?",
+    "a": "Yes. A 7(a) term loan can include working capital, and the SBA's CAPLines program offers revolving lines tied to contracts or receivables. Lenders will want a backlog report and receivables aging before sizing a line."
+   },
+   {
+    "q": "Does an SBA loan help with bonding?",
+    "a": "Not directly, but the SBA runs a separate Surety Bond Guarantee program that helps small contractors get bid and performance bonds. Stronger working capital from a 7(a) loan can also improve the balance sheet that sureties review."
+   },
+   {
+    "q": "How much down payment does a contractor need for an SBA loan?",
+    "a": "Expansion loans for an established contractor may need little or no down payment. Start-ups and business purchases need at least 10% equity under current SBA rules, and many lenders ask for more when the company is new."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Legal Services",
+  "short": "Legal Support Services",
+  "naics": "541199",
+  "program": "7(a)",
+  "title": "Legal Services Business Loans: SBA Guide",
+  "description": "SBA loans for process servers, paralegal firms, patent agents and legal document preparers: eligibility, typical loan sizes, terms and rate caps.",
+  "h1": "Legal services business loans: SBA rates and eligibility",
+  "note": "NAICS 541199 covers legal businesses that are not law offices or title and settlement firms. That includes process servers, independent paralegal services, legal document preparers, patent agents and similar legal support companies. These are service businesses with few hard assets, so loans are usually modest 7(a) or Express loans for buying a firm, opening an office or adding staff. Lenders focus on recurring clients, mostly law firms and courts, and steady cash flow.",
+  "who": "Owners with experience in the work and any credential the state requires, such as a process server license or registration as a legal document assistant. Patent agents need registration with the US Patent and Trademark Office. Lenders like firms with repeat law firm or corporate clients. Law practices themselves fall under a different code but can also get SBA loans. Businesses that offer legal advice without a license are a non-starter for any lender.",
+  "programs": [
+   {
+    "h": "7(a) for buying a firm",
+    "p": "A 7(a) loan can fund the purchase of a process serving or paralegal company, including goodwill and working capital, on a 10-year term. Most of the value is goodwill, so the seller's client relationships matter."
+   },
+   {
+    "h": "SBA Express for small needs",
+    "p": "Loans under $500,000 for office build-out, software, vehicles for servers or a new hire's salary ramp move quickly through Express. The rate is slightly higher than standard 7(a), but the paperwork is lighter."
+   },
+   {
+    "h": "Microloans for start-ups",
+    "p": "A new process server or document preparation business that needs under $50,000 can approach a nonprofit SBA microlender. Many microlenders also offer coaching on pricing, bookkeeping and finding law firm clients."
+   }
+  ],
+  "uses": [
+   "Buying an established process serving or paralegal firm",
+   "Case management and e-filing software",
+   "Office lease build-out",
+   "Working capital while new clients ramp up",
+   "Vehicles for process servers"
+  ],
+  "amounts": "Loans to legal support firms are usually $25,000 to $500,000, with business acquisitions at the higher end. Buyers and start-ups need at least 10% equity, and a seller note can help on a purchase. Because there's little collateral, the lender may take a lien on the owner's home if one is available. Terms run up to 10 years.",
+  "example_amount": 150000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a legal services business",
+   "p": "With little equipment to secure the loan, lenders lean on cash flow and the owner's personal credit. They check client concentration closely, since losing one large law firm can cut revenue sharply. On an acquisition they want to know whether clients will stay after the seller leaves, and they may ask for a transition period or an earnout. Licensing, errors and omissions insurance and any complaints or regulatory actions also get reviewed."
+  },
+  "related": [
+   "Administrative Management and General Management Consulting Services",
+   "All Other Business Support Services",
+   "Public Relations Agencies"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses are in All Other Legal Services?",
+    "a": "NAICS 541199 covers legal services other than law offices and title or settlement offices. Common examples are process servers, independent paralegal and legal document preparation services, patent agents who are not attorneys, and other legal support firms that work for lawyers, courts and the public."
+   },
+   {
+    "q": "Can a process server get an SBA loan?",
+    "a": "Yes. Process serving companies are eligible for 7(a), Express and microloans. Most borrow to buy an existing firm, expand into new counties, or fund vehicles, software and working capital. Lenders want to see repeat clients and steady monthly revenue."
+   },
+   {
+    "q": "Can I buy a paralegal or legal document business with an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance most of the purchase price on a 10-year term, with at least 10% equity from you. The lender will review client lists, revenue trends and how much of the business depends on the seller personally."
+   },
+   {
+    "q": "Can a law firm get an SBA loan?",
+    "a": "Yes. Law offices are a separate code but are eligible for SBA loans. Attorneys use 7(a) loans to buy practices, buy out partners or fund office space. Lenders do not lend against expected contingency fees from pending cases."
+   },
+   {
+    "q": "What rate do small legal services loans carry?",
+    "a": "With prime at 7.00%, SBA caps variable rates at 13.50% for loans of $50,000 or less and 13.00% for $50,001 to $250,000. Small service business loans are often priced close to those caps. Larger acquisition loans fall into lower tiers."
+   }
+  ]
+ },
+ {
+  "folder": "Building Inspection Services",
+  "short": "Building Inspection Services",
+  "naics": "541350",
+  "program": "7(a)",
+  "title": "Home Inspection Business Loans: SBA Guide",
+  "description": "SBA loans for home and building inspection businesses: eligibility, licensing, buying an inspection company or franchise, loan sizes and rate caps.",
+  "h1": "Home and building inspection business loans",
+  "note": "Inspection companies need little capital, so loans here are small. Most are 7(a), Express or microloans to start an inspection business, buy a franchise, add inspectors and vehicles, or acquire an established company with realtor referrals. Equipment like thermal cameras, moisture meters, drones and radon monitors adds up but rarely tops six figures. Lenders focus on the owner's licensing and referral base, and on how sensitive revenue is to home sales volume.",
+  "who": "Home and commercial building inspectors with the license or certification their state requires, plus errors and omissions and general liability insurance. Lenders like owners with construction, engineering or prior inspection experience. Franchise buyers can qualify if the brand is listed in the SBA Franchise Directory. Government building code inspectors are public employees, so this code mainly covers private firms that inspect for buyers, lenders and insurers.",
+  "programs": [
+   {
+    "h": "Microloans and Express for start-ups",
+    "p": "A new inspector buying tools, software, a vehicle and marketing often needs under $100,000. Microlenders cover up to $50,000, and Express covers larger amounts quickly."
+   },
+   {
+    "h": "7(a) for acquisitions and franchises",
+    "p": "Buying a multi-inspector company or a territory franchise fits a standard 7(a) loan on a 10-year term, including working capital. The lender will review the franchise agreement or the seller's referral sources before approving."
+   }
+  ],
+  "uses": [
+   "Starting a home inspection business",
+   "Buying an inspection franchise territory",
+   "Thermal cameras, drones and radon or mold testing equipment",
+   "Vehicles for added inspectors",
+   "Buying an established multi-inspector company"
+  ],
+  "amounts": "Most inspection business loans run $25,000 to $300,000. A franchise start-up often sits under $150,000, while buying an established multi-inspector firm can reach several hundred thousand. Start-ups and acquisitions need at least 10% equity. Terms run up to 10 years, and loans under $50,000 carry the highest SBA rate cap.",
+  "example_amount": 100000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a building inspection business",
+   "p": "Revenue follows home sales, so lenders ask how the business held up when mortgage rates rose and sales slowed. They want to see where jobs come from, whether from a handful of real estate agents or a broad mix that includes commercial, insurance and new construction inspections. Ancillary services like radon, sewer scope and mold testing raise revenue per job and help the application. Claims history and E&O coverage are checked, since one lawsuit can hurt a small firm."
+  },
+  "related": [
+   "All Other Specialty Trade Contractors",
+   "Septic Tank and Related Services",
+   "Administrative Management and General Management Consulting Services",
+   "Franchises"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to start a home inspection business?",
+    "a": "Yes. A licensed inspector can use an SBA microloan or Express loan for equipment, software, insurance, a vehicle and marketing. You'll need a business plan, your license or certification, and at least 10% of the project cost as equity."
+   },
+   {
+    "q": "How much does it cost to start a home inspection business?",
+    "a": "Many independent inspectors start for well under $50,000, covering training, licensing, tools, software, insurance and marketing. Franchises cost more because of fees and required territory investments. The lender will want to see your own budget, not an industry average."
+   },
+   {
+    "q": "Can I finance a home inspection franchise with an SBA loan?",
+    "a": "Yes, if the franchise brand is on the SBA Franchise Directory. A 7(a) or Express loan can cover the franchise fee, equipment, vehicle and early working capital. The lender will review the franchise agreement and the brand's track record."
+   },
+   {
+    "q": "Do I need collateral for an inspection business loan?",
+    "a": "Loans of $50,000 or less need no collateral under SBA rules. For larger loans the lender takes business assets and may ask for a lien on your home if equity is available, but a loan is not declined only for lack of collateral."
+   },
+   {
+    "q": "Is a commercial property inspection firm eligible?",
+    "a": "Yes. Firms doing property condition assessments, construction draw inspections or insurance inspections are eligible. These businesses often have steadier revenue than residential inspectors because lenders and insurers order work year-round. Lenders still ask about licensing and E&O coverage."
+   }
+  ]
+ },
+ {
+  "folder": "Carpet and Rug Mills",
+  "short": "Carpet and Rug Mills",
+  "naics": "314110",
+  "program": "7(a) and 504",
+  "title": "Carpet Manufacturing Loans: SBA Guide",
+  "description": "SBA loans for carpet and rug mills: 7(a) and 504 eligibility for tufting and weaving equipment, plants and acquisitions, terms and today's rate caps.",
+  "h1": "Carpet and rug mill loans: SBA rates and eligibility",
+  "note": "Carpet and rug mills make tufted, woven and other floor coverings from yarn. Large mills dominate broadloom carpet, so small borrowers here tend to be rug makers, custom and hospitality carpet producers, specialty weavers and mills that serve niche markets. Loans are equipment-heavy: tufting machines, looms, finishing and dyeing lines, plus the plant itself. Lenders focus on customer concentration, raw material costs and whether the equipment has a resale market if things go wrong.",
+  "who": "Manufacturers that meet the SBA size standard for this code, which is measured by employee count. That covers most independent rug and specialty carpet makers. Lenders want management with mill or textile manufacturing experience and clear relationships with distributors, designers or contract buyers. Importers that only resell rugs made elsewhere are wholesalers or retailers, not mills, and are underwritten differently.",
+  "programs": [
+   {
+    "h": "504 for plants and heavy equipment",
+    "p": "A 504 loan finances a mill building or major machinery with a long fixed rate. Manufacturers can access up to $5.5 million in SBA debenture, larger than the standard limit."
+   },
+   {
+    "h": "7(a) for acquisitions and working capital",
+    "p": "A 7(a) loan covers buying an existing mill, mixed equipment and working capital needs, including yarn inventory, on a 10-year term. It suits buyers who need goodwill and inventory financed along with the machinery."
+   },
+   {
+    "h": "Export and line-of-credit options",
+    "p": "Mills selling overseas can look at SBA export working capital loans, and CAPLines can fund inventory and receivables on large contract orders. These lines revolve as orders ship and customers pay, which fits mills with long production cycles."
+   }
+  ],
+  "uses": [
+   "Tufting machines, looms and finishing lines",
+   "Buying or expanding a manufacturing plant",
+   "Yarn and backing inventory",
+   "Buying an existing rug or carpet mill",
+   "Energy-efficient dryers and dye equipment"
+  ],
+  "amounts": "Loans to carpet and rug makers often range from $250,000 to $5 million. A 504 project usually needs about 10% down, or 15% for a start-up or special-purpose building. 7(a) acquisitions need at least 10% equity. Equipment terms run up to 10 years, or longer for heavy machinery with a long useful life, and real estate up to 25 years.",
+  "example_amount": 1500000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for a carpet or rug mill",
+   "p": "Lenders check whether a few big customers, such as a flooring distributor or a hospitality chain, account for most sales. They look at gross margins over several years, since yarn and petroleum-based material costs swing. Equipment appraisals matter because specialized textile machinery can be hard to resell. Expect questions about import competition, environmental permits for dyeing and wastewater, and whether the plant has room to grow without another move."
+  },
+  "related": [
+   "Apparel Accessories and Other Apparel Manufacturing",
+   "All Other Miscellaneous Manufacturing",
+   "All Other Miscellaneous Wood Product Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can a carpet manufacturer get an SBA loan?",
+    "a": "Yes. Carpet and rug mills that meet the SBA size standard are eligible for 7(a) and 504 loans. Common uses are tufting and weaving equipment, plant purchases or expansions, yarn inventory and buying an existing mill."
+   },
+   {
+    "q": "What is the SBA 504 limit for a manufacturer?",
+    "a": "Manufacturers can receive up to $5.5 million in SBA debenture per project, compared with $5 million for most businesses. Combined with the bank's first lien and your equity, total project size can be much larger."
+   },
+   {
+    "q": "What is the 504 rate for a mill building?",
+    "a": "The 25-year all-in 504 debenture rate was about 6.97% in October 2026. That fixed rate applies to the SBA's share, roughly 40% of the project. The bank's 50% first lien is priced separately. Ask your CDC for the current rate."
+   },
+   {
+    "q": "Can I buy a rug manufacturing business with an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance the purchase price, equipment and working capital. You'll need at least 10% equity, and the lender will review customer lists, equipment condition, margins and whether key employees will stay after closing."
+   },
+   {
+    "q": "How long can I finance carpet machinery?",
+    "a": "Standard 7(a) equipment loans run up to 10 years. Heavy machinery with a longer useful life can sometimes go longer, and 504 loans offer 10, 20 or 25-year terms depending on what is being financed."
+   }
+  ]
+ },
+ {
+  "folder": "Musical Groups and Artists",
+  "short": "Musicians and Bands",
+  "naics": "711130",
+  "program": "7(a), Express and microloans",
+  "title": "Loans for Musicians & Bands: SBA Guide",
+  "description": "SBA loans for bands, musicians and music groups: who qualifies, financing gear, vans and studios, microloans, loan sizes and today's rate caps.",
+  "h1": "Loans for musicians and bands: SBA rates and eligibility",
+  "note": "Music groups and artists earn money from live shows, recordings, licensing and teaching, and that income is lumpy. SBA loans for this code are usually small: microloans and Express loans for instruments, sound gear, a touring van or trailer, or a rehearsal and recording space. Lenders focus on whether the act runs as a real business, with tax returns, a booking history and income that comes from more than one source.",
+  "who": "For-profit bands, ensembles, wedding and event bands, and solo artists operating as a business with a tax ID and filed returns. Lenders want at least a couple of years of performance income and a credit history to match. Nonprofit orchestras, choirs and community ensembles are not eligible for 7(a). Loans can't be used to fund a speculative album or tour with no established revenue behind it.",
+  "programs": [
+   {
+    "h": "Microloans up to $50,000",
+    "p": "Nonprofit SBA microlenders are often the best fit for a working band that needs gear, a van or recording costs and has limited collateral. Many also offer business coaching."
+   },
+   {
+    "h": "SBA Express for established acts",
+    "p": "An event band or touring group with steady bookings can use Express for vehicles, equipment or a rehearsal space build-out, with a faster decision. Lenders expect two or more years of steady income."
+   },
+   {
+    "h": "7(a) for a studio or venue business",
+    "p": "If the act also runs a recording studio or teaching operation, a 7(a) loan can fund build-out and equipment on a 10-year term. Lesson and studio income tends to be steadier than touring income."
+   }
+  ],
+  "uses": [
+   "Instruments, amplifiers and PA systems",
+   "A touring van or trailer",
+   "Rehearsal or recording space build-out",
+   "Recording and production costs for an established act",
+   "Working capital between touring seasons"
+  ],
+  "amounts": "Most loans to musicians and bands are $10,000 to $150,000. Microloans top out at $50,000. Start-ups need at least 10% equity, and lenders usually ask for more when income is irregular. Equipment and vehicle loans run 5 to 10 years. Loans of $50,000 or less carry the highest SBA rate cap.",
+  "example_amount": 50000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a band or musical artist",
+   "p": "Lenders want two to three years of tax returns showing performance income, plus booking calendars, contracts and any recurring work like residencies, weddings or corporate events. Income from several sources, such as gigs, streaming, licensing and lessons, reads as more stable than touring alone. Personal credit carries a lot of weight. For a group, lenders ask who owns the gear and the name, and every 20% or larger owner signs a personal guarantee."
+  },
+  "related": [
+   "Independent Artists, Writers, and Performers",
+   "Motion Picture and Video Production",
+   "All Other Amusement and Recreation Industries"
+  ],
+  "faqs": [
+   {
+    "q": "Can a band get an SBA loan?",
+    "a": "Yes, if it operates as a for-profit business with a tax ID and income history. Most bands qualify for microloans or small Express loans for gear, vans and studio costs. Lenders want tax returns, booking records and personal credit from the members who own the business."
+   },
+   {
+    "q": "Can I get a loan for music equipment?",
+    "a": "Yes. Instruments, PA systems, lighting and recording gear are eligible SBA loan uses. Small gear loans often come from SBA microlenders or as Express loans, with the equipment serving as part of the collateral. Lenders still look first at whether your income covers the payment."
+   },
+   {
+    "q": "Can an SBA loan pay for recording an album?",
+    "a": "Sometimes, as part of a loan to an established act that can show the income to repay it. Lenders won't fund a speculative project whose repayment depends on the album succeeding. The loan is judged on your existing cash flow."
+   },
+   {
+    "q": "Can an orchestra or nonprofit ensemble get an SBA loan?",
+    "a": "Nonprofit orchestras, choirs and community ensembles are not eligible for 7(a) or 504 loans. They usually rely on donors, grants, arts council funding or conventional bank lines of credit instead. A for-profit company that books or manages musicians is a different case and can apply."
+   },
+   {
+    "q": "What credit score do musicians need for an SBA loan?",
+    "a": "The SBA sets no minimum score, but most bank lenders look for scores around the high 600s or better. Microlenders are more flexible and focus on your plan, income history and willingness to work with an adviser."
+   }
+  ]
+ },
+ {
+  "folder": "Barber Shops",
+  "short": "Barber Shops",
+  "naics": "812111",
+  "program": "7(a), Express and microloans",
+  "title": "Barber Shop Loans: SBA Rates & Eligibility",
+  "description": "Barber shop loans: SBA 7(a), Express and microloan eligibility, start-up costs, buying a shop, down payment, terms and today's rate caps.",
+  "h1": "Barber shop loans: SBA rates and eligibility",
+  "note": "Barber shop loans are usually small. Most are microloans, Express or small 7(a) loans to open a shop, buy chairs and build out the space, or buy an established shop from a retiring owner. The big question for lenders is how the shop makes money: barbers on commission, booth or chair rental, or a mix. They look at chair count, how full the book is, and whether the clients follow the owner or the location.",
+  "who": "Licensed barbers and shop owners. Most states require both a barber license for the owner or manager and a shop license for the location. Lenders want hands-on barbering or shop management experience and a lease that runs at least as long as the loan. A shop run purely on booth rental can still qualify, but lenders review the rental agreements and turnover closely. Start-ups qualify with a plan and equity.",
+  "programs": [
+   {
+    "h": "Microloans for new shops",
+    "p": "Opening a two or three-chair shop often costs under $50,000. Nonprofit SBA microlenders fund these when a bank won't, and many add business coaching. A plan and a license are required."
+   },
+   {
+    "h": "SBA Express for build-out",
+    "p": "Express loans under $500,000 cover chairs, stations, plumbing and buildout for a larger shop with a fast lender decision and a slightly higher rate. It suits owners adding chairs."
+   },
+   {
+    "h": "7(a) for buying a shop",
+    "p": "Buying an established shop, or a building with the shop in it, fits a standard 7(a). Real estate can run up to 25 years. Equipment and goodwill run up to 10 years."
+   }
+  ],
+  "uses": [
+   "Barber chairs, stations and mirrors",
+   "Plumbing, electrical and build-out for a new location",
+   "Buying an existing barber shop",
+   "Booking software and point-of-sale systems",
+   "Working capital while a new shop builds clientele"
+  ],
+  "amounts": "Most barber shop loans fall between $25,000 and $200,000. Start-ups and buyers need at least 10% equity, and lenders often ask for 15% to 20% for a brand-new shop. Equipment and build-out loans run up to 10 years. Because many of these loans are $50,000 or less, they sit in the SBA's highest rate tier.",
+  "example_amount": 75000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a barber shop",
+   "p": "Lenders want to understand the revenue model. Commission shops show payroll and product sales, while booth-rent shops show steady rent with less upside, and the cash flow looks different. They ask how many chairs are filled, how long the barbers have stayed, and whether a few top barbers bring most of the clients. On a purchase, they want proof the clients will stay after the seller leaves. Lease terms, location visibility and parking also come up."
+  },
+  "related": [
+   "Beauty Salons",
+   "Cosmetics, Beauty Supplies, and Perfume Stores",
+   "Franchises"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan to open a barber shop?",
+    "a": "Yes. Licensed barbers can use SBA microloans, Express or 7(a) loans to open a shop. You'll need a business plan, your license, a lease, and at least 10% of the project cost in equity. Lenders like to see an existing client base you'll bring along."
+   },
+   {
+    "q": "How much does it cost to open a barber shop?",
+    "a": "It depends heavily on the space. A small shop in a former salon may need only chairs, stations and minor updates, while a raw space needs plumbing, electrical and finishes. Get contractor bids and include several months of working capital in the loan request."
+   },
+   {
+    "q": "Can I buy an existing barber shop with an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance the purchase price, equipment and working capital on a 10-year term. The lender will review the seller's revenue, how the barbers are paid, and whether key barbers plan to stay."
+   },
+   {
+    "q": "Do booth-rental barber shops qualify for SBA loans?",
+    "a": "Yes. The shop owner's income is the booth rent, and lenders underwrite that rent like a lease income stream. They'll review rental agreements, vacancy history and how quickly empty chairs get filled. Signed agreements help."
+   },
+   {
+    "q": "What is the rate on a small barber shop loan?",
+    "a": "With prime at 7.00%, the SBA caps variable rates at 13.50% for loans of $50,000 or less and 13.00% for $50,001 to $250,000. Many small barber shop loans price at or near those caps. A larger loan drops into a lower tier."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Business Support Services",
+  "short": "Business Support Services",
+  "naics": "561499",
+  "program": "7(a)",
+  "title": "Business Support Services Loans: SBA Guide",
+  "description": "SBA loans for business support service firms in NAICS 561499: which businesses fit, eligibility, loan sizes, terms and today's SBA 7(a) rate caps.",
+  "h1": "Business support services loans: SBA rates and eligibility",
+  "note": "NAICS 561499 is a catch-all for office support companies that don't fit document preparation, call centers, collection agencies, credit bureaus, repossession or court reporting. It includes firms that do real-time closed captioning, mail presorting and address bar coding, bar code imprinting and other back-office services for clients. These are service businesses with modest equipment, so loans are usually 7(a) or Express loans for acquisitions, equipment and working capital. Lenders focus on contracts and client concentration.",
+  "who": "For-profit support service firms with owners experienced in the specific service and the systems behind it. Lenders like businesses with multi-year contracts or repeat corporate clients. Start-ups qualify with a plan and equity, but lenders prefer founders who bring clients from a prior role. Firms that subcontract for government agencies are eligible, and lenders will review contract terms and renewal dates.",
+  "programs": [
+   {
+    "h": "7(a) for acquisitions",
+    "p": "Buying a support services company is often mostly goodwill. A 7(a) loan can finance that purchase, plus equipment and working capital, on a 10-year term."
+   },
+   {
+    "h": "SBA Express for equipment and software",
+    "p": "Mail sorting machines, captioning software, servers and office build-out under $500,000 fit an Express loan with a faster decision. The rate is slightly higher than standard 7(a), but the process is simpler."
+   },
+   {
+    "h": "CAPLines for contract work",
+    "p": "Firms that carry receivables on large contracts can use an SBA working capital line tied to those receivables. The SBA calls these CAPLines. Borrowing rises and falls with billings, which suits seasonal or project work."
+   }
+  ],
+  "uses": [
+   "Buying an established support services firm",
+   "Mail sorting, printing or bar code equipment",
+   "Captioning, transcription or workflow software",
+   "Working capital to carry contract receivables",
+   "Office or production space build-out"
+  ],
+  "amounts": "Loans in this category typically range from $50,000 to $750,000. Acquisitions sit at the higher end. Buyers and start-ups need at least 10% equity, and seller financing is common on purchases. Because collateral is thin, lenders may take a lien on the owner's home. Terms run up to 10 years.",
+  "example_amount": 200000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a business support services firm",
+   "p": "Lenders want to know how revenue is contracted: multi-year agreements, month-to-month work or one-off projects. They check how much revenue comes from the top three clients and when those contracts renew. For technology-driven services like captioning, they ask whether software or automation could undercut pricing. Staffing costs and employee turnover matter, since labor is usually the biggest expense. On an acquisition, client transition from the seller gets close review."
+  },
+  "related": [
+   "All Other Support Services",
+   "Administrative Management and General Management Consulting Services",
+   "All Other Legal Services",
+   "Public Relations Agencies"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses are in All Other Business Support Services?",
+    "a": "NAICS 561499 covers office and business support services not listed elsewhere. Examples include real-time closed captioning, mail presorting and address bar coding, and bar code imprinting services. Call centers, collection agencies, credit bureaus, repossession and court reporting each have their own codes."
+   },
+   {
+    "q": "Can a business services company get an SBA loan?",
+    "a": "Yes. Support service firms are eligible for 7(a), Express and microloans. The most common uses are buying an existing firm, equipment and software, and working capital to cover payroll while waiting on client payments. Lenders want tax returns and contracts."
+   },
+   {
+    "q": "Can I finance a business with mostly goodwill using an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance goodwill in a business acquisition on a 10-year term. Because goodwill isn't strong collateral, lenders rely on cash flow, your equity injection, and any personal real estate you can pledge."
+   },
+   {
+    "q": "Can I use an SBA loan for receivables-based working capital?",
+    "a": "Yes. The SBA's CAPLines program offers revolving lines of credit backed by receivables and contracts. It suits firms with large clients who pay on 30 to 90-day terms. Lenders will ask for a receivables aging report and copies of major client contracts before setting the line."
+   },
+   {
+    "q": "What rate does a $200,000 SBA loan carry?",
+    "a": "With prime at 7.00%, a 7(a) loan from $50,001 to $250,000 is capped at prime plus 6.0, or 13.00% variable. Strong borrowers often negotiate below the cap. Loans above $250,000 fall into lower tiers, down to 10.00% over $350,000."
+   }
+  ]
+ },
+ {
+  "folder": "Public Relations Agencies",
+  "short": "PR Agencies",
+  "naics": "541820",
+  "program": "7(a)",
+  "title": "PR Agency Loans: SBA Rates & Eligibility",
+  "description": "SBA loans for public relations agencies: eligibility, buying or merging an agency, working capital, loan sizes, terms and today's 7(a) rate caps.",
+  "h1": "PR agency loans: SBA rates and eligibility",
+  "note": "Public relations agencies sell staff time and relationships, so there's little equipment to finance. SBA loans in this industry mostly fund agency acquisitions, partner buyouts, hiring ahead of new accounts, or an office move. Most are 7(a) or Express loans. Lenders focus on retainer revenue versus project work, how long top clients have stayed, and whether the client relationships belong to the agency or to one or two people.",
+  "who": "For-profit PR, media relations and communications firms with owners experienced in agency work. Lenders like agencies with a few years of tax returns, retainer clients and a team beyond the founder. A senior PR professional starting an agency can qualify if they bring signed clients. Political consulting firms can qualify as businesses, but loan proceeds can't fund political activity, and lobbying-only firms get extra scrutiny.",
+  "programs": [
+   {
+    "h": "7(a) for buying an agency",
+    "p": "Most of an agency's value is goodwill. A 7(a) loan can finance the purchase or a partner buyout on a 10-year term, often paired with a seller note."
+   },
+   {
+    "h": "SBA Express for growth",
+    "p": "Express loans under $500,000 cover hiring ahead of a new account, office build-out or software with a quick decision. The rate is slightly higher than standard 7(a), and lenders still want to see retainer revenue behind the request."
+   }
+  ],
+  "uses": [
+   "Buying an established PR agency",
+   "Buying out a retiring partner",
+   "Hiring staff ahead of new retainers",
+   "Office build-out or relocation",
+   "Media monitoring and analytics software"
+  ],
+  "amounts": "PR agency loans usually range from $50,000 to $1 million, with acquisitions at the top end. Buyers need at least 10% equity, and seller notes are common in agency deals. With little hard collateral, lenders may ask for a lien on personal real estate. Terms run up to 10 years.",
+  "example_amount": 250000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a PR agency",
+   "p": "Lenders want a client list with revenue by account and contract type. Retainers with long-tenured clients look far better than project work that must be replaced each year. They check how much revenue comes from the largest client and whether it's in a volatile sector. On an acquisition, the key question is whether clients will follow the seller out the door, so lenders favor transition agreements and non-competes. Staff costs and utilization also get reviewed."
+  },
+  "related": [
+   "Administrative Management and General Management Consulting Services",
+   "All Other Business Support Services",
+   "Motion Picture and Video Production"
+  ],
+  "faqs": [
+   {
+    "q": "Can a PR agency get an SBA loan?",
+    "a": "Yes. Public relations agencies are eligible for 7(a), Express and microloans. The most common uses are buying an agency, partner buyouts, hiring ahead of new accounts and office build-outs. Lenders underwrite mostly on cash flow and client stability."
+   },
+   {
+    "q": "Can I buy a public relations firm with an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance most of the purchase price, including goodwill, on a 10-year term. You'll need at least 10% equity. Lenders review client contracts, retention history and the seller's role in client relationships."
+   },
+   {
+    "q": "Can an SBA loan fund a partner buyout at an agency?",
+    "a": "Yes. Partner buyouts are an eligible 7(a) use. The remaining owners must show the agency's cash flow covers the new debt, and the lender reviews whether the departing partner's clients will stay. A seller note may also help."
+   },
+   {
+    "q": "How much down payment does an agency acquisition need?",
+    "a": "Current SBA rules require at least 10% equity for a change of ownership. A seller note can sometimes count toward part of that if it meets SBA standby conditions. Many lenders want more equity when clients are concentrated."
+   },
+   {
+    "q": "Can a new PR firm get startup financing?",
+    "a": "Yes, but lenders want proof of demand, such as signed retainers or letters of intent from clients. An experienced founder with committed clients can often get an Express or small 7(a) loan for early salaries and setup costs."
+   }
+  ]
+ },
+ {
+  "folder": "Books Printing",
+  "short": "Book Printers",
+  "naics": "323117",
+  "program": "7(a) and 504",
+  "title": "Book Printing Business Loans: SBA Guide",
+  "description": "SBA loans for book printers: 7(a) and 504 financing for digital and offset presses, binding lines, buildings and acquisitions, terms and rate caps.",
+  "h1": "Book printing business loans: SBA rates and eligibility",
+  "note": "Book printers produce bound books for publishers, authors, schools and institutions, whether in long offset runs or short digital and print-on-demand runs. Loans center on equipment: digital presses, offset presses, perfect binders and case-binding lines. Many projects are 504 loans for a plant or major press, or 7(a) loans to buy an existing printer. Lenders focus on the customer base, equipment value and how the shop has adapted to shorter runs.",
+  "who": "Commercial book printers and binderies that meet the SBA size standard for this code. Lenders look for owners with printing operations experience and established publisher or institutional clients. Print-on-demand operations serving self-published authors qualify. Book publishers that only contract printing out fall under a different code, and a business whose main activity is publishing pays for printing rather than owning presses.",
+  "programs": [
+   {
+    "h": "504 for presses and plants",
+    "p": "A 504 loan funds a building or major press with a long fixed rate and about 10% down. Manufacturers can access up to $5.5 million in SBA debenture."
+   },
+   {
+    "h": "7(a) for acquisitions and mixed needs",
+    "p": "Buying an existing printer, or combining equipment with working capital and paper inventory, fits a 7(a) loan on a 10-year term. It's the usual route when goodwill is part of the price."
+   },
+   {
+    "h": "SBA Express for smaller upgrades",
+    "p": "A digital press, finishing equipment or prepress software under $500,000 can go through Express with a faster decision. The rate is slightly higher than standard 7(a), but approval comes faster."
+   }
+  ],
+  "uses": [
+   "Digital and offset presses",
+   "Perfect binding and case-binding lines",
+   "Buying an existing book printer or bindery",
+   "Paper inventory and working capital",
+   "Purchasing or expanding a plant"
+  ],
+  "amounts": "Book printing loans commonly range from $200,000 to $3 million. 504 projects need about 10% down, or 15% for a start-up. 7(a) acquisitions need at least 10% equity. Equipment terms run up to 10 years, or longer under 504 for heavy presses, and real estate up to 25 years.",
+  "example_amount": 750000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a book printer",
+   "p": "Lenders look at how revenue is split between publishers, self-published authors, schools and other customers, and how much comes from the top accounts. Paper prices and lead times affect margins, so they review gross margin history. Equipment appraisals matter, since older offset presses can have weak resale value while newer digital presses depreciate fast. They want a plan for press utilization and evidence that the shop can compete on short runs and turnaround times."
+  },
+  "related": [
+   "All Other Miscellaneous Manufacturing",
+   "Independent Artists, Writers, and Performers",
+   "All Other Business Support Services"
+  ],
+  "faqs": [
+   {
+    "q": "Can a book printer get an SBA loan?",
+    "a": "Yes. Book printers and binderies that meet the SBA size standard are eligible for 7(a) and 504 loans. Common uses are presses, binding equipment, buying a plant, buying an existing printer and working capital for paper inventory."
+   },
+   {
+    "q": "Can I finance a digital printing press with an SBA loan?",
+    "a": "Yes. A 7(a), Express or 504 loan can fund a digital press. Smaller presses often go through Express or 7(a) on terms up to 10 years, while larger installations paired with a building fit 504."
+   },
+   {
+    "q": "Can I start a print-on-demand book business with an SBA loan?",
+    "a": "Yes, with a solid plan, printing experience and at least 10% equity. Lenders want evidence of demand, such as contracts with publishers or distribution platforms, before funding expensive digital equipment. Microloans can fit a small start."
+   },
+   {
+    "q": "What is the 504 rate for printing equipment?",
+    "a": "The 25-year all-in 504 debenture rate was about 6.97% in October 2026. Equipment-only 504 projects often use a 10-year debenture, which has its own rate. The bank's first lien is priced separately. Ask your CDC for the current figure."
+   },
+   {
+    "q": "How much down payment does a printing company need?",
+    "a": "504 projects typically need about 10% down, rising to 15% for start-ups. A 7(a) acquisition requires at least 10% equity. Expansion equipment for an established printer may need less, depending on the lender. Strong equity helps on used presses."
+   }
+  ]
+ },
+ {
+  "folder": "Motion Picture and Video Production",
+  "short": "Video Production Companies",
+  "naics": "512110",
+  "program": "7(a)",
+  "title": "Video Production Business Loans: SBA Guide",
+  "description": "SBA loans for film and video production companies: eligibility, financing cameras and studios, why single films rarely qualify, loan sizes and rates.",
+  "h1": "Video production business loans: SBA rates and eligibility",
+  "note": "SBA loans in this code go to production companies, not to individual film budgets. Typical borrowers make commercials, corporate and training videos, event and wedding films, or content for brands and streaming platforms. Loans fund cameras, lenses, lighting, editing suites, a studio build-out or the purchase of an existing company. Lenders focus on repeat clients and recurring revenue, because a production company that depends on landing the next big project is hard to underwrite.",
+  "who": "For-profit production companies with a few years of revenue history and owners who have run shoots and managed budgets. Lenders like client rosters with agencies, corporations or networks that order work repeatedly. Financing a single independent film whose repayment depends on future sales is generally speculative and not a fit. Businesses that produce content of a prurient sexual nature are ineligible for SBA loans.",
+  "programs": [
+   {
+    "h": "7(a) for equipment and acquisitions",
+    "p": "Funds camera packages, post-production systems, studio build-out and working capital, or buying an established production company, on a 10-year term. It's the most common SBA loan for production companies with steady clients."
+   },
+   {
+    "h": "SBA Express for gear upgrades",
+    "p": "Loans under $500,000 for cameras, lenses, drones and edit bays close faster through Express, at a slightly higher rate. Lenders often keep gear terms shorter than the 10-year maximum."
+   },
+   {
+    "h": "504 for a studio building",
+    "p": "Buying a building for a sound stage or studio fits a 504 loan with a long fixed rate and about 10% down. A portion of the space can be rented out if the business occupies most of it."
+   }
+  ],
+  "uses": [
+   "Cinema cameras, lenses and lighting",
+   "Editing suites and color grading systems",
+   "Studio or sound stage build-out",
+   "Buying an established production company",
+   "Working capital between client payments"
+  ],
+  "amounts": "Loans to production companies usually range from $50,000 to $750,000, with studio purchases running higher. Start-ups and acquisitions need at least 10% equity. Gear depreciates quickly, so lenders often keep equipment loans to 5 to 7 years even though 7(a) allows up to 10. Real estate can run 25 years.",
+  "example_amount": 150000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a video production company",
+   "p": "Lenders want revenue by client for the last two or three years, and they look for repeat business rather than one-off projects. They check how quickly clients pay, since agencies often pay 60 to 90 days out. Gear loses value fast, so lenders discount equipment as collateral and may want a lien on personal real estate. Expect questions about how much work the owner does personally and whether freelancers or staff could carry the business without them."
+  },
+  "related": [
+   "Independent Artists, Writers, and Performers",
+   "Musical Groups and Artists",
+   "Public Relations Agencies"
+  ],
+  "faqs": [
+   {
+    "q": "Can I use an SBA loan to finance a movie?",
+    "a": "Generally no. Funding a single film whose repayment depends on future distribution is considered speculative, and lenders won't underwrite it. SBA loans fit production companies with existing revenue that need equipment, studio space or working capital."
+   },
+   {
+    "q": "Can a video production company get an SBA loan?",
+    "a": "Yes. Companies producing commercials, corporate videos, events or branded content are eligible for 7(a), Express and microloans. Lenders want a few years of tax returns and a base of repeat clients. Wedding and event videographers qualify too."
+   },
+   {
+    "q": "Can I finance camera equipment with an SBA loan?",
+    "a": "Yes. Cameras, lenses, lighting and editing systems are eligible uses. Because this gear loses value quickly, lenders often set shorter terms and look mostly at your cash flow rather than the equipment's resale value. Microloans fit small kits."
+   },
+   {
+    "q": "Can I buy a production company with an SBA loan?",
+    "a": "Yes. A 7(a) loan can finance the purchase price, equipment and working capital. You'll need at least 10% equity. Lenders review client contracts and whether key clients depend on the seller personally. Seller transition periods help."
+   },
+   {
+    "q": "What rate do video production loans carry?",
+    "a": "With prime at 7.00%, SBA caps variable 7(a) rates at 13.00% for loans from $50,001 to $250,000 and 11.50% from $250,001 to $350,000. Loans above $350,000 are capped at 10.00%. Strong borrowers can negotiate lower."
+   }
+  ]
+ },
+ {
+  "folder": "Automotive Body, Paint, and Interior Repair and Maintenance",
+  "short": "Auto Body Shops",
+  "naics": "811121",
+  "program": "7(a) and 504",
+  "title": "Auto Body Shop Loans: SBA Rates & Terms",
+  "description": "Auto body shop loans: SBA 7(a) and 504 eligibility for paint booths, frame machines, buying a collision shop or building, down payment and rate caps.",
+  "h1": "Auto body shop loans: SBA rates and eligibility",
+  "note": "Collision repair is equipment and real estate heavy. A modern shop needs a paint booth, frame machine, welders, lifts and diagnostic and calibration tools for driver-assist systems. Many auto body loans finance buying an existing shop along with its building, which makes 7(a) or 504 a natural fit. Lenders focus on insurance company relationships, especially direct repair program agreements, along with technician staffing and environmental condition of the property.",
+  "who": "Collision, paint and auto interior repair shops with owners or managers who know the trade and the insurance side of the business. Lenders like I-CAR or OEM certifications and direct repair program agreements with insurers. The shop needs any required state or local repair facility registration and air permits for the paint booth. Start-ups qualify with experience and equity, though buying an established shop is far more common.",
+  "programs": [
+   {
+    "h": "7(a) for buying a shop",
+    "p": "Finances the business, equipment, working capital and the building in one loan. A blended term can stretch to 25 years when real estate is most of the deal."
+   },
+   {
+    "h": "504 for buildings and booths",
+    "p": "Buying or building a shop, or adding a large paint booth, fits a 504 loan with a long fixed rate and about 10% down. Expect an environmental review first."
+   },
+   {
+    "h": "SBA Express for equipment",
+    "p": "A frame machine, ADAS calibration system or new lifts under $500,000 can go through Express with a faster decision. The rate is slightly higher than standard 7(a), but approval comes faster for equipment-only requests."
+   }
+  ],
+  "uses": [
+   "Paint booths and mixing rooms",
+   "Frame machines, welders and lifts",
+   "ADAS calibration and diagnostic equipment",
+   "Buying an existing collision shop and its building",
+   "Working capital while insurer payments clear"
+  ],
+  "amounts": "Auto body loans usually range from $150,000 to $2 million, with real estate deals at the top end. Buyers need at least 10% equity, and 504 projects usually need 10% down or 15% for start-ups and special-purpose buildings. Equipment runs up to 10 years and real estate up to 25 years.",
+  "example_amount": 750000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for an auto body shop",
+   "p": "Lenders ask what share of work comes through insurer direct repair programs and how dependent the shop is on one carrier. They look at cycle time, labor rates and technician headcount, since a shortage of skilled techs caps revenue. On real estate, expect a Phase I environmental review and sometimes more, because paint, solvents and old fuel tanks raise contamination concerns. Equipment age and whether the shop can repair newer vehicles with advanced safety systems also matter."
+  },
+  "related": [
+   "All Other Automotive Repair and Maintenance",
+   "Automotive Glass Replacement Shops",
+   "Car Washes",
+   "Gas Stations"
+  ],
+  "faqs": [
+   {
+    "q": "Can I get an SBA loan for an auto body shop?",
+    "a": "Yes. Collision and paint shops are eligible for 7(a), 504 and Express loans. Common uses are buying an existing shop, purchasing the building, paint booths, frame machines and calibration equipment for newer vehicles. Lenders also review insurer relationships."
+   },
+   {
+    "q": "Can I finance a paint booth with an SBA loan?",
+    "a": "Yes. A paint booth can be financed through a 7(a) or Express loan, or through a 504 loan when it's part of a building project. Installed booths are often treated as fixtures with longer terms."
+   },
+   {
+    "q": "Can I buy a collision shop and its building in one SBA loan?",
+    "a": "Yes. A 7(a) loan can combine the business purchase, equipment, working capital and real estate. When real estate is more than half the project, the blended term can stretch to 25 years, lowering the monthly payment."
+   },
+   {
+    "q": "Do auto body shops need an environmental report for an SBA loan?",
+    "a": "Usually. SBA rules require environmental review for commercial real estate, and auto body shops are flagged as higher-risk uses. Expect at least a Phase I environmental site assessment, and possibly further testing. Budget time for it before closing."
+   },
+   {
+    "q": "What rate will an auto body shop loan carry?",
+    "a": "With prime at 7.00%, 7(a) loans over $350,000 are capped at 10.00% variable. A 504 loan's SBA portion had a 25-year rate around 6.97% in October 2026, with the bank's share priced separately. Smaller loans carry higher caps."
+   }
+  ]
+ },
+ {
+  "folder": "Cement Manufacturing",
+  "short": "Cement Manufacturers",
+  "naics": "327310",
+  "program": "504 and 7(a)",
+  "title": "Cement Manufacturing Loans: SBA Guide",
+  "description": "SBA loans for cement manufacturers: size standard limits, 504 financing up to $5.5 million for plants and equipment, 7(a) uses, terms and rate caps.",
+  "h1": "Cement manufacturing loans: SBA rates and eligibility",
+  "note": "Cement manufacturing means producing portland, masonry and other hydraulic cements, usually by heating limestone and other materials in a kiln and grinding the result. It is one of the most capital-intensive industries there is, and most plants belong to large companies that exceed SBA size limits. Small borrowers in this code tend to be specialty or blended cement producers and grinding operations. For them, the SBA 504 program is the main tool, with lenders focused on permits, raw material supply and energy costs.",
+  "who": "Cement producers that meet the SBA size standard for this code, which is based on employee count including affiliates. Subsidiaries of large building materials groups do not qualify. Lenders want experienced plant management, environmental and air permits in good standing, and secure raw material sources. Ready-mix concrete producers and concrete block makers are different codes, even though they buy cement.",
+  "programs": [
+   {
+    "h": "504 for plant and equipment",
+    "p": "Manufacturers can receive up to $5.5 million in SBA debenture per project, alongside a bank first lien. That suits kiln upgrades, grinding mills, storage silos and plant buildings."
+   },
+   {
+    "h": "7(a) for acquisitions and working capital",
+    "p": "Up to $5 million for buying an existing producer, working capital or mixed equipment needs. Real estate portions can run 25 years. A 7(a) loan is also more flexible than 504 when working capital or goodwill is involved."
+   },
+   {
+    "h": "Energy project financing",
+    "p": "504 projects that cut energy use, such as more efficient kilns or waste heat recovery, may qualify for the larger manufacturer and energy debenture limit."
+   }
+  ],
+  "uses": [
+   "Grinding mills, kilns and dust collection",
+   "Storage silos and loading systems",
+   "Plant buildings and land",
+   "Buying an existing specialty cement producer",
+   "Energy efficiency and emissions upgrades"
+  ],
+  "amounts": "Cement projects that fit SBA programs often run $1 million to well above $5 million, combining a bank loan, an SBA 504 debenture and borrower equity. Expect at least 10% equity, and 15% to 20% for start-ups or special-purpose plants. Real estate and heavy equipment can run 20 to 25 years.",
+  "example_amount": 3000000,
+  "example_years": 25,
+  "risks": {
+   "h": "What lenders look at for a cement manufacturer",
+   "p": "Lenders start with eligibility, since affiliation with a larger company can disqualify the business. Then they focus on environmental permits, emissions compliance and any pending regulatory changes that could require costly upgrades. Energy and fuel costs drive margins, so they review several years of financials and supply contracts. Raw material reserves or supply agreements, plant age, freight distances to customers and dependence on local construction activity all factor into the credit decision."
+  },
+  "related": [
+   "Asphalt Paving Mixture and Block Manufacturing",
+   "All Other Miscellaneous Manufacturing",
+   "All Other Miscellaneous Fabricated Metal Product Manufacturing"
+  ],
+  "faqs": [
+   {
+    "q": "Can a cement manufacturer get an SBA loan?",
+    "a": "Yes, if the company and its affiliates meet the SBA size standard for cement manufacturing. Most large cement producers exceed it. Smaller specialty, blended or grinding operations that qualify can use 504 and 7(a) loans for equipment, plants and acquisitions."
+   },
+   {
+    "q": "What is the largest SBA loan for a manufacturer?",
+    "a": "A 504 project can include up to $5.5 million in SBA debenture for manufacturers, plus a bank first lien and borrower equity, so total project size can be much larger. A 7(a) loan is capped at $5 million."
+   },
+   {
+    "q": "Is a ready-mix concrete plant the same as cement manufacturing?",
+    "a": "No. Ready-mix concrete and concrete block producers have their own NAICS codes. They're eligible for SBA loans too, and the underwriting is similar, focused on equipment, trucks, permits and local construction demand. Size standards differ by code."
+   },
+   {
+    "q": "What is the 504 rate for a manufacturing plant?",
+    "a": "The 25-year all-in 504 debenture rate was about 6.97% in October 2026. It's fixed for the life of the loan on the SBA's portion, roughly 40% of the project. The bank's 50% share is priced separately."
+   },
+   {
+    "q": "How much equity does a cement project need?",
+    "a": "A 504 project normally needs about 10% equity, rising to 15% for start-ups or special-purpose property, and 20% when both apply. Lenders may ask for more on a capital-intensive plant with permit or market risk."
+   }
+  ]
+ },
+ {
+  "folder": "All Other Miscellaneous Wood Product Manufacturing",
+  "short": "Wood Product Manufacturers",
+  "naics": "321999",
+  "program": "7(a) and 504",
+  "title": "Wood Product Manufacturing Loans: SBA",
+  "description": "SBA loans for miscellaneous wood product makers such as pellets, dowels and handles: which businesses fit NAICS 321999, eligibility, terms and rates.",
+  "h1": "Wood product manufacturing loans: SBA rates and eligibility",
+  "note": "NAICS 321999 is the catch-all for wood products that don't fit sawmills, millwork, cabinets, pallets or other named wood codes. It covers makers of wood pellets and fuel logs, dowels, tool handles, wooden ladders, cork products, clothespins, toothpicks and similar items. Loans usually fund saws, CNC routers, dryers, pellet mills and the shop building. Lenders focus on customer contracts, wood supply, equipment resale value and fire and dust safety.",
+  "who": "Wood product manufacturers that meet the SBA size standard for this code, which covers most independent shops. Lenders want owners with woodworking or plant operations experience and reliable sources of logs, lumber or sawmill residue. Craft makers selling online can qualify if the business has real revenue history. Cabinet makers, furniture makers and pallet builders have their own codes but are underwritten in a similar way.",
+  "programs": [
+   {
+    "h": "504 for shops and big equipment",
+    "p": "Buying a building or a pellet line or kiln fits a 504 loan with a long fixed rate. Manufacturers can access up to $5.5 million in SBA debenture."
+   },
+   {
+    "h": "7(a) for mixed needs",
+    "p": "Covers buying an existing manufacturer, equipment, raw material inventory and working capital in one loan on a 10-year term. Real estate included in the same loan can run up to 25 years."
+   },
+   {
+    "h": "Express and microloans for small shops",
+    "p": "A small maker adding a CNC router or a dust collection system can use Express, or a microloan under $50,000. Microlenders also help craft businesses with limited credit history or collateral."
+   }
+  ],
+  "uses": [
+   "CNC routers, lathes and saws",
+   "Pellet mills, dryers and kilns",
+   "Dust collection and fire suppression",
+   "Buying or expanding a shop building",
+   "Lumber and raw material inventory"
+  ],
+  "amounts": "Loans to wood product makers range widely, from $50,000 for a small shop to $3 million or more for a pellet plant. 504 projects usually need about 10% down, or 15% for a start-up. Acquisitions need at least 10% equity. Equipment runs up to 10 years and real estate up to 25 years.",
+  "example_amount": 500000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a wood product manufacturer",
+   "p": "Lenders review whether a few customers, such as a big-box retailer or a single distributor, buy most of the output. They check raw material supply and price swings, especially for pellet makers that depend on sawmill residue. Fire and dust hazards mean they verify insurance coverage and safety systems. Expect equipment appraisals, a look at seasonality for heating products like pellets and firewood, and questions about import competition for commodity items."
+  },
+  "related": [
+   "All Other Miscellaneous Manufacturing",
+   "All Other Miscellaneous Fabricated Metal Product Manufacturing",
+   "Carpet and Rug Mills"
+  ],
+  "faqs": [
+   {
+    "q": "What businesses fall under All Other Miscellaneous Wood Product Manufacturing?",
+    "a": "NAICS 321999 covers wood products not classified elsewhere, such as wood pellets and fuel logs, dowels, tool and broom handles, wooden ladders, cork products, clothespins and toothpicks. Sawmills, millwork, cabinets, pallets and furniture have their own codes."
+   },
+   {
+    "q": "Can a wood pellet plant get an SBA loan?",
+    "a": "Yes, if it meets the SBA size standard. Pellet producers use 504 loans for plants, pellet mills and dryers, and 7(a) loans for working capital and acquisitions. Lenders focus on feedstock supply contracts and seasonal heating demand."
+   },
+   {
+    "q": "Can I finance a CNC router with an SBA loan?",
+    "a": "Yes. A CNC router is a standard equipment purchase under 7(a), Express or 504. Small shops often use Express for speed. The equipment serves as collateral, and the term usually matches its useful life up to 10 years."
+   },
+   {
+    "q": "Can a woodworking start-up get an SBA loan?",
+    "a": "Yes, with a business plan, relevant experience and at least 10% equity. Lenders want evidence of customers or orders. A microloan up to $50,000 can work for a small shop that a bank considers too early."
+   },
+   {
+    "q": "What rate does a $500,000 manufacturing loan carry?",
+    "a": "With prime at 7.00%, a 7(a) loan above $350,000 is capped at 10.00% variable. A 504 loan's SBA portion had a 25-year fixed rate of about 6.97% in October 2026. Smaller loans carry higher caps."
+   }
+  ]
+ },
+ {
+  "folder": "Offices of Podiatrists",
+  "short": "Podiatry Practices",
+  "naics": "621391",
+  "program": "7(a) and 504",
+  "title": "Podiatry Practice Loans: SBA Rates & Terms",
+  "description": "Podiatry practice loans: SBA 7(a) and 504 eligibility for buying a practice, opening an office, equipment and real estate, down payment and rate caps.",
+  "h1": "Podiatry practice loans: SBA rates and eligibility",
+  "note": "Podiatrists borrow to buy an existing practice, open a new office, add equipment like digital X-ray and lasers, or buy the building they practice in. Lenders view podiatry like other medical specialties: strong professional income, low default rates, and a business whose value is tied closely to the doctor. Most loans are 7(a), with 504 used for real estate. Lenders focus on patient volume, payer mix, the selling doctor's transition plan and the buyer's production history.",
+  "who": "Licensed podiatrists (DPMs) in good standing with their state board, including new graduates finishing residency who plan to buy or start a practice. Lenders like associates who have worked in the practice they're buying. Practices must meet Medicare and insurance credentialing requirements to bill. Hospital-owned or nonprofit clinics aren't eligible, but a privately owned group practice qualifies regardless of how many doctors it has.",
+  "programs": [
+   {
+    "h": "7(a) for practice purchases",
+    "p": "Covers goodwill, equipment, working capital and sometimes real estate in one loan. Practice acquisitions usually run 10 years, and longer when real estate is included."
+   },
+   {
+    "h": "504 for an office building",
+    "p": "Buying or building a medical office fits a 504 loan with a long fixed rate and about 10% down. Practices that rent space to other providers can still qualify if they occupy most of the building."
+   },
+   {
+    "h": "SBA Express for equipment",
+    "p": "Digital X-ray, lasers, ultrasound and exam chairs under $500,000 can go through Express with a quick decision. The rate is slightly higher than standard 7(a), but equipment-only requests get a faster lender decision."
+   }
+  ],
+  "uses": [
+   "Buying an existing podiatry practice",
+   "Opening a new office and build-out",
+   "Digital X-ray, ultrasound and laser equipment",
+   "Buying a medical office building",
+   "Buying out a retiring partner"
+  ],
+  "amounts": "Podiatry loans usually range from $200,000 to $1.5 million, with real estate deals higher. Buyers need at least 10% equity under current SBA rules, though a seller note on standby can sometimes cover part of it. Equipment and acquisitions run up to 10 years, and real estate up to 25 years.",
+  "example_amount": 500000,
+  "example_years": 10,
+  "risks": {
+   "h": "What lenders look at for a podiatry practice",
+   "p": "Lenders review three years of practice collections, patient counts and payer mix, since Medicare and insurers set much of the revenue. They compare collections to production to judge billing quality. On a purchase, they focus on how long the seller will stay to introduce patients, referral sources from primary care doctors and diabetes clinics, and whether the buyer's own production supports the debt. Surgical work, orthotics and in-office procedures add revenue and help the application."
+  },
+  "related": [
+   "Medical Practices",
+   "Offices of Dentists",
+   "Offices of Physical, Occupational and Speech Therapists, and Audiologists",
+   "All Other Outpatient Care Centers"
+  ],
+  "faqs": [
+   {
+    "q": "Can a podiatrist get an SBA loan to buy a practice?",
+    "a": "Yes. A 7(a) loan is the most common way podiatrists buy practices. It covers goodwill, equipment and working capital on a 10-year term. You'll need at least 10% equity, and the lender will review the practice's collections and the seller's transition plan."
+   },
+   {
+    "q": "Can a new podiatrist get a loan to start a practice?",
+    "a": "Yes. New DPMs can use 7(a) loans for build-out, equipment and working capital. Lenders want a business plan, a realistic patient ramp-up and student loan payments that still leave room for the new debt. Experience as an associate helps."
+   },
+   {
+    "q": "How much does a podiatry practice loan cost?",
+    "a": "With prime at 7.00%, 7(a) loans above $350,000 are capped at 10.00% variable, and loans from $250,001 to $350,000 at 11.50%. Strong medical borrowers can often negotiate below the cap. Smaller loans carry higher caps."
+   },
+   {
+    "q": "Can I buy my office building with an SBA loan?",
+    "a": "Yes. Owner-occupied medical offices qualify for 7(a) and 504 real estate loans with terms up to 25 years. The 504 debenture rate was about 6.97% in October 2026 for the SBA's portion. Equipment can be included."
+   },
+   {
+    "q": "Do student loans hurt a podiatrist's SBA application?",
+    "a": "They count in the debt analysis, but they don't disqualify you. Lenders look at whether practice income can cover both your personal obligations and the business loan. Income-driven repayment plans often help the numbers. Bring current loan statements to the application."
+   }
+  ]
+ }
+]
