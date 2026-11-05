@@ -310,9 +310,22 @@ def page(path, title, desc, body, active=None, preload=None, extra_head=""):
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
+    if out.endswith("index.html"):
+        # Hostinger's CDN caches static HTML for a year and its purge is unreliable.
+        # index.php takes priority over index.html and sends no-cache headers, so
+        # pages are never stuck on an old version. (Delete these on hosts with sane caching.)
+        with open(out[:-4] + "php", "w", encoding="utf-8") as f:
+            f.write(NOCACHE_PHP)
     PAGES.append((path, title, desc))
 
 PAGES = []
+
+NOCACHE_PHP = """<?php
+header('Content-Type: text/html; charset=utf-8');
+header('Cache-Control: no-cache, must-revalidate, max-age=0');
+header('X-Robots-Tag: noindex, nofollow'); // demo only: remove at launch
+readfile(__DIR__ . '/index.html');
+"""
 
 def page_hero(eyebrow, h1, lead, img_key=None, crumbs=None, extra=""):
     cr = ""

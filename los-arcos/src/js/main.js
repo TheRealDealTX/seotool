@@ -40,6 +40,11 @@
   /* ---------- Mobile menu ---------- */
   var btn = $('.menu-btn'), nav = $('#site-nav');
   function setMenu(open) {
+    if (open && header) {
+      header.classList.remove('is-hidden');
+      /* open the panel right under the header, wherever the header sits (bars above it at page top) */
+      nav.style.setProperty('--nav-top', Math.max(0, Math.round(header.getBoundingClientRect().bottom)) + 'px');
+    }
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     nav.classList.toggle('is-open', open);

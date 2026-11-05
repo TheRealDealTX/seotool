@@ -1,8 +1,8 @@
 # Los Arcos Apartments & Townhomes: concept site
 
-A static pitch site (plain HTML/CSS/JS, no framework, no server runtime) for Los Arcos Apartments & Townhomes, 11315 Fondren Rd, Houston, TX 77035.
+A static pitch site (plain HTML/CSS/JS, no framework; a tiny index.php per page only sets no-cache headers on Hostinger) for Los Arcos Apartments & Townhomes, 11315 Fondren Rd, Houston, TX 77035.
 
-**Live demo (temporary Hostinger domain):** https://darkblue-anteater-582827.hostingersite.com
+**Live demo (temporary Hostinger domain):** https://linen-squid-658043.hostingersite.com
 
 ## Build
 
@@ -34,3 +34,7 @@ python3 -c "from PIL import Image; im=Image.open('photo.jpg').convert('RGB'); [ 
 ## Deploy (Hostinger Agency plan)
 
 Zip the contents of `dist/` (with `index.html` at the archive root) and upload the zip to the website's `.h5g/` directory with `agency-hosting_files_generate-upload-url`. Then run `agency-hosting_files_import-website-from-archive`.
+
+**Caching:** Hostinger's CDN caches plain `.html` responses for a year, and `agency-hosting_cache_clear-website` doesn't reliably purge every edge. To avoid that, the build writes an `index.php` next to every `index.html`. Hostinger serves `index.php` first, and it returns the same HTML with `Cache-Control: no-cache`, so updates show up immediately. CSS and JS are cache-busted with `?v=<hash>`. Images keep long caching; give a replaced photo a new file name if it must update right away.
+
+`.htaccess` is ignored on this platform, and robots.txt on `*.hostingersite.com` is served by Hostinger itself.
