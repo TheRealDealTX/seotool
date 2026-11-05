@@ -230,7 +230,7 @@ def footer():
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="logo" href="/">{LOGO_MARK}<span class="logo__text"><span class="logo__name">Los Arcos</span><span class="logo__sub">Apartments &amp; Townhomes</span></span></a>
-        <address>{P["street"]}<br>{P["city"]}, {P["state"]} {P["zip"]}<br><a href="tel:{P["tel"]}">{P["phone"]}</a></address>
+        <address><strong style="color:#fff;font-weight:600">Los Arcos Apartments</strong><br>{P["street"]}<br>{P["city"]}, {P["state"]} {P["zip"]}<br><a href="tel:{P["tel"]}">{P["phone"]}</a></address>
         <a class="link-arrow" style="color:var(--clay-soft)" href="{DIRECTIONS}" target="_blank" rel="noopener">Get Directions {icon("arrow-ur").replace('<svg', '<svg style="width:16px;height:16px"')}</a>
         <div class="social">{social}</div>
       </div>
@@ -327,7 +327,7 @@ def page_hero(eyebrow, h1, lead, img_key=None, crumbs=None, extra=""):
 </section>
 <div class="arcade" aria-hidden="true" style="background-color:var(--sand)"></div>'''
 
-def cta_band(h="Your quiet retreat in <em>Southwest Houston</em> is waiting.", p="Tour Los Arcos in person or online, and our leasing team will help you find the floor plan that fits your life."):
+def cta_band(h="Your quiet retreat in <em>Southwest Houston</em> is waiting.", p="Tour Los Arcos Apartments in person or online, and our leasing team will help you find the floor plan that fits your life."):
     return f'''<section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="cta reveal">
@@ -407,13 +407,13 @@ def plan_cards(limit=None):
 def build_home():
     slides = [
         ("hero-pool", "Resort-style days", "Sunlit pool days, <em>steps from home.</em>",
-         "Unwind by the sparkling pool in a gated, garden-style community that residents call peaceful.",
+         "Unwind by the sparkling pool at Los Arcos Apartments, a gated, garden-style community residents call peaceful.",
          "/amenities/", "Explore Amenities"),
         ("hero-living", "Space to breathe", "Apartments &amp; townhomes <em>with room to grow.</em>",
-         "One-, two- and three-bedroom apartments plus townhomes, from 550 to nearly 1,500 square feet.",
+         "Los Arcos Apartments offers one-, two- and three-bedroom homes plus townhomes, from 550 to nearly 1,500 square feet.",
          "/floor-plans/", "View Floor Plans"),
         ("hero-skyline", "Southwest Houston", "Quiet streets. <em>Quick commutes.</em>",
-         "Tucked into Brays Oaks with easy drives to the Galleria, the Texas Medical Center and downtown.",
+         "Los Arcos Apartments is tucked into Brays Oaks, with easy drives to the Galleria, the Texas Medical Center and downtown.",
          "/neighborhood/", "See the Neighborhood"),
     ]
     sl, msgs, dots = [], [], []
@@ -442,13 +442,17 @@ def build_home():
     strip = "".join(f'<a href="/gallery/" aria-label="View gallery: {html.escape(IMAGES[k]["alt"])}">{img(k, sizes="320px", alt="")}</a>' for k in strip_keys)
 
     themes = [
-        ("moon", "Quiet &amp; peaceful", "The word residents use most. Los Arcos is a calm, low-key place to come home to."),
+        ("moon", "Quiet &amp; peaceful", "The word residents use most. Los Arcos Apartments is a calm, low-key place to come home to."),
         ("leaf", "Clean, cared-for grounds", "Well-kept landscaping and tidy common areas come up again and again."),
         ("smile", "Friendly, helpful staff", "Reviewers regularly mention a leasing and maintenance team that makes them feel welcome."),
         ("home", "Beautiful, cozy homes", "Spacious layouts with a warm, comfortable feel, from one-bedrooms to two-story townhomes."),
     ]
     theme_html = "".join(f'<div class="theme reveal" data-delay="{i % 2}">{icon(ic)}<h3>{t}</h3><p>{d}</p></div>' for i, (ic, t, d) in enumerate(themes))
 
+    mq_items = ["Gated community", "Sparkling pool", "Garden courtyards", "1, 2 &amp; 3 bedrooms", "Townhomes", "On-site laundry", "Quiet &amp; peaceful", "Southwest Houston"]
+    mq_group = "".join(f"<span>{t}</span><i></i>" for t in mq_items)
+    marquee = (f'<div class="marquee" aria-label="Community highlights"><div class="marquee__track">'
+               f'<div class="marquee__group">{mq_group}</div><div class="marquee__group" aria-hidden="true">{mq_group}</div></div></div>')
     body = f'''<section class="hero" aria-roledescription="carousel" aria-label="Welcome to Los Arcos">
   <div class="hero__slides">{"".join(sl)}</div>
   <div class="hero__inner">
@@ -460,6 +464,7 @@ def build_home():
       </div>
     </div>
   </div>
+  <a class="scroll-cue" href="#intro" aria-label="Scroll to introduction"><span></span></a>
   <a class="hero__arch" href="{GMAPS}" target="_blank" rel="noopener" style="color:#fff;text-decoration:none" aria-label="Rated {P["rating"]} out of 5 from {P["reviews"]} Google reviews (opens Google Maps)">
     <strong>{P["rating"]}</strong><div class="stars" aria-hidden="true">★★★★★</div><small>{P["reviews"]} Google reviews</small>
   </a>
@@ -467,20 +472,20 @@ def build_home():
 
 <div class="wrap"><div class="tiles">{tile_html}</div></div>
 
-<section class="section">
+<section class="section" id="intro">
   <div class="wrap split">
     <div class="split__media reveal">
       <div class="arch-img">{img("ext-garden", sizes="(max-width:860px) 90vw, 560px", alt="Garden-style apartment buildings surrounded by mature trees")}</div>
       <div class="arch-img arch-img--small">{img("am-pool-plants", sizes="240px", alt="Community swimming pool framed by plants")}</div>
-      <div class="badge"><strong>{P["units"]}</strong><span>homes on a<br>gated, garden-style campus</span></div>
+      <div class="badge"><strong data-count="{P["units"]}">{P["units"]}</strong><span>homes on a<br>gated, garden-style campus</span></div>
     </div>
     <div class="reveal" data-delay="1">
       <span class="eyebrow">A quiet retreat in Southwest Houston</span>
       <h1>Spacious Apartments &amp; Townhomes in <em>Southwest Houston</em></h1>
-      <p class="lead">Los Arcos is a gated, garden-style community on Fondren Road in the Brays Oaks neighborhood, where tree-shaded courtyards, a sparkling pool and genuinely friendly neighbors set a slower, calmer pace.</p>
-      <p>Choose from one-, two- and three-bedroom apartments or two-story townhomes ranging from 550 to 1,498 square feet. Residents tell us what they love most is the peace and quiet, the clean, well-kept grounds and a leasing team that knows them by name.</p>
+      <p class="lead">Los Arcos Apartments is a gated, garden-style community on Fondren Road in the Brays Oaks neighborhood, where tree-shaded courtyards, a sparkling pool and genuinely friendly neighbors set a slower, calmer pace.</p>
+      <p>Choose from one-, two- and three-bedroom apartments or two-story townhomes ranging from 550 to 1,498 square feet. Residents tell us what they love most about Los Arcos Apartments is the peace and quiet, the clean, well-kept grounds and a leasing team that knows them by name.</p>
       <div class="stats">
-        <div><strong>{P["rating"]}★</strong><span>{P["reviews"]} Google reviews</span></div>
+        <div><strong><span data-count="{P["rating"]}">{P["rating"]}</span>★</strong><span>{P["reviews"]} Google reviews</span></div>
         <div><strong>550–1,498</strong><span>square feet</span></div>
         <div><strong>1–3 BR</strong><span>plus townhomes</span></div>
       </div>
@@ -491,25 +496,26 @@ def build_home():
 
 <section aria-label="Photo highlights" style="padding-bottom:clamp(48px,7vw,96px)">
   <div class="wrap section-head reveal" style="margin-bottom:28px">
-    <div><span class="eyebrow">Life at Los Arcos</span><h2>Light-filled rooms, <em>shaded courtyards</em></h2></div>
+    <div><span class="eyebrow">Life at Los Arcos Apartments</span><h2>Light-filled rooms, <em>shaded courtyards</em></h2></div>
     <a class="link-arrow" href="/gallery/">Open the full gallery {icon("arrow").replace('<svg', '<svg style="width:18px;height:18px"')}</a>
   </div>
   <div class="strip">{strip}</div>
 </section>
 
+{marquee}
 <section class="section section--dark arch-top" id="reviews">
   <div class="wrap reviews">
     <div class="rating-card reveal">
       <span class="g-mark">{icon("star").replace('<svg', '<svg style="width:18px;height:18px"')} Google Reviews</span>
       <div class="big">{P["rating"]}</div>
       <div class="stars" aria-hidden="true">★★★★★</div>
-      <p>Average from <strong style="color:#fff">{P["reviews"]} reviews</strong>, including <strong style="color:#fff">{P["five_star"]} five-star</strong> ratings.</p>
+      <p>Los Arcos Apartments averages {P["rating"]} stars from <strong style="color:#fff"><span data-count="350" data-suffix="+">350+</span> reviews</strong>, including <strong style="color:#fff"><span data-count="{P["five_star"]}">{P["five_star"]}</span> five-star</strong> ratings.</p>
       <a class="btn btn--light" href="{GMAPS}" target="_blank" rel="noopener">Read reviews on Google {icon("arrow-ur")}</a>
     </div>
     <div>
       <span class="eyebrow">What residents say</span>
       <h2 class="reveal">Rated <em>{P["rating"]} stars</em> by the people who live here.</h2>
-      <p class="lead reveal">Across hundreds of Google reviews, the same themes keep coming up.</p>
+      <p class="lead reveal">Across hundreds of Google reviews of Los Arcos Apartments, the same themes keep coming up.</p>
       <div class="themes">{theme_html}</div>
       <p class="disclaimer">Themes summarized from public Google reviews. Rating and review count as listed on Google Maps.</p>
     </div>
@@ -519,7 +525,7 @@ def build_home():
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
-      <div><span class="eyebrow">Floor plans</span><h2>Find the layout that <em>feels like home</em></h2></div>
+      <div><span class="eyebrow">Floor plans</span><h2>Find the layout that <em>feels like home</em></h2><p class="lead" style="margin-top:14px">Every home at Los Arcos Apartments is designed for easy, comfortable living, with generous closets and natural light.</p></div>
       <a class="btn btn--ghost" href="/floor-plans/">See all floor plans</a>
     </div>
     <div class="plans">{plan_cards(3)}</div>
