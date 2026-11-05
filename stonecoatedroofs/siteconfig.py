@@ -1,5 +1,6 @@
 """Business facts, navigation and keyword overrides for stonecoatedroofs.com."""
 
+import os
 from datetime import date
 
 BIZ = {
@@ -12,7 +13,7 @@ BIZ = {
     "state": "Texas",
 }
 
-TODAY = date.today().isoformat()
+TODAY = os.environ.get("SITE_TODAY") or date.today().isoformat()  # pin to rebuild without re-dating every page
 
 NAV = [
     ("Why Replace", "/why-replace/", None),

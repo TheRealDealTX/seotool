@@ -89,10 +89,13 @@ for p in WP["posts"]:
 for n in NEW:
     if n["kind"] != "guide":
         continue
+    # optional meta: date/modified (default: build date), category slug (default general), image, related (post slugs)
+    cat = CAT_BY_SLUG[n.get("category", "general")]
     POSTS.append(dict(id=n["slug"], kind="post", slug=n["slug"], path=f"/{n['slug']}/", title=n["h1"], h1=n["h1"],
-                      seo_title=n["title"], description=n["description"], date=TODAY, modified=TODAY,
-                      categories=[1], cat_slugs=["general"], image={"src": GUIDE_IMG[n["slug"]], "width": 900, "height": 600},
-                      excerpt=n["lede"], body=n["body"], faq=n.get("faq", []), lede=n["lede"]))
+                      seo_title=n["title"], description=n["description"], date=n.get("date", TODAY),
+                      modified=n.get("modified", n.get("date", TODAY)), categories=[cat["id"]], cat_slugs=[cat["slug"]],
+                      image={"src": n.get("image") or GUIDE_IMG[n["slug"]], "width": 900, "height": 600},
+                      excerpt=n["lede"], body=n["body"], faq=n.get("faq", []), lede=n["lede"], related=n.get("related")))
 POSTS.sort(key=lambda p: (p["date"], str(p["id"])), reverse=True)
 
 
@@ -326,7 +329,7 @@ def fmt_date(iso):
 
 
 TOOL_HINTS = [  # (regex on slug/title, tool path)
-    (r"maint|checklist", "/tools/roof-maintenance-checklist-log/"),
+    (r"maint|checklist|gutter", "/tools/roof-maintenance-checklist-log/"),
     (r"insurance|premium|class-4|discount", "/tools/insurance-discount-estimator/"),
     (r"hail|storm", "/tools/hail-damage-roof-checklist/"),
     (r"cost|price|worth|regret|cheap", "/tools/stone-coated-roof-cost-calculator/"),
@@ -386,6 +389,8 @@ def build_posts():
         # stable but varied: neighbours by date
         idx = POSTS.index(p)
         related = sorted(related, key=lambda r: abs(POSTS.index(r) - idx))[:3]
+        if p.get("related"):
+            related = [next(r for r in POSTS if r["slug"] == s) for s in p["related"]]
         lede = p.get("lede") or trim(p["excerpt"], 210)
         meta = f'<span>Updated <b>{fmt_date(p["modified"])}</b></span><span><b>{read_min(p["body"])}</b> min read</span><span>By <b>{BRAND}</b></span>'
         graph = [crumbs_ld(trail), {
@@ -585,7 +590,8 @@ def listing(path, trail, h1, lede, eyebrow, posts, title, description, chips_act
             prevnext += f'<link rel="prev" href="{ORIGIN}{b if page_no == 2 else f"{b}page/{page_no - 1}/"}">'
         if page_no < pages:
             prevnext += f'<link rel="next" href="{ORIGIN}{b}page/{page_no + 1}/">'
-    page(path, title, description, body, graph=graph, extra_head=prevnext, group="category" if chips_active not in ("all",) else "page")
+    page(path, title, description, body, graph=graph, extra_head=prevnext, group="category" if chips_active not in ("all",) else "page",
+         lastmod=max([TODAY] + [p["modified"] for p in posts]))
 
 
 def build_blog():
@@ -645,7 +651,8 @@ def write_sitemaps():
     for g, fname in (("page", "page-sitemap.xml"), ("post", "post-sitemap.xml"), ("category", "category-sitemap.xml")):
         (OUT / fname).write_text(urlset(groups[g]))
     (OUT / "sitemap_index.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-                                          + "".join(f"  <sitemap><loc>{ORIGIN}/{f}</loc><lastmod>{TODAY}</lastmod></sitemap>\n" for f in ("page-sitemap.xml", "post-sitemap.xml", "category-sitemap.xml"))
+                                          + "".join(f"  <sitemap><loc>{ORIGIN}/{f}</loc><lastmod>{max([TODAY] + [m for _, m in groups[g]])}</lastmod></sitemap>\n"
+                                                    for g, f in (("page", "page-sitemap.xml"), ("post", "post-sitemap.xml"), ("category", "category-sitemap.xml")))
                                           + "</sitemapindex>\n")
     (OUT / "sitemap.xml").write_text(urlset(groups["page"] + groups["post"] + groups["category"]))
     (OUT / "robots.txt").write_text(f"User-agent: *\nDisallow: /home.html\nDisallow: /quote.php\n\nSitemap: {ORIGIN}/sitemap_index.xml\nSitemap: {ORIGIN}/sitemap.xml\n")

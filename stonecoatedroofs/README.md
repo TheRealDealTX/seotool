@@ -24,8 +24,16 @@ a PHP lead handler.
 | `backup/wordpress-2026-10-06/` | REST exports and rendered HTML of every URL on the WordPress site |
 
 ```sh
-python3 build.py && python3 validate.py
+SITE_TODAY=2026-10-07 python3 build.py && python3 validate.py
 ```
+
+`SITE_TODAY` pins the build date (asset `?v=`, page dates, sitemap `lastmod`) to the one baked into the current
+`public/`, so a rebuild only rewrites the pages that actually changed; leave it out to re-date every page.
+
+**New blog posts** go in `content/new/<slug>.html` with `"kind":"guide"` and, in the META JSON, `"date"` (YYYY-MM-DD),
+`"category"` (topic slug, default `general`), `"image"` (put the `.webp` and its `-768x512.webp` card size in
+`public/wp-content/uploads/YYYY/MM/`) and optionally `"related"` (three post slugs) and `"faq"`. Don't put an
+`inline-cta` box in the body; the build adds one. The build adds the post to `/blog/`, its `/topic/` page and the sitemaps.
 
 `validate.py` fails the build if any of the 81 WordPress URLs or 923 media URLs is missing, any internal
 link or image is broken, a page has ≠1 H1 / no canonical / bad JSON-LD, titles or descriptions repeat,
