@@ -473,9 +473,11 @@ def sidebar_html(page, toc):
 <a class="btn btn-ghost-light" href="{SITE['phone_href']}" data-loc="sidebar">{icon('phone')}{SITE['phone_display']}</a>
 <p class="small">{esc(SITE['company'])} &middot; TDI License #{SITE['license_number']}</p>
 </div>""")
-    rel = [p.strip() for p in page.get("related", "").split(",") if p.strip()]
+    # related: comma-separated paths; "path=Label" overrides the default link label
+    rel = [p.strip().partition("=") for p in page.get("related", "").split(",") if p.strip()]
+    rel = [(p.strip(), label.strip() or TITLES.get(p.strip(), p.strip())) for p, _, label in rel]
     if rel:
-        lis = "".join(f'<li><a href="{p}">{esc(TITLES.get(p, p))}</a></li>' for p in rel)
+        lis = "".join(f'<li><a href="{p}">{esc(label)}</a></li>' for p, label in rel)
         parts.append(f'<div class="side-card"><h3>Related</h3><ul class="related-list">{lis}</ul></div>')
     parts.append(f"""<div class="side-card"><h3>Claim tools</h3><ul class="related-list">
 <li><a href="/tools/smoke-damage-scope-calculator/">Smoke Damage Scope Calculator</a></li>
@@ -729,7 +731,7 @@ def build_blog(posts):
                 + (f'<span>{esc(p["category"])}</span>' if p.get("category") else "") + "</p>")
         author_box = (f'<div class="author-box"><div class="author-avatar" aria-hidden="true">{esc(initials)}</div><div>'
                       f'<p><strong>{esc(author)}</strong></p><p>Writes Smoke Damage Public Adjuster\'s guides for Texas property owners dealing with smoke and fire insurance claims.</p></div></div>')
-        main = render_md_page(p, extra_after=author_box, hero_meta=meta) + final_cta()
+        main = render_md_page(p, extra_after=author_box, hero_meta=meta) + (final_cta(title=p["cta_title"]) if p.get("cta_title") else final_cta())
         write(p["path"], render_page(p, main))
         register(p)
     # index

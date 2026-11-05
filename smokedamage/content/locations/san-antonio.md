@@ -17,7 +17,7 @@ region: South Texas
 nearby: New Braunfels, Schertz, Converse, Universal City, Helotes, Boerne, Leon Valley, Live Oak, Seguin
 lat: 29.4241
 lng: -98.4936
-related: /smoke-damage-claims/, /residential-smoke-damage-claims/, /underpaid-smoke-damage-claims/, /texas/new-braunfels/, /texas/austin/
+related: /smoke-damage-claims/, /residential-smoke-damage-claims/, /underpaid-smoke-damage-claims/, /blog/fire-smoke-damage-claim-services-san-antonio/=San Antonio Claim Services Guide, /texas/new-braunfels/, /texas/austin/
 ---
 
 San Antonio has some of the oldest neighborhoods in Texas alongside some of the newest. Limestone and wood-frame homes in King William, Monte Vista and Tobin Hill stand a few miles from tract subdivisions stretching toward Boerne, Helotes and the Loop 1604 corridor. The city's footprint also crosses a natural divide: the Hill Country rises to the north and west, while flatter brush country opens to the south.

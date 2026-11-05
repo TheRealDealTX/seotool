@@ -28,6 +28,8 @@ related: /soot-damage-claims/, /hvac-smoke-damage/, /smoke-damaged-contents/
 
 Blog posts add: `published: 2026-09-28`, `author: Joseph Dittman`,
 `category: Claim Documentation`, `status: published` (or `draft`).
+Optional on blog posts: `cta_title:` (heading of the closing CTA section).
+In `related:`, an entry `path=Label` overrides the default sidebar link label.
 Location pages add: `city: Houston`, `county: Harris County`,
 `region: Gulf Coast`, `nearby: Pasadena, Pearland, Katy, Sugar Land`,
 `lat: 29.7604`, `lng: -95.3698`.
