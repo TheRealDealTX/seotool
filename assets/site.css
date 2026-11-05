@@ -1,11 +1,11 @@
-:root{
+@font-face{font-family:"Fraunces Fallback";font-weight:100 650;src:local("Times New Roman Bold"),local("TimesNewRoman-Bold"),local("Liberation Serif Bold"),local("LiberationSerif-Bold");size-adjust:109.01%;ascent-override:89.72%;descent-override:23.39%;line-gap-override:0%}@font-face{font-family:"Fraunces Fallback";font-weight:651 900;src:local("Times New Roman Bold"),local("TimesNewRoman-Bold"),local("Liberation Serif Bold"),local("LiberationSerif-Bold");size-adjust:112.94%;ascent-override:86.59%;descent-override:22.58%;line-gap-override:0%}@font-face{font-family:"Inter Fallback";font-weight:100 550;src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Liberation Sans"),local("LiberationSans");size-adjust:109.38%;ascent-override:88.57%;descent-override:22.05%;line-gap-override:0%}@font-face{font-family:"Inter Fallback";font-weight:551 900;src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold"),local("LiberationSans-Bold");size-adjust:104.18%;ascent-override:92.99%;descent-override:23.15%;line-gap-override:0%}:root{
   --paper:#F5F7FA; --panel:#FFFFFF; --ink:#0B1F3A; --muted:#5A6B82; --green:#17734F; --green-soft:#E3F2EA;
   --mint:#7DD3A8; --amber:#B7791F; --amber-soft:#FDF1DC; --rule:#E2E8F0; --rule-strong:#CBD5E1; --bar-base:#0B1F3A;
   --band-1:#0B1F3A; --band-2:#123A63; --band-ink:#FFFFFF; --band-muted:#B9C7DA;
   --shadow:0 1px 2px rgba(11,31,58,.05),0 6px 20px -8px rgba(11,31,58,.14);
   --shadow-lg:0 2px 4px rgba(11,31,58,.06),0 24px 48px -16px rgba(11,31,58,.30);
   --measure:68ch; --r:14px; --r-sm:8px;
-  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --serif:"Fraunces","Fraunces Fallback",Georgia,"Times New Roman",serif;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark){
@@ -20,7 +20,7 @@
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
-body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 "Inter","Inter Fallback",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:var(--green);text-underline-offset:.2em;text-decoration-thickness:1px;text-decoration-color:color-mix(in srgb,currentColor 45%,transparent)}
 a:hover{text-decoration-color:currentColor;text-decoration-thickness:2px}
 :focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
