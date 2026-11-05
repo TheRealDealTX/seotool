@@ -465,8 +465,8 @@ def build_home():
     </div>
   </div>
   <a class="scroll-cue" href="#intro" aria-label="Scroll to introduction"><span></span></a>
-  <a class="hero__arch" href="{GMAPS}" target="_blank" rel="noopener" style="color:#fff;text-decoration:none" aria-label="Rated {P["rating"]} out of 5 from {P["reviews"]} Google reviews (opens Google Maps)">
-    <strong>{P["rating"]}</strong><div class="stars" aria-hidden="true">★★★★★</div><small>{P["reviews"]} Google reviews</small>
+  <a class="hero__arch" href="{GMAPS}" target="_blank" rel="noopener" style="color:#fff;text-decoration:none">
+    <strong>{P["rating"]}</strong><span class="sr-only"> out of 5 stars from</span><div class="stars" aria-hidden="true">★★★★★</div><small>{P["reviews"]} Google reviews</small><span class="sr-only"> (opens Google Maps)</span>
   </a>
 </section>
 
@@ -654,7 +654,9 @@ def build_gallery():
     figs = []
     for n, k in enumerate(order):
         cat = IMAGES[k]["cat"]
-        figs.append(f'<figure data-cat="{cat}"><button type="button" data-full="/img/{k}-1600.webp" aria-label="Enlarge photo: {html.escape(IMAGES[k]["alt"], quote=True)}">{img(k, sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 400px", eager=(n < 2), nolazy=(n < 10))}</button><figcaption>{cat.title()}</figcaption></figure>')
+        gw, gh = dims(k, 900)
+        span = round((400 * gh / gw + 16) / 4)  # rows of 4px at ~400px column width
+        figs.append(f'<figure data-cat="{cat}" style="--span:{span}"><button type="button" data-full="/img/{k}-1600.webp" aria-label="Enlarge photo: {html.escape(IMAGES[k]["alt"], quote=True)}">{img(k, sizes="(max-width:700px) 100vw, (max-width:1100px) 50vw, 400px", eager=(n < 3), nolazy=(n < 6))}</button><figcaption>{cat.title()}</figcaption></figure>')
     body = page_hero("Gallery", "A look around <em>Los Arcos</em>",
                      "Browse interiors, exteriors and amenities. Select any photo to view it larger.", None, "Gallery") + f'''
 <section class="section" style="padding-top:48px">

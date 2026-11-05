@@ -312,11 +312,14 @@ p{margin:0 0 1.1em}
 .note{font-size:.85rem;color:var(--muted)}
 
 /* ---------- Gallery ---------- */
-.masonry{columns:3 300px;column-gap:16px}
-.masonry figure{margin:0 0 16px;break-inside:avoid;border-radius:var(--radius-sm);overflow:hidden;position:relative;cursor:zoom-in;background:var(--sand)}
+/* Row-ordered masonry: DOM order = visual order, so the top row loads first */
+.masonry{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:4px;column-gap:16px}
+@media (max-width:1100px){.masonry{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.masonry{grid-template-columns:1fr;grid-auto-rows:auto}.masonry figure{grid-row:auto!important}.masonry img{height:auto!important}}
+.masonry figure{grid-row:span var(--span,60);margin:0 0 16px;border-radius:var(--radius-sm);overflow:hidden;position:relative;cursor:zoom-in;background:var(--sand)}
 .masonry figure[hidden]{display:none}
-.masonry button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
-.masonry img{width:100%;transition:transform .8s var(--ease),filter .4s}
+.masonry button{display:block;width:100%;height:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.masonry img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .4s}
 .masonry figure:hover img{transform:scale(1.04)}
 .masonry figcaption{position:absolute;left:12px;bottom:12px;background:rgba(251,248,243,.92);border-radius:999px;padding:.3em .85em;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:0;transform:translateY(6px);transition:all .35s var(--ease);pointer-events:none}
 .masonry figure:hover figcaption,.masonry figure:focus-within figcaption{opacity:1;transform:none}
@@ -510,13 +513,14 @@ form.is-done{display:none}
 .header.is-hidden{transform:translateY(-100%)}
 
 /* Split-word heading reveal */
-.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.08em;margin-bottom:-.08em}
-.w > span{display:inline-block;will-change:transform}
-.js .split-words .w > span{transform:translateY(105%);opacity:0;transition:transform .9s var(--ease),opacity .6s ease;transition-delay:calc(var(--i) * 45ms)}
-.js .split-words.is-in .w > span{transform:none;opacity:1}
-.hero__msg .w > span{transform:translateY(105%);opacity:0}
+/* no overflow clipping: keeps the normal baseline so line heights never shift (CLS-safe) */
+.w{display:inline}
+.w > span{display:inline-block}
+.js .split-words .w > span{transform:translateY(.45em);opacity:0;filter:blur(8px);transition:transform .9s var(--ease),opacity .7s ease,filter .8s ease;transition-delay:calc(var(--i) * 45ms)}
+.js .split-words.is-in .w > span{transform:none;opacity:1;filter:none}
+.hero__msg .w > span{transform:translateY(.45em);opacity:0;filter:blur(10px)}
 .hero__msg.is-active .w > span{animation:wordUp 1s var(--ease) both;animation-delay:calc(var(--i) * 60ms + .1s)}
-@keyframes wordUp{to{transform:none;opacity:1}}
+@keyframes wordUp{to{transform:none;opacity:1;filter:none}}
 
 /* Arch clip reveal for framed images */
 .js .clip-reveal{clip-path:inset(100% 0 0 0 round 999px 999px var(--radius) var(--radius));transform:none;opacity:1;transition:clip-path 1.3s var(--ease)}
