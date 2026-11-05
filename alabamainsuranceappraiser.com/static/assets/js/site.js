@@ -31,7 +31,12 @@
 
   /* ---------- mobile nav + dropdowns ---------- */
   var toggle = d.querySelector("[data-nav-toggle]");
+  function navTop() {
+    if (header) root.style.setProperty("--nav-top", Math.max(0, header.getBoundingClientRect().bottom) + "px");
+  }
+  w.addEventListener("resize", navTop);
   if (toggle) toggle.addEventListener("click", function () {
+    navTop();
     var open = d.body.classList.toggle("nav-open");
     toggle.setAttribute("aria-expanded", open);
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
@@ -203,7 +208,7 @@
             f.reset(); if (ts) ts.value = Math.floor(Date.now() / 1000);
             status.className = "form-status ok";
             status.textContent = res.message || "Thank you — your claim details were sent. We'll be in touch shortly.";
-            if (w.gtag) w.gtag("event", "generate_lead");
+            (w.dataLayer = w.dataLayer || []).push({ event: "generate_lead", form_page: location.pathname });
           } else {
             status.className = "form-status err";
             status.textContent = res.message || "Something went wrong. Please call (844) 537-1427 or email info@alabamainsuranceappraiser.com.";

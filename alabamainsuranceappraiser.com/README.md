@@ -137,18 +137,28 @@ Then clear the cache (`agency-hosting_cache_clear-website`).
   requested over `http://`/`www.` are served directly by the platform (no PHP
   runs), so they rely on their canonical tags.
 
-## The old WordPress site (rollback)
+## The old WordPress site
 
-The WordPress website (UID `dXa6n8AXT`) was **not deleted**. Its primary domain
-was changed to `wp-old.alabamainsuranceappraiser.com` (also reachable at
-`dimgrey-cheetah-219027.hostingersite.com`) so the main domain could move to the
-new site. A `robots.txt` with `Disallow: /` was added to its web root so the old
-copy isn't crawled as duplicate content.
+The WordPress website (UID `dXa6n8AXT`) was parked on
+`wp-old.alabamainsuranceappraiser.com` at launch and **deleted on 2026-11-05**
+at the owner's request. What remains of it is in
+`backup/wordpress-2026-11-05/` (rendered HTML of every page, the old sitemaps
+and the WP REST exports) plus the original media in `static/wp-content/uploads/`.
+There is no files/database backup of the WordPress install.
 
-To roll back: change `rMIbFS7kW`'s domain back to its temporary domain, then
-change `dXa6n8AXT`'s domain from `wp-old.…` to `alabamainsuranceappraiser.com`
-(`agency-hosting_domains_change-website`), and delete that `robots.txt`.
-Once you're happy with the new site, the WordPress website can be deleted.
+## Google Tag Manager
+
+Container `GTM-NNM37JQN` loads on every page (`GTAG`/`GTM_ID` in
+`components.py`): the owner-supplied `gtm.js` + `gtag()` snippet in `<head>`,
+plus the standard `gtm.start` dataLayer event (without it GTM's page-view
+triggers don't fire) and the `<noscript>` iframe after `<body>`. The contact
+form pushes a `generate_lead` event on success.
+
+## Title & description limits
+
+`validate.py` fails the build if an indexable page's title is over 60
+characters or roughly 580px, or its meta description is outside 70–150
+characters.
 
 ## Things to review
 
@@ -157,5 +167,3 @@ Once you're happy with the new site, the WordPress website can be deleted.
   not licensed as in most states). These are stated cautiously but should be
   reviewed by the business owner.
 * Tool results are labelled as planning estimates.
-* No analytics tag is installed; add GA4/GTM in `components.render_page()` if
-  wanted (the privacy policy already allows for analytics).

@@ -13,8 +13,8 @@ def sidebar_links(exclude):
 # Each entry: title tag, meta description, h1, lead, hero image, service_type, body sections, faqs, related
 DATA = {
     "property-insurance-appraisal": dict(
-        title="Property Insurance Appraisal in Alabama | Amount-of-Loss Experts",
-        desc="Independent property insurance appraisal in Alabama. We evaluate the disputed amount of loss, compare estimates and build a supported appraisal position.",
+        title="Property Insurance Appraisal Services in Alabama",
+        desc="Independent property insurance appraisal in Alabama. We evaluate the disputed amount of loss, compare estimates and support the number.",
         h1="Property Insurance Appraisal in Alabama",
         lead="An independent evaluation of the amount of loss when you and your insurance carrier can't agree on what the damage will cost to repair.",
         img="inspect", stype="Insurance appraisal",
@@ -55,8 +55,8 @@ DATA = {
         related=["estimate-review", "xactimate-estimates", "residential-property-appraisal", "commercial-property-appraisal"],
     ),
     "residential-property-appraisal": dict(
-        title="Residential Insurance Appraisal in Alabama | Home Claim Appraiser",
-        desc="Homeowner insurance appraisal across Alabama for roof, hail, wind, water and fire claims. Independent amount-of-loss evaluation for houses, condos and rentals.",
+        title="Residential Insurance Appraisal in Alabama",
+        desc="Homeowner insurance appraisal across Alabama for roof, hail, wind, water and fire claims, for houses, condos and rental property.",
         h1="Residential Property Insurance Appraisal",
         lead="For Alabama homeowners whose claim payment doesn't cover the real cost to put the house back the way it was.",
         img="residential", stype="Residential property insurance appraisal",
@@ -86,7 +86,7 @@ DATA = {
     ),
     "commercial-property-appraisal": dict(
         title="Commercial Property Insurance Appraisal in Alabama",
-        desc="Commercial insurance appraisal for office, retail, multi-family, church, industrial and institutional buildings in Alabama. Detailed scope and valuation review.",
+        desc="Commercial insurance appraisal for office, retail, multi-family, church and industrial buildings in Alabama. Detailed scope and valuation review.",
         h1="Commercial Property Insurance Appraisal",
         lead="Large-loss appraisal for office, retail, apartment, church, warehouse, industrial and institutional property across Alabama.",
         img="commercial", stype="Commercial property insurance appraisal",
@@ -122,7 +122,7 @@ DATA = {
         related=["property-insurance-appraisal", "matterport-documentation", "wind-storm-damage-appraisal", "xactimate-estimates"],
     ),
     "estimate-review": dict(
-        title="Insurance Claim Estimate Review | Alabama Insurance Appraiser",
+        title="Insurance Claim Estimate Review in Alabama",
         desc="Line-by-line review of carrier and contractor estimates in Alabama. Find missing items, quantity errors and pricing gaps before you invoke appraisal.",
         h1="Insurance Claim Estimate Review",
         lead="Find out exactly where two estimates differ, and which differences are worth fighting for, before you commit to appraisal.",
@@ -156,7 +156,7 @@ DATA = {
     ),
     "xactimate-estimates": dict(
         title="Xactimate Estimates for Insurance Claims in Alabama",
-        desc="Detailed Xactimate estimates for Alabama property insurance claims and appraisal. Line-item scope, current local pricing, sketches and photo documentation.",
+        desc="Detailed Xactimate estimates for Alabama property claims and appraisal: line-item scope, current local pricing, sketches and photo reports.",
         h1="Xactimate Estimates for Alabama Property Claims",
         lead="Detailed, line-item estimates on the platform most insurance carriers already use, priced with the current price list for your area.",
         img="roof", stype="Xactimate estimating",
@@ -185,7 +185,7 @@ DATA = {
     ),
     "symbility-estimates": dict(
         title="Symbility Estimates for Insurance Claims | Alabama",
-        desc="Symbility (CoreLogic Claims Connect) estimates for Alabama property insurance claims. Structured scope and pricing that line up with carrier estimates.",
+        desc="Symbility (CoreLogic) estimates for Alabama property insurance claims, with structured scope and pricing that line up with carrier estimates.",
         h1="Symbility Estimates for Insurance Claims",
         lead="Structured estimates on the Symbility platform, for carriers and claims that use it instead of Xactimate.",
         img="inspect", stype="Symbility estimating",
@@ -211,7 +211,7 @@ DATA = {
     ),
     "matterport-documentation": dict(
         title="Matterport 3D Documentation for Insurance Claims | Alabama",
-        desc="Matterport 3D scanning for Alabama insurance claims: accurate measurements, floor plans and a permanent visual record of property damage for appraisal.",
+        desc="Matterport 3D scanning for Alabama insurance claims: accurate measurements, floor plans and a permanent visual record of property damage.",
         h1="Matterport 3D Documentation for Insurance Claims",
         lead="A permanent, measurable 3D record of the property and the damage, captured before repairs erase the evidence.",
         img="commercial", stype="Matterport property documentation",
@@ -289,8 +289,8 @@ DATA = {
         related=["hail-damage-appraisal", "commercial-property-appraisal", "residential-property-appraisal", "matterport-documentation"],
     ),
     "water-damage-appraisal": dict(
-        title="Water Damage Insurance Appraisal in Alabama | Leak &amp; Plumbing",
-        desc="Water damage appraisal for Alabama plumbing failures, roof leaks and appliance leaks. Drywall, flooring, cabinetry, insulation and mitigation scope review.",
+        title="Water Damage Insurance Appraisal in Alabama",
+        desc="Water damage appraisal for Alabama plumbing, roof and appliance leaks: drywall, flooring, cabinetry, insulation and mitigation scope review.",
         h1="Water Damage Insurance Appraisal",
         lead="Burst pipes, failed supply lines, roof leaks and appliance failures &mdash; where the real damage is usually larger than what's visible on day one.",
         img="flood", stype="Water damage insurance appraisal",
@@ -358,8 +358,8 @@ def service_page(slug):
 def hub():
     p = {
         "path": "/services/",
-        "title": "Insurance Appraisal Services in Alabama | Estimates &amp; Documentation",
-        "description": "Alabama Insurance Appraiser services: claim appraisal, estimate review, Xactimate and Symbility estimates, Matterport scans, and hail, wind, water and fire appraisal.",
+        "title": "Insurance Appraisal &amp; Estimating Services in Alabama",
+        "description": "Claim appraisal, estimate review, Xactimate and Symbility estimates, Matterport scans, and hail, wind, water and fire appraisal across Alabama.",
         "h1": "Property Insurance Appraisal Services in Alabama",
         "lead": "Independent appraisal, detailed estimating and property documentation for residential and commercial insurance claims, statewide.",
         "kicker": "Property loss support statewide", "hero_img": "storm", "nav_active": "/services/",

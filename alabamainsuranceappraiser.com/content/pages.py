@@ -11,8 +11,8 @@ from siteconfig import TODAY
 
 def about():
     p = {
-        "path": "/about-us/", "title": "About Alabama Insurance Appraiser | Independent Claim Appraisal",
-        "description": "About Alabama Insurance Appraiser: independent property insurance appraisal, estimating and claim documentation for residential and commercial losses across Alabama.",
+        "path": "/about-us/", "title": "About Alabama Insurance Appraiser | Who We Are",
+        "description": "About Alabama Insurance Appraiser: independent property claim appraisal, estimating and documentation for home and commercial losses statewide.",
         "h1": "About Alabama Insurance Appraiser",
         "lead": "Independent property insurance appraisal, estimating and claim documentation for residential and commercial losses throughout Alabama.",
         "kicker": "Who we are", "hero_img": "residential", "nav_active": "/about-us/", "schema_type": "AboutPage",
@@ -50,7 +50,7 @@ def about():
 def contact():
     p = {
         "path": "/contact/", "title": "Contact Alabama Insurance Appraiser | (844) 537-1427",
-        "description": "Contact Alabama Insurance Appraiser about a property claim dispute. Call (844) 537-1427, email us or send your claim details online for a free consultation.",
+        "description": "Contact Alabama Insurance Appraiser about a property claim dispute. Call (844) 537-1427, email us or send your claim details for a free consultation.",
         "h1": "Contact Alabama Insurance Appraiser",
         "lead": "Have a property claim with a disagreement over the amount of loss? Tell us about the property, the damage and where the claim stands.",
         "kicker": "Free claim conversation", "hero_img": "residential", "nav_active": "/contact/", "layout": "wide",
@@ -136,7 +136,7 @@ def process():
     ]
     p = {
         "path": "/insurance-appraisal-process/", "title": "The Insurance Appraisal Process in Alabama, Step by Step",
-        "description": "How the property insurance appraisal process works in Alabama: the dispute, written demand, choosing appraisers and umpire, inspection, negotiation, award and payment.",
+        "description": "How Alabama insurance appraisal works: the dispute, written demand, appraisers and umpire, inspection, negotiation, award and payment.",
         "h1": "The Insurance Appraisal Process in Alabama",
         "lead": "Ten steps from a disputed estimate to a signed appraisal award &mdash; and what to watch for at each one.",
         "kicker": "Step-by-step guide", "hero_img": "storm", "nav_active": "/blog/",
@@ -209,7 +209,7 @@ def glossary():
         items.append(f'<div class="term"{anchor}><dt id="{slug}">{t}</dt><dd>{d}</dd></div>')
     p = {
         "path": "/glossary/", "title": "Insurance Claim Glossary | Appraisal &amp; Estimating Terms",
-        "description": "Plain-English glossary of property insurance claim and appraisal terms: ACV, RCV, depreciation, appraisal clause, umpire, O&P, matching, Xactimate and more.",
+        "description": "Plain-English glossary of insurance claim and appraisal terms: ACV, RCV, depreciation, appraisal clause, umpire, O&P, matching and more.",
         "h1": "Insurance Claim &amp; Appraisal Glossary", "lead": "Plain-English definitions of the terms you'll see on estimates, policies and appraisal paperwork.",
         "kicker": "Resources", "hero_img": "inspect", "nav_active": "/blog/", "hero_actions": "",
         "crumbs": [("Home", "/"), ("Glossary", "/glossary/")], "priority": "0.6",
@@ -335,9 +335,9 @@ def pages():
            legal("/privacy-policy/", "Privacy Policy | Alabama Insurance Appraiser",
                  "How Alabama Insurance Appraiser collects, uses and protects information from website visitors, contact form submissions and our free claim tools.", "Privacy Policy", PRIVACY),
            legal("/terms-of-use/", "Terms of Use | Alabama Insurance Appraiser",
-                 "Terms of Use for the Alabama Insurance Appraiser website covering informational content, free tools, intellectual property, liability and acceptable use.", "Terms of Use", TERMS),
+                 "Terms of Use for the Alabama Insurance Appraiser website: informational content, free tools, intellectual property, liability and acceptable use.", "Terms of Use", TERMS),
            legal("/disclaimer/", "Disclaimer | Alabama Insurance Appraiser",
-                 "Important disclaimers: Alabama Insurance Appraiser does not provide legal advice, is not an insurer or public adjuster, and does not guarantee claim outcomes.", "Disclaimer", DISCLAIMER),
+                 "Alabama Insurance Appraiser does not give legal advice, is not an insurer or public adjuster, and does not guarantee any claim outcome.", "Disclaimer", DISCLAIMER),
            thank_you(), not_found()]
     out.append(sitemap_page(out))
     return out

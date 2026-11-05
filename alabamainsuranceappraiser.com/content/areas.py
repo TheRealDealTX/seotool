@@ -144,8 +144,8 @@ def area_page(city, slug):
     path = f"/service-areas/{slug}/"
     p = {
         "path": path,
-        "title": f"Insurance Appraiser {city}, AL | Property Claim Appraisal",
-        "description": f"Insurance appraiser serving {city}, AL and {d['county']}: independent claim appraisal and estimates for hail, wind, water and fire losses.",
+        "title": f"Insurance Appraiser in {city}, AL | Claim Appraisal",
+        "description": f"Insurance appraiser in {city}, AL ({d['county']}): independent claim appraisal and estimates for hail, wind, water and fire losses.",
         "h1": f"Insurance Appraiser in {city}, AL",
         "lead": f"Independent property claim appraisal and estimating for homeowners and businesses in {city} and across {d['county']}.",
         "kicker": f"{d['region']} &middot; {d['county']}", "hero_img": d["img"], "nav_active": "/service-areas/",
@@ -185,8 +185,8 @@ def area_page(city, slug):
 def hub():
     p = {
         "path": "/service-areas/",
-        "title": "Alabama Insurance Appraiser Service Areas | Statewide Coverage",
-        "description": "Alabama Insurance Appraiser serves all 67 counties, including Birmingham, Huntsville, Montgomery, Mobile, Tuscaloosa, Hoover, Auburn, Dothan and Gadsden.",
+        "title": "Alabama Insurance Appraiser Service Areas | Statewide",
+        "description": "Alabama Insurance Appraiser serves all 67 counties, including Birmingham, Huntsville, Montgomery, Mobile, Tuscaloosa, Hoover, Auburn and Dothan.",
         "h1": "Insurance Appraisal Service Areas Across Alabama",
         "lead": "From the Tennessee Valley to the Gulf Coast, we take residential and commercial appraisal assignments in all 67 Alabama counties.",
         "kicker": "Statewide coverage", "hero_img": "home", "nav_active": "/service-areas/",

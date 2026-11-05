@@ -88,6 +88,15 @@ class P(HTMLParser):
             self.main_text.append(d)
 
 
+# Approximate Arial 20px glyph widths (Google's SERP title font) for a pixel estimate.
+_W = {**{c: 11 for c in "abdeghnopqu"}, **{c: 10 for c in "cksvxyz"}, **{c: 5 for c in "fijlrt"},
+      "m": 17, "w": 14, " ": 6, ",": 6, ".": 6, "|": 5, "&": 13, "-": 7, ":": 6, "'": 4, "?": 11, "(": 7, ")": 7}
+
+
+def title_px(t):
+    return round(sum(_W.get(c, 15 if c.isupper() and c in "MW" else 13 if c.isupper() else 11) for c in t))
+
+
 def page_url(f):
     rel = os.path.relpath(f, OUT).replace(os.sep, "/")
     if rel == "home.html":
@@ -123,10 +132,10 @@ def main():
         d = p.meta.get("description", "")
         if not t:
             errors.append(f"{u}: missing title")
-        elif not (25 <= len(t) <= 70) and not noindex:
-            warns.append(f"{u}: title length {len(t)}: {t}")
-        if not (70 <= len(d) <= 165) and not noindex:
-            warns.append(f"{u}: description length {len(d)}")
+        elif not noindex and (not (25 <= len(t) <= 60) or title_px(t) > 580):
+            errors.append(f"{u}: title {len(t)} chars / ~{title_px(t)}px (max 60 / 580px): {t}")
+        if not noindex and not (70 <= len(html.unescape(d)) <= 150):
+            errors.append(f"{u}: description {len(html.unescape(d))} chars (want 70-150)")
         if not noindex:
             if t in titles:
                 errors.append(f"{u}: duplicate title with {titles[t]}")

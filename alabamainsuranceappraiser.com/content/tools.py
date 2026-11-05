@@ -36,7 +36,7 @@ DISCLAIMER = callout("<p>These tools give rough, educational estimates only. The
 TOOLS_DATA = {
     "claim-gap-calculator": dict(
         title="Insurance Claim Gap Calculator | Compare Two Estimates",
-        desc="Free claim gap calculator: compare your insurance company's estimate with your contractor's estimate and see the gap after deductible and depreciation.",
+        desc="Free claim gap calculator: compare the insurance estimate with your contractor's and see the real gap after deductible and depreciation.",
         h1="Insurance Claim Gap Calculator",
         lead="Compare the carrier's estimate with your contractor's estimate and see how big the gap really is after deductible and depreciation.",
         ui=f'''<form class="tool-shell" data-tool="gap" onsubmit="return false">
@@ -101,7 +101,7 @@ TOOLS_DATA = {
     ),
     "roof-square-calculator": dict(
         title="Roof Square Calculator | Roof Area, Pitch &amp; Waste Factor",
-        desc="Free roof square calculator: convert footprint and pitch into roof area, squares, waste factor and bundles to check the roof on your insurance estimate.",
+        desc="Free roof square calculator: turn footprint and pitch into roof area, squares, waste factor and bundles to check your insurance estimate.",
         h1="Roof Square Calculator",
         lead="Turn a building footprint and roof pitch into roof area, squares and bundles &mdash; then compare it with the roof measurements on your estimate.",
         ui=f'''<form class="tool-shell" data-tool="roof" onsubmit="return false">
@@ -136,7 +136,7 @@ TOOLS_DATA = {
     ),
     "hurricane-deductible-calculator": dict(
         title="Hurricane Deductible Calculator Alabama | Wind &amp; Named Storm",
-        desc="Free hurricane and named-storm deductible calculator for Alabama homeowners. Convert a percentage wind deductible into dollars and see what your claim may pay.",
+        desc="Free hurricane deductible calculator for Alabama homeowners: turn a percentage wind deductible into dollars and see what a claim may pay.",
         h1="Hurricane &amp; Wind Deductible Calculator",
         lead="Percentage deductibles are figured on your dwelling limit, not on the damage. See yours in dollars before the next storm.",
         ui=f'''<form class="tool-shell" data-tool="hurr" onsubmit="return false">
@@ -169,8 +169,8 @@ TOOLS_DATA = {
               ("Does appraisal change my deductible?", "<p>No. Appraisal sets the amount of loss; the deductible is then applied under the policy.</p>")],
     ),
     "appraisal-readiness-checklist": dict(
-        title="Insurance Appraisal Checklist | Documents to Gather in Alabama",
-        desc="Free interactive insurance appraisal checklist: track the policy documents, estimates, photos and records to gather before invoking appraisal in Alabama.",
+        title="Insurance Appraisal Checklist for Alabama Claims",
+        desc="Free interactive checklist of the policy documents, estimates, photos and records to gather before invoking appraisal on an Alabama claim.",
         h1="Appraisal Readiness Checklist",
         lead="Check off each document as you gather it. Your progress saves in this browser, and you can print the list for your file.",
         ui="CHECKLIST",
@@ -271,7 +271,7 @@ def hub():
     p = {
         "path": "/tools/",
         "title": "Free Insurance Claim Tools &amp; Calculators | Alabama",
-        "description": "Free insurance claim calculators for Alabama property owners: claim gap, depreciation / ACV, roof squares, hurricane deductible and an appraisal readiness checklist.",
+        "description": "Free claim calculators for Alabama property owners: claim gap, depreciation, roof squares, hurricane deductible and an appraisal checklist.",
         "h1": "Free Insurance Claim Tools &amp; Calculators",
         "lead": "Practical calculators and checklists for policyholders who want to understand their numbers before talking to anyone.",
         "kicker": "Free tools", "hero_img": "inspect", "nav_active": "/tools/", "layout": "wide",

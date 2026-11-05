@@ -28,9 +28,9 @@ FAQS = [
 def page():
     p = {
         "path": "/",
-        "title": "Alabama Insurance Appraiser | Property Claim Appraisal &amp; Estimates",
+        "title": "Alabama Insurance Appraiser | Property Claim Appraisal",
         "og_title": "Alabama Insurance Appraiser — Independent Property Claim Appraisal",
-        "description": "Alabama Insurance Appraiser: independent property insurance appraisal, Xactimate estimates and claim documentation for home and business claims statewide.",
+        "description": "Alabama Insurance Appraiser: independent property claim appraisal, Xactimate estimates and documentation for home and business claims statewide.",
         "crumbs": [("Home", "/")],
         "hero_img": "home",
         "layout": "raw",

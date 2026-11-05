@@ -12,7 +12,18 @@ from siteconfig import BIZ, CITIES, NAV, RESOURCES, SERVICES, TODAY, TOOLS
 ORIGIN = BIZ["origin"]
 ORG_ID = ORIGIN + "/#organization"
 SITE_ID = ORIGIN + "/#website"
-ASSET_VER = "20261105"
+ASSET_VER = "20261105c"
+
+# Google Tag Manager container, loaded on every page (snippet as supplied by the
+# site owner, plus the standard 'gtm.start' event so GTM's page-view triggers fire).
+GTM_ID = "GTM-NNM37JQN"
+GTAG = f'''<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+  dataLayer.push({{'gtm.start': new Date().getTime(), event: 'gtm.js'}});
+</script>'''
 
 esc = html.escape
 
@@ -460,6 +471,7 @@ def render_page(page):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{GTAG}
 <title>{title}</title>
 <meta name="description" content="{esc(desc)}">
 <meta name="robots" content="{robots}">
@@ -492,6 +504,7 @@ def render_page(page):
 <script type="application/ld+json">{schema}</script>
 </head>
 <body class="{page.get('body_class', '')}">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {header(page.get("nav_active", ""))}
 <main id="main">
 {main}

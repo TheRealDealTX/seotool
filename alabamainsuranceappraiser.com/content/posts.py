@@ -18,9 +18,9 @@ def post(slug, title, h1, desc, img, published, excerpt, body, faqs, related, re
 
 # ---------------------------------------------------------------------------
 post("what-does-an-insurance-appraiser-do",
-     "What Does an Insurance Appraiser Do? Alabama Property Claim Guide",
+     "What Does an Insurance Appraiser Do? (Alabama Guide)",
      "What Does an Insurance Appraiser Do?",
-     "What does an insurance appraiser do? How appraisers inspect damage, compare estimates, work with the umpire and settle the amount of loss on Alabama claims.",
+     "What does an insurance appraiser do? How appraisers inspect damage, compare estimates, work with the umpire and settle the amount of loss.",
      "inspect", "2026-08-11",
      "The appraiser's role on a disputed property claim: what gets inspected, how the amount of loss is decided, how the umpire fits in, and what appraisal can't do.",
      f"""
@@ -76,7 +76,7 @@ post("what-does-an-insurance-appraiser-do",
 post("how-to-invoke-the-appraisal-clause-in-alabama",
      "How to Invoke the Appraisal Clause in Alabama (Step by Step)",
      "How to Invoke the Appraisal Clause in Alabama",
-     "How to invoke the appraisal clause on an Alabama property claim: reading the policy, the written demand, deadlines, choosing an appraiser and next steps.",
+     "How to invoke the appraisal clause on an Alabama property claim: the policy, the written demand, deadlines, choosing an appraiser and next steps.",
      "residential", TODAY,
      "Reading the clause, writing the demand, meeting deadlines and choosing your appraiser &mdash; the practical steps for Alabama policyholders.",
      f"""
@@ -117,9 +117,9 @@ post("how-to-invoke-the-appraisal-clause-in-alabama",
 
 # ---------------------------------------------------------------------------
 post("insurance-appraiser-vs-public-adjuster-vs-attorney",
-     "Insurance Appraiser vs. Public Adjuster vs. Attorney in Alabama",
+     "Appraiser vs. Public Adjuster vs. Attorney (Alabama)",
      "Insurance Appraiser vs. Public Adjuster vs. Attorney",
-     "Who does what on a disputed Alabama property claim? Compare insurance appraisers, public adjusters and attorneys, and learn which one fits your situation.",
+     "Who does what on a disputed Alabama property claim? Compare insurance appraisers, public adjusters and attorneys, and see which one fits.",
      "inspect", TODAY,
      "Three very different roles on a disputed claim. Here's what each does, how each is paid and when each makes sense in Alabama.",
      f"""
@@ -151,7 +151,7 @@ post("insurance-appraiser-vs-public-adjuster-vs-attorney",
 
 # ---------------------------------------------------------------------------
 post("what-is-an-insurance-appraisal-umpire",
-     "What Is an Insurance Appraisal Umpire? Role, Selection &amp; Fees",
+     "What Is an Insurance Appraisal Umpire? Role &amp; Fees",
      "What Is an Insurance Appraisal Umpire?",
      "What an insurance appraisal umpire does, how umpires are selected in Alabama, how umpire fees are split and how to prepare items for umpire review.",
      "commercial", TODAY,
@@ -213,9 +213,9 @@ post("how-long-does-insurance-appraisal-take",
 
 # ---------------------------------------------------------------------------
 post("hail-damage-roof-insurance-claims-alabama",
-     "Hail Damage Roof Insurance Claims in Alabama: A Homeowner Guide",
      "Hail Damage Roof Insurance Claims in Alabama",
-     "Hail damage roof claims in Alabama: spotting and documenting damage, repair vs. replacement and matching disputes, and what to do when the estimate is low.",
+     "Hail Damage Roof Insurance Claims in Alabama",
+     "Alabama hail roof claims: spotting and documenting damage, repair vs. replacement and matching disputes, and what to do if the estimate is low.",
      "roof", TODAY,
      "From spotting hail damage to fighting a low roof estimate &mdash; what Alabama homeowners should know.",
      f"""
@@ -249,7 +249,7 @@ post("hail-damage-roof-insurance-claims-alabama",
 post("alabama-hurricane-deductibles-explained",
      "Alabama Hurricane Deductibles Explained (With Examples)",
      "Alabama Hurricane Deductibles Explained",
-     "How hurricane and named-storm deductibles work in Alabama, how to calculate yours in dollars, when they apply and how FORTIFIED roofs can help coastal homeowners.",
+     "How Alabama hurricane and named-storm deductibles work, when they apply, how to figure yours in dollars, and how FORTIFIED roofs help.",
      "flood", TODAY,
      "Percentage deductibles can mean thousands out of pocket. Here's how they work and how to calculate yours.",
      f"""
@@ -336,15 +336,15 @@ def listing(path, title, desc, h1, lead, crumbs, schema_type):
 
 
 def pages():
-    blog = listing("/blog/", "Insurance Appraisal Blog &amp; Guides | Alabama Insurance Appraiser",
-                   "Guides for Alabama property owners on insurance appraisal, umpires, hail and hurricane claims, deductibles and choosing the right help for a disputed claim.",
+    blog = listing("/blog/", "Insurance Appraisal Guides | Alabama Insurance Appraiser",
+                   "Guides for Alabama property owners on insurance appraisal, umpires, hail and hurricane claims, deductibles and getting help with a disputed claim.",
                    "Insurance Appraisal Blog &amp; Guides", "Practical, plain-English guides for Alabama property owners dealing with a disputed insurance claim.",
                    [("Home", "/"), ("Blog", "/blog/")], "CollectionPage")
     blog["schema"] = [{"@type": "Blog", "@id": url("/blog/#blog"), "name": "Alabama Insurance Appraiser Blog", "url": url("/blog/"),
                        "publisher": {"@id": ORG_ID},
                        "blogPost": [{"@type": "BlogPosting", "@id": url(f"/{p['slug']}/#article"), "headline": p["h1"],
                                      "url": url(f"/{p['slug']}/"), "datePublished": p["published"]} for p in POSTS]}]
-    cat = listing("/category/general/", "General Insurance Appraisal Articles | Alabama Insurance Appraiser",
+    cat = listing("/category/general/", "General Articles | Alabama Insurance Appraiser",
                   "All general articles from Alabama Insurance Appraiser on property insurance appraisal, claim disputes, umpires and deductibles in Alabama.",
                   "General Articles", "Every guide in our General category.",
                   [("Home", "/"), ("Blog", "/blog/"), ("General", "/category/general/")], "CollectionPage")
