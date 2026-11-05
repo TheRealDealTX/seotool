@@ -1,0 +1,253 @@
+# sbarates.com static site
+# Updated 2026-11-05: 301 redirects for old/broken URLs (backup: .htaccess.bak-2026-11-05)
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+RewriteEngine On
+
+# force https and bare domain
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://sbarates.com/$1 [R=301,L,NE]
+
+# ---------------------------------------------------------------
+# Old-URL redirects. Every rule drops the query string (QSD) and
+# goes straight to a live page, so each old URL is one hop.
+# Rules are skipped when the requested folder really exists (!-d).
+# ---------------------------------------------------------------
+
+# Old directory landing page
+RewriteRule ^lander/?$ /SBA-Loans/ [QSD,R=301,L]
+
+# Industry pages: any case, hyphens/underscores/double spaces/missing punctuation
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/administrative[^a-z0-9]*management[^a-z0-9]*and[^a-z0-9]*general[^a-z0-9]*management[^a-z0-9]*consulting[^a-z0-9]*services/?$ /SBA-Loan/Administrative\%20Management\%20and\%20General\%20Management\%20Consulting\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*miscellaneous[^a-z0-9]*food[^a-z0-9]*manufacturing/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Food\%20Manufacturing/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*support[^a-z0-9]*services/?$ /SBA-Loan/All\%20Other\%20Support\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/beer[^a-z0-9]*wine[^a-z0-9]*and[^a-z0-9]*liquor[^a-z0-9]*stores/?$ /SBA-Loan/Beer,\%20Wine,\%20and\%20Liquor\%20Stores/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*miscellaneous[^a-z0-9]*manufacturing/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Manufacturing/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*grain[^a-z0-9]*farming/?$ /SBA-Loan/All\%20Other\%20Grain\%20Farming/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/hotels[^a-z0-9]*except[^a-z0-9]*casino[^a-z0-9]*hotels[^a-z0-9]*and[^a-z0-9]*motels/?$ /SBA-Loan/Hotels\%20(except\%20Casino\%20Hotels)\%20and\%20Motels/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*pipeline[^a-z0-9]*transportation/?$ /SBA-Loan/All\%20Other\%20Pipeline\%20Transportation/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/breweries/?$ /SBA-Loan/Breweries/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/appliance[^a-z0-9]*repair[^a-z0-9]*and[^a-z0-9]*maintenance/?$ /SBA-Loan/Appliance\%20Repair\%20and\%20Maintenance/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/child[^a-z0-9]*day[^a-z0-9]*care[^a-z0-9]*services/?$ /SBA-Loan/Child\%20Day\%20Care\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/all[^a-z0-9]*other[^a-z0-9]*miscellaneous[^a-z0-9]*ambulatory[^a-z0-9]*health[^a-z0-9]*care[^a-z0-9]*services/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Ambulatory\%20Health\%20Care\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/environment[^a-z0-9]*conservation[^a-z0-9]*and[^a-z0-9]*wildlife[^a-z0-9]*organizations/?$ /SBA-Loan/Environment,\%20Conservation\%20and\%20Wildlife\%20Organizations/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/convenience[^a-z0-9]*stores/?$ /SBA-Loan/Convenience\%20Stores/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/lessors[^a-z0-9]*of[^a-z0-9]*miniwarehouses[^a-z0-9]*and[^a-z0-9]*self[^a-z0-9]*storage[^a-z0-9]*units/?$ /SBA-Loan/Lessors\%20of\%20Miniwarehouses\%20and\%20Self-Storage\%20Units/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/golf[^a-z0-9]*courses[^a-z0-9]*and[^a-z0-9]*country[^a-z0-9]*clubs/?$ /SBA-Loan/Golf\%20Courses\%20and\%20Country\%20Clubs/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/offices[^a-z0-9]*of[^a-z0-9]*dentists/?$ /SBA-Loan/Offices\%20of\%20Dentists/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/business[^a-z0-9]*associations/?$ /SBA-Loan/Business\%20Associations/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/full[^a-z0-9]*service[^a-z0-9]*restaurants/?$ /SBA-Loan/Full-Service\%20Restaurants/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/horse[^a-z0-9]*and[^a-z0-9]*other[^a-z0-9]*equine[^a-z0-9]*production/?$ /SBA-Loan/Horse\%20and\%20Other\%20Equine\%20Production/ [NC,QSD,R=301,L,NE]
+
+# Retired industry pages -> closest live page
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/snack[^a-z0-9]*and[^a-z0-9]*nonalcoholic[^a-z0-9]*beverage[^a-z0-9]*bars/?$ /SBA-Loan/Full-Service\%20Restaurants/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(restaurant|drinking[^a-z0-9]*place|caterer)[^/]*/?$ /SBA-Loan/Full-Service\%20Restaurants/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(winer|distiller)[^/]*/?$ /SBA-Loan/Breweries/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(hotel|motel|bed[^a-z0-9]*and[^a-z0-9]*breakfast|rv[^a-z0-9]*park)[^/]*/?$ /SBA-Loan/Hotels\%20(except\%20Casino\%20Hotels)\%20and\%20Motels/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(gasoline|gas[^a-z0-9]*station|convenience)[^/]*/?$ /SBA-Loan/Convenience\%20Stores/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(dentist|dental)[^/]*/?$ /SBA-Loan/Offices\%20of\%20Dentists/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(day[^a-z0-9]*care|child[^a-z0-9]*care)[^/]*/?$ /SBA-Loan/Child\%20Day\%20Care\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(storage|warehous)[^/]*/?$ /SBA-Loan/Lessors\%20of\%20Miniwarehouses\%20and\%20Self-Storage\%20Units/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(golf|country[^a-z0-9]*club)[^/]*/?$ /SBA-Loan/Golf\%20Courses\%20and\%20Country\%20Clubs/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(equine|horse)[^/]*/?$ /SBA-Loan/Horse\%20and\%20Other\%20Equine\%20Production/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(grain|wheat|corn|soybean|oilseed)[^/]*/?$ /SBA-Loan/All\%20Other\%20Grain\%20Farming/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(physician|ambulatory|health|medical|clinic)[^/]*/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Ambulatory\%20Health\%20Care\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(consulting|management)[^/]*/?$ /SBA-Loan/Administrative\%20Management\%20and\%20General\%20Management\%20Consulting\%20Services/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*food[^/]*manufactur[^/]*/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Food\%20Manufacturing/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*manufactur[^/]*/?$ /SBA-Loan/All\%20Other\%20Miscellaneous\%20Manufacturing/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*repair[^/]*/?$ /SBA-Loan/Appliance\%20Repair\%20and\%20Maintenance/ [NC,QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^SBA-Loans?/[^/]*(liquor|beer|wine)[^/]*/?$ /SBA-Loan/Beer,\%20Wine,\%20and\%20Liquor\%20Stores/ [NC,QSD,R=301,L,NE]
+
+# Lender pages: any case / spacing variant of a live lender slug
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/riverbank[^a-z0-9]*wa/?$ /SBA-Loans/riverbank-wa/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/new[^a-z0-9]*millennium[^a-z0-9]*bank[^a-z0-9]*nj/?$ /SBA-Loans/new-millennium-bank-nj/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/canandaigua[^a-z0-9]*national[^a-z0-9]*bank[^a-z0-9]*trust/?$ /SBA-Loans/canandaigua-national-bank-trust/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/midfirst[^a-z0-9]*bank[^a-z0-9]*ok/?$ /SBA-Loans/midfirst-bank-ok/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/gbc[^a-z0-9]*international[^a-z0-9]*bank[^a-z0-9]*ca/?$ /SBA-Loans/gbc-international-bank-ca/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/emprise[^a-z0-9]*bank[^a-z0-9]*ks/?$ /SBA-Loans/emprise-bank-ks/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/st[^a-z0-9]*mary[^a-z0-9]*s[^a-z0-9]*cu[^a-z0-9]*ma/?$ /SBA-Loans/st-mary-s-cu-ma/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/first[^a-z0-9]*oklahoma[^a-z0-9]*bank[^a-z0-9]*ok/?$ /SBA-Loans/first-oklahoma-bank-ok/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/newtek[^a-z0-9]*bank[^a-z0-9]*national[^a-z0-9]*association[^a-z0-9]*fl/?$ /SBA-Loans/newtek-bank-national-association-fl/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/umb[^a-z0-9]*bank[^a-z0-9]*national[^a-z0-9]*association[^a-z0-9]*mo/?$ /SBA-Loans/umb-bank-national-association-mo/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/cadence[^a-z0-9]*bank[^a-z0-9]*ms/?$ /SBA-Loans/cadence-bank-ms/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/frost[^a-z0-9]*bank[^a-z0-9]*tx/?$ /SBA-Loans/frost-bank-tx/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/wesbanco[^a-z0-9]*bank[^a-z0-9]*inc[^a-z0-9]*oh/?$ /SBA-Loans/wesbanco-bank-inc-oh/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/bristol[^a-z0-9]*county[^a-z0-9]*savings[^a-z0-9]*bank[^a-z0-9]*ma/?$ /SBA-Loans/bristol-county-savings-bank-ma/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/rockland[^a-z0-9]*trust[^a-z0-9]*company[^a-z0-9]*ma/?$ /SBA-Loans/rockland-trust-company-ma/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/western[^a-z0-9]*commerce[^a-z0-9]*bank[^a-z0-9]*nm/?$ /SBA-Loans/western-commerce-bank-nm/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/florida[^a-z0-9]*first[^a-z0-9]*capital[^a-z0-9]*finance[^a-z0-9]*corporation[^a-z0-9]*inc[^a-z0-9]*fl/?$ /SBA-Loans/florida-first-capital-finance-corporation-inc-fl/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/fulton[^a-z0-9]*bank[^a-z0-9]*national[^a-z0-9]*association[^a-z0-9]*pa/?$ /SBA-Loans/fulton-bank-national-association-pa/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/commercial[^a-z0-9]*bank[^a-z0-9]*of[^a-z0-9]*california[^a-z0-9]*ca/?$ /SBA-Loans/commercial-bank-of-california-ca/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/zions[^a-z0-9]*bank[^a-z0-9]*ut/?$ /SBA-Loans/zions-bank-ut/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/branson[^a-z0-9]*bank[^a-z0-9]*mo/?$ /SBA-Loans/branson-bank-mo/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/wells[^a-z0-9]*fargo[^a-z0-9]*bank[^a-z0-9]*national[^a-z0-9]*association[^a-z0-9]*sd/?$ /SBA-Loans/wells-fargo-bank-national-association-sd/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/grasshopper[^a-z0-9]*bank[^a-z0-9]*national[^a-z0-9]*association[^a-z0-9]*ny/?$ /SBA-Loans/grasshopper-bank-national-association-ny/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/first[^a-z0-9]*federal[^a-z0-9]*bank[^a-z0-9]*fl/?$ /SBA-Loans/first-federal-bank-fl/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/comerica[^a-z0-9]*bank[^a-z0-9]*tx/?$ /SBA-Loans/comerica-bank-tx/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/peoplefund[^a-z0-9]*tx/?$ /SBA-Loans/peoplefund-tx/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/granite[^a-z0-9]*bank[^a-z0-9]*mn/?$ /SBA-Loans/granite-bank-mn/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/avidia[^a-z0-9]*bank[^a-z0-9]*ma/?$ /SBA-Loans/avidia-bank-ma/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/georgia[^a-z0-9]*banking[^a-z0-9]*company[^a-z0-9]*ga/?$ /SBA-Loans/georgia-banking-company-ga/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/renasant[^a-z0-9]*bank[^a-z0-9]*ga/?$ /SBA-Loans/renasant-bank-ga/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/the[^a-z0-9]*huntington[^a-z0-9]*national[^a-z0-9]*bank[^a-z0-9]*oh/?$ /SBA-Loans/the-huntington-national-bank-oh/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/bankvista[^a-z0-9]*mn/?$ /SBA-Loans/bankvista-mn/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/central[^a-z0-9]*bank[^a-z0-9]*ut/?$ /SBA-Loans/central-bank-ut/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/first[^a-z0-9]*financial[^a-z0-9]*bank[^a-z0-9]*oh/?$ /SBA-Loans/first-financial-bank-oh/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/lone[^a-z0-9]*star[^a-z0-9]*national[^a-z0-9]*bank[^a-z0-9]*tx/?$ /SBA-Loans/lone-star-national-bank-tx/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/regent[^a-z0-9]*bank[^a-z0-9]*ok/?$ /SBA-Loans/regent-bank-ok/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/oakstar[^a-z0-9]*bank[^a-z0-9]*mo/?$ /SBA-Loans/oakstar-bank-mo/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/barwick[^a-z0-9]*bank[^a-z0-9]*fl/?$ /SBA-Loans/barwick-bank-fl/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/mission[^a-z0-9]*valley[^a-z0-9]*bank[^a-z0-9]*ca/?$ /SBA-Loans/mission-valley-bank-ca/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/banco[^a-z0-9]*popular[^a-z0-9]*de[^a-z0-9]*puerto[^a-z0-9]*rico[^a-z0-9]*pr/?$ /SBA-Loans/banco-popular-de-puerto-rico-pr/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/idaho[^a-z0-9]*central[^a-z0-9]*cu[^a-z0-9]*id/?$ /SBA-Loans/idaho-central-cu-id/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/live[^a-z0-9]*oak[^a-z0-9]*banking[^a-z0-9]*company[^a-z0-9]*nc/?$ /SBA-Loans/live-oak-banking-company-nc/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/western[^a-z0-9]*alliance[^a-z0-9]*bank[^a-z0-9]*az/?$ /SBA-Loans/western-alliance-bank-az/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/community[^a-z0-9]*choice[^a-z0-9]*cu[^a-z0-9]*mi/?$ /SBA-Loans/community-choice-cu-mi/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/platinum[^a-z0-9]*bank[^a-z0-9]*mn/?$ /SBA-Loans/platinum-bank-mn/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/first[^a-z0-9]*bank[^a-z0-9]*of[^a-z0-9]*central[^a-z0-9]*ohio[^a-z0-9]*oh/?$ /SBA-Loans/first-bank-of-central-ohio-oh/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/wisconsin[^a-z0-9]*women[^a-z0-9]*s[^a-z0-9]*business[^a-z0-9]*initiative[^a-z0-9]*corporation[^a-z0-9]*wi/?$ /SBA-Loans/wisconsin-women-s-business-initiative-corporation-wi/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(SBA-Loans?|listings)/redwood[^a-z0-9]*cu[^a-z0-9]*ca/?$ /listings/redwood-cu-ca/ [NC,QSD,R=301,L]
+
+# Old blog posts -> closest live page
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]*504[^/]*/?$ /sba-504-loan-rates/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]*(rate|interest)[^/]*/?$ /sba-loan-rates/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]*(calculat|payment)[^/]*/?$ /sba-loan-calculator/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]*lender[^/]*/?$ /pages/top-sba-lenders-in-2025/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/[^/]*(small[^a-z0-9]*business[^a-z0-9]*administration|what[^a-z0-9]*is)[^/]*/?$ /blog/Small\%20Business\%20Administration/ [NC,QSD,R=301,L,NE]
+
+# Last resort: unknown pages in each section go to that section's hub
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^SBA-Loan/.+$ /SBA-Loan/ [QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(SBA-Loans|listings)/.+$ /SBA-Loans/ [QSD,R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^blog/.+$ /blog/Small\%20Business\%20Administration/ [QSD,R=301,L,NE]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^pages/.+$ /pages/top-sba-lenders-in-2025/ [QSD,R=301,L]
+# section roots in the wrong case
+RewriteCond %{REQUEST_URI} !^/SBA-Loans/$
+RewriteRule ^sba-loans/?$ /SBA-Loans/ [NC,QSD,R=301,L]
+RewriteCond %{REQUEST_URI} !^/SBA-Loan/$
+RewriteRule ^sba-loan/?$ /SBA-Loan/ [NC,QSD,R=301,L]
+RewriteRule ^(blog|pages|listings)/?$ / [NC,QSD,R=301,L]
+
+# Junk / pagination query strings on live pages -> same page, no query
+RewriteCond %{QUERY_STRING} (^|&)(listingPage|categories_page|directory(%5B|\[)[^=&]*)= [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*[^/])$ /$1/ [QSD,R=301,L]
+RewriteCond %{QUERY_STRING} (^|&)(listingPage|categories_page|directory(%5B|\[)[^=&]*)= [NC]
+RewriteRule ^(.*)$ /$1 [QSD,R=301,L]
+
+# add trailing slash to folder URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+AddType application/manifest+json .webmanifest
+AddType image/x-icon .ico
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/x-icon "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType text/css "access plus 30 days"
+ExpiresByType application/javascript "access plus 30 days"
+ExpiresByType text/html "access plus 1 hour"
+</IfModule>
