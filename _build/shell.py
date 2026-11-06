@@ -8,7 +8,8 @@ import json
 from urllib.parse import quote
 
 SITE = "https://sbarates.com"
-TODAY = "2026-11-05"
+TODAY = "2026-11-06"
+RATES_CHECKED = "November 6, 2026"
 CSS_V = "c208366f"   # bumped by build.py when site.css changes
 JS_V = "9a8dc950"
 
@@ -18,11 +19,11 @@ VAR_CAPS = [("$50,000 or less", 50000, 6.5), ("$50,001 to $250,000", 250000, 6.0
             ("$250,001 to $350,000", 350000, 4.5), ("Over $350,000", 5000000, 3.0)]
 FIX_CAPS = [("$25,000 or less", 25000, 8.0), ("$25,001 to $50,000", 50000, 7.0),
             ("$50,001 to $250,000", 250000, 6.0), ("Over $250,000", 5000000, 5.0)]
-RATE_504_25 = 6.97
+RATE_504_25 = 6.57
 
 SOURCES = ('<p class="src">Sources: <a href="https://www.sba.gov/partners/lenders/7a-loan-program/terms-conditions-eligibility" rel="nofollow">SBA 7(a) terms, conditions and maximum variable rates</a>; '
            '<a href="https://www.federalreserve.gov/releases/h15/" rel="nofollow">Federal Reserve H.15 selected interest rates (bank prime loan rate)</a>; '
-           '<a href="https://somercor.com/october-2026-sba-504-interest-rates/" rel="nofollow">October 2026 SBA 504 debenture pricing, as published by CDCs</a>; '
+           '<a href="https://somercor.com/november-2026-sba-504-interest-rates/" rel="nofollow">November 2026 SBA 504 debenture pricing, as published by CDCs</a>; '
            '<a href="https://data.sba.gov/dataset/7-a-504-foia" rel="nofollow">SBA FOIA 7(a) and 504 loan-level data</a>.</p>')
 
 
@@ -139,7 +140,7 @@ def page(path, title, desc, crumbs, main, extra_nodes=(), nav=None, about_id=Non
 </div></header>
 <main id="main">{main}</main>
 <footer class="site-foot"><div class="wrap foot-grid">
-<div><p><strong>SBARates.com</strong> tracks the SBA's maximum loan rates and public SBA lending data so you can compare lenders before you apply. We're not a lender or a government site, and nothing here is a loan offer.</p><p>Rates last checked {PRIME_DATE}. Lenders set your actual rate below the SBA maximum.</p></div>
+<div><p><strong>SBARates.com</strong> tracks the SBA's maximum loan rates and public SBA lending data so you can compare lenders before you apply. We're not a lender or a government site, and nothing here is a loan offer.</p><p>Rates last checked {RATES_CHECKED}. Lenders set your actual rate below the SBA maximum.</p></div>
 <div><strong>Rates</strong><br><a href="/sba-loan-rates/">SBA 7(a) rates</a><br><a href="/sba-504-loan-rates/">SBA 504 rates</a><br><a href="/sba-loan-calculator/">Payment calculator</a></div>
 <div><strong>Research</strong><br><a href="/SBA-Loans/">Lender directory</a><br><a href="/SBA-Loan/">Industries</a><br><a href="/blog/Small%20Business%20Administration/">What is the SBA?</a><br><a href="/about/">About &amp; sources</a></div>
 </div></footer>
