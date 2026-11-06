@@ -102,6 +102,21 @@ def slug_state(slug):
     return st if st in STATES else None
 
 
+def rates_7a(name):
+    return (f'<h2>Maximum SBA rates at {e(name)}</h2><p>Every SBA lender has to stay at or below the SBA\'s caps, which are tied to the prime rate ({PRIME:.2f}%). '
+            f'A loan over $350,000 can\'t carry a variable rate above {pct(PRIME + 3)}.</p>{var_table()}'
+            f'<p>Ask {e(name)} for its spread over prime. Two lenders can both be under the cap and still be a full point apart. See <a href="/">today\'s SBA loan rates</a> for fixed-rate caps and the <a href="/sba-504-loan-rates/">SBA 504 rate</a>.</p>\n')
+
+
+def rates_cdc(name):
+    return (f'<h2>SBA 504 rates through {e(name)}</h2><p>The CDC portion of a 504 loan is fixed for its whole term at a rate set at the SBA\'s monthly debenture sale, so it is the same at every CDC. '
+            f'What differs between CDCs is speed, fees and which banks they work with.</p>'
+            f'<div class="tbl-wrap"><table><thead><tr><th>504 debenture term</th><th class="r">Effective fixed rate (November 2026)</th></tr></thead><tbody>'
+            f'<tr><td>25-year</td><td class="r num"><strong>6.57%</strong></td></tr><tr><td>20-year</td><td class="r num"><strong>6.58%</strong></td></tr>'
+            f'<tr><td>10-year</td><td class="r num"><strong>6.58%</strong></td></tr></tbody></table></div>'
+            f'<p>The bank\'s first mortgage on the other half is priced separately. See <a href="/sba-504-loan-rates/">SBA 504 rate history</a> and <a href="/">today\'s SBA loan rates</a> to compare with a 7(a) loan.</p>\n')
+
+
 # ---------------------------------------------------------------- lenders
 def render_lender(L, lenders_inv):
     slug = L["slug"]
@@ -113,9 +128,15 @@ def render_lender(L, lenders_inv):
     title = title_with_site(L["title"])
     desc = L["description"]
     faqs = [(f["q"], f["a"]) for f in L["faqs"]]
-    faqs.append((f"What rate will I get on an SBA loan from {name}?",
-                 f"{name} sets your rate at or below the SBA maximum. With prime at {PRIME:.2f}%, variable 7(a) caps run from "
-                 f"{pct(PRIME + 3)} on loans over $350,000 to {pct(PRIME + 6.5)} on loans of $50,000 or less. Your rate depends on loan size, term, collateral, credit and cash flow."))
+    is_cdc = L.get("type") == "CDC"
+    if is_cdc:
+        faqs.append((f"What rate will I get on a 504 loan through {name}?",
+                     f"The CDC portion of a 504 loan carries a fixed rate set at the SBA's monthly debenture sale, the same for every CDC. "
+                     f"The November 2026 sale priced the 25-year debenture at {pct(shell.RATE_504_25)} including fees. The bank's first mortgage is priced separately, so ask for both rates."))
+    else:
+        faqs.append((f"What rate will I get on an SBA loan from {name}?",
+                     f"{name} sets your rate at or below the SBA maximum. With prime at {PRIME:.2f}%, variable 7(a) caps run from "
+                     f"{pct(PRIME + 3)} on loans over $350,000 to {pct(PRIME + 6.5)} on loans of $50,000 or less. Your rate depends on loan size, term, collateral, credit and cash flow."))
 
     others = [(p, d["name"]) for p, d in sorted(lenders_inv.items(), key=lambda x: x[1]["name"]) if d["st"] == st and p != path]
     if others:
@@ -136,12 +157,12 @@ def render_lender(L, lenders_inv):
             f'<h2>What {e(name)} is known for</h2><ul>{known}</ul>\n'
             f'<h2>How business owners use SBA loans here</h2><p>{e(L["sba_fit"])}</p>\n'
             f'<h2>SBA programs to ask {e(name)} about</h2><ul>{prog_html}</ul><p>Program availability changes. Ask the lender which SBA programs it closes most often and whether it has SBA Preferred Lender status, which lets it approve loans in-house.</p>\n'
-            f'<h2>Maximum SBA rates at {e(name)}</h2><p>Every SBA lender has to stay at or below the SBA\'s caps, which are tied to the prime rate ({PRIME:.2f}%). '
-            f'A loan over $350,000 can\'t carry a variable rate above {pct(PRIME + 3)}.</p>{var_table()}'
-            f'<p>Ask {e(name)} for its spread over prime. Two lenders can both be under the cap and still be a full point apart. See <a href="/">today\'s SBA loan rates</a> for fixed-rate caps and the <a href="/sba-504-loan-rates/">SBA 504 rate</a>.</p>\n'
-            + cta(f"lender:{slug}", state=st) +
-            f'<h2>Before you apply</h2><ol class="steps"><li>Ask whether {e(name)} is an SBA Preferred Lender and how many SBA loans it closed last year in your industry.</li>'
-            f'<li>Request the spread over prime, the fixed-rate option and every fee in writing.</li>'
+            + (rates_cdc(name) if is_cdc else rates_7a(name)) +
+            cta(f"lender:{slug}", state=st) +
+            (f'<h2>Before you apply</h2><ol class="steps"><li>Ask {e(name)} which banks it partners with for the first mortgage and how long its 504 loans take from application to closing.</li>'
+             f'<li>Request the bank rate, the CDC packaging fee and every other fee in writing.</li>' if is_cdc else
+             f'<h2>Before you apply</h2><ol class="steps"><li>Ask whether {e(name)} is an SBA Preferred Lender and how many SBA loans it closed last year in your industry.</li>'
+             f'<li>Request the spread over prime, the fixed-rate option and every fee in writing.</li>') +
             f'<li>Get at least one more quote. Our <a href="/SBA-Loans/">SBA lenders list</a> shows other lenders in {e(state)}, and the <a href="/sba-loan-calculator/">payment calculator</a> shows what a quarter point costs you.</li></ol>\n'
             f'<h2>Questions</h2>{faq_html(faqs)}\n'
             f'</div><aside class="aside"><h2>Today\'s SBA rates</h2><p class="num">Prime {PRIME:.2f}%<br>7(a) variable caps {pct(PRIME + 3)}–{pct(PRIME + 6.5)}<br>504, 25-year {pct(shell.RATE_504_25)}</p>'

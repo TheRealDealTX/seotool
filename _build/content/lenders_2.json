@@ -106,21 +106,21 @@
    "HarborOne Credit Union"
   ],
   "title": "HarborOne Bank SBA Loans & Rates (MA)",
-  "description": "HarborOne Bank SBA loans in Massachusetts and Rhode Island: current 7(a) rate caps, 504 rates, the Eastern Bank merger and what to ask before applying.",
+  "description": "HarborOne Bank SBA loans: HarborOne merged into Eastern Bank in November 2025. Current 7(a) rate caps, 504 rates and what former customers should ask.",
   "h1": "HarborOne Bank SBA loans (MA)",
-  "lede": "HarborOne Bank is a Brockton, Massachusetts bank that grew out of a large credit union and lends to small businesses in Massachusetts and Rhode Island.",
+  "lede": "HarborOne Bank grew out of a large Brockton, Massachusetts credit union and merged into Eastern Bank in November 2025.",
   "about": [
    "HarborOne Bank is based in Brockton, Massachusetts. It began as a credit union and operated for years as HarborOne Credit Union, one of the larger credit unions in the state, before converting to a savings bank charter in 2013. The holding company, HarborOne Bancorp, later became publicly traded. The bank also built a sizable mortgage business under the HarborOne Mortgage name.",
    "Its branches are concentrated south of Boston and in Rhode Island, where it expanded through the 2019 acquisition of Coastway Bancorp in Warwick. Business clients range from small retailers and restaurants to contractors, professional firms and commercial real estate investors. The bank has also run small-business education programs for local entrepreneurs.",
-   "In 2025 Eastern Bankshares, the parent of Eastern Bank, agreed to acquire HarborOne. If you are dealing with HarborOne today, ask whether your loan will be underwritten and serviced by Eastern Bank, since branch names, loan officers and SBA processes may have moved under the Eastern brand. Existing borrowers should also confirm how payments and statements are handled after the merger."
+   "Eastern Bankshares completed its acquisition of HarborOne on November 1, 2025, and HarborOne Bank merged into Eastern Bank the same day. HarborOne branches, customers and loans are now part of Eastern Bank, and the HarborOne Mortgage business was folded into Eastern in early 2026. If you are looking for a former HarborOne banker, you will now reach them through Eastern Bank, which is also an SBA lender."
   ],
-  "sba_fit": "HarborOne's typical SBA borrower is a South Shore or Rhode Island business that needs a 7(a) loan for an acquisition, a buildout or working capital, or a 504 deal to buy its own building. Because the bank has been folding into Eastern Bank, the practical question is who makes the decision on your file and how long it will take. Ask for the name of the SBA lender assigned to you, confirm the current application process, and get a written term sheet before you commit to a seller or landlord.",
+  "sba_fit": "Former HarborOne business customers on the South Shore and in Rhode Island now apply through Eastern Bank. Typical SBA uses are unchanged: a 7(a) loan for an acquisition, a buildout or working capital, or a 504 loan to buy your own building. Ask Eastern for the SBA lender covering your area, whether it can approve under Preferred Lender authority, and get a written term sheet before you commit to a seller or landlord.",
   "known_for": [
    "Former credit union that converted to a bank in 2013",
-   "Headquartered in Brockton, Massachusetts",
+   "Was headquartered in Brockton, Massachusetts",
    "Branches south of Boston and in Rhode Island",
-   "Acquired Coastway Bancorp in Rhode Island",
-   "Agreed in 2025 to be acquired by Eastern Bankshares"
+   "Merged into Eastern Bank on November 1, 2025",
+   "Former HarborOne customers now bank with Eastern"
   ],
   "programs": [
    "7(a)",
@@ -129,8 +129,8 @@
   ],
   "faqs": [
    {
-    "q": "Does HarborOne Bank still make SBA loans after the Eastern Bank deal?",
-    "a": "Eastern Bankshares agreed in 2025 to acquire HarborOne, and Eastern is also an SBA lender. Depending on timing, your application may now be handled by Eastern Bank. Call your local branch or a commercial lender to confirm who underwrites SBA loans, which programs are offered and how existing HarborOne loans are serviced."
+    "q": "Is HarborOne Bank part of Eastern Bank now?",
+    "a": "Yes. Eastern Bankshares completed its acquisition of HarborOne Bancorp on November 1, 2025, and HarborOne Bank merged into Eastern Bank. SBA loans for former HarborOne customers are now handled by Eastern Bank. Existing HarborOne loans are serviced by Eastern."
    },
    {
     "q": "Was HarborOne Bank a credit union?",
@@ -292,7 +292,7 @@
   "legal": "Stone Bank",
   "name": "Stone Bank",
   "type": "bank",
-  "city": "Mountain View",
+  "city": "Little Rock",
   "state": "Arkansas",
   "st": "AR",
   "area": "Arkansas",
@@ -300,19 +300,19 @@
   "title": "Stone Bank SBA Loans & Rates (AR)",
   "description": "Stone Bank SBA loans in Arkansas: today's 7(a) rate caps with prime at 7.00%, 504 rates and what to ask an Arkansas community bank before applying.",
   "h1": "Stone Bank SBA loans (AR)",
-  "lede": "Stone Bank is an Arkansas community bank with roots in Stone County that offers business and SBA-guaranteed loans.",
+  "lede": "Stone Bank is a Little Rock-based Arkansas community bank, founded in Mountain View, that offers business and SBA-guaranteed loans.",
   "about": [
-   "Stone Bank is an Arkansas community bank that takes its name from Stone County in the Ozark foothills, where it got its start in Mountain View. It is a locally owned bank rather than a branch of a large regional company, and it has expanded beyond its original rural market into other parts of the state.",
+   "Stone Bank is an Arkansas community bank that takes its name from Stone County in the Ozark foothills, where it started in Mountain View. As it grew, it moved its headquarters to Little Rock: in 2023 it bought the former Bank OZK headquarters building on Chenal Parkway in west Little Rock, and it opened the renovated building as its new headquarters in January 2025.",
    "The bank offers personal and business banking, with commercial lending as a core focus. Its business customers are mostly Arkansas companies: retailers, contractors, healthcare providers, hospitality businesses, and owners buying or improving commercial property. Tourism and small manufacturing are part of the economy in north-central Arkansas, and the bank's loan mix reflects that.",
    "SBA lending has been one of the ways Stone Bank serves business owners beyond its home county. Government guarantees let a smaller bank take on loans for start-ups, acquisitions and real estate that might not fit its conventional lending limits. They also give borrowers longer repayment periods, which helps cash flow in the early years after a purchase or expansion."
   ],
   "sba_fit": "An Arkansas owner would most likely use Stone Bank for a 7(a) loan to buy a business, purchase or renovate a commercial building, or add equipment and working capital in one package. Smaller banks often know the SBA paperwork well because it is a meaningful part of their business, which can help first-time borrowers. Ask whether the bank can approve loans under SBA delegated authority, how long closing usually takes, and whether it will consider a start-up with the minimum 10% equity injection.",
   "known_for": [
    "Arkansas community bank with roots in Stone County",
+   "Headquartered in Little Rock since 2025",
    "Started in Mountain View, Arkansas",
    "Commercial and small-business lending focus",
-   "SBA lending beyond its home market",
-   "Locally owned"
+   "SBA lending across Arkansas"
   ],
   "programs": [
    "7(a)",
@@ -437,39 +437,40 @@
   "slug": "arizona-capital-source-az",
   "legal": "Arizona Capital Source",
   "name": "Arizona Capital Source",
-  "type": "nonbank lender",
-  "city": "",
+  "type": "CDC",
+  "city": "Tucson",
   "state": "Arizona",
   "st": "AZ",
   "area": "Arizona",
   "former_names": [],
-  "title": "Arizona Capital Source SBA Loans (AZ)",
-  "description": "Arizona Capital Source SBA loans: what we know about this Arizona SBA lending participant, today's 7(a) rate caps and how to vet any SBA lender.",
-  "h1": "Arizona Capital Source SBA loans (AZ)",
-  "lede": "Arizona Capital Source is listed in SBA lending records as an Arizona-based participant in SBA programs.",
+  "title": "Arizona Capital Source SBA 504 Loans (AZ)",
+  "description": "Arizona Capital Source: a Tucson nonprofit CDC making SBA 504 loans for owner-occupied property and equipment. Current 504 rates and how the process works.",
+  "h1": "Arizona Capital Source SBA 504 loans (AZ)",
+  "lede": "Arizona Capital Source is a Tucson nonprofit Certified Development Company that provides SBA 504 financing.",
   "about": [
-   "Arizona Capital Source appears in SBA's public lending data as an Arizona-based SBA lending participant. It is a much smaller and less widely known name than the large banks that dominate SBA lending in Phoenix and Tucson, and public information about its current operations is limited. We have not verified its ownership, charter type or present lending activity.",
-   "Entities like this can include small specialty lenders, lending affiliates or organizations that made a limited number of SBA loans in a given period. Some remain active and some change names or stop originating loans. Because of that, a borrower should treat the listing as a starting point, not as confirmation that the lender is open for new SBA applications.",
-   "If you are considering Arizona Capital Source, confirm its status directly. Ask for its SBA lender identification, which programs it participates in and who services its loans. You can also check the lender match tools on SBA.gov to compare it with other Arizona SBA lenders. A few phone calls now can save you weeks of wasted effort later."
+   "Arizona Capital Source is a nonprofit Certified Development Company (CDC) based in Tucson, Arizona. CDCs are the community lenders that make the SBA-backed portion of 504 loans, so Arizona Capital Source works alongside banks rather than in place of them: the bank funds the first mortgage and the CDC funds the second, fixed-rate piece.",
+   "Its focus is 504 financing for owner-occupied commercial real estate and long-life equipment. A typical project is a business buying, building or renovating the property it operates from, with the bank lending about 50% of the cost, the CDC about 40% and the owner putting in about 10%. Third-party lender databases also show it handling some 7(a) loans and working outside Arizona.",
+   "Because a CDC packages and services the 504 portion over 10 to 25 years, the choice of CDC matters: it affects how fast your loan closes and who you deal with after closing. Ask Arizona Capital Source which banks it partners with in your area, its timeline from application to debenture sale, and what fees it charges for packaging."
   ],
-  "sba_fit": "With a lesser-known SBA participant, the most important step is verification. Before sharing tax returns or paying any fee, confirm the organization is an authorized SBA lender and that it, not a broker, will make the loan. Legitimate SBA lenders cannot charge unreasonable upfront fees, and rates cannot exceed SBA caps. Compare any offer against at least one Arizona bank or credit union, and use SBA Lender Match if you need more options.",
+  "sba_fit": "Use Arizona Capital Source when your business wants to own its building or buy major equipment and you want a long fixed rate on part of the financing. The 504 debenture portion priced at 6.57% for 25 years in November 2026, which often beats a bank's own fixed rate. You can bring your own bank or ask the CDC for a referral. Your business generally has to occupy at least 51% of an existing building.",
   "known_for": [
-   "Listed as an Arizona participant in SBA lending data",
-   "Limited public information on current operations",
-   "Verify lender status before applying",
-   "Subject to the same SBA rate caps as any lender"
+   "Nonprofit Certified Development Company",
+   "Based in Tucson, Arizona",
+   "SBA 504 loans for owner-occupied real estate",
+   "Long-term fixed-rate equipment financing",
+   "Works with partner banks on each project"
   ],
   "programs": [
-   "7(a)"
+   "504"
   ],
   "faqs": [
    {
-    "q": "Is Arizona Capital Source an SBA lender?",
-    "a": "Arizona Capital Source appears in SBA lending records as an Arizona participant. We could not independently confirm its current lending activity, ownership or programs. Before applying, contact it directly, ask for its SBA lender details and confirm it is currently accepting new SBA loan applications."
+    "q": "What is Arizona Capital Source?",
+    "a": "Arizona Capital Source is a nonprofit Certified Development Company in Tucson that provides SBA 504 loans. It funds the SBA-backed second piece of a 504 project, usually about 40% of the cost at a fixed rate, while a bank funds the first mortgage and you contribute about 10%."
    },
    {
-    "q": "How do I check whether an Arizona SBA lender is legitimate?",
-    "a": "Ask the lender to confirm its SBA participation in writing and name the programs it uses. You can contact your local SBA district office in Phoenix or use Lender Match on SBA.gov. Be cautious of anyone who asks for large upfront fees or guarantees approval before reviewing your financials."
+    "q": "How does a 504 loan through a CDC work?",
+    "a": "A bank lends about 50% of the project with a first lien, the CDC lends up to 40% through an SBA-guaranteed debenture with a fixed rate set at a monthly bond sale, and you put in about 10%, more for start-ups or special-purpose buildings. The CDC packages the SBA side and services it for the life of the loan."
    },
    {
     "q": "What SBA loan rate should I expect in Arizona?",
@@ -823,7 +824,7 @@
   "h1": "Great Plains National Bank SBA loans (OK)",
   "lede": "Great Plains National Bank is an Oklahoma community bank based in Elk City that lends to farm, energy and small-business customers.",
   "about": [
-   "Great Plains National Bank is an Oklahoma community bank headquartered in Elk City, in the western part of the state. Its website is gpbankok.com, which is how many customers search for it. The bank is locally focused and serves communities across western Oklahoma, and it has also built a presence in the Oklahoma City area.",
+   "Great Plains National Bank is an Oklahoma community bank headquartered in Elk City, in the western part of the state. Its website is gpbankok.com, which is how many customers search for it. Its branches are mostly in western Oklahoma, with offices in the Oklahoma City area and Enid and a few branches in Texas.",
    "Western Oklahoma's economy leans on agriculture, oil and gas, trucking and the service businesses that support them. The bank's commercial customers reflect that: oilfield service companies, equipment dealers, contractors, restaurants, retailers, healthcare providers and real estate owners, along with farm and ranch operations. Many of these customers have banked with Great Plains for years.",
    "The bank offers commercial, agricultural and consumer lending, plus business deposit accounts and online banking. SBA loans help it finance businesses whose collateral or cash flow history does not fit a conventional loan, which can matter in an energy-driven economy that moves in cycles. Loan officers in its western Oklahoma markets tend to know local industries closely."
   ],
@@ -831,7 +832,7 @@
   "known_for": [
    "Community bank based in Elk City, Oklahoma",
    "Website gpbankok.com",
-   "Serves western Oklahoma and the Oklahoma City area",
+   "Branches across Oklahoma and a few in Texas",
    "Lending to energy, agriculture and small businesses",
    "Commercial, agricultural and consumer loans"
   ],
