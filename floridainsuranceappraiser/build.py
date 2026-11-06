@@ -18,7 +18,7 @@ from content.resources import ABOUT, PROCESS, FAQS, GLOSSARY, LEGAL
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "dist")
-VER = "20261106"
+VER = "20261106p"
 NAME = BIZ["name"]
 TEL = f'<a href="tel:{BIZ["phone_href"]}">{BIZ["phone_display"]}</a>'
 SITEMAP = []
@@ -55,6 +55,80 @@ _IC = {
     "camera": '<path d="M4 7h3l2-3h6l2 3h3v12H4z"/><circle cx="12" cy="13" r="3.5"/>',
     "ruler": '<path d="M3 17L17 3l4 4L7 21z"/><path d="M7 13l2 2M10 10l2 2M13 7l2 2"/>',
 }
+
+
+# ------------------------------------------------------------------ photos (Pexels license; see README credits)
+PHOTO_ALT = {
+    "florida-home-palm-trees": "Two-story stucco Florida home with palm trees and a covered patio",
+    "hurricane-palm-trees-wind": "Palm trees bending in hurricane-force wind under a gray sky",
+    "hurricane-damage-aerial": "Aerial view of homes with damaged roofs and fallen trees after a hurricane",
+    "roofer-shingle-roof-repair": "Roofer working on an asphalt shingle roof",
+    "water-damage-collapsed-ceiling": "Interior room with a collapsed ceiling and water-damaged debris",
+    "cracked-wall-foundation": "Large cracks running through a plaster wall",
+    "fire-damaged-house": "Two-story house gutted by fire with a burned-out roof",
+    "florida-condo-building": "Mid-rise Florida condominium building lined with palm trees",
+    "florida-commercial-property": "Commercial retail building with palm trees in Southwest Florida",
+    "insurance-documents-review": "Two people reviewing a home insurance policy on a clipboard",
+    "estimate-review-clipboard-laptop": "Reviewing an insurance estimate on a clipboard beside a laptop",
+    "florida-coastal-homes": "White coastal homes with metal roofs and palm trees on the Florida Panhandle",
+    "property-inspector-clipboard": "Property inspector in a hard hat and safety vest checking a home with a clipboard",
+    "inspector-checklist": "Inspector holding a property inspection checklist on a clipboard",
+    "claim-meeting-paperwork": "Property owner and professional going over claim paperwork at a table",
+    "home-insurance-policy": "Home insurance policy documents and a pen on a desk",
+    "post-storm-flooding-florida": "Storm debris and standing water along a palm-lined Florida waterfront",
+    "flooded-house-street": "Floodwater surrounding a house after a heavy storm",
+    "tile-roof-inspection": "Worker inspecting a tile roof",
+    "miami-beach-skyline": "Miami Beach shoreline with high-rise condominiums at twilight",
+    "tampa-skyline": "Downtown Tampa skyline across the Hillsborough River at sunset",
+    "orlando-lake-eola-skyline": "Downtown Orlando skyline reflected in Lake Eola at sunrise",
+    "jacksonville-skyline-bridge": "Jacksonville skyline and Main Street Bridge over the St. Johns River",
+    "fort-lauderdale-beachfront": "Fort Lauderdale beachfront high-rises and boats on the inlet",
+    "west-palm-beach-waterfront": "West Palm Beach waterfront and skyline under an evening sky",
+    "fort-myers-neighborhood-aerial": "Aerial view of a residential neighborhood in Fort Myers",
+    "naples-pier-sunset": "Naples Pier at sunset on the Gulf of Mexico",
+    "sarasota-skyline": "Sarasota skyline across the bay on a clear day",
+    "st-petersburg-pier": "The St. Pete Pier extending into Tampa Bay",
+    "north-florida-live-oaks": "Live oaks draped in Spanish moss arching over a North Florida street",
+    "pensacola-beach": "Aerial view of white sand and surf on Pensacola Beach",
+}
+SVC_PHOTO = {
+    "homeowners-claim-appraisal": "florida-coastal-homes", "hurricane-claim-appraisal": "hurricane-damage-aerial",
+    "roof-claim-appraisal": "roofer-shingle-roof-repair", "water-damage-claim-appraisal": "water-damage-collapsed-ceiling",
+    "sinkhole-claim-appraisal": "cracked-wall-foundation", "fire-smoke-claim-appraisal": "fire-damaged-house",
+    "condo-hoa-claim-appraisal": "florida-condo-building", "commercial-claim-appraisal": "florida-commercial-property",
+    "umpire-services": "insurance-documents-review", "xactimate-estimate-review": "estimate-review-clipboard-laptop",
+}
+LOC_PHOTO = {
+    "miami-fl": "miami-beach-skyline", "tampa-fl": "tampa-skyline", "orlando-fl": "orlando-lake-eola-skyline",
+    "jacksonville-fl": "jacksonville-skyline-bridge", "fort-lauderdale-fl": "fort-lauderdale-beachfront",
+    "west-palm-beach-fl": "west-palm-beach-waterfront", "fort-myers-fl": "fort-myers-neighborhood-aerial",
+    "naples-fl": "naples-pier-sunset", "sarasota-fl": "sarasota-skyline", "st-petersburg-fl": "st-petersburg-pier",
+    "tallahassee-fl": "north-florida-live-oaks", "pensacola-fl": "pensacola-beach",
+}
+POST_PHOTO = {
+    "how-the-appraisal-clause-works-in-florida": "home-insurance-policy",
+    "florida-hurricane-deductible-explained": "post-storm-flooding-florida",
+    "appraiser-vs-public-adjuster-vs-attorney-florida": "claim-meeting-paperwork",
+    "what-to-do-when-a-florida-claim-is-underpaid": "flooded-house-street",
+    "florida-roof-claims-after-the-2022-reforms": "tile-roof-inspection",
+}
+_DIMS = {}
+
+
+def _dims(name):
+    if name not in _DIMS:
+        from PIL import Image
+        with Image.open(os.path.join(ROOT, "assets/img/photos", name + ".webp")) as im:
+            _DIMS[name] = im.size
+    return _DIMS[name]
+
+
+def photo(name, cls="", sizes="(max-width: 760px) 100vw, 50vw", eager=False, alt=None):
+    w, h = _dims(name)
+    load = 'fetchpriority="high"' if eager else 'loading="lazy"'
+    return (f'<img class="{cls}" src="/assets/img/photos/{name}.webp" '
+            f'srcset="/assets/img/photos/{name}-sm.webp 720w, /assets/img/photos/{name}.webp {w}w" sizes="{sizes}" '
+            f'width="{w}" height="{h}" alt="{esc(alt or PHOTO_ALT[name])}" {load} decoding="async">')
 
 
 def icon(name):
@@ -110,6 +184,7 @@ def head(p):
     graph += p.get("schema", [])
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False)
     robots = p.get("robots", "index, follow, max-image-preview:large")
+    og_image = url(f"/assets/img/photos/{p['photo']}.webp") if p.get("photo") else url("/assets/img/og-image.png")
     extra = ""
     if p.get("published"):
         extra = f'<meta property="article:published_time" content="{p["published"]}">\n'
@@ -129,7 +204,7 @@ def head(p):
 <meta property="og:title" content="{esc(p['title'])}">
 <meta property="og:description" content="{esc(p['description'])}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{url('/assets/img/og-image.png')}">
+<meta property="og:image" content="{og_image}">
 <meta name="twitter:card" content="summary_large_image">
 {extra}<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
@@ -224,13 +299,15 @@ def crumbs(trail):
     return '<nav class="crumbs" aria-label="Breadcrumb">' + "<span>/</span>".join(parts) + "</nav>"
 
 
-def page_hero(trail, kicker, h1, lead, extra=""):
-    return f"""<section class="page-hero"><div class="wrap">
-{crumbs(trail)}
+def page_hero(trail, kicker, h1, lead, extra="", img=None):
+    text = f"""{crumbs(trail)}
 <span class="eyebrow">{esc(kicker)}</span>
 <h1>{h1}</h1>
-<p class="lead">{lead}</p>{extra}
-</div></section>"""
+<p class="lead">{lead}</p>{extra}"""
+    if img:
+        fig = photo(img, sizes="(max-width: 1000px) 100vw, 42vw", eager=True)
+        return f'<section class="page-hero has-photo"><div class="wrap"><div>{text}</div><figure class="hero-photo">{fig}</figure></div></section>'
+    return f'<section class="page-hero"><div class="wrap">{text}</div></section>'
 
 
 def faq_block(faqs, heading="Frequently asked questions"):
@@ -284,7 +361,9 @@ def lead_form(fid="contact-form"):
 
 
 def service_card(s):
-    return f'<a class="card" href="/appraisal-services/{s["slug"]}/">{ico(s["icon"])}<h3>{s["name"]}</h3><p>{esc(s["short"])}</p><span class="go">Learn more →</span></a>'
+    img = photo(SVC_PHOTO[s["slug"]], sizes="(max-width: 640px) 100vw, 380px")
+    return (f'<a class="card card-ph" href="/appraisal-services/{s["slug"]}/"><div class="ph">{img}</div>'
+            f'<div class="cb">{ico(s["icon"])}<h3>{s["name"]}</h3><p>{esc(s["short"])}</p><span class="go">Learn more →</span></div></a>')
 
 
 def tool_card(t):
@@ -292,7 +371,15 @@ def tool_card(t):
 
 
 def post_card(p):
-    return f'<a class="card" href="/blog/{p["slug"]}/"><span class="num">{esc(p["kicker"])}</span><h3>{esc(p["h1"])}</h3><p>{esc(p["excerpt"])}</p><span class="go">Read · {p["read_min"]} min →</span></a>'
+    img = photo(POST_PHOTO[p["slug"]], sizes="(max-width: 640px) 100vw, 380px")
+    return (f'<a class="card card-ph" href="/blog/{p["slug"]}/"><div class="ph">{img}</div>'
+            f'<div class="cb"><span class="num">{esc(p["kicker"])}</span><h3>{esc(p["h1"])}</h3><p>{esc(p["excerpt"])}</p><span class="go">Read · {p["read_min"]} min →</span></div></a>')
+
+
+def loc_card(l):
+    img = photo(LOC_PHOTO[l["slug"]], sizes="(max-width: 640px) 100vw, 290px")
+    return (f'<a class="card card-ph" href="/florida-locations/{l["slug"]}/"><div class="ph">{img}</div>'
+            f'<div class="cb"><h3>{l["city"]}, FL</h3><p>{esc(l["county"])} · {esc(l["region"])}</p><span class="go">View area →</span></div></a>')
 
 
 # ------------------------------------------------------------------ homepage
@@ -333,14 +420,17 @@ def build_home():
 <div class="hero-ctas"><a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a><a class="btn btn-ghost" href="/contact/">Get a free claim review</a></div>
 <ul class="trust"><li>Xactimate &amp; Symbility estimates</li><li>Residential &amp; commercial</li><li>Umpire services</li></ul>
 </div>
+<div class="hero-media">
+<figure class="hero-img">{photo('florida-home-palm-trees', sizes='(max-width: 1000px) 100vw, 46vw', eager=True)}<figcaption>Stucco, tile and shingle: we price Florida homes the way they’re actually built.</figcaption></figure>
 <form class="card-calc" id="quickgap" onsubmit="return false" aria-labelledby="qg-h">
 <h2 id="qg-h">How big is your claim gap?</h2>
 <p class="sub">A 10-second check before you call.</p>
-<div class="field"><label for="qg-ins">Insurance company’s estimate</label><div class="money"><input id="qg-ins" name="ins" inputmode="decimal" value="18000"></div></div>
-<div class="field"><label for="qg-con">Your contractor’s estimate</label><div class="money"><input id="qg-con" name="con" inputmode="decimal" value="41000"></div></div>
+<div class="field"><label for="qg-ins">Insurer’s estimate</label><div class="money"><input id="qg-ins" name="ins" inputmode="decimal" value="18000"></div></div>
+<div class="field"><label for="qg-con">Contractor’s estimate</label><div class="money"><input id="qg-con" name="con" inputmode="decimal" value="41000"></div></div>
 <div class="result"><small>Amount in dispute</small><div class="big">$23,000</div><div class="meter"><i></i></div><small class="verdict-text"></small></div>
 <p style="margin:14px 0 0;font-size:.9rem"><a href="/claim-tools/appraisal-worth-it-calculator/">Run the full worth-it calculator →</a></p>
 </form>
+</div>
 </div>
 <svg class="waves" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30c120-24 240-24 360 0s240 24 360 0 240-24 360 0 240 24 360 0v30z" fill="#fffaf2"/></svg>
 </section>
@@ -356,6 +446,7 @@ def build_home():
 <p>Most underpaid Florida claims aren’t the result of one big disagreement. They’re dozens of small ones: a roof measured without its waste factor, a tile line item swapped for shingles, drywall priced for one wall instead of the whole room, matching ignored, code upgrades left off and contractor overhead and profit quietly removed.</p>
 <p>A Florida Insurance Appraiser finds those differences one line at a time and puts a documented price on each of them. That is what an appraisal panel weighs — not who argues loudest, but whose estimate holds up item by item.</p>
 <p><a class="btn btn-ink" href="/about/">How we work</a></p>
+<figure class="inline-photo">{photo('property-inspector-clipboard', sizes='(max-width: 1000px) 100vw, 560px')}</figure>
 </div>
 <div class="postcard">
 <h3>Illustrative example: a hip-roof hurricane claim</h3>
@@ -387,7 +478,7 @@ def build_home():
 <p style="margin-top:30px"><a href="/appraisal-process/">Read the full Florida appraisal process guide →</a></p>
 </div></section>
 
-<section class="sec ink"><div class="wrap">
+<section class="sec ink photo-bg">{photo('hurricane-palm-trees-wind', cls='bg', sizes='100vw', alt='')}<div class="wrap">
 <div class="split top">
 <div><span class="num" style="color:var(--sun)">No. 04 — Storm country</span>
 <h2>Built for the claims Florida actually gets</h2>
@@ -418,7 +509,8 @@ def build_home():
 <div><span class="num">No. 07 — Where we work</span>
 <h2>A Florida Insurance Appraiser for every coast</h2>
 <p>We work claims statewide — the high-rise condos of Miami-Dade and Broward, the older block homes of Tampa Bay, the barrier islands of Lee and Collier, the oak-canopy neighborhoods of Tallahassee and the Panhandle beaches still rebuilding from recent storms.</p>
-<ul class="chips">{chips}<li><a href="/florida-locations/">All of Florida →</a></li></ul></div>
+<ul class="chips">{chips}<li><a href="/florida-locations/">All of Florida →</a></li></ul>
+<div class="grid g2" style="margin-top:28px">{''.join(loc_card(l) for l in LOCATIONS if l['slug'] in ('miami-fl', 'fort-myers-fl'))}</div></div>
 <div class="grid g2">
 <div class="card">{ico('home')}<h3>Homeowners</h3><p>Single-family homes, townhomes and condo unit owners with HO-3, HO-6 or dwelling policies.</p></div>
 <div class="card">{ico('building')}<h3>Condo associations</h3><p>Master-policy claims, shared elements and building-wide water or wind losses.</p></div>
@@ -452,7 +544,7 @@ def build_home():
 {lead_form('home-form')}
 </div></section>
 """
-    p = {"path": "/", "file": "home.html",
+    p = {"path": "/", "file": "home.html", "photo": "florida-home-palm-trees",
          "title": "Florida Insurance Appraiser | Property Claim Appraisal",
          "description": "Florida Insurance Appraiser resolves underpaid hurricane, roof, water and fire claims with line-item estimates, appraisal and umpire services statewide.",
          "schema": [faq_schema(HOME_FAQS)]}
@@ -460,9 +552,9 @@ def build_home():
 
 
 # ------------------------------------------------------------------ interior templates
-def standard_page(path, trail, kicker, h1, lead, main_html, aside_html, faqs=None, schema=None, title=None, description=None, priority="0.6", extra_hero="", **kw):
+def standard_page(path, trail, kicker, h1, lead, main_html, aside_html, faqs=None, schema=None, title=None, description=None, priority="0.6", extra_hero="", img=None, **kw):
     faq_html = f'<div style="margin-top:40px">{faq_block(faqs)}</div>' if faqs else ""
-    body = page_hero(trail, kicker, h1, lead, extra_hero) + f"""
+    body = page_hero(trail, kicker, h1, lead, extra_hero, img) + f"""
 <section class="sec"><div class="wrap layout">
 <article class="prose">{main_html}{faq_html}</article>
 <aside class="aside">{aside_html}</aside>
@@ -471,7 +563,7 @@ def standard_page(path, trail, kicker, h1, lead, main_html, aside_html, faqs=Non
     sch = [crumbs_schema(trail)] + (schema or [])
     if faqs:
         sch.append(faq_schema(faqs))
-    p = {"path": path, "title": title, "description": description, "schema": sch}
+    p = {"path": path, "title": title, "description": description, "schema": sch, "photo": img}
     p.update(kw)
     write(p, body, priority)
 
@@ -480,12 +572,12 @@ def build_services():
     trail0 = [("Home", "/"), ("Services", "/appraisal-services/")]
     cards = "".join(service_card(s) for s in SERVICES)
     body = page_hero(trail0, "Appraisal & estimating", "Property claim appraisal services across Florida",
-                     f"Ten ways {NAME} helps resolve disputed claims — from a single roof to an entire condominium complex.") + f"""
+                     f"Ten ways {NAME} helps resolve disputed claims — from a single roof to an entire condominium complex.", img="roofer-shingle-roof-repair") + f"""
 <section class="sec"><div class="wrap"><div class="grid g3">{cards}</div>
 <div class="postcard" style="margin-top:56px"><div class="split top"><div><h2>Not sure which service fits?</h2><p>Most clients don’t know whether they need an appraiser, an umpire or just a second set of eyes on an estimate. Call and describe the claim; we’ll point you in the right direction even if it isn’t us.</p></div>
 <div><ul class="ticks"><li>Policy and estimate review before anything is signed</li><li>Clear written fee terms</li><li>Residential, condominium and commercial losses</li><li>Xactimate and Symbility line-item estimates</li></ul><a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a></div></div></div>
 </div></section>""" + cta_band()
-    write({"path": "/appraisal-services/", "title": "Insurance Appraisal Services in Florida | All Services",
+    write({"path": "/appraisal-services/", "photo": "roofer-shingle-roof-repair", "title": "Insurance Appraisal Services in Florida | All Services",
            "description": "Hurricane, roof, water, sinkhole, fire, condo and commercial claim appraisal, plus umpire services and Xactimate estimate review across Florida.",
            "schema": [crumbs_schema(trail0), {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": url(f'/appraisal-services/{s["slug"]}/'), "name": s["name"]} for i, s in enumerate(SERVICES)]}]},
           body, "0.9")
@@ -501,7 +593,7 @@ def build_services():
         schema = [{"@type": "Service", "name": s["name"], "serviceType": s["name"], "provider": {"@id": ORG_ID},
                    "areaServed": {"@type": "State", "name": "Florida"}, "url": url(path), "description": s["description"]}]
         standard_page(path, trail, s["kicker"], esc(s["h1"]), esc(s["lead"]), main, aside, s.get("faqs"), schema,
-                      s["title"], s["description"], "0.8")
+                      s["title"], s["description"], "0.8", img=SVC_PHOTO[s["slug"]])
 
 
 def build_locations():
@@ -509,13 +601,13 @@ def build_locations():
     regions = {}
     for l in LOCATIONS:
         regions.setdefault(l["region"], []).append(l)
-    cards = "".join(f'<a class="card" href="/florida-locations/{l["slug"]}/">{ico("pin")}<h3>{l["city"]}, FL</h3><p>{esc(l["county"])} · {esc(l["region"])}</p><span class="go">View area →</span></a>' for l in LOCATIONS)
+    cards = "".join(loc_card(l) for l in LOCATIONS)
     body = page_hero(trail0, "Statewide coverage", "Insurance appraisal across Florida",
-                     f"{NAME} works property claims in all 67 Florida counties. These are the markets we’re asked about most — if your city isn’t listed, we still cover it.") + f"""
+                     f"{NAME} works property claims in all 67 Florida counties. These are the markets we’re asked about most — if your city isn’t listed, we still cover it.", img="fort-myers-neighborhood-aerial") + f"""
 <section class="sec"><div class="wrap"><div class="grid g4">{cards}</div>
 <div class="sec-head" style="margin-top:64px"><h2>Every region has its own claim pattern</h2><p>South Florida’s high-velocity hurricane zone, Tampa Bay’s sinkhole belt, Southwest Florida’s surge-versus-wind fights and the Panhandle’s tree and wind losses each shape how estimates get written — and where they come up short. Our local pages explain what we see in each market.</p></div>
 </div></section>""" + cta_band()
-    write({"path": "/florida-locations/", "title": "Florida Insurance Appraiser Locations | Statewide Service",
+    write({"path": "/florida-locations/", "photo": "fort-myers-neighborhood-aerial", "title": "Florida Insurance Appraiser Locations | Statewide Service",
            "description": f"{NAME} serves all 67 Florida counties, including Miami, Tampa, Orlando, Jacksonville, Fort Myers, Naples, Sarasota and Pensacola.",
            "schema": [crumbs_schema(trail0)]}, body, "0.9")
     by = {l["slug"]: l for l in LOCATIONS}
@@ -540,16 +632,16 @@ def build_locations():
                    "areaServed": {"@type": "City", "name": f'{l["city"]}, FL', "containedInPlace": {"@type": "AdministrativeArea", "name": l["county"]},
                                   "geo": {"@type": "GeoCoordinates", "latitude": l["lat"], "longitude": l["lng"]}}}]
         standard_page(path, trail, l["kicker"], esc(l["h1"]), esc(l["lead"]), main, aside, l.get("faqs"), schema,
-                      l["title"], l["description"], "0.8")
+                      l["title"], l["description"], "0.8", img=LOC_PHOTO[l["slug"]])
 
 
 def build_tools():
     trail0 = [("Home", "/"), ("Free Tools", "/claim-tools/")]
     body = page_hero(trail0, "Free & private", "Free Florida insurance claim tools",
-                     "Calculators and checklists that help you understand your claim before you talk to anyone. Everything runs in your browser — nothing you type is sent to us.") + f"""
+                     "Calculators and checklists that help you understand your claim before you talk to anyone. Everything runs in your browser — nothing you type is sent to us.", img="estimate-review-clipboard-laptop") + f"""
 <section class="sec"><div class="wrap"><div class="grid g3">{''.join(tool_card(t) for t in TOOLS)}</div>
 <p class="note" style="margin-top:40px">Tools provide general estimates for planning only. They are not appraisals, legal advice or a substitute for reading your policy.</p></div></section>""" + cta_band()
-    write({"path": "/claim-tools/", "title": "Free Florida Insurance Claim Calculators & Tools",
+    write({"path": "/claim-tools/", "photo": "estimate-review-clipboard-laptop", "title": "Free Florida Insurance Claim Calculators & Tools",
            "description": "Free Florida claim tools: appraisal worth-it, hurricane deductible, ACV depreciation, claim deadline and roof calculators, plus an inventory builder.",
            "schema": [crumbs_schema(trail0)]}, body, "0.9")
     for t in TOOLS:
@@ -574,9 +666,9 @@ def build_blog():
     trail0 = [("Home", "/"), ("Guides", "/blog/")]
     posts = sorted(POSTS, key=lambda p: p["published"], reverse=True)
     body = page_hero(trail0, "Guides & articles", "Guides for Florida property insurance claims",
-                     "Plain-English explanations of appraisal, deductibles, roof claims and what to do when a settlement falls short.") + f"""
+                     "Plain-English explanations of appraisal, deductibles, roof claims and what to do when a settlement falls short.", img="post-storm-flooding-florida") + f"""
 <section class="sec"><div class="wrap"><div class="grid g3">{''.join(post_card(p) for p in posts)}</div></div></section>""" + cta_band()
-    write({"path": "/blog/", "title": f"Florida Insurance Claim Guides | {NAME}",
+    write({"path": "/blog/", "photo": "post-storm-flooding-florida", "title": f"Florida Insurance Claim Guides | {NAME}",
            "description": "Guides from Florida Insurance Appraiser on the appraisal clause, hurricane deductibles, roof claims, underpaid settlements and choosing claim help in Florida.",
            "schema": [crumbs_schema(trail0)]}, body, "0.8")
     for p in posts:
@@ -590,7 +682,7 @@ def build_blog():
         standard_page(path, trail, p["kicker"], esc(p["h1"]), esc(p["lead"]), prose(p["sections"]) + '<p class="note">General information, not legal advice. Policies differ; read yours and consult a Florida attorney on legal questions.</p>',
                       call_box() + link_box("More guides", [(x["h1"], f"/blog/{x['slug']}/") for x in others]),
                       p.get("faqs"), schema, p["title"], p["description"], "0.7",
-                      extra_hero=f'<p class="post-meta">By {NAME} · {pub} · {p["read_min"]} min read</p>',
+                      extra_hero=f'<p class="post-meta">By {NAME} · {pub} · {p["read_min"]} min read</p>', img=POST_PHOTO[p["slug"]],
                       published=p["published"], og_type="article", modified=p.get("modified", p["published"]))
 
 
@@ -600,21 +692,21 @@ def build_resources():
     main = prose(ABOUT["sections"]) + (f'<h2>What we hold ourselves to</h2><div class="grid g2">{vals}</div>' if vals else "")
     standard_page("/about/", [("Home", "/"), ("About", "/about/")], ABOUT["kicker"], esc(ABOUT["h1"]), esc(ABOUT["lead"]), main,
                   call_box() + link_box("Start here", [("Appraisal process", "/appraisal-process/"), ("All services", "/appraisal-services/"), ("Free tools", "/claim-tools/"), ("FAQ", "/faq/")]),
-                  None, [{"@type": "AboutPage", "url": url("/about/"), "about": {"@id": ORG_ID}}], ABOUT["title"], ABOUT["description"], "0.7")
+                  None, [{"@type": "AboutPage", "url": url("/about/"), "about": {"@id": ORG_ID}}], ABOUT["title"], ABOUT["description"], "0.7", img="property-inspector-clipboard")
     # process
     steps = "".join(f'<div class="card" style="margin-bottom:16px"><span class="num">Step {i + 1:02d}</span><h3>{esc(t)}</h3>{b}</div>' for i, (t, b) in enumerate(PROCESS["steps"]))
     main = steps + prose(PROCESS.get("sections", []))
     standard_page("/appraisal-process/", [("Home", "/"), ("Appraisal Process", "/appraisal-process/")], PROCESS["kicker"], esc(PROCESS["h1"]), esc(PROCESS["lead"]), main,
                   call_box() + link_box("Helpful tools", [(t["name"], f'/claim-tools/{t["slug"]}/') for t in TOOLS[:4]]),
                   PROCESS.get("faqs"), [{"@type": "HowTo", "name": PROCESS["h1"], "step": [{"@type": "HowToStep", "position": i + 1, "name": t} for i, (t, _) in enumerate(PROCESS["steps"])]}],
-                  PROCESS["title"], PROCESS["description"], "0.8")
+                  PROCESS["title"], PROCESS["description"], "0.8", img="inspector-checklist")
     # faq
     items = "".join(f'<details class="faq"><summary>{esc(q)}</summary><div class="a">{a if a.lstrip().startswith("<") else "<p>" + a + "</p>"}</div></details>' for q, a in FAQS)
     standard_page("/faq/", [("Home", "/"), ("FAQ", "/faq/")], "Straight answers", "Florida insurance appraisal FAQ",
                   "Answers to the questions Florida property owners ask most about appraisal, cost, timing and working with us.", items,
                   call_box() + link_box("Keep reading", [("Claim glossary", "/claim-glossary/"), ("Appraisal process", "/appraisal-process/"), ("Guides", "/blog/")]),
                   None, [faq_schema(FAQS)], "Florida Insurance Appraisal FAQ | Common Questions",
-                  "Answers from Florida Insurance Appraiser on how appraisal works, what it costs, how long it takes, hurricane deductibles, condo claims and more.", "0.7")
+                  "Answers from Florida Insurance Appraiser on how appraisal works, what it costs, how long it takes, hurricane deductibles, condo claims and more.", "0.7", img="claim-meeting-paperwork")
     # glossary
     letters, dl, seen = [], [], set()
     for term, d in sorted(GLOSSARY, key=lambda x: x[0].lower()):
@@ -632,7 +724,7 @@ def build_resources():
                   call_box() + link_box("Related", [("FAQ", "/faq/"), ("Appraisal process", "/appraisal-process/"), ("ACV calculator", "/claim-tools/acv-depreciation-calculator/")]),
                   None, [{"@type": "DefinedTermSet", "name": "Florida property claim glossary", "hasDefinedTerm": [{"@type": "DefinedTerm", "name": t, "description": d} for t, d in GLOSSARY]}],
                   "Insurance Claim Glossary: Florida Appraisal Terms",
-                  "Plain-English definitions of property insurance and appraisal terms used in Florida: ACV, RCV, umpire, hurricane deductible, matching, O&P and more.", "0.6")
+                  "Plain-English definitions of property insurance and appraisal terms used in Florida: ACV, RCV, umpire, hurricane deductible, matching, O&P and more.", "0.6", img="home-insurance-policy")
     # legal
     for key, path, h1, title in [("privacy", "/privacy-policy/", "Privacy policy", "Privacy Policy"),
                                  ("terms", "/terms-of-use/", "Terms of use", "Terms of Use"),
@@ -645,7 +737,7 @@ def build_resources():
 def build_contact():
     trail = [("Home", "/"), ("Contact", "/contact/")]
     body = page_hero(trail, "Free claim review", f"Contact {NAME}",
-                     "Call, email or send your claim details. We review the insurer’s estimate and your numbers at no cost and tell you plainly what we think.") + f"""
+                     "Call, email or send your claim details. We review the insurer’s estimate and your numbers at no cost and tell you plainly what we think.", img="insurance-documents-review") + f"""
 <section class="sec"><div class="wrap split top">
 <div><h2>Reach us directly</h2>
 <ul class="contact-list">
@@ -658,7 +750,7 @@ def build_contact():
 <p class="note">Sending us information does not create an appraisal engagement. We are not a law firm and do not provide legal advice.</p></div>
 {lead_form()}
 </div></section>"""
-    write({"path": "/contact/", "title": f"Contact {NAME} | Free Claim Review",
+    write({"path": "/contact/", "photo": "insurance-documents-review", "title": f"Contact {NAME} | Free Claim Review",
            "description": f"Contact {NAME} at {BIZ['phone_display']} or online for a free review of your disputed Florida property insurance claim. Statewide service.",
            "schema": [crumbs_schema(trail), {"@type": "ContactPage", "url": url("/contact/"), "about": {"@id": ORG_ID}}]}, body, "0.8")
 
