@@ -1,6 +1,6 @@
 # Outreach: Studio at 1660 Richmond
 
-**To:** Fat Property leasing (leasing@fatproperty.com), for the owner of Studio at 1660 Richmond
+**To:** leasing@fatproperty.com (for the owner of Studio at 1660 Richmond)
 **From:** John, Rise Marketing
 **Demo link:** https://sandybrown-bear-867005.hostingersite.com
 
@@ -8,45 +8,25 @@
 
 ## Email 1: Introduction
 
-**Subject:** A website we built for Studio at 1660 Richmond (free demo inside)
+**Subject:** A free website demo for Studio at 1660 Richmond
 
 Hi there,
 
-I'm John with Rise Marketing, the marketing arm of Rise Apartments. Thanks for listing Studio at 1660 Richmond with us. It's a great building, and that courtyard photographs beautifully.
+I'm John with Rise Marketing, the marketing arm of Rise Apartments. Thanks for listing Studio at 1660 Richmond with us.
 
-While we were setting up your listing, we noticed the property doesn't have its own website or Google Business Profile. Renters who search "1660 Richmond Ave" or "studio apartments Montrose" today mostly find third-party listing pages. So we built a demo to show what Studio at 1660 Richmond could look like with a home of its own:
+We noticed the property doesn't have its own website or Google Business Profile, so renters searching for it mostly land on listing sites. We built a demo to show what it could look like:
 
 **https://sandybrown-bear-867005.hostingersite.com**
 
-It's a sample built from the photos and details you already shared with us, so please take a look on your phone. The demo includes:
+It includes a courtyard photo slideshow, a Studios page with pricing and a floor plan, a gallery, a Montrose neighborhood guide, FAQs, and a tour request form. It's fast and works well on phones.
 
-- A homepage with a full-screen courtyard slideshow and clear "Schedule a Tour" and "Check Availability" buttons
-- A Studios page with pricing, unit features and a floor plan
-- A photo gallery with filters and a full-screen viewer
-- A Montrose neighborhood guide with a map, nearby restaurants and shops, and drive times to the Medical Center, Downtown and the Galleria
-- A tour request form with a date and time picker, plus a general contact form
-- FAQs, an Apply Now page and a Residents page
-- A tap-to-call bar on phones, fast load times and accessibility built in
+With your own site and a verified Google Business Profile, renters can find Studio at 1660 Richmond directly on Google Search and Maps, see your photos and hours, and send tour requests straight to your inbox. We can't promise rankings, but that's the foundation for being found.
 
-**Why your own website helps**
+**Pricing:** $100 one-time (site build, on-page and off-page SEO, Google Business Profile setup and more), then $10/month for maintenance, domain and hosting. You get admin access. Pay Rent, Maintenance Request and Resident Portal buttons cost extra.
 
-- **Renters find you directly.** A standalone site gives Studio at 1660 Richmond a place to rank for its own name and address, instead of sending people through listing sites.
-- **You control the story.** Your photos, your pricing, your pet policy and your current specials, updated whenever you need.
-- **Google visibility.** We'll set up and verify a Google Business Profile, so the property can appear on Google Maps and in local search with your hours, photos, phone number and a link to the site. Right now, Google shows only a bare address pin for 1660 Richmond Ave.
-- **More qualified leads.** Tour requests and questions come straight to your leasing inbox, from people who already know what the building offers.
+This is just a demo, built from the details you shared. We'll confirm everything with you first, and we can build something different to fit your needs.
 
-We can't promise specific rankings (nobody honestly can), but a verified Google profile plus a fast, well-built site is the foundation local search rewards.
-
-**Pricing**
-
-- **$100 one-time:** website build, on-page and off-page SEO, Google Business Profile setup and more.
-- **$10/month:** maintenance, domain and hosting.
-- You get **admin access** to your site.
-- Online **Pay Rent, Maintenance Request and Resident Portal** buttons can be connected for an additional cost. Since you already use Buildium, that's an easy hookup.
-
-To be clear, this is a demo. We filled a few details from public sources, and we'll confirm everything with you before anything goes live. If you'd like a different look, different pages or a different name on the site, we'll build something that fits your needs.
-
-Would you have 15 minutes this week to walk through it? Just reply to this email and I'll work around your schedule.
+Do you have 15 minutes this week to take a look together?
 
 Best,
 John
@@ -55,18 +35,16 @@ Rise Marketing, the marketing arm of Rise Apartments
 
 ---
 
-## Email 2: Short follow-up (send 4–5 business days later)
+## Email 2: Follow-up (send 4–5 business days later)
 
-**Subject:** Re: A website we built for Studio at 1660 Richmond
+**Subject:** Re: A free website demo for Studio at 1660 Richmond
 
 Hi again,
 
-Quick follow-up on the demo site we built for Studio at 1660 Richmond:
+Just checking whether you had a chance to see the demo site for Studio at 1660 Richmond:
 https://sandybrown-bear-867005.hostingersite.com
 
-It's $100 one-time for the site, SEO and your Google Business Profile setup, then $10/month for hosting, your domain and maintenance. You'd have full admin access, and we can change the design to fit what you want.
-
-Happy to send over a short list of what we'd need from you (current rent, photos and pet fees) so it's ready to launch. Want me to send it?
+It's $100 one-time, plus $10/month for hosting and maintenance, and we can change anything you'd like. Want to set up a quick call?
 
 Thanks,
 John
