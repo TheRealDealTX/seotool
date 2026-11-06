@@ -105,23 +105,59 @@ if ((is_dir($logDir) || @mkdir($logDir, 0700, true)) && is_writable($logDir)) {
     @file_put_contents($lf, $entry, FILE_APPEND | LOCK_EX);
 }
 
-// Compose the email.
-$subject = 'New claim inquiry: ' . $loss . ' — ' . $name . ($location ? ' (' . $location . ')' : '');
-$body = "New inquiry from the " . SITE_NAME . " website\n"
-      . str_repeat('=', 48) . "\n\n"
-      . "Name:          $name\n"
-      . "Email:         $email\n"
-      . "Phone:         $phone\n"
-      . "I am a:        $role\n"
-      . "Type of loss:  $loss\n"
-      . "Location:      " . ($location ?: '—') . "\n"
-      . "Sent from:     https://alabamainsuranceappraiser.com$page\n"
-      . "Time:          " . date('l, F j, Y g:i A T') . "\n\n"
-      . "Message:\n" . str_repeat('-', 48) . "\n$message\n";
+// Compose the email. Kept deliberately conventional (plain-ASCII subject,
+// quoted-printable text + HTML parts, no custom X-Mailer): a base64-only body
+// and encoded ASCII headers got the first version flagged X-Spam by Hostinger.
+date_default_timezone_set('America/Chicago');
+function ascii(string $s): string {
+    $s = strtr($s, ['—' => '-', '–' => '-', '’' => "'", '‘' => "'", '“' => '"', '”' => '"']);
+    return preg_replace('/[^\x20-\x7E]/', '', $s) ?? '';
+}
+$subject = ascii('Website inquiry: ' . $loss . ' - ' . $name . ($location ? ' (' . $location . ')' : ''));
+$when = date('l, F j, Y g:i A T');
+$rows = [
+    'Name' => $name, 'Email' => $email, 'Phone' => $phone, 'I am a' => $role,
+    'Type of loss' => $loss, 'Location' => $location ?: '-',
+    'Page' => 'https://alabamainsuranceappraiser.com' . $page, 'Received' => $when,
+];
+$text = "New claim inquiry from the " . SITE_NAME . " website\n\n";
+foreach ($rows as $k => $v) $text .= str_pad($k . ':', 14) . $v . "\n";
+$text .= "\nMessage:\n$message\n\nReply to this email to respond to $name directly.\n";
+$h = fn($v) => htmlspecialchars((string)$v, ENT_QUOTES, 'UTF-8');
+$html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#173042;max-width:620px">'
+      . '<h2 style="margin:0 0 12px;font-size:19px">New claim inquiry from the website</h2><table cellpadding="6" style="border-collapse:collapse">';
+foreach ($rows as $k => $v) {
+    $val = $k === 'Email' ? '<a href="mailto:' . $h($v) . '">' . $h($v) . '</a>'
+         : ($k === 'Phone' ? '<a href="tel:' . $h(preg_replace('/[^\d+]/', '', $v)) . '">' . $h($v) . '</a>' : $h($v));
+    $html .= '<tr><td style="color:#6c7f8d;white-space:nowrap;vertical-align:top"><b>' . $h($k) . '</b></td><td>' . $val . '</td></tr>';
+}
+$html .= '</table><p style="margin:16px 0 6px"><b>Message</b></p><p style="margin:0">' . nl2br($h($message)) . '</p>'
+       . '<p style="margin-top:18px;color:#6c7f8d;font-size:13px">Reply to this email to respond to ' . $h($name) . ' directly.</p></div>';
 
-function enc_header(string $s): string { return '=?UTF-8?B?' . base64_encode($s) . '?='; }
+function enc_header(string $s): string {
+    return preg_match('/[^\x20-\x7E]/', $s) ? '=?UTF-8?B?' . base64_encode($s) . '?=' : '"' . addcslashes($s, '"\\') . '"';
+}
+function qp(string $s): string { return quoted_printable_encode(str_replace(["\r\n", "\n"], ["\n", "\r\n"], $s)); }
 
-function smtp_send(array $cfg, string $to, string $replyName, string $replyEmail, string $subject, string $body): bool {
+function build_message(string $from, string $to, string $replyName, string $replyEmail, string $subject, string $text, string $html): array {
+    $boundary = 'b' . bin2hex(random_bytes(10));
+    $headers = [
+        'Date: ' . date('r'),
+        'From: ' . enc_header(SITE_NAME) . " <$from>",
+        "To: <$to>",
+        'Reply-To: ' . enc_header($replyName) . " <$replyEmail>",
+        'Subject: ' . $subject,
+        sprintf('Message-ID: <%s@alabamainsuranceappraiser.com>', bin2hex(random_bytes(12))),
+        'MIME-Version: 1.0',
+        "Content-Type: multipart/alternative; boundary=\"$boundary\"",
+    ];
+    $body = "--$boundary\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n" . qp($text) . "\r\n"
+          . "--$boundary\r\nContent-Type: text/html; charset=UTF-8\r\nContent-Transfer-Encoding: quoted-printable\r\n\r\n" . qp($html) . "\r\n"
+          . "--$boundary--\r\n";
+    return [$headers, $body];
+}
+
+function smtp_send(array $cfg, string $to, array $headers, string $body): bool {
     $host = $cfg['smtp_host'] ?? 'smtp.hostinger.com';
     $port = (int)($cfg['smtp_port'] ?? 465);
     $user = $cfg['smtp_user'] ?? '';
@@ -151,20 +187,8 @@ function smtp_send(array $cfg, string $to, string $replyName, string $replyEmail
     $ok = $ok && $cmd('AUTH LOGIN', [334]) && $cmd(base64_encode($user), [334]) && $cmd(base64_encode($pass), [235])
         && $cmd("MAIL FROM:<$user>", [250]) && $cmd("RCPT TO:<$to>", [250, 251]) && $cmd('DATA', [354]);
     if ($ok) {
-        $mid = sprintf('<%s@alabamainsuranceappraiser.com>', bin2hex(random_bytes(12)));
-        $headers = [
-            'Date: ' . date('r'),
-            'From: ' . enc_header(SITE_NAME . ' Website') . " <$user>",
-            "To: <$to>",
-            'Reply-To: ' . enc_header($replyName) . " <$replyEmail>",
-            'Subject: ' . enc_header($subject),
-            "Message-ID: $mid",
-            'MIME-Version: 1.0',
-            'Content-Type: text/plain; charset=UTF-8',
-            'Content-Transfer-Encoding: base64',
-            'X-Mailer: AIA-Site',
-        ];
-        $data = implode("\r\n", $headers) . "\r\n\r\n" . rtrim(chunk_split(base64_encode($body), 76, "\r\n")) . "\r\n.";
+        // Dot-stuff lines that start with "." (RFC 5321 4.5.2).
+        $data = implode("\r\n", $headers) . "\r\n\r\n" . preg_replace('/^\./m', '..', $body) . "\r\n.";
         $ok = $cmd($data, [250]);
     }
     fwrite($fp, "QUIT\r\n");
@@ -172,13 +196,14 @@ function smtp_send(array $cfg, string $to, string $replyName, string $replyEmail
     return $ok;
 }
 
-$sent = smtp_send($cfg, $to, $name, $email, $subject, $body);
+$from = $cfg['smtp_user'] ?? DEFAULT_TO;
+[$headers, $mime] = build_message($from, $to, $name, $email, $subject, $text, $html);
+$sent = smtp_send($cfg, $to, $headers, $mime);
 
 if (!$sent) {
-    // Fallback to the host's local mailer.
-    $from = $cfg['smtp_user'] ?? DEFAULT_TO;
-    $hdr = 'From: ' . enc_header(SITE_NAME . ' Website') . " <$from>\r\nReply-To: <$email>\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n";
-    $sent = @mail($to, enc_header($subject), $body, $hdr, '-f' . $from);
+    // Fallback to the host's local mailer (same message; To/Subject go as arguments).
+    $extra = array_values(array_filter($headers, fn($l) => !preg_match('/^(To|Subject):/i', $l)));
+    $sent = @mail($to, $subject, $mime, implode("\r\n", $extra), '-f' . $from);
 }
 
 if ($sent) respond(true, "Thank you, $name — your claim details were sent. We'll be in touch shortly.");
