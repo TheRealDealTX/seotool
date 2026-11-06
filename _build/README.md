@@ -35,3 +35,13 @@ To add a paid partner, fill in `PARTNER` at the top of `assets/match.js`
 (name, URL with your tracking ID, one-line blurb). It is shown first and
 labelled as sponsored. GA4 events: `lender_match_cta`, `lender_match_submit`,
 `lender_match_click`.
+
+## Deploying
+
+The Hostinger account (u401386392, sbarates.com is an addon domain) refuses API
+file uploads and has no GitHub integration connected, so deploys go through
+`release/site.zip`: the server clones this branch into a subfolder, then
+"Deploy static site archive" replaces the site with the zip's contents.
+Rebuild the zip after every change:
+
+    git ls-files | grep -v -e '^_build/' -e '^release/' | zip -q -@ release/site.zip
