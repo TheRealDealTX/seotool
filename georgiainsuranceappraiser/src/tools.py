@@ -205,7 +205,7 @@ READY = """
       </div>
       <div>
         <p class="out-msg" data-o="verdict"></p>
-        <h3 style="margin-top:18px;font-size:1.05rem">Your to-do list</h3>
+        <p class="todo-h">Your to-do list</p>
         <ul data-o="todo" style="margin:0;padding-left:1.1em"></ul>
       </div>
     </div>
@@ -217,7 +217,7 @@ TOOLS = [
         "slug": "appraisal-value-estimator", "name": "Appraisal Value Estimator", "icon": "Δ$", "kind": "Calculator",
         "short": "See the disputed amount, a projected award and what you’d net after appraiser and umpire fees.",
         "title": "Appraisal Value Estimator | Is Insurance Appraisal Worth It?",
-        "desc": "Free calculator: compare your estimate with the insurer’s, project an appraisal award and subtract appraiser and umpire fees to see your likely net increase.",
+        "desc": "Free calculator: compare your estimate with the insurer’s, project an appraisal award and subtract appraiser and umpire fees to see your net.",
         "h1": "Appraisal Value Estimator: Is Appraisal Worth It for Your Claim?",
         "lede": "Plug in the carrier’s estimate and yours, choose where an award might land, and add realistic fees. The estimator shows whether appraisal is likely to put more money in your pocket.",
         "markup": GAP_FULL,
@@ -238,7 +238,7 @@ TOOLS = [
         "slug": "depreciation-holdback-calculator", "name": "Depreciation & Holdback Calculator", "icon": "ACV", "kind": "Calculator",
         "short": "Estimate the first ACV check, the recoverable depreciation held back and the total once repairs are done.",
         "title": "Depreciation & Holdback Calculator | RCV vs ACV Payments",
-        "desc": "Free RCV vs ACV calculator. List damaged items with age and life expectancy to estimate your first check, recoverable depreciation and total claim payment.",
+        "desc": "Free RCV vs ACV calculator. List damaged items with age and life expectancy to estimate your first check, recoverable depreciation and total.",
         "h1": "Depreciation & Holdback Calculator (RCV vs. ACV)",
         "lede": "Replacement-cost policies usually pay in two parts: an actual-cash-value check now and recoverable depreciation after repairs. Enter your items to see how the money is split.",
         "markup": DEP,
@@ -257,8 +257,8 @@ TOOLS = [
     {
         "slug": "roof-squares-pitch-calculator", "name": "Roof Squares & Pitch Calculator", "icon": "▲", "kind": "Calculator",
         "short": "Convert a footprint into true roof squares using pitch and waste — then check the carrier’s numbers.",
-        "title": "Roof Squares & Pitch Calculator for Insurance Claims | Free Tool",
-        "desc": "Calculate roof squares from footprint, pitch and waste factor. Compare your roof’s true surface area and steep-pitch charges against your insurance estimate.",
+        "title": "Roof Squares & Pitch Calculator for Insurance Claims",
+        "desc": "Calculate roof squares from footprint, pitch and waste factor, then compare true surface area and steep charges against your insurance estimate.",
         "h1": "Roof Squares and Pitch Calculator for Insurance Claims",
         "lede": "Measurement errors are one of the most common reasons roof claims come up short. Use your home’s footprint and pitch to estimate true roof area, squares and bundles.",
         "markup": ROOF,
@@ -279,7 +279,7 @@ TOOLS = [
         "slug": "wind-hail-deductible-calculator", "name": "Wind & Hail Deductible Calculator", "icon": "%", "kind": "Calculator",
         "short": "Turn a percentage wind/hail or named-storm deductible into dollars and see what a claim would actually pay.",
         "title": "Wind & Hail Deductible Calculator | % Deductible in Dollars",
-        "desc": "Convert a percentage wind/hail or hurricane deductible into dollars and compare what your policy would pay against a flat deductible. Free Georgia claim tool.",
+        "desc": "Convert a percentage wind/hail or hurricane deductible into dollars and compare what your policy would pay against a flat deductible.",
         "h1": "Wind, Hail and Named-Storm Deductible Calculator",
         "lede": "A 2% deductible sounds small until you multiply it by your dwelling coverage. See your deductible in real dollars and how it changes what a storm claim pays.",
         "markup": DEDUCT,
@@ -297,7 +297,7 @@ TOOLS = [
         "slug": "claim-deadline-planner", "name": "Claim Deadline Planner", "icon": "◷", "kind": "Planner",
         "short": "Map notice, proof-of-loss, depreciation and suit-limitation dates from your date of loss — and export them.",
         "title": "Georgia Claim Deadline Planner | Proof of Loss & Suit Dates",
-        "desc": "Enter your date of loss to map proof-of-loss, depreciation recovery and suit-limitation dates for a Georgia property claim, then export them to your calendar.",
+        "desc": "Enter your date of loss to map proof-of-loss, depreciation and suit-limitation dates for a Georgia property claim, then export them to a calendar.",
         "h1": "Georgia Insurance Claim Deadline Planner",
         "lede": "Policy deadlines don’t pause while you argue about a number. Enter your date of loss and your policy’s windows to build a timeline you can download to your calendar.",
         "markup": DATES,
@@ -314,8 +314,8 @@ TOOLS = [
     {
         "slug": "appraisal-readiness-score", "name": "Appraisal Readiness Score", "icon": "✓", "kind": "Checklist",
         "short": "Answer 12 yes/no questions to score your file and get a personal to-do list before invoking appraisal.",
-        "title": "Appraisal Readiness Score | Is Your Claim Ready for Appraisal?",
-        "desc": "Twelve questions that score how ready your property claim is for insurance appraisal, with a personalized to-do list of documents and steps to complete first.",
+        "title": "Appraisal Readiness Score | Is Your Claim Ready?",
+        "desc": "Twelve questions that score how ready your property claim is for insurance appraisal, with a personal to-do list of what to complete first.",
         "h1": "Appraisal Readiness Score: Is Your Claim File Ready?",
         "lede": "The strongest appraisals are won before they start, with a complete file. Answer twelve quick questions to see where yours stands and what to fix first.",
         "markup": READY,

@@ -8,7 +8,8 @@ Growth website.
 | --- | --- |
 | Hostinger website UID | `NtH7QOTDM` (Agency Growth, order 1008744732, php-fpm 8.3) |
 | Temporary URL | https://snow-chinchilla-788360.hostingersite.com |
-| Final domain | georgiainsuranceappraiser.com (not connected yet) |
+| Live domain | https://georgiainsuranceappraiser.com (SSL; www and http 301 to it) |
+| Google Tag Manager | `GTM-K6P2TP3Z` (head snippet + noscript iframe on every page) |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@georgiainsuranceappraiser.com |
 
@@ -85,10 +86,40 @@ are limited to 960px wide via their CDN, so hero images sit behind overlays.
 - Once the domain is connected, `index.php` 301-redirects `www.` and plain http to
   `https://georgiainsuranceappraiser.com`.
 
-## Going live checklist
+## Contact form delivery
 
-1. Attach georgiainsuranceappraiser.com to website `NtH7QOTDM` in hPanel and wait for SSL.
-2. Create the mailbox info@georgiainsuranceappraiser.com. The form at `/api/contact.php`
+`/api/contact.php` sends each lead through `info@georgiainsuranceappraiser.com` over
+authenticated SMTP (`smtp.hostinger.com:465`). It falls back to PHP `mail()` and always
+appends a JSON-lines backup to `api/_private/leads.log.php` on the server.
+
+The SMTP password is **not in git**. It lives only on the server in
+`public_html/api/_private/config.php`. That file returns the settings and answers direct
+requests with a 404, and so does the log. The Hostinger file API can't write outside
+`public_html`, which is why they sit there. To change the password, re-upload that file:
+
+```php
+<?php
+if (!defined('GIA_CONFIG_OK')) { http_response_code(404); exit; }
+return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
+        'smtp_user' => 'info@georgiainsuranceappraiser.com', 'smtp_pass' => '…'];
+```
+
+## SEO rules enforced by validate.py
+
+- Title ≤ 60 characters and ≤ ~580px (estimated with Arial metrics at 20px)
+- Meta description 110–150 characters; unique titles and descriptions
+- Exactly one H1, the first heading is H1, and no skipped levels (H2 → H4)
+- Valid JSON-LD, no broken internal links, alt attributes on every image
+
+Each page's JSON-LD graph holds the ProfessionalService (logo, contact point, service
+catalog), the WebSite, and a WebPage node (or AboutPage, ContactPage or CollectionPage).
+The page node links to its BreadcrumbList, primary image and main entity (Service,
+BlogPosting, WebApplication, HowTo or DefinedTermSet), plus FAQPage and ItemList where they apply.
+
+## Going live checklist (done)
+
+1. ~~Attach the domain and wait for SSL~~ — done.
+2. ~~Create the mailbox~~ — done, and the form delivers through it over SMTP. The form at `/api/contact.php`
    sends to it with PHP `mail()`. It also keeps a JSON-lines backup at `../gia-leads.log`,
    outside `public_html`.
 3. Submit `https://georgiainsuranceappraiser.com/sitemap.xml` to Google Search Console.

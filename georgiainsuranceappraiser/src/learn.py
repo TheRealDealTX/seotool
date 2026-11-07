@@ -126,7 +126,7 @@ POSTS = [
     {
         "slug": "appraiser-vs-public-adjuster-vs-attorney",
         "title": "Appraiser, Public Adjuster or Attorney? Choosing the Right Help in Georgia",
-        "seo": "Insurance Appraiser vs Public Adjuster vs Attorney in Georgia",
+        "seo": "Appraiser vs Public Adjuster vs Attorney in Georgia",
         "desc": "When should a Georgia property owner hire an insurance appraiser, a public adjuster or an attorney? A practical comparison of roles, costs and timing.",
         "date": "2026-09-24", "read": "7 min",
         "summary": "Three professionals, three different jobs. Picking the wrong one first can cost you time and money.",
@@ -157,7 +157,7 @@ POSTS = [
     {
         "slug": "documenting-hail-damage-in-georgia",
         "title": "Documenting Hail Damage in Georgia: A Homeowner’s Field Guide",
-        "seo": "How to Document Hail Damage for an Insurance Claim in Georgia",
+        "seo": "How to Document Hail Damage for a Georgia Claim",
         "desc": "What Georgia homeowners should photograph and save after a hail storm — roof, soft metals, siding, AC units — so a claim or appraisal holds up later.",
         "date": "2026-09-10", "read": "6 min",
         "summary": "The photos you take in the first 48 hours after a hail storm often decide the claim. Here’s what to capture, safely.",
@@ -191,7 +191,7 @@ POSTS = [
     {
         "slug": "when-not-to-invoke-appraisal",
         "title": "Five Situations Where You Shouldn’t Invoke Appraisal (Yet)",
-        "seo": "When Not to Invoke Insurance Appraisal | Georgia Property Claims",
+        "seo": "When Not to Invoke Insurance Appraisal in Georgia",
         "desc": "Appraisal is powerful but not always right. Five situations where Georgia property owners should pause before invoking the appraisal clause.",
         "date": "2026-08-27", "read": "5 min",
         "summary": "An honest look at when appraisal hurts more than it helps — and what to do instead.",

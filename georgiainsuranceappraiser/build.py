@@ -176,8 +176,13 @@ def org_schema():
         "url": DOMAIN + "/",
         "telephone": PHONE_INTL,
         "email": EMAIL,
-        "logo": DOMAIN + "/assets/img/mark.svg",
-        "image": DOMAIN + "/assets/img/og-image.jpg",
+        "logo": {"@type": "ImageObject", "@id": DOMAIN + "/#logo", "url": DOMAIN + "/favicon-512.png", "width": 512, "height": 512, "caption": BRAND},
+        "image": {"@id": DOMAIN + "/#logo"},
+        "address": {"@type": "PostalAddress", "addressRegion": "GA", "addressCountry": "US"},
+        "contactPoint": [{"@type": "ContactPoint", "telephone": PHONE_INTL, "email": EMAIL, "contactType": "customer service", "areaServed": "US-GA", "availableLanguage": "en"}],
+        "slogan": "Independent appraisal for underpaid property claims",
+        "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Insurance appraisal services", "itemListElement": [
+            {"@type": "Offer", "itemOffered": {"@type": "Service", "name": s["name"], "url": f"{DOMAIN}{SVC_BASE}{s['slug']}/"}} for s in SERVICES]},
         "description": "Independent insurance appraisal, estimate review and umpire services for disputed property claims throughout Georgia.",
         "areaServed": [{"@type": "State", "name": "Georgia"}] + [{"@type": "City", "name": l["city"].split(" &")[0]} for l in LOCATIONS],
         "priceRange": "$$",
@@ -255,10 +260,10 @@ def footer():
 <div><a class="brand" href="/">{mark("mf")}<span><b>{BRAND}</b><small>Independent claim appraisal</small></span></a>
 <p>Independent appraisal and estimating support for property owners with disputed insurance claims, from the North Georgia mountains to the Golden Isles.</p>
 <div class="foot-contact"><a href="tel:{TEL}">{PHONE_INTL}</a><a href="mailto:{EMAIL}">{EMAIL}</a><span>Mon–Fri 8am–6pm ET · Statewide</span></div></div>
-<div><h4>Services</h4><ul>{svc}<li><a href="{SVC_BASE}">All services</a></li></ul></div>
-<div><h4>Locations</h4><ul>{loc}<li><a href="{LOC_BASE}">All Georgia</a></li></ul></div>
-<div><h4>Free tools</h4><ul>{tl}</ul></div>
-<div><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/how-appraisal-works/">How appraisal works</a></li><li><a href="/appraisal-faq/">FAQ</a></li><li><a href="/claim-glossary/">Glossary</a></li><li><a href="{POST_BASE}">Insights</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+<div><h3>Services</h3><ul>{svc}<li><a href="{SVC_BASE}">All services</a></li></ul></div>
+<div><h3>Locations</h3><ul>{loc}<li><a href="{LOC_BASE}">All Georgia</a></li></ul></div>
+<div><h3>Free tools</h3><ul>{tl}</ul></div>
+<div><h3>Company</h3><ul><li><a href="/about/">About</a></li><li><a href="/how-appraisal-works/">How appraisal works</a></li><li><a href="/appraisal-faq/">FAQ</a></li><li><a href="/claim-glossary/">Glossary</a></li><li><a href="{POST_BASE}">Insights</a></li><li><a href="/contact/">Contact</a></li></ul></div>
 </div>
 <div class="foot-bottom"><span>© <span data-year>{date.today().year}</span> {BRAND}. All rights reserved.</span>
 <ul><li><a href="/privacy-policy/">Privacy</a></li><li><a href="/terms-of-use/">Terms</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/photo-credits/">Photo credits</a></li><li><a href="/site-map/">Site map</a></li></ul></div>
@@ -270,7 +275,37 @@ def footer():
 
 def document(path, title, desc, body, schema=None, og_type="website", robots="index,follow", preload=None):
     canonical = DOMAIN + path
-    graph = [org_schema(), site_schema()] + (schema or [])
+    page_type, extra_nodes, crumb_id = "WebPage", [], None
+    for n in (schema or []):
+        t = n.get("@type")
+        if t in ("WebPage", "AboutPage", "ContactPage", "CollectionPage"):
+            page_type = t
+            continue
+        if t == "BreadcrumbList":
+            n["@id"] = crumb_id = canonical + "#breadcrumb"
+        if t in ("FAQPage",):
+            n["@id"] = canonical + "#faq"
+        if t in ("BlogPosting", "Service", "WebApplication", "HowTo", "DefinedTermSet", "ItemList"):
+            n.setdefault("@id", canonical + "#" + t.lower())
+            if t == "BlogPosting":
+                n["mainEntityOfPage"] = {"@id": canonical + "#webpage"}
+                n["author"] = {"@id": DOMAIN + "/#business"}
+                n["inLanguage"] = "en-US"
+        extra_nodes.append(n)
+    img_key = preload or "hero-home-after-rain"
+    pimg = PHOTOS[img_key]
+    webpage = {
+        "@type": page_type, "@id": canonical + "#webpage", "url": canonical, "name": title, "description": desc,
+        "inLanguage": "en-US", "isPartOf": {"@id": DOMAIN + "/#website"}, "about": {"@id": DOMAIN + "/#business"},
+        "publisher": {"@id": DOMAIN + "/#business"}, "dateModified": TODAY,
+        "primaryImageOfPage": {"@type": "ImageObject", "url": f"{DOMAIN}/assets/img/photos/{img_key}.webp", "width": pimg["fw"], "height": pimg["fh"]},
+    }
+    if crumb_id:
+        webpage["breadcrumb"] = {"@id": crumb_id}
+    main = [n["@id"] for n in extra_nodes if n.get("@type") in ("Service", "WebApplication", "BlogPosting", "HowTo", "DefinedTermSet")]
+    if main:
+        webpage["mainEntity"] = {"@id": main[0]}
+    graph = [org_schema(), site_schema()] + ([] if robots.startswith("noindex") else [webpage]) + extra_nodes
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
     pre = ""
     if preload:
@@ -279,6 +314,14 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K6P2TP3Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -290,8 +333,15 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{DOMAIN}/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{BRAND} — independent property claim appraisal in Georgia">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{DOMAIN}/assets/img/og-image.jpg">
+<meta name="geo.region" content="US-GA">
 <meta name="theme-color" content="#5c1628">
 <link rel="icon" href="/favicon.ico?v={FAV}" sizes="48x48">
 <link rel="icon" href="/favicon.svg?v={FAV}" type="image/svg+xml">
@@ -305,6 +355,7 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <script type="application/ld+json">{ld}</script>
 </head>
 <body class="on-hero">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6P2TP3Z" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>
 {header()}
 <main id="main">
 {body}
@@ -349,12 +400,12 @@ def faq_block(faqs):
 
 
 def call_box():
-    return f"""<div class="box call"><h3>Talk through your claim</h3><p>Free initial conversation. We’ll tell you honestly whether appraisal fits.</p><a class="big" href="tel:{TEL}">{PHONE_INTL}</a><a class="btn gold" href="/contact/">Send claim details</a></div>"""
+    return f"""<div class="box call"><h2 class="box-t">Talk through your claim</h2><p>Free initial conversation. We’ll tell you honestly whether appraisal fits.</p><a class="big" href="tel:{TEL}">{PHONE_INTL}</a><a class="btn gold" href="/contact/">Send claim details</a></div>"""
 
 
 def list_box(title, items, current=None):
     li = "".join(f'<li><a href="{p}"{" aria-current=\"page\"" if p == current else ""}>{e(n)}<span>›</span></a></li>' for n, p in items)
-    return f'<div class="box"><h3>{e(title)}</h3><ul>{li}</ul></div>'
+    return f'<div class="box"><h2 class="box-t">{e(title)}</h2><ul>{li}</ul></div>'
 
 
 def cta_band(h="Have a claim that doesn’t add up?", p="Send us the carrier’s estimate. We’ll review it and tell you what we see."):
@@ -588,9 +639,9 @@ def home():
 <div class="rv-r">{lead_form(page="/")}</div>
 </div></section>
 """
-    schema = [faq_schema(home_faqs), {"@type": "WebPage", "@id": DOMAIN + "/#webpage", "url": DOMAIN + "/", "name": f"{BRAND} | Independent Property Claim Appraiser", "about": {"@id": DOMAIN + "/#business"}, "isPartOf": {"@id": DOMAIN + "/#website"}}]
-    write("/", document("/", f"{BRAND} | Independent Property Claim Appraiser",
-                        "Georgia Insurance Appraiser provides independent appraisal, estimate review and umpire services for underpaid hail, wind, hurricane, water and fire claims statewide.",
+    schema = [faq_schema(home_faqs)]
+    write("/", document("/", f"{BRAND} | Independent Claim Appraisal",
+                        "Georgia Insurance Appraiser: independent appraisal, estimate review and umpire services for underpaid hail, wind, hurricane, water and fire claims.",
                         body, schema, preload="hero-home-after-rain"), 1.0)
 
 
@@ -621,9 +672,9 @@ def service_pages():
 <section class="sec"><div class="wrap"><div class="index-list" data-stagger>{cards}</div></div></section>
 <section class="sec blush"><div class="wrap split top"><div class="rv-l"><span class="eyebrow">Not sure where to start?</span><h2>Most claims begin with an estimate review</h2><p>Before anyone invokes appraisal, it helps to know exactly where the carrier’s estimate falls short and what that gap is worth. A review gives you that answer in days, and many disputes close at that stage.</p><a class="btn" href="{SVC_BASE}insurance-estimate-review/">About estimate reviews {ic("arrow", "ar")}</a></div><div class="rv-r">{faq_block([("Can I hire you for just one part of the process?", "Yes. Many clients start with an estimate review and decide later whether to invoke appraisal."), ("Do you work on both residential and commercial claims?", "Yes — houses, condos, multifamily, retail, office, industrial, churches and HOA properties."), ("Do you only work on hail claims?", "No. We handle wind, hurricane, water, fire, tree and other covered perils.")])}</div></div></section>
 {cta_band()}"""
-    schema = [crumbs_schema(trail), {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'{SVC_BASE}{s["slug"]}/', "name": s["name"]} for i, s in enumerate(SERVICES)]}]
+    schema = [crumbs_schema(trail), {"@type": "CollectionPage"}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'{SVC_BASE}{s["slug"]}/', "name": s["name"]} for i, s in enumerate(SERVICES)]}]
     write(SVC_BASE, document(SVC_BASE, "Insurance Appraisal Services in Georgia | Claim Valuation",
-                             "Georgia insurance appraisal services: appraisal clause representation, estimate review, hail, wind, hurricane, water, fire and tree claims, plus neutral umpire work.",
+                             "Georgia insurance appraisal services: appraisal clause representation, estimate review, storm, water, fire and tree claims, plus umpire work.",
                              body, schema, preload="contractor"), 0.9)
 
 
@@ -653,8 +704,10 @@ def location_pages():
 {cta_band(f"Disputed claim in {l['city']}?", "Send us the estimate and your photos. We’ll tell you what we see.")}"""
         city = l["city"].split(" &")[0]
         schema = [crumbs_schema(trail), faq_schema(l["faqs"]), {"@type": "Service", "name": f"Insurance appraisal in {name}", "serviceType": "Insurance appraisal", "provider": {"@id": DOMAIN + "/#business"}, "areaServed": {"@type": "City", "name": city, "containedInPlace": {"@type": "State", "name": "Georgia"}}, "url": DOMAIN + path}]
-        title = f"Insurance Appraiser {city} GA | Disputed Claim Appraisal" if len(city) < 14 else f"Insurance Appraiser {city}, GA | Claim Appraisal"
-        desc = f"Independent insurance appraiser serving {l['city']} and {l['county']}. Appraisal and estimate review for underpaid storm, water and fire claims."
+        title = f"Insurance Appraiser {city}, GA | Disputed Claim Appraisal"
+        if len(title) > 56:
+            title = f"Insurance Appraiser {city}, GA | Claim Appraisal"
+        desc = f"Independent insurance appraiser for {city} and {l['county']}. Appraisal and estimate review for underpaid storm, water and fire claims."
         write(path, document(path, title, desc, body, schema, preload=ph), 0.8)
 
     trail = [("Home", "/"), ("Locations", LOC_BASE)]
@@ -665,9 +718,9 @@ def location_pages():
 <section class="sec"><div class="wrap"><div class="cities-grid" data-stagger>{cities}</div></div></section>
 <section class="sec blush"><div class="wrap"><div class="head-l rv"><span class="eyebrow">Regions</span><h2>How claims differ across Georgia</h2><p>The same policy language plays out very differently in a mountain cabin, a Buckhead condo and a Golden Isles beach house.</p></div><div class="index-list" data-stagger>{reg}</div></div></section>
 {cta_band("Don’t see your city?", "We cover every Georgia county. Call and tell us where the property is.")}"""
-    write(LOC_BASE, document(LOC_BASE, "Georgia Insurance Appraiser Locations | Statewide Claim Appraisal",
-                             "Insurance appraisal across Georgia: Atlanta, Savannah, Augusta, Columbus, Macon, Athens, Marietta, Alpharetta, Albany, Valdosta, Warner Robins and Brunswick.",
-                             body, [crumbs_schema(trail)], preload="atlanta-skyline"), 0.9)
+    write(LOC_BASE, document(LOC_BASE, "Georgia Insurance Appraiser Locations | Statewide",
+                             "Insurance appraisal in all 159 Georgia counties, including Atlanta, Savannah, Augusta, Columbus, Macon, Athens, Albany, Valdosta and Brunswick.",
+                             body, [crumbs_schema(trail), {"@type": "CollectionPage"}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + loc_path(l), "name": loc_label(l)} for i, l in enumerate(LOCATIONS)]}], preload="atlanta-skyline"), 0.9)
 
 
 # ---------------------------------------------------------------- tools
@@ -695,9 +748,9 @@ def tool_pages():
                      "Six calculators and planners built from real appraisal work. Use them to understand your claim, check the carrier’s math and decide on next steps — no sign-up, nothing stored.", "laptop-calculator", cta=False) + f"""
 <section class="sec"><div class="wrap"><div class="tiles" data-stagger>{tiles}</div></div></section>
 <section class="sec blush"><div class="wrap split top"><div class="rv-l"><span class="eyebrow">Suggested order</span><h2>Using the tools together</h2><ol><li>Start with the <a href="{TOOL_BASE}claim-deadline-planner/">deadline planner</a> so nothing lapses.</li><li>Check the roof math with the <a href="{TOOL_BASE}roof-squares-pitch-calculator/">squares &amp; pitch calculator</a>.</li><li>See what you’re actually owed with the <a href="{TOOL_BASE}wind-hail-deductible-calculator/">deductible</a> and <a href="{TOOL_BASE}depreciation-holdback-calculator/">depreciation</a> calculators.</li><li>Test the dispute with the <a href="{TOOL_BASE}appraisal-value-estimator/">appraisal value estimator</a>.</li><li>Finish with the <a href="{TOOL_BASE}appraisal-readiness-score/">readiness score</a>.</li></ol></div><div class="rv-r">{call_box()}</div></div></section>"""
-    schema = [crumbs_schema(trail), {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'{TOOL_BASE}{t["slug"]}/', "name": t["name"]} for i, t in enumerate(TOOLS)]}]
+    schema = [crumbs_schema(trail), {"@type": "CollectionPage"}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'{TOOL_BASE}{t["slug"]}/', "name": t["name"]} for i, t in enumerate(TOOLS)]}]
     write(TOOL_BASE, document(TOOL_BASE, "Free Insurance Claim Calculators & Tools for Georgia",
-                              "Free property claim tools: appraisal value estimator, depreciation calculator, roof squares, wind/hail deductible, deadline planner and readiness score.",
+                              "Free property claim tools: appraisal value estimator, depreciation, roof squares and wind/hail deductible calculators, deadline planner and more.",
                               body, schema, preload="laptop-calculator"), 0.9)
 
 
@@ -713,8 +766,8 @@ def learn_pages():
 <div class="wrap layout"><article class="prose">{PROCESS_BODY}</article>
 <aside class="aside">{call_box()}{list_box("Learn", learn_items, path)}</aside></div>{cta_band()}"""
     howto = {"@type": "HowTo", "name": "How insurance appraisal works in Georgia", "step": [{"@type": "HowToStep", "position": i + 1, "name": n} for i, n in enumerate(["The disagreement", "The written demand", "Both sides name appraisers", "Choosing an umpire", "Negotiation between appraisers", "Umpire review", "The award"])]}
-    write(path, document(path, "How Insurance Appraisal Works in Georgia | 7-Step Process Guide",
-                         "Step-by-step guide to insurance appraisal in Georgia: the written demand, choosing appraisers and an umpire, negotiation, umpire review and the binding award.",
+    write(path, document(path, "How Insurance Appraisal Works in Georgia | 7 Steps",
+                         "Step-by-step guide to Georgia insurance appraisal: the written demand, choosing appraisers and an umpire, negotiation and the binding award.",
                          body, [crumbs_schema(trail), howto], preload="clipboard-notes"), 0.8)
 
     path = "/appraisal-faq/"
@@ -726,7 +779,7 @@ def learn_pages():
 <div class="wrap layout"><article class="prose">{groups}</article>
 <aside class="aside">{call_box()}{list_box("Learn", learn_items, path)}</aside></div>{cta_band("Didn’t see your question?", "Call or email — we’re happy to talk it through.")}"""
     write(path, document(path, "Insurance Appraisal FAQ | Costs, Timing & Georgia Rules",
-                         "Answers to common questions about insurance appraisal in Georgia: how it works, what it costs, how long it takes, binding awards and Georgia-specific rules.",
+                         "Answers to common Georgia insurance appraisal questions: how it works, what it costs, how long it takes and when the award is binding.",
                          body, [crumbs_schema(trail), faq_schema(allq)], preload="living-room"), 0.8)
 
     path = "/claim-glossary/"
@@ -767,8 +820,8 @@ def learn_pages():
                      "Practical guides on policy language, documentation and claim strategy, written by people who work appraisal panels.", "modern-kitchen", cta=False) + f"""
 <section class="sec"><div class="wrap"><div class="posts" data-stagger>{cards}</div></div></section>{cta_band()}"""
     write(path, document(path, "Insurance Appraisal Insights & Guides for Georgia",
-                         "Guides for Georgia property owners on appraisal clauses, hail documentation, reading insurance estimates and choosing between appraisers, adjusters and attorneys.",
-                         body, [crumbs_schema(trail)], preload="modern-kitchen"), 0.7)
+                         "Guides for Georgia property owners on appraisal clauses, hail documentation, reading estimates and choosing an appraiser, adjuster or attorney.",
+                         body, [crumbs_schema(trail), {"@type": "CollectionPage"}, {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": DOMAIN + f'{POST_BASE}{p["slug"]}/', "name": p["title"]} for i, p in enumerate(POSTS)]}], preload="modern-kitchen"), 0.7)
 
 
 # ---------------------------------------------------------------- company & legal
@@ -796,8 +849,8 @@ def company_pages():
 <h2>Statewide, on purpose</h2>
 <p>Georgia’s weather varies dramatically between the mountains, the Piedmont, the Coastal Plain and the coast. Working statewide means we see every kind of loss the state produces — ice in Blue Ridge, hail in Marietta, tornadoes in Macon, hurricanes in Brunswick — and price each one with local knowledge.</p>
 </article><aside class="aside">{call_box()}{list_box("Explore", [("Our services", SVC_BASE), ("Locations", LOC_BASE), ("Free tools", TOOL_BASE), ("How appraisal works", "/how-appraisal-works/")])}</aside></div>{cta_band()}"""
-    write(path, document(path, "About Georgia Insurance Appraiser | Independent Claim Valuation",
-                         "Georgia Insurance Appraiser is an independent appraisal and estimating practice focused on one question: the amount of loss on disputed property insurance claims.",
+    write(path, document(path, "About Us | Georgia Insurance Appraiser",
+                         "Georgia Insurance Appraiser is an independent appraisal and estimating practice focused on the amount of loss on disputed property claims.",
                          body, [crumbs_schema(trail), {"@type": "AboutPage", "url": DOMAIN + path, "about": {"@id": DOMAIN + "/#business"}}], preload="plans-review"), 0.7)
 
     path = "/contact/"
@@ -810,7 +863,7 @@ def company_pages():
 <h3>Helpful to have ready</h3><ul><li>Declarations page</li><li>The carrier’s full estimate (PDF)</li><li>Letters or emails from the carrier</li><li>Photos and your contractor’s estimate</li></ul></div>
 <div class="rv-r">{lead_form("Tell us about your claim", page=path)}</div></div></section>"""
     write(path, document(path, "Contact Georgia Insurance Appraiser | (844) 537-1427",
-                         "Contact Georgia Insurance Appraiser for a free review of your disputed property claim. Call or text (844) 537-1427 or email info@georgiainsuranceappraiser.com.",
+                         "Get a free review of your disputed property claim. Call or text (844) 537-1427 or email info@georgiainsuranceappraiser.com to reach us.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage", "url": DOMAIN + path}], preload="consultation"), 0.8)
 
     credits = "".join(

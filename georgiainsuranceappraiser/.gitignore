@@ -1,2 +1,4 @@
 __pycache__/
 gia-leads.log
+_private/
+gia-config.php

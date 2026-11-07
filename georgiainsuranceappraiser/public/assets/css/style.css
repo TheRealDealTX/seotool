@@ -648,3 +648,7 @@ fieldset { border: 0; padding: 0; margin: 0; }
 .sec.maroon .tool a:not(.btn), .sec.dark .form a:not(.btn) { color: var(--maroon); }
 .prose .peril-chips li { padding: 6px 12px; margin: 0; }
 .prose .peril-chips li::before { display: none; }
+.box h2.box-t { font-size: 1.12rem; letter-spacing: -.015em; margin: 0 0 .5em; }
+.box.call h2.box-t { color: #fff; }
+.foot h3 { font-family: var(--display); font-size: .95rem; color: #fff; margin-bottom: 16px; font-weight: 600; letter-spacing: 0; }
+.todo-h { margin: 18px 0 8px; font-family: var(--display); font-weight: 700; color: var(--ink); font-size: 1.05rem; }
