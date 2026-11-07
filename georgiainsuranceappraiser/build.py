@@ -30,7 +30,8 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@georgiainsuranceappraiser.com"
 TODAY = date.today().isoformat()
-VER = "20261107a"
+VER = "20261107b"
+FAV = "3"
 
 SVC_BASE = "/appraisal-services/"
 LOC_BASE = "/locations/"
@@ -161,9 +162,9 @@ SVC_ICON = {
 def mark(uid="m"):
     return (f'<svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="{uid}" x1="0" y1="0" x2="1" y2="1">'
             '<stop offset="0" stop-color="#a62d4a"/><stop offset="1" stop-color="#43111f"/></linearGradient></defs>'
-            f'<rect width="48" height="48" rx="13" fill="url(#{uid})"/>'
-            '<path d="M24 9l12 4.5v9.2c0 7.6-5.1 13.3-12 16.3-6.9-3-12-8.7-12-16.3v-9.2z" fill="none" stroke="#f3cf8e" stroke-width="2.6" stroke-linejoin="round"/>'
-            '<path d="M18.5 24.5l4 4 7.5-8.5" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+            f'<rect width="48" height="48" rx="12" fill="url(#{uid})"/>'
+            '<path d="M24 8.5l13 4.8v9.6c0 8-5.4 14-13 17.3-7.6-3.3-13-9.3-13-17.3v-9.6z" fill="none" stroke="#f3cf8e" stroke-width="3.2" stroke-linejoin="round"/>'
+            '<path d="M18 24.6l4.4 4.4 8-9" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
 # ---------------------------------------------------------------- schema
@@ -292,10 +293,11 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#5c1628">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/favicon.ico?v={FAV}" sizes="48x48">
+<link rel="icon" href="/favicon.svg?v={FAV}" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png?v={FAV}" sizes="96x96" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v={FAV}" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest?v={FAV}">
 {pre}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap">
