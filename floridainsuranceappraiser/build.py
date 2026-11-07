@@ -18,7 +18,7 @@ from content.resources import ABOUT, PROCESS, FAQS, GLOSSARY, LEGAL
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "dist")
-VER = "20261106p"
+VER = "20261107"
 NAME = BIZ["name"]
 TEL = f'<a href="tel:{BIZ["phone_href"]}">{BIZ["phone_display"]}</a>'
 SITEMAP = []
@@ -139,14 +139,19 @@ def ico(name):
     return f'<div class="ico">{icon(name)}</div>'
 
 
-LOGO = ('<svg viewBox="0 0 48 48" aria-hidden="true"><rect x="1.5" y="1.5" width="45" height="45" rx="12" fill="#0f2e2f"/>'
-        '<circle cx="24" cy="25" r="11" fill="#f2b544"/><rect x="6" y="25" width="36" height="16" fill="#0f2e2f"/>'
-        '<path d="M6 29c4 0 4-2.5 8-2.5s4 2.5 8 2.5 4-2.5 8-2.5 4 2.5 8 2.5 4-2.5 4-2.5" stroke="#e2603f" stroke-width="2.6" fill="none" stroke-linecap="round"/>'
-        '<path d="M6 35c4 0 4-2.5 8-2.5s4 2.5 8 2.5 4-2.5 8-2.5 4 2.5 8 2.5 4-2.5 4-2.5" stroke="#2a8c82" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg>')
+def _mark(tile, roof, line):
+    return (f'<svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="{tile}"/>'
+            f'<path d="M11 21L20 13l9 8" fill="none" stroke="{roof}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>'
+            f'<path d="M11 27.5h18" stroke="{line}" stroke-width="2.6" stroke-linecap="round"/></svg>')
 
 
-def brand():
-    return f'<a class="brand" href="/" aria-label="{NAME} home">{LOGO}<span><b>{NAME}</b><small>Independent claim appraisal</small></span></a>'
+LOGO = _mark("#0f4c4a", "#fff", "#c9974a")
+LOGO_DARK = _mark("#fff", "#0f4c4a", "#b7832f")
+
+
+def brand(dark=False):
+    return (f'<a class="brand" href="/" aria-label="{NAME} home">{LOGO_DARK if dark else LOGO}'
+            f'<span class="wm"><small>Florida</small><b>Insurance Appraiser</b></span></a>')
 
 
 # ------------------------------------------------------------------ schema
@@ -197,7 +202,7 @@ def head(p):
 <meta name="description" content="{esc(p['description'])}">
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
-<meta name="theme-color" content="#0f2e2f">
+<meta name="theme-color" content="#0f4c4a">
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="{p.get('og_type', 'website')}">
 <meta property="og:site_name" content="{NAME}">
@@ -211,7 +216,7 @@ def head(p):
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500..600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css?v={VER}">
 <script type="application/ld+json">{ld}</script>
 </head>
@@ -246,7 +251,7 @@ def header():
 <li><a href="/about/">About</a></li>
 <li><a href="/contact/">Contact</a></li>
 </ul>
-<a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a>
+<a class="btn btn-primary" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a>
 </nav>
 </div></header>
 """
@@ -257,16 +262,15 @@ def footer():
     loc = "".join(f'<li><a href="/florida-locations/{l["slug"]}/">{l["city"]}</a></li>' for l in LOCATIONS)
     tls = "".join(f'<li><a href="/claim-tools/{t["slug"]}/">{t["name"]}</a></li>' for t in TOOLS)
     return f"""<footer class="ftr">
-<svg class="waves-top" viewBox="0 0 1440 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 46V20c120-18 240-18 360 0s240 18 360 0 240-18 360 0 240 18 360 0v26z" fill="#0f2e2f"/></svg>
 <div class="wrap">
 <div class="ftr-grid">
-<div>{brand()}<p>{NAME} provides independent appraisal, umpire services and line-item estimate review for Florida homeowners, condominium associations and commercial property owners in disputed insurance claims.</p>
+<div>{brand(True)}<p>{NAME} provides independent appraisal, umpire services and line-item estimate review for Florida homeowners, condominium associations and commercial property owners in disputed insurance claims.</p>
 <ul><li><a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a></li><li><a href="mailto:{BIZ['email']}">{BIZ['email']}</a></li><li>Serving all 67 Florida counties</li></ul></div>
 <div><h4>Services</h4><ul>{svc}<li><a href="/appraisal-services/">All services →</a></li></ul></div>
 <div><h4>Locations</h4><ul>{loc}</ul></div>
 <div><h4>Free tools</h4><ul>{tls}</ul></div>
 <div><h4>Company</h4><ul><li><a href="/about/">About us</a></li><li><a href="/appraisal-process/">Appraisal process</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/claim-glossary/">Claim glossary</a></li><li><a href="/blog/">Guides</a></li><li><a href="/contact/">Contact</a></li></ul>
-<h4 style="margin-top:22px">Legal</h4><ul><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
+<h4 style="margin-top:26px">Legal</h4><ul><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/sitemap/">Sitemap</a></li></ul></div>
 </div>
 <div class="ftr-bottom"><p>© {date.today().year} {NAME}. General information only — not legal advice. Appraisal determines the amount of a covered loss; it does not decide coverage. We are not a law firm.</p><p><a href="/disclaimer/">Disclaimer</a></p></div>
 </div></footer>
@@ -321,7 +325,7 @@ def prose(sections):
 
 def call_box(title="Talk to an appraiser"):
     return f"""<div class="box dark"><h3>{title}</h3><p>Send us the insurer’s estimate and your numbers. We’ll tell you plainly whether appraisal makes sense.</p>
-<a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a>
+<a class="btn btn-primary" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a>
 <p style="margin:12px 0 0;font-size:.9rem"><a href="/contact/">Or send claim details online →</a></p></div>"""
 
 
@@ -355,7 +359,7 @@ def lead_form(fid="contact-form"):
 <div class="field"><label for="{fid}-msg">What happened, and where does the claim stand?</label><textarea id="{fid}-msg" name="message" rows="4" placeholder="Date of loss, insurer, amount offered vs. your estimate…"></textarea></div>
 <div class="hp" aria-hidden="true"><label>Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
 <label class="consent"><input type="checkbox" name="consent" value="yes" required> <span>I agree to be contacted about my claim by phone, text or email. Submitting this form does not create an appraisal engagement.</span></label>
-<button class="btn btn-coral" type="submit">Send my claim details</button>
+<button class="btn btn-primary" type="submit">Send my claim details</button>
 <p class="form-msg" role="status" aria-live="polite"></p>
 </form>"""
 
@@ -417,7 +421,7 @@ def build_home():
 <span class="eyebrow">Independent appraisal · all 67 counties</span>
 <h1>Florida Insurance Appraiser for <em>underpaid</em> property claims</h1>
 <p class="lead">Your insurer says $18,000. Your roofer says $41,000. Florida Insurance Appraiser closes that gap with measurements, photos and a line-by-line estimate the other side has to answer — for homeowners, condo associations and commercial owners from Pensacola to Key West.</p>
-<div class="hero-ctas"><a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a><a class="btn btn-ghost" href="/contact/">Get a free claim review</a></div>
+<div class="hero-ctas"><a class="btn btn-primary" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a><a class="btn btn-ghost" href="/contact/">Get a free claim review</a></div>
 <ul class="trust"><li>Xactimate &amp; Symbility estimates</li><li>Residential &amp; commercial</li><li>Umpire services</li></ul>
 </div>
 <div class="hero-media">
@@ -432,7 +436,6 @@ def build_home():
 </form>
 </div>
 </div>
-<svg class="waves" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60V30c120-24 240-24 360 0s240 24 360 0 240-24 360 0 240 24 360 0v30z" fill="#fffaf2"/></svg>
 </section>
 
 <section class="sec tight"><div class="wrap">
@@ -441,7 +444,7 @@ def build_home():
 
 <section class="sec" id="why"><div class="wrap split">
 <div>
-<span class="num">No. 01 — The gap</span>
+<span class="num">The gap</span>
 <h2>Why the insurer’s number and your contractor’s number never match</h2>
 <p>Most underpaid Florida claims aren’t the result of one big disagreement. They’re dozens of small ones: a roof measured without its waste factor, a tile line item swapped for shingles, drywall priced for one wall instead of the whole room, matching ignored, code upgrades left off and contractor overhead and profit quietly removed.</p>
 <p>A Florida Insurance Appraiser finds those differences one line at a time and puts a documented price on each of them. That is what an appraisal panel weighs — not who argues loudest, but whose estimate holds up item by item.</p>
@@ -462,13 +465,13 @@ def build_home():
 </div></section>
 
 <section class="sec sand"><div class="wrap">
-<div class="sec-head"><span class="num">No. 02 — Services</span><h2>What Florida Insurance Appraiser handles</h2><p>From a single water-damaged kitchen to a 200-unit condominium tower, every assignment starts the same way: an honest read of the policy, the insurer’s estimate and the gap between them.</p></div>
+<div class="sec-head"><span class="num">Services</span><h2>What Florida Insurance Appraiser handles</h2><p>From a single water-damaged kitchen to a 200-unit condominium tower, every assignment starts the same way: an honest read of the policy, the insurer’s estimate and the gap between them.</p></div>
 <div class="grid g3">{svc_cards}</div>
 <p style="margin-top:28px"><a class="btn btn-ghost" href="/appraisal-services/">See all {len(SERVICES)} services</a></p>
 </div></section>
 
 <section class="sec"><div class="wrap">
-<div class="sec-head"><span class="num">No. 03 — The process</span><h2>How appraisal works with a Florida Insurance Appraiser in your corner</h2></div>
+<div class="sec-head"><span class="num">The process</span><h2>How appraisal works with a Florida Insurance Appraiser in your corner</h2></div>
 <ol class="steps">
 <li><h3>Policy &amp; estimate review</h3><p>We read the appraisal provision, deductibles and endorsements, then compare the insurer’s estimate with yours.</p></li>
 <li><h3>Written demand</h3><p>If the gap justifies it, appraisal is invoked in writing and each side names a disinterested appraiser.</p></li>
@@ -480,7 +483,7 @@ def build_home():
 
 <section class="sec ink photo-bg">{photo('hurricane-palm-trees-wind', cls='bg', sizes='100vw', alt='')}<div class="wrap">
 <div class="split top">
-<div><span class="num" style="color:var(--sun)">No. 04 — Storm country</span>
+<div><span class="num">Storm country</span>
 <h2>Built for the claims Florida actually gets</h2>
 <p>Hurricane season runs June 1 through November 30, but Florida losses don’t keep a calendar: summer thunderstorms, plumbing failures, kitchen fires and ground movement fill the other months. After a named storm, insurers face thousands of claims at once, and desk-adjusted estimates written from photos become the norm. That is when a Florida Insurance Appraiser earns their fee.</p>
 <p>We know the difference between wind and surge, how percentage hurricane deductibles change the math, and why a 2001 tile roof in Broward is priced nothing like a 2019 shingle roof in Ocala. <a href="/appraisal-services/hurricane-claim-appraisal/">Hurricane claim appraisal →</a></p></div>
@@ -489,13 +492,13 @@ def build_home():
 </div></section>
 
 <section class="sec"><div class="wrap">
-<div class="sec-head center"><span class="eyebrow">No. 05 — Free tools</span><h2>Free claim tools from Florida Insurance Appraiser</h2><p>Run the numbers yourself before you call anyone. No sign-up, nothing stored on our servers.</p></div>
+<div class="sec-head center"><span class="eyebrow">Free tools</span><h2>Free claim tools from Florida Insurance Appraiser</h2><p>Run the numbers yourself before you call anyone. No sign-up, nothing stored on our servers.</p></div>
 <div class="grid g3">{tool_cards}</div>
 <p style="margin-top:28px;text-align:center"><a class="btn btn-ghost" href="/claim-tools/">See all {len(TOOLS)} tools</a></p>
 </div></section>
 
 <section class="sec sand"><div class="wrap">
-<div class="sec-head"><span class="num">No. 06 — Your options</span><h2>Appraisal vs. the other ways to resolve a Florida claim dispute</h2><p>Appraisal isn’t the right tool for every problem. Here’s how it compares, in plain terms.</p></div>
+<div class="sec-head"><span class="num">Your options</span><h2>Appraisal vs. the other ways to resolve a Florida claim dispute</h2><p>Appraisal isn’t the right tool for every problem. Here’s how it compares, in plain terms.</p></div>
 <div class="table-wrap"><table class="cmp"><thead><tr><th>Option</th><th>Best for</th><th>Decides</th><th>Typical pace</th></tr></thead><tbody>
 <tr><td>Appraisal</td><td>Covered losses where the dispute is the dollar amount</td><td>Amount of loss only</td><td>Weeks to a few months</td></tr>
 <tr><td>DFS mediation</td><td>Residential disputes where both sides may settle with a neutral’s help</td><td>Nothing unless both sides agree</td><td>Often a single session</td></tr>
@@ -506,7 +509,7 @@ def build_home():
 </div></section>
 
 <section class="sec"><div class="wrap split top">
-<div><span class="num">No. 07 — Where we work</span>
+<div><span class="num">Where we work</span>
 <h2>A Florida Insurance Appraiser for every coast</h2>
 <p>We work claims statewide — the high-rise condos of Miami-Dade and Broward, the older block homes of Tampa Bay, the barrier islands of Lee and Collier, the oak-canopy neighborhoods of Tallahassee and the Panhandle beaches still rebuilding from recent storms.</p>
 <ul class="chips">{chips}<li><a href="/florida-locations/">All of Florida →</a></li></ul>
@@ -520,19 +523,19 @@ def build_home():
 </div></section>
 
 <section class="sec sand"><div class="wrap split top">
-<div><span class="num">No. 08 — Questions</span><h2>Questions people ask a Florida Insurance Appraiser</h2>
+<div><span class="num">Questions</span><h2>Questions people ask a Florida Insurance Appraiser</h2>
 <p>Short answers to what we hear most. More in the <a href="/faq/">full FAQ</a> and the <a href="/claim-glossary/">claim glossary</a>.</p></div>
 <div>{faq_html}</div>
 </div></section>
 
 <section class="sec"><div class="wrap">
-<div class="sec-head"><span class="num">No. 09 — Guides</span><h2>Guides for Florida policyholders</h2></div>
+<div class="sec-head"><span class="num">Guides</span><h2>Guides for Florida policyholders</h2></div>
 <div class="grid g3">{''.join(post_card(p) for p in posts)}</div>
 <p style="margin-top:28px"><a class="btn btn-ghost" href="/blog/">All guides</a></p>
 </div></section>
 
 <section class="sec sand" id="contact"><div class="wrap split top">
-<div><span class="num">No. 10 — Free review</span>
+<div><span class="num">Free review</span>
 <h2>Talk to a Florida Insurance Appraiser about your claim</h2>
 <p>Tell us what happened and where the claim stands. We’ll look at the numbers and tell you honestly whether appraisal, a supplement, mediation or something else makes the most sense — even if the answer is that you don’t need us.</p>
 <ul class="contact-list">
@@ -575,7 +578,7 @@ def build_services():
                      f"Ten ways {NAME} helps resolve disputed claims — from a single roof to an entire condominium complex.", img="roofer-shingle-roof-repair") + f"""
 <section class="sec"><div class="wrap"><div class="grid g3">{cards}</div>
 <div class="postcard" style="margin-top:56px"><div class="split top"><div><h2>Not sure which service fits?</h2><p>Most clients don’t know whether they need an appraiser, an umpire or just a second set of eyes on an estimate. Call and describe the claim; we’ll point you in the right direction even if it isn’t us.</p></div>
-<div><ul class="ticks"><li>Policy and estimate review before anything is signed</li><li>Clear written fee terms</li><li>Residential, condominium and commercial losses</li><li>Xactimate and Symbility line-item estimates</li></ul><a class="btn btn-coral" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a></div></div></div>
+<div><ul class="ticks"><li>Policy and estimate review before anything is signed</li><li>Clear written fee terms</li><li>Residential, condominium and commercial losses</li><li>Xactimate and Symbility line-item estimates</li></ul><a class="btn btn-primary" href="tel:{BIZ['phone_href']}">Call {BIZ['phone_short']}</a></div></div></div>
 </div></section>""" + cta_band()
     write({"path": "/appraisal-services/", "photo": "roofer-shingle-roof-repair", "title": "Insurance Appraisal Services in Florida | All Services",
            "description": "Hurricane, roof, water, sinkhole, fire, condo and commercial claim appraisal, plus umpire services and Xactimate estimate review across Florida.",
@@ -827,7 +830,7 @@ $sent = @mail($to, $subject, $body, $headers, '-f' . $to);
 echo json_encode(['ok' => true]);
 """
 
-FAVICON = LOGO.replace('<svg viewBox="0 0 48 48" aria-hidden="true">', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">')
+FAVICON = LOGO.replace('<svg viewBox="0 0 40 40" aria-hidden="true">', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">')
 
 
 def build_root_files():
@@ -837,7 +840,7 @@ def build_root_files():
     w("api/contact.php", CONTACT_PHP)
     w("favicon.svg", FAVICON)
     w("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /home.html\n\nSitemap: {url('/sitemap.xml')}\n")
-    w("site.webmanifest", json.dumps({"name": NAME, "short_name": "FL Appraiser", "icons": [{"src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any"}, {"src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}], "theme_color": "#0f2e2f", "background_color": "#fffaf2", "display": "standalone"}, indent=1))
+    w("site.webmanifest", json.dumps({"name": NAME, "short_name": "FL Appraiser", "icons": [{"src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any"}, {"src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}], "theme_color": "#0f4c4a", "background_color": "#ffffff", "display": "standalone"}, indent=1))
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for path, mod, pri in SITEMAP:
         xml.append(f"<url><loc>{url(path)}</loc><lastmod>{mod}</lastmod><priority>{pri}</priority></url>")

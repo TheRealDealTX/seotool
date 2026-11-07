@@ -16,7 +16,7 @@
     if(pct){be=fee>=100?Infinity:ump/(gap*(1-fee/100))}else{be=gap?(fee+ump)/gap:Infinity}
     out(page,'be',isFinite(be)&&gap?Math.min(be*100,999).toFixed(0)+'%':'—');
     var rows='';[0.25,0.5,0.75].forEach(function(s){var rec=gap*s,net=rec-costAt(rec);
-      rows+='<tr><td>'+(s*100)+'% of the gap</td><td>'+M(rec)+'</td><td style="color:'+(net<0?'#bf4526':'#12595a')+';font-weight:800">'+(net<0?'−':'')+M(Math.abs(net))+'</td></tr>'});
+      rows+='<tr><td>'+(s*100)+'% of the gap</td><td>'+M(rec)+'</td><td style="color:'+(net<0?'#b3261e':'#0f4c4a')+';font-weight:800">'+(net<0?'−':'')+M(Math.abs(net))+'</td></tr>'});
     $('worth-rows').innerHTML=rows;
     var v=$('worth-verdict');
     if(!gap)v.textContent='There’s no disputed amount yet — enter an estimate higher than the insurer’s.';
