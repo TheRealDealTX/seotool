@@ -21,8 +21,8 @@ GAP_FULL = """
     </div>
     <div class="tool-out" aria-live="polite">
       <div class="out-big"><small>Estimated net increase to you</small><b data-o="net">$0</b></div>
-      <div class="stack" aria-hidden="true"><span style="background:#6f8f5f"></span><span style="background:#f0956b"></span><span style="background:#b44a28"></span></div>
-      <div class="legend"><span><i style="background:#6f8f5f"></i>Carrier’s number</span><span><i style="background:#f0956b"></i>Your net gain</span><span><i style="background:#b44a28"></i>Appraisal costs</span></div>
+      <div class="stack" aria-hidden="true"><span style="background:#d4c3c7"></span><span style="background:#e3a94f"></span><span style="background:#7a1d33"></span></div>
+      <div class="legend"><span><i style="background:#d4c3c7"></i>Carrier’s number</span><span><i style="background:#e3a94f"></i>Your net gain</span><span><i style="background:#7a1d33"></i>Appraisal costs</span></div>
       <div class="out-rows">
         <div><span>Amount in dispute</span><b data-o="gap">$0</b></div>
         <div><span>Gap as % of carrier estimate</span><b data-o="pct">—</b></div>
@@ -137,8 +137,8 @@ DEDUCT = """
     </div>
     <div class="tool-out" aria-live="polite">
       <div class="out-big"><small>Your percentage deductible in dollars</small><b data-o="pd">$0</b></div>
-      <div class="stack" aria-hidden="true"><span style="background:#b44a28"></span><span style="background:#6f8f5f"></span></div>
-      <div class="legend"><span><i style="background:#b44a28"></i>You pay</span><span><i style="background:#6f8f5f"></i>Policy pays</span></div>
+      <div class="stack" aria-hidden="true"><span style="background:#7a1d33"></span><span style="background:#d4c3c7"></span></div>
+      <div class="legend"><span><i style="background:#7a1d33"></i>You pay</span><span><i style="background:#d4c3c7"></i>Policy pays</span></div>
       <div class="out-rows">
         <div><span>Payment with % deductible</span><b data-o="pdpay">$0</b></div>
         <div><span>Payment if the flat deductible applied</span><b data-o="flatpay">$0</b></div>
@@ -199,7 +199,7 @@ READY = """
     </div>
     <div class="tool-out" aria-live="polite" style="grid-template-columns:minmax(220px,300px) 1fr;align-items:start">
       <div>
-        <svg class="gauge" viewBox="0 0 200 110" aria-hidden="true"><path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#efe7d6" stroke-width="18"/><path data-o="arc" d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#f0956b" stroke-width="18" stroke-dasharray="251.3" stroke-dashoffset="251.3" style="transition:stroke-dashoffset .5s,stroke .3s"/></svg>
+        <svg class="gauge" viewBox="0 0 200 110" aria-hidden="true"><path d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#f3e6e9" stroke-width="18"/><path data-o="arc" d="M20 100 A80 80 0 0 1 180 100" fill="none" stroke="#e3a94f" stroke-width="18" stroke-dasharray="251.3" stroke-dashoffset="251.3" style="transition:stroke-dashoffset .5s,stroke .3s"/></svg>
         <div class="gauge-num"><span data-o="score">–</span></div>
         <p class="hint" style="text-align:center">Answered <span data-o="count">0 / 12</span></p>
       </div>

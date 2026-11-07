@@ -21,7 +21,8 @@ Growth website.
 | `src/locations.py` | 12 Georgia location pages |
 | `src/tools.py` | 6 interactive tools (markup + copy) |
 | `src/learn.py` | Process guide, FAQ, glossary, 5 insight posts |
-| `static/` | CSS, JS, icons, OG image, `api/contact.php`. Copied into `public/` as-is |
+| `static/` | CSS, JS, icons, OG image, photos, `api/contact.php`. Copied into `public/` as-is |
+| `src/photos.json` | Photo metadata (title, creator, license, source URL, size) used for `img()` and `/photo-credits/` |
 | `public/` | **Build output.** This folder is what gets deployed (committed) |
 | `validate.py` | Post-build checks |
 | `deploy.sh` | Uploads `public/` to the website's `public_html` |
@@ -53,6 +54,26 @@ The URL scheme, copy and design differ from the sister Alabama site on purpose.
 that the homepage's main content mentions "Georgia Insurance Appraiser" at least 14 times
 (currently 18, or 22 counting the header and footer). It checks for broken links, one H1
 per page, valid JSON-LD, and unique titles and descriptions.
+
+## Design
+
+Maroon base (`#7a1d33`, deep `#2b0b14`) with warm gold (`#e3a94f`) and blush accents;
+Outfit headings, Inter body. Photo-led: full-bleed hero with slow zoom and a glass lead form,
+animated stat counters, a bento grid of service photo cards, a scroll-filled process
+timeline, region tabs with photos, 3D-tilt tool cards, parallax banners, scroll progress bar,
+staggered reveal animations and a header that goes from transparent to frosted on scroll.
+All motion respects `prefers-reduced-motion`.
+
+Mobile nav is an off-canvas drawer (`#drawer`) rendered *outside* the sticky header, with
+accordion submenus, scroll lock, and close on ×, overlay tap, link tap or Escape.
+
+## Photos
+
+All 30 photos are royalty-free: CC0 (StockSnap, rawpixel, Flickr CC0) or public domain
+(U.S. government agency photos), found through the Openverse API. Each is served as
+1200px and 640px WebP in `static/assets/img/photos/`. Sources and creators are listed on
+`/photo-credits/` (attribution isn't required, but it's included). The StockSnap originals
+are limited to 960px wide via their CDN, so hero images sit behind overlays.
 
 ## Hosting notes
 

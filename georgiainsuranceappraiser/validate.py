@@ -27,7 +27,7 @@ class P(HTMLParser):
             self.links.append(a["href"])
         if tag in ("script", "img") and a.get("src"):
             self.links.append(a["src"])
-        if tag == "img" and not a.get("alt"):
+        if tag == "img" and "alt" not in a:
             self.imgs_noalt += 1
         if tag == "h1":
             self.h1 += 1
