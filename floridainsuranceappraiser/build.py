@@ -162,7 +162,7 @@ def org_schema():
     return {
         "@type": ["ProfessionalService", "LocalBusiness"], "@id": ORG_ID, "name": NAME, "url": url("/"),
         "telephone": BIZ["phone_href"], "email": BIZ["email"], "image": url("/assets/img/og-image.png"),
-        "logo": url("/favicon.svg"), "priceRange": "$$",
+        "logo": url("/web-app-manifest-512x512.png"), "priceRange": "$$",
         "description": "Independent property insurance appraisal, umpire services and estimate review for homeowners, condo associations and commercial property owners across Florida.",
         "address": {"@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US"},
         "areaServed": [{"@type": "State", "name": "Florida"}] + [{"@type": "City", "name": f'{l["city"]}, FL'} for l in LOCATIONS],
@@ -211,8 +211,10 @@ def head(p):
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="{og_image}">
 <meta name="twitter:card" content="summary_large_image">
-{extra}<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+{extra}<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-96x96.png" type="image/png" sizes="96x96">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -830,7 +832,6 @@ $sent = @mail($to, $subject, $body, $headers, '-f' . $to);
 echo json_encode(['ok' => true]);
 """
 
-FAVICON = LOGO.replace('<svg viewBox="0 0 40 40" aria-hidden="true">', '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">')
 
 
 def build_root_files():
@@ -838,9 +839,10 @@ def build_root_files():
     w("index.php", INDEX_PHP)
     os.makedirs(os.path.join(OUT, "api"), exist_ok=True)
     w("api/contact.php", CONTACT_PHP)
-    w("favicon.svg", FAVICON)
+    for f in ("favicon.svg", "favicon.ico", "favicon-96x96.png", "web-app-manifest-192x192.png", "web-app-manifest-512x512.png"):
+        shutil.copy(os.path.join(ROOT, "assets/icons", f), os.path.join(OUT, f))
     w("robots.txt", f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /home.html\n\nSitemap: {url('/sitemap.xml')}\n")
-    w("site.webmanifest", json.dumps({"name": NAME, "short_name": "FL Appraiser", "icons": [{"src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any"}, {"src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}], "theme_color": "#0f4c4a", "background_color": "#ffffff", "display": "standalone"}, indent=1))
+    w("site.webmanifest", json.dumps({"name": NAME, "short_name": "FL Appraiser", "icons": [{"src": "/web-app-manifest-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"}, {"src": "/web-app-manifest-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}, {"src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any"}], "theme_color": "#0f4c4a", "background_color": "#ffffff", "display": "standalone"}, indent=1))
     xml = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for path, mod, pri in SITEMAP:
         xml.append(f"<url><loc>{url(path)}</loc><lastmod>{mod}</lastmod><priority>{pri}</priority></url>")
