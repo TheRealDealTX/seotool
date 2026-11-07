@@ -197,6 +197,13 @@ def head(p):
 <html lang="en-US">
 <head>
 <meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T37B9MBK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
+<script>if(location.protocol==='http:'&&location.hostname==='floridainsuranceappraiser.com')location.replace('https:'+location.href.slice(5));</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(p['title'])}</title>
 <meta name="description" content="{esc(p['description'])}">
@@ -239,6 +246,7 @@ def header():
     tls = [(t["name"], f'/claim-tools/{t["slug"]}/') for t in TOOLS]
     res = [("Appraisal Process", "/appraisal-process/"), ("FAQ", "/faq/"), ("Claim Glossary", "/claim-glossary/"), ("Guides & Articles", "/blog/")]
     return f"""<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T37B9MBK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="skip" href="#main">Skip to content</a>
 <div class="strip"><div class="wrap"><span>Independent property claim appraisal · all 67 Florida counties</span><span><span><a href="tel:{BIZ['phone_href']}">{BIZ['phone_display']}</a></span><span class="hide-m"><a href="mailto:{BIZ['email']}">{BIZ['email']}</a></span></span></div></div>
 <header class="hdr"><div class="wrap">
@@ -808,10 +816,16 @@ readfile(__DIR__ . '/404.html');
 """
 
 CONTACT_PHP = r"""<?php
-// Lead form handler for floridainsuranceappraiser.com. Sends the submission by email.
+// Lead form handler for floridainsuranceappraiser.com.
+// Sends each submission to the mailbox over authenticated SMTP (SSL). Credentials live in
+// fia-mail-config.php one level above public_html, or public_html/_config/mail.php (a PHP file with a
+// direct-access guard, uploaded separately and never part of this repository or of deploy.sh):
+//   <?php return ['host' => 'smtp.hostinger.com', 'port' => 465, 'user' => 'info@…', 'pass' => '…'];
+// Every lead is also appended to public_html/_config/leads.php (guarded against web access).
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') { http_response_code(405); echo json_encode(['ok' => false, 'error' => 'Method not allowed.']); exit; }
+$private = dirname(__DIR__, 2);
 $to = 'info@floridainsuranceappraiser.com';
 $f = function ($k, $max = 200) { return trim(mb_substr(str_replace(["\r", "\0"], '', (string)($_POST[$k] ?? '')), 0, $max)); };
 if ($f('website') !== '') { echo json_encode(['ok' => true]); exit; }          // honeypot
@@ -825,10 +839,61 @@ $fields = ['Name' => $name, 'Email' => $email, 'Phone' => $phone, 'Location' => 
 $body = "New claim review request from floridainsuranceappraiser.com\n\n";
 foreach ($fields as $k => $v) { $body .= str_pad($k . ':', 14) . ($k === 'Message' ? "\n" : '') . $v . "\n"; }
 $body .= "\nPage: " . ($_SERVER['HTTP_REFERER'] ?? '') . "\nIP: " . ($_SERVER['REMOTE_ADDR'] ?? '') . "\nTime: " . gmdate('c') . "\n";
-$headers = "From: Florida Insurance Appraiser <$to>\r\nReply-To: " . str_replace(["\n", "\r"], '', $email) . "\r\nContent-Type: text/plain; charset=utf-8";
-$subject = '=?UTF-8?B?' . base64_encode('Claim review request: ' . $name) . '?=';
-$sent = @mail($to, $subject, $body, $headers, '-f' . $to);
-@file_put_contents(__DIR__ . '/../../leads.log', json_encode($fields + ['time' => gmdate('c'), 'mailed' => $sent]) . "\n", FILE_APPEND | LOCK_EX);
+$subject = 'Claim review request: ' . $name . ($fields['Type of loss'] ? ' (' . $fields['Type of loss'] . ')' : '');
+
+function fia_smtp(array $c, string $to, string $subject, string $body, string $replyTo, string $replyName) {
+    $ctx = stream_context_create(['ssl' => ['verify_peer' => true, 'verify_peer_name' => true]]);
+    $fp = @stream_socket_client('ssl://' . $c['host'] . ':' . (int)$c['port'], $en, $es, 15, STREAM_CLIENT_CONNECT, $ctx);
+    if (!$fp) { return 'connect failed: ' . $es; }
+    stream_set_timeout($fp, 20);
+    $step = function ($line, $expect, $label) use ($fp) {
+        if ($line !== null) { fwrite($fp, $line . "\r\n"); }
+        $resp = '';
+        while (($l = fgets($fp, 1024)) !== false) { $resp .= $l; if (strlen($l) < 4 || $l[3] === ' ') { break; } }
+        if ((int)substr($resp, 0, 3) !== $expect) { throw new RuntimeException($label . ': ' . trim($resp)); }
+    };
+    $enc = function ($s) { return '=?UTF-8?B?' . base64_encode($s) . '?='; };
+    try {
+        $step(null, 220, 'greeting');
+        $step('EHLO floridainsuranceappraiser.com', 250, 'ehlo');
+        $step('AUTH LOGIN', 334, 'auth');
+        $step(base64_encode($c['user']), 334, 'auth user');
+        $step(base64_encode($c['pass']), 235, 'auth pass');
+        $step('MAIL FROM:<' . $c['user'] . '>', 250, 'mail from');
+        $step('RCPT TO:<' . $to . '>', 250, 'rcpt to');
+        $step('DATA', 354, 'data');
+        $safeReply = str_replace(["\r", "\n", '<', '>'], '', $replyTo);
+        $msg = 'Date: ' . date('r') . "\r\n"
+             . 'From: ' . $enc('Florida Insurance Appraiser Website') . ' <' . $c['user'] . ">\r\n"
+             . 'To: <' . $to . ">\r\n"
+             . 'Reply-To: ' . $enc($replyName) . ' <' . $safeReply . ">\r\n"
+             . 'Subject: ' . $enc($subject) . "\r\n"
+             . 'Message-ID: <' . bin2hex(random_bytes(12)) . "@floridainsuranceappraiser.com>\r\n"
+             . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
+             . rtrim(chunk_split(base64_encode($body), 76, "\r\n")) . "\r\n.";
+        $step($msg, 250, 'message');
+        $step('QUIT', 221, 'quit');
+    } catch (Throwable $e) { fclose($fp); return $e->getMessage(); }
+    fclose($fp);
+    return true;
+}
+
+$cfgFile = is_readable($private . '/fia-mail-config.php') ? $private . '/fia-mail-config.php' : dirname(__DIR__) . '/_config/mail.php';
+$result = 'no mail config';
+if (is_readable($cfgFile)) {
+    $cfg = include $cfgFile;
+    $result = fia_smtp($cfg, $to, $subject, $body, $email, $name);
+}
+if ($result !== true) {                                    // fall back to the local mailer
+    $headers = "From: Florida Insurance Appraiser <$to>\r\nReply-To: " . str_replace(["\n", "\r"], '', $email) . "\r\nContent-Type: text/plain; charset=utf-8";
+    $fallback = @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, $headers, '-f' . $to);
+    $result = ['smtp_error' => $result, 'mail_fallback' => $fallback];
+}
+// Backup log: a guarded .php file in public_html/_config (web requests get a 404; readable in the file manager).
+$log = dirname(__DIR__) . '/_config/leads.php';
+if (!is_dir(dirname($log))) { @mkdir(dirname($log), 0750, true); }
+if (!file_exists($log)) { @file_put_contents($log, "<?php http_response_code(404); exit; ?>\n"); }
+@file_put_contents($log, json_encode($fields + ['time' => gmdate('c'), 'delivery' => $result], JSON_UNESCAPED_UNICODE) . "\n", FILE_APPEND | LOCK_EX);
 echo json_encode(['ok' => true]);
 """
 

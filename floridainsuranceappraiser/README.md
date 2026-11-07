@@ -24,12 +24,24 @@ python3 validate.py   # links, assets, one H1, unique titles/descriptions, JSON-
 Hosting note (same platform behaviour as huttoroofs.com): the homepage is `home.html`, served by
 `index.php`, which also returns real 404s. Don't add an `index.html` at the root.
 
-## Going live on the real domain
-1. Link `floridainsuranceappraiser.com` to website `BHoKZ0Ik1` (hPanel or `agency-hosting_domains_change-website`) and point DNS.
-2. Canonicals, sitemap and schema already use `https://floridainsuranceappraiser.com`; `index.php` 301s `www.` and plain http to it.
-3. Create the mailbox `info@floridainsuranceappraiser.com`. The form (`/api/contact.php`) emails it with PHP `mail()` and
-   also appends each lead to `leads.log` one level above `public_html`, so nothing is lost before the mailbox exists.
-4. Submit `sitemap.xml` in Search Console.
+## Live
+
+Live at https://floridainsuranceappraiser.com (linked 2026-11-07; Hostinger preview domain
+lightgoldenrodyellow-hamster-331460.hostingersite.com). Google Tag Manager container `GTM-T37B9MBK` is in every
+page's `<head>` (plus the GTM `<noscript>` iframe after `<body>`).
+
+**Contact form.** `/api/contact.php` sends each lead to info@floridainsuranceappraiser.com over authenticated SMTP
+(smtp.hostinger.com:465, SSL) and falls back to PHP `mail()`. The SMTP credentials are in
+`public_html/_config/mail.php` on the server only: a PHP file that returns a config array and answers direct
+web requests with an empty 404. It is not in this repository and `deploy.sh` never touches it. If the mailbox
+password changes, edit that file in the Hostinger file manager. Every lead is also appended to
+`public_html/_config/leads.php` (guarded the same way) with a `delivery` field: `true` means the mail server
+accepted the message; otherwise it holds the SMTP error.
+
+**Known hosting limits.** The File Browser cannot write above `public_html`, and the platform ignores `.htaccess`,
+so plain `http://` interior pages are served directly. Canonical tags point to https, and a one-line script in
+`<head>` moves http visitors to https. `www.` resolves but the platform certificate covers only the apex
+domain, so https://www. shows a certificate error until a certificate covering www is issued.
 
 ## Photos
 
