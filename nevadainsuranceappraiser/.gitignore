@@ -1,0 +1,4 @@
+__pycache__/
+_private/
+*.log
+node_modules/
