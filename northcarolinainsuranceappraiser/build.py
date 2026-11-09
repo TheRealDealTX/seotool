@@ -34,7 +34,14 @@ TODAY = date.today().isoformat()
 VER = "20261109c"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-P5FTXTSW"
+# Head snippet exactly as supplied by the site owner (output verbatim right after <meta charset>).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-P5FTXTSW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/claim-appraisal/"
 LOC_BASE = "/areas-we-serve/"
@@ -268,9 +275,7 @@ def _groups():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():
@@ -373,7 +378,7 @@ def document(path, title, desc, body, schema=None, og_type="website", noindex=Fa
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/assets/css/style.css?v={VER}">
-<script>document.documentElement.classList.replace("no-js","js")</script>
+<script>(function(l,h){{if(l.hostname==="www."+h||(l.hostname===h&&l.protocol==="http:"))l.replace("https://"+h+l.pathname+l.search+l.hash)}})(location,"{HOST}");document.documentElement.classList.replace("no-js","js")</script>
 <script type="application/ld+json">{ld}</script>
 </head>
 <body{' class="hero-dark"' if hero_dark else ""}>
@@ -867,7 +872,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and evaluate your claim.</li><li>To provide services you ask for.</li><li>To keep the site secure and working.</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with providers that host our site and email, or when the law requires it.</p>
 <h2>Calculators</h2><p>Our calculators and checklists run in your browser. The figures you enter aren’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add analytics through Google Tag Manager, this policy will be updated to say so.</p>
+<h2>Cookies and analytics</h2><p>We use Google Tag Manager and Google Analytics to understand how visitors use the site, such as which pages are viewed and how people arrive. These tools may set cookies and collect device and usage data, which Google processes under its own privacy policy. You can block these cookies in your browser settings or with Google’s opt-out browser add-on. We don’t use the figures you type into our calculators for analytics, and we don’t sell visitor data. Fonts load from Google Fonts, which may log standard request data.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out at any time.</p>
 <h2>Your choices</h2><p>To see, correct or delete information you’ve given us, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""", "How we collect, use and protect the information you share with us."),

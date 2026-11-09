@@ -9,11 +9,11 @@ are new and differ from every sister site (Alabama, Florida, Georgia).
 | | |
 | --- | --- |
 | Hostinger website UID | `45jUap7vr` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter) |
-| Temporary URL | https://antiquewhite-ibis-687336.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://northcarolinainsuranceappraiser.com (not connected yet) |
+| Live domain | https://northcarolinainsuranceappraiser.com (primary, SSL active until 2027-02-07; www and http 301 to it) |
+| Preview URL | https://blanchedalmond-elephant-870705.hostingersite.com (originally antiquewhite-ibis-687336; preview hosts send `X-Robots-Tag: noindex`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@northcarolinainsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Off. Set `GTM_ID` in `build.py` to turn it on |
+| Email / form inbox | info@northcarolinainsuranceappraiser.com (form delivers over SMTP) |
+| Google Tag Manager | `GTM-P5FTXTSW`: the owner's head snippet verbatim (`GTM_SNIPPET`) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -126,6 +126,9 @@ were any already used on the Georgia site. Each is served as ≤1200px and 640px
   than the real domain, and 301-redirects `www.` and plain http to `https://northcarolinainsuranceappraiser.com`
   (only on the real domain).
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
+- The host serves real files directly, so `index.php` can only redirect `/` and unknown paths. For interior pages
+  requested on `www.` or plain `http://`, a one-line script at the top of `<head>` calls `location.replace()` to
+  the `https://` apex (it does nothing on any other host). Canonical tags also point to the apex.
 
 ## Contact form delivery
 
@@ -147,11 +150,10 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled TEST, and
 check that the log line shows `"via":"smtp"`.
 
-## Going live checklist
+## Going live checklist (done 2026-11-09)
 
-1. Connect the domain to website `45jUap7vr` and wait for SSL to become active.
-2. Check that `www.` and `http://` 301 to `https://northcarolinainsuranceappraiser.com` and that the real domain
-   sends no `X-Robots-Tag: noindex`.
-3. Create the mailbox, then wire up SMTP (above). If you have a GTM container, set `GTM_ID`.
-4. `python3 build.py && python3 validate.py`, redeploy, then clear the cache.
+1. ~~Domain connected to `45jUap7vr`, SSL active~~.
+2. ~~`www.` and `http://` redirect to the https apex, and the real domain sends no noindex~~.
+3. ~~GTM `GTM-P5FTXTSW` added. SMTP config uploaded: config URL returns 404 with 0 bytes, and the TEST lead was logged with `"via":"smtp"`~~.
+4. ~~`validate.py` passes with 0 errors, the site is redeployed and the cache cleared~~.
 5. Submit `https://northcarolinainsuranceappraiser.com/sitemap.xml` in Google Search Console.
