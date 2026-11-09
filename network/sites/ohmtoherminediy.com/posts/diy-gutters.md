@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /blog/diy-gutters/
 category: Home Improvement
 network_link_out: none (week 1)
+image: /assets/img/plants-shelf.webp
 published: true
 ---
 DIY gutters come up every fall, usually right after the first big rain shows you where the old ones stopped working. The question I get from friends is always the same: can a regular person install gutters, or is this a hire-it-out job? The honest answer is that it depends on your house, your ladder comfort and whether you can make a straight line slope very slightly for forty feet. I will walk through all of it, including the parts I would not do myself.

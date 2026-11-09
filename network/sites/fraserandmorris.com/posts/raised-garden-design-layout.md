@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /blog/raised-garden-design-layout.html
 category: Design
 network_link_out: none (week 1)
+image: /assets/img/dahlias.webp
 published: true
 ---
 A raised garden design layout is, more than anything, a decision about proportion. Raised beds are often sold as a solution to poor soil or tired knees, and they are both of those things, but in a small London garden their real gift is structure. A well-placed raised bed draws a line in a space that otherwise has none, and once there is a line there is a room. This article is about where to draw it.

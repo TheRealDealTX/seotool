@@ -8,6 +8,7 @@ date: 2026-11-09
 path: /blue-horizontal-line-on-tv-screen/
 category: Guides
 network_link_out: none (week 2)
+image: /assets/img/living-room-led-tv.webp
 published: true
 ---
 A blue horizontal line on a TV screen is one of the most common complaints we get at the service centre, and one of the most misunderstood. Customers arrive having tried every picture setting, a factory reset, three HDMI cables and a software update, because that is what the first page of search results tells them to do. None of it helps, because a line that stays in the same place through every input and every menu is not a signal problem. It is a hardware fault, and in nine cases out of ten it is one of two parts. This guide explains how to tell which one, what each costs to repair in Kolkata, and when the honest answer is not to repair.

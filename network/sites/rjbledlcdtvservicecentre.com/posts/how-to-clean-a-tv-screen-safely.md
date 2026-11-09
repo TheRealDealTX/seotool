@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /how-to-clean-a-tv-screen-safely/
 category: Guides
 network_link_out: none (week 1)
+image: /assets/img/tv-remote.webp
 published: true
 ---
 Knowing how to clean a TV screen safely is worth more than it sounds. In our workshop we see panels every month with permanent streaks, cloudy patches and scratched anti-glare coatings, and the cause is almost always a cleaning product, not a fault in the set. The panel coating on a modern TV is thin and chemically sensitive, and once it is damaged there is no repair except a new panel, which on most sets costs more than the TV. So this guide is short and strict, and it applies to every brand we service, from Samsung and Sony to LG and Videocon.

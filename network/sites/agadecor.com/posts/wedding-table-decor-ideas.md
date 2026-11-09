@@ -8,6 +8,7 @@ date: 2026-11-11
 path: /blog/wedding-table-decor-ideas/
 category: Planning
 network_link_out: none (week 2; calendar assigns comeicavoliamerenda.com, to be added from week 5)
+image: /assets/img/tablescape-gold.webp
 published: true
 ---
 Wedding table decor ideas usually arrive as a mood board: a tall arrangement here, a runner of greenery there, a forest of candles. What the board never shows is the table underneath, and the table decides almost everything. A centerpiece that looks generous on a 60-inch round disappears on a 10-foot banquet. A candle count that feels romantic on a long table becomes a hazard on a round where guests reach across. We design tablescapes for Chicago and North Shore weddings every weekend, and the first question we ask a couple is not "what flowers do you like" but "what shape are your tables."

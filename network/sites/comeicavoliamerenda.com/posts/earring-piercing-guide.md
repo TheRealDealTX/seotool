@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /earring-piercing-guide/
 category: Guides
 network_link_out: none (week 1)
+image: /assets/img/diamond-studs.webp
 published: true
 ---
 This earring piercing guide covers every standard placement on the ear, in the order most people get them, with the measurements and healing times that matter when you are choosing jewelry. The numbers below are typical ranges from professional piercers, not promises; healing depends on the placement, the jewelry, the aftercare and the person. Where a placement has a sizing quirk we have linked to the detailed page for it.

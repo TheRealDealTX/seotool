@@ -8,6 +8,7 @@ date: 2026-11-13
 path: /blog/trellis-design-for-garden.html
 category: Design
 network_link_out: none (week 2)
+image: /assets/img/courtyard-fountain.webp
 published: true
 ---
 Trellis design for a garden is usually treated as an afterthought: a panel bought on a Saturday, screwed to a fence on Sunday, and resented by the following spring when the clematis has pulled it off the post. We think it deserves the same attention as a path or a bed edge, because in a London garden trellis is often the largest vertical element you will add. It decides where the eye stops, how much sky you borrow, and whether the planting has a frame to grow into or a fence to fall off. This is how we approach it, from the first question (what is the trellis for) to the last (what will climb it).

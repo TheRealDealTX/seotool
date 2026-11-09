@@ -8,6 +8,7 @@ date: 2026-11-15
 path: /blog/wedding-photo-styles/
 category: Guides
 network_link_out: none (week 2; calendar assigns asmith.photography, to be added from week 5)
+image: /assets/img/bw-kiss.webp
 published: true
 ---
 Wedding photo styles are the first thing every photographer's website promises and the last thing most couples can actually define. "Documentary with an editorial edge, light and airy, timeless." Three styles in one sentence, some of them contradictory. This guide takes the five labels you will see most often, explains what each one means in practice, what it asks of your timeline and your guests, and, most usefully, how to look at a portfolio and tell which style a photographer really shoots regardless of what the homepage says.

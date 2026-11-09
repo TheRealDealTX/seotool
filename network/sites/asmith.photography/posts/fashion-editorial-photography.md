@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /fashion-editorial-photography/
 category: Editorial
 network_link_out: none (week 1)
+image: /assets/img/bello-magazine-december-cover-story.webp
 published: true
 ---
 Fashion editorial photography is the part of the business that people picture when they hear the word photographer, and it is also the part that is least like the picture. A twelve-page story in a magazine is roughly two weeks of production and one day of shooting. This is a walk through those two weeks, written from the production side, because the production is where editorials are won.

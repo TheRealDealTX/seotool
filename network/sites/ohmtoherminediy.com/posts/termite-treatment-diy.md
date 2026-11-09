@@ -8,6 +8,7 @@ date: 2026-11-12
 path: /blog/termite-treatment-diy/
 category: Home Improvement
 network_link_out: none (week 2)
+image: /assets/img/dining-farmhouse.webp
 published: true
 ---
 Termite treatment DIY is one of those searches you make at 11 p.m. after finding something you wish you had not. For us it was a line of dried mud, about the width of a pencil, running up the wall behind the laundry room baseboard. If you are here for the same reason, take a breath. Termites are slow. You have weeks, not hours, to figure out what you are dealing with and whether this is a job for you or for someone with a license and a truck. This post walks through both, honestly, including the part where we decided which half to do ourselves.

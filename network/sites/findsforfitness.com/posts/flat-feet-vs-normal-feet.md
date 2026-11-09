@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /flat-feet-vs-normal-feet/
 category: Workouts
 network_link_out: none (week 1)
+image: /assets/img/runners-at-sunrise.webp
 published: true
 ---
 Flat feet vs normal feet is one of those comparisons where the internet is sure flat is bad and the evidence is much calmer. A large share of healthy adults have low arches, most of them have no pain, and the ones who do usually have a fixable reason. This guide covers how to tell what kind of feet you have, what the difference actually changes in your body and your shoes, and the point at which flat feet stop being a shape and start being a problem.

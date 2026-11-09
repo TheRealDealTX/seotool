@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /blog/engagement-photo-poses/
 category: Guides
 network_link_out: none (week 1)
+image: /assets/img/lake-couple.webp
 published: true
 ---
 Engagement photo poses are the thing couples worry about most before a session and think about least during it, which is exactly how it should go. The job of a pose is to give two people something to do with their hands and their attention so the camera can catch what is already between them. So this list is sorted not by style but by comfort, because a couple who has never been photographed needs different prompts from a couple who met on a dance floor.

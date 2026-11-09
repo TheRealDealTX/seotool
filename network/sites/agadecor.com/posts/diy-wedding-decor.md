@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /blog/diy-wedding-decor/
 category: Planning
 network_link_out: none (week 1)
+image: /assets/img/hero-aisle.webp
 published: true
 ---
 DIY wedding decor is not a budget category so much as a decision about where your time goes in the three months before the wedding. We design and install decor for weddings across Chicago and the North Shore, and we see DIY work every weekend, some of it wonderful. The couples who are happiest with it made a clear split early: a short list of things they would make themselves, and everything else rented or hired. This is the split we recommend, with the reasons.

@@ -8,6 +8,7 @@ date: 2026-11-10
 path: /2026/11/10/home-renovation-cost/
 category: Random Thoughts
 network_link_out: none (week 2; calendar assigns templeroofs.com, to be added from week 7)
+image: /assets/img/tool-wall.webp
 published: true
 ---
 Home renovation cost is the number everyone wants before they start and nobody trusts after they finish. Ours came in at roughly double the first guess for the kitchen, about right for the bathroom, and embarrassingly over on the hallway, which was supposed to be the cheap one. This is the room-by-room version I wish someone had handed us in 2013: what each space tends to cost in 2026, which line items blow up, and where a split-level specifically bites you.

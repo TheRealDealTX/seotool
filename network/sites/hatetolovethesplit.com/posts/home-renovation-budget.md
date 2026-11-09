@@ -8,6 +8,7 @@ date: 2026-10-26
 path: /2026/10/26/home-renovation-budget/
 category: Random Thoughts
 network_link_out: none (week 1)
+image: /assets/img/paint-roller.webp
 published: true
 ---
 A home renovation budget is the one document that decides whether a split-level makeover ends with a finished kitchen or with a half-painted hallway and a drawer full of receipts you stopped adding up. I have made every version of that mistake, so this is the budget method I use now, with example numbers scaled for a 1970s Minneapolis split-level like this one.

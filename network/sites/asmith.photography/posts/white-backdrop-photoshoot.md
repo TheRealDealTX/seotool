@@ -8,6 +8,7 @@ date: 2026-11-14
 path: /white-backdrop-photoshoot/
 category: Editorial
 network_link_out: none (week 2)
+image: /assets/img/people.webp
 published: true
 ---
 A white backdrop photoshoot sounds like the easiest setup in photography. Hang white paper, point lights at it, shoot. Then the files come back and the background is a dull gray, or it is white but the subject's edges have gone soft and milky, or there is a gradient that no retoucher wants to deal with across 400 frames. Every one of those problems is a ratio problem, and the ratio is measurable before the first frame. This is the method we use for seamless white on footwear, lookbook and editorial jobs in Los Angeles, with the meter numbers, the distances, and the places it goes wrong.

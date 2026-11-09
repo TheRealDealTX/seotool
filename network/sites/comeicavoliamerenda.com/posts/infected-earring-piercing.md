@@ -8,6 +8,7 @@ date: 2026-11-10
 path: /infected-earring-piercing/
 category: Guides
 network_link_out: none (week 2)
+image: /assets/img/ear-stack.webp
 published: true
 ---
 What to do when an earring is infected depends on one question most guides skip: is it actually infected, or is it irritated? The two look alike in the first day, they are treated differently, and getting it wrong in either direction causes problems. Treat an irritation like an infection and you may remove the earring, close the hole and have to start over. Treat an infection like an irritation and it can spread, especially in cartilage. This guide gives you the test for which one you have, the routine that resolves most cases in a week, the things people put on piercings that make them worse, and the short list of signs that mean a doctor today, not tomorrow.
