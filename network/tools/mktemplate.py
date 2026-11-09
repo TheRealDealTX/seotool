@@ -177,7 +177,7 @@ def make(d):
         s = sub1(s, r'<figure class="post-cover"><img src="[^"]*" srcset="[^"]*"[^>]*alt="[^"]*"[^>]*>(<figcaption>.*?</figcaption>)?</figure>', '<figure class="post-cover"><img src="{{image}}" srcset="{{image_sm}} 720w, {{image}} 1600w" sizes="(max-width: 900px) 100vw, 760px" width="1600" height="1067" alt="{{title}}" loading="eager" decoding="async"></figure>')
         s = inner(s, r'<div class="prose">', 'div', '\n{{content}}\n')
         s = remove(s, r'<section class="faq"', must=False)
-        s = s.replace('<p class="post-lede">{{description}}</p>', '<p class="post-lede">{{description}}</p>')  # already parameterized by head_params
+        s = sub1(s, r'<p class="post-lede">.*?</p>', '<p class="post-lede">{{description}}</p>')
     # hero image of the source page -> {{image}} everywhere (preload, og/twitter image, ImageObject)
     src = open(path, encoding='utf-8').read()
     main = src[src.find('<main'):]
