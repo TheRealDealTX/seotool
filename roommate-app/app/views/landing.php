@@ -1,11 +1,11 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-copy">
-      <span class="pill"><?= icon('sparkle') ?> Free for renters</span>
+      <span class="pill">Free roommate finder in Texas</span>
       <h1>Find a roommate who wants <em>the same apartment</em> you do.</h1>
       <p class="lead">Pick the properties you love, and we'll match you with renters interested in the same place — scored on budget, move-in date and lifestyle. Then add them as friends and start chatting.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary btn-lg" href="/register">Create your free profile</a>
+        <a class="btn btn-gold btn-lg" href="/register">Create your free profile</a>
         <a class="btn btn-ghost btn-lg" href="/login">I already have an account</a>
       </div>
       <div class="hero-stats">

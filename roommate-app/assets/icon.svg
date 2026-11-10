@@ -1,1 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#f43f5e"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#g)"/><path d="M14 32 32 17l18 15" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="38" r="5" fill="#fff"/><circle cx="39" cy="38" r="5" fill="#fff"/><path d="M17 51c1-5 4.5-7.5 8-7.5s7 2.5 8 7.5M31 51c1-5 4.5-7.5 8-7.5s7 2.5 8 7.5" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f3c04f"/>
+      <stop offset=".35" stop-color="#e8743b"/>
+      <stop offset=".65" stop-color="#c2367a"/>
+      <stop offset="1" stop-color="#4b3fd8"/>
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#fff"/>
+  <circle cx="32" cy="32" r="28.5" fill="none" stroke="url(#ring)" stroke-width="3"/>
+  <!-- magnifier handle -->
+  <path d="M40.5 40.5 L50 50" stroke="#9aa3ab" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M40.5 40.5 L50 50" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- lens -->
+  <circle cx="29" cy="29" r="15" fill="#fff" stroke="url(#ring)" stroke-width="2.6"/>
+  <!-- home -->
+  <path d="M20.5 31 L29 23.5 L37.5 31" fill="none" stroke="#1d4463" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23 29.5 V37 H35 V29.5" fill="none" stroke="#1d4463" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- two roommate pins -->
+  <g transform="translate(26.4 36) scale(.62)"><path d="M0 0 c-2.6-2.8-4-4.7-4-6.4 a4 4 0 0 1 8 0 c0 1.7-1.4 3.6-4 6.4z" fill="#e8743b"/><circle cx="0" cy="-6.4" r="1.5" fill="#fff"/></g>
+  <g transform="translate(31.6 36) scale(.62)"><path d="M0 0 c-2.6-2.8-4-4.7-4-6.4 a4 4 0 0 1 8 0 c0 1.7-1.4 3.6-4 6.4z" fill="#4b3fd8"/><circle cx="0" cy="-6.4" r="1.5" fill="#fff"/></g>
+</svg>

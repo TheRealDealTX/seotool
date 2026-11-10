@@ -13,12 +13,10 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title><?= e(isset($title) ? $title . ' · ' . $site : $site . ' — ' . setting('tagline', '')) ?></title>
 <meta name="description" content="<?= e($description ?? 'Find a compatible roommate at the apartment you love. Match with renters interested in the same property, add friends and message them.') ?>">
-<meta name="theme-color" content="#4338ca">
+<meta name="theme-color" content="#1d4463">
 <meta name="csrf" content="<?= e(csrf_token()) ?>">
-<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/icon.svg?v=<?= @filemtime(APP_ROOT . '/assets/icon.svg') ?>" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon-192.png?v=<?= @filemtime(APP_ROOT . '/assets/icon-192.png') ?>">
 <link rel="stylesheet" href="/assets/app.css?v=<?= @filemtime(APP_ROOT . '/assets/app.css') ?>">
 <?php if (!empty($noindex) || $me): ?><meta name="robots" content="noindex"><?php endif; ?>
 </head>
@@ -26,7 +24,7 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
 <header class="topbar">
   <div class="topbar-inner">
     <a class="brand" href="<?= $me ? '/home' : '/' ?>">
-      <img src="/assets/icon.svg" alt="" width="30" height="30"><span><?= e($site) ?></span>
+      <img src="/assets/icon.svg?v=<?= @filemtime(APP_ROOT . '/assets/icon.svg') ?>" alt="" width="40" height="40"><span class="brand-text"><span><?= e($site) ?></span><small>by Rise Apartments</small></span>
     </a>
     <?php if ($me): ?>
     <nav class="mainnav" aria-label="Main">

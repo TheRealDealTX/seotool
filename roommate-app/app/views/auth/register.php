@@ -16,7 +16,7 @@
       <label class="choice"><input type="radio" name="looking_for" value="have_place"><span>Fill a room I have</span></label>
       <label class="choice"><input type="radio" name="looking_for" value="either"><span>Team up &amp; find one together</span></label>
     </fieldset>
-    <label class="check"><input type="checkbox" name="agree" value="1" required> I agree to the <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>, and I'm 18 or older.</label><?= $err('agree') ?>
+    <label class="check check-agree"><input type="checkbox" name="agree" value="1" required><span>I agree to the <a href="/terms" target="_blank">Terms</a> and <a href="/privacy" target="_blank">Privacy Policy</a>, and I'm 18 or older.</span></label><?= $err('agree') ?>
     <button class="btn btn-primary btn-block" type="submit">Create account</button>
   </form>
   <p class="auth-alt">Already a member? <a href="/login">Log in</a></p>

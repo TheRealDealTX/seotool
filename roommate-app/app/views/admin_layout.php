@@ -12,14 +12,13 @@ $pendingProps = (int)val("SELECT COUNT(*) FROM properties WHERE status = 'pendin
 <title><?= e(($title ?? 'Admin') . ' · ' . setting('site_name') . ' Admin') ?></title>
 <meta name="robots" content="noindex">
 <meta name="csrf" content="<?= e(csrf_token()) ?>">
-<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/icon.svg?v=<?= @filemtime(APP_ROOT . '/assets/icon.svg') ?>" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/app.css?v=<?= @filemtime(APP_ROOT . '/assets/app.css') ?>">
 </head>
 <body class="admin">
 <div class="admin-shell">
   <aside class="admin-nav">
-    <a class="brand" href="/admin"><img src="/assets/icon.svg" alt="" width="28" height="28"><span>Admin</span></a>
+    <a class="brand" href="/admin"><img src="/assets/icon.svg?v=<?= @filemtime(APP_ROOT . '/assets/icon.svg') ?>" alt="" width="28" height="28"><span>Admin</span></a>
     <nav>
       <a href="/admin"<?= $on('/admin', true) ?>><?= icon('chart') ?> Dashboard</a>
       <a href="/admin/users"<?= $on('/admin/users') ?>><?= icon('users') ?> Members</a>
