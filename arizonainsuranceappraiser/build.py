@@ -36,7 +36,14 @@ VER = "20261109a"   # bump when CSS/JS change
 FAV = "1"           # bump when icons change
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-KFJD7RGX"
+# Head snippet exactly as supplied by the owner. If empty, the standard GTM loader for GTM_ID is used.
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KFJD7RGX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/appraisal/"
 LOC_BASE = "/cities/"
@@ -290,6 +297,8 @@ def _groups():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_HEAD_SNIPPET:
+        return f"<!-- Google Tag Manager -->\n{GTM_HEAD_SNIPPET}\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
             "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
             f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
@@ -368,6 +377,7 @@ def document(path, title, desc, body, schema=None, og_type="website", noindex=Fa
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>(function(l){{var a="{HOST}";if(l.hostname==="www."+a||(l.hostname===a&&l.protocol==="http:"))l.replace("https://"+a+l.pathname+l.search+l.hash)}})(location)</script>
 {gtm_head()}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">

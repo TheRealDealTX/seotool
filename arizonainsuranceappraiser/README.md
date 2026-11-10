@@ -10,11 +10,11 @@ and differ from every sister site (Alabama, Florida, Georgia, North Carolina).
 | | |
 | --- | --- |
 | Hostinger website UID | `M07QR10Uv` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Temporary URL | https://darkslateblue-sparrow-415541.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://arizonainsuranceappraiser.com (not connected yet) |
+| Live domain | https://arizonainsuranceappraiser.com (SSL; www and http redirect to it) |
+| Preview URL | https://deepskyblue-beaver-435823.hostingersite.com (sends `X-Robots-Tag: noindex`; first temporary URL was darkslateblue-sparrow-415541) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@arizonainsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Off. Set `GTM_ID` in `build.py` to turn it on |
+| Email / form inbox | info@arizonainsuranceappraiser.com (form delivers over SMTP, verified) |
+| Google Tag Manager | `GTM-KFJD7RGX`: the owner's head snippet verbatim (`GTM_HEAD_SNIPPET`) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -132,7 +132,9 @@ alt text that doesn't claim a specific city. Re-run `python3 tools/photos.py` af
   (301), returns `404.html` with a real 404, and sends `X-Robots-Tag: noindex` on any host
   other than the real domain. Don't add a root `index.html`.
 - On the real domain only, `index.php` 301-redirects `www.` and plain http (via
-  `X-Forwarded-Proto`) to `https://arizonainsuranceappraiser.com`.
+  `X-Forwarded-Proto`) to `https://arizonainsuranceappraiser.com`. Existing files (interior
+  pages) are served by the host without `index.php`, so a one-line script at the top of every
+  `<head>` sends www/http visitors on the real domain to https; canonicals already point there.
 - On `*.hostingersite.com` preview domains Hostinger serves its own `robots.txt` (blocking
   Googlebot). Ours is served once the domain is connected.
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy
@@ -161,11 +163,12 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 Then: confirm the config URL returns 404 with 0 bytes, send one submission labelled as a test,
 and confirm the log line shows `"via":"smtp"`.
 
-## When the domain is connected
+## Go-live status (2026-11-10)
 
-1. Confirm the domain is on website `M07QR10Uv` and SSL is active.
-2. Check that `www.` and `http://` 301 to `https://arizonainsuranceappraiser.com` and that the
-   real domain sends no `X-Robots-Tag: noindex`.
-3. Add the GTM container (set `GTM_ID`) and wire SMTP (above).
-4. Re-run `validate.py`, redeploy and clear the cache.
-5. Submit `https://arizonainsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. Domain connected to `M07QR10Uv`; SSL active (apex certificate plus a wildcard covering www).
+2. `/` on www and http returns 301 to `https://arizonainsuranceappraiser.com/`; interior
+   pages redirect in the browser. The real domain sends no noindex header and serves our robots.txt.
+3. GTM `GTM-KFJD7RGX` is on every page. SMTP config uploaded: the config and log URLs return
+   404 with 0 bytes, and one labelled test submission logged `"via":"smtp"`.
+4. `validate.py` passes with zero errors; redeployed and cache cleared.
+5. Still to do by the owner: submit `https://arizonainsuranceappraiser.com/sitemap.xml` to Google Search Console.
