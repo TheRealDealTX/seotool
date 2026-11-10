@@ -9,11 +9,11 @@ pipelines from the sister builds. The copy, URL slugs, palette, fonts and layout
 | | |
 | --- | --- |
 | Hostinger website UID | `0rnHX7sNJ` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
+| Live domain | https://montanainsuranceappraiser.com (connected 2026-11-10; Let’s Encrypt SSL active, expires 2027-02-07) |
 | Temporary URL | https://slateblue-spoonbill-201486.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://montanainsuranceappraiser.com (not connected yet) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@montanainsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Off. Set `GTM_ID` in `build.py` to turn it on |
+| Email / form inbox | info@montanainsuranceappraiser.com (form delivers over SMTP, verified 2026-11-10) |
+| Google Tag Manager | `GTM-5SLMKHWL`: the owner’s head snippet, used verbatim (`GTM_HEAD_SNIPPET` in `build.py`), plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -122,7 +122,10 @@ with its license and source on `/photo-credits/`. Re-run `python3 tools/photos.p
   real 404 status, sends `X-Robots-Tag: noindex` on any host other than the real domain, and 301-redirects `www.` and plain
   http to `https://montanainsuranceappraiser.com` (only on the real domain).
 - On the temporary `*.hostingersite.com` domain the platform serves its own `robots.txt` (blocking Googlebot). The site's
-  own `robots.txt` takes effect once the real domain is connected.
+  own `robots.txt` applies on the real domain.
+- Real files (like `/claim-services/index.html`) are served directly and never reach `index.php`, so the PHP redirect
+  can't catch `http://` or `www.` on interior pages. A one-line script at the top of `<head>` sends those visitors to
+  `https://montanainsuranceappraiser.com` with the same path; canonical tags already point there.
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
 
 ## Contact form delivery
@@ -132,8 +135,8 @@ with its license and source on `/photo-credits/`. Re-run `python3 tools/photos.p
 exists, falls back to PHP `mail()`, and always appends a JSON line to `api/_private/leads.log.php` (it starts with a
 404-and-exit PHP header, so it can't be read over the web).
 
-The password is **never committed** (`_private/` is in `.gitignore`). Once the mailbox exists, upload this file to
-`public_html/api/_private/config.php` with the File Browser API (it can't write outside `public_html`):
+The password is **never committed** (`_private/` is in `.gitignore`). It lives only on the server in
+`public_html/api/_private/config.php` (the File Browser API can't write outside `public_html`). To change it, re-upload:
 
 ```php
 <?php
@@ -143,13 +146,12 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 ```
 
 Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled TEST, and check that the log
-line shows `"via":"smtp"`.
+line shows `"via":"smtp"`. Done on 2026-11-10: config 404/0 bytes, test lead logged with `"via":"smtp"` and no error.
 
 ## Going live checklist
 
-1. Connect the domain to website `0rnHX7sNJ` and wait for SSL to become active.
-2. Check that `www.` and `http://` 301 to `https://montanainsuranceappraiser.com` and that the real domain sends no
-   `X-Robots-Tag: noindex`.
-3. Create the mailbox, then wire up SMTP (above). If you have a GTM container, set `GTM_ID`.
-4. `python3 build.py && python3 validate.py`, redeploy, then clear the cache.
+1. ~~Connect the domain to website `0rnHX7sNJ` and wait for SSL~~ (done 2026-11-10).
+2. ~~Check `www.`/`http://` redirects and that the real domain sends no `X-Robots-Tag: noindex`~~ (done).
+3. ~~Create the mailbox and wire up SMTP; add GTM~~ (done).
+4. ~~`python3 build.py && python3 validate.py`, redeploy, clear the cache~~ (done).
 5. Submit `https://montanainsuranceappraiser.com/sitemap.xml` in Google Search Console.

@@ -34,8 +34,15 @@ TODAY = date.today().isoformat()
 VER = "20261109a"   # bump when CSS/JS change
 FAV = "1"           # bump when icons change
 HOURS = "Mon–Fri, 8am–6pm MT"
-# Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+# Google Tag Manager container ID. Empty = no GTM output at all.
+GTM_ID = "GTM-5SLMKHWL"
+# Head snippet exactly as supplied by the site owner (2026-11-10). Leave empty to use the standard GTM loader.
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-5SLMKHWL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/claim-services/"
 LOC_BASE = "/montana-cities/"
@@ -273,6 +280,8 @@ def _groups():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_HEAD_SNIPPET:
+        return "<!-- Google Tag Manager -->\n" + GTM_HEAD_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
             "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
             f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
@@ -347,6 +356,7 @@ def document(path, title, desc, body, schema=None, og_type="website", noindex=Fa
 <head>
 <meta charset="utf-8">
 {gtm_head()}<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(l,h){{if(l.hostname==="www."+h||(l.hostname===h&&l.protocol==="http:"))l.replace("https://"+h+l.pathname+l.search+l.hash)}})(location,"{HOST}")</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="{robots}">
@@ -871,7 +881,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and evaluate your claim.</li><li>To provide services you ask for.</li><li>To keep the site secure and working.</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with providers that host our site and email, or when the law requires it.</p>
 <h2>Claim tools</h2><p>Our calculators and checklists run in your browser. The figures you enter aren’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add analytics through Google Tag Manager, this notice will be updated to say so.</p>
+<h2>Cookies and analytics</h2><p>We use Google Tag Manager, which can load Google analytics tools that set cookies and collect standard usage data, such as pages visited, device and approximate location, under Google’s privacy policy. We don’t use this data to sell anything about you. Fonts load from Google Fonts, which may log standard request data. You can block or delete cookies in your browser settings.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out at any time.</p>
 <h2>Your choices</h2><p>To see, correct or delete information you’ve given us, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""", "How we collect, use and protect the information you share with us."),
