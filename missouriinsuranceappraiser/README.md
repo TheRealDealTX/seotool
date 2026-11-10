@@ -13,7 +13,7 @@ layout are new and differ from every sister site on the account (Alabama, Florid
 | Final domain | https://missouriinsuranceappraiser.com (not connected yet) |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@missouriinsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Off. Set `GTM_ID` in `build.py` to turn it on |
+| Google Tag Manager | `GTM-NJRMLFJ2` (owner-supplied snippet in `<head>` + noscript iframe after `<body>`) |
 
 ## Layout
 

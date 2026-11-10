@@ -35,7 +35,7 @@ TODAY = date.today().isoformat()
 VER = "20261109a"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-NJRMLFJ2"
 
 SVC_BASE = "/appraisal-help/"
 LOC_BASE = "/communities/"
@@ -287,9 +287,9 @@ def _groups():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    # Container snippet exactly as supplied by the site owner.
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            "<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n</script>\n")
 
 
 def gtm_body():
@@ -360,6 +360,7 @@ def document(path, title, desc, body, schema=None, og_type="website", noindex=Fa
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>(function(l,h){{if(l.hostname==="www."+h||(l.hostname===h&&l.protocol==="http:"))l.replace("https://"+h+l.pathname+l.search+l.hash)}})(location,"{HOST}")</script>
 {gtm_head()}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -902,7 +903,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and evaluate your claim.</li><li>To provide services you request.</li><li>To keep the site secure and working.</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with the providers that host our site and email, or when the law requires it.</p>
 <h2>Tools</h2><p>Our calculators, planners and checklists run in your browser. The figures you enter aren’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add analytics through Google Tag Manager, this notice will be updated to say so.</p>
+<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. We use Google Tag Manager to load site measurement tools, which may set cookies and collect standard usage data (pages viewed, device and browser type) under Google’s privacy policy. Fonts load from Google Fonts, which may log standard request data. You can block these with your browser’s privacy settings.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out at any time.</p>
 <h2>Your choices</h2><p>To see, correct or delete information you’ve given us, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""", "How we collect, use and protect the information you share with us."),
