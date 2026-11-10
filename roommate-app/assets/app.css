@@ -248,8 +248,9 @@ input[type=range] { width: 100%; accent-color: var(--primary); }
 .count.hot { background: var(--accent); color: #fff; }
 
 /* ---------- Tabs ---------- */
-.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin-bottom: 16px; overflow-x: auto; }
-.tabs a { padding: 10px 14px; color: var(--muted); font-weight: 600; border-bottom: 2px solid transparent; margin-bottom: -1px; white-space: nowrap; text-decoration: none; }
+.tabs { display: flex; gap: 4px; box-shadow: inset 0 -1px 0 var(--line); margin-bottom: 16px; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs a { padding: 10px 14px; color: var(--muted); font-weight: 600; border-bottom: 2px solid transparent; white-space: nowrap; text-decoration: none; flex: none; }
 .tabs a:hover { color: var(--text); }
 .tabs a.active { color: var(--primary); border-bottom-color: var(--gold); }
 
@@ -816,3 +817,8 @@ select, textarea, .select-sm, .input-sm, .composer textarea, .comment-form input
   .people-list.big .pl-actions .btn, .people-list.big .pl-actions form { flex: 1; }
   .people-list.big .pl-actions form .btn { width: 100%; }
 }
+
+/* Lists rendered as cards keep the card's inner padding */
+.card.people-list { padding: 6px 20px; }
+.card.notif-list { padding: 6px; }
+@media (max-width: 720px) { .card.people-list { padding: 4px 16px; } }
