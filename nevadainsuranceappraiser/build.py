@@ -35,7 +35,14 @@ TODAY = date.today().isoformat()
 VER = "20261109a"   # bump when CSS/JS change
 FAV = "1"           # bump when icons change
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM output.
-GTM_ID = ""
+GTM_ID = "GTM-PDTLXWJ8"
+# Head snippet exactly as supplied by the site owner (do not reformat).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PDTLXWJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/appraisal/"
 LOC_BASE = "/cities/"
@@ -310,9 +317,7 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():
@@ -367,7 +372,7 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <head>
 <meta charset="utf-8">
 {gtm_head()}<meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.className="js";</script>
+<script>document.documentElement.className="js";(function(l){{if(l.hostname==="www.{HOST}"||(l.hostname==="{HOST}"&&l.protocol==="http:"))l.replace("https://{HOST}"+l.pathname+l.search+l.hash)}})(location);</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="{robots}">

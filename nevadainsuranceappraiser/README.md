@@ -9,11 +9,11 @@ and effects are new and differ from every sister site (Alabama, Florida, Georgia
 | | |
 | --- | --- |
 | Hostinger website UID | `pUs9TSRI1` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Temporary URL | https://aqua-alligator-772171.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://nevadainsuranceappraiser.com (not connected yet) |
+| Live domain | https://nevadainsuranceappraiser.com (SSL active; `www.` and http redirect to it) |
+| Preview domain | https://mintcream-cat-710250.hostingersite.com (sends `X-Robots-Tag: noindex`; the original temporary URL was aqua-alligator-772171.hostingersite.com) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@nevadainsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Off. Set `GTM_ID` in `build.py` to turn it on |
+| Email / form inbox | info@nevadainsuranceappraiser.com (form delivers over SMTP, verified) |
+| Google Tag Manager | `GTM-PDTLXWJ8`: the owner's head snippet verbatim (`GTM_SNIPPET` in `build.py`) + `<noscript>` iframe after `<body>` |
 
 ## Layout
 
@@ -129,6 +129,10 @@ Re-run `python3 tools/photos.py` after editing `src/photo_sources.json`.
 - On the temporary `*.hostingersite.com` domain the CDN serves its own `robots.txt` (blocking Googlebot);
   ours is served once the real domain is connected.
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
+- The host serves existing files directly, so `index.php` only redirects `/`, unknown paths and
+  no-trailing-slash URLs. Plain-http and `www.` requests for interior pages are answered by the host with
+  a 200, so every page carries a one-line script in `<head>` that moves those visitors to the https apex.
+  Canonical tags already point there.
 
 ## Contact form delivery
 
@@ -148,13 +152,13 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 ```
 
 Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled TEST, and check
-that the log line shows `"via":"smtp"`.
+that the log line shows `"via":"smtp"`. Done on 2026-11-10: config and log both return 404 with 0 bytes, and the
+TEST lead was logged with `"via":"smtp"`. If the mailbox password changes, re-upload that file.
 
 ## Going live checklist
 
-1. Connect the domain to website `pUs9TSRI1` and wait for SSL to become active.
-2. Check that `www.` and `http://` 301 to `https://nevadainsuranceappraiser.com` and that the real domain sends
-   no `X-Robots-Tag: noindex`.
-3. Create the mailbox, then wire up SMTP (above). If you have a GTM container, set `GTM_ID`.
-4. `python3 build.py && python3 validate.py`, redeploy, then clear the cache.
+1. ~~Connect the domain and wait for SSL~~ (done 2026-11-10).
+2. ~~Check `www.`/http redirects and that the real domain sends no noindex header~~ (done).
+3. ~~Wire up SMTP and add GTM~~ (done).
+4. ~~Rebuild, validate, redeploy, clear the cache~~ (done).
 5. Submit `https://nevadainsuranceappraiser.com/sitemap.xml` in Google Search Console.
