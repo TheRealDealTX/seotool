@@ -178,6 +178,7 @@ function feed_report(): void
     }
     if (!val('SELECT 1 FROM reports WHERE reporter_id = ? AND target_type = ? AND target_id = ? AND status = ?', [$me['id'], $type, $id, 'open'])) {
         q('INSERT INTO reports (reporter_id, target_type, target_id, reason) VALUES (?, ?, ?, ?)', [$me['id'], $type, $id, $reason]);
+        try { email_admins("New report: $type #$id", "@{$me['username']} reported a $type.\n\nReason: $reason\n\nReview: " . base_url() . '/admin/reports'); } catch (Throwable $e) {}
     }
     if (is_ajax()) json_out(['ok' => true, 'message' => 'Thanks — our team will review this.']);
     flash('success', 'Thanks — our team will review this.');

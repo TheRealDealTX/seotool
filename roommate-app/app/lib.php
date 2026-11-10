@@ -424,6 +424,20 @@ function notify(int $userId, string $type, ?int $actorId = null, ?int $entityId 
 {
     if ($userId === $actorId) return;
     q('INSERT INTO notifications (user_id, actor_id, type, entity_id) VALUES (?, ?, ?, ?)', [$userId, $actorId, $type, $entityId]);
+    $actor = $actorId ? one('SELECT name, username FROM users WHERE id = ?', [$actorId]) : null;
+    $who = $actor['name'] ?? 'Someone';
+    $b = base_url();
+    $mail = match ($type) {
+        'friend_request' => ["$who sent you a friend request", "$who wants to connect on " . setting('site_name') . ".\n\nSee their profile and respond: $b/friends?tab=requests"],
+        'friend_accept' => ["$who accepted your friend request", "You and $who are now friends.\n\nSay hi: $b/messages/" . ($actor['username'] ?? '')],
+        'message' => ["New message from $who", "$who sent you a message.\n\nRead and reply: $b/messages/" . ($actor['username'] ?? '')],
+        'comment' => ["$who commented on your post", "Read it: $b/post/" . (int)$entityId],
+        'property_approved' => ['Your property was approved', "A property you submitted is now live. Renters can pick it and find you.\n\n$b/properties"],
+        default => null,
+    };
+    if ($mail) {
+        try { email_member($userId, $mail[0], $mail[1]); } catch (Throwable $e) { /* email must never break the app */ }
+    }
 }
 
 function unread_counts(int $me): array
@@ -440,13 +454,83 @@ function audit(string $action, string $details = ''): void
     q('INSERT INTO audit_log (admin_id, action, details) VALUES (?, ?, ?)', [uid() ?: null, $action, mb_substr($details, 0, 1000)]);
 }
 
-function send_mail(string $to, string $subject, string $body): bool
+function send_mail(string $to, string $subject, string $body, ?string &$error = null): bool
 {
     global $CONFIG;
     $from = $CONFIG['mail_from'] ?? ('no-reply@' . ($_SERVER['HTTP_HOST'] ?? 'localhost'));
-    $headers = 'From: ' . setting('site_name', 'Rise Roommates') . ' <' . $from . ">\r\n"
-        . "Content-Type: text/plain; charset=UTF-8\r\n";
+    $fromName = setting('site_name', 'Rise Roommates');
+    $footer = "\n\n—\n" . $fromName . ' · ' . base_url() . "\nManage email notifications: " . base_url() . '/settings';
+    $body .= $footer;
+    if (!empty($CONFIG['smtp_host'])) {
+        return smtp_send($to, $subject, $body, $from, $fromName, $error);
+    }
+    $headers = 'From: ' . $fromName . ' <' . $from . ">\r\nContent-Type: text/plain; charset=UTF-8\r\n";
     return @mail($to, $subject, $body, $headers);
+}
+
+/** Minimal SMTP client (implicit TLS on 465 or STARTTLS on 587) with AUTH LOGIN. */
+function smtp_send(string $to, string $subject, string $body, string $from, string $fromName, ?string &$error = null): bool
+{
+    global $CONFIG;
+    $host = $CONFIG['smtp_host'];
+    $port = (int)($CONFIG['smtp_port'] ?? 465);
+    $remote = ($port === 465 ? 'ssl://' : 'tcp://') . $host . ':' . $port;
+    $fp = @stream_socket_client($remote, $errno, $errstr, 15, STREAM_CLIENT_CONNECT,
+        stream_context_create(['ssl' => ['verify_peer' => true, 'verify_peer_name' => true, 'peer_name' => $host]]));
+    if (!$fp) { $error = "connect: $errstr"; return false; }
+    stream_set_timeout($fp, 20);
+    $read = function () use ($fp) {
+        $data = '';
+        while (($line = fgets($fp, 1024)) !== false) { $data .= $line; if (isset($line[3]) && $line[3] === ' ') break; }
+        return $data;
+    };
+    $cmd = function (string $c, array $ok) use ($fp, $read, &$error) {
+        if ($c !== '') fwrite($fp, $c . "\r\n");
+        $r = $read();
+        if (!in_array((int)substr($r, 0, 3), $ok, true)) { $error = trim(preg_replace('/AUTH.*/', 'AUTH ...', $c)) . ' -> ' . trim($r); return false; }
+        return true;
+    };
+    $ehlo = 'EHLO ' . (parse_url(base_url(), PHP_URL_HOST) ?: 'localhost');
+    $ok = $cmd('', [220]) && $cmd($ehlo, [250]);
+    if ($ok && $port !== 465) {
+        $ok = $cmd('STARTTLS', [220]) && stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) && $cmd($ehlo, [250]);
+    }
+    $enc = fn($s) => '=?UTF-8?B?' . base64_encode($s) . '?=';
+    $msg = 'Date: ' . date('r') . "\r\n"
+        . 'From: ' . $enc($fromName) . " <$from>\r\n"
+        . "To: <$to>\r\n"
+        . 'Subject: ' . $enc($subject) . "\r\n"
+        . 'Message-ID: <' . bin2hex(random_bytes(12)) . '@' . (explode('@', $from)[1] ?? 'localhost') . ">\r\n"
+        . "MIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n"
+        . chunk_split(base64_encode($body)) . "\r\n.";
+    $ok = $ok
+        && $cmd('AUTH LOGIN', [334])
+        && $cmd(base64_encode($CONFIG['smtp_user']), [334])
+        && $cmd(base64_encode($CONFIG['smtp_pass']), [235])
+        && $cmd("MAIL FROM:<$from>", [250])
+        && $cmd("RCPT TO:<$to>", [250, 251])
+        && $cmd('DATA', [354])
+        && $cmd($msg, [250]);
+    @fwrite($fp, "QUIT\r\n");
+    fclose($fp);
+    return $ok;
+}
+
+/** Email a member about activity if they opted in and aren't active on the site right now. */
+function email_member(int $userId, string $subject, string $body): void
+{
+    $u = one("SELECT name, email, email_notifications, last_seen, is_demo FROM users WHERE id = ? AND status = 'active'", [$userId]);
+    if (!$u || !$u['email_notifications'] || $u['is_demo']) return;
+    if ($u['last_seen'] && strtotime($u['last_seen']) > time() - 300) return; // online — they'll see it in the app
+    send_mail($u['email'], $subject, "Hi " . explode(' ', $u['name'])[0] . ",\n\n" . $body);
+}
+
+/** Email the site's admin inbox (admin_email setting, falls back to admin accounts). */
+function email_admins(string $subject, string $body): void
+{
+    $to = setting('admin_email', '');
+    $list = $to ? [$to] : array_column(all("SELECT email FROM users WHERE role = 'admin' AND status = 'active'"), 'email');
+    foreach (array_unique($list) as $addr) send_mail($addr, '[Admin] ' . $subject, $body);
 }
 
 function profile_completeness(array $u): int

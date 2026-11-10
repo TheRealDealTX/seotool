@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS users (
   role ENUM('user','admin') NOT NULL DEFAULT 'user',
   status ENUM('active','suspended') NOT NULL DEFAULT 'active',
   is_verified TINYINT(1) NOT NULL DEFAULT 0,
+  is_demo TINYINT(1) NOT NULL DEFAULT 0,
   avatar VARCHAR(255) NULL,
   bio TEXT NULL,
   birth_year SMALLINT NULL,

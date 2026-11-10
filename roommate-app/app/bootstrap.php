@@ -72,6 +72,7 @@ function migrate(): void
     }
     // Columns added after the first release (CREATE TABLE IF NOT EXISTS won't add them).
     $addCols = [
+        'users' => ['is_demo' => 'TINYINT(1) NOT NULL DEFAULT 0'],
         'properties' => [
             'external_id' => 'INT UNSIGNED NULL', 'external_url' => 'VARCHAR(255) NULL', 'image_url' => 'VARCHAR(500) NULL',
         ],
@@ -93,6 +94,7 @@ function migrate(): void
         'schema_version' => '2',
         'sync_source' => 'https://riseapartments.com',
         'last_sync' => '',
+        'admin_email' => '',
     ];
     foreach ($defaults as $k => $v) {
         q('INSERT IGNORE INTO settings (k, v) VALUES (?, ?)', [$k, $v]);

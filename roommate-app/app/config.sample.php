@@ -8,6 +8,11 @@ return [
     'db_pass' => 'change-me',
     'base_url' => 'https://roommate.riseapartments.com',
     'mail_from' => 'no-reply@riseapartments.com',
+    // Optional SMTP (recommended on Hostinger): smtp.hostinger.com, port 465, mailbox address + password
+    'smtp_host' => '',
+    'smtp_port' => 465,
+    'smtp_user' => '',
+    'smtp_pass' => '',
     'timezone' => 'America/Chicago',
     'debug' => false,
     // Token for setup.php (one-time install). Remove setup.php after use.

@@ -39,6 +39,14 @@ function admin_users(): void
         $ids = array_map('intval', (array)($_POST['ids'] ?? []));
         $act = input('bulk');
         $ids = array_filter($ids, fn($i) => $i !== uid());
+        if ($act === 'delete_demo') {
+            require_once APP_DIR . '/pages/profile.php';
+            $demo = array_map('intval', array_column(all('SELECT id FROM users WHERE is_demo = 1'), 'id'));
+            foreach ($demo as $d) delete_user_completely($d);
+            audit('users.delete_demo', count($demo) . ' demo accounts');
+            flash('success', 'Deleted ' . count($demo) . ' demo accounts.');
+            back('/admin/users');
+        }
         if ($ids && in_array($act, ['suspend', 'activate', 'verify'], true)) {
             $in = implode(',', $ids);
             if ($act === 'suspend') q("UPDATE users SET status = 'suspended' WHERE id IN ($in) AND role <> 'admin'");
@@ -50,12 +58,13 @@ function admin_users(): void
         back('/admin/users');
     }
     $s = mb_substr(input('q'), 0, 80);
-    $role = in_array(input('role'), ['user', 'admin'], true) ? input('role') : '';
+    $role = in_array(input('role'), ['user', 'admin', 'demo'], true) ? input('role') : '';
     $status = in_array(input('status'), ['active', 'suspended'], true) ? input('status') : '';
     $where = ['1'];
     $params = [];
     if ($s !== '') { $where[] = '(name LIKE ? OR email LIKE ? OR username LIKE ? OR city LIKE ?)'; $l = "%$s%"; array_push($params, $l, $l, $l, $l); }
-    if ($role) { $where[] = 'role = ?'; $params[] = $role; }
+    if ($role === 'demo') { $where[] = 'is_demo = 1'; }
+    elseif ($role) { $where[] = 'role = ?'; $params[] = $role; }
     if ($status) { $where[] = 'status = ?'; $params[] = $status; }
     $w = implode(' AND ', $where);
     $total = (int)val("SELECT COUNT(*) FROM users WHERE $w", $params);
@@ -73,7 +82,8 @@ function admin_users(): void
         audit('users.export', "rows matching '$s'");
         exit;
     }
-    render('admin/users', compact('users', 'total', 'page', 'pages', 's', 'role', 'status') + ['title' => 'Members']);
+    $demoCount = (int)val('SELECT COUNT(*) FROM users WHERE is_demo = 1');
+    render('admin/users', compact('users', 'total', 'page', 'pages', 's', 'role', 'status', 'demoCount') + ['title' => 'Members']);
 }
 
 function admin_user(string $id): void
@@ -327,7 +337,15 @@ function admin_posts(): void
 function admin_settings(): void
 {
     require_admin();
-    $keys = ['site_name', 'tagline', 'announcement', 'messaging_friends_only', 'allow_property_submissions', 'require_property_approval', 'registration_open'];
+    $keys = ['site_name', 'tagline', 'announcement', 'admin_email', 'messaging_friends_only', 'allow_property_submissions', 'require_property_approval', 'registration_open'];
+    if (is_post() && input('test_email') !== '') {
+        $to = filter_var(input('test_to'), FILTER_VALIDATE_EMAIL) ?: current_user()['email'];
+        $err = null;
+        $ok = send_mail($to, 'Test email from ' . setting('site_name'), "This is a test email from the admin panel. If you can read this, email delivery works.", $err);
+        audit('settings.test_email', "to $to: " . ($ok ? 'sent' : "failed $err"));
+        flash($ok ? 'success' : 'error', $ok ? "Test email sent to $to." : "Email failed: $err");
+        redirect('/admin/settings');
+    }
     if (is_post()) {
         foreach ($keys as $k) {
             $v = in_array($k, ['messaging_friends_only', 'allow_property_submissions', 'require_property_approval', 'registration_open'], true)

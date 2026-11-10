@@ -101,6 +101,7 @@ function properties_new(): void
                 flash('success', 'Property added and saved to your list.');
                 redirect('/properties/' . val('SELECT slug FROM properties WHERE id = ?', [$pid]));
             }
+            try { email_admins('Property awaiting approval: ' . $d['name'], "@{$me['username']} submitted {$d['name']} ({$d['city']}).\n\nReview: " . base_url() . '/admin/properties?status=pending'); } catch (Throwable $e) {}
             flash('success', 'Thanks! The property will appear once our team reviews it (usually within a day).');
             redirect('/properties');
         }
