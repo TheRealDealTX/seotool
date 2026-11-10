@@ -788,3 +788,9 @@ strong.danger { color: var(--danger); }
 .quiz-q { float: left; width: 100%; }
 .quiz-opts { clear: both; }
 .rs-result { position: static; }
+
+/* iOS Safari zooms into any field under 16px — keep every form control at 16px. */
+input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),
+select, textarea, .select-sm, .input-sm, .composer textarea, .comment-form input, .chat-form textarea, .lounge-form input {
+  font-size: 16px !important;
+}
