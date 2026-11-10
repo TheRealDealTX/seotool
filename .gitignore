@@ -1,3 +1,5 @@
 __pycache__/
 *.pyc
 dist/
+roommate-app/app/config.php
+roommate-app/uploads/*/*.jpg

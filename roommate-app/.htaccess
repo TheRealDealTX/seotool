@@ -1,0 +1,40 @@
+# Rise Roommates
+DirectoryIndex index.php
+Options -Indexes
+
+<IfModule LiteSpeed>
+CacheLookup off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# Never serve app internals, dotfiles or SQL
+RewriteRule ^app(/|$) - [F,L]
+RewriteRule (^|/)\. - [F,L]
+RewriteRule \.(sql|md|sample)$ - [F,L]
+
+# Old WordPress URLs -> app
+RewriteRule ^(wp-admin|wp-login\.php|wp-content|wp-includes|xmlrpc\.php)(/.*)?$ / [R=301,L]
+
+# Front controller
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
