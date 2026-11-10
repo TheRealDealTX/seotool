@@ -162,3 +162,12 @@ function delete_user_completely(int $id): void
     }
     q('DELETE FROM users WHERE id = ?', [$id]);
 }
+
+function profile_theme(): void
+{
+    $me = require_login();
+    $theme = array_key_exists(input('theme'), THEMES) ? input('theme') : 'navy';
+    $mode = in_array(input('mode'), ['light', 'dark', 'system'], true) ? input('mode') : 'system';
+    q('UPDATE users SET theme = ?, color_mode = ? WHERE id = ?', [$theme, $mode, $me['id']]);
+    is_ajax() ? json_out(['ok' => true]) : back('/settings');
+}

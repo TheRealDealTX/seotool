@@ -337,7 +337,7 @@ function admin_posts(): void
 function admin_settings(): void
 {
     require_admin();
-    $keys = ['site_name', 'tagline', 'announcement', 'admin_email', 'messaging_friends_only', 'allow_property_submissions', 'require_property_approval', 'registration_open'];
+    $keys = ['site_name', 'tagline', 'announcement', 'admin_email', 'giphy_key', 'messaging_friends_only', 'allow_property_submissions', 'require_property_approval', 'registration_open'];
     if (is_post() && input('test_email') !== '') {
         $to = filter_var(input('test_to'), FILTER_VALIDATE_EMAIL) ?: current_user()['email'];
         $err = null;

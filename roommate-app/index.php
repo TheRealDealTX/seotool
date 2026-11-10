@@ -60,6 +60,9 @@ $routes = [
     ['GET|POST', '/agreement/([A-Za-z0-9_]+)', 'agreement', 'agreement_show'],
     ['GET|POST', '/api/lounge/(\d+)', 'properties', 'properties_lounge'],
     ['POST', '/api/typing/(\d+)', 'messages', 'messages_typing'],
+    ['POST', '/api/message/(\d+)', 'messages', 'messages_action'],
+    ['GET', '/api/gifs', 'feed', 'feed_gifs'],
+    ['POST', '/api/theme', 'profile', 'profile_theme'],
 
     ['GET', '/admin', 'admin', 'admin_dashboard'],
     ['GET|POST', '/admin/users', 'admin', 'admin_users'],

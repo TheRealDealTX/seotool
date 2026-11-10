@@ -1,6 +1,24 @@
 <div class="narrow">
   <h1>Settings</h1>
   <section class="card form-section">
+    <h2>Appearance</h2>
+    <form method="post" action="/api/theme" class="form" id="theme-form"><?= csrf_field() ?>
+      <p class="small muted" style="margin-top:-8px">Pick a color for buttons, links and highlights. Changes preview instantly.</p>
+      <div class="theme-swatches">
+        <?php foreach (THEMES as $key => [$label, $hex]): ?>
+        <label class="swatch"><input type="radio" name="theme" value="<?= $key ?>"<?= ($u['theme'] ?: 'navy') === $key ? ' checked' : '' ?>><span style="--sw:<?= $hex ?>"><i></i><?= e($label) ?></span></label>
+        <?php endforeach; ?>
+      </div>
+      <fieldset class="mode-toggle">
+        <legend class="small muted">Mode</legend>
+        <?php foreach (['system' => '🖥️ System', 'light' => '☀️ Light', 'dark' => '🌙 Dark'] as $key => $label): ?>
+        <label><input type="radio" name="mode" value="<?= $key ?>"<?= ($u['color_mode'] ?: 'system') === $key ? ' checked' : '' ?>><span><?= $label ?></span></label>
+        <?php endforeach; ?>
+      </fieldset>
+      <noscript><button class="btn btn-primary btn-sm">Save</button></noscript>
+    </form>
+  </section>
+  <section class="card form-section">
     <h2>Privacy &amp; notifications</h2>
     <form method="post" class="form"><?= csrf_field() ?><input type="hidden" name="action" value="privacy">
       <label class="switch"><input type="checkbox" name="profile_visible" value="1"<?= $u['profile_visible'] ? ' checked' : '' ?>><span></span> Show my profile in Discover and to non-friends</label>

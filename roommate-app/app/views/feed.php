@@ -33,11 +33,15 @@
       <?= csrf_field() ?>
       <div class="composer-row">
         <?= avatar(current_user(), 'md') ?>
-        <textarea name="body" rows="2" maxlength="3000" placeholder="Looking for a roommate? Share an update, <?= e(explode(' ', current_user()['name'])[0]) ?>…" class="autogrow"></textarea>
+        <textarea name="body" rows="2" maxlength="3000" placeholder="Looking for a roommate? Share an update, <?= e(explode(' ', current_user()['name'])[0]) ?>…" class="autogrow" id="composer-text"></textarea>
       </div>
       <div class="composer-preview" hidden><img alt=""><button type="button" class="iconbtn composer-clear" aria-label="Remove image"><?= icon('x') ?></button></div>
+      <div class="gif-preview" hidden><img alt="GIF"><button type="button" class="iconbtn gif-clear" aria-label="Remove GIF"><?= icon('x') ?></button></div>
       <div class="composer-actions">
         <label class="act" title="Add photo"><?= icon('image') ?> Photo<input type="file" name="image" accept="image/*" hidden class="js-img-input"></label>
+        <button type="button" class="act js-emoji" data-target="#composer-text" title="Emoji">😊 Emoji</button>
+        <button type="button" class="act js-gif" title="GIF"><span class="gif-chip">GIF</span> GIF</button>
+        <input type="hidden" name="gif" value="">
         <?php if ($myProps): ?>
         <select name="property_id" class="select-sm" aria-label="Tag a property">
           <option value="">Tag a property (optional)</option>

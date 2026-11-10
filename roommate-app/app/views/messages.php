@@ -23,19 +23,18 @@
         <?php if ($fstatus === 'friends'): ?><a class="btn btn-ghost btn-sm hide-sm" href="/agreement/<?= e($other['username']) ?>" title="Roommate agreement">📝 Agreement</a><?php endif; ?>
         <a class="btn btn-outline btn-sm" href="/u/<?= e($other['username']) ?>">Profile</a>
       </header>
-      <div class="chat-msgs" id="chat-msgs" data-other="<?= (int)$other['id'] ?>" data-last="<?= $msgs ? (int)end($msgs)['id'] : 0 ?>">
-        <?php if (!$msgs): ?><div class="chat-hello muted"><?= avatar($other, 'lg') ?><p>Say hi to <?= e(explode(' ', $other['name'])[0]) ?>! Introduce yourself and mention which property you're interested in.</p></div><?php endif; ?>
-        <?php $lastDate = ''; foreach ($msgs as $m): $d = date('M j, Y', strtotime($m['created_at'])); if ($d !== $lastDate): $lastDate = $d; ?>
-          <div class="chat-date"><?= e($d) ?></div>
-        <?php endif; ?>
-          <div class="msg <?= (int)$m['sender_id'] === uid() ? 'mine' : 'theirs' ?>" data-id="<?= (int)$m['id'] ?>"><div class="bubble"><?= linkify($m['body']) ?></div><time><?= e(date('g:i A', strtotime($m['created_at']))) ?></time></div>
-        <?php endforeach; ?>
+      <div class="chat-msgs" id="chat-msgs" data-other="<?= (int)$other['id'] ?>" data-initial='<?= e(json_encode($msgs, JSON_UNESCAPED_UNICODE)) ?>'>
+        <div class="chat-hello muted"<?= $msgs ? ' hidden' : '' ?>><?= avatar($other, 'lg') ?><p>Say hi to <?= e(explode(' ', $other['name'])[0]) ?>! Introduce yourself and mention which property you're interested in.</p></div>
       </div>
       <div class="typing" id="typing" hidden><span></span><span></span><span></span> <?= e(explode(' ', $other['name'])[0]) ?> is typing</div>
       <?php if ($canMessage): ?>
-      <form class="chat-form" id="chat-form" data-other="<?= (int)$other['id'] ?>">
-        <textarea name="body" rows="1" maxlength="4000" placeholder="Write a message…" required class="autogrow"><?= e(mb_substr((string)($_GET['draft'] ?? ''), 0, 2000)) ?></textarea>
-        <button class="btn btn-primary btn-icon" type="submit" aria-label="Send"><?= icon('send') ?></button>
+      <div class="reply-bar" id="reply-bar" hidden><div><small>Replying to <b class="rb-who"></b></small><span class="rb-text"></span></div><button type="button" class="iconbtn rb-x" aria-label="Cancel reply"><?= icon('x') ?></button></div>
+      <div class="reply-bar edit-bar" id="edit-bar" hidden><div><small><b>Editing message</b></small><span class="rb-text"></span></div><button type="button" class="iconbtn rb-x" aria-label="Cancel edit"><?= icon('x') ?></button></div>
+      <form class="chat-form" id="chat-form" data-other="<?= (int)$other['id'] ?>" data-other-name="<?= e(explode(' ', $other['name'])[0]) ?>">
+        <button type="button" class="tool-btn js-emoji" data-target="#chat-input" aria-label="Emoji">😊</button>
+        <button type="button" class="tool-btn js-gif" data-mode="chat" aria-label="GIF">GIF</button>
+        <textarea name="body" id="chat-input" rows="1" maxlength="4000" placeholder="Write a message…"><?= e(mb_substr((string)($_GET['draft'] ?? ''), 0, 2000)) ?></textarea>
+        <button class="btn btn-primary chat-send" type="submit" aria-label="Send"><?= icon('send') ?></button>
       </form>
       <?php else: ?>
       <div class="chat-locked muted small"><?= setting('messaging_friends_only') === '1' && $fstatus !== 'friends' ? 'You need to be friends to message. ' . ($fstatus === 'none' ? '<a href="/u/' . e($other['username']) . '">Send a friend request</a>.' : '') : 'You can’t reply to this conversation.' ?></div>

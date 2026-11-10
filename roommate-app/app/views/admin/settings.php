@@ -5,6 +5,7 @@
   <label>Tagline<input type="text" name="tagline" value="<?= e($v['tagline']) ?>" maxlength="120"></label>
   <label>Announcement banner <small class="muted">(shown to everyone at the top of every page; leave empty to hide)</small><textarea name="announcement" rows="2" maxlength="500"><?= e($v['announcement']) ?></textarea></label>
   <label>Admin alert email <small class="muted">(new reports and property submissions are emailed here)</small><input type="email" name="admin_email" value="<?= e($v['admin_email']) ?>" placeholder="marketing@riseapartments.com"></label>
+  <label>GIPHY API key <small class="muted">(turns on GIF search in posts, comments and chats — get a free key at developers.giphy.com)</small><input type="text" name="giphy_key" value="<?= e($v['giphy_key']) ?>" autocomplete="off" placeholder="Paste your GIPHY API key"></label>
   <h2>Community rules</h2>
   <label class="switch"><input type="checkbox" name="registration_open" value="1"<?= $v['registration_open'] === '1' ? ' checked' : '' ?>><span></span> Allow new sign-ups</label>
   <label class="switch"><input type="checkbox" name="messaging_friends_only" value="1"<?= $v['messaging_friends_only'] === '1' ? ' checked' : '' ?>><span></span> Only friends can message each other</label>

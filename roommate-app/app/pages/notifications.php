@@ -19,7 +19,7 @@ function notification_text(array $n): array
         'friend_request' => ["$who sent you a friend request.", '/friends?tab=requests'],
         'friend_accept' => ["$who accepted your friend request.", '/u/' . ($n['username'] ?? '')],
         'message' => ["$who sent you a message.", '/messages/' . ($n['username'] ?? '')],
-        'like' => ["$who liked your post.", '/post/' . (int)$n['entity_id']],
+        'like' => ["$who reacted to your post.", '/post/' . (int)$n['entity_id']],
         'comment' => ["$who commented on your post.", '/post/' . (int)$n['entity_id']],
         'property_approved' => ['A property you submitted was approved.', '/properties'],
         'match' => ["💘 You and $who matched! You're now friends.", '/messages/' . ($n['username'] ?? '')],

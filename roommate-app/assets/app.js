@@ -128,19 +128,6 @@
     c.addEventListener('change', function () { $$('input[name="ids[]"]', c.closest('form')).forEach(function (x) { x.checked = c.checked; }); });
   });
 
-  // Likes
-  document.addEventListener('submit', function (e) {
-    var f = e.target.closest('.js-like');
-    if (!f) return;
-    e.preventDefault();
-    var b = $('button', f);
-    api(f.action, { method: 'POST', body: new FormData(f) }).then(function (j) {
-      b.classList.toggle('liked', j.liked);
-      b.setAttribute('aria-pressed', j.liked ? 'true' : 'false');
-      $('.n', b).textContent = j.likes || '';
-    }).catch(function (j) { toast((j && j.error) || 'Something went wrong'); });
-  });
-
   // Property interest toggles on cards
   document.addEventListener('submit', function (e) {
     var f = e.target.closest('.js-toggle-prop');
@@ -194,78 +181,7 @@
   }
   function applyCounts(c) { if (!c) return; setBadge('messages', c.messages); setBadge('notifications', c.notifications); }
 
-  // Chat
-  var box = $('#chat-msgs');
-  var form = $('#chat-form');
-  if (box) {
-    var other = box.getAttribute('data-other');
-    var last = parseInt(box.getAttribute('data-last'), 10) || 0;
-    var lastDate = ($$('.chat-date', box).pop() || {}).textContent || '';
-    var atBottom = function () { return box.scrollHeight - box.scrollTop - box.clientHeight < 80; };
-    var toBottom = function () { box.scrollTop = box.scrollHeight; };
-    toBottom();
-
-    var render = function (m) {
-      if (box.querySelector('[data-id="' + m.id + '"]')) return;
-      var hello = $('.chat-hello', box); if (hello) hello.remove();
-      if (m.date !== lastDate) {
-        lastDate = m.date;
-        var d = document.createElement('div'); d.className = 'chat-date'; d.textContent = m.date; box.appendChild(d);
-      }
-      var el = document.createElement('div');
-      el.className = 'msg ' + (m.mine ? 'mine' : 'theirs');
-      el.setAttribute('data-id', m.id);
-      el.innerHTML = '<div class="bubble">' + linkify(m.body) + '</div><time>' + esc(m.time) + '</time>';
-      box.appendChild(el);
-      if (m.id > last) last = m.id;
-    };
-    var seen = function (lastRead) {
-      var s = $('.seen', box); if (s) s.remove();
-      var mine = $$('.msg.mine', box).pop();
-      if (mine && lastRead && parseInt(mine.getAttribute('data-id'), 10) <= lastRead) {
-        var el = document.createElement('div'); el.className = 'seen'; el.textContent = 'Seen'; box.appendChild(el);
-      }
-    };
-    var busy = false;
-    var poll = function () {
-      if (busy || document.hidden) return;
-      busy = true;
-      api('/api/conversation/' + other + '?after=' + last).then(function (j) {
-        var stick = atBottom();
-        (j.messages || []).forEach(render);
-        seen(j.last_read);
-        applyCounts(j.counts);
-        if (stick) toBottom();
-      }).catch(function () {}).then(function () { busy = false; });
-    };
-    setInterval(poll, 3500);
-    document.addEventListener('visibilitychange', poll);
-    poll();
-
-    if (form) {
-      var ta = $('textarea', form);
-      ta.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event('submit', { cancelable: true })); }
-      });
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var body = ta.value.trim();
-        if (!body) return;
-        ta.value = ''; grow(ta);
-        var fd = new FormData(); fd.append('body', body); fd.append('_csrf', CSRF);
-        var tmp = document.createElement('div');
-        tmp.className = 'msg mine pending';
-        tmp.innerHTML = '<div class="bubble">' + linkify(body) + '</div><time>Sending…</time>';
-        box.appendChild(tmp); toBottom();
-        api('/api/conversation/' + other, { method: 'POST', body: fd }).then(function (j) {
-          tmp.remove(); render(j.message); toBottom();
-        }).catch(function (j) {
-          tmp.remove(); ta.value = body; toast((j && j.error) || 'Message not sent');
-        });
-      });
-      if (window.matchMedia('(min-width: 721px)').matches) ta.focus();
-    }
-  } else if (document.body.classList.contains('authed')) {
+  if (!document.getElementById('chat-msgs') && document.body.classList.contains('authed')) {
     // Light polling for badges elsewhere
     var tick = function () { if (!document.hidden) api('/api/counts').then(applyCounts).catch(function () {}); };
     setInterval(tick, 30000);
@@ -528,25 +444,347 @@
     });
   }
 
-  // ===== Typing indicator =====
-  var cform = $('#chat-form'), typingEl = $('#typing');
-  if (cform && typingEl) {
-    var other = cform.getAttribute('data-other'), lastSent = 0;
-    $('textarea', cform).addEventListener('input', function () {
-      var now = Date.now();
-      if (now - lastSent > 3000) { lastSent = now; post('/api/typing/' + other, {}).catch(function () {}); }
+})();
+
+/* ---------- Emoji, GIFs, reactions, rich chat, themes ---------- */
+(function () {
+  'use strict';
+  var CSRF = (document.querySelector('meta[name=csrf]') || {}).content || '';
+  var $ = function (s, r) { return (r || document).querySelector(s); };
+  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+  function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+  function linkify(s) { return esc(s).replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener nofollow">$1</a>'); }
+  function req(url, data, method) {
+    var o = { method: method || (data ? 'POST' : 'GET'), credentials: 'same-origin', headers: { 'X-Requested-With': 'fetch', 'Accept': 'application/json' } };
+    if (data) { var fd = new FormData(); fd.append('_csrf', CSRF); Object.keys(data).forEach(function (k) { if (data[k] != null) fd.append(k, data[k]); }); o.body = fd; }
+    return fetch(url, o).then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { if (!r.ok) throw j; return j; }); });
+  }
+  function toast(msg) { var t = document.createElement('div'); t.className = 'toast'; t.textContent = msg; document.body.appendChild(t); setTimeout(function () { t.remove(); }, 2600); }
+  var isTouch = window.matchMedia('(hover: none)').matches;
+
+  // ===== Popover helper =====
+  var openPop = null;
+  function closePop() { if (openPop) { openPop.remove(); openPop = null; } }
+  function showPop(el, anchor, opts) {
+    closePop(); opts = opts || {};
+    el.classList.add('pop'); document.body.appendChild(el); openPop = el;
+    var r = anchor.getBoundingClientRect(), w = el.offsetWidth, h = el.offsetHeight, vw = document.documentElement.clientWidth;
+    var left = Math.min(Math.max(8, (opts.alignRight ? r.right - w : r.left + r.width / 2 - w / 2)), vw - w - 8);
+    var top = r.top - h - 8; if (top < 8 || opts.below) top = r.bottom + 8;
+    if (top + h > window.innerHeight - 8) top = Math.max(8, window.innerHeight - h - 8);
+    el.style.left = left + 'px'; el.style.top = top + 'px';
+    return el;
+  }
+  document.addEventListener('pointerdown', function (e) { if (openPop && !openPop.contains(e.target) && !e.target.closest('.js-emoji,.js-gif')) closePop(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { closePop(); closeMenu(); } });
+  window.addEventListener('resize', closePop);
+
+  // ===== Emoji picker =====
+  var EMOJI = {
+    'Smileys': '😀 😃 😄 😁 😆 😅 🤣 😂 🙂 😉 😊 😇 🥰 😍 🤩 😘 😋 😛 😜 🤪 🤗 🤭 🤫 🤔 😐 😏 😒 🙄 😬 😌 😔 😴 🥱 😷 🤒 🥳 😎 🤓 😕 😟 😮 😲 🥺 😢 😭 😱 😤 😡 🤯 😳 🥵 🥶 😈 💀 🤡 👻 👽 🤖 💩',
+    'Gestures': '👍 👎 👌 🤌 ✌️ 🤞 🤟 🤘 🤙 👋 👏 🙌 👐 🤲 🙏 🤝 💪 👀 🫶 ❤️ 🧡 💛 💚 💙 💜 🖤 🤍 💔 ❣️ 💕 💯 ✨ 🔥 ⭐ 🎉 🎊 💥 💫',
+    'Home': '🏠 🏡 🏢 🏘️ 🔑 🗝️ 🛋️ 🛏️ 🚿 🛁 🧹 🧺 🧼 🧽 🪴 🖼️ 📦 🚚 🧾 💸 💵 💳 📅 ⏰ 💡 🔌 📶 🧯 🚗 🅿️ 🚲 🐶 🐱 🐾 🍳 🥡 🍕 🍔 🌮 🍜 🍣 ☕ 🍷 🍺',
+    'Activities': '🎮 🎲 🎵 🎧 🎸 🎤 🎬 📺 📚 💻 🏋️ 🧘 🏃 ⚽ 🏀 🏈 ⚾ 🎾 🏊 🚴 🥾 🏕️ ✈️ 🌴 🏖️ 🎨 📷 🎂 🎁 🛍️',
+    'Weather': '☀️ 🌤️ ⛅ 🌧️ ⛈️ 🌈 ❄️ 🌙 🌟 🌊 🌵 🌸 🌻 🍂'
+  };
+  function emojiPicker(onPick) {
+    var el = document.createElement('div');
+    el.className = 'emoji-pop';
+    var tabs = Object.keys(EMOJI);
+    el.innerHTML = '<div class="ep-tabs">' + tabs.map(function (t, i) { return '<button type="button" data-t="' + i + '" class="' + (i ? '' : 'on') + '">' + EMOJI[t].split(' ')[0] + '</button>'; }).join('') + '</div><div class="ep-grid"></div>';
+    var grid = $('.ep-grid', el);
+    var fill = function (i) { grid.innerHTML = EMOJI[tabs[i]].split(' ').map(function (e) { return '<button type="button">' + e + '</button>'; }).join(''); grid.scrollTop = 0; };
+    fill(0);
+    el.addEventListener('click', function (e) {
+      var t = e.target.closest('.ep-tabs button');
+      if (t) { $$('.ep-tabs button', el).forEach(function (b) { b.classList.remove('on'); }); t.classList.add('on'); fill(+t.dataset.t); return; }
+      var b = e.target.closest('.ep-grid button'); if (b) onPick(b.textContent);
     });
-    // Piggy-back on the chat poll responses
-    var origFetch = window.fetch;
-    window.fetch = function (url, opts) {
-      var p = origFetch.apply(this, arguments);
-      if (typeof url === 'string' && url.indexOf('/api/conversation/') === 0 && (!opts || !opts.method || opts.method === 'GET')) {
-        p.then(function (r) { return r.clone().json(); }).then(function (j) {
-          typingEl.hidden = !j.typing;
-          if (j.typing) { var b = $('#chat-msgs'); if (b && b.scrollHeight - b.scrollTop - b.clientHeight < 120) b.scrollTop = b.scrollHeight; }
-        }).catch(function () {});
-      }
-      return p;
+    return el;
+  }
+  function insertAtCursor(input, text) {
+    var s = input.selectionStart != null ? input.selectionStart : input.value.length, en = input.selectionEnd != null ? input.selectionEnd : s;
+    input.value = input.value.slice(0, s) + text + input.value.slice(en);
+    var pos = s + text.length; try { input.setSelectionRange(pos, pos); } catch (e) {}
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.js-emoji'); if (!b) return;
+    e.preventDefault();
+    if (openPop && openPop.classList.contains('emoji-pop')) return closePop();
+    var target = $(b.dataset.target) || b.closest('form').querySelector('textarea, input[type=text]');
+    showPop(emojiPicker(function (em) { insertAtCursor(target, em); if (!isTouch) target.focus(); }), b);
+  });
+
+  // ===== GIF picker =====
+  var gifModal = null;
+  function openGifPicker(onPick) {
+    if (gifModal) gifModal.remove();
+    var m = document.createElement('div');
+    m.className = 'modal gif-modal';
+    m.innerHTML = '<div class="modal-box"><div class="gif-head"><input type="search" placeholder="Search GIFs" class="gif-q" autocomplete="off"><button type="button" class="iconbtn gif-x" aria-label="Close">✕</button></div>' +
+      '<div class="gif-grid"><p class="muted small center">Loading…</p></div>' +
+      '<form class="gif-link"><input type="url" placeholder="…or paste a GIF link (GIPHY, Tenor or .gif)" class="gif-url"><button class="btn btn-outline btn-sm">Add</button></form>' +
+      '<p class="gif-credit small muted">Powered by GIPHY</p></div>';
+    document.body.appendChild(m); gifModal = m;
+    var close = function () { m.remove(); gifModal = null; };
+    m.addEventListener('click', function (e) { if (e.target === m || e.target.closest('.gif-x')) close(); });
+    var grid = $('.gif-grid', m), q = $('.gif-q', m), timer;
+    var load = function () {
+      req('/api/gifs?q=' + encodeURIComponent(q.value.trim())).then(function (j) {
+        if (!j.enabled) { grid.innerHTML = '<p class="muted small center gif-off">GIF search isn\'t switched on yet. You can still paste a GIF link below.</p>'; q.hidden = true; $('.gif-credit', m).hidden = true; return; }
+        grid.innerHTML = j.results.length ? j.results.map(function (g) { return '<button type="button" data-url="' + esc(g.url) + '"><img src="' + esc(g.thumb) + '" alt="' + esc(g.title) + '" loading="lazy"></button>'; }).join('') : '<p class="muted small center">No GIFs found.</p>';
+      }).catch(function () { grid.innerHTML = '<p class="muted small center">Couldn\'t load GIFs.</p>'; });
     };
+    q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(load, 300); });
+    grid.addEventListener('click', function (e) { var b = e.target.closest('button[data-url]'); if (b) { close(); onPick(b.dataset.url); } });
+    $('.gif-link', m).addEventListener('submit', function (e) {
+      e.preventDefault(); var u = $('.gif-url', m).value.trim();
+      if (!/^https:\/\/\S+$/i.test(u) || !(/(giphy\.com|tenor\.com)/i.test(u) || /\.(gif|webp)(\?|$)/i.test(u))) return toast('Paste an https GIF link from GIPHY, Tenor or ending in .gif');
+      close(); onPick(u);
+    });
+    load(); if (!isTouch) setTimeout(function () { q.focus(); }, 50);
+  }
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.js-gif'); if (!b) return;
+    e.preventDefault();
+    var form = b.closest('form');
+    if (b.dataset.mode === 'chat') return openGifPicker(function (url) { chatSend('', url); });
+    openGifPicker(function (url) {
+      var hidden = form.querySelector('input[name=gif]'); hidden.value = url;
+      var prev = form.querySelector('.gif-preview');
+      if (prev) { $('img', prev).src = url; prev.hidden = false; var ip = form.querySelector('.js-img-input'); if (ip) { ip.value = ''; var cp = form.querySelector('.composer-preview'); if (cp) cp.hidden = true; } }
+      else form.requestSubmit ? form.requestSubmit() : form.submit(); // comments: send right away
+    });
+  });
+  document.addEventListener('click', function (e) {
+    var x = e.target.closest('.gif-clear'); if (!x) return;
+    var f = x.closest('form'); f.querySelector('input[name=gif]').value = ''; x.closest('.gif-preview').hidden = true;
+  });
+  // Comments: allow GIF-only submit, block empty
+  document.addEventListener('submit', function (e) {
+    var f = e.target.closest('.comment-form'); if (!f) return;
+    if (!f.body.value.trim() && !f.gif.value) e.preventDefault();
+  }, true);
+
+  // ===== Post reactions =====
+  var hoverTimer = null, pressTimer = null, suppressClick = false;
+  function showPicker(wrap) {
+    $$('.react-wrap.open').forEach(function (w) { if (w !== wrap) w.classList.remove('open'); });
+    var bar = document.querySelector('.topbar'), limit = bar ? bar.getBoundingClientRect().bottom : 0;
+    wrap.classList.toggle('below', wrap.getBoundingClientRect().top - 64 < limit + 4);
+    wrap.classList.add('open');
+  }
+  function hidePicker(wrap) { wrap.classList.remove('open'); }
+  document.addEventListener('mouseover', function (e) {
+    if (isTouch) return; var w = e.target.closest('.react-wrap'); if (!w) return;
+    clearTimeout(hoverTimer); hoverTimer = setTimeout(function () { showPicker(w); }, 450);
+  });
+  document.addEventListener('mouseout', function (e) {
+    if (isTouch) return; var w = e.target.closest('.react-wrap'); if (!w || w.contains(e.relatedTarget)) return;
+    clearTimeout(hoverTimer); hoverTimer = setTimeout(function () { hidePicker(w); }, 350);
+  });
+  document.addEventListener('touchstart', function (e) {
+    var b = e.target.closest('.react-btn'); if (!b) return;
+    suppressClick = false;
+    pressTimer = setTimeout(function () { suppressClick = true; showPicker(b.closest('.react-wrap')); if (navigator.vibrate) navigator.vibrate(15); }, 420);
+  }, { passive: true });
+  document.addEventListener('touchend', function () { clearTimeout(pressTimer); });
+  document.addEventListener('touchmove', function () { clearTimeout(pressTimer); }, { passive: true });
+  document.addEventListener('contextmenu', function (e) { if (e.target.closest('.react-btn')) e.preventDefault(); });
+  document.addEventListener('pointerdown', function (e) { if (!e.target.closest('.react-wrap')) $$('.react-wrap.open').forEach(hidePicker); });
+  document.addEventListener('submit', function (e) {
+    var f = e.target.closest('.js-react'); if (!f) return;
+    e.preventDefault();
+    var sub = e.submitter, reaction = sub && sub.name === 'reaction' ? sub.value : null;
+    if (!reaction && suppressClick) { suppressClick = false; return; }
+    hidePicker(f);
+    var btn = $('.react-btn', f);
+    req(f.action, { reaction: reaction }).then(function (j) {
+      var opt = j.reaction ? f.querySelector('.react-picker [value="' + j.reaction + '"]') : null;
+      btn.className = 'act react-btn' + (j.reaction ? ' reacted r-' + j.reaction : '');
+      $('.react-ico', btn).innerHTML = opt ? opt.dataset.emoji : '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7.5-4.6-9-9.5C2 7 4.5 4.5 7.5 4.5c2 0 3.5 1.2 4.5 2.7 1-1.5 2.5-2.7 4.5-2.7 3 0 5.5 2.5 4.5 6-1.5 4.9-9 9.5-9 9.5z"/></svg>';
+      $('.react-label', btn).textContent = opt ? opt.dataset.label : 'Like';
+      btn.classList.add('pop-anim'); setTimeout(function () { btn.classList.remove('pop-anim'); }, 300);
+      var sum = f.closest('.post').querySelector('.reaction-summary');
+      if (sum) { sum.hidden = !j.count; $('.rs-icons', sum).innerHTML = j.top.map(function (x) { return '<span>' + x + '</span>'; }).join(''); $('.rs-count', sum).textContent = j.count; }
+    }).catch(function (j) { toast((j && j.error) || 'Something went wrong'); });
+  });
+
+  // ===== Rich chat =====
+  var box = $('#chat-msgs'), form = $('#chat-form'), typingEl = $('#typing');
+  var chatSend = function () {};
+  var menu = null;
+  function closeMenu() { if (menu) { menu.remove(); menu = null; } $$('.msg.menu-open').forEach(function (m) { m.classList.remove('menu-open'); }); }
+  if (box) {
+    var other = box.dataset.other, otherName = form ? form.dataset.otherName : '';
+    var last = 0, since = '', lastDate = '', byId = {}, replyTo = null, editing = null;
+    var QUICK = ['❤️', '😂', '😮', '😢', '😡', '👍'];
+    var startReply = function () {}, startEdit = function () {};
+    var atBottom = function () { return box.scrollHeight - box.scrollTop - box.clientHeight < 90; };
+    var toBottom = function () { box.scrollTop = box.scrollHeight; };
+    function inner(m) {
+      if (m.deleted) return '<div class="bubble unsent">🚫 ' + (m.mine ? 'You unsent a message' : 'This message was unsent') + '</div>';
+      var h = '';
+      if (m.reply) h += '<a href="#m-' + m.reply.id + '" class="reply-quote" data-jump="' + m.reply.id + '"><small>' + (m.reply.mine ? (m.mine ? 'You replied to yourself' : 'Replied to you') : (m.mine ? 'You replied to ' + esc(otherName) : 'Replied to themselves')) + '</small><span>' + esc(m.reply.body || '') + '</span></a>';
+      if (m.gif) h += '<div class="bubble gif"><img src="' + esc(m.gif) + '" alt="GIF" loading="lazy"></div>';
+      if (m.body) {
+        var onlyEmoji = /^(\p{Extended_Pictographic}|\p{Emoji_Component}|‍|️|\s){1,12}$/u.test(m.body) && !/[0-9#*]/.test(m.body);
+        h += '<div class="bubble' + (onlyEmoji ? ' big-emoji' : '') + '">' + linkify(m.body) + '</div>';
+      }
+      if (m.reactions && m.reactions.length) h += '<div class="msg-reacts">' + m.reactions.map(function (r) { return '<button type="button" class="' + (r.mine ? 'mine' : '') + '" data-emoji="' + esc(r.emoji) + '">' + esc(r.emoji) + (r.count > 1 ? ' ' + r.count : '') + '</button>'; }).join('') + '</div>';
+      return h;
+    }
+    function render(m) {
+      byId[m.id] = m;
+      var el = document.getElementById('m-' + m.id);
+      var html = inner(m) + '<time>' + esc(m.time) + (m.edited && !m.deleted ? ' · edited' : '') + '</time>';
+      if (el) { el.innerHTML = html; el.className = 'msg ' + (m.mine ? 'mine' : 'theirs') + (m.deleted ? ' is-unsent' : ''); return; }
+      var hello = $('.chat-hello', box); if (hello) hello.hidden = true;
+      if (m.date !== lastDate) { lastDate = m.date; var d = document.createElement('div'); d.className = 'chat-date'; d.textContent = m.date; box.appendChild(d); }
+      el = document.createElement('div');
+      el.id = 'm-' + m.id; el.className = 'msg ' + (m.mine ? 'mine' : 'theirs') + (m.deleted ? ' is-unsent' : '');
+      el.dataset.id = m.id; el.innerHTML = html;
+      box.appendChild(el);
+      if (m.id > last) last = m.id;
+    }
+    function seen(lastRead) {
+      var s = $('.seen', box); if (s) s.remove();
+      var mine = $$('.msg.mine', box).pop();
+      if (mine && lastRead && +mine.dataset.id <= lastRead) { var el = document.createElement('div'); el.className = 'seen'; el.textContent = 'Seen'; box.appendChild(el); }
+    }
+    JSON.parse(box.dataset.initial || '[]').forEach(render);
+    toBottom();
+    var busy = false;
+    var poll = function () {
+      if (busy || document.hidden) return; busy = true;
+      req('/api/conversation/' + other + '?after=' + last + (since ? '&since=' + encodeURIComponent(since) : '')).then(function (j) {
+        var stick = atBottom();
+        (j.messages || []).forEach(render); (j.updated || []).forEach(render);
+        since = j.now || since; seen(j.last_read);
+        if (typingEl) typingEl.hidden = !j.typing;
+        if (j.counts) $$('[data-count="messages"] .badge').forEach(function (b) { b.textContent = j.counts.messages; b.hidden = !j.counts.messages; });
+        if (stick) toBottom();
+      }).catch(function () {}).then(function () { busy = false; });
+    };
+    setInterval(poll, 3000); document.addEventListener('visibilitychange', poll); poll();
+
+    // Jump to quoted message
+    box.addEventListener('click', function (e) {
+      var q = e.target.closest('[data-jump]'); if (q) { e.preventDefault(); var t = document.getElementById('m-' + q.dataset.jump); if (t) { t.scrollIntoView({ behavior: 'smooth', block: 'center' }); t.classList.add('flash-msg'); setTimeout(function () { t.classList.remove('flash-msg'); }, 1200); } return; }
+      var r = e.target.closest('.msg-reacts button'); if (r) react(+r.closest('.msg').dataset.id, r.dataset.emoji);
+    });
+    // Double-tap / double-click to ❤️
+    box.addEventListener('dblclick', function (e) { var el = e.target.closest('.msg'); if (el && !el.classList.contains('is-unsent')) { window.getSelection && window.getSelection().removeAllRanges(); react(+el.dataset.id, '❤️'); } });
+
+    function react(id, emoji) { req('/api/message/' + id, { action: 'react', emoji: emoji }).then(function (j) { render(j.message); }).catch(function (j) { toast((j && j.error) || 'Couldn\'t react'); }); }
+
+    // Context menu: right-click or long-press
+    function openMenu(el, x, y) {
+      var m = byId[el.dataset.id]; if (!m || m.deleted) return;
+      closeMenu(); el.classList.add('menu-open');
+      menu = document.createElement('div');
+      menu.className = 'msg-menu';
+      menu.innerHTML = '<div class="mm-reacts">' + QUICK.map(function (q) { return '<button type="button" data-react="' + q + '">' + q + '</button>'; }).join('') + '<button type="button" data-more="1" aria-label="More reactions">＋</button></div>' +
+        (form ? '<button type="button" data-act="reply">↩️ Reply</button>' : '') +
+        (m.body ? '<button type="button" data-act="copy">📋 Copy text</button>' : '') +
+        (m.can_edit && m.body ? '<button type="button" data-act="edit">✏️ Edit</button>' : '') +
+        (m.mine ? '<button type="button" data-act="unsend" class="danger">🗑️ Unsend</button>' : '');
+      document.body.appendChild(menu);
+      var w = menu.offsetWidth, h = menu.offsetHeight, vw = document.documentElement.clientWidth;
+      menu.style.left = Math.min(Math.max(8, x - w / 2), vw - w - 8) + 'px';
+      menu.style.top = (y - h - 12 > 8 ? y - h - 12 : Math.min(y + 12, window.innerHeight - h - 8)) + 'px';
+      menu.addEventListener('click', function (e) {
+        var b = e.target.closest('button'); if (!b) return;
+        if (b.dataset.react) { react(m.id, b.dataset.react); closeMenu(); return; }
+        if (b.dataset.more) { var anchor = b; showPop(emojiPicker(function (em) { closePop(); react(m.id, em); }), anchor); closeMenu(); return; }
+        var a = b.dataset.act; closeMenu();
+        if (a === 'reply') startReply(m);
+        else if (a === 'copy') { navigator.clipboard && navigator.clipboard.writeText(m.body).then(function () { toast('Copied'); }); }
+        else if (a === 'edit') startEdit(m);
+        else if (a === 'unsend') { if (confirm('Unsend this message? It will show as "message unsent" for both of you.')) req('/api/message/' + m.id, { action: 'unsend' }).then(function (j) { render(j.message); }).catch(function (j) { toast((j && j.error) || 'Couldn\'t unsend'); }); }
+      });
+    }
+    box.addEventListener('contextmenu', function (e) {
+      var el = e.target.closest('.msg'); if (!el || e.target.closest('a[href^="http"]')) return;
+      e.preventDefault(); openMenu(el, e.clientX, e.clientY);
+    });
+    var lpTimer = null, lpStart = null;
+    box.addEventListener('touchstart', function (e) {
+      var el = e.target.closest('.msg'); if (!el) return;
+      var t = e.touches[0]; lpStart = [t.clientX, t.clientY];
+      lpTimer = setTimeout(function () { if (navigator.vibrate) navigator.vibrate(15); openMenu(el, lpStart[0], lpStart[1]); }, 450);
+    }, { passive: true });
+    box.addEventListener('touchmove', function (e) { var t = e.touches[0]; if (lpStart && Math.hypot(t.clientX - lpStart[0], t.clientY - lpStart[1]) > 10) clearTimeout(lpTimer); }, { passive: true });
+    box.addEventListener('touchend', function () { clearTimeout(lpTimer); });
+    document.addEventListener('pointerdown', function (e) { if (menu && !menu.contains(e.target)) closeMenu(); });
+    box.addEventListener('scroll', closeMenu, { passive: true });
+
+    if (form) {
+      var ta = $('textarea', form), replyBar = $('#reply-bar'), editBar = $('#edit-bar');
+      var grow = function () { ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 140) + 'px'; };
+      startReply = function (m) {
+        cancelEdit(); replyTo = m.id;
+        $('.rb-who', replyBar).textContent = m.mine ? 'yourself' : otherName;
+        $('.rb-text', replyBar).textContent = m.body || 'GIF';
+        replyBar.hidden = false; ta.focus();
+      }
+      function cancelReply() { replyTo = null; replyBar.hidden = true; }
+      startEdit = function (m) {
+        cancelReply(); editing = m.id;
+        $('.rb-text', editBar).textContent = m.body; editBar.hidden = false;
+        ta.value = m.body; grow(); ta.focus();
+      }
+      function cancelEdit() { if (editing) { editing = null; editBar.hidden = true; ta.value = ''; grow(); } }
+      $('.rb-x', replyBar).addEventListener('click', cancelReply);
+      $('.rb-x', editBar).addEventListener('click', cancelEdit);
+      var lastTyping = 0;
+      ta.addEventListener('input', function () {
+        grow(); var now = Date.now();
+        if (now - lastTyping > 3000 && ta.value.trim()) { lastTyping = now; req('/api/typing/' + other, {}).catch(function () {}); }
+      });
+      ta.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey && !e.isComposing && !isTouch) { e.preventDefault(); form.requestSubmit ? form.requestSubmit() : form.dispatchEvent(new Event('submit', { cancelable: true })); }
+        if (e.key === 'Escape') { cancelReply(); cancelEdit(); }
+        if (e.key === 'ArrowUp' && !ta.value) { var mine = Object.keys(byId).map(function (k) { return byId[k]; }).filter(function (m) { return m.mine && m.can_edit && m.body; }).pop(); if (mine) { e.preventDefault(); startEdit(mine); } }
+      });
+      chatSend = function (body, gif) {
+        var tmp = document.createElement('div');
+        tmp.className = 'msg mine pending';
+        tmp.innerHTML = (gif ? '<div class="bubble gif"><img src="' + esc(gif) + '" alt=""></div>' : '') + (body ? '<div class="bubble">' + linkify(body) + '</div>' : '') + '<time>Sending…</time>';
+        var hello = $('.chat-hello', box); if (hello) hello.hidden = true;
+        box.appendChild(tmp); toBottom();
+        var rt = replyTo; cancelReply();
+        return req('/api/conversation/' + other, { body: body, gif: gif || '', reply_to: rt || '' }).then(function (j) { tmp.remove(); render(j.message); toBottom(); })
+          .catch(function (j) { tmp.remove(); if (body) ta.value = body; toast((j && j.error) || 'Message not sent'); });
+      };
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var body = ta.value.trim(); if (!body) return;
+        if (editing) {
+          var id = editing; cancelEdit();
+          req('/api/message/' + id, { action: 'edit', body: body }).then(function (j) { render(j.message); }).catch(function (j) { toast((j && j.error) || 'Couldn\'t edit'); });
+          return;
+        }
+        ta.value = ''; grow(); chatSend(body, null);
+      });
+      if (!isTouch) ta.focus();
+    }
+  }
+
+  // ===== Lounge input emoji (reuses picker) is wired via .js-emoji =====
+
+  // ===== Theme picker =====
+  var tf = $('#theme-form');
+  if (tf) {
+    var apply = function () {
+      var t = tf.querySelector('input[name=theme]:checked').value, m = tf.querySelector('input[name=mode]:checked').value;
+      var root = document.documentElement;
+      if (t === 'navy') delete root.dataset.theme; else root.dataset.theme = t;
+      if (m === 'system') delete root.dataset.mode; else root.dataset.mode = m;
+      try { localStorage.setItem('rr-theme', t); localStorage.setItem('rr-mode', m); } catch (e) {}
+      req('/api/theme', { theme: t, mode: m }).then(function () { toast('Appearance saved'); }).catch(function () { toast('Couldn\'t save'); });
+    };
+    tf.addEventListener('change', apply);
   }
 })();

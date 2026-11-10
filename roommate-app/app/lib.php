@@ -693,3 +693,25 @@ function quiz_badge(?string $type): string
     $t = QUIZ_TYPES[$type];
     return '<span class="type-badge" title="' . e($t['desc']) . '">' . $t['emoji'] . ' ' . e($t['name']) . '</span>';
 }
+
+/** Accept only https GIF links from GIPHY/Tenor or URLs ending in .gif. Returns null otherwise. */
+function clean_gif_url(string $url): ?string
+{
+    $url = trim($url);
+    if ($url === '' || strlen($url) > 500 || !preg_match('~^https://~i', $url) || !filter_var($url, FILTER_VALIDATE_URL)) return null;
+    $host = strtolower((string)parse_url($url, PHP_URL_HOST));
+    $okHost = preg_match('~(^|\.)giphy\.com$~', $host) || preg_match('~(^|\.)tenor\.com$~', $host);
+    $okExt = preg_match('~\.(gif|webp)(\?.*)?$~i', $url);
+    return ($okHost || $okExt) ? $url : null;
+}
+
+/** Facebook-style post reactions. */
+const REACTIONS = [
+    'like' => ['👍', 'Like'], 'love' => ['❤️', 'Love'], 'care' => ['🥰', 'Care'], 'haha' => ['😂', 'Haha'],
+    'wow' => ['😮', 'Wow'], 'sad' => ['😢', 'Sad'], 'angry' => ['😡', 'Angry'],
+];
+
+const THEMES = [
+    'navy' => ['Rise Navy', '#1d4463'], 'ocean' => ['Ocean', '#0369a1'], 'emerald' => ['Emerald', '#047857'],
+    'plum' => ['Plum', '#6b21a8'], 'rose' => ['Rose', '#be123c'], 'sunset' => ['Sunset', '#c2410c'], 'graphite' => ['Graphite', '#374151'],
+];

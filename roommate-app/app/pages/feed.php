@@ -10,7 +10,7 @@ function load_posts(string $where, array $params, int $limit = 20, int $offset =
     $posts = all("SELECT p.*, u.name, u.username, u.avatar, pr.name AS property_name, pr.slug AS property_slug,
             (SELECT COUNT(*) FROM post_likes l WHERE l.post_id = p.id) AS likes,
             (SELECT COUNT(*) FROM comments c WHERE c.post_id = p.id) AS comments,
-            EXISTS(SELECT 1 FROM post_likes l WHERE l.post_id = p.id AND l.user_id = ?) AS liked
+            (SELECT l.reaction FROM post_likes l WHERE l.post_id = p.id AND l.user_id = ?) AS my_reaction
         FROM posts p
         JOIN users u ON u.id = p.user_id AND u.status = 'active'
         LEFT JOIN properties pr ON pr.id = p.property_id
@@ -23,7 +23,12 @@ function load_posts(string $where, array $params, int $limit = 20, int $offset =
             WHERE c.post_id IN ($ids) $blk ORDER BY c.id ASC");
         $byPost = [];
         foreach ($rows as $c) $byPost[$c['post_id']][] = $c;
+        $top = [];
+        foreach (all("SELECT post_id, reaction, COUNT(*) n FROM post_likes WHERE post_id IN ($ids) GROUP BY post_id, reaction ORDER BY n DESC") as $r) {
+            $top[$r['post_id']][] = $r['reaction'];
+        }
         foreach ($posts as &$p) {
+            $p['top_reactions'] = array_slice($top[$p['id']] ?? [], 0, 3);
             $list = $byPost[$p['id']] ?? [];
             $p['comment_list'] = $commentsPer ? array_slice($list, -$commentsPer) : $list;
         }
@@ -87,7 +92,8 @@ function feed_create(): void
         flash('error', $e->getMessage());
         back();
     }
-    if ($body === '' && !$img) {
+    $gif = $img ? null : clean_gif_url((string)($_POST['gif'] ?? ''));
+    if ($body === '' && !$img && !$gif) {
         flash('error', 'Write something to post.');
         back();
     }
@@ -96,7 +102,7 @@ function feed_create(): void
         flash('error', 'You’re posting a bit fast. Try again in a minute.');
         back();
     }
-    q('INSERT INTO posts (user_id, property_id, body, image) VALUES (?, ?, ?, ?)', [$me['id'], $propId, $body, $img]);
+    q('INSERT INTO posts (user_id, property_id, body, image, gif_url) VALUES (?, ?, ?, ?, ?)', [$me['id'], $propId, $body, $img, $gif]);
     flash('success', 'Posted!');
     back('/home');
 }
@@ -119,19 +125,43 @@ function feed_like(string $id): void
     if (!$post || is_blocked_between((int)$me['id'], (int)$post['user_id'])) {
         is_ajax() ? json_out(['error' => 'Post not found'], 404) : not_found();
     }
-    if (val('SELECT 1 FROM post_likes WHERE post_id = ? AND user_id = ?', [$post['id'], $me['id']])) {
+    $want = input('reaction');
+    $want = array_key_exists($want, REACTIONS) ? $want : null;
+    $current = val('SELECT reaction FROM post_likes WHERE post_id = ? AND user_id = ?', [$post['id'], $me['id']]);
+    if ($current && (!$want || $want === $current)) {
         q('DELETE FROM post_likes WHERE post_id = ? AND user_id = ?', [$post['id'], $me['id']]);
-        $liked = false;
+        $mine = null;
     } else {
-        q('INSERT IGNORE INTO post_likes (post_id, user_id) VALUES (?, ?)', [$post['id'], $me['id']]);
-        $liked = true;
-        if (!val("SELECT 1 FROM notifications WHERE user_id = ? AND actor_id = ? AND type = 'like' AND entity_id = ?", [$post['user_id'], $me['id'], $post['id']])) {
+        $mine = $want ?: 'like';
+        q('INSERT INTO post_likes (post_id, user_id, reaction) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE reaction = VALUES(reaction)', [$post['id'], $me['id'], $mine]);
+        if (!$current && !val("SELECT 1 FROM notifications WHERE user_id = ? AND actor_id = ? AND type = 'like' AND entity_id = ?", [$post['user_id'], $me['id'], $post['id']])) {
             notify((int)$post['user_id'], 'like', (int)$me['id'], (int)$post['id']);
         }
     }
     $count = (int)val('SELECT COUNT(*) FROM post_likes WHERE post_id = ?', [$post['id']]);
-    if (is_ajax()) json_out(['liked' => $liked, 'likes' => $count]);
+    $top = array_column(all('SELECT reaction, COUNT(*) n FROM post_likes WHERE post_id = ? GROUP BY reaction ORDER BY n DESC LIMIT 3', [$post['id']]), 'reaction');
+    if (is_ajax()) json_out(['reaction' => $mine, 'count' => $count, 'top' => array_map(fn($r) => REACTIONS[$r][0], $top)]);
     back();
+}
+
+/** GIF search, proxied through GIPHY with the key from Admin → Settings. */
+function feed_gifs(): void
+{
+    require_login();
+    $key = setting('giphy_key', '');
+    if ($key === '') json_out(['enabled' => false, 'results' => []]);
+    $q = mb_substr(trim((string)($_GET['q'] ?? '')), 0, 60);
+    $url = 'https://api.giphy.com/v1/gifs/' . ($q === '' ? 'trending?' : 'search?q=' . rawurlencode($q) . '&') . 'limit=24&rating=pg-13&api_key=' . rawurlencode($key);
+    $ctx = stream_context_create(['http' => ['timeout' => 8, 'ignore_errors' => true]]);
+    $data = json_decode((string)@file_get_contents($url, false, $ctx), true);
+    $out = [];
+    foreach ($data['data'] ?? [] as $g) {
+        $img = $g['images'] ?? [];
+        $full = $img['downsized_medium']['url'] ?? $img['original']['url'] ?? null;
+        $thumb = $img['fixed_width_small']['url'] ?? $img['fixed_width']['url'] ?? $full;
+        if ($full && clean_gif_url($full)) $out[] = ['url' => $full, 'thumb' => $thumb, 'title' => $g['title'] ?? ''];
+    }
+    json_out(['enabled' => true, 'results' => $out]);
 }
 
 function feed_comment(string $id): void
@@ -140,8 +170,9 @@ function feed_comment(string $id): void
     $post = one("SELECT * FROM posts WHERE id = ? AND status = 'visible'", [(int)$id]);
     if (!$post || is_blocked_between((int)$me['id'], (int)$post['user_id'])) not_found();
     $body = mb_substr(input('body'), 0, 1000);
-    if ($body !== '') {
-        q('INSERT INTO comments (post_id, user_id, body) VALUES (?, ?, ?)', [$post['id'], $me['id'], $body]);
+    $gif = clean_gif_url((string)($_POST['gif'] ?? ''));
+    if ($body !== '' || $gif) {
+        q('INSERT INTO comments (post_id, user_id, body, gif_url) VALUES (?, ?, ?, ?)', [$post['id'], $me['id'], $body, $gif]);
         notify((int)$post['user_id'], 'comment', (int)$me['id'], (int)$post['id']);
     }
     $ref = $_SERVER['HTTP_REFERER'] ?? '/post/' . $post['id'];

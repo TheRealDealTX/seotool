@@ -72,7 +72,11 @@ function migrate(): void
     }
     // Columns added after the first release (CREATE TABLE IF NOT EXISTS won't add them).
     $addCols = [
-        'users' => ['is_demo' => 'TINYINT(1) NOT NULL DEFAULT 0', 'quiz_type' => 'VARCHAR(30) NULL', 'typing_to' => 'INT UNSIGNED NULL', 'typing_at' => 'DATETIME NULL'],
+        'messages' => ['gif_url' => 'VARCHAR(500) NULL', 'reply_to' => 'INT UNSIGNED NULL', 'edited_at' => 'DATETIME NULL', 'deleted_at' => 'DATETIME NULL', 'updated_at' => 'DATETIME(6) NULL'],
+        'post_likes' => ['reaction' => "VARCHAR(16) NOT NULL DEFAULT 'like'"],
+        'posts' => ['gif_url' => 'VARCHAR(500) NULL'],
+        'comments' => ['gif_url' => 'VARCHAR(500) NULL'],
+        'users' => ['theme' => 'VARCHAR(20) NULL', 'color_mode' => 'VARCHAR(10) NULL', 'is_demo' => 'TINYINT(1) NOT NULL DEFAULT 0', 'quiz_type' => 'VARCHAR(30) NULL', 'typing_to' => 'INT UNSIGNED NULL', 'typing_at' => 'DATETIME NULL'],
         'properties' => [
             'external_id' => 'INT UNSIGNED NULL', 'external_url' => 'VARCHAR(255) NULL', 'image_url' => 'VARCHAR(500) NULL',
         ],
@@ -81,6 +85,13 @@ function migrate(): void
         $have = array_column(all("SHOW COLUMNS FROM `$table`"), 'Field');
         foreach ($cols as $col => $def) {
             if (!in_array($col, $have, true)) db()->exec("ALTER TABLE `$table` ADD COLUMN `$col` $def");
+        }
+    }
+    $indexes = ['messages' => ['idx_msg_updated' => '(conversation_id, updated_at)']];
+    foreach ($indexes as $table => $list) {
+        $have = array_column(all("SHOW INDEX FROM `$table`"), 'Key_name');
+        foreach ($list as $name => $cols) {
+            if (!in_array($name, $have, true)) db()->exec("ALTER TABLE `$table` ADD INDEX `$name` $cols");
         }
     }
     $defaults = [
@@ -95,6 +106,7 @@ function migrate(): void
         'sync_source' => 'https://riseapartments.com',
         'last_sync' => '',
         'admin_email' => '',
+        'giphy_key' => '',
     ];
     foreach ($defaults as $k => $v) {
         q('INSERT IGNORE INTO settings (k, v) VALUES (?, ?)', [$k, $v]);

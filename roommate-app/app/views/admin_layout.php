@@ -5,9 +5,11 @@ $on = fn($p, $exact = false) => ($exact ? $path === $p : ($path === $p || str_st
 $openReports = (int)val("SELECT COUNT(*) FROM reports WHERE status = 'open'");
 $pendingProps = (int)val("SELECT COUNT(*) FROM properties WHERE status = 'pending'");
 ?><!doctype html>
-<html lang="en">
+<?php $__u = current_user(); $__theme = $__u['theme'] ?? null; $__mode = $__u['color_mode'] ?? null; ?>
+<html lang="en"<?= $__theme && $__theme !== 'navy' ? ' data-theme="' . e($__theme) . '"' : '' ?><?= $__mode && $__mode !== 'system' ? ' data-mode="' . e($__mode) . '"' : '' ?>>
 <head>
 <meta charset="utf-8">
+<?php if (!$__u): ?><script>try{var t=localStorage.getItem('rr-theme'),m=localStorage.getItem('rr-mode');if(t&&t!=='navy')document.documentElement.dataset.theme=t;if(m&&m!=='system')document.documentElement.dataset.mode=m;}catch(e){}</script><?php endif; ?>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?= e(($title ?? 'Admin') . ' · ' . setting('site_name') . ' Admin') ?></title>
 <meta name="robots" content="noindex">
