@@ -22,6 +22,9 @@ function notification_text(array $n): array
         'like' => ["$who liked your post.", '/post/' . (int)$n['entity_id']],
         'comment' => ["$who commented on your post.", '/post/' . (int)$n['entity_id']],
         'property_approved' => ['A property you submitted was approved.', '/properties'],
+        'match' => ["💘 You and $who matched! You're now friends.", '/messages/' . ($n['username'] ?? '')],
+        'agreement' => ["$who updated your roommate agreement.", '/agreement/' . ($n['username'] ?? '')],
+        'agreement_signed' => ["$who signed your roommate agreement.", '/agreement/' . ($n['username'] ?? '')],
         default => ['You have a new notification.', '/home'],
     };
 }

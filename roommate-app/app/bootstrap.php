@@ -72,7 +72,7 @@ function migrate(): void
     }
     // Columns added after the first release (CREATE TABLE IF NOT EXISTS won't add them).
     $addCols = [
-        'users' => ['is_demo' => 'TINYINT(1) NOT NULL DEFAULT 0'],
+        'users' => ['is_demo' => 'TINYINT(1) NOT NULL DEFAULT 0', 'quiz_type' => 'VARCHAR(30) NULL', 'typing_to' => 'INT UNSIGNED NULL', 'typing_at' => 'DATETIME NULL'],
         'properties' => [
             'external_id' => 'INT UNSIGNED NULL', 'external_url' => 'VARCHAR(255) NULL', 'image_url' => 'VARCHAR(500) NULL',
         ],

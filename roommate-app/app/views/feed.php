@@ -11,6 +11,13 @@
       <?php endif; ?>
     </div>
     <div class="card side-card">
+      <h3 class="side-title">Profile views <span class="count"><?= $views7 ?></span> <small class="muted">this week</small></h3>
+      <?php if ($viewers): ?>
+      <div class="avatar-row"><?php foreach ($viewers as $v): ?><a href="/u/<?= e($v['username']) ?>" title="<?= e($v['name']) ?> · <?= e(time_ago($v['viewed_at'])) ?>"><?= avatar($v, 'sm') ?></a><?php endforeach; ?></div>
+      <?php else: ?><p class="muted small">No views yet. A complete profile with a photo gets noticed.</p><?php endif; ?>
+      <?php if ($likedMe): ?><a class="liked-you" href="/match">💘 <strong><?= $likedMe ?></strong> <?= $likedMe === 1 ? 'person likes' : 'people like' ?> you — swipe to find out who</a><?php endif; ?>
+    </div>
+    <div class="card side-card">
       <h3 class="side-title">My properties</h3>
       <?php if ($myProps): ?>
         <ul class="side-list"><?php foreach ($myProps as $mp): ?><li><a href="/properties/<?= e($mp['slug']) ?>"><?= icon('building') ?><?= e($mp['name']) ?></a></li><?php endforeach; ?></ul>
@@ -75,6 +82,13 @@
         <?php endforeach; ?>
       </ul>
       <a class="btn btn-sm btn-outline btn-block" href="/discover">See all matches</a>
+    </div>
+    <div class="card side-card tools-mini">
+      <h3 class="side-title">Roommate tools</h3>
+      <a href="/match">💘 Roommate Match</a>
+      <a href="/quiz">🧩 Roommate Quiz</a>
+      <a href="/tools/rent-split">🧮 Rent split calculator</a>
+      <a href="/agreements">📝 Roommate agreements</a>
     </div>
     <div class="card side-card small muted">
       <a href="/safety">Safety tips</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a><br>© <?= date('Y') ?> <?= e(setting('site_name')) ?>

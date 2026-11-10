@@ -20,6 +20,7 @@
       <header class="chat-head">
         <a class="iconbtn chat-back" href="/messages" aria-label="Back"><?= icon('back') ?></a>
         <a href="/u/<?= e($other['username']) ?>" class="chat-who"><?= avatar($other, 'sm') ?><div><strong><?= e($other['name']) ?></strong><small class="muted"><?= is_online($other) ? 'Online now' : ($other['last_seen'] ? 'Active ' . e(time_ago($other['last_seen'])) . ' ago' : '') ?></small></div></a>
+        <?php if ($fstatus === 'friends'): ?><a class="btn btn-ghost btn-sm hide-sm" href="/agreement/<?= e($other['username']) ?>" title="Roommate agreement">📝 Agreement</a><?php endif; ?>
         <a class="btn btn-outline btn-sm" href="/u/<?= e($other['username']) ?>">Profile</a>
       </header>
       <div class="chat-msgs" id="chat-msgs" data-other="<?= (int)$other['id'] ?>" data-last="<?= $msgs ? (int)end($msgs)['id'] : 0 ?>">
@@ -30,9 +31,10 @@
           <div class="msg <?= (int)$m['sender_id'] === uid() ? 'mine' : 'theirs' ?>" data-id="<?= (int)$m['id'] ?>"><div class="bubble"><?= linkify($m['body']) ?></div><time><?= e(date('g:i A', strtotime($m['created_at']))) ?></time></div>
         <?php endforeach; ?>
       </div>
+      <div class="typing" id="typing" hidden><span></span><span></span><span></span> <?= e(explode(' ', $other['name'])[0]) ?> is typing</div>
       <?php if ($canMessage): ?>
       <form class="chat-form" id="chat-form" data-other="<?= (int)$other['id'] ?>">
-        <textarea name="body" rows="1" maxlength="4000" placeholder="Write a message…" required class="autogrow"></textarea>
+        <textarea name="body" rows="1" maxlength="4000" placeholder="Write a message…" required class="autogrow"><?= e(mb_substr((string)($_GET['draft'] ?? ''), 0, 2000)) ?></textarea>
         <button class="btn btn-primary btn-icon" type="submit" aria-label="Send"><?= icon('send') ?></button>
       </form>
       <?php else: ?>

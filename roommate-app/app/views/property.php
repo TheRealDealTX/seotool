@@ -35,6 +35,14 @@
       </div>
     </section>
     <aside>
+      <section class="card lounge" id="lounge" data-pid="<?= (int)$p['id'] ?>">
+        <div class="lounge-head"><h3><?= icon('chat') ?> Property lounge</h3><span class="muted small" id="lounge-online"></span></div>
+        <p class="muted small lounge-sub">Group chat for everyone interested in <?= e($p['name']) ?>.</p>
+        <div class="lounge-msgs" id="lounge-msgs"><p class="muted small center">Loading…</p></div>
+        <?php if ($interested): ?>
+        <form class="lounge-form" id="lounge-form"><input type="text" name="body" maxlength="1000" placeholder="Say hi to the group…" required autocomplete="off"><button class="btn btn-primary btn-icon" aria-label="Send"><?= icon('send') ?></button></form>
+        <?php else: ?><p class="small center lounge-join">Mark yourself as interested to join the conversation.</p><?php endif; ?>
+      </section>
       <h2 class="section-sub">Posts about this property</h2>
       <?php if ($interested): ?>
       <form method="post" action="/post" class="card composer">

@@ -63,7 +63,12 @@ function feed_home(): void
     }
     usort($suggest, fn($a, $b) => $b['m']['score'] <=> $a['m']['score']);
 
+    $viewers = all("SELECT u.id, u.name, u.username, u.avatar, v.viewed_at FROM profile_views v JOIN users u ON u.id = v.viewer_id AND u.status = 'active'
+        WHERE v.viewed_id = ? ORDER BY v.viewed_at DESC LIMIT 6", [$me['id']]);
+    $views7 = (int)val('SELECT COUNT(*) FROM profile_views WHERE viewed_id = ? AND viewed_at > (NOW() - INTERVAL 7 DAY)', [$me['id']]);
+    $likedMe = (int)val("SELECT COUNT(*) FROM swipes s WHERE s.target_id = ? AND s.liked = 1 AND NOT EXISTS (SELECT 1 FROM swipes t WHERE t.user_id = ? AND t.target_id = s.user_id)", [$me['id'], $me['id']]);
     render('feed', [
+        'viewers' => $viewers, 'views7' => $views7, 'likedMe' => $likedMe,
         'title' => 'Feed', 'posts' => $posts, 'tab' => $tab, 'page' => $page, 'myProps' => $myProps,
         'suggest' => array_slice($suggest, 0, 5), 'completeness' => profile_completeness($me),
         'mainClass' => 'main-wide',

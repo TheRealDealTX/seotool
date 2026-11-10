@@ -7,6 +7,8 @@
         <h1><?= e($u['name']) ?><?php if ($u['is_verified']): ?> <span class="verified" title="Verified member"><?= icon('check') ?></span><?php endif; ?><?php if (age_of($u)): ?><span class="age">, <?= age_of($u) ?></span><?php endif; ?></h1>
         <p class="muted">@<?= e($u['username']) ?> · <?= e(label('looking_for', $u['looking_for'])) ?><?= $u['city'] ? ' · ' . e($u['city']) : '' ?></p>
         <p class="muted small"><?= $friendCount ?> friend<?= $friendCount === 1 ? '' : 's' ?><?= $mutualCount ? " · $mutualCount mutual" : '' ?> · Joined <?= e(date('M Y', strtotime($u['created_at']))) ?><?= !is_online($u) && $u['last_seen'] ? ' · Active ' . e(time_ago($u['last_seen'])) . ' ago' : '' ?></p>
+        <?= quiz_badge($u['quiz_type']) ?>
+        <?php if ($isMe && !$u['quiz_type']): ?><a class="type-badge type-badge-cta" href="/quiz">🧩 Take the roommate quiz</a><?php endif; ?>
         <?php if ($u['status'] !== 'active'): ?><span class="tag tag-danger">Suspended</span><?php endif; ?>
       </div>
       <div class="profile-actions">
@@ -18,6 +20,7 @@
           <details class="menu menu-right">
             <summary class="btn btn-outline btn-icon" aria-label="More"><?= icon('more') ?></summary>
             <div class="menu-pop">
+              <?php if ($fstatus === 'friends'): ?><a href="/agreement/<?= e($u['username']) ?>">📝 Roommate agreement</a><?php endif; ?>
               <button type="button" class="js-report" data-type="user" data-id="<?= (int)$u['id'] ?>"><?= icon('flag') ?> Report profile</button>
               <form method="post" action="/block/<?= (int)$u['id'] ?>" data-confirm="Block <?= e($u['name']) ?>? They won't be able to see your profile or message you."><?= csrf_field() ?><button type="submit"><?= icon('ban') ?> Block</button></form>
               <?php if (is_admin()): ?><a href="/admin/users/<?= (int)$u['id'] ?>"><?= icon('shield') ?> Manage in admin</a><?php endif; ?>

@@ -8,6 +8,7 @@
     </div>
     <?php if (isset($match)): ?><span class="score <?= score_class($match['score']) ?>" title="Compatibility"><?= $match['score'] ?>%</span><?php endif; ?>
   </a>
+  <?php if (!empty($u['quiz_type'])): ?><div><?= quiz_badge($u['quiz_type']) ?></div><?php endif; ?>
   <div class="chips">
     <?php if (budget_label($u)): ?><span class="chip"><?= icon('dollar') ?><?= e(budget_label($u)) ?></span><?php endif; ?>
     <?php if ($u['move_in_date']): ?><span class="chip"><?= icon('calendar') ?><?= e(date('M j', strtotime($u['move_in_date']))) ?></span><?php endif; ?>

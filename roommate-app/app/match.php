@@ -92,6 +92,12 @@ function match_score(array $a, array $b, int $sharedProps = 0): array
     }
     if ($petClash) $reasons[] = 'Pet preferences differ';
 
+    // Roommate personality types (from the quiz).
+    if (!empty($a['quiz_type']) && !empty($b['quiz_type']) && isset(QUIZ_TYPES[$a['quiz_type']])) {
+        if ($a['quiz_type'] === $b['quiz_type']) { $score = min(100, $score + 5); $reasons[] = 'Same roommate type'; }
+        elseif (in_array($b['quiz_type'], QUIZ_TYPES[$a['quiz_type']]['best'], true)) { $score = min(100, $score + 3); $reasons[] = 'Compatible roommate types'; }
+    }
+
     // Shared interests.
     $ia = array_filter(array_map(fn($s) => strtolower(trim($s)), explode(',', (string)$a['interests'])));
     $ib = array_filter(array_map(fn($s) => strtolower(trim($s)), explode(',', (string)$b['interests'])));

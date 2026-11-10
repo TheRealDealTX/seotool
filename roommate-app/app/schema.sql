@@ -10,6 +10,9 @@ CREATE TABLE IF NOT EXISTS users (
   status ENUM('active','suspended') NOT NULL DEFAULT 'active',
   is_verified TINYINT(1) NOT NULL DEFAULT 0,
   is_demo TINYINT(1) NOT NULL DEFAULT 0,
+  quiz_type VARCHAR(30) NULL,
+  typing_to INT UNSIGNED NULL,
+  typing_at DATETIME NULL,
   avatar VARCHAR(255) NULL,
   bio TEXT NULL,
   birth_year SMALLINT NULL,
@@ -203,4 +206,50 @@ CREATE TABLE IF NOT EXISTS login_attempts (
   email VARCHAR(190) NULL,
   created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   INDEX idx_la (ip, created_at)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS swipes (
+  user_id INT UNSIGNED NOT NULL,
+  target_id INT UNSIGNED NOT NULL,
+  liked TINYINT(1) NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (user_id, target_id),
+  INDEX idx_swipe_target (target_id, liked),
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (target_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS profile_views (
+  viewer_id INT UNSIGNED NOT NULL,
+  viewed_id INT UNSIGNED NOT NULL,
+  viewed_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (viewer_id, viewed_id),
+  INDEX idx_pv_viewed (viewed_id, viewed_at),
+  FOREIGN KEY (viewer_id) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (viewed_id) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS agreements (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_a INT UNSIGNED NOT NULL,
+  user_b INT UNSIGNED NOT NULL,
+  data TEXT NOT NULL,
+  signed_a DATETIME NULL,
+  signed_b DATETIME NULL,
+  updated_by INT UNSIGNED NULL,
+  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  UNIQUE KEY uq_agreement (user_a, user_b),
+  FOREIGN KEY (user_a) REFERENCES users(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_b) REFERENCES users(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS property_messages (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  property_id INT UNSIGNED NOT NULL,
+  user_id INT UNSIGNED NOT NULL,
+  body TEXT NOT NULL,
+  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  INDEX idx_pm_prop (property_id, id),
+  FOREIGN KEY (property_id) REFERENCES properties(id) ON DELETE CASCADE,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

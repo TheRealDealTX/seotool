@@ -119,3 +119,32 @@ function properties_search(): void
         ORDER BY (name LIKE ?) DESC, name LIMIT 20", [$l, $l, $l, $l, $qs . '%']);
     json_out(['results' => array_map(fn($r) => ['id' => (int)$r['id'], 'name' => $r['name'], 'city' => (string)$r['city']], $rows)]);
 }
+
+function properties_lounge(string $id): void
+{
+    $me = require_login();
+    $p = one("SELECT id, name FROM properties WHERE id = ? AND status = 'approved'", [(int)$id]);
+    if (!$p) json_out(['error' => 'Property not found'], 404);
+    $member = (bool)val('SELECT 1 FROM user_properties WHERE user_id = ? AND property_id = ?', [$me['id'], $p['id']]);
+    if (is_post()) {
+        if (!$member) json_out(['error' => 'Mark yourself as interested in this property to join the lounge.'], 403);
+        $body = mb_substr(trim((string)($_POST['body'] ?? '')), 0, 1000);
+        if ($body === '') json_out(['error' => 'Message is empty'], 422);
+        if ((int)val('SELECT COUNT(*) FROM property_messages WHERE user_id = ? AND created_at > (NOW() - INTERVAL 1 MINUTE)', [$me['id']]) >= 10) {
+            json_out(['error' => 'Slow down a little.'], 429);
+        }
+        q('INSERT INTO property_messages (property_id, user_id, body) VALUES (?, ?, ?)', [$p['id'], $me['id'], $body]);
+    }
+    $after = (int)($_GET['after'] ?? 0);
+    $blocked = blocked_ids((int)$me['id']);
+    $blk = $blocked ? ' AND m.user_id NOT IN (' . implode(',', $blocked) . ')' : '';
+    $rows = $after
+        ? all("SELECT m.*, u.name, u.username, u.avatar FROM property_messages m JOIN users u ON u.id = m.user_id AND u.status = 'active' WHERE m.property_id = ? AND m.id > ? $blk ORDER BY m.id ASC LIMIT 100", [$p['id'], $after])
+        : array_reverse(all("SELECT m.*, u.name, u.username, u.avatar FROM property_messages m JOIN users u ON u.id = m.user_id AND u.status = 'active' WHERE m.property_id = ? $blk ORDER BY m.id DESC LIMIT 60", [$p['id']]));
+    $online = (int)val("SELECT COUNT(*) FROM user_properties up JOIN users u ON u.id = up.user_id WHERE up.property_id = ? AND u.last_seen > (NOW() - INTERVAL 5 MINUTE)", [$p['id']]);
+    json_out(['member' => $member, 'online' => $online, 'messages' => array_map(fn($m) => [
+        'id' => (int)$m['id'], 'mine' => (int)$m['user_id'] === (int)$me['id'], 'name' => $m['name'], 'username' => $m['username'],
+        'avatar' => avatar_url($m), 'initials' => mb_strtoupper(mb_substr($m['name'], 0, 1)), 'hue' => crc32($m['name']) % 360,
+        'body' => $m['body'], 'time' => time_ago($m['created_at']),
+    ], $rows)]);
+}

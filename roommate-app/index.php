@@ -50,6 +50,17 @@ $routes = [
 
     ['GET', '/notifications', 'notifications', 'notifications_index'],
 
+    ['GET', '/match', 'match', 'match_index'],
+    ['POST', '/api/swipe', 'match', 'match_swipe'],
+    ['GET', '/matches', 'match', 'match_list'],
+    ['GET|POST', '/quiz', 'quiz', 'quiz_index'],
+    ['GET', '/tools', 'tools', 'tools_index'],
+    ['GET', '/tools/rent-split', 'tools', 'tools_rent'],
+    ['GET', '/agreements', 'agreement', 'agreement_list'],
+    ['GET|POST', '/agreement/([A-Za-z0-9_]+)', 'agreement', 'agreement_show'],
+    ['GET|POST', '/api/lounge/(\d+)', 'properties', 'properties_lounge'],
+    ['POST', '/api/typing/(\d+)', 'messages', 'messages_typing'],
+
     ['GET', '/admin', 'admin', 'admin_dashboard'],
     ['GET|POST', '/admin/users', 'admin', 'admin_users'],
     ['GET|POST', '/admin/users/(\d+)', 'admin', 'admin_user'],

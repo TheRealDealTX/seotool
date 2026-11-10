@@ -432,6 +432,9 @@ function notify(int $userId, string $type, ?int $actorId = null, ?int $entityId 
         'friend_accept' => ["$who accepted your friend request", "You and $who are now friends.\n\nSay hi: $b/messages/" . ($actor['username'] ?? '')],
         'message' => ["New message from $who", "$who sent you a message.\n\nRead and reply: $b/messages/" . ($actor['username'] ?? '')],
         'comment' => ["$who commented on your post", "Read it: $b/post/" . (int)$entityId],
+        'match' => ["You matched with $who!", "You and $who liked each other on Roommate Match, so you're now friends.\n\nSay hi: $b/messages/" . ($actor['username'] ?? '')],
+        'agreement' => ["$who updated your roommate agreement", "Review it and sign when you're ready: $b/agreement/" . ($actor['username'] ?? '')],
+        'agreement_signed' => ["$who signed your roommate agreement", "See it here: $b/agreement/" . ($actor['username'] ?? '')],
         'property_approved' => ['Your property was approved', "A property you submitted is now live. Renters can pick it and find you.\n\n$b/properties"],
         default => null,
     };
@@ -672,4 +675,20 @@ function sync_rise_page(int $page): array
     }
     $totalPages = (int)($headers['x-wp-totalpages'] ?? ($items ? $page + 1 : $page));
     return ['page' => $page, 'total_pages' => $totalPages, 'added' => $added, 'updated' => $updated];
+}
+
+const QUIZ_TYPES = [
+    'planner' => ['name' => 'The Neat Planner', 'emoji' => '🗂️', 'desc' => 'Organized, tidy and reliable. You like a calm, clean home, shared chore charts and bills paid on time.', 'best' => ['planner', 'pro', 'homebody']],
+    'social' => ['name' => 'The Social Host', 'emoji' => '🎉', 'desc' => 'Your place is where friends gather. You love game nights, cooking for people and a lively home.', 'best' => ['social', 'adventurer']],
+    'owl' => ['name' => 'The Night Owl', 'emoji' => '🦉', 'desc' => 'You come alive after dark — late shifts, creative projects or gaming. You keep it quiet, just late.', 'best' => ['owl', 'homebody']],
+    'homebody' => ['name' => 'The Chill Homebody', 'emoji' => '🛋️', 'desc' => 'Cozy nights in, low drama, easygoing. You want a peaceful home and a roommate who respects downtime.', 'best' => ['homebody', 'planner', 'owl']],
+    'pro' => ['name' => 'The Busy Professional', 'emoji' => '💼', 'desc' => 'Work, gym, sleep, repeat. You\'re rarely home, value quiet mornings and want a roommate who\'s low-maintenance.', 'best' => ['pro', 'planner', 'adventurer']],
+    'adventurer' => ['name' => 'The Adventurer', 'emoji' => '🧭', 'desc' => 'Always out exploring — trips, concerts, hikes. Flexible, spontaneous and easy to live with.', 'best' => ['adventurer', 'social', 'pro']],
+];
+
+function quiz_badge(?string $type): string
+{
+    if (!$type || !isset(QUIZ_TYPES[$type])) return '';
+    $t = QUIZ_TYPES[$type];
+    return '<span class="type-badge" title="' . e($t['desc']) . '">' . $t['emoji'] . ' ' . e($t['name']) . '</span>';
 }

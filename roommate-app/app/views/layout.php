@@ -29,6 +29,7 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
     <?php if ($me): ?>
     <nav class="mainnav" aria-label="Main">
       <a href="/home"<?= $active('/home') ?>><?= icon('home') ?><span>Feed</span></a>
+      <a href="/match"<?= $active('/match') ?>><?= icon('heart') ?><span>Match</span></a>
       <a href="/discover"<?= $active('/discover') ?>><?= icon('search') ?><span>Discover</span></a>
       <a href="/properties"<?= $active('/properties') ?>><?= icon('building') ?><span>Properties</span></a>
       <a href="/friends"<?= $active('/friends') ?>><?= icon('users') ?><span>Friends</span><?= $badge($counts['requests']) ?></a>
@@ -42,6 +43,8 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
           <div class="menu-head"><strong><?= e($me['name']) ?></strong><small>@<?= e($me['username']) ?></small></div>
           <a href="/u/<?= e($me['username']) ?>"><?= icon('user') ?> My profile</a>
           <a href="/profile/edit"><?= icon('edit') ?> Edit profile</a>
+          <a href="/matches"><?= icon('heart') ?> My matches</a>
+          <a href="/tools"><?= icon('sparkle') ?> Roommate tools</a>
           <a href="/settings"><?= icon('gear') ?> Settings</a>
           <?php if ($me['role'] === 'admin'): ?><a href="/admin"><?= icon('shield') ?> Admin panel</a><?php endif; ?>
           <a href="/safety"><?= icon('info') ?> Safety tips</a>
@@ -67,6 +70,7 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
 <?php if ($me): ?>
 <nav class="tabbar" aria-label="Main">
   <a href="/home"<?= $active('/home') ?>><?= icon('home') ?><span>Feed</span></a>
+  <a href="/match"<?= $active('/match') ?>><?= icon('heart') ?><span>Match</span></a>
   <a href="/discover"<?= $active('/discover') ?>><?= icon('search') ?><span>Discover</span></a>
   <a href="/properties"<?= $active('/properties') ?>><?= icon('building') ?><span>Places</span></a>
   <a href="/friends"<?= $active('/friends') ?>><?= icon('users') ?><span>Friends</span><?= $badge($counts['requests']) ?></a>

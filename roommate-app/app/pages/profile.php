@@ -15,6 +15,9 @@ function profile_show(string $username): void
         render('error', ['title' => 'Private profile', 'message' => 'This member has hidden their profile.']);
         return;
     }
+    if (!$isMe) {
+        q('INSERT INTO profile_views (viewer_id, viewed_id) VALUES (?, ?) ON DUPLICATE KEY UPDATE viewed_at = NOW()', [$me['id'], $u['id']]);
+    }
     $props = all("SELECT p.*, EXISTS(SELECT 1 FROM user_properties x WHERE x.user_id = ? AND x.property_id = p.id) AS shared
         FROM properties p JOIN user_properties up ON up.property_id = p.id
         WHERE up.user_id = ? AND p.status = 'approved' ORDER BY p.name", [$me['id'], $u['id']]);

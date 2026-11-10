@@ -74,6 +74,7 @@ function messages_api(string $otherId): void
         $cid = find_conversation($myId, $oid, true);
         q('INSERT INTO messages (conversation_id, sender_id, body) VALUES (?, ?, ?)', [$cid, $myId, $body]);
         $mid = (int)db()->lastInsertId();
+        q('UPDATE users SET typing_at = NULL WHERE id = ?', [$myId]);
         q('UPDATE conversations SET last_message_at = NOW() WHERE id = ?', [$cid]);
         // One unread "message" notification per sender at a time.
         if (!val("SELECT 1 FROM notifications WHERE user_id = ? AND actor_id = ? AND type = 'message' AND is_read = 0", [$oid, $myId])) {
@@ -94,7 +95,15 @@ function messages_api(string $otherId): void
         q('UPDATE messages SET read_at = NOW() WHERE conversation_id = ? AND sender_id <> ? AND read_at IS NULL', [$cid, $myId]);
         $lastRead = (int)val('SELECT MAX(id) FROM messages WHERE conversation_id = ? AND sender_id = ? AND read_at IS NOT NULL', [$cid, $myId]);
     }
-    json_out(['messages' => $out, 'last_read' => $lastRead, 'counts' => unread_counts($myId)]);
+    $typing = (bool)val('SELECT 1 FROM users WHERE id = ? AND typing_to = ? AND typing_at > (NOW() - INTERVAL 6 SECOND)', [$oid, $myId]);
+    json_out(['messages' => $out, 'last_read' => $lastRead, 'typing' => $typing, 'counts' => unread_counts($myId)]);
+}
+
+function messages_typing(string $otherId): void
+{
+    $me = require_login();
+    q('UPDATE users SET typing_to = ?, typing_at = NOW() WHERE id = ?', [(int)$otherId, $me['id']]);
+    json_out(['ok' => true]);
 }
 
 function format_msg(array $m, int $me): array
