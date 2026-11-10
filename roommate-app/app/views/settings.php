@@ -30,7 +30,7 @@
     <ul class="people-list">
       <?php foreach ($blocked as $b): ?>
       <li><?= avatar($b, 'sm') ?><span class="grow"><?= e($b['name']) ?> <small class="muted">@<?= e($b['username']) ?></small></span>
-        <form method="post" action="/unblock/<?= (int)$b['id'] ?>"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Unblock</button></form></li>
+        <div class="pl-actions"><form method="post" action="/unblock/<?= (int)$b['id'] ?>"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Unblock</button></form></div></li>
       <?php endforeach; ?>
     </ul>
   </section>

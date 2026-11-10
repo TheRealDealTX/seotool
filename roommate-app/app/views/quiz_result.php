@@ -16,7 +16,7 @@
   <h2 class="section-sub">Renters you'd vibe with</h2>
   <ul class="card people-list big">
     <?php foreach ($people as $p): ?>
-    <li><a href="/u/<?= e($p['username']) ?>"><?= avatar($p, 'md') ?></a><div class="grow"><a class="strong" href="/u/<?= e($p['username']) ?>"><?= e($p['name']) ?></a><small class="muted"><?= quiz_badge($p['quiz_type']) ?> <?= e($p['city']) ?></small></div><a class="btn btn-outline btn-sm" href="/messages/<?= e($p['username']) ?>">Message</a></li>
+    <li><a href="/u/<?= e($p['username']) ?>"><?= avatar($p, 'md') ?></a><div class="grow"><a class="strong" href="/u/<?= e($p['username']) ?>"><?= e($p['name']) ?></a><small class="muted"><?= quiz_badge($p['quiz_type']) ?> <?= e($p['city']) ?></small></div><div class="pl-actions"><a class="btn btn-outline btn-sm" href="/messages/<?= e($p['username']) ?>">Message</a></div></li>
     <?php endforeach; ?>
   </ul>
   <?php endif; ?>

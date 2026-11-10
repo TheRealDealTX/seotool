@@ -14,8 +14,10 @@
         <a href="/u/<?= e($u['username']) ?>"><?= avatar($u, 'md') ?></a>
         <div class="grow"><a class="strong" href="/u/<?= e($u['username']) ?>"><?= e($u['name']) ?></a><small class="muted"><?= e(label('looking_for', $u['looking_for'])) ?> · requested <?= e(time_ago($u['requested_at'])) ?></small></div>
         <span class="score sm <?= score_class($u['_match']['score']) ?>"><?= $u['_match']['score'] ?>%</span>
-        <form method="post" action="/friend/<?= (int)$u['id'] ?>/accept"><?= csrf_field() ?><button class="btn btn-primary btn-sm" type="submit">Accept</button></form>
-        <form method="post" action="/friend/<?= (int)$u['id'] ?>/decline"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Decline</button></form>
+        <div class="pl-actions">
+          <form method="post" action="/friend/<?= (int)$u['id'] ?>/accept"><?= csrf_field() ?><button class="btn btn-primary btn-sm" type="submit">Accept</button></form>
+          <form method="post" action="/friend/<?= (int)$u['id'] ?>/decline"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Decline</button></form>
+        </div>
       </li>
       <?php endforeach; ?>
     </ul>
@@ -26,7 +28,7 @@
       <li>
         <a href="/u/<?= e($u['username']) ?>"><?= avatar($u, 'md') ?></a>
         <div class="grow"><a class="strong" href="/u/<?= e($u['username']) ?>"><?= e($u['name']) ?></a><small class="muted">Sent <?= e(time_ago($u['requested_at'])) ?></small></div>
-        <form method="post" action="/friend/<?= (int)$u['id'] ?>/cancel"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Cancel</button></form>
+        <div class="pl-actions"><form method="post" action="/friend/<?= (int)$u['id'] ?>/cancel"><?= csrf_field() ?><button class="btn btn-outline btn-sm" type="submit">Cancel</button></form></div>
       </li>
       <?php endforeach; ?>
     </ul>

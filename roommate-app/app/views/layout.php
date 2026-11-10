@@ -34,8 +34,10 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
       <a href="/properties"<?= $active('/properties') ?>><?= icon('building') ?><span>Properties</span></a>
       <a href="/friends"<?= $active('/friends') ?>><?= icon('users') ?><span>Friends</span><?= $badge($counts['requests']) ?></a>
       <a href="/messages"<?= $active('/messages') ?> data-count="messages"><?= icon('chat') ?><span>Messages</span><?= $badge($counts['messages']) ?></a>
+      <a href="/tools"<?= $active('/tools') ?>><?= icon('tools') ?><span>Tools</span></a>
     </nav>
     <div class="topbar-right">
+      <a class="iconbtn tools-btn<?= str_starts_with($path, '/tools') || in_array($path, ['/quiz', '/agreements'], true) || str_starts_with($path, '/agreement/') ? ' active' : '' ?>" href="/tools" aria-label="Roommate tools" title="Roommate tools"><?= icon('tools') ?></a>
       <a class="iconbtn" href="/notifications" data-count="notifications" aria-label="Notifications"><?= icon('bell') ?><?= $badge($counts['notifications']) ?></a>
       <details class="menu">
         <summary aria-label="Account menu"><?= avatar($me, 'sm') ?></summary>
@@ -44,7 +46,7 @@ $badge = fn($n) => $n > 0 ? '<span class="badge">' . ($n > 99 ? '99+' : $n) . '<
           <a href="/u/<?= e($me['username']) ?>"><?= icon('user') ?> My profile</a>
           <a href="/profile/edit"><?= icon('edit') ?> Edit profile</a>
           <a href="/matches"><?= icon('heart') ?> My matches</a>
-          <a href="/tools"><?= icon('sparkle') ?> Roommate tools</a>
+          <a href="/tools"><?= icon('tools') ?> Roommate tools</a>
           <a href="/settings"><?= icon('gear') ?> Settings</a>
           <?php if ($me['role'] === 'admin'): ?><a href="/admin"><?= icon('shield') ?> Admin panel</a><?php endif; ?>
           <a href="/safety"><?= icon('info') ?> Safety tips</a>

@@ -597,6 +597,7 @@ function icon(string $name): string
         'trash' => '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
         'ban' => '<circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/>',
         'moon' => '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>',
+        'tools' => '<path d="M14.7 6.3a4 4 0 0 0-5.2 5.2L3.6 17.4a1.9 1.9 0 0 0 2.7 2.7l5.9-5.9a4 4 0 0 0 5.2-5.2l-2.4 2.4-2.3-.5-.5-2.3z"/>',
         'chart' => '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
     ];
     return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' . ($paths[$name] ?? '') . '</svg>';

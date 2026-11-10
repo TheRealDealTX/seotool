@@ -794,3 +794,25 @@ input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=file]),
 select, textarea, .select-sm, .input-sm, .composer textarea, .comment-form input, .chat-form textarea, .lounge-form input {
   font-size: 16px !important;
 }
+
+/* People rows: name block keeps its width; actions group together */
+.people-list li { flex-wrap: wrap; }
+.people-list .grow { flex: 1 1 160px; min-width: 0; }
+.people-list .grow small { line-height: 1.35; }
+.pl-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Tools shortcut in the top bar — phones only (desktop has it in the main nav) */
+.tools-btn { display: none; }
+.iconbtn.active { color: var(--primary); background: var(--primary-50); }
+@media (max-width: 1240px) { .mainnav a { padding: 9px 11px; } }
+
+@media (max-width: 720px) {
+  .topbar-right, .mainnav + .topbar-right { margin-left: auto; }
+  .tools-btn { display: inline-grid; }
+  .brand-text > span { font-size: 1rem; }
+  /* Request rows: avatar + name + score on top, buttons on their own line */
+  .people-list.big li { align-items: center; row-gap: 10px; }
+  .people-list.big .pl-actions { flex-basis: 100%; padding-left: 58px; }
+  .people-list.big .pl-actions .btn, .people-list.big .pl-actions form { flex: 1; }
+  .people-list.big .pl-actions form .btn { width: 100%; }
+}
