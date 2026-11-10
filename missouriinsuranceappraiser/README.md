@@ -10,9 +10,9 @@ layout are new and differ from every sister site on the account (Alabama, Florid
 | --- | --- |
 | Hostinger website UID | `GIDhww0uy` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter) |
 | Temporary URL | https://forestgreen-raven-354869.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://missouriinsuranceappraiser.com (not connected yet) |
+| Live domain | https://missouriinsuranceappraiser.com (SSL active, Let’s Encrypt; http and www redirect to it) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@missouriinsuranceappraiser.com (mailbox still to be created) |
+| Email / form inbox | info@missouriinsuranceappraiser.com (form delivers over SMTP, verified with a test lead) |
 | Google Tag Manager | `GTM-NJRMLFJ2` (owner-supplied snippet in `<head>` + noscript iframe after `<body>`) |
 
 ## Layout
@@ -156,11 +156,13 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled TEST, and
 check that the log line shows `"via":"smtp"`.
 
-## Going live checklist
+## Going live checklist (done 2026-11-10)
 
-1. Connect the domain to website `GIDhww0uy` and wait for SSL to become active.
-2. Check that `www.` and `http://` 301 to `https://missouriinsuranceappraiser.com` and that the real domain
-   sends no `X-Robots-Tag: noindex`.
-3. Create the mailbox, then wire up SMTP (above). If you have a GTM container, set `GTM_ID`.
-4. `python3 build.py && python3 validate.py`, redeploy, then clear the cache.
-5. Submit `https://missouriinsuranceappraiser.com/sitemap.xml` in Google Search Console.
+1. ~~Connect the domain and wait for SSL~~: linked to `GIDhww0uy`, certificate active.
+2. ~~Check redirects and noindex~~: `http://` and `www.` go to `https://missouriinsuranceappraiser.com`. `index.php`
+   sends a 301 for `/` and unknown paths; a tiny head script handles pages the platform serves directly.
+   The real domain sends no `X-Robots-Tag`, and our `robots.txt` is served.
+3. ~~Mailbox and SMTP~~: config uploaded to `public_html/api/_private/config.php` (404, 0 bytes over the web);
+   the test lead logged `"via":"smtp"`. ~~GTM~~: `GTM-NJRMLFJ2`.
+4. ~~Validate, redeploy, clear the cache~~.
+5. Submit `https://missouriinsuranceappraiser.com/sitemap.xml` in Google Search Console (owner to do).
