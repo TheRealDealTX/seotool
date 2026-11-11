@@ -9,10 +9,10 @@ URL slugs and design are new and differ from every sister site.
 | --- | --- |
 | Hostinger website UID | `GhANGdvRH` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter requested) |
 | Temporary URL | https://mediumaquamarine-squirrel-144702.hostingersite.com |
-| Final domain | https://massachusettsinsuranceappraiser.com (not connected yet) |
-| Google Tag Manager | none yet. Set `GTM_ID` (and optionally `GTM_HEAD_SNIPPET`) in `build.py` |
+| Live domain | https://massachusettsinsuranceappraiser.com (connected 2026-11-11, Let's Encrypt SSL covering apex + www; http and www 301 to it) |
+| Google Tag Manager | `GTM-N3W5C9HQ`: the owner's head snippet verbatim (`GTM_HEAD_SNIPPET`) plus the noscript iframe after `<body>` on every page |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@massachusettsinsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@massachusettsinsuranceappraiser.com (live; the form delivers through it over SMTP) |
 
 ## Layout
 
@@ -146,7 +146,14 @@ shows `"via":"smtp"`.
 The JSON-LD also includes Service (services and cities), FAQPage, ItemList (index pages), WebApplication (tools),
 BlogPosting (guides), HowTo (roadmap) and DefinedTermSet (glossary).
 
-## When the domain is connected
+## Go-live log (2026-11-11)
+
+- Domain attached to `GhANGdvRH`; SSL active. The first certificate covered only the apex, so it was reissued to include `www`.
+- `http://` → 301 to `https://massachusettsinsuranceappraiser.com/`; no `X-Robots-Tag` on the real domain; our `robots.txt` is served.
+- GTM `GTM-N3W5C9HQ` added; site rebuilt, validated (0 errors), redeployed, cache cleared.
+- `api/_private/config.php` uploaded (it returns 404 with 0 bytes). One test submission labelled “TEST SUBMISSION - SMTP check” was logged with `"via":"smtp"`.
+
+## Domain checklist (for reference)
 
 1. Attach `massachusettsinsuranceappraiser.com` to website `GhANGdvRH` and wait for SSL to become active.
 2. Check that `http://` and `www.` 301 to `https://massachusettsinsuranceappraiser.com/`, and that the real domain

@@ -31,13 +31,18 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261110a"
+VER = "20261111a"
 FAV = "1"
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-N3W5C9HQ"
 # Head snippet exactly as supplied by the owner (optional). If empty, the standard GTM loader for GTM_ID is used.
-GTM_HEAD_SNIPPET = ""
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-N3W5C9HQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/what-we-appraise/"
 LOC_BASE = "/cities-and-towns/"
