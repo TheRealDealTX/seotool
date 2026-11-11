@@ -8,11 +8,11 @@ pipelines) comes from the Georgia template. The content, URL slugs and design ar
 | | |
 | --- | --- |
 | Hostinger website UID | `yMnjyMKVb` (Agency Growth, order 1008744732, php-fpm 8.3, Boston datacenter) |
-| Temporary URL | https://darkorange-shark-370586.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Final domain | https://westvirginiainsuranceappraiser.com (not connected yet) |
-| Google Tag Manager | not set (`GTM_ID = ""` in `build.py`) |
+| Live domain | https://westvirginiainsuranceappraiser.com (connected Nov 11, 2026; Let's Encrypt SSL active, expires Feb 9, 2027) |
+| Preview URL | https://lightcoral-rook-707471.hostingersite.com (sends `X-Robots-Tag: noindex`; the first temporary URL was darkorange-shark-370586) |
+| Google Tag Manager | `GTM-TFJFX2FN`: the owner's head snippet verbatim (`GTM_HEAD_SNIPPET`) + noscript iframe after `<body>` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@westvirginiainsuranceappraiser.com (mailbox still to be created) |
+| Email / form inbox | info@westvirginiainsuranceappraiser.com (form delivers over SMTP, verified Nov 11, 2026) |
 
 ## Layout
 
@@ -115,6 +115,9 @@ text; decorative backgrounds and card images use `alt=""`. Every photo is listed
 - `index.php` serves `home.html` for `/`, 301s directory URLs to add a trailing slash, returns `404.html` with a
   real 404, sends `X-Robots-Tag: noindex, nofollow` on any host other than the domain, and only on the real domain
   301s `www.` and plain http (checked through `X-Forwarded-Proto`) to `https://westvirginiainsuranceappraiser.com`.
+- Interior pages are real files that the host serves without `index.php`, so they can't get a server-side 301.
+  A one-line script at the top of every `<head>` sends www/http visitors on the real domain to the
+  `https://` apex (path and query kept). Canonicals already point there.
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
 
 ## Contact form
@@ -134,8 +137,8 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@westvirginiainsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and check
-that the log line shows `"via":"smtp"`.
+Done on Nov 11, 2026: the config is uploaded, `/api/_private/config.php` returns 404 with 0 bytes, and one labelled
+test submission was logged with `"via":"smtp"` and no error. To change the password, re-upload that file.
 
 ## Google Tag Manager
 
@@ -144,8 +147,8 @@ given. The head snippet and the `<noscript>` iframe after `<body>` are then outp
 
 ## Going live checklist
 
-1. Attach `westvirginiainsuranceappraiser.com` to website `yMnjyMKVb` and wait for SSL.
-2. Check that www and http 301 to `https://westvirginiainsuranceappraiser.com` and that the real domain has no `X-Robots-Tag` header.
-3. Add GTM if provided; create the mailbox and wire SMTP as described above.
-4. `python3 build.py && python3 validate.py`, deploy, clear the cache.
-5. Submit `https://westvirginiainsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Attach the domain and wait for SSL~~ — done (SSL active).
+2. ~~Check www/http redirects and that the real domain has no noindex header~~ — done.
+3. ~~Add GTM; create the mailbox and wire SMTP~~ — done (`GTM-TFJFX2FN`; SMTP verified).
+4. ~~Rebuild, validate, deploy, clear the cache~~ — done.
+5. Submit `https://westvirginiainsuranceappraiser.com/sitemap.xml` to Google Search Console (owner).

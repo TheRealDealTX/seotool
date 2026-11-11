@@ -31,14 +31,19 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261110b"
+VER = "20261111a"
 FAV = "1"
 OG_ALT = "West Virginia Insurance Appraiser — independent property claim appraisal across all 55 counties"
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-TFJFX2FN"
 # Head snippet exactly as supplied by the owner (optional). If empty, the standard GTM loader for GTM_ID is used.
-GTM_HEAD_SNIPPET = ""
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-TFJFX2FN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/wv-appraisal-services/"
 LOC_BASE = "/west-virginia-service-areas/"
@@ -350,6 +355,7 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 <html lang="en-US" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>(function(l,h){{if((l.hostname==="www."+h)||(l.hostname===h&&l.protocol==="http:")){{l.replace("https://"+h+l.pathname+l.search+l.hash);}}}})(location,"{HOST}");</script>
 {gtm_head()}<meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.className="js";</script>
 <title>{e(title)}</title>
