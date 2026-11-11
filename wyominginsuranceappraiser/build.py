@@ -31,10 +31,10 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261110a"
+VER = "20261111b"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-WF9LR26Z"
 
 SVC_BASE = "/what-we-appraise/"
 LOC_BASE = "/where-we-work/"
@@ -282,17 +282,21 @@ def footer():
 
 
 def gtm_head():
+    # Snippet exactly as supplied by the site owner.
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            "<script>\n"
+            "  window.dataLayer = window.dataLayer || [];\n"
+            "  function gtag(){dataLayer.push(arguments);}\n"
+            "  gtag('js', new Date());\n"
+            "</script>\n")
 
 
 def gtm_body():
     if not GTM_ID:
         return ""
-    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->\n')
+    return (f'<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}" height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>\n')
 
 
 MAIN_TYPES = ("Service", "WebApplication", "BlogPosting", "HowTo", "DefinedTermSet", "ItemList", "FAQPage")
@@ -386,9 +390,14 @@ def document(path, title, desc, body, schema=None, og_type="website", robots="in
 
 
 def write(path, content, priority=0.6, sitemap=True):
-    rel = "home.html" if path == "/" else path.strip("/") + "/index.html"
+    # Directory pages are served as dir/index.php: the host serves real files without running the
+    # front controller, so each page starts with the canonical-host guard (www/http 301, off-domain noindex).
+    rel = "home.html" if path == "/" else path.strip("/") + "/index.php"
     if path.endswith(".html"):
         rel = path.strip("/")
+    if rel.endswith("/index.php"):
+        depth = rel.count("/")
+        content = f"<?php require_once dirname(__DIR__, {depth}) . '/_guard.php'; ?>\n" + content
     full = os.path.join(OUT, rel)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     with open(full, "w", encoding="utf-8") as f:
@@ -937,48 +946,54 @@ def root_files():
     with open(os.path.join(OUT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /home.html\n\nSitemap: {DOMAIN}/sitemap.xml\n")
     with open(os.path.join(OUT, "index.php"), "w") as f:
-        f.write(INDEX_PHP.replace("__HOST__", HOST))
+        f.write(INDEX_PHP)
+    with open(os.path.join(OUT, "_guard.php"), "w") as f:
+        f.write(GUARD_PHP.replace("__HOST__", HOST))
 
 
-INDEX_PHP = r"""<?php
-// Wyoming Insurance Appraiser - front controller for the static build.
-// The host ignores .htaccess, serves real files directly and routes "/" and unknown paths here.
-$uri  = $_SERVER['REQUEST_URI'] ?? '/';
-$path = rawurldecode(strtok($uri, '?'));
-$host = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
-$real = '__HOST__';
-
-// Canonical host and scheme: only on the real domain (TLS terminates upstream, so trust X-Forwarded-Proto).
-$proto = strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http'));
-if ($host === 'www.' . $real || ($host === $real && $proto === 'http')) {
-    header('Location: https://' . $real . $uri, true, 301);
+GUARD_PHP = r"""<?php
+// Wyoming Insurance Appraiser - canonical host guard, required by index.php and by every page's index.php.
+if (realpath($_SERVER['SCRIPT_FILENAME'] ?? '') === __FILE__) { http_response_code(404); exit; }
+$wyia_host  = strtolower(preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? ''));
+$wyia_real  = '__HOST__';
+// TLS terminates upstream: trust X-Forwarded-Proto, fall back to HTTPS.
+$wyia_proto = strtolower($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http'));
+// 301 www. and plain http to https://__HOST__ - only on the real domain.
+if ($wyia_host === 'www.' . $wyia_real || ($wyia_host === $wyia_real && $wyia_proto === 'http')) {
+    header('Location: https://' . $wyia_real . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
     exit;
 }
 // Keep temporary preview domains out of search results.
-if ($host !== $real) {
+if ($wyia_host !== $wyia_real) {
     header('X-Robots-Tag: noindex, nofollow');
 }
+header('Content-Type: text/html; charset=utf-8');
+"""
+
+INDEX_PHP = r"""<?php
+// Wyoming Insurance Appraiser - front controller for the static build.
+// The host ignores .htaccess, serves real files directly (a directory's index.php included)
+// and routes "/" and unknown paths here.
+require_once __DIR__ . '/_guard.php';
+$uri  = $_SERVER['REQUEST_URI'] ?? '/';
+$path = rawurldecode(strtok($uri, '?'));
 if (strpos($path, '..') !== false || strpos($path, "\0") !== false) {
     $path = '/__invalid__';
 }
-
 if ($path === '/' || $path === '/index.php') {
-    header('Content-Type: text/html; charset=utf-8');
     readfile(__DIR__ . '/home.html');
     exit;
 }
-if (substr($path, -1) !== '/' && is_dir(__DIR__ . $path) && is_file(__DIR__ . $path . '/index.html')) {
+if (substr($path, -1) !== '/' && is_file(__DIR__ . $path . '/index.php')) {
     $q = strpos($uri, '?') !== false ? substr($uri, strpos($uri, '?')) : '';
     header('Location: ' . $path . '/' . $q, true, 301);
     exit;
 }
-if (substr($path, -1) === '/' && is_file(__DIR__ . $path . 'index.html')) {
-    header('Content-Type: text/html; charset=utf-8');
-    readfile(__DIR__ . $path . 'index.html');
+if (substr($path, -1) === '/' && $path !== '/' && is_file(__DIR__ . $path . 'index.php')) {
+    include __DIR__ . $path . 'index.php';
     exit;
 }
 http_response_code(404);
-header('Content-Type: text/html; charset=utf-8');
 readfile(__DIR__ . '/404.html');
 """
 

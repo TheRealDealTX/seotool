@@ -122,17 +122,31 @@ def check_graph(rel, data):
             errors.append(f"{rel}: ProfessionalService missing {k}")
 
 
+GUARD = re.compile(r"^<\?php require_once dirname\(__DIR__, \d+\) \. '/_guard\.php'; \?>\n")
+
+
+def page_html(fp):
+    s = open(fp, encoding="utf-8").read()
+    if fp.endswith(".php"):
+        if not GUARD.match(s):
+            errors.append(f"{fp}: page does not start with the canonical-host guard")
+        s = GUARD.sub("", s, count=1)
+        if "<?" in s:
+            errors.append(f"{fp}: stray PHP tag in page HTML")
+    return s
+
+
 titles, descs = {}, {}
 files = []
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
-        if f.endswith(".html"):
+        if f.endswith(".html") or (f == "index.php" and dp != ROOT):
             files.append(os.path.join(dp, f))
 
 for fp in sorted(files):
     rel = "/" + os.path.relpath(fp, ROOT)
     p = P()
-    p.feed(open(fp, encoding="utf-8").read())
+    p.feed(page_html(fp))
     if p.h1 != 1:
         errors.append(f"{rel}: {p.h1} h1 tags")
     for block in p.ld:
@@ -142,7 +156,7 @@ for fp in sorted(files):
             errors.append(f"{rel}: bad JSON-LD {ex}")
     if p.imgs_nosize:
         errors.append(f"{rel}: {p.imgs_nosize} images without width/height")
-    want = DOMAIN + ("/" if rel == "/home.html" else rel[:-len("index.html")] if rel.endswith("/index.html") else rel)
+    want = DOMAIN + ("/" if rel == "/home.html" else rel[:-len("index.html")] if rel.endswith("/index.html") else rel[:-len("index.php")] if rel.endswith("/index.php") else rel)
     if p.canon != want:
         errors.append(f"{rel}: canonical {p.canon!r} != {want!r}")
     for k in ("og:title", "og:description", "og:url", "og:image", "og:image:width", "og:image:height", "og:image:alt", "twitter:card", "twitter:image", "geo.region"):
@@ -181,7 +195,7 @@ for fp in sorted(files):
         if path == "/":
             target = os.path.join(ROOT, "home.html")
         elif path.endswith("/"):
-            target = os.path.join(target, "index.html")
+            target = os.path.join(target, "index.php")
         if not os.path.exists(target):
             errors.append(f"{rel}: broken link {href}")
     if rel == "/home.html":
@@ -190,7 +204,7 @@ for fp in sorted(files):
         body_only = main.split("Skip to content", 1)[-1]
         n_all = body_only.count(KEYWORD)
         # Count inside <main> only (exclude header/footer brand text)
-        raw = open(fp, encoding="utf-8").read()
+        raw = page_html(fp)
         m = re.search(r"<main[^>]*>(.*)</main>", raw, re.S)
         mtext = re.sub(r"<[^>]+>", " ", m.group(1)) if m else ""
         mtext = re.sub(r"<script.*?</script>", " ", mtext, flags=re.S)

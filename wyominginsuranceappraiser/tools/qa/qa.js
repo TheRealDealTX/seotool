@@ -16,7 +16,7 @@ const pages = ["/", "/what-we-appraise/hail-roof-claim-disputes/", "/where-we-wo
       const errs = [];
       pg.on("console", m => { if (m.type() === "error") errs.push(m.text()); });
       pg.on("pageerror", e => errs.push("pageerror " + e.message));
-      pg.on("requestfailed", r => errs.push("reqfail " + r.url()));
+      pg.on("requestfailed", r => { if (!/google-analytics\.com|googletagmanager\.com/.test(r.url())) errs.push("reqfail " + r.url()); });
       const resp = await pg.goto(base + p, { waitUntil: "networkidle" });
       // scroll through to trigger lazy images + reveals
       const H = await pg.evaluate(() => document.documentElement.scrollHeight);
