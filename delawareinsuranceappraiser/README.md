@@ -6,13 +6,13 @@ generator and served by a small PHP front controller on a Hostinger Agency Growt
 | | |
 | --- | --- |
 | Hostinger website UID | `mnkyxd7Sn` (Agency Growth, order 1008744732, php-fpm, PHP 8.3) |
-| Domain | `delawareinsuranceappraiser.com` (attached at creation; www and http 301 to https apex) |
+| Live domain | https://delawareinsuranceappraiser.com — live Nov 12, 2026; SSL covers apex + www; www and http 301 to the https apex |
 | Preview URL | https://seashell-ostrich-882608.hostingersite.com (Hostinger serves its own noindex `robots.txt` here) |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Server | `us-phx-h5g-node3.hstgr.io` (Boston was requested; the order's sites all live on this node) |
-| Google Tag Manager | not set — `GTM_ID = ""` in `build.py` |
+| Google Tag Manager | `GTM-THRM2QP8` (owner-provided head snippet + noscript iframe after `<body>`; `GTM_ID` in `build.py`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@delawareinsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@delawareinsuranceappraiser.com — form delivers over SMTP (verified: log shows `"via":"smtp"`) |
 
 ## Layout
 
@@ -140,7 +140,7 @@ JSON-LD per page: ProfessionalService (logo ImageObject, contactPoint, DE addres
 community pages), FAQPage, ItemList (index pages), WebApplication (worksheets), BlogPosting (journal), HowTo
 (roadmap) and DefinedTermSet (glossary).
 
-## Go-live checklist
+## Go-live checklist (done Nov 12, 2026 except Search Console)
 
 1. Point the domain’s nameservers to `nova.dns-parking.com` and `cosmos.dns-parking.com`.
 2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with
@@ -148,4 +148,6 @@ community pages), FAQPage, ItemList (index pages), WebApplication (worksheets), 
 3. Check `http://`, `http://www.` and `https://www.` interior URLs 301 to the https apex, `/page/index.php` 301s to
    `/page/`, every sitemap URL returns 200, and the real domain sends no `X-Robots-Tag`.
 4. Add GTM and the SMTP config when available, re-run `validate.py`, redeploy, clear the cache.
-5. Submit `https://delawareinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+5. **To do:** submit `https://delawareinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+
+The server also holds `api/_private/config.php` (SMTP password) and `api/_private/leads.log.php`. Neither is in git; leave them in place.
