@@ -31,7 +31,7 @@ PHONE = "(844) 537-1427"
 PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
-GTM_ID = ""  # e.g. "GTM-XXXXXXX". Empty = no tag manager output.
+GTM_ID = "GTM-WFR968BR"  # Empty = no tag manager output. The head snippet is GTM_SNIPPET below.
 TODAY = date.today().isoformat()
 VER = "20261112a"   # CSS/JS cache-buster
 FAV = "1"           # icon cache-buster
@@ -234,9 +234,20 @@ def footer():
 <div class="callbar"><a href="tel:{TEL}">{ic("phone")} Call now</a><a href="{CONTACT}">{ic("doc")} Free review</a></div>"""
 
 
+# Google tag exactly as provided by the site owner (do not reformat).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WFR968BR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
+
+
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_SNIPPET:
+        return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
             "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
             f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
@@ -245,7 +256,7 @@ def gtm_head():
 def gtm_body():
     if not GTM_ID:
         return ""
-    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n'
+    return (f'<!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={GTM_ID}"\nheight="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>\n'
             "<!-- End Google Tag Manager (noscript) -->\n")
 
 

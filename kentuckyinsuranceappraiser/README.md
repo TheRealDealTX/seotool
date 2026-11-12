@@ -6,12 +6,12 @@ PHP front controller plus a canonical-host guard serve it on a Hostinger Agency 
 | | |
 | --- | --- |
 | Hostinger website UID | `qzi3K4TYW` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter) |
-| Domain | `kentuckyinsuranceappraiser.com` (attached at creation; waiting on nameservers) |
-| Preview URL | https://darkslategrey-woodcock-756719.hostingersite.com (all live checks run here until DNS points over) |
-| Nameservers to set at the registrar | `lunar.dns-parking.com`, `solar.dns-parking.com` (from `agency-hosting_websites_get`) |
+| Live domain | https://kentuckyinsuranceappraiser.com — live since Nov 12, 2026. Let’s Encrypt SSL covers the apex and `www` (expires Feb 10, 2027); www and http 301 to the apex |
+| Preview URL | https://darkslategrey-woodcock-756719.hostingersite.com (sends `X-Robots-Tag: noindex`) |
+| Nameservers | `lunar.dns-parking.com`, `solar.dns-parking.com` (from `agency-hosting_websites_get`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@kentuckyinsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@kentuckyinsuranceappraiser.com. The form delivers through it over authenticated SMTP |
+| Google Tag Manager | `GTM-WFR968BR`. The owner’s head snippet is output exactly as given (`GTM_SNIPPET` in `build.py`), plus a `<noscript>` iframe after `<body>` |
 
 ## Layout
 
@@ -162,22 +162,23 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@kentuckyinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-Once the mailbox exists:
-1. Upload the config to `public_html/api/_private/config.php`.
-2. Confirm `https://…/api/_private/config.php` returns 404 with 0 bytes.
-3. Send one submission labelled as a test.
-4. Confirm the log line shows `"via":"smtp"`.
+SMTP has been live since Nov 12, 2026. These checks passed:
+- the config URL returns 404 with 0 bytes
+- one labelled test submission was sent
+- `leads.log.php` (read through the file API) shows `"via":"smtp"` with no error
 
-## Go-live checklist (after the nameservers point to Hostinger)
+To change the password, re-upload `public_html/api/_private/config.php` and repeat those checks.
 
-1. Confirm the domain resolves and SSL is active, and that `ssl_cert.names` covers both the apex and `www`. If it
-   doesn't, run `agency-hosting_ssl_reinstall-website` and wait for `active`.
-2. On the homepage and at least three interior pages, check:
-   - `http://`, `http://www.` and `https://www.` all 301 to `https://kentuckyinsuranceappraiser.com/<page>/`
+## Go-live (done Nov 12, 2026)
+
+1. The domain resolves to the website. The Let’s Encrypt certificate covers `kentuckyinsuranceappraiser.com` and
+   `www.kentuckyinsuranceappraiser.com`, and both hostnames present it.
+2. On the homepage and four interior pages:
+   - `http://`, `http://www.` and `https://www.` each send one 301 to `https://kentuckyinsuranceappraiser.com/<page>/`
    - `/page/index.php` 301s to `/page/`
-   - every sitemap URL returns 200
-   - there's no `X-Robots-Tag` on the real domain, and our own `robots.txt` is served
+   - all 52 sitemap URLs return 200
+   - the real domain sends no `X-Robots-Tag` and serves our own `robots.txt`
 
-   If a www URL returns 200 with `x-hcdn-cache-status: HIT`, clear the cache again.
-3. Add the GTM ID (if provided), wire SMTP, run `validate.py`, redeploy and clear the cache.
-4. Submit `https://kentuckyinsuranceappraiser.com/sitemap.xml` in Google Search Console.
+   If a www URL ever returns 200 with `x-hcdn-cache-status: HIT`, clear the cache and recheck after a few minutes.
+3. The GTM tag was added and SMTP wired. `validate.py` reports zero errors, and the site was redeployed and the cache cleared.
+4. Still to do: submit `https://kentuckyinsuranceappraiser.com/sitemap.xml` in Google Search Console.
