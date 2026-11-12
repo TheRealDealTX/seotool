@@ -1,0 +1,372 @@
+{
+ "hero-coast": {
+  "title": "Portland Head Light Cape Elizabeth",
+  "creator": "Carol M Highsmith",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/3093815/free-photo-image-maine-high-resolution-landscape-waves",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Portland Head Light on the rocky shore of Cape Elizabeth, Maine, with surf breaking below"
+ },
+ "storm-surf": {
+  "title": "The Portland Head Light in Fort Williams Park, Cape Elizabeth, Maine on a dark, dreary day.",
+  "creator": "Jonathan Desrosiers",
+  "license": "cc0",
+  "source": "wordpress",
+  "landing": "https://wordpress.org/photos/photo/95265c51f1/",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Gray storm surf breaking on the rocks below Portland Head Light in Cape Elizabeth"
+ },
+ "cape-coast": {
+  "title": "Portland Head Light, Fort Williams Park, in Cape Elizabeth, Maine",
+  "creator": "stirrell42",
+  "license": "cc0",
+  "source": "wordpress",
+  "landing": "https://wordpress.org/photos/photo/10063076cd/",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Rocky Cape Elizabeth shoreline with Portland Head Light in the distance"
+ },
+ "snow-house": {
+  "title": "Seavey-Robinson House, South Portland, Maine",
+  "creator": "Fillimore",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=181727758",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Historic house in South Portland, Maine, after a fresh snowfall"
+ },
+ "portland-harbor": {
+  "title": "The Cat - Portland, Maine.",
+  "creator": "waddavies",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/141326567@N03/39969767325",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Ferry docked in Portland Harbor with Munjoy Hill houses behind"
+ },
+ "icicles": {
+  "title": "Closeup icicles roof",
+  "creator": "Unknown",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/6018207/photo-image-public-domain-nature-ice",
+  "fw": 1200,
+  "fh": 803,
+  "alt": "Long icicles hanging from a roof edge, a sign of ice damming"
+ },
+ "snow-roof": {
+  "title": "Miller Park",
+  "creator": "dankeck",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/140641142@N05/39521724941",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Snow-covered shingle roof with icicles along the eave"
+ },
+ "red-house-snow": {
+  "title": "snow covered house staircase hills",
+  "creator": "Unknown",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/3291573/free-photo-image-blizzard-cc0-creative-commons",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Red wood-sided house buried in deep snow with a snow-loaded roof"
+ },
+ "shingles": {
+  "title": "Roof slate shingles",
+  "creator": "Picdrome Public Domain Pictures",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/65798313@N06/7226315482",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Weathered slate roof shingles in mixed colors"
+ },
+ "roofer": {
+  "title": "Roofers",
+  "creator": "Dennis S. Hurd",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/43296902@N00/4363286049",
+  "fw": 1200,
+  "fh": 896,
+  "alt": "Roofers on a lift working on a tarped roof of a brick building"
+ },
+ "house-fire": {
+  "title": "474577 House Fire, Cave Junction, OR 1953",
+  "creator": "Forest Service Pacific Northwest Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/135886671@N08/22141572313",
+  "fw": 1200,
+  "fh": 957,
+  "alt": "House engulfed in flames while firefighters work nearby"
+ },
+ "storm-damage": {
+  "title": "Hurricane Irene damage to road, homes in Bethel, VT",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/43322816@N08/6106080399",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Storm-damaged road and homes after Tropical Storm Irene in northern New England"
+ },
+ "tree-on-house": {
+  "title": "Fallen Trees",
+  "creator": "U.S. Fish & Wildlife Service Southwest Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/51896441@N04/37330421606",
+  "fw": 1200,
+  "fh": 675,
+  "alt": "Large trees blown down beside a single-story house after a storm"
+ },
+ "flooded": {
+  "title": "File:Flash flood Canandaigua NY July 23, 2017 cellar door, basement flooding.jpg",
+  "creator": "B137",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=61270021",
+  "fw": 1200,
+  "fh": 795,
+  "alt": "Floodwater covering a yard beside a house with an open cellar door"
+ },
+ "ceiling-damage": {
+  "title": "20220127-RD-LSC-0672",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/51869042369",
+  "fw": 800,
+  "fh": 1200,
+  "alt": "Collapsed water-damaged ceiling exposing wood boards inside a home"
+ },
+ "meeting": {
+  "title": "Business Meeting",
+  "creator": "Christina Morillo",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/business-meeting-SKBXLJOILI",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Two women in a consultation at a table by a window"
+ },
+ "consultation": {
+  "title": "Business Meeting",
+  "creator": "Direct Media",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/business-meeting-SSKSJIBMMP",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Two men reviewing claim figures together on a laptop"
+ },
+ "plans-review": {
+  "title": "Business Meeting",
+  "creator": "Direct Media",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/business-meeting-Z1ZIMB54UM",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Professionals talking through a project around a laptop in an office"
+ },
+ "calc-docs": {
+  "title": "Calculator",
+  "creator": "motazabdelazeem صور من الوطن",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/91352576@N06/24217746621",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Scientific calculator resting on printed estimate pages"
+ },
+ "calc-desk": {
+  "title": "Calculator Numbers",
+  "creator": "Negative Space",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Calculator beside printed charts and a laptop keyboard"
+ },
+ "laptop-calc": {
+  "title": "CWD datasheet",
+  "creator": "U.S. Fish and Wildlife Service - Midwest Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/49208525@N08/6343722631",
+  "fw": 1200,
+  "fh": 797,
+  "alt": "Hand marking up a printed estimate with a pen"
+ },
+ "clipboard": {
+  "title": "Clipboard Hand",
+  "creator": "Kristin Hardwick",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/clipboard-hand-TRKNLIGFAJ",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Person taking notes on a clipboard next to a box"
+ },
+ "condo-building": {
+  "title": "Modern apartment building",
+  "creator": "DennisM2",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/14674348@N04/14996764996",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Brick condominium building with balconies beside the water"
+ },
+ "bar-harbor": {
+  "title": "Boat docks at Bar Harbor, Maine",
+  "creator": "Road Travel America",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/89508513@N02/51293653027",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Boats at the town docks in Bar Harbor, Maine"
+ },
+ "acadia-coast": {
+  "title": "Acadia National Park",
+  "creator": "naturenps",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/130826934@N07/29992479176",
+  "fw": 1200,
+  "fh": 1200,
+  "alt": "Pink granite ledges along the Acadia National Park shoreline"
+ },
+ "harbor-boats": {
+  "title": "Lone Lobster Boat Eastport, Maine",
+  "creator": "Carol M Highsmith",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/3091589/free-photo-image-fishing-boat-small-port-america",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Lobster boat moored at a wharf in Eastport, Maine"
+ },
+ "lobster-boat": {
+  "title": "20180710-RD-LSC-0148",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/43353004111",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Lobster boat loaded with traps in a wooded Maine harbor"
+ },
+ "lewiston-street": {
+  "title": "Secretary Carson visits Auburn and Lewiston, Maine",
+  "creator": "U.S. Dept. of Housing and Urban Development (HUD)",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41555360@N03/33604357278",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Multi-family houses on a residential street in Lewiston–Auburn, Maine"
+ },
+ "old-house-snow": {
+  "title": "Secretary Carson visits Auburn and Lewiston, Maine",
+  "creator": "U.S. Dept. of Housing and Urban Development (HUD)",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41555360@N03/46565699605",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Older wood-frame house with spring snowbanks in Lewiston–Auburn, Maine"
+ },
+ "snow-street": {
+  "title": "Just a few cars and trucks, out for a walk with a dog, Snowy streets of Wallingford, south of Greenlake, Seattle, Washington, USA",
+  "creator": "Wonderlane",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/71401718@N00/6739653327",
+  "fw": 1200,
+  "fh": 799,
+  "alt": "Snow-covered residential street with bare trees in winter"
+ },
+ "marsh": {
+  "title": "Salt marsh",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/43322816@N08/11820949226",
+  "fw": 1200,
+  "fh": 824,
+  "alt": "Salt marsh grasses turning red and gold along a tidal inlet"
+ },
+ "farm-field": {
+  "title": "Potato field",
+  "creator": "JamesAnderson95",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/97116995@N07/9462014674",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Rows of green potato plants in a farm field"
+ },
+ "farmhouse": {
+  "title": "Farmhouse",
+  "creator": "Kim Siever",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/57873306@N00/3790102881",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Gray shingle-sided farmhouse with a pickup truck in the yard"
+ },
+ "lake-camp": {
+  "title": "Snow depth at Lake Cabins (2)",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/80223459@N05/8577951007",
+  "fw": 1200,
+  "fh": 900,
+  "alt": "Lake cabins with deep snow piled on their roofs"
+ },
+ "moose-mist": {
+  "title": "Photo of the Week - Moose in mist (ME)",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/43322816@N08/12637633223",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Moose standing in morning mist at the edge of a Maine pond"
+ },
+ "storm-clouds": {
+  "title": "Barn and storm clouds, Willamette Valley, Oregon",
+  "creator": "Bonnie Moreland (free images)",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/66741228@N05/50298057333",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Dark storm clouds building over an old wooden barn"
+ },
+ "interior": {
+  "title": "Housing improvement project goal 1: two-bedroom unit, living room",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52067485855",
+  "fw": 1200,
+  "fh": 800,
+  "alt": "Living room with a sofa, rug and wood floors in a family home"
+ }
+}
