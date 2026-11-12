@@ -1,0 +1,462 @@
+{
+ "hero-supercell": {
+  "url": "https://live.staticflickr.com/65535/48044614641_e9141c7149_b.jpg",
+  "title": "Supercell thunderstorm",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/47838549@N08/48044614641",
+  "w": 1024,
+  "h": 768
+ },
+ "storm-sunset": {
+  "url": "https://live.staticflickr.com/65535/48044614771_1e6837ac5b_b.jpg",
+  "title": "Nebraska Supercell thunderstorm",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/47838549@N08/48044614771",
+  "w": 1024,
+  "h": 768
+ },
+ "tornado-funnel": {
+  "url": "https://live.staticflickr.com/65535/47953539496_59c53bfe08_b.jpg",
+  "title": "TORUS tornado",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/47838549@N08/47953539496",
+  "w": 1024,
+  "h": 684
+ },
+ "supercell-barn": {
+  "url": "https://live.staticflickr.com/65535/48039373157_e576cd5dbb_b.jpg",
+  "title": "Supercell",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/47838549@N08/48039373157",
+  "w": 1024,
+  "h": 683
+ },
+ "hail-sky": {
+  "url": "https://live.staticflickr.com/2811/11469471905_0460b1bc05_b.jpg",
+  "title": "Before the hail storm",
+  "creator": "Bobby Ketchum",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/32671284@N08/11469471905",
+  "w": 1024,
+  "h": 683
+ },
+ "hail-ground": {
+  "url": "https://live.staticflickr.com/5767/31133560296_49af739963_b.jpg",
+  "title": "An Arizona Hail Storm",
+  "creator": "cogdogblog",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/37996646802@N01/31133560296",
+  "w": 1024,
+  "h": 768
+ },
+ "roof-toolbelt": {
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg4ODI3MjktaW1hZ2Uta3d5bzcyOW4uanBn.jpg",
+  "title": "Roofer's tool belt on a shingle roof",
+  "creator": "rawpixel",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/5942657/free-public-domain-cc0-photo",
+  "w": 3008,
+  "h": 2000
+ },
+ "roof-eave-damage": {
+  "url": "https://live.staticflickr.com/65535/51867761912_8c50f5256d_b.jpg",
+  "title": "20220127-RD-LSC-0692",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/51867761912",
+  "w": 1024,
+  "h": 683
+ },
+ "ceiling-collapse": {
+  "url": "https://live.staticflickr.com/65535/51868728476_3a46f152b2_b.jpg",
+  "title": "20220127-RD-LSC-0527",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/51868728476",
+  "w": 1024,
+  "h": 683
+ },
+ "house-demolition": {
+  "url": "https://live.staticflickr.com/7263/6862190228_24ed91b55f_b.jpg",
+  "title": "20120106-OC-AMW-0047",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/6862190228",
+  "w": 1024,
+  "h": 681
+ },
+ "storm-debris": {
+  "url": "https://live.staticflickr.com/7186/7008296545_b8a46b8dca_b.jpg",
+  "title": "20120106-OC-AMW-0019",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/7008296545",
+  "w": 1024,
+  "h": 681
+ },
+ "log-home-burn-scar": {
+  "url": "https://live.staticflickr.com/2879/9629106733_53c80ec857_b.jpg",
+  "title": "20130821-FS-LSC-1823",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/9629106733",
+  "w": 1024,
+  "h": 678
+ },
+ "forest-fire-night": {
+  "url": "https://live.staticflickr.com/65535/51282470077_ce55abb393_b.jpg",
+  "title": "Sky Fire",
+  "creator": "National Interagency Fire Center",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/165415395@N07/51282470077",
+  "w": 1024,
+  "h": 576
+ },
+ "smoke-plume": {
+  "url": "https://live.staticflickr.com/3793/9610313372_ba9d34f472_b.jpg",
+  "title": "20130716-FS-UNK-0034",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/9610313372",
+  "w": 1024,
+  "h": 768
+ },
+ "burned-prairie": {
+  "url": "https://live.staticflickr.com/65535/48235838516_c5b05b3ffc_b.jpg",
+  "title": "School House Fire Tower after the prescribed burn",
+  "creator": "Redwood National and State Parks",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/133410870@N05/48235838516",
+  "w": 1024,
+  "h": 768
+ },
+ "icicles-eave": {
+  "url": "https://live.staticflickr.com/4597/39521724941_f70ee45e5a_b.jpg",
+  "title": "Miller Park",
+  "creator": "dankeck",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/140641142@N05/39521724941",
+  "w": 1024,
+  "h": 768
+ },
+ "snow-roof-icicles": {
+  "url": "https://pd.w.org/2023/01/45063bddda196c763.26145517-2031x2048.jpg",
+  "title": "A random view snow thickness on roof and icicles formation",
+  "creator": "Tinjure20",
+  "license": "cc0",
+  "source": "wordpress",
+  "landing": "https://wordpress.org/photos/photo/45063bddda/",
+  "w": 2031,
+  "h": 2048
+ },
+ "snow-broken-trees": {
+  "url": "https://live.staticflickr.com/4571/27282051989_f6cb66794a_b.jpg",
+  "title": "Snow Survey131.jpg",
+  "creator": "NRCS Montana",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/160831427@N06/27282051989",
+  "w": 1024,
+  "h": 575
+ },
+ "flood-house": {
+  "url": "https://live.staticflickr.com/65535/52146801150_5f528ba2e4_b.jpg",
+  "title": "Yellowstone flood event 2022: Employee housing near Yellowstone River",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52146801150",
+  "w": 1024,
+  "h": 683
+ },
+ "flood-washout": {
+  "url": "https://live.staticflickr.com/65535/52168607384_2477a0eb9c_b.jpg",
+  "title": "Yellowstone flood event 2022: Lamar River Canyon",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52168607384",
+  "w": 1024,
+  "h": 683
+ },
+ "red-barn-snow": {
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmwyNTgxMDk2NTQ2Ny1pbWFnZS1reWNqbDZuZi5qcGc.jpg",
+  "title": "Red barn Joseph area, Oregon",
+  "creator": "rawpixel",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/6080914/red-barn-the-joseph-area-oregon",
+  "w": 5184,
+  "h": 3456
+ },
+ "ranch-cattle": {
+  "url": "https://live.staticflickr.com/65535/52101044245_50a273042e_b.jpg",
+  "title": "20220523-FPAC-PJK-0443_TONED",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/52101044245",
+  "w": 1024,
+  "h": 683
+ },
+ "condo-building": {
+  "url": "https://live.staticflickr.com/7801/47261995482_36549e77e6_b.jpg",
+  "title": "Condominium building/apartments, 2511 Eutaw Place, Baltimore, MD 21217",
+  "creator": "Baltimore Heritage",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/44034762@N04/47261995482",
+  "w": 1024,
+  "h": 768
+ },
+ "commercial-building": {
+  "url": "https://live.staticflickr.com/4324/35504865664_8a4cbd7ab8_b.jpg",
+  "title": "Engtoften 3 - DSC_1495_6_7_Realistic",
+  "creator": "Lav Ulv",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/99460566@N06/35504865664",
+  "w": 1024,
+  "h": 576
+ },
+ "calculator": {
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/VVXW9WBTB8.jpg",
+  "title": "Calculator Numbers",
+  "creator": "Martin Vorel",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/calculator-numbers-VVXW9WBTB8",
+  "w": 3000,
+  "h": 1957
+ },
+ "notebook": {
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/H5Y00D4OFT.jpg",
+  "title": "Notebook Notepad",
+  "creator": "Wilfred Iven",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/notebook-notepad-H5Y00D4OFT",
+  "w": 4288,
+  "h": 2848
+ },
+ "desk-meeting": {
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdXB3azYxNjM4MDQ3LXdpa2ltZWRpYS1pbWFnZS1rcDY4eDc2bS5qcGc.jpg",
+  "title": "Two people discussing business table",
+  "creator": "rawpixel",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/3336872/free-photo-image-desk-meeting-men",
+  "w": 5760,
+  "h": 3840
+ },
+ "signing": {
+  "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2ZyZGlyZWN0bWVkaWEwMDAwOS1pbWFnZS1rd3Z5amxoby5qcGc.jpg",
+  "title": "Free close two people hands",
+  "creator": "rawpixel",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/5927609/photo-image-background-public-domain-hands",
+  "w": 6720,
+  "h": 4480
+ },
+ "field-datasheet": {
+  "url": "https://live.staticflickr.com/6218/6343722631_84be289da6_b.jpg",
+  "title": "CWD datasheet",
+  "creator": "U.S. Fish and Wildlife Service - Midwest Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/49208525@N08/6343722631",
+  "w": 1024,
+  "h": 680
+ },
+ "house-in-pines": {
+  "url": "https://live.staticflickr.com/7347/9241094605_9a352446fe_b.jpg",
+  "title": "Rehabilitated Cobb House exterior, July 2013",
+  "creator": "GlacierNPS",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/43288043@N04/9241094605",
+  "w": 1024,
+  "h": 683
+ },
+ "great-falls": {
+  "url": "https://live.staticflickr.com/65535/51314585392_6d6bb0eb49_b.jpg",
+  "title": "Great Falls, Montana",
+  "creator": "Road Travel America",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/89508513@N02/51314585392",
+  "w": 1024,
+  "h": 768
+ },
+ "helena-capitol": {
+  "url": "https://live.staticflickr.com/65535/48966619222_a7531c8d96_b.jpg",
+  "title": "Montana State Capitol",
+  "creator": "ChrEugLee",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/184829900@N06/48966619222",
+  "w": 1024,
+  "h": 768
+ },
+ "kalispell-valley": {
+  "url": "https://live.staticflickr.com/65535/52553865558_82d1b5b9e6_b.jpg",
+  "title": "61.jpg",
+  "creator": "NRCS Montana",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/160831427@N06/52553865558",
+  "w": 1024,
+  "h": 576
+ },
+ "butte-panorama": {
+  "url": "https://live.staticflickr.com/65535/48790274206_8280c4a1c1_b.jpg",
+  "title": "That Golden Valley: Scenic view of Butte, Montana, September 1942.",
+  "creator": "polkbritton",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/157979053@N04/48790274206",
+  "w": 1024,
+  "h": 762
+ },
+ "whitefish-mountain": {
+  "url": "https://live.staticflickr.com/65535/51795424106_aa36fb2957_b.jpg",
+  "title": "Looking East toward Flower Point from just below the summit of Big Mountain on a stormy day, Tally Lake Ranger District.",
+  "creator": "Forest Service - Northern Region",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/40882383@N03/51795424106",
+  "w": 1024,
+  "h": 768
+ },
+ "livingston-cattle": {
+  "url": "https://live.staticflickr.com/65535/52100547026_1a455d5917_b.jpg",
+  "title": "20220523-FPAC-PJK-0336_TONED",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/52100547026",
+  "w": 1024,
+  "h": 683
+ },
+ "hiline-hay": {
+  "url": "https://live.staticflickr.com/65535/52344327685_fe14ffb8dc_b.jpg",
+  "title": "Looking north to the Sweet Grass Hills of northern Montana",
+  "creator": "blm_mtdks",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/137405667@N06/52344327685",
+  "w": 1024,
+  "h": 683
+ },
+ "polson-flathead": {
+  "url": "https://live.staticflickr.com/65535/48982312481_7e6a86b4f9_b.jpg",
+  "title": "Flathead Lake in Autumn",
+  "creator": "ChrEugLee",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/184829900@N06/48982312481",
+  "w": 1024,
+  "h": 768
+ },
+ "bozeman-ridge": {
+  "url": "https://live.staticflickr.com/4734/38347841054_428914eb51_b.jpg",
+  "title": "Scenic74.tif",
+  "creator": "NRCS Montana",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/160831427@N06/38347841054",
+  "w": 1024,
+  "h": 768
+ },
+ "missoula-clark-fork": {
+  "url": "https://live.staticflickr.com/65535/48962254972_35f71dbb6d_b.jpg",
+  "title": "Clark Fork River",
+  "creator": "ChrEugLee",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/184829900@N06/48962254972",
+  "w": 1024,
+  "h": 768
+ },
+ "billings-pompeys": {
+  "url": "https://live.staticflickr.com/4531/38235426066_e9cb769556_b.jpg",
+  "title": "Pompeys Pillar National Monument",
+  "creator": "blm_mtdks",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/137405667@N06/38235426066",
+  "w": 1024,
+  "h": 683
+ },
+ "miles-city-prairie": {
+  "url": "https://live.staticflickr.com/65535/49923331293_cfcbdf57a2_b.jpg",
+  "title": "Big Sky Back-Country Byway",
+  "creator": "blm_mtdks",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/137405667@N06/49923331293",
+  "w": 1024,
+  "h": 683
+ },
+ "yellowstone-river": {
+  "url": "https://live.staticflickr.com/4568/38258710072_b22fcf82c4_b.jpg",
+  "title": "Pompeys Pillar National Monument",
+  "creator": "blm_mtdks",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/137405667@N06/38258710072",
+  "w": 1024,
+  "h": 683
+ },
+ "whitefish-lake": {
+  "url": "https://live.staticflickr.com/8025/7638466626_6c6c95cc73_b.jpg",
+  "title": "Stark Sunset",
+  "creator": "dr-scott",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/60174743@N02/7638466626",
+  "w": 1024,
+  "h": 768
+ },
+ "firefighter-smoke": {
+  "url": "https://live.staticflickr.com/3784/13108917885_062cc30ea9_b.jpg",
+  "title": "140311-Z-NI803-312",
+  "creator": "Matt Hecht",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/76858203@N04/13108917885",
+  "w": 1024,
+  "h": 683
+ },
+ "home-burned-hillside": {
+  "url": "https://live.staticflickr.com/3765/9629104439_3685f1c054_b.jpg",
+  "title": "20130821-FS-LSC-1817",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/9629104439",
+  "w": 1024,
+  "h": 678
+ }
+}

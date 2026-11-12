@@ -10,6 +10,12 @@ if ($wyia_host === 'www.' . $wyia_real || ($wyia_host === $wyia_real && $wyia_pr
     header('Location: https://' . $wyia_real . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
     exit;
 }
+// A page requested as /dir/index.php (or /index.php) is a duplicate URL: 301 to the directory.
+if (preg_match('#^(.*/)index\.php$#', strtok($_SERVER['REQUEST_URI'] ?? '/', '?'), $idx_m)) {
+    $idx_q = strpos($_SERVER['REQUEST_URI'], '?') !== false ? substr($_SERVER['REQUEST_URI'], strpos($_SERVER['REQUEST_URI'], '?')) : '';
+    header('Location: ' . $idx_m[1] . $idx_q, true, 301);
+    exit;
+}
 // Keep temporary preview domains out of search results.
 if ($wyia_host !== $wyia_real) {
     header('X-Robots-Tag: noindex, nofollow');

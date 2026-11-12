@@ -1,0 +1,104 @@
+# floridainsuranceappraiser.com — static site
+
+Brand: **Florida Insurance Appraiser** · +1 (844) 537-1427 · info@floridainsuranceappraiser.com
+Hosting: Hostinger Agency Growth, website UID `BHoKZ0Ik1` (plain php-fpm, Boston datacenter).
+Temporary domain: https://pink-tiger-234102.hostingersite.com
+
+```sh
+python3 build.py      # renders everything into dist/
+python3 validate.py   # links, assets, one H1, unique titles/descriptions, JSON-LD, homepage keyword count (>=14)
+./deploy.sh           # uploads dist/ (see header comment for credentials)
+```
+
+## Layout
+| Path | What |
+| --- | --- |
+| `build.py` | Layout, homepage, all page templates, schema, sitemap, `index.php`, `api/contact.php` |
+| `siteconfig.py` | Name, phone, email, origin |
+| `content/` | Copy: `services.py` (10), `locations.py` (12 cities), `tools.py` (7 tools), `blog.py` (5), `resources.py` (about, process, FAQ, glossary, legal) |
+| `assets/` | `site.css`, `site.js` (nav, home gap estimator, form), `tools.js` (all calculators), images |
+
+49 HTML pages: home, about, contact, appraisal process, FAQ, glossary, 10 services + index,
+12 Florida locations + index, 7 tools + index, 5 guides + index, privacy/terms/disclaimer, HTML sitemap, 404.
+
+Hosting note (same platform behaviour as huttoroofs.com): the homepage is `home.html`, served by
+`index.php`, which also returns real 404s. Don't add an `index.html` at the root.
+
+## Live
+
+Live at https://floridainsuranceappraiser.com (linked 2026-11-07; Hostinger preview domain
+lightgoldenrodyellow-hamster-331460.hostingersite.com). Google Tag Manager container `GTM-T37B9MBK` is in every
+page's `<head>` (plus the GTM `<noscript>` iframe after `<body>`).
+
+**Contact form.** `/api/contact.php` sends each lead to info@floridainsuranceappraiser.com over authenticated SMTP
+(smtp.hostinger.com:465, SSL) and falls back to PHP `mail()`. The SMTP credentials are in
+`public_html/_config/mail.php` on the server only: a PHP file that returns a config array and answers direct
+web requests with an empty 404. It is not in this repository and `deploy.sh` never touches it. If the mailbox
+password changes, edit that file in the Hostinger file manager. Every lead is also appended to
+`public_html/_config/leads.php` (guarded the same way) with a `delivery` field: `true` means the mail server
+accepted the message; otherwise it holds the SMTP error.
+
+**Known hosting limits.** The File Browser cannot write above `public_html`, and the platform ignores `.htaccess`,
+so plain `http://` interior pages are served directly. Canonical tags point to https, and a one-line script in
+`<head>` moves http visitors to https. `www.` resolves but the platform certificate covers only the apex
+domain, so https://www. shows a certificate error until a certificate covering www is issued.
+
+## Photos
+
+All photographs are free stock images from [Pexels](https://www.pexels.com/license/) (free for commercial use,
+no attribution required; credited here for the record). Each is stored in `assets/img/photos/` as a
+1600px WebP plus a 720px `-sm` version for `srcset`. Photo-to-page assignments and alt text live at the top of
+`build.py` (`PHOTO_ALT`, `SVC_PHOTO`, `LOC_PHOTO`, `POST_PHOTO`). The Tallahassee page uses a generic North
+Florida live-oak street photo (St. Augustine), and its alt text does not claim it is Tallahassee.
+
+| File | Source |
+| --- | --- |
+| `florida-home-palm-trees` | https://www.pexels.com/photo/5177211/ |
+| `hurricane-palm-trees-wind` | https://www.pexels.com/photo/16313103/ |
+| `hurricane-damage-aerial` | https://www.pexels.com/photo/4170441/ |
+| `roofer-shingle-roof-repair` | https://www.pexels.com/photo/9431615/ |
+| `water-damage-collapsed-ceiling` | https://www.pexels.com/photo/30499666/ |
+| `cracked-wall-foundation` | https://www.pexels.com/photo/7717787/ |
+| `fire-damaged-house` | https://www.pexels.com/photo/12180092/ |
+| `florida-condo-building` | https://www.pexels.com/photo/31642742/ |
+| `florida-commercial-property` | https://www.pexels.com/photo/30648770/ |
+| `insurance-documents-review` | https://www.pexels.com/photo/7731335/ |
+| `estimate-review-clipboard-laptop` | https://www.pexels.com/photo/7731333/ |
+| `florida-coastal-homes` | https://www.pexels.com/photo/19219055/ |
+| `property-inspector-clipboard` | https://www.pexels.com/photo/8293667/ |
+| `inspector-checklist` | https://www.pexels.com/photo/8293680/ |
+| `claim-meeting-paperwork` | https://www.pexels.com/photo/7731328/ |
+| `home-insurance-policy` | https://www.pexels.com/photo/7735634/ |
+| `post-storm-flooding-florida` | https://www.pexels.com/photo/13865771/ |
+| `flooded-house-street` | https://www.pexels.com/photo/28447774/ |
+| `tile-roof-inspection` | https://www.pexels.com/photo/37623622/ |
+| `miami-beach-skyline` | https://www.pexels.com/photo/20486030/ |
+| `tampa-skyline` | https://www.pexels.com/photo/29330870/ |
+| `orlando-lake-eola-skyline` | https://www.pexels.com/photo/11665601/ |
+| `jacksonville-skyline-bridge` | https://www.pexels.com/photo/15058860/ |
+| `fort-lauderdale-beachfront` | https://www.pexels.com/photo/32207987/ |
+| `west-palm-beach-waterfront` | https://www.pexels.com/photo/9867776/ |
+| `fort-myers-neighborhood-aerial` | https://www.pexels.com/photo/12569258/ |
+| `naples-pier-sunset` | https://www.pexels.com/photo/3731068/ |
+| `sarasota-skyline` | https://www.pexels.com/photo/31848418/ |
+| `st-petersburg-pier` | https://www.pexels.com/photo/9422516/ |
+| `north-florida-live-oaks` | https://www.pexels.com/photo/31361526/ |
+| `pensacola-beach` | https://www.pexels.com/photo/12382682/ |
+
+## Canonical host guard (added Nov 12, 2026)
+
+The host ignores `.htaccess` and serves real files without running the root `index.php`, so
+`http://` and `www.` requests for interior pages used to load with a 200 instead of redirecting.
+`deploy.sh` now runs `guardify.py` on a staging copy of `./dist` before uploading:
+
+- every page `dir/index.html` goes up as `dir/index.php`, whose first line is
+  `<?php require_once dirname(__DIR__, n) . '/_guard.php'; ?>`, followed by the unchanged HTML
+- `_guard.php` 301s `www.` and plain http to `https://floridainsuranceappraiser.com`, 301s `/dir/index.php` to `/dir/`,
+  sends `X-Robots-Tag: noindex, nofollow` on any other host (preview domains) and 404s if requested directly
+- the root `index.php` front controller requires the guard and looks for `dir/index.php`
+- after a clean upload, the stale `dir/index.html` pages are deleted from the server, because the
+  host would serve them before `index.php`
+
+`./dist` and `validate.py` keep plain `index.html`, so the build and checks are unchanged.
+**Always deploy with `deploy.sh`**: uploading `./dist` any other way would put `index.html` pages
+back on the server and reopen the gap.

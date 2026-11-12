@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /home.html
+Disallow: /thank-you/
+
+Sitemap: https://alabamainsuranceappraiser.com/sitemap.xml

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /home.html
+
+Sitemap: https://missouriinsuranceappraiser.com/sitemap.xml

@@ -1,0 +1,5 @@
+__pycache__/
+_private/
+*.log
+config.php
+!static/api/contact.php

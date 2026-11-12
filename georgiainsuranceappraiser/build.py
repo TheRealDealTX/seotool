@@ -959,6 +959,12 @@ if ($gia_host === 'www.' . $gia_real || ($gia_host === $gia_real && $gia_proto =
     header('Location: https://' . $gia_real . ($_SERVER['REQUEST_URI'] ?? '/'), true, 301);
     exit;
 }
+// A page requested as /dir/index.php (or /index.php) is a duplicate URL: 301 to the directory.
+if (preg_match('#^(.*/)index\.php$#', strtok($_SERVER['REQUEST_URI'] ?? '/', '?'), $idx_m)) {
+    $idx_q = strpos($_SERVER['REQUEST_URI'], '?') !== false ? substr($_SERVER['REQUEST_URI'], strpos($_SERVER['REQUEST_URI'], '?')) : '';
+    header('Location: ' . $idx_m[1] . $idx_q, true, 301);
+    exit;
+}
 // Keep temporary preview domains out of search results.
 if ($gia_host !== $gia_real) {
     header('X-Robots-Tag: noindex, nofollow');
