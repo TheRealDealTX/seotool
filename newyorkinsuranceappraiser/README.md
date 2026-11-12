@@ -8,12 +8,12 @@ design are new.
 | | |
 | --- | --- |
 | Hostinger website UID | `nFY9v8sgn` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter selected) |
-| Domain | `newyorkinsuranceappraiser.com`, attached at creation. Not resolving yet; nameservers must be pointed first |
+| Live domain | https://newyorkinsuranceappraiser.com (live Nov 12, 2026; SSL covers apex + www; www, http and `/dir/index.php` 301 to the https apex) |
 | Preview URL | https://goldenrod-gaur-817128.hostingersite.com (sends `X-Robots-Tag: noindex`; Hostinger also serves its own blocking robots.txt there) |
-| Nameservers to set at the registrar | `athena.dns-parking.com`, `apollo.dns-parking.com` |
-| Google Tag Manager | Not set. `GTM_ID = ""` in `build.py` |
+| Nameservers | `athena.dns-parking.com`, `apollo.dns-parking.com` (set) |
+| Google Tag Manager | `GTM-NTJK9Q3X`: owner's head snippet used verbatim (`GTM_SNIPPET`) + noscript iframe after `<body>` on every page |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@newyorkinsuranceappraiser.com (mailbox not created yet) |
+| Email / form inbox | info@newyorkinsuranceappraiser.com: form delivers over authenticated SMTP (verified `"via":"smtp"`) |
 
 ## Layout
 
@@ -154,8 +154,9 @@ authenticated SMTP (`smtp.hostinger.com:465`) when `api/_private/config.php` exi
 to `mail()`. It always appends a JSON line to `api/_private/leads.log.php`, whose `<?php http_response_code(404); exit; ?>`
 header makes it 404 with 0 bytes. `_private/` is git-ignored. **Never commit credentials.**
 
-When the mailbox exists, upload this as `public_html/api/_private/config.php`, keeping any local copy outside
-the repo and deleting it after upload:
+**Status:** live. `public_html/api/_private/config.php` is on the server (not in git); its URL returns 404 with
+0 bytes, and a test submission on Nov 12, 2026 logged `"via":"smtp"`. To change the password, re-upload the file
+in this shape (keep any local copy outside the repo and delete it after upload):
 
 ```php
 <?php
@@ -165,19 +166,20 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 ```
 
 Then confirm the config URL returns 404 with 0 bytes, send one submission labelled as a test, and check that
-the log shows `"via":"smtp"`.
+the log shows `"via":"smtp"` (read it through the file API: `GET {url-without-/tus}/raw/public_html/api/_private/leads.log.php`).
 
 ## Google Tag Manager
 
-Set `GTM_ID = "GTM-XXXXXXX"` in `build.py`, then rebuild and deploy. That outputs the standard head snippet and
-the `<noscript>` iframe right after `<body>`.
+`GTM_ID = "GTM-NTJK9Q3X"` in `build.py`. `GTM_SNIPPET` holds the head snippet exactly as the owner supplied it;
+set it to `None` to fall back to the standard GTM loader. The `<noscript>` iframe is output right after `<body>`.
 
-## Going live checklist
+## Go-live (done Nov 12, 2026)
 
-1. Point the domain's nameservers to `athena.dns-parking.com` and `apollo.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`). If `www` is missing,
-   run `agency-hosting_ssl_reinstall-website`.
-3. On the live domain, check that http, `www` and `/index.php` 301 on the homepage and at least three interior pages,
-   that every sitemap URL returns 200, and that the domain sends no `X-Robots-Tag`.
-4. Add GTM and SMTP when provided, rebuild, validate, deploy and clear the cache.
-5. Submit `https://newyorkinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Nameservers pointed~~: SSL is active for `newyorkinsuranceappraiser.com` and `www.newyorkinsuranceappraiser.com`.
+2. ~~Canonical-host checks~~: on the homepage and interior pages, http, `www` and `/dir/index.php` all 301 to the
+   https apex. All 51 sitemap URLs return 200. The live domain sends no `X-Robots-Tag` and serves our `robots.txt`.
+3. ~~GTM and SMTP~~: added and verified, then rebuilt, validated (zero errors), redeployed and cache cleared.
+4. **To do:** submit `https://newyorkinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+
+If a `www` URL ever returns 200 with `x-hcdn-cache-status: HIT`, the CDN is serving a stale copy. Clear the cache
+(`agency-hosting_cache_clear-website`) and recheck after a few minutes.

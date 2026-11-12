@@ -33,8 +33,15 @@ EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
 VER = "20261112a"
 FAV = "1"
-# Google Tag Manager container ID (e.g. "GTM-XXXXXXX"). Empty = no tag output.
-GTM_ID = ""
+# Google Tag Manager container ID. Empty = no tag output.
+GTM_ID = "GTM-NTJK9Q3X"
+# Head snippet exactly as provided by the site owner (None = use the standard GTM loader for GTM_ID).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NTJK9Q3X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/claim-appraisals/"
 LOC_BASE = "/where-we-appraise/"
@@ -230,6 +237,8 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_SNIPPET:
+        return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
     return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
             "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
             f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
