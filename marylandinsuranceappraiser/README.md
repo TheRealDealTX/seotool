@@ -6,13 +6,13 @@ a small PHP guard and front controller serve it on a Hostinger Agency Growth web
 | | |
 | --- | --- |
 | Hostinger website UID | `vYLlD8zwQ` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, created Nov 12, 2026) |
-| Domain | `marylandinsuranceappraiser.com` (attached at creation; SSL issues once DNS points here) |
-| Preview URL | https://darkred-pigeon-443632.hostingersite.com (do live checks here until DNS moves) |
+| Live domain | https://marylandinsuranceappraiser.com (live Nov 12, 2026; SSL covers apex and www; www and http 301 to it) |
+| Preview URL | https://darkred-pigeon-443632.hostingersite.com (sends noindex) |
 | Nameservers to set at the registrar | `atlas.dns-parking.com`, `hyperion.dns-parking.com` |
 | Server | `us-phx-h5g-node3.hstgr.io`, IP 72.60.128.114 (Boston was requested; the order's server hosts the site) |
-| Google Tag Manager | Not set. Fill in `GTM_ID` in `build.py` to output the head snippet and the `<noscript>` iframe |
+| Google Tag Manager | `GTM-K5QKCKLL`: the owner’s head snippet verbatim (`GTM_SNIPPET` in `build.py`) plus the `<noscript>` iframe after `<body>` on every page |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@marylandinsuranceappraiser.com (mailbox still to be created) |
+| Email / form inbox | info@marylandinsuranceappraiser.com (form delivers over SMTP; test lead logged `"via":"smtp"` on Nov 12, 2026) |
 
 ## Layout
 
@@ -158,8 +158,9 @@ authenticated SMTP (`smtp.hostinger.com:465`) when `api/_private/config.php` exi
 `mail()` otherwise. It always appends a JSON line, including `"via"`, to `api/_private/leads.log.php`. That log
 starts with a `<?php … exit;` header, so requesting it returns a 404 with 0 bytes.
 
-**Credentials are never committed** (`_private/` is in `.gitignore`). When the mailbox exists, upload this file to
-`public_html/api/_private/config.php`, keeping any local copy outside the repo and deleting it after upload:
+**Credentials are never committed** (`_private/` is in `.gitignore`). The SMTP password lives only on the server in
+`public_html/api/_private/config.php` (uploaded Nov 12, 2026; the URL returns 404 with 0 bytes). To change the password,
+re-upload a file in this shape, keeping any local copy outside the repo and deleting it after upload:
 
 ```php
 <?php
@@ -168,12 +169,12 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@marylandinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-Then:
+After any change:
 1. Confirm the config URL returns 404 with 0 bytes.
 2. Send one submission labelled as a test.
 3. Confirm the log line shows `"via":"smtp"`.
 
-## Go-live checklist
+## Go-live checklist (done Nov 12, 2026, except Search Console)
 
 1. Point the domain's nameservers to `atlas.dns-parking.com` and `hyperion.dns-parking.com`.
 2. Once it resolves, confirm SSL is active and covers both the apex and `www` (`agency-hosting_websites_get` →

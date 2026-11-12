@@ -35,7 +35,14 @@ TODAY = date.today().isoformat()
 VER = "20261112a"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-K5QKCKLL"
+# Head snippet exactly as supplied by the site owner. Leave GTM_SNIPPET empty to fall back to the standard GTM loader.
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-K5QKCKLL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/property-claim-services/"
 LOC_BASE = "/service-locations/"
@@ -250,6 +257,8 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
+    if GTM_SNIPPET:
+        return f"<!-- Google Tag Manager -->\n{GTM_SNIPPET}\n<!-- End Google Tag Manager -->\n"
     return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
 
 
