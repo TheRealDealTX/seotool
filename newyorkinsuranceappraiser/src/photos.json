@@ -1,0 +1,326 @@
+{
+ "hero": {
+  "title": "Row of brownstone townhouses in Brooklyn (DOCUMERICA)",
+  "creator": "Danny Lyon",
+  "license": "pdm",
+  "landing": "https://commons.wikimedia.org/wiki/File:ROW_HOUSES_IN_BROOKLYN,_NEW_YORK_CITY._THE_INNER_CITY_TODAY_IS_AN_ABSOLUTE_CONTRADICTION_TO_THE_MAIN_STREAM_AMERICA..._-_NARA_-_555912.jpg",
+  "fw": 1200,
+  "fh": 796,
+  "alt": ""
+ },
+ "manhattan": {
+  "title": "Manhattan Skyline",
+  "creator": "Thomson20192",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/93558439@N05/26757600799",
+  "fw": 1024,
+  "fh": 640,
+  "alt": "Lower Manhattan skyline above autumn trees"
+ },
+ "brooklyn": {
+  "title": "Turn Century Brownstone Apartments Being",
+  "creator": "U.S. National Archives",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/8803316/photo-image-person-window-vintage",
+  "fw": 953,
+  "fh": 632,
+  "alt": "Row of red-brick Brooklyn brownstones with tall stoops"
+ },
+ "queens": {
+  "title": "Qns blvd 39st jeh",
+  "creator": "Jim.henderson",
+  "license": "cc0",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=8659248",
+  "fw": 1200,
+  "fh": 818,
+  "alt": "Elevated subway viaduct arches along a Queens boulevard"
+ },
+ "staten-island": {
+  "title": "Staten Island Ferry",
+  "creator": "Gary Lee Todd, Ph.D.",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/101561334@N08/15831476523",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Staten Island Ferry crossing New York Harbor"
+ },
+ "long-island": {
+  "title": "Solar panels at Long Island Visitor Center",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/43322816@N08/13912422474",
+  "fw": 1024,
+  "fh": 658,
+  "alt": "Cedar-shingled building with rooftop solar panels on Long Island"
+ },
+ "south-shore": {
+  "title": "Day 1 - Long Island National Wildlife Refuge Flyover",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/43322816@N08/16461126689",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Aerial view of a Long Island bayfront neighborhood and marsh"
+ },
+ "westchester": {
+  "title": "View of the Hudson River",
+  "creator": "dlge",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/27621018@N08/2995372240",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Hudson River view from a wooded bluff in autumn"
+ },
+ "albany": {
+  "title": "Icicles and snow on roof",
+  "creator": "madraban",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/56844220@N00/5214941839",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Snow piled on the roof edge of a brick building with gutters and downspout"
+ },
+ "syracuse": {
+  "title": "House Winter",
+  "creator": "NeONBRAND",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/house-winter-O7Y8ZBW5HN",
+  "fw": 960,
+  "fh": 640,
+  "alt": "Red house with a stone chimney half buried in deep snow"
+ },
+ "rochester": {
+  "title": "East 98th Street, Glenville, Cleveland, OH",
+  "creator": "w_lemay",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/59081381@N03/28060401287",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Two-and-a-half-story frame house with a front porch and driveway"
+ },
+ "buffalo": {
+  "title": "Buffalo New York - Elmwood District - Historic Area - Winter Snow Day",
+  "creator": "Onasill - Bill Badzo - 149 Million Views - Thank Y",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/7156765@N05/51621537613",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Red-brick Victorian mansion on a snowy city street"
+ },
+ "binghamton": {
+  "title": "Binghamton, New York",
+  "creator": "pecooper98362",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/29261037@N02/18946223870",
+  "fw": 1024,
+  "fh": 680,
+  "alt": "Susquehanna River at dusk with wooded hills"
+ },
+ "roof-shingles": {
+  "title": "Roof slate shingles",
+  "creator": "Picdrome Public Domain Pictures",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/65798313@N06/7226315482",
+  "fw": 1000,
+  "fh": 667,
+  "alt": "Close-up of weathered roof shingles in rows"
+ },
+ "hail": {
+  "title": "Hail",
+  "creator": "Open Grid Scheduler / Grid Engine",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/29155878@N03/22919917430",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Large hailstones scattered in the grass after a storm"
+ },
+ "storm": {
+  "title": "Storm clouds over the Peaks (HDR)",
+  "creator": "deborah.soltesz",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/10836653@N05/3576177210",
+  "fw": 1024,
+  "fh": 658,
+  "alt": "Dark storm clouds with rain falling over hills"
+ },
+ "house-fire": {
+  "title": "House Fire",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5949528/free-public-domain-cc0-photo",
+  "fw": 1024,
+  "fh": 685,
+  "alt": "Two-story house gutted by fire with its roof and walls burned away"
+ },
+ "water-ceiling": {
+  "title": "Flash flood, Canandaigua NY, July 23, 2017: cellar door",
+  "creator": "B137",
+  "license": "cc0",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=61270021",
+  "fw": 1200,
+  "fh": 795,
+  "alt": "Floodwater around a house and its cellar doors after a July 2017 flash flood in Canandaigua, New York"
+ },
+ "icicles": {
+  "title": "Closeup icicles roof",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/6018207/photo-image-public-domain-nature-ice",
+  "fw": 1024,
+  "fh": 685,
+  "alt": "Long icicles hanging from a snow-covered roof edge"
+ },
+ "snow-roof": {
+  "title": "The Roof Drippith",
+  "creator": "cogdogblog",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/37996646802@N01/3270032185",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Heavy snow overhanging a house roof with icicles along the gutter"
+ },
+ "fallen-tree": {
+  "title": "Fallen Trees",
+  "creator": "U.S. Fish & Wildlife Service Southwest Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/51896441@N04/37330421606",
+  "fw": 1024,
+  "fh": 576,
+  "alt": "Large tree uprooted and fallen across a lawn near a house"
+ },
+ "waves": {
+  "title": "Big breaking waves on the Oregon coast.",
+  "creator": "Bonnie Moreland (free images)",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/66741228@N05/46258768895",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Storm surf exploding against a rocky shoreline"
+ },
+ "roofer": {
+  "title": "Roofers (50631209332)",
+  "creator": "Daniel Moskowitz from Denver, USA",
+  "license": "cc0",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=105046310",
+  "fw": 1200,
+  "fh": 802,
+  "alt": "Roofer in a safety harness working on the peak of a house roof"
+ },
+ "consult": {
+  "title": "Business Meeting",
+  "creator": "Christina Morillo",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/business-meeting-SKBXLJOILI",
+  "fw": 960,
+  "fh": 640,
+  "alt": "Two women talking across a table by a large window"
+ },
+ "consult2": {
+  "title": "Business Meeting",
+  "creator": "Direct Media",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/business-meeting-SSKSJIBMMP",
+  "fw": 960,
+  "fh": 640,
+  "alt": "Two men reviewing figures together on a laptop"
+ },
+ "calculator": {
+  "title": "Calculator Numbers",
+  "creator": "Martin Vorel",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/calculator-numbers-VVXW9WBTB8",
+  "fw": 960,
+  "fh": 626,
+  "alt": "Blue calculator, pencil and sticky notes on a desk"
+ },
+ "laptop": {
+  "title": "Calculator Numbers",
+  "creator": "Negative Space",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/calculator-numbers-GIDMT5TDUF",
+  "fw": 960,
+  "fh": 640,
+  "alt": "Calculator beside a laptop and printed charts"
+ },
+ "clipboard": {
+  "title": "Slide notes on clipboard on bus",
+  "creator": "D Coetzee",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/29507259@N02/5816539356",
+  "fw": 1024,
+  "fh": 680,
+  "alt": "Clipboard holding a page of handwritten notes"
+ },
+ "office": {
+  "title": "Office Building",
+  "creator": "Open Grid Scheduler / Grid Engine",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/29155878@N03/26118317213",
+  "fw": 1024,
+  "fh": 678,
+  "alt": "Curved glass office building against a blue sky"
+ },
+ "commercial": {
+  "title": "Photo of the facade of a modernistic & classic architecture office building in brick and metal construction, in the street Rapenburgerstraat close to the Flea-market in Amsterdam city; - urban photography by Fons Heijnsbroek, the Netherlands, 2013",
+  "creator": "Amsterdam free photos & pictures of the Dutch city",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/104736837@N03/11496236035",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Brick and glass commercial building with bicycles parked out front"
+ },
+ "apartment": {
+  "title": "Mayflower Hotel, Akron, OH",
+  "creator": "w_lemay",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/59081381@N03/27953504717",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Facade of a pre-war brick high-rise seen from street level"
+ },
+ "who-home": {
+  "title": "East 98th Street, Glenville, Cleveland, OH",
+  "creator": "w_lemay",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/59081381@N03/28060404887",
+  "fw": 1024,
+  "fh": 768,
+  "alt": "Two-story house with a wide front porch and lawn"
+ },
+ "livingroom": {
+  "title": "Housing improvement project goal 1: two-bedroom unit, living room",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52067485855",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Living room with a sofa, coffee table and bright windows"
+ },
+ "kitchen": {
+  "title": "Free modern kitchen interior image",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5924425/photo-image-public-domain-kitchen-living-room",
+  "fw": 1024,
+  "fh": 683,
+  "alt": "Modern kitchen with a white island and built-in ovens"
+ },
+ "tarp": {
+  "title": "Roofers",
+  "creator": "Dennis S. Hurd",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/43296902@N00/4363286049",
+  "fw": 1024,
+  "fh": 765,
+  "alt": "Crew on a lift tarping a storm-damaged brick gable"
+ },
+ "noreaster": {
+  "title": "Third Nor'easter in 10 Days Impacts New England",
+  "creator": "NOAASatellites",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/125201706@N06/25940345927",
+  "fw": 1024,
+  "fh": 576,
+  "alt": "Satellite image of a nor’easter swirling off the Northeast coast"
+ }
+}
