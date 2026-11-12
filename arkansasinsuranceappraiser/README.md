@@ -42,7 +42,7 @@ export AIA_FB_URL=… AIA_FB_AUTH=… AIA_FB_REST=…
 `DELETE {url-without-/tus}/resources/public_html/<path>` with the same `X-Auth` / `X-Auth-Rest` headers.
 Hostinger's placeholder `public_html/default.php` has already been deleted.
 
-Local preview that mimics the host: `cd public && php -S 127.0.0.1:8765 ../tools/router.php`. The router that serves
+Local preview that mimics the host: `cd public && php -S 127.0.0.1:8765 ../tools/router.php`. The router serves
 real files directly, executes `.php` files and a directory's `index.php`, and sends everything else to `index.php`.
 
 ## URL structure (different from every sister site)
