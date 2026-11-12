@@ -153,7 +153,7 @@ LOCATIONS = [
     },
     {
         "slug": "smyrna", "city": "Smyrna", "county": "Kent & New Castle counties", "region": "Northern Kent",
-        "photo": "farm-barn",
+        "photo": "lightning",
         "lede": "Straddling the Kent–New Castle line on Duck Creek, Smyrna blends an 18th-century downtown with new subdivisions and nearby farmland and marsh along the Delaware Bay.",
         "perils": ["Wind & tornadoes", "Coastal storms", "Hail", "Farm structure damage", "Frozen pipes"],
         "housing": "Historic downtown homes, new subdivisions, farms and agricultural buildings",
@@ -243,7 +243,7 @@ LOCATIONS = [
     },
     {
         "slug": "seaford", "city": "Seaford", "county": "Sussex County", "region": "Western Sussex",
-        "photo": "delaware-farmland",
+        "photo": "flood-street",
         "lede": "Once known as the “Nylon Capital of the World” for its DuPont plant, Seaford sits on the Nanticoke River in western Sussex County, with older neighborhoods, new homes and farmland nearby.",
         "perils": ["Severe storms", "Hurricane remnants", "River flooding", "Tree damage", "Frozen pipes"],
         "housing": "Mid-century homes built for plant workers, older downtown homes, new subdivisions and riverfront properties",
