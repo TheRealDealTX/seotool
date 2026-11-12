@@ -53,7 +53,8 @@ ul,ol{padding-left:1.2em}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff;flex:none}
 .brand:hover,.brand:focus,.brand:active,.brand:visited{color:#fff;text-decoration:none}
 .brand .mark{width:44px;height:44px;flex:none;border-radius:12px;box-shadow:0 0 0 2px rgba(255,255,255,.18)}
-.brand-t{display:flex;flex-direction:column;line-height:1.1}
+.brand-t{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.hdr .brand{min-width:0;flex:0 1 auto}
 .brand-t b{font-family:var(--display);font-stretch:112%;font-weight:800;font-size:1.04rem;letter-spacing:-.01em}
 .brand-t small{font-size:.74rem;opacity:.8;letter-spacing:.04em}
 .nav{margin-left:auto}
@@ -80,7 +81,13 @@ ul,ol{padding-left:1.2em}
 body.drawer-open .scrim{opacity:1;visibility:visible;transition:opacity .25s}
 body.drawer-open .drawer,html:not(.js) .drawer:target{transform:none;visibility:visible;box-shadow:24px 0 60px -20px rgba(6,19,34,.6);transition:transform .3s ease}
 .drawer-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 18px;background:var(--navy)}
-.brand-sm .brand-t b{font-size:.98rem}
+/* drawer brand row must fit inside the drawer: shrinkable brand, wrapping name, never a horizontal scroll */
+.drawer{overflow-x:hidden}
+.drawer-top .brand-sm{flex:1 1 auto;min-width:0;gap:10px}
+.brand-sm .mark{width:38px;height:38px}
+.brand-sm .brand-t{min-width:0}
+.brand-sm .brand-t b{font-size:.95rem;line-height:1.15;white-space:normal}
+.brand-sm .brand-t small{display:none}
 .drawer-x{display:grid;place-items:center;width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.14);color:#fff;font-size:1.8rem;line-height:1;text-decoration:none;flex:none}
 .drawer-x:hover{color:#fff;background:rgba(255,255,255,.24)}
 .drawer-nav ul{list-style:none;margin:0;padding:0}
@@ -533,6 +540,8 @@ html:not(.js) .rail-nav{display:none}
   .season{min-height:240px}
 }
 @media (max-width:420px){
+  .hdr .brand-t b{font-size:.92rem}
+  .hdr-in{gap:12px}
   .towns{grid-template-columns:1fr}
   .ftr-grid{grid-template-columns:1fr}
   .btn{white-space:normal}
