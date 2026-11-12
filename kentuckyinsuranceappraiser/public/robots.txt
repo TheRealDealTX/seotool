@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /home.html
+Disallow: /404.html
+
+Sitemap: https://kentuckyinsuranceappraiser.com/sitemap.xml
