@@ -84,9 +84,9 @@ URL slugs were chosen so none match the sister sites:
 
 ## Photos
 
-Every photo is CC0 or public domain, found through the Openverse API (`license=cc0,pdm`) and other
+34 photos, every one CC0 or public domain (StockSnap, rawpixel, Flickr CC0/PD, Wikimedia Commons PD/CC0, US agencies such as NOAA, USFWS and the Army Corps), found through the Openverse API (`license=cc0,pdm`) and other
 public-domain sources, downloaded one at a time with pauses. Each is served as 1200px and 640px WebP with
-`srcset`/`sizes` and width/height. Sources and licenses are listed on `/photo-credits/`.
+`srcset`/`sizes` and width/height. Sources and licenses are listed on `/photo-credits/`. Six are genuine Delaware scenes (Wilmington skyline, Brandywine Creek, Rehoboth boardwalk and beach, the Lewes ferry terminal, Legislative Hall in Dover); the rest are generic and their alt text says only what they show. Several sources cap at 960–1024px, so those are served at native width (never upscaled). `scripts/make_og.py` builds the OG image.
 
 ## Hosting notes
 
