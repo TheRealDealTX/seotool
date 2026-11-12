@@ -99,7 +99,7 @@ and footer never changes color on hover.
 
 ## Photos
 
-About 35 royalty-free photos (CC0 or public domain), found through the Openverse API (`license=cc0,pdm`): StockSnap,
+36 royalty-free photos (CC0 or public domain), found through the Openverse API (`license=cc0,pdm`): StockSnap,
 rawpixel, Flickr and Wikimedia Commons / US government. Each is a 1200px and a 640px WebP in
 `static/assets/img/photos/`, used with `srcset`/`sizes` and width/height set. Each has descriptive alt text,
 decorative backgrounds use `alt=""`, and all are listed with license and source on `/photo-sources/`.

@@ -93,8 +93,14 @@
   var targets = $$(".reveal, .counters");
   if ("IntersectionObserver" in window && !reduce) {
     body.classList.add("anim");
-    var io = new IntersectionObserver(function (ents) { ents.forEach(function (en) { if (en.isIntersecting) { show(en.target); io.unobserve(en.target); } }); }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    var pending = targets.slice();
+    var done = function (el) { show(el); io.unobserve(el); pending.splice(pending.indexOf(el), 1); };
+    var io = new IntersectionObserver(function (ents) { ents.forEach(function (en) { if (en.isIntersecting && pending.indexOf(en.target) > -1) done(en.target); }); }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
     targets.forEach(function (el) { io.observe(el); });
+    /* Fast scrolls can jump past an element between frames: reveal anything already above the fold line. */
+    var sweep = function () { pending.slice().forEach(function (el) { if (el.getBoundingClientRect().top < window.innerHeight) done(el); }); };
+    window.addEventListener("scroll", function () { requestAnimationFrame(sweep); }, { passive: true });
+    window.addEventListener("load", sweep);
   } else { targets.forEach(show); }
 
   /* ---------- region carousel ---------- */

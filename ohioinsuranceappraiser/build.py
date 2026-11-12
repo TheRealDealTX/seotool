@@ -32,7 +32,7 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261112a"
+VER = "20261112b"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no tag is output.
 GTM_ID = ""
@@ -100,18 +100,18 @@ def img(key, cls="", sizes="100vw", lazy=True, alt=None, extra=""):
 SVC_PHOTO = {
     "appraisal-demand-representation": "consultation", "home-insurance-appraisal": "house-porch", "commercial-hoa-appraisal": "commercial-building",
     "hail-roof-appraisal": "hailstones", "tornado-windstorm-appraisal": "tornado-damage", "derecho-remnant-storm-appraisal": "fallen-tree",
-    "water-damage-appraisal": "flooded-basement", "fire-smoke-appraisal": "house-fire", "ice-dam-frozen-pipe-appraisal": "icicles-roof",
+    "water-damage-appraisal": "water-ceiling", "fire-smoke-appraisal": "house-fire", "ice-dam-frozen-pipe-appraisal": "icicles-roof",
     "estimate-audit": "paperwork", "neutral-umpire-services": "clipboard",
 }
 LOC_PHOTO = {
     "columbus": "columbus-skyline", "cleveland": "cleveland-skyline", "cincinnati": "cincinnati-skyline", "toledo": "toledo",
-    "akron": "akron", "dayton": "dayton", "canton": "house-porch", "youngstown": "tornado-aerial", "sandusky": "lake-erie",
-    "lima": "ohio-farm", "xenia": "tornado-damage", "zanesville": "zanesville",
+    "akron": "akron", "dayton": "tornado-damage", "canton": "house-porch", "youngstown": "storm-clouds", "sandusky": "lake-erie",
+    "lima": "ohio-farm", "xenia": "tornado-aerial", "zanesville": "ice-storm",
 }
 TOOL_PHOTO = {
     "claim-gap-fee-estimator": "calculator", "rcv-acv-holdback-calculator": "paperwork", "roof-area-pitch-calculator": "roofer",
     "percentage-deductible-calculator": "storm-supercell", "claim-calendar-builder": "clipboard", "appraisal-readiness-checkup": "consultation",
-    "basement-backup-sublimit-calculator": "flooded-basement",
+    "basement-backup-sublimit-calculator": "water-ceiling",
 }
 POST_PHOTOS = ["paperwork", "flooded-basement", "slate-roof", "icicles-roof", "calculator", "fallen-tree"]
 POST_PHOTO = {p["slug"]: POST_PHOTOS[i % len(POST_PHOTOS)] for i, p in enumerate(POSTS)}
@@ -488,10 +488,10 @@ REGIONS = [
     ("Central Ohio", "Columbus and suburbs", "columbus-skyline",
      "Franklin County’s fast-growing suburbs mean big subdivisions of similar homes — and big hail and wind events that hit thousands of roofs at once, as the 2012 derecho showed.",
      ["Derechos", "Hail", "Wind", "Basement water"]),
-    ("Southwest Ohio", "Cincinnati · Dayton · Xenia", "dayton",
+    ("Southwest Ohio", "Cincinnati · Dayton · Xenia", "cincinnati-skyline",
      "The Miami Valley sits in one of Ohio’s busiest tornado corridors, from Xenia in 1974 to the Memorial Day 2019 outbreak. Cincinnati’s hillside homes add tree, wind and water problems.",
      ["Tornadoes", "Hail", "Hillside water", "Tree damage"]),
-    ("Southeast Ohio", "Zanesville · Athens · Marietta", "zanesville",
+    ("Southeast Ohio", "Zanesville · Athens · Marietta", "ice-storm",
      "Appalachian hills, river towns and older frame and brick homes. Ice storms, fallen trees and basement water are the claims that come up most along the Muskingum and the Ohio River.",
      ["Ice storms", "Fallen trees", "River-town basements", "Older homes"]),
 ]
