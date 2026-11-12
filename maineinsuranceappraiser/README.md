@@ -6,12 +6,12 @@ and a small PHP front controller plus a canonical-host guard serve it on a Hosti
 | | |
 | --- | --- |
 | Hostinger website UID | `4QdxBSl4j` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, created in the Boston datacenter; the order's server is `us-phx-h5g-node3.hstgr.io`) |
-| Domain | https://maineinsuranceappraiser.com (attached at creation) |
+| Domain | https://maineinsuranceappraiser.com (live; Let's Encrypt SSL covers the bare domain and `www`, expires Feb 10, 2027; www and http 301 to it) |
 | Preview URL | https://linen-weasel-655539.hostingersite.com (Hostinger serves its own Googlebot-blocking `robots.txt` here; our guard also sends `X-Robots-Tag: noindex, nofollow` on every non-canonical host) |
 | Nameservers to set at the registrar | `orbit.dns-parking.com` and `horizon.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@maineinsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | none yet. Set `GTM_ID` in `build.py` to output the head snippet and the `<noscript>` iframe after `<body>` |
+| Email / form inbox | info@maineinsuranceappraiser.com (form delivers over authenticated SMTP) |
+| Google Tag Manager | `GTM-WPRSN8X2`: the owner-supplied head snippet (`GTM_HEAD_SNIPPET`, verbatim) and the `<noscript>` iframe after `<body>` on every page. Set `GTM_ID = ""` to remove |
 
 ## Layout
 
@@ -147,8 +147,11 @@ WebApplication (tools), BlogPosting (guides), HowTo (process) and DefinedTermSet
 
 ## Going live checklist
 
-1. Point the domain's nameservers to `orbit.dns-parking.com` / `horizon.dns-parking.com`.
-2. Confirm SSL covers both `maineinsuranceappraiser.com` and `www.` and that www/http 301 to the canonical host.
-3. Create the mailbox, then upload `api/_private/config.php` and send one labelled test lead.
-4. Add GTM when the container ID is ready (`GTM_ID` in `build.py`), rebuild, deploy, clear cache.
+1. ~~Point the nameservers to `orbit.dns-parking.com` / `horizon.dns-parking.com`~~: done. The domain resolves to the website.
+2. ~~SSL for both names, and www/http 301s~~: done. Checked on the homepage and four interior pages: `http://`, `http://www.` and
+   `https://www.` all 301 to `https://maineinsuranceappraiser.com/<page>/`, `/<page>/index.php` 301s to `/<page>/`, all 52
+   sitemap URLs return 200, and the real domain sends no `X-Robots-Tag` and serves our own `robots.txt`.
+3. ~~Mailbox + SMTP~~: done. `api/_private/config.php` is on the server only (404, 0 bytes when requested). A labelled
+   test lead was logged with `"via":"smtp"`.
+4. ~~GTM~~: done (`GTM-WPRSN8X2`).
 5. Submit `https://maineinsuranceappraiser.com/sitemap.xml` in Google Search Console.
