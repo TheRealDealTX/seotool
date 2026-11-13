@@ -84,7 +84,7 @@ titles, descs = {}, {}
 files = []
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
-        if f.endswith(".html") or (f == "index.php" and dp != ROOT):
+        if (f.endswith(".html") and not re.match(r"google[0-9a-f]+\.html$", f)) or (f == "index.php" and dp != ROOT):
             files.append(os.path.join(dp, f))
 
 for fp in sorted(files):

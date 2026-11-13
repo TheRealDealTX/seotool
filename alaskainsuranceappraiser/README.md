@@ -6,12 +6,13 @@ builds it, and it runs on a Hostinger Agency Growth website behind a small PHP c
 | | |
 | --- | --- |
 | Hostinger website UID | `FOmBEpQf5` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `alaskainsuranceappraiser.com` (attached at creation; nameservers not yet pointed) |
+| Live domain | https://alaskainsuranceappraiser.com (SSL covers apex and www; www and http 301 to the https apex) |
 | Preview URL | https://darkcyan-squirrel-104297.hostingersite.com (sends `X-Robots-Tag: noindex`) |
-| Nameservers to set at the registrar | `atlas.dns-parking.com`, `hyperion.dns-parking.com` |
+| Nameservers | `atlas.dns-parking.com`, `hyperion.dns-parking.com` (pointed Nov 13, 2026) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@alaskainsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Not set yet: `GTM_ID = ""` in `build.py` |
+| Email / form inbox | info@alaskainsuranceappraiser.com (form delivers over SMTP) |
+| Google Tag Manager | `GTM-W3M89TSN` (client's snippet in `<head>` + noscript iframe after `<body>`) |
+| Search Console | `googlecccfbf2f7e9e5ae4.html` verification file in `static/` (skipped by `validate.py`) |
 
 ## Layout
 
@@ -133,7 +134,8 @@ line to `api/_private/leads.log.php`. The log starts with `<?php http_response_c
 checks a constant, so both return 404 when requested directly. They live in `public_html` because the file API can't
 write outside it. `_private/` is git-ignored: **never commit credentials.**
 
-When the mailbox exists, upload this as `public_html/api/_private/config.php` (keep any local copy outside the
+SMTP is live (Nov 13, 2026): the config below was uploaded, its URL returns 404 with 0 bytes, and a
+submission labelled as a test logged `"via":"smtp"`. To change the password, upload this as `public_html/api/_private/config.php` (keep any local copy outside the
 repo and delete it after upload), confirm the URL returns 404 with 0 bytes, send one submission labelled as a
 test, and check the log shows `"via":"smtp"`:
 
@@ -146,16 +148,16 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 
 ## Google Tag Manager
 
-Set `GTM_ID` in `build.py` (for example `"GTM-XXXXXXX"`), rebuild and redeploy. The head snippet and the
-`<noscript>` iframe after `<body>` are then printed on every page.
+`GTM_ID = "GTM-W3M89TSN"` in `build.py`. `gtm_head()` prints the client's snippet exactly as provided (async
+`gtm.js` loader plus the `dataLayer`/`gtag` stub) and `gtm_body()` prints the `<noscript>` iframe right after `<body>`.
+Set `GTM_ID = ""` to remove both.
 
 ## Going live checklist
 
-1. Point the domain's nameservers to `atlas.dns-parking.com` and `hyperion.dns-parking.com`.
-2. Confirm SSL covers both `alaskainsuranceappraiser.com` and `www.alaskainsuranceappraiser.com`
-   (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if not.
-3. On the live domain, check the homepage and at least three interior pages: http, www and https-www all 301 to the
-   https apex; `/page/index.php` 301s to `/page/`; every sitemap URL returns 200; no `X-Robots-Tag`; our `robots.txt`.
-   If a www URL still returns 200 with `x-hcdn-cache-status: HIT`, clear the cache again and recheck.
-4. Add GTM and SMTP when available, rerun `validate.py`, redeploy, clear the cache.
-5. Submit `https://alaskainsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Point the nameservers~~ done; SSL `ssl_cert.names` covers the apex and www, and both present valid certificates.
+2. ~~Canonical-host check on the live domain~~ done on the homepage and four interior pages: http, http-www and
+   https-www all 301 to the https apex, `/page/index.php` 301s to `/page/`, all 51 sitemap URLs return 200 with no
+   `X-Robots-Tag`, and our own `robots.txt` is served. (If a www URL ever returns 200 with `x-hcdn-cache-status: HIT`,
+   clear the cache and recheck.)
+3. ~~GTM, SMTP and the Search Console file~~ done, validated, redeployed and cache cleared.
+4. Submit `https://alaskainsuranceappraiser.com/sitemap.xml` in Google Search Console.
