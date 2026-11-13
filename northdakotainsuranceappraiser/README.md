@@ -9,13 +9,13 @@ design are new and differ from every sister site.
 | | |
 | --- | --- |
 | Hostinger website UID | `Hw07YkBDa` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `northdakotainsuranceappraiser.com` (attached at creation; www and http 301 to `https://northdakotainsuranceappraiser.com`) |
+| Live domain | https://northdakotainsuranceappraiser.com — live since Nov 13, 2026; SSL covers apex + `www` (expires 2027-02-11, auto-renewed by Hostinger); www and http 301 to the apex |
 | Preview URL | https://lightpink-ram-106624.hostingersite.com (sends `X-Robots-Tag: noindex`; Hostinger serves its own robots.txt here) |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` (as reported by `agency-hosting_websites_get`) |
 | Server | `us-phx-h5g-node3.hstgr.io`, IPv4 72.60.128.114 |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@northdakotainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Email / form inbox | info@northdakotainsuranceappraiser.com — form delivers over SMTP (tested Nov 13, 2026, `"via":"smtp"`) |
+| Google Tag Manager | `GTM-T28JCQDJ` — head snippet exactly as supplied (`GTM_HEAD` in `build.py`) + noscript iframe after `<body>` |
 
 ## Layout
 
@@ -26,7 +26,7 @@ design are new and differ from every sister site.
 | `src/locations.py` | 12 city pages |
 | `src/tools.py` | 7 interactive tools (markup + copy) |
 | `src/learn.py` | Process guide (8 stages), grouped FAQ, 44-term glossary, 6 handbook guides |
-| `src/photos.json` | Photo metadata (title, creator, license, source, size) used by `img()` and `/image-credits/` |
+| `src/photos.json` | Photo metadata (title, creator, license, source URL, size) used by `img()`; the source record for every photo |
 | `static/` | CSS, JS, icons, OG image, photos, `api/contact.php` — copied into `public/` as-is |
 | `public/` | **Build output** — what gets deployed (committed) |
 | `validate.py` | Post-build checks (must report zero errors) |
@@ -51,7 +51,7 @@ Local preview that behaves like the host:
 cd public && php -S 127.0.0.1:8080 ../tools/router.php
 ```
 
-## Pages (51 in sitemap.xml)
+## Pages (50 in sitemap.xml)
 
 - Home, `/firm-overview/` (about), `/request-an-appraisal/` (contact)
 - `/appraisal-representation/` + 11 services (appraisal clause, homeowner, commercial/HOA/multifamily,
@@ -65,7 +65,7 @@ cd public && php -S 127.0.0.1:8080 ../tools/router.php
   load estimator (new for this state)
 - `/how-an-appraisal-unfolds/` (HowTo), `/policyholder-faq/` (grouped), `/appraisal-terms-a-z/`
   (searchable glossary), `/claim-handbook/` + 6 guides
-- `/your-privacy/`, `/conditions-of-use/`, `/not-legal-advice/`, `/image-credits/`, `/every-page/`
+- `/your-privacy/`, `/conditions-of-use/`, `/not-legal-advice/`, `/every-page/`
   (HTML site map), `404.html` (served with a real 404), `sitemap.xml`, `robots.txt`
 
 ## Design
@@ -94,7 +94,7 @@ Carol M. Highsmith's Library of Congress photographs (via rawpixel, clean 1024px
 Commons (standard 330px thumbs for contact sheets, 1280px thumbs for finals, one request at a time
 with backoff), StockSnap and rawpixel CC0 stock. Each is saved as 1200px and 640px WebP with
 `srcset`/`sizes`/width/height. rawpixel's `image_1300` files are watermarked — use `editor_1024`.
-Every photo is listed with license and source on `/image-credits/`.
+The public photo-credits page was removed at the owner's request on Nov 13, 2026 (and deleted from the server); `src/photos.json` keeps each photo's license and source.
 
 ## Hosting notes (canonical-host guard)
 
@@ -153,10 +153,8 @@ check the log shows `"via":"smtp"`.
 
 ## Going live checklist
 
-1. Point the domain's nameservers to `nova.dns-parking.com` / `cosmos.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`ssl_cert.names`); reissue with
-   `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. Re-check http/www/`index.php` 301s on the live domain, sitemap URLs 200, no `X-Robots-Tag`.
-4. Create the mailbox, upload the SMTP config, send a test lead.
-5. Add GTM if provided (`GTM_ID`), rebuild, validate, deploy, clear cache.
-6. Submit `https://northdakotainsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Point the nameservers~~ — done; SSL issued for apex + `www`.
+2. ~~Check http/www/`index.php` 301s on the live domain (home + 3 interior pages), sitemap URLs 200, no `X-Robots-Tag`, own robots.txt~~ — done Nov 13, 2026.
+3. ~~Create the mailbox, upload the SMTP config, send a test lead~~ — done; config URL returns 404 / 0 bytes.
+4. ~~Add GTM~~ — done (`GTM-T28JCQDJ`).
+5. Submit `https://northdakotainsuranceappraiser.com/sitemap.xml` to Google Search Console.

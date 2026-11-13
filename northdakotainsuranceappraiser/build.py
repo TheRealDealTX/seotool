@@ -34,7 +34,7 @@ TODAY = date.today().isoformat()
 VER = "20261113a"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-T28JCQDJ"
 
 SVC_BASE = "/appraisal-representation/"
 LOC_BASE = "/across-north-dakota/"
@@ -47,7 +47,6 @@ CONTACT = "/request-an-appraisal/"
 PRIVACY = "/your-privacy/"
 TERMS = "/conditions-of-use/"
 DISCLAIM = "/not-legal-advice/"
-CREDITS = "/image-credits/"
 HTMLMAP = "/every-page/"
 
 e = html.escape
@@ -293,21 +292,25 @@ def footer():
 <div><h2 class="fh">The practice</h2><ul><li><a href="{ABOUT}">Firm overview</a></li><li><a href="{PROCESS}">How an appraisal unfolds</a></li><li><a href="{FAQ_PATH}">Policyholder FAQ</a></li><li><a href="{GLOSS}">Terms A–Z</a></li><li><a href="{POST_BASE}">Claim handbook</a></li><li><a href="{CONTACT}">Request an appraisal</a></li></ul></div>
 </div>
 <div class="foot-legal"><span>© <span data-year>{date.today().year}</span> {BRAND}</span>
-<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISCLAIM}">Disclaimer</a></li><li><a href="{CREDITS}">Image credits</a></li><li><a href="{HTMLMAP}">Site map</a></li></ul></div>
+<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISCLAIM}">Disclaimer</a></li><li><a href="{HTMLMAP}">Site map</a></li></ul></div>
 <p class="foot-disc">{BRAND} provides insurance appraisal, estimating and umpire services. We are not a law firm, do not give legal advice and are not a public adjuster. Content on this site is general and educational; policy terms vary, and results depend on the facts of each claim.</p>
 </div></footer>
 <button class="to-top" type="button" aria-label="Back to top">{ic("up")}</button>
 <div class="callbar"><a href="tel:{TEL}">{ic("phone")} Call now</a><a href="{CONTACT}">{ic("file")} Free review</a></div>"""
 
 
+# Head snippet exactly as supplied by the site owner (Nov 13, 2026).
+GTM_HEAD = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-T28JCQDJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+"""
+
+
 def gtm_head():
-    if not GTM_ID:
-        return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\n"
-            "new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
-            "'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return GTM_HEAD if GTM_ID else ""
 
 
 def gtm_body():
@@ -920,9 +923,6 @@ def company_pages():
                          "Get a free review of your disputed property claim. Call or text (844) 537-1427 or email info@northdakotainsuranceappraiser.com.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], photo="handshake"), 0.8)
 
-    credits = "".join(
-        f'<tr><td>{img(k, sizes="120px", alt="", extra=" class=\"thumb\"")}</td><td>{e(v["title"])}<br><small>{e(v.get("creator") or "Unknown")}</small></td><td>{"CC0 1.0" if v["license"] == "cc0" else "Public domain"}</td><td>{e(v.get("via", ""))}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">Source</a></td></tr>'
-        for k, v in PHOTOS.items())
     upd = date.today().strftime("%B %-d, %Y")
     legal = {
         PRIVACY: ("Privacy Statement", f"""
@@ -941,7 +941,7 @@ def company_pages():
 <h2>No professional relationship</h2><p>Reading this site, using its tools or submitting a form doesn’t create an appraiser–client relationship. That begins only when we both sign a written engagement agreement.</p>
 <h2>No legal advice</h2><p>{BRAND} isn’t a law firm, and nothing here is legal advice. Policies differ and laws change. Talk to a licensed North Dakota attorney about legal questions.</p>
 <h2>Tools and examples</h2><p>Calculators give planning estimates from the information you enter. Example figures are illustrative. Neither is an appraisal, a quote or a prediction of any claim outcome.</p>
-<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are used under the licenses listed on the <a href="{CREDITS}">image credits</a> page.</p>
+<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are public-domain or CC0 images.</p>
 <h2>Limitation of liability</h2><p>The site is provided “as is.” To the extent the law allows, we aren’t liable for decisions made based on its content or tools.</p>
 <h2>Governing law</h2><p>These conditions are governed by the laws of the State of North Dakota.</p>""", "The conditions that apply when you use this website and its tools."),
         DISCLAIM: ("Disclaimer", f"""
@@ -952,9 +952,6 @@ def company_pages():
 <h2>Bad faith and legal claims</h2><p>North Dakota law recognizes legal claims against insurers that handle claims in bad faith, and the state’s insurance code lists unfair claim settlement practices. Whether either applies depends on facts and law that only an attorney can evaluate. Appraisal doesn’t decide those questions.</p>
 <h2>Photographs</h2><p>Photos on this site are public-domain and CC0 images used for illustration. They don’t show our clients’ properties.</p>
 <h2>Third-party references</h2><p>References to agencies, laws or weather events are for context. Verify current rules with official sources such as the North Dakota Insurance Department.</p>""", "Important limits on the information published on this website."),
-        CREDITS: ("Image Credits", f"""
-<p>Every photograph on this site is royalty-free: either dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> or a <strong>public-domain</strong> work, such as Carol M. Highsmith’s photographs in the Library of Congress and images by U.S. government agencies. They were found through the Openverse search engine. Attribution isn’t legally required, but we credit the creators here with thanks. Photos are illustrative and don’t show our clients’ properties.</p>
-<div class="table-wrap"><table class="credits"><thead><tr><th>Photo</th><th>Title / creator</th><th>License</th><th>Via</th><th>Link</th></tr></thead><tbody>{credits}</tbody></table></div>""", "Sources and licenses for the photographs used on this site."),
     }
     for path, (title, content, lede) in legal.items():
         trail = [("Home", "/"), (title, path)]
@@ -971,7 +968,7 @@ def sitemap_pages():
         ("Locations", [("Across North Dakota", LOC_BASE)] + [(f"{l['city']}, ND", loc_path(l)) for l in LOCATIONS]),
         ("Claim tools", [("All tools", TOOL_BASE)] + [(t["name"], f'{TOOL_BASE}{t["slug"]}/') for t in TOOLS]),
         ("Resources", LEARN + [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]),
-        ("Site information", [("Privacy statement", PRIVACY), ("Conditions of use", TERMS), ("Disclaimer", DISCLAIM), ("Image credits", CREDITS)]),
+        ("Site information", [("Privacy statement", PRIVACY), ("Conditions of use", TERMS), ("Disclaimer", DISCLAIM)]),
     ]
     cols = "".join(f'<div class="mapcol rv"><h2>{e(g)}</h2><ul>{"".join(f"<li><a href=\"{p}\">{e(n)}</a></li>" for n, p in links)}</ul></div>' for g, links in groups)
     body = page_hero(trail, "Navigation", "Site Map", f"Every page on {BRAND}, in one place.", "grand-forks-city-hall", cta=False) + f'<section class="sec"><div class="wrap"><div class="mapcols" data-stagger>{cols}</div></div></section>'
