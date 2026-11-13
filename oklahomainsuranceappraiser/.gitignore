@@ -1,4 +1,5 @@
 __pycache__/
-gia-leads.log
+*.pyc
 _private/
-gia-config.php
+oia-config.php
+public/
