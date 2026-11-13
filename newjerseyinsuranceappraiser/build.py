@@ -34,7 +34,14 @@ TODAY = date.today().isoformat()
 VER = "20261112a"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-WFQ9FC4S"
+# Head snippet exactly as supplied by the site owner (output only when GTM_ID is set).
+GTM_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WFQ9FC4S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/appraisal-practice/"
 LOC_BASE = "/garden-state-coverage/"
@@ -270,9 +277,7 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return "<!-- Google Tag Manager -->\n" + GTM_SNIPPET + "\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():

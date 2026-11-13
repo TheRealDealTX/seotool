@@ -5,13 +5,14 @@ New Jersey Insurance Appraiser is a static site with no database and no plugins.
 | | |
 | --- | --- |
 | Hostinger website UID | `JMeZ7Hu3s` (Agency Growth, order 1008744732, php-fpm, PHP 8.3) |
-| Domain | `newjerseyinsuranceappraiser.com`, attached when the site was created |
+| Live domain | https://newjerseyinsuranceappraiser.com (SSL covers apex + www; www and http 301 to it) |
 | Preview URL | https://ivory-viper-458822.hostingersite.com |
 | Nameservers to set at the registrar | `atlas.dns-parking.com`, `hyperion.dns-parking.com` |
 | Server | `us-phx-h5g-node3.hstgr.io`. Boston was requested; the order's server lives in Phoenix, the same as the sister sites |
-| Google Tag Manager | `GTM_ID` in `build.py`, empty, so no snippet is output yet |
+| Google Tag Manager | `GTM-WFQ9FC4S`: owner-supplied head snippet output verbatim (`GTM_SNIPPET` in `build.py`) plus the noscript iframe after `<body>` |
+| Search Console | `googlecccfbf2f7e9e5ae4.html` verification file in `static/` (skipped by `validate.py`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@newjerseyinsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@newjerseyinsuranceappraiser.com; the form delivers through it over SMTP (verified `"via":"smtp"`, Nov 13, 2026) |
 
 ## Layout
 
@@ -107,7 +108,7 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 
 Once the mailbox exists: upload that file to `public_html/api/_private/config.php` from a copy kept outside the repo (delete the local copy afterwards). Confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and confirm the newest log line shows `"via":"smtp"`.
 
-## Going live checklist
+## Going live checklist (1–4 done Nov 13, 2026)
 
 1. Point the domain's nameservers to `atlas.dns-parking.com` and `hyperion.dns-parking.com`.
 2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if `www` is missing.
