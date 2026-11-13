@@ -406,7 +406,6 @@ table { width: 100%; border-collapse: collapse; font-size: .95rem; }
 th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
 thead th { background: var(--tint); color: var(--navy); font-weight: 700; }
 tbody tr:last-child > * { border-bottom: 0; }
-.credits img.thumb { width: 120px; height: 74px; object-fit: cover; border-radius: 8px; max-width: none; }
 
 /* cta strip */
 .cta-strip { padding: 0 0 90px; }

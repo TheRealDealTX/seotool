@@ -33,8 +33,16 @@ EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
 VER = "20261113a"
 FAV = "1"
-# Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no GTM snippet is output.
-GTM_ID = ""
+# Google Tag Manager container ID. Empty = no GTM snippet is output.
+GTM_ID = "GTM-NPG24925"
+# Head snippet exactly as supplied by the site owner (do not reformat).
+GTM_HEAD = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-NPG24925"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+"""
 
 SVC_BASE = "/utah-appraisal-services/"
 LOC_BASE = "/utah-communities/"
@@ -48,7 +56,6 @@ GLOSS = "/claim-terms-glossary/"
 PRIVACY = "/your-privacy/"
 TERMS = "/use-terms/"
 DISC = "/legal-disclaimers/"
-CREDITS = "/photo-credits/"
 SITEMAP = "/utah-site-map/"
 
 e = html.escape
@@ -237,7 +244,7 @@ def footer():
 <div><h3>Company</h3><ul><li><a href="{ABOUT}">About us</a></li><li><a href="{CONTACT}">Contact</a></li><li><a href="{PROCESS}">How appraisal works</a></li><li><a href="{FAQ_P}">FAQ</a></li><li><a href="{GLOSS}">Glossary</a></li><li><a href="{POST_BASE}">Articles</a></li></ul></div>
 </div>
 <div class="shell foot-base"><p>© <span data-year>{date.today().year}</span> {BRAND}. All rights reserved.</p>
-<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISC}">Disclaimers</a></li><li><a href="{CREDITS}">Photo credits</a></li><li><a href="{SITEMAP}">Site map</a></li></ul></div>
+<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISC}">Disclaimers</a></li><li><a href="{SITEMAP}">Site map</a></li></ul></div>
 <p class="shell foot-legal">{BRAND} provides insurance appraisal, estimating and umpire services. We are not a law firm, do not give legal advice and do not act as a public adjuster. Content on this site is general and educational, policy wording varies, and example figures are illustrative. No outcome is guaranteed.</p>
 </footer>
 <a class="to-top" href="#top" aria-label="Back to top">{ic("up")}</a>
@@ -245,11 +252,7 @@ def footer():
 
 
 def gtm_head():
-    if not GTM_ID:
-        return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return GTM_HEAD if GTM_ID else ""
 
 
 def gtm_body():
@@ -830,9 +833,6 @@ def company_pages():
                          f"Request a free review of your disputed Utah property claim. Call or text (844) 537-1427 or email {EMAIL}.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], preload="meeting-table"), 0.8)
 
-    credits = "".join(
-        f'<tr><td>{img(k, "thumb", sizes="120px", alt="")}</td><td><b>{e(v["title"])}</b><br><small>{e(v.get("creator") or "Unknown")} · {e(v["source_name"])}</small></td><td>{"CC0 1.0" if v["license"] == "cc0" else "Public domain"}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">Source</a></td></tr>'
-        for k, v in PHOTOS.items())
     ld = date.today().strftime("%B %-d, %Y")
     legal = {
         PRIVACY: ("Privacy Policy", f"""
@@ -841,7 +841,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and review your claim.</li><li>To provide services you ask for.</li><li>To keep the site secure and working.</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with providers who host our site and email, or when the law requires it.</p>
 <h2>Calculators</h2><p>Our calculators and checklists run in your browser. What you type isn’t sent to us or stored.</p>
-<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data. If we add analytics through Google Tag Manager, it will be used to understand site traffic in aggregate.</p>
+<h2>Cookies and analytics</h2><p>We don’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data. We use Google Tag Manager to load analytics that help us understand site traffic in aggregate.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP at any time to opt out.</p>
 <h2>Your choices</h2><p>Ask us to access, correct or delete the information you’ve shared by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""", "How we collect, use and protect the information you share with us.", "Privacy Policy | Utah Insurance Appraiser"),
@@ -851,7 +851,7 @@ def company_pages():
 <h2>No client relationship</h2><p>Reading the site, using a calculator or sending a form doesn’t create an appraiser–client relationship. That begins only when both sides sign a written engagement agreement.</p>
 <h2>No legal advice</h2><p>{BRAND} isn’t a law firm. Nothing here is legal advice. Policies differ, and laws and court decisions change. Consult a licensed Utah attorney about legal questions.</p>
 <h2>Calculators and examples</h2><p>Calculators give planning estimates from what you enter. Example figures are illustrative. Neither is an appraisal, a quote or a prediction of any claim’s outcome.</p>
-<h2>Content and photos</h2><p>Site text, design and calculators belong to {BRAND}. You may link to and print pages for personal use. Photos are used under the licenses listed on the <a href="{CREDITS}">photo credits</a> page.</p>
+<h2>Content and photos</h2><p>Site text, design and calculators belong to {BRAND}. You may link to and print pages for personal use. Photos are royalty-free CC0 or public-domain images.</p>
 <h2>Limitation of liability</h2><p>The site is provided “as is.” To the extent the law allows, we aren’t liable for decisions made based on its content or calculators.</p>
 <h2>Governing law</h2><p>These terms are governed by the laws of the State of Utah.</p>""", "The terms that apply when you use this website and its calculators.", "Terms of Use | Utah Insurance Appraiser"),
         DISC: ("Disclaimers", f"""
@@ -861,9 +861,6 @@ def company_pages():
 <h2>Laws and deadlines</h2><p>References to Utah statutes, the Utah Insurance Department and court doctrines are general summaries for context, not legal conclusions. Policies contain deadlines for notice, proof of loss, depreciation recovery and lawsuits; nothing here extends or changes them. If a deadline is near, contact a Utah attorney promptly.</p>
 <h2>Weather and history</h2><p>Descriptions of storms, fires, floods and earthquakes draw on public reports and are included for context.</p>
 <h2>Photographs</h2><p>Photos are royalty-free stock and public-domain images used for illustration. They don’t show our clients’ properties.</p>""", "Important limits on the information published on this website.", "Disclaimers | Utah Insurance Appraiser"),
-        CREDITS: ("Photo Credits", f"""
-<p>Every photo on this site is royalty-free: dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> or a <strong>public-domain</strong> work, such as photos by U.S. government agencies. Attribution isn’t legally required, but we credit each source here with thanks. Photos are illustrative and don’t show our clients’ properties.</p>
-<div class="table-wrap"><table class="credits"><thead><tr><th>Photo</th><th>Title / creator</th><th>License</th><th>Link</th></tr></thead><tbody>{credits}</tbody></table></div>""", "Sources and licenses for the photographs used on this site.", "Photo Credits | Utah Insurance Appraiser"),
     }
     for path, (title, content, lede, seo) in legal.items():
         trail = [("Home", "/"), (title, path)]
@@ -880,7 +877,7 @@ def sitemap_pages():
         ("Communities", [("All communities", LOC_BASE)] + [(l["city"], loc_path(l)) for l in LOCATIONS]),
         ("Calculators", [("All calculators", TOOL_BASE)] + [(t["name"], f'{TOOL_BASE}{t["slug"]}/') for t in TOOLS]),
         ("Resources", LEARN + [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]),
-        ("Legal", [("Privacy policy", PRIVACY), ("Terms of use", TERMS), ("Disclaimers", DISC), ("Photo credits", CREDITS)]),
+        ("Legal", [("Privacy policy", PRIVACY), ("Terms of use", TERMS), ("Disclaimers", DISC)] ),
     ]
     cols = "".join(f'<div class="map-col rv"><h2 class="h3">{e(g)}</h2><ul>{"".join(f"<li><a href=\"{p}\">{e(n)}</a></li>" for n, p in links)}</ul></div>' for g, links in groups)
     body = page_hero(trail, "Navigation", "Site Map", f"Every page on {BRAND}, in one place.", "office-tower", cta=False) + f'<section class="sec"><div class="shell map-grid" data-stagger>{cols}</div></section>'

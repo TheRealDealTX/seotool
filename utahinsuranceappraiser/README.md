@@ -9,11 +9,12 @@ The engineering came from `georgiainsuranceappraiser/` (generator, `validate.py`
 | --- | --- |
 | Hostinger website UID | `EAf4DuRFX` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
 | Domain | `utahinsuranceappraiser.com` (attached when the site was created) |
+| Live | https://utahinsuranceappraiser.com (SSL covers apex and www; www and http 301 to it) |
 | Preview URL | https://bisque-salmon-709623.hostingersite.com (sends `X-Robots-Tag: noindex, nofollow`) |
 | Nameservers to set at the registrar | `atlas.dns-parking.com`, `hyperion.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@utahinsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | `GTM_ID` in `build.py` is empty, so no GTM snippet is output yet |
+| Email / form inbox | info@utahinsuranceappraiser.com (form delivers over SMTP) |
+| Google Tag Manager | `GTM-NPG24925`: the owner's head snippet, used verbatim, plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -46,7 +47,7 @@ To preview locally with the host's behavior (real files served directly, a direc
 executed, everything else sent to `index.php`), run `php -S 127.0.0.1:8099 -t public router.php`
 with a router that does exactly that.
 
-## Pages (52 in the sitemap, plus the 404 page)
+## Pages (51 in the sitemap, plus the 404 page)
 
 - Home, `/our-company/`, `/contact-utah-appraiser/`
 - `/utah-appraisal-services/` and 12 services: appraisal clause representation, homeowner,
@@ -59,7 +60,8 @@ with a router that does exactly that.
   (.ics export, Utah 3-year suit default), appraisal readiness checkup, roof snow load estimator (new for Utah)
 - `/how-utah-appraisal-works/` (HowTo), `/utah-appraisal-faq/`, `/claim-terms-glossary/` (searchable),
   `/utah-claim-articles/` and 6 articles
-- `/your-privacy/`, `/use-terms/`, `/legal-disclaimers/`, `/photo-credits/`, `/utah-site-map/`, `404.html`
+- `/your-privacy/`, `/use-terms/`, `/legal-disclaimers/`, `/utah-site-map/`, `404.html`
+  (a `/photo-credits/` page was removed at the owner's request on Nov 13, 2026 and deleted from the server)
 
 None of the URL bases are used by a sister site.
 
@@ -89,7 +91,7 @@ the 2017 Brian Head Fire) and others. Every candidate was checked against the ph
 sites in this repo, and none are reused. They were downloaded one at a time with pauses (Wikimedia
 1280px thumbnails), center-cropped where needed and saved as 1200px and 640px WebP. Pages use them with
 `srcset`/`sizes`, width and height. Alt text is descriptive, and decorative backgrounds use `alt=""`.
-Every photo is listed with its license and source on `/photo-credits/`.
+Each photo's title, creator, license and source URL is kept in `src/photos.json` (there is no public credits page).
 
 ## Hosting notes (why every page is `dir/index.php`)
 
@@ -153,14 +155,15 @@ that the log line shows `"via":"smtp"`.
 
 ## Google Tag Manager
 
-Set `GTM_ID = "GTM-XXXXXXX"` in `build.py`, rebuild, validate and deploy. The head snippet and the
-`<noscript>` iframe right after `<body>` are output only when it's set.
+`GTM_ID` and `GTM_HEAD` in `build.py` hold the container (`GTM-NPG24925`) and the owner's head snippet,
+used exactly as supplied. The `<noscript>` iframe goes right after `<body>`. Set `GTM_ID = ""` to remove both.
 
-## Going live checklist
+## Going live checklist (all done Nov 13, 2026 except Search Console)
 
 1. Point the domain's nameservers to `atlas.dns-parking.com` and `hyperion.dns-parking.com`.
 2. Confirm SSL is active and covers both `utahinsuranceappraiser.com` and `www.` (`agency-hosting_websites_get`
-   → `ssl_cert.names`). If `www` is missing, reissue it with `agency-hosting_ssl_reinstall-website`.
+   → `ssl_cert.names`). The first certificate covered only `www`; it was reissued with
+   `agency-hosting_ssl_reinstall-website` and now lists both names.
 3. On the homepage and at least three interior pages, check that http, http www and https www all 301
    to `https://utahinsuranceappraiser.com/page/`, and that `/page/index.php` 301s to `/page/`. Check that every
    sitemap URL returns 200, and that the real domain sends no `X-Robots-Tag` and serves our `robots.txt`.
