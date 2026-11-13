@@ -6,12 +6,13 @@ PHP front controller plus a canonical-host guard serve it on a Hostinger Agency 
 | | |
 | --- | --- |
 | Hostinger website UID | `usEtwjHWE` (Agency Growth, order 1008744732, php-fpm, PHP 8.3) |
-| Domain | `ohioinsuranceappraiser.com` (attached at creation) |
+| Live domain | https://ohioinsuranceappraiser.com (SSL covers apex + www; www and http 301 to it) |
 | Preview URL | https://lightskyblue-ibis-120121.hostingersite.com |
 | Nameservers to set at the registrar | `helios.dns-parking.com`, `aster.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@ohioinsuranceappraiser.com |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Google Tag Manager | `GTM-TRWZ2BN8` (owner's head snippet as provided + noscript iframe after `<body>`) |
+| Search Console | `googlecccfbf2f7e9e5ae4.html` verification file in `static/` (served at the root) |
 
 The setup asked for the Boston datacenter (closest to Ohio). Every site on this order shares the same server
 (72.60.128.114); Hostinger reports it as `us-phx-h5g-node3`.
@@ -162,13 +163,13 @@ After uploading:
 2. Send one test submission labelled TEST.
 3. Check that the log shows `"via":"smtp"`.
 
-## Going live checklist
+## Going live checklist (done Nov 13, 2026)
 
-1. Point the domain's nameservers to `helios.dns-parking.com` and `aster.dns-parking.com`.
-2. Check that SSL covers both `ohioinsuranceappraiser.com` and `www.` (`agency-hosting_websites_get` → `ssl_cert.names`).
-   If `www` is missing, run `agency-hosting_ssl_reinstall-website`.
-3. Check the www/http/`index.php` redirects on the homepage and on interior pages, check that every sitemap URL
-   returns 200, and check the real domain sends no `X-Robots-Tag`.
-4. Create the mailbox and upload `api/_private/config.php` (see above).
-5. Add the GTM container ID to `GTM_ID`, rebuild, validate, redeploy and clear the cache.
-6. Submit `https://ohioinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Nameservers pointed to `helios.dns-parking.com` / `aster.dns-parking.com`~~ — domain resolves to the website.
+2. ~~SSL~~ — `ssl_cert.names` covers `ohioinsuranceappraiser.com` and `www.ohioinsuranceappraiser.com` (expires 2027-02-10).
+3. ~~Redirects~~ — on `/` and four interior pages, `http://`, `http://www.` and `https://www.` 301 to the https apex,
+   and `/page/index.php` 301s to `/page/`. All 51 sitemap URLs return 200 with no `X-Robots-Tag`, and our own
+   `robots.txt` is served.
+4. ~~Mailbox + SMTP~~ — `api/_private/config.php` uploaded (404, 0 bytes). A labelled TEST submission logged `"via":"smtp"`.
+5. ~~GTM `GTM-TRWZ2BN8`~~ and the Search Console verification file are live.
+6. Submit `https://ohioinsuranceappraiser.com/sitemap.xml` in Google Search Console (owner).

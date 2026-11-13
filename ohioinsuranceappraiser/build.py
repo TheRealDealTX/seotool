@@ -35,7 +35,7 @@ TODAY = date.today().isoformat()
 VER = "20261112b"
 FAV = "1"
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-TRWZ2BN8"
 
 SVC_BASE = "/appraisal-practice/"
 LOC_BASE = "/service-cities/"
@@ -271,10 +271,11 @@ def footer():
 
 
 def gtm_head():
+    # The owner's snippet, used exactly as provided (GTM_ID substituted only).
     if not GTM_ID:
         return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\n"
-            f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<!-- Google Tag Manager -->\n<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n<script>\n'
+            "  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n</script>\n<!-- End Google Tag Manager -->\n")
 
 
 def gtm_body():
