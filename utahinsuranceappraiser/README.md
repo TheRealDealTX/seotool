@@ -108,6 +108,8 @@ Each photo's title, creator, license and source URL is kept in `src/photos.json`
 - `index.php` requires the guard, serves `home.html` for `/`, 301s directory URLs to add the trailing
   slash, includes `dir/index.php` for directory URLs that reach it, and returns `404.html` with a real 404.
 - Never add a root `index.html` or leave a `dir/index.html` on the server.
+- The server also holds `googlecccfbf2f7e9e5ae4.html` (Google Search Console verification) and
+  `api/_private/` (SMTP config and lead log). None of them are in git, and `deploy.sh` never deletes them. Leave them in place.
 - On the preview URL, Hostinger serves its own Googlebot-blocking `robots.txt`. That's expected. Our
   `robots.txt` is served on the real domain.
 
