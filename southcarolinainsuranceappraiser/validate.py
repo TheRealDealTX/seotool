@@ -123,7 +123,7 @@ titles, descs = {}, {}
 files = []
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
-        if f.endswith(".html") or (f == "index.php" and dp != ROOT):
+        if (f.endswith(".html") and not f.startswith("google")) or (f == "index.php" and dp != ROOT):  # skip Search Console verification file
             files.append(os.path.join(dp, f))
 
 for fp in sorted(files):

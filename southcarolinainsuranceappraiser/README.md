@@ -6,12 +6,13 @@ Python generator and served by a tiny PHP front controller on a Hostinger Agency
 | | |
 | --- | --- |
 | Hostinger website UID | `RKnVWfGN0` (Agency Growth, order 1008744732, php-fpm, PHP 8.3; created with datacenter `boston`, server reports `us-phx-h5g-node3`) |
-| Domain | `southcarolinainsuranceappraiser.com` (attached at creation) |
+| Live domain | https://southcarolinainsuranceappraiser.com (SSL covers apex + www; www and http 301 to it) |
 | Preview URL | https://red-snail-854335.hostingersite.com (Hostinger serves its own Googlebot-blocking robots.txt here; our pages also send `X-Robots-Tag: noindex, nofollow` on any non-canonical host) |
 | Nameservers to set at the registrar | `helios.dns-parking.com`, `aster.dns-parking.com` (from `agency-hosting_websites_get`) |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Google Tag Manager | `GTM-KZG5FC4F` (head snippet + noscript iframe on every page) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@southcarolinainsuranceappraiser.com |
+| Email / form inbox | info@southcarolinainsuranceappraiser.com (form delivers over SMTP) |
+| Search Console | `googlecccfbf2f7e9e5ae4.html` verification file in `static/` (skipped by `validate.py`) |
 
 ## Layout
 
@@ -133,8 +134,9 @@ test, and confirm the log shows `"via":"smtp"`.
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty by default. Set it (exactly as provided) and rebuild: the head snippet is output
-right after `<meta charset>` and the `<noscript>` iframe right after `<body>` on every page.
+`GTM_ID` in `build.py` is `GTM-KZG5FC4F`. `gtm_head()` outputs the snippet exactly as provided for this site
+(async `gtm.js` loader + `dataLayer`/`gtag('js')`) right after `<meta charset>`, and the `<noscript>` iframe follows
+`<body>` on every page. Set `GTM_ID = ""` to remove both.
 
 ## SEO rules enforced by validate.py
 
@@ -155,10 +157,12 @@ and DefinedTermSet (glossary).
 
 ## Going live checklist
 
-1. Point the domain's nameservers to the two above.
-2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with
-   `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. Check http/www/`index.php` 301s on the live domain and that the real domain sends no `X-Robots-Tag`.
-4. Create the mailbox, upload `api/_private/config.php`, run the SMTP test above.
-5. Add GTM if wanted, rebuild, validate, redeploy, clear cache.
+1. ~~Point the nameservers~~ — done; DNS resolves to 72.60.128.114.
+2. ~~SSL~~ — active; `ssl_cert.names` lists both `southcarolinainsuranceappraiser.com` and `www.`.
+3. ~~Canonical-host checks~~ — http, http://www and https://www 301 to `https://southcarolinainsuranceappraiser.com/…`
+   on the homepage and interior pages; `/page/index.php` 301s to `/page/`; all 52 sitemap URLs return 200;
+   the real domain sends no `X-Robots-Tag` and serves our own `robots.txt`.
+4. ~~Mailbox + SMTP~~ — `api/_private/config.php` uploaded (404, 0 bytes when requested); a labelled test
+   submission logged `"via":"smtp"` on Nov 13, 2026.
+5. ~~GTM and Search Console file~~ — deployed.
 6. Submit `https://southcarolinainsuranceappraiser.com/sitemap.xml` to Google Search Console.
