@@ -1,4 +1,29 @@
 """Alt text for each photo key in photos.json (decorative uses pass alt="" instead)."""
-import collections
 
-ALT = collections.defaultdict(lambda: "Photo", {})
+ALT = {
+    "calculator-papers": "Calculator resting on printed bar charts beside a laptop keyboard",
+    "consultation": "Two men in a meeting reviewing figures on a laptop at an office table",
+    "fallen-tree-house": "Large uprooted trees lying across the lawn of a single-story brick home after a storm",
+    "grain-elevator": "Grain elevator and steel storage bins beside railroad tracks in a small plains town",
+    "grass-wildfire": "Firefighter walking beside a fast-moving grass fire on dry prairie",
+    "hailstones": "Large white hailstones scattered in green grass after a storm",
+    "hero-supercell": "Rotating supercell thunderstorm with lightning over open farmland and a barn",
+    "home-dusk": "Steep-roofed house with lit windows at dusk",
+    "house-fire": "Firefighter in protective gear and breathing apparatus surrounded by smoke",
+    "ice-power-lines": "Ice-coated trees and broken limbs pulling down utility lines after an ice storm",
+    "ice-storm-trees": "Tree branches encased in ice and hanging icicles after freezing rain",
+    "kitchen-interior": "Residential kitchen with wood cabinets, stainless appliances and plank flooring",
+    "laptop-numbers": "Hands typing on a laptop keyboard at a desk",
+    "lightning-night": "Branching lightning bolts striking at night over distant town lights",
+    "living-room": "Living room with a sofa, coffee table, rug and ceiling fan in a family home",
+    "rain-gutter": "Close-up of rainwater dripping from a roof gutter",
+    "roofer-work": "Workers on ladders repairing the roof of a wooden farm building",
+    "storm-wall-cloud": "Dark storm cloud with a rain shaft moving over flat farmland",
+    "suburban-home": "Two-story house with a covered front porch and green lawn",
+    "tornado-damage-street": "Street lined with snapped trees and debris after a tornado",
+    "tornado-debris-home": "Destroyed homes and stripped trees in a neighborhood after a tornado",
+    "tornado-funnel": "Tornado funnel descending from dark storm clouds",
+    "water-damage": "Homes standing in floodwater on a residential street",
+    "wheat-field": "Golden wheat field and a utility pole under a wide plains sky",
+    "wichita-mountains": "Rocky hills and a lake in the Wichita Mountains of southwest Oklahoma",
+}

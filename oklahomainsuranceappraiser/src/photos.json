@@ -1,4 +1,14 @@
 {
+  "apartment-complex": {
+    "fw": 1024,
+    "fh": 768,
+    "title": "Townhouses, Broadfield at Wilton Farms, Wilkens Avenue and Maiden Choice Lane, Arbutus, MD",
+    "creator": "Baltimore Heritage",
+    "license": "cc0",
+    "landing": "https://www.flickr.com/photos/44034762@N04/33774493601",
+    "source": "flickr",
+    "url": "https://live.staticflickr.com/3911/33774493601_a30c70159c_b.jpg"
+  },
   "calculator-papers": {
     "fw": 960,
     "fh": 640,
@@ -148,6 +158,16 @@
     "landing": "https://www.flickr.com/photos/80223459@N05/52067485855",
     "source": "flickr",
     "url": "https://live.staticflickr.com/65535/52067485855_472403e4d4_b.jpg"
+  },
+  "okc-skyline": {
+    "fw": 1024,
+    "fh": 682,
+    "title": "Oklahoma city skyline",
+    "creator": "jeffstraka49",
+    "license": "pdm",
+    "landing": "https://www.flickr.com/photos/104353434@N05/50545444143",
+    "source": "flickr",
+    "url": "https://live.staticflickr.com/65535/50545444143_f81f73c4dc_b.jpg"
   },
   "rain-gutter": {
     "fw": 1024,
