@@ -34,7 +34,7 @@ TODAY = date.today().isoformat()
 VER = "20261113a"   # CSS/JS cache-buster
 FAV = "1"           # icon cache-buster
 # Google Tag Manager container, e.g. "GTM-XXXXXXX". Empty = no tag is printed.
-GTM_ID = ""
+GTM_ID = "GTM-5VCPD57T"
 
 SVC_BASE = "/appraisal-solutions/"
 LOC_BASE = "/service-area/"
@@ -287,7 +287,7 @@ def footer():
 <div><h3>Resources</h3><ul><li><a href="{PROCESS}">Appraisal process guide</a></li><li><a href="{FAQ_P}">Common questions</a></li><li><a href="{GLOSS}">Insurance terms</a></li><li><a href="{POST_BASE}">Learning center</a></li><li><a href="{ABOUT}">Who we are</a></li><li><a href="{CONTACT}">Contact us</a></li></ul></div>
 </div>
 <div class="wrap foot-legal"><p>{BRAND} provides insurance appraisal, estimating and umpire services. We are not a law firm, do not give legal advice and do not act as public adjusters. Content on this site is general information; policy language controls. Outcomes depend on the facts of each claim and are never guaranteed.</p>
-<div class="foot-bottom"><span>© <span data-year>{date.today().year}</span> {BRAND}</span><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/legal-disclaimer/">Disclaimer</a></li><li><a href="/photo-credits/">Photo credits</a></li><li><a href="/html-sitemap/">Site map</a></li></ul></div></div>
+<div class="foot-bottom"><span>© <span data-year>{date.today().year}</span> {BRAND}</span><ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/legal-disclaimer/">Disclaimer</a></li><li><a href="/html-sitemap/">Site map</a></li></ul></div></div>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top">{ic("up")}</button>
 <div class="call-bar"><a href="tel:{TEL}">{ic("phone")} Call now</a><a href="{CONTACT}">Free review</a></div>"""
@@ -296,9 +296,15 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    # Google tag exactly as supplied by the site owner.
+    return ("<!-- Google Tag Manager -->\n"
+            f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            "<script>\n"
+            "  window.dataLayer = window.dataLayer || [];\n"
+            "  function gtag(){dataLayer.push(arguments);}\n"
+            "  gtag('js', new Date());\n"
+            "</script>\n"
+            "<!-- End Google Tag Manager -->\n")
 
 
 def gtm_body():
@@ -899,10 +905,6 @@ def company_pages():
                          "Get a free review of your disputed Minnesota property claim. Call or text (844) 537-1427, email us, or send your claim details online.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], photo="consultation-laptop"), 0.8)
 
-    lic = {"cc0": "CC0 1.0", "pdm": "Public domain"}
-    credits = "".join(
-        f'<tr><td>{img(k, "credit-th", sizes="120px", alt="")}</td><td>{e(v.get("title") or k.replace("-", " ").title())}<br><small>{e(v.get("creator") or "Unknown")} · {e(v["source"].title())}</small></td><td>{lic.get(v["license"], v["license"])}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">Source</a></td></tr>'
-        for k, v in PHOTOS.items())
     legal = {
         "/privacy/": ("Privacy Policy", f"""
 <p><em>Last updated: {date.today().strftime("%B %-d, %Y")}</em></p>
@@ -920,7 +922,7 @@ def company_pages():
 <h2>No client relationship</h2><p>Reading this site, using its tools or submitting a form doesn’t create an appraiser–client relationship. That begins only when both sides sign a written engagement agreement.</p>
 <h2>No legal advice</h2><p>{BRAND} isn’t a law firm, and nothing here is legal advice. Policies differ, and laws and court decisions change. Consult a licensed Minnesota attorney about legal questions.</p>
 <h2>Tools and estimates</h2><p>Calculators give planning estimates based on what you enter. They are not appraisals, quotes or predictions of any claim outcome.</p>
-<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are used under the licenses on our <a href="/photo-credits/">photo credits</a> page.</p>
+<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are royalty-free CC0 or public-domain images.</p>
 <h2>Limitation of liability</h2><p>The site is provided “as is.” To the extent the law allows, we aren’t liable for decisions made based on its content or tools.</p>
 <h2>Governing law</h2><p>These terms are governed by the laws of the State of Minnesota.</p>""", "The terms that apply when you use this website and its tools."),
         "/legal-disclaimer/": ("Disclaimer", f"""
@@ -930,15 +932,11 @@ def company_pages():
 <h2>Deadlines</h2><p>Policies contain deadlines for notice, proof of loss, replacement-cost recovery and lawsuits. Nothing on this site extends or changes any deadline. If one is approaching, consult a Minnesota attorney promptly.</p>
 <h2>Legal references</h2><p>Mentions of statutes, court decisions, agencies or storms are for context and are described in general terms. Verify current law with official sources such as the Minnesota Department of Commerce and the Minnesota Revisor of Statutes, and with an attorney.</p>
 <h2>Photographs</h2><p>Photos are royalty-free stock and public-domain images used for illustration. Not all were taken in Minnesota, and none show our clients’ properties.</p>""", "Important limits on the information published on this website."),
-        "/photo-credits/": ("Photo Credits", f"""
-<p>Every photograph on this site is royalty-free: dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> (via StockSnap, rawpixel, Flickr and Wikimedia Commons) or a <strong>public-domain</strong> work such as photos by U.S. government agencies. Attribution isn’t legally required, but we credit each source here with thanks. Photos are illustrative, not all were taken in Minnesota, and none show our clients’ properties.</p>
-<div class="table-wrap"><table class="credits"><thead><tr><th scope="col">Photo</th><th scope="col">Title / creator</th><th scope="col">License</th><th scope="col">Link</th></tr></thead><tbody>{credits}</tbody></table></div>""", f"Sources and licenses for all {len(PHOTOS)} photographs used on this site."),
     }
     descs = {
         "/privacy/": "Privacy policy for Minnesota Insurance Appraiser: what we collect through forms and calls, how we use it, and how our claim tools keep data private.",
         "/terms/": "Terms of use for the Minnesota Insurance Appraiser website, its free claim tools and content, including the no-legal-advice and liability terms.",
         "/legal-disclaimer/": "Disclaimer for Minnesota Insurance Appraiser: general information only, no legal advice, illustrative figures, deadlines and photo notes.",
-        "/photo-credits/": "Photo credits for Minnesota Insurance Appraiser: the source, creator and CC0 or public-domain license of every photograph on this website.",
     }
     for path, (title, content, lede) in legal.items():
         trail = [("Home", "/"), (title, path)]
@@ -955,7 +953,7 @@ def sitemap_pages():
         ("Service area", [("All of Minnesota", LOC_BASE)] + [(loc_label(l), loc_path(l)) for l in LOCATIONS]),
         ("Free tools", [("All tools", TOOL_BASE)] + [(t["name"], f'{TOOL_BASE}{t["slug"]}/') for t in TOOLS]),
         ("Resources", LEARN + [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]),
-        ("Legal", [("Privacy policy", "/privacy/"), ("Terms of use", "/terms/"), ("Disclaimer", "/legal-disclaimer/"), ("Photo credits", "/photo-credits/")]),
+        ("Legal", [("Privacy policy", "/privacy/"), ("Terms of use", "/terms/"), ("Disclaimer", "/legal-disclaimer/")]),
     ]
     cols = "".join(f'<div class="map-col rv"><h2>{e(g)}</h2><ul>{"".join(f"<li><a href=\"{p}\">{e(n)}</a></li>" for n, p in links)}</ul></div>' for g, links in groups)
     body = page_hero(trail, "Navigation", "Site Map", f"Every page on {BRAND}, in one place.", "mpls-stone-arch", cta=False) + f'<section class="sec"><div class="wrap"><div class="map-grid" data-stagger>{cols}</div></div></section>'

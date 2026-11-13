@@ -6,13 +6,13 @@ builds it, and a small PHP guard and front controller serve it on a Hostinger Ag
 | | |
 | --- | --- |
 | Hostinger website UID | `jSCKKO45I` (Agency Growth, order 1008744732, php-fpm, PHP 8.3) |
-| Domain | `minnesotainsuranceappraiser.com` (attached at creation; nameservers not pointed yet) |
+| Live domain | https://minnesotainsuranceappraiser.com (SSL covers apex + www; www and http 301 to the https apex) |
 | Preview URL | https://paleturquoise-barracuda-248082.hostingersite.com (sends `X-Robots-Tag: noindex`) |
 | Nameservers to set at the registrar | `hermes.dns-parking.com`, `artemis.dns-parking.com` (from `agency-hosting_websites_get`) |
 | Server | `us-phx-h5g-node3.hstgr.io` (requested Boston, nearest to Minnesota; the order's server is in Phoenix) |
-| Google Tag Manager | Not set yet. Put the container ID in `GTM_ID` in `build.py` |
+| Google Tag Manager | `GTM-5VCPD57T` (owner-supplied snippet in `<head>`, noscript iframe after `<body>`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@minnesotainsuranceappraiser.com (mailbox not created yet) |
+| Email / form inbox | info@minnesotainsuranceappraiser.com (form delivers over SMTP; verified Nov 13, 2026) |
 
 ## Layout
 
@@ -23,7 +23,7 @@ builds it, and a small PHP guard and front controller serve it on a Hostinger Ag
 | `src/locations.py` | 12 Minnesota city pages (county, neighborhoods, housing, storm history) |
 | `src/tools.py` | 7 interactive tools (markup + copy). Logic is in `static/assets/js/app.js` |
 | `src/learn.py` | 8-step process guide, grouped FAQ, 50-term glossary, 6 guides |
-| `src/photos.json` | Photo metadata (title, creator, license, source, size), used by `img()` and `/photo-credits/` |
+| `src/photos.json` | Photo metadata (title, creator, license, source, size), used by `img()` for sizes (credits record; no public credits page) |
 | `static/` | CSS, JS, icons, manifest, OG image, photos, `api/contact.php`. Copied into `public/` as-is |
 | `public/` | **Build output.** This is what gets deployed (committed) |
 | `validate.py` | Post-build checks. Must pass with zero errors |
@@ -47,7 +47,7 @@ To preview locally the way the host serves files, run `php -S` with a router scr
 should serve real files directly, run a directory's `index.php`, and send everything else to
 `/index.php`.
 
-## Pages (51 in sitemap, plus 404)
+## Pages (50 in sitemap, plus 404)
 
 - Home, `/who-we-are/`, `/contact-us/`
 - `/appraisal-solutions/` plus 11 solutions: appraisal clause help, home, commercial/HOA, hail & roof,
@@ -60,7 +60,7 @@ should serve real files directly, run a directory's `index.php`, and send everyt
   checkup, and roof snow load calculator (new for Minnesota)
 - `/appraisal-process-guide/`, `/common-questions/`, `/insurance-terms/` (searchable),
   `/learning-center/` plus 6 guides
-- `/privacy/`, `/terms/`, `/legal-disclaimer/`, `/photo-credits/`, `/html-sitemap/`, `404.html` (real 404)
+- `/privacy/`, `/terms/`, `/legal-disclaimer/`, `/html-sitemap/`, `404.html` (real 404). The photo credits page was removed at the owner's request (Nov 13, 2026); photo sources stay recorded in `src/photos.json`.
 
 The URL slugs, section order, copy, palette and fonts differ from every sister `*insuranceappraiser*`
 site. Before building, the Georgia, Florida, Alabama, Arizona, the Carolinas, Missouri, Montana, Nevada,
@@ -105,8 +105,8 @@ Arkansas and West Virginia builds were all surveyed.
 
 They were downloaded one at a time with pauses, using 1280px Wikimedia thumbnails. Each is saved as
 WebP at up to 1200px and at 640px, served with `srcset`/`sizes`, width and height. Alt text is
-descriptive, and decorative backgrounds use `alt=""`. Every photo's license and source is listed on
-`/photo-credits/`. The Flickr originals come through Openverse at 1024px, so those are the widest
+descriptive, and decorative backgrounds use `alt=""`. Every photo's license and source is recorded in
+`src/photos.json`. The Flickr originals come through Openverse at 1024px, so those are the widest
 versions available. Photos showing political figures, text overlays or artwork were skipped.
 
 ## Hosting notes (why every page is `dir/index.php`)
@@ -203,21 +203,18 @@ mailbox exists:
 
 ## Google Tag Manager
 
-Set `GTM_ID = "GTM-XXXXXXX"` in `build.py`. The standard head snippet is then printed right after
-`<head>`, and the `<noscript>` iframe right after `<body>`. Then rebuild, validate, deploy and clear
+`GTM_ID = "GTM-5VCPD57T"` in `build.py`. `gtm_head()` prints the owner-supplied tag exactly as given
+(async `gtm.js` plus the `dataLayer`/`gtag('js')` lines) after `<meta charset>`, and the `<noscript>` iframe
+is printed right after `<body>`. To change it, edit those two functions. Then rebuild, validate, deploy and clear
 the cache.
 
-## Going-live checklist
+## Go-live status (Nov 13, 2026)
 
-1. Point the domain's nameservers to `hermes.dns-parking.com` and `artemis.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www`.
-   - Check with `agency-hosting_websites_get` → `ssl_cert.names`.
-   - If `www` is missing, run `agency-hosting_ssl_reinstall-website`.
-3. Re-check the redirects on the live domain, on the homepage and at least three interior pages:
-   - `http://`, `http://www.` and `https://www.` all 301 to `https://minnesotainsuranceappraiser.com/…`.
-   - `/page/index.php` 301s to `/page/`.
-   - Every sitemap URL returns 200.
-   - There is no `X-Robots-Tag`, and our own `robots.txt` is served.
-   - If a `www` URL returns 200 with `x-hcdn-cache-status: HIT`, clear the cache and check again.
-4. Add the GTM container, and wire SMTP once the mailbox exists.
-5. Submit `https://minnesotainsuranceappraiser.com/sitemap.xml` to Google Search Console.
+- Nameservers pointed; SSL issued for `minnesotainsuranceappraiser.com` and `www.minnesotainsuranceappraiser.com`.
+- On the homepage and four interior pages, `http://`, `http://www.` and `https://www.` all 301 to the https apex,
+  and `/page/index.php` 301s to `/page/`. All 50 sitemap URLs return 200 with no `X-Robots-Tag`, and our own
+  `robots.txt` is served.
+- SMTP config uploaded to `public_html/api/_private/config.php` (404, 0 bytes when requested); one labelled test
+  submission was logged with `"via":"smtp"`. The local copy of the config was deleted.
+- GTM `GTM-5VCPD57T` is on every page.
+- Remaining: submit `https://minnesotainsuranceappraiser.com/sitemap.xml` to Google Search Console.
