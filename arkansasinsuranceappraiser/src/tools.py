@@ -30,7 +30,7 @@ GAPFEE = """
       <div class="readout"><small>Net increase in your scenario</small><b data-o="net">$0</b></div>
       <div class="meter" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
       <ul class="key"><li><i class="m1"></i>Carrier’s number</li><li><i class="m2"></i>Your net gain</li><li><i class="m3"></i>Appraisal costs</li></ul>
-      <div class="table-wrap"><table class="scen"><thead><tr><th>Award lands at</th><th>Gross increase</th><th>Your costs</th><th>Net to you</th></tr></thead><tbody data-o="scen"></tbody></table></div>
+      <div class="table-wrap"><table class="scen stack-sm"><thead><tr><th>Award lands at</th><th>Gross increase</th><th>Your costs</th><th>Net to you</th></tr></thead><tbody data-o="scen"></tbody></table></div>
       <dl class="calc-rows">
         <div><dt>Amount in dispute</dt><dd data-o="gap">$0</dd></div>
         <div><dt>Gap vs. carrier estimate</dt><dd data-o="pct">—</dd></div>
@@ -61,16 +61,16 @@ GAP_MINI = """
   </div>
 </div>"""
 
-_HB_ROW = ('<tr><td><input name="item" value="{0}" aria-label="Item"></td><td><input name="rcv" inputmode="decimal" value="{1}" aria-label="Replacement cost"></td>'
-           '<td><input name="labor" inputmode="decimal" value="{2}" aria-label="Labor share percent"></td><td><input name="age" inputmode="decimal" value="{3}" aria-label="Age in years"></td>'
-           '<td><input name="life" inputmode="decimal" value="{4}" aria-label="Expected life in years"></td><td class="num" data-o="row">$0</td><td><button type="button" class="rm" aria-label="Remove row">×</button></td></tr>')
+_HB_ROW = ('<tr><td class="td-item" data-label="Item"><input name="item" value="{0}" aria-label="Item"></td><td data-label="RCV ($)"><input name="rcv" inputmode="decimal" value="{1}" aria-label="Replacement cost"></td>'
+           '<td data-label="Labor %"><input name="labor" inputmode="decimal" value="{2}" aria-label="Labor share percent"></td><td data-label="Age (yrs)"><input name="age" inputmode="decimal" value="{3}" aria-label="Age in years"></td>'
+           '<td data-label="Life (yrs)"><input name="life" inputmode="decimal" value="{4}" aria-label="Expected life in years"></td><td class="num" data-label="ACV" data-o="row">$0</td><td class="td-rm"><button type="button" class="rm" aria-label="Remove row">×</button></td></tr>')
 
 HOLDBACK = """
 <div class="calc calc-wide" data-tool="holdback">
   """ + _bar("RCV vs. ACV holdback calculator", "Add as many line items as you need") + """
   <div class="calc-grid">
     <div class="calc-in">
-      <div class="table-wrap items"><table><thead><tr><th>Item</th><th>RCV ($)</th><th>Labor %</th><th>Age (yrs)</th><th>Life (yrs)</th><th>ACV</th><th><span class="sr-only">Remove</span></th></tr></thead><tbody>
+      <div class="table-wrap items"><table class="stack-sm"><thead><tr><th>Item</th><th>RCV ($)</th><th>Labor %</th><th>Age (yrs)</th><th>Life (yrs)</th><th>ACV</th><th><span class="sr-only">Remove</span></th></tr></thead><tbody>
       """ + "".join(_HB_ROW.format(*r) for r in [("Laminated shingle roof", 19800, 45, 8, 30), ("Gutters &amp; downspouts", 2300, 40, 12, 25), ("Interior paint, two rooms", 1900, 70, 5, 10), ("LVP flooring, living area", 4600, 35, 4, 20)]) + """
       </tbody></table></div>
       <p><button type="button" class="btn btn-line btn-sm" data-add data-run>+ Add a line item</button></p>
@@ -147,14 +147,14 @@ DEDUCT = """
     </div>
     <div class="calc-out" aria-live="polite">
       <div class="readout"><small>Your wind/hail deductible in dollars</small><b data-o="pd">$0</b></div>
-      <div class="meter two" aria-hidden="true"><i class="m3"></i><i class="m1"></i></div>
+      <div class="meter meter-2" aria-hidden="true"><i class="m3"></i><i class="m1"></i></div>
       <ul class="key"><li><i class="m3"></i>You pay</li><li><i class="m1"></i>Policy pays</li></ul>
       <dl class="calc-rows">
         <div><dt>Policy pays with this deductible</dt><dd data-o="pdpay">$0</dd></div>
         <div><dt>Policy would pay with the flat deductible</dt><dd data-o="flatpay">$0</dd></div>
         <div><dt>Extra out of pocket</dt><dd data-o="diff">$0</dd></div>
       </dl>
-      <div class="table-wrap"><table class="scen"><thead><tr><th>If your deductible were</th><th>In dollars</th><th>Policy pays</th></tr></thead><tbody data-o="cmp"></tbody></table></div>
+      <div class="table-wrap"><table class="scen stack-sm"><thead><tr><th>If your deductible were</th><th>In dollars</th><th>Policy pays</th></tr></thead><tbody data-o="cmp"></tbody></table></div>
       <p class="verdict" data-o="below"></p>
     </div>
   </div>

@@ -192,7 +192,7 @@
     var tb = $('[data-o="scen"]', r);
     if (tb) tb.innerHTML = [0.25, 0.5, 0.75].map(function (s) {
       var x = m.at(s);
-      return "<tr><td>" + (s * 100) + "% of the gap</td><td>" + money(x.gross) + "</td><td>" + money(x.cost) + '</td><td class="' + (x.net > 0 ? "pos" : "neg") + '">' + money(x.net) + "</td></tr>";
+      return '<tr><th scope="row">' + (s * 100) + '% of the gap</th><td data-label="Gross increase">' + money(x.gross) + '</td><td data-label="Your costs">' + money(x.cost) + '</td><td data-label="Net to you" class="' + (x.net > 0 ? "pos" : "neg") + '">' + money(x.net) + "</td></tr>";
     }).join("");
     var meter = $(".meter", r);
     if (meter && meter.children.length === 3) {
@@ -292,7 +292,7 @@
     var m = dedMath(o);
     set(r, "pd", money(m.pd)); set(r, "pdpay", money(m.pdpay)); set(r, "flatpay", money(m.flatpay)); set(r, "diff", money(m.diff));
     var tb = $('[data-o="cmp"]', r);
-    if (tb) tb.innerHTML = [1, 2, 3, 5].map(function (p) { var x = dedMath({ cova: o.cova, pct: p, flat: o.flat, loss: o.loss }); return "<tr" + (p === o.pct ? ' style="font-weight:800"' : "") + "><td>" + p + "%</td><td>" + money(x.pd) + "</td><td>" + money(x.pdpay) + "</td></tr>"; }).join("");
+    if (tb) tb.innerHTML = [1, 2, 3, 5].map(function (p) { var x = dedMath({ cova: o.cova, pct: p, flat: o.flat, loss: o.loss }); return "<tr" + (p === o.pct ? ' class="cur"' : "") + '><th scope="row">' + p + '% deductible</th><td data-label="In dollars">' + money(x.pd) + '</td><td data-label="Policy pays">' + money(x.pdpay) + "</td></tr>"; }).join("");
     var meter = $(".meter", r);
     if (meter && o.loss > 0) { var a = Math.min(m.pd, o.loss) / o.loss * 100; meter.children[0].style.width = a + "%"; meter.children[1].style.width = (100 - a) + "%"; }
     set(r, "below", !o.loss ? "Enter an estimated loss to compare." : o.loss <= m.pd ? "This loss falls entirely within the percentage deductible, so no payment would be owed under it." : "The loss exceeds the deductible by " + money(o.loss - m.pd) + ".");

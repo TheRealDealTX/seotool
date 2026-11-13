@@ -6,12 +6,13 @@ builds it, and a small PHP guard + front controller serves it on a Hostinger Age
 | | |
 | --- | --- |
 | Hostinger website UID | `ZZxCZVdjC` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `arkansasinsuranceappraiser.com` (attached at creation; waiting on nameservers) |
+| Live domain | https://arkansasinsuranceappraiser.com (SSL covers apex + www; www and http 301 to it) |
 | Preview URL | https://dodgerblue-kingfisher-478637.hostingersite.com |
 | Nameservers to set at the registrar | `aurora.dns-parking.com`, `nebula.dns-parking.com` (from `agency-hosting_websites_get`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@arkansasinsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | none yet: set `GTM_ID` in `build.py` |
+| Email / form inbox | info@arkansasinsuranceappraiser.com (form delivers over SMTP, verified Nov 13, 2026) |
+| Google Tag Manager | `GTM-MQTN2KFK` (head snippet exactly as provided + noscript iframe after `<body>`) |
+| Search Console | `googlecccfbf2f7e9e5ae4.html` verification file in `static/` (skipped by validate.py) |
 
 ## Layout
 
@@ -40,7 +41,7 @@ export AIA_FB_URL=… AIA_FB_AUTH=… AIA_FB_REST=…
 
 `deploy.sh` only adds and overwrites. If a page is removed or renamed, delete the old file on the server:
 `DELETE {url-without-/tus}/resources/public_html/<path>` with the same `X-Auth` / `X-Auth-Rest` headers.
-Hostinger's placeholder `public_html/default.php` has already been deleted.
+Hostinger's placeholder `public_html/default.php` has already been deleted. `api/_private/` (SMTP config, lead log) lives only on the server; leave it in place.
 
 Local preview that mimics the host: `cd public && php -S 127.0.0.1:8765 ../tools/router.php`. The router serves
 real files directly, executes `.php` files and a directory's `index.php`, and sends everything else to `index.php`.
@@ -124,9 +125,14 @@ None reuse the sister Georgia set. All are listed with license and source on `/p
 
 ## Going live checklist
 
-1. Point the domain's nameservers to `aurora.dns-parking.com` / `nebula.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if not.
-3. Re-check redirects on the live domain (http, www, `/index.php`), the sitemap URLs and the absence of `X-Robots-Tag`.
-4. Create the mailbox, upload `api/_private/config.php`, run the SMTP test.
-5. Add the GTM container ID to `GTM_ID` if one is provided, rebuild, redeploy, clear cache.
-6. Submit `https://arkansasinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Point the nameservers~~ — done; SSL covers `arkansasinsuranceappraiser.com` and `www.` (Hostinger `ssl_cert.names`).
+2. ~~Check the canonical host on the live domain~~ — done Nov 13, 2026: http, www and `/index.php` 301 to the https apex on the
+   homepage and four interior pages; all 51 sitemap URLs return 200 with no `X-Robots-Tag`; our `robots.txt` is served.
+3. ~~Mailbox + SMTP~~ — done; config URL returns 404 with 0 bytes, test submission logged with `"via":"smtp"`.
+4. ~~GTM~~ — done (`GTM-MQTN2KFK`). ~~GSC verification file~~ — done.
+5. Submit `https://arkansasinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+
+## Mobile tables
+
+Wide tables (homepage comparison, tool scenario tables, holdback line items, photo credits) carry the `stack-sm` class and become
+labelled cards at ≤700px (`td[data-label]`), so nothing is cut off or needs sideways scrolling at 390px.

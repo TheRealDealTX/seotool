@@ -31,10 +31,10 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261112b"
+VER = "20261113a"
 FAV = "1"
 # Google Tag Manager container ID (e.g. "GTM-XXXXXXX"). Empty = no GTM output.
-GTM_ID = ""
+GTM_ID = "GTM-MQTN2KFK"
 
 SVC_BASE = "/claim-appraisal-services/"
 LOC_BASE = "/arkansas-locations/"
@@ -292,11 +292,15 @@ def footer():
 
 
 def gtm_head():
+    # Head snippet exactly as provided by the site owner.
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\n"
-            "j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n"
-            f"}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            "<script>\n"
+            "  window.dataLayer = window.dataLayer || [];\n"
+            "  function gtag(){dataLayer.push(arguments);}\n"
+            "  gtag('js', new Date());\n"
+            "</script>\n")
 
 
 def gtm_body():
@@ -664,10 +668,10 @@ def home():
 <div class="fit-col yes rv"><h3>{ic("check", size=22)} Good fit for appraisal</h3><ul><li>Coverage accepted, cost disputed</li><li>Repair vs. replace on roofs or floors</li><li>Matching and discontinued materials</li><li>Missing trades, code items or overhead and profit</li><li>Depreciation that looks too heavy</li></ul></div>
 <div class="fit-col no rv"><h3>{ic("x", size=22)} Usually not a fit</h3><ul><li>The claim was denied outright</li><li>The question is whether a cause is covered</li><li>Bad-faith or statutory penalty claims</li><li>Gaps too small to justify fees</li><li>Deadlines that need an attorney now</li></ul></div>
 </div>
-<div class="table-wrap rv"><table class="compare"><caption class="sr-only">Comparing an appraiser, a public adjuster and an attorney</caption><thead><tr><th scope="col">Question</th><th scope="col" class="hl">{K}</th><th scope="col">Public adjuster</th><th scope="col">Attorney</th></tr></thead><tbody>
-<tr><th scope="row">Main job</th><td class="hl">Value the amount of loss</td><td>Handle and negotiate the claim</td><td>Legal disputes and litigation</td></tr>
-<tr><th scope="row">Best stage</th><td class="hl">Coverage accepted, number disputed</td><td>From first notice</td><td>Denials, bad faith, deadlines</td></tr>
-<tr><th scope="row">Typical result</th><td class="hl">Two-signature award</td><td>Negotiated settlement</td><td>Settlement or judgment</td></tr>
+<div class="table-wrap rv"><table class="compare stack-sm"><caption class="sr-only">Comparing an appraiser, a public adjuster and an attorney</caption><thead><tr><th scope="col">Question</th><th scope="col" class="hl">{K}</th><th scope="col">Public adjuster</th><th scope="col">Attorney</th></tr></thead><tbody>
+<tr><th scope="row">Main job</th><td class="hl" data-label="{K}">Value the amount of loss</td><td data-label="Public adjuster">Handle and negotiate the claim</td><td data-label="Attorney">Legal disputes and litigation</td></tr>
+<tr><th scope="row">Best stage</th><td class="hl" data-label="{K}">Coverage accepted, number disputed</td><td data-label="Public adjuster">From first notice</td><td data-label="Attorney">Denials, bad faith, deadlines</td></tr>
+<tr><th scope="row">Typical result</th><td class="hl" data-label="{K}">Two-signature award</td><td data-label="Public adjuster">Negotiated settlement</td><td data-label="Attorney">Settlement or judgment</td></tr>
 </tbody></table></div>
 </div></section>
 
@@ -925,8 +929,8 @@ def company_pages():
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], photo="consultation"), 0.8)
 
     credits = "".join(
-        f'<tr><td>{img(k, sizes="120px", alt="", extra=" class=\"thumb\"")}</td><td>{e(v["title"])}<br><small>{e(v.get("creator") or "Unknown")}</small></td>'
-        f'<td>{"CC0 1.0" if v["license"] == "cc0" else "Public domain"}</td><td>{e(v["source"].title())}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">View source</a></td></tr>'
+        f'<tr><td class="td-thumb">{img(k, sizes="120px", alt="", extra=" class=\"thumb\"")}</td><td data-label="Photo"><span class="cr-t">{e(v["title"])}<small>{e(v.get("creator") or "Unknown")}</small></span></td>'
+        f'<td data-label="License">{"CC0 1.0" if v["license"] == "cc0" else "Public domain"}</td><td data-label="Source">{e(v["source"].title())}</td><td data-label="Link"><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">View source</a></td></tr>'
         for k, v in PHOTOS.items())
     upd = date.today().strftime("%B %-d, %Y")
     legal = {
@@ -965,7 +969,7 @@ def company_pages():
                  f"Disclaimer for {BRAND}: general information only, not legal advice, no guaranteed results and limits on legal citations."),
         P_CREDITS: ("Photo Credits", f"""
 <p>Every photograph on this site is royalty-free: either dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> or a <strong>public-domain</strong> work such as photos by U.S. government agencies. Photos were found through the Openverse search engine. Attribution isn’t legally required, but we credit each source here with thanks. Photos are illustrative and do not show our clients’ properties.</p>
-<div class="table-wrap"><table class="credits"><thead><tr><th scope="col">Photo</th><th scope="col">Title / creator</th><th scope="col">License</th><th scope="col">Source</th><th scope="col">Link</th></tr></thead><tbody>{credits}</tbody></table></div>""",
+<div class="table-wrap"><table class="credits stack-sm"><thead><tr><th scope="col">Photo</th><th scope="col">Title / creator</th><th scope="col">License</th><th scope="col">Source</th><th scope="col">Link</th></tr></thead><tbody>{credits}</tbody></table></div>""",
                      "Sources and licenses for every photograph used on this site.", "Photo Credits & Licenses | " + BRAND,
                      f"Photo credits for {BRAND}: every image used on the site with its CC0 or public-domain license, creator and original source link."),
     }
