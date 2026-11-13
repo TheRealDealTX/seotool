@@ -562,3 +562,30 @@ html.js .tool-card.rv.in { transition: transform .25s, box-shadow .25s, opacity 
 .drawer-top .brand b { font-size: .92rem; }
 .drawer-top .brand small { font-size: .62rem; }
 .drawer-close { flex: none; }
+
+/* mobile header: let the brand shrink/wrap so the menu button never gets pushed off-screen */
+.brand span { min-width: 0; }
+@media (max-width: 1020px) {
+  .head .wrap { gap: 12px; }
+  .head .brand { flex: 1 1 auto; min-width: 0; }
+  .brand b { overflow-wrap: anywhere; }
+}
+@media (max-width: 420px) {
+  .brand svg, .drawer-top .brand svg { width: 36px; height: 36px; }
+  .brand b { font-size: .9rem; }
+  .brand small { font-size: .6rem; letter-spacing: .05em; }
+  .burger { width: 42px; height: 42px; }
+  .drawer-top { padding: 12px; }
+  .drawer-top .brand b { font-size: .86rem; }
+  .drawer-close { width: 40px; height: 40px; }
+}
+@media (max-width: 350px) {
+  .head .brand small, .drawer-top .brand small { display: none; }
+}
+
+/* never let transformed/parallax media or wide tables widen the mobile layout viewport */
+html, body { overflow-x: clip; }
+@supports not (overflow: clip) { html { overflow-x: hidden; } }
+.hero-bg, .page-hero, .cta-par, .loc-feature, .season-panel { overflow: hidden; }
+.calc-wide .calc-body, .calc-mini .calc-body { grid-template-columns: minmax(0, 1fr); }
+.items-table { max-width: 100%; }

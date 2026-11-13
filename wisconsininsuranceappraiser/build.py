@@ -34,7 +34,14 @@ TODAY = date.today().isoformat()
 VER = "20261113a"
 FAV = "1"
 # Google Tag Manager container ID (e.g. "GTM-XXXXXXX"). Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-WWPMQZ85"
+# Head snippet exactly as provided by the site owner (used whenever GTM_ID is set).
+GTM_HEAD_SNIPPET = """<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WWPMQZ85"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>"""
 
 SVC_BASE = "/appraisal-solutions/"
 LOC_BASE = "/local-appraisers/"
@@ -242,7 +249,7 @@ def footer():
 <div><p class="foot-t">Resources</p><ul>{res}</ul></div>
 </div>
 <div class="foot-base"><span>© <span data-year>{date.today().year}</span> {BRAND}. All rights reserved.</span>
-<ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/photo-credits/">Photo credits</a></li><li><a href="{SITEMAP_HTML}">Site map</a></li></ul></div>
+<ul><li><a href="/privacy/">Privacy</a></li><li><a href="/terms/">Terms</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="{SITEMAP_HTML}">Site map</a></li></ul></div>
 <p class="foot-disc">{BRAND} provides insurance appraisal, estimating and umpire services. We are not a law firm, we don’t give legal advice and we don’t act as public adjusters. Information on this site is general and educational, and policy terms vary. Results depend on the facts of each claim and are never guaranteed.</p>
 </div></footer>
 <button class="to-top" type="button" aria-label="Back to top">{ic("up")}</button>
@@ -252,8 +259,7 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],\n"
-            f"j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return f"<!-- Google Tag Manager -->\n{GTM_HEAD_SNIPPET}\n<!-- End Google Tag Manager -->\n"
 
 
 def gtm_body():
@@ -850,10 +856,6 @@ def company_pages():
                          "Get a free review of your disputed Wisconsin property claim. Call or text (844) 537-1427, email us, or send your claim details online.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], preload="laptop-review"), 0.8)
 
-    lic = {"cc0": "CC0 1.0", "pdm": "Public domain"}
-    credits = "".join(
-        f'<tr><td>{img(k, sizes="120px", alt="", extra=" style=\"width:120px;height:72px;object-fit:cover;border-radius:8px\"")}</td><td>{e(v["title"])}<br><small>{e(v.get("creator") or "Unknown")} · via {e(v["source"])}</small></td><td>{lic.get(v["license"], v["license"])}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">Source</a></td></tr>'
-        for k, v in PHOTOS.items())
     upd = date.today().strftime("%B %-d, %Y")
     legal = {
         "/privacy/": ("Privacy Policy", f"""
@@ -862,7 +864,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To answer your inquiry and evaluate your claim.</li><li>To provide services you ask for.</li><li>To keep the site secure and working.</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with providers who host our site and email, or when the law requires it.</p>
 <h2>Calculators</h2><p>Our calculators run in your browser. The numbers you enter aren’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>This site doesn’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add website analytics, it will be used to understand how the site is used, not to sell data.</p>
+<h2>Cookies and analytics</h2><p>Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. We use Google Tag Manager to load measurement tools, such as Google Analytics, that use cookies to show how visitors use the site. We use that information to improve the site, not to sell data. You can block or delete cookies in your browser settings.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out at any time.</p>
 <h2>Your choices</h2><p>You can ask us to access, correct or delete the personal information you’ve given us by emailing <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""", "How we collect, use and protect the information you share with us.", "Privacy policy for Wisconsin Insurance Appraiser: what we collect through forms, calls and email, how it’s used and the choices you have."),
@@ -872,7 +874,7 @@ def company_pages():
 <h2>No client relationship</h2><p>Reading the site, using its calculators or sending a form doesn’t create an appraiser–client relationship. That begins only when we both sign a written engagement agreement.</p>
 <h2>No legal advice</h2><p>{BRAND} isn’t a law firm, and nothing here is legal advice. Policies differ, and laws and court decisions change. Talk to a licensed Wisconsin attorney about legal questions.</p>
 <h2>Calculators and examples</h2><p>Calculators give planning estimates from the information you enter. Example figures are illustrative. None of it is an appraisal, a quote or a prediction of a claim outcome.</p>
-<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are used under the licenses listed on our <a href="/photo-credits/">photo credits</a> page.</p>
+<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are royalty-free images (CC0 or public domain) used for illustration.</p>
 <h2>Limitation of liability</h2><p>The site is provided “as is.” To the extent the law allows, we aren’t liable for decisions made from its content or tools.</p>
 <h2>Governing law</h2><p>These terms are governed by the laws of the State of Wisconsin.</p>""", "The terms that apply when you use this website and its calculators.", "Terms of use for the Wisconsin Insurance Appraiser website: no client relationship, no legal advice, calculator limits and governing law."),
         "/disclaimer/": ("Disclaimer", f"""
@@ -882,9 +884,6 @@ def company_pages():
 <h2>Deadlines</h2><p>Policies contain deadlines for notice, proof of loss, depreciation recovery and lawsuits. Nothing on this site extends or changes a deadline. If one is approaching, contact a Wisconsin attorney promptly.</p>
 <h2>Photographs</h2><p>Photos on this site are royalty-free stock and public-domain images used for illustration. They don’t show our clients’ properties.</p>
 <h2>References</h2><p>Mentions of laws, agencies or weather events are for context only. Check current law and facts with official sources such as the Wisconsin Office of the Commissioner of Insurance.</p>""", "Important limits on the information published on this website.", "Disclaimer for Wisconsin Insurance Appraiser: general information only, no legal advice, no guaranteed results and illustrative examples."),
-        "/photo-credits/": ("Photo Credits", f"""
-<p>Every photograph on this site is royalty-free: either dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> or a <strong>public-domain</strong> work, such as photos by U.S. government agencies. Photos were found through the Openverse catalog. Attribution isn’t legally required, but we credit the photographers here with thanks. Photos are illustrative and don’t show our clients’ properties.</p>
-<div class="table-wrap"><table><thead><tr><th>Photo</th><th>Title / creator</th><th>License</th><th>Link</th></tr></thead><tbody>{credits}</tbody></table></div>""", "Sources and licenses for the photographs used on this site.", "Photo credits for Wisconsin Insurance Appraiser: every image is CC0 or public domain, listed with its creator, source and license."),
     }
     for path, (title, content, lede, desc) in legal.items():
         trail = [("Home", "/"), (title, path)]
@@ -901,7 +900,7 @@ def sitemap_pages():
         ("Cities", [("All cities", LOC_BASE)] + [(loc_label(l), loc_path(l)) for l in LOCATIONS]),
         ("Calculators", [("All calculators", TOOL_BASE)] + [(t["name"], f'{TOOL_BASE}{t["slug"]}/') for t in TOOLS]),
         ("Resources", LEARN + [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]),
-        ("Legal", [("Privacy policy", "/privacy/"), ("Terms of use", "/terms/"), ("Disclaimer", "/disclaimer/"), ("Photo credits", "/photo-credits/")]),
+        ("Legal", [("Privacy policy", "/privacy/"), ("Terms of use", "/terms/"), ("Disclaimer", "/disclaimer/")]),
     ]
     cols = "".join(f'<div class="icard plain rv"><h2>{e(g)}</h2><ul style="padding-left:1.1em;margin:0">{"".join(f"<li><a href=\"{p}\">{e(n)}</a></li>" for n, p in links)}</ul></div>' for g, links in groups)
     body = page_hero(trail, "Navigation", "Site Map", f"Every page on {BRAND}, in one place.", "office-tower", cta=False) + f'<section class="sec"><div class="wrap"><div class="index-grid" data-stagger>{cols}</div></div></section>'

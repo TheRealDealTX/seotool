@@ -6,12 +6,12 @@ PHP front controller plus a canonical-host guard serve it on a Hostinger Agency 
 | | |
 | --- | --- |
 | Hostinger website UID | `sJXNwa420` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Boston datacenter) |
-| Domain | `wisconsininsuranceappraiser.com`, attached at creation (SSL issues once DNS points here) |
+| Live domain | https://wisconsininsuranceappraiser.com (SSL covers the apex and `www`; www and http 301 to the https apex) |
 | Preview URL | https://ghostwhite-jay-318854.hostingersite.com (always sends `X-Robots-Tag: noindex`) |
 | Nameservers to set at the registrar | `pixel.dns-parking.com`, `byte.dns-parking.com` (from `agency-hosting_websites_get`) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@wisconsininsuranceappraiser.com (mailbox still to be created) |
-| Google Tag Manager | Not set. Put the container ID in `GTM_ID` in `build.py`, rebuild and deploy |
+| Email / form inbox | info@wisconsininsuranceappraiser.com (form delivers over SMTP) |
+| Google Tag Manager | `GTM-WWPMQZ85`: the owner's head snippet, verbatim (`GTM_HEAD_SNIPPET` in `build.py`), plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -22,7 +22,7 @@ PHP front controller plus a canonical-host guard serve it on a Hostinger Agency 
 | `src/locations.py` | 12 Wisconsin city pages (county, region, housing mix, storm history, neighborhoods) |
 | `src/tools.py` | 7 calculators (markup and copy); the math is in `static/assets/js/app.js` |
 | `src/learn.py` | 8-step process guide, grouped FAQ, 40-term dictionary, 6 guides |
-| `src/photos.json` | Photo metadata (title, creator, license, source, size, alt text), used by `img()` and `/photo-credits/` |
+| `src/photos.json` | Photo metadata (title, creator, license, source, size, alt text), used by `img()` |
 | `static/` | CSS, JS, icons, OG image, photos and `api/contact.php`, copied into `public/` as-is |
 | `public/` | **Build output.** This is what gets deployed (committed) |
 | `validate.py` | Post-build checks (must report zero errors) |
@@ -40,12 +40,16 @@ export WIA_FB_URL='…/api/tus' WIA_FB_AUTH='…' WIA_FB_REST='…'
 
 `deploy.sh` only adds and overwrites. If you remove or rename a page, delete its old file on the server:
 `curl -X DELETE -H "X-Auth: $WIA_FB_AUTH" -H "X-Auth-Rest: $WIA_FB_REST" "${WIA_FB_URL%/tus}/resources/public_html/<path>"`.
-Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
+Hostinger's placeholder `public_html/default.php` was deleted after the first deploy, and `/photo-credits/` was removed
+on request (Nov 13, 2026).
+
+The server also holds files that are deliberately not in git: `googlecccfbf2f7e9e5ae4.html` (Google Search Console
+verification, in the `public_html` root) and `api/_private/` (SMTP config and lead log). `deploy.sh` never touches them.
 
 Local preview that behaves like the host (real files served directly, a directory's `index.php` executed, everything
 else through the root `index.php`): `php -S 127.0.0.1:8765 -t public router.php` (`router.php` is in this folder).
 
-## Pages (52 in the sitemap, plus the 404)
+## Pages (51 in the sitemap, plus the 404)
 
 - Home, `/about-us/`, `/contact-us/`
 - `/appraisal-solutions/` + 12 services: appraisal demand representation, home, commercial & HOA, hail & roof,
@@ -59,7 +63,7 @@ else through the root `index.php`): `php -S 127.0.0.1:8765 -t public router.php`
   roof snow load (new for this site). Everything runs in the browser and nothing is stored
 - `/appraisal-process-guide/`, `/insurance-appraisal-faq/` (5 topic groups), `/claims-dictionary/` (40 terms, searchable),
   `/learning-center/` + 6 guides
-- `/privacy/`, `/terms/`, `/disclaimer/`, `/photo-credits/`, `/html-sitemap/`, `404.html` (real 404 status),
+- `/privacy/`, `/terms/`, `/disclaimer/`, `/html-sitemap/`, `404.html` (real 404 status),
   `sitemap.xml`, `robots.txt`
 
 URL slugs, copy, section order and design were written fresh and differ from the 22 sister `*insuranceappraiser*`
@@ -93,7 +97,8 @@ sites on the same Hostinger order.
 CC0/PD (including USDA and U.S. Fish & Wildlife Service photos) and Wikimedia Commons (Milwaukee skyline, the State
 Capitol in Madison, Rib Mountain near Wausau). Each is served as 1200px (or the largest the source offers, 960–1200px)
 and 640px WebP with `srcset`, `sizes`, `width` and `height`. Alt text is descriptive; decorative backgrounds use
-`alt=""`. Every photo is listed with its creator, source and license on `/photo-credits/`.
+`alt=""`. The creator, source and license of every photo are kept in `src/photos.json` (the public photo credits page
+was removed at the owner's request; attribution isn't required for CC0/PD images).
 
 Downloads ran one file at a time with pauses and backoff; Wikimedia thumbnails used the standard 330px (contact
 sheets) and 1280px (finals) widths. Wikimedia rate-limited a La Crosse photo and Flickr refused two downloads, so
@@ -156,14 +161,16 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 Then confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and check that
 the log shows `"via":"smtp"`.
 
-## Going live checklist
+## Go-live status (Nov 13, 2026)
 
-1. Point the domain's nameservers to `pixel.dns-parking.com` and `byte.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with
-   `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. On the live domain, check the homepage and at least three interior pages: http, http-www and https-www all 301 to
-   `https://wisconsininsuranceappraiser.com/page/`; `/page/index.php` 301s to `/page/`; every sitemap URL returns 200;
-   no `X-Robots-Tag`; our own `robots.txt`. If a www URL still returns 200 with `x-hcdn-cache-status: HIT`, clear the
-   cache again.
-4. Create the mailbox and wire SMTP (above). Add GTM if wanted.
-5. Submit `https://wisconsininsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. Nameservers point to Hostinger and SSL is active for `wisconsininsuranceappraiser.com` and
+   `www.wisconsininsuranceappraiser.com` (`ssl_cert.names`, expires Feb 11, 2027; Hostinger renews it).
+2. Checked on the live domain (homepage plus four interior pages): http, http-www and https-www all 301 to
+   `https://wisconsininsuranceappraiser.com/page/`; `/page/index.php` and `/index.php` 301 to the directory; all 51 sitemap
+   URLs return 200 with no `X-Robots-Tag`; our own `robots.txt` is served; unknown URLs return 404.
+3. SMTP is wired: `/api/_private/config.php` returns 404 with 0 bytes, and a submission labelled as a test was logged
+   with `"via":"smtp"`.
+4. GTM `GTM-WWPMQZ85` is on every page, and the Search Console verification file is uploaded.
+5. Still to do by the owner: submit `https://wisconsininsuranceappraiser.com/sitemap.xml` in Google Search Console.
+
+If a www URL ever returns 200 with `x-hcdn-cache-status: HIT`, clear the cache (`agency-hosting_cache_clear-website`).
