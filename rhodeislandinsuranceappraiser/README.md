@@ -6,12 +6,12 @@ served from a Hostinger Agency Growth website through a small PHP guard and fron
 | | |
 | --- | --- |
 | Hostinger website UID | `96IM2CwtT` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, created in the Boston datacenter; the API reports server `us-phx-h5g-node3`) |
-| Domain | https://rhodeislandinsuranceappraiser.com (attached at creation; doesn't resolve until nameservers point to Hostinger) |
+| Domain | https://rhodeislandinsuranceappraiser.com (live; SSL covers the apex and www, both expire 2027-02-11; www and http 301 to the apex) |
 | Preview URL | https://peachpuff-herring-145397.hostingersite.com (every page sends `X-Robots-Tag: noindex`; Hostinger serves its own blocking robots.txt here) |
 | Nameservers to set at the registrar | `pixel.dns-parking.com`, `byte.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@rhodeislandinsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | `GTM_ID` in `build.py`, empty, so no tag is output |
+| Email / form inbox | info@rhodeislandinsuranceappraiser.com (form delivers over SMTP; config is on the server only) |
+| Google Tag Manager | `GTM-TD55R2LF` (`GTM_ID` in `build.py`; head snippet exactly as supplied + `<noscript>` iframe after `<body>`) |
 
 ## Layout
 
@@ -45,7 +45,7 @@ export RIA_FB_URL='https://…/tus' RIA_FB_AUTH='…' RIA_FB_REST='…'
 
 Local preview with real routing: `cd public && php -S 127.0.0.1:8099 "$PWD/../dev-router.php"`.
 
-## Pages (51 in the sitemap, plus a 404)
+## Pages (50 in the sitemap, plus a 404)
 
 - Home, `/firm-profile/` (about), `/request-a-claim-review/` (contact)
 - `/claim-valuation-services/` + 11 services (appraisal clause, homeowner, commercial/condo/HOA, roof & hail,
@@ -58,7 +58,8 @@ Local preview with real routing: `cd public && php -S 127.0.0.1:8099 "$PWD/../de
   (.ics export), appraisal readiness checkup, and the Rhode Island-specific **wind vs. flood damage splitter**
 - `/the-appraisal-sequence/` (process guide, HowTo), `/policyholder-questions/` (FAQ by topic),
   `/claim-wordbook/` (searchable glossary, 40 terms), `/claim-notebook/` + 6 guides
-- `/data-privacy/`, `/use-terms/`, `/claim-disclaimer/`, `/photo-credits/`, `/browse-the-site/` (HTML site map)
+- `/data-privacy/`, `/use-terms/`, `/claim-disclaimer/`, `/browse-the-site/` (HTML site map)
+- The photo credits page was removed at the owner's request (Nov 13, 2026) and deleted from the server; sources stay in `src/photos.json`
 - `404.html`, served with a real 404 status by the front controller
 
 Slugs, copy and design are deliberately different from every sister `*insuranceappraiser*` site.
@@ -88,7 +89,7 @@ Slugs, copy and design are deliberately different from every sister `*insurancea
 About 30 real photos, all **CC0 or public domain**, found through the Openverse API (`license=cc0,pdm`) and
 Wikimedia/Flickr/StockSnap/US-government sources, downloaded one at a time with backoff and Wikimedia's standard thumbnail
 widths. None reuse a photo from a sister site. Each one is served as 1200px and 640px WebP with `srcset`, `sizes`, width
-and height. Decorative backgrounds use `alt=""`. Every photo is listed with its license and source on `/photo-credits/`.
+and height. Decorative backgrounds use `alt=""`. Each photo's license, creator and source URL are recorded in `src/photos.json` (no public credits page, at the owner's request).
 
 ## Hosting notes (why pages are `dir/index.php`)
 
@@ -140,21 +141,17 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@rhodeislandinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-Once the mailbox password arrives: upload the config, confirm `/api/_private/config.php` returns 404 with 0 bytes, send one
-submission labelled as a test, and confirm the log line shows `"via":"smtp"`.
+Done Nov 13, 2026: config uploaded, `/api/_private/config.php` and the log both return 404 with 0 bytes, and a submission labelled
+as a test was logged with `"via":"smtp"` and no error.
 
 ## Google Tag Manager
 
-Set `GTM_ID` in `build.py` (for example `GTM-XXXXXXX`), then rebuild and deploy. The head snippet and the `<noscript>`
-iframe right after `<body>` are output only when it's set.
+`GTM_ID = "GTM-TD55R2LF"` in `build.py`. `gtm_head()` outputs the owner's snippet verbatim (async `gtm.js` + `dataLayer`/`gtag('js')`),
+and the `<noscript>` iframe follows `<body>`. Clear `GTM_ID` to remove both. The privacy policy mentions GTM.
 
 ## Go-live checklist
 
-1. Point the domain's nameservers to `pixel.dns-parking.com` and `byte.dns-parking.com`.
-2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with
-   `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. Check http/www/`index.php` URLs 301 to `https://rhodeislandinsuranceappraiser.com/…` on the homepage and interior pages,
-   every sitemap URL returns 200, and the real domain sends no `X-Robots-Tag` and serves our robots.txt. If a www URL still
-   returns 200 with `x-hcdn-cache-status: HIT`, clear the cache again.
-4. Create the mailbox and wire SMTP (see above); add GTM if provided.
-5. Submit `https://rhodeislandinsuranceappraiser.com/sitemap.xml` to Google Search Console.
+1. ~~Nameservers, SSL for apex + www~~: done. http, www and `/dir/index.php` URLs 301 to the https apex on the homepage and
+   interior pages, all 50 sitemap URLs return 200, and the real domain sends no `X-Robots-Tag` and serves our robots.txt.
+2. ~~Mailbox + SMTP~~: done. ~~GTM~~: done.
+3. Submit `https://rhodeislandinsuranceappraiser.com/sitemap.xml` to Google Search Console.

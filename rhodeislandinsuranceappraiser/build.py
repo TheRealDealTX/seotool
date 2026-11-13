@@ -35,7 +35,7 @@ TODAY = date.today().isoformat()
 VER = "20261113a"
 FAV = "1"
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-TD55R2LF"
 
 SVC_BASE = "/claim-valuation-services/"
 LOC_BASE = "/rhode-island-communities/"
@@ -47,7 +47,7 @@ GLOSS = "/claim-wordbook/"
 ABOUT = "/firm-profile/"
 CONTACT = "/request-a-claim-review/"
 MAP = "/browse-the-site/"
-PRIVACY, TERMS, DISCL, CREDITS = "/data-privacy/", "/use-terms/", "/claim-disclaimer/", "/photo-credits/"
+PRIVACY, TERMS, DISCL = "/data-privacy/", "/use-terms/", "/claim-disclaimer/"
 
 e = html.escape
 pages = []  # (path, priority) for sitemap
@@ -249,7 +249,7 @@ def footer():
 <div><h3>Learn</h3><ul><li><a href="{PROCESS}">The appraisal sequence</a></li><li><a href="{FAQ_P}">Policyholder questions</a></li><li><a href="{GLOSS}">Claim wordbook</a></li><li><a href="{POST_BASE}">Claim notebook</a></li><li><a href="{ABOUT}">About</a></li><li><a href="{CONTACT}">Contact</a></li></ul></div>
 </div>
 <div class="wrap ftr-legal"><span>© <span data-year>{date.today().year}</span> {BRAND}</span>
-<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISCL}">Disclaimer</a></li><li><a href="{CREDITS}">Photo credits</a></li><li><a href="{MAP}">Site map</a></li></ul></div>
+<ul><li><a href="{PRIVACY}">Privacy</a></li><li><a href="{TERMS}">Terms</a></li><li><a href="{DISCL}">Disclaimer</a></li><li><a href="{MAP}">Site map</a></li></ul></div>
 <p class="wrap ftr-disc">{BRAND} provides insurance appraisal, estimating and umpire services. We are not a law firm, do not give legal advice and do not act as public adjusters. Information on this site is general; policy wording controls. Example figures are illustrative, and no result is guaranteed.</p>
 </footer>
 <button class="to-top" type="button" aria-label="Back to top">{ic("up", "ic", 20)}</button>
@@ -257,11 +257,11 @@ def footer():
 
 
 def gtm_head():
+    # The container snippet exactly as supplied by the site owner.
     if not GTM_ID:
         return ""
-    return ("<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\nnew Date().getTime(),event:'gtm.js'});"
-            "var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;"
-            f"f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n'
+            '<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(\'js\', new Date());\n</script>\n')
 
 
 def gtm_body():
@@ -876,10 +876,6 @@ def company_pages():
                          f"Request a free review of a disputed property claim. Call or text (844) 537-1427 or email {EMAIL}.",
                          body, [crumbs_schema(trail), {"@type": "ContactPage"}], photo=ph), 0.8)
 
-    credits = "".join(
-        f'<tr><td>{img(k, "thumb", sizes="120px", alt="")}</td><td>{e(v["title"])}<br><small>{e(v.get("creator") or "Unknown")}</small></td>'
-        f'<td>{"CC0 1.0" if v["license"] == "cc0" else "Public domain"}</td><td>{e(v.get("source", ""))}</td><td><a href="{e(v["landing"])}" rel="nofollow noopener" target="_blank">Source</a></td></tr>'
-        for k, v in PHOTOS.items())
     upd = date.today().strftime("%B %-d, %Y")
     legal = {
         PRIVACY: ("Privacy Policy", "Privacy Policy", f"""
@@ -888,7 +884,7 @@ def company_pages():
 <h2>How we use it</h2><ul><li>To respond to your inquiry and evaluate your claim</li><li>To provide services you ask for</li><li>To keep the site secure and working</li></ul>
 <p>We don’t sell personal information. We share it only with people who need it to help with your claim (with your permission), with providers who host our site and email, or when the law requires it.</p>
 <h2>Claim tools</h2><p>Our calculators and checklists run in your browser. What you enter isn’t sent to us or stored on our servers.</p>
-<h2>Cookies and analytics</h2><p>This site doesn’t use advertising cookies. Fonts load from Google Fonts, which may log standard request data under Google’s privacy policy. If we add analytics, this policy will say so.</p>
+<h2>Cookies and analytics</h2><p>We use Google Tag Manager to load site measurement tools, which may set cookies and collect standard usage data (pages visited, device and browser type, approximate location) under Google’s privacy policy. Fonts load from Google Fonts, which may log standard request data. You can block or delete cookies in your browser settings.</p>
 <h2>Text messages</h2><p>If you agree to be contacted by text, message and data rates may apply. Reply STOP to opt out.</p>
 <h2>Your choices</h2><p>To see, correct or delete information you’ve given us, email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 <h2>Contact</h2><p>{BRAND} · <a href="tel:{TEL}">{PHONE_INTL}</a> · <a href="mailto:{EMAIL}">{EMAIL}</a></p>""",
@@ -900,7 +896,7 @@ def company_pages():
 <h2>No professional relationship</h2><p>Reading the site, using its tools or submitting a form doesn’t create an appraiser–client relationship. That begins only when we both sign a written engagement agreement.</p>
 <h2>No legal advice</h2><p>{BRAND} isn’t a law firm. Nothing here is legal advice. Policies differ, and laws and court decisions change. Consult a Rhode Island attorney for legal questions.</p>
 <h2>Tools and estimates</h2><p>Calculators give planning estimates from the figures you enter. They aren’t appraisals, quotes or predictions of any outcome.</p>
-<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are used under the licenses listed on our <a href="{CREDITS}">photo credits</a> page.</p>
+<h2>Intellectual property</h2><p>Site content, design and tools belong to {BRAND}. You may share links and print pages for personal use. Photographs are royalty-free CC0 or public-domain images.</p>
 <h2>Limitation of liability</h2><p>The site is provided “as is.” To the extent the law allows, we aren’t liable for decisions made from its content or tools.</p>
 <h2>Governing law</h2><p>These terms are governed by the laws of the State of Rhode Island.</p>""",
                 "The terms that apply when you use this website and its tools.", "Terms of Use | Rhode Island Insurance Appraiser",
@@ -914,11 +910,6 @@ def company_pages():
 <h2>Photographs</h2><p>Photos are royalty-free stock and public-domain images used for illustration. They don’t show our clients’ properties.</p>""",
                 "Important limits on the information published on this website.", "Disclaimer | Rhode Island Insurance Appraiser",
                 "Disclaimer for Rhode Island Insurance Appraiser: general information only, not legal advice, illustrative figures and no guarantee of results."),
-        CREDITS: ("Photo Credits", "Photo Credits", f"""
-<p>Every photograph on this site is royalty-free: either dedicated to the public domain under <strong>Creative Commons CC0 1.0</strong> or a <strong>public-domain</strong> work, such as photos by U.S. government agencies. Attribution isn’t legally required, but we credit each source here with thanks. Photos are illustrative and don’t show our clients’ properties.</p>
-<div class="table-wrap"><table class="credits"><thead><tr><th scope="col">Photo</th><th scope="col">Title / creator</th><th scope="col">License</th><th scope="col">Via</th><th scope="col">Link</th></tr></thead><tbody>{credits}</tbody></table></div>""",
-                    "Sources and licenses for the photographs used on this site.", "Photo Credits | Rhode Island Insurance Appraiser",
-                    "Photo credits for Rhode Island Insurance Appraiser: every image is CC0 or public domain, listed here with its creator, license and source."),
     }
     ph = P("ri-farm-field", "colonial-house")
     for path, (crumb, h1, content, lede, title, desc) in legal.items():
@@ -936,7 +927,7 @@ def sitemap_pages():
         ("Communities", [("All communities", LOC_BASE)] + [(l["city"], loc_path(l)) for l in LOCATIONS]),
         ("Free tools", [("All tools", TOOL_BASE)] + [(t["name"], f'{TOOL_BASE}{t["slug"]}/') for t in TOOLS]),
         ("Learn", LEARN + [(p["title"], f'{POST_BASE}{p["slug"]}/') for p in POSTS]),
-        ("Legal", [("Privacy policy", PRIVACY), ("Terms of use", TERMS), ("Disclaimer", DISCL), ("Photo credits", CREDITS)]),
+        ("Legal", [("Privacy policy", PRIVACY), ("Terms of use", TERMS), ("Disclaimer", DISCL)])
     ]
     cols = "".join(f'<div class="map-col"><h2>{e(g)}</h2><ul>{"".join(f"<li><a href=\"{p}\">{e(n)}</a></li>" for n, p in links)}</ul></div>' for g, links in groups)
     ph = P("ri-farm-field", "colonial-house")
