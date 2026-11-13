@@ -79,7 +79,7 @@ def img(key, cls="", sizes="100vw", lazy=True, alt=None, extra=""):
 
 
 SVC_PHOTO = {
-    "appraisal-clause-advocacy": P("consultation-table"), "homeowner-claim-valuation": P("triple-decker", "colonial-house"),
+    "appraisal-clause-advocacy": P("consultation-table"), "homeowner-claim-valuation": P("hero-coastal-house", "triple-decker"),
     "commercial-condo-hoa-claims": P("commercial-storefront", "condo-building"), "roof-hail-claim-valuation": P("roof-shingles-damaged", "roofer-at-work"),
     "wind-microburst-tornado-claims": P("tree-on-house", "storm-surf"), "hurricane-tropical-storm-claims": P("hurricane-flood-street", "storm-surf"),
     "water-leak-sewer-backup-claims": P("water-ceiling", "flood-cleanup"), "ice-dam-freeze-claims": P("frozen-icicles", "snow-roof"),
@@ -100,7 +100,7 @@ POST_PHOTO = {
     "matching-materials-on-older-rhode-island-homes": P("providence-college-hill", "colonial-house"),
     "choosing-claim-help-in-rhode-island": P("consultation-table"),
 }
-HERO = P("hero-coastal-house")
+HERO = P("colonial-house")
 
 # ---------------------------------------------------------------- icons (all SVGs carry explicit width/height)
 _I = {
@@ -238,7 +238,7 @@ def footer():
     loc = "".join(f'<li><a href="{loc_path(l)}">{e(l["city"])}</a></li>' for l in LOCATIONS[:8])
     tl = "".join(f'<li><a href="{TOOL_BASE}{t["slug"]}/">{e(t["name"])}</a></li>' for t in TOOLS)
     return f"""<footer class="ftr">
-<div class="ftr-band"><div class="wrap ftr-band-in"><h2>Short check? Let’s see what was missed.</h2><div class="btn-row"><a class="btn ink" href="tel:{TEL}">{ic("phone", "ic", 18)} {PHONE}</a><a class="btn ink-line" href="{CONTACT}">Send the estimate</a></div></div></div>
+<div class="ftr-band"><div class="wrap ftr-band-in"><h2>Short check? Let’s see what was missed.</h2><div class="btn-row"><a class="btn sun" href="tel:{TEL}">{ic("phone", "ic", 18)} {PHONE}</a><a class="btn glass" href="{CONTACT}">Send the estimate</a></div></div></div>
 <div class="wrap ftr-grid">
 <div class="ftr-about">{brand("brand-ftr")}
 <p>Independent appraisal and estimating for property owners with disputed insurance claims, from Woonsocket to Westerly and out to Block Island.</p>

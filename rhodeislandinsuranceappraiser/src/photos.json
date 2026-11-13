@@ -1,0 +1,308 @@
+{
+ "providence-skyline": {
+  "title": "Image of Downtown Providence RI MagicBridgeMedia",
+  "creator": "MagicBridgeMedia",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=173458399",
+  "fw": 1200,
+  "fh": 800
+ },
+ "providence-college-hill": {
+  "title": "Nelson W. Aldrich House",
+  "creator": "Filetime",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=110334247",
+  "fw": 1200,
+  "fh": 800
+ },
+ "newport-harbor": {
+  "title": "Newport Harbor panorama from Perrotti Park",
+  "creator": "Waz8",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=120986083",
+  "fw": 1200,
+  "fh": 675
+ },
+ "newport-mansion": {
+  "title": "The Breakers from the Southwest",
+  "creator": "CopperDoodle",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=153939437",
+  "fw": 1200,
+  "fh": 800
+ },
+ "westerly-beach": {
+  "title": "Watch Hill Cove from Napatree Point",
+  "creator": "Juliancolton",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=29764269",
+  "fw": 1200,
+  "fh": 797
+ },
+ "point-judith-light": {
+  "title": "Point Judith Light is located",
+  "creator": "Carol M Highsmith",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/421820/free-photo-image-lighthouse-rhode-island-warning",
+  "fw": 1024,
+  "fh": 683
+ },
+ "pawtucket-falls": {
+  "title": "View of the Blackstone River in Pawtucket, Rhode Island (Carol M. Highsmith, 2018)",
+  "creator": "Carol M. Highsmith",
+  "license": "pdm",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=130180461",
+  "fw": 1200,
+  "fh": 800
+ },
+ "woonsocket-mill": {
+  "title": "Downtown Woonsocket Historic District",
+  "creator": "Marcbela",
+  "license": "pdm",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=4405285",
+  "fw": 1200,
+  "fh": 800
+ },
+ "bristol-harbor": {
+  "title": "Bristol harbor",
+  "creator": "Angusdavis at English Wikipedia",
+  "license": "pdm",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=11902050",
+  "fw": 960,
+  "fh": 638
+ },
+ "wickford-village": {
+  "title": "Historic Wickford Village: Save the Bay",
+  "creator": "happywhale1",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/148255220@N04/32550072350",
+  "fw": 1024,
+  "fh": 683
+ },
+ "warwick-shore": {
+  "title": "Narragansett Bay from Rocky Point State Park",
+  "creator": "burch19958",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/192021451@N07/52415820077",
+  "fw": 1024,
+  "fh": 683
+ },
+ "ri-state-house": {
+  "title": "2024 Rhode Island State House",
+  "creator": "Farragutful",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=148679025",
+  "fw": 1200,
+  "fh": 800
+ },
+ "ri-farm-field": {
+  "title": "Snow on an old stone wall in Little Compton, Rhode Island",
+  "creator": "Jeff Golenski",
+  "license": "cc0",
+  "source": "wordpress",
+  "landing": "https://wordpress.org/photos/photo/663659ff63/",
+  "fw": 1200,
+  "fh": 800
+ },
+ "hero-coastal-house": {
+  "title": "Tourist cottages in Truro on Cape Cod (Carol M. Highsmith)",
+  "creator": "Carol M. Highsmith",
+  "license": "pdm",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=130004513",
+  "fw": 1200,
+  "fh": 747
+ },
+ "storm-surf": {
+  "title": "Waves Crashing",
+  "creator": "Bonnie Moreland",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/waves-crashing-1X3MKLDHE9",
+  "fw": 960,
+  "fh": 639
+ },
+ "hurricane-flood-street": {
+  "title": "Flooding in Cedar Rapids, IA",
+  "creator": "U.S. Geological Survey",
+  "license": "cc0",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/27784370@N05/2593478529",
+  "fw": 1024,
+  "fh": 681
+ },
+ "flood-cleanup": {
+  "title": "20120106-OC-AMW-0035",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/7008299683",
+  "fw": 1024,
+  "fh": 681
+ },
+ "tree-on-house": {
+  "title": "Fallen tree on a parked car",
+  "creator": "Unknown",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/5943772/free-public-domain-cc0-photo",
+  "fw": 1022,
+  "fh": 575
+ },
+ "snow-roof": {
+  "title": "Wood House",
+  "creator": "Leeroy",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/wood-house-40KKX3FWU3",
+  "fw": 960,
+  "fh": 640
+ },
+ "frozen-icicles": {
+  "title": "Berkeley Heights library large icicles hanging from roof",
+  "creator": "Tomwsulcer",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=31298171",
+  "fw": 1200,
+  "fh": 800
+ },
+ "roof-shingles-damaged": {
+  "title": "Mossy roof",
+  "creator": "Topher",
+  "license": "cc0",
+  "source": "wordpress",
+  "landing": "https://wordpress.org/photos/photo/8926351b23/",
+  "fw": 1200,
+  "fh": 800
+ },
+ "roofer-at-work": {
+  "title": "Roof repair on refuge residence",
+  "creator": "USFWS/Southeast",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41464593@N02/37177142902",
+  "fw": 1024,
+  "fh": 683
+ },
+ "tarp-roof": {
+  "title": "Hurricane Helene, Valdosta, Fairview Historic District, tarp on roof",
+  "creator": "Mjrmtg",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=153737824",
+  "fw": 1200,
+  "fh": 800
+ },
+ "water-ceiling": {
+  "title": "Water-damaged ceiling (USDA 20220127-RD-LSC-0582)",
+  "creator": "USDAgov",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/41284017@N08/51868809813",
+  "fw": 683,
+  "fh": 455
+ },
+ "burned-house": {
+  "title": "Destroyed by fire",
+  "creator": "skochkarev",
+  "license": "pdm",
+  "source": "flickr",
+  "landing": "https://www.flickr.com/photos/96630334@N07/21976919725",
+  "fw": 1024,
+  "fh": 683
+ },
+ "triple-decker": {
+  "title": "Triple-decker, Arlington (DSC02977)",
+  "creator": "Daderot",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=85850197",
+  "fw": 1200,
+  "fh": 800
+ },
+ "colonial-house": {
+  "title": "Cotton House, c. 1720 & c. 1817 - Newport, Rhode Island - DSC04072",
+  "creator": "Daderot",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=67770849",
+  "fw": 1200,
+  "fh": 800
+ },
+ "condo-building": {
+  "title": "Condominium building apartments, 2511 Eutaw Place, Baltimore, MD 21217 (47261995482)",
+  "creator": "Baltimore Heritage from Baltimore, MD, USA",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=85192310",
+  "fw": 1200,
+  "fh": 800
+ },
+ "commercial-storefront": {
+  "title": "164 Angell St, Providence",
+  "creator": "Filetime",
+  "license": "cc0",
+  "source": "wikimedia",
+  "landing": "https://commons.wikimedia.org/w/index.php?curid=117627406",
+  "fw": 1200,
+  "fh": 800
+ },
+ "lightning-sky": {
+  "title": "Lightning Sky",
+  "creator": "Duncan Maloney",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/lightning-sky-KLUGGEFXJ2",
+  "fw": 956,
+  "fh": 538
+ },
+ "consultation-table": {
+  "title": "Team Meeting",
+  "creator": "Startup Stock Photos",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/team-meeting-69TMH4ITIE",
+  "fw": 960,
+  "fh": 640
+ },
+ "estimate-calculator": {
+  "title": "Calculator Pencil",
+  "creator": "Iryna Tysiak",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/calculator-pencil-OQ5FRQT0ZR",
+  "fw": 960,
+  "fh": 601
+ },
+ "inspector-clipboard": {
+  "title": "Tape measure, screws and screwdriver",
+  "creator": "Unknown",
+  "license": "cc0",
+  "source": "rawpixel",
+  "landing": "https://www.rawpixel.com/image/5964088/free-public-domain-cc0-photo",
+  "fw": 1024,
+  "fh": 678
+ },
+ "insurance-paperwork": {
+  "title": "Paperwork Desk",
+  "creator": "Matt Moloney",
+  "license": "cc0",
+  "source": "stocksnap",
+  "landing": "https://stocksnap.io/photo/paperwork-desk-3YJOHX53SQ",
+  "fw": 960,
+  "fh": 640
+ }
+}

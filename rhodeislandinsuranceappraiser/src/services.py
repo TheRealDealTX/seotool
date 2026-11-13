@@ -181,7 +181,7 @@ SERVICES = [
 <p>Many Rhode Island homeowner policies carry a hurricane or named-storm deductible expressed as a percentage of dwelling coverage, commonly between 1% and 5%. On a house insured for $500,000, a 2% deductible is $10,000. The policy defines what triggers it, so the first step in any hurricane claim is confirming which deductible applies and calculating it correctly.</p>
 <h2>Wind versus flood</h2>
 <p>Standard homeowner policies exclude flood, including storm surge. Flood damage is covered, if at all, under a separate flood policy such as one through the National Flood Insurance Program. In a coastal storm, the same house can have wind damage to the roof and flood damage to the first floor. Appraisal under the homeowner policy values the wind-related loss; it doesn’t decide coverage for flood. We separate the two carefully so each policy is presented with the right scope.</p>
-<h3>Our <a href="/policyholder-tools/wind-flood-damage-splitter/">wind vs. flood damage splitter</a> helps you organize a mixed loss before you talk to either carrier.</h3>
+<p>Our <a href="/policyholder-tools/wind-flood-damage-splitter/">wind vs. flood damage splitter</a> helps you organize a mixed loss before you talk to either carrier.</p>
 <h2>Inland hurricane damage</h2>
 <p>Hurricanes don’t stop at the beach. Wind damage and falling trees reach Cranston, Coventry, Smithfield and the rest of the state. Inland claims are valued with the same care, often with fewer complications about flood.</p>""",
         "faqs": [

@@ -507,9 +507,9 @@ fieldset.bare { border: 0; padding: 0; margin: 0; }
 
 /* ---------- footer ---------- */
 .ftr { background: var(--ink); color: rgba(255,255,255,.78); }
-.ftr-band { background: var(--sun); color: var(--ink); }
+.ftr-band { background: var(--harbor); color: var(--white); }
 .ftr-band-in { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding-top: 36px; padding-bottom: 36px; }
-.ftr-band h2 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.8rem); color: var(--ink); }
+.ftr-band h2 { margin: 0; font-size: clamp(1.3rem, 2.4vw, 1.8rem); color: var(--white); }
 .ftr-grid { display: grid; grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr)); gap: 36px; padding-top: 64px; padding-bottom: 40px; }
 .ftr-grid > * { min-width: 0; }
 .ftr h3 { color: var(--white); font-size: 1rem; margin-bottom: 14px; }

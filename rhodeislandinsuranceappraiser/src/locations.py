@@ -43,7 +43,7 @@ LOCATIONS = [
     },
     {
         "slug": "cranston", "city": "Cranston", "county": "Providence County", "region": "Providence metro",
-        "photo": "colonial-house",
+        "photo": "triple-decker",
         "lede": "Cranston runs from dense neighborhoods near Providence to farms and woods in the west, so a claim can mean a triple-decker or a rural colonial with a well.",
         "perils": ["River flooding history", "Tree fall", "Nor’easter wind", "Ice dams", "Fire"],
         "neighborhoods": ["Edgewood", "Pawtuxet", "Garden City", "Knightsville", "Eden Park", "Auburn", "Western Cranston"],

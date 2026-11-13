@@ -62,7 +62,7 @@ def raster(jobs):
 
 def og_image():
     photos = json.load(open(os.path.join(ROOT, "src", "photos.json")))
-    key = next(k for k in ("hero-coastal-house", "newport-harbor", "westerly-beach") if k in photos)
+    key = next(k for k in ("newport-harbor", "westerly-beach", "colonial-house") if k in photos)
     im = Image.open(os.path.join(S, "assets", "img", "photos", f"{key}.webp")).convert("RGB")
     w, h = 1200, 630
     r = max(w / im.width, h / im.height)
