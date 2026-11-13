@@ -106,6 +106,8 @@ and height. Decorative backgrounds use `alt=""`. Each photo's license, creator a
 - `index.php` (front controller) requires the guard, serves `home.html` for `/`, 301s directory URLs that lack a trailing
   slash, includes `dir/index.php` for directory URLs that reach it, and returns `404.html` with a 404 status.
 - Hostinger's placeholder `public_html/default.php` was deleted after the first deploy.
+- The server also holds `googlecccfbf2f7e9e5ae4.html` (Google Search Console verification, uploaded Nov 13, 2026) and
+  `api/_private/` (SMTP config and lead log). They are not in git and `deploy.sh` never removes them; leave them in place.
 
 ## SEO rules enforced by validate.py
 
