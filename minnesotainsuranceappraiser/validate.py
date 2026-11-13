@@ -84,6 +84,8 @@ titles, descs = {}, {}
 files = []
 for dp, _, fs in os.walk(ROOT):
     for f in fs:
+        if re.fullmatch(r"google[0-9a-f]+\.html", f):  # Search Console verification file, not a page
+            continue
         if f.endswith(".html") or (f == "index.php" and dp != ROOT):
             files.append(os.path.join(dp, f))
 
