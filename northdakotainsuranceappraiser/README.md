@@ -112,7 +112,7 @@ The public photo-credits page was removed at the owner's request on Nov 13, 2026
   slash, includes `dir/index.php` for directory URLs that reach it, and returns `404.html` with a 404.
 - `deploy.sh` only adds/overwrites. When a page is removed or renamed, delete it on the server:
   `DELETE {url-without-/tus}/resources/public_html/<path>` with the same two auth headers.
-- Server-only files, never in git: `api/_private/config.php` (SMTP) and `api/_private/leads.log.php`.
+- Server-only files, never in git — leave them in place: `api/_private/config.php` (SMTP), `api/_private/leads.log.php`, and `googlecccfbf2f7e9e5ae4.html` (Google Search Console verification, uploaded Nov 13, 2026).
 
 ## SEO rules enforced by validate.py
 
