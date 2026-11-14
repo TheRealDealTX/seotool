@@ -34,7 +34,7 @@ TEL = "+18445371427"
 EMAIL = "info@" + HOST
 HOURS = "Mon–Fri, 8am–6pm MT"
 TODAY = date.today().isoformat()
-VER = "20261113a"
+VER = "20261114a"
 FAV = "1"
 
 # Google Tag Manager: leave empty for none. When set (e.g. "GTM-XXXXXXX"), the head snippet and
@@ -107,25 +107,25 @@ SVC_PHOTO = {
     "commercial-hoa-appraisal": ph("commercial-center"), "hail-roof-appraisal": ph("hail-stones"),
     "high-wind-damage-appraisal": ph("dust-storm"), "water-damage-appraisal": ph("water-ceiling"),
     "fire-smoke-damage-appraisal": ph("house-fire"), "wildfire-loss-appraisal": ph("wildfire-smoke"),
-    "flat-roof-stucco-appraisal": ph("flat-roof"), "winter-freeze-damage-appraisal": ph("snow-adobe"),
+    "flat-roof-stucco-appraisal": ph("flat-roof"), "winter-freeze-damage-appraisal": ph("metal-roof"),
     "claim-estimate-review": ph("calculator"), "umpire-services": ph("clipboard"),
 }
 LOC_PHOTO = {
     "albuquerque": ph("abq-skyline"), "las-cruces": ph("organ-mountains"), "rio-rancho": ph("rio-grande"),
     "santa-fe": ph("santa-fe-adobe"), "roswell": ph("storm-plains"), "farmington": ph("farmington"),
-    "hobbs": ph("oilfield"), "clovis": ph("plains-farm"), "carlsbad": ph("pecos-river"),
-    "alamogordo": ph("white-sands"), "los-alamos": ph("los-alamos"), "ruidoso": ph("ruidoso-pines"),
+    "hobbs": ph("oilfield"), "clovis": ph("plains-farm"), "carlsbad": ph("carlsbad-caverns"),
+    "alamogordo": ph("dust-storm"), "los-alamos": ph("los-alamos"), "ruidoso": ph("ruidoso-pines"),
 }
 TOOL_PHOTO = {
     "claim-gap-net-recovery-estimator": ph("calculator"), "depreciation-holdback-splitter": ph("paperwork"),
-    "roof-area-pitch-converter": ph("roof-shingles"), "percentage-deductible-converter": ph("hail-stones"),
+    "roof-area-pitch-converter": ph("roof-shingles"), "percentage-deductible-converter": ph("hail-hand"),
     "claim-calendar-builder": ph("clipboard"), "appraisal-file-checkup": ph("roofer"),
-    "wildfire-contents-inventory-estimator": ph("living-room"),
+    "wildfire-contents-inventory-estimator": ph("wildfire-night"),
 }
 POST_PHOTO = {
-    "wildfire-claim-after-total-loss": ph("wildfire-burned"), "hail-damage-on-flat-and-stucco-roofs": ph("flat-roof"),
+    "wildfire-claim-after-total-loss": ph("wildfire-burned"), "hail-damage-on-flat-and-stucco-roofs": ph("stucco-wall"),
     "invoke-appraisal-new-mexico-policy": ph("paperwork"), "appraisal-or-public-adjuster-or-lawyer": ph("consultation"),
-    "monsoon-water-damage-claims": ph("storm-desert"), "depreciation-and-holdback-explained": ph("calculator"),
+    "monsoon-water-damage-claims": ph("lightning"), "depreciation-and-holdback-explained": ph("calculator"),
 }
 
 # ---------------------------------------------------------------- icons

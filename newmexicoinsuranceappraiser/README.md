@@ -43,10 +43,9 @@ server: `DELETE {upload-url-without-/tus}/resources/public_html/<path>` with the
 `X-Auth-Rest` headers.
 
 Local preview that mimics the host (real files served directly, a directory's `index.php` executed,
-everything else to the root `index.php`): run `php -S 127.0.0.1:8090 router.php` from `public/` with a
-small router script like the one described under Hosting notes.
+everything else to the root `index.php`): `cd public && php -S 127.0.0.1:8090 ../dev-router.php`.
 
-## Pages (52 in sitemap.xml)
+## Pages (51 in sitemap.xml, plus the 404)
 
 - Home, About (`/about-the-company/`), Contact (`/contact-new-mexico-appraiser/`)
 - `/appraiser-services/` + 12 services: appraisal demand representation, home, commercial & HOA, hail & roof,
@@ -116,7 +115,44 @@ Wikimedia Commons (license filtered to public domain / CC0). Each is saved as 12
 backgrounds use `alt=""`. The source URL, creator and license of every photo are in `src/photos.json`; the table
 below mirrors it.
 
-PHOTO_TABLE
+| Key | License | Source | Original |
+| --- | --- | --- | --- |
+| `abq-skyline` | Public domain | wikimedia-commons | [Downtown Albuquerque, New Mexico (31780770537).jpg](https://commons.wikimedia.org/wiki/File:Downtown_Albuquerque,_New_Mexico_(31780770537).jpg) |
+| `calculator` | CC0 1.0 | stocksnap | [Accounting Finance](https://stocksnap.io/photo/accounting-finance-JONMP7TPGK) |
+| `carlsbad-caverns` | CC0 1.0 | openverse/flickr | [Carlsbad Caverns Natural Entrance](https://www.flickr.com/photos/27784370@N05/16212008651) |
+| `clipboard` | CC0 1.0 | stocksnap | [Construction Plans](https://stocksnap.io/photo/construction-plans-69YZFGFBSY) |
+| `commercial-center` | CC0 1.0 | stocksnap | [Buildings Architecture](https://stocksnap.io/photo/buildings-architecture-XHNZ9PZ1IM) |
+| `consultation` | CC0 1.0 | stocksnap | [Business Meeting](https://stocksnap.io/photo/business-meeting-SKBXLJOILI) |
+| `dust-storm` | CC0 1.0 | openverse/flickr | [Dust Storms](https://www.flickr.com/photos/27784370@N05/12068809836) |
+| `farmington` | Public domain | wikimedia-commons | [2015-08-14 DurangoFarmington 148 (21262719622).jpg](https://commons.wikimedia.org/wiki/File:2015-08-14_DurangoFarmington_148_(21262719622).jpg) |
+| `flat-roof` | Public domain | wikimedia-commons | [Flat roof (1).jpg](https://commons.wikimedia.org/wiki/File:Flat_roof_(1).jpg) |
+| `hail-hand` | CC0 1.0 | wikimedia-commons | [Kroupy.jpg](https://commons.wikimedia.org/wiki/File:Kroupy.jpg) |
+| `hail-stones` | CC0 1.0 | wikimedia-commons | [Hail on the Docks, Port Edward, British Columbia.jpg](https://commons.wikimedia.org/wiki/File:Hail_on_the_Docks,_Port_Edward,_British_Columbia.jpg) |
+| `hero-adobe-home` | CC0 1.0 | openverse/rawpixel | [Old-style adobe building adorned hot-pepper](https://www.rawpixel.com/image/8042649/photo-image-plant-art-mountains) |
+| `house-fire` | CC0 1.0 | rawpixel | [Burning house](https://www.rawpixel.com/image/5918064/burning-house-free-public-domain-cc0-photo) |
+| `lightning` | Public domain | wikimedia-commons | [Lightning3.jpg](https://commons.wikimedia.org/wiki/File:Lightning3.jpg) |
+| `living-room` | CC0 1.0 | stocksnap | [House Interior](https://stocksnap.io/photo/house-interior-WDVIQZEXML) |
+| `los-alamos` | Public domain | wikimedia-commons | [NRCSNM02089 - New Mexico (5463)(NRCS Photo Gallery).jpg](https://commons.wikimedia.org/wiki/File:NRCSNM02089_-_New_Mexico_(5463)(NRCS_Photo_Gallery).jpg) |
+| `metal-roof` | CC0 1.0 | openverse/wikimedia | [Rubber roof shingle 04](https://commons.wikimedia.org/w/index.php?curid=143615048) |
+| `office-building` | CC0 1.0 | stocksnap | [Office Building](https://stocksnap.io/photo/office-building-7HRFNYC7GU) |
+| `oilfield` | Public domain | wikimedia-commons | [Oil pump Talara Peru.JPG](https://commons.wikimedia.org/wiki/File:Oil_pump_Talara_Peru.JPG) |
+| `organ-mountains` | Public domain | wikimedia-commons | [A walking trail with a view of the Organ Mountains at Dripping Springs](https://commons.wikimedia.org/wiki/File:A_walking_trail_with_a_view_of_the_Organ_Mountains_at_Dripping_Springs_Natural_Area_east_of_Las_Cruces,_NM_(0031d05b-07fe-4538-94fb-6fae0eecb26d).JPG) |
+| `paperwork` | CC0 1.0 | stocksnap | [Calculator Calendar](https://stocksnap.io/photo/calculator-calendar-RFVHCUGML3) |
+| `plains-farm` | Public Domain Mark | openverse/flickr | [ATSF Alco PA-1s power for Train #76, The California Special on ready t](https://www.flickr.com/photos/129679309@N05/22071680463) |
+| `rio-grande` | CC0 1.0 | wikimedia-commons | [Sunset Sandias Bosque (31865031022).jpg](https://commons.wikimedia.org/wiki/File:Sunset_Sandias_Bosque_(31865031022).jpg) |
+| `roof-shingles` | CC0 1.0 | openverse/wikimedia | [Rubber roof shingle 05](https://commons.wikimedia.org/w/index.php?curid=143615050) |
+| `roofer` | CC0 1.0 | stocksnap | [Construction Zone](https://stocksnap.io/photo/construction-zone-6EAB6C3900) |
+| `ruidoso-pines` | Public domain | wikimedia-commons | [Billy the Kid Trail - Downtown Ruidoso - NARA - 7717320.jpg](https://commons.wikimedia.org/wiki/File:Billy_the_Kid_Trail_-_Downtown_Ruidoso_-_NARA_-_7717320.jpg) |
+| `sandia-mountains` | Public domain | wikimedia-commons | [Albuquerque Sandia Mountains (49879402773).jpg](https://commons.wikimedia.org/wiki/File:Albuquerque_Sandia_Mountains_(49879402773).jpg) |
+| `santa-fe-adobe` | Public domain | wikimedia-commons | [AN ADOBE HOUSE, IN SANTA FE, NEW MEXICO, CONVERTED TO SOLAR ENERGY HEA](https://commons.wikimedia.org/wiki/File:AN_ADOBE_HOUSE,_IN_SANTA_FE,_NEW_MEXICO,_CONVERTED_TO_SOLAR_ENERGY_HEATING._INSIDE_THE_GLASS-COVERED_ROOF_PANELS..._-_NARA_-_555286.jpg) |
+| `storm-desert` | Public Domain Mark | openverse/flickr | [JUL 24 Lightning](https://www.flickr.com/photos/165415395@N07/51284172000) |
+| `storm-plains` | Public domain | wikimedia-commons | [Chaparral Supercell 2.JPG](https://commons.wikimedia.org/wiki/File:Chaparral_Supercell_2.JPG) |
+| `stucco-home` | CC0 1.0 | wikimedia-commons | [Employee Housing, Spruce Tree Point, Mesa Verde National Park, Mancos,](https://commons.wikimedia.org/wiki/File:Employee_Housing,_Spruce_Tree_Point,_Mesa_Verde_National_Park,_Mancos,_CO_-_27224105047.jpg) |
+| `stucco-wall` | CC0 1.0 | openverse/flickr | [mustard-colored stucco wall](https://www.flickr.com/photos/136594255@N06/28722496325) |
+| `water-ceiling` | CC0 1.0 | stocksnap | [Raining Raindrops](https://stocksnap.io/photo/raining-raindrops-3AKFOCTZEQ) |
+| `wildfire-burned` | Public domain | wikimedia-commons | [FEMA - 33566 - The burned landscape of California.jpg](https://commons.wikimedia.org/wiki/File:FEMA_-_33566_-_The_burned_landscape_of_California.jpg) |
+| `wildfire-night` | Public domain | wikimedia-commons | [Calf Canyon Fire 2022 05 03-13.54.08.312-CDT.jpg](https://commons.wikimedia.org/wiki/File:Calf_Canyon_Fire_2022_05_03-13.54.08.312-CDT.jpg) |
+| `wildfire-smoke` | Public domain | wikimedia-commons | [Calf Canyon Hermits Peak Fire Apr 29 2022.jpg](https://commons.wikimedia.org/wiki/File:Calf_Canyon_Hermits_Peak_Fire_Apr_29_2022.jpg) |
 
 ## Contact form
 

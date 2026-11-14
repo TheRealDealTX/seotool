@@ -567,3 +567,9 @@ html:not(.no-js) .rv.in, html:not(.no-js) .rv-l.in, html:not(.no-js) .rv-r.in { 
   .topline .wrap { justify-content: center; }
   .topline a { white-space: nowrap; }
 }
+.prose .chips-row { padding-left: 0; }
+@media (max-width: 760px) {
+  .facts { flex-direction: column; width: 100%; }
+  .facts div { border-right: 0; border-bottom: 1px solid rgba(255,215,0,.35); }
+  .facts div:last-child { border-bottom: 0; }
+}
