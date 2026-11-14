@@ -1,0 +1,6 @@
+__pycache__/
+_private/
+*-config.php
+leads.log*
+.photo-cache/
+node_modules/
