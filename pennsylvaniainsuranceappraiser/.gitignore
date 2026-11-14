@@ -1,0 +1,5 @@
+__pycache__/
+_private/
+*.log
+pia-config.php
+ref/
