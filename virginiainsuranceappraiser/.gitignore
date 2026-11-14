@@ -1,0 +1,6 @@
+__pycache__/
+# Never commit credentials or leads: api/_private/ only ever exists on the server.
+_private/
+*config.php
+!static/api/contact.php
+via-leads.log
