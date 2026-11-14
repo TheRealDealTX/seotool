@@ -17,6 +17,17 @@ content, URL slugs, palette, fonts and layout are new and differ from every sist
 Until the nameservers point here, the real domain won't resolve and SSL can't be issued, so live checks
 run on the preview URL. Hostinger serves its own Googlebot-blocking `robots.txt` on preview hosts — expected.
 
+## Go-live status (2026-11-14)
+
+- Nameservers pointed; domain resolves to the website. SSL active, certificate covers `oklahomainsuranceappraiser.com`
+  and `www.oklahomainsuranceappraiser.com` (expires 2027-02-12, auto-renewed by Hostinger).
+- Verified on the live domain (home + 4 interior pages): `http://`, `http://www.` and `https://www.` all 301 to
+  `https://oklahomainsuranceappraiser.com/page/`; `/page/index.php` 301s to `/page/`; every sitemap URL returns 200;
+  no `X-Robots-Tag` on the real domain; our own `robots.txt` is served; the Search Console file returns 200 with the
+  exact bytes and no `X-Robots-Tag`.
+- SMTP wired: `api/_private/config.php` uploaded (returns 404, 0 bytes); a labelled test submission logged `"via":"smtp"`.
+- GTM `GTM-NFWFPG9D` live on every page.
+
 ## Build, validate, deploy
 
 ```sh
@@ -70,8 +81,8 @@ curl -sI -H 'Host: www.oklahomainsuranceappraiser.com' http://127.0.0.1:8099/cit
 
 ## Google Tag Manager
 
-`GTM_ID` in `build.py` is empty by default. Set it (e.g. `GTM-XXXXXXX`) and rebuild to output the head snippet
-and the `<noscript>` iframe right after `<body>`.
+`GTM_ID` in `build.py` is set to **`GTM-NFWFPG9D`** (empty = no GTM output). The head snippet is output exactly as the
+site owner supplied it, and the `<noscript>` iframe goes right after `<body>`.
 
 ## Contact form (`api/contact.php`)
 

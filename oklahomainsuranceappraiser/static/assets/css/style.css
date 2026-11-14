@@ -70,8 +70,9 @@ svg{flex-shrink:0}
 .drop a:hover{background:var(--tint2);color:var(--green-d)}
 .drop .all{grid-column:1/-1;border-top:1px solid var(--line);margin-top:6px;padding-top:12px;font-weight:600;color:var(--clay-d)}
 .head-cta{margin-left:8px;min-height:44px;padding:9px 18px}
-.burger{display:none;margin-left:auto;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--tint2);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
-.burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px}
+.burger{display:none;margin-left:auto;width:52px;height:52px;border-radius:50%;border:0;background:var(--green);cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:6px;flex-shrink:0}
+.burger:hover{background:var(--green-d)}
+.burger span{display:block;width:26px;height:3px;background:#fff;border-radius:3px}
 
 /* drawer (outside the sticky header) */
 .drawer-bg{position:fixed;inset:0;background:rgba(10,38,25,.55);opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s;z-index:200}
@@ -505,11 +506,15 @@ html:not(.no-js) .rv-wipe.in figure,html:not(.no-js) .rv-wipe.in .tagline{clip-p
 }
 @media (max-width:760px){
   body{font-size:16px}
-  :root{--head-h:62px}
+  :root{--head-h:64px}
   .head{padding:8px 0}
-  .head .bar{padding:0 8px 0 12px}
+  .head .bar{padding:0 6px 0 12px;gap:10px}
+  .head.solid .bar{height:60px}
+  .head .wrap{padding:0 14px}
+  .burger{width:50px;height:50px}
   .brand svg{width:36px;height:36px}
   .brand b{font-size:.86rem;white-space:nowrap}
+  .brand{min-width:0}
   .brand small{font-size:.62rem}
   .sec{padding:68px 0}
   .hero{padding:calc(var(--head-h) + 60px) 0 60px;min-height:0}
