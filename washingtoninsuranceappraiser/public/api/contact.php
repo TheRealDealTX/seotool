@@ -146,7 +146,7 @@ if (!$sent) {
 }
 
 // Private JSON-lines backup (Hostinger's file API can't write outside public_html). Its first line is
-// "<?php http_response_code(404); exit; ?>", so a direct request returns an empty 404.
+// a PHP exit line (404 status, no output), so a direct request returns an empty 404.
 $log = __DIR__ . '/_private/leads.log.php';
 if (!is_dir(dirname($log))) @mkdir(dirname($log), 0750, true);
 if (!is_file($log)) @file_put_contents($log, "<?php http_response_code(404); exit; ?>\n");

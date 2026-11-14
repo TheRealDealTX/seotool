@@ -486,6 +486,7 @@ html:not(.no-js) .rv.in{opacity:1;transform:none}
 /* ---------- responsive ---------- */
 @media (max-width:1180px){
   .main-nav,.head-tel{display:none}
+  .head-actions{margin-left:auto}
   .burger{display:flex}
   .no-js .burger{display:none}
   .foot-grid{grid-template-columns:1fr 1fr 1fr}

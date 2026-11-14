@@ -31,12 +31,12 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261113a"   # cache-buster for CSS/JS
+VER = "20261114a"   # cache-buster for CSS/JS
 FAV = "1"           # cache-buster for icons
 COUNTIES = 39
 
 # Google Tag Manager container ID, e.g. "GTM-XXXXXXX". Empty = no tag is output.
-GTM_ID = ""
+GTM_ID = "GTM-NSVPS7XM"
 
 # Google Search Console HTML-file verification. Written byte-for-byte to the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
@@ -191,11 +191,11 @@ def itemlist(items):
 
 # ---------------------------------------------------------------- GTM
 def gtm_head():
+    # The owner's Google tag snippet, used exactly as provided (only the container ID is substituted).
     if not GTM_ID:
         return ""
-    return (f"<!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':\nnew Date().getTime(),event:'gtm.js'}});"
-            "var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\n"
-            f"'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\n}})(window,document,'script','dataLayer','{GTM_ID}');</script>\n<!-- End Google Tag Manager -->\n")
+    return (f'<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>\n<script>\n'
+            "  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n</script>\n")
 
 
 def gtm_body():

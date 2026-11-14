@@ -9,12 +9,12 @@ sister `*insuranceappraiser*` site.
 | | |
 | --- | --- |
 | Hostinger website UID | `BijEtYhpF` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `washingtoninsuranceappraiser.com` (attached at creation) |
+| Domain | https://washingtoninsuranceappraiser.com: live, SSL covers the apex and `www` (www/http 301 to the apex) |
 | Preview URL | https://mediumblue-grouse-262565.hostingersite.com |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
 | Email / form inbox | info@washingtoninsuranceappraiser.com |
-| Google Tag Manager | `GTM_ID` in `build.py`, empty, so no tag is output |
+| Google Tag Manager | `GTM-NSVPS7XM`: the owner's snippet in `<head>` exactly as provided, plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -151,8 +151,10 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@washingtoninsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives: upload the config to `public_html/api/_private/config.php`, confirm its URL
-returns 404 with 0 bytes, send one submission labelled as a test, and confirm the log line shows `"via":"smtp"`.
+**Status: wired (Nov 14, 2026).** The config is uploaded, both private URLs return 404 with 0 bytes, and one test submission
+logged `"via":"smtp"` with no error. To change the password, re-upload the config file (never commit it).
+
+Never put a literal `?>` in a PHP `//` comment in `contact.php`: PHP ends code there, and the rest of the file is sent as text.
 
 ## Photos (CC0 / public domain only)
 
