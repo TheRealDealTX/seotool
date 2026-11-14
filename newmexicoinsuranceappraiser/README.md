@@ -6,12 +6,12 @@ generator and served on a Hostinger Agency Growth website (php-fpm, PHP 8.3).
 | | |
 | --- | --- |
 | Hostinger website UID | `3dr5vg4G5` (Agency Growth, order 1008744732, php-fpm 8.3, Phoenix datacenter) |
-| Domain | `newmexicoinsuranceappraiser.com` (attached at creation) |
+| Domain | https://newmexicoinsuranceappraiser.com (live; SSL covers apex + www; www/http 301 to it) |
 | Preview URL | https://brown-gaur-609134.hostingersite.com |
 | Nameservers to set at the registrar | `orbit.dns-parking.com`, `horizon.dns-parking.com` |
-| Google Tag Manager | none yet — set `GTM_ID` in `build.py` |
+| Google Tag Manager | `GTM-KN635RKT` (head snippet exactly as supplied + noscript iframe after `<body>`, every page) |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@newmexicoinsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@newmexicoinsuranceappraiser.com (form delivers over SMTP; verified Nov 14, 2026) |
 
 ## Layout
 
@@ -171,9 +171,8 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@newmexicoinsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives: upload the config (keep any local copy outside the repo and delete it after),
-confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and confirm
-the log line shows `"via":"smtp"`.
+Done Nov 14, 2026: config uploaded (local copy deleted), `/api/_private/config.php` returns 404 with 0 bytes, and a
+submission labelled as a test logged `"via":"smtp"`. To change the password, re-upload that file the same way.
 
 ## SEO rules enforced by validate.py
 
@@ -189,7 +188,7 @@ the log line shows `"via":"smtp"`.
 - Every `dir/index.php` starts with the guard line and has no other PHP; no `index.html` pages
 - Search Console file present and byte-exact, and not in the sitemap
 
-## Going live
+## Going live (steps 1–3 done Nov 14, 2026)
 
 1. Point the domain's nameservers to `orbit.dns-parking.com` and `horizon.dns-parking.com`.
 2. Confirm SSL covers both the apex and `www` (`agency-hosting_websites_get` → `ssl_cert.names`); reissue with
