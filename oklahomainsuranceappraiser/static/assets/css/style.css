@@ -212,6 +212,7 @@ input:focus,select:focus,textarea:focus{outline:0;border-color:var(--green);box-
 .panel .more p{font-size:.93rem;color:rgba(255,255,255,.85);margin:10px 0 6px}
 .panel .more small{display:block;color:#ffcbb2;font-size:.84rem}
 .panel.on{flex:3.2}
+@media (min-width:1101px){.panel:not(.on) h3{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;font-size:1rem}}
 .panel.on img{opacity:.75;transform:scale(1.04)}
 .panel.on .more{max-height:320px;opacity:1}
 .chips{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-wrap:wrap;gap:6px}

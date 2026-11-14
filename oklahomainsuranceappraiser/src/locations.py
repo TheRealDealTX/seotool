@@ -471,7 +471,7 @@ REGIONS = [
         ["Straight-line wind", "Tree fall", "Hail", "Ice storms"],
         "Northeast Oklahoma’s hills and heavy tree cover mean windstorms and ice storms bring limbs down on roofs across whole neighborhoods. Tulsa’s historic midtown homes and the newer suburbs around it need very different estimates.",
         "Tulsa, Broken Arrow, Owasso, Bixby, Jenks, Claremore, Bartlesville, Muskogee, Tahlequah",
-        "tulsa-skyline",
+        "fallen-tree-house",
     ),
     (
         "northwest",

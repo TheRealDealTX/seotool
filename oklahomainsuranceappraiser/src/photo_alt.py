@@ -25,5 +25,13 @@ ALT = {
     "tornado-funnel": "Tornado funnel descending from dark storm clouds",
     "water-damage": "Homes standing in floodwater on a residential street",
     "wheat-field": "Golden wheat field and a utility pole under a wide plains sky",
+    "roof-torn": "Single-story house with a weathered asphalt shingle roof under a cloudy sky",
+    "roof-shingles": "Tool belt and hammer resting on an asphalt shingle roof beside bare wood decking",
+    "roof-inspection": "Roofers standing on a roof stripped to bare decking above a row of garage doors",
+    "brick-ranch-home": "Single-story ranch house with brick and siding, a curved driveway and a green lawn",
+    "commercial-building": "Looking up at modern glass-and-steel office buildings against a blue sky",
+    "apartment-complex": "Row of two-story brick townhouses with small front lawns and parked cars",
+    "clipboard-inspector": "Worker in a high-visibility vest writing on a clipboard over construction plans",
+    "okc-skyline": "Black-and-white night view of the downtown Oklahoma City skyline with Devon Tower",
     "wichita-mountains": "Rocky hills and a lake in the Wichita Mountains of southwest Oklahoma",
 }

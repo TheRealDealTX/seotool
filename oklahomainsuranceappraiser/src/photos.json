@@ -1,272 +1,332 @@
 {
-  "apartment-complex": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Townhouses, Broadfield at Wilton Farms, Wilkens Avenue and Maiden Choice Lane, Arbutus, MD",
-    "creator": "Baltimore Heritage",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/44034762@N04/33774493601",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/3911/33774493601_a30c70159c_b.jpg"
-  },
-  "calculator-papers": {
-    "fw": 960,
-    "fh": 640,
-    "title": "Calculator Numbers",
-    "creator": "Negative Space",
-    "license": "cc0",
-    "landing": "https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD",
-    "source": "stocksnap",
-    "url": "https://cdn.stocksnap.io/img-thumbs/960w/Y2GUBQIPXD.jpg"
-  },
-  "consultation": {
-    "fw": 960,
-    "fh": 640,
-    "title": "Business Meeting",
-    "creator": "Direct Media",
-    "license": "cc0",
-    "landing": "https://stocksnap.io/photo/business-meeting-SSKSJIBMMP",
-    "source": "stocksnap",
-    "url": "https://cdn.stocksnap.io/img-thumbs/960w/SSKSJIBMMP.jpg"
-  },
-  "fallen-tree-house": {
-    "fw": 1024,
-    "fh": 576,
-    "title": "Fallen Trees",
-    "creator": "U.S. Fish & Wildlife Service Southwest Region",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/51896441@N04/37330421606",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/4514/37330421606_5d6fbc5c12_b.jpg"
-  },
-  "grain-elevator": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Tolono Grain Elevator",
-    "creator": "Gary Lee Todd, Ph.D.",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/101561334@N08/36028665420",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/4335/36028665420_619dbce321_b.jpg"
-  },
-  "grass-wildfire": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Fuels Management - USFWS 2022 Photo/Video Contest",
-    "creator": "National Interagency Fire Center",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/165415395@N07/52572913582",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/52572913582_d58a1904e4_b.jpg"
-  },
-  "hailstones": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Hail",
-    "creator": "Open Grid Scheduler / Grid Engine",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/29155878@N03/22919917430",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/730/22919917430_c710f6c656_b.jpg"
-  },
-  "hero-supercell": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Supercell",
-    "creator": "NOAA NSSL",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/47838549@N08/48039373157",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/48039373157_e576cd5dbb_b.jpg"
-  },
-  "home-dusk": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Outside house night",
-    "creator": "",
-    "license": "cc0",
-    "landing": "https://www.rawpixel.com/image/6034162/photo-image-lights-public-domain-tree",
-    "source": "rawpixel",
-    "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZybmlnaHRfaG9tZV8yX3dpbmRvdy1pbWFnZS1reWJkM3N0aC5qcGc.jpg"
-  },
-  "house-fire": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Yellowstone structural fire team training (17)",
-    "creator": "YellowstoneNPS",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/80223459@N05/32696090467",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/32696090467_bea8a17838_b.jpg"
-  },
-  "ice-power-lines": {
-    "fw": 1024,
-    "fh": 597,
-    "title": "160122-Z-II459-025",
-    "creator": "SC Guard",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/58720666@N05/24519008956",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/1544/24519008956_bfec47248d_b.jpg"
-  },
-  "ice-storm-trees": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Winter Storm Landon",
-    "creator": "dankeck",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/140641142@N05/51862458255",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/51862458255_486194ba1e_b.jpg"
-  },
-  "kitchen-interior": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Housing improvement project goal 1: two-bedroom unit, kitchen",
-    "creator": "YellowstoneNPS",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/80223459@N05/52067013963",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/52067013963_9aab0ea72f_b.jpg"
-  },
-  "laptop-numbers": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Hands Typing on Laptop Keyboard",
-    "creator": "Image Catalog",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/132795455@N08/21713977623",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/664/21713977623_7d69d4e6a8_b.jpg"
-  },
-  "lightning-night": {
-    "fw": 1024,
-    "fh": 689,
-    "title": "Night Thunderstorm by C. Clark(NOAA)",
-    "creator": "pingnews.com",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/39735679@N00/452368208",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/243/452368208_e4ef68ee8d_b.jpg"
-  },
-  "living-room": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Housing improvement project goal 1: two-bedroom unit, living room",
-    "creator": "YellowstoneNPS",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/80223459@N05/52067485855",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/52067485855_472403e4d4_b.jpg"
-  },
-  "okc-skyline": {
-    "fw": 1024,
-    "fh": 682,
-    "title": "Oklahoma city skyline",
-    "creator": "jeffstraka49",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/104353434@N05/50545444143",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/50545444143_f81f73c4dc_b.jpg"
-  },
-  "rain-gutter": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "2014/365/251 Frozen in Time",
-    "creator": "cogdogblog",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/37996646802@N01/14998967189",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/5570/14998967189_2495b00d43_b.jpg"
-  },
-  "roofer-work": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Long Island Wildlife Refuge Complex - Corn Crib during roof repair",
-    "creator": "U. S. Fish and Wildlife Service - Northeast Region",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/43322816@N08/16058080712",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/7542/16058080712_7d3e42fc03_b.jpg"
-  },
-  "storm-wall-cloud": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Supercell thunderstorm",
-    "creator": "NOAA NSSL",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/47838549@N08/48044614641",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/48044614641_e9141c7149_b.jpg"
-  },
-  "suburban-home": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "East 98th Street, Glenville, Cleveland, OH",
-    "creator": "w_lemay",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/59081381@N03/28060404887",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/887/28060404887_db3947e814_b.jpg"
-  },
-  "tornado-damage-street": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Brimfield Tornado Damage, June 3, 2011",
-    "creator": "MassDOT",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/42009447@N05/5793578824",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/2273/5793578824_6020bf7cb2_b.jpg"
-  },
-  "tornado-debris-home": {
-    "fw": 1024,
-    "fh": 768,
-    "title": "Monson Tornado Damage, June 3, 2011",
-    "creator": "MassDOT",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/42009447@N05/5794098962",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/5146/5794098962_a4b9ac54a4_b.jpg"
-  },
-  "tornado-funnel": {
-    "fw": 1024,
-    "fh": 676,
-    "title": "Project Vortex-99: Occluded mesocyclone tornado (NOAA/unidentified fotog)",
-    "creator": "pingnews.com",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/39735679@N00/452392668",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/185/452392668_7ba9ebcfd4_b.jpg"
-  },
-  "water-damage": {
-    "fw": 1024,
-    "fh": 681,
-    "title": "Flooding in Cedar Rapids, IA",
-    "creator": "U.S. Geological Survey",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/27784370@N05/2593473985",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/3041/2593473985_d9b784ed4a_b.jpg"
-  },
-  "wheat-field": {
-    "fw": 1024,
-    "fh": 684,
-    "title": "Wheat Fields with Overhead Power Line",
-    "creator": "Image Catalog",
-    "license": "cc0",
-    "landing": "https://www.flickr.com/photos/132795455@N08/24026544123",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/1689/24026544123_79198c21b3_b.jpg"
-  },
-  "wichita-mountains": {
-    "fw": 1024,
-    "fh": 683,
-    "title": "Wichita Mountains NWR",
-    "creator": "U.S. Fish & Wildlife Service Southwest Region",
-    "license": "pdm",
-    "landing": "https://www.flickr.com/photos/51896441@N04/52927257077",
-    "source": "flickr",
-    "url": "https://live.staticflickr.com/65535/52927257077_f0640c36b6_b.jpg"
-  }
+ "apartment-complex": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Townhouses, Broadfield at Wilton Farms, Wilkens Avenue and Maiden Choice Lane, Arbutus, MD",
+  "creator": "Baltimore Heritage",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/44034762@N04/33774493601",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/3911/33774493601_a30c70159c_b.jpg"
+ },
+ "brick-ranch-home": {
+  "fw": 1024,
+  "fh": 576,
+  "title": "",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/6055650/free-public-domain-cc0-photo",
+  "source": "rawpixel",
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZnJtdWx0aV9jb2xvcmVkX2JyaWNrX3N0YWluLWltYWdlLWt5Y2c1em5jLmpwZw.jpg"
+ },
+ "calculator-papers": {
+  "fw": 960,
+  "fh": 640,
+  "title": "Calculator Numbers",
+  "creator": "Negative Space",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD",
+  "source": "stocksnap",
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/Y2GUBQIPXD.jpg"
+ },
+ "clipboard-inspector": {
+  "fw": 960,
+  "fh": 640,
+  "title": "Construction Plans",
+  "creator": "Burst",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/construction-plans-69YZFGFBSY",
+  "source": "stocksnap",
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/69YZFGFBSY.jpg"
+ },
+ "commercial-building": {
+  "fw": 960,
+  "fh": 541,
+  "title": "Buildings Architecture",
+  "creator": "Daria Nepriakhina",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/buildings-architecture-XHNZ9PZ1IM",
+  "source": "stocksnap",
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/XHNZ9PZ1IM.jpg"
+ },
+ "consultation": {
+  "fw": 960,
+  "fh": 640,
+  "title": "Business Meeting",
+  "creator": "Direct Media",
+  "license": "cc0",
+  "landing": "https://stocksnap.io/photo/business-meeting-SSKSJIBMMP",
+  "source": "stocksnap",
+  "url": "https://cdn.stocksnap.io/img-thumbs/960w/SSKSJIBMMP.jpg"
+ },
+ "fallen-tree-house": {
+  "fw": 1024,
+  "fh": 576,
+  "title": "Fallen Trees",
+  "creator": "U.S. Fish & Wildlife Service Southwest Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/51896441@N04/37330421606",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/4514/37330421606_5d6fbc5c12_b.jpg"
+ },
+ "grain-elevator": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Tolono Grain Elevator",
+  "creator": "Gary Lee Todd, Ph.D.",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/101561334@N08/36028665420",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/4335/36028665420_619dbce321_b.jpg"
+ },
+ "grass-wildfire": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Fuels Management - USFWS 2022 Photo/Video Contest",
+  "creator": "National Interagency Fire Center",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/165415395@N07/52572913582",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/52572913582_d58a1904e4_b.jpg"
+ },
+ "hailstones": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Hail",
+  "creator": "Open Grid Scheduler / Grid Engine",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/29155878@N03/22919917430",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/730/22919917430_c710f6c656_b.jpg"
+ },
+ "hero-supercell": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Supercell",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/47838549@N08/48039373157",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/48039373157_e576cd5dbb_b.jpg"
+ },
+ "home-dusk": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Outside house night",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/6034162/photo-image-lights-public-domain-tree",
+  "source": "rawpixel",
+  "url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZybmlnaHRfaG9tZV8yX3dpbmRvdy1pbWFnZS1reWJkM3N0aC5qcGc.jpg"
+ },
+ "house-fire": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Yellowstone structural fire team training (17)",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/80223459@N05/32696090467",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/32696090467_bea8a17838_b.jpg"
+ },
+ "ice-power-lines": {
+  "fw": 1024,
+  "fh": 597,
+  "title": "160122-Z-II459-025",
+  "creator": "SC Guard",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/58720666@N05/24519008956",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/1544/24519008956_bfec47248d_b.jpg"
+ },
+ "ice-storm-trees": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Winter Storm Landon",
+  "creator": "dankeck",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/140641142@N05/51862458255",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/51862458255_486194ba1e_b.jpg"
+ },
+ "kitchen-interior": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Housing improvement project goal 1: two-bedroom unit, kitchen",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52067013963",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/52067013963_9aab0ea72f_b.jpg"
+ },
+ "laptop-numbers": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Hands Typing on Laptop Keyboard",
+  "creator": "Image Catalog",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/132795455@N08/21713977623",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/664/21713977623_7d69d4e6a8_b.jpg"
+ },
+ "lightning-night": {
+  "fw": 1024,
+  "fh": 689,
+  "title": "Night Thunderstorm by C. Clark(NOAA)",
+  "creator": "pingnews.com",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/39735679@N00/452368208",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/243/452368208_e4ef68ee8d_b.jpg"
+ },
+ "living-room": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Housing improvement project goal 1: two-bedroom unit, living room",
+  "creator": "YellowstoneNPS",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/80223459@N05/52067485855",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/52067485855_472403e4d4_b.jpg"
+ },
+ "okc-skyline": {
+  "fw": 1024,
+  "fh": 682,
+  "title": "Oklahoma city skyline",
+  "creator": "jeffstraka49",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/104353434@N05/50545444143",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/50545444143_f81f73c4dc_b.jpg"
+ },
+ "rain-gutter": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "2014/365/251 Frozen in Time",
+  "creator": "cogdogblog",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/37996646802@N01/14998967189",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/5570/14998967189_2495b00d43_b.jpg"
+ },
+ "roof-inspection": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Long Island Wildlife Refuge Complex - Wertheim Shop during roof repair",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/43322816@N08/15871499500",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/7514/15871499500_b6468af5d4_b.jpg"
+ },
+ "roof-shingles": {
+  "fw": 1024,
+  "fh": 681,
+  "title": "",
+  "creator": "",
+  "license": "cc0",
+  "landing": "https://www.rawpixel.com/image/5942657/free-public-domain-cc0-photo",
+  "source": "rawpixel",
+  "url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcHg4ODI3MjktaW1hZ2Uta3d5bzcyOW4uanBn.jpg"
+ },
+ "roof-torn": {
+  "fw": 768,
+  "fh": 512,
+  "title": "Missing shingles",
+  "creator": "USFWS/Southeast",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/41464593@N02/37075099182",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/4381/37075099182_40f907f71a_b.jpg"
+ },
+ "roofer-work": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Long Island Wildlife Refuge Complex - Corn Crib during roof repair",
+  "creator": "U. S. Fish and Wildlife Service - Northeast Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/43322816@N08/16058080712",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/7542/16058080712_7d3e42fc03_b.jpg"
+ },
+ "storm-wall-cloud": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Supercell thunderstorm",
+  "creator": "NOAA NSSL",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/47838549@N08/48044614641",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/48044614641_e9141c7149_b.jpg"
+ },
+ "suburban-home": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "East 98th Street, Glenville, Cleveland, OH",
+  "creator": "w_lemay",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/59081381@N03/28060404887",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/887/28060404887_db3947e814_b.jpg"
+ },
+ "tornado-damage-street": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Brimfield Tornado Damage, June 3, 2011",
+  "creator": "MassDOT",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/42009447@N05/5793578824",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/2273/5793578824_6020bf7cb2_b.jpg"
+ },
+ "tornado-debris-home": {
+  "fw": 1024,
+  "fh": 768,
+  "title": "Monson Tornado Damage, June 3, 2011",
+  "creator": "MassDOT",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/42009447@N05/5794098962",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/5146/5794098962_a4b9ac54a4_b.jpg"
+ },
+ "tornado-funnel": {
+  "fw": 1024,
+  "fh": 676,
+  "title": "Project Vortex-99: Occluded mesocyclone tornado (NOAA/unidentified fotog)",
+  "creator": "pingnews.com",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/39735679@N00/452392668",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/185/452392668_7ba9ebcfd4_b.jpg"
+ },
+ "water-damage": {
+  "fw": 1024,
+  "fh": 681,
+  "title": "Flooding in Cedar Rapids, IA",
+  "creator": "U.S. Geological Survey",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/27784370@N05/2593473985",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/3041/2593473985_d9b784ed4a_b.jpg"
+ },
+ "wheat-field": {
+  "fw": 1024,
+  "fh": 684,
+  "title": "Wheat Fields with Overhead Power Line",
+  "creator": "Image Catalog",
+  "license": "cc0",
+  "landing": "https://www.flickr.com/photos/132795455@N08/24026544123",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/1689/24026544123_79198c21b3_b.jpg"
+ },
+ "wichita-mountains": {
+  "fw": 1024,
+  "fh": 683,
+  "title": "Wichita Mountains NWR",
+  "creator": "U.S. Fish & Wildlife Service Southwest Region",
+  "license": "pdm",
+  "landing": "https://www.flickr.com/photos/51896441@N04/52927257077",
+  "source": "flickr",
+  "url": "https://live.staticflickr.com/65535/52927257077_f0640c36b6_b.jpg"
+ }
 }

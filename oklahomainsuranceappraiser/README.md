@@ -23,7 +23,7 @@ run on the preview URL. Hostinger serves its own Googlebot-blocking `robots.txt`
 python3 build.py        # writes ./public
 python3 validate.py     # must print "OK — zero errors"
 # fresh credentials from the Hostinger API call agency-hosting_files_generate-upload-url (website_uid 00PvJWQDP):
-export GIA_FB_URL='https://…/tus'  GIA_FB_AUTH='…'  GIA_FB_REST='…'
+export GIA_FB_URL='https://…/api/tus'  GIA_FB_AUTH='…'  GIA_FB_REST='…'
 ./deploy.sh             # TUS upload of every file in ./public to public_html
 ```
 
@@ -141,4 +141,40 @@ All photos are **CC0 or public domain only** (no attribution-required licenses),
 with `srcset`/`sizes` and width/height. Source URL and license for each are in `src/photos.json`; alt text is in
 `src/photo_alt.py`. Full list:
 
-PHOTO_TABLE
+| Key | Size | License | Source | Original |
+| --- | --- | --- | --- | --- |
+| `apartment-complex` | 1024×768 | CC0 1.0 | flickr | https://www.flickr.com/photos/44034762@N04/33774493601 |
+| `brick-ranch-home` | 1024×576 | CC0 1.0 | rawpixel | https://www.rawpixel.com/image/6055650/free-public-domain-cc0-photo |
+| `calculator-papers` | 960×640 | CC0 1.0 | stocksnap | https://stocksnap.io/photo/calculator-numbers-Y2GUBQIPXD |
+| `clipboard-inspector` | 960×640 | CC0 1.0 | stocksnap | https://stocksnap.io/photo/construction-plans-69YZFGFBSY |
+| `commercial-building` | 960×541 | CC0 1.0 | stocksnap | https://stocksnap.io/photo/buildings-architecture-XHNZ9PZ1IM |
+| `consultation` | 960×640 | CC0 1.0 | stocksnap | https://stocksnap.io/photo/business-meeting-SSKSJIBMMP |
+| `fallen-tree-house` | 1024×576 | Public Domain Mark | flickr | https://www.flickr.com/photos/51896441@N04/37330421606 |
+| `grain-elevator` | 1024×683 | CC0 1.0 | flickr | https://www.flickr.com/photos/101561334@N08/36028665420 |
+| `grass-wildfire` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/165415395@N07/52572913582 |
+| `hailstones` | 1024×768 | CC0 1.0 | flickr | https://www.flickr.com/photos/29155878@N03/22919917430 |
+| `hero-supercell` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/47838549@N08/48039373157 |
+| `home-dusk` | 1024×683 | CC0 1.0 | rawpixel | https://www.rawpixel.com/image/6034162/photo-image-lights-public-domain-tree |
+| `house-fire` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/80223459@N05/32696090467 |
+| `ice-power-lines` | 1024×597 | Public Domain Mark | flickr | https://www.flickr.com/photos/58720666@N05/24519008956 |
+| `ice-storm-trees` | 1024×683 | CC0 1.0 | flickr | https://www.flickr.com/photos/140641142@N05/51862458255 |
+| `kitchen-interior` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/80223459@N05/52067013963 |
+| `laptop-numbers` | 1024×683 | CC0 1.0 | flickr | https://www.flickr.com/photos/132795455@N08/21713977623 |
+| `lightning-night` | 1024×689 | Public Domain Mark | flickr | https://www.flickr.com/photos/39735679@N00/452368208 |
+| `living-room` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/80223459@N05/52067485855 |
+| `okc-skyline` | 1024×682 | Public Domain Mark | flickr | https://www.flickr.com/photos/104353434@N05/50545444143 |
+| `rain-gutter` | 1024×683 | CC0 1.0 | flickr | https://www.flickr.com/photos/37996646802@N01/14998967189 |
+| `roof-inspection` | 1024×768 | Public Domain Mark | flickr | https://www.flickr.com/photos/43322816@N08/15871499500 |
+| `roof-shingles` | 1024×681 | CC0 1.0 | rawpixel | https://www.rawpixel.com/image/5942657/free-public-domain-cc0-photo |
+| `roof-torn` | 768×512 | Public Domain Mark | flickr | https://www.flickr.com/photos/41464593@N02/37075099182 |
+| `roofer-work` | 1024×768 | Public Domain Mark | flickr | https://www.flickr.com/photos/43322816@N08/16058080712 |
+| `storm-wall-cloud` | 1024×768 | Public Domain Mark | flickr | https://www.flickr.com/photos/47838549@N08/48044614641 |
+| `suburban-home` | 1024×768 | CC0 1.0 | flickr | https://www.flickr.com/photos/59081381@N03/28060404887 |
+| `tornado-damage-street` | 1024×768 | Public Domain Mark | flickr | https://www.flickr.com/photos/42009447@N05/5793578824 |
+| `tornado-debris-home` | 1024×768 | Public Domain Mark | flickr | https://www.flickr.com/photos/42009447@N05/5794098962 |
+| `tornado-funnel` | 1024×676 | Public Domain Mark | flickr | https://www.flickr.com/photos/39735679@N00/452392668 |
+| `water-damage` | 1024×681 | CC0 1.0 | flickr | https://www.flickr.com/photos/27784370@N05/2593473985 |
+| `wheat-field` | 1024×684 | CC0 1.0 | flickr | https://www.flickr.com/photos/132795455@N08/24026544123 |
+| `wichita-mountains` | 1024×683 | Public Domain Mark | flickr | https://www.flickr.com/photos/51896441@N04/52927257077 |
+
+Note: no CC0/PD source offered 1200px-wide files for most picks, so main files keep the source width (768–1024px); `srcset` lists the true width. Wikimedia was not used (its robot policy requires contact details in the User-Agent).

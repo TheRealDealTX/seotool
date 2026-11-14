@@ -96,15 +96,15 @@ def img(key, cls="", sizes="100vw", lazy=True, alt=None, extra=""):
 SVC_PHOTO = {
     "appraisal-demand-representation": "consultation", "home-insurance-appraiser": "brick-ranch-home",
     "commercial-hoa-claim-appraisal": "commercial-building", "hail-roof-damage-appraiser": "hailstones",
-    "tornado-windstorm-claim-appraisal": "tornado-damage-street", "water-pipe-leak-claim-appraisal": "water-damage",
+    "tornado-windstorm-claim-appraisal": "tornado-damage-street", "water-pipe-leak-claim-appraisal": "rain-gutter",
     "fire-smoke-loss-appraisal": "house-fire", "ice-storm-tree-damage-appraisal": "ice-storm-trees",
     "wildfire-grassfire-claim-appraisal": "grass-wildfire", "earthquake-crack-claim-appraisal": "suburban-home",
     "carrier-estimate-review": "laptop-numbers", "appraisal-umpire-services": "clipboard-inspector",
 }
 LOC_PHOTO = {
-    "oklahoma-city": "okc-skyline", "tulsa": "tulsa-skyline", "norman": "storm-wall-cloud", "broken-arrow": "suburban-home",
+    "oklahoma-city": "okc-skyline", "tulsa": "tornado-funnel", "norman": "storm-wall-cloud", "broken-arrow": "suburban-home",
     "edmond": "home-dusk", "lawton": "wichita-mountains", "moore": "tornado-debris-home", "midwest-city": "brick-ranch-home",
-    "enid": "grain-elevator", "stillwater": "wheat-field", "muskogee": "ice-power-lines", "shawnee": "fallen-tree-house",
+    "enid": "grain-elevator", "stillwater": "wheat-field", "muskogee": "water-damage", "shawnee": "fallen-tree-house",
 }
 TOOL_PHOTO = {
     "claim-gap-fee-estimator": "calculator-papers", "rcv-acv-holdback-calculator": "kitchen-interior",
@@ -909,8 +909,8 @@ def company_pages():
     }
     for path, (h1, title, desc, content, lede) in legal.items():
         trail = [("Home", "/"), (h1, path)]
-        body = page_hero(trail, "Legal", h1, lede, "commercial-building", cta=False) + f'<div class="wrap layout"><article class="prose">{content}</article><aside class="aside">{call_box()}</aside></div>'
-        write(path, document(path, title, desc, body, [], trail, photo="commercial-building"), 0.3)
+        body = page_hero(trail, "Legal", h1, lede, "apartment-complex", cta=False) + f'<div class="wrap layout"><article class="prose">{content}</article><aside class="aside">{call_box()}</aside></div>'
+        write(path, document(path, title, desc, body, [], trail, photo="apartment-complex"), 0.3)
 
 
 def sitemap_pages():
