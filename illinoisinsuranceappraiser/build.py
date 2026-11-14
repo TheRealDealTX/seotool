@@ -31,7 +31,7 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261114a"
+VER = "20261114b"
 FAV = "1"
 # Google Tag Manager container ID (e.g. "GTM-XXXXXXX"). Empty = no GTM snippet is output.
 GTM_ID = ""
@@ -137,7 +137,7 @@ TOOL_PHOTO = {
 }
 POST_PHOTO = {
     "appraisal-clause-in-illinois-policies": "signing-paperwork", "section-155-and-appraisal-basics": "conference-room",
-    "prairie-hail-roof-documentation": "roofers-at-work", "first-30-days-after-tornado-or-derecho": "storm-wreckage",
+    "prairie-hail-roof-documentation": "shingle-rows", "first-30-days-after-tornado-or-derecho": "storm-wreckage",
     "basement-backup-vs-flood-in-illinois": "flooded-basement", "siding-matching-disputes-illinois": "suburban-street",
 }
 
@@ -596,7 +596,7 @@ def home():
 </div></section>
 
 <section class="sec intro"><div class="wrap intro-in">
-<div class="intro-ph rv">{img("roofers-at-work", sizes="(max-width:900px) 100vw, 46vw")}<p class="intro-tag"><b>Covered ≠ paid in full</b><span>Most disputed claims aren’t denied. They’re short.</span></p></div>
+<div class="intro-ph rv">{img("contractors-plans", sizes="(max-width:900px) 100vw, 46vw")}<p class="intro-tag"><b>Covered ≠ paid in full</b><span>Most disputed claims aren’t denied. They’re short.</span></p></div>
 <div class="intro-b rv">
 <p class="kicker">Why owners call</p>
 <h2>What an Illinois Insurance Appraiser brings to a stuck claim</h2>

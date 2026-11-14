@@ -72,7 +72,9 @@
       var r = el.parentElement.getBoundingClientRect();
       if (r.bottom < 0 || r.top > window.innerHeight) return;
       var k = parseFloat(el.getAttribute("data-parallax")) || 0.12;
-      el.style.transform = "translate3d(0," + ((r.top + r.height / 2 - window.innerHeight / 2) * -k).toFixed(1) + "px,0) scale(1.12)";
+      var lim = r.height * 0.055; // scale(1.12) leaves 6% overscan on each edge
+      var dy = Math.max(-lim, Math.min(lim, (r.top + r.height / 2 - window.innerHeight / 2) * -k));
+      el.style.transform = "translate3d(0," + dy.toFixed(1) + "px,0) scale(1.12)";
     });
     if (proc) {
       var pr = proc.getBoundingClientRect(), vh = window.innerHeight;
