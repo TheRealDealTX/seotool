@@ -1,5 +1,5 @@
 <?php
-// Georgia Insurance Appraiser — lead form handler.
+// Illinois Insurance Appraiser — lead form handler.
 // Sends each submission through the site mailbox over authenticated SMTP (Hostinger),
 // falls back to PHP mail(), and always keeps a private JSON-lines backup.
 // SMTP credentials are NOT in git. They live on the server in api/_private/config.php,
@@ -7,9 +7,9 @@
 //   return ['smtp_host'=>'smtp.hostinger.com','smtp_port'=>465,'smtp_user'=>'info@…','smtp_pass'=>'…'];
 declare(strict_types=1);
 
-const TO_EMAIL   = 'info@georgiainsuranceappraiser.com';
-const FROM_EMAIL = 'info@georgiainsuranceappraiser.com';
-const SITE_NAME  = 'Georgia Insurance Appraiser';
+const TO_EMAIL   = 'info@illinoisinsuranceappraiser.com';
+const FROM_EMAIL = 'info@illinoisinsuranceappraiser.com';
+const SITE_NAME  = 'Illinois Insurance Appraiser';
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Robots-Tag: noindex');
@@ -27,7 +27,7 @@ if (!empty($_POST['website'])) {            // honeypot
 // Per-IP throttle: 5 submissions per 10 minutes.
 $ip = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? ($_SERVER['REMOTE_ADDR'] ?? '0');
 $ip = trim(explode(',', $ip)[0]);
-$bucket = sys_get_temp_dir() . '/gia_' . md5($ip);
+$bucket = sys_get_temp_dir() . '/iia_' . md5($ip);
 $hits = array_filter(
     is_file($bucket) ? (array) json_decode((string) file_get_contents($bucket), true) : [],
     fn($t) => is_int($t) && $t > time() - 600
@@ -102,7 +102,7 @@ function smtp_send(array $c, string $to, string $subject, string $body, string $
         if (!in_array((int) substr($r, 0, 3), $okCodes, true)) { $err = trim(preg_replace('/AUTH.*|[A-Za-z0-9+\/=]{20,}/', '', $c)) . ' -> ' . trim($r); return false; }
         return true;
     };
-    $ehlo = 'EHLO georgiainsuranceappraiser.com';
+    $ehlo = 'EHLO illinoisinsuranceappraiser.com';
     if (!$cmd('', [220]) || !$cmd($ehlo, [250])) { fclose($fp); return false; }
     if ($port !== 465) {
         if (!$cmd('STARTTLS', [220]) || !stream_socket_enable_crypto($fp, true, STREAM_CRYPTO_METHOD_TLS_CLIENT) || !$cmd($ehlo, [250])) { fclose($fp); return false; }
@@ -114,7 +114,7 @@ function smtp_send(array $c, string $to, string $subject, string $body, string $
         'From: ' . SITE_NAME . ' <' . FROM_EMAIL . '>',
         'To: <' . $to . '>',
         'Subject: =?UTF-8?B?' . base64_encode($subject) . '?=',
-        'Message-ID: <' . bin2hex(random_bytes(12)) . '@georgiainsuranceappraiser.com>',
+        'Message-ID: <' . bin2hex(random_bytes(12)) . '@illinoisinsuranceappraiser.com>',
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
         'Content-Transfer-Encoding: base64',
@@ -127,9 +127,9 @@ function smtp_send(array $c, string $to, string $subject, string $body, string $
     return $ok;
 }
 
-define('GIA_CONFIG_OK', true);
+define('IIA_CONFIG_OK', true);
 $cfg = [];
-foreach ([__DIR__ . '/_private/config.php', dirname(__DIR__, 2) . '/gia-config.php'] as $cfgFile) {
+foreach ([__DIR__ . '/_private/config.php'] as $cfgFile) {
     if (is_file($cfgFile)) { $cfg = (array) include $cfgFile; break; }
 }
 $err = null;
@@ -146,7 +146,8 @@ if (!$sent) {
     if ($sent) $via .= '+mail';
 }
 
-// Private backup outside the web root, in case delivery ever fails.
+// Private JSON-lines backup in api/_private/ (404s if requested directly), in case delivery ever fails.
+if (!is_dir(__DIR__ . '/_private')) @mkdir(__DIR__ . '/_private', 0750, true);
 $log = __DIR__ . '/_private/leads.log.php';
 if (!is_file($log)) @file_put_contents($log, "<?php http_response_code(404); exit; ?>\n");
 @file_put_contents($log,
