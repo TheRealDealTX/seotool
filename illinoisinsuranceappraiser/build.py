@@ -31,10 +31,10 @@ PHONE_INTL = "+1 (844) 537-1427"
 TEL = "+18445371427"
 EMAIL = "info@" + HOST
 TODAY = date.today().isoformat()
-VER = "20261114b"
+VER = "20261114c"
 FAV = "1"
 # Google Tag Manager container ID (e.g. "GTM-XXXXXXX"). Empty = no GTM snippet is output.
-GTM_ID = ""
+GTM_ID = "GTM-WVS6JR63"
 # Google Search Console HTML-file verification. Written byte-for-byte at the site root on every build.
 GSC_FILE = "googlecccfbf2f7e9e5ae4.html"
 GSC_BODY = "google-site-verification: googlecccfbf2f7e9e5ae4.html"
@@ -301,12 +301,14 @@ def footer():
 def gtm_head():
     if not GTM_ID:
         return ""
+    # Snippet used exactly as provided by the site owner.
     return f"""<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
-new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-}})(window,document,'script','dataLayer','{GTM_ID}');</script>
+<script async src="https://www.googletagmanager.com/gtm.js?id={GTM_ID}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
 <!-- End Google Tag Manager -->
 """
 

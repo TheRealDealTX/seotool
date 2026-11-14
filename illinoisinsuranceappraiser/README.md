@@ -6,12 +6,12 @@ PHP front controller plus a canonical-host guard serve it on a Hostinger Agency 
 | | |
 | --- | --- |
 | Hostinger website UID | `uJ2yGXv1l` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, created in the Boston datacenter) |
-| Domain | `illinoisinsuranceappraiser.com` (attached at creation; waiting on nameservers) |
+| Live domain | https://illinoisinsuranceappraiser.com (live Nov 14, 2026; SSL covers the bare domain and `www`; www and http 301 to it) |
 | Preview URL | https://linen-armadillo-842275.hostingersite.com (serves `X-Robots-Tag: noindex`; Hostinger's own robots.txt blocks Googlebot there) |
 | Nameservers to set at the registrar | `aurora.dns-parking.com`, `nebula.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@illinoisinsuranceappraiser.com (mailbox not created yet) |
-| Google Tag Manager | none yet: set `GTM_ID` in `build.py` |
+| Email / form inbox | info@illinoisinsuranceappraiser.com (form delivers over authenticated SMTP; test submission confirmed `"via":"smtp"`) |
+| Google Tag Manager | `GTM-WVS6JR63`: the owner's snippet in `<head>` exactly as provided, plus the noscript iframe after `<body>` (`GTM_ID` in `build.py`) |
 
 ## Layout
 
@@ -191,14 +191,14 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
 Once the mailbox exists: upload the config, confirm `/api/_private/config.php` returns 404 with 0 bytes, send one
 submission labelled as a test, and confirm the log shows `"via":"smtp"`.
 
-## Go-live checklist
+## Go-live status (Nov 14, 2026)
 
-1. Point the domain's nameservers to `aurora.dns-parking.com` / `nebula.dns-parking.com`.
-2. Confirm SSL covers both `illinoisinsuranceappraiser.com` and `www.` (`ssl_cert.names`); reissue with
-   `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. Check the redirects on the live domain (http, www and https-www → `https://illinoisinsuranceappraiser.com/page/`;
-   `/page/index.php` → `/page/`), that every sitemap URL returns 200 with no `X-Robots-Tag`, and that the
-   Search Console file returns 200 with exact bytes. If a www URL returns 200 with `x-hcdn-cache-status: HIT`,
-   clear the cache again.
-4. Add GTM (set `GTM_ID`) and wire SMTP, rebuild, run validate, redeploy, clear cache.
-5. In Search Console, click **Verify** on the URL-prefix property, then submit `https://illinoisinsuranceappraiser.com/sitemap.xml`.
+1. ~~Nameservers~~ done: the domain resolves to the website, and `ssl_cert.names` lists both the bare domain and `www`.
+2. ~~Canonical host~~ checked on the homepage and interior pages: http, www and https-www 301 to
+   `https://illinoisinsuranceappraiser.com/page/`, and `/page/index.php` 301s to `/page/`. All 50 sitemap URLs
+   return 200 with no `X-Robots-Tag`. The real domain serves our own `robots.txt`, and the Search Console file
+   returns 200 with exact bytes and no `X-Robots-Tag`.
+3. ~~GTM and SMTP~~ done. `api/_private/config.php` returns 404 with 0 bytes, and the log recorded `"via":"smtp"`.
+4. Still to do (owner): click **Verify** in Search Console for the URL-prefix property
+   `https://illinoisinsuranceappraiser.com/`, then submit `https://illinoisinsuranceappraiser.com/sitemap.xml`.
+   Keep `googlecccfbf2f7e9e5ae4.html` on the server permanently.
