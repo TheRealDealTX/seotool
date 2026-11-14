@@ -176,4 +176,37 @@ Set `GTM_ID` in `build.py` (e.g. `"GTM-XXXXXXX"`) and rebuild. That outputs the 
 
 ## Photos
 
-PHOTOS_SECTION
+All 30 photos are CC0 or public domain, so no credit is legally required and the site has **no photo-credits page**. Every license was checked on the source page, not only in search results. This list is internal (it is not linked from the site). Each photo is served as `assets/img/photos/<key>.webp` (up to 1200px) plus `<key>-640.webp`, with `srcset`, and alt text from `desc` in `src/photos.json`. `assets/img/og-image.jpg` (1200×630) is cropped from `hero-brick-colonial`.
+
+| Key | Title / creator | License | Source |
+| --- | --- | --- | --- |
+| `richmond-skyline` | Richmond, Virginia skyline from Shockoe Bottom (Packer1028) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=154257469) |
+| `virginia-beach` | Old Coast Guard Station 24th Atlantic in Virginia Beach (BretFisher) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=23170926) |
+| `norfolk-waterfront` | Coast Guard participates in Norfolk, Va. OpSail 2012's Parade of Sails (Petty Officer 3rd Class David Marin) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:Coast_Guard_participates_in_Norfolk,_Va._OpSail_2012%27s_Parade_of_Sails_120608-G-MD940-715.jpg) |
+| `chesapeake-waterway` | Great Dismal Swamp National Wildlife Refuge- Peaks October 22 – Octobe (U. S. Fish and Wildlife Service - Northe) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:Great_Dismal_Swamp_National_Wildlife_Refuge-_Peaks_October_22_%E2%80%93_October_28_(50432511333).jpg) |
+| `newport-news-james` | Newport News Shipyard, aerial view, Oct 1994 (Don S. Montgomery) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:Newport_News_Shipyard,_aerial_view,_Oct_1994.jpeg) |
+| `alexandria-old-town` | King Street, Alexandria, Virginia (Hermann Luyken) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=64154474) |
+| `arlington-rosslyn` | Rosslyn from Georgetown 2 (Theodore Christopher) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/wiki/File:Rosslyn_from_Georgetown_2.jpg) |
+| `fairfax-suburb` | Tree Outside Suburban Homes (Image Catalog) | CC0 1.0 | [flickr](https://www.flickr.com/photos/132795455@N08/16681992243) |
+| `fredericksburg-downtown` | View of Fredericksburg across Rappahannock from Chatham grounds at sun (Mary O'Neill) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:View_of_Fredericksburg_across_Rappahannock_from_Chatham_grounds_at_sunset_(02f56597-2c8c-4090-a152-70a325f8dcf8).jpg) |
+| `charlottesville-rotunda` | University of Virginia Rotunda 2006 (Aaron Josephson; cropped by Ibn Battuta) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:University_of_Virginia_Rotunda_2006.jpg) |
+| `roanoke-valley` | Star (apbell427) | Public Domain Mark | [flickr](https://www.flickr.com/photos/146431966@N02/45889362585) |
+| `lynchburg-hills` | Downtown Lynchburg (Northern-Virginia-Photographer) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=166226973) |
+| `blue-ridge-mountains` | Skyline Drive, Shenandoah National Park (stefanserena) | CC0 1.0 | [flickr](https://www.flickr.com/photos/146738176@N02/46992330511) |
+| `hero-brick-colonial` | Locust Grove, Louisville, KY (w_lemay) | CC0 1.0 | [flickr](https://www.flickr.com/photos/59081381@N03/27225898877) |
+| `hurricane-flooding` | Hurricane Irma Flooding in Vero Beach (WeatheredAviation) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/wiki/File:Hurricane_Irma_Flooding_in_Vero_Beach.jpg) |
+| `storm-roof-damage` | FEMA - 29543 - Blue roof tarps in Texas (Earl Armstrong) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:FEMA_-_29543_-_Blue_roof_tarps_in_Texas.jpg) |
+| `hail-shingles` | Kroupy (Karel Štípek) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/wiki/File:Kroupy.jpg) |
+| `tree-on-house` | FEMA - 8462 - Photograph by Mark Wolfe taken on 09-21-2003 in North Ca (Mark Wolfe) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:FEMA_-_8462_-_Photograph_by_Mark_Wolfe_taken_on_09-21-2003_in_North_Carolina.jpg) |
+| `ice-storm` | Ice Storm Tree Damage (David Kitto) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=128350213) |
+| `tornado-damage` | Low-end EF3 damage to a home in Virginia Beach, Virginia (National Weather Service) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:Low-end_EF3_damage_to_a_home_in_Virginia_Beach,_Virginia.jpg) |
+| `fire-damage` | Fire-Damaged House at Buxted (October 2010) (User:Hassocks5489) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/wiki/File:Fire-Damaged_House_at_Buxted_(October_2010).jpg) |
+| `water-ceiling` | Ceiling sheetrock damaged by water so paint was peeling (Tomwsulcer) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/wiki/File:Ceiling_sheetrock_damaged_by_water_so_paint_was_peeling.jpg) |
+| `roofer-shingles` | FEMA - 44634 - Roofer working on a home in Oklahoma (Patsy Lynch) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:FEMA_-_44634_-_Roofer_working_on_a_home_in_Oklahoma.jpg) |
+| `storm-sky` | Sunset Thunderstorm (53721202248) (Bob Hyatt, U.S. National Weather Service) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:Sunset_Thunderstorm_(53721202248).jpg) |
+| `condo-building` | Modern apartment building (DennisM2) | CC0 1.0 | [flickr](https://www.flickr.com/photos/14674348@N04/14996764996) |
+| `historic-interior` | Ossian Sweet House interior - fireplace (City of Detroit) | CC0 1.0 | [wikimedia](https://commons.wikimedia.org/w/index.php?curid=174254044) |
+| `consult-table` | Free close two people hands (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/5927609/photo-image-background-public-domain-hands) |
+| `calculator-papers` | Accounting Finance (Wilfred Iven) | CC0 1.0 | [stocksnap](https://stocksnap.io/photo/accounting-finance-JONMP7TPGK) |
+| `tape-measure` | FEMA - 44370 - FEMA PA officer documenting damages to a roof in OK (Win Henderson) | Public Domain Mark | [wikimedia](https://commons.wikimedia.org/wiki/File:FEMA_-_44370_-_FEMA_PA_officer_documenting_damages_to_a_roof_in_OK.jpg) |
+| `laptop-estimate` | Laptop with spreadsheet (rawpixel) | CC0 1.0 | [rawpixel](https://www.rawpixel.com/image/5974308/photo-image-laptop-work-macbook) |
