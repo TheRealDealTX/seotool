@@ -8,12 +8,12 @@ The engineering (generator, validator, deploy script, form handler, tool logic, 
 | | |
 | --- | --- |
 | Hostinger website UID | `2FJj5lTsf` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `southdakotainsuranceappraiser.com` (attached at creation) |
+| Domain | https://southdakotainsuranceappraiser.com (live; SSL covers the domain and www; www and http 301 to it) |
 | Preview URL | https://dimgrey-echidna-626694.hostingersite.com (noindex; Hostinger serves its own robots.txt here) |
 | Nameservers to set at the registrar | `nova.dns-parking.com`, `cosmos.dns-parking.com` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@southdakotainsuranceappraiser.com (mailbox to be created) |
-| Google Tag Manager | `GTM_ID` in `build.py` is empty, so no tag is output yet |
+| Email / form inbox | info@southdakotainsuranceappraiser.com (form delivers over SMTP; verified Nov 14, 2026) |
+| Google Tag Manager | `GTM-PG57CVJ6`: the supplied head snippet verbatim (`GTM_HEAD_SNIPPET`) plus the noscript iframe after `<body>` |
 
 ## Layout
 
@@ -112,8 +112,8 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@southdakotainsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives: upload the config, confirm `/api/_private/config.php` returns 404 with 0 bytes,
-send one submission labelled as a test, and confirm the log line shows `"via":"smtp"`.
+The config was uploaded on Nov 14, 2026: `/api/_private/config.php` returns 404 with 0 bytes, and a submission labelled
+as a test was logged with `"via":"smtp"`. To change the password, re-upload that file (never commit it).
 
 ## SEO rules enforced by validate.py
 
