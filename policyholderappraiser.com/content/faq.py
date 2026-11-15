@@ -43,7 +43,7 @@ FAQ = [
      "adjuster, and we are happy to recommend other qualified appraisers in that situation."),
     ("Do I need a lawyer to go through appraisal?",
      "No. Appraisal is a contractual process, not a lawsuit, and most homeowners complete it without counsel. If your "
-     "dispute also involves a coverage denial, delay or bad-faith conduct, a Texas insurance attorney can advise you on "
+     "dispute also involves a coverage denial, a Texas insurance attorney can advise you on "
      "those issues while appraisal resolves the amount of loss. We work alongside counsel routinely."),
     ("What if the appraisers cannot agree on an umpire?",
      "Either party may ask a county or district court where the property is located to appoint an umpire, after "

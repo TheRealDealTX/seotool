@@ -50,7 +50,7 @@ BIO = {
         "Policy interpretation, coverage application and reading of endorsements and exclusions",
         "Building code, matching, and ordinance-or-law analysis",
         "Award drafting with itemized breakdowns and clean supporting documentation",
-        "Texas appraisal clause procedure, the Prompt Payment of Claims Act and Insurance Code Chapter 542A",
+        "Texas appraisal clause procedure and the 2027 TDI appraisal rules",
         "Field inspection protocols, evidence preservation and photo documentation standards",
         "Direct, professional communication with party-appointed appraisers and counsel",
     ],

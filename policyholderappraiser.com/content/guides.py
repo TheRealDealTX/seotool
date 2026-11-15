@@ -54,7 +54,7 @@ original September 1, 2026 compliance date moved to March 1, 2027 to give carrie
 
 <h2>The residential timeline (§5.9805)</h2>
 <ul class="timeline">
-<li><span class="day">Demand</span><strong>Written appraisal demand</strong><p>Must be made in writing and delivered to the other party, generally no later than the policy's limitations period for filing suit. Special timing applies once a pre-suit notice under Chapter 542A is sent (the insurer then has 60 days) or a lawsuit is filed (the respondent must demand by the time its answer is due, and the plaintiff generally loses the right to demand).</p></li>
+<li><span class="day">Demand</span><strong>Written appraisal demand</strong><p>Must be made in writing and delivered to the other party, generally no later than the policy's limitations period for filing suit. Special timing applies once a lawsuit is filed: the respondent must demand by the time its answer is due, and the plaintiff generally loses the right to demand.</p></li>
 <li><span class="day">Within 20 days</span><strong>Each party hires its appraiser</strong><p>And gives the other party the appraiser's name and contact information in writing.</p></li>
 <li><span class="day">Within 15 days after that</span><strong>Appraisers jointly choose an umpire</strong><p>The umpire may also be chosen within 15 days after the appraisers fail to agree on the amount of loss. If they cannot agree on an umpire, either party may ask a county or district court where the property sits to appoint one. A policy may also allow the policyholder (only) to use an independent umpire-selection vendor, or any method both parties agree to in writing. Ten days' written notice to the other side is required before requesting a court or vendor appointment.</p></li>
 <li><span class="day">Within 120 days of the demand</span><strong>Appraisers attempt to agree</strong><p>The two appraisers must attempt to agree on the amount of loss in dispute.</p></li>
@@ -130,12 +130,12 @@ legal advice. Check the current rule text and your own policy, and consult a Tex
 <div class="table-wrap"><table class="cmp">
 <thead><tr><th>Question</th><th class="hl">Appraisal</th><th>Public adjuster</th><th>Lawsuit</th></tr></thead>
 <tbody>
-<tr><td>What it decides</td><td class="hl">The amount of loss only</td><td>Nothing by itself; negotiates with the carrier</td><td>Coverage, amount, bad faith, penalties, fees</td></tr>
+<tr><td>What it decides</td><td class="hl">The amount of loss only</td><td>Nothing by itself; negotiates with the carrier</td><td>Coverage, amount and the carrier's conduct</td></tr>
 <tr><td>Who decides</td><td class="hl">Two appraisers, with an umpire if needed</td><td>The carrier, after negotiation</td><td>Judge or jury</td></tr>
 <tr><td>Binding?</td><td class="hl">Yes, as to amount of loss</td><td>Only if both sides agree to a settlement</td><td>Yes, subject to appeal</td></tr>
 <tr><td>Typical cost</td><td class="hl">Your appraiser's flat or hourly fee, plus half the umpire</td><td>Percentage of the recovery (Texas caps at 10%)</td><td>Contingency fee (often 33-40%) or hourly; expert costs</td></tr>
 <tr><td>Typical time</td><td class="hl">Weeks to a few months; 2027 rules cap at 120/240 days</td><td>Weeks to months, depending on the carrier</td><td>Often 1-3 years</td></tr>
-<tr><td>Best for</td><td class="hl">Covered loss, disputed scope or price</td><td>Early in the claim, before the carrier's position hardens</td><td>Coverage denials, bad faith, prompt-pay violations</td></tr>
+<tr><td>Best for</td><td class="hl">Covered loss, disputed scope or price</td><td>Early in the claim, before the carrier's position hardens</td><td>Coverage denials and carrier conduct</td></tr>
 <tr><td>Weak for</td><td class="hl">Coverage denials; causation that goes to coverage</td><td>Claims where the carrier will not move</td><td>Pure pricing fights (slow and expensive relative to the gap)</td></tr>
 </tbody></table></div>
 
@@ -158,20 +158,19 @@ usual next step is to recommend appraisal. Note that under Texas's impartiality 
 handled your claim should not then serve as your appraiser on it; you appoint an independent appraiser.</p>
 
 <h2>Lawsuit: when coverage or conduct is the issue</h2>
-<p>Litigation is the only path that can decide coverage, award statutory interest and penalties under the Texas
-Prompt Payment of Claims Act (Insurance Code Chapter 542), or address bad-faith conduct. It is also the slowest and
-most expensive route, and Chapter 542A requires a pre-suit notice at least 61 days before filing on most property
-claims. If the carrier has denied coverage outright, talk to a Texas insurance attorney.</p>
+<p>Litigation is the only path that can decide coverage or address the carrier's conduct. It is also the slowest and
+most expensive route, with pre-suit requirements and a discovery process that can run for years. If the carrier has
+denied coverage outright, talk to a Texas insurance attorney.</p>
 <p>Lawsuits and appraisal interact. Carriers frequently demand appraisal after being sued, and under the 2027 rules a
-respondent must do so by the time its answer is due. Paying an appraisal award can limit, but does not always
-eliminate, a carrier's exposure to penalties and fees. Timing decisions here belong with your attorney.</p>
+respondent must do so by the time its answer is due. An appraisal award settles the amount of loss but does not by
+itself end every question in a lawsuit. Timing decisions here belong with your attorney.</p>
 
 <h2>A simple decision path</h2>
 <ol>
 <li><strong>Is the loss accepted as covered?</strong> No: talk to an attorney about the denial. Yes: continue.</li>
 <li><strong>Has the carrier taken a final position on the amount?</strong> No: a public adjuster can still move it. Yes: continue.</li>
 <li><strong>Is the gap worth the appraisal cost?</strong> Appraiser fees are modest relative to most roof and water disputes. If yes, demand appraisal.</li>
-<li><strong>Is the carrier also delaying, misrepresenting or refusing to engage?</strong> Appraisal can run alongside legal advice; the two are not exclusive.</li>
+<li><strong>Is the carrier also refusing to engage at all?</strong> Appraisal can run alongside legal advice; the two are not exclusive.</li>
 </ol>
 <p>We only do the first of these three jobs on your claim. If appraisal is not the right fit, we will say so and point
 you toward the tool that is.</p>
@@ -321,8 +320,7 @@ umpire award must issue within 240 days of the demand.</p>
 <h2>After the award</h2>
 <p>The carrier pays the award less the deductible, prior payments and any recoverable depreciation withheld under the
 policy's replacement-cost terms, which is released when repairs are completed. The award does not decide coverage,
-so items the carrier denied on coverage grounds are not resolved by it, and the award does not by itself extinguish
-claims for delay or bad faith; those are questions for an attorney.</p>
+so items the carrier denied on coverage grounds are not resolved by it; those are questions for an attorney.</p>
 
 <div class="callout"><span class="label">What you should do during the process</span>
 <p>Keep mitigating damage and keep receipts. Do not sign a release or accept a "final" payment without reading what it
