@@ -303,3 +303,10 @@ textarea { min-height: 120px; resize: vertical; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* City pages */
+.city-card h3 { font-size: 1.05rem; margin-bottom: .2em; }
+.city-card p { font-size: .84rem; margin-bottom: 10px; }
+.footer-cities { font-size: .84rem; line-height: 1.9; color: #8a97a6; margin: 0 0 24px; }
+.footer-cities a { color: #aeb9c6; text-decoration: none; }
+.footer-cities a:hover { color: var(--brass-2); }

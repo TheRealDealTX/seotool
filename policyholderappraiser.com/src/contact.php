@@ -5,12 +5,12 @@
 //
 // Recipient: set FORM_TO in ../form-config.php (outside public_html), e.g.
 //   <?php const FORM_TO = 'someone@example.com';
-// Without that file the message goes to the site's own info@ mailbox.
+// Without that file the message goes to the address below.
 declare(strict_types=1);
 
 $cfg = __DIR__ . '/../form-config.php';
 if (is_file($cfg)) { require $cfg; }
-if (!defined('FORM_TO')) { define('FORM_TO', 'info@policyholderappraiser.com'); }
+if (!defined('FORM_TO')) { define('FORM_TO', 'josephdittmanappraiser@gmail.com'); }
 
 const FROM     = 'forms@policyholderappraiser.com';
 const SITE     = 'https://policyholderappraiser.com';

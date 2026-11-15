@@ -36,15 +36,16 @@ for `make_assets.py`).
 
 `public/contact.php` emails each submission and appends a copy to
 `../form-log/` (outside `public_html`). The recipient defaults to
-`info@policyholderappraiser.com`; override it by creating
+`josephdittmanappraiser@gmail.com`; override it by creating
 `/home/u401386392/domains/policyholderappraiser.com/form-config.php` with:
 
 ```php
 <?php const FORM_TO = 'you@example.com';
 ```
 
-Create the `info@` and `forms@` mailboxes (or forwarders) in hPanel so the
-From address is deliverable and SPF passes.
+The From address is `forms@policyholderappraiser.com`; add an SPF record for
+Hostinger (`v=spf1 include:_spf.mail.hostinger.com ~all`) at the registrar so
+Gmail accepts it.
 
 ## Pages (21 indexable)
 

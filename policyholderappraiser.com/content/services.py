@@ -9,7 +9,7 @@ SERVICES = [
     {
         "slug": "residential-property-appraisal",
         "nav_label": "Homeowners Claim Appraisal",
-        "title": "Homeowners Insurance Claim Appraiser in Texas | Policyholder Appraiser",
+        "title": "Homeowners Insurance Appraisal | Claim Appraiser in Texas",
         "description": (
             "Appoint an independent appraiser for your Texas homeowners insurance claim. "
             "Roof, water, storm and fire losses. Flat, up-front fees. Call (832) 503-5866."
@@ -54,9 +54,9 @@ and to explain the difference in plain terms to an umpire who may be a contracto
 requires any appraiser on a dwelling loss to be competent by training or experience, independent of both
 parties, disinterested in the outcome, and either a licensed adjuster or public adjuster with experience estimating
 residential losses, an engineer or architect, or someone with trade experience in the type of repair at issue.</p>
-<p>Our appraiser is a Texas-licensed public adjuster (license #3356839) with day-to-day experience writing residential
-estimates. We do not serve as appraiser on any claim where Rise Public Adjusting acted as the public adjuster, and
-our fee is never tied to the size of the award. Both are necessary for the independence the rule requires, and both
+<p>Our appraiser, Joseph Dittman, holds Texas public adjuster license #3341461 and independent adjuster license
+#2341686, with eight years of carrier-side estimating behind his appraisal work. We do not serve as appraiser on any claim where Rise Public Adjusting acted as the public adjuster, and
+our fee is quoted in writing before you appoint us. Both are consistent with for the independence the rule requires, and both
 are the reason an umpire takes our numbers seriously.</p>
 
 <div class="callout"><span class="label">Good to know</span>
@@ -122,7 +122,7 @@ printed in your policy. Read it carefully: deadlines, umpire selection and cost-
 
 <h2>What you can expect from us</h2>
 <ul>
-<li>A written engagement letter with a flat or hourly fee quoted before you appoint us. We do not take a percentage of the award.</li>
+<li>A written engagement letter with a flat or hourly fee quoted before you appoint us.</li>
 <li>Independent inspection and a complete, line-item estimate priced to the policy's valuation basis.</li>
 <li>Direct, professional dealings with the carrier's appraiser and, where needed, a clear written submission to the umpire.</li>
 <li>Prompt communication with you and your counsel, if you have retained one, at each step.</li>
@@ -329,13 +329,13 @@ gives it weight with the umpire.</p>
     {
         "slug": "appraisal-umpire-services",
         "nav_label": "Umpire Services",
-        "title": "Insurance Appraisal Umpire in Texas | Policyholder Appraiser",
+        "title": "Insurance Umpire in Texas | Appraisal Umpire Services | Policyholder Appraiser",
         "description": (
-            "Neutral, qualified appraisal umpire for Texas residential and commercial property claims. "
-            "Available for joint selection by both appraisers. Call (832) 503-5866."
+            "Certified insurance umpire for Texas property appraisals. Neutral, qualified and available for joint "
+            "selection by both appraisers on residential and commercial claims. (832) 503-5866."
         ),
-        "h1": "Insurance Appraisal <span>Umpire</span> Services",
-        "h1_plain": "Insurance Appraisal Umpire Services",
+        "h1": "Insurance <span>Umpire</span> Services in Texas",
+        "h1_plain": "Insurance Umpire Services in Texas",
         "eyebrow": "Neutral umpire",
         "service_type": "Insurance Appraisal Umpire Services",
         "icon": "scale",

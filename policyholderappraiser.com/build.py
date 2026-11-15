@@ -16,6 +16,8 @@ from content.services import SERVICES
 from content.guides import GUIDES, BY_SLUG as GUIDE
 from content.faq import FAQ
 from content.legal import PRIVACY_BODY, TERMS_BODY
+from content.cities import CITIES
+from content.bio import BIO
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
@@ -72,7 +74,7 @@ LOGO = ('<svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><rect wid
 # --------------------------------------------------------------------------
 ORG_ID = url("/#organization")
 SITE_ID = url("/#website")
-PERSON_ID = url("/about/#joseph-dittman")
+PERSON_ID = url("/joseph-dittman/#person")
 
 
 def org_schema():
@@ -88,7 +90,7 @@ def org_schema():
         "telephone": "+1-832-503-5866",
         "email": BIZ["email"],
         "description": "Independent insurance appraisers and umpires for disputed residential and commercial property claims in Texas.",
-        "areaServed": {"@type": "State", "name": "Texas"},
+        "areaServed": [{"@type": "State", "name": "Texas"}] + [{"@type": "City", "name": c["name"] + ", TX", "url": url(c["path"])} for c in CITIES],
         "address": {"@type": "PostalAddress", "addressLocality": "Houston", "addressRegion": "TX", "addressCountry": "US"},
         "priceRange": "$$",
         "openingHours": "Mo-Sa 08:00-19:00",
@@ -113,14 +115,16 @@ def person_schema():
         "jobTitle": BIZ["principal_title"],
         "worksFor": {"@id": ORG_ID},
         "image": url("/img/joseph-dittman-appraiser.webp"),
-        "url": url("/about/"),
-        "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "license",
-            "name": "Texas public adjuster license",
-            "identifier": BIZ["license_number"],
-            "recognizedBy": {"@type": "GovernmentOrganization", "name": "Texas Department of Insurance"},
-        },
+        "url": url("/joseph-dittman/"),
+        "sameAs": BIO["sameas"],
+        "knowsAbout": ["Insurance appraisal", "Appraisal umpire", "Xactimate estimating", "Property insurance claims", "Texas Insurance Code Chapter 1813"],
+        "hasCredential": [
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Texas public adjuster license",
+             "identifier": BIZ["license_number"], "recognizedBy": {"@type": "GovernmentOrganization", "name": "Texas Department of Insurance"}},
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Texas independent adjuster license",
+             "identifier": BIZ["ia_license_number"], "recognizedBy": {"@type": "GovernmentOrganization", "name": "Texas Department of Insurance"}},
+            {"@type": "EducationalOccupationalCredential", "credentialCategory": "certification", "name": "P.L.A.N. Umpire / Appraiser Certification"},
+        ],
     }
 
 
@@ -214,7 +218,7 @@ def header(active=None):
         cur = ' aria-current="page"' if href == active else ""
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return f"""<div class="topbar"><div class="wrap topbar-in">
-<span><strong>Independent appraisers for Texas policyholders</strong> &middot; Flat fees, never a percentage of the award</span>
+<span><strong>Independent appraisers for Texas policyholders</strong> &middot; Certified appraiser &amp; umpire &middot; Statewide Texas</span>
 <span class="topbar-links"><a href="tel:{TEL}">Call {PHONE}</a><a href="sms:{TEL}">Text {PHONE}</a></span>
 </div></div>
 <header class="site-header"><div class="wrap header-in">
@@ -229,6 +233,7 @@ def header(active=None):
 def footer():
     services = "".join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)
     guides = "".join(f'<a href="{g["path"]}">{g["nav_label"]}</a>' for g in GUIDES)
+    city_links = " &middot; ".join(f'<a href="{c["path"]}">{c["name"]}</a>' for c in CITIES)
     return f"""</main>
 <section class="cta-band" aria-label="Call to action"><div class="wrap cta-band-in">
 <div><h2>Disagree with the carrier's number?</h2><p>Send us the estimate. We will tell you within one business day whether appraisal fits and what it would cost.</p></div>
@@ -243,8 +248,10 @@ def footer():
 </div>
 <div><div class="footer-title">Appraisal Services</div><div class="footer-links">{services}<a href="/services/">All services</a></div></div>
 <div><div class="footer-title">Guides</div><div class="footer-links"><a href="/appraisal-process/">How appraisal works</a>{guides}<a href="/faq/">FAQ</a></div></div>
-<div><div class="footer-title">Company</div><div class="footer-links"><a href="/about/">About</a><a href="/service-areas/">Service areas</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-use/">Terms of use</a></div></div>
+<div><div class="footer-title">Company</div><div class="footer-links"><a href="/about/">About</a><a href="/joseph-dittman/">Joseph Dittman, appraiser</a><a href="/service-areas/">Service areas</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-use/">Terms of use</a></div></div>
 </div>
+<div class="footer-title" style="margin-top:8px">Insurance appraiser by city</div>
+<p class="footer-cities">{city_links}</p>
 <p class="disclaimer">Appraisal determines the amount of loss, not coverage. Nothing on this site is legal advice; consult a Texas attorney about your claim. Appraisal and umpire services are provided only under a signed engagement letter. We do not serve as appraiser on claims where Rise Public Adjusting acted as public adjuster.</p>
 <div class="footer-bottom"><span>&copy; {TODAY[:4]} {BIZ['legal_name']}. All rights reserved.</span><span><a href="/sitemap.xml">Sitemap</a></span></div>
 </div></footer>
@@ -348,7 +355,7 @@ def sidebar(current=None):
 def author_box():
     return f"""<div class="author-box">
 <img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, appraiser and licensed Texas public adjuster" width="72" height="72" loading="lazy">
-<p><strong>{BIZ['principal']}</strong>{BIZ['principal_title']} ({BIZ['license_label']}). Joseph serves as policyholder-appointed appraiser and as umpire on property losses across Texas. <a href="/about/">About</a></p>
+<p><strong>{BIZ['principal']}</strong>{BIZ['principal_title']}. 463 appraisals closed in 2025, eight years of carrier-side adjusting, six years in construction. Serves as policyholder-appointed appraiser and as umpire statewide. <a href="/joseph-dittman/">Full bio</a></p>
 </div>"""
 
 
@@ -370,6 +377,12 @@ def service_cards(items, cls="grid grid-3"):
         cards.append(f'<a class="card" href="{s["path"]}"><div class="card-icon">{icon(s["icon"])}</div>'
                      f'<h3>{s["nav_label"]}</h3><p>{s["card"]}</p><span class="more">Learn more &rarr;</span></a>')
     return f'<div class="{cls}">{"".join(cards)}</div>'
+
+
+def city_cards(items=None):
+    items = items or CITIES
+    cards = "".join(f'<a class="card city-card" href="{c["path"]}"><h3>{c["name"]}</h3><p>{c["county"]} &middot; {c["region"]}</p><span class="more">Insurance appraiser in {c["name"]} &rarr;</span></a>' for c in items)
+    return f'<div class="grid grid-4">{cards}</div>'
 
 
 def guide_cards(items):
@@ -395,18 +408,18 @@ def steps_block(dark=True):
 def build_home():
     page = {
         "path": "/",
-        "title": "Policyholder Appraiser | Independent Insurance Appraisers in Texas",
-        "description": ("Independent insurance appraiser for Texas policyholders. Appoint us under the appraisal clause "
-                        "to settle disputed roof, water, storm and fire claims. Flat fees. (832) 503-5866."),
+        "title": "Texas Insurance Appraiser & Umpire for Policyholders | Policyholder Appraiser",
+        "description": ("Certified insurance appraiser and umpire for Texas policyholders. Invoke your appraisal clause and "
+                        "appoint an independent claim appraiser for roof, water, storm and fire disputes. (832) 503-5866."),
     }
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), faq_schema(FAQ[:8])]
     body = f"""<section class="hero"><div class="wrap hero-in">
 <div>
-<p class="eyebrow">Independent insurance appraisers &middot; Texas</p>
-<h1>Your appraiser in the <span>insurance appraisal process.</span></h1>
+<p class="eyebrow">Certified insurance appraiser &amp; umpire &middot; Texas</p>
+<h1>Texas insurance appraiser <span>for policyholders.</span></h1>
 <p class="lede">When the carrier agrees your loss is covered but will not agree on what it costs, your policy lets you invoke appraisal. You appoint an appraiser. We are the appraiser Texas policyholders appoint: competent, independent, and disinterested in the outcome, which is exactly what makes our number hold up.</p>
 <div class="hero-actions"><a class="btn btn-brass" href="/contact/">Request a Free Review</a><a class="btn btn-ghost-light" href="/appraisal-process/">How appraisal works</a></div>
-<ul class="trust-row"><li>Flat fee, never a percentage of the award</li><li>{BIZ['license_label']}</li><li>Residential &amp; commercial</li><li>Statewide Texas</li></ul>
+<ul class="trust-row"><li>Flat fee, quoted in writing</li><li>{BIZ['license_label']}</li><li>Residential &amp; commercial</li><li>Statewide Texas</li></ul>
 </div>
 <div class="hero-card">
 <p class="eyebrow" style="color:var(--brass-ink)">Is appraisal right for your claim?</p>
@@ -446,7 +459,7 @@ def build_home():
 <h2>An appraiser with a stake in the award is an appraiser the umpire discounts.</h2>
 <p>Texas now requires appraisers to be competent, independent of the parties and disinterested in the outcome. We built the practice around that standard before it was a rule:</p>
 <ul class="check-list">
-<li>Fees are flat or hourly, quoted in writing, and never a percentage of the award</li>
+<li>Fees are flat or hourly and quoted in writing before you appoint us</li>
 <li>We decline appointments on any claim where Rise Public Adjusting acted as public adjuster</li>
 <li>Our estimates are written in industry-standard software, line by line, so they can be compared and defended</li>
 <li>We tell you when appraisal is the wrong tool, including when the real dispute is coverage</li>
@@ -456,7 +469,7 @@ def build_home():
 <div class="panel">
 <p class="eyebrow">Credentials</p>
 <h3>{BIZ['principal']}</h3>
-<p class="small">{BIZ['principal_title']}. {BIZ['license_label']}, verifiable through the Texas Department of Insurance license lookup. Residential and commercial estimating experience on hail, wind, water and fire losses across Texas.</p>
+<p class="small">Certified insurance appraiser and umpire. Texas public adjuster license #{BIZ['license_number']} and independent adjuster license #{BIZ['ia_license_number']}, both verifiable on the TDI license lookup. 463 appraisals closed and settled in 2025. Eight years of carrier-side adjusting and six years of hands-on construction behind every estimate. <a href="/joseph-dittman/" style="color:#fff;font-weight:700">Full bio &rarr;</a></p>
 <img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, appraiser and licensed Texas public adjuster" class="portrait" width="320" height="320" loading="lazy" style="margin-top:16px">
 </div>
 </div></section>
@@ -464,6 +477,11 @@ def build_home():
 <section class="sand"><div class="wrap">
 <div class="section-head"><p class="eyebrow">Guides</p><h2>Understand the process before you start it</h2></div>
 {guide_cards(GUIDES)}
+</div></section>
+
+<section><div class="wrap">
+<div class="section-head"><p class="eyebrow">Statewide</p><h2>Insurance appraiser in every major Texas city</h2><p>Based in Houston, working everywhere in Texas. Each city page covers the storms, housing stock and county courts that shape appraisals there.</p></div>
+{city_cards()}
 </div></section>
 
 {faq_block(FAQ[:8])}
@@ -504,9 +522,9 @@ def build_service(s):
 
 
 def build_process():
-    page = {"path": "/appraisal-process/", "title": "How the Insurance Appraisal Process Works in Texas",
+    page = {"path": "/appraisal-process/", "title": "Insurance Appraisal Process & Appraisal Clause Explained | Texas",
             "description": "The insurance appraisal process step by step: the demand, appointing appraisers, the inspection, umpire selection and the binding award, with Texas deadlines.",
-            "eyebrow": "The process", "h1": "How the Insurance Appraisal Process <span>Works</span>",
+            "eyebrow": "The process", "h1": "The Insurance Appraisal Process, <span>Step by Step</span>",
             "intro": "Appraisal is the dispute-resolution process written into most property policies for one question: how much is the loss? Here is each step, who does what, and the deadlines that now apply in Texas."}
     graph = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema([("Home", "/"), ("How Appraisal Works", page["path"])]),
              {"@type": "HowTo", "name": "How to resolve a disputed Texas property claim through appraisal",
@@ -529,10 +547,10 @@ def build_process():
 <p>Find the Conditions section of the full policy. The appraisal clause will tell you who may demand appraisal, any time limit, how an umpire is chosen if the appraisers cannot agree, and how costs are split. For residential and personal auto policies issued or renewed on or after March 1, 2027, Texas requires the clause to give both sides a unilateral right to demand appraisal, with no impasse requirement, and to state the deadlines summarized on this page. Commercial and TWIA policies keep their own clauses.</p>
 
 <h2>Step 3: Demand appraisal in writing</h2>
-<p>Send a short letter to the carrier's claims department identifying the claim, invoking the appraisal provision and naming your appraiser. Deliver it in a way you can prove, such as certified mail plus email, and keep a copy. Our <a href="/guides/how-to-demand-appraisal/">demand guide</a> includes a sample letter. Under the 2027 rules the demand generally must be made before the policy's limitations period for filing suit runs, and special timing applies once a pre-suit notice is served or a lawsuit is filed.</p>
+<p>Send a short letter to the carrier's claims department identifying the claim, invoking the appraisal provision and naming your appraiser. Deliver it in a way you can prove, such as certified mail plus email, and keep a copy. Our <a href="/guides/invoke-appraisal-clause/">guide to invoking the appraisal clause</a> includes a sample letter. Under the 2027 rules the demand generally must be made before the policy's limitations period for filing suit runs, and special timing applies once a pre-suit notice is served or a lawsuit is filed.</p>
 
 <h2>Step 4: Both sides appoint appraisers</h2>
-<p>Each party hires its own appraiser and gives the other side the appraiser's name and contact information. The 2027 Texas rules allow 20 days. Appraisers must be competent for the type of loss, independent of the parties and disinterested in the outcome; on residential dwelling losses they must also be a licensed adjuster or public adjuster with estimating experience, an engineer or architect, or a qualified tradesperson. Ask any appraiser how they are paid. A percentage of the award is a conflict of interest.</p>
+<p>Each party hires its own appraiser and gives the other side the appraiser's name and contact information. The 2027 Texas rules allow 20 days. Appraisers must be competent for the type of loss, independent of the parties and disinterested in the outcome; on residential dwelling losses they must also be a licensed adjuster or public adjuster with estimating experience, an engineer or architect, or a qualified tradesperson. Ask any appraiser how they are paid and whether they had any prior role in your claim.</p>
 
 <h2>Step 5: Inspection and the appraiser conference</h2>
 <p>The appraisers inspect the property, jointly or separately, and each prepares an itemized estimate. They then compare estimates line by line, agree on what they can and list what remains in dispute. A large share of most gaps closes at this stage. Under the 2027 rules the appraisers have 120 days from the demand to attempt agreement.</p>
@@ -596,60 +614,141 @@ def build_faq():
 
 
 def build_about():
-    page = {"path": "/about/", "title": "About Joseph Dittman, Texas Insurance Appraiser | Policyholder Appraiser",
-            "description": "The appraisal and umpire practice of Rise Public Adjusting LLC, led by Joseph Dittman, a Texas-licensed public adjuster (#3356839) serving policyholders statewide.",
+    city_list = ", ".join(f'<a href="{c["path"]}">{c["name"]}</a>' for c in CITIES[:-1]) + f' and <a href="{CITIES[-1]["path"]}">{CITIES[-1]["name"]}</a>'
+    page = {"path": "/about/", "title": "About Policyholder Appraiser | Texas Insurance Appraisal Practice",
+            "description": "Policyholder Appraiser is the statewide appraisal and umpire practice of Joseph Dittman, a certified insurance appraiser and licensed Texas adjuster serving policyholders statewide.",
             "eyebrow": "About", "h1": "An appraisal practice built on <span>independence</span>",
-            "intro": "Policyholder Appraiser is the appraisal and umpire practice of Rise Public Adjusting LLC. We exist because Texas homeowners deserve an appraiser who is as prepared as the carrier's, and as impartial as the rule requires."}
+            "intro": "Policyholder Appraiser is the appraisal and umpire practice of Joseph Dittman and Rise Public Adjusting LLC. It exists because Texas policyholders deserve an appraiser who is as prepared as the carrier's, as impartial as the rule requires, and available in every corner of the state."}
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page, "AboutPage"), breadcrumb_schema([("Home", "/"), ("About", "/about/")])]
     body = page_hero(page, [("Home", "/"), ("About", "/about/")]) + f"""
 <section><div class="wrap split">
-<div><img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, appraiser and licensed Texas public adjuster" class="portrait" width="320" height="320" id="joseph-dittman"></div>
+<div><img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, certified insurance appraiser and umpire" class="portrait" width="320" height="320"><p class="center" style="margin-top:18px"><a class="btn btn-dark" href="/joseph-dittman/">Read Joseph's full bio</a></p></div>
 <div class="prose">
 <h2>{BIZ['principal']}</h2>
 <p><strong>{BIZ['principal_title']}</strong></p>
-<p>Joseph Dittman is a Texas-licensed public adjuster who has spent his career on the policyholder side of property claims: inspecting hail, wind, water and fire losses, writing line-item estimates, and negotiating with carrier adjusters across Greater Houston and the state. Rise Public Adjusting LLC holds Texas Department of Insurance public adjuster license #{BIZ['license_number']}, which you can verify on the TDI license lookup.</p>
+<p>Joseph Dittman is a certified insurance appraiser and umpire who has worked property claims from every side of the table: eight years as an independent adjuster for carriers, hands-on years as a construction foreman, and public adjusting on the policyholder side with Rise Public Adjusting LLC. He holds Texas public adjuster license #{BIZ['license_number']} and independent adjuster license #{BIZ['ia_license_number']}, both verifiable on the TDI license lookup, and closed 463 appraisals in 2025 alone.</p>
+<p>He works all over Texas, not just Houston. Appraisal and umpire engagements run statewide, including {city_list}, with the same flat, written fee wherever the property sits.</p>
 <p>Policyholder Appraiser is the part of that practice devoted to the appraisal clause. In the appraiser's chair Joseph's job changes: no longer an advocate negotiating a settlement, but an independent professional determining the amount of loss and defending that determination to the carrier's appraiser and, where needed, to an umpire.</p>
 <h3>How we keep the roles separate</h3>
 <ul>
 <li>We do not serve as appraiser on any claim in which Rise Public Adjusting acted as the public adjuster.</li>
-<li>Appraisal and umpire fees are flat or hourly and quoted in writing. They are never a percentage of the award.</li>
+<li>Appraisal and umpire fees are flat or hourly and quoted in writing before you appoint us.</li>
 <li>Before accepting an umpire appointment we disclose any prior dealings with either party, either appraiser or counsel.</li>
 <li>We decline engagements where appraisal cannot help, including coverage denials.</li>
 </ul>
 <h3>Qualified under the 2027 Texas rules</h3>
-<p>28 TAC §5.9804 requires appraisers and umpires on residential dwelling losses to be competent by training or experience, independent of the parties, disinterested in the outcome, and either a licensed adjuster or public adjuster with residential estimating experience, an engineer or architect, or a qualified tradesperson. Joseph meets the public adjuster standard with daily residential and commercial estimating experience.</p>
+<p>28 TAC §5.9804 requires appraisers and umpires on residential dwelling losses to be competent by training or experience, independent of the parties, disinterested in the outcome, and either a licensed adjuster or public adjuster with residential estimating experience, an engineer or architect, or a qualified tradesperson. Joseph meets the adjuster standard twice over, with daily residential and commercial estimating experience and a construction background behind it.</p>
 </div>
 </div></section>
 <section class="sand"><div class="wrap">
-<div class="section-head"><p class="eyebrow">Related practices</p><h2>Part of the Rise Public Adjusting family</h2><p>Rise Public Adjusting LLC also operates public adjusting practices in Texas, including Houston Public Adjusters. Those practices represent policyholders in presenting and negotiating claims. Policyholder Appraiser is kept separate so that our appraisal work remains independent.</p></div>
-<ul class="pill-row">{''.join(f'<li>{m}</li>' for m in MARKETS)}</ul>
-<p style="margin-top:14px"><a href="/service-areas/">Where we serve</a></p>
+<div class="section-head"><p class="eyebrow">Where we work</p><h2>Statewide Texas, city by city</h2><p>Rise Public Adjusting LLC also operates public adjusting practices in Texas. Those practices represent policyholders in presenting and negotiating claims; Policyholder Appraiser is kept separate so that appraisal work remains independent. Appraisal and umpire engagements are accepted anywhere in the state.</p></div>
+{city_cards()}
 </div></section>
 """ + contact_section()
     write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
-
 def build_areas():
-    page = {"path": "/service-areas/", "title": "Texas Service Areas | Policyholder Appraiser",
-            "description": "Independent insurance appraisers serving policyholders statewide in Texas: Houston, Dallas-Fort Worth, San Antonio, Austin, the Gulf Coast and the Rio Grande Valley.",
-            "eyebrow": "Service areas", "h1": "Appraisal services <span>across Texas</span>",
-            "intro": "The appraisal clause works the same way in every Texas county, and so do we. Based in the Houston area, we travel statewide; travel is included in the quoted fee."}
-    graph = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema([("Home", "/"), ("Service Areas", "/service-areas/")])]
-    regions = [
-        ("Greater Houston & the Upper Gulf Coast", "Houston, Sugar Land, Pearland, League City, Friendswood, Pasadena, The Woodlands, Galveston, Beaumont and Port Arthur. Hurricane, hail and freeze losses dominate here, and our home base means fast scheduling."),
-        ("Dallas-Fort Worth", "Dallas, Fort Worth, Arlington, Plano, Frisco, McKinney and Denton. North Texas hail seasons generate a steady volume of roof repair-versus-replace disputes."),
-        ("San Antonio & the Hill Country", "San Antonio, New Braunfels, San Marcos and Kerrville. Hail, wind and plumbing losses."),
-        ("Austin & Central Texas", "Austin, Round Rock, Georgetown, Hutto, Waco and Temple. Rapidly built housing stock with frequent code-upgrade disputes."),
-        ("Coastal Bend & South Texas", "Corpus Christi, Victoria, Rockport, McAllen, Brownsville and Laredo. Hurricane and windstorm appraisals, including TWIA policies under TWIA's own process."),
-        ("West Texas & the Panhandle", "Lubbock, Amarillo, Midland, Odessa and El Paso. Hail and wind losses on residential and commercial roofs."),
-    ]
-    cards = "".join(f'<div class="card"><h3>{n}</h3><p>{d}</p></div>' for n, d in regions)
+    page = {"path": "/service-areas/", "title": "Insurance Appraiser Service Areas in Texas | Policyholder Appraiser",
+            "description": "Independent insurance appraiser and umpire serving every major Texas city: Houston, San Antonio, Dallas, Fort Worth, Austin, El Paso and more. Pick your city.",
+            "eyebrow": "Service areas", "h1": "Insurance appraiser <span>across Texas</span>",
+            "intro": "The appraisal clause works the same way in every Texas county, but the storms, the housing and the courts that appoint umpires do not. Each city below has its own page covering what drives appraisals there. Based in Houston; travel statewide is included in the quoted fee."}
+    graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Service Areas", "/service-areas/")]),
+             {"@type": "ItemList", "name": "Texas cities served", "itemListElement": [
+                 {"@type": "ListItem", "position": i + 1, "name": f"Insurance appraiser in {c['name']}, TX", "url": url(c["path"])} for i, c in enumerate(CITIES)]}]
     body = page_hero(page, [("Home", "/"), ("Service Areas", "/service-areas/")]) + f"""
-<section><div class="wrap"><div class="grid grid-3">{cards}</div>
-<p style="margin-top:22px;color:var(--slate)">Not listed? If the property is in Texas, call. Remote document review and video walk-throughs can also cover early steps for distant properties before an in-person inspection.</p></div></section>
+<section><div class="wrap">{city_cards()}
+<p style="margin-top:22px;color:var(--slate)">Not listed? If the property is in Texas, call. Remote document review and video walk-throughs cover the early steps for distant properties before an in-person inspection.</p></div></section>
 """ + faq_block(FAQ[:5]) + contact_section()
     write(page["path"], head(page, graph) + header("/service-areas/") + body + footer())
 
+
+def build_city(c):
+    page = {"path": c["path"], "title": c["title"], "description": c["description"], "eyebrow": f"Insurance appraiser &middot; {c['name']}, Texas",
+            "h1": c["h1"], "intro": c["intro"]}
+    trail = [("Home", "/"), ("Service Areas", "/service-areas/"), (c["name"], c["path"])]
+    graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(c["faq"]),
+             {"@type": "Service", "@id": url(c["path"]) + "#service", "name": f"Insurance appraisal services in {c['name']}, TX",
+              "serviceType": "Insurance claim appraisal and umpire services", "provider": {"@id": ORG_ID},
+              "areaServed": [{"@type": "City", "name": c["name"], "containedInPlace": {"@type": "State", "name": "Texas"}}] + [{"@type": "City", "name": n} for n in c["nearby"]],
+              "url": url(c["path"]), "description": c["description"]}]
+    others = [o for o in CITIES if o["slug"] != c["slug"]]
+    other_links = " &middot; ".join(f'<a href="{o["path"]}">{o["name"]}</a>' for o in others)
+    nearby = "".join(f"<li>{n}</li>" for n in c["nearby"])
+    faqs = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in c["faq"])
+    body = page_hero(page, trail) + f"""
+<section><div class="wrap prose-grid">
+<article class="prose">{c['body']}
+<h2>Questions from {c['name']} policyholders</h2>
+{faqs}
+{author_box()}
+</article>
+<aside class="sidebar">
+<div class="side-card"><h3>Appraiser for your {c['name']} claim</h3><p>Send the carrier's estimate. One business day for a straight answer and a written fee.</p><a class="btn btn-brass" href="/contact/">Request a Free Review</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card light"><h3>Also serving near {c['name']}</h3><ul class="pill-row" style="margin-top:4px">{nearby}</ul></div>
+<div class="side-card light"><h3>Appraisal services</h3><div class="side-list">{''.join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)}</div></div>
+<div class="side-card light"><h3>Guides</h3><div class="side-list"><a href="/appraisal-process/">How appraisal works</a><a href="/texas-appraisal-rules/">2027 Texas appraisal rules</a><a href="/guides/invoke-appraisal-clause/">How to invoke the appraisal clause</a></div></div>
+</aside>
+</div></section>
+<section class="sand"><div class="wrap"><p class="eyebrow">Other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_links}</p></div></section>
+""" + contact_section()
+    write(c["path"], head(page, graph) + header("/service-areas/") + body + footer())
+
+
+def build_bio():
+    b = BIO
+    page = {"path": b["path"], "title": b["title"], "description": b["description"], "eyebrow": b["eyebrow"], "h1": b["h1"], "intro": b["intro"]}
+    trail = [("Home", "/"), ("About", "/about/"), ("Joseph Dittman", b["path"])]
+    person = person_schema(); person["description"] = b["description"]
+    graph = [org_schema(), person, website_schema(), webpage_schema(page, "ProfilePage"), breadcrumb_schema(trail)]
+    stats = "".join(f'<div class="stat"><strong>{n}</strong><span>{d}</span></div>' for n, d in b["stats"])
+    lic = "".join(f"<li>{x}</li>" for x in b["licenses"])
+    skills = "".join(f"<li>{x}</li>" for x in b["skills"])
+    testimony = "".join(f"<li>{x}</li>" for x in b["testimony"])
+    city_list = ", ".join(f'<a href="{c["path"]}">{c["name"]}</a>' for c in CITIES)
+    writing = "".join(f'<li><a href="{u}" rel="noopener">{t_}</a></li>' for t_, u in b["writing"])
+    body = page_hero(page, trail) + f"""
+<div class="stats"><div class="wrap stats-in">{stats}</div></div>
+<section><div class="wrap prose-grid">
+<article class="prose" id="person">
+<h2>Appraisal and umpire experience (2022 to present)</h2>
+<p>463 appraisals closed and settled in 2025. Loss types handled: {b['loss_types']}. Engagements have been balanced between policyholder-appointed and carrier-appointed appraiser roles, which supports impartial umpire selection and award drafting that both sides can accept.</p>
+<p>Issues regularly evaluated: {b['issues']}.</p>
+<p>Carriers appraised for or against include {b['appraisal_carriers']}.</p>
+
+<h2>Sworn testimony</h2>
+<ul>{testimony}</ul>
+
+<h2>Carrier-side independent adjusting (2018 to 2025)</h2>
+<p><strong>Commercial:</strong> {b['ia_commercial']}.</p>
+<p><strong>E&amp;O and liability:</strong> {b['ia_liability']}.</p>
+<p><strong>Residential:</strong> {b['ia_residential']}.</p>
+<p>Loss types: wind, hail, sewage backups, pipe bursts, fire, tornado, hurricane, explosions, mitigation and complex multi-trade losses. Eight years of writing carrier estimates is why the carrier's appraiser cannot surprise us with a line item.</p>
+
+<h2>Policyholder-side public adjusting</h2>
+<p>{b['pa']} Policyholder Appraiser is kept separate from that work: we do not serve as appraiser on any claim where Rise Public Adjusting acted as public adjuster.</p>
+
+<h2>Construction and trades background</h2>
+<p>{b['construction']}</p>
+
+<h2>Licenses and certifications</h2>
+<ul>{lic}</ul>
+
+<h2>Umpire-relevant skills</h2>
+<ul>{skills}</ul>
+
+<h2>Writing</h2>
+<ul>{writing}<li>Author and publisher at <a href="https://txinsuranceappraiser.com" rel="noopener">txinsuranceappraiser.com</a></li></ul>
+
+<h2>Where Joseph works</h2>
+<p>Statewide Texas, including {city_list}, and the surrounding counties of each. Travel is included in the quoted fee.</p>
+</article>
+<aside class="sidebar">
+<div class="side-card"><img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, certified insurance appraiser and umpire" class="portrait" width="220" height="220" style="width:160px;margin-bottom:14px"><h3>Appoint Joseph as your appraiser</h3><p>Or request him as umpire. Written fee before any engagement.</p><a class="btn btn-brass" href="/contact/">Contact</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card light"><h3>Services</h3><div class="side-list">{''.join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)}</div></div>
+</aside>
+</div></section>
+""" + contact_section()
+    write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
 def build_contact():
     page = {"path": "/contact/", "title": "Contact Policyholder Appraiser | Free Claim Review | (832) 503-5866",
@@ -748,13 +847,16 @@ def main():
     build_faq()
     build_about()
     build_areas()
+    for c in CITIES:
+        build_city(c)
+    build_bio()
     build_contact()
     build_thanks()
     build_legal("/privacy-policy/", "Privacy Policy", "Privacy Policy", PRIVACY_BODY)
     build_legal("/terms-of-use/", "Terms of Use", "Terms of Use", TERMS_BODY)
     build_404()
     indexable = ["/", "/services/"] + [s["path"] for s in SERVICES] + ["/appraisal-process/", "/guides/"] + \
-                [g["path"] for g in GUIDES] + ["/faq/", "/about/", "/service-areas/", "/contact/", "/privacy-policy/", "/terms-of-use/"]
+                [g["path"] for g in GUIDES] + ["/faq/", "/about/", BIO["path"], "/service-areas/"] + [c["path"] for c in CITIES] + ["/contact/", "/privacy-policy/", "/terms-of-use/"]
     build_sitemap(indexable)
     n = sum(len(f) for _, _, f in os.walk(OUT))
     print(f"built {len(indexable)} pages, {n} files -> {OUT}")

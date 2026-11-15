@@ -11,7 +11,7 @@ FAQ = [
      "A public adjuster represents you in presenting and negotiating the claim and is typically paid a percentage of "
      "the settlement. An appraiser is appointed only after a dispute over the amount of loss, participates in a "
      "formal process that ends in a binding award, and must be disinterested in the outcome, which is why we charge a "
-     "flat or hourly fee and never a percentage of the award."),
+     "flat or hourly fee quoted in writing before you appoint us."),
     ("Does appraisal decide whether my claim is covered?",
      "No. Appraisal is limited to the amount of loss. If the carrier has denied your claim on coverage grounds, "
      "appraisal is generally not the right tool. If the carrier accepted the loss but underpaid it, appraisal is "
@@ -22,8 +22,8 @@ FAQ = [
      "not in substantial compliance with the appraisal clause, or affected by fraud, accident or material mistake."),
     ("How much does an appraiser cost?",
      "Each party pays its own appraiser, and the umpire's fee is usually split equally. We quote a flat or hourly fee "
-     "in writing before you appoint us, based on the size and type of the loss. We do not charge a percentage of the "
-     "award, because an appraiser with a stake in the outcome is not disinterested."),
+     "in writing before you appoint us, based on the size and type of the loss, so you know the cost before the "
+     "process starts."),
     ("How long does appraisal take in Texas?",
      "Many appraisals conclude within one to three months. For residential policies issued or renewed on or after "
      "March 1, 2027, Texas rules require each side to name an appraiser within 20 days of the demand, the appraisers "
@@ -36,7 +36,7 @@ FAQ = [
      "Under 28 TAC §5.9804, appraisers on residential dwelling losses must be competent by training or experience, "
      "independent of the parties and disinterested in the outcome, and must be a licensed adjuster or public adjuster "
      "with residential estimating experience, an engineer or architect, or someone with relevant trade experience. "
-     "Our appraiser is a Texas-licensed public adjuster (license #3356839)."),
+     "Joseph Dittman holds Texas public adjuster license #3341461 and independent adjuster license #2341686."),
     ("Will you serve as appraiser if Rise Public Adjusting was my public adjuster?",
      "No. An appraiser must be independent and disinterested, and a firm that adjusted the claim has an interest in "
      "its outcome. We decline appraiser appointments on any claim where Rise Public Adjusting acted as public "

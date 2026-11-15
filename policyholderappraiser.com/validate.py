@@ -110,6 +110,23 @@ for fs in sorted(pages()):
     if "huttoroofs" in html or "Hutto Roofers" in html:
         errors.append(f"{sp}: leftover copy from another site")
 
+# --- city pages: no body paragraph may repeat on another city page ---
+seen = {}
+for fs in sorted(pages()):
+    sp = site_path(fs)
+    if not (sp.startswith("/service-areas/") and sp.endswith("-tx/")):
+        continue
+    html = open(fs, encoding="utf-8").read()
+    m = re.search(r'<article class="prose">(.*?)<div class="author-box">', html, re.S)
+    body = m.group(1) if m else ""
+    for para in re.findall(r"<(?:p|li)>(.*?)</(?:p|li)>", body, re.S):
+        key = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", para)).strip().lower()
+        if len(key) < 60:
+            continue
+        if key in seen and seen[key] != sp:
+            errors.append(f"{sp}: paragraph duplicated from {seen[key]}: {key[:70]}...")
+        seen.setdefault(key, sp)
+
 print(f"checked {len(titles)} pages")
 for w in warnings:
     print("WARN", w)

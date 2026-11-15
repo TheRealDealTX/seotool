@@ -19,13 +19,13 @@ PRIVACY_BODY = r'''
 <h2>Data retention and security</h2>
 <p>We keep inquiry and engagement records as long as reasonably necessary for business, legal and professional purposes. We use reasonable administrative and technical safeguards, but no internet transmission is completely secure.</p>
 <h2>Your choices</h2>
-<p>You may ask us to update or delete information you provided, or to stop contacting you, by emailing <a href="mailto:info@policyholderappraiser.com">info@policyholderappraiser.com</a> or calling (832) 503-5866. We will honor requests as the law allows.</p>
+<p>You may ask us to update or delete information you provided, or to stop contacting you, by emailing <a href="mailto:josephdittmanappraiser@gmail.com">josephdittmanappraiser@gmail.com</a> or calling (832) 503-5866. We will honor requests as the law allows.</p>
 <h2>Children</h2>
 <p>This website is not directed to children under 13 and we do not knowingly collect information from them.</p>
 <h2>Changes</h2>
 <p>We may update this policy from time to time. The effective date above shows when it was last revised.</p>
 <h2>Contact</h2>
-<p>Rise Public Adjusting LLC, d/b/a Policyholder Appraiser<br>Phone: (832) 503-5866<br>Email: <a href="mailto:info@policyholderappraiser.com">info@policyholderappraiser.com</a></p>
+<p>Rise Public Adjusting LLC, d/b/a Policyholder Appraiser<br>Phone: (832) 503-5866<br>Email: <a href="mailto:josephdittmanappraiser@gmail.com">josephdittmanappraiser@gmail.com</a></p>
 '''
 
 TERMS_BODY = r'''
@@ -38,7 +38,7 @@ TERMS_BODY = r'''
 <h2>Independence</h2>
 <p>When engaged as an appraiser or umpire, we act as the policy and Texas law require: competently, independently and disinterested in the outcome. We do not guarantee any particular award or result.</p>
 <h2>Licensing</h2>
-<p>Public adjusting services, where provided, are provided by Rise Public Adjusting LLC under Texas Department of Insurance public adjuster license #3356839. Appraisal and umpire services are distinct from public adjusting, and we do not serve as appraiser on any claim in which Rise Public Adjusting acted as public adjuster.</p>
+<p>Public adjusting services, where provided, are provided by Rise Public Adjusting LLC under Texas Department of Insurance public adjuster license #3356839 and Joseph Dittman's individual public adjuster license #3341461. Appraisal and umpire services are distinct from public adjusting, and we do not serve as appraiser on any claim in which Rise Public Adjusting acted as public adjuster.</p>
 <h2>Intellectual property</h2>
 <p>Site content, including text, graphics and the Policyholder Appraiser name and mark, belongs to us or our licensors. You may view and print pages for personal, non-commercial use. The sample appraisal demand letter on the Site may be adapted for your own claim.</p>
 <h2>Third-party links</h2>
@@ -50,5 +50,5 @@ TERMS_BODY = r'''
 <h2>Changes</h2>
 <p>We may update these terms at any time by posting a revised version with a new effective date.</p>
 <h2>Contact</h2>
-<p>Questions about these terms: <a href="mailto:info@policyholderappraiser.com">info@policyholderappraiser.com</a> or (832) 503-5866.</p>
+<p>Questions about these terms: <a href="mailto:josephdittmanappraiser@gmail.com">josephdittmanappraiser@gmail.com</a> or (832) 503-5866.</p>
 '''

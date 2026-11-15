@@ -73,9 +73,9 @@ they must also be one of the following:</p>
 <li>someone with occupational experience or training in constructing or repairing the damaged property type, or estimating that type of loss.</li>
 </ul>
 <div class="callout"><span class="label">Practical effect</span>
-<p>The "disinterested in the outcome" requirement is why reputable appraisers quote a flat or hourly fee rather
-than a percentage of the award, and why a public adjuster who handled your claim should not also serve as your
-appraiser on it. Ask any prospective appraiser how they are paid and whether they have any prior role in your claim.</p></div>
+<p>The "disinterested in the outcome" requirement is why reputable appraisers quote a flat or hourly fee in
+writing, and why a public adjuster who handled your claim should not also serve as your appraiser on it. Ask any
+prospective appraiser how they are paid and whether they have any prior role in your claim.</p></div>
 
 <h2>The notice you are now entitled to (§5.9803)</h2>
 <p>Each time an insurer accepts or rejects a claim under Insurance Code §542.056, it must also provide a
@@ -178,21 +178,21 @@ you toward the tool that is.</p>
 """,
     },
     {
-        "slug": "how-to-demand-appraisal",
-        "path": "/guides/how-to-demand-appraisal/",
-        "nav_label": "How to Demand Appraisal (with sample letter)",
-        "title": "How to Demand Appraisal on a Texas Insurance Claim (Sample Letter)",
+        "slug": "invoke-appraisal-clause",
+        "path": "/guides/invoke-appraisal-clause/",
+        "nav_label": "How to Invoke the Appraisal Clause (sample letter)",
+        "title": "How to Invoke the Appraisal Clause in Texas (Sample Demand Letter)",
         "description": (
-            "How to invoke the appraisal clause on a Texas homeowners or commercial claim, with a sample "
-            "appraisal demand letter and a checklist of what to send."
+            "Step by step: how to invoke the appraisal clause on a Texas homeowners or commercial claim, with a "
+            "sample appraisal demand letter and a checklist of what to send."
         ),
-        "h1": "How to Demand Appraisal on a Texas Claim <span>(With a Sample Letter)</span>",
-        "h1_plain": "How to Demand Appraisal on a Texas Claim (With a Sample Letter)",
+        "h1": "How to Invoke the Appraisal Clause on a Texas Claim <span>(With a Sample Demand Letter)</span>",
+        "h1_plain": "How to Invoke the Appraisal Clause on a Texas Claim (With a Sample Demand Letter)",
         "eyebrow": "Step-by-step",
         "published": "2026-11-15",
-        "card": "Where to find the clause, what the demand must say, and a letter you can adapt.",
+        "card": "Where to find the appraisal clause, what the demand must say, and a letter you can adapt.",
         "intro": (
-            "Invoking appraisal is simple, but the details matter: the demand must be in writing, delivered to the "
+            "Invoking the appraisal clause is simple, but the details matter: the demand must be in writing, delivered to the "
             "right place, and it should name your appraiser. Here is how to do it correctly and what to send with it."
         ),
         "body": """
@@ -214,8 +214,8 @@ while the denied part is handled separately.</p>
 <h2>Step 3: Choose your appraiser first</h2>
 <p>Under the 2027 rules you will have 20 days after the demand to name an appraiser and give the carrier their
 contact details. It is far easier to name the appraiser in the demand itself. Confirm the appraiser is competent for
-your type of loss, independent of both you and the carrier, and disinterested in the outcome (a flat or hourly fee,
-no percentage of the award, and no prior role on your claim).</p>
+your type of loss, independent of both you and the carrier, and disinterested in the outcome (a flat or hourly fee
+quoted in writing, and no prior role on your claim).</p>
 
 <h2>Step 4: Write and deliver the demand</h2>
 <p>Keep it short. State the claim number, that you invoke the policy's appraisal provision, the amount in dispute
@@ -332,4 +332,80 @@ the new rules run from the demand date, and a late carrier letter can matter.</p
     },
 ]
 
+BY_SLUG = {g["slug"]: g for g in GUIDES}
+
+GUIDES.append({
+    "slug": "what-is-an-insurance-appraiser",
+    "path": "/guides/what-is-an-insurance-appraiser/",
+    "nav_label": "What Is an Insurance Appraiser?",
+    "title": "What Is an Insurance Appraiser? Role, Qualifications & Cost (Texas)",
+    "description": (
+        "What an insurance claim appraiser does, how a certified insurance appraiser differs from an adjuster "
+        "or public adjuster, who qualifies in Texas, and what one costs."
+    ),
+    "h1": "What Is an Insurance Appraiser, <span>and When Do You Need One?</span>",
+    "h1_plain": "What Is an Insurance Appraiser, and When Do You Need One?",
+    "eyebrow": "Definitions",
+    "published": "2026-11-15",
+    "card": "The role, the qualifications Texas now requires, and how an appraiser differs from an adjuster or public adjuster.",
+    "intro": (
+        "The phrase \"insurance appraiser\" gets used for three different jobs. This page is about the one that matters "
+        "when your claim is underpaid: the appraiser you appoint under your policy's appraisal clause to determine the "
+        "amount of loss."
+    ),
+    "body": """
+<h2>Three things people mean by "insurance appraiser"</h2>
+<ul>
+<li><strong>A carrier's auto damage appraiser</strong>, the employee or vendor who writes the estimate on a wrecked car. Not what this site is about.</li>
+<li><strong>A real estate appraiser</strong>, who values property for lending. Also not what this site is about, although the confusion is common.</li>
+<li><strong>An appraisal-clause appraiser</strong>: the competent, independent person each side appoints when the policyholder and the insurer cannot agree on the amount of a property loss. That is the insurance claim appraiser this page describes.</li>
+</ul>
+
+<h2>What an insurance claim appraiser does</h2>
+<p>When you invoke the appraisal clause, you appoint an appraiser and the carrier appoints one. Each appraiser inspects
+the damage, prices the repair in an itemized estimate, and then the two compare numbers line by line. Where they agree,
+that figure stands. Where they disagree, the two appraisers choose an umpire and the disputed items are decided by any
+two of the three. The result is an <strong>appraisal award</strong>: a binding determination of the amount of loss.</p>
+<p>The appraiser is not a negotiator, not a lawyer and not a contractor bidding for the job. The appraiser's product is a
+defensible number and the documentation behind it: photographs, measurements, moisture readings, test squares, material
+samples, code citations and pricing.</p>
+
+<h2>Appraiser versus adjuster versus public adjuster</h2>
+<div class="table-wrap"><table class="cmp">
+<thead><tr><th>Role</th><th class="hl">Appraisal-clause appraiser</th><th>Carrier adjuster</th><th>Public adjuster</th></tr></thead>
+<tbody>
+<tr><td>Works for</td><td class="hl">Appointed by one party, but must be independent and disinterested</td><td>The insurance company</td><td>The policyholder</td></tr>
+<tr><td>Job</td><td class="hl">Determine the amount of loss in a formal process ending in a binding award</td><td>Investigate and adjust the claim for the carrier</td><td>Prepare, present and negotiate the claim</td></tr>
+<tr><td>When involved</td><td class="hl">After a dispute over amount, once appraisal is invoked</td><td>From the first notice of loss</td><td>Any time before settlement</td></tr>
+<tr><td>Paid by</td><td class="hl">The party who appointed them, usually a flat or hourly fee</td><td>The carrier</td><td>The policyholder, usually a percentage of the settlement</td></tr>
+<tr><td>Decides coverage?</td><td class="hl">No</td><td>Recommends to the carrier</td><td>No</td></tr>
+</tbody></table></div>
+
+<h2>What "certified insurance appraiser" means</h2>
+<p>There is no state license called "insurance appraiser" in Texas. "Certified" generally refers to training programs
+such as the P.L.A.N. umpire and appraiser certification, or to industry designations, and it signals that the appraiser
+has studied appraisal procedure, award drafting and the ethics of the role. What Texas does regulate, beginning with
+residential policies issued or renewed on or after March 1, 2027, is who may serve: appraisers must be competent by
+training or experience, independent of the parties and disinterested in the outcome, and on dwelling losses must be a
+licensed adjuster or public adjuster with residential estimating experience, an engineer or architect, or a qualified
+tradesperson (28 TAC §5.9804).</p>
+<p>In practice the strongest appraisers combine a Texas adjuster license, deep estimating experience in the software
+carriers use, hands-on construction knowledge and a track record on both sides of the table. <a href="/joseph-dittman/">Our appraiser's background</a> is laid out in full on his bio page.</p>
+
+<h2>What an insurance appraiser costs</h2>
+<p>Each party pays its own appraiser; the umpire's fee is usually split. Appraisers charge a flat fee or an hourly rate,
+set by the size and complexity of the loss. For a typical residential roof or water dispute the fee is small relative to
+the gap between the carrier's estimate and the real cost of repair, and it is quoted in writing before you appoint
+anyone. Ask any prospective appraiser two questions: how are you paid, and have you had any prior role in this claim?</p>
+
+<h2>When you need one</h2>
+<ol>
+<li>The carrier has accepted your loss as covered.</li>
+<li>Its estimate is materially lower than the real cost to repair, and negotiation has stalled.</li>
+<li>Your policy has an appraisal clause, or will have one at your next renewal after March 1, 2027.</li>
+</ol>
+<p>If all three are true, <a href="/guides/invoke-appraisal-clause/">invoke the appraisal clause</a> and appoint an
+appraiser. If the carrier has denied coverage, an appraiser cannot help; talk to a Texas insurance attorney.</p>
+""",
+})
 BY_SLUG = {g["slug"]: g for g in GUIDES}
