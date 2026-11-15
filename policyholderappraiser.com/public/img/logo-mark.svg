@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Policyholder Appraiser">
+<rect width="64" height="64" rx="14" fill="#0f1c2b"/>
+<g fill="none" stroke="#d9a93f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+<path d="M32 14v34"/><path d="M24 48h16"/><path d="M14 22h36"/>
+<path d="M14 22l-7 14h14z"/><path d="M50 22l-7 14h14z"/>
+</g>
+<circle cx="32" cy="14" r="3.2" fill="#d9a93f"/>
+</svg>
