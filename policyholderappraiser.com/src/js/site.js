@@ -11,18 +11,16 @@
   onScroll();
 
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    var setOpen = function (open) {
+      nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', String(open));
       document.body.style.overflow = open ? 'hidden' : '';
-    });
+    };
+    toggle.addEventListener('click', function () { setOpen(!nav.classList.contains('open')); });
     nav.addEventListener('click', function (e) {
-      if (e.target.closest('a')) {
-        nav.classList.remove('open');
-        toggle.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = '';
-      }
+      if (e.target.closest('a') || e.target.closest('.nav-close')) setOpen(false);
     });
+    window.addEventListener('resize', function () { if (window.innerWidth > 1100 && nav.classList.contains('open')) setOpen(false); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && nav.classList.contains('open')) toggle.click();
     });

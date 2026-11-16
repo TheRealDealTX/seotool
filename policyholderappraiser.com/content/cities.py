@@ -306,7 +306,7 @@ CITIES = [
         "region": "Dallas-Fort Worth",
         "nearby": ["Las Colinas", "Coppell", "Grand Prairie", "Farmers Branch", "Euless", "Grapevine", "Valley Ranch"],
         "title": "Insurance Appraiser in Irving, TX | Policyholder Appraiser",
-        "description": "Policyholder-appointed insurance appraiser in Irving and Las Colinas, TX for hail, wind, water and fire claim disputes on homes and commercial property. (832) 503-5866.",
+        "description": "Policyholder-appointed insurance appraiser in Irving and Las Colinas, TX for hail, wind, water and fire disputes on homes and businesses.",
         "h1": "Insurance Appraiser in <span>Irving, TX</span>",
         "intro": "Irving pairs some of the Metroplex's oldest post-war neighborhoods with the corporate towers and gated communities of Las Colinas, and hail treats them the same. The carrier estimates do not. We serve as the policyholder's appraiser on Irving residential and commercial claims.",
         "body": """

@@ -2,10 +2,10 @@
 
 BIO = {
     "path": "/joseph-dittman/",
-    "title": "Joseph Dittman | Certified Insurance Appraiser & Umpire, Texas",
+    "title": "Joseph Dittman | Certified Insurance Appraiser & Umpire",
     "description": (
-        "Joseph Dittman is a certified insurance appraiser and umpire and a licensed Texas public and independent "
-        "adjuster: 463 appraisals closed in 2025, eight years of carrier-side adjusting, hands-on construction."
+        "Certified insurance appraiser and umpire, licensed Texas adjuster. 463 appraisals closed in 2025 "
+        "and eight years of carrier-side adjusting."
     ),
     "eyebrow": "Bio",
     "h1": "Joseph Dittman, <span>Certified Insurance Appraiser &amp; Umpire</span>",

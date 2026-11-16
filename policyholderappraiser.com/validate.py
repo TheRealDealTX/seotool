@@ -2,6 +2,7 @@
 """Post-build checks for public/: well-formed HTML, valid JSON-LD, internal
 links resolve, unique titles/descriptions, sensible lengths."""
 
+import html as htmlmod
 import json
 import os
 import re
@@ -47,7 +48,7 @@ class Checker(HTMLParser):
 def pages():
     for dp, _d, files in os.walk(OUT):
         for f in files:
-            if f.endswith(".html"):
+            if f.endswith(".html") and not f.startswith("google"):
                 yield os.path.join(dp, f)
 
 
@@ -85,15 +86,15 @@ for fs in sorted(pages()):
     if not t or not d:
         errors.append(f"{sp}: missing title/description")
     else:
-        title, desc = t.group(1), d.group(1)
+        title, desc = htmlmod.unescape(t.group(1)), htmlmod.unescape(d.group(1))
         if title in titles:
             errors.append(f"{sp}: duplicate title with {titles[title]}")
         if desc in descs and sp != "/404.html":
             errors.append(f"{sp}: duplicate description with {descs[desc]}")
         titles[title], descs[desc] = sp, sp
-        if len(title) > 70:
+        if len(title) > 60:
             warnings.append(f"{sp}: title {len(title)} chars")
-        if len(desc) > 165:
+        if len(desc) > 145:
             warnings.append(f"{sp}: description {len(desc)} chars")
     for href in c.links:
         if href.startswith(("http", "mailto:", "tel:", "sms:", "#")):

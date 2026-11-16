@@ -6,7 +6,7 @@ CITIES2 = [
         "region": "South Texas border region",
         "nearby": ["Rio Bravo", "El Cenizo", "Zapata", "Cotulla", "Hebbronville"],
         "title": "Insurance Appraiser in Laredo, TX | Policyholder Appraiser",
-        "description": "Independent insurance appraiser serving Laredo, TX policyholders on disputed wind, hail, water and fire claims, including warehouse and logistics property. (832) 503-5866.",
+        "description": "Independent insurance appraiser serving Laredo, TX policyholders on disputed wind, hail, water and fire claims, including warehouse property.",
         "h1": "Insurance Appraiser in <span>Laredo, TX</span>",
         "intro": "Laredo's claims are shaped by heat, sudden wind, flash flooding along the Rio Grande and Zacate Creek, and a commercial economy built on warehousing for the busiest inland port in the country. Carrier adjusters are rarely local, and the gap between their estimates and real Laredo repair costs is where appraisal earns its keep.",
         "body": """
@@ -63,7 +63,7 @@ CITIES2 = [
         "region": "Dallas-Fort Worth",
         "nearby": ["Prosper", "Little Elm", "The Colony", "Plano", "McKinney", "Celina", "Allen"],
         "title": "Insurance Appraiser in Frisco, TX | Policyholder Appraiser",
-        "description": "Independent insurance appraiser for Frisco, TX homeowners disputing hail and roof claim amounts on newer homes: matching, HOA standards, code upgrades. (832) 503-5866.",
+        "description": "Independent insurance appraiser for Frisco, TX homeowners disputing hail and roof claim amounts: matching, HOA standards and code upgrades.",
         "h1": "Insurance Appraiser in <span>Frisco, TX</span>",
         "intro": "Frisco's housing is almost entirely post-2000 construction, which changes the appraisal argument. Nobody disputes that the roofs are young; the fight is about matching discontinued shingle colors on enormous, complex roofs, satisfying HOA architectural standards, and paying the steep-slope labor those rooflines require.",
         "body": """
@@ -208,7 +208,7 @@ CITIES2 = [
         "region": "Central Texas",
         "nearby": ["Harker Heights", "Copperas Cove", "Temple", "Belton", "Nolanville", "Salado"],
         "title": "Insurance Appraiser in Killeen, TX | Policyholder Appraiser",
-        "description": "Policyholder-appointed insurance appraiser in Killeen, TX and Bell County for hail, tornado, wind and water claim disputes, including military families mid-move. (832) 503-5866.",
+        "description": "Policyholder-appointed insurance appraiser in Killeen, TX and Bell County for hail, tornado, wind and water disputes, on orders or not.",
         "h1": "Insurance Appraiser in <span>Killeen, TX</span>",
         "intro": "Killeen's housing serves Fort Cavazos, which means a large share of claims are filed by families who are deploying, moving or renting out a home from another state. Carriers know that an absent policyholder rarely pushes back on a low estimate. Appraisal lets you appoint someone local to do it for you.",
         "body": """
@@ -294,7 +294,7 @@ CITIES2 = [
         "region": "Austin and Central Texas",
         "nearby": ["Round Rock", "Leander", "Hutto", "Taylor", "Cedar Park", "Liberty Hill", "Jarrell", "Sun City"],
         "title": "Insurance Appraiser in Georgetown, TX | Policyholder Appraiser",
-        "description": "Policyholder-appointed insurance appraiser in Georgetown, TX and Williamson County for hail, wind, freeze and water claim disputes, including Sun City homes. (832) 503-5866.",
+        "description": "Policyholder-appointed insurance appraiser in Georgetown, TX and Williamson County for hail, wind, freeze and water disputes, Sun City included.",
         "h1": "Insurance Appraiser in <span>Georgetown, TX</span>",
         "intro": "Georgetown has been one of the fastest-growing cities in the country for a decade, which means tens of thousands of new roofs installed in the same few years, a large retirement community in Sun City, and a historic square of limestone Victorian buildings. Williamson County hail reaches all three, and the carrier estimates that follow fit none of them.",
         "body": """

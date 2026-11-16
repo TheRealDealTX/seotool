@@ -181,6 +181,12 @@ def head(page, graph):
 <link rel="canonical" href="{canonical}">
 <meta name="robots" content="{robots}">
 <meta name="theme-color" content="#0f1c2b">
+<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-W4HZ6QQF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+</script>
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{BIZ['name']}">
@@ -224,7 +230,7 @@ def header(active=None):
 <header class="site-header"><div class="wrap header-in">
 <a class="logo" href="/" aria-label="{BIZ['name']} home">{LOGO}<span class="logo-text"><strong>Policyholder Appraiser</strong><em>Texas</em></span></a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="sr">Menu</span><span></span><span></span><span></span></button>
-<nav class="site-nav" id="site-nav" aria-label="Primary"><ul>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Claim Review</a></nav>
+<nav class="site-nav" id="site-nav" aria-label="Primary"><div class="nav-head"><span class="nav-head-title">Menu</span><button class="nav-close" type="button" aria-label="Close menu">&#10005;</button></div><ul>{''.join(items)}</ul><a class="btn btn-brass nav-cta" href="/contact/">Free Claim Review</a></nav>
 </div></header>
 <main id="main">
 """
@@ -408,9 +414,9 @@ def steps_block(dark=True):
 def build_home():
     page = {
         "path": "/",
-        "title": "Texas Insurance Appraiser & Umpire for Policyholders | Policyholder Appraiser",
+        "title": "Texas Insurance Appraiser & Umpire | Policyholder Appraiser",
         "description": ("Certified insurance appraiser and umpire for Texas policyholders. Invoke your appraisal clause and "
-                        "appoint an independent claim appraiser for roof, water, storm and fire disputes. (832) 503-5866."),
+                        "appoint an independent appraiser."),
     }
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), faq_schema(FAQ[:8])]
     body = f"""<section class="hero"><div class="wrap hero-in">
@@ -491,8 +497,8 @@ def build_home():
 
 
 def build_services_index():
-    page = {"path": "/services/", "title": "Insurance Appraisal Services in Texas | Policyholder Appraiser",
-            "description": "Policyholder-appointed appraiser and neutral umpire services for residential and commercial property claims in Texas: roof, hail, hurricane, water, fire.",
+    page = {"path": "/services/", "title": "Insurance Appraisal Services in Texas | Appraiser & Umpire",
+            "description": "Policyholder-appointed appraiser and neutral umpire for residential and commercial property claims in Texas: roof, hail, hurricane, water, fire.",
             "eyebrow": "Services", "h1": "Appraisal &amp; Umpire <span>Services</span>",
             "intro": "We serve in two roles only: the appraiser a policyholder appoints under the appraisal clause, and the neutral umpire both appraisers select. Pick the loss type below."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Services", "/services/")])]
@@ -522,8 +528,8 @@ def build_service(s):
 
 
 def build_process():
-    page = {"path": "/appraisal-process/", "title": "Insurance Appraisal Process & Appraisal Clause Explained | Texas",
-            "description": "The insurance appraisal process step by step: the demand, appointing appraisers, the inspection, umpire selection and the binding award, with Texas deadlines.",
+    page = {"path": "/appraisal-process/", "title": "Insurance Appraisal Process Explained, Step by Step | Texas",
+            "description": "The insurance appraisal process step by step: the demand, appointing appraisers, the inspection, the umpire and the award, with Texas deadlines.",
             "eyebrow": "The process", "h1": "The Insurance Appraisal Process, <span>Step by Step</span>",
             "intro": "Appraisal is the dispute-resolution process written into most property policies for one question: how much is the loss? Here is each step, who does what, and the deadlines that now apply in Texas."}
     graph = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema([("Home", "/"), ("How Appraisal Works", page["path"])]),
@@ -574,8 +580,8 @@ def build_process():
 
 
 def build_guides_index():
-    page = {"path": "/guides/", "title": "Appraisal Guides for Texas Policyholders | Policyholder Appraiser",
-            "description": "Plain-language guides to insurance appraisal in Texas: the 2027 rules, how to demand appraisal, appraisal vs. public adjuster vs. lawsuit, and the inspection.",
+    page = {"path": "/guides/", "title": "Insurance Appraisal Guides for Texas Policyholders",
+            "description": "Plain-language guides to insurance appraisal in Texas: the 2027 rules, invoking the clause, appraisal vs. public adjuster vs. lawsuit.",
             "eyebrow": "Guides", "h1": "Appraisal Guides for <span>Texas Policyholders</span>",
             "intro": "Everything we wish homeowners knew before they called: how the clause works, what the new Texas rules require, and how to choose between appraisal, a public adjuster and a lawsuit."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Guides", "/guides/")])]
@@ -605,7 +611,7 @@ def build_guide(g):
 
 def build_faq():
     page = {"path": "/faq/", "title": "Insurance Appraisal FAQ for Texas Policyholders",
-            "description": "Common questions about insurance appraisal in Texas: what appraisers do, cost, how long it takes, whether the award is binding, and who may serve.",
+            "description": "Common questions about insurance appraisal in Texas: what appraisers do, cost, how long it takes, whether the award is binding and who may serve.",
             "eyebrow": "FAQ", "h1": "Insurance Appraisal <span>Questions &amp; Answers</span>",
             "intro": "Straight answers about the appraisal clause, appraiser qualifications, cost, timing and the 2027 Texas rules."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "FAQPage"), faq_schema(FAQ), breadcrumb_schema([("Home", "/"), ("FAQ", "/faq/")])]
@@ -615,8 +621,8 @@ def build_faq():
 
 def build_about():
     city_list = ", ".join(f'<a href="{c["path"]}">{c["name"]}</a>' for c in CITIES[:-1]) + f' and <a href="{CITIES[-1]["path"]}">{CITIES[-1]["name"]}</a>'
-    page = {"path": "/about/", "title": "About Policyholder Appraiser | Texas Insurance Appraisal Practice",
-            "description": "Policyholder Appraiser is the statewide appraisal and umpire practice of Joseph Dittman, a certified insurance appraiser and licensed Texas adjuster serving policyholders statewide.",
+    page = {"path": "/about/", "title": "About Policyholder Appraiser | Texas Appraisal Practice",
+            "description": "The statewide appraisal and umpire practice of Joseph Dittman, a certified insurance appraiser and licensed Texas adjuster.",
             "eyebrow": "About", "h1": "An appraisal practice built on <span>independence</span>",
             "intro": "Policyholder Appraiser is the appraisal and umpire practice of Joseph Dittman and Rise Public Adjusting LLC. It exists because Texas policyholders deserve an appraiser who is as prepared as the carrier's, as impartial as the rule requires, and available in every corner of the state."}
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page, "AboutPage"), breadcrumb_schema([("Home", "/"), ("About", "/about/")])]
@@ -648,8 +654,8 @@ def build_about():
     write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
 def build_areas():
-    page = {"path": "/service-areas/", "title": "Insurance Appraiser Service Areas in Texas | Policyholder Appraiser",
-            "description": "Independent insurance appraiser and umpire serving every major Texas city: Houston, San Antonio, Dallas, Fort Worth, Austin, El Paso and more. Pick your city.",
+    page = {"path": "/service-areas/", "title": "Insurance Appraiser Service Areas | Every Major Texas City",
+            "description": "Independent insurance appraiser and umpire serving every major Texas city: Houston, San Antonio, Dallas, Fort Worth, Austin, El Paso and more.",
             "eyebrow": "Service areas", "h1": "Insurance appraiser <span>across Texas</span>",
             "intro": "The appraisal clause works the same way in every Texas county, but the storms, the housing and the courts that appoint umpires do not. Each city below has its own page covering what drives appraisals there. Based in Houston; travel statewide is included in the quoted fee."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Service Areas", "/service-areas/")]),
@@ -663,7 +669,16 @@ def build_areas():
 
 
 def build_city(c):
-    page = {"path": c["path"], "title": c["title"], "description": c["description"], "eyebrow": f"Insurance appraiser &middot; {c['name']}, Texas",
+    title = f"{c['name']} TX Insurance Appraiser | Policyholder Appraiser"
+    if len(title) > 60:
+        title = f"Insurance Appraiser in {c['name']}, TX | Appraiser & Umpire"
+    if len(title) > 60:
+        title = f"{c['name']}, TX Insurance Appraiser & Umpire"
+    desc = c["description"]
+    for cut in (" Call (832) 503-5866.", " (832) 503-5866.", " Flat fee, binding award.", " Binding award, flat fee.", " Flat fee quoted in writing.", " Flat fee.", " Binding award without a lawsuit.", " Flat fee, binding award, no lawsuit."):
+        if len(desc) > 145:
+            desc = desc.replace(cut, "")
+    page = {"path": c["path"], "title": title, "description": desc, "eyebrow": f"Insurance appraiser &middot; {c['name']}, Texas",
             "h1": c["h1"], "intro": c["intro"]}
     trail = [("Home", "/"), ("Service Areas", "/service-areas/"), (c["name"], c["path"])]
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(c["faq"]),
@@ -751,8 +766,8 @@ def build_bio():
     write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
 def build_contact():
-    page = {"path": "/contact/", "title": "Contact Policyholder Appraiser | Free Claim Review | (832) 503-5866",
-            "description": "Send us the carrier's estimate for a free appraisal review. Call or text (832) 503-5866. Independent insurance appraisers serving Texas policyholders statewide.",
+    page = {"path": "/contact/", "title": "Contact Policyholder Appraiser | Free Claim Review",
+            "description": "Send us the carrier's estimate for a free appraisal review, or call or text (832) 503-5866. Independent insurance appraiser serving all of Texas.",
             "eyebrow": "Contact", "h1": "Request a <span>free appraisal review</span>",
             "intro": "Send the carrier's estimate and letters. Within one business day we will tell you whether appraisal fits your dispute and, if it does, quote a flat fee in writing."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "ContactPage"), breadcrumb_schema([("Home", "/"), ("Contact", "/contact/")])]

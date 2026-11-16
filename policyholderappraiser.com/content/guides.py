@@ -5,10 +5,10 @@ GUIDES = [
         "slug": "texas-appraisal-rules",
         "path": "/texas-appraisal-rules/",
         "nav_label": "Texas Appraisal Rules 2027 (SB 458)",
-        "title": "Texas Insurance Appraisal Rules 2027: SB 458 & 28 TAC 5.9800 Explained",
+        "title": "Texas Appraisal Rules 2027: SB 458 and TDI Rules Explained",
         "description": (
-            "What SB 458 and TDI's adopted rules (28 TAC §§5.9800-5.9806) mean for Texas homeowners: mandatory "
-            "appraisal clauses, 20/120/240-day deadlines, appraiser qualifications and notice rights."
+            "What SB 458 and TDI's adopted rules mean for Texas homeowners: mandatory appraisal clauses, firm "
+            "deadlines and appraiser qualifications."
         ),
         "h1": "The 2027 Texas Appraisal Rules, <span>Explained for Policyholders</span>",
         "h1_plain": "The 2027 Texas Appraisal Rules, Explained for Policyholders",
@@ -110,10 +110,10 @@ legal advice. Check the current rule text and your own policy, and consult a Tex
         "slug": "appraisal-vs-public-adjuster-vs-lawsuit",
         "path": "/guides/appraisal-vs-public-adjuster-vs-lawsuit/",
         "nav_label": "Appraisal vs. Public Adjuster vs. Lawsuit",
-        "title": "Appraisal vs. Public Adjuster vs. Lawsuit in Texas | Policyholder Appraiser",
+        "title": "Appraisal vs. Public Adjuster vs. Lawsuit in Texas Claims",
         "description": (
             "Appraisal, a public adjuster or a lawsuit? How the three ways to fight an underpaid Texas claim "
-            "compare on cost, timeline and what each can actually decide."
+            "compare on cost, timeline and what each decides."
         ),
         "h1": "Appraisal vs. Public Adjuster vs. Lawsuit: <span>Which One Fixes Your Claim?</span>",
         "h1_plain": "Appraisal vs. Public Adjuster vs. Lawsuit: Which One Fixes Your Claim?",
@@ -180,10 +180,10 @@ you toward the tool that is.</p>
         "slug": "invoke-appraisal-clause",
         "path": "/guides/invoke-appraisal-clause/",
         "nav_label": "How to Invoke the Appraisal Clause (sample letter)",
-        "title": "How to Invoke the Appraisal Clause in Texas (Sample Demand Letter)",
+        "title": "How to Invoke the Appraisal Clause in Texas (Sample Letter)",
         "description": (
-            "Step by step: how to invoke the appraisal clause on a Texas homeowners or commercial claim, with a "
-            "sample appraisal demand letter and a checklist of what to send."
+            "How to invoke the appraisal clause on a Texas homeowners or commercial claim, step by step, with a "
+            "sample appraisal demand letter."
         ),
         "h1": "How to Invoke the Appraisal Clause on a Texas Claim <span>(With a Sample Demand Letter)</span>",
         "h1_plain": "How to Invoke the Appraisal Clause on a Texas Claim (With a Sample Demand Letter)",
@@ -266,10 +266,10 @@ or text (832) 503-5866, or send the carrier's estimate through our contact form 
         "slug": "what-happens-at-an-appraisal-inspection",
         "path": "/guides/what-happens-at-an-appraisal-inspection/",
         "nav_label": "What Happens at an Appraisal Inspection",
-        "title": "What Happens at an Insurance Appraisal Inspection | Policyholder Appraiser",
+        "title": "What Happens at an Insurance Appraisal Inspection?",
         "description": (
             "What to expect when two appraisers inspect your property, how they compare estimates, when the "
-            "umpire steps in, and how the binding award is paid."
+            "umpire steps in and how the award is paid."
         ),
         "h1": "What Happens at an Appraisal Inspection, <span>and How the Award Gets Decided</span>",
         "h1_plain": "What Happens at an Appraisal Inspection, and How the Award Gets Decided",
@@ -336,10 +336,10 @@ GUIDES.append({
     "slug": "what-is-an-insurance-appraiser",
     "path": "/guides/what-is-an-insurance-appraiser/",
     "nav_label": "What Is an Insurance Appraiser?",
-    "title": "What Is an Insurance Appraiser? Role, Qualifications & Cost (Texas)",
+    "title": "What Is an Insurance Appraiser? Role, Qualifications & Cost",
     "description": (
-        "What an insurance claim appraiser does, how a certified insurance appraiser differs from an adjuster "
-        "or public adjuster, who qualifies in Texas, and what one costs."
+        "What an insurance claim appraiser does, how one differs from an adjuster or public adjuster, who "
+        "qualifies in Texas and what one costs."
     ),
     "h1": "What Is an Insurance Appraiser, <span>and When Do You Need One?</span>",
     "h1_plain": "What Is an Insurance Appraiser, and When Do You Need One?",

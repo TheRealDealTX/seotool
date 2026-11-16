@@ -11,8 +11,8 @@ SERVICES = [
         "nav_label": "Homeowners Claim Appraisal",
         "title": "Homeowners Insurance Appraisal | Claim Appraiser in Texas",
         "description": (
-            "Appoint an independent appraiser for your Texas homeowners insurance claim. "
-            "Roof, water, storm and fire losses. Flat, up-front fees. Call (832) 503-5866."
+            "Appoint an independent appraiser for your Texas homeowners insurance claim. Roof, water, storm "
+            "and fire losses. Flat, up-front fees."
         ),
         "h1": "Homeowners Insurance Claim <span>Appraiser</span>",
         "h1_plain": "Homeowners Insurance Claim Appraiser",
@@ -77,10 +77,10 @@ has denied the claim outright, appraisal is usually not the right tool and we wi
     {
         "slug": "commercial-property-appraisal",
         "nav_label": "Commercial Claim Appraisal",
-        "title": "Commercial Property Insurance Appraiser in Texas | Policyholder Appraiser",
+        "title": "Commercial Property Insurance Appraiser in Texas",
         "description": (
-            "Independent appraiser for disputed commercial property claims in Texas: roofs, HVAC, "
-            "tenant build-outs, business personal property. Call (832) 503-5866."
+            "Independent appraiser for disputed commercial property claims in Texas: roofs, HVAC, tenant "
+            "build-outs and business personal property."
         ),
         "h1": "Commercial Property Insurance <span>Appraiser</span>",
         "h1_plain": "Commercial Property Insurance Appraiser",
@@ -135,7 +135,7 @@ the clause and the procedural posture together.</p>
     {
         "slug": "hail-and-roof-claim-appraisal",
         "nav_label": "Hail & Roof Appraisal",
-        "title": "Hail Damage Roof Claim Appraiser in Texas | Policyholder Appraiser",
+        "title": "Hail Damage & Roof Claim Appraiser in Texas",
         "description": (
             "Carrier says repair, you say replace? Appoint an independent appraiser for your Texas hail "
             "and roof insurance claim dispute. Call (832) 503-5866."
@@ -186,10 +186,10 @@ estimate arrives, not when the deadline does.</p>
     {
         "slug": "hurricane-and-wind-claim-appraisal",
         "nav_label": "Hurricane & Wind Appraisal",
-        "title": "Hurricane & Windstorm Claim Appraiser in Texas | Policyholder Appraiser",
+        "title": "Hurricane & Windstorm Claim Appraiser in Texas",
         "description": (
             "Underpaid hurricane or windstorm claim on the Texas coast? Appoint an independent appraiser "
-            "to settle the amount of loss. Statewide. Call (832) 503-5866."
+            "to settle the amount of loss. Call (832) 503-5866."
         ),
         "h1": "Hurricane &amp; Windstorm Claim <span>Appraiser</span>",
         "h1_plain": "Hurricane & Windstorm Claim Appraiser",
@@ -234,7 +234,7 @@ estimate that comes out of it is what we defend at the appraiser conference and,
     {
         "slug": "water-damage-claim-appraisal",
         "nav_label": "Water Damage Appraisal",
-        "title": "Water Damage Insurance Claim Appraiser in Texas | Policyholder Appraiser",
+        "title": "Water Damage Insurance Claim Appraiser in Texas",
         "description": (
             "Plumbing, slab leak or burst-pipe claim underpaid? Appoint an independent appraiser to settle "
             "your Texas water damage claim. Call (832) 503-5866."
@@ -284,7 +284,7 @@ dispute, and the 2027 Texas residential rules now set firm deadlines so it canno
     {
         "slug": "fire-and-smoke-claim-appraisal",
         "nav_label": "Fire & Smoke Appraisal",
-        "title": "Fire & Smoke Damage Claim Appraiser in Texas | Policyholder Appraiser",
+        "title": "Fire & Smoke Damage Claim Appraiser in Texas",
         "description": (
             "Disputed fire or smoke damage claim in Texas? Appoint an independent appraiser for structure, "
             "contents and cleaning scope. Call (832) 503-5866."
@@ -329,10 +329,10 @@ gives it weight with the umpire.</p>
     {
         "slug": "appraisal-umpire-services",
         "nav_label": "Umpire Services",
-        "title": "Insurance Umpire in Texas | Appraisal Umpire Services | Policyholder Appraiser",
+        "title": "Insurance Umpire in Texas | Appraisal Umpire Services",
         "description": (
-            "Certified insurance umpire for Texas property appraisals. Neutral, qualified and available for joint "
-            "selection by both appraisers on residential and commercial claims. (832) 503-5866."
+            "Certified insurance umpire for Texas property appraisals. Neutral, qualified and available for "
+            "joint selection by both appraisers."
         ),
         "h1": "Insurance <span>Umpire</span> Services in Texas",
         "h1_plain": "Insurance Umpire Services in Texas",
