@@ -6,12 +6,12 @@ served on a Hostinger Agency Growth website through a tiny PHP front controller 
 | | |
 | --- | --- |
 | Hostinger website UID | `MzvyUm9HJ` (Agency Growth, order 1008744732, php-fpm, PHP 8.3, Phoenix datacenter) |
-| Domain | `nebraskainsuranceappraiser.com` (attached at creation; nameservers not yet pointed) |
+| Live domain | https://nebraskainsuranceappraiser.com (SSL covers apex + www, expires 2027-02-13; www and http 301 to it) |
 | Preview URL | https://blueviolet-barracuda-496096.hostingersite.com (sends `X-Robots-Tag: noindex`; Hostinger serves its own Googlebot-blocking robots.txt here) |
-| Nameservers to set at the registrar | `orbit.dns-parking.com`, `horizon.dns-parking.com` (from `agency-hosting_websites_get`) |
-| Google Tag Manager | not set yet: `GTM_ID = ""` in `build.py` |
+| Nameservers | `orbit.dns-parking.com`, `horizon.dns-parking.com` (pointed Nov 2026) |
+| Google Tag Manager | `GTM-KDLQBKXL`: owner-supplied head snippet used verbatim (`GTM_SNIPPET`) + noscript iframe after `<body>` |
 | Phone | +1 (844) 537-1427 |
-| Email / form inbox | info@nebraskainsuranceappraiser.com (mailbox to be created) |
+| Email / form inbox | info@nebraskainsuranceappraiser.com (form delivers over SMTP; verified Nov 16, 2026) |
 
 ## Layout
 
@@ -140,8 +140,8 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@nebraskainsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-Then: confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and confirm the
-log line shows `"via":"smtp"`.
+Done Nov 16, 2026: the config is on the server only (not in git, no local copy kept), `/api/_private/config.php` returns 404
+with 0 bytes, and a submission labelled as a test logged `"via":"smtp","err":null`.
 
 ## Photos (internal record — not published)
 
@@ -198,14 +198,14 @@ backgrounds use `alt=""`. `house-fire` is reused from the template's CC0 set. Th
 | `tornado-plains` | TORUS tornado | NOAA NSSL | Public domain | flickr | https://www.flickr.com/photos/47838549@N08/47953539496 |
 | `tornado-street` | Monson tornado damage, June 3, 2011 | MassDOT | Public domain | flickr | https://www.flickr.com/photos/42009447@N05/5793523681 |
 
-## Going live checklist
+## Going live checklist (done Nov 16, 2026)
 
-1. Point the domain's nameservers to `orbit.dns-parking.com` and `horizon.dns-parking.com`.
-2. Confirm SSL covers both `nebraskainsuranceappraiser.com` and `www.` (`agency-hosting_websites_get` → `ssl_cert.names`);
-   reissue with `agency-hosting_ssl_reinstall-website` if `www` is missing.
-3. Check `http://`, `http://www.` and `https://www.` interior URLs 301 to `https://nebraskainsuranceappraiser.com/…`,
-   `/page/index.php` 301s to `/page/`, sitemap URLs return 200, no `X-Robots-Tag` on the real domain, our own `robots.txt`.
-   If a www URL returns 200 with `x-hcdn-cache-status: HIT`, clear the cache again.
-4. Add the GTM container ID (`GTM_ID`) and wire SMTP once provided; rebuild, validate, deploy, clear cache.
-5. In Search Console: verify the **URL-prefix** property `https://nebraskainsuranceappraiser.com/` (HTML file), then submit
+1. ~~Nameservers pointed~~; SSL active for `nebraskainsuranceappraiser.com` and `www.` (server presents both certificates).
+2. ~~Canonical-host checks~~ on `/` and four interior pages: `http://`, `http://www.` and `https://www.` all 301 to
+   `https://nebraskainsuranceappraiser.com/…`; `/page/index.php` 301s to `/page/`; all 50 sitemap URLs return 200; no
+   `X-Robots-Tag` on the real domain; our own `robots.txt` is served; the Search Console file returns 200, no `X-Robots-Tag`,
+   bytes match. If a www URL ever returns 200 with `x-hcdn-cache-status: HIT`, clear the cache and recheck.
+3. ~~GTM added~~ and ~~SMTP wired~~.
+4. Still to do in Search Console: click **Verify** on the **URL-prefix** property `https://nebraskainsuranceappraiser.com/`
+   (HTML-file verification doesn't work for a Domain property, which needs a DNS TXT record), then submit
    `https://nebraskainsuranceappraiser.com/sitemap.xml`. Keep `googlecccfbf2f7e9e5ae4.html` on the server permanently.
