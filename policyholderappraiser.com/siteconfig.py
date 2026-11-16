@@ -36,7 +36,6 @@ MARKETS = [
 
 NAV = [
     ("Services", "/services/"),
-    ("Areas Served", "/service-areas/"),
     ("How Appraisal Works", "/appraisal-process/"),
     ("2027 Rules", "/texas-appraisal-rules/"),
     ("Guides", "/guides/"),

@@ -20,6 +20,7 @@ from content.cities import CITIES
 from content.bio import BIO
 from content.cities_extra import EXTRA
 from content.storms import STORMS, PUBLISHED as STORMS_PUBLISHED
+from content.teasers import BLOG_TEASERS, HOME_SERVICE, HOME_GUIDE
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
@@ -224,14 +225,15 @@ def header(active=None):
     items = []
     for label, href in NAV:
         cur = ' aria-current="page"' if href == active else ""
-        if href == "/service-areas/":
-            subs = "".join(f'<li><a href="{c["path"]}">{kw_title(c)}</a></li>' for c in CITIES)
-            items.append(f'<li class="has-sub"><a href="{href}"{cur}>{label}</a><ul class="sub" aria-label="Areas served"><li class="sub-all"><a href="/service-areas/">All Texas service areas</a></li>{subs}</ul></li>')
-            continue
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
+    areas = "".join(f'<li><a href="{c["path"]}">{kw_title(c)}</a></li>' for c in CITIES)
     return f"""<div class="topbar"><div class="wrap topbar-in">
-<span><strong>Independent appraisers for Texas policyholders</strong> &middot; Certified appraiser &amp; umpire &middot; Statewide Texas</span>
+<button class="areas-toggle" type="button" aria-expanded="false" aria-controls="areas-panel"><span class="areas-burger" aria-hidden="true"><i></i><i></i><i></i></span>Insurance Appraiser Service Areas</button>
 <span class="topbar-links"><a href="tel:{TEL}">Call {PHONE}</a><a href="sms:{TEL}">Text {PHONE}</a></span>
+</div></div>
+<div class="areas-panel" id="areas-panel" hidden><div class="wrap">
+<div class="areas-head"><strong>Insurance appraiser service areas</strong><a href="/service-areas/">All Texas service areas &rarr;</a></div>
+<ul class="areas-list">{areas}</ul>
 </div></div>
 <header class="site-header"><div class="wrap header-in">
 <a class="logo" href="/" aria-label="{BIZ['name']} home">{LOGO}<span class="logo-text"><strong>Policyholder Appraiser</strong><em>Texas</em></span></a>
@@ -336,26 +338,46 @@ def contact_form(compact=False):
 </form>"""
 
 
-def contact_section():
-    return f"""<section class="contact" id="contact"><div class="wrap split">
-<div>
-<p class="eyebrow">Get started</p>
-<h2>Send us the carrier's estimate.</h2>
-<p class="lede">We read the appraisal clause, compare the carrier's scope with the damage you describe, and tell you plainly whether appraisal is the right move. If it is, you get a flat fee in writing before you appoint us.</p>
+def contact_section(heading=None, intro=None, compact=False):
+    """Contact block. The homepage and contact page carry the full intro; every
+    other page passes its own heading and uses the compact variant so the
+    block does not repeat a paragraph across the site."""
+    heading = heading or "Send us the carrier's estimate."
+    if compact:
+        copy = f"""<p class="eyebrow">Get started</p>
+<h2>{heading}</h2>
+<div class="contact-meta">
+<a href="tel:{TEL}">Call {PHONE}</a>
+<a href="sms:{TEL}">Text {PHONE}</a>
+<a href="mailto:{BIZ['email']}">{BIZ['email']}</a>
+</div>"""
+    else:
+        intro = intro or ("We read the appraisal clause, compare the carrier's scope with the damage you describe, and tell you plainly whether appraisal is the right move. If it is, you get a flat fee in writing before you appoint us.")
+        copy = f"""<p class="eyebrow">Get started</p>
+<h2>{heading}</h2>
+<p class="lede">{intro}</p>
 <div class="contact-meta">
 <a href="tel:{TEL}">Call {PHONE}<span>{BIZ['hours']}</span></a>
 <a href="sms:{TEL}">Text {PHONE}<span>Photos of the estimate are welcome</span></a>
 <a href="mailto:{BIZ['email']}">{BIZ['email']}<span>Attach the carrier's estimate and your policy</span></a>
-</div>
+</div>"""
+    return f"""<section class="contact" id="contact"><div class="wrap split">
+<div>
+{copy}
 </div>
 {contact_form()}
 </div></section>
 """
 
 
-def faq_block(items, heading="Common questions about appraisal", intro=None, link=True):
-    details = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in items)
-    more = '<p style="margin-top:18px"><a class="btn btn-outline" href="/faq/">All questions</a></p>' if link else ""
+def faq_block(items, heading="Common questions about appraisal", intro=None, link=True, answers=True):
+    """Full Q&A on /faq/ only. Everywhere else `answers=False` renders the
+    questions as links into /faq/, so answer text is not duplicated."""
+    if answers:
+        details = "".join(f'<details id="q-{FAQ.index((q, a)) + 1}"><summary>{q}</summary><p>{a}</p></details>' for q, a in items)
+    else:
+        details = '<ul class="faq-links">' + "".join(f'<li><a href="/faq/#q-{FAQ.index((q, a)) + 1}">{q}</a></li>' for q, a in items) + "</ul>"
+    more = '<p style="margin-top:18px"><a class="btn btn-outline" href="/faq/">All questions, answered</a></p>' if link else ""
     intro_html = f"<p>{intro}</p>" if intro else ""
     return f"""<section class="sand"><div class="wrap">
 <div class="section-head"><p class="eyebrow">FAQ</p><h2>{heading}</h2>{intro_html}</div>
@@ -379,7 +401,7 @@ def sidebar(current=None):
 def author_box():
     return f"""<div class="author-box">
 <img src="/img/joseph-dittman-appraiser.webp" alt="{BIZ['principal']}, appraiser and licensed Texas public adjuster" width="72" height="72" loading="lazy">
-<p><strong>{BIZ['principal']}</strong>{BIZ['principal_title']}. 463 appraisals closed in 2025, eight years of carrier-side adjusting, six years in construction. Serves as policyholder-appointed appraiser and as umpire statewide. <a href="/joseph-dittman/">Full bio</a></p>
+<p><strong>{BIZ['principal']}</strong>Certified insurance appraiser and umpire, licensed Texas adjuster. <a href="/joseph-dittman/">Full bio</a></p>
 </div>"""
 
 
@@ -395,29 +417,43 @@ def write(path, html):
         f.write(html)
 
 
-def service_cards(items, cls="grid grid-3"):
+def service_cards(items, cls="grid grid-3", blurbs=None):
     cards = []
     for s in items:
+        blurb = blurbs[s["slug"]] if blurbs else s["card"]
         cards.append(f'<a class="card" href="{s["path"]}"><div class="card-icon">{icon(s["icon"])}</div>'
-                     f'<h3>{s["nav_label"]}</h3><p>{s["card"]}</p><span class="more">Learn more &rarr;</span></a>')
+                     f'<h3>{s["nav_label"]}</h3><p>{blurb}</p><span class="more">Learn more &rarr;</span></a>')
     return f'<div class="{cls}">{"".join(cards)}</div>'
 
 
-def city_cards(items=None):
+def city_cards(items=None, compact=False):
     items = items or CITIES
+    if compact:
+        return '<ul class="pill-row city-pills">' + "".join(f'<li><a href="{c["path"]}">{kw_title(c)}</a></li>' for c in items) + "</ul>"
     cards = "".join(f'<a class="card city-card" href="{c["path"]}"><h3>{c["name"]}</h3><p>{c["county"]} &middot; {c["region"]}</p><span class="more">{kw_title(c)} &rarr;</span></a>' for c in items)
     return f'<div class="grid grid-4">{cards}</div>'
 
 
-def guide_cards(items):
+def guide_cards(items, blurbs=None):
     cards = []
     for g in items:
+        blurb = blurbs[g["slug"]] if blurbs else g["card"]
         cards.append(f'<a class="card" href="{g["path"]}"><div class="card-icon">{icon("doc")}</div>'
-                     f'<h3>{g["nav_label"]}</h3><p>{g["card"]}</p><span class="more">Read the guide &rarr;</span></a>')
+                     f'<h3>{g["nav_label"]}</h3><p>{blurb}</p><span class="more">Read the guide &rarr;</span></a>')
     return f'<div class="grid grid-2">{"".join(cards)}</div>'
 
 
-def steps_block(dark=True):
+def steps_block(dark=True, variant="process"):
+    if variant == "home":
+        steps = [
+            ("Day 0", "Invoke the clause", "One signed letter to the carrier starts the process and names your appraiser."),
+            ("Within 20 days", "Two appraisers", "The carrier names its own. Both must be competent, independent and disinterested."),
+            ("Within 120 days", "Inspect, estimate, compare", "Line by line, in the same software, until only the real disputes are left."),
+            ("By day 240", "Binding award", "An umpire decides what remains. Two of three signatures and the number is final."),
+        ]
+        html = "".join(f'<div class="step"><div class="step-num">0{i + 1}</div><span class="when">{w}</span><h3">{t}</h3><p>{d}</p></div>'.replace('<h3">', '<h3>')
+                       for i, (w, t, d) in enumerate(steps))
+        return f'<div class="steps">{html}</div>'
     steps = [
         ("Day 0", "You demand appraisal", "A written demand to the carrier invokes the policy's appraisal clause and names your appraiser."),
         ("Within 20 days", "Appraisers are named", "Each side appoints a competent, independent, disinterested appraiser and shares contact details."),
@@ -436,7 +472,7 @@ def build_home():
         "description": ("Certified insurance appraiser and umpire for Texas policyholders. Invoke your appraisal clause and "
                         "appoint an independent appraiser."),
     }
-    graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), faq_schema(FAQ[:8])]
+    graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page)]
     body = f"""<section class="hero"><div class="wrap hero-in">
 <div>
 <p class="eyebrow">Certified insurance appraiser &amp; umpire &middot; Texas</p>
@@ -467,13 +503,13 @@ def build_home():
 
 <section><div class="wrap">
 <div class="section-head"><p class="eyebrow">What we do</p><h2>Appraisal and umpire services for disputed property claims</h2><p>One job, done carefully: determine the amount of loss and defend it at the appraiser conference and before the umpire.</p></div>
-{service_cards(SERVICES[:6])}
+{service_cards(SERVICES[:6], blurbs=HOME_SERVICE)}
 <p style="margin-top:22px"><a class="btn btn-outline" href="/services/">All services, including umpire appointments</a></p>
 </div></section>
 
 <section class="dark"><div class="wrap">
 <div class="section-head"><p class="eyebrow">How it works</p><h2>Appraisal in four steps</h2><p>Deadlines shown are the Texas residential rules for policies issued or renewed on or after March 1, 2027. Older policies follow the clause as printed.</p></div>
-{steps_block()}
+{steps_block(variant="home")}
 <p style="margin-top:26px"><a class="btn btn-brass" href="/appraisal-process/">The full process, explained</a> <a class="btn btn-ghost-light" href="/texas-appraisal-rules/">The 2027 Texas rules</a></p>
 </div></section>
 
@@ -500,15 +536,15 @@ def build_home():
 
 <section class="sand"><div class="wrap">
 <div class="section-head"><p class="eyebrow">Guides</p><h2>Understand the process before you start it</h2></div>
-{guide_cards(GUIDES)}
+{guide_cards(GUIDES, blurbs=HOME_GUIDE)}
 </div></section>
 
 <section><div class="wrap">
 <div class="section-head"><p class="eyebrow">Statewide</p><h2>Insurance appraiser in every major Texas city</h2><p>Based in Houston, working everywhere in Texas. Each city page covers the storms, housing stock and county courts that shape appraisals there.</p></div>
-{city_cards()}
+{city_cards(compact=True)}
 </div></section>
 
-{faq_block(FAQ[:8])}
+{faq_block(FAQ[:8], answers=False)}
 {contact_section()}
 """
     write("/", head(page, graph) + header("/") + body + footer())
@@ -528,7 +564,7 @@ def build_services_index():
 <p>We also do not serve as appraiser on any claim where Rise Public Adjusting acted as public adjuster. Independence is not a marketing line; it is the qualification.</p></div>
 <div class="panel panel-light"><h3>Not sure which applies?</h3><p>Send the carrier's estimate and letters. We will reply within one business day with a plain answer: appraisal, public adjuster, attorney, or wait.</p><a class="btn btn-dark" href="/contact/">Request a Free Review</a></div>
 </div></section>
-""" + faq_block(FAQ[:6])
+""" + faq_block(FAQ[:6], answers=False) + contact_section("Not sure which service fits? Send the estimate.", compact=True)
     write(page["path"], head(page, graph) + header("/services/") + body + footer())
 
 
@@ -541,7 +577,7 @@ def build_service(s):
 <article class="prose">{s['body']}{author_box()}</article>
 {sidebar(s['path'])}
 </div></section>
-""" + faq_block(FAQ[:5]) + contact_section()
+""" + faq_block(FAQ[:5], heading=f"Questions about {s['nav_label'].lower()}", answers=False) + contact_section(f"Start a {s['nav_label'].lower()} review.", compact=True)
     write(s["path"], head(page, graph) + header("/services/") + body + footer())
 
 
@@ -593,7 +629,7 @@ def build_process():
 </article>
 {sidebar()}
 </div></section>
-""" + faq_block(FAQ[:8]) + contact_section()
+""" + faq_block(FAQ[:8], answers=False) + contact_section("Ready for step one? Send the carrier's letter.", compact=True)
     write(page["path"], head(page, graph) + header("/appraisal-process/") + body + footer())
 
 
@@ -608,7 +644,7 @@ def build_guides_index():
 <div class="grid grid-2" style="margin-top:18px"><a class="card" href="/appraisal-process/"><div class="card-icon">{icon('clock')}</div><h3>How the appraisal process works</h3><p>Seven steps from demand to award, with the Texas deadlines.</p><span class="more">Read &rarr;</span></a>
 <a class="card" href="/faq/"><div class="card-icon">{icon('shield')}</div><h3>Frequently asked questions</h3><p>Cost, timing, binding effect, qualifications and more.</p><span class="more">Read &rarr;</span></a></div>
 </div></section>
-""" + contact_section()
+""" + contact_section("Questions about your own claim?", compact=True)
     write(page["path"], head(page, graph) + header("/guides/") + body + footer())
 
 
@@ -623,7 +659,7 @@ def build_guide(g):
 <article class="prose">{g['body']}{author_box()}</article>
 {sidebar(g['path'])}
 </div></section>
-""" + contact_section()
+""" + contact_section(f"Apply this to your claim.", compact=True)
     write(g["path"], head(page, graph) + header(active) + body + footer())
 
 
@@ -633,7 +669,7 @@ def build_faq():
             "eyebrow": "FAQ", "h1": "Insurance Appraisal <span>Questions &amp; Answers</span>",
             "intro": "Straight answers about the appraisal clause, appraiser qualifications, cost, timing and the 2027 Texas rules."}
     graph = [org_schema(), website_schema(), webpage_schema(page, "FAQPage"), faq_schema(FAQ), breadcrumb_schema([("Home", "/"), ("FAQ", "/faq/")])]
-    body = page_hero(page, [("Home", "/"), ("FAQ", "/faq/")], actions=False) + faq_block(FAQ, heading="Everything policyholders ask us", link=False) + contact_section()
+    body = page_hero(page, [("Home", "/"), ("FAQ", "/faq/")], actions=False) + faq_block(FAQ, heading="Everything policyholders ask us", link=False) + contact_section("Still have a question? Ask it here.", compact=True)
     write(page["path"], head(page, graph) + header("/faq/") + body + footer())
 
 
@@ -666,9 +702,9 @@ def build_about():
 </div></section>
 <section class="sand"><div class="wrap">
 <div class="section-head"><p class="eyebrow">Where we work</p><h2>Statewide Texas, city by city</h2><p>Rise Public Adjusting LLC also operates public adjusting practices in Texas. Those practices represent policyholders in presenting and negotiating claims; Policyholder Appraiser is kept separate so that appraisal work remains independent. Appraisal and umpire engagements are accepted anywhere in the state.</p></div>
-{city_cards()}
+{city_cards(compact=True)}
 </div></section>
-""" + contact_section()
+""" + contact_section("Work with an independent appraiser.", compact=True)
     write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
 def build_areas():
@@ -682,7 +718,7 @@ def build_areas():
     body = page_hero(page, [("Home", "/"), ("Service Areas", "/service-areas/")]) + f"""
 <section><div class="wrap">{city_cards()}
 <p style="margin-top:22px;color:var(--slate)">Not listed? If the property is in Texas, call. Remote document review and video walk-throughs cover the early steps for distant properties before an in-person inspection.</p></div></section>
-""" + faq_block(FAQ[:5]) + contact_section()
+""" + contact_section("Tell us where the property is.", compact=True)
     write(page["path"], head(page, graph) + header("/service-areas/") + body + footer())
 
 
@@ -713,11 +749,11 @@ def build_city(c):
 {extra}
 <h2>Questions for a {K}</h2>
 {faqs}
-<p class="callout"><span class="label">Appoint a {K}</span>Send the carrier's estimate and your policy for a free review. Call or text {PHONE}, or use the form below. The fee is quoted in writing before you appoint us.</p>
+<p class="callout"><span class="label">Appoint a {K}</span>We cover {c['county']} and the properties around {c['nearby'][0]}, {c['nearby'][1]} and {c['nearby'][2]}. Send the carrier's estimate for a {c['name']} claim and the fee comes back in writing.</p>
 {author_box()}
 </article>
 <aside class="sidebar">
-<div class="side-card"><h3>Your {K}</h3><p>Send the carrier's estimate. One business day for a straight answer and a written fee.</p><a class="btn btn-brass" href="/contact/">Request a Free Review</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card"><h3>Your {K}</h3><p>Property in {c['county']}? Send the carrier's estimate and we reply the next business day.</p><a class="btn btn-brass" href="/contact/">Request a Free Review</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
 <div class="side-card light"><h3>{c['name']} storm history</h3><p>{storm['description']}</p><div class="side-list"><a href="{post}">Read the {c['name']} storm timeline</a></div></div>
 <div class="side-card light"><h3>Also serving near {c['name']}</h3><ul class="pill-row" style="margin-top:4px">{nearby}</ul></div>
 <div class="side-card light"><h3>Appraisal services</h3><div class="side-list">{''.join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)}</div></div>
@@ -725,7 +761,7 @@ def build_city(c):
 </aside>
 </div></section>
 <section class="sand"><div class="wrap"><p class="eyebrow">Insurance appraiser in other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_links}</p></div></section>
-""" + contact_section()
+""" + contact_section(f"Start your {c['name']} appraisal review.", compact=True)
     write(c["path"], head(page, graph) + header("/service-areas/") + body + footer())
 
 
@@ -737,10 +773,10 @@ def build_blog_index():
     graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Blog", "/blog/")]),
              {"@type": "Blog", "@id": url("/blog/#blog"), "name": "Policyholder Appraiser storm history blog", "publisher": {"@id": ORG_ID},
               "blogPost": [{"@type": "BlogPosting", "headline": STORMS[c["slug"]]["title"], "url": url(post_path(c)), "datePublished": STORMS_PUBLISHED} for c in CITIES]}]
-    cards = "".join(f'<a class="card" href="{post_path(c)}"><div class="card-icon">{icon("wind")}</div><h3>{STORMS[c["slug"]]["title"].split(":")[0]}</h3><p>{STORMS[c["slug"]]["description"]}</p><span class="more">Read the {c["name"]} timeline &rarr;</span></a>' for c in CITIES)
+    cards = "".join(f'<a class="card" href="{post_path(c)}"><div class="card-icon">{icon("wind")}</div><h3>{STORMS[c["slug"]]["title"].split(":")[0]}</h3><p>{BLOG_TEASERS[c["slug"]]}</p><span class="more">Read the {c["name"]} timeline &rarr;</span></a>' for c in CITIES)
     body = page_hero(page, [("Home", "/"), ("Blog", "/blog/")], actions=False) + f"""
 <section><div class="wrap"><div class="grid grid-3">{cards}</div></div></section>
-""" + contact_section()
+""" + contact_section("Your storm is probably on this list.", compact=True)
     write(page["path"], head(page, graph) + header("/blog/") + body + footer())
 
 
@@ -755,7 +791,7 @@ def build_post(c):
               "author": {"@id": PERSON_ID}, "publisher": {"@id": ORG_ID}, "datePublished": STORMS_PUBLISHED, "dateModified": TODAY,
               "mainEntityOfPage": url(path), "image": url("/img/og-image.png"), "about": {"@type": "City", "name": c["name"] + ", TX"}}]
     svc = {s_["slug"]: s_["path"] for s_ in SERVICES}
-    body_html = s["body"].format(city_url=c["path"], kw=kw(c), hail=svc["hail-and-roof-claim-appraisal"], wind=svc["hurricane-and-wind-claim-appraisal"],
+    body_html = s["body"].replace("<h2>What this history means for your claim</h2>", f"<h2>What this means for a {c['name']} claim today</h2>").format(city_url=c["path"], kw=kw(c), hail=svc["hail-and-roof-claim-appraisal"], wind=svc["hurricane-and-wind-claim-appraisal"],
                                  water=svc["water-damage-claim-appraisal"], fire=svc["fire-and-smoke-claim-appraisal"], home=svc["residential-property-appraisal"])
     others = [o for o in CITIES if o["slug"] != c["slug"]]
     other_posts = " &middot; ".join(f'<a href="{post_path(o)}">{o["name"]}</a>' for o in others)
@@ -763,13 +799,13 @@ def build_post(c):
 <section><div class="wrap prose-grid">
 <article class="prose">{body_html}{author_box()}</article>
 <aside class="sidebar">
-<div class="side-card"><h3>{kw_title(c)}</h3><p>Appoint an independent appraiser for a {c['name']} claim from any of these storms.</p><a class="btn btn-brass" href="{c['path']}">{kw_title(c)} services</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card"><h3>{kw_title(c)}</h3><p>{c['county']} claims from any storm on this page.</p><a class="btn btn-brass" href="{c['path']}">{kw_title(c)} services</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
 <div class="side-card light"><h3>Appraisal services</h3><div class="side-list">{''.join(f'<a href="{s_["path"]}">{s_["nav_label"]}</a>' for s_ in SERVICES)}</div></div>
 <div class="side-card light"><h3>Guides</h3><div class="side-list"><a href="/appraisal-process/">How appraisal works</a><a href="/texas-appraisal-rules/">2027 Texas appraisal rules</a><a href="/guides/invoke-appraisal-clause/">How to invoke the appraisal clause</a></div></div>
 </aside>
 </div></section>
 <section class="sand"><div class="wrap"><p class="eyebrow">Storm history in other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_posts}</p></div></section>
-""" + contact_section()
+""" + contact_section(f"Underpaid after one of these {c['name']} storms?", compact=True)
     write(path, head(page, graph) + header("/blog/") + body + footer())
 
 
@@ -826,7 +862,7 @@ def build_bio():
 <div class="side-card light"><h3>Services</h3><div class="side-list">{''.join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)}</div></div>
 </aside>
 </div></section>
-""" + contact_section()
+""" + contact_section("Appoint Joseph as your appraiser or umpire.", compact=True)
     write(page["path"], head(page, graph) + header("/about/") + body + footer())
 
 def build_contact():
@@ -855,7 +891,7 @@ def build_contact():
 </div>
 {contact_form()}
 </div></section>
-""" + faq_block(FAQ[:6])
+""" + faq_block(FAQ[:6], heading="Before you call, the questions we hear most", answers=False, link=True)
     write(page["path"], head(page, graph) + header("/contact/") + body + footer())
 
 

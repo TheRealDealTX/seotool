@@ -315,21 +315,26 @@ textarea { min-height: 120px; resize: vertical; }
 .footer-cities a { color: #aeb9c6; text-decoration: none; }
 .footer-cities a:hover { color: var(--brass-2); }
 
-/* Areas Served dropdown */
-.site-nav li.has-sub { position: relative; }
-.site-nav .sub { display: none; list-style: none; margin: 0; padding: 0; }
-@media (min-width: 1101px) {
-  .site-nav li.has-sub > a::after { content: " \25BE"; font-size: .75em; }
-  .site-nav .sub { position: absolute; top: 100%; left: 0; width: max-content; min-width: 640px; max-width: min(860px, calc(100vw - 40px)); background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); padding: 14px; grid-template-columns: repeat(3, 1fr); gap: 2px 10px; z-index: 60; }
-  .site-nav li.has-sub:hover > .sub, .site-nav li.has-sub:focus-within > .sub { display: grid; }
-  .site-nav .sub a { font-size: .86rem; font-weight: 600; padding: 7px 10px; white-space: nowrap; }
-  .site-nav .sub .sub-all { grid-column: 1 / -1; border-bottom: 1px solid var(--line); margin-bottom: 6px; }
-  .site-nav .sub .sub-all a { color: var(--brass-ink); }
-}
-@media (max-width: 1100px) {
-  .site-nav .sub { display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px; padding: 0 0 10px 12px; }
-  .site-nav .sub li { border-bottom: 0; }
-  .site-nav .sub a { font-size: .9rem; padding: 7px 4px; color: var(--slate); }
-  .site-nav .sub .sub-all { grid-column: 1 / -1; }
-}
+/* Insurance Appraiser Service Areas: hamburger in the top bar + full-width panel */
+.areas-toggle { display: inline-flex; align-items: center; gap: 10px; background: transparent; border: 0; color: #fff; font: 700 .86rem/1 var(--font); letter-spacing: .02em; padding: 6px 0; cursor: pointer; }
+.areas-toggle:hover, .areas-toggle[aria-expanded="true"] { color: var(--brass-2); }
+.areas-burger { display: inline-flex; flex-direction: column; gap: 3px; width: 18px; }
+.areas-burger i { display: block; height: 2px; background: currentColor; border-radius: 2px; }
+.areas-panel { background: #fff; border-bottom: 1px solid var(--line); box-shadow: 0 14px 30px rgba(15,28,43,.10); position: relative; z-index: 55; }
+.areas-panel[hidden] { display: none; }
+.areas-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 16px 0 10px; border-bottom: 1px solid var(--line); font-size: .9rem; }
+.areas-head strong { font-family: var(--head); text-transform: uppercase; letter-spacing: .12em; font-size: .76rem; color: var(--brass-ink); }
+.areas-head a { color: var(--ink); font-weight: 700; text-decoration: none; }
+.areas-head a:hover { color: var(--brass-ink); }
+.areas-list { list-style: none; margin: 0; padding: 12px 0 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px 18px; }
+.areas-list a { display: block; padding: 7px 0; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .92rem; border-bottom: 1px solid transparent; }
+.areas-list a:hover { color: var(--brass-ink); }
+@media (max-width: 900px) { .areas-list { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .areas-toggle { font-size: .8rem; } .topbar-in { justify-content: space-between; } }
 .callout .label + * , p.callout .label { display: block; }
+.faq-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.faq-links a { display: block; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; font: 700 1rem var(--head); color: var(--ink); text-decoration: none; }
+.faq-links a:hover { border-color: var(--brass); color: var(--brass-ink); }
+.city-pills li { padding: 0; }
+.city-pills a { display: block; padding: 8px 14px; text-decoration: none; color: var(--ink); }
+.city-pills a:hover { color: var(--brass-ink); }

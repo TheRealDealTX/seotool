@@ -26,6 +26,17 @@
     });
   }
 
+  var areasBtn = document.querySelector('.areas-toggle');
+  var areasPanel = document.getElementById('areas-panel');
+  if (areasBtn && areasPanel) {
+    var setAreas = function (open) { areasPanel.hidden = !open; areasBtn.setAttribute('aria-expanded', String(open)); };
+    areasBtn.addEventListener('click', function () { setAreas(areasPanel.hidden); });
+    document.addEventListener('click', function (e) {
+      if (!areasPanel.hidden && !areasPanel.contains(e.target) && !areasBtn.contains(e.target)) setAreas(false);
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !areasPanel.hidden) setAreas(false); });
+  }
+
   document.querySelectorAll('form[data-contact]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();

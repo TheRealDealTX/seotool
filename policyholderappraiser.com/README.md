@@ -18,7 +18,8 @@ script, a small PHP form handler. Hosted on Hostinger shared hosting
 | `content/legal.py` | Privacy policy and terms |
 | `src/` | Static files copied into `public/` as-is: CSS, JS, images, `contact.php`, `.htaccess`, icons |
 | `make_assets.py` | Regenerates the logo SVG, favicons and OG image into `src/` |
-| `validate.py` | Post-build checks (run after every build) |
+| `validate.py` | Post-build checks: HTML, JSON-LD, links, title lengths, city keyword count (14), no repeated paragraphs |
+| `dupcheck.py` | Cross-page duplicate-content report (`--max N` fails if any page shares more than N% of its words) |
 | `deploy.sh` | Uploads `public/` to Hostinger over the File Browser TUS endpoint |
 
 ## Rebuilding and deploying
@@ -26,6 +27,7 @@ script, a small PHP form handler. Hosted on Hostinger shared hosting
 ```sh
 python3 build.py
 python3 validate.py
+python3 dupcheck.py --max 20
 ./deploy.sh        # needs PHA_FB_URL / PHA_FB_AUTH / PHA_FB_REST, see the script header
 ```
 
