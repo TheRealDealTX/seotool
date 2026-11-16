@@ -13,10 +13,30 @@
 
   // mobile nav
   var burger = $(".burger"), nav = $(".nav");
-  if (burger && nav) burger.addEventListener("click", function () {
-    var open = nav.classList.toggle("is-open"); burger.setAttribute("aria-expanded", open);
+  var ICO_MENU = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';
+  var ICO_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>';
+  function setNav(open) {
+    if (!burger || !nav) return;
+    if (open && hdr) nav.style.setProperty("--navtop", Math.max(0, hdr.getBoundingClientRect().bottom) + "px");
+    nav.classList.toggle("is-open", open); burger.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", open); burger.setAttribute("aria-label", open ? "Close menu" : "Menu");
+    burger.innerHTML = open ? ICO_X : ICO_MENU;
     d.body.style.overflow = open ? "hidden" : "";
+  }
+  if (burger && nav) {
+    burger.addEventListener("click", function () { setNav(!nav.classList.contains("is-open")); });
+    nav.addEventListener("click", function (e) { if (e.target.closest("a")) setNav(false); });
+    d.addEventListener("keydown", function (e) { if (e.key === "Escape" && nav.classList.contains("is-open")) { setNav(false); burger.focus(); } });
+    w.addEventListener("resize", function () { if (w.innerWidth > 980 && nav.classList.contains("is-open")) setNav(false); });
+  }
+  // desktop "Shop" dropdown also opens on click/tap (touch laptops, tablets)
+  $$(".nav button[aria-haspopup]").forEach(function (b) {
+    b.setAttribute("aria-expanded", "false");
+    b.addEventListener("click", function (e) { e.stopPropagation(); var li = b.parentNode, open = !li.classList.contains("is-open");
+      li.classList.toggle("is-open", open); b.setAttribute("aria-expanded", open); });
   });
+  d.addEventListener("click", function (e) { if (e.target.closest(".nav__drop")) return;
+    $$(".nav>li.is-open").forEach(function (li) { li.classList.remove("is-open"); var b = $("button", li); if (b) b.setAttribute("aria-expanded", "false"); }); });
 
   // reveal on scroll
   if ("IntersectionObserver" in w && !reduce) {

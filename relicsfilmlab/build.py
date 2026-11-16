@@ -17,7 +17,7 @@ SITE = "https://relicsfilmlab.com"
 TODAY = date.today().isoformat()
 KW = json.load(open(os.path.join(ROOT, "data", "keywords.json")))
 CRED = {}
-for _f in ("image_credits_b.json", "image_credits.json", "image_credits_site.json"):
+for _f in ("image_credits_b.json", "image_credits.json", "image_credits_extra.json", "image_credits_site.json"):
     _p = os.path.join(ROOT, "data", _f)
     if os.path.exists(_p):
         CRED.update({k: v for k, v in json.load(open(_p)).items() if not k.startswith("_")})
@@ -57,7 +57,10 @@ def credit_html(key):
     c = CRED.get(key)
     if not c:
         return ""
-    return (f'Photo: <a href="{esc(c["page"])}" target="_blank" rel="noopener nofollow">{esc(c["artist"])}</a>, '
+    kind = c.get("kind")
+    pre = (f'Representative photo of the {esc(c.get("family", "same"))} line — condition and exact model vary by listing. ' if kind == "representative"
+           else "Illustrative photo. " if kind == "illustrative" else "")
+    return (pre + f'Photo: <a href="{esc(c["page"])}" target="_blank" rel="noopener nofollow">{esc(c["artist"])}</a>, '
             f'{esc(c["license"])}, via {esc(c["source"])}')
 
 def kws(path, n=8):
@@ -227,7 +230,9 @@ def product_card(p, i=0):
     im = img_path(p["slug"])
     b = brand_of(p)
     label = catalog.CATEGORIES[p["cat"]][0]
-    media = (f'<img src="{im}" alt="{esc(p["name"])}" loading="lazy" width="500" height="500">' if im
+    kind = CRED.get(p["slug"], {}).get("kind")
+    alt = p["name"] + (" — representative photo" if kind == "representative" else "") if kind != "illustrative" else ""
+    media = (f'<img src="{im}" alt="{esc(alt)}" loading="lazy" width="500" height="500">' if im
              else f'<div class="ph">{esc(p["name"])}</div>')
     return f"""<article class="card reveal" data-brand="{esc(b[0] if b else 'Other')}" data-name="{esc(p['name'])}" data-year="{esc(re.sub(r'[^0-9]', '', p['year'])[:4])}" data-rank="{i}">
 <div class="card__img">{media}<span class="card__tag">{label}</span></div>
@@ -314,7 +319,9 @@ def product_page(p):
                        "service": "negatives", "workshop": "workshop", "film": "film-rolls", "lens": "lens", "digital": "point-shoot", "ps": "point-shoot", "slr": "slr",
                        "instant": "polaroids", "mf": "medium-format", "movie": "super8", "pocket": "point-shoot"}.get(cat, "hero")
         im_site = site_img(im_fallback)
-    media = (f'<img src="{im}" alt="{esc(name)}" width="1000" height="1000" fetchpriority="high">' if im
+    _k = CRED.get(slug, {}).get("kind")
+    _alt = "" if _k == "illustrative" else name + (" — representative photo" if _k == "representative" else "")
+    media = (f'<img src="{im}" alt="{esc(_alt)}" width="1000" height="1000" fetchpriority="high">' if im
              else (f'<img src="{im_site}" alt="" style="opacity:.35" fetchpriority="high"><div class="ph">{esc(name)}</div>' if im_site else f'<div class="ph">{esc(name)}</div>'))
     credit = credit_html(slug) if im else ("Illustrative photo. " + credit_html("site:" + im_fallback) if im_site else "")
     chips = "".join(f"<span>{esc(x.strip())}</span>" for x in p["spec"].split("·") if x.strip())

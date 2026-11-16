@@ -41,8 +41,10 @@ p{margin:0 0 1.1em}
 @keyframes marq{to{transform:translateX(-50%)}}
 
 /* header */
-.hdr{position:sticky;top:0;z-index:80;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:rgba(13,12,11,.72);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-.hdr.is-scrolled{border-bottom-color:var(--line);background:rgba(13,12,11,.9)}
+.hdr{position:sticky;top:0;z-index:80;border-bottom:1px solid transparent;transition:border-color .3s}
+/* blur lives on a pseudo-element: backdrop-filter on .hdr itself would trap the fixed mobile menu inside the header */
+.hdr::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:rgba(13,12,11,.72);transition:background .3s}
+.hdr.is-scrolled{border-bottom-color:var(--line)}.hdr.is-scrolled::before{background:rgba(13,12,11,.92)}
 .hdr__in{display:flex;align-items:center;gap:22px;height:70px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 1.75rem/1 var(--f-display);letter-spacing:.01em}
 .logo__mark{width:30px;height:30px;border-radius:50%;background:conic-gradient(from 210deg,var(--amber),var(--safelight),var(--amber-2),var(--amber));position:relative;box-shadow:0 0 24px rgba(255,138,31,.45)}
@@ -53,7 +55,7 @@ p{margin:0 0 1.1em}
 .nav a,.nav button{display:block;padding:10px 12px;border-radius:999px;font:500 .9rem/1 var(--f-body);color:var(--paper);text-decoration:none;background:none;border:0;cursor:pointer}
 .nav a:hover,.nav button:hover,.nav .is-active{background:rgba(243,234,216,.08);color:var(--paper)}
 .nav__drop{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:540px;padding:18px;border-radius:var(--radius);background:var(--ink-2);border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6);display:grid;grid-template-columns:1fr 1fr;gap:4px;opacity:0;visibility:hidden;transition:.25s var(--ease)}
-.nav>li:hover .nav__drop,.nav>li:focus-within .nav__drop{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.nav>li:hover .nav__drop,.nav>li:focus-within .nav__drop,.nav>li.is-open .nav__drop{opacity:1;visibility:visible;transform:translate(-50%,0)}
 .nav__drop a{border-radius:12px;padding:12px 14px;line-height:1.3}
 .nav__drop a small{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
 .hdr__tools{display:flex;gap:6px;align-items:center}
@@ -64,12 +66,19 @@ p{margin:0 0 1.1em}
 .badge:empty{display:none}
 .burger{display:none}
 @media (max-width:980px){
-  .nav{position:fixed;inset:70px 0 0 0;background:var(--ink);flex-direction:column;padding:20px 24px 40px;overflow:auto;transform:translateX(100%);transition:transform .35s var(--ease);gap:0}
+  .nav{position:fixed;top:var(--navtop,70px);left:0;right:0;bottom:0;margin:0;z-index:79;background:var(--ink);flex-direction:column;padding:12px 24px 48px;overflow-y:auto;overscroll-behavior:contain;transform:translateX(100%);visibility:hidden;transition:transform .35s var(--ease),visibility 0s .35s;gap:0}
+  .nav.is-open{visibility:visible;transition:transform .35s var(--ease)}
+  .nav>li:hover .nav__drop{transform:none}
   .nav.is-open{transform:none}
   .nav a,.nav button{font-size:1.25rem;padding:14px 0;border-radius:0;border-bottom:1px solid var(--line);width:100%;text-align:left}
   .nav__drop{position:static;transform:none;opacity:1;visibility:visible;min-width:0;grid-template-columns:1fr;background:none;border:0;box-shadow:none;padding:0 0 0 14px}
   .nav__drop a{font-size:1rem}
   .burger{display:grid}
+  .burger.is-open{background:var(--amber);color:var(--ink);border-color:var(--amber)}
+  .nav button[aria-haspopup]{display:none}
+  .nav>li:first-child{order:2;margin-top:26px}
+  .nav>li:first-child .nav__drop::before{content:"Shop by category";display:block;font:600 .72rem/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--amber);padding:0 0 6px}
+  .nav__drop{padding:0}
   .hdr__tools{margin-left:auto}
 }
 
