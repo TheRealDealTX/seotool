@@ -196,9 +196,10 @@ return ['smtp_host' => 'smtp.hostinger.com', 'smtp_port' => 465,
         'smtp_user' => 'info@pennsylvaniainsuranceappraiser.com', 'smtp_pass' => '…'];
 ```
 
-When the mailbox password arrives: upload that file (keep any local copy outside the repo and delete it afterwards),
-confirm `/api/_private/config.php` returns 404 with 0 bytes, send one submission labelled as a test, and confirm the
-log line shows `"via":"smtp"`.
+**SMTP is live and verified (Nov 16, 2026).** `config.php` was uploaded to `public_html/api/_private/` (no local copy
+kept); `/api/_private/config.php` returns 404 with a 0-byte body; a submission labelled as a test returned `{"ok":true}`
+and its `leads.log.php` line shows `"via":"smtp"`. If the mailbox password changes, re-upload the file the same way
+(TUS POST + PATCH with `X-Auth` / `X-Auth-Rest`) and repeat those three checks.
 
 ## Going live checklist
 
@@ -207,5 +208,5 @@ log line shows `"via":"smtp"`.
    `ssl_cert.names`); reissue with `agency-hosting_ssl_reinstall-website` if www is missing.
 3. Check `http://`, `http://www.` and `https://www.` interior pages all 301 to `https://pennsylvaniainsuranceappraiser.com/…`,
    `/page/index.php` 301s to `/page/`, every sitemap URL is 200, and the real domain sends no `X-Robots-Tag`.
-4. Create the mailbox and wire SMTP (above). Add GTM if provided.
+4. ~~Create the mailbox and wire SMTP (above). Add GTM if provided.~~ Done: SMTP verified, GTM `GTM-N9FKFMPJ` deployed.
 5. Click **Verify** in Search Console (URL-prefix property), then submit `https://pennsylvaniainsuranceappraiser.com/sitemap.xml`.
