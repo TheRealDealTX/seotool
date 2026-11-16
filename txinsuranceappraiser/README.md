@@ -99,7 +99,7 @@ Point it at another host with `BASE=https://… python3 _dev/validate.py`.
   Both pages of each pair are kept so no URL is lost, and each pair cross-links. Consider consolidating one of each pair later.
 - The old "Houston-TX.webp" image actually shows Austin, so the Houston page uses a storm-damage image instead.
 - Joseph's photo is `assets/img/site/joseph-dittman-appraiser.webp` (path set in `SITE['photo']`).
-- License shown site-wide: Rise Public Adjusting LLC, Texas public adjuster license #3341461 (`inc/config.php`).
+- License shown site-wide: Rise Public Adjusting LLC, Texas public adjuster license #3356839 (`inc/config.php`).
 
 ## Lead capture
 

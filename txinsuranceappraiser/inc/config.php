@@ -18,7 +18,7 @@ const SITE = [
     'hours_schema'=> 'Mo-Fr 09:00-18:00',
     'hubs'        => ['Austin', 'Waco', 'Dallas', 'Houston'],
     'tagline'     => 'Precision in Appraisal, Thorough on Inspection.',
-    'blurb'       => 'Provides independent insurance appraisal and umpire services for disputed residential and commercial property claims throughout Texas. A service of Rise Public Adjusting LLC, Texas public adjuster license #3341461.',
+    'blurb'       => 'Provides independent insurance appraisal and umpire services for disputed residential and commercial property claims throughout Texas. A service of Rise Public Adjusting LLC, Texas public adjuster license #3356839.',
     'copyright'   => 'Texas Insurance Appraiser - Rise Public Adjusting LLC',
     'photo'       => '/assets/img/site/joseph-dittman-appraiser.webp',
     'logo'        => '/assets/img/site/TX-Insurance-Appraiser-Logo-S.webp',
@@ -28,7 +28,7 @@ const SITE = [
         'name'     => 'Joseph Dittman',
         'role'     => 'Lead Insurance Appraiser',
         'company'  => 'Rise Public Adjusting LLC',
-        'license'  => '3341461',
+        'license'  => '3356839',
         'tdi_url'  => 'https://www.tdi.texas.gov/agent/agentlookup.html',
     ],
     // Contact form delivery
