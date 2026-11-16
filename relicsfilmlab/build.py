@@ -16,7 +16,12 @@ PDIR = os.path.join(PUB, "_p")
 SITE = "https://relicsfilmlab.com"
 TODAY = date.today().isoformat()
 KW = json.load(open(os.path.join(ROOT, "data", "keywords.json")))
-CRED = json.load(open(os.path.join(ROOT, "data", "image_credits.json"))) if os.path.exists(os.path.join(ROOT, "data", "image_credits.json")) else {}
+CRED = {}
+for _f in ("image_credits_b.json", "image_credits.json", "image_credits_site.json"):
+    _p = os.path.join(ROOT, "data", _f)
+    if os.path.exists(_p):
+        CRED.update({k: v for k, v in json.load(open(_p)).items() if not k.startswith("_")})
+CRED = {k: v for k, v in CRED.items() if os.path.exists(os.path.join(ROOT, "public", "assets", "img", "site" if k.startswith("site:") else "products", (k[5:] if k.startswith("site:") else k) + ".webp"))}
 PRODUCTS = catalog.products()
 BY_SLUG = {p["slug"]: p for p in PRODUCTS}
 WRITTEN = {}   # url path -> title (for sitemap / validation)
@@ -246,7 +251,8 @@ def why_points(p):
     if "zoom" in s and p["cat"] == "ps": pts.append("A zoom lens covers wide group shots and tighter portraits without changing position.")
     if re.search(r"f/1\.[0-9]", s): pts.append("A genuinely fast lens for its class, which means cleaner low-light shots and softer backgrounds.")
     if "weatherproof" in s or "waterproof" in s or "underwater" in s: pts.append("Sealed against splashes and weather, so it can go to the beach, the pool party or the hike.")
-    if "mechanical" in s or "manual" in s: pts.append("Mechanical controls teach you exposure properly — aperture, shutter speed and focus are all yours.")
+    if "mechanical" in s: pts.append("Mechanical controls teach you exposure properly — aperture, shutter speed and focus are all yours.")
+    elif "manual" in s: pts.append("Full manual control is there whenever you want to take over from the automation.")
     if "program" in s: pts.append("A Program mode for quick shooting, with manual control available whenever you want it.")
     if "aperture-priority" in s: pts.append("Aperture-priority auto exposure: choose your depth of field and the camera picks the shutter speed.")
     if "shutter-priority" in s: pts.append("Shutter-priority auto exposure keeps motion sharp while the camera handles the aperture.")
@@ -348,7 +354,7 @@ def product_page(p):
     buy = f"""<div class="buybox">
 <div class="mono muted">Available from independent sellers on Amazon</div>
 <div class="buybox__row">{amz_link(ICON['cart'] + " " + btn_label, special['q'] if special else q, 'btn btn--block')}</div>
-<div class="buybox__row"><button class="btn btn--ghost btn--block heart" data-slug="{slug}" aria-pressed="false" style="width:auto;flex:1;border-radius:999px;height:auto">{ICON['heart']} Save to wishlist</button></div>
+<div class="buybox__row"><button class="heart" data-slug="{slug}" aria-pressed="false">{ICON['heart']} Save to wishlist</button></div>
 <p class="buybox__note">We link to live Amazon listings so you always see current prices, condition and seller ratings. Relics earns a small commission at no extra cost to you.</p>
 <div class="trust"><div><b>Checkout</b>Secure on Amazon</div><div><b>Returns</b>Amazon return policy</div><div><b>Advice</b>Written by film shooters</div></div>
 </div>"""
@@ -452,7 +458,7 @@ def product_page(p):
 {buy}
 </div></section>
 <section class="pdp-body"><div class="prose">{''.join(sec)}<h2>FAQ</h2>{faq_h}</div>{aside}</section>
-{f'<section class="section" style="padding-top:20px"><div class="head-row"><h2>You might also like</h2><a class="btn btn--ghost btn--sm" href="/collections/{colslug}">See all {esc(catlabel.lower())}s</a></div><div class="grid">' + "".join(product_card(x, i) for i, x in enumerate(rel)) + "</div></section>" if rel else ""}
+{f'<section class="section" style="padding-top:20px"><div class="head-row"><h2>You might also like</h2><a class="btn btn--ghost btn--sm" href="/collections/{colslug}">See all {re.sub("<.*?>", "", col.get("h1", catlabel + "s")).replace("&amp;", "&")}</a></div><div class="grid">' + "".join(product_card(x, i) for i, x in enumerate(rel)) + "</div></section>" if rel else ""}
 </div>"""
     schema = [cr_ld] + ([faq_ld] if faq_ld else [])
     write(path, meta_title, desc, body, schema=schema, preload=im, ogimg=im)

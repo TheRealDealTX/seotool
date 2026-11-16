@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_p/
+Disallow: /pages/wishlist
+Disallow: /search
+
+Sitemap: https://relicsfilmlab.com/sitemap.xml

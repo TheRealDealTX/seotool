@@ -1,0 +1,82 @@
+{
+ "site:darkroom": {
+  "title": "Darkroom_01",
+  "url": "https://live.staticflickr.com/3504/3195285009_96f7ec643b_b.jpg",
+  "page": "https://www.flickr.com/photos/92357396@N00/3195285009",
+  "artist": "PHOTO/arts Magazine",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 910,
+  "h": 683
+ },
+ "site:workshop": {
+  "title": "Darkroom_02",
+  "url": "https://live.staticflickr.com/3087/3195284943_43d6437b0f_b.jpg",
+  "page": "https://www.flickr.com/photos/92357396@N00/3195284943",
+  "artist": "PHOTO/arts Magazine",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 910,
+  "h": 683
+ },
+ "site:photographer": {
+  "title": "Amy",
+  "url": "https://live.staticflickr.com/288/20232670915_f741f98e8b_b.jpg",
+  "page": "https://www.flickr.com/photos/7997148@N05/20232670915",
+  "artist": "Kh\u00e1nh Hmoong",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 549,
+  "h": 687
+ },
+ "site:point-shoot": {
+  "title": "Pentax IQZoom 140",
+  "url": "https://live.staticflickr.com/7297/14175466563_6c51f0eed1_b.jpg",
+  "page": "https://www.flickr.com/photos/7467877@N07/14175466563",
+  "artist": "CapCase",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 904,
+  "h": 678
+ },
+ "site:prints": {
+  "title": "day 006.",
+  "url": "https://live.staticflickr.com/7754/17276201719_a6e6139975_b.jpg",
+  "page": "https://www.flickr.com/photos/48337528@N05/17276201719",
+  "artist": "H o l l y.",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 846,
+  "h": 635
+ },
+ "site:repair": {
+  "title": "Anh T\u00e8o s\u1eeda m\u00e1y \u1ea3nh/ Camera repair man",
+  "url": "https://live.staticflickr.com/7023/6811890991_73c208de49_b.jpg",
+  "page": "https://www.flickr.com/photos/47615229@N06/6811890991",
+  "artist": "Tri Nguyen | P h o t o g r a p h y",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 913,
+  "h": 685
+ },
+ "site:negatives": {
+  "title": "film negative",
+  "url": "https://live.staticflickr.com/7142/6643035177_2011dc638d_b.jpg",
+  "page": "https://www.flickr.com/photos/51668926@N00/6643035177",
+  "artist": "ruffin_ready",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 910,
+  "h": 683
+ },
+ "site:books": {
+  "title": "Photography Books",
+  "url": "https://live.staticflickr.com/7397/8970232287_18d2087c45_b.jpg",
+  "page": "https://www.flickr.com/photos/92483809@N08/8970232287",
+  "artist": "Yukiko Matsuoka",
+  "license": "CC BY 2.0",
+  "source": "Flickr",
+  "w": 908,
+  "h": 681
+ }
+}

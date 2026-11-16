@@ -182,6 +182,7 @@ p{margin:0 0 1.1em}
 .specline span{font:500 .72rem/1 var(--f-mono);letter-spacing:.06em;padding:8px 11px;border-radius:999px;border:1px solid var(--line-2);color:var(--paper-2)}
 .buybox{border-radius:var(--radius);border:1px solid var(--line-2);padding:22px;background:linear-gradient(160deg,rgba(255,138,31,.09),rgba(255,138,31,0) 50%),var(--ink-2);margin:26px 0}
 .buybox__row{display:flex;gap:10px;margin-top:12px}
+.buybox .heart{display:flex;flex-direction:row;gap:.6em;width:100%;height:auto;padding:15px;border-radius:999px;font:600 .95rem/1 var(--f-body);border:1px solid var(--line-2)}
 .buybox__note{font-size:.78rem;color:var(--muted);margin:12px 0 0}
 .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 0}
 .trust div{font-size:.78rem;line-height:1.35;color:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:12px}

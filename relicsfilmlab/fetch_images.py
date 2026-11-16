@@ -26,7 +26,7 @@ def get(url, tries=4):
             with urllib.request.urlopen(req, timeout=40) as r:
                 return r.read()
         except Exception as e:
-            if i == tries - 1:
+            if i == tries - 1 or ("wikimedia.org" in url and "429" in str(e)):
                 raise
             time.sleep((15 if "429" in str(e) else 2) * (i + 1))
 
@@ -164,8 +164,8 @@ def fetch_product(p, credits):
     except Exception as e:
         print("search fail", slug, e, file=sys.stderr)
         return slug, "retry"
-    cands.sort(key=lambda c: 0 if c["license"] in ("CC0", "Public Domain Mark") else 1)
-    for c in cands[:3]:
+    cands.sort(key=lambda c: (1 if "wikimedia" in c["url"] else 0, 0 if c["license"] in ("CC0", "Public Domain Mark") else 1))
+    for c in cands[:4]:
         try:
             return slug, save(c, path, 1000)
         except Exception as e:
@@ -216,9 +216,84 @@ def main():
             credits.setdefault("_miss", []).append(slug)
             print("--", slug, flush=True)
         json.dump(credits, open(CRED, "w"), indent=1)
-        time.sleep(2.5)
+        time.sleep(1.5)
     json.dump(credits, open(CRED, "w"), indent=1)
     print("products with photos:", sum(1 for p in prods if p["slug"] in credits), "/", len(prods))
 
 if __name__ == "__main__":
     main()
+
+# ---- second pass: alternate names / relaxed matching for misses ----------------
+ALT = {
+    "minolta-x-700-mps-with-50mm-lens": ["Minolta X-700"], "canon-eos-rebel-xs": ["Canon EOS 500"], "canon-sure-shot-z-115": ["Canon Prima Super 115", "Canon Sure Shot Z115"],
+    "olympus-quick-shooter": ["Olympus Quick Shooter"], "pentax-iqzoom-160": ["Pentax Espio 160", "Pentax IQZoom 160"], "olympus-superzoom-760": ["Olympus Superzoom"],
+    "canon-514xl-super-8-camera": ["Canon 514XL", "Canon 514"], "olympus-stylus-zoom-35-70mm": ["Olympus mju zoom", "Olympus Stylus Zoom"],
+    "olympus-infinity-zoom-200": ["Olympus Infinity Zoom"], "polaroid-one-step-land-camera": ["Polaroid OneStep", "Polaroid One Step"],
+    "olympus-stylus": ["Olympus mju II", "Olympus Stylus Epic"], "olympus-stylus-epic-dlx-w-panoramic": ["Olympus mju II", "Olympus Stylus Epic"],
+    "kodak-cameo-motor-ex": ["Kodak Cameo"], "kodak-cameo-focus-free": ["Kodak Cameo"], "kodak-cameo-zoom-plus": ["Kodak Cameo"],
+    "fuji-discovery-1000-zoom": ["Fuji Discovery"], "fuji-discovery": ["Fuji Discovery"], "nikon-tele-touch": ["Nikon Tele Touch", "Nikon TW2"],
+    "canon-sure-shot-owl-date": ["Canon Sure Shot Owl", "Canon Autoboy 3"], "minolta-xg-1": ["Minolta XG-1", "Minolta XG1"], "nikon-f-photomic": ["Nikon F Photomic"],
+    "polaroid-600-one-step-spirit-instant-camera": ["Polaroid Spirit 600"], "polaroid-600-onestep-close-up-instant-camera": ["Polaroid OneStep Close Up", "Polaroid 600"],
+    "nikon-one-touch": ["Nikon One Touch", "Nikon L35AF3"], "nikon-one-touch-zoom-90s": ["Nikon One Touch Zoom"], "kiev-6c-with-65mm-lens": ["Kiev 6C", "Kiev 60"],
+    "olympus-stylus-120": ["Olympus mju zoom 120", "Olympus Stylus"], "olympus-stylus-infinity-mju-35mm-black-amp-silver": ["Olympus mju"],
+    "olympus-stylus-35-mm-black": ["Olympus mju"], "chinon-20-p-xl-direct-sound-super-8-camera": ["Chinon Super 8"], "minolta-srt-101-with-50mm-lens-1966": ["Minolta SRT 101", "Minolta SR-T 101"],
+    "contax-t3-like-new": ["Contax T3"], "olympus-om-2n": ["Olympus OM-2"], "canon-af-35-ml": ["Canon AF35ML"], "konica-autoreflex-t3": ["Konica Autoreflex T3", "Konica T3"],
+    "polaroid-sun-660": ["Polaroid Sun 660"], "olympus-om-g": ["Olympus OM-G", "Olympus OM-20"], "polaroid-600-cool-cam-instant-camera": ["Polaroid Cool Cam"],
+    "fujifilm-instax-wide-300-instant-film-camera-black-silver": ["Instax Wide 300"], "minolta-af-tel": ["Minolta AF-Tele"], "polaroid-pronto-land-camera": ["Polaroid Pronto"],
+    "minolta-110-zoom-date": ["Minolta 110 Zoom"], "polaroid-600-sun-lms-instant-camera": ["Polaroid Sun 600"], "pentax-auto-110-film-camera": ["Pentax Auto 110"],
+    "minolta-xe-7-with-50mm-lens": ["Minolta XE-7", "Minolta XE"], "nikon-nikonos-iv-a": ["Nikonos IV"], "fuji-fujica-st-605": ["Fujica ST605", "Fujica ST 605"],
+    "canon-310xl-super-8-camera": ["Canon 310XL", "Canon 310 XL"], "nikon-l35-af": ["Nikon L35AF", "Nikon L35 AF"], "minolta-srt-200": ["Minolta SRT", "Minolta SR-T"],
+    "canon-t70-1": ["Canon T70"], "fuji-gs645-s": ["Fuji GS645"], "minolta-hi-matic-af-2": ["Minolta Hi-Matic AF2"], "minolta-hi-matic-af2-md": ["Minolta Hi-Matic AF2"],
+    "minolta-hi-matic-af2-m": ["Minolta Hi-Matic AF2"], "yashica-35-me-1973": ["Yashica 35-ME", "Yashica 35 ME"], "mamiya-c330-with-80mm-lens": ["Mamiya C330"],
+    "olympus-pen-ee-1961": ["Olympus Pen EE"], "zeiss-ikon-contaflex-with-original-leather-case1953": ["Zeiss Ikon Contaflex"], "olympus-xa2-2": ["Olympus XA2"],
+    "olympus-xa2-original-case-a11-electronic-flash": ["Olympus XA2"], "canon-tl": ["Canon TL"], "canon-ftb": ["Canon FTb"], "zeiss-ikon-contessa-lk-1963": ["Zeiss Ikon Contessa"],
+    "nishika-n8000-3d-35mm-film-camera": ["Nishika N8000"], "pentax-mg-with-50mm-lens": ["Pentax MG"], "canon-a-1-black-1": ["Canon A-1"], "pentax-k-1000-with-50mm-lens-1": ["Pentax K1000"],
+    "nikon-fe2": ["Nikon FE2"], "canon-canonet-ql-17-giii-1": ["Canonet QL17", "Canonet G-III"], "canon-canonet-ql-17-n": ["Canonet QL17"], "hasselblad-503cx": ["Hasselblad 503CX", "Hasselblad 503"],
+    "hasselblad-500cm": ["Hasselblad 500C/M", "Hasselblad 500CM"], "nikon-em": ["Nikon EM"], "nikon-fg-1982": ["Nikon FG"], "nikon-fg-black-with-50mm-lens": ["Nikon FG"],
+    "mamiya-rb67-pro-sd": ["Mamiya RB67"], "contax-t2": ["Contax T2"], "nikon-f2-with-50mm-lens": ["Nikon F2"], "nikon-fe-black": ["Nikon FE"], "nikon-fm-with-50mm-lens": ["Nikon FM"],
+    "pentax-me-super-with-50mm-lens": ["Pentax ME Super"], "pentax-me": ["Pentax ME"], "olympus-om-10-with-50mm-lens-black": ["Olympus OM-10"], "olympus-om-10": ["Olympus OM-10", "Olympus OM10"],
+    "yashica-mat-124-g": ["Yashica Mat 124", "Yashica-Mat"], "yashica-electro-35-gsn": ["Yashica Electro 35"], "yashica-electro-35-gt": ["Yashica Electro 35"], "yashica-a": ["Yashica-A", "Yashica TLR"],
+    "mamiya-c220-professional": ["Mamiya C220"], "canon-ae-1-program": ["Canon AE-1 Program"], "canon-at-1": ["Canon AT-1"], "canon-av-1": ["Canon AV-1"], "canon-tx": ["Canon TX"],
+    "canon-t50-with-35-70mm-zoom-lens": ["Canon T50"], "minolta-x-370": ["Minolta X-370", "Minolta X-300"], "minolta-xg-m": ["Minolta XG-M"], "minolta-xg-9": ["Minolta XG-9", "Minolta XG9"],
+    "olympus-35-rc": ["Olympus 35 RC"], "canon-af-35m": ["Canon AF35M"], "canon-af35m-ii": ["Canon AF35M"], "olympus-trip-af-50": ["Olympus Trip AF"], "olympus-trip-af-60": ["Olympus Trip AF"],
+    "olympus-trip-md3": ["Olympus Trip MD"], "petri-7s": ["Petri 7s", "Petri 7"], "petri-flex-7": ["Petriflex 7", "Petri Flex"], "petri-flex-v": ["Petriflex V", "Petri Flex"],
+    "agfa-silette-sl": ["Agfa Silette"], "agfa-optima-500": ["Agfa Optima"], "konica-autoreflex-tc": ["Konica Autoreflex TC"], "ricoh-kr-10m": ["Ricoh KR-10"],
+    "kyocera-samurai-x3-0-red-35mm-half-frame-film-camera": ["Kyocera Samurai", "Yashica Samurai"], "canon-elph-sport": ["Canon Elph"], "minolta-weathermatic-dual-35": ["Minolta Weathermatic"],
+    "canon-canonet-28": ["Canonet 28"], "canon-canonet-ql-25": ["Canonet QL25", "Canonet"], "canon-a35-f-40mm-lens": ["Canon A35F", "Canon A35"], "sony-handycam-ccd-sc5": ["Sony CCD-SC5", "Sony Handycam"],
+    "canon-powershot-a550": ["Canon PowerShot A550"], "bolex-580-super-8-camera": ["Bolex Super 8", "Bolex 580"], "minolta-minoltina-p": ["Minoltina"], "yashica-j-3": ["Yashica J-3"],
+    "mamiyasekor-msx-500": ["Mamiya Sekor 500", "Mamiya MSX"], "vivitar-v3000s": ["Vivitar V3000"], "pentax-espio-738": ["Pentax Espio"], "pentax-pc-35-afm": ["Pentax PC35AF"],
+    "polaroid-impulse-se": ["Polaroid Impulse"], "polaroid-600-impulse-instant-camera": ["Polaroid Impulse"], "polaroid-600-silver-express-instant-camera": ["Polaroid 600 Express", "Polaroid OneStep 600"],
+    "polaroid-600-one-step-rainbow-instant-camera": ["Polaroid OneStep 600", "Polaroid 600"], "polaroid-job-pro-2": ["Polaroid Job Pro"], "polaroid-photo-magic-system": ["Polaroid 600"],
+    "polaroid-252-bv": ["Polaroid camera"], "minolta-freedom-dual": ["Minolta Freedom"], "minolta-freedom-zoom-90": ["Minolta Freedom Zoom"], "nikon-zoom-touch-400": ["Nikon Zoom Touch"],
+    "nikon-lite-touch-zoom-110": ["Nikon Lite Touch"], "canon-sureshot-telemax": ["Canon Sure Shot Tele"], "canon-sure-shot-telemax-date": ["Canon Sure Shot Tele"],
+    "pentax-iqzoom-900": ["Pentax IQZoom"], "minolta-freedom-zoom-supreme-ex": ["Minolta Freedom Zoom"], "samsung-maxima-zoom-70-xl": ["Samsung Maxima"],
+    "point-and-shoot-a-m-minolta-hi-matic-s": ["Minolta Hi-Matic"], "minolta-hi-matic-s2": ["Minolta Hi-Matic"],
+}
+
+def second_pass():
+    credits = json.load(open(CRED))
+    miss = [s for s in credits.get("_miss", []) if s in ALT]
+    prods = {p["slug"]: p for p in catalog.products()}
+    for slug in miss:
+        p = prods[slug]
+        got = None
+        for q in ALT[slug]:
+            toks = [t for t in re.split(r"\s+", q)]
+            try:
+                cands = [c for c in openverse(q, "cc0,pdm,by,by-sa", 20, min_w=500) if matches(c["title"], toks)]
+            except Exception as e:
+                print("search fail", slug, e, file=sys.stderr); time.sleep(30); continue
+            cands.sort(key=lambda c: (1 if "wikimedia" in c["url"] else 0, 0 if c["license"] in ("CC0", "Public Domain Mark") else 1))
+            for c in cands[:4]:
+                try:
+                    got = save(c, os.path.join(OUT, "products", slug + ".webp"), 1000); break
+                except Exception as e:
+                    print("dl fail", slug, e, file=sys.stderr)
+            time.sleep(3)
+            if got:
+                break
+        if got:
+            credits[slug] = got; credits["_miss"].remove(slug); print("ok2", slug, flush=True)
+        else:
+            print("--2", slug, flush=True)
+        json.dump(credits, open(CRED, "w"), indent=1)
