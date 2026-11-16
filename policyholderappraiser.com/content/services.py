@@ -21,8 +21,8 @@ SERVICES = [
         "icon": "home",
         "card": "Your appointed appraiser on a disputed homeowners, condo or renters claim anywhere in Texas.",
         "intro": (
-            "When you and your insurance company agree that a loss is covered but cannot agree on what it costs "
-            "to repair, your homeowners policy gives you a way out of the stalemate: appraisal. You appoint an "
+            "When you and your insurance company cannot agree on what a loss costs to repair, or on how much of the "
+            "damage the storm actually caused, your homeowners policy gives you a way out of the stalemate: appraisal. You appoint an "
             "appraiser, the carrier appoints one, and the two of them settle the amount of loss. We serve as the "
             "appraiser homeowners appoint."
         ),
@@ -59,9 +59,11 @@ residential losses, an engineer or architect, or someone with trade experience i
 our fee is quoted in writing before you appoint us. Both are consistent with for the independence the rule requires, and both
 are the reason an umpire takes our numbers seriously.</p>
 
-<div class="callout"><span class="label">Good to know</span>
-<p>Appraisal decides the <em>amount</em> of loss. It does not decide whether something is covered. If the carrier
-has denied the claim outright, appraisal is usually not the right tool and we will tell you so on the first call.</p></div>
+<div class="callout"><span class="label">Good to know: causation is appraisable in Texas</span>
+<p>Appraisal decides the <em>amount</em> of loss, and in Texas that includes causation. Under State Farm Lloyds v.
+Johnson (Tex. 2009), appraisers may decide how much of the damage the storm caused and how much is wear, deterioration
+or a prior event, and award the covered portion. A "wear and tear, not hail" letter is therefore an appraisable dispute,
+not a dead end. Only pure policy-interpretation questions sit outside the panel's authority.</p></div>
 
 <h2>How a homeowners appraisal usually runs</h2>
 <ol>
@@ -170,11 +172,12 @@ our estimate against theirs item by item.</p>
 <p>The result is not an inflated number. It is a complete, defensible one. Appraisal awards are decided by the two
 of three signatures, and umpires sign the estimate that holds up, not the biggest one.</p>
 
-<div class="callout"><span class="label">Before you demand appraisal on a roof claim</span>
-<p>Make sure the carrier has <em>accepted</em> the hail or wind event as a covered loss and the fight is about scope
-or price. If the denial says the damage is wear and tear, mechanical, or pre-dates the policy, that is a coverage
-dispute, and appraisal panels in Texas generally cannot resolve causation that goes to coverage. We will tell you
-which situation you are in.</p></div>
+<div class="callout"><span class="label">"Wear and tear, not hail" is an appraisable dispute</span>
+<p>Carriers routinely deny roof slopes as wear, mechanical damage or a prior storm. In Texas that is a causation
+question, and causation is appraisable: the Texas Supreme Court held in State Farm Lloyds v. Johnson (2009) that an
+appraisal panel deciding the amount of loss may decide which damage the covered hail or wind event caused and which did
+not. You do not need the carrier's agreement that the storm damaged the roof before you invoke appraisal. The
+panel sorts it out with test squares, shingle samples and brittleness testing, and awards the covered portion.</p></div>
 
 <h2>Timing matters</h2>
 <p>Under the 2027 Texas residential appraisal rules, each side has 20 days after a written demand to name its
@@ -268,12 +271,13 @@ pricing software ours does; it simply leaves items out or stops the repair short
 appraisal inspection documents moisture mapping, material types and the extent of affected areas, and our estimate
 carries the repair through to a finished, matched result where the policy supports it.</p>
 
-<div class="callout"><span class="label">Coverage questions are not appraisal questions</span>
-<p>Carriers often deny parts of water claims on causation grounds: long-term seepage, deterioration, or an
-excluded flood or surface-water source. Those are coverage disputes. Appraisal determines the amount of loss for
-the damage the carrier has accepted. If the carrier has accepted the leak but not the full extent of the damage,
-appraisal is a strong fit. If it has denied the leak itself, call us anyway and we will point you in the right
-direction.</p></div>
+<div class="callout"><span class="label">Causation disputes are appraisable in Texas</span>
+<p>Carriers often deny parts of water claims on causation grounds: long-term seepage, deterioration, or a surface-water
+source. In Texas those are questions an appraisal panel can decide. Since State Farm Lloyds v. Johnson (Tex. 2009),
+appraisers determining the amount of loss may separate the damage a sudden covered discharge caused from damage
+attributable to seepage or an excluded source, and award the covered portion. Whether the policy excludes a category
+of loss at all is a policy question for the carrier or a court; everything else about a water claim, including what
+caused which damage, belongs in appraisal.</p></div>
 
 <h2>Freeze events</h2>
 <p>Statewide freezes produce thousands of simultaneous burst-pipe claims, and the carrier scopes that follow are

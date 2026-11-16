@@ -111,15 +111,34 @@ for fs in sorted(pages()):
     if "huttoroofs" in html or "Hutto Roofers" in html:
         errors.append(f"{sp}: leftover copy from another site")
 
-# --- city pages: no body paragraph may repeat on another city page ---
+CITY_NAMES = []
+try:
+    import sys as _sys
+    _sys.path.insert(0, ROOT)
+    from content.cities import CITIES as _C
+    CITY_NAMES = [c["name"] for c in _C]
+except Exception:
+    pass
+# --- city pages and blog posts: no body paragraph may repeat on another page ---
 seen = {}
 for fs in sorted(pages()):
     sp = site_path(fs)
-    if not (sp.startswith("/service-areas/") and sp.endswith("-tx/")):
+    is_city = sp.startswith("/service-areas/") and sp.endswith("-tx/")
+    is_post = sp.startswith("/blog/") and sp != "/blog/"
+    if not (is_city or is_post):
         continue
     html = open(fs, encoding="utf-8").read()
     m = re.search(r'<article class="prose">(.*?)<div class="author-box">', html, re.S)
     body = m.group(1) if m else ""
+    if is_city:
+        city = sp[len("/service-areas/"):-len("-tx/")].replace("-", " ")
+        main = re.search(r"<main[^>]*>(.*?)</main>", html, re.S).group(1)
+        text = htmlmod.unescape(re.sub(r"<[^>]+>", " ", main)).lower()
+        n = len(re.findall(re.escape(city.lower()) + r"\s+insurance\s+appraiser", text))
+        n_other = sum(len(re.findall(re.escape(o.lower()) + r"\s+insurance\s+appraiser", text)) for o in [c2 for c2 in CITY_NAMES if c2.lower() != city.lower()])
+        # the "other cities" strip and nav dropdown mention other cities; only this city's phrase counts
+        if n != 14:
+            (errors if n < 14 else warnings).append(f"{sp}: '{city} insurance appraiser' appears {n} times (target 14)")
     for para in re.findall(r"<(?:p|li)>(.*?)</(?:p|li)>", body, re.S):
         key = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", para)).strip().lower()
         if len(key) < 60:

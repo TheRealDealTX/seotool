@@ -18,6 +18,8 @@ from content.faq import FAQ
 from content.legal import PRIVACY_BODY, TERMS_BODY
 from content.cities import CITIES
 from content.bio import BIO
+from content.cities_extra import EXTRA
+from content.storms import STORMS, PUBLISHED as STORMS_PUBLISHED
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, "src")
@@ -222,6 +224,10 @@ def header(active=None):
     items = []
     for label, href in NAV:
         cur = ' aria-current="page"' if href == active else ""
+        if href == "/service-areas/":
+            subs = "".join(f'<li><a href="{c["path"]}">{kw_title(c)}</a></li>' for c in CITIES)
+            items.append(f'<li class="has-sub"><a href="{href}"{cur}>{label}</a><ul class="sub" aria-label="Areas served"><li class="sub-all"><a href="/service-areas/">All Texas service areas</a></li>{subs}</ul></li>')
+            continue
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return f"""<div class="topbar"><div class="wrap topbar-in">
 <span><strong>Independent appraisers for Texas policyholders</strong> &middot; Certified appraiser &amp; umpire &middot; Statewide Texas</span>
@@ -239,7 +245,7 @@ def header(active=None):
 def footer():
     services = "".join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)
     guides = "".join(f'<a href="{g["path"]}">{g["nav_label"]}</a>' for g in GUIDES)
-    city_links = " &middot; ".join(f'<a href="{c["path"]}">{c["name"]}</a>' for c in CITIES)
+    city_links = " &middot; ".join(f'<a href="{c["path"]}">{kw_title(c)}</a>' for c in CITIES)
     return f"""</main>
 <section class="cta-band" aria-label="Call to action"><div class="wrap cta-band-in">
 <div><h2>Disagree with the carrier's number?</h2><p>Send us the estimate. We will tell you within one business day whether appraisal fits and what it would cost.</p></div>
@@ -253,7 +259,7 @@ def footer():
 <p><a href="tel:{TEL}">{PHONE}</a> &middot; <a href="mailto:{BIZ['email']}">{BIZ['email']}</a><br>{BIZ['hours']}</p>
 </div>
 <div><div class="footer-title">Appraisal Services</div><div class="footer-links">{services}<a href="/services/">All services</a></div></div>
-<div><div class="footer-title">Guides</div><div class="footer-links"><a href="/appraisal-process/">How appraisal works</a>{guides}<a href="/faq/">FAQ</a></div></div>
+<div><div class="footer-title">Guides</div><div class="footer-links"><a href="/appraisal-process/">How appraisal works</a>{guides}<a href="/faq/">FAQ</a><a href="/blog/">Storm history blog</a></div></div>
 <div><div class="footer-title">Company</div><div class="footer-links"><a href="/about/">About</a><a href="/joseph-dittman/">Joseph Dittman, appraiser</a><a href="/service-areas/">Service areas</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy policy</a><a href="/terms-of-use/">Terms of use</a></div></div>
 </div>
 <div class="footer-title" style="margin-top:8px">Insurance appraiser by city</div>
@@ -266,6 +272,18 @@ def footer():
 </body>
 </html>
 """
+
+
+def kw(c):
+    return f"{c['name']} insurance appraiser"
+
+
+def kw_title(c):
+    return f"{c['name']} Insurance Appraiser"
+
+
+def post_path(c):
+    return f"/blog/{c['slug']}-storm-history/"
 
 
 def crumbs(items):
@@ -387,7 +405,7 @@ def service_cards(items, cls="grid grid-3"):
 
 def city_cards(items=None):
     items = items or CITIES
-    cards = "".join(f'<a class="card city-card" href="{c["path"]}"><h3>{c["name"]}</h3><p>{c["county"]} &middot; {c["region"]}</p><span class="more">Insurance appraiser in {c["name"]} &rarr;</span></a>' for c in items)
+    cards = "".join(f'<a class="card city-card" href="{c["path"]}"><h3>{c["name"]}</h3><p>{c["county"]} &middot; {c["region"]}</p><span class="more">{kw_title(c)} &rarr;</span></a>' for c in items)
     return f'<div class="grid grid-4">{cards}</div>'
 
 
@@ -423,7 +441,7 @@ def build_home():
 <div>
 <p class="eyebrow">Certified insurance appraiser &amp; umpire &middot; Texas</p>
 <h1>Texas insurance appraiser <span>for policyholders.</span></h1>
-<p class="lede">When the carrier agrees your loss is covered but will not agree on what it costs, your policy lets you invoke appraisal. You appoint an appraiser. We are the appraiser Texas policyholders appoint: competent, independent, and disinterested in the outcome, which is exactly what makes our number hold up.</p>
+<p class="lede">When the carrier will not agree on what your loss costs, or says the damage is wear instead of the storm, your policy lets you invoke appraisal. You appoint an appraiser. We are the appraiser Texas policyholders appoint: competent, independent, and disinterested in the outcome, which is exactly what makes our number hold up.</p>
 <div class="hero-actions"><a class="btn btn-brass" href="/contact/">Request a Free Review</a><a class="btn btn-ghost-light" href="/appraisal-process/">How appraisal works</a></div>
 <ul class="trust-row"><li>Flat fee, quoted in writing</li><li>{BIZ['license_label']}</li><li>Residential &amp; commercial</li><li>Statewide Texas</li></ul>
 </div>
@@ -431,11 +449,11 @@ def build_home():
 <p class="eyebrow" style="color:var(--brass-ink)">Is appraisal right for your claim?</p>
 <h2>Three quick questions</h2>
 <ul class="check-list">
-<li>The carrier accepted the loss as covered</li>
-<li>You disagree with the amount or scope of its estimate</li>
+<li>The carrier paid less than repairs cost, or blamed the damage on wear instead of the storm</li>
+<li>You have a contractor's estimate, photos or a report that says otherwise</li>
 <li>Your policy has an appraisal clause (every Texas home policy will from March 2027)</li>
 </ul>
-<p class="small">Three yeses and appraisal is probably the fastest, cheapest way to a binding number. Send us the estimate and we will confirm.</p>
+<p class="small">Three yeses and appraisal is probably the fastest, cheapest way to a binding number. In Texas the panel can decide causation too, so a "wear and tear" letter is not the end. Send us the estimate and we will confirm.</p>
 <a class="btn btn-dark btn-block" href="/contact/">Send the Carrier's Estimate</a>
 </div>
 </div></section>
@@ -506,7 +524,7 @@ def build_services_index():
 <section><div class="wrap">{service_cards(SERVICES)}</div></section>
 <section class="sand"><div class="wrap split">
 <div><p class="eyebrow">What we do not do</p><h2>Appraisal has limits. We respect them.</h2>
-<p>Appraisal decides the amount of loss. It does not decide whether a loss is covered. If your carrier has denied coverage, or the dispute is about conduct rather than dollars, we will say so and point you to the right resource rather than take an engagement that cannot help you.</p>
+<p>Appraisal decides the amount of loss, which in Texas includes causation: a panel can decide how much damage the storm caused versus wear or a prior event (State Farm Lloyds v. Johnson, Tex. 2009). It does not decide pure policy-interpretation questions or the carrier's conduct. When a dispute is really about policy wording, we will say so and point you to the right resource rather than take an engagement that cannot help you.</p>
 <p>We also do not serve as appraiser on any claim where Rise Public Adjusting acted as public adjuster. Independence is not a marketing line; it is the qualification.</p></div>
 <div class="panel panel-light"><h3>Not sure which applies?</h3><p>Send the carrier's estimate and letters. We will reply within one business day with a plain answer: appraisal, public adjuster, attorney, or wait.</p><a class="btn btn-dark" href="/contact/">Request a Free Review</a></div>
 </div></section>
@@ -535,7 +553,7 @@ def build_process():
     graph = [org_schema(), website_schema(), webpage_schema(page), breadcrumb_schema([("Home", "/"), ("How Appraisal Works", page["path"])]),
              {"@type": "HowTo", "name": "How to resolve a disputed Texas property claim through appraisal",
               "step": [{"@type": "HowToStep", "position": i + 1, "name": n, "text": t} for i, (n, t) in enumerate([
-                  ("Confirm appraisal fits", "The carrier has accepted the loss as covered and the dispute is about scope or price, not coverage."),
+                  ("Confirm appraisal fits", "The dispute is about the amount of loss: scope, price, or what the covered event caused. In Texas, causation is appraisable."),
                   ("Demand appraisal in writing", "Deliver a written demand to the carrier that invokes the policy's appraisal clause and names your appraiser."),
                   ("Appraisers are appointed", "Each party names a competent, independent, disinterested appraiser within 20 days under the 2027 Texas rules."),
                   ("Inspection and estimates", "Both appraisers inspect, document and price the loss, then compare estimates line by line and agree where they can."),
@@ -547,7 +565,7 @@ def build_process():
 <section><div class="wrap prose-grid">
 <article class="prose">
 <h2>Step 1: Confirm that appraisal fits the dispute</h2>
-<p>Appraisal exists to answer one question: the <strong>amount of loss</strong>. It works when the carrier has accepted that the loss is covered and the disagreement is about scope, quantities or price. It does not work when the carrier says the damage is excluded, pre-existing or not caused by a covered peril; those are coverage questions for negotiation or, if necessary, a court. Read the carrier's letter carefully. "We have paid the reasonable cost of repair" is an amount dispute. "The damage is the result of wear and tear" is a coverage dispute.</p>
+<p>Appraisal exists to answer one question: the <strong>amount of loss</strong>. In Texas that question includes causation. Since State Farm Lloyds v. Johnson (Tex. 2009), an appraisal panel may decide how much of the damage the covered event caused and how much is wear, deterioration or a prior loss, and award the covered portion. So "we have paid the reasonable cost of repair" is an appraisable dispute, and "the damage is the result of wear and tear" is one too. What a panel may not decide is a pure policy question: whether the policy's wording excludes a category of loss, or whether a condition of coverage was satisfied. Read the carrier's letter with that line in mind, and send it to us if you are unsure which side it falls on.</p>
 
 <h2>Step 2: Read the appraisal clause</h2>
 <p>Find the Conditions section of the full policy. The appraisal clause will tell you who may demand appraisal, any time limit, how an umpire is chosen if the appraisers cannot agree, and how costs are split. For residential and personal auto policies issued or renewed on or after March 1, 2027, Texas requires the clause to give both sides a unilateral right to demand appraisal, with no impasse requirement, and to state the deadlines summarized on this page. Commercial and TWIA policies keep their own clauses.</p>
@@ -640,7 +658,7 @@ def build_about():
 <li>We do not serve as appraiser on any claim in which Rise Public Adjusting acted as the public adjuster.</li>
 <li>Appraisal and umpire fees are flat or hourly and quoted in writing before you appoint us.</li>
 <li>Before accepting an umpire appointment we disclose any prior dealings with either party, either appraiser or counsel.</li>
-<li>We decline engagements where appraisal cannot help, including coverage denials.</li>
+<li>We decline engagements where appraisal cannot help, such as disputes that turn purely on policy wording.</li>
 </ul>
 <h3>Qualified under the 2027 Texas rules</h3>
 <p>28 TAC §5.9804 requires appraisers and umpires on residential dwelling losses to be competent by training or experience, independent of the parties, disinterested in the outcome, and either a licensed adjuster or public adjuster with residential estimating experience, an engineer or architect, or a qualified tradesperson. Joseph meets the adjuster standard twice over, with daily residential and commercial estimating experience and a construction background behind it.</p>
@@ -669,44 +687,90 @@ def build_areas():
 
 
 def build_city(c):
-    title = f"{c['name']} TX Insurance Appraiser | Policyholder Appraiser"
-    if len(title) > 60:
-        title = f"Insurance Appraiser in {c['name']}, TX | Appraiser & Umpire"
-    if len(title) > 60:
-        title = f"{c['name']}, TX Insurance Appraiser & Umpire"
+    K, KT, post = kw(c), kw_title(c), post_path(c)
+    title = f"{KT} | Policyholder Appraiser"
     desc = c["description"]
     for cut in (" Call (832) 503-5866.", " (832) 503-5866.", " Flat fee, binding award.", " Binding award, flat fee.", " Flat fee quoted in writing.", " Flat fee.", " Binding award without a lawsuit.", " Flat fee, binding award, no lawsuit."):
         if len(desc) > 145:
             desc = desc.replace(cut, "")
-    page = {"path": c["path"], "title": title, "description": desc, "eyebrow": f"Insurance appraiser &middot; {c['name']}, Texas",
-            "h1": c["h1"], "intro": c["intro"]}
-    trail = [("Home", "/"), ("Service Areas", "/service-areas/"), (c["name"], c["path"])]
+    page = {"path": c["path"], "title": title, "description": desc, "eyebrow": f"{K} &middot; serving {c['county']}",
+            "h1": f"{KT} <span>for Policyholders</span>", "intro": c["intro"]}
+    trail = [("Home", "/"), ("Areas Served", "/service-areas/"), (KT, c["path"])]
     graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail), faq_schema(c["faq"]),
-             {"@type": "Service", "@id": url(c["path"]) + "#service", "name": f"Insurance appraisal services in {c['name']}, TX",
+             {"@type": "Service", "@id": url(c["path"]) + "#service", "name": f"{KT} services",
               "serviceType": "Insurance claim appraisal and umpire services", "provider": {"@id": ORG_ID},
               "areaServed": [{"@type": "City", "name": c["name"], "containedInPlace": {"@type": "State", "name": "Texas"}}] + [{"@type": "City", "name": n} for n in c["nearby"]],
               "url": url(c["path"]), "description": c["description"]}]
     others = [o for o in CITIES if o["slug"] != c["slug"]]
-    other_links = " &middot; ".join(f'<a href="{o["path"]}">{o["name"]}</a>' for o in others)
+    other_links = " &middot; ".join(f'<a href="{o["path"]}">{kw_title(o)}</a>' for o in others)
     nearby = "".join(f"<li>{n}</li>" for n in c["nearby"])
     faqs = "".join(f"<details><summary>{q}</summary><p>{a}</p></details>" for q, a in c["faq"])
+    extra = EXTRA[c["slug"]].format(kw=K, city=c["name"], post=post)
+    storm = STORMS[c["slug"]]
     body = page_hero(page, trail) + f"""
 <section><div class="wrap prose-grid">
 <article class="prose">{c['body']}
-<h2>Questions from {c['name']} policyholders</h2>
+{extra}
+<h2>Questions for a {K}</h2>
 {faqs}
+<p class="callout"><span class="label">Appoint a {K}</span>Send the carrier's estimate and your policy for a free review. Call or text {PHONE}, or use the form below. The fee is quoted in writing before you appoint us.</p>
 {author_box()}
 </article>
 <aside class="sidebar">
-<div class="side-card"><h3>Appraiser for your {c['name']} claim</h3><p>Send the carrier's estimate. One business day for a straight answer and a written fee.</p><a class="btn btn-brass" href="/contact/">Request a Free Review</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card"><h3>Your {K}</h3><p>Send the carrier's estimate. One business day for a straight answer and a written fee.</p><a class="btn btn-brass" href="/contact/">Request a Free Review</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card light"><h3>{c['name']} storm history</h3><p>{storm['description']}</p><div class="side-list"><a href="{post}">Read the {c['name']} storm timeline</a></div></div>
 <div class="side-card light"><h3>Also serving near {c['name']}</h3><ul class="pill-row" style="margin-top:4px">{nearby}</ul></div>
 <div class="side-card light"><h3>Appraisal services</h3><div class="side-list">{''.join(f'<a href="{s["path"]}">{s["nav_label"]}</a>' for s in SERVICES)}</div></div>
 <div class="side-card light"><h3>Guides</h3><div class="side-list"><a href="/appraisal-process/">How appraisal works</a><a href="/texas-appraisal-rules/">2027 Texas appraisal rules</a><a href="/guides/invoke-appraisal-clause/">How to invoke the appraisal clause</a></div></div>
 </aside>
 </div></section>
-<section class="sand"><div class="wrap"><p class="eyebrow">Other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_links}</p></div></section>
+<section class="sand"><div class="wrap"><p class="eyebrow">Insurance appraiser in other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_links}</p></div></section>
 """ + contact_section()
     write(c["path"], head(page, graph) + header("/service-areas/") + body + footer())
+
+
+def build_blog_index():
+    page = {"path": "/blog/", "title": "Texas Storm History Blog | Policyholder Appraiser",
+            "description": "City-by-city storm histories for Texas: the hurricanes, hail, tornadoes, floods and freezes behind property insurance claims, and what each means for appraisal.",
+            "eyebrow": "Blog", "h1": "Texas Storm History, <span>City by City</span>",
+            "intro": "Every underpaid claim starts with a storm. These posts lay out the major weather events in each Texas city we serve, what carriers did with the claims that followed, and how appraisal resolves the disputes that remain."}
+    graph = [org_schema(), website_schema(), webpage_schema(page, "CollectionPage"), breadcrumb_schema([("Home", "/"), ("Blog", "/blog/")]),
+             {"@type": "Blog", "@id": url("/blog/#blog"), "name": "Policyholder Appraiser storm history blog", "publisher": {"@id": ORG_ID},
+              "blogPost": [{"@type": "BlogPosting", "headline": STORMS[c["slug"]]["title"], "url": url(post_path(c)), "datePublished": STORMS_PUBLISHED} for c in CITIES]}]
+    cards = "".join(f'<a class="card" href="{post_path(c)}"><div class="card-icon">{icon("wind")}</div><h3>{STORMS[c["slug"]]["title"].split(":")[0]}</h3><p>{STORMS[c["slug"]]["description"]}</p><span class="more">Read the {c["name"]} timeline &rarr;</span></a>' for c in CITIES)
+    body = page_hero(page, [("Home", "/"), ("Blog", "/blog/")], actions=False) + f"""
+<section><div class="wrap"><div class="grid grid-3">{cards}</div></div></section>
+""" + contact_section()
+    write(page["path"], head(page, graph) + header("/blog/") + body + footer())
+
+
+def build_post(c):
+    s = STORMS[c["slug"]]
+    path = post_path(c)
+    page = {"path": path, "title": s["title"], "description": s["description"], "eyebrow": f"Storm history &middot; {c['name']}, Texas",
+            "h1": s["h1"], "intro": s["intro"], "published": STORMS_PUBLISHED}
+    trail = [("Home", "/"), ("Blog", "/blog/"), (f"{c['name']} storm history", path)]
+    graph = [org_schema(), person_schema(), website_schema(), webpage_schema(page), breadcrumb_schema(trail),
+             {"@type": "BlogPosting", "@id": url(path) + "#post", "headline": s["title"], "description": s["description"],
+              "author": {"@id": PERSON_ID}, "publisher": {"@id": ORG_ID}, "datePublished": STORMS_PUBLISHED, "dateModified": TODAY,
+              "mainEntityOfPage": url(path), "image": url("/img/og-image.png"), "about": {"@type": "City", "name": c["name"] + ", TX"}}]
+    svc = {s_["slug"]: s_["path"] for s_ in SERVICES}
+    body_html = s["body"].format(city_url=c["path"], kw=kw(c), hail=svc["hail-and-roof-claim-appraisal"], wind=svc["hurricane-and-wind-claim-appraisal"],
+                                 water=svc["water-damage-claim-appraisal"], fire=svc["fire-and-smoke-claim-appraisal"], home=svc["residential-property-appraisal"])
+    others = [o for o in CITIES if o["slug"] != c["slug"]]
+    other_posts = " &middot; ".join(f'<a href="{post_path(o)}">{o["name"]}</a>' for o in others)
+    body = page_hero(page, trail, actions=False) + f"""
+<section><div class="wrap prose-grid">
+<article class="prose">{body_html}{author_box()}</article>
+<aside class="sidebar">
+<div class="side-card"><h3>{kw_title(c)}</h3><p>Appoint an independent appraiser for a {c['name']} claim from any of these storms.</p><a class="btn btn-brass" href="{c['path']}">{kw_title(c)} services</a><p style="margin:12px 0 0;text-align:center"><a href="tel:{TEL}" style="color:#fff;text-decoration:none;font-weight:700">Call {PHONE}</a></p></div>
+<div class="side-card light"><h3>Appraisal services</h3><div class="side-list">{''.join(f'<a href="{s_["path"]}">{s_["nav_label"]}</a>' for s_ in SERVICES)}</div></div>
+<div class="side-card light"><h3>Guides</h3><div class="side-list"><a href="/appraisal-process/">How appraisal works</a><a href="/texas-appraisal-rules/">2027 Texas appraisal rules</a><a href="/guides/invoke-appraisal-clause/">How to invoke the appraisal clause</a></div></div>
+</aside>
+</div></section>
+<section class="sand"><div class="wrap"><p class="eyebrow">Storm history in other Texas cities</p><p class="footer-cities" style="color:var(--slate)">{other_posts}</p></div></section>
+""" + contact_section()
+    write(path, head(page, graph) + header("/blog/") + body + footer())
 
 
 def build_bio():
@@ -864,6 +928,8 @@ def main():
     build_areas()
     for c in CITIES:
         build_city(c)
+        build_post(c)
+    build_blog_index()
     build_bio()
     build_contact()
     build_thanks()
@@ -871,7 +937,7 @@ def main():
     build_legal("/terms-of-use/", "Terms of Use", "Terms of Use", TERMS_BODY)
     build_404()
     indexable = ["/", "/services/"] + [s["path"] for s in SERVICES] + ["/appraisal-process/", "/guides/"] + \
-                [g["path"] for g in GUIDES] + ["/faq/", "/about/", BIO["path"], "/service-areas/"] + [c["path"] for c in CITIES] + ["/contact/", "/privacy-policy/", "/terms-of-use/"]
+                [g["path"] for g in GUIDES] + ["/faq/", "/about/", BIO["path"], "/service-areas/"] + [c["path"] for c in CITIES] + ["/blog/"] + [post_path(c) for c in CITIES] + ["/contact/", "/privacy-policy/", "/terms-of-use/"]
     build_sitemap(indexable)
     n = sum(len(f) for _, _, f in os.walk(OUT))
     print(f"built {len(indexable)} pages, {n} files -> {OUT}")

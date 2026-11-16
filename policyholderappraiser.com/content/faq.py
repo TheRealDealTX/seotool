@@ -12,10 +12,12 @@ FAQ = [
      "the settlement. An appraiser is appointed only after a dispute over the amount of loss, participates in a "
      "formal process that ends in a binding award, and must be disinterested in the outcome, which is why we charge a "
      "flat or hourly fee quoted in writing before you appoint us."),
-    ("Does appraisal decide whether my claim is covered?",
-     "No. Appraisal is limited to the amount of loss. If the carrier has denied your claim on coverage grounds, "
-     "appraisal is generally not the right tool. If the carrier accepted the loss but underpaid it, appraisal is "
-     "designed for exactly that dispute."),
+    ("The carrier says my damage is wear and tear, not the storm. Can appraisal still help?",
+     "Yes. In Texas, causation is appraisable. The Texas Supreme Court held in State Farm Lloyds v. Johnson (2009) "
+     "that deciding the amount of loss necessarily includes deciding which damage the covered event caused and which "
+     "is pre-existing or excluded, so an appraisal panel can sort hail from wear, storm from deterioration, and award "
+     "the covered portion. What appraisal does not decide are pure policy questions, such as whether a type of loss "
+     "is excluded by the policy's language; those remain for the carrier and, if necessary, a court."),
     ("Is the appraisal award binding?",
      "Yes, as to the amount of loss. An award signed by both appraisers, or by one appraiser and the umpire, binds "
      "both you and the carrier. Under the 2027 Texas rules it can be set aside only if it was made without authority, "
@@ -43,7 +45,7 @@ FAQ = [
      "adjuster, and we are happy to recommend other qualified appraisers in that situation."),
     ("Do I need a lawyer to go through appraisal?",
      "No. Appraisal is a contractual process, not a lawsuit, and most homeowners complete it without counsel. If your "
-     "dispute also involves a coverage denial, a Texas insurance attorney can advise you on "
+     "dispute also involves a policy-interpretation question or the carrier's conduct, a Texas insurance attorney can advise you on "
      "those issues while appraisal resolves the amount of loss. We work alongside counsel routinely."),
     ("What if the appraisers cannot agree on an umpire?",
      "Either party may ask a county or district court where the property is located to appoint an umpire, after "

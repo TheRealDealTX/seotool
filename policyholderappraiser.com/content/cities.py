@@ -89,8 +89,8 @@ CITIES = [
 <p>All of Dallas County: Richardson, Garland, Irving, Mesquite, Carrollton, Farmers Branch, Lancaster, DeSoto, Duncanville, Cedar Hill, Grand Prairie, Rowlett, Sachse and Balch Springs, plus Plano and Collin County to the north.</p>
 """,
         "faq": [
-            ("The carrier says my Dallas roof damage is cosmetic. Is that a coverage denial or an amount dispute?",
-             "It depends on the policy. If your policy has a cosmetic-damage exclusion for metal roofs, that is a coverage question. On a shingle roof, 'cosmetic' is usually the adjuster's judgment that the hail did not break the mat, which is a factual question about the amount of covered loss, and appraisal panels decide it with test squares and shingle samples."),
+            ("The carrier says my Dallas roof damage is cosmetic. Can appraisal decide that?",
+             "Yes. 'Cosmetic' is the adjuster's judgment that the hail did not functionally damage the shingle, which is a causation and amount-of-loss question an appraisal panel decides in Texas with test squares, shingle samples and brittleness testing. The one exception is a policy with an express cosmetic-damage exclusion for metal roofs, where whether the exclusion applies is a policy-wording question."),
             ("My Dallas home has plank decking. Will appraisal pay to re-deck it?",
              "If replacement is awarded and the policy includes ordinance-or-law coverage, the decking required by the Dallas code and the shingle manufacturer's installation requirements belongs in the amount of loss. We document the decking type with attic photos and board-gap measurements so the umpire can see why it is owed."),
         ],
@@ -179,7 +179,7 @@ CITIES = [
             ("My El Paso flat roof was patched by the carrier's estimate. Can appraisal award a full membrane?",
              "If the evidence shows the membrane has failed beyond repair, that saturated insulation must be removed, or that a patch cannot be made watertight on the existing system, an appraisal award can include the full roof system. We core-sample and moisture-scan low-slope roofs to prove it."),
             ("The carrier says my monsoon water damage is flood. Is that something appraisal can decide?",
-             "Not by itself. Whether water came through the roof or rose from the ground is a coverage question. Appraisal determines the amount of the covered loss. We help by documenting the entry path with photos and moisture mapping; if the carrier then accepts a covered source and disputes the amount, appraisal resolves the rest."),
+             "In Texas, yes. Whether water came through the roof or rose from the street is a causation question, and State Farm Lloyds v. Johnson lets the appraisal panel decide how much of the damage each source caused when it fixes the amount of loss. We document the entry path with photographs and moisture mapping so the panel can award the roof-and-parapet portion even where surface water also entered."),
         ],
     },
     {
@@ -206,7 +206,7 @@ CITIES = [
 """,
         "faq": [
             ("The carrier approved a roof repair on my Arlington home three years ago and now says the roof is worn out. Can appraisal help?",
-             "If the current hail event is accepted as covered, appraisal decides the amount of loss for that event, including whether a repair is feasible on a roof the carrier previously repaired. Prior repair approvals, brittleness testing and the roof's actual condition all go into the appraisers' analysis."),
+             "Yes. Whether the current damage is from this hail event or is wear on a previously repaired roof is a causation question, and Texas appraisal panels decide causation as part of the amount of loss. Prior repair approvals, brittleness testing and the roof's actual condition all go into the appraisers' analysis, and the panel awards what this event caused."),
             ("Can appraisal handle an Arlington apartment complex with twenty buildings?",
              "Yes. Large multifamily losses are among the most common commercial appraisals in Tarrant County. We scope each building and each affected unit, and the award is itemized so the carrier's payment can be reconciled building by building."),
         ],
@@ -240,7 +240,7 @@ CITIES = [
             ("My Corpus Christi wind claim is with TWIA. Do the 2027 Texas appraisal rules apply?",
              "No. TWIA policies are expressly excluded from the 2027 rules and follow TWIA's own appraisal process under 28 TAC §5.4201 and following, including TDI's umpire roster. We work within that process, and we will walk you through its deadlines before you demand appraisal."),
             ("The carrier blames salt-air corrosion for my damaged HVAC and flashing. Can appraisal address that?",
-             "Appraisal resolves the amount of the covered loss. If the carrier has accepted the storm but attributes specific items to corrosion, that is a scope dispute an appraisal panel can decide on the evidence: impact patterns, bent fins, torn flashing and photo documentation of the condition before and after the storm."),
+             "Yes. Whether the flashing and coils were torn by the storm or eaten by salt air is a causation question, and in Texas the appraisal panel decides causation as part of the amount of loss. We document impact patterns, bent fins, torn flashing and the condition before and after the storm so the panel can award the storm-caused portion."),
         ],
     },
     {
@@ -296,7 +296,7 @@ CITIES = [
 """,
         "faq": [
             ("The carrier won't pay to clean my ductwork after a Lubbock dust storm. Is that an appraisal issue?",
-             "If the carrier has accepted the storm as a covered loss and is disputing whether duct cleaning is a necessary part of the repair, that is a scope question appraisal can decide. If it has denied dust intrusion as a covered peril entirely, that is a coverage question; we will tell you which letter you have."),
+             "Usually, yes. Whether the dust came from the storm and whether cleaning is a necessary part of the repair are causation and scope questions, and Texas appraisal panels decide both as part of the amount of loss. The only version that needs a lawyer first is a denial that rests purely on policy wording, such as an express exclusion for windblown dust; send us the letter and we will tell you which you have."),
             ("Do you travel to Lubbock for inspections?",
              "Yes. Travel is included in the quoted fee for Lubbock and the South Plains. We typically schedule West Texas inspections in clusters so the cost stays low, and early document review happens remotely before anyone drives."),
         ],
@@ -324,7 +324,7 @@ CITIES = [
 """,
         "faq": [
             ("The carrier says hail marks on my Las Colinas office roof are cosmetic. Can appraisal decide that?",
-             "If the carrier has accepted the hail event and the dispute is whether the membrane damage requires replacement, that is an amount-of-loss question. We document fractures, punctures and seam damage with close-up photography and, where warranted, core samples so the panel can see whether the membrane is compromised."),
+             "Yes. Whether the hail compromised the membrane or merely marked it is a causation and amount-of-loss question that a Texas appraisal panel decides. We document fractures, punctures and seam damage with close-up photography and, where warranted, core samples so the panel can see whether the membrane is compromised and award replacement if it is."),
             ("My Irving townhome's roof is shared. Who demands appraisal?",
              "The party whose policy covers the damaged element. If the association's master policy covers the roof, the association demands appraisal; if your HO-6 covers interior finishes, you demand appraisal on those. We help sort the responsibility line before any demand goes out."),
         ],

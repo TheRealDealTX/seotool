@@ -135,8 +135,8 @@ legal advice. Check the current rule text and your own policy, and consult a Tex
 <tr><td>Binding?</td><td class="hl">Yes, as to amount of loss</td><td>Only if both sides agree to a settlement</td><td>Yes, subject to appeal</td></tr>
 <tr><td>Typical cost</td><td class="hl">Your appraiser's flat or hourly fee, plus half the umpire</td><td>Percentage of the recovery (Texas caps at 10%)</td><td>Contingency fee (often 33-40%) or hourly; expert costs</td></tr>
 <tr><td>Typical time</td><td class="hl">Weeks to a few months; 2027 rules cap at 120/240 days</td><td>Weeks to months, depending on the carrier</td><td>Often 1-3 years</td></tr>
-<tr><td>Best for</td><td class="hl">Covered loss, disputed scope or price</td><td>Early in the claim, before the carrier's position hardens</td><td>Coverage denials and carrier conduct</td></tr>
-<tr><td>Weak for</td><td class="hl">Coverage denials; causation that goes to coverage</td><td>Claims where the carrier will not move</td><td>Pure pricing fights (slow and expensive relative to the gap)</td></tr>
+<tr><td>Best for</td><td class="hl">Disputed amount, scope, price or causation</td><td>Early in the claim, before the carrier's position hardens</td><td>Coverage denials and carrier conduct</td></tr>
+<tr><td>Weak for</td><td class="hl">Pure policy-interpretation questions; carrier conduct</td><td>Claims where the carrier will not move</td><td>Pure pricing fights (slow and expensive relative to the gap)</td></tr>
 </tbody></table></div>
 
 <h2>Appraisal: when the fight is about the number</h2>
@@ -144,9 +144,11 @@ legal advice. Check the current rule text and your own policy, and consult a Tex
 will cost, that is an amount-of-loss dispute and appraisal is built for it. You appoint an appraiser, the carrier
 appoints one, and the two (or two of three, with an umpire) sign a binding award. There is no judge, no discovery
 and no jury. Under the 2027 Texas residential rules the process also has firm deadlines, so it cannot be dragged out.</p>
-<p>Appraisal cannot decide whether something is covered. If the dispute is "this damage is excluded wear and tear"
-rather than "this damage costs $X," appraisal is the wrong tool, and a panel that tries to decide coverage risks
-having its award set aside.</p>
+<p>Appraisal also handles causation in Texas. If the carrier says "this damage is wear and tear" or "that slope was
+hit in an earlier storm," that is a question of what the covered event caused, and under State Farm Lloyds v. Johnson
+(Tex. 2009) an appraisal panel may decide it as part of the amount of loss. What appraisal cannot decide is a pure
+policy question, such as whether a category of loss is excluded by the policy's wording or whether a condition of
+coverage was met; a panel that rules on those risks having its award set aside.</p>
 
 <h2>Public adjuster: when the claim is still open and moving</h2>
 <p>A licensed public adjuster represents you in presenting and negotiating the claim. They document the loss,
@@ -167,7 +169,7 @@ itself end every question in a lawsuit. Timing decisions here belong with your a
 
 <h2>A simple decision path</h2>
 <ol>
-<li><strong>Is the loss accepted as covered?</strong> No: talk to an attorney about the denial. Yes: continue.</li>
+<li><strong>Is the dispute about amount, scope, price or causation?</strong> Yes: appraisal can decide it. If the carrier's position is purely about policy wording or a coverage condition, talk to an attorney first.</li>
 <li><strong>Has the carrier taken a final position on the amount?</strong> No: a public adjuster can still move it. Yes: continue.</li>
 <li><strong>Is the gap worth the appraisal cost?</strong> Appraiser fees are modest relative to most roof and water disputes. If yes, demand appraisal.</li>
 <li><strong>Is the carrier also refusing to engage at all?</strong> Appraisal can run alongside legal advice; the two are not exclusive.</li>
@@ -205,10 +207,12 @@ who selects an umpire if the appraisers cannot, and how costs are split.</p>
 the <a href="/texas-appraisal-rules/">new Texas rules</a> make the clause mandatory in residential policies.</p>
 
 <h2>Step 2: Confirm appraisal fits your dispute</h2>
-<p>Appraisal determines the amount of loss. Use it when the carrier has accepted the loss as covered and the
-disagreement is over scope, quantity or price. Do not use it to challenge a denial of coverage. If the carrier has
-paid part of the claim and denied another part on coverage grounds, appraisal can address the paid part's amount
-while the denied part is handled separately.</p>
+<p>Appraisal determines the amount of loss, and in Texas that includes causation. Use it when the disagreement is
+over scope, quantity, price, or what the covered event caused versus what is wear, deterioration or a prior loss;
+State Farm Lloyds v. Johnson (Tex. 2009) confirms the panel may decide those questions. A carrier letter that says
+"wear and tear, not hail" is an invitation to appraisal, not a reason to skip it. The only disputes that sit outside
+appraisal are pure policy-interpretation questions, such as whether a category of loss is excluded by the policy's
+wording.</p>
 
 <h2>Step 3: Choose your appraiser first</h2>
 <p>Under the 2027 rules you will have 20 days after the demand to name an appraiser and give the carrier their
@@ -319,8 +323,9 @@ umpire award must issue within 240 days of the demand.</p>
 
 <h2>After the award</h2>
 <p>The carrier pays the award less the deductible, prior payments and any recoverable depreciation withheld under the
-policy's replacement-cost terms, which is released when repairs are completed. The award does not decide coverage,
-so items the carrier denied on coverage grounds are not resolved by it; those are questions for an attorney.</p>
+policy's replacement-cost terms, which is released when repairs are completed. The award resolves the amount
+of loss, including causation disputes the panel decided; pure policy-interpretation questions, if any, remain for the
+carrier and, if necessary, an attorney.</p>
 
 <div class="callout"><span class="label">What you should do during the process</span>
 <p>Keep mitigating damage and keep receipts. Do not sign a release or accept a "final" payment without reading what it
@@ -376,7 +381,7 @@ samples, code citations and pricing.</p>
 <tr><td>Job</td><td class="hl">Determine the amount of loss in a formal process ending in a binding award</td><td>Investigate and adjust the claim for the carrier</td><td>Prepare, present and negotiate the claim</td></tr>
 <tr><td>When involved</td><td class="hl">After a dispute over amount, once appraisal is invoked</td><td>From the first notice of loss</td><td>Any time before settlement</td></tr>
 <tr><td>Paid by</td><td class="hl">The party who appointed them, usually a flat or hourly fee</td><td>The carrier</td><td>The policyholder, usually a percentage of the settlement</td></tr>
-<tr><td>Decides coverage?</td><td class="hl">No</td><td>Recommends to the carrier</td><td>No</td></tr>
+<tr><td>Decides causation?</td><td class="hl">Yes, in Texas, as part of the amount of loss</td><td>Recommends to the carrier</td><td>No</td></tr>
 </tbody></table></div>
 
 <h2>What "certified insurance appraiser" means</h2>
@@ -398,12 +403,13 @@ anyone. Ask any prospective appraiser two questions: how are you paid, and have 
 
 <h2>When you need one</h2>
 <ol>
-<li>The carrier has accepted your loss as covered.</li>
-<li>Its estimate is materially lower than the real cost to repair, and negotiation has stalled.</li>
+<li>The carrier's estimate is materially lower than the real cost to repair, or the carrier says some or all of the damage was not caused by the storm, and negotiation has stalled.</li>
 <li>Your policy has an appraisal clause, or will have one at your next renewal after March 1, 2027.</li>
 </ol>
-<p>If all three are true, <a href="/guides/invoke-appraisal-clause/">invoke the appraisal clause</a> and appoint an
-appraiser. If the carrier has denied coverage, an appraiser cannot help; talk to a Texas insurance attorney.</p>
+<p>If both are true, <a href="/guides/invoke-appraisal-clause/">invoke the appraisal clause</a> and appoint an
+appraiser. In Texas the panel can decide causation as well as price (State Farm Lloyds v. Johnson, 2009). Only a
+denial that rests purely on policy wording, rather than on what caused the damage, needs an attorney before an
+appraiser.</p>
 """,
 })
 BY_SLUG = {g["slug"]: g for g in GUIDES}

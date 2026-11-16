@@ -25,7 +25,7 @@ CITIES2 = [
 """,
         "faq": [
             ("The carrier says my Laredo roof damage is heat-related wear, not hail. Can appraisal help?",
-             "If the carrier has denied the storm entirely, that is a coverage dispute. If it has accepted some storm damage and disputes how much, appraisal decides the amount. Many Laredo letters do the second while sounding like the first; send us the letter and we will tell you which you have."),
+             "Yes. Whether the damage is heat-related aging or hail is a causation question, and in Texas causation is appraisable: under State Farm Lloyds v. Johnson the panel decides how much of the damage the storm caused when it fixes the amount of loss. We separate thermal cracking and granule loss from hail fractures with close-up photography and test squares so the panel can award the storm portion."),
             ("Do you appraise warehouse and cold-storage losses in Laredo?",
              "Yes. Logistics property is a large share of our commercial work. We scope metal roofing, insulated panels, dock equipment, refrigeration and business personal property separately so the award is itemized the way the policy pays."),
         ],
@@ -200,7 +200,7 @@ CITIES2 = [
             ("My Brownsville wind policy is TWIA and my homeowners policy is a standard carrier. Which one do I appraise?",
              "The one whose covered peril is in dispute. Wind and hail damage is appraised under the TWIA policy and its process; water, fire and other perils under the standard policy's clause. If a storm produced both wind and non-wind damage, two appraisals may run in parallel, and we coordinate them."),
             ("The carrier says my roof damage is from salt-air deterioration, not Hurricane Hanna. Can appraisal decide?",
-             "If the carrier accepted the storm and is attributing specific items to deterioration, that is a scope dispute an appraisal panel decides on the evidence. If it has denied the storm entirely, that is a coverage question; we will tell you which letter you have."),
+             "Yes. Storm versus deterioration is a causation question, and Texas appraisal panels decide causation as part of the amount of loss. Whether the carrier accepted part of the storm or denied all of it, the panel can determine how much of the damage Hanna caused and award that portion, on the evidence of uplift patterns, impact marks and the roof's documented condition before the storm."),
         ],
     },
     {
@@ -314,7 +314,7 @@ CITIES2 = [
             ("I live in Sun City and the carrier approved two slopes. Will the association accept that?",
              "Usually not, and that matters. Where the policy covers matching or a reasonable match is unavailable, and the association's standards require uniform appearance, the appraisers consider full replacement in determining the amount of loss. We include the association's written standards in the submission."),
             ("My Georgetown home is new construction and the carrier says the roof damage is installation defects. Can appraisal help?",
-             "If the carrier accepted the storm and is carving out items as defects, the amount of covered storm damage is an appraisal question and the panel decides it on the evidence. If it has denied the storm as a whole, that is a coverage dispute. Send us the letter and we will tell you which it is."),
+             "Yes. Storm damage versus installation defect is a causation question, and in Texas the appraisal panel decides it as part of the amount of loss, whether the carrier carved out a few items or denied the storm entirely. We document the hail and wind damage separately from any workmanship issues so the panel can award the storm-caused portion."),
         ],
     },
 ]
