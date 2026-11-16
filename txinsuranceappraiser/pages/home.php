@@ -145,7 +145,7 @@ ob_start(); ?>
 
 <section class="section">
   <div class="wrap person">
-    <div class="person-photo reveal-l"><span class="init">JD</span></div>
+    <div class="person-photo reveal-l"><img src="<?= SITE['photo'] ?>" alt="Joseph Dittman, Texas insurance appraiser" width="500" height="500" loading="lazy"></div>
     <div class="reveal-r">
       <span class="eyebrow">Meet your appraiser</span>
       <h2>Joseph Dittman, Lead Appraiser at TX Insurance Appraiser</h2>

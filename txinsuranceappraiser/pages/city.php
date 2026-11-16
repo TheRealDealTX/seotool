@@ -207,7 +207,7 @@ ob_start(); ?>
     </div>
     <div class="reveal-r">
       <div class="person" style="grid-template-columns:120px 1fr;gap:22px">
-        <div class="person-photo" style="border-radius:20px"><span class="init" style="font-size:2.2rem">JD</span></div>
+        <div class="person-photo" style="border-radius:20px"><img src="<?= SITE['photo'] ?>" alt="Joseph Dittman, Texas insurance appraiser" width="500" height="500" loading="lazy"></div>
         <div>
           <h3 style="margin-bottom:.2em">Meet Your <?= e($K) ?>: Joseph Dittman</h3>
           <p style="color:var(--ink-2);margin:0">Joseph is a Texas-licensed public adjuster who has spent his career on the policyholder side of hail, wind, water and fire claims. His firm, Rise Public Adjusting LLC, holds TDI license #<?= SITE['appraiser']['license'] ?>. On your appraisal, he serves as your appraiser. <a href="/about-us/">Read his background</a>.</p>

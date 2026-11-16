@@ -98,5 +98,12 @@ Point it at another host with `BASE=https://… python3 _dev/validate.py`.
 
   Both pages of each pair are kept so no URL is lost, and each pair cross-links. Consider consolidating one of each pair later.
 - The old "Houston-TX.webp" image actually shows Austin, so the Houston page uses a storm-damage image instead.
-- Joseph's photo is a monogram placeholder (“JD”). Drop a headshot into `assets/img/site/` and update the
-  `.person-photo` blocks in `pages/home.php`, `pages/about.php` and `pages/city.php`.
+- Joseph's photo is `assets/img/site/joseph-dittman-appraiser.webp` (path set in `SITE['photo']`).
+- License shown site-wide: Rise Public Adjusting LLC, Texas public adjuster license #3341461 (`inc/config.php`).
+
+## Lead capture
+
+Every form (contact page, city pages, homepage hero and the popup) posts to `/contact-submit/` and is emailed to
+`SITE['form_to']` = info@txinsuranceappraiser.com. The popup opens from the header's "Free Claim Review" button and
+the mobile "Free Review" button, after 35 seconds, or on exit intent. It shows once per browser session and never on
+the contact or thank-you pages.

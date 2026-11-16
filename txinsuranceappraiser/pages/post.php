@@ -23,7 +23,7 @@ ob_start(); ?>
     <span class="eyebrow anim"><?= e($cat) ?></span>
     <h1 class="anim" style="max-width:920px"><?= e($p['h1']) ?></h1>
     <div class="post-meta anim">
-      <span class="author-chip"><span class="av">JD</span> <span>By <a href="/about-us/" style="color:#fff">Joseph Dittman</a></span></span>
+      <span class="author-chip"><img class="av" src="<?= SITE['photo'] ?>" alt="Joseph Dittman" width="38" height="38"> <span>By <a href="/about-us/" style="color:#fff">Joseph Dittman</a></span></span>
       <span><?= icon('calendar', 16) ?> Updated <time datetime="<?= e(substr($upd, 0, 10)) ?>"><?= e(nice_date($upd)) ?></time></span>
       <span><?= icon('clock', 16) ?> <?= $mins ?> min read</span>
     </div>
@@ -50,7 +50,7 @@ ob_start(); ?>
     </section>
     <?php endif; ?>
     <div class="author-box">
-      <div class="av">JD</div>
+      <img class="av" src="<?= SITE['photo'] ?>" alt="Joseph Dittman" width="72" height="72" loading="lazy">
       <div>
         <h3>About the author: Joseph Dittman</h3>
         <p style="margin:0;color:var(--ink-2)">Joseph is the lead appraiser at TX Insurance Appraiser and a Texas-licensed public adjuster (Rise Public Adjusting LLC, TDI license #<?= SITE['appraiser']['license'] ?>). He has spent his career inspecting hail, wind, water and fire losses and negotiating property claims across Texas. <a href="/about-us/">More about Joseph</a>.</p>

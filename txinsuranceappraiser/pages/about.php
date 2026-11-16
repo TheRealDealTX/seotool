@@ -6,7 +6,7 @@ $faqs = [
     ['q' => 'Who is the appraiser at TX Insurance Appraiser?',
      'a' => 'Joseph Dittman is the lead appraiser at TX Insurance Appraiser. He is a Texas-licensed public adjuster who has spent his career on the policyholder side of property claims, inspecting hail, wind, water and fire losses, writing line-item estimates and negotiating with carrier adjusters across Texas.'],
     ['q' => 'How can I verify Joseph Dittman’s license?',
-     'a' => 'Rise Public Adjusting LLC, Joseph’s firm, holds Texas Department of Insurance public adjuster license #3356839. You can confirm it on the TDI agent and adjuster license lookup at tdi.texas.gov by searching the license number or the firm name.'],
+     'a' => 'Rise Public Adjusting LLC, Joseph’s firm, holds Texas Department of Insurance public adjuster license #3341461. You can confirm it on the TDI agent and adjuster license lookup at tdi.texas.gov by searching the license number or the firm name.'],
     ['q' => 'Will Joseph act as my public adjuster or my appraiser?',
      'a' => 'On an appraisal assignment through TX Insurance Appraiser, Joseph serves as your appraiser under the policy’s appraisal clause, focused on the amount of loss. He does not act as your public adjuster or attorney on that claim, and TX Insurance Appraiser does not provide legal advice.'],
     ['q' => 'What types of properties does TX Insurance Appraiser handle?',
@@ -33,13 +33,14 @@ ob_start(); ?>
         <li><b>Hubs</b>Austin · Waco · Dallas · Houston</li>
         <li><b>Coverage</b>All of Texas</li>
       </ul>
+      <p style="color:#cfe0ee;font-size:.92rem;margin:16px 0 0"><?= e(SITE['blurb']) ?></p>
     </div>
   </div>
 </section>
 
 <section class="section" id="joseph-dittman">
   <div class="wrap person">
-    <div class="person-photo reveal-l"><span class="init">JD</span></div>
+    <div class="person-photo reveal-l"><img src="<?= SITE['photo'] ?>" alt="Joseph Dittman, Texas insurance appraiser" width="500" height="500" loading="lazy"></div>
     <div class="reveal-r">
       <span class="eyebrow">Meet the appraiser</span>
       <h2>Joseph Dittman — Lead Insurance Appraiser</h2>

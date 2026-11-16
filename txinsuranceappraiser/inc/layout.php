@@ -102,7 +102,7 @@ function site_header(string $path): void
         </li>
       <?php endforeach; ?>
       </ul>
-      <a class="btn btn-gold nav-cta" href="/contact-us/">Free Claim Review</a>
+      <a class="btn btn-gold nav-cta" href="/contact-us/" data-popup>Free Claim Review</a>
     </nav>
     <a class="btn btn-gold header-cta" href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 18) ?><span>Call Now</span></a>
     <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><?= icon('menu', 26) ?></button>
@@ -142,7 +142,7 @@ function site_footer(): void
   <div class="wrap footer-grid">
     <div class="f-brand">
       <img src="<?= SITE['logo'] ?>" alt="TX Insurance Appraiser" width="170" height="67" loading="lazy" class="f-logo">
-      <p class="f-tag"><?= e(SITE['tagline']) ?> Your insurance peace-of-mind partner for disputed property claims in every corner of Texas.</p>
+      <p class="f-tag"><?= e(SITE['blurb']) ?></p>
       <ul class="f-contact">
         <li><?= icon('phone', 18) ?> <a href="tel:<?= SITE['phone_href'] ?>"><?= e(SITE['phone']) ?></a></li>
         <li><?= icon('chat', 18) ?> <a href="sms:<?= SITE['phone_href'] ?>">Send a text message</a></li>
@@ -185,14 +185,26 @@ function site_footer(): void
     </div>
   </div>
   <div class="wrap f-bottom">
-    <p>© <?= date('Y') ?> <?= e(SITE['legal']) ?>. All rights reserved.</p>
+    <p>© <?= date('Y') ?> <?= e(SITE['copyright']) ?>. All rights reserved.</p>
     <p class="f-disclaimer">TX Insurance Appraiser is not a law firm and does not provide legal advice. Appraisal addresses the amount of loss under your policy’s appraisal provision; results depend on your policy and the facts of your claim.</p>
   </div>
 </footer>
+<div class="modal" id="lead-modal" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box">
+    <button class="modal-x" type="button" aria-label="Close" data-close><?= icon('x', 22) ?></button>
+    <div class="modal-head">
+      <img src="<?= SITE['photo'] ?>" alt="Joseph Dittman" width="64" height="64" loading="lazy">
+      <div><span class="eyebrow" style="margin:0 0 4px">Free claim review</span><h2 id="lead-modal-title">Was your claim underpaid?</h2></div>
+    </div>
+    <p class="modal-sub">Tell us about your claim and Joseph will personally review it — free, with no obligation.</p>
+    <?= lead_form('compact', 'popup') ?>
+  </div>
+</div>
 <div class="mobile-bar" role="navigation" aria-label="Quick contact">
   <a href="tel:<?= SITE['phone_href'] ?>"><?= icon('phone', 20) ?> Call</a>
   <a href="sms:<?= SITE['phone_href'] ?>"><?= icon('chat', 20) ?> Text</a>
-  <a href="/contact-us/" class="mb-gold"><?= icon('doc', 20) ?> Free Review</a>
+  <a href="/contact-us/" class="mb-gold" data-popup><?= icon('doc', 20) ?> Free Review</a>
 </div>
 <button class="to-top" aria-label="Back to top"><?= icon('chev', 22) ?></button>
 <?php

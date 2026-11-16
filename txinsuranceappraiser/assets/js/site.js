@@ -155,6 +155,29 @@
     });
   }
 
+  /* popup lead form: opens from [data-popup] links, after 35s, or on exit intent (once per session) */
+  var modal = d.getElementById('lead-modal');
+  if (modal) {
+    var lastFocus = null, KEY = 'txia-popup-seen';
+    var seen = function () { try { return sessionStorage.getItem(KEY); } catch (e) { return null; } };
+    var mark = function () { try { sessionStorage.setItem(KEY, '1'); } catch (e) {} };
+    var openModal = function () {
+      if (!modal.hidden) return;
+      lastFocus = d.activeElement; modal.hidden = false; d.body.classList.add('modal-open'); mark();
+      if (d.body.classList.contains('nav-open') && burger) burger.click();
+      var f = modal.querySelector('input:not([type=hidden]):not([name=website])'); if (f) setTimeout(function () { f.focus(); }, 50);
+    };
+    var closeModal = function () { modal.hidden = true; d.body.classList.remove('modal-open'); if (lastFocus) lastFocus.focus(); };
+    d.querySelectorAll('[data-popup]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); openModal(); }); });
+    modal.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', closeModal); });
+    d.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+    var onContact = /^\/(contact-us|thank-you)\//.test(location.pathname);
+    if (!onContact && !seen()) {
+      setTimeout(function () { if (!seen()) openModal(); }, 35000);
+      d.addEventListener('mouseout', function (e) { if (!e.relatedTarget && e.clientY < 10 && !seen()) openModal(); });
+    }
+  }
+
   /* AJAX lead forms (falls back to normal POST without JS) */
   d.querySelectorAll('form[data-ajax]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
